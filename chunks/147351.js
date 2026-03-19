@@ -14,17 +14,17 @@ var i = n(627968),
     E = n(661191),
     I = n(460350),
     T = n(652215),
-    f = n(48447);
-function C(e) {
+    N = n(874377);
+function f(e) {
     let { assets: t, currentUser: n, message: i } = e,
         l = (E.default.extractTimestamp(n.id) + E.default.extractTimestamp(i.id)) % t.length;
     return t[l];
 }
-function N(e) {
+function C(e) {
     let { currentUser: t, channel: n, message: a, buttonLabels: d, stickers: u, event: _, eventProperties: m } = e,
-        E = l.useMemo(() => C({ assets: u, currentUser: t, message: a }), [u, t, a]),
-        T = l.useMemo(() => C({ assets: d, currentUser: t, message: a }), [d, t, a]),
-        f = l.useCallback(async () => {
+        E = l.useMemo(() => f({ assets: u, currentUser: t, message: a }), [u, t, a]),
+        T = l.useMemo(() => f({ assets: d, currentUser: t, message: a }), [d, t, a]),
+        N = l.useCallback(async () => {
             let { valid: e } = await (0, I.i)({ type: o.oU.FORM, content: "", channel: n });
             e &&
                 (!(function (e) {
@@ -48,7 +48,7 @@ function N(e) {
     return (0, i.jsx)(r.$nd, {
         icon: { type: "sticker", asset: E, component: c.A },
         text: T,
-        onClick: f,
+        onClick: N,
         variant: "secondary",
     });
 }
@@ -69,8 +69,8 @@ function g(e) {
         })({ channel: t, message: n, currentUser: c });
     return null != c && A
         ? (0, i.jsx)("div", {
-              className: f.S,
-              children: (0, i.jsx)(N, {
+              className: N.S,
+              children: (0, i.jsx)(C, {
                   currentUser: c,
                   channel: t,
                   message: n,

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => p });
 var l = n(627968),
     i = n(64700),
     s = n(503698),
@@ -15,13 +15,13 @@ var l = n(627968),
 n(253913);
 var x = n(652215),
     A = n(985018),
-    p = n(57046);
-function f(e) {
+    f = n(944616);
+function p(e) {
     let { channel: t } = e,
         s = (0, r.bG)([g.A], () => g.A.can(x.xBc.MANAGE_CHANNELS, t), [t]),
         u = t.availableTags.length >= 20,
         m = t.availableTags.length > 0,
-        f = i.useCallback(() => {
+        p = i.useCallback(() => {
             let e = t.availableTags.length >= 20;
             s &&
                 !e &&
@@ -42,13 +42,13 @@ function f(e) {
         ),
         {
             handleDragStart: j,
-            handleDragReset: v,
-            handleDragComplete: N,
+            handleDragReset: N,
+            handleDragComplete: v,
         } = (0, h.A)(t.availableTags, (e) => {
             (0, c.fy)({ availableTags: e });
         });
     return (0, l.jsxs)("div", {
-        className: p._A,
+        className: f._A,
         children: [
             m
                 ? t.availableTags.map((e) =>
@@ -59,8 +59,8 @@ function f(e) {
                               availableTags: t.availableTags,
                               canManageChannels: s,
                               onTagClick: C,
-                              onDragComplete: N,
-                              onDragReset: v,
+                              onDragComplete: v,
+                              onDragReset: N,
                               onDragStart: j,
                           },
                           e.id,
@@ -69,8 +69,8 @@ function f(e) {
                 : null,
             m
                 ? (0, l.jsx)(d.DUT, {
-                      onClick: f,
-                      className: a()(p.JE, { [p.r9]: !s || u }),
+                      onClick: p,
+                      className: a()(f.JE, { [f.r9]: !s || u }),
                       children: (0, l.jsx)(d.j96, {
                           size: "custom",
                           "aria-label": A.intl.string(A.t["/jubeD"]),
@@ -83,7 +83,7 @@ function f(e) {
                       variant: "primary",
                       text: A.intl.string(A.t["/jubeD"]),
                       disabled: !s,
-                      onClick: f,
+                      onClick: p,
                   }),
         ],
     });
@@ -103,7 +103,7 @@ function b(e) {
             drag: h,
             dragSourcePosition: g,
             drop: x,
-            setIsDraggable: f,
+            setIsDraggable: p,
         } = (0, u.A)({
             type: "CHANNEL_SETTINGS_FORUM_TAGS",
             index: c,
@@ -113,12 +113,12 @@ function b(e) {
             onDragReset: d,
         });
     return (0, l.jsx)("div", {
-        className: a()(p.kL, { [p.A]: null != g && c < g, [p.Ze]: null != g && c > g }),
+        className: a()(f.kL, { [f.A]: null != g && c < g, [f.Ze]: null != g && c > g }),
         ref: (e) => {
             h(x(e));
         },
-        onMouseEnter: () => f(i),
-        onMouseLeave: () => f(!1),
+        onMouseEnter: () => p(i),
+        onMouseLeave: () => p(!1),
         children: (0, l.jsx)(m.A, {
             tag: t,
             disabled: !i,

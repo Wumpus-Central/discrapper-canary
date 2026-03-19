@@ -1,3 +1,0 @@
-e.exports = JSON.parse(
-    '{"/cp93l":["K\xf6vetkező h\xf3nap"],"raS6yf":["Előző h\xf3nap"],"JA5C7L":["T\xf6rl\xe9s"],"I8kUqR":["Napt\xe1r megnyit\xe1sa"],"db85vU":["Nincsenek megjelen\xedthető elemek"],"bPKiId":["Nincs tal\xe1lat a k\xf6vetkezőre: „",[1,"query"],"”"],"WfH9in":["Bez\xe1r\xe1s"],"m3Vfcs":["Ne jelenjen meg t\xf6bbsz\xf6r"],"cgdAs2":["(\xdaj lapon ny\xedlik meg)"],"2L/ygS":[[1,"percent"]," sz\xe1zal\xe9kban k\xe9sz"],"/Y7vRd":["Az elt\xe1vol\xedt\xe1shoz nyomd meg a T\xf6rl\xe9s gombot."],"VMNfsY":["Kiv\xe1lasztva"],"A+pfVR":["Kiv\xe1laszt\xe1s…"],"v2YSk/":[[1,"stepNumber"],"/",[1,"stepCount"],". l\xe9p\xe9s"],"YpT3kk":["Nagy\xedt\xe1s \xe9s vide\xf3 lej\xe1tsz\xe1sa"]}',
-);

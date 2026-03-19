@@ -2,8 +2,8 @@ n.d(t, { A: () => v });
 var a = n(627968);
 n(64700);
 var i = n(989349),
-    s = n.n(i),
-    l = n(311907),
+    l = n.n(i),
+    s = n(311907),
     r = n(554146),
     o = n(397927),
     d = n(73153),
@@ -11,10 +11,10 @@ var i = n(989349),
     u = n(275759),
     m = n(21119),
     h = n(594061),
-    p = n(617617),
-    x = n(287809),
-    g = n(105040),
-    _ = n(661251);
+    x = n(617617),
+    p = n(287809),
+    g = n(98806),
+    _ = n(930821);
 function f(e) {
     let t = new Date(e);
     return (
@@ -24,16 +24,16 @@ function f(e) {
     );
 }
 function v() {
-    let e = (0, l.bG)([u.Ay], () => u.Ay.getDevToolTotalFriendAnniversaries()),
-        t = (0, l.bG)([u.Ay], () => u.Ay.getDevToolCurrentDate()),
-        n = (0, l.bG)([u.Ay], () => u.Ay.getGiftUnreadNotificationLastDismissedTimes()),
-        i = (0, l.bG)([u.Ay], () => u.Ay.getMessageGiftIntentLastShownMap()),
-        v = (0, l.bG)([u.Ay], () => u.Ay.getHighestAffinityFriendAnniversaries()),
-        b = (0, l.bG)([u.Ay], () => u.Ay.getHighAffinityFriendAnniversaries()),
-        j = (0, l.bG)([u.Ay], () => u.Ay.getProfilePopoutGiftIntentsDismissMap()),
-        A = (0, l.bG)([p.A], () => {
+    let e = (0, s.bG)([u.Ay], () => u.Ay.getDevToolTotalFriendAnniversaries()),
+        t = (0, s.bG)([u.Ay], () => u.Ay.getDevToolCurrentDate()),
+        n = (0, s.bG)([u.Ay], () => u.Ay.getGiftUnreadNotificationLastDismissedTimes()),
+        i = (0, s.bG)([u.Ay], () => u.Ay.getMessageGiftIntentLastShownMap()),
+        v = (0, s.bG)([u.Ay], () => u.Ay.getHighestAffinityFriendAnniversaries()),
+        b = (0, s.bG)([u.Ay], () => u.Ay.getHighAffinityFriendAnniversaries()),
+        j = (0, s.bG)([u.Ay], () => u.Ay.getProfilePopoutGiftIntentsDismissMap()),
+        A = (0, s.bG)([x.A], () => {
             let e =
-                p.A.settings.userContent?.recurringDismissibleContentStates[r.M.GIFT_INTENT_MESSAGE]?.lastDismissedAtMs;
+                x.A.settings.userContent?.recurringDismissibleContentStates[r.M.GIFT_INTENT_MESSAGE]?.lastDismissedAtMs;
             if (null == e || "0" === e) return null;
             let t = Number(e);
             return Number.isNaN(t) ? null : t;
@@ -41,7 +41,7 @@ function v() {
         C = (e) => {
             d.h.dispatch({ type: "DEV_TOOLS_SET_FRIEND_ANNIVERSARY_COUNT", total: e });
         },
-        T = (e) => {
+        y = (e) => {
             let t = m.A.getUserAffinity(e);
             return t?.dmProbability != null ? `${(100 * t.dmProbability).toFixed(3)}%` : "N/A";
         };
@@ -113,11 +113,11 @@ function v() {
                                                     "Highest Affinity Friend Anniversaries (Eligible for Notification):",
                                             }),
                                             v.map((e) => {
-                                                let t = x.default.getUser(e),
+                                                let t = p.default.getUser(e),
                                                     n = t?.username ?? `Unknown User (${e})`;
                                                 return (0, a.jsxs)(
                                                     o.Text,
-                                                    { variant: "text-xs/normal", children: [n, " (", T(e), ")"] },
+                                                    { variant: "text-xs/normal", children: [n, " (", y(e), ")"] },
                                                     e,
                                                 );
                                             }),
@@ -132,11 +132,11 @@ function v() {
                                                 children: "High Affinity Friend Anniversaries:",
                                             }),
                                             b.map((e) => {
-                                                let t = x.default.getUser(e),
+                                                let t = p.default.getUser(e),
                                                     n = t?.username ?? `Unknown User (${e})`;
                                                 return (0, a.jsxs)(
                                                     o.Text,
-                                                    { variant: "text-xs/normal", children: [n, " (", T(e), ")"] },
+                                                    { variant: "text-xs/normal", children: [n, " (", y(e), ")"] },
                                                     e,
                                                 );
                                             }),
@@ -153,9 +153,9 @@ function v() {
                         children: [
                             (0, a.jsx)(o.J3s, {
                                 label: "Override current date used for cooldowns",
-                                value: null != t ? s()(t) : void 0,
+                                value: null != t ? l()(t) : void 0,
                                 onSelect: (e) => {
-                                    let t = s()(),
+                                    let t = l()(),
                                         n = e
                                             .clone()
                                             .hours(t.hours())
@@ -239,11 +239,11 @@ function v() {
                                         }),
                                         Object.entries(i).map((e) => {
                                             let [t, n] = e,
-                                                i = x.default.getUser(t),
-                                                s = i?.username ?? `Unknown User (${t})`;
+                                                i = p.default.getUser(t),
+                                                l = i?.username ?? `Unknown User (${t})`;
                                             return (0, a.jsxs)(
                                                 o.Text,
-                                                { variant: "text-xs/normal", children: [s, ": ", f(n)] },
+                                                { variant: "text-xs/normal", children: [l, ": ", f(n)] },
                                                 t,
                                             );
                                         }),
@@ -357,11 +357,11 @@ function v() {
                                         }),
                                         Object.entries(j).map((e) => {
                                             let [t, n] = e,
-                                                i = x.default.getUser(t),
-                                                s = i?.username ?? `Unknown User (${t})`;
+                                                i = p.default.getUser(t),
+                                                l = i?.username ?? `Unknown User (${t})`;
                                             return (0, a.jsxs)(
                                                 o.Text,
-                                                { variant: "text-xs/normal", children: [s, ": ", f(n)] },
+                                                { variant: "text-xs/normal", children: [l, ": ", f(n)] },
                                                 t,
                                             );
                                         }),

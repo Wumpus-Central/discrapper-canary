@@ -1,4 +1,4 @@
-n.d(t, { j: () => S }), n(801541);
+n.d(t, { j: () => y }), n(801541);
 var i = n(627968),
     r = n(64700),
     a = n(503698),
@@ -17,38 +17,38 @@ var i = n(627968),
     x = n(306417),
     f = n(290794),
     C = n(985018),
-    E = n(121272);
-function I(e) {
+    I = n(70086);
+function E(e) {
     let { percentage: t, label: n, canShowVoterDetails: a, answerId: l } = e,
         o = (0, m.GV)(),
         { channelId: d, messageId: c } = (0, f.Tu)(),
         [A, x] = r.useState(""),
-        [C, I] = r.useState(!1),
-        b = "" !== A && C,
-        T = r.useCallback(() => {
+        [C, E] = r.useState(!1),
+        v = "" !== A && C,
+        b = r.useCallback(() => {
             x((0, g.$m)(c, d, l));
         }, [c, d, l]),
-        v = r.useCallback(() => {
-            T(), I(!0);
-        }, [T]),
-        S = r.useCallback(() => {
-            I(!1);
-        }, []),
+        T = r.useCallback(() => {
+            b(), E(!0);
+        }, [b]),
         y = r.useCallback(() => {
+            E(!1);
+        }, []),
+        S = r.useCallback(() => {
             (0, p.e)({ channelId: d, messageId: c, answerId: l });
         }, [d, c, l]);
     return (
         r.useEffect(() => {
             if (C)
                 return (
-                    h.A.addReactChangeListener(T),
+                    h.A.addReactChangeListener(b),
                     () => {
-                        h.A.removeReactChangeListener(T);
+                        h.A.removeReactChangeListener(b);
                     }
                 );
-        }, [C, T]),
+        }, [C, b]),
         (0, i.jsxs)("div", {
-            className: E.AA,
+            className: I.AA,
             children: [
                 a
                     ? (0, i.jsxs)(i.Fragment, {
@@ -61,31 +61,31 @@ function I(e) {
                                             scaleFontToUserSetting: !0,
                                             children: A,
                                         }),
-                                        forceOpen: b,
+                                        forceOpen: v,
                                         "aria-label": !1,
                                         children: (0, i.jsx)(_.QWc, {
-                                            onMouseEnter: v,
-                                            onMouseLeave: S,
-                                            onFocus: v,
-                                            onBlur: S,
-                                            onClick: y,
-                                            "aria-describedby": b ? o : void 0,
+                                            onMouseEnter: T,
+                                            onMouseLeave: y,
+                                            onFocus: T,
+                                            onBlur: y,
+                                            onClick: S,
+                                            "aria-describedby": v ? o : void 0,
                                             text: n,
                                             variant: "secondary",
                                             textVariant: "text-xs/semibold",
                                         }),
                                     })
                                   : (0, i.jsx)(_.QWc, {
-                                        onMouseEnter: v,
-                                        onMouseLeave: S,
-                                        onFocus: v,
-                                        onBlur: S,
-                                        onClick: y,
+                                        onMouseEnter: T,
+                                        onMouseLeave: y,
+                                        onFocus: T,
+                                        onBlur: y,
+                                        onClick: S,
                                         text: n,
                                         variant: "secondary",
                                         textVariant: "text-xs/semibold",
                                     }),
-                              b && (0, i.jsx)(s.s, { id: o, children: A }),
+                              v && (0, i.jsx)(s.s, { id: o, children: A }),
                           ],
                       })
                     : (0, i.jsx)(_.Text, {
@@ -104,7 +104,7 @@ function I(e) {
         })
     );
 }
-function b(e) {
+function v(e) {
     let { percentage: t, shouldAnimate: n } = e,
         r = (0, _.zhh)(
             {
@@ -114,9 +114,9 @@ function b(e) {
             },
             "animate-always",
         );
-    return (0, i.jsx)(o.animated.span, { className: E.an, style: r, "aria-hidden": !0 });
+    return (0, i.jsx)(o.animated.span, { className: I.an, style: r, "aria-hidden": !0 });
 }
-function T(e) {
+function b(e) {
     let { answersInteraction: t, isSelected: n, didSelfVote: r, isVictor: a, isExpired: l, className: s } = e;
     return (0, d.YW)({ answersInteraction: t, didSelfVote: r })
         .with({ answersInteraction: A.CQ.RADIO_BUTTONS }, () =>
@@ -130,19 +130,19 @@ function T(e) {
         )
         .otherwise(() => null);
 }
-function v(e) {
+function T(e) {
     let { answer: t, isExpired: n, answersInteraction: r, canShowVoteCounts: a, canShowVoterDetails: o } = e,
         d = !0 === t.isSelected,
         c = !0 === t.didSelfVote,
         u = !0 === t.isVictor,
         m = t.shouldAnimateTransition;
     return (0, i.jsxs)("div", {
-        className: l()(E.Fk, { [E.EK]: r !== A.CQ.LIST, [E.wH]: d }),
+        className: l()(I.Fk, { [I.EK]: r !== A.CQ.LIST, [I.wH]: d }),
         children: [
-            a ? (0, i.jsx)(b, { percentage: t.votesPercentage, shouldAnimate: m }) : null,
-            null != t.pollMedia.emoji && (0, i.jsx)(x.Fb, { className: E.Zg, emoji: t.pollMedia.emoji }),
+            a ? (0, i.jsx)(v, { percentage: t.votesPercentage, shouldAnimate: m }) : null,
+            null != t.pollMedia.emoji && (0, i.jsx)(x.Fb, { className: I.Zg, emoji: t.pollMedia.emoji }),
             (0, i.jsx)(_.Text, {
-                className: E.Pf,
+                className: I.Pf,
                 variant: "text-sm/semibold",
                 color: "none",
                 scaleFontToUserSetting: !0,
@@ -150,32 +150,32 @@ function v(e) {
             }),
             t.didSelfVote && (0, i.jsx)(s.s, { children: C.intl.string(C.t["8DAM+5"]) }),
             a &&
-                (0, i.jsx)(I, {
+                (0, i.jsx)(E, {
                     percentage: t.votesPercentage,
                     label: t.votes,
                     canShowVoterDetails: o,
                     answerId: t.answerId,
                 }),
-            (0, i.jsx)(T, {
+            (0, i.jsx)(b, {
                 answersInteraction: r,
                 isSelected: d,
                 didSelfVote: c,
                 isVictor: u,
                 isExpired: n,
-                className: E.ck,
+                className: I.ck,
             }),
         ],
     });
 }
-function S(e) {
+function y(e) {
     let { isExpired: t, answersInteraction: n, canShowVoteCounts: r, canTapAnswers: a, ...l } = e;
     return (0, i.jsx)(x.Fh, {
-        className: E.ry,
-        answerClassName: E.ZF,
+        className: I.ry,
+        answerClassName: I.ZF,
         answersInteraction: n,
         canTapAnswers: a,
         renderAnswerContent: (e) =>
-            (0, i.jsx)(v, {
+            (0, i.jsx)(T, {
                 answer: e,
                 isExpired: t,
                 answersInteraction: n,

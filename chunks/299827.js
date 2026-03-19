@@ -1,24 +1,24 @@
-n.d(t, { X: () => x });
+n.d(t, { X: () => g });
 var l = n(627968),
     i = n(64700),
     s = n(397927),
     a = n(181658),
     r = n(997509),
-    d = n(576705),
-    c = n(652215),
-    o = n(985018),
-    u = n(912579);
-function x(e) {
-    let { guild: t, error: n, onClose: x } = e,
+    o = n(576705),
+    d = n(652215),
+    u = n(985018),
+    c = n(67501);
+function g(e) {
+    let { guild: t, error: n, onClose: g } = e,
         h = t.id,
-        m = i.useCallback(() => {
-            x(), r.A.open(h, c.BEX.INVITES);
-        }, [h, x]),
-        g = i.useCallback(
+        A = i.useCallback(() => {
+            g(), r.A.open(h, d.BEX.INVITES);
+        }, [h, g]),
+        p = i.useCallback(
             (e) =>
                 (0, l.jsx)(s.DUT, {
-                    className: u.P5,
-                    onClick: m,
+                    className: c.P5,
+                    onClick: A,
                     children: (0, l.jsx)(s.Text, {
                         variant: "text-xs/normal",
                         color: "text-link",
@@ -26,12 +26,12 @@ function x(e) {
                         children: e,
                     }),
                 }),
-            [m],
+            [A],
         ),
-        v = i.useCallback(
+        I = i.useCallback(
             (e) =>
                 (0, l.jsx)(s.MzZ, {
-                    href: c.X7G.INVITES_HELP,
+                    href: d.X7G.INVITES_HELP,
                     target: "_blank",
                     children: (0, l.jsx)(s.Text, {
                         variant: "text-xs/normal",
@@ -42,20 +42,20 @@ function x(e) {
                 }),
             [],
         ),
-        j =
+        x =
             n instanceof a.A
-                ? n.code !== c.t02.TOO_MANY_INVITES
+                ? n.code !== d.t02.TOO_MANY_INVITES
                     ? n.getAnyErrorMessage()
-                    : d.A.can(c.xBc.MANAGE_GUILD, t)
-                      ? o.intl.format(o.t["H/RUY1"], { inviteListHook: g, inviteHelpHook: v })
-                      : o.intl.string(o.t["/FxH6G"])
+                    : o.A.can(d.xBc.MANAGE_GUILD, t)
+                      ? u.intl.format(u.t["H/RUY1"], { inviteListHook: p, inviteHelpHook: I })
+                      : u.intl.string(u.t["/FxH6G"])
                 : "message" in n
                   ? n.message
-                  : o.intl.string(o.t.eAn6z2);
+                  : u.intl.string(u.t.eAn6z2);
     return (0, l.jsx)(s.Text, {
-        className: u.gJ,
+        className: c.gJ,
         variant: "text-xs/normal",
         color: "text-feedback-critical",
-        children: j,
+        children: x,
     });
 }

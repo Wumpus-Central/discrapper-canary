@@ -9,7 +9,7 @@ var l = i(627968),
     c = i(573435),
     u = i(885151),
     m = i(985018),
-    x = i(14532);
+    x = i(355330);
 function g(e) {
     let { game: t, activityLevel: i } = e,
         { data: n } = (0, u.k)(t.id),

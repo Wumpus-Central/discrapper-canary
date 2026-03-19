@@ -1,8 +1,8 @@
 n.d(t, { A: () => g });
 var a = n(627968),
     i = n(64700),
-    s = n(417597),
-    l = n(397927),
+    l = n(417597),
+    s = n(397927),
     r = n(793574),
     o = n(287809),
     d = n(590180),
@@ -10,8 +10,8 @@ var a = n(627968),
     u = n(841702),
     m = n(751304),
     h = n(61750),
-    p = n(841015);
-let x = (e) => {
+    x = n(91753);
+let p = (e) => {
         let [t, n] = i.useState(0);
         return (
             i.useLayoutEffect(() => {
@@ -25,76 +25,76 @@ let x = (e) => {
                     }
                 );
             }, []),
-            (0, a.jsx)("div", { className: p.Do, children: (0, a.jsx)(m.A, { ...e }, t) })
+            (0, a.jsx)("div", { className: x.Do, children: (0, a.jsx)(m.A, { ...e }, t) })
         );
     },
     g = () => {
-        let e = (0, s.bG)([o.default], () => o.default.getCurrentUser()),
-            t = (0, s.bG)([d.A], () => d.A.categories),
-            n = (0, s.bG)([c.A], () => c.A.purchases),
-            m = (0, s.bG)([d.A], () => d.A.lastSuccessfulFetch),
+        let e = (0, l.bG)([o.default], () => o.default.getCurrentUser()),
+            t = (0, l.bG)([d.A], () => d.A.categories),
+            n = (0, l.bG)([c.A], () => c.A.purchases),
+            m = (0, l.bG)([d.A], () => d.A.lastSuccessfulFetch),
             g = t.size > 0 && n.size > 0 && null != m,
             { isFetching: _, categories: f } = (0, u.Ay)({ logPerf: !1, stalePurchasesOK: !0, noOp: g }),
             v = g ? t : f,
             b = g || (!_ && v.size > 0),
             [j, A] = i.useState(""),
-            [C, T] = i.useState(null),
-            [y, S] = i.useState(null);
+            [C, y] = i.useState(null),
+            [T, S] = i.useState(null);
         return (i.useEffect(() => {
             if ("" === j.trim() || !b) {
-                T(null), S(null);
+                y(null), S(null);
                 return;
             }
             let e = d.A.getProduct(j),
                 t = d.A.getCategoryForProduct(j);
-            null != e && null != t ? (T(e), S(t)) : (T(null), S(null));
+            null != e && null != t ? (y(e), S(t)) : (y(null), S(null));
         }, [j, b]),
         _)
-            ? (0, a.jsx)(l.Text, { variant: "text-md/normal", children: "Loading categories and collectibles..." })
+            ? (0, a.jsx)(s.Text, { variant: "text-md/normal", children: "Loading categories and collectibles..." })
             : null == e
-              ? (0, a.jsx)(l.Text, { variant: "text-md/normal", children: "No user found" })
+              ? (0, a.jsx)(s.Text, { variant: "text-md/normal", children: "No user found" })
               : (0, a.jsxs)("div", {
-                    className: p.kL,
+                    className: x.kL,
                     children: [
                         (0, a.jsxs)("div", {
-                            className: p.uW,
+                            className: x.uW,
                             children: [
-                                (0, a.jsx)(l.Heading, {
+                                (0, a.jsx)(s.Heading, {
                                     variant: "heading-lg/semibold",
                                     children: "Product Configuration",
                                 }),
                                 (0, a.jsxs)("div", {
-                                    className: p.qp,
+                                    className: x.qp,
                                     children: [
-                                        (0, a.jsx)(l.Text, {
+                                        (0, a.jsx)(s.Text, {
                                             variant: "text-md/semibold",
-                                            className: p.NB,
+                                            className: x.NB,
                                             children: "Primary Product SKU ID",
                                         }),
-                                        (0, a.jsx)(l.ksK, {
+                                        (0, a.jsx)(s.ksK, {
                                             value: j,
                                             onChange: A,
                                             placeholder: "Enter product SKU ID",
                                         }),
                                         !b &&
                                             "" !== j.trim() &&
-                                            (0, a.jsx)(l.Text, {
+                                            (0, a.jsx)(s.Text, {
                                                 variant: "text-sm/normal",
-                                                className: p.KQ,
+                                                className: x.KQ,
                                                 children: "Loading products...",
                                             }),
                                         b &&
                                             "" !== j.trim() &&
                                             null == C &&
-                                            (0, a.jsx)(l.Text, {
+                                            (0, a.jsx)(s.Text, {
                                                 variant: "text-sm/normal",
-                                                className: p.kc,
+                                                className: x.kc,
                                                 children: "Product not found",
                                             }),
                                         null != C &&
-                                            (0, a.jsxs)(l.Text, {
+                                            (0, a.jsxs)(s.Text, {
                                                 variant: "text-sm/normal",
-                                                className: p.xT,
+                                                className: x.xT,
                                                 children: ["Found: ", C.name],
                                             }),
                                     ],
@@ -102,15 +102,15 @@ let x = (e) => {
                             ],
                         }),
                         (0, a.jsxs)("div", {
-                            className: p.uW,
+                            className: x.uW,
                             children: [
-                                (0, a.jsx)(l.Heading, { variant: "heading-lg/semibold", children: "Product Preview" }),
-                                null != C && null != y
+                                (0, a.jsx)(s.Heading, { variant: "heading-lg/semibold", children: "Product Preview" }),
+                                null != C && null != T
                                     ? (0, a.jsxs)("div", {
-                                          className: p.i1,
+                                          className: x.i1,
                                           children: [
-                                              (0, a.jsx)(x, { skuId: C.skuId }),
-                                              (0, a.jsx)(l.Button, {
+                                              (0, a.jsx)(p, { skuId: C.skuId }),
+                                              (0, a.jsx)(s.Button, {
                                                   variant: "primary",
                                                   onClick: () => {
                                                       null != C &&
@@ -125,10 +125,10 @@ let x = (e) => {
                                           ],
                                       })
                                     : (0, a.jsx)("div", {
-                                          className: p.qf,
-                                          children: (0, a.jsx)(l.Text, {
+                                          className: x.qf,
+                                          children: (0, a.jsx)(s.Text, {
                                               variant: "text-md/normal",
-                                              className: p.X2,
+                                              className: x.X2,
                                               children: "Enter a valid product SKU ID to see the preview",
                                           }),
                                       }),

@@ -39,7 +39,7 @@ var i = n(627968),
     F = n(360469),
     H = n(53516),
     B = n(985018),
-    V = n(32385);
+    V = n(690427);
 class K extends l.PureComponent {
     state = { submitting: !1, shouldShowLurkerModeUpsellPopout: !1, shouldShowLurkerModeSuccessPopout: !1 };
     textAreaContainerRef = l.createRef();
@@ -90,7 +90,7 @@ class K extends l.PureComponent {
     handleVerifyPhone = () => {
         (0, d.mMO)(
             async () => {
-                let { default: e } = await Promise.all([n.e("84704"), n.e("45668")]).then(n.bind(n, 615715));
+                let { default: e } = await Promise.all([n.e("84704"), n.e("24676")]).then(n.bind(n, 615715));
                 return (t) => (0, i.jsx)(e, { reason: b.d.GUILD_PHONE_REQUIRED, ...t });
             },
             { modalKey: H.V },

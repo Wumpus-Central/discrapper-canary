@@ -1,4 +1,4 @@
-n.d(t, { A: () => v }), n(938796);
+n.d(t, { A: () => T }), n(938796);
 var i = n(627968),
     r = n(64700),
     a = n(821418),
@@ -17,16 +17,16 @@ var i = n(627968),
     x = n(696451),
     f = n(860689),
     C = n(505417),
-    E = n(168428),
-    I = n(652215),
-    b = n(985018),
-    T = n(563111);
-function v(e) {
+    I = n(168428),
+    E = n(652215),
+    v = n(985018),
+    b = n(42441);
+function T(e) {
     let t,
-        v,
-        S,
+        T,
+        y,
         {
-            onTransitionToInviteChannel: y,
+            onTransitionToInviteChannel: S,
             onAcceptInstantInvite: N,
             guild: j,
             invite: L,
@@ -34,113 +34,113 @@ function v(e) {
             currentUserId: P,
         } = e,
         M = P === R.author.id,
-        { channel: O, approximate_member_count: D, approximate_presence_count: w } = L,
-        k = L.state === I.elq.ACCEPTING,
-        U = null != O ? (0, A.OY)(O) : null,
-        G = null != j,
-        B = null != U,
+        { channel: w, approximate_member_count: D, approximate_presence_count: k } = L,
+        O = L.state === E.elq.ACCEPTING,
+        U = null != w ? (0, A.OY)(w) : null,
+        B = null != j,
+        G = null != U,
         F = null != U && U.isGuildStageVoice(),
         H = (0, l.Lt)(L.flags ?? 0, a.Q.IS_GUEST_INVITE),
         V = U?.isGuildVoiceOrThread() ?? !1,
-        W = j?.features.has(I.GuildFeatures.HUB) ?? !1,
-        q = j?.id,
-        { analyticsLocations: Y } = (0, _.Ay)(u.A.INVITE_EMBED),
-        [z, Q] = r.useState(!1),
+        q = j?.features.has(E.GuildFeatures.HUB) ?? !1,
+        W = j?.id,
+        { analyticsLocations: z } = (0, _.Ay)(u.A.INVITE_EMBED),
+        [Y, Q] = r.useState(!1),
         K = r.useCallback(() => Q(!1), []),
         J = r.useRef(null),
         X = (0, s.bG)([x.Ay], () => m.A.canAcceptInvite([x.Ay], L)),
         Z = r.useCallback(() => {
-            Q(!0), (0, c.Pq)(q, "show profile", Y);
-        }, [q, Y]),
+            Q(!0), (0, c.Pq)(W, "show profile", z);
+        }, [W, z]),
         $ = r.useCallback(() => {
             let e = "noop";
-            G ? (y(), (e = "transition")) : (N(), (e = "accept")),
-                (0, c.he)({ invite: L, action: e, inviter_id: R.author.id, invite_message_id: R.id }, Y);
-        }, [L, R, Y, G, y, N]);
+            B ? (S(), (e = "transition")) : (N(), (e = "accept")),
+                (0, c.he)({ invite: L, action: e, inviter_id: R.author.id, invite_message_id: R.id }, z);
+        }, [L, R, z, B, S, N]);
     if (null == j) {
-        if (null == L.guild) return (0, i.jsx)(E.A, {});
-        (j = f.DY(L.guild)).premiumTier = L.guild.premium_tier ?? I.TVA.NONE;
+        if (null == L.guild) return (0, i.jsx)(I.A, {});
+        (j = f.DY(L.guild)).premiumTier = L.guild.premium_tier ?? E.TVA.NONE;
     }
-    let ee = (0, C.l)({ isVoiceChannel: V, isOwnInvite: M, isGuest: H, isHubGuild: W, isStage: F, isStream: !1 });
+    let ee = (0, C.l)({ isVoiceChannel: V, isOwnInvite: M, isGuest: H, isHubGuild: q, isStage: F, isStream: !1 });
     return (
-        (v = (0, i.jsxs)("span", {
-            className: T.FA,
+        (T = (0, i.jsxs)("span", {
+            className: b.FA,
             children: [
                 (0, i.jsx)(h.A, {
                     guildId: j.id,
                     name: j.name,
-                    shouldShow: z,
+                    shouldShow: Y,
                     onRequestClose: K,
                     targetElementRef: J,
                     children: () => (0, i.jsx)(g.A.GuildName, { guild: j, ref: J }),
                 }),
                 (0, i.jsx)("span", {
-                    className: T.E3,
+                    className: b.E3,
                     children: (0, i.jsx)(p.A, { guild: j, isBannerVisible: !1, disableBoostClick: !0 }),
                 }),
             ],
         })),
         H &&
-            (S = (0, i.jsx)(o.m, {
+            (y = (0, i.jsx)(o.m, {
                 asContainer: !0,
-                text: b.intl.string(b.t["/FeTK6"]),
-                children: (0, i.jsx)(d.mir, { size: "md", color: "currentColor", className: T.G }),
+                text: v.intl.string(v.t["/FeTK6"]),
+                children: (0, i.jsx)(d.mir, { size: "md", color: "currentColor", className: b.G }),
             })),
         V
-            ? ((v = (0, i.jsx)(g.A.Channel, { channel: U })),
+            ? ((T = (0, i.jsx)(g.A.Channel, { channel: U })),
               (t = (0, i.jsxs)("span", {
-                  className: T.FA,
+                  className: b.FA,
                   children: [
-                      b.intl.format(b.t["2wimj5"], { guildName: j.name }),
+                      v.intl.format(v.t["2wimj5"], { guildName: j.name }),
                       (0, i.jsx)("span", {
-                          className: T.E3,
+                          className: b.E3,
                           children: (0, i.jsx)(p.A, { guild: j, isBannerVisible: !1 }),
                       }),
                   ],
               })))
-            : (null != D && D >= 5) || (null != w && w > 0)
-              ? (t = (0, i.jsx)(g.A.Data, { members: D, membersOnline: w }))
-              : B && (t = (0, i.jsx)(g.A.Channel, { channel: U, guild: j })),
+            : (null != D && D >= 5) || (null != k && k > 0)
+              ? (t = (0, i.jsx)(g.A.Data, { members: D, membersOnline: k }))
+              : G && (t = (0, i.jsx)(g.A.Channel, { channel: U, guild: j })),
         (0, i.jsxs)(g.A, {
             children: [
                 (0, i.jsx)(g.A.GuildSplash, { guild: j }),
-                (0, i.jsx)(g.A.Header, { text: ee, extra: S }),
+                (0, i.jsx)(g.A.Header, { text: ee, extra: y }),
                 (0, i.jsxs)(g.A.Body, {
                     children: [
                         (0, i.jsxs)("div", {
-                            className: T.iH,
+                            className: b.iH,
                             children: [
                                 (0, i.jsx)(g.A.Icon, { guild: j }),
-                                (0, i.jsx)(g.A.Info, { title: v, onClick: Z, children: t }),
+                                (0, i.jsx)(g.A.Info, { title: T, onClick: Z, children: t }),
                             ],
                         }),
                         (0, i.jsx)("div", {
-                            className: T.UD,
+                            className: b.UD,
                             children: (0, i.jsx)(d.Button, {
                                 onClick: $,
-                                loading: k,
+                                loading: O,
                                 variant: "active",
                                 fullWidth: V,
                                 disabled: !X,
                                 text: V
                                     ? F
-                                        ? b.intl.string(b.t["7vb2cc"])
-                                        : b.intl.string(b.t.gpqgah)
-                                    : G
-                                      ? b.intl.string(b.t.cEnaWx)
-                                      : b.intl.string(b.t.XpeFYr),
+                                        ? v.intl.string(v.t["7vb2cc"])
+                                        : v.intl.string(v.t.gpqgah)
+                                    : B
+                                      ? v.intl.string(v.t.cEnaWx)
+                                      : v.intl.string(v.t.XpeFYr),
                             }),
                         }),
                     ],
                 }),
-                j.features.has(I.GuildFeatures.HUB) &&
+                j.features.has(E.GuildFeatures.HUB) &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsx)("div", { className: T.me }),
+                            (0, i.jsx)("div", { className: b.me }),
                             (0, i.jsx)(d.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: b.intl.format(b.t["/o1IfA"], {
+                                children: v.intl.format(v.t["/o1IfA"], {
                                     onClick: () =>
                                         (0, d.mMO)(async () => {
                                             let { default: e } = await n.e("98363").then(n.bind(n, 780086));

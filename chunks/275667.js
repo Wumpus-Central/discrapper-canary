@@ -3,10 +3,10 @@ n.d(t, { G: () => u });
 var i = n(627968),
     s = n(311907),
     l = n(397927),
-    r = n(253932),
-    a = n(461213),
+    a = n(253932),
+    r = n(461213),
     o = n(985018),
-    c = n(73187);
+    c = n(407709);
 function d(e) {
     let { onClick: t } = e;
     return (0, i.jsx)(l.DUT, {
@@ -22,7 +22,7 @@ function d(e) {
 }
 function u(e) {
     let { onClick: t } = e,
-        n = r.tz.useSetting(),
-        o = (0, s.bG)([a.A], () => a.A.getStatus());
+        n = a.tz.useSetting(),
+        o = (0, s.bG)([r.A], () => r.A.getStatus());
     return __OVERLAY__ || (n && o !== l.clD.INVISIBLE) ? null : (0, i.jsx)(d, { onClick: t });
 }

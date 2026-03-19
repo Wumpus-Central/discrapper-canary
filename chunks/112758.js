@@ -9,8 +9,8 @@ n.d(t, {
     T0: () => N,
     UY: () => k,
     U_: () => H,
-    VL: () => M,
-    Yq: () => w,
+    VL: () => w,
+    Yq: () => M,
     m: () => y,
     r4: () => D,
     ri: () => U,
@@ -86,10 +86,10 @@ function R(e, t) {
 function P(e, t) {
     return L(b("referencedAvatarProfile", e, t));
 }
-function w(e, t) {
+function M(e, t) {
     return L(b("interactionAvatarProfile", e, t));
 }
-function M(e, t, a, o) {
+function w(e, t, a, o) {
     let { id: d } = t,
         { id: u, flags: p } = e,
         A = (0, l.Lt)(p, v.pr7.EPHEMERAL),
@@ -122,12 +122,12 @@ function M(e, t, a, o) {
                             n.e("3795"),
                             n.e("91139"),
                             n.e("3183"),
-                            n.e("22"),
+                            n.e("5709"),
                             n.e("24202"),
                             n.e("7562"),
                             n.e("5873"),
                             n.e("1636"),
-                            n.e("24172"),
+                            n.e("9148"),
                         ]).then(n.bind(n, 547983));
                         return (n) =>
                             (0, i.jsx)(e, { ...n, message: l, channel: r, mediaItem: t, shouldHideMediaOptions: o });

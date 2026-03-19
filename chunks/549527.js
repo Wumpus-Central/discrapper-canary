@@ -17,31 +17,31 @@ var i = n(627968),
     x = n(643204),
     f = n(535421),
     C = n(112758),
-    E = n(754459),
-    I = n(538355),
-    b = n(699352),
-    T = n(378570),
-    v = n(138298),
-    S = n(253932),
-    y = n(761640),
+    I = n(754459),
+    E = n(538355),
+    v = n(699352),
+    b = n(378570),
+    T = n(138298),
+    y = n(253932),
+    S = n(761640),
     N = n(734057),
     j = n(540999),
     L = n(71393),
     R = n(576705),
     P = n(994500),
     M = n(309010),
-    O = n(287809),
+    w = n(287809),
     D = n(954571),
-    w = n(709634),
-    k = n(652215),
+    k = n(709634),
+    O = n(652215),
     U = n(381941),
-    G = n(618231);
-function B(e) {
+    B = n(8185);
+function G(e) {
     let { message: t, snapshot: n, index: c } = e,
         _ = r.useMemo(() => new u.j(t, n, c), [t, n, c]),
         h = (0, l.bG)(
-            [N.A, O.default, P.A, R.A, L.A, m.A],
-            () => _.getForwardInfo(N.A, O.default, P.A, R.A, L.A, m.A).footerInfo,
+            [N.A, w.default, P.A, R.A, L.A, m.A],
+            () => _.getForwardInfo(N.A, w.default, P.A, R.A, L.A, m.A).footerInfo,
             [_],
             s.A,
         ),
@@ -50,15 +50,15 @@ function B(e) {
                 n = L.A.getGuild(e?.guild_id),
                 i = t.messageReference?.channel_id,
                 r = M.A.getCurrentlySelectedChannelId(),
-                a = y.Ay.getCurrentSidebarChannelId(t.messageReference?.channel_id),
+                a = S.Ay.getCurrentSidebarChannelId(t.messageReference?.channel_id),
                 l = r === i && a === e?.id;
             null == e ||
                 null == n ||
                 l ||
                 null == i ||
-                (v.A.openModReportAsSidebar({ channelId: e.id, baseChannelId: i, guildId: e.guild_id }),
-                (0, T.iN)(i),
-                D.default.track(k.HAw.MODERATOR_REPORT_ORIGINAL_MESSAGE_LINK_CLICKED, {
+                (T.A.openModReportAsSidebar({ channelId: e.id, baseChannelId: i, guildId: e.guild_id }),
+                (0, b.iN)(i),
+                D.default.track(O.HAw.MODERATOR_REPORT_ORIGINAL_MESSAGE_LINK_CLICKED, {
                     moderator_report_id: t.channel_id,
                     destination_channel_id: i,
                     destination_message_id: t.id,
@@ -67,15 +67,15 @@ function B(e) {
     return null == h
         ? null
         : (0, i.jsxs)(d.DUT, {
-              className: G.xQ,
+              className: B.xQ,
               onClick: p,
               "aria-label": h.accessibilityLabel,
               children: [
                   null != h.originIconUrl
-                      ? (0, i.jsx)("img", { className: G.yl, src: h.originIconUrl, alt: "" })
+                      ? (0, i.jsx)("img", { className: B.yl, src: h.originIconUrl, alt: "" })
                       : null,
                   (0, i.jsx)(a.EYj, {
-                      className: G.PJ,
+                      className: B.PJ,
                       variant: "text-sm/medium",
                       color: "none",
                       children: `${h.originLabel}  •  ${h.timestampLabel}`,
@@ -94,7 +94,7 @@ function F(e) {
             showUsernamePopout: _,
             showAvatarPopout: m,
         } = (function (e, t) {
-            let { popouts: n, setPopout: i } = (0, E.A)(e.id, U.Fd),
+            let { popouts: n, setPopout: i } = (0, I.A)(e.id, U.Fd),
                 { usernameProfile: a, avatarProfile: l } = n,
                 s = (0, C.m)(e, t, a, i);
             return {
@@ -109,7 +109,7 @@ function F(e) {
             };
         })(t, a);
     return (0, i.jsx)(g.A, {
-        childrenExecutedCommand: (0, i.jsx)(w.A, {
+        childrenExecutedCommand: (0, i.jsx)(k.A, {
             reportingUserId: l,
             guildId: a.guild_id,
             channel: a,
@@ -135,7 +135,7 @@ function F(e) {
         childrenMessageContent: (0, i.jsx)(A.Ay, { message: t, content: n, compact: !1 }),
         disableInteraction: !0,
         compact: !1,
-        className: G.iU,
+        className: B.iU,
         author: o,
     });
 }
@@ -154,15 +154,15 @@ function H(e) {
             let e = (0, _.A)(t, n);
             return null != s && n?.moderatorReport?.reported_user_id != null ? e.set("author", s) : e;
         }, [t, n, s]),
-        u = S.hD.useSetting(),
-        m = S.rs.useSetting(),
+        u = y.hD.useSetting(),
+        m = y.rs.useSetting(),
         p = (0, l.bG)([j.A], () => j.A.isDeveloper),
         g = (0, h.S)((d.editedTimestamp ?? d.timestamp).valueOf()),
         {
             content: A,
             hasSpoilerEmbeds: x,
             hasBailedAst: f,
-        } = (0, I.A)(d, {
+        } = (0, E.A)(d, {
             hideSimpleEmbedContent: u && m,
             isInteracting: !1,
             formatInline: !1,
@@ -178,9 +178,9 @@ function H(e) {
         : (0, i.jsx)(
               "div",
               {
-                  className: G.kL,
+                  className: B.kL,
                   children: (0, i.jsxs)("div", {
-                      className: G.Qs,
+                      className: B.Qs,
                       children: [
                           (0, i.jsx)(F, {
                               mergedMessageRecord: d,
@@ -189,16 +189,16 @@ function H(e) {
                               reportingUserId: n?.moderatorReport?.reporting_user_id,
                               reportedTimestamp: t.timestamp,
                           }),
-                          (0, b.A)({
+                          (0, v.A)({
                               channelMessageProps: { message: d, channel: C, compact: !1 },
                               hasSpoilerEmbeds: x,
                               hasBailedAst: f,
                               isInteracting: !1,
                               isMessageSnapshot: !0,
                               renderThreadAccessory: !1,
-                              className: G.Mf,
+                              className: B.Mf,
                           }),
-                          (0, i.jsx)(B, { message: t, snapshot: n, index: a }),
+                          (0, i.jsx)(G, { message: t, snapshot: n, index: a }),
                       ],
                   }),
               },

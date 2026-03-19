@@ -1,8 +1,8 @@
 n.d(t, { A: () => v });
 var i = n(627968),
-    r = n(64700),
-    l = n(503698),
-    a = n.n(l),
+    a = n(64700),
+    r = n(503698),
+    l = n.n(r),
     s = n(837381),
     o = n(311907),
     d = n(201275),
@@ -20,14 +20,14 @@ var i = n(627968),
     C = n(734057),
     T = n(661191),
     N = n(652215),
-    S = n(456107),
-    x = n(119907);
-let v = r.memo(function (e) {
+    S = n(480437),
+    x = n(50397);
+let v = a.memo(function (e) {
     let {
             message: t,
             className: n,
-            onContextMenu: r,
-            onClick: l,
+            onContextMenu: a,
+            onClick: r,
             hideSimpleEmbedContent: v = !0,
             channel: y,
             isGroupStart: b,
@@ -37,16 +37,16 @@ let v = r.memo(function (e) {
             ...P
         } = e,
         D = t.type === N.lAJ.POLL_RESULT || (e.disableInteraction ?? !1),
-        j = t.isFirstMessageInForumPost(y),
-        M = (0, c.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
+        M = t.isFirstMessageInForumPost(y),
+        j = (0, c.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
         {
             content: w,
             hasSpoilerEmbeds: U,
             hasBailedAst: G,
         } = (0, m.A)(t, {
             hideSimpleEmbedContent: v,
-            allowList: j || M,
-            allowHeading: j || M,
+            allowList: M || j,
+            allowHeading: M || j,
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
@@ -61,7 +61,7 @@ let v = r.memo(function (e) {
         Y = (0, _.ZD)(t);
     return (0, i.jsx)(h.A, {
         compact: !1,
-        className: a()(n, S.i, { [x.M1]: (0, u.ec)(t), [x.XN]: D }),
+        className: l()(n, S.i, { [x.M1]: (0, u.ec)(t), [x.XN]: D }),
         disableInteraction: D,
         childrenExecutedCommand: (0, f.A)(t, y, !1),
         childrenHeader: (0, E.A)({
@@ -79,8 +79,8 @@ let v = r.memo(function (e) {
         childrenAccessories: e.hideAccessories ? void 0 : (0, g.J)(e, U, G),
         childrenMessageContent: (0, p.A)(e, w),
         childrenSystemMessage: (0, I.A)({ ...e, disableInteraction: D }),
-        onContextMenu: r,
-        onClick: l,
+        onContextMenu: a,
+        onClick: r,
         hasThread: R && null != B && t.hasFlag(N.pr7.HAS_THREAD),
         hasReply: !1,
         "aria-labelledby": F,

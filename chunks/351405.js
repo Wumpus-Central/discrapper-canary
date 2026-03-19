@@ -1,4 +1,4 @@
-n.d(t, { P: () => S }), n(321073);
+n.d(t, { P: () => y }), n(321073);
 var i = n(627968),
     r = n(64700),
     a = n(311907),
@@ -17,11 +17,11 @@ var i = n(627968),
     x = n(125017),
     f = n(104171),
     C = n(13403),
-    E = n(536189),
-    I = n(652215),
-    b = n(272984),
-    T = n(609653);
-function v(e) {
+    I = n(536189),
+    E = n(652215),
+    v = n(272984),
+    b = n(62323);
+function T(e) {
     let { partyMembers: t, partySize: n, maxPartySize: r, guildId: a, activityActionType: s } = e,
         o = Math.max(n, t.length),
         d = (0, g.SJ)({ maxPartySize: r, partySize: o, activityActionType: s }),
@@ -29,7 +29,7 @@ function v(e) {
     for (; c.length < n && c.length < 8; ) c.push(f.mt);
     for (; c.length < r && c.length < 8; ) c.push(null);
     return (0, i.jsxs)("div", {
-        className: T.UF,
+        className: b.UF,
         children: [
             c.length > 0 &&
                 (0, i.jsx)(f.Ay, {
@@ -43,12 +43,12 @@ function v(e) {
         ],
     });
 }
-function S(e) {
-    let { analyticsLocations: t, app: n, channel: l, message: g, hideParty: T, onView: S } = e,
-        y = (0, s.b)(n),
+function y(e) {
+    let { analyticsLocations: t, app: n, channel: l, message: g, hideParty: b, onView: y } = e,
+        S = (0, s.b)(n),
         N = (0, a.bG)([c.default], () => c.default.getId()),
         j = (0, a.bG)([m.A], () => {
-            if (null == g.application) return m.A.findActivity(g.author.id, (e) => e.type === I.$pd.LISTENING);
+            if (null == g.application) return m.A.findActivity(g.author.id, (e) => e.type === E.$pd.LISTENING);
             {
                 let e = g.author.id;
                 return (
@@ -57,14 +57,14 @@ function S(e) {
                 );
             }
         }, [g, l, N]),
-        L = (0, a.bG)([_.A, h.A], () => _.A.getApplicationActivity(y.id) ?? h.A.getApplicationActivity(y.id, !0), [
-            y.id,
+        L = (0, a.bG)([_.A, h.A], () => _.A.getApplicationActivity(S.id) ?? h.A.getApplicationActivity(S.id, !0), [
+            S.id,
         ]),
         R = (0, a.yK)([u.A], () => (null == j || null == j.party ? [] : Array.from(u.A.getParty(j.party.id) ?? [])), [
             j,
         ]),
         { partySize: P, maxPartySize: M } = (0, x._)(j),
-        O = r.useMemo(
+        w = r.useMemo(
             () =>
                 R.map((e) => {
                     let t = p.default.getUser(e);
@@ -74,37 +74,37 @@ function S(e) {
         ),
         D = r.useMemo(
             () =>
-                (0, i.jsx)(v, {
-                    partyMembers: O,
+                (0, i.jsx)(T, {
+                    partyMembers: w,
                     partySize: P,
                     maxPartySize: M,
                     guildId: l.guild_id,
                     activityActionType: g.activity?.type,
                 }),
-            [O, P, M, l.guild_id, g.activity?.type],
+            [w, P, M, l.guild_id, g.activity?.type],
         );
-    return (0, b.pH)(j?.party?.id) || y.id === d.HT.id
-        ? (0, i.jsx)(E.A, {
-              application: y,
+    return (0, v.pH)(j?.party?.id) || S.id === d.HT.id
+        ? (0, i.jsx)(I.A, {
+              application: S,
               currentUserPresenceActivity: L,
-              hideParty: T,
+              hideParty: b,
               message: g,
-              onView: S,
+              onView: y,
               partyStatusElement: D,
               presenceActivity: j,
               guildId: l.guild_id,
           })
-        : g.activity?.type === I.xL.STREAM_REQUEST
-          ? (0, i.jsx)(o.A, { analyticsLocations: t, application: y, channel: l, currentUserId: N, message: g })
+        : g.activity?.type === E.xL.STREAM_REQUEST
+          ? (0, i.jsx)(o.A, { analyticsLocations: t, application: S, channel: l, currentUserId: N, message: g })
           : (0, i.jsx)(C.A, {
                 analyticsLocations: t,
-                application: y,
+                application: S,
                 channel: l,
                 currentUserId: N,
                 currentUserPresenceActivity: L,
-                hideParty: T,
+                hideParty: b,
                 message: g,
-                onView: S,
+                onView: y,
                 partyStatusElement: D,
                 presenceActivity: j,
             });

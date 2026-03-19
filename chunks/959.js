@@ -8,7 +8,7 @@ var r = n(627968),
     l = n(342296),
     u = n(544028),
     c = n(562153),
-    d = n(899959);
+    d = n(434673);
 function _(e) {
     let { participants: t, channel: i } = e;
     return (0, r.jsx)(s.HOs, {
@@ -27,7 +27,7 @@ function _(e) {
                                 n.e("97262"),
                                 n.e("3795"),
                                 n.e("32418"),
-                                n.e("75351"),
+                                n.e("4827"),
                             ]).then(n.bind(n, 668569));
                             return (n) => (0, r.jsx)(t, { ...n, user: e });
                         });

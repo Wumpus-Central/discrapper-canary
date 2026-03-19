@@ -3,8 +3,8 @@ n.d(t, { A: () => b });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(311907),
+    a = n.n(l),
+    r = n(311907),
     o = n(397927),
     c = n(793574),
     d = n(652793),
@@ -12,13 +12,13 @@ var i = n(627968),
     h = n(186111),
     A = n(942975),
     m = n(379229),
-    p = n(489306),
-    g = n(828162),
+    g = n(489306),
+    p = n(828162),
     _ = n(249584),
     f = n(49999),
-    x = n(333354),
+    x = n(136708),
     C = n(985018),
-    E = n(408392);
+    E = n(14714);
 function I(e) {
     let { indicator: t } = e;
     if (null == t) return null;
@@ -34,15 +34,15 @@ function I(e) {
 let N = { animation: { BEG: 0, END: 75 }, LOOP: { BEG: 76, END: 376 } },
     b = s.memo(function (e) {
         let { guildId: t, selected: l } = e,
-            b = (0, p.Ay)(t),
+            b = (0, g.Ay)(t),
             S = s.useCallback(() => {
                 (0, A.Zm)(t),
-                    (0, g.A)(t, c.A.GUILD_POWERUPS_CHANNEL_LIST_ROW),
+                    (0, p.A)(t, c.A.GUILD_POWERUPS_CHANNEL_LIST_ROW),
                     b?.popout?.markAsDismissed(f.i.INDIRECT_ACTION);
             }, [t, b]),
             T = s.useRef(null),
             v = (0, o.red)(o.DXt),
-            y = (0, a.bG)([h.A], () => h.A.hasLayers()),
+            y = (0, r.bG)([h.A], () => h.A.hasLayers()),
             j = (0, u.xr)((e) => e.fullScreenLayers.length > 0),
             R = v || y || j,
             O = s.useCallback(() => {
@@ -97,7 +97,7 @@ let N = { animation: { BEG: 0, END: 75 }, LOOP: { BEG: 76, END: 376 } },
                             }),
                         }),
                     text: (0, i.jsx)("span", {
-                        className: r()({ [E.A7]: b?.showUnread === !0 }),
+                        className: a()({ [E.A7]: b?.showUnread === !0 }),
                         children: C.intl.string(x.default.yv3DJJ),
                     }),
                     selected: l,

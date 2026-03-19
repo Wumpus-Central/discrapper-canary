@@ -1,8 +1,8 @@
 n.d(t, { A: () => f });
 var i = n(627968),
-    r = n(64700),
-    l = n(503698),
-    a = n.n(l),
+    a = n(64700),
+    r = n(503698),
+    l = n.n(r),
     s = n(621466),
     o = n(311907),
     d = n(397927),
@@ -14,9 +14,9 @@ var i = n(627968),
     m = n(715671),
     g = n(652215),
     p = n(985018),
-    E = n(75755);
-class I extends r.Component {
-    searchBarRef = r.createRef();
+    E = n(560125);
+class I extends a.Component {
+    searchBarRef = a.createRef();
     state = { focused: !1 };
     componentDidMount() {
         document.addEventListener("keydown", this.handleKeyDown);
@@ -34,28 +34,28 @@ class I extends r.Component {
     updateActiveRow(e) {
         let { applicationViewItems: t, activeRowKey: n } = this.props,
             i = t.findIndex((e) => e.key === n),
-            r = 0;
-        i >= 0 && (r = (i + e) % t.length) < 0 && (r = t.length - 1);
-        let l = t[r];
-        u.pU(null != l ? l.key : null, !0);
+            a = 0;
+        i >= 0 && (a = (i + e) % t.length) < 0 && (a = t.length - 1);
+        let r = t[a];
+        u.pU(null != r ? r.key : null, !0);
     }
     handleKeyDown = (e) => {
         let { activeRowKey: t, hasModalOpen: n, applicationViewItems: i } = this.props,
-            { searchBarRef: r } = this;
-        if (n || e.ctrlKey || e.altKey || e.metaKey || null == r) return;
-        let l = (0, s.BF)(e)?.activeElement;
-        if (!(l !== r.current && (0, s.Cw)(l)))
+            { searchBarRef: a } = this;
+        if (n || e.ctrlKey || e.altKey || e.metaKey || null == a) return;
+        let r = (0, s.BF)(e)?.activeElement;
+        if (!(r !== a.current && (0, s.Cw)(r)))
             switch (e.which) {
                 case g.Ks6.ESCAPE:
-                    e.target !== r.current ? this.reset() : null != r.current && r.current?.blur();
+                    e.target !== a.current ? this.reset() : null != a.current && a.current?.blur();
                     break;
                 case g.Ks6.ENTER:
                     if (null != t) {
                         e.preventDefault();
                         let n = i.find((e) => e.key === t);
                         if (null == n) return;
-                        let r = n.libraryApplication;
-                        m.performDefaultLibraryApplicationAction(r, {
+                        let a = n.libraryApplication;
+                        m.performDefaultLibraryApplicationAction(a, {
                             analyticsParams: {
                                 source: g.ThZ.APPLICATION_LIBRARY,
                                 location: {
@@ -74,14 +74,14 @@ class I extends r.Component {
                         this.updateActiveRow(e.which === g.Ks6.ARROW_DOWN ? 1 : -1);
                     break;
                 default:
-                    null != r.current && e.target !== r.current && r.current?.focus();
+                    null != a.current && e.target !== a.current && a.current?.focus();
             }
     };
     render() {
         let { filterQuery: e } = this.props,
             { focused: t } = this.state;
         return (0, i.jsx)("div", {
-            className: a()({ [E.sw]: !0, [E.in]: t }),
+            className: l()({ [E.sw]: !0, [E.in]: t }),
             children: (0, i.jsx)(d.IWV, {
                 ref: this.searchBarRef,
                 onChange: u.n9,

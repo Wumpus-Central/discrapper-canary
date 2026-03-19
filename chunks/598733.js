@@ -6,15 +6,15 @@ var i = n(627968),
     a = n(311907),
     o = n(421380),
     c = n(397927),
-    d = n(686956),
-    u = n(976860),
+    u = n(686956),
+    d = n(976860),
     _ = n(71393),
     E = n(967198),
     T = n(449054),
     A = n(652215),
     I = n(985018),
-    p = n(163677),
-    N = n(1624);
+    p = n(231667),
+    N = n(504226);
 let m = () => {
     let e = (0, a.bG)([E.A], () => E.A.getGuildId(), []),
         t = (0, a.bG)([_.A], () => _.A.getGuild(e), [e]),
@@ -23,7 +23,7 @@ let m = () => {
     let m = async () => {
         r(!0);
         try {
-            T.cf(t.id), await d.A.joinGuild(t.id, { source: A.Q4z.NOTICE_BAR });
+            T.cf(t.id), await u.A.joinGuild(t.id, { source: A.Q4z.NOTICE_BAR });
         } catch {
             r(!1);
         }
@@ -38,7 +38,7 @@ let m = () => {
                 className: s()(p.x6, p.aX),
                 innerClassName: p.gb,
                 onClick: () => {
-                    (0, u.JK)().goBack();
+                    (0, d.JK)().goBack();
                 },
                 children: [
                     (0, i.jsx)(c.rJJ, { size: "xs", color: "currentColor", className: p.UE }),

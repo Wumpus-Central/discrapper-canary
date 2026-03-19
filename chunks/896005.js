@@ -2,32 +2,32 @@ n.d(t, { A: () => u });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(397927),
+    a = n.n(l),
+    r = n(397927),
     o = n(641324),
-    d = n(702421);
+    d = n(97291);
 function c(e) {
     let { title: t, subtitle: n, isHiddenVisually: s } = e;
     return null == t || "" === t
         ? null
         : s
-          ? (0, i.jsx)(a.AC4, { tag: "legend", children: t })
-          : (0, i.jsx)(a.Text, {
+          ? (0, i.jsx)(r.AC4, { tag: "legend", children: t })
+          : (0, i.jsx)(r.Text, {
                 tag: "legend",
                 variant: "text-md/semibold",
                 color: "text-strong",
-                className: r()(d.DD, { [d.h0]: null != n && "" !== n }),
+                className: a()(d.DD, { [d.h0]: null != n && "" !== n }),
                 children: t,
             });
 }
 let u = s.memo(function (e) {
     let { node: t } = e,
-        { useTitle: n, useSubtitle: l, layout: r, variant: u = "default", isTitleHiddenVisually: _ } = t,
+        { useTitle: n, useSubtitle: l, layout: a, variant: u = "default", isTitleHiddenVisually: _ } = t,
         m = n(),
         g = l?.(),
         A = s.useId(),
-        h = null != m && "" !== m,
-        x = null != g && "" !== g,
+        x = null != m && "" !== m,
+        h = null != g && "" !== g,
         p = (function (e) {
             switch (e) {
                 case "default":
@@ -37,11 +37,11 @@ let u = s.memo(function (e) {
             }
         })(u);
     return (0, i.jsxs)("fieldset", {
-        "aria-describedby": x ? A : void 0,
+        "aria-describedby": h ? A : void 0,
         children: [
             (0, i.jsx)(c, { title: m, subtitle: g, isHiddenVisually: _ }),
-            x
-                ? (0, i.jsx)(a.Text, {
+            h
+                ? (0, i.jsx)(r.Text, {
                       variant: "text-sm/normal",
                       color: "text-default",
                       id: A,
@@ -49,10 +49,10 @@ let u = s.memo(function (e) {
                       children: g,
                   })
                 : null,
-            (0, i.jsx)(a.BJc, {
+            (0, i.jsx)(r.BJc, {
                 gap: p,
-                padding: { top: h && !_ ? 16 : 0 },
-                children: r.map((e) => (0, i.jsx)(o.A, { node: e }, e.key)),
+                padding: { top: x && !_ ? 16 : 0 },
+                children: a.map((e) => (0, i.jsx)(o.A, { node: e }, e.key)),
             }),
         ],
     });

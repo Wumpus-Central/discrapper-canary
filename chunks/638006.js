@@ -1,4 +1,4 @@
-r.d(e, { A: () => y });
+r.d(e, { A: () => _ });
 var i = r(627968),
     n = r(503698),
     l = r.n(n),
@@ -15,10 +15,10 @@ var i = r(627968),
     g = r(561769),
     C = r(846957),
     h = r(929283),
-    I = r(245068),
-    f = r(761365),
+    f = r(245068),
+    I = r(761365),
     k = r(550674),
-    v = r(8056);
+    v = r(998918);
 let j = (t) => {
         let { product: e, isCardHovered: r, showDefaultAvatar: n, disableAnimation: a } = t,
             u = (0, p.YW)(e),
@@ -28,18 +28,18 @@ let j = (t) => {
             children: [
                 (0, i.jsx)("div", {
                     className: l()(v.mA, { [v.zj]: (o || d) && !r, [v.Ge]: c }),
-                    children: (0, i.jsx)(T, {
+                    children: (0, i.jsx)(E, {
                         product: e,
                         isCardHovered: r,
                         showDefaultAvatar: n,
                         disableAnimation: a,
                     }),
                 }),
-                o && (0, i.jsx)(E, { hidden: r }),
+                o && (0, i.jsx)(T, { hidden: r }),
             ],
         });
     },
-    T = (t) => {
+    E = (t) => {
         let { product: e, isCardHovered: r, showDefaultAvatar: n, disableAnimation: l } = t,
             a = (0, u.bG)([c.default], () => c.default.getCurrentUser()),
             A = (0, p.YW)(e),
@@ -58,9 +58,9 @@ let j = (t) => {
                     avatarSize: o._3J.SIZE_120,
                 });
             case s.R.NAMEPLATE:
-                return (0, i.jsx)(f.A, { nameplate: m, user: a, isHighlighted: x, showDefaultAvatar: n });
+                return (0, i.jsx)(I.A, { nameplate: m, user: a, isHighlighted: x, showDefaultAvatar: n });
             case s.R.BUNDLE:
-                return (0, i.jsx)(I.X, {
+                return (0, i.jsx)(f.X, {
                     product: e,
                     user: a,
                     isHighlighted: x,
@@ -73,7 +73,7 @@ let j = (t) => {
                 return null;
         }
     },
-    E = (t) => {
+    T = (t) => {
         let { hidden: e } = t;
         return (0, i.jsx)(a.rOg, {
             size: "custom",
@@ -83,7 +83,7 @@ let j = (t) => {
             className: l()(v.zo, { [v.R]: e }),
         });
     },
-    y = (t) => {
+    _ = (t) => {
         let { skuId: e, isCardHovered: r, overrideVariantIndex: n } = t,
             l = (0, g.Vm)(e),
             s = (0, A.Q)(l),

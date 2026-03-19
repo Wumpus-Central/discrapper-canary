@@ -10,7 +10,7 @@ var i = n(627968),
     c = n(287809),
     u = n(260451),
     h = n(985018),
-    _ = n(36522);
+    _ = n(290616);
 function p(e) {
     let { friendMemberIds: t, className: n, avatarSize: r = o._3J.SIZE_16 } = e,
         p = (0, a.yK)([c.default], () =>

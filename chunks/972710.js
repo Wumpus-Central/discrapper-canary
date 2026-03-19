@@ -12,8 +12,8 @@ var i = n(627968),
     m = n(384904),
     g = n(793574),
     A = n(688810),
-    h = n(701273),
-    x = n(780964),
+    x = n(701273),
+    h = n(780964),
     p = n(840065),
     T = n(287809),
     E = n(954571),
@@ -23,7 +23,7 @@ var i = n(627968),
     b = n(652215),
     N = n(601107),
     I = n(985018),
-    v = n(141384);
+    v = n(20966);
 let j = [b.Dmq.PAST_DUE, b.Dmq.ACCOUNT_HOLD, b.Dmq.BILLING_RETRY],
     y = (e) => {
         let { transitionState: t, onClose: n, subscription: l, analyticsLocations: a, analyticsLocation: r } = e,
@@ -49,7 +49,7 @@ let j = [b.Dmq.PAST_DUE, b.Dmq.ACCOUNT_HOLD, b.Dmq.BILLING_RETRY],
                     g(!0), d(!1);
                 }
             },
-            h = [
+            x = [
                 { text: I.intl.string(I.t.oEAioF), onClick: () => n(), variant: "secondary" },
                 {
                     text: I.intl.string(I.t["cY+Oob"]),
@@ -64,7 +64,7 @@ let j = [b.Dmq.PAST_DUE, b.Dmq.ACCOUNT_HOLD, b.Dmq.BILLING_RETRY],
             transitionState: t,
             title: I.intl.string(I.t.LZunzZ),
             subtitle: I.intl.string(I.t.FClXh9),
-            actions: h,
+            actions: x,
             onClose: async () => n(),
             children: u ? (0, i.jsx)(_.wx6, { type: "critical", children: I.intl.string(I.t["5mlOCW"]) }) : null,
         });
@@ -86,9 +86,9 @@ function R(e) {
         O = (0, C.A)({ location: "GuildBoostingHeader" });
     if (0 === (0, S.bx)(n.additionalPlans)) return null;
     let { status: P } = n,
-        D = (0, S.$k)(n),
-        L = O && !D && n.isBoostOnly && j.includes(n.status);
-    if (D) t = v.v2;
+        L = (0, S.$k)(n),
+        D = O && !L && n.isBoostOnly && j.includes(n.status);
+    if (L) t = v.v2;
     else
         switch (P) {
             case b.Dmq.PAST_DUE:
@@ -113,7 +113,7 @@ function R(e) {
                     (0, i.jsxs)("div", {
                         className: v.eC,
                         children: [
-                            (0, i.jsx)("div", { className: a()(v.Ab, { [v.aD]: D }) }),
+                            (0, i.jsx)("div", { className: a()(v.Ab, { [v.aD]: L }) }),
                             (0, i.jsx)("div", {
                                 children: (0, S.Uf)({
                                     subscription: n,
@@ -128,7 +128,7 @@ function R(e) {
                         (0, i.jsxs)("div", {
                             className: v.BQ,
                             children: [
-                                L &&
+                                D &&
                                     (0, i.jsx)("div", {
                                         className: v.x7,
                                         children: (0, i.jsx)(c.QWc, {
@@ -150,7 +150,7 @@ function R(e) {
                                         }),
                                     }),
                                 (0, i.jsx)(f.A, {
-                                    onClick: () => (0, p.openUserSettings)(x.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL),
+                                    onClick: () => (0, p.openUserSettings)(h.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL),
                                     text: I.intl.string(I.t["NQ5g/U"]),
                                 }),
                             ],
@@ -161,7 +161,7 @@ function R(e) {
                 (0, i.jsx)(_.Text, {
                     className: v.yW,
                     variant: "text-sm/normal",
-                    children: I.intl.format(d.Fr ? I.t.uxYBEa : I.t.k6haR9, { openAppHook: () => (0, h.A)("app") }),
+                    children: I.intl.format(d.Fr ? I.t.uxYBEa : I.t.k6haR9, { openAppHook: () => (0, x.A)("app") }),
                 }),
         ],
     });

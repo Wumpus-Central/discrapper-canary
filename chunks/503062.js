@@ -13,14 +13,14 @@ var i = n(627968),
     x = n(939496),
     p = n(652215),
     f = n(996988),
-    h = n(794904);
+    h = n(565702);
 let _ = s._3J.SIZE_40,
     A = (0, s.FT9)(_);
 function I(e) {
     let { user: t, status: I, guildId: j, channelId: v, onSelect: E } = e,
         { theme: T, themeType: b } = (0, x.E)(),
         N = l.useMemo(() => t.isNonUserBot() || (0, u.c)(t, v), [t, v]),
-        { activities: S, isMobileOnline: y } = (0, a.cf)([m.A], () => ({
+        { activities: y, isMobileOnline: S } = (0, a.cf)([m.A], () => ({
             activities: m.A.getActivities(t.id),
             isMobileOnline: m.A.isMobileOnline(t.id),
         })),
@@ -32,7 +32,7 @@ function I(e) {
         onClick: E,
         onContextMenu: (e) => {
             (0, r.L3)(e, async () => {
-                let { default: e } = await Promise.all([n.e("97262"), n.e("3795"), n.e("32418"), n.e("75351")]).then(
+                let { default: e } = await Promise.all([n.e("97262"), n.e("3795"), n.e("32418"), n.e("4827")]).then(
                     n.bind(n, 668569),
                 );
                 return (n) => (0, i.jsx)(e, { ...n, user: t });
@@ -45,14 +45,14 @@ function I(e) {
                 size: _,
                 status: N ? p.clD.UNKNOWN : I,
                 statusBackdropColor: N ? void 0 : (0, s.C$5)(T),
-                isMobile: y,
+                isMobile: S,
                 className: h.my,
             }),
             (0, i.jsxs)("div", {
                 className: h.zH,
                 children: [
                     (0, i.jsx)(o.A, { user: t, className: h.Tc, discriminatorClass: h.D2 }),
-                    (0, i.jsx)(c.A, { user: t, activities: S, applicationStream: C, voiceChannel: R }),
+                    (0, i.jsx)(c.A, { user: t, activities: y, applicationStream: C, voiceChannel: R }),
                 ],
             }),
         ],

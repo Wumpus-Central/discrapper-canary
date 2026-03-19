@@ -3,17 +3,17 @@ n.d(t, { A: () => D }), n(321073);
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(735438),
-    o = n.n(a),
+    a = n.n(l),
+    r = n(735438),
+    o = n.n(r),
     c = n(837381),
     d = n(311907),
     u = n(397927),
     h = n(928039),
     A = n(793574),
     m = n(688810),
-    p = n(222823),
-    g = n(203982),
+    g = n(222823),
+    p = n(203982),
     _ = n(661191),
     f = n(851109),
     x = n(932883),
@@ -24,9 +24,9 @@ var i = n(627968),
     b = n(524628),
     S = n(849077),
     T = n(652215),
-    v = n(228160),
+    v = n(21786),
     y = n(985018),
-    j = n(128354);
+    j = n(19e3);
 function R(e) {
     e.stopPropagation();
 }
@@ -35,7 +35,7 @@ function O(e) {
     return (0, i.jsx)(u.DUT, {
         "aria-expanded": n,
         onClick: s,
-        className: r()(j.TP, { [j.yZ]: !n }),
+        className: a()(j.TP, { [j.yZ]: !n }),
         children: (0, i.jsxs)(u.BJc, {
             gap: 4,
             direction: "horizontal",
@@ -45,7 +45,7 @@ function O(e) {
                     variant: "text-sm/medium",
                     color: "text-subtle",
                     className: j.P7,
-                    children: (0, a.capitalize)(y.intl.string(S.v7[t]).toLowerCase()),
+                    children: (0, r.capitalize)(y.intl.string(S.v7[t]).toLowerCase()),
                 }),
                 (0, i.jsx)(u.abt, { size: "xxs", className: j.ai }),
             ],
@@ -93,7 +93,7 @@ function D(e) {
         {
             messages: n,
             unreadMessages: l,
-            loadMore: a,
+            loadMore: r,
             renderLoadingState: A,
             renderMessageGroup: m,
             scrollerClassName: v,
@@ -115,14 +115,14 @@ function D(e) {
             hasLoadedEver: E.A.hasLoadedEver,
         })),
         K = !F && B,
-        { messageCategoryOpenStates: Y, toggleOpenState: W } = (0, C.A)(),
+        { messageCategoryOpenStates: W, toggleOpenState: Y } = (0, C.A)(),
         z =
             ((t = (0, d.yK)([E.A], () => E.A.getNotifyingChannelIds() ?? [])),
-            (0, d.bG)([E.A, p.Ay], () => {
+            (0, d.bG)([E.A, g.Ay], () => {
                 let e = E.A.getChannelInfoMap();
                 for (let n of t) {
                     let t = e[n];
-                    if ((null == t || t.loadState === S.Ve.UNLOADED) && p.Ay.hasUnread(n)) return !0;
+                    if ((null == t || t.loadState === S.Ve.UNLOADED) && g.Ay.hasUnread(n)) return !0;
                 }
                 return !1;
             }, [t]));
@@ -134,10 +134,10 @@ function D(e) {
             P.current?.scrollPageDown({ animate: !0 });
         }
         return (
-            g._.subscribe(T.jej.SCROLL_PAGE_DOWN, t),
-            g._.subscribe(T.jej.SCROLL_PAGE_UP, e),
+            p._.subscribe(T.jej.SCROLL_PAGE_DOWN, t),
+            p._.subscribe(T.jej.SCROLL_PAGE_UP, e),
             () => {
-                g._.unsubscribe(T.jej.SCROLL_PAGE_DOWN, t), g._.unsubscribe(T.jej.SCROLL_PAGE_UP, e);
+                p._.unsubscribe(T.jej.SCROLL_PAGE_DOWN, t), p._.unsubscribe(T.jej.SCROLL_PAGE_UP, e);
             }
         );
     }, []);
@@ -145,8 +145,8 @@ function D(e) {
             let e = P.current?.getScrollerState();
             if (null == e) return;
             let t = 0.5 * e.offsetHeight;
-            e.scrollHeight - (e.scrollTop + e.offsetHeight) <= t && a?.(S.VA.USER_SCROLL);
-        }, [a]),
+            e.scrollHeight - (e.scrollTop + e.offsetHeight) <= t && r?.(S.VA.USER_SCROLL);
+        }, [r]),
         X = s.useMemo(() => {
             let e = { [S.Ur.UNREAD]: [], [S.Ur.TODAY]: [], [S.Ur.YESTERDAY]: [], [S.Ur.OLDER]: [] },
                 t = { [S.Ur.UNREAD]: [], [S.Ur.TODAY]: [], [S.Ur.YESTERDAY]: [], [S.Ur.OLDER]: [] },
@@ -178,14 +178,14 @@ function D(e) {
                 e
             );
         }, [n, l]),
-        Q = 0 === n.length && 0 === l.length && H,
-        J = 0 === n.length && 0 === l.length && !F && B,
+        J = 0 === n.length && 0 === l.length && H,
+        Q = 0 === n.length && 0 === l.length && !F && B,
         $ = s.useMemo(() => {
             let e = [];
             return (
-                J
+                Q
                     ? e.push(A())
-                    : Q
+                    : J
                       ? e.push((0, i.jsx)(M, {}, "empty-state"))
                       : G
                         ? (e.push(...l.map((e) => m([e], !0))), e.push(...n.map((e) => m([e], !1))))
@@ -196,44 +196,44 @@ function D(e) {
                                           O,
                                           {
                                               group: t,
-                                              isOpen: Y[t],
+                                              isOpen: W[t],
                                               toggleOpenedState: () => {
-                                                  let e = Y[t];
-                                                  W(t), (0, x.Ut)({ section: t, enabled: !e, viewId: U });
+                                                  let e = W[t];
+                                                  Y(t), (0, x.Ut)({ section: t, enabled: !e, viewId: U });
                                               },
                                           },
                                           t,
                                       ),
                                   ),
-                                  Y[t] && e.push(...X[t].map((e) => m(e, t === S.Ur.UNREAD))));
+                                  W[t] && e.push(...X[t].map((e) => m(e, t === S.Ur.UNREAD))));
                           }),
                 e
             );
-        }, [n, l, A, Y, W, X, G, m, Q, J, U]),
+        }, [n, l, A, W, Y, X, G, m, J, Q, U]),
         Z = $[$.length - 1],
         ee = s.isValidElement(Z) && Z.type === O,
         et = (0, N.S)((e) => e.setInboxReadState);
     s.useEffect(() => {
-        J || et(0 === X.UNREAD.length);
-    }, [X, J, et]);
-    let en = (n.length > 0 || l.length > 0) && null != a && B;
+        Q || et(0 === X.UNREAD.length);
+    }, [X, Q, et]);
+    let en = (n.length > 0 || l.length > 0) && null != r && B;
     !(function (e) {
         let { loadingInitial: t, messagesByCategory: n } = e,
             i = s.useRef(!1),
             l = n.UNREAD.length > 0,
-            { setOpenStateFromUnreads: r } = (0, C.A)();
+            { setOpenStateFromUnreads: a } = (0, C.A)();
         s.useEffect(() => {
-            t || i.current || (r(l), (i.current = !0));
-        }, [r, l, t]);
+            t || i.current || (a(l), (i.current = !0));
+        }, [a, l, t]);
     })({ messagesByCategory: X, loadingInitial: K });
     let ei = s.useCallback(() => {
-        let e = L.filter((e) => Y[e]).reduce((e, t) => e + X[t].length, 0),
+        let e = L.filter((e) => W[e]).reduce((e, t) => e + X[t].length, 0),
             t = P.current?.getScrollerState();
         return null == t ? 0 : Math.max(0, Math.ceil(t.offsetHeight / 64) - e);
-    }, [Y, X]);
+    }, [W, X]);
     s.useEffect(() => {
-        J || B || 0 >= ei() || ((!ee || z) && a?.(S.VA.FILL_SCROLLER));
-    }, [ei, a, J, B, ee, z]);
+        Q || B || 0 >= ei() || ((!ee || z) && r?.(S.VA.FILL_SCROLLER));
+    }, [ei, r, Q, B, ee, z]);
     let es = s.useMemo(() => {
         let e = Math.min(Math.max(2, ei()), 20);
         return (0, i.jsx)(b.A, { withHeader: !1, size: e });
@@ -248,7 +248,7 @@ function D(e) {
             viewId: U,
         }),
         (0, i.jsx)("div", {
-            className: r()(y, j.KQ),
+            className: a()(y, j.KQ),
             onClick: R,
             onDoubleClick: R,
             "aria-label": e["aria-label"],
@@ -261,7 +261,7 @@ function D(e) {
                             ref: (e) => {
                                 (P.current = e), (t.current = e?.getScrollerNode() ?? null);
                             },
-                            className: r()(j.m4, v),
+                            className: a()(j.m4, v),
                             onScroll: q,
                             fade: !0,
                             ...n,

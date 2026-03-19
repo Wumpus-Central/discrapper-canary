@@ -25,7 +25,7 @@ var i = n(627968),
     C = n(652215),
     I = n(568065),
     v = n(985018),
-    S = n(65146);
+    S = n(500736);
 let y = (e) => {
         let { children: t, currentGuildTier: n, guildStickers: s, tier: l } = e,
             r = n < l,
@@ -59,7 +59,7 @@ let y = (e) => {
                     ((e) => {
                         let { guildId: t } = e;
                         (0, d.mMO)(async () => {
-                            let { default: e } = await Promise.all([n.e("29143"), n.e("27382")]).then(
+                            let { default: e } = await Promise.all([n.e("29143"), n.e("37176")]).then(
                                 n.bind(n, 445002),
                             );
                             return (n) => (0, i.jsx)(e, { guildId: t, ...n });

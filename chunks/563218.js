@@ -13,7 +13,7 @@ var l = n(627968),
     x = n(369053),
     p = n(652215),
     h = n(985018),
-    g = n(71561);
+    g = n(624507);
 function A(e) {
     let { title: t, description: n, onButtonClick: r, trackSettingsUpsellsAction: i } = e,
         [d, c] = a.useState(!1);
@@ -34,10 +34,10 @@ function A(e) {
 }
 function v(e) {
     let { settingsUpsells: t, channelId: n, onModalClose: a, reportId: s, reportType: o, reportSubType: v } = e,
-        b = (0, r.bG)([_.A], () => _.A.getChannel(n)),
-        f = (0, m.MR)(t, b?.type),
-        j = (0, x.Mw)(o, v, s);
-    return 0 === f.length
+        f = (0, r.bG)([_.A], () => _.A.getChannel(n)),
+        b = (0, m.MR)(t, f?.type),
+        C = (0, x.Mw)(o, v, s);
+    return 0 === b.length
         ? null
         : (0, l.jsxs)("div", {
               className: g.kL,
@@ -49,11 +49,11 @@ function v(e) {
                   }),
                   (0, l.jsx)("div", {
                       className: g.uk,
-                      children: f.map((e, n) => {
+                      children: b.map((e, n) => {
                           let { getTitle: a, getDescription: r, onApply: i } = e;
                           return (0, l.jsx)(
                               A,
-                              { title: a(), description: r(), onButtonClick: i, trackSettingsUpsellsAction: j(t[n]) },
+                              { title: a(), description: r(), onButtonClick: i, trackSettingsUpsellsAction: C(t[n]) },
                               n,
                           );
                       }),

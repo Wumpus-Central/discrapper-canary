@@ -1,8 +1,8 @@
 n.d(t, { A: () => D });
 var a = n(627968),
     i = n(64700),
-    s = n(503698),
-    l = n.n(s),
+    l = n(503698),
+    s = n.n(l),
     r = n(158954),
     o = n(311907),
     d = n(827734),
@@ -10,8 +10,8 @@ var a = n(627968),
     u = n(397927),
     m = n(793574),
     h = n(688810),
-    p = n(993719),
-    x = n(14059),
+    x = n(993719),
+    p = n(14059),
     g = n(362823),
     _ = n(980923),
     f = n(206018),
@@ -20,21 +20,21 @@ var a = n(627968),
     j = n(77735),
     A = n(340913),
     C = n(277342),
-    T = n(430452),
-    y = n(383501),
+    y = n(430452),
+    T = n(383501),
     S = n(350535),
     E = n(42473),
     N = n(731854),
     I = n(985018),
-    R = n(807880),
-    k = n(368149),
-    O = n(709502),
+    k = n(83214),
+    R = n(845775),
+    O = n(565204),
     w = n(973324);
 function D(e) {
     let t,
         {
             selfMute: n,
-            serverMute: s,
+            serverMute: l,
             suppress: D,
             awaitingRemote: M,
             iconForeground: P,
@@ -50,20 +50,20 @@ function D(e) {
             speaking: z,
         } = e,
         { showPTTIconIndicator: $ } = A.A.useConfig({ location: "MicrophoneButton" }),
-        q = (0, o.bG)([T.Ay], () => T.Ay.getMode() === N.TB.PUSH_TO_TALK),
-        Q = (0, o.bG)([T.Ay], () => T.Ay.getSettings().modeOptions.shortcut),
-        Y = (0, o.bG)([x.A], () => x.A.getIsTutorialActive(g.v.MUTE_TUTORIAL)),
-        J = (0, o.bG)([y.A], () => null != y.A.getChannelId()),
+        q = (0, o.bG)([y.Ay], () => y.Ay.getMode() === N.TB.PUSH_TO_TALK),
+        Q = (0, o.bG)([y.Ay], () => y.Ay.getSettings().modeOptions.shortcut),
+        Y = (0, o.bG)([p.A], () => p.A.getIsTutorialActive(g.v.MUTE_TUTORIAL)),
+        J = (0, o.bG)([T.A], () => null != T.A.getChannelId()),
         { name: X } = (0, b.x5)(N.oh.AUDIO_INPUT),
         { enabledInputProfiles: Z } = (0, j.d)({ location: "MicrophoneButton" }),
         ee = i.useRef(null),
-        et = n || D || s,
+        et = n || D || l,
         en = (0, C.q)(et),
         { analyticsLocations: ea } = (0, h.Ay)(m.A.AUDIO_INPUT_BUTTON),
-        { Component: ei, events: es, play: el } = en,
-        er = s || D ? r.O1p : ei;
-    i.useEffect(() => () => el(), [et, el]);
-    let eo = (0, _.A)(n, s, D, M);
+        { Component: ei, events: el, play: es } = en,
+        er = l || D ? r.O1p : ei;
+    i.useEffect(() => () => es(), [et, es]);
+    let eo = (0, _.A)(n, l, D, M);
     t = F
         ? { tooltipType: "green_void_do_not_use", tooltipText: I.intl.string(I.t["29gnR4"]), tooltipForceOpen: !0 }
         : H || V
@@ -76,7 +76,7 @@ function D(e) {
     let ed = $ && q && J,
         ec = et ? d.A.colors.ICON_VOICE_MUTED : "currentColor",
         eu = i.useCallback(() => {
-            B(), Y && p.N(g.v.MUTE_TUTORIAL);
+            B(), Y && x.N(g.v.MUTE_TUTORIAL);
         }, [B, Y]);
     return (0, a.jsxs)(h.f5, {
         value: ea,
@@ -108,16 +108,16 @@ function D(e) {
                 spacing: 4,
                 children: (e, n) => {
                     let { onClick: i } = e,
-                        { isShown: s } = n,
-                        o = s ? r.tN5 : r.abt;
+                        { isShown: l } = n,
+                        o = l ? r.tN5 : r.abt;
                     return (0, a.jsxs)("div", {
                         ref: ee,
-                        className: l()(k.Lh, { [k.v8]: et, [k.q6]: s }),
+                        className: s()(R.Lh, { [R.v8]: et, [R.q6]: l }),
                         children: [
                             (0, a.jsx)(E.A, {
                                 "aria-checked": et,
                                 "aria-label": I.intl.string(I.t.w4m945),
-                                className: k.eT,
+                                className: R.eT,
                                 disabled: M,
                                 icon: (0, a.jsx)(er, {
                                     size: "custom",
@@ -129,25 +129,25 @@ function D(e) {
                                 onClick: eu,
                                 onContextMenu: i,
                                 onMouseEnter: () => {
-                                    U(), es.onMouseEnter();
+                                    U(), el.onMouseEnter();
                                 },
                                 onMouseLeave: () => {
-                                    L(), es.onMouseLeave();
+                                    L(), el.onMouseLeave();
                                 },
                                 plated: null != G,
                                 redGlow: et,
                                 role: "switch",
                                 ...t,
-                                children: ed ? (0, a.jsx)("div", { className: l()(O.U, { [O.z]: z }) }) : null,
+                                children: ed ? (0, a.jsx)("div", { className: s()(O.U, { [O.z]: z }) }) : null,
                             }),
                             (0, a.jsx)(E.A, {
                                 "aria-label": W
                                     ? I.intl.formatToPlainString(I.t["18wnuD"], { inputDeviceName: X })
                                     : I.intl.string(I.t.fRzCbB),
-                                className: l()(k.UT, { [k.q6]: s }),
+                                className: s()(R.UT, { [R.q6]: l }),
                                 disabled: M,
                                 icon: (0, a.jsx)(o, {
-                                    className: k.$$,
+                                    className: R.$$,
                                     size: "custom",
                                     width: 12,
                                     height: 12,
@@ -164,7 +164,7 @@ function D(e) {
                                 tooltipPositionKey: W
                                     ? I.intl.formatToPlainString(I.t["18wnuD"], { inputDeviceName: X })
                                     : void 0,
-                                tooltipShouldShow: !s,
+                                tooltipShouldShow: !l,
                                 tooltipText: W
                                     ? I.intl.format(I.t["18wnuD"], { inputDeviceName: X })
                                     : I.intl.string(I.t.fRzCbB),
@@ -178,11 +178,11 @@ function D(e) {
                 shouldShow: Y,
                 graphic: { type: "image", src: w.A },
                 onRequestClose: () => {
-                    p.N(g.v.MUTE_TUTORIAL);
+                    x.N(g.v.MUTE_TUTORIAL);
                 },
                 position: "top",
-                title: I.intl.string(R.default.VG4zAf),
-                body: I.intl.string(R.default["8VIRzR"]),
+                title: I.intl.string(k.default.VG4zAf),
+                body: I.intl.string(k.default["8VIRzR"]),
             }),
         ],
     });

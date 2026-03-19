@@ -1,33 +1,33 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => h });
 var i = n(627968),
     s = n(64700),
     l = n(158954),
-    r = n(311907),
-    a = n(397927),
+    a = n(311907),
+    r = n(397927),
     o = n(73153),
     d = n(271866),
     c = n(956518),
     u = n(235986),
     _ = n(147964),
     m = n(985018),
-    g = n(361151),
-    A = n(473169);
-let h = /^\d+$|^$/;
-function x(e) {
+    g = n(76985),
+    A = n(522759);
+let x = /^\d+$|^$/;
+function h(e) {
     let { onClose: t, transitionState: n } = e,
         {
-            authorizedApplicationId: x,
+            authorizedApplicationId: h,
             authorizationError: p,
             authorizing: T,
-        } = (0, r.cf)([_.A], () => ({
+        } = (0, a.cf)([_.A], () => ({
             authorizedApplicationId: _.A.testModeApplicationId,
             authorizationError: _.A.error,
             authorizing: _.A.isFetchingAuthorization,
         })),
-        [E, C] = s.useState(x ?? ""),
-        [S, f] = s.useState("8080"),
-        [N, b] = s.useState("localhost"),
-        I = h.test(E);
+        [E, S] = s.useState(h ?? ""),
+        [C, f] = s.useState("8080"),
+        [b, N] = s.useState("localhost"),
+        I = x.test(E);
     async function v() {
         d.SH();
         let e = (function (e, t, n) {
@@ -38,32 +38,32 @@ function x(e) {
                 case "proxy":
                     return (0, c.Ay)(n);
             }
-        })(N, S, E);
+        })(b, C, E);
         null != (await d.q1(E, e)) && t();
     }
     s.useEffect(() => () => o.h.wait(() => d.SH()), []);
-    let j = null != x && x === E,
-        O = j
+    let j = null != h && h === E,
+        y = j
             ? function () {
-                  d.cL(), C(""), b(null);
+                  d.cL(), S(""), N(null);
               }
             : v,
-        y = s.useMemo(
+        R = s.useMemo(
             () => [
                 {
                     loading: T,
-                    disabled: !I || 0 === E.length || ("localhost" === N && 0 === S.length),
+                    disabled: !I || 0 === E.length || ("localhost" === b && 0 === C.length),
                     variant: j ? "critical-primary" : "active",
                     text: j ? m.intl.string(m.t.d6TR3I) : m.intl.string(m.t.qwuK5I),
-                    onClick: O,
+                    onClick: y,
                 },
             ],
-            [E.length, T, j, I, S.length, O, N],
+            [E.length, T, j, I, C.length, y, b],
         );
     return (0, i.jsxs)(l.Modal, {
         title: m.intl.string(m.t.f8fzky),
         subtitle: m.intl.string(m.t.a6Vill),
-        actions: y,
+        actions: R,
         onClose: t,
         transitionState: n,
         children: [
@@ -71,7 +71,7 @@ function x(e) {
                 ? null
                 : (0, i.jsx)("div", {
                       className: A.SX,
-                      children: (0, i.jsx)(a.wx6, { type: "critical", children: p }),
+                      children: (0, i.jsx)(r.wx6, { type: "critical", children: p }),
                   }),
             (0, i.jsxs)(u.A, {
                 direction: u.A.Direction.VERTICAL,
@@ -79,43 +79,43 @@ function x(e) {
                 children: [
                     (0, i.jsx)("div", {
                         className: g.I,
-                        children: (0, i.jsx)(a.ksK, {
+                        children: (0, i.jsx)(r.ksK, {
                             label: m.intl.string(m.t.P6TzgI),
                             required: !0,
                             value: E,
                             maxLength: 19,
                             error: I ? null : m.intl.string(m.t.gPNgKO),
                             onChange: function (e) {
-                                C(e);
+                                S(e);
                             },
                             disabled: T,
                         }),
                     }),
                     (0, i.jsx)("div", {
                         className: g.I,
-                        children: (0, i.jsx)(a.l6P, {
+                        children: (0, i.jsx)(r.l6P, {
                             selectionMode: "single",
                             label: m.intl.string(m.t["/GTqXG"]),
                             disabled: !I || "" === E,
-                            value: N,
+                            value: b,
                             options: [
                                 { value: "localhost", label: m.intl.string(m.t["+Y9Y6r"]), id: "localhost" },
                                 { value: "proxy", label: m.intl.string(m.t.uaksyW), id: "proxy" },
                             ],
                             onSelectionChange: function (e) {
-                                b(e);
+                                N(e);
                             },
                             placeholder: "URL Origin Type",
                         }),
                     }),
-                    "localhost" !== N
+                    "localhost" !== b
                         ? null
                         : (0, i.jsx)("div", {
                               className: g.I,
-                              children: (0, i.jsx)(a.ksK, {
+                              children: (0, i.jsx)(r.ksK, {
                                   required: !0,
                                   label: m.intl.string(m.t.fF4zxq),
-                                  value: S,
+                                  value: C,
                                   maxLength: 5,
                                   onChange: (e) => f(e),
                                   disabled: T,

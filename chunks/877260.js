@@ -11,20 +11,20 @@ var r = n(627968),
     d = n(932001),
     m = n(97469),
     f = n(199966),
-    g = n(894858),
-    h = n(397274),
-    y = n(189857),
-    p = n(188180),
+    h = n(894858),
+    p = n(397274),
+    g = n(189857),
+    x = n(188180),
     _ = n(133457),
-    x = n(985018),
-    b = n(658646);
+    y = n(985018),
+    b = n(45272);
 function v(e) {
-    let { root: t, onClose: n, footer: a, emptyState: p, searchBar: v } = e,
-        j = g.A.useField("showNavigationMobile"),
-        S = i.useRef(null),
-        [N] = i.useState(t),
+    let { root: t, onClose: n, footer: a, emptyState: x, searchBar: v } = e,
+        j = h.A.useField("showNavigationMobile"),
+        N = i.useRef(null),
+        [S] = i.useState(t),
         { accessibleDirectory: C } = (0, f._)(),
-        k = i.useMemo(() => (0, y.Z)(N, C), [N, C]),
+        k = i.useMemo(() => (0, g.Z)(S, C), [S, C]),
         [E] = (0, d.kn)(k.allDismissibleContents);
     (0, _.B)({ visibleContent: E, dismissibleBadges: k, accessibleDirectory: C });
     let [w, I] = i.useMemo(() => {
@@ -38,7 +38,7 @@ function v(e) {
             );
         }, [t.layout]),
         T = (0, m.NC)(),
-        R = (0, u.A)("settings-sidebar", S);
+        R = (0, u.A)("settings-sidebar", N);
     return (0, r.jsx)(c.NPJ, {
         theme: T,
         children: (e) =>
@@ -56,7 +56,7 @@ function v(e) {
                                         onClick: n,
                                         variant: "icon-only",
                                         size: "sm",
-                                        "aria-label": x.intl.string(x.t.cpT0Cq),
+                                        "aria-label": y.intl.string(y.t.cpT0Cq),
                                     }),
                                 }),
                             (0, r.jsx)("div", {
@@ -69,7 +69,7 @@ function v(e) {
                                 ),
                             }),
                             null != v && (0, r.jsx)(v, {}),
-                            null != p && 0 === I.length && (0, r.jsx)(p, {}),
+                            null != x && 0 === I.length && (0, r.jsx)(x, {}),
                         ],
                     }),
                     (0, r.jsx)(l.hD, {
@@ -79,8 +79,8 @@ function v(e) {
                                 let { ref: t, ...n } = e;
                                 return (0, r.jsxs)(c.ChK, {
                                     ref: (e) => {
-                                        (S.current = e),
-                                            h.A.setSidebarScrollerRef(e),
+                                        (N.current = e),
+                                            p.A.setSidebarScrollerRef(e),
                                             (t.current = e?.getScrollerNode() ?? null);
                                     },
                                     className: b.Mt,
@@ -125,7 +125,7 @@ function A(e) {
                     }),
                 }),
             t.layout.map((e) =>
-                (0, r.jsx)(p.X, { node: e, visibleContent: n, dismissibleBadges: i, hoisted: a }, e.key),
+                (0, r.jsx)(x.X, { node: e, visibleContent: n, dismissibleBadges: i, hoisted: a }, e.key),
             ),
         ],
     });

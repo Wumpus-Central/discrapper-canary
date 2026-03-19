@@ -1,8 +1,8 @@
 n.d(t, { default: () => p });
 var i = n(627968),
-    r = n(64700),
-    l = n(110259),
-    a = n(158954),
+    a = n(64700),
+    r = n(110259),
+    l = n(158954),
     s = n(417597),
     o = n(397927),
     d = n(803306),
@@ -10,27 +10,27 @@ var i = n(627968),
     u = n(870570),
     A = n(652215),
     h = n(985018),
-    _ = n(665763),
+    _ = n(20697),
     m = n(546);
 function g(e) {
     let { text: t } = e;
     return (0, i.jsxs)("li", {
         className: _.nf,
-        children: [t, " ", (0, i.jsx)(a.I9m, { size: "sm", color: "currentColor" })],
+        children: [t, " ", (0, i.jsx)(l.I9m, { size: "sm", color: "currentColor" })],
     });
 }
 function p(e) {
     let { transitionState: t } = e,
         n = (0, s.bG)([u.A], () => u.A.getAction()),
-        [a, p] = r.useState(!1);
+        [l, p] = a.useState(!1);
     async function E() {
         return p(!0), n === A.a3B.AGREEMENTS && p(await (0, d.Q9)()), null;
     }
     return (
         (0, c.A)(
             {
-                type: l.ImpressionTypes.VIEW,
-                name: l.ImpressionNames.USER_AGREEMENTS,
+                type: r.ImpressionTypes.VIEW,
+                name: r.ImpressionNames.USER_AGREEMENTS,
                 properties: { required_action: n },
             },
             {},
@@ -42,7 +42,7 @@ function p(e) {
             dismissable: !1,
             title: h.intl.string(h.t["7glvXu"]),
             subtitle: h.intl.string(h.t["+USXQE"]),
-            actions: [{ variant: "primary", text: h.intl.string(h.t["+TBKL1"]), onClick: E, loading: a }],
+            actions: [{ variant: "primary", text: h.intl.string(h.t["+TBKL1"]), onClick: E, loading: l }],
             transitionState: t,
             onClose: A.js$,
             children: (0, i.jsxs)(o.BJc, {

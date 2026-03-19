@@ -3,8 +3,8 @@ n.d(t, { y: () => T });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(554146),
+    a = n.n(l),
+    r = n(554146),
     o = n(827734),
     c = n(990078),
     d = n(397927),
@@ -12,8 +12,8 @@ var i = n(627968),
     h = n(887700),
     A = n(855446),
     m = n(793574),
-    p = n(688810),
-    g = n(975412),
+    g = n(688810),
+    p = n(975412),
     _ = n(392054),
     f = n(826673),
     x = n(757293),
@@ -21,7 +21,7 @@ var i = n(627968),
     E = n(272812),
     I = n(652215),
     N = n(985018),
-    b = n(89996),
+    b = n(556614),
     S = n(867010);
 function T(e) {
     let {
@@ -29,20 +29,20 @@ function T(e) {
         guild: n,
         width: s,
         inPopout: l,
-        handleClose: r,
-        userParticipantCount: a,
+        handleClose: a,
+        userParticipantCount: r,
         activitiesEnabled: o = !0,
     } = e;
     return s < 250
-        ? (0, i.jsx)(v, { channel: t, guild: n, width: s, inPopout: l, handleClose: r, userParticipantCount: a })
-        : a > 1
-          ? (0, i.jsx)(j, { channel: t, guild: n, width: s, inPopout: l, handleClose: r, userParticipantCount: a })
+        ? (0, i.jsx)(v, { channel: t, guild: n, width: s, inPopout: l, handleClose: a, userParticipantCount: r })
+        : r > 1
+          ? (0, i.jsx)(j, { channel: t, guild: n, width: s, inPopout: l, handleClose: a, userParticipantCount: r })
           : (0, i.jsx)(y, { channel: t, guild: n, width: s, inPopout: l, activitiesEnabled: o });
 }
 function v(e) {
     let { channel: t, inPopout: n, handleClose: s } = e,
-        { analyticsLocations: l, newestAnalyticsLocation: a } = (0, p.Ay)(m.A.VC_TILE_ACTIVITY_SHELF_BUTTON);
-    return (0, i.jsx)(p.f5, {
+        { analyticsLocations: l, newestAnalyticsLocation: r } = (0, g.Ay)(m.A.VC_TILE_ACTIVITY_SHELF_BUTTON);
+    return (0, i.jsx)(g.f5, {
         value: l,
         children: (0, i.jsxs)(E.A, {
             className: b.zr,
@@ -52,10 +52,10 @@ function v(e) {
                     text: N.intl.string(N.t.qJvTKQ),
                     children: (0, i.jsx)(d.DUT, {
                         onClick: () => {
-                            (0, g.A)({
+                            (0, p.A)({
                                 context: null != t ? { type: "channel", channel: t } : { type: "contextless" },
                                 openInPopout: n,
-                                analyticsLocation: a,
+                                analyticsLocation: r,
                             });
                         },
                         className: b.F1,
@@ -75,7 +75,7 @@ function v(e) {
                     children: (e) =>
                         (0, i.jsx)(d.DUT, {
                             onClick: s,
-                            className: r()(e, b.lg),
+                            className: a()(e, b.lg),
                             children: (0, i.jsx)(d.aXh, {
                                 size: "md",
                                 color: "currentColor",
@@ -89,40 +89,40 @@ function v(e) {
     });
 }
 function y(e) {
-    let { channel: t, guild: l, inPopout: a, activitiesEnabled: o = !0 } = e;
+    let { channel: t, guild: l, inPopout: r, activitiesEnabled: o = !0 } = e;
     s.useEffect(() => {
         C.default.track(I.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: "activity invite",
             n_participants: 1,
         });
     }, []);
-    let { analyticsLocations: c, newestAnalyticsLocation: u } = (0, p.Ay)(m.A.VC_TILE_ACTIVITY_INVITE);
+    let { analyticsLocations: c, newestAnalyticsLocation: u } = (0, g.Ay)(m.A.VC_TILE_ACTIVITY_INVITE);
     function h() {
         (0, d.mMO)(
             async () => {
-                let { default: e } = await Promise.all([n.e("43600"), n.e("28136"), n.e("74918")]).then(
+                let { default: e } = await Promise.all([n.e("43600"), n.e("28136"), n.e("97710")]).then(
                     n.bind(n, 234355),
                 );
                 return (n) => (0, i.jsx)(e, { ...n, guild: l, channel: t, source: I.PE1.ACTIVITY_ENTRY_POINT_TILE });
             },
-            { contextKey: a ? d.KX8 : d.SYi },
+            { contextKey: r ? d.KX8 : d.SYi },
         );
     }
     function A() {
-        (0, g.A)({
+        (0, p.A)({
             context: null != t ? { type: "channel", channel: t } : { type: "contextless" },
-            openInPopout: a,
+            openInPopout: r,
             analyticsLocation: u,
         });
     }
-    return (0, i.jsx)(p.f5, {
+    return (0, i.jsx)(g.f5, {
         value: c,
         children: (0, i.jsx)(d.NPJ, {
             disableAdaptiveTheme: !0,
             theme: I.NJ8.MIDNIGHT,
             children: (e) =>
                 (0, i.jsxs)(E.A, {
-                    className: r()(b.zr, b.co, e),
+                    className: a()(b.zr, b.co, e),
                     children: [
                         (0, i.jsx)("img", { src: S, className: b.Qw, alt: "" }),
                         (0, i.jsxs)(d.ButtonGroup, {
@@ -157,10 +157,10 @@ function j(e) {
             n_participants: c,
         });
     });
-    let g = (0, h.A)({ guildId: n.id }).slice(0, 3),
-        { analyticsLocations: S } = (0, p.Ay)(m.A.VC_TILE_ACTIVITY_SUGGESTION),
+    let p = (0, h.A)({ guildId: n.id }).slice(0, 3),
+        { analyticsLocations: S } = (0, g.Ay)(m.A.VC_TILE_ACTIVITY_SUGGESTION),
         T = s.useMemo(() => ({ channel: t, type: "channel" }), [t]);
-    return (0, i.jsx)(p.f5, {
+    return (0, i.jsx)(g.f5, {
         value: S,
         children: (0, i.jsxs)(E.A, {
             className: b.zr,
@@ -173,8 +173,8 @@ function j(e) {
                       })
                     : null,
                 (0, i.jsx)("div", {
-                    className: r()(b.Di, { [b.qy]: o <= 300 }),
-                    children: g.map((e) =>
+                    className: a()(b.Di, { [b.qy]: o <= 300 }),
+                    children: p.map((e) =>
                         (0, i.jsx)(
                             A.C,
                             {
@@ -196,7 +196,7 @@ function j(e) {
                             close_type: "permanent",
                             n_participants: c,
                         }),
-                            (0, f.Dr)(a.M.VC_TILE_ACTIVITIES_ENTRY_POINT);
+                            (0, f.Dr)(r.M.VC_TILE_ACTIVITIES_ENTRY_POINT);
                     },
                     children: [
                         (0, i.jsx)(x.A, {}),

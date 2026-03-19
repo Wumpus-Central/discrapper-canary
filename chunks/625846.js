@@ -47,7 +47,7 @@ var l = n(627968),
     q = n(947094),
     $ = n(919577),
     J = n(207777),
-    X = n(422844),
+    X = n(200463),
     Q = n(435470),
     Y = n(706849),
     Z = n(613999),
@@ -69,7 +69,7 @@ var l = n(627968),
     eg = n(652215),
     ef = n(37411),
     e_ = n(985018),
-    ep = n(1004);
+    ep = n(162070);
 function ej(e) {
     let { channel: t, guild: n, sidebarState: i } = e;
     return (0, l.jsx)(es.Cp, { channel: t, children: (0, l.jsx)(eS, { channel: t, guild: n, sidebarState: i }) }, t.id);
@@ -430,10 +430,10 @@ function eS(e) {
             updateMasonryListScrollerRef: e3,
             getItemKey: e1,
             renderGridSection: e9,
-            renderGridItem: e4,
-            getGridSectionHeight: e6,
-            getSectionProps: e8,
-            handleGridFocus: e7,
+            renderGridItem: e6,
+            getGridSectionHeight: e8,
+            getSectionProps: e7,
+            handleGridFocus: e4,
         } = (function (e) {
             let {
                     masonryListScrollerRef: t,
@@ -610,7 +610,7 @@ function eS(e) {
         }, [eA, eu, t.guild_id, t.id, ew, C]),
         e5 = (0, x.bG)([v.A], () => v.A.keyboardModeEnabled),
         te = (0, es.kU)((e) => e.titleFocused || e.bodyFocused, d.x),
-        tt = (0, eh.Ay)({ id: "forum-grid-view", isEnabled: eu && e5 && !te, setFocus: e7 }),
+        tt = (0, eh.Ay)({ id: "forum-grid-view", isEnabled: eu && e5 && !te, setFocus: e4 }),
         tn = (0, ex.A)({ listRef: eo, padding: 96, isEnabled: !eu && e5 && !te, channel: t }),
         tl = i.useCallback(
             (e, n, l) => (0 === e ? 0 : (0, ec.iX)(l, t.isMediaChannel() ? ec.PL.SIXTEEN_BY_NINE : ec.PL.THREE_BY_TWO)),
@@ -658,11 +658,11 @@ function eS(e) {
                                           columns: ek,
                                           sections: eG,
                                           getItemKey: e1,
-                                          getSectionHeight: e6,
+                                          getSectionHeight: e8,
                                           getItemHeight: tl,
                                           renderSection: e9,
-                                          renderItem: e4,
-                                          getSectionProps: e8,
+                                          renderItem: e6,
+                                          getSectionProps: e7,
                                           onScroll: A ? e2 : void 0,
                                           chunkSize: 350,
                                           ...ts,

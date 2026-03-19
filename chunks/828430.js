@@ -1,9 +1,9 @@
 n.d(t, { A: () => I });
 var i = n(627968);
 n(64700);
-var r = n(397927),
-    l = n(73153),
-    a = n(272355),
+var a = n(397927),
+    r = n(73153),
+    l = n(272355),
     s = n(36149),
     o = n(662502),
     d = n(260509),
@@ -15,24 +15,24 @@ var r = n(397927),
     m = n(204925),
     g = n(652215),
     p = n(835002);
-class E extends a.A {
+class E extends l.A {
     _initialize() {
-        l.h.subscribe("CONNECTION_OPEN", this.handleConnectionOpen),
-            l.h.subscribe("CHANNEL_SELECT", this.handleChannelSelect),
-            l.h.subscribe("AGE_GATE_MODAL_OPEN", this.handleAgeGateModalOpen),
-            l.h.subscribe("AGE_GATE_MODAL_CLOSE", this.handleAgeGateModalClose),
-            l.h.subscribe("AGE_GATE_SUCCESS_MODAL_OPEN", this.handleAgeGateSuccess),
-            l.h.subscribe("AGE_GATE_FAILURE_MODAL_OPEN", this.handleAgeGateFailure),
-            l.h.subscribe("GUILD_UPDATE", this.handleGuildUpdate);
+        r.h.subscribe("CONNECTION_OPEN", this.handleConnectionOpen),
+            r.h.subscribe("CHANNEL_SELECT", this.handleChannelSelect),
+            r.h.subscribe("AGE_GATE_MODAL_OPEN", this.handleAgeGateModalOpen),
+            r.h.subscribe("AGE_GATE_MODAL_CLOSE", this.handleAgeGateModalClose),
+            r.h.subscribe("AGE_GATE_SUCCESS_MODAL_OPEN", this.handleAgeGateSuccess),
+            r.h.subscribe("AGE_GATE_FAILURE_MODAL_OPEN", this.handleAgeGateFailure),
+            r.h.subscribe("GUILD_UPDATE", this.handleGuildUpdate);
     }
     _terminate() {
-        l.h.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen),
-            l.h.unsubscribe("CHANNEL_SELECT", this.handleChannelSelect),
-            l.h.unsubscribe("AGE_GATE_MODAL_OPEN", this.handleAgeGateModalOpen),
-            l.h.unsubscribe("AGE_GATE_MODAL_CLOSE", this.handleAgeGateModalClose),
-            l.h.unsubscribe("AGE_GATE_SUCCESS_MODAL_OPEN", this.handleAgeGateSuccess),
-            l.h.unsubscribe("AGE_GATE_FAILURE_MODAL_OPEN", this.handleAgeGateFailure),
-            l.h.unsubscribe("GUILD_UPDATE", this.handleGuildUpdate);
+        r.h.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen),
+            r.h.unsubscribe("CHANNEL_SELECT", this.handleChannelSelect),
+            r.h.unsubscribe("AGE_GATE_MODAL_OPEN", this.handleAgeGateModalOpen),
+            r.h.unsubscribe("AGE_GATE_MODAL_CLOSE", this.handleAgeGateModalClose),
+            r.h.unsubscribe("AGE_GATE_SUCCESS_MODAL_OPEN", this.handleAgeGateSuccess),
+            r.h.unsubscribe("AGE_GATE_FAILURE_MODAL_OPEN", this.handleAgeGateFailure),
+            r.h.unsubscribe("GUILD_UPDATE", this.handleGuildUpdate);
     }
     handleChannelSelect(e) {
         let { guildId: t, channelId: n } = e;
@@ -45,23 +45,23 @@ class E extends a.A {
     }
     handleAgeGateModalOpen(e) {
         let { source: t } = e;
-        (0, r.mMO)(
+        (0, a.mMO)(
             async () => {
-                let { default: e } = await Promise.all([n.e("10136"), n.e("40709")]).then(n.bind(n, 776971));
+                let { default: e } = await Promise.all([n.e("10136"), n.e("6179")]).then(n.bind(n, 776971));
                 return (n) => (0, i.jsx)(e, { source: t, ...n });
             },
-            { modalKey: m.Uy, onCloseRequest: g.tEg, backdropStyle: (0, s.lU)(t) ? r.F2Z.LIGHTBOX : void 0 },
+            { modalKey: m.Uy, onCloseRequest: g.tEg, backdropStyle: (0, s.lU)(t) ? a.F2Z.LIGHTBOX : void 0 },
         );
     }
     handleAgeGateSuccess() {
-        o.A.showSuccessToast(p.OB.EXISTING_USER_AGE_GATE_SUCCESS), (0, r.OoC)(m.Uy);
+        o.A.showSuccessToast(p.OB.EXISTING_USER_AGE_GATE_SUCCESS), (0, a.OoC)(m.Uy);
     }
     handleAgeGateFailure(e) {
         let { underageMessage: t } = e;
-        (0, r.zbz)(m.Uy, (e) => (0, i.jsx)(_.default, { underageMessage: t, ...e }));
+        (0, a.zbz)(m.Uy, (e) => (0, i.jsx)(_.default, { underageMessage: t, ...e }));
     }
     handleAgeGateModalClose() {
-        (0, r.OoC)(m.Uy);
+        (0, a.OoC)(m.Uy);
     }
     handleGuildUpdate(e) {
         let { guild: t } = e,

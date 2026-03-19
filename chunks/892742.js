@@ -13,7 +13,7 @@ var i = n(627968),
     h = n(438038),
     p = n(295194),
     g = n(654487),
-    A = n(986588);
+    A = n(69542);
 function x(e) {
     let { questId: t } = e,
         {

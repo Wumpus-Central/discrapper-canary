@@ -9,8 +9,8 @@ var l = i(503698),
     d = i(397927),
     u = i(707606),
     c = i(573648),
-    A = i(235986),
-    m = i(338234),
+    m = i(235986),
+    A = i(338234),
     p = i(159426),
     h = i(25528),
     g = i(655724),
@@ -32,7 +32,7 @@ var l = i(503698),
     U = i(648246),
     L = i(305637),
     b = i(652215),
-    M = i(620452);
+    M = i(37206);
 let R = (0, u.A)((t) => {
     let {
             activity: e,
@@ -53,22 +53,22 @@ let R = (0, u.A)((t) => {
         }),
         B = H === _.O.STREAM_PREVIEW || null != s,
         k = (0, C.A)(e),
-        Y = k || B ? A.A.Direction.HORIZONTAL : A.A.Direction.VERTICAL,
-        z = e?.type === b.$pd.HANG_STATUS,
-        $ = (0, o.bG)([E.A, T.A], () => (z ? T.A.getChannel(E.A.getVoiceStateForUser(l.id)?.channelId) : null)),
+        Y = k || B ? m.A.Direction.HORIZONTAL : m.A.Direction.VERTICAL,
+        $ = e?.type === b.$pd.HANG_STATUS,
+        z = (0, o.bG)([E.A, T.A], () => ($ ? T.A.getChannel(E.A.getVoiceStateForUser(l.id)?.channelId) : null)),
         J = (0, o.bG)([T.A], () => (null != G ? T.A.getChannel(G) : null), [G]),
-        { enableUserHoverActivities: K } = (0, m.fC)({ guildId: R ?? J?.guild_id, location: "UserActivityActions" }),
+        { enableUserHoverActivities: K } = (0, A.fC)({ guildId: R ?? J?.guild_id, location: "UserActivityActions" }),
         { enableRequestToStream: Z } = p.m.useExperiment(
             { guildId: R ?? J?.guild_id, location: "UserActivityActions" },
             { autoTrackExposure: !1 },
         ),
         q = null != J && K && Z && (0, h.F9)(e),
-        X = Y === A.A.Direction.VERTICAL;
-    return (0, n.jsx)(A.A, {
+        X = Y === m.A.Direction.VERTICAL;
+    return (0, n.jsx)(m.A, {
         grow: 0,
-        align: A.A.Align.STRETCH,
+        align: m.A.Align.STRETCH,
         direction: Y,
-        wrap: X ? A.A.Wrap.WRAP : A.A.Wrap.NO_WRAP,
+        wrap: X ? m.A.Wrap.WRAP : m.A.Wrap.NO_WRAP,
         className: r()(u, M.jx, X ? M.Vd : M.xM),
         children: (() => {
             if ((0, v.A)(e))
@@ -88,8 +88,8 @@ let R = (0, u.A)((t) => {
             }
             return B
                 ? (0, n.jsx)(L.A, { isCurrentUser: W.id === l.id, applicationStream: s, onAction: F })
-                : z && null != $
-                  ? (0, n.jsx)(N.A, { userId: l.id, variant: w, hangStatusChannel: $, onAction: F })
+                : $ && null != z
+                  ? (0, n.jsx)(N.A, { userId: l.id, variant: w, hangStatusChannel: z, onAction: F })
                   : (0, n.jsxs)(n.Fragment, {
                         children: [
                             q && (0, n.jsx)(g.B, { userId: l.id, channel: J, onAction: F }),

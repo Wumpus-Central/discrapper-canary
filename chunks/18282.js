@@ -4,7 +4,7 @@ var r = n(627968);
 n(64700);
 var i = n(990078),
     s = n(397927),
-    a = n(785620);
+    a = n(54834);
 function o(e) {
     let { onClick: t, Icon: n, "aria-label": o } = e,
         l = (0, s.rdh)(s.LU0.colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY),

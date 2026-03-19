@@ -3,8 +3,8 @@ n.d(t, { AV: () => R, Ay: () => y, P4: () => j, kD: () => O, sM: () => L });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(837381),
+    a = n.n(l),
+    r = n(837381),
     o = n(311907),
     c = n(3026),
     d = n(990078),
@@ -12,8 +12,8 @@ var i = n(627968),
     h = n(397927),
     A = n(914430),
     m = n(442433),
-    p = n(676002),
-    g = n(485947),
+    g = n(676002),
+    p = n(485947),
     _ = n(924985),
     f = n(71393),
     x = n(576705),
@@ -22,7 +22,7 @@ var i = n(627968),
     I = n(879124),
     N = n(652215),
     b = n(985018),
-    S = n(33925);
+    S = n(587079);
 function T(e) {
     e.stopPropagation();
 }
@@ -31,7 +31,7 @@ let v = s.memo(function (e) {
             {
                 channel: l,
                 connectChannelDragSource: u,
-                connectChannelDropTarget: p,
+                connectChannelDropTarget: g,
                 disableManageChannels: E,
                 position: I,
                 sortingPosition: v,
@@ -65,7 +65,7 @@ let v = s.memo(function (e) {
                     t = l.getGuildId();
                 null != t &&
                     (0, h.mMO)(async () => {
-                        let { default: s } = await Promise.all([n.e("64233"), n.e("9743")]).then(n.bind(n, 409200));
+                        let { default: s } = await Promise.all([n.e("64233"), n.e("10923")]).then(n.bind(n, 409200));
                         return (n) =>
                             (0, i.jsx)(s, {
                                 ...n,
@@ -75,7 +75,7 @@ let v = s.memo(function (e) {
                             });
                     });
             }, [l]),
-            { role: U, tabIndex: P, ...w } = (0, a.rm)(l.id),
+            { role: U, tabIndex: P, ...w } = (0, r.rm)(l.id),
             k = s.useRef(null),
             V = s.useRef(null),
             B = (0, i.jsxs)("li", {
@@ -88,7 +88,7 @@ let v = s.memo(function (e) {
                         offset: { left: 4, right: 4 },
                         children: (0, i.jsxs)("div", {
                             ref: V,
-                            className: r()(S.Ki, S.iE, { [S.yZ]: O, [S.SU]: R, [S.vk]: !0 }),
+                            className: a()(S.Ki, S.iE, { [S.yZ]: O, [S.SU]: R, [S.vk]: !0 }),
                             onContextMenu: D,
                             children: [
                                 (0, i.jsxs)(h.DUT, {
@@ -101,7 +101,7 @@ let v = s.memo(function (e) {
                                     "aria-expanded": !O,
                                     focusProps: { enabled: !1 },
                                     children: [
-                                        (0, i.jsx)(g.A, {
+                                        (0, i.jsx)(p.A, {
                                             className: S.UU,
                                             children: (0, i.jsx)(c.A, { children: l.name }),
                                         }),
@@ -118,7 +118,7 @@ let v = s.memo(function (e) {
                                             ? (0, i.jsx)(d.m, {
                                                   text: b.intl.string(b.t["fUYU+j"]),
                                                   children: (0, i.jsx)(h.DUT, {
-                                                      className: r()(S.c9, S.ih),
+                                                      className: a()(S.c9, S.ih),
                                                       onClick: G,
                                                       tabIndex: P,
                                                       role: "button",
@@ -138,19 +138,19 @@ let v = s.memo(function (e) {
                     j,
                 ],
             });
-        return null != p && null != u ? p(u(B)) : B;
+        return null != g && null != u ? g(u(B)) : B;
     }),
-    y = (0, p.a)(v),
+    y = (0, g.a)(v),
     j = s.memo(function (e) {
         let { name: t, onDismiss: n, className: s } = e;
         return (0, i.jsx)("li", {
-            className: r()(s, S.fx),
+            className: a()(s, S.fx),
             children: (0, i.jsxs)("div", {
-                className: r()(S.Ki, S._V),
+                className: a()(S.Ki, S._V),
                 children: [
                     (0, i.jsx)("div", {
                         className: S.rb,
-                        children: (0, i.jsx)(g.A, { className: S.UU, children: (0, i.jsx)(c.A, { children: t }) }),
+                        children: (0, i.jsx)(p.A, { className: S.UU, children: (0, i.jsx)(c.A, { children: t }) }),
                     }),
                     null != n
                         ? (0, i.jsx)(d.m, {
@@ -192,8 +192,8 @@ let v = s.memo(function (e) {
                 ? (0, i.jsx)("li", {
                       className: S.fx,
                       children: (0, i.jsx)("div", {
-                          className: r()(S.Ki, S._V),
-                          children: (0, i.jsx)(g.A, {
+                          className: a()(S.Ki, S._V),
+                          children: (0, i.jsx)(p.A, {
                               className: S.UU,
                               children: (0, i.jsx)(c.A, { children: b.intl.string(b.t["V/u9Dy"]) }),
                           }),
@@ -207,8 +207,8 @@ let v = s.memo(function (e) {
         return (0, i.jsx)("li", {
             className: S.fx,
             children: (0, i.jsx)("div", {
-                className: r()(S.Ki, S._V),
-                children: (0, i.jsx)(g.A, { className: S.UU, children: (0, i.jsx)(c.A, { children: t.name }) }),
+                className: a()(S.Ki, S._V),
+                children: (0, i.jsx)(p.A, { className: S.UU, children: (0, i.jsx)(c.A, { children: t.name }) }),
             }),
         });
     });

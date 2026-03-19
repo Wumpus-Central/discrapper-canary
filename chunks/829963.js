@@ -10,7 +10,7 @@ var i = n(627968),
     u = n(206589),
     _ = n(768349),
     m = n(985018),
-    h = n(609653);
+    h = n(62323);
 function p(e) {
     let {
             application: t,
@@ -21,41 +21,41 @@ function p(e) {
             partyStatusElement: x,
             currentUserPresenceActivity: f,
             onClickContent: C,
-            onView: E,
-            guildId: I,
+            onView: I,
+            guildId: E,
         } = e,
-        b = (0, u.w)(f, g),
-        T = (0, d.Gq)(g, n.author, "Invite Embed"),
-        v = r.useMemo(() => {
+        v = (0, u.w)(f, g),
+        b = (0, d.Gq)(g, n.author, "Invite Embed"),
+        T = r.useMemo(() => {
             let e = [];
             return (
-                b ||
+                v ||
                     e.push({
-                        label: T.label ?? m.intl.string(m.t.VJlc0S),
+                        label: b.label ?? m.intl.string(m.t.VJlc0S),
                         trackingArea: s.kY.SYNC,
                         onClick: () => {
-                            T.onClick();
+                            b.onClick();
                         },
-                        disabled: T.disabled,
-                        disabledReason: T.disabled ? T.tooltip : void 0,
+                        disabled: b.disabled,
+                        disabledReason: b.disabled ? b.tooltip : void 0,
                     }),
                 e
             );
-        }, [b, T]),
-        S =
+        }, [v, b]),
+        y =
             null != g && null != g.details && null != g.state
                 ? m.intl.formatToPlainString(m.t.JCvHtx, { track: g.details, artist: g.state })
                 : t.name,
-        y = g?.timestamps?.start ?? g?.created_at,
+        S = g?.timestamps?.start ?? g?.created_at,
         N = r.useMemo(
             () =>
-                null != y
+                null != S
                     ? (0, i.jsxs)("div", {
                           className: h.Ym,
                           children: [
                               (0, i.jsx)(a.T7G, { size: "xxs", color: "currentColor" }),
                               (0, i.jsx)(o.z, {
-                                  entry: { start: y, end: g?.timestamps?.end },
+                                  entry: { start: S, end: g?.timestamps?.end },
                                   textColor: "currentColor",
                                   textTabularNumbers: !1,
                                   textFontCode: !1,
@@ -63,7 +63,7 @@ function p(e) {
                           ],
                       })
                     : null,
-            [y, g?.timestamps?.end],
+            [S, g?.timestamps?.end],
         ),
         j = r.useMemo(
             () =>
@@ -84,17 +84,17 @@ function p(e) {
         );
     return (0, i.jsx)(l.h, {
         header: p,
-        title: S,
+        title: y,
         iconSrc: (0, c.A)(g, t.id) ?? void 0,
         info: j,
-        actions: v,
+        actions: T,
         onClickContent: C,
         trackingConfig: {
             id: t.id,
             linkType: _.J.RICH_PRESENCE_INVITE,
-            onView: E,
+            onView: I,
             referrerId: n.author.id,
-            guildId: I,
+            guildId: E,
             channelId: n.channel_id,
             messageId: n.id,
         },

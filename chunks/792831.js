@@ -1,11 +1,11 @@
-n.d(t, { A: () => u });
+n.d(t, { A: () => d });
 var i,
     l = n(627968);
 n(64700);
 var r = n(503698),
     s = n.n(r),
     a = n(953727),
-    o = n(106199),
+    o = n(59937),
     c =
         (((i = {}).LEFT = "LEFT"),
         (i.RIGHT = "RIGHT"),
@@ -14,15 +14,15 @@ var r = n(503698),
         (i.UP_LEFT = "UP_LEFT"),
         (i.DOWN_RIGHT = "DOWN_RIGHT"),
         i);
-let d = (e) => {
+let u = (e) => {
     let {
         width: t = 24,
         height: n = 24,
         color: i = "currentColor",
         direction: r,
         foreground: c,
-        className: d,
-        title: u,
+        className: u,
+        title: d,
         ..._
     } = e;
     return (0, l.jsxs)("svg", {
@@ -30,7 +30,7 @@ let d = (e) => {
         width: t,
         height: n,
         className: s()(
-            d,
+            u,
             (function (e) {
                 switch (e) {
                     case "LEFT":
@@ -52,7 +52,7 @@ let d = (e) => {
         ),
         viewBox: "0 0 24 24",
         children: [
-            null != u ? (0, l.jsx)("title", { children: u }) : null,
+            null != d ? (0, l.jsx)("title", { children: d }) : null,
             (0, l.jsx)("polygon", {
                 className: c,
                 fill: i,
@@ -62,5 +62,5 @@ let d = (e) => {
         ],
     });
 };
-d.Directions = c;
-let u = d;
+u.Directions = c;
+let d = u;

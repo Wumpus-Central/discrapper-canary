@@ -1,8 +1,8 @@
 n.d(t, { A: () => C });
 var i = n(627968),
-    r = n(64700),
-    l = n(964892),
-    a = n(208756),
+    a = n(64700),
+    r = n(964892),
+    l = n(208756),
     s = n(135564),
     o = n(916845),
     d = n(627330),
@@ -14,13 +14,13 @@ var i = n(627968),
     m = n(788868),
     g = n(652215),
     p = n(49999),
-    E = n(49370),
+    E = n(723468),
     I = n(985018),
-    f = n(32743);
+    f = n(254977);
 function C(e) {
     let { targetElementRef: t, dismissPopover: n, children: C, numOrbs: T } = e,
         { analyticsLocations: N } = (0, A.Ay)(u.A.PREMIUM_MARKETING_NITRO_HOME_ORBS_SECTION),
-        S = r.useCallback(() => {
+        S = a.useCallback(() => {
             n(p.i.TAKE_ACTION),
                 (0, h.A)({
                     subscriptionTier: m.pe.TIER_2,
@@ -31,7 +31,7 @@ function C(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", { children: C }),
-            (0, i.jsx)(l.x, {
+            (0, i.jsx)(r.x, {
                 targetElementRef: t,
                 onRequestClose: () => n(p.i.USER_DISMISS),
                 alignmentStrategy: "edge",
@@ -50,7 +50,7 @@ function C(e) {
                             badge: { type: "beta", variant: "expressive" },
                             className: f.Q,
                         }),
-                        (0, i.jsx)(a.Z, {
+                        (0, i.jsx)(l.Z, {
                             actions: [{ text: I.intl.string(I.t.pj0XBN), variant: "primary", icon: c.tvc, onClick: S }],
                         }),
                         (0, i.jsx)(s.F, {}),

@@ -6,7 +6,7 @@ var i = n(627968),
     r = n(486020),
     o = n(188275),
     d = n(985018),
-    c = n(416e3);
+    c = n(126854);
 function u(e) {
     let {
             title: t,

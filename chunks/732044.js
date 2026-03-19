@@ -3,18 +3,18 @@ n.d(t, { A: () => h });
 var i = n(627968),
     s = n(311907),
     l = n(397927),
-    r = n(604681),
-    a = n(736339),
+    a = n(604681),
+    r = n(736339),
     o = n(761640),
     c = n(58736),
     d = n(652215),
-    u = n(320378);
+    u = n(33352);
 function h(e) {
     let { channelId: t } = e,
         n = (0, s.bG)([o.Ay], () => o.Ay.getSection(t), [t]) === d.YvQ.CONVERSATIONS,
-        h = (0, s.bG)([a.A], () => a.A.getChannelConversations(t).length > 0, [t]);
+        h = (0, s.bG)([r.A], () => r.A.getChannelConversations(t).length > 0, [t]);
     return (0, i.jsx)(c.In, {
-        onClick: r.A.toggleConversationsSection,
+        onClick: a.A.toggleConversationsSection,
         tooltip: n ? null : "Conversations",
         icon: l.oyn,
         iconSize: 20,

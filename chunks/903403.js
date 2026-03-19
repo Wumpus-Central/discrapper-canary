@@ -13,19 +13,19 @@ var n = s(627968),
     g = s(203312),
     m = s(212407),
     h = s(985018),
-    p = s(68763);
+    p = s(906357);
 function f(e) {
     let { category: t } = e,
         s = (0, i.bG)([c.A], () => c.A.useReducedMotion),
         l = (0, i.bG)([u.A], () => u.A.isFocused()),
         { catalogBannerStatic: _, catalogBannerAnimated: f, catalogBannerRive: x } = (0, m.MV)(t),
         E = r.useRef(null),
-        C = null != x;
+        b = null != x;
     return (0, n.jsxs)("div", {
         ref: E,
-        className: a()(p.sW, { [p.by]: C }),
+        className: a()(p.sW, { [p.by]: b }),
         children: [
-            C
+            b
                 ? (0, n.jsx)(o._, {
                       src: x,
                       fit: "cover",

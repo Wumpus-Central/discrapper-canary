@@ -3,8 +3,8 @@ n.d(t, { A: () => F }), n(321073);
 var i = n(627968),
     s = n(64700),
     l = n(837381),
-    r = n(311907),
-    a = n(342494),
+    a = n(311907),
+    r = n(342494),
     o = n(397927),
     c = n(308528),
     d = n(933958),
@@ -12,8 +12,8 @@ var i = n(627968),
     h = n(793574),
     A = n(688810),
     m = n(941971),
-    p = n(900848),
-    g = n(65611),
+    g = n(900848),
+    p = n(65611),
     _ = n(855725),
     f = n(532794),
     x = n(366811),
@@ -35,9 +35,9 @@ var i = n(627968),
     G = n(97483),
     U = n(49999),
     P = n(788868),
-    w = n(665606),
+    w = n(525736),
     k = n(985018),
-    V = n(299446),
+    V = n(4720),
     B = n(988572);
 let H = { analyticsSource: { page: D.liQ.GUILD_CHANNEL, section: D.JJy.CHANNEL_LIST, object: D.ZSU.CHANNEL } };
 function F(e) {
@@ -49,44 +49,44 @@ function F(e) {
         z,
         q,
         X,
-        Q,
         J,
+        Q,
         $,
         Z,
         { shouldShowIntroPopover: ee, markIntroPopoverAsDismissed: et } = e,
         en = (0, l.Vd)("favorites"),
         { favoriteAdded: ei, clearFavoriteAdded: es } = (0, j.CJ)(),
         el = s.useRef(null),
-        { analyticsLocations: er } = (0, A.Ay)(h.A.FAVORITES_GUILD_BUTTON),
-        [ea, eo] = s.useState(!1),
+        { analyticsLocations: ea } = (0, A.Ay)(h.A.FAVORITES_GUILD_BUTTON),
+        [er, eo] = s.useState(!1),
         ec = (0, L.$)("favorite-server-context"),
         {
             favoriteGuildEnabled: ed,
             favoriteGuildMuted: eu,
             favoriteChannels: eh,
-        } = (0, r.cf)([T.A], () => ({
+        } = (0, a.cf)([T.A], () => ({
             favoriteGuildEnabled: T.A.favoriteGuildEnabled,
             favoriteChannels: T.A.getFavoriteChannels(),
             favoriteGuildMuted: T.A.favoriteGuildMuted,
         })),
-        eA = (0, r.bG)([N.A], () => N.A.getChannelId(D.YYv)),
-        em = (0, r.bG)([I.A], () => I.A.getChannel(eA)),
-        ep = (0, x.A)((e) => e.guildId),
-        eg = (0, R.ai)(ep),
+        eA = (0, a.bG)([N.A], () => N.A.getChannelId(D.YYv)),
+        em = (0, a.bG)([I.A], () => I.A.getChannel(eA)),
+        eg = (0, x.A)((e) => e.guildId),
+        ep = (0, R.ai)(eg),
         { badge: e_, unread: ef } = (0, O.A)(eh),
         ex =
-            ((F = null != (t = (0, r.bG)([N.A], () => N.A.getVoiceChannelId())) && null != eh[t]),
-            (K = (0, r.bG)([E.A], () => {
+            ((F = null != (t = (0, a.bG)([N.A], () => N.A.getVoiceChannelId())) && null != eh[t]),
+            (K = (0, a.bG)([E.A], () => {
                 if (!F) return !1;
                 let e = E.A.getCurrentUserActiveStream();
                 return null != e && null != eh[e.channelId];
             })),
-            (W = (0, r.bG)([E.A], () => E.A.getAllApplicationStreams().some((e) => null != eh[e.channelId]))),
-            (Y = (0, r.bG)([b.A], () => F && null != t && b.A.hasVideo(t), [F, t])),
-            (z = (0, r.yK)([d.Ay], () =>
+            (W = (0, a.bG)([E.A], () => E.A.getAllApplicationStreams().some((e) => null != eh[e.channelId]))),
+            (Y = (0, a.bG)([b.A], () => F && null != t && b.A.hasVideo(t), [F, t])),
+            (z = (0, a.yK)([d.Ay], () =>
                 S.default.keys(eh).reduce((e, t) => (e.push(...d.Ay.getEmbeddedActivitiesForChannel(t)), e), []),
             )),
-            (q = (0, r.bG)([d.Ay], () =>
+            (q = (0, a.bG)([d.Ay], () =>
                 Array.from(d.Ay.getSelfEmbeddedActivities().values()).some((e) => {
                     let { location: t } = e,
                         n = (0, u.H)(t);
@@ -94,12 +94,12 @@ function F(e) {
                 }),
             )),
             (X = z.length > 0),
-            (Q = !1),
             (J = !1),
+            (Q = !1),
             ($ = !1),
             (Z = !1),
-            F ? ((Q = !Y), (J = Y), ($ = K), (Z = q)) : (($ = W), (Z = X)),
-            (0, g.oi)({ audio: Q, video: J, screenshare: $, liveStage: !1, isCurrentUserConnected: F, activity: Z })),
+            F ? ((J = !Y), (Q = Y), ($ = K), (Z = q)) : (($ = W), (Z = X)),
+            (0, p.oi)({ audio: J, video: Q, screenshare: $, liveStage: !1, isCurrentUserConnected: F, activity: Z })),
         eC = e_ > 0 ? (0, _.w)(e_) : null,
         eE = s.useRef(!1),
         { hasAccess: eI } = (0, j.TW)("FavoritesButton"),
@@ -120,10 +120,10 @@ function F(e) {
                                   return (t) =>
                                       (0, i.jsx)(e, { ...t, parentId: null, source: "favorites_button_onboarding" });
                               }))
-                        : e && (0, f.A)({ subscriptionTier: P.pe.TIER_2, analyticsLocations: er }),
+                        : e && (0, f.A)({ subscriptionTier: P.pe.TIER_2, analyticsLocations: ea }),
                     eN(U.i.TAKE_ACTION);
             },
-            [eN, ed, eI, er],
+            [eN, ed, eI, ea],
         );
     return (
         s.useEffect(() => {
@@ -145,9 +145,9 @@ function F(e) {
                 };
             }
         }, [ei, es]),
-        (0, i.jsxs)(p.c, {
+        (0, i.jsxs)(g.c, {
             children: [
-                (0, i.jsx)(m.A, { selected: eg, hovered: ea, unread: ef && !eu, className: V.I }),
+                (0, i.jsx)(m.A, { selected: ep, hovered: er, unread: ef && !eu, className: V.I }),
                 (0, i.jsx)(M.A, {
                     children: (0, i.jsx)(o.Qk9, {
                         selected: !0,
@@ -161,9 +161,9 @@ function F(e) {
                                     guildName: k.intl.string(k.t.wMWyci),
                                     mentions: e_,
                                 }),
-                                "aria-selected": eg,
+                                "aria-selected": ep,
                                 to: { pathname: D.BVt.CHANNEL(D.YYv, eA), state: H },
-                                selected: eg || ea,
+                                selected: ep || er,
                                 onClick: () => {
                                     ee && eb(!1);
                                 },
@@ -185,7 +185,7 @@ function F(e) {
                     }),
                 }),
                 ee &&
-                    (0, i.jsx)(a.AM, {
+                    (0, i.jsx)(r.AM, {
                         targetElementRef: el,
                         gradientColor: "nitro-pink",
                         position: "right",

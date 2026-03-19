@@ -13,7 +13,7 @@ var s = e(627968),
     x = e(754495),
     _ = e(939075),
     h = e(985018),
-    b = e(86617);
+    b = e(594183);
 function m(t) {
     let { user: i, entry: e, transitionState: m, onAction: p, onClose: A, onOpenGameSettings: k } = t,
         [L, R] = (0, l.yK)([d.A], () => [d.A.isDeletingEntryHistory, d.A.deleteOutboxEntryError]);

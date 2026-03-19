@@ -11,7 +11,7 @@ var i = n(627968),
     _ = n(166403),
     m = n(773669),
     g = n(652215),
-    A = n(445391);
+    A = n(70101);
 function x(e) {
     let { showHeader: t = !1 } = e,
         n = (0, a.bG)([c.A], () => c.A.isSyncing),

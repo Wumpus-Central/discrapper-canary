@@ -26,7 +26,7 @@ function E(t) {
                           n.e("68587"),
                           n.e("28136"),
                           n.e("342"),
-                          n.e("22970"),
+                          n.e("3522"),
                       ]).then(n.bind(n, 21653));
                       return (n) => (0, l.jsx)(t, { ...n, guildScheduledEventId: e, guildId: E.id });
                   }, m)

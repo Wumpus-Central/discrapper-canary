@@ -4,7 +4,7 @@ var i = n(503698),
     s = n.n(i),
     l = n(397927),
     r = n(473145),
-    a = n(946084);
+    a = n(51406);
 function o(e, t) {
     if (t) return { Icon: l.A9s, className: a.YR };
     switch (e) {

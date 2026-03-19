@@ -1,4 +1,4 @@
-n.d(t, { Ix: () => k, J3: () => P, Q3: () => w, mx: () => B });
+n.d(t, { Ix: () => k, J3: () => L, Q3: () => w, mx: () => B });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
@@ -18,8 +18,8 @@ var i = n(627968),
     T = n(234419),
     E = n(792656),
     S = n(511484),
-    f = n(811611),
-    C = n(97469),
+    C = n(811611),
+    f = n(97469),
     b = n(954571),
     N = n(544028),
     I = n(253932),
@@ -28,13 +28,13 @@ var i = n(627968),
     y = n(49999),
     R = n(788868),
     O = n(985018),
-    D = n(594969);
-let P = () => {
+    P = n(56783);
+let L = () => {
     (0, h.Dr)(a.M.CLIENT_THEMES_SPARKLE_PREVIEW, { dismissAction: y.i.PRIMARY, forceTrack: !0 }),
         (0, x.nf)(x.HP.CLIENT_THEMES),
         (0, v.default)();
 };
-function L() {
+function D() {
     let e = (0, p.O)(),
         t = (0, S.U9)(e, R.pe.TIER_2)
             ? O.intl.formatToPlainString(O.t.bkQ4bH, { percent: e?.discount.amount })
@@ -46,20 +46,20 @@ function L() {
         fullWidth: !0,
     });
 }
-function G() {
+function M() {
     let e = (0, l.bG)([m.A], () => m.A.isPreview),
         t = (0, T.V)()?.subscription_trial?.sku_id === R.pe.TIER_2;
     return !e || t
         ? null
         : (0, i.jsxs)("div", {
-              className: D.gY,
+              className: P.gY,
               children: [
-                  (0, i.jsx)(o.Button, { variant: "secondary", text: O.intl.string(O.t["E+COuA"]), onClick: P }),
-                  (0, i.jsx)(L, {}),
+                  (0, i.jsx)(o.Button, { variant: "secondary", text: O.intl.string(O.t["E+COuA"]), onClick: L }),
+                  (0, i.jsx)(D, {}),
               ],
           });
 }
-function M(e) {
+function G(e) {
     let { children: t } = e,
         n = (0, l.bG)([m.A], () => m.A.isPreview),
         { analyticsLocations: a } = (0, _.Ay)(u.A.USER_SETTINGS);
@@ -71,7 +71,7 @@ function M(e) {
             });
     }, [n, a]),
     n)
-        ? (0, i.jsx)("div", { className: D._$, children: t })
+        ? (0, i.jsx)("div", { className: P._$, children: t })
         : t;
 }
 function U() {
@@ -81,16 +81,16 @@ function U() {
         ? (0, i.jsxs)("div", {
               children: [
                   (0, i.jsx)("div", {
-                      className: D.c7,
+                      className: P.c7,
                       children: (0, i.jsx)(o.Button, {
                           variant: "secondary",
                           fullWidth: !0,
                           text: O.intl.string(O.t["E+COuA"]),
-                          onClick: () => P(),
+                          onClick: () => L(),
                       }),
                   }),
-                  (0, i.jsx)("div", { className: D.BU }),
-                  (0, i.jsx)(f.Ay, { type: R.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL, subscriptionTier: R.pe.TIER_2 }),
+                  (0, i.jsx)("div", { className: P.BU }),
+                  (0, i.jsx)(C.Ay, { type: R.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL, subscriptionTier: R.pe.TIER_2 }),
               ],
           })
         : null;
@@ -100,12 +100,12 @@ let k = () =>
         children: (0, i.jsxs)(A.Ay, {
             type: A.v0.SETTINGS,
             children: [
-                (0, i.jsx)(A.Ay.Basic, { className: D.a6 }),
+                (0, i.jsx)(A.Ay.Basic, { className: P.a6 }),
                 (0, i.jsx)(V, {}),
                 (0, i.jsx)(g.A, {}),
-                (0, i.jsxs)(M, {
+                (0, i.jsxs)(G, {
                     children: [
-                        (0, i.jsx)(A.Ay.Gradient, { disabled: !1, renderCTAButtons: () => (0, i.jsx)(G, {}) }),
+                        (0, i.jsx)(A.Ay.Gradient, { disabled: !1, renderCTAButtons: () => (0, i.jsx)(M, {}) }),
                         (0, i.jsx)(U, {}),
                     ],
                 }),
@@ -113,7 +113,7 @@ let k = () =>
         }),
     });
 function V() {
-    let e = (0, C.qo)(),
+    let e = (0, f.qo)(),
         {
             theme: t,
             useForcedColors: n,
@@ -142,20 +142,20 @@ function V() {
 let w = () =>
     (0, l.bG)([m.A], () => m.A.isPreview)
         ? null
-        : (0, i.jsx)(o.Button, { variant: "primary", text: O.intl.string(O.t.qYXrkX), onClick: P });
+        : (0, i.jsx)(o.Button, { variant: "primary", text: O.intl.string(O.t.qYXrkX), onClick: L });
 function B(e) {
     let { size: t } = e;
     return (0, i.jsx)(A.Ay, {
         type: A.v0.SETTINGS,
-        children: (0, i.jsxs)(M, {
+        children: (0, i.jsxs)(G, {
             children: [
                 (0, i.jsx)(A.ew, {
                     isCoachmark: !1,
-                    renderCTAButtons: () => (0, i.jsx)(G, {}),
-                    headingClassName: D.EK,
+                    renderCTAButtons: () => (0, i.jsx)(M, {}),
+                    headingClassName: P.EK,
                     titleTextVariant: "text-md/semibold",
-                    titleClassName: D.cI,
-                    titleIconClassName: D.Hq,
+                    titleClassName: P.cI,
+                    titleIconClassName: P.Hq,
                 }),
                 (0, i.jsx)(o.BJc, {
                     direction: "horizontal",

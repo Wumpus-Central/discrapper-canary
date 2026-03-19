@@ -1,8 +1,8 @@
 n.d(t, { A: () => N });
 var i = n(627968),
-    r = n(64700),
-    l = n(284009),
-    a = n.n(l),
+    a = n(64700),
+    r = n(284009),
+    l = n.n(r),
     s = n(397927),
     o = n(143991),
     d = n(942857),
@@ -18,19 +18,19 @@ var i = n(627968),
     I = n(249477),
     f = n(507060),
     C = n(652215),
-    T = n(92854);
-let N = r.memo(function () {
+    T = n(563760);
+let N = a.memo(function () {
     let e = (0, d.A)(),
-        t = r.useRef(null),
-        n = r.useCallback((e) => {
+        t = a.useRef(null),
+        n = a.useCallback((e) => {
             let { duration: n, intensity: i } = e;
             if (A.A.useReducedMotion || !p.A.isFocused()) return;
-            let { current: r } = t;
-            a()(null != r, "Shakeable is shaken when not mounted"), r.shake(n, i);
+            let { current: a } = t;
+            l()(null != a, "Shakeable is shaken when not mounted"), a.shake(n, i);
         }, []);
     return (
-        r.useEffect(() => (u.A.setLayout(c.Ay), u.A.enable(), () => u.A.disable()), []),
-        r.useEffect(
+        a.useEffect(() => (u.A.setLayout(c.Ay), u.A.enable(), () => u.A.disable()), []),
+        a.useEffect(
             () => (
                 E._.subscribe(C.jej.SHAKE_APP, n),
                 () => {

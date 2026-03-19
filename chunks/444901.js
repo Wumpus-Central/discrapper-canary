@@ -1,4 +1,4 @@
-n.d(t, { A: () => v }), n(321073);
+n.d(t, { A: () => T }), n(321073);
 var i = n(627968),
     r = n(64700),
     a = n(503698),
@@ -17,28 +17,28 @@ var i = n(627968),
     x = n(472590),
     f = n(878831),
     C = n(768349),
-    E = n(985018),
-    I = n(609653),
-    b = n(103467);
-function T(e) {
+    I = n(985018),
+    E = n(62323),
+    v = n(748921);
+function b(e) {
     let { message: t, applicationName: n, iconSrc: r, channel: a, currentUserId: s, viewAction: d } = e,
         c = (0, m.Ay)(t),
         u = (0, h.P)({ user: t.author, channelId: a.id, guildId: a.guild_id, messageId: t.id })(c);
     return (0, i.jsx)(p.A, {
         compact: !1,
-        children: E.intl.format(s === t.author.id ? E.t.anvg2q : E.t.AxVbYF, {
+        children: I.intl.format(s === t.author.id ? I.t.anvg2q : I.t.AxVbYF, {
             username: c.nick,
             usernameHook: u,
             applicationHook: () => {
                 let e = null != d ? o.MzZ : "div";
                 return (0, i.jsxs)(e, {
                     onClick: d,
-                    className: I.Lf,
+                    className: E.Lf,
                     children: [
                         (0, i.jsx)("img", {
-                            alt: E.intl.string(E.t["2B/phM"]),
+                            alt: I.intl.string(I.t["2B/phM"]),
                             src: r,
-                            className: l()(b.Gt, _.M.XSMALL),
+                            className: l()(v.Gt, _.M.XSMALL),
                         }),
                         (0, i.jsx)(o.Text, { variant: "text-sm/semibold", color: "text-muted", children: n }),
                     ],
@@ -47,7 +47,7 @@ function T(e) {
         }),
     });
 }
-function v(e) {
+function T(e) {
     let {
             message: t,
             application: n,
@@ -57,20 +57,20 @@ function v(e) {
             currentUserId: m,
             launchableAppId: h,
             isEmbeddedApplication: p,
-            tryWithGdnAction: b,
-            staticBannerSrc: v,
-            onClickContent: S,
-            iconSrc: y,
+            tryWithGdnAction: v,
+            staticBannerSrc: T,
+            onClickContent: y,
+            iconSrc: S,
             onView: N,
             presenceActivity: j,
             analyticsLocations: L,
             showAuthButton: R,
             startAuthorization: P,
             accountLinkButtonRef: M,
-            renderAccountLinkUpsell: O,
+            renderAccountLinkUpsell: w,
         } = e,
         D = (0, s.bG)([g.A], () => g.A.getMessages(l.id)),
-        { actions: w, hasAccountLinkButton: k } = r.useMemo(() => {
+        { actions: k, hasAccountLinkButton: O } = r.useMemo(() => {
             let e = [],
                 i = !0,
                 r = !1;
@@ -78,7 +78,7 @@ function v(e) {
                 (null != h
                     ? (e = [
                           {
-                              label: E.intl.string(E.t["s+J8Dl"]),
+                              label: I.intl.string(I.t["s+J8Dl"]),
                               trackingArea: u.kY.PLAY,
                               isDeadEnd: !0,
                               onClick: () => {
@@ -86,7 +86,7 @@ function v(e) {
                               },
                           },
                       ])
-                    : null != b && ((e = [b]), (i = !1)),
+                    : null != v && ((e = [v]), (i = !1)),
                 e.length > 0)
             )
                 if (!(0, x.p)(t.id, D, n.id, j)) return { actions: [], hasAccountLinkButton: !1 };
@@ -94,7 +94,7 @@ function v(e) {
                     R &&
                         i &&
                         (e.push({
-                            label: E.intl.string(E.t.lw71Nf),
+                            label: I.intl.string(I.t.lw71Nf),
                             trackingArea: u.kY.CONNECT_ACCOUNT,
                             onClick: () => {
                                 P({ analyticsLocations: L });
@@ -105,36 +105,36 @@ function v(e) {
                         }),
                         (r = !0));
             return { actions: e, hasAccountLinkButton: r };
-        }, [p, h, b, D, j, n.id, t.id, R, P, L, M]),
-        U = w.some((e) => e.trackingArea === u.kY.CLOUD_PLAY);
+        }, [p, h, v, D, j, n.id, t.id, R, P, L, M]),
+        U = k.some((e) => e.trackingArea === u.kY.CLOUD_PLAY);
     (0, f.A)(U, L);
-    let G = w.length > 0,
-        B = r.useMemo(
+    let B = k.length > 0,
+        G = r.useMemo(
             () =>
                 (0, i.jsx)(o.Text, {
                     variant: "text-xs/medium",
-                    className: I.h_,
+                    className: E.h_,
                     color: "none",
                     lineClamp: 3,
-                    children: (0, A.BE)(t, a, l, m, G),
+                    children: (0, A.BE)(t, a, l, m, B),
                 }),
-            [t, a, l, m, G],
+            [t, a, l, m, B],
         );
-    return 0 === w.length
-        ? (0, i.jsx)(T, { message: t, applicationName: a, iconSrc: y, channel: l, currentUserId: m, viewAction: S })
+    return 0 === k.length
+        ? (0, i.jsx)(b, { message: t, applicationName: a, iconSrc: S, channel: l, currentUserId: m, viewAction: y })
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(c.h, {
                       header: _,
                       title: a,
-                      staticBannerSrc: v,
-                      onClickBanner: S,
+                      staticBannerSrc: T,
+                      onClickBanner: y,
                       bannerAspectRatio: c.u.ACTIVITY,
-                      iconSrc: y ?? void 0,
-                      info: B,
-                      actions: w,
+                      iconSrc: S ?? void 0,
+                      info: G,
+                      actions: k,
                       primaryActionFirst: !0,
-                      onClickContent: S,
+                      onClickContent: y,
                       trackingConfig: {
                           id: n.id,
                           linkType: C.J.RICH_PRESENCE_INVITE,
@@ -146,7 +146,7 @@ function v(e) {
                           isDeadEnd: !0,
                       },
                   }),
-                  k ? O() : null,
+                  O ? w() : null,
               ],
           });
 }

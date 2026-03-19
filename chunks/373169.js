@@ -8,7 +8,7 @@ var i = n(627968),
     d = n(780964),
     c = n(840065),
     u = n(985018),
-    _ = n(58477),
+    _ = n(520383),
     m = n(72290);
 function g() {
     let e = (0, l.bG)([o.default], () => o.default.locale),
@@ -36,7 +36,7 @@ function g() {
                 }),
             [],
         ),
-        h = s.useCallback((e) => {
+        x = s.useCallback((e) => {
             g(e),
                 m.nextTick(() => {
                     r.Ay.updateLocale(e),
@@ -49,6 +49,6 @@ function g() {
         description: u.intl.string(u.t.rTPlcq),
         value: t,
         options: A,
-        onSelectionChange: h,
+        onSelectionChange: x,
     });
 }

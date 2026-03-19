@@ -5,54 +5,54 @@ var i = n(627968),
     s = n.n(a),
     r = n(158954),
     o = n(311907),
-    c = n(793574),
-    d = n(688810),
+    d = n(793574),
+    c = n(688810),
     u = n(362490),
-    m = n(429913),
-    g = n(183555),
+    g = n(429913),
+    m = n(183555),
     x = n(622543),
-    f = n(985018),
-    p = n(413611);
+    p = n(985018),
+    f = n(81157);
 function h(e) {
     let { applicationId: t, size: n = "default" } = e,
         l = (0, o.bG)([x.A], () => x.A.getApplicationWidgetConfig(t));
     return (0, i.jsxs)("div", {
-        className: s()(p.kL, { [p.PG]: "small" === n }),
+        className: s()(f.kL, { [f.PG]: "small" === n }),
         children: [
             (0, i.jsxs)("div", {
-                className: p.Qs,
+                className: f.Qs,
                 children: [
-                    (0, i.jsx)("div", { className: p.wx }),
-                    (0, i.jsx)("div", { className: p.yF }),
+                    (0, i.jsx)("div", { className: f.wx }),
+                    (0, i.jsx)("div", { className: f.yF }),
                     (0, i.jsxs)("div", {
-                        className: p.M1,
+                        className: f.M1,
                         children: [
-                            (0, i.jsx)("div", { className: p.dJ }),
-                            (0, i.jsx)("div", { className: p.dJ }),
-                            (0, i.jsx)("div", { className: p.dJ }),
-                            (0, i.jsx)("div", { className: p.dJ }),
-                            (0, i.jsx)("div", { className: p.dJ }),
-                            (0, i.jsx)("div", { className: p.dJ }),
+                            (0, i.jsx)("div", { className: f.dJ }),
+                            (0, i.jsx)("div", { className: f.dJ }),
+                            (0, i.jsx)("div", { className: f.dJ }),
+                            (0, i.jsx)("div", { className: f.dJ }),
+                            (0, i.jsx)("div", { className: f.dJ }),
+                            (0, i.jsx)("div", { className: f.dJ }),
                         ],
                     }),
                 ],
             }),
             (0, i.jsx)("div", {
-                className: p.ZS,
+                className: f.ZS,
                 children:
                     l?.miniPreviewImage != null
-                        ? (0, i.jsx)("img", { src: l.miniPreviewImage, alt: "", className: p.oz })
-                        : (0, i.jsx)("div", { className: p.FQ }),
+                        ? (0, i.jsx)("img", { src: l.miniPreviewImage, alt: "", className: f.oz })
+                        : (0, i.jsx)("div", { className: f.FQ }),
             }),
         ],
     });
 }
 function _(e) {
     let { applicationId: t, size: n = "default" } = e,
-        { trackUserProfileAction: a } = (0, g.NJ)(),
-        s = (0, m.h)(t),
+        { trackUserProfileAction: a } = (0, m.NJ)(),
+        s = (0, g.h)(t),
         { hasAlreadyLinked: o, canStartAuthorization: x, startAuthorization: h, fetched: _ } = (0, u.RD)(s),
-        { analyticsLocations: A } = (0, d.Ay)(c.A.USER_PROFILE_APPLICATION_WIDGET),
+        { analyticsLocations: A } = (0, c.Ay)(d.A.USER_PROFILE_APPLICATION_WIDGET),
         I = l.useCallback(() => {
             x &&
                 (a({ action: "PRESS_APPLICATION_WIDGET_PLACEHOLDER_CONNECT", applicationId: t }),
@@ -61,7 +61,7 @@ function _(e) {
     return "default" !== n || null == s
         ? null
         : (0, i.jsxs)("div", {
-              className: p.qr,
+              className: f.qr,
               children: [
                   (0, i.jsx)(r.A5T, { size: "xs" }),
                   (0, i.jsx)(r.EYj, {
@@ -69,11 +69,11 @@ function _(e) {
                       color: "text-subtle",
                       children: _
                           ? o
-                              ? f.intl.format(f.t.wiyuG9, { applicationName: s.name })
+                              ? p.intl.format(p.t.wiyuG9, { applicationName: s.name })
                               : x
-                                ? f.intl.format(f.t.RNWFOQ, { onConnect: I })
-                                : f.intl.string(f.t["9TX4UT"])
-                          : (0, i.jsx)("div", { className: p.bg }),
+                                ? p.intl.format(p.t.RNWFOQ, { onConnect: I })
+                                : p.intl.string(p.t["9TX4UT"])
+                          : (0, i.jsx)("div", { className: f.bg }),
                   }),
               ],
           });

@@ -59,7 +59,7 @@ function m(e) {
         W = (0, M.c)(t);
     function J() {
         (0, a.mMO)(async () => {
-            let { default: e } = await i.e("53485").then(i.bind(i, 20508));
+            let { default: e } = await i.e("53485").then(i.bind(i, 798127));
             return (i) => (0, n.jsx)(e, { ...i, guild: t });
         });
     }
@@ -79,7 +79,7 @@ function m(e) {
                               label: O.intl.string(O.t.IlFwwR),
                               action: () =>
                                   (0, a.mMO)(async () => {
-                                      let { default: e } = await Promise.all([i.e("14033"), i.e("9934")]).then(
+                                      let { default: e } = await Promise.all([i.e("14033"), i.e("34804")]).then(
                                           i.bind(i, 585265),
                                       );
                                       return (i) => (0, n.jsx)(e, { ...i, guild: t });
@@ -123,7 +123,7 @@ function m(e) {
                                     label: O.intl.string(O.t.BayiAo),
                                     action: () =>
                                         (0, a.mMO)(async () => {
-                                            let { default: e } = await Promise.all([i.e("14033"), i.e("9934")]).then(
+                                            let { default: e } = await Promise.all([i.e("14033"), i.e("34804")]).then(
                                                 i.bind(i, 585265),
                                             );
                                             return (i) => (0, n.jsx)(e, { ...i, guild: t });

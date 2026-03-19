@@ -1,9 +1,9 @@
 n.d(t, { G: () => E, default: () => I });
 var i = n(627968);
 n(64700);
-var r = n(397927),
-    l = n(287070),
-    a = n(950191),
+var a = n(397927),
+    r = n(287070),
+    l = n(950191),
     s = n(101928),
     o = n(287809),
     d = n(87719),
@@ -14,22 +14,22 @@ var r = n(397927),
     _ = n(652215),
     m = n(339984),
     g = n(985018),
-    p = n(698290);
+    p = n(94184);
 function E(e) {
-    let { uploadType: t, imageSrc: l, analyticsSource: a } = e,
+    let { uploadType: t, imageSrc: r, analyticsSource: l } = e,
         s = o.default.getCurrentUser();
     return (
         null != s &&
-        ((0, r.mMO)(async () => {
+        ((0, a.mMO)(async () => {
             let { default: e } = await Promise.resolve().then(n.bind(n, 688796));
             return (n) =>
                 (0, i.jsx)(e, {
                     user: s,
-                    imageSrc: l,
+                    imageSrc: r,
                     uploadType: t,
-                    analyticsSource: a,
+                    analyticsSource: l,
                     analyticsLocation: { section: _.JJy.USER_PROFILE, object: _.ZSU.BUTTON_CTA },
-                    onSecondaryClick: r.s7G,
+                    onSecondaryClick: a.s7G,
                     ...n,
                 });
         }),
@@ -40,22 +40,22 @@ function I(e) {
     let {
             user: t,
             uploadType: n,
-            imageSrc: r,
+            imageSrc: a,
             onClose: o,
             analyticsSource: _,
             analyticsLocation: E,
             onSecondaryClick: I,
             ...f
         } = e,
-        C = (0, a.Ay)(t.id),
+        C = (0, l.Ay)(t.id),
         { primaryColor: T, secondaryColor: N } = (0, s.A)({
             user: t,
             displayProfile: C,
-            pendingAvatarSrc: n === m.HL.AVATAR ? r : void 0,
+            pendingAvatarSrc: n === m.HL.AVATAR ? a : void 0,
             isPreview: !0,
         }),
         S = n === m.HL.AVATAR || n === m.HL.BANNER,
-        x = null != r,
+        x = null != a,
         v = (0, u.u)(n === m.HL.AVATAR ? h.e.ANIMATED_AVATAR_MODAL_UPSELL : h.e.ANIMATED_BANNER_MODAL_UPSELL),
         y = (0, u.A)(n === m.HL.AVATAR ? h.e.ANIMATED_AVATAR_MODAL_UPSELL : h.e.ANIMATED_BANNER_MODAL_UPSELL);
     return S
@@ -92,13 +92,13 @@ function I(e) {
                   LeadingComponent: x
                       ? (0, i.jsx)("div", {
                             className: p.wC,
-                            children: (0, i.jsx)(l.A, {
+                            children: (0, i.jsx)(r.A, {
                                 containerClassName: p.i1,
                                 user: t,
                                 canUsePremiumCustomization: !0,
                                 disabledInputs: !0,
-                                pendingAvatar: n === m.HL.AVATAR ? r : void 0,
-                                pendingBanner: n === m.HL.BANNER ? r : void 0,
+                                pendingAvatar: n === m.HL.AVATAR ? a : void 0,
+                                pendingBanner: n === m.HL.BANNER ? a : void 0,
                                 pendingThemeColors: [T, N],
                                 hideExampleButton: !0,
                             }),

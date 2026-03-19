@@ -1,8 +1,8 @@
 n.d(t, { default: () => E });
 var a = n(627968),
     i = n(64700),
-    s = n(835245),
-    l = n(158954),
+    l = n(835245),
+    s = n(158954),
     r = n(554146),
     o = n(397927),
     d = n(932001),
@@ -10,18 +10,18 @@ var a = n(627968),
     u = n(627575),
     m = n(393033),
     h = n(105428),
-    p = n(975571),
-    x = n(935649),
+    x = n(975571),
+    p = n(935649),
     g = n(847599),
     _ = n(295972),
     f = n(36149),
     v = n(807734),
     b = n(652215),
     j = n(239093),
-    A = n(536242),
+    A = n(949268),
     C = n(985018),
-    T = n(62959),
-    y = n(700129);
+    y = n(499453),
+    T = n(700129);
 function S(e) {
     let { modalSessionId: t, entryPoint: n } = e;
     return (0, m.W$)()
@@ -29,7 +29,7 @@ function S(e) {
               variant: "text-xs/medium",
               children: C.intl.format(A.default.htWh1G, {
                   handleOnHelpUrlHook: () => {
-                      x.A.openUrl(j.d$.LEARN_MORE_UU_APPEAL_LINK),
+                      p.A.openUrl(j.d$.LEARN_MORE_UU_APPEAL_LINK),
                           (0, g.St)(t, g.WU.EXPRESSIVE_PRIMARY, g._7.LEARN_MORE);
                   },
               }),
@@ -47,21 +47,21 @@ function S(e) {
 }
 let E = function (e) {
     let { transitionState: t, entryPoint: n, onClose: u, onComplete: j, dismissable: E, classificationId: N } = e,
-        [I, R] = i.useState(r.M.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
-        k = i.useRef(I),
+        [I, k] = i.useState(r.M.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
+        R = i.useRef(I),
         [O, w] = (0, d.kn)([I], void 0, !0),
-        D = i.useMemo(() => (0, s.A)(), []),
+        D = i.useMemo(() => (0, l.A)(), []),
         M = i.useRef(!1),
         P = (0, m.W$)();
     i.useEffect(() => {
-        k.current = O;
+        R.current = O;
     }, [O]);
     let { loading: U, ageVerificationMethods: L } = (0, v.A)({
         onClose: () => {
             j?.(), u();
         },
         onMethodClick: () => {
-            R(r.M.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
+            k(r.M.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
         },
         classificationId: N,
     });
@@ -69,7 +69,7 @@ let E = function (e) {
         i.useLayoutEffect(
             () => () => {
                 if (M.current) return;
-                let e = k.current;
+                let e = R.current;
                 null != e &&
                     ((M.current = !0),
                     h.A.maybeOpenAgeVerificationUserFeedback({
@@ -82,17 +82,17 @@ let E = function (e) {
         i.useEffect(() => {
             (0, g.Bs)(D, g.WU.EXPRESSIVE_PRIMARY, n);
         }, [D, n]),
-        (0, a.jsx)(l.ExpressiveModal, {
+        (0, a.jsx)(s.ExpressiveModal, {
             transitionState: t,
             onClose: u,
             gradientColor: "blue",
             dismissable: E,
-            graphic: { type: "image", src: y.A },
+            graphic: { type: "image", src: T.A },
             title: (0, f.ST)(n),
             subtitle: (0, f.mK)(
                 n,
                 () => {
-                    x.A.openUrl(p.A.getArticleURL(b.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                    p.A.openUrl(x.A.getArticleURL(b.MVz.TIGGER_PAWTECT_LEARN_MORE)),
                         (0, g.St)(D, g.WU.EXPRESSIVE_PRIMARY, g._7.LEARN_MORE);
                 },
                 P,
@@ -108,7 +108,7 @@ let E = function (e) {
                         gap: 8,
                         padding: { top: 8, bottom: 8, left: 12, right: 12 },
                         align: "center",
-                        className: T.W,
+                        className: y.W,
                         children: [
                             (0, a.jsx)(o.mir, { size: "lg", color: "currentColor" }),
                             (0, a.jsx)(o.Text, {

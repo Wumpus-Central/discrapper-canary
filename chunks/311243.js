@@ -2,11 +2,11 @@ n.d(t, { A: () => c });
 var l = n(627968);
 n(64700);
 var s = n(503698),
-    a = n.n(s),
-    i = n(397927),
+    i = n.n(s),
+    a = n(397927),
     r = n(714510),
-    o = n(646764),
-    u = n(510823);
+    u = n(646764),
+    o = n(96373);
 let c = function (e) {
     let {
             className: t,
@@ -16,23 +16,23 @@ let c = function (e) {
             taskDetails: d,
             location: m,
             sourceQuestContent: A,
-            gameProfileSource: p,
+            gameProfileSource: E,
         } = e,
-        f = (0, r.mU)({
+        p = (0, r.mU)({
             quest: s,
             taskDetails: d,
             location: m,
             questContent: c,
             sourceQuestContent: A,
-            gameProfileSource: p,
+            gameProfileSource: E,
         });
     return (0, l.jsxs)("div", {
-        className: a()(u.iE, t),
+        className: i()(o.iE, t),
         children: [
-            (0, l.jsx)(o.A, { autoplay: n, className: u.Qq, quest: s, questContent: c, sourceQuestContent: A }),
+            (0, l.jsx)(u.A, { autoplay: n, className: o.Qq, quest: s, questContent: c, sourceQuestContent: A }),
             (0, l.jsx)("div", {
-                className: u.C,
-                children: (0, l.jsx)(i.Text, { variant: "text-sm/normal", color: "text-default", children: f }),
+                className: o.C,
+                children: (0, l.jsx)(a.Text, { variant: "text-sm/normal", color: "text-default", children: p }),
             }),
         ],
     });

@@ -1,4 +1,4 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => T });
 var i = n(627968),
     r = n(64700),
     a = n(503698),
@@ -17,81 +17,81 @@ var i = n(627968),
     x = n(42780),
     f = n(860689),
     C = n(897288),
-    E = n(168428),
-    I = n(652215),
-    b = n(985018),
-    T = n(875871);
-function v(e) {
+    I = n(168428),
+    E = n(652215),
+    v = n(985018),
+    b = n(14977);
+function T(e) {
     let { invite: t, isMemberOfGuild: n, message: a, onTransitionToInviteChannel: d, onAcceptInstantInvite: u } = e,
         _ = r.useRef(null),
         [h, g] = r.useState(!0),
-        [v, y] = r.useState(!1),
-        N = t.state === I.elq.ACCEPTING,
+        [T, S] = r.useState(!1),
+        N = t.state === E.elq.ACCEPTING,
         j = (0, s.bG)([c.A], () => c.A.useReducedMotion);
     r.useLayoutEffect(() => {
-        y((_.current?.clientHeight ?? 0) > 292);
-    }, [y]);
+        S((_.current?.clientHeight ?? 0) > 292);
+    }, [S]);
     let L = (0, m.oO)(t),
         R = r.useCallback(() => {
-            !v || (h && g(!1));
-        }, [h, v]),
+            !T || (h && g(!1));
+        }, [h, T]),
         P = r.useCallback(() => {
-            !v || h || g(!0);
-        }, [h, v]),
+            !T || h || g(!0);
+        }, [h, T]),
         M = r.useMemo(
             () =>
-                v && _.current?.clientHeight != null
+                T && _.current?.clientHeight != null
                     ? {
                           height: h ? 292 : _.current.clientHeight + 36 + 48,
                           transition: j ? void 0 : "height 0.2s ease",
                       }
                     : {},
-            [h, v, j],
+            [h, T, j],
         );
     return null == L
-        ? (0, i.jsx)(E.A, {})
+        ? (0, i.jsx)(I.A, {})
         : (0, i.jsxs)(o.sqX, {
-              className: l()(T.Gg, { [T.vk]: v && h }),
+              className: l()(b.Gg, { [b.vk]: T && h }),
               onClick: R,
               style: M,
-              "aria-label": b.intl.string(b.t.dcl9MQ),
+              "aria-label": v.intl.string(v.t.dcl9MQ),
               children: [
                   (0, i.jsxs)("div", {
-                      className: T.uY,
+                      className: b.uY,
                       ref: _,
                       children: [
-                          (0, i.jsx)(x.J$, { profile: L, className: T.vK }),
+                          (0, i.jsx)(x.J$, { profile: L, className: b.vK }),
                           (0, i.jsx)(x.CG, { profile: L }),
                           (0, i.jsx)(A.A, { profile: L }),
-                          (0, i.jsx)(p.P, { profile: L, className: T.rb }),
+                          (0, i.jsx)(p.P, { profile: L, className: b.rb }),
                           (0, i.jsx)(C.A, {
                               guild: null != t.guild ? (0, f.DY)(t.guild) : null,
                               roles: t.roles,
-                              className: T.Ei,
+                              className: b.Ei,
                           }),
                       ],
                   }),
-                  v && !h
+                  T && !h
                       ? (0, i.jsx)("div", {
-                            className: T.Se,
+                            className: b.Se,
                             children: (0, i.jsx)(o.QWc, {
                                 textVariant: "text-xs/medium",
                                 variant: "secondary",
                                 size: "sm",
                                 onClick: P,
-                                text: b.intl.string(b.t.xdCLeM),
+                                text: v.intl.string(v.t.xdCLeM),
                             }),
                         })
                       : null,
                   (0, i.jsxs)("div", {
-                      className: l()(T.qr, { [T.iK]: v }),
+                      className: l()(b.qr, { [b.iK]: T }),
                       children: [
-                          v && h ? (0, i.jsx)("div", { className: T.D7 }) : null,
+                          T && h ? (0, i.jsx)("div", { className: b.D7 }) : null,
                           (0, i.jsx)("div", {
-                              className: l()(T.z8, { [T.it]: v && h }),
+                              className: l()(b.z8, { [b.it]: T && h }),
                               children: (0, i.jsx)("div", {
-                                  className: T.UD,
-                                  children: (0, i.jsx)(S, {
+                                  className: b.UD,
+                                  children: (0, i.jsx)(y, {
                                       invite: t,
                                       profile: L,
                                       isMemberOfGuild: n,
@@ -107,7 +107,7 @@ function v(e) {
               ],
           });
 }
-function S(e) {
+function y(e) {
     let {
             invite: t,
             profile: n,

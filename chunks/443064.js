@@ -12,8 +12,8 @@ var i = n(627968),
     m = n(847599),
     g = n(36149),
     A = n(521933),
-    h = n(50268),
-    x = n(922301),
+    x = n(50268),
+    h = n(922301),
     p = n(81400),
     T = n(557722),
     E = n(207560),
@@ -29,18 +29,18 @@ var i = n(627968),
     R = n(975571),
     O = n(427262),
     P = n(837921),
-    D = n(253932),
-    L = n(780964),
-    G = n(192501),
-    M = n(840065),
+    L = n(253932),
+    D = n(780964),
+    M = n(192501),
+    G = n(840065),
     U = n(652215),
     k = n(53516),
     V = n(985018),
-    w = n(536242),
-    B = n(609290);
+    w = n(949268),
+    B = n(944300);
 let H = P.Ay.getEnableHardwareAcceleration() ? c.JsQ : c.euF;
 function F() {
-    (0, M.openUserSettings)(L.X.PROFILE_PANEL);
+    (0, G.openUserSettings)(D.X.PROFILE_PANEL);
 }
 function Y(e) {
     let { className: t, user: l } = e,
@@ -52,7 +52,7 @@ function Y(e) {
         g(null != r.current && r.current.scrollWidth > r.current.clientWidth);
     }, [l.username]);
     let A = !l.isClaimed(),
-        h = A ? V.intl.string(V.t["7Ngnyr"]) : void 0;
+        x = A ? V.intl.string(V.t["7Ngnyr"]) : void 0;
     return (0, i.jsxs)("div", {
         className: a()(B.ZZ, t),
         children: [
@@ -103,7 +103,7 @@ function Y(e) {
                     }),
                 }),
             (0, i.jsx)(d.m, {
-                text: h,
+                text: x,
                 children: (0, i.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
                     className: B.pr,
@@ -219,7 +219,7 @@ function W(e) {
                 valueMessage: V.intl.string(V.t["8SfTN/"]),
                 handleClick: () =>
                     (0, c.mMO)(async () => {
-                        let { default: e } = await Promise.all([n.e("89129"), n.e("75283")]).then(n.bind(n, 354096));
+                        let { default: e } = await Promise.all([n.e("89129"), n.e("4709")]).then(n.bind(n, 354096));
                         return (t) => (0, i.jsx)(e, { ...t });
                     }),
             };
@@ -230,13 +230,13 @@ function W(e) {
                 buttonAriaLabel: V.intl.string(V.t["8peUT0"]),
                 valueMessage: (0, i.jsx)(X, {
                     text: e,
-                    censor: G.B,
+                    censor: M.B,
                     revealLabel: V.intl.string(V.t["Zvx+yV"]),
                     hideLabel: V.intl.string(V.t.nqTD4d),
                 }),
                 handleClick: () =>
                     (0, c.mMO)(async () => {
-                        let { default: e } = await Promise.all([n.e("89129"), n.e("75283")]).then(n.bind(n, 354096));
+                        let { default: e } = await Promise.all([n.e("89129"), n.e("4709")]).then(n.bind(n, 354096));
                         return (t) => (0, i.jsx)(e, { ...t });
                     }),
             };
@@ -295,7 +295,7 @@ function K(e) {
         (t = d
             ? (0, i.jsx)(X, {
                   text: r,
-                  censor: G.D,
+                  censor: M.D,
                   revealLabel: V.intl.string(V.t.eY3xlT),
                   hideLabel: V.intl.string(V.t["jllbv+"]),
               })
@@ -377,8 +377,8 @@ function K(e) {
 }
 function Z(e) {
     let { user: t } = e,
-        n = (0, h.A)({ id: t.id, label: V.intl.string(V.t["/AXYnE"]) }),
-        l = D.Q_.useSetting(),
+        n = (0, x.A)({ id: t.id, label: V.intl.string(V.t["/AXYnE"]) }),
+        l = L.Q_.useSetting(),
         a = s.useRef(null);
     return l && y.p5
         ? (0, i.jsx)(c.YNO, {
@@ -413,8 +413,8 @@ function q(e) {
         d = !l || r,
         u = V.intl.string(V.t["9KiIz6"]),
         A = V.intl.string(V.t.DVywUB),
-        h = V.intl.string(V.t.lKDPGA),
-        x = s.useCallback(() => {
+        x = V.intl.string(V.t.lKDPGA),
+        h = s.useCallback(() => {
             window.open(R.A.getArticleURL(U.MVz.TIGGER_PAWTECT_LEARN_MORE), "_blank");
         }, []),
         p = s.useCallback(() => {
@@ -429,10 +429,10 @@ function q(e) {
                     ? r
                         ? V.intl.string(V.t.sK0dmH)
                         : o
-                          ? V.intl.format(w.default.WM5adV, { handleOnHelpUrlHook: x })
+                          ? V.intl.format(w.default.WM5adV, { handleOnHelpUrlHook: h })
                           : V.intl.string(V.t.XxRj7f)
-                    : h,
-            [l, r, o, h, x],
+                    : x,
+            [l, r, o, x, h],
         ),
         E = l && !r && o;
     return (0, i.jsxs)("div", {
@@ -490,7 +490,7 @@ function J(e) {
     let { currentUser: t } = e,
         n = (0, b.Ay)(t.id),
         s = (0, f.A)(n),
-        l = D.jP.useSetting(),
+        l = L.jP.useSetting(),
         a = (0, r.bG)([C.A], () => C.A.getErrors()),
         o = a?.avatar?.[0],
         { avatarSrc: d, avatarDecorationSrc: _ } = (0, N.A)({ userId: t?.id, size: c._3J.SIZE_80 }),
@@ -529,7 +529,7 @@ function J(e) {
                                         user: t,
                                         className: B.a1,
                                         discriminatorClass: B.D2,
-                                        displayNameStylesType: x.G.STATIC,
+                                        displayNameStylesType: h.G.STATIC,
                                     }),
                                     (0, i.jsx)(Z, { user: t }),
                                 ],

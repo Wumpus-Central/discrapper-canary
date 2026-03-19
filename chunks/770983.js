@@ -22,8 +22,8 @@ var i = n(627968),
     E = n(188275),
     T = n(518477),
     b = n(985018),
-    N = n(79711);
-function S(e) {
+    N = n(525785);
+function y(e) {
     let { application: t, sku: n, handleOpenUserProfileModal: a, analyticsLocations: s } = e,
         o = l.useRef(null),
         { analyticsLocations: g } = (0, u.Ay)(s ?? []),
@@ -83,7 +83,7 @@ function S(e) {
         }),
     });
 }
-function y(e) {
+function S(e) {
     let {
             wishlist: t,
             handleOpenUserProfileModal: n,
@@ -119,7 +119,7 @@ function y(e) {
                               e.id,
                           )
                         : (0, i.jsx)(
-                              S,
+                              y,
                               { application: x, sku: e, handleOpenUserProfileModal: n, analyticsLocations: a },
                               e.id,
                           ),
@@ -129,5 +129,5 @@ function y(e) {
 function C(e) {
     let { userId: t, numWishlistItemsToRecommend: n, ...l } = e,
         { recommendations: a, status: s } = (0, j.Ul)({ userId: t, numItems: n, source: I.B5.USER_PROFILE });
-    return (0, i.jsx)(y, { isLoading: "loading" === s, recommendations: a, numWishlistItemsToRecommend: n, ...l });
+    return (0, i.jsx)(S, { isLoading: "loading" === s, recommendations: a, numWishlistItemsToRecommend: n, ...l });
 }

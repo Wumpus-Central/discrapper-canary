@@ -33,7 +33,7 @@ var i = n(627968),
     O = n(788868),
     P = n(188275),
     D = n(985018),
-    G = n(39427);
+    G = n(376721);
 function M(e) {
     let { isSocialLayerStorefrontEnabled: t, handleOpenShop: n, handleOpenGameShop: l } = e;
     return t

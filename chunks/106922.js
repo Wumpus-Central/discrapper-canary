@@ -28,11 +28,11 @@ var i = n(627968),
     y = n(976860),
     R = n(780964),
     O = n(12901),
-    D = n(840065),
+    P = n(840065),
     L = n(351906),
-    P = n(287809),
-    G = n(166403),
-    M = n(224016),
+    D = n(287809),
+    M = n(166403),
+    G = n(224016),
     U = n(954571),
     k = n(975571),
     V = n(927578),
@@ -55,7 +55,7 @@ var i = n(627968),
     en = n(88001),
     ei = n(652215),
     es = n(985018),
-    el = n(95252),
+    el = n(263442),
     ea = n(396785),
     er = n(956537);
 let eo = "to_premium_home_button",
@@ -104,8 +104,8 @@ function em() {
     let e = (0, w.k5)(),
         t = (0, w.nf)(),
         n = (0, S.Ay)(),
-        s = (0, u.bG)([G.A], () => G.A.getPremiumTypeSubscription()),
-        l = (0, u.bG)([P.default], () => P.default.getCurrentUser()),
+        s = (0, u.bG)([M.A], () => M.A.getPremiumTypeSubscription()),
+        l = (0, u.bG)([D.default], () => D.default.getCurrentUser()),
         r = l?.isPremiumWithPremiumGroup(),
         o = (0, N.A)(),
         d = (0, B.d)(),
@@ -126,7 +126,7 @@ function em() {
                               className: el._K,
                               children: (0, en.DP)(),
                           })
-                        : (0, i.jsx)(M.A, { className: el.TJ }),
+                        : (0, i.jsx)(G.A, { className: el.TJ }),
                     r
                         ? (0, i.jsx)("div", { style: { marginBottom: "18px" } })
                         : _ && !d
@@ -233,7 +233,7 @@ function em() {
                                               cta_type: "to_subscriptions_button",
                                               target: "subscriptions settings",
                                           }),
-                                              (0, D.openUserSettings)(R.X.SUBSCRIPTIONS_PANEL);
+                                              (0, P.openUserSettings)(R.X.SUBSCRIPTIONS_PANEL);
                                       },
                                       text: es.intl.string(es.t["9uDy6C"]),
                                       fullWidth: !0,
@@ -330,9 +330,9 @@ function eA() {
 let ex = function () {
     let e = (0, b.Hp)(),
         { analyticsLocations: t } = (0, f.Ay)(C.A.PREMIUM_SETTINGS),
-        n = (0, u.bG)([P.default], () => P.default.getCurrentUser()),
-        l = (0, u.bG)([G.A], () => G.A.getPremiumTypeSubscription()),
-        a = (0, u.bG)([G.A], () => G.A.hasFetchedSubscriptions()),
+        n = (0, u.bG)([D.default], () => D.default.getCurrentUser()),
+        l = (0, u.bG)([M.A], () => M.A.getPremiumTypeSubscription()),
+        a = (0, u.bG)([M.A], () => M.A.hasFetchedSubscriptions()),
         r = (0, I.Y)(et.T7),
         [o, m] = s.useState(!0),
         g = (0, N.A)({ forceFetch: !0 }),
@@ -352,7 +352,7 @@ let ex = function () {
             y || e || (await Promise.all([p.hP(), p.$o(), (0, T.zS)(null, null, ei.tF5.DISCOVERY)])), m(!1);
         });
     }, [y, e]);
-    let [D, M] = s.useState(!1);
+    let [P, G] = s.useState(!1);
     if (y) return (0, i.jsx)(E.A, {});
     if (e) return (0, i.jsx)(v.uK, {});
     let k = a && null !== l && r,
@@ -384,9 +384,9 @@ let ex = function () {
                     innerRef: R,
                     onChange: (e) => {
                         e &&
-                            !D &&
+                            !P &&
                             (U.default.track(ei.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }),
-                            M(!0));
+                            G(!0));
                     },
                     children: (0, i.jsx)("div", { ref: R, className: el._Z }),
                 }),

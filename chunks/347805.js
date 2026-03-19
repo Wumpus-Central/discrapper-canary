@@ -1,37 +1,37 @@
-i.d(l, { A: () => m });
-var n = i(627968),
-    t = i(64700),
-    s = i(311907),
-    a = i(397927),
-    r = i(629403),
-    o = i(612630),
-    d = i(351906),
-    c = i(652215),
-    u = i(985018),
-    A = i(75945);
-function m(e) {
-    let { autoFocus: l = !1, className: i, userId: m, onUpdate: p } = e,
+t.d(l, { A: () => A });
+var i = t(627968),
+    n = t(64700),
+    s = t(311907),
+    a = t(397927),
+    r = t(629403),
+    o = t(612630),
+    d = t(351906),
+    c = t(652215),
+    u = t(985018),
+    m = t(893251);
+function A(e) {
+    let { autoFocus: l = !1, className: t, userId: A, onUpdate: p } = e,
         x = (0, s.bG)([d.A], () => d.A.hidePersonalInformation),
-        { loading: g, note: h } = (0, o.A)(m),
-        f = t.useRef(null);
-    return (t.useEffect(() => {
+        { loading: g, note: f } = (0, o.A)(A),
+        h = n.useRef(null);
+    return (n.useEffect(() => {
         if (!l || x) return;
-        let e = f.current;
+        let e = h.current;
         e?.selectionStart != null && (e.focus(), e.setSelection(e.value.length, e.value.length));
     }, [l, x]),
     x)
         ? null
-        : (0, n.jsx)("div", {
-              className: i,
-              children: (0, n.jsx)(a.d4u, {
-                  ref: f,
-                  className: A.P,
+        : (0, i.jsx)("div", {
+              className: t,
+              children: (0, i.jsx)(a.d4u, {
+                  ref: h,
+                  className: m.P,
                   disabled: g,
                   placeholder: g ? u.intl.string(u.t["WLKx/9"]) : u.intl.string(u.t.VBhOe2),
                   "aria-label": u.intl.string(u.t.PbMNh2),
                   onBlur: (e) => {
                       let l = e.currentTarget.value;
-                      (h ?? "") !== l && (p?.(), r.A.updateNote(m, l));
+                      (f ?? "") !== l && (p?.(), r.A.updateNote(A, l));
                   },
                   onKeyPress: (e) => {
                       13 === e.which
@@ -40,7 +40,7 @@ function m(e) {
                               : (e.preventDefault(), e.currentTarget.blur())
                           : e.which === c.Ks6.SPACE && e.stopPropagation();
                   },
-                  defaultValue: h ?? void 0,
+                  defaultValue: f ?? void 0,
                   maxLength: c.T7x,
               }),
           });

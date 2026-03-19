@@ -1,10 +1,10 @@
 n.d(t, { A: () => c });
 var a = n(627968),
     i = n(412703),
-    s = n(843282),
-    l = n(397927),
+    l = n(843282),
+    s = n(397927),
     r = n(927813),
-    o = n(93587);
+    o = n(930625);
 let d = [
         { value: 1, label: "Stream Desktop" },
         { value: 0, label: "Play Desktop" },
@@ -15,10 +15,10 @@ let d = [
     ],
     c = function (e) {
         let { onSelect: t, taskDuration: n = 10, taskConfigV2: c } = e;
-        return (0, a.jsxs)(l.BJc, {
+        return (0, a.jsxs)(s.BJc, {
             gap: 20,
             children: [
-                (0, a.jsx)(s.Pw, {
+                (0, a.jsx)(l.Pw, {
                     label: "Task Type(s)",
                     className: o.Z,
                     placeholder: "Select Task Preset",
@@ -27,16 +27,16 @@ let d = [
                     renderOptionLabel: (e) => (0, a.jsx)("div", { children: e.label }),
                     isSelected: (e) => {
                         var t;
-                        let n, a, s, l, r;
+                        let n, a, l, s, r;
                         return (
                             e ===
                             ((t = c.tasks),
                             (n = i.n.PLAY_ON_PLAYSTATION in t || i.n.PLAY_ON_XBOX in t),
                             (a = i.n.PLAY_ON_DESKTOP in t || i.n.PLAY_ON_DESKTOP_V2 in t),
-                            (s = i.n.STREAM_ON_DESKTOP in t),
-                            (l = i.n.WATCH_VIDEO in t),
+                            (l = i.n.STREAM_ON_DESKTOP in t),
+                            (s = i.n.WATCH_VIDEO in t),
                             (r = i.n.PLAY_ACTIVITY in t),
-                            n && a ? 4 : n ? 3 : a ? 0 : s ? 1 : l ? 2 : r ? 5 : void 0)
+                            n && a ? 4 : n ? 3 : a ? 0 : l ? 1 : s ? 2 : r ? 5 : void 0)
                         );
                     },
                     select: (e) => {
@@ -94,7 +94,7 @@ let d = [
                     serialize: String,
                     "data-migration-pending": !0,
                 }),
-                (0, a.jsx)(l.ksK, {
+                (0, a.jsx)(s.ksK, {
                     label: "Task Duration",
                     value: String(n / r.A.Seconds.MINUTE),
                     onChange: function (e) {

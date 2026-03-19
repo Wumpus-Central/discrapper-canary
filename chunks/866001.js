@@ -1,8 +1,8 @@
 n.d(t, { A: () => P }), n(172879);
 var a = n(627968),
     i = n(64700),
-    s = n(503698),
-    l = n.n(s),
+    l = n(503698),
+    s = n.n(l),
     r = n(985623),
     o = n.n(r),
     d = n(989349),
@@ -10,8 +10,8 @@ var a = n(627968),
     u = n(990078),
     m = n(421380),
     h = n(397927),
-    p = n(73153),
-    x = n(58736),
+    x = n(73153),
+    p = n(58736),
     g = n(379078),
     _ = n(704554),
     f = n(603349),
@@ -20,15 +20,15 @@ var a = n(627968),
     j = n(231545),
     A = n(708403),
     C = n(260880),
-    T = n(303054),
-    y = n(231643),
+    y = n(303054),
+    T = n(231643),
     S = n(652215),
-    E = n(84113),
-    N = n(661251);
+    E = n(704623),
+    N = n(930821);
 function I(e) {
     return parseFloat(e.toFixed(3));
 }
-let R = [
+let k = [
     {
         key: "store",
         cellClassName: E.lA,
@@ -46,16 +46,16 @@ let R = [
         },
     },
 ];
-function k(e) {
+function R(e) {
     let { actionLog: t } = e,
         n = i.useMemo(() => t.traces.map((e) => ({ key: e.name, trace: e })), [t]);
-    return (0, a.jsx)(h.IpV, { children: (0, a.jsx)(T.A, { columns: R, data: n }) });
+    return (0, a.jsx)(h.IpV, { children: (0, a.jsx)(y.A, { columns: k, data: n }) });
 }
 let O = [
     {
         id: "action",
         name: "Action",
-        group: y.fu.NONE,
+        group: T.fu.NONE,
         render(e) {
             let { actionLog: t } = e,
                 n = c()(t.createdAt);
@@ -83,16 +83,16 @@ let O = [
     {
         id: "traces",
         name: "Store Handlers",
-        group: y.fu.NONE,
+        group: T.fu.NONE,
         render(e) {
             let { actionLog: t } = e;
-            return (0, a.jsx)(k, { actionLog: t });
+            return (0, a.jsx)(R, { actionLog: t });
         },
     },
 ];
 function w(e) {
     let { actionLog: t, initialHeight: n } = e,
-        s = i.useMemo(
+        l = i.useMemo(
             () =>
                 t.error
                     ? [
@@ -102,13 +102,13 @@ function w(e) {
                               name: (0, a.jsxs)(a.Fragment, {
                                   children: [(0, a.jsx)(f.A, { className: E.ik }), "Error"],
                               }),
-                              group: y.fu.NONE,
+                              group: T.fu.NONE,
                               render(e) {
                                   let { actionLog: t } = e;
                                   return (0, a.jsxs)(a.Fragment, {
                                       children: [
                                           (0, a.jsx)("div", {
-                                              className: l()(E.u4, N.KE),
+                                              className: s()(E.u4, N.KE),
                                               children: (0, a.jsx)("div", {
                                                   className: N.R5,
                                                   children: (0, a.jsx)(m.$n, {
@@ -131,19 +131,19 @@ function w(e) {
                     : O,
             [t],
         ),
-        { TabBar: r, renderSelectedTab: o } = (0, y.Ay)({ tabs: s }, [s]);
+        { TabBar: r, renderSelectedTab: o } = (0, T.Ay)({ tabs: l }, [l]);
     return (0, a.jsxs)(C.A, {
         className: E.rf,
         minHeight: 100,
         initialHeight: n,
         children: [
             (0, a.jsx)(r, {}),
-            (0, a.jsxs)(x.Ay, {
-                className: l()(N.jr, E.nZ),
+            (0, a.jsxs)(p.Ay, {
+                className: s()(N.jr, E.nZ),
                 children: [
-                    (0, a.jsx)(x.Ay.Icon, { icon: h.KBH, tooltip: t.name }),
-                    (0, a.jsx)(x.Ay.Title, { wrapperClassName: l()(N.qd, N.ZE), className: N.Pz, children: t.name }),
-                    (0, a.jsx)(x.Ay.Icon, {
+                    (0, a.jsx)(p.Ay.Icon, { icon: h.KBH, tooltip: t.name }),
+                    (0, a.jsx)(p.Ay.Title, { wrapperClassName: s()(N.qd, N.ZE), className: N.Pz, children: t.name }),
+                    (0, a.jsx)(p.Ay.Icon, {
                         icon: h.TdU,
                         tooltip: "Copy event data",
                         onClick: () => {
@@ -208,7 +208,7 @@ let D = [
 function P() {
     let e = i.useRef(null),
         [t, n] = i.useState(""),
-        s = (function (e) {
+        l = (function (e) {
             let [t, n] = i.useState(e.logs);
             return (
                 i.useEffect(() => {
@@ -224,14 +224,14 @@ function P() {
                 }, [e]),
                 t
             );
-        })(p.h.actionLogger),
-        r = i.useMemo(() => s.map((e) => ({ key: e.id.toString(), actionLog: e })).toReversed(), [s]),
+        })(x.h.actionLogger),
+        r = i.useMemo(() => l.map((e) => ({ key: e.id.toString(), actionLog: e })).toReversed(), [l]),
         [d, c] = i.useState(r),
-        [m, x] = i.useState(r),
+        [m, p] = i.useState(r),
         [g, f] = i.useState(!1),
         [v, b] = i.useState(),
         j = i.useCallback((e) => {
-            x(e);
+            p(e);
         }, []);
     (0, _.RT)(t, g ? d : r, j, M);
     let A = i.useCallback(
@@ -241,11 +241,11 @@ function P() {
             [r],
         ),
         C = t.trim().length > 0,
-        y = i.useMemo(() => (C ? m : g ? d : r), [r, m, C, g, d]),
+        T = i.useMemo(() => (C ? m : g ? d : r), [r, m, C, g, d]),
         S = g ? "Enable Event Tracking" : "Pause Event Tracking";
     return (0, a.jsxs)("div", {
         ref: e,
-        className: l()(N.nd, E.nd),
+        className: s()(N.nd, E.nd),
         children: [
             (0, a.jsxs)("div", {
                 className: E.KE,
@@ -269,9 +269,9 @@ function P() {
                     }),
                 ],
             }),
-            (0, a.jsx)(T.A, {
+            (0, a.jsx)(y.A, {
                 columns: D,
-                data: y,
+                data: T,
                 selectedRowKey: v?.id.toString(),
                 onClickRow: (e) => b(e.actionLog),
             }),
