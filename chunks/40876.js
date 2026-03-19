@@ -16,6 +16,11 @@ let i = {
         actions: ["POST_CONNECTION_OPEN", "AUTO_UPDATER_QUIT_AND_INSTALL"],
         inlineRequire: () => n(578152).A,
     },
+    NewUpdaterExperimentManager: {
+        actions: ["POST_CONNECTION_OPEN", "LOGOUT"],
+        inlineRequire: () => n(697266).A,
+        hasStoreChangeListeners: !0,
+    },
     AgeVerificationManager: {
         actions: ["POST_CONNECTION_OPEN", "CURRENT_USER_UPDATE", "MESSAGE_CREATE"],
         inlineRequire: () => n(722855).A,
