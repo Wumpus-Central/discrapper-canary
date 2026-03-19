@@ -34,7 +34,7 @@ var i = n(627968),
     D = n(341678),
     k = n(652215),
     O = n(985018),
-    U = n(519934);
+    U = n(982827);
 function B(e) {
     let {
             invite: t,
@@ -59,20 +59,13 @@ function B(e) {
             let { currentUserId: t, author: n, voiceStates: i } = e,
                 r = n.id === t,
                 a = i.length > 0,
-                l = i.some((e) => e.user?.id === n.id),
-                s = i.length - !!l;
+                l = i.length;
             return a
-                ? r
-                    ? {
-                          label: l
-                              ? O.intl.format(O.t["2RWMFV"], { othersCount: s })
-                              : O.intl.format(O.t.IWXzHV, { othersCount: s }),
-                      }
-                    : {
-                          label: l
-                              ? O.intl.format(O.t.Da7tZx, { othersCount: s })
-                              : O.intl.format(O.t["3VbQvv"], { othersCount: s }),
-                      }
+                ? {
+                      label: r
+                          ? O.intl.format(O.t["2RWMFV"], { othersCount: l })
+                          : O.intl.format(O.t.Da7tZx, { othersCount: l }),
+                  }
                 : {
                       label: r ? O.intl.string(O.t.DVDvCD) : O.intl.string(O.t.TY77rq),
                       sublabel: O.intl.string(O.t.wM2WTM),
