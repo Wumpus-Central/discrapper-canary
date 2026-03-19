@@ -1,4 +1,4 @@
-n.d(t, { H: () => s, R: () => l });
+n.d(t, { Ho: () => s, RH: () => l });
 var i,
     s =
         (((i = {}).SEARCH_NO_RESULTS = "SEARCH_NO_RESULTS"),
@@ -66,10 +66,6 @@ var i,
         (i.CHAT_THREADS_SPLIT_VIEW = "CHAT_THREADS_SPLIT_VIEW"),
         (i.CHAT_SPOILERS = "CHAT_SPOILERS"),
         (i.LANGUAGE = "LANGUAGE"),
-        (i.ACTIVITY_PRIVACY = "ACTIVITY_PRIVACY"),
-        (i.ACTIVITY_PRIVACY_STATUS = "ACTIVITY_PRIVACY_STATUS"),
-        (i.ACTIVITY_PRIVACY_RICH_PRESENCE = "ACTIVITY_PRIVACY_RICH_PRESENCE"),
-        (i.ACTIVITY_PRIVACY_TOS = "ACTIVITY_PRIVACY_TOS"),
         (i.REGISTERED_GAMES = "REGISTERED_GAMES"),
         (i.OVERLAY = "OVERLAY"),
         i);

@@ -11,7 +11,7 @@ var i = n(627968),
     _ = n(531525),
     m = n(652215),
     g = n(985018),
-    A = n(456144);
+    A = n(831306);
 function x() {
     let e = (0, a.WX)(),
         t = s.useMemo(
@@ -20,13 +20,13 @@ function x() {
                     title: g.intl.string(g.t.GYpoAq),
                     component: c.Z,
                     orientation: "vertical",
-                    setting: _.H.SEXUALLY_EXPLICIT_MEDIA_REDACTION,
+                    setting: _.Ho.SEXUALLY_EXPLICIT_MEDIA_REDACTION,
                 },
                 {
                     title: g.intl.string(g.t["16/3Bi"]),
                     component: u.q,
                     orientation: "vertical",
-                    setting: _.H.GORE_MEDIA_REDACTION,
+                    setting: _.Ho.GORE_MEDIA_REDACTION,
                 },
             ],
             [],
