@@ -1,34 +1,38 @@
-i.d(e, { U: () => g });
-var n = i(419954),
-    l = i(954571),
-    s = i(975571),
-    r = i(115063),
-    a = i(253932),
-    u = i(780964),
-    o = i(612025),
-    d = i(112469),
-    T = i(542457),
-    A = i(355097),
-    S = i(652215),
-    E = i(985018);
-let g = (0, n.zD)(u.X.CONTENT_AND_SOCIAL_PERMISSIONS_ACTIVITY_JOIN_SETTING, {
-    useTitle: () => E.intl.string(E.t["T+nevN"]),
+n.d(t, { K7: () => x, UK: () => h, f7: () => A });
+var i = n(419954),
+    s = n(954571),
+    l = n(975571),
+    a = n(115063),
+    r = n(253932),
+    o = n(780964),
+    d = n(612025),
+    c = n(112469),
+    u = n(542457),
+    _ = n(355097),
+    m = n(652215),
+    g = n(985018);
+let A = () => (0, c.Tx)() !== d.YG;
+function x() {
+    return g.intl.string(g.t["T+nevN"]);
+}
+let h = (0, i.zD)(o.X.CONTENT_AND_SOCIAL_PERMISSIONS_ACTIVITY_JOIN_SETTING, {
+    useTitle: x,
     useSubtitle: () =>
-        E.intl.format(E.t.jXKQCu, { helpdeskArticle: s.A.getArticleURL(S.MVz.ACTIVITY_STATUS_SETTINGS) }),
+        g.intl.format(g.t.jXKQCu, { helpdeskArticle: l.A.getArticleURL(m.MVz.ACTIVITY_STATUS_SETTINGS) }),
     useValue: () => {
-        let t = (0, d.Tx)();
-        return !a.pE.useSetting().includes(t);
+        let e = (0, c.Tx)();
+        return !r.pE.useSetting().includes(e);
     },
-    setValue: (t) => {
-        let e = o.xk.getState().selectedGuildId,
-            i = (0, r.CN)();
-        t ? i.delete(e) : i.add(e),
-            a.pE.updateSetting([...i]),
-            l.default.track(S.HAw.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
-                action: T.m.RESTRICT_GUILD_ACTIVITY_JOIN_TOGGLE,
-                ingress: A.bf.USER_SETTINGS_PRIVACY_SAFETY,
-                guild_id: e,
+    setValue: (e) => {
+        let t = d.xk.getState().selectedGuildId,
+            n = (0, a.CN)();
+        e ? n.delete(t) : n.add(t),
+            r.pE.updateSetting([...n]),
+            s.default.track(m.HAw.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+                action: u.m.RESTRICT_GUILD_ACTIVITY_JOIN_TOGGLE,
+                ingress: _.bf.USER_SETTINGS_PRIVACY_SAFETY,
+                guild_id: t,
             });
     },
-    usePredicate: () => (0, d.Tx)() !== o.YG,
+    usePredicate: A,
 });
