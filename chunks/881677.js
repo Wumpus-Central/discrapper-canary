@@ -2,8 +2,8 @@
 n.d(t, { B: () => p });
 var r = n(627968),
     i = n(64700),
-    a = n(417597),
-    s = n(459793),
+    s = n(417597),
+    a = n(459793),
     o = n(590180),
     l = n(937008),
     u = n(156312),
@@ -12,40 +12,40 @@ var r = n(627968),
     _ = n(534479),
     f = n(652215);
 function p(e) {
-    let { handleStepChange: t, handleClose: n } = e,
+    let { handleStepChange: t } = e,
         {
-            blockedPayments: p,
-            hasFetchedSkus: h,
-            paymentSources: m,
-            hasFetchedPaymentSources: g,
+            blockedPayments: n,
+            hasFetchedSkus: p,
+            paymentSources: h,
+            hasFetchedPaymentSources: m,
             application: E,
-            skusById: A,
-            selectedSkuId: I,
+            skusById: g,
+            selectedSkuId: A,
         } = (0, u.P5)(),
-        { isGift: T } = (0, l.Pv)(),
-        [y, S] = i.useState(!0),
-        [v, C] = (0, a.yK)([o.A], () => [o.A.isFetchingCategories, o.A.error]);
+        { isGift: I } = (0, l.Pv)(),
+        [T, S] = i.useState(!0),
+        [y, v] = (0, s.yK)([o.A], () => [o.A.isFetchingCategories, o.A.error]);
     return (i.useEffect(() => {
         let e = null != E;
-        h && g && e && S(v);
-    }, [h, g, E, v]),
+        p && m && e && S(y);
+    }, [p, m, E, y]),
     i.useEffect(() => {
-        if (y || p || null == I) return;
-        let e = A[I];
-        T &&
+        if (T || n || null == A) return;
+        let e = g[A];
+        I &&
         (e?.productLine === f.EZt.COLLECTIBLES ||
             e?.productLine === f.EZt.APPLICATION ||
             e?.productLine === f.EZt.SOCIAL_LAYER_GAME_ITEM)
             ? t(c.pn.GIFT_CUSTOMIZATION)
-            : 0 === Object.keys(m).length
+            : 0 === Object.keys(h).length
               ? t(c.pn.ADD_PAYMENT_STEPS)
               : t(c.pn.REVIEW);
-    }, [y, p, t, m, T, A, I]),
-    y)
+    }, [T, n, t, h, I, g, A]),
+    T)
         ? (0, r.jsx)(_.A, {})
-        : p
-          ? (0, r.jsx)(s.oO, { onClose: n })
-          : null != C
-            ? (0, r.jsx)(d.A, { onClose: n })
+        : n
+          ? (0, r.jsx)(a.oO, {})
+          : null != v
+            ? (0, r.jsx)(d.A, {})
             : null;
 }

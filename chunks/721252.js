@@ -11,7 +11,7 @@ var i = n(295405),
     c = n(623020),
     d = n(881677),
     _ = n(985018);
-let f = { key: null, renderStep: (e) => (0, r.jsx)(d.B, { ...e }) },
+let f = { key: null, renderStep: (e) => (0, r.jsx)(d.B, { ...e }), options: { modalSizeGetter: () => "md" } },
     p = {
         key: s.pn.ADD_PAYMENT_STEPS,
         renderStep: (e) =>

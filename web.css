@@ -36909,8 +36909,7 @@ html:not(.chat-input) .inputInner_b1f01d {
     display: flex;
     flex-direction: column;
     margin: auto;
-    text-align: center;
-    width: 400px
+    text-align: center
 }
 
 .header_b7b2cf {
@@ -44994,7 +44993,6 @@ screen and (max-width:485px) {
 }
 
 .giftModalContainer__4485d {
-    background-color: var(--background-base-low);
     padding: var(--space-24)
 }
 

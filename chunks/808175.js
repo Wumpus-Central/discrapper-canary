@@ -6,8 +6,6 @@ e.exports = {
     j0: "splashImage_b7b2cf",
     W0: "settings_b7b2cf",
     yl: "modal_b7b2cf",
-    Gv: "blockedPaymentsModalContent_b7b2cf",
-    Oy: "blockedPaymentsModalHeader_b7b2cf",
     XJ: "blockedPaymentsWarningIcon_b7b2cf",
     ek: "blockedPaymentsWarning_b7b2cf",
 };

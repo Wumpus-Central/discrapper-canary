@@ -326,7 +326,7 @@ function eu(e) {
         },
         shouldUseManaModal: !0,
     });
-    if (eb) n = (0, l.jsx)(g.oO, { onClose: na });
+    if (eb) n = (0, l.jsx)(g.oO, {});
     else if (eM && eN && eQ && null != n_ && "" !== n_)
         if (eg?.isPausedOrPausePending && !eg.isPausedAllowsUpdatesButNotResume)
             n = (0, l.jsx)(c.cwr, {
@@ -539,7 +539,7 @@ function eu(e) {
                 e1 === L.pn.ADD_PAYMENT_STEPS
                     ? ng
                     : (0, l.jsx)(O.A, {
-                          shouldUseManaModal: nd,
+                          shouldUseManaModal: !0,
                           hideBreadcrumbs: (nd && e1 === L.pn.REVIEW) || e1 === L.pn.CONFIRM,
                           steps: nn,
                           currentStep: e1,

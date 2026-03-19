@@ -46,7 +46,7 @@ n(322076);
 var W = n(652215),
     K = n(788868),
     $ = n(985018),
-    z = n(898772);
+    z = n(110690);
 let q = 2,
     Z = "billing",
     X = { [k.pn.GIFT_CUSTOMIZATION]: "xl", [k.pn.REVIEW]: "md", [k.pn.ADD_PAYMENT_STEPS]: "md" },
@@ -298,54 +298,53 @@ function et(e) {
             initialPlanId: n,
             handleStepChange: s,
             referralTrialOfferId: o,
-            handleClose: l,
-            continueSessionToInitialStep: c,
+            continueSessionToInitialStep: l,
         } = e,
         {
-            activeSubscription: d,
-            blockedPayments: f,
-            hasFetchedSubscriptions: h,
-            hasFetchedSubscriptionPlans: m,
-            currencyLoading: E,
-            selectedSkuId: g,
-            setSelectedPlanId: A,
-            defaultPlanId: I,
-            startedPaymentFlowWithPaymentSourcesRef: T,
-            hasPaymentSources: S,
+            activeSubscription: c,
+            blockedPayments: d,
+            hasFetchedSubscriptions: f,
+            hasFetchedSubscriptionPlans: h,
+            currencyLoading: m,
+            selectedSkuId: E,
+            setSelectedPlanId: g,
+            defaultPlanId: A,
+            startedPaymentFlowWithPaymentSourcesRef: I,
+            hasPaymentSources: T,
         } = (0, P.P5)(),
-        { isGift: y } = (0, x.Pv)(),
-        v = T.current,
-        N = (0, V.A)({ isGift: y, skuId: g, referralTrialOfferId: o }),
-        [C, R] = i.useState(!0),
-        O = (0, a.bG)([D.A], () => D.A.applicationIdsFetched.has(K.tv));
+        { isGift: S } = (0, x.Pv)(),
+        y = I.current,
+        v = (0, V.A)({ isGift: S, skuId: E, referralTrialOfferId: o }),
+        [N, C] = i.useState(!0),
+        R = (0, a.bG)([D.A], () => D.A.applicationIdsFetched.has(K.tv));
     return (i.useEffect(() => {
-        R(!h || !m || E);
-    }, [E, m, h]),
+        C(!f || !h || m);
+    }, [m, h, f]),
     (0, _.A)(
         "Payment Modal",
-        C,
+        N,
         5,
-        { hasFetchedSubscriptions: h, hasFetchedSubscriptionPlans: m, currencyLoading: E },
+        { hasFetchedSubscriptions: f, hasFetchedSubscriptionPlans: h, currencyLoading: m },
         { tags: { app_context: Z } },
     ),
     i.useEffect(() => {
-        if ((O || (0, u.LM)(K.tv), C || f)) return;
-        let e = (0, F.vT)({ isTrial: N, isGift: y, selectedSkuId: g, startedPaymentFlowWithPaymentSources: v });
-        null != c
-            ? s(k.pn.ADD_PAYMENT_STEPS, { emitPaymentFlowLoadedEvent: !0, trackedFromStep: c })
+        if ((R || (0, u.LM)(K.tv), N || d)) return;
+        let e = (0, F.vT)({ isTrial: v, isGift: S, selectedSkuId: E, startedPaymentFlowWithPaymentSources: y });
+        null != l
+            ? s(k.pn.ADD_PAYMENT_STEPS, { emitPaymentFlowLoadedEvent: !0, trackedFromStep: l })
             : null != n
-              ? n !== K.gD.PREMIUM_GROUP_MONTH || S
+              ? n !== K.gD.PREMIUM_GROUP_MONTH || T
                   ? s(k.pn.REVIEW)
                   : s(k.pn.ADD_PAYMENT_STEPS)
               : e
-                ? (A((0, F.xT)(g, d, I)), s(k.pn.REVIEW))
+                ? (g((0, F.xT)(E, c, A)), s(k.pn.REVIEW))
                 : null != t
                   ? s(k.pn.PLAN_SELECT)
                   : s(k.pn.SKU_SELECT);
-    }, [c, d, f, O, n, C, s, t, g, A, N, I, y, v, S]),
-    C)
+    }, [l, c, d, R, n, N, s, t, E, g, v, A, S, y, T]),
+    N)
         ? (0, r.jsx)(j.A, {})
-        : f
-          ? (0, r.jsx)(p.oO, { onClose: l })
+        : d
+          ? (0, r.jsx)(p.oO, {})
           : null;
 }

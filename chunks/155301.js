@@ -5,37 +5,37 @@ var i = n(627968),
     a = n(97352),
     s = n(927578),
     o = n(937008),
-    c = n(156312),
-    d = n(534479);
+    d = n(156312),
+    c = n(534479);
 function u(e) {
-    let { initialStep: t, initialPlanId: n, guildId: u, setAnalyticsData: m, handleClose: p } = e,
+    let { initialStep: t, initialPlanId: n, guildId: u, setAnalyticsData: m } = e,
         {
-            blockedPayments: x,
+            blockedPayments: p,
             setStep: f,
-            hasFetchedSubscriptions: h,
+            hasFetchedSubscriptions: x,
             hasFetchedSubscriptionPlans: g,
-            currencyLoading: b,
-            selectedSkuId: j,
+            currencyLoading: h,
+            selectedSkuId: b,
             setSelectedSkuId: A,
-            setSelectedPlanId: S,
+            setSelectedPlanId: j,
             priceOptions: v,
-            setSubscriptionMetadataRequest: C,
-        } = (0, c.P5)(),
-        { isGift: T } = (0, o.Pv)(),
-        [N, E] = r.useState(!h || !g || b);
+            setSubscriptionMetadataRequest: S,
+        } = (0, d.P5)(),
+        { isGift: C } = (0, o.Pv)(),
+        [_, y] = r.useState(!x || !g || h);
     return (r.useEffect(() => {
-        E(!h || !g || b);
-    }, [b, g, h]),
+        y(!x || !g || h);
+    }, [h, g, x]),
     r.useEffect(() => {
-        null != u && C({ guild_id: u });
-    }, [u, C]),
+        null != u && S({ guild_id: u });
+    }, [u, S]),
     r.useEffect(() => {
-        S(n);
+        j(n);
         let e = null != n ? a.A.get(n) : null;
-        N ||
-            x ||
+        _ ||
+            p ||
             (m((t) => {
-                let n = null != e ? (0, s.y8)(e.id, !1, T, v) : void 0;
+                let n = null != e ? (0, s.y8)(e.id, !1, C, v) : void 0;
                 return {
                     ...t,
                     subscription_plan_id: e?.id,
@@ -45,10 +45,10 @@ function u(e) {
                 };
             }),
             null != e && (A(e?.skuId), f(t)));
-    }, [x, n, T, N, v, j, m, S, A, f, t]),
-    N)
-        ? (0, i.jsx)(d.A, {})
-        : x
-          ? (0, i.jsx)(l.oO, { onClose: p })
+    }, [p, n, C, _, v, b, m, j, A, f, t]),
+    _)
+        ? (0, i.jsx)(c.A, {})
+        : p
+          ? (0, i.jsx)(l.oO, {})
           : null;
 }
