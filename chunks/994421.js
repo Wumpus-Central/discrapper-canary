@@ -1,17 +1,13 @@
-i.d(e, { Z: () => o });
-var n = i(419954),
-    l = i(780964),
-    s = i(115980),
-    r = i(985018);
-let a = (0, n.E2)(l.X.BILLING_TRANSACTION_HISTORY, {
-        Component: s.ac,
-        useSearchTerms: () => [r.intl.string(r.t.obLrcK)],
+n.d(t, { Z: () => o });
+var i = n(419954),
+    s = n(780964),
+    l = n(655691),
+    a = n(985018);
+let r = (0, i.E2)(s.X.BILLING_TRANSACTION_HISTORY, {
+        Component: l.A,
+        useSearchTerms: () => [a.intl.string(a.t.obLrcK)],
     }),
-    u = (0, n.E2)(l.X.BILLING_REDEMPTION_REDIRECT, {
-        Component: s.OH,
-        useSearchTerms: () => [r.intl.string(r.t.obLrcK)],
-    }),
-    o = (0, n.zZ)(l.X.BILLING_TRANSACTION_HISTORY_CATEGORY, {
-        useTitle: () => r.intl.string(r.t.obLrcK),
-        buildLayout: () => [a, u],
+    o = (0, i.zZ)(s.X.BILLING_TRANSACTION_HISTORY_CATEGORY, {
+        useTitle: () => a.intl.string(a.t.obLrcK),
+        buildLayout: () => [r],
     });

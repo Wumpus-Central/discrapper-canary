@@ -6,7 +6,7 @@ var i = n(627968),
     r = n(500380),
     o = n(518977),
     d = n(985018),
-    c = n(684167);
+    c = n(218777);
 function u(e) {
     let { country: t, countryName: n, ...o } = e,
         u = s.useCallback(

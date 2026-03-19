@@ -6,6 +6,7 @@ var r = (function (e) {
         (e[(e.BADGE = 1)] = "BADGE"),
         (e[(e.BANNER = 2)] = "BANNER"),
         (e[(e.COACHMARK = 3)] = "COACHMARK"),
+        (e[(e.TAB_TOOLTIP = 4)] = "TAB_TOOLTIP"),
         e
     );
 })({});

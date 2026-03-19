@@ -1,13 +1,13 @@
-i.d(t, { B: () => o });
-var n = i(158954),
-    l = i(419954),
-    s = i(780964),
-    r = i(115980),
-    a = i(985018);
-let u = (0, l.E2)(s.X.BILLING_PAYMENT_METHODS, { Component: r.HG, useSearchTerms: () => [a.intl.string(a.t.W26xGQ)] }),
-    o = (0, l.zZ)(s.X.BILLING_PAYMENT_METHODS_CATEGORY, {
-        useTitle: () => a.intl.string(a.t.W26xGQ),
-        icon: n.XAi,
-        useSubtitle: () => a.intl.string(a.t.h6V3uK),
-        buildLayout: () => [u],
+n.d(t, { B: () => d });
+var i = n(158954),
+    s = n(419954),
+    l = n(780964),
+    a = n(396667),
+    r = n(985018);
+let o = (0, s.E2)(l.X.BILLING_PAYMENT_METHODS, { Component: a.A, useSearchTerms: () => [r.intl.string(r.t.W26xGQ)] }),
+    d = (0, s.zZ)(l.X.BILLING_PAYMENT_METHODS_CATEGORY, {
+        useTitle: () => r.intl.string(r.t.W26xGQ),
+        icon: i.XAi,
+        useSubtitle: () => r.intl.string(r.t.h6V3uK),
+        buildLayout: () => [o],
     });
