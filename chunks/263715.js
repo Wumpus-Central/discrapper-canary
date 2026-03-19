@@ -1,15 +1,17 @@
 "use strict";
-n.d(t, { EL: () => u, PJ: () => s, xW: () => c, zF: () => l });
+n.d(t, { EL: () => d, PJ: () => o, xW: () => _, zF: () => c }), n(321073);
 var r = n(284009),
     i = n.n(r),
-    a = n(735438),
-    s = (function (e) {
+    s = n(735438),
+    a = n(728458),
+    o = (function (e) {
         return (e.ROOT = "root"), (e.FOLDER = "folder"), (e.GUILD = "guild"), e;
     })({});
-function o() {
+function l() {
     return Math.floor(0x100000000 * Math.random());
 }
-class l {
+let u = 0;
+class c {
     root;
     nodes;
     version;
@@ -25,28 +27,41 @@ class l {
         return { rootChildrenIds: this.root.children.map((e) => e.id), nodes: e };
     }
     loadSnapshot(e) {
-        for (let t in ((this.nodes = e.nodes), this.nodes)) {
-            let e = this.nodes[t];
-            (e.children = e.childrenIds.map((e) => this.nodes[e])), delete e.childrenIds;
+        u++;
+        let t = null,
+            n = [];
+        try {
+            for (let r in ((this.nodes = e.nodes), this.nodes)) {
+                let e = this.nodes[r];
+                n.push(r), (t = e), (e.children = e.childrenIds.map((e) => this.nodes[e])), delete e.childrenIds;
+            }
+            (this.root.children = e.rootChildrenIds.map((e) => this.nodes[e])), this.version++;
+        } catch (e) {
+            throw (
+                (a.A.addBreadcrumb({
+                    message: "GuildTree snapshot load failed",
+                    data: { numSnapshotsLoaded: u, currentNode: t, nodesIterated: n },
+                }),
+                e)
+            );
         }
-        (this.root.children = e.rootChildrenIds.map((e) => this.nodes[e])), this.version++;
     }
     moveNextTo(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         this._pluckNode(e);
         let r = null != t.parentId ? this.nodes[t.parentId] : this.root,
-            a = r.children.indexOf(t);
+            s = r.children.indexOf(t);
         i()(
             "folder" !== e.type || "folder" !== r.type,
             `[GUILDS TREE] Tried moving a folder (${e.id}) inside of another folder (${r.id})`,
         ),
             i()(
-                a >= 0,
+                s >= 0,
                 `[GUILDS TREE] target node (${t.id}) did not exist within its specified parent (${t.parentId})`,
             );
-        let s = +!!n;
+        let a = +!!n;
         return (
-            (r.children = [...r.children]), r.children.splice(a + s, 0, e), (e.parentId = r.id), this.version++, this
+            (r.children = [...r.children]), r.children.splice(s + a, 0, e), (e.parentId = r.id), this.version++, this
         );
     }
     moveInto(e, t) {
@@ -99,11 +114,11 @@ class l {
         );
     }
     cloneNode(e) {
-        return (0, a.clone)(e);
+        return (0, s.clone)(e);
     }
     convertToFolder(e) {
-        let t = o();
-        for (; null != this.getNode(t); ) t = o();
+        let t = l();
+        for (; null != this.getNode(t); ) t = l();
         let n = { type: "folder", id: t, expanded: !1, children: [] };
         return this.replaceNode(e, n), this.removeNode(e), this.addNode(e, n, !1), this.version++, n;
     }
@@ -141,10 +156,10 @@ class l {
             this.version++;
     }
 }
-function u(e, t) {
+function d(e, t) {
     return { type: "guild", id: e, parentId: t, children: [], unavailable: !1 };
 }
-function c(e, t, n) {
+function _(e, t, n) {
     return {
         type: "folder",
         id: e.folderId,
