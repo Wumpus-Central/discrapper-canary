@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => E });
 var r = n(627968),
     i = n(64700),
-    a = n(91871),
-    s = n.n(a),
+    s = n(91871),
+    a = n.n(s),
     o = n(397927),
     l = n(100392),
     u = n(102609),
@@ -14,23 +14,23 @@ var r = n(627968),
     p = n(222735),
     h = n(985018);
 function m(e) {
-    let { id: t, experiment: n, currentBucket: i, system: a } = e,
-        s = (0, _.h)(n);
+    let { id: t, experiment: n, currentBucket: i, system: s } = e,
+        a = (0, _.h)(n);
     return (0, r.jsxs)(
         o.Drp,
         {
             id: t.replaceAll("--", "__"),
             label: n.title,
-            action: () => (0, u.t$)(a, t, null),
+            action: () => (0, u.t$)(s, t, null),
             children: [
-                s.map((e) =>
+                a.map((e) =>
                     (0, r.jsx)(
                         o.sLh,
                         {
                             id: `${e.id}`,
-                            label: e.shortLabel,
+                            label: e.label,
                             checked: e.id === i?.variantId,
-                            action: () => (0, u.t$)(a, t, e.id),
+                            action: () => (0, u.t$)(s, t, e.id),
                         },
                         `${e.id}`,
                     ),
@@ -58,7 +58,7 @@ function m(e) {
                                 label: "Clear Override",
                                 color: "danger",
                                 icon: o.ucK,
-                                action: () => (0, u.t$)(a, t, null),
+                                action: () => (0, u.t$)(s, t, null),
                             }),
                     ],
                 }),
@@ -67,23 +67,23 @@ function m(e) {
         t,
     );
 }
-function g() {
+function E() {
     let { experiments: e, overridesInfo: t } = (0, d.hI)(),
-        { experiments: n, overridesInfo: a } = (0, c.op)(),
+        { experiments: n, overridesInfo: s } = (0, c.op)(),
         l = i.useMemo(() => {
             let r = { ...e, ...n },
-                i = { ...t, ...a };
+                i = { ...t, ...s };
             return (0, p.R3)((0, p.Fm)(r), i).map((e) => {
                 let { id: t, experiment: n } = e;
                 return { id: t, experiment: n, currentBucket: i[t], system: n.system };
             });
-        }, [e, t, n, a]),
+        }, [e, t, n, s]),
         [u, _] = i.useState(""),
-        [f, g] = i.useState([]);
+        [f, E] = i.useState([]);
     i.useEffect(() => {
-        0 === u.trim().length ? g(l) : g(l.filter((e) => s()(u, e.experiment.title.toLowerCase())));
+        0 === u.trim().length ? E(l) : E(l.filter((e) => a()(u, e.experiment.title.toLowerCase())));
     }, [l, u]);
-    let E = i.useMemo(
+    let g = i.useMemo(
             () =>
                 l.filter((e) => {
                     let { currentBucket: t } = e;
@@ -99,9 +99,9 @@ function g() {
                 }),
             [f],
         ),
-        I = i.useMemo(() => E.map(m), [E]),
+        I = i.useMemo(() => g.map(m), [g]),
         T = i.useMemo(() => A.map(m), [A]),
-        y = (0, r.jsx)(
+        S = (0, r.jsx)(
             o.aK1,
             {
                 id: "experiments-search",
@@ -122,9 +122,9 @@ function g() {
               (0, r.jsx)(o.bXX, {}, "separator-2"),
               (0, r.jsxs)(
                   o.Drp,
-                  { id: "other-experiments", label: "Other Experiments", children: [y, T] },
+                  { id: "other-experiments", label: "Other Experiments", children: [S, T] },
                   "other-experiments",
               ),
           ]
-        : [y, ...T];
+        : [S, ...T];
 }
