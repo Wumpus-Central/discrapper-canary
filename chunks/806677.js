@@ -135,9 +135,9 @@ function $(e) {
             onSeeWishlistClick: o,
             onWishlistItemClick: c,
             totalUnownedWishlistItems: _,
-            analyticsLocations: u,
+            analyticsLocations: f,
         } = e,
-        f = s.useMemo(
+        m = s.useMemo(
             () =>
                 new Set(
                     i.map((e) => {
@@ -147,8 +147,11 @@ function $(e) {
                 ),
             [i],
         ),
-        m = (0, d.bG)([G.A, M.A], () => M.A.getChannel(G.A.getChannelId())),
-        p = _ > i.length ? _ - i.length + 1 : void 0;
+        p = (0, d.bG)([G.A, M.A], () => M.A.getChannel(G.A.getChannelId())),
+        h = _ > i.length ? _ - i.length + 1 : void 0,
+        I = s.useCallback(() => {
+            c?.(), (0, u.s7G)();
+        }, [c]);
     return ((0, T.T)({ location: "gift_selection_modal_wishlist_section" }), t)
         ? (0, r.jsx)(r.Fragment, {
               children: i.map((e, t) => {
@@ -158,18 +161,18 @@ function $(e) {
                       (0, r.jsx)(
                           y.A,
                           {
-                              numMoreItems: t === i.length - 1 ? p : void 0,
+                              numMoreItems: t === i.length - 1 ? h : void 0,
                               sku: s.sku,
                               wishlistId: n,
                               source: l,
                               wishlistOwner: a,
-                              hasMultipleSources: f.size > 1,
+                              hasMultipleSources: m.size > 1,
                               onOpenWishlist: o,
-                              onClick: c,
-                              analyticsLocations: u,
+                              onClick: I,
+                              analyticsLocations: f,
                               spec: B.Z.SIZE_150,
-                              guildId: m?.guild_id,
-                              channelId: m?.id,
+                              guildId: p?.guild_id,
+                              channelId: p?.id,
                           },
                           s.skuId,
                       )
@@ -187,8 +190,8 @@ function $(e) {
                           giftRecipient: a,
                           defaultWishlistId: n,
                           tooltipConfig: l[t],
-                          onWishlistItemClick: c,
-                          analyticsLocations: u,
+                          onWishlistItemClick: I,
+                          analyticsLocations: f,
                       },
                       i.skuId,
                   );
