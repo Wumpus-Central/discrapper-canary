@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { D7: () => d, W2: () => l, q1: () => _, rS: () => a });
+n.d(t, { D7: () => _, W2: () => u, q1: () => f, rS: () => a });
 var r = n(945810),
     i = n(156312),
     s = n(120700),
@@ -7,36 +7,53 @@ var r = n(945810),
         return (e.LEGACY = "legacy"), (e.UNIFIED = "unified"), e;
     })({});
 let o = new Set([s.C.ORB_CHECKOUT, s.C.COLLECTIBLES_CHECKOUT, s.C.SLAYER_STOREFRONT_CHECKOUT]),
-    l = (0, r.mj)({
+    l = new Set([
+        s.C.GUILD_BOOST_CHECKOUT,
+        s.C.GUILD_PRODUCT_CHECKOUT,
+        s.C.GUILD_ROLE_CHECKOUT,
+        s.C.PREMIUM_APPS_OTP_CHECKOUT,
+        s.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT,
+    ]),
+    u = (0, r.mj)({
         name: "2026-01-unified-checkout-ui",
         kind: "user",
         defaultConfig: { enabled: !1, variation: 0 },
         variations: { 1: { enabled: !0, variation: 1 } },
     }),
-    u = (0, r.mj)({
-        name: "2026-02-unified-checkout-ui-otp-group-1",
-        kind: "user",
-        defaultConfig: { enabled: !1, variation: 0, enabledCheckoutFlows: new Set([]) },
-        variations: { 1: { enabled: !0, variation: 1, enabledCheckoutFlows: o } },
-    }),
-    c = (e) => {
-        let { unifiedCheckoutFlow: t, mainUnifiedCheckoutConfig: n, otpUnifiedCheckoutConfig: r } = e;
-        return !!n.enabled || (null != t && !!(r.enabled && r.enabledCheckoutFlows.has(t)));
-    },
-    d = (e) => {
+    c = [
+        u,
+        (0, r.mj)({
+            name: "2026-02-unified-checkout-ui-otp-group-1",
+            kind: "user",
+            defaultConfig: { enabled: !1, variation: 0, enabledCheckoutFlows: new Set([]) },
+            variations: { 1: { enabled: !0, variation: 1, enabledCheckoutFlows: o } },
+        }),
+        (0, r.mj)({
+            name: "2026-02-unified-checkout-ui-group-2",
+            kind: "user",
+            defaultConfig: { enabled: !1, variation: 0, enabledCheckoutFlows: new Set([]) },
+            variations: { 1: { enabled: !0, variation: 1, enabledCheckoutFlows: l } },
+        }),
+    ],
+    d = (e, t) =>
+        t.some(
+            (t) =>
+                (!!t.enabled &&
+                    (null == t.enabledCheckoutFlows || (null != e && t.enabledCheckoutFlows?.has(e) === !0))) ||
+                !1,
+        ),
+    _ = (e) => {
         let { location: t } = e,
             { unifiedCheckoutFlow: n } = (0, i.P5)();
-        return c({
-            unifiedCheckoutFlow: n,
-            mainUnifiedCheckoutConfig: l.useConfig({ location: t }),
-            otpUnifiedCheckoutConfig: u.useConfig({ location: t }),
-        });
+        return d(
+            n,
+            c.map((e) => e.useConfig({ location: t })),
+        );
     },
-    _ = (e) => {
+    f = (e) => {
         let { location: t, unifiedCheckoutFlow: n } = e;
-        return c({
-            unifiedCheckoutFlow: n,
-            mainUnifiedCheckoutConfig: l.getConfig({ location: t }),
-            otpUnifiedCheckoutConfig: u.getConfig({ location: t }),
-        });
+        return d(
+            n,
+            c.map((e) => e.getConfig({ location: t })),
+        );
     };

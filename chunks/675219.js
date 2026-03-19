@@ -22,6 +22,11 @@ let A = (e, t) => null != t && t.implemented && t.flowType === e,
         [c.C.COLLECTIBLES_CHECKOUT]: { allowGiftCustomization: !0, predicateStepType: "one_time_payment" },
         [c.C.SLAYER_STOREFRONT_CHECKOUT]: { allowGiftCustomization: !0, predicateStepType: "one_time_payment" },
         [c.C.PREMIUM_CHECKOUT]: { allowGiftCustomization: !1 },
+        [c.C.PREMIUM_APPS_OTP_CHECKOUT]: { allowGiftCustomization: !1 },
+        [c.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT]: { allowGiftCustomization: !1 },
+        [c.C.GUILD_BOOST_CHECKOUT]: { allowGiftCustomization: !1 },
+        [c.C.GUILD_PRODUCT_CHECKOUT]: { allowGiftCustomization: !1 },
+        [c.C.GUILD_ROLE_CHECKOUT]: { allowGiftCustomization: !1 },
     };
 class T {
     checkoutFlow;

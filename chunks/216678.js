@@ -12,14 +12,15 @@ function d(t) {
     let {
             applicationId: e,
             skuId: d,
-            onClose: p,
-            onComplete: S,
+            onClose: S,
+            onComplete: p,
             analyticsLocations: I,
             analyticsLocationObject: A,
             contextKey: _,
             isGift: T = !1,
+            checkoutFlow: E,
         } = t,
-        E = !1,
+        C = !1,
         f = (0, l.A)();
     (0, s.mMO)(
         async () => {
@@ -35,19 +36,20 @@ function d(t) {
                     analyticsLocationObject: A,
                     isGift: T,
                     onClose: (t) => {
-                        l(), p?.(t);
+                        l(), S?.(t);
                     },
                     onComplete: (t) => {
-                        (E = !0), S?.(t);
+                        (C = !0), p?.(t);
                     },
+                    checkoutFlow: E,
                 });
             };
         },
         {
             contextKey: _,
             onCloseCallback: () => {
-                if (!E) {
-                    let t = (0, u.q1)({ location: "StandardOneTimePaymentModal" });
+                if (!C) {
+                    let t = (0, u.q1)({ location: "StandardOneTimePaymentModal", unifiedCheckoutFlow: E });
                     o.default.track(c.HAw.PAYMENT_FLOW_CANCELED, {
                         load_id: f,
                         payment_type: c.frM[c.VVm.ONE_TIME],
@@ -59,7 +61,7 @@ function d(t) {
                         checkout_design: t ? u.rS.UNIFIED : u.rS.LEGACY,
                     });
                 }
-                (0, a.ET)(), (0, r.z)(), p?.(E);
+                (0, a.ET)(), (0, r.z)(), S?.(C);
             },
             onCloseRequest: c.tEg,
         },
