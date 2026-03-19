@@ -6,7 +6,7 @@ var i = n(64700),
     r = n(152056),
     o = n(360619),
     d = n(531525);
-let c = (0, l.D)(() => ({ searchResults: d.RH, hasSearchResults: !1 }));
+let c = (0, l.D)(() => ({ searchResults: d.R, hasSearchResults: !1 }));
 function u() {
     let e = r.A.useField("query"),
         t = (0, o.PH)(),

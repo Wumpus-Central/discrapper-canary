@@ -1,11 +1,17 @@
-n.d(t, { A: () => r });
+n.d(t, { A: () => d });
 var a = n(627968),
-    s = n(397927),
-    i = n(93471),
-    l = n(661251);
-function r() {
-    return (0, a.jsx)(s.IpV, {
-        className: l.nd,
-        children: (0, a.jsx)("div", { style: { padding: "var(--space-8)" }, children: (0, a.jsx)(i.A, {}) }),
+    i = n(397927),
+    l = n(641324),
+    s = n(669550),
+    r = n(23901),
+    o = n(930821);
+function d() {
+    let { node: e } = (0, s.Ay)(r.F, "");
+    return (0, a.jsx)(i.IpV, {
+        className: o.nd,
+        children: (0, a.jsx)("div", {
+            style: { padding: "var(--space-8)" },
+            children: (0, a.jsx)(l.A, { node: e }, e.key),
+        }),
     });
 }

@@ -1,8 +1,7 @@
-n.d(t, { Ho: () => s, RH: () => l });
+n.d(t, { H: () => s, R: () => l });
 var i,
     s =
-        (((i = {}).SEARCH_NO_RESULTS = "SEARCH_NO_RESULTS"),
-        (i.PROFILE_CUSTOMIZATION = "PROFILE_CUSTOMIZATION"),
+        (((i = {}).PROFILE_CUSTOMIZATION = "PROFILE_CUSTOMIZATION"),
         (i.PROFILE_DISPLAY_NAME = "PROFILE_DISPLAY_NAME"),
         (i.PROFILE_USER_PROFILE = "PROFILE_USER_PROFILE"),
         (i.PROFILE_SERVER_PROFILES = "PROFILE_SERVER_PROFILES"),
@@ -65,7 +64,6 @@ var i,
         (i.CHAT_THREADS = "CHAT_THREADS"),
         (i.CHAT_THREADS_SPLIT_VIEW = "CHAT_THREADS_SPLIT_VIEW"),
         (i.CHAT_SPOILERS = "CHAT_SPOILERS"),
-        (i.LANGUAGE = "LANGUAGE"),
         (i.REGISTERED_GAMES = "REGISTERED_GAMES"),
         (i.OVERLAY = "OVERLAY"),
         i);
