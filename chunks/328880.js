@@ -1,3 +1,3 @@
 e.exports = JSON.parse(
-    '{"XJ4UpB":["\xc6ndr billede"],"XV4qT6":["Fjern billede"],"1OwLy1":["Mere"],"HkszWk":["V\xe6lg GIF"],"bjP2Do":["Upload billede"]}',
+    '{"XJ4UpB":["\xc6ndr billede"],"XV4qT6":["Fjern billede"],"CLSbjS":["Anmeld billede"],"1OwLy1":["Mere"],"HkszWk":["V\xe6lg GIF"],"SQb1dl":["Bliv inspireret"],"2THN2i":["Ideer til at komme i gang."],"dDID2M":["Nylige billeder"],"9Xxm0y":["F\xe5 adgang til dine nyligste uploads."],"+y6KsI":["Inds\xe6t et billede for at fort\xe6lle andre, hvad der sker."],"yyPbqI":["Tilf\xf8j, hvad du har gang i"],"BIdpHb":["Kommer snart"],"bjP2Do":["Upload billede"],"NGcIOF":["S\xe6t stemningen"]}',
 );
