@@ -74,10 +74,10 @@ var r = (function (e) {
 let i = {
     UNDELETABLE: new Set([1, 2, 3, 4, 5, 21, 35, 56, 57, 64]),
     GUILD_DISCOVERY_STATUS: new Set([14, 15, 16, 17]),
-    USER_MESSAGE: new Set([0, 19, 20, 23, 26, 35, 41, 45, 47]),
-    NOTIFIABLE_SYSTEM_MESSAGE: new Set([7, 22, 46, 63, 64]),
+    USER_MESSAGE: new Set([0, 19, 20, 23, 26, 41, 45, 47]),
+    NOTIFIABLE_SYSTEM_MESSAGE: new Set([7, 22, 35, 46, 63, 64]),
     REPLYABLE: new Set([0, 7, 19, 20, 23, 24, 25, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 45, 46, 63]),
-    FORWARDABLE: new Set([0, 19, 20, 23]),
+    FORWARDABLE: new Set([0, 19, 20, 23, 35]),
     REFERENCED_MESSAGE_AVAILABLE: new Set([19, 21, 23]),
     AVAILABLE_IN_GUILD_FEED: new Set([0, 19]),
     DEADCHAT_PROMPTS: new Set([40, 42]),
