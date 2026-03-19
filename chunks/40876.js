@@ -404,7 +404,7 @@ let i = {
         ],
         inlineRequire: () => n(415202).A,
     },
-    RelationshipManager: { actions: ["RELATIONSHIP_ADD", "FRIEND_REQUEST_ACCEPTED"], inlineRequire: () => n(681245).A },
+    RelationshipManager: { actions: ["RELATIONSHIP_ADD", "FRIEND_REQUEST_ACCEPTED"], inlineRequire: () => n(903626).A },
     RTCLatencyTestManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(222804).A },
     SavedMessagesManager: {
         actions: ["POST_CONNECTION_OPEN"],
@@ -542,11 +542,6 @@ let i = {
     H264MFExperimentManager: {
         actions: ["POST_CONNECTION_OPEN", "LOGOUT"],
         inlineRequire: () => n(219678).A,
-        hasStoreChangeListeners: !0,
-    },
-    LibOpenH264ExperimentManager: {
-        actions: ["POST_CONNECTION_OPEN", "LOGOUT"],
-        inlineRequire: () => n(271282).A,
         hasStoreChangeListeners: !0,
     },
     NativeCrashManager: {

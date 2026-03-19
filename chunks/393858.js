@@ -1,33 +1,28 @@
-i.d(e, { f: () => E });
-var n = i(574381),
-    l = i(311907),
-    s = i(314116),
-    a = i(827343),
-    r = i(77729),
-    u = i(480862),
-    o = i(729410),
-    d = i(419954),
-    A = i(430452),
-    T = i(780964),
-    S = i(985018);
-let E = (0, d.zD)(T.X.VOICE_AND_VIDEO_OPENH264, {
-    useTitle: () => S.intl.string(S.t.qFphsa),
-    useSubtitle: () => S.intl.string(S.t.cQfwyY),
+n.d(t, { f: () => _ });
+var i = n(574381),
+    s = n(311907),
+    l = n(314116),
+    a = n(827343),
+    r = n(77729),
+    o = n(419954),
+    d = n(430452),
+    c = n(780964),
+    u = n(985018);
+let _ = (0, o.zD)(c.X.VOICE_AND_VIDEO_OPENH264, {
+    useTitle: () => u.intl.string(u.t.qFphsa),
+    useSubtitle: () => u.intl.string(u.t.cQfwyY),
     usePredicate: function () {
-        if (!(0, n.j9)()) return !1;
-        let t = (0, o.b)({ location: "OpenH264Setting" }),
-            e = (0, u.n)({ location: "OpenH264Setting" });
-        return t.enabled || e.enabled;
+        return (0, i.j9)();
     },
     useValue: function () {
-        return (0, l.bG)([A.Ay], () => A.Ay.getOpenH264Enabled());
+        return (0, s.bG)([d.Ay], () => d.Ay.getOpenH264Enabled());
     },
-    setValue: function (t) {
-        a.A.setOpenH264Enabled(t),
-            (0, s.A)({
-                title: S.intl.string(S.t["9jf31O"]),
-                subtitle: S.intl.string(S.t["J2wg+X"]),
-                confirmText: S.intl.string(S.t.BddRzS),
+    setValue: function (e) {
+        a.A.setOpenH264Enabled(e),
+            (0, l.A)({
+                title: u.intl.string(u.t["9jf31O"]),
+                subtitle: u.intl.string(u.t["J2wg+X"]),
+                confirmText: u.intl.string(u.t.BddRzS),
                 onConfirm: () => r.A.app.relaunch(),
             });
     },
