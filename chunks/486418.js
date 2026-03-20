@@ -3,14 +3,14 @@ n.d(t, { P: () => u });
 var r = n(417597),
     i = n(554146),
     s = n(826673),
-    a = n(130978),
+    a = n(440293),
     o = n(576705),
     l = n(652215);
 function u(e) {
     let t = (0, s.JZ)(i.M.SERVER_SHOP_PHANTOM_PREVIEW),
         n = (0, r.bG)([o.A], () => null != e && o.A.can(l.xBc.ADMINISTRATOR, e)),
         u = e?.features.has(l.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE) ?? !1,
-        c = (0, a.w)(e?.id, "useGuildShopPreviewVisible"),
+        c = (0, a.w)(e?.id),
         d = [
             l.GuildFeatures.CREATOR_MONETIZABLE,
             l.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL,

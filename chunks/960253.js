@@ -3,7 +3,7 @@ n.d(t, { Oh: () => f, l8: () => _, vz: () => p });
 var r = n(311907),
     i = n(936555),
     s = n(465932),
-    a = n(130978),
+    a = n(440293),
     o = n(164956),
     l = n(71393),
     u = n(217976),
@@ -27,6 +27,6 @@ function f(e) {
 }
 function p(e) {
     let t = f(e),
-        n = (0, a.w)(e, "useShowRoleSubscriptionsInChannelList");
+        n = (0, a.w)(e);
     return t && !n;
 }
