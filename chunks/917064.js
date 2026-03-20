@@ -1,29 +1,29 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => _, s: () => d });
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
-    s = n(397927),
+    s = n.n(i),
+    a = n(397927),
     o = n(985018),
-    l = n(463006),
+    l = n(895836),
     u = n(93364);
 function c(e) {
     let { className: t } = e;
-    return (0, r.jsx)("img", { className: a()(t, l.Dp), src: u, alt: "" });
+    return (0, r.jsx)("img", { className: s()(t, l.Dp), src: u, alt: "" });
 }
 let d = [
-    { icon: s._Jp, getText: () => o.intl.string(o.t.TZigSO) },
+    { icon: a._Jp, getText: () => o.intl.string(o.t.TZigSO) },
     { icon: c, getText: () => o.intl.string(o.t.hjQuV2) },
-    { icon: s.iTF, getText: () => o.intl.string(o.t["2RUcaM"]) },
-    { icon: s.C3E, getText: () => o.intl.string(o.t.bJoZKV) },
+    { icon: a.iTF, getText: () => o.intl.string(o.t["2RUcaM"]) },
+    { icon: a.C3E, getText: () => o.intl.string(o.t.bJoZKV) },
 ];
 function _(e) {
     let { className: t } = e;
     return (0, r.jsxs)("div", {
-        className: a()(l.iE, t),
+        className: s()(l.iE, t),
         children: [
-            (0, r.jsx)(s.Heading, {
+            (0, r.jsx)(a.Heading, {
                 className: l.R_,
                 variant: "heading-xxl/semibold",
                 children: o.intl.string(o.t.IzKs3o),
@@ -38,7 +38,7 @@ function _(e) {
                             className: l.Nr,
                             children: [
                                 (0, r.jsx)(n, { className: l.Kk }),
-                                (0, r.jsx)(s.Text, {
+                                (0, r.jsx)(a.Text, {
                                     className: l.h_,
                                     color: "text-muted",
                                     variant: "text-md/medium",
