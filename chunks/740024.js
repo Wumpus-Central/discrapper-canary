@@ -4,8 +4,8 @@ n(64700);
 var e = n(397927),
     l = n(442433),
     c = n(202803),
-    s = n(957565),
-    r = n(985018);
+    r = n(957565),
+    s = n(985018);
 function o(t) {
     let { attachmentUrl: a, attachmentName: n, onSelect: o } = t;
     return (0, i.jsx)(e.W1t, {
@@ -13,24 +13,24 @@ function o(t) {
         navId: "attachment-link-context",
         onClose: l.Z_,
         onSelect: o,
-        "aria-label": r.intl.string(r.t["5oIOLX"]),
+        "aria-label": s.intl.string(s.t["5oIOLX"]),
         children: (0, i.jsxs)(
             e.rXV,
             {
                 children: [
                     (0, i.jsx)(e.Drp, {
                         id: "attachment-link-copy-link",
-                        label: r.intl.string(r.t.WqhZss),
+                        label: s.intl.string(s.t["92CPQ+"]),
                         action: async () => {
                             let t = await (0, c.AN)(a);
-                            (0, s.C)(t ?? "");
+                            (0, r.C)(t ?? "");
                         },
                     }),
                     (0, i.jsx)(e.Drp, {
                         id: "attachment-link-copy-name",
-                        label: r.intl.string(r.t.JrGD7E),
+                        label: s.intl.string(s.t.JrGD7E),
                         action: () => {
-                            (0, s.C)(n ?? "");
+                            (0, r.C)(n ?? "");
                         },
                     }),
                 ],
