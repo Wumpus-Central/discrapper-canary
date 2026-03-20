@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { ML: () => A, dq: () => g, gn: () => E });
+n.d(t, { ML: () => A, dq: () => E, gn: () => g });
 var r = n(64700),
     i = n(735438),
-    a = n.n(i),
-    s = n(311907),
+    s = n.n(i),
+    a = n(311907),
     o = n(573648),
     l = n(165120),
     u = n(962173),
@@ -14,23 +14,23 @@ var r = n(64700),
 let p = { [_.fg2.INSTAGRAM]: ["1036753656588017764"] },
     h = new Map([[_.fg2.INSTAGRAM, new Date(2023, 1, 18).getTime()]]),
     m = 30 * d.A.Millis.DAY;
-function g(e) {
+function E(e) {
     let { forUserProfile: t } = e,
-        n = (0, s.bG)([c.default], () => c.default.getCurrentUser()),
-        r = l.S.useExperiment({ location: "f2f7ef_1" }, { autoTrackExposure: !1 }).allowPlayStationStaging;
+        n = (0, a.bG)([c.default], () => c.default.getCurrentUser()),
+        r = l.S.useConfig({ location: "f2f7ef_1" }).allowPlayStationStaging;
     return (e) =>
         e.type === _.fg2.PLAYSTATION_STAGING ? r : !!(void 0 !== n && p[e.type]?.includes(n.id)) || !!t || e.enabled;
 }
-function E() {
-    let e = (0, s.bG)([u.A], () => u.A.getAccounts()),
-        t = g({ forUserProfile: !1 }),
+function g() {
+    let e = (0, a.bG)([u.A], () => u.A.getAccounts()),
+        t = E({ forUserProfile: !1 }),
         n = r.useMemo(() => {
             let t = new Set();
             return e.forEach((e) => t.add(e.type)), t;
         }, [e]);
     return r.useMemo(
         () =>
-            a().sortBy(o.A.filter(t), [
+            s().sortBy(o.A.filter(t), [
                 (e) => !(h.has(e.type) && Date.now() < (h.get(e.type) ?? 0) + m),
                 (e) => n.has(e.type),
                 (e) => e.hasMetadata,
@@ -46,16 +46,16 @@ function A(e) {
         let { key: t } = e;
         t === f.dh.SHIFT && n(!0);
     }
-    function a(e) {
+    function s(e) {
         let { key: t } = e;
         t === f.dh.SHIFT && n(!1);
     }
     return (r.useEffect(
         () => (
             window.addEventListener("keydown", i),
-            window.addEventListener("keyup", a),
+            window.addEventListener("keyup", s),
             () => {
-                window.removeEventListener("keydown", i), window.removeEventListener("keyup", a);
+                window.removeEventListener("keydown", i), window.removeEventListener("keyup", s);
             }
         ),
         [],
