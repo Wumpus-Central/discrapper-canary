@@ -1,5 +1,5 @@
-i.d(e, { r: () => r });
-var n = i(419954),
-    l = i(780964),
-    s = i(830001);
-let r = (0, n.WI)(l.X.PROFILE_SECTION, { hoisted: !0, buildLayout: () => [s.f] });
+n.d(t, { r: () => a });
+var i = n(419954),
+    s = n(780964),
+    l = n(830001);
+let a = (0, i.WI)(s.X.PROFILE_SECTION, { hoisted: !0, buildLayout: () => [l.f, l.A] });

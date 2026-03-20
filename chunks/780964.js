@@ -4,6 +4,7 @@ var r = (function (e) {
     return (
         (e.PROFILE_SECTION = "profile_section"),
         (e.PROFILE_SIDEBAR_ITEM = "profile_sidebar_item"),
+        (e.PROFILE_SIDEBAR_ITEM_WYSIWYG = "profile_sidebar_item_wysiwyg"),
         (e.PROFILE_PANEL = "profile_panel"),
         (e.PROFILE_CATEGORY = "profile_category"),
         (e.PROFILE_SETTING = "profile_setting"),
