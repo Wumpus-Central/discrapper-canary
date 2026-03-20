@@ -30,8 +30,8 @@ var o = n(311907),
     I = n(837921),
     _ = n(652215),
     L = n(790782),
-    w = n(728444),
-    O = n(811094);
+    w = n(719550),
+    O = n(516632);
 let G = {
     SELECTED: O.J1,
     CONNECTED: O.d4,
@@ -192,6 +192,7 @@ let B = i.memo(function (e) {
                               onClick: () => N?.(n),
                               ...Q,
                               "aria-label": H,
+                              "aria-current": h ? "page" : void 0,
                               focusProps: { enabled: !1 },
                               children: [
                                   (0, l.jsxs)("div", {
