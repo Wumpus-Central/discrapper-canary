@@ -148,6 +148,12 @@ var r = n(852015),
             (e[(e.MONTHLY_ORBS = 23)] = "MONTHLY_ORBS"),
             (e[(e.SHOP_DISCOUNTS = 24)] = "SHOP_DISCOUNTS"),
             (e[(e.MORE_QUEST_ORBS = 25)] = "MORE_QUEST_ORBS"),
+            (e[(e.PROFILE_BADGES = 26)] = "PROFILE_BADGES"),
+            (e[(e.APP_ICONS = 27)] = "APP_ICONS"),
+            (e[(e.BOOST_DISCOUNT = 28)] = "BOOST_DISCOUNT"),
+            (e[(e.FREE_BOOSTS = 29)] = "FREE_BOOSTS"),
+            (e[(e.INSTALL_PREMIUM_APPLICATIONS = 30)] = "INSTALL_PREMIUM_APPLICATIONS"),
+            (e[(e.INCREASED_VIDEO_UPLOAD_QUALITY = 31)] = "INCREASED_VIDEO_UPLOAD_QUALITY"),
             e
         );
     })({}),
