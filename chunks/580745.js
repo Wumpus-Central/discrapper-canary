@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => E });
 var r = n(311907),
     i = n(73153),
-    a = n(408018),
-    s = n(451909),
+    s = n(408018),
+    a = n(451909),
     o = n(253932),
     l = n(320501);
 let u = {},
@@ -11,8 +11,8 @@ let u = {},
 function d(e) {
     let { channelId: t, messageId: n, content: r, source: i } = e,
         l = o.D_.getSetting(),
-        d = s.Ay.unparse(r, t);
-    (u[t] = { channelId: t, messageId: n, textValue: d, richValue: (0, a.x7)(l ? d : r) }), (c[t] = i);
+        d = a.Ay.unparse(r, t);
+    (u[t] = { channelId: t, messageId: n, textValue: d, richValue: (0, s.x7)(l ? d : r) }), (c[t] = i);
 }
 function _(e) {
     let { channelId: t, textValue: n, richValue: r } = e,
@@ -29,7 +29,10 @@ function p(e) {
     let { channelId: t, id: n } = e;
     u[t]?.messageId === n && (delete u[t], delete c[t]);
 }
-class h extends r.Ay.Store {
+function h() {
+    (u = {}), (c = {});
+}
+class m extends r.Ay.Store {
     initialize() {
         this.waitFor(l.A);
     }
@@ -57,4 +60,10 @@ class h extends r.Ay.Store {
         return c[e];
     }
 }
-let m = new h(i.h, { MESSAGE_START_EDIT: d, MESSAGE_UPDATE_EDIT: _, MESSAGE_END_EDIT: f, MESSAGE_DELETE: p });
+let E = new m(i.h, {
+    MESSAGE_START_EDIT: d,
+    MESSAGE_UPDATE_EDIT: _,
+    MESSAGE_END_EDIT: f,
+    MESSAGE_DELETE: p,
+    LOGOUT: h,
+});
