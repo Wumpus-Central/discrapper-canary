@@ -1,9 +1,9 @@
-n.d(t, { A: () => y, k: () => N });
+n.d(t, { A: () => N, k: () => j });
 var i = n(627968),
-    l = n(64700),
-    r = n(936504),
-    a = n(311907),
-    s = n(421380),
+    r = n(64700),
+    a = n(936504),
+    l = n(158954),
+    s = n(311907),
     o = n(800342),
     d = n(820284),
     c = n(73861),
@@ -13,21 +13,22 @@ var i = n(627968),
     h = n(707606),
     p = n(456412),
     g = n(587895),
-    A = n(189081),
-    x = n(67480),
-    f = n(328968),
-    C = n(652215),
-    I = n(985018),
-    E = n(449880);
-class v extends l.Component {
-    static defaultProps = { renderFallback: C.tEg };
+    A = n(976860),
+    x = n(189081),
+    f = n(67480),
+    C = n(328968),
+    I = n(652215),
+    E = n(985018),
+    v = n(659210);
+class b extends r.Component {
+    static defaultProps = { renderFallback: I.tEg };
     state = { playing: !1, muted: !0 };
     get analyticsLocation() {
         let {
             analyticsContext: { location: e },
             analyticsSection: t,
         } = this.props;
-        return { ...e, section: null != t ? t : C.JJy.APPLICATION_EMBED, object: C.ZSU.CARD };
+        return { ...e, section: null != t ? t : I.JJy.APPLICATION_EMBED, object: I.ZSU.CARD };
     }
     componentDidMount() {
         let { sku: e, skuId: t, storeListing: n } = this.props;
@@ -49,18 +50,23 @@ class v extends l.Component {
         null != t && t(e);
     };
     renderViewInStoreButton() {
-        return (0, i.jsx)(s.$n.Link, {
-            to: C.BVt.APPLICATION_STORE,
-            className: E.h,
-            color: s.$n.Colors.GREEN,
-            size: s.$n.Sizes.SMALL,
-            children: I.intl.string(I.t["W+NB90"]),
+        return (0, i.jsx)("div", {
+            className: v.h,
+            children: (0, i.jsx)(l.$nd, {
+                role: "link",
+                variant: "active",
+                size: "sm",
+                text: E.intl.string(E.t["W+NB90"]),
+                onClick: () => {
+                    (0, A.pX)(I.BVt.APPLICATION_STORE);
+                },
+            }),
         });
     }
     renderApplicationTile = (e, t) => {
-        let { inLibrary: n, width: l, renderCustomTitle: r, renderCustomTagline: a, renderCustomMedia: s } = this.props,
+        let { inLibrary: n, width: r, renderCustomTitle: a, renderCustomTagline: l, renderCustomMedia: s } = this.props,
             { playing: o, muted: d } = this.state,
-            c = l > m.Tm;
+            c = r > m.Tm;
         return (0, i.jsx)(_.A, {
             sku: e,
             storeListing: t,
@@ -69,21 +75,21 @@ class v extends l.Component {
             inLibrary: n,
             onToggleMute: this.handleToggleMute,
             renderCustomActions: () => this.renderActions(e),
-            renderCustomTitle: r,
-            renderCustomTagline: a,
+            renderCustomTitle: a,
+            renderCustomTagline: l,
             renderCustomMedia: s,
             isHorizontal: c,
             isEmbed: !0,
         });
     };
     renderActions = (e) => {
-        let { inLibrary: t, application: n, skuId: l, libraryApplication: r, renderCustomActions: a } = this.props;
-        if (null != a) return (0, i.jsx)("div", { className: E.i, children: a() });
+        let { inLibrary: t, application: n, skuId: r, libraryApplication: a, renderCustomActions: l } = this.props;
+        if (null != l) return (0, i.jsx)("div", { className: v.i, children: l() });
         if (null == n) return null;
-        let s = null != n && n.primarySkuId === l,
-            o = null != r && r.hasFlag(C.hM6.HIDDEN);
+        let s = null != n && n.primarySkuId === r,
+            o = null != a && a.hasFlag(I.hM6.HIDDEN);
         return (0, i.jsxs)("div", {
-            className: E.i,
+            className: v.i,
             children: [
                 !s || o
                     ? this.renderViewInStoreButton()
@@ -91,8 +97,8 @@ class v extends l.Component {
                           application: n,
                           disabledVariant: "primary",
                           size: "sm",
-                          className: E.h,
-                          source: C.ThZ.MESSAGE_EMBED,
+                          className: v.h,
+                          source: I.ThZ.MESSAGE_EMBED,
                           onClick: this.handleActionButtonClick,
                       }),
                 (t && !o) || e.premium ? null : (0, i.jsx)(u.A, { type: u.A.Types.EMBED, sku: e, inLibrary: !1 }),
@@ -100,19 +106,19 @@ class v extends l.Component {
         });
     };
     render() {
-        let { sku: e, storeListing: t, width: n, fetchFailed: l, renderFallback: a } = this.props,
+        let { sku: e, storeListing: t, width: n, fetchFailed: r, renderFallback: l } = this.props,
             s = n > m.Tm;
         return null == e || null == t
-            ? l
-                ? a()
+            ? r
+                ? l()
                 : (0, i.jsx)(m.Wb, { isHorizontal: s })
-            : e.productLine === C.EZt.COLLECTIBLES
-              ? (0, i.jsx)(d.A, { section: C.JJy.APPLICATION_EMBED, children: this.renderApplicationTile(e, t) })
+            : e.productLine === I.EZt.COLLECTIBLES
+              ? (0, i.jsx)(d.A, { section: I.JJy.APPLICATION_EMBED, children: this.renderApplicationTile(e, t) })
               : (0, i.jsx)(d.A, {
-                    section: C.JJy.APPLICATION_EMBED,
-                    children: (0, i.jsx)(r.N_, {
+                    section: I.JJy.APPLICATION_EMBED,
+                    children: (0, i.jsx)(a.N_, {
                         onClick: this.handleLinkClick,
-                        to: C.BVt.APPLICATION_STORE,
+                        to: I.BVt.APPLICATION_STORE,
                         onMouseEnter: this.handleMouseEnter,
                         onMouseLeave: this.handleMouseLeave,
                         children: this.renderApplicationTile(e, t),
@@ -120,20 +126,20 @@ class v extends l.Component {
                 });
     }
 }
-let b = [x.A, A.A, f.A];
-function T(e) {
+let T = [f.A, x.A, C.A];
+function y(e) {
     let { skuId: t } = e,
-        n = x.A.get(t),
+        n = f.A.get(t),
         i = null != n ? g.A.getApplication(n.applicationId) : null;
     return {
         sku: n,
         application: i,
-        fetchFailed: x.A.didFetchingSkuFail(t),
-        inLibrary: null != n && A.A.hasApplication(n.applicationId, n.applicationId, !0),
-        storeListing: null != n ? f.A.getForSKU(n.id) : null,
-        libraryApplication: null != n ? A.A.getLibraryApplication(n.applicationId, n.applicationId, !0) : null,
+        fetchFailed: f.A.didFetchingSkuFail(t),
+        inLibrary: null != n && x.A.hasApplication(n.applicationId, n.applicationId, !0),
+        storeListing: null != n ? C.A.getForSKU(n.id) : null,
+        libraryApplication: null != n ? x.A.getLibraryApplication(n.applicationId, n.applicationId, !0) : null,
     };
 }
-let S = (0, p.A)((0, h.A)(v)),
-    y = a.Ay.connectStores(b, T)(S),
-    N = (0, h.A)(a.Ay.connectStores(b, T)(v));
+let S = (0, p.A)((0, h.A)(b)),
+    N = s.Ay.connectStores(T, y)(S),
+    j = (0, h.A)(s.Ay.connectStores(T, y)(b));
