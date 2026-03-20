@@ -20,7 +20,6 @@ e.exports = {
     Lv: "toolsButtons__84995",
     au: "toolsButton__84995",
     lB: "premiumSettingsPushButton__84995",
-    xP: "secondaryBannerTextButtonContainerWithPause__84995",
     Nn: "secondaryBannerTextButtonContainer__84995",
     wt: "detailsContainer__84995",
     NM: "discountPill__84995",
