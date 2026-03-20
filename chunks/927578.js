@@ -2,13 +2,13 @@
 n.d(t, {
     $Q: () => z,
     $k: () => eD,
-    Ay: () => tz,
+    Ay: () => t$,
     CC: () => O.CC,
     D8: () => J,
     Dd: () => ea,
     EJ: () => e3,
     EL: () => H,
-    Em: () => tL,
+    Em: () => tD,
     FJ: () => ee,
     FY: () => eK,
     GX: () => e0,
@@ -17,7 +17,7 @@ n.d(t, {
     JM: () => j,
     Ke: () => Q,
     LE: () => e$,
-    L_: () => tY,
+    L_: () => tj,
     Mn: () => en,
     Nc: () => eN,
     OU: () => eu,
@@ -30,7 +30,7 @@ n.d(t, {
     Rr: () => eY,
     TW: () => O.ki,
     Tm: () => ed,
-    To: () => tK,
+    To: () => tW,
     U8: () => Z,
     UC: () => q,
     Uf: () => eL,
@@ -41,19 +41,19 @@ n.d(t, {
     aE: () => eX,
     aZ: () => e5,
     bx: () => ep,
-    e1: () => tk,
+    e1: () => tP,
     ee: () => eQ,
     ff: () => eH,
-    iv: () => tH,
+    iv: () => tB,
     jh: () => eM,
     ji: () => eT,
     kX: () => ev,
     ki: () => ek,
     m6: () => et,
-    mH: () => tD,
+    mH: () => tb,
     mv: () => e9,
     nB: () => el,
-    nK: () => tw,
+    nK: () => tL,
     pb: () => K,
     qn: () => e2,
     re: () => ez,
@@ -100,7 +100,7 @@ var r = n(284009),
     M = n(88001),
     x = n(818348),
     P = n(985018),
-    k = n(519412);
+    k = n(518582);
 let U = {
         PAYMENT_SOURCE_MANAGEMENT: "https://support.apple.com/HT201266",
         BILLING_HISTORY: "https://support.apple.com/HT201266",
@@ -395,7 +395,7 @@ function eo(e) {
             hasFractionalPremiumWithSub: c,
         } = e,
         d = w.hd[n],
-        _ = tb(j(d.id), d.interval),
+        _ = tO(j(d.id), d.interval),
         f =
             ek(t) ||
             (null == t.paymentSourceId && !t.isPurchasedExternally && !E.default.getCurrentUser()?.hasFreePremium()),
@@ -649,7 +649,7 @@ function ef(e) {
     }
 }
 function ep(e) {
-    let t = I.A.getPlanIdsForSkus([tD(w.pe.GUILD)]);
+    let t = I.A.getPlanIdsForSkus([tb(w.pe.GUILD)]);
     i()(null != t, "Missing guildSubscriptionPlanIds");
     let n = e.find((e) => {
         let { planId: n } = e;
@@ -812,7 +812,7 @@ function eS(e, t) {
 function ey(e, t, n, r) {
     let i = a()(r ? void 0 : e);
     if (t.length > 0) {
-        let e = tB(t);
+        let e = tV(t);
         i = i.add(e, "hours");
     }
     if (!r && void 0 !== n) {
@@ -823,7 +823,7 @@ function ey(e, t, n, r) {
     return i.toDate();
 }
 function ev(e) {
-    let t = tB(e.unactivatedUnits);
+    let t = tV(e.unactivatedUnits);
     if (!(t > 0 && e.fractionalState === w.xc.NONE)) return "";
     let n = { days: P.t.fYmirx, hours: P.t["C3RO+g"], minutes: P.t.r77oHc },
         r = (0, c.Vb)((0, y.Tf)(0, t * v.A.Millis.HOUR));
@@ -964,7 +964,7 @@ function eF(e, t, n, r) {
         let t = Error("Unsupported plan");
         throw ((0, S.pM)(t, { tags: { planId: e } }), t);
     }
-    let a = I.A.getForSkuAndInterval(tD(w.pe.GUILD), s.interval, s.intervalCount);
+    let a = I.A.getForSkuAndInterval(tb(w.pe.GUILD), s.interval, s.intervalCount);
     if (null == a) {
         let t = Error("Unsupported plan");
         throw ((0, S.pM)(t, { tags: { planId: e } }), t);
@@ -1249,108 +1249,105 @@ function tu(e) {
     return (0, f.RM)(f.OW, e);
 }
 function tc(e) {
-    return (0, f.RM)(f.WQ, e);
-}
-function td(e) {
     return (0, f.RM)(f._w, e);
 }
-function t_(e) {
+function td(e) {
     return (0, f.RM)(f.Qz, e);
 }
-function tf(e) {
+function t_(e) {
     return (0, f.RM)(f.Pm, e);
 }
-function tp(e) {
+function tf(e) {
     return (0, f.RM)(f.x, e);
 }
-function th(e) {
+function tp(e) {
     return (0, f.RM)(f.cS, e);
 }
-function tm(e) {
+function th(e) {
     return (0, f.RM)(f.T7, e);
 }
-function tE(e) {
+function tm(e) {
     return (0, f.RM)(f.lx, e);
 }
-function tg(e) {
+function tE(e) {
     return (0, f.RM)(f.zL, e);
 }
-function tA(e, t) {
+function tg(e, t) {
     return "high" === e ? (0, f.RM)(f.sj, t) : "mid" === e && (0, f.RM)(f.II, t);
 }
-function tI(e) {
+function tA(e) {
     return (0, f.RM)(f.G5, e);
 }
-function tT(e) {
+function tI(e) {
     return (0, f.RM)(f.aE, e);
 }
-function tS(e) {
+function tT(e) {
     return (0, f.RM)(f.GS, e);
 }
-function ty(e) {
+function tS(e) {
     return (0, f.RM)(f.Zc, e);
 }
-function tv(e) {
+function ty(e) {
     return (0, f.RM)(f.G3, e);
 }
-function tN(e) {
+function tv(e) {
     return (0, f.RM)(f.z0, e);
 }
-function tC(e) {
+function tN(e) {
     return (0, h.Nh)(e?.perks, l.bb.MONTHLY_ORBS);
 }
-function tR(e) {
+function tC(e) {
     return (0, h.Nh)(e?.perks, l.bb.SHOP_DISCOUNTS);
 }
-function tO(e) {
+function tR(e) {
     return (0, h.Nh)(e?.perks, l.bb.MORE_QUEST_ORBS);
 }
-function tb(e, t) {
+function tO(e, t) {
     let n = (0, b.$g)(e.amount, e.currency),
         r = ee(t);
     return `${n}/${r}`;
 }
-function tD(e) {
+function tb(e) {
     return e;
 }
-function tL(e) {
+function tD(e) {
     return "isNitroLocked" in e;
 }
-function tw() {
+function tL() {
     let e = (0, o.bG)([E.default], () => E.default.getCurrentUser());
     return (0, O.YE)(e, w.PremiumTypes.TIER_2);
 }
-function tM(e) {
+function tw(e) {
     return null != e && w.n0.includes(e) ? 1 : 2;
 }
-function tx(e) {
+function tM(e) {
     return e === w.Tt ? w.h7 : e === w.yo ? w.CA : w.CQ;
 }
-function tP() {
+function tx() {
     return w.CQ;
 }
-function tk(e) {
+function tP(e) {
     let t = (0, p.N)("getOfferNoticeThreshold");
-    return 0 !== t ? t : tU(e) ? tx(e.trial_id) : tG(e) ? tP() : w.CQ;
+    return 0 !== t ? t : tk(e) ? tM(e.trial_id) : tU(e) ? tx() : w.CQ;
 }
-function tU(e) {
+function tk(e) {
     return null != e && "trial_id" in e;
 }
-function tG(e) {
+function tU(e) {
     return null != e && "discount_id" in e;
 }
-function tF(e) {
+function tG(e) {
     if (e === w.WT.YEAR) return P.intl.string(P.t.tfqrhj);
     if (e === w.WT.MONTH) return P.intl.string(P.t.FPybU7);
     throw Error(`Invalid interval type: ${e}`);
 }
-function tV(e) {
+function tF(e) {
     return null != e && !e.isProvisional && !e.bot;
 }
-function tB(e) {
-    return tH(e.map((e) => e.skuId));
+function tV(e) {
+    return tB(e.map((e) => e.skuId));
 }
-function tH(e) {
+function tB(e) {
     return e.reduce((e, t) => {
         let [n, r] = w.NL[t],
             i = 1;
@@ -1364,37 +1361,37 @@ function tH(e) {
         return e + i * r;
     }, 0);
 }
-let tj = (e) => {
+let tH = (e) => {
         let { subscriptionPlan: t, isGift: n = !1, priceOptions: r = {} } = e,
             i = w.En[t.skuId];
         return null == i ? null : Y(i, !1, n, r);
     },
-    tY = (e) => {
+    tj = (e) => {
         let { planId: t, shouldUseCalculatedDiscount: n, isGift: r, priceOptions: i, subscriptionPlan: s } = e,
             a = w.XE[t];
-        return n && (a = tW(s, r, i)), a;
+        return n && (a = tY(s, r, i)), a;
     };
-function tW(e) {
+function tY(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     if (e.interval !== w.WT.YEAR) return;
-    let r = tj({ subscriptionPlan: e, isGift: t, priceOptions: n });
+    let r = tH({ subscriptionPlan: e, isGift: t, priceOptions: n });
     if (null == r) return;
     let i = Y(e.id, !1, t, n);
     if (0 !== r.amount) return Math.floor(100 * (1 - i.amount / (12 * r.amount)));
 }
-function tK(e) {
+function tW(e) {
     return null == e ? 0 : Math.max((0, y.m_)(new Date(), new Date(e)), 0);
 }
-function t$(e) {
+function tK(e) {
     return Math.max(1, Math.ceil((0, y.c_)(new Date(e.currentPeriodEnd), new Date())));
 }
-let tz = Object.freeze({
+let t$ = Object.freeze({
     isNewUser: e9,
     isPremiumAtLeast: O.CC,
     isPremium: O.ki,
     isPremiumExactly: O.YE,
-    isPremiumEligible: tV,
+    isPremiumEligible: tF,
     getPrice: Y,
     getDefaultPrice: j,
     getInterval: X,
@@ -1404,8 +1401,8 @@ let tz = Object.freeze({
     getTierDisplayNameByPlanId: ei,
     getDisplayName: en,
     getPremiumPlanOptions: ed,
-    getReverseTrialWeeks: tM,
-    formatInterval: tF,
+    getReverseTrialWeeks: tw,
+    formatInterval: tG,
     getPlanDescription: eo,
     isPremiumSku: ec,
     getIntervalMonths: es,
@@ -1433,11 +1430,11 @@ let tz = Object.freeze({
     getPremiumSkuIdForSubscription: e5,
     getPremiumTypeFromSubscription: e7,
     getPremiumGradientColor: e8,
-    getUnactivatedFractionalPremiumHours: tB,
-    castPremiumSubscriptionAsSkuId: tD,
-    calculateDiscountPercentageForYearlyPlan: tW,
-    getDaysSincePremium: tK,
-    getDaysRemainingUntilSubscriptionCurrentPeriodEnds: t$,
+    getUnactivatedFractionalPremiumHours: tV,
+    castPremiumSubscriptionAsSkuId: tb,
+    calculateDiscountPercentageForYearlyPlan: tY,
+    getDaysSincePremium: tW,
+    getDaysRemainingUntilSubscriptionCurrentPeriodEnds: tK,
     canUseAnimatedEmojis: te,
     canUseEmojisEverywhere: tt,
     canUseSoundboardEverywhere: tn,
@@ -1448,25 +1445,24 @@ let tz = Object.freeze({
     canEditDiscriminator: to,
     hasBoostDiscount: tl,
     canUseAnimatedAvatar: tu,
-    canUseFancyVoiceChannelReactions: tc,
-    canInstallPremiumApplications: td,
-    canUseIncreasedMessageLength: t_,
-    canUseIncreasedGuildCap: tf,
-    canRedeemPremiumPerks: tp,
-    canUsePremiumProfileCustomization: th,
-    canUsePremiumAppIcons: tm,
-    canUsePremiumGuildMemberProfile: tE,
-    canUseClientThemes: tg,
-    canStreamQuality: tA,
-    canUseQuestOrbMultiplier: tI,
-    hasFreeBoosts: tT,
-    canUseCustomStickersEverywhere: tS,
-    canUseCustomBackgrounds: ty,
-    canUseCollectibles: tv,
-    canUsePremiumVoiceFilters: tN,
-    canUseMonthlyOrbs: tC,
-    canUseShopDiscounts: tR,
-    canUseMoreQuestOrbs: tO,
-    formatPriceString: tb,
+    canInstallPremiumApplications: tc,
+    canUseIncreasedMessageLength: td,
+    canUseIncreasedGuildCap: t_,
+    canRedeemPremiumPerks: tf,
+    canUsePremiumProfileCustomization: tp,
+    canUsePremiumAppIcons: th,
+    canUsePremiumGuildMemberProfile: tm,
+    canUseClientThemes: tE,
+    canStreamQuality: tg,
+    canUseQuestOrbMultiplier: tA,
+    hasFreeBoosts: tI,
+    canUseCustomStickersEverywhere: tT,
+    canUseCustomBackgrounds: tS,
+    canUseCollectibles: ty,
+    canUsePremiumVoiceFilters: tv,
+    canUseMonthlyOrbs: tN,
+    canUseShopDiscounts: tC,
+    canUseMoreQuestOrbs: tR,
+    formatPriceString: tO,
     StreamQuality: B,
 });
