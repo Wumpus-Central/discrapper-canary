@@ -1,129 +1,59 @@
 "use strict";
-n.d(t, { A: () => E }), n(321073);
+n.d(t, { A: () => E });
 var r = n(627968);
 n(64700);
 var i = n(311907),
-    a = n(873298),
     s = n(397927),
-    o = n(817281),
-    l = n(955572),
-    u = n(775602),
-    c = n(688810),
-    d = n(692798),
-    _ = n(544028),
-    f = n(964404),
-    p = n(253932),
-    h = n(185928),
-    m = n(652215),
-    g = n(985018);
+    a = n(817281),
+    o = n(775602),
+    l = n(688810),
+    u = n(692798),
+    c = n(544028),
+    d = n(964404),
+    _ = n(358776),
+    f = n(361082),
+    p = n(185928),
+    h = n(652215),
+    m = n(985018);
 function E() {
-    let e = p.hH.useSetting(),
-        { analyticsLocations: t } = (0, c.Ay)(),
+    let e = (0, _.bp)("useAppearanceItems"),
+        t = (0, f.A)(),
+        { analyticsLocations: n } = (0, l.Ay)(),
         {
-            theme: n,
-            useSystemTheme: E,
+            theme: E,
+            useSystemTheme: g,
             useForcedColors: A,
-        } = (0, i.cf)([_.A, f.Ay, u.A], () => ({
-            theme: _.A.theme,
-            useSystemTheme: f.Ay.useSystemTheme,
-            useForcedColors: u.A.useForcedColors,
+        } = (0, i.cf)([c.A, d.Ay, o.A], () => ({
+            theme: c.A.theme,
+            useSystemTheme: d.Ay.useSystemTheme,
+            useForcedColors: o.A.useForcedColors,
         })),
-        I = p.Xi.useSetting(),
-        T = (e, i) =>
+        I = (e, t) =>
             (0, r.jsx)(s.iDA, {
                 id: e,
                 group: "input-modes",
-                label: i,
+                label: t,
                 disabled: A,
-                checked: E === h.Q_.ON ? "system" === e : e === n,
+                checked: g === p.Q_.ON ? "system" === e : e === E,
                 action: () => {
-                    (0, d.X8)({ isPersisted: !0, analyticsLocations: t, themeName: `default ${e}` }),
-                        (0, o.u_)({ theme: e });
+                    (0, u.X8)({ isPersisted: !0, analyticsLocations: n, themeName: `default ${e}` }),
+                        (0, a.u_)({ theme: e });
                 },
-            }),
-        y = [
-            (0, r.jsxs)(
-                s.rXV,
-                {
-                    children: [
-                        T(m.NJ8.LIGHT, g.intl.string(g.t.K2sFfo)),
-                        T(m.NJ8.DARK, g.intl.string(g.t.SMPT1k)),
-                        T(m.NJ8.DARKER, g.intl.string(g.t.b8Cei3)),
-                        T(m.NJ8.MIDNIGHT, g.intl.string(g.t.Do4ZJx)),
-                        T("system", g.intl.string(g.t["7rOU6j"])),
-                    ],
-                },
-                "theme-items",
-            ),
-        ];
-    return (
-        y.push(
-            (0, r.jsxs)(
-                s.rXV,
-                {
-                    label: "UI Density",
-                    children: [
-                        (0, r.jsx)(s.iDA, {
-                            id: "compact-ui",
-                            group: "list-density",
-                            label: g.intl.string(g.t["7iegX4"]),
-                            checked: I === a.NS.COMPACT,
-                            action: () => {
-                                p.Xi.updateSetting(a.NS.COMPACT);
-                            },
-                        }),
-                        (0, r.jsx)(s.iDA, {
-                            id: "default-ui",
-                            group: "list-density",
-                            label: g.intl.string(g.t.bBvAEH),
-                            checked: I === a.NS.DEFAULT,
-                            action: () => {
-                                p.Xi.updateSetting(a.NS.DEFAULT);
-                            },
-                        }),
-                        (0, r.jsx)(s.iDA, {
-                            id: "cozy-ui",
-                            group: "list-density",
-                            label: g.intl.string(g.t["4cuYHx"]),
-                            checked: I === a.NS.COZY,
-                            action: () => {
-                                p.Xi.updateSetting(a.NS.COZY);
-                            },
-                        }),
-                    ],
-                },
-                "list-density",
-            ),
+            });
+    return [
+        (0, r.jsxs)(
+            s.rXV,
+            {
+                children: [
+                    I(h.NJ8.LIGHT, m.intl.string(m.t.K2sFfo)),
+                    I(h.NJ8.DARK, m.intl.string(m.t.SMPT1k)),
+                    I(h.NJ8.DARKER, m.intl.string(m.t.b8Cei3)),
+                    I(h.NJ8.MIDNIGHT, m.intl.string(m.t.Do4ZJx)),
+                    I("system", m.intl.string(m.t["7rOU6j"])),
+                ],
+            },
+            "theme-items",
         ),
-        y.push(
-            (0, r.jsxs)(
-                s.rXV,
-                {
-                    label: "Message Display",
-                    children: [
-                        (0, r.jsx)(s.iDA, {
-                            id: "cozy-chat",
-                            group: "chat-density",
-                            label: g.intl.string(g.t.Jqj4cZ),
-                            checked: !e,
-                            action: () => {
-                                p.hH.updateSetting(!1), (0, l.AC)();
-                            },
-                        }),
-                        (0, r.jsx)(s.iDA, {
-                            id: "compact-chat",
-                            group: "chat-density",
-                            label: g.intl.string(g.t["1JNcPS"]),
-                            checked: e,
-                            action: () => {
-                                p.hH.updateSetting(!0), (0, l.AC)();
-                            },
-                        }),
-                    ],
-                },
-                "chat-density",
-            ),
-        ),
-        y
-    );
+        ...(e ? [] : t),
+    ];
 }
