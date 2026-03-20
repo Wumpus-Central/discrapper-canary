@@ -4,8 +4,8 @@ var l = i(627968),
     a = i(503698),
     s = i.n(a),
     r = i(47762),
-    d = i(990078),
-    o = i(397927),
+    o = i(990078),
+    d = i(397927),
     c = i(573435),
     u = i(885151),
     m = i(985018),
@@ -16,7 +16,7 @@ function g(e) {
         a = n?.supplementalData?.coverImageUrl;
     if (null == a) return null;
     let s = i?.level === r._.HIGH;
-    return (0, l.jsx)(d.m, {
+    return (0, l.jsx)(o.m, {
         position: "bottom",
         "aria-label": t.name,
         text: t.name,
@@ -32,8 +32,8 @@ function g(e) {
                         className: x.Sy,
                         children: (0, l.jsx)("div", {
                             className: x.oZ,
-                            children: (0, l.jsx)(o.Y3C, {
-                                color: o.LU0.unsafe_rawColors.ORANGE_330.css,
+                            children: (0, l.jsx)(d.Y3C, {
+                                color: d.LU0.unsafe_rawColors.ORANGE_330.css,
                                 width: 12,
                                 height: 12,
                                 size: "custom",
@@ -58,11 +58,11 @@ function h(e) {
                 ? null
                 : 0 === a.length || h
                   ? (0, l.jsx)(g, { game: i, activityLevel: r?.[i.id] })
-                  : (0, l.jsx)(d.m, {
+                  : (0, l.jsx)(o.m, {
                         position: "bottom",
-                        "aria-label": m.intl.string(m.t["whEs/l"]),
-                        text: m.intl.string(m.t["whEs/l"]),
-                        children: (0, l.jsxs)(o.DUT, {
+                        "aria-label": m.intl.string(m.t.yohc6E),
+                        text: m.intl.string(m.t.yohc6E),
+                        children: (0, l.jsxs)(d.DUT, {
                             className: s()(x.Xy, x.oL, x.vk),
                             onClick: A,
                             "aria-label": `Show ${a.length} more games`,
@@ -71,7 +71,7 @@ function h(e) {
                                 (0, l.jsx)("div", { className: x.Fg }),
                                 (0, l.jsx)("div", {
                                     className: x.AZ,
-                                    children: (0, l.jsx)(o.Text, {
+                                    children: (0, l.jsx)(d.Text, {
                                         variant: "text-xs/normal",
                                         color: "always-white",
                                         children: `+${a.length}`,
@@ -83,7 +83,7 @@ function h(e) {
         }, [i, p, a, r, h, A]);
     if (null == t || 0 === t.length) return null;
     let E = h && a.length > 0 ? a : [];
-    return (0, l.jsxs)(o.BJc, {
+    return (0, l.jsxs)(d.BJc, {
         direction: "horizontal",
         gap: 8,
         wrap: !0,
