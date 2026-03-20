@@ -54,14 +54,13 @@ function G(e) {
 }
 function F() {
     let e = {},
-        t = c.A.getFavoriteChannels(),
-        n = c.A.getFavoriteCategories();
-    for (let r in t) {
-        let i = t[r],
-            s = n[r] ?? h.A.getChannel(r);
-        if (null == s) continue;
-        let a = (0, d.K)(t, i, s);
-        e[r] = { channel: a, comparator: a.position };
+        t = c.A.getFavoriteChannels();
+    for (let n in t) {
+        let r = h.A.getChannel(n);
+        if (null == r) continue;
+        let i = t[n],
+            s = (0, d.K)(t, i, r);
+        e[n] = { channel: s, comparator: s.position };
     }
     return e;
 }

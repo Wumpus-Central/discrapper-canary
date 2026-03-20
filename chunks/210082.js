@@ -1,35 +1,33 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => u });
 var i = n(311907),
-    s = n(873298),
-    l = n(863005),
-    a = n(734057),
-    r = n(576705),
-    o = n(222823),
-    c = n(543465),
-    d = n(661191),
-    u = n(818348);
-function h(e) {
-    return (0, i.cf)([l.A, a.A, o.Ay, c.Ay, r.A], () =>
-        d.default.keys(e).reduce(
-            (t, n) => {
-                if (e[n]?.type === s.Ip.CATEGORY) return t;
-                let i = a.A.getChannel(n),
-                    h = i?.getGuildId(),
-                    A = i?.isGuildVocal();
+    s = n(863005),
+    l = n(734057),
+    a = n(576705),
+    r = n(222823),
+    o = n(543465),
+    c = n(661191),
+    d = n(818348);
+function u(e) {
+    return (0, i.cf)([s.A, l.A, r.Ay, o.Ay, a.A], () =>
+        c.default.keys(e).reduce(
+            (e, t) => {
+                let n = l.A.getChannel(t),
+                    i = n?.getGuildId(),
+                    u = n?.isGuildVocal();
                 if (
-                    ((t.badge = t.badge + o.Ay.getMentionCount(n)),
-                    (t.unread =
-                        t.unread ||
-                        (!A && r.A.can(u.xB.VIEW_CHANNEL, i) && o.Ay.hasUnread(n) && !c.Ay.isChannelMuted(h, n))),
-                    null != h)
+                    ((e.badge = e.badge + r.Ay.getMentionCount(t)),
+                    (e.unread =
+                        e.unread ||
+                        (!u && a.A.can(d.xB.VIEW_CHANNEL, n) && r.Ay.hasUnread(t) && !o.Ay.isChannelMuted(i, t))),
+                    null != i)
                 ) {
-                    let e = l.A.getActiveJoinedRelevantThreadsForParent(h, n),
-                        i = l.A.getActiveJoinedUnreadThreadsForParent(h, n);
-                    for (let n in ((t.unread = t.unread || d.default.keys(i).some((t) => t in e)), e))
-                        t.badge += o.Ay.getMentionCount(n);
+                    let n = s.A.getActiveJoinedRelevantThreadsForParent(i, t),
+                        l = s.A.getActiveJoinedUnreadThreadsForParent(i, t);
+                    for (let t in ((e.unread = e.unread || c.default.keys(l).some((e) => e in n)), n))
+                        e.badge += r.Ay.getMentionCount(t);
                 }
-                return t;
+                return e;
             },
             { badge: 0, unread: !1 },
         ),
