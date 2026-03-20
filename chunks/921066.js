@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => S });
 var i,
     a = n(627968),
     l = n(64700),
@@ -10,63 +10,67 @@ var i,
     u = n(881635),
     _ = n(567771),
     m = n(168350),
-    A = n(763754),
-    E = n(652215),
-    I = n(985018),
-    T = n(942066),
-    f = n(810309),
-    N = n(274993),
-    C = n(218924);
-function g(e) {
-    let { message: t, guild: g, usernameHook: p } = e,
-        h = (0, r.bG)([c.A], () => c.A.useReducedMotion),
-        R = (i || (i = n.t(l, 2))).useContext(s.C)?.animate ?? !1,
-        x = !h && R,
-        S = (0, A.Ay)(t),
-        O = p(S),
-        M = (0, _.A)(t);
+    A = n(649963),
+    E = n(763754),
+    I = n(652215),
+    T = n(985018),
+    f = n(942066),
+    N = n(810309),
+    C = n(274993),
+    g = n(218924);
+function h() {
+    let e = (0, r.bG)([c.A], () => c.A.useReducedMotion),
+        t = (i || (i = n.t(l, 2))).useContext(s.C)?.animate ?? !1;
+    return !e && t;
+}
+function p(e) {
+    let { message: t, guild: n, usernameHook: i } = e,
+        l = h(),
+        r = (0, E.Ay)(t),
+        s = i(r),
+        c = (0, _.A)(t);
     return (0, a.jsxs)("div", {
-        className: T.kL,
+        className: f.kL,
         children: [
-            (0, a.jsx)(m.A, { className: T.Tp, forceReducedMotion: !x }),
+            (0, a.jsx)(m.A, { className: f.Tp, forceReducedMotion: !l }),
             (0, a.jsxs)("div", {
-                className: T.rc,
+                className: f.rc,
                 children: [
-                    (0, a.jsx)("img", { className: T.iQ, src: f.A, alt: "", "aria-hidden": !0 }),
-                    (0, a.jsx)("img", { className: T.CC, src: x ? N.A : C.A, alt: "", "aria-hidden": !0 }),
+                    (0, a.jsx)("img", { className: f.iQ, src: N.A, alt: "", "aria-hidden": !0 }),
+                    (0, a.jsx)("img", { className: f.CC, src: l ? C.A : g.A, alt: "", "aria-hidden": !0 }),
                 ],
             }),
             (0, a.jsxs)("div", {
-                className: T.Qs,
+                className: f.Qs,
                 children: [
                     (0, a.jsx)(o.Text, {
                         variant: "text-md/semibold",
-                        className: T.DD,
-                        children: I.intl.format(I.t["7t1Ecm"], {
-                            username: S.nick,
-                            usernameHook: O,
-                            numSubscriptions: M,
+                        className: f.DD,
+                        children: T.intl.format(T.t["7t1Ecm"], {
+                            username: r.nick,
+                            usernameHook: s,
+                            numSubscriptions: c,
                         }),
                     }),
                     (0, a.jsx)(o.Text, {
                         variant: "text-md/normal",
-                        className: T.rf,
-                        children: I.intl.string(I.t.nybLqy),
+                        className: f.rf,
+                        children: T.intl.string(T.t.nybLqy),
                     }),
                 ],
             }),
-            null != g &&
+            null != n &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
-                        (0, a.jsx)(d.A, { className: T.WM, guildId: g.id }),
+                        (0, a.jsx)(d.A, { className: f.WM, guildId: n.id }),
                         (0, a.jsx)("div", {
-                            className: T.qr,
+                            className: f.qr,
                             children: (0, a.jsx)(u.A, {
-                                guild: g,
+                                guild: n,
                                 analyticsLocation: {
-                                    page: E.liQ.GUILD_CHANNEL,
-                                    section: E.JJy.CHANNEL_TEXT_AREA,
-                                    object: E.ZSU.BOOST_ANNOUNCEMENT_UPSELL,
+                                    page: I.liQ.GUILD_CHANNEL,
+                                    section: I.JJy.CHANNEL_TEXT_AREA,
+                                    object: I.ZSU.BOOST_ANNOUNCEMENT_UPSELL,
                                 },
                             }),
                         }),
@@ -74,4 +78,67 @@ function g(e) {
                 }),
         ],
     });
+}
+let R = { id: null, name: "❤️", animated: !1 };
+function x(e) {
+    let { message: t, guild: n, usernameHook: i } = e,
+        r = h(),
+        s = (0, E.Ay)(t),
+        c = i(s),
+        d = l.useCallback(() => {
+            (0, A.BB)(t.channel_id, t.id, R, A.qN.MESSAGE);
+        }, [t.channel_id, t.id]);
+    return (0, a.jsxs)("div", {
+        className: f.kL,
+        children: [
+            (0, a.jsx)(m.A, { className: f.Tp, forceReducedMotion: !r }),
+            (0, a.jsx)("div", {
+                className: f.VA,
+                children: (0, a.jsx)("img", { className: f.V_, src: r ? C.A : g.A, alt: "", "aria-hidden": !0 }),
+            }),
+            (0, a.jsxs)("div", {
+                className: f.sf,
+                children: [
+                    (0, a.jsx)(o.Text, {
+                        variant: "text-md/semibold",
+                        className: f.DD,
+                        children: T.intl.format(T.t["/1IQGD"], { username: s.nick, usernameHook: c }),
+                    }),
+                    (0, a.jsx)(o.Text, {
+                        variant: "text-md/normal",
+                        className: f.rf,
+                        children: T.intl.string(T.t.nIEjuk),
+                    }),
+                ],
+            }),
+            null != n &&
+                (0, a.jsxs)("div", {
+                    className: f.qr,
+                    children: [
+                        (0, a.jsx)(u.A, {
+                            guild: n,
+                            analyticsLocation: {
+                                page: I.liQ.GUILD_CHANNEL,
+                                section: I.JJy.CHANNEL_TEXT_AREA,
+                                object: I.ZSU.BOOST_ANNOUNCEMENT_UPSELL,
+                            },
+                        }),
+                        (0, a.jsx)(o.vN3, {
+                            children: (0, a.jsx)("button", {
+                                className: f.Zf,
+                                onClick: d,
+                                "aria-label": T.intl.string(T.t.eaRpLR),
+                                children: (0, a.jsx)("span", { role: "img", "aria-hidden": "true", children: "❤️" }),
+                            }),
+                        }),
+                    ],
+                }),
+        ],
+    });
+}
+function S(e) {
+    let { message: t, guild: n, usernameHook: i } = e;
+    return t.hasFlag(I.pr7.IS_FIRST_BOOSTER)
+        ? (0, a.jsx)(x, { message: t, guild: n, usernameHook: i })
+        : (0, a.jsx)(p, { message: t, guild: n, usernameHook: i });
 }
