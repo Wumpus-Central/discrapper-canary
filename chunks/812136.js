@@ -8,8 +8,8 @@ var r = i(503698),
     a = i(397927),
     o = i(775602),
     c = i(289397),
-    C = i(976860),
-    u = i(491026),
+    C = i(130978),
+    u = i(976860),
     x = i(381969),
     h = i(920814),
     _ = i(305015),
@@ -19,7 +19,7 @@ var r = i(503698),
     m = i(652215),
     f = i(746080),
     v = i(985018),
-    L = i(227090);
+    L = i(713244);
 function I(e) {
     let {
         icon: t,
@@ -71,7 +71,7 @@ function I(e) {
 }
 function A(e) {
     let { guild: t } = e,
-        i = (0, u.YZ)(t.id, "guild_shop_category_selector"),
+        i = (0, C.w)(t.id, "guild_shop_category_selector"),
         { selectedTab: r, setSelectedTab: n, categoryTabs: A, handlePreviewDismiss: w } = (0, x.k)(),
         N = "false" === d.w.get(g.Db, "false"),
         T = (0, l.bG)([o.A], () => o.A.useReducedMotion),
@@ -98,7 +98,7 @@ function A(e) {
                             body: i
                                 ? v.intl.string(v.t["jqz+ly"])
                                 : v.intl.format(v.t.ycs4oO, {
-                                      openRoleSubPage: () => (0, C.pX)(m.BVt.CHANNEL(t.id, f.VV.ROLE_SUBSCRIPTIONS)),
+                                      openRoleSubPage: () => (0, u.pX)(m.BVt.CHANNEL(t.id, f.VV.ROLE_SUBSCRIPTIONS)),
                                   }),
                             disabled: !i,
                             selected: r === h.B.GUILD_ROLE_SUBSCRIPTIONS,
