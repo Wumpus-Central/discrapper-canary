@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => S, V: () => d });
+n.d(t, { A: () => y, V: () => _ });
 var r = n(410530),
     i = n(582972),
     s = n(311907),
@@ -7,8 +7,9 @@ var r = n(410530),
     o = n(431560),
     l = n(287809),
     u = n(927813),
-    c = n(26508),
-    d = (function (e) {
+    c = n(649032),
+    d = n(26508),
+    _ = (function (e) {
         return (
             (e.NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD = "NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD"),
             (e.MISSING_NECESSARY_PREMIUM_STATUS = "MISSING_NECESSARY_PREMIUM_STATUS"),
@@ -16,10 +17,10 @@ var r = n(410530),
             e
         );
     })({});
-let _ = 864e5,
-    f = new o.Z({ ttlMs: _ });
-function p() {
-    let e = f.getValue();
+let f = 864e5,
+    p = new o.Z({ ttlMs: f });
+function h() {
+    let e = p.getValue();
     if (null == e) return { state: "MORE_THAN_24H_BEFORE_REWARD" };
     let t = new Date();
     for (let n of e.values()) {
@@ -32,45 +33,45 @@ function p() {
     }
     return { state: "MORE_THAN_24H_BEFORE_REWARD" };
 }
-function h(e, t) {
-    return "LESS_THAN_24H_BEFORE_REWARD" === e ? (t ?? _) : _;
-}
-function m() {
-    let { state: e, msUntilReward: t } = p();
-    f.setTtl(h(e, t));
+function m(e, t) {
+    return "LESS_THAN_24H_BEFORE_REWARD" === e ? (t ?? f) : f;
 }
 function E() {
-    f.setLoading();
+    let { state: e, msUntilReward: t } = h();
+    p.setTtl(m(e, t));
 }
-function g(e) {
+function g() {
+    p.setLoading();
+}
+function A(e) {
     let { programRewards: t } = e;
-    if (!f.isLoading()) return !1;
+    if (!p.isLoading()) return !1;
     let n = new Map();
     t.forEach((e) => {
         n.set(e.reward_program, e);
     }),
-        f.setValue(n),
-        m();
-}
-function A() {
-    if (!f.isLoading()) return !1;
-    f.setError();
+        p.setValue(n),
+        E();
 }
 function I() {
-    f.clear();
+    if (!p.isLoading()) return !1;
+    p.setError();
 }
-class T extends s.Ay.PersistedStore {
+function T() {
+    p.clear();
+}
+class S extends s.Ay.PersistedStore {
     static displayName = "ProgramRewardsStore";
     static persistKey = "ProgramRewardsStore";
     initialize(e) {
         if ((this.waitFor(l.default), e?.cache != null)) {
             let t = new Map(e.cache.value);
-            f.restore({ value: t, fetchedAt: e.cache.fetchedAt });
+            p.restore({ value: t, fetchedAt: e.cache.fetchedAt });
         }
-        m();
+        E();
     }
     getState() {
-        let e = f.serialize();
+        let e = p.serialize();
         return { cache: null != e ? { value: Array.from(e.value.entries()), fetchedAt: e.fetchedAt } : null };
     }
     getTotalDaysInDuration(e) {
@@ -80,47 +81,80 @@ class T extends s.Ay.PersistedStore {
         return null == n || n <= 0 ? null : Math.ceil(n / u.A.Millis.DAY);
     }
     isFetching() {
-        return f.isLoading();
+        return p.isLoading();
     }
     isFetched() {
-        return f.isValid();
+        return p.isValid();
     }
     hasCachedValue() {
-        return null != f.getValue();
+        return null != p.getValue();
     }
     isReady() {
         return (
             !this.isFetching() &&
-            (this.hasCachedValue() || !(0, c.g_)("ProgramRewardsStore") || this.isError() || !(0, c.mY)())
+            (this.hasCachedValue() || !(0, d.g_)("ProgramRewardsStore") || this.isError() || !(0, d.mY)())
         );
     }
     shouldFetch() {
-        return (0, c.g_)("ProgramRewardsStore.shouldFetch")
-            ? (0, c.mY)()
-                ? f.shouldFetch()
+        return (0, d.g_)("ProgramRewardsStore.shouldFetch")
+            ? (0, d.mY)()
+                ? p.shouldFetch()
                     ? { shouldFetch: !0 }
                     : { shouldFetch: !1, reason: "CACHE_SHOULD_NOT_FETCH" }
                 : { shouldFetch: !1, reason: "MISSING_NECESSARY_PREMIUM_STATUS" }
             : { shouldFetch: !1, reason: "NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD" };
     }
     isError() {
-        return f.isError();
+        return p.isError();
     }
     getStatus() {
-        return f.getStatus();
+        return p.getStatus();
     }
     getRewardForProgram(e) {
-        return f.getValue()?.get(e);
+        return p.getValue()?.get(e);
     }
     forceExpire() {
-        f.forceExpire();
+        p.forceExpire();
     }
+    __getLocalVars = () => {
+        let e = this.getState(),
+            t = e.cache?.value ?? [],
+            n = {};
+        for (let [e, r] of t) n[e === c.W.NITRO ? "NITRO" : String(e)] = r;
+        return {
+            status: this.getStatus(),
+            isFetching: this.isFetching(),
+            isFetched: this.isFetched(),
+            hasCachedValue: this.hasCachedValue(),
+            isError: this.isError(),
+            isReady: this.isReady(),
+            shouldFetch: this.shouldFetch(),
+            fetchedAt: e.cache?.fetchedAt ?? null,
+            rewards: Object.keys(n).length > 0 ? n : null,
+        };
+    };
+    __getLocalVarsEditConfig = () => ({
+        preDispatches: [{ type: "PROGRAM_REWARDS_FETCH" }],
+        actionType: "PROGRAM_REWARDS_FETCH_SUCCESS",
+        buildPayload: (e) => {
+            let t = e.rewards ?? null;
+            return null == t || 0 === Object.keys(t).length
+                ? { programRewards: [] }
+                : {
+                      programRewards: Object.entries(t).map((e) => {
+                          let [t, n] = e;
+                          return { ...n, reward_program: "NITRO" === t ? c.W.NITRO : Number(t) };
+                      }),
+                  };
+        },
+        getPurgeVars: () => ({ rewards: null }),
+    });
 }
-let S = new T(a.h, {
-    LOGOUT: I,
-    PROGRAM_REWARDS_FETCH: E,
-    PROGRAM_REWARDS_FETCH_SUCCESS: g,
-    PROGRAM_REWARDS_FETCH_FAILURE: A,
-    CURRENT_USER_UPDATE: m,
-    CONNECTION_OPEN: m,
+let y = new S(a.h, {
+    LOGOUT: T,
+    PROGRAM_REWARDS_FETCH: g,
+    PROGRAM_REWARDS_FETCH_SUCCESS: A,
+    PROGRAM_REWARDS_FETCH_FAILURE: I,
+    CURRENT_USER_UPDATE: E,
+    CONNECTION_OPEN: E,
 });
