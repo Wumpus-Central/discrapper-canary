@@ -1,41 +1,87 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => v });
 var a = n(627968),
     i = n(64700),
-    s = n(503698),
-    l = n.n(s),
-    r = n(397927),
-    o = n(760716),
-    d = n(188275),
-    c = n(661251),
-    u = n(508474);
-function m() {
-    let e = (0, o.i)((e) => e.overrideApplicationId),
-        t = (0, o.i)((e) => e.setOverrideApplicationId),
+    l = n(503698),
+    s = n.n(l),
+    r = n(311907),
+    o = n(397927),
+    d = n(271866),
+    c = n(409626),
+    u = n(692969),
+    m = n(912615),
+    h = n(147964),
+    p = n(760716),
+    x = n(188275),
+    g = n(652215),
+    _ = n(930821),
+    f = n(265296);
+function v() {
+    let e = (0, p.i)((e) => e.overrideApplicationId),
+        t = (0, p.i)((e) => e.setOverrideApplicationId),
         n = null != e,
-        [s, m] = i.useState(d.XR),
-        h = i.useCallback(
+        [l, v] = i.useState(x.XR),
+        [b, j] = i.useState(g.FYj),
+        A = i.useCallback(
             (e) => {
-                e ? t(s) : t(null);
+                e ? t(l) : t(null);
             },
-            [s, t],
+            [l, t],
         ),
-        x = i.useCallback(
+        C = i.useCallback(
             (e) => {
-                m(e), n && t(e);
+                v(e), n && t(e);
             },
             [n, t],
         ),
-        p = (0, o.i)((e) => e.showSelfActivity),
-        g = (0, o.i)((e) => e.setShowSelfActivity);
+        y = (0, p.i)((e) => e.showSelfActivity),
+        T = (0, p.i)((e) => e.setShowSelfActivity),
+        S = (0, p.i)((e) => e.recommendationApplicationIds),
+        E = (0, p.i)((e) => e.setRecommendationApplicationIds),
+        N = i.useCallback(
+            (e) => {
+                e ? E(b) : E(null);
+            },
+            [b, E],
+        ),
+        I = (0, r.bG)([h.A], () => null != h.A.testModeApplicationId),
+        k = i.useCallback((e) => {
+            e ? (0, o.qfG)((e) => (0, a.jsx)(m.A, { ...e })) : d.cL();
+        }, []),
+        R = (0, u.A)({
+            location: "DevToolsSlayerStorefrontPanel",
+            applicationId: l,
+            source: c.Ob.Embed,
+            trackEntryPointImpression: !0,
+        }),
+        O = i.useCallback(
+            (e) => {
+                R?.(e);
+            },
+            [R],
+        );
     return (0, a.jsx)("div", {
-        className: l()(c.nd, u.n),
+        className: s()(_.nd, f.n),
         children: (0, a.jsxs)("div", {
-            className: u.k,
+            className: f.k,
             children: [
-                (0, a.jsx)(r.Heading, { variant: "heading-lg/normal", children: "Activity Override" }),
-                (0, a.jsx)(r.dOG, { label: "Override activity application ID", checked: n, onChange: h }),
-                (0, a.jsx)(r.ksK, { label: "Application ID", value: s, onChange: x, disabled: !n }),
-                (0, a.jsx)(r.dOG, { label: "Show own voice activity (bypass self check)", checked: p, onChange: g }),
+                (0, a.jsx)(o.ksK, { label: "Application ID", value: l, onChange: C }),
+                (0, a.jsx)(o.Heading, { variant: "heading-lg/normal", children: "Activity Override" }),
+                (0, a.jsx)(o.dOG, { label: "Override activity application ID", checked: n, onChange: A }),
+                (0, a.jsx)(o.dOG, { label: "Show own voice activity (bypass self check)", checked: y, onChange: T }),
+                (0, a.jsx)(o.dOG, { label: "Enable application test mode", checked: I, onChange: k }),
+                (0, a.jsx)(o.Button, { text: "Open Game Profile Modal", onClick: O }),
+                (0, a.jsx)(o.Heading, { variant: "heading-lg/normal", children: "Wishlists" }),
+                (0, a.jsx)(o.ksK, {
+                    label: "Recommendation application IDs",
+                    value: b,
+                    onChange: j,
+                    disabled: null == S,
+                }),
+                (0, a.jsx)(o.dOG, {
+                    label: "Enable recommendation application IDs override",
+                    checked: null != S,
+                    onChange: N,
+                }),
             ],
         }),
     });
