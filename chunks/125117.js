@@ -1,20 +1,14 @@
 n.d(t, { b: () => I, n: () => m });
 var l = n(64700),
     i = n(311907),
-    s = n(870391),
-    r = n(379078),
+    r = n(870391),
+    s = n(379078),
     a = n(704554),
     u = n(461213),
     o = n(403362),
     d = n(185657);
 function c(e) {
-    return {
-        user: e.user,
-        activities: e.activities,
-        nickname: e.nickname,
-        gameProfileEntry: e.gameProfileEntry,
-        relationshipType: e.relationshipType,
-    };
+    return { user: e.user, activities: e.activities, nickname: e.nickname, relationshipType: e.relationshipType };
 }
 function h(e) {
     return e.map(c);
@@ -26,13 +20,13 @@ function g(e, t) {
 }
 function I() {
     let [e] = (0, i.bG)(
-        [d.A, s.A, u.A],
+        [d.A, r.A, u.A],
         () => {
-            let e = s.A.getGroups(),
+            let e = r.A.getGroups(),
                 [t, n] = d.A.getRows(d.j.FRIEND_REQUESTS),
                 l = h(t),
                 i = h(d.A.getRows(d.j.SUGGESTIONS)[0]),
-                r = h(d.A.getRows(d.j.SAME_ACTIVITY)[0]),
+                s = h(d.A.getRows(d.j.SAME_ACTIVITY)[0]),
                 a = h(d.A.getRows(d.j.ACTIVITIES)[0]),
                 o = h(d.A.getRows(d.j.IN_GAME)[0]),
                 c = h(d.A.getRows(d.j.ONLINE)[0]),
@@ -41,9 +35,9 @@ function I() {
                     let [t] = d.A.getRows(`GROUP:${e.id}`);
                     return { id: e.id, name: e.name, users: h(t) };
                 }),
-                E = u.A.getPrimaryActivity()?.name ?? "",
-                A = e.map((e) => `${e.id}\0${e.name}\0${e.userIds.length}`).join("|"),
-                f = `${n}\0${A}\0${E}`;
+                A = u.A.getPrimaryActivity()?.name ?? "",
+                f = e.map((e) => `${e.id}\0${e.name}\0${e.userIds.length}`).join("|"),
+                E = `${n}\0${f}\0${A}`;
             return [
                 {
                     groups: I,
@@ -51,12 +45,12 @@ function I() {
                     suggestions: i,
                     inGame: o,
                     activities: a,
-                    sameActivity: r,
+                    sameActivity: s,
                     online: c,
                     offline: g,
-                    currentActivityName: E,
+                    currentActivityName: A,
                 },
-                f,
+                E,
             ];
         },
         [],
@@ -64,42 +58,42 @@ function I() {
     );
     return e;
 }
-function E(e) {
+function A(e) {
     let { user: t, activities: n, nickname: l } = e;
     return [t.username, t.globalName, l, ...n.map((e) => e.name)].filter(o.Vq);
 }
-let A = { searchType: r.n.FUZZY, searchStringGenerator: E, sortType: r.r.JARO_WINKLER, throttleMs: 100 };
-function f(e, t) {
+let f = { searchType: s.n.FUZZY, searchStringGenerator: A, sortType: s.r.JARO_WINKLER, throttleMs: 100 };
+function E(e, t) {
     let [n, i] = l.useState(t),
-        s = l.useCallback(() => i(t), [t]);
-    return (0, a.RT)(e, t, i, A), [n, s];
+        r = l.useCallback(() => i(t), [t]);
+    return (0, a.RT)(e, t, i, f), [n, r];
 }
 function m(e) {
     let [t, n] = l.useState(""),
-        [i, s] = f(t, e.friendRequests),
-        [r, a] = f(t, e.suggestions),
-        [u, o] = f(t, e.sameActivity),
-        [d, c] = f(t, e.activities),
-        [h, g] = f(t, e.inGame),
-        [I, A] = f(t, e.online),
-        [m, S] = f(t, e.offline),
-        p = l.useMemo(() => {
+        [i, r] = E(t, e.friendRequests),
+        [s, a] = E(t, e.suggestions),
+        [u, o] = E(t, e.sameActivity),
+        [d, c] = E(t, e.activities),
+        [h, g] = E(t, e.inGame),
+        [I, f] = E(t, e.online),
+        [m, S] = E(t, e.offline),
+        _ = l.useMemo(() => {
             if ("" === t.trim()) return e.groups;
             let n = t.toLowerCase();
             return e.groups
                 .map((e) => {
-                    let t = e.users.filter((e) => E(e).some((e) => null != e && e.toLowerCase().includes(n)));
+                    let t = e.users.filter((e) => A(e).some((e) => null != e && e.toLowerCase().includes(n)));
                     return { ...e, users: t };
                 })
                 .filter((e) => e.users.length > 0);
         }, [t, e.groups]),
-        N = l.useCallback(() => {
-            n(""), s(), a(), o(), c(), g(), A(), S();
-        }, [s, a, o, c, g, A, S]);
+        p = l.useCallback(() => {
+            n(""), r(), a(), o(), c(), g(), f(), S();
+        }, [r, a, o, c, g, f, S]);
     return {
-        groups: p,
+        groups: _,
         friendRequests: i,
-        suggestions: r,
+        suggestions: s,
         sameActivity: u,
         inGame: h,
         activities: d,
@@ -108,6 +102,6 @@ function m(e) {
         currentActivityName: e.currentActivityName,
         searchQuery: t,
         setSearchQuery: n,
-        clearSearch: N,
+        clearSearch: p,
     };
 }

@@ -1,78 +1,76 @@
-n.d(t, { $: () => S, A: () => p });
+n.d(t, { $: () => m, A: () => S });
 var l = n(627968),
     i = n(64700),
-    s = n(311907),
-    r = n(375492),
-    a = n(287809),
-    u = n(810412),
-    o = n(914853),
-    d = n(243612),
-    c = n(640490),
-    h = n(755588),
-    g = n(222870),
-    I = n(180720),
-    E = n(576420),
+    r = n(311907),
+    s = n(287809),
+    a = n(810412),
+    u = n(914853),
+    o = n(243612),
+    d = n(640490),
+    c = n(755588),
+    h = n(222870),
+    g = n(180720),
+    I = n(576420),
     A = n(610358),
     f = n(652215),
-    m = n(553777);
-function S() {
+    E = n(364495);
+function m() {
     let { onPrimaryAction: e, onContextMenu: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        n = (0, d.b4)(),
+        n = (0, o.b4)(),
         A = n?.id,
-        S = n?.altId,
-        p = (0, s.bG)([a.default], () => a.default.getCurrentUser()) ?? null,
-        N = null != S ? S : A,
-        T = E.Ay.useField("activeTab"),
-        _ = E.Ay.useField("setActiveTab"),
-        y = i.useCallback(
+        m = n?.altId,
+        S = (0, r.bG)([s.default], () => s.default.getCurrentUser()) ?? null,
+        _ = I.Ay.useField("activeTab"),
+        p = I.Ay.useField("setActiveTab"),
+        N = i.useCallback(
             (e) => {
-                e !== T &&
-                    (_(e),
-                    (0, u.YX)(f.uss.FRIENDS, {
-                        type: u.Z5.TAB_SELECTED,
+                e !== _ &&
+                    (p(e),
+                    (0, a.YX)(f.uss.FRIENDS, {
+                        type: a.Z5.TAB_SELECTED,
                         value: (function (e) {
                             switch (e) {
-                                case o.x.FRIENDS:
-                                    return u.IP.FRIEND_TAB_SELECTED;
-                                case o.x.MESSAGES:
-                                    return u.IP.MESSAGES_TAB_SELECTED;
-                                case o.x.VOICE:
-                                    return u.IP.VOICE_TAB_SELECTED;
+                                case u.x.FRIENDS:
+                                    return a.IP.FRIEND_TAB_SELECTED;
+                                case u.x.MESSAGES:
+                                    return a.IP.MESSAGES_TAB_SELECTED;
+                                case u.x.VOICE:
+                                    return a.IP.VOICE_TAB_SELECTED;
                                 default:
-                                    return u.IP.FRIEND_TAB_SELECTED;
+                                    return a.IP.FRIEND_TAB_SELECTED;
                             }
                         })(e),
                     }));
             },
-            [T, _],
+            [_, p],
         ),
-        C = (0, s.bG)([r.A], () => (null == N ? null : r.A.getApplicationActivity(N)), [N]) ?? null;
+        T = (0, o.xl)(null != m ? m : A);
     return (0, l.jsxs)("div", {
-        className: m.kL,
+        className: E.kL,
         children: [
-            (0, l.jsx)(h.b, {
-                currentUser: p,
-                activity: C,
+            (0, l.jsx)(c.b, {
+                currentUser: S,
+                activity: T,
                 currentGameName: n?.name ?? null,
-                activeTab: T,
-                onTabChange: y,
+                activeTab: _,
+                onTabChange: N,
             }),
             (0, l.jsx)("div", {
-                className: m.Qs,
+                className: E.Qs,
                 children:
-                    T === o.x.FRIENDS
-                        ? (0, l.jsx)(c.F, { onPrimaryAction: e, onContextMenu: t })
-                        : T === o.x.MESSAGES
-                          ? (0, l.jsx)(g.t, { onPrimaryAction: e, onContextMenu: t })
-                          : T === o.x.VOICE
-                            ? (0, l.jsx)(I.T, { onPrimaryAction: e, onContextMenu: t })
+                    _ === u.x.FRIENDS
+                        ? (0, l.jsx)(d.F, { onPrimaryAction: e, onContextMenu: t })
+                        : _ === u.x.MESSAGES
+                          ? (0, l.jsx)(h.t, { onPrimaryAction: e, onContextMenu: t })
+                          : _ === u.x.VOICE
+                            ? (0, l.jsx)(g.T, { onPrimaryAction: e, onContextMenu: t })
                             : null,
             }),
         ],
     });
 }
-let p = i.memo(function (e) {
+let S = i.memo(function (e) {
     let { locked: t } = e,
         { handlePrimaryAction: n, handleContextMenu: i } = (0, A.W)();
-    return t ? null : (0, l.jsx)(S, { onPrimaryAction: n, onContextMenu: i });
+    return t ? null : (0, l.jsx)(m, { onPrimaryAction: n, onContextMenu: i });
 });

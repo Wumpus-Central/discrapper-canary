@@ -1,4 +1,4 @@
-n.d(t, { r: () => E });
+n.d(t, { r: () => S });
 var l = n(627968),
     i = n(64700),
     r = n(6161),
@@ -9,48 +9,54 @@ var l = n(627968),
     d = n(833349),
     c = n(672979),
     h = n(661191),
-    g = n(67103),
-    I = n(652215),
-    A = n(985018);
-function f(e) {
-    return e.find((e) => (0, d.A)(e, I.jUm.JOIN));
-}
+    g = n(243612),
+    I = n(67103),
+    A = n(652215),
+    f = n(985018);
 function E(e) {
+    return e.find((e) => (0, d.A)(e, A.jUm.JOIN));
+}
+function m(e, t) {
+    return null == t ? E(e) : (e.find((e) => (0, d.A)(e, A.jUm.JOIN) && e.application_id === t) ?? E(e));
+}
+function S(e) {
     let {
             userId: t,
             friendActivities: n,
             currentUserPlayingActivities: d,
-            gameProfileEntry: I,
+            gameProfileEntry: A,
             onPrimaryAction: E,
         } = e,
-        [m, S] = i.useState(!1),
-        _ = i.useRef(null);
+        [S, _] = i.useState(!1),
+        p = i.useRef(null);
     i.useEffect(
         () => () => {
-            null != _.current && clearTimeout(_.current);
+            null != p.current && clearTimeout(p.current);
         },
         [],
     );
-    let p = (function (e, t, n, l) {
-            let i = f(t);
-            if (null != i) return { kind: "ask_to_join", activity: i };
-            let u = f(n);
-            if (null != u) return { kind: "invite_to_activity", activity: u };
+    let N = (function (e, t, n, l) {
+            let i = (0, g.qv)(),
+                u = i?.altId ?? i?.id,
+                o = m(t, u);
+            if (null != o) return { kind: "ask_to_join", activity: o };
+            let d = m(n, u);
+            if (null != d) return { kind: "invite_to_activity", activity: d };
             if (null != l) return { kind: "send_game_invite_message", gameEntry: l };
-            let o = n.find(c.A);
-            if (null != o) {
+            let I = n.find(c.A);
+            if (null != I) {
                 let t;
                 return {
                     kind: "send_game_invite_message",
                     gameEntry:
-                        ((t = o.timestamps?.start ?? Date.now()),
+                        ((t = I.timestamps?.start ?? Date.now()),
                         {
                             id: h.default.fromTimestamp(t),
                             author_id: e,
                             extra: {
                                 type: "played_game_extra",
-                                game_name: o.name,
-                                application_id: o.application_id ?? "",
+                                game_name: I.name,
+                                application_id: I.application_id ?? "",
                                 fake_inventory_item: !0,
                             },
                             content_type: s.ContentInventoryEntryType.PLAYED_GAME,
@@ -61,38 +67,38 @@ function E(e) {
                 };
             }
             return null;
-        })(t, n, d, I),
-        N = i.useCallback(
+        })(t, n, d, A),
+        T = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
-                    m ||
-                        null == p ||
-                        (S(!0),
-                        null != _.current && clearTimeout(_.current),
-                        (_.current = setTimeout(() => {
-                            S(!1), (_.current = null);
+                    S ||
+                        null == N ||
+                        (_(!0),
+                        null != p.current && clearTimeout(p.current),
+                        (p.current = setTimeout(() => {
+                            _(!1), (p.current = null);
                         }, 2e3)),
                         E?.({
                             type: (function (e) {
                                 switch (e) {
                                     case "ask_to_join":
-                                        return g.c.ASK_TO_JOIN;
+                                        return I.c.ASK_TO_JOIN;
                                     case "invite_to_activity":
-                                        return g.c.SEND_ACTIVITY_INVITE;
+                                        return I.c.SEND_ACTIVITY_INVITE;
                                     case "send_game_invite_message":
-                                        return g.c.SEND_GAME_INVITE_MESSAGE;
+                                        return I.c.SEND_GAME_INVITE_MESSAGE;
                                 }
-                            })(p.kind),
+                            })(N.kind),
                             userId: t,
-                            activity: p.activity,
-                            gameEntry: p.gameEntry,
+                            activity: N.activity,
+                            gameEntry: N.gameEntry,
                         }));
             },
-            [m, p, t, E],
+            [S, N, t, E],
         );
-    if (null == p) return null;
-    let T = (function (e, t) {
+    if (null == N) return null;
+    let y = (function (e, t) {
             if (t) return o.BNr;
             switch (e) {
                 case "ask_to_join":
@@ -102,27 +108,27 @@ function E(e) {
                 case "send_game_invite_message":
                     return o.lX7;
             }
-        })(p.kind, m),
-        y = (function (e) {
+        })(N.kind, S),
+        C = (function (e) {
             switch (e) {
                 case "ask_to_join":
-                    return A.intl.string(A.t.OKsSCR);
+                    return f.intl.string(f.t.OKsSCR);
                 case "invite_to_activity":
-                    return A.intl.string(A.t["3fRySx"]);
+                    return f.intl.string(f.t["3fRySx"]);
                 case "send_game_invite_message":
-                    return A.intl.string(A.t.XHxDIV);
+                    return f.intl.string(f.t.XHxDIV);
             }
-        })(p.kind);
+        })(N.kind);
     return (0, l.jsx)(u.m_, {
-        text: y,
-        "aria-label": y,
+        text: C,
+        "aria-label": C,
         children: (0, l.jsx)(o.K0, {
-            icon: T,
-            "aria-label": y,
+            icon: y,
+            "aria-label": C,
             size: "sm",
             variant: "icon-only",
-            onClick: N,
-            disabled: m,
+            onClick: T,
+            disabled: S,
         }),
     });
 }
