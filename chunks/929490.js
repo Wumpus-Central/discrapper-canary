@@ -29,6 +29,7 @@ class a extends r.A {
     screenshotUrls;
     trailers;
     supplementalData;
+    l30Rank;
     get applicationId() {
         return this.id;
     }
@@ -57,6 +58,7 @@ class a extends r.A {
             (this.screenshotHashes = e.screenshot_hashes),
             (this.screenshotUrls = t?.screenshot_urls ?? e.screenshot_urls),
             (this.trailers = e.trailers),
+            (this.l30Rank = e.l30_rank),
             null != t &&
                 (this.supplementalData = {
                     applicationId: e.id,
@@ -80,6 +82,7 @@ class a extends r.A {
                     reviews: s(t.reviews),
                     steam_id: t.steam_id,
                     announcementsChannelId: t.announcements_channel_id,
+                    l30Rank: t.l30_rank,
                 });
     }
 }
