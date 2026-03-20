@@ -54,7 +54,7 @@ function m(e) {
                                 (0, r.jsxs)(l.Text, {
                                     variant: "text-sm/semibold",
                                     color: "text-muted",
-                                    lineClamp: 1,
+                                    lineClamp: 2,
                                     className: h.wx,
                                     children: [null != n && (0, r.jsx)("img", { alt: "", src: n, className: h.nr }), t],
                                 }),
@@ -122,7 +122,7 @@ function E(e) {
         case "guildSubscription":
             return p.intl.format(f.default.mXvZt2, {
                 guildName: t.guild.name,
-                icon: (0, r.jsx)(c.Ay, { guild: t.guild, iconSize: 16, className: h.RG }),
+                icon: (0, r.jsx)(c.Ay, { guild: t.guild, size: c.Ay.Sizes.SMOL, className: h.RG }),
             });
         case "boost":
             return p.intl.format(f.default["8imbq5"], {
