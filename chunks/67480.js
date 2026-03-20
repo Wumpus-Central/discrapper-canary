@@ -1,6 +1,6 @@
 "use strict";
 let r;
-n.d(t, { A: () => L });
+n.d(t, { A: () => w });
 var i = n(311907),
     s = n(73153),
     a = n(260811),
@@ -12,10 +12,20 @@ let u = new Map(),
     _ = new Map(),
     f = new Map(),
     p = new Map();
-function h(e) {
-    let t = a.A.createFromServer(e);
-    null == t.price && _.get(e.id)?.price != null && (t.price = _.get(e.id)?.price),
-        _.set(e.id, t),
+function h(e, t) {
+    return (
+        null == t ||
+            (null == e.price && null != t.price && (e.price = t.price),
+            0 === Object.keys(e.prices).length && Object.keys(t.prices).length > 0 && (e.prices = t.prices),
+            null == e.orbsReward && null != t.orbsReward && (e.orbsReward = t.orbsReward),
+            0 === e.eligibleOffers.length && t.eligibleOffers.length > 0 && (e.eligibleOffers = t.eligibleOffers)),
+        e
+    );
+}
+function m(e) {
+    let t = _.get(e.id),
+        n = h(a.A.createFromServer(e), t);
+    _.set(e.id, n),
         c.delete(e.id),
         d.delete(e.id),
         e.bundled_sku_ids?.forEach((t) => {
@@ -24,12 +34,8 @@ function h(e) {
         f.has(e.application_id) || f.set(e.application_id, new Set()),
         f.get(e.application_id).add(e.id);
 }
-function m(e) {
-    h(e);
-}
 function E(e) {
-    let { skuId: t } = e;
-    c.add(t);
+    m(e);
 }
 function g(e) {
     let { skuId: t } = e;
@@ -37,54 +43,58 @@ function g(e) {
 }
 function A(e) {
     let { skuId: t } = e;
-    c.delete(t), d.add(t);
+    c.add(t);
 }
 function I(e) {
     let { skuId: t } = e;
     c.delete(t), d.add(t);
 }
 function T(e) {
-    let { giftCode: t } = e;
-    if (null == t.store_listing) return !1;
-    h(t.store_listing.sku);
+    let { skuId: t } = e;
+    c.delete(t), d.add(t);
 }
 function S(e) {
-    let { sku: t } = e;
-    m(t);
+    let { giftCode: t } = e;
+    if (null == t.store_listing) return !1;
+    m(t.store_listing.sku);
 }
 function y(e) {
-    let { guildId: t, skus: n } = e;
-    for (let e of n) m(e);
-    null != t && p.set(t, new Set(n.map((e) => e.id)));
+    let { sku: t } = e;
+    E(t);
 }
 function v(e) {
-    h(e.sku),
-        null != e.child_skus && e.child_skus.forEach((e) => h(e)),
-        null != e.alternative_skus && e.alternative_skus.forEach((e) => h(e));
+    let { guildId: t, skus: n } = e;
+    for (let e of n) E(e);
+    null != t && p.set(t, new Set(n.map((e) => e.id)));
 }
 function N(e) {
-    let { storeListings: t } = e;
-    for (let e of t) v(e);
+    m(e.sku),
+        null != e.child_skus && e.child_skus.forEach((e) => m(e)),
+        null != e.alternative_skus && e.alternative_skus.forEach((e) => m(e));
 }
 function C(e) {
-    let { storeListing: t } = e;
-    v(t);
+    let { storeListings: t } = e;
+    for (let e of t) N(e);
 }
 function R(e) {
-    let { entitlements: t } = e;
-    for (let e of t) null != e.sku && h(e.sku);
+    let { storeListing: t } = e;
+    N(t);
 }
-function O() {
-    (u = new Map()), (c = new Set()), (d = new Set()), (_ = new Map()), (f = new Map()), (p = new Map());
+function O(e) {
+    let { entitlements: t } = e;
+    for (let e of t) null != e.sku && m(e.sku);
 }
 function b() {
-    if (r === o.default.locale) return !1;
-    (r = o.default.locale), O();
+    (u = new Map()), (c = new Set()), (d = new Set()), (_ = new Map()), (f = new Map()), (p = new Map());
 }
-class D extends i.il {
+function D() {
+    if (r === o.default.locale) return !1;
+    (r = o.default.locale), b();
+}
+class L extends i.il {
     static displayName = "SKUStore";
     initialize() {
-        this.waitFor(o.default, l.A), this.syncWith([o.default], b), (r = o.default.locale);
+        this.waitFor(o.default, l.A), this.syncWith([o.default], D), (r = o.default.locale);
     }
     get(e) {
         return _.get(e);
@@ -107,18 +117,18 @@ class D extends i.il {
         return d.has(e);
     }
 }
-let L = new D(s.h, {
-    STORE_LISTINGS_FETCH_START: E,
-    STORE_LISTINGS_FETCH_FAIL: A,
-    STORE_LISTINGS_FETCH_SUCCESS: N,
-    STORE_LISTING_FETCH_SUCCESS: C,
-    GIFT_CODE_RESOLVE_SUCCESS: T,
-    SKU_FETCH_START: g,
-    SKU_FETCH_SUCCESS: S,
-    SKU_FETCH_FAIL: I,
-    SKUS_FETCH_SUCCESS: y,
-    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: R,
-    APPLICATION_STORE_CLEAR_DATA: O,
-    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: R,
-    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: R,
+let w = new L(s.h, {
+    STORE_LISTINGS_FETCH_START: g,
+    STORE_LISTINGS_FETCH_FAIL: I,
+    STORE_LISTINGS_FETCH_SUCCESS: C,
+    STORE_LISTING_FETCH_SUCCESS: R,
+    GIFT_CODE_RESOLVE_SUCCESS: S,
+    SKU_FETCH_START: A,
+    SKU_FETCH_SUCCESS: y,
+    SKU_FETCH_FAIL: T,
+    SKUS_FETCH_SUCCESS: v,
+    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: O,
+    APPLICATION_STORE_CLEAR_DATA: b,
+    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: O,
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: O,
 });
