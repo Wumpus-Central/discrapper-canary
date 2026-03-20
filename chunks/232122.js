@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => f, m: () => _ });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(397927),
     l = n(975571),
     u = n(652215),
     c = n(985018),
-    d = n(822524);
+    d = n(531282);
 let _ = [
     { getQuestion: () => c.intl.string(c.t.C4J8UB), getAnswer: () => c.intl.string(c.t.nhkk6k) },
     {
@@ -25,10 +25,10 @@ let _ = [
 ];
 function f(e) {
     let { className: t } = e,
-        [n, a] = i.useState(null),
+        [n, s] = i.useState(null),
         [l, u] = i.useState(null);
     return (0, r.jsxs)("div", {
-        className: s()(d.iE, t),
+        className: a()(d.iE, t),
         children: [
             (0, r.jsx)(o.Heading, {
                 className: d.R_,
@@ -46,8 +46,8 @@ function f(e) {
                         o.DUT,
                         {
                             tag: "li",
-                            className: s()(d.Aw, { [d.$K]: i }),
-                            onClick: () => a((e) => (e === t ? null : t)),
+                            className: a()(d.Aw, { [d.$K]: i }),
+                            onClick: () => s((e) => (e === t ? null : t)),
                             onMouseEnter: () => u(t),
                             onMouseLeave: () => u(null),
                             children: [
