@@ -1,15 +1,14 @@
 "use strict";
-n.d(t, { $P: () => a, Ai: () => c, H8: () => u, Mm: () => o, VL: () => s, w5: () => i, xG: () => l });
+n.d(t, { $P: () => s, Ai: () => c, H8: () => u, Mm: () => o, VL: () => a, w5: () => i, xG: () => l });
 var r = n(652215);
 let i = 15,
-    a = 3,
-    s = "1312632705086787756";
+    s = 3,
+    a = "1312632705086787756";
 var o = (function (e) {
     return (
         (e[(e.MESSAGE = 0)] = "MESSAGE"),
         (e[(e.ACTIVITY = 2)] = "ACTIVITY"),
         (e[(e.CUSTOM_STATUS = 3)] = "CUSTOM_STATUS"),
-        (e[(e.GENERATED_CANDIDATE = 4)] = "GENERATED_CANDIDATE"),
         (e[(e.GUILD_EVENT = 5)] = "GUILD_EVENT"),
         (e[(e.RECOMMENDED_GUILDS = 6)] = "RECOMMENDED_GUILDS"),
         e
@@ -29,11 +28,9 @@ function l(e) {
             return "guild_event";
         case 6:
             return "recommended_guilds";
-        case 4:
-            return "generated_candidate";
     }
 }
-let u = new Set([0, 3, 4]);
+let u = new Set([0, 3]);
 r.Auw.IMAGE, r.Auw.GIFV;
 var c = (function (e) {
     return (e[(e.DEFAULT = 0)] = "DEFAULT"), (e[(e.BOOKMARKS = 2)] = "BOOKMARKS"), e;

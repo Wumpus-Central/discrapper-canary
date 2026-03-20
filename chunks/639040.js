@@ -1,12 +1,12 @@
 n.d(t, { A: () => d }), n(321073);
 var i = n(64700),
-    r = n(311907),
-    a = n(4106),
-    l = n(883344),
+    a = n(311907),
+    l = n(4106),
+    r = n(883344),
     s = n(596720);
 function o(e, t, n) {
-    if (t.type === s.Mm.MESSAGE)
-        return t.message.id === t.message.channel_id && null != t.threadChannel
+    return t.type === s.Mm.MESSAGE
+        ? t.message.id === t.message.channel_id && null != t.threadChannel
             ? {
                   id: e.id,
                   timestamp: Date.now(),
@@ -29,54 +29,45 @@ function o(e, t, n) {
                   score: e.score,
                   debugScore: JSON.stringify(e.score_components),
                   unread: n,
-              };
-    if (t.type === s.Mm.ACTIVITY || t.type === s.Mm.CUSTOM_STATUS)
-        return {
-            id: e.id,
-            timestamp: Date.now(),
-            data: { kind: "contentInventory", content: t.activity },
-            score: e.score,
-            debugScore: JSON.stringify(e.score_components),
-            unread: n,
-        };
-    if (t.type === s.Mm.GUILD_EVENT)
-        return {
-            id: e.id,
-            timestamp: Date.now(),
-            data: { kind: "guildEvent", eventId: t.event_id },
-            score: e.score,
-            debugScore: JSON.stringify(e.score_components),
-            unread: n,
-        };
-    if (t.type === s.Mm.RECOMMENDED_GUILDS)
-        return {
-            id: e.id,
-            timestamp: Date.now(),
-            data: { kind: "recommendedGuilds" },
-            score: e.score,
-            debugScore: JSON.stringify(e.score_components),
-            unread: n,
-        };
-    if (t.type === s.Mm.GENERATED_CANDIDATE)
-        return {
-            id: e.id,
-            timestamp: Date.now(),
-            data: { kind: "generatedCandidate", item: t.candidate },
-            score: e.score,
-            debugScore: JSON.stringify(e.score_components),
-            unread: n,
-        };
-    return null;
+              }
+        : t.type === s.Mm.ACTIVITY || t.type === s.Mm.CUSTOM_STATUS
+          ? {
+                id: e.id,
+                timestamp: Date.now(),
+                data: { kind: "contentInventory", content: t.activity },
+                score: e.score,
+                debugScore: JSON.stringify(e.score_components),
+                unread: n,
+            }
+          : t.type === s.Mm.GUILD_EVENT
+            ? {
+                  id: e.id,
+                  timestamp: Date.now(),
+                  data: { kind: "guildEvent", eventId: t.event_id },
+                  score: e.score,
+                  debugScore: JSON.stringify(e.score_components),
+                  unread: n,
+              }
+            : t.type === s.Mm.RECOMMENDED_GUILDS
+              ? {
+                    id: e.id,
+                    timestamp: Date.now(),
+                    data: { kind: "recommendedGuilds" },
+                    score: e.score,
+                    debugScore: JSON.stringify(e.score_components),
+                    unread: n,
+                }
+              : null;
 }
 function d() {
-    let e = (0, r.bG)([l.A], () => l.A.getUnreadDisplayItems()),
-        t = (0, r.bG)([l.A], () => l.A.getReadDisplayItems()),
-        n = (0, r.bG)([l.A], () => l.A.getNextIndexToHydrate()),
-        d = (0, r.cf)([l.A], () => l.A.getHydratedItems()),
-        c = (0, r.bG)([l.A], () => l.A.getMissingItems());
+    let e = (0, a.bG)([r.A], () => r.A.getUnreadDisplayItems()),
+        t = (0, a.bG)([r.A], () => r.A.getReadDisplayItems()),
+        n = (0, a.bG)([r.A], () => r.A.getNextIndexToHydrate()),
+        d = (0, a.cf)([r.A], () => r.A.getHydratedItems()),
+        c = (0, a.bG)([r.A], () => r.A.getMissingItems());
     i.useEffect(() => {
         let e = Date.now() + t.length;
-        a.A.ackGravityItems(t.map((t) => ({ id: t.id, timestamp: e-- }), !0));
+        l.A.ackGravityItems(t.map((t) => ({ id: t.id, timestamp: e-- }), !0));
     }, [t]);
     let u = [],
         A = [],
