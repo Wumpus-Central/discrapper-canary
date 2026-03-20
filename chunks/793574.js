@@ -110,6 +110,8 @@ var r = (function (e) {
         (e.GUILD_POWERUPS_COACHMARK_GAME_SERVER_HOSTING_AVAILABLE =
             "guild powerups - coachmark - game server hosting available"),
         (e.GUILD_POWERUPS_COACHMARK_GAME_SERVER_NEW_GAMES = "guild powerups - coachmark - game server new games"),
+        (e.GUILD_POWERUPS_COACHMARK_GAME_SERVER_PRICING_CHANGE =
+            "guild powerups - coachmark - game server pricing change"),
         (e.GUILD_POWERUPS_COACHMARK_BOOST_TO_UNLOCK = "guild powerups - coachmark - boost to unlock"),
         (e.GUILD_POWERUPS_COACHMARK_EXPIRING_PERK = "guild powerups - coachmark - expiring perk"),
         (e.GUILD_POWERUPS_MARKETING = "guild powerups - marketing"),

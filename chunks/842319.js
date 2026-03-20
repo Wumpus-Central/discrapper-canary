@@ -276,6 +276,7 @@ function w() {
                   }),
                   null != a &&
                       0 !== O &&
+                      a.planId !== M &&
                       (0, l.jsx)(u.A, {
                           className: G.et,
                           children: (0, l.jsx)(c.Text, {
