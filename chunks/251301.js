@@ -1,5 +1,4 @@
-a.d(t, { j: () => o });
+a.d(t, { j: () => r });
 var l = a(556810),
-    r = a(204094),
-    n = a(506273);
-let o = { title: "Sku", stories: [l.l, n.P, r.r] };
+    n = a(204094);
+let r = { title: "Sku", stories: [l.l, n.r] };
