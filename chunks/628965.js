@@ -1,48 +1,42 @@
 "use strict";
-n.d(t, { A: () => I });
+n.d(t, { A: () => g });
 var r = n(311907),
     i = n(73153),
     s = n(287809);
 let a = null,
     o = {},
-    l = {},
-    u = null,
-    c = [],
-    d = null;
-function _(e) {
-    f(e);
+    l = null,
+    u = [],
+    c = null;
+function d(e) {
+    _(e);
 }
-function f(e) {
-    if (null == s.default.getCurrentUser()) return p();
+function _(e) {
+    if (null == s.default.getCurrentUser()) return f();
     (a = e.section ?? a),
         null != e.subsection && null != a && (o[a] = e.subsection),
-        null != e.scrollPosition && null != a && (l[a] = e.scrollPosition),
-        (u = e.analyticsLocation ?? null),
-        (c = e.analyticsLocations ?? []),
-        (d = e.searchParams ?? null);
+        (l = e.analyticsLocation ?? null),
+        (u = e.analyticsLocations ?? []),
+        (c = e.searchParams ?? null);
 }
-function p() {
-    (a = null), (o = {}), (l = {}), (u = null), (c = []), (d = null);
+function f() {
+    (a = null), (o = {}), (l = null), (u = []), (c = null);
 }
-function h(e) {
+function p(e) {
     (a = e.section),
-        (u = null),
-        (c = e.analyticsLocations ?? []),
-        (d = null),
+        (l = null),
+        (u = e.analyticsLocations ?? []),
+        (c = null),
         null != e.subsection && (o[a] = e.subsection);
 }
-function m(e) {
+function h(e) {
     let { forSection: t } = e;
     null != t ? delete o[t] : null != a && delete o[a];
 }
-function E() {
-    (u = null), (c = []), (d = null);
+function m() {
+    (l = null), (u = []), (c = null);
 }
-function g(e) {
-    let { forSection: t } = e;
-    null != t ? delete l[t] : null != a && delete l[a];
-}
-class A extends r.Ay.Store {
+class E extends r.Ay.Store {
     static displayName = "UserSettingsModalStore";
     initialize() {
         this.waitFor(s.default);
@@ -53,26 +47,22 @@ class A extends r.Ay.Store {
     getSubsection() {
         return null != a ? o[a] : null;
     }
-    getScrollPosition() {
-        return null != a ? l[a] : null;
-    }
     getAnalyticsLocation() {
-        return u;
+        return l;
     }
     getAnalyticsLocations() {
-        return c;
+        return u;
     }
     getSearchParams() {
-        return d;
+        return c;
     }
 }
-let I = new A(i.h, {
-    USER_SETTINGS_MODAL_OPEN: _,
-    USER_SETTINGS_MODAL_INIT: f,
-    USER_SETTINGS_MODAL_CLOSE: p,
-    LOGOUT: p,
-    USER_SETTINGS_MODAL_SET_SECTION: h,
-    USER_SETTINGS_MODAL_CLEAR_SUBSECTION: m,
-    USER_SETTINGS_MODAL_CLEAR_LOCATION: E,
-    USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: g,
+let g = new E(i.h, {
+    USER_SETTINGS_MODAL_OPEN: d,
+    USER_SETTINGS_MODAL_INIT: _,
+    USER_SETTINGS_MODAL_CLOSE: f,
+    LOGOUT: f,
+    USER_SETTINGS_MODAL_SET_SECTION: p,
+    USER_SETTINGS_MODAL_CLEAR_SUBSECTION: h,
+    USER_SETTINGS_MODAL_CLEAR_LOCATION: m,
 });

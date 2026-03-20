@@ -1,74 +1,74 @@
 "use strict";
-n.d(t, { default: () => j });
+n.d(t, { default: () => A });
 var r = n(627968),
     i = n(64700),
     a = n(397927),
-    s = n(252452),
-    l = n(955838),
+    l = n(252452),
+    s = n(507553),
     o = n(324593),
     c = n(883662),
     u = n(961350),
     d = n(287809),
-    m = n(152056),
-    f = n(780964),
-    h = n(162396),
-    g = n(960545),
+    h = n(152056),
+    _ = n(780964),
+    f = n(162396),
+    m = n(960545),
     p = n(841329),
-    y = n(12901),
-    _ = n(921854),
-    x = n(987281),
-    b = n(985018),
-    v = n(249316);
-let A = new Set([f.X.PROFILE_PANEL, f.X.SUBSCRIPTIONS_PANEL, f.X.FAMILY_CENTER_PANEL, f.X.POGGERMODE_PANEL]);
-function j(e) {
+    b = n(12901),
+    g = n(921854),
+    y = n(987281),
+    v = n(985018),
+    x = n(365782);
+let E = new Set([_.X.PROFILE_PANEL, _.X.SUBSCRIPTIONS_PANEL, _.X.FAMILY_CENTER_PANEL, _.X.POGGERMODE_PANEL]);
+function A(e) {
     let { target: t, ...n } = e,
-        a = m.A.useField("query");
-    (0, x.V)();
-    let b = i.useCallback(() => {
-            m.A.setState({ query: "" }), o.A.terminate();
+        a = h.A.useField("query");
+    (0, y.V)();
+    let v = i.useCallback(() => {
+            h.A.setState({ query: "" }), o.A.terminate();
         }, []),
-        [v, j] = i.useState(!1);
+        [x, A] = i.useState(!1);
     return (i.useLayoutEffect(() => {
         let e = () => {
-            null == d.default.getCurrentUser() && (j(!0), (0, y.default)());
+            null == d.default.getCurrentUser() && (A(!0), (0, b.default)());
         };
         return (
             u.default.addChangeListener(e),
             () => {
-                u.default.removeChangeListener(e), g.A.resetState(), l.default.resetState(), s.A.close();
+                u.default.removeChangeListener(e), m.A.resetState(), s.A.resetState(), l.A.close();
             }
         );
     }, []),
-    v)
+    x)
         ? null
         : (0, r.jsx)(c.A, {
-              partialRoot: _.D,
-              searchBar: N,
-              emptyState: S,
-              sidebarFooter: h.A,
+              partialRoot: g.D,
+              searchBar: S,
+              emptyState: N,
+              sidebarFooter: f.A,
               onViewChange: (e) => {
-                  A.has(e) || (0, p._)(e);
+                  E.has(e) || (0, p._)(e);
               },
               target: t,
-              defaultTarget: f.X.ACCOUNT_PANEL,
+              defaultTarget: _.X.ACCOUNT_PANEL,
               searchQuery: a,
-              clearSearchQuery: b,
+              clearSearchQuery: v,
               ...n,
           });
 }
-function N() {
-    let e = m.A.useField("query"),
+function S() {
+    let e = h.A.useField("query"),
         t = i.useCallback((e) => {
-            m.A.setState({ query: e }), o.A.maybeTrackQueryEntered();
+            h.A.setState({ query: e }), o.A.maybeTrackQueryEntered();
         }, []),
         n = i.useCallback(() => {
             o.A.isSessionActive() || o.A.initialize();
         }, []),
-        s = i.useCallback(() => {
-            0 === m.A.getField("query").trim().length && o.A.terminate();
-        }, []),
         l = i.useCallback(() => {
-            m.A.setState({ query: "" }), o.A.terminate();
+            0 === h.A.getField("query").trim().length && o.A.terminate();
+        }, []),
+        s = i.useCallback(() => {
+            h.A.setState({ query: "" }), o.A.terminate();
         }, []);
     return (
         i.useEffect(
@@ -78,24 +78,24 @@ function N() {
             [],
         ),
         (0, r.jsx)("div", {
-            className: v.P,
-            children: (0, r.jsx)(a.IWV, { size: "md", query: e, onFocus: n, onBlur: s, onChange: t, onClear: l }),
+            className: x.P,
+            children: (0, r.jsx)(a.IWV, { size: "md", query: e, onFocus: n, onBlur: l, onChange: t, onClear: s }),
         })
     );
 }
-function S() {
+function N() {
     return (0, r.jsxs)("div", {
-        className: v.t,
+        className: x.t,
         children: [
             (0, r.jsx)(a.Text, {
                 variant: "text-sm/semibold",
                 color: "text-strong",
-                children: b.intl.string(b.t.zihbmv),
+                children: v.intl.string(v.t.zihbmv),
             }),
             (0, r.jsx)(a.Text, {
                 variant: "text-sm/normal",
                 color: "text-subtle",
-                children: b.intl.string(b.t.XclvsB),
+                children: v.intl.string(v.t.XclvsB),
             }),
         ],
     });
