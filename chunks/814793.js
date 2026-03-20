@@ -1,33 +1,45 @@
 "use strict";
-n.d(t, { $e: () => m, E0: () => g, Ll: () => E, _e: () => f, f0: () => I, pv: () => A, ui: () => _, vA: () => h });
+n.d(t, {
+    $e: () => g,
+    E0: () => A,
+    I0: () => S,
+    Ll: () => I,
+    _e: () => h,
+    jQ: () => y,
+    pv: () => T,
+    ui: () => p,
+    vA: () => E,
+});
 var r = n(267548),
     i = n(731355),
-    a = n(643501),
-    s = n(279250),
+    s = n(643501),
+    a = n(279250),
     o = n(71393),
     l = n(576705),
     u = n(977997),
-    c = n(792620),
-    d = n(654487);
-function _(e) {
+    c = n(87549),
+    d = n(590202),
+    _ = n(792620),
+    f = n(654487);
+function p(e) {
     if (null == e) return !1;
-    let t = (0, c.pU)(e);
+    let t = (0, _.pU)(e);
     return null != t && t.length > 1;
 }
-function f(e) {
-    return (0, c.vS)(e) === d.ej;
-}
-function p(e, t) {
-    return new Set(e.config.features).has(t);
-}
 function h(e) {
-    return ((0, c.Cr)(e) || (0, c.vl)(e)) && e.config.features.includes(d.Li.START_QUEST_CTA);
+    return (0, _.vS)(e) === f.ej;
 }
 function m(e, t) {
+    return new Set(e.config.features).has(t);
+}
+function E(e) {
+    return ((0, _.Cr)(e) || (0, _.vl)(e)) && e.config.features.includes(f.Li.START_QUEST_CTA);
+}
+function g(e, t) {
     let n = new Map();
     for (let [r, i] of e)
-        if (!(_(i) || p(i, d.Li.NON_GAMING_PLAY_QUEST))) {
-            for (let e of (0, c.hL)(i))
+        if (!(p(i) || m(i, f.Li.NON_GAMING_PLAY_QUEST))) {
+            for (let e of (0, _.hL)(i))
                 if (t.has(e)) {
                     n.set(r, i);
                     break;
@@ -35,15 +47,24 @@ function m(e, t) {
         }
     return n;
 }
-function g(e) {
+function A(e) {
     return e.sharePolicy !== r.i.NOT_SHAREABLE;
 }
-function E(e, t) {
-    return null != e && null != t && (0, s.eo)(t, u.A, o.A, l.A, a.default)[0];
-}
-function A(e) {
-    return (0, c.vv)({ config: e }) ? i.Z.VIDEO : i.Z.GAMEPLAY;
-}
 function I(e, t) {
+    return null != e && null != t && (0, a.eo)(t, u.A, o.A, l.A, s.default)[0];
+}
+function T(e) {
+    return (0, _.vv)({ config: e }) ? i.Z.VIDEO : i.Z.GAMEPLAY;
+}
+function S(e, t) {
     return e.ctaQuests.some((e) => e.questId === t);
+}
+function y(e) {
+    let { questId: t, fromContent: n, utmSource: r, utmMedium: i } = e;
+    c.A.getState().setUtmCurrentContext({
+        utmSourceCurrent: r,
+        utmMediumCurrent: i,
+        utmCampaignCurrent: t,
+        utmContentCurrent: (0, d.jO)(n),
+    });
 }

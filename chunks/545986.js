@@ -1,21 +1,21 @@
 "use strict";
 n.d(t, {
-    Df: () => z,
-    Fy: () => eo,
-    Oz: () => eu,
-    QA: () => ei,
-    Zc: () => X,
-    cf: () => $,
-    d5: () => en,
-    e0: () => el,
-    f7: () => W,
-    hJ: () => q,
-    l9: () => et,
-    m6: () => Z,
-    navigateToQuestHome: () => Q,
-    q$: () => ea,
-    rx: () => K,
-    z6: () => ee,
+    Df: () => Y,
+    Fy: () => er,
+    Oz: () => es,
+    QA: () => ee,
+    Zc: () => $,
+    cf: () => j,
+    d5: () => Q,
+    e0: () => ei,
+    f7: () => B,
+    hJ: () => W,
+    l9: () => X,
+    m6: () => K,
+    navigateToQuestHome: () => z,
+    q$: () => en,
+    rx: () => H,
+    z6: () => Z,
 });
 var r = n(627968);
 n(64700);
@@ -39,28 +39,24 @@ var o = n(397927),
     I = n(877062),
     T = n(829219),
     S = n(859703),
-    y = n(341915),
-    v = n(405670),
-    N = n(245853),
-    C = n(972495),
-    R = n(943849),
-    O = n(579473),
-    b = n(561844),
-    D = n(590202),
-    L = n(437343),
-    w = n(710969),
-    M = n(792620),
-    x = n(814793),
-    P = n(753386),
-    k = n(964168),
-    U = n(419818),
-    G = n(654487),
-    F = n(652215),
-    V = n(488995),
-    B = n(985018);
-let H = "in-app",
-    j = "Discord Widget";
-async function Y(e) {
+    y = n(405670),
+    v = n(245853),
+    N = n(972495),
+    C = n(943849),
+    R = n(579473),
+    O = n(561844),
+    b = n(590202),
+    D = n(437343),
+    L = n(710969),
+    w = n(792620),
+    M = n(814793),
+    x = n(753386),
+    P = n(964168),
+    k = n(654487),
+    U = n(652215),
+    G = n(488995),
+    F = n(985018);
+async function V(e) {
     try {
         let t = (0, d.br)(e);
         if (null == t || t.type !== c.I.INVITE) return !1;
@@ -77,47 +73,47 @@ async function Y(e) {
         return !1;
     }
 }
-async function W(e) {
+async function B(e) {
     try {
         if (A.A.isDiscordUrl(e)) return !0;
-        return await Y(e);
+        return await V(e);
     } catch (e) {
         return !1;
     }
 }
-function K(e) {
+function H(e) {
     let { quest: t, sourceQuestContent: i } = e;
     (0, o.mMO)(async () => {
         let { default: e } = await n.e("67299").then(n.bind(n, 975726));
         return (n) => (0, r.jsx)(e, { ...n, initialQuest: t, sourceQuestContent: i });
     });
 }
-function $(e, t, i) {
+function j(e, t, i) {
     (0, o.mMO)(async () => {
         let { default: s } = await n.e("26747").then(n.bind(n, 529398));
         return (n) => (0, r.jsx)(s, { ...n, initialQuest: e, location: t, sourceQuestContent: i });
     });
 }
-function z(e, t, i) {
+function Y(e, t, i) {
     (0, o.mMO)(async () => {
         let { default: s } = await n.e("67426").then(n.bind(n, 268473));
         return (n) => (0, r.jsx)(s, { ...n, initialQuest: e, sourceQuestContent: i, location: t });
     });
 }
-function q(e, t, i, s) {
+function W(e, t, i, s) {
     (0, o.mMO)(async () => {
         let { default: a } = await n.e("90948").then(n.bind(n, 651663));
         return (n) => (0, r.jsx)(a, { ...n, initialQuest: e, sourceQuestContent: i, location: t, preview: s });
     });
 }
-function Z(e, t, i) {
+function K(e, t, i) {
     (0, o.mMO)(async () => {
         let { default: s } = await n.e("81169").then(n.bind(n, 124232));
         return (n) => (0, r.jsx)(s, { ...n, quest: e, location: t, sourceQuestContent: i });
     });
 }
-function X(e, t) {
-    (0, b.Y5)({
+function $(e, t) {
+    (0, O.Y5)({
         questId: e.id,
         questContent: t.content,
         questContentPosition: t.position,
@@ -130,35 +126,26 @@ function X(e, t) {
             return (n) => (0, r.jsx)(i, { ...n, questContent: t.content, quest: e });
         });
 }
-function Q() {
-    let {
-        fromContent: e,
-        questId: t,
-        forceDiscoveryQuestHomeRoute: n = !1,
-    } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    (0, U.A.getState().setUtmCurrentContext)({
-        utmSourceCurrent: j,
-        utmMediumCurrent: H,
-        utmCampaignCurrent: t,
-        utmContentCurrent: Object.keys(y.uF).find((t) => y.uF[t] === e),
-    });
-    let r = null != t ? `#${t}` : "";
-    n && _.A.setState({ selectedTab: V.GlobalDiscoveryTab.QUESTS }),
+function z(e) {
+    let { fromContent: t, questId: n, forceDiscoveryQuestHomeRoute: r = !1 } = e;
+    (0, M.jQ)({ questId: n, fromContent: t });
+    let i = null != n ? `#${n}` : "";
+    r && _.A.setState({ selectedTab: G.GlobalDiscoveryTab.QUESTS }),
         (0, p.default)(),
-        (0, f.pX)((n ? F.BVt.QUEST_HOME_DEPRECATED : F.BVt.QUEST_HOME) + r);
+        (0, f.pX)((r ? U.BVt.QUEST_HOME_DEPRECATED : U.BVt.QUEST_HOME) + i);
 }
-let J = 0.2;
-function ee(e) {
-    let t = (0, R.L)({ quest: e }),
-        n = { location: G.rE.QUESTS_BAR };
-    if (!(0, C.l)(n) || Math.random() > J) return;
-    let r = (0, L.A)(e);
-    t.log(`Showing survey ${r.id}`), (0, k.m)({ questId: e.id, survey: r });
+let q = 0.2;
+function Z(e) {
+    let t = (0, C.L)({ quest: e }),
+        n = { location: k.rE.QUESTS_BAR };
+    if (!(0, N.l)(n) || Math.random() > q) return;
+    let r = (0, D.A)(e);
+    t.log(`Showing survey ${r.id}`), (0, P.m)({ questId: e.id, survey: r });
 }
-function et() {
-    return Promise.all([n.e("35584"), n.e("23628"), n.e("73845")]).then(n.bind(n, 717415));
+function X() {
+    return Promise.all([n.e("35584"), n.e("34700"), n.e("28927")]).then(n.bind(n, 752231));
 }
-function en(e) {
+function Q(e) {
     let {
         quest: t,
         questContent: n,
@@ -167,33 +154,33 @@ function en(e) {
         autoplay: l = !0,
         skipEnrollmentCheck: u = !1,
     } = e;
-    if ((0, M.K$)(t)) return void eo(t);
+    if ((0, w.K$)(t)) return void er(t);
     let c = (0, i.A)();
-    if (!u && t.userStatus?.enrolledAt == null && !(0, w.Ic)(t)) {
+    if (!u && t.userStatus?.enrolledAt == null && !(0, L.Ic)(t)) {
         S.A.isEnrolling(t.id) ||
-            (0, T.Oy)(t.id, { questContent: n, questContentCTA: D.Cy.ACCEPT_QUEST, sourceQuestContent: s });
-        let e = v.Ay.getState().getVideoProgress(t.id);
+            (0, T.Oy)(t.id, { questContent: n, questContentCTA: b.Cy.ACCEPT_QUEST, sourceQuestContent: s });
+        let e = y.Ay.getState().getVideoProgress(t.id);
         null != e &&
             e.timestampSec > 1 &&
             ((0, T.QG)(t.id),
-            g.default.track(F.HAw.QUEST_VIDEO_ENROLLMENT_RETRY_ATTEMPTED, {
+            g.default.track(U.HAw.QUEST_VIDEO_ENROLLMENT_RETRY_ATTEMPTED, {
                 quest_id: t.id,
-                source_quest_content: (0, D.jO)(s),
+                source_quest_content: (0, b.jO)(s),
                 source_quest_content_cta: a,
                 video_session_id: c,
             }));
     }
-    let { setCaptionEnabled: d, muted: _, volume: f, captionEnabled: p } = v.Ay.getState(),
-        { enabled: h, variant: m } = N.Ig.getConfig({ location: G.rE.VIDEO_MODAL }),
-        E = null != (0, O.tW)(t, O.fY.VIDEO_PLAYER_CAPTION, void 0, !1);
+    let { setCaptionEnabled: d, muted: _, volume: f, captionEnabled: p } = y.Ay.getState(),
+        { enabled: h, variant: m } = v.Ig.getConfig({ location: k.rE.VIDEO_MODAL }),
+        E = null != (0, R.tW)(t, R.fY.VIDEO_PLAYER_CAPTION, void 0, !1);
     _ &&
         h &&
-        (m === N.sy.AUTO_ENABLE_CAPTIONS && E && !p
+        (m === v.sy.AUTO_ENABLE_CAPTIONS && E && !p
             ? d(!0)
-            : m === N.sy.AUTO_UNMUTE && (v.Ay.getState().setMuted(!1), 0 === f && v.Ay.getState().setVolume(0.3))),
+            : m === v.sy.AUTO_UNMUTE && (y.Ay.getState().setMuted(!1), 0 === f && y.Ay.getState().setVolume(0.3))),
         (0, o.mMO)(
             async () => {
-                let { default: e } = await et();
+                let { default: e } = await X();
                 return (n) =>
                     (0, r.jsx)(e, {
                         ...n,
@@ -205,13 +192,13 @@ function en(e) {
                     });
             },
             {
-                modalKey: (0, P.cZ)(t.id),
+                modalKey: (0, x.cZ)(t.id),
                 backdropStyle: o.F2Z.IMMERSIVE,
-                onCloseCallback: () => (0, P.vm)({ questId: t.id, sourceQuestContent: s, videoSessionId: c }),
+                onCloseCallback: () => (0, x.vm)({ questId: t.id, sourceQuestContent: s, videoSessionId: c }),
             },
         );
 }
-function er(e) {
+function J(e) {
     let t = platform.os?.family,
         n = "quest";
     if ("Android" === t || "iOS" === t) {
@@ -222,20 +209,20 @@ function er(e) {
     }
     return "discord://";
 }
-function ei(e) {
-    let t = er(e),
+function ee(e) {
+    let t = J(e),
         n = (0, s.X7)(t);
     null != n &&
-        g.default.track(F.HAw.DEEP_LINK_CLICKED, {
+        g.default.track(U.HAw.DEEP_LINK_CLICKED, {
             fingerprint: (0, a.v)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource,
         }),
         I.A.launch(t, (t) => {
-            t || (0, f.bG)({ pathname: F.BVt.QUEST_HOME, hash: e });
+            t || (0, f.bG)({ pathname: U.BVt.QUEST_HOME, hash: e });
         });
 }
-function es(e) {
+function et(e) {
     let t = platform.os?.family,
         n = "quest-preview";
     if ("Android" === t || "iOS" === t) {
@@ -246,26 +233,26 @@ function es(e) {
     }
     return "discord://";
 }
-function ea(e) {
-    let t = es(e),
+function en(e) {
+    let t = et(e),
         n = (0, s.X7)(t);
     null != n &&
-        g.default.track(F.HAw.DEEP_LINK_CLICKED, {
+        g.default.track(U.HAw.DEEP_LINK_CLICKED, {
             fingerprint: (0, a.v)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource,
         }),
         I.A.launch(t, (t) => {
-            t || (0, f.bG)({ pathname: F.BVt.QUEST_HOME, hash: e });
+            t || (0, f.bG)({ pathname: U.BVt.QUEST_HOME, hash: e });
         });
 }
-function eo(e) {
+function er(e) {
     (0, o.mMO)(async () => {
-        let { default: t } = await Promise.all([n.e("86184"), n.e("77828")]).then(n.bind(n, 491390));
+        let { default: t } = await Promise.all([n.e("88592"), n.e("97642")]).then(n.bind(n, 185342));
         return (n) => (0, r.jsx)(t, { ...n, questId: e.id });
     });
 }
-async function el(e, t) {
+async function ei(e, t) {
     let { type: n } = await (0, T.Oy)(e.id, {
         questContent: t.questContent,
         questContentCTA: t.questContentCTA,
@@ -275,7 +262,7 @@ async function el(e, t) {
     });
     switch (n) {
         case T.WM.SUCCESS:
-            en({
+            Q({
                 quest: e,
                 questContent: t.questContent,
                 sourceQuestContent: t.sourceQuestContent,
@@ -283,13 +270,13 @@ async function el(e, t) {
             });
             break;
         case T.WM.CAPTCHA_FAILED:
-            l.A.show({ title: B.intl.string(B.t["/CidxO"]), body: B.intl.string(B.t.HQdHg6) });
+            l.A.show({ title: F.intl.string(F.t["/CidxO"]), body: F.intl.string(F.t.HQdHg6) });
             break;
         case T.WM.UNKNOWN_ERROR:
-            l.A.show({ title: B.intl.string(B.t.R0RpRX), body: B.intl.string(B.t.OXD41D) });
+            l.A.show({ title: F.intl.string(F.t.R0RpRX), body: F.intl.string(F.t.OXD41D) });
         case T.WM.PREVIOUS_IN_FLIGHT_REQUEST:
     }
 }
-function eu(e) {
-    if ((0, x.vA)(e)) return e.config.features.includes(G.Li.CLOUD_GAMING_ACTIVITY) ? o.hpF : o._xR;
+function es(e) {
+    if ((0, M.vA)(e)) return e.config.features.includes(k.Li.CLOUD_GAMING_ACTIVITY) ? o.hpF : o._xR;
 }

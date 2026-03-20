@@ -38,13 +38,13 @@ var i = n(627968),
     k = n(240248),
     V = n(341915),
     B = n(631001),
-    H = n(245853),
-    F = n(807876),
-    Y = n(890687),
-    W = n(590202),
-    K = n(885459),
-    q = n(545986),
-    z = n(419818),
+    H = n(87549),
+    F = n(245853),
+    Y = n(807876),
+    W = n(890687),
+    K = n(590202),
+    q = n(885459),
+    z = n(545986),
     $ = n(203879),
     Q = n(409389),
     X = n(881172),
@@ -58,7 +58,7 @@ var i = n(627968),
     el = n(758836),
     er = n(613057),
     es = n(985018),
-    eo = n(467303),
+    eo = n(941797),
     ed = n(318808),
     ec = n(92872),
     eu = n(880440),
@@ -112,9 +112,9 @@ function ep(e) {
 function eE(e) {
     let { renderBanner: t, children: n, header: l, withQuestsGrid: s = !0 } = e,
         { isInDiscoverQuestHomeTab: o, onScroll: d, onSelectTab: c, scrollerRef: u, selectedTab: A } = a.useContext(em),
-        { questHomeHero: h, isLoading: _ } = (0, Y.vG)(),
+        { questHomeHero: h, isLoading: _ } = (0, W.vG)(),
         { enabled: m } = (0, D.Z)({ location: ei.rE.QUEST_HOME_DESKTOP }),
-        { enabled: g } = H.sn.useConfig({ location: ei.rE.QUEST_HOME_DESKTOP }),
+        { enabled: g } = F.sn.useConfig({ location: ei.rE.QUEST_HOME_DESKTOP }),
         p = a.useRef(null),
         E = a.useCallback((e) => {
             p.current?.resetSortingFiltering(),
@@ -132,7 +132,7 @@ function eE(e) {
                 children: [
                     (function () {
                         if (!o && g) {
-                            if (A !== Y.NC.ALL) return null;
+                            if (A !== W.NC.ALL) return null;
                             if (_) return (0, i.jsx)(ee.H, {});
                             if (null != h) return (0, i.jsx)(ee.A, { config: h, onQuestCtaClick: E });
                         }
@@ -140,14 +140,14 @@ function eE(e) {
                     })(),
                     (0, i.jsx)(v.A, {
                         children: (0, i.jsxs)("div", {
-                            className: r()(eo.Qs, { [eo.HR]: g && !m && A !== Y.NC.ALL }),
+                            className: r()(eo.Qs, { [eo.HR]: g && !m && A !== W.NC.ALL }),
                             children: [
                                 n,
                                 s
-                                    ? A === Y.NC.CLAIMED
+                                    ? A === W.NC.CLAIMED
                                         ? (0, i.jsx)(X.A, { onSelectTab: c })
-                                        : A === Y.NC.PREVIEW_TOOL
-                                          ? (0, i.jsx)(K.A, {})
+                                        : A === W.NC.PREVIEW_TOOL
+                                          ? (0, i.jsx)(q.A, {})
                                           : (0, i.jsx)(Q.A, { ref: p })
                                     : null,
                             ],
@@ -166,14 +166,14 @@ let eI = function (e) {
         C = (0, c.bG)([E.A], () => E.A.getState("quests")),
         { selectedTab: v, onSelectTab: L, tabs: j } = (0, en.J)({ withClaimedQuestsTab: !_ });
     a.useLayoutEffect(() => {
-        _ && v === Y.NC.CLAIMED && B.A.setState({ tab: Y.NC.ALL });
+        _ && v === W.NC.CLAIMED && B.A.setState({ tab: W.NC.ALL });
     }, [_, v]);
-    let { onScroll: U, scrollPosition: H } = (0, S.G)(),
-        K = z.A.getState().getUtmCurrentContext(),
+    let { onScroll: U, scrollPosition: F } = (0, S.G)(),
+        q = H.A.getState().getUtmCurrentContext(),
         $ = (0, Z.W)((e) => e.registerAssetLoad),
-        Q = a.useRef(K);
+        Q = a.useRef(q);
     a.useEffect(() => {
-        Q.current = K;
+        Q.current = q;
     }),
         a.useEffect(() => {
             let { current: e } = Q;
@@ -211,13 +211,13 @@ let eI = function (e) {
         a.useEffect(() => {
             N.g.trigger();
         }, []);
-    let eA = (0, F.U)({ location: ei.rE.QUEST_PREVIEW_TOOL_2 });
+    let eA = (0, Y.U)({ location: ei.rE.QUEST_PREVIEW_TOOL_2 });
     a.useEffect(() => {
         if (null != C) return;
         let e = new URLSearchParams(n.search),
-            i = e.get(Y.L1.TAB);
-        if (eA && i === Y.NC.PREVIEW_TOOL) {
-            let t = e.get(Y.L1.QUEST_ID);
+            i = e.get(W.L1.TAB);
+        if (eA && i === W.NC.PREVIEW_TOOL) {
+            let t = e.get(W.L1.QUEST_ID);
             p.A.openNativeAppModal("quests", ea.e$_.DEEP_LINK, {
                 type: er.XK.QUEST_PREVIEW_TOOL,
                 params: { questId: t, tab: i },
@@ -225,10 +225,10 @@ let eI = function (e) {
             return;
         }
         let a = performance.getEntriesByType("navigation")[0];
-        if ("POP" === l.action && a?.type === "navigate" && t && i !== Y.NC.PREVIEW_TOOL) {
+        if ("POP" === l.action && a?.type === "navigate" && t && i !== W.NC.PREVIEW_TOOL) {
             let t = (0, k.uJ)(n.hash) ? null : n.hash.substring(1),
-                a = e.get(Y.L1.SORT),
-                l = e.get(Y.L1.FILTER);
+                a = e.get(W.L1.SORT),
+                l = e.get(W.L1.FILTER);
             p.A.openNativeAppModal("quests", ea.e$_.DEEP_LINK, {
                 type: er.XK.QUEST_HOME,
                 params: { questId: (0, k.uJ)(t) ? void 0 : t, sort: a, filter: l, tab: i },
@@ -239,12 +239,12 @@ let eI = function (e) {
             t && (0, T.Dr)(u.M.QUEST_HOME_ENTRYPOINT_ONBOARDING);
         }, [t]);
     let eh = a.useCallback(() => {
-            (0, q.navigateToQuestHome)({ fromContent: V.uF.QUEST_HOME_MOVE_CALLOUT_DISCOVER }),
+            (0, z.navigateToQuestHome)({ fromContent: V.uF.QUEST_HOME_MOVE_CALLOUT_DISCOVER }),
                 w.default.track(ea.HAw.QUEST_CONTENT_CLICKED, {
-                    cta_name: W.Cy.VIEW_QUESTS,
+                    cta_name: K.Cy.VIEW_QUESTS,
                     click_id: (0, o.A)(),
                     is_targeted: !1,
-                    ...(0, W.fF)(V.uF.QUEST_HOME_MOVE_CALLOUT_DISCOVER),
+                    ...(0, K.fF)(V.uF.QUEST_HOME_MOVE_CALLOUT_DISCOVER),
                 });
         }, []),
         e_ = a.useCallback(
@@ -302,7 +302,7 @@ let eI = function (e) {
                     : X
                       ? (0, i.jsx)(eE, {
                             renderBanner: () =>
-                                v !== Y.NC.PREVIEW_TOOL &&
+                                v !== W.NC.PREVIEW_TOOL &&
                                 (0, i.jsxs)(x.A, {
                                     title: et,
                                     description: ed,
@@ -366,7 +366,7 @@ let eI = function (e) {
                                 variant: b.Z5.OVERLAY,
                                 children: [
                                     (0, i.jsx)("div", { className: eo.T_ }),
-                                    (0, i.jsx)(b.ns, { scrollPosition: H }),
+                                    (0, i.jsx)(b.ns, { scrollPosition: F }),
                                     (0, i.jsx)(b.T4, { icon: A.r2v }),
                                 ],
                             }),

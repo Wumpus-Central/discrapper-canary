@@ -54,6 +54,8 @@ var r = (function (e) {
         (e[(e.QUEST_ACTIVITY_UNENROLLED_MODAL = 49)] = "QUEST_ACTIVITY_UNENROLLED_MODAL"),
         (e[(e.QUEST_HOME_HERO = 50)] = "QUEST_HOME_HERO"),
         (e[(e.QUEST_ACTIVITY_HEADER = 51)] = "QUEST_ACTIVITY_HEADER"),
+        (e[(e.USER_PROFILE_HEADER = 52)] = "USER_PROFILE_HEADER"),
+        (e[(e.USER_SETTINGS = 53)] = "USER_SETTINGS"),
         e
     );
 })({});

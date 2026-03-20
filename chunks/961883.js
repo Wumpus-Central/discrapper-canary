@@ -1,4 +1,4 @@
-n.d(e, { $V: () => D, $k: () => C, aG: () => N, mO: () => L, v8: () => T }), n(321073);
+n.d(e, { $V: () => b, $k: () => L, aG: () => U, mO: () => k, v8: () => D }), n(321073);
 var i = n(64700),
     a = n(106778),
     l = n(284009),
@@ -7,24 +7,25 @@ var i = n(64700),
     s = n(398590),
     o = n(954921),
     p = n(590547),
-    u = n(87719),
-    c = n(309635),
-    g = n(545986),
-    A = n(780964),
+    _ = n(87719),
+    E = n(309635),
+    u = n(341915),
+    c = n(545986),
+    S = n(780964),
     h = n(840065),
-    f = n(318346),
-    m = n(954571),
-    y = n(203982),
-    E = n(975571),
-    v = n(993408),
-    I = n(442759),
-    _ = n(158216),
+    A = n(318346),
+    I = n(954571),
+    R = n(203982),
+    T = n(975571),
+    f = n(993408),
+    y = n(442759),
+    g = n(158216),
     O = n(758836),
-    b = n(652215),
-    R = n(839358),
-    S = n(985018);
-let k = (t) => (null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null),
-    C = (t) => {
+    N = n(652215),
+    m = n(839358),
+    v = n(985018);
+let C = (t) => (null != t ? v.intl.format(v.t["4kp0AB"], { itemName: t }) : null),
+    L = (t) => {
         let {
             product: e,
             overrideTitle: n,
@@ -34,14 +35,14 @@ let k = (t) => (null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null
             itemConsumed: r,
         } = t;
         if (null != n) return n;
-        if (O.Dp.ORB_PROFILE_BADGE === e.skuId) return S.intl.string(R.default.nvaTQq);
+        if (O.Dp.ORB_PROFILE_BADGE === e.skuId) return v.intl.string(m.default.nvaTQq);
         if (O.Dp.FRACTIONAL_PREMIUM === e.skuId)
-            if (r) return S.intl.string(S.t.t0xkSB);
-            else return S.intl.string(S.t.g5W1g8);
-        if (i && !a) return S.intl.string(S.t.IMffmm);
-        return S.intl.formatToPlainString(S.t.YNaxMp, { itemName: l });
+            if (r) return v.intl.string(v.t.t0xkSB);
+            else return v.intl.string(v.t.g5W1g8);
+        if (i && !a) return v.intl.string(v.t.IMffmm);
+        return v.intl.formatToPlainString(v.t.YNaxMp, { itemName: l });
     },
-    T = (t) => {
+    D = (t) => {
         let {
             product: e,
             overrideDescription: n,
@@ -53,99 +54,99 @@ let k = (t) => (null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null
             expiresAt: o,
         } = t;
         if (null != n) return n;
-        if (O.Dp.ORB_PROFILE_BADGE === e.skuId) return S.intl.string(R.default.UnPGii);
+        if (O.Dp.ORB_PROFILE_BADGE === e.skuId) return v.intl.string(m.default.UnPGii);
         if (O.Dp.FRACTIONAL_PREMIUM === e.skuId) {
-            let t = S.intl.formatToPlainString(S.t.Cz1G97, { days: 3 });
+            let t = v.intl.formatToPlainString(v.t.Cz1G97, { days: 3 });
             return r
-                ? S.intl.format(S.t.bhLChO, {
-                      helpCenterLink: E.A.getArticleURL(b.MVz.FRACTIONAL_PREMIUM_ABOUT),
+                ? v.intl.format(v.t.bhLChO, {
+                      helpCenterLink: T.A.getArticleURL(N.MVz.FRACTIONAL_PREMIUM_ABOUT),
                       duration: t,
                       expirationDate: o,
                   })
                 : s
-                  ? S.intl.string(S.t.fBmhE9)
-                  : S.intl.format(S.t["1ZBX4E"], {
-                        helpCenterLink: E.A.getArticleURL(b.MVz.FRACTIONAL_PREMIUM_ABOUT),
+                  ? v.intl.string(v.t.fBmhE9)
+                  : v.intl.format(v.t["1ZBX4E"], {
+                        helpCenterLink: T.A.getArticleURL(N.MVz.FRACTIONAL_PREMIUM_ABOUT),
                         duration: t,
                     });
         }
         if (e.type === d.R.BUNDLE) {
-            let { itemOneName: t, itemTwoName: n } = (0, I.yW)(e);
-            return S.intl.format(S.t.fXw44U, { itemOneName: t, itemTwoName: n });
+            let { itemOneName: t, itemTwoName: n } = (0, y.yW)(e);
+            return v.intl.format(v.t.fXw44U, { itemOneName: t, itemTwoName: n });
         }
-        return e.type === d.R.AVATAR_DECORATION && a && null != l ? l : k(i);
+        return e.type === d.R.AVATAR_DECORATION && a && null != l ? l : C(i);
     },
-    N = (t) => {
+    U = (t) => {
         let {
                 product: e,
                 onClose: n,
                 analyticsLocations: i,
                 hasRequiredProductItems: a,
                 handleUseNow: l,
-                isApplying: m,
-                openProfileSettings: E,
-                itemConsumed: v,
+                isApplying: I,
+                openProfileSettings: T,
+                itemConsumed: f,
             } = t,
-            I = [];
+            y = [];
         if (O.Dp.ORB_PROFILE_BADGE === e.skuId)
-            I.push(
+            y.push(
                 {
-                    text: S.intl.string(R.default.yfwZuy),
+                    text: v.intl.string(m.default.yfwZuy),
                     variant: "primary",
                     onClick: () => {
-                        n(), y._.dispatch(b.jej.SHOW_ACCOUNT_PROFILE_POPOUT, {});
+                        n(), R._.dispatch(N.jej.SHOW_ACCOUNT_PROFILE_POPOUT, {});
                     },
                 },
                 {
-                    text: S.intl.string(S.t.H57f41),
+                    text: v.intl.string(v.t.H57f41),
                     variant: "secondary",
                     onClick: () => {
                         n(),
-                            (0, f.Y)({
-                                pageType: b.liQ.SHOP_ORBS_TAB,
-                                sectionType: b.JJy.ORBS_BADGE_REDEMPTION_MODAL,
-                                ctaObject: b.ZSU.CTA_TO_QUEST_HOME,
+                            (0, A.Y)({
+                                pageType: N.liQ.SHOP_ORBS_TAB,
+                                sectionType: N.JJy.ORBS_BADGE_REDEMPTION_MODAL,
+                                ctaObject: N.ZSU.CTA_TO_QUEST_HOME,
                             }),
-                            (0, g.navigateToQuestHome)();
+                            (0, c.navigateToQuestHome)({ fromContent: u.uF.REWARD_MODAL });
                     },
                 },
             );
         else if (O.Dp.FRACTIONAL_PREMIUM === e.skuId)
-            v
-                ? I.push(
-                      { text: S.intl.string(S.t.cpT0Cq), variant: "secondary", onClick: n },
+            f
+                ? y.push(
+                      { text: v.intl.string(v.t.cpT0Cq), variant: "secondary", onClick: n },
                       {
-                          text: S.intl.string(S.t.ERKK6v),
+                          text: v.intl.string(v.t.ERKK6v),
                           variant: "primary",
                           onClick: () => {
-                              (0, u.x)(n);
+                              (0, _.x)(n);
                           },
                       },
                   )
-                : I.push(
-                      { text: S.intl.string(S.t.cpT0Cq), variant: "secondary", onClick: n },
+                : y.push(
+                      { text: v.intl.string(v.t.cpT0Cq), variant: "secondary", onClick: n },
                       {
-                          text: S.intl.string(S.t["Jr6N+s"]),
+                          text: v.intl.string(v.t["Jr6N+s"]),
                           variant: "primary",
                           onClick: () => {
-                              (0, h.openUserSettings)(A.X.SUBSCRIPTIONS_PANEL), n();
+                              (0, h.openUserSettings)(S.X.SUBSCRIPTIONS_PANEL), n();
                           },
                       },
                   );
         else {
             let [t] = e.items;
-            I.push({
-                text: S.intl.string(S.t["2p2aYz"]),
+            y.push({
+                text: v.intl.string(v.t["2p2aYz"]),
                 variant: a ? "secondary" : "primary",
                 onClick: () => {
-                    if ((n(), (0, s.jH)(), E?.(), e.type === d.R.AVATAR_DECORATION)) {
+                    if ((n(), (0, s.jH)(), T?.(), e.type === d.R.AVATAR_DECORATION)) {
                         r()(t.type === d.R.AVATAR_DECORATION, "product type and item type are the same"),
                             (0, o.L)({ initialSelectedDecoration: t, analyticsLocations: i });
                         return;
                     }
                     if (e.type === d.R.PROFILE_EFFECT) {
                         r()(t.type === d.R.PROFILE_EFFECT, "product type and item type are the same"),
-                            (0, c.W)({ initialSelectedEffect: t, analyticsLocations: i });
+                            (0, E.W)({ initialSelectedEffect: t, analyticsLocations: i });
                         return;
                     }
                     if (e.type === d.R.NAMEPLATE) {
@@ -156,14 +157,14 @@ let k = (t) => (null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null
                 },
             });
         }
-        return a && I.push({ text: S.intl.string(S.t.MAS7uK), variant: "primary", onClick: l, loading: m }), I;
+        return a && y.push({ text: v.intl.string(v.t.MAS7uK), variant: "primary", onClick: l, loading: I }), y;
     },
-    D = (t, e) => {
-        let n = i.useMemo(() => (0, v.V6)(t.type, t.skuId), [t.type, t.skuId]);
+    b = (t, e) => {
+        let n = i.useMemo(() => (0, f.V6)(t.type, t.skuId), [t.type, t.skuId]);
         return (
             i.useEffect(() => {
-                m.default.track(b.HAw.OPEN_MODAL, {
-                    type: b.JJy.COLLECTIBLES_SHOP_COLLECTED_MODAL,
+                I.default.track(N.HAw.OPEN_MODAL, {
+                    type: N.JJy.COLLECTIBLES_SHOP_COLLECTED_MODAL,
                     location_stack: e,
                     sku_id: t.skuId,
                     product_type: n,
@@ -172,11 +173,11 @@ let k = (t) => (null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null
             { productType: n }
         );
     },
-    L = (t, e) => {
+    k = (t, e) => {
         let n = i.useRef(new a.OH()),
             l = (0, i.useRef)(null),
             [r, d] = i.useState(null),
-            s = (0, _.AB)({ purchaseType: e, skuId: t.skuId });
+            s = (0, g.AB)({ purchaseType: e, skuId: t.skuId });
         return {
             environment: n.current,
             modalRef: l,
