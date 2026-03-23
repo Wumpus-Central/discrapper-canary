@@ -1,8 +1,6 @@
 e.exports = {
     cs: "outgoing-call-pulse__67dba",
     u9: "outgoing-call-ellipsis__67dba",
-    iE: "wrapper__67dba",
-    VL: "hasSections__67dba",
     p: "channelIcon__67dba",
     uP: "inviteSectionHeader__67dba",
     ep: "inviteSectionToggleIcon__67dba",

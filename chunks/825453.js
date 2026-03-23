@@ -15,8 +15,8 @@ var i = n(64700),
     p = n(287809),
     A = n(403362),
     b = n(803378),
-    _ = n(200662),
-    f = n(652215);
+    f = n(200662),
+    _ = n(652215);
 function N(e, t, n) {
     let l = (0, o.bG)([b.A], () => b.A.getApplicationPermissions()),
         a = i.useMemo(() => {
@@ -26,8 +26,8 @@ function N(e, t, n) {
                 (t = e),
                 (n = { ...(l ?? {}) }),
                 (i = (0, u.Ap)(t)),
-                (s = (0, _.Eu)(i, c.RA.CHANNEL)),
-                (a = (0, _.Eu)(t, c.RA.ROLE)) in n || (n[a] = { id: t, permission: !0, type: c.RA.ROLE }),
+                (s = (0, f.Eu)(i, c.RA.CHANNEL)),
+                (a = (0, f.Eu)(t, c.RA.ROLE)) in n || (n[a] = { id: t, permission: !0, type: c.RA.ROLE }),
                 s in n || (n[s] = { id: i, permission: !0, type: c.RA.CHANNEL }),
                 n
             );
@@ -39,14 +39,14 @@ function N(e, t, n) {
         }, [n]),
         j = (0, o.bG)([b.A], () => (null == n ? b.A.getEditedApplication() : b.A.getEditedCommand()?.permissions), [n]),
         T = n ?? t,
-        C = null != n ? N : a,
-        v = i.useMemo(() => j ?? { ...(C ?? {}) }, [j, C]),
-        E = i.useMemo(() => Object.keys(v).length, [v]),
-        I = i.useMemo(() => (null == C || null == v ? null : !r().isEqual(C, v)), [C, v]);
+        v = null != n ? N : a,
+        C = i.useMemo(() => j ?? { ...(v ?? {}) }, [j, v]),
+        I = i.useMemo(() => Object.keys(C).length, [C]),
+        E = i.useMemo(() => (null == v || null == C ? null : !r().isEqual(v, C)), [v, C]);
     return (
         i.useEffect(() => {
-            T === t && (I ? d.A.startEditingCommandPermissions(T) : d.A.stopEditingCommandPermissions(T));
-        }, [t, I, T]),
+            T === t && (E ? d.A.startEditingCommandPermissions(T) : d.A.stopEditingCommandPermissions(T));
+        }, [t, E, T]),
         {
             originalApplicationPermissions: a,
             originalCommandPermissions: N,
@@ -60,7 +60,7 @@ function N(e, t, n) {
                     {
                         channelIds: d,
                         roleIds: b,
-                        userIds: _,
+                        userIds: f,
                     } = i.useMemo(() => {
                         let e = [],
                             n = [],
@@ -99,11 +99,12 @@ function N(e, t, n) {
                         [p.default],
                         () =>
                             Object.fromEntries(
-                                _.map(p.default.getUser)
+                                f
+                                    .map(p.default.getUser)
                                     .filter(A.Vq)
                                     .map((e) => [e.id, e]),
                             ),
-                        [_],
+                        [f],
                     );
                 return i.useMemo(() => {
                     let e = n.id,
@@ -115,7 +116,7 @@ function N(e, t, n) {
                         if (o.type === c.RA.CHANNEL) {
                             let e = o.id === i,
                                 n = N[o.id];
-                            (t = e || h.A.can(f.xBc.VIEW_CHANNEL, n)), (d = !0);
+                            (t = e || h.A.can(_.xBc.VIEW_CHANNEL, n)), (d = !0);
                         } else if (o.type === c.RA.ROLE) {
                             let i = o.id === e,
                                 s = j[o.id];
@@ -123,15 +124,15 @@ function N(e, t, n) {
                         } else if (o.type === c.RA.USER) {
                             let e = T[o.id];
                             (t = null != e),
-                                (d = null != e && (r || h.A.canManageUser(f.xBc.USE_APPLICATION_COMMANDS, e, n)));
+                                (d = null != e && (r || h.A.canManageUser(_.xBc.USE_APPLICATION_COMMANDS, e, n)));
                         }
                         s[a] = { ...o, canRead: t, canWrite: d };
                     }
                     return s;
                 }, [N, n, l, r, t, j, T]);
-            })(e, v),
-            hasChanges: I,
-            selectedPermissionCount: E,
+            })(e, C),
+            hasChanges: E,
+            selectedPermissionCount: I,
         }
     );
 }
