@@ -35,6 +35,14 @@ let c = (0, i.mj)({
             enableVoiceOnlyClips: !0,
             enableAdvancedSignals: !0,
         },
+        3: {
+            enableClips: !0,
+            ignorePlatformRestriction: !0,
+            showClipsHeaderEntrypoint: !1,
+            enableScreenshotKeybind: !1,
+            enableVoiceOnlyClips: !1,
+            enableAdvancedSignals: !1,
+        },
     },
 });
 function d() {
