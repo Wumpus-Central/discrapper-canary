@@ -4,7 +4,7 @@ var a = n(627968),
     l = n(347971),
     s = n(944158),
     r = n(516286),
-    o = n(80768);
+    o = n(320054);
 function d() {
     return (0, a.jsxs)(i.IpV, {
         className: o.n,

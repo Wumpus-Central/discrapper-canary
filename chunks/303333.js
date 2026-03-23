@@ -11,10 +11,10 @@ var i = n(627968),
     u = n(522435),
     h = n(493819),
     A = n(722884),
-    m = n(924804),
-    g = n(985018),
-    p = n(229320);
-function _(e) {
+    m = n(148690),
+    _ = n(985018),
+    p = n(72057);
+function g(e) {
     let { channel: t, imageUrl: n } = e,
         l = s.useCallback(() => {
             (0, A.A)({ channel: t });
@@ -30,7 +30,7 @@ function _(e) {
                 className: p.n_,
                 children: [
                     (0, i.jsx)(a.m, {
-                        text: g.intl.string(m.default.XJ4UpB),
+                        text: _.intl.string(m.default.XJ4UpB),
                         children: (0, i.jsx)(r.DUT, {
                             className: p.HF,
                             onClick: l,
@@ -38,7 +38,7 @@ function _(e) {
                         }),
                     }),
                     (0, i.jsx)(a.m, {
-                        text: g.intl.string(m.default.XV4qT6),
+                        text: _.intl.string(m.default.XV4qT6),
                         children: (0, i.jsx)(r.DUT, {
                             className: p.HF,
                             onClick: o,
@@ -65,7 +65,7 @@ function f(e) {
                 (0, i.jsx)(r.Text, {
                     variant: "text-sm/medium",
                     color: "currentColor",
-                    children: g.intl.string(m.default.NGcIOF),
+                    children: _.intl.string(m.default.NGcIOF),
                 }),
             ],
         }),
@@ -79,7 +79,7 @@ function x(e) {
         h = s.useMemo(() => (null == r ? null : (0, u.K7)(r)), [r]);
     return a
         ? null != r && c && null != h
-            ? (0, i.jsx)(_, { channel: t, imageUrl: h })
+            ? (0, i.jsx)(g, { channel: t, imageUrl: h })
             : n
               ? (0, i.jsx)(f, { channel: t })
               : null

@@ -12,13 +12,13 @@ var i = n(627968),
     h = n(104171),
     A = n(763758),
     m = n(287809),
-    g = n(139675),
+    _ = n(139675),
     p = n(486020),
-    _ = n(403362),
+    g = n(403362),
     f = n(427262),
     x = n(652215),
     C = n(985018),
-    E = n(52734);
+    E = n(6676);
 let I = h.DN.SIZE_24;
 function N(e) {
     let { activity: t, user: n, embeddedApp: s, onOpenSpotifyAlbum: l, compact: a } = e,
@@ -43,20 +43,20 @@ function N(e) {
     let h = r.large_image ?? r.small_image,
         A = (0, d.A)(t),
         m = a ? E.p_ : A ? E.RC : E.P3,
-        _ =
+        g =
             null != h
-                ? (0, i.jsx)("img", { alt: r.large_text ?? "", src: (0, g.uD)(u, h, [128, 128]), className: m })
+                ? (0, i.jsx)("img", { alt: r.large_text ?? "", src: (0, _.uD)(u, h, [128, 128]), className: m })
                 : null;
     return A && null != l
-        ? ((_ = (0, i.jsx)(c.DUT, {
+        ? ((g = (0, i.jsx)(c.DUT, {
               className: E.vk,
               onClick: () => {
                   l(t, n.id);
               },
-              children: _,
+              children: g,
           })),
-          (0, i.jsx)(o.m, { text: null != r.large_text ? r.large_text : null, position: "top", children: _ }))
-        : _;
+          (0, i.jsx)(o.m, { text: null != r.large_text ? r.large_text : null, position: "top", children: g }))
+        : g;
 }
 function b(e) {
     let { activity: t, embeddedApp: n, onOpenSpotifyTrack: s, compact: l } = e,
@@ -132,13 +132,13 @@ function y(e) {
             sortedVoiceStates: c,
             onOpenSpotifyTrack: u,
             onOpenSpotifyArtist: A,
-            onOpenSpotifyAlbum: g,
+            onOpenSpotifyAlbum: _,
         } = e,
         p = [];
     null != n
         ? (p = Array.from(n.embeddedActivity.userIds))
         : (0, d.A)(t) && null != c && (p = c.map((e) => e.user.id));
-    let x = (0, r.yK)([m.default], () => p.map((e) => m.default.getUser(e)).filter(_.Vq)),
+    let x = (0, r.yK)([m.default], () => p.map((e) => m.default.getUser(e)).filter(g.Vq)),
         C = null != n || (0, d.A)(t),
         y = s.useMemo(() => {
             let e = new Map();
@@ -159,7 +159,7 @@ function y(e) {
                   (0, i.jsxs)("div", {
                       className: E.Wh,
                       children: [
-                          (0, i.jsx)(N, { activity: t, user: l, embeddedApp: n, onOpenSpotifyAlbum: g }),
+                          (0, i.jsx)(N, { activity: t, user: l, embeddedApp: n, onOpenSpotifyAlbum: _ }),
                           (0, i.jsxs)("div", {
                               className: E.X0,
                               children: [

@@ -10,8 +10,8 @@ var i = n(627968),
     u = n(235986),
     _ = n(147964),
     m = n(985018),
-    g = n(76985),
-    A = n(522759);
+    g = n(361151),
+    A = n(473169);
 let x = /^\d+$|^$/;
 function h(e) {
     let { onClose: t, transitionState: n } = e,
@@ -25,7 +25,7 @@ function h(e) {
             authorizing: _.A.isFetchingAuthorization,
         })),
         [E, S] = s.useState(h ?? ""),
-        [C, f] = s.useState("8080"),
+        [f, C] = s.useState("8080"),
         [b, N] = s.useState("localhost"),
         I = x.test(E);
     async function v() {
@@ -38,7 +38,7 @@ function h(e) {
                 case "proxy":
                     return (0, c.Ay)(n);
             }
-        })(b, C, E);
+        })(b, f, E);
         null != (await d.q1(E, e)) && t();
     }
     s.useEffect(() => () => o.h.wait(() => d.SH()), []);
@@ -52,13 +52,13 @@ function h(e) {
             () => [
                 {
                     loading: T,
-                    disabled: !I || 0 === E.length || ("localhost" === b && 0 === C.length),
+                    disabled: !I || 0 === E.length || ("localhost" === b && 0 === f.length),
                     variant: j ? "critical-primary" : "active",
                     text: j ? m.intl.string(m.t.d6TR3I) : m.intl.string(m.t.qwuK5I),
                     onClick: y,
                 },
             ],
-            [E.length, T, j, I, C.length, y, b],
+            [E.length, T, j, I, f.length, y, b],
         );
     return (0, i.jsxs)(l.Modal, {
         title: m.intl.string(m.t.f8fzky),
@@ -115,9 +115,9 @@ function h(e) {
                               children: (0, i.jsx)(r.ksK, {
                                   required: !0,
                                   label: m.intl.string(m.t.fF4zxq),
-                                  value: C,
+                                  value: f,
                                   maxLength: 5,
-                                  onChange: (e) => f(e),
+                                  onChange: (e) => C(e),
                                   disabled: T,
                               }),
                           }),

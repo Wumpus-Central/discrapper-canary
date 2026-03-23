@@ -12,16 +12,16 @@ var i = n(627968),
     h = n(887700),
     A = n(855446),
     m = n(793574),
-    g = n(688810),
+    _ = n(688810),
     p = n(975412),
-    _ = n(392054),
+    g = n(392054),
     f = n(826673),
     x = n(757293),
     C = n(954571),
     E = n(272812),
     I = n(652215),
     N = n(985018),
-    b = n(556614),
+    b = n(89996),
     S = n(867010);
 function T(e) {
     let {
@@ -41,8 +41,8 @@ function T(e) {
 }
 function v(e) {
     let { channel: t, inPopout: n, handleClose: s } = e,
-        { analyticsLocations: l, newestAnalyticsLocation: r } = (0, g.Ay)(m.A.VC_TILE_ACTIVITY_SHELF_BUTTON);
-    return (0, i.jsx)(g.f5, {
+        { analyticsLocations: l, newestAnalyticsLocation: r } = (0, _.Ay)(m.A.VC_TILE_ACTIVITY_SHELF_BUTTON);
+    return (0, i.jsx)(_.f5, {
         value: l,
         children: (0, i.jsxs)(E.A, {
             className: b.zr,
@@ -96,11 +96,11 @@ function y(e) {
             n_participants: 1,
         });
     }, []);
-    let { analyticsLocations: c, newestAnalyticsLocation: u } = (0, g.Ay)(m.A.VC_TILE_ACTIVITY_INVITE);
+    let { analyticsLocations: c, newestAnalyticsLocation: u } = (0, _.Ay)(m.A.VC_TILE_ACTIVITY_INVITE);
     function h() {
         (0, d.mMO)(
             async () => {
-                let { default: e } = await Promise.all([n.e("43600"), n.e("28136"), n.e("97710")]).then(
+                let { default: e } = await Promise.all([n.e("43600"), n.e("28136"), n.e("74918")]).then(
                     n.bind(n, 234355),
                 );
                 return (n) => (0, i.jsx)(e, { ...n, guild: l, channel: t, source: I.PE1.ACTIVITY_ENTRY_POINT_TILE });
@@ -115,7 +115,7 @@ function y(e) {
             analyticsLocation: u,
         });
     }
-    return (0, i.jsx)(g.f5, {
+    return (0, i.jsx)(_.f5, {
         value: c,
         children: (0, i.jsx)(d.NPJ, {
             disableAdaptiveTheme: !0,
@@ -158,9 +158,9 @@ function j(e) {
         });
     });
     let p = (0, h.A)({ guildId: n.id }).slice(0, 3),
-        { analyticsLocations: S } = (0, g.Ay)(m.A.VC_TILE_ACTIVITY_SUGGESTION),
+        { analyticsLocations: S } = (0, _.Ay)(m.A.VC_TILE_ACTIVITY_SUGGESTION),
         T = s.useMemo(() => ({ channel: t, type: "channel" }), [t]);
-    return (0, i.jsx)(g.f5, {
+    return (0, i.jsx)(_.f5, {
         value: S,
         children: (0, i.jsxs)(E.A, {
             className: b.zr,
@@ -182,7 +182,7 @@ function j(e) {
                                 activityItem: e,
                                 aspectRatio: A.C.AspectRatio.SIXTEEN_BY_NINE,
                                 animatedDivClass: b.KU,
-                                commandOrigin: _.iw.VOICE_TILE_ACTIVITY_SUGGESTIONS,
+                                commandOrigin: g.iw.VOICE_TILE_ACTIVITY_SUGGESTIONS,
                             },
                             e.application.id,
                         ),

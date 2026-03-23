@@ -12,9 +12,9 @@ var i = n(627968),
     h = n(793574),
     A = n(688810),
     m = n(941971),
-    g = n(900848),
+    _ = n(900848),
     p = n(65611),
-    _ = n(855725),
+    g = n(855725),
     f = n(532794),
     x = n(366811),
     C = n(345942),
@@ -35,9 +35,9 @@ var i = n(627968),
     G = n(97483),
     U = n(49999),
     P = n(788868),
-    w = n(525736),
+    w = n(665606),
     k = n(985018),
-    V = n(4720),
+    V = n(299446),
     B = n(988572);
 let H = { analyticsSource: { page: D.liQ.GUILD_CHANNEL, section: D.JJy.CHANNEL_LIST, object: D.ZSU.CHANNEL } };
 function F(e) {
@@ -71,9 +71,9 @@ function F(e) {
         })),
         eA = (0, a.bG)([N.A], () => N.A.getChannelId(D.YYv)),
         em = (0, a.bG)([I.A], () => I.A.getChannel(eA)),
-        eg = (0, x.A)((e) => e.guildId),
-        ep = (0, R.ai)(eg),
-        { badge: e_, unread: ef } = (0, O.A)(eh),
+        e_ = (0, x.A)((e) => e.guildId),
+        ep = (0, R.ai)(e_),
+        { badge: eg, unread: ef } = (0, O.A)(eh),
         ex =
             ((F = null != (t = (0, a.bG)([N.A], () => N.A.getVoiceChannelId())) && null != eh[t]),
             (K = (0, a.bG)([E.A], () => {
@@ -100,7 +100,7 @@ function F(e) {
             (Z = !1),
             F ? ((J = !Y), (Q = Y), ($ = K), (Z = q)) : (($ = W), (Z = X)),
             (0, p.oi)({ audio: J, video: Q, screenshare: $, liveStage: !1, isCurrentUserConnected: F, activity: Z })),
-        eC = e_ > 0 ? (0, _.w)(e_) : null,
+        eC = eg > 0 ? (0, g.w)(eg) : null,
         eE = s.useRef(!1),
         { hasAccess: eI } = (0, j.TW)("FavoritesButton"),
         eN = s.useCallback(
@@ -145,7 +145,7 @@ function F(e) {
                 };
             }
         }, [ei, es]),
-        (0, i.jsxs)(g.c, {
+        (0, i.jsxs)(_.c, {
             children: [
                 (0, i.jsx)(m.A, { selected: ep, hovered: er, unread: ef && !eu, className: V.I }),
                 (0, i.jsx)(M.A, {
@@ -159,7 +159,7 @@ function F(e) {
                                 ...en,
                                 ariaLabel: k.intl.formatToPlainString(k.t["/uzRss"], {
                                     guildName: k.intl.string(k.t.wMWyci),
-                                    mentions: e_,
+                                    mentions: eg,
                                 }),
                                 "aria-selected": ep,
                                 to: { pathname: D.BVt.CHANNEL(D.YYv, eA), state: H },

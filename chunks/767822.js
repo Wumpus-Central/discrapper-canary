@@ -10,7 +10,7 @@ var i = n(627968),
     c = n(268749),
     u = n(690420),
     m = n(985018),
-    g = n(81701);
+    g = n(522743);
 function x(e) {
     let { guildId: t, triggerType: n } = e,
         x = s.useMemo(() => () => (0, o._I)(t, n), [t, n]),

@@ -1,4 +1,4 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => E });
 var i = n(627968),
     r = n(64700),
     a = n(158954),
@@ -15,7 +15,7 @@ var i = n(627968),
     g = n(715671),
     A = n(652215),
     x = n(985018),
-    f = n(21219);
+    f = n(168785);
 class C extends r.PureComponent {
     static defaultProps = {
         fullWidth: !1,
@@ -34,7 +34,7 @@ class C extends r.PureComponent {
         d.L3(
             e,
             async () => {
-                let { default: e } = await n.e("55436").then(n.bind(n, 661991));
+                let { default: e } = await n.e("33055").then(n.bind(n, 661991));
                 return (n) => (0, i.jsx)(e, { ...n, libraryApplication: t, onPlay: this.handleClick });
             },
             { onClose: a },
@@ -100,7 +100,7 @@ class C extends r.PureComponent {
                 );
     }
 }
-function I(e) {
+function E(e) {
     let { applicationId: t, libraryApplication: n } = e,
         r = (0, c.p)(),
         [a, s] = (0, l.yK)(

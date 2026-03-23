@@ -1,4 +1,4 @@
-i.d(t, { A: () => c });
+i.d(e, { A: () => c });
 var s = i(627968);
 i(64700);
 var r = i(732955),
@@ -6,10 +6,10 @@ var r = i(732955),
     l = i(381969),
     d = i(920814),
     a = i(985018),
-    o = i(130769);
+    o = i(41715);
 function c() {
-    let { selectedTab: e, isPhantomPreview: t, handlePreviewDismiss: i } = (0, l.k)();
-    return t
+    let { selectedTab: t, isPhantomPreview: e, handlePreviewDismiss: i } = (0, l.k)();
+    return e
         ? (0, s.jsxs)(s.Fragment, {
               children: [
                   (0, s.jsxs)("div", {
@@ -20,14 +20,14 @@ function c() {
                               variant: "text-sm/normal",
                               className: o.cP,
                               children:
-                                  e === d.B.GUILD_PRODUCTS_PREVIEW
+                                  t === d.B.GUILD_PRODUCTS_PREVIEW
                                       ? a.intl.string(a.t.F4Z0nV)
                                       : a.intl.string(a.t.pzTFpM),
                           }),
                       ],
                   }),
                   (0, s.jsx)(r.$nd, {
-                      text: e === d.B.GUILD_PRODUCTS_PREVIEW ? a.intl.string(a.t.YF35pV) : a.intl.string(a.t.r30bky),
+                      text: t === d.B.GUILD_PRODUCTS_PREVIEW ? a.intl.string(a.t.YF35pV) : a.intl.string(a.t.r30bky),
                       size: "sm",
                       variant: "secondary",
                       onClick: i,

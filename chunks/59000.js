@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => _ });
 var i = n(627968),
     s = n(64700),
     l = n(582754),
@@ -9,10 +9,10 @@ var i = n(627968),
     c = n(742589),
     d = n(652215),
     u = n(985018),
-    h = n(3628),
+    h = n(491986),
     A = n(745652),
     m = n(855324);
-let g = () => {
+let _ = () => {
     let e = (0, r.Ay)();
     s.useEffect(() => {
         o.Ay.trackWithMetadata(d.HAw.GUILD_OUTAGE_VIEWED, {});

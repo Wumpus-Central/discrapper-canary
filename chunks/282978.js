@@ -12,16 +12,16 @@ var i = n(627968),
     h = n(793574),
     A = n(688810),
     m = n(919395),
-    g = n(657331),
+    _ = n(657331),
     p = n(696451),
-    _ = n(71393),
+    g = n(71393),
     f = n(287809),
     x = n(583613),
     C = n(403362),
     E = n(58736),
     I = n(518477),
     N = n(985018),
-    b = n(30250);
+    b = n(940688);
 class S {
     userId;
     user;
@@ -39,7 +39,7 @@ class S {
             .toPairs()
             .map((e) => {
                 let [t, n] = e;
-                return [t, n.map((e) => _.A.getGuild(e)?.name).filter(C.Vq)];
+                return [t, n.map((e) => g.A.getGuild(e)?.name).filter(C.Vq)];
             })
             .filter((t) => {
                 let [n] = t;
@@ -86,7 +86,7 @@ class S {
         });
     }
     handleClick = () => {
-        (0, g.openUserProfileModal)({
+        (0, _.openUserProfileModal)({
             userId: this.userId,
             channelId: this.channelId,
             sourceAnalyticsLocations: this.analyticsLocations,
@@ -99,13 +99,13 @@ function T(e) {
         n = t.getRecipientId(),
         l = (0, m.EI)(n),
         a = Array(l.length).fill(null),
-        { analyticsLocations: g } = (0, A.Ay)(h.A.AKA),
+        { analyticsLocations: _ } = (0, A.Ay)(h.A.AKA),
         p = (function (e) {
             let { userId: t, channelId: n, analyticsLocations: i } = e,
                 l = (0, r.bG)([f.default], () => f.default.getUser(t), [t]),
                 [a] = s.useState(() => new S({ user: l, userId: t, channelId: n, analyticsLocations: i }));
             return a.updateData({ userId: t, user: l, channelId: n, analyticsLocations: i }), a;
-        })({ userId: n, analyticsLocations: g, channelId: t.id }),
+        })({ userId: n, analyticsLocations: _, channelId: t.id }),
         [x, C] = s.useState(!1),
         I = s.useCallback(() => {
             C(!0);
@@ -116,7 +116,7 @@ function T(e) {
     return 0 === p.getNicknameGuildPairs().length && 0 === l.length
         ? (0, i.jsx)("div", { className: b.jH })
         : (0, i.jsxs)(A.f5, {
-              value: g,
+              value: _,
               children: [
                   (0, i.jsx)(E.cG, { className: b.yF }),
                   (0, i.jsx)(d.LpS, { text: N.intl.string(N.t.l1QVfj), disableColor: !0, className: b.RV }),
@@ -134,7 +134,7 @@ function T(e) {
                                           c.m,
                                           {
                                               asContainer: !0,
-                                              text: _.A.getGuild(a)?.name,
+                                              text: g.A.getGuild(a)?.name,
                                               position: "bottom",
                                               children: (0, i.jsx)("img", {
                                                   alt: "",

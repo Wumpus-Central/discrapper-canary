@@ -8,7 +8,7 @@ var i = n(627968),
     d = n(342296),
     c = n(988647),
     u = n(403362),
-    _ = n(36668);
+    _ = n(641017);
 let m = (e) => {
         let { member: t, empty: n, guildId: a } = e,
             l = r.useRef(null);

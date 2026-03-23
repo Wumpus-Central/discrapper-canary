@@ -20,7 +20,7 @@ var r = n(627968),
     I = n(652215),
     T = n(788868),
     S = n(985018),
-    y = n(392757);
+    y = n(48187);
 let v = 80;
 function N(e) {
     let { className: t, onClose: n } = e;

@@ -1,8 +1,8 @@
 n.d(t, { A: () => E });
 var i = n(627968),
     a = n(64700),
-    r = n(873263),
-    l = n(311907),
+    l = n(873263),
+    r = n(311907),
     s = n(726249),
     o = n(49463),
     d = n(122204),
@@ -13,9 +13,9 @@ var i = n(627968),
     _ = n(726845),
     m = n(285395),
     g = n(488995),
-    p = n(935266);
+    p = n(34352);
 let E = function () {
-    let e = (0, l.bG)([o.A], () => o.A.hasLoadedExperiments),
+    let e = (0, r.bG)([o.A], () => o.A.hasLoadedExperiments),
         t = _.A.useField("selectedTab"),
         n = (function (e) {
             switch (e) {
@@ -29,7 +29,7 @@ let E = function () {
                     (0, A.xb)(e);
             }
         })(t),
-        E = (0, r.zy)();
+        E = (0, l.zy)();
     return (
         a.useEffect(() => {
             let e = E.pathname,

@@ -10,7 +10,7 @@ var i = n(627968),
     u = n(369496),
     _ = n(580630),
     m = n(349439),
-    g = n(22907);
+    g = n(959349);
 let A = (e) => {
         let { displayName: t, product: n } = e,
             s = (0, m.nF)(n);

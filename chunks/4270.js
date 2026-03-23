@@ -1,8 +1,8 @@
 n.d(t, { A: () => y });
 var i = n(627968),
     a = n(64700),
-    r = n(503698),
-    l = n.n(r),
+    l = n(503698),
+    r = n.n(l),
     s = n(837381),
     o = n(731738),
     d = n(397927),
@@ -22,12 +22,12 @@ var i = n(627968),
     N = n(687599),
     S = n(652215),
     x = n(985018),
-    v = n(38702);
+    v = n(843284);
 function y() {
     let e = a.useRef(null),
         t = (0, I.A)(),
         n = (0, f.I)(),
-        r = (0, g.r)(),
+        l = (0, g.r)(),
         y = (0, c.w)(),
         b = (0, A.A)("message-requests-spam-list"),
         { channelId: O } = (0, E.N)(),
@@ -52,15 +52,15 @@ function y() {
                     T.A,
                     {
                         index: n,
-                        className: l()({ [v.wH]: null != O && O === o, [v.wZ]: null != O && O === s }),
+                        className: r()({ [v.wH]: null != O && O === o, [v.wZ]: null != O && O === s }),
                         channel: a.channel,
                         user: a.user,
-                        hasSingleMessageRequest: r,
+                        hasSingleMessageRequest: l,
                     },
                     o,
                 );
             },
-            [t, r, O],
+            [t, l, O],
         ),
         M = a.useCallback(
             () =>
@@ -101,12 +101,12 @@ function y() {
               navigator: b,
               children: (0, i.jsx)(s.PR, {
                   children: (n) => {
-                      let { ref: a, role: r, ...l } = n;
+                      let { ref: a, role: l, ...r } = n;
                       return (0, i.jsx)(
                           d.B8B,
                           {
                               className: v.p_,
-                              innerRole: r,
+                              innerRole: l,
                               innerAriaLabel: x.intl.string(x.t.e7GWjQ),
                               ref: (t) => {
                                   (e.current = t), (a.current = t?.getScrollerNode() ?? null);
@@ -120,7 +120,7 @@ function y() {
                               sections: [t.length],
                               chunkSize: 30,
                               fade: !0,
-                              ...l,
+                              ...r,
                           },
                           "message-requests-spam-list",
                       );

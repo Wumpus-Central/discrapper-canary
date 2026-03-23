@@ -27,7 +27,7 @@ var n = i(627968),
     U = i(239093),
     I = i(652215),
     S = i(838541),
-    w = i(366906);
+    w = i(26896);
 let O = (e) => {
     let { message: t } = e,
         { attachments: i } = t;

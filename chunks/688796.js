@@ -2,8 +2,8 @@ n.d(t, { G: () => E, default: () => I });
 var i = n(627968);
 n(64700);
 var a = n(397927),
-    r = n(287070),
-    l = n(950191),
+    l = n(287070),
+    r = n(950191),
     s = n(101928),
     o = n(287809),
     d = n(87719),
@@ -14,9 +14,9 @@ var a = n(397927),
     _ = n(652215),
     m = n(339984),
     g = n(985018),
-    p = n(94184);
+    p = n(698290);
 function E(e) {
-    let { uploadType: t, imageSrc: r, analyticsSource: l } = e,
+    let { uploadType: t, imageSrc: l, analyticsSource: r } = e,
         s = o.default.getCurrentUser();
     return (
         null != s &&
@@ -25,9 +25,9 @@ function E(e) {
             return (n) =>
                 (0, i.jsx)(e, {
                     user: s,
-                    imageSrc: r,
+                    imageSrc: l,
                     uploadType: t,
-                    analyticsSource: l,
+                    analyticsSource: r,
                     analyticsLocation: { section: _.JJy.USER_PROFILE, object: _.ZSU.BUTTON_CTA },
                     onSecondaryClick: a.s7G,
                     ...n,
@@ -47,7 +47,7 @@ function I(e) {
             onSecondaryClick: I,
             ...f
         } = e,
-        C = (0, l.Ay)(t.id),
+        C = (0, r.Ay)(t.id),
         { primaryColor: T, secondaryColor: N } = (0, s.A)({
             user: t,
             displayProfile: C,
@@ -92,7 +92,7 @@ function I(e) {
                   LeadingComponent: x
                       ? (0, i.jsx)("div", {
                             className: p.wC,
-                            children: (0, i.jsx)(r.A, {
+                            children: (0, i.jsx)(l.A, {
                                 containerClassName: p.i1,
                                 user: t,
                                 canUsePremiumCustomization: !0,

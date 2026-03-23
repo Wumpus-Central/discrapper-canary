@@ -13,15 +13,15 @@ var r = n(158954),
     m = n(427262),
     h = n(652215),
     p = n(985018),
-    g = n(42441);
+    g = n(563111);
 function A(e) {
     let t,
         n,
         A,
         { author: x, banned: f, channelId: C } = e,
-        I = (0, a.bG)([d.default], () => d.default.getId()),
-        E = m.Ay.useName(x),
-        v = I === x.id,
+        E = (0, a.bG)([d.default], () => d.default.getId()),
+        I = m.Ay.useName(x),
+        v = E === x.id,
         b = (0, a.bG)([c.A, u.A], () => {
             let e = c.A.getChannel(C);
             if (null == e) return !1;
@@ -39,8 +39,8 @@ function A(e) {
             : ((A = p.intl.string(p.t.YVub5y)),
               f
                   ? (t = p.intl.string(p.t["57nBty"]))
-                  : null != E && b
-                    ? ((t = p.intl.formatToPlainString(p.t["9Akp1s"], { username: E })),
+                  : null != I && b
+                    ? ((t = p.intl.formatToPlainString(p.t["9Akp1s"], { username: I })),
                       (n = (0, i.jsx)(r.$nd, {
                           onClick: function () {
                               let { id: e } = x,

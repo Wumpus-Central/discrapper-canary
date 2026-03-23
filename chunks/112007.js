@@ -17,10 +17,10 @@ var i = n(627968),
     x = n(696451),
     f = n(860689),
     C = n(505417),
-    I = n(168428),
-    E = n(652215),
+    E = n(168428),
+    I = n(652215),
     v = n(985018),
-    b = n(42441);
+    b = n(563111);
 function T(e) {
     let t,
         T,
@@ -35,31 +35,31 @@ function T(e) {
         } = e,
         M = P === R.author.id,
         { channel: w, approximate_member_count: D, approximate_presence_count: k } = L,
-        O = L.state === E.elq.ACCEPTING,
+        O = L.state === I.elq.ACCEPTING,
         U = null != w ? (0, A.OY)(w) : null,
         B = null != j,
         G = null != U,
         F = null != U && U.isGuildStageVoice(),
         H = (0, l.Lt)(L.flags ?? 0, a.Q.IS_GUEST_INVITE),
         V = U?.isGuildVoiceOrThread() ?? !1,
-        q = j?.features.has(E.GuildFeatures.HUB) ?? !1,
+        q = j?.features.has(I.GuildFeatures.HUB) ?? !1,
         W = j?.id,
-        { analyticsLocations: z } = (0, _.Ay)(u.A.INVITE_EMBED),
-        [Y, Q] = r.useState(!1),
+        { analyticsLocations: Y } = (0, _.Ay)(u.A.INVITE_EMBED),
+        [z, Q] = r.useState(!1),
         K = r.useCallback(() => Q(!1), []),
         J = r.useRef(null),
         X = (0, s.bG)([x.Ay], () => m.A.canAcceptInvite([x.Ay], L)),
         Z = r.useCallback(() => {
-            Q(!0), (0, c.Pq)(W, "show profile", z);
-        }, [W, z]),
+            Q(!0), (0, c.Pq)(W, "show profile", Y);
+        }, [W, Y]),
         $ = r.useCallback(() => {
             let e = "noop";
             B ? (S(), (e = "transition")) : (N(), (e = "accept")),
-                (0, c.he)({ invite: L, action: e, inviter_id: R.author.id, invite_message_id: R.id }, z);
-        }, [L, R, z, B, S, N]);
+                (0, c.he)({ invite: L, action: e, inviter_id: R.author.id, invite_message_id: R.id }, Y);
+        }, [L, R, Y, B, S, N]);
     if (null == j) {
-        if (null == L.guild) return (0, i.jsx)(I.A, {});
-        (j = f.DY(L.guild)).premiumTier = L.guild.premium_tier ?? E.TVA.NONE;
+        if (null == L.guild) return (0, i.jsx)(E.A, {});
+        (j = f.DY(L.guild)).premiumTier = L.guild.premium_tier ?? I.TVA.NONE;
     }
     let ee = (0, C.l)({ isVoiceChannel: V, isOwnInvite: M, isGuest: H, isHubGuild: q, isStage: F, isStream: !1 });
     return (
@@ -69,7 +69,7 @@ function T(e) {
                 (0, i.jsx)(h.A, {
                     guildId: j.id,
                     name: j.name,
-                    shouldShow: Y,
+                    shouldShow: z,
                     onRequestClose: K,
                     targetElementRef: J,
                     children: () => (0, i.jsx)(g.A.GuildName, { guild: j, ref: J }),
@@ -133,7 +133,7 @@ function T(e) {
                         }),
                     ],
                 }),
-                j.features.has(E.GuildFeatures.HUB) &&
+                j.features.has(I.GuildFeatures.HUB) &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)("div", { className: b.me }),

@@ -1,8 +1,8 @@
 n.d(t, { A: () => v });
 var i = n(627968),
     a = n(64700),
-    r = n(503698),
-    l = n.n(r),
+    l = n(503698),
+    r = n.n(l),
     s = n(837381),
     o = n(311907),
     d = n(201275),
@@ -20,14 +20,14 @@ var i = n(627968),
     C = n(734057),
     T = n(661191),
     N = n(652215),
-    S = n(480437),
-    x = n(50397);
+    S = n(456107),
+    x = n(119907);
 let v = a.memo(function (e) {
     let {
             message: t,
             className: n,
             onContextMenu: a,
-            onClick: r,
+            onClick: l,
             hideSimpleEmbedContent: v = !0,
             channel: y,
             isGroupStart: b,
@@ -61,7 +61,7 @@ let v = a.memo(function (e) {
         Y = (0, _.ZD)(t);
     return (0, i.jsx)(h.A, {
         compact: !1,
-        className: l()(n, S.i, { [x.M1]: (0, u.ec)(t), [x.XN]: D }),
+        className: r()(n, S.i, { [x.M1]: (0, u.ec)(t), [x.XN]: D }),
         disableInteraction: D,
         childrenExecutedCommand: (0, f.A)(t, y, !1),
         childrenHeader: (0, E.A)({
@@ -80,7 +80,7 @@ let v = a.memo(function (e) {
         childrenMessageContent: (0, p.A)(e, w),
         childrenSystemMessage: (0, I.A)({ ...e, disableInteraction: D }),
         onContextMenu: a,
-        onClick: r,
+        onClick: l,
         hasThread: R && null != B && t.hasFlag(N.pr7.HAS_THREAD),
         hasReply: !1,
         "aria-labelledby": F,

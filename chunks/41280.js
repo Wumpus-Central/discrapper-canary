@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => x });
 var a = n(627968),
     i = n(64700),
     l = n(503698),
@@ -9,21 +9,21 @@ var a = n(627968),
     c = n(311907),
     u = n(397927),
     m = n(775602),
-    h = n(67316);
-let x = { mass: 10, tension: 550, friction: 140 };
-function p(e) {
+    h = n(314098);
+let p = { mass: 10, tension: 550, friction: 140 };
+function x(e) {
     let { className: t, pageMultiplier: n } = e,
         l = (0, c.bG)([m.A], () => m.A.useReducedMotion),
-        [r, p] = i.useState({ x: 0, y: 0 }),
+        [r, x] = i.useState({ x: 0, y: 0 }),
         g = i.useMemo(
             () =>
                 o().throttle((e) => {
-                    l || p({ x: (window.innerWidth - e.pageX * n) / 90, y: (window.innerHeight - e.pageY * n) / 90 });
+                    l || x({ x: (window.innerWidth - e.pageX * n) / 90, y: (window.innerHeight - e.pageY * n) / 90 });
                 }, 20),
             [n, l],
         );
     i.useEffect(() => (window.addEventListener("mousemove", g), () => window.removeEventListener("mousemove", g)), [g]);
-    let [_, f] = (0, u.zhh)(() => ({ x: 0, y: 0, config: x }));
+    let [_, f] = (0, u.zhh)(() => ({ x: 0, y: 0, config: p }));
     return (
         i.useEffect(() => {
             f({ x: r.x, y: r.y });

@@ -12,10 +12,10 @@ var i = n(627968),
     h = n(736653),
     A = n(531685),
     m = n(85448),
-    g = n(806931),
-    p = n(941493),
-    _ = n(641254),
-    f = n(861303);
+    _ = n(806931),
+    p = n(254187),
+    g = n(20976),
+    f = n(162253);
 let x = {
     SCALE_MIN: 0.7,
     SCALE_MAX: 1,
@@ -85,7 +85,7 @@ class C extends s.PureComponent {
             style: this.getWidthStyle(),
             children: [
                 (0, i.jsx)("div", {
-                    className: a()(p.XY, _.xM, _.wq, _.Hu),
+                    className: a()(p.XY, g.xM, g.wq, g.Hu),
                     children: (0, i.jsx)(r.A.div, { className: l, style: this.getSpriteStyle() }),
                 }),
                 (0, i.jsx)(r.A.div, { style: this.getScaleStyle(), children: t }),
@@ -95,12 +95,12 @@ class C extends s.PureComponent {
 }
 function E(e) {
     var t;
-    let { participants: n, onContextMenu: s, className: l, onClick: r, width: d, guildId: _ } = e,
+    let { participants: n, onContextMenu: s, className: l, onClick: r, width: d, guildId: g } = e,
         f = (0, h.Ay)(),
         x = ((t = n.length), ((0, u.FT9)(u._3J.SIZE_80) + 16) * t > d ? u._3J.SIZE_40 : u._3J.SIZE_80),
         E = (0, o.bG)([A.A], () => A.A.isFocused()),
         I = n.map((e) => {
-            if (e.type !== g.lp.USER) return null;
+            if (e.type !== _.lp.USER) return null;
             let { user: t, voiceState: n, speaking: l, ringing: a } = e;
             return (0, i.jsx)(
                 C,
@@ -116,7 +116,7 @@ function E(e) {
                             m.A,
                             {
                                 userId: t.id,
-                                src: t.getAvatarURL(_, (0, u.FT9)(x), l && E),
+                                src: t.getAvatarURL(g, (0, u.FT9)(x), l && E),
                                 size: x,
                                 muted: n?.isVoiceMuted() ?? !1,
                                 deafen: n?.isVoiceDeafened() ?? !1,

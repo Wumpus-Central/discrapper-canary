@@ -11,10 +11,10 @@ var i = n(989349),
     u = n(275759),
     m = n(21119),
     h = n(594061),
-    x = n(617617),
-    p = n(287809),
-    g = n(98806),
-    _ = n(930821);
+    p = n(617617),
+    x = n(287809),
+    g = n(105040),
+    _ = n(661251);
 function f(e) {
     let t = new Date(e);
     return (
@@ -31,9 +31,9 @@ function v() {
         v = (0, s.bG)([u.Ay], () => u.Ay.getHighestAffinityFriendAnniversaries()),
         b = (0, s.bG)([u.Ay], () => u.Ay.getHighAffinityFriendAnniversaries()),
         j = (0, s.bG)([u.Ay], () => u.Ay.getProfilePopoutGiftIntentsDismissMap()),
-        A = (0, s.bG)([x.A], () => {
+        A = (0, s.bG)([p.A], () => {
             let e =
-                x.A.settings.userContent?.recurringDismissibleContentStates[r.M.GIFT_INTENT_MESSAGE]?.lastDismissedAtMs;
+                p.A.settings.userContent?.recurringDismissibleContentStates[r.M.GIFT_INTENT_MESSAGE]?.lastDismissedAtMs;
             if (null == e || "0" === e) return null;
             let t = Number(e);
             return Number.isNaN(t) ? null : t;
@@ -113,7 +113,7 @@ function v() {
                                                     "Highest Affinity Friend Anniversaries (Eligible for Notification):",
                                             }),
                                             v.map((e) => {
-                                                let t = p.default.getUser(e),
+                                                let t = x.default.getUser(e),
                                                     n = t?.username ?? `Unknown User (${e})`;
                                                 return (0, a.jsxs)(
                                                     o.Text,
@@ -132,7 +132,7 @@ function v() {
                                                 children: "High Affinity Friend Anniversaries:",
                                             }),
                                             b.map((e) => {
-                                                let t = p.default.getUser(e),
+                                                let t = x.default.getUser(e),
                                                     n = t?.username ?? `Unknown User (${e})`;
                                                 return (0, a.jsxs)(
                                                     o.Text,
@@ -239,7 +239,7 @@ function v() {
                                         }),
                                         Object.entries(i).map((e) => {
                                             let [t, n] = e,
-                                                i = p.default.getUser(t),
+                                                i = x.default.getUser(t),
                                                 l = i?.username ?? `Unknown User (${t})`;
                                             return (0, a.jsxs)(
                                                 o.Text,
@@ -357,7 +357,7 @@ function v() {
                                         }),
                                         Object.entries(j).map((e) => {
                                             let [t, n] = e,
-                                                i = p.default.getUser(t),
+                                                i = x.default.getUser(t),
                                                 l = i?.username ?? `Unknown User (${t})`;
                                             return (0, a.jsxs)(
                                                 o.Text,

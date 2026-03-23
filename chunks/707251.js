@@ -12,9 +12,9 @@ var i = n(627968),
     h = n(688810),
     A = n(313961),
     m = n(384059),
-    g = n(47167),
+    _ = n(47167),
     p = n(689874),
-    _ = n(509536),
+    g = n(509536),
     f = n(58736),
     x = n(742589),
     C = n(977851),
@@ -31,18 +31,18 @@ var i = n(627968),
     O = n(652215),
     L = n(788868),
     M = n(985018),
-    D = n(142829);
+    D = n(20531);
 function G(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, showRequestToSpeakSidebar: s } = e,
         { analyticsLocations: l, newestAnalyticsLocation: o } = (0, h.Ay)(u.A.VOICE_CHANNEL_HEADER),
         c = (0, r.bG)([A.A], () => A.A.getChatOpen(t.id), [t.id]),
-        g = (0, T.Ni)(t.id),
-        _ = (0, b.zy)(t.id, S.ip.REQUESTED_TO_SPEAK_ONLY);
+        _ = (0, T.Ni)(t.id),
+        g = (0, b.zy)(t.id, S.ip.REQUESTED_TO_SPEAK_ONLY);
     return (0, i.jsxs)(h.f5, {
         value: l,
         children: [
             (0, i.jsx)(p.A, { channelId: t.id }, "clips-enabled-indicator"),
-            !s && g
+            !s && _
                 ? (0, i.jsx)("div", {
                       className: a()(D.x6, { [D.vc]: c }),
                       children: (0, i.jsx)(j.A, {
@@ -50,7 +50,7 @@ function G(e) {
                               c && d.A.updateChatOpen(t.id, !1), (0, m.X)(o, m.O.OPEN_REQUEST_TO_SPEAK_SIDEBAR), n();
                           },
                           showRequestToSpeakSidebar: s,
-                          numRequestToSpeak: _,
+                          numRequestToSpeak: g,
                       }),
                   })
                 : null,
@@ -69,7 +69,7 @@ function G(e) {
 }
 function U(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, showRequestToSpeakSidebar: l } = e,
-        u = (0, g.Ay)(t),
+        u = (0, _.Ay)(t),
         h = (0, r.bG)([y.A], () => y.A.getStageInstanceByChannel(t.id)),
         A = (0, b.uy)(t.id),
         m = (0, b.zy)(t.id, S.ip.AUDIENCE),
@@ -181,7 +181,7 @@ function U(e) {
                                             (0, i.jsx)(c.Button, {
                                                 variant: "expressive",
                                                 onClick: () => {
-                                                    (0, _.K)({
+                                                    (0, g.K)({
                                                         guildId: t.guild_id,
                                                         location: { section: O.JJy.STAGE_VIDEO_LIMIT },
                                                     }),

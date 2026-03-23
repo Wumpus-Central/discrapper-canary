@@ -6,8 +6,8 @@ var i = n(503698),
     s = n.n(i),
     a = n(397927),
     o = n(985018),
-    l = n(993004),
-    u = n(641254);
+    l = n(341806),
+    u = n(20976);
 function c() {
     return (0, r.jsxs)("div", {
         className: s()(l.iG, u.Uu, u.Hu),

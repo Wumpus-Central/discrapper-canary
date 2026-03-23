@@ -10,7 +10,7 @@ var s = n(503698),
     c = n(128450),
     u = n(339984),
     _ = n(985018),
-    m = n(738296);
+    m = n(52506);
 function g(e) {
     let {
             showRemoveBannerButton: t,
@@ -25,7 +25,7 @@ function g(e) {
             withHighlight: E = !1,
         } = e,
         { newestAnalyticsLocation: S } = (0, o.Ay)(),
-        C = E ? r.wLn : a.$n;
+        f = E ? r.wLn : a.$n;
     return (0, i.jsx)(c.A, {
         className: A,
         title: _.intl.string(_.t.Vgdusv),
@@ -36,7 +36,7 @@ function g(e) {
         children: (0, i.jsxs)("div", {
             className: m.NC,
             children: [
-                (0, i.jsx)(C, {
+                (0, i.jsx)(f, {
                     className: l()({ [m.yj]: E }),
                     size: a.$n.Sizes.SMALL,
                     onClick: () =>

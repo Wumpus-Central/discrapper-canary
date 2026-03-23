@@ -55,7 +55,7 @@ var l = n(627968),
     en = n(837921),
     el = n(652215),
     es = n(985018),
-    ei = n(477549);
+    ei = n(45119);
 let ea = en.Ay.getEnableHardwareAcceleration() ? x.JsQ : x.euF,
     er = { offset: { top: 2, bottom: 2, right: 4 } },
     eu = (e) => {
@@ -256,7 +256,7 @@ function eA(e) {
                                   n.e("97262"),
                                   n.e("42128"),
                                   n.e("39778"),
-                                  n.e("40009"),
+                                  n.e("76779"),
                               ]).then(n.bind(n, 385913));
                               return (n) => (0, l.jsx)(e, { ...n, user: r, channel: t, channelSelected: i });
                           },
@@ -282,7 +282,7 @@ function eA(e) {
             loop: em,
             boldFontOpacity: 0.9,
         }),
-        e3 = ew
+        e6 = ew
             ? (0, l.jsxs)(l.Fragment, {
                   children: [
                       e9,
@@ -297,12 +297,12 @@ function eA(e) {
               })
             : e9,
         e7 = s.useRef(null),
-        e6 = (0, w.W)({ location: "PrivateChannel" }) && r?.displayNameStyles != null,
+        e3 = (0, w.W)({ location: "PrivateChannel" }) && r?.displayNameStyles != null,
         e4 = [(0, y.Ay)({ channel: t, unread: eq }), (0, y.r2)({ channel: t, muted: eG, userStatus: B })]
             .filter(Boolean)
             .join(", "),
-        e8 = (0, S.bG)([$.Ay], () => $.Ay.lastMessageId(t.id)),
-        { waveShouldShow: e5, wavePressed: te } = (0, D.A)(t, e8),
+        e5 = (0, S.bG)([$.Ay], () => $.Ay.lastMessageId(t.id)),
+        { waveShouldShow: e8, wavePressed: te } = (0, D.A)(t, e5),
         { showClose: tt } = R.A.useConfig({ location: "PrivateChannel" }),
         tn = (0, p.A)(() => {
             let e = eL.current?.getBoundingClientRect() ?? null,
@@ -349,7 +349,7 @@ function eA(e) {
                                     content: e7,
                                     placement: H.u.CHANNEL,
                                 }),
-                                (0, l.jsx)("div", { className: ei.lU, ref: eL, children: e3 }),
+                                (0, l.jsx)("div", { className: ei.lU, ref: eL, children: e6 }),
                                 (0, l.jsx)(o.N_, {
                                     style: eR,
                                     innerRef: eh,
@@ -432,7 +432,7 @@ function eA(e) {
                                                       iconClassName: eV ? ei.tG : void 0,
                                                   })
                                                 : null,
-                                        name: (0, l.jsx)(h.A, { className: a()(ei.uN, { [ei.e8]: e6 }), children: e3 }),
+                                        name: (0, l.jsx)(h.A, { className: a()(ei.uN, { [ei.e8]: e3 }), children: e6 }),
                                         decorators: t.isSystemDM()
                                             ? (0, l.jsx)(M.A, {
                                                   className: ei.G$,
@@ -440,7 +440,7 @@ function eA(e) {
                                                   verified: !0,
                                               })
                                             : null,
-                                        withDisplayNameStyles: e6,
+                                        withDisplayNameStyles: e3,
                                     }),
                                 }),
                                 (0, l.jsxs)("div", {
@@ -448,10 +448,10 @@ function eA(e) {
                                     children: [
                                         eF ? (0, l.jsx)(ec, {}) : null,
                                         ek ? (0, l.jsx)(ed, {}) : null,
-                                        e5 && null != eB
+                                        e8 && null != eB
                                             ? (0, l.jsx)(eo, { channelName: eB, onClick: te, showNameplate: ez })
                                             : null,
-                                        tt || !e5
+                                        tt || !e8
                                             ? (0, l.jsx)(eu, {
                                                   icon: x.PGe,
                                                   "aria-label": eU

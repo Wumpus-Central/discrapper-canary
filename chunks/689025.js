@@ -12,9 +12,9 @@ var i = n(627968),
     h = n(442433),
     A = n(676002),
     m = n(296216),
-    g = n(963027),
+    _ = n(963027),
     p = n(202384),
-    _ = n(51758),
+    g = n(51758),
     f = n(721592),
     x = n(214660),
     C = n(378570),
@@ -41,8 +41,8 @@ n(281405);
 var V = n(652215),
     B = n(349828),
     H = n(985018),
-    F = n(719550),
-    K = n(24383);
+    F = n(728444),
+    K = n(834201);
 class W extends U.Ay {
     channelItemRef = s.createRef();
     state = { shouldShowGuildVerificationPopout: !1 };
@@ -68,7 +68,7 @@ class W extends U.Ay {
     handleClick = () => {
         let { channel: e, locked: t, connected: n, unverifiedAccount: i } = this.props,
             s = e.getGuildId();
-        null != s && (0, _.V)(s) && (0, p.Ze)(s),
+        null != s && (0, g.V)(s) && (0, p.Ze)(s),
             i && this.setState({ shouldShowGuildVerificationPopout: !0 }),
             t || n || e.isRoleSubscriptionTemplatePreviewChannel() || (0, E.av)(e),
             __OVERLAY__ || (0, C.iN)(e.id);
@@ -151,7 +151,7 @@ class W extends U.Ay {
                 canMoveMembers: A,
                 stageInstance: m,
                 isSubscriptionGated: p,
-                needSubscriptionToAccess: _,
+                needSubscriptionToAccess: g,
                 unread: f,
                 resolvedUnreadSetting: x,
                 mentionCount: C,
@@ -192,12 +192,12 @@ class W extends U.Ay {
                                     connectDragPreview: u,
                                     subtitle: this.renderSubtitle(),
                                     isFavoriteSuggestion: E,
-                                    "aria-label": (0, g.Ay)({
+                                    "aria-label": (0, _.Ay)({
                                         channel: e,
                                         unread: f,
                                         mentionCount: C,
                                         isSubscriptionGated: p,
-                                        needSubscriptionToAccess: _,
+                                        needSubscriptionToAccess: g,
                                     }),
                                     children: [
                                         E && this.renderAcceptSuggestionButton(),
@@ -239,8 +239,8 @@ function z(e) {
         h = (0, r.bG)([v.A], () => v.A.isCollapsed(n.parent_id)),
         A = (0, T.Ay)(n.id),
         m = (0, r.bG)([b.A], () => b.A.getStageInstanceByChannel(n.id), [n.id]),
-        g = (0, I.zy)(n.id, N.ip.AUDIENCE),
-        { isSubscriptionGated: p, needSubscriptionToAccess: _ } = (0, f.A)(n.id),
+        _ = (0, I.zy)(n.id, N.ip.AUDIENCE),
+        { isSubscriptionGated: p, needSubscriptionToAccess: g } = (0, f.A)(n.id),
         x = (0, r.bG)([M.Ay], () => M.Ay.isFavorite(t.id, n.id)),
         C = (0, S.xn)(n.id),
         E = (0, P.A)({
@@ -249,17 +249,17 @@ function z(e) {
             isChannelCollapsed: a,
             voiceStates: o,
             isSubscriptionGated: p,
-            needSubscriptionToAccess: _,
+            needSubscriptionToAccess: g,
             enableConnectedUserLimit: C || (n.userLimit > 0 && n.userLimit < V.RCc),
         }),
         j = e.connected && null == E;
     return (0, i.jsx)(Y, {
         categoryCollapsed: h,
         connectAction: A,
-        numAudience: g,
+        numAudience: _,
         stageInstance: m,
         isSubscriptionGated: p,
-        needSubscriptionToAccess: _,
+        needSubscriptionToAccess: g,
         ...c,
         ...u,
         ...e,

@@ -1,8 +1,8 @@
 n.d(t, { A: () => g });
 var i = n(627968),
     a = n(64700),
-    r = n(835245),
-    l = n(607399),
+    l = n(835245),
+    r = n(607399),
     s = n(732955),
     o = n(397927),
     d = n(954571),
@@ -11,14 +11,14 @@ var i = n(627968),
     A = n(652215),
     h = n(613057),
     _ = n(985018),
-    m = n(9043);
+    m = n(742249);
 function g(e) {
     let { applicationId: t } = e.match.params,
         [g, p] = a.useState(!1),
         E = a.useRef(!1),
         [I, f] = a.useState(null),
-        C = !c.isPlatformEmbedded && !l.Fr && !g,
-        T = a.useMemo(() => (0, r.A)(), []);
+        C = !c.isPlatformEmbedded && !r.Fr && !g,
+        T = a.useMemo(() => (0, l.A)(), []);
     return (a.useEffect(() => {
         C &&
             !0 !== E.current &&

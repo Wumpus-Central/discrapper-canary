@@ -7,7 +7,7 @@ var r = n(989349),
     s = n(397927),
     o = n(239093),
     d = n(985018),
-    c = n(972678);
+    c = n(153400);
 function u(e) {
     if (null == e.message.embeds || null == e.message.embeds[0].fields) return null;
     let t = e.message.embeds[0],
@@ -20,7 +20,7 @@ function u(e) {
         : (0, i.jsxs)(s.DUT, {
               onClick: () => {
                   (0, s.mMO)(async () => {
-                      let { default: e } = await Promise.all([n.e("83518"), n.e("9407"), n.e("70660")]).then(
+                      let { default: e } = await Promise.all([n.e("83518"), n.e("9407"), n.e("1708")]).then(
                           n.bind(n, 956450),
                       );
                       return (t) =>

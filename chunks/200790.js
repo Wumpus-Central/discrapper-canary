@@ -12,7 +12,7 @@ var s = n(503698),
     _ = n(919395),
     m = n(128450),
     g = n(985018),
-    A = n(6022);
+    A = n(223772);
 function x(e) {
     let { user: t, guild: n, className: s, sectionTitle: x, forcedDivider: h = !1, withTutorial: p = !1 } = e,
         { analyticsLocations: T } = (0, o.Ay)(),

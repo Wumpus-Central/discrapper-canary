@@ -1,8 +1,8 @@
 n.d(t, { A: () => s });
 var i = n(627968),
     a = n(64700),
-    r = n(775135),
-    l = n(156e3);
+    l = n(775135),
+    r = n(935318);
 function s(e) {
     let { guild: t, setHasSubheader: n } = e,
         s = a.useRef(null);
@@ -11,6 +11,6 @@ function s(e) {
             let e = s.current;
             null != e && n(e.childNodes.length > 0);
         }),
-        (0, i.jsx)("div", { className: l.k, ref: s, children: (0, i.jsx)(r.A, { guild: t }) })
+        (0, i.jsx)("div", { className: r.k, ref: s, children: (0, i.jsx)(l.A, { guild: t }) })
     );
 }

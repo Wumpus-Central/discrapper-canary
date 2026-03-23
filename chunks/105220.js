@@ -1,8 +1,8 @@
 n.d(t, { A: () => N });
 var i = n(627968),
     a = n(64700),
-    r = n(284009),
-    l = n.n(r),
+    l = n(284009),
+    r = n.n(l),
     s = n(397927),
     o = n(143991),
     d = n(942857),
@@ -18,7 +18,7 @@ var i = n(627968),
     I = n(249477),
     f = n(507060),
     C = n(652215),
-    T = n(563760);
+    T = n(92854);
 let N = a.memo(function () {
     let e = (0, d.A)(),
         t = a.useRef(null),
@@ -26,7 +26,7 @@ let N = a.memo(function () {
             let { duration: n, intensity: i } = e;
             if (A.A.useReducedMotion || !p.A.isFocused()) return;
             let { current: a } = t;
-            l()(null != a, "Shakeable is shaken when not mounted"), a.shake(n, i);
+            r()(null != a, "Shakeable is shaken when not mounted"), a.shake(n, i);
         }, []);
     return (
         a.useEffect(() => (u.A.setLayout(c.Ay), u.A.enable(), () => u.A.disable()), []),

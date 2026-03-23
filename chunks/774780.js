@@ -18,7 +18,7 @@ var i = n(627968),
     A = n(411335),
     f = n(652215),
     j = n(985018),
-    N = n(130408);
+    N = n(64638);
 function E(e) {
     let { guildId: t, setPreventNavigation: n = () => {} } = e,
         { editingRule: E, setEditingRule: b } = (0, x.U)(),

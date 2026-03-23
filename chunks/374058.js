@@ -10,8 +10,8 @@ var a = n(627968),
     u = n(397927),
     m = n(297413),
     h = n(58736),
-    x = n(379078),
-    p = n(704554),
+    p = n(379078),
+    x = n(704554),
     g = n(287809),
     _ = n(957565),
     f = n(405269),
@@ -22,8 +22,8 @@ var a = n(627968),
     C = n(303054),
     y = n(231643),
     T = n(985018),
-    S = n(891026),
-    E = n(930821);
+    S = n(76584),
+    E = n(661251);
 let N = [
     {
         key: "event",
@@ -73,8 +73,8 @@ function k(e) {
         })
     );
 }
-let R = new Set(["client_performance_cpu", "client_performance_memory"]),
-    O = [
+let O = new Set(["client_performance_cpu", "client_performance_memory"]),
+    R = [
         {
             id: "details",
             name: "Details",
@@ -86,7 +86,7 @@ let R = new Set(["client_performance_cpu", "client_performance_memory"]),
                         filteredEvents: d,
                     } = e,
                     c = g.default.getUser(l),
-                    x = o()(i);
+                    p = o()(i);
                 return (0, a.jsxs)("div", {
                     "data-mtctest-ignore": "true",
                     children: [
@@ -130,8 +130,8 @@ let R = new Set(["client_performance_cpu", "client_performance_memory"]),
                                     copyValue: i.toISOString(),
                                     children: (0, a.jsxs)("time", {
                                         dateTime: i.toISOString(),
-                                        title: (0, f.i$)(x, "LLLL"),
-                                        children: ["(", o().locale(), ") ", (0, f.mk)(x)],
+                                        title: (0, f.i$)(p, "LLLL"),
+                                        children: ["(", o().locale(), ") ", (0, f.mk)(p)],
                                     }),
                                 }),
                                 null != c &&
@@ -150,7 +150,7 @@ let R = new Set(["client_performance_cpu", "client_performance_memory"]),
                         (0, a.jsx)(I, {
                             children: Object.entries(n).map((e) => {
                                 let [n, i] = e,
-                                    l = R.has(n)
+                                    l = O.has(n)
                                         ? ((e, t, n) => {
                                               let a = e.filter((e) => e.event === t);
                                               if (0 === a.length) return { average: null, count: 0 };
@@ -226,7 +226,7 @@ let R = new Set(["client_performance_cpu", "client_performance_memory"]),
         networkActions: { label: "Network", filter: (e) => e.event.startsWith("network_action") },
     },
     D = {
-        searchType: x.n.REGEX,
+        searchType: p.n.REGEX,
         searchStringGenerator: (e) => {
             let { event: t, properties: n } = e;
             return null != n.location ? [t, n.location] : t;
@@ -239,17 +239,17 @@ function M() {
         l = (0, d.bG)([v.A], () => v.A.loggedEventsVersion),
         [r, o] = i.useState(() => Object.keys(w)),
         [m, h] = i.useState(v.A.loggedEvents),
-        x = i.useCallback((e) => {
+        p = i.useCallback((e) => {
             h(e);
         }, []);
-    (0, p.RT)(t, v.A.loggedEvents, x, D, [l]);
+    (0, x.RT)(t, v.A.loggedEvents, p, D, [l]);
     let g = m.filter((e) => {
             for (let t of r) if (w[t].filter(e)) return !0;
             return !1;
         }),
         [_, f] = i.useState(void 0),
         j = g.find((e) => e.key === _),
-        { TabBar: I, renderSelectedTab: k } = (0, y.Ay)({ tabs: O }, []);
+        { TabBar: I, renderSelectedTab: k } = (0, y.Ay)({ tabs: R }, []);
     return (0, a.jsxs)("div", {
         ref: e,
         className: s()(E.nd, S.nd),

@@ -17,8 +17,8 @@ var i = n(627968),
     x = n(207371),
     f = n(205184),
     C = n(773669),
-    I = n(961350),
-    E = n(734057),
+    E = n(961350),
+    I = n(734057),
     v = n(994500),
     b = n(967198),
     T = n(287809),
@@ -33,7 +33,7 @@ var i = n(627968),
     w = n(574660),
     D = n(768349),
     k = n(985018),
-    O = n(355208);
+    O = n(22658);
 function U(e) {
     let { app: t, linkType: n, activityCustomId: a, activityReferrerId: l, message: o, onView: g } = e,
         { name: f, bot: C } = (t = (0, P.b)(t)),
@@ -41,12 +41,12 @@ function U(e) {
         b = (0, h.Ag)(t),
         T = y.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, bot: C }),
         { staticBannerSrc: S, videoBannerSrc: L, bannerAspectRatio: D } = (0, M.f)(t),
-        O = (0, s.bG)([I.default], () => l ?? I.default.getId(), [l]),
+        O = (0, s.bG)([E.default], () => l ?? E.default.getId(), [l]),
         { analyticsLocations: U } = (0, _.Ay)(u.A.APP_MESSAGE_EMBED),
         { currentChannelId: F, instanceId: H, isCurrentlyInInstance: V, canLaunchInChannel: q } = (0, N.w)(t.id),
         W = (0, c.A)(),
-        z = (0, p.Vr)({ context: { type: "contextless" }, applicationId: t.id, botUserId: C?.id }),
-        Y = null != v && b && z,
+        Y = (0, p.Vr)({ context: { type: "contextless" }, applicationId: t.id, botUserId: C?.id }),
+        z = null != v && b && Y,
         Q = q && b,
         K = (0, x.e)(t),
         J = (0, w.F)(t),
@@ -86,7 +86,7 @@ function U(e) {
                                   disabled: V,
                               }),
                           !Q &&
-                              Y &&
+                              z &&
                               e.push({
                                   label: k.intl.string(k.t.JeK1Wg),
                                   trackingArea: R.kY.PLAY,
@@ -103,7 +103,7 @@ function U(e) {
                     : null != X && e.push(X),
                 e
             );
-        }, [b, X, K, t.id, Q, Y, H, V, F, W, a, O, U, v]),
+        }, [b, X, K, t.id, Q, z, H, V, F, W, a, O, U, v]),
         $ = b ? (0, i.jsx)(G, { app: t }) : (0, i.jsx)(B, { app: t });
     return (0, i.jsx)(j.h, {
         title: f,
@@ -121,7 +121,7 @@ function U(e) {
             referrerId: O,
             activityCustomId: a,
             onView: g,
-            guildId: E.A.getChannel(o.channel_id)?.guild_id,
+            guildId: I.A.getChannel(o.channel_id)?.guild_id,
             channelId: o.channel_id,
             messageId: o.id,
         },

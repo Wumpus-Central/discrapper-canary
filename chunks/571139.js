@@ -14,18 +14,18 @@ var l = n(503698),
     T = n(202384),
     A = n(513461),
     I = n(709977),
-    p = n(212455),
-    N = n(652215),
+    N = n(212455),
+    p = n(652215),
     m = n(746080),
     R = n(985018),
-    h = n(463149),
-    S = n(504226);
+    h = n(121615),
+    S = n(1624);
 let g = () => {
     let e = (0, a.bG)([_.A], () => _.A.getGuildId(), []),
         t = (0, a.bG)([d.A], () => d.A.getGuild(e), [e]),
-        l = (0, a.bG)([p.A], () => (null != e ? p.A.getRequest(e) : null), [e]),
+        l = (0, a.bG)([N.A], () => (null != e ? N.A.getRequest(e) : null), [e]),
         g = (0, s.zy)(),
-        C = (0, u.B)(g.pathname, N.BVt.CHANNEL(t?.id, m.VV.GUILD_ONBOARDING))?.isExact === !0;
+        C = (0, u.B)(g.pathname, p.BVt.CHANNEL(t?.id, m.VV.GUILD_ONBOARDING))?.isExact === !0;
     if (null == t || !(0, I.Qd)(t) || C) return null;
     let O = l?.applicationStatus ?? A.B5.STARTED,
         y = null,

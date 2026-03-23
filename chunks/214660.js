@@ -13,12 +13,12 @@ var l = n(503698),
     h = n(915089),
     A = n(557722),
     m = n(834942),
-    g = n(287809),
+    _ = n(287809),
     p = n(652215),
-    _ = n(53516),
+    g = n(53516),
     f = n(985018),
-    x = n(178768),
-    C = n(513679),
+    x = n(43310),
+    C = n(248789),
     E = (((i = {})[(i.VOICE = 0)] = "VOICE"), i);
 let I = (e) => {
     let { type: t, guildId: i, closePopout: l } = e,
@@ -76,7 +76,7 @@ let I = (e) => {
                                                                 async () => {
                                                                     let { default: e } = await Promise.all([
                                                                         n.e("84704"),
-                                                                        n.e("24676"),
+                                                                        n.e("45668"),
                                                                     ]).then(n.bind(n, 615715));
                                                                     return (t) =>
                                                                         (0, s.jsx)(e, {
@@ -84,14 +84,14 @@ let I = (e) => {
                                                                             ...t,
                                                                         });
                                                                 },
-                                                                { modalKey: _.V },
+                                                                { modalKey: g.V },
                                                             )
                                                           : N &&
                                                             (d.A.verifyResend(),
                                                             (0, o.A)({
                                                                 title: f.intl.string(f.t.LykQYk),
                                                                 subtitle: f.intl.format(f.t.azKEPy, {
-                                                                    email: g.default.getCurrentUser()?.email,
+                                                                    email: _.default.getCurrentUser()?.email,
                                                                 }),
                                                             })),
                                                         l();

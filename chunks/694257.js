@@ -3,7 +3,7 @@ n.d(t, { A: () => r }), n(321073);
 var i = n(627968),
     s = n(64700),
     l = n(945777),
-    a = n(752223);
+    a = n(58249);
 let r = s.memo(function (e) {
     let { channel: t, participants: n, maxTiles: s } = e;
     if (0 === n.length) return null;

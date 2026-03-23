@@ -1,4 +1,4 @@
-i.d(t, { h: () => j });
+i.d(e, { h: () => j });
 var s = i(627968),
     r = i(64700),
     n = i(503698),
@@ -12,20 +12,20 @@ var s = i(627968),
     x = i(558060),
     h = i(284683),
     _ = i(985018),
-    p = i(564032);
-function j(e) {
-    let { guildId: t, productId: i } = e,
-        { listingsLoaded: n } = (0, C.bb)(t),
-        d = (0, C.fZ)(t),
+    p = i(77142);
+function j(t) {
+    let { guildId: e, productId: i } = t,
+        { listingsLoaded: n } = (0, C.bb)(e),
+        d = (0, C.fZ)(e),
         j = r.useRef(null),
         { sortOption: g } = (0, x.R)(),
         m = r.useMemo(
             () =>
-                (function (e, t) {
+                (function (t, e) {
                     let i, s;
-                    switch (t) {
+                    switch (e) {
                         case h.p$.NAME:
-                            (i = (e) => e.name.toLowerCase()), (s = "asc");
+                            (i = (t) => t.name.toLowerCase()), (s = "asc");
                             break;
                         case h.p$.PRICE_ASC:
                             (i = "price_tier"), (s = "asc");
@@ -37,9 +37,9 @@ function j(e) {
                             (i = "published_at"), (s = "desc");
                             break;
                         default:
-                            return e;
+                            return t;
                     }
-                    return a().orderBy(e, [i], [s]);
+                    return a().orderBy(t, [i], [s]);
                 })(d, g),
             [d, g],
         );
@@ -47,7 +47,7 @@ function j(e) {
         ? (0, s.jsx)("ul", {
               className: p.Ui,
               "aria-label": _.intl.string(_.t.qe4kTa),
-              children: m.map((e) =>
+              children: m.map((t) =>
                   (0, s.jsx)(
                       "li",
                       {
@@ -55,22 +55,22 @@ function j(e) {
                           children: (0, s.jsx)(
                               "div",
                               {
-                                  className: l()(p.Ux, { [p.Oj]: e.id === i }),
-                                  ref: e.id === i ? j : void 0,
+                                  className: l()(p.Ux, { [p.Oj]: t.id === i }),
+                                  ref: t.id === i ? j : void 0,
                                   onLoad: () => {
-                                      let t = j.current;
-                                      null != t &&
-                                          e.id === i &&
-                                          (t.scrollIntoView({ behavior: "smooth", block: "center" }),
+                                      let e = j.current;
+                                      null != e &&
+                                          t.id === i &&
+                                          (e.scrollIntoView({ behavior: "smooth", block: "center" }),
                                           setTimeout(() => {
-                                              t.classList.remove(p.Oj);
+                                              e.classList.remove(p.Oj);
                                           }, 2e3));
                                   },
                                   children: (0, s.jsx)(
                                       u.i,
                                       {
-                                          guildProductListing: e,
-                                          guildId: t,
+                                          guildProductListing: t,
+                                          guildId: e,
                                           location: c.A.GUILD_SHOP_PAGE,
                                           shouldShowFullDescriptionButton: !1,
                                           hideRoleTag: !0,
@@ -81,13 +81,13 @@ function j(e) {
                                           descriptionTextVariant: "text-xs/normal",
                                           showOpaqueBackground: !0,
                                       },
-                                      e.id,
+                                      t.id,
                                   ),
                               },
-                              e.id,
+                              t.id,
                           ),
                       },
-                      e.id,
+                      t.id,
                   ),
               ),
           })

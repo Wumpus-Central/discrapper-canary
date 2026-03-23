@@ -1,4 +1,4 @@
-n.d(t, { A: () => f }), n(321073);
+n.d(t, { A: () => C }), n(321073);
 var i = n(627968),
     s = n(64700),
     l = n(158954),
@@ -14,13 +14,13 @@ var i = n(627968),
     A = n(967198),
     x = n(926140),
     h = n(985018),
-    p = n(90831);
+    p = n(971953);
 function T() {}
 let E = [x.rD.VOICE_CHANNEL];
 function S(e) {
     e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0);
 }
-function C() {
+function f() {
     return (0, i.jsx)("div", {
         className: p.i1,
         children: (0, i.jsx)(r.Text, {
@@ -31,7 +31,7 @@ function C() {
         }),
     });
 }
-function f(e) {
+function C(e) {
     let { keybind: t } = e,
         n = s.useRef(t);
     s.useEffect(() => {
@@ -75,7 +75,7 @@ function b(e) {
     let t,
         n,
         { transitionState: o, onClose: c, onSelect: T } = e,
-        f = s.useId(),
+        C = s.useId(),
         b = s.useRef(null),
         {
             query: N,
@@ -111,15 +111,15 @@ function b(e) {
         null == e || e.isItemVisible(0, y, !0) || e.scrollToIndex({ section: 0, row: y });
     }, [y]);
     let O = null != j ? j.length : v.length,
-        P = (() => {
+        L = (() => {
             if (null != j) return j[y]?.id;
             let e = v[y];
             if (e?.type === x.rD.VOICE_CHANNEL) return e.record.id;
         })(),
-        L =
+        D =
             O > 0 || "" === N
                 ? {
-                      innerId: f,
+                      innerId: C,
                       innerRole: "listbox",
                       innerAriaLabel: h.intl.string(h.t["+N3fW7"]),
                       ref: b,
@@ -154,7 +154,7 @@ function b(e) {
                       sectionHeight: 0,
                       rowHeight: 34,
                   }
-                : { sections: [1], renderRow: () => (0, i.jsx)(C, {}), sectionHeight: 0, rowHeight: 52 };
+                : { sections: [1], renderRow: () => (0, i.jsx)(f, {}), sectionHeight: 0, rowHeight: 52 };
     return (0, i.jsx)(l.Modal, {
         transitionState: o,
         onClose: c,
@@ -189,14 +189,14 @@ function b(e) {
             },
             placeholder: h.intl.string(h.t.tG0r7g),
             role: "combobox",
-            "aria-controls": f,
+            "aria-controls": C,
             "aria-expanded": O > 0,
-            "aria-activedescendant": O > 0 && null != P ? P : void 0,
+            "aria-activedescendant": O > 0 && null != L ? L : void 0,
             "aria-autocomplete": "list",
             spellCheck: !1,
             autoFocus: !0,
         }),
-        listProps: L,
+        listProps: D,
     });
 }
 function N(e) {

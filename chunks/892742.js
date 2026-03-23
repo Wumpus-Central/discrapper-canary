@@ -13,7 +13,7 @@ var i = n(627968),
     h = n(438038),
     p = n(295194),
     g = n(654487),
-    A = n(69542);
+    A = n(986588);
 function x(e) {
     let { questId: t } = e,
         {
@@ -22,16 +22,16 @@ function x(e) {
             isFetchingCurrentQuests: f,
         } = (0, o.mL)({ fetchPolicy: "cache-or-network", callerSource: "embed" }),
         C = r.useMemo(() => (0, d.vc)(t, n, x), [t, n, x]),
-        I = r.useMemo(() => x.find((e) => e.id === t), [t, x]),
-        { enabled: E } = s.S.useConfig({ location: g.rE.EMBED_DESKTOP });
+        E = r.useMemo(() => x.find((e) => e.id === t), [t, x]),
+        { enabled: I } = s.S.useConfig({ location: g.rE.EMBED_DESKTOP });
     return f
         ? (0, i.jsx)(a.y$y, { className: A.u })
         : null == C
-          ? null != I
+          ? null != E
               ? (0, i.jsx)(u.g, { questId: t })
               : (0, i.jsx)(_.l, { questId: t, reason: _.o.NOT_FOUND })
           : (0, c.E0)(C.config)
-            ? E
+            ? I
                 ? (0, i.jsx)(
                       p.M,
                       { quest: C, location: l.uF.QUESTS_EMBED, sourceQuestContent: l.uF.QUESTS_EMBED },

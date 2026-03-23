@@ -10,7 +10,7 @@ var i = n(627968),
     u = n(206589),
     _ = n(768349),
     m = n(985018),
-    h = n(62323);
+    h = n(609653);
 function p(e) {
     let {
             application: t,
@@ -21,8 +21,8 @@ function p(e) {
             partyStatusElement: x,
             currentUserPresenceActivity: f,
             onClickContent: C,
-            onView: I,
-            guildId: E,
+            onView: E,
+            guildId: I,
         } = e,
         v = (0, u.w)(f, g),
         b = (0, d.Gq)(g, n.author, "Invite Embed"),
@@ -92,9 +92,9 @@ function p(e) {
         trackingConfig: {
             id: t.id,
             linkType: _.J.RICH_PRESENCE_INVITE,
-            onView: I,
+            onView: E,
             referrerId: n.author.id,
-            guildId: E,
+            guildId: I,
             channelId: n.channel_id,
             messageId: n.id,
         },

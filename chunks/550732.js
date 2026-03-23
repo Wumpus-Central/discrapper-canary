@@ -14,8 +14,8 @@ var a = n(991660),
     A = n(816709),
     h = n(652215),
     C = n(985018),
-    E = n(23928),
-    x = n(52379);
+    E = n(356426),
+    x = n(22789);
 function N(e) {
     let { appId: t, skuId: n, transitionState: N, onClose: I, children: f, footer: _ } = e,
         g = (0, s.bG)([o.A, c.A], () => o.A.getApplication(t) ?? c.A.getApplicationRecord(t), [t]),

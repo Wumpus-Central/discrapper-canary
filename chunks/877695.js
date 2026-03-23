@@ -17,16 +17,16 @@ var i = n(627968),
     x = n(42780),
     f = n(860689),
     C = n(897288),
-    I = n(168428),
-    E = n(652215),
+    E = n(168428),
+    I = n(652215),
     v = n(985018),
-    b = n(14977);
+    b = n(875871);
 function T(e) {
     let { invite: t, isMemberOfGuild: n, message: a, onTransitionToInviteChannel: d, onAcceptInstantInvite: u } = e,
         _ = r.useRef(null),
         [h, g] = r.useState(!0),
         [T, S] = r.useState(!1),
-        N = t.state === E.elq.ACCEPTING,
+        N = t.state === I.elq.ACCEPTING,
         j = (0, s.bG)([c.A], () => c.A.useReducedMotion);
     r.useLayoutEffect(() => {
         S((_.current?.clientHeight ?? 0) > 292);
@@ -49,7 +49,7 @@ function T(e) {
             [h, T, j],
         );
     return null == L
-        ? (0, i.jsx)(I.A, {})
+        ? (0, i.jsx)(E.A, {})
         : (0, i.jsxs)(o.sqX, {
               className: l()(b.Gg, { [b.vk]: T && h }),
               onClick: R,

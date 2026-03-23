@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => _ });
 var i = n(627968),
     s = n(64700),
     l = n(607399),
@@ -11,22 +11,22 @@ var i = n(627968),
     u = n(353202),
     h = n(544028),
     A = n(985018),
-    m = n(985531);
-function g(e) {
+    m = n(70461);
+function _(e) {
     let t,
-        { channelId: g } = e;
+        { channelId: _ } = e;
     s.useEffect(() => {
-        u.A.loadThread(g);
+        u.A.loadThread(_);
     });
     let p = (0, o.DZ)(),
-        _ = (0, a.bG)([h.A], () => h.A.theme);
+        g = (0, a.bG)([h.A], () => h.A.theme);
     return p
         ? (0, i.jsxs)("div", {
               className: m.A,
-              children: [l.Fr && (0, i.jsx)(d.Ay, { children: null }), (0, i.jsx)(c.A, { theme: _ })],
+              children: [l.Fr && (0, i.jsx)(d.Ay, { children: null }), (0, i.jsx)(c.A, { theme: g })],
           })
         : ((t =
-              null != g
+              null != _
                   ? (0, i.jsx)(r.y$y, { type: r.y$y.Type.SPINNING_CIRCLE })
                   : (0, i.jsx)(r.SGT, { note: A.intl.string(A.t["LTr+x9"]), children: A.intl.string(A.t.ai6Lbr) })),
           (0, i.jsxs)("div", {
@@ -34,7 +34,7 @@ function g(e) {
               children: [
                   l.Fr && (0, i.jsx)(d.Ay, { children: null }),
                   (0, i.jsxs)(r.ppr, {
-                      theme: _,
+                      theme: g,
                       children: [
                           (0, i.jsx)(r.G8R, { darkSrc: n(355937), lightSrc: n(332327), width: 272, height: 222 }),
                           t,

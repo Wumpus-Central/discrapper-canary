@@ -10,8 +10,8 @@ var a = n(627968),
     u = n(841702),
     m = n(751304),
     h = n(61750),
-    x = n(91753);
-let p = (e) => {
+    p = n(841015);
+let x = (e) => {
         let [t, n] = i.useState(0);
         return (
             i.useLayoutEffect(() => {
@@ -25,7 +25,7 @@ let p = (e) => {
                     }
                 );
             }, []),
-            (0, a.jsx)("div", { className: x.Do, children: (0, a.jsx)(m.A, { ...e }, t) })
+            (0, a.jsx)("div", { className: p.Do, children: (0, a.jsx)(m.A, { ...e }, t) })
         );
     },
     g = () => {
@@ -54,21 +54,21 @@ let p = (e) => {
             : null == e
               ? (0, a.jsx)(s.Text, { variant: "text-md/normal", children: "No user found" })
               : (0, a.jsxs)("div", {
-                    className: x.kL,
+                    className: p.kL,
                     children: [
                         (0, a.jsxs)("div", {
-                            className: x.uW,
+                            className: p.uW,
                             children: [
                                 (0, a.jsx)(s.Heading, {
                                     variant: "heading-lg/semibold",
                                     children: "Product Configuration",
                                 }),
                                 (0, a.jsxs)("div", {
-                                    className: x.qp,
+                                    className: p.qp,
                                     children: [
                                         (0, a.jsx)(s.Text, {
                                             variant: "text-md/semibold",
-                                            className: x.NB,
+                                            className: p.NB,
                                             children: "Primary Product SKU ID",
                                         }),
                                         (0, a.jsx)(s.ksK, {
@@ -80,7 +80,7 @@ let p = (e) => {
                                             "" !== j.trim() &&
                                             (0, a.jsx)(s.Text, {
                                                 variant: "text-sm/normal",
-                                                className: x.KQ,
+                                                className: p.KQ,
                                                 children: "Loading products...",
                                             }),
                                         b &&
@@ -88,13 +88,13 @@ let p = (e) => {
                                             null == C &&
                                             (0, a.jsx)(s.Text, {
                                                 variant: "text-sm/normal",
-                                                className: x.kc,
+                                                className: p.kc,
                                                 children: "Product not found",
                                             }),
                                         null != C &&
                                             (0, a.jsxs)(s.Text, {
                                                 variant: "text-sm/normal",
-                                                className: x.xT,
+                                                className: p.xT,
                                                 children: ["Found: ", C.name],
                                             }),
                                     ],
@@ -102,14 +102,14 @@ let p = (e) => {
                             ],
                         }),
                         (0, a.jsxs)("div", {
-                            className: x.uW,
+                            className: p.uW,
                             children: [
                                 (0, a.jsx)(s.Heading, { variant: "heading-lg/semibold", children: "Product Preview" }),
                                 null != C && null != T
                                     ? (0, a.jsxs)("div", {
-                                          className: x.i1,
+                                          className: p.i1,
                                           children: [
-                                              (0, a.jsx)(p, { skuId: C.skuId }),
+                                              (0, a.jsx)(x, { skuId: C.skuId }),
                                               (0, a.jsx)(s.Button, {
                                                   variant: "primary",
                                                   onClick: () => {
@@ -125,10 +125,10 @@ let p = (e) => {
                                           ],
                                       })
                                     : (0, a.jsx)("div", {
-                                          className: x.qf,
+                                          className: p.qf,
                                           children: (0, a.jsx)(s.Text, {
                                               variant: "text-md/normal",
-                                              className: x.X2,
+                                              className: p.X2,
                                               children: "Enter a valid product SKU ID to see the preview",
                                           }),
                                       }),

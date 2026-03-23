@@ -1,8 +1,8 @@
 n.d(t, { A: () => p });
 var i = n(627968),
     a = n(64700),
-    r = n(397927),
-    l = n(686956),
+    l = n(397927),
+    r = n(686956),
     s = n(292455),
     o = n(701508),
     d = n(979590),
@@ -11,8 +11,8 @@ var i = n(627968),
     A = n(212165),
     h = n(599907),
     _ = n(985018),
-    m = n(987134),
-    g = n(236415);
+    m = n(27740),
+    g = n(318937);
 let p = function (e) {
     let { onScroll: t } = e,
         n = (0, A.A)(),
@@ -40,7 +40,7 @@ let p = function (e) {
                     n.length > 0
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(r.Heading, {
+                                  (0, i.jsx)(l.Heading, {
                                       className: m.G,
                                       variant: "heading-lg/semibold",
                                       color: "text-strong",
@@ -52,7 +52,7 @@ let p = function (e) {
                                           p.map((e) =>
                                               (0, i.jsx)(
                                                   h.nO,
-                                                  { guild: e, onClick: () => l.A.transitionToGuildSync(e.id) },
+                                                  { guild: e, onClick: () => r.A.transitionToGuildSync(e.id) },
                                                   e.id,
                                               ),
                                           ),
@@ -66,13 +66,13 @@ let p = function (e) {
                     (0, i.jsxs)("div", {
                         className: g.ed,
                         children: [
-                            (0, i.jsxs)(r.Text, {
+                            (0, i.jsxs)(l.Text, {
                                 className: g.Qq,
                                 variant: "text-sm/medium",
                                 color: "text-default",
                                 children: [_.intl.string(_.t.O1k9XX), " "],
                             }),
-                            (0, i.jsx)(r.Text, {
+                            (0, i.jsx)(l.Text, {
                                 className: g.Qq,
                                 variant: "text-sm/medium",
                                 color: "text-default",

@@ -1,4 +1,4 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => E });
 var i = n(627968),
     r = n(64700),
     a = n(503698),
@@ -12,16 +12,16 @@ var i = n(627968),
     m = n(447215),
     h = n(287809),
     p = n(405269),
-    g = n(733045),
+    g = n(641131),
     A = n(985018),
-    x = n(67642),
-    f = n(222590),
+    x = n(197172),
+    f = n(679740),
     C = n(513653);
-let I = (e) => {
-    let { reportingUserId: t, guildId: n, compact: a, channel: s, messageId: I, reportedTimestamp: E } = e,
+let E = (e) => {
+    let { reportingUserId: t, guildId: n, compact: a, channel: s, messageId: E, reportedTimestamp: I } = e,
         v = h.default.getUser(t),
         b = r.useMemo(() => (a ? (0, _.A)((0, p.i$)(o()(), "LT")) : null), [a]),
-        T = (0, m.P)({ user: v, channelId: s.id, guildId: n, messageId: I })((0, c.m2)(v, s)),
+        T = (0, m.P)({ user: v, channelId: s.id, guildId: n, messageId: E })((0, c.m2)(v, s)),
         y = null != v ? v.getAvatarURL(n, (0, d.FT9)(d._3J.SIZE_16)) : C,
         S =
             null != v
@@ -37,7 +37,7 @@ let I = (e) => {
                 color: "text-subtle",
                 children: [
                     (0, i.jsx)("span", { className: x.Ek, children: "•" }),
-                    (0, i.jsx)(u.A, { timestamp: E, className: x.vE }),
+                    (0, i.jsx)(u.A, { timestamp: I, className: x.vE }),
                 ],
             }),
         ],

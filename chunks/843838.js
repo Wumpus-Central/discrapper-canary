@@ -19,7 +19,7 @@ var i = n(627968),
     E = n(846611),
     S = n(841532),
     f = n(788868),
-    C = n(53633);
+    C = n(637676);
 function b(e) {
     let { premiumSubscription: t } = e,
         n = (0, l.bG)([g.A], () => g.A.boostSlots),

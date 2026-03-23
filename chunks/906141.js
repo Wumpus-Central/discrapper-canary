@@ -12,9 +12,9 @@ var i = n(627968),
     h = n(704413),
     A = n(9842),
     m = n(253932),
-    g = n(734057),
+    _ = n(734057),
     p = n(994500),
-    _ = n(661191),
+    g = n(661191),
     f = n(988012),
     x = n(141468),
     C = n(694318),
@@ -34,8 +34,8 @@ var i = n(627968),
     D = n(888675),
     G = n(652215),
     U = n(985018),
-    P = n(785186),
-    w = n(50397);
+    P = n(410132),
+    w = n(119907);
 let k = s.memo(function e(t) {
     let n,
         {
@@ -51,9 +51,9 @@ let k = s.memo(function e(t) {
         } = t,
         K = G.sl8.has(l.type) ? l.messageReference : void 0,
         W = (0, r.bG)([A.A], () => A.A.getMessageByReference(K)),
-        Y = (0, r.bG)([g.A], () =>
+        Y = (0, r.bG)([_.A], () =>
             l.type === G.lAJ.THREAD_STARTER_MESSAGE && W.state === A.a.LOADED
-                ? g.A.getChannel(W.message.channel_id)
+                ? _.A.getChannel(W.message.channel_id)
                 : null,
         ),
         z = m.X6.useSetting(),
@@ -76,8 +76,8 @@ let k = s.memo(function e(t) {
         }),
         ei = (0, I.Ay)(l),
         es = (0, r.bG)(
-            [g.A],
-            () => l.hasFlag(G.pr7.HAS_THREAD) && g.A.getChannel(_.default.castMessageIdAsChannelId(l.id)),
+            [_.A],
+            () => l.hasFlag(G.pr7.HAS_THREAD) && _.A.getChannel(g.default.castMessageIdAsChannelId(l.id)),
         ),
         el = l.type === G.lAJ.THREAD_STARTER_MESSAGE && W.state === A.a.LOADED && null != Y,
         ea = !el && void 0 === n,

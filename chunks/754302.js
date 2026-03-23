@@ -4,7 +4,7 @@ n(64700);
 var a = n(503698),
     l = n.n(a),
     i = n(397927),
-    s = n(59182);
+    s = n(385104);
 function u(e) {
     let { children: t } = e;
     return (0, r.jsx)("div", { className: s.MD, children: (0, r.jsx)("div", { className: s.Qs, children: t }) });

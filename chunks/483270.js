@@ -12,9 +12,9 @@ var i = n(627968),
     h = n(311907),
     A = n(397927),
     m = n(442433),
-    g = n(414798),
+    _ = n(414798),
     p = n(775602),
-    _ = n(793574),
+    g = n(793574),
     f = n(688810),
     x = n(485947),
     C = n(509536),
@@ -40,8 +40,8 @@ var i = n(627968),
     V = n(110574),
     B = n(652215),
     H = n(985018),
-    F = n(624934),
-    K = n(268053);
+    F = n(767952),
+    K = n(701939);
 let W = k.Ay.getEnableHardwareAcceleration(),
     Y = 44 + V.b,
     z = s.memo(function (e) {
@@ -54,36 +54,36 @@ let W = k.Ay.getEnableHardwareAcceleration(),
                 () => (A?.colorRoleId != null ? j.A.getRole(t.guild_id, A.colorRoleId)?.name : void 0),
                 [t.guild_id, A],
             ),
-            _ = (0, h.bG)([M.default], () => M.default.getUser(a)),
+            g = (0, h.bG)([M.default], () => M.default.getUser(a)),
             f = (0, h.bG)([M.default], () => M.default.getCurrentUser()),
-            x = _?.id === f?.id,
+            x = g?.id === f?.id,
             E = (0, h.bG)([R.A, O.A], () => (x ? O.A.getStatus() : R.A.getStatus(a, t.guild_id))),
             N = (0, h.bG)([R.A], () => R.A.isMobileOnline(a)),
             b = (0, h.bG)([R.A, O.A], () => (x ? O.A.getActivities() : R.A.getActivities(a, t.guild_id))),
             D = (0, h.bG)([v.A], () => v.A.getAnyStreamForUser(a)),
             G = (0, c.rm)(a),
             P = (0, h.bG)([S.A], () => S.A.canUserViewChannel(t.id, l, a)),
-            k = _?.id != null && _.id === r,
+            k = g?.id != null && g.id === r,
             F = s.useCallback(
                 (e) => {
-                    null != _ &&
+                    null != g &&
                         (0, m.L3)(e, async () => {
-                            let { default: e } = await Promise.all([n.e("97262"), n.e("67447"), n.e("38398")]).then(
+                            let { default: e } = await Promise.all([n.e("97262"), n.e("67447"), n.e("3798")]).then(
                                 n.bind(n, 708202),
                             );
-                            return (n) => (0, i.jsx)(e, { ...n, user: _, guildId: t.guild_id, channel: t });
+                            return (n) => (0, i.jsx)(e, { ...n, user: g, guildId: t.guild_id, channel: t });
                         });
                 },
-                [_, t],
+                [g, t],
             ),
             K = s.useCallback(() => {
-                if (null == _) return;
-                let e = `@${w.Ay.getUserTag(_, { decoration: "never" })}`,
-                    n = `<@${_.id}>`;
+                if (null == g) return;
+                let e = `@${w.Ay.getUserTag(g, { decoration: "never" })}`,
+                    n = `<@${g.id}>`;
                 U._.dispatch(B.jej.TEXTAREA_FOCUS, { channelId: t.id }),
                     U._.dispatchToLastSubscribed(B.jej.INSERT_TEXT, { plainText: e, rawText: n }),
-                    g.A.startTyping(t.id);
-            }, [_, t]),
+                    _.A.startTyping(t.id);
+            }, [g, t]),
             Y = s.useCallback(
                 (e) => {
                     e.stopPropagation(),
@@ -94,13 +94,13 @@ let W = k.Ay.getEnableHardwareAcceleration(),
                 },
                 [t.guild_id],
             ),
-            z = (0, I.r)({ user: _, guildId: t.guild_id }),
+            z = (0, I.r)({ user: g, guildId: t.guild_id }),
             [q, X] = s.useState(!1);
-        if (null == _) return null;
+        if (null == g) return null;
         let J = A?.premiumSince;
         return (0, i.jsx)(T.A, {
             targetElementRef: o,
-            user: _,
+            user: g,
             guildId: t.guild_id,
             channelId: t.id,
             position: u.Fr ? "window_center" : "left",
@@ -114,7 +114,7 @@ let W = k.Ay.getEnableHardwareAcceleration(),
                     ref: o,
                     onContextMenu: F,
                     shouldAnimateStatus: W,
-                    user: _,
+                    user: g,
                     currentUser: f,
                     nick: A?.nick,
                     status: E,
@@ -191,10 +191,10 @@ function J(e) {
         r,
         u,
         m,
-        g,
+        _,
         { channel: x, guild: C } = e,
         E = `members-${x.id}`,
-        { analyticsLocations: I } = (0, f.Ay)(_.A.MEMBER_LIST),
+        { analyticsLocations: I } = (0, f.Ay)(g.A.MEMBER_LIST),
         N = (0, b.q)(x.id, C),
         S = N.filter((e) => e.userIds.length > 0).reverse()[0],
         { navigator: T, listRef: v } =
@@ -229,7 +229,7 @@ function J(e) {
                     }),
                 [],
             )),
-            (g = s.useCallback(
+            (_ = s.useCallback(
                 () =>
                     new Promise((e) => {
                         let t = r.current;
@@ -243,7 +243,7 @@ function J(e) {
                 [],
             )),
             {
-                navigator: (0, d.Ay)({ id: t, setFocus: u, isEnabled: l, scrollToStart: m, scrollToEnd: g }),
+                navigator: (0, d.Ay)({ id: t, setFocus: u, isEnabled: l, scrollToStart: m, scrollToEnd: _ }),
                 listRef: r,
             }),
         y = 0 === N.length || N.every((e) => 0 === e.userIds.length);

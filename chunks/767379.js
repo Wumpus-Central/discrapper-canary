@@ -10,17 +10,17 @@ var a = n(627968),
     u = n(627575),
     m = n(393033),
     h = n(105428),
-    x = n(975571),
-    p = n(935649),
+    p = n(975571),
+    x = n(935649),
     g = n(847599),
     _ = n(295972),
     f = n(36149),
     v = n(807734),
     b = n(652215),
     j = n(239093),
-    A = n(949268),
+    A = n(536242),
     C = n(985018),
-    y = n(499453),
+    y = n(62959),
     T = n(700129);
 function S(e) {
     let { modalSessionId: t, entryPoint: n } = e;
@@ -29,7 +29,7 @@ function S(e) {
               variant: "text-xs/medium",
               children: C.intl.format(A.default.htWh1G, {
                   handleOnHelpUrlHook: () => {
-                      p.A.openUrl(j.d$.LEARN_MORE_UU_APPEAL_LINK),
+                      x.A.openUrl(j.d$.LEARN_MORE_UU_APPEAL_LINK),
                           (0, g.St)(t, g.WU.EXPRESSIVE_PRIMARY, g._7.LEARN_MORE);
                   },
               }),
@@ -48,15 +48,15 @@ function S(e) {
 let E = function (e) {
     let { transitionState: t, entryPoint: n, onClose: u, onComplete: j, dismissable: E, classificationId: N } = e,
         [I, k] = i.useState(r.M.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
-        R = i.useRef(I),
-        [O, w] = (0, d.kn)([I], void 0, !0),
+        O = i.useRef(I),
+        [R, w] = (0, d.kn)([I], void 0, !0),
         D = i.useMemo(() => (0, l.A)(), []),
         M = i.useRef(!1),
         P = (0, m.W$)();
     i.useEffect(() => {
-        R.current = O;
-    }, [O]);
-    let { loading: U, ageVerificationMethods: L } = (0, v.A)({
+        O.current = R;
+    }, [R]);
+    let { loading: L, ageVerificationMethods: U } = (0, v.A)({
         onClose: () => {
             j?.(), u();
         },
@@ -69,7 +69,7 @@ let E = function (e) {
         i.useLayoutEffect(
             () => () => {
                 if (M.current) return;
-                let e = R.current;
+                let e = O.current;
                 null != e &&
                     ((M.current = !0),
                     h.A.maybeOpenAgeVerificationUserFeedback({
@@ -92,7 +92,7 @@ let E = function (e) {
             subtitle: (0, f.mK)(
                 n,
                 () => {
-                    p.A.openUrl(x.A.getArticleURL(b.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                    x.A.openUrl(p.A.getArticleURL(b.MVz.TIGGER_PAWTECT_LEARN_MORE)),
                         (0, g.St)(D, g.WU.EXPRESSIVE_PRIMARY, g._7.LEARN_MORE);
                 },
                 P,
@@ -118,7 +118,7 @@ let E = function (e) {
                             }),
                         ],
                     }),
-                    null == L || 0 === L.length
+                    null == U || 0 === U.length
                         ? (0, a.jsxs)(o.BJc, {
                               direction: "vertical",
                               align: "center",
@@ -142,7 +142,7 @@ let E = function (e) {
                         : (0, a.jsx)(o.BJc, {
                               direction: "vertical",
                               gap: 8,
-                              children: L.map((e) => {
+                              children: U.map((e) => {
                                   let { title: t, description: n, onClick: i } = e;
                                   return (0, a.jsx)(
                                       c.PQ,
@@ -150,7 +150,7 @@ let E = function (e) {
                                           variant: "clickable",
                                           title: t,
                                           description: n,
-                                          buttonDisabled: U,
+                                          buttonDisabled: L,
                                           onButtonPress: () => i(D),
                                       },
                                       t,

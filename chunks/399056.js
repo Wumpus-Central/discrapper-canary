@@ -10,7 +10,7 @@ var i = n(627968),
     c = n(132514),
     u = n(987957),
     m = n(985018),
-    g = n(499323);
+    g = n(659233);
 let x = [];
 function h() {
     return (0, i.jsx)("div", {
@@ -39,7 +39,7 @@ function _(e) {
         a = s.useCallback(() => {
             if (null != t)
                 return (0, r.mMO)(async () => {
-                    let { default: e } = await Promise.all([n.e("54569"), n.e("4593")]).then(n.bind(n, 251632));
+                    let { default: e } = await Promise.all([n.e("54569"), n.e("76945")]).then(n.bind(n, 251632));
                     return (n) => (0, i.jsx)(e, { ...n, guildId: t, onSave: l });
                 });
         }, [t, l]);

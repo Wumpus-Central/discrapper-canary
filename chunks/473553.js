@@ -12,9 +12,9 @@ var i = n(627968),
     h = n(829219),
     A = n(859703),
     m = n(341915),
-    g = n(759366),
+    _ = n(759366),
     p = n(245853),
-    _ = n(714510),
+    g = n(714510),
     f = n(890687),
     x = n(590202),
     C = n(639214),
@@ -27,18 +27,18 @@ var i = n(627968),
     v = n(49999),
     y = n(165610),
     j = n(985018),
-    R = n(25327);
+    R = n(453561);
 function O(e) {
     let { quest: t, applicationId: n } = e,
         a = (0, f.fc)(t),
-        u = (0, _.mU)({
+        u = (0, g.mU)({
             quest: t,
             taskDetails: a,
             location: T.rE.QUEST_ACTIVITY_HEADER,
             questContent: m.uF.QUEST_ACTIVITY_HEADER,
             sourceQuestContent: m.uF.RUNNING_ACTIVITY,
         }),
-        [A, g] = s.useState(!1),
+        [A, _] = s.useState(!1),
         p = s.useRef(null),
         C = s.useRef(null),
         [b, O] = (0, c.kn)([r.M.QUEST_ACTIVITY_HEADER_INTRO], void 0, !0),
@@ -58,8 +58,8 @@ function O(e) {
         children: [
             (0, i.jsxs)("div", {
                 className: R.wx,
-                onMouseEnter: () => g(!0),
-                onMouseLeave: () => g(!1),
+                onMouseEnter: () => _(!0),
+                onMouseLeave: () => _(!1),
                 children: [
                     (0, i.jsxs)(l.BJc, {
                         className: R.P9,
@@ -169,14 +169,14 @@ function L(e) {
         c = (0, a.bG)([u.A], () => u.A.theme),
         d = s.useMemo(() => (0, C.jm)(r, t, !0)[0], [r, t]),
         { enabled: h } = p.Ym.useConfig({ location: T.rE.QUEST_ACTIVITY_HEADER }),
-        _ = (0, a.bG)([g.A], () => g.A.getState().autoEnroll),
+        g = (0, a.bG)([_.A], () => _.A.getState().autoEnroll),
         f = d?.id,
-        x = (0, a.bG)([g.A], () => g.A.isDismissed(f), [f]);
+        x = (0, a.bG)([_.A], () => _.A.isDismissed(f), [f]);
     return (s.useEffect(() => {
         !h ||
             null == d ||
             d.userStatus?.enrolledAt != null ||
-            _ ||
+            g ||
             x ||
             (0, o.mMO)(
                 async () => {
@@ -185,7 +185,7 @@ function L(e) {
                 },
                 { modalKey: "quest-activity-unenrolled-modal" },
             );
-    }, [h, d, _, x]),
+    }, [h, d, g, x]),
     null != d && h)
         ? (0, i.jsx)(l.NPJ, {
               theme: c,

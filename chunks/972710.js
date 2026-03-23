@@ -18,12 +18,12 @@ var i = n(627968),
     T = n(287809),
     E = n(954571),
     S = n(927578),
-    C = n(866312),
-    f = n(327479),
+    f = n(866312),
+    C = n(327479),
     b = n(652215),
     N = n(601107),
     I = n(985018),
-    v = n(20966);
+    v = n(141384);
 let j = [b.Dmq.PAST_DUE, b.Dmq.ACCOUNT_HOLD, b.Dmq.BILLING_RETRY],
     y = (e) => {
         let { transitionState: t, onClose: n, subscription: l, analyticsLocations: a, analyticsLocation: r } = e,
@@ -83,14 +83,14 @@ function R(e) {
             return o()(null != e, "GuildBoostingHeader: currentUser cannot be undefined"), e;
         }),
         { analyticsLocations: R } = (0, A.Ay)(g.A.GUILD_BOOSTING_SUBSCRIPTION_HEADER),
-        O = (0, C.A)({ location: "GuildBoostingHeader" });
+        O = (0, f.A)({ location: "GuildBoostingHeader" });
     if (0 === (0, S.bx)(n.additionalPlans)) return null;
-    let { status: P } = n,
-        L = (0, S.$k)(n),
-        D = O && !L && n.isBoostOnly && j.includes(n.status);
-    if (L) t = v.v2;
+    let { status: L } = n,
+        D = (0, S.$k)(n),
+        P = O && !D && n.isBoostOnly && j.includes(n.status);
+    if (D) t = v.v2;
     else
-        switch (P) {
+        switch (L) {
             case b.Dmq.PAST_DUE:
             case b.Dmq.ACCOUNT_HOLD:
             case b.Dmq.BILLING_RETRY:
@@ -113,7 +113,7 @@ function R(e) {
                     (0, i.jsxs)("div", {
                         className: v.eC,
                         children: [
-                            (0, i.jsx)("div", { className: a()(v.Ab, { [v.aD]: L }) }),
+                            (0, i.jsx)("div", { className: a()(v.Ab, { [v.aD]: D }) }),
                             (0, i.jsx)("div", {
                                 children: (0, S.Uf)({
                                     subscription: n,
@@ -128,7 +128,7 @@ function R(e) {
                         (0, i.jsxs)("div", {
                             className: v.BQ,
                             children: [
-                                D &&
+                                P &&
                                     (0, i.jsx)("div", {
                                         className: v.x7,
                                         children: (0, i.jsx)(c.QWc, {
@@ -149,7 +149,7 @@ function R(e) {
                                             text: I.intl.string(I.t["ETE/oC"]),
                                         }),
                                     }),
-                                (0, i.jsx)(f.A, {
+                                (0, i.jsx)(C.A, {
                                     onClick: () => (0, p.openUserSettings)(h.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL),
                                     text: I.intl.string(I.t["NQ5g/U"]),
                                 }),

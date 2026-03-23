@@ -20,8 +20,8 @@ var i = n(627968),
     j = n(555337),
     N = n(401755),
     E = n(985018),
-    b = n(320616),
-    T = n(522759);
+    b = n(776433),
+    T = n(473169);
 class C extends d.Ay.Store {
     initialize() {
         this.waitFor(j.A, A.A);
@@ -415,7 +415,7 @@ function P(e) {
             text: E.intl.string(E.t.YI3iV6),
             onClick: () =>
                 (0, g.mMO)(async () => {
-                    let { default: e } = await Promise.all([n.e("7726"), n.e("58938")]).then(n.bind(n, 72715));
+                    let { default: e } = await Promise.all([n.e("7726"), n.e("4042")]).then(n.bind(n, 72715));
                     return (n) => (0, i.jsx)(e, { ...n, guildTemplate: t });
                 }),
         }),

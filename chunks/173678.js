@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { M: () => p, z: () => _ });
+n.d(t, { M: () => p, z: () => g });
 var i = n(627968),
     s = n(575593),
     l = n(397927),
@@ -10,9 +10,9 @@ var i = n(627968),
     d = n(957785),
     u = n(788868),
     h = n(985018),
-    A = n(55751),
-    m = n(754558);
-function g(e, t, n) {
+    A = n(733557),
+    m = n(101616);
+function _(e, t, n) {
     (0, o.A)({
         skuId: e.skuId,
         isGift: !0,
@@ -29,12 +29,12 @@ function p(e, t) {
             onViewWishlist: u,
             isSingleCard: m = !1,
             wishlistId: p,
-            showTypeTooltip: _ = !1,
+            showTypeTooltip: g = !1,
             cardSize: f,
         } = t,
         x = null != e.bundleItems && e.bundleItems.length > 0,
         C = null != n && n > 0,
-        E = _ && !C,
+        E = g && !C,
         I = C ? h.intl.string(h.t.TxBQzD) : h.intl.string(h.t.pLPjsb),
         N = {
             title: E ? h.intl.string(h.t.HFhcqh) : I,
@@ -47,7 +47,7 @@ function p(e, t) {
         d.A,
         {
             onCardClick: () => {
-                C ? u() : g(e, l, o);
+                C ? u() : _(e, l, o);
             },
             tooltipConfig: N,
             shouldScalePreview: x || !b,
@@ -70,7 +70,7 @@ function p(e, t) {
         e.skuId,
     );
 }
-function _(e, t) {
+function g(e, t) {
     let { profileOwner: n, analyticsLocations: a, wishlistId: r, onViewWishlist: o } = t,
         c = null != e.bundleItems && e.bundleItems.length > 0,
         d = p(e, {
@@ -104,7 +104,7 @@ function _(e, t) {
                 children: [
                     (0, i.jsx)(l.DUT, {
                         onClick: () => {
-                            g(e, n, a);
+                            _(e, n, a);
                         },
                         className: m.Hh,
                         "aria-label": h.intl.string(h.t.pLPjsb),

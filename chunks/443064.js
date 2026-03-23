@@ -18,8 +18,8 @@ var i = n(627968),
     T = n(557722),
     E = n(207560),
     S = n(790114),
-    C = n(836602),
-    f = n(262),
+    f = n(836602),
+    C = n(262),
     b = n(950191),
     N = n(854627),
     I = n(542535),
@@ -28,19 +28,19 @@ var i = n(627968),
     y = n(957565),
     R = n(975571),
     O = n(427262),
-    P = n(837921),
-    L = n(253932),
-    D = n(780964),
+    L = n(837921),
+    D = n(253932),
+    P = n(780964),
     M = n(192501),
     G = n(840065),
     U = n(652215),
     k = n(53516),
     V = n(985018),
-    w = n(949268),
-    B = n(944300);
-let H = P.Ay.getEnableHardwareAcceleration() ? c.JsQ : c.euF;
+    w = n(536242),
+    B = n(609290);
+let H = L.Ay.getEnableHardwareAcceleration() ? c.JsQ : c.euF;
 function F() {
-    (0, G.openUserSettings)(D.X.PROFILE_PANEL);
+    (0, G.openUserSettings)(P.X.PROFILE_PANEL);
 }
 function Y(e) {
     let { className: t, user: l } = e,
@@ -219,7 +219,7 @@ function W(e) {
                 valueMessage: V.intl.string(V.t["8SfTN/"]),
                 handleClick: () =>
                     (0, c.mMO)(async () => {
-                        let { default: e } = await Promise.all([n.e("89129"), n.e("4709")]).then(n.bind(n, 354096));
+                        let { default: e } = await Promise.all([n.e("89129"), n.e("75283")]).then(n.bind(n, 354096));
                         return (t) => (0, i.jsx)(e, { ...t });
                     }),
             };
@@ -236,7 +236,7 @@ function W(e) {
                 }),
                 handleClick: () =>
                     (0, c.mMO)(async () => {
-                        let { default: e } = await Promise.all([n.e("89129"), n.e("4709")]).then(n.bind(n, 354096));
+                        let { default: e } = await Promise.all([n.e("89129"), n.e("75283")]).then(n.bind(n, 354096));
                         return (t) => (0, i.jsx)(e, { ...t });
                     }),
             };
@@ -378,7 +378,7 @@ function K(e) {
 function Z(e) {
     let { user: t } = e,
         n = (0, x.A)({ id: t.id, label: V.intl.string(V.t["/AXYnE"]) }),
-        l = L.Q_.useSetting(),
+        l = D.Q_.useSetting(),
         a = s.useRef(null);
     return l && y.p5
         ? (0, i.jsx)(c.YNO, {
@@ -489,9 +489,9 @@ function q(e) {
 function J(e) {
     let { currentUser: t } = e,
         n = (0, b.Ay)(t.id),
-        s = (0, f.A)(n),
-        l = L.jP.useSetting(),
-        a = (0, r.bG)([C.A], () => C.A.getErrors()),
+        s = (0, C.A)(n),
+        l = D.jP.useSetting(),
+        a = (0, r.bG)([f.A], () => f.A.getErrors()),
         o = a?.avatar?.[0],
         { avatarSrc: d, avatarDecorationSrc: _ } = (0, N.A)({ userId: t?.id, size: c._3J.SIZE_80 }),
         m = (0, S.A)(),

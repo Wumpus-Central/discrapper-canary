@@ -15,13 +15,13 @@ var i = n(627968),
     x = n(743981),
     h = n(355097),
     p = n(985018),
-    T = n(919501);
+    T = n(86267);
 let E = (0, o.Ld)(),
     S = s.memo(function (e) {
         let { availablePrimaryGuilds: t, pendingPrimaryGuildId: n, onChange: o } = e,
             S = s.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
-            C = (0, l.bG)([g.default], () => (0, c.Zo)(g.default.getCurrentUser()?.primaryGuild).guildId),
-            f = void 0 !== n ? n : C,
+            f = (0, l.bG)([g.default], () => (0, c.Zo)(g.default.getCurrentUser()?.primaryGuild).guildId),
+            C = void 0 !== n ? n : f,
             b = s.useMemo(
                 () => t.reduce((e, t) => (t.profile?.tag != null && e.push({ label: t.name, value: t.id }), e), []),
                 [t],
@@ -93,18 +93,18 @@ let E = (0, o.Ld)(),
                 },
                 [o],
             ),
-            R = s.useCallback((e) => e === f, [f]),
+            R = s.useCallback((e) => e === C, [C]),
             O = s.useCallback((e) => e, []),
-            P = s.useCallback(() => {
+            L = s.useCallback(() => {
                 o?.(null);
             }, [o]),
-            L = s.useRef(null);
+            D = s.useRef(null);
         return (
-            (0, m.A)(L, h._F.GUILD_TAG),
+            (0, m.A)(D, h._F.GUILD_TAG),
             (0, i.jsxs)(_.A, {
                 title: p.intl.string(p.t.Pdd1nd),
                 titleId: E,
-                ref: L,
+                ref: D,
                 children: [
                     (0, i.jsx)(r.Text, {
                         className: T.VA,
@@ -121,8 +121,8 @@ let E = (0, o.Ld)(),
                         renderTrailing: v,
                         renderOptionValue: j,
                         serialize: O,
-                        clear: P,
-                        clearable: null != f,
+                        clear: L,
+                        clearable: null != C,
                         maxVisibleItems: 8,
                         "data-migration-pending": !0,
                     }),

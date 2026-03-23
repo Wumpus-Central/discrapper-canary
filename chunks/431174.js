@@ -17,22 +17,22 @@ var i = n(627968),
     x = n(306417),
     f = n(290794),
     C = n(985018),
-    I = n(70086);
-function E(e) {
+    E = n(121272);
+function I(e) {
     let { percentage: t, label: n, canShowVoterDetails: a, answerId: l } = e,
         o = (0, m.GV)(),
         { channelId: d, messageId: c } = (0, f.Tu)(),
         [A, x] = r.useState(""),
-        [C, E] = r.useState(!1),
+        [C, I] = r.useState(!1),
         v = "" !== A && C,
         b = r.useCallback(() => {
             x((0, g.$m)(c, d, l));
         }, [c, d, l]),
         T = r.useCallback(() => {
-            b(), E(!0);
+            b(), I(!0);
         }, [b]),
         y = r.useCallback(() => {
-            E(!1);
+            I(!1);
         }, []),
         S = r.useCallback(() => {
             (0, p.e)({ channelId: d, messageId: c, answerId: l });
@@ -48,7 +48,7 @@ function E(e) {
                 );
         }, [C, b]),
         (0, i.jsxs)("div", {
-            className: I.AA,
+            className: E.AA,
             children: [
                 a
                     ? (0, i.jsxs)(i.Fragment, {
@@ -114,7 +114,7 @@ function v(e) {
             },
             "animate-always",
         );
-    return (0, i.jsx)(o.animated.span, { className: I.an, style: r, "aria-hidden": !0 });
+    return (0, i.jsx)(o.animated.span, { className: E.an, style: r, "aria-hidden": !0 });
 }
 function b(e) {
     let { answersInteraction: t, isSelected: n, didSelfVote: r, isVictor: a, isExpired: l, className: s } = e;
@@ -137,12 +137,12 @@ function T(e) {
         u = !0 === t.isVictor,
         m = t.shouldAnimateTransition;
     return (0, i.jsxs)("div", {
-        className: l()(I.Fk, { [I.EK]: r !== A.CQ.LIST, [I.wH]: d }),
+        className: l()(E.Fk, { [E.EK]: r !== A.CQ.LIST, [E.wH]: d }),
         children: [
             a ? (0, i.jsx)(v, { percentage: t.votesPercentage, shouldAnimate: m }) : null,
-            null != t.pollMedia.emoji && (0, i.jsx)(x.Fb, { className: I.Zg, emoji: t.pollMedia.emoji }),
+            null != t.pollMedia.emoji && (0, i.jsx)(x.Fb, { className: E.Zg, emoji: t.pollMedia.emoji }),
             (0, i.jsx)(_.Text, {
-                className: I.Pf,
+                className: E.Pf,
                 variant: "text-sm/semibold",
                 color: "none",
                 scaleFontToUserSetting: !0,
@@ -150,7 +150,7 @@ function T(e) {
             }),
             t.didSelfVote && (0, i.jsx)(s.s, { children: C.intl.string(C.t["8DAM+5"]) }),
             a &&
-                (0, i.jsx)(E, {
+                (0, i.jsx)(I, {
                     percentage: t.votesPercentage,
                     label: t.votes,
                     canShowVoterDetails: o,
@@ -162,7 +162,7 @@ function T(e) {
                 didSelfVote: c,
                 isVictor: u,
                 isExpired: n,
-                className: I.ck,
+                className: E.ck,
             }),
         ],
     });
@@ -170,8 +170,8 @@ function T(e) {
 function y(e) {
     let { isExpired: t, answersInteraction: n, canShowVoteCounts: r, canTapAnswers: a, ...l } = e;
     return (0, i.jsx)(x.Fh, {
-        className: I.ry,
-        answerClassName: I.ZF,
+        className: E.ry,
+        answerClassName: E.ZF,
         answersInteraction: n,
         canTapAnswers: a,
         renderAnswerContent: (e) =>

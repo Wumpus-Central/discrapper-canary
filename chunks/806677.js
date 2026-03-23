@@ -42,8 +42,8 @@ var r = i(627968),
     U = i(518477),
     B = i(699976),
     Z = i(985018),
-    K = i(235889),
-    X = i(8043);
+    K = i(855135),
+    X = i(958237);
 function z(e) {
     let { onSelectSku: t, priceOptions: i, showPromotionalGiftBanner: s } = e;
     return (0, r.jsxs)("div", {

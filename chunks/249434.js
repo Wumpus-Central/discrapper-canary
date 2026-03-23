@@ -8,7 +8,7 @@ var i = n(627968),
     o = n(555337),
     d = n(339984),
     c = n(985018),
-    u = n(31186);
+    u = n(577332);
 function m(e) {
     let { profile: t, handleIconChange: l, canManageGuild: o } = e,
         m = s.useCallback(() => {
@@ -21,7 +21,7 @@ function m(e) {
                         n.e("59701"),
                         n.e("35929"),
                         n.e("74571"),
-                        n.e("33535"),
+                        n.e("94073"),
                     ]).then(n.bind(n, 142630));
                     return (n) =>
                         (0, i.jsx)(s, {

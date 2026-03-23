@@ -30,7 +30,7 @@ var a = n(503698),
     y = n(183924),
     b = n(920409),
     P = n(532294),
-    L = n(903634);
+    L = n(87528);
 function D(e) {
     return e.map((e, t) =>
         (0, l.jsxs)(l.Fragment, {

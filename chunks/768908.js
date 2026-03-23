@@ -18,19 +18,19 @@ var i = n(627968),
     T = n(760751),
     E = n(189081),
     S = n(954571),
-    C = n(583613),
-    f = n(723702),
+    f = n(583613),
+    C = n(723702),
     b = n(544028),
     N = n(790174),
     I = n(652215),
     v = n(650583),
     j = n(985018),
-    y = n(38872),
-    R = n(754694),
-    O = n(641254),
-    P = n(522759);
-let L = r.Ay.connectStores([b.A], () => ({ theme: b.A.theme }))(c.ppr),
-    D = (0, f.isWindows)();
+    y = n(900506),
+    R = n(976092),
+    O = n(20976),
+    L = n(473169);
+let D = r.Ay.connectStores([b.A], () => ({ theme: b.A.theme }))(c.ppr),
+    P = (0, C.isWindows)();
 function M(e) {
     let { onClose: t } = e,
         n = (0, r.bG)([g.Ay], () => g.Ay.getCandidateGames()),
@@ -49,7 +49,7 @@ function M(e) {
                     o(e);
                 },
             }),
-            (0, i.jsx)(c.cGx, { className: a()(P.Ot, P.QB) }),
+            (0, i.jsx)(c.cGx, { className: a()(L.Ot, L.QB) }),
             (0, i.jsxs)("div", {
                 className: a()(y.o1, O.xM),
                 children: [
@@ -68,25 +68,25 @@ function M(e) {
     });
 }
 function G(e) {
-    let { rawGame: t, nowPlaying: l = !1, isOverride: A, subgames: h, isSubgame: C = !1, parentGame: f } = e,
+    let { rawGame: t, nowPlaying: l = !1, isOverride: A, subgames: h, isSubgame: f = !1, parentGame: C } = e,
         b = (0, r.cf)([g.Ay, T.A, E.A], () => (0, g.xU)(t, g.Ay, T.A, E.A)),
         { canToggleDetection: N, isCurrentGameDetectionEnabled: R } = (0, r.cf)([g.Ay], () => ({
-            canToggleDetection: null == f || g.Ay.isDetectionEnabled(f),
+            canToggleDetection: null == C || g.Ay.isDetectionEnabled(C),
             isCurrentGameDetectionEnabled: g.Ay.isDetectionEnabled(b),
         })),
-        P = (0, r.bG)([g.Ay], () => g.Ay.getVisibleGame()),
-        [L, M] = s.useState(!1),
+        L = (0, r.bG)([g.Ay], () => g.Ay.getVisibleGame()),
+        [D, M] = s.useState(!1),
         U = s.useMemo(
             () =>
                 (0, p.n1)(b)
-                    ? C
+                    ? f
                         ? b.gameName
                         : j.intl.formatToPlainString(j.t.G6BGdx, { subgameName: b.gameName })
                     : b.name,
-            [b, C],
+            [b, f],
         ),
         [k, V] = s.useState(U ?? "???"),
-        w = a()(O.tR, { [y.LO]: !l, [y.Rw]: l, [y.FB]: null != b && l, [y.xL]: C, [y.fG]: null != h && h.length > 0 });
+        w = a()(O.tR, { [y.LO]: !l, [y.Rw]: l, [y.FB]: null != b && l, [y.xL]: f, [y.fG]: null != h && h.length > 0 });
     function B() {
         null != h && h.length > 0 && R
             ? (0, c.mMO)(async () => {
@@ -110,8 +110,8 @@ function G(e) {
               })
             : u.A.toggleDetection(b);
     }
-    let H = null != P && (0, g.Es)(b) === (0, g.Es)(P),
-        F = (null != f && f.id === P?.id) || H || (null != h && h.some((e) => e.id === P?.id));
+    let H = null != L && (0, g.Es)(b) === (0, g.Es)(L),
+        F = (null != C && C.id === L?.id) || H || (null != h && h.some((e) => e.id === L?.id));
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
@@ -172,7 +172,7 @@ function G(e) {
                             })(),
                         ],
                     }),
-                    A || L
+                    A || D
                         ? null
                         : (0, i.jsx)("div", {
                               className: a()(O.tR, O.oA, O.LT, y.E3),
@@ -182,7 +182,7 @@ function G(e) {
                                       "aria-label": j.intl.string(j.t["y0B+lo"]),
                                       className: y.ym,
                                       onClick: function () {
-                                          if (L) return;
+                                          if (D) return;
                                           let e = null != b.id ? T.A.getDetectableGame(b.id) : null;
                                           S.default.track(I.HAw.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
                                               application_id: e?.id,
@@ -244,7 +244,7 @@ function G(e) {
                         });
                     })(),
                     (function () {
-                        if (!D || null != f) return null;
+                        if (!P || null != C) return null;
                         let { overlay: e, overlayWarn: t } = b,
                             n = e
                                 ? (0, i.jsx)(c.kN9, {
@@ -332,12 +332,12 @@ function U() {
 }
 function k(e) {
     let { children: t } = e;
-    return (0, i.jsxs)(L, {
-        className: P.eT,
+    return (0, i.jsxs)(D, {
+        className: L.eT,
         children: [(0, i.jsx)(c.G8R, { darkSrc: n(839628), lightSrc: n(446404), width: 430, height: 250 }), t],
     });
 }
-let V = (0, C.L_)(function () {
+let V = (0, f.L_)(function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
         return new Set(t.map((e) => e.exePath));
     }),
@@ -360,7 +360,7 @@ let V = (0, C.L_)(function () {
     B = () => {
         let e = s.useRef(null);
         return (0, i.jsxs)("div", {
-            className: a()(y.ax, P.Gf),
+            className: a()(y.ax, L.Gf),
             children: [
                 (0, i.jsx)("span", { children: j.intl.string(j.t.xwhoqM) }),
                 (0, i.jsx)(c.YNO, {

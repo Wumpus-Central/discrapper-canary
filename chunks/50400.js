@@ -12,9 +12,9 @@ var i = n(627968),
     h = n(47167),
     A = n(598104),
     m = n(616356),
-    g = n(383501),
+    _ = n(383501),
     p = n(222823),
-    _ = n(309010),
+    g = n(309010),
     f = n(287809),
     x = n(607567),
     C = n(531685),
@@ -24,7 +24,7 @@ var i = n(627968),
     b = n(65611),
     S = n(652215),
     T = n(985018),
-    v = n(2724);
+    v = n(308294);
 let y = { friction: 28, tension: 600 };
 function j(e) {
     switch (e) {
@@ -81,7 +81,7 @@ class R extends s.PureComponent {
             s = t.type === S.rbe.DM ? f.default.getUser(t.getRecipientId()) : null;
         null != s
             ? (0, c.L3)(e, async () => {
-                  let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("39778"), n.e("49783")]).then(
+                  let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("39778"), n.e("38389")]).then(
                       n.bind(n, 385913),
                   );
                   return (n) => (0, i.jsx)(e, { ...n, channel: t, user: s });
@@ -104,9 +104,9 @@ class R extends s.PureComponent {
                 unread: u,
                 treeItemProps: h,
             } = this.props,
-            { hovered: m, animating: g } = this.state,
+            { hovered: m, animating: _ } = this.state,
             p = e.isMultiUserDM() && null == e.icon,
-            _ = () =>
+            g = () =>
                 (0, i.jsx)(o.jlP, {
                     to: S.BVt.CHANNEL(S.ME, e.id),
                     onMouseEnter: () => this.setState({ hovered: !0 }),
@@ -130,7 +130,7 @@ class R extends s.PureComponent {
             style: this.getAnimatedStyle(),
             children: (0, i.jsxs)(N.c, {
                 children: [
-                    (0, i.jsx)(E.A, { hovered: !g && m, selected: !g && n, unread: !g && u, className: v.I }),
+                    (0, i.jsx)(E.A, { hovered: !_ && m, selected: !_ && n, unread: !_ && u, className: v.I }),
                     (0, i.jsx)(I.A, {
                         channel: e,
                         children: (0, i.jsx)(o.Qk9, {
@@ -139,7 +139,7 @@ class R extends s.PureComponent {
                             lowerBadge: s > 0 ? (0, b.wN)(s, void 0, !0) : null,
                             upperBadge: (0, b.oi)({ audio: a, video: r, screenshare: c, isCurrentUserConnected: d }),
                             lowerBadgeSize: { width: (0, o.o6S)(s) },
-                            children: _(),
+                            children: g(),
                         }),
                     }),
                 ],
@@ -151,11 +151,11 @@ let O = s.forwardRef(function (e, t) {
     let n = e.channel.id,
         s = (0, h.Ay)(e.channel),
         l = (0, a.Vd)(n, 2),
-        c = (0, r.bG)([g.A], () => g.A.getChannelId(), []),
+        c = (0, r.bG)([_.A], () => _.A.getChannelId(), []),
         u = (0, r.bG)([d.A], () => d.A.getMode(n), [n]),
         A = (0, r.bG)([m.A], () => m.A.getAllApplicationStreamsForChannel(n).length > 0),
         f = (0, r.bG)([x.Ay], () => x.Ay.getVoiceStatesForChannel(e.channel).length > 0, [e.channel]),
-        C = (0, r.bG)([_.A], () => _.A.getChannelId(), []),
+        C = (0, r.bG)([g.A], () => g.A.getChannelId(), []),
         E = (0, r.bG)([p.Ay], () => p.Ay.getMentionCount(n), [n]),
         I = c === n,
         N = !1,

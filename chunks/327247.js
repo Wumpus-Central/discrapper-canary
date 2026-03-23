@@ -17,8 +17,8 @@ var i = n(627968),
     x = n(561844),
     f = n(590202),
     C = n(710969),
-    I = n(92246),
-    E = n(792620),
+    E = n(92246),
+    I = n(792620),
     v = n(453384),
     b = n(201805),
     T = n(212614),
@@ -28,11 +28,11 @@ var i = n(627968),
     j = n(545986),
     L = n(654487),
     R = n(985018),
-    P = n(65439),
-    M = n(962734);
+    P = n(421193),
+    M = n(196240);
 let w = async () => await n.e("40119").then(n.t.bind(n, 718698, 19));
 function D(e) {
-    let { quest: t, location: n, isInteracting: a, contentPosition: E, sourceQuestContent: b } = e,
+    let { quest: t, location: n, isInteracting: a, contentPosition: I, sourceQuestContent: b } = e,
         D = r.useRef(null),
         { ref: U, scrollHeight: B } = (0, o.wR)(),
         G = 104 !== B,
@@ -42,13 +42,13 @@ function D(e) {
         }),
         H = (0, C.Ic)(t),
         V = (0, A.In)(t),
-        q = (0, I.mq)(t.config),
-        W = (0, I.mH)(t.config),
-        z = t.userStatus?.enrolledAt != null,
-        Y = t.userStatus?.completedAt != null,
+        q = (0, E.mq)(t.config),
+        W = (0, E.mH)(t.config),
+        Y = t.userStatus?.enrolledAt != null,
+        z = t.userStatus?.completedAt != null,
         Q = t.userStatus?.claimedAt != null,
-        K = (0, I.ks)(t.config),
-        J = (0, I._Z)(t.config),
+        K = (0, E.ks)(t.config),
+        J = (0, E._Z)(t.config),
         { completedRatio: X, completedRatioDisplay: Z } = (0, A.O9)(t),
         $ = (0, g.gj)(t, b, _.Ob.QuestEmbed, D),
         ee = (0, y.Pd)(t),
@@ -110,11 +110,11 @@ function D(e) {
                 (0, x.Y5)({
                     questId: t.id,
                     questContent: n,
-                    questContentPosition: E,
+                    questContentPosition: I,
                     questContentCTA: f.Cy.LEARN_MORE,
                     sourceQuestContent: b,
                 });
-        }, [t.id, n, E, b]),
+        }, [t.id, n, I, b]),
         ea = (0, c.bG)([h.A], () => null != h.A.questEnrollmentBlockedUntil, []),
         el = p.t.useConfig({ location: L.rE.EMBED_DESKTOP });
     return (0, i.jsxs)("div", {
@@ -128,12 +128,12 @@ function D(e) {
                     (0, i.jsxs)("div", {
                         className: M.c6,
                         children: [
-                            !Q && Y && (0, i.jsx)("div", { className: M.Nz }),
-                            z
+                            !Q && z && (0, i.jsx)("div", { className: M.Nz }),
+                            Y
                                 ? (0, i.jsxs)("div", {
                                       className: M.Tr,
                                       children: [
-                                          Y &&
+                                          z &&
                                               (0, i.jsx)(d.akl, {
                                                   importData: w,
                                                   className: M.t_,
@@ -229,14 +229,14 @@ function D(e) {
                                         surface: y.V3.QUEST_EMBED,
                                         analyticsCtxQuestContent: n,
                                         analyticsCtxSourceQuestContent: b,
-                                        analyticsCtxQuestContentPosition: E,
+                                        analyticsCtxQuestContentPosition: I,
                                     })
                                   : (0, i.jsx)(O, {
                                         quest: t,
                                         progressState: V,
                                         questContent: n,
                                         sourceQuestContent: b,
-                                        questContentPosition: E,
+                                        questContentPosition: I,
                                     }),
                           ],
                       }),
@@ -255,8 +255,8 @@ let k = r.memo(function (e) {
 function O(e) {
     let { quest: t, progressState: n, questContent: r, questContentPosition: a, sourceQuestContent: l } = e,
         s = (0, c.bG)([h.A], () => h.A.isEnrolling(t.id)),
-        o = (0, E.vv)(t),
-        u = (0, E.Cr)(t),
+        o = (0, I.vv)(t),
+        u = (0, I.Cr)(t),
         _ = (0, C.Ic)(t),
         m = (0, b._c)({
             progressState: n,

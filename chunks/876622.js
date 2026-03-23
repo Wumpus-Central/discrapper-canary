@@ -8,7 +8,7 @@ var n = a(627968),
     c = a(770178),
     d = a(124589),
     u = a(985018),
-    m = a(326046);
+    m = a(55092);
 function h(e) {
     let { onTabSelect: t, tabs: a, selectedTab: l } = e,
         r = i.useMemo(

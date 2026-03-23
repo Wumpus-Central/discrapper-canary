@@ -12,9 +12,9 @@ var i = n(627968),
     h = n(401843),
     A = n(793574),
     m = n(688810),
-    g = n(139286),
+    _ = n(139286),
     p = n(313961),
-    _ = n(480890),
+    g = n(480890),
     f = n(643501),
     x = n(652896),
     C = n(279250),
@@ -32,7 +32,7 @@ var i = n(627968),
     L = n(289105),
     M = n(652215),
     D = n(806931),
-    G = n(55039);
+    G = n(742149);
 let U = 16 / 9,
     P = (e) => {
         let {
@@ -48,7 +48,7 @@ let U = 16 / 9,
             } = e,
             A = s.useRef(null),
             { reducedMotion: m } = s.useContext(c.CZY),
-            { blocked: g, ignored: p, id: _ } = t;
+            { blocked: _, ignored: p, id: g } = t;
         return (0, i.jsx)(b.A, {
             targetElementRef: A,
             user: r,
@@ -65,7 +65,7 @@ let U = 16 / 9,
                         {
                             participant: n,
                             aspectRatio: U,
-                            blocked: g,
+                            blocked: _,
                             ignored: p,
                             channel: l,
                             className: G.V,
@@ -76,7 +76,7 @@ let U = 16 / 9,
                             onContextMenu: u,
                             children: d && (0, i.jsx)(L.A, {}),
                         },
-                        _,
+                        g,
                     ),
                 }),
         });
@@ -92,7 +92,7 @@ let U = 16 / 9,
                 popoutType: A,
             } = e,
             { reducedMotion: m } = s.useContext(c.CZY),
-            { id: g, blocked: _, ignored: E } = t,
+            { id: _, blocked: g, ignored: E } = t,
             N = (0, o.yK)([S.A], () => S.A.getAllActiveStreams(), []),
             { selectedParticipant: b, largeStream: T } = (0, o.cf)([p.A], () => ({
                 selectedParticipant: null != l ? p.A.getSelectedParticipant(l.id) : null,
@@ -121,7 +121,7 @@ let U = 16 / 9,
                 participant: n,
                 aspectRatio: U,
                 fit: n.type === D.lp.USER ? I.$.COVER : void 0,
-                blocked: _,
+                blocked: g,
                 ignored: E,
                 channel: l,
                 className: G.V,
@@ -133,7 +133,7 @@ let U = 16 / 9,
                 width: a,
                 children: r && n.type === D.lp.USER && (0, i.jsx)(L.A, {}),
             },
-            g,
+            _,
         );
     },
     k = s.memo(function (e) {
@@ -148,7 +148,7 @@ let U = 16 / 9,
             b = (0, o.bG)([R.Ay], () => R.Ay.isModerator(C.id, s.id), [s.id, C.id]);
         if (null == I || I.type === D.lp.ACTIVITY) return null;
         let S = (e) => {
-                (0, g.x)({
+                (0, _.x)({
                     type: r.ImpressionTypes.MENU,
                     name: r.ImpressionNames.CALL_TILE_CONTEXT_MENU,
                     properties: { location: "StageTile", is_tile_owner: C.id === x, tile_type: e },
@@ -169,7 +169,7 @@ let U = 16 / 9,
                                             stream: e.stream,
                                             appContext: h,
                                             exitFullscreen: () => {},
-                                            onInteraction: (0, _.s)("StreamContextMenu", d, {
+                                            onInteraction: (0, g.s)("StreamContextMenu", d, {
                                                 entrypoint: a,
                                                 targetUserId: C.id,
                                                 tileType: D.qs.STREAM,
@@ -183,7 +183,7 @@ let U = 16 / 9,
                     default:
                         if ((S(D.qs.USER), l))
                             return (0, N.r)(t, C, s, { context: h }, (e, t) =>
-                                (0, _.Y)({
+                                (0, g.Y)({
                                     menuName: e,
                                     menuItemProps: t,
                                     entrypoint: D.GK.THREE_DOT,
@@ -199,7 +199,7 @@ let U = 16 / 9,
                                     n.e("97262"),
                                     n.e("42128"),
                                     n.e("84841"),
-                                    n.e("38522"),
+                                    n.e("54266"),
                                 ]).then(n.bind(n, 107632));
                                 return (t) =>
                                     (0, i.jsx)(e, {
@@ -210,7 +210,7 @@ let U = 16 / 9,
                                         showMediaItems: !0,
                                         showStageChannelItems: !0,
                                         showChatItems: !1,
-                                        onInteraction: (0, _.s)("GuildChannelUserContextMenu", d, {
+                                        onInteraction: (0, g.s)("GuildChannelUserContextMenu", d, {
                                             targetUserId: C.id,
                                             tileType: D.qs.USER,
                                         }),

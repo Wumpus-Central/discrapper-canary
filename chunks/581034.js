@@ -8,13 +8,13 @@ var r = n(989349),
     o = n(393033),
     d = n(239093),
     c = n(985018),
-    u = n(682402);
+    u = n(617184);
 function _(e) {
     let { classificationId: t } = e;
     return (0, i.jsx)(s.MzZ, {
         onClick: () => {
             (0, s.mMO)(async () => {
-                let { default: e } = await Promise.all([n.e("83518"), n.e("9407"), n.e("70660")]).then(
+                let { default: e } = await Promise.all([n.e("83518"), n.e("9407"), n.e("1708")]).then(
                     n.bind(n, 956450),
                 );
                 return (n) =>

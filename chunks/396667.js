@@ -11,7 +11,7 @@ var i = n(627968),
     _ = n(166403),
     m = n(773669),
     g = n(652215),
-    A = n(70101);
+    A = n(445391);
 function x(e) {
     let { showHeader: t = !1 } = e,
         n = (0, a.bG)([c.A], () => c.A.isSyncing),
@@ -21,7 +21,7 @@ function x(e) {
         T = (0, a.bG)([_.A], () => _.A.getPremiumTypeSubscription()),
         E = (0, a.bG)([c.A], () => c.A.isRemovingPaymentSource),
         S = (0, a.bG)([c.A], () => c.A.isUpdatingPaymentSource),
-        { enabled: C } = (0, d.c)({ location: "UserSettingsBilling" });
+        { enabled: f } = (0, d.c)({ location: "UserSettingsBilling" });
     return (s.useEffect(() => {
         r.$o(), r.hP();
     }, []),
@@ -35,6 +35,6 @@ function x(e) {
               locale: p,
               removing: E,
               submitting: S,
-              showGiftCards: C,
+              showGiftCards: f,
           });
 }

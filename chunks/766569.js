@@ -1,4 +1,4 @@
-n.d(t, { A: () => L });
+n.d(t, { A: () => D });
 var i = n(627968),
     s = n(64700),
     l = n(284009),
@@ -18,8 +18,8 @@ var i = n(627968),
     T = n(622543),
     E = n(696451),
     S = n(351906),
-    C = n(287809),
-    f = n(975571),
+    f = n(287809),
+    C = n(975571),
     b = n(927578),
     N = n(159001),
     I = n(65767),
@@ -27,32 +27,32 @@ var i = n(627968),
     j = n(687021),
     y = n(652215),
     R = n(985018),
-    O = n(61687);
-function P(e) {
+    O = n(764121);
+function L(e) {
     (0, o.mMO)(async () => {
         let { default: t } = await n.e("65281").then(n.bind(n, 547352));
         return (n) => (0, i.jsx)(t, { source: { ...e, page: y.liQ.GUILD_MEMBER_PROFILE_SETTINGS }, ...n });
     });
 }
-function L(e) {
+function D(e) {
     let { selectedGuild: t, onGuildChange: n } = e,
         { analyticsLocations: l } = (0, _.Ay)(u.A.USER_SETTINGS_GUILD_PROFILE),
-        L = (0, r.bG)([C.default], () => {
-            let e = C.default.getCurrentUser();
+        D = (0, r.bG)([f.default], () => {
+            let e = f.default.getCurrentUser();
             return a()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e;
         }),
-        D = (0, r.bG)([E.Ay], () => (null != t ? E.Ay.getMember(t.id, L.id) : null)),
-        M = (0, r.bG)([T.A], () => !T.A.isFetchingProfile(L.id, t?.id)),
+        P = (0, r.bG)([E.Ay], () => (null != t ? E.Ay.getMember(t.id, D.id) : null)),
+        M = (0, r.bG)([T.A], () => !T.A.isFetchingProfile(D.id, t?.id)),
         G = (0, r.bG)([S.A], () => S.A.hidePersonalInformation),
         { pendingAvatar: U, pendingNameplate: k, ...V } = (0, r.cf)([p.A], () => p.A.getPendingChanges(t?.id)),
-        w = (0, h.V7)({ userId: L.id, image: U }),
+        w = (0, h.V7)({ userId: D.id, image: U }),
         B = (0, g.lw)({
             pendingValue: k,
-            userValue: L?.collectibles?.nameplate,
-            guildValue: D?.collectibles?.nameplate,
+            userValue: D?.collectibles?.nameplate,
+            guildValue: P?.collectibles?.nameplate,
             guildId: t?.id,
         }),
-        { pendingDisplayNameStyles: H } = (0, g.B0)(L, t?.id);
+        { pendingDisplayNameStyles: H } = (0, g.B0)(D, t?.id);
     return (s.useEffect(() => () => d.h.wait(N.IM), []), G)
         ? (0, i.jsx)(c.A, {})
         : M
@@ -62,7 +62,7 @@ function L(e) {
                     (0, i.jsx)(o.Text, {
                         variant: "text-sm/normal",
                         children: R.intl.format(R.t["/PTB2E"], {
-                            helpCenterLink: f.A.getArticleURL(y.MVz.GUILD_PROFILES),
+                            helpCenterLink: C.A.getArticleURL(y.MVz.GUILD_PROFILES),
                         }),
                     }),
                     null != t
@@ -79,15 +79,15 @@ function L(e) {
                                           ...V,
                                           pendingAvatar: w,
                                           pendingDisplayNameStyles: H,
-                                          user: L,
+                                          user: D,
                                           guild: t,
-                                          canUsePremiumCustomization: b.Ay.canUsePremiumProfileCustomization(L),
-                                          onUpsellClick: P,
+                                          canUsePremiumCustomization: b.Ay.canUsePremiumProfileCustomization(D),
+                                          onUpsellClick: L,
                                       }),
                                       nameplatePreview: (0, i.jsx)(m.A, {
                                           ...V,
                                           pendingDisplayNameStyles: H,
-                                          user: L,
+                                          user: D,
                                           guildId: t?.id,
                                           nameplate: B,
                                           className: null == B ? O.t : void 0,

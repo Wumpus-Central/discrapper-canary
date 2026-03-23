@@ -12,7 +12,7 @@ var i,
     h = n(761929),
     A = n(964404),
     m = n(743898),
-    g = n(83181),
+    _ = n(3651),
     p =
         (((i = {})[(i.PostSidebar = 0)] = "PostSidebar"),
         (i[(i.ThreadSidebar = 1)] = "ThreadSidebar"),
@@ -20,7 +20,7 @@ var i,
         (i[(i.MessageRequestSidebar = 3)] = "MessageRequestSidebar"),
         (i[(i.HomeSidebar = 4)] = "HomeSidebar"),
         i);
-function _(e) {
+function g(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: i, maxWidth: l, minWidth: a } = e,
         r = (0, h.A)({
             minDimension: a,
@@ -31,7 +31,7 @@ function _(e) {
             orientation: h.R.HORIZONTAL_LEFT,
             throttleDuration: 16,
         });
-    return (0, s.jsx)("div", { onMouseDown: r, className: g.Di });
+    return (0, s.jsx)("div", { onMouseDown: r, className: _.Di });
 }
 function f(e) {
     let { sidebarType: t, maxWidth: n, onWidthChange: i, children: a, floatingLayer: h } = e,
@@ -70,11 +70,11 @@ function f(e) {
             !I && (0, s.jsx)("div", { style: { minWidth: S } }),
             (0, s.jsx)(T, {
                 children: (0, s.jsxs)("div", {
-                    className: r()(g.PA, { [g.R]: !1 }),
+                    className: r()(_.PA, { [_.R]: !1 }),
                     children: [
-                        (0, s.jsx)("div", { className: r()(g.Uc, { [g.DU]: I, [g.iK]: !I }), style: { width: S } }),
+                        (0, s.jsx)("div", { className: r()(_.Uc, { [_.DU]: I, [_.iK]: !I }), style: { width: S } }),
                         !I &&
-                            (0, s.jsx)(_, {
+                            (0, s.jsx)(g, {
                                 minWidth: 450,
                                 maxWidth: n,
                                 resizableNode: p,
@@ -83,7 +83,7 @@ function f(e) {
                             }),
                         (0, s.jsx)("div", {
                             ref: p,
-                            className: r()(g.kL, { [g.DU]: I }),
+                            className: r()(_.kL, { [_.DU]: I }),
                             style: { width: b },
                             children: a,
                         }),

@@ -12,7 +12,7 @@ var i = n(627968),
     m = n(183555),
     x = n(622543),
     p = n(985018),
-    f = n(81157);
+    f = n(413611);
 function h(e) {
     let { applicationId: t, size: n = "default" } = e,
         l = (0, o.bG)([x.A], () => x.A.getApplicationWidgetConfig(t));

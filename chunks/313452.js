@@ -12,9 +12,9 @@ var i = n(627968),
     h = n(928039),
     A = n(793574),
     m = n(688810),
-    g = n(222823),
+    _ = n(222823),
     p = n(203982),
-    _ = n(661191),
+    g = n(661191),
     f = n(851109),
     x = n(932883),
     C = n(39324),
@@ -24,9 +24,9 @@ var i = n(627968),
     b = n(524628),
     S = n(849077),
     T = n(652215),
-    v = n(21786),
+    v = n(228160),
     y = n(985018),
-    j = n(19e3);
+    j = n(128354);
 function R(e) {
     e.stopPropagation();
 }
@@ -118,11 +118,11 @@ function D(e) {
         { messageCategoryOpenStates: W, toggleOpenState: Y } = (0, C.A)(),
         z =
             ((t = (0, d.yK)([E.A], () => E.A.getNotifyingChannelIds() ?? [])),
-            (0, d.bG)([E.A, g.Ay], () => {
+            (0, d.bG)([E.A, _.Ay], () => {
                 let e = E.A.getChannelInfoMap();
                 for (let n of t) {
                     let t = e[n];
-                    if ((null == t || t.loadState === S.Ve.UNLOADED) && g.Ay.hasUnread(n)) return !0;
+                    if ((null == t || t.loadState === S.Ve.UNLOADED) && _.Ay.hasUnread(n)) return !0;
                 }
                 return !1;
             }, [t]));
@@ -170,7 +170,7 @@ function D(e) {
                     }),
                     o().each(L, (n) => {
                         [...Object.values(i[n]).map((e) => e.reverse()), ...t[n].map((e) => [e])]
-                            .sort((e, t) => _.default.compare(t[0].id, e[0].id))
+                            .sort((e, t) => g.default.compare(t[0].id, e[0].id))
                             .forEach((t) => {
                                 e[n].push(t);
                             });

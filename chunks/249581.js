@@ -1,13 +1,13 @@
 n.d(t, { A: () => h });
 var i = n(627968),
     a = n(64700),
-    r = n(503698),
-    l = n.n(r),
+    l = n(503698),
+    r = n.n(l),
     s = n(397927),
     o = n(927018),
     d = n(64585),
     c = n(906688),
-    u = n(212963);
+    u = n(99761);
 let A = (e) => {
     let { color: t } = e;
     return (0, i.jsxs)("svg", {
@@ -66,7 +66,7 @@ let A = (e) => {
 };
 function h(e) {
     let { achievement: t, unlocked: n } = e,
-        { name: r, description: h, rarity: _, hideDescriptionUntilUnlock: m, onAction: g } = t,
+        { name: l, description: h, rarity: _, hideDescriptionUntilUnlock: m, onAction: g } = t,
         { color: p } = (0, o.ag)(_);
     a.useEffect(() => {
         let e = setTimeout(() => {
@@ -79,7 +79,7 @@ function h(e) {
     let E = null != g && n,
         I = E ? s.DUT : "div";
     return (0, i.jsxs)(I, {
-        className: l()(u.kL, E && u.b),
+        className: r()(u.kL, E && u.b),
         onClick: () => {
             E && g();
         },
@@ -91,7 +91,7 @@ function h(e) {
             (0, i.jsxs)("div", {
                 className: u.__invalid_nameContainer,
                 children: [
-                    (0, i.jsx)(s.Text, { variant: "text-md/semibold", color: "text-strong", children: r() }),
+                    (0, i.jsx)(s.Text, { variant: "text-md/semibold", color: "text-strong", children: l() }),
                     (0, i.jsx)(s.Text, {
                         variant: "text-xs/medium",
                         color: "text-default",

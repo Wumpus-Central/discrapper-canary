@@ -1,96 +1,96 @@
-r.d(e, { A: () => _ });
-var i = r(627968),
-    n = r(503698),
-    l = r.n(n),
+r.d(t, { A: () => y });
+var n = r(627968),
+    l = r(503698),
+    i = r.n(l),
     s = r(575593),
     a = r(158954),
     u = r(311907),
     o = r(397927),
-    d = r(331402),
-    c = r(287809),
-    A = r(298072),
+    c = r(331402),
+    d = r(287809),
+    f = r(298072),
     m = r(400076),
-    x = r(466459),
-    p = r(623373),
-    g = r(561769),
-    C = r(846957),
-    h = r(929283),
-    f = r(245068),
-    I = r(761365),
-    k = r(550674),
-    v = r(998918);
-let j = (t) => {
-        let { product: e, isCardHovered: r, showDefaultAvatar: n, disableAnimation: a } = t,
-            u = (0, p.YW)(e),
-            { isPurchased: o, isPartiallyOwnedBundle: d } = (0, x.h)(e),
-            c = u === s.R.PROFILE_EFFECT;
-        return (0, i.jsxs)(i.Fragment, {
+    h = r(466459),
+    A = r(623373),
+    x = r(561769),
+    p = r(846957),
+    C = r(929283),
+    g = r(245068),
+    v = r(761365),
+    I = r(550674),
+    b = r(8056);
+let k = (e) => {
+        let { product: t, isCardHovered: r, showDefaultAvatar: l, disableAnimation: a } = e,
+            u = (0, A.YW)(t),
+            { isPurchased: o, isPartiallyOwnedBundle: c } = (0, h.h)(t),
+            d = u === s.R.PROFILE_EFFECT;
+        return (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, i.jsx)("div", {
-                    className: l()(v.mA, { [v.zj]: (o || d) && !r, [v.Ge]: c }),
-                    children: (0, i.jsx)(E, {
-                        product: e,
+                (0, n.jsx)("div", {
+                    className: i()(b.mA, { [b.zj]: (o || c) && !r, [b.Ge]: d }),
+                    children: (0, n.jsx)(E, {
+                        product: t,
                         isCardHovered: r,
-                        showDefaultAvatar: n,
+                        showDefaultAvatar: l,
                         disableAnimation: a,
                     }),
                 }),
-                o && (0, i.jsx)(T, { hidden: r }),
+                o && (0, n.jsx)(j, { hidden: r }),
             ],
         });
     },
-    E = (t) => {
-        let { product: e, isCardHovered: r, showDefaultAvatar: n, disableAnimation: l } = t,
-            a = (0, u.bG)([c.default], () => c.default.getCurrentUser()),
-            A = (0, p.YW)(e),
-            m = (0, k.D)(e),
-            x = r && !l;
-        switch (A) {
+    E = (e) => {
+        let { product: t, isCardHovered: r, showDefaultAvatar: l, disableAnimation: i } = e,
+            a = (0, u.bG)([d.default], () => d.default.getCurrentUser()),
+            f = (0, A.YW)(t),
+            m = (0, I.D)(t),
+            h = r && !i;
+        switch (f) {
             case s.R.PROFILE_EFFECT:
-                return (0, i.jsx)(d.A, { skuId: m.skuId, isHighlighted: x, removeSetHeight: !0, hideBackground: !0 });
+                return (0, n.jsx)(c.A, { skuId: m.skuId, isHighlighted: h, removeSetHeight: !0, hideBackground: !0 });
             case s.R.AVATAR_DECORATION:
-                return (0, i.jsx)(h.i, {
+                return (0, n.jsx)(C.i, {
                     item: m,
                     user: a,
-                    isHighlighted: x,
-                    showDefaultAvatar: n,
-                    disableAnimation: l,
+                    isHighlighted: h,
+                    showDefaultAvatar: l,
+                    disableAnimation: i,
                     avatarSize: o._3J.SIZE_120,
                 });
             case s.R.NAMEPLATE:
-                return (0, i.jsx)(I.A, { nameplate: m, user: a, isHighlighted: x, showDefaultAvatar: n });
+                return (0, n.jsx)(v.A, { nameplate: m, user: a, isHighlighted: h, showDefaultAvatar: l });
             case s.R.BUNDLE:
-                return (0, i.jsx)(f.X, {
-                    product: e,
+                return (0, n.jsx)(g.X, {
+                    product: t,
                     user: a,
-                    isHighlighted: x,
-                    showDefaultAvatar: n,
-                    disableAnimation: l,
+                    isHighlighted: h,
+                    showDefaultAvatar: l,
+                    disableAnimation: i,
                 });
             case s.R.EXTERNAL_SKU:
-                return (0, i.jsx)(C.B, { product: e, animationState: x ? "on" : "off" });
+                return (0, n.jsx)(p.B, { product: t, animationState: h ? "on" : "off" });
             default:
                 return null;
         }
     },
-    T = (t) => {
-        let { hidden: e } = t;
-        return (0, i.jsx)(a.rOg, {
+    j = (e) => {
+        let { hidden: t } = e;
+        return (0, n.jsx)(a.rOg, {
             size: "custom",
             color: o.LU0.colors.INTERACTIVE_TEXT_ACTIVE,
             width: 40,
             height: 40,
-            className: l()(v.zo, { [v.R]: e }),
+            className: i()(b.zo, { [b.R]: t }),
         });
     },
-    _ = (t) => {
-        let { skuId: e, isCardHovered: r, overrideVariantIndex: n } = t,
-            l = (0, g.Vm)(e),
-            s = (0, A.Q)(l),
+    y = (e) => {
+        let { skuId: t, isCardHovered: r, overrideVariantIndex: l } = e,
+            i = (0, x.Vm)(t),
+            s = (0, f.Q)(i),
             { variant: a } = (0, m.w)("ProductPreview"),
             u = a !== m.L.CONTROL,
             o = a === m.L.DEFAULT_AVATAR_NO_ANIMATION;
-        if (null == l) return null;
-        let d = (0, p.rb)(l, n ?? s);
-        return (0, i.jsx)(j, { product: d, isCardHovered: r, showDefaultAvatar: u, disableAnimation: o });
+        if (null == i) return null;
+        let c = (0, A.rb)(i, l ?? s);
+        return (0, n.jsx)(k, { product: c, isCardHovered: r, showDefaultAvatar: u, disableAnimation: o });
     };

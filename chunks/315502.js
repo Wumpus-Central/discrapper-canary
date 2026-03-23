@@ -5,7 +5,7 @@ n(64700);
 var s = n(503698),
     l = n.n(s),
     a = n(397927),
-    r = n(516238);
+    r = n(91248);
 function o(e) {
     let { hasMentions: t, truncatedCount: n, className: s } = e;
     return (0, i.jsx)(a.Text, { className: l()(r.T, s, { [r.l]: t }), variant: "text-xs/normal", children: n });

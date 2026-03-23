@@ -6,7 +6,7 @@ var i = n(627968),
     r = n(791498),
     o = n(590089),
     d = n(876813),
-    c = n(40937);
+    c = n(191563);
 function u(e) {
     let { node: t } = e,
         { destinationKey: n, useTrailingDecoration: u, useTitle: _, useSubtitle: m } = t,
@@ -18,12 +18,12 @@ function u(e) {
         E = p ?? T,
         S = (0, r.q)(t);
     if (null == x || null == E) return null;
-    let C = null != h ? h.icon : void 0;
+    let f = null != h ? h.icon : void 0;
     return (0, i.jsx)(o.U, {
         title: E,
         description: A,
         leadingElement:
-            null != C && (0, i.jsx)("div", { className: c.z, children: (0, i.jsx)(C, { color: "currentColor" }) }),
+            null != f && (0, i.jsx)("div", { className: c.z, children: (0, i.jsx)(f, { color: "currentColor" }) }),
         trailingElement: (0, i.jsxs)("div", {
             className: c.M,
             children: [null != g && (0, i.jsx)(d.Q, { decoration: g }), (0, i.jsx)(s.uhT, {})],

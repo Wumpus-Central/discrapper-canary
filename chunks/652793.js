@@ -7,9 +7,9 @@ var s = n(503698),
     a = n(837381),
     r = n(672117),
     o = n(397927),
-    c = n(814823),
-    d = n(719550),
-    u = n(516632);
+    c = n(69813),
+    d = n(728444),
+    u = n(811094);
 function h(e) {
     let {
             id: t,
@@ -18,9 +18,9 @@ function h(e) {
             renderIcon: h,
             text: A,
             selected: m,
-            trailing: g,
+            trailing: _,
             background: p,
-            showUnread: _ = !1,
+            showUnread: g = !1,
             ref: f,
             ...x
         } = e,
@@ -43,7 +43,7 @@ function h(e) {
             className: l()(d.fx, u.iE, { [u.J1]: m }, n),
             children: [
                 p,
-                _ ? (0, i.jsx)("div", { className: l()(u.gy, u.WS) }) : null,
+                g ? (0, i.jsx)("div", { className: l()(u.gy, u.WS) }) : null,
                 (0, i.jsx)("div", {
                     className: l()([u.nf, u.ae, s]),
                     children: (0, i.jsxs)("div", {
@@ -51,7 +51,7 @@ function h(e) {
                         children: [
                             (0, i.jsx)("div", { className: u.zc, children: h(u.Kk) }),
                             (0, i.jsx)("div", { className: u.UU, "aria-hidden": !0, children: A }),
-                            g,
+                            _,
                         ],
                     }),
                 }),

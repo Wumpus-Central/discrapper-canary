@@ -17,10 +17,10 @@ var i = n(627968),
     x = n(125017),
     f = n(104171),
     C = n(13403),
-    I = n(536189),
-    E = n(652215),
+    E = n(536189),
+    I = n(652215),
     v = n(272984),
-    b = n(62323);
+    b = n(609653);
 function T(e) {
     let { partyMembers: t, partySize: n, maxPartySize: r, guildId: a, activityActionType: s } = e,
         o = Math.max(n, t.length),
@@ -48,7 +48,7 @@ function y(e) {
         S = (0, s.b)(n),
         N = (0, a.bG)([c.default], () => c.default.getId()),
         j = (0, a.bG)([m.A], () => {
-            if (null == g.application) return m.A.findActivity(g.author.id, (e) => e.type === E.$pd.LISTENING);
+            if (null == g.application) return m.A.findActivity(g.author.id, (e) => e.type === I.$pd.LISTENING);
             {
                 let e = g.author.id;
                 return (
@@ -84,7 +84,7 @@ function y(e) {
             [w, P, M, l.guild_id, g.activity?.type],
         );
     return (0, v.pH)(j?.party?.id) || S.id === d.HT.id
-        ? (0, i.jsx)(I.A, {
+        ? (0, i.jsx)(E.A, {
               application: S,
               currentUserPresenceActivity: L,
               hideParty: b,
@@ -94,7 +94,7 @@ function y(e) {
               presenceActivity: j,
               guildId: l.guild_id,
           })
-        : g.activity?.type === E.xL.STREAM_REQUEST
+        : g.activity?.type === I.xL.STREAM_REQUEST
           ? (0, i.jsx)(o.A, { analyticsLocations: t, application: S, channel: l, currentUserId: N, message: g })
           : (0, i.jsx)(C.A, {
                 analyticsLocations: t,

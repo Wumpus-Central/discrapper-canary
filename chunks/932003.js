@@ -9,7 +9,7 @@ var i = r(877624),
     c = r(412260),
     d = r(810498),
     m = r(985018),
-    u = r(4733);
+    u = r(708611);
 function T() {
     let { claimableRewards: e } = (0, l.Pv)(),
         t = (0, a.bG)([c.A], () => {
