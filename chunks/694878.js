@@ -22,18 +22,19 @@ function g(e) {
             (0, o.A)(n, r.A.GUILD_POWERUPS_GUILD_SETTINGS_TAGS, "guildTagsBadgePacks"), d.A.close();
         }, [n]),
         _ = (0, a.A)(),
-        A = s.useId();
+        p = s.useId();
     return (0, i.jsx)("div", {
         className: t,
         children: (0, i.jsx)(l.D0$, {
             label: m.intl.string(u.default.pb7lpK),
-            id: A,
+            description: m.intl.string(u.default.X4LEbC),
+            id: p,
             children: (0, i.jsx)(c.y, {
                 badgeCollection: _,
                 handleBoostUpsellClick: h,
                 onBadgeClicked: x,
                 selectedBadge: g,
-                headingId: A,
+                headingId: p,
             }),
         }),
     });
