@@ -1,4 +1,4 @@
-n.d(t, { H: () => s, R: () => l });
+n.d(t, { H: () => s });
 var i,
     s =
         (((i = {}).PROFILE_CUSTOMIZATION = "PROFILE_CUSTOMIZATION"),
@@ -38,4 +38,3 @@ var i,
         (i.REGISTERED_GAMES = "REGISTERED_GAMES"),
         (i.OVERLAY = "OVERLAY"),
         i);
-let l = [];
