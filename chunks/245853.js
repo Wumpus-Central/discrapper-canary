@@ -5,14 +5,17 @@ n.d(t, {
     TY: () => c,
     YX: () => u,
     Ym: () => l,
+    fV: () => E,
     jS: () => o,
     m8: () => d,
+    rE: () => h,
     rI: () => p,
     sn: () => i,
     sy: () => _,
     uK: () => s,
 });
 var r = n(945810);
+n(654487);
 let i = (0, r.mj)({
         name: "2025-11-quest-home-takeover-client-rollout",
         kind: "user",
@@ -81,3 +84,25 @@ let f = (0, r.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     });
+var h = (function (e) {
+    return (
+        (e[(e.RANK_DOWN_ALL_QUESTS_AFTER_30_MINUTES = 0)] = "RANK_DOWN_ALL_QUESTS_AFTER_30_MINUTES"),
+        (e[(e.REMOVE_NON_VIDEO_QUESTS = 1)] = "REMOVE_NON_VIDEO_QUESTS"),
+        (e[(e.RANK_BASED_ON_QUEST_TYPE = 2)] = "RANK_BASED_ON_QUEST_TYPE"),
+        e
+    );
+})({});
+let m = (0, r.mj)({
+    name: "2026-03-mobile-quest-home-ranking-availability",
+    kind: "user",
+    defaultConfig: { enabled: !1, variant: null },
+    variations: {
+        0: { enabled: !1, variant: null },
+        1: { enabled: !0, variant: 0 },
+        2: { enabled: !0, variant: 1 },
+        3: { enabled: !0, variant: 2 },
+    },
+});
+function E() {
+    return m.definition.defaultConfig.variant;
+}

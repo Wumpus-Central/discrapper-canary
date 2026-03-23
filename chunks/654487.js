@@ -13,7 +13,7 @@ n.d(t, {
     Ls: () => L,
     Pc: () => P,
     TY: () => u.T,
-    WQ: () => G,
+    WQ: () => F,
     ZV: () => f,
     aA: () => h,
     aJ: () => C,
@@ -25,7 +25,7 @@ n.d(t, {
     hK: () => O,
     kL: () => x,
     mg: () => y,
-    pc: () => V,
+    pc: () => B,
     rE: () => d,
     tZ: () => _,
     zO: () => w,
@@ -178,22 +178,28 @@ var x = (function (e) {
         );
     })({});
 let U = [
-    { group: "task", filter: "task_play" },
-    { group: "task", filter: "task_video" },
-    { group: "reward", filter: "reward_virtual_currency" },
-    { group: "reward", filter: "reward_collectible" },
-    { group: "reward", filter: "reward_in_game" },
-];
-function G(e) {
+        { group: "task", filter: "task_play" },
+        { group: "task", filter: "task_video" },
+        { group: "reward", filter: "reward_virtual_currency" },
+        { group: "reward", filter: "reward_collectible" },
+        { group: "reward", filter: "reward_in_game" },
+    ],
+    G = [
+        { group: "reward", filter: "reward_virtual_currency" },
+        { group: "reward", filter: "reward_collectible" },
+        { group: "reward", filter: "reward_in_game" },
+    ];
+function F(e) {
     return Object.values(P).includes(e)
         ? { group: "task", filter: e }
         : Object.values(k).includes(e)
           ? { group: "reward", filter: e }
           : null;
 }
-let F = ["reward", "task"],
-    V = Object.entries((0, r.groupBy)(U, "group")).sort((e, t) => {
-        let n = F.indexOf(e[0]),
-            r = F.indexOf(t[0]);
+let V = ["reward", "task"],
+    B = Object.entries((0, r.groupBy)(U, "group")).sort((e, t) => {
+        let n = V.indexOf(e[0]),
+            r = V.indexOf(t[0]);
         return n < r ? -1 : +(r < n);
     });
+Object.entries((0, r.groupBy)(G, "group"));
