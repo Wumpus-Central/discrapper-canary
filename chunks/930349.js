@@ -1,42 +1,63 @@
-l.d(t, { C: () => d });
+l.d(t, { C: () => h });
 var a = l(627968);
 l(64700);
 var n = l(503698),
     r = l.n(n),
     i = l(158954),
-    o = l(397927),
-    s = l(530949);
-function u(e) {
-    let { mode: t, className: l } = e;
-    return "add" === t
-        ? (0, a.jsx)(o.j96, { size: "sm", color: "white", "aria-hidden": !0, className: l })
-        : (0, a.jsx)(o.R2l, { size: "sm", color: "white", "aria-hidden": !0, className: l });
+    o = l(990078),
+    s = l(397927),
+    u = l(985018),
+    c = l(530949);
+function d() {
+    return (0, a.jsx)("div", { className: c.overlay });
 }
-function c(e) {
-    let { alignment: t, showOnHover: l, children: n } = e;
+function p(e) {
+    let { iconAlignment: t } = e;
     return (0, a.jsx)("div", {
-        className: r()(s.overlay, {
-            [s.overlayAlignCenter]: "center" === t,
-            [s.overlayAlignRight]: "right" === t,
-            [s.overlayAlwaysVisible]: !l,
-        }),
-        children: n,
+        className: r()(c.iconContainer, { [c.iconAlignCenter]: "center" === t, [c.iconAlignRight]: "right" === t }),
+        children: (0, a.jsx)(s.j96, { size: "sm", color: "white", "aria-hidden": !0, className: c.overlayIcon }),
     });
 }
-function d(e) {
-    let { iconAlignment: t, editingMode: l, variant: n, onClick: o, "aria-label": d, children: p } = e;
-    return (0, a.jsxs)(i.DUT, {
-        "aria-label": d,
-        className: r()(s.base, s[n]),
-        onClick: o,
+function m(e) {
+    let { onClick: t, type: l, accessibleLabel: n } = e,
+        r = "remove" === l ? u.intl.string(u.t["2A+piL"]) : u.intl.string(u.t.GaEG4t);
+    return (0, a.jsx)(o.m, {
+        text: r,
+        ariaHidden: !0,
+        children: (0, a.jsx)(i.K0, {
+            "aria-label": n,
+            icon: "remove" === l ? i.ucK : i.mqY,
+            size: "sm",
+            variant: "overlay-secondary",
+            onClick: t,
+        }),
+    });
+}
+function h(e) {
+    let {
+        editingMode: t,
+        variant: l,
+        onClick: n,
+        accessibleLabel: o,
+        children: s,
+        deleteButtonConfig: u,
+        showOverlay: h,
+    } = e;
+    return (0, a.jsxs)("div", {
+        className: c.tileWrapper,
         children: [
-            (0, a.jsx)("div", { className: s.content, children: p }),
-            (0, a.jsx)(c, {
-                alignment: t,
-                showOnHover: "edit" === l,
-                children: (0, a.jsx)(u, { mode: l, className: s.overlayIcon }),
+            (0, a.jsxs)(i.DUT, {
+                "aria-label": o,
+                className: r()(c.base, c[l]),
+                onClick: n,
+                children: [
+                    (0, a.jsx)("div", { className: c.content, children: s }),
+                    h && (0, a.jsx)(d, {}),
+                    "add" === t && (0, a.jsx)(p, { iconAlignment: "bar" === l ? "right" : "center" }),
+                ],
             }),
+            null != u && (0, a.jsx)("div", { className: c.deleteButtonWrapper, children: (0, a.jsx)(m, { ...u }) }),
         ],
     });
 }
-(d.Icon = u), (d.Overlay = c);
+(h.Overlay = d), (h.OverlayIcon = p), (h.DeleteButton = m);
