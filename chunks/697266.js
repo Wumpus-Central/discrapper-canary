@@ -8,8 +8,9 @@ let o = !1,
     l = null;
 async function u() {
     if ((0, s.isMac)() && window.DiscordNative?.settings?.set != null) {
-        let { enabled: e } = (0, a.$)({ location: "updateSwitch" });
-        await window.DiscordNative.settings.set("USE_NEW_UPDATER", e), (l = e);
+        let { enabled: e } = (0, a.$)({ location: "updateSwitch" }),
+            t = e && (window.DiscordNative.nativeModules.getUpdaterVersion?.() ?? 0) >= 1;
+        await window.DiscordNative.settings.set("USE_NEW_UPDATER", t), (l = t);
     }
 }
 class c extends r.A {
