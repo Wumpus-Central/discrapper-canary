@@ -8,9 +8,9 @@ var r = n(64700),
     l = n(594832),
     u = n(240248);
 function c(e) {
-    let { currentUser: t, skuId: n, location: c, onAddSuccess: d, onRemoveSuccess: _, onError: f } = e,
+    let { userId: t, skuId: n, location: c, onAddSuccess: d, onRemoveSuccess: _, onError: f } = e,
         { analyticsLocations: p } = (0, s.Ay)((0, u.uJ)(c) ? [] : [c]),
-        h = (0, i.bG)([a.A], () => (null != t ? a.A.getFirstWishlistId(t.id) : null)),
+        h = (0, i.bG)([a.A], () => a.A.getFirstWishlistId(t)),
         m = (0, l.rJ)(h, n),
         [E, g] = r.useState(null),
         [A, I] = r.useState(!1),
@@ -19,7 +19,7 @@ function c(e) {
         g(null), I(!1);
     }, [n]);
     let S = r.useCallback(async () => {
-        if (null != t && !A)
+        if (!A)
             if ((I(!0), T && null != h)) {
                 g(!1);
                 try {
@@ -39,6 +39,6 @@ function c(e) {
                     g(null), I(!1);
                 }
             }
-    }, [t, A, T, h, n, p, d, _, f]);
+    }, [A, T, h, n, p, d, _, f]);
     return { isWishlisted: T, isBusy: A, handleToggle: S };
 }

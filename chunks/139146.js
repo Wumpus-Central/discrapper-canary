@@ -1,161 +1,128 @@
 "use strict";
-n.d(t, { R: () => T, _: () => S });
+n.d(t, { R: () => m, _: () => E });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(575593),
-    l = n(311907),
-    u = n(554146),
-    c = n(435371),
-    d = n(397927),
-    _ = n(932001),
-    f = n(661492),
-    p = n(287809),
-    h = n(466459),
-    m = n(620434),
-    E = n(49999),
-    g = n(985018),
-    A = n(394236);
-let I = { xs: "xxs", sm: "xs", md: "refresh_sm" },
-    T = (e) => {
-        let { product: t, selectedVariantIndex: n, hideIfPurchased: s = !0, ...a } = e,
-            l = i.useMemo(
-                () => (t.type === o.R.VARIANTS_GROUP && null != n && t.variants?.[n] != null ? t.variants[n] : t),
-                [t, n],
-            ),
-            u = l.skuId,
-            { isPurchased: c } = (0, h.h)(l),
-            _ = i.useMemo(() => {
-                let e = "6/4";
-                switch (t.type) {
-                    case o.R.NAMEPLATE:
-                    case o.R.AVATAR_DECORATION:
-                        e = "16/9";
-                        break;
-                    case o.R.BUNDLE:
-                    case o.R.PROFILE_EFFECT:
-                    default:
-                        e = "6/4";
-                }
-                return {
-                    type: "dynamic",
-                    component: d.Oz7.COLLECTIBLES_PREVIEW,
-                    aspectRatio: e,
-                    props: { product: t, forCollectedModal: !0 },
-                };
-            }, [t]);
-        return c && s
+    o = n(311907),
+    l = n(435371),
+    u = n(397927),
+    c = n(661492),
+    d = n(961350),
+    _ = n(841e3),
+    f = n(985018),
+    p = n(394236);
+let h = { xs: "xxs", sm: "xs", md: "refresh_sm" },
+    m = (e) => {
+        let {
+                product: t,
+                selectedVariantIndex: n,
+                location: i,
+                onError: s,
+                isCardHovered: a = !0,
+                showIfWishlisted: l = !0,
+                hideIfPurchased: u = !0,
+                ...f
+            } = e,
+            p = (0, o.bG)([d.default], () => d.default.getId()),
+            {
+                isWishlisted: h,
+                isBusy: m,
+                isFirstTimeWishlister: g,
+                handleToggle: A,
+                specificProductOrVariant: I,
+                isPurchased: T,
+            } = (0, _.z)({ userId: p, product: t, selectedVariantIndex: n, location: i, onError: s }),
+            S = a || (h && l);
+        return (T && u) || !S
             ? null
-            : (0, r.jsx)(S, { skuId: u, productName: l.name, nuxGraphic: _, disabled: !(0, f.q)(l), ...a });
+            : (0, r.jsx)(E, {
+                  skuId: I.skuId,
+                  productName: I.name,
+                  disabled: !(0, c.q)(I),
+                  isWishlisted: h,
+                  isBusy: m,
+                  isFirstTimeWishlister: g,
+                  onClick: A,
+                  ...f,
+              });
     };
-function S(e) {
+function E(e) {
     let {
             skuId: t,
-            productName: s,
-            className: o,
-            disabled: f,
-            isCardHovered: h = !0,
-            nuxGraphic: T,
-            trackButtonClick: S,
-            variant: y = "default",
-            size: v = "md",
-            showIfWishlisted: N = !0,
-            onError: C,
-            location: R,
+            productName: n,
+            className: s,
+            disabled: o,
+            variant: c = "default",
+            size: d = "md",
+            isWishlisted: _,
+            isBusy: m,
+            isFirstTimeWishlister: E,
+            onClick: g,
         } = e,
-        O = I[v],
-        [b, D] = (0, _.kn)([u.M.WISHLIST_NUX_TOOLTIP_AND_MODAL], void 0, !0),
-        L = (0, l.bG)([p.default], () => p.default.getCurrentUser()),
-        w = b === u.M.WISHLIST_NUX_TOOLTIP_AND_MODAL,
-        { reducedMotion: M } = i.useContext(d.CZY),
-        {
-            isWishlisted: x,
-            isBusy: P,
-            handleToggle: k,
-        } = (0, m.c)({
-            currentUser: L,
-            skuId: t,
-            location: R,
-            onAddSuccess: () => {
-                w &&
-                    null != T &&
-                    ((0, d.mMO)(async () => {
-                        let { default: e } = await n.e("64581").then(n.bind(n, 38884));
-                        return (t) => (0, r.jsx)(e, { ...t, graphic: T });
-                    }),
-                    D(E.i.USER_DISMISS));
-            },
-            onError:
-                C ??
-                (() => {
-                    (0, d.showToast)((0, d.createToast)(g.intl.string(g.t.F8FvUy), d.ToastType.FAILURE)),
-                        d.ORC.announce(g.intl.string(g.t.F8FvUy));
-                }),
-        }),
-        U = i.useRef(null),
-        [G, F] = i.useState(!1),
-        V = x && !G,
-        B = V ? d.C3E : d.yhu,
-        H = a()(A.normalIconColor, V && A.wishlistedOrAnimating);
+        A = h[d],
+        { reducedMotion: I } = i.useContext(u.CZY),
+        T = i.useRef(null),
+        [S, y] = i.useState(!1),
+        v = _ && !S,
+        N = v ? u.C3E : u.yhu,
+        C = a()(p.normalIconColor, v && p.wishlistedOrAnimating);
     i.useEffect(() => {
-        F(!1);
+        y(!1);
     }, [t]);
-    let j = i.useCallback(
+    let R = i.useCallback(
             (e) => {
-                e.stopPropagation(), f || (S?.(), x || M.enabled ? x && G && F(!1) : F(!0), k());
+                e.stopPropagation(), o || (_ || I.enabled ? _ && S && y(!1) : y(!0), g());
             },
-            [f, S, x, M.enabled, G, k],
+            [o, _, I.enabled, S, g],
         ),
-        Y = x ? g.intl.string(g.t.yr9TTf) : g.intl.string(g.t["8DkMEQ"]),
-        W = g.intl.formatToPlainString(g.t["7kFjeK"], { productName: s }),
-        K = !f && !x && !G,
-        $ = i.useCallback(
+        O = _ ? f.intl.string(f.t.yr9TTf) : f.intl.string(f.t["8DkMEQ"]),
+        b = f.intl.formatToPlainString(f.t["7kFjeK"], { productName: n }),
+        D = !o && !_ && !S,
+        L = i.useCallback(
             (e) => {
-                e.target === e.currentTarget && G && requestAnimationFrame(() => F(!1));
+                e.target === e.currentTarget && S && requestAnimationFrame(() => y(!1));
             },
-            [G],
+            [S],
         ),
-        z = (e) =>
-            M.enabled
-                ? (0, r.jsx)(B, { colorClass: e ?? H, size: O })
+        w = (e) =>
+            I.enabled
+                ? (0, r.jsx)(N, { colorClass: e ?? C, size: A })
                 : (0, r.jsxs)("div", {
-                      className: a()(A.iconContainer, K && A.canAnimate),
+                      className: a()(p.iconContainer, D && p.canAnimate),
                       children: [
                           (0, r.jsx)("span", {
-                              className: a()(A.iconWrapper, K && A.canHover),
-                              children: (0, r.jsx)(B, { colorClass: e ?? H, size: O }),
+                              className: a()(p.iconWrapper, D && p.canHover),
+                              children: (0, r.jsx)(N, { colorClass: e ?? C, size: A }),
                           }),
                           (0, r.jsx)("span", {
-                              className: a()(A.animationOverlay, G && A.clickAnimation),
-                              onAnimationEnd: $,
-                              children: (0, r.jsx)(d.C3E, { size: O }),
+                              className: a()(p.animationOverlay, S && p.clickAnimation),
+                              onAnimationEnd: L,
+                              children: (0, r.jsx)(u.C3E, { size: A }),
                           }),
                       ],
                   }),
-        q = () =>
-            (0, r.jsx)(d.DUT, {
+        M = () =>
+            (0, r.jsx)(u.DUT, {
                 className: a()(
-                    A.wishlistButton,
-                    A[v],
+                    p.wishlistButton,
+                    p[d],
                     {
-                        [A.variantDefault]: "default" === y,
-                        [A.variantSecondaryOverlay]: "overlay-secondary" === y,
-                        [A.disabled]: f,
+                        [p.variantDefault]: "default" === c,
+                        [p.variantSecondaryOverlay]: "overlay-secondary" === c,
+                        [p.disabled]: o,
                     },
-                    o,
+                    s,
                 ),
-                innerRef: U,
-                onClick: j,
-                "aria-label": W,
-                "aria-pressed": x,
-                "aria-busy": P,
-                "aria-disabled": f,
-                children: z(),
+                innerRef: T,
+                onClick: R,
+                "aria-label": b,
+                "aria-pressed": _,
+                "aria-busy": m,
+                "aria-disabled": o,
+                children: w(),
             });
-    return (h || (x && N)) && null != L
-        ? w && !f
-            ? (0, r.jsx)(c.un, { title: g.intl.string(g.t["47Rhc3"]), body: g.intl.string(g.t.PXjA0b), children: q() })
-            : (0, r.jsx)(c.m_, { text: f ? g.intl.string(g.t["50TX9k"]) : Y, ariaHidden: !f, children: q() })
-        : null;
+    return E && !o
+        ? (0, r.jsx)(l.un, { title: f.intl.string(f.t["47Rhc3"]), body: f.intl.string(f.t.PXjA0b), children: M() })
+        : (0, r.jsx)(l.m_, { text: o ? f.intl.string(f.t["50TX9k"]) : O, ariaHidden: !o, children: M() });
 }

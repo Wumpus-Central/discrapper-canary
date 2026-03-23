@@ -1,20 +1,30 @@
-n.d(t, { l: () => o });
+n.d(t, { l: () => u });
 var i = n(627968),
     s = n(64700),
-    l = n(139146),
-    a = n(788868),
-    r = n(985018);
-let o = s.forwardRef(function (e, t) {
-    let { className: n, disabled: s, trackButtonClick: o, size: d } = e;
+    l = n(311907),
+    a = n(139146),
+    r = n(574499),
+    o = n(961350),
+    d = n(788868),
+    c = n(985018);
+let u = s.forwardRef(function (e, t) {
+    let { className: n, disabled: s, size: u } = e,
+        m = d.pe.TIER_2,
+        _ = c.intl.string(c.t.lG6a5x),
+        g = (0, l.bG)([o.default], () => o.default.getId()),
+        { isWishlisted: A, isBusy: x, isFirstTimeWishlister: p, handleToggle: h } = (0, r.c)({ userId: g, skuId: m });
     return (0, i.jsx)("div", {
         ref: t,
-        children: (0, i.jsx)(l._, {
-            skuId: a.pe.TIER_2,
-            productName: r.intl.string(r.t.lG6a5x),
+        children: (0, i.jsx)(a._, {
+            skuId: m,
+            productName: _,
             className: n,
             disabled: s,
-            trackButtonClick: o,
-            size: d,
+            size: u,
+            isWishlisted: A,
+            isBusy: x,
+            isFirstTimeWishlister: p,
+            onClick: h,
         }),
     });
 });
