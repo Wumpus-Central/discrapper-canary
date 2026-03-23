@@ -1,52 +1,51 @@
 "use strict";
-n.d(t, { M: () => f });
+n.d(t, { M: () => g });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
-    r = n(554146),
-    a = n(379848),
+    a = n(554146),
+    r = n(379848),
     o = n(832248),
     c = n(201805),
     d = n(253932),
     u = n(995377),
     h = n(461213),
     A = n(954571),
-    p = n(130802),
-    g = n(652215),
-    m = n(49999),
-    _ = n(654487);
-let f = (e) => {
-    let { children: t, isForceShowSharingPopout: n, setIsForceShowSharingPopout: f, popoutTargetRef: x } = e,
-        C = (function (e) {
+    m = n(130802),
+    p = n(652215),
+    _ = n(49999);
+let g = (e) => {
+    let { children: t, isForceShowSharingPopout: n, setIsForceShowSharingPopout: g, popoutTargetRef: f } = e,
+        x = (function (e) {
             let { isForceShowSharingPopout: t } = e,
-                { isQuestBarEmpty: n, hasLoadedQuestBar: i } = (0, c.c9)({ location: _.rE.CONFLICT_CHECKS }),
+                { isQuestBarEmpty: n, hasLoadedQuestBar: i } = (0, c.c9)(),
                 s = d.tz.useSetting(),
-                r = (0, u.G)(),
-                a = (0, l.bG)([h.A], () => h.A.getStatus()),
+                a = (0, u.G)(),
+                r = (0, l.bG)([h.A], () => h.A.getStatus()),
                 { isOpen: A } = (0, o.A)();
-            if (((n && i) || t) && !r && !A && !__OVERLAY__) {
-                if (!s && a === g.clD.INVISIBLE) return t ? p.u5.ActivityAndStatus : p.u5.ActivityAndStatusNux;
-                if (!s) return t ? p.u5.Activity : p.u5.ActivityNux;
-                if (a === g.clD.INVISIBLE) return t ? p.u5.Status : p.u5.StatusNux;
+            if (((n && i) || t) && !a && !A && !__OVERLAY__) {
+                if (!s && r === p.clD.INVISIBLE) return t ? m.u5.ActivityAndStatus : m.u5.ActivityAndStatusNux;
+                if (!s) return t ? m.u5.Activity : m.u5.ActivityNux;
+                if (r === p.clD.INVISIBLE) return t ? m.u5.Status : m.u5.StatusNux;
             }
             return null;
         })({ isForceShowSharingPopout: n });
     (0, s.useEffect)(() => {
-        n && A.default.track(g.HAw.OPEN_POPOUT, { type: "SharingPrivacyPopout" });
+        n && A.default.track(p.HAw.OPEN_POPOUT, { type: "SharingPrivacyPopout" });
     }, [n]);
-    let E = n ? [] : [r.M.SHARE_ACTIVITY_COACHMARK_V2];
-    return (0, i.jsx)(a.Ay, {
-        contentTypes: E,
+    let C = n ? [] : [a.M.SHARE_ACTIVITY_COACHMARK_V2];
+    return (0, i.jsx)(r.Ay, {
+        contentTypes: C,
         children: (e) => {
             let { visibleContent: s, markAsDismissed: l } = e,
-                a = s === r.M.SHARE_ACTIVITY_COACHMARK_V2 || n;
-            return (0, i.jsx)(p.zd, {
-                showPopout: a,
-                popoutState: C,
+                r = s === a.M.SHARE_ACTIVITY_COACHMARK_V2 || n;
+            return (0, i.jsx)(m.zd, {
+                showPopout: r,
+                popoutState: x,
                 handleClose: () => {
-                    l(m.i.USER_DISMISS), f(!1);
+                    l(_.i.USER_DISMISS), g(!1);
                 },
-                popoutTargetRef: x,
+                popoutTargetRef: f,
                 children: t,
             });
         },

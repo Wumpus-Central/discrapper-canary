@@ -20,8 +20,8 @@ var r = n(607399),
     I = n(268313),
     T = n(376943),
     S = n(22007),
-    y = n(677402),
-    v = n(807876),
+    y = n(807876),
+    v = n(971276),
     N = n(545986),
     C = n(976860),
     R = n(788995),
@@ -192,7 +192,7 @@ function j(e) {
                 !0
             );
         };
-    if (null != o && o.type === m.I.QUESTS_EMBED && (0, y.s)({ location: F.rE.EMBED_MOBILE }))
+    if (null != o && o.type === m.I.QUESTS_EMBED && (0, v.s)())
         return (e) => {
             let t, r;
             e?.preventDefault();
@@ -290,7 +290,7 @@ function j(e) {
           ? (e) => (e?.preventDefault(), (0, C.pX)(G.BVt.QUEST_HOME + (x ?? "")), !0)
           : j && L?.startsWith("/quest-preview")
             ? (e) => {
-                  if ((e?.preventDefault(), (0, v.U)({ location: F.rE.NAVIGATE_TO_QUEST_HOME_UTIL })))
+                  if ((e?.preventDefault(), (0, y.U)({ location: F.rE.NAVIGATE_TO_QUEST_HOME_UTIL })))
                       return (0, C.pX)(G.BVt.QUEST_HOME + `?tab=preview_tool&quest_id=${L.split("/").at(-1)}`), !0;
               }
             : j && L?.startsWith("/discovery/servers")

@@ -1,22 +1,21 @@
-n.d(t, { N: () => u, P: () => c });
+n.d(t, { N: () => c, P: () => d });
 var i = n(64700),
     s = n(86379),
     l = n(35587),
-    a = n(677402),
+    a = n(971276),
     r = n(368631),
-    o = n(682262),
-    d = n(654487);
-function c() {
+    o = n(682262);
+function d() {
     let e = (0, l.IO)().length,
         t = (0, o.b_)(),
         n = (0, s.Hp)(),
-        c = (0, a.H)({ location: d.rE.USER_SETTINGS_SEARCH_GIFT_INVENTORY });
+        d = (0, a.s)();
     return i.useMemo(
-        () => (0, r.zj)({ unseenGiftCount: e, isOverlaySupported: t, paymentsBlocked: n, isEligibleForQuests: c }),
-        [c, t, n, e],
+        () => (0, r.zj)({ unseenGiftCount: e, isOverlaySupported: t, paymentsBlocked: n, isEligibleForQuests: d }),
+        [d, t, n, e],
     );
 }
-function u(e) {
+function c(e) {
     return Array.from(
         new Map(
             Object.entries(e).filter((e) => {

@@ -2,7 +2,7 @@
 n.d(t, { H1: () => P, Lk: () => H, TQ: () => F, Xf: () => x, _c: () => U, c9: () => V, dN: () => G, ix: () => M });
 var r = n(627968),
     i = n(64700),
-    s = n(396181),
+    s = n(497766),
     a = n(311907),
     o = n(397927),
     l = n(59520);
@@ -14,8 +14,8 @@ var u = n(87719),
     f = n(859703),
     p = n(341915),
     h = n(302654),
-    m = n(677402),
-    E = n(890687),
+    m = n(890687),
+    E = n(971276),
     g = n(18437),
     A = n(590202),
     I = n(971649),
@@ -86,7 +86,7 @@ let x = (e) => {
         };
     },
     P = (e, t, n) => {
-        let { message: i, xboxURL: s } = (0, E.UX)(),
+        let { message: i, xboxURL: s } = (0, m.UX)(),
             a = (0, g.Ut)(),
             o = (r) => {
                 let i = r.target;
@@ -125,14 +125,14 @@ function U(e) {
             sourceQuestContent: c,
         } = e,
         d = M({ quest: t, questContent: r, questContentPosition: s, questContentRowIndex: a, sourceQuestContent: c }),
-        f = (0, E.RR)({ quest: t }),
-        p = (0, E.fc)(t),
+        f = (0, m.RR)({ quest: t }),
+        p = (0, m.fc)(t),
         h = (0, I.vU)()?.getId(),
-        { launchInGameActivity: m } = (0, E.zW)(t),
+        { launchInGameActivity: E } = (0, m.zW)(t),
         g = (0, R.vA)(t);
     return i.useMemo(() => {
         switch (n) {
-            case E.F3.UNACCEPTED:
+            case m.F3.UNACCEPTED:
                 let e = w.intl.string(w.t.kUQLMJ),
                     i = A.Cy.ACCEPT_QUEST;
                 return (
@@ -179,12 +179,12 @@ function U(e) {
                                           questContentRowIndex: a,
                                           sourceQuestContent: c,
                                       }),
-                                      m());
+                                      E());
                         },
                     }
                 );
-            case E.F3.ACCEPTED:
-            case E.F3.IN_PROGRESS:
+            case m.F3.ACCEPTED:
+            case m.F3.IN_PROGRESS:
                 if (f && o)
                     return {
                         text: w.intl.string(w.t.Cfye4v),
@@ -228,21 +228,21 @@ function U(e) {
                         text: e,
                         tooltipText: w.intl.string(w.t.hsbwjv),
                         onClick: () => {
-                            t.config.features.includes(L.Li.START_QUEST_CTA) && m();
+                            t.config.features.includes(L.Li.START_QUEST_CTA) && E();
                         },
                     };
                 }
                 return { text: w.intl.string(w.t.cfY4PE), tooltipText: w.intl.string(w.t.hsbwjv), onClick: null };
-            case E.F3.COMPLETED:
+            case m.F3.COMPLETED:
                 return { text: w.intl.string(w.t.cfY4PE), tooltipText: null, onClick: d };
-            case E.F3.CLAIMED:
+            case m.F3.CLAIMED:
                 return {
                     tooltipText: null,
                     onClick: d,
                     text: (0, N.r7)(t.config) ? w.intl.string(w.t.bAGFz3) : w.intl.string(w.t.vTgCWx),
                 };
         }
-    }, [n, l, f, o, d, t, r, s, a, h, p, u, m, c, g]);
+    }, [n, l, f, o, d, t, r, s, a, h, p, u, E, c, g]);
 }
 function G() {
     let { enableNewRequestBehavior: e } = h.A.useConfig({ location: "useQuestBarQuest" }),
@@ -257,34 +257,33 @@ function G() {
     return e ? t : n;
 }
 function F(e) {
-    let { location: t, quest: n } = e,
-        r = (0, m.H)({ location: t }),
-        i = (0, E.LS)(n),
-        { premiumSubscription: s } = (0, a.cf)([d.A], () => ({ premiumSubscription: d.A.getPremiumSubscription() })),
-        o = (0, a.bG)([f.A], () => null != f.A.questDeliveryOverride);
-    if (null == n) return { isQuestBarVisible: !1, reason: "quest_is_null" };
-    if ((0, N.K9)(n.config) && s?.isPurchasedExternally)
+    let { quest: t } = e,
+        n = (0, E.s)(),
+        r = (0, m.LS)(t),
+        { premiumSubscription: i } = (0, a.cf)([d.A], () => ({ premiumSubscription: d.A.getPremiumSubscription() })),
+        s = (0, a.bG)([f.A], () => null != f.A.questDeliveryOverride);
+    if (null == t) return { isQuestBarVisible: !1, reason: "quest_is_null" };
+    if ((0, N.K9)(t.config) && i?.isPurchasedExternally)
         return { isQuestBarVisible: !1, reason: "premium_subscription_is_purchased_externally" };
-    let l = n.userStatus?.claimedAt != null,
-        u = !o && null != n.userStatus && (0, y.gO)(n.userStatus, p.uF.QUEST_BAR);
-    return l
+    let o = t.userStatus?.claimedAt != null,
+        l = !s && null != t.userStatus && (0, y.gO)(t.userStatus, p.uF.QUEST_BAR);
+    return o
         ? { isQuestBarVisible: !1, reason: "quest_claimed" }
-        : i
+        : r
           ? { isQuestBarVisible: !1, reason: "quest_expired" }
-          : r
-            ? u
+          : n
+            ? l
                 ? { isQuestBarVisible: !1, reason: "quest_dismissed" }
                 : { isQuestBarVisible: !0, reason: "quest_bar_visible" }
             : { isQuestBarVisible: !1, reason: "quest_not_eligible_for_quests" };
 }
-function V(e) {
-    let { location: t } = e,
-        { isQuestBarVisible: n } = F({ location: t, quest: G() }),
-        { lastFetchedCurrentQuests: r, lastFetchedQuestToDeliver: i } = (0, a.cf)([f.A], () => ({
+function V() {
+    let { isQuestBarVisible: e } = F({ quest: G() }),
+        { lastFetchedCurrentQuests: t, lastFetchedQuestToDeliver: n } = (0, a.cf)([f.A], () => ({
             lastFetchedCurrentQuests: f.A.lastFetchedCurrentQuests,
             lastFetchedQuestToDeliver: f.A.lastFetchedQuestToDeliver,
         }));
-    return { isQuestBarEmpty: !n, hasLoadedQuestBar: 0 !== r && 0 !== i };
+    return { isQuestBarEmpty: !e, hasLoadedQuestBar: 0 !== t && 0 !== n };
 }
 let B = { leading: !0, trailing: !1 };
 function H(e) {

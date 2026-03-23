@@ -1,12 +1,11 @@
-i.d(e, { E: () => o });
-var n = i(677402),
-    l = i(419954),
-    s = i(780964),
-    r = i(586685),
-    a = i(654487),
-    u = i(985018);
-let o = (0, l.E2)(s.X.GIFT_QUEST_NOTICES_SETTING, {
-    Component: r.SB,
-    useSearchTerms: () => [u.intl.string(u.t.JALI2K)],
-    usePredicate: () => (0, n.H)({ location: a.rE.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
+n.d(t, { E: () => o });
+var i = n(971276),
+    s = n(419954),
+    l = n(780964),
+    a = n(586685),
+    r = n(985018);
+let o = (0, s.E2)(l.X.GIFT_QUEST_NOTICES_SETTING, {
+    Component: a.SB,
+    useSearchTerms: () => [r.intl.string(r.t.JALI2K)],
+    usePredicate: i.s,
 });

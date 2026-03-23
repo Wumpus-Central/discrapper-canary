@@ -76,9 +76,9 @@ var h = n(236698),
     L = n(341915),
     w = n(245853),
     M = n(302654),
-    x = n(677402),
-    P = n(807876),
-    k = n(579473),
+    x = n(807876),
+    P = n(579473),
+    k = n(971276),
     U = n(561844),
     G = n(590202),
     F = n(971649),
@@ -108,7 +108,7 @@ function ee() {
             isFetchingCurrentQuests: D.A.isFetchingCurrentQuests,
             lastFetchedCurrentQuests: D.A.lastFetchedCurrentQuests,
         })),
-        l = (0, x.s)({ location: z.rE.USE_QUESTS });
+        l = (0, k.s)();
     return (
         r.useEffect(() => {
             if (
@@ -674,7 +674,7 @@ function eZ(e, t) {
     return r.useMemo(() => {
         if (null == n) return null;
         let e = t ?? ((0, u.Mw)(i) ? q.NJ8.DARK : q.NJ8.LIGHT);
-        return (0, k.tW)(n, k.fY.COSPONSOR_LOGO_TYPE, e);
+        return (0, P.tW)(n, P.fY.COSPONSOR_LOGO_TYPE, e);
     }, [i, t, n]);
 }
 function eX(e) {
@@ -701,7 +701,7 @@ function eQ(e) {
 }
 let eJ = () => (0, c.yK)([D.A], () => [...D.A.quests.values()]).some((e) => e.preview),
     e0 = () => {
-        let e = (0, P.U)({ location: z.rE.QUEST_PREVIEW_TOOL_2 }),
+        let e = (0, x.U)({ location: z.rE.QUEST_PREVIEW_TOOL_2 }),
             t = eJ();
         return e && t;
     },

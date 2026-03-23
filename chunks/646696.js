@@ -9,7 +9,7 @@ var r = n(439372),
     u = n(341915),
     c = n(245853),
     d = n(302654),
-    _ = n(677402),
+    _ = n(971276),
     f = n(654487);
 let p = s.A.Millis.DAY,
     h = 30 * s.A.Millis.MINUTE,
@@ -25,11 +25,7 @@ class I extends r.A {
     lastFetchAttemptedAt = 0;
     lastFetchedQuestForLocaleChangeAt = 0;
     _fetch(e) {
-        if (
-            !(0, _.s)({ location: f.rE.QUESTS_MANAGER }) ||
-            l.A.isFetchingCurrentQuests ||
-            ((0, o.N1)(), (0, a.isMac)() && "focused" !== i.A.getState())
-        )
+        if (!(0, _.s)() || l.A.isFetchingCurrentQuests || ((0, o.N1)(), (0, a.isMac)() && "focused" !== i.A.getState()))
             return;
         let { enableNewRequestBehavior: t } = d.A.getConfig({ location: "QuestFetchManager" });
         t || (0, o.r8)(u.yW.DESKTOP_ACCOUNT_PANEL_AREA, e);
@@ -50,7 +46,7 @@ class I extends r.A {
         }, e);
         let { enabled: t } = c.sn.getConfig({ location: f.rE.QUESTS_MANAGER }),
             { enabled: n } = c.Iq.getConfig({ location: f.rE.QUESTS_MANAGER });
-        if (t && n && (0, _.s)({ location: f.rE.QUESTS_MANAGER })) {
+        if (t && n && (0, _.s)()) {
             let t = e + Math.floor(Math.random() * m);
             this.initialQuestHomeHeroFetchTimerId = window.setTimeout(() => {
                 try {
