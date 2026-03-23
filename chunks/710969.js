@@ -81,6 +81,7 @@ function T(e) {
         [o.uF.QUEST_BAR]: o.yW.DESKTOP_ACCOUNT_PANEL_AREA,
         [o.uF.QUEST_BAR_V2]: o.yW.DESKTOP_ACCOUNT_PANEL_AREA,
         [o.uF.QUEST_BAR_MOBILE]: o.yW.MOBILE_HOME_DOCK_AREA,
+        [o.uF.QUEST_HOME_HERO]: o.yW.QUEST_HOME_BANNER_DESKTOP,
     }[e];
 }
 function S(e) {

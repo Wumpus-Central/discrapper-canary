@@ -6,8 +6,8 @@ n.d(t, {
     CI: () => I,
     Fw: () => N,
     GD: () => A,
-    J6: () => O,
-    K3: () => x,
+    J6: () => b,
+    K3: () => M,
     Ko: () => p,
     Li: () => c.L,
     Ls: () => L,
@@ -21,9 +21,9 @@ n.d(t, {
     ej: () => S,
     fO: () => E,
     fP: () => T,
-    gB: () => b,
-    hK: () => R,
-    kL: () => M,
+    gB: () => R,
+    hK: () => O,
+    kL: () => x,
     mg: () => y,
     pc: () => V,
     rE: () => d,
@@ -129,9 +129,9 @@ var v = (function (e) {
 })({});
 let N = "1333839522189938740",
     C = "1410358070831480904",
-    b = "1420556874629251124",
-    R = "1402418703554842694",
-    O = new Set([l.yW.DESKTOP_ACCOUNT_PANEL_AREA, l.yW.MOBILE_HOME_DOCK_AREA]),
+    R = "1420556874629251124",
+    O = "1402418703554842694",
+    b = new Set([l.yW.DESKTOP_ACCOUNT_PANEL_AREA, l.yW.MOBILE_HOME_DOCK_AREA, l.yW.QUEST_HOME_BANNER_DESKTOP]),
     D = new Set([
         i.n.STREAM_ON_DESKTOP,
         i.n.PLAY_ON_DESKTOP,
@@ -156,8 +156,8 @@ let N = "1333839522189938740",
         i.n.PLAY_ON_DESKTOP_V2,
         i.n.PLAY_ACTIVITY,
     ]),
-    x = { is_targeted: !1 };
-var M = (function (e) {
+    M = { is_targeted: !1 };
+var x = (function (e) {
         return (
             (e.SUGGESTED = "suggested"),
             (e.MOST_RECENT = "most_recent"),
