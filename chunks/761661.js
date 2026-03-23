@@ -1,31 +1,30 @@
-"use strict";
-n.d(t, { CZ: () => d, Qp: () => c, XG: () => _, dh: () => u, f4: () => l });
-var r = n(812729),
-    i = n.n(r),
-    s = n(839214),
-    a = n(652896);
-let o = (0, s.D)(() => ({ streams: {} }));
-function l(e) {
-    let t = (0, a._z)(e),
-        n = o.useState((e) => e.streams, i());
+n.d(t, { CZ: () => c, Qp: () => u, XG: () => h, dh: () => d, f4: () => o });
+var i = n(812729),
+    s = n.n(i),
+    l = n(839214),
+    r = n(652896);
+let a = (0, l.D)(() => ({ streams: {} }));
+function o(e) {
+    let t = (0, r._z)(e),
+        n = a.useState((e) => e.streams, s());
     return n[t]?.zoom ?? 100;
 }
-function u(e) {
-    return l(e) / 100;
+function d(e) {
+    return o(e) / 100;
 }
-function c(e, t) {
-    let n = (0, a._z)(e);
-    o.setState(
+function u(e, t) {
+    let n = (0, r._z)(e);
+    a.setState(
         (e) => ({ ...e, streams: { ...e.streams, [n]: { zoom: t, fitOverride: e.streams[n]?.fitOverride } } }),
         !0,
     );
 }
-function d(e, t) {
-    let n = (0, a._z)(e);
-    o.setState((e) => ({ ...e, streams: { ...e.streams, [n]: { zoom: e.streams[n]?.zoom, fitOverride: t } } }));
+function c(e, t) {
+    let n = (0, r._z)(e);
+    a.setState((e) => ({ ...e, streams: { ...e.streams, [n]: { zoom: e.streams[n]?.zoom, fitOverride: t } } }));
 }
-function _(e) {
-    let t = (0, a._z)(e),
-        n = o.useState((e) => e.streams, i());
+function h(e) {
+    let t = (0, r._z)(e),
+        n = a.useState((e) => e.streams, s());
     return n[t]?.fitOverride;
 }

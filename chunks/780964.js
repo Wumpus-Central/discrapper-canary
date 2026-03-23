@@ -446,7 +446,6 @@ var r = (function (e) {
         (e.OVERLAY_NOTIFICATIONS_GAME_ACTIVITY = "overlay_notifications_game_activity"),
         (e.OVERLAY_NOTIFICATIONS_NOW_PLAYING = "overlay_notifications_now_playing"),
         (e.OVERLAY_NOTIFICATIONS_NOW_PLAYING_DIFFERENT_GAMES = "overlay_notifications_now_playing_different_games"),
-        (e.OVERLAY_NOTIFICATIONS_FRIEND_STREAM_WATCH = "overlay_notifications_friend_stream_watch"),
         (e.DEVELOPER_SECTION = "developer_section"),
         (e.EXPERIMENTS_SIDEBAR_ITEM = "experiments_sidebar_item"),
         (e.EXPERIMENTS_PANEL = "experiments_panel"),

@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => A });
+n.d(t, { A: () => g });
 var r = n(311907),
     i = n(73153),
-    a = n(256415),
-    s = n(403362),
+    s = n(256415),
+    a = n(403362),
     o = n(93465),
     l = n(672396);
 function u() {
@@ -20,7 +20,7 @@ function f(e) {
     let { applicationId: t, enabled: n } = e;
     return (d.gameSettings[t] = { limitedInteractionOverride: n }), !0;
 }
-function h(e) {
+function p(e) {
     let { setting: t, disabled: n } = e;
     return (
         n ? d.notificationSettings.add(t) : d.notificationSettings.delete(t),
@@ -28,7 +28,7 @@ function h(e) {
         !0
     );
 }
-function p(e) {
+function h(e) {
     switch (e) {
         case l.KS.TextChat:
             return o.M.TEXT_CHAT;
@@ -39,8 +39,6 @@ function p(e) {
             return o.M.GO_LIVE_NUDGE;
         case l.KS.NowPlayingNotification:
             return o.M.NOW_PLAYING;
-        case l.KS.StreamWatchNudge:
-            return o.M.FRIEND_STREAM_WATCH_NUDGE;
         case l.KS.ClipsReminderNotification:
         case l.KS.ClipsNotification:
             return o.M.CLIPS;
@@ -55,10 +53,10 @@ function p(e) {
         case l.KS.OverlayCrashed:
             return null;
         default:
-            (0, s.xb)(e);
+            (0, a.xb)(e);
     }
 }
-function g(e) {
+function m(e) {
     let { overlayNotificationSettings: t } = e;
     d.notificationSettings = new Set(t.notificationSettings);
     let n = Object.fromEntries(
@@ -80,7 +78,7 @@ class E extends r.Ay.PersistedStore {
     initialize(e) {
         let t = c();
         (d = { ...t, ...(e ?? {}), notificationSettings: new Set(e?.notificationSettings ?? t.notificationSettings) }),
-            this.waitFor(a.default);
+            this.waitFor(s.default);
     }
     getInitialOverlayState() {
         return {
@@ -103,19 +101,19 @@ class E extends r.Ay.PersistedStore {
         return d.notificationSettings.has(e);
     }
     isNotificationDisabled(e) {
-        let t = p(e);
+        let t = h(e);
         return null != t && d.notificationSettings.has(t);
     }
     getDisabledNotifications() {
         return d.notificationSettings;
     }
     getDisabledSettingByNotificationType(e) {
-        return p(e);
+        return h(e);
     }
 }
-let A = new E(i.h, {
+let g = new E(i.h, {
     LOGOUT: u,
     OVERLAY_SET_LIMITED_INTERACTION_OVERRIDE: f,
-    OVERLAY_SET_NOTIFICATION_DISABLED_SETTING: h,
-    OVERLAY_INITIALIZE: g,
+    OVERLAY_SET_NOTIFICATION_DISABLED_SETTING: p,
+    OVERLAY_INITIALIZE: m,
 });

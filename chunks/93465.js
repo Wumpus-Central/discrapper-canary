@@ -9,7 +9,6 @@ var r = (function (e) {
         (e.GAME_ACTIVITY = "GAME_ACTIVITY"),
         (e.NOW_PLAYING = "NOW_PLAYING"),
         (e.NOW_PLAYING_DIFFERENT_GAMES = "NOW_PLAYING_DIFFERENT_GAMES"),
-        (e.FRIEND_STREAM_WATCH_NUDGE = "FRIEND_STREAM_WATCH_NUDGE"),
         (e.CLIPS = "CLIPS"),
         (e.REQUEST_TO_STREAM = "REQUEST_TO_STREAM"),
         e

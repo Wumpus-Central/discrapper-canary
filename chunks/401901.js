@@ -1,71 +1,69 @@
-"use strict";
-n.d(t, { $: () => _, A: () => f });
-var r = n(627968),
-    i = n(64700),
-    s = n(503698),
-    a = n.n(s),
+n.d(t, { $: () => m, A: () => A });
+var i,
+    l = n(627968),
+    s = n(64700),
+    a = n(503698),
+    r = n.n(a),
     o = n(397927),
-    l = n(183325),
-    u = n(778862),
-    c = n(821589),
-    d = n(463689),
-    _ = (function (e) {
-        return (e.CONTAIN = "contain"), (e.COVER = "cover"), e;
-    })({});
-let f = i.memo(function (e) {
+    c = n(183325),
+    d = n(778862),
+    u = n(821589),
+    h = n(463689),
+    m = (((i = {}).CONTAIN = "contain"), (i.COVER = "cover"), i);
+let A = s.memo(function (e) {
     let {
             streamId: t,
             onResize: n,
-            wrapperClassName: s,
-            videoComponent: _,
-            className: f,
-            fit: p = "contain",
-            mirror: h = !1,
-            paused: m = !1,
-            streamPreviewURL: E,
-            videoSpinnerContext: g,
-            userId: A,
-            streamKey: I,
+            wrapperClassName: i,
+            videoComponent: a,
+            className: m,
+            fit: A = "contain",
+            mirror: g = !1,
+            paused: p = !1,
+            streamPreviewURL: f,
+            videoSpinnerContext: _,
+            userId: E,
+            streamKey: x,
         } = e,
-        [T, S] = i.useState(!0);
-    (0, u.A)({ location: "VideoStream", videoSpinnerContext: g, userId: A, streamId: t, loading: T, paused: m });
-    let { onReady: y } = (0, l.A)({
+        [C, S] = s.useState(!0);
+    (0, d.A)({ location: "VideoStream", videoSpinnerContext: _, userId: E, streamId: t, loading: C, paused: p });
+    let { onReady: I } = (0, c.A)({
             streamId: t,
-            userId: A,
-            loading: T,
-            videoSpinnerContext: g,
-            streamKey: I,
-            paused: m,
+            userId: E,
+            loading: C,
+            videoSpinnerContext: _,
+            streamKey: x,
+            paused: p,
         }),
-        v = i.useCallback(() => {
-            S(!1), y();
-        }, [y]);
-    return (0, r.jsxs)("div", {
-        className: a()(d.wrapper, s),
+        T = s.useCallback(() => {
+            S(!1), I();
+        }, [I]);
+    return (0, l.jsxs)("div", {
+        className: r()(h.wrapper, i),
         children: [
             null != t &&
-                (0, r.jsx)(_, {
-                    className: a()(d.video, (0, c.t)(d, "video", p), { [d.mirror]: h }, f),
+                (0, l.jsx)(a, {
+                    className: r()(h.video, (0, u.t)(h, "video", A), { [h.mirror]: g }, m),
                     streamId: t,
                     onResize: n,
-                    onReady: v,
-                    paused: m,
+                    onReady: T,
+                    paused: p,
                 }),
-            m
+            p
                 ? null
-                : (0, r.jsx)("div", {
-                      className: a()(d.previewWrapper, { [d.loading]: T }),
+                : (0, l.jsx)("div", {
+                      className: r()(h.previewWrapper, { [h.loading]: C }),
                       children:
-                          T &&
-                          (0, r.jsxs)(i.Fragment, {
+                          C &&
+                          (0, l.jsxs)(s.Fragment, {
                               children: [
-                                  null != E
-                                      ? (0, r.jsx)("img", { src: E, alt: "", className: d.previewImage })
-                                      : (0, r.jsx)("div", {
-                                            className: d.emptyPreviewWrapper,
-                                            children: (0, r.jsx)("div", { className: d.emptyPreview }),
+                                  null != f
+                                      ? (0, l.jsx)("img", { src: f, alt: "", className: h.previewImage })
+                                      : (0, l.jsx)("div", {
+                                            className: h.emptyPreviewWrapper,
+                                            children: (0, l.jsx)("div", { className: h.emptyPreview }),
                                         }),
-                                  (0, r.jsx)(o.y$y, { className: d.spinner }),
+                                  (0, l.jsx)(o.y$y, { className: h.spinner }),
                               ],
                           }),
                   }),

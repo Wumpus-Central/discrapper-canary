@@ -295,10 +295,6 @@ let i = {
         inlineRequire: () => n(777414).A,
         neverLoadBeforeConnectionOpen: !0,
     },
-    OverlayWidgetPinManager: {
-        actions: ["OVERLAY_UPDATE_OVERLAY_STATE", "LAYOUT_SET_PINNED"],
-        inlineRequire: () => n(720196).A,
-    },
     OverlayWindowRAFManager: {
         actions: [
             "OVERLAY_UPDATE_OVERLAY_METHOD",
@@ -409,7 +405,7 @@ let i = {
         ],
         inlineRequire: () => n(415202).A,
     },
-    RelationshipManager: { actions: ["RELATIONSHIP_ADD", "FRIEND_REQUEST_ACCEPTED"], inlineRequire: () => n(903626).A },
+    RelationshipManager: { actions: ["RELATIONSHIP_ADD", "FRIEND_REQUEST_ACCEPTED"], inlineRequire: () => n(681245).A },
     RTCLatencyTestManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(222804).A },
     SavedMessagesManager: {
         actions: ["POST_CONNECTION_OPEN"],

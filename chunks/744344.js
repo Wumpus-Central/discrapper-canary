@@ -1,26 +1,26 @@
-i.d(e, { r: () => T });
-var n = i(311907),
-    l = i(684013),
-    s = i(592598),
-    r = i(419954),
-    a = i(780964),
-    u = i(790076),
-    o = i(985018);
-let d = (0, u.ze)(!0, !0);
-function A(t) {
-    return (0, r.zD)(t.key, {
-        useTitle: () => o.intl.string(t.title),
-        useSubtitle: () => o.intl.string(t.description),
-        useValue: () => !(0, n.bG)([s.A], () => s.A.getDisabledNotifications().has(t.disabledSetting)),
-        setValue: (e) => {
-            l.A.setNotificationDisabledSetting(t.disabledSetting, !e);
+n.d(t, { r: () => m });
+var i = n(311907),
+    s = n(684013),
+    l = n(592598),
+    a = n(419954),
+    r = n(780964),
+    o = n(790076),
+    d = n(985018);
+let c = (0, o.ze)(!0);
+function u(e) {
+    return (0, a.zD)(e.key, {
+        useTitle: () => d.intl.string(e.title),
+        useSubtitle: () => d.intl.string(e.description),
+        useValue: () => !(0, i.bG)([l.A], () => l.A.getDisabledNotifications().has(e.disabledSetting)),
+        setValue: (t) => {
+            s.A.setNotificationDisabledSetting(e.disabledSetting, !t);
         },
-        usePredicate: t.usePredicate,
+        usePredicate: e.usePredicate,
     });
 }
-let T = (0, r.FW)(a.X.OVERLAY_NOTIFICATIONS_LIST, {
+let m = (0, a.FW)(r.X.OVERLAY_NOTIFICATIONS_LIST, {
     variant: "compact",
-    useTitle: () => o.intl.string(o.t.gnKWdS),
+    useTitle: () => d.intl.string(d.t.gnKWdS),
     isTitleHiddenVisually: !0,
-    buildLayout: () => d.map(A),
+    buildLayout: () => c.map(u),
 });
