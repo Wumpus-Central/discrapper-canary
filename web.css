@@ -17082,6 +17082,7 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     border: 1px solid var(--border-subtle);
     border-radius: 8px;
     box-shadow: var(--shadow-low);
+    cursor: pointer;
     padding: var(--space-12)
 }
 
