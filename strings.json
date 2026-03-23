@@ -19565,6 +19565,8 @@
   "ihxM9x": "[!!{username}!!](!!{username}!!) just boosted the server!",
   "oAYAP7": "[!!{username}!!](!!{username}!!) just boosted the server! !!{guildName}!! has achieved **!!{newTierName}!!!**",
   "cUfTTE": "$[!!{username}!!]({{usernameHook}}) just boosted the server! !!{guildName}!! has achieved **!!{newTierName}!!!**",
+  "dWm8Iu": "Server Boosts help unlock perks for everyone in the server. $[Learn more]({{learnMoreHook}})",
+  "SbSWvY": "$[@!!{username}!!]({{usernameHook}}) Boosted this server {numSubscriptions, plural, one { time} other { times} }",
   "57St/7": "$[!!{username}!!]({{usernameHook}}) just boosted the server!",
   "rbj006": "[!!{username}!!](!!{username}!!) just boosted the server **!!{numSubscriptions}!!** times!",
   "GjNvr7": "[!!{username}!!](!!{username}!!) just boosted the server **!!{numSubscriptions}!!** times! !!{guildName}!! has achieved **!!{newTierName}!!!**",
