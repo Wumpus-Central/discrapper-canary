@@ -1,36 +1,27 @@
-"use strict";
-n.d(t, { _: () => l });
-var r = n(627968),
-    i = n(311907),
+n.d(t, { _: () => o });
+var a = n(627968),
+    l = n(311907),
     s = n(139146),
-    a = n(961350),
-    o = n(471505);
-function l(e) {
-    let {
-            sku: t,
-            location: n,
-            isCardHovered: l = !0,
-            showIfWishlisted: u = !0,
-            trackButtonClick: c,
-            onError: d,
-            ..._
-        } = e,
-        f = (0, i.bG)([a.default], () => a.default.getId()),
+    r = n(961350),
+    i = n(471505);
+function o(e) {
+    let { sku: t, location: n, isCardHovered: o = !0, trackButtonClick: d, ...c } = e,
+        u = (0, l.bG)([r.default], () => r.default.getId()),
         {
-            isWishlisted: p,
-            isBusy: h,
-            isFirstTimeWishlister: m,
-            handleToggle: E,
-        } = (0, o.G)({ userId: f, sku: t, location: n, trackButtonClick: c, onError: d });
-    return l || (p && u)
-        ? (0, r.jsx)(s._, {
+            isWishlisted: _,
+            isBusy: m,
+            isFirstTimeWishlister: h,
+            handleToggle: p,
+        } = (0, i.G)({ userId: u, sku: t, location: n, trackButtonClick: d });
+    return o || _
+        ? (0, a.jsx)(s._, {
               skuId: t.id,
               productName: t.name,
-              isWishlisted: p,
-              isBusy: h,
-              isFirstTimeWishlister: m,
-              onClick: E,
-              ..._,
+              isWishlisted: _,
+              isBusy: m,
+              isFirstTimeWishlister: h,
+              onClick: p,
+              ...c,
           })
         : null;
 }

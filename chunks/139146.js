@@ -14,37 +14,28 @@ var r = n(627968),
     p = n(394236);
 let h = { xs: "xxs", sm: "xs", md: "refresh_sm" },
     m = (e) => {
-        let {
-                product: t,
-                selectedVariantIndex: n,
-                location: i,
-                onError: s,
-                isCardHovered: a = !0,
-                showIfWishlisted: l = !0,
-                hideIfPurchased: u = !0,
-                ...f
-            } = e,
-            p = (0, o.bG)([d.default], () => d.default.getId()),
+        let { product: t, selectedVariantIndex: n, location: i, onError: s, isCardHovered: a = !0, ...l } = e,
+            u = (0, o.bG)([d.default], () => d.default.getId()),
             {
-                isWishlisted: h,
-                isBusy: m,
-                isFirstTimeWishlister: g,
-                handleToggle: A,
-                specificProductOrVariant: I,
-                isPurchased: T,
-            } = (0, _.z)({ userId: p, product: t, selectedVariantIndex: n, location: i, onError: s }),
-            S = a || (h && l);
-        return (T && u) || !S
+                isWishlisted: f,
+                isBusy: p,
+                isFirstTimeWishlister: h,
+                handleToggle: m,
+                specificProductOrVariant: g,
+                isPurchased: A,
+            } = (0, _.z)({ userId: u, product: t, selectedVariantIndex: n, location: i, onError: s }),
+            I = a || f;
+        return A || !I
             ? null
             : (0, r.jsx)(E, {
-                  skuId: I.skuId,
-                  productName: I.name,
-                  disabled: !(0, c.q)(I),
-                  isWishlisted: h,
-                  isBusy: m,
-                  isFirstTimeWishlister: g,
-                  onClick: A,
-                  ...f,
+                  skuId: g.skuId,
+                  productName: g.name,
+                  disabled: !(0, c.q)(g),
+                  isWishlisted: f,
+                  isBusy: p,
+                  isFirstTimeWishlister: h,
+                  onClick: m,
+                  ...l,
               });
     };
 function E(e) {
