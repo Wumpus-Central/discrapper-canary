@@ -1,25 +1,26 @@
 "use strict";
-n.d(t, { U: () => m });
+n.d(t, { U: () => E, V: () => l });
 var r = n(64700),
     i = n(353640),
     s = n(158390),
     a = n(52133),
     o = n(417597);
-class l extends Error {
+let l = Symbol("NO_DATA");
+class u extends Error {
     name = "HTTPResponseError";
     status = 0;
     setStatus(e) {
         this.status = e;
     }
 }
-function u(e) {
+function c(e) {
     if (e instanceof Error) return e;
     if ("object" == typeof e && null != e && "status" in e && "number" == typeof e.status) {
         if ("body" in e && null != e.body && "object" == typeof e.body && "message" in e.body) {
-            let t = new l(String(e.body.message));
+            let t = new u(String(e.body.message));
             return t.setStatus(e.status), t;
         }
-        let t = new l(
+        let t = new u(
             Object.entries(e)
                 .map((e) => {
                     let [t, n] = e;
@@ -31,108 +32,113 @@ function u(e) {
     }
     return Error(String(e));
 }
-function c(e) {
+function d(e) {
     let [t, n] = (0, r.useState)(e);
     return e === t || (0, a.v)(e, t) || n(e), t;
 }
-function d(e, t) {
+function _(e, t) {
     return Array.isArray(e) && Array.isArray(t) ? (0, a.v)(e, t) : Object.is(e, t);
 }
-function _(e) {
-    return e instanceof l && (e.status >= 500 || 429 === e.status);
+function f(e) {
+    return e instanceof u && (e.status >= 500 || 429 === e.status);
 }
-let f = 5;
-function p() {
+let p = 5;
+function h() {
     return new s.A();
 }
-let h = (0, i.v)(() => ({ isLoading: !1, error: null, backoff: new s.A() }));
-function m(e, t) {
+let m = (0, i.v)(() => ({ isLoading: !1, error: null, backoff: new s.A() }));
+function E(e, t) {
     let {
             getQueryId: n,
             get: s,
             load: a,
-            getIsLoading: l,
-            getError: m,
-            retryConfig: { maxRetries: E = f, backoff: g = p, retryableErrors: A = _ } = {},
+            getIsLoading: u,
+            getError: E,
+            retryConfig: { maxRetries: g = p, backoff: A = h, retryableErrors: I = f } = {},
         } = t,
-        I = new Map();
-    function T(e) {
-        if (null == e) return h;
-        let t = I.get(e);
-        return null == t && ((t = (0, i.v)(() => ({ isLoading: !1, error: null, backoff: g() }))), I.set(e, t)), t;
+        T = new Map();
+    function S(e) {
+        if (null == e) return m;
+        let t = T.get(e);
+        return null == t && ((t = (0, i.v)(() => ({ isLoading: !1, error: null, backoff: A() }))), T.set(e, t)), t;
     }
-    async function S(e) {
-        let { queryId: t, args: n, refetch: r = !1, useStoreState: i = T(t) } = e,
+    async function y(e) {
+        let { queryId: t, args: n, refetch: r = !1, useStoreState: i = S(t) } = e,
             o = i.getState().backoff,
-            c = l?.(...n) ?? i.getState().isLoading;
-        if (null != t && !c && (r || null == s(...n)))
+            d = u?.(...n) ?? i.getState().isLoading;
+        if (null != t && !d) {
+            if (!r) {
+                let e = s(...n);
+                if (e === l || null != e) return;
+            }
             try {
                 i.setState({ isLoading: !0 }), await a(...n), o.succeed(), i.setState({ error: null, isLoading: !1 });
             } catch (s) {
-                let e = u(s);
+                let e = c(s);
                 i.setState({ error: e, isLoading: !1 }),
-                    A(e) &&
-                        E > o.fails &&
+                    I(e) &&
+                        g > o.fails &&
                         (await new Promise((e, s) => {
                             o.fail(() => {
-                                S({ queryId: t, args: n, useStoreState: i, refetch: r }).then(e, s);
+                                y({ queryId: t, args: n, useStoreState: i, refetch: r }).then(e, s);
                             });
                         }));
             }
+        }
     }
-    function y() {
+    function v() {
         for (var t = arguments.length, i = Array(t), a = 0; a < t; a++) i[a] = arguments[a];
-        let u = c(i),
-            _ = Array.isArray(e) ? e : [e],
-            f = n(...u),
-            p = T(f),
-            h = (0, o.bG)(_, () => l?.(...u), [u]),
-            E = p((e) => null == l && e.isLoading),
-            g = h ?? E,
-            A = (0, o.bG)(_, () => m?.(...u), [u]),
-            I = p((e) => (null == m ? e.error : null)),
-            y = A ?? I,
-            v = (0, o.bG)(_, () => s(...u), [u], d);
+        let c = d(i),
+            f = Array.isArray(e) ? e : [e],
+            p = n(...c),
+            h = S(p),
+            m = (0, o.bG)(f, () => u?.(...c), [c]),
+            g = h((e) => null == u && e.isLoading),
+            A = m ?? g,
+            I = (0, o.bG)(f, () => E?.(...c), [c]),
+            T = h((e) => (null == E ? e.error : null)),
+            v = I ?? T,
+            N = (0, o.bG)(f, () => s(...c), [c], _);
         return (
             (0, r.useEffect)(() => {
-                S({ queryId: f, args: u, useStoreState: p });
-            }, [f, u, p]),
+                y({ queryId: p, args: c, useStoreState: h });
+            }, [p, c, h]),
             {
-                data: v,
-                error: y,
-                isLoading: g,
+                data: N === l ? null : N,
+                error: v,
+                isLoading: A,
                 refetch: (0, r.useCallback)(() => {
-                    S({ queryId: f, args: u, useStoreState: p, refetch: !0 });
-                }, [f, u, p]),
+                    y({ queryId: p, args: c, useStoreState: h, refetch: !0 });
+                }, [p, c, h]),
             }
         );
     }
     return (
-        (y.refetch = async function () {
+        (v.refetch = async function () {
             for (var e = arguments.length, t = Array(e), r = 0; r < e; r++) t[r] = arguments[r];
             let i = n(...t),
-                s = T(i);
-            s.getState().backoff.succeed(), await S({ queryId: i, args: t, useStoreState: s, refetch: !0 });
+                s = S(i);
+            s.getState().backoff.succeed(), await y({ queryId: i, args: t, useStoreState: s, refetch: !0 });
         }),
-        (y.fetchMany = async function () {
+        (v.fetchMany = async function () {
             for (var e = arguments.length, t = Array(e), r = 0; r < e; r++) t[r] = arguments[r];
             await Promise.all(
                 t.map((e) => {
                     let t = n(...e);
-                    return S({ queryId: t, args: e, useStoreState: T(t) });
+                    return y({ queryId: t, args: e, useStoreState: S(t) });
                 }),
             );
         }),
-        (y.refetchMany = async function () {
+        (v.refetchMany = async function () {
             for (var e = arguments.length, t = Array(e), r = 0; r < e; r++) t[r] = arguments[r];
             await Promise.all(
                 t.map((e) => {
                     let t = n(...e),
-                        r = T(t);
-                    return r.getState().backoff.succeed(), S({ queryId: t, args: e, useStoreState: r, refetch: !0 });
+                        r = S(t);
+                    return r.getState().backoff.succeed(), y({ queryId: t, args: e, useStoreState: r, refetch: !0 });
                 }),
             );
         }),
-        y
+        v
     );
 }

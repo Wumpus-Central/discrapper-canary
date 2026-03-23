@@ -7,7 +7,7 @@ var r = n(64700),
     o = n(652215);
 let l = (0, i.UT)(a.A, {
     getQueryId: o.fic.GAME,
-    get: (e) => (null != e ? (a.A.getGame(e) ?? null) : null),
+    get: (e) => (null == e ? null : a.A.hasNoData(e) ? i.V5 : (a.A.getGame(e) ?? null)),
     load: async (e) => {
         null != e && (await (0, s.E)([e]));
     },
