@@ -565,6 +565,8 @@ var r = (function (e) {
             (e[(e.GAME_SERVER_PRICING_CHANGE_COACHMARK = 713)] = "GAME_SERVER_PRICING_CHANGE_COACHMARK"),
             (e[(e.PREMIUM_WISHLIST_COACHMARK = 714)] = "PREMIUM_WISHLIST_COACHMARK"),
             (e[(e.PREMIUM_GROUP_POPOVER_UPSELL_V2 = 715)] = "PREMIUM_GROUP_POPOVER_UPSELL_V2"),
+            (e[(e.L_3PP_NON_NITRO_POPOVER = 716)] = "L_3PP_NON_NITRO_POPOVER"),
+            (e[(e.L_3PP_NITRO_TOOLTIP = 717)] = "L_3PP_NITRO_TOOLTIP"),
             e
         );
     })({}),
