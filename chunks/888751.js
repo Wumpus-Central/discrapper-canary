@@ -72,13 +72,14 @@ let E = function (e) {
                 currency: s,
                 subscriptionPlan: a,
                 subscriptionTrial: o,
+                excludeDiscountsAndAdjustments: u,
             } = t,
             {
-                label: u,
-                amount: c,
-                amountWithoutDiscount: d,
-                subscriptionDiscount: _,
-                entitlementDiscount: f,
+                label: c,
+                amount: d,
+                amountWithoutDiscount: _,
+                subscriptionDiscount: f,
+                entitlementDiscount: p,
             } = (0, l.Ae)(e, {
                 overrideAmount: n,
                 subscriptionPlan: a,
@@ -86,10 +87,10 @@ let E = function (e) {
                 isPrepaidPaymentSource: r,
                 currency: s,
             }),
-            p = null != _ || null != f,
-            E = { id: e.id, label: u, amount: p ? d : c, lineItemType: "main" },
-            A = [
-                E,
+            E = null != f || null != p,
+            A = { id: e.id, label: c, amount: E ? _ : d, lineItemType: "main" },
+            I = [
+                A,
                 ...i.map((e) => ({
                     id: e.id,
                     label: e.label,
@@ -100,8 +101,8 @@ let E = function (e) {
                 })),
             ];
         return (
-            null != _ && A.push(g(_, "subscription-discount", h.intl.string(m.default["9yHcmL"]))),
-            { lineItems: A, primaryLineItem: E, entitlementDiscount: f }
+            null == f || u || I.push(g(f, "subscription-discount", h.intl.string(m.default["9yHcmL"]))),
+            { lineItems: I, primaryLineItem: A, entitlementDiscount: p }
         );
     },
     S = (e, t) => {
@@ -110,30 +111,32 @@ let E = function (e) {
                 subscriptionPlan: r,
                 isPrepaidPaymentSource: i = !1,
                 includeTaxLineItem: s = !0,
+                excludeDiscountsAndAdjustments: a,
             } = t,
             {
-                basePlanInvoiceItem: a,
-                guildSubscriptionInvoiceItem: o,
-                guildSubscriptionPlan: u,
-                guildSubscriptionAmount: c,
-                guildBoostItemLabel: d,
+                basePlanInvoiceItem: o,
+                guildSubscriptionInvoiceItem: u,
+                guildSubscriptionPlan: c,
+                guildSubscriptionAmount: d,
+                guildBoostItemLabel: _,
             } = (0, l.wt)(e, { isPrepaidPaymentSource: i });
-        if (null == a) return { lineItems: [], primaryLineItem: null };
+        if (null == o) return { lineItems: [], primaryLineItem: null };
         let {
-            lineItems: _,
-            primaryLineItem: f,
-            entitlementDiscount: p,
-        } = T(a, {
+            lineItems: f,
+            primaryLineItem: p,
+            entitlementDiscount: m,
+        } = T(o, {
             subscriptionPlan: r,
             subscriptionTrial: n,
             isPrepaidPaymentSource: i,
             currency: e.currency,
             invoiceAdjustmentDisplayItems: [],
+            excludeDiscountsAndAdjustments: a,
         });
         return (
-            0 !== c && null != o && null != u && null != d && _.push({ id: o.id, label: d, amount: c }),
-            s && _.push({ id: "tax", label: h.intl.string(h.t.jiRvC7), amount: e.tax, lineItemType: "tax" }),
-            { lineItems: _, primaryLineItem: f, entitlementDiscount: p }
+            0 !== d && null != u && null != c && null != _ && f.push({ id: u.id, label: _, amount: d }),
+            s && f.push({ id: "tax", label: h.intl.string(h.t.jiRvC7), amount: e.tax, lineItemType: "tax" }),
+            { lineItems: f, primaryLineItem: p, entitlementDiscount: m }
         );
     },
     y = (e, t) => {

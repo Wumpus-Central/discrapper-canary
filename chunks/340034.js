@@ -37,9 +37,8 @@ let N = (e) => {
         });
     },
     C = (e) => {
-        let { label: t = S.intl.string(y.default.eoXh7B), lineItems: n, currency: s, hasSubscriptionCredit: a } = e,
-            o = i.useMemo(() => (a ? S.intl.string(S.t.A7Hpfs) : void 0), [a]);
-        return (0, r.jsx)(d.Vm, { label: t, lineItems: n, currency: s, collapsedContentLabelOverride: o });
+        let { label: t = S.intl.string(y.default.eoXh7B), lineItems: n, currency: i } = e;
+        return (0, r.jsx)(d.Vm, { label: t, lineItems: n, currency: i });
     },
     R = (e) => {
         let {
@@ -50,26 +49,18 @@ let N = (e) => {
                 isCustomGift: a,
             } = e,
             { invoicePreview: o } = t,
-            l = [],
-            c = null;
-        if (t.type === h.N$.PREMIUM_GIFT)
-            l = (0, A.fk)(o, { isCustomGift: a, isPrepaidPaymentSource: s, subscriptionPlan: n });
-        else {
-            let e = (0, A.IY)(o, {
-                isPrepaidPaymentSource: s,
-                invoiceSummaryType: t.type,
-                subscriptionPlan: n,
-                subscriptionTrial: i,
-            });
-            (l = e.lineItems), (c = e.entitlementDiscount);
-        }
-        let d = (0, u.lp)(o, { manualLineItems: l, includeTaxLineItem: !0 });
-        return (0, r.jsx)(C, {
-            label: S.intl.string(y.default.eoXh7B),
-            lineItems: d,
-            currency: o.currency,
-            hasSubscriptionCredit: null != c,
-        });
+            l = [];
+        l =
+            t.type === h.N$.PREMIUM_GIFT
+                ? (0, A.fk)(o, { isCustomGift: a, isPrepaidPaymentSource: s, subscriptionPlan: n })
+                : (0, A.IY)(o, {
+                      isPrepaidPaymentSource: s,
+                      invoiceSummaryType: t.type,
+                      subscriptionPlan: n,
+                      subscriptionTrial: i,
+                  }).lineItems;
+        let c = (0, u.lp)(o, { manualLineItems: l, includeTaxLineItem: !0 });
+        return (0, r.jsx)(C, { label: S.intl.string(y.default.eoXh7B), lineItems: c, currency: o.currency });
     },
     O = (e) => {
         let {

@@ -134,17 +134,12 @@ function P(e) {
             guildBoostItemLabel: d,
         } = (0, R.rc)(t, { isPrepaidPaymentSource: n });
     if (i) {
-        let { lineItems: e, entitlementDiscount: i } = (0, m.Ig)(t, {
+        let { lineItems: e } = (0, m.Ig)(t, {
             subscriptionTrial: null,
             includeTaxLineItem: !0,
             isPrepaidPaymentSource: n,
         });
-        return (0, r.jsx)(h.ID, {
-            hasSubscriptionCredit: null != i,
-            label: D.intl.string(D.t["2eh+Co"]),
-            lineItems: e,
-            currency: t.currency,
-        });
+        return (0, r.jsx)(h.ID, { label: D.intl.string(D.t["2eh+Co"]), lineItems: e, currency: t.currency });
     }
     return (0, r.jsxs)(r.Fragment, {
         children: [
