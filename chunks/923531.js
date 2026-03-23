@@ -1,12 +1,11 @@
 "use strict";
 n.d(t, {
-    $h: () => R,
     Is: () => I,
     Mo: () => y,
     VE: () => C,
     aq: () => A,
     cV: () => m,
-    fq: () => O,
+    fq: () => R,
     hO: () => N,
     i6: () => E,
     jp: () => h,
@@ -93,10 +92,7 @@ let c = 60,
         if (a.A.getAreLinkedUsersProcessed()) return a.A.getLinkedUsers();
         s.Ay.fetchLinkedUsers();
     },
-    b = () =>
-        Object.values(a.A.getLinkedUsers()).some((e) => e.link_status === o.Ef.ACTIVE && e.link_type === o.QM.PARENT),
-    R = () => b(),
-    O = (e, t) =>
+    R = (e, t) =>
         t > 0 && 0 === e
             ? u.intl.formatToPlainString(l.default["L/Cj7S"], { callCount: t })
             : e > 0 && 0 === t

@@ -1,9 +1,9 @@
-i.d(e, { B: () => a });
-var n = i(419954),
-    l = i(780964),
-    s = i(962789),
-    r = i(985018);
-let a = (0, n.E2)(l.X.CONTENT_AND_SOCIAL_CONNECTED_GAMES, {
-    useSearchTerms: () => [r.intl.string(r.t.YpCiMt)],
-    Component: s.T,
+n.d(t, { B: () => r });
+var i = n(419954),
+    s = n(780964),
+    l = n(27715),
+    a = n(985018);
+let r = (0, i.E2)(s.X.CONTENT_AND_SOCIAL_CONNECTED_GAMES, {
+    useSearchTerms: () => [a.intl.string(a.t.YpCiMt)],
+    Component: l.T,
 });

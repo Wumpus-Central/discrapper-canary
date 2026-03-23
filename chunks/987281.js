@@ -1,26 +1,27 @@
-n.d(t, { V: () => u, a: () => c });
-var i = n(64700),
-    s = n(964486),
-    l = n(839214),
-    a = n(535762),
-    r = n(152056),
-    o = n(360619),
-    d = n(531525);
-let c = (0, l.D)(() => ({ searchResults: d.R, hasSearchResults: !1 }));
-function u() {
-    let e = r.A.useField("query"),
-        t = (0, o.PH)(),
-        n = i.useRef(new a.A((0, o.NI)(t))),
-        l = i.useCallback(async (e) => {
-            let t = await n.current.search(e.trim());
-            c.setState({ searchResults: t, hasSearchResults: !0 });
+"use strict";
+r.d(t, { V: () => d });
+var n = r(64700),
+    a = r(964486),
+    i = r(839214),
+    l = r(535762),
+    s = r(152056),
+    o = r(360619),
+    c = r(531525);
+let u = (0, i.D)(() => ({ searchResults: c.R, hasSearchResults: !1 }));
+function d() {
+    let e = s.A.useField("query"),
+        t = (0, o.P)(),
+        r = n.useRef(new l.A((0, o.N)(t))),
+        i = n.useCallback(async (e) => {
+            let t = await r.current.search(e.trim());
+            u.setState({ searchResults: t, hasSearchResults: !0 });
         }, []);
-    i.useEffect(() => {
-        "" === e || e.length < 2 ? c.resetState() : l(e);
-    }, [e, l]),
-        (0, s.Ay)(() => () => {
-            c.resetState(), r.A.setState({ query: "" });
+    n.useEffect(() => {
+        "" === e || e.length < 2 ? u.resetState() : i(e);
+    }, [e, i]),
+        (0, a.Ay)(() => () => {
+            u.resetState(), s.A.setState({ query: "" });
         });
-    let d = c.useField("searchResults");
-    return { hasSearchResults: c.useField("hasSearchResults"), searchResults: d };
+    let c = u.useField("searchResults");
+    return { hasSearchResults: u.useField("hasSearchResults"), searchResults: c };
 }

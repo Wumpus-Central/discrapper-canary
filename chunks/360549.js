@@ -8,13 +8,13 @@ var i = n(627968),
     d = n(711014),
     c = n(152056),
     u = n(612025),
-    _ = n(985018),
-    m = n(208227);
-let g = { label: () => _.intl.string(_.t["32u1Dx"]), value: u.YG };
+    m = n(985018),
+    _ = n(245425);
+let g = { label: () => m.intl.string(m.t["32u1Dx"]), value: u.YG };
 function A() {
     let { selectedGuildId: e, setSelectedGuildId: t } = (0, u.xk)(),
         n = (0, l.bG)([d.Ay], () => d.Ay.getFlattenedGuildIds()),
-        _ = (0, l.bG)([o.A], () => o.A.getGuilds()),
+        m = (0, l.bG)([o.A], () => o.A.getGuilds()),
         A = n[0];
     s.useEffect(
         () =>
@@ -39,23 +39,23 @@ function A() {
                 id: g.value,
                 label: g.label(),
                 leading: (0, i.jsx)("div", {
-                    className: m.KP,
-                    children: (0, i.jsx)(a.pVd, { size: "sm", color: "white", "aria-hidden": !0, className: m.cl }),
+                    className: _.KP,
+                    children: (0, i.jsx)(a.pVd, { size: "sm", color: "white", "aria-hidden": !0, className: _.cl }),
                 }),
             }),
             n.forEach((t) => {
-                let n = _[t];
+                let n = m[t];
                 null != n &&
                     e.push({
                         id: n.id,
                         label: n.name,
                         value: n.id,
-                        leading: (0, i.jsx)(r.Ay, { className: m.cl, guild: n, size: r.Ay.Sizes.SMALLER, active: !0 }),
+                        leading: (0, i.jsx)(r.Ay, { className: _.cl, guild: n, size: r.Ay.Sizes.SMALLER, active: !0 }),
                     });
             }),
             e
         );
-    }, [n, _]);
+    }, [n, m]);
     return (0, i.jsx)(a.ZiE, {
         selectionMode: "single",
         onSelectionChange: (e) => {
