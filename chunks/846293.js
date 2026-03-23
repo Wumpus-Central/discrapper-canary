@@ -89,10 +89,9 @@ function ec(e, t) {
 function ed(e, t, n) {
     if (n?.targetType === es.yV.ROLE_SUBSCRIPTIONS_PURCHASE) return er.VV.ROLE_SUBSCRIPTIONS;
     if (n?.targetType == null && !(0, G.QE)(t.type) && (0, R.K)(e)) return er.VV.GUILD_HOME;
-    let r = V.A.getChannel(t.id);
-    return W.A.can(et.xBc.VIEW_CHANNEL, r)
-        ? t.id
-        : (B.Ay.getDefaultChannel(e, !0, et.xBc.CREATE_INSTANT_INVITE)?.id ?? t.id);
+    let r = V.A.getChannel(t.id),
+        i = (0, G.TA)(t.type);
+    return W.A.can(i, r) ? t.id : (B.Ay.getDefaultChannel(e, !0, et.xBc.CREATE_INSTANT_INVITE)?.id ?? t.id);
 }
 function e_(e, t) {
     let { type: n } = e,
@@ -123,7 +122,7 @@ function ef(e) {
         m = ed(t, r, i),
         A = p === et.rbe.GUILD_STAGE_VOICE,
         I = et.BVt.CHANNEL(t, m);
-    (0, G.QE)(p) && i?.autoJoin !== !1
+    m === r.id && (0, G.QE)(p) && i?.autoJoin !== !1
         ? (0, v.B)(() => {
               Promise.resolve()
                   .then(n.bind(n, 956793))
