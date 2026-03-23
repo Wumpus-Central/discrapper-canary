@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => K, UB: () => j, _0: () => k, dv: () => B, kw: () => V }), n(321073);
+n.d(t, { Ay: () => W, UB: () => H, _0: () => k, kw: () => V }), n(321073);
 var r = n(284009),
     i = n.n(r),
     s = n(279194),
@@ -72,19 +72,16 @@ function F(e) {
     return G(e);
 }
 var V = (function (e) {
-        return (
-            (e[(e.Camera = 0)] = "Camera"),
-            (e[(e.Microphone = 1)] = "Microphone"),
-            (e[(e.Photo = 2)] = "Photo"),
-            (e[(e.InputMonitoring = 3)] = "InputMonitoring"),
-            (e[(e.ScreenRecording = 4)] = "ScreenRecording"),
-            e
-        );
-    })({}),
-    B = (function (e) {
-        return (e.VIDEO = "VIDEO"), (e.MUTE = "MUTE"), (e.DEAFEN = "DEAFEN"), (e.DISCONNECT = "DISCONNECT"), e;
-    })({});
-function H(e) {
+    return (
+        (e[(e.Camera = 0)] = "Camera"),
+        (e[(e.Microphone = 1)] = "Microphone"),
+        (e[(e.Photo = 2)] = "Photo"),
+        (e[(e.InputMonitoring = 3)] = "InputMonitoring"),
+        (e[(e.ScreenRecording = 4)] = "ScreenRecording"),
+        e
+    );
+})({});
+function B(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : N;
     return {
         id: t[e.id ?? ""],
@@ -110,7 +107,7 @@ function H(e) {
         executableFingerprint: e.executableFingerprint,
     };
 }
-function j(e, t) {
+function H(e, t) {
     if (null != t && I(t)) {
         let e = t.split("/")[1]?.toLowerCase();
         if ("jpeg" === e) return "jpg";
@@ -121,13 +118,13 @@ function j(e, t) {
     let r = n.pathname?.split(".")?.pop()?.toLowerCase();
     return null != r && r.length <= T ? r : void 0;
 }
-function Y(e) {
+function j(e) {
     if ((0, f.isDesktop)())
         try {
-            W.sendIPC(e);
+            Y.sendIPC(e);
         } catch (e) {}
 }
-let W = {
+let Y = {
         requireModule(e) {
             let t = n(393742).A.getConfig({ location: "requireModule" }).moduleCacheEnabled;
             if (t && C.hasOwnProperty(e) && null != C[e]) return C[e];
@@ -191,7 +188,7 @@ let W = {
                         return null != e.id && (N[t] = e.id), { ...e, cmdline: e.cmdLine, id: t };
                     }),
                     o = N,
-                    l = (e) => n(e.map((e) => H(e, o)));
+                    l = (e) => n(e.map((e) => B(e, o)));
                 null != r && null != s.setProcessObserverUserId && s.setProcessObserverUserId(r),
                     t && null != s.setObservedGamesCallback2
                         ? s.setObservedGamesCallback2(a, l)
@@ -204,8 +201,8 @@ let W = {
         setGameDetectionCallback(e) {
             this.getDiscordUtils().setGameDetectionCallback?.((t, n) =>
                 e(
-                    t.map((e) => H(e)),
-                    n.map((e) => H(e)),
+                    t.map((e) => B(e)),
+                    n.map((e) => B(e)),
                 ),
             );
         },
@@ -220,7 +217,7 @@ let W = {
         },
         setCandidateGamesCallback(e) {
             this.getDiscordUtils().setCandidateGamesCallback((t) => {
-                e(t.map((e) => H(e)));
+                e(t.map((e) => B(e)));
             });
         },
         clearCandidateGamesCallback() {
@@ -334,7 +331,7 @@ let W = {
             i()(f.isPlatformEmbedded, "Copy image method called outside native app"),
                 i()("function" == typeof E.clipboard.copyImage, "Copy image not supported");
             let n = await F(e),
-                r = j(e, t),
+                r = H(e, t),
                 s = null != r && g.has(r) ? `image.${r}` : e;
             E.clipboard.copyImage(m.from(n), s);
         },
@@ -344,7 +341,7 @@ let W = {
         },
         canSaveImage(e, t) {
             if (null == e || !f.isPlatformEmbedded) return !1;
-            let n = j(e, t);
+            let n = H(e, t);
             return null == n || A.has(n);
         },
         async saveImage(e, t, n) {
@@ -362,7 +359,7 @@ let W = {
                     o = `${t}.${e}`;
                 }
             } else if (!o.includes(".")) {
-                let r = j(e, t) ?? n ?? "png";
+                let r = H(e, t) ?? n ?? "png";
                 o = `${o}.${r}`;
             }
             let u = await F(e),
@@ -435,7 +432,7 @@ let W = {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0;
             if (!f.isPlatformEmbedded || "function" != typeof E.clipboard.copyImage) return !1;
             if (null != e) {
-                let t = j(e, void 0);
+                let t = H(e, void 0);
                 if (null != t && !g.has(t)) return !1;
             }
             return !0;
@@ -520,7 +517,7 @@ let W = {
             E.window.close(e);
         },
         clearNavigationHistory() {
-            Y(o.W.NAVIGATION_HISTORY_CLEAR);
+            j(o.W.NAVIGATION_HISTORY_CLEAR);
         },
         setAlwaysOnTop(e, t) {
             "function" == typeof E.window.setAlwaysOnTop && E.window.setAlwaysOnTop(e, t);
@@ -892,10 +889,10 @@ let W = {
             (0, f.isDesktop)() && this.sendIPC(o.W.APP_FIRST_RENDER_AFTER_READY_PAYLOAD);
         },
         appLoaded() {
-            Y(o.W.APP_LOADED);
+            j(o.W.APP_LOADED);
         },
         indexLoadedAsync() {
-            Y(o.W.APP_ASYNC_INDEX_TSX_LOADED);
+            j(o.W.APP_ASYNC_INDEX_TSX_LOADED);
         },
     },
-    K = W;
+    W = Y;

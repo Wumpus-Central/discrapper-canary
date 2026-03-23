@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Fh: () => r, du: () => i, fS: () => a, qQ: () => s });
+n.d(t, { Fh: () => r, du: () => i, dv: () => o, fS: () => a, qQ: () => s });
 class r extends Error {
     name = "SystemServiceNotAvailableError";
     constructor() {
@@ -29,4 +29,7 @@ var i = (function (e) {
     })({}),
     a = (function (e) {
         return (e.WINDOW = "window"), (e.SCREEN = "screen"), (e.CAMERA = "camera"), e;
+    })({}),
+    o = (function (e) {
+        return (e.VIDEO = "VIDEO"), (e.MUTE = "MUTE"), (e.DEAFEN = "DEAFEN"), (e.DISCONNECT = "DISCONNECT"), e;
     })({});
