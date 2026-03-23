@@ -1,16 +1,12 @@
 "use strict";
-n.d(t, { I: () => i });
-let r = (0, n(600975).C)({
-    id: "2025-04_native_markdown",
+n.d(t, { I: () => s });
+let l = (0, n(945810).mj)({
+    name: "2025-04-native-markdown",
     kind: "user",
-    label: "Native Markdown",
     defaultConfig: { enabled: !1 },
-    treatments: [
-        { id: 0, label: "Disabled", config: { enabled: !1 } },
-        { id: 1, label: "Enabled", config: { enabled: !0 } },
-    ],
+    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-function i(e) {
+function s(e) {
     let { location: t } = e;
-    return r.useExperiment({ location: t });
+    return l.useConfig({ location: t });
 }
