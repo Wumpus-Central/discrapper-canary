@@ -1,44 +1,44 @@
-n.d(t, { A: () => g });
-var i = n(627968);
-n(64700);
-var s = n(311907),
-    l = n(397927),
-    a = n(734057),
-    r = n(309010),
-    d = n(622543),
-    o = n(987112),
-    c = n(389996),
-    u = n(743987),
-    A = n(900179),
-    x = n(280645),
-    m = n(928223),
-    p = n(518477),
-    h = n(985018),
-    f = n(195723);
-function g(e) {
-    let { user: t, displayProfile: n, guildId: g, onClose: I } = e,
-        j = (0, s.bG)([d.A], () => d.A.getUserProfile(t.id)?.application),
-        _ = (0, s.bG)([a.A, r.A], () => a.A.getChannel(r.A.getChannelId()));
-    return (0, i.jsxs)(l.IpV, {
+t.d(n, { A: () => h });
+var i = t(627968);
+t(64700);
+var s = t(311907),
+    r = t(397927),
+    a = t(734057),
+    l = t(309010),
+    o = t(622543),
+    d = t(987112),
+    c = t(389996),
+    u = t(743987),
+    A = t(900179),
+    _ = t(280645),
+    m = t(928223),
+    x = t(518477),
+    p = t(985018),
+    f = t(195723);
+function h(e) {
+    let { user: n, displayProfile: t, guildId: h, onClose: g } = e,
+        I = (0, s.bG)([o.A], () => o.A.getUserProfile(n.id)?.application),
+        j = (0, s.bG)([a.A, l.A], () => a.A.getChannel(l.A.getChannelId()));
+    return (0, i.jsxs)(r.IpV, {
         fade: !0,
         className: f.XG,
         children: [
-            n?.bio != null && n?.bio !== "" && (0, i.jsx)(c.A, { userBio: n.bio, setLineClamp: !1 }),
-            j?.popularApplicationCommandIds != null &&
-                null != _ &&
-                (0, i.jsx)(o.A, {
-                    applicationId: j.id,
-                    commandIds: j.popularApplicationCommandIds,
-                    channel: _,
-                    guildId: g,
-                    onClick: I,
+            (0, i.jsx)(c.E, { userBio: t?.bio, setLineClamp: !1 }),
+            I?.popularApplicationCommandIds != null &&
+                null != j &&
+                (0, i.jsx)(d.A, {
+                    applicationId: I.id,
+                    commandIds: I.popularApplicationCommandIds,
+                    channel: j,
+                    guildId: h,
+                    onClick: g,
                 }),
-            n?.guildId != null && (0, i.jsx)(x.A, { userId: t.id, guildId: n.guildId }),
+            t?.guildId != null && (0, i.jsx)(_.A, { userId: n.id, guildId: t.guildId }),
             (0, i.jsx)(A.A, {
-                heading: h.intl.string(h.t["A//N4k"]),
-                children: (0, i.jsx)(u.A, { userId: t.id, guildId: g, tooltipDelay: p.In }),
+                heading: p.intl.string(p.t["A//N4k"]),
+                children: (0, i.jsx)(u.A, { userId: n.id, guildId: h, tooltipDelay: x.In }),
             }),
-            (0, i.jsx)(m.A, { userId: t.id }),
+            (0, i.jsx)(m.A, { userId: n.id }),
         ],
     });
 }

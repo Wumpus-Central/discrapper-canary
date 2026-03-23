@@ -2,8 +2,8 @@
 n.d(t, { A: () => f });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(158954),
     l = n(619517),
     u = n(183555),
@@ -11,7 +11,7 @@ var r = n(627968),
     d = n(985018),
     _ = n(208952);
 function f(e) {
-    let { previewData: t, className: n, onClick: a } = e,
+    let { previewData: t, className: n, onClick: s } = e,
         { trackUserProfileAction: f } = (0, u.NJ)(),
         p = i.useRef(!1);
     return (
@@ -21,11 +21,11 @@ function f(e) {
         }, [f, t.application.id]),
         (0, r.jsx)(o.sqX, {
             onClick: () => {
-                f({ action: "PRESS_APPLICATION_WIDGET_PREVIEW", applicationId: t.application.id }), a?.();
+                f({ action: "PRESS_APPLICATION_WIDGET_PREVIEW", applicationId: t.application.id }), s?.();
             },
             "aria-label": t.application.name,
             children: (0, r.jsxs)(c.A.Overlay, {
-                className: s()(_.kL, n),
+                className: a()(_.kL, n),
                 children: [
                     (0, r.jsxs)(o.BJc, {
                         gap: 8,
@@ -48,7 +48,8 @@ function f(e) {
                             (0, r.jsxs)("div", {
                                 className: _.P_,
                                 children: [
-                                    (0, r.jsxs)(o.DZT, {
+                                    (0, r.jsxs)(o.EYj, {
+                                        tag: "div",
                                         variant: "heading-sm/semibold",
                                         lineClamp: 2,
                                         children: [

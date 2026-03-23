@@ -49,7 +49,8 @@ function I(e) {
         };
     return (0, r.jsxs)("div", {
         children: [
-            (0, r.jsxs)(o.Heading, {
+            (0, r.jsxs)(o.Text, {
+                tag: "div",
                 variant: "heading-sm/semibold",
                 color: "text-default",
                 className: A.CT,

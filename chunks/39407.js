@@ -125,89 +125,91 @@ function j(e) {
                         (0, r.jsx)(l.AC4, {
                             children: (0, r.jsx)(l.H, { id: eT, children: B.intl.format(B.t.KRe1Fk, { name: eS }) }),
                         }),
-                        (0, r.jsxs)(D.A, {
-                            user: t,
-                            displayProfile: ea,
-                            themeType: V.d.POPOUT,
-                            privateBanner: ea?.private === !0 ? (0, r.jsx)(b.A, {}) : void 0,
-                            children: [
-                                null != ef.interactionType &&
-                                    (0, r.jsx)(s.animated.div, { style: ep, className: H.tB }),
-                                (0, r.jsxs)(L.A, {
-                                    children: [
-                                        (0, r.jsx)(M.A, {
-                                            shouldShowTooltip: null === ef.interactionType,
-                                            user: t,
-                                            guildId: j,
-                                            channelId: Y,
-                                            onClose: $,
-                                            appContext: X,
-                                        }),
-                                        (0, r.jsx)(w.A, {
-                                            themeType: V.d.POPOUT,
-                                            user: t,
-                                            setFriendRequestSent: el,
-                                            toastShowing: eu && eo && ec,
-                                        }),
-                                        !em &&
-                                            (0, r.jsx)(x.yo, {
+                        (0, r.jsx)(l.Fmo, {
+                            children: (0, r.jsxs)(D.A, {
+                                user: t,
+                                displayProfile: ea,
+                                themeType: V.d.POPOUT,
+                                privateBanner: ea?.private === !0 ? (0, r.jsx)(b.A, {}) : void 0,
+                                children: [
+                                    null != ef.interactionType &&
+                                        (0, r.jsx)(s.animated.div, { style: ep, className: H.tB }),
+                                    (0, r.jsxs)(L.A, {
+                                        children: [
+                                            (0, r.jsx)(M.A, {
+                                                shouldShowTooltip: null === ef.interactionType,
                                                 user: t,
                                                 guildId: j,
-                                                viewProfileItem: eA(),
+                                                channelId: Y,
+                                                onClose: $,
                                                 appContext: X,
                                             }),
-                                    ],
-                                }),
-                                (0, r.jsxs)("div", {
-                                    className: H.wx,
-                                    children: [
-                                        (0, r.jsx)(R.A, {
-                                            user: t,
-                                            displayProfile: ea,
-                                            guildId: j,
-                                            themeType: V.d.POPOUT,
-                                        }),
-                                        (0, r.jsx)(O.A, { userId: t.id, className: H.oR, onClose: $ }),
-                                        (0, r.jsx)(C.A, {
-                                            user: t,
-                                            displayProfile: ea,
-                                            guildId: j,
-                                            channelId: Y,
-                                            themeType: V.d.POPOUT,
-                                            onOpenProfile: q ? void 0 : eg,
-                                        }),
-                                        (0, r.jsx)(P.A, {
-                                            ref: eh,
-                                            user: t,
-                                            guildId: j,
-                                            channelId: Y,
-                                            themeType: V.d.POPOUT,
-                                            onCloseProfile: $,
-                                            prompt: eE,
-                                        }),
-                                    ],
-                                }),
-                                (0, r.jsx)(U.A, {
-                                    user: t,
-                                    currentUser: n,
-                                    displayProfile: ea,
-                                    guild: er,
-                                    isHoveringOrFocusing: null == ef.interactionType && ed,
-                                    onOpenProfile: q ? void 0 : eg,
-                                    channelId: Y,
-                                    onClose: $,
-                                }),
-                                (0, r.jsx)(G.A, {
-                                    user: t,
-                                    guildId: j,
-                                    channelId: Y,
-                                    onClose: $,
-                                    appContext: X,
-                                    disableAutoFocus: Q,
-                                }),
-                                ea?.profileEffect != null &&
-                                    (0, r.jsx)(m.A, { skuId: ea?.profileEffect?.skuId, isHovering: e_ }),
-                            ],
+                                            (0, r.jsx)(w.A, {
+                                                themeType: V.d.POPOUT,
+                                                user: t,
+                                                setFriendRequestSent: el,
+                                                toastShowing: eu && eo && ec,
+                                            }),
+                                            !em &&
+                                                (0, r.jsx)(x.yo, {
+                                                    user: t,
+                                                    guildId: j,
+                                                    viewProfileItem: eA(),
+                                                    appContext: X,
+                                                }),
+                                        ],
+                                    }),
+                                    (0, r.jsxs)("div", {
+                                        className: H.wx,
+                                        children: [
+                                            (0, r.jsx)(R.A, {
+                                                user: t,
+                                                displayProfile: ea,
+                                                guildId: j,
+                                                themeType: V.d.POPOUT,
+                                            }),
+                                            (0, r.jsx)(O.A, { userId: t.id, className: H.oR, onClose: $ }),
+                                            (0, r.jsx)(C.A, {
+                                                user: t,
+                                                displayProfile: ea,
+                                                guildId: j,
+                                                channelId: Y,
+                                                themeType: V.d.POPOUT,
+                                                onOpenProfile: q ? void 0 : eg,
+                                            }),
+                                            (0, r.jsx)(P.A, {
+                                                ref: eh,
+                                                user: t,
+                                                guildId: j,
+                                                channelId: Y,
+                                                themeType: V.d.POPOUT,
+                                                onCloseProfile: $,
+                                                prompt: eE,
+                                            }),
+                                        ],
+                                    }),
+                                    (0, r.jsx)(U.A, {
+                                        user: t,
+                                        currentUser: n,
+                                        displayProfile: ea,
+                                        guild: er,
+                                        isHoveringOrFocusing: null == ef.interactionType && ed,
+                                        onOpenProfile: q ? void 0 : eg,
+                                        channelId: Y,
+                                        onClose: $,
+                                    }),
+                                    (0, r.jsx)(G.A, {
+                                        user: t,
+                                        guildId: j,
+                                        channelId: Y,
+                                        onClose: $,
+                                        appContext: X,
+                                        disableAutoFocus: Q,
+                                    }),
+                                    ea?.profileEffect != null &&
+                                        (0, r.jsx)(m.A, { skuId: ea?.profileEffect?.skuId, isHovering: e_ }),
+                                ],
+                            }),
                         }),
                     ],
                 }),
