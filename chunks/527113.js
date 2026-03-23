@@ -3,8 +3,8 @@ n.d(t, { A: () => m });
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
-    s = n(397927),
+    s = n.n(i),
+    a = n(397927),
     o = n(652215),
     l = n(788868),
     u = n(985018),
@@ -131,9 +131,9 @@ function p(e) {
     let { value: t, isBoosted: n = !1 } = e;
     return "boolean" == typeof t
         ? t
-            ? (0, r.jsx)(s.A9s, { size: "md", color: "currentColor", className: c.oE })
-            : (0, r.jsx)(s.PGe, { size: "md", color: "currentColor", className: c.i3 })
-        : (0, r.jsx)(s.Text, {
+            ? (0, r.jsx)(a.A9s, { size: "md", color: "currentColor", className: c.oE })
+            : (0, r.jsx)(a.PGe, { size: "md", color: "currentColor", className: c.i3 })
+        : (0, r.jsx)(a.Text, {
               color: n ? "text-strong" : "text-muted",
               variant: n ? "text-md/bold" : "text-md/medium",
               children: t,
@@ -145,8 +145,8 @@ function h(e) {
     return null == n
         ? null
         : (0, r.jsx)("div", {
-              className: a()(c.ER, { [c.GH]: n === o.TVA.TIER_2, [c.z5]: n === o.TVA.TIER_3 }),
-              children: (0, r.jsx)(s.Text, {
+              className: s()(c.ER, { [c.GH]: n === o.TVA.TIER_2, [c.z5]: n === o.TVA.TIER_3 }),
+              children: (0, r.jsx)(a.Text, {
                   className: c.uQ,
                   color: "always-white",
                   variant: "text-xs/bold",
@@ -155,15 +155,16 @@ function h(e) {
           });
 }
 function m(e) {
-    let { className: t, guild: n } = e;
+    let { className: t, guild: n, hideHeading: i = !1, hideTier0: l = !1 } = e;
     return (0, r.jsxs)("div", {
-        className: a()(c.iE, t),
+        className: s()(c.iE, t),
         children: [
-            (0, r.jsx)(s.Heading, {
-                className: c.R_,
-                variant: "heading-xxl/semibold",
-                children: u.intl.string(u.t["9GGb9k"]),
-            }),
+            !i &&
+                (0, r.jsx)(a.Heading, {
+                    className: c.R_,
+                    variant: "heading-xxl/semibold",
+                    children: u.intl.string(u.t["9GGb9k"]),
+                }),
             (0, r.jsxs)("div", {
                 className: c.wY,
                 children: [
@@ -172,42 +173,43 @@ function m(e) {
                         className: c.tp,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: a()(c.nM, c.U1),
+                                className: s()(c.nM, c.U1),
                                 children: [
                                     (0, r.jsx)("div", {
-                                        className: a()(c.Hn, c.DV),
-                                        children: (0, r.jsx)(s.Heading, {
+                                        className: s()(c.Hn, c.DV),
+                                        children: (0, r.jsx)(a.Heading, {
                                             color: "text-default",
                                             variant: "heading-lg/semibold",
                                             children: u.intl.string(u.t.F5MY0k),
                                         }),
                                     }),
-                                    (0, r.jsxs)("div", {
-                                        className: a()(c.Hn, c.pU),
-                                        children: [
-                                            (0, r.jsx)(s.Heading, {
-                                                color: "text-default",
-                                                variant: "heading-lg/semibold",
-                                                children: u.intl.string(u.t.mx8j2m),
-                                            }),
-                                            (0, r.jsx)(s.Text, {
-                                                color: "text-muted",
-                                                variant: "text-sm/medium",
-                                                children: u.intl.format(u.t["pob/cL"], {
-                                                    subscriptions: o.M2T[o.TVA.NONE],
+                                    !l &&
+                                        (0, r.jsxs)("div", {
+                                            className: s()(c.Hn, c.pU),
+                                            children: [
+                                                (0, r.jsx)(a.Heading, {
+                                                    color: "text-default",
+                                                    variant: "heading-lg/semibold",
+                                                    children: u.intl.string(u.t.mx8j2m),
                                                 }),
-                                            }),
-                                        ],
-                                    }),
+                                                (0, r.jsx)(a.Text, {
+                                                    color: "text-muted",
+                                                    variant: "text-sm/medium",
+                                                    children: u.intl.format(u.t["pob/cL"], {
+                                                        subscriptions: o.M2T[o.TVA.NONE],
+                                                    }),
+                                                }),
+                                            ],
+                                        }),
                                     (0, r.jsxs)("div", {
-                                        className: a()(c.Hn, c.pU),
+                                        className: s()(c.Hn, c.pU),
                                         children: [
-                                            (0, r.jsx)(s.Heading, {
+                                            (0, r.jsx)(a.Heading, {
                                                 color: "text-default",
                                                 variant: "heading-lg/semibold",
                                                 children: u.intl.string(u.t.nzXtaS),
                                             }),
-                                            (0, r.jsx)(s.Text, {
+                                            (0, r.jsx)(a.Text, {
                                                 color: "text-muted",
                                                 variant: "text-sm/medium",
                                                 children: u.intl.format(u.t["pob/cL"], {
@@ -217,14 +219,14 @@ function m(e) {
                                         ],
                                     }),
                                     (0, r.jsxs)("div", {
-                                        className: a()(c.Hn, c.pU),
+                                        className: s()(c.Hn, c.pU),
                                         children: [
-                                            (0, r.jsx)(s.Heading, {
+                                            (0, r.jsx)(a.Heading, {
                                                 color: "text-default",
                                                 variant: "heading-lg/semibold",
                                                 children: u.intl.string(u.t["h33/uW"]),
                                             }),
-                                            (0, r.jsx)(s.Text, {
+                                            (0, r.jsx)(a.Text, {
                                                 color: "text-muted",
                                                 variant: "text-sm/medium",
                                                 children: u.intl.format(u.t["pob/cL"], {
@@ -234,14 +236,14 @@ function m(e) {
                                         ],
                                     }),
                                     (0, r.jsxs)("div", {
-                                        className: a()(c.Hn, c.pU),
+                                        className: s()(c.Hn, c.pU),
                                         children: [
-                                            (0, r.jsx)(s.Heading, {
+                                            (0, r.jsx)(a.Heading, {
                                                 color: "text-default",
                                                 variant: "heading-lg/semibold",
                                                 children: u.intl.string(u.t.BfF6ED),
                                             }),
-                                            (0, r.jsx)(s.Text, {
+                                            (0, r.jsx)(a.Text, {
                                                 color: "text-muted",
                                                 variant: "text-sm/medium",
                                                 children: u.intl.format(u.t["pob/cL"], {
@@ -256,30 +258,31 @@ function m(e) {
                                 (0, r.jsxs)(
                                     "div",
                                     {
-                                        className: a()(c.nM, { [c.fW]: t === f.length - 1 }),
+                                        className: s()(c.nM, { [c.fW]: t === f.length - 1 }),
                                         children: [
                                             (0, r.jsx)("div", {
-                                                className: a()(c.Hn, c.DV),
-                                                children: (0, r.jsx)(s.Text, {
+                                                className: s()(c.Hn, c.DV),
+                                                children: (0, r.jsx)(a.Text, {
                                                     color: "text-muted",
                                                     variant: "text-md/medium",
                                                     children: e.getPerkLabel(),
                                                 }),
                                             }),
+                                            !l &&
+                                                (0, r.jsx)("div", {
+                                                    className: s()(c.Hn, c.pU),
+                                                    children: (0, r.jsx)(p, { value: e.getTier0Value() }),
+                                                }),
                                             (0, r.jsx)("div", {
-                                                className: a()(c.Hn, c.pU),
-                                                children: (0, r.jsx)(p, { value: e.getTier0Value() }),
-                                            }),
-                                            (0, r.jsx)("div", {
-                                                className: a()(c.Hn, c.pU),
+                                                className: s()(c.Hn, c.pU),
                                                 children: (0, r.jsx)(p, { value: e.getTier1Value(), isBoosted: !0 }),
                                             }),
                                             (0, r.jsx)("div", {
-                                                className: a()(c.Hn, c.pU),
+                                                className: s()(c.Hn, c.pU),
                                                 children: (0, r.jsx)(p, { value: e.getTier2Value(), isBoosted: !0 }),
                                             }),
                                             (0, r.jsx)("div", {
-                                                className: a()(c.Hn, c.pU),
+                                                className: s()(c.Hn, c.pU),
                                                 children: (0, r.jsx)(p, { value: e.getTier3Value(), isBoosted: !0 }),
                                             }),
                                         ],
