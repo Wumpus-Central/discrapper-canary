@@ -13,7 +13,7 @@ function d(e) {
         n = r.useMemo(() => (t?.userId != null ? [t.userId] : []), [t]),
         o = (0, c.gT)({ userIds: n }),
         d = (0, c.K6)({ userIds: n }),
-        _ = (0, c.l1)(n),
+        _ = (0, c.tR)(n),
         f = (0, i.bG)([u.A], () => u.A.getStorefrontDetectableGameAndApplicationIds()),
         p = r.useMemo(() => {
             if (t?.widgets == null) return !1;
@@ -32,7 +32,7 @@ function d(e) {
             for (let t of f) if (e.has(t)) return !0;
             return !1;
         }, [t?.widgets, f]);
-    return t?.application == null && (o || d || _ || p);
+    return t?.application == null && (o || d || _.length > 0 || p);
 }
 function _(e) {
     let { userId: t } = e;
