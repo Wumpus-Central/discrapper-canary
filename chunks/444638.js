@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     X$: "streamTile__8151b",
     Vs: "tile__8151b",

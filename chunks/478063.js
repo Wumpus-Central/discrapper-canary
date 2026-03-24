@@ -1,17 +1,18 @@
+"use strict";
 a.d(t, { A: () => h });
 var n = a(627968),
     i = a(64700),
     r = a(503698),
-    l = a.n(r),
-    o = a(97808),
-    s = a(863610),
+    s = a.n(r),
+    l = a(97808),
+    o = a(863610),
     _ = a(397927),
     c = a(573435);
 a(883392);
 var d = a(657323);
 let u = {},
     f = 1 / 4;
-function m(e) {
+function p(e) {
     let { height: t, fillColor: a } = e;
     return (0, n.jsx)("div", {
         style: {
@@ -23,16 +24,16 @@ function m(e) {
             height: t,
             width: 2.5 * t,
         },
-        children: (0, n.jsx)(s.n, { className: d.r$, dotRadius: t * f }),
+        children: (0, n.jsx)(o.n, { className: d.r$, dotRadius: t * f }),
     });
 }
-function p(e) {
+function m(e) {
     let { isTyping: t, statusCoords: a, status: i } = e,
         r = (0, _.S31)(_.clD.ONLINE);
     return t
         ? (0, n.jsx)("div", {
               style: { position: "absolute", top: a.y, left: a.x },
-              children: (0, n.jsx)(m, { height: a.height, fillColor: r }),
+              children: (0, n.jsx)(p, { height: a.height, fillColor: r }),
           })
         : null != i
           ? (0, n.jsx)(_.nW6, { size: a.height, status: i, style: { position: "absolute", top: a.y, left: a.x } })
@@ -112,10 +113,10 @@ let g = {
     },
     h = function (e) {
         var t;
-        let { backSrc: a, frontSrc: r, size: s, isTyping: f, status: m, style: h, className: b, ...I } = e,
-            { size: C } = _.vCh[s],
+        let { backSrc: a, frontSrc: r, size: o, isTyping: f, status: p, style: h, className: b, ...I } = e,
+            { size: v } = _.vCh[o],
             {
-                statusCoords: v,
+                statusCoords: C,
                 frontAvatarOffsetPx: y,
                 frontAvatarSizePx: x,
                 backAvatarSizePx: E,
@@ -125,13 +126,13 @@ let g = {
                     a,
                     n,
                     i,
-                    r = `${C}-${f}`;
+                    r = `${v}-${f}`;
                 return (
                     u[r] ??
-                    ((a = +(t = (e = _.vCh[s]).size / 1.5)),
+                    ((a = +(t = (e = _.vCh[o]).size / 1.5)),
                     (n = 0.5 * t),
                     (i = {
-                        statusCoords: (0, o.Rb)(e, _.clD.ONLINE, { isTyping: f, isMobile: !1, isVR: !1 }),
+                        statusCoords: (0, l.Rb)(e, _.clD.ONLINE, { isTyping: f, isMobile: !1, isVR: !1 }),
                         frontAvatarSizePx: a,
                         backAvatarSizePx: t,
                         frontAvatarOffsetPx: n,
@@ -140,33 +141,33 @@ let g = {
                     (u[r] = i),
                     i)
                 );
-            }, [C, f, s]),
-            S = ((t = null != m), f ? g[s].typing : t ? g[s].status : g[s].default),
-            L = g[s].back;
+            }, [v, f, o]),
+            S = ((t = null != p), f ? g[o].typing : t ? g[o].status : g[o].default),
+            T = g[o].back;
         return (0, n.jsxs)("div", {
-            style: { width: C, height: C, ...h },
+            style: { width: v, height: v, ...h },
             "aria-label": I["aria-label"],
             "aria-hidden": I["aria-hidden"],
-            className: l()(d.kL, b),
+            className: s()(d.kL, b),
             children: [
                 (0, n.jsxs)(c.Ay, {
                     mask: S,
-                    height: C,
-                    width: C,
+                    height: v,
+                    width: v,
                     children: [
                         (0, n.jsx)(c.Ay, {
-                            mask: L,
-                            height: C,
-                            width: C,
+                            mask: T,
+                            height: v,
+                            width: v,
                             children: (0, n.jsx)("img", { src: a, alt: "", width: E, height: E }),
                         }),
                         (0, n.jsx)("div", {
                             style: { position: "absolute", top: y, left: y },
-                            children: (0, n.jsx)(A, { src: r, size: x, isTyping: f, status: m }),
+                            children: (0, n.jsx)(A, { src: r, size: x, isTyping: f, status: p }),
                         }),
                     ],
                 }),
-                (0, n.jsx)(p, { statusCoords: v, status: m, isTyping: f }),
+                (0, n.jsx)(m, { statusCoords: C, status: p, isTyping: f }),
             ],
         });
     };

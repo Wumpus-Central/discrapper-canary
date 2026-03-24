@@ -1,32 +1,33 @@
-n.d(t, { A: () => m });
-var r = n(627968);
-n(64700);
-var i = n(990078),
-    a = n(397927),
-    l = n(580630),
-    s = n(993408),
-    c = n(641563),
-    o = n(652215),
-    d = n(985018),
-    u = n(778052);
+"use strict";
+r.d(t, { A: () => m });
+var n = r(627968);
+r(64700);
+var i = r(990078),
+    s = r(397927),
+    a = r(580630),
+    l = r(993408),
+    c = r(641563),
+    o = r(652215),
+    d = r(985018),
+    u = r(778052);
 function m(e) {
     let { product: t } = e,
-        n = (0, s.yt)(t, o.lid.PREMIUM_TIER_2);
-    if (null == n) return null;
-    let m = (0, l.RS)(n.amount, n.currency);
-    return (0, r.jsxs)("div", {
+        r = (0, l.yt)(t, o.lid.PREMIUM_TIER_2);
+    if (null == r) return null;
+    let m = (0, a.RS)(r.amount, r.currency);
+    return (0, n.jsxs)("div", {
         className: u.k,
         children: [
-            (0, r.jsx)(i.m, {
+            (0, n.jsx)(i.m, {
                 text: d.intl.string(d.t.MPFyJ5),
                 "aria-label": d.intl.string(d.t.X3Ekj8),
-                children: (0, r.jsx)(a.tvc, { size: "md", color: "currentColor", className: u.o }),
+                children: (0, n.jsx)(s.tvc, { size: "md", color: "currentColor", className: u.o }),
             }),
-            (0, r.jsx)(a.Text, {
+            (0, n.jsx)(s.Text, {
                 variant: "text-xs/medium",
                 children: d.intl.format(d.t.Sv8iic, {
                     price: m,
-                    subscribeNowHook: (e) => (0, r.jsx)(c.Z, { text: e }),
+                    subscribeNowHook: (e) => (0, n.jsx)(c.Z, { text: e }),
                 }),
             }),
         ],

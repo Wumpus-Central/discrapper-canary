@@ -1,8 +1,9 @@
-n.d(t, { J: () => a });
-var i = n(353640),
-    r = n(121894);
-let a = (0, i.v)((e) => ({
+"use strict";
+a.d(t, { J: () => r });
+var n = a(353640),
+    i = a(121894);
+let r = (0, n.v)((e) => ({
     favoriteAdded: !1,
-    notifyFavoriteAdded: () => (0, r.r)(() => e({ favoriteAdded: !0 })),
-    clearFavoriteAdded: () => (0, r.r)(() => e({ favoriteAdded: !1 })),
+    notifyFavoriteAdded: () => (0, i.r)(() => e({ favoriteAdded: !0 })),
+    clearFavoriteAdded: () => (0, i.r)(() => e({ favoriteAdded: !1 })),
 }));

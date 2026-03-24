@@ -1,25 +1,26 @@
-n.d(t, { A: () => d });
-var r = n(627968);
-n(64700);
-var i = n(503698),
-    a = n.n(i),
-    l = n(575593),
-    s = n(397927),
-    c = n(985018),
-    o = n(837368);
+"use strict";
+r.d(t, { A: () => d });
+var n = r(627968);
+r(64700);
+var i = r(503698),
+    s = r.n(i),
+    a = r(575593),
+    l = r(397927),
+    c = r(985018),
+    o = r(837368);
 function d(e) {
     var t;
-    let { product: n, isDarkText: i = !1, isOrbExclusive: d = !1 } = e,
+    let { product: r, isDarkText: i = !1, isOrbExclusive: d = !1 } = e,
         u =
-            ((t = n.type),
+            ((t = r.type),
             d
                 ? c.intl.string(c.t["0TmQRG"])
-                : t === l.R.AVATAR_DECORATION
+                : t === a.R.AVATAR_DECORATION
                   ? c.intl.string(c.t["7v0T9P"])
-                  : t === l.R.PROFILE_EFFECT
+                  : t === a.R.PROFILE_EFFECT
                     ? c.intl.string(c.t.wR5wOo)
                     : null);
     return null === u
         ? null
-        : (0, r.jsx)(s.Text, { variant: "text-xxs/normal", className: a()([o.kL, i ? o.ap : o.aK]), children: u });
+        : (0, n.jsx)(l.Text, { variant: "text-xxs/normal", className: s()([o.kL, i ? o.ap : o.aK]), children: u });
 }

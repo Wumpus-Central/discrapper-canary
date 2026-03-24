@@ -1,29 +1,30 @@
-n.d(t, { c: () => d });
-var r = n(627968);
-n(64700);
-var i = n(503698),
-    a = n.n(i),
-    l = n(990078),
-    s = n(397927),
-    c = n(985018),
-    o = n(988573);
+"use strict";
+r.d(t, { c: () => d });
+var n = r(627968);
+r(64700);
+var i = r(503698),
+    s = r.n(i),
+    a = r(990078),
+    l = r(397927),
+    c = r(985018),
+    o = r(988573);
 let d = (e) => {
-    let { className: t, isPartiallyPurchased: n } = e;
-    return n
-        ? (0, r.jsx)(l.m, {
+    let { className: t, isPartiallyPurchased: r } = e;
+    return r
+        ? (0, n.jsx)(a.m, {
               position: "top",
               align: "left",
               text: c.intl.string(c.t.y1VWkZ),
-              children: (0, r.jsxs)("div", {
-                  className: a()(o.GX, t),
+              children: (0, n.jsxs)("div", {
+                  className: s()(o.GX, t),
                   children: [
-                      (0, r.jsx)("span", {
+                      (0, n.jsx)("span", {
                           className: o.P0,
-                          children: (0, r.jsx)(s.mir, { size: "md", color: "currentColor", className: o.G }),
+                          children: (0, n.jsx)(l.mir, { size: "md", color: "currentColor", className: o.G }),
                       }),
-                      (0, r.jsx)(s.Text, { variant: "text-md/semibold", children: c.intl.string(c.t.BEjTij) }),
+                      (0, n.jsx)(l.Text, { variant: "text-md/semibold", children: c.intl.string(c.t.BEjTij) }),
                   ],
               }),
           })
-        : (0, r.jsx)(s.Text, { variant: "text-md/semibold", className: t, children: c.intl.string(c.t["6cfuDj"]) });
+        : (0, n.jsx)(l.Text, { variant: "text-md/semibold", className: t, children: c.intl.string(c.t["6cfuDj"]) });
 };
