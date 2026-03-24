@@ -1,4 +1,4 @@
-n.d(t, { A: () => eg }), n(321073);
+n.d(t, { A: () => em }), n(321073);
 var i = n(627968),
     a = n(64700),
     l = n(497766),
@@ -60,12 +60,11 @@ var i = n(627968),
     es = n(652215),
     eo = n(946960),
     ed = n(49999),
-    ec = n(349828),
-    eu = n(985018),
-    eA = n(484241);
-let eh = "server-settings",
-    e_ = { origin: { x: -8, y: -48 }, targetWidth: 40, targetHeight: 40, offset: { x: 0, y: 0 } };
-class em extends a.PureComponent {
+    ec = n(985018),
+    eu = n(484241);
+let eA = "server-settings",
+    eh = { origin: { x: -8, y: -48 }, targetWidth: 40, targetHeight: 40, offset: { x: 0, y: 0 } };
+class e_ extends a.PureComponent {
     historyUnlisten = () => {};
     guildHeaderRef = a.createRef();
     guildHeaderDropdownButtonRef = a.createRef();
@@ -112,17 +111,22 @@ class em extends a.PureComponent {
     };
     handleContextMenu = (e) => {
         let { guild: t } = this.props;
-        null != t &&
-            t.id !== ec.Vc &&
+        if (null != t) {
+            if ((0, C.ai)(t.id))
+                return void (0, h.L3)(e, async () => {
+                    let { default: e } = await n.e("60497").then(n.bind(n, 908424));
+                    return (t) => (0, i.jsx)(e, { ...t, navId: "favorites-channel-list-context" });
+                });
             (0, h.L3)(e, async () => {
                 let { default: e } = await n.e("10758").then(n.bind(n, 455557));
                 return (n) => (0, i.jsx)(e, { ...n, guild: t });
             });
+        }
     };
     handleHeaderContextMenu = (e) => {
         let { guild: t } = this.props;
         if (null != t) {
-            if (t.id === ec.Vc) return void this.props.onFavoriteGuildContextMenu(e);
+            if ((0, C.ai)(t.id)) return void this.props.onFavoriteGuildContextMenu(e);
             (0, h.L3)(e, async () => {
                 let { default: e } = await Promise.all([
                     n.e("43600"),
@@ -192,9 +196,9 @@ class em extends a.PureComponent {
             ? (0, i.jsx)("div", {
                   onClick: (t) => (e ? null : t.stopPropagation()),
                   children: (0, i.jsx)(B.A, {
-                      tutorialId: eh,
+                      tutorialId: eA,
                       position: "bottom",
-                      inlineSpecs: e_,
+                      inlineSpecs: eh,
                       children: this.renderGuildHeaderDropdownButton(e),
                   }),
               })
@@ -206,8 +210,8 @@ class em extends a.PureComponent {
                             !a &&
                             (0, i.jsx)(c.AM, {
                                 targetElementRef: this.guildHeaderDropdownButtonRef,
-                                title: eu.intl.string(eu.t.Rk2RJk),
-                                body: eu.intl.string(eu.t.sFSrFH),
+                                title: ec.intl.string(ec.t.Rk2RJk),
+                                body: ec.intl.string(ec.t.sFSrFH),
                                 onRequestClose: this.handleCloseTemplateDirtyTooltip,
                                 position: "bottom",
                                 caretConfig: { align: "center" },
@@ -222,8 +226,8 @@ class em extends a.PureComponent {
                             this.renderGuildHeaderDropdownButton(e),
                             (0, i.jsx)(c.AM, {
                                 targetElementRef: this.guildHeaderDropdownButtonRef,
-                                title: eu.intl.string(eu.t.Q3qa4x),
-                                body: eu.intl.string(eu.t.UyHD4O),
+                                title: ec.intl.string(ec.t.Q3qa4x),
+                                body: ec.intl.string(ec.t.UyHD4O),
                                 onRequestClose: this.handleCloseSubscribeTooltip,
                                 position: "bottom",
                                 caretConfig: { align: "center" },
@@ -328,10 +332,10 @@ class em extends a.PureComponent {
         {
             if (t.features.has(es.GuildFeatures.HUB) && !a)
                 return (0, i.jsx)("div", {
-                    className: eA.r0,
+                    className: eu.r0,
                     children: (0, i.jsx)(R.A, { guild: t, channel: n ?? K.Ay.getDefaultChannel(t.id) }),
                 });
-            let e = t.id === ec.Vc ? et.T : et.B;
+            let e = (0, C.ai)(t.id) ? et.T : et.B;
             return (0, i.jsx)(e, {
                 guild: t,
                 ...l,
@@ -346,9 +350,9 @@ class em extends a.PureComponent {
         let { guild: e } = this.props,
             t = (0, C.YC)(e);
         return (0, i.jsxs)("nav", {
-            className: eA.kL,
+            className: eu.kL,
             onContextMenu: this.handleContextMenu,
-            "aria-label": eu.intl.formatToPlainString(eu.t.nj5gAZ, { guildName: t ?? "" }),
+            "aria-label": ec.intl.formatToPlainString(ec.t.nj5gAZ, { guildName: t ?? "" }),
             children: [
                 null != e && this.renderGuildHeader(this.state.hasGuildSubheader),
                 null != e &&
@@ -358,7 +362,7 @@ class em extends a.PureComponent {
         });
     }
 }
-function eg(e) {
+function em(e) {
     let { guildId: t, hideSelectedChannel: n, selectedChannelId: l } = e,
         d = (0, N.$)("favorite-guild-header-context"),
         c = (0, s.bG)([q.A], () => q.A.getGuild(t)),
@@ -385,9 +389,9 @@ function eg(e) {
         ),
         ec = (0, p.A)(c),
         eu = (0, u.red)(u.DXt),
-        eA = (0, s.bG)([z.A], () => z.A.hasLayers()),
-        e_ = (0, P.xr)((e) => e.fullScreenLayers.length > 0),
-        eg = (0, s.bG)([H.A], () => H.A.shouldShow(eh)),
+        eh = (0, s.bG)([z.A], () => z.A.hasLayers()),
+        em = (0, P.xr)((e) => e.fullScreenLayers.length > 0),
+        eg = (0, s.bG)([H.A], () => H.A.shouldShow(eA)),
         ep = (0, y.A)(t),
         eE = c?.features.has(es.GuildFeatures.HUB) === !0,
         eI = b && c?.features.has(es.GuildFeatures.DISCOVERABLE) === !0,
@@ -449,7 +453,7 @@ function eg(e) {
                         : null,
             [eV, eF, eW, ej, eU, eB, eY, eK],
         );
-    return (0, i.jsx)(em, {
+    return (0, i.jsx)(e_, {
         guildId: t,
         hideSelectedChannel: n,
         guild: c,
@@ -463,7 +467,7 @@ function eg(e) {
         isUnavailable: R,
         user: V,
         hasChannelNotice: null != ec || ea,
-        anyLayerOpen: eu || eA || e_,
+        anyLayerOpen: eu || eh || em,
         showGuildHeaderTutorial: eg,
         showGuildTemplateDirtyTooltip: ef,
         showNewUnreadsBar: eN,
