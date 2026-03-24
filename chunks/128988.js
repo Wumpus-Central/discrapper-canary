@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => f });
 var i = n(627968),
     l = n(64700),
     a = n(688807),
@@ -11,12 +11,12 @@ var i = n(627968),
     g = n(742710),
     m = n(463259),
     x = n(18983),
-    f = n(219016);
-function p(e) {
+    p = n(330966);
+function f(e) {
     let { scrollerRef: t } = e,
         n = (0, o.GG)("user_profile_drag_preview_layer"),
         {
-            isDragging: p,
+            isDragging: f,
             item: h,
             sourceClientOffset: _,
         } = (0, a.V)((e) => ({
@@ -32,36 +32,48 @@ function p(e) {
                     ? null
                     : (function (e, t, n) {
                           let { id: l, itemType: a, itemPreviewProps: s } = e;
-                          if ("WIDGET" === a && s?.widget != null)
+                          if ("WIDGET" === a && s?.widget != null) {
+                              let { widget: e, getWidth: n } = s,
+                                  l = n?.() ?? 432;
                               return (0, i.jsx)("div", {
-                                  className: f.dt,
-                                  children: (0, i.jsx)(m.u, { widget: s.widget, user: t, disableInteraction: !0 }),
+                                  className: p.dt,
+                                  style: { width: l },
+                                  children: (0, i.jsx)(m.u, { widget: e, user: t, disableInteraction: !0 }),
                               });
+                          }
                           if ("GAME_COVER" === a && s?.gameName != null) {
-                              let { imageSrc: e, gameName: n } = s;
-                              return (0, i.jsx)(u.A, {
-                                  className: f.XJ,
-                                  imageSrc: e,
-                                  gameName: n,
-                                  applicationId: l,
-                                  userId: t?.id,
-                                  disableInteraction: !0,
+                              let { imageSrc: e, gameName: n, getWidth: a } = s,
+                                  r = a?.() ?? 90;
+                              return (0, i.jsx)("div", {
+                                  style: { width: r },
+                                  children: (0, i.jsx)(u.A, {
+                                      className: p.XJ,
+                                      imageSrc: e,
+                                      gameName: n,
+                                      applicationId: l,
+                                      userId: t?.id,
+                                      disableInteraction: !0,
+                                  }),
                               });
                           }
                           if ("GAME_DETAILS_CARD" === a && s?.game != null && s?.widgetType != null) {
-                              let { game: e, widgetType: n } = s;
-                              return (0, i.jsx)(g.A, {
-                                  className: f.xB,
-                                  user: t,
-                                  widgetType: n,
-                                  game: e,
-                                  disableInteraction: !0,
+                              let { game: e, widgetType: n, getWidth: l } = s,
+                                  a = l?.() ?? 400;
+                              return (0, i.jsx)("div", {
+                                  className: p.xB,
+                                  style: { width: a },
+                                  children: (0, i.jsx)(g.A, {
+                                      user: t,
+                                      widgetType: n,
+                                      game: e,
+                                      disableInteraction: !0,
+                                  }),
                               });
                           }
                           if ("WISHLIST_ITEM" === a && s?.item != null) {
                               let { item: e } = s;
                               return (0, i.jsx)("div", {
-                                  className: f.Xm,
+                                  className: p.Xm,
                                   children: n
                                       ? (0, i.jsx)(d.A, { item: e, wishlistOwner: t, wishlistId: null, isDragging: !0 })
                                       : (0, i.jsx)(x.A, {
@@ -87,18 +99,18 @@ function p(e) {
         }, [t]);
     if (
         (l.useEffect(() => {
-            if (!p) {
+            if (!f) {
                 v.current = null;
                 return;
             }
             null == v.current && E();
-        }, [p, E]),
-        !0 !== p || null == _ || null == j)
+        }, [f, E]),
+        !0 !== f || null == _ || null == j)
     )
         return null;
     null == v.current && E();
     let { x: T, y: b } = v.current ?? { x: 0, y: 0 },
         N = _.x - T - 60 * !!I,
-        S = _.y - b;
-    return (0, i.jsx)("div", { className: f.kL, style: { transform: `translate3d(${N}px, ${S}px, 0)` }, children: j });
+        y = _.y - b;
+    return (0, i.jsx)("div", { className: p.kL, style: { transform: `translate3d(${N}px, ${y}px, 0)` }, children: j });
 }

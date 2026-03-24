@@ -1,101 +1,108 @@
 n.d(t, { A: () => I });
 var i = n(627968),
-    r = n(64700),
+    l = n(64700),
     a = n(503698),
-    l = n.n(a),
-    s = n(540185),
+    s = n.n(a),
+    r = n(540185),
     o = n(397927),
     d = n(587895),
     c = n(403362),
     u = n(635344),
-    A = n(735321),
-    h = n(384377),
-    _ = n(492280),
-    m = n(939899),
-    p = n(518477),
-    g = n(985018),
-    E = n(369134);
-let f = {
-    [s.x.FAVORITE_GAMES]: {
+    g = n(735321),
+    m = n(606758),
+    x = n(492280),
+    p = n(939899),
+    f = n(518477),
+    h = n(985018),
+    _ = n(369134);
+let A = {
+    [r.x.FAVORITE_GAMES]: {
         placeholder: () => ({ variant: "details", applicationId: u.n.LEAGUE_OF_LEGENDS }),
-        getAriaLabel: () => g.intl.string(g.t.xJtdIm),
+        getAriaLabel: () => h.intl.string(h.t.xJtdIm),
     },
-    [s.x.CURRENT_GAMES]: {
+    [r.x.CURRENT_GAMES]: {
         placeholder: () => ({ variant: "details", applicationId: u.n.VALORANT }),
-        getAriaLabel: () => g.intl.string(g.t.Ae8tRi),
+        getAriaLabel: () => h.intl.string(h.t.Ae8tRi),
     },
-    [s.x.PLAYED_GAMES]: {
+    [r.x.PLAYED_GAMES]: {
         placeholder: () => ({
             variant: "grid",
             applicationIds: [u.n.PEAK, u.n.BATTLEFIELD_6, u.n.REPO, u.n.BALDURS_GATE_3],
         }),
-        getAriaLabel: () => g.intl.string(g.t["pBR+4j"]),
+        getAriaLabel: () => h.intl.string(h.t["pBR+4j"]),
     },
-    [s.x.WANT_TO_PLAY_GAMES]: {
+    [r.x.WANT_TO_PLAY_GAMES]: {
         placeholder: () => ({
             variant: "grid",
             applicationIds: [u.n.MARVEL_RIVALS, u.n.WORLD_OF_WARCRAFT, u.n.RUST, u.n.SILKSONG],
         }),
-        getAriaLabel: () => g.intl.string(g.t.NtoBi1),
+        getAriaLabel: () => h.intl.string(h.t.NtoBi1),
     },
-    [s.x.APPLICATION]: {
+    [r.x.APPLICATION]: {
         placeholder: (e) => ({ variant: "application-widget", applicationId: e.applicationId }),
         icon: (e) => d.A.getApplication(e.applicationId)?.getIconURL(16),
         getAriaLabel: (e) =>
-            g.intl.formatToPlainString(g.t.KfGahB, {
+            h.intl.formatToPlainString(h.t.KfGahB, {
                 applicationName: d.A.getApplication(e.applicationId)?.name ?? "",
             }),
     },
 };
 function I(e) {
     let t,
-        { widget: n, onAddWidget: a, size: s = "default", loading: d = !1, trackUserProfileEditAction: u } = e,
-        { placeholder: g, getAriaLabel: I, icon: C } = f[n.type],
-        N = "small" === s,
-        T = r.useCallback(() => {
+        { widget: n, onAddWidget: a, size: r = "default", loading: d = !1, trackUserProfileEditAction: u } = e,
+        { placeholder: h, getAriaLabel: I, icon: j } = A[n.type],
+        v = l.useCallback(() => {
             d ||
-                ((0, A.Y5)(n),
+                ((0, g.Y5)(n),
                 u({ action: "WIDGET_ADDED", ...n.getProfileEditAnalyticsOptions() }),
-                (0, h.XA)(p.jM.WIDGET_ADDED),
+                (0, m.XA)(f.jM.WIDGET_ADDED),
                 a?.());
         }, [d, n, u, a]),
-        S = C?.(n);
+        E = j?.(n);
     return (0, i.jsxs)("div", {
-        className: E.LG,
+        className: _.LG,
         children: [
             (0, i.jsxs)(o.DUT, {
-                className: l()(E.PH, N && E.PG, d && E.Lq),
-                onClick: T,
+                className: s()(_.PH, "small" === r && _.PG, d && _.Lq),
+                onClick: v,
                 "aria-label": I(n),
                 "aria-busy": d,
                 children: [
                     (() => {
-                        let e = g(n);
+                        let e = h(n);
                         switch (e.variant) {
                             case "details":
-                                return (0, i.jsx)(_.E, { className: E.xR, applicationId: e.applicationId, size: s });
+                                return (0, i.jsx)(x.E, {
+                                    className: _.l4,
+                                    gridClassName: _.Qs,
+                                    applicationId: e.applicationId,
+                                });
                             case "grid":
-                                return (0, i.jsx)(_.l, { className: E.xR, applicationIds: e.applicationIds, size: s });
+                                return (0, i.jsx)(x.l, {
+                                    className: _.l4,
+                                    gridClassName: _.Qs,
+                                    applicationIds: e.applicationIds,
+                                });
                             case "application-widget":
-                                return (0, i.jsx)(m.A, { applicationId: e.applicationId, size: s });
+                                return (0, i.jsx)(p.A, { applicationId: e.applicationId, size: r });
                             default:
                                 return (0, c.xb)(e);
                         }
                     })(),
                     (0, i.jsxs)("div", {
-                        className: E.Lw,
+                        className: _.Lw,
                         children: [
-                            (0, i.jsx)(o.U1e, { size: "md", color: "currentColor", className: E.c9 }),
+                            (0, i.jsx)(o.U1e, { size: "md", color: "currentColor", className: _.c9 }),
                             (0, i.jsxs)("div", {
-                                className: E.DD,
+                                className: _.DD,
                                 children: [
                                     (0, i.jsx)(o.Text, {
                                         variant: "text-md/medium",
                                         color: "text-strong",
-                                        children: (0, A.L)(n),
+                                        children: (0, g.L)(n),
                                     }),
-                                    null != S
-                                        ? (0, i.jsx)("img", { src: S, alt: "", width: 16, height: 16, className: E.Kk })
+                                    null != E
+                                        ? (0, i.jsx)("img", { src: E, alt: "", width: 16, height: 16, className: _.Kk })
                                         : null,
                                 ],
                             }),
@@ -103,8 +110,8 @@ function I(e) {
                     }),
                 ],
             }),
-            "application-widget" === (t = g(n)).variant
-                ? (0, i.jsx)(m.R, { applicationId: t.applicationId, size: s })
+            "application-widget" === (t = h(n)).variant
+                ? (0, i.jsx)(p.R, { applicationId: t.applicationId, size: r })
                 : null,
         ],
     });
