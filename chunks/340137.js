@@ -1,29 +1,27 @@
 "use strict";
-n.d(t, { A: () => g });
-var r = n(554146),
-    i = n(406935),
-    a = n(451988),
+n.d(t, { A: () => m });
+var r = n(406935),
+    i = n(451988),
     s = n(439372),
-    o = n(827827),
-    l = n(970931),
-    u = n(253932),
-    c = n(594061),
-    d = n(461213),
-    _ = n(652215);
-let f = new a.Ep(),
-    p = new a.Ep(),
-    h = new a.Ep();
-class m extends s.A {
-    previousStatus = null;
+    a = n(827827),
+    o = n(970931),
+    l = n(253932),
+    u = n(594061),
+    c = n(461213),
+    d = n(652215);
+let _ = new i.Ep(),
+    f = new i.Ep(),
+    p = new i.Ep();
+class h extends s.A {
     actions = {
         POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
         USER_SETTINGS_PROTO_UPDATE: () => this.handleUserSettingsProtoUpdate(),
     };
     handlePostConnectionOpen = () => {
-        (this.previousStatus = d.A.getStatus()), this.handleCommonUpdates();
+        this.handleCommonUpdates();
     };
     handleUserSettingsProtoUpdate = () => {
-        this.handleCommonUpdates(), this.manageDoNotDisturbReminderPopover();
+        this.handleCommonUpdates();
     };
     handleCommonUpdates = () => {
         this.manageExpiringCustomStatus(),
@@ -32,77 +30,68 @@ class m extends s.A {
             this.manageExpiringFocusMode();
     };
     manageExpiringCustomStatus = () => {
-        let e = u.G2.getSetting();
-        if (null == e) h.stop();
+        let e = l.G2.getSetting();
+        if (null == e) p.stop();
         else if (null != e.expiresAtMs && "0" !== e.expiresAtMs) {
             let t = new Date(Number(e.expiresAtMs)).getTime() - new Date().getTime();
             t > 0
-                ? h.start(
+                ? p.start(
                       t,
                       () => {
-                          u.G2.updateSetting(void 0);
+                          l.G2.updateSetting(void 0);
                       },
                       !0,
                   )
-                : (u.G2.updateSetting(void 0), h.stop());
-        } else null != h && h.stop();
+                : (l.G2.updateSetting(void 0), p.stop());
+        } else null != p && p.stop();
     };
     manageExpiringStatus = () => {
-        let e = u.CY.getSetting();
-        if (null != e && "0" !== e && d.A.getStatus() !== _.clD.ONLINE) {
+        let e = l.CY.getSetting();
+        if (null != e && "0" !== e && c.A.getStatus() !== d.clD.ONLINE) {
+            let t = new Date(Number(e)).getTime() - new Date().getTime();
+            t > 0
+                ? _.start(
+                      t,
+                      () => {
+                          (0, a.A)({
+                              nextStatus: d.clD.ONLINE,
+                              analyticsContext: { location: { object: d.ZSU.CUSTOM_STATUS_MANAGER } },
+                          });
+                      },
+                      !0,
+                  )
+                : ((0, a.A)({
+                      nextStatus: d.clD.ONLINE,
+                      analyticsContext: { location: { object: d.ZSU.CUSTOM_STATUS_MANAGER } },
+                  }),
+                  _.stop());
+        } else null != _ && _.stop();
+    };
+    lazilyMigrateStatusCreatedAt = () => {
+        c.A.getStatus() !== d.clD.ONLINE &&
+            null == l._6.getSetting() &&
+            u.wc.updateAsync(
+                "status",
+                (e) => {
+                    e.statusCreatedAtMs = r.ol.create({ value: `${Date.now()}` });
+                },
+                u.Sb.INFREQUENT_USER_ACTION,
+            );
+    };
+    manageExpiringFocusMode = () => {
+        let e = l.Jr.getSetting();
+        if (null != e && "0" !== e) {
             let t = new Date(Number(e)).getTime() - new Date().getTime();
             t > 0
                 ? f.start(
                       t,
                       () => {
-                          (0, o.A)({
-                              nextStatus: _.clD.ONLINE,
-                              analyticsContext: { location: { object: _.ZSU.CUSTOM_STATUS_MANAGER } },
-                          });
+                          (0, o.ES)(!1);
                       },
                       !0,
                   )
-                : ((0, o.A)({
-                      nextStatus: _.clD.ONLINE,
-                      analyticsContext: { location: { object: _.ZSU.CUSTOM_STATUS_MANAGER } },
-                  }),
-                  f.stop());
+                : ((0, o.ES)(!1), f.stop());
         } else null != f && f.stop();
     };
-    lazilyMigrateStatusCreatedAt = () => {
-        d.A.getStatus() !== _.clD.ONLINE &&
-            null == u._6.getSetting() &&
-            c.wc.updateAsync(
-                "status",
-                (e) => {
-                    e.statusCreatedAtMs = i.ol.create({ value: `${Date.now()}` });
-                },
-                c.Sb.INFREQUENT_USER_ACTION,
-            );
-    };
-    manageExpiringFocusMode = () => {
-        let e = u.Jr.getSetting();
-        if (null != e && "0" !== e) {
-            let t = new Date(Number(e)).getTime() - new Date().getTime();
-            t > 0
-                ? p.start(
-                      t,
-                      () => {
-                          (0, l.ES)(!1);
-                      },
-                      !0,
-                  )
-                : ((0, l.ES)(!1), p.stop());
-        } else null != p && p.stop();
-    };
-    manageDoNotDisturbReminderPopover = () => {
-        if (null == this.previousStatus) {
-            this.previousStatus = d.A.getStatus();
-            return;
-        }
-        let e = d.A.getStatus();
-        this.previousStatus !== _.clD.DND && e === _.clD.DND && (0, c._N)(r.M.DO_NOT_DISTURB_REMINDER_POPOVER),
-            (this.previousStatus = e);
-    };
 }
-let g = new m();
+let m = new h();
