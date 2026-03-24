@@ -4942,6 +4942,7 @@ var no = (function (e) {
             (e.ACK_COMMUNITY_MESSAGES = "ack_community_messages"),
             (e.VOICE_PANEL_TAB_OPENED = "voice_panel_tab_opened"),
             (e.VOICE_PANEL_SCREENSHARE_BUTTON_TAPPED = "voice_panel_screenshare_button_tapped"),
+            (e.VOICE_PANEL_LAYOUT_DESYNC = "voice_panel_layout_desync"),
             (e.ANNOUNCEMENT_MESSAGE_LINK_CLICKED = "announcement_message_link_clicked"),
             (e.ANNOUNCEMENT_MESSAGE_VIEWED = "announcement_message_viewed"),
             (e.REDESIGN_NAV_BAR_CLICKED = "redesign_nav_bar_clicked"),
