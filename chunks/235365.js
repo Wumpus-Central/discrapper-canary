@@ -1,4 +1,4 @@
-a.d(t, { A: () => g, L: () => _ });
+a.d(t, { A: () => _, L: () => h });
 var n = a(627968),
     r = a(64700),
     s = a(503698),
@@ -8,53 +8,51 @@ var n = a(627968),
     o = a(688810),
     c = a(320118),
     u = a(954571),
-    m = a(570627),
-    p = a(128620),
-    f = a(652215),
-    b = a(49370),
-    A = a(985018),
-    h = a(609195);
-let _ = "orbs",
-    g = (e) => {
+    m = a(128620),
+    p = a(652215),
+    f = a(49370),
+    b = a(985018),
+    A = a(609195);
+let h = "orbs",
+    _ = (e) => {
         let { className: t, location: a } = e,
-            s = m.m.useConfig({ location: "PremiumTenureRewardsOrbsSection" }).enabled,
-            { analyticsLocations: g } = (0, o.Ay)(a),
-            R = r.useRef(null),
-            x = r.useRef(!1),
-            { passesGeneralUIInvariant: E, programReward: C } = (0, c.F)({
+            { analyticsLocations: s } = (0, o.Ay)(a),
+            _ = r.useRef(null),
+            g = r.useRef(!1),
+            { passesGeneralUIInvariant: R, programReward: x } = (0, c.F)({
                 location: "PremiumTenureRewardsOrbsSection",
             });
-        return E
+        return R
             ? (0, n.jsx)(o.f5, {
-                  value: g,
+                  value: s,
                   children: (0, n.jsx)(i.L, {
-                      innerRef: R,
+                      innerRef: _,
                       onChange: (e) => {
                           e &&
-                              !x.current &&
-                              ((x.current = !0),
-                              u.default.track(f.HAw.PREMIUM_TENURE_REWARDS_ORBS_SECTION_IMPRESSION, {
-                                  program_state: C?.program_current_state,
+                              !g.current &&
+                              ((g.current = !0),
+                              u.default.track(p.HAw.PREMIUM_TENURE_REWARDS_ORBS_SECTION_IMPRESSION, {
+                                  program_state: x?.program_current_state,
                               }));
                       },
                       threshold: 0.5,
                       children: (0, n.jsxs)("div", {
-                          ref: R,
-                          id: _,
-                          className: l()(h.uW, h.Uv, h.qr, t, { [h.J4]: s }),
+                          ref: _,
+                          id: h,
+                          className: l()(A.uW, A.Uv, A.qr, t),
                           children: [
                               (0, n.jsx)(d.DZT, {
-                                  variant: s ? "display-sm" : "heading-xxl/extrabold",
-                                  className: h.R_,
+                                  variant: "display-sm",
+                                  className: A.R_,
                                   style: { textAlign: "start" },
-                                  children: A.intl.string(b.default.EdGvBM),
+                                  children: b.intl.string(f.default.EdGvBM),
                               }),
                               (0, n.jsx)(d.EYj, {
-                                  variant: s ? "text-md/medium" : "text-lg/normal",
-                                  className: l()(h.VA, h.dO),
-                                  children: A.intl.string(b.default["2KoHRF"]),
+                                  variant: "text-md/medium",
+                                  className: l()(A.VA, A.dO),
+                                  children: b.intl.string(f.default["2KoHRF"]),
                               }),
-                              (0, n.jsx)(p.A, {}),
+                              (0, n.jsx)(m.A, {}),
                           ],
                       }),
                   }),

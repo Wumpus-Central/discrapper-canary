@@ -1,4 +1,4 @@
-n.d(t, { zj: () => T }), n(321073);
+n.d(t, { zj: () => C }), n(321073);
 var a = n(627968),
     i = n(554146),
     s = n(397927),
@@ -9,113 +9,105 @@ var a = n(627968),
     c = n(103738),
     u = n(745109),
     m = n(836602),
-    h = n(517235),
-    x = n(768908),
-    p = n(586685),
-    g = n(790076),
-    _ = n(224515),
-    f = n(682262),
-    v = n(531525),
-    b = n(652215),
-    j = n(985018);
-let A = () => {
+    h = n(768908),
+    x = n(586685),
+    p = n(790076),
+    g = n(224515),
+    _ = n(682262),
+    f = n(531525),
+    v = n(652215),
+    b = n(985018);
+let j = () => {
         let e = [];
         return e.push(i.M.DISPLAY_NAME_STYLES_NEW_BADGE), e;
     },
-    C = () => {
-        let e = A(),
+    A = () => {
+        let e = j(),
             [t] = (0, d.kn)(e);
-        return t === i.M.DISPLAY_NAME_STYLES_NEW_BADGE ? (0, a.jsx)(s.LpS, { text: j.intl.string(j.t.y2b7CA) }) : null;
+        return t === i.M.DISPLAY_NAME_STYLES_NEW_BADGE ? (0, a.jsx)(s.LpS, { text: b.intl.string(b.t.y2b7CA) }) : null;
     },
-    T = (e) => {
+    C = (e) => {
         let { unseenGiftCount: t, isOverlaySupported: n, paymentsBlocked: i, isEligibleForQuests: s } = e;
         return Object.freeze({
-            [v.H.PROFILE_CUSTOMIZATION]: {
-                section: b.nc_.PROFILE_CUSTOMIZATION,
+            [f.H.PROFILE_CUSTOMIZATION]: {
+                section: v.nc_.PROFILE_CUSTOMIZATION,
                 type: o.Py.WIDE,
-                searchableTitles: [j.intl.string(j.t["vi7f+q"])],
-                label: j.intl.string(j.t["vi7f+q"]),
-                ariaLabel: j.intl.string(j.t["vi7f+q"]),
+                searchableTitles: [b.intl.string(b.t["vi7f+q"])],
+                label: b.intl.string(b.t["vi7f+q"]),
+                ariaLabel: b.intl.string(b.t["vi7f+q"]),
                 element: u.A,
-                newIndicator: (0, a.jsx)(C, {}),
-                newIndicatorDismissibleContentTypes: [...A()],
+                newIndicator: (0, a.jsx)(A, {}),
+                newIndicatorDismissibleContentTypes: [...j()],
                 notice: { stores: [m.A], element: c.A },
                 onSettingsClose: () => {
-                    (0, l.F7)(), r.A.clearSubsection(b.nc_.PROFILE_CUSTOMIZATION);
+                    (0, l.F7)(), r.A.clearSubsection(v.nc_.PROFILE_CUSTOMIZATION);
                 },
             },
-            [v.H.PROFILE_DISPLAY_NAME]: {
-                section: b.nc_.PROFILE_CUSTOMIZATION,
-                searchableTitles: [j.intl.string(j.t["9AjdkD"])],
-                parent: v.H.PROFILE_CUSTOMIZATION,
+            [f.H.PROFILE_DISPLAY_NAME]: {
+                section: v.nc_.PROFILE_CUSTOMIZATION,
+                searchableTitles: [b.intl.string(b.t["9AjdkD"])],
+                parent: f.H.PROFILE_CUSTOMIZATION,
             },
-            [v.H.PROFILE_USER_PROFILE]: {
-                section: b.nc_.PROFILE_CUSTOMIZATION,
-                searchableTitles: [j.intl.string(j.t["2p07FR"]), j.intl.string(j.t["7vhiqk"])],
-                parent: v.H.PROFILE_CUSTOMIZATION,
+            [f.H.PROFILE_USER_PROFILE]: {
+                section: v.nc_.PROFILE_CUSTOMIZATION,
+                searchableTitles: [b.intl.string(b.t["2p07FR"]), b.intl.string(b.t["7vhiqk"])],
+                parent: f.H.PROFILE_CUSTOMIZATION,
             },
-            [v.H.PROFILE_SERVER_PROFILES]: {
-                section: b.nc_.PROFILE_CUSTOMIZATION,
-                searchableTitles: [j.intl.string(j.t.kPHroX)],
-                parent: v.H.PROFILE_CUSTOMIZATION,
+            [f.H.PROFILE_SERVER_PROFILES]: {
+                section: v.nc_.PROFILE_CUSTOMIZATION,
+                searchableTitles: [b.intl.string(b.t.kPHroX)],
+                parent: f.H.PROFILE_CUSTOMIZATION,
             },
-            [v.H.PREMIUM]: {
-                section: b.nc_.PREMIUM,
-                ariaLabel: j.intl.string(j.t.Ipxkog),
-                searchableTitles: [j.intl.string(j.t.Ipxkog)],
-                label: j.intl.string(j.t.Ipxkog),
-                element: h.A,
+            [f.H.GUILD_BOOSTING]: {
+                section: v.nc_.GUILD_BOOSTING,
+                searchableTitles: [b.intl.string(b.t["+CbP2v"])],
+                label: b.intl.string(b.t["+CbP2v"]),
+                element: g.A,
             },
-            [v.H.GUILD_BOOSTING]: {
-                section: b.nc_.GUILD_BOOSTING,
-                searchableTitles: [j.intl.string(j.t["+CbP2v"])],
-                label: j.intl.string(j.t["+CbP2v"]),
-                element: _.A,
-            },
-            [v.H.GIFT_INVENTORY]: {
-                section: b.nc_.INVENTORY,
-                searchableTitles: [j.intl.string(j.t["jcSP+g"])],
-                label: j.intl.string(j.t["jcSP+g"]),
-                element: p.Ay,
-                ariaLabel: j.intl.string(j.t["jcSP+g"]),
+            [f.H.GIFT_INVENTORY]: {
+                section: v.nc_.INVENTORY,
+                searchableTitles: [b.intl.string(b.t["jcSP+g"])],
+                label: b.intl.string(b.t["jcSP+g"]),
+                element: x.Ay,
+                ariaLabel: b.intl.string(b.t["jcSP+g"]),
                 badgeCount: t,
             },
-            [v.H.GIFT_CODE_REDEMPTION]: {
-                section: b.nc_.INVENTORY,
-                searchableTitles: [j.intl.string(j.t["il+VCo"])],
-                parent: v.H.GIFT_INVENTORY,
+            [f.H.GIFT_CODE_REDEMPTION]: {
+                section: v.nc_.INVENTORY,
+                searchableTitles: [b.intl.string(b.t["il+VCo"])],
+                parent: f.H.GIFT_INVENTORY,
                 predicate: () => !i,
             },
-            [v.H.GIFT_INVENTORY_QUESTS]: {
-                section: b.nc_.INVENTORY,
-                searchableTitles: [j.intl.string(j.t.JALI2K)],
-                parent: v.H.GIFT_INVENTORY,
+            [f.H.GIFT_INVENTORY_QUESTS]: {
+                section: v.nc_.INVENTORY,
+                searchableTitles: [b.intl.string(b.t.JALI2K)],
+                parent: f.H.GIFT_INVENTORY,
                 predicate: () => s,
             },
-            [v.H.GIFT_INVENTORY_LIST]: {
-                section: b.nc_.INVENTORY,
-                searchableTitles: [j.intl.string(j.t["9KeUbY"])],
-                parent: v.H.GIFT_INVENTORY,
+            [f.H.GIFT_INVENTORY_LIST]: {
+                section: v.nc_.INVENTORY,
+                searchableTitles: [b.intl.string(b.t["9KeUbY"])],
+                parent: f.H.GIFT_INVENTORY,
                 predicate: () => !i,
             },
-            [v.H.GIFT_BLOCKED_PAYMENTS]: {
-                section: b.nc_.INVENTORY,
-                searchableTitles: [j.intl.string(j.t.vwMEHS)],
-                parent: v.H.GIFT_INVENTORY,
+            [f.H.GIFT_BLOCKED_PAYMENTS]: {
+                section: v.nc_.INVENTORY,
+                searchableTitles: [b.intl.string(b.t.vwMEHS)],
+                parent: f.H.GIFT_INVENTORY,
                 predicate: () => i,
             },
-            [v.H.REGISTERED_GAMES]: {
-                section: b.nc_.REGISTERED_GAMES,
-                searchableTitles: [j.intl.string(j.t.AVDyEj)],
-                label: j.intl.string(j.t.AVDyEj),
-                element: x.Ay,
-                predicate: () => (0, f.Pi)(),
+            [f.H.REGISTERED_GAMES]: {
+                section: v.nc_.REGISTERED_GAMES,
+                searchableTitles: [b.intl.string(b.t.AVDyEj)],
+                label: b.intl.string(b.t.AVDyEj),
+                element: h.Ay,
+                predicate: () => (0, _.Pi)(),
             },
-            [v.H.OVERLAY]: {
-                section: b.nc_.OVERLAY,
-                searchableTitles: [j.intl.string(j.t["9cb1Uz"]), j.intl.string(j.t.HcoRu0)],
-                label: j.intl.string(j.t["9cb1Uz"]),
-                element: g.Ay,
+            [f.H.OVERLAY]: {
+                section: v.nc_.OVERLAY,
+                searchableTitles: [b.intl.string(b.t["9cb1Uz"]), b.intl.string(b.t.HcoRu0)],
+                label: b.intl.string(b.t["9cb1Uz"]),
+                element: p.Ay,
                 predicate: () => n,
             },
         });

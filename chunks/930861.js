@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { _J: () => _, kF: () => h, wL: () => m });
+n.d(t, { kF: () => h, wL: () => m });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(615300),
     l = n(421380),
     u = n(235986),
@@ -20,7 +20,7 @@ class h extends i.PureComponent {
         let { className: e, shineSize: t, shinePaused: n, ...i } = this.props;
         return (0, r.jsx)(o.A.div, {
             ...i,
-            className: s()(d.dj, e, { [d.EM]: n }),
+            className: a()(d.dj, e, { [d.EM]: n }),
             children: (0, r.jsx)(u.A, {
                 align: u.A.Align.CENTER,
                 justify: u.A.Justify.CENTER,
@@ -34,24 +34,24 @@ let m = (e) => {
     let {
             children: t,
             className: n,
-            disabled: a,
+            disabled: s,
             submitting: o,
             pauseAnimation: u,
             shineSize: _ = "default",
             shinePaused: f,
             buttonShineClassName: p,
             onlyShineOnHover: m,
-            ...g
+            ...E
         } = e,
-        E = i.useRef(null),
-        A = (0, c.M)(E),
-        I = !a && !o && !0 !== u && (!m || A);
+        g = i.useRef(null),
+        A = (0, c.M)(g),
+        I = !s && !o && !0 !== u && (!m || A);
     return (0, r.jsxs)(l.$n, {
         "data-migration-pending": !0,
-        buttonRef: E,
-        ...g,
-        className: s()(d.WE, n),
-        disabled: a,
+        buttonRef: g,
+        ...E,
+        className: a()(d.WE, n),
+        disabled: s,
         submitting: o,
         children: [
             t,
@@ -59,7 +59,7 @@ let m = (e) => {
                 ? (0, r.jsx)(h, {
                       "data-migration-pending": !0,
                       shinePaused: f,
-                      className: s()(d.Qr, m ? d.PK : void 0, p),
+                      className: a()(d.Qr, m ? d.PK : void 0, p),
                       shineSize: _,
                   })
                 : null,
