@@ -1,17 +1,8 @@
-n.d(t, { P: () => d });
+n.d(t, { P: () => l });
 var a = n(64700),
-    i = n(86379),
-    s = n(35587),
-    l = n(971276),
-    r = n(368631),
-    o = n(682262);
-function d() {
-    let e = (0, s.IO)().length,
-        t = (0, o.b_)(),
-        n = (0, i.Hp)(),
-        d = (0, l.s)();
-    return a.useMemo(
-        () => (0, r.z)({ unseenGiftCount: e, isOverlaySupported: t, paymentsBlocked: n, isEligibleForQuests: d }),
-        [d, t, n, e],
-    );
+    i = n(368631),
+    s = n(682262);
+function l() {
+    let e = (0, s.b_)();
+    return a.useMemo(() => (0, i.z)({ isOverlaySupported: e }), [e]);
 }

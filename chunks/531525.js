@@ -1,12 +1,7 @@
-n.d(t, { H: () => s });
-var i,
-    s =
-        (((i = {}).GUILD_BOOSTING = "GUILD_BOOSTING"),
-        (i.GIFT_INVENTORY = "GIFT_INVENTORY"),
-        (i.GIFT_CODE_REDEMPTION = "GIFT_CODE_REDEMPTION"),
-        (i.GIFT_INVENTORY_QUESTS = "GIFT_INVENTORY_QUESTS"),
-        (i.GIFT_INVENTORY_LIST = "GIFT_INVENTORY_LIST"),
-        (i.GIFT_BLOCKED_PAYMENTS = "GIFT_BLOCKED_PAYMENTS"),
-        (i.REGISTERED_GAMES = "REGISTERED_GAMES"),
-        (i.OVERLAY = "OVERLAY"),
-        i);
+n.d(t, { H: () => i });
+var a,
+    i =
+        (((a = {}).GUILD_BOOSTING = "GUILD_BOOSTING"),
+        (a.REGISTERED_GAMES = "REGISTERED_GAMES"),
+        (a.OVERLAY = "OVERLAY"),
+        a);
