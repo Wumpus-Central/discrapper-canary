@@ -24,14 +24,14 @@ var r = n(627968),
     v = n(392054),
     N = n(429913),
     C = n(954466),
-    b = n(354138),
-    R = n(111042),
-    O = n(767599),
+    R = n(354138),
+    O = n(111042),
+    b = n(767599),
     D = n(111162),
     L = n(403362),
     w = n(989837),
-    x = n(500049),
-    M = n(869186),
+    M = n(500049),
+    x = n(869186),
     P = n(676765),
     k = n(933840),
     U = n(735991),
@@ -45,8 +45,8 @@ var r = n(627968),
     W = n(995346);
 n(60809);
 var K = n(652215),
-    z = n(73510),
-    $ = n(985018),
+    $ = n(73510),
+    z = n(985018),
     q = n(244777);
 let Z = [],
     X = 4,
@@ -63,39 +63,39 @@ let Z = [],
 function ei(e) {
     let { context: t, entrypoint: n, searchQuery: s, setSearchQuery: a, setScroller: o, isScrollCloseToBottom: l } = e,
         u = (0, p.bG)([E.A], () => E.A.getIsEnabled(), []),
-        c = n === x.s4.TEXT && "channel" === t.type && null != t.channel && !t.channel.isPrivate(),
+        c = n === M.s4.TEXT && "channel" === t.type && null != t.channel && !t.channel.isPrivate(),
         d = (0, U.sw)(n),
         _ = !(0, U.sw)(n),
-        f = n === x.s4.TEXT,
+        f = n === M.s4.TEXT,
         [m, A] = ef(!0),
         [I, T] = ef(c),
         [S, y] = ef(d),
         [v, N] = ef(_),
         C = m && I && S && v,
-        b = (d || c) && !C,
-        R = _ && u;
+        R = (d || c) && !C,
+        O = _ && u;
     i.useEffect(() => {
         let e = "channel" === t.type ? t.channel?.guild_id : void 0;
         (0, g.LV)({ guildId: e, force: !0 });
     }, [t]),
         i.useEffect(() => {
-            n === x.s4.VOICE && g.LK();
+            n === M.s4.VOICE && g.LK();
         }, [n]);
-    let O = s.length > 0;
+    let b = s.length > 0;
     return (0, r.jsxs)("div", {
         className: q.kL,
         children: [
-            R ? (0, r.jsx)(es, {}) : null,
+            O ? (0, r.jsx)(es, {}) : null,
             (0, r.jsx)(ea, {
                 searchQuery: s,
                 setSearchQuery: a,
-                placeholder: f ? $.intl.string($.t.ziyFv2) : $.intl.string($.t["pw+r5b"]),
+                placeholder: f ? z.intl.string(z.t.ziyFv2) : z.intl.string(z.t["pw+r5b"]),
             }),
             (0, r.jsx)(h.HOs, {
                 ref: o,
                 className: q.Ph,
                 fade: !0,
-                children: O
+                children: b
                     ? (0, r.jsx)(W.A, { context: t, query: s, entrypoint: n, isScrollCloseToBottom: l })
                     : (0, r.jsxs)("div", {
                           children: [
@@ -105,11 +105,11 @@ function ei(e) {
                               _ && (0, r.jsx)(eu, { context: t, onEmptyState: N }),
                               C &&
                                   (0, r.jsx)(H.U, {
-                                      type: x.wg.HOME_EMPTY,
+                                      type: M.wg.HOME_EMPTY,
                                       textContent:
-                                          n === x.s4.TEXT ? $.intl.string($.t.iKZctW) : $.intl.string($.t.RL7Ncg),
+                                          n === M.s4.TEXT ? z.intl.string(z.t.iKZctW) : z.intl.string(z.t.RL7Ncg),
                                   }),
-                              b && (0, r.jsx)(Y.A, {}),
+                              R && (0, r.jsx)(Y.A, {}),
                           ],
                       }),
             }),
@@ -120,7 +120,7 @@ function es() {
     return (0, r.jsxs)("div", {
         className: q.G,
         children: [
-            (0, r.jsx)(h.Text, { className: q.TR, variant: "text-sm/normal", children: $.intl.string($.t.tZ3FNs) }),
+            (0, r.jsx)(h.Text, { className: q.TR, variant: "text-sm/normal", children: z.intl.string(z.t.tZ3FNs) }),
             (0, r.jsx)(T.F, { hideSearch: !0 }),
         ],
     });
@@ -205,8 +205,8 @@ function eo(e) {
 }
 function el(e) {
     let { context: t, entrypoint: n, onEmptyState: s } = e,
-        a = n === x.s4.VOICE,
-        { frecentApps: o, loading: l } = (0, M.k)({
+        a = n === M.s4.VOICE,
+        { frecentApps: o, loading: l } = (0, x.k)({
             context: t,
             onlyActivityApps: a,
             allowCommandFetch: !0,
@@ -217,23 +217,23 @@ function el(e) {
             for (let t of o) null != t.application && e.push({ application: t.application });
             return e;
         }, [o]),
-        c = $.intl.string($.t["s+UQpc"]),
+        c = z.intl.string(z.t["s+UQpc"]),
         d = c;
-    a && (d = $.intl.string($.t["2pFD8L"]));
+    a && (d = z.intl.string(z.t["2pFD8L"]));
     let { items: _, handleViewMore: f } = eE({
         title: d,
-        look: n === x.s4.VOICE ? F.r0.LARGE_BANNER : F.r0.ROW,
+        look: n === M.s4.VOICE ? F.r0.LARGE_BANNER : F.r0.ROW,
         items: u,
         limit: ee,
-        sectionName: x.yK.RECENT_APPS,
+        sectionName: M.yK.RECENT_APPS,
     });
     i.useEffect(() => {
         l ||
             (0 !== _.length &&
                 (0, S.zV)(K.HAw.APP_LAUNCHER_FRECENTS_SEEN, {
                     num: _.length,
-                    section_name: x.yK.RECENT_APPS,
-                    location: x.W8.HOME,
+                    section_name: M.yK.RECENT_APPS,
+                    location: M.W8.HOME,
                     source: n,
                 }));
     }, [_.length, n, l]);
@@ -260,8 +260,8 @@ function el(e) {
                                             context: t,
                                             application: i,
                                             look: F.r0.ICON,
-                                            location: x.W8.HOME,
-                                            sectionName: x.yK.RECENT_APPS,
+                                            location: M.W8.HOME,
+                                            sectionName: M.yK.RECENT_APPS,
                                             resultsPosition: n,
                                             isOneClickCTA: !0,
                                             fetchesApplication: !1,
@@ -274,8 +274,8 @@ function el(e) {
                                             context: t,
                                             application: i,
                                             look: F.r0.ICON,
-                                            location: x.W8.HOME,
-                                            sectionName: x.yK.RECENT_APPS,
+                                            location: M.W8.HOME,
+                                            sectionName: M.yK.RECENT_APPS,
                                             resultsPosition: n,
                                         },
                                         i.id,
@@ -292,7 +292,7 @@ function eu(e) {
     let s = (0, A.A)({ guildId: "channel" === t.type ? t.channel?.getGuildId() : void 0 }),
         a = F.r0.LARGE_BANNER,
         { trackSectionImpressionRef: o } = (0, B.A)({
-            sectionName: x.yK.ACTIVITIES,
+            sectionName: M.yK.ACTIVITIES,
             numItems: s.length,
             numVisibleItems: s.length,
         }),
@@ -309,7 +309,7 @@ function eu(e) {
                       ref: (e) => {
                           o.current = e;
                       },
-                      children: (0, r.jsx)(j.A, { title: $.intl.string($.t.shUONg) }),
+                      children: (0, r.jsx)(j.A, { title: z.intl.string(z.t.shUONg) }),
                   }),
                   (0, r.jsx)("div", {
                       className: q.a2,
@@ -322,7 +322,7 @@ function eu(e) {
                                   application: i,
                                   look: a,
                                   location: v.Oh.APP_LAUNCHER_HOME,
-                                  sectionName: x.yK.ACTIVITIES,
+                                  sectionName: M.yK.ACTIVITIES,
                                   resultsPosition: n,
                                   sectionOverallPosition: 0,
                                   isOneClickCTA: !l,
@@ -337,10 +337,10 @@ function eu(e) {
 }
 function ec(e) {
     let { context: t, onEmptyState: n } = e,
-        s = x.yK.APPS_IN_THIS_SERVER,
+        s = M.yK.APPS_IN_THIS_SERVER,
         { appsInThisServer: a, isLoading: o } = (0, P.A)({ context: t }),
         { items: l, handleViewMore: u } = eE({
-            title: $.intl.string($.t.KfkuGc),
+            title: z.intl.string(z.t.KfkuGc),
             look: F.r0.ROW,
             items: a,
             limit: X,
@@ -360,7 +360,7 @@ function ec(e) {
                           c.current = e;
                       },
                       children: (0, r.jsx)(j.A, {
-                          title: $.intl.string($.t.KfkuGc),
+                          title: z.intl.string(z.t.KfkuGc),
                           buttonType: j.A.buttonTypes.VIEW_MORE,
                           onClickViewButton: u,
                       }),
@@ -394,7 +394,7 @@ function ed(e) {
     let { context: t, entrypoint: n, onEmptyState: s } = e,
         { fetchState: a, recommendationsSections: o, isInstallOnDemand: l } = eh({ context: t, entrypoint: n }),
         u = em({ context: t, recommendationsSections: o }),
-        c = a === R.e.FETCHING,
+        c = a === O.e.FETCHING,
         d = !c && 0 === o.length;
     return (i.useEffect(() => {
         s(d);
@@ -521,7 +521,7 @@ function e_(e) {
                             showsPromoted: u,
                         } = e;
                     return (
-                        null != s && null != a && (i = (0, O.DH)({ itemId: s, hash: a, containerWidth: 500 })),
+                        null != s && null != a && (i = (0, b.DH)({ itemId: s, hash: a, containerWidth: 500 })),
                         (0, r.jsx)(
                             F.Gt,
                             {
@@ -557,25 +557,25 @@ function ef(e) {
 }
 function ep() {
     let e = (0, p.bG)([D.default], () => D.default.onlyShowPreviewAppCollections),
-        t = C.A.getCurrentConfig({ location: "App Launcher Home (Web)" }, { autoTrackExposure: !1 }).enabled;
+        t = C.A.getConfig({ location: "App Launcher Home (Web)" }).enabled;
     return e ? o.W.PREVIEW : t ? o.W.NON_STAFF_PREVIEW : o.W.ACTIVE;
 }
 function eh(e) {
     let { context: t, entrypoint: n } = e,
         r = ep();
     i.useEffect(() => {
-        (0, b.An)({ surface: er, activeState: r });
+        (0, R.An)({ surface: er, activeState: r });
     }, [r]);
     let { sectionDescriptors: s } = y.cu({
             context: t,
             filters: { commandTypes: [m.kc.CHAT] },
-            options: { placeholderCount: 0, limit: z.Hi, includeFrecency: !0 },
+            options: { placeholderCount: 0, limit: $.Hi, includeFrecency: !0 },
             allowFetch: !0,
         }),
         a = i.useCallback((e) => null == s.find((t) => t.id === e.id), [s]),
-        o = (0, p.bG)([R.A], () => R.A.getFetchState({ surface: er, activeState: r })),
-        l = (0, p.bG)([R.A], () => R.A.getCollections({ surface: er, activeState: r })),
-        u = n === x.s4.VOICE;
+        o = (0, p.bG)([O.A], () => O.A.getFetchState({ surface: er, activeState: r })),
+        l = (0, p.bG)([O.A], () => O.A.getCollections({ surface: er, activeState: r })),
+        u = n === M.s4.VOICE;
     return {
         fetchState: o,
         recommendationsSections: i.useMemo(() => (u ? (0, U.hX)(l) : l), [l, u]),

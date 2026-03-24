@@ -1,15 +1,8 @@
 "use strict";
 n.d(t, { A: () => r });
-let r = (0, n(600975).C)({
+let r = (0, n(945810).mj)({
     kind: "user",
-    id: "2025-01_allow_nonstaff_to_preview_app_collections",
-    label: "Allow Non-Staff to Preview App Collections",
+    name: "2025-01-allow-nonstaff-to-preview-app-collections",
     defaultConfig: { enabled: !1 },
-    treatments: [
-        {
-            id: 1,
-            label: 'In App Launcher in Text, enable seeing only "NON_STAFF_PREVIEW" app collections',
-            config: { enabled: !0 },
-        },
-    ],
+    variations: { 1: { enabled: !0 } },
 });
