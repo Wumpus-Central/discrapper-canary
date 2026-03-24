@@ -1,14 +1,15 @@
 "use strict";
 n.d(t, {
     DK: () => U,
-    DP: () => j,
-    Lw: () => H,
+    DP: () => W,
+    Lw: () => Y,
     U5: () => x,
     _J: () => P,
-    m0: () => B,
+    de: () => V,
+    m0: () => j,
     mT: () => k,
     sw: () => M,
-    tC: () => Y,
+    tC: () => K,
     wP: () => G,
 });
 var r = n(627968),
@@ -238,6 +239,26 @@ function F(e) {
     });
 }
 function V(e) {
+    let { overrideRenewalDate: t, currentInvoice: n, renewalInvoice: r, isSubscriptionUpdate: i } = e;
+    return null != t
+        ? t
+        : null != n
+          ? n.subscriptionPeriodEnd
+          : i
+            ? r.subscriptionPeriodStart
+            : r.subscriptionPeriodEnd;
+}
+function B(e) {
+    let { overrideRenewalDate: t, proratedInvoice: n, renewalInvoice: r, isUpdate: i } = e;
+    return null != t
+        ? t
+        : i
+          ? null != n
+              ? n.subscriptionPeriodEnd
+              : r.subscriptionPeriodStart
+          : r.subscriptionPeriodEnd;
+}
+function H(e) {
     let {
             proratedInvoice: t,
             renewalInvoice: n,
@@ -266,20 +287,13 @@ function V(e) {
     return (0, r.jsx)(r.Fragment, {
         children: D.intl.format(d, {
             rate: (0, T.CE)((0, T.$g)(n.subtotal, n.currency), u, c),
-            renewalDate:
-                null != a
-                    ? a
-                    : s
-                      ? null != t
-                          ? t.subscriptionPeriodEnd
-                          : n.subscriptionPeriodStart
-                      : n.subscriptionPeriodEnd,
+            renewalDate: B({ overrideRenewalDate: a, proratedInvoice: t, renewalInvoice: n, isUpdate: s }),
             contactLink: b.X7G.CONTACT,
             helpdeskArticle: A.A.getArticleURL(b.MVz.BILLING),
         }),
     });
 }
-function B(e) {
+function j(e) {
     let {
             premiumSubscription: t,
             proratedInvoice: n,
@@ -314,7 +328,7 @@ function B(e) {
             c
                 ? null
                 : (0, r.jsx)(N.X0, {
-                      children: (0, r.jsx)(V, {
+                      children: (0, r.jsx)(H, {
                           proratedInvoice: n,
                           renewalInvoice: s,
                           isTrial: l,
@@ -343,20 +357,20 @@ function B(e) {
         ],
     });
 }
-let H = (e, t) => {
+let Y = (e, t) => {
     let { isCustomGift: n, isPrepaidPaymentSource: r } = t;
     return n
         ? (0, I.D8)(e.interval, !0, void 0, void 0, !0, (0, I.m6)(e.id))
         : D.intl.formatToPlainString(D.t.LQLxkW, { planName: (0, I.Mn)(e.id, !1, r) });
 };
-function j(e) {
+function W(e) {
     let { plan: t, className: n, isPrepaidPaymentSource: i = !1, isCustomGift: s = !1, invoicePreview: a } = e,
         { tax: o, taxInclusive: l, currency: u } = a,
         c = a.total,
         _ = c - o,
         f = (0, T.$g)(_, u),
         p = (0, T.$g)(c, u),
-        h = H(t, { isCustomGift: s, isPrepaidPaymentSource: i });
+        h = Y(t, { isCustomGift: s, isPrepaidPaymentSource: i });
     return (0, r.jsxs)("div", {
         className: n,
         children: [
@@ -381,7 +395,7 @@ function j(e) {
         ],
     });
 }
-function Y(e) {
+function K(e) {
     let t,
         { invoice: n, plan: i } = e,
         s = (0, y.Z)(n.invoiceItems).find((e) => e.subscriptionPlanId === i.id);

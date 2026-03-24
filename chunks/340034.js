@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { ID: () => C, PI: () => L, W9: () => R, XH: () => O, hP: () => w, l$: () => D, rk: () => N });
+n.d(t, { ID: () => R, PI: () => w, W9: () => O, XH: () => b, hP: () => M, l$: () => L, rk: () => C });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -11,24 +11,25 @@ var r = n(627968),
     d = n(270537),
     _ = n(156962),
     f = n(446929),
-    p = n(367921),
-    h = n(299301),
-    m = n(371794),
-    E = n(156312),
-    g = n(908419),
-    A = n(888751),
-    I = n(652215),
-    T = n(788868),
-    S = n(985018),
-    y = n(756366),
-    v = n(772992);
-let N = (e) => {
+    p = n(692440),
+    h = n(367921),
+    m = n(299301),
+    E = n(371794),
+    g = n(156312),
+    A = n(908419),
+    I = n(888751),
+    T = n(652215),
+    S = n(788868),
+    y = n(985018),
+    v = n(756366),
+    N = n(772992);
+let C = (e) => {
         let { className: t, currencies: n, onChange: i, selectedCurrency: s, ...o } = e;
         return (0, r.jsx)(l.f, {
             currencies: n,
-            className: a()(v.p2, t),
+            className: a()(N.p2, t),
             children: (0, r.jsx)(l.A, {
-                label: S.intl.string(S.t["/AAR02"]),
+                label: y.intl.string(y.t["/AAR02"]),
                 selectedCurrency: s,
                 currencies: n,
                 onChange: i,
@@ -36,11 +37,11 @@ let N = (e) => {
             }),
         });
     },
-    C = (e) => {
-        let { label: t = S.intl.string(y.default.eoXh7B), lineItems: n, currency: i } = e;
+    R = (e) => {
+        let { label: t = y.intl.string(v.default.eoXh7B), lineItems: n, currency: i } = e;
         return (0, r.jsx)(d.Vm, { label: t, lineItems: n, currency: i });
     },
-    R = (e) => {
+    O = (e) => {
         let {
                 invoiceSummaryTypeWithPreview: t,
                 subscriptionPlan: n,
@@ -51,18 +52,18 @@ let N = (e) => {
             { invoicePreview: o } = t,
             l = [];
         l =
-            t.type === h.N$.PREMIUM_GIFT
-                ? (0, A.fk)(o, { isCustomGift: a, isPrepaidPaymentSource: s, subscriptionPlan: n })
-                : (0, A.IY)(o, {
+            t.type === m.N$.PREMIUM_GIFT
+                ? (0, I.fk)(o, { isCustomGift: a, isPrepaidPaymentSource: s, subscriptionPlan: n })
+                : (0, I.IY)(o, {
                       isPrepaidPaymentSource: s,
                       invoiceSummaryType: t.type,
                       subscriptionPlan: n,
                       subscriptionTrial: i,
                   }).lineItems;
         let c = (0, u.lp)(o, { manualLineItems: l, includeTaxLineItem: !0 });
-        return (0, r.jsx)(C, { label: S.intl.string(y.default.eoXh7B), lineItems: c, currency: o.currency });
+        return (0, r.jsx)(R, { label: y.intl.string(v.default.eoXh7B), lineItems: c, currency: o.currency });
     },
-    O = (e) => {
+    b = (e) => {
         let {
                 selectedPlanId: t,
                 priceOptions: n,
@@ -87,10 +88,10 @@ let N = (e) => {
             {
                 selectedPlan: E,
                 selectedPlanPrice: g,
-                isPrepaid: I,
-                shouldShowHRKEuroWarning: S,
+                isPrepaid: A,
+                shouldShowHRKEuroWarning: T,
                 shouldShowTotalInSubscriptionFlow: y,
-                shouldShowUpdatedPaymentModal: N,
+                shouldShowUpdatedPaymentModal: v,
                 userTrialOffer: C,
                 trialPeriodCopy: R,
                 isEligibleForTrial: O,
@@ -120,7 +121,7 @@ let N = (e) => {
                 discountOffer: H,
                 discountAmountOff: j,
             } = (0, f.Rx)(m),
-            Y = i.useMemo(() => (s.length > 0 ? T.hd[s[0]].premiumType : void 0), [s]),
+            Y = i.useMemo(() => (s.length > 0 ? S.hd[s[0]].premiumType : void 0), [s]),
             W = i.useCallback(
                 (e) => {
                     P(e.value);
@@ -128,10 +129,10 @@ let N = (e) => {
                 [P],
             ),
             K = i.useMemo(() => {
-                let e = null != H && H.discount.user_usage_limit_interval === T.Ff.MONTH;
+                let e = null != H && H.discount.user_usage_limit_interval === S.Ff.MONTH;
                 return s.map((t) => {
                     let { isCurrentPlan: n, disabled: r } = (0, f.cD)(k, t),
-                        i = (0, A.Rs)(k, {
+                        i = (0, I.Rs)(k, {
                             planId: t,
                             isEligibleForDiscount: V,
                             isCurrentPlan: n,
@@ -166,7 +167,7 @@ let N = (e) => {
                           (0, r.jsx)(o.EYj, {
                               variant: "text-md/medium",
                               color: "text-subtle",
-                              className: v.ST,
+                              className: N.ST,
                               children: M,
                           }),
                       (0, r.jsx)(c.me, {
@@ -180,25 +181,25 @@ let N = (e) => {
                           ? (0, f.LR)({
                                 selectedPlan: E,
                                 selectedPlanPrice: g,
-                                isPrepaid: I,
-                                shouldShowHRKEuroWarning: S,
-                                shouldShowUpdatedPaymentModal: N,
+                                isPrepaid: A,
+                                shouldShowHRKEuroWarning: T,
+                                shouldShowUpdatedPaymentModal: v,
                                 showTotal: p,
                                 shouldShowTotalInSubscriptionFlow: y,
-                                previewTotalSectionClassName: v.$r,
+                                previewTotalSectionClassName: N.$r,
                             })
                           : null,
                   ],
               });
     },
-    b = (e) => {
+    D = (e) => {
         let { fractionalPremiumInfo: t, isEligibleForTrial: n, trialPeriodCopy: r, subscriptionPeriodEnd: i } = e,
             s = n ? { variant: _.uA.TRIAL, trialPeriod: r, trialEnd: i } : {};
         return { fractionalPremiumBannerMessage: (0, _.NQ)({ fractionalPremiumInfo: t, ...s }) };
     },
-    D = (e) => {
+    L = (e) => {
         let { fractionalPremiumInfo: t, isEligibleForTrial: n, trialPeriodCopy: i, subscriptionPeriodEnd: s } = e,
-            { fractionalPremiumBannerMessage: a } = b({
+            { fractionalPremiumBannerMessage: a } = D({
                 fractionalPremiumInfo: t,
                 isEligibleForTrial: n,
                 trialPeriodCopy: i,
@@ -206,7 +207,7 @@ let N = (e) => {
             });
         return null != a && "" !== a ? (0, r.jsx)(o.wx6, { type: "info", children: a }) : null;
     };
-function L(e) {
+function w(e) {
     let {
             planGroup: t,
             isTrial: n,
@@ -215,48 +216,54 @@ function L(e) {
             paymentSourceType: a,
             activeSubscription: o,
             invoiceSummaryTypeWithPreview: l,
-            hideLegalContent: u,
+            overrideRenewalDate: u,
+            hideLegalContent: d,
         } = e,
-        { immediateDelivery: d } = (0, g.U)(),
-        { discountOffer: _ } = (0, E.P5)();
-    if (l.type === h.N$.LOADING) return null;
-    let { invoicePreview: f } = l,
-        m = ("renewalInvoicePreview" in l ? l.renewalInvoicePreview : null) ?? f,
-        T = m.invoiceItems.find((e) => e.subscriptionPlanId === i.id),
-        S = null != T ? (0, A.Re)(T, _).amount : m.subtotal;
-    if (u) return null;
-    let y = {
-        purchaseButtonText: (0, p.Ro)({
-            productLine: I.EZt.PREMIUM,
-            purchaseType: I.VVm.SUBSCRIPTION,
+        { immediateDelivery: _ } = (0, A.U)(),
+        { discountOffer: f } = (0, g.P5)();
+    if (l.type === m.N$.LOADING) return null;
+    let { invoicePreview: E } = l,
+        S = ("renewalInvoicePreview" in l ? l.renewalInvoicePreview : null) ?? E,
+        y = S.invoiceItems.find((e) => e.subscriptionPlanId === i.id),
+        v = null != y ? (0, I.Re)(y, f).amount : S.subtotal;
+    if (d) return null;
+    let N = {
+        purchaseButtonText: (0, h.Ro)({
+            productLine: T.EZt.PREMIUM,
+            purchaseType: T.VVm.SUBSCRIPTION,
             plan: i,
             premiumSubscription: o,
             isGift: s,
             planGroup: t,
             isPrepaidPaymentSource: !1,
         }),
-        totalDue: f.total,
-        renewalPrice: S,
-        currency: f.currency,
+        totalDue: E.total,
+        renewalPrice: v,
+        currency: E.currency,
         interval: i.interval,
         intervalCount: i.intervalCount,
-        startDate: f.subscriptionPeriodEnd,
+        startDate: (0, p.de)({
+            overrideRenewalDate: u,
+            currentInvoice: E.id !== S.id ? E : void 0,
+            renewalInvoice: S,
+            isSubscriptionUpdate: null != o,
+        }),
     };
     return (0, r.jsx)(c._P, {
-        variant: { type: s ? c.I0.GiftNitro : n ? c.I0.SubscriptionTrial : c.I0.Subscription, ...y },
+        variant: { type: s ? c.I0.GiftNitro : n ? c.I0.SubscriptionTrial : c.I0.Subscription, ...N },
         paymentSourceType: a,
-        immediateDelivery: d,
+        immediateDelivery: _,
     });
 }
-function w(e) {
+function M(e) {
     let { productLine: t, premiumType: n, applicationId: i, thumbnail: s } = e;
-    return n === T.PremiumTypes.TIER_0
+    return n === S.PremiumTypes.TIER_0
         ? (0, r.jsx)(c.DH, {})
-        : n === T.PremiumTypes.TIER_2
+        : n === S.PremiumTypes.TIER_2
           ? (0, r.jsx)(c.JW, {})
           : null != i && null != s
-            ? (0, r.jsx)("img", { src: (0, m.YE)(i, s, 64), alt: "", className: v.gw })
-            : t === I.EZt.APPLICATION
+            ? (0, r.jsx)("img", { src: (0, E.YE)(i, s, 64), alt: "", className: N.gw })
+            : t === T.EZt.APPLICATION
               ? (0, r.jsx)(c.jw, {})
               : void 0;
 }

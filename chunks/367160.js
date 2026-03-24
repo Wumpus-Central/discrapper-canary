@@ -11,7 +11,7 @@ var r = n(627968),
     d = n(234419),
     _ = n(446929),
     f = n(815545),
-    p = n(494230),
+    p = n(271849),
     h = n(299301),
     m = n(156312),
     E = n(222707),
@@ -160,7 +160,10 @@ let v = (e) => {
         "renewalInvoicePreview" in ed &&
         null != ed.renewalInvoicePreview
     ) {
-        let e = (0, I.Gj)(ed.invoicePreview, ed.renewalInvoicePreview, eI, { discountOffer: x });
+        let e = (0, I.Gj)(ed.invoicePreview, ed.renewalInvoicePreview, eI, {
+            discountOffer: x,
+            isSubscriptionUpdate: null != en,
+        });
         eS = (0, r.jsx)(c._, { ...e });
     }
     let ey = q

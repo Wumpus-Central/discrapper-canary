@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { D7: () => _, W2: () => u, q1: () => f, rS: () => a });
+n.d(t, { D7: () => f, W2: () => u, q1: () => p, rS: () => a, uD: () => c });
 var r = n(945810),
     i = n(156312),
     s = n(120700),
@@ -20,14 +20,15 @@ let o = new Set([s.C.ORB_CHECKOUT, s.C.COLLECTIBLES_CHECKOUT, s.C.SLAYER_STOREFR
         defaultConfig: { enabled: !1, variation: 0 },
         variations: { 1: { enabled: !0, variation: 1 } },
     }),
-    c = [
+    c = (0, r.mj)({
+        name: "2026-02-unified-checkout-ui-otp-group-1",
+        kind: "user",
+        defaultConfig: { enabled: !1, variation: 0, enabledCheckoutFlows: new Set([]) },
+        variations: { 1: { enabled: !0, variation: 1, enabledCheckoutFlows: o } },
+    }),
+    d = [
         u,
-        (0, r.mj)({
-            name: "2026-02-unified-checkout-ui-otp-group-1",
-            kind: "user",
-            defaultConfig: { enabled: !1, variation: 0, enabledCheckoutFlows: new Set([]) },
-            variations: { 1: { enabled: !0, variation: 1, enabledCheckoutFlows: o } },
-        }),
+        c,
         (0, r.mj)({
             name: "2026-02-unified-checkout-ui-group-2",
             kind: "user",
@@ -35,25 +36,25 @@ let o = new Set([s.C.ORB_CHECKOUT, s.C.COLLECTIBLES_CHECKOUT, s.C.SLAYER_STOREFR
             variations: { 1: { enabled: !0, variation: 1, enabledCheckoutFlows: l } },
         }),
     ],
-    d = (e, t) =>
+    _ = (e, t) =>
         t.some(
             (t) =>
                 (!!t.enabled &&
                     (null == t.enabledCheckoutFlows || (null != e && t.enabledCheckoutFlows?.has(e) === !0))) ||
                 !1,
         ),
-    _ = (e) => {
+    f = (e) => {
         let { location: t } = e,
             { unifiedCheckoutFlow: n } = (0, i.P5)();
-        return d(
+        return _(
             n,
-            c.map((e) => e.useConfig({ location: t })),
+            d.map((e) => e.useConfig({ location: t })),
         );
     },
-    f = (e) => {
+    p = (e) => {
         let { location: t, unifiedCheckoutFlow: n } = e;
-        return d(
+        return _(
             n,
-            c.map((e) => e.getConfig({ location: t })),
+            d.map((e) => e.getConfig({ location: t })),
         );
     };

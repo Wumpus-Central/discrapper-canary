@@ -260,34 +260,31 @@ let R = (e, t) => {
                 ? arguments[3]
                 : { overrideRenewalDate: void 0, isSubscriptionUpdate: !1, discountOffer: null },
             a = (0, l.Q8)(t, e, { isSubscriptionUpdate: i }),
-            { intervalType: o, intervalCount: u } = (0, _.Ge)(t),
-            c = t.currency,
-            d = [];
+            { intervalType: u, intervalCount: c } = (0, _.Ge)(t),
+            d = t.currency,
+            f = [];
         for (let e of a) {
             let { subscriptionPlanId: t } = e,
                 { lineItem: r } = O(e, n, {
                     isPremiumBasePlanInvoiceItem: (0, _.xq)(t),
-                    intervalType: o,
-                    intervalCount: u,
+                    intervalType: u,
+                    intervalCount: c,
                     discountOffer: s,
-                    currency: c,
+                    currency: d,
                 });
-            d.push(r);
+            f.push(r);
         }
-        let f = r;
-        return (
-            null == f && (f = null != e ? e.subscriptionPeriodEnd : t.subscriptionPeriodStart),
-            {
-                lineItems: d,
-                intervalType: o,
-                intervalCount: u,
-                currency: c,
-                label: h.intl.string(m.default.GGn3pp),
-                totalLineItemValueSubText: h.intl.string(m.default.yvUaHi),
-                totalLineItemLabel: N(o, u),
-                totalLineItemLabelSubText: h.intl.format(m.default.MR4VnX, { renewalDate: f }),
-            }
-        );
+        let p = (0, o.de)({ overrideRenewalDate: r, currentInvoice: e, renewalInvoice: t, isSubscriptionUpdate: i });
+        return {
+            lineItems: f,
+            intervalType: u,
+            intervalCount: c,
+            currency: d,
+            label: h.intl.string(m.default.GGn3pp),
+            totalLineItemValueSubText: h.intl.string(m.default.yvUaHi),
+            totalLineItemLabel: N(u, c),
+            totalLineItemLabelSubText: h.intl.format(m.default.MR4VnX, { renewalDate: p }),
+        };
     },
     D = (e, t) => {
         let { isEligibleForTrial: n } = t;

@@ -127,18 +127,20 @@ function j(e) {
                 : B.intl.formatToPlainString(B.t["sBpy9/"], { planName: em.name });
     let eL = i.useRef(null),
         [ew, eM] = i.useState(null),
-        ex = i.useMemo(
+        [ex, eP] = i.useState(void 0),
+        ek = i.useMemo(
             () => ({
                 shouldUseUnifiedCheckoutUI: er,
                 unifiedSubscriptionDetailsNode: eL,
                 setUnifiedPlainNoticeText: eM,
+                setOverrideRenewalDate: eP,
             }),
             [er],
         ),
         {
-            content: eP,
-            isInvoiceBilledImmediately: ek,
-            ...eU
+            content: eU,
+            isInvoiceBilledImmediately: eG,
+            ...eF
         } = null != n
             ? (0, k.TD)(
                   { hasOpenInvoice: ee, showResumeSubscriptionView: eb, planId: W },
@@ -152,12 +154,12 @@ function j(e) {
                       onInvoiceError: q,
                       onRenewalInvoicePreview: eT,
                   },
-                  ex,
+                  ek,
               )
             : { content: null, isInvoiceBilledImmediately: !0, shouldRenderToUnifiedSubscriptionDetailsDirectly: !1 },
-        eG = n?.eligiblePaymentGateways,
-        eF = null != eG && eG.length > 0 && (ep === O.B || null === eh) && el ? M.fU.SELECT_PAYMENT_METHOD : void 0,
-        eV = i.useMemo(
+        eV = n?.eligiblePaymentGateways,
+        eB = null != eV && eV.length > 0 && (ep === O.B || null === eh) && el ? M.fU.SELECT_PAYMENT_METHOD : void 0,
+        eH = i.useMemo(
             () => ({
                 label: B.intl.string(B.t["/AAR02"]),
                 selectedCurrency: o.currency,
@@ -167,7 +169,7 @@ function j(e) {
             }),
             [Q, J, o, eR],
         ),
-        eB = (0, r.jsx)(p.A, {
+        ej = (0, r.jsx)(p.A, {
             label: B.intl.string(B.t["mmDvV+"]),
             paymentSources: ev,
             selectedPaymentSourceId: ep,
@@ -180,11 +182,12 @@ function j(e) {
             className: a()({ [H.E4]: eu }),
             shouldUseUnifiedCheckoutUI: er,
         }),
-        eH = null != n && (0, D.Ge)(n, W, X),
-        ej = eH && null != Z,
-        eY = er
+        eY = null != n && (0, D.Ge)(n, W, X),
+        eW = eY && null != Z,
+        eK = er
             ? null != ed && null != eI
                 ? (0, r.jsx)(y.PI, {
+                      overrideRenewalDate: ex,
                       planGroup: X,
                       activeSubscription: n,
                       isTrial: !1,
@@ -196,13 +199,13 @@ function j(e) {
                           invoicePreview: ed,
                           renewalInvoicePreview: eI,
                       },
-                      hideLegalContent: ej,
+                      hideLegalContent: eW,
                   })
                 : null
             : (0, r.jsx)(w.A, {
                   isActive: z,
                   ref: $,
-                  children: eH
+                  children: eY
                       ? (0, r.jsx)(k.vi, {
                             premiumSubscription: n,
                             newPlan: em,
@@ -234,40 +237,40 @@ function j(e) {
                             planGroup: X,
                         }),
               }),
-        eW = !eb && eO && !ec,
-        eK = i.useMemo(() => (eW ? (0, r.jsx)(T.P, { planSkuId: em.skuId }) : null), [eW, em.skuId]);
+        e$ = !eb && eO && !ec,
+        ez = i.useMemo(() => (e$ ? (0, r.jsx)(T.P, { planSkuId: em.skuId }) : null), [e$, em.skuId]);
     return er
         ? (0, r.jsx)(U.n, {
               disabled: eR,
               showFractionalPremiumBanner: eg,
               fractionalPremiumInfo: eA,
               isPremiumGroupPurchase: ec,
-              paymentRestrictionBannerType: eF,
+              paymentRestrictionBannerType: eB,
               invoiceError: Z,
               unifiedPlainNoticeText: ew,
               invoicePreview: ed,
-              invoicePreviewComponent: eP,
-              shouldShowPlanSelectAndPromoBanner: eW,
+              invoicePreviewComponent: eU,
+              shouldShowPlanSelectAndPromoBanner: e$,
               shouldRenderInvoicePreviewSubscriptionDetailsDirectly:
-                  eU.shouldRenderToUnifiedSubscriptionDetailsDirectly,
+                  eF.shouldRenderToUnifiedSubscriptionDetailsDirectly,
               newPlan: em,
               planId: W,
               priceOptions: o,
               premiumPlanOptions: eD,
               unifiedSubscriptionDetailsNode: eL,
-              isInvoiceBilledImmediately: ek,
-              paymentSelectContent: eB,
-              currencySelectComponent: (0, r.jsx)(y.rk, { ...eV }),
-              legalContent: eY,
+              isInvoiceBilledImmediately: eG,
+              paymentSelectContent: ej,
+              currencySelectComponent: (0, r.jsx)(y.rk, { ...eH }),
+              legalContent: eK,
           })
         : (0, r.jsxs)("div", {
               className: H.Du,
               children: [
-                  (0, r.jsx)(M.je, { paymentRestrictionBannerType: eF }),
-                  eW &&
+                  (0, r.jsx)(M.je, { paymentRestrictionBannerType: eB }),
+                  e$ &&
                       (0, r.jsxs)("div", {
                           children: [
-                              eK,
+                              ez,
                               (0, r.jsx)(x.$p, {
                                   disabled: eR,
                                   planOptions: eD,
@@ -288,10 +291,10 @@ function j(e) {
                               children: (0, r.jsx)(d.Text, { variant: "text-sm/medium", children: (0, S.Nn)() }),
                           }),
                       }),
-                  (0, r.jsx)(d.D0$, { label: t, children: eP }),
-                  (0, r.jsx)("div", { className: H.LC, children: eB }),
-                  (0, r.jsx)(_.f, { currencies: Q, className: H.p2, children: (0, r.jsx)(_.A, { ...eV }) }),
-                  eY,
+                  (0, r.jsx)(d.D0$, { label: t, children: eU }),
+                  (0, r.jsx)("div", { className: H.LC, children: ej }),
+                  (0, r.jsx)(_.f, { currencies: Q, className: H.p2, children: (0, r.jsx)(_.A, { ...eH }) }),
+                  eK,
               ],
           });
 }
