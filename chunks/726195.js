@@ -1,5 +1,6 @@
 e.exports = {
     KQ: "messagesPopoutWrap_e8b59c",
+    G6: "messagesPopoutWrapDefaultSize_e8b59c",
     wx: "header_e8b59c",
     gn: "titleContainer_e8b59c",
     qr: "footer_e8b59c",
