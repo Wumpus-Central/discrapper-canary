@@ -92,11 +92,16 @@ function S(e) {
         onHoverOrFocusChange: L,
         children: [
             (0, r.jsx)(p.A, { spec: R, onClick: G, isHoveringOrFocusing: D, label: F, icon: V }),
-            y &&
-                n === d.uS.WISHLIST &&
-                k.length > 0 &&
-                (0, r.jsx)(h.X, { spec: R, users: k, guildId: S ?? void 0, channelId: v ?? void 0 }),
-            (0, r.jsx)(f.A, { spec: R, sku: t, isCardHovered: D, location: "ContextualSocialLayerSkuItemCard" }),
+            (0, r.jsx)(f.A, {
+                spec: R,
+                sku: t,
+                isCardHovered: D,
+                location: "ContextualSocialLayerSkuItemCard",
+                replacedElement:
+                    y && n === d.uS.WISHLIST && k.length > 0
+                        ? (0, r.jsx)(h.X, { spec: R, users: k, guildId: S ?? void 0, channelId: v ?? void 0 })
+                        : null,
+            }),
         ],
     });
 }

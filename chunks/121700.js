@@ -16,70 +16,76 @@ function p(e) {
     return { top: e.iconInset, insetInlineEnd: e.iconInset };
 }
 function h(e) {
-    let { sku: t, location: n, onError: s, ...o } = e,
-        c = (0, i.bG)([u.default], () => u.default.getId()),
-        {
-            isWishlisted: d,
-            isBusy: _,
-            isFirstTimeWishlister: f,
-            handleToggle: p,
-        } = (0, l.G)({ userId: c, sku: t, location: n, onError: s });
-    return (0, r.jsx)(a._, {
-        skuId: t.id,
-        productName: t.name,
-        isWishlisted: d,
-        isBusy: _,
-        isFirstTimeWishlister: f,
-        onClick: p,
-        ...o,
-    });
-}
-function m(e) {
-    let { product: t, location: n, onError: s, ...l } = e,
+    let { spec: t, sku: n, location: s, onError: o, ...c } = e,
         d = (0, i.bG)([u.default], () => u.default.getId()),
         {
             isWishlisted: _,
-            isBusy: f,
-            isFirstTimeWishlister: p,
-            handleToggle: h,
-            specificProductOrVariant: m,
-            isPurchased: E,
-        } = (0, o.z)({ userId: d, product: t, location: n, onError: s });
-    return E && !_
-        ? null
-        : (0, r.jsx)(a._, {
-              skuId: m.skuId,
-              productName: m.name,
-              disabled: !(0, c.q)(m),
-              isWishlisted: _,
-              isBusy: f,
-              isFirstTimeWishlister: p,
-              onClick: h,
-              ...l,
+            isBusy: h,
+            isFirstTimeWishlister: m,
+            handleToggle: E,
+        } = (0, l.G)({ userId: d, sku: n, location: s, onError: o });
+    return (0, r.jsx)("div", {
+        className: f.U,
+        style: p(t),
+        children: (0, r.jsx)(a._, {
+            skuId: n.id,
+            productName: n.name,
+            size: t.wishlistButtonSize,
+            isWishlisted: _,
+            isBusy: h,
+            isFirstTimeWishlister: m,
+            onClick: E,
+            ...c,
+        }),
+    });
+}
+function m(e) {
+    let { spec: t, product: n, location: s, onError: l, replacedElement: d, ..._ } = e,
+        h = (0, i.bG)([u.default], () => u.default.getId()),
+        {
+            isWishlisted: m,
+            isBusy: E,
+            isFirstTimeWishlister: g,
+            handleToggle: A,
+            specificProductOrVariant: I,
+            isPurchased: T,
+        } = (0, o.z)({ userId: h, product: n, location: s, onError: l });
+    return T && !m
+        ? d
+        : (0, r.jsx)("div", {
+              className: f.U,
+              style: p(t),
+              children: (0, r.jsx)(a._, {
+                  skuId: I.skuId,
+                  productName: I.name,
+                  size: t.wishlistButtonSize,
+                  disabled: !(0, c.q)(I),
+                  isWishlisted: m,
+                  isBusy: E,
+                  isFirstTimeWishlister: g,
+                  onClick: A,
+                  ..._,
+              }),
           });
 }
 function E(e) {
-    let { sku: t, ...n } = e,
-        a = (0, i.bG)([s.A], () => s.A.getProduct(t.id));
-    return null == a ? null : (0, r.jsx)(m, { product: a, ...n });
+    let { sku: t, replacedElement: n, ...a } = e,
+        o = (0, i.bG)([s.A], () => s.A.getProduct(t.id));
+    return null == o ? n : (0, r.jsx)(m, { product: o, replacedElement: n, ...a });
 }
 function g(e) {
-    let { sku: t, isCardHovered: n, spec: i, ...s } = e;
-    if (!n) return null;
-    let a = null;
+    let { sku: t, isCardHovered: n, replacedElement: i, ...s } = e;
+    if (!n) return i;
     switch (t.productLine) {
         case _.EZt.SOCIAL_LAYER_GAME_ITEM:
-            a = (0, r.jsx)(h, { sku: t, size: i.wishlistButtonSize, ...s });
-            break;
+            return (0, r.jsx)(h, { sku: t, ...s });
         case _.EZt.COLLECTIBLES:
-            a = (0, r.jsx)(E, { sku: t, size: i.wishlistButtonSize, ...s });
-            break;
+            return (0, r.jsx)(E, { sku: t, replacedElement: i, ...s });
         default:
-            a = null;
+            return i;
     }
-    return null != a ? (0, r.jsx)("div", { className: f.U, style: p(i), children: a }) : null;
 }
 function A(e) {
-    let { skipExperiment: t = !1, location: n, ...i } = e;
-    return ((0, d.H)(n) || t) && (0, r.jsx)(g, { location: n, ...i });
+    let { skipExperiment: t = !1, location: n, replacedElement: i, ...s } = e;
+    return (0, d.H)(n) || t ? (0, r.jsx)(g, { location: n, replacedElement: i, ...s }) : i;
 }
