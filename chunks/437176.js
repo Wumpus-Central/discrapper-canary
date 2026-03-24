@@ -1,9 +1,4 @@
 e.exports = {
-    iE: "wrapper__5d00f",
-    Qx: "wrapperWithOldDiscoveryHeader__5d00f",
-    FG: "contentWrapper__5d00f",
-    B3: "contentWrapperLoading__5d00f",
-    Qs: "content__5d00f",
     Tv: "heroBackground__5d00f",
     Np: "backgroundOverlay__5d00f",
     LO: "heroAsset__5d00f",
@@ -11,9 +6,6 @@ e.exports = {
     jx: "heroAssetBlurred__5d00f",
     Co: "heroAssetBlurredA__5d00f",
     hw: "heroAssetBlurredB__5d00f",
-    yp: "contentBody__5d00f",
     wm: "logo__5d00f",
-    DD: "title__5d00f",
-    VA: "subtitle__5d00f",
     yu: "sponsoredTag__5d00f",
 };
