@@ -56,8 +56,8 @@ let v = function (e) {
         k = i.useRef(null),
         U = i.useRef(v),
         G = (0, h.K9)(s.config);
-    return (
-        i.useEffect(() => {
+    if (
+        (i.useEffect(() => {
             if (null != k.current) {
                 if (!M.isAnimated || w) {
                     (k.current.currentTime = 0), k.current.pause();
@@ -70,77 +70,84 @@ let v = function (e) {
             }
         }, [v, M, w]),
         (0, I.A)(k, T.rE.QUEST_HOME_DESKTOP),
-        (t = G
-            ? (0, r.jsx)(m.Sn, {
-                  id: "QuestRewardTile_rewardTileNitro",
-                  children: (e) => (0, r.jsx)(g.A, { ref: e, className: y.eB }),
-              })
-            : O
-              ? (0, r.jsx)(E.N, {
-                    showVideo: v,
-                    imageAsset:
-                        null != x
-                            ? {
-                                  asset: x,
-                                  assetId: "QuestRewardTile_rewardTileStatic",
-                                  className: y.XM,
-                                  alt: S.intl.string(S.t.UMclVN),
-                              }
-                            : void 0,
-                    videoAsset: { asset: M, assetId: "QuestRewardTile_rewardTileAnimated", className: a()(y.eB, y.tv) },
-                    onLoadComplete: e.onLoadComplete,
-                })
-              : M.isAnimated
-                ? (0, r.jsx)(m.Sn, {
-                      id: "QuestRewardTile_rewardTileAnimated",
-                      children: (t) =>
-                          (0, r.jsx)(d.A, {
-                              ref: (e) => {
-                                  (t.current = e), (k.current = e);
-                              },
-                              autoPlay: !w && v,
-                              loop: !0,
-                              muted: !0,
-                              playsInline: !0,
-                              className: y.eB,
-                              controls: !1,
-                              onProgress: e.onLoadComplete,
-                              children: (0, r.jsx)("source", { src: M.url, type: M.mimetype ?? void 0 }),
-                          }),
-                  })
-                : (0, r.jsx)(m.Sn, {
-                      id: "QuestRewardTile_rewardTileStatic",
-                      children: (t) =>
-                          (0, r.jsx)("img", {
-                              ref: t,
-                              alt: (0, h.mq)(s.config),
-                              className: a()(y.eB, y.Qz),
-                              src: M.url,
-                              onLoad: e.onLoadComplete,
-                          }),
-                  })),
-        null == N
-            ? (0, r.jsx)("div", { className: a()(y.al, n, { [y.Ij]: b }), style: D, children: t })
-            : (0, r.jsxs)(u.DUT, {
-                  className: a()(y.a$, y.al, y.Yi, n, { [y.Ij]: b }),
-                  onClick: P,
-                  style: D,
-                  children: [
-                      t,
-                      "text" === N &&
-                          (0, r.jsx)(u.Text, {
-                              color: "always-white",
-                              variant: "text-xs/normal",
-                              className: y.n_,
-                              style: { fontSize: C },
-                              children: S.intl.format(S.t.DYAleT, {}),
-                          }),
-                      "icon" === N &&
-                          (0, r.jsx)("div", {
-                              className: y.n_,
-                              children: (0, r.jsx)(u.mir, { size: "xxs", color: u.LU0.colors.WHITE.css }),
-                          }),
-                  ],
-              })
-    );
+        G)
+    )
+        t = (0, r.jsx)(m.Sn, {
+            id: "QuestRewardTile_rewardTileNitro",
+            children: (e) => (0, r.jsx)(g.A, { ref: e, className: y.eB }),
+        });
+    else if (O)
+        t = (0, r.jsx)(E.N, {
+            showVideo: v,
+            imageAsset:
+                null != x
+                    ? {
+                          asset: x,
+                          assetId: "QuestRewardTile_rewardTileStatic",
+                          className: y.XM,
+                          alt: S.intl.string(S.t.UMclVN),
+                      }
+                    : void 0,
+            videoAsset: { asset: M, assetId: "QuestRewardTile_rewardTileAnimated", className: a()(y.eB, y.WY) },
+            onLoadComplete: e.onLoadComplete,
+        });
+    else if (M.isAnimated) {
+        let n = (0, _.WV)(M.url);
+        t = (0, r.jsx)(m.Sn, {
+            id: "QuestRewardTile_rewardTileAnimated",
+            children: (t) =>
+                (0, r.jsxs)(r.Fragment, {
+                    children: [
+                        null != n && (0, r.jsx)("img", { alt: S.intl.string(S.t.UMclVN), className: y.XM, src: n }),
+                        (0, r.jsx)(d.A, {
+                            ref: (e) => {
+                                (t.current = e), (k.current = e);
+                            },
+                            autoPlay: !w && v,
+                            loop: !0,
+                            muted: !0,
+                            playsInline: !0,
+                            className: a()(y.eB, y.WY),
+                            controls: !1,
+                            onProgress: e.onLoadComplete,
+                            children: (0, r.jsx)("source", { src: M.url, type: M.mimetype ?? void 0 }),
+                        }),
+                    ],
+                }),
+        });
+    } else
+        t = (0, r.jsx)(m.Sn, {
+            id: "QuestRewardTile_rewardTileStatic",
+            children: (t) =>
+                (0, r.jsx)("img", {
+                    ref: t,
+                    alt: (0, h.mq)(s.config),
+                    className: a()(y.eB, y.Qz),
+                    src: M.url,
+                    onLoad: e.onLoadComplete,
+                }),
+        });
+    return null == N
+        ? (0, r.jsx)("div", { className: a()(y.al, n, { [y.Ij]: b }), style: D, children: t })
+        : (0, r.jsxs)(u.DUT, {
+              className: a()(y.a$, y.al, y.Yi, n, { [y.Ij]: b }),
+              onClick: P,
+              style: D,
+              children: [
+                  t,
+                  "text" === N &&
+                      (0, r.jsx)(u.Text, {
+                          color: "always-white",
+                          variant: "text-xs/normal",
+                          className: y.n_,
+                          style: { fontSize: C },
+                          children: S.intl.format(S.t.DYAleT, {}),
+                      }),
+                  "icon" === N &&
+                      (0, r.jsx)("div", {
+                          className: y.n_,
+                          children: (0, r.jsx)(u.mir, { size: "xxs", color: u.LU0.colors.WHITE.css }),
+                      }),
+              ],
+          });
 };

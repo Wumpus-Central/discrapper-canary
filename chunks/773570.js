@@ -5,7 +5,7 @@ e.exports = {
     Yi: "rewardHighlight__28141",
     a$: "questRewardTileInteractive__28141",
     eB: "questRewardTileAsset__28141",
-    tv: "questRewardTileAssetLazyVideo__28141",
+    WY: "questRewardTileAbsolutePosition__28141",
     Qz: "questRewardTileAssetStatic__28141",
     n_: "questRewardTileDetailsLearnMore__28141",
     kF: "Shine__28141",
