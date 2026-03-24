@@ -11,7 +11,7 @@ function d() {
         n = (0, i.Hp)(),
         d = (0, l.s)();
     return a.useMemo(
-        () => (0, r.zj)({ unseenGiftCount: e, isOverlaySupported: t, paymentsBlocked: n, isEligibleForQuests: d }),
+        () => (0, r.z)({ unseenGiftCount: e, isOverlaySupported: t, paymentsBlocked: n, isEligibleForQuests: d }),
         [d, t, n, e],
     );
 }
