@@ -1,19 +1,16 @@
 "use strict";
-n.d(t, { Lj: () => _, VS: () => u, ds: () => o, sE: () => c, t4: () => l });
+n.d(t, { Lj: () => f, VS: () => c, ds: () => l, sE: () => d, t4: () => u });
 var r = n(600975),
-    i = n(335934),
+    i = n(945810),
+    s = n(335934),
     a = n(688151);
-let s = (0, r.C)({
+let o = (0, i.mj)({
         kind: "user",
-        id: "2024-03_content_inventory_memberlist_and_ranker",
-        label: "Enables the memberlist content feed",
+        name: "2026-03-content-inventory-memberlist-and-ranker",
         defaultConfig: { enabled: !0, impressionCappingEnabled: !0 },
-        treatments: [
-            { id: -1, label: "Not in experiment", config: { enabled: !1 } },
-            { id: 0, label: "Holdout", config: { enabled: !1 } },
-        ],
+        variations: { 0: { enabled: !1, impressionCappingEnabled: !1 } },
     }),
-    o = (0, r.C)({
+    l = (0, r.C)({
         kind: "user",
         id: "2025-04_hotwheels_holdout_the_sequel",
         label: "Tracking a holdout hashed to member list experiment for data readouts",
@@ -24,7 +21,7 @@ let s = (0, r.C)({
             { id: 1, label: "Shadow Treatment", config: {} },
         ],
     }),
-    l = (0, r.C)({
+    u = (0, r.C)({
         kind: "user",
         id: "2025-09_hotwheels_nvidia_boost",
         label: "Next iteration of the activity feed ranking model.",
@@ -35,22 +32,22 @@ let s = (0, r.C)({
             { id: 17, label: "ML model V3 - Nvidia big boost", config: {} },
         ],
     });
-function u(e) {
-    let { enabled: t } = s.getCurrentConfig({ location: e }, { autoTrackExposure: !0 }),
-        n = (0, i.HF)(e, !1);
+function c(e) {
+    let { enabled: t } = o.getConfig({ location: e }),
+        n = (0, s.HF)(e, !1);
     return t || n;
 }
-function c(e) {
-    let { enabled: t, impressionCappingEnabled: n } = s.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
+function d(e) {
+    let { enabled: t, impressionCappingEnabled: n } = o.getConfig({ location: e });
     return t && !0 === n;
 }
-let d = (0, r.C)({
+let _ = (0, r.C)({
     kind: "user",
     id: "2024-08_content_inventory_analytics_sampling",
     label: "Content Inventory Analytics Sampling",
     defaultConfig: { trackingEnabled: !0 },
     treatments: [{ id: 1, label: "Tracking disabled", config: { trackingEnabled: !1 } }],
 });
-function _(e) {
-    return d.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
+function f(e) {
+    return _.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
 }
