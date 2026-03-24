@@ -1,11 +1,12 @@
 "use strict";
-function r(e, t, n) {
-    let r = new n.constructor(n.toJS());
+n.d(t, { K: () => i });
+var r = n(652215);
+function i(e, t, n) {
+    let i = new n.constructor(n.toJS());
     return (
-        (r.position_ = t.order),
-        null != t.nickname && (r.name = t.nickname),
-        null != t.parentId && t.parentId in e && (r.parent_id = t.parentId),
-        r
+        (i.position_ = t.order),
+        null != t.nickname && n.type !== r.rbe.DM && (i.name = t.nickname),
+        null != t.parentId && t.parentId in e && (i.parent_id = t.parentId),
+        i
     );
 }
-n.d(t, { K: () => r });
