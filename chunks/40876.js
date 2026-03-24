@@ -821,5 +821,11 @@ let i = {
         loadRightBeforeConnectionOpen: !0,
     },
     SocialLayerStorefrontConfigManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(49431).A },
+    CacheRequireModuleExperimentManager: {
+        actions: [],
+        inlineRequire: () => n(178881).A,
+        hasStoreChangeListeners: !0,
+        loadRightBeforeConnectionOpen: !0,
+    },
 };
 (0, r.n)(i);
