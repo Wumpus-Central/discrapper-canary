@@ -60,9 +60,11 @@ function S(e) {
                     applicationId: t.applicationId,
                     guildId: s.guildId,
                     isStorefront: !1,
+                    giftRecipient: P,
+                    giftingOrigin: I.vQ.SHOP_PAGE,
                     analyticsLocations: x,
                 });
-        }, [t.id, t.applicationId, s, x]),
+        }, [s, t.id, t.applicationId, P, x]),
         G = i.useCallback(() => {
             (0, A.a)(
                 t,

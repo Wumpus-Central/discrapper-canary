@@ -10,9 +10,11 @@ let a = "social-layer-storefront-product-details-modal",
             applicationId: o,
             guildId: l,
             isStorefront: u,
-            analyticsLocations: c,
-            analyticsContext: d,
-            onClose: _,
+            giftRecipient: c,
+            giftingOrigin: d,
+            analyticsLocations: _,
+            analyticsContext: f,
+            onClose: p,
         } = e;
         (0, s.iR)(l, t, "openSocialLayerStorefrontProductDetailsModal"),
             (0, i.mMO)(
@@ -25,15 +27,17 @@ let a = "social-layer-storefront-product-details-modal",
                             applicationId: o,
                             guildId: l,
                             isStorefront: u,
-                            analyticsLocations: c,
-                            analyticsContext: d,
+                            analyticsLocations: _,
+                            analyticsContext: f,
+                            giftRecipient: c,
+                            giftingOrigin: d,
                         });
                 },
                 {
                     modalKey: a,
                     allowsNavigation: u,
                     onCloseCallback: () => {
-                        _?.();
+                        p?.();
                     },
                 },
             );

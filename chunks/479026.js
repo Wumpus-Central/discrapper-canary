@@ -8,7 +8,13 @@ var i = l(64700),
     o = l(976860),
     c = l(901123);
 function d(e) {
-    let { sku: t, analyticsLocations: l, analyticsSource: d = r.A.USER_PROFILE_WISHLIST } = e;
+    let {
+        sku: t,
+        analyticsLocations: l,
+        analyticsSource: d = r.A.USER_PROFILE_WISHLIST,
+        giftRecipient: h,
+        giftingOrigin: p,
+    } = e;
     return (
         (0, a.A)(),
         i.useCallback(() => {
@@ -24,7 +30,9 @@ function d(e) {
                       analyticsSource: d,
                       returnRef: void 0,
                       tab: void 0,
+                      giftRecipient: h,
+                      giftingOrigin: p,
                   });
-        }, [l, d, t.id])
+        }, [l, d, h, p, t.id])
     );
 }
