@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => j, Bz: () => N, Xi: () => v, iA: () => h }), n(321073);
+n.d(t, { Ay: () => j, Bz: () => N, EM: () => d, Xi: () => v, iA: () => h }), n(321073);
 var r = n(311907),
     i = n(205693),
     s = n(73153),
@@ -82,14 +82,14 @@ function C() {
         f[e] = {};
     });
 }
-function b() {
+function R() {
     null != S && (S.destroy(), (S = null));
 }
-function R(e) {
+function O(e) {
     _ = e.section ?? d;
 }
-function O() {
-    b();
+function b() {
+    R();
 }
 function D(e) {
     null != e.channelId && (C(), p.clear(), y.clear());
@@ -103,7 +103,7 @@ function L(e) {
 function w(e) {
     _ = e.section;
 }
-function x(e, t, n) {
+function M(e, t, n) {
     return {
         screenshareCapturedFps: Math.max(
             0,
@@ -139,7 +139,7 @@ function x(e, t, n) {
         ),
     };
 }
-function M(e) {
+function x(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now(),
         r = {};
@@ -152,12 +152,12 @@ function M(e) {
                 for (let e = 0; e < s.length; e++) {
                     let r = t[e],
                         i = "object" == typeof r ? r : {};
-                    a.push(M(s[e], i, n));
+                    a.push(x(s[e], i, n));
                 }
             } else r[i] = s;
         else if ("object" == typeof s && null !== s) {
             let t = "object" == typeof e && null !== e ? e : {};
-            r[i] = M(s, t, n);
+            r[i] = x(s, t, n);
         } else if (i in h && "number" == typeof s) {
             let t = (r[i] = Array.isArray(e) ? e : []);
             t.push({ value: s, time: n }), t.length > m && t.shift();
@@ -195,10 +195,10 @@ function k(e) {
                 a = i[r]?.screenshare;
             if ((y.set(e, o), null != s && null != a)) {
                 let e = (o - s) / 1e3;
-                e > 0 && (u = { ...n, screenshare: { ...n.screenshare, ...x(n.screenshare, a, e) } });
+                e > 0 && (u = { ...n, screenshare: { ...n.screenshare, ...M(n.screenshare, a, e) } });
             }
         }
-        i[r] = M(u, i[r], o);
+        i[r] = x(u, i[r], o);
     } else delete i[r];
 }
 function U(e) {
@@ -207,7 +207,7 @@ function U(e) {
 function G(e) {
     let { path: t } = e,
         n = o.Ay.getMediaEngine();
-    if ((b(), !n.supports(c.O5.CONNECTION_REPLAY) || 0 === t.length)) return;
+    if ((R(), !n.supports(c.O5.CONNECTION_REPLAY) || 0 === t.length)) return;
     let r = n.createReplayConnection(c.x.DEFAULT, t);
     null != r &&
         ((S = r),
@@ -277,8 +277,8 @@ class H extends r.Ay.Store {
     }
 }
 let j = new H(s.h, {
-    RTC_DEBUG_MODAL_OPEN: R,
-    RTC_DEBUG_MODAL_CLOSE: O,
+    RTC_DEBUG_MODAL_OPEN: O,
+    RTC_DEBUG_MODAL_CLOSE: b,
     RTC_DEBUG_MODAL_SET_SECTION: w,
     RTC_DEBUG_MODAL_OPEN_REPLAY: U,
     RTC_DEBUG_MODAL_OPEN_REPLAY_AT_PATH: G,
