@@ -398,7 +398,7 @@ let eI = {
         }
     },
     openNativeAppModal(e) {
-        let t = { experiments: [S.R.definition.id] };
+        let t = { experiments: [S.R.definition.id], installationId: F.default.getInstallationForTracking() };
         y.A.openNativeAppModal(e, et.e$_.INVITE_BROWSER, t);
     },
     openApp(e, t, n, r, s) {
@@ -416,6 +416,7 @@ let eI = {
             (a = (0, u.Ay)(e, {
                 utmSource: 2 === s ? "friend_invite" : eo,
                 fingerprint: n,
+                installationId: F.default.getInstallationForTracking(),
                 username: r,
                 attemptId: t,
                 event: o?.guildScheduledEventId,

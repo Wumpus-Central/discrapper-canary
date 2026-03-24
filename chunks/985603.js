@@ -35,12 +35,14 @@ var a = n(835245),
     j = n(652215),
     w = n(654487);
 function U(e, t) {
-    null != e &&
+    let { fingerprint: n, installationId: i } = e;
+    (null != n || null != i) &&
         b.default.track(j.HAw.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
             invite_code: null,
             has_auth_token: null,
             is_backgrounded: null,
-            fingerprint: (0, l.d)(e),
+            fingerprint: null != n ? (0, l.d)(n) : null,
+            received_installation_id: i,
             link_type: t,
         });
 }
@@ -111,39 +113,36 @@ let G = {
                             n = (0, S.default)({ path: e, search: i.search });
                         (0, S.trackParseSettingsUrl)(n, "deeplink"),
                             (0, x.openUserSettings)(n.target, { path: n.path }),
-                            U(i.fingerprint, (0, M.OE)(t));
+                            U(i, (0, M.OE)(t));
                     }
                     break;
                 case M.XK.CHANGELOG:
                     null != i &&
-                        ((0, N.pX)(L.A.formatPathWithQuery(j.BVt.CHANGELOGS(i.date), i.query)),
-                        U(i.fingerprint, (0, M.OE)(t)));
+                        ((0, N.pX)(L.A.formatPathWithQuery(j.BVt.CHANGELOGS(i.date), i.query)), U(i, (0, M.OE)(t)));
                     break;
                 case M.XK.LIBRARY:
-                    (0, N.pX)(j.BVt.APPLICATION_LIBRARY), null != i && U(i.fingerprint, (0, M.OE)(t));
+                    (0, N.pX)(j.BVt.APPLICATION_LIBRARY), null != i && U(i, (0, M.OE)(t));
                     break;
                 case M.XK.STORE_HOME:
-                    (0, N.pX)(j.BVt.APPLICATION_STORE), null != i && U(i.fingerprint, (0, M.OE)(t));
+                    (0, N.pX)(j.BVt.APPLICATION_STORE), null != i && U(i, (0, M.OE)(t));
                     break;
                 case M.XK.STORE_LISTING:
-                    null != i &&
-                        ((0, N.pX)(j.BVt.APPLICATION_STORE_LISTING_SKU(i.skuId, i.slug)),
-                        U(i.fingerprint, (0, M.OE)(t)));
+                    null != i && ((0, N.pX)(j.BVt.APPLICATION_STORE_LISTING_SKU(i.skuId, i.slug)), U(i, (0, M.OE)(t)));
                     break;
                 case M.XK.PICK_GUILD_SETTINGS:
                     null != i &&
                         ((0, N.pX)(j.BVt.PICK_GUILD_SETTINGS(i.section, i.subsection), { search: i.search }),
-                        U(i.fingerprint, (0, M.OE)(t)));
+                        U(i, (0, M.OE)(t)));
                     break;
                 case M.XK.CHANNEL:
                     null != i &&
                         ((0, N.pX)(j.BVt.CHANNEL(i.guildId, i.channelId, i.messageId), { search: i.search }),
-                        U(i.fingerprint, (0, M.OE)(t)));
+                        U(i, (0, M.OE)(t)));
                     break;
                 case M.XK.GAME_SHOP:
                     null != i &&
                         ((0, N.pX)(j.BVt.CHANNELS_GAME_SHOP(i.guildId, i.pageIndex, i.skuId, i.slug)),
-                        U(i.fingerprint, (0, M.OE)(t)));
+                        U(i, (0, M.OE)(t)));
                     break;
                 case M.XK.QUEST_HOME:
                     if (null != i) {
@@ -152,7 +151,7 @@ let G = {
                             null != i.filter && e.set(T.L1.FILTER, i.filter),
                             null != i.tab && e.set(T.L1.TAB, i.tab),
                             (0, N.pX)(j.BVt.QUEST_HOME, { hash: i.questId, search: `?${e.toString()}` }),
-                            U(i.fingerprint, (0, M.OE)(t));
+                            U(i, (0, M.OE)(t));
                     } else (0, N.pX)(j.BVt.QUEST_HOME);
                     break;
                 case M.XK.QUEST_PREVIEW_TOOL:
@@ -161,13 +160,13 @@ let G = {
                         e.set(T.L1.TAB, T.NC.PREVIEW_TOOL),
                             null != i.questId && e.set(T.L1.QUEST_ID, i.questId),
                             (0, N.pX)(j.BVt.QUEST_HOME, { search: `?${e.toString()}` }),
-                            U(i.fingerprint, (0, M.OE)(t));
+                            U(i, (0, M.OE)(t));
                     }
                     break;
                 case M.XK.DISCOVERY_GAME_RESULTS:
                     null != i &&
                         ((0, N.pX)(j.BVt.GLOBAL_DISCOVERY_SERVERS, { search: `?game=${i.gameId}` }),
-                        U(i.fingerprint, (0, M.OE)(t)));
+                        U(i, (0, M.OE)(t)));
                     break;
                 case M.XK.OAUTH2:
                     let l = new URL(j.BVt.OAUTH2_AUTHORIZE, window.location.origin);
@@ -176,14 +175,13 @@ let G = {
                     if (null != r) return (0, I.openOAuth2ModalWithCreateGuildModal)(r), !0;
                     return !1;
                 case M.XK.ONE_TIME_LOGIN:
-                    if (null != i) return (0, f.N)({ token: i.token }), U(i.fingerprint, (0, M.OE)(t)), !0;
+                    if (null != i) return (0, f.N)({ token: i.token }), U(i, (0, M.OE)(t)), !0;
                     return !1;
                 case M.XK.SHOP:
-                    null != i &&
-                        ((0, N.pX)(j.BVt.COLLECTIBLES_SHOP, { search: i.search }), U(i.fingerprint, (0, M.OE)(t)));
+                    null != i && ((0, N.pX)(j.BVt.COLLECTIBLES_SHOP, { search: i.search }), U(i, (0, M.OE)(t)));
                     break;
                 case M.XK.FEATURES:
-                    i?.path != null && ((0, N.pX)(i.path), U(i.fingerprint, (0, M.OE)(t)));
+                    i?.path != null && ((0, N.pX)(i.path), U(i, (0, M.OE)(t)));
                     break;
                 case M.XK.ACTIVITIES:
                     if (null != i) {
@@ -238,7 +236,7 @@ let G = {
                                     });
                                 }
                             })(i.applicationId, i.url, e),
-                            U(i.fingerprint, (0, M.OE)(t)),
+                            U(i, (0, M.OE)(t)),
                             !0
                         );
                     }
@@ -246,7 +244,7 @@ let G = {
                 case M.XK.PLAYGROUND:
                     if (null != i) {
                         let { openPlayground: e } = n(965042);
-                        e(i.collection, i.story), U(i.fingerprint, (0, M.OE)(t));
+                        e(i.collection, i.story), U(i, (0, M.OE)(t));
                     }
             }
         },

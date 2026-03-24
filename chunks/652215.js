@@ -3700,6 +3700,7 @@ var no = (function (e) {
             (e.EXTERNAL_FINGERPRINT_DROPPED = "external_fingerprint_dropped"),
             (e.EXTERNAL_DYNAMIC_LINK_RECEIVED = "external_dynamic_link_received"),
             (e.DEEP_LINK_CLICKED = "deep_link_clicked"),
+            (e.EXTERNAL_INSTALLATION_ID_RECEIVED = "external_installation_id_received"),
             (e.VOICE_CHANNEL_INVITE_SENT = "voice_channel_invite_sent"),
             (e.INVITE_OPENED = "invite_opened"),
             (e.INVITE_VIEWED = "invite_viewed"),
