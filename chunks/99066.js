@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Lj: () => f, VS: () => c, ds: () => l, sE: () => d, t4: () => u });
+n.d(t, { VS: () => c, ds: () => l, sE: () => d, t4: () => u });
 var r = n(600975),
     i = n(945810),
     s = n(335934),
@@ -40,14 +40,4 @@ function c(e) {
 function d(e) {
     let { enabled: t, impressionCappingEnabled: n } = o.getConfig({ location: e });
     return t && !0 === n;
-}
-let _ = (0, r.C)({
-    kind: "user",
-    id: "2024-08_content_inventory_analytics_sampling",
-    label: "Content Inventory Analytics Sampling",
-    defaultConfig: { trackingEnabled: !0 },
-    treatments: [{ id: 1, label: "Tracking disabled", config: { trackingEnabled: !1 } }],
-});
-function f(e) {
-    return _.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
 }
