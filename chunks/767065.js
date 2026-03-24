@@ -251,7 +251,7 @@ class ey extends _.A {
                 });
         } else
             i === eo.x.STREAM &&
-                ((this._goLiveQualityManager = new y.A(!0)),
+                ((this._goLiveQualityManager = new y.A()),
                 this._goLiveQualityManager.on(y.j.RequestedSSRCsUpdate, (e, t, n) => {
                     this._connection?.createUser(e, t, n);
                 }),
@@ -557,10 +557,7 @@ class ey extends _.A {
         this._numNoiseCancellationChanges++, this._voiceDuration?.setNoiseCancellationEnabled(e);
     }
     setSimulcastDebugOverride(e, t, n) {
-        t === this.context &&
-            (t === eo.x.DEFAULT
-                ? this._localMediaSinkWantsManager?.setSimulcastDebugOverride(e, n)
-                : this._goLiveQualityManager?.setSimulcastDebugOverride(n));
+        t === this.context && t === eo.x.DEFAULT && this._localMediaSinkWantsManager?.setSimulcastDebugOverride(e, n);
     }
     setVideoSize(e, t, n) {
         null == t ||
@@ -927,8 +924,7 @@ class ey extends _.A {
                     (this._localMediaSinkWantsManager.setFirstFrameReceived(t),
                     this.emit(z.q.Video, this.guildId, this.channelId, eg(e), n, this.streamServerId)),
                     null != this._goLiveQualityManager &&
-                        (this._goLiveQualityManager.setFirstFrameReceived(t),
-                        this.emit(z.q.Video, this.guildId, this.channelId, eg(e), n, this.streamServerId));
+                        this.emit(z.q.Video, this.guildId, this.channelId, eg(e), n, this.streamServerId);
             }),
             m.on(f.yq.Silence, (e) => {
                 this._inputDetected = this._inputDetected || !e;
@@ -1282,7 +1278,6 @@ class ey extends _.A {
         }),
             this.emit(z.q.ClientConnect, e),
             this._videoQuality?.updateCallUserIdsCount(this._userIds.size),
-            this._goLiveQualityManager?.updateCallUserIds(this._userIds),
             this._localMediaSinkWantsManager?.updateCallUserIds(this._userIds);
     }
     _handleClientDisconnect(e) {
@@ -1314,7 +1309,6 @@ class ey extends _.A {
             this._localMediaSinkWantsManager?.destroyUser(e),
             this._userIds.delete(e),
             this.emit(z.q.ClientDisconnect, e),
-            this._goLiveQualityManager?.updateCallUserIds(this._userIds),
             this._localMediaSinkWantsManager?.updateCallUserIds(this._userIds),
             this._videoQuality?.updateCallUserIdsCount(this._userIds.size),
             1 === this._userIds.size && (this._secureFramesLastBecameAloneTime = (0, p.tB)());

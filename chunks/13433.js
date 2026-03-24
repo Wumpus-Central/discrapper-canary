@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => V, t: () => F }), n(321073);
+n.d(t, { A: () => U, t: () => k });
 var r = n(735438),
     i = n.n(r),
     s = n(205693),
@@ -32,11 +32,8 @@ var r = n(735438),
     w = n(6542),
     M = n(652215),
     x = n(731854);
-let P = 10,
-    k = 15e5,
-    U = 15e5,
-    G = 5 * R.A.Millis.SECOND;
-class F {
+let P = 5 * R.A.Millis.SECOND;
+class k {
     streamRegion;
     streamApplication;
     streamApplicationHistory;
@@ -98,15 +95,13 @@ class F {
         return (this.endTime ?? e) - this.startTime;
     }
 }
-class V extends u.A {
+class U extends u.A {
     analyticsContext;
     videoStreamStats;
     streamContext;
     streamKey;
     soundshareStats = new d.A();
     updateVideoStreamId;
-    bandwidthSamples = [];
-    goliveCurrentMaxResolution;
     _firstFrameDelivered = !1;
     screenshareFinishedCount = 0;
     soundshareFailuresReported = {};
@@ -205,44 +200,6 @@ class V extends u.A {
     }
     getVoiceParticipantType() {
         return this.isOwner ? "streamer" : "receiver";
-    }
-    updateStats(e) {
-        let t,
-            n = !this.isOwner && this._goLiveQualityManager?.getUserID() != null,
-            r =
-                void 0 !== this.goliveCurrentMaxResolution &&
-                (this.goliveCurrentMaxResolution.height > 720 || 0 === this.goliveCurrentMaxResolution.height),
-            s = "unknown",
-            a = e.find((e) => e.mediaEngineConnectionId === this._connection?.mediaEngineConnectionId)?.stats;
-        if (null != a && n) {
-            let e = a.transport.inboundBitrateEstimate;
-            null != e &&
-                e < 1e8 &&
-                (this.bandwidthSamples.push(e),
-                this.bandwidthSamples.length > P && this.bandwidthSamples.shift(),
-                this.bandwidthSamples.length === P &&
-                    ((t = i().mean(this.bandwidthSamples)) > U ? (s = "HQ") : t < k && (s = "LQ")));
-        }
-        let o = this._goLiveQualityManager?.isDowngraded() ?? !1;
-        if (
-            ("HQ" === s && o
-                ? (this.logger.info(`Attempting to upgrade to HQ simulcast stream, bandwidth estimate: ${t}`),
-                  this._goLiveQualityManager?.setGoLiveStreamDowngraded(!1))
-                : "LQ" === s &&
-                  !o &&
-                  r &&
-                  (this.logger.info(`Attempting to downgrade to LQ simulcast stream, bandwidth estimate: ${t}`),
-                  this._goLiveQualityManager?.setGoLiveStreamDowngraded(!0)),
-            n)
-        ) {
-            let e =
-                !this._goLiveQualityManager?.senderSupportsSimulcast() ||
-                this._goLiveQualityManager?.isDowngraded() === !1;
-            this._videoQuality?.setViewedSimulcastQuality(e);
-            let t = this._goLiveQualityManager?.isOneToOneCall() ?? !1,
-                n = r && "LQ" === s && !t;
-            this._videoQuality?.setEligibleSimulcastQuality(!n);
-        }
     }
     initializeEvents() {
         let e = !1;
@@ -346,7 +303,7 @@ class V extends u.A {
                         let t = I.Ay.getGoLiveSource();
                         switch ((this.soundshareStats.traceEvent(t?.desktopSource?.soundshareSession, e), e.type)) {
                             case "soundshare_attach_requested":
-                                this.errorTimer.start(G, () => {
+                                this.errorTimer.start(P, () => {
                                     l.h.dispatch({
                                         type: "MEDIA_ENGINE_SOUNDSHARE_FAILED",
                                         errorMessage: "Sound Hook Failed",
@@ -466,16 +423,15 @@ class V extends u.A {
                     this.updateVideoStreamId(i, s));
             }),
             this.on(c.q.VideoSourceQualityChanged, (e, t, n, r, i, s) => {
-                n === this._goLiveQualityManager?.getUserID() && (this.goliveCurrentMaxResolution = r),
-                    l.h.dispatch({
-                        type: "MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED",
-                        guildId: e,
-                        channelId: t,
-                        senderUserId: n,
-                        maxResolution: r,
-                        maxFrameRate: i,
-                        context: s,
-                    });
+                l.h.dispatch({
+                    type: "MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED",
+                    guildId: e,
+                    channelId: t,
+                    senderUserId: n,
+                    maxResolution: r,
+                    maxFrameRate: i,
+                    context: s,
+                });
             }),
             this.on(c.q.SecureFramesUpdate, () => {
                 l.h.dispatch({ type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE" });

@@ -1,4 +1,4 @@
-r.d(t, { C6: () => R, HI: () => S }), r(321073);
+r.d(t, { C6: () => D, HI: () => S }), r(321073);
 var n = r(627968),
     a = r(64700),
     i = r(503698),
@@ -6,29 +6,29 @@ var n = r(627968),
     l = r(23339),
     o = r(311907),
     d = r(397927),
-    c = r(233545),
-    u = r(684339),
+    u = r(233545),
+    c = r(684339),
     m = r(235986),
     p = r(401901),
-    y = r(696451),
-    h = r(430452),
+    h = r(696451),
+    y = r(430452),
     A = r(383501),
-    g = r(412780),
-    f = r(287809),
-    v = r(427262),
-    C = r(974175),
-    x = r(731854),
-    E = r(518959),
-    D = r(473169);
-let b = { [x.r8.NO_OVERRIDE]: "None", [x.r8.LOW]: "Low Quality Stream", [x.r8.HIGH]: "High Quality Stream" };
-function R(e) {
+    f = r(412780),
+    g = r(287809),
+    F = r(427262),
+    v = r(974175),
+    C = r(731854),
+    b = r(518959),
+    x = r(473169);
+let E = { [C.r8.NO_OVERRIDE]: "None", [C.r8.LOW]: "Low Quality Stream", [C.r8.HIGH]: "High Quality Stream" };
+function D(e) {
     let t = [],
         r = 0;
     for (e.length % 2 != 0 && e.push((0, n.jsx)(m.A, { basis: "50%", grow: 0 }, r++)); e.length > 0; )
         t.push((0, n.jsx)(m.A, { basis: "50%", grow: 0, children: e.splice(0, 2) }, r++));
     return t;
 }
-let F = { ssrc: 1, codec: 2 };
+let R = { ssrc: 1, codec: 2 };
 function S(e) {
     let {
             streams: t,
@@ -40,14 +40,14 @@ function S(e) {
             showUserInfo: I = !1,
             showSimulcastOverride: P = !1,
         } = e,
-        [B, k] = a.useState("0"),
-        T = (0, o.bG)([A.A], () => (I ? A.A.getGuildId() : null)),
-        L = (0, o.bG)([f.default], () => (I && null != S ? f.default.getUser(S) : null)),
-        w = (0, o.bG)([y.Ay], () => (I && null != T && null != S ? y.Ay.getNick(T, S) : null));
+        [k, B] = a.useState("0"),
+        w = (0, o.bG)([A.A], () => (I ? A.A.getGuildId() : null)),
+        G = (0, o.bG)([g.default], () => (I && null != S ? g.default.getUser(S) : null)),
+        T = (0, o.bG)([h.Ay], () => (I && null != w && null != S ? h.Ay.getNick(w, S) : null));
     if (null == t || (I && null == S) || 0 === t.length) return (0, n.jsx)(d.y$y, { type: d.y$y.Type.SPINNING_CIRCLE });
-    let M = N;
-    I && null != L && (M = `${N} — ${w ?? v.Ay.getName(L)}`);
-    let G = t.map((e, t) => {
+    let L = N;
+    I && null != G && (L = `${N} — ${T ?? F.Ay.getName(G)}`);
+    let M = t.map((e, t) => {
             let r, a;
             return (0, n.jsx)(
                 d.VQ0.Item,
@@ -66,22 +66,22 @@ function S(e) {
                 t.toString(),
             );
         }),
-        $ = Math.min(parseInt(B, 10), t.length - 1),
-        H = t[$],
-        O = (function (e, t, r, a, i) {
+        $ = Math.min(parseInt(k, 10), t.length - 1),
+        q = t[$],
+        U = (function (e, t, r, a, i) {
             let l,
                 o = [];
             for (let t of Object.keys(e).sort((e, t) => {
-                let r = F[e],
-                    n = F[t];
+                let r = R[e],
+                    n = R[t];
                 return r !== n
                     ? void 0 === r
                         ? 1
                         : void 0 === n
                           ? -1
                           : r - n
-                    : g.iA[e] !== g.iA[t]
-                      ? g.iA[e]
+                    : f.iA[e] !== f.iA[t]
+                      ? f.iA[e]
                           ? 1
                           : -1
                       : e > t
@@ -89,12 +89,12 @@ function S(e) {
                         : -1;
             })) {
                 let r = e[t];
-                C.R[t] || void 0 === r || o.push((0, n.jsx)(C.q7, { section: a, label: t, value: r }, t));
+                v.R[t] || void 0 === r || o.push((0, n.jsx)(v.q7, { section: a, label: t, value: r }, t));
             }
             return (0, n.jsxs)(
                 "div",
                 {
-                    className: D.C2,
+                    className: x.C2,
                     children: [
                         "video" === e.type &&
                             null != r &&
@@ -102,39 +102,40 @@ function S(e) {
                             null != i &&
                             (null != (l = i.get(r, a, e.ssrc))
                                 ? (0, n.jsx)("div", {
-                                      className: s()(E.tN, D.C2),
+                                      className: s()(b.tN, x.C2),
                                       children: (0, n.jsx)(p.A, {
                                           streamId: l,
-                                          videoComponent: h.Ay.getMediaEngine().Video,
+                                          videoComponent: y.Ay.getMediaEngine().Video,
                                           paused: !1,
-                                          videoSpinnerContext: u.u.REPLAY_VIDEO_STREAM,
+                                          videoSpinnerContext: c.u.REPLAY_VIDEO_STREAM,
                                           userId: a,
                                       }),
                                   })
                                 : null),
-                        R(o),
+                        D(o),
                     ],
                 },
                 `${e.type} + ${e.ssrc}`,
             );
-        })(H, 0, i, S, j),
-        U =
+        })(q, 0, i, S, j),
+        H =
             P &&
-            "video" === H.type &&
+            "video" === q.type &&
             null != i &&
             null != S &&
             null != j &&
+            r === C.x.DEFAULT &&
             (0, n.jsx)(m.A, {
-                className: D.SX,
+                className: x.SX,
                 children: (0, n.jsx)(m.A.Child, {
                     basis: "100%",
                     children: (0, n.jsx)(d.l6P, {
                         label: "Simulcast Override",
-                        value: g.Ay.getSimulcastDebugOverride(S, r),
+                        value: f.Ay.getSimulcastDebugOverride(S, r),
                         onSelectionChange: (e) => {
-                            c.z0(S, r, e);
+                            u.z0(S, r, e);
                         },
-                        options: Object.values(x.r8).map((e) => ({ id: e, value: e, label: b[e] })),
+                        options: Object.values(C.r8).map((e) => ({ id: e, value: e, label: E[e] })),
                         selectionMode: "single",
                         fullWidth: !0,
                     }),
@@ -143,17 +144,17 @@ function S(e) {
     return (0, n.jsxs)(d.BJc, {
         gap: 16,
         children: [
-            (0, n.jsx)(d.Heading, { variant: "heading-md/medium", children: M }),
+            (0, n.jsx)(d.Heading, { variant: "heading-md/medium", children: L }),
             (0, n.jsx)(d.VQ0, {
                 type: "top",
                 look: "brand",
-                selectedItem: B,
-                onItemSelect: k,
-                className: E.$H,
-                children: G,
+                selectedItem: k,
+                onItemSelect: B,
+                className: b.$H,
+                children: M,
             }),
-            O,
             U,
+            H,
         ],
     });
 }
