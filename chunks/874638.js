@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { Z: () => a, c: () => s }), n(321073);
+n.d(t, { Z: () => s, c: () => a }), n(321073);
 var r = n(735438),
     i = n.n(r);
-function a(e) {
+function s(e) {
     let t = (e, t) =>
             e.subscriptionPlanId === t.subscriptionPlanId &&
             e.subscriptionPlanPrice === t.subscriptionPlanPrice &&
@@ -24,13 +24,14 @@ function a(e) {
             return (
                 r.has(e.subscriptionPlanId) &&
                     ((t.amount = t.amount * t.quantity),
-                    (t.discounts = t.discounts.map((e) => ({ ...e, amount: e.amount * t.quantity })))),
+                    (t.discounts = t.discounts.map((e) => ({ ...e, amount: e.amount * t.quantity }))),
+                    null != t.tax && (t.tax = t.tax * t.quantity)),
                 t
             );
         })
     );
 }
-function s(e) {
+function a(e) {
     return {
         id: e.id,
         subscriptionPlanId: e.subscription_plan_id,
@@ -38,5 +39,8 @@ function s(e) {
         amount: e.amount,
         quantity: e.quantity,
         discounts: e.discounts,
+        tax: e.tax,
+        taxCode: e.tax_code,
+        nominalTaxRate: e.nominal_tax_rate,
     };
 }
