@@ -1,11 +1,8 @@
 "use strict";
-n.d(t, { A: () => l, t: () => r });
-var i = n(512750),
-    s = n(840120);
-function l(e, t, n) {
-    let l = (0, s.j$)(e, n);
-    return t.skuId === i.FB && l;
+function i(e, t, n) {
+    return !1;
 }
-function r(e, t, n) {
-    return t.skuId === i.FB && (0, s.ip)(e, n);
+function s(e, t, n) {
+    return !1;
 }
+n.d(t, { A: () => i, t: () => s });

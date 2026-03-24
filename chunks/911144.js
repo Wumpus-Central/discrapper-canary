@@ -1,116 +1,108 @@
 "use strict";
-n.d(t, { C: () => T });
+n.d(t, { C: () => f });
 var i = n(627968),
     s = n(64700),
-    l = n(512750),
-    r = n(397927),
-    a = n(793574),
-    o = n(688810),
-    d = n(279208),
-    c = n(840120),
-    u = n(828162),
-    m = n(997509),
-    g = n(310527),
-    x = n(446291),
-    h = n(342490),
-    _ = n(695800),
-    A = n(533148),
-    p = n(652215),
-    f = n(874864),
-    j = n(985018),
-    N = n(802498);
-function E(e) {
+    l = n(397927),
+    r = n(688810),
+    a = n(279208),
+    o = n(310527),
+    d = n(446291),
+    c = n(342490),
+    u = n(695800),
+    m = n(533148),
+    g = n(652215),
+    x = n(874864),
+    h = n(985018),
+    _ = n(802498);
+function p(e) {
     let { originalVanityURLCode: t } = e;
     if (null != t && t.length > 0) {
-        let e = (0, d.A)(t);
-        return (0, i.jsx)(r.Text, {
+        let e = (0, a.A)(t);
+        return (0, i.jsx)(l.Text, {
             variant: "text-sm/medium",
             color: "text-subtle",
-            className: N.YQ,
-            children: j.intl.format(j.t["1qTOvn"], { urlText: e, urlValue: e }),
+            className: _.YQ,
+            children: h.intl.format(h.t["1qTOvn"], { urlText: e, urlValue: e }),
         });
     }
     return null;
 }
-function b(e) {
-    let { guild: t, vanityURLCode: n, vanityURLUses: l, originalVanityURLCode: a, errorDetails: o } = e,
-        d = t?.features.has(p.GuildFeatures.VANITY_URL) === !0,
-        c = s.useCallback(() => {
-            (0, g.OH)("");
+function A(e) {
+    let { guild: t, vanityURLCode: n, vanityURLUses: r, originalVanityURLCode: a, errorDetails: c } = e,
+        u = t?.features.has(g.GuildFeatures.VANITY_URL) === !0,
+        x = s.useCallback(() => {
+            (0, o.OH)("");
         }, []),
-        u = s.useCallback((e) => {
-            (0, g.OH)(e);
+        p = s.useCallback((e) => {
+            (0, o.OH)(e);
         }, []);
-    if (null == n) return (0, i.jsx)(r.y$y, {});
-    let m = null != o ? (0, x.z)(o.code) : null;
-    return (0, i.jsxs)(r.ZpM, {
+    if (null == n) return (0, i.jsx)(l.y$y, {});
+    let A = null != c ? (0, d.z)(c.code) : null;
+    return (0, i.jsxs)(l.ZpM, {
         editable: !0,
-        className: N.pU,
+        className: _.pU,
         children: [
             (0, i.jsxs)("div", {
-                className: N.p2,
+                className: _.p2,
                 children: [
-                    (0, i.jsx)(r.Heading, {
+                    (0, i.jsx)(l.Heading, {
                         variant: "heading-sm/semibold",
                         color: "text-default",
-                        children: j.intl.string(j.t["6oJyq5"]),
+                        children: h.intl.string(h.t["6oJyq5"]),
                     }),
                     n.length > 0
-                        ? (0, i.jsx)(r.Text, {
+                        ? (0, i.jsx)(l.Text, {
                               variant: "text-sm/medium",
                               color: "text-subtle",
-                              children: j.intl.format(j.t.MVWOUY, { uses: l }),
+                              children: h.intl.format(h.t.MVWOUY, { uses: r }),
                           })
                         : null,
                 ],
             }),
-            (0, i.jsx)(A.A, { value: n, onChange: u, error: m, disabled: !d }),
+            (0, i.jsx)(m.A, { value: n, onChange: p, error: A, disabled: !u }),
             null != a && a.length > 0
                 ? (0, i.jsx)("div", {
-                      className: N.J9,
-                      children: (0, i.jsx)(r.Button, {
+                      className: _.J9,
+                      children: (0, i.jsx)(l.Button, {
                           variant: "critical-secondary",
-                          onClick: c,
-                          text: j.intl.string(j.t["3ggb6K"]),
+                          onClick: x,
+                          text: h.intl.string(h.t["3ggb6K"]),
                       }),
                   })
                 : null,
         ],
     });
 }
-function T(e) {
-    let { guild: t, vanityURLCode: n, vanityURLUses: r, originalVanityURLCode: d, errorDetails: g } = e,
-        { analyticsLocations: A } = (0, o.Ay)(),
-        j = (0, c.M5)(t.id, "GuildSettingsBoostPerks"),
-        T = s.useCallback(
+function f(e) {
+    let { guild: t, vanityURLCode: n, vanityURLUses: l, originalVanityURLCode: a, errorDetails: o } = e,
+        { analyticsLocations: m } = (0, r.Ay)(),
+        h = s.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
-                    j
-                        ? (m.A.close(), (0, u.A)(t.id, a.A.GUILD_POWERUPS_GUILD_SETTINGS_VANITY_URL, l.FB))
-                        : (0, _.p_)({
-                              guild: t,
-                              analyticsLocations: A,
-                              analyticsSection: p.JJy.GUILD_SETTINGS_VANITY_URL,
-                              analyticsObject: p.ZSU.BUTTON_CTA,
-                              perks: (0, f.DU)(),
-                              targetPremiumGuildTier: p.TVA.TIER_3,
-                          });
+                    (0, u.p_)({
+                        guild: t,
+                        analyticsLocations: m,
+                        analyticsSection: g.JJy.GUILD_SETTINGS_VANITY_URL,
+                        analyticsObject: g.ZSU.BUTTON_CTA,
+                        perks: (0, x.DU)(),
+                        targetPremiumGuildTier: g.TVA.TIER_3,
+                    });
             },
-            [A, t, j],
+            [m, t],
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, x.d)(t)
-                ? (0, i.jsx)(b, {
+            (0, d.d)(t)
+                ? (0, i.jsx)(A, {
                       guild: t,
                       vanityURLCode: n,
-                      vanityURLUses: r,
-                      originalVanityURLCode: d,
-                      errorDetails: g,
+                      vanityURLUses: l,
+                      originalVanityURLCode: a,
+                      errorDetails: o,
                   })
-                : (0, i.jsx)("div", { className: N.Oy, children: (0, i.jsx)(h.u, { onClick: T }) }),
-            (0, i.jsx)(E, { originalVanityURLCode: d }),
+                : (0, i.jsx)("div", { className: _.Oy, children: (0, i.jsx)(c.u, { onClick: h }) }),
+            (0, i.jsx)(p, { originalVanityURLCode: a }),
         ],
     });
 }

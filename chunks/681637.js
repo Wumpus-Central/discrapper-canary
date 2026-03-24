@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => T });
+n.d(t, { A: () => I });
 var r = n(607399),
     i = n(923408),
     s = n(439372),
@@ -14,24 +14,22 @@ var r = n(607399),
     p = n(832547),
     h = n(103821),
     m = n(128069),
-    E = n(840120),
-    g = n(363487),
-    A = n(342220);
-class I extends s.A {
+    E = n(363487),
+    g = n(342220);
+class A extends s.A {
     handleSelectedGuildChange() {
         let e = u.A.getGuildId();
         if (null == e || (0, a.ai)(e)) return;
         let t = o.A.getGuild(e);
         if (null == t) return;
-        E.Qb.trackExposure({ guildId: t.id, location: "GuildPowerupsManager" }),
-            c.x1.trackExposure({ guildId: t.id, location: "GuildPowerupsManager" }),
+        c.x1.trackExposure({ guildId: t.id, location: "GuildPowerupsManager" }),
             m.vu.trackExposure({ guildId: t.id, location: "GuildPowerupsManager" }),
             (0, c.TS)(t.id, "GuildPowerupsManager") &&
                 d.r.trackExposure({ guildId: t.id, location: "GuildPowerupsManager" });
         let n = p.A.getConfig({ location: "GuildPowerupsManager" }).enabled,
             i = h.A.getConfig({ location: "GuildPowerupsManager" }).enabled;
-        if (!(0, g.G)(l.A, t)) {
-            let e = (n || i) && (0, A.X)();
+        if (!(0, E.G)(l.A, t)) {
+            let e = (n || i) && (0, g.X)();
             if (r.Fr || !e) return;
         }
         f.A.shouldFetchCatalogForGuild(e) && (0, _.AK)(e), f.A.shouldFetchPowerupsForGuild(e) && (0, _.Xd)(e);
@@ -45,7 +43,7 @@ class I extends s.A {
         this.refreshGuildPowerups(t);
     }
     refreshGuildPowerups(e) {
-        !0 === (0, g.G)(l.A, o.A.getGuild(e)) && ((0, _.Xd)(e), (0, i.VU)(e));
+        !0 === (0, E.G)(l.A, o.A.getGuild(e)) && ((0, _.Xd)(e), (0, i.VU)(e));
     }
     stores = new Map().set(u.A, this.handleSelectedGuildChange);
     actions = {
@@ -54,4 +52,4 @@ class I extends s.A {
         GUILD_APPLIED_BOOSTS_UPDATE: this.handleAppliedBoostUpdate.bind(this),
     };
 }
-let T = new I();
+let I = new A();
