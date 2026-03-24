@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => H });
+n.d(t, { A: () => j });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -19,22 +19,23 @@ var r = n(627968),
     A = n(930101),
     I = n(976860),
     T = n(302031),
-    S = n(696451),
-    y = n(317525),
-    v = n(71393),
-    N = n(957565),
-    C = n(365526),
-    R = n(678473),
-    O = n(997954),
-    b = n(556300),
-    D = n(990474),
-    L = n(620700),
-    w = n(49005),
-    M = n(652215),
-    x = n(746080),
-    P = n(830412),
-    k = n(431055);
-function U(e) {
+    S = n(157941),
+    y = n(696451),
+    v = n(317525),
+    N = n(71393),
+    C = n(957565),
+    R = n(365526),
+    O = n(678473),
+    b = n(997954),
+    D = n(556300),
+    L = n(990474),
+    w = n(620700),
+    M = n(49005),
+    x = n(652215),
+    P = n(746080),
+    k = n(206314),
+    U = n(829681);
+function G(e) {
     let { emojiTooltipPosition: t = "top", enableEmojiClick: n = !0 } = e;
     return {
         react(e, i, s) {
@@ -45,7 +46,7 @@ function U(e) {
         },
     };
 }
-function G(e) {
+function F(e) {
     let { emojiTooltipPosition: t = "top", enableEmojiClick: n = !0 } = e;
     return {
         react(e, i, s) {
@@ -63,39 +64,39 @@ function G(e) {
         },
     };
 }
-function F(e, t, n) {
-    let r = v.A.getGuild(e);
+function V(e, t, n) {
+    let r = N.A.getGuild(e);
     if (null == e || null == r) return;
     let i = (t) => {
-        r.features.has(M.GuildFeatures.COMMUNITY) && (0, I.pX)(M.BVt.CHANNEL(e, t));
+        r.features.has(x.GuildFeatures.COMMUNITY) && (0, I.pX)(x.BVt.CHANNEL(e, t));
     };
     switch (t) {
         case "home":
         case "guide":
-            i(x.VV.GUILD_HOME);
+            i(P.VV.GUILD_HOME);
             break;
         case "browse":
-            i(x.VV.CHANNEL_BROWSER);
+            i(P.VV.CHANNEL_BROWSER);
             break;
         case "customize":
-            i(x.VV.CUSTOMIZE_COMMUNITY);
+            i(P.VV.CUSTOMIZE_COMMUNITY);
             break;
         case "linked-roles":
             if (null != n) {
-                let t = S.Ay.getSelfMember(e);
+                let t = y.Ay.getSelfMember(e);
                 if (null == t) return null;
-                let r = y.A.getRole(e, n);
+                let r = v.A.getRole(e, n);
                 null == r || t.roles.includes(r.id)
                     ? u.h.dispatch({ type: "GUILD_ROLE_CONNECTIONS_MODAL_SHOW", guildId: e })
                     : u.h.dispatch({ type: "GUILD_ROLE_CONNECTIONS_MODAL_SHOW", guildId: e, role: r });
             } else u.h.dispatch({ type: "GUILD_ROLE_CONNECTIONS_MODAL_SHOW", guildId: e });
     }
 }
-function V(e) {
+function B(e) {
     let { text: t } = e,
         [n, s] = i.useState(!1),
         a = () => {
-            (0, N.C)(
+            (0, C.C)(
                 t,
                 () => s(!0),
                 () => s(!1),
@@ -108,15 +109,15 @@ function V(e) {
             : (0, r.jsx)(l.TdU, { size: "xs", color: "currentColor" }),
     });
 }
-let B = {
+let H = {
     blockQuote: {
         react: (e, t, n) =>
             (0, r.jsxs)(
                 "div",
                 {
-                    className: P.h,
+                    className: k.h,
                     children: [
-                        (0, r.jsx)("div", { className: P.r }),
+                        (0, r.jsx)("div", { className: k.r }),
                         (0, r.jsx)("blockquote", { children: t(e.content, n) }),
                     ],
                 },
@@ -126,35 +127,41 @@ let B = {
     s: { react: (e, t, n) => (0, r.jsx)("s", { children: t(e.content, n) }, n.key) },
     highlight: { react: (e, t, n) => (0, r.jsx)("span", { className: "highlight", children: e.content }, n.key) },
     paragraph: { react: (e, t, n) => (0, r.jsx)("p", { children: t(e.content, n) }, n.key) },
-    inlineCode: { react: (e, t, n) => (0, r.jsx)("code", { className: "inline", children: (0, C.t)(e, t, n) }, n.key) },
+    inlineCode: { react: (e, t, n) => (0, r.jsx)("code", { className: "inline", children: (0, R.t)(e, t, n) }, n.key) },
     codeBlock: {
         react(e, t, i) {
-            let s = () => (0, r.jsx)("code", { className: a()(k.kw, "hljs"), children: (0, C.t)(e, t, i) });
+            let s = () => (0, r.jsx)("code", { className: a()(U.kw, "hljs"), children: (0, R.t)(e, t, i) });
             return (0, r.jsx)(
                 "pre",
                 {
                     children: (0, r.jsxs)("div", {
-                        className: P.Hy,
+                        className: k.Hy,
                         children: [
-                            N.p5
-                                ? (0, r.jsx)("div", { className: P.lB, children: (0, r.jsx)(V, { text: e.content }) })
+                            C.p5
+                                ? (0, r.jsx)("div", { className: k.lB, children: (0, r.jsx)(B, { text: e.content }) })
                                 : null,
-                            (0, r.jsx)(d.c2, {
-                                createPromise: () => Promise.resolve().then(n.bind(n, 752238)),
-                                webpackId: 752238,
-                                renderFallback: s,
-                                render: (t) => {
-                                    if (!(e.lang && t.hasLanguage(e.lang))) return s();
-                                    {
-                                        let n = t.highlight(e.lang, e.content, !0);
-                                        return null == n
-                                            ? s()
-                                            : (0, r.jsx)("code", {
-                                                  className: a()(k.kw, "hljs", n.language),
-                                                  dangerouslySetInnerHTML: { __html: n.value },
-                                              });
-                                    }
-                                },
+                            (0, r.jsx)(S.l, {
+                                location: "MarkupReactRules",
+                                code: e.content,
+                                lang: e.lang,
+                                className: a()(U.kw, "hljs"),
+                                children: (0, r.jsx)(d.c2, {
+                                    createPromise: () => Promise.resolve().then(n.bind(n, 752238)),
+                                    webpackId: 752238,
+                                    renderFallback: s,
+                                    render: (t) => {
+                                        if (!(e.lang && t.hasLanguage(e.lang))) return s();
+                                        {
+                                            let n = t.highlight(e.lang, e.content, !0);
+                                            return null == n
+                                                ? s()
+                                                : (0, r.jsx)("code", {
+                                                      className: a()(U.kw, "hljs", n.language),
+                                                      dangerouslySetInnerHTML: { __html: n.value },
+                                                  });
+                                        }
+                                    },
+                                }),
                             }),
                         ],
                     }),
@@ -196,9 +203,9 @@ let B = {
     staticRouteLink: {
         react(e, t, n) {
             let i = () => {
-                F(e.guildId, e.id, e.itemId);
+                V(e.guildId, e.id, e.itemId);
             };
-            return (0, C.d)(e.id)
+            return (0, R.d)(e.id)
                 ? (0, r.jsxs)(
                       h.A,
                       {
@@ -217,14 +224,14 @@ let B = {
                 : null;
         },
     },
-    timestamp: { react: (e, t, n) => (0, r.jsx)(R.A, { node: e }, n.key) },
+    timestamp: { react: (e, t, n) => (0, r.jsx)(O.A, { node: e }, n.key) },
     list: {
         react: (e, t, n) => {
             let i = e.ordered ? "ol" : "ul",
                 s = null == e.start ? void 0 : (e.start + (e.items.length - 1)).toString().length;
             return (0, o.reactElement)(i, `${n.key}`, {
                 start: e.start,
-                className: n.formatInline ? P.tZ : null,
+                className: n.formatInline ? k.tZ : null,
                 style: { "--totalCharacters": s },
                 children: e.items.map((e, i) => {
                     let s = (0, o.reactElement)("span", `${n.key}-${i}-innerSpan`, { children: t(e, n) });
@@ -240,24 +247,24 @@ let B = {
             let i = (0, o.reactElement)("span", `${n.key}-innerSpan`, { children: t(e.content, n) });
             return (0, o.reactElement)("h" + e.level, n?.key != null ? `${n.key}` : null, {
                 children: [i, (0, r.jsx)(l.AC4, { children: "," }, "screen-reader-pause")],
-                className: n.formatInline ? P.tZ : null,
+                className: n.formatInline ? k.tZ : null,
             });
         },
     },
     guild: {
         react: (e, t, n) => {
-            let i = v.A.getGuild(e.guildId);
-            return (0, r.jsx)(p.A, { guild: i, children: (0, C.t)(e, t, n) }, n.key);
+            let i = N.A.getGuild(e.guildId);
+            return (0, r.jsx)(p.A, { guild: i, children: (0, R.t)(e, t, n) }, n.key);
         },
     },
-    channel: { react: (e, t, n) => (0, r.jsx)(f.A, { iconType: e.iconType, children: (0, C.t)(e, t, n) }, n.key) },
+    channel: { react: (e, t, n) => (0, r.jsx)(f.A, { iconType: e.iconType, children: (0, R.t)(e, t, n) }, n.key) },
     message: { react: (e, t, n) => (0, r.jsx)(E.A, {}, n.key) },
     subtext: {
         react: (e, t, n) => {
             let r = (0, o.reactElement)("span", `${n.key}-innerSpan`, { children: t(e.content, n) });
             return (0, o.reactElement)("small", n?.key != null ? `${n.key}` : null, {
                 children: r,
-                className: n.formatInline ? P.tZ : null,
+                className: n.formatInline ? k.tZ : null,
             });
         },
     },
@@ -268,15 +275,15 @@ let B = {
                 : (0, r.jsx)("span", { children: t(e.content, n) }, n.key),
     },
 };
-function H(e) {
+function j(e) {
     return {
-        ...B,
-        link: (0, w.A)(e),
-        devLink: (0, L.A)(e),
-        emoji: U(e),
-        customEmoji: G(e),
-        channelMention: (0, b.A)(e),
-        commandMention: (0, D.Ay)(e),
-        attachmentLink: (0, O.A)(e),
+        ...H,
+        link: (0, M.A)(e),
+        devLink: (0, w.A)(e),
+        emoji: G(e),
+        customEmoji: F(e),
+        channelMention: (0, D.A)(e),
+        commandMention: (0, L.Ay)(e),
+        attachmentLink: (0, b.A)(e),
     };
 }

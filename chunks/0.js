@@ -1,0 +1,1 @@
+return i.length&&u(i)

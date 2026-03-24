@@ -1,2 +1,1 @@
-"use strict";
-e.exports = "/assets/9326857756cb21c9.svg";
+return f(i,"u")
