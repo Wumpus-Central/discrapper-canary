@@ -19,7 +19,7 @@ function M(t) {
     let i = (0, A.Y)(t),
         r = N.A.getGuild(t),
         E = null != r && (0, e.w)(r),
-        s = (0, S.K5)({ location: "getPermissionOptions" });
+        s = (0, S.K)({ location: "getPermissionOptions" });
     return {
         PRIORITY_SPEAKER_DESCRIPTION: d.intl.format(d.t.j66HgY, {
             keybind: d.intl.string(d.t.DkSwJ2),

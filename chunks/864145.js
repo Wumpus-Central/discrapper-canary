@@ -1,20 +1,16 @@
 "use strict";
-n.d(t, { K5: () => s, UL: () => a, X9: () => o });
-var r = n(600975),
-    i = n(688151);
-let a = (0, r.C)({
-    id: "2024-11_soundmoji_rendering",
-    label: "Render soundmojis",
+n.d(t, { K: () => i, X: () => s });
+let r = (0, n(945810).mj)({
+    name: "2026-03-soundmoji-rendering",
     kind: "user",
     defaultConfig: { enabled: !1 },
-    commonTriggerPoint: i.$G.CONNECTION_OPEN,
-    treatments: [{ id: 1, label: "Enabled", config: { enabled: !0 } }],
+    variations: { 1: { enabled: !0 } },
 });
+function i(e) {
+    let { location: t } = e;
+    return r.getConfig({ location: t }).enabled;
+}
 function s(e) {
     let { location: t } = e;
-    return a.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
-}
-function o(e) {
-    let { location: t } = e;
-    return a.useExperiment({ location: t }, { autoTrackExposure: !1 }).enabled;
+    return r.useConfig({ location: t }).enabled;
 }
