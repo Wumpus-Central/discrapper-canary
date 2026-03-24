@@ -10,7 +10,6 @@ e.exports = {
     Gc: "assetBodyVideoPreviewVisible__24e2c",
     IC: "heroAssetWrapper__24e2c",
     tV: "legibilityGradient__24e2c",
-    tt: "legibilityGradientDark__24e2c",
     LO: "heroAsset__24e2c",
     lO: "cta__24e2c",
     Yd: "contentInteractable__24e2c",
