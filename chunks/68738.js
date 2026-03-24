@@ -60,10 +60,10 @@ let h = {
                     n.e("11810"),
                     n.e("39048"),
                     n.e("17537"),
-                    n.e("33105"),
+                    n.e("73756"),
                     n.e("56475"),
                     n.e("54469"),
-                    n.e("59461"),
+                    n.e("47277"),
                 ]).then(n.bind(n, 544676)),
                 t = Object.values(d.A.getGuilds())[0];
             return null == t ? () => null : (n) => (0, a.jsx)(e, { ...n, guild: t });
@@ -134,7 +134,7 @@ let h = {
                       });
         },
         ChannelListThreadContextMenu: async () => {
-            let { default: e } = await Promise.all([n.e("94989"), n.e("69545")]).then(n.bind(n, 44536)),
+            let { default: e } = await Promise.all([n.e("94989"), n.e("1798")]).then(n.bind(n, 44536)),
                 t = d.A.getGuilds(),
                 i = null;
             for (let e of Object.values(t)) {

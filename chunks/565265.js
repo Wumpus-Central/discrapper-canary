@@ -1,27 +1,27 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => g });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(621466),
+    a = n.n(l),
+    r = n(621466),
     o = n(397927),
     c = n(442433),
     d = n(46054),
     u = n(742589),
     h = n(985018),
     A = n(980017),
-    p = n(206314);
-function g(e) {
+    m = n(206314);
+function p(e) {
     return e.matches("a") || "highlight" === e.className || e.className.includes("mention");
 }
-class m extends s.Component {
+class _ extends s.Component {
     handleOpenTopic = (e) => {
         let t = e.target;
-        if ((0, a.vq)(t)) {
-            if (g(t)) return;
+        if ((0, r.vq)(t)) {
+            if (p(t)) return;
             let e = t.parentNode;
-            if ((0, a.vq)(e) && g(e)) return;
+            if ((0, r.vq)(e) && p(e)) return;
         }
         (0, o.mMO)(async () => {
             let { default: e } = await n.e("8939").then(n.bind(n, 181094));
@@ -31,7 +31,7 @@ class m extends s.Component {
     handleContextMenu = (e) => {
         let { channel: t, guild: s } = this.props;
         (0, c.L3)(e, async () => {
-            let { default: e } = await n.e("17425").then(n.bind(n, 340968));
+            let { default: e } = await Promise.all([n.e("70303"), n.e("17425"), n.e("40878")]).then(n.bind(n, 340968));
             return (n) => (0, i.jsx)(e, { ...n, channel: t, guild: s, includeTopic: !0 });
         });
     };
@@ -44,7 +44,7 @@ class m extends s.Component {
                   children: [
                       (0, i.jsx)(u.A.Divider, {}),
                       (0, i.jsxs)("div", {
-                          className: r()(A.At, A.lu, p.PT),
+                          className: a()(A.At, A.lu, m.PT),
                           onContextMenu: this.handleContextMenu,
                           onClick: this.handleOpenTopic,
                           children: [
@@ -63,4 +63,4 @@ class m extends s.Component {
             : null;
     }
 }
-let _ = m;
+let g = _;

@@ -3,9 +3,9 @@ n.d(t, { A: () => eV });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(284009),
-    o = n.n(a),
+    a = n.n(l),
+    r = n(284009),
+    o = n.n(r),
     c = n(110259),
     d = n(311907),
     u = n(554146),
@@ -13,8 +13,8 @@ var i = n(627968),
     A = n(397927),
     m = n(73153),
     p = n(367513),
-    g = n(442433),
-    _ = n(956793),
+    _ = n(442433),
+    g = n(956793),
     f = n(401843),
     x = n(817281),
     C = n(820284),
@@ -57,8 +57,8 @@ var i = n(627968),
     ei = n(128286),
     es = n(619344),
     el = n(821747),
-    er = n(125248),
-    ea = n(616356),
+    ea = n(125248),
+    er = n(616356),
     eo = n(961350),
     ec = n(249288),
     ed = n(696451),
@@ -67,8 +67,8 @@ var i = n(627968),
     eA = n(309010),
     em = n(287809),
     ep = n(977997),
-    eg = n(954571),
-    e_ = n(147036),
+    e_ = n(954571),
+    eg = n(147036),
     ef = n(203982),
     ex = n(723702),
     eC = n(837921),
@@ -86,7 +86,7 @@ var i = n(627968),
     eL = n(806931),
     eM = n(652215),
     eD = n(985018),
-    eG = n(304718);
+    eG = n(354972);
 let eU = {
         [eM.DUB.NORMAL]: eG.qb,
         [eM.DUB.MINIMUM]: eG.Bp,
@@ -101,8 +101,8 @@ function ew(e) {
             channel: n,
             selectedParticipant: s,
             canChangeLayout: l,
-            canInvite: r,
-            onToggleChat: a,
+            canInvite: a,
+            onToggleChat: r,
             maybeLeaveFullScreen: o,
         } = e,
         c = (0, Q.Bx)(),
@@ -111,7 +111,7 @@ function ew(e) {
         A = [eM.DUB.FULL_SCREEN, eM.DUB.NO_CHAT].includes(t);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            r && c < Q.vs.NO_INVITE
+            a && c < Q.vs.NO_INVITE
                 ? (0, i.jsx)(en.A, {
                       channel: n,
                       stream: s?.type === eL.lp.STREAM ? (0, P.Iy)(s.id) : void 0,
@@ -131,7 +131,7 @@ function ew(e) {
                           direction: h,
                           className: eG.jZ,
                           onClick: () => {
-                              (0, eR.X)(y.A.VOICE_CONTROL_TRAY, eR.O.CHAT, A), a();
+                              (0, eR.X)(y.A.VOICE_CONTROL_TRAY, eR.O.CHAT, A), r();
                           },
                       }),
                   })
@@ -154,7 +154,7 @@ class ek extends s.PureComponent {
     componentDidMount() {
         let { channel: e, layout: t } = this.props;
         this.currentDocument.addEventListener(eE.Wb, this.handleFullScreenChange),
-            eg.default.track(eM.HAw.VIDEO_LAYOUT_TOGGLED, {
+            e_.default.track(eM.HAw.VIDEO_LAYOUT_TOGGLED, {
                 video_layout: this.inPopout ? "popout" : t,
                 ...(0, j.QS)(e.id),
             });
@@ -200,17 +200,17 @@ class ek extends s.PureComponent {
     get viewProperties() {
         let { layout: e, mode: t, channel: n, inCall: i, canPopout: s } = this.props,
             l = t === eM._Of.VIDEO && i && !(this.popoutOpen && !this.inPopout),
-            r = t === eM._Of.VIDEO && i && this.popoutSupported && s,
-            a = t !== eM._Of.VOICE && n.isPrivate() && !this.inPopout && i,
+            a = t === eM._Of.VIDEO && i && this.popoutSupported && s,
+            r = t !== eM._Of.VOICE && n.isPrivate() && !this.inPopout && i,
             o = n.type === eM.rbe.GUILD_VOICE,
             c = {
                 renderHeader: !0,
                 useTheme: !1,
                 useExternalHeader: e === eM.DUB.MINIMUM || e === eM.DUB.NORMAL,
                 canInvite: o,
-                canPopout: r,
+                canPopout: a,
                 canFullscreen: l,
-                canChangeLayout: a,
+                canChangeLayout: r,
                 canStayOnTop: this.inPopout && this.nativePopoutSupported,
             };
         if (!i) return { ...c, canFullscreen: l, useTheme: !0 };
@@ -282,13 +282,13 @@ class ek extends s.PureComponent {
         });
     };
     handleContextMenu = (e, t, s, l) => {
-        let { channel: r, appContext: a, layout: c } = this.props,
-            d = { onClose: () => this._lastIdleProps?.onAllowIdle("menu"), context: a };
+        let { channel: a, appContext: r, layout: c } = this.props,
+            d = { onClose: () => this._lastIdleProps?.onAllowIdle("menu"), context: r };
         switch ((this._lastIdleProps?.onPreventIdle("menu"), this._lastIdleProps?.onActive(), e.type)) {
             case eL.lp.HIDDEN_STREAM:
             case eL.lp.STREAM:
                 this.trackCallTileContextMenuImpression(e, eL.qs.STREAM),
-                    (0, g.L3)(
+                    (0, _.L3)(
                         t,
                         async () => {
                             let { default: t } = await n.e("66692").then(n.bind(n, 796175));
@@ -297,7 +297,7 @@ class ek extends s.PureComponent {
                                     ...n,
                                     stream: e.stream,
                                     exitFullscreen: this.maybeLeaveFullScreen,
-                                    appContext: a,
+                                    appContext: r,
                                     minimal: s,
                                     onInteraction: this.getCallTileMenuActionHandler(
                                         "StreamContextMenu",
@@ -315,7 +315,7 @@ class ek extends s.PureComponent {
                 let u = em.default.getUser(e.id);
                 if (null != u) {
                     if (s)
-                        return (0, W.r)(t, u, r, d, (e, t) =>
+                        return (0, W.r)(t, u, a, d, (e, t) =>
                             (0, eO.Y)({
                                 menuItemProps: t,
                                 menuName: e,
@@ -325,16 +325,17 @@ class ek extends s.PureComponent {
                                 location: y.A.CHANNEL_CALL,
                             }),
                         );
-                    switch (r.type) {
+                    switch (a.type) {
                         case eM.rbe.DM:
-                            return (0, g.L3)(
+                            return (0, _.L3)(
                                 t,
                                 async () => {
                                     let { default: t } = await Promise.all([
                                         n.e("97262"),
                                         n.e("42128"),
+                                        n.e("70303"),
                                         n.e("39778"),
-                                        n.e("40225"),
+                                        n.e("75063"),
                                     ]).then(n.bind(n, 385913));
                                     return (n) =>
                                         (0, i.jsx)(t, {
@@ -342,7 +343,7 @@ class ek extends s.PureComponent {
                                             showChannelCallItems: !0,
                                             showMediaItems: !0,
                                             user: u,
-                                            channel: r,
+                                            channel: a,
                                             showModalItems: !0,
                                             onInteraction: this.getCallTileMenuActionHandler(
                                                 "DMUserContextMenu",
@@ -354,14 +355,14 @@ class ek extends s.PureComponent {
                                 d,
                             );
                         case eM.rbe.GROUP_DM:
-                            return (0, g.L3)(
+                            return (0, _.L3)(
                                 t,
                                 async () => {
                                     let { default: t } = await Promise.all([
                                         n.e("97262"),
                                         n.e("42128"),
                                         n.e("62891"),
-                                        n.e("92105"),
+                                        n.e("77473"),
                                     ]).then(n.bind(n, 228006));
                                     return (n) =>
                                         (0, i.jsx)(t, {
@@ -370,7 +371,7 @@ class ek extends s.PureComponent {
                                             showMediaItems: !0,
                                             showChatItems: c === eM.DUB.MINIMUM || c === eM.DUB.NORMAL,
                                             user: u,
-                                            channel: r,
+                                            channel: a,
                                             showModalItems: !0,
                                             onInteraction: this.getCallTileMenuActionHandler(
                                                 "GroupDMUserContextMenu",
@@ -384,17 +385,17 @@ class ek extends s.PureComponent {
                         case eM.rbe.GUILD_VOICE:
                         case eM.rbe.PUBLIC_THREAD:
                         case eM.rbe.PRIVATE_THREAD:
-                            let l = r.getGuildId();
+                            let l = a.getGuildId();
                             return (
                                 o()(null != l, "GuildID null for guild voice channel"),
-                                (0, g.L3)(
+                                (0, _.L3)(
                                     t,
                                     async () => {
                                         let { default: t } = await Promise.all([
                                             n.e("97262"),
                                             n.e("42128"),
                                             n.e("84841"),
-                                            n.e("49783"),
+                                            n.e("54266"),
                                         ]).then(n.bind(n, 107632));
                                         return (n) =>
                                             (0, i.jsx)(t, {
@@ -403,7 +404,7 @@ class ek extends s.PureComponent {
                                                 showChannelCallItems: !0,
                                                 showChatItems: !1,
                                                 user: u,
-                                                channel: r,
+                                                channel: a,
                                                 guildId: l,
                                                 showModalItems: !0,
                                                 onInteraction: this.getCallTileMenuActionHandler(
@@ -424,14 +425,14 @@ class ek extends s.PureComponent {
         this.setState({ resizedHeight: e });
     };
     handleSelectParticipant = (e, t) => {
-        let { channel: n, selectedParticipant: i, allActiveStreams: s, inCall: l, mode: r } = this.props;
+        let { channel: n, selectedParticipant: i, allActiveStreams: s, inCall: l, mode: a } = this.props;
         (0, eL.Ay)(e) &&
             (0, w.eo)(n, ep.A, eu.A, eh.A, G.default)[0] &&
-            (_.default.selectVoiceChannel(n.id),
+            (g.default.selectVoiceChannel(n.id),
             0 === s.filter((t) => (0, P._z)(t) === e.id && t.state !== eM.XYD.ENDED).length &&
                 (0, f.A9)((0, P.Iy)(e.id), { forceMultiple: t.shiftKey })),
             l &&
-                r === eM._Of.VIDEO &&
+                a === eM._Of.VIDEO &&
                 (i?.id === e.id ? p.A.selectParticipant(n.id, null) : p.A.selectParticipant(n.id, e.id));
     };
     handleOpenPopout = () => {
@@ -439,7 +440,7 @@ class ek extends s.PureComponent {
             n = async () => {
                 t?.applicationId != null && (await (0, S.od)(t.applicationId, e.id));
                 let n = e.getGuildId();
-                null == n || ed.Ay.isCurrentUserGuest(n) || (0, K.pX)((0, e_.vJ)(n)), H.openChannelCallPopout(e);
+                null == n || ed.Ay.isCurrentUserGuest(n) || (0, K.pX)((0, eg.vJ)(n)), H.openChannelCallPopout(e);
             };
         null == t || (0, N.f)() ? n() : (0, v.A)({ onConfirm: n });
     };
@@ -468,8 +469,8 @@ class ek extends s.PureComponent {
     };
     renderBottomLeft = () => {
         let { layout: e, channel: t, selectedParticipant: n, inCall: s } = this.props,
-            { canChangeLayout: l, canInvite: r } = this.viewProperties,
-            a =
+            { canChangeLayout: l, canInvite: a } = this.viewProperties,
+            r =
                 e === eM.DUB.FULL_SCREEN
                     ? () => {
                           (this._prevLayout = eM.DUB.NORMAL), this.handleFullScreen();
@@ -481,8 +482,8 @@ class ek extends s.PureComponent {
                   channel: t,
                   selectedParticipant: n,
                   canChangeLayout: l,
-                  canInvite: r,
-                  onToggleChat: a,
+                  canInvite: a,
+                  onToggleChat: r,
                   maybeLeaveFullScreen: this.maybeLeaveFullScreen,
               })
             : null;
@@ -494,9 +495,9 @@ class ek extends s.PureComponent {
                 currentUserId: n,
                 selectedParticipant: s,
                 inCall: l,
-                canUseHaven: r,
+                canUseHaven: a,
             } = this.props,
-            { canFullscreen: a, canStayOnTop: o, canPopout: c, useTheme: d } = this.viewProperties;
+            { canFullscreen: r, canStayOnTop: o, canPopout: c, useTheme: d } = this.viewProperties;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 null != s && s.type !== eL.lp.ACTIVITY && s.user.id !== n
@@ -516,7 +517,7 @@ class ek extends s.PureComponent {
                           onToggleStayOnTop: this.handleStayOnTop,
                       })
                     : null,
-                r &&
+                a &&
                     l &&
                     (0, i.jsx)(A.K0, {
                         variant: "icon-only",
@@ -537,7 +538,7 @@ class ek extends s.PureComponent {
                           },
                       })
                     : null,
-                a
+                r
                     ? (0, i.jsx)(et.A, {
                           themeable: d,
                           node: this.getRootNode(),
@@ -564,23 +565,23 @@ class ek extends s.PureComponent {
     };
     renderVoiceChannelEffects = () => {
         let { channel: e, callContainerDimensions: t } = this.props;
-        return (0, i.jsx)(ej.Ay, { children: (0, i.jsx)(er.A, { callHeight: t.height, channelId: e.id }) });
+        return (0, i.jsx)(ej.Ay, { children: (0, i.jsx)(ea.A, { callHeight: t.height, channelId: e.id }) });
     };
     renderHeader = () => {
-        let { renderExternalHeader: e, channel: t, guild: n, appContext: s, chatOpen: l, inCall: r } = this.props,
-            { useExternalHeader: a, renderHeader: o } = this.viewProperties;
+        let { renderExternalHeader: e, channel: t, guild: n, appContext: s, chatOpen: l, inCall: a } = this.props,
+            { useExternalHeader: r, renderHeader: o } = this.viewProperties;
         return o
             ? (0, i.jsx)(J.A, {
                   children: (0, i.jsx)("div", {
                       className: eG.dL,
-                      children: a
+                      children: r
                           ? e?.()
                           : (0, i.jsx)(ev.A, {
                                 channel: t,
                                 guild: n,
                                 appContext: s,
-                                inCall: r,
-                                isChatOpen: l || (this.popoutOpen && !this.inPopout && r),
+                                inCall: a,
+                                isChatOpen: l || (this.popoutOpen && !this.inPopout && a),
                                 exitFullScreen: this.maybeLeaveFullScreen,
                             }),
                   }),
@@ -593,8 +594,8 @@ class ek extends s.PureComponent {
                 selectedParticipant: n,
                 inCall: s,
                 hasConnectPermission: l,
-                mode: r,
-                participantsOpen: a,
+                mode: a,
+                participantsOpen: r,
                 participants: o,
                 filteredParticipants: c,
                 participantsVersion: d,
@@ -603,13 +604,13 @@ class ek extends s.PureComponent {
                 layout: A,
                 forceShowControls: m,
                 awaitingRemoteSessionInfo: p,
-                currentChannelActivities: g,
-                callContainerDimensions: _,
+                currentChannelActivities: _,
+                callContainerDimensions: g,
             } = this.props,
             f = A === eM.DUB.MINIMUM,
             x = f || A === eM.DUB.NORMAL,
-            C = s && r === eM._Of.VIDEO,
-            E = (g?.length ?? 0) > 0 && u.isPrivate();
+            C = s && a === eM._Of.VIDEO,
+            E = (_?.length ?? 0) > 0 && u.isPrivate();
         return (
             (this._lastIdleProps = e),
             (0, i.jsx)(Z.A, {
@@ -638,13 +639,13 @@ class ek extends s.PureComponent {
                               selectedParticipant: C ? n : null,
                               layout: A,
                               idle: e.idle,
-                              mode: r,
+                              mode: a,
                               onSelectParticipant: this.handleSelectParticipant,
                               onContextMenuParticipant: this.handleContextMenu,
-                              showParticipants: a && (!x || E),
+                              showParticipants: r && (!x || E),
                               popoutType: t,
                               awaitingRemoteSessionInfo: p,
-                              callContainerDimensions: _,
+                              callContainerDimensions: g,
                           }),
             })
         );
@@ -656,7 +657,7 @@ class ek extends s.PureComponent {
                 guild: n,
                 mode: s,
                 chatOpen: l,
-                appContext: a,
+                appContext: r,
                 maxSidebarWidth: o,
                 maxHeight: c,
                 inCall: d,
@@ -666,7 +667,7 @@ class ek extends s.PureComponent {
             m = e !== eM.DUB.HAVEN && e !== eM.DUB.NO_CHAT && e !== eM.DUB.FULL_SCREEN && null != c,
             p = eM.NJ8.MIDNIGHT;
         return (0, i.jsxs)("div", {
-            className: r()(eG.iE, eU[e], eP[a], {
+            className: a()(eG.iE, eU[e], eP[r], {
                 [eG.XW]: this.popoutOpen && !this.inPopout && e !== eM.DUB.NO_CHAT && t.isPrivate(),
                 [eG.Ki]: h,
                 [eG.vc]: l,
@@ -680,7 +681,7 @@ class ek extends s.PureComponent {
                     theme: p,
                     children: (t) =>
                         (0, i.jsx)("div", {
-                            className: r()(eG.ik, l || e !== eM.DUB.FULL_SCREEN ? void 0 : eG.iy, t),
+                            className: a()(eG.ik, l || e !== eM.DUB.FULL_SCREEN ? void 0 : eG.iy, t),
                             ref: (e) => {
                                 (this._callContainerRef.current = e), (this.props.callContainerRef.current = e);
                             },
@@ -710,10 +711,10 @@ class ek extends s.PureComponent {
     }
 }
 let eV = function (e) {
-    let { channel: t, renderExternalHeader: n, maxHeight: l, canPopout: r = !0, popoutType: a } = e,
+    let { channel: t, renderExternalHeader: n, maxHeight: l, canPopout: a = !0, popoutType: r } = e,
         { width: o = 0, ref: c } = (0, E.Ay)(),
-        { width: h = 0, height: m = 0, ref: g } = (0, E.Ay)(),
-        { ref: _ } = (0, E.Ay)(),
+        { width: h = 0, height: m = 0, ref: _ } = (0, E.Ay)(),
+        { ref: g } = (0, E.Ay)(),
         f = (0, B.Us)(),
         N = (0, U.A)(),
         S = (0, d.bG)([eA.A], () => (N?.channelId ?? eA.A.getVoiceChannelId()) === t.id),
@@ -747,10 +748,10 @@ let eV = function (e) {
                 }
             );
         }, [f, t.id]),
-        H = (0, d.yK)([ea.A], () => ea.A.getAllActiveStreams()),
+        H = (0, d.yK)([er.A], () => er.A.getAllActiveStreams()),
         { selectedStream: K } = (0, d.cf)(
-            [ea.A],
-            () => ({ selectedStream: null != k ? ea.A.getActiveStreamForStreamKey(k.id) : null }),
+            [er.A],
+            () => ({ selectedStream: null != k ? er.A.getActiveStreamForStreamKey(k.id) : null }),
             [k],
         ),
         W = (0, d.bG)([eu.A], () => eu.A.getGuild(t.getGuildId())),
@@ -790,7 +791,7 @@ let eV = function (e) {
     }, [S, L]);
     let es = (0, D.mB)(u.M.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
         { analyticsLocations: el } = (0, R.Ay)(y.A.CHANNEL_CALL),
-        er = o - 550,
+        ea = o - 550,
         ed = T.Ay.getEmbeddedActivitiesForChannel(t.id),
         { enabled: em } = V.s.useConfig({ location: "ChannelCall" }),
         ep = (0, eI.T)({ channel: t, location: "ChannelCall" });
@@ -799,8 +800,8 @@ let eV = function (e) {
             S &&
             null == eN.A.getAllChatOpen()[t.id] &&
             (o <= 0 || p.A.updateChatOpen(t.id, !0, "auto open screen width"));
-    }, [ep, er, o, t.id, S]);
-    let { theme: eg } = (0, A.wRf)();
+    }, [ep, ea, o, t.id, S]);
+    let { theme: e_ } = (0, A.wRf)();
     return (0, i.jsx)(R.f5, {
         value: el,
         children: (0, i.jsx)(C.A, {
@@ -825,7 +826,7 @@ let eV = function (e) {
                             participantsVersion: O,
                             layout: M,
                             chatOpen: w,
-                            maxSidebarWidth: er,
+                            maxSidebarWidth: ea,
                             currentUserId: z,
                             selectedParticipant: k,
                             allActiveStreams: H,
@@ -835,16 +836,16 @@ let eV = function (e) {
                             updateStoredCallHeaderHeight: ee,
                             wrapperRef: c,
                             callContainerDimensions: { width: h, height: m },
-                            callContainerRef: g,
-                            channelChatRef: _,
+                            callContainerRef: _,
+                            channelChatRef: g,
                             width: o,
                             maxHeight: l,
                             forceShowControls: es,
                             awaitingRemoteSessionInfo: $,
                             currentChannelActivities: ed,
-                            theme: eg,
-                            canPopout: r,
-                            popoutType: a,
+                            theme: e_,
+                            canPopout: a,
+                            popoutType: r,
                             canUseHaven: em,
                         }),
                         !t.isPrivate() && (0, i.jsx)(ej.wQ, {}),

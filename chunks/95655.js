@@ -13,8 +13,8 @@ var i = n(627968),
     A = n(954571),
     m = n(652215),
     p = n(985018),
-    g = n(202115);
-let _ = (e) => {
+    _ = n(202115);
+let g = (e) => {
         let { channel: t } = e;
         return (0, h.bG)({ channelId: t.id })
             ? (0, i.jsx)(l.m, {
@@ -38,7 +38,7 @@ let _ = (e) => {
                     text: p.intl.string(p.t["5Q9+/L"]),
                     position: "bottom",
                     children: (0, i.jsxs)(a.DUT, {
-                        className: g.cD,
+                        className: _.cD,
                         onClick: () => {
                             (0, u.U)(s, o.A.HEADER_BAR);
                         },
@@ -46,7 +46,7 @@ let _ = (e) => {
                             (0, r.L3)(
                                 e,
                                 () =>
-                                    Promise.all([n.e("97262"), n.e("60200"), n.e("98750")])
+                                    Promise.all([n.e("97262"), n.e("70303"), n.e("60200"), n.e("29108")])
                                         .then(n.bind(n, 4027))
                                         .then((e) => {
                                             let { default: n } = e;
@@ -65,18 +65,18 @@ let _ = (e) => {
                         "aria-label": p.intl.string(p.t["5Q9+/L"]),
                         children: [
                             (0, i.jsx)(d.A, {
-                                className: g.gn,
+                                className: _.gn,
                                 "aria-hidden": !0,
                                 channel: t,
                                 size: a._3J.SIZE_20,
                                 facepileSizeOverride: a._3J.SIZE_24,
                             }),
                             (0, i.jsx)(a.Text, { variant: "text-md/medium", color: "text-strong", children: h ?? "" }),
-                            (0, i.jsx)(a.R2l, { className: g.IZ, size: "xs", color: "currentColor" }),
+                            (0, i.jsx)(a.R2l, { className: _.IZ, size: "xs", color: "currentColor" }),
                         ],
                     }),
                 }),
-                (0, i.jsx)(_, { channel: t }),
+                (0, i.jsx)(g, { channel: t }),
             ],
         });
     });
