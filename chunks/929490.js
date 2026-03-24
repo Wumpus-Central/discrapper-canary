@@ -3,7 +3,18 @@ n.d(t, { A: () => a });
 var r = n(315069),
     i = n(611010);
 function s(e) {
-    if (e?.steam != null) return { steam: { rating: e.steam.rating, ratingCount: e.steam.rating_count } };
+    if (e?.steam != null || e?.opencritic != null)
+        return {
+            steam: null != e.steam ? { rating: e.steam.rating, ratingCount: e.steam.rating_count } : void 0,
+            opencritic:
+                null != e.opencritic
+                    ? {
+                          topCriticRating: e.opencritic.top_critic_rating,
+                          topCriticRatingCount: e.opencritic.top_critic_rating_count,
+                          tier: e.opencritic.tier,
+                      }
+                    : void 0,
+        };
 }
 class a extends r.A {
     id;
@@ -80,6 +91,7 @@ class a extends r.A {
                     shopCollectionIds: e.shop_collection_ids,
                     steamReleaseStatus: t.steam_release_status,
                     reviews: s(t.reviews),
+                    opencriticUrl: t.opencritic_url,
                     steam_id: t.steam_id,
                     announcementsChannelId: t.announcements_channel_id,
                     l30Rank: t.l30_rank,
