@@ -1,4 +1,4 @@
-n.d(t, { A: () => j, K: () => A });
+n.d(t, { A: () => v, K: () => j });
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -9,12 +9,12 @@ var a = n(627968),
     d = n(409626),
     u = n(37948),
     m = n(985018),
-    x = n(728528),
-    f = n(612617);
+    x = n(851822),
+    f = n(307291);
 let h = [s.V.OFFICIAL, s.V.TWITTER, s.V.YOUTUBE],
     g = { colorClass: f.wP },
-    p = { size: "xs", colorClass: f.wP };
-function _(e, t) {
+    _ = { size: "xs", colorClass: f.wP };
+function p(e, t) {
     switch (e.category) {
         case s.V.OFFICIAL:
             return { icon: (0, a.jsx)(o.L_e, { ...t }), action: d.Ws.WebsiteLink, title: m.intl.string(m.t.fOUKvg) };
@@ -40,25 +40,26 @@ function _(e, t) {
             throw Error("Unknown website category");
     }
 }
-function v(e) {
-    let { website: t, trackClick: n } = e,
-        { action: l, icon: i, title: r } = _(t, g);
+function A(e) {
+    let { website: t, trackAction: n } = e,
+        { action: i, icon: r, title: s } = p(t, g),
+        d = l.useCallback(() => {
+            n(i);
+        }, [i, n]);
     return (0, a.jsx)(c.m, {
-        text: r,
+        text: s,
         children: (0, a.jsx)(o.MzZ, {
-            onClick: () => {
-                n(l);
-            },
+            onClick: d,
             className: f.yO,
             href: t.url,
             target: "_blank",
-            "aria-label": r,
-            children: i,
+            "aria-label": s,
+            children: r,
         }),
     });
 }
-let j = function (e) {
-    let { detectedGame: t, trackClick: n } = e;
+let v = function (e) {
+    let { detectedGame: t, trackAction: n } = e;
     if (null == t.websites) return null;
     let l = t.websites
         .filter((e) => {
@@ -78,15 +79,15 @@ let j = function (e) {
                   }),
                   (0, a.jsx)("div", {
                       className: r()(x.nM, x.mX),
-                      children: l.map((e) => (0, a.jsx)(v, { website: e, trackClick: n }, e.url)),
+                      children: l.map((e) => (0, a.jsx)(A, { website: e, trackAction: n }, e.url)),
                   }),
               ],
           });
 };
-function A(e) {
-    let { website: t, trackClick: n } = e,
+function j(e) {
+    let { website: t, trackAction: n } = e,
         i = (0, u.A)(),
-        { action: r, icon: s, title: d } = _(t, p),
+        { action: r, icon: s, title: d } = p(t, _),
         m = l.useCallback(() => {
             n(r), i(t.url);
         }, [r, i, n, t.url]);

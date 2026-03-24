@@ -1,20 +1,26 @@
 "use strict";
-n.d(t, { n: () => s });
+n.d(t, { n: () => l });
 var r = n(627968),
-    i = n(397927),
-    a = n(985018);
-function s(e) {
-    if (null == e) return null;
-    let t = () =>
-        (0, i.mMO)(async () => {
-            let { default: t } = await n.e("27495").then(n.bind(n, 651930));
-            return (n) => (0, r.jsx)(t, { ...n, detectedActivity: { application_id: e, name: "" } });
-        });
-    return (0, r.jsx)(i.Drp, {
-        id: "game-profile-something-wrong",
-        label: a.intl.string(a.t.qP2cXd),
-        action: t,
-        color: "danger",
-        leadingAccessory: { type: "icon", icon: i.EpV },
-    });
+    i = n(64700),
+    s = n(397927),
+    a = n(409626),
+    o = n(985018);
+function l(e, t) {
+    let l = i.useCallback(() => {
+        null != e &&
+            (t?.(a.Ws.Feedback),
+            (0, s.mMO)(async () => {
+                let { default: t } = await n.e("27495").then(n.bind(n, 651930));
+                return (n) => (0, r.jsx)(t, { ...n, detectedActivity: { application_id: e, name: "" } });
+            }));
+    }, [e, t]);
+    return null == e
+        ? null
+        : (0, r.jsx)(s.Drp, {
+              id: "game-profile-something-wrong",
+              label: o.intl.string(o.t.qP2cXd),
+              action: l,
+              color: "danger",
+              leadingAccessory: { type: "icon", icon: s.EpV },
+          });
 }

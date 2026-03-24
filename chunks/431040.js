@@ -1,179 +1,179 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => _ });
 var a = n(627968),
     l = n(64700),
     i = n(397927),
     r = n(541830),
     s = n(240248),
-    o = n(899273),
-    c = n(504186),
+    c = n(899273),
+    o = n(504186),
     d = n(814698),
     u = n(839671),
     m = n(936636),
     x = n(424994),
-    _ = n(985018),
-    g = n(82890);
-function f() {
-    return (0, a.jsx)(i.Text, { variant: "text-sm/normal", color: "text-subtle", children: _.intl.string(_.t.GruYxV) });
+    f = n(985018),
+    h = n(82890);
+function g() {
+    return (0, a.jsx)(i.Text, { variant: "text-sm/normal", color: "text-subtle", children: f.intl.string(f.t.GruYxV) });
 }
-let p = function (e) {
-    let { application: t, detectedGame: n, trackAction: p } = e,
-        h = l.useMemo(() => n.genres.map(r.du).join(", "), [n]),
-        v = n.publishers.join(", "),
-        A = n.developers.join(", "),
+let _ = function (e) {
+    let { application: t, detectedGame: n, trackAction: _ } = e,
+        p = l.useMemo(() => n.genres.map(r.du).join(", "), [n]),
+        A = n.publishers.join(", "),
+        v = n.developers.join(", "),
         j = n.firstReleaseDate,
-        I = (0, c.A)(n),
-        b = (0, o.Y)(n),
-        C = !(0, s.uJ)(h),
-        E = !(0, s.uJ)(v),
-        N = !(0, s.uJ)(A),
+        E = (0, o.A)(n),
+        I = (0, c.Y)(n),
+        C = !(0, s.uJ)(p),
+        b = !(0, s.uJ)(A),
+        N = !(0, s.uJ)(v),
         T = !(0, s.uJ)(j),
-        S = I.length > 0,
-        k = b.length > 0 && !b.every((e) => (0, s.uJ)(e.url));
+        S = E.length > 0,
+        L = I.length > 0 && !I.every((e) => (0, s.uJ)(e.url));
     return (0, a.jsxs)("div", {
-        className: g.uW,
+        className: h.uW,
         children: [
             (0, a.jsx)("div", {
-                className: g.Gf,
+                className: h.Gf,
                 children: (0, a.jsx)(i.Heading, {
                     variant: "heading-sm/semibold",
                     color: "text-strong",
-                    children: _.intl.string(_.t["7OjmmH"]),
+                    children: f.intl.string(f.t["7OjmmH"]),
                 }),
             }),
             (0, a.jsxs)("div", {
-                className: g.kL,
+                className: h.kL,
                 children: [
                     (0, a.jsxs)("div", {
-                        className: g.J1,
+                        className: h.J1,
                         children: [
                             (0, a.jsx)(i.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-subtle",
-                                children: 1 !== n.genres.length ? _.intl.string(_.t.pDgwYB) : _.intl.string(_.t.mjFKqn),
+                                children: 1 !== n.genres.length ? f.intl.string(f.t.pDgwYB) : f.intl.string(f.t.mjFKqn),
                             }),
                             C
                                 ? (0, a.jsx)(i.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-subtle",
-                                      className: g.Gu,
-                                      children: h,
+                                      className: h.Gu,
+                                      children: p,
                                   })
-                                : (0, a.jsx)(f, {}),
+                                : (0, a.jsx)(g, {}),
                         ],
                     }),
                     (0, a.jsxs)("div", {
-                        className: g.J1,
+                        className: h.J1,
                         children: [
                             (0, a.jsx)(i.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-subtle",
                                 children:
                                     1 !== n.publishers.length
-                                        ? _.intl.string(_.t.Hc7Enk)
-                                        : _.intl.string(_.t["4Byy/G"]),
+                                        ? f.intl.string(f.t.Hc7Enk)
+                                        : f.intl.string(f.t["4Byy/G"]),
                             }),
-                            E
+                            b
                                 ? (0, a.jsx)(i.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-subtle",
-                                      className: g.Gu,
-                                      children: v,
+                                      className: h.Gu,
+                                      children: A,
                                   })
-                                : (0, a.jsx)(f, {}),
+                                : (0, a.jsx)(g, {}),
                         ],
                     }),
                     (0, a.jsxs)("div", {
-                        className: g.J1,
+                        className: h.J1,
                         children: [
                             (0, a.jsx)(i.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-subtle",
                                 children:
-                                    1 !== n.developers.length ? _.intl.string(_.t.KATEJB) : _.intl.string(_.t.na3PT0),
+                                    1 !== n.developers.length ? f.intl.string(f.t.KATEJB) : f.intl.string(f.t.na3PT0),
                             }),
                             N
                                 ? (0, a.jsx)(i.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-subtle",
-                                      className: g.Gu,
-                                      children: A,
+                                      className: h.Gu,
+                                      children: v,
                                   })
-                                : (0, a.jsx)(f, {}),
+                                : (0, a.jsx)(g, {}),
                         ],
                     }),
                     (0, a.jsxs)("div", {
-                        className: g.J1,
+                        className: h.J1,
                         children: [
                             (0, a.jsx)(i.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-subtle",
-                                children: _.intl.string(_.t.H3mPDT),
+                                children: f.intl.string(f.t.H3mPDT),
                             }),
                             T
                                 ? (0, a.jsx)(i.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-subtle",
-                                      className: g.Gu,
-                                      children: new Date(j).toLocaleDateString(_.intl.currentLocale, {
+                                      className: h.Gu,
+                                      children: new Date(j).toLocaleDateString(f.intl.currentLocale, {
                                           year: "numeric",
                                           month: "long",
                                           day: "numeric",
                                       }),
                                   })
-                                : (0, a.jsx)(f, {}),
+                                : (0, a.jsx)(g, {}),
                         ],
                     }),
                     (0, a.jsxs)("div", {
-                        className: g.J1,
+                        className: h.J1,
                         children: [
                             (0, a.jsx)(i.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-subtle",
-                                children: I.length > 1 ? _.intl.string(_.t.PNqxNe) : _.intl.string(_.t["UxAag+"]),
+                                children: E.length > 1 ? f.intl.string(f.t.PNqxNe) : f.intl.string(f.t["UxAag+"]),
                             }),
                             S
                                 ? (0, a.jsx)("div", {
-                                      className: g.Gu,
-                                      children: I.map((e) => (0, a.jsx)(m.s, { platform: e }, e)),
+                                      className: h.Gu,
+                                      children: E.map((e) => (0, a.jsx)(m.s, { platform: e }, e)),
                                   })
-                                : (0, a.jsx)(f, {}),
+                                : (0, a.jsx)(g, {}),
                         ],
                     }),
                     (0, a.jsxs)("div", {
-                        className: g.J1,
+                        className: h.J1,
                         children: [
                             (0, a.jsx)(i.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-subtle",
-                                children: _.intl.string(_.t["Oj3o1/"]),
+                                children: f.intl.string(f.t["Oj3o1/"]),
                             }),
-                            k
+                            L
                                 ? (0, a.jsx)("div", {
-                                      className: g.Gu,
-                                      children: b.map((e) => (0, a.jsx)(u.K, { website: e, trackClick: p }, e.url)),
+                                      className: h.Gu,
+                                      children: I.map((e) => (0, a.jsx)(u.K, { website: e, trackAction: _ }, e.url)),
                                   })
-                                : (0, a.jsx)(f, {}),
+                                : (0, a.jsx)(g, {}),
                         ],
                     }),
                     (0, a.jsxs)("div", {
-                        className: g.J1,
+                        className: h.J1,
                         children: [
                             (0, a.jsx)(i.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-subtle",
-                                children: _.intl.string(_.t["BwQ+9e"]),
+                                children: f.intl.string(f.t["BwQ+9e"]),
                             }),
                             (0, a.jsx)(i.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-subtle",
-                                className: g.Gu,
-                                children: _.intl.format(_.t.XPFZVl, { igdbLink: x.s8 }),
+                                className: h.Gu,
+                                children: f.intl.format(f.t.XPFZVl, { igdbLink: x.s8 }),
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, a.jsx)("div", { className: g.OQ, children: (0, a.jsx)(d.A, { application: t, trackAction: p }) }),
+            (0, a.jsx)("div", { className: h.OQ, children: (0, a.jsx)(d.A, { application: t, trackAction: _ }) }),
         ],
     });
 };
