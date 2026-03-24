@@ -68993,6 +68993,13 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-family: Delicious Handrawn;
+    font-style: normal;
+    font-weight: 400;
+    src: url(/assets/54ea0efe31f53f3c.woff2) format("woff2")
+}
+
+@font-face {
     font-family: Cherry Bomb One;
     font-style: normal;
     font-weight: 400;

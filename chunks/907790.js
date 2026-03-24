@@ -52,6 +52,7 @@ var r = {
     "./cherry-bomb-one/cherrybombone-400-normal.woff2": ["369645"],
     "./source-code-pro/sourcecodepro-700-bold.woff2": ["209722"],
     "./gg-sans/ggsans-700-bold.woff2": ["964033"],
+    "./delicious-handrawn/delicioushandrawn-400-normal.woff2": ["908540"],
     "./zilla-slab/zillaslab-600-semibold.woff2": ["805038"],
     "./gg-sans/ggsans-400-normalitalic.woff2": ["822752"],
     "./noto-sans/notosans-400-normalitalic.woff2": ["533668"],
