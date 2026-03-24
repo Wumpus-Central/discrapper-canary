@@ -387,13 +387,17 @@ async function J(e, t, n, r) {
         { name: a, line1: o, line2: l, city: u, state: c, postalCode: d, country: _ } = t,
         f = C.kv.get(n);
     s()(null != f, "unsupported payment method type");
-    let { paymentMethod: p, error: h } = await e.createPaymentMethod({
-        type: f,
-        billing_details: { address: { line1: o, line2: l, city: u, state: c, postal_code: d, country: _ }, name: a },
-    });
-    if (null != h) throw F(h);
-    if (null == p) throw F("stripePaymentMethod not available with successful stripe call");
-    return P(y.kM_.STRIPE, p.id, t, { billingAddressToken: i, analyticsLocation: r });
+    let p = {
+            type: f,
+            billing_details: {
+                address: { line1: o, line2: l, city: u, state: c, postal_code: d, country: _ },
+                name: a,
+            },
+        },
+        { paymentMethod: h, error: m } = await e.createPaymentMethod(p);
+    if (null != m) throw F(m);
+    if (null == h) throw F("stripePaymentMethod not available with successful stripe call");
+    return P(y.kM_.STRIPE, h.id, t, { billingAddressToken: i, analyticsLocation: r });
 }
 async function ee(e, t, n) {
     let r = await M(e),
