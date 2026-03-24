@@ -567,6 +567,7 @@ var r = (function (e) {
             (e[(e.PREMIUM_GROUP_POPOVER_UPSELL_V2 = 715)] = "PREMIUM_GROUP_POPOVER_UPSELL_V2"),
             (e[(e.L_3PP_NON_NITRO_POPOVER = 716)] = "L_3PP_NON_NITRO_POPOVER"),
             (e[(e.L_3PP_NITRO_TOOLTIP = 717)] = "L_3PP_NITRO_TOOLTIP"),
+            (e[(e.MOBILE_ACCOUNT_LINKING_BANNER = 718)] = "MOBILE_ACCOUNT_LINKING_BANNER"),
             e
         );
     })({}),

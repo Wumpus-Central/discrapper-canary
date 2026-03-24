@@ -549,6 +549,8 @@ var r = (function (e) {
         (e.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED = "slayer storefront product details embed"),
         (e.SLAYER_STOREFRONT_SHOP_TAB = "slayer storefront shop tab"),
         (e.AGE_GROUP = "age group"),
+        (e.MOBILE_ACCOUNT_LINK_LARGE_BANNER = "mobile account link large banner"),
+        (e.MOBILE_ACCOUNT_LINK_MEDIUM_BANNER = "mobile account link medium banner"),
         (e.GIFT_CARD_REDEMPTION_SUCCESS_MODAL = "gift card redemption success modal"),
         (e.GAME_COMMUNITY_MULTI_GUILD_UPSELL_GUILDS_BAR_ENTRYPOINT =
             "game community multi guild upsell guilds bar entrypoint"),

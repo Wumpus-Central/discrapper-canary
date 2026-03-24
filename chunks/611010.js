@@ -2,8 +2,8 @@
 n.d(t, { Ay: () => f, kJ: () => _, lg: () => d }), n(938796);
 var r = n(101359),
     i = n(136722),
-    a = n(315069),
-    s = n(486020),
+    s = n(315069),
+    a = n(486020),
     o = n(431209),
     l = n(427157),
     u = n(360469);
@@ -14,7 +14,7 @@ function d(e) {
         null != e.arguments && (t.arguments = e.arguments), null != e.is_launcher && (t.isLauncher = e.is_launcher), t
     );
 }
-class _ extends a.A {
+class _ extends s.A {
     id;
     name;
     icon;
@@ -62,19 +62,19 @@ class _ extends a.A {
             (this.connectionEntrypointUrl = e.connection_entrypoint_url ?? e.connectionEntrypointUrl);
     }
     getIconURL(e, t) {
-        return null != this.icon ? s.Ay.getGameAssetURL({ id: this.id, hash: this.icon, size: e, format: t }) : null;
+        return null != this.icon ? a.Ay.getGameAssetURL({ id: this.id, hash: this.icon, size: e, format: t }) : null;
     }
     getIconSource(e, t) {
-        return null != this.icon ? s.Ay.getGameAssetSource({ id: this.id, hash: this.icon, size: e, format: t }) : null;
+        return null != this.icon ? a.Ay.getGameAssetSource({ id: this.id, hash: this.icon, size: e, format: t }) : null;
     }
     getSplashURL(e, t) {
         return null != this.splash
-            ? s.Ay.getGameAssetURL({ id: this.id, hash: this.splash, size: e, keepAspectRatio: !0, format: t })
+            ? a.Ay.getGameAssetURL({ id: this.id, hash: this.splash, size: e, keepAspectRatio: !0, format: t })
             : null;
     }
     getCoverImageURL(e) {
         return null != this.coverImage
-            ? s.Ay.getApplicationIconURL({ id: this.id, icon: this.coverImage, size: e, keepAspectRatio: !0 })
+            ? a.Ay.getApplicationIconURL({ id: this.id, icon: this.coverImage, size: e, keepAspectRatio: !0 })
             : null;
     }
 }
@@ -110,6 +110,7 @@ class f extends _ {
     categories;
     linkedGames;
     deepLinkUri;
+    applicationAccountLinkBenefitConfig;
     static createFromServer(e) {
         return new f({
             ...e,
@@ -152,6 +153,7 @@ class f extends _ {
                 application: null != e.application ? f.createFromServer(e.application) : void 0,
             })),
             deepLinkUri: e.deeplink_uri,
+            applicationAccountLinkBenefitConfig: e.application_account_link_benefit_config,
         });
     }
     constructor(e) {
@@ -190,7 +192,9 @@ class f extends _ {
                     ...e,
                     application: null != e.application ? f.createFromServer(e.application) : void 0,
                 })) ?? e.linkedGames),
-            (this.deepLinkUri = e.deepLinkUri ?? e.deeplink_uri);
+            (this.deepLinkUri = e.deepLinkUri ?? e.deeplink_uri),
+            (this.applicationAccountLinkBenefitConfig =
+                e.applicationAccountLinkBenefitConfig ?? e.application_account_link_benefit_config);
     }
     mergeFromApplicationUpdate(e) {
         return new f({
@@ -241,6 +245,8 @@ class f extends _ {
             categories: e.categories ?? this.categories,
             linkedGames: e.linkedGames ?? this.linkedGames,
             deepLinkUri: e.deepLinkUri ?? this.deepLinkUri,
+            applicationAccountLinkBenefitConfig:
+                e.applicationAccountLinkBenefitConfig ?? this.applicationAccountLinkBenefitConfig,
         });
     }
     getMaxParticipants() {
