@@ -13,7 +13,7 @@ n.d(t, {
 });
 var r = n(64700),
     i = n(311907),
-    s = n(20424),
+    s = n(96203),
     a = n(622543),
     o = n(576622),
     l = n(961350),
@@ -125,11 +125,11 @@ function v(e, t) {
 }
 function N(e) {
     let { isGift: t, giftRecipient: n, isSocialLayerStorefrontEnabled: o = !0 } = e,
-        l = (0, s.c)({ userId: n?.id }),
+        l = (0, s.A)({ userId: n?.id }),
         u = (0, i.bG)([a.A], () => (n?.id == null ? null : a.A.getFirstWishlistId(n.id))),
         { wishlist: c } = y({ wishlistId: null != u && t && null != n ? u : null, userId: n?.id }),
         d = (0, p.B)(c);
-    return r.useMemo(() => !0 === t && null != n && (d.length > 0 || (o && l)), [t, n, d, l, o]);
+    return r.useMemo(() => !0 === t && null != n && (d.length > 0 || (o && l.length > 0)), [t, n, d, l, o]);
 }
 function C() {
     return R((0, i.bG)([l.default], () => l.default.getId()));

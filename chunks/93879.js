@@ -38,7 +38,7 @@ function R(e) {
             cardSpec: M,
         } = e,
         x = (0, l.h)(s),
-        P = (0, A.Ay)(x?.id),
+        P = (0, A.A)(x?.id),
         k = (0, c.GG)("social_layer_storefront_gifting_breadcrumb");
     (0, d.T)({ location: "social_layer_storefront_gifting_breadcrumb" });
     let U = i.useMemo(() => {

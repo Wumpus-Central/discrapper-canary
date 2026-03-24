@@ -413,7 +413,7 @@ function eN(e) {
         ),
         { largeImage: v, smallImage: N } = (0, ee.nO)({ entry: A, showCoverImage: f }),
         C = (0, P.w)({ location: "content_inventory" }),
-        b = (0, u.bG)([x.A], () => x.A.getStorefrontDetectableGameAndApplicationIds()),
+        b = (0, u.bG)([x.A], () => x.A.getDetectableIdsToApplicationIds()),
         D = I ? y : void 0;
     return (0, r.jsxs)("div", {
         className: eE.au,
@@ -467,7 +467,7 @@ function eN(e) {
                     s,
                 ],
             }),
-            C && null != T && b.has(T)
+            C && null != T && null != b[T]
                 ? (0, r.jsx)(U.A, {
                       className: eE.zu,
                       rewardOfferNoticeClassName: eE.PU,
@@ -520,7 +520,7 @@ function eC(e) {
         { largeImage: F, smallImage: V } = (0, ee.D8)(L, w ?? M),
         { largeImage: H } = (0, ee.nO)({ entry: I }),
         K = (0, P.w)({ location: "content_inventory" }),
-        $ = (0, u.bG)([x.A], () => x.A.getStorefrontDetectableGameAndApplicationIds());
+        $ = (0, u.bG)([x.A], () => x.A.getDetectableIdsToApplicationIds());
     return (0, r.jsxs)("div", {
         className: eE.au,
         children: [
@@ -594,7 +594,7 @@ function eC(e) {
                     }),
                 ],
             }),
-            K && null != S && $.has(S)
+            K && null != S && null != $[S]
                 ? (0, r.jsx)(U.A, {
                       className: eE.zu,
                       applicationId: S,

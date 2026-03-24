@@ -18,8 +18,6 @@ let s = {
         ss02: "Italic - straight l",
         ss03: "Italic - full height forms (W,M)",
         ss04: "Italic - alternate figures (3,4,5,6,7,8,9)",
-        wishlist_user_profile_account_popout_upsell:
-            "Show user profile account popout upsell (reset WISHLIST_USER_PROFILE_ACCOUNT_POPOUT_UPSELL DCF as well)",
     },
     a = {};
 function o(e) {

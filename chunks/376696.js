@@ -3,8 +3,8 @@ n.d(t, { A: () => w });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(311907),
+    a = n.n(l),
+    r = n(311907),
     o = n(397927),
     c = n(80682),
     d = n(845056),
@@ -12,9 +12,9 @@ var i = n(627968),
     h = n(323073),
     A = n(643501),
     m = n(279250),
-    p = n(834757),
-    g = n(727353),
-    _ = n(140547),
+    _ = n(834757),
+    p = n(727353),
+    g = n(140547),
     f = n(636920),
     x = n(832163),
     C = n(565688),
@@ -52,26 +52,26 @@ function w(e) {
         W = Array.from((0, u.Rz)(K).values()),
         Y = (0, E.W)(),
         z = (0, I.i)((e) => e.showSelfActivity),
-        [q, X] = (0, a.yK)(
+        [q, X] = (0, r.yK)(
             [b.A],
             () => [b.A.getStreamForUser(n.id, t.getGuildId()), b.A.getActiveStreamForUser(n.id, t.getGuildId())],
             [t, n.id],
         ),
-        [J, Q] = (0, a.yK)([j.A, T.A, v.A, A.default], () => (0, m.eo)(t, j.A, T.A, v.A, A.default)),
-        $ = (0, a.bG)([S.default], () => S.default.getId()),
-        Z = (0, a.bG)([y.A], () => (0, p.nr)(q, y.A), [q]),
+        [J, Q] = (0, r.yK)([j.A, T.A, v.A, A.default], () => (0, m.eo)(t, j.A, T.A, v.A, A.default)),
+        $ = (0, r.bG)([S.default], () => S.default.getId()),
+        Z = (0, r.bG)([y.A], () => (0, _.nr)(q, y.A), [q]),
         ee = (0, d.me)(n, w ?? Z),
-        et = (0, a.bG)([R.Ay], () => R.Ay.getVoiceStatesForChannel(t).find((e) => e.user.id === n.id) ?? null, [
+        et = (0, r.bG)([R.Ay], () => R.Ay.getVoiceStatesForChannel(t).find((e) => e.user.id === n.id) ?? null, [
             t,
             n.id,
         ]),
         en = s.useMemo(() => (null != et ? [et] : []), [et]),
         { enableUserHoverActivities: ei } = (0, L.fC)({ guildId: t.guild_id, location: "VoiceUserActivities" }),
-        { enableHangStatus: es } = (0, _.$j)({ guildId: t.guild_id, location: "VoiceUserActivities" }),
+        { enableHangStatus: es } = (0, g.$j)({ guildId: t.guild_id, location: "VoiceUserActivities" }),
         el = (0, C.m)({ location: "voice_channel_activities" }),
-        er = (0, a.bG)([x.A], () => x.A.getStorefrontDetectableGameAndApplicationIds()),
-        ea = (0, h.r9)() && (0, h.UK)(t.id),
-        eo = null != q && !ea,
+        ea = (0, r.bG)([x.A], () => x.A.getDetectableIdsToApplicationIds()),
+        er = (0, h.r9)() && (0, h.UK)(t.id),
+        eo = null != q && !er,
         ec = ee.length + W.length > 0,
         ed = null != V,
         eu = n.id === S.default.getId() && !z,
@@ -93,7 +93,7 @@ function w(e) {
         if (!eh) return null;
     }
     return (0, i.jsxs)(o.HOs, {
-        className: r()(P.popover, U.kL),
+        className: a()(P.popover, U.kL),
         children: [
             ed && es && null != V
                 ? (0, i.jsx)(f.Z, {
@@ -108,9 +108,9 @@ function w(e) {
                       textClassName: U.YJ,
                   })
                 : null,
-            null == q || null == k || ea
+            null == q || null == k || er
                 ? null
-                : (0, i.jsx)(g.P, {
+                : (0, i.jsx)(p.P, {
                       stream: q,
                       activeStream: X,
                       streamActivity: Z,
@@ -136,8 +136,8 @@ function w(e) {
                 ),
             ),
             ee.map((e) => {
-                let r = e.application_id;
-                return (null != Y && (r = Y), el && null != r && er.has(r))
+                let a = e.application_id;
+                return (null != Y && (a = Y), el && null != a && null != ea[a])
                     ? (0, i.jsxs)(
                           s.Fragment,
                           {
@@ -151,7 +151,7 @@ function w(e) {
                                   }),
                                   (0, i.jsx)(N.A, {
                                       className: U.L,
-                                      applicationId: r,
+                                      applicationId: a,
                                       rewardOfferNoticeClassName: U.Nh,
                                       userIds: [n.id],
                                       location: "voice_channel",

@@ -1,10 +1,12 @@
 "use strict";
-n.d(t, { T: () => o });
+n.d(t, { T: () => l });
 var r = n(64700),
-    i = n(760716),
-    s = n(652215),
-    a = n(188275);
-function o(e) {
-    let t = (0, i.i)((e) => e.recommendationApplicationIds);
-    return r.useMemo(() => (null != t && t.length > 0 ? t : e ? [s.FYj, a.XR] : [s.FYj]), [e, t]);
+    i = n(735438),
+    s = n(96203),
+    a = n(760716),
+    o = n(652215);
+function l(e) {
+    let t = (0, s.A)({ userId: e }),
+        n = (0, a.i)((e) => e.recommendationApplicationIds);
+    return r.useMemo(() => (0, i.uniq)([o.FYj, ...t, ...(n ?? [])]).sort(), [t, n]);
 }

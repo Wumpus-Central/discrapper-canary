@@ -51,7 +51,7 @@ function L(e) {
         S = (0, _.W)(),
         R = (0, d.mM)(f),
         L = (0, m.m)({ location: "voice_channel_activities" }),
-        D = (0, r.bG)([A.A], () => A.A.getStorefrontDetectableGameAndApplicationIds()),
+        D = (0, r.bG)([A.A], () => A.A.getDetectableIdsToApplicationIds()),
         G = R.length + b.length > 0;
     return (s.useEffect(() => {
         G && C.default.track(T.HAw.OPEN_POPOUT, { type: "Voice Channel Activities", channel_id: l.id });
@@ -72,7 +72,7 @@ function L(e) {
                   R.map((e, t) => {
                       let { members: n, activity: a } = e,
                           r = a.application_id;
-                      return (null != S && (r = S), L && null != r && D.has(r))
+                      return (null != S && (r = S), L && null != r && null != D[r])
                           ? (0, i.jsxs)(
                                 s.Fragment,
                                 {
