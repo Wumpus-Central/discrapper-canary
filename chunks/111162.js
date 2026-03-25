@@ -69,6 +69,7 @@ let f = (() => {
         preventPopoutClose: !1,
         logKeyboardMismatches: !1,
         alertStartupMetrics: !1,
+        logQuestEvents: !1,
     },
     m = { ...h };
 function E(e) {
@@ -142,6 +143,9 @@ class T extends s.Ay.Store {
     }
     get alertStartupMetrics() {
         return m.alertStartupMetrics;
+    }
+    get isLoggingQuestEvents() {
+        return m.logQuestEvents;
     }
     getDebugOptionsHeaderValue() {
         return (

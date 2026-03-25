@@ -472,6 +472,7 @@ var r = (function (e) {
         (e.KEYBOARD_MISMATCHES = "keyboard_mismatches"),
         (e.REQUEST_TRACING = "request_tracing"),
         (e.KEEP_POPOUTS_OPEN = "keep_popouts_open"),
+        (e.QUEST_LOGGING = "quest_logging"),
         (e.TRIGGERS = "triggers"),
         (e.DESIGN_TOOLS = "design_tools"),
         (e.CSS_DEBUGGING = "css_debugging"),
