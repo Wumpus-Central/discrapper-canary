@@ -1,3 +1,3 @@
 i.exports = JSON.parse(
-    '{"XJ4UpB":["Promijeni sliku"],"XV4qT6":["Ukloni sliku"],"1OwLy1":["Više"],"HkszWk":["Odaberi GIF"],"bjP2Do":["Prenesi sliku"]}',
+    '{"XJ4UpB":["Promijeni sliku"],"XV4qT6":["Ukloni sliku"],"CLSbjS":["Prijavi sliku"],"1OwLy1":["Više"],"HkszWk":["Odaberi GIF"],"SQb1dl":["Pronađi nadahnuće"],"2THN2i":["Ideje koje će te pokrenuti."],"dDID2M":["Nedavne slike"],"9Xxm0y":["Pristupi svojim nedavnim prijenosima."],"+y6KsI":["Postavi sliku kako bi drugi znali što se događa."],"yyPbqI":["Dodaj što smjeraš"],"BIdpHb":["Dolazi uskoro"],"bjP2Do":["Prenesi sliku"],"NGcIOF":["Postavi ugođaj"]}',
 );

@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"XJ4UpB":["K\xe9p m\xf3dos\xedt\xe1sa"],"XV4qT6":["K\xe9p elt\xe1vol\xedt\xe1sa"],"1OwLy1":["T\xf6bb"],"HkszWk":["GIF kiv\xe1laszt\xe1sa"],"bjP2Do":["K\xe9p felt\xf6lt\xe9se"]}',
+t.exports = JSON.parse(
+    '{"XJ4UpB":["K\xe9p m\xf3dos\xedt\xe1sa"],"XV4qT6":["K\xe9p elt\xe1vol\xedt\xe1sa"],"CLSbjS":["K\xe9p jelent\xe9se"],"1OwLy1":["T\xf6bb"],"HkszWk":["GIF kiv\xe1laszt\xe1sa"],"SQb1dl":["Inspir\xe1l\xf3d\xe1s"],"2THN2i":["\xd6tletek az első l\xe9p\xe9sekhez."],"dDID2M":["Leg\xfajabb k\xe9pek"],"9Xxm0y":["Hozz\xe1f\xe9r\xe9s a legut\xf3bb felt\xf6lt\xf6tt tartalmaidhoz."],"+y6KsI":["Be\xe1ll\xedthatsz egy k\xe9pet, hogy m\xe1sok tudt\xe1ra add, mi t\xf6rt\xe9nik."],"yyPbqI":["Megadhatod, mivel foglalatoskodsz \xe9pp"],"BIdpHb":["Hamarosan"],"bjP2Do":["K\xe9p felt\xf6lt\xe9se"],"NGcIOF":["A hangulat megalapoz\xe1sa"]}',
 );
