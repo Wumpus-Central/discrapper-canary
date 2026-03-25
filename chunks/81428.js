@@ -1,28 +1,41 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => f });
 var r = n(311907),
     i = n(73153),
+    s = n(518977),
     a = n(653741);
-let s = null;
-function o(e) {
-    s = null != e.regionalFeatureConfig ? a.wN.fromConnectionOpen(e.regionalFeatureConfig) : null;
+let o = null,
+    l = null;
+function u(e) {
+    if (null == e) return !1;
+    l = (0, s.XF)(e) ?? (0, s.rE)();
 }
-class l extends r.Ay.Store {
+function c(e) {
+    u(e.countryCode), (o = null != e.regionalFeatureConfig ? a.wN.fromConnectionOpen(e.regionalFeatureConfig) : null);
+}
+function d(e) {
+    let { countryCode: t } = e;
+    return u(t);
+}
+class _ extends r.Ay.Store {
     static displayName = "RegionalFeatureConfigStore";
     getRegionalFeatureConfig() {
-        return s;
+        return o;
     }
     isFeatureAgeGated(e) {
-        return s?.isFeatureAgeGated(e) ?? !1;
+        return o?.isFeatureAgeGated(e) ?? !1;
     }
     isSettingTeenByDefault(e) {
-        return s?.isFeatureTeenByDefault(e) ?? !1;
+        return o?.isFeatureTeenByDefault(e) ?? !1;
     }
     hasAgeGatedFeatures() {
-        return s?.hasAgeGatedFeatures() ?? !1;
+        return o?.hasAgeGatedFeatures() ?? !1;
     }
     hasTeenDefaults() {
-        return s?.hasTeenDefaults() ?? !1;
+        return o?.hasTeenDefaults() ?? !1;
+    }
+    getUserCountryCode() {
+        return l;
     }
 }
-let u = new l(i.h, { CONNECTION_OPEN: o });
+let f = new _(i.h, { CONNECTION_OPEN: c, SET_LOCATION_METADATA: d });
