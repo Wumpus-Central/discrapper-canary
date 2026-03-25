@@ -1,7 +1,8 @@
 "use strict";
 n.d(t, { c: () => a }), n(321073);
 var r = n(52724);
-function i(e) {
+let i = "dndOriginalRole";
+function s(e) {
     if (null == e) return { x: 0, y: 0 };
     let t = e.nodeType === Node.ELEMENT_NODE ? e : e.parentElement;
     if (null == t) return { x: 0, y: 0 };
@@ -17,11 +18,11 @@ class a {
     focusManager;
     actions;
     monitor;
-    constructor(e, t, n, i, a) {
+    constructor(e, t, n, i, s) {
         (this.targetNodes = t),
             (this.manager = n),
             (this.previewer = i),
-            (this.announcer = a),
+            (this.announcer = s),
             (this.currentHoveredNode = e),
             (this.focusManager = (0, r.C)({
                 getFocusableElements: () => this.getViableTargets(t),
@@ -29,10 +30,27 @@ class a {
             })),
             (this.actions = n.getActions()),
             (this.monitor = n.getMonitor()),
+            this.overrideRoleToApplicationForHoveredNode(),
             window.addEventListener("keydown", this.handleDraggedElementKeyDown, { capture: !0 });
     }
+    restoreRoleOfHoveredNode() {
+        if (null == this.currentHoveredNode) return;
+        let e = this.currentHoveredNode.dataset[i];
+        null != e &&
+            ("" === e
+                ? this.currentHoveredNode.removeAttribute("role")
+                : this.currentHoveredNode.setAttribute("role", e),
+            delete this.currentHoveredNode.dataset[i]);
+    }
+    overrideRoleToApplicationForHoveredNode() {
+        null != this.currentHoveredNode &&
+            ((this.currentHoveredNode.dataset[i] = this.currentHoveredNode.getAttribute("role") ?? ""),
+            this.currentHoveredNode.setAttribute("role", "application"),
+            this.currentHoveredNode.focus());
+    }
     disconnect() {
-        window.removeEventListener("keydown", this.handleDraggedElementKeyDown, { capture: !0 });
+        window.removeEventListener("keydown", this.handleDraggedElementKeyDown, { capture: !0 }),
+            this.restoreRoleOfHoveredNode();
     }
     handleDraggedElementKeyDown = async (e) => {
         switch (e.key) {
@@ -51,11 +69,12 @@ class a {
             return e === r;
         })?.[0];
         null != t &&
-            (this.actions.hover([t], { clientOffset: i(e) }),
+            (this.restoreRoleOfHoveredNode(),
+            this.actions.hover([t], { clientOffset: s(e) }),
             (this.currentHoveredNode = e),
+            this.overrideRoleToApplicationForHoveredNode(),
             this.previewer.render(this.monitor),
-            this.announcer.announceHover(e, t),
-            e?.focus());
+            this.announcer.announceHover(e, t));
     }
     getNextDropTarget() {
         return this.focusManager.getNextFocusableElement({ wrap: !1, from: this.currentHoveredNode ?? void 0 });
