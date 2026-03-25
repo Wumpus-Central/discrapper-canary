@@ -1,45 +1,44 @@
 "use strict";
-n.d(t, { A: () => k }), n(321073);
+n.d(t, { A: () => P }), n(321073);
 var r = n(311907),
     i = n(73153),
-    a = n(832946),
-    s = n(272207),
+    s = n(832946),
+    a = n(272207),
     o = n(961350),
-    l = n(652215),
-    u = n(788868);
-let c = null,
+    l = n(652215);
+let u = null,
+    c = null,
     d = null,
     _ = null,
     f = null,
-    p = null,
-    h = !1,
-    m = null,
-    g = !1,
+    p = !1,
+    h = null,
+    m = !1,
     E = !1,
-    A = null,
-    I = !1,
-    T = null;
-function y(e) {
+    g = null,
+    A = !1,
+    I = null;
+function T(e) {
     let { subscriptions: t, lastLazyPerkSync: n } = e,
         r = {},
         i = {},
-        a = [],
-        u = [],
-        _ = o.default.getId();
+        s = [],
+        d = [],
+        p = o.default.getId();
     t.forEach((e) => {
-        if (e.user_id !== _) return;
-        let t = s.h.createFromServer(e);
+        if (e.user_id !== p) return;
+        let t = a.h.createFromServer(e);
         (r[t.id] = t),
-            x(t) &&
+            w(t) &&
                 ((i[t.id] = t),
-                t.type === l.rzx.GUILD && t.status !== l.Dmq.ENDED && a.push(t),
-                t.type === l.rzx.APPLICATION && t.status !== l.Dmq.ENDED && u.push(t));
+                t.type === l.rzx.GUILD && t.status !== l.Dmq.ENDED && s.push(t),
+                t.type === l.rzx.APPLICATION && t.status !== l.Dmq.ENDED && d.push(t));
     }),
-        (c = r),
-        (d = i),
-        (f = a),
-        (p = u),
-        (T = n);
+        (u = r),
+        (c = i),
+        (_ = s),
+        (f = d),
+        (I = n);
 }
 function S(e) {
     let { activeSubscriptions: t, record: n } = e,
@@ -47,74 +46,74 @@ function S(e) {
     if (-1 === r) return [n, ...t];
     {
         let e = [...t];
-        return x(n) && n.status !== l.Dmq.ENDED ? (e[r] = n) : e.splice(r, 1), e;
+        return w(n) && n.status !== l.Dmq.ENDED ? (e[r] = n) : e.splice(r, 1), e;
     }
+}
+function y(e) {
+    let { subscription: t } = e;
+    if (t.user_id !== o.default.getId()) return;
+    let n = a.h.createFromServer(t);
+    (u = { ...u, [n.id]: n }),
+        w(n) && (c = { ...c, [n.id]: n }),
+        null != _ && n.type === l.rzx.GUILD && (_ = S({ activeSubscriptions: _, record: n })),
+        null != f && n.type === l.rzx.APPLICATION && (_ = S({ activeSubscriptions: f, record: n }));
 }
 function v(e) {
     let { subscription: t } = e;
-    if (t.user_id !== o.default.getId()) return;
-    let n = s.h.createFromServer(t);
-    (c = { ...c, [n.id]: n }),
-        x(n) && (d = { ...d, [n.id]: n }),
-        null != f && n.type === l.rzx.GUILD && (f = S({ activeSubscriptions: f, record: n })),
-        null != p && n.type === l.rzx.APPLICATION && (f = S({ activeSubscriptions: p, record: n }));
+    if (((p = !0), (A = !1), null != t)) {
+        if (t.user_id !== o.default.getId()) {
+            p = !1;
+            return;
+        }
+        d = a.h.createFromServer(t);
+    }
+}
+function N() {
+    A = !1;
 }
 function C(e) {
     let { subscription: t } = e;
-    if (((h = !0), (I = !1), null != t)) {
+    if (((m = !0), null != t)) {
         if (t.user_id !== o.default.getId()) {
-            h = !1;
+            m = !1;
             return;
         }
-        _ = s.h.createFromServer(t);
-    }
-}
-function b() {
-    I = !1;
-}
-function N(e) {
-    let { subscription: t } = e;
-    if (((g = !0), null != t)) {
-        if (t.user_id !== o.default.getId()) {
-            g = !1;
-            return;
-        }
-        m = s.h.createFromServer(t);
+        h = a.h.createFromServer(t);
     }
 }
 function R() {
     E = !0;
 }
 function O() {
-    I = !0;
+    A = !0;
+}
+function b(e) {
+    let { eligible: t } = e;
+    (g = t), (E = !1);
 }
 function D(e) {
-    let { eligible: t } = e;
-    (A = t), (E = !1);
-}
-function L(e) {
     let {} = e;
-    (A = !1), (E = !1);
+    (g = !1), (E = !1);
 }
-function w() {
-    (c = null),
+function L() {
+    (u = null),
+        (c = null),
         (d = null),
         (_ = null),
         (f = null),
-        (p = null),
-        (h = !1),
-        (m = null),
-        (g = !1),
+        (p = !1),
+        (h = null),
+        (m = !1),
         (E = !1),
-        (I = !1),
-        (T = null);
+        (A = !1),
+        (I = null);
 }
-function x(e) {
+function w(e) {
     return e.status !== l.Dmq.UNPAID;
 }
-function P(e, t) {
+function M(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        r = n ? d : c;
+        r = n ? c : u;
     if (null == r) return null;
     for (let n in r) {
         let i = r[n];
@@ -123,83 +122,79 @@ function P(e, t) {
     }
     return null;
 }
-class M extends r.Ay.Store {
+class x extends r.Ay.Store {
     initialize() {
         this.waitFor(o.default);
     }
     static displayName = "SubscriptionStore";
     hasFetchedSubscriptions() {
-        return null != c;
+        return null != u;
     }
     hasFetchedMostRecentPremiumTypeSubscription() {
-        return h;
+        return p;
     }
     hasFetchedPreviousPremiumTypeSubscription() {
-        return g;
+        return m;
     }
     getPremiumSubscription() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return P(l.rzx.PREMIUM, (e) => !(0, a.m1)(e.planId), e);
+        return M(l.rzx.PREMIUM, (e) => !(0, s.m1)(e.planId), e);
     }
     getPremiumTypeSubscription() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return P(l.rzx.PREMIUM, void 0, e);
-    }
-    inReverseTrial() {
-        let e = P(l.rzx.PREMIUM, void 0, !0);
-        return null != e && null != e.trialId && !!u.BT.includes(e.trialId) && null == e.paymentSourceId;
+        return M(l.rzx.PREMIUM, void 0, e);
     }
     getSubscriptions() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return e ? d : c;
+        return e ? c : u;
     }
     getSubscriptionById(e) {
-        return c?.[e] ?? void 0;
+        return u?.[e] ?? void 0;
     }
     getActiveGuildSubscriptions() {
-        return f;
+        return _;
     }
     getActiveApplicationSubscriptions() {
-        return p;
+        return f;
     }
     getSubscriptionForPlanIds(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = new Set(e),
-            r = t ? d : c;
+            r = t ? c : u;
         return null == r ? null : (Object.values(r).find((e) => e.items.some((e) => n.has(e.planId))) ?? null);
     }
     getMostRecentPremiumTypeSubscription() {
-        return _;
+        return d;
     }
     getPreviousPremiumTypeSubscription() {
-        return m;
+        return h;
     }
     getIsSubscriptionEligibleForReward() {
-        return A;
+        return g;
     }
     getIsFetchingSubscriptionRewardEligibility() {
         return E;
     }
     getIsFetchingMostRecentSubscription() {
-        return I;
+        return A;
     }
     getLastLazyPerkSync() {
-        return T;
+        return I;
     }
     getPremiumGroupSubscription() {
-        return P(l.rzx.PREMIUM, (e) => e.hasAnyPremiumGroup, !0);
+        return M(l.rzx.PREMIUM, (e) => e.hasAnyPremiumGroup, !0);
     }
 }
-let k = new M(i.h, {
-    BILLING_SUBSCRIPTION_FETCH_SUCCESS: y,
-    BILLING_SUBSCRIPTION_UPDATE_SUCCESS: v,
+let P = new x(i.h, {
+    BILLING_SUBSCRIPTION_FETCH_SUCCESS: T,
+    BILLING_SUBSCRIPTION_UPDATE_SUCCESS: y,
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_START: O,
-    BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: C,
-    BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_FAIL: b,
-    BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: N,
-    BILLING_SUBSCRIPTION_RESET: w,
+    BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: v,
+    BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_FAIL: N,
+    BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: C,
+    BILLING_SUBSCRIPTION_RESET: L,
     BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_START: R,
-    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS: D,
-    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_FAILURE: L,
-    LOGOUT: w,
+    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS: b,
+    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_FAILURE: D,
+    LOGOUT: L,
 });

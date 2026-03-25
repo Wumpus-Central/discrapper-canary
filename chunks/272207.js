@@ -2,8 +2,8 @@
 n.d(t, { A: () => m, h: () => h });
 var r = n(284009),
     i = n.n(r),
-    a = n(315069),
-    s = n(367888),
+    s = n(315069),
+    a = n(367888),
     o = n(894972),
     l = n(723702),
     u = n(474090),
@@ -14,7 +14,7 @@ var r = n(284009),
 function p(e) {
     return { id: e.id, planId: e.plan_id, quantity: e.quantity };
 }
-class h extends a.A {
+class h extends s.A {
     id;
     type;
     items;
@@ -112,9 +112,9 @@ class h extends a.A {
             r = null;
         if (e.type === d.rzx.PREMIUM) {
             const i = f.hd[e.items[0].planId],
-                a = i.interval,
+                s = i.interval,
                 o = i.intervalCount;
-            (n = (0, s.a9)(e.items, a, o)), null != t && (r = (0, s.a9)(t.items, a, o));
+            (n = (0, a.a9)(e.items, s, o)), null != t && (r = (0, a.a9)(t.items, s, o));
         } else null != t && t.items.length > 0 && (r = t.items[0].planId);
         (this.planId = n),
             (this.additionalPlans = e.items.filter((e) => e.planId !== n)),
@@ -209,9 +209,6 @@ class h extends a.A {
     }
     get hasActiveTrial() {
         return null != this.trialId && null != this.trialEndsAt && new Date() < this.trialEndsAt;
-    }
-    get inReverseTrial() {
-        return null != this.trialId && f.BT.includes(this.trialId) && null == this.paymentSourceId;
     }
     get premiumSince() {
         return this.streakStartedAt ?? this.createdAt;

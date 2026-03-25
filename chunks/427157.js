@@ -212,6 +212,9 @@ class I extends a.A {
     hasFreePremium() {
         return this.isStaff() || this.hasFlag(g.nhx.PARTNER) || this.isStaffPersonal();
     }
+    isOnReverseTrial() {
+        return (0, m.ki)(this) && this.premiumState?.premiumSource === s.fE.REVERSE_TRIAL;
+    }
     isPremiumWithPremiumGroup() {
         return (0, m.ki)(this, A.PremiumTypes.TIER_2) && this.premiumState?.premiumSource === s.fE.SUBSCRIPTION_GROUP;
     }
