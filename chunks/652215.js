@@ -4035,6 +4035,7 @@ var no = (function (e) {
             (e.STREAM_SETTINGS_UPDATE = "stream_settings_update"),
             (e.VIDEO_INPUT_INITIALIZED = "video_input_initialized"),
             (e.AUDIO_INPUT_INITIALIZED = "audio_input_initialized"),
+            (e.AUDIO_EFFECTS_PROBE_COMPLETED = "audio_effects_probe_completed"),
             (e.NOTIFY_STREAM_SETTING_UPDATE = "notify_stream_setting_update"),
             (e.SECURE_FRAMES_TRANSITION = "secure_frames_transition"),
             (e.MLS_FAILURES = "mls_failures"),
