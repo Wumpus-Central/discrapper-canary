@@ -15,6 +15,7 @@ var r = (function (e) {
         (e[(e.GIFT_REMINDER_NAGBAR = 10)] = "GIFT_REMINDER_NAGBAR"),
         (e[(e.GIFT_REMINDER_COACHMARK = 11)] = "GIFT_REMINDER_COACHMARK"),
         (e[(e.PREMIUM_TAB_TOOLTIP = 12)] = "PREMIUM_TAB_TOOLTIP"),
+        (e[(e.PREMIUM_TAB_POPOVER = 13)] = "PREMIUM_TAB_POPOVER"),
         e
     );
 })({});
