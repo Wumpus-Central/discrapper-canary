@@ -463,6 +463,9 @@ class q extends i.PureComponent {
     _hasStatsListener = !1;
     mediaRef = i.createRef();
     controlsRef = i.createRef();
+    handleVideoRef = (e) => {
+        (this.mediaRef.current = e), null != this.props.videoRef && (this.props.videoRef.current = e);
+    };
     playPausePopRef = i.createRef();
     static getDerivedStateFromProps(e, t) {
         return !e.playable && t.playing ? { playing: !1, hideControls: !1 } : null;
@@ -584,6 +587,7 @@ class q extends i.PureComponent {
         (null != t && (0, S._U)(t, t?.ownerDocument)) || this.setState({ fullscreen: !1 });
     };
     toggleFullscreen = () => {
+        if (null != this.props.onFullscreenChange) return void this.props.onFullscreenChange(!this.state.fullscreen);
         let e = !this.state.fullscreen;
         this.setState({ fullscreen: e });
     };
@@ -645,7 +649,10 @@ class q extends i.PureComponent {
         this._analytics.onLoadedMetadata(e);
         let { current: t } = this.mediaRef;
         null != t &&
-            (this.updateTime(t.currentTime, t.duration),
+            (null != this.props.initialTimeSec &&
+                this.props.initialTimeSec > 0 &&
+                (t.currentTime = this.props.initialTimeSec),
+            this.updateTime(t.currentTime, t.duration),
             this.setState({ hasLoadedMetadata: !0, currentTime: t.currentTime, duration: t.duration }));
     };
     handleDurationChange = () => {
@@ -677,7 +684,9 @@ class q extends i.PureComponent {
         null != r
             ? r(e)
             : (e.stopPropagation(),
-              i && !t && n && s ? this.setState({ muted: !1, hasClickedPlay: !0 }) : this.setPlay(!this.state.playing));
+              i && !t && n && s && this.state.muted
+                  ? this.setState({ muted: !1, hasClickedPlay: !0 })
+                  : this.setPlay(!this.state.playing));
     };
     setPlay = (e) => {
         let {
@@ -686,7 +695,7 @@ class q extends i.PureComponent {
         } = this;
         e !== this.state.playing &&
             (e
-                ? this.setState({ playing: e, hasClickedPlay: !0, muted: (!!n || !t) && r })
+                ? this.setState({ playing: e, hasClickedPlay: !0, muted: (!!n || !t || !r) && r })
                 : this.setState({ playing: !1, hideControls: !1 }));
     };
     handleDragStart = (e) => {
@@ -798,7 +807,7 @@ class q extends i.PureComponent {
                   onProgress: this.handleBuffer,
                   poster: n,
                   preload: this.state.preload,
-                  ref: this.mediaRef,
+                  ref: this.handleVideoRef,
                   width: u,
                   src: t,
               });

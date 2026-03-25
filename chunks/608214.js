@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { Ay: () => I, FX: () => g, VZ: () => E }), n(938796);
+n.d(t, { Ay: () => I, FX: () => E, VZ: () => g }), n(938796);
 var r = n(627968),
     i = n(64700),
-    a = n(665260),
-    s = n(731068),
+    s = n(665260),
+    a = n(731068),
     o = n(619517),
     l = n(248643),
     u = n(803316),
@@ -14,61 +14,61 @@ var r = n(627968),
     p = n(454290),
     h = n(504149),
     m = n(112576);
-function g(e, t) {
+function E(e, t) {
     return {
         ...e,
-        type: (0, s.FE)(e),
+        type: (0, a.FE)(e),
         original: e.url,
-        srcIsAnimated: (0, a.Lt)(e.flags, s.e5.IS_ANIMATED),
+        srcIsAnimated: (0, s.Lt)(e.flags, a.e5.IS_ANIMATED),
         sourceMetadata: { message: t },
     };
 }
-function E(e) {
+function g(e) {
     let t = f.A.toURLSafe(e);
     return null == t ? null : (t.searchParams.append("format", "webp"), t.toString());
 }
 function A(e) {
     let t,
-        { media: n, obscured: i = !1, maxWidth: a, maxHeight: s, onContextMenu: u } = e,
-        { width: d, height: f, url: g, proxyUrl: A, alt: I, type: y, maxWidth: S, maxHeight: v, ...C } = n,
-        { zoomed: b } = (0, p.Q)(),
-        N = T(b, g, A, n.contentType, n.originalContentType),
-        R = null != d && 0 !== d && null != f && 0 !== f;
-    if ("VIDEO" === y && R && null != A) {
-        let e = E(A);
+        { media: n, obscured: i = !1, maxWidth: s, maxHeight: a, onContextMenu: u } = e,
+        { width: d, height: f, url: E, proxyUrl: A, alt: I, type: S, maxWidth: y, maxHeight: v, ...N } = n,
+        { zoomed: C } = (0, p.Q)(),
+        R = T(C, E, A, n.contentType, n.originalContentType),
+        O = null != d && 0 !== d && null != f && 0 !== f;
+    if ("VIDEO" === S && O && null != A) {
+        let e = n.poster ?? g(A);
         if (null == e) return null;
         let t = n.renderLinkComponent ?? c.bU;
         return (0, r.jsx)(l.A, {
-            ...C,
-            src: N,
+            ...N,
+            src: R,
             width: d,
             height: f,
-            maxWidth: a,
-            maxHeight: s,
+            maxWidth: s,
+            maxHeight: a,
             poster: e,
             naturalWidth: d,
             naturalHeight: f,
             volume: _.v1,
-            autoMute: _.uj,
+            autoMute: n.autoMute ?? _.uj,
             onVolumeChange: _.ls,
             onMute: _.y5,
             renderLinkComponent: t,
-            autoPlay: !i,
+            autoPlay: n.autoPlay ?? !i,
             alt: I,
             onContextMenu: u,
             disableArrowKeySeek: !0,
         });
     }
     return (
-        "IMAGE" === y &&
-            (t = R
+        "IMAGE" === S &&
+            (t = O
                 ? (0, r.jsx)(o.Ay, {
-                      ...C,
-                      src: N,
+                      ...N,
+                      src: R,
                       width: d,
                       height: f,
-                      maxWidth: a,
-                      maxHeight: s,
+                      maxWidth: s,
+                      maxHeight: a,
                       useFullWidth: !0,
                       shouldLink: !1,
                       className: m.$_,
@@ -78,11 +78,11 @@ function A(e) {
                       onContextMenu: u,
                   })
                 : (0, r.jsx)("img", {
-                      src: N,
+                      src: R,
                       alt: I,
                       onContextMenu: u,
                       className: m.xx,
-                      style: { maxWidth: a, maxHeight: s },
+                      style: { maxWidth: s, maxHeight: a },
                   })),
         null != t ? (0, r.jsx)(h.A, { children: t }) : null
     );

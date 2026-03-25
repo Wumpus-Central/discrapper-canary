@@ -1,27 +1,32 @@
 "use strict";
-n.d(t, { K: () => s, R: () => o });
+n.d(t, { K: () => a, R: () => o });
 var r = n(627968),
     i = n(397927),
-    a = n(700331);
-let s = "Media Viewer Modal";
+    s = n(700331);
+let a = "Media Viewer Modal";
 function o(e, t) {
-    let { location: o, contextKey: l, ...u } = e,
-        c = u.items[u.startingIndex ?? 0]?.sourceMetadata?.message;
-    a.l.markSessionStarted({
-        channelId: c?.channel_id,
-        numMediaItems: u.items.length,
+    let { location: o, contextKey: l, onClose: u, ...c } = e,
+        d = c.items[c.startingIndex ?? 0]?.sourceMetadata?.message;
+    s.l.markSessionStarted({
+        channelId: d?.channel_id,
+        numMediaItems: c.items.length,
         source: o,
-        hasMediaOptions: !u.shouldHideMediaOptions,
+        hasMediaOptions: !c.shouldHideMediaOptions,
     }),
         (0, i.mMO)(
             async () => {
                 let { default: e } = await n.e("48654").then(n.bind(n, 321565));
-                return (t) => (0, r.jsx)(e, { ...t, ...u });
+                return function (t) {
+                    let n = () => {
+                        u?.(), t.onClose();
+                    };
+                    return (0, r.jsx)(e, { ...t, ...c, onClose: n });
+                };
             },
             {
-                modalKey: s,
+                modalKey: a,
                 contextKey: l,
-                onCloseCallback: a.l.markSessionCompleted,
+                onCloseCallback: s.l.markSessionCompleted,
                 backdropStyle: i.F2Z.LIGHTBOX,
                 stackingBehavior: t,
             },
