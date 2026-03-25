@@ -59715,6 +59715,17 @@ html.disable-forced-colors * {
     color: var(--interactive-text-hover)
 }
 
+.footerUpsellRow_cf6da1 {
+    align-items: center;
+    display: flex;
+    gap: 8px
+}
+
+.footerWishlistButton_cf6da1 {
+    background: var(--control-secondary-background-hover);
+    border: 1px solid var(--control-secondary-border-hover)
+}
+
 .bannerUpsell_cf6da1 {
     align-items: center;
     background-image: var(--custom-premium-colors-premium-gradient-tier-2);
@@ -60137,6 +60148,18 @@ html.disable-forced-colors * {
 
 .controlLabelInput__5a2df::placeholder {
     color: var(--input-placeholder-text-default)
+}
+
+.footerUpsellRow__5a2df {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    width: 100%
+}
+
+.footerWishlistButton__5a2df {
+    background: var(--control-secondary-background-hover);
+    border: 1px solid var(--control-secondary-border-hover)
 }
 
 .mobileContainer__26f4a {

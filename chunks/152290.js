@@ -22,4 +22,6 @@ e.exports = {
     oU: "nitroIcon__5a2df",
     Vt: "controlLabelContainer__5a2df",
     A9: "controlLabelInput__5a2df",
+    rV: "footerUpsellRow__5a2df",
+    Tf: "footerWishlistButton__5a2df",
 };

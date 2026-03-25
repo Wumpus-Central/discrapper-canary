@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => W }), n(801541);
+n.d(t, { A: () => $ }), n(801541);
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -18,151 +18,160 @@ var r = n(627968),
     g = n(996254),
     A = n(234419),
     I = n(792656),
-    T = n(450232),
-    S = n(780964),
-    y = n(358776),
-    v = n(840065),
-    N = n(287809),
-    C = n(954571),
-    R = n(927578),
-    O = n(47671),
-    b = n(11029),
-    D = n(58034),
-    L = n(474529),
-    w = n(692798),
-    M = n(385803),
-    x = n(652215),
-    P = n(49999),
-    k = n(788868),
-    U = n(985018),
-    G = n(218098);
-let F = () =>
+    T = n(400669),
+    S = n(450232),
+    y = n(780964),
+    v = n(358776),
+    N = n(840065),
+    C = n(909536),
+    R = n(287809),
+    O = n(954571),
+    b = n(927578),
+    D = n(47671),
+    L = n(11029),
+    w = n(58034),
+    M = n(474529),
+    x = n(692798),
+    P = n(385803),
+    k = n(652215),
+    U = n(49999),
+    G = n(788868),
+    F = n(985018),
+    V = n(218098);
+let B = () =>
         (0, r.jsx)("div", {
-            className: G.nV,
+            className: V.nV,
             children: (0, r.jsxs)("div", {
-                className: G.mR,
+                className: V.mR,
                 children: [
-                    (0, r.jsx)(T.A, { className: G.PC, size: "md" }),
+                    (0, r.jsx)(S.A, { className: V.PC, size: "md" }),
                     (0, r.jsx)(d.Heading, {
                         variant: "heading-md/bold",
                         color: "always-white",
-                        children: U.intl.string(U.t.POSLGY),
+                        children: F.intl.string(F.t.POSLGY),
                     }),
                 ],
             }),
         }),
-    V = (e) => {
+    H = (e) => {
         let { markAsDismissed: t } = e,
-            n = (0, D.H)(),
+            n = (0, w.H)(),
             i = () => {
-                null != t && t(P.i.DISMISS), n(x.HAw.CLIENT_THEME_PREVIEW_CLOSED), (0, b.D)();
+                null != t && t(U.i.DISMISS), n(k.HAw.CLIENT_THEME_PREVIEW_CLOSED), (0, L.D)();
             };
         return (0, r.jsxs)("div", {
-            className: G.nV,
+            className: V.nV,
             children: [
                 (0, r.jsx)(d.DUT, {
-                    className: G.VV,
+                    className: V.VV,
                     onClick: i,
-                    children: (0, r.jsx)(d.aXh, { size: "md", color: "currentColor", className: G.P0 }),
+                    children: (0, r.jsx)(d.aXh, { size: "md", color: "currentColor", className: V.P0 }),
                 }),
-                (0, r.jsx)(d.Heading, { variant: "heading-lg/extrabold", children: U.intl.string(U.t["xSR+a/"]) }),
+                (0, r.jsx)(d.Heading, { variant: "heading-lg/extrabold", children: F.intl.string(F.t["xSR+a/"]) }),
             ],
         });
     },
-    B = (e) => {
+    j = (e) => {
         let { onSubscribeSuccess: t, markAsDismissed: n } = e,
             { analyticsLocations: i } = (0, m.Ay)(h.A.CLIENT_THEMES_EDITOR),
-            [s, a] = (0, l.yK)([N.default, O.A], () => [
-                O.A.gradientPreset,
-                R.Ay.isPremium(N.default.getCurrentUser()),
+            [s, a] = (0, l.yK)([R.default, D.A], () => [
+                D.A.gradientPreset,
+                b.Ay.isPremium(R.default.getCurrentUser()),
             ]),
             o = (0, A.V)(),
-            c = (0, R.FY)({
+            c = (0, b.FY)({
                 intervalType: o?.subscription_trial?.interval,
                 intervalCount: o?.subscription_trial?.interval_count,
             }),
             d = a
-                ? U.intl.string(U.t.IJI7yk)
-                : o?.subscription_trial?.sku_id === k.pe.TIER_2
+                ? F.intl.string(F.t.IJI7yk)
+                : o?.subscription_trial?.sku_id === G.pe.TIER_2
                   ? c
-                  : U.intl.string(U.t.mr4K7D),
+                  : F.intl.string(F.t.mr4K7D),
             f = (e) => {
                 e &&
                     (t?.(),
-                    null != n && n(P.i.PRIMARY),
+                    null != n && n(U.i.PRIMARY),
                     null != s &&
-                        ((0, w.X8)({ isPersisted: !0, themeName: u.ju[s.id], analyticsLocations: i }),
+                        ((0, x.X8)({ isPersisted: !0, themeName: u.ju[s.id], analyticsLocations: i }),
                         (0, _.u_)({ backgroundGradientPresetId: s.id, theme: s.theme })));
             };
         return (0, r.jsx)(I.A, {
-            subscriptionTier: k.pe.TIER_2,
+            subscriptionTier: G.pe.TIER_2,
             defaultTextOverride: d,
-            premiumModalAnalyticsLocation: { object: x.ZSU.BUTTON_CTA, objectType: x.AnalyticsObjectTypes.BUY },
+            premiumModalAnalyticsLocation: { object: k.ZSU.BUTTON_CTA, objectType: k.AnalyticsObjectTypes.BUY },
             onSubscribeModalClose: f,
             fullWidth: !0,
         });
     },
-    H = (e) => {
+    Y = (e) => {
         let { markAsDismissed: t, isCoachmark: n } = e,
-            { isPreview: s } = (0, l.cf)([O.A], () => ({ isPreview: O.A.isPreview })),
+            { isPreview: s } = (0, l.cf)([D.A], () => ({ isPreview: D.A.isPreview })),
             [a, u] = i.useState(!1),
-            d = (0, D.H)(),
-            _ = () => {
-                if ((null != t && t(P.i.DISMISS), d(x.HAw.CLIENT_THEME_PREVIEW_CLOSED), (0, b.D)(), !n)) {
-                    let e = (0, y.Ci)("ClientThemesEditor_handleBack");
-                    (0, v.openUserSettings)(e ? S.X.DISPLAY_THEME_CATEGORY : S.X.APPEARANCE_PANEL);
+            d = (0, w.H)(),
+            _ = (0, C.St)("client_themes_editor_footer"),
+            f = () => {
+                if ((null != t && t(U.i.DISMISS), d(k.HAw.CLIENT_THEME_PREVIEW_CLOSED), (0, L.D)(), !n)) {
+                    let e = (0, v.Ci)("ClientThemesEditor_handleBack");
+                    (0, N.openUserSettings)(e ? y.X.DISPLAY_THEME_CATEGORY : y.X.APPEARANCE_PANEL);
                 }
             },
-            f = (0, g.X)(
-                { no: U.t["3D5yo/"], "sv-SE": U.t["3D5yo/"], uk: U.t["3D5yo/"], de: U.t["3D5yo/"] },
-                U.t["dqH+qr"],
+            p = (0, g.X)(
+                { no: F.t["3D5yo/"], "sv-SE": F.t["3D5yo/"], uk: F.t["3D5yo/"], de: F.t["3D5yo/"] },
+                F.t["dqH+qr"],
             ),
-            p = (0, o.YW)({ isPreview: s, isCoachmark: n, forceShowCloseButton: a })
-                .with({ isCoachmark: !0 }, { forceShowCloseButton: !0 }, () => U.intl.string(U.t.cpT0Cq))
-                .with({ isPreview: !0 }, () => f)
-                .otherwise(() => U.intl.string(U.t.Olc2K3));
+            h = (0, o.YW)({ isPreview: s, isCoachmark: n, forceShowCloseButton: a })
+                .with({ isCoachmark: !0 }, { forceShowCloseButton: !0 }, () => F.intl.string(F.t.cpT0Cq))
+                .with({ isPreview: !0 }, () => p)
+                .otherwise(() => F.intl.string(F.t.Olc2K3)),
+            m = (0, r.jsx)(j, {
+                onSubscribeSuccess: () => {
+                    u(!0);
+                },
+                markAsDismissed: t,
+            });
         return (0, r.jsxs)("div", {
-            className: G.N3,
+            className: V.N3,
             children: [
                 s &&
-                    (0, r.jsx)(B, {
-                        onSubscribeSuccess: () => {
-                            u(!0);
-                        },
-                        markAsDismissed: t,
-                    }),
-                (0, r.jsx)(c.$nd, { fullWidth: !0, onClick: _, variant: "secondary", text: p }),
+                    (_
+                        ? (0, r.jsxs)("div", {
+                              className: V.rV,
+                              children: [(0, r.jsx)(T.l, { size: "sm", className: V.Tf }), m],
+                          })
+                        : m),
+                (0, r.jsx)(c.$nd, { fullWidth: !0, onClick: f, variant: "secondary", text: h }),
             ],
         });
     },
-    j = 16,
-    Y = 24;
-function W(e) {
-    let { markAsDismissed: t, showClientThemesCoachmark: n, iconSize: s = M.ni.SIZE_60 } = e,
+    W = 16,
+    K = 24;
+function $(e) {
+    let { markAsDismissed: t, showClientThemesCoachmark: n, iconSize: s = P.ni.SIZE_60 } = e,
         { analyticsLocations: o } = (0, m.Ay)(h.A.CLIENT_THEMES_EDITOR),
-        { isPreview: u, shouldEditorAnimate: c } = (0, l.cf)([O.A, p.A], () => ({
-            isPreview: O.A.isPreview,
+        { isPreview: u, shouldEditorAnimate: c } = (0, l.cf)([D.A, p.A], () => ({
+            isPreview: D.A.isPreview,
             shouldEditorAnimate: n && !p.A.useReducedMotion,
         })),
         _ = (0, E.fy)().activePanel === E.HP.CLIENT_THEMES,
-        g = (0, D.H)();
-    i.useEffect(() => g(x.HAw.CLIENT_THEME_PREVIEW_VIEWED), [g]),
+        g = (0, w.H)();
+    i.useEffect(() => g(k.HAw.CLIENT_THEME_PREVIEW_VIEWED), [g]),
         i.useEffect(() => {
             u &&
-                C.default.track(x.HAw.PREMIUM_UPSELL_VIEWED, {
-                    type: k.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+                O.default.track(k.HAw.PREMIUM_UPSELL_VIEWED, {
+                    type: G.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                     location_stack: o,
                 });
         }, [u, o]);
-    let A = (0, D.Z)(),
-        I = (0, f.A)(null, u ? A : x.tEg);
+    let A = (0, w.Z)(),
+        I = (0, f.A)(null, u ? A : k.tEg);
     i.useEffect(() => {
         if (u && !_) return A;
     }, [u, _, A]);
     let T = i.useMemo(
         () => ({
-            "--custom-client-themes-editor-content-width": `${3 * s + 2 * Y}px`,
-            "--custom-client-themes-editor-padding": `${j}px`,
+            "--custom-client-themes-editor-content-width": `${3 * s + 2 * K}px`,
+            "--custom-client-themes-editor-padding": `${W}px`,
         }),
         [s],
     );
@@ -171,23 +180,23 @@ function W(e) {
         children: (0, r.jsx)("div", {
             ref: I,
             "data-app-right-panel": !0,
-            className: a()(G.HS, c ? G.hP : null),
+            className: a()(V.HS, c ? V.hP : null),
             style: T,
             children: (0, r.jsxs)(d.Fmo, {
                 children: [
-                    n ? (0, r.jsx)(F, {}) : (0, r.jsx)(V, { markAsDismissed: t }),
-                    (0, r.jsx)(L.A, {}),
+                    n ? (0, r.jsx)(B, {}) : (0, r.jsx)(H, { markAsDismissed: t }),
+                    (0, r.jsx)(M.A, {}),
                     (0, r.jsx)(d.HOs, {
-                        className: G.sV,
-                        children: (0, r.jsxs)(w.Ay, {
-                            type: w.v0.EDITOR,
+                        className: V.sV,
+                        children: (0, r.jsxs)(x.Ay, {
+                            type: x.v0.EDITOR,
                             children: [
-                                !u && (0, r.jsx)(w.Ay.Basic, { className: G.Gg, iconSize: s }),
-                                (0, r.jsx)(w.Ay.Gradient, { className: G.Gg, isCoachmark: n, iconSize: s }),
+                                !u && (0, r.jsx)(x.Ay.Basic, { className: V.Gg, iconSize: s }),
+                                (0, r.jsx)(x.Ay.Gradient, { className: V.Gg, isCoachmark: n, iconSize: s }),
                             ],
                         }),
                     }),
-                    (0, r.jsx)(H, { markAsDismissed: t, isCoachmark: n }),
+                    (0, r.jsx)(Y, { markAsDismissed: t, isCoachmark: n }),
                 ],
             }),
         }),

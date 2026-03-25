@@ -1,5 +1,6 @@
-n.d(t, { Gh: () => l, St: () => a });
-let i = (0, n(945810).mj)({
+"use strict";
+n.d(t, { Gh: () => i, St: () => s });
+let r = (0, n(945810).mj)({
     name: "2026-03-wishlisting-nitro",
     kind: "user",
     defaultConfig: { isEnabled: !1, isRoadblocksEnabled: !1 },
@@ -9,9 +10,9 @@ let i = (0, n(945810).mj)({
         2: { isEnabled: !0, isRoadblocksEnabled: !0 },
     },
 });
-function l(e) {
-    return i.useConfig({ location: e }).isEnabled;
+function i(e) {
+    return r.useConfig({ location: e }).isEnabled;
 }
-function a(e) {
-    return i.useConfig({ location: e }).isRoadblocksEnabled;
+function s(e) {
+    return r.useConfig({ location: e }).isRoadblocksEnabled;
 }

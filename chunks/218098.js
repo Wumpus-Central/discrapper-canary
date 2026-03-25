@@ -9,6 +9,8 @@ e.exports = {
     N3: "editorFooter_cf6da1",
     VV: "closeCircleButton_cf6da1",
     P0: "closeCircle_cf6da1",
+    rV: "footerUpsellRow_cf6da1",
+    Tf: "footerWishlistButton_cf6da1",
     mR: "bannerUpsell_cf6da1",
     PC: "premiumIcon_cf6da1",
 };
