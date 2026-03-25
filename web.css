@@ -37651,11 +37651,11 @@ screen and (max-width:485px) {
 
 .headerContainer__2dea3 {
     background-color: var(--background-base-low);
+    border-start-end-radius: calc(var(--custom-border-radius) + 2px);
+    border-start-start-radius: calc(var(--custom-border-radius) + 2px);
+    box-sizing: border-box;
     height: 112px;
-    margin-inline-start: -1px;
-    margin-top: calc(var(--custom-modal-padding-top)*-1 - 2px);
-    position: relative;
-    width: calc(100% + 2px)
+    position: relative
 }
 
 .closeContainer__2dea3 {
@@ -37685,8 +37685,8 @@ screen and (max-width:485px) {
 }
 
 .headerImage__2dea3 {
-    border-start-end-radius: 12px;
-    border-start-start-radius: 12px;
+    border-start-end-radius: var(--radius-md);
+    border-start-start-radius: var(--radius-md);
     -o-object-fit: cover;
     object-fit: cover
 }

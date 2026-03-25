@@ -38,15 +38,15 @@ function g(e) {
             paymentSourceType: v,
             hide: N,
             purchaseType: C,
-            productLine: b,
-            proratedAmount: R,
-            basePrice: O,
+            productLine: R,
+            proratedAmount: O,
+            basePrice: b,
             currentSubscription: D,
             skuId: L,
             applicationName: w,
-            hasAlreadyLinked: x,
+            hasAlreadyLinked: M,
         } = e,
-        M = (0, i.bG)([a.A], () => a.A.inReverseTrial());
+        x = (0, i.bG)([a.A], () => a.A.inReverseTrial());
     if (N) return null;
     let P = null == e.planGroup ? [] : e.planGroup;
     if (null != y) {
@@ -60,7 +60,7 @@ function g(e) {
             purchaseType: C || _.VVm.SUBSCRIPTION,
             plan: g,
             premiumSubscription: null == D ? null : D,
-            productLine: b,
+            productLine: R,
             isGift: !!A,
             planGroup: P,
             isPrepaidPaymentSource: !1,
@@ -96,7 +96,7 @@ function g(e) {
                     throw Error(`Unexpected interval: ${t}`);
             }
     else if (C === _.VVm.ONE_TIME)
-        switch (b) {
+        switch (R) {
             case _.EZt.COLLECTIBLES:
                 (V = U),
                     (F = A
@@ -108,11 +108,11 @@ function g(e) {
                 break;
             case _.EZt.SOCIAL_LAYER_GAME_ITEM:
                 V = U;
-                let B = A || !0 === x ? h.t.f6Ngwm : h.t.CVITgq;
+                let B = A || !0 === M ? h.t.f6Ngwm : h.t.CVITgq;
                 F = h.intl.format(B, { applicationName: w ?? "game's" });
                 break;
             default:
-                (V = G), (F = h.intl.string(h.t["9/siSQ"]));
+                (V = G), (F = "");
         }
     else if (null == g || A)
         switch ((A && (V = U), t)) {
@@ -136,7 +136,7 @@ function g(e) {
     else {
         let e,
             r = (0, s.Ro)({
-                productLine: b,
+                productLine: R,
                 purchaseType: _.VVm.SUBSCRIPTION,
                 plan: g,
                 premiumSubscription: null == D ? null : D,
@@ -144,7 +144,7 @@ function g(e) {
                 planGroup: P,
                 isPrepaidPaymentSource: !1,
             });
-        I || (e = E(O, t, n, g.id)),
+        I || (e = E(b, t, n, g.id)),
             (F = D?.isPausedAllowsResumeButNotUpdates
                 ? h.intl.format(h.t.B6oNwB, {
                       primaryText: r,
@@ -161,9 +161,9 @@ function g(e) {
                         contactLink: _.X7G.CONTACT,
                         helpdeskArticle: l.A.getArticleURL(_.MVz.BILLING),
                     })
-                  : M && b === _.EZt.BOOST && null != O
+                  : x && R === _.EZt.BOOST && null != b
                     ? h.intl.format(h.t["2nKy/0"], {
-                          price: (0, c.$g)(O.amount, O.currency),
+                          price: (0, c.$g)(b.amount, b.currency),
                           paidServiceTermsArticle: _.X7G.PAID_TERMS,
                           contactUsArticle: _.X7G.CONTACT,
                           subscriptionFAQArticle: l.A.getArticleURL(_.MVz.BILLING),
@@ -175,11 +175,11 @@ function g(e) {
                             cancelSubscriptionArticle: l.A.getArticleURL(_.MVz.PREMIUM_DETAILS_CANCEL_SUB),
                             paidServiceTermsArticle: l.A.getArticleURL(_.MVz.PAID_TERMS),
                         })
-                      : null != R && null != O
+                      : null != O && null != b
                         ? h.intl.format(h.t.Kcieh4, {
                               primaryText: r,
-                              proratedAmount: (0, c.$g)(R, O.currency),
-                              renewalAmount: (0, c.$g)(O.amount, O.currency),
+                              proratedAmount: (0, c.$g)(O, b.currency),
+                              renewalAmount: (0, c.$g)(b.amount, b.currency),
                               rateInterval: u.Ay.formatInterval(g?.interval),
                               paidURL: _.X7G.PAID_TERMS,
                               contactLink: _.X7G.CONTACT,
