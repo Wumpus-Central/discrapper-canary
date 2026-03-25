@@ -83,16 +83,14 @@ function F(e) {
         showHangStatus: j,
         isSelf: Y,
         isHovered: W,
-        handleHoverHangStatus: K,
-        handleHoverIcons: $,
-        onAddHangStatusClicked: z,
+        onAddHangStatusClicked: K,
     } = e;
     if (m || I) return null;
-    let q = [],
-        Z = H({ iconClassName: y, mute: n, localMute: i, serverMute: o, deaf: u, serverDeaf: p });
+    let $ = [],
+        z = H({ iconClassName: y, mute: n, localMute: i, serverMute: o, deaf: u, serverDeaf: p });
     E &&
         (s
-            ? q.push(
+            ? $.push(
                   (0, r.jsx)(
                       c.m,
                       {
@@ -107,7 +105,7 @@ function F(e) {
                       "video",
                   ),
               )
-            : q.push(
+            : $.push(
                   (0, r.jsx)(
                       c.m,
                       {
@@ -118,7 +116,7 @@ function F(e) {
                   ),
               )),
         F &&
-            q.push(
+            $.push(
                 (0, r.jsx)(
                     c.m,
                     {
@@ -132,7 +130,7 @@ function F(e) {
                 ),
             ),
         null != v &&
-            q.push(
+            $.push(
                 (0, r.jsx)(
                     c.m,
                     {
@@ -143,11 +141,11 @@ function F(e) {
                 ),
             ),
         N === M.f$.XBOX || C === w.J7.XBOX
-            ? q.push((0, r.jsx)(b.A, { className: a()(P.Kk, y) }, "xbox"))
+            ? $.push((0, r.jsx)(b.A, { className: a()(P.Kk, y) }, "xbox"))
             : N === M.f$.PLAYSTATION || C === w.J7.PLAYSTATION
-              ? q.push((0, r.jsx)(O.A, { className: a()(P.Kk, y) }, "playstation"))
+              ? $.push((0, r.jsx)(O.A, { className: a()(P.Kk, y) }, "playstation"))
               : C === w.J7.QUEST &&
-                q.push(
+                $.push(
                     (0, r.jsx)(
                         l.VrHeadsetIcon,
                         { size: "xs", color: "currentColor", className: a()(P.Kk, y) },
@@ -155,7 +153,7 @@ function F(e) {
                     ),
                 ),
         T &&
-            q.push(
+            $.push(
                 (0, r.jsx)(
                     c.m,
                     {
@@ -165,11 +163,11 @@ function F(e) {
                     "watch",
                 ),
             ),
-        g && q.push((0, r.jsx)(A.Ay, { size: A.Ay.Sizes.SMALL }, "stream")),
+        g && $.push((0, r.jsx)(A.Ay, { size: A.Ay.Sizes.SMALL }, "stream")),
         S &&
             null != k &&
             W &&
-            q.push(
+            $.push(
                 (0, r.jsx)(
                     c.m,
                     {
@@ -188,24 +186,17 @@ function F(e) {
                     "ring",
                 ),
             );
-    let X = null != R && !(0, h.n)(R, L.gfo.EMBEDDED),
-        Q = null == V && X;
-    return 0 !== q.length || 0 !== Z.length || j || Q || S
+    let q = null != R && !(0, h.n)(R, L.gfo.EMBEDDED),
+        Z = null == V && q;
+    return 0 !== $.length || 0 !== z.length || j || Z || S
         ? (0, r.jsxs)("div", {
               className: a()(P.Pt, t),
               children: [
-                  (0, r.jsxs)("div", {
-                      className: P.RL,
-                      onMouseEnter: () => $?.(!0),
-                      onMouseLeave: () => $?.(!1),
-                      children: [Z, q],
-                  }),
-                  (j || Q) && !S
+                  (0, r.jsxs)("div", { className: P.RL, children: [z, $] }),
+                  (j || Z) && !S
                       ? (0, r.jsx)("div", {
                             className: P.RL,
-                            onMouseEnter: () => K?.(!0),
-                            onMouseLeave: () => K?.(!1),
-                            children: Q
+                            children: Z
                                 ? (0, r.jsx)(
                                       B,
                                       { application: R, iconClassName: y, guildId: D, channelId: k, userId: G.id },
@@ -216,7 +207,7 @@ function F(e) {
                                       hangStatusActivity: V,
                                       iconClassName: y,
                                       isSelf: Y,
-                                      onAddHangStatusClicked: z,
+                                      onAddHangStatusClicked: K,
                                   }),
                         })
                       : null,
