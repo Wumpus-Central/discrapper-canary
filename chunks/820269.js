@@ -60,6 +60,7 @@ function a(e) {
                 reducedMotionSrc: e.reduced_motion_src,
                 effects: e.effects?.map(s),
             };
+        if (e.type === r.R.PROFILE_FRAME) return { id: e.id, type: e.type, label: e.label, layers: e.layers };
     }
 }
 function o(e) {
