@@ -26438,6 +26438,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     transition-property: box-shadow, background
 }
 
+.result__2dc39:focus-within .favButton__2dc39,
 .result__2dc39:hover .favButton__2dc39 {
     opacity: 1;
     transform: none
