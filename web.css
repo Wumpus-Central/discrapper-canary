@@ -20106,7 +20106,8 @@ img.thumbnail__0f2e8 {
 }
 
 :root {
-    --custom-user-profile-banner-height: 0;
+    --custom-user-profile-banner-height: 0px;
+    --custom-user-profile-footer-height: 0px;
     --custom-user-profile-theme-padding: 0;
     --custom-user-profile-base-layer-z-index: 0;
     --custom-user-profile-bottom-layer-z-index: 1;
@@ -20134,7 +20135,8 @@ img.thumbnail__0f2e8 {
 }
 
 :root .user-profile-sidebar {
-    --custom-user-profile-banner-height: 120px
+    --custom-user-profile-banner-height: 120px;
+    --custom-user-profile-footer-height: 44px
 }
 
 :root .custom-user-profile-theme.user-profile-modal,
@@ -20201,7 +20203,7 @@ img.thumbnail__0f2e8 {
 }
 
 :where(.outer_c0bea0).custom-user-profile-theme {
-    background: linear-gradient(var(--profile-gradient-primary-color), var(--profile-gradient-secondary-color));
+    background: linear-gradient(var(--profile-gradient-primary-color) var(--custom-user-profile-banner-height), var(--profile-gradient-secondary-color) calc(100% - var(--custom-user-profile-footer-height)));
     padding: var(--custom-user-profile-theme-padding)
 }
 

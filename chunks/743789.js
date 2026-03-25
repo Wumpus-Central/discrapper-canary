@@ -1,8 +1,6 @@
 "use strict";
 e.exports = {
     wx: "header__7f9c0",
-    qr: "footer__7f9c0",
-    wC: "footerButton__7f9c0",
     vK: "banner__7f9c0",
     tB: "backdrop__7f9c0",
     oR: "toast__7f9c0",
