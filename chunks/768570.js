@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { $H: () => c, B7: () => d, Q_: () => _, nC: () => s, oi: () => a, su: () => u, us: () => l, yQ: () => o });
+n.d(t, { $H: () => c, B7: () => d, Q_: () => _, nC: () => a, oi: () => s, su: () => u, us: () => l, yQ: () => o });
 var r = n(461012),
     i = n(652215),
-    a = (function (e) {
+    s = (function (e) {
         return (e.KEY_PRESS = "key_press"), (e.CLICK = "click"), e;
     })({});
-let s = "SearchStore",
+let a = "SearchStore",
     o = "SearchHistoryStore_Web",
     l = { sort_by: "timestamp", sort_order: "desc" },
     u = { 1: { has: ["image", "video"] }, 3: { has: ["file"] }, 0: {}, 2: { has: ["link"] }, 4: { pinned: !0 } };
@@ -30,13 +30,11 @@ i.I4_.THREAD,
     i.I4_.GUILD_CHANNEL,
     i.I4_.GUILD,
     i.I4_.DMS,
-    i.I4_.FAVORITES,
     i.I4_.THREAD,
     i.I4_.CHANNEL,
     i.I4_.GUILD_CHANNEL,
     i.I4_.GUILD,
     i.I4_.DMS,
-    i.I4_.FAVORITES,
     r.b.COZY;
 var _ = (function (e) {
     return (

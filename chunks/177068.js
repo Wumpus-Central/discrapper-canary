@@ -1,13 +1,14 @@
 "use strict";
-n.d(t, { DX: () => _, MS: () => d });
+n.d(t, { DX: () => f, MS: () => _ });
 var r = n(488428),
     i = n(562465),
-    a = n(626584),
-    s = n(927813),
-    o = n(652215);
-let l = 5e3,
-    u = 5;
-class c {
+    s = n(626584),
+    a = n(734057),
+    o = n(927813),
+    l = n(652215);
+let u = 5e3,
+    c = 5;
+class d {
     indexingPollId;
     searchId;
     searchType;
@@ -24,12 +25,12 @@ class c {
                 if (null == r || this.isCanceled) return;
                 if (200 === r.status) e(r);
                 else if (202 === r.status) {
-                    if (((this.query.attempts = (this.query.attempts ?? 0) + 1), this.query.attempts > u)) return;
+                    if (((this.query.attempts = (this.query.attempts ?? 0) + 1), this.query.attempts > c)) return;
                     let i = parseInt(r.headers["retry-after"]);
-                    (this.retryDelay = isNaN(i) || 0 === i ? l : i * s.A.Millis.SECOND), this.retryLater(e, t, n), t(r);
+                    (this.retryDelay = isNaN(i) || 0 === i ? u : i * o.A.Millis.SECOND), this.retryLater(e, t, n), t(r);
                 }
             } catch (e) {
-                new a.A("SearchFetcher").error(e), n(e);
+                new s.A("SearchFetcher").error(e), n(e);
             }
     }
     cancel() {
@@ -40,17 +41,22 @@ class c {
             (this.indexingPollId = setTimeout(this.fetch.bind(this, e, t, n), this.retryDelay));
     }
 }
-class d extends c {
+class _ extends d {
     getEndpoint() {
         switch (this.searchType) {
-            case o.I4_.FAVORITES:
-                return o.Rsh.SEARCH_FAVORITES;
-            case o.I4_.GUILD:
+            case l.I4_.GUILD:
                 if (null == this.searchId || "" === this.searchId) return;
-                return o.Rsh.SEARCH_GUILD(this.searchId);
-            case o.I4_.CHANNEL:
+                return l.Rsh.SEARCH_GUILD(this.searchId);
+            case l.I4_.GUILD_CHANNEL: {
                 if (null == this.searchId || "" === this.searchId) return;
-                return o.Rsh.SEARCH_CHANNEL(this.searchId);
+                let e = a.A.getChannel(this.searchId),
+                    t = e?.getGuildId();
+                if (null == t) return;
+                return l.Rsh.SEARCH_GUILD(t);
+            }
+            case l.I4_.CHANNEL:
+                if (null == this.searchId || "" === this.searchId) return;
+                return l.Rsh.SEARCH_CHANNEL(this.searchId);
             default:
                 throw Error(`[SearchFetcher] Unhandled search type: ${this.searchType}`);
         }
@@ -63,23 +69,23 @@ class d extends c {
             : i.Bo.get({ url: n, query: r.stringify(this.query), oldFormErrors: !0, rejectWithError: t });
     }
 }
-class _ extends c {
+class f extends d {
     payload;
     constructor(e, t, n, r) {
         super(e, t, n), (this.payload = r);
     }
     getEndpoint() {
         switch (this.searchType) {
-            case o.I4_.DMS:
-                return o.Rsh.SEARCH_TABS_DMS;
-            case o.I4_.GUILD_CHANNEL:
-            case o.I4_.GUILD:
-            case o.I4_.THREAD:
+            case l.I4_.DMS:
+                return l.Rsh.SEARCH_TABS_DMS;
+            case l.I4_.GUILD_CHANNEL:
+            case l.I4_.GUILD:
+            case l.I4_.THREAD:
                 if (null == this.searchId || "" === this.searchId) return;
-                return o.Rsh.SEARCH_TABS_GUILD(this.searchId);
-            case o.I4_.CHANNEL:
+                return l.Rsh.SEARCH_TABS_GUILD(this.searchId);
+            case l.I4_.CHANNEL:
                 if (null == this.searchId || "" === this.searchId) return;
-                return o.Rsh.SEARCH_TABS_CHANNEL(this.searchId);
+                return l.Rsh.SEARCH_TABS_CHANNEL(this.searchId);
             default:
                 throw Error(`[SearchFetcher] Unhandled search type: ${this.searchType}`);
         }
