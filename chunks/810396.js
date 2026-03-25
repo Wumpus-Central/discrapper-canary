@@ -38,7 +38,7 @@ function g(e) {
         L = (0, u.r)(t),
         w = (0, d.A)({ userId: t.id, guildId: n, pendingDisplayNameStyles: T }),
         M = null != w,
-        x = null != L && (0, r.jsx)(c.A, { type: L, verified: t.isVerifiedBot(), className: E.AO });
+        x = null != L ? (0, r.jsx)(c.A, { type: L, verified: t.isVerifiedBot(), className: E.AO }) : null;
     return (0, r.jsxs)("div", {
         className: s()(E.kL, { [E.Od]: null != L }, v),
         children: [
