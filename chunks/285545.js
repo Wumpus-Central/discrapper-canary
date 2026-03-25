@@ -1,8 +1,8 @@
-n.d(t, { i: () => m }), n(321073);
+n.d(t, { i: () => g }), n(321073);
 var i = n(64700),
-    r = n(311907),
-    a = n(919796),
-    l = n(4106),
+    a = n(311907),
+    l = n(919796),
+    r = n(4106),
     s = n(105971),
     o = n(800319),
     d = n(883344),
@@ -10,60 +10,62 @@ var i = n(64700),
     u = n(859524),
     A = n(639040),
     h = n(567061),
-    _ = n(118972);
-function m(e) {
+    _ = n(563874),
+    m = n(118972);
+function g(e) {
     let { showDot: t, notificationItem: n } = e,
-        [m, p] = i.useState(!1),
-        { unreadItems: g, readItems: E, allUnreadItemsHydrated: f } = (0, A.A)(),
-        I = (0, r.bG)([d.A], () => d.A.getVersion(), []),
-        C = (0, r.bG)([d.A], () => !(d.A.isFirstPageHydrated() && I > 0));
+        [g, p] = i.useState(!1),
+        { unreadItems: E, readItems: I, allUnreadItemsHydrated: f } = (0, A.A)(),
+        C = (0, a.bG)([d.A], () => d.A.getVersion(), []),
+        T = (0, a.bG)([d.A], () => !(d.A.isFirstPageHydrated() && C > 0));
     i.useEffect(() => {
         null != d.A.getLoadId() && s.k.trackFeedShown({ homeSessionId: "gravity" });
-    }, [I]);
-    let N = (0, r.bG)([d.A], () => d.A.isRefreshing(), []),
-        T = (0, r.bG)([d.A], () => d.A.isHydrating(), []),
-        [S, x] = i.useState([]),
-        { loadId: v, lastScrollEventTimestamp: b } = (0, r.cf)([d.A], () => ({
+    }, [C]);
+    let N = (0, a.bG)([d.A], () => d.A.isRefreshing(), []),
+        S = (0, a.bG)([d.A], () => d.A.isHydrating(), []),
+        [x, v] = i.useState([]),
+        { loadId: b, lastScrollEventTimestamp: y } = (0, a.cf)([d.A], () => ({
             loadId: d.A.getLoadId(),
             lastScrollEventTimestamp: d.A.lastScrollEvent(),
         })),
-        y = S.filter((e) => {
-            let { item: t } = e;
-            return !o.P.has(t.data.kind);
-        })
+        O = x
+            .filter((e) => {
+                let { item: t } = e;
+                return !o.P.has(t.data.kind);
+            })
             .map((e) => {
                 let { item: t } = e;
                 return t.id;
             })
             .pop(),
-        L = (0, a.A)(y);
+        L = (0, l.A)(O);
     i.useEffect(() => {
-        if (N || C || null == L || null == y || y === L) return;
+        if (N || T || null == L || null == O || O === L) return;
         let e = Date.now();
-        e - b > _.N && (l.A.gravityScrollEvent(e), s.k.trackFeedFirstScrollStarted());
-    }, [N, b, L, y, v, C]);
-    let O = i.useCallback(
+        e - y > m.N && (r.A.gravityScrollEvent(e), s.k.trackFeedFirstScrollStarted());
+    }, [N, y, L, O, b, T]);
+    let R = i.useCallback(
             (e) => {
                 let { viewableItems: t } = e;
                 if ((t.some((e) => "end" === e.item.data.kind) && p(!0), 0 === t.length)) return;
-                x(t);
+                v(t);
                 let n = [],
                     i = (0, u.P0)(t),
-                    r = Date.now();
+                    a = Date.now();
                 for (let e = i.length - 1; e >= 0; e--) {
                     let t = i[e];
-                    null != t && n.push({ id: t.id, type: (0, c.xG)(t), timestamp: r++ });
+                    null != t && n.push({ id: t.id, type: (0, c.xG)(t), timestamp: a++ });
                 }
-                n.length > 0 && l.A.ackGravityItems(n, !0),
+                n.length > 0 && r.A.ackGravityItems(n, !0),
                     s.k.trackItemShortImpression(
                         t,
                         i.map((e) => ({ id: e.id, type: (0, c.xG)(e) })),
-                        I,
+                        C,
                     );
             },
-            [I, p],
+            [C, p],
         ),
-        R = i.useCallback(
+        P = i.useCallback(
             (e) => {
                 let { viewableItems: t } = e;
                 if (0 === t.length) return;
@@ -71,9 +73,9 @@ function m(e) {
                 s.k.trackItemLongImpression(
                     t,
                     n.map((e) => ({ id: e.id, type: (0, c.xG)(e) })),
-                    I,
+                    C,
                 ),
-                    l.A.triggerItemsLongImpression(
+                    r.A.triggerItemsLongImpression(
                         t
                             .filter((e) => {
                                 let { item: t } = e;
@@ -93,11 +95,11 @@ function m(e) {
                             }),
                     );
             },
-            [I],
+            [C],
         ),
-        P = i.useCallback((e) => {
+        D = i.useCallback((e) => {
             let { viewableItems: t } = e;
-            l.A.startItemsDwell(
+            r.A.startItemsDwell(
                 t
                     .filter((e) => {
                         let { item: t } = e;
@@ -117,7 +119,7 @@ function m(e) {
                     }),
             );
         }, []),
-        j = i.useMemo(
+        M = i.useMemo(
             () => [
                 {
                     viewabilityConfig: {
@@ -125,7 +127,7 @@ function m(e) {
                         viewAreaCoveragePercentThreshold: 100,
                         minimumViewTime: 50,
                     },
-                    onViewableItemsChanged: O,
+                    onViewableItemsChanged: R,
                 },
                 {
                     viewabilityConfig: {
@@ -133,7 +135,7 @@ function m(e) {
                         viewAreaCoveragePercentThreshold: 50,
                         minimumViewTime: 1e3,
                     },
-                    onViewableItemsChanged: R,
+                    onViewableItemsChanged: P,
                 },
                 {
                     viewabilityConfig: {
@@ -141,19 +143,20 @@ function m(e) {
                         viewAreaCoveragePercentThreshold: 50,
                         minimumViewTime: 50,
                     },
-                    onViewableItemsChanged: P,
+                    onViewableItemsChanged: D,
                 },
             ],
-            [O, R, P],
+            [R, P, D],
         );
     i.useEffect(() => {
-        l.A.openICYMITab();
+        r.A.openICYMITab();
     }, []);
-    let D = (0, h.E)(t),
-        { data: w, stickyHeaderIndices: M } = i.useMemo(() => {
+    let j = (0, h.E)(t),
+        w = (0, _.n)(),
+        { data: U, stickyHeaderIndices: G } = i.useMemo(() => {
             let e = [];
             return (
-                C &&
+                T &&
                     null != n &&
                     n.type === c.Mm.CUSTOM_STATUS &&
                     e.push({
@@ -163,29 +166,30 @@ function m(e) {
                         score: n.score,
                         unread: !0,
                     }),
-                C
+                T
                     ? e.push({ id: "loading", timestamp: 0, unread: !1, data: { kind: "loading" } })
-                    : (g.forEach((t) => {
+                    : (w && e.push({ id: "sunsetBanner", timestamp: 0, unread: !1, data: { kind: "sunsetBanner" } }),
+                      E.forEach((t) => {
                           (0, u.yx)(t) || e.push(t);
                       }),
                       f && e.push({ id: "end", timestamp: 0, unread: !1, data: { kind: "end" } }),
-                      E.length > 0 &&
-                          E.forEach((t) => {
+                      I.length > 0 &&
+                          I.forEach((t) => {
                               (0, u.yx)(t) || e.push(t);
                           }),
-                      T && e.push({ id: "bottomLoading", timestamp: 0, unread: !1, data: { kind: "bottomLoading" } })),
+                      S && e.push({ id: "bottomLoading", timestamp: 0, unread: !1, data: { kind: "bottomLoading" } })),
                 { data: e, stickyHeaderIndices: [] }
             );
-        }, [C, n, g, f, E, T]);
+        }, [T, n, E, f, I, S, w]);
     return {
-        data: w,
-        loading: C,
-        version: I,
-        visibleItemIds: S,
-        endVisible: m,
+        data: U,
+        loading: T,
+        version: C,
+        visibleItemIds: x,
+        endVisible: g,
         isRefreshing: N,
-        handleOnRefresh: D,
-        stickyHeaderIndices: M,
-        viewabilityConfigCallbackPairs: j,
+        handleOnRefresh: j,
+        stickyHeaderIndices: G,
+        viewabilityConfigCallbackPairs: M,
     };
 }
