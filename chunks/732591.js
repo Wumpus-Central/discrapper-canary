@@ -11,5 +11,6 @@ e.exports = {
     vg: "soundPreviewName__0b69f",
     Fr: "soundPreviewText__0b69f",
     tD: "upsellText__0b69f",
+    Zv: "leadingAction__0b69f",
     Z3: "legacyUpsellButton__0b69f",
 };

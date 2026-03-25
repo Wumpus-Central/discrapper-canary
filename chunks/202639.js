@@ -29,36 +29,37 @@ function E(e) {
             hoveredNitroLockedSound: v,
             useUpdatedStyling: N = !1,
             subscribeButtonVariantOverride: C,
+            leadingAction: R,
         } = e,
-        { enabled: R } = u.e.useConfig({ location: "PremiumFloatingPickerUpsell" }),
-        { useLegacyButton: O } = c.h.useConfig({ location: "PremiumFloatingPickerUpsell" }),
-        b = (0, o.zhh)({
+        { enabled: O } = u.e.useConfig({ location: "PremiumFloatingPickerUpsell" }),
+        { useLegacyButton: b } = c.h.useConfig({ location: "PremiumFloatingPickerUpsell" }),
+        D = (0, o.zhh)({
             transform: t ? "translateY(0%)" : "translateY(120%)",
             opacity: +!!t,
             config: { tension: 120, friction: 14 },
         }),
-        D = R && null != v,
-        L = v?.emojiId != null || v?.emojiName != null,
-        w = n;
-    if (D) {
+        L = O && null != v,
+        w = v?.emojiId != null || v?.emojiName != null,
+        M = n;
+    if (L) {
         let e = d.A.getGuild(v.guildId);
-        w = h.intl.format(h.t.eku049, { serverName: e?.name ?? h.intl.string(h.t.DmIUGK) });
+        M = h.intl.format(h.t.eku049, { serverName: e?.name ?? h.intl.string(h.t.DmIUGK) });
     }
     return (0, r.jsx)(a.animated.div, {
-        style: { ...b },
+        style: { ...D },
         className: s()(m.Zj, y && m.Me, N && m.ww, { [m.tO]: "floating" === S, [m.Kx]: "inline" === S }, I),
         children: (0, r.jsxs)(g, {
-            hasPreviewSound: D,
+            hasPreviewSound: L,
             useGradientBg: y,
             children: [
-                D &&
+                L &&
                     (0, r.jsxs)("div", {
                         className: m.Ed,
                         children: [
                             (0, r.jsxs)("div", {
                                 className: m.vg,
                                 children: [
-                                    L && (0, r.jsx)(l.A, { emojiId: v.emojiId, emojiName: v.emojiName }),
+                                    w && (0, r.jsx)(l.A, { emojiId: v.emojiId, emojiName: v.emojiName }),
                                     (0, r.jsx)(o.Text, {
                                         variant: "text-sm/semibold",
                                         color: "text-strong",
@@ -70,19 +71,20 @@ function E(e) {
                                 variant: "text-xs/normal",
                                 color: "text-muted",
                                 className: m.Fr,
-                                children: w ?? n,
+                                children: M ?? n,
                             }),
                         ],
                     }),
-                !D &&
+                !L &&
                     (0, r.jsx)(o.Text, {
                         variant: i ?? "text-sm/medium",
                         color: "text-strong",
                         className: m.tD,
                         children: n,
                     }),
+                null != R && (0, r.jsx)("div", { className: m.Zv, children: R }),
                 "string" == typeof E
-                    ? O
+                    ? b
                         ? (0, r.jsx)(f.A, {
                               size: "m",
                               className: m.Z3,
