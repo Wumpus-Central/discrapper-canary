@@ -1,100 +1,85 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => _ });
 var l = n(627968),
     a = n(64700),
-    i = n(397927),
-    r = n(46054),
+    r = n(397927),
+    i = n(46054),
     s = n(861662),
     d = n(985018),
     o = n(322367),
-    u = n(473169);
-let c = (e) => {
+    c = n(473169);
+let u = (e) => {
         let {
                 data: {
                     title: t,
                     subtitle: n,
-                    description: c,
-                    placeholder: m,
-                    rows: _,
+                    description: u,
+                    placeholder: _,
+                    rows: m,
                     character_limit: x,
-                    pattern: g,
+                    pattern: p,
                 },
                 onChange: h,
-                initialText: p,
+                initialText: g,
                 isRequired: A,
             } = e,
-            b = a.useMemo(() => r.A.reactParserFor({ ...r.A.defaultRules, link: s.B }), []),
-            [v, f] = a.useState(""),
-            [j, T] = a.useState(null);
+            v = a.useMemo(() => i.A.reactParserFor({ ...i.A.defaultRules, link: s.B }), []),
+            [f, b] = a.useState(""),
+            [C, j] = a.useState(null);
         a.useEffect(() => {
-            f(p?.value ?? "");
-        }, [p]);
-        let N = a.useCallback(
+            b(g?.value ?? "");
+        }, [g]);
+        let T = a.useCallback(
             (e) => {
-                let t = null != g ? new RegExp(g) : null;
+                let t = null != p ? new RegExp(p) : null;
                 null == t || t.test(e)
-                    ? null != e && (T(null), f(e), h({ value: e, isValid: !0 }))
-                    : (T(d.intl.string(d.t["24xrGb"])), h({ value: e, isValid: !1 }));
+                    ? null != e && (j(null), b(e), h({ value: e, isValid: !0 }))
+                    : (j(d.intl.string(d.t["24xrGb"])), h({ value: e, isValid: !1 }));
             },
-            [h, g],
+            [h, p],
         );
         return (0, l.jsxs)("div", {
-            className: u.QB,
+            className: c.QB,
             children: [
                 (0, l.jsxs)("div", {
-                    className: u.QB,
+                    className: c.QB,
                     children: [
                         null != t &&
-                            (0, l.jsxs)(i.Text, {
+                            (0, l.jsxs)(r.Text, {
                                 variant: "text-sm/bold",
                                 children: [t, A && (0, l.jsx)("span", { className: o.m, children: "*" })],
                             }),
-                        null != c &&
+                        null != u &&
                             (0, l.jsx)("div", {
-                                className: u.a5,
-                                children: (0, l.jsx)(i.Text, {
+                                className: c.a5,
+                                children: (0, l.jsx)(r.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    children: c,
+                                    children: u,
                                 }),
                             }),
                     ],
                 }),
-                1 === _
-                    ? (0, l.jsx)(i.ksK, {
-                          maxLength: x,
-                          onChange: N,
-                          value: v,
-                          error: j,
-                          placeholder: m,
-                          autoFocus: !0,
-                      })
-                    : (0, l.jsx)(i.fs1, {
-                          maxLength: x,
-                          onChange: N,
-                          value: v,
-                          error: j,
-                          rows: _,
-                          placeholder: m,
-                          autoFocus: !0,
-                      }),
+                1 === m
+                    ? (0, l.jsx)(r.ksK, { maxLength: x, onChange: T, value: f, error: C, placeholder: _ })
+                    : (0, l.jsx)(r.fs1, { maxLength: x, onChange: T, value: f, error: C, rows: m, placeholder: _ }),
                 null != n &&
                     (0, l.jsx)("div", {
-                        className: u.a5,
-                        children: (0, l.jsx)(i.Text, {
+                        className: c.a5,
+                        children: (0, l.jsx)(r.Text, {
                             variant: "text-xs/normal",
                             color: "text-muted",
-                            children: b(n),
+                            children: v(n),
                         }),
                     }),
             ],
         });
     },
-    m = (e) => {
+    _ = (e) => {
         let { elements: t, onChange: n, state: a } = e,
-            i = t.map((e) => {
+            r = t.map((e) => {
                 let t = e.name;
                 return (0, l.jsx)(
-                    c,
+                    u,
                     {
                         data: e.data,
                         onChange: (e) => n(t, e.value, e.isValid),
@@ -104,5 +89,5 @@ let c = (e) => {
                     t,
                 );
             });
-        return (0, l.jsx)("div", { children: i });
+        return (0, l.jsx)("div", { children: r });
     };
