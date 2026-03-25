@@ -1,19 +1,19 @@
 n.d(t, { A: () => A }), n(323874), n(14289), n(35956);
 var l = n(627968),
-    i = n(64700),
-    a = n(397927),
-    r = n(46054),
+    a = n(64700),
+    r = n(397927),
+    i = n(46054),
     s = n(403362),
     d = n(861662),
     o = n(985018),
-    u = n(322367),
-    c = n(473169);
-let m = ["cdn.discordapp.com", "media.discordapp.net"],
-    _ = /^(?:localhost|127\.0\.0\.1|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})$/,
+    c = n(322367),
+    u = n(473169);
+let _ = ["cdn.discordapp.com", "media.discordapp.net"],
+    m = /^(?:localhost|127\.0\.0\.1|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})$/,
     x = (0, s.m6)()
         ? /^https?:\/\/(?:(?:ptb\.|canary\.)?discord(?:app)?\.com|localhost(?::\d+)?|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(?::\d+)?)\/channels\/(?:@me|\d+)\/\d+\/\d+$/
         : /^https:\/\/(?:ptb\.|canary\.)?discord(?:app)?\.com\/channels\/(?:@me|\d+)\/\d+\/\d+$/;
-function g(e) {
+function p(e) {
     try {
         return new URL(e), !0;
     } catch {
@@ -23,11 +23,11 @@ function g(e) {
 function h(e) {
     return (
         "" !== e &&
-        !!g(e) &&
+        !!p(e) &&
         !(function (e) {
             try {
                 let t = new URL(e);
-                if (m.some((e) => t.hostname === e) || ((0, s.m6)() && _.test(t.hostname))) return !0;
+                if (_.some((e) => t.hostname === e) || ((0, s.m6)() && m.test(t.hostname))) return !0;
                 return !1;
             } catch {
                 return !1;
@@ -35,111 +35,113 @@ function h(e) {
         })(e)
     );
 }
-let p = (e) => {
+let g = (e) => {
         let {
-                data: { title: t, subtitle: n, placeholder: s, message_link_title: m, message_link_placeholder: _ },
-                onChange: p,
+                data: { title: t, subtitle: n, placeholder: s, message_link_title: _, message_link_placeholder: m },
+                onChange: g,
                 initialContentUrl: A,
-                initialMessageUrl: b,
-                isRequired: v,
+                initialMessageUrl: v,
+                isRequired: f,
             } = e,
-            f = i.useMemo(() => r.A.reactParserFor({ ...r.A.defaultRules, link: d.B }), []),
-            [j, T] = i.useState(""),
-            [N, S] = i.useState(""),
-            [k, C] = i.useState(null),
-            [I, E] = i.useState(null),
-            [y, M] = i.useState(!1);
-        i.useEffect(() => {
-            T(A?.value ?? ""), S(b?.value ?? ""), A?.value != null && "" !== A.value && M(h(A.value));
-        }, [A, b]);
-        let R = i.useCallback(
+            b = a.useMemo(() => i.A.reactParserFor({ ...i.A.defaultRules, link: d.B }), []),
+            [C, j] = a.useState(""),
+            [T, N] = a.useState(""),
+            [I, S] = a.useState(null),
+            [y, k] = a.useState(null),
+            [E, w] = a.useState(!1);
+        a.useEffect(() => {
+            j(A?.value ?? ""), N(v?.value ?? ""), A?.value != null && "" !== A.value && w(h(A.value));
+        }, [A, v]);
+        let R = a.useCallback(
                 (e) => {
-                    if ((T(e), "" === e)) {
-                        C(null), M(!1), S(""), E(null), p({ value: e, isValid: !1 });
+                    if ((j(e), "" === e)) {
+                        S(null), w(!1), N(""), k(null), g({ value: e, isValid: !1 });
                         return;
                     }
-                    if (!g(e)) {
-                        C(o.intl.string(o.t["24xrGb"])), M(!1), S(""), E(null), p({ value: e, isValid: !1 });
+                    if (!p(e)) {
+                        S(o.intl.string(o.t["24xrGb"])), w(!1), N(""), k(null), g({ value: e, isValid: !1 });
                         return;
                     }
                     let t = h(e);
-                    M(t),
-                        C(null),
+                    w(t),
+                        S(null),
                         t
-                            ? "" === N
-                                ? p({ value: e, isValid: !1 })
-                                : x.test(N)
-                                  ? p({ value: e, isValid: !0 }, { value: N, isValid: !0 })
-                                  : p({ value: e, isValid: !1 }, { value: N, isValid: !1 })
-                            : (S(""), E(null), p({ value: e, isValid: !0 }));
+                            ? "" === T
+                                ? g({ value: e, isValid: !1 })
+                                : x.test(T)
+                                  ? g({ value: e, isValid: !0 }, { value: T, isValid: !0 })
+                                  : g({ value: e, isValid: !1 }, { value: T, isValid: !1 })
+                            : (N(""), k(null), g({ value: e, isValid: !0 }));
                 },
-                [p, N],
+                [g, T],
             ),
-            L = i.useCallback(
+            M = a.useCallback(
                 (e) => {
-                    if ((S(e), "" === e || !x.test(e))) {
-                        E(o.intl.string(o.t["24xrGb"])), p({ value: j, isValid: !1 }, { value: e, isValid: !1 });
+                    if ((N(e), "" === e || !x.test(e))) {
+                        k(o.intl.string(o.t["24xrGb"])), g({ value: C, isValid: !1 }, { value: e, isValid: !1 });
                         return;
                     }
-                    E(null), p({ value: j, isValid: !0 }, { value: e, isValid: !0 });
+                    k(null), g({ value: C, isValid: !0 }, { value: e, isValid: !0 });
                 },
-                [p, j],
+                [g, C],
             );
         return (0, l.jsxs)("div", {
             children: [
-                (0, l.jsxs)(a.BJc, {
+                (0, l.jsxs)(r.BJc, {
                     gap: 16,
                     children: [
                         (0, l.jsxs)("div", {
-                            className: c.QB,
+                            className: u.QB,
                             children: [
                                 null != t &&
                                     (0, l.jsx)("div", {
-                                        className: c.QB,
-                                        children: (0, l.jsxs)(a.Text, {
-                                            variant: "text-sm/bold",
-                                            children: [t, v && (0, l.jsx)("span", { className: u.m, children: "*" })],
+                                        className: u.QB,
+                                        children: (0, l.jsxs)(r.Text, {
+                                            variant: "text-md/medium",
+                                            color: "text-strong",
+                                            children: [t, f && (0, l.jsx)("span", { className: c.m, children: "*" })],
                                         }),
                                     }),
-                                (0, l.jsx)(a.ksK, { onChange: R, value: j, error: k, placeholder: s, autoFocus: !0 }),
+                                (0, l.jsx)(r.ksK, { onChange: R, value: C, error: I, placeholder: s, autoFocus: !0 }),
                             ],
                         }),
-                        y &&
-                            null != m &&
+                        E &&
+                            null != _ &&
                             (0, l.jsxs)("div", {
-                                className: c.QB,
+                                className: u.QB,
                                 children: [
                                     (0, l.jsx)("div", {
-                                        className: c.QB,
-                                        children: (0, l.jsxs)(a.Text, {
-                                            variant: "text-sm/bold",
-                                            children: [m, v && (0, l.jsx)("span", { className: u.m, children: "*" })],
+                                        className: u.QB,
+                                        children: (0, l.jsxs)(r.Text, {
+                                            variant: "text-md/medium",
+                                            color: "text-strong",
+                                            children: [_, f && (0, l.jsx)("span", { className: c.m, children: "*" })],
                                         }),
                                     }),
-                                    (0, l.jsx)(a.ksK, { onChange: L, value: N, error: I, placeholder: _ }),
+                                    (0, l.jsx)(r.ksK, { onChange: M, value: T, error: y, placeholder: m }),
                                 ],
                             }),
                     ],
                 }),
-                null != n && (0, l.jsx)(a.Text, { variant: "text-xs/normal", children: f(n) }),
+                null != n && (0, l.jsx)(r.Text, { variant: "text-xs/normal", children: b(n) }),
             ],
         });
     },
     A = (e) => {
-        let { element: t, onChange: n, state: a } = e,
-            r = t.name,
+        let { element: t, onChange: n, state: r } = e,
+            i = t.name,
             s = `${t.name}_message_link`,
-            d = i.useCallback(
+            d = a.useCallback(
                 (e, t) => {
-                    null != t ? n(r, e.value, e.isValid && t.isValid, s, t.value) : n(r, e.value, e.isValid, s, void 0);
+                    null != t ? n(i, e.value, e.isValid && t.isValid, s, t.value) : n(i, e.value, e.isValid, s, void 0);
                 },
-                [n, r, s],
+                [n, i, s],
             );
-        return (0, l.jsx)(p, {
+        return (0, l.jsx)(g, {
             data: t.data,
             onChange: d,
-            initialContentUrl: a?.[r],
-            initialMessageUrl: a?.[s],
+            initialContentUrl: r?.[i],
+            initialMessageUrl: r?.[s],
             isRequired: t.should_submit_data,
         });
     };

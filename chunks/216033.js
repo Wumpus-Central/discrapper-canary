@@ -22,7 +22,13 @@ function o(e) {
                           className: d.w,
                           children: t,
                       }),
-                  null != n && (0, l.jsx)(r.Text, { variant: "text-sm/normal", className: d.r, children: c(n) }),
+                  null != n &&
+                      (0, l.jsx)(r.Text, {
+                          variant: "text-md/normal",
+                          color: "text-subtle",
+                          className: d.r,
+                          children: c(n),
+                      }),
               ],
           })
         : null;
