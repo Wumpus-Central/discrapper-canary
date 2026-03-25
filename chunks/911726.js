@@ -16,13 +16,13 @@ var i,
     T = n(567771),
     f = n(780964),
     N = n(840065),
-    C = n(473145),
-    g = n(763754),
+    g = n(473145),
+    C = n(763754),
     p = n(888675),
     h = n(921066),
-    R = n(652215),
-    x = n(985018),
-    S = n(754830);
+    x = n(652215),
+    R = n(985018),
+    S = n(811336);
 let O = {
     enter: { BEG: 0, END: 22 },
     confetti: { BEG: 23, END: 119 },
@@ -98,8 +98,8 @@ function F(e) {
         ),
         { createMultipleConfettiAt: I, confettiCanvas: T } = l.useContext(m.x),
         [f, N] = l.useState(null),
-        C = (0, o.f9)(T, f),
-        g = (function (e, t) {
+        g = (0, o.f9)(T, f),
+        C = (function (e, t) {
             if (null == e) return "enter";
             switch (e) {
                 case "enter":
@@ -117,10 +117,10 @@ function F(e) {
         })(u, E),
         p = D.includes(E),
         h = p && "exit" === u,
-        R = l.useCallback((e) => {
+        x = l.useCallback((e) => {
             A(e);
         }, []),
-        x = l.useCallback(() => {
+        R = l.useCallback(() => {
             "exit" === u && t?.();
         }, [t, u]),
         U = l.useCallback((e) => {
@@ -149,7 +149,7 @@ function F(e) {
         l.useEffect(() => {
             if (p && "leaf_fall" === u) {
                 let e = v[E].leafRotationDirection;
-                C.createConfetti(
+                g.createConfetti(
                     {
                         id: `${L}-${(0, c.A)()}`,
                         position: {
@@ -173,7 +173,7 @@ function F(e) {
                     { sprite: "TOP_LEFT" === E ? y : b },
                 );
             }
-        }, [p, C, E, u]),
+        }, [p, g, E, u]),
         (0, a.jsxs)(a.Fragment, {
             children: [
                 (0, a.jsx)(o.K_, { ref: N, sprites: k, colors: j, spriteWidth: 45, spriteHeight: 45 }),
@@ -188,10 +188,10 @@ function F(e) {
                     children: (0, a.jsx)(_.tvC, {
                         animationRef: U,
                         className: s()(S.oQ, { [S.EG]: h }),
-                        nextScene: g,
+                        nextScene: C,
                         sceneSegments: O,
-                        onScenePlay: R,
-                        onSceneComplete: x,
+                        onScenePlay: x,
+                        onSceneComplete: R,
                         importData: G,
                         pauseWhileUnfocused: !1,
                     }),
@@ -205,12 +205,12 @@ function B(e) {
         { message: n, compact: i, guild: r, usernameHook: s, onClickMessage: o } = e,
         c = (function (e) {
             switch (e.type) {
-                case R.lAJ.GUILD_BOOST_TIER_1:
-                    return R.TVA.TIER_1;
-                case R.lAJ.GUILD_BOOST_TIER_2:
-                    return R.TVA.TIER_2;
-                case R.lAJ.GUILD_BOOST_TIER_3:
-                    return R.TVA.TIER_3;
+                case x.lAJ.GUILD_BOOST_TIER_1:
+                    return x.TVA.TIER_1;
+                case x.lAJ.GUILD_BOOST_TIER_2:
+                    return x.TVA.TIER_2;
+                case x.lAJ.GUILD_BOOST_TIER_3:
+                    return x.TVA.TIER_3;
             }
             return null;
         })(n),
@@ -219,27 +219,27 @@ function B(e) {
         [h, O] = l.useState(!1),
         M = l.useRef(null),
         { reducedMotion: D } = l.useContext(_.CZY),
-        P = (0, g.Ay)(n),
+        P = (0, C.Ay)(n),
         U = P.nick,
         v = s(P);
     t =
         null == c || null == r
             ? d > 1
-                ? x.intl.format(x.t.yfC9ds, { username: U, usernameHook: v, numSubscriptions: d })
-                : x.intl.format(x.t["57St/7"], { username: U, usernameHook: v })
+                ? R.intl.format(R.t.yfC9ds, { username: U, usernameHook: v, numSubscriptions: d })
+                : R.intl.format(R.t["57St/7"], { username: U, usernameHook: v })
             : d > 1
-              ? x.intl.format(x.t.PO9uJD, {
+              ? R.intl.format(R.t.PO9uJD, {
                     username: U,
                     usernameHook: v,
                     numSubscriptions: d,
                     guildName: r.name,
-                    newTierName: (0, C.gb)(c),
+                    newTierName: (0, g.gb)(c),
                 })
-              : x.intl.format(x.t.cUfTTE, {
+              : R.intl.format(R.t.cUfTTE, {
                     username: U,
                     usernameHook: v,
                     guildName: r.name,
-                    newTierName: (0, C.gb)(c),
+                    newTierName: (0, g.gb)(c),
                 });
     let j = l.useCallback(() => {
             if (!D.enabled)
@@ -296,8 +296,7 @@ function B(e) {
     });
 }
 function H(e) {
-    let { message: t, guild: n, usernameHook: i } = e;
-    return (0, A.n)("UserPremiumGuildSubscription")
-        ? (0, a.jsx)(h.A, { message: t, guild: n, usernameHook: i })
-        : (0, a.jsx)(B, { ...e });
+    let { message: t, guild: n, usernameHook: i } = e,
+        { enabled: l, compact: r } = A.X.useConfig({ location: "UserPremiumGuildSubscription" });
+    return l ? (0, a.jsx)(h.A, { message: t, guild: n, usernameHook: i, compact: r }) : (0, a.jsx)(B, { ...e });
 }

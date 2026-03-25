@@ -146,6 +146,7 @@ var r = (function (e) {
         (e.GUILD_BOOSTING_TIER_1 = "guild boosting tier 1"),
         (e.GUILD_BOOSTING_TIER_2 = "guild boosting tier 2"),
         (e.GUILD_BOOSTING_TIER_3 = "guild boosting tier 3"),
+        (e.GUILD_BOOSTING_SYSTEM_MESSAGE = "guild boosting system message"),
         (e.GUILD_BOOSTING_UPSELL_BANNER = "guild boosting upsell banner"),
         (e.GUILD_BOOSTING_SIDEBAR_DISPLAY = "guild boosting sidebar display"),
         (e.GUILDS_LIST = "guilds list"),
