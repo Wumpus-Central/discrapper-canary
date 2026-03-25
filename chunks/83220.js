@@ -1,1 +1,22 @@
-s.d(e,{lu:()=>r,zf:()=>n});var i=s(978862);function r(){return Date.now()/1e3}let n=function(){let{performance:t}=i.O;if(!t||!t.now)return r;let e=Date.now()-t.now(),s=void 0==t.timeOrigin?e:t.timeOrigin;return()=>(s+t.now())/1e3}();(()=>{let{performance:t}=i.O;if(!t||!t.now)return;let e=t.now(),s=Date.now(),r=t.timeOrigin?Math.abs(t.timeOrigin+e-s):36e5,n=t.timing&&t.timing.navigationStart,o="number"==typeof n?Math.abs(n+e-s):36e5;if((r<36e5||o<36e5)&&r<=o)return t.timeOrigin})()f(o||c)if(a<=u)return r="timeOrigin",e.timeOrigin;else return r="navigationStart";return r="dateNow"})()
+s.d(e, { lu: () => r, zf: () => n });
+var i = s(978862);
+function r() {
+    return Date.now() / 1e3;
+}
+let n = (function () {
+    let { performance: t } = i.O;
+    if (!t || !t.now) return r;
+    let e = Date.now() - t.now(),
+        s = void 0 == t.timeOrigin ? e : t.timeOrigin;
+    return () => (s + t.now()) / 1e3;
+})();
+(() => {
+    let { performance: t } = i.O;
+    if (!t || !t.now) return;
+    let e = t.now(),
+        s = Date.now(),
+        r = t.timeOrigin ? Math.abs(t.timeOrigin + e - s) : 36e5,
+        n = t.timing && t.timing.navigationStart,
+        o = "number" == typeof n ? Math.abs(n + e - s) : 36e5;
+    if ((r < 36e5 || o < 36e5) && r <= o) return t.timeOrigin;
+})();
