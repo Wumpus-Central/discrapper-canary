@@ -20058,9 +20058,12 @@ img.thumbnail__0f2e8 {
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: var(--custom-user-profile-banner-radius, var(--radius-xs) var(--radius-xs) 0 0);
     transition: background-color .1s;
     width: 100%
+}
+
+:not(.custom-user-profile-theme).user-profile-popout :where(.banner__68edb) {
+    border-radius: var(--custom-user-profile-banner-radius, var(--radius-sm) var(--radius-sm) 0 0)
 }
 
 .user-profile-modal-v2 :where(.banner__68edb) {
@@ -20168,7 +20171,6 @@ img.thumbnail__0f2e8 {
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow-border), var(--shadow-high);
     max-height: calc(100vh - 20px);
-    overflow: hidden;
     width: 300px
 }
 
@@ -20241,13 +20243,16 @@ img.thumbnail__0f2e8 {
 
 .user-profile-modal-v2 .inner_c0bea0 {
     border-radius: inherit;
+    box-sizing: border-box;
     flex-direction: row;
     gap: 0;
     height: 100%;
+    overflow: visible;
     padding-block: var(--custom-modal-v2-padding) 0;
     padding-inline-end: calc(var(--custom-modal-v2-padding) - var(--custom-modal-v2-tabpanel-scrollbar-offset));
     padding-inline-start: var(--custom-modal-v2-padding);
     position: relative;
+    z-index: var(--custom-user-profile-base-layer-z-index);
 
     @container (min-width: 714px) {
         --custom-modal-v2-padding: var(--space-32)
@@ -34613,6 +34618,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 }
 
 .profileEffects__01370 {
+    border-radius: inherit;
     height: 100%;
     inset-inline-start: 0;
     overflow: hidden;
@@ -34637,15 +34643,16 @@ html:not(.chat-input) .inputInner_b1f01d {
     width: 100%
 }
 
+.user-profile-popout .inner__01370 {
+    border-radius: var(--radius-sm)
+}
+
 .user-profile-modal-v2 .inner__01370 {
     border-radius: var(--radius-lg) var(--radius-lg) 0 0
 }
 
-.innerNoRadius__01370 {
-    border-radius: 0
-}
-
 .effect__01370 {
+    border-radius: inherit;
     inset-inline-start: 0;
     position: absolute;
     top: 0;
