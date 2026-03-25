@@ -126,55 +126,58 @@ class D extends s.A {
     handleLocalMute = (e, t) => {
         this.update();
     };
+    invertWants(e, t) {
+        for (let n of Object.values(this.videoSsrcs))
+            for (let r of n) R ? (r.quality !== A ? (e[r.ssrc] = A) : (e[r.ssrc] = I)) : (e[r.ssrc] = t);
+        for (let t of Object.values(this.audioSsrcs)) e[t] = A;
+    }
     update = (() => {
         var e = this;
         return function () {
             let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
                 n = e.getWantsLevel(),
-                r = b(n);
-            if ((0, c.P)("RTCMediaSinkWantsManager.update").invertWants) {
-                for (let t of Object.values(e.videoSsrcs)) for (let e of t) r[e.ssrc] = n;
-                for (let t of Object.values(e.audioSsrcs)) r[t] = n;
-            }
-            e.updateOffscreenUsers();
-            let s = (0, p.isDesktop)() && e.isOneToOneCall() && !e.isStageChannel;
-            for (let [i, a] of h.default.entries(e.videoSsrcs)) {
+                r = b(n),
+                s = r;
+            (0, c.P)("RTCMediaSinkWantsManager.update").invertWants && (e.invertWants(r, n), R && (s = { ...r })),
+                e.updateOffscreenUsers();
+            let a = (0, p.isDesktop)() && e.isOneToOneCall() && !e.isStageChannel;
+            for (let [i, s] of h.default.entries(e.videoSsrcs)) {
                 let o = [],
                     u = !1,
                     c = e.streamPixelCounts[e.streamIds[i]] ?? 0,
                     d = e.getWantsLevel(c),
-                    _ = a[0].ssrc;
+                    _ = s[0].ssrc;
                 if (e.shouldReceiveFromUser(i)) {
                     let t = i === e.selectedParticipantId && n !== A && !e.pipOpen;
-                    if (a.length > 1) {
-                        for (let e of a)
+                    if (s.length > 1) {
+                        for (let e of s)
                             e.quality === A
                                 ? t
                                     ? ((r[e.ssrc] = A), (_ = e.ssrc))
                                     : (r[e.ssrc] = I)
                                 : t
                                   ? (r[e.ssrc] = I)
-                                  : (s && (r[e.ssrc] = d), (_ = e.ssrc));
+                                  : (a && (r[e.ssrc] = d), (_ = e.ssrc));
                         if (e.supportsSeamless && !e.framesReceived[_])
-                            for (let t of ((u = !0), (o = [_]), a))
+                            for (let t of ((u = !0), (o = [_]), s))
                                 t.ssrc !== _ &&
                                     e.framesReceived[t.ssrc] &&
-                                    (t.quality === A ? (r[t.ssrc] = A) : (r[t.ssrc] = s ? d : n), o.push(t.ssrc));
-                    } else t ? (r[_] = A) : s && (r[_] = d);
-                } else for (let e of a) r[e.ssrc] = I;
+                                    (t.quality === A ? (r[t.ssrc] = A) : (r[t.ssrc] = a ? d : n), o.push(t.ssrc));
+                    } else t ? (r[_] = A) : a && (r[_] = d);
+                } else for (let e of s) r[e.ssrc] = I;
                 let f = e.getSimulcastOverrideQuality(i);
                 for (let t of (f === g.r8.HIGH ? (r[_] = A) : f === g.r8.LOW && (r[_] = 50),
                 (e.supportsSeamless && u) || (o = [_]),
-                a))
+                s))
                     o.includes(t.ssrc) || delete e.framesReceived[t.ssrc];
                 (t.includes(i) || (void 0 !== e.remoteVideoSsrcs[i] && !(0, l.A)(e.remoteVideoSsrcs[i], o))) &&
                     ((e.remoteVideoSsrcs[i] = [...o]), e.emit("user-ssrc-update", i, e.audioSsrcs[i], o));
             }
-            for (let [t, n] of Object.entries(e.audioSsrcs)) e.connection?.getLocalMute(t) && (r[n] = 0);
-            return R
-                ? e.latestWants
-                : (null == e.connection || i().isEqual(e.latestWants, r) || ((e.latestWants = r), e.emit("update", r)),
-                  r);
+            let o = R ? s : r;
+            for (let [t, n] of Object.entries(e.audioSsrcs)) e.connection?.getLocalMute(t) && (o[n] = 0);
+            return (
+                null == e.connection || i().isEqual(e.latestWants, o) || ((e.latestWants = o), e.emit("update", o)), o
+            );
         };
     })();
     getAudioSSRCs() {
@@ -195,9 +198,7 @@ class D extends s.A {
         return t > 0 ? (this.audioSsrcs[e] = t) : delete this.audioSsrcs[e], this.update();
     }
     setVideoSSRCs(e, t) {
-        let n = t
-            .filter((e) => e.active && (e.ssrc ?? 0) > 0)
-            .map((e) => ({ quality: e.quality ?? 100, ssrc: e.ssrc }));
+        let n = t.filter((e) => e.active && (e.ssrc ?? 0) > 0).map((e) => ({ quality: e.quality ?? A, ssrc: e.ssrc }));
         if (n.length > 0) (this.videoSsrcs[e] = n), this.participants.add(e);
         else {
             if (void 0 !== this.videoSsrcs[e])
