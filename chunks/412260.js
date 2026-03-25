@@ -199,10 +199,15 @@ class M extends r.Ay.PersistedStore {
             t = Object.keys(e);
         return 0 === t.length ? [] : e[t[0]].rewardSkuIds;
     }
-    getMarketingMomentRewardSkuIds() {
+    getMarketingMomentPromotion() {
         let e = E[u.pt.MARKETING_MOMENT],
             t = Object.keys(e);
-        return 0 === t.length ? [] : e[t[0]].rewardSkuIds;
+        if (0 === t.length) return null;
+        let n = e[t[0]];
+        return n.endDate < new Date() ? null : n;
+    }
+    getMarketingMomentRewardSkuIds() {
+        return this.getMarketingMomentPromotion()?.rewardSkuIds ?? [];
     }
 }
 let x = new M(i.h, {
