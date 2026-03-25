@@ -1,4 +1,4 @@
-s.d(t, { A: () => j });
+s.d(t, { A: () => A });
 var r = s(627968);
 s(64700);
 var i = s(421380),
@@ -10,55 +10,64 @@ var i = s(421380),
     d = s(234419),
     u = s(465794),
     f = s(511484),
-    h = s(927578),
-    x = s(213279),
-    p = s(788868),
-    m = s(191850),
-    _ = s(985018),
-    g = s(827025);
-function j(e) {
+    h = s(400669),
+    x = s(909536),
+    p = s(927578),
+    m = s(213279),
+    _ = s(788868),
+    g = s(191850),
+    j = s(985018),
+    v = s(827025);
+function A(e) {
     let { onClose: t } = e,
         { analyticsLocations: s } = (0, a.Ay)(l.A.GO_LIVE_MODAL_V2),
-        j = (0, d.V)(),
-        v = (0, c.O)(),
-        A = j?.subscription_trial?.sku_id === p.pe.TIER_2 || (0, f.U9)(v, p.pe.TIER_2),
-        y = _.intl.string(m.default["+f+cqk"]);
+        A = (0, x.St)("hd_streaming_upsell_ribbon"),
+        y = (0, d.V)(),
+        S = (0, c.O)(),
+        C = y?.subscription_trial?.sku_id === _.pe.TIER_2 || (0, f.U9)(S, _.pe.TIER_2),
+        b = j.intl.string(g.default["+f+cqk"]);
     return (
-        A &&
-            (null != j
-                ? (y = (0, h.FY)({
-                      intervalType: j?.subscription_trial?.interval,
-                      intervalCount: j?.subscription_trial?.interval_count,
+        C &&
+            (null != y
+                ? (b = (0, p.FY)({
+                      intervalType: y?.subscription_trial?.interval,
+                      intervalCount: y?.subscription_trial?.interval_count,
                   }))
-                : null != v && (y = _.intl.formatToPlainString(_.t.bkQ4bH, { percent: v.discount.amount }))),
+                : null != S && (b = j.intl.formatToPlainString(j.t.bkQ4bH, { percent: S.discount.amount }))),
         (0, r.jsxs)("div", {
-            className: g.zr,
+            className: v.zr,
             children: [
                 (0, r.jsxs)(n.Text, {
-                    className: g.aV,
+                    className: v.aV,
                     variant: "text-xs/normal",
                     color: "always-white",
                     children: [
                         (0, r.jsx)(n.XAi, { size: "xxs", color: "currentColor" }),
-                        _.intl.format(_.t.sLJ3EV, {
+                        j.intl.format(j.t.sLJ3EV, {
                             onNitroClick: function () {
-                                (0, x.p)({ analyticsLocation: s[0], onClose: t });
+                                (0, m.p)({ analyticsLocation: s[0], onClose: t });
                             },
                         }),
                     ],
                 }),
-                (0, r.jsx)(u.A, {
-                    className: g.lI,
-                    iconClassName: g.PC,
-                    size: i.$n.Sizes.TINY,
-                    color: i.$n.Colors.BRAND_INVERTED,
-                    subscriptionTier: p.pe.TIER_2,
-                    buttonShineClassName: g.vb,
-                    iconColor: o.k0.PREMIUM_TIER_2,
-                    onClick: () => {
-                        t();
-                    },
-                    textOptions: { subscribeText: y, textClassName: g.U_ },
+                (0, r.jsxs)("div", {
+                    className: v.OQ,
+                    children: [
+                        A && (0, r.jsx)(h.l, { size: "sm", className: v.ij }),
+                        (0, r.jsx)(u.A, {
+                            className: v.lI,
+                            iconClassName: v.PC,
+                            size: i.$n.Sizes.TINY,
+                            color: i.$n.Colors.BRAND_INVERTED,
+                            subscriptionTier: _.pe.TIER_2,
+                            buttonShineClassName: v.vb,
+                            iconColor: o.k0.PREMIUM_TIER_2,
+                            onClick: () => {
+                                t();
+                            },
+                            textOptions: { subscribeText: b, textClassName: v.U_ },
+                        }),
+                    ],
                 }),
             ],
         })
