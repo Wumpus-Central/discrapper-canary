@@ -21960,17 +21960,6 @@ img.thumbnail__0f2e8 {
 
 @value iconSize 20px;
 
-.visuallyHidden__0d242 {
-    border: 0;
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px
-}
-
 .tooltip__0d242 {
     max-width: 275px
 }
@@ -21989,7 +21978,7 @@ img.thumbnail__0f2e8 {
     padding-inline-end: 4px
 }
 
-input[type=checkbox]:focus-visible+.label__0d242 {
+.label__0d242:focus-visible {
     box-shadow: 0 0 8px var(--brand-500)
 }
 

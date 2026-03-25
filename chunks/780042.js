@@ -1,74 +1,62 @@
 "use strict";
-n.d(t, { A: () => y });
+n.d(t, { A: () => T });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(522160),
+    s = n(503698),
+    a = n.n(s),
+    o = n(497766),
     l = n(311907),
     u = n(554146),
     c = n(459192),
     d = n(397927),
     _ = n(775602),
-    f = n(379848),
-    h = n(287809),
-    p = n(927578),
-    g = n(49999),
+    f = n(932001),
+    p = n(287809),
+    h = n(927578),
+    m = n(49999),
     E = n(985018),
-    A = n(500320);
-let I = { tension: 750, mass: 2.5, friction: 70 },
-    T = 20;
-function y(e) {
-    let { checked: t, onClick: n, id: a = "burst-reaction-toggle-button" } = e,
-        y = (0, l.bG)([_.A], () => _.A.useReducedMotion),
-        S = h.default.getCurrentUser(),
-        v = null == S || (0, p.TW)(S) ? [u.M.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
-        [C, b] = (0, f.kn)(v),
-        [N, R] = i.useState(!1),
-        [O, D] = (0, d.zhh)(() => ({})),
-        L = (0, o.animated)(d.it9);
-    function w() {
-        D({ from: { rotate: t ? "360deg" : "0deg" }, to: { rotate: t ? "0deg" : "360deg" }, config: I }), n?.(), R(!1);
+    g = n(500320);
+let A = { tension: 750, mass: 2.5, friction: 70 },
+    I = 20;
+function T(e) {
+    let { checked: t, onClick: n } = e,
+        s = (0, l.bG)([_.A], () => _.A.useReducedMotion),
+        T = p.default.getCurrentUser(),
+        S = null == T || (0, h.TW)(T) ? [u.M.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
+        [y, v] = (0, f.kn)(S),
+        [N, C] = i.useState(!1),
+        [R, O] = (0, d.zhh)(() => ({})),
+        b = (0, o.animated)(d.it9);
+    function D() {
+        O({ from: { rotate: t ? "360deg" : "0deg" }, to: { rotate: t ? "0deg" : "360deg" }, config: A }), n?.(), C(!1);
     }
     i.useEffect(() => {
-        let e = C === u.M.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-        e && (b(g.i.DISMISS), setTimeout(() => R(e), 200));
-    }, [C, b]);
-    let x = N ? E.intl.string(E.t["Osi/uy"]) : t ? E.intl.string(E.t["5cRA/b"]) : E.intl.string(E.t.buV4av),
-        P = N ? E.intl.string(E.t.ORK94p) : void 0;
+        let e = y === u.M.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
+        e && (v(m.i.DISMISS), setTimeout(() => C(e), 200));
+    }, [y, v]);
+    let L = N ? E.intl.string(E.t["Osi/uy"]) : t ? E.intl.string(E.t["5cRA/b"]) : E.intl.string(E.t.buV4av),
+        w = N ? E.intl.string(E.t.ORK94p) : void 0;
     return (0, r.jsx)(c.u, {
         position: "top",
-        title: P,
-        body: x,
+        title: w,
+        body: L,
         asset: (0, r.jsx)(d.tvc, { size: "md", color: "currentColor" }),
         assetSize: 20,
         forceOpen: N,
-        children: (0, r.jsxs)("div", {
-            "aria-label": x,
-            children: [
-                (0, r.jsx)("input", { className: A.Qg, checked: t, onChange: w, id: a, type: "checkbox" }),
-                (0, r.jsxs)("label", {
-                    htmlFor: a,
-                    className: s()(A.Pf, { [A.wM]: t }),
-                    children: [
-                        (0, r.jsx)(L, {
-                            style: y ? void 0 : O,
-                            size: "custom",
-                            width: T,
-                            height: T,
-                            color: t ? "white" : "currentColor",
-                            className: A.Kk,
-                        }),
-                        (0, r.jsx)("span", {
-                            children: (0, r.jsx)(d.Text, {
-                                className: A.Qg,
-                                variant: "text-sm/semibold",
-                                children: E.intl.string(E.t.buV4av),
-                            }),
-                        }),
-                    ],
-                }),
-            ],
+        children: (0, r.jsx)(d.DUT, {
+            "aria-label": L,
+            "aria-pressed": t,
+            onClick: D,
+            focusProps: { enabled: !1 },
+            className: a()(g.Pf, { [g.wM]: t }),
+            children: (0, r.jsx)(b, {
+                style: s ? void 0 : R,
+                size: "custom",
+                width: I,
+                height: I,
+                color: t ? "white" : "currentColor",
+                className: g.Kk,
+            }),
         }),
     });
 }
