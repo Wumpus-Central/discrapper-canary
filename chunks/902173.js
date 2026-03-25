@@ -38,6 +38,7 @@ var r = (function (e) {
         (e[(e.MOBILE_ACTIVITY_QUEST = 36)] = "MOBILE_ACTIVITY_QUEST"),
         (e[(e.QUEST_BAR_UNFURL = 37)] = "QUEST_BAR_UNFURL"),
         (e[(e.NO_PREMIUM_ORBS_PERK = 38)] = "NO_PREMIUM_ORBS_PERK"),
+        (e[(e.NITRO_CONTROL_CTA = 39)] = "NITRO_CONTROL_CTA"),
         e
     );
 })({});
