@@ -22355,7 +22355,7 @@ img.thumbnail__0f2e8 {
 
 .wishlistButton__979b1.disabled__979b1 {
     cursor: not-allowed;
-    opacity: .5
+    filter: brightness(110%)
 }
 
 .wishlistButton__979b1:not(.disabled__979b1):hover {
@@ -22412,6 +22412,7 @@ img.thumbnail__0f2e8 {
 }
 
 .disabled__979b1 .normalIconColor__979b1 {
+    opacity: .5;
     fill: var(--icon-subtle)
 }
 

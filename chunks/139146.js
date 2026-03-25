@@ -50,51 +50,51 @@ function E(e) {
             isBusy: m,
             isFirstTimeWishlister: E,
             onClick: g,
+            tooltipConfig: A = {},
         } = e,
-        A = h[d],
-        { reducedMotion: I } = i.useContext(u.CZY),
-        T = i.useRef(null),
-        [S, y] = i.useState(!1),
-        v = _ && !S,
-        N = v ? u.C3E : u.yhu,
-        C = a()(p.normalIconColor, v && p.wishlistedOrAnimating);
+        I = h[d],
+        { reducedMotion: T } = i.useContext(u.CZY),
+        S = i.useRef(null),
+        [y, v] = i.useState(!1),
+        N = _ && !y,
+        C = N ? u.C3E : u.yhu,
+        R = a()(p.normalIconColor, N && p.wishlistedOrAnimating);
     i.useEffect(() => {
-        y(!1);
+        v(!1);
     }, [t]);
-    let R = i.useCallback(
+    let O = i.useCallback(
             (e) => {
-                e.stopPropagation(), o || (_ || I.enabled ? _ && S && y(!1) : y(!0), g());
+                e.stopPropagation(), o || (_ || T.enabled ? _ && y && v(!1) : v(!0), g());
             },
-            [o, _, I.enabled, S, g],
+            [o, _, T.enabled, y, g],
         ),
-        O = _ ? f.intl.string(f.t.yr9TTf) : f.intl.string(f.t["8DkMEQ"]),
-        b = f.intl.formatToPlainString(f.t["7kFjeK"], { productName: n }),
-        D = !o && !_ && !S,
-        L = i.useCallback(
+        b = !o && !_ && !y,
+        D = i.useCallback(
             (e) => {
-                e.target === e.currentTarget && S && requestAnimationFrame(() => y(!1));
+                e.target === e.currentTarget && y && requestAnimationFrame(() => v(!1));
             },
-            [S],
+            [y],
         ),
-        w = (e) =>
-            I.enabled
-                ? (0, r.jsx)(N, { colorClass: e ?? C, size: A })
+        L = (e) =>
+            T.enabled
+                ? (0, r.jsx)(C, { colorClass: e ?? R, size: I })
                 : (0, r.jsxs)("div", {
-                      className: a()(p.iconContainer, D && p.canAnimate),
+                      className: a()(p.iconContainer, b && p.canAnimate),
                       children: [
                           (0, r.jsx)("span", {
-                              className: a()(p.iconWrapper, D && p.canHover),
-                              children: (0, r.jsx)(N, { colorClass: e ?? C, size: A }),
+                              className: a()(p.iconWrapper, b && p.canHover),
+                              children: (0, r.jsx)(C, { colorClass: e ?? R, size: I }),
                           }),
                           (0, r.jsx)("span", {
-                              className: a()(p.animationOverlay, S && p.clickAnimation),
-                              onAnimationEnd: L,
-                              children: (0, r.jsx)(u.C3E, { size: A }),
+                              className: a()(p.animationOverlay, y && p.clickAnimation),
+                              onAnimationEnd: D,
+                              children: (0, r.jsx)(u.C3E, { size: I }),
                           }),
                       ],
                   }),
-        M = () =>
-            (0, r.jsx)(u.DUT, {
+        w = () => {
+            let e = f.intl.formatToPlainString(f.t["7kFjeK"], { productName: n });
+            return (0, r.jsx)(u.DUT, {
                 className: a()(
                     p.wishlistButton,
                     p[d],
@@ -105,15 +105,24 @@ function E(e) {
                     },
                     s,
                 ),
-                innerRef: T,
-                onClick: R,
-                "aria-label": b,
+                innerRef: S,
+                onClick: O,
+                "aria-label": e,
                 "aria-pressed": _,
                 "aria-busy": m,
                 "aria-disabled": o,
-                children: w(),
+                children: L(),
             });
-    return E && !o
-        ? (0, r.jsx)(l.un, { title: f.intl.string(f.t["47Rhc3"]), body: f.intl.string(f.t.PXjA0b), children: M() })
-        : (0, r.jsx)(l.m_, { text: o ? f.intl.string(f.t["50TX9k"]) : O, ariaHidden: !o, children: M() });
+        };
+    if (E && !o) {
+        let e = A.firstTimeTitle ?? f.intl.string(f.t["47Rhc3"]),
+            t = A.firstTimeBody ?? f.intl.string(f.t.PXjA0b);
+        return (0, r.jsx)(l.un, { title: e, body: t, children: w() });
+    }
+    let M = o
+        ? (A.disabled ?? f.intl.string(f.t["50TX9k"]))
+        : _
+          ? (A.remove ?? f.intl.string(f.t.yr9TTf))
+          : (A.add ?? f.intl.string(f.t["8DkMEQ"]));
+    return (0, r.jsx)(l.m_, { text: M, ariaHidden: !o, children: w() });
 }
