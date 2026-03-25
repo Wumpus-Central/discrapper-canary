@@ -1,0 +1,22 @@
+"use strict";
+e.exports = {
+    up: "premiumPillWithSparkles_f19a5c",
+    QX: "sparkleStar1_f19a5c",
+    J0: "sparkleStar2_f19a5c",
+    QC: "sparkleStar3_f19a5c",
+    JF: "sparkleStar4_f19a5c",
+    Cm: "sparkleStar5_f19a5c",
+    hg: "premiumPill_f19a5c",
+    AE: "premiumPillTier0GradientFill_f19a5c",
+    eY: "premiumPillTier2GradientFill_f19a5c",
+    ZC: "greyBackgroundPill_f19a5c",
+    u0: "modBackgroundPill_f19a5c",
+    rE: "premiumPillTier2OldGradientFill_f19a5c",
+    mY: "lightBackgroundPill_f19a5c",
+    Xu: "premiumPillGap_f19a5c",
+    YY: "premiumPillText_f19a5c",
+    oo: "premiumPillTextTier0_f19a5c",
+    oJ: "premiumPillTextTier2_f19a5c",
+    Zz: "premiumPillTextInverted_f19a5c",
+    jc: "premiumPillTextDefault_f19a5c",
+};
