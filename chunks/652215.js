@@ -4040,6 +4040,7 @@ var no = (function (e) {
             (e.SECURE_FRAMES_TRANSITION = "secure_frames_transition"),
             (e.MLS_FAILURES = "mls_failures"),
             (e.AV_ERROR_REPORTED = "av_error_reported"),
+            (e.DEBUG_LOG_UPLOADED = "debug_log_uploaded"),
             (e.VIDEO_CALL_ENDED = "video_call_ended"),
             (e.VIDEO_SPINNER_SHOWN_V2 = "video_spinner_shown_v2"),
             (e.VIDEO_TOGGLED = "video_toggled"),
