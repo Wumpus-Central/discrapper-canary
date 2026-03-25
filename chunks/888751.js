@@ -256,34 +256,46 @@ let R = (e, t) => {
                 overrideRenewalDate: r,
                 isSubscriptionUpdate: i,
                 discountOffer: s,
+                fractionalPremiumInfo: a,
             } = arguments.length > 3 && void 0 !== arguments[3]
                 ? arguments[3]
-                : { overrideRenewalDate: void 0, isSubscriptionUpdate: !1, discountOffer: null },
-            a = (0, l.Q8)(t, e, { isSubscriptionUpdate: i }),
-            { intervalType: u, intervalCount: c } = (0, _.Ge)(t),
-            d = t.currency,
-            f = [];
-        for (let e of a) {
+                : {
+                      overrideRenewalDate: void 0,
+                      isSubscriptionUpdate: !1,
+                      discountOffer: null,
+                      fractionalPremiumInfo: null,
+                  },
+            u = (0, l.Q8)(t, e, { isSubscriptionUpdate: i }),
+            { intervalType: c, intervalCount: d } = (0, _.Ge)(t),
+            f = t.currency,
+            p = [];
+        for (let e of u) {
             let { subscriptionPlanId: t } = e,
                 { lineItem: r } = O(e, n, {
                     isPremiumBasePlanInvoiceItem: (0, _.xq)(t),
-                    intervalType: u,
-                    intervalCount: c,
+                    intervalType: c,
+                    intervalCount: d,
                     discountOffer: s,
-                    currency: d,
+                    currency: f,
                 });
-            f.push(r);
+            p.push(r);
         }
-        let p = (0, o.de)({ overrideRenewalDate: r, currentInvoice: e, renewalInvoice: t, isSubscriptionUpdate: i });
+        let E = (0, o.de)({
+            overrideRenewalDate: r,
+            currentInvoice: e,
+            renewalInvoice: t,
+            isSubscriptionUpdate: i,
+            fractionalPremiumInfo: a,
+        });
         return {
-            lineItems: f,
-            intervalType: u,
-            intervalCount: c,
-            currency: d,
+            lineItems: p,
+            intervalType: c,
+            intervalCount: d,
+            currency: f,
             label: h.intl.string(m.default.GGn3pp),
             totalLineItemValueSubText: h.intl.string(m.default.yvUaHi),
-            totalLineItemLabel: N(u, c),
-            totalLineItemLabelSubText: h.intl.format(m.default.MR4VnX, { renewalDate: p }),
+            totalLineItemLabel: N(c, d),
+            totalLineItemLabelSubText: h.intl.format(m.default.MR4VnX, { renewalDate: E }),
         };
     },
     D = (e, t) => {

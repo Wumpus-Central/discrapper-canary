@@ -239,14 +239,20 @@ function F(e) {
     });
 }
 function V(e) {
-    let { overrideRenewalDate: t, currentInvoice: n, renewalInvoice: r, isSubscriptionUpdate: i } = e;
-    return null != t
-        ? t
-        : null != n
-          ? n.subscriptionPeriodEnd
-          : i
-            ? r.subscriptionPeriodStart
-            : r.subscriptionPeriodEnd;
+    let t,
+        {
+            overrideRenewalDate: n,
+            currentInvoice: r,
+            renewalInvoice: i,
+            isSubscriptionUpdate: s,
+            fractionalPremiumInfo: a,
+        } = e;
+    return null != n
+        ? n
+        : ((t = null != r ? r.subscriptionPeriodEnd : s ? i.subscriptionPeriodStart : i.subscriptionPeriodEnd),
+            null != a && a.isFractionalPremiumActive)
+          ? (0, I._e)(t, a.unactivatedUnits, a.endsAt, !1)
+          : t;
 }
 function B(e) {
     let { overrideRenewalDate: t, proratedInvoice: n, renewalInvoice: r, isUpdate: i } = e;

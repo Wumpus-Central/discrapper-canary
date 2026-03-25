@@ -163,6 +163,7 @@ let v = (e) => {
         let e = (0, I.Gj)(ed.invoicePreview, ed.renewalInvoicePreview, eI, {
             discountOffer: x,
             isSubscriptionUpdate: null != en,
+            fractionalPremiumInfo: er,
         });
         eS = (0, r.jsx)(c._, { ...e });
     }
@@ -197,6 +198,7 @@ let v = (e) => {
             isGift: U,
             paymentSourceType: ee,
             invoiceSummaryTypeWithPreview: ed,
+            fractionalPremiumInfo: er,
         }),
         eC =
             ed.type === h.N$.PREMIUM_WITH_TRIAL
