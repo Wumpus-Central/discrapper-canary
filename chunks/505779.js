@@ -1,26 +1,29 @@
-n.d(t, { V: () => l });
-var a,
-    l =
-        (((a = {})[(a.OFFICIAL = 1)] = "OFFICIAL"),
-        (a[(a.WIKIA = 2)] = "WIKIA"),
-        (a[(a.WIKIPEDIA = 3)] = "WIKIPEDIA"),
-        (a[(a.FACEBOOK = 4)] = "FACEBOOK"),
-        (a[(a.TWITTER = 5)] = "TWITTER"),
-        (a[(a.TWITCH = 6)] = "TWITCH"),
-        (a[(a.INSTAGRAM = 8)] = "INSTAGRAM"),
-        (a[(a.YOUTUBE = 9)] = "YOUTUBE"),
-        (a[(a.IPHONE = 10)] = "IPHONE"),
-        (a[(a.IPAD = 11)] = "IPAD"),
-        (a[(a.ANDROID = 12)] = "ANDROID"),
-        (a[(a.STEAM = 13)] = "STEAM"),
-        (a[(a.REDDIT = 14)] = "REDDIT"),
-        (a[(a.ITCH = 15)] = "ITCH"),
-        (a[(a.EPICGAMES = 16)] = "EPICGAMES"),
-        (a[(a.GOG = 17)] = "GOG"),
-        (a[(a.DISCORD = 18)] = "DISCORD"),
-        (a[(a.BLUESKY = 19)] = "BLUESKY"),
-        (a[(a.BATTLENET = 20)] = "BATTLENET"),
-        (a[(a.RIOT = 21)] = "RIOT"),
-        (a[(a.ROBLOX = 22)] = "ROBLOX"),
-        (a[(a.MINECRAFT = 23)] = "MINECRAFT"),
-        a);
+"use strict";
+n.d(t, { V: () => r });
+var r = (function (e) {
+    return (
+        (e[(e.OFFICIAL = 1)] = "OFFICIAL"),
+        (e[(e.WIKIA = 2)] = "WIKIA"),
+        (e[(e.WIKIPEDIA = 3)] = "WIKIPEDIA"),
+        (e[(e.FACEBOOK = 4)] = "FACEBOOK"),
+        (e[(e.TWITTER = 5)] = "TWITTER"),
+        (e[(e.TWITCH = 6)] = "TWITCH"),
+        (e[(e.INSTAGRAM = 8)] = "INSTAGRAM"),
+        (e[(e.YOUTUBE = 9)] = "YOUTUBE"),
+        (e[(e.IPHONE = 10)] = "IPHONE"),
+        (e[(e.IPAD = 11)] = "IPAD"),
+        (e[(e.ANDROID = 12)] = "ANDROID"),
+        (e[(e.STEAM = 13)] = "STEAM"),
+        (e[(e.REDDIT = 14)] = "REDDIT"),
+        (e[(e.ITCH = 15)] = "ITCH"),
+        (e[(e.EPICGAMES = 16)] = "EPICGAMES"),
+        (e[(e.GOG = 17)] = "GOG"),
+        (e[(e.DISCORD = 18)] = "DISCORD"),
+        (e[(e.BLUESKY = 19)] = "BLUESKY"),
+        (e[(e.BATTLENET = 20)] = "BATTLENET"),
+        (e[(e.RIOT = 21)] = "RIOT"),
+        (e[(e.ROBLOX = 22)] = "ROBLOX"),
+        (e[(e.MINECRAFT = 23)] = "MINECRAFT"),
+        e
+    );
+})({});
