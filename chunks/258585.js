@@ -1,48 +1,46 @@
 "use strict";
-n.d(t, { X5: () => m, eO: () => h, pn: () => g });
+n.d(t, { X5: () => h, eO: () => p, pn: () => m });
 var r = n(311907),
     i = n(506774),
-    a = n(401843),
-    s = n(250105),
+    s = n(401843),
+    a = n(250105),
     o = n(217222),
-    l = n(128319),
-    u = n(929921),
-    c = n(753070);
-let d = { allowAutoQuality: !1, defaultAutoQuality: !1, migrateAutoQuality: !1 },
-    _ = "GoLiveAutoQualityMigrationVersion",
-    f = 1,
-    p = (0, s.Ay)({
+    l = n(929921),
+    u = n(753070);
+let c = { allowAutoQuality: !1, defaultAutoQuality: !1, migrateAutoQuality: !1 },
+    d = "GoLiveAutoQualityMigrationVersion",
+    _ = 1,
+    f = (0, a.Ay)({
         name: "2025-10-go-live-auto-quality",
         kind: "user",
-        defaultConfig: d,
+        defaultConfig: c,
         variations: {
-            1: { ...d, allowAutoQuality: !0, migrateAutoQuality: !0 },
-            2: { ...d, allowAutoQuality: !0, defaultAutoQuality: !0 },
+            1: { ...c, allowAutoQuality: !0, migrateAutoQuality: !0 },
+            2: { ...c, allowAutoQuality: !0, defaultAutoQuality: !0 },
         },
     });
-function h(e) {
-    let { location: t } = e,
-        { isInHoldout: n } = l.p.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
-    return n ? p.definition.defaultConfig : p.getConfig({ location: t });
-}
-function m(e) {
+function p(e) {
     let { location: t } = e;
-    return (0, r.bG)([o.A], () => h({ location: t }));
+    return f.getConfig({ location: t });
 }
-function g() {
-    let e = p.getConfig({ location: "maybeMigrateToAutoQuality" }).migrateAutoQuality,
-        t = Number(i.w.get(_) ?? 0);
-    if (!e || t >= f) return;
-    let n = u.A.getState();
-    if (n.preset !== c.jQ.PRESET_CUSTOM) {
-        (0, a.Xd)({
-            preset: c.jQ.PRESET_AUTO,
+function h(e) {
+    let { location: t } = e;
+    return (0, r.bG)([o.A], () => p({ location: t }));
+}
+function m() {
+    let e = f.getConfig({ location: "maybeMigrateToAutoQuality" }).migrateAutoQuality,
+        t = Number(i.w.get(d) ?? 0);
+    if (!e || t >= _) return;
+    let n = l.A.getState();
+    if (n.preset !== u.jQ.PRESET_CUSTOM) {
+        (0, s.Xd)({
+            preset: u.jQ.PRESET_AUTO,
             resolution: n.resolution,
             frameRate: n.fps,
             soundshareEnabled: n.soundshareEnabled,
             noTrack: !0,
         }),
-            i.w.set(_, f);
+            i.w.set(d, _);
         return;
     }
 }

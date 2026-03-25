@@ -1,8 +1,7 @@
 "use strict";
-n.d(t, { F: () => o });
-var r = n(945810),
-    i = n(128319);
-let a = {
+n.d(t, { F: () => a });
+var r = n(945810);
+let i = {
         useAGC2: !0,
         enableAnalog: !1,
         enableDigital: !0,
@@ -19,15 +18,14 @@ let a = {
         defaultConfig: { noiseCancellationDuringProcessing: !1, noiseCancellationConfig: { useAGC2: !1 } },
         variations: {
             1: { noiseCancellationDuringProcessing: !0, noiseCancellationConfig: { useAGC2: !1 } },
-            2: { noiseCancellationDuringProcessing: !0, noiseCancellationConfig: a, vadKrispActivationThreshold: 0.5 },
-            3: { noiseCancellationDuringProcessing: !0, noiseCancellationConfig: a, vadKrispActivationThreshold: 0.7 },
-            4: { noiseCancellationDuringProcessing: !0, noiseCancellationConfig: a, vadKrispActivationThreshold: 0.8 },
-            5: { noiseCancellationDuringProcessing: !0, noiseCancellationConfig: a, vadKrispActivationThreshold: 0.9 },
-            6: { noiseCancellationDuringProcessing: !0, noiseCancellationConfig: a, vadKrispActivationThreshold: 0.95 },
+            2: { noiseCancellationDuringProcessing: !0, noiseCancellationConfig: i, vadKrispActivationThreshold: 0.5 },
+            3: { noiseCancellationDuringProcessing: !0, noiseCancellationConfig: i, vadKrispActivationThreshold: 0.7 },
+            4: { noiseCancellationDuringProcessing: !0, noiseCancellationConfig: i, vadKrispActivationThreshold: 0.8 },
+            5: { noiseCancellationDuringProcessing: !0, noiseCancellationConfig: i, vadKrispActivationThreshold: 0.9 },
+            6: { noiseCancellationDuringProcessing: !0, noiseCancellationConfig: i, vadKrispActivationThreshold: 0.95 },
         },
     });
-function o(e) {
-    let { location: t, disable: n = !1 } = e,
-        { isInHoldout: r } = i.p.getCurrentConfig({ location: t }, { disable: n, autoTrackExposure: !0 });
-    return r || n ? s.definition.defaultConfig : s.getConfig({ location: t });
+function a(e) {
+    let { location: t, disable: n = !1 } = e;
+    return n ? s.definition.defaultConfig : s.getConfig({ location: t });
 }

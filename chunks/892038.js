@@ -77,7 +77,7 @@ class _ extends r.A {
     }
     setVideoSize(e, t, n) {
         this.streamId === e &&
-            (!((0, o.isAndroid)() || (0, o.isIOS)()) || (0, a.H)("GoLiveQualityManager").enabled) &&
+            (!((0, o.isAndroid)() || (0, o.isIOS)()) || a.A.getConfig({ location: "GoLiveQualityManager" }).enabled) &&
             (null != t && ((this.resolutionWidth = t.width), (this.resolutionHeight = t.height)),
             null != n && (this.zoom = n),
             this.delayedUpdate());

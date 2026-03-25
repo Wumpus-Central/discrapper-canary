@@ -512,7 +512,7 @@ function na() {
                     e.setExperimentFlag(eP.fd.SIGNAL_AV1_HARDWARE_DECODE, !0));
             }
             if ((0, eg.isWeb)()) {
-                let { enabled: t } = (0, W.O)("MediaEngineStore");
+                let { enabled: t } = W.A.getConfig({ location: "MediaEngineStore" });
                 e.setExperimentFlag(eP.fd.BROWSER_HEVC, t);
             }
             for (let n of ((0, eg.isWindows)() &&

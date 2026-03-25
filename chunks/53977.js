@@ -2,8 +2,8 @@ n.d(t, { A: () => x });
 var i = n(627968),
     l = n(64700),
     a = n(397927),
-    r = n(566605),
-    s = n(379848),
+    s = n(566605),
+    r = n(379848),
     o = n(183555),
     d = n(357541),
     c = n(814221),
@@ -14,11 +14,11 @@ function x() {
     let { trackUserProfileAction: e, trackUserProfileEditAction: t } = (0, o.NJ)(),
         x = l.useRef(!1),
         {
-            suggestions: f,
-            currentUser: h,
-            isLoading: p,
-        } = (0, r.A)({ location: "UserProfileModalV2ApplicationWidgetsEmptyState" }),
-        _ = f?.[0],
+            suggestions: p,
+            currentUser: f,
+            isLoading: h,
+        } = (0, s.A)({ location: "UserProfileModalV2ApplicationWidgetsEmptyState" }),
+        _ = p?.[0],
         A = l.useCallback(() => {
             t({ action: "PRESS_ADD_WIDGET" }),
                 (0, a.mMO)(
@@ -31,19 +31,19 @@ function x() {
         }, [t]);
     if (
         (l.useEffect(() => {
-            p ||
+            h ||
                 null == _ ||
                 x.current ||
                 (e({ action: "VIEW_APPLICATION_WIDGETS_EMPTY_STATE", applicationId: _.application.id }),
                 (x.current = !0));
-        }, [p, e, _]),
-        p)
+        }, [h, e, _]),
+        h)
     )
-        return (0, i.jsx)("div", { className: m.L, children: (0, i.jsx)(a.y$y, {}) });
+        return (0, i.jsx)("div", { className: m.Lq, children: (0, i.jsx)(a.y$y, {}) });
     if (null == _) return (0, i.jsx)(u.A, {});
     let I = (0, i.jsxs)(a.BJc, {
         gap: 4,
-        className: m.w,
+        className: m.wx,
         children: [
             (0, i.jsx)(a.Heading, {
                 variant: "heading-md/medium",
@@ -57,7 +57,7 @@ function x() {
             }),
         ],
     });
-    return (0, i.jsx)(s.Ay, {
+    return (0, i.jsx)(r.Ay, {
         contentTypes: [_.dismissibleContent],
         bypassAutoDismiss: !0,
         children: (e) => {
@@ -69,7 +69,10 @@ function x() {
                       children: [
                           (0, i.jsx)(a.hKd, { size: 32 }),
                           I,
-                          (0, i.jsx)(d.A, { user: h, application: _.application, onDismiss: n }),
+                          (0, i.jsx)("div", {
+                              className: m.Zj,
+                              children: (0, i.jsx)(d.A, { user: f, application: _.application, onDismiss: n }),
+                          }),
                           (0, i.jsx)(c.A, {}),
                       ],
                   })
