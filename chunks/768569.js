@@ -2,8 +2,8 @@ n.d(t, { p: () => m });
 var i = n(627968);
 n(64700);
 var a = n(342494),
-    r = n(397927),
-    l = n(688810),
+    l = n(397927),
+    r = n(688810),
     s = n(532794),
     o = n(113359),
     d = n(788868),
@@ -15,13 +15,20 @@ var a = n(342494),
 let m = (e) => {
     let { targetElementRef: t, dismissPopover: m, children: g } = e,
         p = (0, o.QG)({ location: "nitro_tab_popover" }) === o.xb.POPOVER,
-        { analyticsLocations: E } = (0, l.Ay)(),
-        I = (0, i.jsx)(a.AM, {
+        { analyticsLocations: E } = (0, r.Ay)(),
+        I = p
+            ? h.intl.string(A.default.oOSj1l)
+            : h.intl.format(A.default["c+NBSl"], { premiumGroupProductName: (0, c.DP)() }),
+        f = p
+            ? h.intl.string(A.default.nCLJQn)
+            : h.intl.format(A.default.MuUV5u, { premiumGroupProductName: (0, c.DP)(), totalSeats: c.aw }),
+        C = (0, i.jsx)(a.AM, {
             targetElementRef: t,
-            title: h.intl.format(A.default["c+NBSl"], { premiumGroupProductName: (0, c.DP)() }),
-            body: h.intl.format(A.default.MuUV5u, { premiumGroupProductName: (0, c.DP)(), totalSeats: c.aw }),
+            title: I,
+            body: f,
             graphic: { type: "image", src: _ },
             badge: { type: "beta", variant: "expressive" },
+            gradientColor: "nitro-pink",
             size: "md",
             align: "top",
             position: "right",
@@ -40,15 +47,15 @@ let m = (e) => {
                                       initialPlanId: d.gD.PREMIUM_GROUP_MONTH,
                                       analyticsLocations: E,
                                   })
-                                : (0, r.mMO)(async () => {
+                                : (0, l.mMO)(async () => {
                                       let { default: e } = await n.e("91976").then(n.bind(n, 526710));
                                       return (t) => (0, i.jsx)(e, { ...t });
                                   });
                     },
-                    ...(p ? { icon: r.tvc, iconPosition: "start" } : {}),
+                    ...(p ? { icon: l.tvc, iconPosition: "start" } : {}),
                 },
             ],
             onRequestClose: () => m(u.i.USER_DISMISS),
         });
-    return (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)("div", { children: g }), I] });
+    return (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)("div", { children: g }), C] });
 };
