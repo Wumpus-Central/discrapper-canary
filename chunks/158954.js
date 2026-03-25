@@ -458,7 +458,6 @@ n.d(t, {
     uik: () => z.PlaybackOffIcon,
     vAm: () => z.EyePlusIcon,
     vH5: () => z.ScreenSystemRequirementsIcon,
-    vJI: () => z.SettingsCircleIcon,
     vN3: () => N.vN,
     vOF: () => z.FlipHorizontalIcon,
     vRF: () => z.BoostTier2SimpleIcon,

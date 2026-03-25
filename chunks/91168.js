@@ -21,8 +21,8 @@ var i = n(627968),
     N = n(7891),
     E = n(450510),
     b = n(861410),
-    T = n(433522),
-    C = n(287809),
+    C = n(433522),
+    T = n(287809),
     I = n(203982),
     v = n(403362),
     S = n(997509),
@@ -43,8 +43,8 @@ var i = n(627968),
     V = n(291444),
     z = n(239741),
     W = n(396816),
-    Y = n(807165),
-    K = n(454516),
+    K = n(807165),
+    Y = n(454516),
     X = n(155008),
     J = n(965033),
     Z = n(737331),
@@ -69,7 +69,7 @@ var i = n(627968),
     eh = n(652215),
     e_ = n(124759),
     ep = n(985018),
-    eA = n(221009);
+    eA = n(453263);
 let ef = {
     getSectionDefinition: function (e, t) {
         let ef = (0, _.$)(t.guild.id),
@@ -141,12 +141,11 @@ let ef = {
                     section: eh.BEX.ROLES,
                     impressionName: s.ImpressionNames.GUILD_SETTINGS_ROLES,
                     label: ep.intl.string(ep.t["LPJmL/"]),
-                    element: Y.A,
+                    element: K.A,
                     type: d.Py.MINIMAL,
                     ariaLabel: ep.intl.string(ep.t.KXcEC9),
-                    notice: { stores: [W.A], element: Y.W },
+                    notice: { stores: [W.A], element: K.W },
                     predicate: () => t.canManageRoles,
-                    icon: t.permissionMigrationAvailable ? (0, i.jsx)("div", { className: eA.Vx }) : void 0,
                 };
             case eh.BEX.EMOJI:
                 return {
@@ -256,7 +255,7 @@ let ef = {
                     section: eh.BEX.BANS,
                     impressionName: s.ImpressionNames.GUILD_SETTINGS_BANS,
                     label: ep.intl.string(ep.t.ZbeITS),
-                    element: K.A,
+                    element: Y.A,
                     predicate: () => t.canManageBans,
                 };
             case eh.BEX.COMMUNITY:
@@ -331,7 +330,7 @@ let ef = {
                     label: ep.intl.string(ep.t["2rkmDr"]),
                     ariaLabel: ep.intl.string(ep.t["2rkmDr"]),
                     element: D.A,
-                    notice: { stores: [b.A], element: T.A },
+                    notice: { stores: [b.A], element: C.A },
                     predicate: () =>
                         t.canManageGuild &&
                         t.guild.features.has(eh.GuildFeatures.COMMUNITY) &&
@@ -386,7 +385,7 @@ let ef = {
                 return {
                     section: eh.BEX.DELETE,
                     onClick() {
-                        let e = C.default.getCurrentUser();
+                        let e = T.default.getCurrentUser();
                         if (null == e) return;
                         let { name: s } = t.guild,
                             l = () => {

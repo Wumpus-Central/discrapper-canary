@@ -14,16 +14,16 @@ var i = n(627968),
     x = n(954571),
     h = n(558393),
     _ = n(488926),
-    A = n(636042),
-    p = n(526855),
+    p = n(636042),
+    A = n(526855),
     f = n(785312),
     j = n(316506),
     N = n(631103),
     E = n(927573),
     b = n(652215),
-    T = n(985018),
-    C = n(276317),
-    I = n(261223);
+    C = n(985018),
+    T = n(276317),
+    I = n(483604);
 function v(e) {
     let { guild: t, role: n, locked: l } = e,
         r = (0, o.bG)([g.default], () => g.default.getCurrentUser()),
@@ -32,16 +32,16 @@ function v(e) {
         x = s.useMemo(() => _.cc({ user: r, context: t, roles: m }), [r, t, m]),
         h = !a.aI(u, x);
     return (0, i.jsx)(d.m, {
-        text: h ? T.intl.string(T.t["IQ/6Sg"]) : null,
+        text: h ? C.intl.string(C.t["IQ/6Sg"]) : null,
         position: "top",
         children: (0, i.jsx)("div", {
-            className: C.FS,
+            className: T.FS,
             children: (0, i.jsx)(c.QWc, {
                 variant: "primary",
                 textVariant: "text-sm/semibold",
-                onClick: () => (0, A.Y_)(n.id),
+                onClick: () => (0, p.Y_)(n.id),
                 disabled: a.aI(n.permissions, _.x3) || h || l,
-                text: T.intl.string(T.t["UYq7+O"]),
+                text: C.intl.string(C.t["UYq7+O"]),
             }),
         }),
     });
@@ -50,38 +50,37 @@ function S(e) {
     let { guild: t, role: n, specs: s, locked: l } = e;
     if (0 === s.length)
         return (0, i.jsxs)("div", {
-            className: C.pb,
+            className: T.pb,
             children: [
-                (0, i.jsx)(p.A, { className: C.wV }),
-                (0, i.jsx)(c.Text, { variant: "text-sm/normal", children: T.intl.string(T.t.DEBGqA) }),
+                (0, i.jsx)(A.A, { className: T.wV }),
+                (0, i.jsx)(c.Text, { variant: "text-sm/normal", children: C.intl.string(C.t.DEBGqA) }),
             ],
         });
     function r(e) {
         return m.A.can(e, t)
             ? !m.A.can(e, t, null, { [n.id]: { ...n, permissions: a.TF(n.permissions, e) } }) &&
-                  T.intl.string(T.t["K+D+GF"])
-            : T.intl.string(T.t.nOtPMM);
+                  C.intl.string(C.t["K+D+GF"])
+            : C.intl.string(C.t.nOtPMM);
     }
     return (0, i.jsxs)("div", {
-        className: C.eZ,
+        className: T.eZ,
         children: [
             (0, i.jsx)(v, { guild: t, role: n, locked: l }),
-            s.map((e, s) =>
+            s.map((e, t) =>
                 (0, i.jsx)(
                     u.A,
                     {
-                        className: C.p2,
+                        className: T.p2,
                         spec: e,
                         permissions: n.permissions,
                         locked: l,
                         onChange: (e, t) => {
                             if ("string" == typeof t) throw Error("Unexpected string `allow`");
-                            (0, A.Ul)(n.id, e, t);
+                            (0, p.Ul)(n.id, e, t);
                         },
                         permissionRender: r,
-                        guildId: t.id,
                     },
-                    s,
+                    t,
                 ),
             ),
         ],
@@ -104,7 +103,7 @@ function y(e) {
             }))
             .filter((e) => e.permissions.length > 0),
         { headerHeight: g, headerRef: _ } = (0, f.A)(0),
-        { scrolledToTop: A, handleScroll: p } = (0, j.u)(),
+        { scrolledToTop: p, handleScroll: A } = (0, j.u)(),
         v = s.useRef(!1);
     return (
         s.useEffect(() => {
@@ -113,14 +112,14 @@ function y(e) {
                 (x.default.track(b.HAw.SEARCH_STARTED, { search_type: "Permissions" }), (v.current = !0));
         }, [d]),
         (0, i.jsx)(c.GtU, {
-            className: C.XG,
+            className: T.XG,
             style: { scrollPaddingTop: g },
-            onScroll: p,
+            onScroll: A,
             children: (0, i.jsxs)("div", {
                 className: I.Q,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: r()(I.wx, I.ln, { [I.l6]: !A }),
+                        className: r()(I.wx, I.ln, { [I.l6]: !p }),
                         ref: _,
                         children: [
                             (0, i.jsx)(j.A, {
@@ -129,15 +128,15 @@ function y(e) {
                                 selectedSection: E.T$.PERMISSIONS,
                                 setSelectedSection: a,
                             }),
-                            (0, i.jsx)("div", { className: C.U9, children: (0, i.jsx)(N.A, { role: n }) }),
+                            (0, i.jsx)("div", { className: T.U9, children: (0, i.jsx)(N.A, { role: n }) }),
                             (0, i.jsx)("div", {
-                                className: C.MT,
+                                className: T.MT,
                                 children: (0, i.jsx)(c.IWV, {
                                     query: d,
                                     onChange: u,
                                     onClear: () => u(""),
-                                    placeholder: T.intl.string(T.t.OLJAk3),
-                                    "aria-label": T.intl.string(T.t.OLJAk3),
+                                    placeholder: C.intl.string(C.t.OLJAk3),
+                                    "aria-label": C.intl.string(C.t.OLJAk3),
                                 }),
                             }),
                         ],
