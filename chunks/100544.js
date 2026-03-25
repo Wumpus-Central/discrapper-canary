@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { CT: () => s, W6: () => a, WM: () => u, XY: () => o, g6: () => i, gi: () => c, j_: () => l });
+n.d(t, { CT: () => a, W6: () => s, WM: () => u, XY: () => o, g6: () => i, gi: () => c, j_: () => l });
 var r = n(592819),
     i = (function (e) {
         return (e.INACTIVE = "inactive"), (e.BACKGROUND = "background"), (e.ACTIVE = "active"), e;
     })({}),
-    a = (function (e) {
+    s = (function (e) {
         return (
             (e.INVITE = "invite"),
             (e.GUILD_TEMPLATE = "guild-template"),
@@ -43,7 +43,7 @@ var r = n(592819),
             (e.ACCOUNT_STANDING = "account-standing"),
             (e.MOBILE_NATIVE_UPDATE = "mobile-native-update"),
             (e.SHOP = "shop"),
-            (e.APPLE_PAYMENT_LINK = "apple-payment-link"),
+            (e.MOBILE_WEB_REDIRECT_CHECKOUT = "mobile-web-redirect-checkout"),
             (e.AUTHORIZED_APPS = "authorized-apps"),
             (e.DAVE_PROTOCOL_VERIFICATION = "dave-protocol-verification"),
             (e.ICYMI = "icymi"),
@@ -60,7 +60,7 @@ var r = n(592819),
             e
         );
     })({});
-let s = "CacheStoreLazy",
+let a = "CacheStoreLazy",
     o = "CacheStoreChannelsLazy",
     l = "CacheStore";
 var u = (function (e) {

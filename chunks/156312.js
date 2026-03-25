@@ -30,7 +30,7 @@ var r = n(627968),
     D = n(927578),
     L = n(728458),
     w = n(955529),
-    M = n(483827),
+    M = n(795791),
     x = n(543027),
     P = n(853398),
     k = n(121005),
@@ -191,9 +191,9 @@ function ee(e) {
         })),
         tF = tU ? Z.Ot : void 0,
         { enabled: tV } = (0, g.Y)({ location: "PaymentContext" }),
-        tB = (0, M.uR)({ location: "PaymentModal" }),
+        tB = (0, M.b7)(),
         tH = i.useMemo(() => {
-            if (tB) return $.uH.APPLE_PAYMENT_LINK;
+            if (tB) return $.uH.MOBILE_WEB_REDIRECT_CHECKOUT;
         }, [tB]),
         tj = i.useMemo(() => null != e$ && e$.id === q.gD.PREMIUM_GROUP_MONTH, [e$]),
         tY = (0, y.V)(e_ ?? void 0),
