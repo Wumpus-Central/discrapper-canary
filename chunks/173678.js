@@ -107,7 +107,6 @@ function g(e, t) {
                             _(e, n, a);
                         },
                         className: m.Hh,
-                        "aria-label": h.intl.string(h.t.pLPjsb),
                         children: (0, i.jsx)(l.Text, {
                             variant: "text-sm/semibold",
                             color: "text-default",

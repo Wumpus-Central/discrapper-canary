@@ -1,33 +1,33 @@
 "use strict";
-n.d(t, { A: () => _, Z: () => p });
+n.d(t, { A: () => g, Z: () => _ });
 var i = n(627968);
 n(64700);
 var s = n(397927),
     l = n(793574),
-    r = n(627363),
-    a = n(576030),
+    a = n(627363),
+    r = n(576030),
     o = n(957785),
     c = n(533406),
     d = n(366523),
     u = n(788868),
     h = n(985018),
-    A = n(673892),
-    m = n(754558);
-function p(e, t) {
+    A = n(407494),
+    m = n(101616);
+function _(e, t) {
     let {
             moreCount: n,
             onViewWishlist: s,
-            isSingleCard: r = !1,
+            isSingleCard: a = !1,
             profileOwner: m,
-            wishlistId: p,
-            cardSize: g,
-            analyticsLocations: _,
+            wishlistId: _,
+            cardSize: p,
+            analyticsLocations: g,
         } = t,
         f = null != n && n > 0,
         x = {
             title: f ? h.intl.string(h.t.TxBQzD) : h.intl.string(h.t["4yiU7x"]),
             body: f ? void 0 : h.intl.string(h.t.ilhtIa),
-            renderIcon: f ? void 0 : a.GM,
+            renderIcon: f ? void 0 : r.GM,
             shouldShow: !0,
         };
     return (0, i.jsx)(
@@ -42,7 +42,7 @@ function p(e, t) {
                           { isGift: !0, giftRecipient: m, giftingOrigin: u.vQ.USER_PROFILE_WISHLIST },
                           {
                               analyticsLocations: [
-                                  ..._,
+                                  ...g,
                                   l.A.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON,
                               ],
                           },
@@ -59,16 +59,16 @@ function p(e, t) {
                     shape: "custom",
                 }),
             moreCount: n,
-            isSingleCard: r,
-            wishlistId: p,
-            cardSize: g,
+            isSingleCard: a,
+            wishlistId: _,
+            cardSize: p,
         },
         e.skuId,
     );
 }
-function g(e) {
-    let { item: t, card: n, analyticsLocations: a, profileOwner: o } = e,
-        { data: d } = (0, r.YY)(t.sku.applicationId);
+function p(e) {
+    let { item: t, card: n, analyticsLocations: r, profileOwner: o } = e,
+        { data: d } = (0, a.YY)(t.sku.applicationId);
     return (0, i.jsxs)("div", {
         className: m.D5,
         children: [
@@ -82,14 +82,13 @@ function g(e) {
                             { isGift: !0, giftRecipient: o, giftingOrigin: u.vQ.USER_PROFILE_WISHLIST },
                             {
                                 analyticsLocations: [
-                                    ...a,
+                                    ...r,
                                     l.A.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON,
                                 ],
                             },
                         );
                     },
                     className: m.Hh,
-                    "aria-label": h.intl.string(h.t.pLPjsb),
                     children: [
                         (0, i.jsx)(s.Text, {
                             variant: "text-sm/semibold",
@@ -108,15 +107,15 @@ function g(e) {
         ],
     });
 }
-function _(e, t) {
-    let { profileOwner: n, analyticsLocations: s, wishlistId: l, onViewWishlist: r } = t,
-        a = p(e, {
+function g(e, t) {
+    let { profileOwner: n, analyticsLocations: s, wishlistId: l, onViewWishlist: a } = t,
+        r = _(e, {
             index: 0,
             profileOwner: n,
             analyticsLocations: s,
-            onViewWishlist: r,
+            onViewWishlist: a,
             isSingleCard: !0,
             wishlistId: l,
         });
-    return (0, i.jsx)(g, { item: e, card: a, profileOwner: n, analyticsLocations: s });
+    return (0, i.jsx)(p, { item: e, card: r, profileOwner: n, analyticsLocations: s });
 }

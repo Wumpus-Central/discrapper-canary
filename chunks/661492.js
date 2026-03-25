@@ -1,25 +1,28 @@
 "use strict";
-n.d(t, { q: () => r, x: () => a });
-var i = n(575593),
-    s = n(993408),
-    l = n(985018);
-function a(e) {
-    let t = e.skuName;
-    if (null != e.bundleItems && e.bundleItems.length > 0)
-        return l.intl.formatToPlainString(l.t["/l2CAE"], { itemName: t });
-    let n = e.collectiblesItem;
-    if (null == n) return t;
-    switch (n.type) {
-        case i.R.AVATAR_DECORATION:
-            return l.intl.formatToPlainString(l.t.IQQYef, { itemName: t });
-        case i.R.PROFILE_EFFECT:
-            return l.intl.formatToPlainString(l.t["x/MGWy"], { itemName: t });
-        case i.R.NAMEPLATE:
-            return l.intl.formatToPlainString(l.t.eVNt6E, { itemName: t });
+n.d(t, { TC: () => l, qq: () => c, x2: () => u });
+var r = n(575593),
+    i = n(993408),
+    s = n(872472),
+    a = n(985018);
+function o(e, t) {
+    switch (t) {
+        case r.R.AVATAR_DECORATION:
+            return a.intl.formatToPlainString(a.t.lvBzLi, { product: e });
+        case r.R.PROFILE_EFFECT:
+            return a.intl.formatToPlainString(a.t.eR7moP, { product: e });
+        case r.R.NAMEPLATE:
+            return a.intl.formatToPlainString(a.t.YFOwHj, { product: e });
         default:
-            return t;
+            return e;
     }
 }
-function r(e) {
-    return !(0, s.G0)(e) && e.type !== i.R.EXTERNAL_SKU;
+function l(e) {
+    return o(e.name, e.tenantMetadata?.collectibles?.type);
+}
+function u(e) {
+    let t = (0, s.L)(e) ? e.collectiblesItem?.type : void 0;
+    return o(e.skuName, t);
+}
+function c(e) {
+    return !(0, i.G0)(e) && e.type !== r.R.EXTERNAL_SKU;
 }

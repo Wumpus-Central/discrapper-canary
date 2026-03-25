@@ -30,7 +30,7 @@ let h = { xs: "xxs", sm: "xs", md: "refresh_sm" },
             : (0, r.jsx)(E, {
                   skuId: g.skuId,
                   productName: g.name,
-                  disabled: !(0, c.q)(g),
+                  disabled: !(0, c.qq)(g),
                   isWishlisted: f,
                   isBusy: p,
                   isFirstTimeWishlister: h,

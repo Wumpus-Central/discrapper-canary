@@ -59,7 +59,7 @@ function m(e) {
                   skuId: I.skuId,
                   productName: I.name,
                   size: t.wishlistButtonSize,
-                  disabled: !(0, c.q)(I),
+                  disabled: !(0, c.qq)(I),
                   isWishlisted: m,
                   isBusy: E,
                   isFirstTimeWishlister: g,

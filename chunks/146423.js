@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $: () => A, A: () => I });
+n.d(t, { $: () => I, A: () => T });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -10,60 +10,63 @@ var r = n(627968),
     c = n(587895),
     d = n(713517),
     _ = n(607123),
-    f = n(627001),
-    p = n(778712),
-    h = n(985018),
-    m = n(72939),
-    E = n(476324);
-function g(e) {
+    f = n(661492),
+    p = n(627001),
+    h = n(778712),
+    m = n(985018),
+    E = n(72939),
+    g = n(476324);
+function A(e) {
     return { width: e.size, height: e.size };
 }
-function A(e) {
+function I(e) {
     let { spec: t, cardStyle: n } = e;
     return (0, r.jsx)("div", {
-        className: a()(m.Nr, n),
-        style: g(t),
+        className: a()(E.Nr, n),
+        style: A(t),
         children: (0, r.jsx)("div", {
-            className: m.ho,
-            children: (0, r.jsx)(u.euF, { src: E, size: p._3.SIZE_80, "aria-label": h.intl.string(h.t.lqaIxI) }),
+            className: E.ho,
+            children: (0, r.jsx)(u.euF, { src: g, size: h._3.SIZE_80, "aria-label": m.intl.string(m.t.lqaIxI) }),
         }),
     });
 }
-function I(e) {
+function T(e) {
     let {
             sku: t,
             user: n,
             spec: s,
             children: u,
-            cardStyle: p,
-            skuPreviewStyle: h,
-            disableHoverOrFocus: E,
-            onHoverOrFocusChange: A,
-            onClick: I,
+            cardStyle: h,
+            skuPreviewStyle: m,
+            disableHoverOrFocus: g,
+            onHoverOrFocusChange: I,
+            onClick: T,
+            "aria-label": S,
         } = e,
-        T = i.useRef(null),
-        { isHoveringOrFocusing: S } = (0, d.A)(T),
-        y = i.useRef(A),
-        v = (0, l.bG)([c.A], () => c.A.getApplication(t.applicationId));
+        y = i.useRef(null),
+        { isHoveringOrFocusing: v } = (0, d.A)(y),
+        N = i.useRef(I),
+        C = (0, l.bG)([c.A], () => c.A.getApplication(t.applicationId));
     return (
         i.useEffect(() => {
-            y.current = A;
-        }, [A]),
+            N.current = I;
+        }, [I]),
         i.useEffect(() => {
-            y.current?.(S);
-        }, [S]),
-        (0, r.jsxs)(o.DUT, {
-            innerRef: T,
-            className: a()(m.Nr, p),
-            onClick: I,
-            style: g(s),
+            N.current?.(v);
+        }, [v]),
+        (0, r.jsxs)(o.sqX, {
+            ref: y,
+            className: a()(E.Nr, h),
+            onClick: T,
+            "aria-label": S,
+            style: A(s),
             children: [
-                (0, r.jsx)(o.AC4, { children: (0, r.jsx)(o.H, { children: t.name }) }),
+                (0, r.jsx)(o.AC4, { children: (0, r.jsx)(o.H, { children: (0, f.TC)(t) }) }),
                 (0, r.jsx)("div", {
-                    className: a()(m.ev, h),
-                    children: (0, r.jsx)(_.Ay, { sku: t, isFocused: !E && S, user: n }),
+                    className: a()(E.ev, m),
+                    children: (0, r.jsx)(_.Ay, { sku: t, isFocused: !g && v, user: n }),
                 }),
-                (0, r.jsx)(f.P, { spec: s, application: v }),
+                (0, r.jsx)(p.P, { spec: s, application: C }),
                 u,
             ],
         })
