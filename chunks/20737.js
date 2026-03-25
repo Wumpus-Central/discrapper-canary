@@ -1,4 +1,4 @@
-n.d(t, { A: () => w });
+n.d(t, { A: () => k });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -22,9 +22,9 @@ var i = n(627968),
     I = n(761640),
     T = n(186111),
     N = n(576705),
-    b = n(461213),
-    y = n(203982),
-    v = n(723702),
+    v = n(461213),
+    b = n(203982),
+    y = n(723702),
     j = n(518960),
     R = n(545428),
     M = n(38198),
@@ -32,13 +32,13 @@ var i = n(627968),
     O = n(652215),
     L = n(696016),
     P = n(985018),
-    k = n(275825);
-let w = l.memo(function (e) {
-    let { className: t, channel: s, draftType: w, editorTextContent: U, setValue: G, canOnlyUseTextCommands: F } = e,
+    w = n(275825);
+let k = l.memo(function (e) {
+    let { className: t, channel: s, draftType: k, editorTextContent: U, setValue: G, canOnlyUseTextCommands: F } = e,
         H = (0, _.Us)(),
         B = l.useRef(null),
         V = l.useRef(null),
-        K = (0, r.bG)([b.A], () => b.A.getActivities()),
+        K = (0, r.bG)([v.A], () => v.A.getActivities()),
         W = (0, A.Et)(),
         z = (0, r.bG)([m.A], () => m.A.getLastClipsSession()),
         Y = (0, r.yK)([m.A], () => m.A.getNewClipIds()),
@@ -79,17 +79,17 @@ let w = l.memo(function (e) {
                 t === s.id && B.current?.activateUploadDialogue();
             };
             return (
-                y._.subscribe(O.jej.UPLOAD_FILE, e),
+                b._.subscribe(O.jej.UPLOAD_FILE, e),
                 () => {
-                    y._.unsubscribe(O.jej.UPLOAD_FILE, e);
+                    b._.unsubscribe(O.jej.UPLOAD_FILE, e);
                 }
             );
         });
     let eo = (0, C.n)(s),
         ec = (0, C.Tb)(s),
-        ed = !S.D_.useSetting() && !(0, v.isAndroidWeb)() && null != window.ResizeObserver,
+        ed = !S.D_.useSetting() && !(0, y.isAndroidWeb)() && null != window.ResizeObserver,
         eu = (0, E.I7)(s ?? void 0),
-        eh = (0, x.Sc)({ location: "ChannelAttachButton" }),
+        eh = (0, x.Sc)(),
         em = (0, u.b)(),
         eA = Y?.length ?? 0,
         eg = (0, D.A)({
@@ -107,7 +107,7 @@ let w = l.memo(function (e) {
             canSummarizeThreads: em,
         });
     if (0 === eg.length) return null;
-    let ep = (0, i.jsx)(o.pa$, { size: "refresh_sm", color: "currentColor", colorClass: k.dW }),
+    let ep = (0, i.jsx)(o.pa$, { size: "refresh_sm", color: "currentColor", colorClass: w.dW }),
         ef = (0, i.jsx)(o.YNO, {
             targetElementRef: V,
             shouldShow: null != et,
@@ -132,7 +132,7 @@ let w = l.memo(function (e) {
                             options: eg,
                             channel: s,
                             onFileUpload: () => B.current?.activateUploadDialogue(),
-                            draftType: w,
+                            draftType: k,
                             editorTextContent: U,
                             setValue: G,
                             openClips: er,
@@ -144,8 +144,8 @@ let w = l.memo(function (e) {
             children: (e) =>
                 (0, i.jsx)(R.A, {
                     ref: V,
-                    className: a()(k.g$, t),
-                    childClassName: k.wh,
+                    className: a()(w.g$, t),
+                    childClassName: w.wh,
                     isActive: !1,
                     "aria-label": P.intl.string(P.t.d56gCa),
                     onDoubleClick: es ? () => B.current?.activateUploadDialogue() : void 0,
@@ -157,7 +157,7 @@ let w = l.memo(function (e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", {
-                className: k.EJ,
+                className: w.EJ,
                 children: (0, i.jsx)(c.A, {
                     ref: B,
                     onChange: (e) => {
@@ -165,8 +165,8 @@ let w = l.memo(function (e) {
                         (t = e.currentTarget.files),
                             null != (n = e.currentTarget.err) && "ETOOLARGE" === n.code
                                 ? (0, j.V)(s, [])
-                                : (0, j.R)(t, s, w, { requireConfirm: !0, origin: "file_picker" }),
-                            y._.dispatchToLastSubscribed(O.jej.TEXTAREA_FOCUS),
+                                : (0, j.R)(t, s, k, { requireConfirm: !0, origin: "file_picker" }),
+                            b._.dispatchToLastSubscribed(O.jej.TEXTAREA_FOCUS),
                             (e.currentTarget.value = "");
                     },
                     multiple: s.rateLimitPerUser <= 0,
@@ -174,7 +174,7 @@ let w = l.memo(function (e) {
                     "aria-hidden": !0,
                 }),
             }),
-            (0, i.jsx)("div", { className: k.Jd, children: ef }),
+            (0, i.jsx)("div", { className: w.Jd, children: ef }),
         ],
     });
 });

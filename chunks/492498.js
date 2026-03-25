@@ -3,25 +3,25 @@ n.d(t, { A: () => R });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(311907),
+    a = n.n(l),
+    r = n(311907),
     o = n(397927),
     c = n(378939),
     d = n(964486),
     u = n(475743),
     h = n(323073),
     A = n(202803),
-    p = n(636922),
-    g = n(835835),
-    m = n(566908),
-    _ = n(253932),
+    m = n(636922),
+    _ = n(835835),
+    p = n(566908),
+    g = n(253932),
     f = n(734057),
     x = n(517019),
     C = n(309010),
     E = n(187508),
     I = n(576456),
-    b = n(572448),
-    N = n(963702),
+    N = n(572448),
+    b = n(963702),
     S = n(652215),
     T = n(985018),
     v = n(318136);
@@ -30,21 +30,21 @@ function j(e, t, n) {
     let i = t ? E.Ay.guildFilter : null,
         s = t ? E.Ay.roleFilter : null,
         l = t ? E.Ay.everyoneFilter : null,
-        r = null;
-    null != e && null != i && (r = i === S.KE7.ALL_SERVERS ? null : e.getGuildId()),
-        c.A.fetchRecentMentions({ before: n, limit: S.Ue3, guildId: r, roles: s, everyone: l });
+        a = null;
+    null != e && null != i && (a = i === S.KE7.ALL_SERVERS ? null : e.getGuildId()),
+        c.A.fetchRecentMentions({ before: n, limit: S.Ue3, guildId: a, roles: s, everyone: l });
 }
 function R(e) {
     let { onJump: t } = e,
-        n = (0, a.bG)([f.A, C.A], () => f.A.getChannel(C.A.getChannelId())),
+        n = (0, r.bG)([f.A, C.A], () => f.A.getChannel(C.A.getChannelId())),
         {
             messages: l,
             hasMore: o,
             loading: h,
-            guildFilter: p,
-            roleFilter: _,
+            guildFilter: m,
+            roleFilter: g,
             everyoneFilter: x,
-        } = (0, a.cf)([E.Ay], () => ({
+        } = (0, r.cf)([E.Ay], () => ({
             messages: E.Ay.getMentions(),
             hasMore: E.Ay.hasMore,
             loading: E.Ay.loading,
@@ -52,15 +52,15 @@ function R(e) {
             roleFilter: E.Ay.roleFilter,
             everyoneFilter: E.Ay.everyoneFilter,
         })),
-        I = (0, m.Sc)({ location: "RecentMentions" }),
-        b = (0, u.A)(p),
-        N = (0, u.A)(_),
+        I = (0, p.Sc)(),
+        N = (0, u.A)(m),
+        b = (0, u.A)(g),
         y = (0, u.A)(x);
     s.useEffect(() => {
         E.Ay.hasLoadedEver
-            ? ((null != b && p !== b) || (null != N && _ !== N) || (null != y && x !== y)) && j(n, !0)
+            ? ((null != N && m !== N) || (null != b && g !== b) || (null != y && x !== y)) && j(n, !0)
             : j(n, !0);
-    }, [b, p, N, _, y, x, n, !0]),
+    }, [N, m, b, g, y, x, n, !0]),
         (0, d.Ay)(() => {
             l?.some(A.$r) && (c.A.clearMentions(), j(n, !0));
         }),
@@ -71,8 +71,8 @@ function R(e) {
             [],
         );
     let R = s.useCallback(() => null, []);
-    return (0, i.jsx)(g.Ay, {
-        className: r()(v.sH, { [v.qC]: I }),
+    return (0, i.jsx)(_.Ay, {
+        className: a()(v.sH, { [v.qC]: I }),
         scrollerClassName: v.XG,
         onFetch: () => null,
         onJump: t,
@@ -103,12 +103,12 @@ function L(e) {
     if (null == t) return null;
     let l = f.A.getChannel(t.channel_id);
     if (null == l || (0, h.Jm)(l) || (0, h.$v)(l)) return null;
-    let r = x.A.didAgree(l.getGuildId()),
-        a = !!(0, h.Gc)(l) && !r;
+    let a = x.A.didAgree(l.getGuildId()),
+        r = !!(0, h.Gc)(l) && !a;
     return (0, i.jsxs)("div", {
         className: v.kL,
         children: [
-            (0, i.jsx)(b.A, {
+            (0, i.jsx)(N.A, {
                 channel: l,
                 gotoChannel: n,
                 children:
@@ -119,13 +119,13 @@ function L(e) {
                 children: [
                     (0, i.jsx)(I.A, { className: v.QT, onJump: n }),
                     (0, i.jsx)(
-                        p.A,
+                        m.A,
                         {
                             message: t,
                             channel: l,
                             className: v.iU,
-                            hideAccessories: a,
-                            compact: _.hH.getSetting(),
+                            hideAccessories: r,
+                            compact: g.hH.getSetting(),
                             animateAvatar: !1,
                             focusProps: y,
                             trackAnnouncementViews: !0,
@@ -138,5 +138,5 @@ function L(e) {
     });
 }
 function M() {
-    return (0, i.jsx)(N.A, { Icon: o.XxR, header: T.intl.string(T.t.bgDz74), tip: T.intl.string(T.t.NS15vk) });
+    return (0, i.jsx)(b.A, { Icon: o.XxR, header: T.intl.string(T.t.bgDz74), tip: T.intl.string(T.t.NS15vk) });
 }

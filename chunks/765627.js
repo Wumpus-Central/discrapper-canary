@@ -18,7 +18,7 @@ var s = n(417597),
 function g(e) {
     let { tab: t, setTab: n, badgeState: u, closePopout: A } = e,
         { enabled: m, inInbox: g } = o.A.useConfig({ location: "RecentsPopout" }),
-        x = (0, d.Sc)({ location: "RecentsHeader" }),
+        x = (0, d.Sc)(),
         C = (0, s.bG)([c.A], () => c.A.getOverdueMessageReminderCount());
     return (0, i.jsxs)("div", {
         className: p.wx,
