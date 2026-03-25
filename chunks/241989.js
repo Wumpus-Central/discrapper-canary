@@ -10,43 +10,53 @@ var r = n(627968),
     c = n(263063),
     d = n(403362),
     _ = n(427262),
-    f = n(523376),
+    f = n(756366),
     p = n(985018),
-    h = n(547595);
+    h = n(559485);
 function m(e) {
     let {
             header: t,
             headerIconSrc: n,
-            bottomSubText: s,
-            label: u,
-            description: c,
-            graphic: d,
-            price: _,
-            PriceIcon: f,
-            priceTooltip: p,
-            priceSubText: m,
-            priceSubTextHasStrikethrough: g = !0,
-            target: A,
-            className: I,
+            headerIconComponent: s,
+            bottomSubText: u,
+            label: c,
+            description: d,
+            graphic: _,
+            price: f,
+            PriceIcon: p,
+            priceTooltip: m,
+            priceSubText: g,
+            priceSubTextHasStrikethrough: A = !0,
+            target: I,
+            className: T,
         } = e,
-        T = (0, r.jsx)(E, { target: A }),
-        S = i.useMemo(() => {
+        S = (0, r.jsx)(E, { target: I }),
+        y = i.useMemo(() => {
             let e = (0, r.jsxs)(l.Text, {
                 variant: "text-md/medium",
                 color: "text-default",
                 className: h.nw,
-                children: [null != f && (0, r.jsx)(f, { size: "xs" }), _],
+                children: [null != p && (0, r.jsx)(p, { size: "xs" }), f],
             });
-            return null != p
-                ? (0, r.jsx)(o.m_, { text: p, asContainer: !0, position: "top", align: "center", children: e })
+            return null != m
+                ? (0, r.jsx)(o.m_, { text: m, asContainer: !0, position: "top", align: "center", children: e })
                 : e;
-        }, [f, _, p]);
+        }, [p, f, m]),
+        v = i.useMemo(
+            () =>
+                null != s
+                    ? (0, r.jsx)("span", { className: h.nr, children: s })
+                    : null != n
+                      ? (0, r.jsx)("img", { alt: "", src: n, className: h.nr })
+                      : null,
+            [n, s],
+        );
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: a()(h.kL, I),
+                className: a()(h.kL, T),
                 children: [
-                    null != d && (0, r.jsx)("div", { className: h.Kk, children: d }),
+                    null != _ && (0, r.jsx)("div", { className: h.Kk, children: _ }),
                     (0, r.jsxs)("div", {
                         className: h.Qs,
                         children: [
@@ -56,7 +66,7 @@ function m(e) {
                                     color: "text-muted",
                                     lineClamp: 2,
                                     className: h.wx,
-                                    children: [null != n && (0, r.jsx)("img", { alt: "", src: n, className: h.nr }), t],
+                                    children: [v, t],
                                 }),
                             (0, r.jsxs)("div", {
                                 className: h.zH,
@@ -68,34 +78,34 @@ function m(e) {
                                                 variant: "text-md/normal",
                                                 color: "text-default",
                                                 lineClamp: 2,
-                                                children: u,
+                                                children: c,
                                             }),
-                                            null != c &&
+                                            null != d &&
                                                 (0, r.jsx)(l.Text, {
                                                     variant: "text-sm/normal",
                                                     color: "text-muted",
                                                     lineClamp: 2,
-                                                    children: c,
+                                                    children: d,
                                                 }),
-                                            null != T &&
+                                            null != S &&
                                                 (0, r.jsx)(l.Text, {
                                                     variant: "text-sm/normal",
                                                     color: "text-muted",
                                                     lineClamp: 1,
-                                                    children: T,
+                                                    children: S,
                                                 }),
                                         ],
                                     }),
                                     (0, r.jsxs)("div", {
                                         className: h.p6,
                                         children: [
-                                            S,
-                                            null != m &&
+                                            y,
+                                            null != g &&
                                                 (0, r.jsx)(l.Text, {
-                                                    variant: g ? "text-xs/medium" : "text-sm/normal",
+                                                    variant: A ? "text-xs/medium" : "text-sm/normal",
                                                     color: "text-muted",
-                                                    className: a()(h.Jb, { [h.Nc]: g }),
-                                                    children: m,
+                                                    className: a()(h.Jb, { [h.Nc]: A }),
+                                                    children: g,
                                                 }),
                                         ],
                                     }),
@@ -105,8 +115,8 @@ function m(e) {
                     }),
                 ],
             }),
-            null != s &&
-                (0, r.jsx)(l.Text, { variant: "text-sm/medium", color: "text-muted", className: h.dx, children: s }),
+            null != u &&
+                (0, r.jsx)(l.Text, { variant: "text-sm/medium", color: "text-muted", className: h.dx, children: u }),
         ],
     });
 }
