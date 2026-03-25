@@ -1,22 +1,39 @@
 "use strict";
-n.d(t, { j: () => o });
+n.d(t, { j: () => u });
 var r = n(64700),
     i = n(626584),
-    s = n(728458);
-let a = new i.A("CheckoutErrorBoundary.tsx");
-class o extends r.PureComponent {
+    s = n(954571),
+    a = n(728458),
+    o = n(652215);
+let l = new i.A("CheckoutErrorBoundary.tsx");
+class u extends r.PureComponent {
     state = { error: null, info: null };
     componentDidCatch(e, t) {
-        let { loadId: n, selectedSkuId: r, selectedPlanId: i, isGift: o, purchaseType: l } = this.props,
-            u = {
-                tags: { app_context: "billing", checkout_error: "true", billing_context: "checkout" },
-                extra: { loadId: n, selectedSkuId: r, selectedPlanId: i, isGift: o, purchaseType: l },
+        let {
+                loadId: n,
+                selectedSkuId: r,
+                selectedPlanId: i,
+                isGift: u,
+                purchaseType: c,
+                additionalAnalyticsData: d,
+            } = this.props,
+            _ = this.props.shouldRethrowError,
+            f = { loadId: n, selectedSkuId: r, selectedPlanId: i, isGift: u, purchaseType: c },
+            p = {
+                tags: {
+                    app_context: "billing",
+                    checkout_error: "true",
+                    billing_context: "checkout",
+                    ...(_ ? { crashed: "true" } : {}),
+                },
+                extra: { ...f, ...(t ?? {}) },
             };
         if (
-            (s.A.captureException(e, u),
-            a.error("Error caught by CheckoutErrorBoundary:", { error: e, sentryErrorContext: u }),
+            (a.A.captureException(e, p),
+            l.error("Checkout error occurred:", { error: e, additionalErrorContext: f }),
+            s.default.track(o.HAw.PAYMENT_FLOW_ERROR, { load_id: n, crashed: _, error_message: e.message, ...d }),
             this.setState({ error: e, info: t }),
-            null != this.props.onUnhandledError && this.props.onUnhandledError(e, t, u),
+            null != this.props.onUnhandledError && this.props.onUnhandledError(e, t, p),
             this.props.shouldRethrowError)
         )
             throw e;

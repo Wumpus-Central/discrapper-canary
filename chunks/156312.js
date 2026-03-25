@@ -201,7 +201,9 @@ function ee(e) {
         tK = (0, S.O)(),
         t$ = tK?.discount?.plan_ids.some((e) => q.hd[e].skuId === eK),
         tz = !!(!tj && !en && null != tK && null != eK && t$),
-        tq = null != e$ ? e$.id : null;
+        tq = null != e$ ? e$.id : null,
+        tZ = null != eT && null != eA[eT] ? eA[eT]?.type : null,
+        tX = i.useMemo(() => ({ payment_source_id: eT, payment_gateway: el, payment_source_type: tZ }), [eT, el, tZ]);
     return (0, r.jsx)(X.Provider, {
         value: {
             stripe: ef,
@@ -314,6 +316,7 @@ function ee(e) {
                 selectedPlanId: tq,
                 isGift: en,
                 purchaseType: es,
+                additionalAnalyticsData: tX,
                 children: er,
             }),
         }),

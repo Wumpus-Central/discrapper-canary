@@ -3986,6 +3986,7 @@ var no = (function (e) {
             (e.PAYMENT_FLOW_FAILED = "payment_flow_failed"),
             (e.PAYMENT_FLOW_CANCELED = "payment_flow_canceled"),
             (e.PAYMENT_FLOW_LOADED = "payment_flow_loaded"),
+            (e.PAYMENT_FLOW_ERROR = "payment_flow_error"),
             (e.PAYMENT_REQUEST_LOADED = "payment_request_loaded"),
             (e.PAYMENT_REQUEST_COMPLETED = "payment_request_completed"),
             (e.GIFT_CATEGORY_SELECT_MODAL_OPENED = "gift_category_select_modal_opened"),
