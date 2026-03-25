@@ -1,10 +1,10 @@
 n.d(t, { Z: () => s });
-var i = n(964486);
+var i = n(64700);
 function s(e) {
-    (0, i.Ay)(() => {
+    i.useEffect(() => {
         let t = e?.();
         return () => {
             t?.();
         };
-    });
+    }, [e]);
 }
