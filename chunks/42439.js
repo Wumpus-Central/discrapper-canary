@@ -1,9 +1,9 @@
-i.d(e, { K: () => a });
-var n = i(627968),
-    l = i(419954),
-    s = i(780964),
-    r = i(768908);
-let a = (0, l.E2)(s.X.REGISTERED_GAMES_ADDED_GAMES_SETTING, {
+n.d(t, { K: () => r });
+var i = n(627968),
+    s = n(419954),
+    l = n(780964),
+    a = n(328616);
+let r = (0, s.E2)(l.X.REGISTERED_GAMES_ADDED_GAMES_SETTING, {
     useSearchTerms: () => [],
-    Component: () => (0, n.jsx)(r.T, { hideHeader: !0 }),
+    Component: () => (0, i.jsx)(a.T, {}),
 });

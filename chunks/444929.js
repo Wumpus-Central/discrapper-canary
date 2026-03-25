@@ -1,9 +1,9 @@
-i.d(e, { u: () => a });
-var n = i(419954),
-    l = i(780964),
-    s = i(768908),
-    r = i(985018);
-let a = (0, n.E2)(l.X.REGISTERED_GAMES_CURRENT_GAME_SETTING, {
-    useSearchTerms: () => [r.intl.string(r.t["MY9/Oe"])],
-    Component: s.cH,
+n.d(t, { u: () => r });
+var i = n(419954),
+    s = n(780964),
+    l = n(957281),
+    a = n(985018);
+let r = (0, i.E2)(s.X.REGISTERED_GAMES_CURRENT_GAME_SETTING, {
+    useSearchTerms: () => [a.intl.string(a.t["MY9/Oe"])],
+    Component: l.c,
 });
