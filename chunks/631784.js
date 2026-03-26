@@ -140,6 +140,9 @@ function T(e) {
     };
 }
 function S(e) {
+    r.useEffect(() => {
+        (0, a.A)(e);
+    }, [e]);
     let { defaultWishlistId: t } = (0, i.cf)([s.A], () => ({ defaultWishlistId: s.A.getFirstWishlistId(e) }));
     return { userIdsAndWishlistIds: r.useMemo(() => [{ userId: e, wishlistId: t }], [e, t]), defaultWishlistId: t };
 }
