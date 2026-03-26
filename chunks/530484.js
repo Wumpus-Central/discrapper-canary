@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(627968);
 n(64700);
 var s = n(311907),
@@ -12,10 +12,10 @@ var s = n(311907),
     u = n(543465),
     h = n(652793),
     A = n(790782),
-    p = n(985018),
-    g = n(811094);
-function m(e) {
-    let { guild: t, selected: m } = e,
+    m = n(985018),
+    p = n(567431);
+function g(e) {
+    let { guild: t, selected: g } = e,
         { hasUnread: _, mentionCount: f } = (0, s.cf)(
             [d.Ay],
             () => ({
@@ -27,18 +27,18 @@ function m(e) {
         x = (0, s.bG)([u.Ay], () => u.Ay.isMuteScheduledEventsEnabled(t.id));
     async function C() {
         await (0, r.mMO)(async () => {
-            let { default: e } = await Promise.all([n.e("51354"), n.e("7453"), n.e("90041")]).then(n.bind(n, 926956));
+            let { default: e } = await Promise.all([n.e("51354"), n.e("7453"), n.e("9561")]).then(n.bind(n, 926956));
             return (n) => (0, i.jsx)(e, { ...n, guildId: t.id });
         }),
             (0, o.Dr)(l.M.GUILD_HEADER_EVENT_UPSELL);
     }
     let E = (0, c.Ay)(t.id),
-        I = E.length > 0 ? p.intl.formatToPlainString(p.t.IBdqSu, { number: E.length }) : p.intl.string(p.t.tlopTM);
+        I = E.length > 0 ? m.intl.formatToPlainString(m.t.IBdqSu, { number: E.length }) : m.intl.string(m.t.tlopTM);
     return (0, i.jsx)(h.G, {
         id: `upcoming-events-${t.id}`,
         renderIcon: (e) => (0, i.jsx)(r.CTc, { size: "md", color: "currentColor", className: e }),
         text: I,
-        selected: m,
+        selected: g,
         onClick: C,
         onContextMenu: (e) => {
             (0, a.L3)(e, async () => {
@@ -47,6 +47,6 @@ function m(e) {
             });
         },
         showUnread: _ && !x,
-        trailing: !x && f > 0 ? (0, i.jsx)(r.hVq, { className: g.Do, disableColor: !0, count: f }) : null,
+        trailing: !x && f > 0 ? (0, i.jsx)(r.hVq, { className: p.Do, disableColor: !0, count: f }) : null,
     });
 }

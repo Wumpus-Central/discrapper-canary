@@ -2,19 +2,19 @@
 n.d(t, { A: () => _ });
 var r = n(627968);
 n(64700);
-var i = n(522160),
-    a = n(311907),
-    s = n(397927),
+var i = n(4208),
+    s = n(311907),
+    a = n(397927),
     o = n(775602),
     l = n(985018),
-    u = n(798516),
-    c = n(910200);
+    u = n(361887),
+    c = n(886981);
 let d = () =>
         (0, r.jsxs)("div", {
             className: c.oR,
             children: [
-                (0, r.jsx)(s.y$y, { type: s.tVU.SPINNING_CIRCLE_SIMPLE, className: u.S }),
-                (0, r.jsx)(s.Text, {
+                (0, r.jsx)(a.y$y, { type: a.tVU.SPINNING_CIRCLE_SIMPLE, className: u.S }),
+                (0, r.jsx)(a.Text, {
                     color: "text-strong",
                     variant: "text-md/normal",
                     children: l.intl.string(l.t["5z/hlE"]),
@@ -23,8 +23,8 @@ let d = () =>
         }),
     _ = (e) => {
         let { shown: t, sent: n, className: u } = e,
-            c = (0, a.bG)([o.A], () => o.A.useReducedMotion),
-            _ = (0, s.pnh)(
+            c = (0, s.bG)([o.A], () => o.A.useReducedMotion),
+            _ = (0, a.pnh)(
                 t,
                 {
                     from: { transform: c ? "translateY(0)" : "translateY(16px)", opacity: 0 },
@@ -43,14 +43,14 @@ let d = () =>
                         className: u,
                         style: e,
                         children: n
-                            ? (0, r.jsx)(s.y8, {
+                            ? (0, r.jsx)(a.y8, {
                                   message: l.intl.string(l.t.fjcCk5),
-                                  type: s.ToastType.SUCCESS,
+                                  type: a.ToastType.SUCCESS,
                                   id: "success_message_toast",
                               })
-                            : (0, r.jsx)(s.y8, {
+                            : (0, r.jsx)(a.y8, {
                                   message: "",
-                                  type: s.ToastType.CUSTOM,
+                                  type: a.ToastType.CUSTOM,
                                   id: "custom_loading_message_toast",
                                   options: { component: (0, r.jsx)(d, {}) },
                               }),

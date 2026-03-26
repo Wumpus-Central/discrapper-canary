@@ -40,7 +40,7 @@ var r = n(627968),
     V = n(869146),
     B = n(652215),
     H = n(392164),
-    j = n(32069);
+    j = n(237618);
 function Y(e) {
     let { withTitleBar: t, isFullScreen: n } = e;
     return t && k.isPlatformEmbedded && !n;

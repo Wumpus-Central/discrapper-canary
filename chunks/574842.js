@@ -3,20 +3,20 @@ n.d(t, { F: () => _ });
 var r = n(627968);
 n(64700);
 var i = n(311907),
-    a = n(397927),
-    s = n(71393),
+    s = n(397927),
+    a = n(71393),
     o = n(967198),
     l = n(985018),
-    u = n(849096);
+    u = n(21965);
 let c = () =>
         (0, r.jsx)(r.Fragment, {
             children: l.intl.format(l.t.ymkBti, {
                 shareIcon: l.intl.string(l.t.VINpSK),
-                shareIconHook: () => (0, r.jsx)(a.DpX, { className: u.Kk }, "icon"),
+                shareIconHook: () => (0, r.jsx)(s.DpX, { className: u.Kk }, "icon"),
             }),
         }),
     d = () => {
-        let e = (0, i.bG)([s.A, o.A], () => s.A.getGuild(o.A.getGuildId()), []),
+        let e = (0, i.bG)([a.A, o.A], () => a.A.getGuild(o.A.getGuildId()), []),
             t = e?.name;
         return (0, r.jsx)(r.Fragment, { children: l.intl.format(l.t.oQuG3K, { serverName: t }) });
     },

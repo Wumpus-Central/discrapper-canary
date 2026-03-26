@@ -3,11 +3,11 @@ n.d(t, { A: () => u });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    a = n.n(l),
-    r = n(732955),
+    r = n.n(l),
+    a = n(732955),
     o = n(397927),
     c = n(985018),
-    d = n(67170);
+    d = n(537923);
 function u(e) {
     let {
             className: t,
@@ -17,20 +17,20 @@ function u(e) {
             description: h,
             userCount: A,
             onClick: m,
-            highlight: _,
-            onDismiss: p,
+            highlight: p,
+            onDismiss: g,
         } = e,
-        g = s.useCallback(
+        _ = s.useCallback(
             (e) => {
-                e.stopPropagation(), p?.();
+                e.stopPropagation(), g?.();
             },
-            [p],
+            [g],
         );
     return (0, i.jsxs)(o.DUT, {
-        className: a()(d.kL, t, null != _ && { [d.U6]: _ }),
+        className: r()(d.kL, t, null != p && { [d.U6]: p }),
         onClick: m,
         children: [
-            (0, i.jsx)("div", { className: a()(d.Kk, n), children: l }),
+            (0, i.jsx)("div", { className: r()(d.Kk, n), children: l }),
             (0, i.jsxs)("div", {
                 className: d.FS,
                 children: [
@@ -61,8 +61,8 @@ function u(e) {
                         : null,
                 ],
             }),
-            null != p
-                ? (0, i.jsx)("div", { className: d.r, children: (0, i.jsx)(r.JnF, { size: "xs", onClick: g }) })
+            null != g
+                ? (0, i.jsx)("div", { className: d.r, children: (0, i.jsx)(a.JnF, { size: "xs", onClick: _ }) })
                 : (0, i.jsx)(o._BQ, { size: "xs", color: "currentColor", className: d.OW }),
         ],
     });

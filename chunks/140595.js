@@ -3,8 +3,8 @@ n(102563), n(890245);
 var r = n(728458);
 n(618714), n(547830), n(812022), n(365659), n(961350), n(49463), n(930839), n(438483), n(236922);
 var i = n(247775),
-    a = n(905469),
-    s = n(121894),
+    s = n(905469),
+    a = n(121894),
     o = n(311907),
     l = n(484838),
     u = n(397927),
@@ -29,15 +29,15 @@ var m = n(652215);
             .then(n.bind(n, 588019))
             .then((e) => e.init()),
     (0, l.Zs)(c.A),
-    (0, a.l)(i, d.A),
-    o.Ay.Emitter.injectBatchEmitChanges(s.r),
+    (0, s.l)(i, d.A),
+    o.Ay.Emitter.injectBatchEmitChanges(a.r),
     (o.Ay.PersistedStore.disableWrites = __OVERLAY__),
     o.Ay.initialize(),
-    n.e("65430").then(n.t.bind(n, 306613, 19));
-let g = window.GLOBAL_ENV.RELEASE_CHANNEL,
-    E = "493560",
-    A = "93179522fde40f7ecc7aea17608967ce0f49de7c";
-new h.A().log(`[BUILD INFO] Release Channel: ${g}, Build Number: ${E}, Version Hash: ${A}`),
+    n.e("3595").then(n.t.bind(n, 702182, 19));
+let E = window.GLOBAL_ENV.RELEASE_CHANNEL,
+    g = "517175",
+    A = "77efc1a934fa98c0675d6cf7281c3961f55f9d1d";
+new h.A().log(`[BUILD INFO] Release Channel: ${E}, Build Number: ${g}, Version Hash: ${A}`),
     r.A.setTags({ appContext: m.QCW }),
     _.A.initBasic(),
     f.A.init(),

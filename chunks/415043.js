@@ -3,18 +3,18 @@ var i = n(627968);
 n(64700);
 var l = n(503698),
     a = n.n(l),
-    r = n(342952),
-    s = n(435371),
+    s = n(342952),
+    r = n(435371),
     o = n(397927),
     d = n(915089),
-    c = n(457047);
+    c = n(20342);
 function u(e) {
-    let { label: t, className: n, size: l = o._3J.SIZE_16, maxUsers: s = 4, ...u } = e,
+    let { label: t, className: n, size: l = o._3J.SIZE_16, maxUsers: r = 4, ...u } = e,
         g = (0, d.GV)();
     return (0, i.jsxs)("div", {
         className: a()(n, c.k),
         children: [
-            (0, i.jsx)(r.I, { "aria-labelledby": g, overflowCountClassName: c.j, size: l, maxUsers: s, ...u }),
+            (0, i.jsx)(s.I, { "aria-labelledby": g, overflowCountClassName: c.j, size: l, maxUsers: r, ...u }),
             (0, i.jsx)(o.Text, { variant: "text-xs/normal", color: "text-subtle", id: g, children: t }),
         ],
     });
@@ -31,14 +31,14 @@ function g(e) {
     } = e;
     return (0, i.jsx)("div", {
         className: n,
-        children: (0, i.jsx)(s.m_, {
+        children: (0, i.jsx)(r.m_, {
             text: t,
             asContainer: !0,
             ariaHidden: !0,
             children: (0, i.jsx)(o.DUT, {
                 onClick: g,
                 "aria-label": t,
-                children: (0, i.jsx)(r.I, {
+                children: (0, i.jsx)(s.I, {
                     size: d,
                     maxUsers: u,
                     overflowCountClassName: a()(c.j, l),

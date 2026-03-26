@@ -5,8 +5,8 @@ var i = n(627968),
     r = n(503698),
     l = n.n(r),
     a = n(235986),
-    o = n(267950);
-class c extends s.PureComponent {
+    o = n(55623);
+class d extends s.PureComponent {
     static defaultProps = { autoFocus: !1 };
     _codeBlockRef;
     render() {
@@ -42,7 +42,7 @@ class c extends s.PureComponent {
         t?.(e.currentTarget.value);
     };
 }
-class d extends s.PureComponent {
+class c extends s.PureComponent {
     _codeBlockRefs = Array(this.props.count);
     static defaultProps = { count: 6 };
     constructor(e) {
@@ -56,7 +56,7 @@ class d extends s.PureComponent {
             e === n.length / 2 && s.push((0, i.jsx)("div", { className: o.j }, "spacer")),
                 s.push(
                     (0, i.jsx)(
-                        c,
+                        d,
                         {
                             ref: (t) => this.setCodeBlockRef(e, t),
                             code: n[e],
@@ -105,4 +105,4 @@ class d extends s.PureComponent {
         t?.(e);
     }
 }
-let u = d;
+let u = c;

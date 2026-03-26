@@ -1,20 +1,20 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => _ });
 var i = n(627968);
 n(64700);
 var s = n(503698),
-    r = n.n(s),
+    l = n.n(s),
     a = n(397927),
-    l = n(294433),
+    r = n(294433),
     o = n(299628),
-    c = n(842130),
-    d = n(985018),
-    u = n(121113),
-    _ = n(896498);
-let m = () => {
-    let e = d.intl.string(c.default.tr8Gni),
-        t = (0, l.y)(d.intl.string(c.default["3xKGSE"]), d.intl.string(c.default.XbgrG7));
+    d = n(842130),
+    c = n(985018),
+    u = n(26440),
+    m = n(452567);
+let _ = () => {
+    let e = c.intl.string(d.default.tr8Gni),
+        t = (0, r.y)(c.intl.string(d.default["3xKGSE"]), c.intl.string(d.default.XbgrG7));
     return (0, i.jsxs)(a.BJc, {
-        className: r()(u.k, _.a),
+        className: l()(u.k, m.a),
         gap: 24,
         padding: 24,
         children: [

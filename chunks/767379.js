@@ -1,8 +1,8 @@
 n.d(t, { default: () => E });
 var a = n(627968),
     i = n(64700),
-    l = n(835245),
-    s = n(158954),
+    s = n(835245),
+    l = n(158954),
     r = n(554146),
     o = n(397927),
     d = n(932001),
@@ -10,17 +10,17 @@ var a = n(627968),
     u = n(627575),
     m = n(393033),
     h = n(105428),
-    p = n(975571),
-    x = n(935649),
+    x = n(975571),
+    p = n(935649),
     g = n(847599),
-    _ = n(295972),
-    f = n(36149),
+    f = n(295972),
+    _ = n(36149),
     v = n(807734),
     b = n(652215),
     j = n(239093),
     A = n(536242),
     C = n(985018),
-    y = n(62959),
+    y = n(774992),
     T = n(700129);
 function S(e) {
     let { modalSessionId: t, entryPoint: n } = e;
@@ -29,7 +29,7 @@ function S(e) {
               variant: "text-xs/medium",
               children: C.intl.format(A.default.htWh1G, {
                   handleOnHelpUrlHook: () => {
-                      x.A.openUrl(j.d$.LEARN_MORE_UU_APPEAL_LINK),
+                      p.A.openUrl(j.d$.LEARN_MORE_UU_APPEAL_LINK),
                           (0, g.St)(t, g.WU.EXPRESSIVE_PRIMARY, g._7.LEARN_MORE);
                   },
               }),
@@ -50,9 +50,9 @@ let E = function (e) {
         [I, k] = i.useState(r.M.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
         O = i.useRef(I),
         [R, w] = (0, d.kn)([I], void 0, !0),
-        D = i.useMemo(() => (0, l.A)(), []),
-        M = i.useRef(!1),
-        P = (0, m.W$)();
+        D = i.useMemo(() => (0, s.A)(), []),
+        P = i.useRef(!1),
+        M = (0, m.W$)();
     i.useEffect(() => {
         O.current = R;
     }, [R]);
@@ -68,10 +68,10 @@ let E = function (e) {
     return (
         i.useLayoutEffect(
             () => () => {
-                if (M.current) return;
+                if (P.current) return;
                 let e = O.current;
                 null != e &&
-                    ((M.current = !0),
+                    ((P.current = !0),
                     h.A.maybeOpenAgeVerificationUserFeedback({
                         location: "age_verification_get_started_modal",
                         visibleContent: e,
@@ -82,20 +82,20 @@ let E = function (e) {
         i.useEffect(() => {
             (0, g.Bs)(D, g.WU.EXPRESSIVE_PRIMARY, n);
         }, [D, n]),
-        (0, a.jsx)(s.ExpressiveModal, {
+        (0, a.jsx)(l.ExpressiveModal, {
             transitionState: t,
             onClose: u,
             gradientColor: "blue",
             dismissable: E,
             graphic: { type: "image", src: T.A },
-            title: (0, f.ST)(n),
-            subtitle: (0, f.mK)(
+            title: (0, _.ST)(n),
+            subtitle: (0, _.mK)(
                 n,
                 () => {
-                    x.A.openUrl(p.A.getArticleURL(b.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                    p.A.openUrl(x.A.getArticleURL(b.MVz.TIGGER_PAWTECT_LEARN_MORE)),
                         (0, g.St)(D, g.WU.EXPRESSIVE_PRIMARY, g._7.LEARN_MORE);
                 },
-                P,
+                M,
             ),
             actionBarInput: (0, a.jsx)(S, { modalSessionId: D, entryPoint: n }),
             children: (0, a.jsxs)(o.BJc, {
@@ -134,7 +134,7 @@ let E = function (e) {
                                       size: "sm",
                                       text: C.intl.string(A.default.hDvmYP),
                                       onClick: () => {
-                                          (0, _.DJ)();
+                                          (0, f.DJ)();
                                       },
                                   }),
                               ],

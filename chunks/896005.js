@@ -5,7 +5,7 @@ var i = n(627968),
     a = n.n(l),
     r = n(397927),
     o = n(641324),
-    d = n(702421);
+    d = n(12846);
 function c(e) {
     let { title: t, subtitle: n, isHiddenVisually: s } = e;
     return null == t || "" === t
@@ -22,11 +22,11 @@ function c(e) {
 }
 let u = s.memo(function (e) {
     let { node: t } = e,
-        { useTitle: n, useSubtitle: l, layout: a, variant: u = "default", isTitleHiddenVisually: _ } = t,
-        m = n(),
+        { useTitle: n, useSubtitle: l, layout: a, variant: u = "default", isTitleHiddenVisually: m } = t,
+        _ = n(),
         g = l?.(),
-        A = s.useId(),
-        x = null != m && "" !== m,
+        x = s.useId(),
+        A = null != _ && "" !== _,
         h = null != g && "" !== g,
         p = (function (e) {
             switch (e) {
@@ -37,21 +37,21 @@ let u = s.memo(function (e) {
             }
         })(u);
     return (0, i.jsxs)("fieldset", {
-        "aria-describedby": h ? A : void 0,
+        "aria-describedby": h ? x : void 0,
         children: [
-            (0, i.jsx)(c, { title: m, subtitle: g, isHiddenVisually: _ }),
+            (0, i.jsx)(c, { title: _, subtitle: g, isHiddenVisually: m }),
             h
                 ? (0, i.jsx)(r.Text, {
                       variant: "text-sm/normal",
                       color: "text-default",
-                      id: A,
+                      id: x,
                       className: d.VA,
                       children: g,
                   })
                 : null,
             (0, i.jsx)(r.BJc, {
                 gap: p,
-                padding: { top: x && !_ ? 16 : 0 },
+                padding: { top: A && !m ? 16 : 0 },
                 children: a.map((e) => (0, i.jsx)(o.A, { node: e }, e.key)),
             }),
         ],

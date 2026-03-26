@@ -1,20 +1,20 @@
 n.d(t, { E: () => l, T: () => s }), n(801541);
 var i = n(889137),
-    r = n(966974),
-    a = n(48693);
+    a = n(966974),
+    r = n(108234);
 function l(e, t) {
     let n = (0, i.YW)(t)
-        .with(r.Z.IMAGE_ONLY_ANSWERS, () => a.EK)
-        .otherwise(() => a.fD);
+        .with(a.Z.IMAGE_ONLY_ANSWERS, () => r.EK)
+        .otherwise(() => r.fD);
     return {
         styles: {
             loserSelected: n,
             normal: n,
             notVoted: n,
             selected: n,
-            voted: a.pq,
-            victorSelected: a.iu,
-            victorNotSelected: a.iu,
+            voted: r.pq,
+            victorSelected: r.iu,
+            victorNotSelected: r.iu,
             normalVote: n,
         },
     };

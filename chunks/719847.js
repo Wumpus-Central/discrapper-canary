@@ -1,79 +1,79 @@
-i.d(e, { default: () => v });
+i.d(e, { default: () => g });
 var s = i(627968),
     r = i(64700),
-    l = i(991660),
+    a = i(991660),
     n = i(158954),
-    C = i(311907),
-    a = i(397927),
+    l = i(311907),
+    o = i(397927),
     c = i(627363),
-    o = i(587895),
-    d = i(575926),
-    p = i(957565),
-    _ = i(997997),
-    h = i(123791),
-    u = i(55926),
-    L = i(816709),
-    x = i(652215),
-    f = i(435220),
-    b = i(985018),
-    S = i(801059),
-    g = i(22789);
-function v(t) {
-    let { onClose: e, transitionState: i, appId: v, guildId: m } = t,
-        j = (0, C.bG)([o.A], () => o.A.getApplication(v), [v]),
-        [w, A] = r.useState(() => (o.A.isFetchingApplication(v) ? { status: 1 } : { status: 0 }));
+    p = i(587895),
+    _ = i(575926),
+    d = i(957565),
+    b = i(997997),
+    u = i(123791),
+    S = i(55926),
+    x = i(816709),
+    f = i(652215),
+    h = i(435220),
+    m = i(985018),
+    C = i(678378),
+    A = i(110992);
+function g(t) {
+    let { onClose: e, transitionState: i, appId: g, guildId: T } = t,
+        v = (0, l.bG)([p.A], () => p.A.getApplication(g), [g]),
+        [y, D] = r.useState(() => (p.A.isFetchingApplication(g) ? { status: 1 } : { status: 0 }));
     r.useEffect(() => {
-        0 === w.status &&
-            (A({ status: 1 }),
-            c.Ay.fetchApplication(v)
+        0 === y.status &&
+            (D({ status: 1 }),
+            c.Ay.fetchApplication(g)
                 .then(() => {
-                    A({ status: 2 });
+                    D({ status: 2 });
                 })
                 .catch((t) => {
-                    A({ status: 3, error: t.message });
+                    D({ status: 3, error: t.message });
                 }));
-    }, [v, w.status]);
-    let { subscriptions: V, otps: y } = (0, h.C)(v);
-    if (null == j) return null;
-    let T = b.intl.formatToPlainString(b.t.XDRjs5, { appName: j.name }),
-        P = (0, s.jsx)("div", { className: S.K, children: (0, s.jsx)(d.h, {}) }),
-        D = p.p5
-            ? (0, s.jsx)(a.K0, {
-                  "aria-label": b.intl.string(b.t.WqhZss),
-                  icon: () => (0, s.jsx)(a.qYV, { size: "sm" }),
+    }, [g, y.status]);
+    let { subscriptions: j, otps: I } = (0, u.C)(g);
+    if (null == v) return null;
+    let E = m.intl.formatToPlainString(m.t.XDRjs5, { appName: v.name }),
+        N = (0, s.jsx)("div", { className: C.K, children: (0, s.jsx)(_.h, {}) }),
+        O = d.p5
+            ? (0, s.jsx)(o.K0, {
+                  "aria-label": m.intl.string(m.t.WqhZss),
+                  icon: () => (0, s.jsx)(o.qYV, { size: "sm" }),
                   onClick: () => {
-                      let t = `${location.protocol}//${location.host}${x.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(v, f.GlobalDiscoveryAppsSections.STORE)}`;
-                      (0, p.C)(t, () =>
-                          (0, a.showToast)((0, a.createToast)(b.intl.string(b.t["L/PwZf"]), a.ToastType.SUCCESS)),
+                      let t = `${location.protocol}//${location.host}${f.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(g, h.GlobalDiscoveryAppsSections.STORE)}`;
+                      (0, d.C)(t, () =>
+                          (0, o.showToast)((0, o.createToast)(m.intl.string(m.t["L/PwZf"]), o.ToastType.SUCCESS)),
                       ),
-                          (0, _.K)(v, _.C.STORE_MODAL);
+                          (0, b.K)(g, b.C.STORE_MODAL);
                   },
                   variant: "icon-only",
               })
             : void 0;
     return (0, s.jsxs)(n.dWK, {
         transitionState: i,
-        "aria-label": T,
+        "aria-label": E,
         onClose: e,
         size: "xxl",
         children: [
-            (0, s.jsx)(n.rQ0, { leading: P, title: T, trailing: D }),
-            (0, s.jsx)(l.A, {
+            (0, s.jsx)(n.rQ0, { leading: N, title: E, trailing: O }),
+            (0, s.jsx)(a.A, {
                 children: (0, s.jsx)("main", {
-                    className: g.bodyInner,
-                    children: (0, s.jsx)(u.Mp, { app: j, guildId: m, subscriptions: V, otps: y }),
+                    className: A.bodyInner,
+                    children: (0, s.jsx)(S.Mp, { app: v, guildId: T, subscriptions: j, otps: I }),
                 }),
             }),
             (0, s.jsx)(n.jlY, {
-                children: (0, s.jsx)(a.Text, {
+                children: (0, s.jsx)(o.Text, {
                     variant: "text-md/normal",
                     children:
-                        null != j.termsOfServiceUrl || null != j.privacyPolicyUrl
-                            ? (0, s.jsx)(L.A, {
-                                  termsOfServiceUrl: j.termsOfServiceUrl,
-                                  privacyPolicyUrl: j.privacyPolicyUrl,
+                        null != v.termsOfServiceUrl || null != v.privacyPolicyUrl
+                            ? (0, s.jsx)(x.A, {
+                                  termsOfServiceUrl: v.termsOfServiceUrl,
+                                  privacyPolicyUrl: v.privacyPolicyUrl,
                               })
-                            : b.intl.string(b.t["3ZY+0D"]),
+                            : m.intl.string(m.t["3ZY+0D"]),
                 }),
             }),
         ],

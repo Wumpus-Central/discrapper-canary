@@ -1,64 +1,64 @@
 "use strict";
-n.d(t, { d: () => g, i: () => h.i });
+n.d(t, { d: () => m, i: () => p.i });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(522160),
+    s = n(503698),
+    a = n.n(s),
+    o = n(4208),
     l = n(110259),
     u = n(113325),
     c = n(426333),
     d = n(707554),
     _ = n(22856),
     f = n(150591),
-    h = n(815390),
-    p = n(22789);
-function g(e) {
+    p = n(815390),
+    h = n(110992);
+function m(e) {
     let {
             transitionState: t,
             animationVariant: n = "default",
-            size: a = "md",
-            paddingSize: h = "sm",
-            fullScreenOnMobile: g = !0,
+            size: s = "md",
+            paddingSize: p = "sm",
+            fullScreenOnMobile: m = !0,
             returnRef: E,
-            role: A = "dialog",
-            "aria-label": I,
-            dismissable: T = !0,
-            maxHeight: y = "default",
+            role: g = "dialog",
+            "aria-label": A,
+            dismissable: I = !0,
+            maxHeight: T = "default",
             onClose: S,
-            contentOutsideContainer: v,
-            trackingProps: C,
-            children: b,
+            contentOutsideContainer: y,
+            trackingProps: v,
+            children: N,
         } = e,
-        N = i.useId(),
-        R = i.useMemo(() => ({ id: N, headingId: `heading-${N}`, onClose: S, dismissable: T }), [T, N, S]),
+        C = i.useId(),
+        R = i.useMemo(() => ({ id: C, headingId: `heading-${C}`, onClose: S, dismissable: I }), [I, C, S]),
         O = (0, f.kS)(t, n),
-        D = i.useRef(null);
+        b = i.useRef(null);
     return (0, r.jsx)(_.V.Provider, {
         value: R,
         children: (0, r.jsx)(u.l, {
-            id: N,
-            role: A,
-            "aria-label": I,
-            "aria-labelledby": null != I ? void 0 : R.headingId,
+            id: C,
+            role: g,
+            "aria-label": A,
+            "aria-labelledby": null != A ? void 0 : R.headingId,
             returnRef: E,
-            trackingProps: { ...C, impressionType: C?.impressionType ?? l.ImpressionTypes.MODAL },
+            trackingProps: { ...v, impressionType: v?.impressionType ?? l.ImpressionTypes.MODAL },
             children: (0, r.jsx)(c.xp, {
-                containerRef: D,
+                containerRef: b,
                 children: (0, r.jsx)(d.F, {
                     forceLevel: 1,
                     children: (0, r.jsxs)("div", {
-                        ref: D,
-                        className: s()(p.outerContainer, { [p.fullScreenOnMobile]: g }),
+                        ref: b,
+                        className: a()(h.outerContainer, { [h.fullScreenOnMobile]: m }),
                         children: [
-                            v,
+                            y,
                             (0, r.jsx)(o.animated.div, {
                                 "data-mana-component": "modal",
-                                className: s()(p.container, p[`size-${a}`], p[`padding-size-${h}`], {
-                                    [p.maxHeightViewport]: "viewport" === y,
+                                className: a()(h.container, h[`size-${s}`], h[`padding-size-${p}`], {
+                                    [h.maxHeightViewport]: "viewport" === T,
                                 }),
                                 style: O,
-                                children: b,
+                                children: N,
                             }),
                         ],
                     }),

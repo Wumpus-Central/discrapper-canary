@@ -15,7 +15,7 @@ var i = n(627968),
     h = n(726862),
     _ = n(539916),
     p = n(985018),
-    A = n(42483);
+    A = n(851824);
 function f(e) {
     let { guild: t, prejoinOnly: n, postjoinOnly: l } = e,
         d = (0, a.bG)([x.A], () => x.A.editedOnboardingPrompts),
@@ -99,8 +99,8 @@ function j(e) {
             ...E.map((e) => ({ id: e.id, data: e })),
         ],
         {
-            handleDragStart: T,
-            handleDragReset: C,
+            handleDragStart: C,
+            handleDragReset: T,
             handleDragComplete: I,
         } = (0, u.A)(b, (e) => {
             let t = e.findIndex((e) => "separator" === e.id),
@@ -148,8 +148,8 @@ function j(e) {
                                             singleColumn: r,
                                             promptIndex: t,
                                             dragIndex: t,
-                                            onPromptDragStart: T,
-                                            onPromptDragReset: C,
+                                            onPromptDragStart: C,
+                                            onPromptDragReset: T,
                                             onPromptDragComplete: I,
                                         },
                                         e.id,
@@ -170,8 +170,8 @@ function j(e) {
                                             prompt: e,
                                             promptIndex: t + N.length,
                                             dragIndex: t + N.length + 1,
-                                            onPromptDragStart: T,
-                                            onPromptDragReset: C,
+                                            onPromptDragStart: C,
+                                            onPromptDragReset: T,
                                             onPromptDragComplete: I,
                                         },
                                         e.id,

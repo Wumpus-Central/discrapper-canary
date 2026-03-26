@@ -7,13 +7,13 @@ var r = s(503698),
     a = s(397927),
     i = s(496431),
     o = s(985018),
-    c = s(487604);
+    c = s(20649);
 let d = (e) => {
     let t,
         s,
-        { endDate: r, size: d = "md", className: u, showSeconds: g = !1 } = e,
-        { days: m, hours: _, minutes: h, seconds: p } = (0, i.A)(r),
-        f = ((s = [(t = (e) => `${e.toString().padStart(2, "0")}`)(m), t(_), t(h)]), g && s.push(t(p)), s.join(":"));
+        { endDate: r, size: d = "md", className: u, showSeconds: _ = !1 } = e,
+        { days: g, hours: m, minutes: h, seconds: p } = (0, i.A)(r),
+        f = ((s = [(t = (e) => `${e.toString().padStart(2, "0")}`)(g), t(m), t(h)]), _ && s.push(t(p)), s.join(":"));
     return (0, n.jsxs)("div", {
         className: l()(c.kL, u),
         role: "timer",
@@ -47,7 +47,7 @@ let d = (e) => {
                               t,
                           ),
                 ),
-            (0, n.jsx)(a.AC4, { children: o.intl.format(o.t.j6IyVe, { days: m, hours: _, minutes: h }) }),
+            (0, n.jsx)(a.AC4, { children: o.intl.format(o.t.j6IyVe, { days: g, hours: m, minutes: h }) }),
         ],
     });
 };

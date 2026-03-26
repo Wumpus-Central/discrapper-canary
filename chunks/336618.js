@@ -28,8 +28,8 @@ var r = n(627968),
     O = n(652215),
     b = n(49999),
     D = n(985018),
-    L = n(278178),
-    w = n(178588);
+    L = n(23769),
+    w = n(351671);
 function M(e) {
     let t = i.useCallback(() => Promise.resolve({ default: e.boxAnimationUrl }), [e.boxAnimationUrl]);
     return (0, r.jsx)(R.A, {

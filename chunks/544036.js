@@ -14,7 +14,7 @@ var s = e(627968),
     E = e(580630),
     f = e(652215),
     A = e(985018),
-    D = e(886928),
+    D = e(64125),
     g = e(495995);
 function k(t) {
     let { transitionState: i, onClose: e, amountRedeemed: k, currencyCode: T, loadId: I } = t,

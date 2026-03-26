@@ -3,8 +3,8 @@ n.d(t, { p: () => T });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    a = n.n(l),
-    r = n(497766),
+    r = n.n(l),
+    a = n(4208),
     o = n(110259),
     c = n(311907),
     d = n(435371),
@@ -12,17 +12,17 @@ var i = n(627968),
     h = n(964486),
     A = n(793574),
     m = n(688810),
-    _ = n(139286),
-    p = n(713517),
-    g = n(71393),
+    p = n(139286),
+    g = n(713517),
+    _ = n(71393),
     f = n(576705),
     x = n(954571),
     C = n(778768),
     E = n(652215);
 n(281405);
 var I = n(985018),
-    N = n(430023),
-    b = n(77615);
+    N = n(426114),
+    b = n(805098);
 let S = (e) => 1 - Math.pow(1 - e, 4);
 function T(e) {
     let { channel: t, onClose: l } = e,
@@ -32,18 +32,18 @@ function T(e) {
         R = s.useRef(null),
         [O, L] = s.useState(0),
         { analyticsLocations: M } = (0, m.Ay)(A.A.VOICE_INVITE_SUGGESTIONS);
-    (0, _.A)({
+    (0, p.A)({
         name: o.ImpressionNames.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT,
         type: o.ImpressionTypes.VIEW,
         properties: { voice_channel_id: t.id, voice_guild_id: t.guild_id, location_stack: M },
     });
     let D = (0, c.bG)([f.A], () => f.A.can(E.xBc.CREATE_INSTANT_INVITE, t), [t]),
-        G = (0, c.bG)([g.A], () => g.A.getGuild(t.guild_id)),
+        G = (0, c.bG)([_.A], () => _.A.getGuild(t.guild_id)),
         [U, P] = s.useState(!1),
-        w = s.useRef(null),
-        { isHoveringOrFocusing: k } = (0, p.A)(D ? T : w),
+        k = s.useRef(null),
+        { isHoveringOrFocusing: w } = (0, g.A)(D ? T : k),
         [V, B] = s.useState(!1),
-        H = k || V,
+        H = w || V,
         F = s.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "unknown";
@@ -61,7 +61,7 @@ function T(e) {
         K = s.useCallback(() => {
             null != G &&
                 (0, u.mMO)(async () => {
-                    let { default: e } = await Promise.all([n.e("43600"), n.e("28136"), n.e("74918")]).then(
+                    let { default: e } = await Promise.all([n.e("43600"), n.e("28136"), n.e("89886")]).then(
                         n.bind(n, 234355),
                     );
                     return (n) => (0, i.jsx)(e, { ...n, guild: G, channel: t, source: E.PE1.VOICE_INVITE_SUGGESTIONS });
@@ -128,18 +128,18 @@ function T(e) {
               onRequestClose: Q,
               children: (e) => {
                   let { onClick: t, ...n } = e;
-                  return (0, i.jsx)(r.animated.div, {
+                  return (0, i.jsx)(a.animated.div, {
                       className: N.lY,
                       style: W,
                       children: (0, i.jsx)(u.DUT, {
                           innerRef: T,
-                          className: a()({ [N.vk]: !U }, b.q7, b.L9, b.vk),
+                          className: r()({ [N.vk]: !U }, b.q7, b.L9, b.vk),
                           "aria-disabled": U,
                           "aria-label": I.intl.string(I.t.F3qiJr),
                           onClick: K,
                           ...n,
                           children: (0, i.jsxs)("div", {
-                              className: a()(N.Qs, b.Qs),
+                              className: r()(N.Qs, b.Qs),
                               children: [
                                   (0, i.jsxs)("div", {
                                       className: N.R4,
@@ -148,7 +148,7 @@ function T(e) {
                                           (0, i.jsxs)(
                                               "svg",
                                               {
-                                                  className: a()(N.O1, { [N.Ft]: H }),
+                                                  className: r()(N.O1, { [N.Ft]: H }),
                                                   viewBox: "0 0 24 24",
                                                   style: { "--custom-voice-invite-suggestions-timer-duration": 1e4 },
                                                   children: [
@@ -163,7 +163,7 @@ function T(e) {
                                               width: 14,
                                               height: 14,
                                               color: "currentColor",
-                                              className: a()(N.Hk, N.Kk),
+                                              className: r()(N.Hk, N.Kk),
                                           }),
                                       ],
                                   }),
@@ -177,7 +177,7 @@ function T(e) {
                                           children: I.intl.string(I.t["EE+P0H"]),
                                       }),
                                   }),
-                                  k
+                                  w
                                       ? (0, i.jsx)(u.DUT, {
                                             className: N.VN,
                                             onClick: (e) => {

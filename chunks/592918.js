@@ -5,7 +5,7 @@ var l = n(627968),
     a = n(661191),
     r = n(333672),
     o = n(985018),
-    c = n(2404);
+    c = n(963723);
 let d = { type: "image", src: n(685831).A, aspectRatio: "16/9" };
 function u(t) {
     let {

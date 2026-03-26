@@ -8,10 +8,10 @@ var i = n(627968),
     d = n(544420),
     c = n(15285),
     u = n(985018),
-    m = n(883622),
-    _ = n(976092),
-    g = n(20976),
-    x = n(473169);
+    m = n(342905),
+    _ = n(778437),
+    g = n(435115),
+    x = n(885106);
 function A(e) {
     let { onClose: t } = e,
         n = (0, r.bG)([c.Ay], () => c.Ay.getCandidateGames()),

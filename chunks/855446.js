@@ -5,17 +5,17 @@ var i,
     l = n(64700),
     r = n(503698),
     a = n.n(r),
-    o = n(475539),
+    o = n(4208),
     c = n(696292),
     d = n(397927),
-    u = n(753845),
+    u = n(932413),
     h = n(849269),
     A = n(881343),
-    p = n(697675),
-    g = n(869003),
-    m = n(652215),
+    m = n(697675),
+    p = n(869003),
+    g = n(652215),
     _ = n(985018),
-    f = n(279240);
+    f = n(488893);
 let x = ["embedded_cover"],
     C = { tension: 800, friction: 24 };
 var E =
@@ -25,8 +25,8 @@ var E =
 function I(e) {
     let { context: t, activityItem: n, onClick: i, aspectRatio: r = 0, animatedDivClass: E, commandOrigin: I } = e,
         {
-            onActivityItemSelected: b,
-            imageBackground: N,
+            onActivityItemSelected: N,
+            imageBackground: b,
             activityAction: S,
             labelType: T,
         } = (0, h.Ay)({
@@ -35,7 +35,7 @@ function I(e) {
             guildId: t.channel.getGuildId() ?? void 0,
             locationObject: {},
             onActivityItemSelected: i,
-            embeddedActivitiesManager: g.A,
+            embeddedActivitiesManager: p.A,
             assetNames: x,
             commandOrigin: I,
         }),
@@ -50,7 +50,7 @@ function I(e) {
             () =>
                 (0, s.jsx)("div", {
                     className: f.Gz,
-                    children: (0, s.jsx)("div", { className: f.fC, children: (0, s.jsx)(p.A, { labelType: T }) }),
+                    children: (0, s.jsx)("div", { className: f.fC, children: (0, s.jsx)(m.A, { labelType: T }) }),
                 }),
             [T],
         ),
@@ -86,7 +86,7 @@ function I(e) {
             }
         }, [S]);
     return (0, s.jsx)(d.DUT, {
-        onClick: b,
+        onClick: N,
         onFocus: j,
         onBlur: R,
         onMouseEnter: j,
@@ -99,7 +99,7 @@ function I(e) {
             children: (e) => {
                 let { value: t } = e;
                 return (0, s.jsx)(d.NPJ, {
-                    theme: m.NJ8.DARK,
+                    theme: g.NJ8.DARK,
                     children: (e) =>
                         (0, s.jsx)(u.A, {
                             applicationId: n.application.id,
@@ -111,7 +111,7 @@ function I(e) {
                                     style: { transform: t.to([0, 1], [1, 1.05]).to((e) => `scale(${e})`) },
                                     children: [
                                         (0, s.jsx)(A.A, {
-                                            imageBackground: N,
+                                            imageBackground: b,
                                             applicationName: n.application.name,
                                             imageClassName: f.jj,
                                             imageNotFoundClassName: f.v_,

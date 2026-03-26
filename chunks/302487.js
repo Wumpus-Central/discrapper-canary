@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { A: () => k, h: () => P });
+n.d(t, { A: () => w, h: () => P });
 var l = n(627968),
     i = n(64700),
     s = n(284009),
     a = n.n(s),
-    r = n(522160),
+    r = n(4208),
     o = n(884362),
     d = n(837381),
     c = n(741918),
@@ -14,22 +14,22 @@ var l = n(627968),
     x = n(817363),
     g = n(775602),
     f = n(355622),
-    p = n(349688),
-    _ = n(914905),
+    _ = n(349688),
+    p = n(914905),
     j = n(734057),
     b = n(31717),
     v = n(522602),
     A = n(518960),
     C = n(853742),
     T = n(985018),
-    N = n(149707);
+    N = n(3246);
 let S = { scale: 0.95, opacity: 0 },
     y = { scale: 1, opacity: 1 },
     E = { scale: 1, opacity: 1 },
     I = { tension: 2400, friction: 52 },
     R = `.${N.EJ}`,
     M = { behavior: "smooth", block: "nearest", inline: "nearest" };
-function k(e) {
+function w(e) {
     let { channelId: t, onClick: n, onClose: s, onMouseEnter: r, listItemProps: o } = e,
         d = i.useRef(null),
         c = (0, m.bG)([j.A], () => j.A.getChannel(t), [t]);
@@ -64,7 +64,7 @@ function k(e) {
         })
     );
 }
-function w(e) {
+function k(e) {
     let { channelId: t, closePopout: n } = e,
         [s, a] = i.useState(!1),
         { reducedMotion: u } = i.useContext(h.CZY),
@@ -104,14 +104,14 @@ function w(e) {
                             children: [
                                 b.map((e) =>
                                     (0, l.jsx)(
-                                        _.A,
+                                        p.A,
                                         {
                                             channelId: t,
                                             draftType: f.oU.CREATE_FORUM_POST.drafts.type,
                                             upload: e,
                                             keyboardModeEnabled: j,
                                             hideFileName: !0,
-                                            size: p.L.SMALL,
+                                            size: _.L.SMALL,
                                         },
                                         e.id,
                                     ),
@@ -128,7 +128,7 @@ function w(e) {
 function L(e) {
     let { channelId: t, setFileInputOpen: n } = e,
         i = { ...(0, d.rm)("upload-button"), tabIndex: 0 };
-    return (0, l.jsx)(k, {
+    return (0, l.jsx)(w, {
         channelId: t,
         onClick: () => {
             n(!0);
@@ -193,12 +193,12 @@ function P(e) {
                       },
                       onMouseEnter: c,
                       children: [
-                          (0, l.jsx)(_.J, { upload: r[0], size: p.L.SMALL }),
+                          (0, l.jsx)(p.J, { upload: r[0], size: _.L.SMALL }),
                           (0, l.jsx)("div", { className: N.qS, children: o }),
                       ],
                   })
-                : (0, l.jsx)(k, { onMouseEnter: c, channelId: t }),
-            n && (0, l.jsx)(w, { channelId: t, closePopout: u }),
+                : (0, l.jsx)(w, { onMouseEnter: c, channelId: t }),
+            n && (0, l.jsx)(k, { channelId: t, closePopout: u }),
         ],
     });
 }

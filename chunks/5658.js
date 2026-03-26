@@ -2,7 +2,7 @@
 n.d(t, { A: () => I });
 var i = n(627968),
     s = n(64700),
-    l = n(475539),
+    l = n(4208),
     r = n(311283),
     a = n(311907),
     o = n(435371),
@@ -11,14 +11,14 @@ var i = n(627968),
     u = n(334738),
     h = n(58149),
     A = n(976860),
-    p = n(734057),
-    g = n(510560),
-    m = n(572448),
+    m = n(734057),
+    p = n(510560),
+    g = n(572448),
     _ = n(955454),
     f = n(502754),
     x = n(652215),
     C = n(985018),
-    E = n(391900);
+    E = n(368897);
 let I = s.memo(function (e) {
         let { channel: t, deleteChannel: n } = e,
             r = s.useRef(null),
@@ -42,18 +42,18 @@ let I = s.memo(function (e) {
                 },
                 "animate-always",
             ),
-            p = {
+            m = {
                 opacity: h,
                 height: A.to((e) => {
                     var t, n;
                     return u ? ((t = a), (n = o) + (t - n) * e) : "auto";
                 }),
             };
-        return (0, i.jsx)(l.animated.div, { ref: r, style: p, children: (0, i.jsx)(b, { ...e }) });
+        return (0, i.jsx)(l.animated.div, { ref: r, style: m, children: (0, i.jsx)(N, { ...e }) });
     }),
-    b = s.memo(function (e) {
+    N = s.memo(function (e) {
         let { channel: t, onJump: n, deleteChannel: l, toggle: r } = e,
-            o = (0, a.bG)([p.A], () => p.A.getChannel(t.channelId));
+            o = (0, a.bG)([m.A], () => m.A.getChannel(t.channelId));
         if (
             (s.useEffect(() => {
                 null == o ||
@@ -86,7 +86,7 @@ let I = s.memo(function (e) {
         return (0, i.jsx)("div", {
             className: E.Ix,
             children: (0, i.jsx)(c.Fmo, {
-                component: (0, i.jsx)(m.A, {
+                component: (0, i.jsx)(g.A, {
                     channel: o,
                     gotoChannel: C,
                     mentionCount: t.mentionCount,
@@ -97,7 +97,7 @@ let I = s.memo(function (e) {
                     children: (0, i.jsxs)(c.ButtonGroup, {
                         size: "sm",
                         className: E.GC,
-                        children: [(0, i.jsx)(g.A, { channel: o }), (0, i.jsx)(N, { ...e })],
+                        children: [(0, i.jsx)(p.A, { channel: o }), (0, i.jsx)(b, { ...e })],
                     }),
                 }),
                 children: t.collapsed
@@ -110,7 +110,7 @@ let I = s.memo(function (e) {
             }),
         });
     });
-function N(e) {
+function b(e) {
     let { channel: t, markChannelRead: n, markGuildRead: s, getNumUnreadChannels: l } = e,
         a = (0, r.A)() && null != t.guildId;
     return (0, i.jsx)(o.m_, {

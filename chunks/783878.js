@@ -2,12 +2,12 @@
 n.d(t, { Z: () => l });
 var r = n(627968),
     i = n(978617),
-    a = n(158954),
-    s = n(389723),
-    o = n(594597);
+    s = n(158954),
+    a = n(389723),
+    o = n(27576);
 function l(e) {
     let { hideTags: t, wrapTags: n, maxOptionsVisible: l = 5, ...u } = e,
-        { fieldProps: c } = (0, a.ndh)(u),
+        { fieldProps: c } = (0, s.ndh)(u),
         {
             disabled: d,
             required: _,
@@ -15,36 +15,36 @@ function l(e) {
             onKeyDown: p,
             onFocus: h,
             onBlur: m,
-            placeholder: g,
-            closeOnSelect: E,
+            placeholder: E,
+            closeOnSelect: g,
             selectionMode: A,
         } = u,
         {
             isOpen: I,
             setIsOpen: T,
-            refs: y,
-            floatingStyles: S,
+            refs: S,
+            floatingStyles: y,
             getFloatingProps: v,
-            getReferenceProps: C,
-            transitionStyles: b,
+            getReferenceProps: N,
+            transitionStyles: C,
         } = (0, i.GY)();
-    return (0, r.jsxs)(s.iS, {
+    return (0, r.jsxs)(a.iS, {
         ...u,
         isCollapsible: !0,
         isOpen: I,
         setIsOpen: T,
-        closeOnSelect: E ?? "single" === A,
+        closeOnSelect: g ?? "single" === A,
         children: [
-            (0, r.jsx)(s.a3, {
+            (0, r.jsx)(a.a3, {
                 hideTags: t,
                 required: _,
                 disabled: d,
                 wrapTags: n,
                 showChevronButton: !0,
-                ref: y.setReference,
-                placeholder: g,
+                ref: S.setReference,
+                placeholder: E,
                 ...c,
-                ...C(),
+                ...N(),
                 onKeyDown: p,
                 onBlur: m,
                 onQueryChange: f,
@@ -52,11 +52,11 @@ function l(e) {
             }),
             I &&
                 (0, r.jsx)("div", {
-                    ref: y.setFloating,
+                    ref: S.setFloating,
                     className: o.S_,
-                    style: { ...S, ...b },
+                    style: { ...y, ...C },
                     ...v(),
-                    children: (0, r.jsx)(s.X2, {
+                    children: (0, r.jsx)(a.X2, {
                         renderListItem: (e) => (0, r.jsx)(i.c$, { ...e }),
                         maxVisibleItems: l,
                     }),

@@ -1,35 +1,35 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => c });
 var i = n(627968);
 n(64700);
-var s = n(522160),
-    a = n(397927),
-    l = n(65470),
+var s = n(4208),
+    l = n(397927),
+    a = n(65470),
     r = n(792656),
     o = n(652215),
-    c = n(433538);
-let d = function (e) {
-    let { isVisible: t, subscriptionTier: n, isEligibleForBogoPromotion: d } = e,
-        u = (0, a.zhh)({
+    d = n(688523);
+let c = function (e) {
+    let { isVisible: t, subscriptionTier: n, isEligibleForBogoPromotion: c } = e,
+        u = (0, l.zhh)({
             transform: t ? "translateY(-100%)" : "translateY(0%)",
             opacity: +!!t,
             config: { tension: 120, friction: 12 },
         }),
-        _ = { section: o.JJy.MARKETING_FLOATING_CTA };
+        m = { section: o.JJy.MARKETING_FLOATING_CTA };
     return (0, i.jsx)(s.animated.div, {
-        className: c.i,
+        className: d.i,
         style: u,
         "data-mtctest-ignore": "true",
         children: (0, i.jsxs)("div", {
-            className: c.U,
+            className: d.U,
             children: [
                 (0, i.jsx)(r.A, {
                     size: "md",
                     subscriptionTier: n,
-                    hasActivePromotion: !!d,
+                    hasActivePromotion: !!c,
                     isPersistentCTA: !0,
-                    premiumModalAnalyticsLocation: _,
+                    premiumModalAnalyticsLocation: m,
                 }),
-                (0, i.jsx)(l.A, { variant: "secondary", size: "md" }),
+                (0, i.jsx)(a.A, { variant: "secondary", size: "md" }),
             ],
         }),
     });

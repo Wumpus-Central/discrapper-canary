@@ -1,15 +1,15 @@
 n.d(t, { A: () => _ });
 var i = n(627968),
-    r = n(64700),
-    a = n(503698),
-    l = n.n(a),
-    s = n(497766),
+    a = n(64700),
+    r = n(503698),
+    l = n.n(r),
+    s = n(4208),
     o = n(397927),
     d = n(486020),
-    c = n(558770);
+    c = n(754521);
 let u = { mass: 1, tension: 170, friction: 26 };
 function _(e) {
-    let { className: t, voiceStates: n, guildId: a, ref: _, motion: m } = e,
+    let { className: t, voiceStates: n, guildId: r, ref: _, motion: m } = e,
         h = n.length > 4,
         p = h ? n.slice(0, 3) : n,
         g = h ? n.length - 4 + 1 : 0,
@@ -19,7 +19,7 @@ function _(e) {
         C = 1 + ((m?.proximity ?? 0) / 2) * 0.08,
         [I, E] = (0, o.zhh)(() => ({ x: 0, y: 0, scale: 1, config: u }));
     return (
-        r.useEffect(() => {
+        a.useEffect(() => {
             E({ x: x, y: f, scale: C });
         }, [x, f, C, E]),
         (0, i.jsxs)(s.animated.div, {
@@ -40,7 +40,7 @@ function _(e) {
                             children: (0, i.jsx)(o.euF, {
                                 src:
                                     ((n = 0 === t ? 80 : 60),
-                                    (null != e.member ? (0, d.xT)(e.member) : null) ?? e.user.getAvatarURL(a, n)),
+                                    (null != e.member ? (0, d.xT)(e.member) : null) ?? e.user.getAvatarURL(r, n)),
                                 size:
                                     1 === A
                                         ? o._3J.SIZE_80

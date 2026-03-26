@@ -19,7 +19,7 @@ var i = n(627968),
     x = n(783123),
     C = n(996988),
     E = n(985018),
-    I = n(133786),
+    I = n(38351),
     N = n(724693);
 function b(e) {
     let { user: t, channel: n, onHide: b } = e,

@@ -5,13 +5,13 @@ var l = n(627968),
     s = n.n(r),
     i = n(342952),
     o = n(397927),
-    d = n(562153),
-    c = n(576757),
+    c = n(562153),
+    d = n(576757),
     u = n(291594),
     m = n(22869),
     p = n(959),
     A = n(985018),
-    h = n(199830);
+    h = n(25117);
 function C(e) {
     let { entry: t, channel: n, className: r } = e,
         C = a.useRef(null),
@@ -20,9 +20,9 @@ function C(e) {
             displayParticipants: x,
             participant1: N,
             participant2: I,
-            numOtherParticipants: _,
-            orderedParticipants: f,
-        } = (0, c.A)(t),
+            numOtherParticipants: f,
+            orderedParticipants: _,
+        } = (0, d.A)(t),
         g = [N, I];
     return (0, l.jsxs)("div", {
         className: s()(h.kL, r),
@@ -32,7 +32,7 @@ function C(e) {
                       children: [
                           (0, l.jsx)(p.A, {
                               targetElementRef: C,
-                              participants: f,
+                              participants: _,
                               channel: n,
                               children: (e) =>
                                   (0, l.jsx)(o.DUT, {
@@ -58,9 +58,9 @@ function C(e) {
                 className: s()(h.IY, h.Io),
                 scaleFontToUserSetting: !0,
                 children: A.intl.format(A.t.rH95Gu, {
-                    user0: d.Ay.getName(n.guild_id, n.id, g[0]),
-                    user1: d.Ay.getName(n.guild_id, n.id, g[1]),
-                    countOthers: _,
+                    user0: c.Ay.getName(n.guild_id, n.id, g[0]),
+                    user1: c.Ay.getName(n.guild_id, n.id, g[1]),
+                    countOthers: f,
                     name0Hook: (e, t) => (0, l.jsx)(m.A, { text: e, user: g[0], channel: n }, t),
                     name1Hook: (e, t) => (0, l.jsx)(m.A, { text: e, user: g[1], channel: n }, t),
                     countOthersHook: (e, t) =>
@@ -68,7 +68,7 @@ function C(e) {
                             p.A,
                             {
                                 targetElementRef: E,
-                                participants: f,
+                                participants: _,
                                 channel: n,
                                 children: (t) =>
                                     (0, l.jsx)(u.A, {

@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { A: () => y });
+n.d(t, { A: () => S });
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
-    s = n(311907),
+    s = n.n(i),
+    a = n(311907),
     o = n(435371),
     l = n(397927),
     u = n(454938),
@@ -15,33 +15,33 @@ var i = n(503698),
     p = n(696451),
     h = n(287809),
     m = n(473145),
-    g = n(652215),
-    E = n(985018),
-    A = n(617286);
+    E = n(652215),
+    g = n(985018),
+    A = n(52915);
 function I(e) {
     let { guild: t, isBannerVisible: n, disableBoostClick: i } = e,
-        a = (0, s.bG)([h.default, p.Ay], () => {
+        s = (0, a.bG)([h.default, p.Ay], () => {
             let e = h.default.getCurrentUser();
             return p.Ay.isMember(t.id, e?.id);
         }),
         { premiumTier: u, premiumSubscriberCount: c } = t;
-    if (0 === c && u === g.TVA.NONE) return null;
+    if (0 === c && u === E.TVA.NONE) return null;
     let d = (e) => {
             e.stopPropagation(),
                 e.preventDefault(),
-                a &&
+                s &&
                     !i &&
                     (0, _.K)({
                         guildId: t.id,
-                        location: { section: g.JJy.GUILD_HEADER, object: g.ZSU.BOOST_GEM_ICON },
+                        location: { section: E.JJy.GUILD_HEADER, object: E.ZSU.BOOST_GEM_ICON },
                     });
         },
-        I = u === g.TVA.NONE ? E.intl.string(E.t.c2wsn6) : m.gb(u);
+        I = u === E.TVA.NONE ? g.intl.string(g.t.c2wsn6) : m.gb(u);
     return (0, r.jsx)("div", {
         className: A._C,
         children: (0, r.jsx)(o.un, {
             title: I,
-            body: E.intl.format(E.t.If4iTS, { subscriberCount: c }),
+            body: g.intl.format(g.t.If4iTS, { subscriberCount: c }),
             position: "bottom",
             children: (0, r.jsx)(l.DUT, {
                 className: A.__invalid_premiumGuildIcon,
@@ -50,7 +50,7 @@ function I(e) {
                     size: 18,
                     premiumTier: u,
                     iconBackgroundClassName: n ? A.z_ : void 0,
-                    iconClassName: n && u !== g.TVA.TIER_3 ? A.S1 : null,
+                    iconClassName: n && u !== E.TVA.TIER_3 ? A.S1 : null,
                 }),
             }),
         }),
@@ -66,7 +66,7 @@ function T(e) {
                   size: 18,
                   tooltipPosition: "bottom",
                   tooltipColor: l.STz.Colors.PRIMARY,
-                  className: a()(A.n2, { [A.cE]: n }),
+                  className: s()(A.n2, { [A.cE]: n }),
                   disableBoostClick: i,
               }),
           })
@@ -77,16 +77,16 @@ function T(e) {
                   size: 18,
                   tooltipPosition: "bottom",
                   tooltipColor: l.STz.Colors.PRIMARY,
-                  className: a()(A.n2, { [A.cE]: n }),
+                  className: s()(A.n2, { [A.cE]: n }),
               }),
           });
 }
-function y(e) {
+function S(e) {
     let { guild: t, disableBoostClick: n } = e,
         i = !1;
     return (0, u.A)(t)
         ? (0, r.jsx)(T, { guild: t, disableColor: !1, disableBoostClick: n })
-        : t.features.has(g.GuildFeatures.VERIFIED) || t.features.has(g.GuildFeatures.PARTNERED)
+        : t.features.has(E.GuildFeatures.VERIFIED) || t.features.has(E.GuildFeatures.PARTNERED)
           ? (0, r.jsx)(T, { guild: t, disableColor: !i })
           : (0, r.jsx)(I, { guild: t, isBannerVisible: i, disableBoostClick: n });
 }

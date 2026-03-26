@@ -2,7 +2,7 @@ i.d(t, { A: () => T });
 var n = i(627968),
     l = i(64700),
     a = i(106778),
-    s = i(522160),
+    s = i(4208),
     r = i(615300),
     o = i(397927),
     u = i(565645),
@@ -12,12 +12,12 @@ var n = i(627968),
     m = i(486020),
     p = i(690521),
     g = i(851110),
-    A = i(624085);
+    A = i(396560);
 let f = [];
 function T(e) {
     let { messageId: t, emoji: i, startPosition: T, targetPosition: E } = e,
-        [x, I] = l.useState(0),
-        [N, v] = l.useState(0),
+        [x, N] = l.useState(0),
+        [I, v] = l.useState(0),
         [j, R] = l.useState(null),
         { confettiCanvas: C } = l.useContext(d.x),
         S = (0, a.f9)(C, j),
@@ -41,7 +41,7 @@ function T(e) {
                 v(t);
             },
         }),
-        M = (0, o.zhh)({
+        L = (0, o.zhh)({
             from: { x: T.x, scale: 1, opacity: 1 },
             to: { x: y, scale: 0.5, opacity: 0.4 },
             config: { duration: 450, easing: r.A.Easing.in(r.A.Easing.ease) },
@@ -50,13 +50,13 @@ function T(e) {
             },
             onChange: (e) => {
                 let { x: t } = e;
-                I(t);
+                N(t);
             },
         });
     return (
         l.useEffect(() => {
-            x > 0 && N > 0 && S.createConfetti({ ...g.Mw, position: { type: "static", value: { x: x, y: N } } });
-        }, [S, x, N]),
+            x > 0 && I > 0 && S.createConfetti({ ...g.Mw, position: { type: "static", value: { x: x, y: I } } });
+        }, [S, x, I]),
         (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsx)(a.K_, { ref: R, sprites: b, colors: f, spriteWidth: g.wn, spriteHeight: g.wn }),
@@ -65,7 +65,7 @@ function T(e) {
                         style: { ...O },
                         className: A.qq,
                         children: (0, n.jsx)(s.animated.div, {
-                            style: { ...M, opacity: M.opacity },
+                            style: { ...L, opacity: L.opacity },
                             children: (0, n.jsx)(u.A, {
                                 className: A.Zg,
                                 emojiId: i.id,

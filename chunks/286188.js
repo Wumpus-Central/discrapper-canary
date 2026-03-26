@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var r = n(627968),
     i = n(64700),
-    a = n(522160),
-    s = n(158954),
+    s = n(4208),
+    a = n(158954),
     o = n(311907),
     l = n(397927),
     u = n(736653),
@@ -11,53 +11,53 @@ var r = n(627968),
     d = n(263215),
     _ = n(985018),
     f = n(333354),
-    h = n(159118);
-function p(e) {
+    p = n(994003);
+function h(e) {
     let { powerup: t } = e;
-    return (0, r.jsx)(s.EYj, { tag: "span", variant: "text-md/semibold", className: h.Zt, children: t.title });
+    return (0, r.jsx)(a.EYj, { tag: "span", variant: "text-md/semibold", className: p.Zt, children: t.title });
 }
-function g(e) {
+function m(e) {
     let { guildId: t, onButtonClick: n } = e,
-        g = (0, d.A)(t),
+        m = (0, d.A)(t),
         E = (0, u.Ay)(),
-        A = (0, l.qB1)(E),
-        I = (0, o.bG)([c.A], () => c.A.useReducedMotion),
-        [T, y] = i.useState(I),
-        [S, v] = (0, l.zhh)(() => ({ scale: I ? 1 : 0.8, config: { tension: 500, friction: 10 } }));
+        g = (0, l.qB1)(E),
+        A = (0, o.bG)([c.A], () => c.A.useReducedMotion),
+        [I, T] = i.useState(A),
+        [S, y] = (0, l.zhh)(() => ({ scale: A ? 1 : 0.8, config: { tension: 500, friction: 10 } }));
     i.useEffect(() => {
-        if (I) return;
+        if (A) return;
         let e = setTimeout(() => {
-            v({ scale: 1 }), y(!0);
+            y({ scale: 1 }), T(!0);
         }, 300);
         return () => clearTimeout(e);
-    }, [v, I]);
-    let C = i.useMemo(() => {
+    }, [y, A]);
+    let v = i.useMemo(() => {
         let e;
-        if (null == g || 0 === g.length) return "";
-        if (1 === g.length) e = (0, r.jsx)(p, { powerup: g[0] });
-        else if (2 === g.length)
+        if (null == m || 0 === m.length) return "";
+        if (1 === m.length) e = (0, r.jsx)(h, { powerup: m[0] });
+        else if (2 === m.length)
             e = _.intl.format(f.default.MNO3sG, {
-                perk1: (0, r.jsx)(p, { powerup: g[0] }),
-                perk2: (0, r.jsx)(p, { powerup: g[1] }),
+                perk1: (0, r.jsx)(h, { powerup: m[0] }),
+                perk2: (0, r.jsx)(h, { powerup: m[1] }),
             });
         else {
-            let t = Array.from(g).reverse();
+            let t = Array.from(m).reverse();
             e = _.intl.format(f.default.GmN3Vf, {
-                perk1: (0, r.jsx)(p, { powerup: t[0] }),
-                perk2: (0, r.jsx)(p, { powerup: t[1] }),
+                perk1: (0, r.jsx)(h, { powerup: t[0] }),
+                perk2: (0, r.jsx)(h, { powerup: t[1] }),
             });
         }
         return _.intl.format(f.default["/6GgQq"], { perks: e });
-    }, [g]);
-    return null == g || 0 === g.length
+    }, [m]);
+    return null == m || 0 === m.length
         ? null
-        : (0, r.jsxs)(a.animated.div, {
-              className: h.kL,
-              style: { ...S, opacity: +!!T },
+        : (0, r.jsxs)(s.animated.div, {
+              className: p.kL,
+              style: { ...S, opacity: +!!I },
               children: [
-                  (0, r.jsx)(s.EYj, { tag: "span", variant: "text-md/semibold", className: h.h_, children: C }),
-                  (0, r.jsx)(s.$nd, {
-                      variant: A ? "primary" : "overlay-primary",
+                  (0, r.jsx)(a.EYj, { tag: "span", variant: "text-md/semibold", className: p.h_, children: v }),
+                  (0, r.jsx)(a.$nd, {
+                      variant: g ? "primary" : "overlay-primary",
                       size: "sm",
                       text: _.intl.string(f.default.E5V5KK),
                       onClick: n,

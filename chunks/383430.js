@@ -6,14 +6,14 @@ var i = n(627968),
     r = n(486020),
     o = n(403362),
     d = n(985018),
-    c = n(416e3);
+    c = n(688369);
 function u(e) {
     let {
             title: t,
             variant: n = "secondary",
             handleOpenCollectiblesShop: u,
-            handleOpenGameShop: m,
-            handleAddNitroToWishlist: g,
+            handleOpenGameShop: g,
+            handleAddNitroToWishlist: m,
             socialLayerStorefrontApplicationIds: x,
         } = e,
         p = l.useRef(null),
@@ -34,7 +34,7 @@ function u(e) {
                     }),
                 [t, n],
             );
-        })({ applications: (0, s.A)(x), handleOpenGameShop: m }),
+        })({ applications: (0, s.A)(x), handleOpenGameShop: g }),
         A = l.useMemo(
             () =>
                 (0, i.jsxs)(a.rXV, {
@@ -47,7 +47,7 @@ function u(e) {
                                 leadingAccessory: { type: "icon", icon: a.U1X },
                                 action: u,
                             }),
-                        null != m &&
+                        null != g &&
                             _.map((e) => {
                                 let { id: t, label: n, iconLeft: l, leadingAccessory: s, action: r } = e;
                                 return (0, i.jsx)(
@@ -56,17 +56,17 @@ function u(e) {
                                     t,
                                 );
                             }),
-                        null != g &&
+                        null != m &&
                             (0, i.jsx)(a.Drp, {
                                 id: "add-nitro-to-wishlist",
                                 label: d.intl.string(d.t.lG6a5x),
                                 iconLeft: a.tvc,
                                 leadingAccessory: { type: "icon", icon: a.tvc },
-                                action: g,
+                                action: m,
                             }),
                     ],
                 }),
-            [u, m, g, _],
+            [u, g, m, _],
         );
     return (0, i.jsx)(a.YNO, {
         targetElementRef: p,

@@ -20,12 +20,12 @@ var i = s(627968),
     L = s(509870),
     y = s(211145),
     v = s(985018),
-    A = s(558837),
+    A = s(70802),
     S = s(131265),
     w = s(556011),
     N = s(469961),
-    F = s(172944);
-function U(e) {
+    b = s(172944);
+function F(e) {
     let { numOfSelectedUsers: t, anySelected: s } = e,
         a = (0, L.A)({ numNewSelected: t, anySelected: s });
     return (0, i.jsxs)(i.Fragment, {
@@ -41,7 +41,7 @@ function U(e) {
         ],
     });
 }
-function b() {
+function U() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", {
@@ -183,7 +183,7 @@ function R(e) {
     let { className: t } = e;
     return "light" === (0, c.bG)([f.A], () => f.A.theme)
         ? (0, i.jsx)(x._V3, { className: t, src: S, width: 55, height: 38 })
-        : (0, i.jsx)(x._V3, { className: t, src: F, width: 55, height: 38 });
+        : (0, i.jsx)(x._V3, { className: t, src: b, width: 55, height: 38 });
 }
 let B = function (e) {
     let { onClose: t, onShare: s } = e,
@@ -195,7 +195,7 @@ let B = function (e) {
         {
             eligibleUsers: w,
             fetchUsers: N,
-            hasError: F,
+            hasError: b,
             isFetching: R,
             resendUsers: B,
         } = (0, g.i)({ searchQuery: f, selectedUsers: _ }),
@@ -204,7 +204,7 @@ let B = function (e) {
     let G = (0, d.K)((e) => {
         e && !R && N();
     });
-    if (F) return (0, i.jsx)(M, { onClose: t });
+    if (b) return (0, i.jsx)(M, { onClose: t });
     if (0 === r) return (0, i.jsx)(k, { onShare: s });
     let D = f.length > 0 && 0 === w.length;
     return (0, i.jsxs)("div", {
@@ -212,7 +212,7 @@ let B = function (e) {
             (0, i.jsxs)("div", {
                 className: l()(A.wx, A.HE),
                 children: [
-                    D ? (0, i.jsx)(b, {}) : (0, i.jsx)(U, { numOfSelectedUsers: O.length, anySelected: _.size > 0 }),
+                    D ? (0, i.jsx)(U, {}) : (0, i.jsx)(F, { numOfSelectedUsers: O.length, anySelected: _.size > 0 }),
                     (0, i.jsx)(x.iS7, {
                         selectionMode: "multiple",
                         value: Array.from(_.values()),

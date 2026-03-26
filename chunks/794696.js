@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { A: () => c });
+n.d(t, { A: () => d });
 var i = n(627968),
     s = n(64700),
     r = n(218681),
-    l = n(522160),
+    l = n(4208),
     a = n(397927);
 let o = window.ResizeObserver ?? r.t;
-function c(e) {
-    let { show: t, children: n, top: r = 0, bottom: c = 0 } = e,
-        { ref: d, height: u } = (() => {
+function d(e) {
+    let { show: t, children: n, top: r = 0, bottom: d = 0 } = e,
+        { ref: c, height: u } = (() => {
             let e = s.useRef(null),
                 [t, n] = s.useState(0),
                 i = s.useMemo(
@@ -26,7 +26,7 @@ function c(e) {
         })(),
         h = (0, a.zhh)({
             from: { height: 0, paddingBottom: "0px", marginTop: "0px" },
-            to: { height: t ? u : 0, paddingBottom: t ? `${c}px` : "0px", marginTop: t ? `${r}px` : "0px" },
+            to: { height: t ? u : 0, paddingBottom: t ? `${d}px` : "0px", marginTop: t ? `${r}px` : "0px" },
             config: { tension: 170, friction: 26 },
         }),
         _ = (0, a.zhh)({
@@ -36,6 +36,6 @@ function c(e) {
         });
     return (0, i.jsx)(l.animated.div, {
         style: { overflow: "hidden", height: h.height, paddingBottom: h.paddingBottom, marginTop: h.marginTop },
-        children: (0, i.jsx)(l.animated.div, { style: { opacity: _.opacity }, ref: d, children: n }),
+        children: (0, i.jsx)(l.animated.div, { style: { opacity: _.opacity }, ref: c, children: n }),
     });
 }

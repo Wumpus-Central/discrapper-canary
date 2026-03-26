@@ -1,10 +1,10 @@
 n.d(t, { j: () => y }), n(801541);
 var i = n(627968),
-    r = n(64700),
-    a = n(503698),
-    l = n.n(a),
+    a = n(64700),
+    r = n(503698),
+    l = n.n(r),
     s = n(126031),
-    o = n(497766),
+    o = n(4208),
     d = n(889137),
     c = n(615300),
     u = n(990078),
@@ -17,28 +17,28 @@ var i = n(627968),
     x = n(306417),
     f = n(290794),
     C = n(985018),
-    E = n(121272);
-function I(e) {
-    let { percentage: t, label: n, canShowVoterDetails: a, answerId: l } = e,
+    I = n(724109);
+function E(e) {
+    let { percentage: t, label: n, canShowVoterDetails: r, answerId: l } = e,
         o = (0, m.GV)(),
         { channelId: d, messageId: c } = (0, f.Tu)(),
-        [A, x] = r.useState(""),
-        [C, I] = r.useState(!1),
+        [A, x] = a.useState(""),
+        [C, E] = a.useState(!1),
         v = "" !== A && C,
-        b = r.useCallback(() => {
+        b = a.useCallback(() => {
             x((0, g.$m)(c, d, l));
         }, [c, d, l]),
-        T = r.useCallback(() => {
-            b(), I(!0);
+        T = a.useCallback(() => {
+            b(), E(!0);
         }, [b]),
-        y = r.useCallback(() => {
-            I(!1);
+        y = a.useCallback(() => {
+            E(!1);
         }, []),
-        S = r.useCallback(() => {
+        S = a.useCallback(() => {
             (0, p.e)({ channelId: d, messageId: c, answerId: l });
         }, [d, c, l]);
     return (
-        r.useEffect(() => {
+        a.useEffect(() => {
             if (C)
                 return (
                     h.A.addReactChangeListener(b),
@@ -48,9 +48,9 @@ function I(e) {
                 );
         }, [C, b]),
         (0, i.jsxs)("div", {
-            className: E.AA,
+            className: I.AA,
             children: [
-                a
+                r
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
                               "" !== A
@@ -106,7 +106,7 @@ function I(e) {
 }
 function v(e) {
     let { percentage: t, shouldAnimate: n } = e,
-        r = (0, _.zhh)(
+        a = (0, _.zhh)(
             {
                 from: { width: n ? "0%" : `${t}%` },
                 to: { width: `${t}%` },
@@ -114,11 +114,11 @@ function v(e) {
             },
             "animate-always",
         );
-    return (0, i.jsx)(o.animated.span, { className: E.an, style: r, "aria-hidden": !0 });
+    return (0, i.jsx)(o.animated.span, { className: I.an, style: a, "aria-hidden": !0 });
 }
 function b(e) {
-    let { answersInteraction: t, isSelected: n, didSelfVote: r, isVictor: a, isExpired: l, className: s } = e;
-    return (0, d.YW)({ answersInteraction: t, didSelfVote: r })
+    let { answersInteraction: t, isSelected: n, didSelfVote: a, isVictor: r, isExpired: l, className: s } = e;
+    return (0, d.YW)({ answersInteraction: t, didSelfVote: a })
         .with({ answersInteraction: A.CQ.RADIO_BUTTONS }, () =>
             (0, i.jsx)(x.k$, { isSelected: n, size: 24, className: s }),
         )
@@ -126,61 +126,61 @@ function b(e) {
             (0, i.jsx)(x.e5, { isSelected: n, size: 20, className: s }),
         )
         .with({ answersInteraction: A.CQ.LIST, didSelfVote: !0 }, () =>
-            (0, i.jsx)(x.Vx, { isVictor: a, isExpired: l, size: 24, className: s }),
+            (0, i.jsx)(x.Vx, { isVictor: r, isExpired: l, size: 24, className: s }),
         )
         .otherwise(() => null);
 }
 function T(e) {
-    let { answer: t, isExpired: n, answersInteraction: r, canShowVoteCounts: a, canShowVoterDetails: o } = e,
+    let { answer: t, isExpired: n, answersInteraction: a, canShowVoteCounts: r, canShowVoterDetails: o } = e,
         d = !0 === t.isSelected,
         c = !0 === t.didSelfVote,
         u = !0 === t.isVictor,
         m = t.shouldAnimateTransition;
     return (0, i.jsxs)("div", {
-        className: l()(E.Fk, { [E.EK]: r !== A.CQ.LIST, [E.wH]: d }),
+        className: l()(I.Fk, { [I.EK]: a !== A.CQ.LIST, [I.wH]: d }),
         children: [
-            a ? (0, i.jsx)(v, { percentage: t.votesPercentage, shouldAnimate: m }) : null,
-            null != t.pollMedia.emoji && (0, i.jsx)(x.Fb, { className: E.Zg, emoji: t.pollMedia.emoji }),
+            r ? (0, i.jsx)(v, { percentage: t.votesPercentage, shouldAnimate: m }) : null,
+            null != t.pollMedia.emoji && (0, i.jsx)(x.Fb, { className: I.Zg, emoji: t.pollMedia.emoji }),
             (0, i.jsx)(_.Text, {
-                className: E.Pf,
+                className: I.Pf,
                 variant: "text-sm/semibold",
                 color: "none",
                 scaleFontToUserSetting: !0,
                 children: t.pollMedia.text,
             }),
             t.didSelfVote && (0, i.jsx)(s.s, { children: C.intl.string(C.t["8DAM+5"]) }),
-            a &&
-                (0, i.jsx)(I, {
+            r &&
+                (0, i.jsx)(E, {
                     percentage: t.votesPercentage,
                     label: t.votes,
                     canShowVoterDetails: o,
                     answerId: t.answerId,
                 }),
             (0, i.jsx)(b, {
-                answersInteraction: r,
+                answersInteraction: a,
                 isSelected: d,
                 didSelfVote: c,
                 isVictor: u,
                 isExpired: n,
-                className: E.ck,
+                className: I.ck,
             }),
         ],
     });
 }
 function y(e) {
-    let { isExpired: t, answersInteraction: n, canShowVoteCounts: r, canTapAnswers: a, ...l } = e;
+    let { isExpired: t, answersInteraction: n, canShowVoteCounts: a, canTapAnswers: r, ...l } = e;
     return (0, i.jsx)(x.Fh, {
-        className: E.ry,
-        answerClassName: E.ZF,
+        className: I.ry,
+        answerClassName: I.ZF,
         answersInteraction: n,
-        canTapAnswers: a,
+        canTapAnswers: r,
         renderAnswerContent: (e) =>
             (0, i.jsx)(T, {
                 answer: e,
                 isExpired: t,
                 answersInteraction: n,
-                canShowVoteCounts: r,
-                canShowVoterDetails: a,
+                canShowVoteCounts: a,
+                canShowVoterDetails: r,
             }),
         ...l,
     });

@@ -6,14 +6,14 @@ var i = n(627968),
     s = n(732955),
     o = n(397927),
     c = n(274372),
-    d = n(239450),
+    d = n(17069),
     u = n(794905),
     _ = n(320501),
     m = n(998218),
     A = n(888675),
     E = n(652215),
     I = n(985018),
-    T = n(633232);
+    T = n(419397);
 function f(e) {
     let { message: t, compact: n } = e,
         f = t.channel_id,
@@ -25,7 +25,7 @@ function f(e) {
                     : null,
             [t.messageReference],
         ),
-        { clipId: C, remoteTriggerClipId: g } = a.useMemo(
+        { clipId: g, remoteTriggerClipId: C } = a.useMemo(
             () =>
                 null != N
                     ? (function (e) {
@@ -44,16 +44,16 @@ function f(e) {
                     : {},
             [N],
         ),
-        h = (0, r.bG)([c.A], () => c.A.getMatchingGroupClip(C, g)),
+        h = (0, r.bG)([c.A], () => c.A.getMatchingGroupClip(g, C)),
         p = (0, r.bG)([c.A], () => null != h && null != f && c.A.wasClipSharedInChannel(h.id, f)),
-        { onShareClick: R } = (0, u.A)(f),
-        x = a.useCallback(() => {
+        { onShareClick: x } = (0, u.A)(f),
+        R = a.useCallback(() => {
             null != h &&
                 null != f &&
                 t.messageReference?.message_id != null &&
-                R({ clips: [h], messageReference: { channel_id: f, message_id: t.messageReference.message_id } });
-        }, [h, f, t.messageReference, R]);
-    if (null == N || (null == C && null == g) || null == h || p) return null;
+                x({ clips: [h], messageReference: { channel_id: f, message_id: t.messageReference.message_id } });
+        }, [h, f, t.messageReference, x]);
+    if (null == N || (null == g && null == C) || null == h || p) return null;
     let S = N.attachments.find((e) => (0, l.Lt)(e.flags ?? 0, E.sbO.IS_CLIP)),
         O = null;
     if (S?.proxy_url != null) {
@@ -69,7 +69,7 @@ function f(e) {
             className: T.i,
             children: [
                 (0, i.jsx)(d.A, { thumbnails: M, variant: "stacked" }),
-                (0, i.jsx)(s.$nd, { size: "sm", onClick: x, text: I.intl.string(I.t["5qb8EX"]), icon: o.W4J }),
+                (0, i.jsx)(s.$nd, { size: "sm", onClick: R, text: I.intl.string(I.t["5qb8EX"]), icon: o.W4J }),
             ],
         }),
         children: I.intl.string(I.t.ThhsNG),

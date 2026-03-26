@@ -1,4 +1,4 @@
-i.d(t, { A: () => m });
+i.d(e, { A: () => m });
 var s = i(627968);
 i(64700);
 var r = i(417597),
@@ -13,13 +13,13 @@ var r = i(417597),
     x = i(634654),
     h = i(652215),
     _ = i(985018),
-    p = i(721746);
+    p = i(76385);
 function j() {
-    let e = o.kt.useSetting(),
-        t = (0, C.j)(),
+    let t = o.kt.useSetting(),
+        e = (0, C.j)(),
         i = (0, r.bG)([l.A], () => l.A.useReducedMotion),
         n =
-            t && e && !i
+            e && t && !i
                 ? (0, d.n)("server_products/storefront/question-mark.gif")
                 : (0, d.n)("server_products/storefront/question-mark.png");
     return (0, s.jsxs)("div", {
@@ -62,14 +62,14 @@ function g() {
         ],
     });
 }
-function m(e) {
-    let { guildId: t } = e;
+function m(t) {
+    let { guildId: e } = t;
     return (0, s.jsxs)("div", {
         className: p.Bh,
         children: [
             (0, s.jsxs)("div", {
                 className: p.gp,
-                children: [(0, s.jsx)(j, {}), (0, s.jsx)(u.A, { guildId: t, showCTA: !0 })],
+                children: [(0, s.jsx)(j, {}), (0, s.jsx)(u.A, { guildId: e, showCTA: !0 })],
             }),
             (0, s.jsx)(g, {}),
         ],

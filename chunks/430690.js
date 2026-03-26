@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(442215),
+    o = n(4208),
     l = n(110259),
     u = n(66455),
     c = n(607399),
@@ -14,7 +14,7 @@ var r = n(627968),
     p = n(919796),
     h = n(989395),
     m = n(688810),
-    E = n(234266);
+    E = n(714013);
 let g = { mass: 1, tension: 300, friction: 28, clamp: !0 };
 function A(e, t) {
     return null == e ? null : e.index > t.index ? "backwards" : e.index < t.index ? "forwards" : null;
@@ -52,15 +52,15 @@ function S(e) {
     let v = T.activeSlide,
         N = (0, p.A)(T.activeSlide),
         C = T.directionOverride ?? A(null != N ? S[N] : null, S[v]),
-        { reducedMotion: b } = i.useContext(d.CZY),
-        R = i.useContext(h.A),
-        O = S[v].impressionName,
+        { reducedMotion: R } = i.useContext(d.CZY),
+        O = i.useContext(h.A),
+        b = S[v].impressionName,
         D = { ...S[v].impressionProperties, location_stack: y };
-    R({ type: l.ImpressionTypes.MODAL, name: O, properties: D, _stackContext: { isSlide: !0 } });
-    let { ref: L, width: w = 0, height: x = 0 } = (0, f.Ay)(v),
-        M = { ...g, ...T.springConfig, ...(b.enabled ? { clamp: !0 } : null) },
+    O({ type: l.ImpressionTypes.MODAL, name: b, properties: D, _stackContext: { isSlide: !0 } });
+    let { ref: L, width: w = 0, height: M = 0 } = (0, f.Ay)(v),
+        x = { ...g, ...T.springConfig, ...(R.enabled ? { clamp: !0 } : null) },
         P = (0, _.zhh)(
-            { width: T.width ?? w, height: x, config: M },
+            { width: T.width ?? w, height: M, config: x },
             null == N ? "animate-never" : "respect-motion-settings",
         ),
         k = (0, _.pnh)(
@@ -70,7 +70,7 @@ function S(e) {
                 from: { value: 1 },
                 enter: { value: 0 },
                 leave: { value: -1 },
-                config: M,
+                config: x,
                 onRest: (e, t) => {
                     let { item: n } = t;
                     n === v && null != T.onSlideReady && T.onSlideReady(n);
@@ -115,7 +115,7 @@ function S(e) {
                         backfaceVisibility: "hidden",
                         ...Y,
                         ...H,
-                        ...(b.enabled
+                        ...(R.enabled
                             ? u
                             : { left: e.value.to(I("left", U)), right: e.value.to(I("right", U)), ...(n && u) }),
                     },

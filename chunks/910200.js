@@ -1,2 +1,7 @@
-"use strict";
-e.exports = { oR: "toast__3fde7", Qs: "content__3fde7", Kk: "icon__3fde7", gS: "clipIcon__3fde7 icon__3fde7" };
+e.exports = {
+    rf: "body__968a4",
+    S: "invoiceTable__968a4",
+    OC: "cancelImage__968a4",
+    Au: "invoiceCancelRow__968a4",
+    z3: "error__968a4",
+};

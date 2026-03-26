@@ -1,22 +1,22 @@
 n.d(t, { A: () => c });
 var a = n(627968),
-    s = n(64700),
-    i = n(311907),
+    i = n(64700),
+    s = n(311907),
     l = n(397927),
     r = n(53705),
     o = n(154323),
-    d = n(607335);
+    d = n(37760);
 function c() {
-    let e = (0, i.bG)([o.A], () => o.A.allWithDescriptions(), [], i.My),
-        t = s.useMemo(
+    let e = (0, s.bG)([o.A], () => o.A.allWithDescriptions(), [], s.My),
+        t = i.useMemo(
             () =>
                 e.map((e) => {
-                    let [t, n, s] = e;
+                    let [t, n, i] = e;
                     return (0, a.jsxs)(a.Fragment, {
                         children: [
                             (0, a.jsx)(
                                 l.dOG,
-                                { label: s, description: t, checked: n, onChange: (e) => (0, r.L)(t, e) },
+                                { label: i, description: t, checked: n, onChange: (e) => (0, r.L)(t, e) },
                                 t,
                             ),
                             (0, a.jsx)(l.cGx, { gap: 16 }),

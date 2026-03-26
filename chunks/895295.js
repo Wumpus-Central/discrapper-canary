@@ -5,7 +5,7 @@ var r = n(627968),
     s = n(503698),
     a = n.n(s),
     o = n(397927),
-    l = n(510875);
+    l = n(83634);
 let u = (e) => {
     let { text: t } = e;
     return (0, r.jsx)(o.Text, { tag: "span", variant: "eyebrow", color: "always-white", className: l.Fi, children: t });

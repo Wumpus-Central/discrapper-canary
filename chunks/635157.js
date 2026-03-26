@@ -17,16 +17,16 @@ var i = n(627968),
     _ = n(854627),
     E = n(314307),
     x = n(985018),
-    C = n(82842);
+    C = n(563003);
 function S(e) {
     let t,
         { channel: n, children: S, user: I } = e,
         T = (0, s.bG)([o.A], () => o.A.useReducedMotion),
         N = (0, u.Ay)(n) ?? "",
         {
-            avatarDecorationSrc: y,
+            avatarDecorationSrc: v,
             eventHandlers: b,
-            isAnimating: v,
+            isAnimating: y,
         } = (0, _.A)({ userId: I?.id, size: r._3J.SIZE_80, animateOnHover: !0 }),
         [j, R] = l.useState(!1),
         M = l.useCallback(() => {
@@ -41,7 +41,7 @@ function S(e) {
         onMouseEnter: M,
         onMouseLeave: D,
         children: [
-            ((t = !T && v),
+            ((t = !T && y),
             n.isMultiUserDM()
                 ? (0, i.jsx)(g.Q, {
                       channel: n,
@@ -53,7 +53,7 @@ function S(e) {
                       "aria-label": N,
                       size: r._3J.SIZE_80,
                       src: (0, d.Y)(n, 80, t),
-                      avatarDecoration: y,
+                      avatarDecoration: v,
                   })),
             (0, i.jsx)(E.cr, {
                 children: O

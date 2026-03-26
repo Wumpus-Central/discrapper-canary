@@ -6,7 +6,7 @@ var r = n(627968),
     a = n(224016),
     o = n(149757),
     l = n(985018),
-    u = n(916e3);
+    u = n(562571);
 let c = (e) => {
     let { profileBadge: t, tenureBadge: n } = e,
         c = (0, o.I)(n.id).standard;

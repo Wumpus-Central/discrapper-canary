@@ -2,25 +2,25 @@
 n.d(t, { A: () => d });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(397927),
     l = n(297413),
     u = n(342296),
-    c = n(89839);
+    c = n(960074);
 function d(e) {
     let {
             user: t,
             guildId: n,
-            channelId: a,
+            channelId: s,
             nick: d,
             className: _,
             textClassName: f,
             disablePopout: p,
             ignoreModalClicks: h,
             onClick: m,
-            onContextMenu: g,
-            onPopoutRequestOpen: E,
+            onContextMenu: E,
+            onPopoutRequestOpen: g,
             onPopoutRequestClose: A,
         } = e,
         I = i.useRef(null);
@@ -28,19 +28,19 @@ function d(e) {
         targetElementRef: I,
         user: t,
         guildId: n,
-        channelId: a,
+        channelId: s,
         position: "left",
         shouldShow: !p && void 0,
-        onRequestOpen: E,
+        onRequestOpen: g,
         onRequestClose: A,
         ignoreModalClicks: h,
         children: (e) => {
-            let { onClick: i, ...a } = e;
+            let { onClick: i, ...s } = e;
             return (0, r.jsxs)(o.DUT, {
-                ...a,
+                ...s,
                 innerRef: I,
-                className: s()(c.DV, _, { [c.YR]: p }),
-                onContextMenu: g,
+                className: a()(c.DV, _, { [c.YR]: p }),
+                onContextMenu: E,
                 onClick: (e) => {
                     i(e), m?.(e);
                 },
@@ -52,7 +52,7 @@ function d(e) {
                         size: o._3J.SIZE_24,
                     }),
                     (0, r.jsx)(o.Text, {
-                        className: s()(c.Ft, f),
+                        className: a()(c.Ft, f),
                         variant: "text-sm/normal",
                         children: (0, r.jsx)(l.A, { user: t, nick: d, usernameClass: c.Xh, hideDiscriminator: !0 }),
                     }),

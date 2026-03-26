@@ -1,7 +1,7 @@
 n.d(t, { A: () => em }), n(321073);
 var i = n(627968),
     a = n(64700),
-    l = n(497766),
+    l = n(4208),
     r = n(942381),
     s = n(311907),
     o = n(554146),
@@ -23,8 +23,8 @@ var i = n(627968),
     S = n(72152),
     x = n(502103),
     v = n(929163),
-    y = n(423183),
-    b = n(568185),
+    b = n(423183),
+    y = n(568185),
     O = n(225437),
     L = n(221094),
     R = n(781862),
@@ -61,7 +61,7 @@ var i = n(627968),
     eo = n(946960),
     ed = n(49999),
     ec = n(985018),
-    eu = n(484241);
+    eu = n(600001);
 let eA = "server-settings",
     eh = { origin: { x: -8, y: -48 }, targetWidth: 40, targetHeight: 40, offset: { x: 0, y: 0 } };
 class e_ extends a.PureComponent {
@@ -136,12 +136,12 @@ class e_ extends a.PureComponent {
                     n.e("16301"),
                     n.e("22191"),
                     n.e("25961"),
-                    n.e("21968"),
+                    n.e("91872"),
                     n.e("35894"),
                     n.e("50796"),
                     n.e("8458"),
                     n.e("11810"),
-                    n.e("39048"),
+                    n.e("34656"),
                     n.e("54469"),
                     n.e("52191"),
                 ]).then(n.bind(n, 544676));
@@ -165,7 +165,7 @@ class e_ extends a.PureComponent {
     };
     handleCloseTemplateDirtyTooltip = () => {
         let { guild: e, showGuildTemplateDirtyTooltip: t } = this.props;
-        null != e && t && b.A.hideGuildTemplateDirtyTooltip(e.id);
+        null != e && t && y.A.hideGuildTemplateDirtyTooltip(e.id);
     };
     renderMenuPopout = async () => {
         let { default: e } = await n.e("19418").then(n.bind(n, 222785));
@@ -369,7 +369,7 @@ function em(e) {
         A = (0, T.A)(t),
         h = (0, s.bG)([Y.A], () => Y.A.getGuildDimensions(t).scrollTo),
         C = (0, s.bG)([X.A], () => X.A.getChannelId()),
-        b = (0, s.bG)([$.A], () => $.A.can(es.xBc.MANAGE_GUILD, c)),
+        y = (0, s.bG)([$.A], () => $.A.can(es.xBc.MANAGE_GUILD, c)),
         R = (0, s.bG)([W.A], () => W.A.isUnavailable(t)),
         V = (0, s.bG)([Z.default], () => Z.default.getCurrentUser()),
         { enableStudyGroup: B } = (0, L.y)(c),
@@ -392,12 +392,12 @@ function em(e) {
         eh = (0, s.bG)([z.A], () => z.A.hasLayers()),
         em = (0, P.xr)((e) => e.fullScreenLayers.length > 0),
         eg = (0, s.bG)([H.A], () => H.A.shouldShow(eA)),
-        ep = (0, y.A)(t),
+        ep = (0, b.A)(t),
         eE = c?.features.has(es.GuildFeatures.HUB) === !0,
-        eI = b && c?.features.has(es.GuildFeatures.DISCOVERABLE) === !0,
+        eI = y && c?.features.has(es.GuildFeatures.DISCOVERABLE) === !0,
         ef = (0, s.bG)(
             [O.A, z.A],
-            () => null != c && null != V && b && !z.A.hasLayers() && O.A.shouldShowGuildTemplateDirtyTooltip(t),
+            () => null != c && null != V && y && !z.A.hasLayers() && O.A.shouldShowGuildTemplateDirtyTooltip(t),
         ),
         eC = (0, s.bG)([F.A], () => F.A.getChannel(l)),
         { isPopoutOpen: eT } = (0, S.S)(),
@@ -406,8 +406,8 @@ function em(e) {
         ex = ee && !eS;
     (0, x.A)(c);
     let ev = (0, I.JZ)(o.M.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
-        ey = (0, v.A)(t),
-        eb = (0, s.bG)([X.A], () => X.A.getChannelId()),
+        eb = (0, v.A)(t),
+        ey = (0, s.bG)([X.A], () => X.A.getChannelId()),
         eO = (0, s.bG)([Q.A], () => Q.A.desyncedVoiceStatesCount),
         eL = (0, G.A)(t);
     el.A.useConfig({ guildId: t, location: "guild_sidebar" });
@@ -427,7 +427,7 @@ function em(e) {
         eR && !eP && !1 === eL && ek.push(o.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
         eR && !1 === eL && ek.push(o.M.GAME_SERVER_HOSTING_BATCH_RELEASE_V2_COACHMARK),
         eR && !eP && eD && !1 === eL && ek.push(o.M.GAME_SERVER_PRICING_CHANGE_COACHMARK),
-        ey && ek.push(o.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL);
+        eb && ek.push(o.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL);
     let [eV, eB] = (0, f.kn)(ek, ed.m.GUILD_HEADER_TOOLTIPS),
         eH = null == eV,
         [eF, eY] = (0, f.D8)(
@@ -462,7 +462,7 @@ function em(e) {
         selectedChannel: eC,
         selectedVoiceChannelId: C,
         voiceStates: A,
-        rtcConnectedChannelId: eb,
+        rtcConnectedChannelId: ey,
         rtcDesyncedVoiceStatesCount: eO,
         isUnavailable: R,
         user: V,

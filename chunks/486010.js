@@ -21,7 +21,7 @@ var s = a(627968),
     C = a(128088),
     v = a(652215),
     I = a(985018),
-    E = a(904268);
+    E = a(18737);
 function y(e) {
     let { name: t, imageUrl: a, selected: n, onTap: l } = e;
     return (0, s.jsxs)(m.DUT, {

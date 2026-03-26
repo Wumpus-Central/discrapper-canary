@@ -4,7 +4,7 @@ var i = n(627968),
     s = n(64700),
     l = n(503698),
     r = n.n(l),
-    a = n(497766),
+    a = n(4208),
     o = n(607399),
     c = n(311907),
     d = n(990078),
@@ -23,7 +23,7 @@ var i = n(627968),
     N = n(652215),
     b = n(349828),
     S = n(985018),
-    T = n(668560);
+    T = n(961577);
 function v(e) {
     let { guild: t, controller: n, guildBanner: s, animate: l } = e,
         { value: c } = n.springs;
@@ -100,7 +100,7 @@ function L(e) {
         E = s.useCallback(() => {
             C
                 ? (0, u.mMO)(async () => {
-                      let { default: e } = await Promise.all([n.e("43600"), n.e("52537")]).then(n.bind(n, 234355));
+                      let { default: e } = await Promise.all([n.e("43600"), n.e("67505")]).then(n.bind(n, 234355));
                       return (t) => (0, i.jsx)(e, { ...t, guild: l, source: N.PE1.GUILD_HEADER_INVITE_BUTTON });
                   })
                 : (0, u.mMO)(async () => {
@@ -170,27 +170,27 @@ let M = s.memo(function (e) {
         G = I.features.has(N.GuildFeatures.ANIMATED_BANNER),
         U = (0, m.A)(I),
         P = !U && (0, E.A)(I),
-        w = !U && O,
-        k = (0, C.VI)(b) && G && !p,
+        k = !U && O,
+        w = (0, C.VI)(b) && G && !p,
         [V, B] = s.useState(!1),
         H = s.useRef(!1),
         F = s.useRef(null),
         K = t ?? F,
-        Y = s.useRef(void 0),
-        W = f.kt.getSetting(),
+        W = s.useRef(void 0),
+        Y = f.kt.getSetting(),
         z = (0, c.bG)([_.A], () => _.A.theme);
     s.useEffect(() => {
-        if (k && n && !H.current && W)
+        if (w && n && !H.current && Y)
             return (
                 B(!0),
-                (Y.current = setTimeout(() => {
+                (W.current = setTimeout(() => {
                     B(!1);
                 }, 5e3)),
                 () => {
-                    clearTimeout(Y.current);
+                    clearTimeout(W.current);
                 }
             );
-    }, [k, n, W]),
+    }, [w, n, Y]),
         s.useEffect(() => {
             H.current = n;
         }, [n]);
@@ -207,7 +207,7 @@ let M = s.memo(function (e) {
                         "data-has-banner": q(),
                         "data-banner-visible": n,
                         ref: K,
-                        className: r()(a, { [T.kL]: !0, [T.r9]: q(), [T.Pi]: n, [e]: !1, [T.Iv]: w || (M && P) }),
+                        className: r()(a, { [T.kL]: !0, [T.r9]: q(), [T.Pi]: n, [e]: !1, [T.Iv]: k || (M && P) }),
                         onMouseDown: A,
                         onContextMenu: h,
                         children: [
@@ -239,11 +239,11 @@ let M = s.memo(function (e) {
                             (0, i.jsx)(D, { controller: l }),
                         ],
                     }),
-                    k && q()
+                    w && q()
                         ? (0, i.jsx)("div", {
                               className: T.rt,
                               onMouseEnter: () => {
-                                  B(!0), clearTimeout(Y.current);
+                                  B(!0), clearTimeout(W.current);
                               },
                               onMouseLeave: () => B(!1),
                               style: { height: S },

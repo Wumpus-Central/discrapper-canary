@@ -6,22 +6,22 @@ var i = n(627968),
     r = n.n(l),
     a = n(397927),
     o = n(183555),
-    c = n(752458);
+    c = n(75415);
 function d(e) {
     let { section: t, header: n, items: l, listClassName: d, onExpand: u } = e,
         { trackUserProfileAction: h } = (0, o.NJ)(),
         A = s.useId(),
-        [p, g] = s.useState(!1),
-        m = p ? a.abt : a._BQ;
+        [m, p] = s.useState(!1),
+        g = m ? a.abt : a._BQ;
     return (0, i.jsxs)("section", {
         className: c.uW,
         children: [
             (0, i.jsxs)(a.DUT, {
                 className: r()(c.wx, c.vk),
                 "aria-controls": A,
-                "aria-expanded": p,
+                "aria-expanded": m,
                 onClick: () => {
-                    g(!p), p || (h({ action: "PRESS_SECTION", section: t }), u?.());
+                    p(!m), m || (h({ action: "PRESS_SECTION", section: t }), u?.());
                 },
                 children: [
                     (0, i.jsxs)(a.Heading, {
@@ -29,10 +29,10 @@ function d(e) {
                         color: "text-default",
                         children: [n, " — ", l.length],
                     }),
-                    (0, i.jsx)(m, { size: "md" }),
+                    (0, i.jsx)(g, { size: "md" }),
                 ],
             }),
-            l.length > 0 && (0, i.jsx)("ul", { id: A, hidden: !p, className: r()(c.p_, d), children: l }),
+            l.length > 0 && (0, i.jsx)("ul", { id: A, hidden: !m, className: r()(c.p_, d), children: l }),
         ],
     });
 }

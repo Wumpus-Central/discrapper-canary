@@ -1,8 +1,8 @@
 n.d(t, { j: () => j }), n(321073);
 var a = n(627968);
 n(64700);
-var s = n(311907),
-    i = n(827734),
+var i = n(311907),
+    s = n(827734),
     l = n(582754),
     r = n(397927),
     o = n(544028),
@@ -14,19 +14,19 @@ var s = n(311907),
     x = n(429707),
     p = n(274303),
     g = n(994125),
-    _ = n(347853),
-    f = n(652215),
+    f = n(347853),
+    _ = n(652215),
     v = n(985018),
-    b = n(877347);
+    b = n(51292);
 function j(e) {
-    let t = (0, s.bG)([u.default], () => u.default.getCurrentUser()),
-        n = (0, s.bG)([c.A], () => c.A.hidePersonalInformation),
-        j = (0, s.bG)([o.A], () => (0, l.Mw)(o.A.theme)),
+    let t = (0, i.bG)([u.default], () => u.default.getCurrentUser()),
+        n = (0, i.bG)([c.A], () => c.A.hidePersonalInformation),
+        j = (0, i.bG)([o.A], () => (0, l.Mw)(o.A.theme)),
         { multiAccountUsers: A } = (0, g.K)(),
-        C = A.map((s) => {
-            let l = new d.A(s),
+        C = A.map((i) => {
+            let l = new d.A(i),
                 o = l.id === t?.id,
-                c = s.tokenStatus === p.U.INVALID,
+                c = i.tokenStatus === p.U.INVALID,
                 u = n ? null : `#${l.discriminator}`;
             return (0, a.jsx)(
                 r.Drp,
@@ -41,7 +41,7 @@ function j(e) {
                                 (0, a.jsx)(r.euF, {
                                     src: l.getAvatarURL(void 0, 40),
                                     size: r._3J.SIZE_24,
-                                    "aria-label": s.username,
+                                    "aria-label": i.username,
                                 }),
                                 (0, a.jsxs)("div", {
                                     className: b.DD,
@@ -65,20 +65,20 @@ function j(e) {
                                 o &&
                                     (0, a.jsx)(r.yr3, {
                                         size: "sm",
-                                        color: t ? i.A.unsafe_rawColors.WHITE.css : i.A.unsafe_rawColors.BRAND_500.css,
+                                        color: t ? s.A.unsafe_rawColors.WHITE.css : s.A.unsafe_rawColors.BRAND_500.css,
                                         secondaryColor:
                                             (t && j) || (t && !j)
-                                                ? i.A.unsafe_rawColors.BRAND_500.css
-                                                : i.A.unsafe_rawColors.WHITE.css,
+                                                ? s.A.unsafe_rawColors.BRAND_500.css
+                                                : s.A.unsafe_rawColors.WHITE.css,
                                         className: b.s0,
                                     }),
                                 c &&
                                     (0, a.jsx)(r.EpV, {
-                                        color: i.A.unsafe_rawColors.RED_400.css,
+                                        color: s.A.unsafe_rawColors.RED_400.css,
                                         secondaryColor:
                                             (t && j) || (t && !j)
-                                                ? i.A.unsafe_rawColors.BRAND_500.css
-                                                : i.A.unsafe_rawColors.WHITE.css,
+                                                ? s.A.unsafe_rawColors.BRAND_500.css
+                                                : s.A.unsafe_rawColors.WHITE.css,
                                         size: "xs",
                                         className: b.s0,
                                     }),
@@ -86,12 +86,12 @@ function j(e) {
                         });
                     },
                     action: () => {
-                        if ((e?.(), c)) (0, _.A)();
+                        if ((e?.(), c)) (0, f.A)();
                         else {
                             var n;
                             (n = l.id) !== t?.id &&
-                                (m.default.track(f.HAw.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
-                                    location: { section: f.JJy.USER_PROFILE },
+                                (m.default.track(_.HAw.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
+                                    location: { section: _.JJy.USER_PROFILE },
                                 }),
                                 x.Mx(n));
                         }
@@ -109,7 +109,7 @@ function j(e) {
                         id: "manage-accounts",
                         label: v.intl.string(v.t.WbFpq4),
                         action: () => {
-                            e?.(), (0, _.A)();
+                            e?.(), (0, f.A)();
                         },
                     }),
                 ],

@@ -23,7 +23,7 @@ var a = s(503698),
 s(232198);
 var v = s(652215),
     A = s(985018),
-    S = s(535828);
+    S = s(50985);
 let w = (e) => {
         let { user: t, trialCreationResult: s, onClose: a } = e,
             { avatarSrc: l, eventHandlers: n } = (0, f.A)({ userId: t?.id, size: c._3J.SIZE_56 }),

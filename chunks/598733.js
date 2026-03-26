@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => h });
 var i = n(627968),
     l = n(64700),
     r = n(503698),
@@ -10,20 +10,20 @@ var i = n(627968),
     d = n(976860),
     _ = n(71393),
     E = n(967198),
-    T = n(449054),
-    A = n(652215),
+    A = n(449054),
+    T = n(652215),
     I = n(985018),
-    N = n(163677),
-    p = n(1624);
-let m = () => {
+    N = n(236458),
+    p = n(215433);
+let h = () => {
     let e = (0, a.bG)([E.A], () => E.A.getGuildId(), []),
         t = (0, a.bG)([_.A], () => _.A.getGuild(e), [e]),
         [n, r] = l.useState(!1);
     if (null == t) return null;
-    let m = async () => {
+    let h = async () => {
         r(!0);
         try {
-            T.cf(t.id), await u.A.joinGuild(t.id, { source: A.Q4z.NOTICE_BAR });
+            A.cf(t.id), await u.A.joinGuild(t.id, { source: T.Q4z.NOTICE_BAR });
         } catch {
             r(!1);
         }
@@ -52,7 +52,7 @@ let m = () => {
                 color: o.$n.Colors.WHITE,
                 size: o.$n.Sizes.NONE,
                 submitting: n,
-                onClick: m,
+                onClick: h,
                 children: I.intl.format(I.t.uHN7ny, { guild: t.name }),
             }),
         ],

@@ -24,8 +24,8 @@ var a = n(835245),
     S = n(849823),
     x = n(840065),
     v = n(962173),
-    y = n(287809),
-    b = n(954571),
+    b = n(287809),
+    y = n(954571),
     O = n(203982),
     L = n(998218),
     R = n(837921),
@@ -37,7 +37,7 @@ var a = n(835245),
 function U(e, t) {
     let { fingerprint: n, installationId: i } = e;
     (null != n || null != i) &&
-        b.default.track(j.HAw.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
+        y.default.track(j.HAw.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
             invite_code: null,
             has_auth_token: null,
             is_backgrounded: null,
@@ -62,14 +62,14 @@ let G = {
             let {
                 args: { code: t },
             } = e;
-            if (null == y.default.getCurrentUser()) return;
+            if (null == b.default.getCurrentUser()) return;
             let { guildTemplate: a } = await E.A.resolveGuildTemplate(t);
             if (null == a)
                 throw new P.A({ errorCode: j.Lw6.INVALID_GUILD_TEMPLATE }, `Invalid guild template id: ${t}`);
             return (
                 R.Ay.focus(),
                 (0, r.mMO)(async () => {
-                    let { default: e } = await Promise.all([n.e("7726"), n.e("4042")]).then(n.bind(n, 72715));
+                    let { default: e } = await Promise.all([n.e("7726"), n.e("49040")]).then(n.bind(n, 72715));
                     return (t) => (0, i.jsx)(e, { ...t, guildTemplate: a });
                 }),
                 { guildTemplate: a, code: t }
@@ -88,7 +88,7 @@ let G = {
                         .then((a) => {
                             let { giftCode: l } = a;
                             R.Ay.focus(),
-                                b.default.track(j.HAw.OPEN_MODAL, { type: "gift_accept", location: j.$OG }),
+                                y.default.track(j.HAw.OPEN_MODAL, { type: "gift_accept", location: j.$OG }),
                                 (0, r.mMO)(async () => {
                                     let { default: e } = await n.e("14439").then(n.bind(n, 67327));
                                     return (n) => (0, i.jsx)(e, { code: t, ...n });
@@ -191,7 +191,7 @@ let G = {
                                 try {
                                     let i = h.Ay.getCurrentEmbeddedActivity();
                                     if (i?.applicationId === e)
-                                        return void b.default.track(j.HAw.ACTIVITY_DEEP_LINK_RECEIVED, {
+                                        return void y.default.track(j.HAw.ACTIVITY_DEEP_LINK_RECEIVED, {
                                             application_id: e,
                                             success: !1,
                                             failure_reason: "activity_already_running",
@@ -200,7 +200,7 @@ let G = {
                                     let a = await p.Ay.fetchApplication(e),
                                         l = a?.bot?.id;
                                     if (null == l)
-                                        return void b.default.track(j.HAw.ACTIVITY_DEEP_LINK_RECEIVED, {
+                                        return void y.default.track(j.HAw.ACTIVITY_DEEP_LINK_RECEIVED, {
                                             application_id: e,
                                             success: !1,
                                             failure_reason: "no_bot_user",
@@ -221,14 +221,14 @@ let G = {
                                         customId: d,
                                         referrerId: o,
                                     }),
-                                        b.default.track(j.HAw.ACTIVITY_DEEP_LINK_RECEIVED, {
+                                        y.default.track(j.HAw.ACTIVITY_DEEP_LINK_RECEIVED, {
                                             application_id: e,
                                             success: !0,
                                             failure_reason: null,
                                             attempt_id: n,
                                         });
                                 } catch (t) {
-                                    b.default.track(j.HAw.ACTIVITY_DEEP_LINK_RECEIVED, {
+                                    y.default.track(j.HAw.ACTIVITY_DEEP_LINK_RECEIVED, {
                                         application_id: e,
                                         success: !1,
                                         failure_reason: "launch_failed",

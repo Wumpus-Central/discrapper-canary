@@ -1,8 +1,8 @@
 n.d(t, { A: () => V });
 var i = n(627968),
     l = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     r = n(311907),
     o = n(506774),
     c = n(990078),
@@ -11,22 +11,22 @@ var i = n(627968),
     h = n(56562),
     m = n(765671),
     A = n(304072),
-    p = n(390395),
-    g = n(659195),
+    g = n(390395),
+    p = n(659195),
     f = n(505527),
     _ = n(467073),
     E = n(960538),
-    C = n(898280),
-    x = n(573163),
-    S = n(260821),
-    T = n(226698),
-    I = n(376708),
+    x = n(898280),
+    C = n(573163),
+    S = n(483202),
+    I = n(226698),
+    T = n(376708),
     N = n(715757),
     v = n(390897),
-    y = n(704860),
-    b = n(152007),
-    R = n(867455),
-    j = n(734057),
+    b = n(704860),
+    y = n(152007),
+    j = n(867455),
+    R = n(734057),
     M = n(147036),
     D = n(957565),
     O = n(435470),
@@ -35,25 +35,25 @@ var i = n(627968),
     w = n(652215),
     k = n(985018),
     U = n(641131),
-    G = n(256366),
-    F = n(233080),
-    H = n(165180);
+    G = n(12131),
+    F = n(486025),
+    H = n(303621);
 function B(e) {
     let { channel: t } = e,
-        a = t.isArchivedThread(),
-        s = (0, I.uW)(t),
+        s = t.isArchivedThread(),
+        a = (0, T.uW)(t),
         [r, c] = l.useState(!1),
         u = () => {
             c(!0),
-                T.A.resolveFlag(t.id).then(() => {
+                I.A.resolveFlag(t.id).then(() => {
                     c(!1);
                 });
         };
-    return s
+    return a
         ? (0, i.jsx)(d.Button, {
               size: "sm",
               variant: "secondary",
-              text: a ? k.intl.string(U.default["2Y4vkk"]) : k.intl.string(U.default.YIbR4r),
+              text: s ? k.intl.string(U.default["2Y4vkk"]) : k.intl.string(U.default.YIbR4r),
               onClick: () => {
                   !0 === o.w.get(v.f)
                       ? u()
@@ -67,37 +67,37 @@ function B(e) {
               },
               loading: r,
               icon: d.A9s,
-              disabled: a,
+              disabled: s,
           })
         : null;
 }
 function V(e) {
-    let { postId: t, isFirstMessage: n, isLastItem: a = !1, parentChannelId: o } = e,
-        { ref: T, width: I } = (0, m.Ay)(),
+    let { postId: t, isFirstMessage: n, isLastItem: s = !1, parentChannelId: o } = e,
+        { ref: I, width: T } = (0, m.Ay)(),
         [v, U] = l.useState(3),
-        [V, W] = l.useState(!n),
-        [K, z] = (0, A.A)(!1, 2e3),
-        Y = (0, r.bG)([j.A], () => j.A.getChannel(t), [t]),
+        [V, K] = l.useState(!n),
+        [W, z] = (0, A.A)(!1, 2e3),
+        Y = (0, r.bG)([R.A], () => R.A.getChannel(t), [t]),
         { firstMessage: q } = (0, L.OA)(Y),
-        J = (0, r.bG)([b.A], () => b.A.hasJoined(t)),
+        J = (0, r.bG)([y.A], () => y.A.hasJoined(t)),
         { disableReactionUpdates: $, disableReactionCreates: Z, isLurking: X, isPendingMember: Q } = (0, _.A)(Y),
         ee = (0, N.W1)(Y),
-        et = (0, r.bG)([j.A], () => j.A.getChannel(o)),
+        et = (0, r.bG)([R.A], () => R.A.getChannel(o)),
         en = (0, O.Ck)(et),
-        ei = (0, r.bG)([p.A], () => p.A.shouldDisplayPrompt(t) && !0 === n, [t, n]),
+        ei = (0, r.bG)([g.A], () => g.A.shouldDisplayPrompt(t) && !0 === n, [t, n]),
         el = l.useCallback(
             (e) => {
                 let t = e[0];
                 if (null != t && n) {
                     let e = t.intersectionRect,
                         n = t.boundingClientRect;
-                    W((e.bottom - e.top) / (n.bottom - n.top) < 1);
+                    K((e.bottom - e.top) / (n.bottom - n.top) < 1);
                 }
             },
             [n],
         );
     l.useLayoutEffect(() => {
-        let e = T.current;
+        let e = I.current;
         if (null == e || !n) return;
         let t = new IntersectionObserver(el, { threshold: 1 });
         return (
@@ -107,11 +107,11 @@ function V(e) {
             }
         );
     });
-    let [ea, es] = l.useState(!0);
+    let [es, ea] = l.useState(!0);
     if (
         (l.useEffect(() => {
-            null == I || (U(Math.floor((I - 280) / 58)), es(!1));
-        }, [I]),
+            null == T || (U(Math.floor((T - 280) / 58)), ea(!1));
+        }, [T]),
         null == Y || null == q)
     )
         return null;
@@ -124,13 +124,13 @@ function V(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
-                className: s()(G.kL, { [G.wx]: V }),
-                ref: T,
+                className: a()(G.kL, { [G.wx]: V }),
+                ref: I,
                 children: [
                     ee
-                        ? (0, i.jsx)("div", { className: G.kX, children: (0, i.jsx)(y.A, { message: q, channel: Y }) })
+                        ? (0, i.jsx)("div", { className: G.kX, children: (0, i.jsx)(b.A, { message: q, channel: Y }) })
                         : (0, i.jsxs)("div", {
-                              className: s()(G.hY, { [G.Lq]: ea }),
+                              className: a()(G.hY, { [G.Lq]: es }),
                               children: [
                                   !er &&
                                       !Z &&
@@ -153,7 +153,7 @@ function V(e) {
                                               emojiSize: "reaction",
                                           }),
                                       }),
-                                  (0, i.jsx)(x.A, {
+                                  (0, i.jsx)(C.A, {
                                       message: q,
                                       channel: Y,
                                       disableReactionCreates: !0,
@@ -171,7 +171,7 @@ function V(e) {
                                           message: q,
                                           channel: Y,
                                           useChatFontScaling: !1,
-                                          className: s()(H.secondary, G.vU, { [G.w$]: !er }),
+                                          className: a()(H.secondary, G.vU, { [G.w$]: !er }),
                                           isForumToolbar: !0,
                                           children: !er && k.intl.string(k.t.xpOyTO),
                                       }),
@@ -192,14 +192,14 @@ function V(e) {
                                           text: J ? k.intl.string(k.t["7OkUzs"]) : k.intl.string(k.t["3aOv+h"]),
                                           onClick: () => {
                                               J
-                                                  ? R.A.leaveThread(Y, "Forum Toolbar")
-                                                  : R.A.joinThread(Y, "Forum Toolbar");
+                                                  ? j.A.leaveThread(Y, "Forum Toolbar")
+                                                  : j.A.joinThread(Y, "Forum Toolbar");
                                           },
                                       }),
                                   }),
                             (0, i.jsx)(c.m, {
                                 text: k.intl.string(k.t.WqhZss),
-                                children: K
+                                children: W
                                     ? (0, i.jsx)(d.Button, {
                                           icon: d.A9s,
                                           size: "sm",
@@ -237,8 +237,8 @@ function V(e) {
                     }),
                 ],
             }),
-            ei && (0, i.jsx)(g.A, { threadId: t }),
-            (0, i.jsx)(C.A, { channel: Y, isLastItem: a }),
+            ei && (0, i.jsx)(p.A, { threadId: t }),
+            (0, i.jsx)(x.A, { channel: Y, isLastItem: s }),
         ],
     });
 }

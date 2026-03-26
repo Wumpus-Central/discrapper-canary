@@ -4,7 +4,7 @@ var r = n(627968),
     a = n(503698),
     i = n.n(a),
     s = n(771253),
-    o = n(497766),
+    o = n(4208),
     u = n(942381),
     c = n(311907),
     d = n(876230),
@@ -38,7 +38,7 @@ var r = n(627968),
     B = n(654487),
     Q = n(838541),
     V = n(985018),
-    K = n(681636);
+    K = n(655833);
 let F = { tension: 250, friction: 5, clamp: !0 };
 function $(e) {
     let {
@@ -98,9 +98,9 @@ function $(e) {
         eJ = l.useMemo(() => W.config.features.includes(B.Li.FULL_EPISODE_VIDEO_QUEST), [W.config.features]),
         eZ = l.useRef(!1),
         [e0, e1] = l.useState(null),
-        [e6, e7] = l.useState(!1),
-        [e2, e4] = l.useState(!1),
-        [e9, e8] = l.useState(!1),
+        [e6, e2] = l.useState(!1),
+        [e4, e7] = l.useState(!1),
+        [e8, e9] = l.useState(!1),
         [e3, e5] = l.useState(null),
         te = eX ? (ez.current?.duration ?? 0) : Math.max(eF.maxTimestampSec, eh.progressSeconds),
         tt = l.useMemo(() => (0, y.L)({ quest: W, location: B.rE.VIDEO_MODAL }), [W]),
@@ -144,9 +144,9 @@ function $(e) {
     let tC = l.useRef(null),
         ty = l.useCallback(() => {
             clearTimeout(tC.current),
-                e8(!0),
+                e9(!0),
                 (tC.current = setTimeout(() => {
-                    e8(!1);
+                    e9(!1);
                 }, 1e3));
         }, []);
     l.useEffect(
@@ -160,7 +160,7 @@ function $(e) {
             getCurrentVideoTime: tT,
             isPlaying: ec === w.Q6.PLAYING,
             isMetadataLoaded: e6,
-            isInitialSeekComplete: e2,
+            isInitialSeekComplete: e4,
             onAnalytics: tg,
             emitIntervalMs: v.KI,
             minSegmentDurationMs: v._4,
@@ -280,7 +280,7 @@ function $(e) {
                 eB((e / (ez.current.duration ?? 1)) * 100),
                 tN(),
                 eA(!0),
-                e4(!1),
+                e7(!1),
                 (ez.current.currentTime = e),
                 e$(W.id, e, ez.current.duration));
         },
@@ -415,10 +415,10 @@ function $(e) {
         t0 = l.useMemo(() => (0, _.tW)(W, _.fY.VIDEO_PLAYER_THUMBNAIL, void 0, !1), [W]),
         t1 = l.useMemo(() => (0, _.tW)(W, _.fY.VIDEO_PLAYER_CAPTION, void 0, !1), [W]),
         t6 = eX || eF.maxTimestampSec >= (ez.current?.currentTime ?? 0) + 1,
-        t7 = l.useMemo(() => null === (0, _.tW)(W, _.fY.VIDEO_PLAYER_TRANSCRIPT, void 0, !1), [W]),
-        t2 = ee ? 20 : 12,
-        t4 = 20 * !!ee,
-        t9 = eX && ej;
+        t2 = l.useMemo(() => null === (0, _.tW)(W, _.fY.VIDEO_PLAYER_TRANSCRIPT, void 0, !1), [W]),
+        t4 = ee ? 20 : 12,
+        t7 = 20 * !!ee,
+        t8 = eX && ej;
     return (0, r.jsx)(p.DUT, {
         className: K.W6,
         "data-fullscreen": J,
@@ -483,7 +483,7 @@ function $(e) {
                     onLoadedMetadata: (e) => {
                         null != ez.current &&
                             (tt.info(`[QV] | handleLoadedMetadata | videoAssetId: ${ts}`),
-                            e7(!0),
+                            e2(!0),
                             ts !== _.fY.VIDEO_PLAYER_VIDEO_HLS && tQ(tn),
                             eY ? (ez.current.volume = 0) : (ez.current.volume = eG));
                     },
@@ -518,7 +518,7 @@ function $(e) {
                     onCanPlay: tH,
                     onCanPlayThrough: tH,
                     onSeeked: () => {
-                        tt.info("[QV] | handleSeeked"), e4(!0);
+                        tt.info("[QV] | handleSeeked"), e7(!0);
                     },
                     onAbort: () => tY(w.SB.ABORT),
                     onError: () => tY(w.SB.ERROR),
@@ -631,7 +631,7 @@ function $(e) {
                     className: K.Jp,
                     style: { opacity: (0, o.to)([tz.to({ range: [0, 1], output: [0, 1] })], (e) => `${e}`) },
                 }),
-                e9 &&
+                e8 &&
                     (0, r.jsx)(
                         "div",
                         {
@@ -652,7 +652,7 @@ function $(e) {
                         ref: tq,
                         "data-testid": "discord-web-video-player-captions",
                         style: {
-                            translateY: (0, o.to)([tz.to({ range: [0, 1], output: [-t4, -ta[tr]] })], (e) => `${e}px`),
+                            translateY: (0, o.to)([tz.to({ range: [0, 1], output: [-t7, -ta[tr]] })], (e) => `${e}px`),
                         },
                         children: (0, r.jsx)(p.Text, {
                             variant: "text-lg/semibold",
@@ -669,20 +669,20 @@ function $(e) {
                             style: {
                                 transform: (0, o.to)(
                                     [tz.to({ range: [1, 0], output: [0, 1] })],
-                                    (e) => `translateY(-${e * t4}px)`,
+                                    (e) => `translateY(-${e * t7}px)`,
                                 ),
                             },
                             children: (0, r.jsx)(O.A, {
                                 percent: null != eU ? eU : ev,
                                 animate: !0 !== eq.current && !eS,
-                                interactionEnabled: t9,
+                                interactionEnabled: t8,
                                 playerState: ec,
                                 preloadedBuffers: tj ? eT : void 0,
                                 durationSec: ez.current?.duration ?? 1,
                                 isFullyVisible: tj && ej,
                                 maxSeekableTime: tj && ej ? te : void 0,
                                 onClick: (e) => {
-                                    t9 && (tQ(e), ec === w.Q6.ENDED && tD(w.Q6.PLAYING));
+                                    t8 && (tQ(e), ec === w.Q6.ENDED && tD(w.Q6.PLAYING));
                                 },
                                 onScrubBack: tU,
                                 onScrubForward: tB,
@@ -697,7 +697,7 @@ function $(e) {
                             style: {
                                 paddingTop: (0, o.to)(
                                     [tz.to({ range: [0, 1], output: [0, 1] })],
-                                    (e) => `${e * e * t2}px`,
+                                    (e) => `${e * e * t4}px`,
                                 ),
                                 paddingBottom: (0, o.to)(
                                     [tz.to({ range: [0, 1], output: [0, 1] })],
@@ -717,7 +717,7 @@ function $(e) {
                                 visible: tj,
                                 seekForwardEnabled: t6,
                                 hideCaptionBtn: null == t1,
-                                hideTranscriptBtn: t7,
+                                hideTranscriptBtn: t2,
                                 size: tr,
                                 handlePlaybackBtnClick: tV,
                                 handleTranscriptBtnClick: () => {

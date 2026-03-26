@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { D: () => g });
+n.d(t, { D: () => m });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a);
+    s = n(503698),
+    a = n.n(s);
 n(735438);
-var o = n(522160);
+var o = n(4208);
 n(435371);
 var l = n(397927),
     u = n(565645);
@@ -18,28 +18,28 @@ var _ = n(7584);
 n(850992), n(690521);
 var f = n(403362);
 n(806931);
-var h = n(307731);
+var p = n(307731);
 n(650583);
-var p = n(845762);
-function g(e) {
-    let { emoji: t, isDisabled: n = !1, onClick: a, className: _ } = e,
+var h = n(814979);
+function m(e) {
+    let { emoji: t, isDisabled: n = !1, onClick: s, className: _ } = e,
         f = i.useRef(null),
-        h = (0, c.M)(f);
+        p = (0, c.M)(f);
     return (0, r.jsx)("span", {
         ref: f,
         children: (0, r.jsx)(l.DUT, {
-            onClick: a,
+            onClick: s,
             focusProps: { enabled: !n },
             children: (0, r.jsx)(l.c7X, {
                 config: d.B,
                 from: { value: 0 },
-                to: { value: +!!h },
+                to: { value: +!!p },
                 children: (e) => {
                     let { value: i } = e;
                     return (0, r.jsx)(o.animated.div, {
                         style: { transform: i.to([0, 1], [1, 1.14]).to((e) => `scale(${e})`) },
                         children: (0, r.jsx)(u.A, {
-                            className: s()(p.Zg, _, { [p.c4]: n }),
+                            className: a()(h.Zg, _, { [h.c4]: n }),
                             emojiId: t.id,
                             emojiName: t?.surrogates,
                             animated: t.animated,
@@ -50,7 +50,7 @@ function g(e) {
         }),
     });
 }
-h.b_.CHAT,
+p.b_.CHAT,
     [
         _.Ay.getByName("thumbsup"),
         _.Ay.getByName("eyes"),

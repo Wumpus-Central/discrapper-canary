@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => O });
+n.d(t, { A: () => b });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(311907),
     l = n(827734),
     u = n(582754),
@@ -14,16 +14,16 @@ var r = n(627968),
     p = n(544028),
     h = n(696451),
     m = n(287809),
-    g = n(816166),
-    E = n(813098),
+    E = n(816166),
+    g = n(813098),
     A = n(473145),
     I = n(426983),
     T = n(176128),
-    y = n(981883),
-    S = n(652215),
+    S = n(981883),
+    y = n(652215),
     v = n(985018),
-    C = n(106967);
-let b = {
+    N = n(85168);
+let C = {
     [I._.STAFF]: {
         IconComponent: c.VaJ,
         foregroundDarkColor: l.A.unsafe_rawColors.WHITE.css,
@@ -46,7 +46,7 @@ let b = {
         backgroundLightColor: l.A.unsafe_rawColors.GREEN_360.css,
     },
     [I._.PARTNERED]: {
-        IconComponent: (0, c.kHD)(g.A),
+        IconComponent: (0, c.kHD)(E.A),
         foregroundDarkColor: l.A.unsafe_rawColors.WHITE.css,
         foregroundLightColor: l.A.unsafe_rawColors.WHITE.css,
         backgroundDarkColor: l.A.unsafe_rawColors.BRAND_500.css,
@@ -74,15 +74,15 @@ let b = {
     },
     [I._.NONE]: {},
 };
-function N(e) {
+function R(e) {
     let { guildTraits: t } = e;
     return (0, r.jsxs)("div", {
-        className: C.V8,
+        className: N.V8,
         children: [
             (0, r.jsxs)("div", {
-                className: s()(C.f, C.N5),
+                className: a()(N.f, N.N5),
                 children: [
-                    (0, r.jsx)(E.A, { width: 18, height: 18, className: C.F8 }),
+                    (0, r.jsx)(g.A, { width: 18, height: 18, className: N.F8 }),
                     (0, r.jsx)(c.Text, {
                         variant: "text-xs/semibold",
                         color: "always-white",
@@ -91,7 +91,7 @@ function N(e) {
                 ],
             }),
             (0, r.jsx)("div", {
-                className: C.f,
+                className: N.f,
                 children: (0, r.jsx)(c.Text, {
                     variant: "text-xs/semibold",
                     color: "always-white",
@@ -101,104 +101,104 @@ function N(e) {
         ],
     });
 }
-function R(e) {
+function O(e) {
     let { badgeType: t, guildTraits: n } = e,
-        { tooltipTitle: i, tooltipSubtitle: a, tooltipDescription: s } = (0, y.V)(t, n.visibility);
+        { tooltipTitle: i, tooltipSubtitle: s, tooltipDescription: a } = (0, S.V)(t, n.visibility);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: C.Rf,
+                className: N.Rf,
                 children: [
                     (0, r.jsx)(c.Text, { color: "interactive-text-active", variant: "text-xs/bold", children: i }),
-                    null != a
-                        ? (0, r.jsx)(c.Text, { color: "text-muted", variant: "text-xs/medium", children: a })
-                        : null,
                     null != s
                         ? (0, r.jsx)(c.Text, { color: "text-muted", variant: "text-xs/medium", children: s })
                         : null,
+                    null != a
+                        ? (0, r.jsx)(c.Text, { color: "text-muted", variant: "text-xs/medium", children: a })
+                        : null,
                 ],
             }),
-            n.premium ? (0, r.jsx)(N, { guildTraits: n }) : null,
+            n.premium ? (0, r.jsx)(R, { guildTraits: n }) : null,
         ],
     });
 }
-function O(e) {
+function b(e) {
     let t,
         n,
         {
-            guild: a,
-            tooltipColor: s = c.STz.Colors.BRAND,
+            guild: s,
+            tooltipColor: a = c.STz.Colors.BRAND,
             tooltipPosition: l,
             className: d,
-            flowerStarClassName: g,
-            iconClassName: E,
+            flowerStarClassName: E,
+            iconClassName: g,
             badgeStrokeColor: A,
-            badgeColor: y,
+            badgeColor: S,
             disableBoostClick: v,
-            "aria-label": N = !1,
-            ...O
+            "aria-label": R = !1,
+            ...b
         } = e,
-        D = O.size ?? 18,
+        D = b.size ?? 18,
         L = (0, o.bG)([m.default, h.Ay], () => {
             let e = m.default.getCurrentUser();
-            return h.Ay.isMember(a?.id, e?.id);
+            return h.Ay.isMember(s?.id, e?.id);
         }),
         w = (0, o.bG)([p.A], () => p.A.theme),
-        x = (0, T.Jp)(a),
-        P = (0, I.K)(x),
-        M = i.useMemo(() => x.premium && L && !v, [v, x.premium, L]),
+        M = (0, T.Jp)(s),
+        x = (0, I.K)(M),
+        P = i.useMemo(() => M.premium && L && !v, [v, M.premium, L]),
         k = i.useCallback(
             (e) => {
-                M &&
+                P &&
                     (e.stopPropagation(),
                     e.preventDefault(),
                     (0, _.K)({
-                        guildId: a.id,
-                        location: { section: S.JJy.GUILD_HEADER, object: S.ZSU.BOOST_GEM_ICON },
+                        guildId: s.id,
+                        location: { section: y.JJy.GUILD_HEADER, object: y.ZSU.BOOST_GEM_ICON },
                     }));
             },
-            [M, a.id],
+            [P, s.id],
         );
-    if (P === I._.NONE) return null;
+    if (x === I._.NONE) return null;
     let {
         IconComponent: U,
         backgroundDarkColor: G,
-        backgroundLightColor: V,
-        foregroundDarkColor: F,
+        backgroundLightColor: F,
+        foregroundDarkColor: V,
         foregroundLightColor: B,
-        premiumBackgroundColor: j,
-        premiumForegroundColor: H,
+        premiumBackgroundColor: H,
+        premiumForegroundColor: j,
         sizeAdjustment: Y,
-    } = b[P];
+    } = C[x];
     if (null == U) return null;
-    x.premium && ((t = H), (n = j));
-    let W = (0, u.Mw)(w) ? F : B,
-        K = (0, u.Mw)(w) ? G : V;
+    M.premium && ((t = j), (n = H));
+    let W = (0, u.Mw)(w) ? V : B,
+        K = (0, u.Mw)(w) ? G : F;
     (t = t ?? W), (n = n ?? K);
-    let z = Math.floor(0.75 * D) - (Y ?? 0);
+    let $ = Math.floor(0.75 * D) - (Y ?? 0);
     return (0, r.jsx)(c.STz, {
-        color: s,
+        color: a,
         position: l,
-        "aria-label": N,
-        text: (0, r.jsx)(R, { badgeType: P, guildTraits: x }),
-        tooltipContentClassName: C.Hj,
+        "aria-label": R,
+        text: (0, r.jsx)(O, { badgeType: x, guildTraits: M }),
+        tooltipContentClassName: N.Hj,
         children: (e) =>
             (0, r.jsx)(c.DUT, {
                 onClick: k,
-                tabIndex: M ? 0 : -1,
+                tabIndex: P ? 0 : -1,
                 children: (0, r.jsx)(f.A, {
                     ...e,
                     className: d,
-                    flowerStarClassName: g,
+                    flowerStarClassName: E,
                     allowFullSizedIcon: !0,
-                    color: n ?? y,
+                    color: n ?? S,
                     stroke: A,
                     size: D,
                     children: (0, r.jsx)(U, {
                         size: "custom",
-                        width: z,
-                        height: z,
-                        className: E,
+                        width: $,
+                        height: $,
+                        className: g,
                         color: t ?? "currentColor",
                     }),
                 }),

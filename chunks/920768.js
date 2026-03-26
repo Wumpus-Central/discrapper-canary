@@ -3,11 +3,11 @@ var r = s(627968),
     n = s(64700),
     a = s(503698),
     i = s.n(a),
-    l = s(522160),
+    l = s(4208),
     o = s(397927),
-    h = s(557722),
-    c = s(219716),
-    d = s(484410);
+    c = s(557722),
+    h = s(219716),
+    d = s(834265);
 function u(e) {
     let { show: t, alpha2: s, countryCode: a } = e,
         u = n.useRef(null),
@@ -20,7 +20,7 @@ function u(e) {
         }
         return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
     }, [t, s, a]);
-    let E = (0, o.zhh)({
+    let S = (0, o.zhh)({
         width: `${m}px`,
         onStart: () => {
             g(!0);
@@ -33,10 +33,10 @@ function u(e) {
         targetElementRef: u,
         position: "top",
         renderPopout: (e) =>
-            (0, r.jsx)(c.A, {
+            (0, r.jsx)(h.A, {
                 className: d.SW,
                 onClick: (t) => {
-                    h.A.setCountryCode(t), e.closePopout();
+                    c.A.setCountryCode(t), e.closePopout();
                 },
             }),
         children: (e) =>
@@ -45,7 +45,7 @@ function u(e) {
                 ref: u,
                 children: (0, r.jsx)(l.animated.div, {
                     className: d.kL,
-                    style: E,
+                    style: S,
                     children: (0, r.jsxs)("div", {
                         className: d.WH,
                         ref: p,

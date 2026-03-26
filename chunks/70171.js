@@ -1,7 +1,7 @@
-n.d(t, { A: () => C });
+n.d(t, { A: () => x });
 var i = n(627968),
     l = n(64700),
-    s = n(522160),
+    s = n(4208),
     a = n(311907),
     r = n(582754),
     o = n(397927),
@@ -11,42 +11,42 @@ var i = n(627968),
     h = n(361157),
     m = n(652896),
     A = n(750506),
-    g = n(353839);
+    g = n(172914);
 let p = { visibility: "hidden" },
     f = { precision: 1e-4, duration: 300 },
     _ = { tension: 150, friction: 20, precision: 1e-4, bounce: 0 },
     E = { duration: 1e3 };
-function C(e) {
+function x(e) {
     let { stream: t, popoutType: n } = e,
-        { reducedMotion: C } = l.useContext(r.CZ),
-        x = (0, l.useRef)(null),
+        { reducedMotion: x } = l.useContext(r.CZ),
+        C = (0, l.useRef)(null),
         S = h.K.getState().clipsButtonRef,
-        T = (0, m._z)(t),
-        N = (0, a.bG)([d.A], () => d.A.getActiveAnimation()),
-        I = (0, a.yK)([d.A], () => d.A.getStreamClipAnimations(T)),
+        I = (0, m._z)(t),
+        T = (0, a.bG)([d.A], () => d.A.getActiveAnimation()),
+        N = (0, a.yK)([d.A], () => d.A.getStreamClipAnimations(I)),
         v = (0, l.useRef)(void 0);
     l.useEffect(
         () => () => {
-            (0, u.MI)(T);
+            (0, u.MI)(I);
         },
-        [T],
+        [I],
     );
-    let y = (e) => {
+    let b = (e) => {
             if (n !== c.N.NO_POPOUT) return p;
             let t = S?.getBoundingClientRect();
-            if (((v.current = t), e.timestamp !== N || null == t)) return p;
+            if (((v.current = t), e.timestamp !== T || null == t)) return p;
             let { top: i, left: l } = t;
             return { top: i + 36, left: l - 216, height: 151, width: 268 };
         },
-        b = (0, l.useRef)(null),
+        y = (0, l.useRef)(null),
         j = (0, o.pnh)(
-            I,
-            { keys: (e) => e.timestamp, ref: b, from: { opacity: 0.2 }, enter: { opacity: 0 }, config: f },
+            N,
+            { keys: (e) => e.timestamp, ref: y, from: { opacity: 0.2 }, enter: { opacity: 0 }, config: f },
             "animate-always",
         ),
         R = (0, l.useRef)(null),
         M = (0, o.pnh)(
-            I,
+            N,
             {
                 ref: R,
                 keys: (e) => e.timestamp,
@@ -54,18 +54,18 @@ function C(e) {
                     position: "fixed",
                     visibility: "hidden",
                     opacity: 1,
-                    ...(C.enabled
-                        ? y(e)
+                    ...(x.enabled
+                        ? b(e)
                         : (() => {
                               if (n !== c.N.NO_POPOUT) return p;
-                              let e = x.current?.getBoundingClientRect();
+                              let e = C.current?.getBoundingClientRect();
                               return null == e ? p : { width: e.width, height: e.height, top: e.top, left: e.left };
                           })()),
                 }),
-                enter: (e) => [{ opacity: 1, visibility: "visible", ...y(e) }],
+                enter: (e) => [{ opacity: 1, visibility: "visible", ...b(e) }],
                 leave: {
                     opacity: 0,
-                    ...(!C.enabled && {
+                    ...(!x.enabled && {
                         height: 0,
                         width: 0,
                         ...(() => {
@@ -73,20 +73,20 @@ function C(e) {
                         })(),
                     }),
                 },
-                config: C.enabled ? E : _,
+                config: x.enabled ? E : _,
                 onRest: (e, t) => {
                     null != t.item &&
-                        null != I.find((e) => e.timestamp === t.item.timestamp) &&
-                        (0, u.MI)(T, t.item.timestamp);
+                        null != N.find((e) => e.timestamp === t.item.timestamp) &&
+                        (0, u.MI)(I, t.item.timestamp);
                 },
             },
             "animate-always",
         );
     return (
-        (0, s.useChain)([b, R], [0, 0.1], 3e3),
+        (0, s.useChain)([y, R], [0, 0.1], 3e3),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)("div", { className: g.R, ref: x }),
+                (0, i.jsx)("div", { className: g.R, ref: C }),
                 j((e, t) => null != t && (0, i.jsx)(s.animated.div, { className: g.w5, style: e })),
                 (0, i.jsx)(A.Ay, {
                     children: (0, i.jsx)("div", {

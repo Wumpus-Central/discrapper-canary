@@ -4,7 +4,7 @@ var i = n(627968),
     s = n(64700),
     l = n(503698),
     r = n.n(l),
-    a = n(380278),
+    a = n(4208),
     o = n(311907),
     d = n(397927),
     c = n(474001),
@@ -14,7 +14,7 @@ var i = n(627968),
     x = n(213733),
     h = n(652215),
     _ = n(985018),
-    p = n(875139);
+    p = n(315192);
 let A = { tension: 200, friction: 20 },
     f = { ...A, clamp: !0 };
 function j(e) {
@@ -122,8 +122,8 @@ function E(e) {
         } = e,
         E = (0, o.bG)([g.A], () => g.A.getGuild(f)?.premiumTier ?? h.TVA.NONE),
         b = h.M2T[l.tier],
-        T = a && l.tier <= E,
-        C = l.tier !== h.TVA.NONE && l.tier !== h.TVA.TIER_1;
+        C = a && l.tier <= E,
+        T = l.tier !== h.TVA.NONE && l.tier !== h.TVA.TIER_1;
     return (0, i.jsxs)(
         "div",
         {
@@ -141,7 +141,7 @@ function E(e) {
                     guildId: f,
                     hasBottomMargin: c,
                     subscriptionsRequired: b,
-                    hasAnimatedUnlocked: T,
+                    hasAnimatedUnlocked: C,
                     isAnimatedTo: a,
                 }),
                 (0, i.jsx)("div", {
@@ -151,7 +151,7 @@ function E(e) {
                             ? t
                             : (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      C
+                                      T
                                           ? (0, i.jsx)("div", { className: p.p8, children: _.intl.string(_.t.oKzyRQ) })
                                           : null,
                                       null != l.perks &&
@@ -198,7 +198,7 @@ function E(e) {
                                                           },
                                                           e.title?.toString(),
                                                       );
-                                                  })(e, T),
+                                                  })(e, C),
                                               ),
                                           }),
                                   ],
@@ -211,9 +211,9 @@ function E(e) {
 }
 let b = (e) => {
         let { transform: t, hasAnimatedUnlocked: n, headerButton: s, subscriptionsRequired: l } = e;
-        return null !== s ? s : n ? (0, i.jsx)(T, { transform: t }) : (0, i.jsx)(C, { subscriptionsRequired: l });
+        return null !== s ? s : n ? (0, i.jsx)(C, { transform: t }) : (0, i.jsx)(T, { subscriptionsRequired: l });
     },
-    T = (e) => {
+    C = (e) => {
         let { transform: t } = e;
         return (0, i.jsx)(a.animated.div, {
             style: { transform: t },
@@ -221,7 +221,7 @@ let b = (e) => {
             children: _.intl.string(_.t.dNGM0v),
         });
     },
-    C = (e) => {
+    T = (e) => {
         let { subscriptionsRequired: t } = e;
         return (0, i.jsxs)(i.Fragment, {
             children: [

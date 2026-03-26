@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => G });
+n.d(t, { A: () => L });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -14,19 +14,19 @@ var i = n(627968),
     x = n(964486),
     h = n(775602),
     _ = n(63104),
-    A = n(861197),
-    p = n(967144),
+    p = n(861197),
+    A = n(967144),
     f = n(34457),
     j = n(576705),
     N = n(792831),
     E = n(396816),
     b = n(359837),
-    T = n(533448),
-    C = n(316506),
+    C = n(533448),
+    T = n(316506),
     I = n(927573),
     v = n(652215),
     S = n(985018),
-    y = n(971525);
+    y = n(87024);
 let R = "DRAGGABLE_ROLE";
 function O(e) {
     let t,
@@ -38,27 +38,27 @@ function O(e) {
             onClick: g,
             currentPosition: x,
             onDragStart: h,
-            onDragReset: A,
+            onDragReset: p,
             onDragComplete: j,
             roleStyle: N,
         } = e,
         E = (0, b.c)(s, d, l),
-        T = (0, f.Oy)(l),
-        C = null == E && !T,
+        C = (0, f.Oy)(l),
+        T = null == E && !C,
         I = l.tags?.guild_connections !== void 0,
-        S = (0, p.X_)(s.id, l, l.colorStrings),
+        S = (0, A.X_)(s.id, l, l.colorStrings),
         [, O] = (0, a.i)({
             type: R,
             item: () => (h(l.id), { id: l.id, position: x }),
-            canDrag: () => C,
+            canDrag: () => T,
             end: (e, t) => {
                 let n = t.getDropResult();
-                null == n ? A() : j(n.roleId);
+                null == n ? p() : j(n.roleId);
             },
         }),
-        [{ dragSourcePosition: G }, L] = (0, o.H)({
+        [{ dragSourcePosition: L }, G] = (0, o.H)({
             accept: R,
-            canDrop: () => C,
+            canDrop: () => T,
             collect: (e) => {
                 let t = e.getItem();
                 return null != t && e.isOver() && e.canDrop()
@@ -75,7 +75,7 @@ function O(e) {
               ? (0, i.jsx)(u.WYI, { color: D, colors: S, background: !1, tooltip: !1 })
               : (0, i.jsx)(u.RYH, { color: D, colors: S })),
         (0, i.jsxs)(u.VQ0.Item, {
-            className: r()(y.nM, { [y.qo]: null !== G && x < G, [y.BP]: null !== G && x > G }),
+            className: r()(y.nM, { [y.qo]: null !== L && x < L, [y.BP]: null !== L && x > L }),
             id: l.id,
             selectedItem: c,
             itemType: "side",
@@ -88,14 +88,14 @@ function O(e) {
             },
             "aria-label": l.name,
             clickableRef: (e) => {
-                O(L(e?.ref ?? null));
+                O(G(e?.ref ?? null));
             },
             children: [
                 t,
                 null != E ? (0, i.jsx)(b.A, { className: y.s2, tooltipText: E }) : null,
                 (0, i.jsx)(u.Text, {
                     variant: "text-sm/medium",
-                    color: T ? "text-strong" : "interactive-text-active",
+                    color: C ? "text-strong" : "interactive-text-active",
                     lineClamp: 1,
                     children: l.name,
                 }),
@@ -103,14 +103,14 @@ function O(e) {
         })
     );
 }
-function G(e) {
+function L(e) {
     let { guild: t, currentRoleId: n, setCurrentRoleId: l, setSelectedSection: a } = e,
         o = (0, d.bG)([E.A], () => E.A.roles),
         m = (0, d.bG)([j.A], () => j.A.getHighestRole(t)),
         _ = (0, d.bG)([h.A], () => h.A.roleStyle),
-        [p, f] = s.useState(o.length),
-        { scrolledToTop: b, handleScroll: v } = (0, C.u)(),
-        { handleDragStart: R, handleDragReset: G, handleDragComplete: L } = (0, T.A)(o),
+        [A, f] = s.useState(o.length),
+        { scrolledToTop: b, handleScroll: v } = (0, T.u)(),
+        { handleDragStart: R, handleDragReset: L, handleDragComplete: G } = (0, C.A)(o),
         D = s.useRef(null),
         M = s.useCallback(
             (e) => {
@@ -124,9 +124,9 @@ function G(e) {
             M(n);
         }),
         s.useEffect(() => {
-            o.length > p && M(n), o.length !== p && f(o.length);
-        }, [o.length, p, f, M, n]),
-        (0, i.jsx)(A.Ay.Sidebar, {
+            o.length > A && M(n), o.length !== A && f(o.length);
+        }, [o.length, A, f, M, n]),
+        (0, i.jsx)(p.Ay.Sidebar, {
             className: y.pz,
             children: (0, i.jsxs)("div", {
                 className: y.kL,
@@ -189,8 +189,8 @@ function G(e) {
                                         onClick: () => l(e.id),
                                         currentPosition: s,
                                         onDragStart: R,
-                                        onDragReset: G,
-                                        onDragComplete: L,
+                                        onDragReset: L,
+                                        onDragComplete: G,
                                         roleStyle: _,
                                     },
                                     e.id,

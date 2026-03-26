@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => G }), n(321073);
+n.d(t, { A: () => L }), n(321073);
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -21,11 +21,11 @@ var i = n(627968),
     N = n(740816),
     E = n(285732),
     b = n(395405),
-    T = n(175471),
-    C = n(652215),
+    C = n(175471),
+    T = n(652215),
     I = n(568065),
     v = n(985018),
-    S = n(65146);
+    S = n(691235);
 let y = (e) => {
         let { children: t, currentGuildTier: n, guildStickers: s, tier: l } = e,
             r = n < l,
@@ -55,11 +55,11 @@ let y = (e) => {
             size: "sm",
             text: v.intl.string(v.t.O1REe1),
             onClick: () => {
-                f.default.track(C.HAw.OPEN_MODAL, { type: C.JJy.CREATE_STICKER_MODAL, location: s }),
+                f.default.track(T.HAw.OPEN_MODAL, { type: T.JJy.CREATE_STICKER_MODAL, location: s }),
                     ((e) => {
                         let { guildId: t } = e;
                         (0, d.mMO)(async () => {
-                            let { default: e } = await Promise.all([n.e("29143"), n.e("27382")]).then(
+                            let { default: e } = await Promise.all([n.e("29143"), n.e("96637")]).then(
                                 n.bind(n, 445002),
                             );
                             return (n) => (0, i.jsx)(e, { guildId: t, ...n });
@@ -69,13 +69,13 @@ let y = (e) => {
             disabled: !l,
         });
     },
-    G = (e) => {
+    L = (e) => {
         let { guild: t } = e,
             l = (0, N.A)(t.id),
             { analyticsLocations: u } = (0, m.Ay)(),
             f = (0, p.A)(t.id),
-            G = t.features.has(C.GuildFeatures.MORE_STICKERS) ? C.TVA.TIER_3 : t.premiumTier,
-            L = t.features.has(C.GuildFeatures.MORE_STICKERS) ? C.M2T[C.TVA.TIER_3] : f,
+            L = t.features.has(T.GuildFeatures.MORE_STICKERS) ? T.TVA.TIER_3 : t.premiumTier,
+            G = t.features.has(T.GuildFeatures.MORE_STICKERS) ? T.M2T[T.TVA.TIER_3] : f,
             D = (0, A.A)(t.id);
         if (
             (s.useEffect(() => {
@@ -87,38 +87,38 @@ let y = (e) => {
         let M = l.stickers,
             k = [
                 {
-                    tier: C.TVA.NONE,
+                    tier: T.TVA.NONE,
                     title: (0, i.jsx)(y, {
                         guildStickers: M,
-                        currentGuildTier: G,
-                        tier: C.TVA.NONE,
+                        currentGuildTier: L,
+                        tier: T.TVA.NONE,
                         children: v.intl.string(v.t.tfVXhP),
                     }),
                 },
                 {
-                    tier: C.TVA.TIER_1,
+                    tier: T.TVA.TIER_1,
                     title: (0, i.jsx)(y, {
                         guildStickers: M,
-                        currentGuildTier: G,
-                        tier: C.TVA.TIER_1,
+                        currentGuildTier: L,
+                        tier: T.TVA.TIER_1,
                         children: v.intl.string(v.t.nzXtaS),
                     }),
                 },
                 {
-                    tier: C.TVA.TIER_2,
+                    tier: T.TVA.TIER_2,
                     title: (0, i.jsx)(y, {
                         guildStickers: M,
-                        currentGuildTier: G,
-                        tier: C.TVA.TIER_2,
+                        currentGuildTier: L,
+                        tier: T.TVA.TIER_2,
                         children: v.intl.string(v.t["h33/uW"]),
                     }),
                 },
                 {
-                    tier: C.TVA.TIER_3,
+                    tier: T.TVA.TIER_3,
                     title: (0, i.jsx)(y, {
                         guildStickers: M,
-                        currentGuildTier: G,
-                        tier: C.TVA.TIER_3,
+                        currentGuildTier: L,
+                        tier: T.TVA.TIER_3,
                         children: v.intl.string(v.t.BfF6ED),
                     }),
                 },
@@ -137,49 +137,49 @@ let y = (e) => {
                     F = (0, j.Cp)(N.tier),
                     H = M.slice(w, B),
                     V = H.length > 0,
-                    z = G < N.tier,
+                    z = L < N.tier,
                     W =
                         ((s = M.length),
-                        s < (0, j.aG)(C.TVA.NONE)
-                            ? C.TVA.NONE
-                            : s < (0, j.aG)(C.TVA.TIER_1)
-                              ? C.TVA.TIER_1
-                              : s < (0, j.aG)(C.TVA.TIER_2)
-                                ? C.TVA.TIER_2
-                                : s < (0, j.aG)(C.TVA.TIER_3) ||
+                        s < (0, j.aG)(T.TVA.NONE)
+                            ? T.TVA.NONE
+                            : s < (0, j.aG)(T.TVA.TIER_1)
+                              ? T.TVA.TIER_1
+                              : s < (0, j.aG)(T.TVA.TIER_2)
+                                ? T.TVA.TIER_2
+                                : s < (0, j.aG)(T.TVA.TIER_3) ||
                                     (null != t &&
-                                        t.features.has(C.GuildFeatures.MORE_STICKERS) &&
+                                        t.features.has(T.GuildFeatures.MORE_STICKERS) &&
                                         s < c.K.MAX_STICKER_SLOTS)
-                                  ? C.TVA.TIER_3
-                                  : C.TVA.NONE),
-                    Y = k && !z && W === N.tier && B !== H.length,
-                    K = Y || H.length > 0,
+                                  ? T.TVA.TIER_3
+                                  : T.TVA.NONE),
+                    K = k && !z && W === N.tier && B !== H.length,
+                    Y = K || H.length > 0,
                     X = B - w,
                     J = n(415358),
                     Z = F - H.length,
-                    q = Y ? Math.min(5 - ((H.length + 0) % 5), Z) : 0,
+                    q = K ? Math.min(5 - ((H.length + 0) % 5), Z) : 0,
                     Q = [];
                 for (let e = 0; e < q; e++) Q.push((0, i.jsx)(R, {}, `placeholder-${e}`));
-                let $ = t.premiumTier < N.tier && f >= C.M2T[N.tier],
+                let $ = t.premiumTier < N.tier && f >= T.M2T[N.tier],
                     ee = v.intl.string(v.t.dtFw5c),
                     et = () => {
                         var e, n;
                         let i;
                         return (
-                            (e = Math.max(1, C.M2T[N.tier] - f)),
+                            (e = Math.max(1, T.M2T[N.tier] - f)),
                             (n = N.tier),
                             (i = null),
-                            void (n === C.TVA.TIER_1
-                                ? (i = C.AnalyticsObjectTypes.TIER_1)
-                                : n === C.TVA.TIER_2
-                                  ? (i = C.AnalyticsObjectTypes.TIER_2)
-                                  : n === C.TVA.TIER_3 && (i = C.AnalyticsObjectTypes.TIER_3),
+                            void (n === T.TVA.TIER_1
+                                ? (i = T.AnalyticsObjectTypes.TIER_1)
+                                : n === T.TVA.TIER_2
+                                  ? (i = T.AnalyticsObjectTypes.TIER_2)
+                                  : n === T.TVA.TIER_3 && (i = T.AnalyticsObjectTypes.TIER_3),
                             (0, x.A)({
                                 analyticsLocations: u,
                                 analyticsLocation: {
-                                    page: C.liQ.GUILD_SETTINGS,
-                                    section: C.JJy.GUILD_SETTINGS_STICKERS,
-                                    object: C.ZSU.BOOST_LEVEL_UPSELL_BUTTON,
+                                    page: T.liQ.GUILD_SETTINGS,
+                                    section: T.JJy.GUILD_SETTINGS_STICKERS,
+                                    object: T.ZSU.BOOST_LEVEL_UPSELL_BUTTON,
                                     objectType: i,
                                 },
                                 guildId: t.id,
@@ -197,8 +197,8 @@ let y = (e) => {
                           (ee = v.intl.string(v.t.g7lkrU)),
                           t.premiumTier + 1 !== N.tier && ((en = !0), (l = v.intl.string(v.t.mTMkY2))))
                         : ((en = !0), (l = v.intl.string(v.t.hwPEJR))));
-                let ei = W === y + 1 && W > G,
-                    es = Y || ei || y > G;
+                let ei = W === y + 1 && W > L,
+                    es = K || ei || y > L;
                 return (
                     ei
                         ? (m = (0, i.jsx)(g.A, {
@@ -206,29 +206,29 @@ let y = (e) => {
                               size: o.$n.Sizes.SMALL,
                               color: o.$n.Colors.GREEN,
                               buttonText: v.intl.string(v.t.Vbkh2l),
-                              targetBoostedGuildTier: G + 1,
+                              targetBoostedGuildTier: L + 1,
                               analyticsLocation: {
-                                  page: C.liQ.GUILD_SETTINGS,
-                                  section: C.JJy.GUILD_SETTINGS_STICKERS,
-                                  object: C.ZSU.BOOST_UPSELL_NEXT_LEVEL_HEADER,
+                                  page: T.liQ.GUILD_SETTINGS,
+                                  section: T.JJy.GUILD_SETTINGS_STICKERS,
+                                  object: T.ZSU.BOOST_UPSELL_NEXT_LEVEL_HEADER,
                                   objectType: (0, j.k1)(N.tier),
                               },
                           }))
-                        : Y && (m = (0, i.jsx)(O, { guild: t })),
+                        : K && (m = (0, i.jsx)(O, { guild: t })),
                     (0, i.jsxs)(
-                        T.A,
+                        C.A,
                         {
-                            subscriptionCount: L,
+                            subscriptionCount: G,
                             tier: N,
                             onSetRef: A,
                             isAnimatedTo: p,
                             hasBottomMargin: y !== b.length - 1,
-                            withCardBody: !K,
+                            withCardBody: !Y,
                             headerButton: m,
                             showHeaderLockStatus: es,
                             guildId: t.id,
                             children: [
-                                K &&
+                                Y &&
                                     (0, i.jsxs)("div", {
                                         className: S.Vg,
                                         children: [
@@ -243,7 +243,7 @@ let y = (e) => {
                                         ],
                                     }),
                                 !z &&
-                                    !Y &&
+                                    !K &&
                                     0 === H.length &&
                                     (0, i.jsx)("div", {
                                         className: r()(S.Rm, S.MC),
@@ -268,7 +268,7 @@ let y = (e) => {
                                                 variant: "text-md/normal",
                                                 color: "text-default",
                                                 children:
-                                                    N.tier === C.TVA.TIER_1
+                                                    N.tier === T.TVA.TIER_1
                                                         ? v.intl.formatToPlainString(v.t.psMYux, { numAdditional: X })
                                                         : v.intl.formatToPlainString(v.t.bLykEe, {
                                                               numAdditional: X,

@@ -23,21 +23,21 @@ var i = n(627968),
     S = n(954571),
     x = n(927813),
     v = n(279877),
-    y = n(112273),
-    b = n(666290),
+    b = n(112273),
+    y = n(666290),
     O = n(928636),
     L = n(502696),
     R = n(282447),
     P = n(652215),
     D = n(654487),
     M = n(985018),
-    j = n(23729);
+    j = n(724410);
 let w = 15 * x.A.Millis.MINUTE,
     U = (0, R.A)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: r } = e,
             s = a.useRef(null),
-            d = (0, i.jsx)(b.A, { party: t, onUserContextMenu: n }),
-            u = (0, i.jsx)(y.A, { party: t, onChannelContextMenu: l, quest: r }),
+            d = (0, i.jsx)(y.A, { party: t, onUserContextMenu: n }),
+            u = (0, i.jsx)(b.A, { party: t, onChannelContextMenu: l, quest: r }),
             { partiedMembers: A, applicationStreams: h, currentActivities: _, voiceChannels: m } = t,
             g = A.length,
             p = h.length,
@@ -124,26 +124,26 @@ function k() {
                 });
             return { questsByPartyId: t, questIdsByPartyId: n };
         }, [e, s, o]),
-        y = (0, d.bG)([h.A], () => h.A.earnedQuestForPlacement.get(_.uF.ACTIVITY_PANEL), []),
-        b = a.useRef([]),
+        b = (0, d.bG)([h.A], () => h.A.earnedQuestForPlacement.get(_.uF.ACTIVITY_PANEL), []),
+        y = a.useRef([]),
         O = a.useMemo(() => {
             let e = Array.from(x.values()),
-                t = b.current;
-            return t.length === e.length && e.every((e, n) => e === t[n]) ? t : ((b.current = e), e);
+                t = y.current;
+            return t.length === e.length && e.every((e, n) => e === t[n]) ? t : ((y.current = e), e);
         }, [x]);
     a.useEffect(() => {
         f && 0 !== O.length && (0, A.yO)(O, _.uF.ACTIVITY_PANEL, "NowPlaying");
-    }, [O, f, y]);
+    }, [O, f, b]);
     let L = a.useMemo(() => {
             if (!f) return S;
-            if (null == y) return new Map();
+            if (null == b) return new Map();
             let e = new Map();
             for (let [t, n] of x.entries()) {
-                let i = y.quests.get(n);
+                let i = b.quests.get(n);
                 (0, p.Oh)(i) && null != i.questWithUserStatus && e.set(t, i.questWithUserStatus);
             }
             return e;
-        }, [f, y, S, x]),
+        }, [f, b, S, x]),
         R = null;
     return t
         ? (R =

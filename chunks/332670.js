@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, { A: () => i });
-var r = n(522160);
+var r = n(4208);
 class i extends r.FrameLoop {
     _requestAnimationFrame = (e) => requestAnimationFrame(e);
     _cancelAnimationFrame = (e) => cancelAnimationFrame(e);
@@ -44,7 +44,7 @@ class i extends r.FrameLoop {
             (this.startQueue.size > 0 && (this.startQueue.forEach(this.addAnimation), this.startQueue.clear()),
             this.timeoutQueue.length > 0 &&
                 r.Globals.batchedUpdates(() => {
-                    let t = a(this.timeoutQueue, (t) => t.time > e);
+                    let t = s(this.timeoutQueue, (t) => t.time > e);
                     this.timeoutQueue.splice(0, t).forEach((e) => e.handler());
                 }),
             e > this.lastTime)
@@ -76,9 +76,9 @@ class i extends r.FrameLoop {
                 let e = this.timeoutQueue.findIndex((e) => e.cancel === i);
                 e >= 0 && this.timeoutQueue.splice(e, 1);
             },
-            s = a(this.timeoutQueue, (e) => e.time > n),
+            a = s(this.timeoutQueue, (e) => e.time > n),
             o = { time: n, handler: e, cancel: i };
-        return this.timeoutQueue.splice(s, 0, o), this.startLoop(), o;
+        return this.timeoutQueue.splice(a, 0, o), this.startLoop(), o;
     };
     onFrame = (e) => {
         this.frameQueue.add(e), this.startLoop();
@@ -93,7 +93,7 @@ class i extends r.FrameLoop {
             this.loop();
     }
 }
-function a(e, t) {
+function s(e, t) {
     let n = e.findIndex(t);
     return n < 0 ? e.length : n;
 }

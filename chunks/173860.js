@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => m }), n(321073);
+n.d(t, { A: () => g }), n(321073);
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -9,9 +9,9 @@ var i = n(627968),
     c = n(615300),
     d = n(52133),
     u = n(397927),
-    h = n(473134);
+    h = n(92722);
 let A = { friction: 10, tension: 300 };
-class p extends s.Component {
+class m extends s.Component {
     _timeout;
     constructor(e) {
         super(e), (this.state = { translateY: new c.A.Value(), reduceMotion: !1 });
@@ -65,7 +65,7 @@ class p extends s.Component {
         };
     }
 }
-class g extends s.PureComponent {
+class p extends s.PureComponent {
     static contextType = u.CZY;
     static defaultProps = { className: h.kL, reverse: !1, hide: !1, animate: !0 };
     state = { unread: null, mention: null };
@@ -145,7 +145,7 @@ class g extends s.PureComponent {
             { reducedMotion: u } = this.context;
         return (0, i.jsx)("div", {
             className: a ?? void 0,
-            children: (0, i.jsx)(p, {
+            children: (0, i.jsx)(m, {
                 hide: !0 === c || (null == e && null == t),
                 className: r()(o, null != t ? h.lE : h.gy),
                 text: null != t ? n : s,
@@ -156,4 +156,4 @@ class g extends s.PureComponent {
         });
     }
 }
-let m = g;
+let g = p;

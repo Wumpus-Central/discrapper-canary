@@ -4,7 +4,7 @@ var i = n(627968),
     l = n(503698),
     r = n.n(l),
     s = n(873263),
-    o = n(497766),
+    o = n(4208),
     d = n(535185),
     c = n(397927),
     u = n(927813),
@@ -12,7 +12,7 @@ var i = n(627968),
     h = n(710969),
     _ = n(439075),
     m = n(985018),
-    g = n(838205);
+    g = n(398168);
 let p = 4 * u.A.Millis.SECOND;
 function E(e) {
     let { children: t } = e,
@@ -54,7 +54,7 @@ let I = a.forwardRef(function (e, t) {
         T = a.useRef(""),
         [N, S] = a.useState(null),
         [x, v] = a.useState(0),
-        [{ highlightAnimationProgress: y }, b] = (0, c.zhh)(() => ({
+        [{ highlightAnimationProgress: b }, y] = (0, c.zhh)(() => ({
             highlightAnimationProgress: 1,
             config: { duration: p },
         })),
@@ -78,7 +78,7 @@ let I = a.forwardRef(function (e, t) {
         let e = document.getElementById(`quest-tile-${N}`);
         null != e &&
             (e.scrollIntoView({ behavior: "smooth", block: "center" }),
-            b({
+            y({
                 from: { highlightAnimationProgress: 0 },
                 to: { highlightAnimationProgress: 1 },
                 reset: !0,
@@ -86,7 +86,7 @@ let I = a.forwardRef(function (e, t) {
                     e.cancelled || S(null);
                 },
             }));
-    }, [N, x, b]),
+    }, [N, x, y]),
     d && 0 === n.length)
         ? (0, i.jsx)(c.y$y, { className: g.u1 })
         : 0 === n.length
@@ -117,14 +117,14 @@ let I = a.forwardRef(function (e, t) {
                                 style: l
                                     ? {
                                           boxShadow: (0, o.to)(
-                                              [y.to({ range: [0, 0.25, 0.75, 1], output: [0, 1, 1, 0] })],
+                                              [b.to({ range: [0, 0.25, 0.75, 1], output: [0, 1, 1, 0] })],
                                               (e) => `0 0 ${25 * e}px 0 rgba(88, 101, 242, ${e})`,
                                           ),
                                       }
                                     : s
                                       ? {
                                             opacity: (0, o.to)(
-                                                [y.to({ range: [0, 0.25, 0.75, 1], output: [1, 0.4, 0.4, 1] })],
+                                                [b.to({ range: [0, 0.25, 0.75, 1], output: [1, 0.4, 0.4, 1] })],
                                                 (e) => e,
                                             ),
                                         }

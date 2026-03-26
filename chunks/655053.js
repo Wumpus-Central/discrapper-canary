@@ -2,8 +2,8 @@
 n.d(t, { i: () => o });
 var r = n(627968),
     i = n(64700),
-    a = n(683071),
-    s = n(22789);
+    s = n(683071),
+    a = n(110992);
 function o(e) {
     let { message: t, type: n } = e,
         o = null == t || 0 === t.length || null == n,
@@ -14,8 +14,8 @@ function o(e) {
             null != n && u(n), null != t && d(t);
         }, [n, t]),
         (0, r.jsx)("div", {
-            className: o ? s.sectionHidden : s.section,
-            children: (0, r.jsx)(a.w, { type: l, hidden: o, children: c }),
+            className: o ? a.sectionHidden : a.section,
+            children: (0, r.jsx)(s.w, { type: l, hidden: o, children: c }),
         })
     );
 }

@@ -16,7 +16,7 @@ var l = n(503698),
     f = n(606758),
     h = n(518477),
     _ = n(985018),
-    A = n(10241);
+    A = n(558454);
 function I(e) {
     let { widget: t, className: n, buttonRef: l, additionalMenuItems: s } = e,
         r = (0, p.L)(t),

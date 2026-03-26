@@ -9,7 +9,7 @@ var i = n(627968),
     c = n(965660),
     u = n(599907),
     A = n(652215),
-    h = n(27740);
+    h = n(173629);
 let _ = { page: A.liQ.GUILD_DISCOVERY, object: A.ZSU.CARD, section: A.JJy.DISCOVER_POPULAR };
 function m(e) {
     let { tab: t, guildIds: n, loading: A, onScroll: m, onGuildCardClick: g, onGuildCardSeen: p } = e,

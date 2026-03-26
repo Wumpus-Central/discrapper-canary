@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(446315);
+    o = n(39228);
 let l = i.forwardRef(function (e, t) {
     let { color: n = "purple", offsetBottom: i = 0, children: s, ...l } = e,
         u = "object" == typeof n && null != n;

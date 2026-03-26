@@ -17,16 +17,16 @@ var n = s(627968),
     f = s(440938),
     x = s(590180),
     E = s(940980),
-    C = s(751304),
-    b = s(561769),
+    b = s(751304),
+    C = s(561769),
     A = s(484469),
     S = s(917987),
-    v = s(4196),
+    v = s(781815),
     I = s(938191),
     L = s(758836),
     j = s(652215),
     k = s(985018),
-    T = s(201073);
+    T = s(297046);
 let O = (e) => {
     let {
             isLoading: t,
@@ -41,9 +41,9 @@ let O = (e) => {
         M = (0, i.bG)([_.default], () => _.default.getCurrentUser()),
         P = p.Ay.canUseCollectibles(M),
         D = (0, E.W)("FeedBlock"),
-        H = (0, I.yB)("FeedBlock"),
+        w = (0, I.yB)("FeedBlock"),
         {
-            sortType: w,
+            sortType: H,
             setSortType: F,
             sortedItems: G,
             sortOptions: U,
@@ -91,7 +91,7 @@ let O = (e) => {
                               ],
                           }),
                           (0, n.jsxs)("div", {
-                              className: a()(T.IE, { [I.jP]: H }),
+                              className: a()(T.IE, { [I.jP]: w }),
                               children: [
                                   (0, n.jsx)(c.Text, {
                                       variant: "text-md/medium",
@@ -108,7 +108,7 @@ let O = (e) => {
                                               let { label: t, value: s } = e;
                                               return { id: s, label: t, value: s };
                                           },
-                                          value: w,
+                                          value: H,
                                           selectionMode: "single",
                                           fullWidth: !0,
                                       }),
@@ -165,10 +165,10 @@ let O = (e) => {
                                         },
                                         children: (0, n.jsx)("div", {
                                             className: s,
-                                            children: (0, n.jsx)(C.A, {
+                                            children: (0, n.jsx)(b.A, {
                                                 skuId: e.skuId,
                                                 prioritizedCurrency:
-                                                    y === L.G2.ORBS ? b.Hi.ORBS : D ? b.Hi.FIAT : void 0,
+                                                    y === L.G2.ORBS ? C.Hi.ORBS : D ? C.Hi.FIAT : void 0,
                                             }),
                                         }),
                                     },

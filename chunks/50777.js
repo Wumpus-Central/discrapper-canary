@@ -1,7 +1,7 @@
 n.d(t, { A: () => j });
 var i = n(627968),
-    r = n(64700),
-    a = n(158954),
+    a = n(64700),
+    r = n(158954),
     l = n(311907),
     s = n(990078),
     o = n(397927),
@@ -17,38 +17,38 @@ var i = n(627968),
     x = n(580630),
     f = n(871123),
     C = n(733391),
-    E = n(832163),
-    I = n(317560),
+    I = n(832163),
+    E = n(317560),
     v = n(533406),
     b = n(300182),
     T = n(183802),
     y = n(818348),
     S = n(985018),
-    N = n(919095);
+    N = n(23542);
 function j(e) {
     let { guildId: t, skuId: n, channel: j } = e,
         L = (0, l.bG)([A.A], () => A.A.isFetchingForSKU(n)),
         R = (0, l.bG)([g.A], () => g.A.get(n)),
         P = R?.applicationId,
-        M = (0, l.bG)([u.A], () => null != P && u.A.isFetchingApplication(P)),
-        w = (0, l.bG)([u.A], () => null != P && u.A.didFetchingApplicationFail(P)),
+        w = (0, l.bG)([u.A], () => null != P && u.A.isFetchingApplication(P)),
+        M = (0, l.bG)([u.A], () => null != P && u.A.didFetchingApplicationFail(P)),
         D = (0, m.h)(P),
         { analyticsLocations: k } = (0, c.Ay)(d.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED);
     (0, h.pE)();
     let O = (0, l.bG)([p.default], () =>
             j.isDM() && null != j.recipients && 0 !== j.recipients.length ? p.default.getUser(j.recipients[0]) : null,
         ),
-        U = (0, l.bG)([E.A], () => (null != n ? E.A.getNormalizedSKUEligibility(n) : void 0), [n]),
-        { primaryIconAsset: B, primaryIconLabel: G } = r.useMemo(() => (0, f.Cv)(R, P), [R, P]);
-    r.useEffect(() => {
+        U = (0, l.bG)([I.A], () => (null != n ? I.A.getNormalizedSKUEligibility(n) : void 0), [n]),
+        { primaryIconAsset: B, primaryIconLabel: G } = a.useMemo(() => (0, f.Cv)(R, P), [R, P]);
+    a.useEffect(() => {
         null == t || null == n || A.A.isFetchingForSKU(n) || (0, C.qf)(t, n);
     }, [t, n]);
-    let F = r.useCallback(
+    let F = a.useCallback(
             (e) => {
                 e.stopPropagation(),
                     R?.applicationId != null &&
                         null != t &&
-                        (0, I.R)({
+                        (0, E.R)({
                             skuId: n,
                             applicationId: R.applicationId,
                             guildId: t,
@@ -58,7 +58,7 @@ function j(e) {
             },
             [n, R, t, k],
         ),
-        H = r.useCallback(() => {
+        H = a.useCallback(() => {
             null != R &&
                 U &&
                 (0, v.a)(
@@ -67,7 +67,7 @@ function j(e) {
                     { analyticsLocations: [d.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_PURCHASE_BUTTON], guildId: t },
                 );
         }, [R, t, U]),
-        V = r.useCallback(() => {
+        V = a.useCallback(() => {
             null != R &&
                 (0, v.a)(
                     R,
@@ -75,8 +75,8 @@ function j(e) {
                     { analyticsLocations: [d.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_GIFT_BUTTON] },
                 );
         }, [R, O]),
-        q = null != P && null == D && !w;
-    return (L || M || q) && (null == R || null == D)
+        q = null != P && null == D && !M;
+    return (L || w || q) && (null == R || null == D)
         ? (0, i.jsx)("div", { className: N.kL, children: (0, i.jsx)(o.y$y, { className: N.u1 }) })
         : null != R && null != D && (0, _.A)(D) && D.guildId === t
           ? (0, i.jsxs)("div", {
@@ -129,7 +129,7 @@ function j(e) {
                                                             orbCount: R.orbsReward,
                                                             orbIconHook: () =>
                                                                 (0, i.jsx)(
-                                                                    a.Cp8,
+                                                                    r.Cp8,
                                                                     { size: "xs", color: "currentColor" },
                                                                     "orbs-icon",
                                                                 ),
@@ -140,13 +140,13 @@ function j(e) {
                                     }),
                                 ],
                             }),
-                            (0, i.jsxs)(a.e2v, {
+                            (0, i.jsxs)(r.e2v, {
                                 wrap: !1,
                                 fullWidth: !0,
                                 children: [
                                     (0, i.jsx)(s.m, {
                                         text: U ? void 0 : S.intl.string(S.t.IqlPbQ),
-                                        children: (0, i.jsx)(a.$nd, {
+                                        children: (0, i.jsx)(r.$nd, {
                                             variant: U ? "secondary" : "primary",
                                             onClick: F,
                                             text: S.intl.string(S.t.KLBTgF),
@@ -154,7 +154,7 @@ function j(e) {
                                         }),
                                     }),
                                     U &&
-                                        (0, i.jsx)(a.$nd, {
+                                        (0, i.jsx)(r.$nd, {
                                             variant: "primary",
                                             onClick: H,
                                             text: S.intl.format(S.t.Xp5WTn, {

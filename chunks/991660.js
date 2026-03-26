@@ -4,19 +4,19 @@ var n = i(627968),
     s = i(503698),
     a = i.n(s),
     r = i(158954),
-    u = i(88744);
+    u = i(829403);
 function o(t) {
     let { children: e, gradientClassName: i, onScroll: s, ...o } = t,
         c = l.useRef(null),
-        [d, p] = l.useState(!0),
-        S = l.useCallback(() => {
-            c.current?.isScrolledToBottom() === !0 ? p(!1) : p(!0);
+        [d, S] = l.useState(!0),
+        p = l.useCallback(() => {
+            c.current?.isScrolledToBottom() === !0 ? S(!1) : S(!0);
         }, [c]),
         I = l.useCallback(
             (t) => {
-                S(), null != s && s(t);
+                p(), null != s && s(t);
             },
-            [S, s],
+            [p, s],
         );
     return (0, n.jsxs)(n.Fragment, {
         children: [
@@ -24,7 +24,7 @@ function o(t) {
                 fade: !0,
                 ...o,
                 ref: (t) => {
-                    null != t && ((c.current = t), S());
+                    null != t && ((c.current = t), p());
                 },
                 onScroll: I,
                 children: e,

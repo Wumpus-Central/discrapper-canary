@@ -1,33 +1,33 @@
-n.d(t, { A: () => O });
+n.d(t, { A: () => y });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(735438),
-    o = n.n(a),
+    a = n.n(l),
+    r = n(735438),
+    o = n.n(r),
     d = n(158954),
     c = n(435371),
     u = n(397927),
-    _ = n(414079),
-    m = n(416052),
+    m = n(414079),
+    _ = n(416052),
     g = n(148810),
-    A = n(380610),
-    h = n(235986),
-    x = n(544028),
+    x = n(380610),
+    A = n(235986),
+    h = n(544028),
     p = n(652215),
-    T = n(986238),
-    E = n(258588),
-    C = n(436833),
-    S = n(522759);
-let f = ["discord_web", "discord_marketing", "discord_developers", "discord_ios", "discord_android"],
-    N = [
+    f = n(986238),
+    T = n(909453),
+    S = n(8350),
+    E = n(885106);
+let b = ["discord_web", "discord_marketing", "discord_developers", "discord_ios", "discord_android"],
+    C = [
         { id: "branch", value: "branch", label: "Branch Name" },
         { id: "id", value: "id", label: "Commit SHA" },
     ];
-function b(e) {
+function v(e) {
     return "discord_ios" in e || "discord_android" in e;
 }
-class I extends s.Component {
+class N extends s.Component {
     handleRemoveBuildOverride = () => {
         this.props.onBuildOverrideRemoved(this.props.project);
     };
@@ -39,29 +39,29 @@ class I extends s.Component {
     };
     render() {
         let { project: e, overrideType: t, overrideId: n, disabled: s, error: l } = this.props;
-        return (0, i.jsxs)(h.A, {
-            direction: h.A.Direction.VERTICAL,
-            className: r()(E.oS, S.SX, C.N, E.nM),
+        return (0, i.jsxs)(A.A, {
+            direction: A.A.Direction.VERTICAL,
+            className: a()(T.oS, E.SX, S.N, T.nM),
             children: [
-                (0, i.jsx)(_.A, {
-                    className: r()(E.lL, { [E.zi]: s }),
+                (0, i.jsx)(m.A, {
+                    className: a()(T.lL, { [T.zi]: s }),
                     onClick: s ? void 0 : this.handleRemoveBuildOverride,
                 }),
-                (0, i.jsxs)(h.A, {
-                    className: S.QB,
+                (0, i.jsxs)(A.A, {
+                    className: E.QB,
                     children: [
-                        (0, i.jsx)(h.A.Child, {
+                        (0, i.jsx)(A.A.Child, {
                             basis: "50%",
                             children: (0, i.jsx)(u.l6P, {
                                 selectionMode: "single",
                                 label: "Override Type",
-                                options: N,
+                                options: C,
                                 onSelectionChange: this.handleOverrideTypeChanged,
                                 value: t,
                                 disabled: s,
                             }),
                         }),
-                        (0, i.jsx)(h.A.Child, {
+                        (0, i.jsx)(A.A.Child, {
                             wrap: !0,
                             basis: "50%",
                             children: (0, i.jsx)(u.ksK, {
@@ -73,19 +73,19 @@ class I extends s.Component {
                         }),
                     ],
                 }),
-                (0, i.jsxs)(h.A.Child, {
+                (0, i.jsxs)(A.A.Child, {
                     children: [
                         null != l &&
                             "" !== l &&
                             (0, i.jsx)(u.Text, {
-                                className: E.AS,
+                                className: T.AS,
                                 color: "text-feedback-critical",
                                 variant: "text-sm/normal",
                                 children: l,
                             }),
                         (0, i.jsxs)(u.Text, {
                             variant: "text-sm/normal",
-                            className: E.AS,
+                            className: T.AS,
                             children: [
                                 "This controls the build that will be served for the ",
                                 (0, i.jsx)("code", { children: e }),
@@ -98,11 +98,11 @@ class I extends s.Component {
         });
     }
 }
-class v extends s.Component {
+class I extends s.Component {
     state = { loading: !0, buildOverrides: {}, loadedBuildOverrides: {}, errors: {}, saving: !1, didSave: !1 };
     async refreshBuildOverrides() {
         this.setState({ loading: !0 });
-        let e = await (0, A.bD)();
+        let e = await (0, x.bD)();
         this.setState({ loading: !1, buildOverrides: e, loadedBuildOverrides: o().cloneDeep(e), errors: {} });
     }
     isDirty() {
@@ -116,7 +116,7 @@ class v extends s.Component {
         let { buildOverrides: e } = this.state;
         if (null == e) return [];
         let t = Object.keys(e);
-        return o().without(f, ...t);
+        return o().without(b, ...t);
     }
     handleAddBuildOverride = (e) => {
         if (null == e) return;
@@ -161,8 +161,8 @@ class v extends s.Component {
     };
     renderEmpty() {
         return (0, i.jsx)(u.ppr, {
-            theme: x.A.theme,
-            className: r()(S.eT, S.SX),
+            theme: h.A.theme,
+            className: a()(E.eT, E.SX),
             children: (0, i.jsx)(u.SGT, { children: "You have no build overrides configured." }),
         });
     }
@@ -172,7 +172,7 @@ class v extends s.Component {
             ? null
             : o().map(e, (e, s) =>
                   (0, i.jsx)(
-                      I,
+                      N,
                       {
                           project: s,
                           overrideType: e.type,
@@ -219,7 +219,7 @@ class v extends s.Component {
                 (0, i.jsx)(u.Button, {
                     variant: "primary",
                     text: "Save Build Overrides",
-                    disabled: b(t ?? {}),
+                    disabled: v(t ?? {}),
                     onClick: this.handleSaveChanges,
                     loading: e,
                 }),
@@ -230,13 +230,13 @@ class v extends s.Component {
         let e,
             { loading: t, saving: n, buildOverrides: s } = this.state;
         e = t
-            ? (0, i.jsx)(u.y$y, { className: S.QX })
+            ? (0, i.jsx)(u.y$y, { className: E.QX })
             : null != s && 0 === Object.keys(s).length
               ? this.renderEmpty()
               : this.renderItems();
         let l = !n && !t && this.getAvailableProjects().length > 0,
-            r =
-                b(s ?? {}) && "stable" !== window.GLOBAL_ENV.RELEASE_CHANNEL
+            a =
+                v(s ?? {}) && "stable" !== window.GLOBAL_ENV.RELEASE_CHANNEL
                     ? (0, i.jsx)(u.Text, {
                           color: "text-feedback-critical",
                           variant: "text-md/normal",
@@ -259,7 +259,7 @@ class v extends s.Component {
                         onSelectionChange: this.handleAddBuildOverride,
                         disabled: !l,
                     }),
-                    r,
+                    a,
                     e,
                     (0, i.jsxs)(u.ButtonGroup, {
                         justify: "end",
@@ -377,7 +377,7 @@ class j extends s.Component {
                   ));
     };
     isMobile() {
-        return b(this.props.buildOverrides ?? {});
+        return v(this.props.buildOverrides ?? {});
     }
     renderSettingsForm() {
         let {
@@ -386,22 +386,22 @@ class j extends s.Component {
                 userIdEntry: n,
                 userIdEntryError: s,
                 allowedVersions: l,
-                allowedVersionEntry: r,
-                allowedVersionEntryError: a,
+                allowedVersionEntry: a,
+                allowedVersionEntryError: r,
                 allowLoggedOut: o,
                 experiments: d,
                 experimentsError: c,
             } = this.state,
-            _ = T.fL.find((t) => t.value === e),
-            m = l.map((e) => ({ id: e, label: e, value: e }));
+            m = f.fL.find((t) => t.value === e),
+            _ = l.map((e) => ({ id: e, label: e, value: e }));
         return (0, i.jsxs)(u.BJc, {
             gap: 20,
             children: [
                 (0, i.jsx)(u.l6P, {
                     selectionMode: "single",
                     label: "Expire After",
-                    value: null != _ ? _.value : void 0,
-                    options: T.fL,
+                    value: null != m ? m.value : void 0,
+                    options: f.fL,
                     onSelectionChange: this.handleExpirationChange,
                 }),
                 this.isMobile()
@@ -410,7 +410,7 @@ class j extends s.Component {
                           selectionMode: "single",
                           label: "Release Channel",
                           value: t,
-                          options: T.VP,
+                          options: f.VP,
                           onSelectionChange: this.handleReleaseChannelChange,
                       }),
                 this.isMobile()
@@ -420,9 +420,9 @@ class j extends s.Component {
                               (0, i.jsx)(u.ksK, {
                                   label: "Add allowed app version (required)",
                                   autoFocus: !0,
-                                  value: r,
+                                  value: a,
                                   onKeyDown: this.handleAllowedVersionEnter,
-                                  error: a,
+                                  error: r,
                                   onChange: this.handleAllowedVersionEntry,
                                   placeholder: "Example: 34",
                                   trailing: { icon: u.j96, onClick: this.handleAddAllowedVersion, "aria-label": "Add" },
@@ -431,7 +431,7 @@ class j extends s.Component {
                                   selectionMode: "single",
                                   label: "Remove allowed app version",
                                   value: void 0,
-                                  options: m,
+                                  options: _,
                                   onSelectionChange: this.handleRemoveAllowedVersion,
                                   disabled: 0 === l.length,
                               }),
@@ -480,7 +480,7 @@ class j extends s.Component {
         return (0, i.jsx)(d.Modal, {
             title: "Generate Public Build Override Link",
             input: this.renderHelpMessage(),
-            actionBarInput: (0, i.jsx)(m.A, { value: n }),
+            actionBarInput: (0, i.jsx)(_.A, { value: n }),
             transitionState: t,
             "aria-label": "Generate Public Build Override Link",
             actions: [{ variant: "primary", text: "Generate Link", onClick: this.handleGenerateLink }],
@@ -489,4 +489,4 @@ class j extends s.Component {
         });
     }
 }
-let O = v;
+let y = I;

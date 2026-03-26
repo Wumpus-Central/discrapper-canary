@@ -12,7 +12,7 @@ var l = n(627968),
     m = n(576705),
     h = n(874026),
     g = n(652215),
-    A = n(575157);
+    A = n(366e3);
 function f(e) {
     let { channel: t, children: n, childWrapperClassName: s } = e,
         o = i.useRef(null),

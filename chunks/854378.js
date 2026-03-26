@@ -2,11 +2,11 @@
 n.d(t, {
     $v: () => S,
     Ay: () => w,
-    CK: () => b,
+    CK: () => R,
     F4: () => y,
     KE: () => L,
     ME: () => C,
-    R1: () => O,
+    R1: () => b,
     _V: () => I,
     eB: () => N,
     eu: () => T,
@@ -29,7 +29,7 @@ var i = n(503698),
     f = n(975571),
     p = n(652215),
     h = n(985018),
-    m = n(334354);
+    m = n(22393);
 let E = a.euF;
 null == E && (E = () => null);
 let g = (e) => {
@@ -109,7 +109,7 @@ let v = (e) => {
         let { className: t, children: n } = e;
         return (0, r.jsx)(a.Text, { variant: "text-xs/normal", className: s()(m.Sv, t), children: n });
     },
-    b = (e) => {
+    R = (e) => {
         let { className: t } = e;
         return (0, r.jsx)(u.A, {
             direction: u.A.Direction.VERTICAL,
@@ -118,7 +118,7 @@ let v = (e) => {
             children: (0, r.jsx)(l.A, { className: m.$$ }),
         });
     },
-    R = (e) =>
+    O = (e) =>
         (0, r.jsx)(a.Text, {
             tag: "span",
             className: e?.className,
@@ -126,9 +126,9 @@ let v = (e) => {
             color: "text-default",
             children: e?.children,
         }),
-    O = (e) => {
+    b = (e) => {
         let t,
-            { online: n, total: i, className: a, flat: o, textClassName: l, renderText: c = R } = e;
+            { online: n, total: i, className: a, flat: o, textClassName: l, renderText: c = O } = e;
         return null == i
             ? null
             : (null != n &&

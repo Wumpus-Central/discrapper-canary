@@ -14,15 +14,15 @@ var i = n(627968),
     x = n(71393),
     h = n(351906),
     _ = n(954571),
-    A = n(555337),
-    p = n(855537),
+    p = n(555337),
+    A = n(855537),
     f = n(907445),
     j = n(11725),
     N = n(652215),
     E = n(897513),
     b = n(985018),
-    T = n(381929);
-let C = function (e, t, n) {
+    C = n(25424);
+let T = function (e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             s = null;
         return (
@@ -41,7 +41,7 @@ let C = function (e, t, n) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         return t || e === N.t02.NOT_ENOUGH_GUILD_MEMBERS
             ? (0, i.jsx)("div", {
-                  className: T.NA,
+                  className: C.NA,
                   children: (0, i.jsx)(d.wx6, { type: "info", children: b.intl.string(b.t["FsgE/B"]) }),
               })
             : null == e
@@ -50,10 +50,10 @@ let C = function (e, t, n) {
     },
     v = () => {
         let [e, t] = s.useState(!1),
-            n = (0, a.bG)([A.A], () => A.A.getGuildId());
+            n = (0, a.bG)([p.A], () => p.A.getGuildId());
         return (0, i.jsx)("div", {
             "data-button-hoisted-classname-wrapper": !0,
-            className: T.XU,
+            className: C.XU,
             children: (0, i.jsx)(d.Button, {
                 variant: "primary",
                 text: b.intl.string(b.t.Uskgxx),
@@ -85,7 +85,7 @@ let C = function (e, t, n) {
         });
     },
     S = () => {
-        let e = (0, a.bG)([A.A], () => A.A.getGuildId()),
+        let e = (0, a.bG)([p.A], () => p.A.getGuildId()),
             t = (0, a.bG)([g.A], () => g.A.getMemberCount(e)),
             n = (0, a.bG)([x.A], () => x.A.getGuild(e)),
             l = (0, a.bG)([m.default], () => m.default.locale),
@@ -103,7 +103,7 @@ let C = function (e, t, n) {
                     !n.features.has(N.GuildFeatures.PARTNERED) &&
                     !n.features.has(N.GuildFeatures.VERIFIED));
         s.useEffect(() => {
-            null == e || S || ((0, p.p9)(e), (0, p.fe)(e), (0, p._z)(e));
+            null == e || S || ((0, A.p9)(e), (0, A.fe)(e), (0, A._z)(e));
         }, [e, S]),
             s.useEffect(() => {
                 (0, u.sF)(E._.GUILD_ANALYTICS_GUILD_SETTINGS_MENU);
@@ -111,28 +111,28 @@ let C = function (e, t, n) {
         let y =
             null != r
                 ? (0, i.jsx)("div", {
-                      className: T.__invalid_guildAnalyticsOverviewWrapper,
+                      className: C.__invalid_guildAnalyticsOverviewWrapper,
                       children: (0, i.jsxs)("div", {
-                          className: T.SJ,
+                          className: C.SJ,
                           children: [
                               (0, i.jsx)(j.A, {
                                   title: b.intl.string(b.t.i0NorT),
                                   tooltipText: b.intl.string(b.t.KiRbLJ),
-                                  ...C(r.visitors, r.visitorsChange, l),
+                                  ...T(r.visitors, r.visitorsChange, l),
                               }),
                               (0, i.jsx)(j.A, {
                                   title: b.intl.string(b.t.DDAHdQ),
                                   tooltipText: b.intl.string(b.t.HxWUkU),
-                                  ...C(r.communicators, r.communicatorsChange, l),
+                                  ...T(r.communicators, r.communicatorsChange, l),
                               }),
                               (0, i.jsx)(j.A, {
                                   title: b.intl.string(b.t.hYeOqC),
-                                  ...C(r.newMembers, r.newMembersChange, l),
+                                  ...T(r.newMembers, r.newMembersChange, l),
                               }),
                               (0, i.jsx)(j.A, {
                                   title: b.intl.string(b.t.jj7OPw),
                                   tooltipText: b.intl.string(b.t.MQCslz),
-                                  ...C(r.pctRetained, r.pctRetainedChange, l, !0),
+                                  ...T(r.pctRetained, r.pctRetainedChange, l, !0),
                               }),
                           ],
                       }),
@@ -144,18 +144,18 @@ let C = function (e, t, n) {
                 (0, i.jsx)(d.Text, { variant: "text-sm/normal", children: b.intl.format(b.t.NIZ60a, {}) }),
                 I(o, S),
                 (0, i.jsxs)("div", {
-                    className: T.Pg,
+                    className: C.Pg,
                     children: [
-                        (0, i.jsx)("div", { className: T.jM }),
+                        (0, i.jsx)("div", { className: C.jM }),
                         (0, i.jsx)(d.Text, {
-                            className: T.WO,
+                            className: C.WO,
                             variant: "text-sm/normal",
                             children: b.intl.string(b.t.A5vswv),
                         }),
                         (0, i.jsx)(v, {}),
                     ],
                 }),
-                _ ? (0, i.jsx)("div", { className: T.Rc, children: (0, i.jsx)(c.A, {}) }) : y,
+                _ ? (0, i.jsx)("div", { className: C.Rc, children: (0, i.jsx)(c.A, {}) }) : y,
             ],
         });
     };

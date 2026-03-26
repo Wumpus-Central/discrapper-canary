@@ -13,7 +13,7 @@ var l = n(627968),
     x = n(369053),
     p = n(652215),
     h = n(985018),
-    g = n(71561);
+    g = n(266004);
 function A(e) {
     let { title: t, description: n, onButtonClick: r, trackSettingsUpsellsAction: i } = e,
         [d, c] = a.useState(!1);

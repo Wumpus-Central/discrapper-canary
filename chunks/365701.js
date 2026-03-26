@@ -20,9 +20,9 @@ var i = n(627968),
     j = n(555337),
     N = n(401755),
     E = n(985018),
-    b = n(776433),
-    T = n(473169);
-class C extends d.Ay.Store {
+    b = n(681409),
+    C = n(885106);
+class T extends d.Ay.Store {
     initialize() {
         this.waitFor(j.A, A.A);
     }
@@ -63,7 +63,7 @@ class C extends d.Ay.Store {
         );
     }
 }
-let I = new C(x.h);
+let I = new T(x.h);
 function v() {
     let [e, t] = s.useState(!1),
         n = async () => {
@@ -76,12 +76,12 @@ function S(e) {
 }
 function y() {
     return (0, i.jsx)("div", {
-        className: T.Q5,
+        className: C.Q5,
         children: (0, i.jsxs)(g.Fmo, {
             component: (0, i.jsx)(g.Heading, { variant: "heading-lg/semibold", children: E.intl.string(E.t.KUw7Ss) }),
             children: [
                 (0, i.jsx)(g.Text, {
-                    className: T.SX,
+                    className: C.SX,
                     variant: "text-sm/normal",
                     children: E.intl.format(E.t.c0m8bK, {}),
                 }),
@@ -127,17 +127,17 @@ function R() {
     )
         return null != t
             ? (0, i.jsx)(g.Text, { color: "text-feedback-critical", variant: "text-sm/normal", children: t.message })
-            : (0, i.jsx)(g.y$y, { className: T.eT });
+            : (0, i.jsx)(g.y$y, { className: C.eT });
     let c =
         null != t && null == t.getFirstFieldErrorMessage("name") && null == t.getFirstFieldErrorMessage("description");
     return (0, i.jsxs)(g.BJc, {
         gap: 20,
         children: [
-            (0, i.jsx)(L, {}),
+            (0, i.jsx)(G, {}),
             (0, i.jsx)(D, { guild: e, guildTemplate: a }),
             c
                 ? (0, i.jsx)(g.Text, {
-                      className: T.Ot,
+                      className: C.Ot,
                       color: "text-feedback-critical",
                       variant: "text-sm/normal",
                       children: t.getAnyErrorMessage(),
@@ -237,7 +237,7 @@ function O() {
         ],
     });
 }
-function G(e) {
+function L(e) {
     let { cancel: t, confirm: n } = e;
     return (0, i.jsx)(g.MJ3, {
         dismissable: !0,
@@ -253,7 +253,7 @@ function G(e) {
         }),
     });
 }
-function L() {
+function G() {
     let e = (0, d.bG)([I], () => I.name),
         t = (0, d.bG)([I], () => I.description),
         n = (0, d.bG)([I], () => I.error),
@@ -309,12 +309,12 @@ function D(e) {
                   n.isDirty &&
                       (0, i.jsx)(g.Text, {
                           color: "text-feedback-warning",
-                          className: T.Ot,
+                          className: C.Ot,
                           variant: "text-sm/normal",
                           children: E.intl.string(E.t.aWsjtD),
                       }),
                   (0, i.jsxs)("div", {
-                      className: r()(T.QX, b.UD),
+                      className: r()(C.QX, b.UD),
                       children: [
                           n.isDirty && (0, i.jsx)(k, { guild: t, guildTemplate: n }),
                           (0, i.jsxs)("div", {
@@ -401,7 +401,7 @@ function U(e) {
                     onClick: () => r(!0),
                 }),
             }),
-            l ? (0, i.jsx)(G, { confirm: a, cancel: () => r(!1) }) : null,
+            l ? (0, i.jsx)(L, { confirm: a, cancel: () => r(!1) }) : null,
         ],
     });
 }
@@ -415,7 +415,7 @@ function P(e) {
             text: E.intl.string(E.t.YI3iV6),
             onClick: () =>
                 (0, g.mMO)(async () => {
-                    let { default: e } = await Promise.all([n.e("7726"), n.e("4042")]).then(n.bind(n, 72715));
+                    let { default: e } = await Promise.all([n.e("7726"), n.e("49040")]).then(n.bind(n, 72715));
                     return (n) => (0, i.jsx)(e, { ...n, guildTemplate: t });
                 }),
         }),

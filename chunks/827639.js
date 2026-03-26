@@ -1,3 +1,24 @@
-e.exports = JSON.parse(
-    '{"+utqaz":["Geschenk-Hintergrundoption: ",[1,"giftStyle"]],"B9XqQk":["Schachtel"],"AJ4iir":["Kuchen"],"P5keo3":["Truhe"],"w84vET":["Kaffee"],"6dCq/u":["Tasse"],"+HMF8k":["Nitroween"],"vd1fu/":["Festtagsschachtel"],"aubYGR":["Festtagskuchen"],"vjxYqU":["Festtagstruhe"],"bHuJLa":["Festtagskaffee"],"M6cPwB":["Schneekugel"],"GzPel1":["Box"]}',
-);
+"use strict";
+e.exports = {
+    Th: "spacingContainer_eaaeee",
+    e4: "formFieldContainer_eaaeee",
+    fc: "actionButtonsContainer_eaaeee",
+    oE: "compact_eaaeee",
+    ZM: "canRemove_eaaeee",
+    hP: "actionButton_eaaeee",
+    _Q: "backgroundContainer_eaaeee",
+    pK: "containerPadding_eaaeee",
+    ds: "compactContainer_eaaeee",
+    ID: "compactTitle_eaaeee",
+    cK: "dragContainer_eaaeee",
+    co: "dragIcon_eaaeee",
+    VU: "dragIconContainer_eaaeee",
+    TG: "dropHovered_eaaeee",
+    DD: "title_eaaeee",
+    Gp: "containerTitle_eaaeee title_eaaeee",
+    vk: "clickable_eaaeee",
+    Gc: "fieldPadding_eaaeee",
+    vs: "fieldFooterContainer_eaaeee",
+    IC: "termsFieldCaretIcon_eaaeee",
+    L6: "typeTag_eaaeee",
+};

@@ -2,21 +2,21 @@
 n.d(t, { A: () => l });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(742947);
+    s = n(503698),
+    a = n.n(s),
+    o = n(90954);
 let l = (e) => {
-    let { src: t, alt: n, size: a, "aria-label": l, className: u } = e,
+    let { src: t, alt: n, size: s, "aria-label": l, className: u } = e,
         c = i.useRef(null),
         d = i.useRef(!1),
         _ = d.current ? o.S : o.Y;
     return (0, r.jsx)("img", {
-        className: s()(_, u),
+        className: a()(_, u),
         alt: n,
         src: t,
         ref: c,
         "aria-label": l,
-        style: { backgroundSize: a, height: a, width: a },
+        style: { backgroundSize: s, height: s, width: s },
         onLoad: d.current
             ? void 0
             : (e) => {

@@ -15,7 +15,7 @@ var a = l(627968),
     p = l(550997),
     g = l(652215),
     b = l(985018),
-    f = l(903957);
+    f = l(3952);
 let x = m.A.reactParserFor(p.default.getDefaultRules(f)),
     k = {};
 class A extends n.PureComponent {

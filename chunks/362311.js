@@ -12,7 +12,7 @@ var i = n(627968),
     C = n(808728),
     g = n(71393),
     _ = n(985018),
-    L = n(124921);
+    L = n(80240);
 function u(t) {
     let { createdGuildId: e, hasFooter: n = !0, onClose: u, onChannelPromptCompleted: x, isSlideReady: T } = t,
         [E, G] = a.useState(""),

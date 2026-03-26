@@ -1,23 +1,23 @@
 "use strict";
-n.d(t, { A: () => E });
-var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    a = n.n(l),
-    r = n(311907),
-    o = n(685603),
-    d = n(467627),
-    c = n(967198),
-    u = n(855790),
-    h = n(335022),
-    p = n(714977),
-    A = n(266244),
-    f = n(439817),
-    g = n(985018),
-    _ = n(90901);
-function m(e) {
+i.d(t, { A: () => v });
+var n = i(627968),
+    s = i(64700),
+    a = i(503698),
+    l = i.n(a),
+    r = i(311907),
+    o = i(685603),
+    d = i(467627),
+    c = i(967198),
+    u = i(855790),
+    h = i(335022),
+    _ = i(714977),
+    p = i(266244),
+    f = i(439817),
+    m = i(985018),
+    g = i(156052);
+function A(e) {
     let { closePopout: t } = e;
-    return (0, i.jsx)(p.A, { onClose: t });
+    return (0, n.jsx)(_.A, { onClose: t });
 }
 class x extends s.PureComponent {
     static defaultProps = { contained: !1 };
@@ -26,21 +26,21 @@ class x extends s.PureComponent {
         t(o.P.MOVE, e.clientX, e.clientY);
     };
     render() {
-        let { selectedGuildId: e, locked: t, contained: n, className: s } = this.props,
-            l =
+        let { selectedGuildId: e, locked: t, contained: i, className: s } = this.props,
+            a =
                 null != e
-                    ? (0, i.jsx)(h.A, { guildId: e, onDragStart: this.onDragStart }, e)
-                    : (0, i.jsx)(f.A, {
-                          title: g.intl.string(g.t.YUU0RF),
-                          renderSettings: m,
+                    ? (0, n.jsx)(h.A, { guildId: e, onDragStart: this.onDragStart }, e)
+                    : (0, n.jsx)(f.A, {
+                          title: m.intl.string(m.t.YUU0RF),
+                          renderSettings: A,
                           onDragStart: this.onDragStart,
-                          children: (0, i.jsx)(A.A, {}),
+                          children: (0, n.jsx)(p.A, {}),
                       }),
-            r = n ? "div" : u.Ay;
-        return (0, i.jsxs)(r, {
-            className: a()(_.E, { [_.H]: !n }, s),
-            children: [(0, i.jsx)(d.A, { isOverlay: !0, disableAppDownload: !0, isVisible: !t }), l],
+            r = i ? "div" : u.Ay;
+        return (0, n.jsxs)(r, {
+            className: l()(g.E, { [g.H]: !i }, s),
+            children: [(0, n.jsx)(d.A, { isOverlay: !0, disableAppDownload: !0, isVisible: !t }), a],
         });
     }
 }
-let E = r.Ay.connectStores([c.A], () => ({ selectedGuildId: c.A.getGuildId() }))(x);
+let v = r.Ay.connectStores([c.A], () => ({ selectedGuildId: c.A.getGuildId() }))(x);

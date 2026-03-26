@@ -1,1 +1,2 @@
-e.exports = { _: "tags_e5a45e", L: "wrap_e5a45e" };
+"use strict";
+e.exports = { q: "badge_dd79c2" };

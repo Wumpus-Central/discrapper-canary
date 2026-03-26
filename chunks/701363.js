@@ -55,7 +55,7 @@ var l = n(627968),
     en = n(837921),
     el = n(652215),
     es = n(985018),
-    ei = n(45119);
+    ei = n(107852);
 let ea = en.Ay.getEnableHardwareAcceleration() ? x.JsQ : x.euF,
     er = { offset: { top: 2, bottom: 2, right: 4 } },
     eu = (e) => {
@@ -256,7 +256,7 @@ function eA(e) {
                                   n.e("97262"),
                                   n.e("42128"),
                                   n.e("39778"),
-                                  n.e("76779"),
+                                  n.e("63270"),
                               ]).then(n.bind(n, 385913));
                               return (n) => (0, l.jsx)(e, { ...n, user: r, channel: t, channelSelected: i });
                           },
@@ -275,17 +275,17 @@ function eA(e) {
                     return (t) => (0, l.jsx)(e, { title: s, body: i, onSubmit: eJ, ...t });
                 });
         },
-        e9 = (0, l.jsx)(V.A, {
+        e3 = (0, l.jsx)(V.A, {
             userName: eB,
             displayNameStyles: r?.displayNameStyles,
             effectDisplayType: em || i || ef ? k.G.ANIMATED : k.G.PLAIN,
             loop: em,
             boldFontOpacity: 0.9,
         }),
-        e6 = ew
+        e9 = ew
             ? (0, l.jsxs)(l.Fragment, {
                   children: [
-                      e9,
+                      e3,
                       (0, l.jsx)(z.Ay, {
                           primaryGuild: r?.primaryGuild,
                           userId: r?.id,
@@ -295,18 +295,18 @@ function eA(e) {
                       }),
                   ],
               })
-            : e9,
-        e7 = s.useRef(null),
-        e3 = (0, F.W)({ location: "PrivateChannel" }) && r?.displayNameStyles != null,
-        e5 = [(0, y.Ay)({ channel: t, unread: eq }), (0, y.r2)({ channel: t, muted: eG, userStatus: w })]
+            : e3,
+        e6 = s.useRef(null),
+        e7 = (0, F.W)({ location: "PrivateChannel" }) && r?.displayNameStyles != null,
+        e8 = [(0, y.Ay)({ channel: t, unread: eq }), (0, y.r2)({ channel: t, muted: eG, userStatus: w })]
             .filter(Boolean)
             .join(", "),
-        e4 = (0, S.bG)([$.Ay], () => $.Ay.lastMessageId(t.id)),
-        { waveShouldShow: e8, wavePressed: te } = (0, D.A)(t, e4),
+        e5 = (0, S.bG)([$.Ay], () => $.Ay.lastMessageId(t.id)),
+        { waveShouldShow: e4, wavePressed: te } = (0, D.A)(t, e5),
         { showClose: tt } = R.A.useConfig({ location: "PrivateChannel" }),
         tn = (0, p.A)(() => {
             let e = eL.current?.getBoundingClientRect() ?? null,
-                t = e7.current?.getBoundingClientRect() ?? null;
+                t = e6.current?.getBoundingClientRect() ?? null;
             if (null == t || null == e || e.width + 44 - t.width <= 0) return void ey({ maskImage: "none" });
             let n = t.width - 16;
             ey({
@@ -346,19 +346,19 @@ function eA(e) {
                                     nameplate: ez ? Z : void 0,
                                     selected: i,
                                     hovered: em,
-                                    content: e7,
+                                    content: e6,
                                     placement: G.u.CHANNEL,
                                 }),
-                                (0, l.jsx)("div", { className: ei.lU, ref: eL, children: e6 }),
+                                (0, l.jsx)("div", { className: ei.lU, ref: eL, children: e9 }),
                                 (0, l.jsx)(o.N_, {
                                     style: eR,
                                     innerRef: eh,
                                     to: el.BVt.CHANNEL(el.ME, t.id),
                                     className: ei.nf,
-                                    "aria-label": e5,
+                                    "aria-label": e8,
                                     ...s,
                                     children: (0, l.jsx)(b.A, {
-                                        ref: e7,
+                                        ref: e6,
                                         avatar: (() => {
                                             let e = x._3J.SIZE_32;
                                             if (t.isMultiUserDM())
@@ -432,7 +432,7 @@ function eA(e) {
                                                       iconClassName: eV ? ei.tG : void 0,
                                                   })
                                                 : null,
-                                        name: (0, l.jsx)(h.A, { className: a()(ei.uN, { [ei.e8]: e3 }), children: e6 }),
+                                        name: (0, l.jsx)(h.A, { className: a()(ei.uN, { [ei.e8]: e7 }), children: e9 }),
                                         decorators: t.isSystemDM()
                                             ? (0, l.jsx)(M.A, {
                                                   className: ei.G$,
@@ -440,7 +440,7 @@ function eA(e) {
                                                   verified: !0,
                                               })
                                             : null,
-                                        withDisplayNameStyles: e3,
+                                        withDisplayNameStyles: e7,
                                     }),
                                 }),
                                 (0, l.jsxs)("div", {
@@ -448,10 +448,10 @@ function eA(e) {
                                     children: [
                                         eF ? (0, l.jsx)(ec, {}) : null,
                                         ek ? (0, l.jsx)(ed, {}) : null,
-                                        e8 && null != eB
+                                        e4 && null != eB
                                             ? (0, l.jsx)(eo, { channelName: eB, onClick: te, showNameplate: ez })
                                             : null,
-                                        tt || !e8
+                                        tt || !e4
                                             ? (0, l.jsx)(eu, {
                                                   icon: x.PGe,
                                                   "aria-label": eU

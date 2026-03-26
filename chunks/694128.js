@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { $: () => s, S: () => l });
+n.d(t, { $: () => a, S: () => l });
 var r = n(627968);
 n(64700);
 var i = n(835245),
-    a = n(651122);
-function s() {
+    s = n(46665);
+function a() {
     return (0, r.jsx)("svg", {
-        className: a.d,
+        className: s.d,
         version: "1.1",
         preserveAspectRatio: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -24,7 +24,7 @@ function s() {
 let o = (0, i.A)();
 function l() {
     return (0, r.jsxs)("svg", {
-        className: a.S4,
+        className: s.S4,
         version: "1.1",
         preserveAspectRatio: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -42,9 +42,9 @@ function l() {
                 x2: "1221.1846",
                 y2: "1689.3361",
                 children: [
-                    (0, r.jsx)("stop", { offset: "0", className: a.V9 }),
-                    (0, r.jsx)("stop", { offset: "0.5", className: a.o8 }),
-                    (0, r.jsx)("stop", { offset: "1", className: a.hu }),
+                    (0, r.jsx)("stop", { offset: "0", className: s.V9 }),
+                    (0, r.jsx)("stop", { offset: "0.5", className: s.o8 }),
+                    (0, r.jsx)("stop", { offset: "1", className: s.hu }),
                 ],
             }),
             (0, r.jsx)("path", {

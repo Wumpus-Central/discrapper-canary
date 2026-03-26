@@ -3,7 +3,7 @@ var i = n(627968),
     l = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(497766),
+    r = n(4208),
     o = n(311907),
     c = n(397927),
     d = n(964486),
@@ -22,9 +22,9 @@ var i = n(627968),
     I = n(474090),
     T = n(927578),
     N = n(971778),
-    y = n(494783),
+    v = n(494783),
     b = n(342887),
-    v = n(606451),
+    y = n(606451),
     j = n(177392),
     R = n(185494),
     M = n(15910),
@@ -35,16 +35,16 @@ var i = n(627968),
     w = n(731854),
     k = n(734317),
     U = n(985018),
-    G = n(632998);
+    G = n(365145);
 function F(e) {
     let { onSettingsButtonClick: t, wide: n, showOutputDevices: s = !1, showSearchBar: F = !0 } = e,
         [H, B] = l.useState(""),
         { analyticsLocations: V, newestAnalyticsLocation: K } = (0, m.Ay)(h.A.VOICE_FILTER_POPOUT),
-        z = l.useRef(null),
-        W = (0, u.A)({
+        W = l.useRef(null),
+        z = (0, u.A)({
             minDimension: 400,
             maxDimension: 600,
-            resizableDomNodeRef: z,
+            resizableDomNodeRef: W,
             onElementResize: (e, t) => {},
             onElementResizeEnd: (e) => {},
             orientation: u.R.VERTICAL_TOP,
@@ -54,7 +54,7 @@ function F(e) {
         q = (0, o.bG)([N.A], () => N.A.getCatalogUpdateTime()),
         [J, $] = l.useState(!1),
         [Z, X] = l.useState(!1),
-        { activeVoice: Q } = (0, y.f)(),
+        { activeVoice: Q } = (0, v.f)(),
         ee = (0, c.zhh)({
             transform: J ? "translateY(-8px) scale(0.96)" : "translateY(0px) scale(1)",
             config: { duration: 150, mass: 1, stiffness: 711.1, damping: 40 },
@@ -74,14 +74,14 @@ function F(e) {
     return (0, i.jsx)(m.f5, {
         value: V,
         children: (0, i.jsxs)("div", {
-            ref: z,
+            ref: W,
             className: a()(G.ZO, { [G.U]: n, [G.Fd]: !ea }),
             style: { height: 500 },
             children: [
                 ea &&
                     (0, i.jsx)("div", {
                         className: G.Di,
-                        onMouseDown: W,
+                        onMouseDown: z,
                         children: (0, i.jsx)("div", { className: G.YC }),
                     }),
                 F &&
@@ -133,7 +133,7 @@ function F(e) {
                         ],
                     }),
                 (0, i.jsx)(j.H, {}),
-                (0, i.jsx)(v.m, {}),
+                (0, i.jsx)(y.m, {}),
                 (0, i.jsx)(R.l, {}),
                 (0, i.jsxs)("div", {
                     className: a()(G.N$, { [G.rd]: null != Q }),

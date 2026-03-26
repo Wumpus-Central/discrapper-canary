@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => g, n: () => m });
+n.d(t, { A: () => E, n: () => m });
 var r = n(627968),
     i = n(64700),
-    a = n(990078),
-    s = n(397927),
+    s = n(990078),
+    a = n(397927),
     o = n(442433),
     l = n(50268),
     u = n(409626),
@@ -12,32 +12,32 @@ var r = n(627968),
     _ = n(20805),
     f = n(420706),
     p = n(985018),
-    h = n(596020);
+    h = n(22239);
 let m = "content-inventory-context";
-function g(e) {
-    let { user: t, guildId: n, channel: g, entry: E, onSelect: A, disableGameProfileLinks: I } = e,
+function E(e) {
+    let { user: t, guildId: n, channel: E, entry: g, onSelect: A, disableGameProfileLinks: I } = e,
         T = i.useRef(null),
-        y = i.useContext(f.Jd),
-        S = (0, d.A)({ userId: t.id, guildId: n, channelId: g?.id, onAction: y }),
+        S = i.useContext(f.Jd),
+        y = (0, d.A)({ userId: t.id, guildId: n, channelId: E?.id, onAction: S }),
         v = (0, l.A)({ id: t.id, label: p.intl.string(p.t["/AXYnE"]) }),
-        C = "application_id" in E.extra ? E.extra.application_id : null,
-        b = (0, l.A)({ id: C, label: p.intl.string(p.t["FfCL+6"]) }),
-        N = (0, _.zD)(E),
-        R = (0, c.A)({
+        N = "application_id" in g.extra ? g.extra.application_id : null,
+        C = (0, l.A)({ id: N, label: p.intl.string(p.t["FfCL+6"]) }),
+        R = (0, _.zD)(g),
+        O = (0, c.A)({
             location: "ContentPopoutContextMenu",
-            applicationId: N && !0 !== I ? E.extra?.application_id : void 0,
+            applicationId: R && !0 !== I ? g.extra?.application_id : void 0,
             source: u.Ob.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
-            sourceUserId: E.author_id,
+            sourceUserId: g.author_id,
         });
-    return (0, r.jsx)(s.YNO, {
+    return (0, r.jsx)(a.YNO, {
         targetElementRef: T,
         align: "top",
         position: "right",
         disablePointerEvents: !1,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(s.W1t, {
+            return (0, r.jsx)(a.W1t, {
                 "data-menu-migrated-auto": !0,
                 navId: m,
                 onClose: () => {
@@ -47,33 +47,33 @@ function g(e) {
                 onSelect: A,
                 children: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsxs)(s.rXV, {
+                        (0, r.jsxs)(a.rXV, {
                             children: [
-                                S,
-                                null != R &&
-                                    (0, r.jsx)(s.Drp, {
+                                y,
+                                null != O &&
+                                    (0, r.jsx)(a.Drp, {
                                         id: "game-profile",
                                         label: p.intl.string(p.t.f7aVGn),
                                         action: (e) => {
-                                            R(e), y?.();
+                                            O(e), S?.();
                                         },
                                     }),
                             ],
                         }),
-                        (0, r.jsxs)(s.rXV, { children: [v, b] }),
+                        (0, r.jsxs)(a.rXV, { children: [v, C] }),
                     ],
                 }),
             });
         },
         children: (e) =>
-            (0, r.jsx)(a.m, {
+            (0, r.jsx)(s.m, {
                 asContainer: !0,
                 text: p.intl.string(p.t["UKOtz+"]),
-                children: (0, r.jsx)(s.DUT, {
+                children: (0, r.jsx)(a.DUT, {
                     innerRef: T,
                     className: h.r,
                     ...e,
-                    children: (0, r.jsx)(s.jNK, { color: "currentColor", size: "custom", width: 16, height: 16 }),
+                    children: (0, r.jsx)(a.jNK, { color: "currentColor", size: "custom", width: 16, height: 16 }),
                 }),
             }),
     });

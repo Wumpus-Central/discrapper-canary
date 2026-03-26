@@ -1,43 +1,43 @@
-n.d(t, { A: () => C, Y: () => h });
+n.d(t, { A: () => f, Y: () => h });
 var i = n(627968),
     s = n(64700),
-    r = n(503698),
-    a = n.n(r),
-    l = n(417597),
+    l = n(503698),
+    a = n.n(l),
+    r = n(417597),
     o = n(397927),
-    c = n(714991),
-    d = n(695515),
+    d = n(714991),
+    c = n(695515),
     u = n(397808),
-    _ = n(652215),
-    m = n(842130),
-    A = n(985018),
-    g = n(957415);
-let E = [18, 18, 16, 16, 14, 12, 10];
+    m = n(652215),
+    _ = n(842130),
+    g = n(985018),
+    x = n(75262);
+let A = [18, 18, 16, 16, 14, 12, 10];
 function h(e) {
-    return E[e.length - 1] ?? E[E.length - 1];
+    return A[e.length - 1] ?? A[A.length - 1];
 }
 let p = s.memo((e) => {
     let { guildId: t, className: n, customSubtext: s } = e,
-        r = (0, l.bG)([d.A], () => d.A.getGuild(t));
-    if (void 0 === r) return null;
-    let E = r.features.has(_.GuildFeatures.VERIFIED) || r.features.has(_.GuildFeatures.PARTNERED),
-        { name: h } = r;
+        l = (0, r.bG)([c.A], () => c.A.getGuild(t));
+    if (void 0 === l) return null;
+    let A = l.features.has(m.GuildFeatures.VERIFIED) || l.features.has(m.GuildFeatures.PARTNERED),
+        { name: h } = l;
     return (0, i.jsxs)("div", {
-        className: a()(g.kL, n),
+        className: a()(x.kL, n),
         children: [
             (0, i.jsx)(u.A, { guildId: t }),
             (0, i.jsxs)("div", {
-                className: g.$z,
+                className: x.$z,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: g.wx,
+                        className: x.wx,
                         children: [
-                            E
-                                ? (0, i.jsx)(c.A, {
-                                      guild: r,
+                            A
+                                ? (0, i.jsx)(d.A, {
+                                      guild: l,
                                       tooltipPosition: "bottom",
                                       tooltipColor: o.STz.Colors.PRIMARY,
-                                      className: g.n2,
+                                      className: x.n2,
                                   })
                                 : null,
                             (0, i.jsx)(o.Text, { variant: "text-md/semibold", children: h }),
@@ -49,8 +49,8 @@ let p = s.memo((e) => {
                         children:
                             null != s
                                 ? s
-                                : void 0 !== r.approximateMemberCount
-                                  ? A.intl.format(m.default["5JmNgg"], { members: r.approximateMemberCount })
+                                : void 0 !== l.approximateMemberCount
+                                  ? g.intl.format(_.default["5JmNgg"], { members: l.approximateMemberCount })
                                   : null,
                     }),
                 ],
@@ -59,4 +59,4 @@ let p = s.memo((e) => {
     });
 });
 p.displayName = "FamilyCenterActivityGuildRow";
-let C = p;
+let f = p;

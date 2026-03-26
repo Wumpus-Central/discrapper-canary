@@ -21,8 +21,8 @@ var i = n(627968),
     N = n(652215),
     E = n(539916),
     b = n(985018),
-    T = n(42483);
-function C(e) {
+    C = n(851824);
+function T(e) {
     let { guildId: t, prompts: n } = e,
         r = (0, l.bG)([m.A], () => m.A.editedDefaultChannelIds),
         [d, u] = (0, c.Lx)(t, n, [...r]),
@@ -33,18 +33,18 @@ function C(e) {
         [p, A] = s.useState(!1),
         f = p ? a.abt : a.tN5;
     return (0, i.jsxs)("div", {
-        className: T.Kf,
+        className: C.Kf,
         children: [
             (0, i.jsxs)(a.DUT, {
-                className: T.a9,
+                className: C.a9,
                 onClick: () => A(!p),
                 children: [
                     (0, i.jsxs)("div", {
-                        className: T.Vn,
+                        className: C.Vn,
                         children: [
-                            h <= 85 && (0, i.jsx)(a.EpV, { size: "xs", color: "currentColor", className: T.$e }),
+                            h <= 85 && (0, i.jsx)(a.EpV, { size: "xs", color: "currentColor", className: C.$e }),
                             (0, i.jsx)(a.Text, {
-                                className: T.XG,
+                                className: C.XG,
                                 variant: "text-xs/medium",
                                 color: "text-muted",
                                 children: b.intl.format(b.t.nMVKCX, { numChannelsMissing: x - g }),
@@ -52,21 +52,21 @@ function C(e) {
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: T.L$,
+                        className: C.L$,
                         children: [
                             (0, i.jsx)(a.iCB, {
-                                className: T.gH,
+                                className: C.gH,
                                 foregroundColor: h > 85 ? "var(--status-positive)" : "var(--status-warning)",
                                 percent: h,
                             }),
-                            (0, i.jsx)(f, { size: "md", color: "currentColor", className: T.OW }),
+                            (0, i.jsx)(f, { size: "md", color: "currentColor", className: C.OW }),
                         ],
                     }),
                 ],
             }),
             p
                 ? (0, i.jsxs)("div", {
-                      className: T.k$,
+                      className: C.k$,
                       children: [
                           (0, i.jsx)(a.Text, {
                               variant: "text-xs/semibold",
@@ -74,15 +74,15 @@ function C(e) {
                               children: b.intl.string(b.t["0FM4i+"]),
                           }),
                           (0, i.jsx)("div", {
-                              className: T.BM,
+                              className: C.BM,
                               children: u.map((e) => {
                                   let t = (0, o.gU)(e) ?? a.N$i;
                                   return (0, i.jsx)(
                                       "div",
                                       {
-                                          className: T.N5,
+                                          className: C.N5,
                                           children: (0, i.jsxs)(a.Text, {
-                                              className: T.Ix,
+                                              className: C.Ix,
                                               variant: "text-xs/normal",
                                               color: "interactive-text-active",
                                               children: [(0, i.jsx)(t, { size: "xxs", color: "currentColor" }), e.name],
@@ -93,7 +93,7 @@ function C(e) {
                               }),
                           }),
                           (0, i.jsx)("div", {
-                              className: T.fg,
+                              className: C.fg,
                               children:
                                   _ > 0
                                       ? (0, i.jsxs)(i.Fragment, {
@@ -158,7 +158,7 @@ function v(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(a.Heading, {
-                className: T.wx,
+                className: C.wx,
                 variant: "heading-lg/extrabold",
                 children: c ? b.intl.string(b.t.AGjtFv) : b.intl.string(b.t.dqCzoT),
             }),
@@ -168,7 +168,7 @@ function v(e) {
                 children: b.intl.string(b.t["q/6MLL"]),
             }),
             (0, i.jsxs)("div", {
-                className: T.yJ,
+                className: C.yJ,
                 children: [
                     (0, i.jsx)(a.MzZ, {
                         target: "_blank",
@@ -179,7 +179,7 @@ function v(e) {
                             children: b.intl.string(b.t.Ok55Kh),
                         }),
                     }),
-                    (0, i.jsx)("div", { className: T.Om }),
+                    (0, i.jsx)("div", { className: C.Om }),
                     (0, i.jsx)(a.MzZ, {
                         onClick: h,
                         children: (0, i.jsx)(a.Text, {
@@ -188,14 +188,14 @@ function v(e) {
                             children: b.intl.string(b.t["6gsjdM"]),
                         }),
                     }),
-                    (0, i.jsx)("div", { className: T.Om }),
+                    (0, i.jsx)("div", { className: C.Om }),
                     (0, i.jsx)(A.mU, { guildId: t.id }),
                 ],
             }),
-            (0, i.jsx)(C, { guildId: t.id, prompts: o }),
+            (0, i.jsx)(T, { guildId: t.id, prompts: o }),
             n && (0, i.jsx)(f.A, { guildId: t.id }),
             (0, i.jsx)("div", {
-                className: T.E3,
+                className: C.E3,
                 children: r ? (0, i.jsx)(a.y$y, {}) : (0, i.jsx)(j.A, { postjoinOnly: c, guildId: t.id }),
             }),
         ],

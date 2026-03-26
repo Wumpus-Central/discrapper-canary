@@ -18,12 +18,12 @@ var i = n(627968),
     A = n(411335),
     f = n(652215),
     j = n(985018),
-    N = n(64638);
+    N = n(214259);
 function E(e) {
     let { guildId: t, setPreventNavigation: n = () => {} } = e,
         { editingRule: E, setEditingRule: b } = (0, x.U)(),
-        { guild: T, subsection: C } = (0, l.cf)([a.A], () => a.A.getProps()),
-        I = T?.id ?? t ?? f.dJq,
+        { guild: C, subsection: T } = (0, l.cf)([a.A], () => a.A.getProps()),
+        I = C?.id ?? t ?? f.dJq,
         v = null != E,
         [S] = (0, u.qv)(I),
         { rulesByTriggerType: y } = (0, u.wP)(I),
@@ -35,13 +35,13 @@ function E(e) {
                     .filter(d.Vq),
             [y],
         ),
-        G = { isInEditMode: v, setEditingRule: b },
-        L = s.useRef(G);
+        L = { isInEditMode: v, setEditingRule: b },
+        G = s.useRef(L);
     s.useEffect(() => {
-        L.current = G;
+        G.current = L;
     }),
         s.useEffect(() => {
-            let { isInEditMode: e, setEditingRule: t } = L.current;
+            let { isInEditMode: e, setEditingRule: t } = G.current;
             e && t(null);
         }, [I]);
     let D = s.useCallback(
@@ -119,7 +119,7 @@ function E(e) {
                                                   triggerType: e,
                                                   rules: y[e] ?? [],
                                                   initWithEdit:
-                                                      C === f.nd0.AUTOMOD_MENTION_SPAM && e === A.uh.MENTION_SPAM,
+                                                      T === f.nd0.AUTOMOD_MENTION_SPAM && e === A.uh.MENTION_SPAM,
                                               },
                                               e,
                                           ),
@@ -130,7 +130,7 @@ function E(e) {
                           t,
                       );
                   }),
-            null != T && (0, i.jsx)(o.t9, { guild: T, withDivider: !1, className: N.Vf }),
+            null != C && (0, i.jsx)(o.t9, { guild: C, withDivider: !1, className: N.Vf }),
             (0, i.jsx)(h.A, { guildId: I, existingRules: O }),
             v && (0, i.jsx)("div", { className: N.OL }),
         ],

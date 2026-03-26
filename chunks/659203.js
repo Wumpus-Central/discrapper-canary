@@ -16,12 +16,12 @@ var i = n(627968),
     T = n(287809),
     f = n(166403),
     N = n(954571),
-    C = n(405269),
-    g = n(975571),
+    g = n(405269),
+    C = n(975571),
     h = n(927578),
     p = n(580630),
-    R = n(851746),
-    x = n(259297),
+    x = n(851746),
+    R = n(259297),
     S = n(727949),
     O = n(664654),
     M = n(303682),
@@ -30,7 +30,7 @@ var i = n(627968),
     U = n(788868),
     v = n(652215),
     L = n(985018),
-    j = n(26875),
+    j = n(739636),
     y = n(954457);
 class b extends a.Component {
     trialOffer;
@@ -59,7 +59,7 @@ class b extends a.Component {
         if (this.isSender) return L.intl.format(L.t["4/EMxl"], { receiver: e?.username });
         let t = T.default.getUser(this.trialOffer.referrer_id),
             n = t?.username !== void 0 ? t.username : "";
-        return L.intl.format(L.t.yisueA, { sender: n, helpdeskArticle: g.A.getArticleURL(v.MVz.REFERRAL_PROGRAM) });
+        return L.intl.format(L.t.yisueA, { sender: n, helpdeskArticle: C.A.getArticleURL(v.MVz.REFERRAL_PROGRAM) });
     }
     getTitleText() {
         let e = T.default.getUser(this.trialOffer.user_id),
@@ -76,7 +76,7 @@ class b extends a.Component {
     }
     getBodyText() {
         return this.recipientHasNitro && !this.isSender && void 0 === this.trialOffer.redeemed_at
-            ? L.intl.format(L.t.LwCwT9, { helpdeskArticle: g.A.getArticleURL(v.MVz.REFERRAL_PROGRAM) })
+            ? L.intl.format(L.t.LwCwT9, { helpdeskArticle: C.A.getArticleURL(v.MVz.REFERRAL_PROGRAM) })
             : this.offerExpired
               ? null
               : L.intl.string(L.t.lQLlOb);
@@ -115,11 +115,11 @@ class b extends a.Component {
     renderExpirationDate() {
         let { trialOffer: e, trialEndsAt: t } = this.props;
         if (void 0 !== e.redeemed_at && !this.isSender && null !== t)
-            return L.intl.formatToPlainString(L.t.nP0ivR, { date: (0, C.i$)(r()(t), "LL") });
+            return L.intl.formatToPlainString(L.t.nP0ivR, { date: (0, g.i$)(r()(t), "LL") });
         if (this.recipientHasNitro || void 0 === e.expires_at) return null;
         let n = r()(e.expires_at);
         return this.offerExpired
-            ? L.intl.formatToPlainString(L.t.PuSHfU, { date: (0, C.i$)(r()(n), "LL") })
+            ? L.intl.formatToPlainString(L.t.PuSHfU, { date: (0, g.i$)(r()(n), "LL") })
             : (0, S.GQ)(n.valueOf());
     }
     renderMedia() {
@@ -136,7 +136,7 @@ class b extends a.Component {
                         return {
                             headerText: L.intl.formatToPlainString(L.t.qABVhL, { recipient: t }),
                             bodyText: L.intl.formatToPlainString(L.t.u7hyDx, {
-                                helpdeskArticle: g.A.getArticleURL(v.MVz.REFERRAL_PROGRAM),
+                                helpdeskArticle: C.A.getArticleURL(v.MVz.REFERRAL_PROGRAM),
                             }),
                         };
                     else
@@ -159,26 +159,26 @@ class b extends a.Component {
                     (0, i.jsx)(D.A, {
                         subscriptionTier: U.pe.TIER_2,
                         buttonTextOverride: (() => {
-                            switch (x.$.getConfig({ location: "ReferralTrialEmbed" }).variation) {
-                                case x.Y.CONTROL:
+                            switch (R.$.getConfig({ location: "ReferralTrialEmbed" }).variation) {
+                                case R.Y.CONTROL:
                                     return L.intl.string(L.t.O0etsF);
-                                case x.Y.VARIANT_1:
+                                case R.Y.VARIANT_1:
                                     return L.intl.string(L.t.m7EEMb);
-                                case x.Y.VARIANT_2: {
+                                case R.Y.VARIANT_2: {
                                     let e = (0, o.TW)(L.intl.currentLocale);
                                     return L.intl.format(L.t["+KbxV6"], { fixedTrialCost: (0, p.$g)(0, e) });
                                 }
-                                case x.Y.VARIANT_3:
+                                case R.Y.VARIANT_3:
                                     return L.intl.string(L.t["6TzrER"]);
-                                case x.Y.VARIANT_4:
+                                case R.Y.VARIANT_4:
                                     return L.intl.string(L.t.UZe3YC);
-                                case x.Y.VARIANT_5:
+                                case R.Y.VARIANT_5:
                                     return L.intl.string(L.t.cLVMi9);
-                                case x.Y.VARIANT_6:
+                                case R.Y.VARIANT_6:
                                     return L.intl.string(L.t.ACQTfp);
-                                case x.Y.VARIANT_7:
+                                case R.Y.VARIANT_7:
                                     return L.intl.string(L.t["2P1J0w"]);
-                                case x.Y.VARIANT_8:
+                                case R.Y.VARIANT_8:
                                     return L.intl.string(L.t.dRoPcT);
                             }
                         })(),
@@ -265,11 +265,11 @@ function k(e) {
             isResolving: r,
             referralsSent: o,
         } = (0, c.cf)(
-            [R.A],
+            [x.A],
             () => ({
-                trialOffer: n ? R.A.getRelevantUserTrialOffer(t) : null,
-                isResolving: !!n && R.A.isResolving(t),
-                referralsSent: R.A.getRecipientStatus(),
+                trialOffer: n ? x.A.getRelevantUserTrialOffer(t) : null,
+                isResolving: !!n && x.A.isResolving(t),
+                referralsSent: x.A.getRecipientStatus(),
             }),
             [n, t],
         ),

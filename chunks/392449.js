@@ -10,27 +10,27 @@ var l = n(627968),
     d = n(966327),
     m = n(964486),
     h = n(629357),
-    b = n(47167),
+    x = n(47167),
     f = n(598104),
-    x = n(255266),
-    g = n(72563),
+    g = n(255266),
+    b = n(72563),
     p = n(223863),
     A = n(95701),
     _ = n(734057),
     v = n(71393),
-    y = n(576705),
-    S = n(290863),
+    S = n(576705),
+    y = n(290863),
     C = n(222823),
     j = n(994500),
     N = n(287809),
-    T = n(405269),
-    L = n(403362),
-    D = n(427262),
-    k = n(652215),
-    w = n(790782),
-    E = n(985018),
-    P = n(116106);
-function M(e) {
+    L = n(405269),
+    T = n(403362),
+    k = n(427262),
+    D = n(652215),
+    M = n(790782),
+    w = n(985018),
+    E = n(68119);
+function P(e) {
     let {
             destination: t,
             icon: n,
@@ -40,10 +40,10 @@ function M(e) {
             disabled: o,
             onPressDestination: d,
             "aria-setsize": h,
-            "aria-posinset": b,
+            "aria-posinset": x,
         } = e,
         f = i.useRef(!1),
-        x = i.useCallback(() => {
+        g = i.useCallback(() => {
             o || d?.(t);
         }, [d, o, t]);
     return (
@@ -51,28 +51,28 @@ function M(e) {
             f.current && ((f.current = !1), d?.(t, { transitionToDestination: !1, closeAfterSend: !1 }));
         }),
         (0, l.jsxs)(c.DUT, {
-            className: a()(P.HP, { [P.r9]: o }),
-            onClick: x,
+            className: a()(E.HP, { [E.r9]: o }),
+            onClick: g,
             "aria-selected": u,
             "aria-setsize": h,
-            "aria-posinset": b,
+            "aria-posinset": x,
             children: [
                 (0, l.jsxs)("div", {
-                    className: P.D_,
+                    className: E.D_,
                     children: [
-                        (0, l.jsx)("div", { className: P.P0, children: n }),
+                        (0, l.jsx)("div", { className: E.P0, children: n }),
                         (0, l.jsxs)("div", {
-                            className: P.WD,
+                            className: E.WD,
                             children: [
                                 (0, l.jsx)(c.Text, {
                                     tag: "strong",
-                                    className: P.Pf,
+                                    className: E.Pf,
                                     variant: "text-md/semibold",
                                     lineClamp: 1,
                                     children: s,
                                 }),
                                 (0, l.jsx)(c.Text, {
-                                    className: P.J2,
+                                    className: E.J2,
                                     variant: "text-xs/normal",
                                     color: "text-muted",
                                     children: r,
@@ -81,57 +81,57 @@ function M(e) {
                         }),
                     ],
                 }),
-                (0, l.jsx)("div", { className: P.kv, children: (0, l.jsx)(c.P7L, { checked: u }) }),
+                (0, l.jsx)("div", { className: E.kv, children: (0, l.jsx)(c.P7L, { checked: u }) }),
             ],
         })
     );
 }
-function F(e) {
+function I(e) {
     let { user: t, subLabel: n, ...i } = e,
-        s = D.Ay.useName(t),
-        a = D.Ay.useUserTag(t, { decoration: "never" }),
+        s = k.Ay.useName(t),
+        a = k.Ay.useUserTag(t, { decoration: "never" }),
         r = (0, o.bG)([j.A], () => j.A.getNickname(t.id)),
-        u = (0, o.bG)([S.A], () => S.A.getStatus(t.id));
-    return (0, l.jsx)(M, {
+        u = (0, o.bG)([y.A], () => y.A.getStatus(t.id));
+    return (0, l.jsx)(P, {
         ...i,
         icon: (0, l.jsx)(d.A, { "aria-hidden": !0, size: c._3J.SIZE_32, user: t, status: u }),
         label: r ?? s,
         subLabel: n ?? a,
     });
 }
-function z(e) {
+function q(e) {
     let { channel: t, subLabel: n, ...i } = e,
-        s = (0, b.Ay)(t),
-        a = (0, g.i)(t);
-    return (0, l.jsx)(M, {
+        s = (0, x.Ay)(t),
+        a = (0, b.i)(t);
+    return (0, l.jsx)(P, {
         ...i,
         icon: (0, l.jsx)(f.A, { "aria-hidden": !0, size: c._3J.SIZE_32, channel: t }),
         label: s,
         subLabel: n ?? a,
     });
 }
-function I(e) {
+function F(e) {
     let { channel: t, subLabel: n, ...i } = e,
         s = (0, o.bG)([v.A], () => v.A.getGuild(t?.guild_id)),
-        a = (0, b.Ay)(t),
+        a = (0, x.Ay)(t),
         r = (0, o.bG)([_.A, N.default, j.A], () => {
             let e = _.A.getChannel(t.parent_id);
-            return null == e ? null : (0, b.m1)(e, N.default, j.A, !1);
+            return null == e ? null : (0, x.m1)(e, N.default, j.A, !1);
         }),
-        d = (0, o.bG)([C.Ay], () => C.Ay.lastMessageTimestamp(t.id, w.P.CHANNEL)),
+        d = (0, o.bG)([C.Ay], () => C.Ay.lastMessageTimestamp(t.id, M.P.CHANNEL)),
         m = s?.name;
     if (t.isThread() || t.isForumPost()) {
         let e = t.isForumPost() ? c.bSJ : c.N$i;
         m = (0, l.jsxs)("div", {
-            className: P.vr,
+            className: E.vr,
             children: [
-                (0, l.jsx)(e, { color: c.LU0.colors.TEXT_SUBTLE, className: P.Q9 }),
+                (0, l.jsx)(e, { color: c.LU0.colors.TEXT_SUBTLE, className: E.Q9 }),
                 (0, l.jsx)(c.Text, { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: r }),
                 null != d
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
                               (0, l.jsx)(c.Text, {
-                                  className: P.Ql,
+                                  className: E.Ql,
                                   variant: "text-xs/medium",
                                   color: "text-subtle",
                                   children: "•",
@@ -139,7 +139,7 @@ function I(e) {
                               (0, l.jsx)(c.Text, {
                                   variant: "text-xs/medium",
                                   color: "text-subtle",
-                                  children: (0, T.Fe)(u()(d)),
+                                  children: (0, L.Fe)(u()(d)),
                               }),
                           ],
                       })
@@ -147,9 +147,9 @@ function I(e) {
             ],
         });
     }
-    return (0, l.jsx)(M, {
+    return (0, l.jsx)(P, {
         ...i,
-        icon: (0, l.jsx)(x.A, { size: x.q.SMALL_32, guild: s, channel: t }),
+        icon: (0, l.jsx)(g.A, { size: g.q.SMALL_32, guild: s, channel: t }),
         label: a,
         subLabel: n ?? m,
     });
@@ -176,33 +176,33 @@ function G(e) {
                                   if (
                                       null != t.rateLimitPerUser &&
                                       t.rateLimitPerUser > 0 &&
-                                      !(y.A.can(k.xBc.MANAGE_CHANNELS, t) || y.A.can(k.xBc.MANAGE_MESSAGES, t))
+                                      !(S.A.can(D.xBc.MANAGE_CHANNELS, t) || S.A.can(D.xBc.MANAGE_MESSAGES, t))
                                   )
-                                      return { label: E.intl.string(E.t.Icu3bf) };
-                                  if (t.isThread() || t.isForumPost() || !y.A.can(k.xBc.USE_APPLICATION_COMMANDS, t))
-                                      return { label: E.intl.string(E.t.v8MLqz) };
+                                      return { label: w.intl.string(w.t.Icu3bf) };
+                                  if (t.isThread() || t.isForumPost() || !S.A.can(D.xBc.USE_APPLICATION_COMMANDS, t))
+                                      return { label: w.intl.string(w.t.v8MLqz) };
                                   let n = (0, p._5)(t.id);
-                                  if (e.id === n.id) return { label: E.intl.string(E.t.mD4gqe) };
+                                  if (e.id === n.id) return { label: w.intl.string(w.t.mD4gqe) };
                               }
                           })(r, o)
                         : null,
-                b = u.includes(d),
+                x = u.includes(d),
                 f = {
                     destination: c,
                     subLabel: null != m ? m.label : void 0,
-                    disabled: (a && !b) || null != m,
-                    selected: b,
+                    disabled: (a && !x) || null != m,
+                    selected: x,
                     onPressDestination: s,
                     "aria-posinset": n + 1,
                     "aria-setsize": e.length,
                 };
             return i === h.rD.USER
-                ? (0, l.jsx)(F, { user: o, ...f }, d)
+                ? (0, l.jsx)(I, { user: o, ...f }, d)
                 : i === h.rD.GROUP_DM
-                  ? (0, l.jsx)(z, { channel: o, ...f }, d)
+                  ? (0, l.jsx)(q, { channel: o, ...f }, d)
                   : i === h.rD.TEXT_CHANNEL || i === h.rD.VOICE_CHANNEL
-                    ? (0, l.jsx)(I, { channel: o, ...f }, d)
-                    : void (0, L.xb)(i);
+                    ? (0, l.jsx)(F, { channel: o, ...f }, d)
+                    : void (0, T.xb)(i);
         });
     }, [a, s, r, t, u]);
 }

@@ -11,20 +11,20 @@ var i = n(627968),
     u = n(564864),
     m = n(260197),
     g = n(985018),
-    x = n(35407);
+    x = n(284818);
 function h(e) {
     let { guild: t, formFields: n } = e,
         [d, h] = s.useState(n);
     s.useEffect(() => h(n), [n]);
-    let A = (0, a.H)({ guildId: t.id }) ?? 0,
-        [p, f] = s.useState(null),
+    let p = (0, a.H)({ guildId: t.id }) ?? 0,
+        [A, f] = s.useState(null),
         j = s.useMemo(() => d?.some((e) => (0, r.i7)(e)), [d]),
         N = s.useMemo(() => d.length === m.OK, [d]),
         E = s.useCallback(
             (e) => {
-                u.A.setPendingMemberVerificationRules(t.id, e), h(e), null != p && f(null);
+                u.A.setPendingMemberVerificationRules(t.id, e), h(e), null != A && f(null);
             },
-            [p, t.id],
+            [A, t.id],
         ),
         b = s.useCallback(
             (e) => {
@@ -32,13 +32,13 @@ function h(e) {
             },
             [d, E],
         ),
-        T = s.useCallback(
+        C = s.useCallback(
             (e) => {
                 E([...d.slice(0, e), ...d.slice(e + 1)]);
             },
             [d, E],
         ),
-        C = s.useCallback(
+        T = s.useCallback(
             (e, t) => {
                 if (d[e] === t) return;
                 let n = [...d];
@@ -51,9 +51,9 @@ function h(e) {
                 let i = d.indexOf(e),
                     s = [...d];
                 null != t && t !== i && (s.splice(i, 1), s.splice(t, 0, e), h(s)),
-                    n ? (E(s), null !== p && f(null)) : p !== t && f(t);
+                    n ? (E(s), null !== A && f(null)) : A !== t && f(t);
             },
-            [p, d, E],
+            [A, d, E],
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -65,14 +65,14 @@ function h(e) {
             }),
             d.map((e) =>
                 (0, c.Td)({
-                    dropHoveredIndex: p,
+                    dropHoveredIndex: A,
                     formField: e,
                     guild: t,
                     index: d.indexOf(e),
                     isDragEnabled: d.length > 1,
-                    submittedGuildJoinRequestsCount: A,
-                    removeFormField: T,
-                    updateFormField: C,
+                    submittedGuildJoinRequestsCount: p,
+                    removeFormField: C,
+                    updateFormField: T,
                     updateFormFieldOrder: I,
                     canRemove: d.length > 1,
                     actionsLocation: "side",

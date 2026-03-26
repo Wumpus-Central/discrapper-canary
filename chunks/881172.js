@@ -5,7 +5,7 @@ var a = n(397927),
     l = n(890687),
     r = n(150574),
     s = n(91973),
-    o = n(60171);
+    o = n(200784);
 function d(e) {
     let { onSelectTab: t } = e,
         { claimedQuests: n, isFetchingClaimedQuests: d } = (0, l.Iq)();

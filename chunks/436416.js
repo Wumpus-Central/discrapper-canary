@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(475539),
+    o = n(4208),
     l = n(311907),
     u = n(397927),
     c = n(387755),
@@ -24,14 +24,14 @@ var r = n(627968),
     v = n(481947),
     N = n(260509),
     C = n(616356),
-    b = n(71393),
-    R = n(430452),
-    O = n(287809),
+    R = n(71393),
+    O = n(430452),
+    b = n(287809),
     D = n(607567),
     L = n(503509),
     w = n(531685),
-    x = n(954571),
-    M = n(486020),
+    M = n(954571),
+    x = n(486020),
     P = n(203982),
     k = n(427262),
     U = n(313961),
@@ -42,10 +42,10 @@ var r = n(627968),
     H = n(650583),
     j = n(731854),
     Y = n(985018),
-    W = n(293390),
-    K = n(976092);
-let z = 80,
-    $ = 40,
+    W = n(25051),
+    K = n(778437);
+let $ = 80,
+    z = 40,
     q = 32;
 function Z(e) {
     let { voiceState: t, user: n, channel: i } = e,
@@ -86,16 +86,16 @@ function X(e) {
         { analyticsLocations: v } = (0, E.Ay)(h.A.INCOMING_CALL_MODAL),
         C = i.useRef(null),
         q = (0, l.bG)([w.A], () => w.A.windowSize()),
-        X = (0, l.bG)([b.A], () => b.A.getGuild(S.guild_id)),
-        Q = null != X ? M.Ay.getGuildIconURL({ id: X.id, icon: X.icon, size: $ }) : null,
-        J = (0, g.Y)(S, $, !0) ?? Q,
+        X = (0, l.bG)([R.A], () => R.A.getGuild(S.guild_id)),
+        Q = null != X ? x.Ay.getGuildIconURL({ id: X.id, icon: X.icon, size: z }) : null,
+        J = (0, g.Y)(S, z, !0) ?? Q,
         ee = (0, A.Ay)(S),
         et = (0, l.yK)([D.Ay, U.A], () =>
             D.Ay.getVoiceStatesForChannel(S).filter((e) => !U.A.getGuildRingingUsers(S.id).has(e.user.id)),
         ),
-        [en, er] = (0, l.yK)([R.Ay], () => [R.Ay.supports(j.O5.VIDEO), Object.keys(R.Ay.getVideoDevices()).length]),
+        [en, er] = (0, l.yK)([O.Ay], () => [O.Ay.supports(j.O5.VIDEO), Object.keys(O.Ay.getVideoDevices()).length]),
         ei = (0, l.bG)([U.A], () => U.A.getVideoParticipants(S.id).length > 0),
-        es = (0, l.bG)([O.default], () => O.default.getUser(y)),
+        es = (0, l.bG)([b.default], () => b.default.getUser(y)),
         ea = (0, k.tx)(es),
         eo = ei && en && er > 0,
         el = i.useCallback((e) => {
@@ -103,12 +103,12 @@ function X(e) {
         }, []),
         eu = i.useCallback(() => {
             (0, V.X)(v[0], V.O.DISCONNECT),
-                x.default.track(B.HAw.RING_CALL_DECLINED, { location: v[0], guild_id: S.guild_id, ...(0, m.dI)(S) }),
+                M.default.track(B.HAw.RING_CALL_DECLINED, { location: v[0], guild_id: S.guild_id, ...(0, m.dI)(S) }),
                 c.A.stopRinging(S.id);
         }, [S, v]),
         ec = i.useCallback(() => {
             (0, V.X)(v[0], V.O.JOIN_CALL),
-                x.default.track(B.HAw.RING_CALL_ACCEPTED, { location: v[0], guild_id: S.guild_id, ...(0, m.dI)(S) }),
+                M.default.track(B.HAw.RING_CALL_ACCEPTED, { location: v[0], guild_id: S.guild_id, ...(0, m.dI)(S) }),
                 _.default.selectVoiceChannel(S.id);
         }, [S, v]);
     i.useEffect(() => {
@@ -153,7 +153,7 @@ function X(e) {
                                         (0, r.jsx)(u.euF, {
                                             className: W.gX,
                                             "aria-label": "user",
-                                            src: es?.getAvatarURL(S.guild_id, z, !1, !1),
+                                            src: es?.getAvatarURL(S.guild_id, $, !1, !1),
                                             size: u._3J.SIZE_80,
                                         }),
                                     (0, r.jsx)(u.Heading, {
@@ -170,16 +170,16 @@ function X(e) {
                                             (null != X || null != J) &&
                                                 (0, r.jsx)(T.Ay, {
                                                     mask: T.hW.SQUIRCLE,
-                                                    width: $,
-                                                    height: $,
+                                                    width: z,
+                                                    height: z,
                                                     className: W.NR,
                                                     children:
                                                         null != J
                                                             ? (0, r.jsx)("img", {
                                                                   alt: X?.name ?? ee ?? "",
                                                                   src: J,
-                                                                  width: $,
-                                                                  height: $,
+                                                                  width: z,
+                                                                  height: z,
                                                               })
                                                             : null != X
                                                               ? (0, r.jsx)("div", {

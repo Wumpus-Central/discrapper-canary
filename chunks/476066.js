@@ -3,7 +3,7 @@ var r = n(627968),
     l = n(64700),
     a = n(503698),
     i = n.n(a),
-    s = n(497766),
+    s = n(4208),
     o = n(311907),
     u = n(876230),
     c = n(397927),
@@ -20,7 +20,7 @@ var r = n(627968),
     A = n(662903),
     b = n(838541),
     _ = n(985018),
-    C = n(681636);
+    C = n(655833);
 let y = { tension: 250, friction: 5, clamp: !0 },
     T = l.forwardRef(function (e, t) {
         let {
@@ -101,9 +101,9 @@ let y = { tension: 250, friction: 5, clamp: !0 },
             { isHlsActive: eJ } = (0, A.Ay)(eG, { src: en, initialTimeSec: w, onError: eX, onHlsInstance: Z }),
             [eZ, e0] = l.useState(!1),
             [e1, e6] = l.useState(null),
-            [e7, e2] = l.useState(0),
-            e4 = j ?? eG.current?.duration ?? 0,
-            [e9, e8] = l.useState(u.oA.MD),
+            [e2, e4] = l.useState(0),
+            e7 = j ?? eG.current?.duration ?? 0,
+            [e8, e9] = l.useState(u.oA.MD),
             e3 = { [u.oA.MD]: 50, [u.oA.LG]: 58 };
         (0, d.u5)(() => {
             ez.current && (ez.current = !1);
@@ -174,7 +174,7 @@ let y = { tension: 250, friction: 5, clamp: !0 },
         let ti = !te && (em || ec || eo === u.Q6.ENDED),
             ts = l.useCallback(() => {
                 let e = (0, E.qf)(eG.current?.parentNode, eG.current);
-                null == e || (0, E._U)(e) || (e.removeEventListener(E.Wb, ts), e$(!1), K?.(!1), e8(u.oA.MD));
+                null == e || (0, E._U)(e) || (e.removeEventListener(E.Wb, ts), e$(!1), K?.(!1), e9(u.oA.MD));
             }, [K]),
             to = () => {
                 null == eG.current ||
@@ -182,7 +182,7 @@ let y = { tension: 250, friction: 5, clamp: !0 },
             },
             tu = () => {
                 if (null == eG.current || O) return;
-                let e = Math.min(eG.current.currentTime + 10, e4);
+                let e = Math.min(eG.current.currentTime + 10, e7);
                 tc(e), eo !== u.Q6.ENDED && e >= eG.current.duration && e5(u.Q6.ENDED, u.KB.SEEK);
             };
         l.useEffect(() => {
@@ -348,7 +348,7 @@ let y = { tension: 250, friction: 5, clamp: !0 },
                             if (null == eG.current) return;
                             w > 0 && tc(w, !1), eO ? (eG.current.volume = 0) : (eG.current.volume = eP);
                             let t = eG.current.duration;
-                            t > 0 && isFinite(t) && e2(t);
+                            t > 0 && isFinite(t) && e4(t);
                         },
                         onLoadStart: () => {
                             (ew.current = performance.now()), $?.();
@@ -445,7 +445,7 @@ let y = { tension: 250, friction: 5, clamp: !0 },
                                 (0, r.jsx)(s.animated.div, {
                                     className: i()(C.xr, { [C.MZ]: "portrait" === D }),
                                     "data-testid": "discord-web-video-player-transcript",
-                                    style: { marginBottom: (0, s.to)([th, tg], (e, t) => `${e * e3[e9] + t}px`) },
+                                    style: { marginBottom: (0, s.to)([th, tg], (e, t) => `${e * e3[e8] + t}px`) },
                                     children: (0, r.jsx)(v.X, {
                                         text: B,
                                         onClose: () => {
@@ -480,7 +480,7 @@ let y = { tension: 250, friction: 5, clamp: !0 },
                             "data-testid": "discord-web-video-player-captions",
                             style: {
                                 translateY: (0, s.to)(
-                                    [th.to({ range: [0, 1], output: [-20, -e3[e9]] })],
+                                    [th.to({ range: [0, 1], output: [-20, -e3[e8]] })],
                                     (e) => `${e}px`,
                                 ),
                             },
@@ -493,7 +493,7 @@ let y = { tension: 250, friction: 5, clamp: !0 },
                         }),
                     (0, r.jsxs)(s.animated.div, {
                         className: C.r8,
-                        style: { height: (0, s.to)([th.to({ range: [0, 1], output: [0, e3[e9]] })], (e) => `${e}px`) },
+                        style: { height: (0, s.to)([th.to({ range: [0, 1], output: [0, e3[e8]] })], (e) => `${e}px`) },
                         children: [
                             (0, r.jsx)(s.animated.div, {
                                 style: {
@@ -509,9 +509,9 @@ let y = { tension: 250, friction: 5, clamp: !0 },
                                     backgroundColor: ti ? void 0 : "rgba(0, 0, 0, 0.0)",
                                     playerState: eo,
                                     preloadedBuffers: ti ? ey : void 0,
-                                    durationSec: e7 > 0 ? e7 : 1,
+                                    durationSec: e2 > 0 ? e2 : 1,
                                     isFullyVisible: ti && eI,
-                                    maxSeekableTime: ti && eI ? e4 : void 0,
+                                    maxSeekableTime: ti && eI ? e7 : void 0,
                                     onClick: (e) => {
                                         tc(e), eo === u.Q6.ENDED && e5(u.Q6.PLAYING, u.KB.USER);
                                     },
@@ -548,7 +548,7 @@ let y = { tension: 250, friction: 5, clamp: !0 },
                                     hideCaptionBtn: null == U,
                                     hideTranscriptBtn: null == B,
                                     hideSkipButtons: "portrait" === D,
-                                    size: e9,
+                                    size: e8,
                                     volume: eP,
                                     muted: eO,
                                     transcriptEnabled: eB,
@@ -565,10 +565,10 @@ let y = { tension: 250, friction: 5, clamp: !0 },
                                         let e = !eF,
                                             t = (0, E.qf)(eG.current?.parentNode, eG.current);
                                         e && null != t
-                                            ? ((0, E.tl)(t), t.addEventListener(E.Wb, ts), K?.(!0), e8(u.oA.LG))
+                                            ? ((0, E.tl)(t), t.addEventListener(E.Wb, ts), K?.(!0), e9(u.oA.LG))
                                             : e ||
                                               null == t ||
-                                              (t.removeEventListener(E.Wb, ts), K?.(!1), (0, E.sP)(t), e8(u.oA.MD)),
+                                              (t.removeEventListener(E.Wb, ts), K?.(!1), (0, E.sP)(t), e9(u.oA.MD)),
                                             e$(e);
                                     },
                                     handleSeekBackBtnClick: to,

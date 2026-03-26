@@ -11,9 +11,9 @@ var s = n(503698),
     d = n(689906),
     u = n(224331),
     h = n(568065),
-    A = n(136708),
+    A = n(333354),
     m = n(985018),
-    p = n(452565);
+    p = n(58962);
 function g(e) {
     let { className: t, guildId: n, powerup: s, onClick: a } = e,
         o = (0, d.A)(n, s),

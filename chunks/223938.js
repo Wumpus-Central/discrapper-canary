@@ -5,7 +5,7 @@ var i = n(627968),
     a = n.n(s),
     r = n(284009),
     o = n.n(r),
-    c = n(490249),
+    c = n(4208),
     d = n(835245),
     u = n(311907),
     h = n(827734),
@@ -22,9 +22,9 @@ var i = n(627968),
     I = n(224805),
     T = n(598071),
     N = n(101555),
-    y = n(834755),
+    v = n(834755),
     b = n(703007),
-    v = n(2553),
+    y = n(2553),
     j = n(946274),
     R = n(135621),
     M = n(406704),
@@ -41,13 +41,13 @@ var i = n(627968),
     B = n(147025),
     V = n(133343),
     K = n(851023),
-    z = n(171593),
-    W = n(652215);
+    W = n(171593),
+    z = n(652215);
 n(827669), n(294920);
 var Y = n(478644),
     q = n(985018),
-    J = n(204794),
-    $ = n(178588);
+    J = n(287303),
+    $ = n(351671);
 function Z(e, t, n) {
     let i = e.startsWith("attachment://"),
         l = e;
@@ -73,7 +73,7 @@ let X = l.memo(
                 disabled: f,
                 accessibilityLabel: N,
                 channel: b,
-                type: v,
+                type: y,
                 focused: j,
                 onChange: w,
                 onResize: U,
@@ -99,27 +99,27 @@ let X = l.memo(
             e_ = ep?.heroFile,
             eE = ep?.publish ?? !0,
             ex = ep?.createThread ?? !0;
-        o()(null != v, "chat input type must be set");
+        o()(null != y, "chat input type must be set");
         let { analyticsLocations: eC } = (0, x.Ay)(E.A.CHANNEL_TEXT_AREA),
             eS = (0, V.L0)(t),
             eI = l.useRef(null),
             eT = l.useRef(null),
             eN = l.useRef(null),
-            ey = l.useRef(null);
+            ev = l.useRef(null);
         eu?.(eT.current);
         let { activeCommand: eb } = (0, u.cf)([C.A], () => ({
-                activeCommand: v.commands?.enabled ? C.A.getActiveCommand(b.id) : null,
-                activeCommandSection: v.commands?.enabled ? C.A.getActiveCommandSection(b.id) : null,
+                activeCommand: y.commands?.enabled ? C.A.getActiveCommand(b.id) : null,
+                activeCommandSection: y.commands?.enabled ? C.A.getActiveCommandSection(b.id) : null,
             })),
             {
-                isLurking: ev,
+                isLurking: ey,
                 isPendingMember: ej,
                 disabled: eR,
                 canAttachFiles: eM,
                 canEveryoneSendMessages: eD,
-            } = (0, V.Sk)(b, v, eb, f),
+            } = (0, V.Sk)(b, y, eb, f),
             eO = !D.D_.useSetting() && !(0, k.isAndroidWeb)() && null != window.ResizeObserver,
-            eL = !eO || !v.commands?.enabled || !j || "/" !== s,
+            eL = !eO || !y.commands?.enabled || !j || "/" !== s,
             eP = (0, R.A)(),
             { fontSize: ew } = (0, u.cf)([_.A], () => ({
                 fontSize: _.A.fontSize,
@@ -127,7 +127,7 @@ let X = l.memo(
             })),
             ek = (0, u.bG)([L.A], () => L.A.isEnabled()),
             eU = (0, M.n)(b);
-        (0, V.N_)(v, eR, b.id);
+        (0, V.N_)(y, eR, b.id);
         let { eventEmitter: eG, handleEditorSelectionChanged: eF } = (0, V.ml)(eT, s, r),
             eH = l.useCallback(
                 (e) => {
@@ -137,7 +137,7 @@ let X = l.memo(
                         n = [],
                         i = (ef.length > 0 ? ef : e.value.length > 0 ? e.value : q.intl.string(q.t["7Xm5QI"])).slice(
                             0,
-                            W.Ign,
+                            z.Ign,
                         );
                     if (null == e_)
                         return ei({
@@ -171,9 +171,9 @@ let X = l.memo(
                 },
                 [ei, ef, e_, b.id, ex, eE, eU],
             ),
-            { submit: eB, handleSubmit: eV } = (0, V.Zx)(eH, v, eT, ey, b.id),
-            { autocompleteRef: eK, handleMaybeShowAutocomplete: ez, handleHideAutocomplete: eW } = (0, V.v7)(),
-            eY = l.useCallback(() => ey?.current?.hide(), []),
+            { submit: eB, handleSubmit: eV } = (0, V.Zx)(eH, y, eT, ev, b.id),
+            { autocompleteRef: eK, handleMaybeShowAutocomplete: eW, handleHideAutocomplete: ez } = (0, V.v7)(),
+            eY = l.useCallback(() => ev?.current?.hide(), []),
             { editorHeight: eq, handleResize: eJ } = (0, V.ck)(U),
             {
                 handleTab: e$,
@@ -194,18 +194,18 @@ let X = l.memo(
                     [eL],
                 ),
             }),
-            { expressionPickerView: eQ, shouldHideExpressionPicker: e0, handleOuterClick: e1 } = (0, V.MD)(v, eT, b.id),
-            { handleAutocompleteVisibilityChange: e2 } = (0, V.uW)(v, b.id),
+            { expressionPickerView: eQ, shouldHideExpressionPicker: e0, handleOuterClick: e1 } = (0, V.MD)(y, eT, b.id),
+            { handleAutocompleteVisibilityChange: e2 } = (0, V.uW)(y, b.id),
             e3 = (0, V.NO)(eT),
-            e7 = (0, V.Vu)(eB, v, eT),
+            e7 = (0, V.Vu)(eB, y, eT),
             e5 = (0, V.HG)(eT),
-            e9 = (0, V.C)({ editorRef: eT, disabled: eR, textValue: s, channelId: b.id, chatInputType: v, submit: eH });
+            e6 = (0, V.C)({ editorRef: eT, disabled: eR, textValue: s, channelId: b.id, chatInputType: y, submit: eH });
         (0, G.R)(eG, b.guild_id, b.id);
-        let [e6, e4] = l.useState(!1),
+        let [e9, e4] = l.useState(!1),
             e8 = l.useCallback(() => {
                 e1(), e4(!0);
             }, [e1]),
-            te = e6 || s.length > 0 || null != e_ || ef.length > 0,
+            te = e9 || s.length > 0 || null != e_ || ef.length > 0,
             { editorHeaderHeight: tt, paddingTop: tn } = (0, A.zhh)({
                 editorHeaderHeight: 122 * !!te,
                 paddingTop: 16 * !!te,
@@ -230,10 +230,10 @@ let X = l.memo(
             }, []),
             tc = l.useCallback(() => {
                 if (null == e_) return;
-                let e = P.A.getUploads(b.id, v.drafts.type),
+                let e = P.A.getUploads(b.id, y.drafts.type),
                     t = e.find((e) => e.filename === e_.name)?.id;
                 null != t && g.A.remove(b.id, t, O.C.ChannelMessage), (0, I.x)(b.id, { heroFile: null });
-            }, [b.id, e_, v.drafts.type]);
+            }, [b.id, e_, y.drafts.type]);
         return (0, i.jsx)(T.Sv, {
             value: eG,
             children: (0, i.jsxs)(x.f5, {
@@ -294,11 +294,11 @@ let X = l.memo(
                                                             placeholder: eo,
                                                             required: m,
                                                             accessibilityLabel: N,
-                                                            isPreviewing: (ev || ej) && eD,
+                                                            isPreviewing: (ey || ej) && eD,
                                                             channel: b,
                                                             type: F.oU.CREATE_ANNOUNCEMENT_POST,
                                                             canPasteFiles: eM,
-                                                            uploadPromptCharacterCount: W.CS1,
+                                                            uploadPromptCharacterCount: z.CS1,
                                                             maxCharacterCount: er ?? eP,
                                                             allowNewLines: !0,
                                                             "aria-describedby": ec,
@@ -312,8 +312,8 @@ let X = l.memo(
                                                             onEnter: eZ,
                                                             onMoveSelection: eX,
                                                             onSelectionChanged: eF,
-                                                            onMaybeShowAutocomplete: ez,
-                                                            onHideAutocomplete: eW,
+                                                            onMaybeShowAutocomplete: eW,
+                                                            onHideAutocomplete: ez,
                                                             promptToUpload: el,
                                                             fontSize: ew,
                                                             spellcheckEnabled: ek,
@@ -326,9 +326,9 @@ let X = l.memo(
                                         }),
                                         (0, i.jsx)("div", {
                                             className: J.KK,
-                                            children: (0, i.jsx)(z.A, {
+                                            children: (0, i.jsx)(W.A, {
                                                 channelId: b.id,
-                                                type: v,
+                                                type: y,
                                                 canAttachFiles: eM,
                                                 ignoreFile: e_?.name,
                                                 smallAttachments: !0,
@@ -432,7 +432,7 @@ let X = l.memo(
                                 textValue: s,
                                 focused: j,
                                 expressionPickerView: eQ,
-                                type: v,
+                                type: y,
                                 editorRef: eT,
                                 onSendMessage: eB,
                                 onSendSticker: () => {},
@@ -445,13 +445,13 @@ let X = l.memo(
                     }),
                     e0
                         ? null
-                        : (0, i.jsx)(y.A, {
+                        : (0, i.jsx)(v.A, {
                               positionTargetRef: eS,
-                              type: v,
+                              type: y,
                               onSelectGIF: e7,
                               onSelectEmoji: e3,
                               onSelectKaomoji: e5,
-                              onSelectSticker: e9,
+                              onSelectSticker: e6,
                               channel: b,
                               closeOnModalOuterClick: eA,
                               parentModalKey: eg,
@@ -473,8 +473,8 @@ function Q(e) {
         "data-menu-migrated": !0,
         "aria-label": q.intl.string(q.t["9WnJyo"]),
         navId: "send-announcement-options",
-        onClose: W.tEg,
-        onSelect: W.tEg,
+        onClose: z.tEg,
+        onSelect: z.tEg,
         children: [
             (0, i.jsx)(A.sLh, {
                 id: "create-thread",
@@ -592,7 +592,7 @@ function en(e) {
                         "aria-hidden": !0,
                         tabIndex: -1,
                         maxFileSizeBytes: Y.j,
-                        onFileSizeError: () => (0, v.A)(Y.j),
+                        onFileSizeError: () => (0, y.A)(Y.j),
                     }),
                     (0, i.jsx)(A.XGR, {
                         size: "md",

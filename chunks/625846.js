@@ -69,7 +69,7 @@ var l = n(627968),
     eg = n(652215),
     ef = n(37411),
     e_ = n(985018),
-    ep = n(1004);
+    ep = n(985757);
 function ej(e) {
     let { channel: t, guild: n, sidebarState: i } = e;
     return (0, l.jsx)(es.Cp, { channel: t, children: (0, l.jsx)(eS, { channel: t, guild: n, sidebarState: i }) }, t.id);
@@ -428,11 +428,11 @@ function eS(e) {
         e0 = i.useRef(null),
         {
             updateMasonryListScrollerRef: e3,
-            getItemKey: e1,
-            renderGridSection: e9,
+            getItemKey: e9,
+            renderGridSection: e1,
             renderGridItem: e6,
-            getGridSectionHeight: e4,
-            getSectionProps: e8,
+            getGridSectionHeight: e8,
+            getSectionProps: e4,
             handleGridFocus: e7,
         } = (function (e) {
             let {
@@ -600,7 +600,7 @@ function eS(e) {
         parentId: t.id,
         focusedThreadId: eS,
     });
-    let e5 = i.useCallback(() => {
+    let e2 = i.useCallback(() => {
             if (eA) return;
             let e = eu ? e0.current?.getScrollerState() : eo.current?.getScrollerState();
             if (null == e) return;
@@ -608,10 +608,10 @@ function eS(e) {
             let n = e.scrollTop + e.offsetHeight;
             e.scrollHeight - n < (eu ? Math.max(200, (0, ec.iX)(ew)) : 200) && C();
         }, [eA, eu, t.guild_id, t.id, ew, C]),
-        e2 = (0, x.bG)([v.A], () => v.A.keyboardModeEnabled),
+        e5 = (0, x.bG)([v.A], () => v.A.keyboardModeEnabled),
         te = (0, es.kU)((e) => e.titleFocused || e.bodyFocused, d.x),
-        tt = (0, eh.Ay)({ id: "forum-grid-view", isEnabled: eu && e2 && !te, setFocus: e7 }),
-        tn = (0, ex.A)({ listRef: eo, padding: 96, isEnabled: !eu && e2 && !te, channel: t }),
+        tt = (0, eh.Ay)({ id: "forum-grid-view", isEnabled: eu && e5 && !te, setFocus: e7 }),
+        tn = (0, ex.A)({ listRef: eo, padding: 96, isEnabled: !eu && e5 && !te, channel: t }),
         tl = i.useCallback(
             (e, n, l) => (0 === e ? 0 : (0, ec.iX)(l, t.isMediaChannel() ? ec.PL.SIXTEEN_BY_NINE : ec.PL.THREE_BY_TWO)),
             [t],
@@ -657,13 +657,13 @@ function eS(e) {
                                           className: ep.grid,
                                           columns: ek,
                                           sections: eG,
-                                          getItemKey: e1,
-                                          getSectionHeight: e4,
+                                          getItemKey: e9,
+                                          getSectionHeight: e8,
                                           getItemHeight: tl,
-                                          renderSection: e9,
+                                          renderSection: e1,
                                           renderItem: e6,
-                                          getSectionProps: e8,
-                                          onScroll: A ? e5 : void 0,
+                                          getSectionProps: e4,
+                                          onScroll: A ? e2 : void 0,
                                           chunkSize: 350,
                                           ...ts,
                                           ...e,
@@ -687,7 +687,7 @@ function eS(e) {
                                                   renderRow: eQ,
                                                   renderSection: eX,
                                                   chunkSize: 150,
-                                                  onScroll: A ? e5 : void 0,
+                                                  onScroll: A ? e2 : void 0,
                                                   paddingBottom: 24,
                                                   ...i,
                                                   ...e,

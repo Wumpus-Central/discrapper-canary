@@ -14,14 +14,14 @@ var i = n(627968),
     x = n(859126),
     h = n(287809),
     _ = n(996439),
-    A = n(997509),
-    p = n(555337),
+    p = n(997509),
+    A = n(555337),
     f = n(203498),
     j = n(660496),
     N = n(652215),
     E = n(985018),
-    b = n(220906);
-class T extends s.PureComponent {
+    b = n(8271);
+class C extends s.PureComponent {
     render() {
         let { user: e, guild: t } = this.props;
         return (0, i.jsxs)(o.DUT, {
@@ -67,7 +67,7 @@ class T extends s.PureComponent {
         });
     };
 }
-let C = s.forwardRef(function (e, t) {
+let T = s.forwardRef(function (e, t) {
     let { guild: n, sortedBans: l, bans: r } = e,
         a = s.useCallback(
             (e) => {
@@ -84,7 +84,7 @@ let C = s.forwardRef(function (e, t) {
                     return (0, i.jsx)(o.y$y, { className: b.u1, type: o.y$y.Type.SPINNING_CIRCLE }, "spinner");
                 let t = l[e],
                     s = r?.get(t?.id ?? "");
-                if (null != t && null != s) return (0, i.jsx)(T, { user: t, ban: s, guild: n }, t.id);
+                if (null != t && null != s) return (0, i.jsx)(C, { user: t, ban: s, guild: n }, t.id);
             },
             [r, n, l],
         );
@@ -102,17 +102,17 @@ function I(e) {
         [l, r] = s.useState(n ?? ""),
         [a, d] = s.useState(!1),
         u = s.useCallback(() => {
-            A.A.setSection(N.BEX.SAFETY), (0, f.K)(j.C.DM_AND_SPAM_PROTECTION);
+            p.A.setSection(N.BEX.SAFETY), (0, f.K)(j.C.DM_AND_SPAM_PROTECTION);
         }, []),
         m = s.useCallback((e) => {
-            r(e), 0 === e.trim().length && A.A.setSearchQuery(e);
+            r(e), 0 === e.trim().length && p.A.setSearchQuery(e);
         }, []),
         g = s.useCallback(() => {
-            r(""), A.A.setSearchQuery("");
+            r(""), p.A.setSearchQuery("");
         }, []),
         h = s.useCallback(async () => {
             if (0 === l.trim().length) {
-                A.A.setSearchQuery(l), d(!1);
+                p.A.setSearchQuery(l), d(!1);
                 return;
             }
             if (!a)
@@ -120,7 +120,7 @@ function I(e) {
                     d(!0);
                     let [e, n] = (0, x.H)(l),
                         i = e[0];
-                    A.A.setSearchQuery(l), await c.A.searchGuildBans(t, i, n), d(!1);
+                    p.A.setSearchQuery(l), await c.A.searchGuildBans(t, i, n), d(!1);
                 } catch (e) {
                     d(!1);
                 }
@@ -170,13 +170,13 @@ function I(e) {
     });
 }
 function v() {
-    let { guild: e, searchQuery: t } = (0, a.bG)([p.A], () => p.A.getProps(), [], l.isEqual),
+    let { guild: e, searchQuery: t } = (0, a.bG)([A.A], () => A.A.getProps(), [], l.isEqual),
         d = null != t && t.trim().length > 0,
         g = (0, u.A)(d),
-        A = d !== g,
-        [f] = (0, a.bG)([p.A], () => p.A.getBans(), [], _.D),
+        p = d !== g,
+        [f] = (0, a.bG)([A.A], () => A.A.getBans(), [], _.D),
         j = f?.size ?? 0,
-        T = (0, m.Ay)(),
+        C = (0, m.Ay)(),
         v = e?.id ?? N.dJq,
         S = s.useRef(null),
         y = s.useCallback(
@@ -210,13 +210,13 @@ function v() {
             [y],
         ),
         O = s.useMemo(() => R(f, t, j), [f, R, t, j]),
-        G = null != f,
-        L = O.length % 1e3 == 0 && O.length > 0 && G,
+        L = null != f,
+        G = O.length % 1e3 == 0 && O.length > 0 && L,
         D = 0 === O.length,
         [M, k] = s.useState({ currentPage: 1, pageSize: 100 });
     s.useEffect(() => {
-        A && 1 !== M.currentPage && k((e) => ({ ...e, currentPage: 1 }));
-    }, [A, M.currentPage]);
+        p && 1 !== M.currentPage && k((e) => ({ ...e, currentPage: 1 }));
+    }, [p, M.currentPage]);
     let U = s.useCallback(
             (e) => {
                 c.A.fetchGuildBansBatch(v, 1e3, e);
@@ -228,12 +228,12 @@ function v() {
             (e) => {
                 S.current?.scrollToSectionTop(0),
                     (e + 1) * M.pageSize > O.length &&
-                        L &&
+                        G &&
                         !d &&
                         ((B.current = O[O.length - 1]?.id ?? null), U(B.current)),
-                    (null != P[e - 1] || L) && k((t) => ({ ...t, currentPage: e }));
+                    (null != P[e - 1] || G) && k((t) => ({ ...t, currentPage: e }));
             },
-            [M.pageSize, O, L, P, U, d],
+            [M.pageSize, O, G, P, U, d],
         ),
         B = s.useRef(null);
     s.useEffect(() => {
@@ -249,11 +249,11 @@ function v() {
                   (0, i.jsxs)("div", {
                       className: b.gs,
                       children: [
-                          !D && (0, i.jsx)(C, { guild: e, bans: f, sortedBans: F, ref: S }),
-                          !L &&
+                          !D && (0, i.jsx)(T, { guild: e, bans: f, sortedBans: F, ref: S }),
+                          !G &&
                               D &&
                               (0, i.jsxs)(o.ppr, {
-                                  theme: T,
+                                  theme: C,
                                   className: b.p$,
                                   children: [
                                       (0, i.jsx)(o.G8R, {
@@ -274,7 +274,7 @@ function v() {
                   (0, i.jsx)("div", {
                       children: (0, i.jsx)(o.mgR, {
                           className: b.JV,
-                          totalCount: O.length + (L ? M.pageSize : 0),
+                          totalCount: O.length + (G ? M.pageSize : 0),
                           pageSize: M.pageSize,
                           currentPage: M.currentPage,
                           onPageChange: w,

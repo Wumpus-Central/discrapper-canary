@@ -6,12 +6,12 @@ var r = n(627968),
     a = n.n(s),
     o = n(735438),
     l = n.n(o),
-    u = n(475539),
+    u = n(4208),
     c = n(621466),
     d = n(158954),
     _ = n(990078),
     f = n(775602),
-    p = n(785294);
+    p = n(189039);
 function h(e, t) {
     let n = 0;
     for (let r = 0; r < t.length; r++) {
@@ -110,8 +110,8 @@ class g extends i.PureComponent {
                 barClassName: D,
                 grabberClassName: L,
                 grabberStyles: w = {},
-                markerPosition: x = 0,
-                "aria-hidden": M,
+                markerPosition: M = 0,
+                "aria-hidden": x,
                 "aria-label": P,
                 "aria-labelledby": k,
                 "aria-describedby": U,
@@ -132,8 +132,8 @@ class g extends i.PureComponent {
                               {
                                   className: a()(p.mark, {
                                       [p.defaultValue]: s,
-                                      [p.markAbove]: 0 === x,
-                                      [p.markBelow]: 1 === x,
+                                      [p.markAbove]: 0 === M,
+                                      [p.markBelow]: 1 === M,
                                   }),
                                   style: { left: `${e}%` },
                                   children:
@@ -177,7 +177,7 @@ class g extends i.PureComponent {
                                 "aria-valuenow": e,
                                 "aria-disabled": m,
                                 "aria-orientation": C,
-                                "aria-hidden": M,
+                                "aria-hidden": x,
                                 "aria-label": P,
                                 "aria-labelledby": k,
                                 "aria-describedby": U ?? i.describedById,

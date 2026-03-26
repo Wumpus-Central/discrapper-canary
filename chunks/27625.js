@@ -5,7 +5,7 @@ var n = s(397927),
     e = s(975807),
     r = s(915089),
     l = s(985018),
-    c = s(36205);
+    c = s(942002);
 function d(t) {
     let { href: i, onClose: d, transitionState: o } = t,
         b = (0, r.GV)();
@@ -15,7 +15,7 @@ function d(t) {
         "aria-labelledby": b,
         parentComponent: "SuspiciousDownloadModal",
         children: [
-            (0, a.jsx)("img", { className: c.Qw, src: s(929279), alt: "" }),
+            (0, a.jsx)("img", { className: c.Qw, src: s(151660), alt: "" }),
             (0, a.jsx)(n.$mQ, {
                 children: (0, a.jsxs)("div", {
                     className: c.jE,

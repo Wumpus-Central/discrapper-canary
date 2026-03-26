@@ -1,4 +1,4 @@
-n.d(t, { A: () => z });
+n.d(t, { A: () => W });
 var i = n(627968),
     l = n(64700),
     s = n(284009),
@@ -22,9 +22,9 @@ var i = n(627968),
     I = n(158476),
     T = n(857071),
     N = n(552227),
-    y = n(698405),
+    v = n(698405),
     b = n(557722),
-    v = n(976860),
+    y = n(976860),
     j = n(544028),
     R = n(560010),
     M = n(696451),
@@ -39,7 +39,7 @@ var i = n(627968),
     F = n(360469),
     H = n(53516),
     B = n(985018),
-    V = n(32385);
+    V = n(120260);
 class K extends l.PureComponent {
     state = { submitting: !1, shouldShowLurkerModeUpsellPopout: !1, shouldShowLurkerModeSuccessPopout: !1 };
     textAreaContainerRef = l.createRef();
@@ -90,7 +90,7 @@ class K extends l.PureComponent {
     handleVerifyPhone = () => {
         (0, d.mMO)(
             async () => {
-                let { default: e } = await Promise.all([n.e("84704"), n.e("45668")]).then(n.bind(n, 615715));
+                let { default: e } = await Promise.all([n.e("84704"), n.e("5966")]).then(n.bind(n, 615715));
                 return (t) => (0, i.jsx)(e, { reason: b.d.GUILD_PHONE_REQUIRED, ...t });
             },
             { modalKey: H.V },
@@ -115,7 +115,7 @@ class K extends l.PureComponent {
         }
     };
     handleGoBack = () => {
-        this.setState({ submitting: !0 }), (0, v.JK)().goBack();
+        this.setState({ submitting: !0 }), (0, y.JK)().goBack();
     };
     handleFollowAnnouncement = () => {
         let { channel: e } = this.props;
@@ -131,7 +131,7 @@ class K extends l.PureComponent {
         let { guild: e } = this.props;
         return (
             a()(null != e, "GuildVerification.renderLurkerModeUpsellPopout - guild cannot be undefined"),
-            (0, i.jsx)(y.A, { type: y.w.CHAT, guild: e, closePopout: this.closeLurkerModeUpsellPopout })
+            (0, i.jsx)(v.A, { type: v.w.CHAT, guild: e, closePopout: this.closeLurkerModeUpsellPopout })
         );
     };
     renderMemberVerificationSuccessModal = () => {
@@ -263,7 +263,7 @@ class K extends l.PureComponent {
         });
     }
 }
-function z(e) {
+function W(e) {
     let { channel: t, children: n } = e,
         l = t.getGuildId(),
         s = (0, r.bG)([D.A], () => D.A.getGuild(l)),
@@ -279,7 +279,7 @@ function z(e) {
         f = (0, r.bG)([L.A], () => L.A.can(G.xBc.SEND_MESSAGES, t)),
         _ = (0, r.bG)([C.A], () => C.A.getRequest(l)),
         { showLinkedLobbyApplicationLoadingIndicator: S, requiredLinkedLobbyApplication: N } = (0, k.A)(t.linkedLobby),
-        y = {
+        v = {
             ...a,
             guild: s,
             isLurking: d,
@@ -298,5 +298,5 @@ function z(e) {
             useReducedMotion: A.A.useReducedMotion,
             isStaff: h,
         };
-    return (0, i.jsx)(K, { ...y, channel: t, children: n });
+    return (0, i.jsx)(K, { ...v, channel: t, children: n });
 }

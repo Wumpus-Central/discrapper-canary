@@ -2,8 +2,8 @@
 n.d(t, { a: () => T });
 var r = n(627968),
     i = n(64700),
-    a = n(110259),
-    s = n(311907),
+    s = n(110259),
+    a = n(311907),
     o = n(397927),
     l = n(139286),
     u = n(713654),
@@ -14,11 +14,11 @@ var r = n(627968),
     p = n(954571),
     h = n(355622),
     m = n(652215),
-    g = n(985018),
-    E = n(149650);
+    E = n(985018),
+    g = n(64245);
 function A(e) {
     let { channel: t, type: n } = e,
-        r = (0, s.bG)([f.A], () => {
+        r = (0, a.bG)([f.A], () => {
             let e = f.A.getChannel(t.parent_id);
             return e?.isForumLikeChannel() ?? !1;
         }),
@@ -28,7 +28,7 @@ function A(e) {
 function I(e) {
     let { thread: t, pendingScheduledMessage: n } = e,
         h = (0, d.Vp)({ location: "ThreadsAlsoSendToChannelArea" }),
-        [A, I] = (0, s.yK)([f.A, _.A], () => [
+        [A, I] = (0, a.yK)([f.A, _.A], () => [
             t.isThread() ? f.A.getChannel(t.parent_id) : null,
             _.A.getAlsoSendToChannel(t.id),
         ]),
@@ -44,14 +44,14 @@ function I(e) {
             [t],
         );
     (0, l.A)(
-        { name: a.ImpressionNames.MESSAGE_ALSO_SEND_TO_CHANNEL, type: a.ImpressionTypes.VIEW },
+        { name: s.ImpressionNames.MESSAGE_ALSO_SEND_TO_CHANNEL, type: s.ImpressionTypes.VIEW },
         { disableTrack: null == A || !h.enabled },
         [A, h.enabled],
     );
-    let y = null != n;
+    let S = null != n;
     if (!h.enabled || null == A) return null;
-    let S = (0, u.gU)(A),
-        v = g.intl.format(g.t.UqL10G, {
+    let y = (0, u.gU)(A),
+        v = E.intl.format(E.t.UqL10G, {
             callToActionHook: (e, t) =>
                 (0, r.jsx)(
                     o.Text,
@@ -59,8 +59,8 @@ function I(e) {
                         variant: "text-sm/normal",
                         color: "text-subtle",
                         lineClamp: 1,
-                        className: E.Pf,
-                        children: g.intl.string(g.t.Pi3JW7),
+                        className: g.Pf,
+                        children: E.intl.string(E.t.Pi3JW7),
                     },
                     t,
                 ),
@@ -72,19 +72,19 @@ function I(e) {
                         variant: "text-sm/normal",
                         color: "text-subtle",
                         lineClamp: 1,
-                        className: E.Pf,
-                        children: [null == S ? null : (0, r.jsx)(S, { color: "currentColor", className: E.Kk }, t), e],
+                        className: g.Pf,
+                        children: [null == y ? null : (0, r.jsx)(y, { color: "currentColor", className: g.Kk }, t), e],
                     },
                     t,
                 ),
         });
     return (0, r.jsx)("div", {
-        className: E.kL,
-        children: (0, r.jsx)(o.Checkbox, { checked: I, disabled: y, onChange: T, label: v, labelType: "secondary" }),
+        className: g.kL,
+        children: (0, r.jsx)(o.Checkbox, { checked: I, disabled: S, onChange: T, label: v, labelType: "secondary" }),
     });
 }
 function T(e) {
     let { channel: t, type: n, pendingScheduledMessage: i } = e,
-        { shouldShow: a } = A({ channel: t, type: n });
-    return a ? (0, r.jsx)(I, { thread: t, pendingScheduledMessage: i }) : null;
+        { shouldShow: s } = A({ channel: t, type: n });
+    return s ? (0, r.jsx)(I, { thread: t, pendingScheduledMessage: i }) : null;
 }

@@ -1,19 +1,19 @@
 "use strict";
-n.d(t, { g: () => p, k: () => g });
+n.d(t, { g: () => p, k: () => E });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(118952),
     l = n(129844),
     u = n(426333),
     c = n(452027),
     d = n(331322),
     _ = n(834730),
-    f = n(314288);
+    f = n(1505);
 function p(e) {
     let { disabled: t, isSelected: n } = e,
-        [a, o] = (0, i.useState)(void 0),
+        [s, o] = (0, i.useState)(void 0),
         l = (0, i.useRef)(!1);
     return (
         (0, i.useEffect)(() => {
@@ -24,7 +24,7 @@ function p(e) {
             o(n ? "animateIn" : "animateOut");
         }, [n]),
         (0, r.jsx)("div", {
-            className: s()([f.standaloneRadioIndicator, "string" == typeof a && f[a]]),
+            className: a()([f.standaloneRadioIndicator, "string" == typeof s && f[s]]),
             "data-selected": n,
             "data-disabled": t,
             children: (0, r.jsx)(h, {}),
@@ -47,9 +47,9 @@ function h() {
     });
 }
 function m(e) {
-    let { desc: t, disabled: n, leadingIcon: a, name: c, value: p, isSelected: m } = e,
-        g = (0, i.useRef)(null),
+    let { desc: t, disabled: n, leadingIcon: s, name: c, value: p, isSelected: m } = e,
         E = (0, i.useRef)(null),
+        g = (0, i.useRef)(null),
         [A, I] = (0, i.useState)(void 0),
         T = (0, i.useRef)(!1);
     return (
@@ -61,15 +61,15 @@ function m(e) {
             I(m ? "animateIn" : "animateOut");
         }, [m]),
         (0, r.jsx)(u.vN, {
-            focusTarget: g,
-            ringTarget: g,
+            focusTarget: E,
+            ringTarget: E,
             within: !0,
             children: (0, r.jsxs)(o.sx, {
-                className: s()([f.radioGroupOption, "string" == typeof A && f[A]]),
+                className: a()([f.radioGroupOption, "string" == typeof A && f[A]]),
                 value: p,
                 isDisabled: n,
-                inputRef: E,
-                ref: g,
+                inputRef: g,
+                ref: E,
                 children: [
                     (0, r.jsx)(h, {}),
                     (0, r.jsxs)(d.B, {
@@ -78,8 +78,8 @@ function m(e) {
                             (0, r.jsxs)(l.J, {
                                 className: f.label,
                                 children: [
-                                    null != a &&
-                                        (0, r.jsx)(a, {
+                                    null != s &&
+                                        (0, r.jsx)(s, {
                                             className: f.radioItemIcon,
                                             size: "sm",
                                             color: "currentColor",
@@ -99,8 +99,8 @@ function m(e) {
         })
     );
 }
-function g(e) {
-    let { onChange: t, options: n, value: i, disabled: a = !1, "aria-labelledby": s, ...l } = e,
+function E(e) {
+    let { onChange: t, options: n, value: i, disabled: s = !1, "aria-labelledby": a, ...l } = e,
         u =
             null != t
                 ? (e) => {
@@ -114,9 +114,9 @@ function g(e) {
             (0, r.jsx)(o.z6, {
                 id: e.controlId,
                 className: f.group,
-                isDisabled: a,
+                isDisabled: s,
                 onChange: u,
-                "aria-labelledby": s ?? e.labelId,
+                "aria-labelledby": a ?? e.labelId,
                 "aria-describedby": e.describedById,
                 "aria-errormessage": e.errorMessageId,
                 "data-mana-component": "BaseRadioGroup",

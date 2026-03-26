@@ -44,7 +44,7 @@ var l = n(627968),
     H = n(652215),
     z = n(806931),
     W = n(985018),
-    K = n(470699);
+    K = n(43322);
 function Y(e) {
     let { channelId: t, quest: n, previewQuest: i, isParticipatingOverride: p } = e,
         _ = (0, I.Ut)(),

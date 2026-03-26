@@ -10,7 +10,7 @@ var i = n(503698),
     u = n(612630),
     c = n(518477),
     d = n(985018),
-    _ = n(90460);
+    _ = n(948837);
 function f(e) {
     let { userId: t, isVisible: n, onOpenProfile: i } = e,
         { note: f } = (0, u.A)(t),

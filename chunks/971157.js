@@ -1,4 +1,4 @@
-n.d(t, { A: () => E }), n(321073);
+n.d(t, { A: () => I }), n(321073);
 var i = n(627968),
     l = n(64700),
     s = n(179771),
@@ -15,13 +15,13 @@ var i = n(627968),
     p = n(661191),
     A = n(427262),
     b = n(447066),
-    _ = n(998874),
-    f = n(657681),
+    f = n(998874),
+    _ = n(657681),
     N = n(267001),
     j = n(652215),
     T = n(985018),
-    C = n(882441);
-function v(e) {
+    v = n(64250);
+function C(e) {
     let { application: t, guild: n, integration: l, ...s } = e;
     return (0, i.jsx)(a.ConfirmModal, {
         ...s,
@@ -35,25 +35,25 @@ function v(e) {
         },
     });
 }
-function E(e) {
+function I(e) {
     let {
             guild: t,
             applicationIntegration: n,
             selectableWebhookChannels: a,
             editedWebhook: d,
             errors: u,
-            canNavigate: E,
+            canNavigate: I,
         } = e,
-        { application: I, integration: S, webhooks: y } = n,
+        { application: E, integration: S, webhooks: y } = n,
         [O, w] = (0, r.yK)(
             [x.A],
-            () => [x.A.can(j.xBc.MANAGE_ROLES, t), null == I.bot || x.A.canManageUser(j.xBc.MANAGE_GUILD, I.bot.id, t)],
-            [I.bot, t],
+            () => [x.A.can(j.xBc.MANAGE_ROLES, t), null == E.bot || x.A.canManageUser(j.xBc.MANAGE_GUILD, E.bot.id, t)],
+            [E.bot, t],
         ),
         R = (0, r.bG)([x.A], () => x.A.can(j.xBc.MANAGE_WEBHOOKS, t), [t]),
         k = l.useCallback(() => {
-            E() && (0, o.qfG)((e) => (0, i.jsx)(v, { guild: t, application: I, integration: S, ...e }));
-        }, [I, E, t, S]),
+            I() && (0, o.qfG)((e) => (0, i.jsx)(C, { guild: t, application: E, integration: S, ...e }));
+        }, [E, I, t, S]),
         L = l.useMemo(() => {
             let e = [
                 {
@@ -72,10 +72,10 @@ function E(e) {
         }, [S.id, S.user]),
         M = l.useMemo(
             () =>
-                null != I.bot && S.scopes?.includes(s.F.BOT)
-                    ? (0, i.jsx)(f.A, { guild: t, applicationIntegration: n })
+                null != E.bot && S.scopes?.includes(s.F.BOT)
+                    ? (0, i.jsx)(_.A, { guild: t, applicationIntegration: n })
                     : (0, i.jsx)(o.ZpM, {
-                          className: C.aM,
+                          className: v.aM,
                           editable: !0,
                           children: (0, i.jsx)(o.Text, {
                               color: "text-muted",
@@ -83,24 +83,24 @@ function E(e) {
                               children: T.intl.string(T.t.pfLnza),
                           }),
                       }),
-            [I.bot, n, t, S.scopes],
+            [E.bot, n, t, S.scopes],
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(b.A, {
-                name: I.name,
-                imageSrc: h.Ay.getApplicationIconURL({ id: I.id, icon: I.icon, size: 32 }),
+                name: E.name,
+                imageSrc: h.Ay.getApplicationIconURL({ id: E.id, icon: E.icon, size: 32 }),
                 details: L,
                 isHeader: !0,
             }),
-            I?.description != null ? (0, i.jsx)(g.A, { userBio: I.description, className: C.ux }) : null,
-            O ? (0, i.jsx)(m.A, { application: I, canNavigate: E, guildId: t.id }) : null,
-            (0, i.jsx)(o.cGx, { className: C.zN }),
-            null != I.bot
+            E?.description != null ? (0, i.jsx)(g.A, { userBio: E.description, className: v.ux }) : null,
+            O ? (0, i.jsx)(m.A, { application: E, canNavigate: I, guildId: t.id }) : null,
+            (0, i.jsx)(o.cGx, { className: v.zN }),
+            null != E.bot
                 ? (0, i.jsxs)("div", {
-                      className: C.uW,
+                      className: v.uW,
                       children: [
-                          (0, i.jsx)(_.A, {
+                          (0, i.jsx)(f.A, {
                               icon: (0, i.jsx)(o.CnV, { size: "xs", color: "currentColor" }),
                               title: T.intl.string(T.t.AOdOYr),
                           }),
@@ -109,9 +109,9 @@ function E(e) {
                   })
                 : null,
             (0, i.jsxs)("div", {
-                className: C.uW,
+                className: v.uW,
                 children: [
-                    (0, i.jsx)(_.A, {
+                    (0, i.jsx)(f.A, {
                         icon: (0, i.jsx)(o.XC7, { size: "md", color: "currentColor" }),
                         title: T.intl.string(T.t["t9ZX/I"]),
                     }),
@@ -121,10 +121,10 @@ function E(e) {
                               editedWebhook: d,
                               selectableWebhookChannels: a,
                               errors: u,
-                              canNavigate: E,
+                              canNavigate: I,
                           })
                         : (0, i.jsx)(o.ZpM, {
-                              className: C.aM,
+                              className: v.aM,
                               editable: !0,
                               children: (0, i.jsx)(o.Text, {
                                   color: "text-muted",
@@ -134,9 +134,9 @@ function E(e) {
                           }),
                 ],
             }),
-            (0, i.jsx)(o.cGx, { className: C.zN }),
+            (0, i.jsx)(o.cGx, { className: v.zN }),
             (0, i.jsxs)(c.A, {
-                className: C.uW,
+                className: v.uW,
                 justify: c.A.Justify.BETWEEN,
                 align: c.A.Align.CENTER,
                 children: [

@@ -11,14 +11,14 @@ var i = n(627968),
     u = n(880457),
     h = n(164684),
     A = n(85109),
-    p = n(914703),
-    g = n(932883),
-    m = n(394953),
+    m = n(914703),
+    p = n(932883),
+    g = n(394953),
     _ = n(654795),
     f = n(849077),
     x = n(652215),
     C = n(985018),
-    E = n(471135);
+    E = n(68450);
 let I = {
     [f.Th.MENTION]: [f.kR.SETTINGS],
     [f.Th.REPLY]: [f.kR.SETTINGS],
@@ -26,10 +26,10 @@ let I = {
     [f.Th.ANNOUNCEMENT]: [f.kR.SETTINGS],
     [f.Th.MESSAGE]: [f.kR.SETTINGS],
 };
-function b(e) {
+function N(e) {
     let { label: t, onClick: n, message: l, Icon: o, interactionType: c } = e,
         [d, u] = (0, s.useState)(!1),
-        h = (0, g.op)();
+        h = (0, p.op)();
     return (0, i.jsx)(r.m, {
         text: t,
         position: "top",
@@ -40,21 +40,21 @@ function b(e) {
         children: (0, i.jsx)(a.DUT, {
             className: E.XI,
             onClick: (e) => {
-                (0, g.Ml)({ message: l, interactionType: c, viewId: h }), e.stopPropagation(), n(l);
+                (0, p.Ml)({ message: l, interactionType: c, viewId: h }), e.stopPropagation(), n(l);
             },
             children: (0, i.jsx)(o, { size: d ? "sm" : "xs", className: E.gE }),
         }),
     });
 }
-function N(e) {
+function b(e) {
     let { channel: t, message: n, label: l, Icon: o, Menu: c, interactionType: d, actionType: u } = e,
-        h = (0, g.op)(),
-        [A, p] = (0, s.useState)(!1),
-        [m, f] = (0, s.useState)(!1),
+        h = (0, p.op)(),
+        [A, m] = (0, s.useState)(!1),
+        [g, f] = (0, s.useState)(!1),
         x = (0, s.useRef)(null),
         { openMenu: C, closeMenu: I } = (0, _.s)();
     return (0, i.jsx)(a.YNO, {
-        shouldShow: m,
+        shouldShow: g,
         animation: a.YNO.Animation.NONE,
         position: "right",
         align: "top",
@@ -75,16 +75,16 @@ function N(e) {
                 position: "top",
                 spacing: 4,
                 asContainer: !0,
-                onTooltipShow: () => p(!0),
-                onTooltipHide: () => p(!1),
+                onTooltipShow: () => m(!0),
+                onTooltipHide: () => m(!1),
                 children: (0, i.jsx)(a.DUT, {
                     innerRef: x,
                     className: E.XI,
                     onClick: (e) => {
                         let t;
-                        (0, g.Ml)({ message: n, interactionType: d, viewId: h }),
+                        (0, p.Ml)({ message: n, interactionType: d, viewId: h }),
                             e.stopPropagation(),
-                            f((t = !m)),
+                            f((t = !g)),
                             t ? C(n.id, u) : I(n.id, u);
                     },
                     children: (0, i.jsx)(o, {
@@ -113,7 +113,7 @@ let S = {
                     e.id,
                 );
         },
-        interactionType: g.X8.ACK,
+        interactionType: p.X8.ACK,
     },
     [f.kR.BOOKMARK]: {
         type: "menu",
@@ -122,7 +122,7 @@ let S = {
             null != A.A.getSavedMessage(e.message.channel_id, e.message.id)
                 ? (0, i.jsx)(a.cFy, { ...e })
                 : (0, i.jsx)(a.c$8, { ...e }),
-        interactionType: g.X8.BOOKMARK,
+        interactionType: p.X8.BOOKMARK,
         Menu: (e) => {
             let { message: t, renderPopoutProps: n } = e,
                 s = (0, l.bG)([A.A], () => A.A.getSavedMessage(t.channel_id, t.id)),
@@ -166,11 +166,11 @@ let S = {
         type: "menu",
         Icon: a.XFE,
         label: C.intl.string(C.t.h850Ss),
-        interactionType: g.X8.SETTINGS,
+        interactionType: p.X8.SETTINGS,
         Menu: (e) => {
             let { channel: t, renderPopoutProps: n } = e;
             return t.isThread()
-                ? (0, i.jsx)(p.A, { ...n, channel: t, navId: "thread-context", label: C.intl.string(C.t["1NBjqb"]) })
+                ? (0, i.jsx)(m.A, { ...n, channel: t, navId: "thread-context", label: C.intl.string(C.t["1NBjqb"]) })
                 : (0, i.jsx)(d.A, { ...n, channel: t, navId: "channel-context", label: C.intl.string(C.t.Xm41aV) });
         },
     },
@@ -179,7 +179,7 @@ function T(e) {
     let t,
         { message: n, channel: l, isUnread: r } = e,
         o =
-            ((t = (0, m.i3)()),
+            ((t = (0, g.i3)()),
             (0, s.useMemo)(() => {
                 let e = f.Th.MENTION,
                     n = new Set();
@@ -195,9 +195,9 @@ function T(e) {
             let t = S[e];
             switch (t.type) {
                 case "standard":
-                    return (0, i.jsx)(b, { ...t, actionType: e, message: n }, e);
+                    return (0, i.jsx)(N, { ...t, actionType: e, message: n }, e);
                 case "menu":
-                    return (0, i.jsx)(N, { ...t, actionType: e, channel: l, message: n }, e);
+                    return (0, i.jsx)(b, { ...t, actionType: e, channel: l, message: n }, e);
             }
         }),
     });

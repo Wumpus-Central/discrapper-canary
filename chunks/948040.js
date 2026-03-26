@@ -6,7 +6,7 @@ var i = n(627968),
     r = n(155718),
     o = n(200662),
     d = n(985018),
-    c = n(48778);
+    c = n(878407);
 function u(e) {
     let { applicationIcon: t, applicationName: u, canNavigate: m, command: g, guildId: x } = e,
         h = l.useMemo(() => 0 !== Object.keys(g.permissions ?? {}).length, [g.permissions]),
@@ -36,7 +36,7 @@ function u(e) {
             [g],
         ),
         b = g.type === r.kc.CHAT ? s.kC9 : s.ueQ,
-        _ = (0, o.p6)(g.type, g.displayName);
+        f = (0, o.p6)(g.type, g.displayName);
     return (0, i.jsxs)(s.DUT, {
         onClick: p,
         className: c.AS,
@@ -46,7 +46,7 @@ function u(e) {
                 className: c.Cv,
                 children: [
                     (0, i.jsx)(b, { className: c.Kk, size: "md", color: "currentColor" }),
-                    (0, i.jsx)(s.Text, { variant: "text-md/normal", children: _ }),
+                    (0, i.jsx)(s.Text, { variant: "text-md/normal", children: f }),
                 ],
             }),
             (0, i.jsx)("div", {

@@ -17,19 +17,19 @@ var a = n(627968),
     j = n(363487),
     h = n(665171),
     A = n(397400),
-    C = n(165655),
-    p = n(496587),
-    I = n(684610),
-    N = n(500897),
-    E = n(225180),
-    S = n(117265),
-    b = n(365003),
+    p = n(165655),
+    C = n(496587),
+    b = n(684610),
+    I = n(500897),
+    N = n(225180),
+    E = n(117265),
+    S = n(365003),
     T = n(680127),
     R = n(858192),
     M = n(49999),
     y = n(294726),
     G = n(985018),
-    k = n(748137);
+    k = n(10342);
 function L(e) {
     let { guildId: t, instance: n } = e,
         [i, l] = s.useState(!1),
@@ -89,7 +89,7 @@ function B(e) {
 }
 function U(e) {
     let { instance: t } = e,
-        n = (0, b.A)(t.providerType, t.gameServerPanelUrl);
+        n = (0, S.A)(t.providerType, t.gameServerPanelUrl);
     return (0, a.jsx)(u.Button, {
         fullWidth: !0,
         text: G.intl.string(y.default.bBkeMs),
@@ -101,11 +101,11 @@ function U(e) {
 }
 function F(e) {
     let { guildId: t, instance: n } = e,
-        i = (0, S.A)(n),
+        i = (0, E.A)(n),
         [h, F] = (0, m.kn)([c.M.GAME_SERVER_HOSTING_PORTKEY_TOS]),
         V = h !== c.M.GAME_SERVER_HOSTING_PORTKEY_TOS,
         w = (0, d.bG)([g.A], () => g.A.getDetectableGame(n.gameId)),
-        W = (0, b.A)(n.providerType, n.gameServerPanelUrl),
+        W = (0, S.A)(n.providerType, n.gameServerPanelUrl),
         q = s.useCallback(() => {
             (0, A.Ai)(t, n.gameId, w?.name ?? "", n.id),
                 V || null == n.providerType
@@ -117,8 +117,8 @@ function F(e) {
                           },
                       });
         }, [n, V, F, t, w?.name]),
-        { handleCopyServerIp: Y, animateCopyIcon: H } = (0, N.A)(t, n.id, _.A.GAME_SERVER_GAME, i ?? ""),
-        K = (0, E.A)(n.gameId, "cover"),
+        { handleCopyServerIp: Y, animateCopyIcon: H } = (0, I.A)(t, n.id, _.A.GAME_SERVER_GAME, i ?? ""),
+        K = (0, N.A)(n.gameId, "cover"),
         Z = (0, j.A)(t),
         $ = s.useCallback(() => {
             (0, A.f7)(t, n.id), (0, v.h)({ href: n.gameServerPanelUrl ?? "" });
@@ -181,7 +181,7 @@ function F(e) {
                     return null;
             }
         }, [n.status, n.gameServerPanelUrl, Z]);
-    return (0, a.jsxs)(p.A, {
+    return (0, a.jsxs)(C.A, {
         actions: z,
         children: [
             (0, a.jsxs)("div", {
@@ -349,9 +349,9 @@ function F(e) {
             Z &&
                 (0, a.jsx)("div", {
                     className: k.overflowMenu,
-                    children: (0, a.jsx)(I.A, { guildId: t, instance: n }),
+                    children: (0, a.jsx)(b.A, { guildId: t, instance: n }),
                 }),
-            (0, a.jsx)("div", { className: k.imageBackground, children: (0, a.jsx)(C.T, { imageUrl: K ?? "" }) }),
+            (0, a.jsx)("div", { className: k.imageBackground, children: (0, a.jsx)(p.T, { imageUrl: K ?? "" }) }),
         ],
     });
 }

@@ -6,7 +6,7 @@ var i = n(627968),
     r = n.n(l),
     a = n(284009),
     o = n.n(a),
-    c = n(490249),
+    c = n(4208),
     d = n(311907),
     u = n(554146),
     h = n(397927),
@@ -35,8 +35,8 @@ var i = n(627968),
     G = n(508654),
     U = n(984624),
     P = n(394412),
-    w = n(267102),
-    k = n(526292),
+    k = n(267102),
+    w = n(526292),
     V = n(396495),
     B = n(478564),
     H = n(123973),
@@ -73,7 +73,7 @@ var i = n(627968),
     ex = n(652215),
     eC = n(806931),
     eE = n(49999),
-    eI = n(832391);
+    eI = n(776912);
 function eN(e, t) {
     if (es.Ay.isVideoEnabled() === e) return;
     let n = () => A.A.setVideoEnabled(e);
@@ -82,7 +82,7 @@ function eN(e, t) {
 function eb(e) {
     let { channel: t, currentUser: n, exitFullScreen: l, canGoLive: r, hasPermission: a, disabled: o } = e,
         { parentAnalyticsLocation: c, analyticsLocations: A } = (0, E.Ay)(),
-        m = (0, w.Us)(),
+        m = (0, k.Us)(),
         p = (0, d.yK)([en.A], () => en.A.getAllActiveStreams()),
         g = p.find((e) => e.ownerId === n.id),
         _ = s.useRef(null),
@@ -92,7 +92,7 @@ function eb(e) {
             if ((l?.(), !r)) return (0, eg.A)();
             (0, e_.A)(x, t.id, A);
         }, [x, t.id, r, l, A]),
-        I = (0, k.k0)(),
+        I = (0, w.k0)(),
         [N, b] = s.useState(!1),
         S = () => {
             ((0, v.X)(c, v.O.STREAM, !0), r) ? C() : (0, eg.A)();
@@ -307,7 +307,7 @@ let eT = s.memo(function (e) {
 });
 function ev(e) {
     let { channel: t, cameraUnavailable: n, hasCameraPermission: l, currentUser: r } = e,
-        a = (0, w.Us)(),
+        a = (0, k.Us)(),
         { parentAnalyticsLocation: o } = (0, E.Ay)(),
         { reachedLimit: c, limit: u } = (0, eo.A)(t),
         h = s.useCallback(() => {
@@ -359,7 +359,7 @@ let ej = function (e) {
         { suppress: j, selfMute: L, mute: D } = (0, ed.A)(t),
         { canGoLive: G } = (0, d.cf)([es.Ay], () => ({ canGoLive: (0, M.A)(es.Ay) })),
         U = (0, O.A)(),
-        k = (0, d.bG)([R.default], () => null != R.default.getAwaitingRemoteSessionInfo()),
+        w = (0, d.bG)([R.default], () => null != R.default.getAwaitingRemoteSessionInfo()),
         V = null != U,
         F = (0, d.bG)([el.A], () => (U?.channelId ?? el.A.getVoiceChannelId()) === t.id),
         Y = (0, B.A)({ channelId: t.id }),
@@ -370,7 +370,7 @@ let ej = function (e) {
         ei = (0, H.Ay)(t),
         eu = s.useRef(null),
         em = s.useRef(null),
-        eg = (0, w.Us)(),
+        eg = (0, k.Us)(),
         e_ = en
             ? (e) => {
                   (0, m.L3)(e, () =>
@@ -449,7 +449,7 @@ let ej = function (e) {
                                                   serverMute: D,
                                                   suppress: j,
                                                   popoutOpen: s,
-                                                  awaitingRemote: k,
+                                                  awaitingRemote: w,
                                                   onClick: () => (0, T.A)(D, j, ex.JJy.VOICE_CONTROL_TRAY),
                                                   onContextMenu: e_,
                                               });

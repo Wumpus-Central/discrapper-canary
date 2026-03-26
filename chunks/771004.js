@@ -1,4 +1,4 @@
-n.d(t, { A: () => A, h: () => p });
+n.d(t, { A: () => v, h: () => _ });
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -10,21 +10,21 @@ var a = n(627968),
     u = n(981355),
     m = n(409626),
     x = n(305080),
-    f = n(936636),
-    h = n(985018),
-    g = n(851822),
-    _ = n(812254);
-function p(e) {
+    h = n(936636),
+    f = n(985018),
+    g = n(282063),
+    p = n(48757);
+function _(e) {
     let { detectedGame: t, trackAction: n } = e,
         [i, x] = l.useState(t?.summaryLocalized != null),
-        [p, A] = l.useState(!0),
-        [v, j] = l.useState(!1),
-        E = l.useRef(null),
-        { width: I, height: C } = (0, u.A)();
+        [_, v] = l.useState(!0),
+        [j, A] = l.useState(!1),
+        C = l.useRef(null),
+        { width: I, height: b } = (0, u.A)();
     return (l.useEffect(() => {
-        let e = E.current;
-        null != e && j(e.scrollHeight - e.clientHeight > 1 || !p);
-    }, [E, I, C, p]),
+        let e = C.current;
+        null != e && A(e.scrollHeight - e.clientHeight > 1 || !_);
+    }, [C, I, b, _]),
     null == t.summary)
         ? null
         : (0, a.jsxs)("div", {
@@ -39,66 +39,66 @@ function p(e) {
                                   variant: "text-xs/medium",
                                   color: "text-default",
                                   children: i
-                                      ? h.intl.format(h.t.aZ2iIp, { onShowOriginal: () => x(!1) })
-                                      : h.intl.format(h.t["/2ylF4"], { onShowTranslated: () => x(!0) }),
+                                      ? f.intl.format(f.t.aZ2iIp, { onShowOriginal: () => x(!1) })
+                                      : f.intl.format(f.t["/2ylF4"], { onShowTranslated: () => x(!0) }),
                               }),
                           ],
                       }),
                   (0, a.jsx)(c.EYj, {
-                      ref: E,
-                      lineClamp: p ? 8 : void 0,
+                      ref: C,
+                      lineClamp: _ ? 8 : void 0,
                       variant: "text-sm/normal",
                       children: i ? t.summaryLocalized : t.summary,
                   }),
-                  v &&
+                  j &&
                       (0, a.jsx)(d.DUT, {
                           className: g.vk,
                           onClick: () => {
-                              n(p ? m.Ws.ShowMore : m.Ws.ShowLess), A(!p);
+                              n(_ ? m.Ws.ShowMore : m.Ws.ShowLess), v(!_);
                           },
                           children: (0, a.jsx)(c.EYj, {
                               variant: "text-sm/semibold",
-                              children: p ? h.intl.string(h.t.lBeKY2) : h.intl.string(h.t["6MwJo/"]),
+                              children: _ ? f.intl.string(f.t.lBeKY2) : f.intl.string(f.t["6MwJo/"]),
                           }),
                       }),
-                  (0, a.jsx)(f.A, { className: _.B, detectedGame: t }),
+                  (0, a.jsx)(h.A, { className: p.B, detectedGame: t }),
               ],
           });
 }
-function A(e) {
+function v(e) {
     let { detectedGame: t, trackAction: n } = e,
         [i, s] = l.useState(!1),
         [o, d] = l.useState(null),
-        f = l.useRef(null),
-        { width: _, height: p } = (0, u.A)(),
-        { isTwoColumn: A } = (0, x.c)(),
-        v = l.useMemo(() => (A ? 8 : 5), [A]),
-        j = l.useCallback((e) => d(e > v), [v]);
+        h = l.useRef(null),
+        { width: p, height: _ } = (0, u.A)(),
+        { isTwoColumn: v } = (0, x.c)(),
+        j = l.useMemo(() => (v ? 8 : 5), [v]),
+        A = l.useCallback((e) => d(e > j), [j]);
     l.useEffect(() => {
         d(null);
-    }, [t.summary, v, _, p]),
+    }, [t.summary, j, p, _]),
         l.useEffect(() => {
-            let e = f.current;
+            let e = h.current;
             if (null == e || null != o) return;
             let t = parseInt(window.getComputedStyle(e).lineHeight, 10);
-            isNaN(t) || j(Math.floor(e.offsetHeight / t));
-        }, [f, o, j]);
-    let E = l.useCallback(() => {
+            isNaN(t) || A(Math.floor(e.offsetHeight / t));
+        }, [h, o, A]);
+    let C = l.useCallback(() => {
         let e = !i;
         n(e ? m.Ws.ShowMore : m.Ws.ShowLess), s(e);
     }, [i, n]);
     if (null == t.summary) return null;
-    let I = i ? h.intl.string(h.t["6MwJo/"]) : h.intl.string(h.t.lBeKY2);
+    let I = i ? f.intl.string(f.t["6MwJo/"]) : f.intl.string(f.t.lBeKY2);
     return (0, a.jsxs)("div", {
         className: r()(g.fi, g.mX),
         children: [
             (0, a.jsx)(c.EYj, {
-                ref: f,
-                lineClamp: i || null == o ? void 0 : v,
+                ref: h,
+                lineClamp: i || null == o ? void 0 : j,
                 variant: "text-sm/normal",
                 children: t.summary,
             }),
-            o && (0, a.jsx)(c.QWc, { onClick: E, text: I }),
+            o && (0, a.jsx)(c.QWc, { onClick: C, text: I }),
         ],
     });
 }

@@ -5,7 +5,7 @@ var s = n(397927),
     l = n(521933),
     a = n(876696),
     r = n(985018),
-    o = n(139674);
+    o = n(27671);
 function d(e) {
     let { currentUser: t } = e;
     return t.isClaimed()

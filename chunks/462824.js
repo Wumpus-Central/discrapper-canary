@@ -3,12 +3,12 @@ n.d(t, { p: () => _, s: () => d });
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
-    s = n(522160),
+    s = n.n(i),
+    a = n(4208),
     o = n(866323),
     l = n(892491),
     u = n(150591),
-    c = n(894198);
+    c = n(827407);
 function d(e) {
     return e !== l.F.TOP_RADIAL && e !== l.F.SUBTLE && e !== l.F.BLUR;
 }
@@ -33,9 +33,9 @@ function _(e) {
         "instant" === n ? "animate-never" : "animate-always",
     )((e, n) =>
         n
-            ? (0, r.jsx)(s.animated.div, {
+            ? (0, r.jsx)(a.animated.div, {
                   role: "none",
-                  className: a()(c.f5, { [c.Et]: "lightbox" === t, [c.RS]: _ }),
+                  className: s()(c.f5, { [c.Et]: "lightbox" === t, [c.RS]: _ }),
                   style: e,
                   onClick: d ? void 0 : i,
               })

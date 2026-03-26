@@ -1,4 +1,4 @@
-n.d(t, { A: () => e_, c: () => em });
+n.d(t, { A: () => eg, c: () => em });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -9,20 +9,20 @@ var i = n(627968),
     c = n(877624),
     u = n(311907),
     m = n(230109),
-    g = n(732955),
-    _ = n(582754),
+    _ = n(732955),
+    g = n(582754),
     x = n(421380),
     A = n(397927),
     h = n(73153),
     p = n(384904),
     f = n(73825),
     T = n(736653),
-    E = n(793574),
-    S = n(688810),
+    S = n(793574),
+    E = n(688810),
     b = n(86379),
     C = n(531260),
-    N = n(160946),
-    v = n(459793),
+    v = n(160946),
+    N = n(459793),
     I = n(721668),
     j = n(976860),
     y = n(780964),
@@ -53,7 +53,7 @@ var i = n(627968),
     ee = n(88001),
     et = n(652215),
     en = n(985018),
-    ei = n(95252),
+    ei = n(699357),
     es = n(396785),
     el = n(956537);
 let ea = "to_premium_home_button",
@@ -75,7 +75,7 @@ function ec(e) {
                       (0, i.jsx)(W.ir, {
                           text: a ? en.intl.string(en.t.qYKftX) : en.intl.string(en.t.EyjDRE),
                           className: ei.uS,
-                          colorOptions: (0, _.Mw)(l)
+                          colorOptions: (0, g.Mw)(l)
                               ? W.at.PREMIUM_TIER_2_WHITE_FILL
                               : W.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
                       }),
@@ -158,7 +158,7 @@ function eu() {
                                         (0, i.jsx)(W.ir, {
                                             text: en.intl.string(en.t.qYKftX),
                                             className: ei.uS,
-                                            colorOptions: (0, _.Mw)(n)
+                                            colorOptions: (0, g.Mw)(n)
                                                 ? W.at.PREMIUM_TIER_2_WHITE_FILL
                                                 : W.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
                                         }),
@@ -181,7 +181,7 @@ function eu() {
                                 : Z.Nz.DEFAULT,
                     }),
                     m && !c
-                        ? (0, i.jsxs)(g.e2v, {
+                        ? (0, i.jsxs)(_.e2v, {
                               fullWidth: !0,
                               direction: "vertical",
                               children: [
@@ -190,7 +190,7 @@ function eu() {
                                           ? en.intl.string(en.t.YScQSF)
                                           : en.intl.string(en.t["0b3YRn"]),
                                   }),
-                                  (0, i.jsx)(g.$nd, {
+                                  (0, i.jsx)(_.$nd, {
                                       onClick: () => {
                                           G.default.track(et.HAw.PREMIUM_SETTINGS_INTERACTED, {
                                               cta_type: ea,
@@ -206,11 +206,11 @@ function eu() {
                                   }),
                               ],
                           })
-                        : (0, i.jsxs)(g.e2v, {
+                        : (0, i.jsxs)(_.e2v, {
                               fullWidth: !0,
                               direction: "vertical",
                               children: [
-                                  (0, i.jsx)(g.$nd, {
+                                  (0, i.jsx)(_.$nd, {
                                       variant: "overlay-primary",
                                       fullWidth: !0,
                                       onClick: () => {
@@ -224,7 +224,7 @@ function eu() {
                                       text: en.intl.string(en.t.VR2iVB),
                                       size: "md",
                                   }),
-                                  (0, i.jsx)(g.$nd, {
+                                  (0, i.jsx)(_.$nd, {
                                       variant: "overlay-secondary",
                                       onClick: () => {
                                           G.default.track(et.HAw.PREMIUM_SETTINGS_INTERACTED, {
@@ -294,7 +294,7 @@ function em(e) {
         ],
     });
 }
-function eg() {
+function e_() {
     return (0, i.jsxs)("div", {
         className: ei.T1,
         children: [
@@ -325,15 +325,15 @@ function eg() {
         ],
     });
 }
-let e_ = function () {
+let eg = function () {
     let e = (0, b.Hp)(),
-        { analyticsLocations: t } = (0, S.Ay)(E.A.PREMIUM_SETTINGS),
+        { analyticsLocations: t } = (0, E.Ay)(S.A.PREMIUM_SETTINGS),
         n = (0, u.bG)([L.default], () => L.default.getCurrentUser()),
         l = (0, u.bG)([P.A], () => P.A.getPremiumTypeSubscription()),
         a = (0, u.bG)([P.A], () => P.A.hasFetchedSubscriptions()),
-        r = (0, N.Y)($.T7),
-        [o, g] = s.useState(!0),
-        _ = (0, C.A)({ forceFetch: !0 }),
+        r = (0, v.Y)($.T7),
+        [o, _] = s.useState(!0),
+        g = (0, C.A)({ forceFetch: !0 }),
         x = (0, u.bG)([F.A], () => {
             let e = F.A.getMarketingComponentByType(c.C.BILLING_SETTINGS_NITRO_GIFT_BANNER);
             return null == e || "billingSettingsNitroGiftBanner" !== e.properties.properties.oneofKind
@@ -346,18 +346,18 @@ let e_ = function () {
     let y = (0, H.m)();
     s.useEffect(() => {
         h.h.wait(async () => {
-            e || (await Promise.all([p.hP(), p.$o(), (0, f.zS)(null, null, et.tF5.DISCOVERY)])), g(!1);
+            e || (await Promise.all([p.hP(), p.$o(), (0, f.zS)(null, null, et.tF5.DISCOVERY)])), _(!1);
         });
     }, [e]);
     let [O, R] = s.useState(!1);
-    if (e) return (0, i.jsx)(v.uK, {});
+    if (e) return (0, i.jsx)(N.uK, {});
     let D = a && null !== l && r,
-        M = _.fetched && _.isFractionalPremiumActive,
+        M = g.fetched && g.isFractionalPremiumActive,
         U = n?.isPremiumWithPremiumGroup();
     if (!D && !M && !o && !U) return (0, i.jsx)(I.A, { title: en.intl.string(en.t.dyq9TR), note: null });
     if ((!D && !M && !U) || o) return (0, i.jsx)(A.y$y, {});
     let k = !!l?.hasActiveTrial;
-    return (0, i.jsx)(S.f5, {
+    return (0, i.jsx)(E.f5, {
         value: t,
         children: (0, i.jsxs)(i.Fragment, {
             children: [
@@ -366,7 +366,7 @@ let e_ = function () {
                         T && (0, i.jsx)(em, { config: x }),
                         (0, i.jsx)(eu, {}),
                         y && (0, i.jsx)(J.A, { isInSettings: !0 }),
-                        !T && (0, i.jsx)(eg, {}),
+                        !T && (0, i.jsx)(e_, {}),
                         (0, i.jsx)(Q.A, {
                             hideCTAs: !0,
                             headingOverride: en.intl.string(en.t.dnVvQS),

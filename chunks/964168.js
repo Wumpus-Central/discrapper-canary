@@ -1,51 +1,51 @@
 "use strict";
-n.d(t, { default: () => y, m: () => v });
+n.d(t, { default: () => T, m: () => y });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(522160),
+    s = n(503698),
+    a = n.n(s),
+    o = n(4208),
     l = n(397927),
     u = n(964486),
     c = n(235986),
     d = n(954571),
     _ = n(859703),
     f = n(890687),
-    h = n(590202),
-    p = n(652215),
-    g = n(985018),
-    E = n(627574),
-    A = n(295171);
-let I = 2500,
-    T = 467;
-function y(e) {
-    let { questId: t, survey: n, transitionState: a, onClose: s, onSubmit: _ } = e,
-        h = (0, f.C5)(t),
-        [y, v] = i.useState(0),
-        [b, N] = (0, l.zhh)(() => ({ from: { width: "0%" }, config: { duration: I } })),
+    p = n(590202),
+    h = n(652215),
+    m = n(985018),
+    E = n(457791),
+    g = n(295171);
+let A = 2500,
+    I = 467;
+function T(e) {
+    let { questId: t, survey: n, transitionState: s, onClose: a, onSubmit: _ } = e,
+        p = (0, f.C5)(t),
+        [T, y] = i.useState(0),
+        [N, C] = (0, l.zhh)(() => ({ from: { width: "0%" }, config: { duration: A } })),
         R = (e) => {
             _(),
-                v(1),
-                null != h &&
-                    d.default.track(p.HAw.QUEST_SURVEY_SUBMITTED, { ...C(h, n), choice: e.text, choice_id: e.key });
+                y(1),
+                null != p &&
+                    d.default.track(h.HAw.QUEST_SURVEY_SUBMITTED, { ...v(p, n), choice: e.text, choice_id: e.key });
         },
         O = async (e) => {
-            1 === e && (await N({ width: "100%" }), s());
+            1 === e && (await C({ width: "100%" }), a());
         };
     return (
         (0, u.Ay)(() => {
-            null != h && d.default.track(p.HAw.QUEST_SURVEY_DISPLAYED, C(h, n));
+            null != p && d.default.track(h.HAw.QUEST_SURVEY_DISPLAYED, v(p, n));
         }),
-        null == h && s(),
+        null == p && a(),
         (0, r.jsx)(l.EOs, {
             "data-migration-pending": !0,
-            transitionState: a,
+            transitionState: s,
             size: l.rIJ.DYNAMIC,
             className: E.modalRoot,
             parentComponent: "QuestSurveyModal",
             children: (0, r.jsxs)(l.tN_, {
-                activeSlide: y,
-                width: T,
+                activeSlide: T,
+                width: I,
                 onSlideReady: O,
                 children: [
                     (0, r.jsxs)(l.q7S, {
@@ -57,8 +57,8 @@ function y(e) {
                                 separator: !1,
                                 className: E.Hc,
                                 children: [
-                                    (0, r.jsx)(l.s_y, { "data-migration-pending": !0, className: E.PV, onClick: s }),
-                                    (0, r.jsx)("img", { src: A, alt: "", className: E.LY }),
+                                    (0, r.jsx)(l.s_y, { "data-migration-pending": !0, className: E.PV, onClick: a }),
+                                    (0, r.jsx)("img", { src: g, alt: "", className: E.LY }),
                                     (0, r.jsx)(l.Heading, { variant: "heading-lg/semibold", children: n.title }),
                                     (0, r.jsx)(l.Text, {
                                         variant: "text-md/normal",
@@ -81,15 +81,15 @@ function y(e) {
                                 "data-migration-pending": !0,
                                 className: E.wD,
                                 children: [
-                                    (0, r.jsx)("img", { src: A, alt: "", className: E.LY }),
+                                    (0, r.jsx)("img", { src: g, alt: "", className: E.LY }),
                                     (0, r.jsx)(l.Heading, {
                                         variant: "heading-lg/semibold",
-                                        children: g.intl.string(g.t.KTjjrG),
+                                        children: m.intl.string(m.t.KTjjrG),
                                     }),
                                     (0, r.jsx)(l.Text, {
                                         variant: "text-md/normal",
                                         color: "text-muted",
-                                        children: g.intl.string(g.t.AvbrEM),
+                                        children: m.intl.string(m.t.AvbrEM),
                                     }),
                                 ],
                             }),
@@ -100,10 +100,10 @@ function y(e) {
                                     children: [
                                         (0, r.jsx)(l.Button, {
                                             variant: "primary",
-                                            text: g.intl.string(g.t.cpT0Cq),
-                                            onClick: s,
+                                            text: m.intl.string(m.t.cpT0Cq),
+                                            onClick: a,
                                         }),
-                                        (0, r.jsx)(o.animated.div, { className: E.ce, style: b }),
+                                        (0, r.jsx)(o.animated.div, { className: E.ce, style: N }),
                                     ],
                                 }),
                             }),
@@ -117,12 +117,12 @@ function y(e) {
 function S(e) {
     let { className: t, choice: n, onClick: i } = e;
     return (0, r.jsxs)(l.DUT, {
-        className: s()(E.z5, t),
+        className: a()(E.z5, t),
         onClick: () => i(n),
         children: [(0, r.jsx)(l.Text, { variant: "text-sm/semibold", children: n.text }), (0, r.jsx)(l._BQ, {})],
     });
 }
-function v(e) {
+function y(e) {
     let t = !1;
     (0, l.mMO)(
         async () => {
@@ -139,15 +139,15 @@ function v(e) {
         {
             onCloseCallback: () => {
                 let n = _.A.getQuest(e.questId);
-                null != n && d.default.track(p.HAw.QUEST_SURVEY_DISMISSED, { ...C(n, e.survey), submitted: t });
+                null != n && d.default.track(h.HAw.QUEST_SURVEY_DISMISSED, { ...v(n, e.survey), submitted: t });
             },
         },
     );
 }
-function C(e, t) {
+function v(e, t) {
     return {
         quest_id: e.id,
-        quest_status: (0, h.NI)(e),
+        quest_status: (0, p.NI)(e),
         survey_id: t.id,
         survey_title: t.title,
         survey_subtitle: t.subtitle,

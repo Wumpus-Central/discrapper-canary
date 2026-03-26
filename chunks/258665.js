@@ -9,22 +9,22 @@ var i = n(627968),
     d = n(582754),
     c = n(397927),
     u = n(573648),
-    g = n(793574),
-    m = n(47167),
+    m = n(793574),
+    g = n(47167),
     x = n(342296),
     h = n(544028),
     _ = n(427157),
-    A = n(994500),
-    p = n(287809),
+    p = n(994500),
+    A = n(287809),
     f = n(147925),
     j = n(860689),
     N = n(427262),
     E = n(820883),
     b = n(276373),
-    T = n(438407),
-    C = n(652215),
+    C = n(438407),
+    T = n(652215),
     I = n(985018),
-    v = n(159529);
+    v = n(91404);
 class S extends s.PureComponent {
     render() {
         let { user: e, onContextMenu: t } = this.props;
@@ -53,8 +53,8 @@ let y = s.forwardRef((e, t) => {
             guild: y,
             onChannelContextMenu: R,
             onContentClick: O,
-            onHeaderClick: G,
-            onTargetContextMenu: L,
+            onHeaderClick: L,
+            onTargetContextMenu: G,
             onUserContextMenu: D,
             theme: M,
         } = e,
@@ -68,7 +68,7 @@ let y = s.forwardRef((e, t) => {
         w === B
             ? (0, i.jsx)(c.Text, { className: v.timestamp, variant: "text-sm/normal", children: w })
             : (0, i.jsxs)(c.Text, { className: v.timestamp, variant: "text-sm/normal", children: [w, "—", B] });
-    let F = U ? G : C.tEg;
+    let F = U ? L : T.tEg;
     return (0, i.jsx)(a.tG, {
         id: l.id,
         children: (e) =>
@@ -82,7 +82,7 @@ let y = s.forwardRef((e, t) => {
                         onClick: F,
                         ...e,
                         children: [
-                            (0, i.jsx)(T.H, { action: l.action, actionType: l.actionType, targetType: l.targetType }),
+                            (0, i.jsx)(C.H, { action: l.action, actionType: l.actionType, targetType: l.targetType }),
                             (function () {
                                 let {
                                     user: e,
@@ -94,7 +94,7 @@ let y = s.forwardRef((e, t) => {
                                         targetElementRef: k,
                                         user: e,
                                         guildId: N,
-                                        newAnalyticsLocations: [g.A.AVATAR],
+                                        newAnalyticsLocations: [m.A.AVATAR],
                                         children: (e) =>
                                             (0, i.jsx)(c.euF, {
                                                 ...e,
@@ -104,10 +104,10 @@ let y = s.forwardRef((e, t) => {
                                                 },
                                                 className: v.avatar,
                                                 src:
-                                                    l.action === C.F_X.AUTO_MODERATION_BLOCK_MESSAGE ||
-                                                    l.action === C.F_X.AUTO_MODERATION_FLAG_TO_CHANNEL ||
-                                                    l.action === C.F_X.AUTO_MODERATION_USER_COMMUNICATION_DISABLED ||
-                                                    l.action === C.F_X.AUTO_MODERATION_QUARANTINE_USER
+                                                    l.action === T.F_X.AUTO_MODERATION_BLOCK_MESSAGE ||
+                                                    l.action === T.F_X.AUTO_MODERATION_FLAG_TO_CHANNEL ||
+                                                    l.action === T.F_X.AUTO_MODERATION_USER_COMMUNICATION_DISABLED ||
+                                                    l.action === T.F_X.AUTO_MODERATION_QUARANTINE_USER
                                                         ? (0, E.q)()
                                                         : l.user?.getAvatarURL(N, 40),
                                                 "aria-hidden": !0,
@@ -158,22 +158,22 @@ let y = s.forwardRef((e, t) => {
                                                               return I.intl.string(I.t["30mdIx"]);
                                                           },
                                                           targetHook: (e, t) =>
-                                                              l.targetType === C.GaG.USER && l.target instanceof _.A
+                                                              l.targetType === T.GaG.USER && l.target instanceof _.A
                                                                   ? (0, i.jsx)(
                                                                         S,
-                                                                        { user: l.target, onContextMenu: L },
+                                                                        { user: l.target, onContextMenu: G },
                                                                         t,
                                                                     )
                                                                   : (0, i.jsx)(
                                                                         "span",
-                                                                        { onContextMenu: L, children: e },
+                                                                        { onContextMenu: G, children: e },
                                                                         t,
                                                                     ),
                                                           count: s.count ?? "",
                                                           channel:
                                                               null == s.channel || "string" == typeof s.channel
                                                                   ? s.channel
-                                                                  : (0, m.m1)(s.channel, p.default, A.A, !0),
+                                                                  : (0, g.m1)(s.channel, A.default, p.A, !0),
                                                           channelHook: (e, t) =>
                                                               (0, i.jsx)("span", { onContextMenu: R, children: e }, t),
                                                           subtarget: s.subtarget,
@@ -196,7 +196,7 @@ let y = s.forwardRef((e, t) => {
                         ],
                     }),
                     h ? (0, i.jsx)("div", { className: v.divider }) : null,
-                    h && null != y ? (0, i.jsx)(T.r, { log: l, guild: y, onContentClick: O }) : null,
+                    h && null != y ? (0, i.jsx)(C.r, { log: l, guild: y, onContentClick: O }) : null,
                 ],
             }),
     });

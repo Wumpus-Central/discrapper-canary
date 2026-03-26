@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { l: () => R });
+n.d(t, { l: () => O });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -22,10 +22,10 @@ var r = n(627968),
     S = n(483084),
     y = n(641668),
     v = n(715022),
-    N = n(594597);
+    N = n(27576);
 let C = 24,
-    b = 36;
-function R(e) {
+    R = 36;
+function O(e) {
     let { i18n: t } = (0, m.G9)(),
         {
             selectionMode: n,
@@ -33,11 +33,11 @@ function R(e) {
             autoFocus: o,
             clearable: E,
             fullWidth: g,
-            closeOnSelect: R = !0,
+            closeOnSelect: O = !0,
             shouldFocusWrap: L,
             placeholder: w = t.SELECT_PLACEHOLDER,
-            name: x,
-            form: M,
+            name: M,
+            form: x,
             autoComplete: P,
             maxOptionsVisible: k = 5,
             options: U,
@@ -49,7 +49,7 @@ function R(e) {
         } = e,
         j = i.useRef(null),
         { fieldProps: Y } = (0, f.n)(H),
-        { id: W, required: K, label: z, disabled: $ } = Y,
+        { id: W, required: K, label: $, disabled: z } = Y,
         {
             isOpen: q,
             setIsOpen: Z,
@@ -63,10 +63,10 @@ function R(e) {
         { options: er, loading: ei } = (0, S.K)({ active: q, options: U, renderOption: G }),
         es = i.useRef(null),
         ea = i.useRef(null),
-        eo = R ?? "multiple" !== n,
+        eo = O ?? "multiple" !== n,
         el = Array.isArray(V) ? V.length > 0 : null != V,
-        eu = $ || s,
-        { measuredWidth: ec, itemsForMeasurement: ed } = O(er, n),
+        eu = z || s,
+        { measuredWidth: ec, itemsForMeasurement: ed } = b(er, n),
         e_ = i.useCallback(() => {
             eu || Z(!q);
         }, [eu, Z, q]),
@@ -106,7 +106,7 @@ function R(e) {
             return er.filter((t) => (0, v.fI)(t.value, e));
         }, [V, er]),
         eE = i.useMemo(() => {
-            if (!g) return `${Math.max(ec ?? 200, 200) * ("multiple" === n ? 1.5 : 1) + !!E * C + b + 12}px`;
+            if (!g) return `${Math.max(ec ?? 200, 200) * ("multiple" === n ? 1.5 : 1) + !!E * C + R + 12}px`;
         }, [g, ec, n, E]),
         eg = i.useCallback(
             (e) => {
@@ -153,12 +153,12 @@ function R(e) {
     );
     let eN = (0, c.r)(u.A.modules.select.MAX_WIDTH),
         eC = i.useMemo(() => ({ horizontalControlColumnWidth: `min(${eN}px, auto)` }), [eN]);
-    function eb(e) {
+    function eR(e) {
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(T.p, {
                     ref: eT,
-                    disabled: $,
+                    disabled: z,
                     readOnly: s,
                     loading: ei,
                     clearable: E,
@@ -171,7 +171,7 @@ function R(e) {
                     handleClear: ep,
                     ...J(),
                     children: (0, r.jsxs)(d.s, {
-                        "aria-label": z,
+                        "aria-label": $,
                         buttonRef: es,
                         buttonProps: { ...(null != W ? { id: W } : {}), style: { marginLeft: -4 } },
                         focusProps: { ringTarget: ea },
@@ -186,7 +186,7 @@ function R(e) {
                         "aria-errormessage": e?.errorMessageId,
                         "aria-invalid": e?.errorMessageId != null,
                         children: [
-                            (0, r.jsxs)(p.A, { children: [z, ", "] }),
+                            (0, r.jsxs)(p.A, { children: [$, ", "] }),
                             (0, r.jsx)(D, {
                                 tagGroupRef: j,
                                 placeholder: w,
@@ -198,8 +198,8 @@ function R(e) {
                     }),
                 }),
                 (0, r.jsx)(A.H, {
-                    name: x,
-                    form: M,
+                    name: M,
+                    form: x,
                     disabled: eu,
                     autoComplete: P,
                     selectionMode: n,
@@ -238,10 +238,10 @@ function R(e) {
         ...Y,
         "data-mana-component": "select",
         layoutConfig: eC,
-        children: (e) => (0, r.jsx)("div", { style: { width: g ? "100%" : `minmax(${eE}px, 100%)` }, children: eb(e) }),
+        children: (e) => (0, r.jsx)("div", { style: { width: g ? "100%" : `minmax(${eE}px, 100%)` }, children: eR(e) }),
     });
 }
-function O(e, t) {
+function b(e, t) {
     let { ref: n, width: s } = (0, o.Ay)(),
         a = i.useId();
     return {

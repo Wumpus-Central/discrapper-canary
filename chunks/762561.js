@@ -2,7 +2,7 @@
 n.d(t, { A: () => V });
 var i = n(627968),
     s = n(64700),
-    l = n(497766),
+    l = n(4208),
     r = n(158954),
     a = n(311907),
     o = n(397927),
@@ -13,8 +13,8 @@ var i = n(627968),
     A = n(182592),
     m = n(594832),
     p = n(183555),
-    _ = n(622543),
-    g = n(950191),
+    g = n(622543),
+    _ = n(950191),
     f = n(679492),
     x = n(657331),
     C = n(718019),
@@ -36,11 +36,11 @@ var i = n(627968),
     U = n(518477),
     P = n(996988),
     k = n(985018),
-    w = n(743789);
+    w = n(374146);
 function V(e) {
     let { user: t, currentUser: n, channel: V } = e,
         B = __OVERLAY__,
-        H = (0, g.Ay)(t.id),
+        H = (0, _.Ay)(t.id),
         F = (0, c.Ay)(),
         { analyticsLocations: K } = (0, u.Ay)(d.A.USER_PROFILE_SIDEBAR),
         W = (0, p.pb)({ layout: "SIDEBAR", userId: t.id, channelId: V.id }),
@@ -52,7 +52,7 @@ function V(e) {
             (0, x.openUserProfileModal)({ sourceAnalyticsLocations: K, hideRestrictedProfile: !0, ...W, ...e });
         },
         $ = H?.widgets != null && H.widgets.length > 0,
-        { defaultWishlistId: Z } = (0, a.cf)([_.A], () => ({ defaultWishlistId: _.A.getFirstWishlistId(t.id) })),
+        { defaultWishlistId: Z } = (0, a.cf)([g.A], () => ({ defaultWishlistId: g.A.getFirstWishlistId(t.id) })),
         { wishlist: ee } = (0, m.fw)({ wishlistId: Z, userId: t.id }),
         et = s.useMemo(() => (null == ee ? null : ee.items.filter((e) => !e.isOwned)), [ee]);
     return (0, i.jsx)(u.f5, {

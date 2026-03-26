@@ -1,81 +1,81 @@
-n.d(t, { A: () => h });
-var a = n(627968),
-    i = n(64700),
-    s = n(503698),
-    l = n.n(s),
-    r = n(522160),
+n.d(t, { A: () => m });
+var i = n(627968),
+    a = n(64700),
+    r = n(503698),
+    l = n.n(r),
+    s = n(4208),
     o = n(397927),
     d = n(398025),
     c = n(419367),
-    u = n(638322);
-let m = "var(--background-mod-strong)",
-    h = i.forwardRef((e, t) => {
+    u = n(293225);
+let _ = "var(--background-mod-strong)",
+    m = a.forwardRef((e, t) => {
         let {
                 percentComplete: n,
-                size: s = 42,
-                style: h = "default",
-                percentCompleteText: p,
-                percentCompleteTextVariant: x = "text-lg/medium",
+                size: r = 42,
+                style: m = "default",
+                percentCompleteText: h,
+                percentCompleteTextVariant: p = "text-lg/medium",
                 children: g,
             } = e,
-            { strokeWidth: _ } = "small" === h ? { strokeWidth: 3 } : { strokeWidth: 4 },
-            f = s / 2,
-            b = s / 2 - _ / 2,
-            v = 2 * Math.PI * b,
-            j = v - n * v,
-            C = i.useMemo(() => ({ strokeDasharray: `${v} ${v}`, strokeDashoffset: j }), [v, j]),
-            { progressTextAnimation: A } = (0, o.zhh)({ progressTextAnimation: +(null != p && 1 !== n), config: c.N });
-        return (0, a.jsxs)("div", {
+            { strokeWidth: A } = "small" === m ? { strokeWidth: 3 } : { strokeWidth: 4 },
+            x = r / 2,
+            f = r / 2 - A / 2,
+            C = 2 * Math.PI * f,
+            I = C - n * C,
+            E = a.useMemo(() => ({ strokeDasharray: `${C} ${C}`, strokeDashoffset: I }), [C, I]),
+            { progressTextAnimation: v } = (0, o.zhh)({ progressTextAnimation: +(null != h && 1 !== n), config: c.N });
+        return (0, i.jsxs)("div", {
             className: u.A7,
             ref: t,
-            style: { width: s, height: s, padding: _ + 2 },
+            style: { width: r, height: r, padding: A + 2 },
             children: [
-                (0, a.jsxs)("div", {
+                (0, i.jsxs)("div", {
                     className: u.vW,
                     children: [
                         g,
-                        (0, a.jsxs)(r.animated.div, {
-                            style: { opacity: (0, d.a)(A), inset: _ },
+                        (0, i.jsxs)(s.animated.div, {
+                            style: { opacity: (0, d.a)(v), inset: A },
                             className: l()(u.rD, u.qk),
                             children: [
-                                (0, a.jsx)("div", { className: l()(u.rD, u.LU) }),
-                                (0, a.jsx)(o.Text, { variant: x, color: "text-strong", className: u.l_, children: p }),
+                                (0, i.jsx)("div", { className: l()(u.rD, u.LU) }),
+                                (0, i.jsx)(o.Text, { variant: p, color: "text-strong", className: u.l_, children: h }),
                             ],
                         }),
                     ],
                 }),
-                (0, a.jsxs)("svg", {
+                (0, i.jsxs)("svg", {
                     className: u.hr,
-                    height: s,
-                    width: s,
+                    height: r,
+                    width: r,
                     children: [
-                        (0, a.jsx)("circle", {
+                        (0, i.jsx)("circle", {
                             className: u.qB,
-                            strokeWidth: _,
+                            strokeWidth: A,
                             fill: "transparent",
-                            r: b,
-                            cx: f,
-                            cy: f,
-                            stroke: m,
+                            r: f,
+                            cx: x,
+                            cy: x,
+                            stroke: _,
                         }),
-                        (0, a.jsx)("circle", {
+                        (0, i.jsx)("circle", {
                             className: u.qB,
-                            strokeWidth: _,
+                            strokeWidth: A,
                             fill: "transparent",
-                            r: b,
-                            cx: f,
-                            cy: f,
-                            stroke: m,
+                            r: f,
+                            cx: x,
+                            cy: x,
+                            stroke: _,
                         }),
-                        (0, a.jsx)("circle", {
+                        (0, i.jsx)("circle", {
                             className: u.qB,
-                            strokeWidth: _,
+                            strokeWidth: A,
                             fill: "transparent",
-                            r: b,
-                            cx: f,
-                            cy: f,
+                            r: f,
+                            cx: x,
+                            cy: x,
                             stroke: "rgba(98, 196, 101, 1)",
-                            style: C,
+                            style: E,
                         }),
                     ],
                 }),

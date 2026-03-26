@@ -15,7 +15,7 @@ var l = n(627968),
 n(253913);
 var x = n(652215),
     A = n(985018),
-    p = n(57046);
+    p = n(316783);
 function f(e) {
     let { channel: t } = e,
         s = (0, r.bG)([g.A], () => g.A.can(x.xBc.MANAGE_CHANNELS, t), [t]),
@@ -30,7 +30,7 @@ function f(e) {
                     return (n) => (0, l.jsx)(e, { ...n, channelId: t.id, guildId: t.guild_id });
                 });
         }, [t, s]),
-        C = i.useCallback(
+        j = i.useCallback(
             (e) => {
                 s &&
                     (0, d.mMO)(async () => {
@@ -41,7 +41,7 @@ function f(e) {
             [s, t],
         ),
         {
-            handleDragStart: j,
+            handleDragStart: C,
             handleDragReset: N,
             handleDragComplete: v,
         } = (0, h.A)(t.availableTags, (e) => {
@@ -58,10 +58,10 @@ function f(e) {
                               tag: e,
                               availableTags: t.availableTags,
                               canManageChannels: s,
-                              onTagClick: C,
+                              onTagClick: j,
                               onDragComplete: v,
                               onDragReset: N,
-                              onDragStart: j,
+                              onDragStart: C,
                           },
                           e.id,
                       ),

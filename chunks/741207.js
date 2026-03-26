@@ -12,7 +12,7 @@ var s = n(311907),
     u = n(652215),
     m = n(200700),
     g = n(985018),
-    x = n(86181);
+    x = n(524190);
 function h(e) {
     let { action: t, triggerType: n, guildId: h, toggled: _, onToggleAction: p } = e,
         A = (e) => () => p(e),
@@ -21,19 +21,19 @@ function h(e) {
         N = null != j ? (0, m.getFriendlyDurationString)(j) : null,
         E = (0, s.bG)([o.A, a.A], () => o.A.can(u.xBc.MODERATE_MEMBERS, a.A.getGuild(h)), [h]);
     if (null == f) return null;
-    let { headerText: b, descriptionText: T, icon: C } = f;
+    let { headerText: b, descriptionText: C, icon: T } = f;
     return (0, i.jsxs)("div", {
         className: x.Ik,
         children: [
             (0, i.jsx)("div", {
                 className: x.TV,
-                children: (0, i.jsx)(C, { size: "md", color: "currentColor", className: x.gE }),
+                children: (0, i.jsx)(T, { size: "md", color: "currentColor", className: x.gE }),
             }),
             (0, i.jsxs)("div", {
                 className: x.xj,
                 children: [
                     (0, i.jsx)(r.Heading, { variant: "heading-sm/semibold", children: b }),
-                    (0, i.jsx)(r.Text, { color: "interactive-text-default", variant: "text-xs/medium", children: T }),
+                    (0, i.jsx)(r.Text, { color: "interactive-text-default", variant: "text-xs/medium", children: C }),
                     _ &&
                         (0, i.jsxs)(r.Text, {
                             color: "interactive-text-default",

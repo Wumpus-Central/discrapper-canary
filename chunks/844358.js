@@ -10,7 +10,7 @@ var i = n(627968),
     u = n(652215),
     A = n(613057),
     h = n(985018),
-    _ = n(742249);
+    _ = n(34960);
 function m(e) {
     let { applicationId: t } = e,
         [m, g] = a.useState(null),

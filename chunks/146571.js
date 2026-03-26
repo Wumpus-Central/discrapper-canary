@@ -5,11 +5,11 @@ var r = s(627968),
     i = s.n(a),
     l = s(421380),
     o = s(397927),
-    h = s(915089),
-    c = s(628387),
+    c = s(915089),
+    h = s(628387),
     d = s(920768),
-    u = s(291255),
-    p = s(713545);
+    u = s(83302),
+    p = s(199228);
 function m(e) {
     let {
             alpha2: t,
@@ -19,21 +19,21 @@ function m(e) {
             error: C,
             className: A,
             required: g,
-            value: E,
-            setRef: S,
+            value: S,
+            setRef: E,
             placeholder: f,
-            autoFocus: x,
-            maxLength: y,
-            spellCheck: w,
+            autoFocus: w,
+            maxLength: x,
+            spellCheck: y,
             autoComplete: N,
             autoCapitalize: j,
             autoCorrect: k,
             onChange: v,
             inputClassName: T,
         } = e,
-        _ = (0, h.GV)(),
+        _ = (0, c.GV)(),
         [O, P] = n.useState(!1),
-        L = (0, c.Vl)(a, E);
+        L = (0, h.Vl)(a, S);
     return (0, r.jsx)("div", {
         className: A ?? void 0,
         children: (0, r.jsx)(o.D0$, {
@@ -48,22 +48,22 @@ function m(e) {
                     (0, r.jsx)(l.ob, {
                         id: _,
                         name: "email",
-                        type: a === c.Pd.EMAIL ? "email" : "text",
-                        value: E,
-                        inputRef: S,
+                        type: a === h.Pd.EMAIL ? "email" : "text",
+                        value: S,
+                        inputRef: E,
                         placeholder: f,
                         "aria-label": m,
                         required: g,
                         onChange: function (e) {
-                            let t = (0, c.Vl)(a, e) ? s : "";
+                            let t = (0, h.Vl)(a, e) ? s : "";
                             v(e, t);
                         },
                         autoComplete: N,
                         autoCapitalize: j,
                         autoCorrect: k,
-                        autoFocus: x,
-                        maxLength: y,
-                        spellCheck: w,
+                        autoFocus: w,
+                        maxLength: x,
+                        spellCheck: y,
                         className: u.I6,
                         inputClassName: u.LF,
                         onFocus: () => P(!0),

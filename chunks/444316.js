@@ -9,7 +9,7 @@ var l = i(627968),
     c = i(287809),
     u = i(260451),
     m = i(985018),
-    x = i(36522);
+    x = i(383499);
 function g(e) {
     let { friendMemberIds: t, className: i, avatarSize: a = o._3J.SIZE_16 } = e,
         g = (0, r.yK)([c.default], () =>

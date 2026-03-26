@@ -1,4 +1,4 @@
-i.d(t, { A: () => c });
+i.d(t, { A: () => o });
 var n = i(627968);
 i(64700);
 var l = i(311907),
@@ -6,20 +6,20 @@ var l = i(311907),
     r = i(855687),
     a = i(576705),
     d = i(652215),
-    o = i(985018);
-function c(e) {
+    c = i(985018);
+function o(e) {
     let { source: t, guild: i, channel: n, stageInstance: s } = e,
         d = (0, l.bG)([a.A], () => (0, r.K)(a.A, i, n, s)),
-        o = A(t, i, n),
-        c = g(t, n);
-    return d ? o : c;
+        c = A(t, i, n),
+        o = g(t, n);
+    return d ? c : o;
 }
 function u(e, t) {
     return (null != t && [d.PE1.GUILD_HEADER, d.PE1.GUILD_CONTEXT_MENU].includes(t)) || null == e
-        ? o.intl.string(o.t.Sd8Ixw)
+        ? c.intl.string(c.t.Sd8Ixw)
         : e.type === d.rbe.GUILD_VOICE
-          ? o.intl.string(o.t["EE+P0H"])
-          : o.intl.string(o.t["0jeAXt"]);
+          ? c.intl.string(c.t["EE+P0H"])
+          : c.intl.string(c.t["0jeAXt"]);
 }
 let A = (e, t, l) => {
         if (null == t) return null;
@@ -32,7 +32,7 @@ let A = (e, t, l) => {
             leadingAccessory: e === d.PE1.GUILD_HEADER ? { type: "icon", icon: s.DpX } : void 0,
             action: () =>
                 (0, s.mMO)(async () => {
-                    let { default: s } = await Promise.all([i.e("43600"), i.e("28136"), i.e("8421")]).then(
+                    let { default: s } = await Promise.all([i.e("43600"), i.e("28136"), i.e("72469")]).then(
                         i.bind(i, 234355),
                     );
                     return (i) => (0, n.jsx)(s, { ...i, guild: t, channel: l, source: e });

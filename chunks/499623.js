@@ -5,15 +5,15 @@ var n = s(627968),
     l = s(975571),
     i = s(652215),
     o = s(333354),
-    d = s(985018),
-    c = s(930323);
+    c = s(985018),
+    d = s(1752);
 function u(e) {
     let { powerup: t } = e;
     return t.skuId === a.FB
         ? (0, n.jsx)(r.EYj, {
-              className: c.C,
+              className: d.C,
               variant: "text-sm/medium",
-              children: d.intl.format(o.default.fXE30d, { helpDeskArticle: l.A.getArticleURL(i.MVz.GUILD_VANITY_URL) }),
+              children: c.intl.format(o.default.fXE30d, { helpDeskArticle: l.A.getArticleURL(i.MVz.GUILD_VANITY_URL) }),
           })
         : null;
 }

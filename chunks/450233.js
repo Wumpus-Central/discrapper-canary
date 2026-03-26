@@ -10,7 +10,7 @@ var r = n(627968),
     c = n(403362),
     d = n(832208),
     _ = n(985018),
-    f = n(784550);
+    f = n(62727);
 let p = "US",
     h = "CA",
     m = 5,
@@ -111,10 +111,10 @@ var R = (function (e) {
             e
         );
     })(R || {}),
-    b = (function (e) {
+    O = (function (e) {
         return (e.EDIT = "edit"), (e.CREATE = "create"), e;
-    })(b || {});
-let O = { [p]: o.D, [h]: s.i },
+    })(O || {});
+let b = { [p]: o.D, [h]: s.i },
     D = { [p]: o.J, [h]: s.d },
     L = (e, t) => ({
         name: "name",
@@ -176,7 +176,7 @@ let O = { [p]: o.D, [h]: s.i },
             },
         };
     },
-    x = (e, t) => ({
+    M = (e, t) => ({
         name: "line1",
         id: S,
         title: () => _.intl.string(_.t.x0beVT),
@@ -196,7 +196,7 @@ let O = { [p]: o.D, [h]: s.i },
                 : f.bt,
         renderInput: (e) => (0, r.jsx)(l.ksK, { ...e }),
     }),
-    M = (e, t) => ({
+    x = (e, t) => ({
         name: "line2",
         id: y,
         title: () => _.intl.string(_.t.i2Z0gI),
@@ -313,7 +313,7 @@ let O = { [p]: o.D, [h]: s.i },
                 }
             },
             renderInput(t, n) {
-                let i = O[e],
+                let i = b[e],
                     s =
                         null == t.value ||
                         "" === t.value ||
@@ -347,20 +347,20 @@ let O = { [p]: o.D, [h]: s.i },
         };
     },
     G = {
-        modalUS: [[w], [x], [M], [P], [U, k]],
-        modalInternational: [[w], [x], [M], [P], [U], [k]],
-        modalUSWithName: [[w], [L], [x], [M], [P], [U, k]],
-        modalInternationalWithName: [[w], [L], [x], [M], [P], [U], [k]],
-        settingsUS: [[L], [x, M], [P, U, k], [w]],
-        settingsUSMobile: [[L], [x], [M], [P], [U], [k], [w]],
-        settingsInternational: [[L], [x, M], [P], [U, k], [w]],
-        settingsInternationalMobile: [[L], [x], [M], [P], [U], [k], [w]],
-        settingsInternationalWithoutName: [[x, M], [P], [U, k], [w]],
-        settingsInternationalWithoutNameMobile: [[x], [M], [P], [U], [k], [w]],
+        modalUS: [[w], [M], [x], [P], [U, k]],
+        modalInternational: [[w], [M], [x], [P], [U], [k]],
+        modalUSWithName: [[w], [L], [M], [x], [P], [U, k]],
+        modalInternationalWithName: [[w], [L], [M], [x], [P], [U], [k]],
+        settingsUS: [[L], [M, x], [P, U, k], [w]],
+        settingsUSMobile: [[L], [M], [x], [P], [U], [k], [w]],
+        settingsInternational: [[L], [M, x], [P], [U, k], [w]],
+        settingsInternationalMobile: [[L], [M], [x], [P], [U], [k], [w]],
+        settingsInternationalWithoutName: [[M, x], [P], [U, k], [w]],
+        settingsInternationalWithoutNameMobile: [[M], [x], [P], [U], [k], [w]],
     };
 class F extends i.PureComponent {
     static Layouts = R;
-    static Modes = b;
+    static Modes = O;
     static defaultProps = {
         name: "",
         country: "",

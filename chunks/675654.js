@@ -17,15 +17,15 @@ var i = n(627968),
     p = n(545055),
     A = n(966394),
     f = n(985018),
-    j = n(93100);
+    j = n(654853);
 function N(e) {
     let { guildId: t } = e,
         { guildProfile: d, fetchGuildProfile: g, fetchStatus: N } = (0, m.u)(t),
         E = N !== u.X.FETCHED,
         {
             fetchedEmbed: b,
-            embedEnabled: T,
-            embedChannelId: C,
+            embedEnabled: C,
+            embedChannelId: T,
         } = (0, a.cf)([h.A], () => {
             let { fetchedEmbed: e, embedEnabled: t, embedChannelId: n } = h.A.getProps();
             return { fetchedEmbed: e, embedEnabled: t, embedChannelId: n };
@@ -34,23 +34,23 @@ function N(e) {
         v = s.useMemo(() => (0, p.Z)(t), [t]),
         [S, y] = s.useState(!1),
         R = null != d && l.i.VISIBLE.has(d.visibility),
-        O = !E && !R && !T;
+        O = !E && !R && !C;
     s.useEffect(() => {
         b || (0, x.D)(t);
     }, [b, t]),
         s.useEffect(() => {
             g();
         }, [t, g]);
-    let G = s.useCallback(
+    let L = s.useCallback(
         async (e) => {
-            y(!0), await (0, _.E)(t, e, C), y(!1);
+            y(!0), await (0, _.E)(t, e, T), y(!1);
         },
-        [C, t],
+        [T, t],
     );
     return b
         ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(o.dOG, { label: f.intl.string(f.t.NR6huS), checked: T, onChange: G, disabled: S }),
+                  (0, i.jsx)(o.dOG, { label: f.intl.string(f.t.NR6huS), checked: C, onChange: L, disabled: S }),
                   O
                       ? (0, i.jsx)(r.EYj, {
                             variant: "text-sm/normal",
@@ -59,15 +59,15 @@ function N(e) {
                             children: f.intl.string(f.t["zCGuJ+"]),
                         })
                       : null,
-                  T
+                  C
                       ? (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(A.s, {
                                     label: f.intl.string(f.t.LUo0Q8),
                                     description: f.intl.string(f.t.LxVR9A),
                                     guildId: t,
-                                    widgetEnabled: T,
-                                    widgetChannelId: C,
+                                    widgetEnabled: C,
+                                    widgetChannelId: T,
                                     enableLocalUpdate: !0,
                                 }),
                                 (0, i.jsxs)("div", {

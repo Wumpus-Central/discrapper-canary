@@ -3,8 +3,8 @@ n.d(t, { A: () => N });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
-    a = n(397927),
-    r = n(73153),
+    r = n(397927),
+    a = n(73153),
     o = n(334738),
     c = n(222823),
     d = n(954571),
@@ -12,14 +12,14 @@ var i = n(627968),
     h = n(938764),
     A = n(519480),
     m = n(352123),
-    _ = n(372536),
-    p = n(268965),
-    g = n(667369),
+    p = n(372536),
+    g = n(268965),
+    _ = n(667369),
     f = n(647026),
     x = n(946116),
     C = n(652215),
     E = n(650583),
-    I = n(10544);
+    I = n(104333);
 let N = (e) => {
     let { channel: t, guild: N } = e,
         {
@@ -44,7 +44,7 @@ let N = (e) => {
         () => () => {
             let e = c.Ay.lastMessageId(t.id);
             null != e &&
-                r.h.wait(() => {
+                a.h.wait(() => {
                     (0, o.ack)(
                         t.id,
                         {
@@ -59,7 +59,7 @@ let N = (e) => {
         },
         [t.id],
     );
-    let j = s.useMemo(() => (null != S ? (0, g._)(Object.values(S), b) : null), [S, b]),
+    let j = s.useMemo(() => (null != S ? (0, _._)(Object.values(S), b) : null), [S, b]),
         {
             mostRecentQuery: R,
             searchFetching: O,
@@ -86,12 +86,12 @@ let N = (e) => {
                 primary_category_id: b,
             });
         }, [t.id, N.id, b]);
-    let w = (0, m.b)(t),
-        k = s.useMemo(
+    let k = (0, m.b)(t),
+        w = s.useMemo(
             () =>
-                w
+                k
                     ? () => {
-                          (0, a.mMO)(async () => {
+                          (0, r.mMO)(async () => {
                               let { default: e } = await n.e("6759").then(n.bind(n, 953722));
                               return (n) =>
                                   (0, i.jsx)(e, {
@@ -104,7 +104,7 @@ let N = (e) => {
                           });
                       }
                     : void 0,
-            [w, N.name, N.id, t.id, b],
+            [k, N.name, N.id, t.id, b],
         ),
         V = (e) => {
             0 !== M.trim().length &&
@@ -125,21 +125,21 @@ let N = (e) => {
               mostRecentQuery: R,
               handleSearchKeyPress: V,
               handleClearSearch: B,
-              handleCreateOrAddGuild: k,
+              handleCreateOrAddGuild: w,
               searchResults: L,
               searchFetching: O,
           })
         : null == j && null == b
-          ? (0, i.jsx)("div", { className: I.$$, children: (0, i.jsx)(a.y$y, { className: I.u1 }) })
+          ? (0, i.jsx)("div", { className: I.$$, children: (0, i.jsx)(r.y$y, { className: I.u1 }) })
           : j?.length === 0 && null == b
-            ? (0, i.jsx)("div", { className: I.$$, children: (0, i.jsx)(_.A, { guild: N, onAddGuild: k }) })
-            : (0, i.jsx)(p.A, {
+            ? (0, i.jsx)("div", { className: I.$$, children: (0, i.jsx)(p.A, { guild: N, onAddGuild: w }) })
+            : (0, i.jsx)(g.A, {
                   channel: t,
                   searchQuery: M,
                   setSearchQuery: D,
                   handleSearchKeyPress: V,
                   handleClearSearch: B,
-                  handleCreateOrAddGuild: k,
+                  handleCreateOrAddGuild: w,
                   currentCategoryId: b,
                   handleSelectCategory: (e) => {
                       u.uU(t.id, e);

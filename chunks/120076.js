@@ -2,10 +2,10 @@ n.d(t, { e: () => c });
 var i = n(627968),
     l = n(64700);
 n(503698);
-var s = n(522160),
+var s = n(4208),
     r = n(397927),
     a = n(985018),
-    d = n(301450);
+    d = n(47409);
 function o(e) {
     let { testimonial: t, className: n } = e,
         { message: l, profilePic: s, adminTitle: o, emphasisColor: c = "interactive-text-default" } = t;

@@ -20,7 +20,7 @@ var l = n(627968),
     S = n(985925),
     G = n(295191),
     O = n(586387),
-    R = n(12999);
+    R = n(885858);
 function C(e) {
     let { userId: t, guildId: n, onClose: a, className: C, infoPanelClassName: L, style: D, moderatorReportId: f } = e,
         x = (0, S.q)(n),

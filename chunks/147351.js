@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => C });
 var i = n(627968),
     a = n(64700),
     l = n(311907),
@@ -14,13 +14,13 @@ var i = n(627968),
     E = n(661191),
     I = n(460350),
     T = n(652215),
-    f = n(48447);
+    f = n(705886);
 function N(e) {
     let { assets: t, currentUser: n, message: i } = e,
         a = (E.default.extractTimestamp(n.id) + E.default.extractTimestamp(i.id)) % t.length;
     return t[a];
 }
-function C(e) {
+function g(e) {
     let { currentUser: t, channel: n, message: l, buttonLabels: d, stickers: u, event: _, eventProperties: m } = e,
         E = a.useMemo(() => N({ assets: u, currentUser: t, message: l }), [u, t, l]),
         T = a.useMemo(() => N({ assets: d, currentUser: t, message: l }), [d, t, l]),
@@ -52,7 +52,7 @@ function C(e) {
         variant: "secondary",
     });
 }
-function g(e) {
+function C(e) {
     let { channel: t, message: n, buttonLabels: a, stickers: r, event: s, eventProperties: o } = e,
         c = m.default.getCurrentUser(),
         A = (function (e) {
@@ -70,7 +70,7 @@ function g(e) {
     return null != c && A
         ? (0, i.jsx)("div", {
               className: f.S,
-              children: (0, i.jsx)(C, {
+              children: (0, i.jsx)(g, {
                   currentUser: c,
                   channel: t,
                   message: n,

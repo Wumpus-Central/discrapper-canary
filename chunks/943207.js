@@ -7,9 +7,9 @@ var i = n(627968),
     o = n(670492),
     d = n(957565),
     c = n(985018),
-    u = n(139674),
-    _ = n(473169);
-function m(e) {
+    u = n(27671),
+    m = n(885106);
+function _(e) {
     let {
             code: { code: t, consumed: n },
         } = e,
@@ -25,7 +25,7 @@ function m(e) {
             [a],
         );
     return (0, i.jsx)("li", {
-        className: _.SX,
+        className: m.SX,
         children: (0, i.jsxs)(l.DUT, {
             innerRef: r,
             className: u.Uc,
@@ -36,7 +36,7 @@ function m(e) {
 }
 function g(e) {
     let { backupCodes: t } = e,
-        n = s.useCallback((e) => e.map((e) => (0, i.jsx)(m, { code: e }, e.code)), []),
+        n = s.useCallback((e) => e.map((e) => (0, i.jsx)(_, { code: e }, e.code)), []),
         d = s.useCallback(async () => {
             let e = o.A.getVerificationKey();
             await a.A.confirmViewBackupCodes(e, !0);

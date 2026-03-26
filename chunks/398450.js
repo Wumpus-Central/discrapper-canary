@@ -4,7 +4,7 @@ n(64700);
 var s = n(397927),
     r = n(235986),
     i = n(985018),
-    a = n(288661);
+    a = n(39634);
 let o = {
     SlideContent: function (e) {
         let { children: t, scrollbarType: n } = e;
@@ -23,14 +23,14 @@ let o = {
     },
     SlideFooter: function (e) {
         let { mfaChallenge: t, setSlide: n, trailingButton: r, showConfirm: a = !1, disabled: o, submitting: d } = e,
-            c = t.methods.length > 1;
-        return null != r || c || a
+            u = t.methods.length > 1;
+        return null != r || u || a
             ? (0, l.jsx)(s.jlY, {
                   "data-migration-pending": !0,
                   children: (0, l.jsxs)(s.ButtonGroup, {
                       fullWidth: !0,
                       children: [
-                          c &&
+                          u &&
                               (0, l.jsx)(s.Button, {
                                   variant: "secondary",
                                   text: i.intl.string(i.t.Tot4EC),

@@ -8,17 +8,17 @@ var i = n(627968),
     d = n(397927),
     c = n(974544),
     u = n(351906),
-    _ = n(823092),
-    g = n(963935),
-    m = n(894858),
-    A = n(272053),
-    h = n(397274),
-    p = n(641324),
-    x = n(46373),
-    E = n(872175);
+    m = n(823092),
+    _ = n(963935),
+    g = n(894858),
+    x = n(272053),
+    A = n(397274),
+    h = n(641324),
+    p = n(46373),
+    f = n(32145);
 function T(e) {
     let { notice: t, children: n } = e,
-        { showNotice: l, handleStoreUpdate: a } = (0, _.L_)(),
+        { showNotice: l, handleStoreUpdate: a } = (0, m.L_)(),
         c = t?.stores;
     s.useEffect(() => {
         if (null != c) {
@@ -37,7 +37,7 @@ function T(e) {
     let u = s.useMemo(() => {
         if (null == t || !l) return null;
         let { element: e } = t;
-        return (0, i.jsx)(d.FQk, { className: E.lm, children: (0, i.jsx)(e, {}) });
+        return (0, i.jsx)(d.FQk, { className: f.lm, children: (0, i.jsx)(e, {}) });
     }, [t, l]);
     return (0, i.jsxs)(i.Fragment, { children: [n, (0, i.jsx)(o.F, { component: "div", children: u })] });
 }
@@ -45,12 +45,12 @@ function S(e) {
     let { decoration: t } = e,
         n = t.component;
     return (0, i.jsx)("div", {
-        className: a()(E.oK, { [E.qf]: t.sticky }),
+        className: a()(f.oK, { [f.qf]: t.sticky }),
         "data-settings-panel-sticky-decoration": t.sticky || void 0,
         children: (0, i.jsx)(n, {}),
     });
 }
-function C(e) {
+function E(e) {
     let { panelKey: t, notice: n, children: l } = e,
         a = s.useRef(null);
     return (0, i.jsx)(T, {
@@ -58,12 +58,12 @@ function C(e) {
         children: (0, i.jsx)(
             d.GtU,
             {
-                className: E.XG,
+                className: f.XG,
                 ref: (e) => {
-                    h.A.setPanelScrollerRef(e);
+                    A.A.setPanelScrollerRef(e);
                 },
                 children: (0, i.jsx)("div", {
-                    className: E.nd,
+                    className: f.nd,
                     ref: a,
                     children: (0, i.jsx)(d.xpW, { containerRef: a, children: l }),
                 }),
@@ -72,10 +72,10 @@ function C(e) {
         ),
     });
 }
-function f(e) {
+function b(e) {
     let { layout: t, decoration: n } = e;
     return (0, i.jsxs)("div", {
-        className: E.LZ,
+        className: f.LZ,
         children: [
             null != n && (0, i.jsx)(S, { decoration: n }),
             t.map((e, n) =>
@@ -83,8 +83,8 @@ function f(e) {
                     s.Fragment,
                     {
                         children: [
-                            (0, i.jsx)(p.A, { node: e }),
-                            n !== t.length - 1 && (0, i.jsx)(x.A, { className: E.yF }),
+                            (0, i.jsx)(h.A, { node: e }),
+                            n !== t.length - 1 && (0, i.jsx)(p.A, { className: f.yF }),
                         ],
                     },
                     e.key,
@@ -93,29 +93,29 @@ function f(e) {
         ],
     });
 }
-function I(e) {
+function C(e) {
     let { panelKey: t, layout: n, notice: l, decoration: a } = e,
         r =
-            m.A.useState((e) => {
+            g.A.useState((e) => {
                 let { currentTabKeys: n } = e;
                 return n.get(t);
             }) ?? n[0].key;
     s.useEffect(() => {
-        let e = m.A.getField("currentTabKeys");
+        let e = g.A.getField("currentTabKeys");
         if (n.some((n) => n.key === e.get(t))) return;
         let i = new Map(e);
-        i.set(t, n[0].key), m.A.setState({ currentTabKeys: i });
+        i.set(t, n[0].key), g.A.setState({ currentTabKeys: i });
     }, [n, t]);
     let o = n.find((e) => e.key === r) ?? n[0];
-    return (0, i.jsxs)(C, {
+    return (0, i.jsxs)(E, {
         panelKey: t,
         notice: l,
         children: [
             (0, i.jsx)(d.VQ0, {
-                className: E.$H,
+                className: f.$H,
                 selectedItem: r,
                 onItemSelect: (e) => {
-                    A.A.navigate(e, {
+                    x.A.navigate(e, {
                         onTransitionStart: () => {
                             let t = n.find((t) => t.key === e);
                             t?.onItemSelect?.();
@@ -135,20 +135,20 @@ function I(e) {
                 children:
                     null != o.StronglyDiscouragedCustomComponent
                         ? (0, i.jsx)(o.StronglyDiscouragedCustomComponent, {})
-                        : (0, i.jsx)(f, { layout: o.layout, decoration: a }),
+                        : (0, i.jsx)(b, { layout: o.layout, decoration: a }),
             }),
         ],
     });
 }
-function b(e) {
+function v(e) {
     let { panelKey: t, notice: n, decoration: s, layout: l } = e;
-    return (0, i.jsx)(C, { panelKey: t, notice: n, children: (0, i.jsx)(f, { layout: l, decoration: s }) });
+    return (0, i.jsx)(E, { panelKey: t, notice: n, children: (0, i.jsx)(b, { layout: l, decoration: s }) });
 }
 function N(e) {
     let { node: t } = e,
         { layout: n } = t;
     if ((0, r.bG)([u.A], () => u.A.hidePersonalInformation) && t.hideInStreamerMode) return (0, i.jsx)(c.A, {});
-    if ((0, g.zY)(n)) return (0, i.jsx)(I, { panelKey: t.key, notice: t.notice, decoration: t.decoration, layout: n });
-    if ((0, g.Iu)(n)) return (0, i.jsx)(b, { panelKey: t.key, notice: t.notice, decoration: t.decoration, layout: n });
+    if ((0, _.zY)(n)) return (0, i.jsx)(C, { panelKey: t.key, notice: t.notice, decoration: t.decoration, layout: n });
+    if ((0, _.Iu)(n)) return (0, i.jsx)(v, { panelKey: t.key, notice: t.notice, decoration: t.decoration, layout: n });
     throw Error("Panels must have a list of categories or a list of tabs");
 }

@@ -6,7 +6,7 @@ var r = n(627968),
     a = n.n(s),
     o = n(397927),
     l = n(235986),
-    u = n(31582),
+    u = n(890423),
     c = (function (e) {
         return (e.SINGLE_AVATAR = "1"), (e.MULTIPLE_AVATAR = "2"), e;
     })(c || {});

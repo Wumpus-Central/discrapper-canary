@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { I: () => b });
+n.d(t, { I: () => R });
 var r = n(627968),
     i = n(64700),
     s = n(977418),
     a = n(967158),
-    o = n(522160),
+    o = n(4208),
     l = n(823807),
     u = n(827734),
     c = n(717421),
@@ -12,7 +12,7 @@ var r = n(627968),
     _ = n(844222),
     f = n(426333),
     p = n(140735),
-    h = n(443504);
+    h = n(287235);
 let m = "M4.10585 5.3837L5.37864 4.11091L11.884 10.61632L10.6112 11.88912L4.10585 5.3837Z",
     E = "M10.61632 4.11091L11.88912 5.3837L5.3837 11.88912L4.11091 10.61632L10.61632 4.11091Z",
     g = "M5.25333 8.80104L5.25333 7.17346L10.85336 7.17346L10.85336 8.80104L5.25333 8.80104Z",
@@ -43,7 +43,7 @@ function C(e, t, n) {
         }),
     });
 }
-function b(e) {
+function R(e) {
     let {
             checked: t,
             disabled: n,
@@ -53,16 +53,16 @@ function b(e) {
             hasIcon: A = !1,
             describedBy: I,
             labelledBy: T,
-            innerRef: b,
+            innerRef: R,
         } = e,
-        { reducedMotion: R } = i.useContext(_.C),
-        O = i.useRef(null),
+        { reducedMotion: O } = i.useContext(_.C),
+        b = i.useRef(null),
         D = i.useRef(null),
-        L = b ?? D,
+        L = R ?? D,
         w = (0, l.H)({ isSelected: t, onChange: E, isDisabled: n }),
         {
-            inputProps: x,
-            labelProps: M,
+            inputProps: M,
+            labelProps: x,
             isPressed: P,
         } = (0, s.K)({ id: m, isDisabled: n, "aria-describedby": I, "aria-labelledby": T }, w, L),
         { hoverProps: k, isHovered: U } = (0, a.M)({ isDisabled: n }),
@@ -75,14 +75,14 @@ function b(e) {
         Y = (0, d.r)(u.A.colors.SWITCH_BACKGROUND_HOVER).spring(),
         W = (0, d.r)(u.A.colors.SWITCH_BACKGROUND_SELECTED_HOVER).spring(),
         K = (0, d.r)(u.A.colors.SWITCH_BORDER_HOVER).spring(),
-        z = (0, d.r)(u.A.colors.SWITCH_BORDER_SELECTED_HOVER).spring(),
-        $ = (0, d.r)(u.A.colors.SWITCH_THUMB_ICON_DEFAULT).spring(),
+        $ = (0, d.r)(u.A.colors.SWITCH_BORDER_SELECTED_HOVER).spring(),
+        z = (0, d.r)(u.A.colors.SWITCH_THUMB_ICON_DEFAULT).spring(),
         q = (0, d.r)(u.A.colors.SWITCH_THUMB_ICON_ACTIVE).spring(),
         Z = (0, d.r)(u.A.colors.SWITCH_THUMB_BACKGROUND_DEFAULT).spring(),
         X = (0, d.r)(u.A.colors.SWITCH_THUMB_BACKGROUND_SELECTED_DEFAULT).spring(),
         { state: Q, opacity: J } = (0, c.z)(
             {
-                config: { duration: R.enabled ? 200 : 300 },
+                config: { duration: O.enabled ? 200 : 300 },
                 opacity: n ? 0.5 : 1,
                 state: P ? (t ? N[N.length - 2] : v[1]) : +!!t,
             },
@@ -94,18 +94,18 @@ function b(e) {
         };
     return (0, r.jsx)(f.vN, {
         ...g,
-        ringTarget: O,
+        ringTarget: b,
         focusTarget: L,
         within: !0,
         offset: -2,
         children: (0, r.jsxs)("label", {
-            ...M,
+            ...x,
             className: h.kL,
             "data-disabled": n || void 0,
             children: [
                 (0, r.jsx)(o.animated.div, {
                     ...k,
-                    ref: O,
+                    ref: b,
                     className: h.cw,
                     "data-size": "md",
                     "data-mana-component": "switch",
@@ -115,7 +115,7 @@ function b(e) {
                         border: "1px solid",
                         borderColor: Q.to({
                             range: y,
-                            output: [U ? K : H, U ? K : H, U ? z : j, U ? z : j],
+                            output: [U ? K : H, U ? K : H, U ? $ : j, U ? $ : j],
                             extrapolate: "clamp",
                         }),
                     },
@@ -125,7 +125,7 @@ function b(e) {
                         preserveAspectRatio: "xMidYMin meet",
                         style: {
                             left: Q.to(
-                                R.enabled
+                                O.enabled
                                     ? { range: y, output: [1, 1, 24, 24] }
                                     : { range: S, output: [1, 1, 1, 24, 24, 24] },
                             ),
@@ -134,17 +134,17 @@ function b(e) {
                         children: [
                             (0, r.jsx)(o.animated.rect, {
                                 fill: Q.to({ range: y, output: [Z, Z, X, X] }),
-                                x: R.enabled ? 4 : ee([4, 4, 2.5, 1, 2.5, 4]),
-                                y: R.enabled ? 4 : ee([4, 7, 2.5, 7, 2.5, 4]),
-                                width: R.enabled ? 16 : ee([16, 16, 19, 22, 19, 16]),
-                                height: R.enabled ? 16 : ee([16, 10, 19, 10, 19, 16]),
-                                rx: R.enabled ? 8 : ee([8, 5, 9.5, 5, 9.5, 8]),
+                                x: O.enabled ? 4 : ee([4, 4, 2.5, 1, 2.5, 4]),
+                                y: O.enabled ? 4 : ee([4, 7, 2.5, 7, 2.5, 4]),
+                                width: O.enabled ? 16 : ee([16, 16, 19, 22, 19, 16]),
+                                height: O.enabled ? 16 : ee([16, 10, 19, 10, 19, 16]),
+                                rx: O.enabled ? 8 : ee([8, 5, 9.5, 5, 9.5, 8]),
                             }),
-                            A && C(Q, $, q),
+                            A && C(Q, z, q),
                         ],
                     }),
                 }),
-                (0, r.jsx)(p.A, { children: (0, r.jsx)("input", { ...x, ref: L }) }),
+                (0, r.jsx)(p.A, { children: (0, r.jsx)("input", { ...M, ref: L }) }),
             ],
         }),
     });

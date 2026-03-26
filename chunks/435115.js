@@ -1,0 +1,20 @@
+"use strict";
+e.exports = {
+    Uu: "flex_abf706",
+    CT: "alignStart_abf706",
+    ZT: "alignEnd_abf706",
+    Hu: "alignCenter_abf706",
+    hx: "alignStretch_abf706",
+    Ju: "alignBaseline_abf706",
+    LF: "justifyStart_abf706",
+    Ub: "justifyEnd_abf706",
+    wq: "justifyCenter_abf706",
+    aD: "justifyAround_abf706",
+    LT: "justifyBetween_abf706",
+    oA: "noWrap_abf706",
+    LV: "wrap_abf706",
+    Tt: "wrapReverse_abf706",
+    Vd: "vertical_abf706",
+    xM: "horizontal_abf706",
+    tR: "flexCenter_abf706",
+};

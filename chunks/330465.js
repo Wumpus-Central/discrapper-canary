@@ -3,9 +3,9 @@ n.d(t, { A: () => P });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    a = n.n(l),
-    r = n(131346),
-    o = n(380278),
+    r = n.n(l),
+    a = n(131346),
+    o = n(4208),
     c = n(837381),
     d = n(607399),
     u = n(417597),
@@ -31,7 +31,7 @@ var i = n(627968),
     O = n(65611),
     L = n(652215),
     M = n(985018),
-    D = n(837021);
+    D = n(604418);
 let G = { analyticsSource: { page: L.liQ.GUILD_CHANNEL, section: L.JJy.CHANNEL_LIST, object: L.ZSU.CHANNEL } };
 function U(e, t) {
     (0, p.L3)(e, async () => {
@@ -43,16 +43,16 @@ function U(e, t) {
             n.e("16301"),
             n.e("22191"),
             n.e("25961"),
-            n.e("21968"),
+            n.e("91872"),
             n.e("35894"),
             n.e("50796"),
             n.e("8458"),
             n.e("11810"),
-            n.e("39048"),
-            n.e("41538"),
+            n.e("34656"),
+            n.e("30453"),
             n.e("56475"),
             n.e("54469"),
-            n.e("67109"),
+            n.e("48892"),
         ]).then(n.bind(n, 544676));
         return (n) => (0, i.jsx)(e, { ...n, guild: t });
     });
@@ -64,8 +64,8 @@ let P = s.memo(function (e) {
             onDragStart: l,
             onDragEnd: p,
             route: P,
-            guild: w,
-            animatable: k,
+            guild: k,
+            animatable: w,
             selected: V = !1,
             unread: B = !1,
             mediaState: H,
@@ -92,7 +92,7 @@ let P = s.memo(function (e) {
               ) ?? void 0)
         : null == ei && null != J && (ei = (0, O.eW)({ guildJoinRequestStatus: J }) ?? void 0);
     let es = e.lowerBadgeSize ?? { width: (0, A.o6S)(K) },
-        [{ dragging: el }, ea] = (0, r.i)({
+        [{ dragging: el }, er] = (0, a.i)({
             type: b.PJ.GUILD,
             item: () => (
                 requestAnimationFrame(() => {
@@ -105,7 +105,7 @@ let P = s.memo(function (e) {
             },
             collect: (e) => ({ dragging: e.isDragging() }),
         }),
-        er = (0, c.Vd)(ee ?? L.dJq, null != et ? 2 : 1),
+        ea = (0, c.Vd)(ee ?? L.dJq, null != et ? 2 : 1),
         [eo, ec] = s.useState(!1),
         ed = !q && eo,
         [eu, eh] = s.useState(!1),
@@ -117,16 +117,16 @@ let P = s.memo(function (e) {
             null != P ? (0, f.pX)(P, { state: G }) : (0, x.u)(ee, { state: G });
         }, [ee, P]),
         ef = s.useCallback(() => {
-            if (null != P || null == w || F || !X) return;
-            let e = (0, _.W)(w.id);
-            null != e && m.A.preload(w.id, e);
-        }, [P, w, F, X]),
+            if (null != P || null == k || F || !X) return;
+            let e = (0, _.W)(k.id);
+            null != e && m.A.preload(k.id, e);
+        }, [P, k, F, X]),
         ex = (0, u.bG)([E.Ay], () => E.Ay.isCurrentUserGuest(ee)),
         eC = s.useCallback(
             (e) => {
-                null == w || ex || Y(e, w);
+                null == k || ex || Y(e, k);
             },
-            [w, Y, ex],
+            [k, Y, ex],
         ),
         eE = s.useCallback(
             (e) => {
@@ -155,9 +155,9 @@ let P = s.memo(function (e) {
             [ee, n],
         ),
         eT = (0, A.rdh)(A.LU0.modules.guildbar.AVATAR_SIZE);
-    if (null == w) return null;
+    if (null == k) return null;
     let ev = (0, i.jsx)(T.A, {
-            guild: w,
+            guild: k,
             show: eA,
             active: V,
             onAnimationStart: function () {
@@ -169,17 +169,17 @@ let P = s.memo(function (e) {
         }),
         ey = eg
             ? (0, i.jsx)(A.jlP, {
-                  ariaLabel: M.intl.formatToPlainString(M.t["/uzRss"], { guildName: w.name, mentions: K }),
-                  name: w.name,
+                  ariaLabel: M.intl.formatToPlainString(M.t["/uzRss"], { guildName: k.name, mentions: K }),
+                  name: k.name,
                   onClick: e_,
                   onMouseEnter: eN,
                   onMouseLeave: eb,
                   onMouseDown: ef,
                   onContextMenu: eC,
                   onKeyDown: eE,
-                  icon: (0, C.Iv)(w, 2 * eT, ed && k, !0),
+                  icon: (0, C.Iv)(k, 2 * eT, ed && w, !0),
                   selected: V || ed,
-                  ...er,
+                  ...ea,
                   "aria-setsize": $,
                   "aria-posinset": Z,
                   "aria-selected": V,
@@ -189,23 +189,23 @@ let P = s.memo(function (e) {
                   children: (0, i.jsx)("div", {
                       ref: z
                           ? (e) => {
-                                ea(e);
+                                er(e);
                             }
                           : void 0,
-                      "data-dnd-name": w.name,
+                      "data-dnd-name": k.name,
                       "data-drop-hovering": eA,
                       children: (0, i.jsx)(A.jlP, {
-                          ariaLabel: M.intl.formatToPlainString(M.t["/uzRss"], { guildName: w.name, mentions: K }),
-                          name: w.name,
+                          ariaLabel: M.intl.formatToPlainString(M.t["/uzRss"], { guildName: k.name, mentions: K }),
+                          name: k.name,
                           onClick: e_,
                           onMouseEnter: eN,
                           onMouseLeave: eb,
                           onMouseDown: ef,
                           onContextMenu: eC,
                           onKeyDown: eE,
-                          icon: (0, C.Iv)(w, 2 * eT, ed && k, !0),
+                          icon: (0, C.Iv)(k, 2 * eT, ed && w, !0),
                           selected: V || ed,
-                          ...er,
+                          ...ea,
                           "aria-setsize": $,
                           "aria-posinset": Z,
                           "aria-selected": V,
@@ -218,13 +218,13 @@ let P = s.memo(function (e) {
             ? (0, i.jsx)(o.animated.div, {
                   ref: z
                       ? (e) => {
-                            ea(e);
+                            er(e);
                         }
                       : void 0,
-                  "data-dnd-name": w.name,
+                  "data-dnd-name": k.name,
                   style: { scale: null == Q ? 1 : Q },
                   "data-drop-hovering": eA,
-                  className: a()(D.rN, { [D.p9]: q, [D.oR]: eA, [D.wH]: eA || V }),
+                  className: r()(D.rN, { [D.p9]: q, [D.oR]: eA, [D.wH]: eA || V }),
                   children: (0, i.jsx)(A.Qk9, {
                       selected: !0,
                       upperBadge: en,
@@ -235,7 +235,7 @@ let P = s.memo(function (e) {
               })
             : (0, i.jsx)(o.animated.div, {
                   style: { scale: null == Q ? 1 : Q },
-                  className: a()(D.rN, { [D.p9]: q, [D.oR]: eA, [D.wH]: eA || V }),
+                  className: r()(D.rN, { [D.p9]: q, [D.oR]: eA, [D.wH]: eA || V }),
                   "data-drop-hovering": eA,
                   children: (0, i.jsx)(A.Qk9, {
                       selected: V,
@@ -249,8 +249,8 @@ let P = s.memo(function (e) {
         ref: eS,
         children: [
             (0, i.jsx)(S.A, { hovered: !el && ed, selected: !el && V, unread: !el && B, className: D.Io }),
-            (0, i.jsx)(y.A, { guild: w, disabled: q, isDragging: el, children: el ? eR : eO }),
-            z ? (0, i.jsx)(v.Ay, { name: w.name, targetNode: t, onDragOverChanged: eI }) : null,
+            (0, i.jsx)(y.A, { guild: k, disabled: q, isDragging: el, children: el ? eR : eO }),
+            z ? (0, i.jsx)(v.Ay, { name: k.name, targetNode: t, onDragOverChanged: eI }) : null,
         ],
     });
 });

@@ -15,8 +15,8 @@ var i = n(627968),
     p = n(447066),
     A = n(320426),
     b = n(652215),
-    _ = n(985018),
-    f = n(979773);
+    f = n(985018),
+    _ = n(30220);
 function N(e) {
     let {
             name: t,
@@ -25,10 +25,10 @@ function N(e) {
             iconBackgroundColor: N,
             iconClassName: j,
             iconWrapperClassName: T,
-            details: C,
-            integration: v,
-            buttonText: E,
-            buttonDisabled: I,
+            details: v,
+            integration: C,
+            buttonText: I,
+            buttonDisabled: E,
             hasNextSection: S,
             onButtonClick: y,
             guildId: O,
@@ -37,11 +37,11 @@ function N(e) {
             trailing: k,
         } = e,
         [L, M] = l.useState(!1),
-        G = R && !w && !L && void 0 !== O && null != v,
+        G = R && !w && !L && void 0 !== O && null != C,
         U = l.useRef(null),
         D = l.useRef(null),
         P =
-            null == E || null == y
+            null == I || null == y
                 ? null
                 : S
                   ? (0, i.jsxs)(c.BJc, {
@@ -50,35 +50,35 @@ function N(e) {
                         align: "center",
                         ref: D,
                         children: [
-                            (0, i.jsx)(c.Text, { variant: "text-sm/normal", children: E }),
+                            (0, i.jsx)(c.Text, { variant: "text-sm/normal", children: I }),
                             S
                                 ? (0, i.jsx)(c._BQ, {
                                       size: "custom",
                                       color: "currentColor",
                                       width: 10,
                                       height: 10,
-                                      className: f.OW,
+                                      className: _.OW,
                                   })
                                 : null,
                         ],
                     })
-                  : (0, i.jsx)(c.Button, { size: "sm", buttonRef: U, disabled: I, onClick: y, text: E });
+                  : (0, i.jsx)(c.Button, { size: "sm", buttonRef: U, disabled: E, onClick: y, text: I });
     l.useEffect(() => {
         G &&
             h.default.track(b.HAw.COMMANDS_MIGRATION_TOOLTIP_VIEWED, {
                 ...(0, u.H$)(O),
-                application_id: v?.application.id,
+                application_id: C?.application.id,
                 location: "overview",
             });
-    }, [O, v?.application.id, G]);
+    }, [O, C?.application.id, G]);
     let B =
             G && (null != D.current || null != U.current)
                 ? (0, i.jsx)(d.AM, {
                       targetElementRef: S ? D : U,
-                      title: _.intl.string(_.t.ufFDiC),
-                      body: _.intl.string(_.t.TyMJwC),
+                      title: f.intl.string(f.t.ufFDiC),
+                      body: f.intl.string(f.t.TyMJwC),
                       onRequestClose: () => {
-                          M(!0), A.A.dismissOverviewTooltip(O, v.integration);
+                          M(!0), A.A.dismissOverviewTooltip(O, C.integration);
                       },
                       position: "bottom",
                       align: "center",
@@ -86,10 +86,10 @@ function N(e) {
                   })
                 : null,
         W = (0, o.yK)([g.A], () =>
-            null != v && null != O ? (g.A.getApplicationEntitlementsForGuild(v.application.id, O) ?? []) : [],
+            null != C && null != O ? (g.A.getApplicationEntitlementsForGuild(C.application.id, O) ?? []) : [],
         ),
         H = (0, m.ON)(O, !0),
-        V = v?.application != null && Object.keys(H.result?.sections[v.application.id]?.commands ?? {}).length > 0,
+        V = C?.application != null && Object.keys(H.result?.sections[C.application.id]?.commands ?? {}).length > 0,
         z = (0, i.jsxs)(c.BJc, {
             direction: "horizontal",
             align: "center",
@@ -101,7 +101,7 @@ function N(e) {
                     iconBackgroundColor: N,
                     iconClassName: j,
                     iconWrapperClassName: T,
-                    details: C,
+                    details: v,
                     isPremium: W.length > 0,
                     children: (function (e, t) {
                         if (null == e) return null;
@@ -113,30 +113,30 @@ function N(e) {
                                 n.push({
                                     id: "bot",
                                     label: new x.A(l.bot).isVerifiedBot()
-                                        ? _.intl.string(_.t.xxcTGy)
-                                        : _.intl.string(_.t.AOdOYr),
+                                        ? f.intl.string(f.t.xxcTGy)
+                                        : f.intl.string(f.t.AOdOYr),
                                     icon: c.CnV,
                                 }),
                             a.length > 0 &&
                                 n.push({
                                     id: "webhooks",
-                                    label: _.intl.formatToPlainString(_.t["6HqDfT"], { count: a.length }),
+                                    label: f.intl.formatToPlainString(f.t["6HqDfT"], { count: a.length }),
                                     icon: c.XC7,
                                 }),
                             s?.scopes?.includes(r.F.APPLICATIONS_COMMANDS) === !0 &&
                                 t &&
-                                n.push({ id: "commands", label: _.intl.string(_.t["0hKkS+"]), icon: c.kC9 }),
+                                n.push({ id: "commands", label: f.intl.string(f.t["0hKkS+"]), icon: c.kC9 }),
                             (0, i.jsx)(c.BJc, {
                                 direction: "horizontal",
                                 gap: 4,
                                 children: (0, i.jsx)(c.CR_, {
-                                    label: _.intl.string(_.t.G8u3Jf),
+                                    label: f.intl.string(f.t.G8u3Jf),
                                     layout: "inline",
                                     items: n,
                                 }),
                             })
                         );
-                    })(v, V),
+                    })(C, V),
                 }),
                 B,
                 P,
@@ -146,9 +146,9 @@ function N(e) {
     return S
         ? (0, i.jsx)(c.DUT, {
               onClick: () => {
-                  R && null != O && null != v && A.A.dismissOverviewTooltip(O, v.integration), y?.();
+                  R && null != O && null != C && A.A.dismissOverviewTooltip(O, C.integration), y?.();
               },
-              children: (0, i.jsx)(c.ZpM, { editable: !0, className: a()(f.Nr, f.vk), children: z }),
+              children: (0, i.jsx)(c.ZpM, { editable: !0, className: a()(_.Nr, _.vk), children: z }),
           })
-        : (0, i.jsx)(c.ZpM, { editable: !0, className: f.Nr, children: z });
+        : (0, i.jsx)(c.ZpM, { editable: !0, className: _.Nr, children: z });
 }

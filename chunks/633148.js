@@ -10,11 +10,11 @@ var l = n(627968),
     c = n(853742),
     u = n(652215),
     m = n(985018),
-    h = n(659002);
+    h = n(93071);
 function x(e) {
     let { channelName: t, guildId: x, tagFilter: g, channel: f } = e,
-        p = (0, d.S4)(f),
-        _ = (0, r.AI)(f),
+        _ = (0, d.S4)(f),
+        p = (0, r.AI)(f),
         j = f.isMediaChannel(),
         b = i.useCallback(() => {
             (0, c.zd)(),
@@ -24,11 +24,11 @@ function x(e) {
                 });
         }, [x]),
         v = g.size > 0,
-        A = _ || p,
-        C = !v && p && !j,
+        A = p || _,
+        C = !v && _ && !j,
         T = i.useCallback(
-            () => (C ? b() : _ ? void o._.dispatch(u.jej.FOCUS_COMPOSER_TITLE) : (0, u.FXj)()),
-            [b, C, _],
+            () => (C ? b() : p ? void o._.dispatch(u.jej.FOCUS_COMPOSER_TITLE) : (0, u.FXj)()),
+            [b, C, p],
         );
     return (0, l.jsxs)("div", {
         className: h.k,

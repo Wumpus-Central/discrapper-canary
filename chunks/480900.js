@@ -1,8 +1,8 @@
-n.d(t, { b: () => y, default: () => L });
+n.d(t, { b: () => y, default: () => O });
 var i = n(627968),
-    r = n(64700),
-    a = n(503698),
-    l = n.n(a),
+    a = n(64700),
+    l = n(503698),
+    r = n.n(l),
     s = n(158954),
     o = n(311907),
     d = n(582754),
@@ -12,119 +12,119 @@ var i = n(627968),
     h = n(736653),
     _ = n(573648),
     m = n(104171),
-    p = n(58149),
-    g = n(427157),
+    g = n(58149),
+    p = n(427157),
     E = n(961350),
-    f = n(696451),
-    I = n(317525),
+    I = n(696451),
+    f = n(317525),
     C = n(954571),
-    N = n(975571),
-    T = n(967740),
+    T = n(975571),
+    N = n(967740),
     S = n(652215),
     x = n(985018),
-    v = n(702326),
-    b = n(688963);
+    v = n(746183),
+    b = n(83104);
 function y(e, t) {
     (0, c.mMO)(async () => {
-        let { default: r } = await Promise.all([n.e("49282"), n.e("58481")]).then(n.bind(n, 488358));
-        return (n) => (0, i.jsx)(r, { role: e, guildId: t, ...n });
+        let { default: a } = await Promise.all([n.e("49282"), n.e("46836")]).then(n.bind(n, 488358));
+        return (n) => (0, i.jsx)(a, { role: e, guildId: t, ...n });
     });
 }
-let L = function (e) {
-    let { guildId: t, transitionState: a, onClose: L } = e,
-        O = (0, o.bG)([I.A], () => I.A.getSortedRoles(t)),
+let O = function (e) {
+    let { guildId: t, transitionState: l, onClose: O } = e,
+        L = (0, o.bG)([f.A], () => f.A.getSortedRoles(t)),
         R = (0, o.bG)([E.default], () => E.default.getId()),
-        P = (0, o.bG)([f.Ay], () => f.Ay.getMember(t, R)),
-        [j, D] = r.useState([]),
-        w = (0, h.Ay)();
+        P = (0, o.bG)([I.Ay], () => I.Ay.getMember(t, R)),
+        [D, M] = a.useState([]),
+        j = (0, h.Ay)();
     if (
-        (r.useEffect(() => {
-            0 !== j.length &&
+        (a.useEffect(() => {
+            0 !== D.length &&
                 C.default.track(S.HAw.PASSPORT_ENTRY_VIEWED, {
-                    role_ids: j.map((e) => {
+                    role_ids: D.map((e) => {
                         let { role_id: t } = e;
                         return t;
                     }),
-                    ...(0, p.H$)(t),
+                    ...(0, g.H$)(t),
                 });
-        }, [t, j]),
-        r.useEffect(() => {
-            A.A.getGuildRoleConnectionsConfigurations(t).then((e) => D(e));
+        }, [t, D]),
+        a.useEffect(() => {
+            A.A.getGuildRoleConnectionsConfigurations(t).then((e) => M(e));
         }, [t]),
         null == P)
     )
         return null;
-    let M = O.filter((e) => null === e.tags.guild_connections);
+    let w = L.filter((e) => null === e.tags.guild_connections);
     return (0, i.jsx)(s.Modal, {
-        transitionState: a,
+        transitionState: l,
         title: x.intl.string(x.t.ghtnss),
-        onClose: L,
-        subtitle: x.intl.format(x.t["Y+TsEV"], { helpdeskArticleUrl: N.A.getArticleURL(S.MVz.CONNECTION_DETAILS) }),
+        onClose: O,
+        subtitle: x.intl.format(x.t["Y+TsEV"], { helpdeskArticleUrl: T.A.getArticleURL(S.MVz.CONNECTION_DETAILS) }),
         actions: [],
         children: (0, i.jsx)(c.BJc, {
-            children: M.map((e) => {
-                let a = P.roles.includes(e.id),
+            children: w.map((e) => {
+                let l = P.roles.includes(e.id),
                     s = (function (e) {
-                        let n = j.find((t) => {
+                        let n = D.find((t) => {
                             let { role_id: n } = t;
                             return n === e;
                         });
                         if (null == n) return [];
-                        let r = {};
+                        let a = {};
                         for (let e of n.rules.flat()) {
-                            let a;
+                            let l;
                             if (null != e.application_id) {
-                                let r = n.applications?.[e.application_id];
-                                a =
-                                    r?.bot != null
+                                let a = n.applications?.[e.application_id];
+                                l =
+                                    a?.bot != null
                                         ? (0, i.jsx)("img", {
-                                              src: new g.A(r.bot).getAvatarURL(t, 24),
+                                              src: new p.A(a.bot).getAvatarURL(t, 24),
                                               alt: "",
-                                              className: l()(v.ZN, b.my),
+                                              className: r()(v.ZN, b.my),
                                           })
                                         : null;
                             } else {
                                 let t = _.A.get(e.connection_type);
-                                a = (0, i.jsx)("img", {
-                                    src: (0, d.qB)(w) ? t.icon.lightSVG : t.icon.darkSVG,
+                                l = (0, i.jsx)("img", {
+                                    src: (0, d.qB)(j) ? t.icon.lightSVG : t.icon.darkSVG,
                                     alt: "",
                                     className: b.my,
                                 });
                             }
-                            null != a && (r[`${e.connection_type}:${e.application_id}`] = a);
+                            null != l && (a[`${e.connection_type}:${e.application_id}`] = l);
                         }
-                        return Object.values(r);
+                        return Object.values(a);
                     })(e.id);
                 return (0, i.jsxs)(
                     c.DUT,
                     {
-                        className: l()(v.L5, a ? v.xN : null),
-                        onClick: a ? void 0 : () => y(e, t),
-                        onContextMenu: a
-                            ? (r) => {
-                                  var a;
+                        className: r()(v.L5, l ? v.xN : null),
+                        onClick: l ? void 0 : () => y(e, t),
+                        onContextMenu: l
+                            ? (a) => {
+                                  var l;
                                   return (
-                                      (a = e.id),
-                                      void (0, u.L3)(r, async () => {
+                                      (l = e.id),
+                                      void (0, u.L3)(a, async () => {
                                           let { default: e } = await n.e("68001").then(n.bind(n, 699896));
                                           return (n) =>
                                               (0, i.jsx)(e, {
                                                   ...n,
-                                                  roleId: a,
-                                                  onLeaveRole: () => A.A.unassignGuildRoleConnection(t, a),
+                                                  roleId: l,
+                                                  onLeaveRole: () => A.A.unassignGuildRoleConnection(t, l),
                                               });
                                       })
                                   );
                               }
                             : void 0,
                         children: [
-                            a
+                            l
                                 ? (0, i.jsx)("div", {
                                       className: v.UA,
                                       children: (0, i.jsx)(c.Uzd, { size: "xs", color: "currentColor" }),
                                   })
                                 : null,
-                            (0, i.jsx)(T.A, { guildId: t, role: e, size: 24 }),
+                            (0, i.jsx)(N.A, { guildId: t, role: e, size: 24 }),
                             (0, i.jsxs)("div", {
                                 className: v.fk,
                                 children: [
@@ -148,7 +148,7 @@ let L = function (e) {
                                 showUserPopout: !1,
                                 guildId: t,
                                 users: s.map(() => null),
-                                renderUser: (e, t, n) => (0, i.jsx)(r.Fragment, { children: s[n] }, n),
+                                renderUser: (e, t, n) => (0, i.jsx)(a.Fragment, { children: s[n] }, n),
                                 max: 3,
                             }),
                         ],

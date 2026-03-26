@@ -5,27 +5,27 @@ var i = n(627968),
     l = n(503698),
     r = n.n(l),
     a = n(735438),
-    o = n(475539),
+    o = n(4208),
     c = n(311907),
     d = n(397927),
     u = n(73153),
     h = n(367513),
     A = n(843472),
-    p = n(386467),
-    g = n(465364),
-    m = n(763754),
+    m = n(386467),
+    p = n(465364),
+    g = n(763754),
     _ = n(448368),
     f = n(378058),
     x = n(148355),
     C = n(320501),
     E = n(994500),
     I = n(486020),
-    b = n(927813),
-    N = n(403362),
+    N = n(927813),
+    b = n(403362),
     S = n(652215),
     T = n(838541),
-    v = n(279633);
-let y = 10 * b.A.Millis.SECOND;
+    v = n(424366);
+let y = 10 * N.A.Millis.SECOND;
 function j(e) {
     let { message: t } = e,
         { isBlocked: n, isIgnored: l } = (0, c.cf)(
@@ -33,10 +33,10 @@ function j(e) {
             () => ({ isBlocked: E.A.isBlockedForMessage(t), isIgnored: E.A.isIgnoredForMessage(t) }),
             [t],
         ),
-        a = (0, m.X4)(t),
-        o = s.useContext(p.A),
+        a = (0, g.X4)(t),
+        o = s.useContext(m.A),
         [u, C] = s.useState(!1),
-        b = s.useCallback(
+        N = s.useCallback(
             (e) => {
                 "A" !== e.target.nodeName &&
                     (h.A.updateChatOpen(t.channel_id, !0),
@@ -44,13 +44,13 @@ function j(e) {
             },
             [t.channel_id, t.id],
         ),
-        N = null != t.content && "" !== t.content ? (0, g.Ay)(t, { isInteracting: u }).content : null,
+        b = null != t.content && "" !== t.content ? (0, p.Ay)(t, { isInteracting: u }).content : null,
         {
             contentPlaceholder: S,
             renderedContent: y,
             trailingIcon: j,
             leadingIcon: R,
-        } = (0, _.o)(t, N, n, l, v.BK, { trailingIconClass: v.sl, leadingIconClass: v.aG, iconSize: T.eJ }),
+        } = (0, _.o)(t, b, n, l, v.BK, { trailingIconClass: v.sl, leadingIconClass: v.aG, iconSize: T.eJ }),
         O = (0, f.o6)(t),
         L =
             O.length > 0
@@ -64,7 +64,7 @@ function j(e) {
         onMouseLeave: () => {
             C(!1);
         },
-        onClick: b,
+        onClick: N,
         children: [
             (0, i.jsxs)("div", {
                 className: r()(v.kn, { [v.mK]: t.mentioned }),
@@ -84,13 +84,13 @@ function j(e) {
 function R(e) {
     let { channelId: t, className: n } = e,
         [l, h] = s.useState(!1),
-        { toastsHidden: A, toastMessages: p } = (function (e) {
+        { toastsHidden: A, toastMessages: m } = (function (e) {
             let { channelId: t, isFrozen: n, count: i, lingerMs: l } = e,
                 [r, a] = s.useState([]),
                 [o, d] = s.useState(!1),
                 h = s.useRef(null),
                 A = s.useRef(void 0),
-                p = s.useCallback(() => {
+                m = s.useCallback(() => {
                     a([]), d(!0);
                 }, []);
             s.useEffect(() => {
@@ -103,7 +103,7 @@ function R(e) {
                         i.type === S.lAJ.STAGE_SPEAKER ||
                         i.type === S.lAJ.STAGE_RAISE_HAND ||
                         s ||
-                        (clearTimeout(A.current), (A.current = setTimeout(p, l)), a((e) => [...e, i.id]));
+                        (clearTimeout(A.current), (A.current = setTimeout(m, l)), a((e) => [...e, i.id]));
                 }
                 return (
                     u.h.subscribe("MESSAGE_CREATE", e),
@@ -111,7 +111,7 @@ function R(e) {
                         u.h.unsubscribe("MESSAGE_CREATE", e);
                     }
                 );
-            }, [t, p, i, l]),
+            }, [t, m, i, l]),
                 s.useEffect(
                     () => () => {
                         clearTimeout(A.current);
@@ -126,31 +126,31 @@ function R(e) {
                         });
                 }, [r]),
                 n && null == h.current ? (h.current = r) : n || null == h.current || (h.current = null);
-            let g = h.current ?? r;
+            let p = h.current ?? r;
             return {
                 toastsHidden: o,
-                toastMessages: (0, c.yK)([C.A], () => g.map((e) => C.A.getMessage(t, e)), [t, g]).filter(N.Vq),
+                toastMessages: (0, c.yK)([C.A], () => p.map((e) => C.A.getMessage(t, e)), [t, p]).filter(b.Vq),
             };
         })({ channelId: t, isFrozen: l, count: 3, lingerMs: y }),
-        g = s.useRef({}),
-        [m, _] = s.useState({}),
+        p = s.useRef({}),
+        [g, _] = s.useState({}),
         f = s.useCallback((e, t) => {
-            null == t ? delete g.current[e] : (g.current[e] = t);
+            null == t ? delete p.current[e] : (p.current[e] = t);
         }, []),
-        x = s.useRef(m);
+        x = s.useRef(g);
     s.useLayoutEffect(() => {
-        x.current = m;
+        x.current = g;
     }),
         s.useLayoutEffect(() => {
             let e = {},
                 t = 0;
-            for (let n of p) {
-                let i = g.current[n.id] ?? 0;
+            for (let n of m) {
+                let i = p.current[n.id] ?? 0;
                 (e[n.id] = t), (t += i + 8);
             }
             (0, a.isEqual)(e, x.current) || _(e);
-        }, [p]);
-    let E = p.map((e) => ({ message: e, height: g.current[e.id], y: m[e.id] })),
+        }, [m]);
+    let E = m.map((e) => ({ message: e, height: p.current[e.id], y: g[e.id] })),
         I = (0, d.pnh)(E, {
             keys: (e) => e.message.id,
             from: () => ({ opacity: 0 }),

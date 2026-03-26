@@ -8,10 +8,10 @@ var i = n(627968),
     d = n(780964),
     c = n(428130),
     u = n(123857),
-    _ = n(985018),
-    m = n(402699);
+    m = n(985018),
+    _ = n(94888);
 let g = (0, o.E2)(d.X.APPEARANCE_CLIENT_THEMES, {
-    useSearchTerms: () => [_.intl.string(_.t.Ksh3ik), _.intl.string(_.t["0EzVst"]), _.intl.string(_.t.OCOOiI)],
+    useSearchTerms: () => [m.intl.string(m.t.Ksh3ik), m.intl.string(m.t["0EzVst"]), m.intl.string(m.t.OCOOiI)],
     Component: () => {
         let e = (0, s.bG)([a.A], () => a.A.useForcedColors);
         return (0, i.jsxs)("fieldset", {
@@ -20,13 +20,13 @@ let g = (0, o.E2)(d.X.APPEARANCE_CLIENT_THEMES, {
                     tag: "legend",
                     variant: "heading-xl/normal",
                     color: "text-strong",
-                    className: m.D,
-                    children: _.intl.string(_.t.Ksh3ik),
+                    className: _.D,
+                    children: m.intl.string(m.t.Ksh3ik),
                 }),
                 e
                     ? (0, i.jsx)(l.wx6, {
                           type: "info",
-                          children: (0, r.D)() ? (0, i.jsx)(c.Ys, {}) : _.intl.string(_.t.AUMSZP),
+                          children: (0, r.D)() ? (0, i.jsx)(c.Ys, {}) : m.intl.string(m.t.AUMSZP),
                       })
                     : (0, i.jsxs)("div", { children: [(0, i.jsx)(c.ac, {}), (0, i.jsx)(u.Ix, {})] }),
             ],

@@ -14,8 +14,8 @@ var i = n(627968),
     p = n(685049),
     f = n(617086),
     h = n(985018),
-    _ = n(461349),
-    A = n(616060);
+    _ = n(522500),
+    A = n(51631);
 function I(e) {
     let { index: t, widgetType: n, game: a, coverImageUrl: s, gameName: r, children: o } = e,
         { manageFocusOnReorder: d } = (0, g.r)(),
@@ -46,29 +46,29 @@ function j(e) {
             disableInteraction: h = !1,
             index: j,
             onRemoveGame: v,
-            coverRef: E,
+            coverRef: T,
         } = e,
-        { coverImageUrl: T, gameName: b, isLoading: N } = (0, o.A)(t.applicationId),
-        { registerDragHandleRef: y } = (0, g.r)(),
-        S = (0, f.A)(t.applicationId).length > 0,
+        { coverImageUrl: E, gameName: b, isLoading: N } = (0, o.A)(t.applicationId),
+        { registerDragHandleRef: S } = (0, g.r)(),
+        y = (0, f.A)(t.applicationId).length > 0,
         C = d.default.getCurrentUser(),
         R = C?.id === n,
         k = !h && R,
-        { isDragging: w } = (0, r.V)((e) => ({ isDragging: e.isDragging() })),
+        { isDragging: O } = (0, r.V)((e) => ({ isDragging: e.isDragging() })),
         L = () =>
             (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(m.A, {
-                        imageSrc: T,
+                        imageSrc: E,
                         gameName: b,
                         applicationId: t.applicationId,
                         userId: n,
                         disableInteraction: h,
-                        className: s()(S ? A.kO : void 0, null == T || h ? void 0 : _.iL),
-                        hideTooltip: w,
-                        coverRef: E,
+                        className: s()(y ? A.kO : void 0, null == E || h ? void 0 : _.iL),
+                        hideTooltip: O,
+                        coverRef: T,
                     }),
-                    k && (0, i.jsx)(u.jV, { buttonRef: y(t.applicationId), className: A.BU }),
+                    k && (0, i.jsx)(u.jV, { buttonRef: S(t.applicationId), className: A.BU }),
                     !h &&
                         (0, i.jsx)(p.d, {
                             userId: n,
@@ -90,6 +90,6 @@ function j(e) {
     return N
         ? (0, i.jsx)("div", { className: _.mD })
         : k
-          ? (0, i.jsx)(I, { widgetType: l, index: j ?? 0, game: t, coverImageUrl: T, gameName: b, children: L() })
+          ? (0, i.jsx)(I, { widgetType: l, index: j ?? 0, game: t, coverImageUrl: E, gameName: b, children: L() })
           : (0, i.jsx)("div", { className: A.kL, children: L() });
 }

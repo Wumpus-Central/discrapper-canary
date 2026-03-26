@@ -8,15 +8,15 @@ var i = t(627968),
     d = t(351906),
     c = t(652215),
     u = t(985018),
-    m = t(75945);
+    m = t(828950);
 function A(e) {
     let { autoFocus: l = !1, className: t, userId: A, onUpdate: p } = e,
         x = (0, s.bG)([d.A], () => d.A.hidePersonalInformation),
-        { loading: g, note: h } = (0, o.A)(A),
-        f = n.useRef(null);
+        { loading: g, note: f } = (0, o.A)(A),
+        h = n.useRef(null);
     return (n.useEffect(() => {
         if (!l || x) return;
-        let e = f.current;
+        let e = h.current;
         e?.selectionStart != null && (e.focus(), e.setSelection(e.value.length, e.value.length));
     }, [l, x]),
     x)
@@ -24,14 +24,14 @@ function A(e) {
         : (0, i.jsx)("div", {
               className: t,
               children: (0, i.jsx)(a.d4u, {
-                  ref: f,
+                  ref: h,
                   className: m.P,
                   disabled: g,
                   placeholder: g ? u.intl.string(u.t["WLKx/9"]) : u.intl.string(u.t.VBhOe2),
                   "aria-label": u.intl.string(u.t.PbMNh2),
                   onBlur: (e) => {
                       let l = e.currentTarget.value;
-                      (h ?? "") !== l && (p?.(), r.A.updateNote(A, l));
+                      (f ?? "") !== l && (p?.(), r.A.updateNote(A, l));
                   },
                   onKeyPress: (e) => {
                       13 === e.which
@@ -40,7 +40,7 @@ function A(e) {
                               : (e.preventDefault(), e.currentTarget.blur())
                           : e.which === c.Ks6.SPACE && e.stopPropagation();
                   },
-                  defaultValue: h ?? void 0,
+                  defaultValue: f ?? void 0,
                   maxLength: c.T7x,
               }),
           });

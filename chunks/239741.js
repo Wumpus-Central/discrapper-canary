@@ -1,44 +1,44 @@
 "use strict";
-n.d(t, { A: () => L });
+n.d(t, { A: () => G });
 var i = n(627968),
     s = n(64700),
-    l = n(522160),
+    l = n(4208),
     r = n(311907),
     a = n(827734),
     o = n(73939),
     d = n(582754),
     c = n(397927),
     u = n(736653),
-    g = n(58149),
-    m = n(954571),
+    m = n(58149),
+    g = n(954571),
     x = n(203982),
     h = n(555337),
     _ = n(418448),
-    A = n(527678),
-    p = n(199940),
+    p = n(527678),
+    A = n(199940),
     f = n(132514),
     j = n(107795),
     N = n(655943),
     E = n(287479),
     b = n(400812),
-    T = n(72533),
-    C = n(246282),
+    C = n(72533),
+    T = n(246282),
     I = n(729984),
     v = n(692453),
     S = n(360827),
     y = n(133154),
     R = n(652215),
     O = n(985018),
-    G = n(484729);
-function L() {
+    L = n(444412);
+function G() {
     let e = (0, r.bG)([h.A], () => h.A.getGuild());
     return null == e ? null : (0, i.jsx)(D, { guild: e });
 }
 function D(e) {
     let { guild: t } = e,
         h = t.id,
-        L = (0, r.bG)([E.A], () => E.A.getCurrentPage()),
-        D = (0, T.A)(h),
+        G = (0, r.bG)([E.A], () => E.A.getCurrentPage()),
+        D = (0, C.A)(h),
         {
             hasChanges: M,
             hasConfiguredAnythingForCurrentStep: k,
@@ -49,7 +49,7 @@ function D(e) {
             hasErrors: E.A.hasErrors(),
         })),
         P = (0, r.bG)([E.A], () => {
-            let e = (0, b.ql)(L);
+            let e = (0, b.ql)(G);
             return null != e && !E.A.isEducationUpsellDismissed(e);
         }),
         w = (0, u.Ay)(),
@@ -69,27 +69,27 @@ function D(e) {
     let V = (0, c.rdh)(a.A.colors.BACKGROUND_SURFACE_HIGH).hex(),
         z = (0, c.rdh)(a.A.unsafe_rawColors.PRIMARY_160).hex(),
         W = (0, d.Mw)(w) ? V : z,
-        Y = F.to({ range: [0, 1], output: [W, (0, c.rdh)(a.A.colors.BACKGROUND_FEEDBACK_CRITICAL).hex()] });
+        K = F.to({ range: [0, 1], output: [W, (0, c.rdh)(a.A.colors.BACKGROUND_FEEDBACK_CRITICAL).hex()] });
     if (D) {
-        if (L === b.Hy.DEFAULT_CHANNELS) return (0, i.jsx)(I.G, {});
-        else if (L === b.Hy.CUSTOMIZATION_QUESTIONS) return (0, i.jsx)(S.fO, {});
-        else if (L === b.Hy.HOME_SETTINGS) return (0, i.jsx)(y.A, {});
-        else if (L === b.Hy.CONNECTIONS) return (0, i.jsx)(v.R, {});
-        else if ((L === b.Hy.LANDING || L === b.Hy.REVIEW) && f.A.hasChanges()) return (0, i.jsx)(y.A, {});
+        if (G === b.Hy.DEFAULT_CHANNELS) return (0, i.jsx)(I.G, {});
+        else if (G === b.Hy.CUSTOMIZATION_QUESTIONS) return (0, i.jsx)(S.fO, {});
+        else if (G === b.Hy.HOME_SETTINGS) return (0, i.jsx)(y.A, {});
+        else if (G === b.Hy.CONNECTIONS) return (0, i.jsx)(v.R, {});
+        else if ((G === b.Hy.LANDING || G === b.Hy.REVIEW) && f.A.hasChanges()) return (0, i.jsx)(y.A, {});
     }
-    let K = L === b.kd[b.kd.length - 1],
+    let Y = G === b.kd[b.kd.length - 1],
         X = async () => {
             let e = N.A.advancedMode;
             if (M)
                 try {
-                    if (L === b.Hy.DEFAULT_CHANNELS)
+                    if (G === b.Hy.DEFAULT_CHANNELS)
                         await (0, _.jr)(t).then(() =>
                             e ? (0, j.dm)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve(),
                         );
-                    else if (L === b.Hy.CUSTOMIZATION_QUESTIONS) await (0, j.dm)(t, { ignoreDefaultPrompt: !0 });
-                    else if (L === b.Hy.HOME_SETTINGS) {
+                    else if (G === b.Hy.CUSTOMIZATION_QUESTIONS) await (0, j.dm)(t, { ignoreDefaultPrompt: !0 });
+                    else if (G === b.Hy.HOME_SETTINGS) {
                         let e = f.A.getSettings();
-                        await (0, p.W5)(t.id, e);
+                        await (0, A.W5)(t.id, e);
                     }
                 } catch {
                     return !1;
@@ -97,35 +97,35 @@ function D(e) {
             return !0;
         },
         J = async () => {
-            m.default.track(R.HAw.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
-                ...(0, g.H$)(h),
-                step: b.Hy[L],
+            g.default.track(R.HAw.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
+                ...(0, m.H$)(h),
+                step: b.Hy[G],
                 back: !1,
                 skip: !M,
             }),
-                (0, A.Ay)((0, b.ql)(L)),
-                (await X()) && (0, A._k)(h, L);
+                (0, p.Ay)((0, b.ql)(G)),
+                (await X()) && (0, p._k)(h, G);
         },
         Z = async () => {
-            m.default.track(R.HAw.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
-                ...(0, g.H$)(h),
-                step: b.Hy[L],
+            g.default.track(R.HAw.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
+                ...(0, m.H$)(h),
+                step: b.Hy[G],
                 back: !0,
                 skip: !1,
             }),
-                (await X()) && (0, A.kP)(h, L);
+                (await X()) && (0, p.kP)(h, G);
         },
-        Q = null;
+        q = null;
     P &&
-        (L === b.Hy.SAFETY_CHECK
-            ? (Q = (0, i.jsx)(C.Et, {}))
-            : L === b.Hy.DEFAULT_CHANNELS
-              ? (Q = (0, i.jsx)(C.hz, {}))
-              : L === b.Hy.CUSTOMIZATION_QUESTIONS
-                ? (Q = (0, i.jsx)(C.yP, {}))
-                : L === b.Hy.HOME_SETTINGS && (Q = (0, i.jsx)(C.QS, {})));
-    let q = (0, i.jsx)("div", {
-            className: P ? G.R : void 0,
+        (G === b.Hy.SAFETY_CHECK
+            ? (q = (0, i.jsx)(T.Et, {}))
+            : G === b.Hy.DEFAULT_CHANNELS
+              ? (q = (0, i.jsx)(T.hz, {}))
+              : G === b.Hy.CUSTOMIZATION_QUESTIONS
+                ? (q = (0, i.jsx)(T.yP, {}))
+                : G === b.Hy.HOME_SETTINGS && (q = (0, i.jsx)(T.QS, {})));
+    let Q = (0, i.jsx)("div", {
+            className: P ? L.R : void 0,
             children: (0, i.jsx)(c.Button, {
                 size: "sm",
                 variant: "secondary",
@@ -148,22 +148,22 @@ function D(e) {
     return (0, i.jsx)(o.F, {
         component: "div",
         children: (0, i.jsx)(c.FQk, {
-            className: G.hE,
+            className: L.hE,
             children: (0, i.jsx)(l.animated.div, {
-                className: G.kL,
-                style: { backgroundColor: Y },
+                className: L.kL,
+                style: { backgroundColor: K },
                 children: (0, i.jsxs)("div", {
-                    className: G.nP,
+                    className: L.nP,
                     ref: B,
                     children: [
                         P
                             ? (0, i.jsxs)("div", {
-                                  className: G.cZ,
+                                  className: L.cZ,
                                   children: [
-                                      (0, i.jsx)("img", { className: G.kX, src: n(903702), alt: "wumpus" }),
+                                      (0, i.jsx)("img", { className: L.kX, src: n(903702), alt: "wumpus" }),
                                       (0, i.jsxs)("div", {
-                                          className: G.C0,
-                                          children: [Q, (0, i.jsx)("div", { className: G.JM })],
+                                          className: L.C0,
+                                          children: [q, (0, i.jsx)("div", { className: L.JM })],
                                       }),
                                   ],
                               })
@@ -171,11 +171,11 @@ function D(e) {
                         (0, i.jsx)(c.xpW, {
                             containerRef: B,
                             children: (0, i.jsxs)("div", {
-                                className: G.o1,
+                                className: L.o1,
                                 children: [
-                                    q,
+                                    Q,
                                     (0, i.jsxs)("div", {
-                                        className: G.K2,
+                                        className: L.K2,
                                         children: [
                                             U
                                                 ? (0, i.jsx)(c.Text, {
@@ -184,7 +184,7 @@ function D(e) {
                                                       children: O.intl.string(O.t.DhYsPL),
                                                   })
                                                 : null,
-                                            K ? null : $,
+                                            Y ? null : $,
                                         ],
                                     }),
                                 ],

@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
     r = n.n(l),
-    a = n(522160),
+    a = n(4208),
     o = n(397927),
-    d = n(995591);
+    d = n(429446);
 class c extends s.Component {
     render() {
         let { icon: e, ...t } = this.props;
@@ -14,7 +14,7 @@ class c extends s.Component {
     }
 }
 let u = (0, a.animated)(c),
-    g = function (e) {
+    m = function (e) {
         let { className: t, name: n, icon: s, iconClassName: l } = e,
             a = (0, o.pnh)(
                 { name: n, icon: s, iconClassName: l },

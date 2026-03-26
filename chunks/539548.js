@@ -18,16 +18,16 @@ var s = t(311907),
     h = t(518477),
     g = t(652215),
     I = t(985018),
-    j = t(78702),
-    b = t(781425);
+    j = t(575877),
+    b = t(643146);
 function v(e) {
     let { user: n, currentUser: t, guildId: v, onClose: C } = e,
         { live: N, recent: y, stream: E } = (0, u.A)(n.id),
         { voiceChannel: T, voiceActivity: L } = (0, A.A)({ userId: n.id, guildId: v }),
-        O = (0, s.bG)([a.A], () => a.A.isFetchingUserOutbox(n.id)),
-        P = n.id === t.id,
+        P = (0, s.bG)([a.A], () => a.A.isFetchingUserOutbox(n.id)),
+        O = n.id === t.id,
         R = (0, s.bG)([o.A, l.A], () => {
-            let e = P ? o.A.getStatus() : l.A.getStatus(n.id);
+            let e = O ? o.A.getStatus() : l.A.getStatus(n.id);
             return e === r.clD.OFFLINE || e === r.clD.INVISIBLE;
         }),
         S = (0, s.bG)([c.A], () => c.A.getUserProfile(n.id)?.private === !0),
@@ -35,7 +35,7 @@ function v(e) {
         k = !S && null == E && null == L && null != T,
         G = !R && (M || k),
         B = y.length > 0;
-    return G || B || !O
+    return G || B || !P
         ? (0, i.jsxs)(r.IpV, {
               className: j.XG,
               fade: !0,
@@ -85,7 +85,7 @@ function v(e) {
                   B
                       ? (0, i.jsx)(_.A, {
                             heading: I.intl.string(I.t.M0zgnT),
-                            introText: P
+                            introText: O
                                 ? I.intl.format(I.t["4bk9Ak"], {
                                       learnMoreHook: (e, n) =>
                                           (0, i.jsx)(

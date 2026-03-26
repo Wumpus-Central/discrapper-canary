@@ -15,17 +15,17 @@ var i = n(627968),
     p = n(342887),
     f = n(973947),
     _ = n(985018),
-    E = n(32425);
+    E = n(208368);
 let x = [51],
     C = [_.t.OpqAok];
 function S(e) {
     let { columns: t, handleScroll: n, voiceListRef: l, showSectionHeaders: s = !1, query: a } = e,
         r = T(),
         S = (0, o.bG)([h.default], () => (0, m.ki)(h.default.getCurrentUser())),
-        y = N(a, S),
-        b = Math.ceil(y.length / t),
+        v = N(a, S),
+        b = Math.ceil(v.length / t),
         {
-            isNativeModuleLoaded: v,
+            isNativeModuleLoaded: y,
             isNativeModuleLoading: j,
             catalogLastFetchTime: R,
         } = (0, o.cf)([g.A], () => ({
@@ -33,7 +33,7 @@ function S(e) {
             isNativeModuleLoading: g.A.isNativeModuleLoading(),
             catalogLastFetchTime: g.A.getCatalogLastFetchTime(),
         }));
-    return a && 0 === y.length
+    return a && 0 === v.length
         ? (0, i.jsxs)("div", {
               className: E.nm,
               children: [
@@ -58,7 +58,7 @@ function S(e) {
                     (0, i.jsx)(d.Text, {
                         variant: "text-sm/normal",
                         color: "text-muted",
-                        children: _.intl.format(_.t["5afO9U"], { onClick: v ? p.st : p.md }),
+                        children: _.intl.format(_.t["5afO9U"], { onClick: y ? p.st : p.md }),
                     }),
                 ],
             })
@@ -72,7 +72,7 @@ function S(e) {
                   className: E.kL,
                   renderRow: (e) => {
                       let n = e * t,
-                          l = y.slice(n, n + t);
+                          l = v.slice(n, n + t);
                       return (0, i.jsx)(
                           I,
                           {

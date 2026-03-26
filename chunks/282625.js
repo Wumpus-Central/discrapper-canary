@@ -9,28 +9,28 @@ var i = n(627968),
     d = n(311907),
     c = n(397927),
     u = n(137130),
-    g = n(442433),
-    m = n(974544),
+    m = n(442433),
+    g = n(974544),
     x = n(928039),
     h = n(544028),
     _ = n(411153),
-    A = n(427157),
-    p = n(734057),
+    p = n(427157),
+    A = n(734057),
     f = n(71393),
     j = n(351906),
     N = n(287809),
     E = n(403362),
     b = n(427262),
-    T = n(555337),
-    C = n(276373),
+    C = n(555337),
+    T = n(276373),
     I = n(523599),
     v = n(438407),
     S = n(258665),
     y = n(652215),
     R = n(985018),
-    O = n(688661),
-    G = n(63135);
-let L = s.forwardRef((e, t) => {
+    O = n(819570),
+    L = n(223698);
+let G = s.forwardRef((e, t) => {
     let { onHeaderClick: s, guildId: l, guild: r, ...a } = e;
     return null == l
         ? null
@@ -48,7 +48,7 @@ let L = s.forwardRef((e, t) => {
                       { user: s } = t;
                   null != s &&
                       null != l &&
-                      (0, g.L3)(e, async () => {
+                      (0, m.L3)(e, async () => {
                           let { default: e } = await n.e("76926").then(n.bind(n, 422189));
                           return (t) => (0, i.jsx)(e, { ...t, guildId: l, user: s });
                       });
@@ -59,7 +59,7 @@ let L = s.forwardRef((e, t) => {
                   null != t.options.channel &&
                       "string" != typeof t.options.channel &&
                       null != s &&
-                      (0, g.L3)(e, async () => {
+                      (0, m.L3)(e, async () => {
                           let { default: e } = await n.e("23440").then(n.bind(n, 194195));
                           return (n) =>
                               null != t.options.channel ? (0, i.jsx)(e, { ...n, channel: t.options.channel }) : null;
@@ -70,21 +70,21 @@ let L = s.forwardRef((e, t) => {
                   switch (t.targetType) {
                       case y.GaG.CHANNEL:
                       case y.GaG.CHANNEL_OVERWRITE:
-                          let s = p.A.getChannel(t.targetId),
+                          let s = A.A.getChannel(t.targetId),
                               r = f.A.getGuild(l);
                           if (null != s && null != r)
-                              return (0, g.L3)(e, async () => {
+                              return (0, m.L3)(e, async () => {
                                   let { default: e } = await n.e("23440").then(n.bind(n, 194195));
                                   return (t) => (0, i.jsx)(e, { ...t, channel: s });
                               });
-                          return (0, g.L3)(e, async () => {
+                          return (0, m.L3)(e, async () => {
                               let { default: e } = await n.e("15687").then(n.bind(n, 646938));
                               return (n) => (0, i.jsx)(e, { ...n, id: t.targetId, label: R.intl.string(R.t.rCazna) });
                           });
                       case y.GaG.USER:
                           let o = N.default.getUser(t.targetId);
                           if (null != o && null != l)
-                              return (0, g.L3)(e, async () => {
+                              return (0, m.L3)(e, async () => {
                                   let { default: e } = await n.e("76926").then(n.bind(n, 422189));
                                   return (t) => (0, i.jsx)(e, { ...t, guildId: l, user: o });
                               });
@@ -103,8 +103,8 @@ function D(e) {
             scroller: d,
             setExpandedRef: c,
             setLastExpandedRef: u,
-            onHeaderClick: g,
-            onContentClick: m,
+            onHeaderClick: m,
+            onContentClick: g,
         } = e,
         h = s.useRef(d);
     s.useEffect(() => {
@@ -125,7 +125,7 @@ function D(e) {
                             s = o === e.id,
                             a = t ? c : s ? u : null;
                         return (0, i.jsx)(
-                            L,
+                            G,
                             {
                                 guildId: n,
                                 guild: l,
@@ -133,8 +133,8 @@ function D(e) {
                                     a?.(e);
                                 },
                                 className: O.nM,
-                                onHeaderClick: g,
-                                onContentClick: m,
+                                onHeaderClick: m,
+                                onContentClick: g,
                                 log: e,
                                 expanded: t,
                             },
@@ -146,7 +146,7 @@ function D(e) {
         }),
     });
 }
-L.displayName = "AuditLogClickWrap";
+G.displayName = "AuditLogClickWrap";
 class M extends s.PureComponent {
     _clickedInside = !1;
     _scrollerRef = null;
@@ -206,7 +206,7 @@ class M extends s.PureComponent {
         };
     };
     formatUserOption = (e) => {
-        if (!(e.user instanceof A.A))
+        if (!(e.user instanceof p.A))
             return {
                 id: e.value,
                 value: e.value,
@@ -238,14 +238,14 @@ class M extends s.PureComponent {
     renderHeaderDropdowns = () => {
         let { actionFilter: e, hide: t, userIdFilter: n, moderators: s } = this.props;
         if (t) return null;
-        let l = C.ACTION_FILTER_ITEMS(),
+        let l = T.ACTION_FILTER_ITEMS(),
             r =
                 l.find((t) => {
                     let { value: n } = t;
                     return e === n;
                 }) ?? l[0],
             a = { label: R.intl.string(R.t.ZRFdsL), valueLabel: R.intl.string(R.t.an9Ry3), value: null },
-            o = [a, ...s].map((e) => (e instanceof A.A ? { label: e.username, value: e.id, user: e } : e)),
+            o = [a, ...s].map((e) => (e instanceof p.A ? { label: e.username, value: e.id, user: e } : e)),
             d =
                 o.find((e) => {
                     let { value: t } = e;
@@ -302,9 +302,9 @@ class M extends s.PureComponent {
                 isLoading: o,
                 hasError: d,
                 guildId: u,
-                guild: g,
+                guild: m,
             } = this.props;
-        if (r) return (0, i.jsx)(m.A, {});
+        if (r) return (0, i.jsx)(g.A, {});
         if (o || a) return this.renderSpinner();
         if (0 === s.length) {
             let e = d ? R.intl.string(R.t.tzkaD7) : R.intl.string(R.t.lNuYhh),
@@ -321,7 +321,7 @@ class M extends s.PureComponent {
         return (0, i.jsx)(D, {
             logs: s,
             guildId: u,
-            guild: g,
+            guild: m,
             expandedId: e,
             lastExpandedId: t,
             setExpandedRef: this.handleSetExpandedRef,
@@ -347,11 +347,11 @@ class M extends s.PureComponent {
     render() {
         let { isLoadingNextPage: e, hide: t, isLoading: n } = this.props;
         return (0, i.jsx)("div", {
-            className: G.customColumn,
+            className: L.customColumn,
             children: (0, i.jsx)("div", {
-                className: G.customContainer,
+                className: L.customContainer,
                 children: (0, i.jsx)(c.GtU, {
-                    className: r()(G.customScroller, O.XG),
+                    className: r()(L.customScroller, O.XG),
                     onScroll: this.handleOnScroll,
                     ref: this.handleSetScrollerRef,
                     children: (0, i.jsx)("div", {
@@ -421,8 +421,8 @@ class M extends s.PureComponent {
         this._lastExpandedRef = e;
     };
 }
-let k = d.Ay.connectStores([I.A, T.A, f.A, h.A, j.A, N.default], () => {
-    let e = T.A.getGuildId(),
+let k = d.Ay.connectStores([I.A, C.A, f.A, h.A, j.A, N.default], () => {
+    let e = C.A.getGuildId(),
         t = f.A.getGuild(e),
         n = I.A.logs;
     return {
@@ -435,7 +435,7 @@ let k = d.Ay.connectStores([I.A, T.A, f.A, h.A, j.A, N.default], () => {
         showLoadMore: I.A.groupedFetchCount > 2,
         hasError: I.A.hasError,
         hasOlderLogs: I.A.hasOlderLogs,
-        logs: null != n && null != t ? C.transformLogs(n, t) : [],
+        logs: null != n && null != t ? T.transformLogs(n, t) : [],
         actionFilter: I.A.actionFilter,
         userIdFilter: I.A.userIdFilter,
         theme: h.A.theme,

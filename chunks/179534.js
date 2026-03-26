@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => L });
+n.d(t, { A: () => G });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -21,20 +21,20 @@ var i = n(627968),
     N = n(735937),
     E = n(104685),
     b = n(856768),
-    T = n(189552),
-    C = n(508160),
+    C = n(189552),
+    T = n(508160),
     I = n(749060),
-    v = n(374963),
+    v = n(597344),
     S = n(636670),
     y = n(652215),
     R = n(985018),
-    O = n(334063),
-    G = n(21397);
-function L(e) {
+    O = n(598482),
+    L = n(223698);
+function G(e) {
     let { guildId: t } = e,
         n = (0, a.bG)([p.A], () => p.A.getGuild(t)),
         { analyticsLocations: l } = (0, c.Ay)(d.A.GUILD_SETTINGS_MEMBERS_PAGE),
-        L = (0, u.q)(t),
+        G = (0, u.q)(t),
         D = (0, a.bG)([_.Ay], () => _.Ay.getGuildSidebarState(t), [t]),
         M = s.useCallback(() => {
             x.A.closeGuildSidebar(t);
@@ -55,22 +55,22 @@ function L(e) {
         F = (0, A.Ms)(t),
         H = (0, A.Wl)(t);
     if (null == n) return null;
-    let V = (0, T.ii)(H, F, U);
+    let V = (0, C.ii)(H, F, U);
     return (0, i.jsxs)(c.f5, {
         value: l,
         children: [
             (0, i.jsx)("div", {
-                className: r()(G.customColumn, O.$Z, O.ed),
+                className: r()(L.customColumn, O.$Z, O.ed),
                 children: (0, i.jsx)("div", {
-                    className: G.customContainer,
+                    className: L.customContainer,
                     children: (0, i.jsx)(o.ArX, {
-                        className: r()(G.customScroller, O.cj),
+                        className: r()(L.customScroller, O.cj),
                         orientation: "auto",
                         children: (0, i.jsx)(o.ArX, {
                             className: O.mh,
                             orientation: "auto",
                             children: (0, i.jsxs)("main", {
-                                className: r()(G.customColumn, G.contentColumnDefault, O.$Z, O.ed, O.z1),
+                                className: r()(L.customColumn, L.contentColumnDefault, O.$Z, O.ed, O.z1),
                                 children: [
                                     (0, i.jsx)(
                                         "div",
@@ -96,14 +96,14 @@ function L(e) {
                                                               className: O.FV,
                                                               children: [
                                                                   (0, i.jsx)(v.A, { guild: n, ref: w }),
-                                                                  (0, i.jsx)(C.A, {
+                                                                  (0, i.jsx)(T.A, {
                                                                       guild: n,
                                                                       searchState: V,
                                                                       compact: !0,
                                                                       onSelectRow: P,
                                                                       onResetForNewMembers: B,
                                                                   }),
-                                                                  V !== T.IY.SUCCESS_STILL_INDEXING &&
+                                                                  V !== C.IY.SUCCESS_STILL_INDEXING &&
                                                                       (0, i.jsx)(I.A, { guildId: n.id }),
                                                               ],
                                                           })
@@ -142,7 +142,7 @@ function L(e) {
                     }),
                 }),
             }),
-            L &&
+            G &&
                 null != D &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [

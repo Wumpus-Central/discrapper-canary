@@ -3,7 +3,7 @@ var i = n(627968),
     l = n(64700),
     a = n(503698),
     s = n.n(a),
-    r = n(497766),
+    r = n(4208),
     o = n(311907),
     d = n(397927),
     c = n(775602),
@@ -16,14 +16,14 @@ var i = n(627968),
     h = n(518477),
     _ = n(652215),
     A = n(985018),
-    I = n(892984);
+    I = n(440693);
 let j = "user-profile-save-reset-toolbar-label";
 function v(e) {
     let { className: t } = e,
         { trackUserProfileEditSaved: n } = (0, g.NJ)(),
         [a, v] = l.useState(!1),
-        E = (0, o.yK)([p.A], () => p.A.getSaveablePendingWidgets() ?? []),
-        T = (0, o.yK)([p.A], () => p.A.getChangedWidgets()),
+        T = (0, o.yK)([p.A], () => p.A.getSaveablePendingWidgets() ?? []),
+        E = (0, o.yK)([p.A], () => p.A.getChangedWidgets()),
         b = (0, o.yK)([p.A], () => p.A.getRemovedWidgets()),
         N = (0, o.bG)([p.A], () => p.A.hasUnsavedChanges()),
         S = (0, o.bG)([p.A], () => p.A.canSaveChanges()),
@@ -52,12 +52,12 @@ function v(e) {
     let k = l.useCallback(async () => {
             if (p.A.canSaveChanges()) {
                 try {
-                    await x.A.savePendingWidgets(E);
+                    await x.A.savePendingWidgets(T);
                 } catch (e) {
                     (0, f.XA)(h.jM.WIDGET_SAVE_FAILURE);
                     return;
                 }
-                for (let e of T) {
+                for (let e of E) {
                     let t = { widgetEdited: e.type, isWidgetRemoved: !1 };
                     (0, m.fu)(e) &&
                         ((t.gameIds = e.games.map((e) => e.applicationId)),
@@ -67,8 +67,8 @@ function v(e) {
                 }
                 for (let e of b) n({ widgetEdited: e.type, isWidgetRemoved: !0 });
             }
-        }, [E, T, b, n]),
-        L = l.useCallback(() => {
+        }, [T, E, b, n]),
+        O = l.useCallback(() => {
             x.A.clearPendingWidgets();
         }, []);
     return R((e, n) =>
@@ -94,7 +94,7 @@ function v(e) {
                                       size: "sm",
                                       variant: "secondary",
                                       text: A.intl.string(A.t.yBZMsQ),
-                                      onClick: L,
+                                      onClick: O,
                                       disabled: !N || y,
                                   }),
                                   (0, i.jsx)(d.Button, {

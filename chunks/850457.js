@@ -4,8 +4,8 @@ var i = n(627968);
 n(64700);
 var s = n(311907),
     l = n(827734),
-    a = n(397927),
-    r = n(587895),
+    r = n(397927),
+    a = n(587895),
     o = n(47167),
     c = n(475889),
     d = n(693879),
@@ -13,20 +13,20 @@ var s = n(311907),
     h = n(290987),
     A = n(769022),
     m = n(898926),
-    g = n(287809),
-    p = n(562153),
+    p = n(287809),
+    g = n(562153),
     _ = n(996439),
     f = n(985018),
-    x = n(707143);
+    x = n(4568);
 function C(e) {
     let { event: t, guildId: n, channelId: l } = e,
-        o = (0, s.bG)([g.default], () => g.default.getUser(t.userId)),
-        c = (0, s.bG)([r.A], () =>
+        o = (0, s.bG)([p.default], () => p.default.getUser(t.userId)),
+        c = (0, s.bG)([a.A], () =>
             t.eventType === m.i.ACTIVITY_ENDED && null != t.applicationId
-                ? r.A.getApplication(t.applicationId)
+                ? a.A.getApplication(t.applicationId)
                 : void 0,
         ),
-        d = p.Ay.useName(n, l, o);
+        d = g.Ay.useName(n, l, o);
     if (null == o) return null;
     let A = t.eventType === m.i.ACTIVITY_ENDED;
     return (0, i.jsxs)("div", {
@@ -38,9 +38,9 @@ function C(e) {
                 children:
                     A && null != c
                         ? (0, i.jsx)(u.A, { game: c, className: x.AW })
-                        : (0, i.jsx)(a.euF, {
+                        : (0, i.jsx)(r.euF, {
                               src: o.getAvatarURL(n, 20),
-                              size: a._3J.SIZE_20,
+                              size: r._3J.SIZE_20,
                               "aria-label": o.username,
                           }),
             }),
@@ -48,7 +48,7 @@ function C(e) {
                 className: x.Kw,
                 children: [
                     A
-                        ? (0, i.jsx)(a.Text, {
+                        ? (0, i.jsx)(r.Text, {
                               variant: "text-sm/normal",
                               className: x.rN,
                               children: f.intl.format(f.t.CKIMrx, {
@@ -56,26 +56,26 @@ function C(e) {
                                   activityName: t.applicationName ?? "Unknown",
                               }),
                           })
-                        : (0, i.jsx)(a.Text, {
+                        : (0, i.jsx)(r.Text, {
                               variant: "text-sm/normal",
                               className: x.qJ,
                               children: f.intl.format(f.t.TlVwqn, {
                                   user: d,
                                   userHook: (e, t) =>
                                       (0, i.jsx)(
-                                          a.Text,
+                                          r.Text,
                                           { variant: "text-sm/semibold", className: x.C3, children: e },
                                           t,
                                       ),
                                   labelHook: (e, t) =>
                                       (0, i.jsx)(
-                                          a.Text,
+                                          r.Text,
                                           { variant: "text-sm/normal", className: x.CS, children: e },
                                           t,
                                       ),
                               }),
                           }),
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(r.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
                         className: x.gE,
@@ -96,8 +96,8 @@ function E(e) {
     return (0, i.jsxs)("div", {
         className: x.hY,
         children: [
-            (0, i.jsx)(a.HKD, { size: "custom", color: l.A.colors.ICON_FEEDBACK_POSITIVE, height: 20, width: 20 }),
-            (0, i.jsx)(a.Text, { variant: "text-md/medium", className: x.HA, children: s }),
+            (0, i.jsx)(r.HKD, { size: "custom", color: l.A.colors.ICON_FEEDBACK_POSITIVE, height: 20, width: 20 }),
+            (0, i.jsx)(r.Text, { variant: "text-md/medium", className: x.HA, children: s }),
             null != n && (0, i.jsx)(d.z, { textColor: "text-feedback-positive", entry: { start: n } }),
         ],
     });
@@ -111,11 +111,11 @@ function I(e) {
               className: x.kL,
               children: [
                   (0, i.jsx)(E, { channel: t }),
-                  (0, i.jsx)(a.HOs, {
+                  (0, i.jsx)(r.HOs, {
                       children: (0, i.jsxs)("div", {
                           className: x.PI,
                           children: [
-                              (0, i.jsx)(a.Text, {
+                              (0, i.jsx)(r.Text, {
                                   variant: "text-sm/medium",
                                   color: "text-muted",
                                   className: x.s8,
