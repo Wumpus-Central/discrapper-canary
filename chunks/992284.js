@@ -2,6 +2,7 @@ a.r(
     (e.exports = {
         boxBackdrop: "boxBackdrop__53b4c",
         bentoSectionHeader: "bentoSectionHeader__53b4c",
+        highlightBento: "highlightBento__53b4c",
         bentoBoxesGrid: "bentoBoxesGrid__53b4c",
         bentoBoxButton: "bentoBoxButton__53b4c",
         backgroundColor: "backgroundColor__53b4c",
