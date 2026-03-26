@@ -3,19 +3,19 @@ n.d(t, {
     JM: () => d,
     Js: () => f,
     Jx: () => E,
+    XL: () => I,
     Xm: () => g,
     YT: () => c,
     fx: () => h,
-    oK: () => I,
     up: () => p,
     wr: () => _,
     xv: () => A,
 });
-var r = n(957565),
-    i = n(723702),
-    s = n(341915),
+var r = n(876230),
+    i = n(957565),
+    s = n(723702),
     a = n(561844),
-    o = n(261331),
+    o = n(163961),
     l = n(654487),
     u = n(985018);
 function c(e) {
@@ -105,19 +105,19 @@ let g = (e, t) => {
         impressionId: t.impressionId,
         sourceQuestContent: t.sourceQuestContent,
     }),
-        (0, r.C)(m(e));
+        (0, i.C)(m(e));
 };
 function A(e) {
     if (0 === e.rewardsConfig.rewards.length) throw Error(`Quest ${e.id} has no rewards configured`);
     return e.rewardsConfig.rewards[0];
 }
 let I = (e) => {
-    let { hasVideoAsset: t, playerState: n, pauseReason: r } = e;
+    let { hasVideoAsset: t, playerState: n, pauseReason: i } = e;
     return t
-        ? n === o.Q6.PAUSED && r === s.Yg.LOST_FOCUS
+        ? n === o.Q6.PAUSED && i === r.KB.FOCUS
             ? u.intl.string(u.t.w6PeBF)
             : null
-        : (0, i.isWeb)()
+        : (0, s.isWeb)()
           ? u.intl.string(u.t["E1du/q"])
           : u.intl.string(u.t["rStN/7"]);
 };

@@ -1,22 +1,22 @@
-n.d(t, { Ay: () => u, Bu: () => o, OJ: () => a, XY: () => s });
+n.d(t, { Ay: () => u, Bu: () => o, OJ: () => s, XY: () => i });
 var r = n(64700),
     l = n(771253),
-    i = n(876230);
-let s = 8e5,
-    a = 20,
+    a = n(876230);
+let i = 8e5,
+    s = 20,
     o = 30;
 function u(e, t) {
     let { src: n, initialTimeSec: u = 0, onError: c, onHlsInstance: d } = t,
         m = r.useRef(null),
         p = r.useRef(u);
     p.current = u;
-    let f = r.useRef(c),
-        E = r.useRef(d);
+    let E = r.useRef(c),
+        f = r.useRef(d);
     r.useEffect(() => {
-        f.current = c;
+        E.current = c;
     }, [c]),
         r.useEffect(() => {
-            E.current = d;
+            f.current = d;
         }, [d]);
     let h = null != n && n.split("?")[0].endsWith(".m3u8") && l.Ay.isSupported();
     return (
@@ -24,13 +24,13 @@ function u(e, t) {
             if (!h || null == n || null == e.current) return;
             let t = e.current,
                 r = new l.Ay({
-                    backBufferLength: a,
+                    backBufferLength: s,
                     maxBufferLength: o,
                     startPosition: p.current,
                     startFragPrefetch: !0,
                     startLevel: -1,
                 });
-            (m.current = r), E.current?.(r);
+            (m.current = r), f.current?.(r);
             let u = 0,
                 c = () => {
                     r.mainForwardBufferInfo?.len === 0 &&
@@ -42,23 +42,23 @@ function u(e, t) {
                 };
             return (
                 r.on(l.Ay.Events.FRAG_LOADING, () => {
-                    r.config.minAutoBitrate !== s && (r.config.minAutoBitrate = s);
+                    r.config.minAutoBitrate !== i && (r.config.minAutoBitrate = i);
                 }),
                 r.on(l.Ay.Events.ERROR, (e, t) => {
                     if (
-                        (f.current?.(
+                        (E.current?.(
                             (function (e) {
                                 switch (e) {
                                     case l.Ay.ErrorTypes.NETWORK_ERROR:
-                                        return i.SB.HLS_NETWORK_ERROR;
+                                        return a.SB.HLS_NETWORK_ERROR;
                                     case l.Ay.ErrorTypes.MEDIA_ERROR:
-                                        return i.SB.HLS_MEDIA_ERROR;
+                                        return a.SB.HLS_MEDIA_ERROR;
                                     case l.Ay.ErrorTypes.MUX_ERROR:
-                                        return i.SB.HLS_MUX_ERROR;
+                                        return a.SB.HLS_MUX_ERROR;
                                     case l.Ay.ErrorTypes.KEY_SYSTEM_ERROR:
-                                        return i.SB.HLS_KEY_SYSTEM_ERROR;
+                                        return a.SB.HLS_KEY_SYSTEM_ERROR;
                                     default:
-                                        return i.SB.HLS_OTHER_ERROR;
+                                        return a.SB.HLS_OTHER_ERROR;
                                 }
                             })(t.type),
                             { errorDetails: t.details, fatal: t.fatal },
@@ -66,7 +66,7 @@ function u(e, t) {
                         t.fatal)
                     ) {
                         if (u >= 3) {
-                            r.destroy(), (m.current = null), E.current?.(null);
+                            r.destroy(), (m.current = null), f.current?.(null);
                             return;
                         }
                         switch ((u++, t.type)) {
@@ -77,7 +77,7 @@ function u(e, t) {
                                 r.recoverMediaError();
                                 break;
                             default:
-                                r.destroy(), (m.current = null), E.current?.(null);
+                                r.destroy(), (m.current = null), f.current?.(null);
                         }
                     }
                 }),
@@ -86,7 +86,9 @@ function u(e, t) {
                 r.attachMedia(t),
                 () => {
                     t.removeEventListener("seeking", c),
-                        m.current === r && (r.destroy(), (m.current = null), E.current?.(null));
+                        m.current === r && (r.destroy(), (m.current = null), f.current?.(null)),
+                        t.removeAttribute("src"),
+                        t.load();
                 }
             );
         }, [h, n, e]),

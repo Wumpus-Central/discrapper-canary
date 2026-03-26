@@ -10,29 +10,29 @@ var a = n(627968),
     u = n(668824),
     m = n(397927),
     h = n(341915),
-    p = n(92246),
-    x = n(792620),
+    x = n(92246),
+    p = n(792620),
     g = n(241124),
-    _ = n(947926),
-    f = n(717695),
-    b = n(164203),
-    v = n(127219),
+    f = n(947926),
+    _ = n(717695),
+    v = n(164203),
+    b = n(127219),
     j = n(438038),
-    C = n(439075),
-    A = n(223344),
-    T = n(589939),
-    S = n(443960),
-    y = n(899860),
+    A = n(439075),
+    C = n(223344),
+    y = n(589939),
+    T = n(443960),
+    S = n(899860),
     E = n(633581),
     N = n(508575),
     I = n(847807),
     k = n(364329),
-    R = n(545986),
-    O = n(927813),
+    O = n(545986),
+    R = n(927813),
     w = n(350246);
 let D = ["png", "gif", "webp"],
-    M = [...D, "jpg", "jpeg"],
-    P = Array.from(new Set([...M, "gif", "mp4", "webm"]));
+    P = [...D, "jpg", "jpeg"],
+    M = Array.from(new Set([...P, "gif", "mp4", "webm"]));
 function L() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { streamProgressSeconds: t = 0, completedAt: n = null, enrolledAt: a = null, claimedAt: i = null } = e;
@@ -207,11 +207,11 @@ function G() {
         c({ ...t, config: { ...t.config, colors: { ...t.config.colors, [e]: n } } });
     }
     function X() {
-        (0, p.tU)(t.config) && (0, R.hJ)(t, h.uF.GIFT_INVENTORY_FOR_YOU, h.uF.INTERNAL_PREVIEW_TOOL, !0);
+        (0, x.tU)(t.config) && (0, O.hJ)(t, h.uF.GIFT_INVENTORY_FOR_YOU, h.uF.INTERNAL_PREVIEW_TOOL, !0);
     }
     let Z = i.useMemo(() => {
             for (let [e, n] of Object.entries(t.config.taskConfigV2.tasks)) if (null != n.target) return n.target;
-            return 10 * O.A.Seconds.MINUTE;
+            return 10 * R.A.Seconds.MINUTE;
         }, [t.config.taskConfigV2.tasks]),
         ee = i.useMemo(() => o.n.WATCH_VIDEO in t.config.taskConfigV2.tasks, [t.config.taskConfigV2.tasks]);
     l()(!1 !== t.preview && null != t.preview, "Preview config must have property preview: true");
@@ -231,7 +231,7 @@ function G() {
                                         if (null == e.userStatus) return k.b.UNENROLLED;
                                         if (null != e.userStatus.claimedAt) return k.b.CLAIMED;
                                         if (null != e.userStatus.completedAt) return k.b.COMPLETED_100;
-                                        let t = (0, x.Yh)(e),
+                                        let t = (0, p.Yh)(e),
                                             n = t.progressSeconds,
                                             a = t.targetSeconds;
                                         return n / a >= 1
@@ -265,26 +265,26 @@ function G() {
             (0, a.jsxs)("div", {
                 className: w.OA,
                 children: [
-                    (0, a.jsx)(y.A, {
+                    (0, a.jsx)(S.A, {
                         title: "Quest Name",
                         assetKey: "questName",
                         onMessageChange: Q,
                         initialValue: t.config.messages.questName,
                     }),
-                    (0, a.jsx)(y.A, {
+                    (0, a.jsx)(S.A, {
                         title: "Game Title",
                         assetKey: "gameTitle",
                         onMessageChange: Q,
                         initialValue: t.config.messages.gameTitle,
                     }),
-                    (0, a.jsx)(y.A, {
+                    (0, a.jsx)(S.A, {
                         title: "Game Publisher",
                         assetKey: "gamePublisher",
                         onMessageChange: Q,
                         initialValue: t.config.messages.gamePublisher,
                     }),
                     ee &&
-                        (0, a.jsx)(y.A, {
+                        (0, a.jsx)(S.A, {
                             title: "Video Title",
                             assetKey: "videoTitle",
                             onMessageChange: function (e, n) {
@@ -311,42 +311,42 @@ function G() {
             (0, a.jsxs)("div", {
                 className: w.OA,
                 children: [
-                    (0, a.jsx)(S.A, {
+                    (0, a.jsx)(T.A, {
                         title: "Hero",
                         assetKey: "hero",
                         onFileChange: $,
-                        filters: P,
+                        filters: M,
                         initialValue: t.config.assets.hero,
                     }),
-                    (0, a.jsx)(S.A, {
+                    (0, a.jsx)(T.A, {
                         title: "Hero Video (optional)",
                         assetKey: "heroVideo",
                         onFileChange: $,
-                        filters: P,
+                        filters: M,
                         initialValue: t.config.assets.heroVideo ?? void 0,
                     }),
-                    (0, a.jsx)(S.A, {
+                    (0, a.jsx)(T.A, {
                         title: "Quest Bar Hero",
                         assetKey: "questBarHero",
                         onFileChange: $,
-                        filters: P,
+                        filters: M,
                         initialValue: t.config.assets.questBarHero,
                     }),
-                    (0, a.jsx)(S.A, {
+                    (0, a.jsx)(T.A, {
                         title: "Quest Bar Hero Video (optional)",
                         assetKey: "questBarHeroVideo",
                         onFileChange: $,
-                        filters: P,
+                        filters: M,
                         initialValue: t.config.assets.questBarHeroVideo ?? void 0,
                     }),
-                    (0, a.jsx)(S.A, {
+                    (0, a.jsx)(T.A, {
                         title: "Game Tile",
                         assetKey: "gameTile",
                         onFileChange: $,
-                        filters: [...M, "svg"],
+                        filters: [...P, "svg"],
                         initialValue: t.config.assets.gameTile,
                     }),
-                    (0, a.jsx)(S.A, {
+                    (0, a.jsx)(T.A, {
                         title: "Logotype",
                         assetKey: "logotype",
                         onFileChange: $,
@@ -356,25 +356,25 @@ function G() {
                     ee &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
-                                (0, a.jsx)(S.A, {
+                                (0, a.jsx)(T.A, {
                                     title: "Quest Video",
                                     assetKey: "videoPlayerVideo",
                                     onFileChange: q,
-                                    filters: P,
+                                    filters: M,
                                     initialValue: et?.assets.video.url,
                                 }),
-                                (0, a.jsx)(S.A, {
+                                (0, a.jsx)(T.A, {
                                     title: "Quest Video (Low Resolution)",
                                     assetKey: "videoPlayerVideoLowRes",
                                     onFileChange: q,
-                                    filters: P,
+                                    filters: M,
                                     initialValue: et?.assets.videoLowRes?.url,
                                 }),
-                                (0, a.jsx)(S.A, {
+                                (0, a.jsx)(T.A, {
                                     title: "Video Player Thumbnail (optional)",
                                     assetKey: "videoPlayerThumbnail",
                                     onFileChange: q,
-                                    filters: M,
+                                    filters: P,
                                     initialValue: et?.assets.video.thumbnail,
                                 }),
                             ],
@@ -394,20 +394,20 @@ function G() {
                             (0, a.jsxs)("div", {
                                 className: w.OA,
                                 children: [
-                                    (0, a.jsx)(y.A, {
+                                    (0, a.jsx)(S.A, {
                                         title: "Name",
                                         assetKey: "name",
                                         onMessageChange: (e, t) => Y(e, t, n),
                                         initialValue: e.messages.name,
                                     }),
-                                    (0, a.jsx)(y.A, {
+                                    (0, a.jsx)(S.A, {
                                         title: "Name With Article",
                                         assetKey: "nameWithArticle",
                                         onMessageChange: (e, t) => Y(e, t, n),
                                         initialValue: e.messages.nameWithArticle,
                                     }),
                                     e.type !== d.l.VIRTUAL_CURRENCY &&
-                                        (0, a.jsx)(S.A, {
+                                        (0, a.jsx)(T.A, {
                                             title: "Asset",
                                             assetKey: "asset",
                                             onFileChange: (e, a) =>
@@ -435,7 +435,7 @@ function G() {
                                                         });
                                                     }
                                                 })(e, a, n),
-                                            filters: P,
+                                            filters: M,
                                             initialValue: e.asset,
                                         }),
                                     (0, a.jsxs)(m.BJc, {
@@ -472,13 +472,13 @@ function G() {
                         className: w.OA,
                         style: { marginBottom: 0 },
                         children: [
-                            (0, a.jsx)(A.A, {
+                            (0, a.jsx)(C.A, {
                                 title: "Primary",
                                 colorKey: "primary",
                                 onChange: J,
                                 value: t.config.colors.primary,
                             }),
-                            (0, a.jsx)(A.A, {
+                            (0, a.jsx)(C.A, {
                                 title: "Secondary",
                                 colorKey: "secondary",
                                 onChange: J,
@@ -553,7 +553,7 @@ function G() {
             (0, a.jsxs)("div", {
                 className: w.$$,
                 children: [
-                    (0, a.jsxs)(T.A, {
+                    (0, a.jsxs)(y.A, {
                         withBorder: !0,
                         children: [
                             (0, a.jsx)(m.Heading, { variant: "heading-sm/semibold", children: "Quest Bar" }),
@@ -572,14 +572,14 @@ function G() {
                                             isPreview: !0,
                                             source: "preview",
                                             questId: "0",
-                                            children: (0, a.jsx)(f.A, { children: (0, a.jsx)(_.Y, { quest: t }) }),
+                                            children: (0, a.jsx)(_.A, { children: (0, a.jsx)(f.Y, { quest: t }) }),
                                         }),
                                     }),
                                 ],
                             }),
                         ],
                     }),
-                    (0, a.jsxs)(T.A, {
+                    (0, a.jsxs)(y.A, {
                         withBorder: !0,
                         children: [
                             (0, a.jsx)(m.Heading, { variant: "heading-sm/semibold", children: "Quest Home Card" }),
@@ -587,7 +587,7 @@ function G() {
                                 isPreview: !0,
                                 source: "preview",
                                 questId: "0",
-                                children: (0, a.jsx)(C.A, {
+                                children: (0, a.jsx)(A.A, {
                                     quest: t,
                                     className: w.d,
                                     questContent: h.uF.QUEST_HOME_DESKTOP,
@@ -598,7 +598,7 @@ function G() {
                             }),
                         ],
                     }),
-                    (0, a.jsxs)(T.A, {
+                    (0, a.jsxs)(y.A, {
                         withBorder: !0,
                         children: [
                             (0, a.jsx)(m.Heading, { variant: "heading-sm/semibold", children: "Channel Call Header" }),
@@ -617,7 +617,7 @@ function G() {
                                     questId: "0",
                                     children: (0, a.jsx)("div", {
                                         className: w.Jr,
-                                        children: (0, a.jsx)(b.A, {
+                                        children: (0, a.jsx)(v.A, {
                                             channelId: "123",
                                             previewQuest: t,
                                             isParticipatingOverride: G,
@@ -637,12 +637,12 @@ function G() {
                             },
                         }),
                     }),
-                    (0, a.jsxs)(T.A, {
+                    (0, a.jsxs)(y.A, {
                         withBorder: !0,
                         children: [
                             (0, a.jsx)(m.Heading, { variant: "heading-sm/semibold", children: "Quest Card Embed" }),
                             V
-                                ? (0, a.jsx)(v.l, { questId: t.id })
+                                ? (0, a.jsx)(b.l, { questId: t.id })
                                 : (0, a.jsx)(
                                       j.R,
                                       {
@@ -659,7 +659,7 @@ function G() {
                         children: (0, a.jsx)(m.dOG, { label: "Invalid Quests Embed:", checked: V, onChange: W }),
                     }),
                     ee &&
-                        (0, a.jsxs)(T.A, {
+                        (0, a.jsxs)(y.A, {
                             withBorder: !0,
                             allowClicks: !0,
                             children: [
@@ -671,9 +671,10 @@ function G() {
                                         (0, m.mMO)(async () => {
                                             let { default: e } = await Promise.all([
                                                 n.e("35584"),
-                                                n.e("23628"),
-                                                n.e("62269"),
-                                            ]).then(n.bind(n, 717415));
+                                                n.e("29636"),
+                                                n.e("7634"),
+                                                n.e("31738"),
+                                            ]).then(n.bind(n, 201257));
                                             return (n) =>
                                                 (0, a.jsx)(e, {
                                                     ...n,

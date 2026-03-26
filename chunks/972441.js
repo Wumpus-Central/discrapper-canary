@@ -1,9 +1,9 @@
 n.d(t, { A: () => u });
 var r = n(64700),
     l = n(158954),
-    s = n(61491),
+    a = n(61491),
     i = n(770178),
-    a = n(765548),
+    s = n(765548),
     o = n(650583);
 function u(e) {
     let {
@@ -11,11 +11,11 @@ function u(e) {
             onScrubForward: n,
             maxSeekableTime: u,
             interactionEnabled: c,
-            duration: d,
+            durationSec: d,
             onClick: m,
             percent: p,
         } = e,
-        [f, E] = r.useState(null),
+        [E, f] = r.useState(null),
         [h, v] = r.useState(null),
         [x, g] = r.useState(!1),
         { i18n: S } = (0, l.G98)(),
@@ -31,17 +31,17 @@ function u(e) {
                 e
             );
         }, [p, S]),
-        C = r.useMemo(() => (null == f || null == u ? null : (0, s.DX)(u, d, f)), [f, u, d]),
-        _ = (0, a.A)((e) => {
-            E(e.contentRect);
+        b = r.useMemo(() => (null == E || null == u ? null : (0, a.DX)(u, d, E)), [E, u, d]),
+        _ = (0, s.A)((e) => {
+            f(e.contentRect);
         }),
-        b = (0, i.w)(_),
+        C = (0, i.w)(_),
         y = (e) => {
-            null != b.current && v(e.clientX - b.current.getBoundingClientRect().left);
+            null != C.current && v(e.clientX - C.current.getBoundingClientRect().left);
         };
     return {
-        contRef: b,
-        boundingRect: f,
+        contRef: C,
+        boundingRect: E,
         handleMouseEnter: (e) => {
             c && (g(!0), y(e));
         },
@@ -61,13 +61,13 @@ function u(e) {
             [t, n],
         ),
         hoveredAtX: h,
-        maxSeekableX: C,
+        maxSeekableX: b,
         isHovering: x,
         handleClick: (e) => {
             if (!c || null == m) return;
             let t = e.currentTarget.getBoundingClientRect(),
                 n = e.clientX - t.left;
-            m((0, s.hc)(n, t, d));
+            m((0, a.hc)(n, t, d));
         },
         ariaProps: A,
     };

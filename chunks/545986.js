@@ -143,7 +143,7 @@ function Z(e) {
     t.log(`Showing survey ${r.id}`), (0, P.m)({ questId: e.id, survey: r });
 }
 function X() {
-    return Promise.all([n.e("35584"), n.e("34700"), n.e("32483")]).then(n.bind(n, 752231));
+    return Promise.all([n.e("35584"), n.e("29636"), n.e("7634"), n.e("70033")]).then(n.bind(n, 201257));
 }
 function Q(e) {
     let {
@@ -248,7 +248,7 @@ function en(e) {
 }
 function er(e) {
     (0, o.mMO)(async () => {
-        let { default: t } = await Promise.all([n.e("66211"), n.e("97642")]).then(n.bind(n, 185342));
+        let { default: t } = await Promise.all([n.e("66211"), n.e("27818")]).then(n.bind(n, 518420));
         return (n) => (0, r.jsx)(t, { ...n, questId: e.id });
     });
 }

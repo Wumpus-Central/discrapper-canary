@@ -56,7 +56,7 @@ e.exports = {
     ZH: "play__8fb25",
     bK: "playPauseAnimation__8fb25",
     Cw: "transcriptBodySpinner__8fb25",
-    b9: "videoStatusMessage__8fb25",
+    zG: "videoOverlayMessage__8fb25",
     z6: "closeModalBtnWrapper__8fb25",
     zH: "inactivePoster__8fb25",
     mF: "inactivePlayButton__8fb25",
