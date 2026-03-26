@@ -18,4 +18,9 @@ var r = (function (e) {
     })({});
 let s = "steelseries",
     a = "kontrolfreek",
-    o = new Set(["steelseries", "kontrolfreek"]);
+    o = new Set(
+        Object.keys({
+            steelseries: { id: "steelseries", label: "SteelSeries" },
+            kontrolfreek: { id: "kontrolfreek", label: "KontrolFreek" },
+        }),
+    );
