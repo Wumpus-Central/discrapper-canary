@@ -1,11 +1,11 @@
-n.d(t, { X8: () => a, dB: () => l });
+n.d(t, { X8: () => l, dB: () => a });
 var i = n(664654),
     s = n(985018);
-let a = (e) => {
+let l = (e) => {
         let { hasSentAll: t } = e;
         return s.intl.string(s.t.USo4s7);
     },
-    l = (e) => {
+    a = (e) => {
         let { helpdeskArticle: t, referralsStatuses: n } = e;
         return ((e) => {
             let { hasSentAll: t, hasSentAtLeastOne: n, helpdeskArticle: i } = e;

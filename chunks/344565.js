@@ -1,12 +1,12 @@
-s.d(t, { A: () => a });
+s.d(t, { A: () => r });
 var i = s(627968);
 s(64700);
-let a = (e) => {
-    let { className: t, width: s = 214, height: a = 165 } = e;
+let r = (e) => {
+    let { className: t, width: s = 214, height: r = 165 } = e;
     return (0, i.jsxs)("svg", {
         className: t,
         width: s,
-        height: a,
+        height: r,
         viewBox: "0 0 214 165",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",

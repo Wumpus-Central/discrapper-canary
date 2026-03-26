@@ -1,8 +1,8 @@
 s.d(t, { A: () => N });
 var i = s(627968);
 s(64700);
-var a = s(503698),
-    r = s.n(a),
+var r = s(503698),
+    a = s.n(r),
     l = s(284009),
     n = s.n(l),
     C = s(311907),
@@ -12,21 +12,21 @@ var a = s(503698),
     x = s(308528),
     h = s(398590),
     p = s(736653),
-    f = s(854627),
-    _ = s(186111),
+    _ = s(854627),
+    f = s(186111),
     u = s(975571),
     j = s(427262),
     m = s(326084),
     g = s(851746),
-    L = s(558450),
-    y = s(614298);
+    L = s(747115),
+    y = s(344565);
 s(232198);
 var v = s(652215),
     A = s(985018),
-    S = s(50985);
+    S = s(408789);
 let w = (e) => {
-        let { user: t, trialCreationResult: s, onClose: a } = e,
-            { avatarSrc: l, eventHandlers: n } = (0, f.A)({ userId: t?.id, size: c._3J.SIZE_56 }),
+        let { user: t, trialCreationResult: s, onClose: r } = e,
+            { avatarSrc: l, eventHandlers: n } = (0, _.A)({ userId: t?.id, size: c._3J.SIZE_56 }),
             C = j.Ay.getName(t),
             o = t.username !== C && s === m.o.SUCCESS,
             p = s === m.o.FAIL;
@@ -34,7 +34,7 @@ let w = (e) => {
             className: S.El,
             children: [
                 (0, i.jsx)(c.euF, {
-                    imageClassName: r()({ [S.jN]: p }),
+                    imageClassName: a()({ [S.jN]: p }),
                     src: l,
                     "aria-label": C,
                     size: c._3J.SIZE_56,
@@ -63,9 +63,9 @@ let w = (e) => {
                                           var e;
                                           return (
                                               (e = t.id),
-                                              void (_.A.hasLayers() && (0, h.jH)(),
+                                              void (f.A.hasLayers() && (0, h.jH)(),
                                               x.A.openPrivateChannel({ recipientIds: e }),
-                                              a())
+                                              r())
                                           );
                                       },
                                       className: S.t0,
@@ -83,28 +83,28 @@ let w = (e) => {
         });
     },
     N = (e) => {
-        let { selectedUsers: t, trialCreationResult: s, onClose: a } = e,
-            r = [...t].map((e) => (0, i.jsx)(w, { user: e, trialCreationResult: s.get(e.id), onClose: a }, e.id)),
+        let { selectedUsers: t, trialCreationResult: s, onClose: r } = e,
+            a = [...t].map((e) => (0, i.jsx)(w, { user: e, trialCreationResult: s.get(e.id), onClose: r }, e.id)),
             l = (0, C.bG)([g.A], () => g.A.getReferralsRemaining());
         n()(null !== l, "Referrals remaining should not be null");
         let d = (0, p.DP)(),
             x = (0, o.qB)(d) ? y.A : L.A,
             h = A.intl.string(A.t.Pcb7KF),
-            f = [...s.values()].filter((e) => e === m.o.SUCCESS).length;
+            _ = [...s.values()].filter((e) => e === m.o.SUCCESS).length;
         return (
-            l > 0 && (h = A.intl.formatToPlainString(A.t.iWtOfC, { numReferrals: f })),
-            0 === f && (h = A.intl.string(A.t["7VBEue"])),
+            l > 0 && (h = A.intl.formatToPlainString(A.t.iWtOfC, { numReferrals: _ })),
+            0 === _ && (h = A.intl.string(A.t["7VBEue"])),
             (0, i.jsxs)("div", {
                 className: S.Jc,
                 children: [
                     (0, i.jsx)(c.DUT, {
-                        onClick: a,
+                        onClick: r,
                         className: S.cG,
                         children: (0, i.jsx)(c.PGe, { size: "custom", width: 20, height: 20 }),
                     }),
                     (0, i.jsx)(x, { className: S.nr }),
                     (0, i.jsx)(c.Heading, { variant: "heading-lg/bold", className: S.R_, children: h }),
-                    (0, i.jsx)("div", { className: S.wj, children: r }),
+                    (0, i.jsx)("div", { className: S.wj, children: a }),
                     (0, i.jsx)(c.Text, {
                         variant: "text-md/medium",
                         children: A.intl.format(A.t.CZaMHn, {

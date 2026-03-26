@@ -14,11 +14,11 @@ var i = n(627968),
     x = n(236834),
     A = n(549996),
     h = n(371764),
-    p = n(65470),
-    f = n(792656),
-    T = n(224850),
-    S = n(552554),
-    E = n(797255),
+    p = n(379040),
+    f = n(65470),
+    T = n(792656),
+    S = n(224850),
+    E = n(552554),
     b = n(288351),
     C = n(103733),
     v = n(326180),
@@ -29,7 +29,7 @@ let y = s.memo(
     s.forwardRef((e, t) => {
         let { className: n, subscriptionTier: s, isEligibleForBogoPromotion: l } = e,
             { analyticsLocations: y } = (0, m.Ay)(u.A.PREMIUM_MARKETING_HERO_CTA),
-            O = (0, S.N)(),
+            O = (0, E.N)(),
             R = (0, x.A)(),
             L = null != R,
             P = (0, o.bG)([c.A], () => c.A.useReducedMotion),
@@ -71,12 +71,12 @@ let y = s.memo(
                                     L &&
                                         (0, i.jsx)("div", {
                                             className: j.eZ,
-                                            children: (0, i.jsx)(E.A, { referrer: R, enablePremiumBrandRefresh: !0 }),
+                                            children: (0, i.jsx)(p.A, { referrer: R, enablePremiumBrandRefresh: !0 }),
                                         }),
                                     U &&
                                         (0, i.jsx)("div", {
                                             className: j.Qn,
-                                            children: (0, i.jsx)(T.A, {
+                                            children: (0, i.jsx)(S.A, {
                                                 textColor: "text-strong",
                                                 smallerText: !1,
                                                 isApplicationHome: !0,
@@ -86,14 +86,14 @@ let y = s.memo(
                                     (0, i.jsxs)("div", {
                                         className: V ? j.es : j.UJ,
                                         children: [
-                                            (0, i.jsx)(f.A, {
+                                            (0, i.jsx)(T.A, {
                                                 size: "md",
                                                 fullWidth: V,
                                                 hasActivePromotion: !!l,
                                                 subscriptionTier: w ? N.pe.NONE : s,
                                                 buttonTextOverride: w ? I.intl.string(I.t["2pG5Ga"]) : void 0,
                                             }),
-                                            !V && (0, i.jsx)(p.A, { variant: "secondary", size: "md" }),
+                                            !V && (0, i.jsx)(f.A, { variant: "secondary", size: "md" }),
                                         ],
                                     }),
                                     (0, i.jsx)("div", {
