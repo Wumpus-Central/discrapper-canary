@@ -4,26 +4,26 @@ i(64700);
 var n = i(575593),
     l = i(311907),
     a = i(397927),
-    r = i(550111),
-    o = i(242874),
-    u = i(75825),
-    d = i(331402),
-    c = i(287809),
-    f = i(562819),
-    p = i(215689),
-    h = i(674658),
+    r = i(242874),
+    o = i(75825),
+    u = i(331402),
+    d = i(287809),
+    c = i(562819),
+    f = i(215689),
+    p = i(674658),
+    h = i(512213),
     m = i(245068),
     g = i(704751);
 let A = a._3J.SIZE_152,
-    x = (0, f.Te)(A),
+    x = (0, c.Te)(A),
     _ = (t) => {
         let { item: e } = t,
-            i = (0, l.bG)([c.default], () => c.default.getCurrentUser()),
+            i = (0, l.bG)([d.default], () => d.default.getCurrentUser()),
             {
                 avatarDecorationSrc: n,
                 avatarPlaceholderSrc: r,
                 eventHandlers: o,
-            } = (0, p.A)({ user: i, avatarDecorationOverride: e, size: x });
+            } = (0, f.A)({ user: i, avatarDecorationOverride: e, size: x });
         return (0, s.jsx)("div", {
             className: g._P,
             children: (0, s.jsx)(a.euF, { ...o, "aria-label": e.label, src: r, avatarDecoration: n, size: A }),
@@ -33,14 +33,14 @@ let A = a._3J.SIZE_152,
         let { item: e } = t;
         return (0, s.jsx)("div", {
             className: g.xC,
-            children: (0, s.jsx)(d.A, { isHighlighted: !0, skuId: e?.skuId }),
+            children: (0, s.jsx)(u.A, { isHighlighted: !0, skuId: e?.skuId }),
         });
     },
     R = (t) => {
         let { item: e } = t;
         return (0, s.jsx)("div", {
             className: g.M4,
-            children: (0, s.jsx)(r.A, {
+            children: (0, s.jsx)(h.A, {
                 nameplate: e,
                 className: g.qF,
                 nameplatePreviewSize: "xlarge",
@@ -55,22 +55,22 @@ let A = a._3J.SIZE_152,
     },
     C = (t) => {
         let { giftCode: e } = t,
-            { product: i, isFetching: l } = (0, h.q)(e.skuId, !0);
+            { product: i, isFetching: l } = (0, p.q)(e.skuId, !0);
         if (l || null == i) return (0, s.jsx)("div", { className: g.dc, children: (0, s.jsx)(a.y$y, {}) });
         if (i.type === n.R.BUNDLE) return 0 === i.items.length ? null : (0, s.jsx)(S, { product: i });
-        let r = i?.items[0];
-        switch (r?.type) {
+        let u = i?.items[0];
+        switch (u?.type) {
             case n.R.AVATAR_DECORATION:
-                return (0, s.jsx)(_, { item: r });
+                return (0, s.jsx)(_, { item: u });
             case n.R.PROFILE_EFFECT:
-                return (0, s.jsx)(y, { item: r });
+                return (0, s.jsx)(y, { item: u });
             case n.R.NAMEPLATE:
-                return (0, s.jsx)(R, { item: r });
+                return (0, s.jsx)(R, { item: u });
             default:
                 return null != e.giftStyle
-                    ? (0, s.jsx)(u.A, {
-                          defaultAnimationState: o.oA.ACTION,
-                          idleAnimationState: o.oA.LOOP,
+                    ? (0, s.jsx)(o.A, {
+                          defaultAnimationState: r.oA.ACTION,
+                          idleAnimationState: r.oA.LOOP,
                           className: g.l$,
                           giftStyle: e.giftStyle,
                       })

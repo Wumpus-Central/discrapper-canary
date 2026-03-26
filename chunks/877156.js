@@ -1,102 +1,102 @@
-n.d(t, { A: () => g });
-var l = n(627968),
-    i = n(64700),
-    s = n(311907),
-    r = n(732955),
-    a = n(397927),
-    o = n(775602),
-    u = n(688810),
-    d = n(580314),
-    c = n(674658),
-    p = n(898461),
-    m = n(837015),
-    E = n(61750),
-    _ = n(369496),
-    h = n(550111),
-    x = n(287809),
-    S = n(482132),
-    P = n(758836),
-    I = n(985018),
-    T = n(920144);
+t.d(n, { A: () => g });
+var l = t(627968),
+    i = t(64700),
+    r = t(311907),
+    s = t(732955),
+    a = t(397927),
+    o = t(775602),
+    u = t(688810),
+    d = t(912140),
+    c = t(674658),
+    p = t(780898),
+    m = t(512213),
+    E = t(898461),
+    _ = t(837015),
+    x = t(61750),
+    S = t(287809),
+    P = t(482132),
+    T = t(758836),
+    I = t(985018),
+    h = t(401506);
 function g(e) {
-    let { rewardSkuId: t, onClose: n } = e,
-        g = (0, s.bG)([x.default], () => x.default.getCurrentUser()),
-        A = (0, s.bG)([o.A], () => o.A.useReducedMotion),
-        { analyticsLocations: j } = (0, u.Ay)(),
-        f = a._3J.SIZE_32,
-        { product: M, isFetching: R } = (0, c.q)(t),
-        [y, C] = i.useState(!1),
-        v = M?.items[0],
+    let { rewardSkuId: n, onClose: t } = e,
+        g = (0, r.bG)([S.default], () => S.default.getCurrentUser()),
+        A = (0, r.bG)([o.A], () => o.A.useReducedMotion),
+        { analyticsLocations: f } = (0, u.Ay)(),
+        j = a._3J.SIZE_32,
+        { product: R, isFetching: M } = (0, c.q)(n),
+        [C, y] = i.useState(!1),
+        N = R?.items[0],
         {
-            isNameplateReward: N,
-            nameplateData: O,
+            isNameplateReward: O,
+            nameplateData: v,
             rewardAvatarDecorationSrc: b,
         } = i.useMemo(
             () =>
-                null == v
+                null == N
                     ? { isNameplateReward: !1, nameplateData: null, rewardAvatarDecorationSrc: null }
-                    : (0, m.F)(v)
+                    : (0, _.F)(N)
                       ? {
                             isNameplateReward: !0,
                             nameplateData: {
-                                skuId: v.skuId,
-                                src: v.asset,
-                                palette: (0, _.H6)(v.palette ?? "sky"),
-                                imgAlt: v.label,
+                                skuId: N.skuId,
+                                src: N.asset,
+                                palette: (0, p.H6)(N.palette ?? "sky"),
+                                imgAlt: N.label,
                             },
                             rewardAvatarDecorationSrc: null,
                         }
-                      : (0, p.T)(v)
+                      : (0, E.T)(N)
                         ? {
                               isNameplateReward: !1,
                               nameplateData: null,
                               rewardAvatarDecorationSrc: (0, d.A)({
-                                  legacyAssetId: v.asset,
-                                  skuId: v.skuId,
-                                  size: f,
+                                  legacyAssetId: N.asset,
+                                  skuId: N.skuId,
+                                  size: j,
                                   canAnimate: !A,
                               }),
                           }
                         : { isNameplateReward: !1, nameplateData: null, rewardAvatarDecorationSrc: null },
-            [v, f, A],
+            [N, j, A],
         );
-    return (0, l.jsx)(S.UX, {
-        children: (0, l.jsx)(r.jlY, {
+    return (0, l.jsx)(P.UX, {
+        children: (0, l.jsx)(s.jlY, {
             children: (0, l.jsxs)("div", {
-                className: T.W,
+                className: h.W,
                 children: [
-                    N && null != O
+                    O && null != v
                         ? (0, l.jsx)("div", {
-                              className: T.D,
-                              onMouseEnter: () => C(!0),
-                              onMouseLeave: () => C(!1),
-                              children: (0, l.jsx)(h.a, {
+                              className: h.D,
+                              onMouseEnter: () => y(!0),
+                              onMouseLeave: () => y(!1),
+                              children: (0, l.jsx)(m.a, {
                                   user: g,
                                   nameplate: null,
-                                  nameplateData: O,
+                                  nameplateData: v,
                                   showPlaceholderUser: !0,
                                   nameplatePreviewSize: "xsmall",
-                                  isHighlighted: y,
+                                  isHighlighted: C,
                               }),
                           })
                         : (0, l.jsx)(a.JsQ, {
                               "aria-label": g?.username,
-                              size: f,
-                              src: g?.getAvatarURL(void 0, (0, a.FT9)(f), !A),
+                              size: j,
+                              src: g?.getAvatarURL(void 0, (0, a.FT9)(j), !A),
                               avatarDecoration: b,
                           }),
-                    (0, l.jsx)(r.$nd, {
+                    (0, l.jsx)(s.$nd, {
                         variant: "primary",
                         text: I.intl.string(I.t.kMYVwv),
-                        loading: R,
+                        loading: M,
                         onClick: () => {
-                            null != M &&
-                                (n(),
-                                (0, E.A)({
-                                    product: M,
+                            null != R &&
+                                (t(),
+                                (0, x.A)({
+                                    product: R,
                                     shouldShowPromotionalExperience: !0,
-                                    analyticsLocations: j,
-                                    purchaseType: P.gs.PROMOTIONAL,
+                                    analyticsLocations: f,
+                                    purchaseType: T.gs.PROMOTIONAL,
                                 }));
                         },
                     }),

@@ -4,11 +4,11 @@ var r = n(136722),
     i = n(665260),
     s = n(988506),
     a = n(315069),
-    o = n(507698),
-    l = n(698574),
-    u = n(945096),
-    c = n(47537),
-    d = n(369496),
+    o = n(698574),
+    l = n(821956),
+    u = n(780898),
+    c = n(945096),
+    d = n(47537),
     _ = n(244284),
     f = n(817857),
     p = n(392737),
@@ -83,14 +83,14 @@ class I extends a.A {
             (this.personalConnectionId = e.personal_connection_id ?? e.personalConnectionId ?? null),
             (this.globalName = e.global_name ?? e.globalName),
             (this.banner = e.banner),
-            (this.primaryGuild = (0, c.j)(e.primary_guild ?? e.primaryGuild ?? null)),
+            (this.primaryGuild = (0, d.j)(e.primary_guild ?? e.primaryGuild ?? null)),
             (this.collectibles = e.collectibles),
-            (this.displayNameStyles = e.displayNameStyles ?? (0, u.mT)(e.display_name_styles)),
+            (this.displayNameStyles = e.displayNameStyles ?? (0, c.mT)(e.display_name_styles)),
             (this.premiumState = e.premiumState ?? (0, p.f)(e.premium_state)),
             (this.perks = e.perks?.activePerksBitmask != null ? e.perks : (0, f.c$)(e.perks)),
             (this.restrictedSchedule = (0, _.QU)(e.restricted_schedule ?? e.restrictedSchedule)),
             (this.appTransactionIds = e.appTransactionIds ?? e.app_transaction_ids ?? null),
-            (this.storeCountry = (0, l.P)(e.store_country ?? e.storeCountry)),
+            (this.storeCountry = (0, o.P)(e.store_country ?? e.storeCountry)),
             Object.defineProperties(this, {
                 hasFlag: {
                     writable: !1,
@@ -267,10 +267,10 @@ class I extends a.A {
         return this.avatarDecorationData;
     }
     set avatarDecoration(e) {
-        this.avatarDecorationData = (0, o.Xq)(e);
+        this.avatarDecorationData = (0, l.Xq)(e);
     }
     get nameplate() {
-        return (0, d.WK)(this.collectibles?.nameplate);
+        return (0, u.WK)(this.collectibles?.nameplate);
     }
     get premiumGroupRole() {
         return this.premiumState?.premiumSubscriptionGroupRole ?? s.qT.UNSPECIFIED;

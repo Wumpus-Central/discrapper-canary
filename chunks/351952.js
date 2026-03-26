@@ -2,8 +2,8 @@
 n.d(t, { K: () => p, _: () => h });
 var r = n(64700),
     i = n(736653),
-    a = n(226540),
-    s = n(369496),
+    s = n(88686),
+    a = n(780898),
     o = n(818348);
 let l = "14",
     u = "1A",
@@ -13,11 +13,11 @@ let l = "14",
     f = "80";
 function p(e) {
     let t = (0, i.Ay)(),
-        [n, a] = (0, r.useState)({});
+        [n, s] = (0, r.useState)({});
     return (
         (0, r.useEffect)(() => {
             null == e ||
-                a({
+                s({
                     "--custom-nameplate": (t === o.NJ.LIGHT ? e.palette.lightBackground : e.palette.darkBackground) + c,
                     "--custom-nameplate-neutral":
                         t !== o.NJ.LIGHT ? "rgba(0, 0, 0, 0.22)" : "rgba(255, 255, 255  , 0.22)",
@@ -28,14 +28,14 @@ function p(e) {
         n
     );
 }
-function h(e, t, n, s, o) {
+function h(e, t, n, a, o) {
     let l = (0, i.Ay)(),
         u = (0, r.useMemo)(
-            () => (null == t ? null : m({ palette: t.palette, theme: l, hover: n, selected: s, placement: o })),
-            [t, n, s, l, o],
+            () => (null == t ? null : m({ palette: t.palette, theme: l, hover: n, selected: a, placement: o })),
+            [t, n, a, l, o],
         ),
         [c, d] = (0, r.useState)(null != u ? { background: u } : {}),
-        _ = o === a.u.MEMBER_LIST;
+        _ = o === s.u.MEMBER_LIST;
     return (
         (0, r.useEffect)(() => {
             if (null == u) return;
@@ -56,14 +56,14 @@ function h(e, t, n, s, o) {
 }
 function m(e) {
     let { palette: t, theme: n, hover: r, selected: i, placement: p } = e;
-    if (!(0, s.wT)(t)) return;
+    if (!(0, a.wT)(t)) return;
     let h = n === o.NJ.LIGHT,
         m = h ? t.lightBackground : t.darkBackground;
-    if (p === a.u.MEMBER_LIST || p === a.u.CHANNEL) {
-        let e = `${i ? f : r && p === a.u.MEMBER_LIST ? d : c}`;
+    if (p === s.u.MEMBER_LIST || p === s.u.CHANNEL) {
+        let e = `${i ? f : r && p === s.u.MEMBER_LIST ? d : c}`;
         return `linear-gradient(90deg, transparent 0%, ${m}${l} 20%, ${m}${l} 50%, ${m}${e} 100%)`;
     }
-    let g = p === a.u.MINI_PREVIEW ? c : u,
-        E = h ? d : _;
-    return `linear-gradient(90deg, ${m}${g} 0%, ${m}${E} 100%)`;
+    let E = p === s.u.MINI_PREVIEW ? c : u,
+        g = h ? d : _;
+    return `linear-gradient(90deg, ${m}${E} 0%, ${m}${g} 100%)`;
 }

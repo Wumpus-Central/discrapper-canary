@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { AK: () => s, KO: () => a, Wj: () => o, Z6: () => l, fc: () => i });
-var r = n(226540);
+n.d(t, { AK: () => a, KO: () => s, Wj: () => o, Z6: () => l, fc: () => i });
+var r = n(88686);
 let i = {
         [r.W.Crimson]: { darkBackground: "#900007", lightBackground: "#E7040F", name: r.W.Crimson },
         [r.W.Berry]: { darkBackground: "#893A99", lightBackground: "#B11FCF", name: r.W.Berry },
@@ -14,7 +14,7 @@ let i = {
         [r.W.Lemon]: { darkBackground: "#F6CD12", lightBackground: "#FED400", name: r.W.Lemon },
         [r.W.White]: { darkBackground: "#FFFFFF", lightBackground: "#FFFFFF", name: r.W.White },
     },
-    a = "invalid_palette",
-    s = "custom_palette",
-    o = { name: a, darkBackground: "", lightBackground: "" },
+    s = "invalid_palette",
+    a = "custom_palette",
+    o = { name: s, darkBackground: "", lightBackground: "" },
     l = Object.values(i);

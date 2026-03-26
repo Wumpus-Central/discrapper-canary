@@ -7,13 +7,13 @@ var r = n(627968),
     o = n(582754),
     l = n(397927),
     u = n(736653),
-    c = n(226540),
-    d = n(369496),
-    _ = n(227),
-    f = n(262737),
-    p = n(590180),
-    h = n(320447),
-    m = n(442759),
+    c = n(262737),
+    d = n(590180),
+    _ = n(320447),
+    f = n(442759),
+    p = n(88686),
+    h = n(780898),
+    m = n(214881),
     E = n(181774),
     g = n(132198),
     A = n(929283),
@@ -29,7 +29,7 @@ let v = (e) => {
     },
     N = (e) => {
         let { profileEffect: t, fallbackLabel: n } = e,
-            s = (0, f.V)(t?.skuId),
+            s = (0, c.V)(t?.skuId),
             { accessibilityLabel: a, thumbnailPreviewSrc: o, title: l } = s?.config ?? {},
             u = i.useMemo(() => (0, E.Rc)(o), [o]);
         return null == s
@@ -53,13 +53,13 @@ let v = (e) => {
                   className: I.rz,
                   onMouseEnter: o,
                   onMouseLeave: l,
-                  children: (0, r.jsx)(_.A, { nameplate: (0, d.WK)(t), hovered: s, placement: c.u.MINI_PREVIEW }),
+                  children: (0, r.jsx)(m.A, { nameplate: (0, h.WK)(t), hovered: s, placement: p.u.MINI_PREVIEW }),
               });
     },
     R = (e) => {
         let { product: t, fallbackLabel: n } = e,
-            { firstAvatarDecoration: i, firstProfileEffect: s, firstNameplate: a } = (0, m.f5)(t),
-            { enabled: o } = (0, h.P)("BundleMiniPreview"),
+            { firstAvatarDecoration: i, firstProfileEffect: s, firstNameplate: a } = (0, f.f5)(t),
+            { enabled: o } = (0, _.P)("BundleMiniPreview"),
             u = t.previewAssets?.fgStatic;
         return o && null != u
             ? (0, r.jsx)("img", { src: u, alt: t.name, className: I.C0 })
@@ -89,17 +89,17 @@ let v = (e) => {
     O = (e) => {
         let { product: t, sku: n, fallbackLabel: i } = e,
             o = n?.id,
-            u = (0, a.bG)([p.A], () => p.A.getProduct(n?.id)),
+            u = (0, a.bG)([d.A], () => d.A.getProduct(n?.id)),
             c = t ?? u;
         if (c?.type === s.R.BUNDLE) return (0, r.jsx)(R, { product: c, fallbackLabel: i });
-        let [d] = c?.items ?? [];
+        let [_] = c?.items ?? [];
         return void 0 !== o && o in g.m
             ? g.m[o].render({ animationState: "on_hover", className: I.Vr })
-            : d?.type === s.R.AVATAR_DECORATION
-              ? (0, r.jsx)(v, { avatarDecoration: d, avatarSize: l._3J.SIZE_40 })
-              : d?.type === s.R.PROFILE_EFFECT
-                ? (0, r.jsx)(N, { profileEffect: d, fallbackLabel: i })
-                : d?.type === s.R.NAMEPLATE
-                  ? (0, r.jsx)(C, { nameplate: d, fallbackLabel: i })
+            : _?.type === s.R.AVATAR_DECORATION
+              ? (0, r.jsx)(v, { avatarDecoration: _, avatarSize: l._3J.SIZE_40 })
+              : _?.type === s.R.PROFILE_EFFECT
+                ? (0, r.jsx)(N, { profileEffect: _, fallbackLabel: i })
+                : _?.type === s.R.NAMEPLATE
+                  ? (0, r.jsx)(C, { nameplate: _, fallbackLabel: i })
                   : i;
     };

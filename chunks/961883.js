@@ -5,20 +5,20 @@ var i = n(64700),
     r = n.n(l),
     d = n(575593),
     s = n(398590),
-    o = n(590547),
-    p = n(87719),
-    _ = n(309635),
-    E = n(341915),
-    u = n(545986),
-    c = n(780964),
-    S = n(840065),
-    h = n(318346),
-    A = n(954571),
-    I = n(203982),
-    R = n(975571),
-    T = n(993408),
-    f = n(562819),
-    y = n(442759),
+    o = n(87719),
+    p = n(309635),
+    _ = n(341915),
+    E = n(545986),
+    u = n(780964),
+    c = n(840065),
+    S = n(318346),
+    h = n(954571),
+    A = n(203982),
+    I = n(975571),
+    R = n(993408),
+    T = n(562819),
+    f = n(442759),
+    y = n(637193),
     g = n(158216),
     O = n(758836),
     N = n(652215),
@@ -59,19 +59,19 @@ let C = (t) => (null != t ? v.intl.format(v.t["4kp0AB"], { itemName: t }) : null
             let t = v.intl.formatToPlainString(v.t.Cz1G97, { days: 3 });
             return r
                 ? v.intl.format(v.t.bhLChO, {
-                      helpCenterLink: R.A.getArticleURL(N.MVz.FRACTIONAL_PREMIUM_ABOUT),
+                      helpCenterLink: I.A.getArticleURL(N.MVz.FRACTIONAL_PREMIUM_ABOUT),
                       duration: t,
                       expirationDate: o,
                   })
                 : s
                   ? v.intl.string(v.t.fBmhE9)
                   : v.intl.format(v.t["1ZBX4E"], {
-                        helpCenterLink: R.A.getArticleURL(N.MVz.FRACTIONAL_PREMIUM_ABOUT),
+                        helpCenterLink: I.A.getArticleURL(N.MVz.FRACTIONAL_PREMIUM_ABOUT),
                         duration: t,
                     });
         }
         if (e.type === d.R.BUNDLE) {
-            let { itemOneName: t, itemTwoName: n } = (0, y.yW)(e);
+            let { itemOneName: t, itemTwoName: n } = (0, f.yW)(e);
             return v.intl.format(v.t.fXw44U, { itemOneName: t, itemTwoName: n });
         }
         return e.type === d.R.AVATAR_DECORATION && a && null != l ? l : C(i);
@@ -83,18 +83,18 @@ let C = (t) => (null != t ? v.intl.format(v.t["4kp0AB"], { itemName: t }) : null
                 analyticsLocations: i,
                 hasRequiredProductItems: a,
                 handleUseNow: l,
-                isApplying: A,
-                openProfileSettings: R,
-                itemConsumed: T,
+                isApplying: h,
+                openProfileSettings: I,
+                itemConsumed: R,
             } = t,
-            y = [];
+            f = [];
         if (O.Dp.ORB_PROFILE_BADGE === e.skuId)
-            y.push(
+            f.push(
                 {
                     text: v.intl.string(m.default.yfwZuy),
                     variant: "primary",
                     onClick: () => {
-                        n(), I._.dispatch(N.jej.SHOW_ACCOUNT_PROFILE_POPOUT, {});
+                        n(), A._.dispatch(N.jej.SHOW_ACCOUNT_PROFILE_POPOUT, {});
                     },
                 },
                 {
@@ -102,68 +102,68 @@ let C = (t) => (null != t ? v.intl.format(v.t["4kp0AB"], { itemName: t }) : null
                     variant: "secondary",
                     onClick: () => {
                         n(),
-                            (0, h.Y)({
+                            (0, S.Y)({
                                 pageType: N.liQ.SHOP_ORBS_TAB,
                                 sectionType: N.JJy.ORBS_BADGE_REDEMPTION_MODAL,
                                 ctaObject: N.ZSU.CTA_TO_QUEST_HOME,
                             }),
-                            (0, u.navigateToQuestHome)({ fromContent: E.uF.REWARD_MODAL });
+                            (0, E.navigateToQuestHome)({ fromContent: _.uF.REWARD_MODAL });
                     },
                 },
             );
         else if (O.Dp.FRACTIONAL_PREMIUM === e.skuId)
-            T
-                ? y.push(
+            R
+                ? f.push(
                       { text: v.intl.string(v.t.cpT0Cq), variant: "secondary", onClick: n },
                       {
                           text: v.intl.string(v.t.ERKK6v),
                           variant: "primary",
                           onClick: () => {
-                              (0, p.x)(n);
+                              (0, o.x)(n);
                           },
                       },
                   )
-                : y.push(
+                : f.push(
                       { text: v.intl.string(v.t.cpT0Cq), variant: "secondary", onClick: n },
                       {
                           text: v.intl.string(v.t["Jr6N+s"]),
                           variant: "primary",
                           onClick: () => {
-                              (0, S.openUserSettings)(c.X.SUBSCRIPTIONS_PANEL), n();
+                              (0, c.openUserSettings)(u.X.SUBSCRIPTIONS_PANEL), n();
                           },
                       },
                   );
         else {
             let [t] = e.items;
-            y.push({
+            f.push({
                 text: v.intl.string(v.t["2p2aYz"]),
                 variant: a ? "secondary" : "primary",
                 onClick: () => {
-                    if ((n(), (0, s.jH)(), R?.(), e.type === d.R.AVATAR_DECORATION)) {
+                    if ((n(), (0, s.jH)(), I?.(), e.type === d.R.AVATAR_DECORATION)) {
                         r()(t.type === d.R.AVATAR_DECORATION, "product type and item type are the same"),
-                            (0, f.L)({ initialSelectedDecoration: t, analyticsLocations: i });
+                            (0, T.L)({ initialSelectedDecoration: t, analyticsLocations: i });
                         return;
                     }
                     if (e.type === d.R.PROFILE_EFFECT) {
                         r()(t.type === d.R.PROFILE_EFFECT, "product type and item type are the same"),
-                            (0, _.W)({ initialSelectedEffect: t, analyticsLocations: i });
+                            (0, p.W)({ initialSelectedEffect: t, analyticsLocations: i });
                         return;
                     }
                     if (e.type === d.R.NAMEPLATE) {
                         r()(t.type === d.R.NAMEPLATE, "product type and item type are the same"),
-                            (0, o.p)({ initialSelectedNameplate: t, analyticsLocations: i });
+                            (0, y.p)({ initialSelectedNameplate: t, analyticsLocations: i });
                         return;
                     }
                 },
             });
         }
-        return a && y.push({ text: v.intl.string(v.t.MAS7uK), variant: "primary", onClick: l, loading: A }), y;
+        return a && f.push({ text: v.intl.string(v.t.MAS7uK), variant: "primary", onClick: l, loading: h }), f;
     },
     b = (t, e) => {
-        let n = i.useMemo(() => (0, T.V6)(t.type, t.skuId), [t.type, t.skuId]);
+        let n = i.useMemo(() => (0, R.V6)(t.type, t.skuId), [t.type, t.skuId]);
         return (
             i.useEffect(() => {
-                A.default.track(N.HAw.OPEN_MODAL, {
+                h.default.track(N.HAw.OPEN_MODAL, {
                     type: N.JJy.COLLECTIBLES_SHOP_COLLECTED_MODAL,
                     location_stack: e,
                     sku_id: t.skuId,

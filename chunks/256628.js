@@ -2623,7 +2623,7 @@ var r = {
     "./1f938-1f3fe-200d-2640-fe0f.svg": "623523",
     "./1f938-1f3fe-200d-2642-fe0f.svg": "614313",
     "./1f938-1f3fe.svg": "878437",
-    "./1f938-1f3ff-200d-2640-fe0f.svg": "88686",
+    "./1f938-1f3ff-200d-2640-fe0f.svg": "866305",
     "./1f938-1f3ff-200d-2642-fe0f.svg": "314304",
     "./1f938-1f3ff.svg": "379302",
     "./1f938-200d-2640-fe0f.svg": "796523",
@@ -3411,7 +3411,7 @@ var r = {
     "./1f9f7.svg": "356377",
     "./1f9f8.svg": "839582",
     "./1f9f9.svg": "975983",
-    "./1f9fa.svg": "347959",
+    "./1f9fa.svg": "570340",
     "./1f9fb.svg": "243364",
     "./1f9fc.svg": "621381",
     "./1f9fd.svg": "202810",
@@ -3839,9 +3839,9 @@ var r = {
     "./e50a.svg": "516897",
 };
 function i(e) {
-    return n(a(e));
+    return n(s(e));
 }
-function a(e) {
+function s(e) {
     if (!n.o(r, e)) {
         var t = Error("Cannot find module '" + e + "'");
         throw ((t.code = "MODULE_NOT_FOUND"), t);
@@ -3851,6 +3851,6 @@ function a(e) {
 (i.keys = function () {
     return Object.keys(r);
 }),
-    (i.resolve = a),
+    (i.resolve = s),
     (e.exports = i),
     (i.id = 256628);
