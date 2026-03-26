@@ -268,7 +268,7 @@ function P(e, t) {
             freeTextElements: n,
             dropdownElements: r,
             countrySelectElement: i,
-            radioGroupElement: s,
+            radioGroupElements: s,
             multiSelectElement: a,
             contentUrlInputElement: o,
         } = e,
@@ -281,7 +281,7 @@ function P(e, t) {
         ) ||
         r.some((e) => !0 === e.should_submit_data && (l?.[e.name] == null || l?.[e.name].value === "")) ||
         (i?.should_submit_data === !0 && (l?.[i.name] == null || l?.[i.name].value === "")) ||
-        (s?.should_submit_data === !0 && (l?.[s.name] == null || l?.[s.name].value === "")) ||
+        s.some((e) => !0 === e.should_submit_data && (l?.[e.name] == null || l?.[e.name].value === "")) ||
         (a?.should_submit_data === !0 && (null == u || 0 === Object.keys(u).length)) ||
         (o?.should_submit_data === !0 && (l?.[o.name] == null || l?.[o.name].value === "" || !l?.[o.name]?.isValid))
     );

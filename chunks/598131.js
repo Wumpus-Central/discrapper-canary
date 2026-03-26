@@ -87,7 +87,7 @@ let el = (e) => {
         eg = en(t, "dropdown"),
         eA = et(t, "country_select"),
         ev = et(t, "inline_notice"),
-        ef = et(t, "radio_group"),
+        ef = en(t, "radio_group"),
         eb = et(t, "text"),
         eC = et(t, "content_url_input"),
         eT = r.x.REPORT_TO_MOD.has(n.name),
@@ -103,7 +103,7 @@ let el = (e) => {
             (e) => ({
                 nodeRef: t.id,
                 destination: e,
-                textInput: null != eh || null != eg || null != eA || null != ef || null != eC ? eM : void 0,
+                textInput: null != eh || null != eg || null != eA || ef.length > 0 || null != eC ? eM : void 0,
                 multiSelect: null != em ? { name: em.name, state: ew } : void 0,
             }),
             [t, eh, eg, eA, ef, eC, em, ew, eM],
@@ -115,7 +115,7 @@ let el = (e) => {
                         freeTextElements: eh,
                         dropdownElements: eg,
                         countrySelectElement: eA,
-                        radioGroupElement: ef,
+                        radioGroupElements: ef,
                         multiSelectElement: em,
                         contentUrlInputElement: eC,
                     },
@@ -362,13 +362,18 @@ let el = (e) => {
                         null != eg &&
                         eg.length > 0 &&
                         (0, l.jsx)("div", { children: (0, l.jsx)(T.A, { elements: eg, onChange: eU, state: eM }) }),
-                    null != ef &&
-                        (0, l.jsx)("div", { children: (0, l.jsx)(P.A, { element: ef, onChange: eU, state: eM }) }),
+                    ef.map((e) => (0, l.jsx)(P.A, { element: e, onChange: eU, state: eM }, e.name)),
                     null != ev &&
                         (function (e, t, n) {
                             let { visible_when: l } = e.data;
                             if (null == l) return !0;
-                            let a = et(t, l.element_type);
+                            let a =
+                                null != l.element_name
+                                    ? t.elements.find((e) => {
+                                          let { name: t } = e;
+                                          return t === l.element_name;
+                                      })
+                                    : et(t, l.element_type);
                             return null != a && n?.[a.name]?.value === l.value;
                         })(ev, t, eM) &&
                         (0, l.jsx)(M.A, { element: ev }),
