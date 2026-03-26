@@ -1,14 +1,14 @@
-i.d(e, { a: () => u });
-var n = i(286237),
-    l = i(419954),
-    s = i(780964),
-    r = i(790076),
-    a = i(985018);
-let u = (0, l.E2)(s.X.OVERLAY_CURRENT_GAME, {
-    Component: r.nR,
+n.d(t, { a: () => o });
+var i = n(286237),
+    s = n(419954),
+    l = n(780964),
+    a = n(536664),
+    r = n(985018);
+let o = (0, s.E2)(l.X.OVERLAY_CURRENT_GAME, {
+    Component: a.A,
     usePredicate: () => {
-        let { runningGame: t } = (0, n.A)();
-        return null != t;
+        let { runningGame: e } = (0, i.A)();
+        return null != e;
     },
-    useSearchTerms: () => [a.intl.string(a.t["9cb1Uz"])],
+    useSearchTerms: () => [r.intl.string(r.t["9cb1Uz"])],
 });

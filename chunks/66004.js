@@ -1,32 +1,31 @@
-"use strict";
-n.d(t, { A: () => m });
-var i = n(627968),
-    s = n(64700),
-    l = n(835245),
-    r = n(311907),
-    a = n(73153),
-    o = n(775602),
-    c = n(58149),
-    d = n(667050),
-    u = n(407781),
-    h = n(652215),
-    A = n(384187);
+i.d(t, { A: () => m });
+var n = i(627968),
+    l = i(64700),
+    r = i(835245),
+    s = i(311907),
+    a = i(73153),
+    o = i(775602),
+    d = i(58149),
+    u = i(667050),
+    c = i(407781),
+    A = i(652215),
+    h = i(384187);
 function m(e) {
-    let { channelId: t, guildId: n, userId: m, containerDimensions: p } = e,
-        g = (0, r.bG)([o.A], () => o.A.useReducedMotion),
-        [_, f] = s.useState([]),
-        x = _.length < 50;
-    s.useEffect(() => {
+    let { channelId: t, guildId: i, userId: m, containerDimensions: p } = e,
+        g = (0, s.bG)([o.A], () => o.A.useReducedMotion),
+        [f, T] = l.useState([]),
+        S = f.length < 50;
+    l.useEffect(() => {
         function e(e) {
-            let { channelId: i, userId: s, emoji: r, animationType: a, animationId: o } = e;
-            if (null != m && m !== s) return;
-            let u = null != r && null != a && null != o;
-            if (i === t && !g && x && u) {
-                let e = (0, d.Br)(r),
-                    i = null != r.id && !r.animated,
-                    u = { id: (0, l.A)(), animationType: a, animationId: o, shouldResize: i, url: e, userId: s };
-                f((e) => [...e, u]),
-                    c.Ay.trackWithMetadata(h.HAw.VOICE_CHANNEL_EFFECT_VIEWED, { channel_id: t, guild_id: n });
+            let { channelId: n, userId: l, emoji: s, animationType: a, animationId: o } = e;
+            if (null != m && m !== l) return;
+            let c = null != s && null != a && null != o;
+            if (n === t && !g && S && c) {
+                let e = (0, u.Br)(s),
+                    n = null != s.id && !s.animated,
+                    c = { id: (0, r.A)(), animationType: a, animationId: o, shouldResize: n, url: e, userId: l };
+                T((e) => [...e, c]),
+                    d.Ay.trackWithMetadata(A.HAw.VOICE_CHANNEL_EFFECT_VIEWED, { channel_id: t, guild_id: i });
             }
         }
         return (
@@ -35,22 +34,22 @@ function m(e) {
                 a.h.unsubscribe("VOICE_CHANNEL_EFFECT_SEND", e);
             }
         );
-    }, [t, n, m, g, x]);
-    let C = s.useCallback((e) => {
-        f((t) => {
-            let n = [...t],
-                i = n.findIndex((t) => t.id === e);
-            return n.splice(i, 1), n;
+    }, [t, i, m, g, S]);
+    let E = l.useCallback((e) => {
+        T((t) => {
+            let i = [...t],
+                n = i.findIndex((t) => t.id === e);
+            return i.splice(n, 1), i;
         });
     }, []);
     return g
         ? null
-        : (0, i.jsx)("div", {
-              className: A.Y,
+        : (0, n.jsx)("div", {
+              className: h.Y,
               style: { width: p.width },
-              children: (0, i.jsx)("div", {
-                  className: A.z,
-                  children: _.map((e) => (0, i.jsx)(u.A, { containerDimensions: p, effect: e, onComplete: C }, e.id)),
+              children: (0, n.jsx)("div", {
+                  className: h.z,
+                  children: f.map((e) => (0, n.jsx)(c.A, { containerDimensions: p, effect: e, onComplete: E }, e.id)),
               }),
           });
 }

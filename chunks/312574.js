@@ -15,31 +15,31 @@ var i = n(627968),
     A = n(256415),
     h = n(723702),
     p = n(780964),
-    f = n(790076),
-    T = n(682262),
+    f = n(682262),
+    T = n(202949),
     S = n(694202),
     E = n(50847),
     b = n(606275),
     C = n(879545),
     v = n(49999),
     N = n(985018),
-    I = n(696952),
+    I = n(633831),
     j = n(130324),
     y = n(966040);
 let O = (0, m.t_)(p.X.OVERLAY_PANEL, {
         initialize: function () {
             return (
-                (0, f.Ql)(),
-                g.Ay.addChangeListener(f.Ql),
-                c.A.addChangeListener(f.Ql),
-                A.default.addChangeListener(f.Ql),
-                x.default.addChangeListener(f.Ql),
+                (0, T.Q)(),
+                g.Ay.addChangeListener(T.Q),
+                c.A.addChangeListener(T.Q),
+                A.default.addChangeListener(T.Q),
+                x.default.addChangeListener(T.Q),
                 h.isPlatformEmbedded && (0, d.a2)(),
                 () => {
-                    g.Ay.removeChangeListener(f.Ql),
-                        c.A.removeChangeListener(f.Ql),
-                        A.default.removeChangeListener(f.Ql),
-                        x.default.removeChangeListener(f.Ql),
+                    g.Ay.removeChangeListener(T.Q),
+                        c.A.removeChangeListener(T.Q),
+                        A.default.removeChangeListener(T.Q),
+                        x.default.removeChangeListener(T.Q),
                         h.isPlatformEmbedded && (0, d.e0)();
                 }
             );
@@ -111,6 +111,6 @@ let O = (0, m.t_)(p.X.OVERLAY_PANEL, {
     R = (0, m.i4)(p.X.OVERLAY_SIDEBAR_ITEM, {
         useTitle: () => N.intl.string(N.t["9cb1Uz"]),
         icon: l.WindowTopOutlineIcon,
-        usePredicate: T.b_,
+        usePredicate: f.b_,
         buildLayout: () => [O],
     });

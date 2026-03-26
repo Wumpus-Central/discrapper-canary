@@ -1,6 +1,6 @@
-i.d(e, { k: () => a });
-var n = i(419954),
-    l = i(780964),
-    s = i(790076),
-    r = i(985018);
-let a = (0, n.E2)(l.X.OVERLAY_LEGACY_SETTING, { Component: s.fE, useSearchTerms: () => [r.intl.string(r.t.BfFpW1)] });
+n.d(t, { k: () => r });
+var i = n(419954),
+    s = n(780964),
+    l = n(296410),
+    a = n(985018);
+let r = (0, i.E2)(s.X.OVERLAY_LEGACY_SETTING, { Component: l.A, useSearchTerms: () => [a.intl.string(a.t.BfFpW1)] });
