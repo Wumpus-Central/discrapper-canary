@@ -219,16 +219,17 @@ function w(e) {
             overrideRenewalDate: u,
             fractionalPremiumInfo: d,
             hideLegalContent: _,
+            isInvoiceBilledImmediately: f = !0,
         } = e,
-        { immediateDelivery: f } = (0, A.U)(),
-        { discountOffer: E } = (0, g.P5)();
+        { immediateDelivery: E } = (0, A.U)(),
+        { discountOffer: S } = (0, g.P5)();
     if (l.type === m.N$.LOADING) return null;
-    let { invoicePreview: S } = l,
-        y = ("renewalInvoicePreview" in l ? l.renewalInvoicePreview : null) ?? S,
-        v = y.invoiceItems.find((e) => e.subscriptionPlanId === i.id),
-        N = null != v ? (0, I.Re)(v, E).amount : y.subtotal;
+    let { invoicePreview: y } = l,
+        v = ("renewalInvoicePreview" in l ? l.renewalInvoicePreview : null) ?? y,
+        N = v.invoiceItems.find((e) => e.subscriptionPlanId === i.id),
+        C = null != N ? (0, I.Re)(N, S).amount : v.subtotal;
     if (_) return null;
-    let C = {
+    let R = {
         purchaseButtonText: (0, h.Ro)({
             productLine: T.EZt.PREMIUM,
             purchaseType: T.VVm.SUBSCRIPTION,
@@ -238,23 +239,23 @@ function w(e) {
             planGroup: t,
             isPrepaidPaymentSource: !1,
         }),
-        totalDue: S.total,
-        renewalPrice: N,
-        currency: S.currency,
+        totalDue: f ? y.total : 0,
+        renewalPrice: C,
+        currency: y.currency,
         interval: i.interval,
         intervalCount: i.intervalCount,
         startDate: (0, p.de)({
             overrideRenewalDate: u,
-            currentInvoice: S.id !== y.id ? S : void 0,
-            renewalInvoice: y,
+            currentInvoice: y.id !== v.id ? y : void 0,
+            renewalInvoice: v,
             isSubscriptionUpdate: null != o,
             fractionalPremiumInfo: d,
         }),
     };
     return (0, r.jsx)(c._P, {
-        variant: { type: s ? c.I0.GiftNitro : n ? c.I0.SubscriptionTrial : c.I0.Subscription, ...C },
+        variant: { type: s ? c.I0.GiftNitro : n ? c.I0.SubscriptionTrial : c.I0.Subscription, ...R },
         paymentSourceType: a,
-        immediateDelivery: f,
+        immediateDelivery: E,
     });
 }
 function M(e) {

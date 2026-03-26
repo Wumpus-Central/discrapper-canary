@@ -194,6 +194,7 @@ function j(e) {
                       plan: em,
                       isGift: ef,
                       paymentSourceType: eh,
+                      isInvoiceBilledImmediately: eG,
                       invoiceSummaryTypeWithPreview: {
                           type: P.N$.PREMIUM_SWITCH_PLAN,
                           invoicePreview: ed,
