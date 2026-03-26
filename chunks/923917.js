@@ -109,10 +109,10 @@ class W extends i.Component {
         this.props.onBlur?.();
     };
     registerPopoutGlobalKeybinds() {
-        let { guestWindow: e } = this.props,
-            t = e.document;
-        for (let e of ((this._combokeys = (0, b.I)(t.documentElement)),
-        [E.VT, E.rR, m.D, ...(this.props.keybinds ?? [])]))
+        let { guestWindow: e, channelId: t } = this.props,
+            n = e.document;
+        for (let e of ((this._combokeys = (0, b.I)(n.documentElement)),
+        [E.VT, E.rR, (0, m.LB)(t), ...(this.props.keybinds ?? [])]))
             if (e.comboKeysBindGlobal)
                 for (let t of e.binds)
                     this._combokeys.bindGlobal(t, (t, n) => ("function" == typeof e.action && e.action(t, n), !1));
