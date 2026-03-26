@@ -24,7 +24,7 @@ function m(e) {
     });
 }
 function A(e) {
-    let { guildId: l, onChangeGuildId: t, onClose: n, className: A } = e;
+    let { selectedGuildId: l, onSelectGuildId: t, onClose: n, className: A } = e;
     return (0, i.jsxs)("aside", {
         id: c,
         "aria-labelledby": u,
