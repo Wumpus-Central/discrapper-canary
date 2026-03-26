@@ -16,7 +16,6 @@ let o = {
                 e.features.has(r.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED) &&
                 !e.features.has(r.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED) &&
                 a.A.can(r.xBc.ADMINISTRATOR, e) &&
-                (0, s.D3)() &&
                 (0, s.TG)(e.id),
             [],
         ),
