@@ -34,7 +34,7 @@ let v = (e) => {
             metadata: D,
         } = e,
         L = (0, p.L)(e),
-        { isEligibleForTrial: w, selectedStoreListing: M, discountOffer: x } = (0, m.P5)(),
+        { isEligibleForTrial: w, discountOffer: M, selectedStoreListing: x } = (0, m.P5)(),
         P = D?.guild_id ?? void 0,
         {
             error: k,
@@ -101,7 +101,7 @@ let v = (e) => {
             premiumSubscription: en,
             isGift: U,
         }),
-        eE = i.useMemo(() => null != x && null != x.discount && null != H && (0, f.Ro)(H, x.discount.id), [x, H]),
+        eE = i.useMemo(() => null != M && null != M.discount && null != H && (0, f.Ro)(H, M.discount.id), [M, H]),
         eg = i.useMemo(() => {
             if (null != ed && ed.type === h.N$.PREMIUM_WITH_TRIAL && null != eh)
                 return (0, r.jsx)(o.J, {
@@ -109,8 +109,8 @@ let v = (e) => {
                     Icon: s.tvc,
                     text: S.intl.format(y.default.IAsfR5, { daysCount: ep }),
                 });
-            if (null != x && eE) {
-                let e = x.discount;
+            if (null != M && eE) {
+                let e = M.discount;
                 if (e.user_usage_limit_interval === T.Ff.MONTH)
                     return (0, r.jsx)(o.J, {
                         gradientColor: "nitro-pink",
@@ -122,7 +122,7 @@ let v = (e) => {
                     });
             }
             return null;
-        }, [eh, eE, x, ep, ed]),
+        }, [eh, eE, M, ep, ed]),
         eA = i.useMemo(() => {
             let e = [];
             return (
@@ -161,7 +161,7 @@ let v = (e) => {
         null != ed.renewalInvoicePreview
     ) {
         let e = (0, I.Gj)(ed.invoicePreview, ed.renewalInvoicePreview, eI, {
-            discountOffer: x,
+            discountOffer: M,
             isSubscriptionUpdate: null != en,
             fractionalPremiumInfo: er,
         });
@@ -183,8 +183,8 @@ let v = (e) => {
             : (0, r.jsx)(A._, {
                   type: ed.type,
                   invoicePreview: ed.invoicePreview,
+                  storeListing: x,
                   subscriptionPlan: W,
-                  storeListing: M,
                   isPrepaidPaymentSource: K,
                   giftRecipient: G,
                   isPremiumGroupPurchase: ei,

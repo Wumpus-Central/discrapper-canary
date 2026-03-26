@@ -9,5 +9,4 @@ e.exports = {
     d8: "invoiceDiscountTag__25766",
     V$: "totalRow__25766",
     oC: "slayerStorefrontProductPreview__25766",
-    go: "invoiceProductPreviewImage__25766",
 };

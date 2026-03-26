@@ -15,4 +15,5 @@ e.exports = {
     Kk: "icon_da8ac7",
     nC: "expressiveGradient_da8ac7",
     CX: "nitroCredit_da8ac7",
+    gw: "purchaseItemImage_da8ac7",
 };
