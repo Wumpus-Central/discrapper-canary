@@ -1,87 +1,109 @@
 "use strict";
-n.d(t, { A: () => x });
+n.d(t, { A: () => N });
 var i = n(627968),
     s = n(64700),
-    l = n(311907),
-    a = n(990078),
-    r = n(397927),
-    o = n(309698),
-    c = n(888697),
-    d = n(581007),
-    u = n(522435),
-    h = n(493819),
-    A = n(722884),
-    m = n(148690),
-    _ = n(985018),
-    p = n(72057);
-function g(e) {
-    let { channel: t, imageUrl: n } = e,
-        l = s.useCallback(() => {
-            (0, A.A)({ channel: t });
+    l = n(503698),
+    r = n.n(l),
+    a = n(311907),
+    o = n(990078),
+    c = n(397927),
+    d = n(309698),
+    u = n(262763),
+    h = n(743674),
+    A = n(888697),
+    m = n(581007),
+    p = n(522435),
+    g = n(493819),
+    _ = n(722884),
+    f = n(148690),
+    x = n(985018),
+    C = n(72057);
+function E(e) {
+    let { channel: t, imageUrl: n, isConnected: l } = e,
+        a = (0, h.S)(n),
+        d = s.useCallback(() => {
+            (0, _.A)({ channel: t });
         }, [t]),
-        o = s.useCallback(() => {
-            (0, c.e)(t.id);
-        }, [t.id]);
+        m = s.useCallback(() => {
+            (0, A.e)(t.id);
+        }, [t.id]),
+        p = s.useCallback(() => {
+            u.A.handleVoiceConnect({ channel: t, connected: !1, needSubscriptionToAccess: !1 });
+        }, [t]),
+        E = null != a ? { backgroundColor: a } : void 0;
     return (0, i.jsxs)("div", {
-        className: p.rs,
+        className: C.rs,
         children: [
-            (0, i.jsx)("div", { className: p.ZS, children: (0, i.jsx)(h.A, { src: n, className: p.Sl }) }),
-            (0, i.jsxs)("div", {
-                className: p.n_,
-                children: [
-                    (0, i.jsx)(a.m, {
-                        text: _.intl.string(m.default.XJ4UpB),
-                        children: (0, i.jsx)(r.DUT, {
-                            className: p.HF,
-                            onClick: l,
-                            children: (0, i.jsx)(r.R2l, { size: "xs", color: "currentColor" }),
-                        }),
-                    }),
-                    (0, i.jsx)(a.m, {
-                        text: _.intl.string(m.default.XV4qT6),
-                        children: (0, i.jsx)(r.DUT, {
-                            className: p.HF,
-                            onClick: o,
-                            children: (0, i.jsx)(r.ucK, { size: "xs", color: "currentColor" }),
-                        }),
-                    }),
-                ],
-            }),
+            l
+                ? (0, i.jsx)("div", {
+                      className: C.ZS,
+                      style: E,
+                      children: (0, i.jsx)(g.A, { src: n, className: C.Sl }),
+                  })
+                : (0, i.jsx)(c.DUT, {
+                      className: r()(C.ZS, C.jI),
+                      style: E,
+                      onClick: p,
+                      children: (0, i.jsx)(g.A, { src: n, className: C.Sl }),
+                  }),
+            l
+                ? (0, i.jsxs)("div", {
+                      className: C.n_,
+                      children: [
+                          (0, i.jsx)(o.m, {
+                              text: x.intl.string(f.default.XJ4UpB),
+                              children: (0, i.jsx)(c.DUT, {
+                                  className: C.HF,
+                                  onClick: d,
+                                  children: (0, i.jsx)(c.R2l, { size: "xs", color: "currentColor" }),
+                              }),
+                          }),
+                          (0, i.jsx)(o.m, {
+                              text: x.intl.string(f.default.XV4qT6),
+                              children: (0, i.jsx)(c.DUT, {
+                                  className: C.HF,
+                                  onClick: m,
+                                  children: (0, i.jsx)(c.ucK, { size: "xs", color: "currentColor" }),
+                              }),
+                          }),
+                      ],
+                  })
+                : null,
         ],
     });
 }
-function f(e) {
+function I(e) {
     let { channel: t } = e,
         n = s.useCallback(() => {
-            (0, A.A)({ channel: t });
+            (0, _.A)({ channel: t });
         }, [t]);
     return (0, i.jsx)("div", {
-        className: p._o,
-        children: (0, i.jsxs)(r.DUT, {
-            className: p.hH,
+        className: C._o,
+        children: (0, i.jsxs)(c.DUT, {
+            className: C.hH,
             onClick: n,
             children: [
-                (0, i.jsx)(r.XGR, { size: "xs", color: "currentColor" }),
-                (0, i.jsx)(r.Text, {
+                (0, i.jsx)(c.XGR, { size: "xs", color: "currentColor" }),
+                (0, i.jsx)(c.Text, {
                     variant: "text-sm/medium",
                     color: "currentColor",
-                    children: _.intl.string(m.default.NGcIOF),
+                    children: x.intl.string(f.default.NGcIOF),
                 }),
             ],
         }),
     });
 }
-function x(e) {
+function N(e) {
     let { channel: t, isConnected: n } = e,
-        { enableHangoutWindow: a } = (0, d.Dm)({ guildId: t.guild_id, location: "HangoutWindow" }),
-        r = (0, l.bG)([o.A], () => o.A.getChannelStatus(t), [t]),
-        c = s.useMemo(() => (0, u.TP)(r), [r]),
-        h = s.useMemo(() => (null == r ? null : (0, u.K7)(r)), [r]);
-    return a
-        ? null != r && c && null != h
-            ? (0, i.jsx)(g, { channel: t, imageUrl: h })
+        { enableHangoutWindow: l } = (0, m.Dm)({ guildId: t.guild_id, location: "HangoutWindow" }),
+        r = (0, a.bG)([d.A], () => d.A.getChannelStatus(t), [t]),
+        o = s.useMemo(() => (0, p.TP)(r), [r]),
+        c = s.useMemo(() => (null == r ? null : (0, p.K7)(r)), [r]);
+    return l
+        ? null != r && o && null != c
+            ? (0, i.jsx)(E, { channel: t, imageUrl: c, isConnected: n })
             : n
-              ? (0, i.jsx)(f, { channel: t })
+              ? (0, i.jsx)(I, { channel: t })
               : null
         : null;
 }
