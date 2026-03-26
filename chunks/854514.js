@@ -1,4 +1,4 @@
-n.d(t, { A: () => y, H: () => b });
+n.d(t, { Ae: () => v, Ay: () => b, Hk: () => O });
 var i = n(627968),
     a = n(64700),
     l = n(503698),
@@ -15,14 +15,17 @@ var i = n(627968),
     g = n(415441),
     p = n(73473),
     E = n(139384),
-    I = n(506787),
+    I = n(729168),
     f = n(7832),
     C = n(654487),
     T = n(49999),
     N = n(985018),
-    S = n(437176),
-    x = n(695074);
-function v(e) {
+    S = n(684027),
+    x = n(311401);
+function v() {
+    return (0, i.jsx)("div", { className: S.Np });
+}
+function y(e) {
     let { assetImage: t, assetVideo: n } = e,
         l = a.useRef(null);
     (0, E.A)(l, C.rE.QUEST_HOME_DESKTOP);
@@ -31,7 +34,7 @@ function v(e) {
         ? (0, i.jsxs)("div", {
               className: S.Tv,
               children: [
-                  (0, i.jsx)("div", { className: S.Np }),
+                  (0, i.jsx)(v, {}),
                   (0, i.jsx)("div", {
                       className: S.LO,
                       children: (0, i.jsx)("img", { className: S.LY, src: t.url, alt: t.altText }),
@@ -49,7 +52,7 @@ function v(e) {
         : (0, i.jsxs)("div", {
               className: S.Tv,
               children: [
-                  (0, i.jsx)("div", { className: S.Np }),
+                  (0, i.jsx)(v, {}),
                   (0, i.jsx)("div", {
                       className: S.LO,
                       children: (0, i.jsx)(g.N, {
@@ -73,7 +76,7 @@ function v(e) {
               ],
           });
 }
-function y(e) {
+function b(e) {
     let { config: t, onQuestCtaClick: n } = e,
         l = (0, o.bG)([u.A], () => u.A.quests),
         { dismissQuestHomeHeroContent: r } = (0, f.I)();
@@ -151,11 +154,11 @@ function y(e) {
                             ),
                         ],
                     }),
-                    background: (0, i.jsx)(v, { assetImage: t.assetHeroImage, assetVideo: t.assetHeroVideo }),
+                    background: (0, i.jsx)(y, { assetImage: t.assetHeroImage, assetVideo: t.assetHeroVideo }),
                 }),
         })
     );
 }
-function b() {
+function O() {
     return (0, i.jsx)("div", { className: r()(x.iE, x.FG, x.B3), children: (0, i.jsx)(d.y$y, {}) });
 }

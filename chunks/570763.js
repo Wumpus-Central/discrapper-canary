@@ -49,7 +49,7 @@ var i = n(627968),
     Q = n(724339),
     X = n(516226),
     Z = n(854514),
-    J = n(506787),
+    J = n(729168),
     ee = n(321503),
     et = n(475529),
     en = n(654487),
@@ -57,7 +57,7 @@ var i = n(627968),
     ea = n(758836),
     el = n(613057),
     er = n(985018),
-    es = n(467303),
+    es = n(749504),
     eo = n(92872),
     ed = n(880440),
     ec = n(522303),
@@ -132,8 +132,8 @@ function ep(e) {
                     (function () {
                         if (!o && g) {
                             if (A !== F.NC.ALL) return null;
-                            if (_) return (0, i.jsx)(Z.H, {});
-                            if (null != h) return (0, i.jsx)(Z.A, { config: h, onQuestCtaClick: E });
+                            if (_) return (0, i.jsx)(Z.Hk, {});
+                            if (null != h) return (0, i.jsx)(Z.Ay, { config: h, onQuestCtaClick: E });
                         }
                         return t();
                     })(),
@@ -193,10 +193,10 @@ let eE = function (e) {
             z ? window.open(ei.X7G.PAID_TERMS_ORBS) : window.open(w.A.getArticleURL(ei.MVz.QUESTS_LEARN_MORE));
         }, [z]);
     (0, f.HU)({ location: er.intl.string(er.t.JALI2K) });
-    let Z = z ? er.intl.format(er.t.BCBIlp, {}) : er.intl.format(er.t.lmMBfy, {}),
-        ee = z ? er.intl.format(er.t.U9FY0J, {}) : er.intl.string(er.t.oWCrBq),
-        eo = a.useRef(null),
-        ed = a.useCallback(() => {
+    let ee = z ? er.intl.format(er.t.BCBIlp, {}) : er.intl.format(er.t.lmMBfy, {}),
+        eo = z ? er.intl.format(er.t.U9FY0J, {}) : er.intl.string(er.t.oWCrBq),
+        ed = a.useRef(null),
+        ec = a.useCallback(() => {
             (0, L.Y)({
                 pageType: ei.liQ.GLOBAL_DISCOVERY_QUESTS,
                 sectionType: ei.JJy.ORBS_BALANCE_MENU,
@@ -210,12 +210,12 @@ let eE = function (e) {
         a.useEffect(() => {
             N.g.trigger();
         }, []);
-    let ec = (0, H.U)({ location: en.rE.QUEST_PREVIEW_TOOL_2 });
+    let eu = (0, H.U)({ location: en.rE.QUEST_PREVIEW_TOOL_2 });
     a.useEffect(() => {
         if (null != C) return;
         let e = new URLSearchParams(n.search),
             i = e.get(F.L1.TAB);
-        if (ec && i === F.NC.PREVIEW_TOOL) {
+        if (eu && i === F.NC.PREVIEW_TOOL) {
             let t = e.get(F.L1.QUEST_ID);
             p.A.openNativeAppModal("quests", ei.e$_.DEEP_LINK, {
                 type: el.XK.QUEST_PREVIEW_TOOL,
@@ -233,11 +233,11 @@ let eE = function (e) {
                 params: { questId: (0, U.uJ)(t) ? void 0 : t, sort: a, filter: l, tab: i },
             });
         }
-    }, [n.search, C, ec, l.action, n.hash, t]),
+    }, [n.search, C, eu, l.action, n.hash, t]),
         a.useEffect(() => {
             t && (0, T.Dr)(u.M.QUEST_HOME_ENTRYPOINT_ONBOARDING);
         }, [t]);
-    let eu = a.useCallback(() => {
+    let eA = a.useCallback(() => {
             (0, K.navigateToQuestHome)({ fromContent: G.uF.QUEST_HOME_MOVE_CALLOUT_DISCOVER }),
                 M.default.track(ei.HAw.QUEST_CONTENT_CLICKED, {
                     cta_name: Y.Cy.VIEW_QUESTS,
@@ -246,9 +246,9 @@ let eE = function (e) {
                     ...(0, Y.fF)(G.uF.QUEST_HOME_MOVE_CALLOUT_DISCOVER),
                 });
         }, []),
-        eA = a.useCallback(
+        eh = a.useCallback(
             (e) => {
-                l.replace({ ...l.location, hash: void 0 }), eo.current?.scrollToTop({ animate: !1 }), b(e);
+                l.replace({ ...l.location, hash: void 0 }), ed.current?.scrollToTop({ animate: !1 }), b(e);
             },
             [l, b],
         );
@@ -256,8 +256,8 @@ let eE = function (e) {
         value: { onAssetLoadComplete: W },
         children: (0, i.jsx)(e_.Provider, {
             value: a.useMemo(
-                () => ({ isInDiscoverQuestHomeTab: _, onScroll: j, onSelectTab: eA, scrollerRef: eo, selectedTab: v }),
-                [_, j, eA, eo, v],
+                () => ({ isInDiscoverQuestHomeTab: _, onScroll: j, onSelectTab: eh, scrollerRef: ed, selectedTab: v }),
+                [_, j, eh, ed, v],
             ),
             children: (0, i.jsx)("div", {
                 className: r()(es.kL, { [es.KY]: !t }),
@@ -270,12 +270,12 @@ let eE = function (e) {
                                   button: (0, i.jsx)(A.Button, {
                                       variant: "overlay-primary",
                                       text: er.intl.string(er.t.GURBQl),
-                                      onClick: eu,
+                                      onClick: eA,
                                   }),
                                   className: es.Gj,
                                   children: (0, i.jsx)(eg, { onLoadComplete: W }),
                               }),
-                          header: (0, i.jsx)(y.S, { selectedTabId: v, handleTransition: eA, tabs: D, icon: A.r2v }),
+                          header: (0, i.jsx)(y.S, { selectedTabId: v, handleTransition: eh, tabs: D, icon: A.r2v }),
                           withQuestsGrid: !1,
                           children: (0, i.jsxs)("div", {
                               className: es.kj,
@@ -291,7 +291,7 @@ let eE = function (e) {
                                   }),
                                   (0, i.jsx)(A.QWc, {
                                       text: er.intl.string(er.t["1CdL8d"]),
-                                      onClick: eu,
+                                      onClick: eA,
                                       textVariant: "text-md/normal",
                                       variant: "primary",
                                   }),
@@ -302,8 +302,8 @@ let eE = function (e) {
                           renderBanner: () =>
                               v !== F.NC.PREVIEW_TOOL &&
                               (0, i.jsx)(J.A, {
-                                  title: Z,
-                                  subtitle: ee,
+                                  title: ee,
+                                  subtitle: eo,
                                   buttons: z
                                       ? (0, i.jsxs)(A.ButtonGroup, {
                                             children: [
@@ -334,6 +334,7 @@ let eE = function (e) {
                                   background: (0, i.jsxs)("div", {
                                       className: r()(es.Tv, { [es.lJ]: z }),
                                       children: [
+                                          (0, i.jsx)(Z.Ae, {}),
                                           (0, i.jsx)("div", { className: r()(es.nz, { [es.ZZ]: z }) }),
                                           (0, i.jsx)(em, {
                                               onLoadComplete: W,
@@ -344,14 +345,14 @@ let eE = function (e) {
                               }),
                           header: (0, i.jsx)(y.S, {
                               selectedTabId: v,
-                              handleTransition: eA,
+                              handleTransition: eh,
                               tabs: D,
                               endContent: z
                                   ? (0, i.jsx)(P.SS, {
                                         analyticsPage: ei.liQ.GLOBAL_DISCOVERY_QUESTS,
                                         cardAlignment: P.cP.END,
                                         ctaText: er.intl.string(er.t["J+vlIR"]),
-                                        ctaOnClick: ed,
+                                        ctaOnClick: ec,
                                     })
                                   : null,
                               icon: A.r2v,
