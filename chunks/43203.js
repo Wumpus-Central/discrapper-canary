@@ -1,43 +1,39 @@
-n.d(t, { $: () => x, A: () => p });
+n.d(t, { $: () => h, A: () => x });
 var a = n(73153),
     i = n(846293),
-    s = n(394681),
-    l = n(976860),
-    r = n(961350),
-    o = n(954571),
-    d = n(723702),
-    c = n(837921),
-    u = n(636401),
-    m = n(613057),
-    h = n(652215);
-async function x(e, t) {
+    s = n(976860),
+    l = n(961350),
+    r = n(954571),
+    o = n(723702),
+    d = n(837921),
+    c = n(636401),
+    u = n(613057),
+    m = n(652215);
+async function h(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { invite: m } = await i.Ay.resolveInvite(e, t);
-    if (null == m) throw new u.A({ errorCode: h.Lw6.INVALID_INVITE }, `Invalid invite id: ${e}`);
-    if (null != n && "experiments" in n)
-        for (let e of n.experiments ?? [])
-            e === s.R.definition.id && null != m.guild && s.R.trackExposure({ guildId: m.guild.id, location: t });
+        { invite: u } = await i.Ay.resolveInvite(e, t);
+    if (null == u) throw new c.A({ errorCode: m.Lw6.INVALID_INVITE }, `Invalid invite id: ${e}`);
     return (
         n?.installationId != null &&
-            o.default.track(h.HAw.EXTERNAL_INSTALLATION_ID_RECEIVED, {
+            r.default.track(m.HAw.EXTERNAL_INSTALLATION_ID_RECEIVED, {
                 received_installation_id: n.installationId,
                 location: "openInviteFromRPC",
             }),
-        r.default.isAuthenticated()
-            ? a.h.dispatch({ type: "INVITE_MODAL_OPEN", invite: m, code: e, context: h.BRT.APP })
-            : (0, l.bG)(h.BVt.INVITE(e)),
-        d.isPlatformEmbedded && c.Ay.focus(),
-        { invite: m, code: e }
+        l.default.isAuthenticated()
+            ? a.h.dispatch({ type: "INVITE_MODAL_OPEN", invite: u, code: e, context: m.BRT.APP })
+            : (0, s.bG)(m.BVt.INVITE(e)),
+        o.isPlatformEmbedded && d.Ay.focus(),
+        { invite: u, code: e }
     );
 }
-let p = {
-    [h.e$_.OPEN_INVITE]: {
-        scope: m.hj,
+let x = {
+    [m.e$_.OPEN_INVITE]: {
+        scope: u.hj,
         async handler(e) {
             let {
                 args: { code: t },
             } = e;
-            await x(t, "RPC OPEN_INVITE Handler");
+            await h(t, "RPC OPEN_INVITE Handler");
         },
     },
 };
