@@ -18,8 +18,8 @@ var l = t(627968),
     I = t(160946),
     g = t(459793),
     b = t(608805),
-    f = t(589078),
-    y = t(981036),
+    y = t(589078),
+    f = t(981036),
     x = t(725836),
     M = t(584160),
     T = t(169797),
@@ -114,7 +114,7 @@ function ep(e) {
             transitionState: t,
             onClose: r,
             closeGuildPerksModal: d,
-            analyticsLocations: f,
+            analyticsLocations: y,
             analyticsLocation: ep,
             analyticsSourceLocation: ed,
             guildId: e_,
@@ -128,8 +128,8 @@ function ep(e) {
         {
             activeSubscription: eg,
             blockedPayments: eb,
-            startingFractionalPremiumEndsAtRef: ef,
-            invoicePreview: ey,
+            startingFractionalPremiumEndsAtRef: ey,
+            invoicePreview: ef,
             customCheckoutFlow: ex,
         } = (0, L.P5)(),
         eM = (0, o.bG)([H.A], () => H.A.hasFetchedSubscriptions()),
@@ -164,7 +164,7 @@ function ep(e) {
         ),
         eX = i.useMemo(() => (0, k.A)(), []),
         [eZ, e0] = (0, m.A)(() => [eX ?? (0, a.A)(), Date.now()]),
-        { analyticsLocations: e8 } = (0, P.Ay)(f, A.A.GUILD_BOOST_PURCHASE_MODAL),
+        { analyticsLocations: e8 } = (0, P.Ay)(y, A.A.GUILD_BOOST_PURCHASE_MODAL),
         e9 = i.useMemo(
             () =>
                 e$.find((e) => {
@@ -452,10 +452,9 @@ function ep(e) {
                             ni(j.h.PURCHASING),
                                 eO(!0),
                                 s()(null != ew, "Missing paymentSourceId"),
-                                s()(null != ey, "Missing invoicePreview");
-                            let n = { amount: ey.total, currency: ey.currency },
-                                t = a.currency ?? ey.currency,
-                                l = (0, K.U8)(eg, e$, t.toLowerCase(), a.paymentSourceId);
+                                s()(null != ef, "Missing invoicePreview");
+                            let n = { amount: ef.total, currency: ef.currency },
+                                t = (0, K.U8)(eg, e$, a.currency.toLowerCase(), a.paymentSourceId);
                             if (
                                 (z.default.track(en.HAw.PAYMENT_FLOW_COMPLETED, {
                                     ...e7,
@@ -468,24 +467,25 @@ function ep(e) {
                                 return;
                             if (null == eg || null == eh) {
                                 s()(null != e, "Missing paymentSource");
-                                let i = await (0, p.Ky)({
+                                let l = await (0, p.Ky)({
                                     items: e$,
                                     paymentSource: e,
-                                    currency: t,
+                                    currency: a.currency,
                                     expectedInvoicePrice: n,
-                                    expectedRenewalPrice: l,
+                                    expectedRenewalPrice: t,
                                 });
-                                if (i.redirectConfirmation) return void nP(null != i.redirectURL);
+                                if (l.redirectConfirmation) return void nP(null != l.redirectURL);
                             } else {
-                                let i = { items: (0, K.aE)(eg, e$) };
-                                (i.currency = eg.currency ?? t),
-                                    (i.paymentSource = null != eT ? ek[eT] : void 0),
-                                    null == i.paymentSource &&
+                                let l = { items: (0, K.aE)(eg, e$) };
+                                (l.currency = eg.currency),
+                                    null == l.currency && (l.currency = a.currency),
+                                    (l.paymentSource = null != eT ? ek[eT] : void 0),
+                                    null == l.paymentSource &&
                                         (s()(null != e, "Missing paymentSource"),
-                                        (i.paymentSource = e),
-                                        (i.currency = t));
-                                let r = await (0, p.nV)(eg, i, n, l, e8);
-                                if (r.redirectConfirmation) return void nP(null != r.redirectURL);
+                                        (l.paymentSource = e),
+                                        (l.currency = a.currency));
+                                let i = await (0, p.nV)(eg, l, n, t, e8);
+                                if (i.redirectConfirmation) return void nP(null != i.redirectURL);
                             }
                             null == eI && e3(R.pn.CONFIRM),
                                 ni(j.h.COMPLETED),
@@ -518,12 +518,12 @@ function ep(e) {
                               },
                         variant: "active",
                     }),
-                        (r = (0, l.jsx)(y.p, { ...m }));
+                        (r = (0, l.jsx)(f.p, { ...m }));
                     break;
                 case R.pn.CONFIRM:
                     let E = o?.name ?? eR?.name,
                         A = (0, D.g)(ek, ew),
-                        P = (0, Q.b2)(ef.current) && null != eh && !et.YV.has(eh.id);
+                        P = (0, Q.b2)(ey.current) && null != eh && !et.YV.has(eh.id);
                     e = (0, l.jsx)(X.W, {
                         guild: o,
                         guildBoostQuantity: eH + eL.length,
@@ -561,23 +561,23 @@ function ep(e) {
         }
     else n = (0, l.jsx)("div", { className: er._5, children: (0, l.jsx)(u.y$y, {}) });
     let nb = (0, M.u)({ skuId: e5, step: e1 }),
-        nf = null;
+        ny = null;
     return (
         eb ||
             (nd && e1 === R.pn.REVIEW
-                ? (nf = (0, l.jsx)(T.s3, { ...nb }))
+                ? (ny = (0, l.jsx)(T.s3, { ...nb }))
                 : e1 !== R.pn.PREMIUM_UPSELL &&
-                  (nf = (0, l.jsx)($.A, { onClose: na, currentStep: e1, purchaseState: nl }))),
+                  (ny = (0, l.jsx)($.A, { onClose: na, currentStep: e1, purchaseState: nl }))),
         nd
             ? (0, l.jsx)(x.e0, {
                   children: (0, l.jsxs)(T.Jg, {
                       transitionState: t,
                       size: "md",
                       onClose: () => (na(), Promise.resolve()),
-                      children: [nf, n],
+                      children: [ny, n],
                   }),
               })
-            : (0, l.jsxs)(u.dWK, { transitionState: t, onClose: () => (na(), Promise.resolve()), children: [nf, n] })
+            : (0, l.jsxs)(u.dWK, { transitionState: t, onClose: () => (na(), Promise.resolve()), children: [ny, n] })
     );
 }
 function ed(e) {
@@ -589,7 +589,7 @@ function ed(e) {
             activeSubscription: n,
             stepConfigs: [],
             skuIDs: [],
-            unifiedCheckoutFlow: f.CL.GUILD_BOOST_CHECKOUT,
+            unifiedCheckoutFlow: y.CL.GUILD_BOOST_CHECKOUT,
             children: (0, l.jsx)(ep, { ...e }),
         }),
     });

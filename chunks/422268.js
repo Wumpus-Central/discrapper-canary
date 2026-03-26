@@ -51,43 +51,41 @@ let m = (e) => {
                 e
             );
         }, [E, g, A, n, m]),
-        P = i.useMemo(() => (0, c.l6)(R, T?.checkoutContext?.available_plans), [R, T]),
-        k = i.useMemo(() => (y ? (0, r.jsx)(a.P, { planSkuId: N.skuId }) : null), [y, N.skuId]),
-        U = (0, c.J$)(R.paymentSourceId),
-        G = null,
-        F = null;
+        P = i.useMemo(() => (y ? (0, r.jsx)(a.P, { planSkuId: N.skuId }) : null), [y, N.skuId]),
+        k = (0, c.J$)(R.paymentSourceId),
+        U = null,
+        G = null;
     y
-        ? (F = (0, r.jsx)(l.XH, {
+        ? (G = (0, r.jsx)(l.XH, {
               disabled: t,
               headingSubText: I,
               planOptions: O,
               eligibleForMultiMonthPlans: !1,
               selectedPlanId: C,
               showPlanStatusSubText: !0,
-              priceOptions: P,
           }))
         : null != T &&
-          (G = (0, r.jsx)(u._, {
+          (U = (0, r.jsx)(u._, {
               type: f.N$.PREMIUM_SWITCH_PLAN,
               invoicePreview: T,
               subscriptionPlan: N,
-              isPrepaidPaymentSource: U,
+              isPrepaidPaymentSource: k,
               isPremiumGroupPurchase: E,
               bottomSubText: I,
           }));
-    let V = v ? S : (0, r.jsx)("div", { ref: b }),
-        B = v ? null : S;
+    let F = v ? S : (0, r.jsx)("div", { ref: b }),
+        V = v ? null : S;
     return (0, r.jsx)(s.rg, {
         shouldShowGlobalNotices: !0,
         upperInlineNoticeProps: x,
         paymentSelectContent: (0, r.jsxs)(r.Fragment, { children: [L, w] }),
-        subscriptionDetailsContent: V,
-        purchaseItemContent: G,
-        planSelectContent: F,
-        invoiceSummaryContent: B,
+        subscriptionDetailsContent: F,
+        purchaseItemContent: U,
+        planSelectContent: G,
+        invoiceSummaryContent: V,
         legalContent: M,
         invoiceTotalDueLabel: D ? p.intl.string(h.default.R0cZsM) : p.intl.string(h.default["11g67A"]),
         invoiceTotalDueValue: null != T ? (0, _.U5)(T) : void 0,
-        promotionalNoticeContent: k,
+        promotionalNoticeContent: P,
     });
 };

@@ -51,34 +51,38 @@ function E(e) {
             skuIDs: a,
             excludeSubscriptionPlansBySKU: o,
         } = e,
-        [u, c] = r.useReducer(
+        [c, d] = r.useReducer(
             (e, t) => ({ ...e, ...t }),
             null != i ? { paymentSourceId: i, currency: t, loaded: !1 } : { currency: t, loaded: !1 },
         ),
-        d = (0, l.Y)(a),
-        _ = JSON.stringify(a),
-        h = r.useRef(a);
+        _ = (0, l.Y)(a),
+        m = JSON.stringify(a),
+        E = r.useRef(a);
     r.useEffect(() => {
-        h.current = a;
+        E.current = a;
     }),
         r.useEffect(() => {
             (async () => {
-                let { current: e } = h;
+                let { current: e } = E;
                 try {
                     e.length > 0 && !o && (await p(i, e));
                 } catch (e) {
                     if (e.code !== f) throw e;
                 }
-                c({ paymentSourceId: i, currency: void 0, loaded: !0 });
+                let t = [];
+                null != n && null != u.A.get(n) && (t = h(n, i, s)),
+                    t.length > 0
+                        ? d({ paymentSourceId: i, currency: t[0], loaded: !0 })
+                        : d({ paymentSourceId: i, loaded: !1 });
             })();
-        }, [i, _, n, s, d, o]);
-    let m = u.paymentSourceId !== i || null == n || !d || !0 !== u.loaded;
+        }, [i, m, n, s, _, o]);
+    let g = c.paymentSourceId !== i || null == n || !_ || !0 !== c.loaded;
     return {
-        hasFetchedSubscriptionPlans: d,
-        priceOptions: u,
+        hasFetchedSubscriptionPlans: _,
+        priceOptions: c,
         setCurrency: (e) => {
-            c({ currency: e });
+            d({ currency: e });
         },
-        currencyLoading: m,
+        currencyLoading: g,
     };
 }

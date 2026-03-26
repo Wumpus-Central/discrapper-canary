@@ -18,30 +18,35 @@ function u(e) {
             selectedSkuId: b,
             setSelectedSkuId: A,
             setSelectedPlanId: j,
-            priceOptions: S,
-            setSubscriptionMetadataRequest: v,
-            displayCurrency: C,
+            priceOptions: v,
+            setSubscriptionMetadataRequest: S,
         } = (0, d.P5)(),
-        { isGift: _ } = (0, o.Pv)(),
-        [y, N] = l.useState(!x || !g || h);
+        { isGift: C } = (0, o.Pv)(),
+        [_, y] = l.useState(!x || !g || h);
     return (l.useEffect(() => {
-        N(!x || !g || h);
+        y(!x || !g || h);
     }, [h, g, x]),
     l.useEffect(() => {
-        null != u && v({ guild_id: u });
-    }, [u, v]),
+        null != u && S({ guild_id: u });
+    }, [u, S]),
     l.useEffect(() => {
         j(n);
         let e = null != n ? a.A.get(n) : null;
-        y ||
+        _ ||
             p ||
             (m((t) => {
-                let n = null != e ? (0, s.y8)(e.id, !1, _, { paymentSourceId: S.paymentSourceId }) : void 0;
-                return { ...t, subscription_plan_id: e?.id, price: n?.amount, regular_price: e?.price, currency: C };
+                let n = null != e ? (0, s.y8)(e.id, !1, C, v) : void 0;
+                return {
+                    ...t,
+                    subscription_plan_id: e?.id,
+                    price: n?.amount,
+                    regular_price: e?.price,
+                    currency: v.currency,
+                };
             }),
             null != e && (A(e?.skuId), f(t)));
-    }, [p, n, _, y, S, C, b, m, j, A, f, t]),
-    y)
+    }, [p, n, C, _, v, b, m, j, A, f, t]),
+    _)
         ? (0, i.jsx)(c.A, {})
         : p
           ? (0, i.jsx)(r.oO, {})
