@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => M }), n(321073);
+n.d(t, { A: () => x }), n(321073);
 var r = n(735438),
     i = n.n(r),
     s = n(311907),
@@ -112,10 +112,7 @@ class A {
             i = _.default.getCurrentUser(),
             s = r?.id === i?.id ? d.A.getStatus() : c.A.getStatus(e, this.guildId),
             a = null != r && null != t && p.$3({ permission: E.xBc.VIEW_CHANNEL, user: r, context: t }),
-            o =
-                s !== E.clD.OFFLINE && s !== E.clD.INVISIBLE && s !== E.clD.UNKNOWN
-                    ? (n?.hoistRoleId ?? "online")
-                    : "offline",
+            o = s !== E.clD.OFFLINE && s !== E.clD.INVISIBLE ? (n?.hoistRoleId ?? "online") : "offline",
             u = n?.nick ?? m.Ay.getName(r);
         return [o, u?.toLowerCase(), a];
     }
@@ -158,7 +155,7 @@ function C(e) {
     for (let n in g) g[n].updateUserId(e) && (t = !0);
     return t;
 }
-function b(e) {
+function R(e) {
     let { presences: t } = e,
         n = i()(t)
             .map((e) => e.user?.id)
@@ -169,7 +166,7 @@ function b(e) {
     for (let e in g) g[e].updateMultipleUserIds(n) && (r = !0);
     return r;
 }
-function R(e) {
+function O(e) {
     let { chunks: t } = e,
         n = !1;
     for (let { guildId: e, members: r } of t) {
@@ -178,7 +175,7 @@ function R(e) {
     }
     return n;
 }
-function O(e) {
+function b(e) {
     let { channel: t } = e;
     if (!(t.id in g) || t.threadMetadata?.archived !== !0) return !1;
     delete g[t.id];
@@ -201,7 +198,7 @@ function w(e) {
     for (let e in g) n.has(g[e].parentId) && (g[e].rebuild(), (r = !0));
     return r;
 }
-class x extends s.Ay.Store {
+class M extends s.Ay.Store {
     static displayName = "ThreadMemberListStore";
     initialize() {
         this.waitFor(o.A, l.Ay, u.A, c.A, d.A, _.default),
@@ -226,10 +223,10 @@ class x extends s.Ay.Store {
         return i?.canViewChannel ?? !1;
     }
 }
-let M = new x(a.h, {
+let x = new M(a.h, {
     CONNECTION_OPEN: I,
     THREAD_MEMBERS_UPDATE: T,
-    THREAD_UPDATE: O,
+    THREAD_UPDATE: b,
     THREAD_DELETE: D,
     CHANNEL_UPDATES: w,
     THREAD_MEMBER_LIST_UPDATE: S,
@@ -238,8 +235,8 @@ let M = new x(a.h, {
     GUILD_MEMBER_ADD: y,
     GUILD_MEMBER_UPDATE: y,
     GUILD_MEMBER_REMOVE: y,
-    PRESENCES_REPLACE: b,
-    GUILD_MEMBERS_CHUNK_BATCH: R,
+    PRESENCES_REPLACE: R,
+    GUILD_MEMBERS_CHUNK_BATCH: O,
     GUILD_ROLE_UPDATE: L,
     GUILD_ROLE_DELETE: L,
     PASSIVE_UPDATE_V2: N,
