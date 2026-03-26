@@ -2,8 +2,8 @@
 n.d(t, { A: () => T });
 var r = n(64700),
     i = n(284009),
-    a = n.n(i),
-    s = n(735438),
+    s = n.n(i),
+    a = n(735438),
     o = n(989349),
     l = n.n(o),
     u = n(311907),
@@ -14,24 +14,25 @@ var r = n(64700),
     p = n(469778),
     h = n(739508),
     m = n(927578),
-    g = n(652215),
-    E = n(788868);
+    E = n(652215),
+    g = n(788868);
 let A = (e) => {
     let {
             isFetching: t = !1,
             entitlements: n,
             unactivatedFractionalPremiumUnits: r,
             currentUser: i,
-            premiumSubscription: s,
+            premiumSubscription: a,
             fetchedAllEntitlements: o,
             excludeReverseTrialFromCountdown: u,
         } = e,
         c = {
             isFractionalPremiumActive: !1,
-            fractionalState: E.xc.NONE,
+            fractionalState: g.xc.NONE,
             startsAt: l()(0),
             endsAt: l()(0),
             currentEntitlementId: "",
+            currentEntitlementEndsAt: l()(0),
             unactivatedUnits: [],
             fetched: o,
         };
@@ -40,7 +41,7 @@ let A = (e) => {
     let d = n
         .filter((e) => null != e.endsAt && null != e.startsAt)
         .sort((e, t) =>
-            (a()(null != e.endsAt && null != t.endsAt, "endsAt should not be null"), e.endsAt < t.endsAt)
+            (s()(null != e.endsAt && null != t.endsAt, "endsAt should not be null"), e.endsAt < t.endsAt)
                 ? -1
                 : +(e.endsAt > t.endsAt),
         );
@@ -50,15 +51,16 @@ let A = (e) => {
         throw ((0, h.hD)(t, { extra: { entitlementIds: e } }), Error(t));
     }
     let _ = d[0] ?? null,
-        f = E.xc.NONE;
-    null != _ && (f = null != s && s.status === g.Dmq.PAUSED ? E.xc.FP_SUB_PAUSED : E.xc.FP_ONLY);
-    let p = u && _?.sourceType === g.GD.REVERSE_TRIAL;
+        f = g.xc.NONE;
+    null != _ && (f = null != a && a.status === E.Dmq.PAUSED ? g.xc.FP_SUB_PAUSED : g.xc.FP_ONLY);
+    let p = u && _?.sourceType === E.GD.REVERSE_TRIAL;
     return {
         isFractionalPremiumActive: null != _,
         fractionalState: f,
         startsAt: null != _ ? l()(_.startsAt) : l()(0),
         endsAt: null != _ ? l()((0, m._e)(_.endsAt, r, void 0, p)) : l()(0),
         currentEntitlementId: null != _ ? _.id : "",
+        currentEntitlementEndsAt: null != _ ? l()(_.endsAt) : l()(0),
         unactivatedUnits: r,
         fetched: o,
     };
@@ -75,14 +77,14 @@ function T() {
             ? arguments[0]
             : { forceFetch: !1, excludeReverseTrial: !1, excludeReverseTrialFromCountdown: !1 },
         i = (0, u.bG)([_.default], () => _.default.getCurrentUser()),
-        a = (0, u.yK)([p.A], () => p.A.getFractionalPremium({ excludeReverseTrial: t })),
+        s = (0, u.yK)([p.A], () => p.A.getFractionalPremium({ excludeReverseTrial: t })),
         o = (0, u.bG)([p.A], () => p.A.fetchedAllEntitlements),
         l = (0, u.yK)([p.A], () => p.A.getUnactivatedFractionalPremiumUnits()),
         h = (0, u.bG)([f.A], () => f.A.getPremiumTypeSubscription()),
-        [m, E] = r.useState(
+        [m, g] = r.useState(
             A({
                 isFetching: I(e, i) || p.A.fetchingAllEntitlements,
-                entitlements: a,
+                entitlements: s,
                 unactivatedFractionalPremiumUnits: l,
                 currentUser: i,
                 premiumSubscription: h,
@@ -92,19 +94,19 @@ function T() {
         );
     return (
         (0, d.Ay)(() => {
-            I(e, i) && (0, c.qw)({ entitlementType: g.zF_.FRACTIONAL_REDEMPTION });
+            I(e, i) && (0, c.qw)({ entitlementType: E.zF_.FRACTIONAL_REDEMPTION });
         }),
         r.useEffect(() => {
             let e = A({
-                entitlements: a,
+                entitlements: s,
                 unactivatedFractionalPremiumUnits: l,
                 currentUser: i,
                 premiumSubscription: h,
                 fetchedAllEntitlements: o,
                 excludeReverseTrialFromCountdown: n,
             });
-            E((t) => ((0, s.isEqual)(t, e) ? t : e));
-        }, [i, a, h, l, o, n]),
+            g((t) => ((0, a.isEqual)(t, e) ? t : e));
+        }, [i, s, h, l, o, n]),
         m
     );
 }

@@ -251,7 +251,7 @@ function V(e) {
         ? n
         : ((t = null != r ? r.subscriptionPeriodEnd : s ? i.subscriptionPeriodStart : i.subscriptionPeriodEnd),
             null != a && a.isFractionalPremiumActive)
-          ? (0, I._e)(t, a.unactivatedUnits, a.endsAt, !1)
+          ? (0, I._e)(t, a.unactivatedUnits, a.currentEntitlementEndsAt)
           : t;
 }
 function B(e) {

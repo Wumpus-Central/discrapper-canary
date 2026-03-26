@@ -729,6 +729,7 @@ function eS(e, t) {
                       startsAt: a()(0),
                       endsAt: a()(0),
                       currentEntitlementId: "",
+                      currentEntitlementEndsAt: a()(0),
                       unactivatedUnits: [],
                   },
         s = null !== n && e.status === D.Dmq.PAST_DUE ? n : t,
