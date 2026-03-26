@@ -639,16 +639,20 @@ function nu() {
                 }
             eF.warn(`Watchdog timeout, report submission status: ${e ?? 200}`);
             let t = en.A.getConfig({ location: "watchdog_timeout" }).enabled && null != R.A.processUtils.setCrashReason;
-            eE.default.track(
-                ew.HAw.VOICE_WATCHDOG_TIMEOUT,
-                { minidump_submission_error: e, will_restart: t },
-                { flush: !0 },
-            ),
-                t &&
-                    (eF.info("Relaunching app due to voice watchdog timeout"),
-                    await R.A.processUtils.setCrashReason("voice-watchdog-timeout"),
-                    v.w.set("discord_watchdog_restart_timestamp", Date.now().toString()),
-                    R.A.app.relaunch());
+            try {
+                await eE.default.track(
+                    ew.HAw.VOICE_WATCHDOG_TIMEOUT,
+                    { minidump_submission_error: e, will_restart: t },
+                    { flush: !0 },
+                );
+            } catch (e) {
+                eF.error("Failed to flush voice watchdog timeout analytics event", e);
+            }
+            t &&
+                (eF.info("Relaunching app due to voice watchdog timeout"),
+                await R.A.processUtils.setCrashReason("voice-watchdog-timeout"),
+                v.w.set("discord_watchdog_restart_timestamp", Date.now().toString()),
+                R.A.app.relaunch());
         }),
         e9.on(y.bg.VideoInputInitialized, (e) => {
             eE.default.track(ew.HAw.VIDEO_INPUT_INITIALIZED, {

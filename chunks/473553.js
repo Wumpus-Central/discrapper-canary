@@ -3,8 +3,8 @@ n.d(t, { A: () => L });
 var i = n(627968),
     s = n(64700),
     l = n(158954),
-    a = n(311907),
-    r = n(554146),
+    r = n(311907),
+    a = n(554146),
     o = n(397927),
     c = n(932001),
     d = n(625180),
@@ -17,8 +17,8 @@ var i = n(627968),
     g = n(714510),
     f = n(890687),
     x = n(590202),
-    C = n(639214),
-    E = n(801320),
+    E = n(639214),
+    C = n(801320),
     I = n(898375),
     N = n(713081),
     b = n(73473),
@@ -27,21 +27,21 @@ var i = n(627968),
     v = n(49999),
     y = n(165610),
     j = n(985018),
-    R = n(453561);
+    R = n(528622);
 function O(e) {
     let { quest: t, applicationId: n } = e,
-        a = (0, f.fc)(t),
+        r = (0, f.fc)(t),
         u = (0, g.mU)({
             quest: t,
-            taskDetails: a,
+            taskDetails: r,
             location: T.rE.QUEST_ACTIVITY_HEADER,
             questContent: m.uF.QUEST_ACTIVITY_HEADER,
             sourceQuestContent: m.uF.RUNNING_ACTIVITY,
         }),
         [A, _] = s.useState(!1),
         p = s.useRef(null),
-        C = s.useRef(null),
-        [b, O] = (0, c.kn)([r.M.QUEST_ACTIVITY_HEADER_INTRO], void 0, !0),
+        E = s.useRef(null),
+        [b, O] = (0, c.kn)([a.M.QUEST_ACTIVITY_HEADER_INTRO], void 0, !0),
         { completedRatio: L, completedRatioDisplay: M, percentComplete: D } = (0, f.O9)(t, !0),
         G = s.useCallback(() => {
             d.A.updateFrameLayoutMode({ applicationId: n, layoutMode: y.y.PIP });
@@ -79,7 +79,7 @@ function O(e) {
                                 }),
                             }),
                             (0, i.jsx)(o.YNO, {
-                                targetElementRef: C,
+                                targetElementRef: E,
                                 renderPopout: (e) => {
                                     let { closePopout: n } = e;
                                     return (0, i.jsx)(I.A, {
@@ -100,7 +100,7 @@ function O(e) {
                                         }),
                                         variant: "secondary",
                                         size: "sm",
-                                        buttonRef: C,
+                                        buttonRef: E,
                                         ...e,
                                     }),
                             }),
@@ -155,7 +155,8 @@ function O(e) {
                 ],
             }),
             null != b &&
-                (0, i.jsx)(E.A, {
+                U &&
+                (0, i.jsx)(C.A, {
                     onDismiss: () => O(v.i.USER_DISMISS),
                     onCTAClick: () => O(v.i.TAKE_ACTION),
                     targetElementRef: p,
@@ -165,27 +166,27 @@ function O(e) {
 }
 function L(e) {
     let { applicationId: t } = e,
-        r = (0, a.bG)([A.A], () => A.A.quests),
-        c = (0, a.bG)([u.A], () => u.A.theme),
-        d = s.useMemo(() => (0, C.jm)(r, t, !0)[0], [r, t]),
-        { enabled: h } = p.Ym.useConfig({ location: T.rE.QUEST_ACTIVITY_HEADER }),
-        g = (0, a.bG)([_.A], () => _.A.getState().autoEnroll),
-        f = d?.id,
-        x = (0, a.bG)([_.A], () => _.A.isDismissed(f), [f]);
+        a = (0, r.bG)([A.A], () => A.A.quests),
+        c = (0, r.bG)([u.A], () => u.A.theme),
+        d = s.useMemo(() => (0, E.jm)(a, t, !0)[0], [a, t]),
+        { enabled: h, showSkipButton: g } = p.Ym.useConfig({ location: T.rE.QUEST_ACTIVITY_HEADER }),
+        f = (0, r.bG)([_.A], () => _.A.getState().autoEnroll),
+        x = d?.id,
+        C = (0, r.bG)([_.A], () => _.A.isDismissed(x), [x]);
     return (s.useEffect(() => {
         !h ||
             null == d ||
             d.userStatus?.enrolledAt != null ||
-            g ||
-            x ||
+            f ||
+            C ||
             (0, o.mMO)(
                 async () => {
                     let { default: e } = await n.e("85986").then(n.bind(n, 113273));
-                    return (t) => (0, i.jsx)(e, { ...t, quest: d });
+                    return (t) => (0, i.jsx)(e, { ...t, quest: d, showSkipButton: g });
                 },
                 { modalKey: "quest-activity-unenrolled-modal" },
             );
-    }, [h, d, g, x]),
+    }, [h, d, f, C, g]),
     null != d && h)
         ? (0, i.jsx)(l.NPJ, {
               theme: c,

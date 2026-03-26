@@ -43,8 +43,8 @@ let i = (0, r.mj)({
     l = (0, r.mj)({
         name: "2026-03-desktop-activity-quest-header",
         kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 1: { enabled: !0 } },
+        defaultConfig: { enabled: !1, showSkipButton: !1 },
+        variations: { 1: { enabled: !0, showSkipButton: !0 }, 2: { enabled: !0, showSkipButton: !1 } },
     }),
     u = (0, r.mj)({
         name: "2026-02-app-store-bottom-sheet-overlay",
