@@ -1,22 +1,18 @@
 "use strict";
 n.d(t, {
-    Cv: () => N,
-    OY: () => O,
-    Q6: () => b,
-    Ri: () => A,
-    Ye: () => D,
-    bF: () => T,
-    fq: () => C,
-    jd: () => I,
-    jz: () => y,
-    mC: () => E,
-    p3: () => m,
-    pV: () => h,
-    sq: () => v,
-    wH: () => L,
-    xf: () => R,
-    y8: () => g,
-    zf: () => S,
+    Cv: () => A,
+    OY: () => S,
+    Q6: () => y,
+    Ye: () => v,
+    bF: () => h,
+    fq: () => I,
+    jd: () => p,
+    jz: () => E,
+    pV: () => f,
+    sq: () => g,
+    wH: () => N,
+    xf: () => T,
+    zf: () => m,
 }),
     n(321073);
 var r = n(735438),
@@ -24,36 +20,13 @@ var r = n(735438),
     s = n(310209),
     a = n(611010),
     o = n(71393),
-    l = n(580630),
-    u = n(371794),
-    c = n(998218),
-    d = n(832163),
-    _ = n(188275),
-    f = n(652215),
-    p = n(818348);
-let h = u.QB ? "webp" : "jpg";
-function m(e, t) {
-    let n = g(e, t) ?? { amount: 0, currency: p.Yr.USD };
-    return (0, l.$g)(n.amount, n.currency);
-}
-function E(e) {
-    return null != e.price || null != e.prices[f.lid.DEFAULT];
-}
-function g(e, t) {
-    return null != e.prices[t] && e.prices[t].countryPrices.prices.length > 0
-        ? e.prices[t].countryPrices.prices[0]
-        : null != e.prices[f.lid.DEFAULT] && e.prices[f.lid.DEFAULT].countryPrices.prices.length > 0
-          ? e.prices[f.lid.DEFAULT].countryPrices.prices[0]
-          : null != e.price
-            ? e.price
-            : null;
-}
-function A(e) {
-    let t = g(e, f.lid.DEFAULT) ?? { amount: 0, currency: p.Yr.USD },
-        n = g(e, f.lid.GIFT) ?? { amount: 0, currency: p.Yr.USD };
-    return t.currency !== n.currency || t.amount !== n.amount;
-}
-function I(e) {
+    l = n(371794),
+    u = n(998218),
+    c = n(832163),
+    d = n(188275),
+    _ = n(652215);
+let f = l.QB ? "webp" : "jpg";
+function p(e) {
     let t = new Set(),
         n = [];
     for (let r of e.pages) {
@@ -62,17 +35,17 @@ function I(e) {
     }
     return n;
 }
-function T(e) {
-    return null != e && e.productLine === f.EZt.SOCIAL_LAYER_GAME_ITEM;
+function h(e) {
+    return null != e && e.productLine === _.EZt.SOCIAL_LAYER_GAME_ITEM;
 }
-function S() {
-    let e = o.A.getGuild(_.v8);
-    return null != e && e.features.has(f.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ? e.id : _.Kf;
+function m() {
+    let e = o.A.getGuild(d.v8);
+    return null != e && e.features.has(_.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ? e.id : d.Kf;
 }
-function y(e) {
-    return !!d.A.getStorefrontGuildIds().has(e.id) || (e.features?.has(f.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ?? !1);
+function E(e) {
+    return !!c.A.getStorefrontGuildIds().has(e.id) || (e.features?.has(_.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ?? !1);
 }
-function v(e) {
+function g(e) {
     return {
         applicationId: e.application_id,
         title: e.title,
@@ -95,7 +68,7 @@ function v(e) {
         application: null != e.application ? a.Ay.createFromServer(e.application) : void 0,
     };
 }
-function N(e, t) {
+function A(e, t) {
     if (
         null == t ||
         e?.tenantMetadata?.socialLayer?.carouselItems == null ||
@@ -106,34 +79,34 @@ function N(e, t) {
     return null == n.labelIconAssetId
         ? { primaryIconAsset: void 0, primaryIconLabel: void 0 }
         : {
-              primaryIconAsset: c.A.toURLSafe((0, u.YE)(t, n.labelIconAssetId, 512, "webp")) ?? void 0,
+              primaryIconAsset: u.A.toURLSafe((0, l.YE)(t, n.labelIconAssetId, 512, "webp")) ?? void 0,
               primaryIconLabel: n.label,
           };
 }
-function C(e) {
+function I(e) {
     let t = e?.applicationId,
         n = e?.tenantMetadata?.socialLayer?.cardImageAssetId ?? e?.thumbnailAssetId;
-    if (null != n && null != t) return c.A.toURLSafe((0, u.YE)(t, n, 512, "webp"));
+    if (null != n && null != t) return u.A.toURLSafe((0, l.YE)(t, n, 512, "webp"));
 }
-function R(e) {
+function T(e) {
     if (e?.tenantMetadata?.socialLayer?.cardBackgroundImageAssetId != null && e?.applicationId != null)
-        return c.A.toURLSafe(
-            (0, u.YE)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, 1024, h),
+        return u.A.toURLSafe(
+            (0, l.YE)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, 1024, f),
         );
 }
-function O(e, t) {
-    return `${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}${f.BVt.GAME_SHOP(e, t.id, t.slug)}`;
+function S(e, t) {
+    return `${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}${_.BVt.GAME_SHOP(e, t.id, t.slug)}`;
 }
-function b(e, t) {
-    return `${O(e, t)}
+function y(e, t) {
+    return `${S(e, t)}
 
 `;
 }
-function D(e) {
+function v(e) {
     let t = o.A.getGuild(e);
-    return null != t && y(t);
+    return null != t && E(t);
 }
-function L(e, t, n) {
+function N(e, t, n) {
     return 0 === e.length
         ? { hasWishlist: !1, hasPopular: !1 }
         : {

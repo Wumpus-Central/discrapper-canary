@@ -13,13 +13,13 @@ var r = n(627968),
     f = n(798048),
     p = n(111085),
     h = n(594832),
-    m = n(871123),
+    m = n(580630),
     E = n(44724),
     g = n(317560),
     A = n(533406),
     I = n(366523),
-    T = n(652215),
-    S = n(788868),
+    T = n(788868),
+    S = n(818348),
     y = n(985018),
     v = n(474259);
 let N = 20;
@@ -36,7 +36,7 @@ function C(e) {
             analyticsLocations: L,
             ...w
         } = e,
-        { item: M, isOwner: x, giftingOrigin: P = S.vQ.USER_PROFILE_WISHLIST } = w,
+        { item: M, isOwner: x, giftingOrigin: P = T.vQ.USER_PROFILE_WISHLIST } = w,
         k = M.sku,
         U = k.applicationId,
         G = (0, d.h)(U),
@@ -52,7 +52,9 @@ function C(e) {
             () =>
                 x || B
                     ? {
-                          buttonCTALabel: C ? (0, m.p3)(k, T.lid.DEFAULT) : y.intl.string(y.t.FdGl5A),
+                          buttonCTALabel: C
+                              ? (0, m.$g)(k.price?.amount ?? 0, k.price?.currency ?? S.Yr.USD)
+                              : y.intl.string(y.t.FdGl5A),
                           buttonIcon: void 0,
                           handleCardClick: () => {
                               G?.guildId != null &&
@@ -69,7 +71,9 @@ function C(e) {
                           },
                       }
                     : {
-                          buttonCTALabel: C ? (0, m.p3)(k, T.lid.GIFT) : y.intl.string(y.t.ilhtIa),
+                          buttonCTALabel: C
+                              ? (0, m.$g)(k.price?.amount ?? 0, k.price?.currency ?? S.Yr.USD)
+                              : y.intl.string(y.t.ilhtIa),
                           buttonIcon: s ? void 0 : l.okO,
                           handleCardClick: () => {
                               D?.(),
