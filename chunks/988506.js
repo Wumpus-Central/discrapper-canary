@@ -71,6 +71,7 @@ var r = n(852015),
             (e[(e.PERSONA = 2)] = "PERSONA"),
             (e[(e.INCODE = 3)] = "INCODE"),
             (e[(e.DISCORD = 4)] = "DISCORD"),
+            (e[(e.GOOGLE_WALLET = 5)] = "GOOGLE_WALLET"),
             e
         );
     })({}),
