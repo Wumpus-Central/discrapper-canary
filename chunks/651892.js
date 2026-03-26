@@ -44,12 +44,12 @@ function d(e) {
         cosponsorName: a,
     } = e;
     if (t) {
+        if (n) return u.intl.string(u.t.nPg6f1);
         let e =
-                null == a
-                    ? u.intl.formatToPlainString(u.t.Piihy1, { gamePublisher: i })
-                    : u.intl.formatToPlainString(u.t.DV47Gy, { gamePublisher: i, cosponsorName: a }),
-            t = n ? u.intl.string(u.t.nPg6f1) : u.intl.string(u.t.fEbrT8);
-        return `${e} ${t}`;
+            null == a
+                ? u.intl.formatToPlainString(u.t.Piihy1, { gamePublisher: i })
+                : u.intl.formatToPlainString(u.t.DV47Gy, { gamePublisher: i, cosponsorName: a });
+        return `${e} ${u.intl.string(u.t.fEbrT8)}`;
     }
     return r
         ? u.intl.formatToPlainString(u.t.zDHY3s, { gamePublisher: i })

@@ -10,7 +10,7 @@ function a(e) {
 }
 let o = function (e) {
     let { label: t, currencies: n, onChange: a, selectedCurrency: o, disabled: l = !1 } = e;
-    if (n.length < 2) return null;
+    if (n.length < 2 || null == o) return null;
     let u = n.map((e, t) => ({ id: t.toString(), value: e, label: `${e.toUpperCase()} - ${(0, s.Q)(e)}` })),
         c = (e) => {
             null != e && a(e);

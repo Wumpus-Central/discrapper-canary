@@ -32,6 +32,7 @@ let A = (e) => {
             startsAt: l()(0),
             endsAt: l()(0),
             currentEntitlementId: "",
+            currentEntitlementEndsAt: l()(0),
             unactivatedUnits: [],
             fetched: o,
         };
@@ -59,6 +60,7 @@ let A = (e) => {
         startsAt: null != _ ? l()(_.startsAt) : l()(0),
         endsAt: null != _ ? l()((0, m._e)(_.endsAt, r, void 0, p)) : l()(0),
         currentEntitlementId: null != _ ? _.id : "",
+        currentEntitlementEndsAt: null != _ ? l()(_.endsAt) : l()(0),
         unactivatedUnits: r,
         fetched: o,
     };
