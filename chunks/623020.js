@@ -10,7 +10,7 @@ var r = n(627968),
     c = n(666468),
     d = n(810498),
     _ = n(367921),
-    f = n(494230),
+    f = n(271849),
     p = n(369280),
     h = n(45938),
     m = n(927578),
@@ -250,7 +250,7 @@ function F(e) {
         eV = (0, d.px)(q, ef, em),
         eB = i.useCallback(
             () =>
-                eU
+                (X(void 0), eU)
                     ? void n(A.pn.SKU_SELECT)
                     : ec
                       ? void n(A.pn.ADD_PAYMENT_STEPS)
@@ -259,7 +259,7 @@ function F(e) {
                         : eG
                           ? n(A.pn.GIFT_CUSTOMIZATION)
                           : n(A.pn.PLAN_SELECT),
-            [n, eU, eG, eV, ec],
+            [X, n, eU, eG, eV, ec],
         ),
         eH = () => {
             n(A.pn.ADD_PAYMENT_STEPS);

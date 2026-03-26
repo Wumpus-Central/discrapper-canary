@@ -48,7 +48,7 @@ var r = n(627968),
 n(601107);
 var G = n(818348),
     F = n(985018),
-    V = n(329221);
+    V = n(239746);
 function B(e, t) {
     let { isEligibleForBOGOPromotion: n } = t;
     return null != e && !n;
@@ -162,7 +162,7 @@ let j = () => {
         a()(null != Z, "Price option has to be set");
         let X = D?.discount?.plan_ids,
             Q = null != D && r.some((e) => X?.includes(e)) && null != D.discount,
-            J = (0, T.y8)(k.gD.PREMIUM_MONTH_TIER_2, !1, L, Z);
+            J = r.includes(k.gD.PREMIUM_MONTH_TIER_2) ? (0, T.y8)(k.gD.PREMIUM_MONTH_TIER_2, !1, L, Z) : void 0;
         i.useEffect(() => {
             s && y.Ay.trackExposure({ location: "5f89bb_1" });
         }, [s]);

@@ -29,14 +29,14 @@ async function m(e) {
         subscriptionPlan: v,
         planGroup: N,
         trialId: C,
-        priceOptions: b,
-        paymentSource: R,
-        isPrepaidPaymentPastDue: O,
+        priceOptions: R,
+        paymentSource: O,
+        isPrepaidPaymentPastDue: b,
         openInvoiceId: D,
         premiumSubscription: L,
         onNext: w,
-        metadata: x,
-        sku: M,
+        metadata: M,
+        sku: x,
         skuPricePreview: P,
         purchaseType: k,
         referralCode: U,
@@ -61,13 +61,13 @@ async function m(e) {
         )
             return;
         if (k === p.VVm.ONE_TIME)
-            i()(null != M, "SKU must exist and be fetched."),
+            i()(null != x, "SKU must exist and be fetched."),
                 i()(null != P, "SKUPricePreview must exist."),
-                (e = await (0, u.XU)(M.applicationId, M.id, {
+                (e = await (0, u.XU)(x.applicationId, x.id, {
                     expectedAmount: P.amount,
                     expectedCurrency: P.currency,
                     isGift: A,
-                    paymentSource: R,
+                    paymentSource: O,
                     loadId: G,
                     giftInfoOptions: F,
                     orderId: B,
@@ -75,10 +75,12 @@ async function m(e) {
         else {
             i()(null != v, "Missing subscriptionPlan"), i()(null != V, "Missing invoicePreview");
             let t = { amount: V.total, currency: V.currency },
-                n = (0, _.$Q)((0, _.y8)(v.id, !1, !1, b));
+                n = (0, _.l6)(R, V.checkoutContext?.available_plans),
+                r = (0, _.$Q)((0, _.y8)(v.id, !1, !1, n));
             if (null != L) {
-                let e = (0, _.Pg)(L, v.id, 1, new Set(N));
-                (e = (0, _.qn)(e)), (n = (0, _.UC)(e, b.currency.toLowerCase(), b.paymentSourceId));
+                let e = R.currency ?? V.currency,
+                    t = (0, _.Pg)(L, v.id, 1, new Set(N));
+                (t = (0, _.qn)(t)), (r = (0, _.UC)(t, e.toLowerCase(), R.paymentSourceId));
             }
             if (A) {
                 let t = V.total,
@@ -86,34 +88,35 @@ async function m(e) {
                 e = await (0, u.XU)(h.tv, v.skuId, {
                     expectedAmount: t,
                     expectedCurrency: n,
-                    paymentSource: R,
+                    paymentSource: O,
                     subscriptionPlanId: v.id,
                     isGift: !0,
                     loadId: G,
                     giftInfoOptions: F,
                     orderId: B,
                 });
-            } else if (O && null != D && null != R && null != L)
-                e = p.AD1.has(R.type)
-                    ? await (0, a.LD)(L, D, R, b.currency, G)
-                    : await (0, a.nV)(L, { paymentSource: R, currency: b.currency }, t, n, S, T, G);
-            else if (null != L) {
-                let r = (0, _.Pg)(L, v.id, 1, new Set(N)),
-                    i = { paymentSource: R, currency: b.currency };
+            } else if (b && null != D && null != O && null != L) {
+                let n = R.currency ?? V.currency;
+                e = p.AD1.has(O.type)
+                    ? await (0, a.LD)(L, D, O, n, G)
+                    : await (0, a.nV)(L, { paymentSource: O, currency: n }, t, r, S, T, G);
+            } else if (null != L) {
+                let n = (0, _.Pg)(L, v.id, 1, new Set(N)),
+                    i = { paymentSource: O, currency: R.currency ?? V.currency };
                 L.status === p.Dmq.PAUSED && (i.status = p.Dmq.ACTIVE),
-                    L.isPausedAllowsResumeButNotUpdates || (i.items = r),
-                    (e = await (0, a.nV)(L, i, t, n, S, T, G));
+                    L.isPausedAllowsResumeButNotUpdates || (i.items = n),
+                    (e = await (0, a.nV)(L, i, t, r, S, T, G));
             } else
                 e = await (0, l.B1)({
                     planId: v.id,
-                    currency: b.currency,
-                    paymentSource: R,
+                    currency: R.currency ?? V.currency,
+                    paymentSource: O,
                     trialId: C,
-                    metadata: x,
+                    metadata: M,
                     referralCode: U,
                     loadId: G,
                     expectedInvoicePrice: t,
-                    expectedRenewalPrice: n,
+                    expectedRenewalPrice: r,
                 });
         }
         if (e.redirectConfirmation) return void g(null != e.redirectURL);
@@ -133,8 +136,8 @@ async function m(e) {
             d.default.track(p.HAw.PAYMENT_FLOW_FAILED, {
                 ...I,
                 payment_error_code: e?.code,
-                payment_source_id: R?.id,
-                payment_source_type: R?.type,
+                payment_source_id: O?.id,
+                payment_source_type: O?.type,
                 duration_ms: Date.now() - y,
             });
     } finally {
