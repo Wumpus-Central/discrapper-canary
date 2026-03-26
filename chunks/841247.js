@@ -147,9 +147,7 @@ function G(e) {
     }, [s, Y]);
     let { planSwitchNoticeCopy: W, overrideRenewalDate: K } = i.useMemo(() => {
         let e;
-        return (null !== u &&
-            null !== V &&
-            (e = (0, A._e)(V.subscriptionPeriodEnd, u.unactivatedUnits, u.currentEntitlementEndsAt)),
+        return (null !== u && null !== V && (e = (0, A._e)(V.subscriptionPeriodEnd, u.unactivatedUnits, u.endsAt)),
         null != V && null != H)
             ? {
                   overrideRenewalDate: e,

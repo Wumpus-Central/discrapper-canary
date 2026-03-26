@@ -162,7 +162,7 @@ let j = () => {
         a()(null != Z, "Price option has to be set");
         let X = D?.discount?.plan_ids,
             Q = null != D && r.some((e) => X?.includes(e)) && null != D.discount,
-            J = r.includes(k.gD.PREMIUM_MONTH_TIER_2) ? (0, T.y8)(k.gD.PREMIUM_MONTH_TIER_2, !1, L, Z) : void 0;
+            J = (0, T.y8)(k.gD.PREMIUM_MONTH_TIER_2, !1, L, Z);
         i.useEffect(() => {
             s && y.Ay.trackExposure({ location: "5f89bb_1" });
         }, [s]);

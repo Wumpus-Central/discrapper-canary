@@ -250,7 +250,7 @@ function F(e) {
         eV = (0, d.px)(q, ef, em),
         eB = i.useCallback(
             () =>
-                (X(void 0), eU)
+                eU
                     ? void n(A.pn.SKU_SELECT)
                     : ec
                       ? void n(A.pn.ADD_PAYMENT_STEPS)
@@ -259,7 +259,7 @@ function F(e) {
                         : eG
                           ? n(A.pn.GIFT_CUSTOMIZATION)
                           : n(A.pn.PLAN_SELECT),
-            [X, n, eU, eG, eV, ec],
+            [n, eU, eG, eV, ec],
         ),
         eH = () => {
             n(A.pn.ADD_PAYMENT_STEPS);
