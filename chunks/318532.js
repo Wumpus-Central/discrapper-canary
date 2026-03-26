@@ -1,77 +1,74 @@
-s.d(t, { default: () => S });
-var n = s(627968),
-    i = s(64700),
-    l = s(503698),
-    r = s.n(l),
-    a = s(311907),
-    c = s(990078),
-    o = s(732955),
-    d = s(397927),
-    u = s(855057),
-    x = s(45837),
-    g = s(888697),
-    f = s(94113),
+s.d(t, { default: () => I });
+var l = s(627968),
+    n = s(64700),
+    r = s(311907),
+    i = s(732955),
+    a = s(397927),
+    c = s(743674),
+    o = s(855057),
+    u = s(45837),
+    d = s(888697),
+    x = s(94113),
     m = s(493819),
-    p = s(131955),
-    j = s(148690),
-    h = s(985018),
-    b = s(679426);
-let _ = [
+    g = s(425897),
+    h = s(131955),
+    f = s(148690),
+    _ = s(985018),
+    p = s(233807);
+let b = [
     { gif: s(203736), png: s(775788) },
     { gif: s(640237), png: s(689006) },
     { gif: s(964805), png: s(533798) },
     { gif: s(322821), png: s(891814) },
 ];
-function C(e) {
+function j(e) {
     let { shouldAnimate: t } = e;
-    return (0, n.jsx)("div", {
-        className: b.p8,
-        children: _.map((e) =>
-            (0, n.jsx)("div", { className: b.Nw, style: { backgroundImage: `url(${t ? e.gif : e.png})` } }, e.gif),
+    return (0, l.jsx)("div", {
+        className: p.p8,
+        children: b.map((e) =>
+            (0, l.jsx)("div", { className: p.Nw, style: { backgroundImage: `url(${t ? e.gif : e.png})` } }, e.gif),
         ),
     });
 }
-function N(e) {
-    let { onOpenGIFPicker: t } = e,
-        { shouldAnimate: s, onMouseEnter: i, onMouseLeave: l } = (0, x.A)();
-    return (0, n.jsxs)("ul", {
-        className: b.f9,
+function C(e) {
+    let { onOpenGIFPicker: t, onOpenRecentUploads: s } = e,
+        { shouldAnimate: n, onMouseEnter: r, onMouseLeave: i } = (0, u.A)();
+    return (0, l.jsxs)("ul", {
+        className: p.f9,
         children: [
-            (0, n.jsx)("li", {
-                children: (0, n.jsx)(c.m, {
-                    text: h.intl.string(j.default.BIdpHb),
-                    children: (0, n.jsx)("div", {
-                        className: r()(b.uK, b.IZ),
-                        children: (0, n.jsxs)("div", {
-                            className: b.Mn,
-                            children: [
-                                (0, n.jsx)(d.XGR, { size: "md", color: "currentColor" }),
-                                (0, n.jsx)(d.Text, {
-                                    variant: "text-sm/semibold",
-                                    color: "currentColor",
-                                    children: h.intl.string(j.default.bjP2Do),
-                                }),
-                            ],
-                        }),
+            (0, l.jsx)("li", {
+                children: (0, l.jsx)(a.DUT, {
+                    className: p.uK,
+                    onClick: s,
+                    children: (0, l.jsxs)("div", {
+                        className: p.Mn,
+                        children: [
+                            (0, l.jsx)(a.XGR, { size: "md", color: "currentColor" }),
+                            (0, l.jsx)(a.Text, {
+                                variant: "text-sm/semibold",
+                                color: "currentColor",
+                                children: _.intl.string(f.default.zetfRy),
+                            }),
+                        ],
                     }),
                 }),
             }),
-            (0, n.jsx)("li", {
-                children: (0, n.jsxs)(d.DUT, {
-                    className: b.uK,
+            (0, l.jsx)("li", {
+                children: (0, l.jsxs)(a.DUT, {
+                    className: p.uK,
                     onClick: t,
-                    onMouseEnter: i,
-                    onMouseLeave: l,
+                    onMouseEnter: r,
+                    onMouseLeave: i,
                     children: [
-                        (0, n.jsx)(C, { shouldAnimate: s }),
-                        (0, n.jsxs)("div", {
-                            className: b.Mn,
+                        (0, l.jsx)(j, { shouldAnimate: n }),
+                        (0, l.jsxs)("div", {
+                            className: p.Mn,
                             children: [
-                                (0, n.jsx)(d.Osp, { size: "md", color: "currentColor" }),
-                                (0, n.jsx)(d.Text, {
+                                (0, l.jsx)(a.Osp, { size: "md", color: "currentColor" }),
+                                (0, l.jsx)(a.Text, {
                                     variant: "text-sm/semibold",
                                     color: "currentColor",
-                                    children: h.intl.string(j.default.HkszWk),
+                                    children: _.intl.string(f.default.HkszWk),
                                 }),
                             ],
                         }),
@@ -81,26 +78,26 @@ function N(e) {
         ],
     });
 }
-function I(e) {
+function N(e) {
     let { onSelect: t } = e;
-    return (0, n.jsxs)("div", {
+    return (0, l.jsxs)("div", {
         children: [
-            (0, n.jsx)(d.Text, { variant: "text-sm/semibold", children: h.intl.string(j.default.SQb1dl) }),
-            (0, n.jsx)(d.Text, {
+            (0, l.jsx)(a.Text, { variant: "text-sm/semibold", children: _.intl.string(f.default.SQb1dl) }),
+            (0, l.jsx)(a.Text, {
                 variant: "text-xs/normal",
                 color: "text-muted",
-                className: b.u2,
-                children: h.intl.string(j.default["2THN2i"]),
+                className: p.u2,
+                children: _.intl.string(f.default["2THN2i"]),
             }),
-            (0, n.jsx)("div", {
-                className: b.si,
-                children: p.Kg.map((e, s) => {
-                    let { gif: i, png: l } = e;
-                    return (0, n.jsx)(
-                        d.DUT,
+            (0, l.jsx)("div", {
+                className: p.si,
+                children: h.Kg.map((e, s) => {
+                    let { gif: n, png: r } = e;
+                    return (0, l.jsx)(
+                        a.DUT,
                         {
-                            onClick: () => t(i),
-                            children: (0, n.jsx)(m.A, { src: i, staticSrc: l, autoPlayOnMount: !0, className: b.yh }),
+                            onClick: () => t(n),
+                            children: (0, l.jsx)(m.A, { src: n, staticSrc: r, autoPlayOnMount: !0, className: p.yh }),
                         },
                         s,
                     );
@@ -109,73 +106,91 @@ function I(e) {
         ],
     });
 }
-function v(e) {
-    let { recentUrls: t, onSelect: s } = e;
-    return (0, n.jsxs)("div", {
-        children: [
-            (0, n.jsx)(d.Text, { variant: "text-sm/semibold", children: h.intl.string(j.default.dDID2M) }),
-            (0, n.jsx)(d.Text, {
-                variant: "text-xs/normal",
-                color: "text-muted",
-                className: b.u2,
-                children: h.intl.string(j.default["9Xxm0y"]),
-            }),
-            (0, n.jsx)("div", {
-                className: b.si,
-                children: t.map((e) =>
-                    (0, n.jsx)(
-                        d.DUT,
-                        { onClick: () => s(e), children: (0, n.jsx)(m.A, { src: e, className: b.yh }) },
-                        e,
-                    ),
-                ),
-            }),
-        ],
+function y(e) {
+    let { url: t, onSelect: s } = e,
+        r = (0, c.S)(t),
+        i = n.useCallback(() => s(t), [t, s]);
+    return (0, l.jsx)(a.DUT, {
+        className: p.yh,
+        style: { backgroundColor: r },
+        onClick: i,
+        children: (0, l.jsx)(m.A, { src: t, className: p.vA }),
     });
 }
 function S(e) {
-    let { transitionState: t, onClose: s, channel: l } = e,
-        [r, c] = i.useState("HOME"),
-        d = (0, a.bG)([f.A], () => f.A.getRecentImageUrls()),
-        x = i.useCallback(
+    let { recentUrls: t, onSelect: s } = e;
+    return (0, l.jsxs)("div", {
+        children: [
+            (0, l.jsx)(a.Text, { variant: "text-sm/semibold", children: _.intl.string(f.default.dDID2M) }),
+            (0, l.jsx)(a.Text, {
+                variant: "text-xs/normal",
+                color: "text-muted",
+                className: p.u2,
+                children: _.intl.string(f.default["9Xxm0y"]),
+            }),
+            (0, l.jsx)("div", { className: p.si, children: t.map((e) => (0, l.jsx)(y, { url: e, onSelect: s }, e)) }),
+        ],
+    });
+}
+function I(e) {
+    let { transitionState: t, onClose: s, channel: a } = e,
+        [c, u] = n.useState("HOME"),
+        m = (0, r.bG)([x.A], () => x.A.getRecentImageUrls()),
+        h = n.useCallback(
             async (e) => {
-                await (0, g._)(l.id, e), s();
+                await (0, d._)(a.id, e), s();
             },
-            [l.id, s],
+            [a.id, s],
         ),
-        m = i.useCallback(
+        b = n.useCallback(
             (e) => {
                 let t = e.src ?? e.url;
-                null != t && x(t);
+                null != t && h(t);
             },
-            [x],
+            [h],
         );
-    return "GIF_PICKER" === r
-        ? (0, n.jsxs)(o.dWK, {
+    return "RECENT_UPLOADS" === c
+        ? (0, l.jsxs)(i.dWK, {
               transitionState: t,
               onClose: s,
               size: "md",
               children: [
-                  (0, n.jsx)(o.rQ0, { title: h.intl.string(j.default.HkszWk) }),
-                  (0, n.jsx)("div", {
-                      className: b.SD,
-                      children: (0, n.jsx)(u.A, { className: b.XC, onSelectGIF: m, headingColor: "text-subtle" }),
+                  (0, l.jsx)(i.rQ0, {
+                      title: _.intl.string(f.default.aBnIyR),
+                      subtitle: _.intl.string(f.default["5VL9Ju"]),
                   }),
+                  (0, l.jsx)(g.A, { guildId: a.guild_id, onSelect: h }),
               ],
           })
-        : (0, n.jsx)(o.aFV, {
-              transitionState: t,
-              onClose: s,
-              size: "md",
-              title: h.intl.string(j.default.yyPbqI),
-              subtitle: h.intl.string(j.default["+y6KsI"]),
-              actions: [],
-              children: (0, n.jsxs)("div", {
-                  className: b.jE,
-                  children: [
-                      (0, n.jsx)(N, { onOpenGIFPicker: () => c("GIF_PICKER") }),
-                      d.length > 0 ? (0, n.jsx)(v, { recentUrls: d, onSelect: x }) : (0, n.jsx)(I, { onSelect: x }),
-                  ],
-              }),
-          });
+        : "GIF_PICKER" === c
+          ? (0, l.jsxs)(i.dWK, {
+                transitionState: t,
+                onClose: s,
+                size: "md",
+                children: [
+                    (0, l.jsx)(i.rQ0, { title: _.intl.string(f.default.HkszWk) }),
+                    (0, l.jsx)("div", {
+                        className: p.SD,
+                        children: (0, l.jsx)(o.A, { className: p.XC, onSelectGIF: b, headingColor: "text-subtle" }),
+                    }),
+                ],
+            })
+          : (0, l.jsx)(i.aFV, {
+                transitionState: t,
+                onClose: s,
+                size: "md",
+                title: _.intl.string(f.default.yyPbqI),
+                subtitle: _.intl.string(f.default["+y6KsI"]),
+                actions: [],
+                children: (0, l.jsxs)("div", {
+                    className: p.jE,
+                    children: [
+                        (0, l.jsx)(C, {
+                            onOpenGIFPicker: () => u("GIF_PICKER"),
+                            onOpenRecentUploads: () => u("RECENT_UPLOADS"),
+                        }),
+                        m.length > 0 ? (0, l.jsx)(S, { recentUrls: m, onSelect: h }) : (0, l.jsx)(N, { onSelect: h }),
+                    ],
+                }),
+            });
 }
