@@ -5,19 +5,19 @@ n(64700);
 var i = n(889137),
     s = n(575593),
     a = n(397927),
-    o = n(954921),
-    l = n(278539),
+    o = n(562819),
+    l = n(215689),
     u = n(674658),
-    c = n(245068),
-    d = n(550111),
-    _ = n(242874),
-    f = n(75825),
-    p = n(331402),
+    c = n(512213),
+    d = n(139136),
+    _ = n(245068),
+    f = n(242874),
+    p = n(75825),
     h = n(837921),
     m = n(937008),
     E = n(652215),
     g = n(985018),
-    A = n(381084);
+    A = n(632041);
 let I = h.Ay.getEnableHardwareAcceleration() ? a.JsQ : a.euF;
 function T(e) {
     let { avatarDecoration: t } = e,
@@ -42,14 +42,14 @@ function S(e) {
     let { skuId: t } = e;
     return (0, r.jsx)("div", {
         className: A.YS,
-        children: (0, r.jsx)(p.A, { skuId: t, removeSetHeight: !0, isHighlighted: !0 }),
+        children: (0, r.jsx)(d.A, { skuId: t, removeSetHeight: !0, isHighlighted: !0 }),
     });
 }
 function y(e) {
     let { nameplate: t } = e;
     return (0, r.jsx)("div", {
         className: A.rz,
-        children: (0, r.jsx)(d.A, {
+        children: (0, r.jsx)(c.A, {
             nameplate: t,
             className: A.qF,
             nameplatePreviewSize: "xlarge",
@@ -63,7 +63,7 @@ let v = (e) => {
         { selectedGiftStyle: n } = (0, m.Pv)(),
         { product: a } = (0, u.q)(t?.id);
     if (a?.type === s.R.BUNDLE)
-        return (0, r.jsx)("div", { className: A.ww, children: (0, r.jsx)(c.X, { product: a, isHighlighted: !1 }) });
+        return (0, r.jsx)("div", { className: A.ww, children: (0, r.jsx)(_.X, { product: a, isHighlighted: !1 }) });
     let o = a?.items[0],
         l = (0, i.YW)(o)
             .with({ type: s.R.AVATAR_DECORATION }, (e) => (0, r.jsx)(T, { avatarDecoration: e }))
@@ -73,8 +73,8 @@ let v = (e) => {
     return null != n && null == l
         ? (0, r.jsx)("div", {
               className: A.rk,
-              children: (0, r.jsx)(f.A, {
-                  defaultAnimationState: _.oA.LOOP,
+              children: (0, r.jsx)(p.A, {
+                  defaultAnimationState: f.oA.LOOP,
                   giftStyle: n,
                   shouldAnimate: !0,
                   className: A.__invalid_giftMainAnimation,

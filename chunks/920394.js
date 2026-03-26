@@ -2,8 +2,8 @@
 n.d(t, { A: () => I });
 var r = n(735438),
     i = n(575593),
-    a = n(311907),
-    s = n(73153),
+    s = n(311907),
+    a = n(73153),
     o = n(203632);
 let l = {},
     u = (e, t) => !(0, r.isEqual)(l[e], t) && ((l[e] = t), !0),
@@ -59,14 +59,14 @@ let l = {},
         let { purchases: t } = e;
         return _(t);
     },
-    g = (e) => {
+    E = (e) => {
         let { purchases: t } = e;
         return null != t && _(t);
     },
-    E = (e) => {
+    g = (e) => {
         l = {};
     };
-class A extends a.Ay.Store {
+class A extends s.Ay.Store {
     static displayName = "ProfileEffectStore";
     getAllProfileEffects() {
         return Object.values(l);
@@ -75,11 +75,11 @@ class A extends a.Ay.Store {
         return null != e ? l[e] : void 0;
     }
 }
-let I = new A(s.h, {
+let I = new A(a.h, {
     COLLECTIBLES_PRODUCT_FETCH_SUCCESS: f,
     COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: p,
     COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: h,
     COLLECTIBLES_PURCHASES_FETCH_SUCCESS: m,
-    COLLECTIBLES_CLAIM_SUCCESS: g,
-    LOGOUT: E,
+    COLLECTIBLES_CLAIM_SUCCESS: E,
+    LOGOUT: g,
 });

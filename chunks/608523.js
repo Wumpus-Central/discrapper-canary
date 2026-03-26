@@ -5,8 +5,8 @@ var l = n(627968),
     i = n(46054),
     s = n(861662),
     d = n(985018),
-    o = n(322367),
-    c = n(473169);
+    o = n(773680),
+    c = n(885106);
 let u = (e) => {
         let {
                 data: {
@@ -24,16 +24,16 @@ let u = (e) => {
             } = e,
             v = a.useMemo(() => i.A.reactParserFor({ ...i.A.defaultRules, link: s.B }), []),
             [f, b] = a.useState(""),
-            [C, j] = a.useState(null);
+            [C, T] = a.useState(null);
         a.useEffect(() => {
             b(g?.value ?? "");
         }, [g]);
-        let T = a.useCallback(
+        let j = a.useCallback(
             (e) => {
                 let t = null != p ? new RegExp(p) : null;
                 null == t || t.test(e)
-                    ? null != e && (j(null), b(e), h({ value: e, isValid: !0 }))
-                    : (j(d.intl.string(d.t["24xrGb"])), h({ value: e, isValid: !1 }));
+                    ? null != e && (T(null), b(e), h({ value: e, isValid: !0 }))
+                    : (T(d.intl.string(d.t["24xrGb"])), h({ value: e, isValid: !1 }));
             },
             [h, p],
         );
@@ -61,8 +61,8 @@ let u = (e) => {
                     ],
                 }),
                 1 === m
-                    ? (0, l.jsx)(r.ksK, { maxLength: x, onChange: T, value: f, error: C, placeholder: _ })
-                    : (0, l.jsx)(r.fs1, { maxLength: x, onChange: T, value: f, error: C, rows: m, placeholder: _ }),
+                    ? (0, l.jsx)(r.ksK, { maxLength: x, onChange: j, value: f, error: C, placeholder: _ })
+                    : (0, l.jsx)(r.fs1, { maxLength: x, onChange: j, value: f, error: C, rows: m, placeholder: _ }),
                 null != n &&
                     (0, l.jsx)("div", {
                         className: c.a5,
@@ -90,5 +90,5 @@ let u = (e) => {
                     t,
                 );
             });
-        return (0, l.jsx)("div", { children: r });
+        return (0, l.jsx)("div", { className: o.k, children: r });
     };

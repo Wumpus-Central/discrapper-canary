@@ -29,10 +29,10 @@ async function i(e, t) {
         throw (URL.revokeObjectURL(i), e);
     }
 }
-function a(e) {
+function s(e) {
     URL.revokeObjectURL(e);
 }
-function s(e) {
+function a(e) {
     for (let t of e.values()) if (2 !== t) return !1;
     return !0;
 }
@@ -66,7 +66,7 @@ let o = (e, t) => {
             n.current = 1;
             let t = d.current;
             e.config.effects.forEach(async (e) => {
-                if (h.current.has(e.src)) p.current.set(e.src, 2), s(p.current) && (l(!0), (n.current = 2));
+                if (h.current.has(e.src)) p.current.set(e.src, 2), a(p.current) && (l(!0), (n.current = 2));
                 else
                     try {
                         let r = await i(e.src, t.signal);
@@ -74,7 +74,7 @@ let o = (e, t) => {
                         p.current.set(e.src, 2),
                             h.current.set(e.src, r.src),
                             c((t) => ({ ...t, [e.src]: r })),
-                            s(p.current) && (l(!0), (n.current = 2));
+                            a(p.current) && (l(!0), (n.current = 2));
                     } catch (e) {}
             });
         }, [e, _]),
@@ -82,7 +82,7 @@ let o = (e, t) => {
             let e = h.current,
                 t = d.current;
             return () => {
-                Array.from(e.values()).forEach(a), t.abort();
+                Array.from(e.values()).forEach(s), t.abort();
             };
         }, []),
         { loaded: o, layerData: u }

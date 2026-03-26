@@ -1,14 +1,14 @@
-n.d(t, { B: () => S, G: () => T });
+n.d(t, { B: () => T, G: () => y });
 var a = n(627968),
     i = n(64700),
     s = n(397927),
-    l = n(43708),
+    l = n(816866),
     r = n(600239),
     o = n(940622),
     d = n(928953),
     c = n(559474),
     u = n(327885),
-    m = n(381957);
+    m = n(978108);
 let h = i.createContext({ setDropHandler: () => {} }),
     x = [
         { name: "Preview", value: "preview" },
@@ -70,7 +70,7 @@ let h = i.createContext({ setDropHandler: () => {} }),
             ],
         });
     },
-    b = () => {
+    v = () => {
         let { previewAvatarDecorationKey: e, setPreviewAvatarDecorationKey: t } = (0, o.JE)(),
             { avatarDecorationAssets: n } = (0, o.NE)(),
             l = i.useMemo(() => n.map((e) => ({ id: e.name, label: e.name, value: e.name })), [n]);
@@ -91,7 +91,7 @@ let h = i.createContext({ setDropHandler: () => {} }),
                   ],
               });
     },
-    v = (e) => {
+    b = (e) => {
         let { clearAssets: t, clearIgnoredFiles: n } = e,
             { collectionAssets: l } = (0, o.NE)(),
             { deleteCollectionAsset: r, clearAssets: d } = (0, o.JE)(),
@@ -170,7 +170,7 @@ let h = i.createContext({ setDropHandler: () => {} }),
                   ],
               });
     },
-    C = () => {
+    A = () => {
         let { validateShopAssetPackage: e, reset: t, validationComplete: n, warnings: l, errors: r } = (0, u.y)(),
             o = Object.entries(r),
             d = Object.entries(l),
@@ -298,7 +298,7 @@ let h = i.createContext({ setDropHandler: () => {} }),
             })
         );
     },
-    A = () => {
+    C = () => {
         let { previewEnabled: e, setPreviewEnabled: t, clearAssets: n } = (0, o.JE)(),
             { ignoredFilenames: l, clearAssets: r, clearIgnoredFilenames: d, processAndUpsertAssets: u } = (0, c.ds)(),
             { setDropHandler: x } = i.useContext(h),
@@ -333,14 +333,14 @@ let h = i.createContext({ setDropHandler: () => {} }),
                         ],
                     }),
                     (0, a.jsx)(f, {}),
-                    (0, a.jsx)(b, {}),
-                    (0, a.jsx)(v, { clearAssets: r, clearIgnoredFiles: d }),
+                    (0, a.jsx)(v, {}),
+                    (0, a.jsx)(b, { clearAssets: r, clearIgnoredFiles: d }),
                     (0, a.jsx)(j, { ignoredFiles: l, handleClearIgnoredFiles: d }),
                 ],
             })
         );
     },
-    T = () => {
+    y = () => {
         let [e, t] = i.useState("preview");
         return (0, a.jsxs)("div", {
             className: m.kL,
@@ -356,13 +356,13 @@ let h = i.createContext({ setDropHandler: () => {} }),
                     optionClassName: m.UK,
                 }),
                 (0, a.jsx)(s.hKd, { size: 8 }),
-                "preview" === e && (0, a.jsx)(A, {}),
-                "validate" === e && (0, a.jsx)(C, {}),
+                "preview" === e && (0, a.jsx)(C, {}),
+                "validate" === e && (0, a.jsx)(A, {}),
                 (0, a.jsx)(s.hKd, { size: 16 }),
             ],
         });
     },
-    S = (e) => {
+    T = (e) => {
         let { children: t } = e,
             [n, s] = i.useState(() => () => {}),
             l = i.useMemo(() => ({ setDropHandler: (e) => s(() => e) }), []);

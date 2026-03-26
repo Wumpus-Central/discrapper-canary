@@ -7,17 +7,17 @@ var r = n(627968),
     o = n(582754),
     l = n(397927),
     u = n(736653),
-    c = n(262737),
-    d = n(590180),
-    _ = n(320447),
-    f = n(442759),
-    p = n(88686),
-    h = n(780898),
-    m = n(214881),
+    c = n(590180),
+    d = n(320447),
+    _ = n(442759),
+    f = n(88686),
+    p = n(780898),
+    h = n(214881),
+    m = n(496867),
     E = n(181774),
     g = n(132198),
     A = n(929283),
-    I = n(190016),
+    I = n(581989),
     T = n(180171),
     S = n(989099),
     y = n(370184);
@@ -29,7 +29,7 @@ let v = (e) => {
     },
     N = (e) => {
         let { profileEffect: t, fallbackLabel: n } = e,
-            s = (0, c.V)(t?.skuId),
+            s = (0, m.V)(t?.skuId),
             { accessibilityLabel: a, thumbnailPreviewSrc: o, title: l } = s?.config ?? {},
             u = i.useMemo(() => (0, E.Rc)(o), [o]);
         return null == s
@@ -53,13 +53,13 @@ let v = (e) => {
                   className: I.rz,
                   onMouseEnter: o,
                   onMouseLeave: l,
-                  children: (0, r.jsx)(m.A, { nameplate: (0, h.WK)(t), hovered: s, placement: p.u.MINI_PREVIEW }),
+                  children: (0, r.jsx)(h.A, { nameplate: (0, p.WK)(t), hovered: s, placement: f.u.MINI_PREVIEW }),
               });
     },
     R = (e) => {
         let { product: t, fallbackLabel: n } = e,
-            { firstAvatarDecoration: i, firstProfileEffect: s, firstNameplate: a } = (0, f.f5)(t),
-            { enabled: o } = (0, _.P)("BundleMiniPreview"),
+            { firstAvatarDecoration: i, firstProfileEffect: s, firstNameplate: a } = (0, _.f5)(t),
+            { enabled: o } = (0, d.P)("BundleMiniPreview"),
             u = t.previewAssets?.fgStatic;
         return o && null != u
             ? (0, r.jsx)("img", { src: u, alt: t.name, className: I.C0 })
@@ -89,10 +89,10 @@ let v = (e) => {
     O = (e) => {
         let { product: t, sku: n, fallbackLabel: i } = e,
             o = n?.id,
-            u = (0, a.bG)([d.A], () => d.A.getProduct(n?.id)),
-            c = t ?? u;
-        if (c?.type === s.R.BUNDLE) return (0, r.jsx)(R, { product: c, fallbackLabel: i });
-        let [_] = c?.items ?? [];
+            u = (0, a.bG)([c.A], () => c.A.getProduct(n?.id)),
+            d = t ?? u;
+        if (d?.type === s.R.BUNDLE) return (0, r.jsx)(R, { product: d, fallbackLabel: i });
+        let [_] = d?.items ?? [];
         return void 0 !== o && o in g.m
             ? g.m[o].render({ animationState: "on_hover", className: I.Vr })
             : _?.type === s.R.AVATAR_DECORATION

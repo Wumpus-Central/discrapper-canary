@@ -13,15 +13,15 @@ n.d(t, { Ay: () => l, GT: () => c, Mz: () => d, fB: () => h, qH: () => u, rs: ()
     n(65162);
 var r = n(115943),
     i = n.n(r);
-let a = 22,
-    s = (e) => i().decode(e),
+let s = 22,
+    a = (e) => i().decode(e),
     o = (e) => Math.round(e.frames.reduce((e, t) => e + t.delay, 0)),
     l = async (e, t, n) => ({
         src: e,
         base64: e,
         loop: !1,
         loopDelay: 0,
-        duration: o(s(await t.arrayBuffer())),
+        duration: o(a(await t.arrayBuffer())),
         start: 0,
         position: { x: 0, y: 0 },
         zIndex: 100 + n,
@@ -66,7 +66,7 @@ let c = (e, t) => ({ name: t.name, src: URL.createObjectURL(t), base64: e }),
                     4,
                 )
                     .split("\n")
-                    .map((e) => " ".repeat(a) + e)
+                    .map((e) => " ".repeat(s) + e)
                     .join("\n"),
             )
             .join(",\n") +
@@ -75,9 +75,9 @@ let c = (e, t) => ({ name: t.name, src: URL.createObjectURL(t), base64: e }),
         let [t, n] = e.split(","),
             r = atob(n),
             i = t.split(";")[0],
-            a = new Uint8Array(r.length);
-        for (let e = 0; e < r.length; e++) a[e] = r.charCodeAt(e);
-        return new Blob([a], { type: i });
+            s = new Uint8Array(r.length);
+        for (let e = 0; e < r.length; e++) s[e] = r.charCodeAt(e);
+        return new Blob([s], { type: i });
     },
     h = (e) => {
         let t = p(e);

@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { jV: () => s, uN: () => o, ud: () => u });
+n.d(t, { jV: () => a, uN: () => o, ud: () => u });
 var r = n(64700),
     i = n(735438),
-    a = n(575593);
-let s = (e) => {
+    s = n(575593);
+let a = (e) => {
         let t = e?.collectibles?.find((e) => {
             let { type: t } = e;
-            return t === a.R.PROFILE_EFFECT;
+            return t === s.R.PROFILE_EFFECT;
         });
         if (null != t)
             return {
