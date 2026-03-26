@@ -75,10 +75,12 @@ async function m(e) {
         else {
             i()(null != v, "Missing subscriptionPlan"), i()(null != V, "Missing invoicePreview");
             let t = { amount: V.total, currency: V.currency },
-                n = (0, _.$Q)((0, _.y8)(v.id, !1, !1, R));
+                n = (0, _.l6)(R, V.checkoutContext?.available_plans),
+                r = (0, _.$Q)((0, _.y8)(v.id, !1, !1, n));
             if (null != L) {
-                let e = (0, _.Pg)(L, v.id, 1, new Set(N));
-                (e = (0, _.qn)(e)), (n = (0, _.UC)(e, R.currency.toLowerCase(), R.paymentSourceId));
+                let e = R.currency ?? V.currency,
+                    t = (0, _.Pg)(L, v.id, 1, new Set(N));
+                (t = (0, _.qn)(t)), (r = (0, _.UC)(t, e.toLowerCase(), R.paymentSourceId));
             }
             if (A) {
                 let t = V.total,
@@ -93,27 +95,28 @@ async function m(e) {
                     giftInfoOptions: F,
                     orderId: B,
                 });
-            } else if (b && null != D && null != O && null != L)
+            } else if (b && null != D && null != O && null != L) {
+                let n = R.currency ?? V.currency;
                 e = p.AD1.has(O.type)
-                    ? await (0, a.LD)(L, D, O, R.currency, G)
-                    : await (0, a.nV)(L, { paymentSource: O, currency: R.currency }, t, n, S, T, G);
-            else if (null != L) {
-                let r = (0, _.Pg)(L, v.id, 1, new Set(N)),
-                    i = { paymentSource: O, currency: R.currency };
+                    ? await (0, a.LD)(L, D, O, n, G)
+                    : await (0, a.nV)(L, { paymentSource: O, currency: n }, t, r, S, T, G);
+            } else if (null != L) {
+                let n = (0, _.Pg)(L, v.id, 1, new Set(N)),
+                    i = { paymentSource: O, currency: R.currency ?? V.currency };
                 L.status === p.Dmq.PAUSED && (i.status = p.Dmq.ACTIVE),
-                    L.isPausedAllowsResumeButNotUpdates || (i.items = r),
-                    (e = await (0, a.nV)(L, i, t, n, S, T, G));
+                    L.isPausedAllowsResumeButNotUpdates || (i.items = n),
+                    (e = await (0, a.nV)(L, i, t, r, S, T, G));
             } else
                 e = await (0, l.B1)({
                     planId: v.id,
-                    currency: R.currency,
+                    currency: R.currency ?? V.currency,
                     paymentSource: O,
                     trialId: C,
                     metadata: M,
                     referralCode: U,
                     loadId: G,
                     expectedInvoicePrice: t,
-                    expectedRenewalPrice: n,
+                    expectedRenewalPrice: r,
                 });
         }
         if (e.redirectConfirmation) return void g(null != e.redirectURL);
