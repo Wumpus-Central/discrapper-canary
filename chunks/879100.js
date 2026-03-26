@@ -40,7 +40,7 @@ var k = n(26279),
     B = n(788868),
     W = n(818348),
     V = n(985018),
-    Y = n(843010);
+    Y = n(877985);
 function H(e) {
     let {
             premiumSubscriptionPlan: t,
@@ -88,7 +88,7 @@ function H(e) {
                 ? { amount: eu.amount, tax: 0, taxInclusive: !0, currency: H.currency }
                 : w.Ay.getPrice($.id, es, !1, H),
         eo = n * ec.amount,
-        ed = (0, g.d)() && w.Ay.hasBoostDiscount(Z) && null != T,
+        ed = (0, g.ds)() && w.Ay.hasBoostDiscount(Z) && null != T,
         em =
             w.Ay.hasBoostDiscount(Z) &&
             null != T &&

@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { Bv: () => I, ar: () => h, f9: () => A, g5: () => E, k0: () => T, k5: () => m, nf: () => g });
+n.d(t, { Bv: () => I, ar: () => h, f9: () => A, g5: () => g, k0: () => T, k5: () => m, nf: () => E });
 var r = n(64700),
     i = n(989349),
-    a = n.n(i),
-    s = n(311907),
+    s = n.n(i),
+    a = n(311907),
     o = n(155718),
     l = n(166403),
     u = n(89366),
@@ -20,12 +20,12 @@ function h() {
     return null != e || t || null != n || r;
 }
 let m = () => {
-        let e = (0, s.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
+        let e = (0, a.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
             t = e?.metadata?.active_discount_expires_at;
-        return null != t && a()(Date.now()) <= a()(t);
+        return null != t && s()(Date.now()) <= s()(t);
     },
-    g = () => {
-        let e = (0, s.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
+    E = () => {
+        let e = (0, a.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
             t = e?.metadata?.active_discount_id;
         switch (t) {
             case p.q:
@@ -45,18 +45,18 @@ let m = () => {
                 return;
         }
     },
-    E = (e) => {
+    g = (e) => {
         let [t, n] = r.useState(!1),
-            [i, a] = r.useState(!1),
-            [s, o] = r.useState(null);
-        if (e) return { churnUserDiscountOffer: s, isFetchingChurnDiscountOffer: i };
+            [i, s] = r.useState(!1),
+            [a, o] = r.useState(null);
+        if (e) return { churnUserDiscountOffer: a, isFetchingChurnDiscountOffer: i };
         let l = () => {
-            n(!0), a(!1);
+            n(!0), s(!1);
         };
         return (
             i ||
                 t ||
-                (a(!0),
+                (s(!0),
                 (0, d.qz)()
                     .then((e) => {
                         o(e), l();
@@ -64,11 +64,11 @@ let m = () => {
                     .catch((e) => {
                         l();
                     })),
-            { churnUserDiscountOffer: s, isFetchingChurnDiscountOffer: i }
+            { churnUserDiscountOffer: a, isFetchingChurnDiscountOffer: i }
         );
     },
     A = () => {
-        let e = (0, s.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
+        let e = (0, a.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
             t = m(),
             n = null !== e && e.hasPremiumNitroMonthly,
             r = !!e?.hasActiveTrial;
@@ -87,4 +87,4 @@ let m = () => {
         }
         return null;
     },
-    T = () => (0, c.d)();
+    T = () => (0, c.ds)();

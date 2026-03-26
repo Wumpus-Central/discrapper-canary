@@ -9,33 +9,35 @@ var i = n(627968),
     c = n(397927),
     u = n(73153),
     m = n(793574),
-    g = n(688810),
-    _ = n(726649),
+    _ = n(688810),
+    g = n(726649),
     x = n(611924),
     A = n(961250),
     h = n(320118),
     p = n(622543),
     f = n(576622),
     T = n(166403),
-    E = n(954571),
-    S = n(131168),
-    b = n(482589),
-    C = n(511484),
+    S = n(954571),
+    E = n(637073),
+    b = n(131168),
+    C = n(482589),
+    v = n(511484),
     N = n(568031),
-    v = n(518491),
-    I = n(965591),
-    j = n(495022),
-    y = n(382694),
-    O = n(235365),
-    R = n(994763),
-    L = n(788868),
-    P = n(652215),
-    D = n(985018),
-    G = n(520089),
-    M = n(288894);
+    I = n(518491),
+    j = n(965591),
+    y = n(495022),
+    O = n(382694),
+    R = n(235365),
+    L = n(994763),
+    P = n(788868),
+    D = n(652215),
+    G = n(985018),
+    M = n(904286),
+    k = n(288894);
 let U = (e) => {
     let { userId: t } = e,
-        n = (0, r.zy)();
+        n = (0, E.ds)(),
+        l = (0, r.zy)();
     s.useEffect(() => {
         u.h.wait(async () => {
             let e = [(0, A.Ay)()];
@@ -43,106 +45,106 @@ let U = (e) => {
         });
     }, [t]),
         s.useEffect(() => {
-            K(!0);
+            Z(!0);
         }, []),
-        (0, b.j)(),
-        (0, x.P)(_.b);
-    let l = s.useRef(null),
-        U = s.useRef(null),
-        k = (0, o.bG)([T.A], () => T.A.getPremiumTypeSubscription()),
-        { isReady: w, programReward: V, isEligible: B } = (0, h.F)({ location: "PremiumSubscriberHome" }),
+        (0, C.j)(),
+        (0, x.P)(g.b);
+    let U = s.useRef(null),
+        w = s.useRef(null),
+        V = (0, o.bG)([T.A], () => T.A.getPremiumTypeSubscription()),
+        { isReady: B, programReward: F, isEligible: H } = (0, h.F)({ location: "PremiumSubscriberHome" }),
         {
-            scrollTargetId: F,
-            glowingPerkId: H,
-            scrollBlock: z,
-            scrollInline: Y,
+            scrollTargetId: z,
+            glowingPerkId: Y,
+            scrollBlock: X,
+            scrollInline: K,
         } = s.useMemo(() => {
-            let e = new URLSearchParams(n.search),
+            let e = new URLSearchParams(l.search),
                 t = e.get("perk"),
-                i = e.get("section");
+                n = e.get("section");
             return null != t
                 ? { scrollTargetId: t, glowingPerkId: t, scrollBlock: "center", scrollInline: "center" }
-                : null != i
-                  ? { scrollTargetId: i, scrollBlock: "start" }
+                : null != n
+                  ? { scrollTargetId: n, scrollBlock: "start" }
                   : {};
-        }, [n.search]);
-    (0, R.z)(F ?? "", null != F, z, Y);
-    let [X, K] = s.useState(!1),
-        W = (0, S.p)(),
-        Z = s.useRef(null),
-        [q, Q] = s.useState(!1),
-        J = null != W && null != k && k.status === P.Dmq.CANCELED,
-        $ = (0, C.iU)(L.gD.PREMIUM_MONTH_TIER_2, W, k),
-        ee = !q && J,
-        { analyticsLocations: et } = (0, g.Ay)(m.A.PREMIUM_SUBSCRIBER_NITRO_HOME),
-        [en, ei] = s.useState(!1);
-    return null != (0, o.bG)([p.A], () => (null != t ? p.A.getUserProfile(t) : null)) && (w || null != V)
+        }, [l.search]);
+    (0, L.z)(z ?? "", null != z, X, K);
+    let [W, Z] = s.useState(!1),
+        q = (0, b.p)(),
+        Q = s.useRef(null),
+        [J, $] = s.useState(!1),
+        ee = null != q && null != V && V.status === D.Dmq.CANCELED,
+        et = (0, v.iU)(P.gD.PREMIUM_MONTH_TIER_2, q, V),
+        en = !J && ee,
+        { analyticsLocations: ei } = (0, _.Ay)(m.A.PREMIUM_SUBSCRIBER_NITRO_HOME),
+        [es, el] = s.useState(!1);
+    return null != (0, o.bG)([p.A], () => (null != t ? p.A.getUserProfile(t) : null)) && (B || null != F)
         ? (0, i.jsxs)(c.GtU, {
-              className: G.xW,
-              ref: l,
+              className: M.xW,
+              ref: U,
               children: [
                   (0, i.jsx)(c.hLv, {
                       color: "nitro-pink",
-                      className: a()(G.kL, G.Gd),
-                      offsetBottom: 0.8,
-                      children: (0, i.jsxs)(g.f5, {
-                          value: et,
+                      className: a()(M.kL, M.Gd),
+                      offsetBottom: n ? 0.55 : 0.8,
+                      children: (0, i.jsxs)(_.f5, {
+                          value: ei,
                           children: [
                               (0, i.jsx)(d.L, {
-                                  innerRef: Z,
-                                  onChange: (e) => Q(e),
+                                  innerRef: Q,
+                                  onChange: (e) => $(e),
                                   threshold: 0.1,
                                   active: !0,
-                                  children: (0, i.jsx)(v.A, {
-                                      buttonVisibilityRef: Z,
-                                      className: G.v1,
+                                  children: (0, i.jsx)(I.A, {
+                                      buttonVisibilityRef: Q,
+                                      className: M.v1,
                                       enablePremiumBrandRefresh: !0,
-                                      userDiscountOffer: W,
-                                      discountedPrice: $,
+                                      userDiscountOffer: q,
+                                      discountedPrice: et,
                                   }),
                               }),
-                              (0, i.jsx)(y.A, { glowingPerkId: H }),
-                              null != V &&
-                                  B &&
-                                  (0, i.jsx)(O.A, { location: m.A.PREMIUM_MARKETING_NITRO_HOME_ORBS_SECTION }),
-                              (0, i.jsx)(j.A, { glowingPerkId: H }),
+                              (0, i.jsx)(O.A, { glowingPerkId: Y }),
+                              null != F &&
+                                  H &&
+                                  (0, i.jsx)(R.A, { location: m.A.PREMIUM_MARKETING_NITRO_HOME_ORBS_SECTION }),
+                              (0, i.jsx)(y.A, { glowingPerkId: Y }),
                               (0, i.jsx)(N.A, {
-                                  className: G.Zy,
+                                  className: M.Zy,
                                   location: m.A.PREMIUM_MARKETING_GIFT_SECTION,
-                                  analyticsLocation: { page: P.liQ.NITRO_HOME, section: P.JJy.GIFT_BANNER },
+                                  analyticsLocation: { page: D.liQ.NITRO_HOME, section: D.JJy.GIFT_BANNER },
                               }),
-                              (0, i.jsx)("div", { className: G.hz }),
+                              (0, i.jsx)("div", { className: M.hz }),
                               (0, i.jsx)(d.L, {
-                                  innerRef: U,
+                                  innerRef: w,
                                   onChange: (e) => {
                                       e &&
-                                          !en &&
-                                          (E.default.track(P.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-                                              location_stack: et,
+                                          !es &&
+                                          (S.default.track(D.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                                              location_stack: ei,
                                           }),
-                                          ei(!0));
+                                          el(!0));
                                   },
-                                  children: (0, i.jsx)("div", { ref: U, className: G._Z }),
+                                  children: (0, i.jsx)("div", { ref: w, className: M._Z }),
                               }),
                               (0, i.jsx)("img", {
-                                  src: M,
-                                  className: G.Kw,
+                                  src: k,
+                                  className: M.Kw,
                                   width: 112,
                                   height: 85,
-                                  alt: D.intl.string(D.t.X4IxWL),
+                                  alt: G.intl.string(G.t.X4IxWL),
                               }),
                           ],
                       }),
                   }),
-                  J &&
-                      null != $ &&
-                      (0, i.jsx)(I.A, {
-                          isVisible: ee && X,
-                          premiumSubscription: k,
-                          churnDiscountOffer: W,
-                          discountedPrice: $,
+                  ee &&
+                      null != et &&
+                      (0, i.jsx)(j.A, {
+                          isVisible: en && W,
+                          premiumSubscription: V,
+                          churnDiscountOffer: q,
+                          discountedPrice: et,
                       }),
               ],
           })
-        : (0, i.jsx)("div", { className: a()(G.kL, G.Lq), children: (0, i.jsx)(c.y$y, {}) });
+        : (0, i.jsx)("div", { className: a()(M.kL, M.Lq), children: (0, i.jsx)(c.y$y, {}) });
 };

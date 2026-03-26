@@ -26,7 +26,7 @@ function E() {
         t = (0, i.bG)([a.default], () => a.default.getCurrentUser()),
         n = (0, u.QQ)(),
         E = (0, i.bG)([o.A], () => o.A.hasAnyUnexpiredOffer()),
-        g = (0, c.d)(),
+        g = (0, c.ds)(),
         [A, I] = r.useState(!1),
         [T, S] = r.useState([]);
     r.useEffect(() => {
@@ -64,20 +64,20 @@ function E() {
         }, []);
     let C = {};
     for (let { code: e, promotion: t } of T) C[t.id] = e;
-    let b = m(n, E, g, C),
-        R = new Set(
-            b.map((e) => {
+    let R = m(n, E, g, C),
+        O = new Set(
+            R.map((e) => {
                 let { id: t } = e;
                 return t;
             }),
         );
     return {
         promotionsLoaded: A && (!N || null != e || g),
-        activeOutboundPromotions: b,
+        activeOutboundPromotions: R,
         claimedEndedOutboundPromotions: T.filter((e) => {
             let { promotion: t } = e;
             return (
-                !R.has(t.id) && !1 === (0, _.HB)({ promotionPartner: t.outboundTitle, promotionType: t.promotionType })
+                !O.has(t.id) && !1 === (0, _.HB)({ promotionPartner: t.outboundTitle, promotionType: t.promotionType })
             );
         }).filter((e) => (0, _.OP)(e.promotion)),
         claimedOutboundPromotionCodeMap: C,
@@ -89,7 +89,7 @@ function g() {
         t = m(
             (0, u.QQ)(),
             (0, i.bG)([o.A], () => o.A.hasAnyUnexpiredOffer()),
-            (0, c.d)(),
+            (0, c.ds)(),
             {},
         );
     return r
