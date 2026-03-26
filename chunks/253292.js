@@ -20,15 +20,23 @@ function d(e) {
             i = n || (0, o.isLinux)() || "safari" === r;
         return (0, l.e)("useNameplateAsset")
             ? {
-                  staticImageUrl: (0, u.getCollectiblesItemAssetUrl)(e.skuId, u.CollectiblesItemAssetFormat.STATIC),
+                  staticImageUrl: (0, u.getCollectiblesItemAssetUrl)({
+                      skuId: e.skuId,
+                      assetFormat: u.CollectiblesItemAssetFormat.STATIC,
+                  }),
                   ...(i
                       ? {
-                            animatedImageUrl: (0, u.getCollectiblesItemAssetUrl)(
-                                e.skuId,
-                                u.CollectiblesItemAssetFormat.ANIMATED,
-                            ),
+                            animatedImageUrl: (0, u.getCollectiblesItemAssetUrl)({
+                                skuId: e.skuId,
+                                assetFormat: u.CollectiblesItemAssetFormat.ANIMATED,
+                            }),
                         }
-                      : { videoUrl: (0, u.getCollectiblesItemAssetUrl)(e.skuId, u.CollectiblesItemAssetFormat.VIDEO) }),
+                      : {
+                            videoUrl: (0, u.getCollectiblesItemAssetUrl)({
+                                skuId: e.skuId,
+                                assetFormat: u.CollectiblesItemAssetFormat.VIDEO,
+                            }),
+                        }),
               }
             : {
                   staticImageUrl: (0, a.n)(`collectibles/${e.src}static.png`),

@@ -568,6 +568,7 @@ var r = (function (e) {
             (e[(e.L_3PP_NON_NITRO_POPOVER = 716)] = "L_3PP_NON_NITRO_POPOVER"),
             (e[(e.L_3PP_NITRO_TOOLTIP = 717)] = "L_3PP_NITRO_TOOLTIP"),
             (e[(e.MOBILE_ACCOUNT_LINKING_BANNER = 718)] = "MOBILE_ACCOUNT_LINKING_BANNER"),
+            (e[(e.APRIL_FOOLS_2026_COACHMARK = 719)] = "APRIL_FOOLS_2026_COACHMARK"),
             e
         );
     })({}),
