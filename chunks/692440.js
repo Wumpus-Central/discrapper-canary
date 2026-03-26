@@ -40,7 +40,7 @@ var r = n(627968),
     O = n(788868),
     b = n(652215),
     D = n(985018),
-    L = n(362442);
+    L = n(222967);
 function w(e) {
     let {
             invoiceItem: t,
@@ -311,23 +311,28 @@ function j(e) {
             isPrepaidPaymentSource: c = !1,
             trialFooterMessageOverride: h,
             hideSubscriptionDetails: E = !1,
-            shouldUseUnifiedCheckoutUI: A,
-            unifiedCheckoutDefaultExpanded: I,
+            fractionalPremiumInfo: A,
+            shouldUseUnifiedCheckoutUI: I,
+            unifiedCheckoutDefaultExpanded: T,
         } = e,
-        { analyticsLocations: T } = (0, f.Ay)(),
-        y = {
+        { analyticsLocations: y } = (0, f.Ay)(),
+        v = {
             subscriptionId: t?.id,
             renewal: !0,
             preventFetch: !o,
-            analyticsLocatinons: T,
+            analyticsLocatinons: y,
             analyticsLocation: _.A.SUBSCRIPTION_INVOICE_FOOTER,
             ...u,
         },
-        [v] = (0, S.Kq)(y),
-        [C, R] = i.useState(!1);
-    if (A) {
-        let e = (0, m.Gj)(n ?? null, s, null, { overrideRenewalDate: a, isSubscriptionUpdate: o });
-        return (0, r.jsx)(p._D, { ...e, defaultExpanded: I });
+        [C] = (0, S.Kq)(v),
+        [R, O] = i.useState(!1);
+    if (I) {
+        let e = (0, m.Gj)(n ?? null, s, null, {
+            overrideRenewalDate: a,
+            isSubscriptionUpdate: o,
+            fractionalPremiumInfo: A,
+        });
+        return (0, r.jsx)(p._D, { ...e, defaultExpanded: T });
     }
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -347,17 +352,17 @@ function j(e) {
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsxs)(d.DUT, {
-                            onClick: () => R((e) => !e),
+                            onClick: () => O((e) => !e),
                             className: L.K3,
                             children: [
-                                C ? D.intl.string(D.t.aBcRbK) : D.intl.string(D.t.X6duqp),
+                                R ? D.intl.string(D.t.aBcRbK) : D.intl.string(D.t.X6duqp),
                                 (0, r.jsx)(g.A, {
-                                    direction: C ? g.A.Directions.UP : g.A.Directions.DOWN,
+                                    direction: R ? g.A.Directions.UP : g.A.Directions.DOWN,
                                     className: L.ts,
                                 }),
                             ],
                         }),
-                        C ? (0, r.jsx)(F, { isUpdate: o, currentInvoice: v, newInvoice: s, inTrialPeriod: l }) : null,
+                        R ? (0, r.jsx)(F, { isUpdate: o, currentInvoice: C, newInvoice: s, inTrialPeriod: l }) : null,
                     ],
                 }),
         ],

@@ -221,35 +221,42 @@ let R = (e, t) => {
             : { amount: o, matchedDiscountInfo: r };
     },
     O = (e, t, n) => {
-        let { isPremiumBasePlanInvoiceItem: r, intervalType: i, intervalCount: a, discountOffer: o, currency: u } = n,
-            { showGuildSubscriptionAdjustmentTooltip: c } = e,
+        let {
+                invoiceIncludesPremiumBasePlan: r,
+                isPremiumBasePlanInvoiceItem: i,
+                intervalType: a,
+                intervalCount: o,
+                discountOffer: u,
+                currency: c,
+            } = n,
+            { showGuildSubscriptionAdjustmentTooltip: d } = e,
             {
-                label: d,
-                subscriptionDiscount: _,
-                originalAmount: p,
-            } = (0, l.Ae)(e, { subscriptionTrial: t, currency: u }),
-            E = c ? h.intl.format(h.t.UDop9c, {}) : void 0,
-            g = null != _,
-            A =
-                !r && g
+                label: p,
+                subscriptionDiscount: E,
+                originalAmount: g,
+            } = (0, l.Ae)(e, { subscriptionTrial: t, currency: c }),
+            A = d ? h.intl.format(h.t.UDop9c, {}) : void 0,
+            I = null != E,
+            T =
+                !i && I
                     ? {
-                          subText: (0, f.CE)((0, f.$g)(p, u), i, a),
+                          subText: (0, f.CE)((0, f.$g)(g, c), a, o),
                           subTextHasStrikethrough: !0,
-                          valueIcon: s.tvc,
+                          valueIcon: r && (0, _.z4)(e.subscriptionPlanId) ? s.tvc : void 0,
                           color: "text-feedback-positive",
                           valueColor: "text-feedback-positive",
                       }
                     : null,
-            { amount: I, matchedDiscountInfo: T } = R(e, o),
-            S = null != T && T.intervalCount > 1,
-            y =
-                r && S
+            { amount: S, matchedDiscountInfo: y } = R(e, u),
+            v = null != y && y.intervalCount > 1,
+            N =
+                i && v
                     ? {
-                          subText: h.intl.format(m.default.Chj1Ke, { discountEndDate: T.discountEndDate }),
+                          subText: h.intl.format(m.default.Chj1Ke, { discountEndDate: y.discountEndDate }),
                           subTextColor: "text-feedback-positive",
                       }
                     : null;
-        return { matchedDiscountInfo: T, lineItem: { id: e.id, label: d, amount: I, tooltip: E, ...y, ...A } };
+        return { matchedDiscountInfo: y, lineItem: { id: e.id, label: p, amount: S, tooltip: A, ...N, ...T } };
     },
     b = function (e, t, n) {
         let {
@@ -268,10 +275,12 @@ let R = (e, t) => {
             u = (0, l.Q8)(t, e, { isSubscriptionUpdate: i }),
             { intervalType: c, intervalCount: d } = (0, _.Ge)(t),
             f = t.currency,
-            p = [];
+            p = [],
+            E = u.some((e) => (0, _.xq)(e.subscriptionPlanId));
         for (let e of u) {
             let { subscriptionPlanId: t } = e,
                 { lineItem: r } = O(e, n, {
+                    invoiceIncludesPremiumBasePlan: E,
                     isPremiumBasePlanInvoiceItem: (0, _.xq)(t),
                     intervalType: c,
                     intervalCount: d,
@@ -280,7 +289,7 @@ let R = (e, t) => {
                 });
             p.push(r);
         }
-        let E = (0, o.de)({
+        let g = (0, o.de)({
             overrideRenewalDate: r,
             currentInvoice: e,
             renewalInvoice: t,
@@ -295,7 +304,7 @@ let R = (e, t) => {
             label: h.intl.string(m.default.GGn3pp),
             totalLineItemValueSubText: h.intl.string(m.default.yvUaHi),
             totalLineItemLabel: N(c, d),
-            totalLineItemLabelSubText: h.intl.format(m.default.MR4VnX, { renewalDate: E }),
+            totalLineItemLabelSubText: h.intl.format(m.default.MR4VnX, { renewalDate: g }),
         };
     },
     D = (e, t) => {
