@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => g, h: () => m });
+n.d(t, { A: () => I, h: () => g });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -7,44 +7,48 @@ var r = n(627968),
     o = n(311907),
     l = n(397927),
     u = n(525723),
-    c = n(287809),
-    d = n(580630),
-    _ = n(178213),
-    f = n(985018),
-    p = n(433107);
-function h(e) {
+    c = n(871123),
+    d = n(287809),
+    _ = n(580630),
+    f = n(178213),
+    p = n(652215),
+    h = n(985018),
+    m = n(498700);
+function E(e) {
     return { margin: e.buttonInset };
 }
-function m(e) {
-    let { sku: t, wishlistOwner: n, isOwned: r, hideIcon: s, shortText: a, location: p } = e,
-        h = (0, o.bG)([c.default], () => c.default.getCurrentUser()),
-        m = (0, _.AZ)(p ?? "User Profile Wishlist Overlay Button"),
-        E = (0, u.Xi)(t);
+function g(e) {
+    let { sku: t, wishlistOwner: n, isOwned: r, hideIcon: s, shortText: a, location: m } = e,
+        E = (0, o.bG)([d.default], () => d.default.getCurrentUser()),
+        g = (0, f.AZ)(m ?? "User Profile Wishlist Overlay Button"),
+        A = (0, u.Xi)(t),
+        I = null == n || n.id === E?.id || r;
     return i.useMemo(() => {
-        if (m && null != t && !r) {
-            if (null != E)
+        if (g && null != t && !r) {
+            if (null != A)
                 return {
-                    label: f.intl.formatToPlainString(f.t.AYcXGW, { discountOfferAmount: E.amount }),
+                    label: h.intl.formatToPlainString(h.t.AYcXGW, { discountOfferAmount: A.amount }),
                     icon: void 0,
                     isPromptingPurchase: !0,
                 };
-            let e = t.getPrice(h?.premiumType);
-            if (null != e) return { label: (0, d.$g)(e.amount, e.currency), icon: void 0, isPromptingPurchase: !0 };
+            let e = I ? p.lid.DEFAULT : p.lid.GIFT,
+                n = t.productLine === p.EZt.SOCIAL_LAYER_GAME_ITEM ? (0, c.y8)(t, e) : t.getPrice(E?.premiumType);
+            if (null != n) return { label: (0, _.$g)(n.amount, n.currency), icon: void 0, isPromptingPurchase: !0 };
         }
-        return null == n || n.id === h?.id || r
+        return I
             ? {
-                  label: a ? f.intl.string(f.t["99GFiS"]) : f.intl.string(f.t.FdGl5A),
+                  label: a ? h.intl.string(h.t["99GFiS"]) : h.intl.string(h.t.FdGl5A),
                   icon: void 0,
                   isPromptingPurchase: !1,
               }
             : {
-                  label: a ? f.intl.string(f.t["3wFtNJ"]) : f.intl.string(f.t.ilhtIa),
+                  label: a ? h.intl.string(h.t["3wFtNJ"]) : h.intl.string(h.t.ilhtIa),
                   icon: s ? void 0 : l.okO,
                   isPromptingPurchase: !0,
               };
-    }, [m, t, r, n, h?.id, h?.premiumType, a, s, E]);
+    }, [g, t, r, a, s, A, I, E?.premiumType]);
 }
-function E(e) {
+function A(e) {
     let { spec: t, label: n, icon: s, onClick: o, isHoveringOrFocusing: u, fullWidth: c = !1 } = e,
         d = i.useCallback(
             (e) => {
@@ -53,8 +57,8 @@ function E(e) {
             [o],
         );
     return (0, r.jsx)("div", {
-        className: a()(p.L, { [p.K]: u }),
-        style: h(t),
+        className: a()(m.L, { [m.K]: u }),
+        style: E(t),
         children: (0, r.jsx)(l.Button, {
             variant: "primary",
             size: "sm",
@@ -66,7 +70,7 @@ function E(e) {
         }),
     });
 }
-function g(e) {
+function I(e) {
     let { spec: t, onClick: n, isHoveringOrFocusing: i, label: s, icon: a } = e;
-    return (0, r.jsx)(E, { spec: t, label: s, icon: a, onClick: n, isHoveringOrFocusing: i, fullWidth: !0 });
+    return (0, r.jsx)(A, { spec: t, label: s, icon: a, onClick: n, isHoveringOrFocusing: i, fullWidth: !0 });
 }

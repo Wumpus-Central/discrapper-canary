@@ -49,7 +49,7 @@ let A = (e) => {
             x.current = O;
         }),
             i.useEffect(() => {
-                D(-x.current), S((0, h.uN)(p.effects));
+                D(-x.current), S((0, h.u)(p.effects));
             }, [p]),
             i.useEffect(() => {
                 let e = 0,
@@ -145,7 +145,7 @@ let A = (e) => {
             n = (0, l.bG)([u.A], () => u.A.useReducedMotion),
             i = (0, p.V)(e.skuId),
             s = (0, d.C)(i?.config),
-            a = (0, h.ud)(i?.config),
+            a = (0, h.b)(i?.config),
             _ = s ?? a,
             { autoPlay: f = !0, isHovering: m } = e,
             g = !!(

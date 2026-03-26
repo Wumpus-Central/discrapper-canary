@@ -2,8 +2,8 @@
 n.d(t, { A: () => u });
 var r = n(919395),
     i = n(486020),
-    a = n(927578),
-    s = n(289173),
+    s = n(927578),
+    a = n(289173),
     o = n(788868);
 function l(e, t) {
     return null == t || "" === t ? e : t;
@@ -17,6 +17,7 @@ class u {
     accentColor;
     themeColors;
     profileEffect;
+    profileFrame;
     popoutAnimationParticleType;
     fetchStartedAt;
     fetchEndedAt;
@@ -31,6 +32,7 @@ class u {
             (this.accentColor = e.accentColor),
             (this.themeColors = t?.themeColors ?? e.themeColors),
             (this.profileEffect = t?.profileEffect ?? e.profileEffect),
+            (this.profileFrame = t?.profileFrame ?? e.profileFrame),
             (this.popoutAnimationParticleType = t?.popoutAnimationParticleType ?? e.popoutAnimationParticleType),
             (this.fetchStartedAt = e.fetchStartedAt),
             (this.fetchEndedAt = e.fetchEndedAt),
@@ -53,13 +55,13 @@ class u {
         return this._userProfile.widgets;
     }
     get gameWidgets() {
-        return this._userProfile.widgets?.filter(s.fu);
+        return this._userProfile.widgets?.filter(a.fu);
     }
     get primaryColor() {
         return this.themeColors?.[0] ?? this.accentColor;
     }
     get canUsePremiumProfileCustomization() {
-        return a.Ay.isPremiumAtLeast(this.premiumType, o.PremiumTypes.TIER_2);
+        return s.Ay.isPremiumAtLeast(this.premiumType, o.PremiumTypes.TIER_2);
     }
     get canEditThemes() {
         return this.canUsePremiumProfileCustomization;
