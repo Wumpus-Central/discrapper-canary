@@ -62,6 +62,7 @@ e.exports = {
     mF: "inactivePlayButton__8fb25",
     z_: "inactivePlayButtonIcon__8fb25",
     R4: "floatingShareButtonContainer__8fb25",
+    MU: "overlayContainer__8fb25",
     MM: "endScreenOverlay__8fb25",
     bU: "endScreenImageBackground__8fb25",
     Pb: "endScreenContainer__8fb25",

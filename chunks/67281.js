@@ -33,7 +33,7 @@ let A = function (e) {
                             (0, i.jsxs)("div", {
                                 className: g.$,
                                 children: [
-                                    (0, i.jsx)(c.xgA, { className: g.gr, size: "xs", color: "currentColor" }),
+                                    (0, i.jsx)(c.xgA, { className: g.gr, size: "xs", color: "white" }),
                                     !s()(l) &&
                                         (0, i.jsx)(c.Text, {
                                             className: g.DD,

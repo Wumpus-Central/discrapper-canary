@@ -32,16 +32,16 @@ function E(e) {
             videoUrlOverride: I,
         } = e,
         { sourceQuestContent: V, quest: R, videoSessionId: w, setIsFullscreenEnabled: O } = a.useContext(g.a),
-        B = (0, a.useRef)(null),
-        U = (0, b.Yh)(R),
+        U = (0, a.useRef)(null),
+        B = (0, b.Yh)(R),
         L = R.userStatus?.completedAt != null,
         D = a.useMemo(() => R.config.features.includes(T.Li.FULL_EPISODE_VIDEO_QUEST), [R.config.features]),
         F = (0, p.Kr)((e) => e.videoProgress[R.id] ?? p.yc, o.x),
         M = (0, p.Kr)((e) => e.setVideoProgress),
-        j = (0, s.g)(L, F, U.progressSeconds),
+        j = (0, s.g)(L, F, B.progressSeconds),
         [W] = a.useState(() => d.A.getEffectiveConnectionSpeed()),
-        N = L ? void 0 : Math.max(F.maxTimestampSec, U.progressSeconds),
-        { videoAsset: Q, videoAssetType: G } = (0, C.A)(B, W, j, I, !1),
+        N = L ? void 0 : Math.max(F.maxTimestampSec, B.progressSeconds),
+        { videoAsset: Q, videoAssetType: G } = (0, C.A)(U, W, j, I, !1),
         q = (0, a.useRef)(null),
         H = a.useCallback((e) => {
             q.current = e;
@@ -67,7 +67,7 @@ function E(e) {
         } = (0, h.A)({
             questId: R.id,
             isQuestCompleted: L,
-            videoRef: B,
+            videoRef: U,
             hlsRef: q,
             videoSessionId: w,
             videoAssetId: G,
@@ -76,12 +76,12 @@ function E(e) {
             isFullEpisodeVideoQuest: D,
             listenForHlsErrors: !1,
         });
-    (0, x.A)({ videoAssetUrl: Q?.url, videoRef: B, hlsRef: q, videoAssetType: G });
+    (0, x.A)({ videoAssetUrl: Q?.url, videoRef: U, hlsRef: q, videoAssetType: G });
     let eu = (0, y.A)(R),
         [ec, ep] = a.useState(!1),
         [e_, ef] = a.useState(!1),
         [eb, em] = a.useState(!1),
-        eg = a.useCallback(() => B.current?.currentTime ?? null, []),
+        eg = a.useCallback(() => U.current?.currentTime ?? null, []),
         { forceSendCurrentSegment: eS } = (0, l.Yr)({
             getCurrentVideoTime: eg,
             isPlaying: ec,
@@ -96,7 +96,7 @@ function E(e) {
             (e, t) => {
                 switch (e) {
                     case i.Q6.PLAYING:
-                        ep(!0), B.current?.paused === !0 && Z(ev.current), (ev.current = null);
+                        ep(!0), U.current?.paused === !0 && Z(ev.current), (ev.current = null);
                         break;
                     case i.Q6.PAUSED:
                         ep(!1), eS();
@@ -145,7 +145,7 @@ function E(e) {
         ),
         eE = a.useCallback(
             (e, r) => {
-                M(R.id, e, r), (0, u.Gn)(R.id, U.taskType, e), n(e);
+                M(R.id, e, r), (0, u.Gn)(R.id, B.taskType, e), n(e);
                 let a = D && e >= t && !z.current;
                 (e >= Y.current || a) &&
                     (a && (z.current = !0),
@@ -153,17 +153,17 @@ function E(e) {
                     L || R.userStatus?.enrolledAt == null || (0, m.zv)(R, e),
                     el());
             },
-            [R, U.taskType, t, L, D, el, M, n],
+            [R, B.taskType, t, L, D, el, M, n],
         ),
         eP = a.useCallback(
             (e, t) => {
-                eS(), null != B.current && M(R.id, t, B.current.duration);
+                eS(), null != U.current && M(R.id, t, U.current.duration);
             },
             [R.id, M, eS],
         ),
         eA = a.useCallback(() => {
-            if ((eS(), null != B.current)) {
-                let e = B.current.duration;
+            if ((eS(), null != U.current)) {
+                let e = U.current.duration;
                 L || R.userStatus?.enrolledAt == null || (0, m.zv)(R, e + 1), M(R.id, e, e);
             }
         }, [R, L, M, eS]),
@@ -176,15 +176,18 @@ function E(e) {
         eI = a.useMemo(() => (0, _.tW)(R, _.fY.VIDEO_PLAYER_CAPTION, void 0, !1), [R]),
         eV = a.useCallback(() => (0, r.jsx)(v.A, {}), []),
         eR = a.useCallback(
-            () => (0, r.jsx)(S.A, { videoRef: B, onTrackQuestContentClick: es, orientation: k }),
+            () => (0, r.jsx)(S.A, { videoRef: U, onTrackQuestContentClick: es, orientation: k }),
             [es, k],
         );
     return (0, r.jsx)(l.Ft, {
-        ref: B,
+        ref: U,
         targetTimeSec: t,
         parentTransitionState: P,
         onOptimisticProgressUpdate: n,
         autoplay: E,
+        progressGlow: !0,
+        pauseOnLostVisibility: !0,
+        autoFocus: !0,
         performanceClockStartTime: A,
         orientation: k,
         videoUrlOverride: I,
