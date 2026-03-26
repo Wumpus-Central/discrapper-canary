@@ -1,24 +1,28 @@
-n.d(t, { M: () => c, t: () => o });
+n.d(t, { M: () => d, t: () => o });
 var a = n(627968);
 n(64700);
 var l = n(397927),
-    i = n(4227),
-    r = n(466459);
-let s = "collectibles shop product details modal",
+    i = n(440938),
+    r = n(4227),
+    s = n(466459);
+let c = "collectibles shop product details modal",
     o = (e) => {
         let {
             product: t,
             category: o,
-            shouldCheckoutWithOrbs: c,
-            analyticsSource: d,
-            analyticsLocations: u,
-            returnRef: m,
-            tab: x,
-            giftRecipient: h,
-            giftingOrigin: f,
+            shouldCheckoutWithOrbs: d,
+            analyticsSource: u,
+            analyticsLocations: m,
+            returnRef: x,
+            tab: h,
+            giftRecipient: f,
+            giftingOrigin: g,
+            cardId: p,
+            sessionId: _,
+            tilePosition: v,
         } = e;
         if (t.isCategoryReward) {
-            let { isPurchased: e } = (0, r.o)(i.A, t);
+            let { isPurchased: e } = (0, s.o)(r.A, t);
             if (!e) return;
         }
         (0, l.mMO)(
@@ -44,22 +48,25 @@ let s = "collectibles shop product details modal",
                     n.e("76760"),
                 ]).then(n.bind(n, 929400));
                 return (n) =>
-                    (0, a.jsx)(e, {
-                        ...n,
-                        product: t,
-                        category: o,
-                        shouldCheckoutWithOrbs: c,
-                        analyticsSource: d,
-                        analyticsLocations: u,
-                        returnRef: m,
-                        tab: x,
-                        giftRecipient: h,
-                        giftingOrigin: f,
+                    (0, a.jsx)(i.R9, {
+                        newValue: { cardId: p, sessionId: _, tilePosition: v },
+                        children: (0, a.jsx)(e, {
+                            ...n,
+                            product: t,
+                            category: o,
+                            shouldCheckoutWithOrbs: d,
+                            analyticsSource: u,
+                            analyticsLocations: m,
+                            returnRef: x,
+                            tab: h,
+                            giftRecipient: f,
+                            giftingOrigin: g,
+                        }),
                     });
             },
-            { modalKey: s },
+            { modalKey: c },
         );
     },
-    c = () => {
-        (0, l.OoC)(s);
+    d = () => {
+        (0, l.OoC)(c);
     };

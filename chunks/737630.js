@@ -1,5 +1,5 @@
 "use strict";
-s.r(t), s.d(t, { default: () => w });
+s.r(t), s.d(t, { default: () => H });
 var n = s(627968),
     r = s(64700),
     l = s(503698),
@@ -9,25 +9,25 @@ var n = s(627968),
     c = s(192308),
     d = s(397927),
     u = s(944791),
-    g = s(444927),
-    _ = s(688810),
-    m = s(697454),
+    _ = s(444927),
+    g = s(688810),
+    m = s(475073),
     h = s(611924),
     p = s(594832),
     f = s(287809),
     x = s(440938),
     E = s(590180),
-    C = s(161918),
-    A = s(790297),
-    b = s(338769),
+    b = s(161918),
+    C = s(790297),
+    A = s(338769),
     S = s(841702),
     v = s(621653),
-    L = s(983545),
-    I = s(365491),
+    I = s(983545),
+    L = s(365491),
     j = s(530971),
     k = s(177366),
-    O = s(155486),
-    T = s(278576),
+    T = s(155486),
+    O = s(278576),
     N = s(120286),
     y = s(870308),
     R = s(938191),
@@ -35,7 +35,7 @@ var n = s(627968),
     M = s(652215),
     P = s(650583),
     D = s(157884);
-let H = (e) => {
+let w = (e) => {
         let { children: t, shouldAddEventListener: s, onClose: n } = e,
             l = (0, c.useHasAnyModalOpen)();
         return (
@@ -49,27 +49,27 @@ let H = (e) => {
             t
         );
     },
-    w = function (e) {
+    H = function (e) {
         let { tab: t = B.G2.HOME } = e;
         (0, h.P)(m.a), (0, v.g)();
-        let s = (0, g.A)((0, i.A)()),
+        let s = (0, _.A)((0, i.A)()),
             l = (0, o.bG)([f.default], () => f.default.getCurrentUser());
         (0, p.pE)();
         let c = (0, R.yB)("CollectiblesShop"),
-            { onClose: P } = (0, T.tR)(),
-            { currentTab: w, hasFilters: U } = (0, I.v)(),
-            G = r.useMemo(() => (t === B.G2.HOME && w && U() ? w : t), [t, w, U]),
-            { categories: F, refreshCategories: V } = (0, S.Ay)({ logPerf: !0 }, { sessionId: s, tab: G }),
-            K = r.useMemo(() => [...F.values()], [F]),
-            [z, W] = r.useState(),
-            Y = (0, o.bG)([E.A], () => E.A.getCategory(z)?.name),
+            { onClose: P } = (0, O.tR)(),
+            { currentTab: H, hasFilters: F } = (0, L.v)(),
+            G = r.useMemo(() => (t === B.G2.HOME && H && F() ? H : t), [t, H, F]),
+            { categories: U, refreshCategories: V } = (0, S.Ay)({ logPerf: !0 }, { sessionId: s, tab: G }),
+            K = r.useMemo(() => [...U.values()], [U]),
+            [W, z] = r.useState(),
+            Y = (0, o.bG)([E.A], () => E.A.getCategory(W)?.name),
             [$, Z] = r.useState();
-        (0, k.XU)();
+        (0, k.XU)(s);
         let q = r.useCallback((e, t) => {
-                Z(e), W(t);
+                Z(e), z(t);
             }, []),
-            { selectedTab: X, transitionState: J, transitionToTab: Q } = (0, L.o)(G);
-        (0, A.uS)(s, X, Y, J, $), (0, A.N0)(X, l);
+            { selectedTab: X, transitionState: J, transitionToTab: Q } = (0, I.o)(G);
+        (0, C.uS)(s, X, Y, J, $), (0, C.N0)(X, l);
         let { dismissShopButtonDC: ee } = (0, y.A)();
         r.useEffect(() => {
             ee();
@@ -84,15 +84,15 @@ let H = (e) => {
                 es.current?.focus();
             }, []),
             (0, R.gB)();
-        let { analyticsLocations: en } = (0, A.lC)(X),
-            er = (0, b.V)(X, "collectibles_shop");
-        return (0, n.jsx)(_.f5, {
+        let { analyticsLocations: en } = (0, C.lC)(X),
+            er = (0, A.V)(X, "collectibles_shop");
+        return (0, n.jsx)(g.f5, {
             value: en,
             children: (0, n.jsx)(x.R9, {
                 newValue: { sessionId: s, pageCategory: Y, pageSize: B.l5 },
-                children: (0, n.jsx)(C.iM, {
+                children: (0, n.jsx)(b.iM, {
                     tab: X,
-                    children: (0, n.jsx)(H, {
+                    children: (0, n.jsx)(w, {
                         onClose: P,
                         shouldAddEventListener: !1,
                         children: (0, n.jsxs)("div", {
@@ -100,9 +100,9 @@ let H = (e) => {
                             ref: es,
                             tabIndex: -1,
                             children: [
-                                (0, n.jsx)(O.G, { handleTransition: Q, selectedTab: X }),
+                                (0, n.jsx)(T.G, { handleTransition: Q, selectedTab: X }),
                                 null != er &&
-                                    er.type === b.Z.COUNTDOWN &&
+                                    er.type === A.Z.COUNTDOWN &&
                                     (0, n.jsx)(N.k, {
                                         message: er.message,
                                         onClick: () => Q(B.G2.HOME),
