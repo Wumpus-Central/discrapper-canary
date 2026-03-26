@@ -9,9 +9,9 @@ let i = (0, n(600975).C)({
 });
 function s(e) {
     let { guildId: t, location: n } = e;
-    return i.useExperiment({ guildId: t, location: n }, { autoTrackExposure: !0 });
+    return i.useExperiment({ guildId: t, location: n });
 }
 function l(e) {
-    let { guildId: t, location: n, autoTrackExposure: s = !0 } = e;
-    return i.getCurrentConfig({ guildId: t, location: n }, { autoTrackExposure: s });
+    let { guildId: t, location: n } = e;
+    return i.getCurrentConfig({ guildId: t, location: n });
 }

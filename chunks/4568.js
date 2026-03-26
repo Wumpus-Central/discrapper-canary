@@ -5,6 +5,7 @@ e.exports = {
     HA: "channelName__243fe",
     s8: "historyListHeader__243fe",
     PI: "historyList__243fe",
+    Gz: "historyListRows__243fe",
     NG: "eventRow__243fe",
     Wz: "eventConnector__243fe",
     xW: "eventIconContainer__243fe",

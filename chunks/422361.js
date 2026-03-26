@@ -17,8 +17,8 @@ var i = n(627968),
     g = n(186369),
     f = n(725613),
     x = n(963027),
-    C = n(844262),
-    E = n(47167),
+    E = n(844262),
+    C = n(47167),
     I = n(262763),
     N = n(5932),
     b = n(857253),
@@ -35,8 +35,8 @@ var i = n(627968),
     G = n(591346),
     U = n(734057),
     P = n(71393),
-    k = n(834942),
-    w = n(576705),
+    w = n(834942),
+    k = n(576705),
     V = n(222823),
     B = n(543465),
     H = n(977997),
@@ -52,7 +52,7 @@ n(281405);
 var Q = n(652215),
     $ = n(349828),
     Z = n(985018),
-    ee = n(728444);
+    ee = n(928409);
 class et extends K.Ay {
     state = { popoutToShow: null, shouldShowGuildVerificationPopout: !1, hovered: !1 };
     ref = s.createRef();
@@ -164,20 +164,15 @@ class et extends K.Ay {
         return null != n && n.length > 0 ? (0, i.jsx)(O.A, { channel: e, isConnected: t }) : null;
     }
     renderPopout = () => {
-        let { channel: e, sorting: t, isUserOver: n, selected: s } = this.props,
-            { popoutToShow: l, shouldShowGuildVerificationPopout: a } = this.state;
-        if (a)
-            return (0, i.jsx)(j.A, {
-                type: j.H.VOICE,
-                guildId: e.guild_id,
-                closePopout: this.closeGuildVerificationPopout,
-            });
-        if (t || n) return null;
-        if ("history" === l) {
-            let t = this.getVoiceStatesCount();
-            if (t > 0) return (0, i.jsx)(z.A, { channel: e, isChannelSelected: s, voiceStatesCount: t });
-        }
-        return null;
+        let { channel: e, sorting: t, isUserOver: n } = this.props,
+            { popoutToShow: s, shouldShowGuildVerificationPopout: l } = this.state;
+        return l
+            ? (0, i.jsx)(j.A, { type: j.H.VOICE, guildId: e.guild_id, closePopout: this.closeGuildVerificationPopout })
+            : t || n
+              ? null
+              : "history" === s && this.getVoiceStatesCount() > 0
+                ? (0, i.jsx)(z.A, { channel: e, source: "voice_channel" })
+                : null;
     };
     renderOpenChatButton = () => {
         let { channel: e, locked: t, forceShowButtons: n } = this.props;
@@ -220,7 +215,7 @@ class et extends K.Ay {
                 connectDragPreview: p,
                 canReorderChannel: g,
                 canMoveMembers: f,
-                showTutorial: E,
+                showTutorial: C,
                 hasActiveEvent: I,
                 embeddedApps: N,
                 isSubscriptionGated: b,
@@ -232,11 +227,7 @@ class et extends K.Ay {
                 voiceStates: R,
             } = this.props,
             { shouldShowGuildVerificationPopout: O } = this.state,
-            { enableHistoryHover: L } = (0, G.NH)({
-                guildId: e.guild_id,
-                location: "VoiceChannel",
-                autoTrackExposure: !1,
-            }),
+            { enableHistoryHover: L } = (0, G.NH)({ guildId: e.guild_id, location: "VoiceChannel" }),
             M = y || j,
             U = (0, i.jsxs)("li", {
                 ref: this.ref,
@@ -293,7 +284,7 @@ class et extends K.Ay {
                                             embeddedActivitiesCount: N.length,
                                             isSubscriptionGated: b,
                                         }),
-                                        "aria-describedby": (0, C.A)({ channel: e, embeddedApps: N }),
+                                        "aria-describedby": (0, E.A)({ channel: e, embeddedApps: N }),
                                         withGuildIcon: T,
                                         children: [
                                             S &&
@@ -324,7 +315,7 @@ class et extends K.Ay {
         return (
             f && (U = _(U)),
             g && (U = A(m(U))),
-            E &&
+            C &&
                 (U = (0, i.jsx)(D.A, {
                     childRef: this.ref,
                     tutorialId: "voice-conversations",
@@ -349,26 +340,26 @@ function ei(e) {
         } = e,
         d = (0, r.cf)([V.Ay], () => ({ unread: V.Ay.hasUnread(n.id), mentionCount: V.Ay.getMentionCount(n.id) })),
         u = (0, r.bG)([B.Ay], () => B.Ay.resolveUnreadSetting(n)),
-        h = (0, r.cf)([U.A, k.A, w.A], () => {
+        h = (0, r.cf)([U.A, w.A, k.A], () => {
             let e = U.A.getChannel(n.parent_id),
-                i = k.A.getCheck(n.guild_id);
+                i = w.A.getCheck(n.guild_id);
             return {
-                canManageChannel: w.A.can(Q.xBc.MANAGE_CHANNELS, n),
+                canManageChannel: k.A.can(Q.xBc.MANAGE_CHANNELS, n),
                 canReorderChannel:
                     !0 !== s &&
                     (t.id === $.Vc ||
-                        (null != e ? w.A.can(Q.xBc.MANAGE_CHANNELS, e) : w.A.can(Q.xBc.MANAGE_CHANNELS, t))),
-                canMoveMembers: w.A.can(Q.xBc.MOVE_MEMBERS, n),
-                locked: !w.A.can(Q.xBc.CONNECT, n),
-                bypassLimit: w.A.can(Q.xBc.MOVE_MEMBERS, n),
+                        (null != e ? k.A.can(Q.xBc.MANAGE_CHANNELS, e) : k.A.can(Q.xBc.MANAGE_CHANNELS, t))),
+                canMoveMembers: k.A.can(Q.xBc.MOVE_MEMBERS, n),
+                locked: !k.A.can(Q.xBc.CONNECT, n),
+                bypassLimit: k.A.can(Q.xBc.MOVE_MEMBERS, n),
                 unverifiedAccount: !i.canChat,
             };
         }),
         A = (0, r.bG)([H.A], () => H.A.hasVideo(n.id)),
         m = (0, _.Ay)(n),
-        p = (0, E.Ay)(n),
+        p = (0, C.Ay)(n),
         x = (0, y.Qs)(n.id),
-        C = (0, r.bG)([f.A], () => null != f.A.getStartTime(n), [n]),
+        E = (0, r.bG)([f.A], () => null != f.A.getStartTime(n), [n]),
         { isSubscriptionGated: I, needSubscriptionToAccess: N } = (0, v.A)(n.id),
         S = (0, b.A)(),
         T = (0, r.bG)([B.Ay], () => B.Ay.isFavorite(t.id, n.id)),
@@ -416,7 +407,7 @@ function ei(e) {
         showEmptyChannelTopic: M,
         enableOpenTIVForPing: D,
         hasChannelInfo: null != z,
-        hasStartTime: C,
+        hasStartTime: E,
         shouldHighlightChannel: K,
         shouldUseAnimatedWaveform: Y,
     });
