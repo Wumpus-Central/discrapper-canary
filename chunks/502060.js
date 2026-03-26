@@ -1,17 +1,16 @@
-n.d(t, { G: () => a });
+n.d(t, { A: () => a });
 var i = n(627968);
 n(64700);
-var s = n(397927);
-n(195043);
-var r = n(645022);
-function a(e) {
+var s = n(397927),
+    l = n(663237);
+let a = function (e) {
     let { children: t, title: n, description: a } = e;
     return (0, i.jsxs)("div", {
-        className: r.L1,
+        className: l.L1,
         children: [
             (null != n || null != a) &&
                 (0, i.jsxs)("div", {
-                    className: r.Km,
+                    className: l.Km,
                     children: [
                         null != n &&
                             (0, i.jsx)(s.Heading, {
@@ -23,8 +22,8 @@ function a(e) {
                             (0, i.jsx)(s.Text, { variant: "text-sm/normal", color: "text-default", children: a }),
                     ],
                 }),
-            (0, i.jsx)("div", { className: r.Yq, children: t }),
-            (0, i.jsx)(s.cGx, { className: r.yj }),
+            (0, i.jsx)("div", { className: l.Yq, children: t }),
+            (0, i.jsx)(s.cGx, { className: l.yj }),
         ],
     });
-}
+};

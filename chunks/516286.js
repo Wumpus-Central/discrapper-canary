@@ -1,76 +1,48 @@
-n.d(t, { A: () => p });
-var a = n(627968),
-    i = n(64700),
-    s = n(397927),
-    l = n(669550),
-    r = n(963935),
-    o = n(921854),
-    d = n(522958),
-    c = n(983078),
-    u = n(159452);
-function m(e) {
-    let { setting: t, depth: n, highlightMode: s } = e,
-        l = i.useContext(x)?.get(t),
-        r = null;
-    return (
-        null != l &&
-            l.length > 0 &&
-            (r = l
-                .sort((e, t) => e.localeCompare(t))
-                .map((e) => (0, a.jsx)(m, { setting: e, depth: n + 1, highlightMode: s }, e))),
-        (0, a.jsx)(d.n, { title: t, initExpanded: n <= 2, highlightMode: s, children: r })
-    );
-}
-function h(e) {
+n.d(t, { A: () => c });
+var a = n(627968);
+n(64700);
+var i = n(397927),
+    s = n(669550),
+    l = n(963935),
+    r = n(921854),
+    o = n(522958);
+function d(e) {
     let { setting: t, depth: n, inheritedHighlightMode: i } = e,
         s = (function (e, t) {
             if ("migrated" === t) return "migrated";
             switch (e.type) {
-                case r.Z6.ROOT:
+                case l.Z6.ROOT:
                     return "migrated-root";
-                case r.Z6.SECTION:
-                case r.Z6.PANEL:
-                case r.Z6.SIDEBAR_ITEM:
+                case l.Z6.SECTION:
+                case l.Z6.PANEL:
+                case l.Z6.SIDEBAR_ITEM:
                     return "migrated";
                 default:
                     return t ?? "migrated";
             }
         })(t, i),
-        l = "migrated" === s ? "migrated" : void 0,
-        o = null;
+        r = "migrated" === s ? "migrated" : void 0,
+        c = null;
     return (
-        (0, r.nW)(t) &&
+        (0, l.nW)(t) &&
             t.layout.length > 0 &&
-            (o = t.layout.map((e) => (0, a.jsx)(h, { setting: e, depth: n + 1, inheritedHighlightMode: l }, e.key))),
-        (0, a.jsx)(d.n, { title: t.key, initExpanded: n <= 2, highlightMode: s, children: o })
+            (c = t.layout.map((e) => (0, a.jsx)(d, { setting: e, depth: n + 1, inheritedHighlightMode: r }, e.key))),
+        (0, a.jsx)(o.n, { title: t.key, initExpanded: n <= 2, highlightMode: s, children: c })
     );
 }
-let x = i.createContext(null);
-function p() {
-    let [e, t] = i.useState(!1),
-        { legacySettingDirectory: n } = (0, c.B)(),
-        { node: r } = (0, l.Ay)(o.D, ""),
-        d = (0, l.KA)();
-    return (0, a.jsxs)(s.nVY, {
+function c() {
+    let { node: e } = (0, s.Ay)(r.D, ""),
+        t = (0, s.KA)();
+    return (0, a.jsxs)(i.nVY, {
         label: "Settings Tree",
         children: [
-            (0, a.jsx)(s.dOG, {
+            (0, a.jsx)(i.dOG, {
                 label: "Bypass Predicates",
                 description: "Forces all migrated settings to be visible.",
-                checked: d,
-                onChange: l.jL,
+                checked: t,
+                onChange: s.jL,
             }),
-            (0, a.jsx)(s.dOG, { checked: e, onChange: (e) => t(e), label: "Show Legacy Settings Tree" }),
-            (0, a.jsx)(x.Provider, {
-                value: n,
-                children: (0, a.jsxs)("div", {
-                    className: u.B2,
-                    children: [
-                        e && (0, a.jsx)(m, { setting: "root", depth: 1 }, "root"),
-                        !e && (0, a.jsx)(h, { setting: r, depth: 1 }, r.key),
-                    ],
-                }),
-            }),
+            (0, a.jsx)(d, { setting: e, depth: 1 }, e.key),
         ],
     });
 }
