@@ -75,7 +75,7 @@ let p = function (e) {
                             variant: "secondary",
                             text: A.intl.string(A.t.KLOhbO),
                             onClick: () => {
-                                (0, c.K)({
+                                (0, c.K4)({
                                     guildId: p.id,
                                     location: { section: x.JJy.GUILD_BOOSTING_RECOMMENDED_SERVER_GO_TO_SERVER_CTA },
                                 });

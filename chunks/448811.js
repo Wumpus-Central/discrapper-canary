@@ -1,36 +1,39 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => h });
 var r = n(627968);
 n(64700);
 var i = n(397927),
-    a = n(398590),
-    s = n(793574),
+    s = n(398590),
+    a = n(793574),
     o = n(688810),
-    l = n(976860),
-    u = n(979286),
-    c = n(652215),
-    d = n(985018),
-    _ = n(732475);
-let f = (e) => {
+    l = n(509536),
+    u = n(361158),
+    c = n(976860),
+    d = n(979286),
+    _ = n(652215),
+    f = n(985018),
+    p = n(104236);
+let h = (e) => {
     let { onClose: t } = e,
         { analyticsLocations: n } = (0, o.Ay)(),
-        f = () => {
+        h = () => {
             t(),
-                (0, l.pX)(c.BVt.COLLECTIBLES_SHOP),
-                (0, u.Cz)({ analyticsSource: s.A.PREMIUM_PAYMENT_MODAL, analyticsLocations: n }),
-                (0, a.jH)();
+                (0, c.pX)(_.BVt.COLLECTIBLES_SHOP),
+                (0, d.Cz)({ analyticsSource: a.A.PREMIUM_PAYMENT_MODAL, analyticsLocations: n }),
+                (0, s.jH)(),
+                (0, u.dF)(l.Zt);
         };
     return (0, r.jsxs)("div", {
-        className: _.kL,
+        className: p.kL,
         children: [
             (0, r.jsx)("div", {
-                className: _.Wk,
+                className: p.Wk,
                 children: (0, r.jsx)(i.U1X, { size: "custom", width: 20, height: 20, color: i.LU0.colors.WHITE }),
             }),
             (0, r.jsx)(i.Text, {
                 variant: "text-sm/normal",
-                children: d.intl.format(d.t.twSHte, {
-                    checkItOut: (e) => (0, r.jsx)(i.DUT, { className: _.nf, onClick: f, children: e }),
+                children: f.intl.format(f.t.twSHte, {
+                    checkItOut: (e) => (0, r.jsx)(i.DUT, { className: p.nf, onClick: h, children: e }),
                 }),
             }),
         ],

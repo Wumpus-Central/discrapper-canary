@@ -3,8 +3,8 @@ n.d(t, { A: () => U });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(311907),
+    a = n.n(l),
+    r = n(311907),
     o = n(827734),
     c = n(397927),
     d = n(367513),
@@ -12,13 +12,13 @@ var i = n(627968),
     h = n(688810),
     A = n(313961),
     m = n(384059),
-    p = n(47167),
-    g = n(689874),
-    _ = n(509536),
+    _ = n(47167),
+    p = n(689874),
+    g = n(509536),
     f = n(58736),
     x = n(742589),
-    C = n(977851),
-    E = n(71393),
+    E = n(977851),
+    C = n(71393),
     I = n(576705),
     N = n(954571),
     b = n(113783),
@@ -35,29 +35,29 @@ var i = n(627968),
 function G(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, showRequestToSpeakSidebar: s } = e,
         { analyticsLocations: l, newestAnalyticsLocation: o } = (0, h.Ay)(u.A.VOICE_CHANNEL_HEADER),
-        c = (0, a.bG)([A.A], () => A.A.getChatOpen(t.id), [t.id]),
-        p = (0, T.Ni)(t.id),
-        _ = (0, b.zy)(t.id, S.ip.REQUESTED_TO_SPEAK_ONLY);
+        c = (0, r.bG)([A.A], () => A.A.getChatOpen(t.id), [t.id]),
+        _ = (0, T.Ni)(t.id),
+        g = (0, b.zy)(t.id, S.ip.REQUESTED_TO_SPEAK_ONLY);
     return (0, i.jsxs)(h.f5, {
         value: l,
         children: [
-            (0, i.jsx)(g.A, { channelId: t.id }, "clips-enabled-indicator"),
-            !s && p
+            (0, i.jsx)(p.A, { channelId: t.id }, "clips-enabled-indicator"),
+            !s && _
                 ? (0, i.jsx)("div", {
-                      className: r()(D.x6, { [D.vc]: c }),
+                      className: a()(D.x6, { [D.vc]: c }),
                       children: (0, i.jsx)(j.A, {
                           toggleRequestToSpeakSidebar: () => {
                               c && d.A.updateChatOpen(t.id, !1), (0, m.X)(o, m.O.OPEN_REQUEST_TO_SPEAK_SIDEBAR), n();
                           },
                           showRequestToSpeakSidebar: s,
-                          numRequestToSpeak: _,
+                          numRequestToSpeak: g,
                       }),
                   })
                 : null,
             !c &&
                 (0, i.jsx)("div", {
-                    className: r()(D.x6, { [D.vc]: s }),
-                    children: (0, i.jsx)(C.V, {
+                    className: a()(D.x6, { [D.vc]: s }),
+                    children: (0, i.jsx)(E.V, {
                         channelId: t.id,
                         showRequestToSpeakSidebar: s,
                         toggleRequestToSpeakSidebar: n,
@@ -69,19 +69,19 @@ function G(e) {
 }
 function U(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, showRequestToSpeakSidebar: l } = e,
-        u = (0, p.Ay)(t),
-        h = (0, a.bG)([y.A], () => y.A.getStageInstanceByChannel(t.id)),
+        u = (0, _.Ay)(t),
+        h = (0, r.bG)([y.A], () => y.A.getStageInstanceByChannel(t.id)),
         A = (0, b.uy)(t.id),
         m = (0, b.zy)(t.id, S.ip.AUDIENCE),
-        g = (0, a.bG)([E.A], () => E.A.getGuild(t.guild_id), [t.guild_id]),
-        C = g?.maxStageVideoChannelUsers ?? 0,
+        p = (0, r.bG)([C.A], () => C.A.getGuild(t.guild_id), [t.guild_id]),
+        E = p?.maxStageVideoChannelUsers ?? 0,
         T =
-            null != g && g.features.has(O.GuildFeatures.COMMUNITY)
-                ? C < O.p2C
-                : g?.premiumTier !== O.TVA.TIER_3 && C <= O.nyz,
+            null != p && p.features.has(O.GuildFeatures.COMMUNITY)
+                ? E < O.p2C
+                : p?.premiumTier !== O.TVA.TIER_3 && E <= O.nyz,
         j = (0, R.A)(t),
-        U = (0, a.bG)([I.A], () => I.A.can(v.QY, t)),
-        k = () => {
+        U = (0, r.bG)([I.A], () => I.A.can(v.QY, t)),
+        w = () => {
             d.A.updateStageVideoLimitBoostUpsellDismissed(t.id, !0),
                 N.default.track(O.HAw.BOOSTING_UPSELL_CLICKED, {
                     guild_id: t.guild_id,
@@ -90,10 +90,10 @@ function U(e) {
                     action: L.pd.DISMISS,
                 });
         },
-        w = { canModerate: U, audienceCount: m, channel: t, speakerCount: A },
-        V = s.useRef(w);
+        k = { canModerate: U, audienceCount: m, channel: t, speakerCount: A },
+        V = s.useRef(k);
     s.useEffect(() => {
-        V.current = w;
+        V.current = k;
     }),
         s.useEffect(() => {
             let { canModerate: e, audienceCount: t, channel: n, speakerCount: i } = V.current;
@@ -112,7 +112,7 @@ function U(e) {
                 toolbar: (0, i.jsx)(G, { toggleRequestToSpeakSidebar: n, showRequestToSpeakSidebar: l, channel: t }),
                 onDoubleClick: x.I,
                 transparent: !0,
-                className: r()(e, D.lF),
+                className: a()(e, D.lF),
                 children: [
                     (0, i.jsx)(f.Ay.Icon, {
                         icon: c.qux,
@@ -173,7 +173,7 @@ function U(e) {
                                   ? (0, i.jsxs)(i.Fragment, {
                                         children: [
                                             (0, i.jsx)(c.Button, {
-                                                onClick: k,
+                                                onClick: w,
                                                 size: "sm",
                                                 variant: "secondary",
                                                 text: M.intl.string(M.t.L5eIZ2),
@@ -181,7 +181,7 @@ function U(e) {
                                             (0, i.jsx)(c.Button, {
                                                 variant: "expressive",
                                                 onClick: () => {
-                                                    (0, _.K)({
+                                                    (0, g.K4)({
                                                         guildId: t.guild_id,
                                                         location: { section: O.JJy.STAGE_VIDEO_LIMIT },
                                                     }),
@@ -199,7 +199,7 @@ function U(e) {
                                     })
                                   : (0, i.jsx)(c.Button, {
                                         variant: "primary",
-                                        onClick: k,
+                                        onClick: w,
                                         size: "sm",
                                         text: M.intl.string(M.t.WAI6xu),
                                     }),

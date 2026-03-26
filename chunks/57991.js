@@ -152,7 +152,7 @@ function b(e) {
                 P &&
                     (e.stopPropagation(),
                     e.preventDefault(),
-                    (0, _.K)({
+                    (0, _.K4)({
                         guildId: s.id,
                         location: { section: y.JJy.GUILD_HEADER, object: y.ZSU.BOOST_GEM_ICON },
                     }));

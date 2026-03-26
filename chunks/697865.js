@@ -1,67 +1,67 @@
-n.d(t, { A: () => y });
+n.d(t, { A: () => L });
 var r = n(627968),
     i = n(503698),
-    l = n.n(i),
-    s = n(158954),
-    a = n(311907),
-    o = n(421380),
+    s = n.n(i),
+    l = n(158954),
+    o = n(311907),
+    a = n(421380),
     d = n(397927),
     u = n(730134),
     c = n(775602),
     m = n(509536),
     p = n(721923),
     _ = n(29086),
-    x = n(854627),
-    A = n(696451),
-    f = n(317525),
-    g = n(71393),
+    f = n(854627),
+    g = n(696451),
+    x = n(317525),
+    A = n(71393),
     v = n(287809),
     h = n(562153),
-    b = n(837921),
+    E = n(837921),
     j = n(953382),
-    E = n(652215),
+    b = n(652215),
     I = n(333354),
-    C = n(985018),
-    S = n(520277),
+    S = n(985018),
+    C = n(509754),
     w = n(445826);
-let N = b.Ay.getEnableHardwareAcceleration() ? d.JsQ : u.A;
-function y(e) {
+let N = E.Ay.getEnableHardwareAcceleration() ? d.JsQ : u.A;
+function L(e) {
     let { guildId: t, showVideoCard: n = !1 } = e,
-        i = (0, a.bG)([g.A], () => g.A.getGuild(t)),
-        u = (0, a.bG)([f.A], () => f.A.getSortedRoles(t).find((e) => e.tags?.premium_subscriber === null)),
-        b = (0, a.bG)([v.default], () => v.default.getCurrentUser()),
-        y = b?.id,
-        L = (0, a.bG)([A.Ay], () => (null != y ? A.Ay.getMember(t, y) : void 0), [y, t]),
-        T = L?.premiumSince != null,
-        k = (0, j.q)("GuildPowerupsBoostInfoContainerMember"),
-        R = (0, a.bG)([c.A], () => c.A.useReducedMotion),
+        i = (0, o.bG)([A.A], () => A.A.getGuild(t)),
+        u = (0, o.bG)([x.A], () => x.A.getSortedRoles(t).find((e) => e.tags?.premium_subscriber === null)),
+        E = (0, o.bG)([v.default], () => v.default.getCurrentUser()),
+        L = E?.id,
+        y = (0, o.bG)([g.Ay], () => (null != L ? g.Ay.getMember(t, L) : void 0), [L, t]),
+        k = y?.premiumSince != null,
+        R = (0, j.q)("GuildPowerupsBoostInfoContainerMember"),
+        T = (0, o.bG)([c.A], () => c.A.useReducedMotion),
         {
-            avatarDecorationSrc: P,
-            avatarSrc: G,
+            avatarDecorationSrc: G,
+            avatarSrc: P,
             eventHandlers: O,
-        } = (0, x.A)({ userId: b?.id, guildId: t, size: d._3J.SIZE_40, animateOnHover: !R });
-    if (null == i || null == L || null == b) return null;
+        } = (0, f.A)({ userId: E?.id, guildId: t, size: d._3J.SIZE_40, animateOnHover: !T });
+    if (null == i || null == y || null == E) return null;
     let D = n ? "div" : d.hLv;
     return (0, r.jsxs)(D, {
-        className: n ? S.ft : S.fx,
+        className: n ? C.ft : C.fx,
         children: [
-            !n && (0, r.jsx)("img", { alt: "", className: S.Sl, src: w }),
+            !n && (0, r.jsx)("img", { alt: "", className: C.Sl, src: w }),
             (0, r.jsxs)("div", {
-                className: S.FS,
+                className: C.FS,
                 children: [
-                    (0, r.jsx)(s.EYj, {
+                    (0, r.jsx)(l.EYj, {
                         variant: "text-md/semibold",
-                        children: C.intl.string(T ? I.default.KSWK1U : I.default.XXXX5l),
+                        children: S.intl.string(k ? I.default.KSWK1U : I.default.XXXX5l),
                     }),
-                    (0, r.jsx)(s.EYj, {
+                    (0, r.jsx)(l.EYj, {
                         variant: "text-sm/medium",
-                        children: C.intl.format(T ? I.default["7fWTg4"] : I.default["7PXeeQ"], {
+                        children: S.intl.format(k ? I.default["7fWTg4"] : I.default["7PXeeQ"], {
                             onClick: () => {
-                                (0, m.K)({
+                                (0, m.K4)({
                                     guildId: t,
                                     location: {
-                                        section: E.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
-                                        object: E.ZSU.LEARN_MORE,
+                                        section: b.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
+                                        object: b.ZSU.LEARN_MORE,
                                     },
                                 });
                             },
@@ -70,41 +70,41 @@ function y(e) {
                 ],
             }),
             null != u &&
-                !T &&
+                !k &&
                 (0, r.jsx)(_.V, {
                     avatar: (0, r.jsx)(N, {
                         ...O,
-                        user: b,
-                        src: G,
-                        avatarDecoration: P,
+                        user: E,
+                        src: P,
+                        avatarDecoration: G,
                         size: d._3J.SIZE_40,
                         "aria-hidden": !0,
                         animate: !0,
                     }),
                     username: (0, r.jsx)(d.gyj, {
                         variant: "text-md/semibold",
-                        name: h.Ay.getName(t, null, b),
+                        name: h.Ay.getName(t, null, E),
                         colorString: u.colorString,
                         colorStrings: u.colorStrings,
                     }),
-                    className: l()(S.Qs, S.cX),
-                    message: C.intl.string(C.t["6OSasb"]),
+                    className: s()(C.Qs, C.cX),
+                    message: S.intl.string(S.t["6OSasb"]),
                     decorations: (0, r.jsx)(d._Jp, {
                         color: d.LU0.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                        className: S.$J,
+                        className: C.$J,
                     }),
                 }),
             (0, r.jsx)(p.A, {
                 guild: i,
-                className: S.Qs,
+                className: C.Qs,
                 analyticsLocation: {
-                    page: E.liQ.GUILD_POWERUPS_OVERVIEW,
-                    section: E.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
+                    page: b.liQ.GUILD_POWERUPS_OVERVIEW,
+                    section: b.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
                 },
-                color: o.XD.BRAND,
-                size: o.lO.MEDIUM,
+                color: a.XD.BRAND,
+                size: a.lO.MEDIUM,
                 fullWidth: !0,
-                useExpressiveButton: k,
+                useExpressiveButton: R,
                 icon: (0, r.jsx)(d._Jp, { color: "currentColor", size: "sm" }),
             }),
         ],

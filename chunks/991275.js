@@ -45,7 +45,7 @@ var r = n(627968),
     W = n(837921),
     K = n(652215),
     $ = n(985018),
-    z = n(701939);
+    z = n(922936);
 let q = W.Ay.getEnableHardwareAcceleration(),
     Z = 18,
     X = 42,
@@ -85,7 +85,7 @@ let q = W.Ay.getEnableHardwareAcceleration(),
                                 n.e("42128"),
                                 n.e("97283"),
                                 n.e("84841"),
-                                n.e("82669"),
+                                n.e("19901"),
                             ]).then(n.bind(n, 107632)),
                             t = B.A.isInChannel(G.A.getVoiceChannelId(), c.id);
                         return (n) => (0, r.jsx)(e, { ...n, user: c, guildId: I, channel: A, showMediaItems: t });
@@ -104,7 +104,7 @@ let q = W.Ay.getEnableHardwareAcceleration(),
                 (e) => {
                     null != I &&
                         (e.stopPropagation(),
-                        (0, D.K)({
+                        (0, D.K4)({
                             guildId: I,
                             location: { section: K.JJy.MEMBER_LIST, object: K.ZSU.BOOST_GEM_ICON },
                         }));

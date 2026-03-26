@@ -1,38 +1,38 @@
 n.d(t, { A: () => M });
 var i = n(627968),
-    l = n(64700),
-    a = n(311907),
+    a = n(64700),
+    l = n(311907),
     r = n(554146),
     s = n(397927),
     o = n(155718),
     c = n(775602),
     d = n(793574),
     u = n(367727),
-    m = n(509536),
-    _ = n(881635),
+    _ = n(509536),
+    m = n(881635),
     A = n(363487),
-    f = n(828162),
-    h = n(71393),
-    g = n(888675),
-    E = n(652215),
-    p = n(49999),
-    x = n(985018),
-    C = n(136708),
-    I = n(738448),
-    T = n(274993),
-    N = n(218924);
-function S(e) {
-    let { title: t, body: n, guild: l, analyticsLocations: r } = e,
-        o = (0, a.bG)([c.A], () => c.A.useReducedMotion);
+    E = n(828162),
+    I = n(71393),
+    T = n(888675),
+    f = n(652215),
+    N = n(49999),
+    g = n(985018),
+    C = n(333354),
+    h = n(884967),
+    p = n(274993),
+    x = n(218924);
+function R(e) {
+    let { title: t, body: n, guild: a, analyticsLocations: r } = e,
+        o = (0, l.bG)([c.A], () => c.A.useReducedMotion);
     return (0, i.jsxs)("div", {
-        className: I.kL,
+        className: h.kL,
         children: [
             (0, i.jsx)("div", {
-                className: I.ZS,
-                children: (0, i.jsx)("img", { className: I.Sl, src: o ? N.A : T.A, alt: "Boost gem" }),
+                className: h.ZS,
+                children: (0, i.jsx)("img", { className: h.Sl, src: o ? x.A : p.A, alt: "Boost gem" }),
             }),
             (0, i.jsxs)("div", {
-                className: I.Qs,
+                className: h.Qs,
                 children: [
                     (0, i.jsx)(s.Heading, {
                         variant: "heading-md/semibold",
@@ -41,43 +41,43 @@ function S(e) {
                     }),
                     (0, i.jsx)(s.Text, {
                         color: "text-muted",
-                        className: I.rf,
+                        className: h.rf,
                         variant: "text-sm/medium",
                         children: n,
                     }),
                 ],
             }),
             (0, i.jsx)("div", {
-                children: (0, i.jsx)(_.A, {
-                    guild: l,
+                children: (0, i.jsx)(m.A, {
+                    guild: a,
                     analyticsLocations: r,
-                    analyticsLocation: { page: E.liQ.GUILD_CHANNEL, section: E.JJy.CHANNEL_TEXT_AREA },
+                    analyticsLocation: { page: f.liQ.GUILD_CHANNEL, section: f.JJy.CHANNEL_TEXT_AREA },
                 }),
             }),
         ],
     });
 }
-function R(e) {
+function S(e) {
     let { guild: t } = e;
-    l.useEffect(() => {
-        (0, u.uh)(r.M.FIRST_BOOSTER_UPSELL_OVERSEER, { dismissAction: p.i.AUTO_DISMISS, guildId: t.id });
+    a.useEffect(() => {
+        (0, u.uh)(r.M.FIRST_BOOSTER_UPSELL_OVERSEER, { dismissAction: N.i.AUTO_DISMISS, guildId: t.id });
     }, [t.id]);
     let n = (0, A.A)(t.id);
-    return (0, i.jsx)(S, {
-        title: x.intl.string(C.default.qGDEON),
-        body: x.intl.format(C.default["s+HTdX"], {
+    return (0, i.jsx)(R, {
+        title: g.intl.string(C.default.qGDEON),
+        body: g.intl.format(C.default["s+HTdX"], {
             viewAllPerks: (e) =>
                 (0, i.jsx)(s.DUT, {
                     tag: "a",
                     role: "link",
                     onClick: () => {
                         n
-                            ? (0, f.A)(t.id, d.A.GUILD_BOOSTING_FIRST_TIME_BOOSTER_UPSELL)
-                            : (0, m.K)({
+                            ? (0, E.A)(t.id, d.A.GUILD_BOOSTING_FIRST_TIME_BOOSTER_UPSELL)
+                            : (0, _.K4)({
                                   guildId: t.id,
                                   location: {
-                                      section: E.JJy.CHANNEL_TEXT_AREA,
-                                      object: E.ZSU.BOOST_ANNOUNCEMENT_UPSELL,
+                                      section: f.JJy.CHANNEL_TEXT_AREA,
+                                      object: f.ZSU.BOOST_ANNOUNCEMENT_UPSELL,
                                   },
                               });
                     },
@@ -88,20 +88,20 @@ function R(e) {
         analyticsLocations: [d.A.GUILD_BOOSTING_FIRST_TIME_BOOSTER_UPSELL],
     });
 }
-function v(e) {
+function O(e) {
     let { boostingPrompt: t, guild: n } = e;
-    return t.guildBoostUpsellType === o.Mk.FIRST_BOOSTER ? (0, i.jsx)(R, { guild: n }) : null;
+    return t.guildBoostUpsellType === o.Mk.FIRST_BOOSTER ? (0, i.jsx)(S, { guild: n }) : null;
 }
 function M(e) {
     let { boostingPrompt: t, channel: n } = e,
-        l = n.guild_id,
-        r = (0, a.bG)([h.A], () => h.A.getGuild(l), [l]);
+        a = n.guild_id,
+        r = (0, l.bG)([I.A], () => I.A.getGuild(a), [a]);
     return null == r
         ? null
-        : (0, i.jsx)(g.A, {
-              contentClassName: I.FG,
-              iconContainerClassName: I.zc,
-              iconNode: (0, i.jsx)(s.XFE, { colorClass: I.Kk }),
-              children: (0, i.jsx)(v, { boostingPrompt: t, guild: r }),
+        : (0, i.jsx)(T.A, {
+              contentClassName: h.FG,
+              iconContainerClassName: h.zc,
+              iconNode: (0, i.jsx)(s.XFE, { colorClass: h.Kk }),
+              children: (0, i.jsx)(O, { boostingPrompt: t, guild: r }),
           });
 }

@@ -31,7 +31,7 @@ function I(e) {
                 e.preventDefault(),
                 s &&
                     !i &&
-                    (0, _.K)({
+                    (0, _.K4)({
                         guildId: t.id,
                         location: { section: E.JJy.GUILD_HEADER, object: E.ZSU.BOOST_GEM_ICON },
                     });

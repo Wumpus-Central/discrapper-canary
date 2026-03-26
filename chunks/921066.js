@@ -20,7 +20,7 @@ var i,
     C = n(763754),
     h = n(652215),
     p = n(985018),
-    x = n(625780),
+    x = n(272435),
     R = n(810309),
     S = n(274993),
     O = n(218924);
@@ -113,7 +113,7 @@ function y(e) {
             null != t &&
                 (i
                     ? (0, f.A)(t.id, _.A.GUILD_BOOSTING_SYSTEM_MESSAGE)
-                    : (0, m.K)({
+                    : (0, m.K4)({
                           guildId: t.id,
                           location: { section: h.JJy.CHANNEL_TEXT_AREA, object: h.ZSU.BOOST_ANNOUNCEMENT_UPSELL },
                       }));

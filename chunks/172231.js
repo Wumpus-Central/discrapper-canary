@@ -57,7 +57,7 @@ function E(t) {
                       variant: "expressive",
                       onClick: () => {
                           T(),
-                              (0, r.K)({ guildId: e.guild_id, location: { section: o.JJy.STAGE_VIDEO_LIMIT } }),
+                              (0, r.K4)({ guildId: e.guild_id, location: { section: o.JJy.STAGE_VIDEO_LIMIT } }),
                               l.default.track(o.HAw.BOOSTING_UPSELL_CLICKED, {
                                   guild_id: e.guild_id,
                                   type: c.e.VIDEO_STAGE_LIMIT,

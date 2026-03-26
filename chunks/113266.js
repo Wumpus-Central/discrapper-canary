@@ -21,23 +21,23 @@ var i = n(627968),
     N = n(796774),
     E = n(209932),
     b = n(102597),
-    T = n(904054),
-    C = n(496502),
+    C = n(904054),
+    T = n(496502),
     I = n(657331),
     v = n(71393),
     S = n(287809),
     y = n(358431),
     R = n(486020),
     O = n(473145),
-    G = n(723702),
-    L = n(427262),
+    L = n(723702),
+    G = n(427262),
     D = n(555337),
     M = n(619842),
     k = n(652215),
     U = n(980504),
     P = n(985018),
-    w = n(591322);
-let B = G.isPlatformEmbedded || "Safari" !== o().name;
+    w = n(656489);
+let B = L.isPlatformEmbedded || "Safari" !== o().name;
 function F() {
     let e = (0, d.bG)([D.A], () => D.A.getProps().guild),
         { analyticsLocations: t } = (0, A.Ay)(p.A.GUILD_SETTINGS_SOUNDBOARD);
@@ -49,7 +49,7 @@ function F() {
                   gap: 8,
                   children: [
                       (0, i.jsx)(g.Heading, { variant: "heading-lg/semibold", children: P.intl.string(P.t.OWQNYr) }),
-                      (0, i.jsx)(Y, { guild: e }),
+                      (0, i.jsx)(K, { guild: e }),
                   ],
               }),
           });
@@ -76,7 +76,7 @@ function V(e) {
                       children: (0, i.jsx)(g.DUT, {
                           className: w.c7,
                           onClick: () => {
-                              (0, f.K)({
+                              (0, f.K4)({
                                   guildId: s,
                                   location: { section: k.JJy.GUILD_SETTINGS_SOUNDBOARD, object: k.ZSU.BOOST_GEM_ICON },
                               });
@@ -132,7 +132,7 @@ let z = (e) => {
             popoutTargetRef: e,
         });
     };
-function Y(e) {
+function K(e) {
     let { guild: t } = e,
         [l, r] = (0, d.yK)([E.A], () => [
             E.A.getSoundsForGuild(t.id) ?? U.pD,
@@ -151,7 +151,7 @@ function Y(e) {
     function p(e) {
         o.current?.pause();
         let t = x[e.soundId];
-        null != t && ((o.current = t), (t.currentTime = 0), (t.volume = (0, T.A)(e.volume)), t.play());
+        null != t && ((o.current = t), (t.currentTime = 0), (t.volume = (0, C.A)(e.volume)), t.play());
     }
     if (
         (s.useEffect(
@@ -169,7 +169,7 @@ function Y(e) {
               text: P.intl.string(P.t["/uNYPJ"]),
               onClick: function () {
                   (0, g.mMO)(async () => {
-                      let { default: e } = await Promise.all([n.e("40556"), n.e("44986")]).then(n.bind(n, 228884));
+                      let { default: e } = await Promise.all([n.e("40556"), n.e("18550")]).then(n.bind(n, 228884));
                       return (n) => (0, i.jsx)(e, { ...n, guildId: t.id });
                   });
               },
@@ -225,7 +225,7 @@ function Y(e) {
                                       ],
                                   }),
                                   l.map((e) =>
-                                      (0, i.jsx)(K, { sound: e, isPlaying: !1, guild: t, onPlaySound: p }, e.soundId),
+                                      (0, i.jsx)(Y, { sound: e, isPlaying: !1, guild: t, onPlaySound: p }, e.soundId),
                                   ),
                               ],
                           }),
@@ -234,18 +234,18 @@ function Y(e) {
         ],
     });
 }
-function K(e) {
+function Y(e) {
     let { sound: t, isPlaying: l, onPlaySound: a, guild: o } = e,
         { soundId: c, name: m, user: _, userId: p, emojiId: f, emojiName: E } = t,
         { analyticsLocations: b } = (0, A.Ay)(),
-        T = (0, d.bG)([S.default], () => _ ?? S.default.getUser(p), [p, _]),
+        C = (0, d.bG)([S.default], () => _ ?? S.default.getUser(p), [p, _]),
         { canManageGuildExpression: v } = (0, j.nr)(o),
         y = s.useMemo(() => v(t), [t, v]),
         O = null != f || null != E,
-        [G, D] = s.useState(!1),
-        M = (0, C.v)(t, o.id);
+        [L, D] = s.useState(!1),
+        M = (0, T.v)(t, o.id);
     async function k() {
-        if (!G) {
+        if (!L) {
             D(!0);
             try {
                 await (0, N.ty)(o.id, c);
@@ -255,15 +255,15 @@ function K(e) {
         }
     }
     s.useEffect(() => {
-        null == T && e();
+        null == C && e();
         async function e() {
             await (0, x.wz)(p);
         }
-    }, [T, p]);
+    }, [C, p]);
     let U = s.useCallback(() => {
-            null != T && (0, I.openUserProfileModal)({ userId: T.id, guildId: o.id, sourceAnalyticsLocations: b });
-        }, [T, o.id, b]),
-        B = L.Ay.useUserTag(T);
+            null != C && (0, I.openUserProfileModal)({ userId: C.id, guildId: o.id, sourceAnalyticsLocations: b });
+        }, [C, o.id, b]),
+        B = G.Ay.useUserTag(C);
     return (0, i.jsxs)("div", {
         className: r()(w.nM, { [w.vu]: l }),
         children: [
@@ -272,7 +272,7 @@ function K(e) {
                 : (0, i.jsx)(g.xfq, { size: "md", color: "currentColor", className: w.Zg }),
             (0, i.jsx)(g.DUT, {
                 onClick: () => {
-                    G || a(t);
+                    L || a(t);
                 },
                 onContextMenu: M,
                 className: w.TW,
@@ -282,7 +282,7 @@ function K(e) {
                     children: [m, " ", (0, i.jsx)(g.HKD, { size: "md", color: "currentColor", className: w.Ns })],
                 }),
             }),
-            null != T &&
+            null != C &&
                 (0, i.jsxs)(g.DUT, {
                     className: w.xp,
                     onClick: U,
@@ -291,7 +291,7 @@ function K(e) {
                             "aria-label": B,
                             size: g._3J.SIZE_24,
                             className: w.Cp,
-                            src: (0, R.ku)(T, !1, 24),
+                            src: (0, R.ku)(C, !1, 24),
                         }),
                         (0, i.jsx)(g.Text, { variant: "text-sm/normal", lineClamp: 1, children: B }),
                     ],
@@ -305,7 +305,7 @@ function K(e) {
                               onClick: function (e) {
                                   e.stopPropagation(),
                                       (0, g.mMO)(async () => {
-                                          let { default: e } = await Promise.all([n.e("40556"), n.e("44986")]).then(
+                                          let { default: e } = await Promise.all([n.e("40556"), n.e("18550")]).then(
                                               n.bind(n, 228884),
                                           );
                                           return (n) => (0, i.jsx)(e, { ...n, guildId: o.id, existingSound: t });
