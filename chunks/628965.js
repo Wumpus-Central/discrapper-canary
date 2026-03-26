@@ -1,42 +1,36 @@
 "use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => E });
 var r = n(311907),
     i = n(73153),
     s = n(287809);
 let a = null,
     o = {},
     l = null,
-    u = [],
-    c = null;
-function d(e) {
-    _(e);
+    u = [];
+function c(e) {
+    d(e);
 }
-function _(e) {
-    if (null == s.default.getCurrentUser()) return f();
+function d(e) {
+    if (null == s.default.getCurrentUser()) return _();
     (a = e.section ?? a),
         null != e.subsection && null != a && (o[a] = e.subsection),
         (l = e.analyticsLocation ?? null),
-        (u = e.analyticsLocations ?? []),
-        (c = e.searchParams ?? null);
+        (u = e.analyticsLocations ?? []);
 }
-function f() {
-    (a = null), (o = {}), (l = null), (u = []), (c = null);
+function _() {
+    (a = null), (o = {}), (l = null), (u = []);
+}
+function f(e) {
+    (a = e.section), (l = null), (u = e.analyticsLocations ?? []), null != e.subsection && (o[a] = e.subsection);
 }
 function p(e) {
-    (a = e.section),
-        (l = null),
-        (u = e.analyticsLocations ?? []),
-        (c = null),
-        null != e.subsection && (o[a] = e.subsection);
-}
-function h(e) {
     let { forSection: t } = e;
     null != t ? delete o[t] : null != a && delete o[a];
 }
-function m() {
-    (l = null), (u = []), (c = null);
+function h() {
+    (l = null), (u = []);
 }
-class E extends r.Ay.Store {
+class m extends r.Ay.Store {
     static displayName = "UserSettingsModalStore";
     initialize() {
         this.waitFor(s.default);
@@ -53,16 +47,13 @@ class E extends r.Ay.Store {
     getAnalyticsLocations() {
         return u;
     }
-    getSearchParams() {
-        return c;
-    }
 }
-let g = new E(i.h, {
-    USER_SETTINGS_MODAL_OPEN: d,
-    USER_SETTINGS_MODAL_INIT: _,
-    USER_SETTINGS_MODAL_CLOSE: f,
-    LOGOUT: f,
-    USER_SETTINGS_MODAL_SET_SECTION: p,
-    USER_SETTINGS_MODAL_CLEAR_SUBSECTION: h,
-    USER_SETTINGS_MODAL_CLEAR_LOCATION: m,
+let E = new m(i.h, {
+    USER_SETTINGS_MODAL_OPEN: c,
+    USER_SETTINGS_MODAL_INIT: d,
+    USER_SETTINGS_MODAL_CLOSE: _,
+    LOGOUT: _,
+    USER_SETTINGS_MODAL_SET_SECTION: f,
+    USER_SETTINGS_MODAL_CLEAR_SUBSECTION: p,
+    USER_SETTINGS_MODAL_CLEAR_LOCATION: h,
 });
