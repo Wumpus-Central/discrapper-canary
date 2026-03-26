@@ -12,6 +12,7 @@ let u = {
         [r.D.XBOX_GAME_PASS]: {
             distributor: r.D.XBOX_GAME_PASS,
             getLabel: () => a.intl.string(a.t["s7+3um"]),
+            getStoreName: () => a.intl.string(a.t["QpN/Iz"]),
             icon: i.YWd,
             getStoreUrl: l,
             analyticsAction: "PRESS_PLAY_WITH_XBOX_GAME_PASS_BUTTON",
@@ -19,6 +20,7 @@ let u = {
         [r.D.STEAM]: {
             distributor: r.D.STEAM,
             getLabel: () => a.intl.string(a.t.OlubC8),
+            getStoreName: () => a.intl.string(a.t.FsANs4),
             icon: i.NXQ,
             getStoreUrl: s.Z,
             analyticsAction: "PRESS_PLAY_ON_STEAM_BUTTON",
