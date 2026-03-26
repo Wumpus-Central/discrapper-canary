@@ -15,9 +15,9 @@ var a = n(627968),
     g = n(409626),
     p = n(368546),
     _ = n(985018),
-    v = n(851822),
-    j = n(351886),
-    A = n(947570);
+    v = n(282063),
+    j = n(426401),
+    A = n(791129);
 function C(e) {
     let { detectedGame: t, trackAction: n } = e,
         i = l.useRef(null),
@@ -96,7 +96,7 @@ function C(e) {
               ],
           });
 }
-let b = l.memo(function (e) {
+let I = l.memo(function (e) {
         let { item: t, index: n, isSelected: i, isPlaying: s, onSelect: d, gameName: u } = e,
             m = l.useCallback(() => d(n), [d, n]);
         return (0, a.jsx)(o.DUT, {
@@ -119,7 +119,7 @@ let b = l.memo(function (e) {
             }),
         });
     }),
-    I = l.memo(function (e) {
+    b = l.memo(function (e) {
         let {
                 item: t,
                 reducedMotion: n,
@@ -239,7 +239,7 @@ function E(e) {
                       ? (0, a.jsx)("div", {
                             className: A.ND,
                             children: (0, a.jsx)(
-                                I,
+                                b,
                                 {
                                     item: S,
                                     reducedMotion: C,
@@ -263,9 +263,10 @@ function E(e) {
                         }),
                   (0, a.jsx)(u.A, {
                       gap: "xs",
+                      iconButtonSize: "sm",
                       children: E.map((e, n) =>
                           (0, a.jsx)(
-                              b,
+                              I,
                               { item: e, index: n, isPlaying: T, isSelected: n === N, onSelect: r, gameName: t.name },
                               `${n}-${e.url}`,
                           ),
