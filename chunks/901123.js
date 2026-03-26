@@ -124,10 +124,12 @@ let a = "@me",
         BILLING_MANAGE_SUBSCRIPTION: "/billing/premium/manage",
         BILLING_MANAGE_SUBSCRIPTION_WITH_DEEP_LINK: (e, t) =>
             `/billing/premium/manage?deep_link_type=${e}${null != t ? `&load_id=${t}` : ""}`,
-        BILLING_STANDALONE_CHECKOUT_PAGE: (e, t, n, r, i, s) =>
-            `/billing/premium/subscribe?plan_id=${e}&gift=${t}&load_id=${n}${null != r ? `&payment_method_type=${r}` : ""}${null != i ? `&deep_link_type=${i}` : ""}${null != s ? `&use_preset_offer=${s}` : ""}`,
-        BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE: (e, t, n) =>
-            `/billing/guild-subscriptions/purchase?guild_id=${e}${null != t ? `&deep_link_type=${t}` : ""}${null != n ? `&load_id=${n}` : ""}`,
+        BILLING_MANAGE_SUBSCRIPTION_WITH_FLOW_TYPE: (e, t) =>
+            `/billing/premium/manage?flow_type=${e}${null != t ? `&load_id=${t}` : ""}`,
+        BILLING_STANDALONE_CHECKOUT_PAGE: (e, t, n, r, i, s, a) =>
+            `/billing/premium/subscribe?plan_id=${e}&gift=${t}&load_id=${n}${null != r ? `&payment_method_type=${r}` : ""}${null != i ? `&deep_link_type=${i}` : ""}${null != s ? `&use_preset_offer=${s}` : ""}${null != a ? `&flow_type=${a}` : ""}`,
+        BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE: (e, t, n, r) =>
+            `/billing/guild-subscriptions/purchase?guild_id=${e}${null != t ? `&deep_link_type=${t}` : ""}${null != n ? `&load_id=${n}` : ""}${null != r ? `&flow_type=${r}` : ""}`,
         GUILD_BOOSTING_MARKETING: (e) => `/guilds/${e}/premium-guild-subscriptions`,
         GUILD_SETTINGS: (e, t, n) => {
             let r = `/guilds/${e}/settings${null != t ? `/${t}` : ""}`;
