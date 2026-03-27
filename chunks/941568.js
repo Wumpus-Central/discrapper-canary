@@ -3,40 +3,52 @@ var a = n(627968),
     i = n(64700),
     l = n(503698),
     r = n.n(l),
-    s = n(397927),
-    c = n(688810),
-    o = n(607470),
-    d = n(720462),
-    u = n(46054),
-    m = n(409626),
-    x = n(21091),
-    h = n(385064),
+    s = n(621466),
+    c = n(397927),
+    o = n(688810),
+    d = n(607470),
+    u = n(720462),
+    m = n(46054),
+    x = n(409626),
+    h = n(21091),
+    f = n(385064),
     g = n(305080),
-    f = n(954506),
-    _ = n(985018),
-    p = n(95225),
-    v = n(782691);
-function A(e, t) {
-    return u.A.parse(e, !0, { allowHeading: !0, allowList: !0, allowLinks: !0, channelId: t });
+    _ = n(954506),
+    p = n(985018),
+    v = n(95225),
+    A = n(782691);
+function j(e, t) {
+    return m.A.parse(e, !0, { allowHeading: !0, allowList: !0, allowLinks: !0, channelId: t });
 }
-function j(e) {
-    let { variant: t, message: n, channelId: l, onCardClick: c } = e,
-        [d, u] = i.useState(!1),
-        m = null != n.mediaUrl,
-        x = "video" === n.mediaType,
-        h = "main" === t,
-        g = i.useCallback(() => u(!0), []),
-        f = i.useCallback(() => c(n.id), [c, n.id]);
-    return (0, a.jsxs)(s.DUT, {
-        className: h ? p.cG : p.IU,
-        onClick: f,
+function E(e) {
+    let { variant: t, message: n, channelId: l, onCardClick: o } = e,
+        [u, m] = i.useState(!1),
+        x = null != n.mediaUrl,
+        h = "video" === n.mediaType,
+        f = "main" === t,
+        g = i.useCallback(() => m(!0), []),
+        _ = i.useCallback(
+            (e) => {
+                if (
+                    !(
+                        (0, s.vq)(e.target, HTMLAnchorElement) ||
+                        ((0, s.vq)(e.target, HTMLSpanElement) && (0, s.vq)(e.target.parentElement, HTMLAnchorElement))
+                    )
+                )
+                    return o(n.id);
+            },
+            [o, n.id],
+        );
+    return (0, a.jsxs)(c.DUT, {
+        className: f ? v.cG : v.IU,
+        onClick: _,
         children: [
-            m &&
+            x &&
                 (0, a.jsxs)("div", {
-                    className: h ? p._v : p.eZ,
+                    className: f ? v._v : v.eZ,
                     children: [
-                        x
-                            ? (0, a.jsx)(o.A, {
+                        h
+                            ? (0, a.jsx)(d.A, {
                                   src: n.mediaUrl,
                                   poster: (function (e) {
                                       try {
@@ -46,7 +58,7 @@ function j(e) {
                                           return;
                                       }
                                   })(n.mediaUrl),
-                                  className: r()(h ? p.fk : p.v, d ? p.RT : p.YC),
+                                  className: r()(f ? v.fk : v.v, u ? v.RT : v.YC),
                                   muted: !0,
                                   preload: "metadata",
                                   playsInline: !0,
@@ -54,29 +66,29 @@ function j(e) {
                               })
                             : (0, a.jsx)("img", {
                                   src: n.mediaUrl,
-                                  className: r()(h ? p.fk : p.v, d ? p.RT : p.YC),
+                                  className: r()(f ? v.fk : v.v, u ? v.RT : v.YC),
                                   alt: "",
                                   onLoad: g,
                               }),
-                        !d &&
+                        !u &&
                             (0, a.jsx)("div", {
-                                className: p.ns,
-                                children: (0, a.jsx)(s.y$y, { type: s.tVU.SPINNING_CIRCLE, className: p.u1 }),
+                                className: v.ns,
+                                children: (0, a.jsx)(c.y$y, { type: c.tVU.SPINNING_CIRCLE, className: v.u1 }),
                             }),
                     ],
                 }),
             (0, a.jsxs)("div", {
-                className: h ? p.GT : p.s4,
+                className: f ? v.GT : v.s4,
                 children: [
                     null != n.title &&
-                        (0, a.jsx)(s.Heading, {
-                            variant: h ? "heading-md/bold" : "heading-sm/bold",
+                        (0, a.jsx)(c.Heading, {
+                            variant: f ? "heading-md/bold" : "heading-sm/bold",
                             color: "text-strong",
-                            className: h ? p.KX : p._N,
-                            children: A(n.title, l),
+                            className: f ? v.KX : v._N,
+                            children: j(n.title, l),
                         }),
                     n.body.length > 0 &&
-                        (0, a.jsx)("div", { className: r()(p.h_, h ? p.My : p.Gd, v.PT), children: A(n.body, l) }),
+                        (0, a.jsx)("div", { className: r()(v.h_, f ? v.My : v.Gd, A.PT), children: j(n.body, l) }),
                 ],
             }),
         ],
@@ -84,43 +96,43 @@ function j(e) {
 }
 function C(e) {
     let { gameId: t, trackAction: n } = e,
-        { analyticsLocations: l } = (0, c.Ay)(),
+        { analyticsLocations: l } = (0, o.Ay)(),
         { officialInvite: r, closeModal: s } = (0, g.c)(),
-        { messages: o, guildId: u, channelId: v } = (0, x.A)(t),
+        { messages: c, guildId: d, channelId: m } = (0, h.A)(t),
         A = i.useCallback(() => {
-            let e = r?.guild?.id ?? u;
+            let e = r?.guild?.id ?? d;
             null != e &&
-                (n(m.Ws.Announcements),
+                (n(x.Ws.Announcements),
                 s(),
-                (0, h.A)({ invite: r, guildId: e, channelId: v, analyticsLocationStack: l }));
-        }, [n, s, r, u, v, l]),
-        C = i.useCallback(
+                (0, f.A)({ invite: r, guildId: e, channelId: m, analyticsLocationStack: l }));
+        }, [n, s, r, d, m, l]),
+        j = i.useCallback(
             (e) => {
-                let t = r?.guild?.id ?? u;
+                let t = r?.guild?.id ?? d;
                 null != t &&
-                    (n(m.Ws.AnnouncementsItem),
+                    (n(x.Ws.AnnouncementsItem),
                     s(),
-                    (0, h.A)({ invite: r, guildId: t, channelId: v, messageId: e, analyticsLocationStack: l }));
+                    (0, f.A)({ invite: r, guildId: t, channelId: m, messageId: e, analyticsLocationStack: l }));
             },
-            [n, s, r, u, v, l],
+            [n, s, r, d, m, l],
         );
-    if (null == v || 0 === o.length) return null;
-    let E = 2 !== o.length,
-        I = E ? o[0] : null,
-        N = E ? o.slice(1) : o;
-    return (0, a.jsx)(f.A, {
-        title: _.intl.string(_.t.B0BV3Y),
+    if (null == m || 0 === c.length) return null;
+    let C = 2 !== c.length,
+        I = C ? c[0] : null,
+        N = C ? c.slice(1) : c;
+    return (0, a.jsx)(_.A, {
+        title: p.intl.string(p.t.B0BV3Y),
         onClickViewAll: A,
         children: (0, a.jsxs)("div", {
-            className: p.f3,
+            className: v.f3,
             children: [
-                null != I && (0, a.jsx)(j, { variant: "main", message: I, channelId: v, onCardClick: C }),
+                null != I && (0, a.jsx)(E, { variant: "main", message: I, channelId: m, onCardClick: j }),
                 N.length > 0 &&
-                    (0, a.jsx)(d.A, {
+                    (0, a.jsx)(u.A, {
                         gap: "sm",
-                        className: p.jG,
+                        className: v.jG,
                         children: N.map((e) =>
-                            (0, a.jsx)(j, { variant: "small", message: e, channelId: v, onCardClick: C }, e.id),
+                            (0, a.jsx)(E, { variant: "small", message: e, channelId: m, onCardClick: j }, e.id),
                         ),
                     }),
             ],

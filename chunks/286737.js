@@ -1,31 +1,31 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => h });
 var a = n(627968),
-    l = n(64700),
-    i = n(311907),
+    i = n(64700),
+    l = n(311907),
     r = n(397927),
     s = n(289363),
-    o = n(287809),
-    c = n(486020),
+    c = n(287809),
+    o = n(486020),
     d = n(409626),
     u = n(305080),
     m = n(985018),
-    x = n(409861);
-function f(e) {
-    let { trackAction: t } = e,
+    x = n(290490);
+function h(e) {
+    let { trackAction: t, analyticsLocations: n } = e,
         {
-            fetchedAuthorization: n,
+            fetchedAuthorization: h,
             hasAlreadyLinked: f,
-            canStartAuthorization: h,
-            startAuthorization: g,
+            canStartAuthorization: g,
+            startAuthorization: _,
             connectionApp: p,
             officialInvite: v,
         } = (0, u.c)(),
-        j = (0, i.bG)([o.default], () => o.default.getCurrentUser()),
-        _ = l.useCallback(() => {
-            t(d.Ws.LinkAccount), g({ analyticsLocations: ["game_profile"] });
-        }, [t, g]);
-    if (!n || null == p || !h || f || null == j) return null;
-    let A = v?.guild != null ? c.Ay.getGuildSplashURL({ id: v.guild.id, splash: v.guild.splash }) : null;
+        A = (0, l.bG)([c.default], () => c.default.getCurrentUser()),
+        j = i.useCallback(() => {
+            t(d.Ws.LinkAccount), _({ analyticsLocations: n });
+        }, [t, _, n]);
+    if (!h || null == p || !g || f || null == A) return null;
+    let E = v?.guild != null ? o.Ay.getGuildSplashURL({ id: v.guild.id, splash: v.guild.splash }) : null;
     return (0, a.jsxs)("div", {
         className: x.uW,
         children: [
@@ -38,8 +38,8 @@ function f(e) {
             (0, a.jsxs)("div", {
                 className: x.kL,
                 children: [
-                    null != A
-                        ? (0, a.jsx)("img", { className: x.ll, src: A, alt: "" })
+                    null != E
+                        ? (0, a.jsx)("img", { className: x.ll, src: E, alt: "" })
                         : (0, a.jsx)("div", { className: x.sB, children: (0, a.jsx)(s.default, { application: p }) }),
                     (0, a.jsxs)("div", {
                         className: x.hQ,
@@ -63,7 +63,7 @@ function f(e) {
                                 variant: "secondary",
                                 icon: r.A5T,
                                 text: m.intl.string(m.t.jynBQ5),
-                                onClick: _,
+                                onClick: j,
                                 fullWidth: !0,
                             }),
                         ],
