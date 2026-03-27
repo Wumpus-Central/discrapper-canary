@@ -5,6 +5,7 @@ e.exports = {
     cG: "closeButtonContainer_d06335",
     Ki: "video_d06335",
     Qs: "content_d06335",
+    ON: "modalTopPill_d06335",
     uI: "subHeader_d06335",
     G3: "bodyText_d06335",
     UD: "buttonContainer_d06335",

@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { dz: () => o, ih: () => g }), n(321073);
+n.d(t, { dz: () => o, ih: () => E }), n(321073);
 var r = n(852015),
     i = n(144367),
-    a = n(428420),
-    s = n(324281),
+    s = n(428420),
+    a = n(324281),
     o = (function (e) {
         return (
             (e[(e.UNSPECIFIED = 0)] = "UNSPECIFIED"),
@@ -13,10 +13,11 @@ var r = n(852015),
             (e[(e.OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER = 4)] =
                 "OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER"),
             (e[(e.OPEN_PLAN_SELECTION_MODAL = 5)] = "OPEN_PLAN_SELECTION_MODAL"),
+            (e[(e.OPEN_PREMIUM_GROUP_PAYMENT_MODAL = 6)] = "OPEN_PREMIUM_GROUP_PAYMENT_MODAL"),
             e
         );
     })({});
-class l extends s.G {
+class l extends a.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.FeatureCard", [
             { no: 1, name: "header", kind: "scalar", T: 9 },
@@ -29,41 +30,41 @@ class l extends s.G {
     create(e) {
         let t = { header: "", pill: "", body: "", imageLink: "", imageLinkLightTheme: "" };
         return (
-            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let a = i ?? this.create(),
-            s = e.pos + t;
-        for (; e.pos < s; ) {
+        let s = i ?? this.create(),
+            a = e.pos + t;
+        for (; e.pos < a; ) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    a.header = e.string();
+                    s.header = e.string();
                     break;
                 case 2:
-                    a.pill = e.string();
+                    s.pill = e.string();
                     break;
                 case 3:
-                    a.body = e.string();
+                    s.body = e.string();
                     break;
                 case 4:
-                    a.imageLink = e.string();
+                    s.imageLink = e.string();
                     break;
                 case 5:
-                    a.imageLinkLightTheme = e.string();
+                    s.imageLinkLightTheme = e.string();
                     break;
                 default:
-                    let s = n.readUnknownField;
-                    if ("throw" === s)
+                    let a = n.readUnknownField;
+                    if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let o = e.skip(i);
-                    !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, o);
+                    !1 !== a && (!0 === a ? r.f$.onRead : a)(this.typeName, s, t, i, o);
             }
         }
-        return a;
+        return s;
     }
     internalBinaryWrite(e, t, n) {
         "" !== e.header && t.tag(1, r.O0.LengthDelimited).string(e.header),
@@ -76,7 +77,7 @@ class l extends s.G {
     }
 }
 let u = new l();
-class c extends s.G {
+class c extends a.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.SubscriptionButton", [
             { no: 1, name: "copy", kind: "scalar", T: 9 },
@@ -91,32 +92,32 @@ class c extends s.G {
     create(e) {
         let t = { copy: "", buttonAction: 0 };
         return (
-            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let a = i ?? this.create(),
-            s = e.pos + t;
-        for (; e.pos < s; ) {
+        let s = i ?? this.create(),
+            a = e.pos + t;
+        for (; e.pos < a; ) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    a.copy = e.string();
+                    s.copy = e.string();
                     break;
                 case 2:
-                    a.buttonAction = e.int32();
+                    s.buttonAction = e.int32();
                     break;
                 default:
-                    let s = n.readUnknownField;
-                    if ("throw" === s)
+                    let a = n.readUnknownField;
+                    if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let o = e.skip(i);
-                    !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, o);
+                    !1 !== a && (!0 === a ? r.f$.onRead : a)(this.typeName, s, t, i, o);
             }
         }
-        return a;
+        return s;
     }
     internalBinaryWrite(e, t, n) {
         "" !== e.copy && t.tag(1, r.O0.LengthDelimited).string(e.copy),
@@ -126,7 +127,7 @@ class c extends s.G {
     }
 }
 let d = new c();
-class _ extends s.G {
+class _ extends a.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.Variant1Storage", [
             {
@@ -153,49 +154,49 @@ class _ extends s.G {
             heroArtVideoSubtitleLinks: {},
         };
         return (
-            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let a = i ?? this.create(),
-            s = e.pos + t;
-        for (; e.pos < s; ) {
+        let s = i ?? this.create(),
+            a = e.pos + t;
+        for (; e.pos < a; ) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    this.binaryReadMap1(a.heroArtLocalizedVideoLinksDarkTheme, e, n);
+                    this.binaryReadMap1(s.heroArtLocalizedVideoLinksDarkTheme, e, n);
                     break;
                 case 2:
-                    this.binaryReadMap2(a.heroArtLocalizedVideoLinksLightTheme, e, n);
+                    this.binaryReadMap2(s.heroArtLocalizedVideoLinksLightTheme, e, n);
                     break;
                 case 3:
-                    this.binaryReadMap3(a.heroArtVideoSubtitleLinks, e, n);
+                    this.binaryReadMap3(s.heroArtVideoSubtitleLinks, e, n);
                     break;
                 default:
-                    let s = n.readUnknownField;
-                    if ("throw" === s)
+                    let a = n.readUnknownField;
+                    if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let o = e.skip(i);
-                    !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, o);
+                    !1 !== a && (!0 === a ? r.f$.onRead : a)(this.typeName, s, t, i, o);
             }
         }
-        return a;
+        return s;
     }
     binaryReadMap1(e, t, n) {
         let r = t.uint32(),
             i = t.pos + r,
-            a,
-            s;
+            s,
+            a;
         for (; t.pos < i; ) {
             let [e, n] = t.tag();
             switch (e) {
                 case 1:
-                    a = t.string();
+                    s = t.string();
                     break;
                 case 2:
-                    s = t.string();
+                    a = t.string();
                     break;
                 default:
                     throw new globalThis.Error(
@@ -203,21 +204,21 @@ class _ extends s.G {
                     );
             }
         }
-        e[a ?? ""] = s ?? "";
+        e[s ?? ""] = a ?? "";
     }
     binaryReadMap2(e, t, n) {
         let r = t.uint32(),
             i = t.pos + r,
-            a,
-            s;
+            s,
+            a;
         for (; t.pos < i; ) {
             let [e, n] = t.tag();
             switch (e) {
                 case 1:
-                    a = t.string();
+                    s = t.string();
                     break;
                 case 2:
-                    s = t.string();
+                    a = t.string();
                     break;
                 default:
                     throw new globalThis.Error(
@@ -225,21 +226,21 @@ class _ extends s.G {
                     );
             }
         }
-        e[a ?? ""] = s ?? "";
+        e[s ?? ""] = a ?? "";
     }
     binaryReadMap3(e, t, n) {
         let r = t.uint32(),
             i = t.pos + r,
-            a,
-            s;
+            s,
+            a;
         for (; t.pos < i; ) {
             let [e, n] = t.tag();
             switch (e) {
                 case 1:
-                    a = t.string();
+                    s = t.string();
                     break;
                 case 2:
-                    s = t.string();
+                    a = t.string();
                     break;
                 default:
                     throw new globalThis.Error(
@@ -247,7 +248,7 @@ class _ extends s.G {
                     );
             }
         }
-        e[a ?? ""] = s ?? "";
+        e[s ?? ""] = a ?? "";
     }
     internalBinaryWrite(e, t, n) {
         for (let n of Object.keys(e.heroArtLocalizedVideoLinksDarkTheme))
@@ -279,7 +280,7 @@ class _ extends s.G {
     }
 }
 let f = new _();
-class p extends s.G {
+class p extends a.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.Subtitle", [
             { no: 1, name: "link", kind: "scalar", T: 9 },
@@ -290,35 +291,35 @@ class p extends s.G {
     create(e) {
         let t = { link: "", locale: "", isDefault: !1 };
         return (
-            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let a = i ?? this.create(),
-            s = e.pos + t;
-        for (; e.pos < s; ) {
+        let s = i ?? this.create(),
+            a = e.pos + t;
+        for (; e.pos < a; ) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    a.link = e.string();
+                    s.link = e.string();
                     break;
                 case 2:
-                    a.locale = e.string();
+                    s.locale = e.string();
                     break;
                 case 3:
-                    a.isDefault = e.bool();
+                    s.isDefault = e.bool();
                     break;
                 default:
-                    let s = n.readUnknownField;
-                    if ("throw" === s)
+                    let a = n.readUnknownField;
+                    if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let o = e.skip(i);
-                    !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, o);
+                    !1 !== a && (!0 === a ? r.f$.onRead : a)(this.typeName, s, t, i, o);
             }
         }
-        return a;
+        return s;
     }
     internalBinaryWrite(e, t, n) {
         "" !== e.link && t.tag(1, r.O0.LengthDelimited).string(e.link),
@@ -329,7 +330,7 @@ class p extends s.G {
     }
 }
 let h = new p();
-class m extends s.G {
+class m extends a.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.AnnouncementModalVariant1Properties", [
             { no: 1, name: "header", kind: "scalar", T: 9 },
@@ -364,68 +365,68 @@ class m extends s.G {
             heroArtVideoSubtitles: [],
         };
         return (
-            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let a = i ?? this.create(),
-            s = e.pos + t;
-        for (; e.pos < s; ) {
+        let s = i ?? this.create(),
+            a = e.pos + t;
+        for (; e.pos < a; ) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    a.header = e.string();
+                    s.header = e.string();
                     break;
                 case 2:
-                    a.subheader = e.string();
+                    s.subheader = e.string();
                     break;
                 case 3:
-                    a.videoLink = e.string();
+                    s.videoLink = e.string();
                     break;
                 case 4:
-                    a.helpArticleId = e.string();
+                    s.helpArticleId = e.string();
                     break;
                 case 5:
-                    a.featureCards.push(u.internalBinaryRead(e, e.uint32(), n));
+                    s.featureCards.push(u.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 6:
-                    a.button = d.internalBinaryRead(e, e.uint32(), n, a.button);
+                    s.button = d.internalBinaryRead(e, e.uint32(), n, s.button);
                     break;
                 case 7:
-                    a.dismissKey = e.string();
+                    s.dismissKey = e.string();
                     break;
                 case 8:
-                    a.heroArtVideoLinkLightTheme = e.string();
+                    s.heroArtVideoLinkLightTheme = e.string();
                     break;
                 case 9:
-                    a.heroArtImageLinkDarkTheme = e.string();
+                    s.heroArtImageLinkDarkTheme = e.string();
                     break;
                 case 10:
-                    a.heroArtImageLinkLightTheme = e.string();
+                    s.heroArtImageLinkLightTheme = e.string();
                     break;
                 case 11:
-                    a.modalTopPill = e.string();
+                    s.modalTopPill = e.string();
                     break;
                 case 12:
-                    a.body = e.string();
+                    s.body = e.string();
                     break;
                 case 13:
-                    a.heroArtVideoSubtitles.push(h.internalBinaryRead(e, e.uint32(), n));
+                    s.heroArtVideoSubtitles.push(h.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 14:
-                    a.storage = f.internalBinaryRead(e, e.uint32(), n, a.storage);
+                    s.storage = f.internalBinaryRead(e, e.uint32(), n, s.storage);
                     break;
                 default:
-                    let s = n.readUnknownField;
-                    if ("throw" === s)
+                    let a = n.readUnknownField;
+                    if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let o = e.skip(i);
-                    !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, o);
+                    !1 !== a && (!0 === a ? r.f$.onRead : a)(this.typeName, s, t, i, o);
             }
         }
-        return a;
+        return s;
     }
     internalBinaryWrite(e, t, n) {
         "" !== e.header && t.tag(1, r.O0.LengthDelimited).string(e.header),
@@ -448,4 +449,4 @@ class m extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let g = new m();
+let E = new m();
