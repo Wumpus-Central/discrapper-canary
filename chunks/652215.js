@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, {
-    $4X: () => ex,
+    $4X: () => eP,
     $8o: () => ea,
     $OG: () => tw,
     $aF: () => to,
@@ -76,7 +76,7 @@ n.d(t, {
     ME: () => f.ME,
     MLl: () => rl,
     MRS: () => o.M,
-    MVz: () => nP,
+    MVz: () => nx,
     MdR: () => tu,
     Mmu: () => tO,
     NA2: () => eG,
@@ -98,7 +98,7 @@ n.d(t, {
     Pq7: () => h.Pq,
     Puh: () => n8,
     PvD: () => es,
-    Q4z: () => tx,
+    Q4z: () => tP,
     Q7O: () => h.Q7,
     QCW: () => nQ,
     RCc: () => tt,
@@ -156,7 +156,7 @@ n.d(t, {
     YYv: () => f.YY,
     Yri: () => h.Yr,
     YvQ: () => R,
-    Z86: () => nx,
+    Z86: () => nP,
     ZE4: () => h.ZE,
     ZGg: () => eK,
     ZSU: () => tD,
@@ -198,11 +198,11 @@ n.d(t, {
     eAD: () => e0,
     eGj: () => ep,
     eQT: () => e1,
-    elq: () => x,
+    elq: () => P,
     ewM: () => tq,
     f5z: () => Z,
-    fAW: () => P,
-    fHV: () => eP,
+    fAW: () => x,
+    fHV: () => ex,
     fg2: () => tY,
     fic: () => rL,
     frM: () => h.fr,
@@ -258,7 +258,7 @@ n.d(t, {
     lid: () => ne,
     m3P: () => O,
     m_i: () => ro,
-    mdB: () => tP,
+    mdB: () => tx,
     meB: () => h.me,
     mnr: () => rM,
     mu: () => eW,
@@ -702,7 +702,7 @@ var r = n(989441),
             e
         );
     })({}),
-    x = (function (e) {
+    P = (function (e) {
         return (
             (e.RESOLVING = "RESOLVING"),
             (e.RESOLVED = "RESOLVED"),
@@ -717,7 +717,7 @@ var r = n(989441),
             e
         );
     })({}),
-    P = (function (e) {
+    x = (function (e) {
         return (e.OPENING = "OPENING"), (e.OPEN = "OPEN"), (e.OPEN_FAIL = "OPEN_FAIL"), e;
     })({}),
     k = (function (e) {
@@ -1542,6 +1542,7 @@ let ef = "",
         STOREFRONT_COLLECTION_WITH_PRODUCTS: (e) => `/storefront/collections/${e}`,
         STOREFRONT_PRODUCT_BY_SKU_ID: (e) => `/storefront/products/sku/${e}`,
         STOREFRONT_PRODUCTS_BY_SKU_IDS: "/storefront/products/skus",
+        STOREFRONT_PROMOTIONS: "/storefront/promotions",
         STORE_DIRECTORY_LAYOUT: (e) => `/store/directory-layouts/${e}`,
         STORE_DIRECTORY: (e) => `/store/directory/${e}`,
         STORE_EMAIL_RESEND_PAYMENT_VERIFICATION: "/store/email/resend-payment-verification",
@@ -1959,8 +1960,8 @@ let eS = 100,
     eL = 4e3,
     ew = 250,
     eM = 100,
-    ex = 1e3,
-    eP = 100,
+    eP = 1e3,
+    ex = 100,
     ek = 256,
     eU = 32,
     eG = 190,
@@ -3208,7 +3209,7 @@ let tw = { page: "Direct", object: "Web URL" },
         SECURE_FRAMES_VERIFIED_DEVICES: "Secure Frames Verified Devices",
         REACTION_NOTIFICATIONS: "Reaction Notifications",
     });
-var tx = (function (e) {
+var tP = (function (e) {
         return (
             (e.APPLICATION_STORE = "Application Store Verified Guild Invite - Lurker"),
             (e.CHAT_INPUT_BLOCKER = "Chat Input Blocker - Lurker Mode"),
@@ -3224,7 +3225,7 @@ var tx = (function (e) {
             e
         );
     })({}),
-    tP = (function (e) {
+    tx = (function (e) {
         return (
             (e.QR_CODE = "QR Code Login"),
             (e.MOBILE_WEB_HANDOFF = "Mobile Web Handoff"),
@@ -5751,11 +5752,11 @@ var nb = (function (e) {
     nM = (function (e) {
         return (e.GIF = "GIF"), (e.STICKER = "STICKER"), e;
     })({});
-let nx = Object.freeze({
+let nP = Object.freeze({
     GIF: { type: "GIF", command: "gif", title: "Gif", commandId: "-16" },
     TENOR: { type: "GIF", command: "tenor", title: "Tenor", commandId: "-9" },
 });
-var nP = (function (e) {
+var nx = (function (e) {
         return (
             (e.ENABLE_MIC_FIREFOX = "204392448"),
             (e.PUSH_TO_TALK_ADMINISTRATOR_MODE = "205082178"),
