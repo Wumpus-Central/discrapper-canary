@@ -25,30 +25,31 @@ var r = n(562465),
     _ = n(652215);
 async function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { channelId: r, onSuccess: a, joinSource: u, loadId: d, shouldNavigate: f = !0 } = n,
-        p = (0, o.JK)(),
-        h = c.A.getGuild(e),
-        m = { state: { analyticsSource: t } };
-    null != h && null != h.joinedAt
-        ? f &&
-          (null == r
-              ? (0, l.u)(e, m)
-              : (0, s.A)(_.BVt.CHANNEL(e, r, n.messageId), { ...m, navigationReplace: !0, openChannel: !0 }))
-        : (await i.A.joinGuild(e, { lurker: !0, source: u, loadId: d, lurkLocation: t?.page }),
-          f &&
+        r = arguments.length > 3 ? arguments[3] : void 0,
+        { channelId: a, onSuccess: u, joinSource: d, loadId: f, shouldNavigate: p = !0 } = n,
+        h = (0, o.JK)(),
+        m = c.A.getGuild(e),
+        E = { sourceLocationStack: r, state: { analyticsSource: t } };
+    null != m && null != m.joinedAt
+        ? p &&
+          (null == a
+              ? (0, l.u)(e, E)
+              : (0, s.A)(_.BVt.CHANNEL(e, a, n.messageId), { ...E, navigationReplace: !0, openChannel: !0 }))
+        : (await i.A.joinGuild(e, { lurker: !0, source: d, loadId: f, lurkLocation: r?.[r.length - 1] ?? t?.page }),
+          p &&
               (await i.A.transitionToGuildSync(
                   e,
                   {
-                      ...m,
-                      welcomeModalChannelId: r,
-                      navigationReplace: null != r,
-                      openChannel: null != r,
-                      search: p.location.search,
+                      ...E,
+                      welcomeModalChannelId: a,
+                      navigationReplace: null != a,
+                      openChannel: null != a,
+                      search: h.location.search,
                   },
-                  r,
+                  a,
                   n.messageId,
               ))),
-        a?.();
+        u?.();
 }
 function p(e) {
     return {

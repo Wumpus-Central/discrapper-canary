@@ -3222,6 +3222,7 @@ var tP = (function (e) {
             (e.GUILD_EVENT_EMBED = "Guild Event Embed"),
             (e.GAME_COMMUNITY_UPSELL = "Game Community Upsell"),
             (e.ACTIVITY_PANEL_GAME_COMMUNITY_UPSELL = "Activity Panel Game Community Upsell"),
+            (e.GAME_PROFILE_ANNOUNCEMENTS = "Game Profile Announcements"),
             e
         );
     })({}),
