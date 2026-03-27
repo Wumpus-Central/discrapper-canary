@@ -571,6 +571,8 @@ var r = (function (e) {
             (e[(e.APRIL_FOOLS_2026_COACHMARK = 719)] = "APRIL_FOOLS_2026_COACHMARK"),
             (e[(e.PRIVATE_PROFILE_COACHMARK = 720)] = "PRIVATE_PROFILE_COACHMARK"),
             (e[(e.PRIVATE_PROFILE_INLINE_NOTICE = 721)] = "PRIVATE_PROFILE_INLINE_NOTICE"),
+            (e[(e.GAME_SERVER_HOSTING_BATCH_RELEASE_V3_COACHMARK = 722)] =
+                "GAME_SERVER_HOSTING_BATCH_RELEASE_V3_COACHMARK"),
             e
         );
     })({}),
