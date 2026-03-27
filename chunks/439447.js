@@ -1,4 +1,4 @@
-i.d(e, { A: () => p });
+i.d(e, { A: () => h });
 var n,
     l,
     r = i(627968),
@@ -10,13 +10,14 @@ var n,
         (((n = u || {}).ACTIVITY_FEED = "ACTIVITY_FEED"),
         (n.ACTIVITY_FEED_NEW = "ACTIVITY_FEED_NEW"),
         (n.USER_ACTIVITY = "USER_ACTIVITY"),
+        (n.USER_ACTIVITY_VOICE_USER = "USER_ACTIVITY_VOICE_USER"),
         (n.GAME_LIBRARY_TIME_PLAYED = "GAME_LIBRARY_TIME_PLAYED"),
         (n.GAME_LIBRARY_LAST_PLAYED = "GAME_LIBRARY_LAST_PLAYED"),
         (n.VOICE_CHANNEL_HISTORY = "VOICE_CHANNEL_HISTORY"),
         n),
     c = (((l = c || {}).START = "START"), (l.END = "END"), (l.TIME = "TIME"), l);
-let m = (t) => (e, i) => (null == i ? "" : d.intl.format(t(), { time: e, ...i })),
-    A = {
+let A = (t) => (e, i) => (null == i ? "" : d.intl.format(t(), { time: e, ...i })),
+    m = {
         ACTIVITY_FEED: {
             START: {
                 [a.pJ.SECONDS]: () => d.intl.string(d.t["ahzZr+"]),
@@ -36,10 +37,10 @@ let m = (t) => (e, i) => (null == i ? "" : d.intl.format(t(), { time: e, ...i })
         },
         ACTIVITY_FEED_NEW: {
             START: {
-                [a.pJ.SECONDS]: m(() => d.t.Bf3PRU),
-                [a.pJ.MINUTES]: m(() => d.t["A9P+dT"]),
-                [a.pJ.HOURS]: m(() => d.t.KwVzfh),
-                [a.pJ.DAYS]: m(() => d.t.hbUpBN),
+                [a.pJ.SECONDS]: A(() => d.t.Bf3PRU),
+                [a.pJ.MINUTES]: A(() => d.t["A9P+dT"]),
+                [a.pJ.HOURS]: A(() => d.t.KwVzfh),
+                [a.pJ.DAYS]: A(() => d.t.hbUpBN),
             },
             END: {
                 [a.pJ.SECONDS]: (t) => d.intl.formatToPlainString(d.t.C3MTOD, { seconds: t }),
@@ -84,6 +85,29 @@ let m = (t) => (e, i) => (null == i ? "" : d.intl.format(t(), { time: e, ...i })
                 },
             },
         },
+        USER_ACTIVITY_VOICE_USER: {
+            START: {
+                [a.pJ.SECONDS]: () => d.intl.string(d.t["ahzZr+"]),
+                [a.pJ.MINUTES]: function (t, e) {
+                    let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                    return i
+                        ? d.intl.formatToPlainString(d.t["03mIHW"], { time: t })
+                        : d.intl.formatToPlainString(d.t.w5w79N, { time: t });
+                },
+                [a.pJ.HOURS]: function (t, e) {
+                    let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                    return i
+                        ? d.intl.formatToPlainString(d.t.eNoooU, { time: t })
+                        : d.intl.formatToPlainString(d.t.EPkGyE, { time: t });
+                },
+                [a.pJ.DAYS]: function (t, e) {
+                    let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                    return i
+                        ? d.intl.formatToPlainString(d.t["2rUo/p"], { time: t })
+                        : d.intl.formatToPlainString(d.t.V3g3dS, { time: t });
+                },
+            },
+        },
         GAME_LIBRARY_TIME_PLAYED: {
             TIME: {
                 [a.pJ.NONE]: () => d.intl.string(d.t.LqDiCt),
@@ -113,7 +137,7 @@ let m = (t) => (e, i) => (null == i ? "" : d.intl.format(t(), { time: e, ...i })
             },
         },
     };
-function p(t) {
+function h(t) {
     return class extends s.PureComponent {
         static Locations = u;
         static Types = c;
@@ -142,7 +166,7 @@ function p(t) {
         getTimeUnit(t, e, i) {
             let n = (0, a.Ul)(t, (t) =>
                 (function (t, e, i) {
-                    let n = A[i];
+                    let n = m[i];
                     if (null != n) {
                         let i = n[e];
                         if (null != i) return null != i[t];
@@ -170,11 +194,11 @@ function p(t) {
                 d = this.getType();
             if (null == d) return null;
             let u = this.getTimeUnit(o, e, d),
-                c = A[e][d];
+                c = m[e][d];
             if (null == c) return null;
-            let m = c[u],
-                p = Math.floor((0, a.eZ)(o, u));
-            return (0, r.jsx)(t, { ...s, children: m?.(p, i, n, l) });
+            let A = c[u],
+                h = Math.floor((0, a.eZ)(o, u));
+            return (0, r.jsx)(t, { ...s, children: A?.(h, i, n, l) });
         }
     };
 }
