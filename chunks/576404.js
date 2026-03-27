@@ -4,7 +4,6 @@ e.exports = {
     _v: "mainCardImageContainer__250d5",
     fk: "mainCardImage__250d5",
     GT: "mainCardBody__250d5",
-    g4: "loadingContainer__250d5",
     jG: "scrollContainer__250d5",
     IU: "smallCard__250d5",
     eZ: "smallCardImageContainer__250d5",
