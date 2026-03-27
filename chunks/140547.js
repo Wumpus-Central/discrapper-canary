@@ -1,8 +1,9 @@
 "use strict";
-n.d(t, { $j: () => a, Eh: () => s, ko: () => o });
+n.d(t, { $j: () => o, Eh: () => a, ko: () => l, yT: () => u });
 var r = n(600975),
-    i = n(688151);
-let s = (0, r.C)({
+    i = n(945810),
+    s = n(688151);
+let a = (0, r.C)({
     kind: "guild",
     id: "2025-07_hang_status",
     label: "Hang Statuses",
@@ -13,7 +14,7 @@ let s = (0, r.C)({
         allowPermanentClear: !1,
         defaultStatusVariant: "twemoji",
     },
-    commonTriggerPoint: i.$G.VOICE_CALL,
+    commonTriggerPoint: s.$G.VOICE_CALL,
     treatments: [
         {
             id: 1,
@@ -72,11 +73,17 @@ let s = (0, r.C)({
         },
     ],
 });
-function a(e) {
-    let { guildId: t, location: n } = e;
-    return s.useExperiment({ guildId: t, location: n }, { autoTrackExposure: !0 });
-}
 function o(e) {
     let { guildId: t, location: n } = e;
-    return s.getCurrentConfig({ guildId: t, location: n }, { autoTrackExposure: !0 });
+    return a.useExperiment({ guildId: t, location: n }, { autoTrackExposure: !0 });
 }
+function l(e) {
+    let { guildId: t, location: n } = e;
+    return a.getCurrentConfig({ guildId: t, location: n }, { autoTrackExposure: !0 });
+}
+let u = (0, i.mj)({
+    name: "2026-03-hang-status-subscribe",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});
