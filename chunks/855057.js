@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => b });
+n.d(t, { A: () => C });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(311907),
     l = n(397927),
     u = n(73153),
@@ -14,15 +14,15 @@ var r = n(627968),
     p = n(996566),
     h = n(291147),
     m = n(380544),
-    g = n(950301),
-    E = n(247683),
+    E = n(950301),
+    g = n(247683),
     A = n(652215),
     I = n(732139),
     T = n(650583),
-    y = n(985018),
-    S = n(418981);
+    S = n(985018),
+    y = n(666494);
 let v = (e) => e.stopPropagation();
-class C extends i.PureComponent {
+class N extends i.PureComponent {
     state = { resultType: null };
     componentDidMount() {
         c.V$(),
@@ -81,15 +81,15 @@ class C extends i.PureComponent {
                 return (0, r.jsx)(l.Heading, {
                     variant: "heading-md/semibold",
                     color: t,
-                    className: S.wL,
-                    children: y.intl.string(y.t.y3LQCG),
+                    className: y.wL,
+                    children: S.intl.string(S.t.y3LQCG),
                 });
             case A.dD.TRENDING_GIFS:
                 return (0, r.jsx)(l.Heading, {
                     variant: "heading-md/semibold",
                     color: t,
-                    className: S.wL,
-                    children: y.intl.string(y.t.H6zNFz),
+                    className: y.wL,
+                    children: S.intl.string(S.t.H6zNFz),
                 });
             default: {
                 let t = (0, m.cf)(),
@@ -113,8 +113,8 @@ class C extends i.PureComponent {
             null != e &&
                 (t = (0, r.jsx)(l.DUT, {
                     onClick: this.handleClearQuery,
-                    className: S.Gv,
-                    "aria-label": y.intl.string(y.t["13/7kX"]),
+                    className: y.Gv,
+                    "aria-label": S.intl.string(S.t["13/7kX"]),
                     children: (0, r.jsx)(l.rJJ, { size: "md", color: "currentColor" }),
                 })),
             (0, r.jsxs)(d.A, { align: d.A.Align.CENTER, children: [t, this.renderHeaderContent()] })
@@ -126,8 +126,8 @@ class C extends i.PureComponent {
                 resultItems: t,
                 resultQuery: n,
                 query: i,
-                favorites: a,
-                searchOffset: s,
+                favorites: s,
+                searchOffset: a,
                 searchLimit: o,
                 searchTotalResults: l,
                 suggestions: u,
@@ -135,15 +135,15 @@ class C extends i.PureComponent {
             } = this.props,
             { resultType: d } = this.state;
         return null == d
-            ? (0, r.jsx)(g.A, { className: e, hideFavoritesTile: c, onSelectItem: this.handleSelectItem })
-            : (0, r.jsx)(E.Ay, {
+            ? (0, r.jsx)(E.A, { className: e, hideFavoritesTile: c, onSelectItem: this.handleSelectItem })
+            : (0, r.jsx)(g.Ay, {
                   className: e,
-                  data: d === A.dD.FAVORITES ? a : t,
+                  data: d === A.dD.FAVORITES ? s : t,
                   onSelectGIF: this.handleSelectGIF,
                   resultType: d,
                   resultQuery: n,
                   query: i,
-                  searchOffset: s,
+                  searchOffset: a,
                   searchLimit: o,
                   searchTotalResults: l,
                   suggestions: u,
@@ -157,24 +157,24 @@ class C extends i.PureComponent {
             id: I.ni,
             role: "tabpanel",
             "aria-labelledby": I.g9,
-            className: s()(S.kL, e),
+            className: a()(y.kL, e),
             onClick: v,
             ref: t,
             children: [
-                (0, r.jsx)("div", { className: s()(S.wx, this.props.headerClassName), children: this.renderHeader() }),
-                (0, r.jsx)("div", { className: S.Qs, children: this.renderContent() }),
+                (0, r.jsx)("div", { className: a()(y.wx, this.props.headerClassName), children: this.renderHeader() }),
+                (0, r.jsx)("div", { className: y.Qs, children: this.renderContent() }),
             ],
         });
     }
 }
-let b = i.forwardRef((e, t) => {
+let C = i.forwardRef((e, t) => {
     i.useEffect(() => {
-        e.persistSearch || (0, _.Ri)(e.initialQuery ?? "");
+        e.persistSearch || ((0, _.Ri)(e.initialQuery ?? ""), c.$P(e.initialQuery ?? "", A.dD.SEARCH));
     }, [e.persistSearch, e.initialQuery]);
     let {
             query: n,
-            resultQuery: a,
-            resultItems: s,
+            resultQuery: s,
+            resultItems: a,
             suggestions: l,
         } = (0, o.cf)([f.A], () => ({
             query: f.A.getQuery(),
@@ -183,21 +183,21 @@ let b = i.forwardRef((e, t) => {
             suggestions: f.A.getSuggestions(),
         })),
         u = (0, _.RQ)((e) => e.searchQuery),
-        c = null != n && "" !== n ? n : u,
-        d = (0, p.IE)(),
-        h = i.useRef(null);
-    return (0, r.jsx)(C, {
+        d = null != n && "" !== n ? n : u,
+        h = (0, p.IE)(),
+        m = i.useRef(null);
+    return (0, r.jsx)(N, {
         ...e,
         forwardedRef: t,
-        query: c,
-        resultQuery: a,
-        resultItems: s,
+        query: d,
+        resultQuery: s,
+        resultItems: a,
         suggestions: l,
-        favorites: d,
+        favorites: h,
         searchOffset: 0,
         searchTotalResults: f.A.getResultItems().length,
         searchLimit: null,
-        searchBarRef: h,
+        searchBarRef: m,
         selectedGIF: e.selectedGIF,
     });
 });
