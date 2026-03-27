@@ -1,4 +1,4 @@
-n.d(t, { A: () => et });
+n.d(t, { A: () => ea });
 var a = n(627968),
     i = n(64700),
     s = n(503698),
@@ -12,206 +12,216 @@ var a = n(627968),
     h = n(688810),
     x = n(395332),
     p = n(351966),
-    g = n(713517),
-    _ = n(645507),
-    f = n(970931),
-    v = n(258836),
-    b = n(206835),
-    j = n(183555),
-    A = n(950191),
-    C = n(657331),
-    y = n(718019),
-    T = n(31432),
-    S = n(915614),
-    E = n(223330),
-    N = n(559506),
-    I = n(646986),
-    k = n(379654),
-    O = n(946356),
-    R = n(810396),
-    w = n(376285),
-    D = n(159218),
-    P = n(442228),
-    M = n(253932),
-    L = n(290863),
-    U = n(351906),
-    B = n(957565),
-    G = n(562153),
-    F = n(927578),
-    V = n(832248),
-    W = n(962303),
-    H = n(163233),
-    K = n(95551),
-    z = n(471303),
-    $ = n(740142),
-    q = n(33042),
-    Q = n(347853),
-    Y = n(652215),
-    J = n(996988),
-    X = n(985018),
-    Z = n(337637),
-    ee = n(886308);
-function et(e) {
-    let { currentUser: t, onClose: n, setPopoutRef: s, highlightBadge: et, className: en } = e,
-        ea = __OVERLAY__,
-        ei = (0, A.Ay)(t.id, void 0),
-        { analyticsLocations: es } = (0, h.Ay)(m.A.USER_PROFILE_ACCOUNT_POPOUT),
-        el = (0, j.pb)({ layout: "ACCOUNT_POPOUT", userId: t.id, guildId: void 0 }),
-        { ref: er, height: eo } = (0, u.Ay)(),
-        { isHoveringOrFocusing: ed, isHovering: ec } = (0, g.A)(er);
+    g = n(361628),
+    _ = n(744808),
+    f = n(713517),
+    v = n(645507),
+    b = n(970931),
+    j = n(258836),
+    A = n(206835),
+    C = n(183555),
+    y = n(950191),
+    T = n(657331),
+    S = n(718019),
+    E = n(31432),
+    N = n(915614),
+    I = n(223330),
+    k = n(559506),
+    O = n(646986),
+    R = n(379654),
+    w = n(946356),
+    D = n(810396),
+    P = n(376285),
+    M = n(159218),
+    L = n(442228),
+    U = n(253932),
+    B = n(290863),
+    G = n(351906),
+    F = n(957565),
+    V = n(562153),
+    W = n(927578),
+    H = n(832248),
+    K = n(962303),
+    z = n(163233),
+    $ = n(95551),
+    q = n(471303),
+    Q = n(740142),
+    Y = n(33042),
+    J = n(347853),
+    X = n(652215),
+    Z = n(996988),
+    ee = n(985018),
+    et = n(337637),
+    en = n(886308);
+function ea(e) {
+    let { currentUser: t, onClose: n, setPopoutRef: s, highlightBadge: ea, className: ei } = e,
+        es = __OVERLAY__,
+        el = (0, y.Ay)(t.id, void 0),
+        er = (0, g.A)(el?.profileFrame?.skuId, "UserProfileAccountPopout"),
+        { analyticsLocations: eo } = (0, h.Ay)(m.A.USER_PROFILE_ACCOUNT_POPOUT),
+        ed = (0, C.pb)({ layout: "ACCOUNT_POPOUT", userId: t.id, guildId: void 0 }),
+        { ref: ec, height: eu } = (0, u.Ay)(),
+        { isHoveringOrFocusing: em, isHovering: eh } = (0, f.A)(ec);
     i.useEffect(() => {
-        s?.(er.current);
-    }, [er, s]),
-        i.useEffect(() => (V.A.setState({ isOpen: !0 }), () => V.A.setState({ isOpen: !1 })), []);
-    let eu = (0, d.bG)([L.A], () => L.A.getStatus(t.id)),
-        em = M.CY.useSetting(),
-        eh = (0, q.Q)(em),
-        ex = (0, d.bG)([U.A], () => U.A.hidePersonalInformation),
-        ep = (0, f.kB)(),
-        eg = M.Q_.useSetting(),
-        e_ = (0, q.T)(eu),
-        ef = (0, W.j)(n),
-        ev = (0, b.A)({ analyticsLocations: es }),
-        eb = (0, F.TW)(t),
-        ej = i.useRef(null),
-        eA = i.useRef(null),
-        eC = i.useRef((0, V.A)((e) => e.shouldRenderTenureLevelUp)),
-        ey = i.useMemo(() => (0, _.A)(), []),
-        [eT, eS] = i.useState(!0);
+        s?.(ec.current);
+    }, [ec, s]),
+        i.useEffect(() => (H.A.setState({ isOpen: !0 }), () => H.A.setState({ isOpen: !1 })), []);
+    let ex = (0, d.bG)([B.A], () => B.A.getStatus(t.id)),
+        ep = U.CY.useSetting(),
+        eg = (0, Y.Q)(ep),
+        e_ = (0, d.bG)([G.A], () => G.A.hidePersonalInformation),
+        ef = (0, b.kB)(),
+        ev = U.Q_.useSetting(),
+        eb = (0, Y.T)(ex),
+        ej = (0, K.j)(n),
+        eA = (0, A.A)({ analyticsLocations: eo }),
+        eC = (0, W.TW)(t),
+        ey = i.useRef(null),
+        eT = i.useRef(null),
+        eS = i.useRef((0, H.A)((e) => e.shouldRenderTenureLevelUp)),
+        eE = i.useMemo(() => (0, v.A)(), []),
+        [eN, eI] = i.useState(!0);
     i.useEffect(() => {
         setTimeout(() => {
-            eS(!1);
+            eI(!1);
         }, 500);
     }, []);
-    let eE = (e) => {
-            n?.(), (0, C.openUserProfileModal)({ customStatusPrompt: ey, sourceAnalyticsLocations: es, ...el, ...e });
+    let ek = (e) => {
+            n?.(), (0, T.openUserProfileModal)({ customStatusPrompt: eE, sourceAnalyticsLocations: eo, ...ed, ...e });
         },
-        eN = ei?.widgets != null && ei.widgets.length > 0,
-        eI = i.useCallback(() => {
+        eO = el?.widgets != null && el.widgets.length > 0,
+        eR = i.useCallback(() => {
             n();
         }, [n]),
-        ek = i.useCallback(() => {
-            ev(), eI();
-        }, [ev, eI]),
-        eO = (0, x.JY)({ location: "UserProfileAccountPopout" }),
-        eR = (0, x.on)({ location: "UserProfileAccountPopout" }),
-        ew = i.useId();
+        ew = i.useCallback(() => {
+            eA(), eR();
+        }, [eA, eR]),
+        eD = (0, x.JY)({ location: "UserProfileAccountPopout" }),
+        eP = (0, x.on)({ location: "UserProfileAccountPopout" }),
+        eM = i.useId();
     return (0, a.jsx)(h.f5, {
-        value: es,
-        children: (0, a.jsx)(j.of, {
-            value: el,
-            isLoaded: ei?.isLoaded,
+        value: eo,
+        children: (0, a.jsx)(C.of, {
+            value: ed,
+            isLoaded: el?.isLoaded,
             children: (0, a.jsxs)(c.lGe, {
-                ref: er,
-                "aria-labelledby": ew,
-                className: l()(Z.jC, en),
+                ref: ec,
+                "aria-labelledby": eM,
+                className: l()(et.jC, ei, {
+                    [et.lO]: null != er,
+                    [et.IW]:
+                        er?.layers.find((e) => {
+                            let { type: t, anchor: n } = e;
+                            return "staple" === t && "bottom" === n;
+                        }) !== void 0,
+                }),
                 "data-layer": "base",
                 children: [
                     (0, a.jsx)(o.AC4, {
-                        children: (0, a.jsx)(o.H, { id: ew, children: X.intl.string(X.t["5fWB8U"]) }),
+                        children: (0, a.jsx)(o.H, { id: eM, children: ee.intl.string(ee.t["5fWB8U"]) }),
                     }),
                     (0, a.jsxs)(c.Fmo, {
                         children: [
-                            (0, a.jsx)($.A, { displayProfile: ei, handleOpenUserProfileModal: eE, height: eo }),
-                            (0, a.jsxs)(O.A, {
-                                className: Z.BK,
+                            (0, a.jsx)(Q.A, { displayProfile: el, handleOpenUserProfileModal: ek, height: eu }),
+                            (0, a.jsxs)(w.A, {
+                                className: et.BK,
                                 user: t,
-                                displayProfile: ei,
-                                themeType: J.d.POPOUT,
+                                displayProfile: el,
+                                themeType: Z.d.POPOUT,
                                 children: [
                                     (0, a.jsxs)("div", {
-                                        className: ee.wx,
+                                        className: en.wx,
                                         children: [
-                                            (0, a.jsx)(S.A, { user: t, displayProfile: ei, themeType: J.d.POPOUT }),
-                                            (0, a.jsx)(y.A, {
+                                            (0, a.jsx)(N.A, { user: t, displayProfile: el, themeType: Z.d.POPOUT }),
+                                            (0, a.jsx)(S.A, {
                                                 user: t,
-                                                displayProfile: ei,
-                                                themeType: J.d.POPOUT,
-                                                onOpenProfile: ea ? void 0 : eE,
+                                                displayProfile: el,
+                                                themeType: Z.d.POPOUT,
+                                                onOpenProfile: es ? void 0 : ek,
                                             }),
-                                            (0, a.jsx)(D.A, {
-                                                ref: ej,
+                                            (0, a.jsx)(M.A, {
+                                                ref: ey,
                                                 user: t,
-                                                themeType: J.d.POPOUT,
+                                                themeType: Z.d.POPOUT,
                                                 onCloseProfile: n,
-                                                prompt: ey,
+                                                prompt: eE,
                                             }),
                                         ],
                                     }),
                                     (0, a.jsxs)(c.HOs, {
-                                        className: Z.rf,
-                                        style: { pointerEvents: eT ? "none" : void 0 },
+                                        className: et.rf,
+                                        style: { pointerEvents: eN ? "none" : void 0 },
                                         children: [
-                                            (0, a.jsx)(N.A, { userId: t.id }),
-                                            (0, a.jsx)(R.A, {
+                                            (0, a.jsx)(k.A, { userId: t.id }),
+                                            (0, a.jsx)(D.A, {
                                                 user: t,
-                                                className: Z.Xh,
-                                                nickname: G.Ay.getName(void 0, null, t),
-                                                onOpenProfile: ea ? void 0 : eE,
-                                                pronouns: ei?.pronouns,
-                                                tags: (0, a.jsx)(T.A, {
-                                                    displayProfile: ei,
-                                                    themeType: J.d.POPOUT,
+                                                className: et.Xh,
+                                                nickname: V.Ay.getName(void 0, null, t),
+                                                onOpenProfile: es ? void 0 : ek,
+                                                pronouns: el?.pronouns,
+                                                tags: (0, a.jsx)(E.A, {
+                                                    displayProfile: el,
+                                                    themeType: Z.d.POPOUT,
                                                     onClose: n,
-                                                    shouldOpenBadgeTooltip: null != et ? (e) => e === et : void 0,
-                                                    shouldGlowTenureBadge: eC.current,
+                                                    shouldOpenBadgeTooltip: null != ea ? (e) => e === ea : void 0,
+                                                    shouldGlowTenureBadge: eS.current,
                                                 }),
-                                                nicknameIcons: (0, a.jsx)(w.A, { user: t, isVisible: ed }),
+                                                nicknameIcons: (0, a.jsx)(P.A, { user: t, isVisible: em }),
                                             }),
-                                            (0, a.jsx)(P.A, {
+                                            (0, a.jsx)(L.A, {
                                                 user: t,
-                                                bio: ei?.bio,
-                                                hidePersonalInformation: ex,
+                                                bio: el?.bio,
+                                                hidePersonalInformation: e_,
                                                 onClose: n,
                                             }),
-                                            eN &&
-                                                (0, a.jsx)(k.A, {
+                                            eO &&
+                                                (0, a.jsx)(R.A, {
                                                     user: t,
-                                                    widgets: ei?.widgets,
-                                                    onOpenUserProfileModal: eE,
+                                                    widgets: el?.widgets,
+                                                    onOpenUserProfileModal: ek,
                                                 }),
-                                            (0, a.jsx)(E.A, { isPremiumUser: eb, onInteraction: n }),
-                                            (0, a.jsx)(I.A, {
+                                            (0, a.jsx)(I.A, { isPremiumUser: eC, onInteraction: n }),
+                                            (0, a.jsx)(O.A, {
                                                 user: t,
                                                 currentUser: t,
-                                                onOpenUserProfileModal: eE,
+                                                onOpenUserProfileModal: ek,
                                                 onClose: n,
                                             }),
                                             (0, a.jsxs)("div", {
-                                                className: Z.T_,
+                                                className: et.T_,
                                                 children: [
-                                                    (0, a.jsx)(O.A.Overlay, {
-                                                        className: Z.g0,
-                                                        children: (0, a.jsxs)(K.Gs, {
+                                                    (0, a.jsx)(w.A.Overlay, {
+                                                        className: et.g0,
+                                                        children: (0, a.jsxs)($.Gs, {
                                                             children: [
-                                                                (0, a.jsx)(K.N3, {
+                                                                (0, a.jsx)($.N3, {
                                                                     action: "EDIT_PROFILE",
-                                                                    label: X.intl.string(X.t.s5vZlQ),
+                                                                    label: ee.intl.string(ee.t.s5vZlQ),
                                                                     icon: c.R2l,
-                                                                    onClick: ek,
-                                                                    ref: eA,
+                                                                    onClick: ew,
+                                                                    ref: eT,
                                                                 }),
-                                                                (0, a.jsx)(K.N3, {
+                                                                (0, a.jsx)($.N3, {
                                                                     action: "PRESS_SET_STATUS",
-                                                                    label: (0, a.jsx)(z.A, {}),
-                                                                    sublabel: null != eh && eh,
+                                                                    label: (0, a.jsx)(q.A, {}),
+                                                                    sublabel: null != eg && eg,
                                                                     icon: () =>
-                                                                        (0, a.jsx)(c.nW6, { status: eu, size: 12 }),
+                                                                        (0, a.jsx)(c.nW6, { status: ex, size: 12 }),
                                                                     trailing:
-                                                                        (ep || eu === Y.clD.DND) &&
+                                                                        (ef || ex === X.clD.DND) &&
                                                                         (0, a.jsx)(c.a_I, { size: "xxs" }),
                                                                     renderSubmenu: r.Fr
                                                                         ? void 0
                                                                         : (e) => {
                                                                               let { closePopout: t } = e;
-                                                                              return (0, a.jsx)(K.eE, {
+                                                                              return (0, a.jsx)($.eE, {
                                                                                   navId: "set-status-submenu",
-                                                                                  className: Z.hQ,
-                                                                                  "aria-label": X.intl.string(
-                                                                                      X.t.E13trI,
+                                                                                  className: et.hQ,
+                                                                                  "aria-label": ee.intl.string(
+                                                                                      ee.t.E13trI,
                                                                                   ),
                                                                                   onClose: t,
-                                                                                  children: e_,
+                                                                                  children: eb,
                                                                               });
                                                                           },
                                                                     onClick: r.Fr
@@ -232,8 +242,8 @@ function et(e) {
                                                                                                           ...n,
                                                                                                           size: "sm",
                                                                                                           "aria-label":
-                                                                                                              X.intl.string(
-                                                                                                                  X.t[
+                                                                                                              ee.intl.string(
+                                                                                                                  ee.t[
                                                                                                                       "3Uj+2p"
                                                                                                                   ],
                                                                                                               ),
@@ -247,8 +257,8 @@ function et(e) {
                                                                                                                   variant:
                                                                                                                       "fixed",
                                                                                                                   "aria-label":
-                                                                                                                      X.intl.string(
-                                                                                                                          X
+                                                                                                                      ee.intl.string(
+                                                                                                                          ee
                                                                                                                               .t
                                                                                                                               .E13trI,
                                                                                                                       ),
@@ -259,7 +269,7 @@ function et(e) {
                                                                                                                   onSelect:
                                                                                                                       void 0,
                                                                                                                   children:
-                                                                                                                      e_,
+                                                                                                                      eb,
                                                                                                               },
                                                                                                           ),
                                                                                                       },
@@ -273,36 +283,36 @@ function et(e) {
                                                             ],
                                                         }),
                                                     }),
-                                                    (0, a.jsx)(O.A.Overlay, {
-                                                        className: Z.g0,
-                                                        children: (0, a.jsxs)(K.Gs, {
+                                                    (0, a.jsx)(w.A.Overlay, {
+                                                        className: et.g0,
+                                                        children: (0, a.jsxs)($.Gs, {
                                                             children: [
-                                                                (0, a.jsx)(K.N3, {
+                                                                (0, a.jsx)($.N3, {
                                                                     action: "PRESS_SWITCH_ACCOUNTS",
                                                                     icon: c.rMq,
-                                                                    label: X.intl.string(X.t.oMNyYN),
+                                                                    label: ee.intl.string(ee.t.oMNyYN),
                                                                     onClick: () => {
-                                                                        n(), (0, Q.A)();
+                                                                        n(), (0, J.A)();
                                                                     },
                                                                     renderSubmenu: (e) => {
                                                                         let { closePopout: t } = e;
-                                                                        return (0, a.jsx)(K.eE, {
+                                                                        return (0, a.jsx)($.eE, {
                                                                             navId: "switch-accounts-submenu",
-                                                                            "aria-label": X.intl.string(X.t.wFhVqL),
+                                                                            "aria-label": ee.intl.string(ee.t.wFhVqL),
                                                                             onClose: t,
-                                                                            children: ef,
+                                                                            children: ej,
                                                                         });
                                                                     },
                                                                 }),
                                                                 !__OVERLAY__ &&
-                                                                    B.p5 &&
-                                                                    eg &&
-                                                                    (0, a.jsx)(K.N3, {
+                                                                    F.p5 &&
+                                                                    ev &&
+                                                                    (0, a.jsx)($.N3, {
                                                                         action: "COPY_USER_ID",
                                                                         icon: c.L9S,
-                                                                        label: X.intl.string(X.t["/AXYnE"]),
+                                                                        label: ee.intl.string(ee.t["/AXYnE"]),
                                                                         onClick: () => {
-                                                                            (0, B.C)(t.id), n();
+                                                                            (0, F.C)(t.id), n();
                                                                         },
                                                                     }),
                                                             ],
@@ -312,13 +322,14 @@ function et(e) {
                                             }),
                                         ],
                                     }),
-                                    ei?.profileEffect != null &&
-                                        !eC.current &&
-                                        (0, a.jsx)(p.A, { skuId: ei.profileEffect.skuId, isHovering: ec }),
+                                    null != er && (0, a.jsx)(_.A, { frame: er }),
+                                    el?.profileEffect != null &&
+                                        !eS.current &&
+                                        (0, a.jsx)(p.A, { skuId: el.profileEffect.skuId, isHovering: eh }),
                                 ],
                             }),
-                            eO && eR ? (0, a.jsx)(H.A, { targetElementRef: eA, onClose: n }) : null,
-                            (0, a.jsx)(v.A, {}),
+                            eD && eP ? (0, a.jsx)(z.A, { targetElementRef: eT, onClose: n }) : null,
+                            (0, a.jsx)(j.A, {}),
                         ],
                     }),
                 ],
