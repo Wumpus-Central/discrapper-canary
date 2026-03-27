@@ -40,16 +40,7 @@ async function m(e, t) {
         if (null == n.body || !n.ok) throw Error("Failed to fetch social layer storefront SKU");
         i.h.dispatch({
             type: "SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS",
-            guildId: e,
-            storefront: (0, a.sq)({
-                application_id: n.body.store_listing.sku.application_id,
-                title: "",
-                logo_asset_id: void 0,
-                light_theme_logo_asset_id: void 0,
-                pages: [],
-                store_listings: [],
-                assets: n.body.assets,
-            }),
+            assets: Object.fromEntries(n.body.assets.map((e) => [e.id, e])),
         }),
             i.h.dispatch({ type: "STORE_LISTING_FETCH_SUCCESS", storeListing: n.body.store_listing });
     } catch (e) {
