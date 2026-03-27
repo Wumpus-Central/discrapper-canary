@@ -1,10 +1,15 @@
-s.d(l, { OY: () => h, ph: () => m, py: () => a });
-var t = s(64700),
-    r = s(909396);
-let n = /^[a-z0-9_+\-.#]+$/,
-    c = Promise.resolve(null),
-    u = new Map(),
-    i = {
+t.d(l, { OY: () => d, ph: () => g, py: () => x });
+var s = t(64700),
+    n = t(635377),
+    r = t.n(n),
+    u = t(181370),
+    c = t.n(u),
+    i = t(909396);
+let p = /^[a-z0-9_+\-.#]+$/,
+    a = Promise.resolve(null),
+    h = new Map(),
+    o = new (r())({ max: 256 }),
+    m = {
         h: "cpp",
         hpp: "cpp",
         cc: "cpp",
@@ -59,44 +64,54 @@ let n = /^[a-z0-9_+\-.#]+$/,
         v: "verilog",
         sv: "verilog",
     },
-    p = new Set((0, r.hK)());
-function a(e) {
+    f = new Set((0, i.hK)());
+function x(e) {
     if (null == e) return;
     let l = e.toLowerCase();
-    if (!n.test(l)) return;
-    if (p.has(l)) return l;
-    let s = (0, r.Op)(l);
-    if (p.has(s)) return s;
-    let t = i[l];
-    if (null != t && p.has(t)) return t;
+    if (!p.test(l)) return;
+    if (f.has(l)) return l;
+    let t = (0, i.Op)(l);
+    if (f.has(t)) return t;
+    let s = m[l];
+    if (null != s && f.has(s)) return s;
 }
-function h(e, l) {
-    let s = t.use(
+function d(e, l) {
+    let t = s.use(
             (function (e) {
-                if (null == e) return c;
-                let l = u.get(e);
-                return null == l && ((l = (0, r.oS)(e)), u.set(e, l)), l;
+                if (null == e) return a;
+                let l = h.get(e);
+                return null == l && ((l = (0, i.oS)(e)), h.set(e, l)), l;
             })(e),
         ),
-        n = t.useMemo(() => {
+        n = s.useMemo(() => {
             if (
                 !(function (e) {
                     for (let l of e.split("\n")) if (l.length > 1e3) return !1;
                     return !0;
                 })(l) ||
-                null == s
+                null == t
             )
                 return null;
-            let e = l.endsWith("\n") ? l : l + "\n";
-            return s.highlight(e);
-        }, [s, l]);
-    return "string" == typeof n || null == n ? n : t.use(n);
+            let s = c()(`${e}\0${l}`),
+                n = o.get(s);
+            if (null != n) return n;
+            let r = l.endsWith("\n") ? l : l + "\n",
+                u = t.highlight(r);
+            return "string" == typeof u && o.set(s, u), u;
+        }, [t, l, e]);
+    if ("string" == typeof n || null == n) return n;
+    let r = s.use(n);
+    if (null != r) {
+        let t = c()(`${e}\0${l}`);
+        o.set(t, r);
+    }
+    return r;
 }
-p.add("ansi");
-let o = null;
-function m(e) {
-    o ??= s.e("1180").then(s.t.bind(s, 628759, 23));
-    let { default: l } = t.use(o),
-        [r] = t.useState(() => new l({ escapeXML: !0 }));
-    return t.useMemo(() => r.toHtml(e), [r, e]);
+f.add("ansi");
+let j = null;
+function g(e) {
+    j ??= t.e("1180").then(t.t.bind(t, 628759, 23));
+    let { default: l } = s.use(j),
+        [n] = s.useState(() => new l({ escapeXML: !0 }));
+    return s.useMemo(() => n.toHtml(e), [n, e]);
 }
