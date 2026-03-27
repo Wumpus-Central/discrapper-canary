@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { J$: () => A, WM: () => h, cZ: () => E, eG: () => p, vm: () => g, zh: () => m, zv: () => _ });
+n.d(t, { J$: () => A, WM: () => h, cZ: () => g, eG: () => p, vm: () => E, zh: () => m, zv: () => _ });
 var r = n(544180),
     i = n(829219),
-    a = n(859703),
-    s = n(405670),
+    s = n(859703),
+    a = n(405670),
     o = n(561844),
     l = n(710969),
     u = n(792620),
@@ -24,11 +24,12 @@ let h = (e) =>
 function m(e, t) {
     return e <= 0 || t <= 0 ? 0 : e >= t ? 1 : Math.min(1, Math.round((e / t) * 100) / 100);
 }
-function g(e) {
-    let { questId: t, sourceQuestContent: n, videoSessionId: i } = e,
-        l = s.Ay.getState().getVideoProgress(t);
+function E(e) {
+    let { questId: t, sourceQuestContent: n, videoSessionId: i } = e;
+    a.Ay.getState().setTranscriptEnabled(!1);
+    let l = a.Ay.getState().getVideoProgress(t);
     if (null == l) return;
-    let u = a.A.getQuest(t);
+    let u = s.A.getQuest(t);
     null != u && u.userStatus?.enrolledAt != null && u.userStatus?.completedAt == null && _(u, l.maxTimestampSec);
     let d = m(l.maxTimestampSec, l.duration);
     (0, o.av)({
@@ -48,9 +49,9 @@ function g(e) {
             sourceQuestContent: n,
         });
 }
-function E(e) {
+function g(e) {
     return `VIDEO-QUEST-${e}`;
 }
 function A(e) {
-    return !!(0, u.vv)(e) && (0, n(192308).hasModalOpen)(E(e.id));
+    return !!(0, u.vv)(e) && (0, n(192308).hasModalOpen)(g(e.id));
 }
