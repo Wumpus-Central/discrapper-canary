@@ -5,14 +5,14 @@ var r = n(627968),
     s = n.n(l),
     o = n(311907),
     a = n(554146),
-    u = n(397927),
-    d = n(793574),
+    d = n(397927),
+    u = n(793574),
     c = n(932001),
     p = n(742589),
-    m = n(976860),
-    _ = n(488803),
-    A = n(14081),
-    f = n(843095),
+    _ = n(976860),
+    m = n(488803),
+    f = n(14081),
+    A = n(843095),
     g = n(645619),
     x = n(929250),
     v = n(489306),
@@ -24,43 +24,43 @@ var r = n(627968),
     S = n(194867),
     C = n(149854),
     w = n(864450),
-    N = n(697865),
+    y = n(697865),
     L = n(297407),
-    y = n(271484),
-    R = n(289642),
-    k = n(915667),
+    k = n(436207),
+    N = n(271484),
+    R = n(915667),
     T = n(800007),
     P = n(568065),
-    G = n(652215),
-    O = n(49999),
-    D = n(136708),
-    U = n(985018),
-    V = n(965888);
+    O = n(652215),
+    G = n(49999),
+    D = n(333354),
+    V = n(985018),
+    U = n(453165);
 function M(e) {
     let { guildId: t, powerupListingId: l } = e;
     (0, E.A)(t);
-    let M = (0, _.C$)(t, "GuildPowerupsOverview");
+    let M = (0, m.C$)(t, "GuildPowerupsOverview");
     (0, v.Pq)(t);
     let W = (0, o.bG)([g.A], () => g.A.getStateForGuild(t)),
         B = (0, h.A)(t),
         F = (0, x.h)("GuildPowerupsOverview"),
         J = i.useRef(!1),
-        { shouldShow: K, modalConfig: Y } = (0, R.A)(t, "GuildPowerupsOverview"),
-        z = null == l && null != Y,
-        $ = [];
-    K && z && $.push(a.M.VANITY_URL_POWERUP_ROLLBACK_MODAL);
-    let [X, q] = (0, c.kn)($),
-        H = (0, b.MO)(t, M),
-        Q = H.flatMap((e) => e.listings)
+        { shouldShow: K, modalConfig: z } = (0, k.A)(t, "GuildPowerupsOverview"),
+        $ = null == l && null != z,
+        X = [];
+    K && $ && X.push(a.M.VANITY_URL_POWERUP_ROLLBACK_MODAL);
+    let [H, Y] = (0, c.kn)(X),
+        Q = (0, b.MO)(t, M),
+        q = Q.flatMap((e) => e.listings)
             .filter((e) => "multiPerk" === e.type)
             .map((e) => e.group),
-        Z = (0, y.g)(Q, t);
+        Z = (0, N.g)(q, t);
     return (i.useEffect(() => {
         if (null != l && !J.current)
-            for (let e of H)
+            for (let e of Q)
                 for (let n of e.listings) {
                     if (("singleLevel" === n.type || "singlePerk" === n.type) && n.powerup.skuId === l) {
-                        (0, k.A)(t, n.powerup), (J.current = !0);
+                        (0, R.A)(t, n.powerup), (J.current = !0);
                         return;
                     }
                     if ("multiPerk" === n.type && (n.group === l || n.powerups.some((e) => e.skuId === l))) {
@@ -72,81 +72,81 @@ function M(e) {
                                 let e = new URL(window.location.href);
                                 e.searchParams.delete(P.G0);
                                 let t = e.pathname + e.search + e.hash;
-                                (0, m.bG)(t), (J.current = !1);
+                                (0, _.bG)(t), (J.current = !1);
                             },
                         });
                         return;
                     }
                     if ("gameServer" === n.type && l === T.W5) {
-                        (0, f.A)({ guildId: t, analyticsLocation: d.A.GUILD_POWERUPS_OVERVIEW }), (J.current = !0);
+                        (0, A.A)({ guildId: t, analyticsLocation: u.A.GUILD_POWERUPS_OVERVIEW }), (J.current = !0);
                         return;
                     }
                 }
-    }, [t, l, H, Z]),
+    }, [t, l, Q, Z]),
     i.useEffect(() => {
-        if (null != X && null != Y) {
+        if (null != H && null != z) {
             let e = {
                 onCloseCallback: () => {
-                    q(O.i.USER_DISMISS);
+                    Y(G.i.USER_DISMISS);
                 },
-                modalKey: `dismissible_content_${X}`,
+                modalKey: `dismissible_content_${H}`,
             };
-            (0, u.mMO)(async () => {
+            (0, d.mMO)(async () => {
                 let { default: e } = await n.e("86618").then(n.bind(n, 442241));
-                return (t) => (0, r.jsx)(e, { modalConfig: Y, markAsDismissed: q, ...t });
+                return (t) => (0, r.jsx)(e, { modalConfig: z, markAsDismissed: Y, ...t });
             }, e);
         }
-    }, [t, X, q, Y]),
+    }, [t, H, Y, z]),
     W?.powerupCatalog == null)
         ? null
         : (0, r.jsxs)("div", {
-              className: V.kL,
+              className: U.kL,
               children: [
                   (0, r.jsxs)(p.A, {
-                      className: V.KE,
+                      className: U.KE,
                       hideSearch: !0,
                       toolbar: (0, r.jsx)("div", {}),
                       children: [
-                          (0, r.jsx)(p.A.Icon, { icon: u._Jp, "aria-label": "" }),
-                          (0, r.jsx)(p.A.Title, { children: U.intl.string(D.default.yv3DJJ) }),
+                          (0, r.jsx)(p.A.Icon, { icon: d._Jp, "aria-label": "" }),
+                          (0, r.jsx)(p.A.Title, { children: V.intl.string(D.default.yv3DJJ) }),
                       ],
                   }),
                   (0, r.jsxs)("div", {
-                      className: V.hQ,
+                      className: U.hQ,
                       children: [
-                          (0, r.jsx)(u.IpV, {
-                              className: V.DO,
-                              children: H.map((e) => {
+                          (0, r.jsx)(d.IpV, {
+                              className: U.DO,
+                              children: Q.map((e) => {
                                   let { type: n, listings: i } = e,
                                       { title: l, description: o } = (function (e) {
                                           switch (e) {
                                               case P.o9.LEVEL:
                                                   return {
-                                                      title: U.intl.string(D.default["TXY/b0"]),
-                                                      description: U.intl.string(D.default.aJv4PB),
+                                                      title: V.intl.string(D.default["TXY/b0"]),
+                                                      description: V.intl.string(D.default.aJv4PB),
                                                   };
                                               case P.o9.PERK:
                                                   return {
-                                                      title: U.intl.string(D.default.TV3Vm8),
-                                                      description: U.intl.string(D.default.STx9hp),
+                                                      title: V.intl.string(D.default.TV3Vm8),
+                                                      description: V.intl.string(D.default.STx9hp),
                                                   };
                                           }
                                       })(n),
-                                      a = n === P.o9.LEVEL ? u.IpV : "div";
+                                      a = n === P.o9.LEVEL ? d.IpV : "div";
                                   return (0, r.jsxs)(
                                       "div",
                                       {
-                                          className: V.lt,
+                                          className: U.lt,
                                           children: [
                                               (0, r.jsxs)("div", {
-                                                  className: V.kn,
+                                                  className: U.kn,
                                                   children: [
-                                                      (0, r.jsx)(u.Heading, {
+                                                      (0, r.jsx)(d.Heading, {
                                                           color: "text-strong",
                                                           variant: "heading-lg/semibold",
                                                           children: l,
                                                       }),
-                                                      (0, r.jsx)(u.Text, {
+                                                      (0, r.jsx)(d.Text, {
                                                           color: "text-muted",
                                                           variant: "text-sm/medium",
                                                           children: o,
@@ -155,7 +155,7 @@ function M(e) {
                                               }),
                                               (0, r.jsx)(a, {
                                                   orientation: "horizontal",
-                                                  className: s()(V.qJ, V.kn, { [V.dU]: n === P.o9.LEVEL }),
+                                                  className: s()(U.qJ, U.kn, { [U.dU]: n === P.o9.LEVEL }),
                                                   fade: !0,
                                                   children: i.map((e, n) => {
                                                       switch (e.type) {
@@ -173,7 +173,7 @@ function M(e) {
                                                           case "singlePerk":
                                                               return (0, r.jsx)(
                                                                   C.A,
-                                                                  { guildId: t, powerup: e.powerup },
+                                                                  { guildId: t, powerup: e.powerup, badge: e.badge },
                                                                   `powerup-${e.powerup.skuId}`,
                                                               );
                                                           case "multiPerk":
@@ -184,7 +184,7 @@ function M(e) {
                                                               );
                                                           case "gameServer":
                                                               return (0, r.jsx)(
-                                                                  A.A,
+                                                                  f.A,
                                                                   { guildId: t },
                                                                   "powerup-game-server",
                                                               );
@@ -198,27 +198,27 @@ function M(e) {
                               }),
                           }),
                           (0, r.jsxs)("div", {
-                              className: V.so,
+                              className: U.so,
                               children: [
                                   B
                                       ? (0, r.jsx)(w.A, { guildId: t, showVideoCard: F })
                                       : F
                                         ? (0, r.jsxs)("div", {
-                                              className: V.CG,
+                                              className: U.CG,
                                               children: [
                                                   (0, r.jsx)(I.A, {
                                                       guildId: t,
                                                       variant: "member",
                                                       analyticsLocation: {
-                                                          page: G.liQ.GUILD_POWERUPS_OVERVIEW,
-                                                          section: G.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
-                                                          object: G.ZSU.CARD,
+                                                          page: O.liQ.GUILD_POWERUPS_OVERVIEW,
+                                                          section: O.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
+                                                          object: O.ZSU.CARD,
                                                       },
                                                   }),
-                                                  (0, r.jsx)(N.A, { guildId: t, showVideoCard: !0 }),
+                                                  (0, r.jsx)(y.A, { guildId: t, showVideoCard: !0 }),
                                               ],
                                           })
-                                        : (0, r.jsx)(N.A, { guildId: t }),
+                                        : (0, r.jsx)(y.A, { guildId: t }),
                                   (0, r.jsx)(L.A, { guildId: t }),
                               ],
                           }),

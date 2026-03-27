@@ -21,5 +21,5 @@ e.exports = {
     nt: "enabledBadge__65e57",
     NC: "buttonsContainer__65e57",
     x6: "button__65e57",
-    Ad: "newBadge__65e57",
+    AP: "typeBadge__65e57",
 };
