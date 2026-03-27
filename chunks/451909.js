@@ -52,7 +52,7 @@ function M(e, t, n, r) {
         })
         .first();
 }
-function x(e, t, n) {
+function P(e, t, n) {
     if (t[0] !== e) return;
     if ('"' !== t[1]) return M(e, t, n, "channel");
     let r = 2;
@@ -80,7 +80,7 @@ function x(e, t, n) {
         })
         .first();
 }
-function P(e) {
+function x(e) {
     return { order: e.order, match: e.match, parse: (t) => ({ type: e.type, content: t[0] }) };
 }
 function k(e) {
@@ -95,11 +95,11 @@ let U = d.A.RULES,
     j = /(@everyone|@here|@Clyde)\b/,
     Y = /^[^\s]+@[^\s]+\.[^\s.]+/,
     W = {
-        link: P(a().defaultRules.link),
-        autolink: P(a().defaultRules.autolink),
-        url: P(a().defaultRules.url),
-        inlineCode: P(U.inlineCode),
-        codeBlock: P(U.codeBlock),
+        link: x(a().defaultRules.link),
+        autolink: x(a().defaultRules.autolink),
+        url: x(a().defaultRules.url),
+        inlineCode: x(U.inlineCode),
+        codeBlock: x(U.codeBlock),
         rawUserMention: k(F),
         rawRoleMention: k(V),
         rawChannelMention: k(B),
@@ -135,7 +135,7 @@ let U = d.A.RULES,
             },
         },
         channel: {
-            match: (e, t) => x("#", e, t.channels) ?? null,
+            match: (e, t) => P("#", e, t.channels) ?? null,
             parse: (e) => ({ type: "text", content: `<#${e[1]}>` }),
         },
         emoticon: {
@@ -190,8 +190,8 @@ let U = d.A.RULES,
         },
     },
     K = {
-        inlineCode: P(U.inlineCode),
-        codeBlock: P(U.codeBlock),
+        inlineCode: x(U.inlineCode),
+        codeBlock: x(U.codeBlock),
         mention: {
             match: a().anyScopeRegex(F),
             parse(e, t, n) {
@@ -323,14 +323,18 @@ function Q(e) {
         n = e?.getGuildId(),
         r = null != n ? T.A.getGuild(n) : null,
         s = S.A.can(D.xBc.MENTION_EVERYONE, e);
-    t = e?.isPrivate()
-        ? e.recipients.map((e) => ({ userId: e, nick: null }))
-        : null != n
-          ? A.Ay.getMembers(n).map((e) => {
-                let { userId: t, nick: n } = e;
-                return { userId: t, nick: n };
-            })
-          : [];
+    if (e?.isPrivate()) {
+        t = e.recipients.map((e) => ({ userId: e, nick: null }));
+        let n = N.default.getCurrentUser();
+        null != n && t.push({ userId: n.id, nick: null });
+    } else
+        t =
+            null != n
+                ? A.Ay.getMembers(n).map((e) => {
+                      let { userId: t, nick: n } = e;
+                      return { userId: t, nick: n };
+                  })
+                : [];
     let a = i()(
             t.reduce((e, t) => {
                 let { userId: n } = t,
