@@ -3,7 +3,7 @@ var a = n(627968),
     i = n(64700),
     s = n(873298),
     l = n(265486),
-    r = n(36149),
+    r = n(840387),
     o = n(253932),
     d = n(780964),
     c = n(840065),
@@ -12,7 +12,7 @@ var a = n(627968),
     h = n(796343);
 function x(e) {
     let { markAsDismissed: t, targetElementRef: n } = e,
-        x = (0, r.yM)(),
+        x = (0, r.Z)(),
         p = o.KP.useSetting(),
         g = x && p !== s.KP.FRIENDS_AND_ALL_GUILDS,
         _ = (0, i.useCallback)(() => {
