@@ -51,16 +51,25 @@ let _ = 20,
                 scrollOffset: _,
                 searchQuery: D,
             }),
-            x = i.useCallback(
+            P = i.useCallback(
                 (e) => {
-                    M(e), p({ listRef: b, searchQuery: D, nitroLockedSectionStates: w, scrollTop: e }), R?.(e);
+                    M(e),
+                        p({
+                            listRef: b,
+                            searchQuery: D,
+                            nitroLockedSectionStates: w,
+                            scrollTop: e,
+                            sectionHeaderHeight: v,
+                            sectionFooterHeight: N,
+                        }),
+                        R?.(e);
                 },
-                [M, D, w, R],
+                [M, D, w, v, N, R],
             );
         return (
             i.useEffect(() => {
-                null != b.current && x(0);
-            }, [x, b]),
+                null != b.current && P(b.current.getScrollerNode()?.scrollTop ?? 0);
+            }, [P, b]),
             (0, c.FV)({ searchQuery: D, activeCategoryIndex: L, listRef: b }),
             i.useImperativeHandle(
                 t,
@@ -102,7 +111,7 @@ let _ = 20,
                         : (0, r.jsx)(a.A, {
                               role: "none presentation",
                               listPadding: f,
-                              onScroll: x,
+                              onScroll: P,
                               renderRow: h,
                               renderSection: m,
                               renderSectionHeader: E,
@@ -123,12 +132,26 @@ let _ = 20,
     }),
     p = (0, s.throttle)(h, 300, { leading: !1, trailing: !0 });
 function h(e) {
-    let { listRef: t, searchQuery: n, nitroLockedSectionStates: r, scrollTop: i } = e;
+    let {
+        listRef: t,
+        searchQuery: n,
+        nitroLockedSectionStates: r,
+        scrollTop: i,
+        sectionHeaderHeight: s,
+        sectionFooterHeight: a,
+    } = e;
     if (null == t.current) return;
-    let s = (0, u.s)({ listRef: t, searchQuery: n, nitroLockedSectionStates: r, scrollTop: i });
+    let o = (0, u.s)({
+        listRef: t,
+        searchQuery: n,
+        nitroLockedSectionStates: r,
+        scrollTop: i,
+        sectionHeaderHeight: s,
+        sectionFooterHeight: a,
+    });
     l.RQ.setState({
-        isNitroLockedSectionVisible: s.isNitroLockedSectionVisible,
-        areOnlyNitroLockedSectionsVisible: s.areOnlyNitroLockedSectionsVisible,
+        isNitroLockedSectionVisible: o.isNitroLockedSectionVisible,
+        areOnlyNitroLockedSectionsVisible: o.areOnlyNitroLockedSectionsVisible,
     });
 }
 let m = f;

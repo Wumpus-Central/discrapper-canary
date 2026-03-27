@@ -153,6 +153,7 @@ class A extends a.G {
             },
             { no: 37, name: "growthbook_tags", kind: "scalar", repeat: 2, T: 9 },
             { no: 38, name: "allocate_right_to_left", kind: "scalar", T: 8 },
+            { no: 39, name: "is_managed", kind: "scalar", T: 8 },
         ]);
     }
     create(e) {
@@ -186,6 +187,7 @@ class A extends a.G {
             customUnitPrefix: 0,
             growthbookTags: [],
             allocateRightToLeft: !1,
+            isManaged: !1,
         };
         return (
             globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
@@ -314,6 +316,9 @@ class A extends a.G {
                 case 38:
                     s.allocateRightToLeft = e.bool();
                     break;
+                case 39:
+                    s.isManaged = e.bool();
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -376,7 +381,8 @@ class A extends a.G {
                 o.as.internalBinaryWrite(e.guildExperimentVersion, t.tag(35, r.O0.LengthDelimited).fork(), n).join(),
             0 !== e.customUnitPrefix && t.tag(36, r.O0.Varint).int32(e.customUnitPrefix);
         for (let n = 0; n < e.growthbookTags.length; n++) t.tag(37, r.O0.LengthDelimited).string(e.growthbookTags[n]);
-        !1 !== e.allocateRightToLeft && t.tag(38, r.O0.Varint).bool(e.allocateRightToLeft);
+        !1 !== e.allocateRightToLeft && t.tag(38, r.O0.Varint).bool(e.allocateRightToLeft),
+            !1 !== e.isManaged && t.tag(39, r.O0.Varint).bool(e.isManaged);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
