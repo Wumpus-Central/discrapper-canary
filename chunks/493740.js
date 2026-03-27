@@ -157,7 +157,7 @@ let G = new p(r.w.INCREASED_GUILD_LIMIT),
 function $(e, t, n) {
     if ((null != t && t.isPremiumWithFractionalPremiumOnly() && Y.includes(e)) || (n && W.includes(e))) return !1;
     let r = K.get(e);
-    if (null != r) {
+    if (null != r && t?.perks != null) {
         let n = u.A.getConfig({ location: "product_catalog_can_user_use" });
         if (n !== u.I.CONTROL) {
             let i = e.getFeatureValue(t),
