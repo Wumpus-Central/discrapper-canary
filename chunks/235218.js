@@ -62,7 +62,6 @@ function C(e) {
                                       : (0, g.R)({
                                             skuId: k.id,
                                             applicationId: G.id,
-                                            guildId: G.guildId,
                                             isStorefront: !1,
                                             analyticsLocations: V,
                                         }));

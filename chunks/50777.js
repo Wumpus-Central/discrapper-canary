@@ -46,16 +46,9 @@ function N(e) {
             (e) => {
                 e.stopPropagation(),
                     L?.applicationId != null &&
-                        null != t &&
-                        (0, I.R)({
-                            skuId: n,
-                            applicationId: L.applicationId,
-                            guildId: t,
-                            isStorefront: !1,
-                            analyticsLocations: D,
-                        });
+                        (0, I.R)({ skuId: n, applicationId: L.applicationId, isStorefront: !1, analyticsLocations: D });
             },
-            [n, L, t, D],
+            [n, L, D],
         ),
         F = a.useCallback(() => {
             null != L &&

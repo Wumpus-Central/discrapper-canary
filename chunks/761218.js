@@ -84,9 +84,9 @@ let I = { pageSection: "marvel-rivals-promotional-banner" },
             }, [M]),
             w = r.useCallback(
                 (e, t) => {
-                    let { skuId: s, applicationId: n, guildId: r } = t;
+                    let { skuId: s, applicationId: n } = t;
                     M("card_click", s),
-                        (0, p.R)({ skuId: s, applicationId: n, guildId: r, isStorefront: !1, analyticsLocations: O });
+                        (0, p.R)({ skuId: s, applicationId: n, isStorefront: !1, analyticsLocations: O });
                 },
                 [M, O],
             ),

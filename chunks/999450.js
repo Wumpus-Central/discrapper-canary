@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => h });
 var a = n(627968),
     l = n(64700),
     i = n(793574),
@@ -10,32 +10,24 @@ var a = n(627968),
     u = n(305080),
     m = n(954506),
     x = n(985018);
-function f(e) {
+function h(e) {
     let { trackAction: t } = e,
         { socialLayerStorefrontRecommendationsData: n } = (0, u.c)(),
-        { analyticsLocations: f } = (0, r.Ay)([i.A.GAME_PROFILE]),
-        h = l.useCallback(() => {
+        { analyticsLocations: h } = (0, r.Ay)([i.A.GAME_PROFILE]),
+        f = l.useCallback(() => {
             n?.guildId != null && (t(d.Ws.GameShop), (0, s.default)({ guildId: n.guildId }));
         }, [n, t]),
         g = l.useCallback(
-            (e) => {
-                n?.guildId != null &&
-                    (t(d.Ws.GameShopItem),
-                    (0, c.R)({
-                        skuId: e,
-                        applicationId: n.application.id,
-                        guildId: n.guildId,
-                        isStorefront: !1,
-                        analyticsLocations: f,
-                    }));
+            (e, n) => {
+                t(d.Ws.GameShopItem), (0, c.R)({ skuId: e, applicationId: n, isStorefront: !1, analyticsLocations: h });
             },
-            [n, t, f],
+            [t, h],
         );
     if (null == n) return null;
-    let { skuIds: _ } = n;
+    let { skuIds: p } = n;
     return (0, a.jsx)(m.A, {
         title: x.intl.string(x.t.WDdlUb),
-        onClickViewAll: h,
-        children: (0, a.jsx)(o.R, { skuIds: _, analyticsLocations: f, onCardClick: g }),
+        onClickViewAll: f,
+        children: (0, a.jsx)(o.R, { skuIds: p, analyticsLocations: h, onCardClick: g }),
     });
 }

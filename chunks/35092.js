@@ -3,8 +3,8 @@ n.d(t, { A: () => L });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    a = n.n(l),
-    r = n(575593),
+    r = n.n(l),
+    a = n(575593),
     o = n(158954),
     c = n(417597),
     d = n(793574),
@@ -17,21 +17,21 @@ var i = n(627968),
     g = n(661492),
     f = n(146423),
     x = n(662349),
-    C = n(216020),
-    E = n(479026),
+    E = n(216020),
+    C = n(479026),
     I = n(699976),
     N = n(652215),
     b = n(788868),
     S = n(518477),
     T = n(985018),
-    v = n(556786);
+    v = n(444239);
 let y = I.Z.SIZE_90;
 function j(e) {
     let {
             sku: t,
             wishlistOwner: n,
             wishlistId: l,
-            isSingleCard: r,
+            isSingleCard: a,
             style: c,
             skuPreviewStyle: d,
             onDetailsClick: u,
@@ -48,7 +48,7 @@ function j(e) {
             }),
                 u();
         }, [t, l, u, m]),
-        E = s.useCallback(() => {
+        C = s.useCallback(() => {
             m({
                 action: S.Mq.PRESS_WISHLIST_BREADCRUMB_CARD,
                 skuId: t.id,
@@ -82,27 +82,27 @@ function j(e) {
                     sku: t,
                     user: n,
                     spec: y,
-                    cardStyle: a()(v.Nr, v.Q1, c),
-                    skuPreviewStyle: a()(v.ho, d),
+                    cardStyle: r()(v.Nr, v.Q1, c),
+                    skuPreviewStyle: r()(v.ho, d),
                     onClick: _,
                     "aria-label": T.intl.formatToPlainString(T.t.ZBB4Ty, { productName: (0, g.TC)(t) }),
                     onHoverOrFocusChange: R,
                     children: (0, i.jsx)(x.A, {
                         spec: y,
-                        onClick: b ? E : _,
+                        onClick: b ? C : _,
                         isHoveringOrFocusing: j,
                         label: I,
                         icon: N,
                     }),
                 }),
             }),
-            r && (0, i.jsx)(C.A, { title: A.title, description: A.description, onClick: _ }),
+            a && (0, i.jsx)(E.A, { title: A.title, description: A.description, onClick: _ }),
         ],
     });
 }
 function R(e) {
-    let { sku: t, wishlistOwner: n, analyticsLocations: l, ...a } = e,
-        r = (0, c.bG)([h.A], () => h.A.getApplication(t.applicationId)),
+    let { sku: t, wishlistOwner: n, analyticsLocations: l, ...r } = e,
+        a = (0, c.bG)([h.A], () => h.A.getApplication(t.applicationId)),
         { analyticsLocations: o } = (0, u.Ay)(
             ...(l ?? []),
             d.A.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON,
@@ -115,20 +115,18 @@ function R(e) {
             );
         }, [t, n, o]),
         p = s.useCallback(() => {
-            r?.guildId != null &&
-                (0, m.R)({
-                    skuId: t.id,
-                    applicationId: t.applicationId,
-                    guildId: r.guildId,
-                    isStorefront: !1,
-                    giftRecipient: n,
-                    giftingOrigin: b.vQ.USER_PROFILE_WISHLIST,
-                    analyticsLocations: o,
-                });
-        }, [r?.guildId, t.id, t.applicationId, n, o]),
+            (0, m.R)({
+                skuId: t.id,
+                applicationId: t.applicationId,
+                isStorefront: !1,
+                giftRecipient: n,
+                giftingOrigin: b.vQ.USER_PROFILE_WISHLIST,
+                analyticsLocations: o,
+            });
+        }, [t.id, t.applicationId, n, o]),
         g = s.useMemo(
-            () => ({ title: t.name, description: T.intl.format(T.t["CqpEC+"], { applicationName: r?.name }) }),
-            [t.name, r?.name],
+            () => ({ title: t.name, description: T.intl.format(T.t["CqpEC+"], { applicationName: a?.name }) }),
+            [t.name, a?.name],
         );
     return (0, i.jsx)(j, {
         sku: t,
@@ -137,7 +135,7 @@ function R(e) {
         onDetailsClick: p,
         onPurchaseClick: A,
         singleCardInfo: g,
-        ...a,
+        ...r,
     });
 }
 function O(e) {
@@ -151,16 +149,16 @@ function O(e) {
                 giftRecipient: n,
             });
         }, [t.id, n, l]),
-        d = (0, E.e)({ sku: t, giftRecipient: n, giftingOrigin: b.vQ.USER_PROFILE_WISHLIST, analyticsLocations: l }),
+        d = (0, C.e)({ sku: t, giftRecipient: n, giftingOrigin: b.vQ.USER_PROFILE_WISHLIST, analyticsLocations: l }),
         u = s.useMemo(() => {
             switch (t?.tenantMetadata?.collectibles?.type) {
-                case r.R.PROFILE_EFFECT:
-                case r.R.NAMEPLATE:
+                case a.R.PROFILE_EFFECT:
+                case a.R.NAMEPLATE:
                     return;
-                case r.R.AVATAR_DECORATION:
-                    return a()(v.ML, v._P);
+                case a.R.AVATAR_DECORATION:
+                    return r()(v.ML, v._P);
                 default:
-                    return a()(v.ML, v.ZY);
+                    return r()(v.ML, v.ZY);
             }
         }, [t?.tenantMetadata?.collectibles?.type]),
         h = s.useMemo(
@@ -170,11 +168,11 @@ function O(e) {
                     if (e.tenantMetadata?.collectibles == null) return "";
                     if (null != e.bundledSkus && e.bundledSkus.length > 0) return T.intl.string(T.t.Zr5tjn);
                     switch (e.tenantMetadata.collectibles.type) {
-                        case r.R.AVATAR_DECORATION:
+                        case a.R.AVATAR_DECORATION:
                             return T.intl.string(T.t["7v0T9P"]);
-                        case r.R.PROFILE_EFFECT:
+                        case a.R.PROFILE_EFFECT:
                             return T.intl.string(T.t.wR5wOo);
-                        case r.R.NAMEPLATE:
+                        case a.R.NAMEPLATE:
                             return T.intl.string(T.t.x5CoXR);
                         default:
                             return "";

@@ -1,31 +1,33 @@
-n.d(t, { R: () => s });
-var a = n(627968);
-n(64700);
-var l = n(720462),
-    i = n(183802),
-    r = n(209968);
-function s(e) {
-    let { skuIds: t, analyticsLocations: n, onCardClick: s } = e;
+n.d(t, { R: () => c });
+var a = n(627968),
+    l = n(64700),
+    i = n(720462),
+    r = n(183802),
+    s = n(244459);
+function c(e) {
+    let { skuIds: t, analyticsLocations: n, onCardClick: c } = e,
+        o = l.useMemo(() => {
+            if (null != c)
+                return (e, t) => {
+                    let { skuId: n, applicationId: a } = t;
+                    e.preventDefault(), c(n, a);
+                };
+        }, [c]);
     return null == t || 0 === t.length
         ? null
-        : (0, a.jsx)(l.A, {
+        : (0, a.jsx)(i.A, {
               gap: "md",
               children: t.map((e, t) =>
                   (0, a.jsx)(
                       "div",
                       {
-                          className: r.B,
-                          children: (0, a.jsx)(i.A, {
+                          className: s.B,
+                          children: (0, a.jsx)(r.A, {
                               positionInSection: t,
                               skuId: e,
-                              variant: i.s.SMALL,
+                              variant: r.s.SMALL,
                               analyticsLocations: n,
-                              onClick:
-                                  null != s
-                                      ? (t) => {
-                                            t.preventDefault(), s(e);
-                                        }
-                                      : void 0,
+                              onClick: o,
                           }),
                       },
                       `${e}-${t}`,

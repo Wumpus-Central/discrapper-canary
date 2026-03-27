@@ -61,7 +61,6 @@ function N(e) {
                 (0, A.R)({
                     skuId: t.id,
                     applicationId: t.applicationId,
-                    guildId: s.guildId,
                     isStorefront: !1,
                     giftRecipient: U,
                     giftingOrigin: T.vQ.SHOP_PAGE,

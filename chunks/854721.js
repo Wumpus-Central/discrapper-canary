@@ -24,7 +24,7 @@ var n = t(627968),
     b = t(964395),
     R = t(542533),
     N = t(652215),
-    v = t(151439);
+    v = t(475260);
 function C(e) {
     let { storefront: l, guildId: t, selectedPageIndex: a, selectedSku: i } = e,
         r = (0, E.jM)(),
@@ -40,7 +40,6 @@ function C(e) {
                     (0, k.R)({
                         skuId: d,
                         applicationId: l.applicationId,
-                        guildId: t,
                         isStorefront: !0,
                         analyticsLocations: [u.A.SOCIAL_LAYER_STOREFRONT],
                         analyticsContext: o.current,

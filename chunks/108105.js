@@ -50,6 +50,7 @@ function B(e) {
         b = (0, j.B)(),
         f = l.useCallback(() => {
             null != t &&
+                null != n &&
                 (u(O.Jq.BUY_BUTTON),
                 (0, y.a)(
                     t,
@@ -61,10 +62,10 @@ function B(e) {
                 ));
         }, [t, u, n, _]),
         g = l.useCallback(() => {
-            (0, S.X)({ guildId: n });
+            null != n && (0, S.X)({ guildId: n });
         }, [n]),
         C = l.useCallback(() => {
-            u(O.Jq.VISIT_SHOP), (0, S.default)({ guildId: n }), o();
+            null != n && (u(O.Jq.VISIT_SHOP), (0, S.default)({ guildId: n }), o());
         }, [n, o, u]),
         x = l.useCallback(() => {
             null != t &&
@@ -212,22 +213,25 @@ function G(e) {
             returnRef: n,
             skuId: s,
             applicationId: i,
-            guildId: u,
-            isStorefront: h,
-            giftRecipient: E,
+            isStorefront: u,
+            giftRecipient: h,
             giftingOrigin: v,
             analyticsLocations: j,
             analyticsContext: S,
             onClose: y,
         } = e,
         { analyticsLocations: R } = (0, p.Ay)(j ?? []),
-        G = (0, N.A)({ guildId: u }),
-        W = (0, d.bG)([x.A], () => x.A.isFetchingForSKU(s)),
-        Y = (0, c.Mwr)((0, m.Ay)()),
-        [q, X] = l.useState(!0),
-        V = (0, d.bG)([C.A], () => C.A.get(s)),
-        [$, z] = l.useState(null),
-        J = (function (e, t) {
+        { guildId: G } = (0, E.nG)(i);
+    l.useEffect(() => {
+        null != G && null != s && (0, I.iR)(G, s, "SocialLayerStorefrontProductDetailsModal");
+    }, [G, s]);
+    let W = (0, N.A)({ guildId: G }),
+        Y = (0, d.bG)([x.A], () => x.A.isFetchingForSKU(s)),
+        q = (0, c.Mwr)((0, m.Ay)()),
+        [X, V] = l.useState(!0),
+        $ = (0, d.bG)([C.A], () => C.A.get(s)),
+        [z, J] = l.useState(null),
+        K = (function (e, t) {
             let n = t?.labelIconAssetId != null ? (0, T.YE)(e, t?.labelIconAssetId) : null,
                 [a, s] = (0, b.rh)(n, "#000000"),
                 i = l.useMemo(() => {
@@ -235,13 +239,13 @@ function G(e) {
                     return `radial-gradient(181.07% 122.33% at -20.89% -23.8%, ${e.alpha(0.25).hex()} 0%, transparent 100%)`;
                 }, [a]);
             return null != n && "#000000" !== a ? i : void 0;
-        })(i, $);
+        })(i, z);
     (0, g.pE)(),
         (0, _.Ay)(() => {
             A.default.track(L.HAw.OPEN_MODAL, { location_stack: R, type: w.Nh, sku_id: s, application_id: i }),
                 (0, I.Xw)();
         });
-    let K = l.useCallback(
+    let Q = l.useCallback(
         (e) => {
             A.default.track(L.HAw.SLAYER_STOREFRONT_PDP_ELEMENT_CLICKED, {
                 slayer_storefront_session_id: S?.sessionId,
@@ -254,37 +258,38 @@ function G(e) {
         [S, s, R],
     );
     l.useEffect(() => {
-        null == u || null == s || x.A.isFetchingForSKU(s) || (0, I.qf)(u, s);
-    }, [u, s]);
-    let Q = l.useCallback(() => {
-            null != V &&
-                (K(O.Jq.FORWARD_BUTTON),
+        null == G || null == s || x.A.isFetchingForSKU(s) || (0, I.qf)(G, s);
+    }, [G, s]);
+    let Z = l.useCallback(() => {
+            null != $ &&
+                null != G &&
+                (Q(O.Jq.FORWARD_BUTTON),
                 (0, k.d)({
-                    sku: V,
-                    guildId: u,
+                    sku: $,
+                    guildId: G,
                     source: "social-layer-storefront-pdp",
                     analyticsLocations: R,
                     analyticsContext: S,
                 }));
-        }, [V, u, K, R, S]),
-        Z = l.useCallback(() => {
-            K(O.Jq.WISHLIST_BUTTON);
-        }, [K]),
+        }, [$, G, Q, R, S]),
         ee = l.useCallback(() => {
-            X(!q), K(O.Jq.MUTE_BUTTON);
-        }, [q, K]);
-    if (null == V?.tenantMetadata?.socialLayer || G?.storefront == null) return W ? (0, a.jsx)(c.y$y, {}) : null;
-    let et =
-            null != G.storefront.logoAssetId
-                ? (0, T.YE)(G.storefront.applicationId, G.storefront.logoAssetId, 75)
+            Q(O.Jq.WISHLIST_BUTTON);
+        }, [Q]),
+        et = l.useCallback(() => {
+            V(!X), Q(O.Jq.MUTE_BUTTON);
+        }, [X, Q]);
+    if (null == $?.tenantMetadata?.socialLayer || W?.storefront == null) return Y ? (0, a.jsx)(c.y$y, {}) : null;
+    let en =
+            null != W.storefront.logoAssetId
+                ? (0, T.YE)(W.storefront.applicationId, W.storefront.logoAssetId, 75)
                 : null,
-        en =
-            null != G.storefront.lightThemeLogoAssetId
-                ? (0, T.YE)(G.storefront.applicationId, G.storefront.lightThemeLogoAssetId, 75)
+        ea =
+            null != W.storefront.lightThemeLogoAssetId
+                ? (0, T.YE)(W.storefront.applicationId, W.storefront.lightThemeLogoAssetId, 75)
                 : null,
-        ea = null;
+        el = null;
     return (
-        (ea = Y ? (et ?? en) : (en ?? et)),
+        (el = q ? (en ?? ea) : (ea ?? en)),
         (0, a.jsx)(c.EOs, {
             transitionState: t,
             "hide-shadow": !0,
@@ -297,21 +302,21 @@ function G(e) {
                 children: [
                     (0, a.jsxs)("div", {
                         className: D.op,
-                        style: { background: J },
+                        style: { background: K },
                         children: [
                             (0, a.jsx)("div", {
                                 className: D.r$,
-                                children: null != ea ? (0, a.jsx)("img", { className: D.wm, src: ea, alt: "" }) : null,
+                                children: null != el ? (0, a.jsx)("img", { className: D.wm, src: el, alt: "" }) : null,
                             }),
-                            (0, a.jsx)(F, { applicationId: i, selectedCarouselItem: $ }),
+                            (0, a.jsx)(F, { applicationId: i, selectedCarouselItem: z }),
                             (0, a.jsx)(B, {
-                                sku: V,
-                                guildId: u,
-                                shouldShowShopLink: !h,
-                                giftRecipient: E,
+                                sku: $,
+                                guildId: G,
+                                shouldShowShopLink: !u,
+                                giftRecipient: h,
                                 giftingOrigin: v,
                                 onClose: y,
-                                trackPDPClick: K,
+                                trackPDPClick: Q,
                                 analyticsLocations: R,
                             }),
                         ],
@@ -320,34 +325,34 @@ function G(e) {
                         className: D.Cf,
                         children: [
                             (0, a.jsx)(M, {
-                                sku: V,
+                                sku: $,
                                 applicationId: i,
-                                storefront: G.storefront,
-                                onSelectedCarouselItemChange: z,
-                                isMuted: q,
-                                trackPDPClick: K,
+                                storefront: W.storefront,
+                                onSelectedCarouselItemChange: J,
+                                isMuted: X,
+                                trackPDPClick: Q,
                             }),
                             (0, a.jsxs)("div", {
                                 className: D.V7,
                                 children: [
-                                    null != V &&
+                                    null != $ &&
                                         (0, a.jsx)(U._, {
-                                            sku: V,
+                                            sku: $,
                                             isCardHovered: !0,
                                             className: o()(D.jU, D.ij),
-                                            trackButtonClick: Z,
+                                            trackButtonClick: ee,
                                             variant: "overlay-secondary",
                                             location: "social_layer_storefront_product_details_modal",
                                         }),
                                     (0, a.jsx)(H, {
-                                        onClick: Q,
+                                        onClick: Z,
                                         ariaLabel: P.intl.string(P.t.Ej3B3Y),
                                         children: (0, a.jsx)(f.A, { size: "refresh_sm", color: "currentColor" }),
                                     }),
                                     (0, a.jsx)(H, {
-                                        onClick: ee,
-                                        ariaLabel: q ? P.intl.string(P.t.YqAjXy) : P.intl.string(P.t.w4m945),
-                                        children: q
+                                        onClick: et,
+                                        ariaLabel: X ? P.intl.string(P.t.YqAjXy) : P.intl.string(P.t.w4m945),
+                                        children: X
                                             ? (0, a.jsx)(c._RO, { size: "refresh_sm", color: "currentColor" })
                                             : (0, a.jsx)(c.HKD, { size: "refresh_sm", color: "currentColor" }),
                                     }),

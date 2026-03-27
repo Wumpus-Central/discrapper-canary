@@ -15,8 +15,8 @@ var r,
     E = n(397927),
     R = n(442433),
     m = n(775602),
-    I = n(793574),
-    f = n(688810),
+    f = n(793574),
+    I = n(688810),
     H = n(713517),
     O = n(427209),
     S = n(544028),
@@ -32,8 +32,8 @@ var r,
     k = n(44724),
     B = n(345938),
     U = n(533406),
-    G = n(366523),
-    y = n(300182),
+    y = n(366523),
+    G = n(300182),
     v = n(620999),
     j = n(743693),
     w = n(696028),
@@ -104,13 +104,13 @@ function J(t) {
         O = i.useRef(null),
         B = i.useRef(null),
         j = (0, _.bG)([N.A], () => N.A.get(r)),
-        X = (0, _.bG)([x.A], () => x.A.getGuildIdFromApplicationId(j?.applicationId)),
+        { guildId: X } = (0, L.nG)(j?.applicationId),
         J = (0, _.bG)([S.A], () => (0, A.Mwr)(S.A.theme)),
         $ = (0, _.bG)([m.A], () => m.A.useReducedMotion),
         Z = C.Q_.useSetting(),
         { isHoveringOrFocusing: tt } = (0, H.A)(O),
         te = (0, p.jM)(),
-        { analyticsLocations: tn } = (0, f.Ay)(o ?? []),
+        { analyticsLocations: tn } = (0, I.Ay)(o ?? []),
         tr = i.useRef({ positionInSection: e, analyticsLocations: tn }),
         [ts, ti] = i.useState(!1),
         ta = (0, _.bG)([x.A], () => (null != r ? x.A.getNormalizedSKUEligibility(r) : void 0), [r]),
@@ -163,12 +163,12 @@ function J(t) {
             return e <= 3 ? W.intl.format(W.t.PWw4Vp, { days: e }) : null;
         }, [j?.tenantMetadata?.socialLayer?.expiresAt]),
         tm = (0, L.xf)(j),
-        tI = i.useMemo(() => {
+        tf = i.useMemo(() => {
             if (!tl) return "none";
             let [t, e] = K[a];
             return `linear-gradient(to top, ${q} ${30 + t}%, ${z} ${30 + e}%)`;
         }, [a, tl]),
-        tf = i.useCallback(() => {
+        tI = i.useCallback(() => {
             (0, k.X)({ guildId: X });
         }, [X]),
         tH = i.useCallback(() => {
@@ -195,11 +195,11 @@ function J(t) {
         }, [X, r, tE, j?.slug]),
         tN = i.useCallback(
             (t) => {
-                (t_(P.bB.CARD), null != l && null != X && j?.applicationId != null)
-                    ? l(t, { skuId: r, applicationId: j.applicationId, guildId: X })
+                (t_(P.bB.CARD), null != l && j?.applicationId != null)
+                    ? l(t, { skuId: r, applicationId: j.applicationId })
                     : tC();
             },
-            [t_, l, tC, r, j?.applicationId, X],
+            [t_, l, tC, r, j?.applicationId],
         ),
         tM = i.useCallback(
             (t) => {
@@ -221,7 +221,7 @@ function J(t) {
             children: (0, s.jsxs)(E.sqX, {
                 onClick: tN,
                 onContextMenu: tM,
-                onMouseDown: tf,
+                onMouseDown: tI,
                 onMouseEnter: tO,
                 onMouseLeave: tS,
                 className: c()(tc, { [V.Zl]: !$ && 2 !== a, [V.BN]: J, [J ? V.Mn : V.YF]: tt, [V.Rc]: !tl }, u),
@@ -240,7 +240,7 @@ function J(t) {
                     }),
                     null != tL
                         ? tl
-                            ? (0, s.jsx)(G.A, {
+                            ? (0, s.jsx)(y.A, {
                                   containerClassName: V.Vl,
                                   foregroundImageClassName: V.wP,
                                   cardImage: tL,
@@ -263,7 +263,7 @@ function J(t) {
                     2 !== a
                         ? (0, s.jsxs)(s.Fragment, {
                               children: [
-                                  (0, s.jsx)("div", { className: V.iZ, style: { background: tI } }),
+                                  (0, s.jsx)("div", { className: V.iZ, style: { background: tf } }),
                                   (0, s.jsxs)("div", {
                                       className: V.zH,
                                       children: [
@@ -346,7 +346,7 @@ function J(t) {
                                                                     {
                                                                         analyticsLocations: [
                                                                             ...tn,
-                                                                            I.A.SLAYER_STOREFRONT_CARD_PURCHASE_BUTTON,
+                                                                            f.A.SLAYER_STOREFRONT_CARD_PURCHASE_BUTTON,
                                                                         ],
                                                                         guildId: X,
                                                                     },
@@ -370,7 +370,7 @@ function J(t) {
                                                             fullWidth: !0,
                                                         }),
                                                     }),
-                                              (0, s.jsx)(y.A, {
+                                              (0, s.jsx)(G.A, {
                                                   onGift: (t) => {
                                                       t.stopPropagation(),
                                                           t_(P.bB.GIFT_BUTTON),
@@ -380,7 +380,7 @@ function J(t) {
                                                               {
                                                                   analyticsLocations: [
                                                                       ...tn,
-                                                                      I.A.SLAYER_STOREFRONT_CARD_GIFT_BUTTON,
+                                                                      f.A.SLAYER_STOREFRONT_CARD_GIFT_BUTTON,
                                                                   ],
                                                               },
                                                           );
