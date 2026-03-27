@@ -108,68 +108,74 @@ class M extends n.PureComponent {
         let r = o()(s)
             .sortBy((e) => (e.inviter.username ?? "").toLocaleLowerCase())
             .value();
-        return (0, i.jsxs)(x.XIK, {
-            "aria-label": w.intl.string(w.t["9F90ic"]),
-            selectionMode: "none",
-            children: [
-                (0, i.jsxs)(x.A0N, {
-                    children: [
-                        (0, i.jsx)(x.VeA, { children: w.intl.string(w.t.EgHyKy) }),
-                        (0, i.jsx)(x.VeA, { children: w.intl.string(w.t.LBlFEN) }),
-                        (0, i.jsx)(x.VeA, { children: w.intl.string(w.t["1aM27d"]) }),
-                    ],
-                }),
-                (0, i.jsx)(x.BFY, {
-                    items: r,
-                    children: (e) => {
-                        let s = new y.A(e.inviter);
-                        return (0, i.jsxs)(x.Hjg, {
-                            id: e.code,
-                            children: [
-                                (0, i.jsx)(x.nA6, {
-                                    children: (0, i.jsx)(v.A, {
-                                        avatar: (0, i.jsx)(A.A, { user: s, size: x._3J.SIZE_24 }),
-                                        name: (0, i.jsx)(p.A, {
-                                            user: s,
-                                            hideDiscriminator: t,
-                                            usernameClass: R.Xh,
-                                            discriminatorClass: R.OM,
+        return (0, i.jsx)(x.GtU, {
+            orientation: "horizontal",
+            children: (0, i.jsxs)(x.XIK, {
+                "aria-label": w.intl.string(w.t["9F90ic"]),
+                selectionMode: "none",
+                children: [
+                    (0, i.jsxs)(x.A0N, {
+                        children: [
+                            (0, i.jsx)(x.VeA, { isRowHeader: !0, children: w.intl.string(w.t.EgHyKy) }),
+                            (0, i.jsx)(x.VeA, { children: w.intl.string(w.t.LBlFEN) }),
+                            (0, i.jsx)(x.VeA, { children: w.intl.string(w.t["1aM27d"]) }),
+                        ],
+                    }),
+                    (0, i.jsx)(x.BFY, {
+                        items: r,
+                        children: (e) => {
+                            let s = new y.A(e.inviter);
+                            return (0, i.jsxs)(x.Hjg, {
+                                id: e.code,
+                                children: [
+                                    (0, i.jsx)(x.nA6, {
+                                        children: (0, i.jsx)(v.A, {
+                                            avatar: (0, i.jsx)(A.A, { user: s, size: x._3J.SIZE_24 }),
+                                            name: (0, i.jsx)(p.A, {
+                                                user: s,
+                                                hideDiscriminator: t,
+                                                usernameClass: R.Xh,
+                                                discriminatorClass: R.OM,
+                                            }),
                                         }),
                                     }),
-                                }),
-                                (0, i.jsx)(x.nA6, {
-                                    children: (0, i.jsx)(x.Text, {
-                                        className: R.aY,
-                                        variant: "text-sm/normal",
-                                        children: n ? "..." : e.code,
+                                    (0, i.jsx)(x.nA6, {
+                                        children: (0, i.jsx)(x.Text, {
+                                            className: R.aY,
+                                            variant: "text-sm/normal",
+                                            children: n ? "..." : e.code,
+                                        }),
                                     }),
-                                }),
-                                (0, i.jsx)(x.nA6, {
-                                    children: (0, i.jsxs)(x.BJc, {
-                                        direction: "horizontal",
-                                        align: "center",
-                                        gap: 8,
-                                        children: [
-                                            (0, i.jsx)(x.Text, {
-                                                className: R.qW,
-                                                variant: "text-sm/normal",
-                                                children: (0, i.jsx)(g.A, { deadline: e.getExpiresAt(), showDays: !1 }),
-                                            }),
-                                            (0, i.jsx)(x.K0, {
-                                                size: "sm",
-                                                "aria-label": w.intl.string(w.t.N86XcP),
-                                                variant: "critical-secondary",
-                                                icon: x.ucK,
-                                                onClick: () => this.handleRevoke(e),
-                                            }),
-                                        ],
+                                    (0, i.jsx)(x.nA6, {
+                                        children: (0, i.jsxs)(x.BJc, {
+                                            direction: "horizontal",
+                                            align: "center",
+                                            gap: 8,
+                                            children: [
+                                                (0, i.jsx)(x.Text, {
+                                                    className: R.qW,
+                                                    variant: "text-sm/normal",
+                                                    children: (0, i.jsx)(g.A, {
+                                                        deadline: e.getExpiresAt(),
+                                                        showDays: !1,
+                                                    }),
+                                                }),
+                                                (0, i.jsx)(x.K0, {
+                                                    size: "sm",
+                                                    "aria-label": w.intl.string(w.t.N86XcP),
+                                                    variant: "critical-secondary",
+                                                    icon: x.ucK,
+                                                    onClick: () => this.handleRevoke(e),
+                                                }),
+                                            ],
+                                        }),
                                     }),
-                                }),
-                            ],
-                        });
-                    },
-                }),
-            ],
+                                ],
+                            });
+                        },
+                    }),
+                ],
+            }),
         });
     }
     renderEmpty() {

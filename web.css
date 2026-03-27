@@ -4751,6 +4751,7 @@
     background-color: var(--background-mod-muted);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm);
+    box-sizing: border-box;
     width: 100%
 }
 
