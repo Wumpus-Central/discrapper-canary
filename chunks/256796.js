@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => _ });
 var r = n(735438),
     i = n.n(r),
     s = n(73153),
@@ -7,14 +7,13 @@ var r = n(735438),
     o = n(594061),
     l = n(822382),
     u = n(23667),
-    c = n(956467),
-    d = n(652215);
-function _(e) {
+    c = n(956467);
+function d(e) {
     if (!Array.isArray(e.pinned)) return;
     let t = e.pinned.some((e) => !0 === e);
     e.pinned = t;
 }
-let f = {
+let _ = {
     fetchTabMessages: function (e) {
         let {
                 searchContext: t,
@@ -22,7 +21,7 @@ let f = {
                 searchQueryString: r,
                 pagination: o,
                 trackExactTotalHits: u,
-                getId: d,
+                getId: _,
                 getLimit: f,
                 onFetchStart: p,
                 onFetchSuccess: h,
@@ -30,7 +29,7 @@ let f = {
             } = e,
             E = (0, l._o)(r),
             g = (0, l.Zf)(E);
-        _(g);
+        d(g);
         let A = (0, l.nm)(m),
             I = { ...g, ...A },
             T = (0, l.mt)(t);
@@ -45,7 +44,7 @@ let f = {
             trackExactTotalHits: u,
         });
         p?.({ searchContext: t, searchQueryString: r, searchQuery: I });
-        let y = n.map((e) => d(e));
+        let y = n.map((e) => _(e));
         return (
             s.h.dispatch({ type: "SEARCH_MESSAGES_START", ids: y }),
             S.fetch(
@@ -57,7 +56,7 @@ let f = {
                         guildId: T,
                         data: r.map((e) => {
                             let [t, r] = e,
-                                s = d(t),
+                                s = _(t),
                                 o = r.cursor;
                             return {
                                 id: s,
@@ -94,26 +93,24 @@ let f = {
                 searchEverywhere: o,
                 onFetchStart: c,
             } = e,
-            _ = (0, l._o)(n),
-            f = (0, l.Zf)(_),
-            p = (0, l.nm)(i),
-            h = { ...f, ...p, offset: r.offset },
-            m = (0, l.mt)(t);
-        null != m && (0, l.L5)(h, m);
-        let E = (0, l._b)(t);
-        null != E && t.type === d.I4_.GUILD_CHANNEL && (h.channel_id = [E]), o && (h.search_everywhere = !0);
-        let g = (0, l.bS)(t),
-            A = u.A.create({ id: g, searchType: t.type, searchQuery: h });
-        c?.({ searchContext: t, searchQueryString: n, searchQuery: h }),
-            s.h.dispatch({ type: "SEARCH_MESSAGES_START", ids: [g] }),
-            A.fetch(
+            d = (0, l._o)(n),
+            _ = (0, l.Zf)(d),
+            f = (0, l.nm)(i),
+            p = { ..._, ...f, offset: r.offset },
+            h = (0, l.mt)(t);
+        null != h && (0, l.L5)(p, h), o && (p.search_everywhere = !0);
+        let m = (0, l.bS)(t),
+            E = u.A.create({ id: m, searchType: t.type, searchQuery: p });
+        c?.({ searchContext: t, searchQueryString: n, searchQuery: p }),
+            s.h.dispatch({ type: "SEARCH_MESSAGES_START", ids: [m] }),
+            E.fetch(
                 (e) => {
                     s.h.dispatch({
                         type: "SEARCH_MESSAGES_SUCCESS",
-                        guildId: m,
+                        guildId: h,
                         data: [
                             {
-                                id: g,
+                                id: m,
                                 analyticsId: e.body.analytics_id,
                                 totalResults: e.body.total_results,
                                 messages: e.body.messages,
@@ -128,10 +125,10 @@ let f = {
                     });
                 },
                 () => {
-                    s.h.dispatch({ type: "SEARCH_MESSAGES_INDEXING", ids: [g] });
+                    s.h.dispatch({ type: "SEARCH_MESSAGES_INDEXING", ids: [m] });
                 },
                 (e) => {
-                    s.h.dispatch({ type: "SEARCH_MESSAGES_FAILURE", ids: [g], error: e });
+                    s.h.dispatch({ type: "SEARCH_MESSAGES_FAILURE", ids: [m], error: e });
                 },
             );
     },
