@@ -10,26 +10,26 @@ var l = e(397927),
     c = e(50268),
     o = e(93055),
     h = e(133238),
-    A = e(795144),
-    f = e(671470),
-    g = e(73028),
-    j = e(961350),
-    _ = e(605691),
+    A = e(128001),
+    g = e(671470),
+    f = e(73028),
+    _ = e(961350),
+    j = e(605691),
     x = e(848977),
-    b = e(995102),
-    m = e(652215),
+    m = e(995102),
+    b = e(652215),
     p = e(985018);
 function v(n) {
     let { channel: t, onSelect: a } = n,
-        d = t.isOwner(j.default.getId()),
+        d = t.isOwner(_.default.getId()),
         o = (0, x.A)(t),
-        _ = (0, b.A)(t),
-        m = (0, c.A)({ id: t.id, label: p.intl.string(p.t.gFHI3k) }),
+        j = (0, m.A)(t),
+        b = (0, c.A)({ id: t.id, label: p.intl.string(p.t.gFHI3k) }),
         v = (0, s.A)(t),
         O = (0, h.y)(t),
         G = (0, A.A)(t),
-        X = (0, f.A)(t),
-        y = d
+        y = (0, g.A)(t),
+        X = d
             ? (0, i.jsx)(l.Drp, {
                   id: "instant-invites",
                   label: p.intl.string(p.t.ngRFjZ),
@@ -50,36 +50,35 @@ function v(n) {
               onSelect: a,
               children: [
                   (0, i.jsx)(l.rXV, { children: o }),
-                  (0, i.jsx)(l.rXV, { children: X }),
-                  (0, i.jsx)(l.rXV, { children: G }),
+                  (0, i.jsxs)(l.rXV, { children: [y, G] }),
                   (0, i.jsxs)(l.rXV, {
                       children: [
-                          y,
+                          X,
                           (0, i.jsx)(l.Drp, {
                               id: "edit-gdm",
                               label: p.intl.string(p.t["5Q9+/L"]),
-                              action: () => (0, g.U)(t.id, u.A.GROUP_DM_CONTEXT_MENU),
+                              action: () => (0, f.U)(t.id, u.A.GROUP_DM_CONTEXT_MENU),
                           }),
                       ],
                   }),
                   (0, i.jsx)(l.rXV, { children: v }),
-                  (0, i.jsx)(l.rXV, { children: _ }),
+                  (0, i.jsx)(l.rXV, { children: j }),
                   (0, i.jsx)(l.rXV, { children: O }),
-                  (0, i.jsx)(l.rXV, { children: m }),
+                  (0, i.jsx)(l.rXV, { children: b }),
               ],
           });
 }
 function O(n) {
     let { channel: t, selected: a, onSelect: d } = n,
-        o = t.isOwner(j.default.getId()),
+        o = t.isOwner(_.default.getId()),
         A = (0, x.A)(t),
-        f = (0, b.A)(t),
-        m = (0, _.A)(t, a),
+        g = (0, m.A)(t),
+        b = (0, j.A)(t, a),
         v = (0, c.A)({ id: t.id, label: p.intl.string(p.t.gFHI3k) }),
         O = (0, s.A)(t),
         G = (0, h.m)(t),
-        X = (0, h.y)(t),
-        y = o
+        y = (0, h.y)(t),
+        X = o
             ? (0, i.jsx)(l.Drp, {
                   id: "instant-invites",
                   label: p.intl.string(p.t.ngRFjZ),
@@ -103,17 +102,17 @@ function O(n) {
                   (0, i.jsx)(l.rXV, { children: G }),
                   (0, i.jsxs)(l.rXV, {
                       children: [
-                          y,
+                          X,
                           (0, i.jsx)(l.Drp, {
                               id: "edit-gdm",
                               label: p.intl.string(p.t["5Q9+/L"]),
-                              action: () => (0, g.U)(t.id, u.A.GROUP_DM_CONTEXT_MENU),
+                              action: () => (0, f.U)(t.id, u.A.GROUP_DM_CONTEXT_MENU),
                           }),
                       ],
                   }),
                   (0, i.jsx)(l.rXV, { children: O }),
-                  (0, i.jsx)(l.rXV, { children: f }),
-                  (0, i.jsxs)(l.rXV, { children: [X, m] }),
+                  (0, i.jsx)(l.rXV, { children: g }),
+                  (0, i.jsxs)(l.rXV, { children: [y, b] }),
                   (0, i.jsx)(l.rXV, { children: v }),
               ],
           });
@@ -123,7 +122,7 @@ let G = (0, d.A)(
         function (n) {
             return (0, o.DZ)() ? (0, i.jsx)(v, { ...n }) : (0, i.jsx)(O, { ...n });
         },
-        { object: m.ZSU.CONTEXT_MENU },
+        { object: b.ZSU.CONTEXT_MENU },
     ),
     [u.A.CONTEXT_MENU, u.A.GROUP_DM_MENU],
 );
