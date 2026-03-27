@@ -1,5 +1,6 @@
-a.d(e, { A: () => r });
-var n = a(64700),
-    l = a(317097);
-let r = (t) =>
-    n.useMemo(() => (0, l.qt)(t.variantValue) && 0.3 > (0, l.OK)((0, l.LX)(t.variantValue)), [t.variantValue]);
+"use strict";
+r.d(t, { A: () => s });
+var n = r(64700),
+    i = r(317097);
+let s = (e) =>
+    n.useMemo(() => (0, i.qt)(e.variantValue) && 0.3 > (0, i.OK)((0, i.LX)(e.variantValue)), [e.variantValue]);

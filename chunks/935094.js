@@ -1,18 +1,19 @@
-a.d(e, { f: () => r });
-var n = a(64700),
-    l = a(575593);
-let r = (t) => {
-    let [e, a] = (0, n.useState)(null);
+"use strict";
+r.d(t, { f: () => s });
+var n = r(64700),
+    i = r(575593);
+let s = (e) => {
+    let [t, r] = (0, n.useState)(null);
     return {
-        previewingVariantIndex: e,
+        previewingVariantIndex: t,
         handleEntering: (0, n.useCallback)(
-            (e) => {
-                t?.type !== l.R.VARIANTS_GROUP || a(e);
+            (t) => {
+                e?.type !== i.R.VARIANTS_GROUP || r(t);
             },
-            [t?.type],
+            [e?.type],
         ),
         handleLeaving: (0, n.useCallback)(() => {
-            t?.type !== l.R.VARIANTS_GROUP || a(null);
-        }, [t?.type]),
+            e?.type !== i.R.VARIANTS_GROUP || r(null);
+        }, [e?.type]),
     };
 };

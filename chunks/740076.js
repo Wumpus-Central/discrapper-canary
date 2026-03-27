@@ -1,14 +1,15 @@
-a.d(e, { I: () => i });
-var n = a(334279),
-    l = a(311907),
-    r = a(166403),
-    s = a(985018);
-let i = (t) => {
-    let e = (0, l.bG)([r.A], () => {
-        let t = r.A.getPremiumSubscription();
-        return t?.isPurchasedExternally === !0;
+"use strict";
+r.d(t, { I: () => l });
+var n = r(334279),
+    i = r(311907),
+    s = r(166403),
+    a = r(985018);
+let l = (e) => {
+    let t = (0, i.bG)([s.A], () => {
+        let e = s.A.getPremiumSubscription();
+        return e?.isPurchasedExternally === !0;
     });
-    return t === n.j.PREMIUM_TIER_2_3_DAY
-        ? { isDisabled: e, disabledReason: e ? s.intl.string(s.t.NbveHD) : null }
+    return e === n.j.PREMIUM_TIER_2_3_DAY
+        ? { isDisabled: t, disabledReason: t ? a.intl.string(a.t.NbveHD) : null }
         : { isDisabled: !1, disabledReason: null };
 };
