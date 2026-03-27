@@ -87,6 +87,8 @@ class O {
     videoDurationMs;
     sourceVideoProfile;
     sourceVideoLevel;
+    uploadedImageWidth;
+    uploadedImageHeight;
     targetVideoWidth;
     targetVideoHeight;
     targetVideoBitrate;
@@ -396,7 +398,9 @@ class b extends I.Ay {
                 (this.uploadAnalytics.imageEncoderType = e.file.imageEncoderType),
                 e.file.isImage &&
                     ((this.uploadAnalytics.sourceMediaWidth = e.file.sourceWidth),
-                    (this.uploadAnalytics.sourceMediaHeight = e.file.sourceHeight)),
+                    (this.uploadAnalytics.sourceMediaHeight = e.file.sourceHeight),
+                    (this.uploadAnalytics.uploadedImageWidth = e.file.uploadedImageWidth),
+                    (this.uploadAnalytics.uploadedImageHeight = e.file.uploadedImageHeight)),
                 void 0 !== e.file.videoMetadata &&
                     ((this.uploadAnalytics.sourceMediaWidth = e.file.videoMetadata.width),
                     (this.uploadAnalytics.sourceMediaHeight = e.file.videoMetadata.height),
@@ -576,6 +580,8 @@ class b extends I.Ay {
             source_media_width: this.uploadAnalytics.sourceMediaWidth,
             source_media_height: this.uploadAnalytics.sourceMediaHeight,
             source_media_format: this.uploadAnalytics.sourceMediaFormat,
+            uploaded_image_width: this.uploadAnalytics.uploadedImageWidth,
+            uploaded_image_height: this.uploadAnalytics.uploadedImageHeight,
             source_video_bitrate: this.uploadAnalytics.sourceVideoBitrate,
             video_duration_ms: this.uploadAnalytics.videoDurationMs,
             source_video_profile_name: this.uploadAnalytics.sourceVideoProfile,
