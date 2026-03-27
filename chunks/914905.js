@@ -20,7 +20,7 @@ var r = n(627968),
     I = n(851023),
     T = n(349688),
     S = n(985018),
-    y = n(156544);
+    y = n(886615);
 let v = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif", "video/quicktime", "video/mp4"];
 function N(e) {
     let { alt: t, spoiler: n, renderContent: s, size: o } = e,
@@ -121,6 +121,7 @@ function C(e) {
             onClick: E,
             className: y.clickableMedia,
             "aria-label": I,
+            tabIndex: -1,
             children: (0, r.jsx)(N, { size: o, alt: n, spoiler: s, renderContent: m }),
         }),
     });
