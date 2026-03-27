@@ -207,7 +207,7 @@ class q extends a.Component {
             currentUser: l,
         } = this.props;
         if (null == i) return G.intl.string(G.t.ZTNur7);
-        if (!n && this.isCustomGiftMessage() && !e.redeemed) return;
+        if (!n && this.isCustomGiftMessage() && !e.redeemed) return (0, E.bF)(i) ? this.props.content : void 0;
         let s = i.isPreorder() ? G.intl.formatToPlainString(G.t.evinTd, { name: i.name }) : i.name;
         if (e.redeemed)
             return e.isSubscription || (0, g.hU)(e) || (0, E.bF)(i)
