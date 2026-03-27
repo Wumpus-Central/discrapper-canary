@@ -361,6 +361,9 @@ class A extends s.A {
     setClipsModulePath(e) {
         (0, d.lE)().setClipsModulePath?.(e);
     }
+    setClipsDataPath(e) {
+        (0, d.lE)().setClipsDataPath?.(e);
+    }
     setClipBufferLength(e) {
         (0, d.lE)().setClipBufferLength?.(e);
     }

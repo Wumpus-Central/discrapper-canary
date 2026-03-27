@@ -237,6 +237,7 @@ class O extends l.A {
         return Promise.reject(Error("UNSUPPORTED"));
     }
     setClipsModulePath(e) {}
+    setClipsDataPath(e) {}
     setClipBufferLength(e) {}
     setClipsMLPipelineEnabled(e) {}
     setClipsMLPipelineTypeEnabled(e, t) {}

@@ -45,8 +45,8 @@ let O = new Set([
     L = "lastImageSaveDirectory",
     w = /[<>:"/\\|?*@]/g,
     M = /(\.[a-zA-Z0-9]+):[^.]*$/,
-    x = /(\.[a-zA-Z0-9]+)%3A.+$/,
-    P = /[^a-zA-Z0-9]/g,
+    P = /(\.[a-zA-Z0-9]+)%3A.+$/,
+    x = /[^a-zA-Z0-9]/g,
     k = /\.[^.]*$/;
 var U = (function (e) {
     return (e.SAVED = "saved"), (e.CANCELED = "canceled"), (e.ERRORED = "errored"), e;
@@ -57,7 +57,7 @@ function G(e) {
         return (t = (t = t.replace(M, "$1")).replace(/(.+)@([a-zA-Z0-9]+)$/, "$1.$2")).replace(w, "_");
     } catch {
         return e
-            .replace(x, "$1")
+            .replace(P, "$1")
             .replace(/(.+)%40([a-zA-Z0-9]+)$/, "$1.$2")
             .replace(w, "_");
     }
@@ -353,7 +353,7 @@ let W = {
             o = G(o);
             let l = a.searchParams.get("format");
             if (null != l) {
-                let e = l.replace(P, "").toLowerCase();
+                let e = l.replace(x, "").toLowerCase();
                 if (e.length > 0) {
                     let t = o.replace(k, "");
                     o = `${t}.${e}`;
@@ -416,6 +416,21 @@ let W = {
         canCheckMLModelFilesExist: () => "function" == typeof E.fileManager.checkMLModelFilesExist,
         checkMLModelFilesExist: async (e) => await E.fileManager.checkMLModelFilesExist(e),
         cleanupUnusedMLModelFiles: async (e) => await E.fileManager.cleanupUnusedMLModelFiles(e),
+        async downloadClipsFile(e, t, n) {
+            i()(f.isPlatformEmbedded, "Download clips file method called outside native app");
+            let r = p.A.toURLSafe(e);
+            return (
+                i()(r, "Could not download clips file, fileSrc was not a valid path"),
+                await E.fileManager.maybeDownloadClipsFile(e, t, n)
+            );
+        },
+        stopClipsDownloads() {
+            E.fileManager.stopClipsDownloads();
+        },
+        canCheckClipsFilesExist: () => "function" == typeof E.fileManager.checkClipsFilesExist,
+        checkClipsFilesExist: async (e) => await E.fileManager.checkClipsFilesExist(e),
+        cleanupUnusedClipsFiles: async (e) => await E.fileManager.cleanupUnusedClipsFiles(e),
+        getClipsDataDirSync: () => E.fileManager.getClipsDataDirSync(),
         async downloadOpenH264(e, t, n, r) {
             i()(f.isPlatformEmbedded, "Download OpenH264 file method called outside native app");
             let s = p.A.toURLSafe(e);

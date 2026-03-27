@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => S });
+n.d(t, { A: () => y });
 var r = n(397927),
     i = n(73153),
     s = n(15285),
@@ -8,48 +8,53 @@ var r = n(397927),
     l = n(837921),
     u = n(366598),
     c = n(274372),
-    d = n(915618),
-    _ = n(572164),
-    f = n(399925);
+    d = n(746781),
+    _ = n(915618),
+    f = n(572164),
+    p = n(399925);
 n(63389);
-var p = n(696016),
-    h = n(731854),
-    m = n(985018);
-let E = "CLIPS_IN_CALL_WARNING",
-    g = !1,
-    A = null;
-function I() {
-    return g
+var h = n(696016),
+    m = n(731854),
+    E = n(985018);
+let g = "CLIPS_IN_CALL_WARNING",
+    A = !1,
+    I = null;
+function T() {
+    return A
         ? Promise.resolve()
-        : null != A
-          ? A
-          : (A = (async () => {
+        : null != I
+          ? I
+          : (I = (async () => {
                 try {
                     await l.Ay.ensureModule("discord_clips");
-                    let e = l.Ay.requireModule("discord_clips").getModulePath();
-                    o.Ay.getMediaEngine().setClipsModulePath(e),
-                        (g = !0),
-                        p.nx.info("discord_clips module loaded, path: " + e);
+                    let e = l.Ay.requireModule("discord_clips").getModulePath(),
+                        t = o.Ay.getMediaEngine(),
+                        n = l.Ay.getClipsDataDirSync();
+                    t.setClipsDataPath(n),
+                        d.A.start(),
+                        t.setClipsModulePath(e),
+                        (A = !0),
+                        h.nx.info("discord_clips module loaded, path: " + e);
                 } catch (e) {
-                    (A = null), p.nx.error("Failed to load discord_clips module", e);
+                    (I = null), h.nx.error("Failed to load discord_clips module", e);
                 }
             })());
 }
-class T extends u.A {
+class S extends u.A {
     showClipsToast() {
         (0, r.showToast)({
-            id: E,
-            message: m.intl.string(m.t["d+41qJ"]),
+            id: g,
+            message: E.intl.string(E.t["d+41qJ"]),
             type: r.ToastType.CLIP,
-            options: { duration: p.Vi },
+            options: { duration: h.Vi },
         });
     }
     applyNativeClipsSettings(e) {
-        if (!(0, d.A)(o.Ay)) return;
+        if (!(0, _.A)(o.Ay)) return;
         let t = o.Ay.getMediaEngine(),
             n = () => {
                 let n = c.A.getSettings(),
-                    r = (0, _.TD)();
+                    r = (0, f.TD)();
                 if (
                     (t.setClipBufferLength(r ? n.clipsLength / 1e3 : 0),
                     e?.settings.decoupledClipsEnabled === !0 && this.fireClipsInitEvent(),
@@ -61,7 +66,7 @@ class T extends u.A {
                     t.setClipsQualitySettings(s, a, r) || null == e || this.fireClipsInitEvent();
                 }
             };
-        g || !t.supports(h.O5.CLIPS_V3) ? n() : I().then(n);
+        A || !t.supports(m.O5.CLIPS_V3) ? n() : T().then(n);
     }
     handleClipsInitOnToggleDetection(e) {
         let t = s.Ay.getVisibleGame();
@@ -71,11 +76,11 @@ class T extends u.A {
         let t = s.Ay.getVisibleGame();
         null == t ||
             (e.added.find((e) => e.pid === t.pid)
-                ? setTimeout(() => this.fireClipsInitEvent(), p.dV)
+                ? setTimeout(() => this.fireClipsInitEvent(), h.dV)
                 : this.fireClipsInitEvent());
     }
     fireClipsInitEvent() {
-        if (!(0, _.TD)() || null != a.A.getCurrentUserActiveStream()) return;
+        if (!(0, f.TD)() || null != a.A.getCurrentUserActiveStream()) return;
         let e = s.Ay.getVisibleGame();
         if (e?.pid == null || e?.windowHandle == null || null == e.name || "" === e.name) return;
         let t = c.A.getSettings();
@@ -89,9 +94,9 @@ class T extends u.A {
     loadClipsFromStorage() {
         let e = c.A.getSettings().storageLocation;
         "" !== e &&
-            f.Fb(e).catch((e) => {
-                p.nx.error("Failed to load clips directory on connection open", e);
+            p.Fb(e).catch((e) => {
+                h.nx.error("Failed to load clips directory on connection open", e);
             });
     }
 }
-let S = new T();
+let y = new S();
