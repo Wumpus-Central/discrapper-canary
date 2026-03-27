@@ -11,7 +11,7 @@ var r = n(627968),
     d = n(961350),
     _ = n(841e3),
     f = n(985018),
-    p = n(394236);
+    p = n(606625);
 let h = { xs: "xxs", sm: "xs", md: "refresh_sm" },
     m = (e) => {
         let { product: t, selectedVariantIndex: n, location: i, onError: s, isCardHovered: a = !0, ...l } = e,
@@ -50,49 +50,50 @@ function E(e) {
             isBusy: m,
             isFirstTimeWishlister: E,
             onClick: g,
-            tooltipConfig: A = {},
+            shouldShowTooltip: A,
+            tooltipConfig: I = {},
         } = e,
-        I = h[d],
-        { reducedMotion: T } = i.useContext(u.CZY),
-        S = i.useRef(null),
-        [y, v] = i.useState(!1),
-        N = _ && !y,
-        C = N ? u.C3E : u.yhu,
-        R = a()(p.normalIconColor, N && p.wishlistedOrAnimating);
+        T = h[d],
+        { reducedMotion: S } = i.useContext(u.CZY),
+        y = i.useRef(null),
+        [v, N] = i.useState(!1),
+        C = _ && !v,
+        R = C ? u.C3E : u.yhu,
+        O = a()(p.normalIconColor, C && p.wishlistedOrAnimating);
     i.useEffect(() => {
-        v(!1);
+        N(!1);
     }, [t]);
-    let O = i.useCallback(
+    let b = i.useCallback(
             (e) => {
-                e.stopPropagation(), o || (_ || T.enabled ? _ && y && v(!1) : v(!0), g());
+                e.stopPropagation(), o || (_ || S.enabled ? _ && v && N(!1) : N(!0), g());
             },
-            [o, _, T.enabled, y, g],
+            [o, _, S.enabled, v, g],
         ),
-        b = !o && !_ && !y,
-        D = i.useCallback(
+        D = !o && !_ && !v,
+        L = i.useCallback(
             (e) => {
-                e.target === e.currentTarget && y && requestAnimationFrame(() => v(!1));
+                e.target === e.currentTarget && v && requestAnimationFrame(() => N(!1));
             },
-            [y],
+            [v],
         ),
-        L = (e) =>
-            T.enabled
-                ? (0, r.jsx)(C, { colorClass: e ?? R, size: I })
+        w = (e) =>
+            S.enabled
+                ? (0, r.jsx)(R, { colorClass: e ?? O, size: T })
                 : (0, r.jsxs)("div", {
-                      className: a()(p.iconContainer, b && p.canAnimate),
+                      className: a()(p.iconContainer, D && p.canAnimate),
                       children: [
                           (0, r.jsx)("span", {
-                              className: a()(p.iconWrapper, b && p.canHover),
-                              children: (0, r.jsx)(C, { colorClass: e ?? R, size: I }),
+                              className: a()(p.iconWrapper, D && p.canHover),
+                              children: (0, r.jsx)(R, { colorClass: e ?? O, size: T }),
                           }),
                           (0, r.jsx)("span", {
-                              className: a()(p.animationOverlay, y && p.clickAnimation),
-                              onAnimationEnd: D,
-                              children: (0, r.jsx)(u.C3E, { size: I }),
+                              className: a()(p.animationOverlay, v && p.clickAnimation),
+                              onAnimationEnd: L,
+                              children: (0, r.jsx)(u.C3E, { size: T }),
                           }),
                       ],
                   }),
-        w = () => {
+        M = () => {
             let e = f.intl.formatToPlainString(f.t["7kFjeK"], { productName: n });
             return (0, r.jsx)(u.DUT, {
                 className: a()(
@@ -105,24 +106,24 @@ function E(e) {
                     },
                     s,
                 ),
-                innerRef: S,
-                onClick: O,
+                innerRef: y,
+                onClick: b,
                 "aria-label": e,
                 "aria-pressed": _,
                 "aria-busy": m,
                 "aria-disabled": o,
-                children: L(),
+                children: w(),
             });
         };
     if (E && !o) {
-        let e = A.firstTimeTitle ?? f.intl.string(f.t["47Rhc3"]),
-            t = A.firstTimeBody ?? f.intl.string(f.t.PXjA0b);
-        return (0, r.jsx)(l.un, { title: e, body: t, children: w() });
+        let e = I.firstTimeTitle ?? f.intl.string(f.t["47Rhc3"]),
+            t = I.firstTimeBody ?? f.intl.string(f.t.PXjA0b);
+        return (0, r.jsx)(l.un, { title: e, body: t, shouldShow: A, children: M() });
     }
-    let M = o
-        ? (A.disabled ?? f.intl.string(f.t["50TX9k"]))
+    let P = o
+        ? (I.disabled ?? f.intl.string(f.t["50TX9k"]))
         : _
-          ? (A.remove ?? f.intl.string(f.t.yr9TTf))
-          : (A.add ?? f.intl.string(f.t["8DkMEQ"]));
-    return (0, r.jsx)(l.m_, { text: M, ariaHidden: !o, children: w() });
+          ? (I.remove ?? f.intl.string(f.t.yr9TTf))
+          : (I.add ?? f.intl.string(f.t["8DkMEQ"]));
+    return (0, r.jsx)(l.m_, { text: P, ariaHidden: !o, shouldShow: A, children: M() });
 }
