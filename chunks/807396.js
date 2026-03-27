@@ -1,4 +1,4 @@
-n.d(t, { d: () => Y, u: () => w }), n(321073);
+n.d(t, { d: () => z, u: () => V }), n(321073);
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -8,32 +8,32 @@ var i = n(627968),
     d = n(827734),
     c = n(990078),
     u = n(582754),
-    _ = n(397927),
-    g = n(73153),
-    A = n(77468),
-    m = n(289498),
-    h = n(736653),
-    p = n(573648),
-    x = n(681819),
-    E = n(370480),
+    m = n(397927),
+    _ = n(73153),
+    g = n(77468),
+    A = n(289498),
+    x = n(736653),
+    h = n(573648),
+    p = n(681819),
+    f = n(370480),
     T = n(882997),
     S = n(373498),
-    C = n(169869),
-    I = n(263063),
-    f = n(496885),
-    N = n(962173),
-    b = n(71393),
-    v = n(351906),
-    O = n(954571),
-    j = n(975571),
-    R = n(773669),
-    y = n(801264),
-    P = n(523104),
-    D = n(856220),
-    L = n(652215),
+    E = n(169869),
+    b = n(263063),
+    C = n(496885),
+    v = n(962173),
+    N = n(71393),
+    I = n(351906),
+    j = n(954571),
+    y = n(975571),
+    O = n(773669),
+    R = n(801264),
+    L = n(523104),
+    P = n(856220),
+    D = n(652215),
     G = n(783419),
     M = n(985018),
-    U = n(431070);
+    U = n(693595);
 let k = (e) => {
     let t,
         { integration: n } = e,
@@ -42,21 +42,21 @@ let k = (e) => {
             joinErrorMessage: l,
             showJoinErrorMessage: a,
         } = (0, o.cf)(
-            [N.A],
+            [v.A],
             () => ({
-                isJoining: N.A.isJoining(n.id),
+                isJoining: v.A.isJoining(n.id),
                 joinErrorMessage:
-                    "" === N.A.joinErrorMessage(n.id) ? M.intl.string(M.t.j2d6Km) : N.A.joinErrorMessage(n.id),
-                showJoinErrorMessage: void 0 !== N.A.joinErrorMessage(n.id),
+                    "" === v.A.joinErrorMessage(n.id) ? M.intl.string(M.t.j2d6Km) : v.A.joinErrorMessage(n.id),
+                showJoinErrorMessage: void 0 !== v.A.joinErrorMessage(n.id),
             }),
             [n.id],
         );
     return (
-        null != (0, o.bG)([b.A], () => b.A.getGuild(n.guild.id), [n.guild.id]) ||
-            (t = (0, i.jsx)(_.Button, {
+        null != (0, o.bG)([N.A], () => N.A.getGuild(n.guild.id), [n.guild.id]) ||
+            (t = (0, i.jsx)(m.Button, {
                 size: "sm",
                 onClick: function () {
-                    A.A.joinServer(n.id, () => {});
+                    g.A.joinServer(n.id, () => {});
                 },
                 disabled: s,
                 variant: "primary",
@@ -68,18 +68,18 @@ let k = (e) => {
                 (0, i.jsxs)("div", {
                     className: U.XX,
                     children: [
-                        (0, i.jsx)(I.Ay, { size: I.Ay.Sizes.SMALL, guild: n.guild, className: U.$f }),
+                        (0, i.jsx)(b.Ay, { size: b.Ay.Sizes.SMALL, guild: n.guild, className: U.$f }),
                         (0, i.jsxs)("div", {
                             className: U.Vn,
                             children: [
-                                (0, i.jsx)(_.Text, {
+                                (0, i.jsx)(m.Text, {
                                     variant: "text-md/semibold",
                                     color: "text-strong",
                                     children: n.guild.name,
                                 }),
-                                (0, i.jsx)(_.MzZ, {
-                                    href: p.A.get(n.type)?.getPlatformUserUrl?.(n.account),
-                                    children: (0, i.jsx)(_.Text, {
+                                (0, i.jsx)(m.MzZ, {
+                                    href: h.A.get(n.type)?.getPlatformUserUrl?.(n.account),
+                                    children: (0, i.jsx)(m.Text, {
                                         variant: "text-xs/normal",
                                         color: "text-default",
                                         children: n.account.name,
@@ -91,7 +91,7 @@ let k = (e) => {
                     ],
                 }),
                 a &&
-                    (0, i.jsx)(_.Text, {
+                    (0, i.jsx)(m.Text, {
                         variant: "text-xs/normal",
                         color: "text-feedback-critical",
                         className: U.R,
@@ -101,54 +101,54 @@ let k = (e) => {
         })
     );
 };
-function V(e) {
+function w(e) {
     let t,
         n,
         l,
         a,
         o,
-        g,
-        m,
-        { onDisconnect: h, account: I, theme: N, locale: b } = e,
-        [v, O] = s.useState(I.friendSync),
-        [R, V] = s.useState(I.visibility),
-        [w, H] = s.useState(I.metadataVisibility),
-        [B, F] = s.useState(I.showActivity),
-        [Y, z] = s.useState(null),
-        [X, W] = s.useState(null),
-        [K, Z] = s.useState(!1),
-        [q, J] = s.useState([]),
-        Q = (0, x.ML)(I.type),
-        $ = p.A.get(Q);
+        _,
+        A,
+        { onDisconnect: x, account: b, theme: v, locale: N } = e,
+        [I, j] = s.useState(b.friendSync),
+        [O, w] = s.useState(b.visibility),
+        [V, B] = s.useState(b.metadataVisibility),
+        [F, H] = s.useState(b.showActivity),
+        [z, Y] = s.useState(null),
+        [X, K] = s.useState(null),
+        [W, Z] = s.useState(!1),
+        [q, Q] = s.useState([]),
+        J = (0, p.ML)(b.type),
+        $ = h.A.get(J);
     s.useEffect(() => {
-        O(I.friendSync), V(I.visibility), H(I.metadataVisibility), F(I.showActivity);
-    }, [I]);
-    let ee = { inProgressVisibility: Y, inProgressMetadataVisibility: X },
+        j(b.friendSync), w(b.visibility), B(b.metadataVisibility), H(b.showActivity);
+    }, [b]);
+    let ee = { inProgressVisibility: z, inProgressMetadataVisibility: X },
         et = s.useRef(ee);
     return (
         s.useEffect(() => {
             et.current = ee;
         }),
         s.useEffect(() => {
-            if (!1 === I.verified) return;
+            if (!1 === b.verified) return;
             let { inProgressVisibility: e, inProgressMetadataVisibility: t } = et.current;
-            null != e && (V(e), A.A.setVisibility(I.type, I.id, e), z(null)),
-                null != t && (H(t), A.A.setMetadataVisibility(I.type, I.id, t), W(null));
-        }, [I]),
+            null != e && (w(e), g.A.setVisibility(b.type, b.id, e), Y(null)),
+                null != t && (B(t), g.A.setMetadataVisibility(b.type, b.id, t), K(null));
+        }, [b]),
         (0, i.jsxs)("div", {
             className: U.FI,
             children: [
-                ((t = p.A.get(I.type)),
-                (n = p.A.get(Q)),
-                (l = "1" === (I.metadata ?? {})[G.pK.TWITTER_VERIFIED]),
+                ((t = h.A.get(b.type)),
+                (n = h.A.get(J)),
+                (l = "1" === (b.metadata ?? {})[G.pK.TWITTER_VERIFIED]),
                 (a = null),
-                t.type === L.fg2.TWITTER &&
+                t.type === D.fg2.TWITTER &&
                     l &&
                     (a = (0, i.jsx)(c.m, {
                         text: M.intl.string(M.t.Jebrww),
-                        children: (0, i.jsx)(f.A, {
+                        children: (0, i.jsx)(C.A, {
                             color: d.A.unsafe_rawColors.TWITTER.css,
-                            children: (0, i.jsx)(_.Uzd, { size: "xs", color: d.A.unsafe_rawColors.WHITE.css }),
+                            children: (0, i.jsx)(m.Uzd, { size: "xs", color: d.A.unsafe_rawColors.WHITE.css }),
                         }),
                     })),
                 (0, i.jsxs)("div", {
@@ -157,23 +157,23 @@ function V(e) {
                         (0, i.jsx)("img", {
                             alt: n.name,
                             className: U.gj,
-                            src: (0, u.Mw)(N) ? n.icon.darkSVG : n.icon.lightSVG,
+                            src: (0, u.Mw)(v) ? n.icon.darkSVG : n.icon.lightSVG,
                         }),
                         (0, i.jsxs)("div", {
                             children: [
                                 (0, i.jsxs)("div", {
                                     className: U.$p,
                                     children: [
-                                        (0, i.jsx)(_.Text, {
+                                        (0, i.jsx)(m.Text, {
                                             color: "text-strong",
                                             variant: "text-md/semibold",
                                             className: U.RW,
-                                            children: I.name,
+                                            children: b.name,
                                         }),
                                         null != a && (0, i.jsx)("div", { className: U.cG, children: a }),
                                     ],
                                 }),
-                                (0, i.jsx)(_.Text, {
+                                (0, i.jsx)(m.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-default",
                                     className: U.Au,
@@ -181,11 +181,11 @@ function V(e) {
                                 }),
                             ],
                         }),
-                        (0, i.jsx)(_.DUT, {
+                        (0, i.jsx)(m.DUT, {
                             className: U.uH,
                             onClick: function () {
-                                let e = p.A.get(I.type);
-                                (0, _.qfG)((t) =>
+                                let e = h.A.get(b.type);
+                                (0, m.qfG)((t) =>
                                     (0, i.jsx)(r.Modal, {
                                         title: M.intl.formatToPlainString(M.t.U5x12f, { name: e.name }),
                                         subtitle: M.intl.format(M.t.VgqIPj, { provider: e.name }),
@@ -198,15 +198,15 @@ function V(e) {
                                             {
                                                 text: M.intl.string(M.t.bsbMVz),
                                                 onClick: () => {
-                                                    h(), t.onClose();
+                                                    x(), t.onClose();
                                                 },
                                                 variant: "primary",
                                             },
                                         ],
                                         ...t,
                                         children:
-                                            (0, S.A)(I) &&
-                                            (0, i.jsx)(y.A, {
+                                            (0, S.A)(b) &&
+                                            (0, i.jsx)(R.A, {
                                                 children: M.intl.format(M.t.COW3Xn, { platformName: e.name }),
                                             }),
                                     }),
@@ -214,47 +214,47 @@ function V(e) {
                             },
                             "aria-label": M.intl.string(M.t.ppppRJ),
                             focusProps: { offset: { top: -4, left: -4, right: -4 } },
-                            children: (0, i.jsx)(_.PGe, { size: "xs", color: "currentColor" }),
+                            children: (0, i.jsx)(m.PGe, { size: "xs", color: "currentColor" }),
                         }),
                     ],
                 })),
-                I.twoWayLink
+                b.twoWayLink
                     ? null
-                    : I.type === L.fg2.XBOX
-                      ? (0, i.jsx)(D._, {})
-                      : I.type === L.fg2.PLAYSTATION
-                        ? (0, i.jsx)(P.j, {})
+                    : b.type === D.fg2.XBOX
+                      ? (0, i.jsx)(P._, {})
+                      : b.type === D.fg2.PLAYSTATION
+                        ? (0, i.jsx)(L.j, {})
                         : null,
                 (function (e) {
                     let t = e.metadata ?? {},
                         n = null,
-                        s = (0, E.An)(t[G.pK.CREATED_AT], b);
+                        s = (0, f.An)(t[G.pK.CREATED_AT], N);
                     switch (e.type) {
-                        case L.fg2.REDDIT:
-                            n = (0, C.xE)(t, U.Nz);
+                        case D.fg2.REDDIT:
+                            n = (0, E.xE)(t, U.Nz);
                             break;
-                        case L.fg2.STEAM:
-                            n = (0, C.dy)(t, U.Nz);
+                        case D.fg2.STEAM:
+                            n = (0, E.dy)(t, U.Nz);
                             break;
-                        case L.fg2.BLUESKY:
-                        case L.fg2.TWITTER:
-                        case L.fg2.MASTODON:
-                            n = (0, C.ED)(t, U.Nz);
+                        case D.fg2.BLUESKY:
+                        case D.fg2.TWITTER:
+                        case D.fg2.MASTODON:
+                            n = (0, E.ED)(t, U.Nz);
                             break;
-                        case L.fg2.EBAY:
-                            n = (0, C.ub)(t, U.Nz);
+                        case D.fg2.EBAY:
+                            n = (0, E.ub)(t, U.Nz);
                             break;
-                        case L.fg2.PAYPAL:
-                            n = (0, C.gZ)(t, U.Nz);
+                        case D.fg2.PAYPAL:
+                            n = (0, E.gZ)(t, U.Nz);
                             break;
-                        case L.fg2.TIKTOK:
-                            n = (0, C.HU)(t, U.Nz);
+                        case D.fg2.TIKTOK:
+                            n = (0, E.HU)(t, U.Nz);
                     }
                     null !== s &&
                         (null == n && (n = []),
                         n?.push(
                             (0, i.jsx)(
-                                _.Text,
+                                m.Text,
                                 {
                                     variant: "text-xs/normal",
                                     color: "text-subtle",
@@ -267,17 +267,17 @@ function V(e) {
                     let l = q.includes(e.id),
                         a = M.intl.string(M.t.wzzjk9);
                     if (null == n || 0 === n.length)
-                        if (!0 !== p.A.get(e.type).hasMetadata) return null;
+                        if (!0 !== h.A.get(e.type).hasMetadata) return null;
                         else
                             (n = [
-                                (0, i.jsx)(_.LpS, { className: U.Z3, text: M.intl.string(M.t.y2b7CA) }, "badge"),
+                                (0, i.jsx)(m.LpS, { className: U.Z3, text: M.intl.string(M.t.y2b7CA) }, "badge"),
                                 (0, i.jsx)(
-                                    _.Text,
+                                    m.Text,
                                     {
                                         variant: "text-xs/normal",
                                         className: U.vt,
                                         children: M.intl.format(M.t.Up2ni7, {
-                                            helpdeskUrl: j.A.getArticleURL(L.MVz.CONNECTION_DETAILS),
+                                            helpdeskUrl: y.A.getArticleURL(D.MVz.CONNECTION_DETAILS),
                                         }),
                                     },
                                     "label",
@@ -291,20 +291,20 @@ function V(e) {
                                 "div",
                                 {
                                     className: U.jy,
-                                    children: (0, i.jsx)(_.Button, {
+                                    children: (0, i.jsx)(m.Button, {
                                         text: a,
                                         variant: "secondary",
                                         size: "sm",
-                                        loading: K,
+                                        loading: W,
                                         disabled: l,
                                         "aria-label": M.intl.string(M.t.sCkLYH),
                                         onClick: l
                                             ? void 0
                                             : () => {
                                                   Z(!0),
-                                                      A.A.refresh(e.type, e.id).finally(() => {
+                                                      g.A.refresh(e.type, e.id).finally(() => {
                                                           setTimeout(() => {
-                                                              q.push(e.id), J(q), Z(!1);
+                                                              q.push(e.id), Q(q), Z(!1);
                                                           }, 2e3);
                                                       });
                                               },
@@ -315,99 +315,99 @@ function V(e) {
                         ),
                         (0, i.jsx)("div", { className: U.tJ, children: n })
                     );
-                })(I),
-                (L.txh.has(I.type) &&
-                    (o = (0, i.jsx)(_.dOG, {
+                })(b),
+                (D.txh.has(b.type) &&
+                    (o = (0, i.jsx)(m.dOG, {
                         label: M.intl.string(M.t["+KCMSi"]),
-                        checked: v,
+                        checked: I,
                         onChange: function (e) {
-                            O(e), A.A.setFriendSync(I.type, I.id, e);
+                            j(e), g.A.setFriendSync(b.type, b.id, e);
                         },
                     })),
-                L.ewM.has(I.type) &&
-                    (g = (0, i.jsx)(_.dOG, {
+                D.ewM.has(b.type) &&
+                    (_ = (0, i.jsx)(m.dOG, {
                         label: M.intl.format(M.t["6u6J0q"], { platform: $.name }),
-                        checked: B,
+                        checked: F,
                         onChange: function (e) {
-                            F(e), A.A.setShowActivity(I.type, I.id, e);
+                            H(e), g.A.setShowActivity(b.type, b.id, e);
                         },
                     })),
-                p.A.get(I.type)?.hasMetadata === !0 &&
-                    (m = (0, i.jsx)(_.dOG, {
+                h.A.get(b.type)?.hasMetadata === !0 &&
+                    (A = (0, i.jsx)(m.dOG, {
                         label: M.intl.string(M.t.FYKGsL),
-                        checked: 1 === w,
+                        checked: 1 === V,
                         onChange: function (e) {
-                            let { verified: t } = I,
+                            let { verified: t } = b,
                                 n = +!!e;
                             if (e && !t) {
-                                W(n), (0, T.A)({ platformType: I.type, location: "User Settings" });
+                                K(n), (0, T.A)({ platformType: b.type, location: "User Settings" });
                                 return;
                             }
-                            H(n), A.A.setMetadataVisibility(I.type, I.id, n);
+                            B(n), g.A.setMetadataVisibility(b.type, b.id, n);
                         },
-                        disabled: 1 !== R || null == I.metadata,
+                        disabled: 1 !== O || null == b.metadata,
                     })),
                 (0, i.jsxs)("div", {
                     className: U.HZ,
                     children: [
-                        (0, i.jsx)(_.dOG, {
+                        (0, i.jsx)(m.dOG, {
                             label: M.intl.string(M.t.f7yOAX),
-                            checked: 1 === R,
+                            checked: 1 === O,
                             onChange: function (e) {
-                                let { verified: t } = I,
+                                let { verified: t } = b,
                                     n = +!!e;
                                 if (e && !t) {
-                                    z(n), (0, T.A)({ platformType: I.type, location: "User Settings" });
+                                    Y(n), (0, T.A)({ platformType: b.type, location: "User Settings" });
                                     return;
                                 }
-                                V(n), A.A.setVisibility(I.type, I.id, n);
+                                w(n), g.A.setVisibility(b.type, b.id, n);
                             },
                         }),
-                        m,
-                        g,
+                        A,
+                        _,
                         o,
                     ],
                 })),
                 (function () {
-                    if (I.revoked || I.integrations.length > 0) return (0, i.jsx)(_.cGx, {});
+                    if (b.revoked || b.integrations.length > 0) return (0, i.jsx)(m.cGx, {});
                 })(),
-                I.revoked
+                b.revoked
                     ? (0, i.jsx)(r.po8, {
                           messageType: r.YCn.INFO,
                           children: M.intl.format(M.t["6C4lgA"], {
                               onReconnect: function () {
-                                  (0, T.A)({ platformType: I.type, location: "User Settings" });
+                                  (0, T.A)({ platformType: b.type, location: "User Settings" });
                               },
                           }),
                       })
-                    : I.integrations.length > 0
-                      ? (0, i.jsx)(_.D0$, {
+                    : b.integrations.length > 0
+                      ? (0, i.jsx)(m.D0$, {
                             label: M.intl.string(M.t.fOe3fZ),
-                            children: I.integrations.map((e) => (0, i.jsx)(k, { integration: e }, e.id)),
+                            children: b.integrations.map((e) => (0, i.jsx)(k, { integration: e }, e.id)),
                         })
                       : void 0,
             ],
         })
     );
 }
-function w() {
-    return (0, i.jsx)(_.D0$, {
+function V() {
+    return (0, i.jsx)(m.D0$, {
         label: M.intl.string(M.t.ZeDrUf),
-        description: M.intl.format(M.t["oYc+Gz"], { privacyPolicyUrl: L.X7G.PRIVACY }),
-        children: (0, i.jsx)(B, {}),
+        description: M.intl.format(M.t["oYc+Gz"], { privacyPolicyUrl: D.X7G.PRIVACY }),
+        children: (0, i.jsx)(F, {}),
     });
 }
-function H(e) {
-    let t = p.A.get(e);
+function B(e) {
+    let t = h.A.get(e);
     (0, T.A)({ platformType: t.type }),
-        O.default.track(L.HAw.ACCOUNT_LINK_STEP, {
+        j.default.track(D.HAw.ACCOUNT_LINK_STEP, {
             previous_step: "desktop connections",
             current_step: "desktop oauth",
             platform_type: t.type,
         });
 }
-function B() {
-    let e = (0, x.gn)();
+function F() {
+    let e = (0, p.gn)();
     return (0, i.jsxs)("div", {
         className: U.lA,
         children: [
@@ -415,7 +415,7 @@ function B() {
                 .slice(0, 10)
                 .map((e) =>
                     (0, i.jsx)(
-                        m.A,
+                        A.A,
                         { type: e.type, className: U.__invalid_accountButton, innerClassName: U.U$ },
                         e.type,
                     ),
@@ -424,15 +424,15 @@ function B() {
                 text: M.intl.string(M.t.QqTz8b),
                 children: (0, i.jsx)("div", {
                     className: a()(U.ej, U.__invalid_accountButton),
-                    children: (0, i.jsx)(_.vN3, {
+                    children: (0, i.jsx)(m.vN3, {
                         children: (0, i.jsx)("button", {
                             className: a()(U.R8, U.U$),
                             type: "button",
                             onClick: function () {
-                                g.h.dispatch({ type: "CONNECTIONS_GRID_MODAL_SHOW", onComplete: H });
+                                _.h.dispatch({ type: "CONNECTIONS_GRID_MODAL_SHOW", onComplete: B });
                             },
                             "aria-label": M.intl.string(M.t.Zhcj9X),
-                            children: (0, i.jsx)(_._BQ, {
+                            children: (0, i.jsx)(m._BQ, {
                                 color: "currentColor",
                                 size: "md",
                                 "aria-label": M.intl.string(M.t.QqTz8b),
@@ -444,25 +444,25 @@ function B() {
         ],
     });
 }
-function F(e) {
+function H(e) {
     let t,
         { fetching: n, accounts: s, theme: l, locale: a } = e;
     return (
         (t = n
-            ? (0, i.jsx)(_.y$y, { type: _.y$y.Type.SPINNING_CIRCLE })
+            ? (0, i.jsx)(m.y$y, { type: m.y$y.Type.SPINNING_CIRCLE })
             : 0 === s.length
-              ? (0, i.jsx)(_.ppr, {
+              ? (0, i.jsx)(m.ppr, {
                     theme: l,
-                    children: (0, i.jsx)(_.SGT, {
+                    children: (0, i.jsx)(m.SGT, {
                         note: M.intl.string(M.t.WenGZ2),
                         children: M.intl.string(M.t.aoLS84),
                     }),
                 })
               : s
-                    .filter((e) => p.A.isSupported(e.type))
+                    .filter((e) => h.A.isSupported(e.type))
                     .map((e, t) =>
                         (0, i.jsx)(
-                            V,
+                            w,
                             {
                                 theme: l,
                                 account: e,
@@ -470,7 +470,7 @@ function F(e) {
                                 onDisconnect: () =>
                                     (function (e) {
                                         let { type: t, id: n } = e;
-                                        A.A.disconnect(t, n);
+                                        g.A.disconnect(t, n);
                                     })(e),
                             },
                             t,
@@ -479,11 +479,15 @@ function F(e) {
         (0, i.jsx)("div", { className: U.V, children: t })
     );
 }
-function Y() {
-    let e = (0, o.bG)([v.A], () => v.A.hidePersonalInformation),
-        t = (0, o.bG)([N.A], () => N.A.isFetching()),
-        n = (0, o.bG)([N.A], () => N.A.getAccounts()),
-        s = (0, h.Ay)(),
-        l = (0, o.bG)([R.default], () => R.default.locale);
-    return e ? null : (0, i.jsx)(F, { fetching: t, accounts: n, theme: s, locale: l });
+function z() {
+    let e = (0, o.bG)([I.A], () => I.A.hidePersonalInformation),
+        t = (0, o.bG)([v.A], () => v.A.isFetching()),
+        n = (0, o.bG)([v.A], () => v.A.getAccounts()),
+        s = (0, x.Ay)(),
+        l = (0, o.bG)([O.default], () => O.default.locale);
+    return e
+        ? null
+        : (0, i.jsxs)(i.Fragment, {
+              children: [null, (0, i.jsx)(H, { fetching: t, accounts: n, theme: s, locale: l })],
+          });
 }
