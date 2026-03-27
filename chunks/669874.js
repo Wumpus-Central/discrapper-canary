@@ -15,25 +15,32 @@ class u extends r.PureComponent {
                 selectedPlanId: i,
                 isGift: u,
                 purchaseType: c,
-                additionalAnalyticsData: d,
+                locationStack: d,
+                additionalAnalyticsData: _,
             } = this.props,
-            _ = this.props.shouldRethrowError,
-            f = { loadId: n, selectedSkuId: r, selectedPlanId: i, isGift: u, purchaseType: c },
-            p = {
+            f = this.props.shouldRethrowError,
+            p = { loadId: n, selectedSkuId: r, selectedPlanId: i, isGift: u, purchaseType: c, locationStack: d },
+            h = {
                 tags: {
                     app_context: "billing",
                     checkout_error: "true",
                     billing_context: "checkout",
-                    ...(_ ? { crashed: "true" } : {}),
+                    ...(f ? { crashed: "true" } : {}),
                 },
-                extra: { ...f, ...(t ?? {}) },
+                extra: { ...p, ...(t ?? {}) },
             };
+        a.A.captureException(e, h), l.error("Checkout error occurred:", { error: e, additionalErrorContext: p });
+        let m = "string" == typeof e ? e : e.message;
         if (
-            (a.A.captureException(e, p),
-            l.error("Checkout error occurred:", { error: e, additionalErrorContext: f }),
-            s.default.track(o.HAw.PAYMENT_FLOW_ERROR, { load_id: n, crashed: _, error_message: e.message, ...d }),
+            (s.default.track(o.HAw.PAYMENT_FLOW_ERROR, {
+                load_id: n,
+                crashed: f,
+                error_message: m,
+                location_stack: d ?? [],
+                ..._,
+            }),
             this.setState({ error: e, info: t }),
-            null != this.props.onUnhandledError && this.props.onUnhandledError(e, t, p),
+            null != this.props.onUnhandledError && this.props.onUnhandledError(e, t, h),
             this.props.shouldRethrowError)
         )
             throw e;
