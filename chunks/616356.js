@@ -19,9 +19,9 @@ var u = n(311907),
     v = n(309010),
     N = n(977997),
     C = n(652215),
-    b = n(502075);
-let R = null,
-    O = {},
+    R = n(502075);
+let O = null,
+    b = {},
     D = null;
 function L() {
     (r = new Map()), (i = {}), (s = {}), (a = {});
@@ -29,14 +29,14 @@ function L() {
 function w(e) {
     null == i[e.ownerId] && (i[e.ownerId] = {}), (i[e.ownerId][e.guildId ?? C.eGj] = e);
 }
-function x(e, t) {
+function M(e, t) {
     let n = t ?? C.eGj;
     return i[e]?.[n] != null && (delete i[e][n], !0);
 }
-function M(e) {
+function P(e) {
     r.delete(e);
 }
-function P() {
+function x() {
     let e = [];
     for (let t in i) {
         let n = i[t];
@@ -54,28 +54,39 @@ function k(e) {
 function U(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
-        let { userId: n, guildId: r, channelId: i, sessionId: s, selfStream: a, discoverable: o } = t;
-        if (a && null != i)
+        let { userId: n, guildId: i, channelId: s, sessionId: o, selfStream: l, discoverable: u } = t;
+        if (l && null != s)
             return (
                 w({
-                    streamType: null != r ? b.U4.GUILD : b.U4.CALL,
+                    streamType: null != i ? R.U4.GUILD : R.U4.CALL,
                     ownerId: n,
-                    guildId: r,
-                    channelId: i,
-                    discoverable: o,
+                    guildId: i,
+                    channelId: s,
+                    discoverable: u,
                 }),
                 !0
             );
         {
-            let t = g.default.getSessionId();
-            return n === g.default.getId() && s !== t && null != y.A.getChannelId() ? e : x(n, r) || e;
+            let t = g.default.getId(),
+                l = g.default.getSessionId();
+            if (n === t && o !== l && null != y.A.getChannelId()) return e;
+            if (n === t && o === l && null != s) {
+                let e = (0, f._z)({
+                    streamType: null != i ? R.U4.GUILD : R.U4.CALL,
+                    guildId: i,
+                    channelId: s,
+                    ownerId: n,
+                });
+                if (r.has(e) && null == a[e]) return P(e), !0;
+            }
+            return M(n, i) || e;
         }
     }, !1);
 }
 function G(e) {
     let { streamKey: t } = e,
         n = (0, f.Iy)(t);
-    r.delete(t), r.set(t, { ...n, state: C.XYD.CONNECTING }), n.ownerId === g.default.getId() && (O[n.channelId] = !1);
+    r.delete(t), r.set(t, { ...n, state: C.XYD.CONNECTING }), n.ownerId === g.default.getId() && (b[n.channelId] = !1);
 }
 function F(e) {
     let {
@@ -144,17 +155,17 @@ function Y(e) {
 }
 function W(e) {
     let { streamKey: t } = e;
-    M(t);
+    P(t);
 }
 function K(e) {
     let { id: t, channelId: n } = e;
-    (R = t),
+    (O = t),
         Array.from(r.values()).forEach((e) => {
-            (0, f._z)(e) !== R && e.state === C.XYD.ENDED && M((0, f._z)(e));
+            (0, f._z)(e) !== O && e.state === C.XYD.ENDED && P((0, f._z)(e));
         }),
-        null == t || ((0, f.wL)(t) && t.includes(g.default.getId()) && (O[n] = !1));
+        null == t || ((0, f.wL)(t) && t.includes(g.default.getId()) && (b[n] = !1));
 }
-function z(e) {
+function $(e) {
     let { streamKey: t, unavailable: i, reason: a } = e;
     delete s[t];
     let o = r.get(t);
@@ -173,9 +184,9 @@ function z(e) {
             }),
             (l = C.XYD.ENDED);
     } else o.state === C.XYD.FAILED && a === C.H2B.USER_REQUESTED && (l = C.XYD.FAILED);
-    r.set(t, { ...o, state: l }), l === C.XYD.ENDED && R !== t && M(t);
+    r.set(t, { ...o, state: l }), l === C.XYD.ENDED && O !== t && P(t);
 }
-function $(e) {
+function z(e) {
     let { streamKey: t } = e,
         n = r.get(t);
     if (null == n) return !1;
@@ -200,7 +211,7 @@ function q(e) {
 }
 function Z(e) {
     let { channelId: t, selfStreamHidden: n } = e;
-    (0, f.wL)(R) && R?.includes(g.default.getId()) && !1 === O[t] && !0 === n && (R = null), (O[t] = n);
+    (0, f.wL)(O) && O?.includes(g.default.getId()) && !1 === b[t] && !0 === n && (O = null), (b[t] = n);
 }
 function X(e) {
     let { intent: t } = e;
@@ -208,7 +219,7 @@ function X(e) {
 }
 function Q(e, t) {
     let n = A.A.getBasicChannel(t);
-    return e === b.U4.CALL || (null != n && S.A.canBasicChannel(C.hVb.VIEW_CHANNEL, n));
+    return e === R.U4.CALL || (null != n && S.A.canBasicChannel(C.hVb.VIEW_CHANNEL, n));
 }
 function J(e) {
     if (Q(e.streamType, e.channelId)) return !0;
@@ -222,13 +233,13 @@ class ee extends u.Ay.PersistedStore {
     initialize(e) {
         this.syncWith([S.A], () => !0),
             this.waitFor(g.default, A.A, S.A, y.A, _.Ay, v.A),
-            e?.selfStreamParticipantsHidden !== void 0 && Object.assign(O, e?.selfStreamParticipantsHidden);
+            e?.selfStreamParticipantsHidden !== void 0 && Object.assign(b, e?.selfStreamParticipantsHidden);
     }
     getState() {
-        return { selfStreamParticipantsHidden: O };
+        return { selfStreamParticipantsHidden: b };
     }
     isSelfStreamHidden(e) {
-        return O[e] ?? !1;
+        return b[e] ?? !1;
     }
     getLastActiveStream() {
         return (0, h.A)(T.Ay) ? (Array.from(r.values()).pop() ?? null) : null;
@@ -291,10 +302,10 @@ class ee extends u.Ay.PersistedStore {
         return (0, h.A)(T.Ay) ? (s[e] ?? null) : null;
     }
     getAllApplicationStreams() {
-        return (0, h.A)(T.Ay) ? P().filter((e) => null != e && Q(e.streamType, e.channelId)) : [];
+        return (0, h.A)(T.Ay) ? x().filter((e) => null != e && Q(e.streamType, e.channelId)) : [];
     }
     getAllApplicationStreamsForChannel(e) {
-        return (0, h.A)(T.Ay) ? P().filter((t) => null != t && t.channelId === e && Q(t.streamType, t.channelId)) : [];
+        return (0, h.A)(T.Ay) ? x().filter((t) => null != t && t.channelId === e && Q(t.streamType, t.channelId)) : [];
     }
     getViewerIds(e) {
         if (!(0, h.A)(T.Ay)) return [];
@@ -326,8 +337,8 @@ let et = new ee(c.h, {
     STREAM_STOP: j,
     STREAM_CREATE: Y,
     STREAM_UPDATE: Y,
-    STREAM_TIMED_OUT: $,
-    STREAM_DELETE: z,
+    STREAM_TIMED_OUT: z,
+    STREAM_DELETE: $,
     STREAM_CLOSE: W,
     STREAM_UPDATE_SELF_HIDDEN: Z,
     SET_STREAM_APP_INTENT: X,
