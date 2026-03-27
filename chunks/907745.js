@@ -304,9 +304,16 @@ class $ extends s.PureComponent {
             return e.preventDefault(), (l = n ? R.mQ(l) : R.aB(l)), this.setEditorState(l), !0;
         if ("End" === t || ("ArrowRight" === t && r))
             return e.preventDefault(), (l = n ? R.Le(l) : R.Tj(l)), this.setEditorState(l), !0;
-        if (("Delete" === t || "Backspace" === t) && r) {
+        if ("Delete" === t && r) {
             let e = R.Xq(l);
             return this.setEditorState(e), !0;
+        }
+        if ("Backspace" === t && r) {
+            e.preventDefault();
+            let t = l.getSelection().getEndOffset();
+            return (
+                t > 0 && ((l = R.le("", l, 0, t)), (l = this.tokenize(l)), (l = R.aB(l))), this.setEditorState(l), !0
+            );
         }
         return R.K6(e);
     };
