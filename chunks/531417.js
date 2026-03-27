@@ -113,6 +113,8 @@ class A extends s.A {
                 return (0, d.$b)(h.BY.SCREEN_PREVIEWS);
             case h.O5.CLIPS:
                 return (0, d.$b)(h.BY.CLIPS);
+            case h.O5.CLIPS_V3:
+                return (0, d.$b)(h.BY.CLIPS_V3);
             case h.O5.WINDOW_PREVIEWS:
                 return (0, d.$b)(h.BY.WINDOW_PREVIEWS);
             case h.O5.AUDIO_DEBUG_STATE:
@@ -356,6 +358,9 @@ class A extends s.A {
                 : n([]);
         });
     }
+    setClipsModulePath(e) {
+        (0, d.lE)().setClipsModulePath?.(e);
+    }
     setClipBufferLength(e) {
         (0, d.lE)().setClipBufferLength?.(e);
     }
@@ -373,8 +378,23 @@ class A extends s.A {
                   n.saveClip(
                       e,
                       t,
-                      (e, t, n) => r({ duration: e, clipStats: JSON.parse(n) }),
-                      (e) => i(JSON.parse(e)),
+                      (e, t, n) => {
+                          let i;
+                          try {
+                              i = JSON.parse("" !== n ? n : "{}");
+                          } catch {
+                              i = {};
+                          }
+                          return r({ duration: e, clipStats: i });
+                      },
+                      (e) => {
+                          try {
+                              let t = JSON.parse("" !== e ? e : "{}");
+                              return i(t);
+                          } catch {
+                              return i({ errorMessage: "clip save failed", errorAt: "unknown" });
+                          }
+                      },
                   );
               });
     }
@@ -387,8 +407,23 @@ class A extends s.A {
                       e,
                       t,
                       n,
-                      (e, t, n) => i({ duration: e, clipStats: JSON.parse(n) }),
-                      (e) => s(JSON.parse(e)),
+                      (e, t, n) => {
+                          let r;
+                          try {
+                              r = JSON.parse("" !== n ? n : "{}");
+                          } catch {
+                              r = {};
+                          }
+                          return i({ duration: e, clipStats: r });
+                      },
+                      (e) => {
+                          try {
+                              let t = JSON.parse("" !== e ? e : "{}");
+                              return s(t);
+                          } catch {
+                              return s({ errorMessage: "clip save failed", errorAt: "unknown" });
+                          }
+                      },
                   );
               });
     }

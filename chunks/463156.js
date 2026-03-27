@@ -1,25 +1,22 @@
-i.d(t, { A: () => c });
-var l = i(627968),
-    n = i(64700),
-    s = i(311907),
-    a = i(397927),
-    r = i(958805),
-    o = i(61881),
-    d = i(985018);
+t.d(l, { A: () => c });
+var i = t(627968),
+    n = t(64700),
+    s = t(311907),
+    a = t(397927),
+    r = t(958805),
+    o = t(61881),
+    d = t(985018);
 function c(e) {
-    let { isCurrentUser: t, onClose: i, className: c } = e,
-        u = (0, s.bG)([o.A], () => o.A.hasUnsavedChanges()),
-        A = n.useCallback(() => {
-            t && u ? r.A.notifyUnsavedWidgets() : i();
-        }, [t, u, i]);
-    return (0, l.jsx)("div", {
-        className: c,
-        children: (0, l.jsx)(a.K0, {
-            "aria-label": d.intl.string(d.t.cpT0Cq),
-            icon: a.PGe,
-            onClick: A,
-            variant: "secondary",
-            size: "sm",
-        }),
+    let { isCurrentUser: l, onClose: t } = e,
+        c = (0, s.bG)([o.A], () => o.A.hasUnsavedChanges()),
+        u = n.useCallback(() => {
+            l && c ? r.A.notifyUnsavedWidgets() : t();
+        }, [l, c, t]);
+    return (0, i.jsx)(a.K0, {
+        "aria-label": d.intl.string(d.t.cpT0Cq),
+        icon: a.PGe,
+        onClick: u,
+        variant: "secondary",
+        size: "sm",
     });
 }

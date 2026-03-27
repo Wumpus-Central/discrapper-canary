@@ -71,7 +71,7 @@ function h(e) {
                           }),
                       }),
         });
-    let y = null == b || 0 === j.length || t !== s.ip4.ENTERED;
+    let y = null == b || t !== s.ip4.ENTERED;
     return (0, a.jsx)("div", {
         className: m.OJ,
         children: y

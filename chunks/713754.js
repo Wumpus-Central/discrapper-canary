@@ -64,6 +64,7 @@ var a = (function (e) {
             (e.FIRST_FRAME_CALLBACK = "first_frame_callback"),
             (e.REMOTE_USER_MULTI_STREAM = "remote_user_multi_stream"),
             (e.CLIPS = "clips"),
+            (e.CLIPS_V3 = "clips_v3"),
             (e.GO_LIVE_HARDWARE = "go_live_hardware"),
             (e.IMAGE_QUALITY_MEASUREMENT = "image_quality_measurement"),
             (e.SCREEN_CAPTURE_KIT = "screen_capture_kit"),

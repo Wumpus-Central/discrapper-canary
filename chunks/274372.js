@@ -107,6 +107,10 @@ function U(e) {
             let { id: n } = e;
             return n !== t.id;
         })),
+        (E = E.filter((e) => {
+            let { id: n } = e;
+            return n !== t.id;
+        })),
         (E = [t, ...E]),
         (b.hasClips = !0);
 }

@@ -80,6 +80,7 @@ class l extends r.A {
     getSingleWindowPreview(e, t, n) {
         return Promise.reject(Error("UNSUPPORTED"));
     }
+    setClipsModulePath(e) {}
     setClipBufferLength(e) {}
     setClipsMLPipelineEnabled(e) {}
     setClipsMLPipelineTypeEnabled(e, t) {}

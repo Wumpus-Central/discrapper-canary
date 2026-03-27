@@ -192,6 +192,7 @@ var Y = (function (e) {
             (e.VOICE_FILTERS = "VOICE_FILTERS"),
             (e.AUTOMATIC_GAIN_CONTROL = "AUTOMATIC_GAIN_CONTROL"),
             (e.CLIPS = "CLIPS"),
+            (e.CLIPS_V3 = "CLIPS_V3"),
             (e.SPEED_TEST = "SPEED_TEST"),
             (e.IMAGE_QUALITY_MEASUREMENT = "IMAGE_QUALITY_MEASUREMENT"),
             (e.GO_LIVE_HARDWARE = "GO_LIVE_HARDWARE"),

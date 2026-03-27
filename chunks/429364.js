@@ -147,7 +147,10 @@ function m(e) {
             return () => {
                 e();
             };
-        }, [m, I, k, x]);
+        }, [m, I, k, x]),
+        n.useEffect(() => {
+            G > 0 && O <= 0 && y <= 0 && T((e) => ({ ...e, cropEnd: G }));
+        }, [G, O, y]);
     let eo = n.useMemo(() => O - M, [M, O]),
         eu = n.useCallback(
             (e) => (
