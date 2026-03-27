@@ -3,8 +3,8 @@ n.d(t, { Ay: () => M });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(880013),
+    a = n.n(l),
+    r = n(4208),
     o = n(607399),
     c = n(311907),
     d = n(990078),
@@ -23,18 +23,18 @@ var i = n(627968),
     N = n(652215),
     b = n(349828),
     S = n(985018),
-    T = n(826358);
+    T = n(961577);
 function v(e) {
     let { guild: t, controller: n, guildBanner: s, animate: l } = e,
         { value: c } = n.springs;
-    return (0, i.jsx)(a.animated.div, {
+    return (0, i.jsx)(r.animated.div, {
         className: T.nI,
         style: { opacity: c, transform: c.to((e) => `translateY(-${(1 - e) * 90}px)`) },
-        children: (0, i.jsx)(a.animated.div, {
-            className: r()(T._e, { [T.fr]: o.Fr }),
+        children: (0, i.jsx)(r.animated.div, {
+            className: a()(T._e, { [T.fr]: o.Fr }),
             style: { transform: c.to((e) => `translateY(${(1 - e) * 90}px)`) },
             children: (0, i.jsx)("img", {
-                className: r()(T.Q, { [T.fr]: o.Fr }),
+                className: a()(T.Q, { [T.fr]: o.Fr }),
                 src: E.Ay.getGuildBannerURL({ id: t.id, banner: s }, l) ?? "",
                 alt: "",
                 "aria-hidden": !0,
@@ -73,8 +73,8 @@ function y(e) {
                 }),
         });
     return l
-        ? (0, i.jsx)("div", { className: r()(T.pS, T.W$), children: h })
-        : (0, i.jsx)(a.animated.div, {
+        ? (0, i.jsx)("div", { className: a()(T.pS, T.W$), children: h })
+        : (0, i.jsx)(r.animated.div, {
               className: T.pS,
               style: s ? { opacity: o } : { height: o.to((e) => `${20 * e}px`) },
               children: h,
@@ -94,13 +94,13 @@ function R(e) {
 }
 let O = [b.Vc, N.gNP];
 function L(e) {
-    let { bannerVisible: t, guild: l, onClick: r, onContextMenu: a, ariaControls: o, ariaExpanded: m, children: g } = e,
+    let { bannerVisible: t, guild: l, onClick: a, onContextMenu: r, ariaControls: o, ariaExpanded: m, children: g } = e,
         f = (0, h.YC)(l),
         E = (0, c.bG)([x.A], () => (0, _.K)(x.A, l)),
         C = s.useCallback(() => {
             E
                 ? (0, u.mMO)(async () => {
-                      let { default: e } = await Promise.all([n.e("43600"), n.e("71281")]).then(n.bind(n, 234355));
+                      let { default: e } = await Promise.all([n.e("43600"), n.e("67505")]).then(n.bind(n, 234355));
                       return (t) => (0, i.jsx)(e, { ...t, guild: l, source: N.PE1.GUILD_HEADER_INVITE_BUTTON });
                   })
                 : (0, u.mMO)(async () => {
@@ -115,8 +115,8 @@ function L(e) {
                 "aria-label": S.intl.formatToPlainString(S.t.xMXpl3, { guildName: f }),
                 "aria-controls": o,
                 "aria-expanded": m,
-                onContextMenu: a,
-                onClick: r,
+                onContextMenu: r,
+                onClick: a,
                 children: [
                     (0, i.jsxs)("div", {
                         className: T.LO,
@@ -152,7 +152,7 @@ let M = s.memo(function (e) {
             ref: t,
             bannerVisible: n,
             controller: l,
-            className: a,
+            className: r,
             onClick: d,
             onContextMenu: h,
             onMouseDown: A,
@@ -207,15 +207,15 @@ let M = s.memo(function (e) {
                         "data-has-banner": q(),
                         "data-banner-visible": n,
                         ref: K,
-                        className: r()(a, { [T.kL]: !0, [T.r9]: q(), [T.Pi]: n, [e]: !1, [T.Iv]: w || (M && P) }),
+                        className: a()(r, { [T.kL]: !0, [T.r9]: q(), [T.Pi]: n, [e]: !1, [T.Iv]: w || (M && P) }),
                         onMouseDown: A,
                         onContextMenu: h,
                         children: [
                             (0, i.jsxs)("header", {
-                                className: r()(T.wx, R, { [T.jD]: o.Fr }),
+                                className: a()(T.wx, R, { [T.jD]: o.Fr }),
                                 children: [
                                     (0, i.jsx)("div", {
-                                        className: r()(T.VW, T.Nk),
+                                        className: a()(T.VW, T.Nk),
                                         children: (0, i.jsx)(L, {
                                             bannerVisible: n,
                                             guild: I,
@@ -259,9 +259,9 @@ function D(e) {
         s = t.springs.value;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(a.animated.div, { className: T.UL, style: { opacity: s.to((e) => 0.5 * e) } }),
-            (0, i.jsx)(a.animated.div, { className: T.ze, style: { opacity: s.to((e) => e) } }),
-            (0, i.jsx)(a.animated.div, {
+            (0, i.jsx)(r.animated.div, { className: T.UL, style: { opacity: s.to((e) => 0.5 * e) } }),
+            (0, i.jsx)(r.animated.div, { className: T.ze, style: { opacity: s.to((e) => e) } }),
+            (0, i.jsx)(r.animated.div, {
                 className: T.iI,
                 style: {
                     opacity: s.to((e) => (1 - e) * 6),

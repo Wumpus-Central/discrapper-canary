@@ -3,11 +3,11 @@ var r = s(627968),
     n = s(64700),
     a = s(503698),
     i = s.n(a),
-    l = s(880013),
+    l = s(4208),
     o = s(397927),
     c = s(557722),
     h = s(219716),
-    d = s(779220);
+    d = s(834265);
 function u(e) {
     let { show: t, alpha2: s, countryCode: a } = e,
         u = n.useRef(null),

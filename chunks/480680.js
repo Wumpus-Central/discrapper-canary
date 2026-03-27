@@ -3,8 +3,8 @@ n.d(t, { A: () => w });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(880013),
+    a = n.n(l),
+    r = n(4208),
     o = n(311907),
     c = n(827734);
 n(990078);
@@ -33,10 +33,10 @@ var m = n(952790),
     O = n(849077),
     L = n(652215),
     M = n(985018),
-    D = n(136508);
+    D = n(674823);
 let G = [],
     U = {
-        controller: new a.Controller({ value: 1, immediate: !0 }),
+        controller: new r.Controller({ value: 1, immediate: !0 }),
         renderBanner: !1,
         bannerVisible: !1,
         communityInfoVisible: !1,
@@ -49,7 +49,7 @@ function P(e) {
     let { includePanelSpacing: t } = e,
         n = (0, N.op)(),
         { selectedFilter: l } = (0, b.A)(),
-        a = (0, o.bG)([S.A], () => S.A.oldestDisplayedMessageId),
+        r = (0, o.bG)([S.A], () => S.A.oldestDisplayedMessageId),
         c = (0, o.yK)([S.A], () => S.A.getInboxMessages()),
         v = (0, o.yK)([x.Ay, g.A, S.A], () =>
             c.filter(
@@ -132,7 +132,7 @@ function P(e) {
                 }),
             [w],
         ),
-        K = k(v, l, a),
+        K = k(v, l, r),
         W = k(y, l, null);
     (0, A.Ay)(() => {
         u.h.dispatch({ type: "NOTIFICATIONS_INBOX_OPEN" });
@@ -146,11 +146,11 @@ function P(e) {
             if (null != s) return { message: s, isUnread: null != i };
             let l = S.A.getNotifyingChannelIds();
             if (null == l || 0 === l.length) return { message: null, isUnread: !1 };
-            let r = l[0],
-                a = x.Ay.getTrackedAckMessageId(r);
-            return null == a
+            let a = l[0],
+                r = x.Ay.getTrackedAckMessageId(a);
+            return null == r
                 ? { message: null, isUnread: !1 }
-                : { message: { id: E.default.atNextMillisecond(a), channel_id: r }, isUnread: x.Ay.hasUnread(r) ?? !1 };
+                : { message: { id: E.default.atNextMillisecond(r), channel_id: a }, isUnread: x.Ay.hasUnread(a) ?? !1 };
         })(K, W);
         null != i &&
             I.A.inboxItemClick({
@@ -170,7 +170,7 @@ function P(e) {
         z = Y === C.yF.DROPDOWN && l !== O.Io.ALL,
         q = (0, O.Yw)(l);
     return (0, i.jsx)("nav", {
-        className: r()(D.kL, { [D.Yu]: t }),
+        className: a()(D.kL, { [D.Yu]: t }),
         children: (0, i.jsxs)(d.Fmo, {
             forceLevel: 1,
             component: (0, i.jsx)(m.Ay, { hasSubheader: !0, guild: q, ...U }),
@@ -218,7 +218,7 @@ function H(e) {
     let { hideBanner: t } = e,
         n = (0, v.S)((e) => e.shouldHide());
     return (0, i.jsx)("div", {
-        className: r()(D.dl, { [D.jD]: n || t }),
+        className: a()(D.dl, { [D.jD]: n || t }),
         children: (0, i.jsxs)("div", {
             className: D.XD,
             children: [

@@ -29,8 +29,8 @@ var i = n(627968),
     y = n(927573),
     R = n(652215),
     O = n(985018),
-    L = n(546010),
-    G = n(512672);
+    L = n(775233),
+    G = n(19427);
 let D = "DRAGGABLE_ROLE";
 function M(e) {
     let {

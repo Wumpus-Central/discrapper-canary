@@ -3,8 +3,8 @@ n.d(t, { A: () => B });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(172218),
+    a = n.n(l),
+    r = n(172218),
     o = n(311907),
     c = n(397927),
     d = n(308528),
@@ -36,7 +36,7 @@ var i = n(627968),
 n(281405);
 var U = n(652215),
     P = n(349828),
-    w = n(99566);
+    w = n(928409);
 class k extends L.Ay {
     state = { shouldShowThreadsPopout: !1, shouldShowActivities: !1 };
     channelItemRef = s.createRef();
@@ -82,10 +82,10 @@ class k extends L.Ay {
     };
     renderPopout = (e) => {
         let { channel: t, sorting: n, embeddedApps: s, channelIsContentGated: l } = this.props,
-            { shouldShowActivities: r } = this.state;
+            { shouldShowActivities: a } = this.state;
         return t.isModeratorReportChannel() || l
             ? null
-            : null != s && s.length > 0 && r && !n
+            : null != s && s.length > 0 && a && !n
               ? (0, i.jsx)(G.A, { onAction: this.handleActivitiesPopoutClose, channel: t })
               : (0, i.jsx)(O.A, { ...e, channel: this.props.channel });
     };
@@ -111,7 +111,7 @@ class k extends L.Ay {
                         n.e("97262"),
                         n.e("42128"),
                         n.e("39778"),
-                        n.e("22283"),
+                        n.e("34408"),
                     ]).then(n.bind(n, 385913));
                     return (n) => (0, i.jsx)(e, { ...n, user: s, channel: t, showModalItems: !1 });
                 });
@@ -142,7 +142,7 @@ class k extends L.Ay {
                 selected: n,
                 muted: s,
                 unread: l,
-                hasActiveThreads: a,
+                hasActiveThreads: r,
                 hasMoreActiveThreads: o,
                 mentionCount: d,
                 connectChannelDropTarget: u,
@@ -165,7 +165,7 @@ class k extends L.Ay {
             R = !S && b && null != I && I.length > 0,
             O = (0, g.M)(E),
             L = (0, i.jsxs)("li", {
-                className: r()(this.getClassName(), { [w.r9]: this.isDisabled(), [w.wH]: n }),
+                className: a()(this.getClassName(), { [w.r9]: this.isDisabled(), [w.wH]: n }),
                 "data-dnd-name": e.name,
                 onMouseEnter: j || R ? this.handleMouseEnter : void 0,
                 onMouseLeave: j || R ? this.handleMouseLeave : void 0,
@@ -187,7 +187,7 @@ class k extends L.Ay {
                                 muted: s,
                                 unread: l,
                                 mentionCount: d,
-                                hasActiveThreads: a,
+                                hasActiveThreads: r,
                                 subtitle: O?.subtitle,
                                 subtitleColor: O?.color,
                                 onMouseDown: this.handleMouseDown,
@@ -229,7 +229,7 @@ class k extends L.Ay {
 }
 let V = (0, h.a)(k);
 function B(e) {
-    let { channel: t, guild: n, disableSorting: l, isFavoriteCategory: r, muted: c, selected: d } = e,
+    let { channel: t, guild: n, disableSorting: l, isFavoriteCategory: a, muted: c, selected: d } = e,
         { hasActiveThreads: u, hasMoreActiveThreads: h } = (0, I.NR)(t),
         p = (0, o.cf)([y.Ay], () => ({
             unread: y.Ay.hasUnread(t.id),
@@ -265,7 +265,7 @@ function B(e) {
         }),
         k = (0, m.Ay)(t),
         [B, H] = s.useState(!1),
-        F = (0, a.K)(
+        F = (0, r.K)(
             s.useCallback((e) => {
                 H(e);
             }, []),
@@ -288,7 +288,7 @@ function B(e) {
               isSubscriptionGated: O,
               needSubscriptionToAccess: R,
               isNewChannel: S && e.canBeNewChannel,
-              isFavoriteSuggestion: r && !L,
+              isFavoriteSuggestion: a && !L,
               channelIsContentGated: D,
               channelInfo: w,
               embeddedApps: k,

@@ -3,7 +3,7 @@ n.d(t, { $: () => a, S: () => l });
 var r = n(627968);
 n(64700);
 var i = n(835245),
-    s = n(467380);
+    s = n(46665);
 function a() {
     return (0, r.jsx)("svg", {
         className: s.d,

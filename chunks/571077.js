@@ -30,7 +30,7 @@ function _(e) {
     if (null == c || !_) return null;
     let f = () => {
         (0, s.mMO)(async () => {
-            let { default: e } = await Promise.all([n.e("13088"), n.e("33563"), n.e("1184")]).then(n.bind(n, 719847));
+            let { default: e } = await Promise.all([n.e("13088"), n.e("33563"), n.e("35946")]).then(n.bind(n, 719847));
             return (t) => (0, r.jsx)(e, { appId: c.id, guildId: o, ...t });
         });
     };

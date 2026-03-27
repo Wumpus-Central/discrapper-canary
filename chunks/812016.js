@@ -5,7 +5,7 @@ r(64700);
 var i = r(397927),
     s = r(224016),
     a = r(985018),
-    l = r(794740),
+    l = r(20865),
     c = r(461727);
 let o = () => {
     let e = [a.t.E1NP2x, a.t.kpMomJ, a.t.xT1Vfn, a.t.myyAEr, a.t.zTk8Ul];

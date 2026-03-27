@@ -7,7 +7,7 @@ var i = n(503698),
     a = n(607399),
     o = n(397927),
     l = n(985018),
-    u = n(31004),
+    u = n(494697),
     c = (function (e) {
         return (e.DEFAULT = ""), (e.BOLD = "Bold"), (e.SOLID = "Solid"), e;
     })(c || {});

@@ -3,10 +3,10 @@ var i = n(627968),
     a = n(64700),
     r = n(503698),
     l = n.n(r),
-    s = n(880013),
+    s = n(4208),
     o = n(397927),
     d = n(486020),
-    c = n(795924);
+    c = n(754521);
 let u = { mass: 1, tension: 170, friction: 26 };
 function _(e) {
     let { className: t, voiceStates: n, guildId: r, ref: _, motion: m } = e,

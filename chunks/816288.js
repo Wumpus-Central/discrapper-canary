@@ -3,8 +3,8 @@ n.d(t, { A: () => S, n: () => N });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(880013),
+    a = n.n(l),
+    r = n(4208),
     o = n(158954),
     c = n(311907),
     d = n(397927),
@@ -17,9 +17,9 @@ var i = n(627968),
     g = n(267771),
     f = n(828162),
     x = n(259568),
-    E = n(136708),
+    E = n(333354),
     C = n(985018),
-    I = n(492813);
+    I = n(208988);
 let N = s.forwardRef((e, t) => {
     let { appliedBoostCount: n, maxBoostCount: l, premiumSubscriberCount: c, className: u } = e,
         h = n >= l,
@@ -37,8 +37,8 @@ let N = s.forwardRef((e, t) => {
             ref: t,
             className: I.hQ,
             children: [
-                (0, i.jsx)("div", { className: r()(I.L$, u) }),
-                (0, i.jsx)(a.animated.div, { className: r()(I.qB, { [I.mu]: A <= 5 }), style: m }),
+                (0, i.jsx)("div", { className: a()(I.L$, u) }),
+                (0, i.jsx)(r.animated.div, { className: a()(I.qB, { [I.mu]: A <= 5 }), style: m }),
                 (0, i.jsxs)("div", {
                     className: I.FS,
                     children: [
@@ -62,7 +62,7 @@ let N = s.forwardRef((e, t) => {
                             className: I.Ui,
                             children: [
                                 (0, i.jsx)(o.EYj, {
-                                    className: r()(I.Qq, I.ue),
+                                    className: a()(I.Qq, I.ue),
                                     variant: "text-xs/semibold",
                                     children: h
                                         ? C.intl.formatToPlainString(E.default["Ehpq+7"], { appliedBoostCount: n })
@@ -75,7 +75,7 @@ let N = s.forwardRef((e, t) => {
                                     width: 12,
                                     height: 12,
                                     direction: _.A.Directions.RIGHT,
-                                    className: r()(I.Qq, I.ue),
+                                    className: a()(I.Qq, I.ue),
                                 }),
                             ],
                         }),
@@ -87,7 +87,7 @@ let N = s.forwardRef((e, t) => {
 });
 function b(e) {
     let { guild: t, withMargin: l } = e,
-        a = s.useRef(null),
+        r = s.useRef(null),
         o = (0, g.A)(t),
         _ = (0, p.A)(t.id),
         E = s.useCallback(() => {
@@ -114,16 +114,16 @@ function b(e) {
                 role: "button",
                 focusProps: { offset: { left: 10, right: 4 } },
                 onClick: E,
-                className: r()(I.kL, { [I.aF]: l }),
+                className: a()(I.kL, { [I.aF]: l }),
                 onContextMenu: b,
                 children: (0, i.jsx)(N, {
-                    ref: a,
+                    ref: r,
                     appliedBoostCount: C,
                     maxBoostCount: o,
                     premiumSubscriberCount: t.premiumSubscriberCount,
                 }),
             }),
-            (0, i.jsx)(x.a, { guild: t, targetElementRef: a }),
+            (0, i.jsx)(x.a, { guild: t, targetElementRef: r }),
         ],
     });
 }

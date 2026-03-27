@@ -3,17 +3,17 @@ n.d(t, { A: () => h });
 var i = n(627968),
     s = n(64700),
     l = n(397927),
-    r = n(323073),
-    a = n(58736),
+    a = n(323073),
+    r = n(58736),
     o = n(707539),
     c = n(617011),
     d = n(985018),
-    u = n(857476);
+    u = n(94287);
 function h(e) {
     let { channel: t } = e,
         [n, h] = s.useState(!1),
         A = s.useRef(null),
-        m = (0, r.vL)(t),
+        m = (0, a.vL)(t),
         _ = s.useCallback(() => {
             h(!1);
         }, []),
@@ -36,7 +36,7 @@ function h(e) {
         clickTrap: !0,
         children: (e, t) => {
             let { isShown: n } = t;
-            return (0, i.jsx)(a.In, {
+            return (0, i.jsx)(r.In, {
                 ...e,
                 ref: A,
                 className: u.Kk,

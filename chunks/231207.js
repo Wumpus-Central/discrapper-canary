@@ -28,7 +28,7 @@ var a = n(627968),
     I = n(166403),
     k = n(652215),
     O = n(788868),
-    R = n(19897);
+    R = n(318296);
 function w(e) {
     let { selectedGuildForGuildSub: t } = e,
         n = (0, v.uk)(t?.id)[0];

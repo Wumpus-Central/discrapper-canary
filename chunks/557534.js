@@ -3,8 +3,8 @@ n.d(t, { Ay: () => L, Jd: () => y, O6: () => v, gQ: () => j, h$: () => T });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(311907),
+    a = n.n(l),
+    r = n(311907),
     o = n(990078),
     c = n(397927),
     d = n(435183),
@@ -22,7 +22,7 @@ var i = n(627968),
     I = n(343360),
     N = n(652215),
     b = n(985018),
-    S = n(99566);
+    S = n(928409);
 function T(e, t, n) {
     return null != t && !!t && !(0, I.ws)(n, e.type);
 }
@@ -31,7 +31,7 @@ function v(e, t) {
 }
 function y(e) {
     let { channel: t, disableManageChannels: n, tabIndex: s, forceShowButtons: l, hasChannelInfo: h = !1 } = e;
-    return (0, a.bG)(
+    return (0, r.bG)(
         [E.A, C.A],
         () =>
             n ||
@@ -49,7 +49,7 @@ function y(e) {
               asContainer: !0,
               text: b.intl.string(b.t["3gUsJb"]),
               children: (0, i.jsx)(c.DUT, {
-                  className: r()(S.Xs, l ? S.Tf : void 0, h ? S.bw : S.UI),
+                  className: a()(S.Xs, l ? S.Tf : void 0, h ? S.bw : S.UI),
                   onClick: function () {
                       d.Ay.open(t.id);
                   },
@@ -68,11 +68,11 @@ function j(e) {
             forceShowButtons: m,
             hasChannelInfo: g = !1,
         } = e,
-        C = (0, a.bG)([x.A], () => x.A.getGuild(t.getGuildId())),
-        I = (0, a.bG)([_.A], () => _.A.getStageInstanceByChannel(t.id), [t.id]),
-        T = (0, a.bG)([h.Ay], () => h.Ay.getActiveEventByChannel(t.id), [t.id]),
-        v = (0, a.bG)([E.A], () => (0, A.K)(E.A, C, t, I)),
-        y = (0, a.bG)([], () =>
+        C = (0, r.bG)([x.A], () => x.A.getGuild(t.getGuildId())),
+        I = (0, r.bG)([_.A], () => _.A.getStageInstanceByChannel(t.id), [t.id]),
+        T = (0, r.bG)([h.Ay], () => h.Ay.getActiveEventByChannel(t.id), [t.id]),
+        v = (0, r.bG)([E.A], () => (0, A.K)(E.A, C, t, I)),
+        y = (0, r.bG)([], () =>
             t?.type === N.rbe.GUILD_VOICE ? b.intl.string(b.t["EE+P0H"]) : b.intl.string(b.t["0jeAXt"]),
         ),
         j = s.useRef(null);
@@ -90,14 +90,14 @@ function j(e) {
             asContainer: !0,
             text: y,
             children: (0, i.jsx)(c.DUT, {
-                className: r()(S.Xs, m ? S.Tf : void 0, g ? S.bw : S.UI),
+                className: a()(S.Xs, m ? S.Tf : void 0, g ? S.bw : S.UI),
                 onClick: function () {
                     if (null != C) {
                         let e = f.A.getAllActiveStreams().filter(
                             (e) => e.state !== N.XYD.ENDED && e.channelId === t.id,
                         );
                         (0, c.mMO)(async () => {
-                            let { default: s } = await Promise.all([n.e("43600"), n.e("71281")]).then(
+                            let { default: s } = await Promise.all([n.e("43600"), n.e("67505")]).then(
                                 n.bind(n, 234355),
                             );
                             return (n) =>

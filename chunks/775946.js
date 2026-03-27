@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { A: () => a });
+n.d(t, { A: () => r });
 var i = n(627968);
 n(64700);
 var s = n(827734),
     l = n(397927),
-    r = n(15122);
-function a(e) {
+    a = n(328689);
+function r(e) {
     let { mentionsCount: t, isMentionLowImportance: n } = e;
     return (0, i.jsx)("div", {
-        className: r.R,
+        className: a.R,
         "aria-hidden": !0,
         children: (0, i.jsx)(l.hVq, {
             count: t,

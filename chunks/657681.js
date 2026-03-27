@@ -15,7 +15,7 @@ var i = n(627968),
     p = n(317525),
     A = n(486020),
     b = n(985018),
-    f = n(50399);
+    f = n(475942);
 function _(e) {
     let { guild: t, applicationIntegration: n } = e,
         { application: _ } = n,

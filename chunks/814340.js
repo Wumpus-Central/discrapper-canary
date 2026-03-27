@@ -3,8 +3,8 @@ n.d(t, { A: () => K });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(158954),
+    a = n.n(l),
+    r = n(158954),
     o = n(311907),
     c = n(990078),
     d = n(397927),
@@ -31,7 +31,7 @@ var i = n(627968),
     O = n(826050),
     L = n(652215),
     M = n(985018),
-    D = n(992928);
+    D = n(598855);
 let G = () =>
     (0, i.jsxs)("div", {
         className: D.p$,
@@ -153,16 +153,16 @@ class F extends s.PureComponent {
                         n.e("16301"),
                         n.e("22191"),
                         n.e("25961"),
-                        n.e("33144"),
+                        n.e("91872"),
                         n.e("35894"),
                         n.e("50796"),
                         n.e("8458"),
                         n.e("11810"),
-                        n.e("4260"),
+                        n.e("34656"),
                         n.e("30453"),
                         n.e("56475"),
                         n.e("54469"),
-                        n.e("70522"),
+                        n.e("48892"),
                     ]).then(n.bind(n, 544676));
                     return (n) => (0, i.jsx)(e, { ...n, guild: t.record, onSelect: y.jD, hideSettings: !0 });
                 });
@@ -225,7 +225,7 @@ class F extends s.PureComponent {
                 });
             case m.rD.USER:
                 return (0, u.L3)(e, async () => {
-                    let { default: e } = await Promise.all([n.e("97262"), n.e("32418"), n.e("84821")]).then(
+                    let { default: e } = await Promise.all([n.e("97262"), n.e("32418"), n.e("54631")]).then(
                         n.bind(n, 668569),
                     );
                     return (n) => (0, i.jsx)(e, { ...n, user: t.record, onSelect: y.jD });
@@ -476,7 +476,7 @@ class F extends s.PureComponent {
     };
     renderProtip() {
         return (0, i.jsx)(p.A, {
-            className: r()(D.PP, { [D.ov]: this.state.query.length > 0 }),
+            className: a()(D.PP, { [D.ov]: this.state.query.length > 0 }),
             type: p.A.Types.INLINE,
             children: M.intl.format(M.t.wukqXQ, {
                 userSymbolHook: (e, t) => H(t, m.AT.USER, M.intl.string(M.t.GQRCGn)),
@@ -493,7 +493,7 @@ class F extends s.PureComponent {
         return t ? null : (0, i.jsx)(O.A, { hasQuery: e.length > 0 && n.length > 0 });
     }
     render() {
-        return (0, i.jsx)(a.dWK, {
+        return (0, i.jsx)(r.dWK, {
             "aria-label": M.intl.string(M.t.ZvKwYa),
             size: "lg",
             transitionState: this.props.transitionState,

@@ -3,8 +3,8 @@ n.d(t, { A: () => x });
 var i = n(627968),
     s = n(64700),
     l = n(554146),
-    r = n(192308),
-    a = n(990078),
+    a = n(192308),
+    r = n(990078),
     o = n(397927),
     c = n(932001),
     d = n(652793),
@@ -12,10 +12,10 @@ var i = n(627968),
     h = n(652215),
     A = n(746080),
     m = n(49999),
-    _ = n(738072),
+    _ = n(294726),
     p = n(985018),
-    g = n(208811),
-    f = n(99566);
+    g = n(81152),
+    f = n(928409);
 let x = s.memo(function (e) {
     let { guildId: t, selected: x } = e,
         [E, C] = (0, c.ww)([l.M.GAME_SERVER_HOSTING_NEW_BADGE], t),
@@ -26,7 +26,7 @@ let x = s.memo(function (e) {
         b = s.useCallback(
             (e) => {
                 e.stopPropagation(),
-                    (0, r.openModalLazy)(async () => {
+                    (0, a.openModalLazy)(async () => {
                         let { default: e } = await n.e("2872").then(n.bind(n, 128459));
                         return (n) => (0, i.jsx)(e, { ...n, guildId: t });
                     });
@@ -38,7 +38,7 @@ let x = s.memo(function (e) {
             children: [
                 (0, i.jsx)("div", {
                     className: f.Xs,
-                    children: (0, i.jsx)(a.m, {
+                    children: (0, i.jsx)(r.m, {
                         text: p.intl.string(p.t.fgq1gs),
                         position: "top",
                         children: (0, i.jsx)(o.DUT, {

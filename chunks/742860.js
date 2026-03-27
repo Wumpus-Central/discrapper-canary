@@ -3,7 +3,7 @@ var a = n(627968),
     i = n(64700),
     s = n(503698),
     l = n.n(s),
-    r = n(880013),
+    r = n(4208),
     o = n(889137),
     d = n(311907),
     c = n(827734),
@@ -45,7 +45,7 @@ var a = n(627968),
     z = n(654487),
     $ = n(272111),
     q = n(985018),
-    Q = n(198472);
+    Q = n(833931);
 let Y = i.forwardRef(function (e, t) {
     let { isHovered: n, asset: s, poster: l, className: r, autoPlay: o = !1 } = e,
         { isExpanded: c } = i.useContext(F.T),

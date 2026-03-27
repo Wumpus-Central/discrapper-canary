@@ -1,43 +1,43 @@
 n.d(t, { A: () => E });
 var r = n(627968),
     i = n(64700),
-    s = n(503698),
-    l = n.n(s),
+    l = n(503698),
+    s = n.n(l),
     o = n(158954),
     a = n(311907),
-    d = n(397927),
-    u = n(793574),
+    u = n(397927),
+    d = n(793574),
     c = n(890942),
-    m = n(744201),
-    p = n(522055),
-    _ = n(793506),
+    p = n(744201),
+    _ = n(522055),
+    m = n(793506),
     f = n(204017),
-    g = n(843095),
-    x = n(738072),
-    A = n(985018),
-    v = n(242030),
-    h = n(4799);
+    A = n(843095),
+    g = n(294726),
+    x = n(985018),
+    v = n(849289),
+    h = n(848820);
 function E(e) {
     let { guildId: t } = e,
         n = i.useRef(null),
-        { state: s, lowestGameServerCost: E } = (0, a.cf)([p.A], () => ({
-            state: p.A.getStateForGuild(t),
-            lowestGameServerCost: p.A.getLowestGameCostForGuild(t),
+        { state: l, lowestGameServerCost: E } = (0, a.cf)([_.A], () => ({
+            state: _.A.getStateForGuild(t),
+            lowestGameServerCost: _.A.getLowestGameCostForGuild(t),
         })),
-        j = (0, _.A)(t),
-        { gameName: b, gameName2: I } = (0, f.A)(),
-        { textColor: S } = (0, m.A)(j?.type === "active");
-    return null == s
+        b = (0, m.A)(t),
+        { gameName: I, gameName2: j } = (0, f.A)(),
+        { textColor: S } = (0, p.A)(b?.type === "active");
+    return null == l
         ? null
         : (0, r.jsxs)(c.NI, {
-              label: A.intl.string(x.default["B3OfL/"]),
+              label: x.intl.string(g.default["B3OfL/"]),
               badge: "beta",
-              isActive: j?.type === "active",
-              isWarning: j?.type === "expiring",
-              onClick: () => (0, g.A)({ guildId: t, analyticsLocation: u.A.GUILD_POWERUPS_OVERVIEW }),
+              isActive: b?.type === "active",
+              isWarning: b?.type === "expiring",
+              onClick: () => (0, A.A)({ guildId: t, analyticsLocation: d.A.GUILD_POWERUPS_OVERVIEW }),
               children: [
                   (0, r.jsx)("div", {
-                      className: l()(h.ZS, v.Sl),
+                      className: s()(h.ZS, v.Sl),
                       children: (0, r.jsx)(o.E_w, {
                           withReducedMotion: "halt",
                           eventTargetRef: n,
@@ -47,27 +47,27 @@ function E(e) {
                       }),
                   }),
                   (0, r.jsx)(c.Ft, {
-                      title: A.intl.string(x.default["B3OfL/"]),
+                      title: x.intl.string(g.default["B3OfL/"]),
                       textColor: S,
-                      footer: (0, r.jsx)(c.$L, { cost: E ?? 0, costDecorator: "+", status: j }),
+                      footer: (0, r.jsx)(c.$L, { cost: E ?? 0, costDecorator: "+", status: b }),
                       children: (0, r.jsx)(o.EYj, {
                           className: v.h_,
                           color: S,
                           variant: "text-sm/medium",
-                          children: A.intl.format(x.default["+UqyGU"], { gameName: b, gameName2: I }),
+                          children: x.intl.format(g.default["+UqyGU"], { gameName: I, gameName2: j }),
                       }),
                   }),
                   (0, r.jsx)(c.kd, {
-                      children: (0, r.jsx)(d.Button, {
+                      children: (0, r.jsx)(u.Button, {
                           variant: "primary",
                           fullWidth: !0,
                           text:
-                              Object.values(s.entitlements).length > 0
-                                  ? A.intl.string(x.default.PuvU5b)
-                                  : A.intl.string(x.default.b62EHM),
+                              Object.values(l.entitlements).length > 0
+                                  ? x.intl.string(g.default.PuvU5b)
+                                  : x.intl.string(g.default.b62EHM),
                           onClick: (e) => {
                               e.stopPropagation(),
-                                  (0, g.A)({ guildId: t, analyticsLocation: u.A.GUILD_POWERUPS_OVERVIEW });
+                                  (0, A.A)({ guildId: t, analyticsLocation: d.A.GUILD_POWERUPS_OVERVIEW });
                           },
                       }),
                   }),

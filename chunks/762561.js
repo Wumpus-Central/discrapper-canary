@@ -2,9 +2,9 @@
 n.d(t, { A: () => V });
 var i = n(627968),
     s = n(64700),
-    l = n(880013),
-    r = n(158954),
-    a = n(311907),
+    l = n(4208),
+    a = n(158954),
+    r = n(311907),
     o = n(397927),
     c = n(736653),
     d = n(793574),
@@ -36,7 +36,7 @@ var i = n(627968),
     U = n(518477),
     P = n(996988),
     w = n(985018),
-    k = n(49615);
+    k = n(374146);
 function V(e) {
     let { user: t, currentUser: n, channel: V } = e,
         B = __OVERLAY__,
@@ -47,12 +47,12 @@ function V(e) {
         Y = s.useRef(null),
         { isHoveringOrFocusing: z, isHovering: q } = (0, A.A)(Y),
         X = (0, f.fC)(),
-        J = (0, o.zhh)({ opacity: +(null != X.interactionType), config: { duration: 150 } }),
-        Q = (e) => {
+        Q = (0, o.zhh)({ opacity: +(null != X.interactionType), config: { duration: 150 } }),
+        J = (e) => {
             (0, x.openUserProfileModal)({ sourceAnalyticsLocations: K, hideRestrictedProfile: !0, ...W, ...e });
         },
         $ = H?.widgets != null && H.widgets.length > 0,
-        { defaultWishlistId: Z } = (0, a.cf)([p.A], () => ({ defaultWishlistId: p.A.getFirstWishlistId(t.id) })),
+        { defaultWishlistId: Z } = (0, r.cf)([p.A], () => ({ defaultWishlistId: p.A.getFirstWishlistId(t.id) })),
         { wishlist: ee } = (0, m.fw)({ wishlistId: Z, userId: t.id }),
         et = s.useMemo(() => (null == ee ? null : ee.items.filter((e) => !e.isOwned)), [ee]);
     return (0, i.jsx)(u.f5, {
@@ -70,8 +70,8 @@ function V(e) {
                     themeOverride: F,
                     privateBanner: H?.private === !0 ? (0, i.jsx)(N.A, {}) : void 0,
                     children: [
-                        null != X.interactionType && (0, i.jsx)(l.animated.div, { style: J, className: k.tB }),
-                        (0, i.jsxs)(r.d_W, {
+                        null != X.interactionType && (0, i.jsx)(l.animated.div, { style: Q, className: k.tB }),
+                        (0, i.jsxs)(a.d_W, {
                             children: [
                                 (0, i.jsxs)(v.A, {
                                     children: [
@@ -96,7 +96,7 @@ function V(e) {
                                             displayProfile: H,
                                             channelId: V.id,
                                             themeType: P.d.SIDEBAR,
-                                            onOpenProfile: B ? void 0 : Q,
+                                            onOpenProfile: B ? void 0 : J,
                                         }),
                                         (0, i.jsx)(O.A, {
                                             user: t,
@@ -112,7 +112,7 @@ function V(e) {
                                     displayProfile: H,
                                     channel: V,
                                     isHoveringOrFocusing: null == X.interactionType && z,
-                                    onOpenProfile: B ? void 0 : Q,
+                                    onOpenProfile: B ? void 0 : J,
                                 }),
                                 $ &&
                                     (0, i.jsx)("div", {
@@ -120,7 +120,7 @@ function V(e) {
                                         children: (0, i.jsx)(b.A, {
                                             user: t,
                                             widgets: H.widgets,
-                                            onOpenUserProfileModal: Q,
+                                            onOpenUserProfileModal: J,
                                         }),
                                     }),
                                 null != et &&
@@ -133,14 +133,14 @@ function V(e) {
                                             wishlistId: Z,
                                             title: w.intl.string(w.t["7lZ31J"]),
                                             onClick: () => {
-                                                Q?.({ tabSection: U.RP.WISHLIST });
+                                                J?.({ tabSection: U.RP.WISHLIST });
                                             },
                                         }),
                                     }),
                                 (0, i.jsx)(D.A, { user: t, channelId: V.id }),
                             ],
                         }),
-                        !B && (0, i.jsx)(M.A, { handleOpenProfile: Q, analyticsLocations: K, context: W }),
+                        !B && (0, i.jsx)(M.A, { handleOpenProfile: J, analyticsLocations: K, context: W }),
                         H?.profileEffect != null && (0, i.jsx)(h.A, { skuId: H?.profileEffect?.skuId, isHovering: q }),
                     ],
                 }),

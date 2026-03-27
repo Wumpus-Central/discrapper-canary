@@ -3,8 +3,8 @@ n.d(t, { A: () => f });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(311907),
+    a = n.n(l),
+    r = n(311907),
     o = n(442433),
     c = n(676002),
     d = n(734057),
@@ -14,7 +14,7 @@ var i = n(627968),
     m = n(166444),
     _ = n(652215),
     p = n(790782),
-    g = n(99566);
+    g = n(928409);
 let f = (0, c.a)(function (e) {
     let {
             guild: t,
@@ -28,13 +28,13 @@ let f = (0, c.a)(function (e) {
             connectChannelDropTarget: N,
             tabIndex: b,
         } = e,
-        S = (0, a.bG)([d.A, u.Ay], () => {
+        S = (0, r.bG)([d.A, u.Ay], () => {
             let e = u.Ay.getDirectoryChannelIds(t.id);
             return 0 === e.length ? null : d.A.getChannel(e[0]);
         }),
-        T = (0, a.bG)([d.A], () => d.A.getChannel(S?.parent_id)),
+        T = (0, r.bG)([d.A], () => d.A.getChannel(S?.parent_id)),
         v = l === S?.id,
-        y = (0, a.bG)([h.A], () =>
+        y = (0, r.bG)([h.A], () =>
             null != T ? h.A.can(_.xBc.MANAGE_CHANNELS, T) : null != t && h.A.can(_.xBc.MANAGE_CHANNELS, t),
         ),
         j = s.useCallback(
@@ -51,7 +51,7 @@ let f = (0, c.a)(function (e) {
     let R = (0, A.O6)(c, C),
         O = (0, A.h$)(S, x, E),
         L = (0, i.jsx)("div", {
-            className: r()(R, { [g.r9]: O, [g.wH]: v }),
+            className: a()(R, { [g.r9]: O, [g.wH]: v }),
             "data-dnd-name": S.name,
             children: (0, i.jsxs)(m.Ay, {
                 className: g.Ki,

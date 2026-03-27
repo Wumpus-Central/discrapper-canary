@@ -4,7 +4,7 @@ var r = n(627968),
     s = n(503698),
     a = n.n(s),
     l = n(771253),
-    o = n(880013),
+    o = n(4208),
     u = n(942381),
     c = n(311907),
     d = n(876230),
@@ -38,7 +38,7 @@ var r = n(627968),
     U = n(654487),
     Q = n(838541),
     B = n(985018),
-    F = n(155350);
+    F = n(655833);
 let K = { tension: 250, friction: 5, clamp: !0 };
 function Y(e) {
     let {
@@ -99,7 +99,7 @@ function Y(e) {
         eZ = i.useRef(!1),
         [e0, e1] = i.useState(null),
         [e6, e7] = i.useState(!1),
-        [e5, e4] = i.useState(!1),
+        [e4, e5] = i.useState(!1),
         [e3, e8] = i.useState(!1),
         [e9, e2] = i.useState(null),
         te = eJ ? (eq.current?.duration ?? 0) : Math.max(eK.maxTimestampSec, ef.progressSeconds),
@@ -160,7 +160,7 @@ function Y(e) {
             getCurrentVideoTime: tD,
             isPlaying: ec === O.Q6.PLAYING,
             isMetadataLoaded: e6,
-            isInitialSeekComplete: e5,
+            isInitialSeekComplete: e4,
             onAnalytics: th,
             emitIntervalMs: v.KI,
             minSegmentDurationMs: v._4,
@@ -280,7 +280,7 @@ function Y(e) {
                 eU((e / (eq.current.duration ?? 1)) * 100),
                 ty(),
                 eA(!0),
-                e4(!1),
+                e5(!1),
                 (eq.current.currentTime = e),
                 eY(W.id, e, eq.current.duration));
         },
@@ -416,8 +416,8 @@ function Y(e) {
         t1 = i.useMemo(() => (0, C.tW)(W, C.fY.VIDEO_PLAYER_CAPTION, void 0, !1), [W]),
         t6 = eJ || eK.maxTimestampSec >= (eq.current?.currentTime ?? 0) + 1,
         t7 = i.useMemo(() => null === (0, C.tW)(W, C.fY.VIDEO_PLAYER_TRANSCRIPT, void 0, !1), [W]),
-        t5 = ee ? 20 : 12,
-        t4 = 20 * !!ee,
+        t4 = ee ? 20 : 12,
+        t5 = 20 * !!ee,
         t3 = eJ && eP;
     return (0, r.jsx)(E.DUT, {
         className: F.W6,
@@ -518,7 +518,7 @@ function Y(e) {
                     onCanPlay: tG,
                     onCanPlayThrough: tG,
                     onSeeked: () => {
-                        tt.info("[QV] | handleSeeked"), e4(!0);
+                        tt.info("[QV] | handleSeeked"), e5(!0);
                     },
                     onAbort: () => t$(O.SB.ABORT),
                     onError: () => t$(O.SB.ERROR),
@@ -652,7 +652,7 @@ function Y(e) {
                         ref: tz,
                         "data-testid": "discord-web-video-player-captions",
                         style: {
-                            translateY: (0, o.to)([tq.to({ range: [0, 1], output: [-t4, -ts[tr]] })], (e) => `${e}px`),
+                            translateY: (0, o.to)([tq.to({ range: [0, 1], output: [-t5, -ts[tr]] })], (e) => `${e}px`),
                         },
                         children: (0, r.jsx)(E.Text, {
                             variant: "text-lg/semibold",
@@ -669,7 +669,7 @@ function Y(e) {
                             style: {
                                 transform: (0, o.to)(
                                     [tq.to({ range: [1, 0], output: [0, 1] })],
-                                    (e) => `translateY(-${e * t4}px)`,
+                                    (e) => `translateY(-${e * t5}px)`,
                                 ),
                             },
                             children: (0, r.jsx)(j.A, {
@@ -697,7 +697,7 @@ function Y(e) {
                             style: {
                                 paddingTop: (0, o.to)(
                                     [tq.to({ range: [0, 1], output: [0, 1] })],
-                                    (e) => `${e * e * t5}px`,
+                                    (e) => `${e * e * t4}px`,
                                 ),
                                 paddingBottom: (0, o.to)(
                                     [tq.to({ range: [0, 1], output: [0, 1] })],

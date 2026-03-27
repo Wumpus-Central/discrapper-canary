@@ -4,8 +4,8 @@ var i,
     s = n(627968);
 n(64700);
 var l = n(503698),
-    r = n.n(l),
-    a = n(311907),
+    a = n.n(l),
+    r = n(311907),
     o = n(139033),
     c = n(397927),
     d = n(830215),
@@ -17,8 +17,8 @@ var l = n(503698),
     p = n(652215),
     g = n(53516),
     f = n(985018),
-    x = n(14688),
-    E = n(467935),
+    x = n(609657),
+    E = n(442078),
     C = (((i = {})[(i.VOICE = 0)] = "VOICE"), i);
 let I = (e) => {
     let { type: t, guildId: i, closePopout: l } = e,
@@ -29,7 +29,7 @@ let I = (e) => {
             notPhoneVerified: b,
             newAccount: S,
             newMember: T,
-        } = (0, a.bG)([m.A], () => m.A.getCheck(i), [i]),
+        } = (0, r.bG)([m.A], () => m.A.getCheck(i), [i]),
         v = 0 === t ? f.intl.string(f.t["6zY8BI"]) : null,
         y = null,
         j = null;
@@ -49,7 +49,7 @@ let I = (e) => {
     null == v || null == y)
         ? null
         : (0, s.jsxs)(c.lGe, {
-              className: r()(E.popover, x.kL),
+              className: a()(E.popover, x.kL),
               "aria-labelledby": C,
               children: [
                   (0, s.jsx)("img", { alt: "", className: x.Sl, src: n(303528) }),
@@ -76,7 +76,7 @@ let I = (e) => {
                                                                 async () => {
                                                                     let { default: e } = await Promise.all([
                                                                         n.e("84704"),
-                                                                        n.e("75904"),
+                                                                        n.e("5966"),
                                                                     ]).then(n.bind(n, 615715));
                                                                     return (t) =>
                                                                         (0, s.jsx)(e, {

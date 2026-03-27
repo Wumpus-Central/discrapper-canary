@@ -16,7 +16,7 @@ var i = n(627968),
     p = n(652215),
     N = n(746080),
     m = n(985018),
-    R = n(95473);
+    R = n(592528);
 function h(e) {
     let { onDismiss: t } = e,
         h = (0, r.bG)([_.A], () => _.A.getGuildId()),

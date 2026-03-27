@@ -5,11 +5,11 @@ var a = n(627968),
     l = n.n(s),
     r = n(735438),
     o = n.n(r),
-    d = n(880013),
+    d = n(4208),
     c = n(311907),
     u = n(397927),
     m = n(775602),
-    h = n(949220);
+    h = n(573411);
 let x = { mass: 10, tension: 550, friction: 140 };
 function p(e) {
     let { className: t, pageMultiplier: n } = e,

@@ -5,7 +5,7 @@ var i = n(627968),
     a = n.n(s),
     r = n(284009),
     o = n.n(r),
-    c = n(880013),
+    c = n(4208),
     d = n(835245),
     u = n(311907),
     h = n(827734),
@@ -46,8 +46,8 @@ var i = n(627968),
 n(827669), n(294920);
 var Y = n(478644),
     q = n(985018),
-    J = n(207722),
-    $ = n(526636);
+    J = n(287303),
+    $ = n(351671);
 function Z(e, t, n) {
     let i = e.startsWith("attachment://"),
         l = e;
@@ -196,16 +196,16 @@ let X = l.memo(
             }),
             { expressionPickerView: eQ, shouldHideExpressionPicker: e0, handleOuterClick: e1 } = (0, V.MD)(y, eT, b.id),
             { handleAutocompleteVisibilityChange: e2 } = (0, V.uW)(y, b.id),
-            e7 = (0, V.NO)(eT),
-            e3 = (0, V.Vu)(eB, y, eT),
-            e9 = (0, V.HG)(eT),
-            e5 = (0, V.C)({ editorRef: eT, disabled: eR, textValue: s, channelId: b.id, chatInputType: y, submit: eH });
+            e3 = (0, V.NO)(eT),
+            e7 = (0, V.Vu)(eB, y, eT),
+            e5 = (0, V.HG)(eT),
+            e6 = (0, V.C)({ editorRef: eT, disabled: eR, textValue: s, channelId: b.id, chatInputType: y, submit: eH });
         (0, G.R)(eG, b.guild_id, b.id);
-        let [e6, e4] = l.useState(!1),
+        let [e9, e4] = l.useState(!1),
             e8 = l.useCallback(() => {
                 e1(), e4(!0);
             }, [e1]),
-            te = e6 || s.length > 0 || null != e_ || ef.length > 0,
+            te = e9 || s.length > 0 || null != e_ || ef.length > 0,
             { editorHeaderHeight: tt, paddingTop: tn } = (0, A.zhh)({
                 editorHeaderHeight: 122 * !!te,
                 paddingTop: 16 * !!te,
@@ -448,10 +448,10 @@ let X = l.memo(
                         : (0, i.jsx)(v.A, {
                               positionTargetRef: eS,
                               type: y,
-                              onSelectGIF: e3,
-                              onSelectEmoji: e7,
-                              onSelectKaomoji: e9,
-                              onSelectSticker: e5,
+                              onSelectGIF: e7,
+                              onSelectEmoji: e3,
+                              onSelectKaomoji: e5,
+                              onSelectSticker: e6,
                               channel: b,
                               closeOnModalOuterClick: eA,
                               parentModalKey: eg,

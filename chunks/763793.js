@@ -3,8 +3,8 @@ n.d(t, { A: () => k, i: () => U });
 var i = n(627968),
     s = n(64700),
     l = n(284009),
-    r = n.n(l),
-    a = n(110259),
+    a = n.n(l),
+    r = n(110259),
     o = n(311907),
     c = n(397927),
     d = n(367513),
@@ -32,15 +32,15 @@ var i = n(627968),
     L = n(289105),
     M = n(652215),
     D = n(806931),
-    G = n(9295);
+    G = n(905686);
 let U = 16 / 9,
     P = (e) => {
         let {
                 stageParticipant: t,
                 rtcParticipant: n,
                 channel: l,
-                guildId: r,
-                user: a,
+                guildId: a,
+                user: r,
                 width: o,
                 isModerator: d,
                 onContextMenu: u,
@@ -51,8 +51,8 @@ let U = 16 / 9,
             { blocked: _, ignored: p, id: g } = t;
         return (0, i.jsx)(b.A, {
             targetElementRef: A,
-            user: a,
-            guildId: r,
+            user: r,
+            guildId: a,
             channelId: l.id,
             clickTrap: !0,
             children: (e) =>
@@ -86,8 +86,8 @@ let U = 16 / 9,
                 stageParticipant: t,
                 rtcParticipant: n,
                 channel: l,
-                width: r,
-                isModerator: a,
+                width: a,
+                isModerator: r,
                 onContextMenu: u,
                 popoutType: A,
             } = e,
@@ -130,8 +130,8 @@ let U = 16 / 9,
                 onClick: R,
                 onContextMenu: u,
                 pulseSpeakingIndicator: !m.enabled,
-                width: r,
-                children: a && n.type === D.lp.USER && (0, i.jsx)(L.A, {}),
+                width: a,
+                children: r && n.type === D.lp.USER && (0, i.jsx)(L.A, {}),
             },
             _,
         );
@@ -142,19 +142,19 @@ let U = 16 / 9,
             h = (0, C.Us)(),
             f = s.getGuildId(),
             x = T.default.getId();
-        r()(null != f, "Channel cannot be guildless");
+        a()(null != f, "Channel cannot be guildless");
         let { user: E } = t,
             I = (0, o.bG)([p.A], () => p.A.getParticipant(s.id, t.id), [s.id, t.id]),
             b = (0, o.bG)([R.Ay], () => R.Ay.isModerator(E.id, s.id), [s.id, E.id]);
         if (null == I || I.type === D.lp.ACTIVITY) return null;
         let S = (e) => {
                 (0, _.x)({
-                    type: a.ImpressionTypes.MENU,
-                    name: a.ImpressionNames.CALL_TILE_CONTEXT_MENU,
+                    type: r.ImpressionTypes.MENU,
+                    name: r.ImpressionNames.CALL_TILE_CONTEXT_MENU,
                     properties: { location: "StageTile", is_tile_owner: E.id === x, tile_type: e },
                 });
             },
-            v = (e, t, l, r) => {
+            v = (e, t, l, a) => {
                 switch (e.type) {
                     case D.lp.HIDDEN_STREAM:
                     case D.lp.STREAM:
@@ -170,7 +170,7 @@ let U = 16 / 9,
                                             appContext: h,
                                             exitFullscreen: () => {},
                                             onInteraction: (0, g.s)("StreamContextMenu", d, {
-                                                entrypoint: r,
+                                                entrypoint: a,
                                                 targetUserId: E.id,
                                                 tileType: D.qs.STREAM,
                                             }),
@@ -199,7 +199,7 @@ let U = 16 / 9,
                                     n.e("97262"),
                                     n.e("42128"),
                                     n.e("84841"),
-                                    n.e("36382"),
+                                    n.e("50970"),
                                 ]).then(n.bind(n, 107632));
                                 return (t) =>
                                     (0, i.jsx)(e, {

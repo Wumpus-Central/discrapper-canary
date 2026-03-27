@@ -17,7 +17,7 @@ var i = n(311907),
     _ = n(347853),
     f = n(652215),
     v = n(985018),
-    b = n(848193);
+    b = n(51292);
 function j(e) {
     let t = (0, i.bG)([u.default], () => u.default.getCurrentUser()),
         n = (0, i.bG)([c.A], () => c.A.hidePersonalInformation),

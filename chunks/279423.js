@@ -3,7 +3,7 @@ var i = n(627968),
     s = n(158954),
     l = n(964486),
     a = n(933297),
-    r = n(206625);
+    r = n(38456);
 function o(e) {
     let { notice: t } = e,
         { noticeType: n, useText: a } = t,

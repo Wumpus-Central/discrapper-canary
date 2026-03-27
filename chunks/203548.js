@@ -2,10 +2,10 @@
 n.d(t, { A: () => u });
 var i = n(627968),
     s = n(64700),
-    l = n(880013),
-    r = n(397927),
-    a = n(770178),
-    o = n(727528);
+    l = n(4208),
+    a = n(397927),
+    r = n(770178),
+    o = n(637707);
 let c = Math.ceil(Math.sqrt(115200)),
     d = (c - 240) / 2,
     u = s.forwardRef(function (e, t) {
@@ -14,8 +14,8 @@ let c = Math.ceil(Math.sqrt(115200)),
             A = s.useCallback((e) => {
                 h(e.contentRect.width);
             }, []),
-            m = (0, a.w)(A, [], { fireOnMount: !0 }),
-            [{ shineSpring: _ }, p] = (0, r.zhh)(() => ({
+            m = (0, r.w)(A, [], { fireOnMount: !0 }),
+            [{ shineSpring: _ }, p] = (0, a.zhh)(() => ({
                 from: { shineSpring: 0 },
                 config: { clamp: !0, mass: 1, tension: 170, friction: 38 },
             })),

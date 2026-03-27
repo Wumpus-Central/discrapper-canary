@@ -3,9 +3,9 @@ n.d(t, { A: () => R });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(131346),
-    o = n(880013),
+    a = n.n(l),
+    r = n(131346),
+    o = n(4208),
     c = n(837381),
     d = n(317097),
     u = n(319060),
@@ -20,11 +20,11 @@ var i = n(627968),
     E = n(531053),
     C = n(107385),
     I = n(900848),
-    N = n(772972),
+    N = n(550591),
     b = n(114329),
     S = n(985018),
-    T = n(161136),
-    v = n(135759);
+    T = n(142163),
+    v = n(604418);
 let y = (0, p.xI)(u.A.FOLDER_ITEM_ANIMATION_DURATION),
     j = (0, o.animated)(h.BJc),
     R = s.memo(function (e) {
@@ -54,15 +54,15 @@ let y = (0, p.xI)(u.A.FOLDER_ITEM_ANIMATION_DURATION),
                 "aria-setsize": Y,
                 "aria-posinset": z,
             } = e,
-            { id: q, name: X, children: J } = u,
-            [Q, $] = s.useState(!1),
+            { id: q, name: X, children: Q } = u,
+            [J, $] = s.useState(!1),
             [Z, ee] = s.useState(!1),
-            et = Q || Z,
+            et = J || Z,
             en = (0, m.qK)("FolderItem");
         s.useEffect(() => {
             w && $(!1);
         }, [w]);
-        let [{ dragging: ei }, es] = (0, a.i)({
+        let [{ dragging: ei }, es] = (0, r.i)({
                 type: g.PJ.FOLDER,
                 item: () => (k?.(), { type: g.PJ.FOLDER, nodeId: u.id }),
                 end() {
@@ -73,17 +73,17 @@ let y = (0, p.xI)(u.A.FOLDER_ITEM_ANIMATION_DURATION),
             el = s.useCallback((e) => {
                 ee(e);
             }, []),
-            er = s.useCallback(
+            ea = s.useCallback(
                 (e) => {
                     (("ArrowRight" === e.key && !O) || ("ArrowLeft" === e.key && O)) && B();
                 },
                 [B, O],
             ),
-            ea = null != X && "" !== X ? X : null != U && "" !== U ? U : S.intl.string(S.t.xV9hVh),
+            er = null != X && "" !== X ? X : null != U && "" !== U ? U : S.intl.string(S.t.xV9hVh),
             eo = (0, c.Vd)(`${q}`),
             ec = `folder-items-${q}`,
             ed =
-                ((t = J.length),
+                ((t = Q.length),
                 (n = (0, h.rdh)(h.LU0.modules.guildbar.FOLDER_SIZE)),
                 (l = (0, h.rdh)(h.LU0.modules.guildbar.AVATAR_SIZE)),
                 t * (l + (o = (0, h.rdh)(h.LU0.space.SPACE_XS))) -
@@ -99,9 +99,9 @@ let y = (0, p.xI)(u.A.FOLDER_ITEM_ANIMATION_DURATION),
             eh = s.useCallback((e) => p?.(q, e), [p, q]),
             eA = (0, i.jsxs)(I.c, {
                 children: [
-                    (0, i.jsx)(f.A, { disabled: ei || O, hovered: Q, selected: R, unread: G, className: v.Io }),
+                    (0, i.jsx)(f.A, { disabled: ei || O, hovered: J, selected: R, unread: G, className: v.Io }),
                     (0, i.jsx)(N.A, {
-                        text: ea,
+                        text: er,
                         disabled: w,
                         selected: R,
                         disableWrapper: !0,
@@ -111,8 +111,8 @@ let y = (0, p.xI)(u.A.FOLDER_ITEM_ANIMATION_DURATION),
                                       es(e);
                                   }
                                 : void 0,
-                            className: r()(T.MJ, { [T.L0]: "icon" === K || en, [v.oR]: !ei && Z && !O }),
-                            "data-dnd-name": ea,
+                            className: a()(T.MJ, { [T.L0]: "icon" === K || en, [v.oR]: !ei && Z && !O }),
+                            "data-dnd-name": er,
                             children: ei
                                 ? (0, i.jsx)(C.A, { isFolder: !0 })
                                 : (0, i.jsx)(x.A, {
@@ -122,12 +122,12 @@ let y = (0, p.xI)(u.A.FOLDER_ITEM_ANIMATION_DURATION),
                                       mediaState: L,
                                       mentionCount: M,
                                       isMentionLowImportance: D,
-                                      tooltipName: ea,
+                                      tooltipName: er,
                                       folderGroupId: ec,
                                       onClick: B,
                                       onContextMenu: H,
                                       onHoverChange: $,
-                                      onKeyDown: er,
+                                      onKeyDown: ea,
                                       treeItemProps: eo,
                                       folderButtonContent: W,
                                       "aria-setsize": Y,
@@ -135,14 +135,14 @@ let y = (0, p.xI)(u.A.FOLDER_ITEM_ANIMATION_DURATION),
                                   }),
                         }),
                     }),
-                    P ? (0, i.jsx)(E.Ay, { name: ea, targetNode: u, onDragOverChanged: el }) : null,
+                    P ? (0, i.jsx)(E.Ay, { name: er, targetNode: u, onDragOverChanged: el }) : null,
                 ],
             }),
             em = null != u.color ? u.color : b.DO,
             e_ = em === b.DO ? void 0 : (0, d.Hl)(em);
         return (0, i.jsxs)("div", {
             ref: eh,
-            className: r()(T.qc, { [T.Av]: O, [T.Lg]: et }),
+            className: a()(T.qc, { [T.Av]: O, [T.Lg]: et }),
             style: { "--custom-folder-color": e_ ?? "" },
             "data-drop-hovering": Z,
             children: [
@@ -162,13 +162,13 @@ let y = (0, p.xI)(u.A.FOLDER_ITEM_ANIMATION_DURATION),
                                 className: T.TN,
                                 style: { height: e.height.to((e) => e * ed) },
                                 "aria-label": u.name,
-                                children: J.map((t, n) => F(t, n, J.length, e.height)),
+                                children: Q.map((t, n) => F(t, n, Q.length, e.height)),
                             },
                             s,
                         )
                     );
                 }),
-                P && O ? (0, i.jsx)(E.qv, { name: ea, targetNode: u }) : null,
+                P && O ? (0, i.jsx)(E.qv, { name: er, targetNode: u }) : null,
             ],
         });
     });

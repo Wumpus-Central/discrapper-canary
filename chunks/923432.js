@@ -3,8 +3,8 @@ n.d(t, { A: () => x });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(880013),
+    a = n.n(l),
+    r = n(4208),
     o = n(311907),
     c = n(397927),
     d = n(250719),
@@ -13,12 +13,12 @@ var i = n(627968),
     A = n(147036),
     m = n(288989),
     _ = n(985018),
-    p = n(217996);
+    p = n(567207);
 let g = { friction: 30, tension: 300 };
 function f(e) {
     let { guildChannels: t, jumpToVoiceChannels: n } = e,
         l = t.getCategoryFromSection(t.voiceChannelsSectionNumber),
-        a = (0, d.A)(t.id),
+        r = (0, d.A)(t.id),
         o = s.useCallback(
             (e) => {
                 e.preventDefault(), e.stopPropagation(), n();
@@ -26,9 +26,9 @@ function f(e) {
             [n],
         ),
         h = l?.getChannelRecords() ?? [],
-        m = (0, A.fK)({ channels: h, selectedChannelId: null, selectedVoiceChannelId: null, voiceStates: a });
+        m = (0, A.fK)({ channels: h, selectedChannelId: null, selectedVoiceChannelId: null, voiceStates: r });
     return (0, i.jsxs)(c.DUT, {
-        className: r()(p.M0, p.OF),
+        className: a()(p.M0, p.OF),
         onClick: o,
         children: [
             (0, i.jsx)(c.HKD, { size: "custom", className: p.Gs, width: 14, height: 14, color: "currentColor" }),
@@ -68,14 +68,14 @@ function x(e) {
             [u, N],
         );
     return (0, i.jsx)("div", {
-        className: r()(p.kL, { [p.Mn]: "top" === t, [p.sQ]: "bottom" === t }),
-        children: (0, i.jsx)(a.animated.div, {
+        className: a()(p.kL, { [p.Mn]: "top" === t, [p.sQ]: "bottom" === t }),
+        children: (0, i.jsx)(r.animated.div, {
             className: p.pK,
             style: S,
             "aria-hidden": b,
             children:
                 C === m.k.HIDDEN
-                    ? (0, i.jsx)("div", { className: r()(p.M0, p.Te) })
+                    ? (0, i.jsx)("div", { className: a()(p.M0, p.Te) })
                     : C === m.k.UNREAD
                       ? (0, i.jsxs)(c.DUT, {
                             className: p.M0,
@@ -106,7 +106,7 @@ function x(e) {
                         })
                       : C === m.k.MENTIONS
                         ? (0, i.jsx)(c.DUT, {
-                              className: r()(p.M0, p.vU),
+                              className: a()(p.M0, p.vU),
                               onClick: T,
                               children: (0, i.jsx)(c.Text, {
                                   variant: "text-xs/semibold",

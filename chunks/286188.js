@@ -2,7 +2,7 @@
 n.d(t, { A: () => m });
 var r = n(627968),
     i = n(64700),
-    s = n(880013),
+    s = n(4208),
     a = n(158954),
     o = n(311907),
     l = n(397927),
@@ -10,8 +10,8 @@ var r = n(627968),
     c = n(775602),
     d = n(263215),
     _ = n(985018),
-    f = n(136708),
-    p = n(642840);
+    f = n(333354),
+    p = n(994003);
 function h(e) {
     let { powerup: t } = e;
     return (0, r.jsx)(a.EYj, { tag: "span", variant: "text-md/semibold", className: p.Zt, children: t.title });

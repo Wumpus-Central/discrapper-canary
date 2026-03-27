@@ -4,8 +4,8 @@ var i = n(627968);
 n(64700);
 var s = n(503698),
     l = n.n(s),
-    r = n(311907),
-    a = n(990078),
+    a = n(311907),
+    r = n(990078),
     o = n(397927),
     c = n(730134),
     d = n(440594),
@@ -36,12 +36,12 @@ var s = n(503698),
     G = n(652215),
     U = n(818348),
     P = n(985018),
-    w = n(35471),
-    k = n(830684);
+    w = n(972708),
+    k = n(782691);
 function V(e) {
     let { focusedParticipant: t, channel: n } = e,
         s = (0, I.Us)(),
-        l = (0, r.bG)([j.A], () => j.A.getLayout(n.id, s));
+        l = (0, a.bG)([j.A], () => j.A.getLayout(n.id, s));
     return (0, i.jsx)(y.A, {
         children: (0, i.jsx)(L.A, {
             participant: t,
@@ -54,23 +54,23 @@ function V(e) {
 }
 function B(e) {
     let { user: t, channel: n, stream: s, color: l } = e,
-        r = (0, v.A)(n, t, s);
+        a = (0, v.A)(n, t, s);
     return null == t || null == s
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(c.A, { className: w.my, size: o._3J.SIZE_24, user: t, animate: !1 }),
-                  (0, i.jsx)(o.Text, { className: w.W$, variant: "text-md/medium", color: l, children: r }),
+                  (0, i.jsx)(o.Text, { className: w.W$, variant: "text-md/medium", color: l, children: a }),
               ],
           });
 }
 function H(e) {
     let t,
         { focusedApplication: n, focusedParticipant: s, channel: l } = e,
-        r = (0, T.$F)(l),
-        a = (0, p.Qs)(l.id),
-        c = null != a ? (0, g.G3)(a) : null,
-        u = null != a;
+        a = (0, T.$F)(l),
+        r = (0, p.Qs)(l.id),
+        c = null != r ? (0, g.G3)(r) : null,
+        u = null != r;
     if (s?.type === D.lp.ACTIVITY)
         null != n &&
             (t = (0, i.jsxs)(i.Fragment, {
@@ -83,7 +83,7 @@ function H(e) {
                         color: "none",
                         children: (0, d.A)(n.name),
                     }),
-                    r && (0, i.jsx)(V, { channel: l, focusedParticipant: s }),
+                    a && (0, i.jsx)(V, { channel: l, focusedParticipant: s }),
                 ],
             }));
     else if (s?.type === D.lp.STREAM) {
@@ -92,16 +92,16 @@ function H(e) {
         t = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(x.Ay.Divider, { className: w.yF }),
-                (0, i.jsx)(B, { user: e, channel: l, stream: n, color: r ? "text-strong" : "none" }),
-                r && (0, i.jsx)(V, { channel: l, focusedParticipant: s }),
+                (0, i.jsx)(B, { user: e, channel: l, stream: n, color: a ? "text-strong" : "none" }),
+                a && (0, i.jsx)(V, { channel: l, focusedParticipant: s }),
             ],
         });
-    } else u && (t = (0, i.jsx)(f.A, { guildEvent: a, recurrenceId: c }));
+    } else u && (t = (0, i.jsx)(f.A, { guildEvent: r, recurrenceId: c }));
     return (0, i.jsx)("div", { className: w.kL, children: t });
 }
 function F(e) {
     let { channel: t, guild: s, appContext: c, inCall: d, isChatOpen: _, exitFullScreen: p } = e,
-        { focusedParticipant: g } = (0, r.cf)(
+        { focusedParticipant: g } = (0, a.cf)(
             [j.A],
             () => ({
                 focusedParticipant: j.A.getSelectedParticipant(t.id),
@@ -114,11 +114,11 @@ function F(e) {
         [T] = (0, u.A)(g?.type === D.lp.ACTIVITY ? [g.applicationId] : []),
         v = P.intl.string(P.t.BVZqJl);
     t.isDM() ? (v = P.intl.string(P.t.jN2DfZ)) : t.isGroupDM() && (v = P.intl.string(P.t["e5y+gm"]));
-    let y = (0, r.bG)([h.A], () => h.A.getChannelStatus(t)),
+    let y = (0, a.bG)([h.A], () => h.A.getChannelStatus(t)),
         L = t.isGuildVoice() && d && null != y && y.length > 0,
         G = (0, R.Ay)(t),
         V = L
-            ? (0, i.jsx)(a.m, {
+            ? (0, i.jsx)(r.m, {
                   asContainer: !0,
                   text: P.intl.string(P.t.Mgpxiw),
                   delay: 500,
@@ -184,7 +184,7 @@ function F(e) {
                                         null != I ? (0, i.jsx)(x.Ay.ChannelIcon, { icon: I, "aria-label": v }) : null,
                                         f,
                                         B &&
-                                            (0, i.jsx)(a.m, {
+                                            (0, i.jsx)(r.m, {
                                                 text: P.intl.string(P.t.QyZ4Td),
                                                 children: (0, i.jsx)(o.m5V, {
                                                     size: "xs",

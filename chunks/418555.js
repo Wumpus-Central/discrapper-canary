@@ -5,7 +5,7 @@ n(64700);
 var i = n(993401),
     s = n(784886),
     a = n(985018),
-    o = n(74209);
+    o = n(886308);
 function l(e) {
     let { user: t, hideMessageInput: n, hideExampleButton: l } = e;
     return n

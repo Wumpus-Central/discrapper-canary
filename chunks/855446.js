@@ -3,9 +3,9 @@ n.d(t, { C: () => I });
 var i,
     s = n(627968),
     l = n(64700),
-    r = n(503698),
-    a = n.n(r),
-    o = n(880013),
+    a = n(503698),
+    r = n.n(a),
+    o = n(4208),
     c = n(696292),
     d = n(397927),
     u = n(932413),
@@ -15,7 +15,7 @@ var i,
     _ = n(869003),
     p = n(652215),
     g = n(985018),
-    f = n(867958);
+    f = n(488893);
 let x = ["embedded_cover"],
     E = { tension: 800, friction: 24 };
 var C =
@@ -23,7 +23,7 @@ var C =
     (i[(i.SIXTEEN_BY_NINE = 1)] = "SIXTEEN_BY_NINE"),
     i);
 function I(e) {
-    let { context: t, activityItem: n, onClick: i, aspectRatio: r = 0, animatedDivClass: C, commandOrigin: I } = e,
+    let { context: t, activityItem: n, onClick: i, aspectRatio: a = 0, animatedDivClass: C, commandOrigin: I } = e,
         {
             onActivityItemSelected: N,
             imageBackground: b,
@@ -72,7 +72,7 @@ function I(e) {
                     return (0, s.jsx)("div", {
                         className: f.m9,
                         children: (0, s.jsx)("div", {
-                            className: a()(f.aF, f.pS),
+                            className: r()(f.aF, f.pS),
                             children: (0, s.jsx)(d.Text, {
                                 variant: "text-sm/medium",
                                 color: "always-white",
@@ -107,7 +107,7 @@ function I(e) {
                             children: (i) =>
                                 (0, s.jsxs)(o.animated.div, {
                                     ref: i,
-                                    className: a()(e, f.LM, C, { [f.$g]: 0 === r, [f.J3]: 1 === r }),
+                                    className: r()(e, f.LM, C, { [f.$g]: 0 === a, [f.J3]: 1 === a }),
                                     style: { transform: t.to([0, 1], [1, 1.05]).to((e) => `scale(${e})`) },
                                     children: [
                                         (0, s.jsx)(A.A, {

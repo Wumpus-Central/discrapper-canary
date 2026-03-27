@@ -2,7 +2,7 @@ n.d(t, { A: () => r });
 var i = n(627968),
     l = n(397927),
     a = n(985018),
-    s = n(62007);
+    s = n(673182);
 function r(e) {
     let { onClick: t, expanded: n } = e;
     return (0, i.jsx)(l.DUT, {

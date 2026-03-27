@@ -6,7 +6,7 @@ var r = n(503698),
     a = n(676279),
     o = n(913563),
     l = n(824994),
-    u = n(19732);
+    u = n(372185);
 let c = {
     [s.x.DEFAULT]: "",
     [s.x.CHERRY_BOMB]: u.u_,

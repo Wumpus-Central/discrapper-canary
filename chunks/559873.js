@@ -3,8 +3,8 @@ n.d(t, { A: () => T });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
-    r = n(990078),
-    a = n(397927),
+    a = n(990078),
+    r = n(397927),
     o = n(73153),
     c = n(334738),
     d = n(461678),
@@ -18,7 +18,7 @@ var i = n(627968),
     f = n(849077),
     x = n(652215),
     E = n(985018),
-    C = n(487397);
+    C = n(68450);
 let I = {
     [f.Th.MENTION]: [f.kR.SETTINGS],
     [f.Th.REPLY]: [f.kR.SETTINGS],
@@ -30,14 +30,14 @@ function N(e) {
     let { label: t, onClick: n, message: l, Icon: o, interactionType: c } = e,
         [d, u] = (0, s.useState)(!1),
         h = (0, _.op)();
-    return (0, i.jsx)(r.m, {
+    return (0, i.jsx)(a.m, {
         text: t,
         position: "top",
         spacing: 4,
         asContainer: !0,
         onTooltipShow: () => u(!0),
         onTooltipHide: () => u(!1),
-        children: (0, i.jsx)(a.DUT, {
+        children: (0, i.jsx)(r.DUT, {
             className: C.XI,
             onClick: (e) => {
                 (0, _.Ml)({ message: l, interactionType: c, viewId: h }), e.stopPropagation(), n(l);
@@ -53,9 +53,9 @@ function b(e) {
         [p, f] = (0, s.useState)(!1),
         x = (0, s.useRef)(null),
         { openMenu: E, closeMenu: I } = (0, g.s)();
-    return (0, i.jsx)(a.YNO, {
+    return (0, i.jsx)(r.YNO, {
         shouldShow: p,
-        animation: a.YNO.Animation.NONE,
+        animation: r.YNO.Animation.NONE,
         position: "right",
         align: "top",
         autoInvert: !1,
@@ -64,20 +64,20 @@ function b(e) {
             f(!1), I(n.id, u);
         },
         renderPopout: (e) =>
-            (0, i.jsx)(a.lGe, {
+            (0, i.jsx)(r.lGe, {
                 onClick: (e) => e.stopPropagation(),
                 returnRef: x,
                 children: (0, i.jsx)(c, { "data-menu-migrated": !0, renderPopoutProps: e, channel: t, message: n }),
             }),
         children: (e) =>
-            (0, i.jsx)(r.m, {
+            (0, i.jsx)(a.m, {
                 text: l,
                 position: "top",
                 spacing: 4,
                 asContainer: !0,
                 onTooltipShow: () => m(!0),
                 onTooltipHide: () => m(!1),
-                children: (0, i.jsx)(a.DUT, {
+                children: (0, i.jsx)(r.DUT, {
                     innerRef: x,
                     className: C.XI,
                     onClick: (e) => {
@@ -101,7 +101,7 @@ function b(e) {
 let S = {
     [f.kR.ACK]: {
         type: "standard",
-        Icon: a.A9s,
+        Icon: r.A9s,
         label: E.intl.string(E.t.e6RscS),
         onClick: (e) => {
             o.h.dispatch({ type: "NOTIFICATIONS_INBOX_ITEM_ACK", messageId: e.id, channelId: e.channel_id }),
@@ -120,14 +120,14 @@ let S = {
         label: E.intl.string(E.t["9p3D9p"]),
         Icon: (e) =>
             null != A.A.getSavedMessage(e.message.channel_id, e.message.id)
-                ? (0, i.jsx)(a.cFy, { ...e })
-                : (0, i.jsx)(a.c$8, { ...e }),
+                ? (0, i.jsx)(r.cFy, { ...e })
+                : (0, i.jsx)(r.c$8, { ...e }),
         interactionType: _.X8.BOOKMARK,
         Menu: (e) => {
             let { message: t, renderPopoutProps: n } = e,
                 s = (0, l.bG)([A.A], () => A.A.getSavedMessage(t.channel_id, t.id)),
-                r = (0, u.P)({ message: t, savedMessage: s });
-            return (0, i.jsxs)(a.W1t, {
+                a = (0, u.P)({ message: t, savedMessage: s });
+            return (0, i.jsxs)(r.W1t, {
                 "data-menu-migrated-auto": !0,
                 ...n,
                 navId: "message-reminder-create",
@@ -136,11 +136,11 @@ let S = {
                 onSelect: () => null,
                 children: [
                     null != s
-                        ? (0, i.jsx)(a.Drp, {
+                        ? (0, i.jsx)(r.Drp, {
                               id: "remove-from-for-later",
                               label: E.intl.string(E.t.SvXS1Z),
-                              icon: a.cFy,
-                              leadingAccessory: { type: "icon", icon: a.cFy },
+                              icon: r.cFy,
+                              leadingAccessory: { type: "icon", icon: r.cFy },
                               action: () =>
                                   (0, h.x)({
                                       channelId: t.channel_id,
@@ -149,22 +149,22 @@ let S = {
                                       displayToast: !0,
                                   }),
                           })
-                        : (0, i.jsx)(a.Drp, {
+                        : (0, i.jsx)(r.Drp, {
                               id: "create-bookmark",
                               label: E.intl.string(E.t["9p3D9p"]),
-                              icon: a.c$8,
-                              leadingAccessory: { type: "icon", icon: a.c$8 },
+                              icon: r.c$8,
+                              leadingAccessory: { type: "icon", icon: r.c$8 },
                               action: () => (0, h.Y)({ channelId: t.channel_id, messageId: t.id, displayToast: !0 }),
                           }),
-                    (0, i.jsx)(a.bXX, {}),
-                    r,
+                    (0, i.jsx)(r.bXX, {}),
+                    a,
                 ],
             });
         },
     },
     [f.kR.SETTINGS]: {
         type: "menu",
-        Icon: a.XFE,
+        Icon: r.XFE,
         label: E.intl.string(E.t.h850Ss),
         interactionType: _.X8.SETTINGS,
         Menu: (e) => {
@@ -177,15 +177,15 @@ let S = {
 };
 function T(e) {
     let t,
-        { message: n, channel: l, isUnread: r } = e,
+        { message: n, channel: l, isUnread: a } = e,
         o =
             ((t = (0, p.i3)()),
             (0, s.useMemo)(() => {
                 let e = f.Th.MENTION,
                     n = new Set();
-                return r && n.add(f.kR.ACK), t && n.add(f.kR.BOOKMARK), I[e].forEach((e) => n.add(e)), Array.from(n);
-            }, [n, r, t]));
-    return (0, i.jsx)(a.BJc, {
+                return a && n.add(f.kR.ACK), t && n.add(f.kR.BOOKMARK), I[e].forEach((e) => n.add(e)), Array.from(n);
+            }, [n, a, t]));
+    return (0, i.jsx)(r.BJc, {
         direction: "horizontal",
         gap: 4,
         align: "center",

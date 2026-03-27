@@ -3,9 +3,9 @@ n.d(t, { A: () => R, R: () => y });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(735438),
-    o = n(880013),
+    a = n.n(l),
+    r = n(735438),
+    o = n(4208),
     c = n(311907),
     d = n(397927),
     u = n(73153),
@@ -24,7 +24,7 @@ var i = n(627968),
     b = n(403362),
     S = n(652215),
     T = n(838541),
-    v = n(379807);
+    v = n(424366);
 let y = 10 * N.A.Millis.SECOND;
 function j(e) {
     let { message: t } = e,
@@ -33,7 +33,7 @@ function j(e) {
             () => ({ isBlocked: C.A.isBlockedForMessage(t), isIgnored: C.A.isIgnoredForMessage(t) }),
             [t],
         ),
-        a = (0, p.X4)(t),
+        r = (0, p.X4)(t),
         o = s.useContext(m.A),
         [u, E] = s.useState(!1),
         N = s.useCallback(
@@ -67,14 +67,14 @@ function j(e) {
         onClick: N,
         children: [
             (0, i.jsxs)("div", {
-                className: r()(v.kn, { [v.mK]: t.mentioned }),
+                className: a()(v.kn, { [v.mK]: t.mentioned }),
                 children: [null != L ? null : R, y ?? L ?? (0, i.jsx)("span", { children: S }), null != L ? null : j],
             }),
             (0, i.jsx)("img", {
                 alt: "",
                 src:
-                    a?.guildMemberAvatar != null && null != o
-                        ? (0, I.s7)({ guildId: o, userId: t.author.id, avatar: a.guildMemberAvatar })
+                    r?.guildMemberAvatar != null && null != o
+                        ? (0, I.s7)({ guildId: o, userId: t.author.id, avatar: r.guildMemberAvatar })
                         : t.author.getAvatarURL(o, 32),
                 className: v.my,
             }),
@@ -86,12 +86,12 @@ function R(e) {
         [l, h] = s.useState(!1),
         { toastsHidden: A, toastMessages: m } = (function (e) {
             let { channelId: t, isFrozen: n, count: i, lingerMs: l } = e,
-                [r, a] = s.useState([]),
+                [a, r] = s.useState([]),
                 [o, d] = s.useState(!1),
                 h = s.useRef(null),
                 A = s.useRef(void 0),
                 m = s.useCallback(() => {
-                    a([]), d(!0);
+                    r([]), d(!0);
                 }, []);
             s.useEffect(() => {
                 function e(e) {
@@ -103,7 +103,7 @@ function R(e) {
                         i.type === S.lAJ.STAGE_SPEAKER ||
                         i.type === S.lAJ.STAGE_RAISE_HAND ||
                         s ||
-                        (clearTimeout(A.current), (A.current = setTimeout(m, l)), a((e) => [...e, i.id]));
+                        (clearTimeout(A.current), (A.current = setTimeout(m, l)), r((e) => [...e, i.id]));
                 }
                 return (
                     u.h.subscribe("MESSAGE_CREATE", e),
@@ -119,14 +119,14 @@ function R(e) {
                     [],
                 ),
                 s.useEffect(() => {
-                    r.length > 3 &&
-                        a((e) => {
+                    a.length > 3 &&
+                        r((e) => {
                             let t = e.length - 3;
                             return [...e.slice(t)];
                         });
-                }, [r]),
-                n && null == h.current ? (h.current = r) : n || null == h.current || (h.current = null);
-            let _ = h.current ?? r;
+                }, [a]),
+                n && null == h.current ? (h.current = a) : n || null == h.current || (h.current = null);
+            let _ = h.current ?? a;
             return {
                 toastsHidden: o,
                 toastMessages: (0, c.yK)([E.A], () => _.map((e) => E.A.getMessage(t, e)), [t, _]).filter(b.Vq),
@@ -148,7 +148,7 @@ function R(e) {
                 let i = _.current[n.id] ?? 0;
                 (e[n.id] = t), (t += i + 8);
             }
-            (0, a.isEqual)(e, x.current) || g(e);
+            (0, r.isEqual)(e, x.current) || g(e);
         }, [m]);
     let C = m.map((e) => ({ message: e, height: _.current[e.id], y: p[e.id] })),
         I = (0, d.pnh)(C, {
@@ -171,7 +171,7 @@ function R(e) {
         theme: S.NJ8.DARK,
         children: (e) =>
             (0, i.jsx)("div", {
-                className: r()(n, e),
+                className: a()(n, e),
                 onMouseEnter: () => {
                     h(!0);
                 },

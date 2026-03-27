@@ -3,8 +3,8 @@ n.d(t, { A: () => N });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(311907),
+    a = n.n(l),
+    r = n(311907),
     o = n(990078),
     c = n(397927),
     d = n(309698),
@@ -15,12 +15,12 @@ var i = n(627968),
     _ = n(522435),
     p = n(493819),
     g = n(722884),
-    f = n(924804),
+    f = n(148690),
     x = n(985018),
-    E = n(73131);
+    E = n(591454);
 function C(e) {
     let { channel: t, imageUrl: n, isConnected: l } = e,
-        a = (0, h.S)(n),
+        r = (0, h.S)(n),
         d = s.useCallback(() => {
             (0, g.A)({ channel: t });
         }, [t]),
@@ -30,7 +30,7 @@ function C(e) {
         _ = s.useCallback(() => {
             u.A.handleVoiceConnect({ channel: t, connected: !1, needSubscriptionToAccess: !1 });
         }, [t]),
-        C = null != a ? { backgroundColor: a } : void 0;
+        C = null != r ? { backgroundColor: r } : void 0;
     return (0, i.jsxs)("div", {
         className: E.rs,
         children: [
@@ -41,7 +41,7 @@ function C(e) {
                       children: (0, i.jsx)(p.A, { src: n, className: E.Sl }),
                   })
                 : (0, i.jsx)(c.DUT, {
-                      className: r()(E.ZS, E.jI),
+                      className: a()(E.ZS, E.jI),
                       style: C,
                       onClick: _,
                       children: (0, i.jsx)(p.A, { src: n, className: E.Sl }),
@@ -96,11 +96,11 @@ function I(e) {
 function N(e) {
     let { channel: t, isConnected: n } = e,
         { enableHangoutWindow: l } = (0, m.Dm)({ guildId: t.guild_id, location: "HangoutWindow" }),
-        r = (0, a.bG)([d.A], () => d.A.getChannelStatus(t), [t]),
-        o = s.useMemo(() => (0, _.TP)(r), [r]),
-        c = s.useMemo(() => (null == r ? null : (0, _.K7)(r)), [r]);
+        a = (0, r.bG)([d.A], () => d.A.getChannelStatus(t), [t]),
+        o = s.useMemo(() => (0, _.TP)(a), [a]),
+        c = s.useMemo(() => (null == a ? null : (0, _.K7)(a)), [a]);
     return l
-        ? null != r && o && null != c
+        ? null != a && o && null != c
             ? (0, i.jsx)(C, { channel: t, imageUrl: c, isConnected: n })
             : n
               ? (0, i.jsx)(I, { channel: t })
