@@ -32791,7 +32791,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-sm\/normal_a7acae {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.2857142857142858
 }
@@ -32802,7 +32802,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-sm\/medium_a7acae {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 500;
     line-height: 1.2857142857142858
 }
@@ -32813,7 +32813,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-sm\/semibold_a7acae {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 600;
     line-height: 1.2857142857142858
 }
@@ -32824,7 +32824,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-sm\/bold_a7acae {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 700;
     line-height: 1.2857142857142858
 }
@@ -32835,7 +32835,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-sm\/extrabold_a7acae {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 800;
     line-height: 1.2857142857142858
 }
@@ -32846,7 +32846,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-md\/normal_a7acae {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -32857,7 +32857,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-md\/medium_a7acae {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -32868,7 +32868,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-md\/semibold_a7acae {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -32879,7 +32879,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-md\/bold_a7acae {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -32890,7 +32890,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-md\/extrabold_a7acae {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 800;
     line-height: 1.25
 }
@@ -32901,7 +32901,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-lg\/normal_a7acae {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 400;
     line-height: 1.2
 }
@@ -32912,7 +32912,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-lg\/medium_a7acae {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 500;
     line-height: 1.2
 }
@@ -32923,7 +32923,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-lg\/semibold_a7acae {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.2
 }
@@ -32934,7 +32934,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-lg\/bold_a7acae {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 700;
     line-height: 1.2
 }
@@ -32945,7 +32945,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-lg\/extrabold_a7acae {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 800;
     line-height: 1.2
 }
@@ -32956,7 +32956,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-xl\/normal_a7acae {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -32967,7 +32967,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-xl\/medium_a7acae {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -32978,7 +32978,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-xl\/semibold_a7acae {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -32989,7 +32989,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-xl\/bold_a7acae {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -33000,7 +33000,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-xl\/extrabold_a7acae {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 800;
     line-height: 1.25
 }
@@ -33011,7 +33011,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-xxl\/normal_a7acae {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -33022,7 +33022,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-xxl\/medium_a7acae {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -33033,7 +33033,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-xxl\/semibold_a7acae {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -33044,7 +33044,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-xxl\/bold_a7acae {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -33055,7 +33055,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-xxl\/extrabold_a7acae {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 800;
     line-height: 1.25
 }
@@ -33066,20 +33066,20 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .eyebrow_a7acae {
     font-family: var(--font-display);
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: .02em;
     line-height: 1.3333333333333333;
     text-transform: uppercase
 }
 
-.eyebrow_a7acae,
 .eyebrow_a7acae.fontScaling_a7acae {
     font-size: .75rem
 }
 
 .heading-deprecated-12\/normal_a7acae {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -33090,7 +33090,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-deprecated-12\/medium_a7acae {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -33101,7 +33101,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-deprecated-12\/semibold_a7acae {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
@@ -33112,7 +33112,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-deprecated-12\/bold_a7acae {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -33123,7 +33123,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-deprecated-12\/extrabold_a7acae {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 800;
     line-height: 1.3333333333333333
 }
@@ -33134,7 +33134,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .redesign\/heading-18\/semibold_a7acae {
     font-family: var(--font-display);
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
@@ -33145,7 +33145,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .redesign\/heading-18\/bold_a7acae {
     font-family: var(--font-display);
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -33156,7 +33156,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-xxs\/normal_a7acae {
     font-family: var(--font-primary);
-    font-size: .625rem;
+    font-size: 10px;
     font-weight: 400;
     line-height: 1.2
 }
@@ -33167,7 +33167,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-xxs\/medium_a7acae {
     font-family: var(--font-primary);
-    font-size: .625rem;
+    font-size: 10px;
     font-weight: 500;
     line-height: 1.2
 }
@@ -33178,18 +33178,18 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-xxs\/semibold_a7acae {
     font-family: var(--font-primary);
-    font-size: .625rem;
+    font-size: 10px;
     font-weight: 600;
     line-height: 1.2
 }
 
-.text-xxs\/bold_a7acae,
 .text-xxs\/semibold_a7acae.fontScaling_a7acae {
     font-size: .625rem
 }
 
 .text-xxs\/bold_a7acae {
     font-family: var(--font-primary);
+    font-size: 10px;
     font-weight: 700;
     line-height: 1.2
 }
@@ -33200,7 +33200,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-xs\/normal_a7acae {
     font-family: var(--font-primary);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -33211,7 +33211,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-xs\/medium_a7acae {
     font-family: var(--font-primary);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -33222,18 +33222,18 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-xs\/semibold_a7acae {
     font-family: var(--font-primary);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
 
-.text-xs\/bold_a7acae,
 .text-xs\/semibold_a7acae.fontScaling_a7acae {
     font-size: .75rem
 }
 
 .text-xs\/bold_a7acae {
     font-family: var(--font-primary);
+    font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -33244,18 +33244,18 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-sm\/normal_a7acae {
     font-family: var(--font-primary);
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.2857142857142858
 }
 
-.text-sm\/medium_a7acae,
-.text-sm\/normal_a7acae,
 .text-sm\/normal_a7acae.fontScaling_a7acae {
     font-size: .875rem
 }
 
 .text-sm\/medium_a7acae {
     font-family: var(--font-primary);
+    font-size: 14px;
     font-weight: 500;
     line-height: 1.2857142857142858
 }
@@ -33266,18 +33266,18 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-sm\/semibold_a7acae {
     font-family: var(--font-primary);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 600;
     line-height: 1.2857142857142858
 }
 
-.text-sm\/bold_a7acae,
 .text-sm\/semibold_a7acae.fontScaling_a7acae {
     font-size: .875rem
 }
 
 .text-sm\/bold_a7acae {
     font-family: var(--font-primary);
+    font-size: 14px;
     font-weight: 700;
     line-height: 1.2857142857142858
 }
@@ -33288,7 +33288,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-md\/normal_a7acae {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -33299,7 +33299,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-md\/medium_a7acae {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -33310,7 +33310,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-md\/semibold_a7acae {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -33321,7 +33321,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-md\/bold_a7acae {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -33332,18 +33332,18 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-lg\/normal_a7acae {
     font-family: var(--font-primary);
+    font-size: 20px;
     font-weight: 400;
     line-height: 1.2
 }
 
-.text-lg\/medium_a7acae,
-.text-lg\/normal_a7acae,
 .text-lg\/normal_a7acae.fontScaling_a7acae {
     font-size: 1.25rem
 }
 
 .text-lg\/medium_a7acae {
     font-family: var(--font-primary);
+    font-size: 20px;
     font-weight: 500;
     line-height: 1.2
 }
@@ -33354,18 +33354,18 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-lg\/semibold_a7acae {
     font-family: var(--font-primary);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.2
 }
 
-.text-lg\/bold_a7acae,
 .text-lg\/semibold_a7acae.fontScaling_a7acae {
     font-size: 1.25rem
 }
 
 .text-lg\/bold_a7acae {
     font-family: var(--font-primary);
+    font-size: 20px;
     font-weight: 700;
     line-height: 1.2
 }
@@ -33376,7 +33376,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .redesign\/message-preview\/normal_a7acae {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -33387,7 +33387,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .redesign\/message-preview\/medium_a7acae {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -33398,7 +33398,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .redesign\/message-preview\/semibold_a7acae {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
@@ -33409,7 +33409,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .redesign\/message-preview\/bold_a7acae {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -33420,7 +33420,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .redesign\/channel-title\/normal_a7acae {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.375
 }
@@ -33431,7 +33431,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .redesign\/channel-title\/medium_a7acae {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.375
 }
@@ -33442,7 +33442,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .redesign\/channel-title\/semibold_a7acae {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.375
 }
@@ -33453,7 +33453,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .redesign\/channel-title\/bold_a7acae {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.375
 }
@@ -33464,44 +33464,44 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .display-sm_a7acae {
     font-family: var(--font-headline);
+    font-size: 20px;
     font-weight: 800;
     line-height: 1
 }
 
-.display-sm_a7acae,
 .display-sm_a7acae.fontScaling_a7acae {
     font-size: 1.25rem
 }
 
 .display-md_a7acae {
     font-family: var(--font-headline);
+    font-size: 34px;
     font-weight: 800;
     line-height: 1.0588235294117647
 }
 
-.display-md_a7acae,
 .display-md_a7acae.fontScaling_a7acae {
     font-size: 2.125rem
 }
 
 .display-lg_a7acae {
     font-family: var(--font-headline);
+    font-size: 44px;
     font-weight: 800;
     line-height: .9545454545454546
 }
 
-.display-lg_a7acae,
 .display-lg_a7acae.fontScaling_a7acae {
     font-size: 2.75rem
 }
 
 .code_a7acae {
     font-family: var(--font-code);
+    font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
 
-.code_a7acae,
 .code_a7acae.fontScaling_a7acae {
     font-size: .75rem
 }
@@ -33528,8 +33528,8 @@ html:not(.chat-input) .inputInner_b1f01d {
 }
 
 .liveLarge_a7acae {
-    font-size: .875rem;
-    line-height: .9375rem
+    font-size: 14px;
+    line-height: 15px
 }
 
 .liveSmall_a7acae {}
