@@ -6,7 +6,7 @@ var s = n(397927),
     r = n(17372),
     l = n(843376),
     a = n(985018),
-    o = n(101865);
+    o = n(428640);
 let d = (e) => {
     let { showBackButton: t, onBack: n, renderFooter: d, onReopen: c } = e,
         u = (0, l.i)(r.tY.MEDIA_TAKEDOWN, c),
@@ -56,6 +56,13 @@ let d = (e) => {
                                             children: a.intl.string(a.t.dFaQGn),
                                         }),
                                     }),
+                                    (0, i.jsx)("li", {
+                                        children: (0, i.jsx)(s.Text, {
+                                            variant: "text-md/normal",
+                                            color: "text-subtle",
+                                            children: a.intl.string(a.t.RVNwXh),
+                                        }),
+                                    }),
                                 ],
                             }),
                         ],
@@ -86,6 +93,7 @@ let d = (e) => {
                                 children: a.intl.format(a.t.R2Q57u, {
                                     supportOrgURL: "https://stopncii.org/partners/global-network-of-partners/",
                                     wellbeingURL: "https://discord.com/safety-wellbeing",
+                                    helpCenterURL: "https://support.discord.com/hc/articles/38675715591831",
                                 }),
                             }),
                         ],
