@@ -1,8 +1,8 @@
 n.d(t, { Ay: () => h });
 var i = n(627968),
-    l = n(412703),
+    a = n(412703),
     r = n(397927),
-    a = n(890687),
+    l = n(890687),
     s = n(590202),
     o = n(792620),
     d = n(814793),
@@ -12,10 +12,10 @@ var i = n(627968),
     m = n(985018);
 let h = function (e) {
     let { quest: t, taskType: n, analyticsCtxQuestContent: h, analyticsCtxSourceQuestContent: p, size: g } = e,
-        A = (0, a.fc)(t),
+        A = (0, l.fc)(t),
         x = (function (e, t, n, i) {
-            let { launchInGameActivity: l } = (0, a.zW)(e);
-            return (0, o.BS)(e)
+            let { launchInGameActivity: a } = (0, l.zW)(e);
+            return (0, o.K$)(e)
                 ? () => {
                       (0, u.Fy)(e);
                   }
@@ -25,22 +25,22 @@ let h = function (e) {
                     }
                   : (0, d.vA)(e)
                     ? () => {
-                          l();
+                          a();
                       }
                     : null;
-        })(t, h, p, l.o.VIDEO.has(n) ? s.Cy.WATCH_VIDEO : (0, d.vA)(t) ? s.Cy.START_QUEST : s.Cy.ACCEPT_QUEST),
+        })(t, h, p, a.o.VIDEO.has(n) ? s.Cy.WATCH_VIDEO : (0, d.vA)(t) ? s.Cy.START_QUEST : s.Cy.ACCEPT_QUEST),
         f = (0, u.Oz)(t),
         C = (function (e, t, n) {
-            if ((0, o.BS)(t)) return m.intl.string(m.t.IsH2Sp);
+            if ((0, o.K$)(t)) return m.intl.string(m.t.IsH2Sp);
             if ((0, o.IO)(t)) return (0, c.WM)(n);
             if ((0, d.vA)(t))
-                return t.config.features.includes(_.Li.START_QUEST_CTA)
-                    ? (0, o.vl)(t)
-                        ? t.config.features.includes(_.Li.CLOUD_GAMING_ACTIVITY)
-                            ? m.intl.string(m.t["+qoymD"])
-                            : m.intl.string(m.t["Ie9++s"])
-                        : m.intl.string(m.t["hRIVy+"])
-                    : m.intl.string(m.t.l7E81v);
+                return (0, o.Ov)(t)
+                    ? m.intl.string(m.t["hRIVy+"])
+                    : (0, o.vl)(t)
+                      ? t.config.features.includes(_.Li.CLOUD_GAMING_ACTIVITY)
+                          ? m.intl.string(m.t["+qoymD"])
+                          : m.intl.string(m.t["Ie9++s"])
+                      : m.intl.string(m.t.l7E81v);
             return m.intl.string(m.t["9KoPyB"]);
         })(0, t, A);
     return null == x

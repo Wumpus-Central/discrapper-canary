@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { H1: () => P, Lk: () => H, TQ: () => F, Xf: () => x, _c: () => U, c9: () => V, dN: () => G, ix: () => M });
+n.d(t, { H1: () => x, Lk: () => H, TQ: () => F, Xf: () => P, _c: () => U, c9: () => V, dN: () => G, ix: () => M });
 var r = n(627968),
     i = n(64700),
     s = n(4208),
@@ -62,7 +62,7 @@ function M(e) {
                   : (0, b.E)());
     }, [t, f, n, r, s, d, _, o]);
 }
-let x = (e) => {
+let P = (e) => {
         let { useReducedMotion: t, className: n } = e,
             [a, l] = (0, o.zhh)(() => ({})),
             u = i.useRef(!1),
@@ -85,7 +85,7 @@ let x = (e) => {
             },
         };
     },
-    P = (e, t, n) => {
+    x = (e, t, n) => {
         let { message: i, xboxURL: s } = (0, m.UX)(),
             a = (0, g.Ut)(),
             o = (r) => {
@@ -104,13 +104,13 @@ let x = (e) => {
         return (0, r.jsx)("span", { onClick: o, children: i });
     };
 function k(e) {
-    return e.config.features.includes(L.Li.START_QUEST_CTA)
-        ? (0, C.vl)(e)
-            ? e.config.features.includes(L.Li.CLOUD_GAMING_ACTIVITY)
-                ? { text: w.intl.string(w.t["+qoymD"]), questContentCTA: A.Cy.START_QUEST }
-                : { text: w.intl.string(w.t["Ie9++s"]), questContentCTA: A.Cy.START_QUEST }
-            : { text: w.intl.string(w.t["hRIVy+"]), questContentCTA: A.Cy.START_QUEST }
-        : { text: w.intl.string(w.t.l7E81v), questContentCTA: A.Cy.ACCEPT_QUEST };
+    return (0, C.vl)(e)
+        ? e.config.features.includes(L.Li.CLOUD_GAMING_ACTIVITY)
+            ? { text: w.intl.string(w.t["+qoymD"]), questContentCTA: A.Cy.START_QUEST }
+            : { text: w.intl.string(w.t["Ie9++s"]), questContentCTA: A.Cy.START_QUEST }
+        : (0, C.Ov)(e)
+          ? { text: w.intl.string(w.t["hRIVy+"]), questContentCTA: A.Cy.START_QUEST }
+          : { text: w.intl.string(w.t.l7E81v), questContentCTA: A.Cy.ACCEPT_QUEST };
 }
 function U(e) {
     let {
@@ -228,7 +228,7 @@ function U(e) {
                         text: e,
                         tooltipText: w.intl.string(w.t.hsbwjv),
                         onClick: () => {
-                            t.config.features.includes(L.Li.START_QUEST_CTA) && E();
+                            E();
                         },
                     };
                 }

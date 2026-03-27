@@ -33,7 +33,7 @@ function m(e, t) {
     return new Set(e.config.features).has(t);
 }
 function E(e) {
-    return ((0, _.Cr)(e) || (0, _.vl)(e)) && e.config.features.includes(f.Li.START_QUEST_CTA);
+    return (0, _.vl)(e) || (0, _.Ov)(e);
 }
 function g(e, t) {
     let n = new Map();

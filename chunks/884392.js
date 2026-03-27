@@ -1,8 +1,8 @@
 n.d(t, { A: () => g });
 var i = n(627968),
-    l = n(412703),
+    a = n(412703),
     r = n(311907),
-    a = n(397927),
+    l = n(397927),
     s = n(829219),
     o = n(859703),
     d = n(890687),
@@ -13,10 +13,9 @@ var i = n(627968),
     h = n(985018);
 function p(e) {
     switch (e) {
-        case l.n.ACHIEVEMENT_IN_GAME:
-        case l.n.ACHIEVEMENT_IN_ACTIVITY:
-        case l.n.PLAY_ACTIVITY:
-        case l.n.WATCH_VIDEO:
+        case a.n.ACHIEVEMENT_IN_ACTIVITY:
+        case a.n.PLAY_ACTIVITY:
+        case a.n.WATCH_VIDEO:
             return c.Cy.START_QUEST;
         default:
             return c.Cy.ACCEPT_QUEST;
@@ -32,34 +31,31 @@ let g = function (e) {
             preClickCallback: x,
             analyticsCtxQuestContent: f,
             analyticsCtxSourceQuestContent: C,
-            analyticsCtxQuestContentPosition: E,
-            analyticsCtxQuestContentRowIndex: I,
+            analyticsCtxQuestContentPosition: I,
+            analyticsCtxQuestContentRowIndex: E,
         } = e,
         b = {
             questContent: f,
             questContentCTA: p(c),
             sourceQuestContent: C,
-            questContentPosition: E,
-            questContentRowIndex: I,
+            questContentPosition: I,
+            questContentRowIndex: E,
         },
-        T = n.id,
-        { isEnrolling: v } = (0, r.cf)([o.A], () => ({ isEnrolling: o.A.isEnrolling(T) }), [T]),
-        S = (0, _.Oz)(n),
-        y = (function (e, t) {
+        v = n.id,
+        { isEnrolling: T } = (0, r.cf)([o.A], () => ({ isEnrolling: o.A.isEnrolling(v) }), [v]),
+        y = (0, _.Oz)(n),
+        S = (function (e, t) {
             let { launchInGameActivity: n } = (0, d.zW)(t);
             if ((0, u.K$)(t))
                 return () => {
                     (0, _.Fy)(t);
                 };
             switch (e) {
-                case l.n.ACHIEVEMENT_IN_GAME:
-                case l.n.ACHIEVEMENT_IN_ACTIVITY:
-                case l.n.PLAY_ACTIVITY:
-                    if (t.config.features.includes(m.Li.START_QUEST_CTA))
-                        return () => {
-                            n();
-                        };
-                    return null;
+                case a.n.ACHIEVEMENT_IN_ACTIVITY:
+                case a.n.PLAY_ACTIVITY:
+                    return () => {
+                        n();
+                    };
                 default:
                     return null;
             }
@@ -67,22 +63,20 @@ let g = function (e) {
         N = (function (e, t) {
             let { features: n } = t.config;
             switch (e) {
-                case l.n.WATCH_VIDEO:
+                case a.n.WATCH_VIDEO:
                     return h.intl.formatToPlainString(h.t.GNsKiW, { remainTime: (0, u.xm)((0, u.Yh)(t)) });
-                case l.n.ACHIEVEMENT_IN_GAME:
-                case l.n.ACHIEVEMENT_IN_ACTIVITY:
-                    return n.includes(m.Li.START_QUEST_CTA) ? h.intl.string(h.t["hRIVy+"]) : h.intl.string(h.t.l7E81v);
-                case l.n.PLAY_ACTIVITY:
+                case a.n.ACHIEVEMENT_IN_ACTIVITY:
+                    return h.intl.string(h.t["hRIVy+"]);
+                case a.n.PLAY_ACTIVITY:
                     if (n.includes(m.Li.CLOUD_GAMING_ACTIVITY)) return h.intl.string(h.t["+qoymD"]);
-                    if (n.includes(m.Li.START_QUEST_CTA)) return h.intl.string(h.t["Ie9++s"]);
-                    return h.intl.string(h.t.l7E81v);
+                    return h.intl.string(h.t["Ie9++s"]);
                 default:
                     return h.intl.string(h.t.kUQLMJ);
             }
         })(c, n),
         j =
-            ((t = y ?? void 0),
-            c === l.n.WATCH_VIDEO
+            ((t = S ?? void 0),
+            c === a.n.WATCH_VIDEO
                 ? async () => {
                       await (0, _.e0)(n, {
                           questContent: b.questContent,
@@ -103,15 +97,15 @@ let g = function (e) {
                       }),
                           t?.();
                   });
-    return (0, i.jsx)(a.Button, {
+    return (0, i.jsx)(l.Button, {
         size: g,
-        loading: v,
+        loading: T,
         variant: A,
         onClick: () => {
             x?.(), j();
         },
         text: N,
-        icon: S,
+        icon: y,
         fullWidth: !0,
     });
 };

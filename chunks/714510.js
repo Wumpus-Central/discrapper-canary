@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { NA: () => J, VX: () => z, XR: () => ee, gj: () => K, mU: () => W, tH: () => $, wT: () => x });
+n.d(t, { NA: () => J, VX: () => z, XR: () => ee, gj: () => K, mU: () => W, tH: () => $, wT: () => M });
 var r = n(64700),
     i = n(311907);
 n(166352);
@@ -66,7 +66,7 @@ function L(e, t) {
 function w(e, t) {
     return C(e, t, { base: y.t.NIimTt, clickable: y.t.GFdaUK, generic: y.t.N3tNbI, clickableGeneric: y.t.k2srpz });
 }
-function x(e, t, n, r) {
+function M(e, t, n, r) {
     let { targetMinutes: i } = (0, A.fc)(e),
         s = (0, A.I3)(e),
         a = (0, A.BL)({ quest: e, questContent: n, sourceQuestContent: r }),
@@ -94,7 +94,7 @@ function x(e, t, n, r) {
         y.intl.format(l, { minutes: i, gameTitle: e.config.messages.gameTitle })
     );
 }
-function M(e) {
+function P(e) {
     let t,
         {
             quest: n,
@@ -140,7 +140,7 @@ function M(e) {
         i,
     );
 }
-function P(e) {
+function x(e) {
     let t,
         {
             quest: n,
@@ -394,7 +394,7 @@ function j(e) {
             onGameSheetClosed: c,
         });
     if (A)
-        return M({
+        return P({
             quest: t,
             taskDetails: n,
             withoutMarkdown: a,
@@ -404,7 +404,7 @@ function j(e) {
             descriptionExperimentVariant: f,
         });
     if ((0, E.g5)(t))
-        return P({
+        return x({
             quest: t,
             taskDetails: n,
             withoutMarkdown: a,
@@ -572,8 +572,7 @@ function J(e) {
         case 0:
             if (Q(t, n)) {
                 if (t.config.features.includes(I.Li.CLOUD_GAMING_ACTIVITY)) return y.intl.string(y.t["+qoymD"]);
-                if (t.config.features.includes(I.Li.START_QUEST_CTA))
-                    return y.intl.string(r ? y.t.E4kW5O : y.t["Ie9++s"]);
+                if ((0, g.vA)(t)) return y.intl.string(r ? y.t.E4kW5O : y.t["Ie9++s"]);
             }
             return y.intl.string(y.t.l7E81v);
         case 1:
@@ -581,9 +580,7 @@ function J(e) {
         case 2:
             return y.intl.formatToPlainString(y.t.GNsKiW, { remainTime: (0, E.xm)(s) });
         case 3:
-            return t.config.features.includes(I.Li.START_QUEST_CTA) && Q(t, n)
-                ? y.intl.string(r ? y.t.CkUzLd : y.t["hRIVy+"])
-                : y.intl.string(y.t.l7E81v);
+            return (0, g.vA)(t) && Q(t, n) ? y.intl.string(r ? y.t.CkUzLd : y.t["hRIVy+"]) : y.intl.string(y.t.l7E81v);
     }
 }
 function ee(e) {
