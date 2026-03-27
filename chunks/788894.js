@@ -310,6 +310,14 @@ let r = {
                     return 12;
                 },
             },
+            GUILD_FOLDER_BACKGROUND_RADIUS: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 0x7fffffff;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 16;
+                    return 0x7fffffff;
+                },
+            },
             GUILD_FOLDER_BACKGROUND_WIDTH_OFFSET: {
                 resolve(e) {
                     let { enabledExperiments: t } = e;
@@ -539,6 +547,15 @@ let r = {
                     if (0 === t.length) return "text-sm/semibold";
                     for (let e of t) if ("mobile-visual-refresh" === e) return "text-sm/medium";
                     return "text-sm/semibold";
+                },
+            },
+            USER_ROW_LABEL_LINE_HEIGHT_ANDROID: { resolve: () => 16 },
+            USER_ROW_LABEL_LINE_HEIGHT_IOS: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 22;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 20;
+                    return 22;
                 },
             },
             VOICE_CHANNEL_USER_LIMIT_BORDER_WIDTH: {
