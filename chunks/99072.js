@@ -1,8 +1,8 @@
-n.d(t, { A: () => b });
+n.d(t, { A: () => v });
 var i = n(627968);
 n(64700);
-var r = n(311907),
-    a = n(397927),
+var a = n(311907),
+    r = n(397927),
     l = n(456060),
     s = n(793574),
     o = n(688810),
@@ -18,14 +18,14 @@ var r = n(311907),
     x = n(723702),
     f = n(661191),
     C = n(820672),
-    E = n(768349),
-    I = n(426127),
-    v = n(985018);
-function b(e) {
-    let { currentUserId: t, message: b, application: T, channel: y, analyticsLocations: S, onView: N } = e,
+    I = n(768349),
+    E = n(55705),
+    b = n(985018);
+function v(e) {
+    let { currentUserId: t, message: v, application: T, channel: y, analyticsLocations: S, onView: N } = e,
         { staticBannerSrc: j, videoBannerSrc: L, bannerAspectRatio: R } = (0, u.f)(T),
         P = A.Ay.getApplicationIconURL({ id: T.id, icon: T.icon }),
-        M = (0, r.bG)([_.Ay, p.A], () =>
+        w = (0, a.bG)([_.Ay, p.A], () =>
             _.Ay.getVisibleRunningGames().find((e) => {
                 let { id: t } = e;
                 if (t === T.id) return !0;
@@ -33,23 +33,23 @@ function b(e) {
                 return null != n && t === n.id;
             }),
         ),
-        w = (0, r.bG)([h.A], () => h.A.getCurrentUserActiveStream()),
-        D = (0, r.bG)([g.A], () => g.A.getChannelId()),
-        k = f.default.extractTimestamp(b.id) + C.M < Date.now(),
-        O = (0, i.jsx)(i.Fragment, { children: (0, l.Wf)(b, y, t) }),
+        M = (0, a.bG)([h.A], () => h.A.getCurrentUserActiveStream()),
+        D = (0, a.bG)([g.A], () => g.A.getChannelId()),
+        k = f.default.extractTimestamp(v.id) + C.M < Date.now(),
+        O = (0, i.jsx)(i.Fragment, { children: (0, l.Wf)(v, y, t) }),
         { analyticsLocations: U } = (0, o.Ay)(S, s.A.REQUEST_TO_STREAM_INVITE_EMBED),
-        B = v.intl.string(I.default["5+172e"]),
+        B = b.intl.string(E.default["5+172e"]),
         G = !1;
     return (
         k
-            ? ((B = v.intl.string(I.default.u4QmWl)), (G = !0))
-            : null != w
-              ? ((B = v.intl.string(I.default.P0wwmM)), (G = !0))
+            ? ((B = b.intl.string(E.default.u4QmWl)), (G = !0))
+            : null != M
+              ? ((B = b.intl.string(E.default.P0wwmM)), (G = !0))
               : D !== y.id
-                ? ((B = v.intl.string(I.default.qRXats)), (G = !0))
-                : null == M && ((B = v.intl.string(I.default["43zohO"])), (G = !0)),
+                ? ((B = b.intl.string(E.default.qRXats)), (G = !0))
+                : null == w && ((B = b.intl.string(E.default["43zohO"])), (G = !0)),
         (0, i.jsx)(d.h, {
-            header: v.intl.string(I.default.nAyuPp),
+            header: b.intl.string(E.default.nAyuPp),
             title: T.name,
             staticBannerSrc: j,
             videoBannerSrc: L,
@@ -57,7 +57,7 @@ function b(e) {
             iconSrc: P ?? void 0,
             info: O,
             actions:
-                b.author.id === t
+                v.author.id === t
                     ? []
                     : [
                           {
@@ -65,10 +65,10 @@ function b(e) {
                               trackingArea: c.kY.STREAM,
                               disabled: G,
                               onClick: () => {
-                                  null != M &&
+                                  null != w &&
                                       ((0, x.isWindows)()
-                                          ? (0, m.A)(M.pid)
-                                          : (0, a.mMO)(async () => {
+                                          ? (0, m.A)(w.pid)
+                                          : (0, r.mMO)(async () => {
                                                 let { default: e } = await Promise.all([
                                                     n.e("96811"),
                                                     n.e("48697"),
@@ -80,10 +80,10 @@ function b(e) {
                       ],
             trackingConfig: {
                 id: T.id,
-                linkType: E.J.REQUEST_TO_STREAM,
+                linkType: I.J.REQUEST_TO_STREAM,
                 guildId: y.guild_id,
                 channelId: y.id,
-                messageId: b.id,
+                messageId: v.id,
                 onView: N,
                 isDeadEnd: k,
             },

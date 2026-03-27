@@ -1,17 +1,17 @@
 n.d(t, { A: () => u });
 var i = n(627968),
-    r = n(64700),
-    a = n(397927),
+    a = n(64700),
+    r = n(397927),
     l = n(572211),
     s = n(443795),
     o = n(768349),
     d = n(985018),
-    c = n(609653);
+    c = n(71747);
 function u(e) {
     let { application: t, message: n, header: u, onClickContent: _, onView: m, guildId: h } = e,
-        p = r.useMemo(
+        p = a.useMemo(
             () =>
-                (0, i.jsx)(a.Text, {
+                (0, i.jsx)(r.Text, {
                     variant: "text-xs/medium",
                     className: c.h_,
                     color: "none",

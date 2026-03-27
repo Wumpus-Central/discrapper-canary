@@ -2,8 +2,8 @@
 n.d(t, { A: () => v });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(111956),
     l = n.n(o),
     u = n(835245),
@@ -14,10 +14,10 @@ var r = n(627968),
     p = n(256415),
     h = n(723702),
     m = n(41984),
-    g = n(127242),
-    E = n(545807),
+    E = n(127242),
+    g = n(545807),
     A = n(392164),
-    I = n(722240);
+    I = n(93798);
 function T(e, t) {
     return {
         name: e,
@@ -27,7 +27,7 @@ function T(e, t) {
         bottom: Math.ceil(t.bottom),
     };
 }
-class y {
+class S {
     resizeObserver;
     mutationObserver;
     zones = new Map();
@@ -102,11 +102,11 @@ class y {
             this.updateZones();
     }
 }
-let S = i.createContext(new y((0, E.b)()));
+let y = i.createContext(new S((0, g.b)()));
 function v(e) {
-    let { observe: t = !0, className: n, style: a, children: o } = e,
-        l = i.useContext(S),
-        u = (0, c.bG)([g.A], () => g.A.hasRenderDebugMode(m.x7.ClickZones)),
+    let { observe: t = !0, className: n, style: s, children: o } = e,
+        l = i.useContext(y),
+        u = (0, c.bG)([E.A], () => E.A.hasRenderDebugMode(m.x7.ClickZones)),
         d = (0, c.bG)([p.default], () => p.default.disableClickableRegions),
         [{ refHandler: _, setObserve: f }] = i.useState(() => {
             let e = null;
@@ -123,6 +123,6 @@ function v(e) {
         i.useLayoutEffect(() => {
             d ? f(!1) : f(t);
         }, [t, f, d]),
-        (0, r.jsx)("div", { ref: _, style: a, className: s()(n, I.v, u && I.p), "data-click-zone": !0, children: o })
+        (0, r.jsx)("div", { ref: _, style: s, className: a()(n, I.v, u && I.p), "data-click-zone": !0, children: o })
     );
 }

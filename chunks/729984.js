@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => G, G: () => L });
+n.d(t, { A: () => L, G: () => G });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
@@ -21,13 +21,13 @@ var i = n(627968),
     N = n(107795),
     E = n(655943),
     b = n(82566),
-    T = n(259866),
-    C = n(950358),
+    C = n(259866),
+    T = n(950358),
     I = n(561108),
     v = n(191117),
     S = n(985018),
-    y = n(894958),
-    R = n(206314);
+    y = n(7716),
+    R = n(830684);
 function O(e) {
     let { guild: t } = e,
         r = (0, l.bG)([c.A], () => c.A.getEnabled(t.id)),
@@ -159,7 +159,7 @@ function O(e) {
               ],
           });
 }
-function G(e) {
+function L(e) {
     let { saveOnClose: t = !1 } = e,
         n = (0, l.bG)([A.A], () => A.A.getGuild()),
         r = (0, l.bG)([c.A], () => c.A.isLoading()),
@@ -214,13 +214,13 @@ function G(e) {
                                 color: "text-default",
                                 children: S.intl.string(S.t.Kq7FAS),
                             }),
-                            (0, i.jsx)(T.mU, { className: y.kr, guildId: n.id }),
+                            (0, i.jsx)(C.mU, { className: y.kr, guildId: n.id }),
                             g
                                 ? null
                                 : (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(O, { guild: n }),
-                                          (0, i.jsx)(C.A, {
+                                          (0, i.jsx)(T.A, {
                                               className: y.bE,
                                               guild: n,
                                               categories: d,
@@ -267,7 +267,7 @@ function G(e) {
                 ],
             });
 }
-function L() {
+function G() {
     let e = (0, l.bG)([A.A], () => A.A.getProps().guild),
         t = (0, l.bG)([j.A], () => j.A.submitting),
         n = (0, l.bG)([E.A], () => E.A.advancedMode);

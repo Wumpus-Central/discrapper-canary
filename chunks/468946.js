@@ -1,26 +1,26 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => g });
 var a = n(627968),
-    i = n(281445),
-    l = n(158954),
-    s = n(736653),
+    l = n(281445),
+    s = n(158954),
+    i = n(736653),
     r = n(27023),
     d = n(818348),
-    u = n(294726),
+    o = n(738072),
     c = n(985018),
-    o = n(288948),
+    u = n(73658),
     m = n(391637),
-    g = n(588979);
-function f() {
-    let e = (0, s.Ay)();
-    return (0, a.jsx)(l.EYj, {
+    x = n(588979);
+function v() {
+    let e = (0, i.Ay)();
+    return (0, a.jsx)(s.EYj, {
         variant: "text-sm/medium",
-        className: o.Q,
-        children: c.intl.format(u.default.fcJiY8, {
-            provider: (0, a.jsx)("img", { className: o.S, src: e !== d.NJ.LIGHT ? g : m, alt: "Shockbyte" }),
+        className: u.Q,
+        children: c.intl.format(o.default.fcJiY8, {
+            provider: (0, a.jsx)("img", { className: u.S, src: e !== d.NJ.LIGHT ? x : m, alt: "Shockbyte" }),
         }),
     });
 }
-function _() {
+function g() {
     let { gameProvider: e } = (0, r.bv)();
-    return e === i.X.SHOCKBYTE ? (0, a.jsx)(f, {}) : null;
+    return e === l.X.SHOCKBYTE ? (0, a.jsx)(v, {}) : null;
 }

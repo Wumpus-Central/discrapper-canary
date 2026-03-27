@@ -1,7 +1,7 @@
 n.d(t, { R: () => m, T: () => h });
 var a = n(627968),
     i = n(64700),
-    s = n(4208),
+    s = n(880013),
     l = n(311907),
     r = n(397927),
     o = n(765671),
@@ -21,13 +21,13 @@ function h(e) {
         h = (0, l.bG)([c.A], () => c.A.useReducedMotion),
         { ref: x, height: p = null } = (0, o.Ay)(),
         g = (0, d.A)(p) ?? null,
-        [{ height: f }, _] = (0, r.zhh)(() => ({ from: { height: 0 }, config: n }));
+        [{ height: _ }, f] = (0, r.zhh)(() => ({ from: { height: 0 }, config: n }));
     return (
         i.useLayoutEffect(() => {
-            null !== p && _({ height: p, immediate: !m || h || null === g });
-        }, [p, _, m, h, g]),
+            null !== p && f({ height: p, immediate: !m || h || null === g });
+        }, [p, f, m, h, g]),
         (0, a.jsx)(s.animated.div, {
-            style: { height: null === g ? "auto" : f, overflow: "hidden" },
+            style: { height: null === g ? "auto" : _, overflow: "hidden" },
             children: (0, a.jsx)("div", { style: { overflow: "hidden" }, ref: x, children: t }),
         })
     );

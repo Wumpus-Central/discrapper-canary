@@ -9,9 +9,9 @@ var r = n(627968),
     u = n(384904),
     c = n(176095),
     d = n(580630),
-    _ = n(756366),
+    _ = n(523376),
     f = n(985018),
-    p = n(396872);
+    p = n(1434);
 let h = (e) => e.stopPropagation(),
     m = (e) => {
         let { tdsWalletSource: t, checked: n, onChange: s, fieldLabel: m, itemAmount: E, className: g } = e,

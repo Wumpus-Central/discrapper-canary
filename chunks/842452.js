@@ -5,27 +5,27 @@ var i = n(627968),
     l = n(503698),
     r = n.n(l),
     a = n(131346),
-    o = n(4208),
+    o = n(880013),
     c = n(837381),
     d = n(317097),
     u = n(319060),
     h = n(397927),
     A = n(817281),
     m = n(534409),
-    p = n(711014),
-    g = n(240248),
-    _ = n(263715),
+    _ = n(711014),
+    p = n(240248),
+    g = n(263715),
     f = n(941971),
     x = n(447253),
-    C = n(531053),
-    E = n(107385),
+    E = n(531053),
+    C = n(107385),
     I = n(900848),
-    N = n(550591),
+    N = n(772972),
     b = n(114329),
     S = n(985018),
-    T = n(142163),
-    v = n(604418);
-let y = (0, g.xI)(u.A.FOLDER_ITEM_ANIMATION_DURATION),
+    T = n(161136),
+    v = n(135759);
+let y = (0, p.xI)(u.A.FOLDER_ITEM_ANIMATION_DURATION),
     j = (0, o.animated)(h.BJc),
     R = s.memo(function (e) {
         var t;
@@ -34,7 +34,7 @@ let y = (0, g.xI)(u.A.FOLDER_ITEM_ANIMATION_DURATION),
             o,
             {
                 folderNode: u,
-                setNodeRef: g,
+                setNodeRef: p,
                 selected: R,
                 expanded: O,
                 mediaState: L,
@@ -43,8 +43,8 @@ let y = (0, g.xI)(u.A.FOLDER_ITEM_ANIMATION_DURATION),
                 unread: G = !1,
                 defaultFolderName: U,
                 draggable: P = !1,
-                sorting: k = !1,
-                onDragStart: w,
+                sorting: w = !1,
+                onDragStart: k,
                 onDragEnd: V,
                 onExpandCollapse: B,
                 onContextMenu: H,
@@ -60,13 +60,13 @@ let y = (0, g.xI)(u.A.FOLDER_ITEM_ANIMATION_DURATION),
             et = Q || Z,
             en = (0, m.qK)("FolderItem");
         s.useEffect(() => {
-            k && $(!1);
-        }, [k]);
+            w && $(!1);
+        }, [w]);
         let [{ dragging: ei }, es] = (0, a.i)({
-                type: _.PJ.FOLDER,
-                item: () => (w?.(), { type: _.PJ.FOLDER, nodeId: u.id }),
+                type: g.PJ.FOLDER,
+                item: () => (k?.(), { type: g.PJ.FOLDER, nodeId: u.id }),
                 end() {
-                    V?.(), (0, A.um)(p.Ay.getCompatibleGuildFolders());
+                    V?.(), (0, A.um)(_.Ay.getCompatibleGuildFolders());
                 },
                 collect: (e) => ({ dragging: e.isDragging() }),
             }),
@@ -96,13 +96,13 @@ let y = (0, g.xI)(u.A.FOLDER_ITEM_ANIMATION_DURATION),
                 leave: { height: 0 },
                 config: { duration: y },
             }),
-            eh = s.useCallback((e) => g?.(q, e), [g, q]),
+            eh = s.useCallback((e) => p?.(q, e), [p, q]),
             eA = (0, i.jsxs)(I.c, {
                 children: [
                     (0, i.jsx)(f.A, { disabled: ei || O, hovered: Q, selected: R, unread: G, className: v.Io }),
                     (0, i.jsx)(N.A, {
                         text: ea,
-                        disabled: k,
+                        disabled: w,
                         selected: R,
                         disableWrapper: !0,
                         children: (0, i.jsx)("div", {
@@ -114,11 +114,11 @@ let y = (0, g.xI)(u.A.FOLDER_ITEM_ANIMATION_DURATION),
                             className: r()(T.MJ, { [T.L0]: "icon" === K || en, [v.oR]: !ei && Z && !O }),
                             "data-dnd-name": ea,
                             children: ei
-                                ? (0, i.jsx)(E.A, { isFolder: !0 })
+                                ? (0, i.jsx)(C.A, { isFolder: !0 })
                                 : (0, i.jsx)(x.A, {
                                       folderNode: u,
                                       expanded: O,
-                                      sorting: k,
+                                      sorting: w,
                                       mediaState: L,
                                       mentionCount: M,
                                       isMentionLowImportance: D,
@@ -135,15 +135,15 @@ let y = (0, g.xI)(u.A.FOLDER_ITEM_ANIMATION_DURATION),
                                   }),
                         }),
                     }),
-                    P ? (0, i.jsx)(C.Ay, { name: ea, targetNode: u, onDragOverChanged: el }) : null,
+                    P ? (0, i.jsx)(E.Ay, { name: ea, targetNode: u, onDragOverChanged: el }) : null,
                 ],
             }),
             em = null != u.color ? u.color : b.DO,
-            ep = em === b.DO ? void 0 : (0, d.Hl)(em);
+            e_ = em === b.DO ? void 0 : (0, d.Hl)(em);
         return (0, i.jsxs)("div", {
             ref: eh,
             className: r()(T.qc, { [T.Av]: O, [T.Lg]: et }),
-            style: { "--custom-folder-color": ep ?? "" },
+            style: { "--custom-folder-color": e_ ?? "" },
             "data-drop-hovering": Z,
             children: [
                 !ei && O && (0, i.jsx)("span", { className: T.GO }),
@@ -168,7 +168,7 @@ let y = (0, g.xI)(u.A.FOLDER_ITEM_ANIMATION_DURATION),
                         )
                     );
                 }),
-                P && O ? (0, i.jsx)(C.qv, { name: ea, targetNode: u }) : null,
+                P && O ? (0, i.jsx)(E.qv, { name: ea, targetNode: u }) : null,
             ],
         });
     });

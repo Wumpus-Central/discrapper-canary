@@ -1,8 +1,8 @@
-n.d(t, { A: () => N, C: () => y });
+n.d(t, { A: () => N, C: () => S });
 var i = n(627968),
-    l = n(64700),
+    a = n(64700),
     r = n(284009),
-    a = n.n(r),
+    l = n.n(r),
     s = n(311907),
     o = n(397927),
     d = n(241524),
@@ -17,37 +17,37 @@ var i = n(627968),
     x = n(427262),
     f = n(218394),
     C = n(386952),
-    E = n(381969),
-    I = n(920814),
+    I = n(381969),
+    E = n(920814),
     b = n(235665),
-    T = n(985018),
-    v = n(656708);
-function S(e) {
+    v = n(985018),
+    T = n(66996);
+function y(e) {
     let { onClick: t } = e;
     return (0, i.jsxs)(o.DUT, {
         onClick: t,
-        className: v.dO,
+        className: T.dO,
         children: [
             (0, i.jsx)(o.Text, {
                 variant: "text-sm/medium",
                 color: "text-strong",
-                children: T.intl.string(T.t.J4cw1q),
+                children: v.intl.string(v.t.J4cw1q),
             }),
             (0, i.jsx)(o.hKd, { size: 4, horizontal: !0 }),
-            (0, i.jsx)(A.A, { direction: A.A.Directions.RIGHT, className: v.wY }),
+            (0, i.jsx)(A.A, { direction: A.A.Directions.RIGHT, className: T.wY }),
         ],
     });
 }
-function y(e) {
+function S(e) {
     let { coverImageAsset: t, isPreview: n = !1 } = e,
-        l = h.kt.useSetting(),
-        r = (0, f.j)() && l,
-        [a, s] = (0, m.A)(t, r),
+        a = h.kt.useSetting(),
+        r = (0, f.j)() && a,
+        [l, s] = (0, m.A)(t, r),
         o = r
             ? (0, i.jsx)(u.A, {
                   autoPlay: !0,
                   loop: !0,
-                  className: v.N4,
+                  className: T.N4,
                   width: 655,
                   poster: (0, c.n)("server_products/storefront/default-header.png"),
                   src: (0, c.n)("server_products/storefront/default-header.mov"),
@@ -55,12 +55,12 @@ function y(e) {
             : (0, i.jsx)("img", {
                   src: (0, c.n)("server_products/storefront/default-header.png"),
                   alt: "",
-                  className: v.N4,
+                  className: T.N4,
               });
     return (0, i.jsx)("div", {
-        ref: a,
-        className: v.El,
-        children: null == s || n ? o : (0, i.jsx)("img", { src: s, alt: "", className: v.N4 }),
+        ref: l,
+        className: T.El,
+        children: null == s || n ? o : (0, i.jsx)("img", { src: s, alt: "", className: T.N4 }),
     });
 }
 function N(e) {
@@ -68,17 +68,17 @@ function N(e) {
         r = t.id,
         { nickname: u, nickcolor: m } = (0, s.cf)([p.Ay, g.default], () => {
             let e = g.default.getCurrentUser();
-            a()(null != e, "user cannot be null");
+            l()(null != e, "user cannot be null");
             let t = p.Ay.getMember(r, e.id);
             return { nickname: t?.nick ?? x.Ay.getName(e), nickcolor: t?.colorString ?? void 0 };
         }, [r]),
         { isTruncated: h, ExpandableTextContainer: A } = (0, C.e)(),
         f = (n?.description?.trim().length ?? 0) > 0,
-        [N, j] = l.useState(1),
+        [N, j] = a.useState(1),
         L = (0, d.A)("(max-width: 1439px)"),
-        { selectedTab: R, isPhantomPreview: P } = (0, E.k)(),
-        M = R === I.B.GUILD_PRODUCTS_PREVIEW ? T.intl.string(T.t["LvXy/H"]) : T.intl.string(T.t.XyqKh8),
-        w = f
+        { selectedTab: R, isPhantomPreview: P } = (0, I.k)(),
+        w = R === E.B.GUILD_PRODUCTS_PREVIEW ? v.intl.string(v.t["LvXy/H"]) : v.intl.string(v.t.XyqKh8),
+        M = f
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsx)(A, {
@@ -93,7 +93,7 @@ function N(e) {
                           (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(o.hKd, { size: 4 }),
-                                  (0, i.jsx)(S, { onClick: () => (0, b.A)({ guildId: r }) }),
+                                  (0, i.jsx)(y, { onClick: () => (0, b.A)({ guildId: r }) }),
                               ],
                           }),
                   ],
@@ -101,13 +101,13 @@ function N(e) {
             : (0, i.jsx)(o.Text, {
                   variant: "text-sm/normal",
                   color: "text-default",
-                  children: P ? M : T.intl.string(T.t["NY/FIW"]),
+                  children: P ? w : v.intl.string(v.t["NY/FIW"]),
               });
     return (0, i.jsxs)("div", {
-        className: v.kL,
+        className: T.kL,
         children: [
             (0, i.jsxs)("div", {
-                className: v.op,
+                className: T.op,
                 children: [
                     (0, i.jsx)("div", {
                         children: (0, i.jsx)(_.Ay, {
@@ -131,15 +131,15 @@ function N(e) {
                                     color: "text-strong",
                                     lineClamp: 2,
                                     children: P
-                                        ? T.intl.string(T.t.rtgp7q)
-                                        : T.intl.formatToPlainString(T.t.NZeik9, { guildName: t.name }),
+                                        ? v.intl.string(v.t.rtgp7q)
+                                        : v.intl.formatToPlainString(v.t.NZeik9, { guildName: t.name }),
                                 }),
                             }),
                             (0, i.jsx)(o.hKd, { size: 8 }),
                             (0, i.jsx)(o.Text, {
                                 variant: "text-md/normal",
                                 color: "text-default",
-                                children: T.intl.format(T.t["7JwrlH"], {
+                                children: v.intl.format(v.t["7JwrlH"], {
                                     username: u,
                                     usernameHook: function (e, t) {
                                         return (0, i.jsx)("span", { style: { color: m }, children: e }, t);
@@ -147,12 +147,12 @@ function N(e) {
                                 }),
                             }),
                             (0, i.jsx)(o.hKd, { size: 9 }),
-                            w,
+                            M,
                         ],
                     }),
                 ],
             }),
-            (0, i.jsx)(y, { coverImageAsset: n?.cover_image_asset, isPreview: P }),
+            (0, i.jsx)(S, { coverImageAsset: n?.cover_image_asset, isPreview: P }),
         ],
     });
 }

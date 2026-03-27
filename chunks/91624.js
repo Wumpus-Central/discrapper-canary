@@ -18,7 +18,7 @@ var i = n(627968),
     E = n(205120),
     x = n(652215);
 n(294920);
-var C = n(119907);
+var C = n(10029);
 function S(e) {
     let { value: t, channel: n } = e;
     return (0, p.i)({ type: c.oU.EDIT, content: t, channel: n, restrictMentions: !1, respectCooldown: !1 });
@@ -33,9 +33,9 @@ function I(e) {
         I = null != p && p.features.has(x.GuildFeatures.NEWS),
         N = _ && I,
         {
-            editingMessage: y,
+            editingMessage: v,
             editingTextValue: b,
-            editingRichValue: v,
+            editingRichValue: y,
         } = (0, a.cf)(
             [h.A],
             () => ({
@@ -50,7 +50,7 @@ function I(e) {
             (e, i, l) => {
                 let { content: a } = l,
                     c = A.A.can(x.xBc.MANAGE_MESSAGES, t),
-                    d = null != y && null != y.author ? y.author.id : null,
+                    d = null != v && null != v.author ? v.author.id : null,
                     u = N && (d === j || c),
                     h = { content: a, components: void 0 };
                 if (n.hasFlag(x.pr7.IS_COMPONENTS_V2)) {
@@ -61,22 +61,22 @@ function I(e) {
                         (h.components = t);
                 }
                 return (
-                    u && null != y && (0, s.Lt)(y.flags, x.pr7.CROSSPOSTED)
+                    u && null != v && (0, s.Lt)(v.flags, x.pr7.CROSSPOSTED)
                         ? f.A.confirmEdit(e, i, h)
                         : r.A.editMessage(e, i, h),
                     Promise.resolve()
                 );
             },
-            [y, N, j, t, n],
+            [v, N, j, t, n],
         ),
         M = l.useCallback((e) => (0, l.createElement)(T, { ...e, className: C.gM, key: d }), [d]);
-    return null != b && null != v
+    return null != b && null != y
         ? (0, i.jsx)(E.A, {
               ref: void 0,
               channel: t,
               message: n,
               textValue: b,
-              richValue: v,
+              richValue: y,
               onCancel: r.A.endEditMessage,
               onChange: r.A.updateEditMessage,
               onConfirmDelete: f.A.confirmDelete,

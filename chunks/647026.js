@@ -6,8 +6,8 @@ var s = n(397927),
     l = n(792831),
     r = n(226694),
     a = n(985018),
-    o = n(104333),
-    c = n(971519),
+    o = n(46570),
+    c = n(624042),
     d = n(578576);
 let u = (e) => {
     let t,
@@ -17,17 +17,17 @@ let u = (e) => {
             mostRecentQuery: h,
             handleClearSearch: A,
             handleSearchKeyPress: m,
-            handleCreateOrAddGuild: p,
-            searchResults: g,
-            searchFetching: _,
+            handleCreateOrAddGuild: _,
+            searchResults: p,
+            searchFetching: g,
         } = e;
-    if (_) t = (0, i.jsx)("div", { className: o.$$, children: (0, i.jsx)(s.y$y, { className: o.u1 }) });
-    else if (0 === g.length) {
+    if (g) t = (0, i.jsx)("div", { className: o.$$, children: (0, i.jsx)(s.y$y, { className: o.u1 }) });
+    else if (0 === p.length) {
         let e =
-            null != p
+            null != _
                 ? a.intl.format(a.t.qWFupn, {
                       addServerHook: function (e, t) {
-                          return (0, i.jsx)(s.MzZ, { onClick: p, children: e }, t);
+                          return (0, i.jsx)(s.MzZ, { onClick: _, children: e }, t);
                       },
                   })
                 : a.intl.string(a.t.vYyEnv);
@@ -44,7 +44,7 @@ let u = (e) => {
                 (0, i.jsx)(s.Text, { variant: "text-md/normal", color: "text-default", className: c.av, children: e }),
             ],
         });
-    } else t = (0, i.jsx)("div", { className: o.vY, children: g.map((e) => (0, i.jsx)(r.A, { entry: e }, e.guildId)) });
+    } else t = (0, i.jsx)("div", { className: o.vY, children: p.map((e) => (0, i.jsx)(r.A, { entry: e }, e.guildId)) });
     return (0, i.jsx)("div", {
         className: o.$$,
         children: (0, i.jsxs)(s.ArX, {
@@ -64,7 +64,7 @@ let u = (e) => {
                                 (0, i.jsx)(s.Heading, {
                                     variant: "heading-xl/semibold",
                                     className: c.s7,
-                                    children: a.intl.format(a.t.UkOHRd, { numResults: g.length, query: h }),
+                                    children: a.intl.format(a.t.UkOHRd, { numResults: p.length, query: h }),
                                 }),
                             ],
                         }),

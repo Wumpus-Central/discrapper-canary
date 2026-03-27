@@ -1,8 +1,8 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => g });
 var i = n(627968),
-    r = n(64700),
+    a = n(64700),
     l = n(503698),
-    a = n.n(l),
+    r = n.n(l),
     s = n(735438),
     o = n(421380),
     d = n(397927),
@@ -10,16 +10,16 @@ var i = n(627968),
     u = n(954571),
     A = n(652215),
     h = n(985018),
-    _ = n(861968);
+    _ = n(66762);
 let m = (0, s.debounce)(c.Ay.trackWithMetadata, 500),
-    p = function (e) {
+    g = function (e) {
         let {
             guild: t,
             title: n,
             message: l,
             image: s,
-            type: p,
-            imageStyles: g,
+            type: g,
+            imageStyles: p,
             imageMarginX: E,
             imageMarginTop: I,
             trackingSource: f,
@@ -31,9 +31,9 @@ let m = (0, s.debounce)(c.Ay.trackWithMetadata, 500),
             centerText: v,
             className: y,
         } = e;
-        r.useEffect(() => {
-            m(A.HAw.CHANNEL_NOTICE_VIEWED, { notice_type: p, guild_id: t.id });
-        }, [t.id, p]);
+        a.useEffect(() => {
+            m(A.HAw.CHANNEL_NOTICE_VIEWED, { notice_type: g, guild_id: t.id });
+        }, [t.id, g]);
         let b = null;
         "function" == typeof S
             ? (b = S())
@@ -43,11 +43,11 @@ let m = (0, s.debounce)(c.Ay.trackWithMetadata, 500),
                   className: _.x6,
                   size: o.$n.Sizes.SMALL,
                   onClick: () => {
-                      null != p &&
+                      null != g &&
                           u.default.track(A.HAw.CHANNEL_NOTICE_CTA_CLICKED, {
                               source: f,
                               guild_id: t.id,
-                              notice_type: p,
+                              notice_type: g,
                           }),
                           N?.();
                   },
@@ -62,7 +62,7 @@ let m = (0, s.debounce)(c.Ay.trackWithMetadata, 500),
               (O = (0, i.jsx)(d.Text, {
                   variant: "text-md/medium",
                   color: "text-strong",
-                  className: a()(_.DD, { [_.vG]: null == s }, { [_.gX]: v }),
+                  className: r()(_.DD, { [_.vG]: null == s }, { [_.gX]: v }),
                   children: n,
               }));
         let L = null;
@@ -70,20 +70,20 @@ let m = (0, s.debounce)(c.Ay.trackWithMetadata, 500),
             ? (L = l())
             : null != l &&
               (L = (0, i.jsx)(d.Text, {
-                  className: a()({ [_.gX]: v }),
+                  className: r()({ [_.gX]: v }),
                   variant: "text-sm/normal",
                   color: "text-muted",
                   children: l,
               }));
         let R = null != E ? `${E}px` : "16px";
         return (0, i.jsxs)("div", {
-            className: a()(_.kL, y),
+            className: r()(_.kL, y),
             children: [
                 !0 === C
                     ? null
                     : (0, i.jsx)(d.DUT, {
                           onClick: () => {
-                              c.Ay.trackWithMetadata(A.HAw.CHANNEL_NOTICE_CLOSED, { notice_type: p }), T?.();
+                              c.Ay.trackWithMetadata(A.HAw.CHANNEL_NOTICE_CLOSED, { notice_type: g }), T?.();
                           },
                           className: _.VN,
                           "aria-label": h.intl.string(h.t.WAI6xu),
@@ -95,7 +95,7 @@ let m = (0, s.debounce)(c.Ay.trackWithMetadata, 500),
                         style: { marginTop: `${I}px`, marginLeft: R, marginRight: R },
                         children:
                             "string" == typeof s
-                                ? (0, i.jsx)("img", { className: _.Sl, style: g, src: s, alt: "" })
+                                ? (0, i.jsx)("img", { className: _.Sl, style: p, src: s, alt: "" })
                                 : s,
                     }),
                 (0, i.jsxs)("div", { className: _.iU, children: [O, L, b] }),

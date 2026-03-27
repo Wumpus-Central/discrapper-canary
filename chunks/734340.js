@@ -13,8 +13,8 @@ var a = n(627968),
     x = n(28974),
     p = n(991347),
     g = n(871317),
-    f = n(698638),
-    _ = n(254810);
+    _ = n(698638),
+    f = n(62080);
 function v() {
     let [e, t] = (0, i.useState)(!1),
         [n, s] = (0, i.useState)(!1),
@@ -45,10 +45,10 @@ function v() {
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsxs)("div", {
-                className: _.ne,
+                className: f.ne,
                 children: [
                     (0, a.jsxs)("div", {
-                        className: _.gO,
+                        className: f.gO,
                         children: [
                             (0, a.jsx)(l.Button, {
                                 size: "sm",
@@ -69,7 +69,7 @@ function v() {
                         ],
                     }),
                     (0, a.jsxs)("div", {
-                        className: _.uQ,
+                        className: f.uQ,
                         children: [
                             e && (0, a.jsx)(d.Ix, {}),
                             n &&
@@ -84,11 +84,11 @@ function v() {
                 ],
             }),
             (0, a.jsxs)("div", {
-                className: _.iW,
+                className: f.iW,
                 children: [
                     (0, a.jsx)(b, { nameplate: r }, r?.palette?.name),
                     (0, a.jsxs)("div", {
-                        className: _.Uo,
+                        className: f.Uo,
                         children: [
                             (0, a.jsx)(l.Text, {
                                 variant: "text-sm/semibold",
@@ -97,7 +97,7 @@ function v() {
                             (0, a.jsx)(o.A, {
                                 title: "upload image",
                                 description: "upload the background",
-                                icons: f.xi,
+                                icons: _.xi,
                                 onDrop: async (e) => {
                                     let t = URL.createObjectURL(e[0]),
                                         n = e[0],
@@ -106,7 +106,7 @@ function v() {
                                 },
                             }),
                             (0, a.jsx)("div", {
-                                className: _.is,
+                                className: f.is,
                                 children: Object.values(x).map((e) => {
                                     let { url: t } = e;
                                     return (0, a.jsx)(j, { src: t, onSetStatic: T, removeAsset: E }, t);
@@ -162,11 +162,11 @@ function b(e) {
             [],
         ),
         (0, a.jsx)(l.IpV, {
-            className: _.Fp,
+            className: f.Fp,
             orientation: "horizontal",
             children: (0, a.jsxs)("div", {
                 ref: r,
-                className: _.ey,
+                className: f.ey,
                 style: { width: `${n}px` },
                 children: [
                     (0, a.jsx)(l.Text, { variant: "text-sm/semibold", children: "Memberlist" }),
@@ -175,7 +175,7 @@ function b(e) {
                     (0, a.jsx)(T, { nameplate: t }),
                     (0, a.jsx)(l.Text, { variant: "text-sm/semibold", children: "RTC" }),
                     (0, a.jsx)(S, { nameplate: t }),
-                    (0, a.jsx)("div", { className: _.Di, onMouseDown: m }),
+                    (0, a.jsx)("div", { className: f.Di, onMouseDown: m }),
                 ],
             }),
         })
@@ -184,16 +184,16 @@ function b(e) {
 function j(e) {
     let { src: t, onSetStatic: n, removeAsset: i } = e;
     return (0, a.jsxs)("div", {
-        className: _.xO,
+        className: f.xO,
         children: [
             (0, a.jsx)(l.DUT, {
                 onClick: () => i(t),
-                className: _.yV,
+                className: f.yV,
                 children: (0, a.jsx)(l.PGe, { size: "custom", width: 16, height: 16, name: "x" }),
             }),
-            (0, a.jsx)("img", { className: _.Ez, src: t, alt: "" }),
+            (0, a.jsx)("img", { className: f.Ez, src: t, alt: "" }),
             (0, a.jsx)("div", {
-                className: _.Lu,
+                className: f.Lu,
                 children: (0, a.jsx)(l.Button, {
                     onClick: () => n(t),
                     size: "sm",
@@ -207,7 +207,7 @@ function j(e) {
 function A(e) {
     let { label: t, onClick: n } = e;
     return (0, a.jsxs)("div", {
-        className: _.Uu,
+        className: f.Uu,
         children: [
             (0, a.jsx)(l.Text, { variant: "text-sm/normal", children: "coming soon" }),
             (0, a.jsx)(l.Button, { variant: "secondary", size: "sm", text: t, disabled: !0, onClick: n }),
@@ -217,14 +217,14 @@ function A(e) {
 function C(e) {
     let { label: t, onChange: n } = e;
     return (0, a.jsxs)("div", {
-        className: _.Im,
+        className: f.Im,
         children: [
             (0, a.jsx)(l.Text, { variant: "text-sm/normal", children: t }),
             (0, a.jsx)("input", {
                 onChange: (e) => {
                     n(e.target.value);
                 },
-                className: _.QL,
+                className: f.QL,
                 placeholder: "#000000",
             }),
         ],
@@ -234,13 +234,13 @@ function y(e) {
     let { nameplate: t } = e,
         n = (0, s.bG)([c.default], () => c.default.getCurrentUser());
     return (0, a.jsx)("div", {
-        className: _.VH,
+        className: f.VH,
         children: (0, a.jsxs)("div", {
-            className: _.H1,
+            className: f.H1,
             children: [
-                (0, a.jsx)(l.Text, { className: _.Pf, variant: "text-sm/semibold", children: "DEFAULT" }),
+                (0, a.jsx)(l.Text, { className: f.Pf, variant: "text-sm/semibold", children: "DEFAULT" }),
                 (0, a.jsx)(r.A, { nameplate: t, user: n, currentUser: n }),
-                (0, a.jsx)(l.Text, { className: _.Pf, variant: "text-sm/semibold", children: "FOCUSED" }),
+                (0, a.jsx)(l.Text, { className: f.Pf, variant: "text-sm/semibold", children: "FOCUSED" }),
                 (0, a.jsxs)("div", {
                     children: [
                         (0, a.jsx)(r.A, { nameplate: t, selected: !0, user: n, currentUser: n }),
@@ -254,13 +254,13 @@ function y(e) {
 function T(e) {
     let { nameplate: t } = e;
     return (0, a.jsx)("div", {
-        className: _.VH,
+        className: f.VH,
         children: (0, a.jsxs)("div", {
-            className: _.H1,
+            className: f.H1,
             children: [
-                (0, a.jsx)(l.Text, { className: _.Pf, variant: "text-sm/semibold", children: "DEFAULT" }),
+                (0, a.jsx)(l.Text, { className: f.Pf, variant: "text-sm/semibold", children: "DEFAULT" }),
                 (0, a.jsx)(g.A, { nameplate: t }),
-                (0, a.jsx)(l.Text, { className: _.Pf, variant: "text-sm/semibold", children: "FOCUSED" }),
+                (0, a.jsx)(l.Text, { className: f.Pf, variant: "text-sm/semibold", children: "FOCUSED" }),
                 (0, a.jsxs)("div", {
                     children: [(0, a.jsx)(g.A, { selected: !0, nameplate: t }), (0, a.jsx)(g.A, { selected: !0 })],
                 }),
@@ -271,7 +271,7 @@ function T(e) {
 function S(e) {
     let { nameplate: t } = e;
     return (0, a.jsx)("div", {
-        className: _.VH,
-        children: (0, a.jsx)("div", { className: _.X2, children: (0, a.jsx)(x.A, { nameplate: t }) }),
+        className: f.VH,
+        children: (0, a.jsx)("div", { className: f.X2, children: (0, a.jsx)(x.A, { nameplate: t }) }),
     });
 }

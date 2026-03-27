@@ -1,4 +1,4 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => A });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
@@ -8,43 +8,43 @@ var i = n(627968),
     d = n(287809),
     c = n(65470),
     u = n(400669),
-    _ = n(736455),
-    m = n(876587),
+    m = n(736455),
+    _ = n(876587),
     g = n(985018),
-    A = n(798294);
-let x = (e) => {
+    x = n(69894);
+let A = (e) => {
     let { navBarSections: t, activeSectionId: n } = e,
-        x = {
-            [_.k.HOME]: g.intl.string(g.t.uGRXjS),
-            [_.k.WHATS_NEW]: g.intl.string(g.t["mfcR/v"]),
-            [_.k.BEST_OF_NITRO]: g.intl.string(g.t.xQKkE8),
-            [_.k.PLANS]: g.intl.string(g.t.wyNMnm),
-            [_.k.COMPARE]: g.intl.string(g.t.pwD7If),
+        A = {
+            [m.k.HOME]: g.intl.string(g.t.uGRXjS),
+            [m.k.WHATS_NEW]: g.intl.string(g.t["mfcR/v"]),
+            [m.k.BEST_OF_NITRO]: g.intl.string(g.t.xQKkE8),
+            [m.k.PLANS]: g.intl.string(g.t.wyNMnm),
+            [m.k.COMPARE]: g.intl.string(g.t.pwD7If),
         },
         h = (0, l.bG)([d.default], () => d.default.getCurrentUser()),
         p = (0, o.Gh)("premium_marketing_nav_bar") && null != h,
-        T = s.useRef(null),
-        E = Object.values(t).sort((e, t) => e.order - t.order);
+        f = s.useRef(null),
+        T = Object.values(t).sort((e, t) => e.order - t.order);
     return (0, i.jsxs)(r.A, {
-        className: A.TQ,
+        className: x.TQ,
         transparent: !0,
         children: [
             (0, i.jsxs)("div", {
-                className: A.Wc,
+                className: x.Wc,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: A.wG,
+                        className: x.wG,
                         children: [
-                            (0, i.jsx)(a.tvc, { className: A.nE, colorClass: A.oG }),
+                            (0, i.jsx)(a.tvc, { className: x.nE, colorClass: x.oG }),
                             (0, i.jsx)("div", {
-                                className: A.zc,
-                                children: E.map((e) => {
+                                className: x.zc,
+                                children: T.map((e) => {
                                     let t = n === e.id,
-                                        s = x[e.id];
+                                        s = A[e.id];
                                     return (0, i.jsxs)(
                                         a.DUT,
                                         {
-                                            className: A.S0,
+                                            className: x.S0,
                                             onClick: e.scrollToSection,
                                             children: [
                                                 (0, i.jsx)(a.Text, {
@@ -52,7 +52,7 @@ let x = (e) => {
                                                     color: "text-strong",
                                                     children: s,
                                                 }),
-                                                t && (0, i.jsx)("div", { className: A.W0 }),
+                                                t && (0, i.jsx)("div", { className: x.W0 }),
                                             ],
                                         },
                                         s,
@@ -62,15 +62,15 @@ let x = (e) => {
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: A.MQ,
+                        className: x.MQ,
                         children: [
-                            p && (0, i.jsx)(u.l, { ref: T, size: "sm" }),
+                            p && (0, i.jsx)(u.l, { ref: f, size: "sm" }),
                             (0, i.jsx)(c.A, { size: "sm", variant: "overlay-secondary" }),
                         ],
                     }),
                 ],
             }),
-            p && (0, i.jsx)(m.O, { targetElementRef: T }),
+            p && (0, i.jsx)(_.O, { targetElementRef: f }),
         ],
     });
 };

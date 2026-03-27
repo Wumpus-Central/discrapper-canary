@@ -2,10 +2,10 @@
 n.d(t, { A: () => u });
 var i = n(627968),
     s = n(64700),
-    l = n(4208),
+    l = n(880013),
     r = n(397927),
     a = n(770178),
-    o = n(637707);
+    o = n(727528);
 let c = Math.ceil(Math.sqrt(115200)),
     d = (c - 240) / 2,
     u = s.forwardRef(function (e, t) {
@@ -15,37 +15,37 @@ let c = Math.ceil(Math.sqrt(115200)),
                 h(e.contentRect.width);
             }, []),
             m = (0, a.w)(A, [], { fireOnMount: !0 }),
-            [{ shineSpring: p }, g] = (0, r.zhh)(() => ({
+            [{ shineSpring: _ }, p] = (0, r.zhh)(() => ({
                 from: { shineSpring: 0 },
                 config: { clamp: !0, mass: 1, tension: 170, friction: 38 },
             })),
-            _ = s.useCallback(
+            g = s.useCallback(
                 (e, t) => {
-                    g({ shineSpring: 1, delay: t });
+                    p({ shineSpring: 1, delay: t });
                 },
-                [g],
+                [p],
             ),
             f = s.useCallback(() => {
-                g({ shineSpring: 0, immediate: !0 });
-            }, [g]),
+                p({ shineSpring: 0, immediate: !0 });
+            }, [p]),
             x = s.useMemo(() => {
                 let e = (0, i.jsx)(l.animated.div, {
                     className: o.q2,
                     style: {
-                        transform: p.to(
+                        transform: _.to(
                             (e) => `translateX(calc(${e * u}px + ${e * c}px)) translateY(-50%) rotate(45deg)`,
                         ),
                     },
                 });
                 return n(o.VU, o.Qq, o.Kk, e);
-            }, [n, u, p]);
+            }, [n, u, _]);
         return (
-            s.useImperativeHandle(t, () => ({ onMouseEnter: _, onMouseLeave: f }), [_, f]),
+            s.useImperativeHandle(t, () => ({ onMouseEnter: g, onMouseLeave: f }), [g, f]),
             (0, i.jsx)("div", {
                 className: o.iE,
-                onMouseEnter: _,
+                onMouseEnter: g,
                 onMouseLeave: f,
-                onFocus: _,
+                onFocus: g,
                 onBlur: f,
                 ref: m,
                 style: { "--custom-shine-dimensions": "240px", "--custom-shine-rotated-dimensions-delta": `${d}px` },

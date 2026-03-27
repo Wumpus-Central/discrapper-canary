@@ -14,23 +14,23 @@ var i = n(627968),
     x = n(398590),
     h = n(736653),
     _ = n(775602),
-    A = n(793574),
-    p = n(268218),
+    p = n(793574),
+    A = n(268218),
     f = n(379848),
     j = n(201275),
     N = n(20851),
     E = n(176201),
     b = n(676608),
-    T = n(828162),
-    C = n(801264),
+    C = n(828162),
+    T = n(801264),
     I = n(34457),
     v = n(576705),
     S = n(636042),
     y = n(396816),
     R = n(545567),
     O = n(785312),
-    G = n(319805),
-    L = n(316506),
+    L = n(319805),
+    G = n(316506),
     D = n(486619),
     M = n(631103),
     k = n(927573),
@@ -38,12 +38,12 @@ var i = n(627968),
     P = n(652215),
     w = n(178758),
     B = n(985018),
-    F = n(333354),
-    H = n(617375),
-    V = n(261223),
+    F = n(136708),
+    H = n(75601),
+    V = n(177424),
     z = n(598227),
     W = n(406853);
-let K = (0, p.Fe)({ createPromise: () => n.e("66147").then(n.bind(n, 48736)), webpackId: 48736 }),
+let K = (0, A.Fe)({ createPromise: () => n.e("66147").then(n.bind(n, 48736)), webpackId: 48736 }),
     Y = o().debounce((e, t) => (0, S.nK)(e, t), 200);
 function X(e) {
     let { role: t, disabled: n } = e,
@@ -70,9 +70,9 @@ function J(e) {
         o = (0, R.$)(B.intl.string(B.t.Mi9Kbe)),
         c = (0, h.Ay)(),
         _ = (0, j.qE)(n, t),
-        p = { dark: { src: z, name: t.name }, light: { src: W, name: t.name } };
+        A = { dark: { src: z, name: t.name }, light: { src: W, name: t.name } };
     function b() {
-        (0, T.A)(n, A.A.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT), (0, x.jH)();
+        (0, C.A)(n, p.A.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT), (0, x.jH)();
     }
     return (0, i.jsx)(f.Ay, {
         contentTypes: [u.M.GUILD_SETTINGS_ROLE_STYLES_NEW_BADGE],
@@ -111,7 +111,7 @@ function J(e) {
                                                     },
                                                     message: o,
                                                     preview: !0,
-                                                    roleIcon: _ ?? ((0, m.qB)(c) ? p.light : p.dark),
+                                                    roleIcon: _ ?? ((0, m.qB)(c) ? A.light : A.dark),
                                                     isGroupStart: !0,
                                                     disableInteraction: !0,
                                                     previewGuildId: n,
@@ -173,7 +173,7 @@ function Z() {
         children: B.intl.string(F.default["+/IHLl"]),
     });
 }
-function Q(e) {
+function q(e) {
     let { role: t, disabled: n, currentStyle: s, hasEnhancedRoleColors: l } = e;
     return (0, i.jsx)("div", {
         className: H.Ei,
@@ -208,7 +208,7 @@ function Q(e) {
         }),
     });
 }
-function q(e) {
+function Q(e) {
     let { role: t, guildId: n, selectedStyle: s, disableInteraction: l } = e,
         a = (0, R.$)(B.intl.string(B.t.Mi9Kbe)),
         o = {
@@ -294,8 +294,8 @@ function ee(e) {
         m = (0, I.Oy)(n),
         x = s || m,
         h = (0, c.bG)([v.A], () => v.A.canImpersonateRole(t, n)),
-        { headerHeight: _, headerRef: A } = (0, O.A)(0),
-        { scrolledToTop: p, handleScroll: f } = (0, L.u)();
+        { headerHeight: _, headerRef: p } = (0, O.A)(0),
+        { scrolledToTop: A, handleScroll: f } = (0, G.u)();
     return (0, i.jsx)(g.GtU, {
         className: H.XG,
         style: { scrollPaddingTop: _ },
@@ -304,9 +304,9 @@ function ee(e) {
             className: V.Q,
             children: [
                 (0, i.jsx)("div", {
-                    className: r()(V.wx, V.ln, { [V.l6]: !p }),
-                    ref: A,
-                    children: (0, i.jsx)(L.A, {
+                    className: r()(V.wx, V.ln, { [V.l6]: !A }),
+                    ref: p,
+                    children: (0, i.jsx)(G.A, {
                         guild: t,
                         role: n,
                         selectedSection: k.T$.DISPLAY,
@@ -321,17 +321,17 @@ function ee(e) {
                     (0, i.jsx)(J, { role: n, guildId: t.id, selectedStyle: u, disabled: x, shouldShowUpsell: d }),
                 u !== y.y.HOLOGRAPHIC &&
                     null != u &&
-                    (0, i.jsx)(Q, { role: n, disabled: x, currentStyle: u, hasEnhancedRoleColors: a }),
+                    (0, i.jsx)(q, { role: n, disabled: x, currentStyle: u, hasEnhancedRoleColors: a }),
                 u === y.y.HOLOGRAPHIC &&
-                    (0, i.jsx)(C.A, {
+                    (0, i.jsx)(T.A, {
                         className: H.u,
                         children: (0, i.jsx)(g.Text, {
                             variant: "text-xs/medium",
                             children: B.intl.string(F.default.tBhCyr),
                         }),
                     }),
-                (0, i.jsx)(G.A, { guild: t, disabled: x, role: n }),
-                (0, i.jsx)(q, { role: n, guildId: t.id, selectedStyle: u, disableInteraction: !a }),
+                (0, i.jsx)(L.A, { guild: t, disabled: x, role: n }),
+                (0, i.jsx)(Q, { role: n, guildId: t.id, selectedStyle: u, disableInteraction: !a }),
                 (0, i.jsx)(g.cGx, { className: H.yF }),
                 (0, i.jsx)($, { role: n, disabled: x }),
                 h

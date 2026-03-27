@@ -4,13 +4,13 @@ var a = n(627968),
     i = n(311907),
     r = n(397927),
     s = n(769015),
-    o = n(287809),
-    c = n(486020),
-    d = n(239031);
+    c = n(287809),
+    o = n(486020),
+    d = n(52653);
 let u = l.memo(function (e) {
     let { application: t } = e,
-        n = (0, i.bG)([o.default], () => o.default.getCurrentUser()),
-        l = c.Ay.getUserAvatarURL(n);
+        n = (0, i.bG)([c.default], () => c.default.getCurrentUser()),
+        l = o.Ay.getUserAvatarURL(n);
     return (0, a.jsxs)("div", {
         className: d.Y,
         children: [

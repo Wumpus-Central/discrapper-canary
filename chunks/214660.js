@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => I, H: () => E });
+n.d(t, { A: () => I, H: () => C });
 var i,
     s = n(627968);
 n(64700);
@@ -13,16 +13,16 @@ var l = n(503698),
     h = n(915089),
     A = n(557722),
     m = n(834942),
-    p = n(287809),
-    g = n(652215),
-    _ = n(53516),
+    _ = n(287809),
+    p = n(652215),
+    g = n(53516),
     f = n(985018),
-    x = n(609657),
-    C = n(442078),
-    E = (((i = {})[(i.VOICE = 0)] = "VOICE"), i);
+    x = n(14688),
+    E = n(467935),
+    C = (((i = {})[(i.VOICE = 0)] = "VOICE"), i);
 let I = (e) => {
     let { type: t, guildId: i, closePopout: l } = e,
-        E = (0, h.GV)(),
+        C = (0, h.GV)(),
         {
             notClaimed: I,
             notEmailVerified: N,
@@ -41,22 +41,22 @@ let I = (e) => {
               : N
                 ? ((y = f.intl.string(f.t.vdSOpz)), (j = f.intl.string(f.t.lm1UKt)))
                 : T
-                  ? ((y = f.intl.formatToPlainString(f.t.v1ktYb, { min: g.$8o.MEMBER_AGE })),
+                  ? ((y = f.intl.formatToPlainString(f.t.v1ktYb, { min: p.$8o.MEMBER_AGE })),
                     (j = f.intl.string(f.t.BddRzS)))
                   : S &&
-                    ((y = f.intl.formatToPlainString(f.t.sncw41, { min: g.$8o.ACCOUNT_AGE })),
+                    ((y = f.intl.formatToPlainString(f.t.sncw41, { min: p.$8o.ACCOUNT_AGE })),
                     (j = f.intl.string(f.t.BddRzS)))),
     null == v || null == y)
         ? null
         : (0, s.jsxs)(c.lGe, {
-              className: r()(C.popover, x.kL),
-              "aria-labelledby": E,
+              className: r()(E.popover, x.kL),
+              "aria-labelledby": C,
               children: [
                   (0, s.jsx)("img", { alt: "", className: x.Sl, src: n(303528) }),
                   (0, s.jsxs)("div", {
                       className: x.Qs,
                       children: [
-                          (0, s.jsx)(c.Heading, { variant: "heading-md/semibold", id: E, children: v }),
+                          (0, s.jsx)(c.Heading, { variant: "heading-md/semibold", id: C, children: v }),
                           (0, s.jsx)(c.Text, { color: "text-default", variant: "text-sm/normal", children: y }),
                           (0, s.jsxs)("div", {
                               className: x.UD,
@@ -76,7 +76,7 @@ let I = (e) => {
                                                                 async () => {
                                                                     let { default: e } = await Promise.all([
                                                                         n.e("84704"),
-                                                                        n.e("5966"),
+                                                                        n.e("75904"),
                                                                     ]).then(n.bind(n, 615715));
                                                                     return (t) =>
                                                                         (0, s.jsx)(e, {
@@ -84,14 +84,14 @@ let I = (e) => {
                                                                             ...t,
                                                                         });
                                                                 },
-                                                                { modalKey: _.V },
+                                                                { modalKey: g.V },
                                                             )
                                                           : N &&
                                                             (d.A.verifyResend(),
                                                             (0, o.A)({
                                                                 title: f.intl.string(f.t.LykQYk),
                                                                 subtitle: f.intl.format(f.t.azKEPy, {
-                                                                    email: p.default.getCurrentUser()?.email,
+                                                                    email: _.default.getCurrentUser()?.email,
                                                                 }),
                                                             })),
                                                         l();

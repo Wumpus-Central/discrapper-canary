@@ -22,7 +22,7 @@ var r = n(627968),
     S = n(652215),
     y = n(788868),
     v = n(985018),
-    N = n(787288);
+    N = n(60230);
 let C = (0, E.createChannelRecord)({ id: "1", type: S.rbe.DM });
 function R(e) {
     let { user: t, guildId: s, channelId: E, onClose: S, disableAutoFocus: R = !1, upsell: O = !1 } = e,

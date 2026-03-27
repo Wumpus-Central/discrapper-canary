@@ -3,8 +3,8 @@ n.d(t, { A: () => K });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    a = n.n(l),
-    r = n(158954),
+    r = n.n(l),
+    a = n(158954),
     o = n(311907),
     c = n(990078),
     d = n(397927),
@@ -12,13 +12,13 @@ var i = n(627968),
     h = n(390435),
     A = n(775121),
     m = n(629357),
-    p = n(599677),
-    g = n(12351),
-    _ = n(915089),
+    _ = n(599677),
+    p = n(12351),
+    g = n(915089),
     f = n(734057),
     x = n(458294),
-    C = n(71393),
-    E = n(290863),
+    E = n(71393),
+    C = n(290863),
     I = n(222823),
     N = n(309010),
     b = n(607567),
@@ -31,7 +31,7 @@ var i = n(627968),
     O = n(826050),
     L = n(652215),
     M = n(985018),
-    D = n(171814);
+    D = n(992928);
 let G = () =>
     (0, i.jsxs)("div", {
         className: D.p$,
@@ -49,7 +49,7 @@ let G = () =>
 class U extends s.Component {
     static defaultProps = { unread: !1 };
     render() {
-        let e = C.A.getGuild(this.props.channel.guild_id);
+        let e = E.A.getGuild(this.props.channel.guild_id);
         return (0, i.jsx)(R.c3, {
             ...this.props,
             children: (0, i.jsx)("div", { className: D.MD, children: null != e ? e.name : null }),
@@ -75,22 +75,22 @@ let P = o.Ay.connectStores([I.Ay, f.A], (e) => {
         let { guild: t } = e;
         return { unread: x.default.hasUnread(t.id) };
     })(R.OS),
-    V = o.Ay.connectStores([I.Ay, E.A], (e) => {
+    V = o.Ay.connectStores([I.Ay, C.A], (e) => {
         let { channel: t } = e,
             n = null,
-            i = E.A.getState().statuses;
+            i = C.A.getState().statuses;
         return (
             t.recipients?.some((e) => i[e] === L.clD.ONLINE) && (n = L.clD.ONLINE),
             { mentions: I.Ay.getMentionCount(t.id), status: n }
         );
     })(R.nG),
-    B = o.Ay.connectStores([f.A, I.Ay, E.A], (e) => {
+    B = o.Ay.connectStores([f.A, I.Ay, C.A], (e) => {
         let { user: t } = e,
             n = f.A.getDMFromUserId(t.id);
         return {
             mentions: null != n ? I.Ay.getMentionCount(n) : 0,
-            status: E.A.getStatus(t.id),
-            isMobile: E.A.isMobileOnline(t.id),
+            status: C.A.getStatus(t.id),
+            isMobile: C.A.isMobileOnline(t.id),
         };
     })(R.KJ);
 function H(e, t, n) {
@@ -103,7 +103,7 @@ function H(e, t, n) {
 class F extends s.PureComponent {
     scrollerRef = s.createRef();
     inputRef = s.createRef();
-    _listId = (0, _.Ld)();
+    _listId = (0, g.Ld)();
     state = { query: this.props.query, mouseFocusDisabled: !0 };
     componentDidMount() {
         A.A.disable(), A.A.enableTemp(h.w);
@@ -153,23 +153,23 @@ class F extends s.PureComponent {
                         n.e("16301"),
                         n.e("22191"),
                         n.e("25961"),
-                        n.e("21968"),
+                        n.e("33144"),
                         n.e("35894"),
                         n.e("50796"),
                         n.e("8458"),
                         n.e("11810"),
-                        n.e("39048"),
+                        n.e("4260"),
                         n.e("30453"),
                         n.e("56475"),
                         n.e("54469"),
-                        n.e("51438"),
+                        n.e("70522"),
                     ]).then(n.bind(n, 544676));
                     return (n) => (0, i.jsx)(e, { ...n, guild: t.record, onSelect: y.jD, hideSettings: !0 });
                 });
             case m.rD.TEXT_CHANNEL:
             case m.rD.VOICE_CHANNEL:
                 let s = t.record,
-                    l = C.A.getGuild(s.getGuildId());
+                    l = E.A.getGuild(s.getGuildId());
                 if (null == l) return;
                 switch (s.type) {
                     case L.rbe.GUILD_TEXT:
@@ -225,7 +225,7 @@ class F extends s.PureComponent {
                 });
             case m.rD.USER:
                 return (0, u.L3)(e, async () => {
-                    let { default: e } = await Promise.all([n.e("97262"), n.e("32418"), n.e("47969")]).then(
+                    let { default: e } = await Promise.all([n.e("97262"), n.e("32418"), n.e("84821")]).then(
                         n.bind(n, 668569),
                     );
                     return (n) => (0, i.jsx)(e, { ...n, user: t.record, onSelect: y.jD });
@@ -347,7 +347,7 @@ class F extends s.PureComponent {
         let { row: t } = e,
             n = this.props.results[t],
             { selectedIndex: s } = this.props,
-            { showScores: l } = p.A.getCurrentConfig({ location: "62f4be_1" }, { autoTrackExposure: !1 });
+            { showScores: l } = _.A.getCurrentConfig({ location: "62f4be_1" }, { autoTrackExposure: !1 });
         switch (n.type) {
             case m.rD.HEADER:
                 return (0, i.jsx)(R.Y9, { children: n.record.text }, `${n.type}-${n.record.id}`);
@@ -475,9 +475,9 @@ class F extends s.PureComponent {
         }
     };
     renderProtip() {
-        return (0, i.jsx)(g.A, {
-            className: a()(D.PP, { [D.ov]: this.state.query.length > 0 }),
-            type: g.A.Types.INLINE,
+        return (0, i.jsx)(p.A, {
+            className: r()(D.PP, { [D.ov]: this.state.query.length > 0 }),
+            type: p.A.Types.INLINE,
             children: M.intl.format(M.t.wukqXQ, {
                 userSymbolHook: (e, t) => H(t, m.AT.USER, M.intl.string(M.t.GQRCGn)),
                 textChannelSymbolHook: (e, t) => H(t, m.AT.TEXT_CHANNEL, M.intl.string(M.t.wrwhuZ)),
@@ -493,7 +493,7 @@ class F extends s.PureComponent {
         return t ? null : (0, i.jsx)(O.A, { hasQuery: e.length > 0 && n.length > 0 });
     }
     render() {
-        return (0, i.jsx)(r.dWK, {
+        return (0, i.jsx)(a.dWK, {
             "aria-label": M.intl.string(M.t.ZvKwYa),
             size: "lg",
             transitionState: this.props.transitionState,

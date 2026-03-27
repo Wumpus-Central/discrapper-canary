@@ -11,7 +11,7 @@ var i = n(627968),
     A = n(652215),
     h = n(613057),
     _ = n(985018),
-    m = n(34960);
+    m = n(583779);
 function g(e) {
     let { applicationId: t } = e.match.params,
         [g, p] = a.useState(!1),

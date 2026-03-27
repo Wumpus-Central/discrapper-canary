@@ -1,5 +1,5 @@
 "use strict";
-r.d(t, { A: () => x });
+r.d(t, { A: () => f });
 var n = r(627968),
     i = r(64700),
     s = r(503698),
@@ -10,15 +10,15 @@ var n = r(627968),
     d = r(538355),
     u = r(699352),
     m = r(715628),
-    h = r(752636),
-    p = r(119907);
-let x = i.memo(function (e) {
+    p = r(752636),
+    h = r(10029);
+let f = i.memo(function (e) {
     let {
             message: t,
             channel: r,
             compact: s,
-            className: x,
-            isGroupStart: f,
+            className: f,
+            isGroupStart: x,
             hideSimpleEmbedContent: v = !0,
             disableInteraction: _,
             previewGuildId: g,
@@ -27,19 +27,19 @@ let x = i.memo(function (e) {
         } = e,
         N = g ?? (0, c.U)(t),
         C = (0, l.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
-        { content: b } = (0, d.A)(t, {
+        { content: I } = (0, d.A)(t, {
             hideSimpleEmbedContent: v,
             allowList: C,
             allowHeading: C,
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
-        R = i.useMemo(() => (0, h.A)({ ...e, channel: r, guildId: N }), [e, r, N]);
+        R = i.useMemo(() => (0, p.A)({ ...e, channel: r, guildId: N }), [e, r, N]);
     return (0, n.jsx)(o.A, {
         compact: s,
-        className: a()(x, { [p.iU]: !0, [p.HJ]: !s, [p._A]: f }),
+        className: a()(f, { [h.iU]: !0, [h.HJ]: !s, [h._A]: x }),
         childrenHeader: R,
-        childrenMessageContent: (0, m.A)(e, b),
+        childrenMessageContent: (0, m.A)(e, I),
         childrenAccessories: null != r ? (0, u.J)({ message: t, channel: r, compact: s }, !1, !1) : null,
         disableInteraction: _,
         author: j,

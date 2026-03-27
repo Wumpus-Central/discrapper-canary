@@ -5,20 +5,20 @@ var i = n(627968),
     l = n(503698),
     r = n.n(l),
     a = n(131346),
-    o = n(4208),
+    o = n(880013),
     c = n(837381),
     d = n(607399),
     u = n(417597),
     h = n(451988),
     A = n(397927),
     m = n(308528),
-    p = n(442433),
-    g = n(817281),
-    _ = n(658128),
+    _ = n(442433),
+    p = n(817281),
+    g = n(658128),
     f = n(976860),
     x = n(345942),
-    C = n(260509),
-    E = n(696451),
+    E = n(260509),
+    C = n(696451),
     I = n(711014),
     N = n(676279),
     b = n(263715),
@@ -31,10 +31,10 @@ var i = n(627968),
     O = n(65611),
     L = n(652215),
     M = n(985018),
-    D = n(604418);
+    D = n(135759);
 let G = { analyticsSource: { page: L.liQ.GUILD_CHANNEL, section: L.JJy.CHANNEL_LIST, object: L.ZSU.CHANNEL } };
 function U(e, t) {
-    (0, p.L3)(e, async () => {
+    (0, _.L3)(e, async () => {
         let { default: e } = await Promise.all([
             n.e("43600"),
             n.e("68587"),
@@ -43,16 +43,16 @@ function U(e, t) {
             n.e("16301"),
             n.e("22191"),
             n.e("25961"),
-            n.e("91872"),
+            n.e("33144"),
             n.e("35894"),
             n.e("50796"),
             n.e("8458"),
             n.e("11810"),
-            n.e("34656"),
+            n.e("4260"),
             n.e("30453"),
             n.e("56475"),
             n.e("54469"),
-            n.e("48892"),
+            n.e("70522"),
         ]).then(n.bind(n, 544676));
         return (n) => (0, i.jsx)(e, { ...n, guild: t });
     });
@@ -62,10 +62,10 @@ let P = s.memo(function (e) {
             guildNode: t,
             setRef: n,
             onDragStart: l,
-            onDragEnd: p,
+            onDragEnd: _,
             route: P,
-            guild: k,
-            animatable: w,
+            guild: w,
+            animatable: k,
             selected: V = !1,
             unread: B = !1,
             mediaState: H,
@@ -101,7 +101,7 @@ let P = s.memo(function (e) {
                 { type: t.type, nodeId: t.id }
             ),
             end() {
-                p?.(), (0, g.um)(I.Ay.getCompatibleGuildFolders());
+                _?.(), (0, p.um)(I.Ay.getCompatibleGuildFolders());
             },
             collect: (e) => ({ dragging: e.isDragging() }),
         }),
@@ -110,25 +110,25 @@ let P = s.memo(function (e) {
         ed = !q && eo,
         [eu, eh] = s.useState(!1),
         [eA, em] = s.useState(!1),
-        [ep] = s.useState(() => new h.J_(70, () => em(!0))),
-        eg = (0, N.nr)() && !d.Fr;
-    s.useEffect(() => () => ep.cancel(), [ep]);
-    let e_ = s.useCallback(() => {
+        [e_] = s.useState(() => new h.J_(70, () => em(!0))),
+        ep = (0, N.nr)() && !d.Fr;
+    s.useEffect(() => () => e_.cancel(), [e_]);
+    let eg = s.useCallback(() => {
             null != P ? (0, f.pX)(P, { state: G }) : (0, x.u)(ee, { state: G });
         }, [ee, P]),
         ef = s.useCallback(() => {
-            if (null != P || null == k || F || !X) return;
-            let e = (0, _.W)(k.id);
-            null != e && m.A.preload(k.id, e);
-        }, [P, k, F, X]),
-        ex = (0, u.bG)([E.Ay], () => E.Ay.isCurrentUserGuest(ee)),
-        eC = s.useCallback(
-            (e) => {
-                null == k || ex || Y(e, k);
-            },
-            [k, Y, ex],
-        ),
+            if (null != P || null == w || F || !X) return;
+            let e = (0, g.W)(w.id);
+            null != e && m.A.preload(w.id, e);
+        }, [P, w, F, X]),
+        ex = (0, u.bG)([C.Ay], () => C.Ay.isCurrentUserGuest(ee)),
         eE = s.useCallback(
+            (e) => {
+                null == w || ex || Y(e, w);
+            },
+            [w, Y, ex],
+        ),
+        eC = s.useCallback(
             (e) => {
                 "ArrowLeft" === e.key &&
                     null != et &&
@@ -138,9 +138,9 @@ let P = s.memo(function (e) {
         ),
         eI = s.useCallback(
             (e) => {
-                e ? ep.delay() : (ep.cancel(), em(!1));
+                e ? e_.delay() : (e_.cancel(), em(!1));
             },
-            [ep],
+            [e_],
         );
     function eN() {
         q || ec(!0);
@@ -155,9 +155,9 @@ let P = s.memo(function (e) {
             [ee, n],
         ),
         eT = (0, A.rdh)(A.LU0.modules.guildbar.AVATAR_SIZE);
-    if (null == k) return null;
+    if (null == w) return null;
     let ev = (0, i.jsx)(T.A, {
-            guild: k,
+            guild: w,
             show: eA,
             active: V,
             onAnimationStart: function () {
@@ -167,17 +167,17 @@ let P = s.memo(function (e) {
                 eA || eh(!1);
             },
         }),
-        ey = eg
+        ey = ep
             ? (0, i.jsx)(A.jlP, {
-                  ariaLabel: M.intl.formatToPlainString(M.t["/uzRss"], { guildName: k.name, mentions: K }),
-                  name: k.name,
-                  onClick: e_,
+                  ariaLabel: M.intl.formatToPlainString(M.t["/uzRss"], { guildName: w.name, mentions: K }),
+                  name: w.name,
+                  onClick: eg,
                   onMouseEnter: eN,
                   onMouseLeave: eb,
                   onMouseDown: ef,
-                  onContextMenu: eC,
-                  onKeyDown: eE,
-                  icon: (0, C.Iv)(k, 2 * eT, ed && w, !0),
+                  onContextMenu: eE,
+                  onKeyDown: eC,
+                  icon: (0, E.Iv)(w, 2 * eT, ed && k, !0),
                   selected: V || ed,
                   ...ea,
                   "aria-setsize": $,
@@ -192,18 +192,18 @@ let P = s.memo(function (e) {
                                 er(e);
                             }
                           : void 0,
-                      "data-dnd-name": k.name,
+                      "data-dnd-name": w.name,
                       "data-drop-hovering": eA,
                       children: (0, i.jsx)(A.jlP, {
-                          ariaLabel: M.intl.formatToPlainString(M.t["/uzRss"], { guildName: k.name, mentions: K }),
-                          name: k.name,
-                          onClick: e_,
+                          ariaLabel: M.intl.formatToPlainString(M.t["/uzRss"], { guildName: w.name, mentions: K }),
+                          name: w.name,
+                          onClick: eg,
                           onMouseEnter: eN,
                           onMouseLeave: eb,
                           onMouseDown: ef,
-                          onContextMenu: eC,
-                          onKeyDown: eE,
-                          icon: (0, C.Iv)(k, 2 * eT, ed && w, !0),
+                          onContextMenu: eE,
+                          onKeyDown: eC,
+                          icon: (0, E.Iv)(w, 2 * eT, ed && k, !0),
                           selected: V || ed,
                           ...ea,
                           "aria-setsize": $,
@@ -214,14 +214,14 @@ let P = s.memo(function (e) {
               }),
         ej = eA || eu ? ev : ey,
         eR = (0, i.jsx)(v.g4, { children: (0, i.jsx)(j.A, {}) }),
-        eO = eg
+        eO = ep
             ? (0, i.jsx)(o.animated.div, {
                   ref: z
                       ? (e) => {
                             er(e);
                         }
                       : void 0,
-                  "data-dnd-name": k.name,
+                  "data-dnd-name": w.name,
                   style: { scale: null == Q ? 1 : Q },
                   "data-drop-hovering": eA,
                   className: r()(D.rN, { [D.p9]: q, [D.oR]: eA, [D.wH]: eA || V }),
@@ -249,8 +249,8 @@ let P = s.memo(function (e) {
         ref: eS,
         children: [
             (0, i.jsx)(S.A, { hovered: !el && ed, selected: !el && V, unread: !el && B, className: D.Io }),
-            (0, i.jsx)(y.A, { guild: k, disabled: q, isDragging: el, children: el ? eR : eO }),
-            z ? (0, i.jsx)(v.Ay, { name: k.name, targetNode: t, onDragOverChanged: eI }) : null,
+            (0, i.jsx)(y.A, { guild: w, disabled: q, isDragging: el, children: el ? eR : eO }),
+            z ? (0, i.jsx)(v.Ay, { name: w.name, targetNode: t, onDragOverChanged: eI }) : null,
         ],
     });
 });

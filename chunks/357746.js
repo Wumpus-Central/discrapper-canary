@@ -3,8 +3,8 @@ n.d(t, { A: () => b });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    a = n.n(l),
-    r = n(311907),
+    r = n.n(l),
+    a = n(311907),
     o = n(397927),
     c = n(793574),
     d = n(652793),
@@ -16,9 +16,9 @@ var i = n(627968),
     p = n(828162),
     g = n(249584),
     f = n(49999),
-    x = n(333354),
-    C = n(985018),
-    E = n(408392);
+    x = n(136708),
+    E = n(985018),
+    C = n(93290);
 function I(e) {
     let { indicator: t } = e;
     if (null == t) return null;
@@ -42,7 +42,7 @@ let N = { animation: { BEG: 0, END: 75 }, LOOP: { BEG: 76, END: 376 } },
             }, [t, b]),
             T = s.useRef(null),
             v = (0, o.red)(o.DXt),
-            y = (0, r.bG)([h.A], () => h.A.hasLayers()),
+            y = (0, a.bG)([h.A], () => h.A.hasLayers()),
             j = (0, u.xr)((e) => e.fullScreenLayers.length > 0),
             R = v || y || j,
             O = s.useCallback(() => {
@@ -82,16 +82,16 @@ let N = { animation: { BEG: 0, END: 75 }, LOOP: { BEG: 76, END: 376 } },
             children: [
                 (0, i.jsx)(d.G, {
                     ref: T,
-                    className: E.kL,
+                    className: C.kL,
                     id: `skill-trees-${t}`,
                     renderIcon: (e) => (0, i.jsx)(o._Jp, { size: "md", className: e, color: "currentColor" }),
                     background:
                         b?.popout != null &&
                         (0, i.jsx)("div", {
-                            className: E.Fi,
+                            className: C.Fi,
                             children: (0, i.jsx)(o.tvC, {
                                 nextScene: null == L ? "animation" : "LOOP",
-                                className: E.UU,
+                                className: C.UU,
                                 sceneSegments: N,
                                 importData: () => n.e("67807").then(n.t.bind(n, 217762, 19)),
                                 onScenePlay: D,
@@ -99,8 +99,8 @@ let N = { animation: { BEG: 0, END: 75 }, LOOP: { BEG: 76, END: 376 } },
                             }),
                         }),
                     text: (0, i.jsx)("span", {
-                        className: a()({ [E.A7]: b?.showUnread === !0 }),
-                        children: C.intl.string(x.default.yv3DJJ),
+                        className: r()({ [C.A7]: b?.showUnread === !0 }),
+                        children: E.intl.string(x.default.yv3DJJ),
                     }),
                     selected: l,
                     onClick: S,

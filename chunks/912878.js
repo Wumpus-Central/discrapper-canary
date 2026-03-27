@@ -13,24 +13,24 @@ var a = n(627968),
     x = n(704844),
     p = n(734057),
     g = n(994500),
-    f = n(287809),
-    _ = n(645959),
+    _ = n(287809),
+    f = n(645959),
     v = n(263834),
     b = n(865116),
     j = n(716371),
-    A = n(49977),
-    C = n(310086);
+    A = n(664558),
+    C = n(793877);
 function y() {
-    let e = (0, d.yK)([_.default], () => _.default.getSortedChannels()[1]),
+    let e = (0, d.yK)([f.default], () => f.default.getSortedChannels()[1]),
         [t, n] = i.useState(e.length > 0 ? e[0].channelId : void 0),
-        { selectedChannel: s, options: l } = (0, d.cf)([p.A, f.default, g.A], () => ({
+        { selectedChannel: s, options: l } = (0, d.cf)([p.A, _.default, g.A], () => ({
             selectedChannel: p.A.getChannel(t),
             options: e.map((e) => {
                 let t = p.A.getChannel(e.channelId);
                 return {
                     id: e.channelId,
                     value: e.channelId,
-                    label: null != t ? (0, h.m1)(t, f.default, g.A) : e.channelId,
+                    label: null != t ? (0, h.m1)(t, _.default, g.A) : e.channelId,
                     leading:
                         null != t
                             ? (0, a.jsx)(c.euF, { src: (0, m.Y)(t), "aria-hidden": !0, size: c._3J.SIZE_16 })

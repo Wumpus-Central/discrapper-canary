@@ -3,8 +3,8 @@ n.d(t, { A: () => j });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    a = n.n(l),
-    r = n(837381),
+    r = n.n(l),
+    a = n(837381),
     o = n(311907),
     c = n(3026),
     d = n(397927),
@@ -17,19 +17,19 @@ var i = n(627968),
     g = n(977997),
     f = n(607567),
     x = n(892896),
-    C = n(884415),
-    E = n(775946),
+    E = n(884415),
+    C = n(775946),
     I = n(588224),
     N = n(37411),
     b = n(985018),
-    S = n(728444),
-    T = n(811094),
-    v = n(316945);
+    S = n(99566),
+    T = n(11464),
+    v = n(251843);
 function y(e) {
     let { style: t, withGuildIcon: n, inverted: s } = e,
-        l = { className: a()(v.GI, { [v.a7]: n }, { [v.BJ]: s }), style: t },
-        { density: r } = (0, d.wRf)();
-    switch (r) {
+        l = { className: r()(v.GI, { [v.a7]: n }, { [v.BJ]: s }), style: t },
+        { density: a } = (0, d.wRf)();
+    switch (a) {
         case "cozy":
             return (0, i.jsxs)("svg", {
                 ...l,
@@ -109,10 +109,10 @@ let j = s.memo(function (e) {
             },
             [t],
         ),
-        k = s.useCallback(() => {
+        w = s.useCallback(() => {
             u.A.preload(t.guild_id, t.id);
         }, [t.guild_id, t.id]),
-        w = s.useCallback(
+        k = s.useCallback(
             (e) => {
                 let s = _.A.getChannel(t.id);
                 null != s &&
@@ -124,7 +124,7 @@ let j = s.memo(function (e) {
             [t.id],
         ),
         V = null == O ? 0 : O.length,
-        { role: B, ...H } = (0, r.rm)(t.id),
+        { role: B, ...H } = (0, a.rm)(t.id),
         F = s.useRef(null),
         K =
             D > 0
@@ -134,7 +134,7 @@ let j = s.memo(function (e) {
                   : b.intl.formatToPlainString(b.t["0nZpiF"], { channelName: t.name });
     return (0, i.jsxs)("li", {
         role: B,
-        className: a()(S.fx, { [S.wH]: l }),
+        className: r()(S.fx, { [S.wH]: l }),
         children: [
             (0, i.jsx)(y, { withGuildIcon: R }),
             j
@@ -149,11 +149,11 @@ let j = s.memo(function (e) {
                 ringTarget: F,
                 offset: { top: 2, bottom: 2, right: 4 },
                 children: (0, i.jsxs)("div", {
-                    className: a()(S.Ki, T.iE, T.ZS, { [T.J1]: l, [T.F4]: !l && U, [T.V2]: !U && !l && M, [T.lY]: R }),
-                    onMouseDown: k,
-                    onContextMenu: w,
+                    className: r()(S.Ki, T.iE, T.ZS, { [T.J1]: l, [T.F4]: !l && U, [T.V2]: !U && !l && M, [T.lY]: R }),
+                    onMouseDown: w,
+                    onContextMenu: k,
                     children: [
-                        !M || U || l ? null : (0, i.jsx)("div", { className: a()(T.gy, T.WS) }),
+                        !M || U || l ? null : (0, i.jsx)("div", { className: r()(T.gy, T.WS) }),
                         (0, i.jsx)(d.DUT, {
                             ...H,
                             innerRef: F,
@@ -162,17 +162,17 @@ let j = s.memo(function (e) {
                             "aria-label": K,
                             focusProps: { enabled: !1 },
                             children: (0, i.jsxs)("div", {
-                                className: a()(T.Y5, T.__invalid_threadMainContent),
+                                className: r()(T.Y5, T.__invalid_threadMainContent),
                                 children: [
                                     (0, i.jsx)(c.A, { className: T.UU, "aria-hidden": !0, children: t.name }),
                                     (0, i.jsxs)("div", {
                                         className: T.Y_,
                                         children: [
                                             V > 0 && t.userLimit > 0
-                                                ? (0, i.jsx)(C.A, { userCount: V, video: L, channel: t })
+                                                ? (0, i.jsx)(E.A, { userCount: V, video: L, channel: t })
                                                 : null,
                                             (0, x.A)(D)
-                                                ? (0, i.jsx)(E.A, { mentionsCount: D, isMentionLowImportance: G })
+                                                ? (0, i.jsx)(C.A, { mentionsCount: D, isMentionLowImportance: G })
                                                 : null,
                                         ],
                                     }),

@@ -4,7 +4,7 @@ var i = n(627968),
     s = n(64700),
     l = n(503698),
     r = n.n(l),
-    a = n(4208),
+    a = n(880013),
     o = n(397927),
     c = n(475743),
     d = n(216418),
@@ -12,15 +12,15 @@ var i = n(627968),
     h = n(961350),
     A = n(430452),
     m = n(203982),
-    p = n(220144),
-    g = n(175203),
-    _ = n(306852),
+    _ = n(220144),
+    p = n(175203),
+    g = n(306852),
     f = n(947580),
     x = n(163432),
-    C = n(652215),
-    E = n(806931),
-    I = n(256960),
-    N = n(363862);
+    E = n(652215),
+    C = n(806931),
+    I = n(610893),
+    N = n(332741);
 let b = 16 / 9,
     S = 8 + x.Vp;
 function T(e) {
@@ -40,23 +40,23 @@ function T(e) {
             width: G,
             height: U,
             layout: P,
-            idle: k,
+            idle: w,
         } = e,
-        w = A.Ay.getVideoComponent(),
+        k = A.Ay.getVideoComponent(),
         V = h.default.getId(),
         [B, H] = s.useState(null),
         F = (0, c.A)(B),
         [K, W] = s.useState(!0),
         [Y, z] = s.useState(!1),
-        q = L.type === E.lp.ACTIVITY,
+        q = L.type === C.lp.ACTIVITY,
         X = (0, d.A)(q ? L.applicationId : void 0),
         J = !q && null != L.streamId,
         Q = U <= 2 * S + 144,
         $ = M && !Q,
         Z = (0, c.A)($),
-        ee = P === C.DUB.MINIMUM || P === C.DUB.NORMAL,
+        ee = P === E.DUB.MINIMUM || P === E.DUB.NORMAL,
         et = !Q && (!ee || q),
-        en = (0, p.A)(et, 100),
+        en = (0, _.A)(et, 100),
         ei = ((0, c.A)(L.id) ?? L.id) !== L.id,
         es = 0;
     (q || $) && (es += 72), q && !$ && (et ? (es += 48) : (es += 8)), $ && (es += 0.5 * S + 8);
@@ -86,20 +86,20 @@ function T(e) {
                 delay: ec || !$ ? 0 : 100,
                 config: { ...a.config.stiff, clamp: !0 },
                 onStart: () => z(!0),
-                onChange: () => m._.dispatch(C.jej.REMEASURE_TARGET),
+                onChange: () => m._.dispatch(E.jej.REMEASURE_TARGET),
                 onRest: () => {
-                    z(!1), m._.dispatch(C.jej.REMEASURE_TARGET);
+                    z(!1), m._.dispatch(E.jej.REMEASURE_TARGET);
                 },
             },
             eh,
         ),
         em = (0, o.zhh)({ value: +!!$, config: { ...a.config.stiff, clamp: !0 } }, eh),
-        ep = (0, o.zhh)(
+        e_ = (0, o.zhh)(
             { value: ea, config: { ...a.config.stiff, clamp: !0 } },
             (Z === $ && em.value.idle && !en) || ei || eu ? "animate-never" : "animate-always",
         ),
-        eg = (0, o.zhh)({ value: t, config: { ...a.config.stiff, clamp: !0 } }, eh),
-        e_ = (0, o.pnh)(
+        ep = (0, o.zhh)({ value: t, config: { ...a.config.stiff, clamp: !0 } }, eh),
+        eg = (0, o.pnh)(
             L,
             {
                 keys: (e) => e?.id,
@@ -115,7 +115,7 @@ function T(e) {
             H(e), W(!1);
         }, []),
         ex = $ ? [] : (0, f.Cf)(v, L, V),
-        { visibleParticipants: eC, participantTileWidth: eE } = (0, x.i4)(G, y);
+        { visibleParticipants: eE, participantTileWidth: eC } = (0, x.i4)(G, y);
     return (0, i.jsxs)("div", {
         className: r()(N.zr, I.tR, D),
         children: [
@@ -128,12 +128,12 @@ function T(e) {
                         style: { top: em.value.to((e) => (-e * S) / 2) },
                         children: [
                             (0, i.jsx)(a.animated.div, {
-                                style: { width: ep.value },
+                                style: { width: e_.value },
                                 className: N.tN,
                                 children: (0, i.jsx)("div", {
                                     className: I.xS,
                                     style: { aspectRatio: el },
-                                    children: e_((e, t, s) => {
+                                    children: eg((e, t, s) => {
                                         let { key: r } = s;
                                         return null != t
                                             ? (0, i.jsx)(
@@ -141,12 +141,12 @@ function T(e) {
                                                   {
                                                       className: I.qX,
                                                       style: e,
-                                                      children: (0, i.jsx)(g.Ay, {
+                                                      children: (0, i.jsx)(p.Ay, {
                                                           focused: !0,
                                                           noBorder: ea >= G || er >= U,
                                                           channel: O,
                                                           className: I.JS,
-                                                          videoComponent: w,
+                                                          videoComponent: k,
                                                           width: G,
                                                           participant: t,
                                                           onClick: n,
@@ -166,8 +166,8 @@ function T(e) {
                             }),
                             et
                                 ? (0, i.jsx)(a.animated.div, {
-                                      className: r()(N.$l, { [N.N7]: k }),
-                                      style: { bottom: eg.value },
+                                      className: r()(N.$l, { [N.N7]: w }),
+                                      style: { bottom: ep.value },
                                       children: (0, i.jsx)(u.A, {
                                           channelId: O.id,
                                           isParticipantsOpen: M,
@@ -189,8 +189,8 @@ function T(e) {
                             onClick: n,
                             onContextMenu: l,
                             onDoubleClick: T,
-                            participants: eC,
-                            participantTileWidth: eE,
+                            participants: eE,
+                            participantTileWidth: eC,
                             selectedParticipantId: L.id,
                             inCall: R,
                             popoutType: j,
@@ -200,7 +200,7 @@ function T(e) {
                 ],
             }),
             ex.length > 0
-                ? (0, i.jsx)(_.A, {
+                ? (0, i.jsx)(g.A, {
                       onContextMenuParticipant: l,
                       width: G,
                       height: U,

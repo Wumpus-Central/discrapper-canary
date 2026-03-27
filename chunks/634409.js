@@ -6,10 +6,10 @@ var r = n(627968),
     a = n(793574),
     o = n(688810),
     l = n(311016),
-    u = n(915089),
-    c = n(713517),
-    d = n(267102),
-    _ = n(182592),
+    u = n(351966),
+    c = n(915089),
+    d = n(713517),
+    _ = n(267102),
     f = n(562153),
     p = n(183555),
     h = n(672385),
@@ -26,7 +26,7 @@ var r = n(627968),
     C = n(652215),
     R = n(996988),
     O = n(985018),
-    b = n(435953);
+    b = n(74209);
 function D(e) {
     let {
             user: t,
@@ -42,11 +42,11 @@ function D(e) {
             onClickContainer: G,
         } = e,
         F = (0, m.Ay)(t.id, n),
-        V = (0, d.aL)(),
+        V = (0, _.aL)(),
         { analyticsLocations: B } = (0, o.Ay)([...k, a.A.USER_PROFILE_POPOUT]),
         H = (0, p.pb)({ layout: "POPOUT", userId: t.id, guildId: n, channelId: D, messageId: L, roleId: w }),
         j = i.useRef(null),
-        Y = (0, c.M)(j);
+        Y = (0, d.M)(j);
     i.useEffect(() => {
         M?.(j?.current);
     }, [j, M]);
@@ -67,7 +67,7 @@ function D(e) {
                   })
                 : null,
         z = U ? "div" : s.lGe,
-        q = (0, u.GV)(),
+        q = (0, c.GV)(),
         Z = f.Ay.useName(n, D, t);
     return (0, r.jsx)(o.f5, {
         value: B,
@@ -113,7 +113,7 @@ function D(e) {
                                         onOpenProfile: K ? W : void 0,
                                         tags: (0, r.jsx)(A.A, { displayProfile: F, themeType: R.d.POPOUT, onClose: x }),
                                     }),
-                                    (0, r.jsx)(T.A, {
+                                    (0, r.jsx)(T.E, {
                                         userId: t.id,
                                         userBio: F?.bio,
                                         setLineClamp: !1,
@@ -124,7 +124,7 @@ function D(e) {
                             (0, r.jsx)("div", { className: b.qr }),
                         ],
                     }),
-                    F?.profileEffect != null && (0, r.jsx)(_.A, { skuId: F?.profileEffect?.skuId, isHovering: Y }),
+                    F?.profileEffect != null && (0, r.jsx)(u.A, { skuId: F?.profileEffect?.skuId, isHovering: Y }),
                 ],
             }),
         }),

@@ -1,65 +1,8 @@
-n.d(t, { d: () => g, o: () => u });
-var i = n(627968),
-    l = n(409626),
-    a = n(692969),
-    r = n(562153),
-    s = n(415043),
-    o = n(617086),
-    d = n(985018),
-    c = n(418061);
-function u(e) {
-    let { applicationId: t, ...n } = e,
-        l = (0, o.A)(t);
-    return l.length > 0
-        ? (0, i.jsx)(s.A, {
-              label: d.intl.formatToPlainString(d.t.ujhJdG, { numFriends: l.length }),
-              users: l,
-              maxUsers: 4,
-              ...n,
-          })
-        : null;
-}
-function g(e) {
-    var t, n, u;
-    let g,
-        { userId: m, applicationId: x, guildId: f, channelId: h, className: p } = e,
-        _ = (0, o.A)(x),
-        A = _.length > 0,
-        I =
-            ((t = _),
-            (n = f),
-            (u = h),
-            (g = t.slice(0, 3).map((e) => r.Ay.getName(n, u, e))),
-            1 === t.length
-                ? d.intl.formatToPlainString(d.t.FURqTU, { name: g[0] })
-                : 2 === t.length
-                  ? d.intl.formatToPlainString(d.t["08Usu/"], { name1: g[0], name2: g[1] })
-                  : 3 === t.length
-                    ? d.intl.formatToPlainString(d.t.NTYHag, { name1: g[0], name2: g[1], name3: g[2] })
-                    : d.intl.formatToPlainString(d.t["i/5oAn"], {
-                          name1: g[0],
-                          name2: g[1],
-                          name3: g[2],
-                          numPeople: t.length - 3,
-                      })),
-        j = (0, a.A)({
-            location: "SocialProofButton",
-            applicationId: x,
-            source: l.Ob.UserProfile,
-            sourceUserId: m,
-            trackEntryPointImpression: !0,
-        });
-    return A && null != j
-        ? (0, i.jsx)(s.H, {
-              users: _,
-              label: I,
-              className: p,
-              onClick: j,
-              guildId: f,
-              channelId: h,
-              "aria-label": I,
-              overflowCountColor: "text-strong",
-              overflowCountClassName: c.L,
-          })
-        : null;
-}
+e.exports = {
+    kL: "container__011b7",
+    ak: "micTest__011b7",
+    EX: "small__011b7",
+    mi: "meterOnly__011b7",
+    Qe: "micTestCaption__011b7",
+    km: "buttonSizer__011b7",
+};

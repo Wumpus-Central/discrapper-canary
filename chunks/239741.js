@@ -2,7 +2,7 @@
 n.d(t, { A: () => G });
 var i = n(627968),
     s = n(64700),
-    l = n(4208),
+    l = n(880013),
     r = n(311907),
     a = n(827734),
     o = n(73939),
@@ -29,7 +29,7 @@ var i = n(627968),
     y = n(133154),
     R = n(652215),
     O = n(985018),
-    L = n(444412);
+    L = n(632704);
 function G() {
     let e = (0, r.bG)([h.A], () => h.A.getGuild());
     return null == e ? null : (0, i.jsx)(D, { guild: e });

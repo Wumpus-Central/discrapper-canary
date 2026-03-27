@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { A: () => g });
-var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    a = n.n(l),
-    r = n(397927),
-    o = n(652215),
-    d = n(985018),
-    c = n(291358),
-    u = n(473169);
+i.d(t, { A: () => m });
+var n = i(627968),
+    s = i(64700),
+    a = i(503698),
+    l = i.n(a),
+    r = i(397927),
+    o = i(652215),
+    d = i(985018),
+    c = i(92056),
+    u = i(153335);
 let h = 0,
-    p = (e) => {
+    _ = (e) => {
         switch (e) {
             case o.G6Q.TOP_LEFT:
                 return d.intl.string(d.t.xlchpU);
@@ -24,26 +24,26 @@ let h = 0,
                 return d.intl.string(d.t.AlY4Za);
         }
     },
-    A = [o.G6Q.DISABLED, o.G6Q.TOP_LEFT, o.G6Q.TOP_RIGHT, o.G6Q.BOTTOM_LEFT, o.G6Q.BOTTOM_RIGHT];
+    p = [o.G6Q.DISABLED, o.G6Q.TOP_LEFT, o.G6Q.TOP_RIGHT, o.G6Q.BOTTOM_LEFT, o.G6Q.BOTTOM_RIGHT];
 function f(e) {
-    let { position: t, onChange: n } = e,
-        [l] = s.useState(() => `notification-position-selector-${h++}`),
+    let { position: t, onChange: i } = e,
+        [a] = s.useState(() => `notification-position-selector-${h++}`),
         f =
             t === o.G6Q.DISABLED
                 ? d.intl.string(d.t.R6LxVf)
-                : d.intl.formatToPlainString(d.t["XXHDM/"], { position: p(t) });
-    return (0, i.jsxs)("div", {
+                : d.intl.formatToPlainString(d.t["XXHDM/"], { position: _(t) });
+    return (0, n.jsxs)("div", {
         children: [
-            (0, i.jsx)(r.vN3, {
+            (0, n.jsx)(r.vN3, {
                 within: !0,
                 offset: -2,
-                children: (0, i.jsx)("div", {
-                    className: a()(c.iE, { [c.wX]: t === o.G6Q.DISABLED }),
-                    children: A.map((e) =>
-                        (0, i.jsxs)(
+                children: (0, n.jsx)("div", {
+                    className: l()(c.iE, { [c.wX]: t === o.G6Q.DISABLED }),
+                    children: p.map((e) =>
+                        (0, n.jsxs)(
                             "label",
                             {
-                                className: a()({
+                                className: l()({
                                     [c.wH]: e === t,
                                     [c.r9]: e === o.G6Q.DISABLED,
                                     [c.O3]: e === o.G6Q.TOP_RIGHT,
@@ -52,15 +52,15 @@ function f(e) {
                                     [c.RV]: e === o.G6Q.BOTTOM_LEFT,
                                 }),
                                 children: [
-                                    p(e),
+                                    _(e),
                                     e === o.G6Q.DISABLED
-                                        ? (0, i.jsx)(r.KTN, { size: "md", color: "currentColor", className: c.WO })
+                                        ? (0, n.jsx)(r.KTN, { size: "md", color: "currentColor", className: c.WO })
                                         : null,
-                                    (0, i.jsx)("input", {
+                                    (0, n.jsx)("input", {
                                         type: "radio",
-                                        name: l,
+                                        name: a,
                                         value: e,
-                                        onChange: (t) => n(t, e),
+                                        onChange: (t) => i(t, e),
                                         className: c.hH,
                                     }),
                                 ],
@@ -70,9 +70,9 @@ function f(e) {
                     ),
                 }),
             }),
-            (0, i.jsx)(r.Text, { variant: "text-sm/normal", className: u.Ot, children: f }),
+            (0, n.jsx)(r.Text, { variant: "text-sm/normal", className: u.Ot, children: f }),
         ],
     });
 }
 f.Positions = o.G6Q;
-let g = f;
+let m = f;

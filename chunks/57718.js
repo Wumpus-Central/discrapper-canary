@@ -5,7 +5,7 @@ var i,
 n(64700);
 var l = n(503698),
     s = n.n(l),
-    o = n(4208),
+    o = n(880013),
     d = n(827734),
     c = n(582754),
     u = n(397927),
@@ -13,7 +13,7 @@ var l = n(503698),
     m = n(579473),
     h = n(241124),
     p = n(652215),
-    g = n(260821),
+    g = n(917094),
     A = (((i = {})[(i.SMALL = 24)] = "SMALL"), (i[(i.MEDIUM = 32)] = "MEDIUM"), i),
     x = (((a = {})[(a.SMALL = 2)] = "SMALL"), (a[(a.MEDIUM = 8)] = "MEDIUM"), a);
 let f = function (e) {
@@ -30,8 +30,8 @@ let f = function (e) {
             onLoadComplete: I,
         } = e,
         E = (0, c.Mw)(A) ? p.NJ8.DARK : p.NJ8.LIGHT,
-        v = (0, _.a5)(a.id, E),
-        b = x && null != a.config.cosponsorMetadata && null != v;
+        b = (0, _.a5)(a.id, E),
+        v = x && null != a.config.cosponsorMetadata && null != b;
     return (0, r.jsxs)("div", {
         className: s()(g.Iu, t),
         children: [
@@ -64,14 +64,14 @@ let f = function (e) {
                 children: (e) =>
                     (0, r.jsx)(o.animated.img, {
                         ref: e,
-                        className: s()(g.lW, n, { [g.TO]: b }),
+                        className: s()(g.lW, n, { [g.TO]: v }),
                         style: C,
                         alt: a.config.messages.gameTitle,
                         src: (0, m.tW)(a, m.fY.LOGO_TYPE, E).url,
                         onLoad: I,
                     }),
             }),
-            b &&
+            v &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)("div", {
@@ -87,7 +87,7 @@ let f = function (e) {
                                     className: s()(g.lW, g.TO, n),
                                     style: C,
                                     alt: a.config.cosponsorMetadata?.name ?? "",
-                                    src: v.url,
+                                    src: b.url,
                                     onLoad: I,
                                 }),
                         }),

@@ -19,13 +19,13 @@ var i = n(627968),
     C = n(954571),
     I = n(957565),
     E = n(943775),
-    v = n(997997),
-    b = n(658575),
+    b = n(997997),
+    v = n(658575),
     T = n(376374),
     y = n(652215),
     S = n(435220),
     N = n(985018),
-    j = n(518435);
+    j = n(252330);
 let L = (0, s.UT)([x.A, f.A, g.A], {
         getQueryId: y.fic.SKU,
         get: (e) => {
@@ -49,7 +49,7 @@ let L = (0, s.UT)([x.A, f.A, g.A], {
     });
 function P(e) {
     let { appId: t, message: r } = e,
-        l = (0, b.G)(t),
+        l = (0, v.G)(t),
         { data: c } = (0, u.YY)(t),
         [m, h, g, x] = (0, s.yK)([_.A, A.A, p.A], () => {
             let e = _.A.getApplication(t),
@@ -76,7 +76,7 @@ function P(e) {
     if (!l || null == c) return null;
     let L = () => {
         (0, o.mMO)(async () => {
-            let { default: e } = await Promise.all([n.e("33563"), n.e("7194")]).then(n.bind(n, 719847));
+            let { default: e } = await Promise.all([n.e("33563"), n.e("88596")]).then(n.bind(n, 719847));
             return (n) =>
                 (0, i.jsx)(e, { transitionState: n.transitionState, onClose: n.onClose, appId: t, guildId: g });
         });
@@ -87,7 +87,7 @@ function P(e) {
         description: T,
         link: `${location.protocol}//${location.host}${y.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(c.id, S.GlobalDiscoveryAppsSections.STORE)}`,
         onLinkCopy: () => {
-            (0, v.K)(t, v.C.STORE_EMBED);
+            (0, b.K)(t, b.C.STORE_EMBED);
         },
         iconSrc: x,
         onIconClick: () => {
@@ -126,14 +126,14 @@ function w(e) {
         { data: A } = (0, u.YY)(c?.applicationId),
         x = (0, s.bG)([p.A], () => p.A.getBasicChannel(l.channel_id)?.guild_id, [l]),
         f = a.useMemo(() => (null != A ? (0, E.A)(A, 45) : void 0), [A]),
-        I = (0, b.G)(A?.id ?? ""),
+        I = (0, v.G)(A?.id ?? ""),
         { openModal: P, subscriptionPurchaseButtonState: w } = (0, h.A)({ skuId: r, initialSubscribeForGuild: x });
     if (!I || null == A || null == c) return null;
     let D = c.type === y.Puh.SUBSCRIPTION,
         k = !!D && (0, m.bg)(c.flags),
         O = () => {
             (0, o.mMO)(async () => {
-                let { default: e } = await Promise.all([n.e("33563"), n.e("7194")]).then(n.bind(n, 719847));
+                let { default: e } = await Promise.all([n.e("33563"), n.e("88596")]).then(n.bind(n, 719847));
                 return (t) =>
                     (0, i.jsx)(e, { transitionState: t.transitionState, onClose: t.onClose, appId: A.id, guildId: x });
             });
@@ -199,7 +199,7 @@ function w(e) {
         description: B,
         link: `${location.protocol}//${location.host}${y.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(A.id, S.GlobalDiscoveryAppsSections.STORE)}`,
         onLinkCopy: () => {
-            (0, v.K)(A.id, v.C.SKU_EMBED, r);
+            (0, b.K)(A.id, b.C.SKU_EMBED, r);
         },
         iconSrc: f,
         onIconClick: () => {

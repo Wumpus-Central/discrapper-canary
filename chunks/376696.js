@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => w });
+n.d(t, { A: () => k });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -12,13 +12,13 @@ var i = n(627968),
     h = n(323073),
     A = n(643501),
     m = n(279250),
-    p = n(834757),
-    g = n(727353),
-    _ = n(140547),
+    _ = n(834757),
+    p = n(727353),
+    g = n(140547),
     f = n(636920),
     x = n(958140),
-    C = n(832163),
-    E = n(565688),
+    E = n(832163),
+    C = n(565688),
     I = n(533562),
     N = n(760716),
     b = n(93879),
@@ -34,14 +34,14 @@ var i = n(627968),
     D = n(652215),
     G = n(699976),
     U = n(985018),
-    P = n(962966),
-    k = n(248789);
-function w(e) {
+    P = n(71228),
+    w = n(467935);
+function k(e) {
     let {
             channel: t,
             user: n,
             onAction: l,
-            excludeActivity: w,
+            excludeActivity: k,
             onWatchStream: V,
             hangStatusActivity: B,
             setIsHangStatusInputFocused: H,
@@ -61,16 +61,16 @@ function w(e) {
         ),
         [$, Z] = (0, a.yK)([R.A, v.A, y.A, A.default], () => (0, m.eo)(t, R.A, v.A, y.A, A.default)),
         ee = (0, a.bG)([T.default], () => T.default.getId()),
-        et = (0, a.bG)([j.A], () => (0, p.nr)(J, j.A), [J]),
-        en = (0, d.m)(n, w ?? et),
+        et = (0, a.bG)([j.A], () => (0, _.nr)(J, j.A), [J]),
+        en = (0, d.m)(n, k ?? et),
         ei = (0, a.bG)([O.Ay], () => O.Ay.getVoiceStatesForChannel(t).find((e) => e.user.id === n.id) ?? null, [
             t,
             n.id,
         ]),
         es = s.useMemo(() => (null != ei ? [ei] : []), [ei]),
-        { enableHangStatus: el } = (0, _.$j)({ guildId: t.guild_id, location: "VoiceUserActivities" }),
-        er = (0, E.m)({ location: "voice_channel_activities" }),
-        ea = (0, a.bG)([C.A], () => C.A.getDetectableIdsToApplicationIds()),
+        { enableHangStatus: el } = (0, g.$j)({ guildId: t.guild_id, location: "VoiceUserActivities" }),
+        er = (0, C.m)({ location: "voice_channel_activities" }),
+        ea = (0, a.bG)([E.A], () => E.A.getDetectableIdsToApplicationIds()),
         eo = (0, a.bG)([T.default], () => T.default.getId() === n.id && !X),
         ec = (0, h.r9)() && (0, h.UK)(t.id),
         ed = null != J && !ec,
@@ -90,7 +90,7 @@ function w(e) {
         ? (0, i.jsx)(x.h, { channel: t, setIsHangStatusInputFocused: H, setIsEmojiPickerOpen: F })
         : eA
           ? (0, i.jsxs)(o.HOs, {
-                className: r()(k.popover, P.kL),
+                className: r()(w.popover, P.kL),
                 children: [
                     eh && el && null != B
                         ? (0, i.jsxs)("div", {
@@ -114,7 +114,7 @@ function w(e) {
                         : null,
                     null == J || null == V || ec
                         ? null
-                        : (0, i.jsx)(g.P, {
+                        : (0, i.jsx)(p.P, {
                               stream: J,
                               activeStream: Q,
                               streamActivity: et,

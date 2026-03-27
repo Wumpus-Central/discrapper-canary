@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => A });
+n.d(t, { A: () => p });
 var i = n(627968),
     s = n(64700),
     l = n(284009),
@@ -13,20 +13,20 @@ var i = n(627968),
     g = n(386784),
     x = n(963175),
     h = n(985018),
-    _ = n(691814);
-function A(e) {
+    _ = n(93932);
+function p(e) {
     let { onDeleteEditState: t } = e,
-        { editStateId: l, guildId: A, groupListingId: p } = (0, m.O)(),
+        { editStateId: l, guildId: p, groupListingId: A } = (0, m.O)(),
         f = (0, a.bG)([u.A], () => u.A.getSubscriptionListing(l)),
         j = f?.id,
-        N = (0, g.A)(A),
+        N = (0, g.A)(p),
         E = s.useMemo(() => null != N && null != f && (N[f.role_id] ?? 0), [N, f]),
         b = 0 === E,
-        T = null == j,
-        C = f?.archived ?? !1,
+        C = null == j,
+        T = f?.archived ?? !1,
         { error: I, deleteSubscriptionListing: v, submitting: S } = (0, c.et)(),
         { error: y, archiveSubscriptionListing: R, submitting: O } = (0, c.hc)(),
-        { allowSelfRemoveMonetization: G } = (0, d.nq)(A);
+        { allowSelfRemoveMonetization: L } = (0, d.nq)(p);
     return null == f
         ? null
         : (0, i.jsx)(x.A, {
@@ -38,9 +38,9 @@ function A(e) {
                           (0, i.jsx)(o.po8, { messageType: o.YCn.ERROR, children: h.intl.string(h.t["9k8H/9"]) }),
                       null !== y &&
                           (0, i.jsx)(o.po8, { messageType: o.YCn.ERROR, children: h.intl.string(h.t.up8gUr) }),
-                      C
+                      T
                           ? (0, i.jsx)(o.D0$, {
-                                disabled: !G,
+                                disabled: !L,
                                 label: h.intl.string(h.t["2D14T0"]),
                                 description: h.intl.string(h.t.Y4KjUN),
                                 children: (0, i.jsxs)(o.BJc, {
@@ -58,10 +58,10 @@ function A(e) {
                                             variant: "critical-primary",
                                             onClick: () => {
                                                 let e = async () => {
-                                                    (T ||
-                                                        (r()(null != p, "group listing doesnt exist"),
+                                                    (C ||
+                                                        (r()(null != A, "group listing doesnt exist"),
                                                         r()(null != j, "subscription listing doesnt exist"),
-                                                        await v(A, p, j))) &&
+                                                        await v(p, A, j))) &&
                                                         t?.();
                                                 };
                                                 (0, o.mMO)(async () => {
@@ -93,20 +93,20 @@ function A(e) {
                                                 });
                                             },
                                             loading: S,
-                                            disabled: !G || !b,
+                                            disabled: !L || !b,
                                             text: h.intl.string(h.t.GMtG6p),
                                         }),
                                     ],
                                 }),
                             })
                           : (0, i.jsx)(o.D0$, {
-                                disabled: !G,
+                                disabled: !L,
                                 label: h.intl.string(h.t["MS/4U1"]),
                                 description: h.intl.string(h.t["5/Jeg2"]),
                                 children: (0, i.jsx)(o.Button, {
                                     variant: "critical-primary",
                                     onClick: () => {
-                                        r()(null != p, "group listing doesnt exist"),
+                                        r()(null != A, "group listing doesnt exist"),
                                             r()(null != j, "subscription listing doesnt exist"),
                                             (0, o.mMO)(async () => {
                                                 let { Modal: e } = await Promise.resolve().then(n.bind(n, 158954));
@@ -125,7 +125,7 @@ function A(e) {
                                                                 text: h.intl.string(h.t.RL0wjm),
                                                                 variant: "critical-primary",
                                                                 onClick: async () => {
-                                                                    await R(A, p, j), t.onClose();
+                                                                    await R(p, A, j), t.onClose();
                                                                 },
                                                             },
                                                         ],
@@ -137,7 +137,7 @@ function A(e) {
                                             });
                                     },
                                     loading: O,
-                                    disabled: !G,
+                                    disabled: !L,
                                     text: h.intl.string(h.t.RL0wjm),
                                 }),
                             }),

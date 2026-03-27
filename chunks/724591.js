@@ -12,13 +12,13 @@ var i = n(627968),
     h = n(442433),
     A = n(932001),
     m = n(361158),
-    p = n(976860),
-    g = n(733391),
-    _ = n(832163),
+    _ = n(976860),
+    p = n(733391),
+    g = n(832163),
     f = n(133015),
     x = n(44724),
-    C = n(94484),
-    E = n(849134),
+    E = n(94484),
+    C = n(849134),
     I = n(203548),
     N = n(186111),
     b = n(371794),
@@ -27,7 +27,7 @@ var i = n(627968),
     v = n(652215),
     y = n(49999),
     j = n(985018),
-    R = n(811094),
+    R = n(11464),
     O = n(439706);
 let L = s.memo(function (e) {
     let { guild: t, selected: l } = e,
@@ -38,9 +38,9 @@ let L = s.memo(function (e) {
         U = (0, m.xr)((e) => e.fullScreenLayers.length > 0),
         P = (0, f.n)({ location: "GameShopChannelRow" });
     s.useEffect(() => {
-        (0, g.Kh)(t.id);
+        (0, p.Kh)(t.id);
     }, [t.id]);
-    let w = (0, a.bG)([_.A], () => _.A.getAnnouncement(t.id)),
+    let w = (0, a.bG)([g.A], () => g.A.getAnnouncement(t.id)),
         k = w?.state === "success" ? w.announcement : void 0,
         [V, B] = (0, A.x_)(o.M.GAME_SHOP_NEW_BADGE, t.id, k?.id ?? ""),
         H = V === o.M.GAME_SHOP_NEW_BADGE && null != k,
@@ -54,8 +54,8 @@ let L = s.memo(function (e) {
     }, [q, l, z]);
     let X = s.useCallback(() => {
             q(y.i.TAKE_ACTION);
-            let e = _.A.getStorefrontState(t.id)?.activePage ?? 0;
-            (0, p.pX)(v.BVt.CHANNELS_GAME_SHOP(t.id, e));
+            let e = g.A.getStorefrontState(t.id)?.activePage ?? 0;
+            (0, _.pX)(v.BVt.CHANNELS_GAME_SHOP(t.id, e));
         }, [t.id, q]),
         J = s.useCallback(() => {
             (0, x.X)({ guildId: t.id, forceFetch: H });
@@ -126,7 +126,7 @@ let L = s.memo(function (e) {
                 let e = P
                     ? j.intl.string(j.t["z/QEIP"])
                     : j.intl.formatToPlainString(j.t["9J4h1a"], { applicationName: k.applicationName });
-                return (0, i.jsx)(E.A, {
+                return (0, i.jsx)(C.A, {
                     onActionClick: X,
                     onActionMouseDown: J,
                     onRender: Z,
@@ -139,7 +139,7 @@ let L = s.memo(function (e) {
                 });
             }
             return Y
-                ? (0, i.jsx)(C.A, {
+                ? (0, i.jsx)(E.A, {
                       onActionClick: X,
                       onActionMouseDown: J,
                       onRender: Z,

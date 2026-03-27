@@ -1,58 +1,58 @@
-a.d(t, { A: () => A, L: () => g });
-var n = a(627968),
-    r = a(64700),
-    s = a(503698),
-    i = a.n(s),
-    d = a(230109),
-    l = a(732955),
+a.d(t, { A: () => h, L: () => g });
+var r = a(627968),
+    n = a(64700),
+    i = a(503698),
+    s = a.n(i),
+    l = a(230109),
+    d = a(732955),
     o = a(688810),
     c = a(320118),
     u = a(954571),
     _ = a(128620),
     m = a(652215),
-    p = a(49370),
+    p = a(723468),
     b = a(985018),
-    f = a(18738);
+    f = a(577057);
 let g = "orbs",
-    A = (e) => {
+    h = (e) => {
         let { className: t, location: a } = e,
-            { analyticsLocations: s } = (0, o.Ay)(a),
-            A = r.useRef(null),
-            h = r.useRef(!1),
+            { analyticsLocations: i } = (0, o.Ay)(a),
+            h = n.useRef(null),
+            A = n.useRef(!1),
             { passesGeneralUIInvariant: x, programReward: R } = (0, c.F)({
                 location: "PremiumTenureRewardsOrbsSection",
             });
         return x
-            ? (0, n.jsx)(o.f5, {
-                  value: s,
-                  children: (0, n.jsx)(d.L, {
-                      innerRef: A,
+            ? (0, r.jsx)(o.f5, {
+                  value: i,
+                  children: (0, r.jsx)(l.L, {
+                      innerRef: h,
                       onChange: (e) => {
                           e &&
-                              !h.current &&
-                              ((h.current = !0),
+                              !A.current &&
+                              ((A.current = !0),
                               u.default.track(m.HAw.PREMIUM_TENURE_REWARDS_ORBS_SECTION_IMPRESSION, {
                                   program_state: R?.program_current_state,
                               }));
                       },
                       threshold: 0.5,
-                      children: (0, n.jsxs)("div", {
-                          ref: A,
+                      children: (0, r.jsxs)("div", {
+                          ref: h,
                           id: g,
-                          className: i()(f.uW, f.Uv, f.qr, t),
+                          className: s()(f.uW, f.Uv, f.qr, t),
                           children: [
-                              (0, n.jsx)(l.DZT, {
+                              (0, r.jsx)(d.DZT, {
                                   variant: "display-sm",
                                   className: f.R_,
                                   style: { textAlign: "start" },
                                   children: b.intl.string(p.default.EdGvBM),
                               }),
-                              (0, n.jsx)(l.EYj, {
+                              (0, r.jsx)(d.EYj, {
                                   variant: "text-md/medium",
-                                  className: i()(f.VA, f.dO),
+                                  className: s()(f.VA, f.dO),
                                   children: b.intl.string(p.default["2KoHRF"]),
                               }),
-                              (0, n.jsx)(_.A, {}),
+                              (0, r.jsx)(_.A, {}),
                           ],
                       }),
                   }),

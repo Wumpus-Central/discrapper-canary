@@ -32,7 +32,7 @@ var i = n(627968),
     O = n(652215),
     L = n(696016),
     P = n(985018),
-    w = n(275825);
+    w = n(91167);
 let k = l.memo(function (e) {
     let { className: t, channel: s, draftType: k, editorTextContent: U, setValue: G, canOnlyUseTextCommands: F } = e,
         H = (0, _.Us)(),
@@ -57,7 +57,7 @@ let k = l.memo(function (e) {
     function er() {
         (0, o.mMO)(
             async () => {
-                let { default: e } = await Promise.all([n.e("4918"), n.e("91232")]).then(n.bind(n, 543428));
+                let { default: e } = await Promise.all([n.e("4918"), n.e("84228")]).then(n.bind(n, 543428));
                 return (t) => (0, i.jsx)(e, { ...t, channelId: s.id, onClipClick: (e) => $({ clips: [e] }) });
             },
             { modalKey: L.nm },

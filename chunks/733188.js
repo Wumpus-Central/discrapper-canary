@@ -13,7 +13,7 @@ var i = n(627968),
     g = n(253932),
     x = n(652215),
     A = n(985018),
-    h = n(80281);
+    h = n(539232);
 let p = new m.nA({ id: "1337", guild_id: "1337", type: x.rbe.GUILD_TEXT, name: "preview" }),
     f = [
         { status: a.clD.IDLE, discriminator: "2" },

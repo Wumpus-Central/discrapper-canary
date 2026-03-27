@@ -2,7 +2,7 @@ n.d(t, { PW: () => d, dN: () => c, oK: () => u }), n(321073);
 var a = n(627968),
     i = n(64700),
     s = n(340287),
-    l = n(4208),
+    l = n(880013),
     r = n(765671),
     o = n(398025);
 n(272111);
@@ -24,16 +24,16 @@ let d = i.createContext({
                 registerComponent: x,
                 unregisterComponent: p,
                 expansionSpring: g,
-                mountPoints: f,
+                mountPoints: _,
             } = i.useContext(d),
-            _ = i.useRef(null),
+            f = i.useRef(null),
             v = i.useRef(null),
             b = i.useRef(void 0);
         i.useEffect(() => {
             h();
         }, [h]),
             i.useLayoutEffect(() => {
-                let e = _.current;
+                let e = f.current;
                 return (
                     null != e && x(e, c, u),
                     () => {
@@ -48,8 +48,8 @@ let d = i.createContext({
             },
             [h],
         );
-        (0, r.i4)(_, j);
-        let A = f.get(c)?.current,
+        (0, r.i4)(f, j);
+        let A = _.get(c)?.current,
             C = null;
         return (
             null == A
@@ -85,7 +85,7 @@ let d = i.createContext({
             (0, a.jsxs)("div", {
                 style: { opacity: +((null == C && "collapsed" === u) || null == A) },
                 ref: t,
-                children: [n(_), C],
+                children: [n(f), C],
             })
         );
     }),

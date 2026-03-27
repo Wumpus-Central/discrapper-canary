@@ -12,34 +12,34 @@ var s = n(503698),
     u = n(397244),
     h = n(714114),
     A = n(729551),
-    p = n(58149),
-    g = n(571694),
-    m = n(47167),
-    _ = n(713654),
+    m = n(58149),
+    _ = n(571694),
+    p = n(47167),
+    g = n(713654),
     f = n(915089),
     x = n(263063),
-    C = n(616356),
-    E = n(734057),
+    E = n(616356),
+    C = n(734057),
     I = n(71393),
     N = n(290863),
     b = n(222823),
     S = n(287809),
     T = n(147925),
-    y = n(652215),
-    v = n(985018),
-    j = n(965572);
+    v = n(652215),
+    y = n(985018),
+    j = n(81236);
 let R = { top: 8, bottom: 8, left: -4, right: -4 };
 function O(e) {
     let { channelState: t, toggle: n, getNumUnreadChannels: s } = e;
     return (0, i.jsx)(c.m_, {
-        text: v.intl.string(v.t.iTcuma),
+        text: y.intl.string(y.t.iTcuma),
         children: (0, i.jsx)(d.DUT, {
             className: l()(j.cS, { [j.yZ]: t?.collapsed }),
             onClick: function () {
                 null != t &&
                     null != n &&
                     (n(t),
-                    (0, p.zV)(y.HAw.INBOX_CHANNEL_COLLAPSED, {
+                    (0, m.zV)(v.HAw.INBOX_CHANNEL_COLLAPSED, {
                         channel_id: t.channelId,
                         guild_id: t.guildId,
                         num_unread_channels_remaining: s?.() ?? 0,
@@ -62,11 +62,11 @@ function L(e) {
             getNumUnreadChannels: h,
         } = e,
         A = (0, r.rm)(`recents-header-${t.id}-${(0, f.GV)()}`),
-        p = u && !t.isNSFW() && null != o && "nsfw" !== o.type;
+        m = u && !t.isNSFW() && null != o && "nsfw" !== o.type;
     return (0, i.jsx)(d.vN3, {
         offset: R,
         children: (0, i.jsxs)("div", {
-            className: l()(j.ZO, { [j.b4]: p }),
+            className: l()(j.ZO, { [j.b4]: m }),
             ...A,
             tabIndex: 0,
             "data-recents-channel": t.id,
@@ -77,7 +77,7 @@ function L(e) {
                     c?.(o);
             },
             children: [
-                p && null != o ? (0, i.jsx)(O, { channelState: o, toggle: c, getNumUnreadChannels: h }) : null,
+                m && null != o ? (0, i.jsx)(O, { channelState: o, toggle: c, getNumUnreadChannels: h }) : null,
                 (0, i.jsx)(M, { channel: t, gotoChannel: s }),
                 (0, i.jsx)(U, { channel: t, gotoChannel: s, mentionCount: a }),
                 n,
@@ -94,7 +94,7 @@ function M(e) {
 function D(e) {
     let { channel: t, gotoChannel: n } = e,
         s = (0, a.bG)([S.default], () => (t.isDM() ? S.default.getUser(t.getRecipientId()) : null)),
-        l = null == s ? (0, g.Y)(t) : s.getAvatarURL(void 0, 40);
+        l = null == s ? (0, _.Y)(t) : s.getAvatarURL(void 0, 40);
     return (0, i.jsx)(d.DUT, {
         onClick: n,
         tabIndex: -1,
@@ -119,16 +119,16 @@ function G(e) {
 function U(e) {
     let { channel: t, gotoChannel: n, mentionCount: s } = e,
         r = (0, a.bG)([I.A], () => I.A.getGuild(t.guild_id)),
-        c = (0, a.bG)([E.A], () => E.A.getChannel(t.parent_id)),
+        c = (0, a.bG)([C.A], () => C.A.getChannel(t.parent_id)),
         u = (0, a.bG)([b.Ay], () => b.Ay.getIsMentionLowImportance(t.id)),
-        h = (0, _.gU)(t, r),
-        A = (0, m.Ay)(t, !1),
-        p = null == c ? r?.name : `${r?.name} › ${c.name}`,
-        g = t.isMultiUserDM()
-            ? v.intl.formatToPlainString(v.t.CxSA5N, { members: t.recipients.length + 1 })
+        h = (0, g.gU)(t, r),
+        A = (0, p.Ay)(t, !1),
+        m = null == c ? r?.name : `${r?.name} › ${c.name}`,
+        _ = t.isMultiUserDM()
+            ? y.intl.formatToPlainString(y.t.CxSA5N, { members: t.recipients.length + 1 })
             : t.isPrivate()
               ? (0, i.jsx)(P, { channel: t })
-              : (0, i.jsx)(d.DUT, { className: l()(j.W$, j.J5), onClick: n, children: p });
+              : (0, i.jsx)(d.DUT, { className: l()(j.W$, j.J5), onClick: n, children: m });
     return (0, i.jsxs)("div", {
         className: j.yP,
         children: [
@@ -163,7 +163,7 @@ function U(e) {
                     ],
                 }),
             }),
-            (0, i.jsx)(d.Text, { color: "text-default", variant: "text-xs/normal", className: j.PL, children: g }),
+            (0, i.jsx)(d.Text, { color: "text-default", variant: "text-xs/normal", className: j.PL, children: _ }),
         ],
     });
 }
@@ -174,13 +174,13 @@ function P(e) {
             status: s,
             activities: l,
             applicationStream: r,
-        } = (0, a.cf)([S.default, N.A, C.A], () => {
+        } = (0, a.cf)([S.default, N.A, E.A], () => {
             let e = S.default.getUser(t.getRecipientId());
             return {
                 user: e,
                 status: null != e ? N.A.getStatus(e.id) : null,
                 activities: null != e ? N.A.getActivities(e.id) : null,
-                applicationStream: null != e ? C.A.getAnyStreamForUser(e.id) : null,
+                applicationStream: null != e ? E.A.getAnyStreamForUser(e.id) : null,
             };
         }),
         { voiceChannel: o } = (0, h.A)({ userId: n?.id });

@@ -24,8 +24,8 @@ var a = n(627968),
     x = n(74848),
     p = n(430452),
     g = n(731854),
-    f = n(4791),
-    _ = n(310086);
+    _ = n(359242),
+    f = n(793877);
 function v(e) {
     let { recording: t } = e;
     return (0, a.jsxs)(a.Fragment, {
@@ -159,9 +159,9 @@ function j() {
         M && K.push({ id: "standard", label: "Standard", value: "STANDARD" }),
         K.push({ id: "disabled", label: "Disabled", value: "NONE" }),
         (0, a.jsx)(d.IpV, {
-            className: _.nd,
+            className: f.nd,
             children: (0, a.jsxs)("div", {
-                className: f.l,
+                className: _.l,
                 children: [
                     (0, a.jsx)(d.Text, { variant: "text-lg/bold", children: "Krisp Tester" }),
                     (0, a.jsx)(h.U, {

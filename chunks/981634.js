@@ -8,7 +8,7 @@ var s = n(503698),
     a = n(397927),
     o = n(709066),
     d = n(351906),
-    c = n(89200);
+    c = n(703610);
 function u(e) {
     let { className: t, avatarURL: n, name: s, bot: u, verifiedBot: m, userTag: g } = e,
         x = (0, r.bG)([d.A], () => d.A.hidePersonalInformation);

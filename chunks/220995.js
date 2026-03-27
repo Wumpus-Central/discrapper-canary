@@ -4,7 +4,7 @@ var i = n(627968),
     s = n(64700),
     l = n(503698),
     r = n.n(l),
-    a = n(4208),
+    a = n(880013),
     o = n(110259),
     c = n(311907),
     d = n(435371),
@@ -12,17 +12,17 @@ var i = n(627968),
     h = n(964486),
     A = n(793574),
     m = n(688810),
-    p = n(139286),
-    g = n(713517),
-    _ = n(71393),
+    _ = n(139286),
+    p = n(713517),
+    g = n(71393),
     f = n(576705),
     x = n(954571),
-    C = n(778768),
-    E = n(652215);
+    E = n(778768),
+    C = n(652215);
 n(281405);
 var I = n(985018),
-    N = n(426114),
-    b = n(805098);
+    N = n(761277),
+    b = n(501365);
 let S = (e) => 1 - Math.pow(1 - e, 4);
 function T(e) {
     let { channel: t, onClose: l } = e,
@@ -32,22 +32,22 @@ function T(e) {
         R = s.useRef(null),
         [O, L] = s.useState(0),
         { analyticsLocations: M } = (0, m.Ay)(A.A.VOICE_INVITE_SUGGESTIONS);
-    (0, p.A)({
+    (0, _.A)({
         name: o.ImpressionNames.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT,
         type: o.ImpressionTypes.VIEW,
         properties: { voice_channel_id: t.id, voice_guild_id: t.guild_id, location_stack: M },
     });
-    let D = (0, c.bG)([f.A], () => f.A.can(E.xBc.CREATE_INSTANT_INVITE, t), [t]),
-        G = (0, c.bG)([_.A], () => _.A.getGuild(t.guild_id)),
+    let D = (0, c.bG)([f.A], () => f.A.can(C.xBc.CREATE_INSTANT_INVITE, t), [t]),
+        G = (0, c.bG)([g.A], () => g.A.getGuild(t.guild_id)),
         [U, P] = s.useState(!1),
-        k = s.useRef(null),
-        { isHoveringOrFocusing: w } = (0, g.A)(D ? T : k),
+        w = s.useRef(null),
+        { isHoveringOrFocusing: k } = (0, p.A)(D ? T : w),
         [V, B] = s.useState(!1),
-        H = w || V,
+        H = k || V,
         F = s.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "unknown";
-                x.default.track(E.HAw.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT_CLOSED, {
+                x.default.track(C.HAw.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT_CLOSED, {
                     reason: e,
                     channel_id: t.id,
                     guild_id: t.guild_id,
@@ -61,10 +61,10 @@ function T(e) {
         K = s.useCallback(() => {
             null != G &&
                 (0, u.mMO)(async () => {
-                    let { default: e } = await Promise.all([n.e("43600"), n.e("28136"), n.e("89886")]).then(
+                    let { default: e } = await Promise.all([n.e("43600"), n.e("28136"), n.e("93662")]).then(
                         n.bind(n, 234355),
                     );
-                    return (n) => (0, i.jsx)(e, { ...n, guild: G, channel: t, source: E.PE1.VOICE_INVITE_SUGGESTIONS });
+                    return (n) => (0, i.jsx)(e, { ...n, guild: G, channel: t, source: C.PE1.VOICE_INVITE_SUGGESTIONS });
                 });
         }, [G, t]),
         [W, Y] = (0, u.zhh)(() => ({
@@ -123,7 +123,7 @@ function T(e) {
               align: "top",
               spacing: 17,
               popoutKey: "voice-invite-suggestions-button",
-              renderPopout: (e) => (0, i.jsx)(C.w, { channel: t, onHoverOrFocus: B, ...e }),
+              renderPopout: (e) => (0, i.jsx)(E.w, { channel: t, onHoverOrFocus: B, ...e }),
               onRequestOpen: J,
               onRequestClose: Q,
               children: (e) => {
@@ -177,7 +177,7 @@ function T(e) {
                                           children: I.intl.string(I.t["EE+P0H"]),
                                       }),
                                   }),
-                                  w
+                                  k
                                       ? (0, i.jsx)(u.DUT, {
                                             className: N.VN,
                                             onClick: (e) => {

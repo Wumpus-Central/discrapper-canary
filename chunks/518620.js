@@ -9,7 +9,7 @@ var i = n(627968),
 n(646363);
 var c = n(652215),
     u = n(788868),
-    A = n(63461);
+    A = n(998838);
 let h = function (e) {
     let { rows: t, renderRow: n, renderSection: h, footer: _, sectionFilter: m, renderSectionFooter: g } = e,
         p = (e) => {
@@ -60,10 +60,10 @@ let h = function (e) {
                 n = N.current;
             null != t && null != n && n.scrollIntoViewNode({ node: t, padding: 8, callback: () => t?.focus() });
         }, []),
-        b = (0, l.Ay)({ id: "people-list", isEnabled: T, scrollToStart: S, scrollToEnd: x, setFocus: v }),
-        y = a.useMemo(() => t.map((e) => e.length), [t]);
+        y = (0, l.Ay)({ id: "people-list", isEnabled: T, scrollToStart: S, scrollToEnd: x, setFocus: v }),
+        b = a.useMemo(() => t.map((e) => e.length), [t]);
     return (0, i.jsx)(r.hD, {
-        navigator: b,
+        navigator: y,
         children: (0, i.jsx)(r.PR, {
             children: (e) => {
                 let { ref: t, ...n } = e;
@@ -79,7 +79,7 @@ let h = function (e) {
                             sectionHeight: 50,
                             renderFooter: f,
                             footerHeight: C,
-                            sections: y,
+                            sections: b,
                             className: A.e3,
                             ...n,
                         }),

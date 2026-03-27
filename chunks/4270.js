@@ -1,4 +1,4 @@
-n.d(t, { A: () => b });
+n.d(t, { A: () => y });
 var i = n(627968),
     a = n(64700),
     l = n(503698),
@@ -22,14 +22,14 @@ var i = n(627968),
     N = n(687599),
     S = n(652215),
     x = n(985018),
-    v = n(69081);
-function b() {
+    v = n(146430);
+function y() {
     let e = a.useRef(null),
         t = (0, I.A)(),
         n = (0, f.I)(),
         l = (0, g.r)(),
-        b = (0, c.w)(),
-        y = (0, A.A)("message-requests-spam-list"),
+        y = (0, c.w)(),
+        b = (0, A.A)("message-requests-spam-list"),
         { channelId: O } = (0, E.N)(),
         L = a.useCallback(() => {
             (0, d.showToast)((0, d.createToast)(x.intl.string(x.t["EDYbS+"]), d.ToastType.FAILURE));
@@ -70,7 +70,7 @@ function b() {
                         className: v.Gf,
                         children: [
                             x.intl.format(x.t.C79Edh, { count: n }),
-                            b && n > 0
+                            y && n > 0
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(d.Text, {
@@ -93,12 +93,12 @@ function b() {
                     },
                     "message-requests-spam-title",
                 ),
-            [n, P, b],
+            [n, P, y],
         );
     return 0 === t.length
         ? (0, i.jsx)(C.A, { section: N.zz.SPAM })
         : (0, i.jsx)(s.hD, {
-              navigator: y,
+              navigator: b,
               children: (0, i.jsx)(s.PR, {
                   children: (n) => {
                       let { ref: a, role: l, ...r } = n;

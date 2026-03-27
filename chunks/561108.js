@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => A });
+n.d(t, { A: () => p });
 var i = n(627968);
 n(64700);
 var s = n(503698),
@@ -14,8 +14,8 @@ var s = n(503698),
     g = n(863694),
     x = n(992711),
     h = n(985018),
-    _ = n(945586);
-function A(e) {
+    _ = n(11088);
+function p(e) {
     let { guild: t, scrollToQuestions: n } = e,
         s = (0, r.bG)([g.A], () => g.A.editedDefaultChannelIds),
         l = (0, u.$)(t.id, s).filter((e) => e.isCategory() || (0, d.S)(e.guild_id, e.id));
@@ -25,12 +25,12 @@ function A(e) {
             (0, i.jsx)("div", { className: _.wx, children: (0, i.jsx)(x.A, { guildId: t.id, scrollToQuestions: n }) }),
             (0, i.jsxs)("div", {
                 className: _.o5,
-                children: [(0, i.jsx)(j, {}), 0 === l.length && (0, i.jsx)(p, {}), (0, i.jsx)(f, { channels: l })],
+                children: [(0, i.jsx)(j, {}), 0 === l.length && (0, i.jsx)(A, {}), (0, i.jsx)(f, { channels: l })],
             }),
         ],
     });
 }
-function p() {
+function A() {
     return (0, i.jsxs)("div", {
         className: _.p$,
         children: [

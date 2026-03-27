@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => L, jO: () => O, nO: () => b });
+n.d(t, { Ay: () => L, jO: () => O, nO: () => y });
 var i = n(627968),
     a = n(64700),
     l = n(503698),
@@ -19,22 +19,22 @@ var i = n(627968),
     f = n(244229),
     C = n(652215),
     T = n(985018),
-    N = n(80172),
+    N = n(146109),
     S = n(937495),
     x = n(517061),
     v = n(970890);
-function b(e) {
+function y(e) {
     let { guild: t, onClick: l, onView: s } = e,
         [_, m] = a.useState(!1),
-        [I, b] = a.useState(!1),
-        [y, O] = a.useState(!1),
+        [I, y] = a.useState(!1),
+        [b, O] = a.useState(!1),
         L = a.useRef(null),
         R = a.useCallback(async () => {
-            b(!0);
+            y(!0);
             try {
                 await l(t.id);
             } finally {
-                b(!1);
+                y(!1);
             }
         }, [t.id, l]),
         P = a.useCallback(
@@ -91,7 +91,7 @@ function b(e) {
                             className: N.wx,
                             children: [
                                 (0, i.jsx)("div", {
-                                    className: r()(N.vK, { [N.Kc]: y }),
+                                    className: r()(N.vK, { [N.Kc]: b }),
                                     children: (0, i.jsx)("img", {
                                         src: w,
                                         alt: "",
@@ -184,10 +184,10 @@ function b(e) {
         ],
     });
 }
-function y(e) {
+function b(e) {
     let { guildId: t, onClick: n, onView: a } = e,
         l = (0, s.bG)([I.A], () => I.A.getGuild(t));
-    return null == l ? null : (0, i.jsx)(b, { guild: l, onClick: n, onView: a });
+    return null == l ? null : (0, i.jsx)(y, { guild: l, onClick: n, onView: a });
 }
 function O(e) {
     let { guildId: t, index: n, onClick: l, onView: r } = e,
@@ -202,7 +202,7 @@ function O(e) {
                               state: n,
                               cleanUp: a,
                               animate: s.current,
-                              children: (0, i.jsx)(y, { guildId: t.guildId, onClick: l, onView: r }),
+                              children: (0, i.jsx)(b, { guildId: t.guildId, onClick: l, onView: r }),
                           },
                           e,
                       ),
@@ -215,4 +215,4 @@ function O(e) {
         children: (0, i.jsx)(d.Fai, { items: u, renderItem: o, getItemKey: c }),
     });
 }
-let L = a.memo(y);
+let L = a.memo(b);

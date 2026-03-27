@@ -3,7 +3,7 @@ var i = n(627968);
 n(64700);
 var l = n(503698),
     s = n.n(l),
-    a = n(4208),
+    a = n(880013),
     r = n(417597),
     o = n(397927),
     c = n(922529),
@@ -14,7 +14,7 @@ var l = n(503698),
     A = n(670455),
     g = n(381941),
     p = n(985018),
-    f = n(950067);
+    f = n(346396);
 function _(e) {
     let { summary: t, channel: n } = e,
         l = (0, r.bG)([h.A], () => h.A.summaryFeedback(t)),

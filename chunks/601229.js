@@ -1,4 +1,4 @@
-n.d(t, { U6: () => T, kp: () => E, yG: () => S });
+n.d(t, { U6: () => f, kp: () => T, yG: () => S });
 var i = n(627968);
 n(64700);
 var s = n(311907),
@@ -9,21 +9,21 @@ var s = n(311907),
     d = n(526162),
     c = n(848971),
     u = n(793943),
-    _ = n(792656),
-    m = n(954571),
+    m = n(792656),
+    _ = n(954571),
     g = n(12901),
-    A = n(652215),
-    x = n(788868),
+    x = n(652215),
+    A = n(788868),
     h = n(985018),
-    p = n(207645);
-let T = () => {
+    p = n(22707);
+let f = () => {
     (0, u.nf)(u.HP.APP_ICON), (0, g.default)();
 };
-function E() {
-    return (0, i.jsx)(_.A, {
-        subscriptionTier: x.pe.TIER_2,
+function T() {
+    return (0, i.jsx)(m.A, {
+        subscriptionTier: A.pe.TIER_2,
         defaultTextOverride: h.intl.string(h.t.mr4K7D),
-        premiumModalAnalyticsLocation: { object: A.ZSU.BUTTON_CTA, objectType: A.AnalyticsObjectTypes.BUY },
+        premiumModalAnalyticsLocation: { object: x.ZSU.BUTTON_CTA, objectType: x.AnalyticsObjectTypes.BUY },
         fullWidth: !0,
     });
 }
@@ -32,7 +32,7 @@ let S = () => {
         t = (0, s.bG)([d.A], () => d.A.isUpsellPreview);
     return (
         (0, a.Ay)(() => {
-            t && m.default.track(A.HAw.PREMIUM_UPSELL_VIEWED, { type: x.e.APP_ICON_UPSELL, location_stack: e });
+            t && _.default.track(x.HAw.PREMIUM_UPSELL_VIEWED, { type: A.e.APP_ICON_UPSELL, location_stack: e });
         }),
         (0, i.jsx)("div", {
             className: p.Gg,
@@ -45,9 +45,9 @@ let S = () => {
                             (0, i.jsx)(l.Button, {
                                 variant: t ? "secondary" : "primary",
                                 text: h.intl.string(h.t["hb/wE0"]),
-                                onClick: () => T(),
+                                onClick: () => f(),
                             }),
-                            t && (0, i.jsx)(E, {}),
+                            t && (0, i.jsx)(T, {}),
                         ],
                     }),
             }),

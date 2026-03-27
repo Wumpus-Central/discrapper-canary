@@ -3,8 +3,8 @@ n.d(t, { A: () => v });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
-    a = n(827734),
-    r = n(397927),
+    r = n(827734),
+    a = n(397927),
     o = n(858177),
     c = n(47167),
     d = n(475889),
@@ -19,13 +19,13 @@ var i = n(627968),
     x = n(562153),
     E = n(652215),
     C = n(985018),
-    I = n(4568);
+    I = n(930935);
 function N(e) {
     let { event: t, guildId: n, channelId: s } = e,
-        a = (0, l.bG)([g.default], () => g.default.getUser(t.userId)),
+        r = (0, l.bG)([g.default], () => g.default.getUser(t.userId)),
         c = (0, o.O)(t.applicationId ?? null),
-        d = x.Ay.useName(n, s, a);
-    return null == a
+        d = x.Ay.useName(n, s, r);
+    return null == r
         ? null
         : (0, i.jsxs)("li", {
               className: I.NG,
@@ -38,7 +38,7 @@ function N(e) {
                   (0, i.jsxs)("div", {
                       className: I.Kw,
                       children: [
-                          (0, i.jsx)(r.Text, {
+                          (0, i.jsx)(a.Text, {
                               variant: "text-sm/normal",
                               className: I.rN,
                               children: C.intl.format(C.t.CKIMrx, {
@@ -46,7 +46,7 @@ function N(e) {
                                   activityName: c?.name ?? C.intl.string(C.t.GIWFlF),
                               }),
                           }),
-                          (0, i.jsx)(r.Text, {
+                          (0, i.jsx)(a.Text, {
                               variant: "text-xs/normal",
                               color: "text-muted",
                               className: I.gE,
@@ -62,9 +62,9 @@ function N(e) {
 }
 function b(e) {
     let { event: t, guildId: n, channelId: s } = e,
-        a = (0, l.bG)([g.default], () => g.default.getUser(t.userId)),
-        o = x.Ay.useName(n, s, a);
-    return null == a
+        r = (0, l.bG)([g.default], () => g.default.getUser(t.userId)),
+        o = x.Ay.useName(n, s, r);
+    return null == r
         ? null
         : (0, i.jsxs)("li", {
               className: I.NG,
@@ -72,35 +72,35 @@ function b(e) {
                   (0, i.jsx)("div", { className: I.Wz }),
                   (0, i.jsx)("div", {
                       className: I.xW,
-                      children: (0, i.jsx)(r.euF, {
-                          src: a.getAvatarURL(n, 20),
-                          size: r._3J.SIZE_20,
+                      children: (0, i.jsx)(a.euF, {
+                          src: r.getAvatarURL(n, 20),
+                          size: a._3J.SIZE_20,
                           "aria-hidden": !0,
                       }),
                   }),
                   (0, i.jsxs)("div", {
                       className: I.Kw,
                       children: [
-                          (0, i.jsx)(r.Text, {
+                          (0, i.jsx)(a.Text, {
                               variant: "text-sm/normal",
                               className: I.qJ,
                               children: C.intl.format(C.t.TlVwqn, {
                                   user: o,
                                   userHook: (e, t) =>
                                       (0, i.jsx)(
-                                          r.Text,
+                                          a.Text,
                                           { variant: "text-sm/semibold", className: I.C3, children: e },
                                           t,
                                       ),
                                   labelHook: (e, t) =>
                                       (0, i.jsx)(
-                                          r.Text,
+                                          a.Text,
                                           { variant: "text-sm/normal", className: I.CS, children: e },
                                           t,
                                       ),
                               }),
                           }),
-                          (0, i.jsx)(r.Text, {
+                          (0, i.jsx)(a.Text, {
                               variant: "text-xs/normal",
                               color: "text-muted",
                               className: I.gE,
@@ -129,14 +129,14 @@ function T(e) {
     return (0, i.jsxs)("div", {
         className: I.hY,
         children: [
-            (0, i.jsx)(r.HKD, { size: "custom", color: a.A.colors.ICON_FEEDBACK_POSITIVE, height: 20, width: 20 }),
-            (0, i.jsx)(r.Text, { variant: "text-md/medium", className: I.HA, children: s }),
+            (0, i.jsx)(a.HKD, { size: "custom", color: r.A.colors.ICON_FEEDBACK_POSITIVE, height: 20, width: 20 }),
+            (0, i.jsx)(a.Text, { variant: "text-md/medium", className: I.HA, children: s }),
             null != n && (0, i.jsx)(u.z, { textColor: "text-feedback-positive", entry: { start: n } }),
         ],
     });
 }
 function v(e) {
-    let { channel: t, source: n, onMouseEnter: a, onMouseLeave: o } = e;
+    let { channel: t, source: n, onMouseEnter: r, onMouseLeave: o } = e;
     s.useEffect(() => {
         (0, m.q)(t.id);
     }, [t.id]);
@@ -150,17 +150,17 @@ function v(e) {
               role: "dialog",
               "aria-label": C.intl.string(C.t.N0ED9s),
               className: I.kL,
-              onMouseEnter: a,
+              onMouseEnter: r,
               onMouseLeave: o,
               children: [
                   (0, i.jsx)(T, { channel: t }),
-                  (0, i.jsx)(r.HOs, {
+                  (0, i.jsx)(a.HOs, {
                       children: (0, i.jsxs)("div", {
                           className: I.PI,
                           children: [
                               (0, i.jsx)("div", {
                                   className: I.s8,
-                                  children: (0, i.jsx)(r.Text, {
+                                  children: (0, i.jsx)(a.Text, {
                                       variant: "text-sm/medium",
                                       color: "text-muted",
                                       children: C.intl.string(C.t.N0ED9s),

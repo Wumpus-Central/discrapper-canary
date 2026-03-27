@@ -2,20 +2,20 @@
 n.d(t, { U: () => T }), n(321073);
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(835245),
     l = n(158954),
     u = n(504345),
     c = n(571356),
     d = n(826745),
     _ = n(985018),
-    f = n(648359),
-    p = n(713545),
-    h = n(829681);
+    f = n(528841),
+    p = n(91731),
+    h = n(813343);
 let m = (0, o.A)(),
-    g = (0, o.A)(),
     E = (0, o.A)(),
+    g = (0, o.A)(),
     A = 10,
     I = 7.23;
 class T extends i.Component {
@@ -40,7 +40,7 @@ class T extends i.Component {
             i = this.context?.errorId;
         return (
             null != i && r.push(i),
-            null != n ? r.push(m) : (null != e && r.push(E), null != t && r.push(g)),
+            null != n ? r.push(m) : (null != e && r.push(g), null != t && r.push(E)),
             r.length > 0 ? r.join(" ") : void 0
         );
     };
@@ -66,7 +66,7 @@ class T extends i.Component {
         if (this.props.showCharacterCount) {
             let { value: e, maxLength: t } = this.props;
             return (0, r.jsxs)("div", {
-                className: s()(f.Ru, { [f.hz]: this.hasError() }),
+                className: a()(f.Ru, { [f.hz]: this.hasError() }),
                 "aria-hidden": "true",
                 children: [e?.length ?? 0, " ", null != t && `/ ${t}`],
             });
@@ -78,7 +78,7 @@ class T extends i.Component {
         let e = this.getCharsLeftLength();
         return null == e
             ? null
-            : (0, r.jsx)("div", { className: s()(f.Ru, { [f.hz]: e < 0 }), "aria-hidden": "true", children: e });
+            : (0, r.jsx)("div", { className: a()(f.Ru, { [f.hz]: e < 0 }), "aria-hidden": "true", children: e });
     }
     hasError() {
         return (
@@ -117,7 +117,7 @@ class T extends i.Component {
                 value: t,
                 placeholder: n,
                 autoFocus: i,
-                minLength: a,
+                minLength: s,
                 maxLength: o,
                 allowOverflow: u,
                 spellCheck: c,
@@ -125,36 +125,36 @@ class T extends i.Component {
                 className: A,
                 id: I,
                 rows: T,
-                flex: y,
-                autosize: S,
+                flex: S,
+                autosize: y,
                 required: v,
-                onInvalid: C,
-                inputRef: b,
+                onInvalid: N,
+                inputRef: C,
             } = this.props,
-            N = S ? d.y : "textarea",
-            R = this.hasError(),
-            O = this.props["aria-labelledby"] ?? this.context?.titleId,
+            R = y ? d.y : "textarea",
+            O = this.hasError(),
+            b = this.props["aria-labelledby"] ?? this.context?.titleId,
             D = this.getAriaDescribedBy();
         return (0, r.jsxs)("div", {
-            className: s()(p.I6, { [f.Uu]: y }),
+            className: a()(p.I6, { [f.Uu]: S }),
             children: [
                 (0, r.jsxs)("div", {
-                    className: s()(f.b4, { [f.Uu]: y }),
+                    className: a()(f.b4, { [f.Uu]: S }),
                     children: [
                         (0, r.jsx)(l.vN3, {
-                            children: (0, r.jsx)(N, {
+                            children: (0, r.jsx)(R, {
                                 type: "text",
-                                className: s()(p.hF, f.Tg, h.qD, A, { [p.z3]: R, [p.r9]: e, [f.Xl]: m }),
-                                "aria-labelledby": O,
+                                className: a()(p.hF, f.Tg, h.qD, A, { [p.z3]: O, [p.r9]: e, [f.Xl]: m }),
+                                "aria-labelledby": b,
                                 "aria-describedby": D,
-                                "aria-invalid": R,
+                                "aria-invalid": O,
                                 style: { paddingRight: this.getPaddingRight() },
                                 id: I,
                                 disabled: e,
                                 placeholder: n,
                                 value: t,
                                 autoFocus: i,
-                                minLength: a,
+                                minLength: s,
                                 maxLength: u ? void 0 : o,
                                 spellCheck: c,
                                 required: v,
@@ -162,15 +162,15 @@ class T extends i.Component {
                                 onBlur: this.onBlur,
                                 onFocus: this.onFocus,
                                 onKeyDown: this.onKeyDown,
-                                onInvalid: C,
+                                onInvalid: N,
                                 rows: T,
-                                ref: b,
+                                ref: C,
                             }),
                         }),
-                        null != a &&
-                            (0, r.jsx)(l.AC4, { id: g, children: _.intl.format(_.t["bmQU//"], { minLength: a }) }),
+                        null != s &&
+                            (0, r.jsx)(l.AC4, { id: E, children: _.intl.format(_.t["bmQU//"], { minLength: s }) }),
                         null != o &&
-                            (0, r.jsx)(l.AC4, { id: E, children: _.intl.format(_.t["+DFxLc"], { maxLength: o }) }),
+                            (0, r.jsx)(l.AC4, { id: g, children: _.intl.format(_.t["+DFxLc"], { maxLength: o }) }),
                         this.renderCharacterCount(),
                         this.renderMaxLength(),
                     ],

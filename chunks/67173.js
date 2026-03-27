@@ -3,7 +3,7 @@ var i = n(627968),
     a = n(64700),
     l = n(503698),
     r = n.n(l),
-    s = n(4208),
+    s = n(880013),
     o = n(837381),
     d = n(158954),
     c = n(311907),
@@ -23,8 +23,8 @@ var i = n(627968),
     S = n(398025),
     x = n(652215),
     v = n(49999),
-    b = n(985018),
-    y = n(449014);
+    y = n(985018),
+    b = n(414939);
 let O = Math.ceil(Math.sqrt(115200)),
     L = (O - 240) / 2,
     R = function (e) {
@@ -100,7 +100,7 @@ let O = Math.ceil(Math.sqrt(115200)),
                 return { inlineCssProperties: e, shouldShowQuestHomeHeroGradient: M && (l || r) };
             }, [M, w]),
             et = (0, i.jsx)("div", {
-                className: y.iE,
+                className: b.iE,
                 onMouseEnter: F,
                 onMouseLeave: Y,
                 onFocus: F,
@@ -108,29 +108,29 @@ let O = Math.ceil(Math.sqrt(115200)),
                 ref: $,
                 style: J,
                 children: (0, i.jsxs)(m.z9, {
-                    className: r()({ [y.VU]: Q || ee, [y.jR]: Q, [y.XO]: M }),
+                    className: r()({ [b.VU]: Q || ee, [b.jR]: Q, [b.XO]: M }),
                     icon: _.r2v,
                     listItemRef: l,
                     onClick: U,
                     route: x.BVt.QUEST_HOME,
                     selected: t,
-                    text: b.intl.string(b.t.JALI2K),
+                    text: y.intl.string(y.t.JALI2K),
                     ...n,
                     children: [
                         M &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsx)("div", {
-                                        className: y.qS,
+                                        className: b.qS,
                                         children: (0, i.jsx)(d.Exy, {
-                                            type: { text: b.intl.string(b.t.y2b7CA) },
+                                            type: { text: y.intl.string(y.t.y2b7CA) },
                                             variant: "expressive",
                                         }),
                                     }),
                                     w?.questHomeEntrypoint?.entrypointAssetImageUrl != null &&
                                         (0, i.jsx)("img", {
                                             src: w?.questHomeEntrypoint?.entrypointAssetImageUrl,
-                                            className: y.Nd,
+                                            className: b.Nd,
                                             alt: "",
                                         }),
                                 ],
@@ -139,7 +139,7 @@ let O = Math.ceil(Math.sqrt(115200)),
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsx)(s.animated.div, {
-                                        className: y.q2,
+                                        className: b.q2,
                                         style: {
                                             transform: V.to(
                                                 (e) =>
@@ -148,12 +148,12 @@ let O = Math.ceil(Math.sqrt(115200)),
                                         },
                                     }),
                                     (0, i.jsx)(s.animated.div, {
-                                        className: y.ys,
+                                        className: b.ys,
                                         style: { opacity: (0, S.a)(G.to({ range: [0, 1], output: [0, 0.5] })) },
                                     }),
                                     (0, i.jsx)(_.LpS, {
-                                        className: y.qS,
-                                        text: b.intl.string(b.t.y2b7CA),
+                                        className: b.qS,
+                                        text: y.intl.string(y.t.y2b7CA),
                                         color: _.LU0.colors.BACKGROUND_BRAND.css,
                                     }),
                                 ],
@@ -172,7 +172,7 @@ let O = Math.ceil(Math.sqrt(115200)),
                                   ? (0, i.jsx)("img", {
                                         src: w.questHomeEntrypoint.tooltipAssetImageUrl,
                                         alt: "",
-                                        className: y.ut,
+                                        className: b.ut,
                                     })
                                   : void 0,
                           assetSize: 48,

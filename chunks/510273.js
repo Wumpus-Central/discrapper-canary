@@ -1,31 +1,31 @@
 r.r(t), r.d(t, { default: () => N });
 var s = r(627968),
     i = r(64700),
-    a = r(4208),
+    a = r(880013),
     l = r(575593),
     n = r(334279),
     d = r(417597),
     u = r(397927),
-    c = r(331402),
-    o = r(287809),
-    h = r(512213),
+    c = r(287809),
+    o = r(512213),
+    h = r(139136),
     m = r(846957),
     f = r(929283),
     g = r(245068),
     p = r(158216),
     j = r(985018),
-    x = r(980456),
+    x = r(431167),
     y = r(743102),
     v = r(241988);
 let _ = (e) => {
         let { product: t, itemConsumed: r, forCollectedModal: i } = e,
-            a = (0, d.bG)([o.default], () => o.default.getCurrentUser());
+            a = (0, d.bG)([c.default], () => c.default.getCurrentUser());
         if (null == a) return null;
         let [p] = t.items;
         if (t.type === l.R.PROFILE_EFFECT)
             return (0, s.jsx)("div", {
                 className: x.NM,
-                children: (0, s.jsx)(c.A, {
+                children: (0, s.jsx)(h.A, {
                     skuId: p.skuId,
                     delayProfileEffectIntro: i,
                     withScaleAnimation: i,
@@ -37,7 +37,7 @@ let _ = (e) => {
         if (t.type === l.R.NAMEPLATE)
             return (0, s.jsx)("div", {
                 className: x.qF,
-                children: (0, s.jsx)(h.A, { nameplate: p, user: a, nameplatePreviewSize: "large", isHighlighted: !0 }),
+                children: (0, s.jsx)(o.A, { nameplate: p, user: a, nameplatePreviewSize: "large", isHighlighted: !0 }),
             });
         if (t.type === l.R.BUNDLE)
             return (0, s.jsx)("div", {

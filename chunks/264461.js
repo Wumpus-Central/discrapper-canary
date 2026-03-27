@@ -1,20 +1,20 @@
 n.d(t, { A: () => _ });
 var a = n(627968),
-    s = n(64700),
-    i = n(503698),
-    l = n.n(i),
+    i = n(64700),
+    s = n(503698),
+    l = n.n(s),
     r = n(158954),
     o = n(311907),
     d = n(902592),
-    c = n(996958),
-    u = n(869146),
-    m = n(680108),
+    c = n(869146),
+    u = n(734340),
+    m = n(550730),
     h = n(439895),
     x = n(652215),
-    p = n(569885);
+    p = n(7875);
 let g = (e) => {
         let { setTab: t } = e,
-            n = (0, o.bG)([u.A], () => u.A.getWindowOpen(x.MLl.DEVTOOLS_POPOUT));
+            n = (0, o.bG)([c.A], () => c.A.getWindowOpen(x.MLl.DEVTOOLS_POPOUT));
         return (0, a.jsxs)("div", {
             className: p.Qs,
             children: [
@@ -85,7 +85,7 @@ let g = (e) => {
         });
     },
     _ = () => {
-        let [e, t] = s.useState(0);
+        let [e, t] = i.useState(0);
         return (0, a.jsxs)(r.IpV, {
             className: p.iE,
             children: [
@@ -101,7 +101,7 @@ let g = (e) => {
                         case 1:
                             return (0, a.jsx)(m.A, {});
                         case 2:
-                            return (0, a.jsx)(c.A, {});
+                            return (0, a.jsx)(u.A, {});
                         case 3:
                             return (0, a.jsx)(h.A, {});
                         default:

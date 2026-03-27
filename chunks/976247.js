@@ -1,34 +1,34 @@
 "use strict";
-n.d(t, { A: () => A, z: () => g });
+n.d(t, { A: () => A, z: () => E });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(452282),
     l = n(515718),
     u = n(369254),
     c = n(358731),
-    d = n(976155);
+    d = n(4681);
 let _ = 24,
     f = 36,
     p = 76,
     h = 88,
     m = 272;
-function g(e, t) {
+function E(e, t) {
     let n = window.innerWidth - (e ? p : _) * 2,
         r = window.innerHeight - 2 * h;
     if (!(0, l.eJ)(t)) return { width: n, height: r };
-    let { width: i, height: a } = t,
-        s = window.innerWidth - 2 * m,
+    let { width: i, height: s } = t,
+        a = window.innerWidth - 2 * m,
         o = window.innerHeight - (e ? h : f) * 2,
-        u = (0, l.Uj)({ width: i, height: a, maxWidth: n, maxHeight: r }),
-        c = (0, l.Uj)({ width: i, height: a, maxWidth: s, maxHeight: o });
+        u = (0, l.Uj)({ width: i, height: s, maxWidth: n, maxHeight: r }),
+        c = (0, l.Uj)({ width: i, height: s, maxWidth: a, maxHeight: o });
     return u.width >= c.width ? u : c;
 }
-function E(e) {
-    let { items: t, currentIndex: n, children: a } = e,
+function g(e) {
+    let { items: t, currentIndex: n, children: s } = e,
         l = t[n],
-        _ = g(t.length > 1, { width: l.width, height: l.height }),
+        _ = E(t.length > 1, { width: l.width, height: l.height }),
         [f, p] = i.useState(0);
     return (
         i.useEffect(() => {
@@ -46,14 +46,14 @@ function E(e) {
             mode: c.nY.PINNED,
             children: (e) =>
                 (0, r.jsx)("div", {
-                    className: s()(d.k4, e),
+                    className: a()(d.k4, e),
                     children: (0, r.jsx)(
                         "div",
-                        { children: _.width > 0 && _.height > 0 && a(_.width, _.height) },
+                        { children: _.width > 0 && _.height > 0 && s(_.width, _.height) },
                         l.url,
                     ),
                 }),
         })
     );
 }
-let A = i.memo(E);
+let A = i.memo(g);

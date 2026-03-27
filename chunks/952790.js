@@ -4,7 +4,7 @@ var i = n(627968),
     s = n(64700),
     l = n(503698),
     r = n.n(l),
-    a = n(4208),
+    a = n(880013),
     o = n(607399),
     c = n(311907),
     d = n(990078),
@@ -12,18 +12,18 @@ var i = n(627968),
     h = n(5180),
     A = n(209047),
     m = n(454938),
-    p = n(855687),
-    g = n(731091),
-    _ = n(544028),
+    _ = n(855687),
+    p = n(731091),
+    g = n(544028),
     f = n(253932),
     x = n(576705),
-    C = n(486020),
-    E = n(885631),
+    E = n(486020),
+    C = n(885631),
     I = n(986268),
     N = n(652215),
     b = n(349828),
     S = n(985018),
-    T = n(961577);
+    T = n(826358);
 function v(e) {
     let { guild: t, controller: n, guildBanner: s, animate: l } = e,
         { value: c } = n.springs;
@@ -35,7 +35,7 @@ function v(e) {
             style: { transform: c.to((e) => `translateY(${(1 - e) * 90}px)`) },
             children: (0, i.jsx)("img", {
                 className: r()(T.Q, { [T.fr]: o.Fr }),
-                src: C.Ay.getGuildBannerURL({ id: t.id, banner: s }, l) ?? "",
+                src: E.Ay.getGuildBannerURL({ id: t.id, banner: s }, l) ?? "",
                 alt: "",
                 "aria-hidden": !0,
             }),
@@ -94,20 +94,20 @@ function R(e) {
 }
 let O = [b.Vc, N.gNP];
 function L(e) {
-    let { bannerVisible: t, guild: l, onClick: r, onContextMenu: a, ariaControls: o, ariaExpanded: m, children: _ } = e,
+    let { bannerVisible: t, guild: l, onClick: r, onContextMenu: a, ariaControls: o, ariaExpanded: m, children: g } = e,
         f = (0, h.YC)(l),
-        C = (0, c.bG)([x.A], () => (0, p.K)(x.A, l)),
-        E = s.useCallback(() => {
-            C
+        E = (0, c.bG)([x.A], () => (0, _.K)(x.A, l)),
+        C = s.useCallback(() => {
+            E
                 ? (0, u.mMO)(async () => {
-                      let { default: e } = await Promise.all([n.e("43600"), n.e("67505")]).then(n.bind(n, 234355));
+                      let { default: e } = await Promise.all([n.e("43600"), n.e("71281")]).then(n.bind(n, 234355));
                       return (t) => (0, i.jsx)(e, { ...t, guild: l, source: N.PE1.GUILD_HEADER_INVITE_BUTTON });
                   })
                 : (0, u.mMO)(async () => {
                       let { default: e } = await n.e("62751").then(n.bind(n, 132610));
                       return (t) => (0, i.jsx)(e, { ...t });
                   });
-        }, [C, l]);
+        }, [E, l]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(u.DUT, {
@@ -126,7 +126,7 @@ function L(e) {
                             (0, i.jsx)(R, { guild: l }),
                         ],
                     }),
-                    (0, i.jsx)("div", { className: T.dx, children: _ }),
+                    (0, i.jsx)("div", { className: T.dx, children: g }),
                 ],
             }),
             l.id === b.Vc && (0, i.jsx)(A.A, { className: T.sq }),
@@ -138,12 +138,12 @@ function L(e) {
                     children: (0, i.jsx)(u.DUT, {
                         className: T.ak,
                         onClick: () => {
-                            E();
+                            C();
                         },
                         children: (0, i.jsx)(u.DpX, { size: "refresh_sm", color: "currentColor" }),
                     }),
                 }),
-            l.id === N.gNP && (0, i.jsx)(g.g, {}),
+            l.id === N.gNP && (0, i.jsx)(p.g, {}),
         ],
     });
 }
@@ -156,8 +156,8 @@ let M = s.memo(function (e) {
             onClick: d,
             onContextMenu: h,
             onMouseDown: A,
-            disableBannerAnimation: p,
-            "aria-expanded": g,
+            disableBannerAnimation: _,
+            "aria-expanded": p,
             "aria-controls": x,
             guild: I,
             guildBanner: b,
@@ -169,18 +169,18 @@ let M = s.memo(function (e) {
         } = e,
         G = I.features.has(N.GuildFeatures.ANIMATED_BANNER),
         U = (0, m.A)(I),
-        P = !U && (0, E.A)(I),
-        k = !U && O,
-        w = (0, C.VI)(b) && G && !p,
+        P = !U && (0, C.A)(I),
+        w = !U && O,
+        k = (0, E.VI)(b) && G && !_,
         [V, B] = s.useState(!1),
         H = s.useRef(!1),
         F = s.useRef(null),
         K = t ?? F,
         W = s.useRef(void 0),
         Y = f.kt.getSetting(),
-        z = (0, c.bG)([_.A], () => _.A.theme);
+        z = (0, c.bG)([g.A], () => g.A.theme);
     s.useEffect(() => {
-        if (w && n && !H.current && Y)
+        if (k && n && !H.current && Y)
             return (
                 B(!0),
                 (W.current = setTimeout(() => {
@@ -190,7 +190,7 @@ let M = s.memo(function (e) {
                     clearTimeout(W.current);
                 }
             );
-    }, [w, n, Y]),
+    }, [k, n, Y]),
         s.useEffect(() => {
             H.current = n;
         }, [n]);
@@ -207,7 +207,7 @@ let M = s.memo(function (e) {
                         "data-has-banner": q(),
                         "data-banner-visible": n,
                         ref: K,
-                        className: r()(a, { [T.kL]: !0, [T.r9]: q(), [T.Pi]: n, [e]: !1, [T.Iv]: k || (M && P) }),
+                        className: r()(a, { [T.kL]: !0, [T.r9]: q(), [T.Pi]: n, [e]: !1, [T.Iv]: w || (M && P) }),
                         onMouseDown: A,
                         onContextMenu: h,
                         children: [
@@ -222,7 +222,7 @@ let M = s.memo(function (e) {
                                             onClick: d,
                                             onContextMenu: h,
                                             ariaControls: x,
-                                            ariaExpanded: g,
+                                            ariaExpanded: p,
                                             children: j,
                                         }),
                                     }),
@@ -239,7 +239,7 @@ let M = s.memo(function (e) {
                             (0, i.jsx)(D, { controller: l }),
                         ],
                     }),
-                    w && q()
+                    k && q()
                         ? (0, i.jsx)("div", {
                               className: T.rt,
                               onMouseEnter: () => {

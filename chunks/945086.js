@@ -10,7 +10,7 @@ var s = n(503698),
     d = n(688810),
     c = n(721923),
     u = n(985018),
-    m = n(283008);
+    m = n(77582);
 let g = (e) => {
     let {
             guild: t,
@@ -41,11 +41,11 @@ function x(e) {
             textColor: x,
             headerColor: h,
             buttonProps: _,
-            useExpressiveButton: A,
+            useExpressiveButton: p,
         } = e,
-        { analyticsLocations: p } = (0, d.Ay)(o.A.GUILD_BOOSTING_UPSELL_BANNER);
+        { analyticsLocations: A } = (0, d.Ay)(o.A.GUILD_BOOSTING_UPSELL_BANNER);
     return (0, i.jsx)(d.f5, {
-        value: p,
+        value: A,
         children: (0, i.jsxs)("div", {
             className: l()(m.vK, u),
             children: [
@@ -69,7 +69,7 @@ function x(e) {
                         analyticsLocation: r,
                         className: m.x6,
                         buttonProps: _,
-                        useExpressiveButton: A,
+                        useExpressiveButton: p,
                     }),
                 }),
             ],

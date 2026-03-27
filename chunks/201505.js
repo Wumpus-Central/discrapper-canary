@@ -6,15 +6,15 @@ var i = n(627968),
     l = n.n(r),
     a = n(989349),
     o = n.n(a),
-    c = n(843282),
-    d = n(397927),
+    d = n(843282),
+    c = n(397927),
     u = n(985018),
-    h = n(614725);
+    h = n(191);
 let _ = o()().localeData().months(),
     p = Array.from(Array(31).keys()).map((e) => ({ value: e + 1, label: `${e + 1}` })),
     g = Array.from(Array(12).keys()).map((e) => ({ value: e + 1, label: _[e] })),
     m = /[a-zA-Z0-9]/;
-function f(e) {
+function A(e) {
     let { options: t, selectOption: n, children: r } = e,
         [l, a] = s.useState("");
     s.useEffect(() => {
@@ -35,7 +35,7 @@ function f(e) {
     );
     return (0, i.jsx)("div", { onKeyDown: o, children: r });
 }
-function A() {
+function f() {
     let e = o()().localeData().longDateFormat("L"),
         t = e.indexOf("D"),
         n = e.indexOf("M"),
@@ -58,16 +58,16 @@ let E = s.forwardRef(function (e, t) {
             onChange: m,
             onPopulated: E,
             error: x,
-            autoFocus: v,
-            required: I,
-            onFocus: N,
-            onBlur: S,
-            name: j,
+            autoFocus: I,
+            required: N,
+            onFocus: v,
+            onBlur: j,
+            name: S,
         } = e,
         {
-            day: C,
-            setDay: y,
-            month: T,
+            day: T,
+            setDay: C,
+            month: y,
             setMonth: b,
             year: R,
             setYear: O,
@@ -78,12 +78,12 @@ let E = s.forwardRef(function (e, t) {
             null != e && ((t = e.date()), (n = e.month() + 1), (i = e.year()));
             let [r, l] = s.useState(t),
                 [a, o] = s.useState(n),
-                [c, d] = s.useState(i);
-            return { day: r, setDay: l, month: a, setMonth: o, year: c, setYear: d };
+                [d, c] = s.useState(i);
+            return { day: r, setDay: l, month: a, setMonth: o, year: d, setYear: c };
         })(a),
         L = s.useMemo(
-            () => (null != C && null != T && null != R ? o()(`${C}/${T}/${R}`, "DD/MM/YYYY") : null),
-            [C, T, R],
+            () => (null != T && null != y && null != R ? o()(`${T}/${y}/${R}`, "DD/MM/YYYY") : null),
+            [T, y, R],
         );
     s.useEffect(() => {
         m(L?.isValid() ? L : null);
@@ -97,88 +97,88 @@ let E = s.forwardRef(function (e, t) {
                 r.current = Array.from(Array(150).keys()).map((e) => ({ value: n - e - 3, label: `${n - e - 3}` }));
             }, [n]),
             r.current),
-        [D, B] = s.useState(v ? 0 : -1),
-        P = s.useMemo(A, []),
-        U = { onPopulated: E, sortedInputs: P },
-        G = s.useRef(U);
+        [D, P] = s.useState(I ? 0 : -1),
+        U = s.useMemo(f, []),
+        B = { onPopulated: E, sortedInputs: U },
+        G = s.useRef(B);
     s.useEffect(() => {
-        G.current = U;
+        G.current = B;
     }),
         s.useEffect(() => {
             let { onPopulated: e, sortedInputs: t } = G.current;
             if (D >= t.length) return void e?.();
         }, [D]);
-    let M = [];
+    let F = [];
     for (let e = 0; e < 3; e++) {
-        let { type: t } = P[e];
+        let { type: t } = U[e];
         switch (t) {
             case "day":
-                M.push({
+                F.push({
                     key: "day",
-                    input: (0, i.jsx)(f, {
+                    input: (0, i.jsx)(A, {
                         options: p,
-                        selectOption: y,
-                        children: (0, i.jsx)(c.Te, {
+                        selectOption: C,
+                        children: (0, i.jsx)(d.Te, {
                             "aria-label": u.intl.string(u.t.Voklre),
                             popoutPosition: "top",
                             placeholder: u.intl.string(u.t.Voklre),
                             options: p,
-                            value: C,
+                            value: T,
                             onChange: (t) => {
-                                y(t), B(e + 1);
+                                C(t), P(e + 1);
                             },
                             maxVisibleItems: 6,
                             autoFocus: D === e,
-                            onOpen: () => N?.(`${j}_${t}`),
-                            onClose: () => S?.(`${j}_${t}`),
+                            onOpen: () => v?.(`${S}_${t}`),
+                            onClose: () => j?.(`${S}_${t}`),
                             "data-migration-pending": !0,
                         }),
                     }),
                 });
                 break;
             case "month":
-                M.push({
+                F.push({
                     key: "month",
-                    input: (0, i.jsx)(f, {
+                    input: (0, i.jsx)(A, {
                         options: g,
                         selectOption: b,
-                        children: (0, i.jsx)(c.Te, {
+                        children: (0, i.jsx)(d.Te, {
                             "aria-label": u.intl.string(u.t.UDlN8W),
                             popoutPosition: "top",
                             placeholder: u.intl.string(u.t.UDlN8W),
                             options: g,
-                            value: T,
+                            value: y,
                             onChange: (t) => {
-                                b(t), B(e + 1);
+                                b(t), P(e + 1);
                             },
                             maxVisibleItems: 6,
                             autoFocus: D === e,
-                            onOpen: () => N?.(`${j}_${t}`),
-                            onClose: () => S?.(`${j}_${t}`),
+                            onOpen: () => v?.(`${S}_${t}`),
+                            onClose: () => j?.(`${S}_${t}`),
                             "data-migration-pending": !0,
                         }),
                     }),
                 });
                 break;
             case "year":
-                M.push({
+                F.push({
                     key: "year",
-                    input: (0, i.jsx)(f, {
+                    input: (0, i.jsx)(A, {
                         options: k,
                         selectOption: O,
-                        children: (0, i.jsx)(c.Te, {
+                        children: (0, i.jsx)(d.Te, {
                             "aria-label": u.intl.string(u.t.ZWr5WA),
                             popoutPosition: "top",
                             placeholder: u.intl.string(u.t.ZWr5WA),
                             options: k,
                             value: R,
                             onChange: (t) => {
-                                O(t), B(e + 1);
+                                O(t), P(e + 1);
                             },
                             maxVisibleItems: 6,
                             autoFocus: D === e,
-                            onOpen: () => N?.(`${j}_${t}`),
-                            onClose: () => S?.(`${j}_${t}`),
+                            onOpen: () => v?.(`${S}_${t}`),
+                            onClose: () => j?.(`${S}_${t}`),
                             "data-migration-pending": !0,
                         }),
                     }),
@@ -187,13 +187,13 @@ let E = s.forwardRef(function (e, t) {
     }
     return (0, i.jsx)("fieldset", {
         className: l()(h.container, _),
-        children: (0, i.jsx)(d.D0$, {
+        children: (0, i.jsx)(c.D0$, {
             label: u.intl.string(u.t.xNpFJ6),
-            required: I,
+            required: N,
             errorMessage: w ?? void 0,
             children: (0, i.jsx)("div", {
                 className: h.inputs,
-                children: M.map((e, t) => {
+                children: F.map((e, t) => {
                     let { key: n, input: s } = e;
                     return (0, i.jsx)("div", { tabIndex: t + 1, className: h[n], children: s }, n);
                 }),

@@ -5,37 +5,37 @@ var i = n(627968),
     l = n(503698),
     r = n.n(l),
     a = n(735438),
-    o = n(4208),
+    o = n(880013),
     c = n(311907),
     d = n(397927),
     u = n(73153),
     h = n(367513),
     A = n(843472),
     m = n(386467),
-    p = n(465364),
-    g = n(763754),
-    _ = n(448368),
+    _ = n(465364),
+    p = n(763754),
+    g = n(448368),
     f = n(378058),
     x = n(148355),
-    C = n(320501),
-    E = n(994500),
+    E = n(320501),
+    C = n(994500),
     I = n(486020),
     N = n(927813),
     b = n(403362),
     S = n(652215),
     T = n(838541),
-    v = n(424366);
+    v = n(379807);
 let y = 10 * N.A.Millis.SECOND;
 function j(e) {
     let { message: t } = e,
         { isBlocked: n, isIgnored: l } = (0, c.cf)(
-            [E.A],
-            () => ({ isBlocked: E.A.isBlockedForMessage(t), isIgnored: E.A.isIgnoredForMessage(t) }),
+            [C.A],
+            () => ({ isBlocked: C.A.isBlockedForMessage(t), isIgnored: C.A.isIgnoredForMessage(t) }),
             [t],
         ),
-        a = (0, g.X4)(t),
+        a = (0, p.X4)(t),
         o = s.useContext(m.A),
-        [u, C] = s.useState(!1),
+        [u, E] = s.useState(!1),
         N = s.useCallback(
             (e) => {
                 "A" !== e.target.nodeName &&
@@ -44,13 +44,13 @@ function j(e) {
             },
             [t.channel_id, t.id],
         ),
-        b = null != t.content && "" !== t.content ? (0, p.Ay)(t, { isInteracting: u }).content : null,
+        b = null != t.content && "" !== t.content ? (0, _.Ay)(t, { isInteracting: u }).content : null,
         {
             contentPlaceholder: S,
             renderedContent: y,
             trailingIcon: j,
             leadingIcon: R,
-        } = (0, _.o)(t, b, n, l, v.BK, { trailingIconClass: v.sl, leadingIconClass: v.aG, iconSize: T.eJ }),
+        } = (0, g.o)(t, b, n, l, v.BK, { trailingIconClass: v.sl, leadingIconClass: v.aG, iconSize: T.eJ }),
         O = (0, f.o6)(t),
         L =
             O.length > 0
@@ -59,10 +59,10 @@ function j(e) {
     return (0, i.jsxs)(d.DUT, {
         className: v.oR,
         onMouseEnter: () => {
-            C(!0);
+            E(!0);
         },
         onMouseLeave: () => {
-            C(!1);
+            E(!1);
         },
         onClick: N,
         children: [
@@ -126,32 +126,32 @@ function R(e) {
                         });
                 }, [r]),
                 n && null == h.current ? (h.current = r) : n || null == h.current || (h.current = null);
-            let p = h.current ?? r;
+            let _ = h.current ?? r;
             return {
                 toastsHidden: o,
-                toastMessages: (0, c.yK)([C.A], () => p.map((e) => C.A.getMessage(t, e)), [t, p]).filter(b.Vq),
+                toastMessages: (0, c.yK)([E.A], () => _.map((e) => E.A.getMessage(t, e)), [t, _]).filter(b.Vq),
             };
         })({ channelId: t, isFrozen: l, count: 3, lingerMs: y }),
-        p = s.useRef({}),
-        [g, _] = s.useState({}),
+        _ = s.useRef({}),
+        [p, g] = s.useState({}),
         f = s.useCallback((e, t) => {
-            null == t ? delete p.current[e] : (p.current[e] = t);
+            null == t ? delete _.current[e] : (_.current[e] = t);
         }, []),
-        x = s.useRef(g);
+        x = s.useRef(p);
     s.useLayoutEffect(() => {
-        x.current = g;
+        x.current = p;
     }),
         s.useLayoutEffect(() => {
             let e = {},
                 t = 0;
             for (let n of m) {
-                let i = p.current[n.id] ?? 0;
+                let i = _.current[n.id] ?? 0;
                 (e[n.id] = t), (t += i + 8);
             }
-            (0, a.isEqual)(e, x.current) || _(e);
+            (0, a.isEqual)(e, x.current) || g(e);
         }, [m]);
-    let E = m.map((e) => ({ message: e, height: p.current[e.id], y: g[e.id] })),
-        I = (0, d.pnh)(E, {
+    let C = m.map((e) => ({ message: e, height: _.current[e.id], y: p[e.id] })),
+        I = (0, d.pnh)(C, {
             keys: (e) => e.message.id,
             from: () => ({ opacity: 0 }),
             enter: (e) => {

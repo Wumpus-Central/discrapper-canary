@@ -12,13 +12,13 @@ var i = n(627968),
     h = n(397927),
     A = n(846293),
     m = n(774300),
-    p = n(566903),
-    g = n(714114),
-    _ = n(864436),
+    _ = n(566903),
+    p = n(714114),
+    g = n(864436),
     f = n(835072),
     x = n(793574),
-    C = n(688810),
-    E = n(139286),
+    E = n(688810),
+    C = n(139286),
     I = n(47167),
     N = n(713517),
     b = n(854627),
@@ -35,21 +35,21 @@ var i = n(627968),
     G = n(582904),
     U = n(652215),
     P = n(985018),
-    w = n(357694),
-    k = n(248789),
-    V = n(165180);
+    w = n(97220),
+    k = n(467935),
+    V = n(276170);
 let B = "VoiceInviteSuggestionsPopover";
 function H(e) {
     let { channel: t, onHoverOrFocus: l, setPopoutRef: a, closePopout: d } = e,
         u = s.useRef(null),
         A = (0, N.A)(u),
         m = (0, G.kt)({ channel: t }),
-        { enabled: p } = T.A.useExperiment({ guildId: t.guild_id, location: "VoiceInviteSuggestionsPopover" }),
-        { analyticsLocations: g } = (0, C.Ay)(x.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
-    (0, E.A)({
+        { enabled: _ } = T.A.useExperiment({ guildId: t.guild_id, location: "VoiceInviteSuggestionsPopover" }),
+        { analyticsLocations: p } = (0, E.Ay)(x.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
+    (0, C.A)({
         name: c.ImpressionNames.VOICE_INVITE_SUGGESTIONS_POPOVER,
         type: c.ImpressionTypes.POPOUT,
-        properties: { voice_channel_id: t.id, voice_guild_id: t.guild_id, location_stack: g },
+        properties: { voice_channel_id: t.id, voice_guild_id: t.guild_id, location_stack: p },
     }),
         s.useEffect(() => {
             a?.(u.current);
@@ -57,11 +57,11 @@ function H(e) {
         s.useEffect(() => {
             l?.(A.isHoveringOrFocusing);
         }, [l, A]);
-    let _ = s.useCallback(() => {
+    let g = s.useCallback(() => {
         let e = j.A.getGuild(t.guild_id);
         o()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, h.mMO)(async () => {
-                let { default: s } = await Promise.all([n.e("43600"), n.e("28136"), n.e("74918")]).then(
+                let { default: s } = await Promise.all([n.e("43600"), n.e("28136"), n.e("93662")]).then(
                     n.bind(n, 234355),
                 );
                 return (n) => (0, i.jsx)(s, { ...n, guild: e, channel: t, source: U.PE1.VOICE_INVITE_SUGGESTIONS });
@@ -75,7 +75,7 @@ function H(e) {
         children: (0, i.jsxs)("div", {
             className: w.vW,
             children: [
-                p &&
+                _ &&
                     (0, i.jsx)(h.Text, {
                         variant: "text-sm/medium",
                         color: "text-muted",
@@ -85,10 +85,10 @@ function H(e) {
                 (0, i.jsxs)("ul", {
                     className: w.p_,
                     children: [
-                        m.map((e) => (0, i.jsx)(F, { channel: t, user: e, ringingEnabled: p }, e.id)),
+                        m.map((e) => (0, i.jsx)(F, { channel: t, user: e, ringingEnabled: _ }, e.id)),
                         (0, i.jsxs)(h.DUT, {
                             tag: "li",
-                            onClick: _,
+                            onClick: g,
                             className: r()(w.nM, w.vk),
                             children: [
                                 (0, i.jsx)("div", {
@@ -115,7 +115,7 @@ function F(e) {
         o = s.useRef(null),
         c = (0, d.bG)([y.Ay], () => y.Ay.getMember(a, n.id), [a, n.id]),
         { isHoveringOrFocusing: x } = (0, N.A)(o),
-        [C, E] = s.useState(null),
+        [E, C] = s.useState(null),
         {
             icon: T,
             iconColor: j,
@@ -144,12 +144,12 @@ function F(e) {
         { activityStatusText: q, activityStatusIcon: X } = s.useMemo(() => {
             if (!K) return { activityStatusText: {}, activityStatusIcon: void 0 };
             let e = z.find((e) => e.type !== U.$pd.CUSTOM_STATUS && e.type !== U.$pd.HANG_STATUS);
-            return { activityStatusText: (0, p.A)(e, !1), activityStatusIcon: null == e ? void 0 : (0, f.f)(e) };
+            return { activityStatusText: (0, _.A)(e, !1), activityStatusIcon: null == e ? void 0 : (0, f.f)(e) };
         }, [K, z]),
-        { voiceChannel: Q } = (0, g.A)({ userId: n.id }),
-        J = (0, I.Ay)(Q),
+        { voiceChannel: J } = (0, p.A)({ userId: n.id }),
+        Q = (0, I.Ay)(J),
         $ = (0, h.S31)(h.clD.ONLINE),
-        Z = "success" === C || "sending" === C,
+        Z = "success" === E || "sending" === E,
         ee = s.useCallback(
             (e) => {
                 e.stopPropagation(), k || F();
@@ -171,10 +171,10 @@ function F(e) {
                 }
                 return e?.code ?? null;
             }
-            E("sending");
+            C("sending");
             let i = await e();
             null == i
-                ? E(null)
+                ? C(null)
                 : m.A.enqueue(
                       {
                           type: m.F.USER,
@@ -184,7 +184,7 @@ function F(e) {
                           inviteAnalyticsMetadata: { source: U.PE1.VOICE_INVITE_SUGGESTIONS },
                       },
                       (e) => {
-                          E(e ? "success" : null);
+                          C(e ? "success" : null);
                       },
                   );
         }, [Z, n, t]),
@@ -198,7 +198,7 @@ function F(e) {
         er = P.intl.string(P.t.jYnGPG),
         ea = W !== h.clD.OFFLINE ? W : void 0,
         eo = K && null != q.text,
-        ec = K && null != Q && null != J;
+        ec = K && null != J && null != Q;
     return (0, i.jsxs)(h.DUT, {
         innerRef: o,
         tag: "li",
@@ -226,23 +226,23 @@ function F(e) {
                             className: w.J2,
                             children: [
                                 ec
-                                    ? (0, i.jsx)(S.A, { size: "custom", color: $, channel: Q, className: w.RI })
+                                    ? (0, i.jsx)(S.A, { size: "custom", color: $, channel: J, className: w.RI })
                                     : null != X
-                                      ? (0, i.jsx)(_.A, { icon: X, className: w.RI })
+                                      ? (0, i.jsx)(g.A, { icon: X, className: w.RI })
                                       : null,
                                 (0, i.jsx)(h.Text, {
                                     variant: "text-xs/medium",
                                     color: "text-status-online",
                                     lineClamp: 1,
-                                    children: ec ? J : q.text,
+                                    children: ec ? Q : q.text,
                                 }),
                             ],
                         }),
                 ],
             }),
-            "sending" === C &&
+            "sending" === E &&
                 (0, i.jsx)("div", { className: w.r$, children: (0, i.jsx)(h.nvX, { dotRadius: 2, themed: !0 }) }),
-            "success" === C &&
+            "success" === E &&
                 (0, i.jsx)(h.Text, {
                     variant: "text-xs/medium",
                     color: "text-muted",
@@ -250,7 +250,7 @@ function F(e) {
                     lineClamp: 1,
                     children: P.intl.string(P.t["8BEiNn"]),
                 }),
-            null == C &&
+            null == E &&
                 !l &&
                 (0, i.jsx)("div", {
                     className: w.SB,

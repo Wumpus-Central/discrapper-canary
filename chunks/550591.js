@@ -1,33 +1,14 @@
-"use strict";
-n.d(t, { A: () => c });
-var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    r = n.n(l),
-    a = n(435371),
-    o = n(354071);
-function c(e) {
-    let {
-            children: t,
-            text: n,
-            disableWrapper: l = !1,
-            disabled: c = !1,
-            hideOnClick: d = !0,
-            shouldShow: u,
-            forceOpen: h,
-            selected: A = !1,
-        } = e,
-        p = s.useMemo(() => (null == n || c ? null : (0, i.jsx)("div", { className: o.SH, children: n })), [n, c]),
-        g = l ? t : (0, i.jsx)("div", { className: r()(o.pm, { [o.wH]: A }), children: t });
-    return (0, i.jsx)(a.m_, {
-        __unsupportedReactNodeAsText: p,
-        position: "right",
-        spacing: 12,
-        hideOnClick: d,
-        shouldShow: u,
-        forceOpen: h,
-        ariaHidden: !0,
-        asContainer: !l,
-        children: g,
-    });
-}
+e.exports = {
+    kL: "container_f215b9",
+    Nr: "card_f215b9",
+    H: "avatarContainer_f215b9",
+    wx: "header_f215b9",
+    my: "avatar_f215b9",
+    eV: "appDetails_f215b9",
+    gn: "titleContainer_f215b9",
+    DD: "title_f215b9",
+    op: "infoContainer_f215b9",
+    JB: "appName_f215b9",
+    m4: "appCategory_f215b9",
+    h_: "description_f215b9",
+};

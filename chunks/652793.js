@@ -7,9 +7,9 @@ var s = n(503698),
     r = n(837381),
     a = n(672117),
     o = n(397927),
-    c = n(452051),
-    d = n(928409),
-    u = n(567431);
+    c = n(137943),
+    d = n(99566),
+    u = n(11464);
 function h(e) {
     let {
             id: t,
@@ -18,21 +18,21 @@ function h(e) {
             renderIcon: h,
             text: A,
             selected: m,
-            trailing: p,
-            background: g,
-            showUnread: _ = !1,
+            trailing: _,
+            background: p,
+            showUnread: g = !1,
             ref: f,
             ...x
         } = e,
-        C = (0, r.rm)(t),
-        E = (0, a.O)(A) ?? "";
+        E = (0, r.rm)(t),
+        C = (0, a.O)(A) ?? "";
     return (0, i.jsx)("li", {
         ref: f,
         children: (0, i.jsxs)(o.sqX, {
             ...x,
-            buttonProps: { ...C, id: t, role: "button" },
+            buttonProps: { ...E, id: t, role: "button" },
             tag: "div",
-            "aria-label": E,
+            "aria-label": C,
             focusProps: { offset: { top: 1, bottom: 1, right: 4 } },
             onContextMenu:
                 null != x.onContextMenu
@@ -42,8 +42,8 @@ function h(e) {
                       },
             className: l()(d.fx, u.iE, { [u.J1]: m }, n),
             children: [
-                g,
-                _ ? (0, i.jsx)("div", { className: l()(u.gy, u.WS) }) : null,
+                p,
+                g ? (0, i.jsx)("div", { className: l()(u.gy, u.WS) }) : null,
                 (0, i.jsx)("div", {
                     className: l()([u.nf, u.ae, s]),
                     children: (0, i.jsxs)("div", {
@@ -51,7 +51,7 @@ function h(e) {
                         children: [
                             (0, i.jsx)("div", { className: u.zc, children: h(u.Kk) }),
                             (0, i.jsx)("div", { className: u.UU, "aria-hidden": !0, children: A }),
-                            p,
+                            _,
                         ],
                     }),
                 }),

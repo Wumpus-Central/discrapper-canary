@@ -20,7 +20,7 @@ var l = s(627968),
     T = s(980888),
     f = s(652215),
     S = s(985018),
-    E = s(775548);
+    E = s(32337);
 class y extends a.Component {
     state = {
         selectedInstallationPath: this.props.defaultInstallationPath,

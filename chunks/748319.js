@@ -13,8 +13,8 @@ var a = n(627968),
     x = n(442433),
     p = n(820284),
     g = n(717558),
-    f = n(964486),
-    _ = n(220839),
+    _ = n(964486),
+    f = n(220839),
     v = n(397244),
     b = n(729551),
     j = n(755039),
@@ -67,8 +67,8 @@ var a = n(627968),
     ex = n(486020),
     ep = n(203982),
     eg = n(927813),
-    ef = n(403362),
-    e_ = n(536194),
+    e_ = n(403362),
+    ef = n(536194),
     ev = n(427262),
     eb = n(837921),
     ej = n(994314),
@@ -80,7 +80,7 @@ var a = n(627968),
     eE = n(652215),
     eN = n(731854),
     eI = n(985018),
-    ek = n(64734);
+    ek = n(683393);
 let eO = eb.Ay.getEnableHardwareAcceleration() ? h.JsQ : h.euF,
     eR = 2.5 * eg.A.Millis.SECOND,
     ew = 2 * eg.A.Millis.MINUTE,
@@ -99,7 +99,7 @@ function eM(e) {
             renderNameTag: m,
             nameplate: x,
             avatarDecoration: g,
-            "data-jump-section": f,
+            "data-jump-section": _,
         } = e,
         v = i.useRef(null),
         b = t ?? v,
@@ -119,7 +119,7 @@ function eM(e) {
                 [n, a] = i.useState(),
                 [s, l] = i.useState(!1);
             return (
-                (0, _.A)(() => l(!0), 750),
+                (0, f.A)(() => l(!0), 750),
                 i.useEffect(() => {
                     let t = (t) => {
                         let { highlightBadge: n } = t;
@@ -193,7 +193,7 @@ function eM(e) {
                                   "aria-label": eI.intl.string(eI.t["5fWB8U"]),
                                   focusProps: { ringTarget: b },
                                   className: ek.$n,
-                                  "data-jump-section": f,
+                                  "data-jump-section": _,
                               }),
                               (0, a.jsx)(eO, {
                                   size: h._3J.SIZE_32,
@@ -548,8 +548,8 @@ function eU(e) {
             handleToggleSelfMute: x,
             handleInputAudioContextMenu: p,
             handleOutputAudioContextMenu: g,
-            handleOpenAccountSettings: f,
-            handleOpenSettingsContextMenu: _,
+            handleOpenAccountSettings: _,
+            handleOpenSettingsContextMenu: f,
             dismissibleContents: v,
             nameplate: b,
             accountContainerRef: j,
@@ -595,8 +595,8 @@ function eU(e) {
             }),
             (0, a.jsx)(eS.A, {
                 webBuildOverride: c,
-                onClick: f,
-                onContextMenu: _,
+                onClick: _,
+                onContextMenu: f,
                 dismissibleContents: v.settings,
                 iconForeground: null != b ? ek.t4 : void 0,
                 nameplate: b,
@@ -621,7 +621,7 @@ function eB(e) {
         l(!1), a.current.stop();
     }, []);
     return (
-        (0, f.l0)(() => {
+        (0, _.l0)(() => {
             a.current.stop();
         }),
         { shouldShowTooltip: s, dismissTooltip: r }
@@ -655,13 +655,13 @@ function eG() {
             let e = ed.A.getChannelId();
             return null != e ? es.A.getChannel(e) : null;
         }),
-        { mute: f, selfMute: _, suppress: v } = (0, ee.A)(p),
+        { mute: _, selfMute: f, suppress: v } = (0, ee.A)(p),
         { selfDeaf: b, deaf: j } = (0, Z.A)(p),
         A = (0, c.bG)([T.A], () => ((0, S.kK)() ? T.A.getCurrentBuildOverride().overrides?.discord_web : null)),
         N = (0, c.bG)([eo.Ay], () => eo.Ay.getSpeakingWhileMuted()),
         I = (0, c.bG)([E.A], () => E.A.isFullscreenInContext()),
         k = (0, c.bG)([er.A], () => er.A.hasLayers()),
-        O = (0, h.red)(h.DXt) || k || e_.P.isDisallowPopupsSet() || I,
+        O = (0, h.red)(h.DXt) || k || ef.P.isDisallowPopupsSet() || I,
         w = (0, c.bG)([V.default], () => null != V.default.getAwaitingRemoteSessionInfo()),
         P = (0, c.bG)([ec.A], () => ec.A.getGuildId()),
         M = e?.avatarDecoration,
@@ -680,7 +680,7 @@ function eG() {
                 null != e &&
                     (a = o()(Array.from(el.A.getParty(e) ?? []))
                         .map((e) => eh.default.getUser(e))
-                        .filter(ef.Vq)
+                        .filter(e_.Vq)
                         .value()),
                 a.length > 1
             );
@@ -716,9 +716,9 @@ function eG() {
             userTag: x,
             occluded: O,
             selfDeaf: b,
-            selfMute: _,
+            selfMute: f,
             serverDeaf: j,
-            serverMute: f,
+            serverMute: _,
             speaking: d,
             voiceDb: m,
             speakingWhileMuted: N,

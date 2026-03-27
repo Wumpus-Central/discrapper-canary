@@ -14,10 +14,10 @@ var i = n(627968),
     x = n(268749),
     h = n(878701),
     _ = n(542210),
-    A = n(780679),
-    p = n(411335),
+    p = n(780679),
+    A = n(411335),
     f = n(985018),
-    j = n(985681);
+    j = n(15919);
 function N(e) {
     let { rule: t, triggerType: n } = e,
         l = s.useMemo(
@@ -52,12 +52,12 @@ let E = (e) => {
         let { className: t, children: n, ...s } = e;
         return (0, i.jsx)(a.DUT, { className: t, onClick: E, onMouseDown: E, onMouseUp: E, ...s, children: n });
     };
-function T(e) {
+function C(e) {
     let { rule: t, onChangeRule: n, onContextMenu: s } = e,
         l = () => n({ ...t, enabled: !t.enabled });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)("div", { className: j.XG, children: (0, i.jsx)(A.A, { rule: t, onChangeRule: n }) }),
+            (0, i.jsx)("div", { className: j.XG, children: (0, i.jsx)(p.A, { rule: t, onChangeRule: n }) }),
             (0, i.jsxs)(b, {
                 className: j.Ik,
                 children: [
@@ -79,7 +79,7 @@ function T(e) {
         ],
     });
 }
-function C(e) {
+function T(e) {
     return (0, g.ub)(e, g.H2.ALPHA)
         ? (0, i.jsx)(d.A, { className: j.n0 })
         : (0, g.ub)(e, g.H2.BETA)
@@ -91,13 +91,13 @@ function I(e) {
         d = (0, h.l)(t.triggerType, t),
         { isLoading: c, saveRule: g } = (0, x.S)(),
         { updateRule: _ } = (0, m.wP)(t.guildId),
-        [A, p] = s.useState(t.enabled),
-        T = (0, l.throttle)(async () => {
+        [p, A] = s.useState(t.enabled),
+        C = (0, l.throttle)(async () => {
             if (!c) {
-                let e = { ...t, enabled: !A };
-                p(!A);
+                let e = { ...t, enabled: !p };
+                A(!p);
                 let n = await g(e, []);
-                null != n && (_(n), p(n.enabled));
+                null != n && (_(n), A(n.enabled));
             }
         }, 300);
     if (null == d) return null;
@@ -117,7 +117,7 @@ function I(e) {
                         color: "text-strong",
                         className: j.aY,
                         children: [
-                            (0, i.jsxs)("div", { className: j.bR, children: [I, C(t.triggerType)] }),
+                            (0, i.jsxs)("div", { className: j.bR, children: [I, T(t.triggerType)] }),
                             (0, i.jsx)(a.Text, { className: j.bL, variant: "text-sm/normal", children: v }),
                         ],
                     }),
@@ -128,7 +128,7 @@ function I(e) {
             (0, i.jsxs)(b, {
                 className: j.Ik,
                 children: [
-                    (0, i.jsx)(a.dOG, { onChange: T, checked: A ?? !1 }),
+                    (0, i.jsx)(a.dOG, { onChange: C, checked: p ?? !1 }),
                     !n &&
                         (0, i.jsx)(r.m, {
                             text: f.intl.string(f.t["UKOtz+"]),
@@ -165,7 +165,7 @@ function v(e) {
                         className: j.bR,
                         variant: "text-md/semibold",
                         color: "text-strong",
-                        children: (0, i.jsxs)("div", { className: j.bR, children: [r, C(t)] }),
+                        children: (0, i.jsxs)("div", { className: j.bR, children: [r, T(t)] }),
                     }),
                     (0, i.jsx)(a.Text, { className: j.mT, variant: "text-sm/normal", children: o }),
                     (0, i.jsx)(N, { triggerType: t }),
@@ -176,7 +176,7 @@ function v(e) {
                 children: (0, i.jsx)(a.Button, {
                     variant: "primary",
                     size: "sm",
-                    text: t === p.uh.KEYWORD ? f.intl.string(f.t.CumH4u) : f.intl.string(f.t.oRs6mG),
+                    text: t === A.uh.KEYWORD ? f.intl.string(f.t.CumH4u) : f.intl.string(f.t.oRs6mG),
                     onClick: n,
                 }),
             }),
@@ -207,7 +207,7 @@ function S(e) {
         null == t ||
             d ||
             (g = l
-                ? (0, i.jsx)(T, { rule: t, onChangeRule: u, onContextMenu: m })
+                ? (0, i.jsx)(C, { rule: t, onChangeRule: u, onContextMenu: m })
                 : (0, i.jsx)(I, { rule: t, isDefaultRule: r, onContextMenu: m })),
         (0, i.jsx)(a.DUT, { className: j.rs, onContextMenu: m, children: g })
     );

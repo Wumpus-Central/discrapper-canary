@@ -6,7 +6,7 @@ var r = n(627968),
     a = n(925946),
     o = n(935520),
     l = n(985018),
-    u = n(183959);
+    u = n(74209);
 function c(e) {
     let { userId: t, onSendWave: n } = e,
         { enabled: c } = o.A.useConfig({ location: "Friend Request Toast" }),

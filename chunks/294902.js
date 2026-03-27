@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => h });
 var r = n(627968);
 n(64700);
 var i = n(311907),
-    a = n(685073),
-    s = n(31432),
+    s = n(685073),
+    a = n(31432),
     o = n(810396),
     l = n(442228),
     u = n(192867),
@@ -12,58 +12,58 @@ var i = n(311907),
     d = n(351906),
     _ = n(385612),
     f = n(996988),
-    h = n(183959);
-function p(e) {
+    p = n(74209);
+function h(e) {
     let {
             user: t,
             displayProfile: n,
-            guild: p,
-            pendingAvatar: g,
+            guild: h,
+            pendingAvatar: m,
             pendingNickname: E,
-            pendingGlobalName: A,
-            pendingBio: I,
-            pendingPronouns: T,
-            pendingLegacyUsernameDisabled: y,
+            pendingGlobalName: g,
+            pendingBio: A,
+            pendingPronouns: I,
+            pendingLegacyUsernameDisabled: T,
             pendingBadges: S,
-            pendingDisplayNameStyles: v,
-            pendingPrimaryGuildId: C,
-            hideBioSection: b,
-            shouldOpenBadgeTooltip: N,
+            pendingDisplayNameStyles: y,
+            pendingPrimaryGuildId: v,
+            hideBioSection: N,
+            shouldOpenBadgeTooltip: C,
         } = e,
-        R = (0, i.bG)([c.Ay], () => (null == p ? null : c.Ay.getMember(p.id, t.id))),
+        R = (0, i.bG)([c.Ay], () => (null == h ? null : c.Ay.getMember(h.id, t.id))),
         O = (0, i.bG)([d.A], () => d.A.hidePersonalInformation),
-        D = n?.getPreviewBio(I),
-        L = T ?? n?.pronouns,
-        w = (0, _.eh)({ pendingNickname: E, pendingGlobalName: A, user: t, guildMember: R }),
-        x = (0, a.gS)(C),
-        P = () => {
-            if (null != R && null !== g && (null != R.avatar || null != g))
-                return (0, r.jsx)(u.A, { user: t, nickname: w });
+        b = n?.getPreviewBio(A),
+        D = I ?? n?.pronouns,
+        L = (0, _.eh)({ pendingNickname: E, pendingGlobalName: g, user: t, guildMember: R }),
+        w = (0, s.gS)(v),
+        M = () => {
+            if (null != R && null !== m && (null != R.avatar || null != m))
+                return (0, r.jsx)(u.A, { user: t, nickname: L });
         };
     return (0, r.jsxs)("div", {
-        className: h.rf,
+        className: p.rf,
         inert: !0,
         children: [
             (0, r.jsx)(o.A, {
                 user: t,
-                guildId: p?.id,
-                usernameIcon: P(),
-                nickname: w,
-                pendingDisplayNameStyles: v,
-                pronouns: L,
-                primaryGuild: x,
-                tags: (0, r.jsx)(s.A, {
+                guildId: h?.id,
+                usernameIcon: M(),
+                nickname: L,
+                pendingDisplayNameStyles: y,
+                pronouns: D,
+                primaryGuild: w,
+                tags: (0, r.jsx)(a.A, {
                     displayProfile: n,
                     themeType: f.d.POPOUT,
-                    pendingLegacyUsernameDisabled: y,
+                    pendingLegacyUsernameDisabled: T,
                     pendingBadges: S,
-                    shouldOpenBadgeTooltip: N,
+                    shouldOpenBadgeTooltip: C,
                 }),
             }),
-            !b &&
-                null != D &&
-                "" !== D &&
-                (0, r.jsx)(l.A, { user: t, bio: D, hidePersonalInformation: O, viewFullBioDisabled: !0 }),
+            !N &&
+                null != b &&
+                "" !== b &&
+                (0, r.jsx)(l.A, { user: t, bio: b, hidePersonalInformation: O, viewFullBioDisabled: !0 }),
         ],
     });
 }

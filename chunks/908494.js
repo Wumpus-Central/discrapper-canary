@@ -8,7 +8,7 @@ var i = n(503698),
     r = n(421380),
     o = n(397927),
     d = n(235986),
-    c = n(302284);
+    c = n(39454);
 let u = (e) => {
     let { className: t, icon: n, noticeText: i, buttonText: u, onClick: h, canSync: g } = e;
     return (0, l.jsx)(o.ZpM, {

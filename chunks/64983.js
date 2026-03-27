@@ -1,8 +1,8 @@
 n.d(t, { A: () => E });
 var i = n(627968),
-    r = n(64700),
+    a = n(64700),
     l = n(735438),
-    a = n.n(l),
+    r = n.n(l),
     s = n(421380),
     o = n(397927),
     d = n(58149),
@@ -11,17 +11,17 @@ var i = n(627968),
     A = n(926466),
     h = n(652215),
     _ = n(985018),
-    m = n(978927);
-let p = a().debounce(d.Ay.trackWithMetadata, 500),
-    g = (e) => {
+    m = n(68377);
+let g = r().debounce(d.Ay.trackWithMetadata, 500),
+    p = (e) => {
         let {
             guild: t,
             title: n,
             message: l,
-            image: a,
+            image: r,
             type: u,
             imageMarginX: A,
-            imageMarginTop: g,
+            imageMarginTop: p,
             trackingSource: E,
             undismissable: I,
             onDismissed: f,
@@ -29,8 +29,8 @@ let p = a().debounce(d.Ay.trackWithMetadata, 500),
             cta: T,
             ctaColor: N,
         } = e;
-        r.useEffect(() => {
-            p(h.HAw.CHANNEL_NOTICE_VIEWED, { notice_type: u, guild_id: t.id });
+        a.useEffect(() => {
+            g(h.HAw.CHANNEL_NOTICE_VIEWED, { notice_type: u, guild_id: t.id });
         }, [t.id, u]);
         let S = null;
         "function" == typeof T
@@ -67,11 +67,11 @@ let p = a().debounce(d.Ay.trackWithMetadata, 500),
                           "aria-label": _.intl.string(_.t.WAI6xu),
                           children: (0, i.jsx)(o.PGe, { size: "md", color: "currentColor", className: m.ut }),
                       }),
-                null != a &&
+                null != r &&
                     (0, i.jsx)("div", {
                         className: m.ZS,
-                        style: { marginTop: `${g}px`, marginLeft: x, marginRight: x },
-                        children: "string" == typeof a ? (0, i.jsx)("img", { className: m.Sl, src: a, alt: "" }) : a,
+                        style: { marginTop: `${p}px`, marginLeft: x, marginRight: x },
+                        children: "string" == typeof r ? (0, i.jsx)("img", { className: m.Sl, src: r, alt: "" }) : r,
                     }),
                 (0, i.jsxs)("div", {
                     className: m.iU,
@@ -88,5 +88,5 @@ let p = a().debounce(d.Ay.trackWithMetadata, 500),
     },
     E = function (e) {
         let { showRedesignedChannelNotice: t } = (0, u.P)(!0);
-        return t ? (0, i.jsx)(A.A, { ...e }) : (0, i.jsx)(g, { ...e });
+        return t ? (0, i.jsx)(A.A, { ...e }) : (0, i.jsx)(p, { ...e });
     };

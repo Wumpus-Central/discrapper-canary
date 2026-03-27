@@ -2,15 +2,15 @@
 n.d(t, { A: () => m });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(397927),
     l = n(496885),
     u = n(816166),
     c = n(403362),
     d = n(652215),
     _ = n(985018),
-    f = n(813055);
+    f = n(49233);
 function p(e) {
     switch (e) {
         case 2:
@@ -35,39 +35,39 @@ class h extends i.PureComponent {
     renderBadge(e, t, n) {
         let {
                 className: i,
-                badgeStrokeColor: a,
+                badgeStrokeColor: s,
                 tooltipColor: u = o.STz.Colors.BRAND,
                 tooltipPosition: c,
                 tooltipDelay: d,
                 size: _ = 16,
                 badgeColor: h,
                 iconClassName: m,
-                flowerStarClassName: g,
+                flowerStarClassName: E,
             } = this.props,
-            E = p(e);
+            g = p(e);
         return (0, r.jsx)(o.STz, {
             color: u,
             position: c,
             delay: d,
-            text: E,
+            text: g,
             children: (o) => {
                 if (5 !== e && 4 !== e)
                     return (0, r.jsx)(l.A, {
                         ...o,
-                        className: s()(n, i),
-                        flowerStarClassName: g,
+                        className: a()(n, i),
+                        flowerStarClassName: E,
                         color: h,
-                        stroke: a,
+                        stroke: s,
                         size: _,
-                        children: (0, r.jsx)(t, { size: "xxs", className: s()(f.Kk, m), color: "currentColor" }),
+                        children: (0, r.jsx)(t, { size: "xxs", className: a()(f.Kk, m), color: "currentColor" }),
                     });
                 {
                     let e = { width: _, height: _ };
                     return (0, r.jsx)("div", {
                         ...o,
-                        className: s()(n, i),
+                        className: a()(n, i),
                         style: e,
-                        children: (0, r.jsx)(t, { className: s()(f.Kk, m), color: "currentColor" }),
+                        children: (0, r.jsx)(t, { className: a()(f.Kk, m), color: "currentColor" }),
                     });
                 }
             },

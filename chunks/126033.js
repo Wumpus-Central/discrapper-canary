@@ -7,7 +7,7 @@ var a = i(627968),
     d = i(486020),
     o = i(320137),
     c = i(985018),
-    m = i(887369);
+    m = i(66335);
 function h(e) {
     let { emoji: t, onChange: i, value: n } = e,
         s = d.Ay.getEmojiURL({ id: t.id, animated: t.animated, size: 24 });

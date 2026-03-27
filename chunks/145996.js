@@ -6,7 +6,7 @@ var a = n(311907),
     i = n(463259),
     s = n(287809),
     d = n(985018),
-    o = n(395618);
+    o = n(93992);
 let c = (e) => {
     let { widget: t, userId: n } = e,
         c = (0, a.bG)([s.default], () => s.default.getUser(n));

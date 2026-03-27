@@ -12,7 +12,7 @@ var i = n(627968),
     h = n(629199),
     _ = n(772659),
     m = n(985018),
-    g = n(22539);
+    g = n(849052);
 function p(e) {
     let { active: t, user: n, channel: p } = e,
         E = (0, u.r)(),
@@ -33,7 +33,7 @@ function p(e) {
             isOptimisticAccepted: x,
         } = (0, A.t)({ user: n, onAcceptSuccess: C, onRejectSuccess: f, onError: I }),
         v = N || S,
-        b = v || x;
+        y = v || x;
     return (0, i.jsxs)("div", {
         className: g.kL,
         children: [
@@ -48,7 +48,7 @@ function p(e) {
                         onClick: (e) => {
                             T(p.id), e.stopPropagation();
                         },
-                        disabled: b,
+                        disabled: y,
                         loading: v,
                     }),
                     (0, i.jsx)(_.A, { channel: p }),

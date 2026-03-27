@@ -3,8 +3,8 @@ var r = n(627968),
     l = n(64700),
     a = n(503698),
     i = n.n(a),
-    s = n(4208),
-    o = n(737149);
+    s = n(880013),
+    o = n(751741);
 let u = (e) => {
     let {
             segment: t,
@@ -15,39 +15,39 @@ let u = (e) => {
             timelineWidth: d,
             preloadedBuffers: m,
             maxSeekableX: p,
-            interactionEnabled: E,
+            interactionEnabled: h,
             useNewStyles: f,
-            showGlow: h,
-            glowClassName: v,
-            progressFillClassName: x,
+            showGlow: x,
+            glowClassName: E,
+            progressFillClassName: v,
         } = e,
-        { startPx: g, endPx: S, leftIndicatorIndex: A, rightIndicatorIndex: b } = t,
-        _ = S - g,
-        C = u.to((e) => Math.min(Math.max(0, e - g), _)),
-        y = null != n && null != c && A === n,
-        T = !y && null != n && null != c && b === n,
-        N = y || T,
-        D = T
-            ? (0, s.to)([C, c], (e, t) => `translateX(-${Math.max(0, _ - t - e)}px)`)
-            : C.to((e) => `translateX(-${_ - e}px)`),
-        I = N ? (0, s.to)([C, c], (e, t) => (y ? Math.max(0, e - t) : Math.min(e, _ - t))) : C,
-        R = Math.max(0, (p ?? 0) - g),
-        L = f ? o.KR : o.Fv,
-        w = l.useMemo(
+        { startPx: g, endPx: b, leftIndicatorIndex: y, rightIndicatorIndex: S } = t,
+        C = b - g,
+        A = u.to((e) => Math.min(Math.max(0, e - g), C)),
+        N = null != n && null != c && y === n,
+        T = !N && null != n && null != c && S === n,
+        w = N || T,
+        R = T
+            ? (0, s.to)([A, c], (e, t) => `translateX(-${Math.max(0, C - t - e)}px)`)
+            : A.to((e) => `translateX(-${C - e}px)`),
+        j = w ? (0, s.to)([A, c], (e, t) => (N ? Math.max(0, e - t) : Math.min(e, C - t))) : A,
+        D = Math.max(0, (p ?? 0) - g),
+        P = f ? o.KR : o.Fv,
+        L = l.useMemo(
             () =>
                 m
                     ?.map((e) => ({ startPx: e.start * d, endPx: (e.start + e.size) * d }))
-                    .filter((e) => e.endPx >= g && e.startPx <= S),
-            [m, g, S, d],
+                    .filter((e) => e.endPx >= g && e.startPx <= b),
+            [m, g, b, d],
         );
     return (0, r.jsxs)(s.animated.div, {
         className: o.$v,
         style: {
-            left: y ? c.to((e) => g + e) : g,
-            width: N ? c.to((e) => _ - e) : _,
+            left: N ? c.to((e) => g + e) : g,
+            width: w ? c.to((e) => C - e) : C,
             "--custom-segment-bg": null != a ? a : void 0,
             "--custom-r-left": u.to((e) => (0 === g || e >= g ? "99px" : "0px")),
-            "--custom-r-right": u.to((e) => (S >= d || e >= S ? "99px" : "0px")),
+            "--custom-r-right": u.to((e) => (b >= d || e >= b ? "99px" : "0px")),
             "--custom-timeline-width": `${d}px`,
         },
         children: [
@@ -56,30 +56,30 @@ let u = (e) => {
                 children: [
                     (0, r.jsxs)(s.animated.div, {
                         className: o.Bw,
-                        style: { left: y ? c.to((e) => -(g + e)) : -g },
+                        style: { left: N ? c.to((e) => -(g + e)) : -g },
                         children: [
-                            w?.map((e) =>
+                            L?.map((e) =>
                                 (0, r.jsx)(
                                     "div",
                                     {
-                                        className: i()(o.r, L),
+                                        className: i()(o.r, P),
                                         style: { width: `${e.endPx - e.startPx}px`, left: `${e.startPx}px` },
                                     },
                                     `${e.startPx}:${e.endPx}`,
                                 ),
                             ),
-                            !E &&
-                                R > 0 &&
-                                (0, r.jsx)("div", { className: i()(o.YK, L), style: { width: `${R}px`, opacity: 1 } }),
+                            !h &&
+                                D > 0 &&
+                                (0, r.jsx)("div", { className: i()(o.YK, P), style: { width: `${D}px`, opacity: 1 } }),
                         ],
                     }),
                     (0, r.jsx)(s.animated.div, {
-                        className: i()(o.TN, x),
-                        style: { transform: D, opacity: C.to((e) => (e <= 0 ? 0 : 1)) },
+                        className: i()(o.TN, v),
+                        style: { transform: R, opacity: A.to((e) => (e <= 0 ? 0 : 1)) },
                     }),
                 ],
             }),
-            h && (0, r.jsx)(s.animated.div, { className: i()(o.DT, v), style: { width: I } }),
+            x && (0, r.jsx)(s.animated.div, { className: i()(o.DT, E), style: { width: j } }),
         ],
     });
 };

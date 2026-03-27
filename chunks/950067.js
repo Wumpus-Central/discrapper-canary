@@ -1,12 +1,147 @@
-e.exports = {
-    aK: "summaryDivider__3aab5",
-    Ke: "summaryDividerStart__3aab5",
-    hO: "summaryDividerEnd__3aab5",
-    Ew: "summaryStartContent__3aab5",
-    rD: "summaryEndContent__3aab5",
-    cR: "summaryStartIcon__3aab5",
-    Jq: "summaryEndIcon__3aab5",
-    RD: "summaryFeedbackWrapper__3aab5",
-    GK: "summaryFeedback__3aab5",
-    O1: "thumbIcon__3aab5",
-};
+let i;
+n.d(t, { A: () => L });
+var a = n(627968);
+n(64700);
+var l = n(397927),
+    r = n(73153),
+    s = n(272355),
+    o = n(323073),
+    d = n(315982),
+    c = n(202384),
+    u = n(709977),
+    A = n(14509),
+    h = n(894778),
+    _ = n(447696),
+    m = n(684407),
+    g = n(919638),
+    p = n(71393),
+    E = n(967198),
+    I = n(287809),
+    f = n(403362),
+    C = n(723702),
+    T = n(942614),
+    N = n(426620),
+    S = n(771016),
+    x = n(994277),
+    v = n(652215);
+n(436317);
+var y = n(315290);
+function b() {
+    null != i && (0, l.OoC)(i);
+}
+class O extends s.A {
+    _initialize() {
+        r.h.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), r.h.subscribe("LOGOUT", b);
+    }
+    _terminate() {
+        r.h.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen), r.h.unsubscribe("LOGOUT", b);
+    }
+    handleConnectionOpen() {
+        var e;
+        let t,
+            r = N.A.getType();
+        if (null == r) return;
+        switch (r) {
+            case S.zY.INVITE_UNCLAIMED:
+                h.A.flowStart(y.do.INVITE, y.ju.NUF_STARTED);
+                break;
+            case S.zY.ORGANIC_REGISTERED:
+                h.A.flowStart(y.do.ORGANIC, y.ju.NUF_STARTED);
+                break;
+            case S.zY.MARKETING_UNCLAIMED:
+                h.A.flowStart(y.do.ORGANIC_MARKETING, y.ju.NUF_STARTED);
+        }
+        let s = !1,
+            b = E.A.getGuildId();
+        if (r === S.zY.INVITE_UNCLAIMED) {
+            let e = p.A.getGuild(b);
+            null != e && (0, u.Qd)(e) && ((s = !0), (0, _.Fy)(e.id));
+        }
+        let O = () => 0 === g.A.totalGuilds && !C.isPlatformEmbedded,
+            L = o.xq();
+        (e = [
+            {
+                key: "Unified NUF Modal",
+                open: async function (e) {
+                    let t = (e) => {
+                        switch (e) {
+                            case x.i.AGE_GATE:
+                                h.A.flowStep(y.do.ANY, y.ju.AGE_GATE);
+                                break;
+                            case x.i.CHOOSE_TEMPLATE:
+                                h.A.flowStep(y.do.ANY, y.jC.GUILD_TEMPLATES);
+                                break;
+                            case x.i.CUSTOMIZE_GUILD:
+                                h.A.flowStep(y.do.ANY, y.jC.GUILD_CREATE);
+                                break;
+                            case x.i.CHANNEL_PROMPT:
+                                h.A.flowStep(y.do.ANY, y.jC.CHANNEL_PROMPT);
+                                break;
+                            case x.i.JOIN_GUILD:
+                                h.A.flowStep(y.do.ANY, y.jC.JOIN_GUILD);
+                                break;
+                            case x.i.CREATION_INTENT:
+                                h.A.flowStep(y.do.ANY, y.jC.CREATION_INTENT);
+                                break;
+                            case x.i.COMPLETE:
+                                h.A.flowStep(y.do.ANY, y.jC.SUCCESS);
+                                break;
+                            case null:
+                                break;
+                            default:
+                                f.xb(e);
+                        }
+                    };
+                    i = await (0, l.mMO)(
+                        async () => {
+                            let { default: e } = await Promise.all([n.e("86746"), n.e("72074")]).then(
+                                n.bind(n, 218318),
+                            );
+                            return (n) => (0, a.jsx)(e, { ...n, onSlideChange: t });
+                        },
+                        { onCloseRequest: v.tEg, onCloseCallback: e, modalKey: i },
+                    );
+                },
+                predicate: () => O() && !0,
+            },
+            { key: "New User Age Gate", open: d.v, predicate: () => L && !O() && !0 },
+            {
+                key: "Claim Account Modal",
+                open: (e) => d.R(C.isPlatformEmbedded, e),
+                predicate: () =>
+                    !s &&
+                    null != I.default.getCurrentUser() &&
+                    !I.default.getCurrentUser()?.isClaimed() &&
+                    !(0, A._9)(),
+            },
+            {
+                key: "Verification Gate with Claim Account",
+                open: (e) => (0, c.Ze)(b, e ?? void 0),
+                predicate: () => s && !I.default.getCurrentUser()?.isClaimed() && !0,
+            },
+            {
+                key: "Guild Welcome Modal",
+                open: (e) =>
+                    (0, l.mMO)(
+                        async () => {
+                            let { default: e } = await n.e("98063").then(n.bind(n, 143154));
+                            return (t) => (0, a.jsx)(e, { ...t, guildId: b });
+                        },
+                        { onCloseCallback: e },
+                    ),
+                predicate: () => null != b && null != m.A.get(b) && m.A.get(b) !== m.E,
+            },
+        ]),
+            (t = () => {
+                T.D(), h.A.flowStep(y.do.ANY, y.ju.NUF_COMPLETE, !0);
+            }),
+            [...e].reverse().forEach((e) => {
+                let n = t;
+                t = () => {
+                    e.predicate() ? e.open(n) : n();
+                };
+            }),
+            t();
+    }
+}
+let L = new O();

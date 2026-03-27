@@ -11,9 +11,9 @@ var i = n(627968),
     m = n(974544),
     _ = n(793574),
     g = n(688810),
-    x = n(429619),
-    A = n(451909),
-    h = n(550111),
+    x = n(512213),
+    A = n(429619),
+    h = n(451909),
     p = n(202639),
     f = n(407217),
     T = n(919395),
@@ -31,7 +31,7 @@ var i = n(627968),
     L = n(780207),
     P = n(652215),
     D = n(985018),
-    G = n(42584);
+    G = n(752366);
 function M() {
     let e = (0, r.bG)([j.default], () => {
             let e = j.default.getCurrentUser();
@@ -47,7 +47,7 @@ function M() {
         } = (0, r.cf)([v.A], () => ({ ...v.A.getPendingChanges(), showNotice: v.A.showNotice() })),
         w = (0, C.V7)({ userId: e.id, image: l }),
         V = (0, T.lw)({ pendingValue: M, userValue: e?.collectibles?.nameplate }),
-        B = (0, N.A)() && null != n ? A.Ay.parse(void 0, n).content : n,
+        B = (0, N.A)() && null != n ? h.Ay.parse(void 0, n).content : n,
         F = O.Ay.canUsePremiumProfileCustomization(e),
         { analyticsLocations: H, newestAnalyticsLocation: z } = (0, g.Ay)(_.A.USER_SETTINGS_USER_PROFILE);
     s.useEffect(() => () => c.h.wait(u.IM), []);
@@ -59,7 +59,7 @@ function M() {
         : (0, i.jsxs)(g.f5, {
               value: H,
               children: [
-                  (0, i.jsx)(x.A, {}),
+                  (0, i.jsx)(A.A, {}),
                   (0, i.jsx)(S.A, {
                       profilePreview: (0, i.jsx)(E.A, {
                           user: e,
@@ -69,7 +69,7 @@ function M() {
                           ...k,
                           pendingAvatar: w,
                       }),
-                      nameplatePreview: (0, i.jsx)(h.A, {
+                      nameplatePreview: (0, i.jsx)(x.A, {
                           user: e,
                           nameplate: V,
                           ...k,

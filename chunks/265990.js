@@ -23,14 +23,14 @@ var i = n(627968),
     S = n(278066),
     x = n(594968),
     v = n(979282),
-    b = n(575474),
-    y = n(535266),
+    y = n(575474),
+    b = n(535266),
     O = n(787331);
 n(646363);
 var L = n(652215),
     R = n(788868),
     P = n(985018),
-    D = n(63461);
+    D = n(998838);
 let M = [];
 function j() {
     d.A.transitionToSection(L.m3P.ADD_FRIEND, { explicit: !0 });
@@ -211,7 +211,7 @@ let G = function (e) {
                           {
                               className: D.Gf,
                               children: [
-                                  (0, i.jsx)(y.A, { id: t, title: a }),
+                                  (0, i.jsx)(b.A, { id: t, title: a }),
                                   el &&
                                       (0, i.jsx)("div", {
                                           className: D.mt,
@@ -226,7 +226,7 @@ let G = function (e) {
                           },
                           a,
                       )
-                    : (0, i.jsx)("div", { className: D.Gf, children: (0, i.jsx)(y.A, { id: t, title: a }) }, a);
+                    : (0, i.jsx)("div", { className: D.Gf, children: (0, i.jsx)(b.A, { id: t, title: a }) }, a);
             },
             [ei, d, t, el, er],
         ),
@@ -264,7 +264,7 @@ let G = function (e) {
         children: (0, i.jsxs)(u.A, {
             section: L.JJy.FRIENDS_LIST,
             children: [
-                k && (0, i.jsx)(b.g, {}),
+                k && (0, i.jsx)(y.g, {}),
                 (0, i.jsx)("div", {
                     className: D.ON,
                     children: (0, i.jsx)(o.IWV, { query: Y[d], onChange: Q, onClear: X }),

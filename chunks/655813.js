@@ -1,3 +1,8 @@
-a.exports = JSON.parse(
-    '{"o/An3l":[[1,"username"]," ti ha chiesto di fare lo streaming di ",[1,"applicationName"]],"DKHhec":["Chiedi di fare streaming"],"8qq+H7":["Chiedi di fare streaming di ",[1,"applicationName"]],"s7bMT0":[[1,"username"]," ti sta chiedendo di fare lo streaming di ",[1,"applicationName"]],"7pndSl":["Hai chiesto a qualcuno di fare lo streaming di ",[1,"applicationName"]],"P0wwmM":["Gi\xe0 in streaming"],"u4QmWl":["Richiesta scaduta"],"qRXats":["Non nel canale vocale"],"43zohO":["Non c\'\xe8 un gioco in corso"],"fac+eE":["Nessun permesso"],"8HU1M2":["Richiesta inviata"],"5+172e":["Fai streaming"],"nAyuPp":["Richiesta di fare streaming"],"d/qbC0":[[1,"username"]," ti ha chiesto di fare streaming"],"8B3U5O":["Hai chiesto a qualcuno di fare streaming"],"UGbmBp":["Fai streaming"],"jTbTAF":[[8,"$b",[[1,"username"]]]," vuole vederti giocare a ",[8,"$b",[[1,"game"]]],"."]}',
-);
+"use strict";
+e.exports = {
+    U0: "draftBadgeContainer_ea81a9",
+    KR: "tierName_ea81a9",
+    ah: "tierImage_ea81a9",
+    Us: "tierPrice_ea81a9",
+    gV: "tierPeriod_ea81a9",
+};

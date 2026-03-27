@@ -1,11 +1,11 @@
-a.d(t, { Ay: () => p, Oj: () => m, Q8: () => h });
+a.d(t, { Ay: () => p, Oj: () => h, Q8: () => m });
 var n = a(627968),
     i = a(64700),
-    s = a(503698),
-    l = a.n(s),
+    l = a(503698),
+    s = a.n(l),
     r = a(397927),
     o = a(532197),
-    c = a(331026);
+    c = a(65668);
 let d = { CENTER: c.Hu, LEFT: c.Vl };
 class u extends i.PureComponent {
     static Align = d;
@@ -30,11 +30,11 @@ class u extends i.PureComponent {
         t(e);
     };
     render() {
-        let { renderItem: e, items: t, vertical: a, paginationContainerClass: s, align: o } = this.props,
+        let { renderItem: e, items: t, vertical: a, paginationContainerClass: l, align: o } = this.props,
             d = a ? c.XA : c.BU;
         return (0, n.jsx)(r.GtU, {
             orientation: a ? "vertical" : "horizontal",
-            className: l()(d, s, o),
+            className: s()(d, l, o),
             ref: this.handleSetScrollerRef,
             children: t.map((t, a) =>
                 i.cloneElement(e(t, a), {
@@ -48,7 +48,7 @@ class u extends i.PureComponent {
         });
     }
 }
-class h extends i.PureComponent {
+class m extends i.PureComponent {
     handlePrevClick = (e) => {
         e.stopPropagation(), e.preventDefault();
         let { onClick: t } = this.props;
@@ -57,13 +57,13 @@ class h extends i.PureComponent {
     render() {
         let { className: e } = this.props;
         return (0, n.jsx)(r.DUT, {
-            className: l()(c.t1, e),
+            className: s()(c.t1, e),
             onClick: this.handlePrevClick,
             children: (0, n.jsx)(o.A, { className: c.UE, direction: o.A.Directions.LEFT }),
         });
     }
 }
-class m extends i.PureComponent {
+class h extends i.PureComponent {
     handleNextClick = (e) => {
         e.stopPropagation(), e.preventDefault();
         let { onClick: t } = this.props;
@@ -72,7 +72,7 @@ class m extends i.PureComponent {
     render() {
         let { className: e } = this.props;
         return (0, n.jsx)(r.DUT, {
-            className: l()(c.XS, e),
+            className: s()(c.XS, e),
             onClick: this.handleNextClick,
             children: (0, n.jsx)(o.A, { className: c.UE, direction: o.A.Directions.RIGHT }),
         });

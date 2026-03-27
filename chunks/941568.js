@@ -1,4 +1,4 @@
-n.d(t, { A: () => I }), n(323874), n(14289), n(35956);
+n.d(t, { A: () => b }), n(323874), n(14289), n(35956);
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -15,8 +15,8 @@ var a = n(627968),
     g = n(954506),
     p = n(652215),
     _ = n(985018),
-    v = n(95225),
-    j = n(782691);
+    v = n(576404),
+    j = n(830684);
 function A(e, t) {
     return u.A.parse(e, !0, { allowHeading: !0, allowList: !0, allowLinks: !0, channelId: t });
 }
@@ -83,23 +83,23 @@ function C(e) {
         ],
     });
 }
-function I(e) {
+function b(e) {
     let { detectedGame: t, trackAction: n } = e,
         i = t.announcementsChannelId,
         { officialInvite: r, isMember: o, closeModal: u } = (0, f.c)(),
         { messages: j, loading: A } = (0, h.A)(i),
-        I = l.useCallback(() => {
+        b = l.useCallback(() => {
             null != r &&
                 (u(), c.h.dispatch({ type: "INVITE_MODAL_OPEN", invite: r, code: r.code, context: p.BRT.APP }));
         }, [u, r]),
-        b = l.useCallback(() => {
-            n(x.Ws.Announcements), o && null != i ? (u(), (0, m.iN)(i)) : I();
-        }, [u, o, I, i, n]),
+        I = l.useCallback(() => {
+            n(x.Ws.Announcements), o && null != i ? (u(), (0, m.iN)(i)) : b();
+        }, [u, o, b, i, n]),
         E = l.useCallback(
             (e) => {
-                n(x.Ws.AnnouncementsItem), o && null != i ? (u(), (0, m.ci)(i, e)) : I();
+                n(x.Ws.AnnouncementsItem), o && null != i ? (u(), (0, m.ci)(i, e)) : b();
             },
-            [u, o, I, i, n],
+            [u, o, b, i, n],
         );
     if (null == i || 0 === j.length)
         return A
@@ -116,7 +116,7 @@ function I(e) {
         k = N ? j.slice(1) : j;
     return (0, a.jsx)(g.A, {
         title: _.intl.string(_.t.B0BV3Y),
-        onClickViewAll: b,
+        onClickViewAll: I,
         children: (0, a.jsxs)("div", {
             className: v.f3,
             children: [

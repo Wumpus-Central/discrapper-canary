@@ -1,8 +1,8 @@
 n.d(t, { B: () => r });
 var i = n(627968);
 n(64700);
-var l = n(397927),
-    a = n(314582);
+var a = n(397927),
+    l = n(84956);
 function r(e) {
     let {
             choiceId: t,
@@ -10,32 +10,32 @@ function r(e) {
             isSelected: r,
             onSelectionChange: s,
             inputType: o,
-            textInputValue: d,
-            onTextInputChange: c,
+            textInputValue: c,
+            onTextInputChange: d,
         } = e,
         u = "true" === n.TextEntry,
-        m = `choice-label-${t}`;
+        _ = `choice-label-${t}`;
     return (0, i.jsxs)("div", {
-        className: a.NV,
+        className: l.NV,
         children: [
-            (0, i.jsxs)(l.DUT, {
-                className: a.d,
+            (0, i.jsxs)(a.DUT, {
+                className: l.d,
                 onClick: () => {
                     s(t);
                 },
                 role: o,
                 "aria-checked": r,
-                "aria-labelledby": m,
+                "aria-labelledby": _,
                 children: [
                     (0, i.jsx)("div", {
-                        className: a.jl,
+                        className: l.jl,
                         children:
                             "radio" === o
-                                ? (0, i.jsx)(l.TN6, { disabled: !1, checked: r })
-                                : (0, i.jsx)(l.P7L, { disabled: !1, checked: r }),
+                                ? (0, i.jsx)(a.TN6, { disabled: !1, checked: r })
+                                : (0, i.jsx)(a.P7L, { disabled: !1, checked: r }),
                     }),
-                    (0, i.jsx)(l.Text, {
-                        id: m,
+                    (0, i.jsx)(a.Text, {
+                        id: _,
                         variant: "text-md/normal",
                         color: "text-subtle",
                         children: (0, i.jsx)("div", { dangerouslySetInnerHTML: { __html: n.Display } }),
@@ -44,11 +44,11 @@ function r(e) {
             }),
             u &&
                 (0, i.jsx)("div", {
-                    className: a.Vi,
-                    children: (0, i.jsx)(l.ksK, {
-                        value: d ?? "",
+                    className: l.Vi,
+                    children: (0, i.jsx)(a.ksK, {
+                        value: c ?? "",
                         onChange: (e) => {
-                            r || s(t), c?.(t, e);
+                            r || s(t), d?.(t, e);
                         },
                         disabled: !r,
                     }),

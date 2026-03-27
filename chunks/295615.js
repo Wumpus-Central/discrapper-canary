@@ -1,33 +1,33 @@
-n.d(t, { default: () => l });
-var d = n(627968),
-    i = n(64700),
-    h = n(397927),
-    s = n(638633),
-    r = n(842130),
-    b = n(985018),
-    a = n(143335);
-function l(e) {
+s.d(t, { default: () => u });
+var d = s(627968),
+    r = s(64700),
+    i = s(397927),
+    n = s(638633),
+    a = s(870236),
+    c = s(985018),
+    l = s(38577);
+function u(e) {
     let { onClose: t } = e,
-        n = (0, s.A)();
+        s = (0, n.A)();
     return (
-        i.useEffect(() => {
-            n || t();
-        }, [n, t]),
+        r.useEffect(() => {
+            s || t();
+        }, [s, t]),
         (0, d.jsx)("div", {
-            className: a.Tp,
+            className: l.Tp,
             children: (0, d.jsxs)("div", {
-                className: a.kL,
+                className: l.kL,
                 children: [
-                    (0, d.jsx)(h.Heading, {
+                    (0, d.jsx)(i.Heading, {
                         variant: "heading-xl/semibold",
-                        className: a.DD,
-                        children: b.intl.string(r.default.ujnPZZ),
+                        className: l.DD,
+                        children: c.intl.string(a.default.ujnPZZ),
                     }),
-                    (0, d.jsx)(h.Text, {
+                    (0, d.jsx)(i.Text, {
                         variant: "text-md/normal",
                         color: "text-muted",
-                        className: a.h_,
-                        children: b.intl.string(r.default.VfqJvY),
+                        className: l.h_,
+                        children: c.intl.string(a.default.VfqJvY),
                     }),
                 ],
             }),

@@ -17,17 +17,17 @@ var n = s(627968),
     f = s(100057),
     x = s(751304),
     E = s(561769),
-    C = s(484469),
-    b = s(998694),
+    b = s(484469),
+    C = s(998694),
     A = s(438166),
     S = s(652215),
-    v = s(695865);
+    v = s(16464);
 let I = { flattenProductVariants: !0 };
 function L(e) {
     let { isFetchingCategories: t, scrollerRef: s, tab: l } = e,
         L = (0, u.uM)(),
         j = L?.sessionId ?? "",
-        { noCache: k, includeUnpublished: T } = (0, b.A)(),
+        { noCache: k, includeUnpublished: T } = (0, C.A)(),
         O = (0, g.W)("CollectiblesFilterResults"),
         N = (0, i.bG)([c.default], () => c.default.getCurrentUser()),
         { skus: y, currentPage: R, totalCount: B, isFetchingResults: M } = (0, p.S)(),
@@ -35,12 +35,12 @@ function L(e) {
         D = r.useCallback(() => {
             s?.current?.scrollToTop({ animate: !0 });
         }, [s]),
-        H = y?.join("");
+        w = y?.join("");
     r.useEffect(() => {
         D();
-    }, [H, D]);
-    let w = (0, m.p)(),
-        F = r.useMemo(() => w(P), [w, P]);
+    }, [w, D]);
+    let H = (0, m.p)(),
+        F = r.useMemo(() => H(P), [H, P]);
     r.useEffect(() => {
         t ||
             (0, f.z)({
@@ -91,7 +91,7 @@ function L(e) {
                         className: a()(v.ZE, { [v.Kp]: W }),
                         ref: G,
                         children: [
-                            Y && [...Array(K)].map((e, t) => (0, n.jsx)(C.A, {}, t)),
+                            Y && [...Array(K)].map((e, t) => (0, n.jsx)(b.A, {}, t)),
                             !Y &&
                                 F.map((e, t) =>
                                     null == _.A.getCategory(e.categorySkuId)

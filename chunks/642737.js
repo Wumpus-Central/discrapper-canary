@@ -1,31 +1,31 @@
-i.d(l, { A: () => p }), i(667532);
-var n = i(627968),
-    t = i(64700),
-    s = i(311907),
-    a = i(397927),
-    r = i(263063),
-    o = i(71393),
-    d = i(711014),
-    c = i(403362),
-    u = i(985018),
-    A = i(427185);
-let m = "MAIN_PROFILE";
+t.d(l, { A: () => p }), t(667532);
+var i = t(627968),
+    n = t(64700),
+    s = t(311907),
+    a = t(397927),
+    r = t(263063),
+    o = t(71393),
+    d = t(711014),
+    c = t(403362),
+    u = t(985018),
+    m = t(18911);
+let A = "MAIN_PROFILE";
 function p(e) {
-    let { selectedGuildId: l, onChange: i } = e,
+    let { selectedGuildId: l, onChange: t } = e,
         p = (0, s.bG)([d.Ay], () => d.Ay.getFlattenedGuildIds()),
-        g = (0, s.bG)([o.A], () => o.A.getGuilds()),
-        x = t.useMemo(() => {
+        x = (0, s.bG)([o.A], () => o.A.getGuilds()),
+        g = n.useMemo(() => {
             let e = p
                 .map((e) => {
-                    let l = g[e];
+                    let l = x[e];
                     return null == l
                         ? null
                         : {
                               id: l.id,
                               label: l.name,
                               value: l.id,
-                              leading: (0, n.jsx)(r.Ay, {
-                                  className: A.$,
+                              leading: (0, i.jsx)(r.Ay, {
+                                  className: m.$,
                                   guild: l,
                                   size: r.Ay.Sizes.SMALLER,
                                   active: !0,
@@ -35,26 +35,26 @@ function p(e) {
                 .filter(c.Vq);
             return (
                 e.unshift({
-                    id: m,
+                    id: A,
                     label: u.intl.string(u.t["2p07FR"]),
-                    value: m,
-                    leading: (0, n.jsx)(a.pVd, { size: "sm", color: a.LU0.colors.ICON_DEFAULT, "aria-hidden": !0 }),
+                    value: A,
+                    leading: (0, i.jsx)(a.pVd, { size: "sm", color: a.LU0.colors.ICON_DEFAULT, "aria-hidden": !0 }),
                 }),
                 e
             );
-        }, [p, g]),
-        h = t.useCallback(
+        }, [p, x]),
+        f = n.useCallback(
             (e) => {
-                i(e === m ? null : e);
+                t(e === A ? null : e);
             },
-            [i],
+            [t],
         );
-    return (0, n.jsx)(a.ZiE, {
+    return (0, i.jsx)(a.ZiE, {
         label: u.intl.string(u.t.rki38K),
         hideLabel: !0,
         selectionMode: "single",
-        onSelectionChange: h,
-        value: l ?? m,
-        options: x,
+        onSelectionChange: f,
+        value: l ?? A,
+        options: g,
     });
 }

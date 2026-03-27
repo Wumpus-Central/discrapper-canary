@@ -6,13 +6,13 @@ var i = n(627968),
     r = n.n(l),
     a = n(397927),
     o = n(183555),
-    c = n(75415);
+    c = n(266348);
 function d(e) {
     let { section: t, header: n, items: l, listClassName: d, onExpand: u } = e,
         { trackUserProfileAction: h } = (0, o.NJ)(),
         A = s.useId(),
-        [m, p] = s.useState(!1),
-        g = m ? a.abt : a._BQ;
+        [m, _] = s.useState(!1),
+        p = m ? a.abt : a._BQ;
     return (0, i.jsxs)("section", {
         className: c.uW,
         children: [
@@ -21,7 +21,7 @@ function d(e) {
                 "aria-controls": A,
                 "aria-expanded": m,
                 onClick: () => {
-                    p(!m), m || (h({ action: "PRESS_SECTION", section: t }), u?.());
+                    _(!m), m || (h({ action: "PRESS_SECTION", section: t }), u?.());
                 },
                 children: [
                     (0, i.jsxs)(a.Heading, {
@@ -29,7 +29,7 @@ function d(e) {
                         color: "text-default",
                         children: [n, " — ", l.length],
                     }),
-                    (0, i.jsx)(g, { size: "md" }),
+                    (0, i.jsx)(p, { size: "md" }),
                 ],
             }),
             l.length > 0 && (0, i.jsx)("ul", { id: A, hidden: !m, className: r()(c.p_, d), children: l }),

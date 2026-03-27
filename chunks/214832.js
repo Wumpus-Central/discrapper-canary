@@ -3,7 +3,7 @@ var i = n(627968),
     a = n(397927),
     l = n(164203),
     r = n(985018),
-    s = n(446e3);
+    s = n(349661);
 let o = (e) => {
     let { quest: t } = e;
     return (0, i.jsx)("div", {

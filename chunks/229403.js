@@ -2,14 +2,14 @@
 n.d(t, { A: () => p });
 var r = n(627968),
     i = n(64700),
-    a = n(311907),
-    s = n(397927),
+    s = n(311907),
+    a = n(397927),
     o = n(493405),
     l = n(812745),
     u = n(70142),
     c = n(825755),
     d = n(985018),
-    _ = n(666491);
+    _ = n(98005);
 class f extends i.PureComponent {
     componentDidMount() {
         null != this.props.venmoClient && o.fB();
@@ -32,19 +32,19 @@ class f extends i.PureComponent {
                 i
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(s.Heading, {
+                              (0, r.jsx)(a.Heading, {
                                   variant: e.length < 25 ? "heading-xl/bold" : "heading-lg/bold",
                                   className: _.y,
                                   children: d.intl.format(d.t.DowIre, { venmoUsername: e }),
                               }),
-                              (0, r.jsx)(s.Text, {
+                              (0, r.jsx)(a.Text, {
                                   variant: "text-md/medium",
                                   className: _.y,
                                   children: d.intl.string(d.t.kmEvnR),
                               }),
                           ],
                       })
-                    : (0, r.jsx)(s.Text, {
+                    : (0, r.jsx)(a.Text, {
                           variant: "text-md/medium",
                           className: _.y,
                           children: null == n ? d.intl.string(d.t["2ouZDU"]) : d.intl.string(d.t.mIL6Jb),
@@ -53,6 +53,6 @@ class f extends i.PureComponent {
         });
     }
 }
-let p = a.Ay.connectStores([u.A, c.A], () => ({ venmoUsername: c.A.venmoUsername, venmoClient: u.A.getVenmoClient() }))(
+let p = s.Ay.connectStores([u.A, c.A], () => ({ venmoUsername: c.A.venmoUsername, venmoClient: u.A.getVenmoClient() }))(
     f,
 );

@@ -12,19 +12,19 @@ var a = n(627968),
     x = n(305080),
     h = n(936636),
     f = n(985018),
-    g = n(282063),
-    p = n(48757);
+    g = n(325952),
+    p = n(679080);
 function _(e) {
     let { detectedGame: t, trackAction: n } = e,
         [i, x] = l.useState(t?.summaryLocalized != null),
         [_, v] = l.useState(!0),
         [j, A] = l.useState(!1),
         C = l.useRef(null),
-        { width: I, height: b } = (0, u.A)();
+        { width: b, height: I } = (0, u.A)();
     return (l.useEffect(() => {
         let e = C.current;
         null != e && A(e.scrollHeight - e.clientHeight > 1 || !_);
-    }, [C, I, b, _]),
+    }, [C, b, I, _]),
     null == t.summary)
         ? null
         : (0, a.jsxs)("div", {
@@ -88,17 +88,17 @@ function v(e) {
         n(e ? m.Ws.ShowMore : m.Ws.ShowLess), s(e);
     }, [i, n]);
     if (null == t.summary) return null;
-    let I = i ? f.intl.string(f.t["6MwJo/"]) : f.intl.string(f.t.lBeKY2);
+    let b = i ? f.intl.string(f.t["6MwJo/"]) : f.intl.string(f.t.lBeKY2);
     return (0, a.jsxs)("div", {
         className: r()(g.fi, g.mX),
         children: [
             (0, a.jsx)(c.EYj, {
                 ref: h,
                 lineClamp: i || null == o ? void 0 : j,
-                variant: "text-sm/normal",
+                variant: "text-md/medium",
                 children: t.summary,
             }),
-            o && (0, a.jsx)(c.QWc, { onClick: C, text: I }),
+            o && (0, a.jsx)(c.QWc, { onClick: C, text: b }),
         ],
     });
 }

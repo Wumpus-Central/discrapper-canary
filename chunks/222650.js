@@ -7,7 +7,7 @@ var s = n(990078),
     a = n(31457),
     o = n(53516),
     d = n(985018),
-    c = n(404467);
+    c = n(430426);
 function u() {
     return (0, r.jsx)(a.ZK, {
         className: c.jm,
@@ -43,7 +43,7 @@ function _(e) {
             onClick: () => {
                 (0, i.mMO)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("84704"), n.e("5966")]).then(n.bind(n, 615715));
+                        let { default: e } = await Promise.all([n.e("84704"), n.e("75904")]).then(n.bind(n, 615715));
                         return (t) => (0, r.jsx)(e, { reason: l.d.GUILD_PHONE_REQUIRED, ...t });
                     },
                     { modalKey: o.V },

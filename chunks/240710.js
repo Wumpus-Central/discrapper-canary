@@ -19,7 +19,7 @@ var i = n(627968),
     A = n(654487),
     p = n(818348),
     I = n(985018),
-    j = n(861616);
+    j = n(26950);
 function v(t) {
     let { quest: e, sourceQuestContent: n, onLoadComplete: v, preCtaClick: T } = t,
         E = (0, d.Ay)(),

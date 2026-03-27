@@ -3,7 +3,7 @@ var i = n(627968),
     a = n(64700),
     r = n(503698),
     l = n.n(r),
-    s = n(4208),
+    s = n(880013),
     o = n(827734),
     d = n(990078),
     c = n(397927),
@@ -19,13 +19,13 @@ var i = n(627968),
     C = n(270045),
     I = n(57718),
     E = n(847641),
-    v = n(646764),
-    b = n(398025),
+    b = n(646764),
+    v = n(398025),
     T = n(433745),
     y = n(654487),
     S = n(818348),
     N = n(985018),
-    j = n(798324);
+    j = n(851383);
 let L = (0, s.animated)(c.abt),
     R = (e) => {
         let {
@@ -48,8 +48,8 @@ let L = (0, s.animated)(c.abt),
                 let t = e.target;
                 H(t.offsetWidth), q(t.scrollWidth);
             }),
-            Y = (0, _.w)(W),
-            z = (0, T.a3)(r),
+            z = (0, _.w)(W),
+            Y = (0, T.a3)(r),
             Q = r === h.uF.QUESTS_EMBED,
             K = (0, p.wT)(n, y.rE.QUESTS_CARD, r, U),
             J = n.userStatus?.completedAt != null,
@@ -79,9 +79,9 @@ let L = (0, s.animated)(c.abt),
                 withGameTile: !Q || null == n.config.cosponsorMetadata,
             });
         return (0, i.jsxs)("div", {
-            className: l()(j.nw, { [j.fu]: z, [j.Gg]: Q, [j.e5]: "xs" === R }),
+            className: l()(j.nw, { [j.fu]: Y, [j.Gg]: Q, [j.e5]: "xs" === R }),
             "aria-label": N.intl.string(N.t.dcl9MQ),
-            style: { height: z ? G : void 0 },
+            style: { height: Y ? G : void 0 },
             children: [
                 (0, i.jsx)(f.A, {
                     quest: n,
@@ -96,13 +96,13 @@ let L = (0, s.animated)(c.abt),
                     children: [
                         (0, i.jsxs)(s.animated.div, {
                             className: l()(j.VW, { [j.eX]: Q }),
-                            style: { y: z ? P.to({ range: [0, 1], output: [T.es, 0] }) : void 0 },
+                            style: { y: Y ? P.to({ range: [0, 1], output: [T.es, 0] }) : void 0 },
                             children: [
-                                z &&
+                                Y &&
                                     (0, i.jsx)(s.animated.div, {
                                         className: j.gM,
                                         style: {
-                                            opacity: (0, b.a)(P.to({ range: [0, 1], output: [1, 0] })),
+                                            opacity: (0, v.a)(P.to({ range: [0, 1], output: [1, 0] })),
                                             visibility: w || !M ? "inherit" : "hidden",
                                         },
                                         "aria-hidden": !w && M,
@@ -113,7 +113,7 @@ let L = (0, s.animated)(c.abt),
                                             children: [
                                                 (0, i.jsx)("div", {
                                                     className: j.SY,
-                                                    children: (0, i.jsx)(v.A, {
+                                                    children: (0, i.jsx)(b.A, {
                                                         quest: n,
                                                         questContent: r,
                                                         className: j.EK,
@@ -137,9 +137,9 @@ let L = (0, s.animated)(c.abt),
                                     ref: (e) => {
                                         B.current = e;
                                     },
-                                    className: l()(j.Yu, { [j.fu]: z, [j.Gg]: Q }),
+                                    className: l()(j.Yu, { [j.fu]: Y, [j.Gg]: Q }),
                                     style: {
-                                        opacity: (0, b.a)(P.to({ range: [0, 1], output: [0, 1] })),
+                                        opacity: (0, v.a)(P.to({ range: [0, 1], output: [0, 1] })),
                                         visibility: w || M ? "inherit" : "hidden",
                                     },
                                     "aria-hidden": !w && !M,
@@ -157,7 +157,7 @@ let L = (0, s.animated)(c.abt),
                                                         __unsupportedReactNodeAsText: n.config.messages.questName,
                                                         shouldShow: null != F && null != V && F < V,
                                                         children: (0, i.jsx)(c.Heading, {
-                                                            ref: Y,
+                                                            ref: z,
                                                             variant:
                                                                 "lg" === R
                                                                     ? "heading-xxl/bold"
@@ -195,19 +195,19 @@ let L = (0, s.animated)(c.abt),
                         }),
                         (0, i.jsxs)(s.animated.div, {
                             className: j._q,
-                            style: { top: z ? P.to({ range: [0, 1], output: [T.es / 2 - T.uR / 2, T.wl] }) : T.wl },
+                            style: { top: Y ? P.to({ range: [0, 1], output: [T.es / 2 - T.uR / 2, T.wl] }) : T.wl },
                             children: [
                                 (0, i.jsx)(C.C, {
                                     questContent: r,
                                     quest: n,
                                     questContentPosition: k,
                                     shouldShowDisclosure: !0,
-                                    hideLearnMore: z,
+                                    hideLearnMore: Y,
                                     showShareLink: !t && Q,
                                     sourceQuestContent: U,
                                     children: (e) =>
                                         (0, i.jsx)(s.animated.div, {
-                                            style: { opacity: (0, b.a)(P), visibility: w || M ? "inherit" : "hidden" },
+                                            style: { opacity: (0, v.a)(P), visibility: w || M ? "inherit" : "hidden" },
                                             "aria-hidden": !w && !M,
                                             children: (0, i.jsx)(c.DUT, {
                                                 ...e,

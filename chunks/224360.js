@@ -11,8 +11,8 @@ var l = n(503698),
     u = n(61881),
     g = n(788593),
     m = n(985018),
-    x = n(522500),
-    p = n(97717);
+    x = n(496527),
+    p = n(853228);
 function f(e) {
     let { applicationId: t, userId: n, onClick: l } = e,
         { coverImageUrl: a, gameName: d, isLoading: f } = (0, c.A)(t),

@@ -6,12 +6,12 @@ var i = n(627968),
     r = n(825244),
     a = n(652215),
     o = n(985018),
-    c = n(729934);
+    c = n(3580);
 let d = (e) => {
     let { guild: t, onAddGuild: d } = e,
         u = s.useCallback(() => {
             (0, l.mMO)(async () => {
-                let { default: e } = await Promise.all([n.e("43600"), n.e("52537")]).then(n.bind(n, 234355));
+                let { default: e } = await Promise.all([n.e("43600"), n.e("71281")]).then(n.bind(n, 234355));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,
@@ -42,7 +42,7 @@ let d = (e) => {
                 : null,
             (0, i.jsx)(r.E, {
                 className: c.c5,
-                iconUrl: n(576877),
+                iconUrl: n(799258),
                 header: o.intl.string(o.t.L4bwJ9),
                 completed: !1,
                 onClick: u,

@@ -3,14 +3,14 @@ n.d(t, { A: () => l, g: () => o });
 var r = n(627968);
 n(64700);
 var i = n(565645),
-    a = n(202027),
-    s = n(322107);
-let o = { SMALL: s.EX, MEDIUM: s.Y, LARGE: s.as };
+    s = n(202027),
+    a = n(12817);
+let o = { SMALL: a.EX, MEDIUM: a.Y, LARGE: a.as };
 function l(e) {
-    let { emojiId: t, emojiName: n, defaultComponent: s, size: l = o.MEDIUM } = e,
-        { customEmoji: u, unicodeEmoji: c } = (0, a.A)(t, n);
+    let { emojiId: t, emojiName: n, defaultComponent: a, size: l = o.MEDIUM } = e,
+        { customEmoji: u, unicodeEmoji: c } = (0, s.A)(t, n);
     return null == u && null == c
-        ? s
+        ? a
         : (0, r.jsx)(i.A, {
               emojiName: null != u ? u?.name : n,
               animated: null != u && u.animated,

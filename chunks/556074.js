@@ -1,7 +1,7 @@
 r.r(t), r.d(t, { VerifyAccountDeekLink: () => g, VerifyAccountLoading: () => A, default: () => y });
 var n = r(627968),
     l = r(64700),
-    a = r(960488),
+    a = r(873263),
     i = r(607399),
     c = r(590053),
     s = r(421380),
@@ -15,7 +15,7 @@ var n = r(627968),
     C = r(950198),
     m = r(652215),
     S = r(985018),
-    _ = r(538644);
+    _ = r(78114);
 let E = null != window.opener;
 function y() {
     let e = (0, a.W6)(),

@@ -14,10 +14,10 @@ var i = n(311907),
     x = n(429707),
     p = n(274303),
     g = n(994125),
-    f = n(347853),
-    _ = n(652215),
+    _ = n(347853),
+    f = n(652215),
     v = n(985018),
-    b = n(51292);
+    b = n(848193);
 function j(e) {
     let t = (0, i.bG)([u.default], () => u.default.getCurrentUser()),
         n = (0, i.bG)([c.A], () => c.A.hidePersonalInformation),
@@ -86,12 +86,12 @@ function j(e) {
                         });
                     },
                     action: () => {
-                        if ((e?.(), c)) (0, f.A)();
+                        if ((e?.(), c)) (0, _.A)();
                         else {
                             var n;
                             (n = l.id) !== t?.id &&
-                                (m.default.track(_.HAw.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
-                                    location: { section: _.JJy.USER_PROFILE },
+                                (m.default.track(f.HAw.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
+                                    location: { section: f.JJy.USER_PROFILE },
                                 }),
                                 x.Mx(n));
                         }
@@ -109,7 +109,7 @@ function j(e) {
                         id: "manage-accounts",
                         label: v.intl.string(v.t.WbFpq4),
                         action: () => {
-                            e?.(), (0, f.A)();
+                            e?.(), (0, _.A)();
                         },
                     }),
                 ],

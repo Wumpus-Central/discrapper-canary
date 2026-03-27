@@ -11,7 +11,7 @@ var r = n(627968),
     d = n(572808),
     _ = n(9045),
     f = n(806931),
-    p = n(63587);
+    p = n(935086);
 let h = 13e3,
     m = (e, t) => e.type === f.lp.USER && e.speaking && e.user.id !== t,
     E = (e) => {

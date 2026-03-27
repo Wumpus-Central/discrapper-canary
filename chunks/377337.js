@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => A });
+n.d(t, { A: () => p });
 var i = n(627968),
     s = n(64700),
     l = n(735438),
@@ -10,7 +10,7 @@ var i = n(627968),
     c = n(308072),
     u = n(298818),
     m = n(985018),
-    g = n(258761);
+    g = n(66903);
 function x(e) {
     let { gameApplicationIds: t, handleChange: n, disabled: s } = e,
         { options: l, matchSorterOptions: r } = (0, o.R)();
@@ -35,7 +35,7 @@ function h(e) {
           });
 }
 let _ = [];
-function A(e) {
+function p(e) {
     let { profile: t, canManageGuild: n } = e,
         l = t.id,
         o = t?.gameApplicationIds ?? _,
@@ -52,14 +52,14 @@ function A(e) {
             },
             [l, o],
         ),
-        A = s.useRef(o),
-        p = s.useMemo(() => (r().isEqual(new Set(o), new Set(A.current)) || (A.current = [...o]), A.current), [o]);
+        p = s.useRef(o),
+        A = s.useMemo(() => (r().isEqual(new Set(o), new Set(p.current)) || (p.current = [...o]), p.current), [o]);
     return (0, i.jsxs)(a.nVY, {
         label: m.intl.string(m.t.BR68vK),
         description: m.intl.string(m.t.MobxiB),
         children: [
             (0, i.jsx)(x, { gameApplicationIds: o, handleChange: c, disabled: !n }),
-            (0, i.jsx)(h, { gameApplicationIds: p, onRemoveGame: g, disabled: !n }),
+            (0, i.jsx)(h, { gameApplicationIds: A, onRemoveGame: g, disabled: !n }),
             (0, i.jsx)(u.A, { guildId: l, selectedGameApplicationIds: o, onUpdateGames: c, disabled: !n }),
         ],
     });

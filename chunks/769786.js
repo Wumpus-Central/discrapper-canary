@@ -10,18 +10,18 @@ var l = n(627968),
     c = n(376092),
     _ = n(317525),
     d = n(71393),
-    g = n(558393),
-    A = n(829887),
+    A = n(558393),
+    g = n(829887),
     T = n(595849),
     I = n(486974),
     N = n(652215),
     h = n(985018),
-    m = n(636376);
+    m = n(92210);
 function S(e) {
     let { permission: t, roleIds: n, guild: r, specMap: a } = e,
         d = N.xBc[t],
-        g = a[d.toString()]?.title ?? (0, c.hx)(d),
-        A = T.S2.has(d),
+        A = a[d.toString()]?.title ?? (0, c.hx)(d),
+        g = T.S2.has(d),
         I = (0, s.yK)([_.A], () => _.A.getManyRoles(r.id, n), [r.id, n]);
     return (0, l.jsx)(o.m, {
         "aria-label": h.intl.string(h.t["0g8Xd/"]),
@@ -29,7 +29,7 @@ function S(e) {
             children: [
                 (0, l.jsx)(E.Text, {
                     variant: "text-sm/normal",
-                    children: A ? h.intl.string(h.t["GEuu/O"]) : h.intl.string(h.t.wgGiCk),
+                    children: g ? h.intl.string(h.t["GEuu/O"]) : h.intl.string(h.t.wgGiCk),
                 }),
                 I.map((e) =>
                     (0, l.jsx)("div", { className: m.Zf, children: (0, l.jsx)(u.A, { role: e, guildId: r.id }) }, e.id),
@@ -37,10 +37,10 @@ function S(e) {
             ],
         }),
         children: (0, l.jsxs)(E.DUT, {
-            className: i()(m.t2, { [m.aE]: A }),
+            className: i()(m.t2, { [m.aE]: g }),
             children: [
-                A && (0, l.jsx)(E.m5V, { size: "custom", width: 16, height: 16, color: E.LU0.colors.TEXT_BRAND }),
-                (0, l.jsx)(E.Text, { variant: "text-xs/medium", color: "interactive-text-default", children: g }),
+                g && (0, l.jsx)(E.m5V, { size: "custom", width: 16, height: 16, color: E.LU0.colors.TEXT_BRAND }),
+                (0, l.jsx)(E.Text, { variant: "text-xs/medium", color: "interactive-text-default", children: A }),
             ],
         }),
     });
@@ -52,9 +52,9 @@ let G = r.memo(function (e) {
         u = (0, T.RP)(t.userId, t.guildId, T.lp),
         c = Object.keys(o).length,
         _ = Object.keys(u).length,
-        G = r.useMemo(() => (null != a ? g.A.getGuildPermissionSpecMap(a) : null), [a]),
-        O = r.useMemo(() => (null != a ? g.A.generateGuildPermissionSpec(a) : null), [a]),
-        C = r.useMemo(() => {
+        G = r.useMemo(() => (null != a ? A.A.getGuildPermissionSpecMap(a) : null), [a]),
+        O = r.useMemo(() => (null != a ? A.A.generateGuildPermissionSpec(a) : null), [a]),
+        R = r.useMemo(() => {
             if (null == a || null == G) return null;
             if (0 === c)
                 return (0, l.jsx)("div", {
@@ -105,8 +105,8 @@ let G = r.memo(function (e) {
                           }),
                       ],
                   }),
-                  (0, l.jsx)(A.SQ, {
-                      children: (0, l.jsx)(A.RU, { description: (0, l.jsx)("div", { className: m.SL, children: C }) }),
+                  (0, l.jsx)(g.SQ, {
+                      children: (0, l.jsx)(g.RU, { description: (0, l.jsx)("div", { className: m.SL, children: R }) }),
                   }),
               ],
           });

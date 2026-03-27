@@ -3,7 +3,7 @@ var i = n(627968),
     a = n(64700),
     r = n(503698),
     l = n.n(r),
-    s = n(4208),
+    s = n(880013),
     o = n(494012),
     d = n(158954),
     c = n(311907),
@@ -19,8 +19,8 @@ var i = n(627968),
     C = n(710969),
     I = n(92246),
     E = n(792620),
-    v = n(453384),
-    b = n(201805),
+    b = n(453384),
+    v = n(201805),
     T = n(212614),
     y = n(79545),
     S = n(646764),
@@ -28,11 +28,11 @@ var i = n(627968),
     j = n(545986),
     L = n(654487),
     R = n(985018),
-    P = n(376936),
-    w = n(582251);
+    P = n(416783),
+    w = n(652254);
 let M = async () => await n.e("40119").then(n.t.bind(n, 718698, 19));
 function D(e) {
-    let { quest: t, location: n, isInteracting: r, contentPosition: E, sourceQuestContent: b } = e,
+    let { quest: t, location: n, isInteracting: r, contentPosition: E, sourceQuestContent: v } = e,
         D = a.useRef(null),
         { ref: U, scrollHeight: B } = (0, o.wR)(),
         G = 104 !== B,
@@ -44,13 +44,13 @@ function D(e) {
         V = (0, A.In)(t),
         q = (0, I.mq)(t.config),
         W = (0, I.mH)(t.config),
-        Y = t.userStatus?.enrolledAt != null,
-        z = t.userStatus?.completedAt != null,
+        z = t.userStatus?.enrolledAt != null,
+        Y = t.userStatus?.completedAt != null,
         Q = t.userStatus?.claimedAt != null,
         K = (0, I.ks)(t.config),
         J = (0, I._Z)(t.config),
         { completedRatio: X, completedRatioDisplay: Z } = (0, A.O9)(t),
-        $ = (0, g.gj)(t, b, _.Ob.QuestEmbed, D),
+        $ = (0, g.gj)(t, v, _.Ob.QuestEmbed, D),
         ee = (0, y.Pd)(t),
         et = a.useMemo(
             () =>
@@ -112,9 +112,9 @@ function D(e) {
                     questContent: n,
                     questContentPosition: E,
                     questContentCTA: f.Cy.LEARN_MORE,
-                    sourceQuestContent: b,
+                    sourceQuestContent: v,
                 });
-        }, [t.id, n, E, b]),
+        }, [t.id, n, E, v]),
         er = (0, c.bG)([h.A], () => null != h.A.questEnrollmentBlockedUntil, []),
         el = p.t.useConfig({ location: L.rE.EMBED_DESKTOP });
     return (0, i.jsxs)("div", {
@@ -128,12 +128,12 @@ function D(e) {
                     (0, i.jsxs)("div", {
                         className: w.c6,
                         children: [
-                            !Q && z && (0, i.jsx)("div", { className: w.Nz }),
-                            Y
+                            !Q && Y && (0, i.jsx)("div", { className: w.Nz }),
+                            z
                                 ? (0, i.jsxs)("div", {
                                       className: w.Tr,
                                       children: [
-                                          z &&
+                                          Y &&
                                               (0, i.jsx)(d.akl, {
                                                   importData: M,
                                                   className: w.t_,
@@ -141,7 +141,7 @@ function D(e) {
                                                   autoplay: !1,
                                                   shouldAnimate: !ei,
                                               }),
-                                          (0, i.jsx)(v.A, {
+                                          (0, i.jsx)(b.A, {
                                               size: 76,
                                               percentComplete: X,
                                               percentCompleteText: r && !H ? Z : void 0,
@@ -151,7 +151,7 @@ function D(e) {
                                                   autoplay: r,
                                                   lazyLoad: !0,
                                                   fullWidth: !0,
-                                                  sourceQuestContent: b,
+                                                  sourceQuestContent: v,
                                               }),
                                           }),
                                       ],
@@ -162,7 +162,7 @@ function D(e) {
                                       questContent: n,
                                       className: w.eB,
                                       lazyLoad: !0,
-                                      sourceQuestContent: b,
+                                      sourceQuestContent: v,
                                   }),
                         ],
                     }),
@@ -207,7 +207,7 @@ function D(e) {
                               }),
                               (0, i.jsx)(d.$nd, {
                                   variant: "primary",
-                                  onClick: () => (0, j.m6)(t, n, b),
+                                  onClick: () => (0, j.m6)(t, n, v),
                                   text: R.intl.string(R.t.vY9GgG),
                               }),
                           ],
@@ -228,14 +228,14 @@ function D(e) {
                                         quest: t,
                                         surface: y.V3.QUEST_EMBED,
                                         analyticsCtxQuestContent: n,
-                                        analyticsCtxSourceQuestContent: b,
+                                        analyticsCtxSourceQuestContent: v,
                                         analyticsCtxQuestContentPosition: E,
                                     })
                                   : (0, i.jsx)(O, {
                                         quest: t,
                                         progressState: V,
                                         questContent: n,
-                                        sourceQuestContent: b,
+                                        sourceQuestContent: v,
                                         questContentPosition: E,
                                     }),
                           ],
@@ -258,7 +258,7 @@ function O(e) {
         o = (0, E.vv)(t),
         u = (0, E.Cr)(t),
         _ = (0, C.Ic)(t),
-        m = (0, b._c)({
+        m = (0, v._c)({
             progressState: n,
             quest: t,
             questContent: a,

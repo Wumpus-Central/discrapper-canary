@@ -12,17 +12,17 @@ var s = n(503698),
     u = n(429913),
     h = n(309698),
     A = n(47167),
-    p = n(713654),
-    g = n(769015),
-    m = n(508654),
-    _ = n(974930),
+    m = n(713654),
+    _ = n(769015),
+    p = n(508654),
+    g = n(974930),
     f = n(961314),
     x = n(58736),
-    C = n(742589),
-    E = n(353428),
+    E = n(742589),
+    C = n(353428),
     I = n(267102),
-    b = n(46054),
-    N = n(164203),
+    N = n(46054),
+    b = n(164203),
     S = n(665691),
     T = n(123973),
     v = n(241756),
@@ -36,8 +36,8 @@ var s = n(503698),
     G = n(652215),
     U = n(818348),
     P = n(985018),
-    w = n(597217),
-    k = n(206314);
+    w = n(35471),
+    k = n(830684);
 function V(e) {
     let { focusedParticipant: t, channel: n } = e,
         s = (0, I.Us)(),
@@ -68,15 +68,15 @@ function H(e) {
     let t,
         { focusedApplication: n, focusedParticipant: s, channel: l } = e,
         r = (0, T.$F)(l),
-        a = (0, m.Qs)(l.id),
-        c = null != a ? (0, _.G3)(a) : null,
+        a = (0, p.Qs)(l.id),
+        c = null != a ? (0, g.G3)(a) : null,
         u = null != a;
     if (s?.type === D.lp.ACTIVITY)
         null != n &&
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(x.Ay.Divider, { className: w.yF }),
-                    (0, i.jsx)(g.A, { game: n, className: w.RI }),
+                    (0, i.jsx)(_.A, { game: n, className: w.RI }),
                     (0, i.jsx)(o.Text, {
                         className: w.W$,
                         variant: "text-md/normal",
@@ -100,8 +100,8 @@ function H(e) {
     return (0, i.jsx)("div", { className: w.kL, children: t });
 }
 function F(e) {
-    let { channel: t, guild: s, appContext: c, inCall: d, isChatOpen: g, exitFullScreen: m } = e,
-        { focusedParticipant: _ } = (0, r.cf)(
+    let { channel: t, guild: s, appContext: c, inCall: d, isChatOpen: _, exitFullScreen: p } = e,
+        { focusedParticipant: g } = (0, r.cf)(
             [j.A],
             () => ({
                 focusedParticipant: j.A.getSelectedParticipant(t.id),
@@ -110,8 +110,8 @@ function F(e) {
             [t.id],
         ),
         f = (0, A.Ay)(t),
-        I = (0, p.gU)(t),
-        [T] = (0, u.A)(_?.type === D.lp.ACTIVITY ? [_.applicationId] : []),
+        I = (0, m.gU)(t),
+        [T] = (0, u.A)(g?.type === D.lp.ACTIVITY ? [g.applicationId] : []),
         v = P.intl.string(P.t.BVZqJl);
     t.isDM() ? (v = P.intl.string(P.t.jN2DfZ)) : t.isGroupDM() && (v = P.intl.string(P.t["e5y+gm"]));
     let y = (0, r.bG)([h.A], () => h.A.getChannelStatus(t)),
@@ -141,7 +141,7 @@ function F(e) {
                           (0, i.jsx)(o.Text, {
                               variant: "text-xs/normal",
                               className: l()(w.Gh, k.PT, { [w.BI]: G }),
-                              children: b.A.parseVoiceChannelStatus(y, !0, { channelId: t.id }),
+                              children: N.A.parseVoiceChannelStatus(y, !0, { channelId: t.id }),
                           }),
                           G &&
                               (0, i.jsx)(o.R2l, {
@@ -163,7 +163,7 @@ function F(e) {
                 theme: U.NJ.DARK,
                 children: (e) =>
                     (0, i.jsxs)(x.Ay, {
-                        onDoubleClick: C.I,
+                        onDoubleClick: E.I,
                         transparent: !0,
                         className: l()(e, w.jr),
                         innerClassName: w.gi,
@@ -173,8 +173,8 @@ function F(e) {
                             channel: t,
                             appContext: c,
                             inCall: d,
-                            isChatOpen: g,
-                            exitFullScreen: m,
+                            isChatOpen: _,
+                            exitFullScreen: p,
                         }),
                         children: [
                             (0, i.jsx)(x.Ay.Title, {
@@ -196,12 +196,12 @@ function F(e) {
                                     ],
                                 }),
                             }),
-                            (0, i.jsx)(E.i$, { channel: t, guild: s }),
-                            (0, i.jsx)(H, { focusedApplication: T, focusedParticipant: _, channel: t }),
+                            (0, i.jsx)(C.i$, { channel: t, guild: s }),
+                            (0, i.jsx)(H, { focusedApplication: T, focusedParticipant: g, channel: t }),
                         ],
                     }),
             }),
-            (0, i.jsx)(N.A, { channelId: t.id }),
+            (0, i.jsx)(b.A, { channelId: t.id }),
         ],
     });
 }

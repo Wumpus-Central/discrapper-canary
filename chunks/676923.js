@@ -2,10 +2,10 @@ n.d(t, { S: () => o });
 var l = n(627968);
 n(64700);
 var i = n(503698),
-    s = n.n(i),
-    r = n(435371),
+    r = n.n(i),
+    s = n(435371),
     a = n(397927),
-    u = n(791895);
+    u = n(60229);
 function o(e) {
     let {
             tooltipText: t,
@@ -18,8 +18,8 @@ function o(e) {
             children: g,
         } = e,
         I = o ?? t,
-        E = (0, l.jsx)(a.DUT, {
-            className: s()(u.k, i),
+        A = (0, l.jsx)(a.DUT, {
+            className: r()(u.k, i),
             "aria-label": I,
             onClick: d,
             onMouseEnter: c,
@@ -27,5 +27,5 @@ function o(e) {
             role: "button",
             children: g,
         });
-    return n ? (0, l.jsx)(r.m_, { text: t, "aria-label": I, children: E }) : E;
+    return n ? (0, l.jsx)(s.m_, { text: t, "aria-label": I, children: A }) : A;
 }

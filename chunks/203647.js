@@ -11,15 +11,15 @@ var i = n(627968),
     g = n(178213),
     m = n(594832),
     x = n(86638),
-    f = n(46537),
-    p = n(287809),
+    p = n(46537),
+    f = n(287809),
     h = n(622543),
     _ = n(451395),
     A = n(823016),
     I = n(18983),
     j = n(985018),
-    v = n(886865);
-function E(e) {
+    v = n(81441);
+function T(e) {
     let { item: t, index: n, wishlistId: l, onReorder: a, children: s } = e,
         { manageFocusOnReorder: r } = (0, A.r)();
     return (0, i.jsx)(_.mG, {
@@ -38,7 +38,7 @@ function E(e) {
         children: (0, i.jsx)("div", { className: v.An, children: s }),
     });
 }
-let T = l.memo(function (e) {
+let E = l.memo(function (e) {
     let {
             item: t,
             index: n,
@@ -47,11 +47,11 @@ let T = l.memo(function (e) {
             wishlistId: d,
             tooltipConfig: c,
             isDragging: u,
-            onReorder: p,
+            onReorder: f,
         } = e,
         { registerDragHandleRef: h } = (0, A.r)(),
         j = (0, g.GG)("user_profile_wishlist_grid"),
-        T = l.useMemo(
+        E = l.useMemo(
             () =>
                 s
                     ? (0, i.jsx)(_.jV, {
@@ -63,20 +63,20 @@ let T = l.memo(function (e) {
             [s, h, t.skuId],
         ),
         b = l.useMemo(() => {
-            if (j) return (0, i.jsx)(x.A, { item: t, wishlistOwner: a, wishlistId: d, isDragging: u, dragHandle: T });
+            if (j) return (0, i.jsx)(x.A, { item: t, wishlistOwner: a, wishlistId: d, isDragging: u, dragHandle: E });
             let e = (0, i.jsx)(I.A, {
                     item: t,
                     profileOwner: a,
                     wishlistId: d,
                     isOwner: s,
                     isDragging: u,
-                    dragHandle: T,
+                    dragHandle: E,
                 }),
                 n = e;
             return (
                 c.shouldShow &&
                     !u &&
-                    (n = (0, f.Qc)(c)
+                    (n = (0, p.Qc)(c)
                         ? (0, i.jsx)(o.m, { text: c.title, position: "top", asContainer: !0, delay: m.Zh, children: e })
                         : (0, i.jsx)(r.u, {
                               title: c.title,
@@ -90,16 +90,16 @@ let T = l.memo(function (e) {
                           })),
                 n
             );
-        }, [j, t, a, u, T, c, s, d]);
+        }, [j, t, a, u, E, c, s, d]);
     return s
-        ? (0, i.jsx)("li", { children: (0, i.jsx)(E, { item: t, index: n, wishlistId: d, onReorder: p, children: b }) })
+        ? (0, i.jsx)("li", { children: (0, i.jsx)(T, { item: t, index: n, wishlistId: d, onReorder: f, children: b }) })
         : (0, i.jsx)("li", { children: b });
 });
 function b(e) {
     let { items: t, profileOwner: n, isOwner: r } = e,
-        o = p.default.getCurrentUser(),
+        o = f.default.getCurrentUser(),
         { defaultWishlistId: g } = (0, s.cf)([h.A], () => ({ defaultWishlistId: h.A.getFirstWishlistId(n.id) })),
-        m = (0, f.b7)(t, r),
+        m = (0, p.b7)(t, r),
         { isDragging: x } = (0, a.V)((e) => ({ isDragging: e.isDragging() })),
         _ = l.useCallback(
             (e, n) => {
@@ -117,7 +117,7 @@ function b(e) {
         className: v.Vg,
         children: t.map((e, t) =>
             (0, i.jsx)(
-                T,
+                E,
                 {
                     item: e,
                     index: t,

@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => R });
+n.d(t, { A: () => O });
 var r = n(627968),
     i = n(64700),
-    a = n(735438),
-    s = n.n(a),
+    s = n(735438),
+    a = n.n(s),
     o = n(258873),
     l = n(622242),
     u = n(731738),
@@ -14,15 +14,15 @@ var r = n(627968),
     p = n(521502),
     h = n(380610),
     m = n(831062),
-    g = n(976860),
-    E = n(954571),
+    E = n(976860),
+    g = n(954571),
     A = n(728458),
     I = n(837921),
     T = n(721668),
-    y = n(652215),
-    S = n(985018),
-    v = n(502167);
-function C() {
+    S = n(652215),
+    y = n(985018),
+    v = n(90321);
+function N() {
     let [e, t] = i.useState(!1);
     if (null == (0, _.bG)([p.A], () => ((0, h.kK)() ? p.A.getCurrentBuildOverride().overrides?.discord_web : null)))
         return null;
@@ -36,12 +36,12 @@ function C() {
     return (0, r.jsx)(d.$nd, {
         variant: "primary",
         size: "md",
-        text: S.intl.string(S.t["/Nz9rY"]),
+        text: y.intl.string(y.t["/Nz9rY"]),
         onClick: n,
         loading: e,
     });
 }
-let b = s().throttle(
+let C = a().throttle(
     (e) => {
         m.A.increment(
             {
@@ -54,18 +54,18 @@ let b = s().throttle(
     100,
     { trailing: !1 },
 );
-class N extends i.PureComponent {
+class R extends i.PureComponent {
     state = { error: null, info: null };
     discordErrorsSet = !1;
     componentDidCatch(e, t) {
         this.triggerSoftCrash(e, t);
     }
     triggerSoftCrash(e, t) {
-        let n = (0, g.JK)().location;
+        let n = (0, E.JK)().location;
         this.setState({ error: e, info: t });
         let r = (0, c.b)(),
             i = A.A.captureCrash(e, { extra: t });
-        E.default.track(y.HAw.APP_CRASHED, {
+        g.default.track(S.HAw.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
@@ -74,7 +74,7 @@ class N extends i.PureComponent {
             uses_client_mods: r,
             error_level: "fatal",
         }),
-            b(r),
+            C(r),
             I.Ay.cleanupDisplaySleep();
     }
     _handleSubmitReport() {
@@ -97,8 +97,8 @@ class N extends i.PureComponent {
         if (null !== this.state.error) {
             let e = (0, r.jsxs)("div", {
                     children: [
-                        (0, r.jsx)("p", { children: S.intl.string(S.t.tx8CkI) }),
-                        (0, r.jsx)("p", { children: S.intl.string(S.t.CvQlAH) }),
+                        (0, r.jsx)("p", { children: y.intl.string(y.t.tx8CkI) }),
+                        (0, r.jsx)("p", { children: y.intl.string(y.t.CvQlAH) }),
                     ],
                 }),
                 n = (0, r.jsxs)(d.e2v, {
@@ -106,14 +106,14 @@ class N extends i.PureComponent {
                         (0, r.jsx)(d.$nd, {
                             variant: "primary",
                             size: "md",
-                            text: S.intl.string(S.t["+hivLW"]),
+                            text: y.intl.string(y.t["+hivLW"]),
                             onClick: this._handleSubmitReport,
                         }),
-                        (0, r.jsx)(C, {}),
+                        (0, r.jsx)(N, {}),
                     ],
                 });
             return (0, r.jsx)(T.A, {
-                title: S.intl.string(S.t["3h+n+8"]),
+                title: y.intl.string(y.t["3h+n+8"]),
                 note: null != t ? t() : e,
                 action: n,
                 className: v.W,
@@ -122,4 +122,4 @@ class N extends i.PureComponent {
         return e;
     }
 }
-let R = N;
+let O = R;

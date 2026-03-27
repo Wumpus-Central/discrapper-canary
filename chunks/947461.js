@@ -12,17 +12,17 @@ var i = n(627968),
     h = n(652215),
     A = n(746080),
     m = n(49999),
-    p = n(294726),
-    g = n(985018),
-    _ = n(81152),
-    f = n(928409);
+    _ = n(738072),
+    p = n(985018),
+    g = n(208811),
+    f = n(99566);
 let x = s.memo(function (e) {
     let { guildId: t, selected: x } = e,
-        [C, E] = (0, c.ww)([l.M.GAME_SERVER_HOSTING_NEW_BADGE], t),
-        I = C === l.M.GAME_SERVER_HOSTING_NEW_BADGE,
+        [E, C] = (0, c.ww)([l.M.GAME_SERVER_HOSTING_NEW_BADGE], t),
+        I = E === l.M.GAME_SERVER_HOSTING_NEW_BADGE,
         N = s.useCallback(() => {
-            E(m.i.USER_DISMISS), (0, u.pX)(h.BVt.CHANNEL(t, A.VV.GAME_SERVERS));
-        }, [t, E]),
+            C(m.i.USER_DISMISS), (0, u.pX)(h.BVt.CHANNEL(t, A.VV.GAME_SERVERS));
+        }, [t, C]),
         b = s.useCallback(
             (e) => {
                 e.stopPropagation(),
@@ -34,16 +34,16 @@ let x = s.memo(function (e) {
             [t],
         ),
         S = (0, i.jsxs)("div", {
-            className: _.c,
+            className: g.c,
             children: [
                 (0, i.jsx)("div", {
                     className: f.Xs,
                     children: (0, i.jsx)(a.m, {
-                        text: g.intl.string(g.t.fgq1gs),
+                        text: p.intl.string(p.t.fgq1gs),
                         position: "top",
                         children: (0, i.jsx)(o.DUT, {
                             onClick: b,
-                            "aria-label": g.intl.string(g.t.fgq1gs),
+                            "aria-label": p.intl.string(p.t.fgq1gs),
                             children: (0, i.jsx)(o.PGe, { size: "xs", color: "currentColor", className: f.gE }),
                         }),
                     }),
@@ -53,8 +53,8 @@ let x = s.memo(function (e) {
                         className: f.yW,
                         children: (0, i.jsx)(o.LpS, {
                             disableColor: !0,
-                            text: g.intl.string(g.t.y2b7CA),
-                            className: _.q,
+                            text: p.intl.string(p.t.y2b7CA),
+                            className: g.q,
                         }),
                     }),
             ],
@@ -63,7 +63,7 @@ let x = s.memo(function (e) {
         className: f.Ki,
         id: `game-server-empty-${t}`,
         renderIcon: (e) => (0, i.jsx)(o._xR, { size: "md", className: e, color: "currentColor" }),
-        text: g.intl.string(p.default.vCzwM7),
+        text: p.intl.string(_.default.vCzwM7),
         selected: x,
         onClick: N,
         trailing: S,

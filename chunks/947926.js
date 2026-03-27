@@ -3,7 +3,7 @@ var a = n(627968),
     i = n(64700),
     s = n(503698),
     l = n.n(s),
-    r = n(4208),
+    r = n(880013),
     o = n(311907),
     d = n(475743),
     c = n(676594),
@@ -13,8 +13,8 @@ var a = n(627968),
     x = n(890687),
     p = n(971276),
     g = n(851936),
-    f = n(792620),
-    _ = n(241124),
+    _ = n(792620),
+    f = n(241124),
     v = n(73473),
     b = n(201805),
     j = n(545986),
@@ -31,7 +31,7 @@ var a = n(627968),
     R = n(20732),
     w = n(654487);
 n(272111);
-var D = n(57291);
+var D = n(407974);
 function P(e) {
     let { isExpanded: t, questId: n } = e;
     return (
@@ -60,12 +60,12 @@ function L(e) {
         { isQuestBarVisible: L, reason: U } = (0, b.TQ)({ quest: t }),
         B = (0, o.bG)([u.A], () => u.A.hasLayers()),
         G = i.useRef(null),
-        F = i.useMemo(() => (0, f.vv)(t), [t]),
+        F = i.useMemo(() => (0, _.vv)(t), [t]),
         V = t.id,
         W = t.userStatus?.enrolledAt != null,
         H = (0, d.A)(W),
         K = t.userStatus?.completedAt != null,
-        { hasError: z, isLoading: $ } = (0, _.Gk)(),
+        { hasError: z, isLoading: $ } = (0, f.Gk)(),
         q = i.useContext(N.Z) || (s && L && !$ && !c),
         {
             isExpanded: Q,
@@ -121,7 +121,7 @@ function L(e) {
         !s || (!q && Z && !$) || z)
     )
         return z ? n.log("Not rendered due to asset error") : s || n.log("Not rendered due to ineligibility"), null;
-    let ef = 70 + 78 * !!K;
+    let e_ = 70 + 78 * !!K;
     return (0, a.jsx)(v.R, {
         questOrQuests: t,
         questContent: h.uF.QUEST_BAR_V2,
@@ -144,7 +144,7 @@ function L(e) {
                         onFocus: eo,
                         onBlur: ed,
                         className: l()(D.iE, { [D.Xc]: !q, [D.uv]: q && Z }),
-                        style: { height: et.to({ range: [0, 1], output: [0, ef] }) },
+                        style: { height: et.to({ range: [0, 1], output: [0, e_] }) },
                         children: (0, a.jsx)(r.animated.div, {
                             className: l()(D.FG, { [D.E$]: Q, [D.KA]: W }),
                             children: (0, a.jsx)(S.R, {
@@ -164,7 +164,7 @@ function L(e) {
                                         onCtxMenuSelect: es,
                                         onGameSheetOpen: el,
                                         onGameSheetClose: er,
-                                        collapsedHeight: ef,
+                                        collapsedHeight: e_,
                                         children: [
                                             (0, a.jsx)(
                                                 y.A,
@@ -198,7 +198,7 @@ let U =
               return null == e
                   ? null
                   : (0, a.jsx)(
-                        _.jY,
+                        f.jY,
                         { source: w.rE.QUESTS_BAR, questId: e.id, children: (0, a.jsx)(L, { quest: e }) },
                         e.id,
                     );

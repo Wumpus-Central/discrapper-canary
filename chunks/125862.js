@@ -1,23 +1,23 @@
 a.d(t, { A: () => u });
 var n = a(627968),
     i = a(64700),
-    s = a(136722),
-    l = a(397927),
+    l = a(136722),
+    s = a(397927),
     r = a(595738),
     o = a(376092),
     c = a(985018),
-    d = a(437504);
+    d = a(43766);
 let u = function (e) {
     let { application: t } = e,
         a = i.useMemo(() => {
             let e = t?.install_params?.permissions;
-            if (null != e) return o.Q.filter((t) => s.zy(s.iu(e), t));
+            if (null != e) return o.Q.filter((t) => l.zy(l.iu(e), t));
         }, [t?.install_params?.permissions]);
     return null != a && a.length > 0
         ? (0, n.jsxs)("div", {
               className: d.A,
               children: [
-                  (0, n.jsx)(l.Heading, {
+                  (0, n.jsx)(s.Heading, {
                       variant: "heading-lg/semibold",
                       color: "text-strong",
                       children: c.intl.string(c.t.runNF8),

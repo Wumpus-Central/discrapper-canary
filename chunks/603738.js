@@ -13,16 +13,16 @@ var n = a(627968),
     p = a(975571),
     f = a(652215),
     E = a(204925),
-    N = a(985018),
-    A = a(216344);
+    A = a(985018),
+    N = a(94354);
 function h(e) {
     let { onComplete: t, onClose: a } = e,
         [i, h] = s.useState(null),
         [b, x] = s.useState(null),
         [T, C] = s.useState(!1),
-        I = (0, r.bG)([m.default], () => m.default.getCurrentUser()),
-        j = s.useRef(null);
-    async function D(e) {
+        j = (0, r.bG)([m.default], () => m.default.getCurrentUser()),
+        D = s.useRef(null);
+    async function I(e) {
         e.preventDefault(), l()(null != i, "Cannot submit null birthday."), C(!0);
         try {
             await d.n7(i, E.w_.NEW_USER_FLOW), t();
@@ -30,14 +30,14 @@ function h(e) {
             null != e.body && null != e.body.date_of_birth
                 ? (d.Xv(E.w_.NEW_USER_FLOW), d.$2(E.w_.NEW_USER_FLOW), a())
                 : e?.body?.username != null
-                  ? x(N.intl.string(N.t["TGg/2k"]))
+                  ? x(A.intl.string(A.t["TGg/2k"]))
                   : x(e?.body.message);
         }
         C(!1);
     }
     s.useEffect(() => {
-        null != I && null != I.nsfwAllowed && t();
-    }, [I, t]);
+        null != j && null != j.nsfwAllowed && t();
+    }, [j, t]);
     let g = s.useCallback(
             (e) => {
                 h(e);
@@ -45,39 +45,39 @@ function h(e) {
             [h],
         ),
         y = s.useCallback(() => {
-            j.current?.focus();
-        }, [j]);
-    return null == I
+            D.current?.focus();
+        }, [D]);
+    return null == j
         ? null
         : (0, n.jsxs)("form", {
-              className: A.Qs,
-              onSubmit: D,
+              className: N.Qs,
+              onSubmit: I,
               children: [
                   (0, n.jsx)(_.pVd, {
                       size: "custom",
                       width: 56,
                       height: 40,
-                      className: A.wm,
+                      className: N.wm,
                       color: o.A.unsafe_rawColors.BRAND_500.css,
                   }),
                   (0, n.jsx)(_.Heading, {
-                      className: A.DD,
+                      className: N.DD,
                       variant: "heading-xl/semibold",
-                      children: N.intl.string(N.t.n7i7sv),
+                      children: A.intl.string(A.t.n7i7sv),
                   }),
                   (0, n.jsx)(_.Text, {
                       color: "text-default",
-                      className: A.h_,
+                      className: N.h_,
                       variant: "text-md/normal",
-                      children: N.intl.format(N.t.fa8kW1, { helpURL: p.A.getArticleURL(f.MVz.AGE_GATE) }),
+                      children: A.intl.format(A.t.fa8kW1, { helpURL: p.A.getArticleURL(f.MVz.AGE_GATE) }),
                   }),
                   (0, n.jsx)(_.wXn, {
                       theme: f.NJ8.LIGHT,
                       children: (0, n.jsx)(u.A, {
                           required: !0,
                           autoFocus: !0,
-                          wrapperClassName: A.kz,
-                          label: N.intl.string(N.t.rhBeKe),
+                          wrapperClassName: N.kz,
+                          label: A.intl.string(A.t.rhBeKe),
                           name: "birthday",
                           onChange: g,
                           onPopulated: y,
@@ -86,18 +86,18 @@ function h(e) {
                       }),
                   }),
                   (0, n.jsx)("div", {
-                      className: A.qr,
+                      className: N.qr,
                       children: (0, n.jsx)("div", {
-                          className: A._o,
+                          className: N._o,
                           children: (0, n.jsx)(c.$n, {
                               "data-migration-pending": !0,
-                              buttonRef: j,
+                              buttonRef: D,
                               type: "submit",
                               size: c.$n.Sizes.LARGE,
                               submitting: T,
                               disabled: null == i,
                               fullWidth: !0,
-                              children: N.intl.string(N.t.PDTjLN),
+                              children: A.intl.string(A.t.PDTjLN),
                           }),
                       }),
                   }),

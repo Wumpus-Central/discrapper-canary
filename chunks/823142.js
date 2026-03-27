@@ -12,17 +12,17 @@ var i = n(627968),
     h = n(397927),
     A = n(914430),
     m = n(442433),
-    p = n(676002),
-    g = n(485947),
-    _ = n(924985),
+    _ = n(676002),
+    p = n(485947),
+    g = n(924985),
     f = n(71393),
     x = n(576705),
-    C = n(543465),
-    E = n(551851),
+    E = n(543465),
+    C = n(551851),
     I = n(879124),
     N = n(652215),
     b = n(985018),
-    S = n(458004);
+    S = n(71735);
 function T(e) {
     e.stopPropagation();
 }
@@ -31,15 +31,15 @@ let v = s.memo(function (e) {
             {
                 channel: l,
                 connectChannelDragSource: u,
-                connectChannelDropTarget: p,
-                disableManageChannels: E,
+                connectChannelDropTarget: _,
+                disableManageChannels: C,
                 position: I,
                 sortingPosition: v,
                 hideIcon: y,
                 children: j,
             } = e,
-            R = (0, o.bG)([C.Ay], () => C.Ay.isChannelMuted(l.getGuildId(), l.id)),
-            O = (0, o.bG)([_.A], () => _.A.isCollapsed(l.id)),
+            R = (0, o.bG)([E.Ay], () => E.Ay.isChannelMuted(l.getGuildId(), l.id)),
+            O = (0, o.bG)([g.A], () => g.A.isCollapsed(l.id)),
             L = (0, o.bG)([x.A], () => x.A.can(N.xBc.MANAGE_CHANNELS, l));
         t = null != v ? (I > v ? S.mU : S.TR) : S.fx;
         let M = s.useCallback(() => {
@@ -65,7 +65,7 @@ let v = s.memo(function (e) {
                     t = l.getGuildId();
                 null != t &&
                     (0, h.mMO)(async () => {
-                        let { default: s } = await Promise.all([n.e("64233"), n.e("38405")]).then(n.bind(n, 409200));
+                        let { default: s } = await Promise.all([n.e("64233"), n.e("52719")]).then(n.bind(n, 409200));
                         return (n) =>
                             (0, i.jsx)(s, {
                                 ...n,
@@ -75,15 +75,15 @@ let v = s.memo(function (e) {
                             });
                     });
             }, [l]),
-            { role: U, tabIndex: P, ...k } = (0, a.rm)(l.id),
-            w = s.useRef(null),
+            { role: U, tabIndex: P, ...w } = (0, a.rm)(l.id),
+            k = s.useRef(null),
             V = s.useRef(null),
             B = (0, i.jsxs)("li", {
                 className: t,
                 "data-dnd-name": l.name,
                 children: [
                     (0, i.jsx)(h.vN3, {
-                        focusTarget: w,
+                        focusTarget: k,
                         ringTarget: V,
                         offset: { left: 4, right: 4 },
                         children: (0, i.jsxs)("div", {
@@ -92,16 +92,16 @@ let v = s.memo(function (e) {
                             onContextMenu: D,
                             children: [
                                 (0, i.jsxs)(h.DUT, {
-                                    innerRef: w,
+                                    innerRef: k,
                                     className: S.rb,
                                     tabIndex: P,
-                                    ...k,
+                                    ...w,
                                     onClick: M,
                                     "aria-label": b.intl.formatToPlainString(b.t.y5l3J2, { categoryName: l.name }),
                                     "aria-expanded": !O,
                                     focusProps: { enabled: !1 },
                                     children: [
-                                        (0, i.jsx)(g.A, {
+                                        (0, i.jsx)(p.A, {
                                             className: S.UU,
                                             children: (0, i.jsx)(c.A, { children: l.name }),
                                         }),
@@ -114,7 +114,7 @@ let v = s.memo(function (e) {
                                     onClick: T,
                                     className: S.Y_,
                                     children:
-                                        L && !E
+                                        L && !C
                                             ? (0, i.jsx)(d.m, {
                                                   text: b.intl.string(b.t["fUYU+j"]),
                                                   children: (0, i.jsx)(h.DUT, {
@@ -138,9 +138,9 @@ let v = s.memo(function (e) {
                     j,
                 ],
             });
-        return null != p && null != u ? p(u(B)) : B;
+        return null != _ && null != u ? _(u(B)) : B;
     }),
-    y = (0, p.a)(v),
+    y = (0, _.a)(v),
     j = s.memo(function (e) {
         let { name: t, onDismiss: n, className: s } = e;
         return (0, i.jsx)("li", {
@@ -150,7 +150,7 @@ let v = s.memo(function (e) {
                 children: [
                     (0, i.jsx)("div", {
                         className: S.rb,
-                        children: (0, i.jsx)(g.A, { className: S.UU, children: (0, i.jsx)(c.A, { children: t }) }),
+                        children: (0, i.jsx)(p.A, { className: S.UU, children: (0, i.jsx)(c.A, { children: t }) }),
                     }),
                     null != n
                         ? (0, i.jsx)(d.m, {
@@ -169,7 +169,7 @@ let v = s.memo(function (e) {
     }),
     R = s.memo(function (e) {
         let { category: t } = e,
-            n = (0, o.bG)([E.A], () => E.A.isVoiceCategoryCollapsed(t.guild.id)),
+            n = (0, o.bG)([C.A], () => C.A.isVoiceCategoryCollapsed(t.guild.id)),
             l = s.useCallback(() => {
                 n ? (0, I.T)(t.guild.id) : (0, I.E)(t.guild.id);
             }, [t.guild.id, n]);
@@ -186,14 +186,14 @@ let v = s.memo(function (e) {
     }),
     O = s.memo(function (e) {
         let { category: t, channel: n } = e,
-            s = (0, o.bG)([E.A], () => E.A.isVoiceCategoryCollapsed(t.guild.id));
+            s = (0, o.bG)([C.A], () => C.A.isVoiceCategoryCollapsed(t.guild.id));
         return s || null == n || n.record.type === N.rbe.GUILD_CATEGORY
             ? s
                 ? (0, i.jsx)("li", {
                       className: S.fx,
                       children: (0, i.jsx)("div", {
                           className: r()(S.Ki, S._V),
-                          children: (0, i.jsx)(g.A, {
+                          children: (0, i.jsx)(p.A, {
                               className: S.UU,
                               children: (0, i.jsx)(c.A, { children: b.intl.string(b.t["V/u9Dy"]) }),
                           }),
@@ -208,7 +208,7 @@ let v = s.memo(function (e) {
             className: S.fx,
             children: (0, i.jsx)("div", {
                 className: r()(S.Ki, S._V),
-                children: (0, i.jsx)(g.A, { className: S.UU, children: (0, i.jsx)(c.A, { children: t.name }) }),
+                children: (0, i.jsx)(p.A, { className: S.UU, children: (0, i.jsx)(c.A, { children: t.name }) }),
             }),
         });
     });

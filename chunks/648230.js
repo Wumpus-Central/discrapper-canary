@@ -18,8 +18,8 @@ var r = s(627968),
     j = s(688810),
     v = s(15285),
     A = s(253932),
-    S = s(430452),
-    y = s(383501),
+    y = s(430452),
+    S = s(383501),
     C = s(287809),
     b = s(157257),
     w = s(723702),
@@ -32,25 +32,25 @@ var r = s(627968),
     M = s(255481),
     U = s(688465),
     G = s(864057),
-    L = s(354062),
-    D = s(715587),
+    D = s(354062),
+    L = s(715587),
     P = s(280481),
     F = s(517753),
     k = s(598032),
     H = s(997248),
     B = s(652681),
     W = s(502075),
-    Z = s(191850),
+    Z = s(332800),
     V = s(985018),
-    z = s(580340);
+    z = s(95062);
 function Q(e) {
     let { onClose: t, transitionState: s, sourcePID: n, analyticsLocations: a = [], selectSource: Q = !0 } = e,
         q = (0, u.bG)([v.Ay], () => (null != n ? (v.Ay.getGameForPID(n) ?? void 0) : void 0)),
         K = i.useRef(performance.now()),
         Y = (0, u.bG)(
-            [S.Ay],
+            [y.Ay],
             () =>
-                (S.Ay.getUseSystemScreensharePicker() || S.Ay.getUseGamescopeCapture()) &&
+                (y.Ay.getUseSystemScreensharePicker() || y.Ay.getUseGamescopeCapture()) &&
                 ((0, w.isLinux)() || ((0, w.isMac)() && o().satisfies(m.A?.os.release, W.WZ))),
         ),
         { analyticsLocations: $ } = (0, j.Ay)(a, g.A.GO_LIVE_MODAL_V2),
@@ -116,7 +116,7 @@ function Q(e) {
                     impressionProperties: {
                         location_stack: $,
                         application_id: (0, w.isWindows)() ? (0, O.A)(v.Ay, b.A)?.id : void 0,
-                        parent_media_session_id: y.A.getMediaSessionId(),
+                        parent_media_session_id: S.A.getMediaSessionId(),
                     },
                 },
             },
@@ -148,7 +148,7 @@ function Q(e) {
                                         children:
                                             Y && ed !== d.fS.CAMERA
                                                 ? (0, r.jsx)(G.A, { onSourceSelect: eh })
-                                                : (0, r.jsx)(L.A, {
+                                                : (0, r.jsx)(D.A, {
                                                       onClick: function (e) {
                                                           e.id?.startsWith(d.fS.CAMERA)
                                                               ? et({ type: "set_selected_source", source: e })
@@ -191,7 +191,7 @@ function Q(e) {
                                                         (eo && !ei && "" === ee.nativeSourceType) ||
                                                         (ea && null == ee.selectedSource),
                                                 }),
-                                            (0, r.jsx)(D.A, { align: "right" }),
+                                            (0, r.jsx)(L.A, { align: "right" }),
                                         ],
                                     }),
                                 ],

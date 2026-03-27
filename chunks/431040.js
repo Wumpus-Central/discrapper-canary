@@ -11,7 +11,7 @@ var a = n(627968),
     m = n(936636),
     x = n(424994),
     h = n(985018),
-    f = n(706445);
+    f = n(12388);
 function g() {
     return (0, a.jsx)(i.Text, { variant: "text-sm/normal", color: "text-subtle", children: h.intl.string(h.t.GruYxV) });
 }
@@ -22,13 +22,13 @@ let p = function (e) {
         j = n.developers.join(", "),
         A = n.firstReleaseDate,
         C = (0, o.A)(n),
-        I = (0, c.Y)(n),
-        b = !(0, s.uJ)(_),
+        b = (0, c.Y)(n),
+        I = !(0, s.uJ)(_),
         E = !(0, s.uJ)(v),
         N = !(0, s.uJ)(j),
         S = !(0, s.uJ)(A),
         k = C.length > 0,
-        T = I.length > 0 && !I.every((e) => (0, s.uJ)(e.url));
+        T = b.length > 0 && !b.every((e) => (0, s.uJ)(e.url));
     return (0, a.jsxs)("div", {
         className: f.uW,
         children: [
@@ -51,7 +51,7 @@ let p = function (e) {
                                 color: "text-subtle",
                                 children: 1 !== n.genres.length ? h.intl.string(h.t.pDgwYB) : h.intl.string(h.t.mjFKqn),
                             }),
-                            b
+                            I
                                 ? (0, a.jsx)(i.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-subtle",
@@ -150,7 +150,7 @@ let p = function (e) {
                             T
                                 ? (0, a.jsx)("div", {
                                       className: f.Gu,
-                                      children: I.map((e) => (0, a.jsx)(u.K, { website: e, trackAction: p }, e.url)),
+                                      children: b.map((e) => (0, a.jsx)(u.K, { website: e, trackAction: p }, e.url)),
                                   })
                                 : (0, a.jsx)(g, {}),
                         ],

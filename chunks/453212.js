@@ -2,15 +2,15 @@
 n.d(t, { XW: () => p, oK: () => h });
 var r = n(627968),
     i = n(64700),
-    a = n(735438),
-    s = n.n(a),
+    s = n(735438),
+    a = n.n(s),
     o = n(615300),
     l = n(827734),
-    u = n(399374);
+    u = n(16152);
 let c = 12,
     d = [l.A.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, l.A.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, "#929AFA"];
 class _ extends i.PureComponent {
-    state = { backgroundColor: s().sample(d) };
+    state = { backgroundColor: a().sample(d) };
     render() {
         let {
             props: { height: e },
@@ -25,7 +25,7 @@ class f extends i.Component {
         super(e);
         const t = Array(10)
             .fill(null)
-            .map(() => s().random(40, 150));
+            .map(() => a().random(40, 150));
         this.state = { blocks: t, height: 2 * t.reduce((e, t) => e + t + c, c), translateY: new o.A.Value(0) };
     }
     componentDidMount() {

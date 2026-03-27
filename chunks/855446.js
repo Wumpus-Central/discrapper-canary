@@ -5,25 +5,25 @@ var i,
     l = n(64700),
     r = n(503698),
     a = n.n(r),
-    o = n(4208),
+    o = n(880013),
     c = n(696292),
     d = n(397927),
     u = n(932413),
     h = n(849269),
     A = n(881343),
     m = n(697675),
-    p = n(869003),
-    g = n(652215),
-    _ = n(985018),
-    f = n(488893);
+    _ = n(869003),
+    p = n(652215),
+    g = n(985018),
+    f = n(867958);
 let x = ["embedded_cover"],
-    C = { tension: 800, friction: 24 };
-var E =
-    (((i = E || {})[(i.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"),
+    E = { tension: 800, friction: 24 };
+var C =
+    (((i = C || {})[(i.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"),
     (i[(i.SIXTEEN_BY_NINE = 1)] = "SIXTEEN_BY_NINE"),
     i);
 function I(e) {
-    let { context: t, activityItem: n, onClick: i, aspectRatio: r = 0, animatedDivClass: E, commandOrigin: I } = e,
+    let { context: t, activityItem: n, onClick: i, aspectRatio: r = 0, animatedDivClass: C, commandOrigin: I } = e,
         {
             onActivityItemSelected: N,
             imageBackground: b,
@@ -35,7 +35,7 @@ function I(e) {
             guildId: t.channel.getGuildId() ?? void 0,
             locationObject: {},
             onActivityItemSelected: i,
-            embeddedActivitiesManager: p.A,
+            embeddedActivitiesManager: _.A,
             assetNames: x,
             commandOrigin: I,
         }),
@@ -64,7 +64,7 @@ function I(e) {
                             children: (0, s.jsx)(d.Text, {
                                 variant: "text-sm/medium",
                                 color: "always-white",
-                                children: _.intl.string(_.t.VJlc0S),
+                                children: g.intl.string(g.t.VJlc0S),
                             }),
                         }),
                     });
@@ -76,7 +76,7 @@ function I(e) {
                             children: (0, s.jsx)(d.Text, {
                                 variant: "text-sm/medium",
                                 color: "always-white",
-                                children: _.intl.string(_.t["wH/wDO"]),
+                                children: g.intl.string(g.t["wH/wDO"]),
                             }),
                         }),
                     });
@@ -93,13 +93,13 @@ function I(e) {
         onMouseLeave: R,
         className: f.XA,
         children: (0, s.jsx)(d.c7X, {
-            config: C,
+            config: E,
             from: { value: 0 },
             to: { value: +!!v },
             children: (e) => {
                 let { value: t } = e;
                 return (0, s.jsx)(d.NPJ, {
-                    theme: g.NJ8.DARK,
+                    theme: p.NJ8.DARK,
                     children: (e) =>
                         (0, s.jsx)(u.A, {
                             applicationId: n.application.id,
@@ -107,7 +107,7 @@ function I(e) {
                             children: (i) =>
                                 (0, s.jsxs)(o.animated.div, {
                                     ref: i,
-                                    className: a()(e, f.LM, E, { [f.$g]: 0 === r, [f.J3]: 1 === r }),
+                                    className: a()(e, f.LM, C, { [f.$g]: 0 === r, [f.J3]: 1 === r }),
                                     style: { transform: t.to([0, 1], [1, 1.05]).to((e) => `scale(${e})`) },
                                     children: [
                                         (0, s.jsx)(A.A, {
@@ -126,4 +126,4 @@ function I(e) {
         }),
     });
 }
-I.AspectRatio = E;
+I.AspectRatio = C;
