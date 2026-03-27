@@ -1,20 +1,21 @@
 "use strict";
 n.d(t, {
-    Cp: () => R,
-    HB: () => w,
-    OP: () => D,
-    S0: () => L,
-    So: () => O,
-    WD: () => S,
-    b3: () => C,
-    kc: () => N,
-    kd: () => b,
+    Cp: () => O,
+    HB: () => M,
+    OP: () => L,
+    S0: () => w,
+    So: () => b,
+    WD: () => y,
+    b3: () => N,
+    dG: () => D,
+    kc: () => R,
+    kd: () => C,
 }),
     n(938796);
 var r = n(665260),
     i = n(562465),
-    a = n(554146),
-    s = n(582754),
+    s = n(554146),
+    a = n(582754),
     o = n(367727),
     l = n(773669),
     u = n(617617),
@@ -25,14 +26,14 @@ var r = n(665260),
     p = n(723702),
     h = n(661191),
     m = n(412260),
-    g = n(852218),
-    E = n(788868),
+    E = n(852218),
+    g = n(788868),
     A = n(652215),
     I = n(360469);
 let T = "{code}",
-    y = 2592e5;
-function S(e, t) {
-    let n = (0, s.Mw)(t) ? "logo-dark" : "logo-light",
+    S = 2592e5;
+function y(e, t) {
+    let n = (0, a.Mw)(t) ? "logo-dark" : "logo-light",
         r = window.GLOBAL_ENV.CDN_HOST,
         i = "?size=256";
     return null != r
@@ -42,7 +43,7 @@ function S(e, t) {
 function v(e) {
     return { code: e.code, userId: e.user_id, claimedAt: e.claimed_at, promotion: c.A.createFromServer(e.promotion) };
 }
-async function C() {
+async function N() {
     return (
         await i.Bo.get({
             url: A.Rsh.CLAIMED_OUTBOUND_PROMOTION_CODES,
@@ -52,33 +53,30 @@ async function C() {
         })
     ).body.map(v);
 }
-async function b(e) {
+async function C(e) {
     let t,
         { promotionId: n, analyticsLocations: r } = e,
-        a = await i.Bo.post({ url: A.Rsh.CLAIM_OUTBOUND_PROMOTION_CODE(n), rejectWithError: !1 }),
-        s = a.body;
+        s = await i.Bo.post({ url: A.Rsh.CLAIM_OUTBOUND_PROMOTION_CODE(n), rejectWithError: !1 }),
+        a = s.body;
     return (
         (t = I.vu.DESKTOP),
-        f.default.track(A.HAw.OUTBOUND_PROMOTION_CLAIMED, { platform: t, status: a.status, location_stack: r }),
-        v(s)
+        f.default.track(A.HAw.OUTBOUND_PROMOTION_CLAIMED, { platform: t, status: s.status, location_stack: r }),
+        v(a)
     );
 }
-function N(e, t) {
+function R(e, t) {
     return null != t.outboundRedemptionUrlFormat && "" !== t.outboundRedemptionUrlFormat
         ? t.outboundRedemptionUrlFormat.replace(T, encodeURIComponent(e))
         : (t.outboundRedemptionPageLink ?? "");
 }
-function R() {
+function O() {
     let e = m.A.outboundPromotions,
         t = m.A.consumedInboundPromotionId,
-        n = e.filter((e) => {
-            let { id: n, flags: i } = e;
-            return n !== t && !(0, r.Lt)(i, E.$3.SUPPRESS_NOTIFICATION);
-        }),
+        n = e.filter((e) => e.id !== t && !(0, r.Lt)(e.flags, g.$3.SUPPRESS_NOTIFICATION) && !D(e)),
         i =
-            u.A.settings.userContent?.recurringDismissibleContentStates[a.M.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR]
+            u.A.settings.userContent?.recurringDismissibleContentStates[s.M.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR]
                 ?.lastDismissedObjectId,
-        s =
+        a =
             null == i
                 ? n
                 : n.filter((e) => {
@@ -88,20 +86,23 @@ function R() {
         o = d.A.getPremiumTypeSubscription(),
         l = !!o?.hasActiveTrial,
         c = _.A.hasAnyUnexpiredOffer(),
-        f = l || c ? s.filter((e) => e.isRedeemableByTrialUsers()) : s;
+        f = l || c ? a.filter((e) => e.isRedeemableByTrialUsers()) : a;
     return 0 === f.length ? null : f.sort((e, t) => (new Date(e.startDate) < new Date(t.startDate) ? -1 : 1))[0].id;
 }
-function O() {
-    let e = R();
-    return null != e && !(0, o.j6)(a.M.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR, e, { cooldownDurationMs: y });
+function b() {
+    let e = O();
+    return null != e && !(0, o.j6)(s.M.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR, e, { cooldownDurationMs: S });
 }
 function D(e) {
-    return !(0, p.isIOS)() || !e.hasFlag(E.$3.IS_BLOCKED_IOS);
+    return e.partnerId === E.XY;
 }
-function L(e, t) {
+function L(e) {
+    return !(0, p.isIOS)() || !e.hasFlag(g.$3.IS_BLOCKED_IOS);
+}
+function w(e, t) {
     return null != t[e.id] || e.isRedeemableByTrialUsers();
 }
-function w(e) {
+function M(e) {
     let { promotionPartner: t, promotionType: n } = e;
-    return n === g.pt.THIRD_PARTY_OUTBOUND_RECURRING || g.SW.has(t.toLocaleLowerCase());
+    return n === E.pt.THIRD_PARTY_OUTBOUND_RECURRING || E.SW.has(t.toLocaleLowerCase());
 }

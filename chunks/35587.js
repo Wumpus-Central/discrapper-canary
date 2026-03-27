@@ -17,7 +17,7 @@ function m(e, t, n, s) {
     let a = (0, i.yK)([p.A], () => p.A.outboundPromotions),
         o = (0, i.bG)([p.A], () => p.A.consumedInboundPromotionId);
     return r.useMemo(
-        () => a.filter((r) => r.id !== o && !!(0, _.OP)(r) && !n && ((!e && !t) || (0, _.S0)(r, s))),
+        () => a.filter((r) => !(r.id === o || !(0, _.OP)(r) || n || (0, _.dG)(r)) && ((!e && !t) || (0, _.S0)(r, s))),
         [a, o, n, e, t, s],
     );
 }
