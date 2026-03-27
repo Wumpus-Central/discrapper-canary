@@ -1,97 +1,88 @@
 "use strict";
-n.d(t, { A: () => T }), n(321073);
+n.d(t, { A: () => j }), n(321073);
 var l = n(311907),
-    s = n(73153),
-    i = n(661191),
-    r = n(17447),
-    a = n(256331),
-    o = n(141850);
-let u = [
-        "rgba(88, 101, 242, 0.12)",
-        "rgba(87, 242, 135, 0.12)",
-        "rgba(254, 231, 92, 0.12)",
-        "rgba(235, 69, 158, 0.12)",
-        "rgba(237, 66, 69, 0.12)",
-        "rgba(49, 196, 182, 0.12)",
-        "rgba(230, 126, 34, 0.12)",
-        "rgba(149, 165, 166, 0.12)",
-        "rgba(155, 89, 182, 0.12)",
-        "rgba(52, 152, 219, 0.12)",
-    ],
-    c = new Map(),
+    i = n(73153),
+    s = n(661191),
+    a = n(17447),
+    r = n(256331),
+    o = n(141850),
+    u = n(705448);
+let c = new Map(),
     d = new Set(),
     m = new Map(),
-    h = null,
-    g = null,
-    A = null,
+    g = new Map(),
+    h = new Map(),
+    A = !1,
     f = null,
     p = null,
     x = null,
-    v = 0;
-function C(e) {
-    return u[
-        (function (e) {
-            let t = 0;
-            for (let n = 0; n < e.length; n++) t = (31 * t + e.charCodeAt(n)) | 0;
-            return Math.abs(t);
-        })(e.id) % u.length
-    ];
-}
-function N(e, t) {
-    let n = m.get(e);
-    if (null == n || 0 === n.length) return !1;
-    for (let e = 0; e < n.length; e++) {
-        let l = n[e];
-        if (t >= l.startTime && t <= l.endTime) return !0;
-        if (t < l.startTime) return 0 === e && !l.hasMoreBefore;
-        if (e < n.length - 1 && t < n[e + 1].startTime) return !1;
-    }
-    return !n[n.length - 1].hasMoreAfter;
-}
-class b extends l.Ay.Store {
+    v = null,
+    C = null,
+    N = null,
+    E = 0,
+    I = null,
+    _ = null,
+    b = 0;
+class S extends l.Ay.Store {
     static displayName = "ConversationsStore";
     initialize() {
-        this.waitFor(a.A);
+        this.waitFor(r.A);
     }
     getMessageConversationColor(e, t) {
-        if (!a.A.isHighlightingEnabled()) return null;
-        let n = c.get(e)?.messageToColor.get(t) ?? null;
-        return null == n ? null : null != g && g.has(t) ? n.replace(/,\s*0\.12\)$/, ", 0.24)") : n;
+        if (!r.A.isHighlightingEnabled()) return null;
+        let n = c.get(e);
+        if (null == n) return null;
+        let l = n.messageMetadataByMessageId.get(t);
+        if (null == l) return null;
+        let i = n.conversationMetadataById.get(l.conversationId)?.color ?? null;
+        return null == i ? null : null != p && p.has(t) ? i.replace(/,\s*0\.12\)$/, ", 0.24)") : i;
     }
     getChannelConversations(e) {
-        return (c.get(e)?.conversations ?? []).map((e) => ({ conversation: e, color: C(e) }));
+        let t = c.get(e);
+        return null == t
+            ? []
+            : t.conversations.map((e) => {
+                  let n = t.conversationMetadataById.get(e.id);
+                  return { conversation: e, color: n?.color ?? u.J["0"] };
+              });
     }
     getVisibleConversationIds(e) {
         let t = new Set();
-        if (null == A && null == f) return t;
+        if (null == x && null == v) return t;
         let n = c.get(e)?.conversations;
         if (null == n) return t;
         for (let e of n) {
-            let n = null != f && 0 > i.default.compare(f, e.start_message_id);
-            (null != A && i.default.compare(A, e.end_message_id) > 0) || n || t.add(e.id);
+            let n = null != v && 0 > s.default.compare(v, e.start_message_id);
+            (null != x && s.default.compare(x, e.end_message_id) > 0) || n || t.add(e.id);
         }
         return t;
     }
-    getMessageModerationLabel(e, t) {
-        return a.A.isHighlightingEnabled() && (0, r.f)("message_header")
-            ? (c.get(e)?.messageToModerationLabel.get(t) ?? null)
-            : null;
-    }
     getConversationForMessage(e, t) {
-        return c.get(e)?.messageToConversationId.get(t) ?? null;
+        return c.get(e)?.messageMetadataByMessageId.get(t)?.conversationId ?? null;
+    }
+    getMessageMetadata(e, t) {
+        return c.get(e)?.messageMetadataByMessageId.get(t) ?? null;
+    }
+    getConversationMetadata(e, t) {
+        return c.get(e)?.conversationMetadataById.get(t) ?? null;
     }
     getScrollToConversation(e) {
-        return x === e && null != p ? { conversationId: p, seq: v } : null;
+        return N === e && null != C ? { conversationId: C, seq: E } : null;
     }
     hasMoreConversations(e, t) {
-        let n = m.get(e);
-        return null != n && 0 !== n.length && ("before" === t ? n[0].hasMoreBefore : n[n.length - 1].hasMoreAfter);
+        return !!c.has(e) && ("before" === t ? !g.get(e) : !h.get(e));
     }
     isPendingFetch(e) {
         return d.has(e);
     }
+    getSelectedConversation(e) {
+        return _ !== e || null == I ? null : (c.get(e)?.conversationMetadataById.get(I)?.conversation ?? null);
+    }
+    getSelectedConversationColor(e) {
+        return _ !== e || null == I ? null : (c.get(e)?.conversationMetadataById.get(I)?.color ?? null);
+    }
 }
-let T = new b(s.h, {
+let j = new S(i.h, {
     CONVERSATIONS_FETCH_START: function (e) {
         let { channelId: t } = e;
         return d.add(t), !0;
@@ -101,115 +92,70 @@ let T = new b(s.h, {
             channelId: t,
             conversations: n,
             direction: l,
-            beforeShortCircuited: s,
-            afterShortCircuited: r,
-            anchor: a,
+            beforeShortCircuited: i,
+            afterShortCircuited: a,
+            isStaleRefresh: r,
         } = e;
-        d.delete(t),
-            (function (e) {
-                let {
-                        channelId: t,
-                        conversations: n,
-                        direction: l,
-                        beforeShortCircuited: s,
-                        afterShortCircuited: r,
-                        anchorTimestamp: a,
-                    } = e,
-                    o = m.get(t) ?? [],
-                    u = n.length >= 5;
-                if (n.length > 0) {
-                    let e,
-                        t,
-                        a = n.map((e) => i.default.extractTimestamp(e.start_message_id)),
-                        c = Math.min(...a),
-                        d = Math.max(...a);
-                    "around" === l
-                        ? ((e = !s && u), (t = !r && u))
-                        : "before" === l
-                          ? ((e = !s && u), (t = !1))
-                          : ((e = !1), (t = !r && u));
-                    let m = { startTime: c, endTime: d, hasMoreBefore: e, hasMoreAfter: t };
-                    o.push(m);
-                } else {
-                    let e = a ?? Date.now();
-                    o.push({ startTime: e, endTime: e, hasMoreBefore: !1, hasMoreAfter: !1 });
-                }
-                m.set(
-                    t,
-                    (function (e) {
-                        if (e.length <= 1) return e;
-                        e.sort((e, t) => e.startTime - t.startTime);
-                        let t = [e[0]];
-                        for (let n = 1; n < e.length; n++) {
-                            let l = t[t.length - 1],
-                                s = e[n];
-                            s.startTime <= l.endTime + 1e3
-                                ? (s.endTime > l.endTime
-                                      ? ((l.endTime = s.endTime), (l.hasMoreAfter = s.hasMoreAfter))
-                                      : (l.hasMoreAfter = l.hasMoreAfter && s.hasMoreAfter),
-                                  (l.hasMoreBefore = l.hasMoreBefore && s.hasMoreBefore))
-                                : t.push(s);
-                        }
-                        return t;
-                    })(o),
-                );
-            })({
-                channelId: t,
-                conversations: n,
-                direction: l,
-                beforeShortCircuited: s,
-                afterShortCircuited: r,
-                anchorTimestamp: null != a ? i.default.extractTimestamp(a) : void 0,
-            });
-        let o = (function (e, t) {
+        d.delete(t), m.set(t, Date.now());
+        let o = c.get(t)?.conversations ?? [];
+        r &&
+            (o = (function (e, t) {
+                if (0 === t.length) return e;
+                let n = new Set(t.map((e) => e.id)),
+                    l = Math.min(...t.map((e) => s.default.extractTimestamp(e.start_message_id))),
+                    i = Math.max(...t.map((e) => s.default.extractTimestamp(e.start_message_id)));
+                return e.filter((e) => {
+                    let t = s.default.extractTimestamp(e.start_message_id);
+                    return t < l || t > i || n.has(e.id);
+                });
+            })(o, n)),
+            i && ("before" === l || "around" === l) && g.set(t, !0),
+            a && ("after" === l || "around" === l) && h.set(t, !0);
+        let A = (function (e, t) {
             let n = new Map();
             for (let t of e) n.set(t.id, t);
             for (let e of t) n.set(e.id, e);
             let l = Array.from(n.values());
-            return l.sort((e, t) => i.default.compare(e.start_message_id, t.start_message_id)), l;
-        })(c.get(t)?.conversations ?? [], n);
+            return l.sort((e, t) => s.default.compare(e.start_message_id, t.start_message_id)), l;
+        })(o, n);
         return (
             c.set(
                 t,
-                (function (e) {
-                    let t = new Map(),
-                        n = new Map(),
-                        l = new Map(),
-                        s = new Map();
+                (function (e, t) {
+                    let n = new Map(),
+                        l = new Map();
                     for (let i of e) {
-                        t.set(i.id, i);
-                        let e = C(i);
-                        for (let t of i.message_ids) n.set(t, i.id), l.set(t, e);
-                        if (null != i.moderation) {
-                            let e = new Map();
-                            for (let t of i.moderation.flagged_message_details) {
-                                let n = e.get(t.message_id);
-                                null != n ? n.push(t) : e.set(t.message_id, [t]);
+                        let e = t?.conversationMetadataById.get(i.id)?.color ?? u.J[b++ % u.J.length];
+                        n.set(i.id, { conversation: i, color: e });
+                        let s = null;
+                        if (null != i.moderation)
+                            for (let e of ((s = new Map()), i.moderation.flagged_message_details)) {
+                                let t = s.get(e.message_id);
+                                null != t ? t.push(e) : s.set(e.message_id, [e]);
                             }
-                            for (let t of i.moderation.flagged_message_ids) {
-                                let n = e.get(t) ?? [],
-                                    l = n[0],
-                                    i = n.map((e) => e.category ?? e.reason).filter((e) => null != e),
-                                    r = l?.severity ?? null,
-                                    a = l?.confidence ?? null,
-                                    o = [null != r ? `${r} severity` : null, null != a ? `${a} confidence` : null]
-                                        .filter(Boolean)
-                                        .join(", "),
-                                    u = [i.length > 0 ? i.join(", ") : null, o.length > 0 ? o : null]
-                                        .filter(Boolean)
-                                        .join(" \xb7 ");
-                                s.set(t, u.length > 0 ? u : "Moderation Failed");
-                            }
+                        for (let e of i.message_ids) {
+                            let t = null;
+                            null != i.moderation &&
+                                i.moderation.flagged_message_ids.includes(e) &&
+                                null != s &&
+                                (t = (function (e) {
+                                    let t = e[0],
+                                        n = e.map((e) => e.category ?? e.reason).filter((e) => null != e),
+                                        l = t?.severity ?? null,
+                                        i = t?.confidence ?? null,
+                                        s = [null != l ? `${l} severity` : null, null != i ? `${i} confidence` : null]
+                                            .filter(Boolean)
+                                            .join(", "),
+                                        a = [n.length > 0 ? n.join(", ") : null, s.length > 0 ? s : null]
+                                            .filter(Boolean)
+                                            .join(" \xb7 ");
+                                    return a.length > 0 ? a : "Moderation Failed";
+                                })(s.get(e) ?? [])),
+                                l.set(e, { conversationId: i.id, moderationLabel: t });
                         }
                     }
-                    return {
-                        conversations: e,
-                        conversationById: t,
-                        messageToConversationId: n,
-                        messageToColor: l,
-                        messageToModerationLabel: s,
-                    };
-                })(o),
+                    return { conversations: e, conversationMetadataById: n, messageMetadataByMessageId: l };
+                })(A, c.get(t)),
             ),
             !0
         );
@@ -221,42 +167,65 @@ let T = new b(s.h, {
     CHANNEL_SELECT: function (e) {
         let { channelId: t, messageId: n } = e;
         return (
-            (h = t ?? null),
-            (A = null),
-            (f = null),
+            (A = !1),
+            (f = t ?? null),
+            (x = null),
+            (v = null),
+            _ !== t && ((I = null), (_ = null)),
             null != t &&
                 !d.has(t) &&
                 !c.has(t) &&
-                (0, r.f)("channel_select") &&
-                (null != n ? (0, o.WF)({ channelId: t, around: n }) : (0, o.WF)({ channelId: t })),
+                (0, a.f)("channel_select") &&
+                (null != n
+                    ? (0, o.WF)({ channelId: t, around: n, limit: 25 })
+                    : (0, o.WF)({ channelId: t, limit: 25 })),
             !0
         );
     },
+    LOAD_MESSAGES_SUCCESS: function (e) {
+        let { channelId: t, jump: n } = e;
+        return null != n && f === t && (m.delete(t), g.delete(t), h.delete(t), (A = !0), !0);
+    },
     UPDATE_VISIBLE_MESSAGES: function (e) {
         let { topVisibleMessage: t, bottomVisibleMessage: n } = e;
-        if (null == h || !(0, r.f)("visible_messages")) return !1;
-        let l = A !== t,
-            s = f !== n;
-        if (((A = t ?? null), (f = n ?? null), d.has(h) || null == t)) return l || s;
-        let a = i.default.extractTimestamp(t);
-        if (N(h, a)) {
-            if (null != n) {
-                let e = i.default.extractTimestamp(n);
-                N(h, e) || (0, o.WF)({ channelId: h, around: n });
-            }
-        } else (0, o.WF)({ channelId: h, around: t });
-        return l || s;
+        if (null == f || !(0, a.f)("visible_messages")) return !1;
+        let l = x !== t,
+            i = v !== n;
+        if (((x = t ?? null), (v = n ?? null), !l && !i)) return !1;
+        if (d.has(f) || null == t) return !0;
+        if (A) return (A = !1), (0, o.WF)({ channelId: f, around: t, limit: 25 }), !0;
+        let r = m.get(f) ?? 0,
+            u = Date.now() - r;
+        if (u < 2e3) return !0;
+        let { above: p, below: C } = (function (e, t, n) {
+            let l = c.get(e)?.conversations;
+            if (null == l || 0 === l.length) return { above: 0, below: 0 };
+            let i = 0,
+                a = 0;
+            for (let e of l)
+                null != t && 0 > s.default.compare(e.start_message_id, t) && i++,
+                    null != n && s.default.compare(e.start_message_id, n) > 0 && a++;
+            return { above: i, below: a };
+        })(f, t, n);
+        return (
+            p < 5 && !g.get(f)
+                ? (0, o.WF)({ channelId: f, before: t, limit: 25 })
+                : C < 5 && null != n && !h.get(f)
+                  ? (0, o.WF)({ channelId: f, after: n, limit: 25 })
+                  : u > 6e4 && (0, o.WF)({ channelId: f, around: t, limit: 25, isStaleRefresh: !0 }),
+            !0
+        );
     },
     CONVERSATIONS_HOVER_CONVERSATION: function (e) {
         let { channelId: t, conversationId: n } = e;
         if (null != t && null != n) {
-            let e = c.get(t)?.conversationById.get(n);
-            g = null != e ? new Set(e.message_ids) : null;
-        } else g = null;
+            let e = c.get(t)?.conversationMetadataById.get(n)?.conversation;
+            p = null != e ? new Set(e.message_ids) : null;
+        } else p = null;
         return !0;
     },
-    CONVERSATIONS_SCROLL_TO: function (e) {
+    SET_SELECTED_CONVERSATION: function (e) {
         let { channelId: t, conversationId: n } = e;
-        return (p = n), (x = t), v++, !0;
+        return (_ !== t || I !== n) && ((_ = t), (I = n), null != t && null != n && ((C = n), (N = t), E++), !0);
     },
 });

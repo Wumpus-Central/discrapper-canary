@@ -1,19 +1,11 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => a });
 var l = n(627968);
 n(64700);
-var s = n(311907),
-    i = n(17447),
-    r = n(256331),
-    a = n(736339),
-    o = n(627168);
-function u(e) {
+var i = n(807884),
+    s = n(299764);
+function a(e) {
     let { channelId: t, messageId: n } = e,
-        u = i.L.useConfig({ location: "message_header" }).enabled,
-        c = (0, s.bG)(
-            [a.A, r.A],
-            () => (u && r.A.isHighlightingEnabled() ? a.A.getMessageModerationLabel(t, n) : null),
-            [t, n, u],
-        );
-    return null == c || "" === c ? null : (0, l.jsx)("span", { className: o.R, children: c });
+        a = (0, i.A)(t, n)?.message.moderationLabel;
+    return null == a || "" === a ? null : (0, l.jsx)("span", { className: s.R, children: a });
 }

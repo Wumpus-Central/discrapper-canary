@@ -1,4 +1,4 @@
-"use strict";
+n.d(t, { i: () => i });
 function i(e) {
     try {
         let t = JSON.parse(e);
@@ -15,4 +15,3 @@ function i(e) {
         return null;
     }
 }
-n.d(t, { i: () => i });
