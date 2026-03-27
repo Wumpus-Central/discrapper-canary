@@ -4,7 +4,6 @@ e.exports = {
     hd: "sectionContainer__61424",
     Jb: "sectionContainerNitroLocked__61424",
     VD: "sectionContainerNitroLockedBackground__61424",
-    N4: "brandRefresh__61424",
     bV: "sectionHeader__61424",
     Gf: "sectionTitle__61424",
     M2: "sectionHeaderContent__61424",

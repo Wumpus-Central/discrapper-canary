@@ -22180,7 +22180,8 @@ img.thumbnail__0f2e8 {
 }
 
 .nitroTopDividerShadow_b3fb5f {
-    box-shadow: 0 -5px 30px 4px var(--premium-tier-2-purple)
+    box-shadow: 0 -5px 30px 4px var(--premium-tier-2-purple);
+    opacity: 0
 }
 
 .glow_b3fb5f.reducedMotion_b3fb5f {
@@ -22215,18 +22216,19 @@ img.thumbnail__0f2e8 {
 }
 
 .nitroTopDividerLockBorder_b3fb5f {
-    background: var(--custom-premium-colors-premium-gradient-tier-2-tri-color);
+    background: var(--border-normal);
     height: 1px;
     width: 100%
 }
 
-.nitroTopDividerLockBorder_b3fb5f.brandRefresh_b3fb5f {
-    background: var(--border-normal)
+.trialNUX_b3fb5f .nitroTopDividerLockBorder_b3fb5f {
+    background: var(--custom-premium-colors-premium-gradient-tier-2-tri-color)
 }
 
 .nitroTopDividerLockCircle_b3fb5f {
     align-items: center;
-    background: var(--custom-premium-colors-premium-gradient-tier-2-tri-color);
+    background: var(--background-surface-highest);
+    border: 1px solid var(--border-normal);
     border-radius: 50%;
     display: flex;
     height: 28px;
@@ -22238,31 +22240,23 @@ img.thumbnail__0f2e8 {
     z-index: 9999
 }
 
-.nitroTopDividerLockCircle_b3fb5f.brandRefresh_b3fb5f {
-    background: var(--background-surface-highest);
-    border: 1px solid var(--border-normal)
-}
-
 .nitroTopDividerLockBorderReversed_b3fb5f {
-    background: var(--custom-premium-colors-premium-gradient-tier-2-tri-color-reverse);
+    background: var(--border-normal);
     height: 1px;
     width: 100%
 }
 
-.nitroTopDividerLockBorderReversed_b3fb5f.brandRefresh_b3fb5f {
-    background: var(--border-normal)
+.trialNUX_b3fb5f .nitroTopDividerLockBorderReversed_b3fb5f {
+    background: var(--custom-premium-colors-premium-gradient-tier-2-tri-color-reverse)
 }
 
 .nitroTopDividerLower_b3fb5f {
-    background-color: var(--premium-tier-2-purple);
-    height: 12px
+    background: linear-gradient(90deg, var(--expressive-gradient-nitro-pink-start) 0, var(--expressive-gradient-nitro-pink-end) 100%);
+    height: 12px;
+    opacity: 1
 }
 
-.nitroTopDividerLower_b3fb5f.brandRefresh_b3fb5f {
-    background: linear-gradient(90deg, var(--expressive-gradient-nitro-pink-start) 0, var(--expressive-gradient-nitro-pink-end) 100%)
-}
-
-.theme-light .nitroTopDividerLower_b3fb5f.brandRefresh_b3fb5f {
+.theme-light .nitroTopDividerLower_b3fb5f {
     background: linear-gradient(90deg, color-mix(in srgb, var(--expressive-gradient-nitro-pink-start) 40%, transparent), color-mix(in srgb, var(--expressive-gradient-nitro-pink-end) 40%, transparent))
 }
 
@@ -22828,14 +22822,10 @@ img.thumbnail__0f2e8 {
 }
 
 .categorySectionNitroLocked_c656ac {
-    background-color: hsl(var(--premium-tier-2-purple-hsl)/.2)
-}
-
-.categorySectionNitroLocked_c656ac.brandRefresh_c656ac {
     background: linear-gradient(90deg, var(--expressive-gradient-nitro-pink-start) 0, var(--expressive-gradient-nitro-pink-end) 100%)
 }
 
-.theme-light .categorySectionNitroLocked_c656ac.brandRefresh_c656ac {
+.theme-light .categorySectionNitroLocked_c656ac {
     background: linear-gradient(90deg, color-mix(in srgb, var(--expressive-gradient-nitro-pink-start) 40%, transparent), color-mix(in srgb, var(--expressive-gradient-nitro-pink-end) 40%, transparent))
 }
 
@@ -22870,14 +22860,10 @@ img.thumbnail__0f2e8 {
 }
 
 .nitroBottomDivider_c656ac {
-    background: var(--custom-premium-colors-premium-gradient-tier-2-tri-color);
+    background: var(--border-normal);
     height: 1px;
     margin: var(--custom-emoji-picker-constants-emoji-premium-upsell-margin-top) 0;
     width: 100%
-}
-
-.nitroBottomDivider_c656ac.brandRefresh_c656ac {
-    background: var(--border-normal)
 }
 
 .upsellContainer_c656ac {
@@ -26784,14 +26770,10 @@ img.thumbnail__0f2e8 {
 }
 
 .sectionContainerNitroLockedBackground__61424 {
-    background-color: hsl(var(--premium-tier-2-purple-hsl)/.35)
-}
-
-.sectionContainerNitroLockedBackground__61424.brandRefresh__61424 {
     background: linear-gradient(90deg, var(--expressive-gradient-nitro-pink-start) 0, var(--expressive-gradient-nitro-pink-end) 100%)
 }
 
-.theme-light .sectionContainerNitroLockedBackground__61424.brandRefresh__61424 {
+.theme-light .sectionContainerNitroLockedBackground__61424 {
     background: linear-gradient(90deg, color-mix(in srgb, var(--expressive-gradient-nitro-pink-start) 40%, transparent), color-mix(in srgb, var(--expressive-gradient-nitro-pink-end) 40%, transparent))
 }
 
@@ -26825,16 +26807,11 @@ img.thumbnail__0f2e8 {
 
 .nitroLocked__61424.lastSectionFooter__61424,
 .nitroLocked__61424.smallPaddingFooter__61424 {
-    background-color: hsl(var(--premium-tier-2-purple-hsl)/.35)
-}
-
-.nitroLocked__61424.lastSectionFooter__61424.brandRefresh__61424,
-.nitroLocked__61424.smallPaddingFooter__61424.brandRefresh__61424 {
     background: linear-gradient(90deg, var(--expressive-gradient-nitro-pink-start) 0, var(--expressive-gradient-nitro-pink-end) 100%)
 }
 
-.theme-light .nitroLocked__61424.lastSectionFooter__61424.brandRefresh__61424,
-.theme-light .nitroLocked__61424.smallPaddingFooter__61424.brandRefresh__61424 {
+.theme-light .nitroLocked__61424.lastSectionFooter__61424,
+.theme-light .nitroLocked__61424.smallPaddingFooter__61424 {
     background: linear-gradient(90deg, color-mix(in srgb, var(--expressive-gradient-nitro-pink-start) 40%, transparent), color-mix(in srgb, var(--expressive-gradient-nitro-pink-end) 40%, transparent))
 }
 
@@ -26859,14 +26836,10 @@ img.thumbnail__0f2e8 {
 }
 
 .soundRowNitroLocked__61424 {
-    background-color: hsl(var(--premium-tier-2-purple-hsl)/.35)
-}
-
-.soundRowNitroLocked__61424.brandRefresh__61424 {
     background: linear-gradient(90deg, var(--expressive-gradient-nitro-pink-start) 0, var(--expressive-gradient-nitro-pink-end) 100%)
 }
 
-.theme-light .soundRowNitroLocked__61424.brandRefresh__61424 {
+.theme-light .soundRowNitroLocked__61424 {
     background: linear-gradient(90deg, color-mix(in srgb, var(--expressive-gradient-nitro-pink-start) 40%, transparent), color-mix(in srgb, var(--expressive-gradient-nitro-pink-end) 40%, transparent))
 }
 

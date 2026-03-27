@@ -8,7 +8,7 @@ e.exports = {
     Q_: "glowAnimation_b3fb5f",
     tP: "nitroTopDividerLockContainer_b3fb5f",
     Mq: "nitroTopDividerLockBorder_b3fb5f",
-    N4: "brandRefresh_b3fb5f",
+    sk: "trialNUX_b3fb5f",
     _Y: "nitroTopDividerLockCircle_b3fb5f",
     Ss: "nitroTopDividerLockBorderReversed_b3fb5f",
     KI: "nitroTopDividerLower_b3fb5f",
