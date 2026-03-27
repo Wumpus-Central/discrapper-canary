@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => w });
+n.d(t, { A: () => M });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(311907),
     l = n(554146),
     u = n(421380),
@@ -14,57 +14,58 @@ var r = n(627968),
     p = n(771781),
     h = n(826673),
     m = n(367727),
-    g = n(465794),
-    E = n(976860),
+    E = n(465794),
+    g = n(976860),
     A = n(967198),
     I = n(183555),
-    T = n(939496),
+    T = n(196502),
+    S = n(939496),
     y = n(993401),
-    S = n(518477),
-    v = n(652215),
+    v = n(518477),
+    N = n(652215),
     C = n(49999),
-    b = n(788868),
-    N = n(996988),
-    R = n(985018),
-    O = n(981656);
-function D(e) {
+    R = n(788868),
+    O = n(996988),
+    b = n(985018),
+    D = n(339465);
+function L(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(c.DUT, {
-        "aria-label": R.intl.string(R.t.WAI6xu),
+        "aria-label": b.intl.string(b.t.WAI6xu),
         onClick: t,
-        className: O.Sc,
-        children: (0, r.jsx)(c.PGe, { size: "xs", className: O.Nk, color: "currentColor" }),
+        className: D.Sc,
+        children: (0, r.jsx)(c.PGe, { size: "xs", className: D.Nk, color: "currentColor" }),
     });
 }
-function L(e) {
+function w(e) {
     let { tiny: t, isPremiumUser: n, onInteraction: i } = e,
-        { analyticsLocations: a, newestAnalyticsLocation: s } = (0, d.Ay)(),
+        { analyticsLocations: s, newestAnalyticsLocation: a } = (0, d.Ay)(),
         { trackUserProfileAction: o } = (0, I.NJ)();
     return (0, r.jsxs)("div", {
-        className: O.JO,
+        className: D.JO,
         children: [
             (0, r.jsx)("div", {
-                className: O.xB,
+                className: D.xB,
                 children: n
                     ? (0, r.jsx)(y.FD, {
-                          action: S.pt.VIEW_PREMIUM_PERKS,
+                          action: v.pt.VIEW_PREMIUM_PERKS,
                           fullWidth: !0,
                           size: "sm",
                           variant: "secondary",
                           icon: c.tvc,
-                          text: R.intl.string(R.t["0Q61kF"]),
+                          text: b.intl.string(b.t["0Q61kF"]),
                           onClick: () => {
-                              (0, E.pX)(v.BVt.APPLICATION_STORE), i?.();
+                              (0, g.pX)(N.BVt.APPLICATION_STORE), i?.();
                           },
                       })
-                    : (0, r.jsx)(g.A, {
+                    : (0, r.jsx)(E.A, {
                           onClick: () => {
-                              o({ action: S.pt.GET_PREMIUM }), i?.();
+                              o({ action: v.pt.GET_PREMIUM }), i?.();
                           },
-                          textOptions: { textOverride: R.intl.string(R.t.x6rkDp) },
-                          subscriptionTier: b.pe.TIER_2,
-                          premiumModalAnalyticsLocation: { section: v.JJy.USER_PROFILE },
-                          className: O.Js,
+                          textOptions: { textOverride: b.intl.string(b.t.x6rkDp) },
+                          subscriptionTier: R.pe.TIER_2,
+                          premiumModalAnalyticsLocation: { section: N.JJy.USER_PROFILE },
+                          className: D.Js,
                           size: t ? u.$n.Sizes.TINY : u.$n.Sizes.SMALL,
                           look: u.$n.Looks.FILLED,
                           color: u.$n.Colors.PRIMARY,
@@ -73,76 +74,78 @@ function L(e) {
                       }),
             }),
             (0, r.jsx)("div", {
-                className: O.xB,
+                className: D.xB,
                 children: (0, r.jsx)(y.FD, {
-                    action: S.pt.VISIT_SHOP,
+                    action: v.pt.VISIT_SHOP,
                     fullWidth: !0,
                     icon: c.U1X,
-                    text: R.intl.string(R.t.b2d0N0),
+                    text: b.intl.string(b.t.b2d0N0),
                     size: "sm",
                     variant: "secondary",
                     onClick: () => {
-                        (0, _.Cz)({ analyticsLocations: a, analyticsSource: s }), i?.();
+                        (0, _.Cz)({ analyticsLocations: s, analyticsSource: a }), i?.();
                     },
                 }),
             }),
         ],
     });
 }
-function w(e) {
-    let { isPremiumUser: t, onInteraction: n, className: a } = e,
-        u = (0, f.GV)(),
-        { themeType: d } = (0, T.E)(),
-        _ = d === N.d.MODAL,
+function M(e) {
+    let { isPremiumUser: t, onInteraction: n, className: s } = e,
+        u = (0, T.h)(),
+        d = (0, f.GV)(),
+        { themeType: _ } = (0, S.E)(),
+        E = _ === O.d.MODAL,
         g = (0, h.JZ)(l.M.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS),
-        E = (0, o.bG)([A.A], () => A.A.getGuildId());
+        I = (0, o.bG)([A.A], () => A.A.getGuildId());
     if (
         (i.useEffect(() => {
-            if (!g)
+            if (!g && !u)
                 return (
                     (0, m.Vh)(l.M.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS),
                     () => {
                         (0, p.pd)({ content: l.M.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS }, !1);
                     }
                 );
-        }, [g]),
-        g)
+        }, [g, u]),
+        u)
     )
-        return null;
-    let I = (0, r.jsx)(c.Heading, { variant: "text-sm/normal", id: u, children: R.intl.string(R.t.EIYbj6) }),
-        y = (0, r.jsx)(D, {
+        return (0, r.jsx)(T.A, { className: s });
+    if (g) return null;
+    let y = (0, r.jsx)(c.Heading, { variant: "text-sm/normal", id: d, children: b.intl.string(b.t.EIYbj6) }),
+        v = (0, r.jsx)(L, {
             onClose: () => {
                 (0, h.Dr)(l.M.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS, {
                     dismissAction: C.i.USER_DISMISS,
-                    guildId: E,
+                    guildId: I,
                     forceTrack: !0,
                 });
             },
         }),
-        S = (0, r.jsx)(L, { isPremiumUser: t, onInteraction: n, tiny: _ });
-    return _
+        N = (0, r.jsx)(w, { isPremiumUser: t, onInteraction: n, tiny: E });
+    return E
         ? (0, r.jsx)("aside", {
-              className: s()(O.Zj, a),
-              "aria-labelledby": u,
+              className: a()(D.Zj, s),
+              "aria-labelledby": d,
               children: (0, r.jsxs)("div", {
-                  className: s()(O.xw, O.xq),
+                  className: a()(D.xw, D.xq),
                   children: [
-                      I,
+                      y,
                       (0, r.jsxs)("div", {
-                          className: O.A_,
-                          children: [(0, r.jsx)("div", { children: S }), (0, r.jsx)("div", { children: y })],
+                          className: D.A_,
+                          children: [(0, r.jsx)("div", { children: N }), (0, r.jsx)("div", { children: v })],
                       }),
                   ],
               }),
           })
         : (0, r.jsx)("aside", {
-              className: s()(O.Zj, a),
-              "aria-labelledby": u,
+              className: a()(D.Zj, s),
+              "aria-labelledby": d,
               children: (0, r.jsxs)("div", {
-                  className: s()(O.xw, O.K1),
+                  className: a()(D.xw, D.K1),
                   children: [
-                      (0, r.jsxs)("div", { className: O.$P, children: [I, (0, r.jsx)("div", { children: y })] }),
-                      S,
+                      (0, r.jsxs)("div", { className: D.$P, children: [y, (0, r.jsx)("div", { children: v })] }),
+                      N,
                   ],
               }),
           });
