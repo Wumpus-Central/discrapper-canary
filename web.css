@@ -34893,9 +34893,11 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .user-profile-modal-v2 .banner__43147 {
     border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    height: 48px;
     position: absolute;
     top: 0;
-    inset-inline: 0
+    inset-inline: 0;
+    padding: 0
 }
 
 .user-profile-sidebar .banner__43147 {
