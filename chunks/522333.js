@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => u });
 var i = n(627968),
     l = n(64700),
     a = n(397927),
@@ -6,63 +6,64 @@ var i = n(627968),
     s = n(486503),
     o = n(253932),
     d = n(957565),
-    c = n(723702),
-    u = n(985018);
-function g(e) {
-    let { messageId: t, itemId: n, type: g, imageSrc: A } = e,
-        p = o.Q_.useSetting(),
-        { tidaWebformEnabled: m } = s.A.useExperiment({ location: "useMessageDetailsItem" }, { autoTrackExposure: !1 }),
-        f = l.useCallback(() => {
+    c = n(985018);
+function u(e) {
+    let { messageId: t, itemId: n, type: u, imageSrc: g } = e,
+        A = o.Q_.useSetting(),
+        { tidaWebformEnabled: p } = s.A.useExperiment({ location: "useMessageDetailsItem" }, { autoTrackExposure: !1 }),
+        m = l.useCallback(() => {
             (0, d.C)(t);
         }, [t]),
-        y = l.useCallback(() => {
+        f = l.useCallback(() => {
             null != n && (0, d.C)(n);
         }, [n]),
         h = l.useCallback(() => {
-            null != A && (0, d.C)(A);
-        }, [A]),
-        E = l.useCallback(() => {
-            null != A && (0, r.A)(A);
-        }, [A]),
-        S = "sticker" === g;
-    if (!p || !d.p5 || !m || ("emoji" !== g && !S) || null == n) return null;
-    let _ = S ? u.intl.string(u.t.SJ3249) : u.intl.string(u.t.Ap2oVy);
+            null != g && (0, d.C)(g);
+        }, [g]),
+        y = l.useCallback(() => {
+            null != g && (0, r.A)(g);
+        }, [g]),
+        E = "sticker" === u;
+    if (!A || !d.p5 || !p || ("emoji" !== u && !E) || null == n) return null;
+    let _ = E ? c.intl.string(c.t.SJ3249) : c.intl.string(c.t.Ap2oVy),
+        S = E ? c.intl.string(c.t.B1ubHx) : c.intl.string(c.t.cIoudn),
+        b = E ? c.intl.string(c.t["qAEi+C"]) : c.intl.string(c.t.gDAM2n);
     return (0, i.jsxs)(a.Drp, {
         id: "message-details",
-        label: u.intl.string(u.t.IqqJNI),
+        label: c.intl.string(c.t.IqqJNI),
+        leadingAccessory: { type: "icon", icon: a.mir },
         children: [
             (0, i.jsx)(a.Drp, {
                 id: "copy-message-id",
-                label: u.intl.string(u.t.zBoHlf),
-                action: f,
+                label: c.intl.string(c.t.zBoHlf),
+                action: m,
                 leadingAccessory: { type: "icon", icon: a.L9S },
                 icon: a.L9S,
             }),
             (0, i.jsx)(a.Drp, {
                 id: "copy-item-id",
                 label: _,
-                action: y,
+                action: f,
                 leadingAccessory: { type: "icon", icon: a.L9S },
                 icon: a.L9S,
             }),
-            null != A &&
+            null != g &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(a.Drp, {
                             id: "copy-image-link",
-                            label: u.intl.string(u.t["8xHmxo"]),
+                            label: S,
                             action: h,
                             leadingAccessory: { type: "icon", icon: a.qYV },
                             icon: a.qYV,
                         }),
-                        c.isPlatformEmbedded &&
-                            (0, i.jsx)(a.Drp, {
-                                id: "open-image-link",
-                                label: u.intl.string(u.t.w8ldGK),
-                                action: E,
-                                leadingAccessory: { type: "icon", icon: a.qYV },
-                                icon: a.qYV,
-                            }),
+                        (0, i.jsx)(a.Drp, {
+                            id: "open-image-link",
+                            label: b,
+                            action: y,
+                            leadingAccessory: { type: "icon", icon: a.qYV },
+                            icon: a.qYV,
+                        }),
                     ],
                 }),
         ],
