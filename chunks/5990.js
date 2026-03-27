@@ -13,7 +13,7 @@ function o() {
 }
 function l(e) {
     let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.A];
-    return e.type !== s.I4_.GUILD_CHANNEL && (!!(0, i._B)(e) || (e.type === s.I4_.DMS && !t.hidePersonalInformation));
+    return !!(0, i._B)(e) || (e.type === s.I4_.DMS && !t.hidePersonalInformation);
 }
 function u(e, t) {
     let [n] = t,
