@@ -147,6 +147,12 @@ let G = new p(r.w.INCREASED_GUILD_LIMIT),
         [G, i.bb.INCREASED_GUILD_LIMIT],
         [F, i.bb.INCREASED_MESSAGE_LENGTH],
         [B, i.bb.INCREASED_FILE_UPLOAD_SIZE],
+        [v, i.bb.PROFILE_BADGES],
+        [R, i.bb.APP_ICONS],
+        [b, i.bb.BOOST_DISCOUNT],
+        [D, i.bb.FREE_BOOSTS],
+        [P, i.bb.INSTALL_PREMIUM_APPLICATIONS],
+        [V, i.bb.INCREASED_VIDEO_UPLOAD_QUALITY],
     ]);
 function $(e, t, n) {
     if ((null != t && t.isPremiumWithFractionalPremiumOnly() && Y.includes(e)) || (n && W.includes(e))) return !1;
