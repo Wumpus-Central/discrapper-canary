@@ -932,13 +932,7 @@ class C extends f.A {
             encodingVideoDegradationPreference: this.videoDegradationPreference,
             reconnectInterval: this.reconnectInterval,
         };
-        return (
-            (0, g.$b)(T.BY.VIDEO_EFFECTS) && this.context === T.x.STREAM && (e.enableVideoEffects = !0),
-            this.experimentFlags.has(I.fd.MUTE_BEFORE_PROCESSING) && (e.muteBeforeProcessing = !0),
-            this.experimentFlags.has(I.fd.PTT_BEFORE_PROCESSING) && (e.pttBeforeProcessing = !0),
-            this.experimentFlags.has(I.fd.SKIP_ENCODE) && (e.skipEncode = !0),
-            e
-        );
+        return (0, g.$b)(T.BY.VIDEO_EFFECTS) && this.context === T.x.STREAM && (e.enableVideoEffects = !0), e;
     }
     handleSpeakingNative = (e, t, n) => {
         let r = T.ME.NONE;
