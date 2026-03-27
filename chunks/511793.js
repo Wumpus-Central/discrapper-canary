@@ -45,12 +45,12 @@ let L = (0, h.Fe)({
         webpackId: 312625,
         name: "InviteProxy",
     }),
-    x = (0, h.Fe)({
+    P = (0, h.Fe)({
         createPromise: () => Promise.all([n.e("34917"), n.e("46391")]).then(n.bind(n, 556074)),
         webpackId: 556074,
         name: "VerifyConnectedAccount",
     }),
-    P = (0, h.Fe)({
+    x = (0, h.Fe)({
         createPromise: () => Promise.all([n.e("34917"), n.e("63832")]).then(n.bind(n, 744185)),
         webpackId: 744185,
         name: "VerifyConnectedAccountSuccess",
@@ -71,7 +71,7 @@ let L = (0, h.Fe)({
         name: "LinkAuthorize",
     }),
     F = (0, h.Fe)({
-        createPromise: () => Promise.all([n.e("56838"), n.e("16864")]).then(n.bind(n, 60883)),
+        createPromise: () => Promise.all([n.e("94201"), n.e("16864")]).then(n.bind(n, 60883)),
         webpackId: 60883,
         name: "ActivateDevice",
     }),
@@ -106,14 +106,14 @@ let L = (0, h.Fe)({
                 n.e("37372"),
                 n.e("41353"),
                 n.e("35664"),
-                n.e("91139"),
+                n.e("84609"),
                 n.e("28136"),
                 n.e("60064"),
                 n.e("97283"),
                 n.e("59701"),
                 n.e("8018"),
                 n.e("62175"),
-                n.e("12437"),
+                n.e("2292"),
                 n.e("24202"),
                 n.e("41606"),
                 n.e("3916"),
@@ -182,7 +182,7 @@ let L = (0, h.Fe)({
     B = (0, h.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("56838"),
+                n.e("94201"),
                 n.e("48330"),
                 n.e("37372"),
                 n.e("88890"),
@@ -236,7 +236,7 @@ let L = (0, h.Fe)({
                 n.e("42006"),
                 n.e("37372"),
                 n.e("35664"),
-                n.e("91139"),
+                n.e("84609"),
                 n.e("28136"),
                 n.e("60064"),
                 n.e("97283"),
@@ -436,9 +436,9 @@ class et extends i.Component {
                                         path: b.BVt.CONNECTIONS_AUTHORIZE_CONTINUE(":type"),
                                         component: q,
                                     }),
-                                    (0, r.jsx)(p.A, { path: b.BVt.CONNECTIONS_SUCCESS(":type"), component: P }),
+                                    (0, r.jsx)(p.A, { path: b.BVt.CONNECTIONS_SUCCESS(":type"), component: x }),
                                     (0, r.jsx)(p.A, { path: b.BVt.CONNECTIONS_ERROR(":type"), component: k }),
-                                    (0, r.jsx)(p.A, { path: b.BVt.CONNECTIONS(":type"), component: x }),
+                                    (0, r.jsx)(p.A, { path: b.BVt.CONNECTIONS(":type"), component: P }),
                                     (0, r.jsx)(p.A, {
                                         path: b.BVt.DOWNLOAD_QR_CODE_REDIRECT,
                                         render: () => {

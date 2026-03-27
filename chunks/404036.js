@@ -15,12 +15,12 @@ function a(e) {
     return (0, i.mMO)(
         async () => {
             let { default: e } = await Promise.all([
-                n.e("12437"),
+                n.e("2292"),
                 n.e("3916"),
                 n.e("55905"),
                 n.e("29716"),
-                n.e("65972"),
-                n.e("67581"),
+                n.e("9854"),
+                n.e("90071"),
             ]).then(n.bind(n, 653813));
             return (n) =>
                 (0, r.jsx)(e, {
