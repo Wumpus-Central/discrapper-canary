@@ -4,7 +4,7 @@ var r = n(627968);
 n(64700);
 var i = n(503698),
     s = n.n(i),
-    a = n(4208),
+    a = n(382222),
     o = n(435371),
     l = n(397927),
     u = n(688810),
@@ -49,8 +49,8 @@ let T = { [h.TVA.NONE]: 0, [h.TVA.TIER_1]: 1 / 3, [h.TVA.TIER_2]: 2 / 3, [h.TVA.
             L = D - R,
             w = N <= C || S,
             M = w && N <= i.premiumTier,
-            x = w && N < i.premiumTier,
-            P = w && N === i.premiumTier,
+            P = w && N < i.premiumTier,
+            x = w && N === i.premiumTier,
             k = i.premiumTier < N && R >= D,
             { scaleFactor: U } = (0, l.zhh)({
                 from: { scaleFactor: 0 },
@@ -97,7 +97,7 @@ let T = { [h.TVA.NONE]: 0, [h.TVA.TIER_1]: 1 / 3, [h.TVA.TIER_2]: 2 / 3, [h.TVA.
                         tierName: (0, _.gb)(N, { useLevels: !1 }),
                     }),
             Y = (0, r.jsxs)(B, {
-                className: s()(A.Ll, { [A.kZ]: M, [A.ng]: V, [A.uZ]: x, [A.Ue]: P }),
+                className: s()(A.Ll, { [A.kZ]: M, [A.ng]: V, [A.uZ]: P, [A.Ue]: x }),
                 style: { left: `${100 * T[N]}%` },
                 ...H,
                 children: [

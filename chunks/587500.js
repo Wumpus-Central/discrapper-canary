@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(4208),
+    o = n(382222),
     l = n(311907),
     u = n(397927),
     c = n(387755),
@@ -31,8 +31,8 @@ var r = n(627968),
     L = n(260509),
     w = n(71393),
     M = n(430452),
-    x = n(287809),
-    P = n(531685),
+    P = n(287809),
+    x = n(531685),
     k = n(954571),
     U = n(486020),
     G = n(313961),
@@ -61,7 +61,7 @@ function er(e) {
         a = (0, y.A)();
     return (
         i.useEffect(() => {
-            let e = x.default.getCurrentUser();
+            let e = P.default.getCurrentUser();
             if (a && null != e) {
                 let t = (0, T.i)(e);
                 (0, S.S1)(t, s, { track: !1 }).catch(W.tEg);
@@ -167,8 +167,8 @@ function es(e) {
         N = (0, g.Ay)(_),
         [C, R] = (0, l.yK)([M.Ay], () => [M.Ay.supports($.O5.VIDEO), Object.keys(M.Ay.getVideoDevices()).length]),
         O = null != S ? `${N}, ${S.name}` : N,
-        b = (0, l.bG)([P.A], () => P.A.isFocused()),
-        x = (0, l.bG)([G.A], () => G.A.getMode(_.id)),
+        b = (0, l.bG)([x.A], () => x.A.isFocused()),
+        P = (0, l.bG)([G.A], () => G.A.getMode(_.id)),
         k = i.useCallback((e) => {
             null != e.top && null != e.left && d.A.move(e.left, e.top);
         }, []),
@@ -179,10 +179,10 @@ function es(e) {
         };
         return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
     }, [_]);
-    let B = x === W._Of.VIDEO && C && R > 0,
+    let B = P === W._Of.VIDEO && C && R > 0,
         { enabled: H } = D.A.useExperiment({ guildId: _?.guild_id, location: "IncomingCallModal" }),
         j =
-            x === W._Of.VOICE || (H && _.type === W.rbe.GUILD_VOICE)
+            P === W._Of.VOICE || (H && _.type === W.rbe.GUILD_VOICE)
                 ? z.intl.string(z.t.Js8cK3)
                 : z.intl.string(z.t.KcnWCO),
         Y = (0, r.jsxs)(r.Fragment, {
@@ -228,7 +228,7 @@ function es(e) {
             ],
         }),
         es = B ? Q : J,
-        ea = (0, l.bG)([P.A], () => P.A.windowSize());
+        ea = (0, l.bG)([x.A], () => x.A.windowSize());
     return (0, r.jsx)(m.f5, {
         value: h,
         children: (0, r.jsx)(f.A, {

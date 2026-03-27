@@ -5,7 +5,7 @@ var i,
     l = n(64700),
     a = n(503698),
     r = n.n(a),
-    o = n(4208),
+    o = n(382222),
     c = n(696292),
     d = n(397927),
     u = n(932413),
@@ -17,13 +17,13 @@ var i,
     g = n(985018),
     f = n(488893);
 let x = ["embedded_cover"],
-    E = { tension: 800, friction: 24 };
-var C =
-    (((i = C || {})[(i.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"),
+    C = { tension: 800, friction: 24 };
+var E =
+    (((i = E || {})[(i.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"),
     (i[(i.SIXTEEN_BY_NINE = 1)] = "SIXTEEN_BY_NINE"),
     i);
 function I(e) {
-    let { context: t, activityItem: n, onClick: i, aspectRatio: a = 0, animatedDivClass: C, commandOrigin: I } = e,
+    let { context: t, activityItem: n, onClick: i, aspectRatio: a = 0, animatedDivClass: E, commandOrigin: I } = e,
         {
             onActivityItemSelected: N,
             imageBackground: b,
@@ -93,7 +93,7 @@ function I(e) {
         onMouseLeave: R,
         className: f.XA,
         children: (0, s.jsx)(d.c7X, {
-            config: E,
+            config: C,
             from: { value: 0 },
             to: { value: +!!v },
             children: (e) => {
@@ -107,7 +107,7 @@ function I(e) {
                             children: (i) =>
                                 (0, s.jsxs)(o.animated.div, {
                                     ref: i,
-                                    className: r()(e, f.LM, C, { [f.$g]: 0 === a, [f.J3]: 1 === a }),
+                                    className: r()(e, f.LM, E, { [f.$g]: 0 === a, [f.J3]: 1 === a }),
                                     style: { transform: t.to([0, 1], [1, 1.05]).to((e) => `scale(${e})`) },
                                     children: [
                                         (0, s.jsx)(A.A, {
@@ -126,4 +126,4 @@ function I(e) {
         }),
     });
 }
-I.AspectRatio = C;
+I.AspectRatio = E;

@@ -4,7 +4,7 @@ var i = n(627968),
     s = n(64700),
     l = n(503698),
     a = n.n(l),
-    r = n(4208),
+    r = n(382222),
     o = n(158954),
     c = n(311907),
     d = n(397927),
@@ -17,8 +17,8 @@ var i = n(627968),
     g = n(267771),
     f = n(828162),
     x = n(259568),
-    E = n(333354),
-    C = n(985018),
+    C = n(333354),
+    E = n(985018),
     I = n(208988);
 let N = s.forwardRef((e, t) => {
     let { appliedBoostCount: n, maxBoostCount: l, premiumSubscriberCount: c, className: u } = e,
@@ -48,7 +48,7 @@ let N = s.forwardRef((e, t) => {
                                 (0, i.jsx)(o.EYj, {
                                     className: I.Qq,
                                     variant: "text-xs/semibold",
-                                    children: C.intl.string(E.default.NI6Ihe),
+                                    children: E.intl.string(C.default.NI6Ihe),
                                 }),
                                 c >= l &&
                                     (0, i.jsx)(o.EYj, {
@@ -65,8 +65,8 @@ let N = s.forwardRef((e, t) => {
                                     className: a()(I.Qq, I.ue),
                                     variant: "text-xs/semibold",
                                     children: h
-                                        ? C.intl.formatToPlainString(E.default["Ehpq+7"], { appliedBoostCount: n })
-                                        : C.intl.formatToPlainString(E.default["/rbPDs"], {
+                                        ? E.intl.formatToPlainString(C.default["Ehpq+7"], { appliedBoostCount: n })
+                                        : E.intl.formatToPlainString(C.default["/rbPDs"], {
                                               appliedBoostCount: n,
                                               maxBoostCount: l,
                                           }),
@@ -90,13 +90,13 @@ function b(e) {
         r = s.useRef(null),
         o = (0, g.A)(t),
         _ = (0, p.A)(t.id),
-        E = s.useCallback(() => {
+        C = s.useCallback(() => {
             (0, f.A)(t.id, h.A.GUILD_BOOSTING_SIDEBAR_DISPLAY);
         }, [t.id]),
-        C = (0, c.bG)([m.A], () => m.A.getCountForGuild(t.id) ?? 0);
+        E = (0, c.bG)([m.A], () => m.A.getCountForGuild(t.id) ?? 0);
     s.useEffect(() => {
-        C !== t.premiumSubscriberCount && (0, A.u)(t.id, t.premiumSubscriberCount);
-    }, [t.id, C, t.premiumSubscriberCount]);
+        E !== t.premiumSubscriberCount && (0, A.u)(t.id, t.premiumSubscriberCount);
+    }, [t.id, E, t.premiumSubscriberCount]);
     let b = s.useCallback(
         (e) => {
             _ &&
@@ -113,12 +113,12 @@ function b(e) {
                 "aria-label": void 0,
                 role: "button",
                 focusProps: { offset: { left: 10, right: 4 } },
-                onClick: E,
+                onClick: C,
                 className: a()(I.kL, { [I.aF]: l }),
                 onContextMenu: b,
                 children: (0, i.jsx)(N, {
                     ref: r,
-                    appliedBoostCount: C,
+                    appliedBoostCount: E,
                     maxBoostCount: o,
                     premiumSubscriberCount: t.premiumSubscriberCount,
                 }),

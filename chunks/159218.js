@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(4208),
+    o = n(382222),
     l = n(311907),
     u = n(451988),
     c = n(397927),
@@ -110,11 +110,11 @@ let O = i.forwardRef(function (e, t) {
             L = i.useRef(null),
             w = i.useRef(null),
             M = i.useRef(O),
-            x = i.useRef(b),
-            P = null != n && null == s,
+            P = i.useRef(b),
+            x = null != n && null == s,
             [k, U] = i.useState(!1),
             [G, F] = i.useState(!0),
-            [V, B] = i.useState(!P && g),
+            [V, B] = i.useState(!x && g),
             H = g && k,
             j = (0, l.bG)([d.A], () => d.A.useReducedMotion),
             [Y] = i.useState(() => new u.Ep());
@@ -129,14 +129,14 @@ let O = i.forwardRef(function (e, t) {
                 t = w.current.getBoundingClientRect().height;
             B(t > e),
                 (M.current = e),
-                (x.current = t),
-                K({ maxHeight: `${Math.min(G ? M.current : x.current, G ? O : b)}px` });
+                (P.current = t),
+                K({ maxHeight: `${Math.min(G ? M.current : P.current, G ? O : b)}px` });
         }, [H, s, n, K, G, O, b]);
         let $ = (e) => {
                 V &&
                     (e
                         ? K({
-                              maxHeight: `${Math.min(x.current, b)}px`,
+                              maxHeight: `${Math.min(P.current, b)}px`,
                               delay: 300 * !j,
                               config: { clamp: !0, duration: 150 * !j },
                           })

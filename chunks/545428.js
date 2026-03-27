@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(4208),
+    o = n(382222),
     l = n(397927),
     u = n(573435),
     c = n(44998),
@@ -44,7 +44,7 @@ function h(e) {
             noHover: w,
         } = e,
         M = (0, l.pnh)(null != E, { ...p, keys: (e) => (e ? "children" : "icon") }),
-        x = (e) => {
+        P = (e) => {
             let { component: t } = e;
             return null != R
                 ? (0, r.jsxs)("div", {
@@ -84,7 +84,7 @@ function h(e) {
                 return t
                     ? (0, r.jsx)(
                           o.animated.div,
-                          { style: e, className: a()(_._o, s), children: x({ component: E }) },
+                          { style: e, className: a()(_._o, s), children: P({ component: E }) },
                           i,
                       )
                     : null != m
@@ -93,7 +93,7 @@ function h(e) {
                             {
                                 style: e,
                                 className: a()(_._o, s),
-                                children: x({
+                                children: P({
                                     component: (0, r.jsx)(m, {
                                         className: a()(_.Kk, h, { [_.d1]: N }),
                                         color: "currentColor",

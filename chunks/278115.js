@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(4208),
+    o = n(382222),
     l = n(172218),
     u = n(512750),
     c = n(311907),
@@ -44,13 +44,13 @@ function L(e) {
         } = e,
         { analyticsLocations: w } = (0, p.Ay)(),
         M = n !== C.b_.INACTIVE,
-        x = (0, E.A)(t),
-        P = (0, c.bG)([_.A], () => _.A.useReducedMotion),
+        P = (0, E.A)(t),
+        x = (0, c.bG)([_.A], () => _.A.useReducedMotion),
         k = i.useRef(null),
         [U, G] = i.useState(!1),
         [F, V] = i.useState(!1),
         B = F,
-        H = F && null != A && "" !== A && !P ? A : g,
+        H = F && null != A && "" !== A && !x ? A : g,
         j = i.useCallback(() => {
             let e = T.A.getGuild(t);
             null != e &&
@@ -161,7 +161,7 @@ function L(e) {
                             fullWidth: !0,
                         }),
                     }),
-                    x &&
+                    P &&
                         (0, r.jsx)("div", {
                             className: D.x6,
                             children: (0, r.jsx)(d.Button, {
@@ -195,8 +195,8 @@ function w(e) {
     });
 }
 let M = 6,
-    x = new Set([N.W5, u.zY]),
-    P = new Map([[N.W5, "+"]]),
+    P = new Set([N.W5, u.zY]),
+    x = new Map([[N.W5, "+"]]),
     k = i.forwardRef((e, t) => {
         let { guild: n, onClose: s } = e;
         i.useEffect(() => {
@@ -237,8 +237,8 @@ let M = 6,
                                   {
                                       guildId: n.id,
                                       powerup: e,
-                                      costDecorator: P.get(e.skuId),
-                                      isNew: x.has(e.skuId),
+                                      costDecorator: x.get(e.skuId),
+                                      isNew: P.has(e.skuId),
                                       onClose: s,
                                   },
                                   `perk-card-${e.skuId}`,

@@ -5,7 +5,7 @@ var i = n(627968),
     l = n(503698),
     a = n.n(l),
     r = n(735438),
-    o = n(4208),
+    o = n(382222),
     c = n(311907),
     d = n(397927),
     u = n(73153),
@@ -17,8 +17,8 @@ var i = n(627968),
     g = n(448368),
     f = n(378058),
     x = n(148355),
-    E = n(320501),
-    C = n(994500),
+    C = n(320501),
+    E = n(994500),
     I = n(486020),
     N = n(927813),
     b = n(403362),
@@ -29,13 +29,13 @@ let y = 10 * N.A.Millis.SECOND;
 function j(e) {
     let { message: t } = e,
         { isBlocked: n, isIgnored: l } = (0, c.cf)(
-            [C.A],
-            () => ({ isBlocked: C.A.isBlockedForMessage(t), isIgnored: C.A.isIgnoredForMessage(t) }),
+            [E.A],
+            () => ({ isBlocked: E.A.isBlockedForMessage(t), isIgnored: E.A.isIgnoredForMessage(t) }),
             [t],
         ),
         r = (0, p.X4)(t),
         o = s.useContext(m.A),
-        [u, E] = s.useState(!1),
+        [u, C] = s.useState(!1),
         N = s.useCallback(
             (e) => {
                 "A" !== e.target.nodeName &&
@@ -59,10 +59,10 @@ function j(e) {
     return (0, i.jsxs)(d.DUT, {
         className: v.oR,
         onMouseEnter: () => {
-            E(!0);
+            C(!0);
         },
         onMouseLeave: () => {
-            E(!1);
+            C(!1);
         },
         onClick: N,
         children: [
@@ -129,7 +129,7 @@ function R(e) {
             let _ = h.current ?? a;
             return {
                 toastsHidden: o,
-                toastMessages: (0, c.yK)([E.A], () => _.map((e) => E.A.getMessage(t, e)), [t, _]).filter(b.Vq),
+                toastMessages: (0, c.yK)([C.A], () => _.map((e) => C.A.getMessage(t, e)), [t, _]).filter(b.Vq),
             };
         })({ channelId: t, isFrozen: l, count: 3, lingerMs: y }),
         _ = s.useRef({}),
@@ -150,8 +150,8 @@ function R(e) {
             }
             (0, r.isEqual)(e, x.current) || g(e);
         }, [m]);
-    let C = m.map((e) => ({ message: e, height: _.current[e.id], y: p[e.id] })),
-        I = (0, d.pnh)(C, {
+    let E = m.map((e) => ({ message: e, height: _.current[e.id], y: p[e.id] })),
+        I = (0, d.pnh)(E, {
             keys: (e) => e.message.id,
             from: () => ({ opacity: 0 }),
             enter: (e) => {

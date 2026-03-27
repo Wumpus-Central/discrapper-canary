@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(4208),
+    o = n(382222),
     l = n(110259),
     u = n(615300),
     c = n(789645),
@@ -61,15 +61,15 @@ function v(e) {
         L = null != N["aria-labelledby"],
         w = i.useId(),
         M = N["aria-labelledby"] ?? w,
-        x = i.useMemo(() => ({ headerId: M, headerIdIsManaged: L }), [M, L]);
+        P = i.useMemo(() => ({ headerId: M, headerIdIsManaged: L }), [M, L]);
     return (0, r.jsx)(E.CP.Provider, {
-        value: x,
+        value: P,
         children: (0, r.jsx)(f.l, {
             className: I.Gg,
             role: c,
             returnRef: T,
             impressionType: l.ImpressionTypes.MODAL,
-            "aria-labelledby": D ? void 0 : x.headerId,
+            "aria-labelledby": D ? void 0 : P.headerId,
             ...N,
             children: (0, r.jsx)(o.animated.div, {
                 className: a()(_, I.zr, S[s], { [I.z]: p, [I.vl]: !m }),

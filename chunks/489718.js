@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(64700),
     s = n(977418),
     a = n(967158),
-    o = n(4208),
+    o = n(382222),
     l = n(823807),
     u = n(827734),
     c = n(717421),
@@ -62,8 +62,8 @@ function R(e) {
         w = (0, l.H)({ isSelected: t, onChange: E, isDisabled: n }),
         {
             inputProps: M,
-            labelProps: x,
-            isPressed: P,
+            labelProps: P,
+            isPressed: x,
         } = (0, s.K)({ id: m, isDisabled: n, "aria-describedby": I, "aria-labelledby": T }, w, L),
         { hoverProps: k, isHovered: U } = (0, a.M)({ isDisabled: n }),
         G = (0, d.r)(u.A.colors.SWITCH_BACKGROUND_DEFAULT).spring(),
@@ -84,7 +84,7 @@ function R(e) {
             {
                 config: { duration: O.enabled ? 200 : 300 },
                 opacity: n ? 0.5 : 1,
-                state: P ? (t ? N[N.length - 2] : v[1]) : +!!t,
+                state: x ? (t ? N[N.length - 2] : v[1]) : +!!t,
             },
             "animate-always",
         ),
@@ -99,7 +99,7 @@ function R(e) {
         within: !0,
         offset: -2,
         children: (0, r.jsxs)("label", {
-            ...x,
+            ...P,
             className: h.kL,
             "data-disabled": n || void 0,
             children: [

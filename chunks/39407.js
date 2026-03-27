@@ -2,7 +2,7 @@
 n.d(t, { A: () => W });
 var r = n(627968),
     i = n(64700),
-    s = n(4208),
+    s = n(382222),
     a = n(311907),
     o = n(73939),
     l = n(397927),
@@ -31,8 +31,8 @@ var r = n(627968),
     L = n(312381),
     w = n(946356),
     M = n(587168),
-    x = n(193738),
-    P = n(613457),
+    P = n(193738),
+    x = n(613457),
     k = n(853397),
     U = n(159218),
     G = n(850092),
@@ -139,7 +139,7 @@ function W(e) {
                                         (0, r.jsx)(s.animated.div, { style: eE, className: Y.tB }),
                                     (0, r.jsxs)(M.A, {
                                         children: [
-                                            (0, r.jsx)(P.A, {
+                                            (0, r.jsx)(x.A, {
                                                 shouldShowTooltip: null === em.interactionType,
                                                 user: t,
                                                 guildId: W,
@@ -147,7 +147,7 @@ function W(e) {
                                                 onClose: q,
                                                 appContext: J,
                                             }),
-                                            (0, r.jsx)(x.A, {
+                                            (0, r.jsx)(P.A, {
                                                 themeType: H.d.POPOUT,
                                                 user: t,
                                                 setFriendRequestSent: ed,

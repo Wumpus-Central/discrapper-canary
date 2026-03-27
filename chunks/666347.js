@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { A: () => x });
+n.d(t, { A: () => P });
 var r = n(627968),
     i = n(64700),
     s = n(735438),
     a = n.n(s),
-    o = n(4208),
+    o = n(382222),
     l = n(258873),
     u = n(622242),
     c = n(731738),
@@ -85,8 +85,8 @@ function w(e) {
             },
             [a, n],
         ),
-        x = (0, d.bG)([v.A], () => v.A.getFocusedRunningGame()),
-        P = f
+        P = (0, d.bG)([v.A], () => v.A.getFocusedRunningGame()),
+        x = f
             ? (0, r.jsxs)("div", {
                   children: [
                       (0, r.jsx)(_.Text, {
@@ -118,14 +118,14 @@ function w(e) {
         k = f ? null : O.intl.string(O.t.oEJEFq);
     return (0, r.jsx)(N.$, {
         title: O.intl.string(O.t.U38qZj),
-        body: P,
+        body: x,
         hint: S ? k : void 0,
         confirmText: O.intl.string(O.t.a3HlgJ),
-        cancelText: null != x ? O.intl.string(O.t.qIYnPo) : void 0,
+        cancelText: null != P ? O.intl.string(O.t.qIYnPo) : void 0,
         icon: (0, r.jsx)(A.A, { width: 40, height: 40, className: b.Lo }),
         onNotificationClick: w,
         onConfirmClick: D,
-        onCancelClick: null != x ? M : void 0,
+        onCancelClick: null != P ? M : void 0,
         onDismissClick: n,
         expand: !0,
         locked: !0,
@@ -189,4 +189,4 @@ class M extends i.PureComponent {
             : (0, r.jsx)("div", { className: t, children: e });
     }
 }
-let x = M;
+let P = M;

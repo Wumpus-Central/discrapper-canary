@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(4208),
+    o = n(382222),
     l = n(311907),
     u = n(397927),
     c = n(684013),
@@ -42,8 +42,8 @@ let I = i.memo(function (e) {
             wrapperClassName: w,
             unreadAccessory: M,
         } = e,
-        [x, P] = i.useState(!1),
-        k = n || x || b === m.yFH.FOCUSED,
+        [P, x] = i.useState(!1),
+        k = n || P || b === m.yFH.FOCUSED,
         U = (0, l.bG)([p.A, f.A], () => p.A.isInputLocked(f.A.getTargetPID()));
     i.useEffect(() => {
         s?.();
@@ -67,10 +67,10 @@ let I = i.memo(function (e) {
             [h],
         ),
         B = i.useCallback(() => {
-            P(!0);
+            x(!0);
         }, []),
         H = i.useCallback(() => {
-            P(!1);
+            x(!1);
         }, []);
     function j() {
         return (0, r.jsx)(d.A, { className: g.r, onDismiss: G, "aria-label": E.intl.string(E.t.LnEgqX) });
@@ -164,7 +164,7 @@ let I = i.memo(function (e) {
         });
     }
     function z() {
-        return null == M ? null : (0, r.jsx)("div", { className: g.B3, children: M(x) });
+        return null == M ? null : (0, r.jsx)("div", { className: g.B3, children: M(P) });
     }
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -285,8 +285,8 @@ function N(e) {
                 onNotificationShow: L,
                 onDismissClick: w,
                 renderFooter: M,
-                onNotificationClick: x,
-                onConfirmClick: P,
+                onNotificationClick: P,
+                onConfirmClick: x,
                 onCancelClick: k,
                 disableClickableRegions: U = !1,
                 clickZoneClassName: G,

@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(4208),
+    o = n(382222),
     l = n(311907),
     u = n(397927),
     c = n(387755),
@@ -31,8 +31,8 @@ var r = n(627968),
     L = n(503509),
     w = n(531685),
     M = n(954571),
-    x = n(486020),
-    P = n(203982),
+    P = n(486020),
+    x = n(203982),
     k = n(427262),
     U = n(313961),
     G = n(850226),
@@ -87,7 +87,7 @@ function X(e) {
         C = i.useRef(null),
         q = (0, l.bG)([w.A], () => w.A.windowSize()),
         X = (0, l.bG)([R.A], () => R.A.getGuild(S.guild_id)),
-        Q = null != X ? x.Ay.getGuildIconURL({ id: X.id, icon: X.icon, size: z }) : null,
+        Q = null != X ? P.Ay.getGuildIconURL({ id: X.id, icon: X.icon, size: z }) : null,
         J = (0, g.Y)(S, z, !0) ?? Q,
         ee = (0, A.Ay)(S),
         et = (0, l.yK)([D.Ay, U.A], () =>
@@ -119,9 +119,9 @@ function X(e) {
     }, [S]),
         i.useEffect(
             () => (
-                P._.subscribe(B.jej.CALL_ACCEPT, ec),
+                x._.subscribe(B.jej.CALL_ACCEPT, ec),
                 () => {
-                    P._.unsubscribe(B.jej.CALL_ACCEPT, ec);
+                    x._.unsubscribe(B.jej.CALL_ACCEPT, ec);
                 }
             ),
             [ec],

@@ -4,7 +4,7 @@ var i = n(627968),
     s = n(64700),
     l = n(503698),
     a = n.n(l),
-    r = n(4208),
+    r = n(382222),
     o = n(110259),
     c = n(311907),
     d = n(435371),
@@ -17,8 +17,8 @@ var i = n(627968),
     g = n(71393),
     f = n(576705),
     x = n(954571),
-    E = n(778768),
-    C = n(652215);
+    C = n(778768),
+    E = n(652215);
 n(281405);
 var I = n(985018),
     N = n(426114),
@@ -37,7 +37,7 @@ function T(e) {
         type: o.ImpressionTypes.VIEW,
         properties: { voice_channel_id: t.id, voice_guild_id: t.guild_id, location_stack: M },
     });
-    let D = (0, c.bG)([f.A], () => f.A.can(C.xBc.CREATE_INSTANT_INVITE, t), [t]),
+    let D = (0, c.bG)([f.A], () => f.A.can(E.xBc.CREATE_INSTANT_INVITE, t), [t]),
         G = (0, c.bG)([g.A], () => g.A.getGuild(t.guild_id)),
         [U, P] = s.useState(!1),
         w = s.useRef(null),
@@ -47,7 +47,7 @@ function T(e) {
         F = s.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "unknown";
-                x.default.track(C.HAw.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT_CLOSED, {
+                x.default.track(E.HAw.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT_CLOSED, {
                     reason: e,
                     channel_id: t.id,
                     guild_id: t.guild_id,
@@ -64,7 +64,7 @@ function T(e) {
                     let { default: e } = await Promise.all([n.e("43600"), n.e("28136"), n.e("89886")]).then(
                         n.bind(n, 234355),
                     );
-                    return (n) => (0, i.jsx)(e, { ...n, guild: G, channel: t, source: C.PE1.VOICE_INVITE_SUGGESTIONS });
+                    return (n) => (0, i.jsx)(e, { ...n, guild: G, channel: t, source: E.PE1.VOICE_INVITE_SUGGESTIONS });
                 });
         }, [G, t]),
         [W, Y] = (0, u.zhh)(() => ({
@@ -123,7 +123,7 @@ function T(e) {
               align: "top",
               spacing: 17,
               popoutKey: "voice-invite-suggestions-button",
-              renderPopout: (e) => (0, i.jsx)(E.w, { channel: t, onHoverOrFocus: B, ...e }),
+              renderPopout: (e) => (0, i.jsx)(C.w, { channel: t, onHoverOrFocus: B, ...e }),
               onRequestOpen: Q,
               onRequestClose: J,
               children: (e) => {

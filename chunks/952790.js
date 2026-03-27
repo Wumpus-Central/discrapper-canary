@@ -4,7 +4,7 @@ var i = n(627968),
     s = n(64700),
     l = n(503698),
     a = n.n(l),
-    r = n(4208),
+    r = n(382222),
     o = n(607399),
     c = n(311907),
     d = n(990078),
@@ -17,8 +17,8 @@ var i = n(627968),
     g = n(544028),
     f = n(253932),
     x = n(576705),
-    E = n(486020),
-    C = n(885631),
+    C = n(486020),
+    E = n(885631),
     I = n(986268),
     N = n(652215),
     b = n(349828),
@@ -35,7 +35,7 @@ function v(e) {
             style: { transform: c.to((e) => `translateY(${(1 - e) * 90}px)`) },
             children: (0, i.jsx)("img", {
                 className: a()(T.Q, { [T.fr]: o.Fr }),
-                src: E.Ay.getGuildBannerURL({ id: t.id, banner: s }, l) ?? "",
+                src: C.Ay.getGuildBannerURL({ id: t.id, banner: s }, l) ?? "",
                 alt: "",
                 "aria-hidden": !0,
             }),
@@ -96,9 +96,9 @@ let O = [b.Vc, N.gNP];
 function L(e) {
     let { bannerVisible: t, guild: l, onClick: a, onContextMenu: r, ariaControls: o, ariaExpanded: m, children: g } = e,
         f = (0, h.YC)(l),
-        E = (0, c.bG)([x.A], () => (0, _.K)(x.A, l)),
-        C = s.useCallback(() => {
-            E
+        C = (0, c.bG)([x.A], () => (0, _.K)(x.A, l)),
+        E = s.useCallback(() => {
+            C
                 ? (0, u.mMO)(async () => {
                       let { default: e } = await Promise.all([n.e("43600"), n.e("67505")]).then(n.bind(n, 234355));
                       return (t) => (0, i.jsx)(e, { ...t, guild: l, source: N.PE1.GUILD_HEADER_INVITE_BUTTON });
@@ -107,7 +107,7 @@ function L(e) {
                       let { default: e } = await n.e("62751").then(n.bind(n, 132610));
                       return (t) => (0, i.jsx)(e, { ...t });
                   });
-        }, [E, l]);
+        }, [C, l]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(u.DUT, {
@@ -138,7 +138,7 @@ function L(e) {
                     children: (0, i.jsx)(u.DUT, {
                         className: T.ak,
                         onClick: () => {
-                            C();
+                            E();
                         },
                         children: (0, i.jsx)(u.DpX, { size: "refresh_sm", color: "currentColor" }),
                     }),
@@ -169,9 +169,9 @@ let M = s.memo(function (e) {
         } = e,
         G = I.features.has(N.GuildFeatures.ANIMATED_BANNER),
         U = (0, m.A)(I),
-        P = !U && (0, C.A)(I),
+        P = !U && (0, E.A)(I),
         w = !U && O,
-        k = (0, E.VI)(b) && G && !_,
+        k = (0, C.VI)(b) && G && !_,
         [V, B] = s.useState(!1),
         H = s.useRef(!1),
         F = s.useRef(null),

@@ -2,7 +2,7 @@
 n.d(t, { A: () => F });
 var r = n(627968),
     i = n(64700),
-    s = n(4208),
+    s = n(382222),
     a = n(837381),
     o = n(311907),
     l = n(732955),
@@ -31,8 +31,8 @@ var r = n(627968),
     L = n(652215),
     w = n(818348),
     M = n(985018),
-    x = n(549488);
-let P = "8px",
+    P = n(549488);
+let x = "8px",
     k = "11px",
     U = 222;
 function G(e) {
@@ -89,7 +89,7 @@ function G(e) {
         ea = () => {
             en.dispatch(L.jej.POPOUT_CLOSE);
         },
-        eo = "top" === F ? `${P} ${P} 0 0` : `0 0 ${P} ${P}`,
+        eo = "top" === F ? `${x} ${x} 0 0` : `0 0 ${x} ${x}`,
         el = () => {
             (0, T.Y5)({
                 questId: t.id,
@@ -186,7 +186,7 @@ function G(e) {
             H.current = e;
         },
         "aria-expanded": ee,
-        className: x.iE,
+        className: P.iE,
         style: {
             width: N.current?.clientWidth ?? U,
             height: ei.height,
@@ -197,18 +197,18 @@ function G(e) {
             ref: (e) => {
                 Q.current = e;
             },
-            className: x.kL,
+            className: P.kL,
             style: { borderRadius: eo },
             children: [
                 (0, r.jsxs)("div", {
-                    className: x.Mn,
+                    className: P.Mn,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: x.kb,
+                            className: P.kb,
                             children: [
                                 (0, r.jsx)(c.Heading, { variant: "heading-sm/semibold", children: ef.headerText }),
                                 (0, r.jsxs)(c.DUT, {
-                                    className: x.yj,
+                                    className: P.yj,
                                     onClick: (e) => {
                                         ea(), ec(e);
                                     },
@@ -216,14 +216,14 @@ function G(e) {
                                         (0, r.jsx)(c.Text, {
                                             variant: "text-xs/medium",
                                             color: "text-muted",
-                                            className: x.BK,
+                                            className: P.BK,
                                             children: M.intl.format(M.t["Lm8/mH"], {
                                                 gamePublisher: t.config.messages.gamePublisher,
                                             }),
                                         }),
                                         (0, r.jsx)(c.cBN, {
                                             size: "custom",
-                                            className: x.$y,
+                                            className: P.$y,
                                             width: k,
                                             height: k,
                                             color: c.LU0.colors.INTERACTIVE_TEXT_DEFAULT,
@@ -233,16 +233,16 @@ function G(e) {
                             ],
                         }),
                         (0, r.jsx)("div", {
-                            className: x.pG,
+                            className: P.pG,
                             children: (0, r.jsxs)("div", {
-                                className: x.zc,
+                                className: P.zc,
                                 children: [
                                     es(
                                         (e, t) =>
                                             t &&
                                             (0, r.jsx)(s.animated.div, {
                                                 style: { opacity: (0, O.a)(e.opacity), scale: (0, O.a)(e.scale) },
-                                                className: x.ae,
+                                                className: P.ae,
                                             }),
                                     ),
                                     "game" === ef.tileAssetType &&
@@ -251,12 +251,12 @@ function G(e) {
                                                 gameTitle: t.config.messages.gameTitle,
                                                 gamePublisher: t.config.messages.gamePublisher,
                                             }),
-                                            className: x.TW,
+                                            className: P.TW,
                                             src: (0, I.tW)(t, I.fY.GAME_TILE, Z).url,
                                         }),
                                     "reward" === ef.tileAssetType &&
                                         (0, r.jsx)(R.A, {
-                                            className: x.TW,
+                                            className: P.TW,
                                             quest: t,
                                             questContent: g.uF.MEMBERS_LIST,
                                             learnMoreStyle: "icon",

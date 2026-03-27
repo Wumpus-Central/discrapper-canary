@@ -4,7 +4,7 @@ var i = n(627968),
     s = n(64700),
     l = n(503698),
     a = n.n(l),
-    r = n(4208),
+    r = n(382222),
     o = n(397927),
     c = n(475743),
     d = n(216418),
@@ -17,8 +17,8 @@ var i = n(627968),
     g = n(306852),
     f = n(947580),
     x = n(163432),
-    E = n(652215),
-    C = n(806931),
+    C = n(652215),
+    E = n(806931),
     I = n(256960),
     N = n(363862);
 let b = 16 / 9,
@@ -48,13 +48,13 @@ function T(e) {
         F = (0, c.A)(B),
         [K, W] = s.useState(!0),
         [Y, z] = s.useState(!1),
-        q = L.type === C.lp.ACTIVITY,
+        q = L.type === E.lp.ACTIVITY,
         X = (0, d.A)(q ? L.applicationId : void 0),
         Q = !q && null != L.streamId,
         J = U <= 2 * S + 144,
         $ = M && !J,
         Z = (0, c.A)($),
-        ee = P === E.DUB.MINIMUM || P === E.DUB.NORMAL,
+        ee = P === C.DUB.MINIMUM || P === C.DUB.NORMAL,
         et = !J && (!ee || q),
         en = (0, _.A)(et, 100),
         ei = ((0, c.A)(L.id) ?? L.id) !== L.id,
@@ -86,9 +86,9 @@ function T(e) {
                 delay: ec || !$ ? 0 : 100,
                 config: { ...r.config.stiff, clamp: !0 },
                 onStart: () => z(!0),
-                onChange: () => m._.dispatch(E.jej.REMEASURE_TARGET),
+                onChange: () => m._.dispatch(C.jej.REMEASURE_TARGET),
                 onRest: () => {
-                    z(!1), m._.dispatch(E.jej.REMEASURE_TARGET);
+                    z(!1), m._.dispatch(C.jej.REMEASURE_TARGET);
                 },
             },
             eh,
@@ -115,7 +115,7 @@ function T(e) {
             H(e), W(!1);
         }, []),
         ex = $ ? [] : (0, f.Cf)(v, L, V),
-        { visibleParticipants: eE, participantTileWidth: eC } = (0, x.i4)(G, y);
+        { visibleParticipants: eC, participantTileWidth: eE } = (0, x.i4)(G, y);
     return (0, i.jsxs)("div", {
         className: a()(N.zr, I.tR, D),
         children: [
@@ -189,8 +189,8 @@ function T(e) {
                             onClick: n,
                             onContextMenu: l,
                             onDoubleClick: T,
-                            participants: eE,
-                            participantTileWidth: eC,
+                            participants: eC,
+                            participantTileWidth: eE,
                             selectedParticipantId: L.id,
                             inCall: R,
                             popoutType: j,

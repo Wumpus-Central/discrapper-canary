@@ -2,7 +2,7 @@
 n.d(t, { A: () => O });
 var i = n(627968),
     s = n(64700),
-    l = n(4208),
+    l = n(382222),
     a = n(837381),
     r = n(311907),
     o = n(397927),
@@ -17,8 +17,8 @@ var i = n(627968),
     g = n(309010),
     f = n(287809),
     x = n(607567),
-    E = n(531685),
-    C = n(941971),
+    C = n(531685),
+    E = n(941971),
     I = n(375855),
     N = n(900848),
     b = n(65611),
@@ -48,7 +48,7 @@ class R extends s.PureComponent {
         let { controller: t } = this.state;
         e(),
             t
-                .update({ immediate: !E.A.isFocused(), height: 1, opacity: 1, scale: 1, config: j })
+                .update({ immediate: !C.A.isFocused(), height: 1, opacity: 1, scale: 1, config: j })
                 .start()
                 .then(() => this.setState({ animating: !1 }));
     }
@@ -59,7 +59,7 @@ class R extends s.PureComponent {
     componentWillLeave(e) {
         let { controller: t } = this.state;
         this.setState({ animating: !0 }, () =>
-            t.update({ immediate: !E.A.isFocused(), height: 0, opacity: 0, scale: 0, config: j }).start().then(e),
+            t.update({ immediate: !C.A.isFocused(), height: 0, opacity: 0, scale: 0, config: j }).start().then(e),
         );
     }
     componentWillUnmount() {
@@ -130,7 +130,7 @@ class R extends s.PureComponent {
             style: this.getAnimatedStyle(),
             children: (0, i.jsxs)(N.c, {
                 children: [
-                    (0, i.jsx)(C.A, { hovered: !_ && m, selected: !_ && n, unread: !_ && u, className: v.I }),
+                    (0, i.jsx)(E.A, { hovered: !_ && m, selected: !_ && n, unread: !_ && u, className: v.I }),
                     (0, i.jsx)(I.A, {
                         channel: e,
                         children: (0, i.jsx)(o.Qk9, {
@@ -155,8 +155,8 @@ let O = s.forwardRef(function (e, t) {
         u = (0, r.bG)([d.A], () => d.A.getMode(n), [n]),
         A = (0, r.bG)([m.A], () => m.A.getAllApplicationStreamsForChannel(n).length > 0),
         f = (0, r.bG)([x.Ay], () => x.Ay.getVoiceStatesForChannel(e.channel).length > 0, [e.channel]),
-        E = (0, r.bG)([g.A], () => g.A.getChannelId(), []),
-        C = (0, r.bG)([p.Ay], () => p.Ay.getMentionCount(n), [n]),
+        C = (0, r.bG)([g.A], () => g.A.getChannelId(), []),
+        E = (0, r.bG)([p.Ay], () => p.Ay.getMentionCount(n), [n]),
         I = c === n,
         N = !1,
         b = !1;
@@ -166,9 +166,9 @@ let O = s.forwardRef(function (e, t) {
         ...e,
         ref: t,
         channelName: s,
-        unread: C > 0,
-        selected: E === n,
-        badge: C,
+        unread: E > 0,
+        selected: C === n,
+        badge: E,
         audio: N,
         video: b,
         stream: A,

@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(4208),
+    o = n(382222),
     l = n(110259),
     u = n(66455),
     c = n(607399),
@@ -58,9 +58,9 @@ function S(e) {
         D = { ...S[v].impressionProperties, location_stack: y };
     O({ type: l.ImpressionTypes.MODAL, name: b, properties: D, _stackContext: { isSlide: !0 } });
     let { ref: L, width: w = 0, height: M = 0 } = (0, f.Ay)(v),
-        x = { ...g, ...T.springConfig, ...(R.enabled ? { clamp: !0 } : null) },
-        P = (0, _.zhh)(
-            { width: T.width ?? w, height: M, config: x },
+        P = { ...g, ...T.springConfig, ...(R.enabled ? { clamp: !0 } : null) },
+        x = (0, _.zhh)(
+            { width: T.width ?? w, height: M, config: P },
             null == N ? "animate-never" : "respect-motion-settings",
         ),
         k = (0, _.pnh)(
@@ -70,7 +70,7 @@ function S(e) {
                 from: { value: 1 },
                 enter: { value: 0 },
                 leave: { value: -1 },
-                config: x,
+                config: P,
                 onRest: (e, t) => {
                     let { item: n } = t;
                     n === v && null != T.onSlideReady && T.onSlideReady(n);
@@ -83,8 +83,8 @@ function S(e) {
         V =
             c.Fr && !T.shouldUseMediaQueriesForSizing
                 ? "100%"
-                : P.width.to((e) => ("string" == typeof e ? e : Math.round(e))),
-        B = c.Fr && !T.shouldUseMediaQueriesForSizing ? "100%" : P.height.to((e) => Math.round(e)),
+                : x.width.to((e) => ("string" == typeof e ? e : Math.round(e))),
+        B = c.Fr && !T.shouldUseMediaQueriesForSizing ? "100%" : x.height.to((e) => Math.round(e)),
         H = i.useMemo(
             () =>
                 c.Fr

@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(4208),
+    o = n(382222),
     l = n(508382),
     u = n(158954),
     c = n(502939),
@@ -38,11 +38,11 @@ function I(e) {
         } = e,
         { isRichTooltip: L } = (0, f.w6)(),
         w = (0, c.D)("Tooltip"),
-        [M, x] = i.useState(I?.ownerDocument);
+        [M, P] = i.useState(I?.ownerDocument);
     i.useLayoutEffect(() => {
-        x(m(T?.current, I, s.current));
+        P(m(T?.current, I, s.current));
     }, [T, I, s]);
-    let P = i.useMemo(() => (("left" === v || "right" === v ? A : g).includes(N) ? N : "center"), [v, N]);
+    let x = i.useMemo(() => (("left" === v || "right" === v ? A : g).includes(N) ? N : "center"), [v, N]);
     if (!n) return null;
     let k = (e) => {
         let { position: t, nudge: n } = e,
@@ -88,7 +88,7 @@ function I(e) {
     let U = (0, r.jsx)(d.QCO, {
         targetRef: T ?? s,
         position: v,
-        align: P,
+        align: x,
         spacing: C,
         positionKey: D,
         autoInvert: !0,

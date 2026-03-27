@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(4208),
+    o = n(382222),
     l = n(158954),
     u = n(863610),
     c = n(935154),
@@ -361,17 +361,17 @@ function w(e) {
             imageClassName: w,
             ref: M,
         } = e,
-        x = n !== h.clD.UNKNOWN ? n : null,
-        P = (0, E.Kj)(i),
-        k = null != x ? Math.ceil((2.5 * P.status - P.status) / 2) : 0,
-        U = P.size + k,
-        G = (0, c.S3)(x, s);
+        P = n !== h.clD.UNKNOWN ? n : null,
+        x = (0, E.Kj)(i),
+        k = null != P ? Math.ceil((2.5 * x.status - x.status) / 2) : 0,
+        U = x.size + k,
+        G = (0, c.S3)(P, s);
     return (0, r.jsx)(D, {
         ...e,
         ariaLabel: b,
         ariaHidden: R,
-        status: x,
-        specs: P,
+        status: P,
+        specs: x,
         typingOffset: k,
         children: (0, r.jsxs)("svg", {
             ref: M,
@@ -384,9 +384,9 @@ function w(e) {
                 (0, r.jsx)("foreignObject", {
                     x: 0,
                     y: 0,
-                    width: P.size,
-                    height: P.size,
-                    mask: `url(#${N(x, i, o, _, l)})`,
+                    width: x.size,
+                    height: x.size,
+                    mask: `url(#${N(P, i, o, _, l)})`,
                     children: (0, r.jsx)(L, {
                         ref: m,
                         src: t,
@@ -396,28 +396,28 @@ function w(e) {
                         className: w,
                     }),
                 }),
-                null != x && null != v ? O(v, P, x, { isMobile: o, isTyping: _, isVR: l }) : null,
-                null != x
+                null != P && null != v ? O(v, x, P, { isMobile: o, isTyping: _, isVR: l }) : null,
+                null != P
                     ? (0, r.jsx)(d.m_, {
-                          text: S ? (0, p.MU)(x) : null,
+                          text: S ? (0, p.MU)(P) : null,
                           ariaHidden: !0,
                           position: "top",
-                          spacing: 5 + 1.5 * P.stroke,
+                          spacing: 5 + 1.5 * x.stroke,
                           delay: y,
                           children: (0, r.jsxs)("g", {
                               children: [
                                   (0, r.jsx)("rect", {
-                                      ...C(P, x, { isMobile: o, isTyping: _, isVR: l }),
+                                      ...C(x, P, { isMobile: o, isTyping: _, isVR: l }),
                                       fill: G,
-                                      mask: `url(#${(0, c.p8)(x, { isMobile: o, isTyping: _, isVR: l })})`,
+                                      mask: `url(#${(0, c.p8)(P, { isMobile: o, isTyping: _, isVR: l })})`,
                                       className: A.Hs,
                                   }),
                                   _
                                       ? (0, r.jsx)(u.n, {
                                             ref: f,
-                                            dotRadius: P.status / 4,
-                                            x: P.size - 1.375 * P.status - P.offset,
-                                            y: P.size - P.status / 1.333 - P.offset,
+                                            dotRadius: x.status / 4,
+                                            x: x.size - 1.375 * x.status - x.offset,
+                                            y: x.size - x.status / 1.333 - x.offset,
                                         })
                                       : null,
                               ],
@@ -432,7 +432,7 @@ function M(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     return 5 - (n && !r ? 0 : 0.5 * e) + 1.5 * t;
 }
-function x(e, t, n) {
+function P(e, t, n) {
     let r = e.status * t,
         i = null != n ? (2.5 * r - r) / 2 : 0,
         s = (e.status - r) / 2,
@@ -442,7 +442,7 @@ function x(e, t, n) {
         u = Math.round((o / t) * 100) / 100;
     return `translate(${l}, ${u})`;
 }
-function P(e) {
+function x(e) {
     let {
             fromIsMobile: t = !0,
             fromStatus: n,
@@ -458,7 +458,7 @@ function P(e) {
             status: C,
             statusColor: R,
             statusTooltip: w = !1,
-            statusTooltipDelay: P,
+            statusTooltipDelay: x,
             statusBackdropColor: k,
             "aria-hidden": U = !1,
             "aria-label": G,
@@ -537,9 +537,9 @@ function P(e) {
                     ariaHidden: !0,
                     position: "top",
                     spacing: M(ee.status, ee.stroke, _, f),
-                    delay: P,
+                    delay: x,
                     children: (0, r.jsxs)(o.animated.g, {
-                        transform: es.scale.to((e) => `scale(${e}) ${x(ee, e, C)}`),
+                        transform: es.scale.to((e) => `scale(${e}) ${P(ee, e, C)}`),
                         children: [
                             (0, r.jsxs)("svg", {
                                 width: et,
@@ -584,7 +584,7 @@ let U = i.memo(function (e) {
             (p.current = h), (u.current = n), (d.current = a), (f.current = _);
         }, [n, a, _, h]),
         !l && null != n && null != u.current && h
-            ? (0, r.jsx)(P, {
+            ? (0, r.jsx)(x, {
                   ...s,
                   status: n,
                   statusColor: _,

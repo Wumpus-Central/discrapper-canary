@@ -3,7 +3,7 @@ var r = n(627968),
     l = n(64700),
     a = n(503698),
     i = n.n(a),
-    s = n(4208),
+    s = n(382222),
     o = n(311907),
     u = n(876230),
     c = n(649658),
@@ -99,13 +99,13 @@ let w = { tension: 250, friction: 5, clamp: !0 },
             eZ = (0, l.useRef)(null),
             eq = l.useRef(!0),
             [e0, e1] = l.useState(null),
-            e6 = l.useCallback(
+            e2 = l.useCallback(
                 (e, t) => {
                     I?.(e, t);
                 },
                 [I],
             ),
-            { isHlsActive: e2 } = (0, S.Ay)(eJ, { src: es, initialTimeSec: L, onError: e6, onHlsInstance: q }),
+            { isHlsActive: e6 } = (0, S.Ay)(eJ, { src: es, initialTimeSec: L, onError: e2, onHlsInstance: q }),
             [e4, e8] = l.useState(!1),
             [e7, e9] = l.useState(null),
             [e3, e5] = l.useState(0),
@@ -393,10 +393,10 @@ let w = { tension: 250, friction: 5, clamp: !0 },
                         onSeeked: () => {
                             e8(!0);
                         },
-                        onAbort: () => e6(u.SB.ABORT),
-                        onError: () => e6(u.SB.ERROR),
-                        onEmptied: () => e6(u.SB.EMPTIED),
-                        onStalled: () => e6(u.SB.STALLED),
+                        onAbort: () => e2(u.SB.ABORT),
+                        onError: () => e2(u.SB.ERROR),
+                        onEmptied: () => e2(u.SB.EMPTIED),
+                        onStalled: () => e2(u.SB.STALLED),
                         onClick: () => {
                             tx();
                         },
@@ -411,9 +411,9 @@ let w = { tension: 250, friction: 5, clamp: !0 },
                                     srcLang: "en",
                                     default: !0,
                                 }),
-                            !e2 &&
+                            !e6 &&
                                 (0, r.jsx)("source", {
-                                    onError: () => e6(u.SB.SOURCE_ERROR),
+                                    onError: () => e2(u.SB.SOURCE_ERROR),
                                     src: es,
                                     type: "video/mp4",
                                 }),

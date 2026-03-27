@@ -4,7 +4,7 @@ var i = n(627968),
     s = n(64700),
     l = n(503698),
     a = n.n(l),
-    r = n(4208),
+    r = n(382222),
     o = n(311907),
     c = n(397927),
     d = n(250719),
@@ -51,15 +51,15 @@ function f(e) {
 function x(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: l, jumpToVoiceChannels: d, jumpToChannel: u } = e,
         { bottomBar: A, topBar: x } = (0, o.cf)([m.A], () => m.A.getUnreadStateForGuildId(n.id)),
-        E = (0, o.bG)([h.A], () => h.A.isFocused()),
-        { mode: C, mentionCount: I, targetChannelId: N } = "bottom" === t ? A : x,
-        b = C === m.k.HIDDEN,
+        C = (0, o.bG)([h.A], () => h.A.isFocused()),
+        { mode: E, mentionCount: I, targetChannelId: N } = "bottom" === t ? A : x,
+        b = E === m.k.HIDDEN,
         S = (0, c.zhh)(
             {
                 to: { transform: b ? ("bottom" === t ? "translateY(180%)" : "translateY(-180%)") : "translateY(0%)" },
                 config: g,
             },
-            E ? "respect-motion-settings" : "animate-never",
+            C ? "respect-motion-settings" : "animate-never",
         ),
         T = s.useCallback(
             (e) => {
@@ -74,9 +74,9 @@ function x(e) {
             style: S,
             "aria-hidden": b,
             children:
-                C === m.k.HIDDEN
+                E === m.k.HIDDEN
                     ? (0, i.jsx)("div", { className: a()(p.M0, p.Te) })
-                    : C === m.k.UNREAD
+                    : E === m.k.UNREAD
                       ? (0, i.jsxs)(c.DUT, {
                             className: p.M0,
                             onClick: T,
@@ -104,7 +104,7 @@ function x(e) {
                                 }),
                             ],
                         })
-                      : C === m.k.MENTIONS
+                      : E === m.k.MENTIONS
                         ? (0, i.jsx)(c.DUT, {
                               className: a()(p.M0, p.vU),
                               onClick: T,
@@ -115,7 +115,7 @@ function x(e) {
                                   children: _.intl.format(_.t.EQcLyp, { count: I }),
                               }),
                           })
-                        : C === m.k.VOICE_CHANNELS
+                        : E === m.k.VOICE_CHANNELS
                           ? (0, i.jsx)(f, { jumpToVoiceChannels: d, guildChannels: n, guildChannelsVersion: l })
                           : void 0,
         }),
