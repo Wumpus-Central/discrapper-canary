@@ -90,10 +90,10 @@ let E = (e, t) => {
             t = (0, r.bG)([l.A], () => l.A.getPremiumSubscription()),
             n = (0, r.bG)([a.default], () => a.default.getCurrentUser()),
             i = (0, r.bG)([o.A], () => {
+                if (null == o.A.get(_.gD.PREMIUM_GROUP_MONTH)) return !1;
                 try {
-                    let e = (0, u.Rr)(),
-                        t = (0, u.I8)(_.gD.PREMIUM_GROUP_MONTH, { purchaseType: p.lid.DEFAULT, currency: e });
-                    return null != t;
+                    let e = (0, u.I8)(_.gD.PREMIUM_GROUP_MONTH, { purchaseType: p.lid.DEFAULT });
+                    return null != e;
                 } catch {
                     return !1;
                 }
