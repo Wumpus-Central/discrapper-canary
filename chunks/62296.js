@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+t.exports = {
     Lb: "confettiCanvas__8fcbd",
     VN: "close__8fcbd",
     yl: "modal__8fcbd",

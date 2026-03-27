@@ -1,56 +1,56 @@
-t.d(a, { default: () => m });
-var n = t(627968),
-    s = t(64700),
-    i = t(106778),
-    r = t(311907),
-    l = t(397927),
-    d = t(775602),
-    c = t(524246),
-    o = t(14368),
-    u = t(62296);
-function m(e) {
-    let { title: a, description: t, image: m, button: p, ...x } = e,
-        g = (0, r.bG)([d.A], () => d.A.useReducedMotion),
-        f = s.useRef(null),
-        h = s.useRef(new i.OH()),
-        [v, j] = s.useState(null);
-    return (0, n.jsxs)(n.Fragment, {
+n.d(e, { A: () => p });
+var r = n(627968),
+    a = n(64700),
+    i = n(106778),
+    l = n(311907),
+    s = n(397927),
+    o = n(775602),
+    d = n(524246),
+    u = n(14368),
+    c = n(62296);
+function p(t) {
+    let { title: e, description: n, image: p, button: f, ..._ } = t,
+        m = (0, l.bG)([o.A], () => o.A.useReducedMotion),
+        A = a.useRef(null),
+        v = a.useRef(new i.OH()),
+        [x, g] = a.useState(null);
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, n.jsx)(i.Fk, { ref: j, className: u.Lb, environment: h.current }),
-            (0, n.jsxs)(l.EOs, {
+            (0, r.jsx)(i.Fk, { ref: g, className: c.Lb, environment: v.current }),
+            (0, r.jsxs)(s.EOs, {
                 "data-migration-pending": !0,
-                className: u.yl,
-                size: l.rIJ.DYNAMIC,
-                ...x,
+                className: c.yl,
+                size: s.rIJ.DYNAMIC,
+                ..._,
                 parentComponent: "GuildPowerupActivateModal",
                 children: [
-                    (0, n.jsx)(l.$mQ, {
+                    (0, r.jsx)(s.$mQ, {
                         "data-migration-pending": !0,
-                        className: u._F,
+                        className: c._F,
                         scrollbarType: "none",
-                        children: (0, n.jsxs)("div", {
-                            className: u.kL,
-                            ref: f,
+                        children: (0, r.jsxs)("div", {
+                            className: c.kL,
+                            ref: A,
                             children: [
-                                m,
-                                (0, n.jsxs)("div", {
-                                    className: u.hQ,
+                                p,
+                                (0, r.jsxs)("div", {
+                                    className: c.hQ,
                                     children: [
-                                        (0, n.jsx)(l.Heading, { variant: "heading-xl/extrabold", children: a }),
-                                        (0, n.jsx)(l.Text, {
+                                        (0, r.jsx)(s.Heading, { variant: "heading-xl/extrabold", children: e }),
+                                        (0, r.jsx)(s.Text, {
                                             tag: "span",
-                                            className: u.h_,
+                                            className: c.h_,
                                             variant: "text-sm/normal",
-                                            children: t,
+                                            children: n,
                                         }),
-                                        p,
+                                        f,
                                     ],
                                 }),
                             ],
                         }),
                     }),
-                    (0, n.jsx)(l.s_y, { "data-migration-pending": !0, className: u.VN, onClick: x.onClose }),
-                    !g && (0, n.jsx)(c.A, { confettiTarget: f.current, confettiCanvas: v, sprites: (0, o.rA)() }),
+                    (0, r.jsx)(s.s_y, { "data-migration-pending": !0, className: c.VN, onClick: _.onClose }),
+                    !m && (0, r.jsx)(d.A, { confettiTarget: A.current, confettiCanvas: x, sprites: (0, u.rA)() }),
                 ],
             }),
         ],
