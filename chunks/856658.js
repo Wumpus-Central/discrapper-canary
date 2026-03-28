@@ -9,9 +9,9 @@ var r = n(627968),
     c = n(341915),
     d = n(890687),
     m = n(646764),
-    E = n(758468),
-    p = n(86761);
-let _ = { duration: 250 },
+    E = n(80026),
+    _ = n(684739);
+let p = { duration: 250 },
     f = (e) => {
         let {
                 currentPx: t,
@@ -24,32 +24,32 @@ let _ = { duration: 250 },
                 onMouseEnter: g,
                 onMouseLeave: A,
             } = e,
-            { label: x, targetSec: C, leftPx: T, rightPx: b, index: D } = n,
+            { label: C, targetSec: T, leftPx: b, rightPx: x, index: D } = n,
             { completedRatio: y } = (0, d.O9)(f),
-            [I, N] = i.useState(!1),
-            L = T - E.Ue,
-            R = t >= L ? Math.min(1, (t - L) / (b - L)) : 0,
+            [I, L] = i.useState(!1),
+            N = b - E.Ue,
+            R = t >= N ? Math.min(1, (t - N) / (x - N)) : 0,
             O = 0 === D && y < 1,
-            { fill: M } = (0, o.zhh)({
+            { fill: k } = (0, o.zhh)({
                 fill: 100 * R,
-                config: _,
+                config: p,
                 onRest: () => {
-                    R <= 0 && N(!1);
+                    R <= 0 && L(!1);
                 },
                 onStart: () => {
-                    N(!0);
+                    L(!0);
                 },
             });
         return (0, r.jsxs)(l.animated.div, {
-            className: a()(p.ck, { [p.a]: O && I, [p.C9]: !O && I }),
+            className: a()(_.ck, { [_.a]: O && I, [_.C9]: !O && I }),
             style: {
-                left: s ? S.to((e) => T - e) : T,
+                left: s ? S.to((e) => b - e) : b,
                 "--custom-indicator-size": s ? S.to((e) => `${E.lS + 2 * e}px`) : `${E.lS}px`,
-                "--custom-indicator-fill": M.to((e) => e),
+                "--custom-indicator-fill": k.to((e) => e),
             },
             children: [
                 (0, r.jsx)(o.DUT, {
-                    className: p.E6,
+                    className: _.E6,
                     onClick:
                         null != h
                             ? (e) => {
@@ -67,23 +67,23 @@ let _ = { duration: 250 },
                     }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: p.Ru,
+                    className: _.Ru,
                     role: "tooltip",
-                    "aria-label": null != x ? `${(0, u.rB)(C)} - ${x}` : (0, u.rB)(C),
+                    "aria-label": null != C ? `${(0, u.rB)(T)} - ${C}` : (0, u.rB)(T),
                     children: [
                         (0, r.jsx)(o.Text, {
                             variant: "text-xs/normal",
                             color: "always-white",
-                            children: (0, u.rB)(C),
+                            children: (0, u.rB)(T),
                         }),
-                        null != x &&
+                        null != C &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    (0, r.jsx)("span", { className: p.AE, "aria-hidden": "true" }),
+                                    (0, r.jsx)("span", { className: _.AE, "aria-hidden": "true" }),
                                     (0, r.jsx)(o.Text, {
                                         variant: "text-xs/normal",
                                         color: "always-white",
-                                        children: x,
+                                        children: C,
                                     }),
                                 ],
                             }),

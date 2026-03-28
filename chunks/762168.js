@@ -1,4 +1,4 @@
-n.d(t, { DX: () => m, _v: () => x, cs: () => y, ec: () => v, kK: () => g, sn: () => C });
+n.d(t, { DX: () => S, _v: () => y, cs: () => T, ec: () => C, kK: () => g, sn: () => h });
 var r = n(627968),
     a = n(64700),
     o = n(412703),
@@ -10,9 +10,10 @@ var r = n(627968),
     c = n(73473),
     p = n(839727),
     _ = n(795068),
-    f = n(652215),
+    f = n(654487),
+    m = n(652215),
     b = n(784018);
-function m(e) {
+function S(e) {
     let {
         url: t,
         width: n = 640,
@@ -33,7 +34,7 @@ function g() {
         { streamProgressSeconds: t = 0, completedAt: n = null, enrolledAt: r = null, claimedAt: a = null } = e;
     return {
         userId: "123",
-        questId: S,
+        questId: v,
         enrolledAt: r,
         completedAt: n,
         claimedAt: a,
@@ -44,13 +45,13 @@ function g() {
         progress: {},
     };
 }
-let S = `playground-video-quest-${Date.now()}`;
-function v(e) {
+let v = `playground-video-quest-${Date.now()}`;
+function C(e) {
     return {
-        id: S,
+        id: v,
         preview: !0,
         config: {
-            id: S,
+            id: v,
             configVersion: 2,
             startsAt: "2024-01-01T00:00:00+00:00",
             expiresAt: "2030-01-01T00:00:00+00:00",
@@ -62,9 +63,8 @@ function v(e) {
                 rewards: [
                     {
                         skuId: "",
-                        asset: "",
-                        assetVideo: null,
-                        type: i.l.REWARD_CODE,
+                        type: i.l.VIRTUAL_CURRENCY,
+                        orbQuantity: 200,
                         messages: {
                             name: "Test Reward",
                             nameWithArticle: "a Test Reward",
@@ -93,14 +93,14 @@ function v(e) {
         targetedContent: [u.uF.QUEST_HOME_DESKTOP],
     };
 }
-function C(e) {
+function h(e) {
     let {
             quest: t,
             isPortrait: n,
             children: o,
             isFullscreenEnabled: i = !1,
             useNewStyling: s = !1,
-            setIsFullscreenEnabled: l = f.tEg,
+            setIsFullscreenEnabled: l = m.tEg,
         } = e,
         d = a.useMemo(
             () => ({
@@ -108,7 +108,7 @@ function C(e) {
                 sourceQuestContent: u.uF.INTERNAL_PREVIEW_TOOL,
                 videoSessionId: "playground-session",
                 isPortrait: n,
-                onClose: f.tEg,
+                onClose: m.tEg,
                 isFullscreenEnabled: i,
                 setIsFullscreenEnabled: l,
                 useNewProgressBarStyling: s,
@@ -124,57 +124,67 @@ function C(e) {
             (0, r.jsx)(_.l.Provider, { value: p, children: (0, r.jsx)(_.a.Provider, { value: d, children: o }) }),
     });
 }
-function h(e) {
-    let { orientation: t, autoplay: n, questCompleted: o, useNewStyling: i, videoUrl: s } = e,
-        l = "portrait" === t,
-        [u, c] = a.useState(!1),
-        _ = m({
-            url: s,
-            width: l ? 360 : 640,
-            height: l ? 640 : 360,
-            videoTitle: l ? "Test Portrait Video" : "Test Landscape Video",
+function x(e) {
+    let {
+            orientation: t,
+            autoplay: n,
+            questCompleted: o,
+            fullEpisode: i,
+            targetTimeSec: s,
+            useNewStyling: l,
+            videoUrl: u,
+        } = e,
+        c = "portrait" === t,
+        [_, b] = a.useState(!1),
+        v = S({
+            url: u,
+            width: c ? 360 : 640,
+            height: c ? 640 : 360,
+            target: s,
+            videoTitle: c ? "Test Portrait Video" : "Test Landscape Video",
             transcript: "transcript.txt",
         }),
-        b = v(_),
-        S = o
-            ? {
-                  ...b,
-                  userStatus: g({
-                      enrolledAt: b.userStatus?.enrolledAt ?? null,
-                      completedAt: b.userStatus?.enrolledAt ?? null,
-                      streamProgressSeconds: _.target,
-                  }),
-              }
-            : b;
+        x = C(v);
+    i && (x.config.features = [f.Li.FULL_EPISODE_VIDEO_QUEST]);
+    let y = o
+        ? {
+              ...x,
+              userStatus: g({
+                  enrolledAt: x.userStatus?.enrolledAt ?? null,
+                  completedAt: x.userStatus?.enrolledAt ?? null,
+                  streamProgressSeconds: v.target,
+              }),
+          }
+        : x;
     return (0, r.jsx)("div", {
         style: {
-            width: l ? "400px" : "100%",
-            maxWidth: l ? void 0 : "800px",
-            height: l ? "700px" : "500px",
+            width: c ? "400px" : "100%",
+            maxWidth: c ? void 0 : "800px",
+            height: c ? "700px" : "500px",
             backgroundColor: "#1e1f22",
             borderRadius: "8px",
             overflow: "hidden",
             "--custom-footer-horizontal-padding": "20px",
         },
-        children: (0, r.jsx)(C, {
-            quest: S,
-            isPortrait: l,
-            isFullscreenEnabled: u,
-            setIsFullscreenEnabled: c,
-            useNewStyling: i,
+        children: (0, r.jsx)(h, {
+            quest: y,
+            isPortrait: c,
+            isFullscreenEnabled: _,
+            setIsFullscreenEnabled: b,
+            useNewStyling: l,
             children: (0, r.jsx)(p.A, {
-                targetTimeSec: _.target,
+                targetTimeSec: v.target,
                 parentTransitionState: d.ip4.ENTERED,
-                onOptimisticProgressUpdate: f.tEg,
+                onOptimisticProgressUpdate: m.tEg,
                 autoplay: n,
                 performanceClockStartTime: 0,
                 orientation: t,
-                videoUrlOverride: s,
+                videoUrlOverride: u,
             }),
         }),
     });
 }
-let x = {
+let y = {
         orientation: {
             label: "Orientation",
             type: "select",
@@ -186,23 +196,25 @@ let x = {
         },
         autoplay: { label: "Autoplay", type: "boolean", defaultValue: !1 },
         questCompleted: { label: "Quest Completed", type: "boolean", defaultValue: !1 },
+        fullEpisode: { label: "Full Episode (shows reward indicator)", type: "boolean", defaultValue: !1 },
+        targetTimeSec: { label: "Target Time (sec)", type: "number", defaultValue: 15 },
         useNewStyling: { label: "Use New Styling", type: "boolean", defaultValue: !1 },
         videoUrl: { label: "Video URL", type: "text", defaultValue: b.kz },
     },
-    y = {
+    T = {
         title: "Video Player",
         stories: [
             {
                 name: "Landscape Video (Quests)",
                 id: "landscape-video",
-                component: h,
-                controls: { ...x, orientation: { ...x.orientation, defaultValue: "landscape" } },
+                component: x,
+                controls: { ...y, orientation: { ...y.orientation, defaultValue: "landscape" } },
             },
             {
                 name: "Portrait Video (Quests)",
                 id: "portrait-video",
-                component: h,
-                controls: { ...x, orientation: { ...x.orientation, defaultValue: "portrait" } },
+                component: x,
+                controls: { ...y, orientation: { ...y.orientation, defaultValue: "portrait" } },
             },
         ],
     };

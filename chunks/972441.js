@@ -15,11 +15,11 @@ function u(e) {
             onClick: m,
             percent: p,
         } = e,
-        [E, f] = r.useState(null),
-        [h, v] = r.useState(null),
-        [x, g] = r.useState(!1),
-        { i18n: S } = (0, l.G98)(),
-        A = r.useMemo(() => {
+        [h, f] = r.useState(null),
+        [x, E] = r.useState(null),
+        [v, g] = r.useState(!1),
+        { i18n: b } = (0, l.G98)(),
+        y = r.useMemo(() => {
             let e = { role: "progressbar", "aria-label": "Progress Bar" };
             return (
                 null != p &&
@@ -27,29 +27,29 @@ function u(e) {
                     ((e["aria-valuenow"] = p),
                     (e["aria-valuemin"] = 0),
                     (e["aria-valuemax"] = 100),
-                    (e["aria-label"] = S.PERCENT_COMPLETE(Math.round(p)))),
+                    (e["aria-label"] = b.PERCENT_COMPLETE(Math.round(p)))),
                 e
             );
-        }, [p, S]),
-        b = r.useMemo(() => (null == E || null == u ? null : (0, a.DX)(u, d, E)), [E, u, d]),
-        _ = (0, s.A)((e) => {
+        }, [p, b]),
+        S = r.useMemo(() => (null == h || null == u ? null : (0, a.DX)(u, d, h)), [h, u, d]),
+        C = (0, s.A)((e) => {
             f(e.contentRect);
         }),
-        C = (0, i.w)(_),
-        y = (e) => {
-            null != C.current && v(e.clientX - C.current.getBoundingClientRect().left);
+        A = (0, i.w)(C),
+        N = (e) => {
+            null != A.current && E(e.clientX - A.current.getBoundingClientRect().left);
         };
     return {
-        contRef: C,
-        boundingRect: E,
+        contRef: A,
+        boundingRect: h,
         handleMouseEnter: (e) => {
-            c && (g(!0), y(e));
+            c && (g(!0), N(e));
         },
         handleMouseLeave: (e) => {
-            c && (g(!1), v(null));
+            c && (g(!1), E(null));
         },
         handleMouseMove: (e) => {
-            c && x && y(e);
+            c && v && N(e);
         },
         handleKeyDown: r.useCallback(
             (e) => {
@@ -60,15 +60,16 @@ function u(e) {
             },
             [t, n],
         ),
-        hoveredAtX: h,
-        maxSeekableX: b,
-        isHovering: x,
+        hoveredAtX: x,
+        maxSeekableX: S,
+        isHovering: v,
         handleClick: (e) => {
             if (!c || null == m) return;
             let t = e.currentTarget.getBoundingClientRect(),
-                n = e.clientX - t.left;
-            m((0, a.hc)(n, t, d));
+                n = e.clientX - t.left,
+                r = (0, a.hc)(n, t, d);
+            m(null != u ? Math.min(r, u) : r);
         },
-        ariaProps: A,
+        ariaProps: y,
     };
 }

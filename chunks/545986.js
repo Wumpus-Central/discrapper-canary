@@ -143,7 +143,7 @@ function Z(e) {
     t.log(`Showing survey ${r.id}`), (0, P.m)({ questId: e.id, survey: r });
 }
 function X() {
-    return Promise.all([n.e("57174"), n.e("92868"), n.e("36671"), n.e("29636"), n.e("7634"), n.e("71269")]).then(
+    return Promise.all([n.e("57174"), n.e("92868"), n.e("36671"), n.e("29636"), n.e("7634"), n.e("7355")]).then(
         n.bind(n, 201257),
     );
 }
@@ -250,7 +250,7 @@ function en(e) {
 }
 function er(e) {
     (0, o.mMO)(async () => {
-        let { default: t } = await Promise.all([n.e("56838"), n.e("27818")]).then(n.bind(n, 518420));
+        let { default: t } = await Promise.all([n.e("94201"), n.e("27818")]).then(n.bind(n, 518420));
         return (n) => (0, r.jsx)(t, { ...n, questId: e.id });
     });
 }

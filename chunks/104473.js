@@ -1,4 +1,4 @@
-n.d(t, { AZ: () => S });
+n.d(t, { AZ: () => g });
 var r = n(627968),
     a = n(64700),
     o = n(382222),
@@ -30,21 +30,12 @@ function c(e) {
     });
 }
 function p(e) {
-    let {
-        orientation: t,
-        autoplay: n,
-        seekForwardRestricted: a,
-        videoUrl: o,
-        poster: l,
-        showEndScreen: p,
-        active: _,
-    } = e;
+    let { orientation: t, autoplay: n, maxSeekableTimeSec: a, videoUrl: o, poster: l, showEndScreen: p, active: _ } = e;
     return (0, r.jsx)("div", {
         style: {
             width: "landscape" === t ? "640px" : "360px",
             height: "landscape" === t ? "360px" : "640px",
             margin: "0 auto",
-            backgroundColor: "#000",
         },
         children: (0, r.jsx)(
             s.A,
@@ -54,7 +45,7 @@ function p(e) {
                 active: _,
                 autoplay: n,
                 orientation: t,
-                seekForwardRestricted: a,
+                maxSeekableTimeSec: a > 0 ? a : void 0,
                 parentTransitionState: i.ip4.ENTERED,
                 targetTimeSec: 1 / 0,
                 onOptimisticProgressUpdate: () => {},
@@ -85,7 +76,7 @@ let _ = {
             defaultValue: "landscape",
         },
         autoplay: { label: "Autoplay", type: "boolean", defaultValue: !1 },
-        seekForwardRestricted: { label: "Restrict Seek Forward", type: "boolean", defaultValue: !1 },
+        maxSeekableTimeSec: { label: "Max Seekable Time (sec, 0 = unrestricted)", type: "number", defaultValue: 0 },
         videoUrl: { label: "Video URL", type: "text", defaultValue: d.kz },
         poster: { label: "Poster URL", type: "text", defaultValue: u },
         showEndScreen: { label: "Show End Screen", type: "boolean", defaultValue: !0 },
@@ -97,13 +88,13 @@ let _ = {
         component: p,
         controls: { ..._, orientation: { ..._.orientation, defaultValue: "landscape" } },
     },
-    b = {
+    m = {
         name: "Portrait Video (Generic)",
         id: "portrait-video-generic",
         component: p,
         controls: { ..._, orientation: { ..._.orientation, defaultValue: "portrait" } },
     },
-    m = {
+    b = {
         name: "HLS Video (Generic)",
         id: "hls-video-generic",
         component: p,
@@ -113,25 +104,25 @@ let _ = {
             videoUrl: { ..._.videoUrl, defaultValue: d.Im },
         },
     },
-    g = { tension: 500, friction: 30, clamp: !0 },
-    S = {
+    S = { tension: 500, friction: 30, clamp: !0 },
+    g = {
         title: "Discord Video Player (Generic)",
         stories: [
             f,
-            b,
             m,
+            b,
             {
                 name: "Timeline Indicators (Generic)",
                 id: "timeline-indicators-generic",
                 component: function (e) {
-                    let { orientation: t, autoplay: n, seekForwardRestricted: l, videoUrl: d, indicatorTimeSec: u } = e,
+                    let { orientation: t, autoplay: n, maxSeekableTimeSec: l, videoUrl: d, indicatorTimeSec: u } = e,
                         c = (function (e) {
                             let [t, n] = a.useState(null),
                                 [s, l] = a.useState(null),
                                 d = a.useRef(null),
                                 [{ expansion: u }, c] = (0, i.zhh)(() => ({
                                     expansion: 0,
-                                    config: g,
+                                    config: S,
                                     onRest: () => {
                                         null == d.current && l(null);
                                     },
@@ -195,13 +186,12 @@ let _ = {
                             width: "landscape" === t ? "640px" : "360px",
                             height: "landscape" === t ? "360px" : "640px",
                             margin: "0 auto",
-                            backgroundColor: "#000",
                         },
                         children: (0, r.jsx)(s.A, {
                             src: d,
                             autoplay: n,
                             orientation: t,
-                            seekForwardRestricted: l,
+                            maxSeekableTimeSec: l > 0 ? l : void 0,
                             parentTransitionState: i.ip4.ENTERED,
                             targetTimeSec: 1 / 0,
                             onOptimisticProgressUpdate: () => {},
@@ -213,7 +203,7 @@ let _ = {
                 controls: {
                     orientation: _.orientation,
                     autoplay: _.autoplay,
-                    seekForwardRestricted: _.seekForwardRestricted,
+                    maxSeekableTimeSec: _.maxSeekableTimeSec,
                     videoUrl: _.videoUrl,
                     indicatorTimeSec: { label: "Indicator Time (sec)", type: "number", defaultValue: 15 },
                 },

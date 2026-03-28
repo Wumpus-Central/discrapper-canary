@@ -10,8 +10,6 @@ e.exports = {
     YK: "seekableBar_e5e85f",
     Ey: "timeDisplay_e5e85f",
     Ub: "grabber_e5e85f",
-    Fv: "roundedV1_e5e85f",
-    KR: "roundedV2_e5e85f",
     $v: "segmentWrapper_e5e85f",
     WJ: "segmentBufferClip_e5e85f",
     Bw: "segmentBufferContent_e5e85f",

@@ -16,7 +16,7 @@ let u = (e) => {
             preloadedBuffers: m,
             maxSeekableX: p,
             interactionEnabled: h,
-            useNewStyles: f,
+            segmentBorderRadius: f = 99,
             showGlow: x,
             glowClassName: E,
             progressFillClassName: v,
@@ -26,13 +26,13 @@ let u = (e) => {
         A = u.to((e) => Math.min(Math.max(0, e - g), C)),
         N = null != n && null != c && y === n,
         T = !N && null != n && null != c && S === n,
-        w = N || T,
-        R = T
+        R = N || T,
+        w = T
             ? (0, s.to)([A, c], (e, t) => `translateX(-${Math.max(0, C - t - e)}px)`)
             : A.to((e) => `translateX(-${C - e}px)`),
-        j = w ? (0, s.to)([A, c], (e, t) => (N ? Math.max(0, e - t) : Math.min(e, C - t))) : A,
-        D = Math.max(0, (p ?? 0) - g),
-        P = f ? o.KR : o.Fv,
+        j = R ? (0, s.to)([A, c], (e, t) => (N ? Math.max(0, e - t) : Math.min(e, C - t))) : A,
+        P = Math.max(0, (p ?? 0) - g),
+        D = { borderRadius: `${f}px` },
         L = l.useMemo(
             () =>
                 m
@@ -44,7 +44,7 @@ let u = (e) => {
         className: o.$v,
         style: {
             left: N ? c.to((e) => g + e) : g,
-            width: w ? c.to((e) => C - e) : C,
+            width: R ? c.to((e) => C - e) : C,
             "--custom-segment-bg": null != a ? a : void 0,
             "--custom-r-left": u.to((e) => (0 === g || e >= g ? "99px" : "0px")),
             "--custom-r-right": u.to((e) => (b >= d || e >= b ? "99px" : "0px")),
@@ -62,20 +62,20 @@ let u = (e) => {
                                 (0, r.jsx)(
                                     "div",
                                     {
-                                        className: i()(o.r, P),
-                                        style: { width: `${e.endPx - e.startPx}px`, left: `${e.startPx}px` },
+                                        className: o.r,
+                                        style: { width: `${e.endPx - e.startPx}px`, left: `${e.startPx}px`, ...D },
                                     },
                                     `${e.startPx}:${e.endPx}`,
                                 ),
                             ),
                             !h &&
-                                D > 0 &&
-                                (0, r.jsx)("div", { className: i()(o.YK, P), style: { width: `${D}px`, opacity: 1 } }),
+                                P > 0 &&
+                                (0, r.jsx)("div", { className: o.YK, style: { width: `${P}px`, opacity: 1, ...D } }),
                         ],
                     }),
                     (0, r.jsx)(s.animated.div, {
                         className: i()(o.TN, v),
-                        style: { transform: R, opacity: A.to((e) => (e <= 0 ? 0 : 1)) },
+                        style: { transform: w, opacity: A.to((e) => (e <= 0 ? 0 : 1)) },
                     }),
                 ],
             }),
