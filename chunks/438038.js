@@ -1,4 +1,4 @@
-n.d(t, { R: () => h });
+n.d(t, { R: () => m });
 var i = n(627968),
     a = n(64700),
     r = n(382222);
@@ -8,65 +8,60 @@ var l = n(341915),
     o = n(73473),
     d = n(288531),
     c = n(285433),
-    u = n(394900),
-    _ = n(433745),
-    m = n(915689);
-function h(e) {
-    let { quest: t, location: n, initiallyExpanded: h, contentPosition: p, sourceQuestContent: g } = e,
-        A = (0, s.LS)(t),
-        { containerRef: x, size: f, height: C } = (0, u.L)(),
-        {
-            expansionSpring: I,
-            isAnimating: E,
-            isExpanded: b,
-            toggleExpanded: v,
-        } = (0, u.s)({ initiallyExpanded: h || (0, _.RA)({ location: n, quest: t }) }),
-        [T, y] = a.useState(!1),
-        S = () => y(!0),
-        N = () => y(!1),
-        j = C ?? _._B;
+    u = n(394900);
+n(433745);
+var _ = n(915689);
+function m(e) {
+    let { quest: t, location: n, contentPosition: m, sourceQuestContent: h } = e,
+        p = (0, s.LS)(t),
+        { containerRef: g, size: A, height: x } = (0, u.L)(),
+        { expansionSpring: f, isAnimating: C, isExpanded: I, toggleExpanded: E } = (0, u.s)({ initiallyExpanded: !0 }),
+        [b, v] = a.useState(!1),
+        T = () => v(!0),
+        y = () => v(!1),
+        S = x ?? 1e3;
     return (0, i.jsx)(o.R, {
         questOrQuests: t,
         questContent: n,
-        questContentPosition: p,
+        questContentPosition: m,
         trackGuildAndChannelMetadata: n === l.uF.QUESTS_EMBED,
-        sourceQuestContent: g,
+        sourceQuestContent: h,
         children: (e) =>
             (0, i.jsx)(r.animated.div, {
-                style: { maxHeight: n === l.uF.QUESTS_EMBED ? void 0 : I.to({ range: [0, 1], output: [_.es, j] }) },
-                className: m.i,
-                onMouseEnter: S,
-                onMouseLeave: N,
-                onFocus: S,
-                onBlur: N,
+                style: { maxHeight: n === l.uF.QUESTS_EMBED ? void 0 : f.to({ range: [0, 1], output: [100, S] }) },
+                className: _.i,
+                onMouseEnter: T,
+                onMouseLeave: y,
+                onFocus: T,
+                onBlur: y,
                 children: (0, i.jsxs)("div", {
                     ref: (t) => {
-                        (e.current = t), (x.current = t);
+                        (e.current = t), (g.current = t);
                     },
                     children: [
                         (0, i.jsx)(c.A, {
-                            isQuestExpired: A,
+                            isQuestExpired: p,
                             location: n,
                             quest: t,
-                            size: f,
-                            expansionSpring: I,
-                            isInteracting: T,
-                            isAnimating: E,
-                            isExpanded: b,
-                            contentPosition: p,
-                            toggleExpanded: v,
-                            sourceQuestContent: g,
+                            size: A,
+                            expansionSpring: f,
+                            isInteracting: b,
+                            isAnimating: C,
+                            isExpanded: I,
+                            contentPosition: m,
+                            toggleExpanded: E,
+                            sourceQuestContent: h,
                         }),
                         (0, i.jsx)(d.A, {
                             quest: t,
-                            isQuestExpired: A,
+                            isQuestExpired: p,
                             location: n,
-                            size: f,
-                            isFocused: T,
-                            isExpanded: b,
-                            isAnimating: E,
-                            contentPosition: p,
-                            sourceQuestContent: g,
+                            size: A,
+                            isFocused: b,
+                            isExpanded: I,
+                            isAnimating: C,
+                            contentPosition: m,
+                            sourceQuestContent: h,
                         }),
                     ],
                 }),
