@@ -19,9 +19,7 @@ let u = { skuId: "None" },
                         i = l.get(n.skuId),
                         r = null != s ? (0, c.gA)(s) : (0, c.G0)(i),
                         a = i?.isCategoryReward ?? !1;
-                    return (
-                        r ? t.premium_purchase.push(n) : null != s ? t.purchase.push(n) : r || a || t.preview.push(n), t
-                    );
+                    return r ? t.premium_purchase.push(n) : null != s ? t.purchase.push(n) : a || t.preview.push(n), t;
                 },
                 { purchase: [], premium_purchase: [], preview: [] },
             );

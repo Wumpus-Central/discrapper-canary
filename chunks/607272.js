@@ -22,7 +22,7 @@ function f(e) {
         m = f || h,
         E = u.A.isStranger(t);
     return null == n && m && !1 !== E
-        ? E && m
+        ? E
             ? void (0, c.B)({
                   onConfirm: () => {
                       _({ userId: t, applicationId: n, location: i, confirmStrangerRequest: !0 }), s?.();
@@ -34,18 +34,16 @@ function f(e) {
                       d?.();
                   },
               })
-            : m
-              ? void _({ userId: t, applicationId: n, location: i })
-                    .then((e) => {
-                        p(e, { userId: t, applicationId: n, location: i, onConfirm: s, onCancel: a }) || s?.();
-                    })
-                    .catch((e) => {
-                        p(e, { userId: t, applicationId: n, location: i, onConfirm: s, onCancel: a });
-                    })
-                    .finally(() => {
-                        d?.();
-                    })
-              : void 0
+            : void _({ userId: t, applicationId: n, location: i })
+                  .then((e) => {
+                      p(e, { userId: t, applicationId: n, location: i, onConfirm: s, onCancel: a }) || s?.();
+                  })
+                  .catch((e) => {
+                      p(e, { userId: t, applicationId: n, location: i, onConfirm: s, onCancel: a });
+                  })
+                  .finally(() => {
+                      d?.();
+                  })
         : _({ userId: t, applicationId: n, location: i, confirmStrangerRequest: !0 }).then(() => {
               s?.(), d?.();
           });

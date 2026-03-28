@@ -33,7 +33,7 @@ function m(e) {
                     children: [
                         (0, a.jsx)(d.A, { groupName: u.m.ACCOUNT_NAME_ZONE, targetElementRef: e.targetElementRef }),
                         (0, a.jsx)(s.Ay, {
-                            contentTypes: m ? (e.additionalDCs ?? []) : [],
+                            contentTypes: e.additionalDCs ?? [],
                             groupName: u.m.ACCOUNT_NAME_ZONE,
                             children: (t) => {
                                 let { visibleContent: n, markAsDismissed: s } = t;

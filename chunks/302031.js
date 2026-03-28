@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => b, Bs: () => v });
+n.d(t, { Ay: () => R, Bs: () => v });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -15,7 +15,7 @@ var r = n(627968),
     h = n(338717),
     m = n(403362),
     E = n(985018),
-    g = n(388963),
+    g = n(962296),
     A = (function (e) {
         return (e.TEXT = "text"), (e.ATTACHMENT = "attachment"), (e.EMBED = "embed"), e;
     })(A || {});
@@ -80,7 +80,7 @@ class N extends i.PureComponent {
     removeObscurity = (e) => {
         let { visible: t } = this.state;
         if (t) return;
-        t || (e.preventDefault(), e.stopPropagation()), this.setState({ visible: !0 });
+        e.preventDefault(), e.stopPropagation(), this.setState({ visible: !0 });
         let { onReveal: n } = this.props;
         null != n && n();
     };
@@ -130,7 +130,7 @@ class N extends i.PureComponent {
                               role: p ? "presentation" : "button",
                               tabIndex: p ? -1 : 0,
                               children: [
-                                  p || t ? null : (0, r.jsx)(S, { reason: o, isSingleMosaicItem: l }),
+                                  p ? null : (0, r.jsx)(S, { reason: o, isSingleMosaicItem: l }),
                                   (0, r.jsx)("div", { "aria-hidden": !p, className: g.Qu, children: e(!p) }),
                                   d
                                       ? null
@@ -285,4 +285,4 @@ let C = (e) => {
     return (0, r.jsx)(N, { ...e, shouldAgeVerify: t, isVerifiedTeen: n });
 };
 (C.Types = A), (C.Reasons = h.Oc);
-let b = C;
+let R = C;

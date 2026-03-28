@@ -56,7 +56,7 @@ function k(t) {
             let t = D ?? Y;
             if (null != j) {
                 if (!(null != k && k?.size > 0 && R) || E) return;
-                if ("" === Y.trim() && !E) return void H(!0);
+                if ("" === Y.trim()) return void H(!0);
                 j(l, [...k], U, t);
             } else {
                 if (null == a) return;

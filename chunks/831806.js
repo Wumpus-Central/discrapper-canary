@@ -104,10 +104,14 @@ function O(e) {
             .with("basic_info", () => (0, i.jsx)(C.A, { guildId: t }))
             .with("manage_listings", () => (0, i.jsx)(T.A, { guildId: t }))
             .with("payment", () => (0, i.jsx)(I.A, { guildId: t }))
-            .exhaustive(),
-        H = O ? (0, i.jsx)(o.VQ0.Panel, { id: k, children: F }) : (0, i.jsx)(o.y$y, {});
+            .exhaustive();
     return (0, i.jsxs)(c.ZV, {
         guildId: t,
-        children: [w, (0, i.jsx)(g.A, { guild: L }), (0, i.jsx)("div", { className: R.Mv, children: B }), H],
+        children: [
+            w,
+            (0, i.jsx)(g.A, { guild: L }),
+            (0, i.jsx)("div", { className: R.Mv, children: B }),
+            (0, i.jsx)(o.VQ0.Panel, { id: k, children: F }),
+        ],
     });
 }

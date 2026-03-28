@@ -2,8 +2,8 @@
 n.d(t, { A: () => d, E: () => c }), n(801541);
 var r = n(64700),
     i = n(889137),
-    a = n(311907),
-    s = n(287809),
+    s = n(311907),
+    a = n(287809),
     o = n(927578),
     l = n(704591);
 n(980504);
@@ -15,11 +15,11 @@ var u = n(985018),
     })({});
 function d(e, t, n, c) {
     let d = "0" === e.guildId,
-        _ = (0, a.bG)([s.default], () => o.Ay.canUseSoundboardEverywhere(s.default.getCurrentUser())),
+        _ = (0, s.bG)([a.default], () => o.Ay.canUseSoundboardEverywhere(a.default.getCurrentUser())),
         f = (0, l.tj)({ location: "useSoundmojiGuildInfoData" }),
         p = e.guildId !== t?.guild_id;
     return {
-        buttonType: r.useMemo(() => (d || !f ? 2 : f && !_ ? 1 : n || null == c ? 2 : 0), [d, _, f, n, c]),
+        buttonType: r.useMemo(() => (d || !f ? 2 : _ ? (n || null == c ? 2 : 0) : 1), [d, _, f, n, c]),
         description: r.useMemo(() => {
             let e = null != c;
             return (0, i.YW)({

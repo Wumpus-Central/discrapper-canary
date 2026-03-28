@@ -8,7 +8,6 @@ e.exports = {
     AB: "stickerCategoryGenericIcon__3ad28",
     dC: "stickerCategoryGeneric__3ad28",
     ls: "stickerCategoryGenericLast__3ad28",
-    d8: "stickerCategoryGenericDisabled__3ad28",
     ny: "guildCategorySeparator__3ad28",
     Fe: "standardStickerShortcut__3ad28",
     Q6: "invisibleShortcut__3ad28",

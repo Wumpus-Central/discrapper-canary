@@ -163,7 +163,7 @@ function L(e) {
                                     (0, s.jsx)(m.DUT, {
                                         className: I.wZ,
                                         onClick: () => {
-                                            S && b(!1);
+                                            b(!1);
                                         },
                                         "aria-label": "overlay",
                                     }),

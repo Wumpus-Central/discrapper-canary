@@ -9,7 +9,7 @@ var i = n(627968),
     d = n(147925),
     c = n(863913),
     u = n(985018),
-    m = n(209248);
+    m = n(443531);
 let g = function (e) {
     let {
             items: t,
@@ -23,7 +23,7 @@ let g = function (e) {
         [A, f] = s.useState(0),
         [j, N] = s.useState(!1),
         [E, b] = s.useState(!1),
-        T = s.useCallback(
+        C = s.useCallback(
             (e, t) => {
                 f((n) => {
                     let i = n + t;
@@ -32,16 +32,16 @@ let g = function (e) {
             },
             [f],
         ),
-        C = s.useCallback(() => {
-            E || T(t, 1);
-        }, [T, t, E]),
+        T = s.useCallback(() => {
+            E || C(t, 1);
+        }, [C, t, E]),
         I = s.useCallback(() => {
-            E || T(t, -1);
-        }, [T, t, E]);
+            E || C(t, -1);
+        }, [C, t, E]);
     return (
         s.useEffect(() => {
-            null != g && (j ? j && h.stop() : h.start(g, C));
-        }, [j, h, g, C]),
+            null != g && (j ? h.stop() : h.start(g, T));
+        }, [j, h, g, T]),
         (0, i.jsxs)("div", {
             className: m.zr,
             onMouseEnter: () => N(!0),
@@ -69,7 +69,7 @@ let g = function (e) {
                 }),
                 (0, i.jsx)(o.DUT, {
                     className: r()(m.Sx, l),
-                    onClick: C,
+                    onClick: T,
                     onMouseEnter: () => p(c.f.LEFT),
                     ignoreKeyPress: E,
                     children: (0, i.jsx)(d.A, {

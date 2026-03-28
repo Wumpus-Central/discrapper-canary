@@ -44,7 +44,7 @@ function N(e, t) {
                 S)
             )
                 l++;
-            else if (u && !S) {
+            else if (u) {
                 let t = d.A.getChannel(e);
                 Promise.resolve()
                     .then(n.bind(n, 645959))
@@ -95,17 +95,17 @@ function C(e, t) {
         !0
     );
 }
-function b() {
+function R() {
     let e = [];
     for (let [t, { isActive: n }] of Object.entries(y)) n && e.push(t);
     return e;
 }
-function R(e) {
+function O(e) {
     let { channelId: t, timestamp: r, lastMessageId: i, affinity: s, authorId: a } = e;
     if (h.Ay.isChannelMuted(null, t)) return !1;
     let { maxNudgeAge: o, maxNudgeCount: l } = E.T.getConfig({ location: "handleReplyNudgeSet" });
     if (t in (y = N(y, { maxNudgeAge: o, maxNudgeCount: l }))) return !1;
-    let u = b();
+    let u = R();
     if (u.length >= l) {
         let e = u.at(-1),
             r = 1 / 0;
@@ -152,7 +152,7 @@ function R(e) {
     }
     (y[t] = { timestamp: r, isActive: !0, lastMessageId: i, affinity: s, authorId: a }), v.add(t);
 }
-function O(e) {
+function b(e) {
     let { channelId: t } = e;
     return C(t, "manual");
 }
@@ -170,11 +170,11 @@ function w(e) {
     let { channelId: t, userId: n } = e;
     return n === c.default.getId() && C(t, "reaction_added");
 }
-function x(e) {
+function M(e) {
     let { guildId: t, channelId: n } = e;
     return null != n && null == t && C(n, "channel_opened");
 }
-function M(e) {
+function x(e) {
     let {
         channel: { id: t },
     } = e;
@@ -188,7 +188,7 @@ function P() {
         } = E.T.getConfig({ location: "handleNudgeVisibilityChange" }),
         r = !1 !== l.LJ.getSetting() && e;
     if (T === r) return !1;
-    (T = r) && ((y = N(y, { maxNudgeAge: t, maxNudgeCount: n })), (v = new Set(b()))),
+    (T = r) && ((y = N(y, { maxNudgeAge: t, maxNudgeCount: n })), (v = new Set(R()))),
         !1 === l.LJ.getSetting() && ((y = {}), (v = new Set()));
 }
 function k() {
@@ -257,12 +257,12 @@ class G extends r.Ay.PersistedStore {
     }
 }
 let F = new G(i.h, {
-    REPLY_NUDGE_SET: R,
-    REPLY_NUDGE_CLEAR: O,
+    REPLY_NUDGE_SET: O,
+    REPLY_NUDGE_CLEAR: b,
     REPLY_NUDGES_INITIALIZED: D,
     MESSAGE_CREATE: L,
     MESSAGE_REACTION_ADD: w,
-    CHANNEL_SELECT: x,
-    CHANNEL_DELETE: M,
+    CHANNEL_SELECT: M,
+    CHANNEL_DELETE: x,
     LOGOUT: U,
 });

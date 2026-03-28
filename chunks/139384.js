@@ -12,7 +12,7 @@ let l = (e, t) => {
     r.useEffect(() => {
         if (l)
             if (u) {
-                if (u && n.current && e?.current != null && (0, i.vq)(e.current, HTMLVideoElement))
+                if (n.current && e?.current != null && (0, i.vq)(e.current, HTMLVideoElement))
                     try {
                         e.current.load(), (n.current = !1);
                     } catch (e) {}

@@ -14,11 +14,10 @@ async function A(e, t) {
 }
 async function f(e, t, n) {
     let l = u.A.getGuild(e);
-    if (null == l) return !0;
-    let i = null != l && l.features?.has(E.GuildFeatures.GUILD_ONBOARDING);
     if (
-        !i ||
-        (i && s.A.shouldFetchPrompts(e) && (await (0, a.jx)(e)),
+        null == l ||
+        !(null != l && l.features?.has(E.GuildFeatures.GUILD_ONBOARDING)) ||
+        (s.A.shouldFetchPrompts(e) && (await (0, a.jx)(e)),
         !(function (e) {
             let t = s.A.getDefaultChannelIds(e);
             if (!s.A.isAdvancedMode(e)) return t;
@@ -29,9 +28,9 @@ async function f(e, t, n) {
         })(e).includes(t) || !(n.removingChat || n.removingView))
     )
         return !0;
-    let r = s.A.getDefaultChannelIds(e),
-        c = s.A.isAdvancedMode(e) ? s.A.getOnboardingPromptsForOnboarding(e) : [];
-    return !((0, d.G4)(e, r, c, (e) => e !== t && (0, d.VU)(e)).length < o.Kd);
+    let i = s.A.getDefaultChannelIds(e),
+        r = s.A.isAdvancedMode(e) ? s.A.getOnboardingPromptsForOnboarding(e) : [];
+    return !((0, d.G4)(e, i, r, (e) => e !== t && (0, d.VU)(e)).length < o.Kd);
 }
 async function N(e, t, n) {
     let u = e.getGuildId();

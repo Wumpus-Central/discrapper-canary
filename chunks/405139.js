@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { Mv: () => S, dP: () => y });
+n.d(t, { Mv: () => y, dP: () => S });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(732955),
     l = n(397927),
     u = n(626584),
@@ -14,8 +14,8 @@ var r = n(627968),
     p = n(71532),
     h = n(427262),
     m = n(652215),
-    g = n(985018),
-    E = n(205207);
+    E = n(985018),
+    g = n(865964);
 let A = new u.A("PaymentRequest"),
     I = Object.values({ applePay: "applePay", googlePay: "googlePay", link: "link", browserCard: "browserCard" });
 class T extends i.Component {
@@ -98,7 +98,7 @@ class T extends i.Component {
         let { available: e } = this.validatePaymentRequest();
         if (!e) return void this.onPaymentRequestFailure();
         let { paymentRequest: t } = this.state;
-        e && null != t && (t.show(), this.props.onChooseType(m.hes.PAYMENT_REQUEST, this.paymentRequestWallet));
+        null != t && (t.show(), this.props.onChooseType(m.hes.PAYMENT_REQUEST, this.paymentRequestWallet));
     };
     renderButton(e) {
         let { iconType: t, buttonText: n, ...i } = e;
@@ -109,7 +109,7 @@ class T extends i.Component {
                 onClick: this.attemptPaymentRequest,
                 text: n,
                 loading: this.state.submitting,
-                icon: () => (0, r.jsx)(c.Ay, { className: this.props.iconClassName ?? E.iA, type: t }),
+                icon: () => (0, r.jsx)(c.Ay, { className: this.props.iconClassName ?? g.iA, type: t }),
                 ...i,
             },
             m.hes.PAYMENT_REQUEST,
@@ -119,8 +119,8 @@ class T extends i.Component {
         return (0, r.jsxs)("div", {
             className: this.props.className,
             children: [
-                (0, r.jsx)(c.Ay, { type: c.Ay.Types.PAYMENT_REQUEST, size: c.y3.MEDIUM, className: E.rS }),
-                (0, r.jsx)(l.Text, { variant: "text-md/medium", className: E.yW, children: g.intl.string(g.t.f19PPV) }),
+                (0, r.jsx)(c.Ay, { type: c.Ay.Types.PAYMENT_REQUEST, size: c.y3.MEDIUM, className: g.rS }),
+                (0, r.jsx)(l.Text, { variant: "text-md/medium", className: g.yW, children: E.intl.string(E.t.f19PPV) }),
             ],
         });
     }
@@ -129,7 +129,7 @@ class T extends i.Component {
             ? this.renderConnectorView()
             : this.renderButton({
                   iconType: c.Ay.Types.PAYMENT_REQUEST,
-                  buttonText: g.intl.string(g.t.f19PPV),
+                  buttonText: E.intl.string(E.t.f19PPV),
                   loading: !(0, f.isDesktop)() && this.state.submitting,
               });
     }
@@ -140,7 +140,7 @@ class T extends i.Component {
         return e ? this.renderMain() : null;
     }
 }
-class y extends T {
+class S extends T {
     state = { ...this.initialState };
     paymentRequestWallet = "googlePay";
     paymentRequestWalletName = "Google Pay";
@@ -160,8 +160,8 @@ class y extends T {
         return (0, r.jsxs)("div", {
             className: this.props.className,
             children: [
-                (0, r.jsx)(c.Ay, { type: c.Ay.Types.G_PAY, size: c.y3.MEDIUM, className: E.rS }),
-                (0, r.jsx)(l.Text, { variant: "text-md/medium", className: E.yW, children: g.intl.string(g.t.ueoGef) }),
+                (0, r.jsx)(c.Ay, { type: c.Ay.Types.G_PAY, size: c.y3.MEDIUM, className: g.rS }),
+                (0, r.jsx)(l.Text, { variant: "text-md/medium", className: g.yW, children: E.intl.string(E.t.ueoGef) }),
             ],
         });
     }
@@ -170,12 +170,12 @@ class y extends T {
             ? this.renderConnectorView()
             : this.renderButton({
                   iconType: c.Ay.Types.G_PAY,
-                  buttonText: g.intl.string(g.t.p2jr2E),
+                  buttonText: E.intl.string(E.t.p2jr2E),
                   loading: !(0, f.isDesktop)() && this.state.submitting,
               });
     }
 }
-class S extends T {
+class y extends T {
     state = { ...this.initialState };
     paymentRequestWallet = "applePay";
     paymentRequestWalletName = "Apple Pay";
@@ -195,8 +195,8 @@ class S extends T {
         return (0, r.jsxs)("div", {
             className: this.props.className,
             children: [
-                (0, r.jsx)(c.Ay, { type: c.Ay.Types.APPLE, size: c.y3.MEDIUM, className: s()(E.rS, E.X6) }),
-                (0, r.jsx)(l.Text, { variant: "text-md/medium", className: E.yW, children: g.intl.string(g.t.iv8pQV) }),
+                (0, r.jsx)(c.Ay, { type: c.Ay.Types.APPLE, size: c.y3.MEDIUM, className: a()(g.rS, g.X6) }),
+                (0, r.jsx)(l.Text, { variant: "text-md/medium", className: g.yW, children: E.intl.string(E.t.iv8pQV) }),
             ],
         });
     }
@@ -205,7 +205,7 @@ class S extends T {
             ? this.renderConnectorView()
             : this.renderButton({
                   iconType: c.Ay.Types.APPLE_LIGHT,
-                  buttonText: g.intl.string(g.t.xdGS1o),
+                  buttonText: E.intl.string(E.t.xdGS1o),
                   loading: !(0, f.isDesktop)() && this.state.submitting,
               });
     }

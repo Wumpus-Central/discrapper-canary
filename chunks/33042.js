@@ -63,8 +63,7 @@ function _(e) {
     let t = l.CY.useSetting(),
         n = (0, s.kB)(),
         r = l.Jr.useSetting(),
-        o = e === u.clD.DND,
-        d = (a) => {
+        o = (a) => {
             let i = g(t);
             if (e === a && null != i) return i;
             switch (a) {
@@ -76,7 +75,7 @@ function _(e) {
                     return;
             }
         },
-        c = (0, a.jsx)(a.Fragment, {
+        d = (0, a.jsx)(a.Fragment, {
             children: h.map((t) => {
                 let { duration: n, label: l } = t;
                 return (0, a.jsx)(
@@ -93,16 +92,16 @@ function _(e) {
                 );
             }),
         }),
-        _ = p({ status: u.clD.ONLINE, currentStatus: e }),
-        f = p({ status: u.clD.IDLE, currentStatus: e, description: d(u.clD.IDLE) }),
-        b = p({ status: u.clD.DND, currentStatus: e, description: d(u.clD.DND) }),
-        v = p({ status: u.clD.INVISIBLE, currentStatus: e, description: d(u.clD.INVISIBLE) });
+        c = p({ status: u.clD.ONLINE, currentStatus: e }),
+        _ = p({ status: u.clD.IDLE, currentStatus: e, description: o(u.clD.IDLE) }),
+        f = p({ status: u.clD.DND, currentStatus: e, description: o(u.clD.DND) }),
+        v = p({ status: u.clD.INVISIBLE, currentStatus: e, description: o(u.clD.INVISIBLE) });
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            _,
+            c,
             (0, a.jsx)(i.bXX, {}, "menu-separator-statuses"),
+            _,
             f,
-            b,
             v,
             n
                 ? (0, a.jsxs)(a.Fragment, {
@@ -118,15 +117,9 @@ function _(e) {
                                   label: m.intl.string(m.t.gJRnwK),
                                   iconLeft: i.a_I,
                                   leadingAccessory: { type: "icon", icon: i.a_I },
-                                  badge: {
-                                      text: n
-                                          ? m.intl.string(m.t.ApAu9f)
-                                          : o
-                                            ? m.intl.string(m.t.gH3Frd)
-                                            : m.intl.string(m.t["64pl82"]),
-                                  },
+                                  badge: { text: m.intl.string(m.t.ApAu9f) },
                                   subtext:
-                                      n && null != r && "0" !== r
+                                      null != r && "0" !== r
                                           ? m.intl.format(m.t.BWD8fs, {
                                                 endTime: new Date(Number(r)).toLocaleString(m.intl.currentLocale, {
                                                     month: "numeric",
@@ -140,7 +133,7 @@ function _(e) {
                                       (0, s.ES)(!n);
                                   },
                                   dontCloseOnAction: !0,
-                                  children: c,
+                                  children: d,
                               },
                               "quiet-mode",
                           ),

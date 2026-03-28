@@ -698,7 +698,7 @@ function eO(e) {
                 s = i
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              i && (0, r.jsx)(p.id, { size: "custom", width: 13, height: 13, className: eE.vb }),
+                              (0, r.jsx)(p.id, { size: "custom", width: 13, height: 13, className: eE.vb }),
                               em.intl.string(em.t.d6DpXI),
                           ],
                       })

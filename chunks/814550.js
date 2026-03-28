@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { f: () => s, u: () => l });
+n.d(t, { f: () => a, u: () => l });
 var r = n(64700),
     i = n(735438),
-    a = n(860923),
-    s = (function (e) {
+    s = n(860923),
+    a = (function (e) {
         return (
             (e.IDLE = "idle"),
             (e.HEAD_TURN = "headTurn"),
@@ -20,14 +20,14 @@ let o = {
     },
     l = (e) => {
         let [t, n] = r.useState("idle"),
-            [s, l] = r.useState(),
-            u = (0, a.A)(),
+            [a, l] = r.useState(),
+            u = (0, s.A)(),
             c = r.useMemo(() => u?.characters[e], [u, e]),
             d = r.useCallback(() => {
-                if (null == c) return s;
+                if (null == c) return a;
                 let e = c[t];
                 return (0, i.sample)(e);
-            }, [s, c, t]);
+            }, [a, c, t]);
         r.useEffect(() => {
             l(d());
         }, [u, e, d]),
@@ -36,17 +36,16 @@ let o = {
             }, [t]);
         let _ = () => {
                 let e = 10,
-                    n = !1,
-                    r = 0,
-                    i = new Set([t]);
-                for (; !n && r < e; ) r += 1;
-                return i;
+                    n = 0,
+                    r = new Set([t]);
+                for (; n < e; ) n += 1;
+                return r;
             },
             f = (e) => (e === t ? t : o[e].includes(t) ? (n(e), e) : t);
         return {
             animationState: t,
             updateAnimationState: f,
-            asset: s,
+            asset: a,
             setAsset: l,
             sampleAsset: d,
             findAnimationTree: _,

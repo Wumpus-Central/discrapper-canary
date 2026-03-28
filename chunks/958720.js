@@ -15,7 +15,7 @@ var r = n(627968),
     h = n(580630),
     m = n(788868),
     E = n(985018),
-    g = n(371894);
+    g = n(799297);
 let A = (e, t) => {
         let n = e.interval === m.WT.YEAR ? E.t.ECT4A5 : E.t.v9QeON;
         return E.intl.format(n, { price: (0, h.$g)(t.amount, t.currency) });
@@ -58,14 +58,12 @@ let A = (e, t) => {
             : null == t || (t.interval === m.WT.YEAR && null != e) || (s && !u)
               ? null != t && t.interval === m.WT.YEAR && null != e
                   ? E.intl.string(E.t["122kWB"])
-                  : s && !u
-                    ? null == l || i
-                        ? null
-                        : {
-                              type: "badge",
-                              textBadgeVariant: "eyebrow",
-                              text: E.intl.format(E.t.IAybsG, { discount: (0, f.l9)(r, l / 100) }),
-                          }
+                  : s && !u && null != l
+                    ? {
+                          type: "badge",
+                          textBadgeVariant: "eyebrow",
+                          text: E.intl.format(E.t.IAybsG, { discount: (0, f.l9)(r, l / 100) }),
+                      }
                     : null
               : null;
     };

@@ -2,8 +2,8 @@
 n.d(t, { A: () => m });
 var r = n(439372),
     i = n(400492),
-    a = n(312671),
-    s = n(470710),
+    s = n(312671),
+    a = n(470710),
     o = n(734057),
     l = n(803224),
     u = n(309010),
@@ -11,17 +11,17 @@ var r = n(439372),
     d = n(977997),
     _ = n(607567),
     f = n(313961);
-let p = (0, i.aN)("call_calling", a.A.getSoundpack());
+let p = (0, i.aN)("call_calling", s.A.getSoundpack());
 class h extends r.A {
     #e = new Set();
     _initialize() {
         this.stores = new Map()
-            .set(s.A, this.handleRingUpdate)
+            .set(a.A, this.handleRingUpdate)
             .set(l.A, this.handleRingUpdate)
             .set(c.A, this.handleRingUpdate)
             .set(d.A, this.handleRingUpdate)
             .set(f.A, this.handleChannelRTCStoreChange)
-            .set(a.A, this.handleSoundpackUpdate);
+            .set(s.A, this.handleSoundpackUpdate);
     }
     actions = {
         GUILD_LOCAL_RING_START: (e) => this.handleGuildRingStart(e),
@@ -33,12 +33,12 @@ class h extends r.A {
         null == n || r || !e || l.A.isSoundDisabled("call_calling") || c.A.disableSounds ? p.stop() : p.loop();
     };
     handleSoundpackUpdate = () => {
-        p.stop(), (p = (0, i.aN)("call_calling", a.A.getSoundpack()));
+        p.stop(), (p = (0, i.aN)("call_calling", s.A.getSoundpack()));
     };
     handleRingUpdate = () => {
         let e = u.A.getVoiceChannelId(),
             t = o.A.getChannel(e)?.guild_id ?? null,
-            n = s.A.getCalls().some(
+            n = a.A.getCalls().some(
                 (e) => e.ringing.length > 0 && d.A.getCurrentClientVoiceChannelId(null) === e.channelId,
             );
         this._handleRing(n || this.#e.size > 0, t);
@@ -58,18 +58,17 @@ class h extends r.A {
             this._handleRing(this.#e.size > 0, n);
     };
     handleChannelRTCStoreChange = () => {
-        let e = u.A.getVoiceChannelId(),
-            t = this.#e.size > 0;
-        if (!t) return;
-        if (null == e && t) {
+        let e = u.A.getVoiceChannelId();
+        if (!(this.#e.size > 0)) return;
+        if (null == e) {
             (this.#e = new Set()), this._handleRing(this.#e.size > 0, null);
             return;
         }
         if (null == e) return;
-        let n = f.A.getGuildRingingUsers(e),
-            r = new Set([...this.#e].filter((e) => !n.has(e)));
-        r.size > 0 &&
-            (r.forEach((e) => {
+        let t = f.A.getGuildRingingUsers(e),
+            n = new Set([...this.#e].filter((e) => !t.has(e)));
+        n.size > 0 &&
+            (n.forEach((e) => {
                 this.#e.delete(e);
             }),
             this._handleRing(this.#e.size > 0, null));

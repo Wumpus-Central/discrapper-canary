@@ -18,8 +18,8 @@ var r = n(412703),
     g = n(341915),
     A = n(759366),
     I = n(245853),
-    T = n(943849),
-    S = n(590202),
+    T = n(590202),
+    S = n(851936),
     y = n(710969),
     v = n(639214),
     N = n(792620),
@@ -28,7 +28,7 @@ var r = n(412703),
 let O = +p.A.Millis.MINUTE,
     b = 2,
     D = +p.A.Millis.SECOND,
-    L = (0, T.L)({ location: R.rE.QUESTS_MANAGER });
+    L = (0, S.L)({ location: R.rE.QUESTS_MANAGER });
 function w(e) {
     return !(0, y.Ic)(e) && null != e.userStatus && null != e.userStatus.enrolledAt && null == e.userStatus.completedAt;
 }
@@ -40,7 +40,7 @@ function M(e) {
         if ((s.config.features.includes(i.L.ACTIVITY_QUEST_AUTO_ENROLLMENT) && !n) || (t && 1))
             return void (0, m.Oy)(s.id, {
                 questContent: g.uF.RUNNING_ACTIVITY,
-                questContentCTA: S.Cy.START_QUEST,
+                questContentCTA: T.Cy.START_QUEST,
                 sourceQuestContent: g.uF.RUNNING_ACTIVITY,
             });
 }
@@ -218,7 +218,7 @@ class k extends s.A {
                 let r = (0, N.vS)(t);
                 w(t) && null != r && r === n && e.set(t.id, { applicationId: n });
             }
-        for (let t of r.values()) w(t) && (0, C._e)(t) && n && e.set(t.id, { applicationId: R.ej });
+        for (let t of r.values()) w(t) && (0, C._e)(t) && e.set(t.id, { applicationId: R.ej });
         return (
             L.log("~ getActivelyProgressingActivityQuestIds -> Actively progressing questIds: ", Array.from(e.keys())),
             e

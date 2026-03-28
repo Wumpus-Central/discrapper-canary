@@ -120,7 +120,7 @@ class e_ extends a.Component {
     componentDidUpdate(e) {
         let { initialized: t } = this.props;
         if (t) {
-            if (t && !this.didUpdate) {
+            if (!this.didUpdate) {
                 (this.didUpdate = !0), this.initialSetup();
                 return;
             }
