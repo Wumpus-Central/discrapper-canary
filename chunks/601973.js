@@ -64,6 +64,7 @@ function f(e) {
               "aria-hidden": !0,
               tabIndex: -1,
               className: c.E1,
+              onMouseDown: (e) => e.preventDefault(),
               onClick: i,
               children: (0, r.jsx)("span", {
                   className: s()(c.t4, { [c.nT]: n }),

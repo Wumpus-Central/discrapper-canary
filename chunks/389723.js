@@ -168,8 +168,8 @@ function C(e) {
         en = "multiple" === M && Y,
         er = null != L ? (0, f.ZN)(F, L) : void 0,
         ei = i.useCallback(() => {
-            H || z?.(!$);
-        }, [H, $, z]),
+            H || z?.((e) => (e || O.current?.focus(), !e));
+        }, [H, z]),
         es = i.useCallback(() => {
             !0 === U && ("multiple" === M ? K([]) : K(null), J(""), O.current?.focus());
         }, [K, M, U, J]),
