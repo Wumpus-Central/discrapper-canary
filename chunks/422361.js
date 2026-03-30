@@ -58,9 +58,9 @@ class en extends W.Ay {
     state = { popoutToShow: null, shouldShowGuildVerificationPopout: !1, hovered: !1 };
     ref = s.createRef();
     channelItemRef = s.createRef();
-    activitiesHoverTimeout = new o.Ep();
+    activitiesHideTimeout = new o.Ep();
     componentWillUnmount() {
-        this.activitiesHoverTimeout.stop();
+        this.activitiesHideTimeout.stop();
     }
     closeGuildVerificationPopout = () => {
         this.setState({ shouldShowGuildVerificationPopout: !1 });
@@ -100,17 +100,18 @@ class en extends W.Ay {
             });
     };
     handleMouseEnter = () => {
-        this.activitiesHoverTimeout.stop(), this.setState({ hovered: !0 });
-        let { enableHistoryHover: e } = (0, U.NH)({ guildId: this.props.channel.guild_id, location: "VoiceChannel" });
-        this.activitiesHoverTimeout.start(100, () => {
-            e && this.getVoiceStatesCount() > 0 && this.setState({ popoutToShow: "history" });
-        });
+        let { enableHistoryHover: e } = (0, U.NH)({ guildId: this.props.channel.guild_id, location: "VoiceChannel" }),
+            t = this.getVoiceStatesCount(),
+            n = null;
+        e && t > 0 && (n = "history"),
+            this.activitiesHideTimeout.stop(),
+            this.setState({ hovered: !0, popoutToShow: n });
     };
     handleMouseLeave = () => {
-        this.activitiesHoverTimeout.start(100, () => this.setState({ popoutToShow: null, hovered: !1 }));
+        this.activitiesHideTimeout.start(100, () => this.setState({ popoutToShow: null, hovered: !1 }));
     };
     closePopout = () => {
-        this.activitiesHoverTimeout.stop(), this.setState({ popoutToShow: null });
+        this.activitiesHideTimeout.stop(), this.setState({ popoutToShow: null });
     };
     getVoiceStatesCount() {
         let { voiceStates: e } = this.props;
@@ -173,12 +174,7 @@ class en extends W.Ay {
             : t || n
               ? null
               : "history" === s && this.getVoiceStatesCount() > 0
-                ? (0, i.jsx)(q.A, {
-                      channel: e,
-                      source: "voice_channel",
-                      onMouseEnter: this.handleMouseEnter,
-                      onMouseLeave: this.handleMouseLeave,
-                  })
+                ? (0, i.jsx)(q.A, { channel: e, source: "voice_channel" })
                 : null;
     };
     renderOpenChatButton = () => {
