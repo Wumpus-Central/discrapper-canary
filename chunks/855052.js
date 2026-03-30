@@ -1,12 +1,13 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => c });
 var r = n(315069),
     i = n(611010),
-    a = n(520606),
-    s = n(872472),
-    o = n(721932),
-    l = n(652215);
-class u extends r.A {
+    s = n(520606),
+    a = n(872472),
+    o = n(394300),
+    l = n(721932),
+    u = n(652215);
+class c extends r.A {
     id;
     userId;
     items;
@@ -20,20 +21,22 @@ class u extends r.A {
     }
     static fromServer(e) {
         let { user_id: t, wishlist_items: n, ...r } = e,
-            c = n.map((e) => {
+            d = n.map((e) => {
                 switch (e.sku_product_line) {
-                    case l.EZt.COLLECTIBLES:
-                        return s.A.fromServer(e);
-                    case l.EZt.SOCIAL_LAYER_GAME_ITEM:
+                    case u.EZt.COLLECTIBLES:
+                        return a.A.fromServer(e);
+                    case u.EZt.SOCIAL_LAYER_GAME_ITEM:
+                        return l.A.fromServer(e);
+                    case u.EZt.PREMIUM:
                         return o.A.fromServer(e);
                     default:
-                        return a.A.fromServer(e);
+                        return s.A.fromServer(e);
                 }
             });
-        return new u({
+        return new c({
             ...r,
             userId: t,
-            items: c,
+            items: d,
             applications: r.applications?.map((e) => i.Ay.createFromServer(e)) ?? void 0,
         });
     }
