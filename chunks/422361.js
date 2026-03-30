@@ -21,8 +21,8 @@ var i = n(627968),
     C = n(47167),
     I = n(262763),
     N = n(5932),
-    b = n(857253),
-    S = n(202384),
+    S = n(857253),
+    b = n(202384),
     T = n(51758),
     v = n(721592),
     y = n(508654),
@@ -58,9 +58,9 @@ class en extends W.Ay {
     state = { popoutToShow: null, shouldShowGuildVerificationPopout: !1, hovered: !1 };
     ref = s.createRef();
     channelItemRef = s.createRef();
-    activitiesHideTimeout = new o.Ep();
+    activitiesHoverTimeout = new o.Ep();
     componentWillUnmount() {
-        this.activitiesHideTimeout.stop();
+        this.activitiesHoverTimeout.stop();
     }
     closeGuildVerificationPopout = () => {
         this.setState({ shouldShowGuildVerificationPopout: !1 });
@@ -100,18 +100,17 @@ class en extends W.Ay {
             });
     };
     handleMouseEnter = () => {
-        let { enableHistoryHover: e } = (0, U.NH)({ guildId: this.props.channel.guild_id, location: "VoiceChannel" }),
-            t = this.getVoiceStatesCount(),
-            n = null;
-        e && t > 0 && (n = "history"),
-            this.activitiesHideTimeout.stop(),
-            this.setState({ hovered: !0, popoutToShow: n });
+        this.activitiesHoverTimeout.stop(), this.setState({ hovered: !0 });
+        let { enableHistoryHover: e } = (0, U.NH)({ guildId: this.props.channel.guild_id, location: "VoiceChannel" });
+        this.activitiesHoverTimeout.start(100, () => {
+            e && this.getVoiceStatesCount() > 0 && this.setState({ popoutToShow: "history" });
+        });
     };
     handleMouseLeave = () => {
-        this.activitiesHideTimeout.start(100, () => this.setState({ popoutToShow: null, hovered: !1 }));
+        this.activitiesHoverTimeout.start(100, () => this.setState({ popoutToShow: null, hovered: !1 }));
     };
     closePopout = () => {
-        this.activitiesHideTimeout.stop(), this.setState({ popoutToShow: null });
+        this.activitiesHoverTimeout.stop(), this.setState({ popoutToShow: null });
     };
     getVoiceStatesCount() {
         let { voiceStates: e } = this.props;
@@ -132,7 +131,7 @@ class en extends W.Ay {
     handleClick = () => {
         let { channel: e } = this.props,
             t = e.getGuildId();
-        null != t && (0, T.V)(t) && (0, S.Ze)(t), this.handleVoiceConnect();
+        null != t && (0, T.V)(t) && (0, b.Ze)(t), this.handleVoiceConnect();
     };
     handleVoiceStatusClick = (e) => {
         let { connected: t, channel: n } = this.props;
@@ -174,7 +173,12 @@ class en extends W.Ay {
             : t || n
               ? null
               : "history" === s && this.getVoiceStatesCount() > 0
-                ? (0, i.jsx)(q.A, { channel: e, source: "voice_channel" })
+                ? (0, i.jsx)(q.A, {
+                      channel: e,
+                      source: "voice_channel",
+                      onMouseEnter: this.handleMouseEnter,
+                      onMouseLeave: this.handleMouseLeave,
+                  })
                 : null;
     };
     renderOpenChatButton = () => {
@@ -222,8 +226,8 @@ class en extends W.Ay {
                 showTutorial: C,
                 hasActiveEvent: I,
                 embeddedApps: N,
-                isSubscriptionGated: b,
-                isFavoriteSuggestion: S,
+                isSubscriptionGated: S,
+                isFavoriteSuggestion: b,
                 withGuildIcon: T,
                 hasStartTime: v,
                 shouldHighlightChannel: y,
@@ -265,7 +269,7 @@ class en extends W.Ay {
                                         iconClassName: a()({ [et.Gj]: I || v || M }),
                                         hasActiveEvent: I,
                                         channel: e,
-                                        selected: !S && t,
+                                        selected: !b && t,
                                         connected: n,
                                         unread: n ? s : void 0,
                                         resolvedUnreadSetting: l,
@@ -279,26 +283,26 @@ class en extends W.Ay {
                                             this.handleContextMenu(e);
                                         },
                                         connectDragPreview: g,
-                                        isFavoriteSuggestion: S,
+                                        isFavoriteSuggestion: b,
                                         "aria-label": (0, x.Ay)({
                                             channel: e,
                                             unread: s,
                                             mentionCount: r,
                                             voiceStates: R,
                                             embeddedActivitiesCount: N.length,
-                                            isSubscriptionGated: b,
+                                            isSubscriptionGated: S,
                                         }),
                                         "aria-describedby": (0, E.A)({ channel: e, embeddedApps: N }),
                                         withGuildIcon: T,
                                         children: [
-                                            S &&
+                                            b &&
                                                 (0, i.jsxs)(i.Fragment, {
                                                     children: [
                                                         this.renderAcceptSuggestionButton(),
                                                         this.renderRemoveSuggestionButton(),
                                                     ],
                                                 }),
-                                            !S &&
+                                            !b &&
                                                 (0, i.jsxs)(i.Fragment, {
                                                     children: [
                                                         this.renderOpenChatButton(),
@@ -365,9 +369,9 @@ function es(e) {
         x = (0, y.Qs)(n.id),
         E = (0, r.bG)([f.A], () => null != f.A.getStartTime(n), [n]),
         { isSubscriptionGated: I, needSubscriptionToAccess: N } = (0, v.A)(n.id),
-        S = (0, b.A)(),
+        b = (0, S.A)(),
         T = (0, r.bG)([H.Ay], () => H.Ay.isFavorite(t.id, n.id)),
-        j = e.connected || S?.channelId === n.id,
+        j = e.connected || b?.channelId === n.id,
         { enableHangStatus: O, showEmptyChannelTopic: M } = (0, R.$j)({
             guildId: n.guild_id,
             location: "VoiceChannel",
