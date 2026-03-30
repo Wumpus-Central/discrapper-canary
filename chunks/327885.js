@@ -35,7 +35,6 @@ let s = new Set([
         [i.RN.MOBILE_HERO]: c,
         [i.RN.PDP_BACKGROUND]: u,
         [i.RN.LOGO]: u,
-        [i.RN.COACHTIP_AVATAR]: u,
         [i.RN.TAB_TOOLTIP]: u,
     },
     h = async (e) => {
@@ -45,13 +44,13 @@ let s = new Set([
         for (let e of await new Promise((e) => a.readEntries(e))) e.isDirectory && t.includes(e.name) && n.add(e.name);
         return t.filter((e) => !n.has(e));
     },
-    p = (e) => {
+    x = (e) => {
         let { names: t, addError: n } = e,
             a = /^[a-z0-9]+(_[a-z0-9]+)*(\.[a-z0-9]+)?$/,
             i = t.filter((e) => !a.test(e));
         i.length > 0 && n("File names must be in lowercase snake case", i);
     },
-    x = (e, t, n, a) => {
+    p = (e, t, n, a) => {
         let i = t.size,
             s = i > 1e6 ? `${(i / 1e6).toFixed(2)}MB` : `${(i / 1e3).toFixed(2)}KB`,
             l = `${t.name} - ${s}`;
@@ -62,7 +61,7 @@ let s = new Set([
     },
     g = (e, t, n, a) => {
         let i = m[e];
-        if (null != i) for (let e of t) e.name.endsWith(".txt") || x(i, e, n, a);
+        if (null != i) for (let e of t) e.name.endsWith(".txt") || p(i, e, n, a);
     },
     _ = (e) => {
         let t = i.aL[e];
@@ -109,9 +108,9 @@ let s = new Set([
                                 for (let e of t.collectionFiles) {
                                     let t = (0, i.pd)(e),
                                         s = null != t ? m[t] : null;
-                                    null != s && x(s, e, n, a);
+                                    null != s && p(s, e, n, a);
                                 }
-                                p({ names: t.collectionFiles.map((e) => e.name), addError: n });
+                                x({ names: t.collectionFiles.map((e) => e.name), addError: n });
                                 let l = new Set(t.collectionFiles.map((e) => (0, i.pd)(e)).filter((e) => null != e)),
                                     r = Array.from(s)
                                         .filter((e) => !l.has(e))
@@ -125,11 +124,11 @@ let s = new Set([
                             })({ files: n, addError: c, addWarning: u }),
                             ((e) => {
                                 let { files: t, addError: n, addWarning: a } = e;
-                                p({ names: Object.keys(t.profileEffectFilesMap), addError: n }),
+                                x({ names: Object.keys(t.profileEffectFilesMap), addError: n }),
                                     Object.entries(t.profileEffectFilesMap).forEach((e) => {
                                         let [t, s] = e,
                                             r = s.map((e) => e.name);
-                                        p({
+                                        x({
                                             names: r.map((e) => {
                                                 let t = e.indexOf("-");
                                                 return e.substring(0, t > 0 ? t : e.length);
@@ -154,7 +153,7 @@ let s = new Set([
                             })({ files: n, addError: c, addWarning: u }),
                             ((e) => {
                                 let { files: t, addError: n, addWarning: a } = e;
-                                p({ names: t.avatarDecorationFiles.map((e) => e.name), addError: n }),
+                                x({ names: t.avatarDecorationFiles.map((e) => e.name), addError: n }),
                                     g(i.Jn.AVATAR_DECORATION, t.avatarDecorationFiles, n, a);
                             })({ files: n, addError: c, addWarning: u }),
                             ((e) => {

@@ -10,11 +10,9 @@ var r = n(758836),
         return (
             (e[(e.NONE = 0)] = "NONE"),
             (e[(e.TOOLTIP = 1)] = "TOOLTIP"),
-            (e[(e.COACHTIP = 2)] = "COACHTIP"),
-            (e[(e.COACHTIP_HEADLINE_ONLY = 3)] = "COACHTIP_HEADLINE_ONLY"),
-            (e[(e.BADGE = 4)] = "BADGE"),
-            (e[(e.COACHMARK = 5)] = "COACHMARK"),
-            (e[(e.TAB_TOOLTIP = 6)] = "TAB_TOOLTIP"),
+            (e[(e.BADGE = 2)] = "BADGE"),
+            (e[(e.COACHMARK = 3)] = "COACHMARK"),
+            (e[(e.TAB_TOOLTIP = 4)] = "TAB_TOOLTIP"),
             e
         );
     })({});
