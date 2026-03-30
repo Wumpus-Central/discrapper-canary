@@ -1,10 +1,9 @@
-"use strict";
-n.d(t, { q: () => a, r: () => s });
-var r = n(128377),
-    i = n(978862);
-function s() {
-    return (0, i.B)("defaultCurrentScope", () => new r.H());
+s.d(e, { q: () => o, r: () => n });
+var i = s(128377),
+    r = s(978862);
+function n() {
+    return (0, r.B)("defaultCurrentScope", () => new i.H());
 }
-function a() {
-    return (0, i.B)("defaultIsolationScope", () => new r.H());
+function o() {
+    return (0, r.B)("defaultIsolationScope", () => new i.H());
 }
