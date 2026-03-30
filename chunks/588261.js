@@ -1139,14 +1139,6 @@ let { Themes: r } = n(680049).zv,
                     [r.DARKER]: { raw: "YELLOW_NEW_53", opacity: 1 },
                 },
             },
-            TEXT_LINK: {
-                "mobile-visual-refresh": {
-                    [r.DARK]: { raw: "BLUE_NEW_27", opacity: 1 },
-                    [r.LIGHT]: { raw: "BLUE_NEW_53", opacity: 1 },
-                    [r.MIDNIGHT]: { raw: "BLUE_NEW_42", opacity: 1 },
-                    [r.DARKER]: { raw: "BLUE_NEW_37", opacity: 1 },
-                },
-            },
             TEXT_MUTED: {
                 "mobile-visual-refresh": {
                     [r.DARK]: { raw: "NEUTRAL_23", opacity: 1 },

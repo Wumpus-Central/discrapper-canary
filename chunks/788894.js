@@ -189,7 +189,7 @@ let r = {
                 resolve(e) {
                     let { enabledExperiments: t } = e;
                     if (0 === t.length) return 24;
-                    for (let e of t) if ("mobile-visual-refresh" === e) return 16;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 8;
                     return 24;
                 },
             },
