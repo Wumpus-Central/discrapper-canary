@@ -1,65 +1,77 @@
-n.d(t, { A: () => h }), n(321073);
+n.d(t, { A: () => g }), n(321073);
 var i = n(627968),
     a = n(64700),
     r = n(735438),
     l = n.n(r),
-    s = n(397927),
-    o = n(793574),
-    d = n(342296),
-    c = n(988647),
-    u = n(403362),
-    _ = n(13806);
-let m = (e) => {
+    s = n(435371),
+    o = n(397927),
+    d = n(793574),
+    c = n(342296),
+    u = n(988647),
+    _ = n(403362),
+    m = n(562153),
+    h = n(13806);
+let p = (e) => {
         let { member: t, empty: n, guildId: r } = e,
             l = a.useRef(null);
         return n
-            ? (0, i.jsx)("div", { className: _._b })
+            ? (0, i.jsx)("div", { className: h._b })
             : null == t
-              ? (0, i.jsx)("div", { className: _.j7, children: (0, i.jsx)(c.A, { className: _.s$ }) })
+              ? (0, i.jsx)("div", { className: h.j7, children: (0, i.jsx)(u.A, { className: h.s$ }) })
               : (0, i.jsx)("div", {
-                    className: _.sR,
-                    children: (0, i.jsx)(d.A, {
+                    className: h.sR,
+                    children: (0, i.jsx)(c.A, {
                         targetElementRef: l,
                         userId: t.id,
                         guildId: r,
-                        newAnalyticsLocations: [o.A.AVATAR],
+                        newAnalyticsLocations: [d.A.AVATAR],
                         position: "left",
                         clickTrap: !0,
                         children: (e) =>
-                            (0, i.jsx)(s.euF, {
-                                ...e,
-                                ref: l,
-                                src: t.getAvatarURL(r, 24),
-                                "aria-label": t.username,
-                                size: s._3J.SIZE_24,
-                                className: _.pO,
+                            (0, i.jsx)(s.m_, {
+                                text: m.Ay.getName(r, void 0, t),
+                                children: (0, i.jsx)(o.euF, {
+                                    ...e,
+                                    ref: l,
+                                    src: t.getAvatarURL(r, 24),
+                                    "aria-label": t.username,
+                                    size: o._3J.SIZE_24,
+                                    className: h.pO,
+                                }),
                             }),
                     }),
                 });
     },
-    h = (e) => {
-        let { partySize: t, members: n, minAvatarsShown: a = 1, maxAvatarsShown: r = 2, guildId: s } = e,
-            { unknownSize: o, totalSize: d, knownSize: c } = t;
-        if (d < a) return null;
-        let h = l()(n)
-            .filter(u.Vq)
+    g = (e) => {
+        let {
+                partySize: t,
+                members: n,
+                minAvatarsShown: a = 1,
+                maxAvatarsShown: r = 2,
+                guildId: s,
+                overflowRef: o,
+            } = e,
+            { unknownSize: d, totalSize: c, knownSize: u } = t;
+        if (c < a) return null;
+        let m = l()(n)
+            .filter(_.Vq)
             .take(r)
-            .map((e) => (0, i.jsx)(m, { member: e, guildId: s }, e.id))
+            .map((e) => (0, i.jsx)(p, { member: e, guildId: s }, e.id))
             .value();
-        for (let e = 0; e < o && h.length < r; e++) h.push((0, i.jsx)(m, { guildId: s }, `unknown-member-${e}`));
-        let p = d - c - o;
-        for (let e = 0; e < p && h.length < r; e++)
-            h.push((0, i.jsx)(m, { empty: !0, guildId: s }, `empty-member-${e}`));
-        let g = Math.max(Math.min(d - h.length, 99), 0);
-        if (1 === g) {
+        for (let e = 0; e < d && m.length < r; e++) m.push((0, i.jsx)(p, { guildId: s }, `unknown-member-${e}`));
+        let g = c - u - d;
+        for (let e = 0; e < g && m.length < r; e++)
+            m.push((0, i.jsx)(p, { empty: !0, guildId: s }, `empty-member-${e}`));
+        let A = Math.max(Math.min(c - m.length, 99), 0);
+        if (1 === A) {
             let e = n[r];
-            h.push((0, i.jsx)(m, { member: e, guildId: s }, e.id));
+            m.push((0, i.jsx)(p, { member: e, guildId: s }, e.id));
         }
         return (0, i.jsx)("div", {
-            className: _.iE,
+            className: h.iE,
             children: (0, i.jsxs)("div", {
-                className: _.S3,
-                children: [h, g > 1 ? (0, i.jsxs)("div", { className: _.Hi, children: ["+", g] }) : null],
+                className: h.S3,
+                children: [m, A > 1 ? (0, i.jsxs)("div", { className: h.Hi, ref: o, children: ["+", A] }) : null],
             }),
         });
     };

@@ -19,7 +19,8 @@ e.exports = {
     bW: "streamPreviewBackdropOverlay__16577",
     Rh: "streamPreview__16577",
     H_: "streamPreviewHover__16577",
+    vk: "clickable__16577",
     rB: "streamPreviewInner__16577",
     Ok: "liveIndicator__16577",
-    g$: "streamPreviewHoverText__16577",
+    bF: "streamPreviewFade__16577",
 };
