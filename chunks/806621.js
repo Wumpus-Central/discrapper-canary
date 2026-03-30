@@ -28,7 +28,7 @@ function u(e) {
         }
         let i = r.A.getMessages(e.id),
             l = !i.hasMoreBefore && !i.hasMoreAfter && i.length < 25,
-            a = r.A.hasCurrentUserSentMessage(e.id),
+            a = r.A.hasCurrentUserSentWaveBlockingMessage(e.id),
             A = (i.ready || t.current) && l && !a;
         return (t.current = A), A;
     }, [m, u, e.id, h]);

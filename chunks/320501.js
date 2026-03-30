@@ -31,8 +31,8 @@ var r = n(735438),
     L = n(652215);
 let w = new Set(),
     M = new d.A("MessageStore"),
-    x = !1;
-function P() {
+    P = !1;
+function x() {
     u.A.forEach((e) => {
         u.A.commit(e.mutate({ ready: !1, loadingMore: !1 }));
     }),
@@ -318,7 +318,7 @@ function ed(e) {
 function e_(e) {
     let { message: t } = e,
         n = D.default.getCurrentUser();
-    null != t && null != t.author && null != n && t.author.id === n.id && (x = !0);
+    null != t && null != t.author && null != n && t.author.id === n.id && (P = !0);
 }
 class ef extends a.Ay.Store {
     static displayName = "MessageStore";
@@ -391,14 +391,21 @@ class ef extends a.Ay.Store {
         let t = D.default.getCurrentUser();
         return null != this.getMessages(e).findNewest((e) => e.author.id === t?.id);
     }
+    hasCurrentUserSentWaveBlockingMessage(e) {
+        let t = D.default.getCurrentUser();
+        return (
+            null !=
+            this.getMessages(e).findNewest((e) => e.type !== L.lAJ.FRIEND_REQUEST_ACCEPTED && e.author.id === t?.id)
+        );
+    }
     hasCurrentUserSentMessageSinceAppStart() {
-        return x;
+        return P;
     }
 }
 let ep = new ef(o.h, {
     BACKGROUND_SYNC_CHANNEL_MESSAGES: k,
-    CONNECTION_OPEN: P,
-    OVERLAY_INITIALIZE: P,
+    CONNECTION_OPEN: x,
+    OVERLAY_INITIALIZE: x,
     CACHE_LOADED: ec,
     LOAD_MESSAGES: U,
     LOAD_MESSAGES_SUCCESS: B,

@@ -1,1 +1,0 @@
-let{message:t,compact:n}=e;return(0,i.jsx)(eE.A,{message:t,compact:n})
