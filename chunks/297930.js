@@ -1,37 +1,36 @@
-"use strict";
-n.r(t), n.d(t, { default: () => o });
-var i = n(627968);
-n(64700);
-var s = n(503698),
-    l = n.n(s),
-    a = n(225180),
-    r = n(295485);
-function o(e) {
-    let { gameId: t } = e,
-        n = (0, a.A)(t, "cover");
+s.r(a), s.d(a, { default: () => r });
+var i = s(627968);
+s(64700);
+var c = s(503698),
+    d = s.n(c),
+    m = s(225180),
+    l = s(295485);
+function r(e) {
+    let { gameId: a } = e,
+        s = (0, m.A)(a, "cover");
     return (0, i.jsxs)("div", {
-        className: r.kL,
+        className: l.kL,
         children: [
             (0, i.jsxs)("div", {
-                className: l()(r.Su, r.TK),
+                className: d()(l.Su, l.TK),
                 children: [
-                    (0, i.jsx)("div", { className: l()(r.w1, r.Uf) }),
-                    (0, i.jsx)("div", { className: l()(r.w1, r.Gj) }),
+                    (0, i.jsx)("div", { className: d()(l.w1, l.Uf) }),
+                    (0, i.jsx)("div", { className: d()(l.w1, l.Gj) }),
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: l()(r.Su, r._3),
+                className: d()(l.Su, l._3),
                 children: [
-                    (0, i.jsx)("div", { className: l()(r.w1, r.Uf) }),
-                    (0, i.jsx)("div", { className: l()(r.w1, r.Gj) }),
+                    (0, i.jsx)("div", { className: d()(l.w1, l.Uf) }),
+                    (0, i.jsx)("div", { className: d()(l.w1, l.Gj) }),
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: l()(r.Su, r.Tp),
+                className: d()(l.Su, l.Tp),
                 children: [
-                    (0, i.jsx)("img", { src: n, alt: "", className: r.Sl }),
-                    (0, i.jsx)("div", { className: l()(r.w1, r.Uf) }),
-                    (0, i.jsx)("div", { className: l()(r.w1, r.Gj) }),
+                    (0, i.jsx)("img", { src: s, alt: "", className: l.Sl }),
+                    (0, i.jsx)("div", { className: d()(l.w1, l.Uf) }),
+                    (0, i.jsx)("div", { className: d()(l.w1, l.Gj) }),
                 ],
             }),
         ],
