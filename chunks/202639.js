@@ -47,7 +47,7 @@ function E(e) {
     }
     return (0, r.jsx)(a.animated.div, {
         style: { ...D },
-        className: s()(m.Zj, y && m.Me, N && m.ww, { [m.tO]: "floating" === S, [m.Kx]: "inline" === S }, I),
+        className: s()(m.Zj, y && m.Me, N && m.ww, L && m.u8, { [m.tO]: "floating" === S, [m.Kx]: "inline" === S }, I),
         children: (0, r.jsxs)(g, {
             hasPreviewSound: L,
             useGradientBg: y,

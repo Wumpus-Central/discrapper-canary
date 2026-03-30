@@ -31,8 +31,8 @@ var r = n(627968),
     L = n(287809),
     w = n(977997),
     M = n(147925),
-    x = n(954571),
-    P = n(927578),
+    P = n(954571),
+    x = n(927578),
     k = n(15290),
     U = n(209932),
     G = n(807348),
@@ -158,35 +158,35 @@ function ed(e) {
         [ey, ev] = i.useState(null),
         [eN, eC] = i.useState(null),
         eR = (0, l.bG)([L.default], () => L.default.getCurrentUser()),
-        eO = (0, P.TW)(eR, X.PremiumTypes.TIER_2),
+        eO = (0, x.TW)(eR, X.PremiumTypes.TIER_2),
         eb = (0, l.bG)([w.A], () => w.A.getVoiceState(t, eR?.id ?? q.dJq)),
         eD = eb?.selfDeaf || eb?.mute || eb?.suppress,
         eL = (0, A.RQ)((e) => e.searchQuery),
         ew = null != eL && "" !== eL,
         eM = (0, m.GV)(),
-        ex = k.T.useConfig({ location: "SoundboardSoundGrid" }),
-        eP = F.h.useConfig({ location: "SoundboardSoundGrid" }),
+        eP = k.T.useConfig({ location: "SoundboardSoundGrid" }),
+        ex = F.h.useConfig({ location: "SoundboardSoundGrid" }),
         ek = (0, b.St)("soundboard_floating_upsell"),
         {
             categories: eU,
             availableSounds: eG,
             soundCounts: eF,
-        } = (0, Y.A)(s, { moveDefaultsToBottom: ex.reorderDefaultSounds }, eh),
+        } = (0, Y.A)(s, { moveDefaultsToBottom: eP.reorderDefaultSounds }, eh),
         [eV, eB] = i.useState([]),
         eH = (0, Y.I)(eU, eV, eL),
         ej = (0, A.RQ)((e) => e.isNitroLockedSectionVisible),
         eY = i.useMemo(() => eH.filter((e) => e.items.length > 0), [eH]),
         eW = i.useMemo(
-            () => eY.findLastIndex((e) => !!(0, P.Em)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
+            () => eY.findLastIndex((e) => !!(0, x.Em)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
             [eY],
         ),
         eK = !eO && er && -1 !== eW,
         e$ = !eO && er && -1 !== eW,
-        ez = !eO && ex.reorderDefaultSounds && eU.length > 6,
+        ez = !eO && eP.reorderDefaultSounds && eU.length > 6,
         eq = O.b0.useSetting(),
         eZ = i.useMemo(() => new Set(eq), [eq]),
         eX = null == s,
-        eQ = P.Ay.canUseCustomCallSounds(eR),
+        eQ = x.Ay.canUseCustomCallSounds(eR),
         eJ = i.useCallback(
             (e) => {
                 eZ.has(e) ? eZ.delete(e) : eZ.add(e), O.b0.updateSetting(Array.from(eZ));
@@ -201,7 +201,7 @@ function ed(e) {
                 else if (!ee && i && (0, V.Au)(s))
                     (0, V.Ak)(e, s?.id ?? q.dJq, t, r),
                         ew &&
-                            x.default.track(q.HAw.SEARCH_RESULT_SELECTED, {
+                            P.default.track(q.HAw.SEARCH_RESULT_SELECTED, {
                                 search_type: q.I4_.SOUNDBOARD,
                                 channel_id: s?.id,
                                 query: eL,
@@ -234,7 +234,9 @@ function ed(e) {
                     d = (t) => {
                         l(t);
                         let n = e[t];
-                        c && n?.item.type === G.uq.SOUND ? eC(n.item.sound) : eC(null);
+                        eO || n?.item.type !== G.uq.SOUND || (0, V.Ir)(eR, n.item.sound, s, !1)
+                            ? eC(null)
+                            : eC(n.item.sound);
                     },
                     _ = () => {
                         eC(null);
@@ -275,7 +277,7 @@ function ed(e) {
                     `row-${n["aria-rowindex"]}`,
                 );
             },
-            [eY, er, eO, t, ee, e1, s, eX, eQ, eD, eA, e_, eK, em],
+            [eY, er, eO, t, eR, ee, e1, s, eX, eQ, eD, eA, e_, eK, em],
         ),
         e3 = i.useCallback(
             (e, t) => {
@@ -293,7 +295,7 @@ function ed(e) {
             null != e && ev(e);
         }, []),
         e4 = i.useCallback(() => {
-            let e = (0, P.Dd)(X.PremiumTypes.TIER_2);
+            let e = (0, x.Dd)(X.PremiumTypes.TIER_2);
             return Q.intl.format(Q.t["tw/SSq"], { nitroTierName: e, onClick: e6 });
         }, [e6]),
         e5 = i.useCallback((e) => (e3(e, t) ? ei : en), [t, e3]),
@@ -312,7 +314,7 @@ function ed(e) {
                     a = e3(n, t),
                     o = eZ.has(i),
                     l = () => {
-                        x.default.track(q.HAw.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
+                        P.default.track(q.HAw.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
                             location: { page: q.liQ.SOUNDBOARD_POPOUT },
                             tab: Z.kx.SOUNDBOARD,
                             guild_id: t ?? null,
@@ -396,27 +398,27 @@ function ed(e) {
         ),
         ts = i.useCallback(() => {
             let e = (0, T.qD)();
-            return (0, P.LE)(e, X.pe.TIER_2) ?? Q.intl.string(Q.t.pj0XBN);
+            return (0, x.LE)(e, X.pe.TIER_2) ?? Q.intl.string(Q.t.pj0XBN);
         }, []),
         ta = i.useCallback(() => {
             if (e$) {
                 let e = ej;
                 return (
-                    ex.alwaysPinned && (e = !0),
+                    eP.alwaysPinned && (e = !0),
                     (0, r.jsx)(y.d, {
                         showUpsell: e,
                         text: e4(),
                         button: ts(),
                         buttonAnalyticsObject: { section: q.JJy.SOUND_PICKER_FLOATING_UPSELL },
-                        useGradientBg: eP.gradientBackground,
+                        useGradientBg: ex.gradientBackground,
                         hoveredNitroLockedSound: eN,
-                        subscribeButtonVariantOverride: eP.subscribeButtonVariant,
+                        subscribeButtonVariantOverride: ex.subscribeButtonVariant,
                         leadingAction: ek ? (0, r.jsx)(N.l, { size: "sm", className: J.ij }) : void 0,
                     })
                 );
             }
             return null;
-        }, [e4, ts, e$, ex.alwaysPinned, eP.gradientBackground, eP.subscribeButtonVariant, ek, ej, eN]),
+        }, [e4, ts, e$, eP.alwaysPinned, ex.gradientBackground, ex.subscribeButtonVariant, ek, ej, eN]),
         to = i.useCallback(
             (e) =>
                 e?.item.type === G.uq.SOUND
@@ -459,7 +461,7 @@ function ed(e) {
                               is_external: !0,
                               location: { ...eS, object: q.ZSU.SOUNDBOARD_SOUND },
                               location_stack: eI,
-                              sku_id: P.Ay.getSkuIdForPremiumType(X.PremiumTypes.TIER_2),
+                              sku_id: x.Ay.getSkuIdForPremiumType(X.PremiumTypes.TIER_2),
                           },
                           onClose: () => ev(null),
                           onLearnMore: E,

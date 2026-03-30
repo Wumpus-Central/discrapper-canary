@@ -20720,6 +20720,10 @@ img.thumbnail__0f2e8 {
     border: 1px solid var(--border-subtle)
 }
 
+.upsellContainer__0b69f:not(.withGradientBg__0b69f).hasPreviewSound__0b69f {
+    padding: 8px 12px
+}
+
 .expressiveGradient__0b69f {
     align-items: center;
     display: flex;
