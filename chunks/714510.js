@@ -521,13 +521,13 @@ function $(e) {
         }),
         C = null != f ? f.percentComplete : d.percentComplete;
     if (p) return y.intl.formatToPlainString(y.t.APddvF, { expirationDate: c });
-    if (n)
-        if (i === _.X0.SELECT) return y.intl.string(y.t.sWUpN8);
-        else {
-            if (!(0, g.ui)(t) || !T || S) return N;
+    if (n) {
+        if (i !== _.X0.SELECT && (0, g.ui)(t) && T && !S) {
             let e = (0, m.mH)(t.config);
             return y.intl.format(y.t["1votF6"], { rewardNameWithArticle: e, targetMinutes: d.targetMinutes });
         }
+        return N;
+    }
     if ((0, E.vv)(t)) return y.intl.string(y.t["o+e9yh"]);
     if (C > 0)
         if (!v) return y.intl.string(y.t.mOrpXG);

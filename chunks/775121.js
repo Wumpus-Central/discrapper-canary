@@ -31,6 +31,7 @@ let d = {},
         "mod+plus",
         "mod+minus",
         "mod+0",
+        "cmd+shift+/",
     ].map((e) => e.replace("mod", h)),
     A = () => [],
     I = [];
