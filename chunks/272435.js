@@ -3,8 +3,6 @@ e.exports = {
     Tp: "background__22cef",
     rc: "gemWrapper__22cef",
     VA: "gemWrapperFirstBooster__22cef gemWrapper__22cef",
-    iQ: "progressRing__22cef",
-    yt: "gemWithRing__22cef",
     V_: "gemFull__22cef",
     Qs: "content__22cef",
     sf: "contentFirstBooster__22cef",
@@ -17,5 +15,7 @@ e.exports = {
     M_: "compactBackground__22cef",
     S8: "compactGemWrapper__22cef",
     fi: "compactContent__22cef",
+    zc: "iconContainer__22cef",
+    oT: "messageLink__22cef",
     nx: "compactActions__22cef",
 };
