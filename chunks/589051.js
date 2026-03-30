@@ -1,33 +1,21 @@
 "use strict";
-n.d(t, {
-    E: () => I,
-    H: () => c,
-    M8: () => A,
-    NI: () => g,
-    X4: () => m,
-    aS: () => d,
-    lR: () => o,
-    o0: () => f,
-    sq: () => l,
-});
+n.d(t, { E: () => I, H: () => c, M8: () => A, NI: () => g, X4: () => m, aS: () => d, o0: () => f, sq: () => l });
 var r = n(812729),
     i = n.n(r),
     s = n(600975),
     a = n(945810);
-let o = (0, s.C)({
-    id: "2025-10_overlay_default_keybind",
-    label: "Overlay Default Keybind",
+let o = (0, a.mj)({
+    name: "2026-03-overlay-default-keybind",
     kind: "user",
     defaultConfig: { keybindOverride: void 0 },
-    treatments: [
-        { id: 1, label: "Ctrl + Tab Keybind", config: { keybindOverride: "ctrl+tab" } },
-        { id: 2, label: "Alt + X Keybind", config: { keybindOverride: "alt+x" } },
-        { id: 3, label: "Ctrl + L Keybind", config: { keybindOverride: "ctrl+l" } },
-    ],
+    variations: {
+        1: { keybindOverride: "ctrl+tab" },
+        2: { keybindOverride: "alt+x" },
+        3: { keybindOverride: "ctrl+l" },
+    },
 });
 function l(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return o.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return o.getConfig({ location: e });
 }
 let u = (0, s.C)({
     kind: "user",
