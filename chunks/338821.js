@@ -234,9 +234,7 @@ function ed(e) {
                     d = (t) => {
                         l(t);
                         let n = e[t];
-                        eO || n?.item.type !== G.uq.SOUND || (0, V.Ir)(eR, n.item.sound, s, !1)
-                            ? eC(null)
-                            : eC(n.item.sound);
+                        c && n?.item.type === G.uq.SOUND ? eC(n.item.sound) : eC(null);
                     },
                     _ = () => {
                         eC(null);
@@ -277,7 +275,7 @@ function ed(e) {
                     `row-${n["aria-rowindex"]}`,
                 );
             },
-            [eY, er, eO, t, eR, ee, e1, s, eX, eQ, eD, eA, e_, eK, em],
+            [eY, er, eO, t, ee, e1, s, eX, eQ, eD, eA, e_, eK, em],
         ),
         e3 = i.useCallback(
             (e, t) => {
