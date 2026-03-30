@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var r = n(311907),
     i = n(73153);
-class a extends r.Ay.Store {
+class s extends r.Ay.Store {
     static displayName = "OrderStore";
     _isCreatingOrder = !1;
     _isUpdatingOrder = !1;
@@ -65,4 +65,4 @@ class a extends r.Ay.Store {
         this._order = null;
     }
 }
-let s = new a();
+let a = new s();

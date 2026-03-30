@@ -6,8 +6,8 @@ var i = n(627968),
     a = n(936504),
     o = n(299855),
     c = n.n(o),
-    u = n(311907),
-    d = n(582754),
+    d = n(311907),
+    u = n(582754),
     _ = n(397927),
     E = n(157559),
     T = n(827343),
@@ -47,7 +47,7 @@ var i = n(627968),
     K = n(598733),
     z = n(801644),
     J = n(74848),
-    Y = n(39771),
+    Y = n(4630),
     Q = n(532794),
     Z = n(234419),
     ee = n(814249),
@@ -60,8 +60,8 @@ var i = n(627968),
     ea = n(840065),
     eo = n(459321),
     ec = n(594609),
-    eu = n(734057),
-    ed = n(430452),
+    ed = n(734057),
+    eu = n(430452),
     e_ = n(383501),
     eE = n(967198),
     eT = n(287809),
@@ -131,9 +131,9 @@ function eU(e) {
         { noticeType: l } = e,
         r = (0, J.x5)(eO.oh.AUDIO_INPUT),
         s = r?.guid ?? "",
-        { inputDeviceOSMuted: a, inputDeviceOSVolume: o } = (0, u.cf)([ed.Ay], () => ({
-            inputDeviceOSMuted: ed.Ay.getInputDeviceOSMuted(),
-            inputDeviceOSVolume: ed.Ay.getInputDeviceOSVolume(),
+        { inputDeviceOSMuted: a, inputDeviceOSVolume: o } = (0, d.cf)([eu.Ay], () => ({
+            inputDeviceOSMuted: eu.Ay.getInputDeviceOSMuted(),
+            inputDeviceOSVolume: eu.Ay.getInputDeviceOSVolume(),
         })),
         c = !1;
     return (
@@ -143,7 +143,7 @@ function eU(e) {
             : 0 === o
               ? ((t = ey.intl.string(ey.t.j4gGA4)),
                 (n = (0, i.jsx)(_.eCN, { href: eD(s), noticeType: l, children: ey.intl.string(ey.t.QghSIq) })))
-              : ed.Ay.supports(eO.O5.LOOPBACK)
+              : eu.Ay.supports(eO.O5.LOOPBACK)
                 ? ((t = ey.intl.string(ey.t.dNAJ18)),
                   (c = !0),
                   (n = (0, i.jsx)(_.zr9, {
@@ -178,9 +178,9 @@ function eM(e) {
     p.A.dismiss(null != e ? { untilAtLeast: s()(e) } : void 0);
 }
 let eL = l.memo(function () {
-    let e = (0, u.bG)([eT.default], () => eT.default.getCurrentUser()),
-        t = (0, u.bG)([eE.A], () => eE.A.getGuildId()),
-        r = (0, u.bG)([ep.Ay], () => ep.Ay.getNotice()),
+    let e = (0, d.bG)([eT.default], () => eT.default.getCurrentUser()),
+        t = (0, d.bG)([eE.A], () => eE.A.getGuildId()),
+        r = (0, d.bG)([ep.Ay], () => ep.Ay.getNotice()),
         { analyticsLocations: s } = (0, f.Ay)(),
         o = (0, C.Ay)(),
         c = (0, V.H)(t),
@@ -233,8 +233,8 @@ let eL = l.memo(function () {
         case eh.kqX.INVITED_TO_SPEAK:
             return (0, i.jsx)(el.A, {});
         case eh.kqX.GUILD_RAID_NOTIFICATION:
-            let { dismissUntil: ed } = r.metadata;
-            return (0, i.jsx)(B.A, { onDismiss: () => eM(ed) });
+            let { dismissUntil: eu } = r.metadata;
+            return (0, i.jsx)(B.A, { onDismiss: () => eM(eu) });
         case eh.kqX.WIN32_DEPRECATED_MESSAGE:
             let { dismissUntil: eS } = r.metadata;
             return (0, i.jsxs)(_.$Td, {
@@ -332,7 +332,7 @@ let eL = l.memo(function () {
                     (0, i.jsx)(_.Z_L, {
                         onClick: () => {
                             let e = e_.A.getRemoteDisconnectVoiceChannelId();
-                            null != e && null != eu.A.getChannel(e) && m.default.selectVoiceChannel(e);
+                            null != e && null != ed.A.getChannel(e) && m.default.selectVoiceChannel(e);
                         },
                         noticeType: r.type,
                         children: ey.intl.string(ey.t.vD60Pv),
@@ -353,7 +353,7 @@ let eL = l.memo(function () {
                     (0, i.jsx)(_.Z_L, {
                         onClick: () => {
                             let e = e_.A.getLastSessionVoiceChannelId();
-                            null != e && null != eu.A.getChannel(e) && m.default.selectVoiceChannel(e);
+                            null != e && null != ed.A.getChannel(e) && m.default.selectVoiceChannel(e);
                         },
                         noticeType: r.type,
                         children: ey.intl.string(ey.t.vD60Pv),
@@ -369,7 +369,7 @@ let eL = l.memo(function () {
                     (0, i.jsx)("img", {
                         alt: "",
                         className: ex.tV,
-                        src: (0, d.qB)(o) ? ej.icon.darkSVG : ej.icon.whiteSVG,
+                        src: (0, u.qB)(o) ? ej.icon.darkSVG : ej.icon.whiteSVG,
                     }),
                     ey.intl.string(ey.t.D8Cp76),
                     (0, i.jsx)(_.Z_L, {

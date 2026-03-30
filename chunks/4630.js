@@ -7,8 +7,8 @@ var l = n(284009),
     a = n(800342),
     o = n(73825),
     c = n(851907),
-    u = n(160946),
-    d = n(589078),
+    d = n(160946),
+    u = n(589078),
     _ = n(869146),
     E = n(143582),
     T = n(490744),
@@ -29,7 +29,7 @@ async function m(e) {
     }
     (f = f ?? A.A.get(C)),
         r()(null != f && f.applicationId === g, "SKU must belong to application"),
-        f.type !== N.Puh.SUBSCRIPTION || (0, u.B)([f.id]) || (await (0, o.ur)(f.id));
+        f.type !== N.Puh.SUBSCRIPTION || (0, d.B)([f.id]) || (await (0, o.ur)(f.id));
     let P =
         null == (S = null != (h = (0, c.LU)({ applicationId: g })) ? _.A.getWindow(h) : void 0) || S.closed
             ? s.SYi
@@ -48,7 +48,7 @@ async function m(e) {
                 onClose: (e) => {
                     e || t();
                 },
-                checkoutFlow: d.CL.PREMIUM_APPS_OTP_CHECKOUT,
+                checkoutFlow: u.CL.PREMIUM_APPS_OTP_CHECKOUT,
             });
         });
     await ((t = g),
