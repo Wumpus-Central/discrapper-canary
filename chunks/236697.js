@@ -13,7 +13,7 @@ var i = n(627968),
     _ = n(49999),
     m = n(653624),
     g = n(985018),
-    p = n(735081),
+    p = n(991674),
     E = n(8496);
 function I(e) {
     let { targetElementRef: t, dismissPopover: n, children: I } = e,
@@ -41,8 +41,8 @@ function I(e) {
                             children: (0, i.jsx)("img", { src: E.A, alt: "", "aria-hidden": !0, className: p.S }),
                         }),
                         (0, i.jsx)(d.D, {
-                            title: g.intl.string(m.default.i4QNXo),
-                            body: g.intl.string(m.default.NqBsX4),
+                            title: g.intl.string(m.default.OlObRa),
+                            body: g.intl.string(m.default["8Gl8gP"]),
                             badge: { type: "beta", variant: "expressive" },
                         }),
                         (0, i.jsx)(r.Z, {

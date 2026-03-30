@@ -8,8 +8,8 @@ var a = n(435371),
 function o(e) {
     let { children: t } = e;
     return (0, i.jsx)(a.un, {
-        body: r.intl.string(l.default.NqBsX4),
-        title: r.intl.string(l.default.i4QNXo),
+        body: r.intl.string(l.default["8Gl8gP"]),
+        title: r.intl.string(l.default.OlObRa),
         asset: (0, i.jsx)("img", { src: s.A, alt: "", "aria-hidden": !0, style: { borderRadius: 8 } }),
         assetSize: 80,
         padding: "lg",
