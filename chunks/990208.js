@@ -1,15 +1,8 @@
 "use strict";
-n.d(t, { A: () => s });
-var r = n(311907),
-    i = n(775602);
-function a(e, t, n, r) {
-    if (null != e) return t || !1 === n || r ? e.staticImageUrl : (e.animatedImageUrl ?? e.staticImageUrl);
-}
-function s(e, t, n) {
-    return a(
-        e,
-        (0, r.bG)([i.A], () => i.A.useReducedMotion),
-        t,
-        n,
-    );
+n.d(t, { A: () => l });
+var i = n(311907),
+    s = n(775602);
+function l(e, t, n) {
+    let l = (0, i.bG)([s.A], () => s.A.useReducedMotion);
+    return null != e ? (l || !1 === t || n ? e.staticImageUrl : (e.animatedImageUrl ?? e.staticImageUrl)) : void 0;
 }
