@@ -2,7 +2,7 @@
 n.d(t, {
     Gw: () => ee,
     HW: () => W,
-    K8: () => Q,
+    K8: () => J,
     Mr: () => et,
     Ns: () => Z,
     UB: () => Y,
@@ -10,7 +10,7 @@ n.d(t, {
     bo: () => q,
     jz: () => X,
     lw: () => z,
-    mn: () => J,
+    mn: () => Q,
 });
 var i = n(627968),
     s = n(64700),
@@ -25,8 +25,8 @@ var i = n(627968),
     A = n(793574),
     m = n(688810),
     _ = n(509536),
-    p = n(987144),
-    g = n(976860),
+    g = n(987144),
+    p = n(976860),
     f = n(71393),
     x = n(204017),
     E = n(645619),
@@ -239,7 +239,7 @@ function X(e) {
         markAsDismissed: s,
     });
 }
-function J(e) {
+function Q(e) {
     let { guildId: t, markAsDismissed: n, channelRowRef: s } = e,
         l = (0, c.bG)([h.A], () => h.A.useReducedMotion);
     return (0, i.jsx)(en, {
@@ -258,14 +258,14 @@ function J(e) {
                 text: P.intl.string(P.t.RzWDqY),
                 variant: "primary",
                 onClick: () => {
-                    n(D.i.TAKE_ACTION), (0, g.pX)(L.BVt.CHANNEL(t, M.VV.GAME_SERVERS));
+                    n(D.i.TAKE_ACTION), (0, p.pX)(L.BVt.CHANNEL(t, M.VV.GAME_SERVERS));
                 },
             },
         ],
         markAsDismissed: n,
     });
 }
-function Q(e) {
+function J(e) {
     let { guildId: t, markAsDismissed: n, channelRowRef: s } = e,
         { gameName: l, gameName2: a } = (0, x.A)(),
         r = (0, c.bG)([h.A], () => h.A.useReducedMotion);
@@ -394,7 +394,7 @@ function ee(e) {
                     let e = f.A.getGuild(t);
                     if (null == e) return;
                     let i = { page: L.liQ.GUILD_CHANNEL, section: L.JJy.GUILD_HEADER };
-                    await (0, p.g)({
+                    await (0, g.g)({
                         guild: e,
                         numberOfBoostsToAdd: c,
                         analyticsLocation: i,
@@ -415,7 +415,7 @@ function et(e) {
         d = (0, c.bG)([E.A], () => E.A.getStateForGuild(t)),
         { analyticsLocations: u } = (0, m.Ay)(A.A.GUILD_POWERUPS_COACHMARK_EXPIRING_PERK),
         _ = d?.allPowerups[n.skuId],
-        g = (0, I.A)(_, !0),
+        p = (0, I.A)(_, !0),
         x = s.useRef(null),
         C = (0, c.bG)([h.A], () => h.A.useReducedMotion);
     if (null == _ && !n.isGameServer) return null;
@@ -435,7 +435,7 @@ function et(e) {
               })
             : _?.type === O.o9.LEVEL
               ? (0, i.jsx)(v.n, { powerup: _, eventTargetRef: x, className: w.Lj })
-              : (0, i.jsx)("img", { alt: "", src: g, className: w.Sl }),
+              : (0, i.jsx)("img", { alt: "", src: p, className: w.Sl }),
         title: N,
         body: S,
         actions: [
@@ -446,7 +446,7 @@ function et(e) {
                     let e = f.A.getGuild(t);
                     if (null == e) return;
                     let i = { page: L.liQ.GUILD_CHANNEL, section: L.JJy.GUILD_HEADER };
-                    await (0, p.g)({
+                    await (0, g.g)({
                         guild: e,
                         numberOfBoostsToAdd: n.numExpiringBoosts,
                         analyticsLocation: i,
@@ -475,6 +475,7 @@ function en(e) {
     } = e;
     return (0, i.jsx)(u.AM, {
         ...c,
+        gradientColor: "pink",
         graphic: {
             type: "dynamic",
             component: d.DynamicGraphicComponent.GUILD_POWERUPS_COACHMARK_ASSET,
