@@ -38,14 +38,12 @@ function u(e) {
                 label: c.intl.string(c.t.zBoHlf),
                 action: m,
                 leadingAccessory: { type: "icon", icon: a.L9S },
-                icon: a.L9S,
             }),
             (0, i.jsx)(a.Drp, {
                 id: "copy-item-id",
                 label: _,
                 action: f,
                 leadingAccessory: { type: "icon", icon: a.L9S },
-                icon: a.L9S,
             }),
             null != g &&
                 (0, i.jsxs)(i.Fragment, {
@@ -55,14 +53,13 @@ function u(e) {
                             label: S,
                             action: h,
                             leadingAccessory: { type: "icon", icon: a.qYV },
-                            icon: a.qYV,
                         }),
                         (0, i.jsx)(a.Drp, {
                             id: "open-image-link",
                             label: b,
                             action: y,
-                            leadingAccessory: { type: "icon", icon: a.qYV },
-                            icon: a.qYV,
+                            leadingAccessory: { type: "icon", icon: a.WxK },
+                            trailingIndicator: { type: "icon", icon: a.I9m },
                         }),
                     ],
                 }),

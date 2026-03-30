@@ -5,54 +5,58 @@ var n = i(627968),
     r = i.n(s),
     a = i(397927),
     d = i(50268),
-    o = i(253932),
-    c = i(260509),
+    c = i(253932),
+    o = i(260509),
     u = i(486020),
-    A = i(957565),
-    g = i(486503),
+    g = i(957565),
+    A = i(486503),
     E = i(652215),
     h = i(985018);
 function p(e) {
-    let t = o.Q_.useSetting(),
-        { tidaWebformEnabled: i } = g.A.useExperiment({ location: "useCopyServerInfoItem" }, { autoTrackExposure: !1 }),
-        s = (0, d.A)({ id: e.id, label: h.intl.string(h.t["94lLD7"]) }),
-        p = l.useCallback(() => {
-            let t = (0, c.Iv)(e, E.XAf, !0);
-            r()(null != t, "cannot copy null icon URL"), (0, A.C)(t);
-        }, [e]),
+    let { showIcons: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        i = c.Q_.useSetting(),
+        { tidaWebformEnabled: s } = A.A.useExperiment({ location: "useCopyServerInfoItem" }, { autoTrackExposure: !1 }),
+        p = (0, d.A)({ id: e.id, label: h.intl.string(h.t["94lLD7"]) }),
         _ = l.useCallback(() => {
-            let t = u.Ay.getGuildBannerURL({ id: e.id, banner: e.banner }, !0);
-            r()(null != t, "cannot copy null banner URL"), (0, A.C)(t);
+            let t = (0, o.Iv)(e, E.XAf, !0);
+            r()(null != t, "cannot copy null icon URL"), (0, g.C)(t);
         }, [e]),
         S = l.useCallback(() => {
-            (0, A.C)(e.id);
+            let t = u.Ay.getGuildBannerURL({ id: e.id, banner: e.banner }, !0);
+            r()(null != t, "cannot copy null banner URL"), (0, g.C)(t);
+        }, [e]),
+        b = l.useCallback(() => {
+            (0, g.C)(e.id);
         }, [e.id]);
-    return !__OVERLAY__ && t && A.p5 && null != e.id
-        ? i
+    return !__OVERLAY__ && i && g.p5 && null != e.id
+        ? s
             ? (0, n.jsxs)(a.Drp, {
                   id: "copy-server-info",
                   label: h.intl.string(h.t["rka/KS"]),
+                  leadingAccessory: t ? { type: "icon", icon: a.mir } : void 0,
                   children: [
                       (0, n.jsx)(a.Drp, {
                           id: "copy-server-id",
                           label: h.intl.string(h.t["94lLD7"]),
-                          action: S,
-                          icon: a.L9S,
+                          action: b,
+                          leadingAccessory: t ? { type: "icon", icon: a.L9S } : void 0,
                       }),
                       null != e.icon &&
                           (0, n.jsx)(a.Drp, {
                               id: "copy-server-icon-link",
                               label: h.intl.string(h.t["7H30wR"]),
-                              action: p,
+                              action: _,
+                              leadingAccessory: t ? { type: "icon", icon: a.qYV } : void 0,
                           }),
                       null != e.banner &&
                           (0, n.jsx)(a.Drp, {
                               id: "copy-server-banner-link",
                               label: h.intl.string(h.t["2FoUnk"]),
-                              action: _,
+                              action: S,
+                              leadingAccessory: t ? { type: "icon", icon: a.qYV } : void 0,
                           }),
                   ],
               })
-            : s
+            : p
         : null;
 }
