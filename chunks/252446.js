@@ -1,20 +1,20 @@
-var r = n(916511),
-    i = n(987307),
-    a = n(326583),
-    s = n(255159);
+var r = n(996533),
+    i = n(850361),
+    s = n(164133),
+    a = n(415169);
 function o(t) {
     var n = "function" == typeof Map ? new Map() : void 0;
     return (
         (e.exports = o =
             function (e) {
-                if (null === e || !a(e)) return e;
+                if (null === e || !s(e)) return e;
                 if ("function" != typeof e) throw TypeError("Super expression must either be null or a function");
                 if (void 0 !== n) {
                     if (n.has(e)) return n.get(e);
                     n.set(e, t);
                 }
                 function t() {
-                    return s(e, arguments, r(this).constructor);
+                    return a(e, arguments, r(this).constructor);
                 }
                 return (
                     (t.prototype = Object.create(e.prototype, {

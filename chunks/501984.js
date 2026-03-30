@@ -1,6 +1,6 @@
-function t(e, t, n, r, i, a, s) {
+function t(e, t, n, r, i, s, a) {
     try {
-        var o = e[a](s),
+        var o = e[s](a),
             l = o.value;
     } catch (e) {
         return void n(e);
@@ -11,13 +11,13 @@ function t(e, t, n, r, i, a, s) {
     return function () {
         var n = this,
             r = arguments;
-        return new Promise(function (i, a) {
-            var s = e.apply(n, r);
+        return new Promise(function (i, s) {
+            var a = e.apply(n, r);
             function o(e) {
-                t(s, i, a, o, l, "next", e);
+                t(a, i, s, o, l, "next", e);
             }
             function l(e) {
-                t(s, i, a, o, l, "throw", e);
+                t(a, i, s, o, l, "throw", e);
             }
             o(void 0);
         });

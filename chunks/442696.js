@@ -5,19 +5,19 @@ function r(e) {
 Object.defineProperty(t, "__esModule", { value: !0 });
 var i = n(131981),
     s = n(843455),
-    a = r(n(42539)),
+    a = r(n(984101)),
     o = n(64700),
-    l = r(n(395869)),
-    u = r(n(486726)),
-    c = r(n(960890)),
-    d = r(n(678456)),
+    l = r(n(420979)),
+    u = r(n(501984)),
+    c = r(n(973280)),
+    d = r(n(269274)),
     _ = n(294814),
     f = n(476575),
     p = n(337126),
-    h = r(n(680292)),
+    h = r(n(252446)),
     m = n(180224),
-    E = r(n(585458)),
-    g = r(n(681334)),
+    E = r(n(901012)),
+    g = r(n(394320)),
     A = n(111806),
     I = n(269270);
 function T(e, t, n) {
@@ -96,7 +96,7 @@ var S = {
             Object.assign(this, v);
     };
 function C(e, t, n) {
-    for (var r in (n && (b((n = a({}, n)), t), (t = a(a({}, n), t))), b(e, t), Object.assign(e, t), v))
+    for (var r in (n && (R((n = a({}, n)), t), (t = a(a({}, n), t))), R(e, t), Object.assign(e, t), v))
         null == e[r] && (e[r] = v[r]);
     var i = e.mass,
         o = e.frequency,
@@ -110,7 +110,7 @@ function C(e, t, n) {
         e
     );
 }
-function b(e, t) {
+function R(e, t) {
     if (s.is.und(t.decay)) {
         var n = !s.is.und(t.tension) || !s.is.und(t.friction);
         (!n && s.is.und(t.frequency) && s.is.und(t.damping) && s.is.und(t.mass)) ||
@@ -118,12 +118,12 @@ function b(e, t) {
             n && (e.frequency = void 0);
     } else e.duration = void 0;
 }
-var R = [],
-    O = function () {
+var O = [],
+    b = function () {
         (this.changed = !1),
-            (this.values = R),
+            (this.values = O),
             (this.toValues = null),
-            (this.fromValues = R),
+            (this.fromValues = O),
             (this.to = void 0),
             (this.from = void 0),
             (this.config = new N()),
@@ -159,10 +159,10 @@ function w(e, t) {
     for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
     return r;
 }
-var x = function (e, t) {
+var M = function (e, t) {
     return p.useMemoOne(e, t || [{}]);
 };
-function M(e) {
+function x(e) {
     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
     return s.is.fun(e) ? e.apply(void 0, n) : e;
 }
@@ -285,10 +285,10 @@ function K(e, t) {
         }
         _
             ? h()
-            : ((u = M(r.delay || 0, n)), (d = P(r.pause, n)) ? (i.resumeQueue.add(p), o.pause()) : (o.resume(), p()));
+            : ((u = x(r.delay || 0, n)), (d = P(r.pause, n)) ? (i.resumeQueue.add(p), o.pause()) : (o.resume(), p()));
     });
 }
-var z = function (e, t) {
+var $ = function (e, t) {
         return 1 == t.length
             ? t[0]
             : t.some(function (e) {
@@ -298,7 +298,7 @@ var z = function (e, t) {
               : t.every(function (e) {
                       return e.noop;
                   })
-                ? $(e)
+                ? z(e)
                 : q(
                       e,
                       t.every(function (e) {
@@ -306,7 +306,7 @@ var z = function (e, t) {
                       }),
                   );
     },
-    $ = function (e, t) {
+    z = function (e, t) {
         return void 0 === t && (t = e.get()), { value: t, noop: !0, finished: !0, target: e };
     },
     q = function (e, t, n) {
@@ -667,7 +667,7 @@ var er = (function (e) {
             var r;
             if (
                 (((r = e.call(this) || this).key = void 0),
-                (r.animation = new O()),
+                (r.animation = new b()),
                 (r.queue = void 0),
                 (r._phase = eo),
                 (r._state = { pauseQueue: new Set(), resumeQueue: new Set() }),
@@ -732,15 +732,15 @@ var er = (function (e) {
                                                 v = h == d ? u.v0 > 0 : h < d,
                                                 N = !1,
                                                 C = 1,
-                                                b = Math.ceil(e / 1),
-                                                R = 0;
-                                            R < b && !(!(Math.abs(A) > T) && (_ = Math.abs(d - f) <= I));
-                                            ++R
+                                                R = Math.ceil(e / 1),
+                                                O = 0;
+                                            O < R && !(!(Math.abs(A) > T) && (_ = Math.abs(d - f) <= I));
+                                            ++O
                                         ) {
                                             y && (N = f == d || f > d == v) && ((A = -A * S), (f = d));
-                                            var O =
+                                            var b =
                                                 (-(1e-6 * a.tension) * (f - d) + -(0.001 * a.friction) * A) / a.mass;
-                                            (A += O * C), (f += A * C);
+                                            (A += b * C), (f += A * C);
                                         }
                                 else {
                                     var D = a.progress || 0;
@@ -828,7 +828,7 @@ var er = (function (e) {
                                                 )
                                             );
                                         case 4:
-                                            return (i = e.sent), e.abrupt("return", z(this, i));
+                                            return (i = e.sent), e.abrupt("return", $(this, i));
                                         case 6:
                                         case "end":
                                             return e.stop();
@@ -965,40 +965,40 @@ var er = (function (e) {
                 y && (g = y.get());
                 var v = s.is.arr(t.to) || s.is.fun(t.to),
                     N = i.config,
-                    b = N.decay,
-                    R = N.velocity;
-                t.config && !v && C(N, M(t.config, r), t.config !== a.config ? M(a.config, r) : void 0);
-                var O = _.getAnimated(this);
-                if (!O || s.is.und(m)) return n(q(this, !0));
+                    R = N.decay,
+                    O = N.velocity;
+                t.config && !v && C(N, x(t.config, r), t.config !== a.config ? x(a.config, r) : void 0);
+                var b = _.getAnimated(this);
+                if (!b || s.is.und(m)) return n(q(this, !0));
                 var D = s.is.und(t.reset) ? l && !t.default : !s.is.und(g) && P(t.reset, r),
                     L = D ? g : this.get(),
                     w = W(m),
-                    x = s.is.num(w) || s.is.arr(w) || s.isAnimatedString(w),
-                    k = !v && (!x || P(a.immediate || t.immediate, r));
+                    M = s.is.num(w) || s.is.arr(w) || s.isAnimatedString(w),
+                    k = !v && (!M || P(a.immediate || t.immediate, r));
                 if (T)
-                    if (k) O = this._updateNode(w);
+                    if (k) b = this._updateNode(w);
                     else {
                         var U = this._getNodeType(m);
-                        if (U !== O.constructor)
+                        if (U !== b.constructor)
                             throw Error(
                                 "Cannot animate between " +
-                                    O.constructor.name +
+                                    b.constructor.name +
                                     " and " +
                                     U.name +
                                     ', as the "to" prop suggests',
                             );
                     }
-                var G = O.constructor,
+                var G = b.constructor,
                     F = !!S,
                     B = !1;
                 if (!F) {
                     var H = D || (this.is(eo) && I);
                     (T || H) && (F = !(B = s.isEqual(W(L), w))),
-                        (s.isEqual(N.decay, b) && s.isEqual(N.velocity, R)) || (F = !0);
+                        (s.isEqual(N.decay, R) && s.isEqual(N.velocity, O)) || (F = !0);
                 }
                 if ((B && this.is(eu) && (i.changed && !D ? (F = !0) : F || this._stop()), !v)) {
                     (F || s.getFluidConfig(d)) &&
-                        ((i.values = O.getPayload()),
+                        ((i.values = b.getPayload()),
                         (i.toValues = S ? null : G == _.AnimatedString ? [1] : s.toArray(w))),
                         (i.immediate = k),
                         (i.onStart = ep(u("onStart"), r)),
@@ -1014,12 +1014,12 @@ var er = (function (e) {
                             });
                     } else (D || t.onRest) && (i.onRest[0] = Y);
                 }
-                var z = ep(u("onProps"), r);
-                if ((z && z(t, this), D && O.setValue(L), v)) n(ee(t.to, t, this._state, this));
+                var $ = ep(u("onProps"), r);
+                if (($ && $(t, this), D && b.setValue(L), v)) n(ee(t.to, t, this._state, this));
                 else if (F) D && (this._phase = el), this._reset(), this._start();
                 else if (this.is(eu) && !T) i.onRest.push(eh(n, this));
                 else {
-                    let e = $(this, L),
+                    let e = z(this, L),
                         t = ep(u("onNoopRest"), r);
                     null != t && t(e), n(e);
                 }
@@ -1129,7 +1129,7 @@ var eh = function (e, t) {
 };
 function em(e, t, n) {
     void 0 === t && (t = e.loop), void 0 === n && (n = e.to);
-    var r = M(t);
+    var r = x(t);
     if (r) {
         var i = !0 !== r && Y(r),
             o = (i || e).reverse,
@@ -1208,7 +1208,7 @@ var eI = ["onStart", "onChange", "onRest"],
             }),
             (t.start = function (e) {
                 var t = e ? s.toArray(e).map(eE) : this.queue;
-                return (e || (this.queue = []), this._flush) ? this._flush(this, t) : (eO(this, t), ey(this, t));
+                return (e || (this.queue = []), this._flush) ? this._flush(this, t) : (eb(this, t), ey(this, t));
             }),
             (t.stop = function (e) {
                 if (s.is.und(e))
@@ -1319,7 +1319,7 @@ function ey(e, t) {
             return ev(e, t);
         }),
     ).then(function (t) {
-        return z(e, t);
+        return $(e, t);
     });
 }
 function ev(e, t, n) {
@@ -1369,10 +1369,10 @@ function ev(e, t, n) {
               )
             : t.keys || !0 !== t.cancel || en(u, e._lastAsyncId),
         Promise.all(l).then(function (s) {
-            var a = z(e, s);
+            var a = $(e, s);
             if (i && a.finished && !(n && a.noop)) {
                 var o = em(t, i, r);
-                if (o) return eO(e, [o]), ev(e, o, !0);
+                if (o) return eb(e, [o]), ev(e, o, !0);
             }
             return a;
         })
@@ -1385,8 +1385,8 @@ function eN(e, t) {
             s.each(s.toArray(t), function (e) {
                 s.is.und(e.keys) && (e = eE(e)),
                     s.is.obj(e.to) || (e = a(a({}, e), {}, { to: void 0 })),
-                    eR(n, e, function (e) {
-                        return eb(e);
+                    eO(n, e, function (e) {
+                        return eR(e);
                     });
             }),
         n
@@ -1397,20 +1397,20 @@ function eC(e, t) {
         e.springs[n] || ((e.springs[n] = t), t.addChild(e));
     });
 }
-function eb(e, t) {
+function eR(e, t) {
     var n = new e_();
     return (n.key = e), t && n.addChild(t), n;
 }
-function eR(e, t, n) {
+function eO(e, t, n) {
     t.keys &&
         s.each(t.keys, function (r) {
             (e[r] || (e[r] = n(r)))._prepareNode(t);
         });
 }
-function eO(e, t) {
+function eb(e, t) {
     s.each(t, function (t) {
-        eR(e.springs, t, function (t) {
-            return eb(t, e);
+        eO(e.springs, t, function (t) {
+            return eR(t, e);
         });
     });
 }
@@ -1419,7 +1419,7 @@ var eD = o.createContext({}),
         var t = e.children,
             n = E(e, ["children"]),
             r = o.useContext(eD);
-        n = x(
+        n = M(
             function () {
                 return a(a({}, r), n);
             },
@@ -1432,7 +1432,7 @@ var eD = o.createContext({}),
 var ew = function () {
         return o.useContext(eD);
     },
-    ex = {
+    eM = {
         create: function (e) {
             return {
                 get controllers() {
@@ -1501,7 +1501,7 @@ var ew = function () {
             };
         },
     };
-function eM(e, t, n) {
+function ex(e, t, n) {
     var r = s.is.fun(t) && t;
     r && !n && (n = []);
     var l = o.useRef(0),
@@ -1540,17 +1540,17 @@ function eM(e, t, n) {
             a && ((a = f[i] = eg(a)), 0 == i && ((d.current = a.ref), (a.ref = void 0)));
         }
     }
-    x(
+    M(
         function () {
             (_.length = e), m(p, e);
         },
         [e],
     ),
-        x(function () {
+        M(function () {
             m(0, Math.min(p, e));
         }, n);
     var E = o.useMemo(function () {
-            return ex.create(function () {
+            return eM.create(function () {
                 return c.ctrls;
             });
         }, []),
@@ -1589,7 +1589,7 @@ function eM(e, t, n) {
 }
 function eP(e, t) {
     var n = s.is.fun(e),
-        r = eM(1, n ? e : [e], n ? t || [] : t),
+        r = ex(1, n ? e : [e], n ? t || [] : t),
         i = r[0][0],
         a = r[1],
         o = r[2];
@@ -1599,7 +1599,7 @@ function ek(e, t, n) {
     var r = s.is.fun(t) && t;
     r && !n && (n = []);
     var a = [],
-        o = eM(
+        o = ex(
             e,
             function (e, n) {
                 return (a[e] = n), k(t, e, n);
@@ -1701,12 +1701,12 @@ function eB(e, t, n) {
                 (r = t.enter), (i = eG);
             }
         }
-        if (((r = M(r, e.item, n)), !(r = s.is.obj(r) ? Y(r) : { to: r }).config)) {
+        if (((r = x(r, e.item, n)), !(r = s.is.obj(r) ? Y(r) : { to: r }).config)) {
             var c = t.config || y.config;
-            r.config = M(c, e.item, n);
+            r.config = x(c, e.item, n);
         }
         var _ = a(a({}, y), {}, { delay: (T += d), reset: !1 }, r);
-        i == eG && s.is.und(_.from) && (_.from = M(s.is.und(t.initial) || g ? t.from : t.initial, e.item, n));
+        i == eG && s.is.und(_.from) && (_.from = x(s.is.und(t.initial) || g ? t.from : t.initial, e.item, n));
         var p = _.onRest;
         _.onRest = _.onNoopRest = function (e) {
             var t = E.current,
@@ -1723,7 +1723,7 @@ function eB(e, t, n) {
                         return e.ctrl.idle;
                     });
                     if (n.phase == eV) {
-                        var i = M(f, n.item);
+                        var i = x(f, n.item);
                         if (!1 !== i) {
                             var a = !0 === i ? 0 : i;
                             if (((n.expired = !0), !r && a > 0)) {
@@ -1753,7 +1753,7 @@ function eB(e, t, n) {
         [N],
     );
     var C = o.useMemo(function () {
-        return ex.create(function () {
+        return eM.create(function () {
             return E.current.map(function (e) {
                 return e.ctrl;
             });
@@ -1775,7 +1775,7 @@ function eB(e, t, n) {
             },
             l ? void 0 : n,
         );
-    var b = function (e) {
+    var R = function (e) {
         return o.createElement(
             o.Fragment,
             null,
@@ -1790,7 +1790,7 @@ function eB(e, t, n) {
             }),
         );
     };
-    return 3 == arguments.length ? [b, C.start, C.stop] : b;
+    return 3 == arguments.length ? [R, C.start, C.stop] : R;
 }
 function eH(e, t) {
     var n = t.key,
@@ -1897,11 +1897,11 @@ var eK = (function (e) {
             t
         );
     })(ea),
-    ez = function (e) {
+    e$ = function (e) {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
         return new eK(e, n);
     },
-    e$ = function (e) {
+    ez = function (e) {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
         return m.deprecateInterpolate(), new eK(e, n);
     };
@@ -1947,17 +1947,17 @@ Object.keys(I).forEach(function (e) {
     (t.Interpolation = eK),
     (t.Spring = ej),
     (t.SpringContext = eL),
-    (t.SpringHandle = ex),
+    (t.SpringHandle = eM),
     (t.SpringValue = e_),
     (t.Trail = eY),
     (t.Transition = eW),
     (t.config = S),
     (t.inferTo = Y),
-    (t.interpolate = e$),
-    (t.to = ez),
+    (t.interpolate = ez),
+    (t.to = e$),
     (t.update = eq),
     (t.useChain = T),
     (t.useSpring = eP),
-    (t.useSprings = eM),
+    (t.useSprings = ex),
     (t.useTrail = ek),
     (t.useTransition = eB);
