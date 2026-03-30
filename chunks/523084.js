@@ -11,12 +11,12 @@ var r = n(627968),
 function p(t) {
     let { title: e, description: n, image: p, button: f, ..._ } = t,
         m = (0, l.bG)([o.A], () => o.A.useReducedMotion),
-        A = a.useRef(null),
-        v = a.useRef(new i.OH()),
-        [x, g] = a.useState(null);
+        v = a.useRef(null),
+        x = a.useRef(new i.OH()),
+        [A, g] = a.useState(null);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(i.Fk, { ref: g, className: c.Lb, environment: v.current }),
+            (0, r.jsx)(i.Fk, { ref: g, className: c.Lb, environment: x.current }),
             (0, r.jsxs)(s.EOs, {
                 "data-migration-pending": !0,
                 className: c.yl,
@@ -30,19 +30,20 @@ function p(t) {
                         scrollbarType: "none",
                         children: (0, r.jsxs)("div", {
                             className: c.kL,
-                            ref: A,
+                            ref: v,
                             children: [
                                 p,
                                 (0, r.jsxs)("div", {
                                     className: c.hQ,
                                     children: [
                                         (0, r.jsx)(s.Heading, { variant: "heading-xl/extrabold", children: e }),
-                                        (0, r.jsx)(s.Text, {
-                                            tag: "span",
-                                            className: c.h_,
-                                            variant: "text-sm/normal",
-                                            children: n,
-                                        }),
+                                        null != n &&
+                                            (0, r.jsx)(s.Text, {
+                                                tag: "span",
+                                                className: c.h_,
+                                                variant: "text-sm/normal",
+                                                children: n,
+                                            }),
                                         f,
                                     ],
                                 }),
@@ -50,7 +51,7 @@ function p(t) {
                         }),
                     }),
                     (0, r.jsx)(s.s_y, { "data-migration-pending": !0, className: c.VN, onClick: _.onClose }),
-                    !m && (0, r.jsx)(d.A, { confettiTarget: A.current, confettiCanvas: x, sprites: (0, u.rA)() }),
+                    !m && (0, r.jsx)(d.A, { confettiTarget: v.current, confettiCanvas: A, sprites: (0, u.rA)() }),
                 ],
             }),
         ],

@@ -14,10 +14,11 @@ var a = n(397927),
 function _(t) {
     let { guildId: e, powerup: n, ..._ } = t;
     if ("control" === (0, i.D)("GuildPowerupActivateModalExperimentWrapper")) {
-        let t = u.HO.has(n.skuId);
+        let t = u.HO.has(n.skuId),
+            i = t ? p.intl.formatToPlainString(c.default.y3wHot, { perkName: n.title }) : void 0;
         return (0, r.jsx)(l.A, {
             title: p.intl.formatToPlainString(c.default.lFuOFF, { perkName: n.title }),
-            description: p.intl.formatToPlainString(c.default.y3wHot, { perkName: n.title }),
+            description: i,
             image: (0, r.jsx)(o.l, { className: f.Sl, powerup: n }),
             button: t
                 ? (0, r.jsx)(s.GU, { className: f.x6, guildId: e, powerup: n, onClick: _.onClose })

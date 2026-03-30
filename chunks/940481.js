@@ -1,4 +1,4 @@
-s.d(t, { default: () => C });
+s.d(t, { default: () => k });
 var n = s(627968),
     a = s(64700),
     r = s(512750),
@@ -8,24 +8,24 @@ var n = s(627968),
     c = s(503852),
     d = s(43594),
     u = s(363487),
-    _ = s(722523),
-    m = s(490557),
-    x = s(214676),
-    g = s(499623),
+    _ = s(490557),
+    m = s(214676),
+    x = s(499623),
+    g = s(448836),
     b = s(428050),
     f = s(568065),
-    h = s(136708),
-    p = s(985018),
-    j = s(400415);
-function C(e) {
-    let { guildId: t, powerup: s, ...C } = e,
-        [k, v] = a.useState(void 0),
+    p = s(333354),
+    h = s(985018),
+    j = s(614070);
+function k(e) {
+    let { guildId: t, powerup: s, ...k } = e,
+        [C, v] = a.useState(void 0),
         N = a.useMemo(() => {
             switch (s.skuId) {
                 case r.SL:
-                    return (0, n.jsx)(x.L, { guildId: t });
+                    return (0, n.jsx)(m.L, { guildId: t });
                 case r.aN:
-                    return (0, n.jsx)(x.T, {});
+                    return (0, n.jsx)(m.T, {});
                 case r.FB:
                     return (0, n.jsx)(b.A, {});
                 default:
@@ -38,12 +38,12 @@ function C(e) {
         I = f.wr[s.skuId],
         E = null != I ? f.a8[I] : null,
         T = (0, l.bG)([o.A], () => o.A.getStateForGuild(t)),
-        O = null != E ? T?.allPowerups[E] : null;
+        w = null != E ? T?.allPowerups[E] : null;
     return (0, n.jsxs)(i.EOs, {
         "data-migration-pending": !0,
         className: j.yl,
         size: i.rIJ.DYNAMIC,
-        ...C,
+        ...k,
         parentComponent: "GuildPowerupPerkModal",
         children: [
             (0, n.jsxs)(i.$mQ, {
@@ -54,7 +54,10 @@ function C(e) {
                     (0, n.jsxs)("div", {
                         className: j.pz,
                         children: [
-                            (0, n.jsx)(i.hLv, { className: j.UZ, children: (0, n.jsx)(m.l, { powerup: s }) }),
+                            (0, n.jsx)(i.hLv, {
+                                className: j.Rp,
+                                children: (0, n.jsx)(_.l, { className: j.UZ, powerup: s }),
+                            }),
                             (0, n.jsxs)("div", {
                                 className: j.hQ,
                                 children: [
@@ -64,22 +67,22 @@ function C(e) {
                                         variant: "text-sm/normal",
                                         children: s.description,
                                     }),
-                                    null != O &&
+                                    null != w &&
                                         (0, n.jsx)(i.Text, {
                                             className: j.h_,
                                             variant: "text-sm/normal",
-                                            children: p.intl.formatToPlainString(h.default.NAFGkH, { level: O.title }),
+                                            children: h.intl.formatToPlainString(p.default.NAFGkH, { level: w.title }),
                                         }),
-                                    (0, n.jsx)(g.F, { powerup: s }),
-                                    null != k &&
+                                    (0, n.jsx)(x.F, { powerup: s }),
+                                    null != C &&
                                         (0, n.jsx)(i.Text, {
                                             className: j.z3,
                                             color: "text-feedback-critical",
                                             variant: "text-sm/semibold",
-                                            children: k,
+                                            children: C,
                                         }),
                                     S &&
-                                        (0, n.jsx)(_.Ay, {
+                                        (0, n.jsx)(g.A, {
                                             className: j.qr,
                                             guildId: t,
                                             powerup: s,
@@ -93,7 +96,7 @@ function C(e) {
                     null != N && (0, n.jsx)("div", { className: j._9, children: N }),
                 ],
             }),
-            (0, n.jsx)(i.s_y, { "data-migration-pending": !0, className: j.VN, onClick: C.onClose }),
+            (0, n.jsx)(i.s_y, { "data-migration-pending": !0, className: j.VN, onClick: k.onClose }),
         ],
     });
 }

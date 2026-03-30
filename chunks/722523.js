@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => v, GU: () => A });
+n.d(t, { Ay: () => h, GU: () => A });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -6,8 +6,8 @@ var i = n(503698),
     s = n(732955),
     o = n(438874),
     a = n(363487),
-    u = n(439156),
-    d = n(689906),
+    d = n(439156),
+    u = n(689906),
     c = n(224331),
     p = n(568065),
     _ = n(333354),
@@ -15,22 +15,35 @@ var i = n(503698),
     f = n(58962);
 function A(e) {
     let { className: t, guildId: n, powerup: i, onClick: o } = e,
-        a = (0, d.A)(n, i),
-        u = (0, c.A)(n, i),
-        A = p.HO.has(i.skuId);
+        a = (0, u.A)(n, i);
     return (0, r.jsx)("div", {
         className: l()(f.FS, t),
         children: (0, r.jsx)(s.$nd, {
             variant: "primary",
             fullWidth: !0,
-            text: A ? m.intl.string(_.default.g5Ds69) : m.intl.string(m.t["0Q61kF"]),
+            text: m.intl.string(_.default.g5Ds69),
             onClick: (e) => {
-                o?.(e), A ? a?.(e) : u?.();
+                o?.(e), a?.(e);
             },
         }),
     });
 }
 function g(e) {
+    let { className: t, guildId: n, powerup: i, onClick: o } = e,
+        a = (0, c.A)(n, i);
+    return (0, r.jsx)("div", {
+        className: l()(f.FS, t),
+        children: (0, r.jsx)(s.$nd, {
+            variant: "primary",
+            fullWidth: !0,
+            text: m.intl.string(m.t["0Q61kF"]),
+            onClick: (e) => {
+                o?.(e), a?.();
+            },
+        }),
+    });
+}
+function x(e) {
     let { className: t, guildId: n, powerup: i } = e,
         o = (0, c.A)(n, i);
     return (0, r.jsx)("div", {
@@ -46,19 +59,19 @@ function g(e) {
         }),
     });
 }
-function x(e) {
+function v(e) {
     let { className: t, guildId: n, powerup: i, expressiveCta: s, onError: a } = e,
-        { showToggleButton: d, isPowerupActive: c } = (0, o.A)(n, i),
-        p = !c;
+        { showToggleButton: u, isPowerupActive: c, showConfigureButton: p } = (0, o.A)(n, i),
+        _ = !c;
     return (0, r.jsxs)("div", {
         className: l()(f.kL, t),
         children: [
-            d && (0, r.jsx)(u.A, { guildId: n, powerup: i, onError: a, grow: p, compact: !p, expressiveCta: s }),
-            c && (0, r.jsx)(A, { guildId: n, powerup: i }),
+            u && (0, r.jsx)(d.A, { guildId: n, powerup: i, onError: a, grow: _, compact: !_, expressiveCta: s }),
+            p ? (0, r.jsx)(A, { guildId: n, powerup: i }) : c ? (0, r.jsx)(g, { guildId: n, powerup: i }) : null,
         ],
     });
 }
-function v(e) {
+function h(e) {
     let { ...t } = e;
-    return (0, a.A)(t.guildId) ? (0, r.jsx)(x, { ...t }) : (0, r.jsx)(g, { ...t });
+    return (0, a.A)(t.guildId) ? (0, r.jsx)(v, { ...t }) : (0, r.jsx)(x, { ...t });
 }

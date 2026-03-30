@@ -6,7 +6,7 @@ var a = n(397927),
     l = n(689906),
     s = n(743569),
     o = n(568065),
-    d = n(136708),
+    d = n(333354),
     u = n(985018);
 function c(t) {
     let { guildId: e, powerup: n, onClose: c, ...p } = t,
@@ -17,8 +17,8 @@ function c(t) {
             n.type === o.o9.LEVEL
                 ? { type: "rive", rive: s.T[n.skuId], aspectRatio: "16/9" }
                 : { type: "image", src: n.animatedImageUrl ?? n.staticImageUrl ?? "", aspectRatio: "16/9" },
-        A = u.intl.formatToPlainString(d.default.lFuOFF, { perkName: n.title }),
-        v = f
+        v = u.intl.formatToPlainString(d.default.lFuOFF, { perkName: n.title }),
+        x = f
             ? [
                   {
                       text: u.intl.string(d.default.g5Ds69),
@@ -41,13 +41,15 @@ function c(t) {
               ];
     return (0, r.jsx)(a.kpP, {
         graphic: m,
-        title: A,
-        actions: v,
+        title: v,
+        actions: x,
         onClose: c,
         ...p,
-        children: (0, r.jsx)(a.Text, {
-            variant: "text-md/normal",
-            children: u.intl.formatToPlainString(d.default.y3wHot, { perkName: n.title }),
-        }),
+        children:
+            f &&
+            (0, r.jsx)(a.Text, {
+                variant: "text-md/normal",
+                children: u.intl.formatToPlainString(d.default.y3wHot, { perkName: n.title }),
+            }),
     });
 }

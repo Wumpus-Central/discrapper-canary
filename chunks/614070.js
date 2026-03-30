@@ -6,6 +6,7 @@ e.exports = {
     hQ: "contentContainer__61aee",
     h_: "description__61aee",
     qr: "footer__61aee",
+    Rp: "powerupImageContainer__61aee",
     UZ: "powerupImage__61aee",
     _9: "exampleImage__61aee",
     z3: "error__61aee",
