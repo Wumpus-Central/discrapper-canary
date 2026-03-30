@@ -1,163 +1,214 @@
-n.d(t, { o: () => T, w: () => E });
-var i = n(627968),
-    s = n(64700),
-    l = n(158954),
-    a = n(311907),
-    r = n(397927),
-    o = n(544028),
-    d = n(954571),
-    c = n(975571),
-    u = n(728458),
-    m = n(264779),
-    _ = n(852218),
-    g = n(699443),
-    x = n(652215),
-    A = n(985018),
-    h = n(276478),
-    p = n(870378),
-    f = n(8496);
-let T = {
-        [_.KS]: {
-            title: A.t.sfGgOG,
-            body: A.t.igiSKe,
-            bodyWithExpiration: A.t.w8CXUl,
-            redemptionURL: "https://steelseries.com/",
-            logos: { dark: (0, i.jsx)(g.a1, {}), light: (0, i.jsx)(g.Gn, {}) },
-            asset: f.A,
+r.d(t, { oL: () => j, wx: () => P });
+var a = r(627968),
+    n = r(64700),
+    s = r(158954),
+    i = r(311907),
+    l = r(397927),
+    o = r(544028),
+    d = r(954571),
+    c = r(405269),
+    u = r(975571),
+    m = r(728458),
+    _ = r(264779),
+    p = r(852218),
+    f = r(699443),
+    h = r(729640),
+    b = r(652215),
+    x = r(653624),
+    g = r(985018),
+    C = r(276478),
+    A = r(861223),
+    R = r(870378),
+    v = r(8496);
+let j = {
+        [p.XY]: {
+            title: x.default.jkdhZq,
+            body: x.default.Yl5ww1,
+            bodyWithExpiration: x.default.Yl5ww1,
+            redemptionURL: "https://www.logitech.com/",
+            logos: { dark: (0, a.jsx)(f.a1, {}), light: (0, a.jsx)(f.Gn, {}) },
+            asset: A,
         },
-        [_.Cs]: {
-            title: A.t["9N8obd"],
-            body: A.t["34g+Z3"],
-            bodyWithExpiration: A.t.rqmpXc,
+        [p.KS]: {
+            title: g.t.sfGgOG,
+            body: g.t.igiSKe,
+            bodyWithExpiration: g.t.w8CXUl,
+            redemptionURL: "https://steelseries.com/",
+            logos: { dark: (0, a.jsx)(f.a1, {}), light: (0, a.jsx)(f.Gn, {}) },
+            asset: v.A,
+        },
+        [p.Cs]: {
+            title: g.t["9N8obd"],
+            body: g.t["34g+Z3"],
+            bodyWithExpiration: g.t.rqmpXc,
             redemptionURL: "https://www.kontrolfreek.com/",
-            logos: { dark: (0, i.jsx)(g.WF, {}), light: (0, i.jsx)(g.s, {}) },
-            asset: p.A,
+            logos: { dark: (0, a.jsx)(f.WF, {}), light: (0, a.jsx)(f.s, {}) },
+            asset: R.A,
         },
     },
-    S = (e) => {
+    N = () => {
+        let e = (0, c.N5)(),
+            t = (0, c.P6)();
+        return (0, a.jsxs)("div", {
+            className: `${C.G9} ${C.sQ}`,
+            children: [
+                (0, a.jsx)(s.EYj, {
+                    variant: "text-sm/normal",
+                    color: "text-muted",
+                    className: C.kT,
+                    children: g.intl.format(x.default["65EEvD"], { days: t }),
+                }),
+                (0, a.jsx)(h.P, { percentage: e }),
+            ],
+        });
+    },
+    E = (e) => {
+        let { children: t } = e;
+        return (0, a.jsx)("div", { className: C.oP, children: (0, a.jsx)("div", { className: C.t0, children: t }) });
+    },
+    I = (e) => {
         let { recurrence: t } = e,
-            n = (0, i.jsx)(l.rOg, { color: r.LU0.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT }),
-            a = (0, i.jsx)(l.K0, {
-                icon: l.TdU,
+            r = (0, a.jsx)(s.rOg, { color: l.LU0.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT }),
+            i = (0, a.jsx)(s.K0, {
+                icon: s.TdU,
                 size: "sm",
                 variant: "secondary",
                 "aria-label": "",
                 color: "icon-feedback-positive",
                 onClick: () => {
-                    navigator.clipboard.writeText(t.code), c(n);
+                    navigator.clipboard.writeText(t.code), c(r);
                 },
             }),
-            [o, c] = s.useState(() => a);
+            [o, c] = n.useState(() => i);
         if (null != t.code)
-            return (0, i.jsx)("div", {
-                className: h.oP,
-                children: (0, i.jsxs)("div", {
-                    className: h.t0,
+            return (0, a.jsx)("div", {
+                className: C.oP,
+                children: (0, a.jsxs)("div", {
+                    className: C.t0,
                     children: [
-                        (0, i.jsx)("div", {
-                            className: h.cD,
-                            children: (0, i.jsx)(l.EYj, {
+                        (0, a.jsx)("div", {
+                            className: C.cD,
+                            children: (0, a.jsx)(s.EYj, {
                                 variant: "text-md/medium",
                                 color: "text-strong",
                                 children: t.code,
                             }),
                         }),
                         o,
-                        (0, i.jsx)(l.$nd, {
+                        (0, a.jsx)(s.$nd, {
                             variant: "overlay-primary",
                             size: "sm",
-                            text: A.intl.formatToPlainString(A.t.DF68t7, { redemptionURL: t.redemptionURL }),
+                            text: g.intl.formatToPlainString(g.t.DF68t7, { redemptionURL: t.redemptionURL }),
                             onClick: () => {
                                 window.open(t.redemptionURL, "_blank"),
-                                    d.default.track(x.HAw.RECURRING_PROMOTION_CLAIMED);
+                                    d.default.track(b.HAw.RECURRING_PROMOTION_CLAIMED);
                             },
                         }),
                     ],
                 }),
             });
     },
-    E = (e) => {
+    y = (e) => {
+        let { recurrence: t, canBeClaimed: r, hasClaimError: n, setCode: i, setHasClaimError: l, className: o } = e;
+        return r
+            ? n
+                ? (0, a.jsx)("div", {
+                      className: o,
+                      children: (0, a.jsx)(s.$nd, {
+                          icon: s.EpV,
+                          variant: "critical-secondary",
+                          size: "sm",
+                          disabled: !0,
+                          text: g.intl.string(g.t["8LKchl"]),
+                      }),
+                  })
+                : (0, a.jsx)("div", {
+                      className: o,
+                      children: (0, a.jsx)(s.$nd, {
+                          icon: s.XAi,
+                          variant: "overlay-primary",
+                          size: "sm",
+                          text: g.intl.string(g.t.vwASIl),
+                          onClick: () => {
+                              (0, _.kd)({ promotionId: t.id, analyticsLocations: [] })
+                                  .then((e) => {
+                                      i(e.code);
+                                  })
+                                  .catch((e) => {
+                                      l(!0), m.A.captureException(e);
+                                  });
+                          },
+                      }),
+                  })
+            : null;
+    },
+    P = (e) => {
         var t;
-        let n,
+        let r,
             d,
             {
-                recurrence: _,
-                titleClassName: g,
-                showPartnerLogo: p = !1,
+                recurrence: c,
+                titleClassName: m,
+                showPartnerLogo: _ = !1,
                 showPartnerImage: f = !1,
-                countdownBar: E,
-                titleVariant: b = "primary",
+                titleVariant: h = "primary",
+                displayCTAInDedicatedFooter: x = !1,
             } = e,
-            [C, v] = s.useState(_.code),
-            [N, I] = s.useState(!1),
-            j =
-                ((t = _.partnerId),
-                (n = (0, a.bG)([o.A], () => (0, l.Mwr)(o.A.theme))),
-                null == (d = T[t]) ? null : n ? d.logos.dark : d.logos.light),
-            y = null == C;
-        return (0, i.jsxs)("div", {
-            className: h.lA,
+            [A, R] = n.useState(c.code),
+            [v, P] = n.useState(!1),
+            T =
+                ((t = c.partnerId),
+                (r = (0, i.bG)([o.A], () => (0, s.Mwr)(o.A.theme))),
+                null == (d = j[t]) ? null : r ? d.logos.dark : d.logos.light),
+            S = null == A;
+        return (0, a.jsxs)("div", {
+            className: C.lA,
             children: [
-                (0, i.jsxs)("div", {
-                    className: h.LV,
+                (0, a.jsxs)("div", {
+                    className: C.LV,
                     children: [
-                        (0, i.jsxs)("div", {
-                            className: h.JN,
+                        (0, a.jsxs)("div", {
+                            className: C.JN,
                             children: [
-                                p && j,
-                                (0, i.jsxs)("div", {
-                                    className: null != g ? `${h.yO} ${g}` : h.yO,
+                                _ && T,
+                                (0, a.jsxs)("div", {
+                                    className: null != m ? `${C.yO} ${m}` : C.yO,
                                     children: [
-                                        (0, i.jsx)(l.DZT, {
-                                            variant: "secondary" === b ? "heading-md/semibold" : "heading-lg/semibold",
+                                        (0, a.jsx)(s.DZT, {
+                                            variant: "secondary" === h ? "heading-md/semibold" : "heading-lg/semibold",
                                             color: "text-strong",
-                                            children: A.intl.string(_.title),
+                                            children: g.intl.string(c.title),
                                         }),
-                                        (0, i.jsx)(l.DZT, {
+                                        (0, a.jsx)(s.DZT, {
                                             variant: "heading-sm/medium",
                                             color: "text-subtle",
-                                            children: N
-                                                ? A.intl.format(A.t.i2EuFO, {
-                                                      helpdeskArticle: c.A.getArticleURL(x.MVz.RECURRING_PROMOTION),
+                                            children: v
+                                                ? g.intl.format(g.t.i2EuFO, {
+                                                      helpdeskArticle: u.A.getArticleURL(b.MVz.RECURRING_PROMOTION),
                                                   })
-                                                : y
-                                                  ? A.intl.string(_.body)
-                                                  : A.intl.format(_.bodyWithExpiration, { date: _.endDate }),
+                                                : S
+                                                  ? g.intl.string(c.body)
+                                                  : g.intl.format(c.bodyWithExpiration, { date: c.endDate }),
                                         }),
                                     ],
                                 }),
-                                y &&
-                                    (N
-                                        ? (0, i.jsx)(l.$nd, {
-                                              icon: l.EpV,
-                                              variant: "critical-secondary",
-                                              size: "sm",
-                                              disabled: !0,
-                                              text: A.intl.string(A.t["8LKchl"]),
-                                          })
-                                        : (0, i.jsx)(l.$nd, {
-                                              icon: l.XAi,
-                                              variant: "overlay-primary",
-                                              size: "sm",
-                                              text: A.intl.string(A.t.vwASIl),
-                                              onClick: () => {
-                                                  (0, m.kd)({ promotionId: _.id, analyticsLocations: [] })
-                                                      .then((e) => {
-                                                          v(e.code);
-                                                      })
-                                                      .catch((e) => {
-                                                          I(!0), u.A.captureException(e);
-                                                      });
-                                              },
-                                          })),
+                                !x &&
+                                    (0, a.jsx)(y, {
+                                        recurrence: c,
+                                        canBeClaimed: S,
+                                        hasClaimError: v,
+                                        setCode: R,
+                                        setHasClaimError: P,
+                                    }),
                             ],
                         }),
                         f &&
-                            (0, i.jsx)("div", {
-                                className: h.R4,
-                                children: (0, i.jsx)(r._V3, {
-                                    src: _.asset ?? "",
-                                    className: h.Ys,
+                            (0, a.jsx)("div", {
+                                className: C.R4,
+                                children: (0, a.jsx)(l._V3, {
+                                    src: c.asset ?? "",
+                                    className: C.Ys,
+                                    imageClassName: c.partnerId === p.XY ? C.Cy : void 0,
                                     width: 100,
                                     height: 100,
                                     zoomable: !1,
@@ -165,8 +216,20 @@ let T = {
                             }),
                     ],
                 }),
-                E,
-                null != C && (0, i.jsx)(S, { recurrence: { ..._, code: C } }),
+                x && (0, a.jsx)(N, {}),
+                null != A && (0, a.jsx)(I, { recurrence: { ...c, code: A } }),
+                x &&
+                    null == A &&
+                    (0, a.jsx)(E, {
+                        children: (0, a.jsx)(y, {
+                            recurrence: c,
+                            canBeClaimed: S,
+                            hasClaimError: v,
+                            setCode: R,
+                            setHasClaimError: P,
+                            className: C.qx,
+                        }),
+                    }),
             ],
         });
     };
