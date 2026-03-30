@@ -12,7 +12,7 @@ var r = n(627968),
     _ = n(397927),
     f = n(607470),
     p = n(384015),
-    h = n(600975),
+    h = n(945810),
     m = n(423562),
     E = n(544180),
     g = n(186835),
@@ -31,8 +31,8 @@ var r = n(627968),
     L = n(838541),
     w = n(985018),
     M = n(73398),
-    x = n(435115);
-let P = 3e3,
+    P = n(435115);
+let x = 3e3,
     k = 1e3,
     U = "-:--",
     G = { friction: 14, tension: 200 },
@@ -167,7 +167,7 @@ class Y extends i.Component {
                     ref: this.setDurationRef,
                 }),
                 (0, r.jsx)("div", {
-                    className: x.Uu,
+                    className: P.Uu,
                     children: (0, r.jsx)(b.A, {
                         ref: this.setVolumeButtonRef,
                         muted: s,
@@ -242,12 +242,11 @@ class K extends i.Component {
         });
     }
 }
-let $ = (0, h.C)({
+let $ = (0, h.mj)({
+    name: "2026-03-media-play-metrics",
     kind: "user",
-    id: "2024-03_media_play_metrics",
-    label: "Media play metrics User Experiment",
     defaultConfig: { enabled: !1 },
-    treatments: [{ id: 1, label: "Send metrics", config: { enabled: !0 } }],
+    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
 class z {
     metadata;
@@ -266,7 +265,7 @@ class z {
     lastPlayingTime;
     analyticsEnabled;
     constructor(e) {
-        (this.metadata = e), (this.analyticsEnabled = $.getCurrentConfig({ location: "media_player" }).enabled);
+        (this.metadata = e), (this.analyticsEnabled = $.getConfig({ location: "media_player" }).enabled);
     }
     moveToState(e) {
         (this.stateTime = performance.now()), (this.currentState = e);
@@ -620,7 +619,7 @@ class q extends i.PureComponent {
     }
     updateControlsVisibility() {
         let { dragging: e, fullscreen: t } = this.state,
-            n = t ? k : P,
+            n = t ? k : x,
             r = Math.max(0, Date.now() - this._lastMove) > n;
         r !== this.state.hideControls && null == e && this.setState({ hideControls: r });
     }
