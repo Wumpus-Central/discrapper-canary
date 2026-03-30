@@ -6,7 +6,7 @@ var s = n(554146),
     a = n(932001),
     r = n(49999),
     o = n(985018),
-    d = n(584386);
+    d = n(201682);
 let c = (e) => {
     let { targetElementRef: t } = e,
         [n, c] = (0, a.kn)([s.M.PREMIUM_WISHLIST_COACHMARK]);
@@ -16,13 +16,13 @@ let c = (e) => {
               targetElementRef: t,
               title: o.intl.string(o.t["1YLUuN"]),
               body: o.intl.string(o.t.IqPvOn),
-              graphic: { type: "image", src: d },
-              size: "md",
+              graphic: { type: "image", src: d.A },
+              size: "video",
               alignmentStrategy: "edge",
               align: "right",
               position: "bottom",
               caretConfig: { align: "end" },
-              actions: [{ text: o.intl.string(o.t.lCOD8e), onClick: () => c(r.i.TAKE_ACTION) }],
+              actions: [{ text: o.intl.string(o.t.moIhI0), onClick: () => c(r.i.TAKE_ACTION) }],
               onRequestClose: () => c(r.i.USER_DISMISS),
           });
 };
