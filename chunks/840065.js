@@ -1,24 +1,26 @@
 "use strict";
-n.r(t), n.d(t, { USER_SETTINGS_MODAL_KEY: () => c, openUserSettings: () => d });
+n.r(t), n.d(t, { USER_SETTINGS_MODAL_KEY: () => d, openUserSettings: () => _ });
 var r = n(627968),
     i = n(397927),
     s = n(73153),
     a = n(790284),
     o = n(272053),
-    l = n(995377),
-    u = n(355097);
-let c = "USER_SETTINGS_MODAL_MODAL_KEY";
-async function d(e) {
+    l = n(960545),
+    u = n(995377),
+    c = n(355097);
+let d = "USER_SETTINGS_MODAL_MODAL_KEY";
+async function _(e) {
     let {
             path: t,
-            stackingBehavior: d = "replaceAll",
-            ..._
+            stackingBehavior: _ = "replaceAll",
+            ...f
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        f = arguments.length > 2 ? arguments[2] : void 0;
+        p = arguments.length > 2 ? arguments[2] : void 0;
     if (
-        (null != t && t === u.od.SUBSCRIPTIONS_ROLE_SUBSCRIPTIONS && a.A.setState({ subsection: u.nR }),
-        s.h.dispatch({ type: "USER_SETTINGS_MODAL_OPEN", ..._ }),
-        (0, l.f)())
+        (null != t && t === c.od.SUBSCRIPTIONS_ROLE_SUBSCRIPTIONS && a.A.setState({ subsection: c.nR }),
+        l.A.setState({ source: f.searchParams?.source }),
+        s.h.dispatch({ type: "USER_SETTINGS_MODAL_OPEN", ...f }),
+        (0, u.f)())
     ) {
         if (null == e) return;
         o.A.navigate(e);
@@ -79,7 +81,7 @@ async function d(e) {
                 ]).then(n.bind(n, 796150));
                 return (n) => (0, r.jsx)(t, { ...n, target: e });
             },
-            { modalKey: c, stackingBehavior: d, stackNextByDefault: !0, contextKey: i.SYi },
+            { modalKey: d, stackingBehavior: _, stackNextByDefault: !0, contextKey: i.SYi },
         );
-    f?.();
+    p?.();
 }

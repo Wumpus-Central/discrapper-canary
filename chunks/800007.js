@@ -1,16 +1,17 @@
 "use strict";
 n.d(t, {
-    Ge: () => p,
+    Ge: () => h,
     HS: () => s,
     PH: () => _,
     ST: () => l,
     U$: () => u,
-    W5: () => m,
+    W5: () => E,
     XF: () => d,
+    YJ: () => p,
     ZI: () => c,
     ZN: () => a,
     by: () => o,
-    eh: () => h,
+    eh: () => m,
     q4: () => f,
 });
 var r = n(281445),
@@ -36,12 +37,13 @@ let a = {
             : "staging" === window.GLOBAL_ENV.PROJECT_ENV
               ? "1415044199572832256"
               : "1415025086791942144",
-    p =
+    p = "production" === window.GLOBAL_ENV.PROJECT_ENV ? "1361763069696675961" : "1486428380437020672",
+    h =
         "production" === window.GLOBAL_ENV.PROJECT_ENV
             ? ["1402418491272986635", "1458530944955973852"]
             : "staging" === window.GLOBAL_ENV.PROJECT_ENV
               ? ["356875570916753438", "1458563423670501376"]
               : ["1", "2"];
 r.X.SHOCKBYTE, window.GLOBAL_ENV.RELEASE_CHANNEL, i.B.STAGING;
-let h = { [r.X.SHOCKBYTE]: "https://shockbyte.com/legal/acceptable-use-policy" },
-    m = "0";
+let m = { [r.X.SHOCKBYTE]: "https://shockbyte.com/legal/acceptable-use-policy" },
+    E = "0";

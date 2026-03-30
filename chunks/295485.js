@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__1d004",
     Su: "gameImage__1d004",

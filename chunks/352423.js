@@ -32,8 +32,8 @@ var b = n(961350),
     L = n(299091),
     w = n(309010),
     M = n(967198),
-    x = n(711014),
-    P = n(954571),
+    P = n(711014),
+    x = n(954571),
     k = n(998218),
     U = n(975807),
     G = n(652215);
@@ -51,7 +51,7 @@ async function B(e) {
     if (null == t) return;
     if (t.state === G.elq.EXPIRED || t.state === G.elq.BANNED || t.state === G.elq.ERROR)
         return void (await V(t, e.code));
-    let n = x.Ay.getFlattenedGuildIds(),
+    let n = P.Ay.getFlattenedGuildIds(),
         r = t?.guild?.id,
         i = null != r && n.includes(r),
         s = !1;
@@ -87,7 +87,7 @@ function j(e) {
             return (
                 null == s
                     ? (0, U.A)(e)
-                    : (P.default.track(G.HAw.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
+                    : (x.default.track(G.HAw.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
                           application_id: s,
                           device_platform: r.Fr ? "mobile_web" : "desktop_web",
                           guild_id: l,
@@ -211,7 +211,7 @@ function j(e) {
                 !0
             );
         };
-    let { host: b, hostname: D, pathname: L, search: x, hash: V } = k.A.toURLSafe(e) ?? {},
+    let { host: b, hostname: D, pathname: L, search: P, hash: V } = k.A.toURLSafe(e) ?? {},
         j = k.A.isDiscordHostname(D ?? null) || k.A.isDiscordLocalhost(b ?? null, D ?? null);
     if (j && (L?.startsWith("/application-directory") || L?.startsWith("/discovery/applications"))) {
         let e = L.split("/"),
@@ -222,7 +222,7 @@ function j(e) {
         return (t) => {
             let r, a, o;
             if ((t?.preventDefault(), i)) {
-                let e = new URLSearchParams(x);
+                let e = new URLSearchParams(P);
                 (r = e.get("q") ?? void 0), (a = e.get("category_id") ?? void 0), (o = e.get("page") ?? void 0);
             } else s && (a = e[4]);
             return (
@@ -245,7 +245,7 @@ function j(e) {
     }
     if (null != L && j && k.A.isAppRoute(L)) {
         let e = { navigationReplace: !1, openChannel: !0 };
-        return null != x && (e.search = x), null != V && (e.hash = V), (t) => (t?.preventDefault(), (0, S.A)(L, e), !0);
+        return null != P && (e.search = P), null != V && (e.hash = V), (t) => (t?.preventDefault(), (0, S.A)(L, e), !0);
     }
     if (null != L && j) {
         let { getOAuth2AuthorizeProps: t, openOAuth2ModalWithCreateGuildModal: r } = n(200330),
@@ -274,8 +274,8 @@ function j(e) {
             { openUserSettings: r } = n(840065);
         return (n) => {
             n?.preventDefault();
-            let i = e({ path: L, search: x });
-            return t(i, "link_click"), r(i.target, { analyticsLocations: s, path: i.path }), !0;
+            let i = e({ path: L, search: P });
+            return t(i, "link_click"), r(i.target, { analyticsLocations: s, path: i.path, searchParams: i.params }), !0;
         };
     }
     if (j && L?.startsWith("/playground")) {
@@ -287,7 +287,7 @@ function j(e) {
     return j && L?.startsWith("/discovery/quests")
         ? (e) => (e?.preventDefault(), (0, N.navigateToQuestHome)({ fromContent: i.u.QUEST_BADGE }), !0)
         : j && L?.startsWith("/quest-home")
-          ? (e) => (e?.preventDefault(), (0, C.pX)(G.BVt.QUEST_HOME + (x ?? "")), !0)
+          ? (e) => (e?.preventDefault(), (0, C.pX)(G.BVt.QUEST_HOME + (P ?? "")), !0)
           : j && L?.startsWith("/quest-preview")
             ? (e) => {
                   if ((e?.preventDefault(), (0, y.U)({ location: F.rE.NAVIGATE_TO_QUEST_HOME_UTIL })))
