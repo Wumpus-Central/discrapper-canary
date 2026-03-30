@@ -1866,6 +1866,13 @@ let { Themes: r } = n(680049).zv,
                 [r.MIDNIGHT]: { raw: "BRAND_500", opacity: 1 },
                 [r.DARKER]: { raw: "BRAND_500", opacity: 1 },
             },
+            SLIDER_TRACK_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: { raw: "NEUTRAL_68", opacity: 1 },
+                [r.LIGHT]: { raw: "NEUTRAL_17", opacity: 1 },
+                [r.MIDNIGHT]: { raw: "NEUTRAL_60", opacity: 1 },
+                [r.DARKER]: { raw: "NEUTRAL_55", opacity: 1 },
+            },
             SPINE_DEFAULT: {
                 category: "generic",
                 [r.DARK]: { raw: "PRIMARY_530", opacity: 1 },
