@@ -19,7 +19,7 @@ var r = n(627968),
     A = n(270537),
     I = n(756366),
     T = n(985018),
-    S = n(954848);
+    S = n(150163);
 let y = (e) => (0, r.jsx)(v, { ...e }),
     v = (e) => {
         let { unifiedStepProps: t } = e,
@@ -108,57 +108,57 @@ let y = (e) => (0, r.jsx)(v, { ...e }),
                 upperInlineNoticeProps: t,
                 planSelectContent: n,
                 purchaseItemContent: s,
-                subscriptionDetailsContent: a,
-                isStepLoading: o,
-                paymentSelectContent: l,
-                invoiceSummaryContent: u,
-                promotionalNoticeContent: c,
-                legalContent: d,
-                invoiceTotalDueLabel: _ = T.intl.string(I.default.R0cZsM),
-                invoiceTotalDueValue: p,
-                shouldShowGlobalNotices: h,
-                footerInlineNoticeProps: E,
-                className: y,
+                subscriptionDetailsContent: o,
+                isStepLoading: l,
+                paymentSelectContent: u,
+                invoiceSummaryContent: c,
+                promotionalNoticeContent: d,
+                legalContent: _,
+                invoiceTotalDueLabel: p = T.intl.string(I.default.R0cZsM),
+                invoiceTotalDueValue: h,
+                shouldShowGlobalNotices: E,
+                footerInlineNoticeProps: y,
+                className: v,
             } = e,
-            v = L(t),
-            N = L(E),
-            R = i.useMemo(
+            N = L(t),
+            R = L(y),
+            O = i.useMemo(
                 () =>
-                    null != v || h
-                        ? h
-                            ? null != v
-                                ? (0, r.jsx)(D, { children: v })
+                    null != N || E
+                        ? E
+                            ? null != N
+                                ? (0, r.jsx)(D, { children: N })
                                 : (0, r.jsx)(D, {})
-                            : (0, r.jsx)("div", { className: S.dD, children: v })
+                            : (0, r.jsx)("div", { className: S.dD, children: N })
                         : null,
-                [h, v],
+                [E, N],
             ),
-            O = i.useMemo(() => (0, f.Gn)(), []);
-        return o
-            ? (0, r.jsx)(C, { className: y })
+            b = i.useMemo(() => (0, f.Gn)(), []);
+        return l
+            ? (0, r.jsx)(C, { className: v })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsxs)("div", {
-                          className: y,
+                          className: a()(v, { [S.pg]: null == c }),
                           children: [
-                              R,
+                              O,
                               n,
                               null != n && null != s && (0, r.jsx)("div", { className: S.ls }),
                               s,
-                              null != a && (0, r.jsx)("div", { className: S.P3, children: a }),
+                              null != o && (0, r.jsx)("div", { className: S.P3, children: o }),
                               (0, r.jsxs)("div", {
                                   className: S.Jv,
-                                  children: [l, O ? (0, r.jsx)(g.Z4, { className: S.KX }) : null],
+                                  children: [u, b ? (0, r.jsx)(g.Z4, { className: S.KX }) : null],
                               }),
-                              null != u && (0, r.jsx)("div", { className: S.ZF, children: u }),
+                              null != c && (0, r.jsx)("div", { className: S.ZF, children: c }),
                           ],
                       }),
                       (0, r.jsxs)(m.bx, {
                           children: [
-                              null != _ && null != p && (0, r.jsx)(A.Qf, { className: S.NR, label: _, value: p }),
-                              null != c ? (0, r.jsx)("div", { className: S.uh, children: c }) : null,
-                              d,
-                              null != N ? (0, r.jsx)("div", { className: S.Uu, children: N }) : null,
+                              null != p && null != h && (0, r.jsx)(A.Qf, { className: S.NR, label: p, value: h }),
+                              null != d ? (0, r.jsx)("div", { className: S.uh, children: d }) : null,
+                              _,
+                              null != R ? (0, r.jsx)("div", { className: S.Uu, children: R }) : null,
                           ],
                       }),
                   ],
