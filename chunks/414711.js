@@ -8,10 +8,10 @@ var i = s(627968),
     u = s(397927),
     h = s(442433);
 s(646363);
-var c = s(254155);
+var c = s(904914);
 class A extends n.PureComponent {
     state = {
-        height: new l.A.Value(this.props.height ?? 62),
+        height: new l.A.Value(this.props.height ?? 61),
         opacity: new l.A.Value(1),
         hovered: !1,
         isContextMenuActive: !1,
@@ -27,7 +27,7 @@ class A extends n.PureComponent {
             this.state.height.setValue(0),
             l.A.parallel([
                 l.A.timing(this.state.opacity, { toValue: 1, duration: 200 }),
-                l.A.timing(this.state.height, { toValue: this.props.height ?? 62, duration: 200 }),
+                l.A.timing(this.state.height, { toValue: this.props.height ?? 61, duration: 200 }),
             ]).start(e);
     }
     handleMouseEnter = () => {
@@ -43,7 +43,7 @@ class A extends n.PureComponent {
             (0, h.L3)(
                 e,
                 async () => {
-                    let { default: e } = await Promise.all([s.e("97262"), s.e("32418"), s.e("22252")]).then(
+                    let { default: e } = await Promise.all([s.e("97262"), s.e("32418"), s.e("54631")]).then(
                         s.bind(s, 668569),
                     );
                     return (s) => (0, i.jsx)(e, { ...s, user: t });
@@ -57,23 +57,36 @@ class A extends n.PureComponent {
     };
     render() {
         let { height: e, opacity: t, hovered: s, isContextMenuActive: n } = this.state,
-            { children: a, user: h, onClick: A, isActive: m, className: d, activeClassName: p } = this.props;
-        return (0, i.jsx)(o.tG, {
-            id: h.id,
-            children: (o) =>
-                (0, i.jsx)(u.vN3, {
-                    offset: { left: -8, right: -8 },
-                    children: (0, i.jsx)(l.A.div, {
-                        className: r()(d, c.V, null != p ? { [p]: m || n } : null, { [c.v]: m || n }),
-                        onContextMenu: (e) => this.handleContextMenu(e, h),
-                        onMouseEnter: this.handleMouseEnter,
-                        onMouseLeave: this.handleMouseLeave,
-                        onClick: A ?? void 0,
-                        style: { height: e, opacity: t },
-                        ...o,
-                        children: a(s || m || n),
-                    }),
+            {
+                children: a,
+                user: h,
+                onClick: A,
+                isActive: m,
+                className: d,
+                activeClassName: p,
+                noBorder: N,
+            } = this.props;
+        return (0, i.jsxs)(i.Fragment, {
+            children: [
+                N ? null : (0, i.jsx)("div", { className: r()(c.yF, { [c._]: m || n || s }) }),
+                (0, i.jsx)(o.tG, {
+                    id: h.id,
+                    children: (o) =>
+                        (0, i.jsx)(u.vN3, {
+                            offset: { left: -8, right: -8 },
+                            children: (0, i.jsx)(l.A.div, {
+                                className: r()(d, c.Vg, null != p ? { [p]: m || n } : null, { [c.vu]: m || n }),
+                                onContextMenu: (e) => this.handleContextMenu(e, h),
+                                onMouseEnter: this.handleMouseEnter,
+                                onMouseLeave: this.handleMouseLeave,
+                                onClick: A ?? void 0,
+                                style: { height: e, opacity: t },
+                                ...o,
+                                children: a(s || m || n),
+                            }),
+                        }),
                 }),
+            ],
         });
     }
 }
