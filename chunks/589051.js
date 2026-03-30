@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { E: () => I, H: () => c, M8: () => A, NI: () => g, X4: () => m, aS: () => d, o0: () => f, sq: () => l });
+n.d(t, { E: () => E, H: () => c, M8: () => m, NI: () => h, aS: () => d, o0: () => f, sq: () => l });
 var r = n(812729),
     i = n.n(r),
     s = n(600975),
@@ -107,21 +107,7 @@ function f(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return _.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-let p = (0, s.C)({
-    id: "2025-11_overlay_bug_reporter",
-    label: "Overlay Bug Reporter",
-    kind: "user",
-    defaultConfig: { enabled: !1 },
-    treatments: [{ id: 1, label: "Enable Bug Reporter", config: { enabled: !0 } }],
-});
-function h(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return p.getCurrentConfig({ location: e }, { autoTrackExposure: t });
-}
-function m(e) {
-    return p.useExperiment({ location: e }).enabled;
-}
-let E = (0, a.mj)({
+let p = (0, a.mj)({
     name: "2025-11-overlay-chat",
     kind: "user",
     defaultConfig: { hasChat: !1, hasFriendList: !1, showNowPlayingForDifferentGames: !1 },
@@ -131,12 +117,12 @@ let E = (0, a.mj)({
         3: { hasChat: !0, hasFriendList: !0, showNowPlayingForDifferentGames: !0 },
     },
 });
-function g(e) {
-    return E.getConfig({ location: e });
+function h(e) {
+    return p.getConfig({ location: e });
 }
-function A(e) {
-    return E.useConfig({ location: e });
+function m(e) {
+    return p.useConfig({ location: e });
 }
-function I() {
-    d("OVERLAY_INITIALIZED"), f("OVERLAY_INITIALIZED"), h("OVERLAY_INITIALIZED"), g("OVERLAY_INITIALIZED");
+function E() {
+    d("OVERLAY_INITIALIZED"), f("OVERLAY_INITIALIZED"), h("OVERLAY_INITIALIZED");
 }

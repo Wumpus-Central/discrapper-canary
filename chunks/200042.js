@@ -45,7 +45,7 @@ var i = n(627968),
     X = n(672396),
     F = n(644434),
     K = n(652215),
-    B = n(661272);
+    B = n(650519);
 let q = !y.isPlatformEmbedded && !1,
     Q = q
         ? (0, i.jsx)(p.A, {
@@ -70,8 +70,7 @@ function $(e) {
     );
 }
 let ee = s.memo(function (e) {
-        let { keybind: t, onClick: n, locked: s } = e,
-            l = (0, N.X4)(g.A.OVERLAY);
+        let { keybind: t, onClick: n, locked: s } = e;
         return (0, i.jsx)(d.DUT, {
             className: r()(B.LK, { [B.Zo]: !s, [B.vZ]: s }),
             onMouseDown: (e) => {
@@ -84,12 +83,10 @@ let ee = s.memo(function (e) {
                 : (0, i.jsxs)(D.A, {
                       className: B.BE,
                       children: [
-                          l
-                              ? (0, i.jsx)(R.A, {
-                                    onClick: () => (0, H.b)(g.A.OVERLAY, K.BRT.OVERLAY),
-                                    IconComponent: d.iFK,
-                                })
-                              : null,
+                          (0, i.jsx)(R.A, {
+                              onClick: () => (0, H.b)(g.A.OVERLAY, K.BRT.OVERLAY),
+                              IconComponent: d.iFK,
+                          }),
                           (0, i.jsx)(R.A, { keybind: t, onClick: n, IconComponent: d.d$L }),
                       ],
                   }),

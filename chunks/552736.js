@@ -1,4 +1,5 @@
-r.d(t, { A: () => i });
-function i() {
+"use strict";
+function r() {
     return null;
 }
+n.d(t, { A: () => r });

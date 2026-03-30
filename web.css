@@ -42903,15 +42903,6 @@ screen and (max-width:485px) {
     background-color: var(--background-mod-muted)
 }
 
-.currencyWrapper_b41cc5,
-.previewTotalSectionContainer_b41cc5 {
-    margin-top: var(--space-16)
-}
-
-.premiumSwitchPlanSelectText_b41cc5 {
-    margin-bottom: var(--space-24)
-}
-
 .subscriptionCostRowAmount__3d62f {
     font-weight: var(--font-weight-medium)
 }
@@ -43154,6 +43145,15 @@ screen and (max-width:485px) {
 
 .premiumGroupNotice_e4d803 {
     margin: 12px 0
+}
+
+.currencyWrapper_b41cc5,
+.previewTotalSectionContainer_b41cc5 {
+    margin-top: var(--space-16)
+}
+
+.premiumSwitchPlanSelectText_b41cc5 {
+    margin-bottom: var(--space-24)
 }
 
 .renewalInvoiceDate_d313e6 {

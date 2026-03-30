@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { ID: () => C, PI: () => L, W9: () => R, XH: () => O, l$: () => D, rk: () => N });
+n.d(t, { PI: () => D, W9: () => C, XH: () => R, l$: () => b, rk: () => N });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -37,10 +37,6 @@ let N = (e) => {
         });
     },
     C = (e) => {
-        let { label: t = S.intl.string(y.default.eoXh7B), lineItems: n, currency: i } = e;
-        return (0, r.jsx)(d.Vm, { label: t, lineItems: n, currency: i });
-    },
-    R = (e) => {
         let {
                 invoiceSummaryTypeWithPreview: t,
                 subscriptionPlan: n,
@@ -60,9 +56,9 @@ let N = (e) => {
                       subscriptionTrial: i,
                   }).lineItems;
         let c = (0, u.lp)(o, { manualLineItems: l, includeTaxLineItem: !0 });
-        return (0, r.jsx)(C, { label: S.intl.string(y.default.eoXh7B), lineItems: c, currency: o.currency });
+        return (0, r.jsx)(d.Vm, { label: S.intl.string(y.default.eoXh7B), lineItems: c, currency: o.currency });
     },
-    O = (e) => {
+    R = (e) => {
         let {
                 selectedPlanId: t,
                 priceOptions: n,
@@ -105,12 +101,12 @@ let N = (e) => {
                     premiumSwitchPlanSelectText: e ? (0, f.yq)(D, L) : null,
                 };
             }, [D, b, L]),
-            x = i.useMemo(
+            P = i.useMemo(
                 () => (p && O ? (0, f.Ct)(C, { subscriptionPeriodEnd: l, trialPeriodCopy: R }) : h),
                 [p, O, C, l, R, h],
             ),
             {
-                selectPlan: P,
+                selectPlan: x,
                 premiumSubscription: k,
                 userLocale: U,
                 priceOptions: G,
@@ -123,9 +119,9 @@ let N = (e) => {
             Y = i.useMemo(() => (s.length > 0 ? T.hd[s[0]].premiumType : void 0), [s]),
             W = i.useCallback(
                 (e) => {
-                    P(e.value);
+                    x(e.value);
                 },
-                [P],
+                [x],
             ),
             K = i.useMemo(() => {
                 let e = null != H && H.discount.user_usage_limit_interval === T.Ff.MONTH;
@@ -171,7 +167,7 @@ let N = (e) => {
                           }),
                       (0, r.jsx)(c.me, {
                           headingComponent: (0, r.jsx)(c.ec, { size: "sm", color: "text-strong", premiumType: Y }),
-                          headingSubText: x,
+                          headingSubText: P,
                           planRadioOptions: K,
                           value: E?.id ?? "",
                           onChange: W,
@@ -191,14 +187,14 @@ let N = (e) => {
                   ],
               });
     },
-    b = (e) => {
+    O = (e) => {
         let { fractionalPremiumInfo: t, isEligibleForTrial: n, trialPeriodCopy: r, subscriptionPeriodEnd: i } = e,
             s = n ? { variant: _.uA.TRIAL, trialPeriod: r, trialEnd: i } : {};
         return { fractionalPremiumBannerMessage: (0, _.NQ)({ fractionalPremiumInfo: t, ...s }) };
     },
-    D = (e) => {
+    b = (e) => {
         let { fractionalPremiumInfo: t, isEligibleForTrial: n, trialPeriodCopy: i, subscriptionPeriodEnd: s } = e,
-            { fractionalPremiumBannerMessage: a } = b({
+            { fractionalPremiumBannerMessage: a } = O({
                 fractionalPremiumInfo: t,
                 isEligibleForTrial: n,
                 trialPeriodCopy: i,
@@ -206,7 +202,7 @@ let N = (e) => {
             });
         return null != a && "" !== a ? (0, r.jsx)(o.wx6, { type: "info", children: a }) : null;
     };
-function L(e) {
+function D(e) {
     let {
             planGroup: t,
             isTrial: n,
