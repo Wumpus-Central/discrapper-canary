@@ -211,20 +211,21 @@ function D(e) {
             paymentSourceType: a,
             activeSubscription: o,
             invoiceSummaryTypeWithPreview: l,
-            overrideRenewalDate: u,
-            fractionalPremiumInfo: d,
-            hideLegalContent: _,
-            isInvoiceBilledImmediately: f = !0,
+            isPrepaidPaymentSource: u = !1,
+            overrideRenewalDate: d,
+            fractionalPremiumInfo: _,
+            hideLegalContent: f,
+            isInvoiceBilledImmediately: T = !0,
         } = e,
-        { immediateDelivery: T } = (0, g.U)(),
-        { discountOffer: S } = (0, E.P5)();
+        { immediateDelivery: S } = (0, g.U)(),
+        { discountOffer: y } = (0, E.P5)();
     if (l.type === m.N$.LOADING) return null;
-    let { invoicePreview: y } = l,
-        v = ("renewalInvoicePreview" in l ? l.renewalInvoicePreview : null) ?? y,
-        N = v.invoiceItems.find((e) => e.subscriptionPlanId === i.id),
-        C = null != N ? (0, A.Re)(N, S).amount : v.subtotal;
-    if (_) return null;
-    let R = {
+    let { invoicePreview: v } = l,
+        N = ("renewalInvoicePreview" in l ? l.renewalInvoicePreview : null) ?? v,
+        C = N.invoiceItems.find((e) => e.subscriptionPlanId === i.id),
+        R = null != C ? (0, A.Re)(C, y).amount : N.subtotal;
+    if (f) return null;
+    let O = {
         purchaseButtonText: (0, h.Ro)({
             productLine: I.EZt.PREMIUM,
             purchaseType: I.VVm.SUBSCRIPTION,
@@ -232,24 +233,24 @@ function D(e) {
             premiumSubscription: o,
             isGift: s,
             planGroup: t,
-            isPrepaidPaymentSource: !1,
+            isPrepaidPaymentSource: u,
         }),
-        totalDue: f ? y.total : 0,
-        renewalPrice: C,
-        currency: y.currency,
+        totalDue: T ? v.total : 0,
+        renewalPrice: R,
+        currency: v.currency,
         interval: i.interval,
         intervalCount: i.intervalCount,
         startDate: (0, p.de)({
-            overrideRenewalDate: u,
-            currentInvoice: y.id !== v.id ? y : void 0,
-            renewalInvoice: v,
+            overrideRenewalDate: d,
+            currentInvoice: v.id !== N.id ? v : void 0,
+            renewalInvoice: N,
             isSubscriptionUpdate: null != o,
-            fractionalPremiumInfo: d,
+            fractionalPremiumInfo: _,
         }),
     };
     return (0, r.jsx)(c._P, {
-        variant: { type: s ? c.I0.GiftNitro : n ? c.I0.SubscriptionTrial : c.I0.Subscription, ...R },
+        variant: { type: s ? c.I0.GiftNitro : n ? c.I0.SubscriptionTrial : c.I0.Subscription, ...O },
         paymentSourceType: a,
-        immediateDelivery: T,
+        immediateDelivery: S,
     });
 }

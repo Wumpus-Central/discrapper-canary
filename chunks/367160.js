@@ -35,7 +35,7 @@ let N = (e) => {
             metadata: L,
         } = e,
         w = (0, p.L)(e),
-        { isEligibleForTrial: M, discountOffer: x, selectedStoreListing: P } = (0, E.P5)(),
+        { isEligibleForTrial: M, discountOffer: P, selectedStoreListing: x } = (0, E.P5)(),
         k = L?.guild_id ?? void 0,
         {
             error: U,
@@ -102,7 +102,7 @@ let N = (e) => {
             premiumSubscription: er,
             isGift: G,
         }),
-        eg = i.useMemo(() => null != x && null != x.discount && null != j && (0, f.Ro)(j, x.discount.id), [x, j]),
+        eg = i.useMemo(() => null != P && null != P.discount && null != j && (0, f.Ro)(j, P.discount.id), [P, j]),
         eA = i.useMemo(() => {
             if (null != e_ && e_.type === h.N$.PREMIUM_WITH_TRIAL && null != em)
                 return (0, r.jsx)(o.J, {
@@ -110,8 +110,8 @@ let N = (e) => {
                     Icon: s.tvc,
                     text: y.intl.format(v.default.IAsfR5, { daysCount: eh }),
                 });
-            if (null != x && eg) {
-                let e = x.discount;
+            if (null != P && eg) {
+                let e = P.discount;
                 if (e.user_usage_limit_interval === S.Ff.MONTH)
                     return (0, r.jsx)(o.J, {
                         gradientColor: "nitro-pink",
@@ -123,7 +123,7 @@ let N = (e) => {
                     });
             }
             return null;
-        }, [em, eg, x, eh, e_]),
+        }, [em, eg, P, eh, e_]),
         eI = i.useMemo(() => {
             let e = [];
             return (
@@ -163,7 +163,7 @@ let N = (e) => {
         null != e_.renewalInvoicePreview
     ) {
         let e = (0, T.Gj)(e_.invoicePreview, e_.renewalInvoicePreview, eT, {
-            discountOffer: x,
+            discountOffer: P,
             isSubscriptionUpdate: null != er,
             fractionalPremiumInfo: ei,
         });
@@ -185,7 +185,7 @@ let N = (e) => {
             : (0, r.jsx)(I._, {
                   type: e_.type,
                   invoicePreview: e_.invoicePreview,
-                  storeListing: P,
+                  storeListing: x,
                   subscriptionPlan: K,
                   isPrepaidPaymentSource: $,
                   giftRecipient: F,
@@ -199,6 +199,7 @@ let N = (e) => {
             plan: K,
             isGift: G,
             paymentSourceType: et,
+            isPrepaidPaymentSource: $,
             invoiceSummaryTypeWithPreview: e_,
             fractionalPremiumInfo: ei,
         }),
