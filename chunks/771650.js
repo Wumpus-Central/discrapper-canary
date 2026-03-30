@@ -76,10 +76,10 @@ function w() {
     };
 }
 let M = "([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})",
-    x = "\\d{4}",
-    P = "([0-9]{4})-([0-9]{1,2})",
+    P = "\\d{4}",
+    x = "([0-9]{4})-([0-9]{1,2})",
     k = "([^\\d\\s]+)",
-    U = RegExp(`(?:\\s*(${M}|${P}|${x}|${k}))`, "i"),
+    U = RegExp(`(?:\\s*(${M}|${x}|${P}|${k}))`, "i"),
     G = RegExp("\\s*(true|false)", "i");
 function F(e) {
     return `${e}:`;
@@ -275,8 +275,8 @@ function Q(e) {
             let o = X(i ?? []);
             if (null != o && o.length > 0) {
                 let e = m.default.getCurrentUser();
-                null != e && o.push(e), (a = E.Ay.queryUsers({ ...s, users: o, boosters: (0, E.X3)(u.rD.USER) }));
-            } else a = E.Ay.queryAllUsers({ ...s, boosters: (0, E.X3)(u.rD.USER) });
+                null != e && o.push(e), (a = E.Ay.queryUsers({ ...s, users: o }));
+            } else a = E.Ay.queryAllUsers({ ...s });
             break;
         default:
             return [];
