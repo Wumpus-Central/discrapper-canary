@@ -486,8 +486,16 @@ let r = {
                 resolve(e) {
                     let { enabledExperiments: t } = e;
                     if (0 === t.length) return 0;
-                    for (let e of t) if ("mobile-visual-refresh" === e) return 12;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 8;
                     return 0;
+                },
+            },
+            TABLE_ROW_ARROW_MARGIN_START: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 14;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 8;
+                    return 14;
                 },
             },
             TABLE_ROW_ARROW_WIDTH: {
@@ -495,6 +503,14 @@ let r = {
                     let { enabledExperiments: t } = e;
                     if (0 === t.length) return 8;
                     for (let e of t) if ("mobile-visual-refresh" === e) return 12;
+                    return 8;
+                },
+            },
+            TABLE_ROW_BORDER_RADIUS: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 8;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 16;
                     return 8;
                 },
             },

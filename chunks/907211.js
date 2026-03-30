@@ -2031,6 +2031,13 @@ let { Themes: r } = n(680049).zv,
                 [r.MIDNIGHT]: { raw: "PLUM_11", opacity: 0.2 },
                 [r.DARKER]: { raw: "PLUM_11", opacity: 0.16 },
             },
+            SWITCH_THUMB_BACKGROUND_DEFAULT: {
+                category: "generic",
+                [r.DARK]: { raw: "WHITE", opacity: 1 },
+                [r.LIGHT]: { raw: "WHITE", opacity: 1 },
+                [r.MIDNIGHT]: { raw: "WHITE", opacity: 1 },
+                [r.DARKER]: { raw: "WHITE", opacity: 1 },
+            },
             TAB_BAR_BACKGROUND: {
                 category: "generic",
                 [r.DARK]: { raw: "PRIMARY_800", opacity: 1 },

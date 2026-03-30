@@ -1043,6 +1043,14 @@ let { Themes: r } = n(680049).zv,
                     [r.DARKER]: { raw: "OPACITY_12", opacity: 0.12156862745098039 },
                 },
             },
+            SWITCH_THUMB_BACKGROUND_DEFAULT: {
+                "mobile-visual-refresh": {
+                    [r.DARK]: { raw: "NEUTRAL_1", opacity: 1 },
+                    [r.LIGHT]: { raw: "NEUTRAL_44", opacity: 1 },
+                    [r.MIDNIGHT]: { raw: "NEUTRAL_1", opacity: 1 },
+                    [r.DARKER]: { raw: "NEUTRAL_1", opacity: 1 },
+                },
+            },
             TAB_BAR_BACKGROUND: {
                 "mobile-visual-refresh": {
                     [r.DARK]: { raw: "NEUTRAL_66", opacity: 1 },
