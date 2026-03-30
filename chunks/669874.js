@@ -27,7 +27,7 @@ class u extends r.PureComponent {
                     billing_context: "checkout",
                     ...(f ? { crashed: "true" } : {}),
                 },
-                extra: { ...p, ...(t ?? {}) },
+                extra: { ...p, ...(_ ?? {}), ...(t ?? {}) },
             };
         a.A.captureException(e, h), l.error("Checkout error occurred:", { error: e, additionalErrorContext: p });
         let m = "string" == typeof e ? e : e.message;
