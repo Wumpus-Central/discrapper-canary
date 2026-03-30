@@ -1,7 +1,7 @@
 n.d(t, { A: () => p });
 var a = n(627968),
-    s = n(64700),
-    i = n(311907),
+    i = n(64700),
+    s = n(311907),
     l = n(554146),
     r = n(397927),
     o = n(541689),
@@ -10,27 +10,27 @@ var a = n(627968),
     u = n(64343),
     m = n(821052),
     h = n(594061),
-    x = n(304932);
+    x = n(331755);
 function p() {
     let {
             dailyCapReached: e,
             dailyCapOverridden: t,
             newUserMinAgeRequiredOverridden: n,
-        } = (0, i.cf)([d.A], () => ({
+        } = (0, s.cf)([d.A], () => ({
             dailyCapReached: d.A.hasUserHitDCCap(),
             dailyCapOverridden: d.A.dailyCapOverridden,
             newUserMinAgeRequiredOverridden: d.A.newUserMinAgeRequiredOverridden,
         })),
-        [p, g] = s.useState(""),
-        [_, f] = s.useState(20),
-        v = s.useMemo(
+        [p, g] = i.useState(""),
+        [_, f] = i.useState(20),
+        v = i.useMemo(
             () =>
                 Object.keys(l.M)
                     .filter((e) => e.toLowerCase().includes(p.toLowerCase()))
                     .reverse(),
             [p],
         ),
-        b = s.useCallback(
+        b = i.useCallback(
             (e) => {
                 let t = e.currentTarget;
                 t.scrollHeight - t.scrollTop <= t.clientHeight + 100 && _ < v.length && f((e) => e + 100);
@@ -59,12 +59,12 @@ function p() {
                                         }),
                                         (0, a.jsx)(r.Button, {
                                             variant: "primary",
-                                            text: "Clear All",
+                                            text: "Undismiss All DCs",
                                             onClick: () => (0, h.nT)(),
                                         }),
                                         (0, a.jsx)(r.Button, {
                                             variant: "primary",
-                                            text: "Check All",
+                                            text: "Dismiss All DCs",
                                             onClick: () => (0, h.D1)(),
                                         }),
                                     ],
