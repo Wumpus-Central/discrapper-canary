@@ -18,7 +18,7 @@ var r = n(627968),
     g = n(531260),
     A = n(446044),
     I = n(669874),
-    T = n(637073),
+    T = n(881489),
     S = n(573359),
     y = n(422936),
     v = n(234419),
@@ -31,8 +31,8 @@ var r = n(627968),
     L = n(927578),
     w = n(728458),
     M = n(955529),
-    P = n(795791),
-    x = n(543027),
+    x = n(795791),
+    P = n(543027),
     k = n(853398),
     U = n(121005),
     G = n(369827),
@@ -101,15 +101,15 @@ function et(e) {
             excludeSubscriptionPlansBySKU: ec,
         }),
         ew = (0, H.A)(),
-        [eM, eP] = i.useState(!1),
+        [eM, ex] = i.useState(!1),
         {
-            step: ex,
+            step: eP,
             setStep: ek,
             steps: eU,
             breadcrumbsData: eG,
             previousStepRef: eF,
         } = (0, Y.A)({ stepConfigs: ee, breadcrumbs: et }),
-        [eV, eB] = (0, B.A)(ex),
+        [eV, eB] = (0, B.A)(eP),
         { paymentError: eH, paymentAuthenticationState: ej } = (0, F.A)(),
         { purchaseError: eY, purchaseErrorBlockRef: eW, setPurchaseError: eK } = (0, V.A)(),
         e$ = (0, c.A)(() => {
@@ -145,7 +145,7 @@ function et(e) {
         null != th.current || tp.isSame(o()(0)) || (th.current = tp);
     }, [tp]);
     let tm = i.useMemo(() => ({ paymentSourceId: eS, paymentGateway: eu, loadId: t }), [eS, eu, t]);
-    (0, x.A)(eE, tm);
+    (0, P.A)(eE, tm);
     let {
             skusById: tE,
             hasFetchedSkus: tg,
@@ -183,8 +183,8 @@ function et(e) {
                 return t === eo;
             }),
         ),
-        tP = tM?.compositeInstanceId,
-        tx = (0, u.bG)([b.A], () => (null != ez ? b.A.getForSKU(ez) : null), [ez]),
+        tx = tM?.compositeInstanceId,
+        tP = (0, u.bG)([b.A], () => (null != ez ? b.A.getForSKU(ez) : null), [ez]),
         [tk, tU] = i.useState(null),
         tG = (0, T.ds)() && !er,
         tF = t_,
@@ -193,7 +193,7 @@ function et(e) {
         })),
         tB = tF ? X.Ot : void 0,
         { enabled: tH } = (0, A.Y)({ location: "PaymentContext" }),
-        tj = (0, P.b7)(),
+        tj = (0, x.b7)(),
         tY = i.useMemo(() => {
             if (tj) return z.uH.MOBILE_WEB_REDIRECT_CHECKOUT;
         }, [tj]),
@@ -205,7 +205,10 @@ function et(e) {
         tZ = !!(!tW && !er && null != tz && null != ez && tq),
         tX = null != eq ? eq.id : null,
         tQ = null != eS && null != eI[eS] ? eI[eS]?.type : null,
-        tJ = i.useMemo(() => ({ payment_source_id: eS, payment_gateway: eu, payment_source_type: tQ }), [eS, eu, tQ]),
+        tJ = i.useMemo(
+            () => ({ payment_source_id: eS, payment_gateway: eu, payment_source_type: tQ, checkout_flow: a }),
+            [eS, eu, tQ, a],
+        ),
         t0 = (0, p.Db)();
     return (0, r.jsx)(Q.Provider, {
         value: {
@@ -233,8 +236,8 @@ function et(e) {
             displayCurrency: eL,
             ...ew,
             hasAcceptedTerms: eM,
-            setHasAcceptedTerms: eP,
-            step: ex,
+            setHasAcceptedTerms: ex,
+            step: eP,
             setStep: ek,
             steps: eU,
             stepConfigs: ee,
@@ -263,7 +266,7 @@ function et(e) {
             setModalOverlayNode: tt,
             selectedSkuId: ez,
             selectedSku: tT,
-            selectedStoreListing: tx,
+            selectedStoreListing: tP,
             selectedPlan: eq,
             setSelectedSkuId: eX,
             setSelectedPlanId: eQ,
@@ -287,7 +290,7 @@ function et(e) {
             application: tb,
             purchaseType: ea,
             isEmbeddedIAP: tw,
-            activitySessionId: tP,
+            activitySessionId: tx,
             devShelfFetchState: tL,
             entitlementsGranted: tl,
             setEntitlementsGranted: tu,

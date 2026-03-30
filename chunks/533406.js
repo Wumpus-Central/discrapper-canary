@@ -44,31 +44,31 @@ function h(e, t) {
                 location_stack: A,
             });
     }
-    let b = S ?? { hasFinished: !1 };
+    let R = S ?? { hasFinished: !1 };
     if (C)
         return void (0, _.L)({
             guildId: I,
             skuId: e.id,
             analyticsLocations: A ?? [],
             onContinue: () => {
-                if (!b.hasFinished)
+                if (!R.hasFinished)
                     return h(
                         e,
                         { isGift: n, giftRecipient: l, giftingOrigin: E, additionalUserIds: g },
-                        { analyticsLocations: A, guildId: I, isEligibilityCheckContinuation: !0, checkoutState: b },
+                        { analyticsLocations: A, guildId: I, isEligibilityCheckContinuation: !0, checkoutState: R },
                     );
             },
         });
-    let R = !1,
-        O = (0, r.A)(),
+    let O = !1,
+        b = (0, r.A)(),
         D = () => {
-            if (!R) {
+            if (!O) {
                 let t = (0, a.q1)({
                     location: "SocialLayerStorefrontPaymentModal",
                     unifiedCheckoutFlow: o.C.SLAYER_STOREFRONT_CHECKOUT,
                 });
                 u.default.track(f.HAw.PAYMENT_FLOW_CANCELED, {
-                    load_id: O,
+                    load_id: b,
                     payment_type: f.frM[f.VVm.ONE_TIME],
                     is_gift: n,
                     sku_id: e.id,
@@ -76,15 +76,16 @@ function h(e, t) {
                     location_stack: A,
                     sku_product_line: e.productLine,
                     checkout_design: t ? a.rS.UNIFIED : a.rS.LEGACY,
+                    checkout_flow: o.C.SLAYER_STOREFRONT_CHECKOUT,
                 });
             }
-            (0, i.ET)(), (0, s.z)(), (0, _.l)(), (b.hasFinished = !0);
+            (0, i.ET)(), (0, s.z)(), (0, _.l)(), (R.hasFinished = !0);
         },
         L = () => {
-            (R = !0), (b.hasFinished = !0);
+            (O = !0), (R.hasFinished = !0);
         },
         w = {
-            loadId: O,
+            loadId: b,
             skuId: e.id,
             applicationId: e.applicationId,
             analyticsLocations: A ?? [],

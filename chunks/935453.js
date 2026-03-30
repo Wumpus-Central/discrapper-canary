@@ -1,8 +1,8 @@
 n.d(t, { N: () => _ });
 var i = n(627968);
 n(64700);
-var r = n(835245),
-    a = n(397927),
+var a = n(835245),
+    r = n(397927),
     l = n(391048),
     s = n(636099),
     o = n(608805),
@@ -12,12 +12,12 @@ var r = n(835245),
 function _(e) {
     let { guildProductListing: t, guildId: _, sourceAnalyticsLocations: m } = e,
         h = !1,
-        p = (0, r.A)(),
+        p = (0, a.A)(),
         g = t.id,
         A = () => {
             h = !0;
         };
-    (0, a.mMO)(
+    (0, r.mMO)(
         async () => {
             let { default: e } = await n.e("41469").then(n.bind(n, 35052));
             return (n) =>
@@ -45,6 +45,7 @@ function _(e) {
                         sku_id: g,
                         location_stack: Array.isArray(m) ? m : [m],
                         checkout_design: e ? o.rS.UNIFIED : o.rS.LEGACY,
+                        checkout_flow: d.C.GUILD_PRODUCT_CHECKOUT,
                     });
                 }
                 (0, l.ET)(), (0, s.z)();

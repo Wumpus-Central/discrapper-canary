@@ -1,4 +1,4 @@
-i.d(e, { A: () => f, l: () => N }), i(938796);
+i.d(e, { A: () => f, l: () => P }), i(938796);
 var n = i(627968);
 i(64700);
 var l = i(284009),
@@ -28,8 +28,8 @@ function f(t) {
             renderHeader: A,
             planGroup: f,
             skuId: h,
-            guildId: N,
-            reviewWarningMessage: P,
+            guildId: P,
+            reviewWarningMessage: N,
             applicationId: g,
             showBenefitsFirst: m,
             onComplete: L,
@@ -42,7 +42,7 @@ function f(t) {
             let { PaymentContextProvider: t } = await Promise.resolve().then(i.bind(i, 156312)),
                 a = (await i.e("72752").then(i.bind(i, 97491))).default,
                 { getApplicationPaymentSteps: r } = await i.e("50243").then(i.bind(i, 107854)),
-                o = r({ guildId: N, showBenefitsFirst: m });
+                o = r({ guildId: P, showBenefitsFirst: m });
             return (i) =>
                 (0, n.jsx)(t, {
                     loadId: F,
@@ -63,9 +63,9 @@ function f(t) {
                                 analyticsSubscriptionType: I,
                                 renderHeader: A,
                                 planGroup: f,
-                                reviewWarningMessage: P,
+                                reviewWarningMessage: N,
                                 applicationId: g,
-                                guildId: N ?? void 0,
+                                guildId: P ?? void 0,
                                 onComplete: () => {
                                     (b = !0), L?.();
                                 },
@@ -91,6 +91,7 @@ function f(t) {
                         application_id: g,
                         location_stack: p,
                         checkout_design: t ? d.rS.UNIFIED : d.rS.LEGACY,
+                        checkout_flow: S.CL.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT,
                     }),
                         (0, o.ET)(),
                         (0, c.z)();
@@ -106,7 +107,7 @@ let h = async (t, e) => {
         .find((t) => t.sku_id === e);
     s()(null == i, "User already has an active subscription to this SKU");
 };
-async function N(t) {
+async function P(t) {
     let {
             applicationId: e,
             skuId: i,

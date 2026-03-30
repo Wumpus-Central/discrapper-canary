@@ -18,6 +18,7 @@ let _ = () => {
             eligible_for_trial: !1,
             payment_modal_version: "v2",
             checkout_design: e ? i.rS.UNIFIED : i.rS.LEGACY,
+            checkout_flow: s.C.ORB_CHECKOUT,
         };
     },
     f = (e, t) => {

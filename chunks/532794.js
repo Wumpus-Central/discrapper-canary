@@ -36,8 +36,8 @@ function O(e) {
             analyticsLocations: L,
             analyticsObject: w,
             analyticsLocation: M,
-            analyticsSourceLocation: P,
-            confirmationFooter: x,
+            analyticsSourceLocation: x,
+            confirmationFooter: P,
             isGift: k = !1,
             giftMessage: U,
             giftStyle: G,
@@ -121,8 +121,8 @@ function O(e) {
                     analyticsLocations: L,
                     analyticsObject: w,
                     analyticsLocation: M,
-                    analyticsSourceLocation: P,
-                    confirmationFooter: x,
+                    analyticsSourceLocation: x,
+                    confirmationFooter: P,
                     trialId: B,
                     postSuccessGuild: H,
                     planGroup: R.LE,
@@ -155,7 +155,7 @@ function O(e) {
                         load_id: X,
                         payment_type: N.frM[N.VVm.SUBSCRIPTION],
                         location: M ?? w,
-                        source: P,
+                        source: x,
                         subscription_type: N.rzx.PREMIUM,
                         is_gift: k,
                         sku_id: et,
@@ -163,6 +163,7 @@ function O(e) {
                         application_id: Y,
                         location_stack: L,
                         checkout_design: e ? _.rS.UNIFIED : _.rS.LEGACY,
+                        checkout_flow: f.C.PREMIUM_CHECKOUT,
                     });
                 }
                 (0, c.ET)(), (0, u.ET)(), (0, d.z)(), O?.(Z), Z && D?.();
