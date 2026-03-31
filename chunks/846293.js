@@ -31,8 +31,8 @@ var r = n(481613),
     L = n(21599),
     w = n(970163),
     M = n(700241),
-    x = n(824865),
-    P = n(976860),
+    P = n(824865),
+    x = n(976860),
     k = n(323443),
     U = n(95701),
     G = n(961350),
@@ -96,12 +96,12 @@ function ed(e, t) {
     let { type: n } = e,
         { transitionTo: r, welcomeModalChannelId: i, guildScheduledEvent: s } = t ?? {},
         a = n === ee.rbe.GUILD_STAGE_VOICE,
-        o = { source: x.A.INVITE_ACCEPT, navigationReplace: !0 };
+        o = { source: P.A.INVITE_ACCEPT, navigationReplace: !0 };
     return (
         null != i && (o.welcomeModalChannelId = i),
         a && (o.state = { stageInviteKey: es.J2 }),
         null != s && (o.guildScheduledEventId = s.id),
-        (e) => (null != r ? r(e, o) : (0, P.pX)(e, o))
+        (e) => (null != r ? r(e, o) : (0, x.pX)(e, o))
     );
 }
 function e_(e) {
@@ -129,7 +129,7 @@ function e_(e) {
                       let { default: n } = e,
                           a = () => {
                               if (A) {
-                                  (0, k.av)(r instanceof U.YB ? r : (0, U.createChannelRecord)(r)), (0, P.pX)(I);
+                                  (0, k.av)(r instanceof U.YB ? r : (0, U.createChannelRecord)(r)), (0, x.pX)(I);
                                   return;
                               }
                               i?.muteOnJoinVoiceChannel && X.A.setSelfMute(_.x.DEFAULT, !0),
@@ -139,7 +139,7 @@ function e_(e) {
                                       J.Nl({ streamType: er.U4.GUILD, ownerId: l, guildId: t, channelId: m }),
                                   u === ei.yV.EMBEDDED_APPLICATION &&
                                       null != c &&
-                                      ((0, P.pX)(ee.BVt.CHANNEL(t ?? ee.ME, m)),
+                                      ((0, x.pX)(ee.BVt.CHANNEL(t ?? ee.ME, m)),
                                       (0, g.A)({
                                           channelId: m,
                                           applicationId: c,
@@ -155,7 +155,7 @@ function e_(e) {
         : (0, E.AX)(h) &&
           u === ei.yV.EMBEDDED_APPLICATION &&
           null != c &&
-          ((0, P.pX)(ee.BVt.CHANNEL(t ?? ee.ME, m)),
+          ((0, x.pX)(ee.BVt.CHANNEL(t ?? ee.ME, m)),
           (0, g.A)({
               channelId: m,
               applicationId: c,
@@ -209,13 +209,14 @@ let eh = function (e, t) {
         (0, O.Fd)(e) && null != n ? eh(n) : await Q.A.transitionToGuildSync(t);
     };
 function eE(e, t) {
-    let { invite: n, action: r, inviter_id: i, invite_message_id: s } = e;
+    let { invite: n, action: r, inviter_id: i, invite_message_id: s, invite_instance_id: a } = e;
     $.default.track(ee.HAw.INVITE_EMBED_ACTIONED, {
         action: r,
         invite_code: n.code,
         invite_type: n.type?.toString(),
         inviter_id: i ?? null,
         invite_message_id: s ?? null,
+        invite_instance_id: a ?? null,
         location_stack: t ?? null,
     });
 }
@@ -331,24 +332,24 @@ let eA = {
             c = K.default.getCurrentUser();
         return c?.hasFlag(ee.nhx.QUARANTINED)
             ? ((0, M.default)(), new Promise((e, t) => t(Error())))
-            : (p.h.dispatch({ type: "INVITE_ACCEPT", code: o }),
+            : (p.h.dispatch({ type: "INVITE_ACCEPT", code: t }),
               d.Bo.post({
                   url: ee.Rsh.INVITE(o),
                   context: u,
                   oldFormErrors: !0,
-                  body: { session_id: l },
+                  body: { session_id: l, invite_instance_id: r.invite_instance_id },
                   rejectWithError: !1,
               }).then(
                   async (e) => {
-                      p.h.dispatch({ type: "INVITE_ACCEPT_SUCCESS", invite: e.body, code: o });
-                      let t = O.Ay.getGuildScheduledEvent(a.guildScheduledEventId),
-                          r = { ...e.body, guild_scheduled_event: t },
-                          l = r?.guild_id ?? r?.guild?.id;
-                      if (!s && null != l && r.new_member && !r.show_verification_form) {
+                      p.h.dispatch({ type: "INVITE_ACCEPT_SUCCESS", invite: e.body, code: t });
+                      let r = O.Ay.getGuildScheduledEvent(a.guildScheduledEventId),
+                          o = { ...e.body, guild_scheduled_event: r },
+                          l = o?.guild_id ?? o?.guild?.id;
+                      if (!s && null != l && o.new_member && !o.show_verification_form) {
                           let { default: e } = await Promise.resolve().then(n.bind(n, 967305));
                           await e({ guildId: l });
                       }
-                      return i?.(r), e.body;
+                      return i?.(o), e.body;
                   },
                   (e) => {
                       throw (
@@ -356,7 +357,7 @@ let eA = {
                               (0, A.yO)(et.w_.JOIN_LARGE_GUILD_UNDERAGE),
                           p.h.dispatch({
                               type: "INVITE_ACCEPT_FAILURE",
-                              code: o,
+                              code: t,
                               error: { message: e.body?.message, code: e.body?.code },
                           }),
                           new m.A(e))

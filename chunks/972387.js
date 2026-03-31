@@ -9,21 +9,21 @@ var i = n(73153),
     d = n(115063),
     u = n(652215);
 let h = {
-    acceptInvite(e) {
-        let t = l.Ay.getInviteContext("Desktop Invite Modal", e),
-            n = (0, a.tJ)(),
-            o = (0, a.Z1)(),
-            u = (0, a.N9)();
+    acceptInvite(e, t) {
+        let n = l.Ay.getInviteContext("Desktop Invite Modal", e),
+            o = (0, a.tJ)(),
+            u = (0, a.Z1)(),
+            h = (0, a.N9)();
         l.Ay.acceptInvite({
             inviteKey: e.code,
-            context: t,
+            context: { ...n, ...(null != t ? { invite_instance_id: t } : {}) },
             callback: (e) => {
                 null == e || null == e.guild || null == e.channel || __OVERLAY__ || l.Ay.transitionToInvite(e);
             },
         }).then(
             () => {
                 if (null != e.guild) {
-                    if (o) {
+                    if (u) {
                         if (r.$s.getSetting().includes(e.guild.id)) {
                             let t = new Set((0, d.Tb)());
                             t.delete(e.guild.id), r.$s.updateSetting(Array.from(t));
@@ -32,7 +32,7 @@ let h = {
                         let t = new Set((0, d.Tb)());
                         t.add(e.guild?.id), r.$s.updateSetting(Array.from(t));
                     }
-                    if (u) {
+                    if (h) {
                         if (r.JG.getSetting().includes(e.guild.id)) {
                             let t = new Set((0, d.Kk)());
                             t.delete(e.guild.id), r.JG.updateSetting(Array.from(t));
@@ -41,7 +41,7 @@ let h = {
                         let t = new Set((0, d.Kk)());
                         t.add(e.guild.id), r.JG.updateSetting(Array.from(t));
                     }
-                    null != n && n.length > 0 && (0, s.GL)(e.guild.id, { nick: n });
+                    null != o && o.length > 0 && (0, s.GL)(e.guild.id, { nick: o });
                 }
                 this.close();
             },

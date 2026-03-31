@@ -31,8 +31,8 @@ var r = n(889137),
     L = n(51271),
     w = n(844944),
     M = n(122906),
-    x = n(21599),
-    P = n(346542),
+    P = n(21599),
+    x = n(346542),
     k = n(279208),
     U = n(917878),
     G = n(586872),
@@ -104,7 +104,7 @@ function eM(e) {
     (0, y.Ay)(t).forEach((e) => {
         let { type: t, code: u, url: c } = e;
         if (t === S.I.INVITE)
-            ex({
+            eP({
                 inviteKey: u,
                 channelId: n,
                 messageId: r,
@@ -155,7 +155,7 @@ function eM(e) {
         else throw Error(`Unknown coded link type: ${t}`);
     });
 }
-function ex(e) {
+function eP(e) {
     let {
             inviteKey: t,
             channelId: n,
@@ -166,8 +166,8 @@ function ex(e) {
         } = e,
         o = ea.default.getId(),
         l = el.A.getInvite(t),
-        u = (0, x.y$)(t),
-        c = null != l && (0, P.oK)(l),
+        u = (0, P.y$)(t),
+        c = null != l && (0, x.oK)(l),
         d = l?.target_application?.id;
     null != d && c && (0, g.KL)(d, ev.J.ACTIVITY_INVITE, o);
     let f = eo.A.getChannel(n);
@@ -207,6 +207,7 @@ function ex(e) {
                 message_id: r,
                 send_type: ey.gfq.DIRECT_MESSAGE,
                 invite_guild_scheduled_event_id: u.guildScheduledEventId,
+                invite_instance_id: (0, P._U)(u.baseCode, r) ?? null,
                 ...a,
             }),
             _.Ay.trackWithMetadata(ey.HAw.INVITE_SENT, t);
@@ -225,12 +226,13 @@ function ex(e) {
                 message_id: r,
                 send_type: ey.gfq.DIRECT_MESSAGE,
                 invite_guild_scheduled_event_id: u.guildScheduledEventId,
+                invite_instance_id: (0, P._U)(u.baseCode, r) ?? null,
                 ...a,
             }),
             _.Ay.trackWithMetadata(ey.HAw.INVITE_SENT, e));
     }
 }
-function eP(e, t, n, r, i) {
+function ex(e, t, n, r, i) {
     (0, eE.e7)(e).forEach((e) => {
         let s = eo.A.getChannel(t);
         null != s &&
@@ -891,8 +893,8 @@ ${s}`),
                     withCheckpoint: b,
                 } = n,
                 M = n.flags ?? 0,
-                [x, P] = (0, en.A)(a);
-            x && ((a = P), (M = (0, s.UI)(M, ey.pr7.SUPPRESS_NOTIFICATIONS)));
+                [P, x] = (0, en.A)(a);
+            P && ((a = x), (M = (0, s.UI)(M, ey.pr7.SUPPRESS_NOTIFICATIONS)));
             let k = !1,
                 U = n.messageReference?.type === ey.SH7.FORWARD;
             if (
@@ -1079,7 +1081,7 @@ ${s}`),
                                         location: f ?? "chat_input",
                                         inviteAnalyticsMetadata: p,
                                     }),
-                                    eP(a, e, _.body.id, f ?? "chat_input", !!n.isGiftLinkSentOnBehalfOfUser),
+                                    ex(a, e, _.body.id, f ?? "chat_input", !!n.isGiftLinkSentOnBehalfOfUser),
                                     null != n.gifMetadata && ek(n.gifMetadata, e, _.body.id, f ?? "chat_input"),
                                     null != r &&
                                         l.h.dispatch({
@@ -1277,6 +1279,6 @@ ${s}`),
                     });
             }
         },
-        trackInvite: ex,
+        trackInvite: eP,
     },
     eH = eB;

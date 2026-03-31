@@ -2,8 +2,8 @@
 n.d(t, { A: () => h });
 var r = n(110259),
     i = n(933681),
-    a = n(95701),
-    s = n(961350),
+    s = n(95701),
+    a = n(961350),
     o = n(71393),
     l = n(954571),
     u = n(499785),
@@ -19,9 +19,9 @@ function f(e) {
                 ? _.G2g.STREAM
                 : e.target_type === d.yV.EMBEDDED_APPLICATION
                   ? _.G2g.APPLICATION
-                  : (0, a.MK)(n.type)
+                  : (0, s.MK)(n.type)
                     ? _.G2g.GDM_INVITE
-                    : null == n || (0, a.Gw)(n.type)
+                    : null == n || (0, s.Gw)(n.type)
                       ? _.G2g.FRIEND_INVITE
                       : _.G2g.SERVER_INVITE;
     }
@@ -29,17 +29,21 @@ function f(e) {
 }
 let p = new Map();
 function h(e, t, n) {
-    if ((l.default.track(_.HAw.INVITE_OPENED, { invite_code: e }), p.has(e))) return p.get(e);
-    let a = (0, c.y$)(e),
+    if (
+        (l.default.track(_.HAw.INVITE_OPENED, { invite_code: e, invite_instance_id: n?.inviteInstanceId ?? null }),
+        p.has(e))
+    )
+        return p.get(e);
+    let s = (0, c.y$)(e),
         d = {
-            ...n,
+            inputValue: n?.inputValue,
             with_counts: !0,
             with_expiration: !0,
-            guild_scheduled_event_id: a.guildScheduledEventId,
+            guild_scheduled_event_id: s.guildScheduledEventId,
             with_permissions: !0,
         },
         h = u.A.get({
-            url: _.Rsh.INVITE(a.baseCode),
+            url: _.Rsh.INVITE(s.baseCode),
             query: d,
             oldFormErrors: !0,
             trackedActionData: {
@@ -53,10 +57,10 @@ function h(e, t, n) {
                         channel_id: r?.channel?.id,
                         channel_type: r?.channel?.type,
                         inviter_id: r?.inviter?.id,
-                        code: a.baseCode,
+                        code: s.baseCode,
                         input_value: n?.inputValue,
                         location: t,
-                        authenticated: s.default.isAuthenticated(),
+                        authenticated: a.default.isAuthenticated(),
                         size_total: r?.approximate_member_count,
                         size_online: r?.approximate_presence_count,
                         destination_user_id: r?.target_user?.id,
@@ -81,15 +85,16 @@ function h(e, t, n) {
                                     channel_id: null != i.channel ? i.channel.id : null,
                                     channel_type: null != i.channel ? i.channel.type : null,
                                     inviter_id: i.inviter ? i.inviter.id : null,
-                                    code: a.baseCode,
+                                    code: s.baseCode,
                                     input_value: n?.inputValue,
                                     location: t,
-                                    authenticated: s.default.isAuthenticated(),
+                                    authenticated: a.default.isAuthenticated(),
                                     size_total: i.approximate_member_count,
                                     size_online: i.approximate_presence_count,
                                     destination_user_id: null != i.target_user ? i.target_user.id : null,
                                     invite_type: f(i),
                                     user_is_member: null != o.A.getGuild(i?.guild?.id),
+                                    invite_instance_id: n?.inviteInstanceId ?? null,
                                 },
                                 { flush: !0 },
                             ),
@@ -104,10 +109,10 @@ function h(e, t, n) {
                                 _.HAw.INVITE_RESOLVED,
                                 {
                                     resolved: !1,
-                                    code: a.baseCode,
+                                    code: s.baseCode,
                                     input_value: n?.inputValue,
                                     location: t,
-                                    authenticated: s.default.isAuthenticated(),
+                                    authenticated: a.default.isAuthenticated(),
                                     user_banned: i,
                                     error_code: r.body?.code,
                                     error_message: r.body?.message,
