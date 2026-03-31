@@ -218,6 +218,30 @@ let r = {
                 },
             },
             CHAT_INPUT_PILL_PADDING: { resolve: () => 2 },
+            COACHMARK_BODY_BORDER_RADIUS: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 16;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 12;
+                    return 16;
+                },
+            },
+            COACHMARK_BODY_WIDTH: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 260;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 240;
+                    return 260;
+                },
+            },
+            COACHMARK_BUTTON_SPACING: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 12;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 16;
+                    return 12;
+                },
+            },
             CONTROL_CHECKBOX_BORDER_RADIUS: {
                 resolve(e) {
                     let { enabledExperiments: t } = e;

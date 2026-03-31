@@ -787,6 +787,22 @@ let { Themes: r } = n(680049).zv,
                     [r.DARKER]: { raw: "OPACITY_20", opacity: 0.2 },
                 },
             },
+            MOBILE_COACHMARK_BACKGROUND_DEFAULT: {
+                "mobile-visual-refresh": {
+                    [r.DARK]: { raw: "NEUTRAL_64", opacity: 1 },
+                    [r.LIGHT]: { raw: "NEUTRAL_1", opacity: 1 },
+                    [r.MIDNIGHT]: { raw: "NEUTRAL_91", opacity: 1 },
+                    [r.DARKER]: { raw: "NEUTRAL_79", opacity: 1 },
+                },
+            },
+            MOBILE_COACHMARK_BORDER_DEFAULT: {
+                "mobile-visual-refresh": {
+                    [r.DARK]: { raw: "OPACITY_12", opacity: 0.12156862745098039 },
+                    [r.LIGHT]: { raw: "OPACITY_28", opacity: 0.2784313725490196 },
+                    [r.MIDNIGHT]: { raw: "OPACITY_20", opacity: 0.2 },
+                    [r.DARKER]: { raw: "OPACITY_12", opacity: 0.12156862745098039 },
+                },
+            },
             MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT: {
                 "mobile-visual-refresh": {
                     [r.DARK]: { raw: "NEUTRAL_66", opacity: 1 },

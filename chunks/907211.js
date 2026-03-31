@@ -1459,6 +1459,13 @@ let { Themes: r } = n(680049).zv,
                 [r.MIDNIGHT]: { raw: "PLUM_19", opacity: 1 },
                 [r.DARKER]: { raw: "PLUM_17", opacity: 1 },
             },
+            MOBILE_COACHMARK_BORDER_DEFAULT: {
+                category: "generic",
+                [r.DARK]: { raw: "PRIMARY_800", opacity: 1 },
+                [r.LIGHT]: { raw: "WHITE", opacity: 1 },
+                [r.MIDNIGHT]: { raw: "PLUM_19", opacity: 1 },
+                [r.DARKER]: { raw: "PLUM_17", opacity: 1 },
+            },
             MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT: {
                 category: "generic",
                 [r.DARK]: { raw: "PRIMARY_630", opacity: 1 },
