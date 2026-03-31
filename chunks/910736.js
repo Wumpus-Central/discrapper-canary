@@ -63,10 +63,11 @@ class d extends a.G {
             { no: 2, name: "body", kind: "scalar", T: 9 },
             { no: 3, name: "asset", kind: "message", T: () => o.i },
             { no: 4, name: "button", kind: "message", T: () => c },
+            { no: 5, name: "help_article_id", kind: "scalar", T: 9 },
         ]);
     }
     create(e) {
-        let t = { header: "", body: "" };
+        let t = { header: "", body: "", helpArticleId: "" };
         return (
             globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
@@ -91,6 +92,9 @@ class d extends a.G {
                 case 4:
                     s.button = c.internalBinaryRead(e, e.uint32(), n, s.button);
                     break;
+                case 5:
+                    s.helpArticleId = e.string();
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -105,7 +109,8 @@ class d extends a.G {
         "" !== e.header && t.tag(1, r.O0.LengthDelimited).string(e.header),
             "" !== e.body && t.tag(2, r.O0.LengthDelimited).string(e.body),
             e.asset && o.i.internalBinaryWrite(e.asset, t.tag(3, r.O0.LengthDelimited).fork(), n).join(),
-            e.button && c.internalBinaryWrite(e.button, t.tag(4, r.O0.LengthDelimited).fork(), n).join();
+            e.button && c.internalBinaryWrite(e.button, t.tag(4, r.O0.LengthDelimited).fork(), n).join(),
+            "" !== e.helpArticleId && t.tag(5, r.O0.LengthDelimited).string(e.helpArticleId);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
