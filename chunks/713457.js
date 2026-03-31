@@ -21,8 +21,8 @@ var a = n(627968),
     A = n(971649),
     C = n(651892),
     y = n(710969),
-    S = n(901406),
-    T = n(792620),
+    T = n(901406),
+    S = n(792620),
     E = n(814793),
     N = n(201805),
     I = n(212614),
@@ -84,7 +84,7 @@ function U(e) {
     return {
         externalLinkCta: (0, C.wr)(t),
         handleOpenExternalLink: i.useCallback(() => {
-            (0, S.pu)(t, {
+            (0, T.pu)(t, {
                 content: x.uF.QUEST_HOME_DESKTOP,
                 ctaContent: j.Cy.OPEN_GAME_LINK,
                 impressionId: a,
@@ -158,7 +158,7 @@ function F(e) {
             questContent: n,
             onReceiveErrorHints: g,
             contentPosition: A,
-            rowIndex: S,
+            rowIndex: T,
             sourceQuestContent: U,
         } = e,
         F = (0, s.bG)([c.A], () => c.A.useReducedMotion),
@@ -182,9 +182,9 @@ function F(e) {
         Z = (0, y.if)(t),
         ee = !(0, y.Ic)(t),
         et = (0, v.In)(t),
-        en = (0, T.IO)(t),
-        ea = (0, T.K$)(t),
-        ei = (0, T.Cr)(t),
+        en = (0, S.IO)(t),
+        ea = (0, S.K$)(t),
+        ei = (0, S.Cr)(t),
         es = (0, v.fc)(t),
         [el, er, eo] = (0, v.Qo)(t, es),
         ed = ee && et === v.F3.ACCEPTED,
@@ -204,7 +204,7 @@ function F(e) {
             quest: t,
             questContent: n,
             questContentPosition: A,
-            questContentRowIndex: S,
+            questContentRowIndex: T,
             inGiftInventory: !0,
             isVideoQuest: en,
             inGameQuest: ei,
@@ -219,7 +219,7 @@ function F(e) {
                         questContent: n,
                         questContentCTA: j.Cy.DEFIBRILLATOR,
                         questContentPosition: A,
-                        questContentRowIndex: S,
+                        questContentRowIndex: T,
                         sourceQuestContent: U,
                     });
             },
@@ -235,7 +235,7 @@ function F(e) {
             eC.enabled &&
             (eC.variant === p.tL.LEARN_MORE_CTA_ONLY ||
                 eC.variant === p.tL.COMBINE_LEARN_MORE_CTA_AND_EXPRESSIVE_BUTTON),
-        eS = (0, v.do)({
+        eT = (0, v.do)({
             quest: t,
             content: n,
             ctaContent:
@@ -244,10 +244,10 @@ function F(e) {
                     : j.Cy.LEARN_MORE_CTA_AND_EXPRESSIVE_BUTTON_TREATMENT_THREE_OPEN_GAME_LINK,
             sourceQuestContent: U,
         }),
-        eT = null;
+        eS = null;
     if (ey) {
         let e = (0, C.wr)(t);
-        eT = (0, a.jsx)(r.$nd, { variant: "secondary", text: e, onClick: eS });
+        eS = (0, a.jsx)(r.$nd, { variant: "secondary", text: e, onClick: eT });
     }
     let eE = null;
     return (Z && X
@@ -307,14 +307,14 @@ function F(e) {
                         className: D.x6,
                         children:
                             em.enabled &&
-                            (eh === k.UA.UNENROLLED || eh === k.UA.ENROLLED) &&
+                            (eh === k.UA.UNENROLLED || eh === k.UA.ENROLLED || eh === k.UA.INCOMPLETE) &&
                             em.enabledQuestStates.has(eh)
                                 ? (0, a.jsxs)(r.e2v, {
                                       direction: "horizontal",
                                       fullWidth: !0,
                                       wrap: !1,
                                       children: [
-                                          eh === k.UA.UNENROLLED ? eT : null,
+                                          eh === k.UA.UNENROLLED ? eS : null,
                                           (0, a.jsx)(I.A, {
                                               quest: t,
                                               surface: k.V3.QUEST_HOME_TILE_FOOTER,
@@ -360,7 +360,9 @@ function F(e) {
                                 size: "sm",
                                 "data-migration-pending": !0,
                             })
-                          : em.enabled && eh === k.UA.ENROLLED && em.enabledQuestStates.has(k.UA.ENROLLED)
+                          : em.enabled &&
+                              (eh === k.UA.ENROLLED || eh === k.UA.INCOMPLETE) &&
+                              em.enabledQuestStates.has(eh)
                             ? (0, a.jsx)("div", {
                                   className: D.x6,
                                   children: (0, a.jsx)(I.A, {
@@ -371,7 +373,7 @@ function F(e) {
                                       analyticsCtxQuestContentPosition: A,
                                   }),
                               })
-                            : (0, T.g5)(t) && !K && el !== x.X0.DESKTOP
+                            : (0, S.g5)(t) && !K && el !== x.X0.DESKTOP
                               ? H
                                   ? (0, a.jsx)("div", {
                                         className: D.x6,
@@ -449,7 +451,7 @@ function F(e) {
                                     fullWidth: !0,
                                     wrap: !1,
                                     children: [
-                                        eT,
+                                        eS,
                                         em.enabled &&
                                         eh === k.UA.UNENROLLED &&
                                         em.enabledQuestStates.has(k.UA.UNENROLLED)
