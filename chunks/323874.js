@@ -1,1 +1,33 @@
-var n=t(693655),o=t(410323),a=t(304880),i=t(627),s=URLSearchParams,u=s.prototype,l=o(u.append),d=o(u.delete),c=o(u.forEach),f=o([].push),h=new s("a=1&a=2&b=3");h.delete("a",1),h.delete("b",void 0),h+""!="a=2"&&n(u,"delete",function(r){var e,t=arguments.length,n=t<2?void 0:arguments[1];if(t&&void 0===n)return d(this,r);var o=[];c(this,function(r,e){f(o,{key:e,value:r})}),i(t,1);for(var s=a(r),u=a(n),h=0,p=0,m=!1,v=o.length;h<v;)e=o[h++],m||e.key===s?(m=!0,d(this,e.key)):p++;for(;p<v;)((e=o[p++]).key!==s||e.value!==u)&&l(this,e.key,e.value)},{enumerable:!0,unsafe:!0})0,unsafe:!0})
+var n = t(693655),
+    o = t(410323),
+    a = t(304880),
+    i = t(627),
+    s = URLSearchParams,
+    u = s.prototype,
+    l = o(u.append),
+    d = o(u.delete),
+    c = o(u.forEach),
+    f = o([].push),
+    h = new s("a=1&a=2&b=3");
+h.delete("a", 1),
+    h.delete("b", void 0),
+    h + "" != "a=2" &&
+        n(
+            u,
+            "delete",
+            function (r) {
+                var e,
+                    t = arguments.length,
+                    n = t < 2 ? void 0 : arguments[1];
+                if (t && void 0 === n) return d(this, r);
+                var o = [];
+                c(this, function (r, e) {
+                    f(o, { key: e, value: r });
+                }),
+                    i(t, 1);
+                for (var s = a(r), u = a(n), h = 0, p = 0, m = !1, v = o.length; h < v; )
+                    (e = o[h++]), m || e.key === s ? ((m = !0), d(this, e.key)) : p++;
+                for (; p < v; ) ((e = o[p++]).key !== s || e.value !== u) && l(this, e.key, e.value);
+            },
+            { enumerable: !0, unsafe: !0 },
+        );
