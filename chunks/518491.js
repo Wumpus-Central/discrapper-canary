@@ -36,7 +36,7 @@ var s = n(503698),
     M = n(792656),
     k = n(511484),
     U = n(939724),
-    w = n(795269),
+    w = n(774774),
     V = n(473702),
     B = n(505559),
     F = n(722274),
@@ -406,7 +406,7 @@ let ee = (e, t, s) => {
         if (v === K.xc.NONE || c)
             y = n
                 ? (0, i.jsx)(B.A, { enablePremiumBrandRefresh: !0, text: p })
-                : (0, i.jsx)(w.ir, {
+                : (0, i.jsx)(w.HU, {
                       className: l()(q.Av, { [q.R]: !h }),
                       text: p,
                       colorOptions: w.at.PREMIUM_TIER_2_WHITE_FILL,
@@ -431,7 +431,7 @@ let ee = (e, t, s) => {
                             className: q.eL,
                             children: n
                                 ? (0, i.jsx)(B.A, { enablePremiumBrandRefresh: !0, text: j })
-                                : (0, i.jsx)(w.R, {
+                                : (0, i.jsx)(w.e4, {
                                       className: l()(q.Av, { [q.R]: !h }),
                                       text: j,
                                       colorOptions: w.at.PREMIUM_TIER_2_WHITE_FILL,

@@ -1,28 +1,28 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => m });
 var i = n(627968),
     s = n(64700),
-    a = n(397927),
-    l = n(793574),
+    l = n(397927),
+    a = n(793574),
     r = n(688810),
     o = n(463042),
-    c = n(985018),
-    d = n(794034);
+    d = n(985018),
+    c = n(895280);
 let u = s.forwardRef((e, t) => {
-    let { analyticsLocations: n } = (0, r.Ay)(l.A.PREMIUM_MARKETING_FOOTER_CTA);
+    let { analyticsLocations: n } = (0, r.Ay)(a.A.PREMIUM_MARKETING_FOOTER_CTA);
     return (0, i.jsx)(r.f5, {
         value: n,
         children: (0, i.jsx)("div", {
             ref: t,
-            className: d.kL,
+            className: c.kL,
             children: (0, i.jsxs)("div", {
-                className: d.hQ,
+                className: c.hQ,
                 children: [
                     (0, i.jsx)(o.A, {}),
-                    (0, i.jsx)(a.Heading, {
+                    (0, i.jsx)(l.Heading, {
                         variant: "display-md",
                         color: "text-strong",
-                        className: d.RH,
-                        children: c.intl.string(c.t.lEw32m),
+                        className: c.RH,
+                        children: d.intl.string(d.t.lEw32m),
                     }),
                 ],
             }),
@@ -30,4 +30,4 @@ let u = s.forwardRef((e, t) => {
     });
 });
 u.displayName = "PremiumMarketingFooter";
-let _ = u;
+let m = u;

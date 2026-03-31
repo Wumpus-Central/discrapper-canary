@@ -9,12 +9,12 @@ var i = n(503698),
     l = n(775602),
     u = n(166532),
     c = n(45938),
-    d = n(28003),
+    d = n(682610),
     _ = n(763795),
     f = n(602980),
     p = n(788868),
     h = n(985018),
-    m = n(812941);
+    m = n(541863);
 function E(e) {
     let {
             currentStep: t,
@@ -30,10 +30,10 @@ function E(e) {
             isEligibleForTrial: v,
             enablePremiumBrandRefresh: N,
             forceBrandRefreshHeader: C,
-            isDisplayingWowMomentConfirmation: b,
-            isPremiumGroupPurchase: R,
+            isDisplayingWowMomentConfirmation: R,
+            isPremiumGroupPurchase: O,
         } = e,
-        O = (0, a.bG)([l.A], () => l.A.useReducedMotion),
+        b = (0, a.bG)([l.A], () => l.A.useReducedMotion),
         D = () => {
             switch (t) {
                 case u.pn.PLAN_SELECT:
@@ -48,8 +48,8 @@ function E(e) {
         };
     return S && (0, c.Ik)(y) && t !== u.pn.CONFIRM
         ? (0, r.jsx)(o.rQ0, { title: D(), titleTextVariant: "heading-lg/semibold" })
-        : N || b
-          ? (0, r.jsx)(d.A, {
+        : N || R
+          ? (0, r.jsx)(_.A, {
                 hideCloseOnFullScreen: !0,
                 forceBrandRefreshHeader: C,
                 hideCloseButton: A,
@@ -58,21 +58,21 @@ function E(e) {
                 isEligibleForTrial: v,
                 showTrialBadge: I,
                 showDiscountBadge: T,
-                isPremiumGroupPurchase: R,
+                isPremiumGroupPurchase: O,
             })
           : (0, r.jsx)("div", {
                 className: s()(m.Q$, n),
-                children: (0, r.jsx)(_.A, {
+                children: (0, r.jsx)(d.A, {
                     hideCloseOnFullScreen: !0,
                     hideCloseButton: A,
                     shouldShowPrice: !0,
                     upgradeToPremiumType: E,
                     renderAnimation: () =>
                         E === p.PremiumTypes.TIER_0
-                            ? (0, r.jsx)(f.Ss, { className: m.mv, currentStep: t, purchaseState: i, pause: O })
+                            ? (0, r.jsx)(f.Ss, { className: m.mv, currentStep: t, purchaseState: i, pause: b })
                             : E === p.PremiumTypes.TIER_1
-                              ? (0, r.jsx)(f.LQ, { className: m.mv, currentStep: t, purchaseState: i, pause: O })
-                              : (0, r.jsx)(f.Ec, { className: m.mv, currentStep: t, purchaseState: i, pause: O }),
+                              ? (0, r.jsx)(f.LQ, { className: m.mv, currentStep: t, purchaseState: i, pause: b })
+                              : (0, r.jsx)(f.Ec, { className: m.mv, currentStep: t, purchaseState: i, pause: b }),
                     plan: null,
                     isGift: !1,
                     className: m.wx,

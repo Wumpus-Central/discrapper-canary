@@ -10,8 +10,8 @@ var i = n(296489),
     u = n(391048),
     c = n(158032),
     d = n(636099),
-    _ = n(608805),
-    f = n(120700),
+    _ = n(120700),
+    f = n(742810),
     p = n(979286),
     h = n(590180),
     m = n(61750),
@@ -36,8 +36,8 @@ function O(e) {
             analyticsLocations: L,
             analyticsObject: w,
             analyticsLocation: M,
-            analyticsSourceLocation: x,
-            confirmationFooter: P,
+            analyticsSourceLocation: P,
+            confirmationFooter: x,
             isGift: k = !1,
             giftMessage: U,
             giftStyle: G,
@@ -67,11 +67,11 @@ function O(e) {
             let { default: e } = await Promise.all([
                 n.e("41353"),
                 n.e("62175"),
-                n.e("2292"),
+                n.e("94212"),
                 n.e("29716"),
                 n.e("14704"),
                 n.e("2824"),
-                n.e("33678"),
+                n.e("67033"),
             ]).then(n.bind(n, 674619));
             return (n) => {
                 let { onClose: s, ...a } = n;
@@ -121,8 +121,8 @@ function O(e) {
                     analyticsLocations: L,
                     analyticsObject: w,
                     analyticsLocation: M,
-                    analyticsSourceLocation: x,
-                    confirmationFooter: P,
+                    analyticsSourceLocation: P,
+                    confirmationFooter: x,
                     trialId: B,
                     postSuccessGuild: H,
                     planGroup: R.LE,
@@ -150,20 +150,20 @@ function O(e) {
             modalKey: ee,
             onCloseCallback: () => {
                 if (!Z) {
-                    let e = (0, _.q1)({ location: "PremiumPaymentModal", unifiedCheckoutFlow: f.C.PREMIUM_CHECKOUT });
+                    let e = (0, f.q1)({ location: "PremiumPaymentModal", unifiedCheckoutFlow: _.C.PREMIUM_CHECKOUT });
                     I.default.track(N.HAw.PAYMENT_FLOW_CANCELED, {
                         load_id: X,
                         payment_type: N.frM[N.VVm.SUBSCRIPTION],
                         location: M ?? w,
-                        source: x,
+                        source: P,
                         subscription_type: N.rzx.PREMIUM,
                         is_gift: k,
                         sku_id: et,
                         eligible_for_trial: null != B,
                         application_id: Y,
                         location_stack: L,
-                        checkout_design: e ? _.rS.UNIFIED : _.rS.LEGACY,
-                        checkout_flow: f.C.PREMIUM_CHECKOUT,
+                        checkout_design: e ? f.rS.UNIFIED : f.rS.LEGACY,
+                        checkout_flow: _.C.PREMIUM_CHECKOUT,
                     });
                 }
                 (0, c.ET)(), (0, u.ET)(), (0, d.z)(), O?.(Z), Z && D?.();

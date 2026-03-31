@@ -2,18 +2,18 @@ n.d(t, { A: () => u });
 var i = n(627968);
 n(64700);
 var s = n(397927),
-    l = n(465794),
-    a = n(795269),
+    l = n(725807),
+    a = n(774774),
     r = n(652215),
     o = n(985018),
-    d = n(773949),
+    d = n(622410),
     c = n(888283);
 let u = () => {
     let e = { section: r.JJy.REVERSE_TRIAL_BANNER };
     return (0, i.jsxs)("div", {
         className: d.vK,
         children: [
-            (0, i.jsx)(a.R, { text: o.intl.string(o.t.qYKftX), className: d.Io }),
+            (0, i.jsx)(a.e4, { text: o.intl.string(o.t.qYKftX), className: d.Io }),
             (0, i.jsx)("img", { src: c, width: 64, height: 64, alt: "", className: d._u }),
             (0, i.jsx)("div", {
                 className: d.IP,
