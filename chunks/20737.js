@@ -1,4 +1,4 @@
-n.d(t, { A: () => k });
+n.d(t, { A: () => U });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -20,153 +20,159 @@ var i = n(627968),
     C = n(406704),
     S = n(253932),
     I = n(761640),
-    T = n(186111),
-    v = n(576705),
-    N = n(461213),
-    y = n(203982),
-    b = n(723702),
-    j = n(518960),
-    R = n(545428),
-    M = n(38198),
-    D = n(447155),
-    O = n(652215),
-    L = n(696016),
-    P = n(985018),
-    w = n(91167);
-let k = l.memo(function (e) {
-    let { className: t, channel: s, draftType: k, editorTextContent: U, setValue: G, canOnlyUseTextCommands: F } = e,
-        H = (0, _.Us)(),
-        B = l.useRef(null),
+    T = n(629016),
+    v = n(186111),
+    N = n(576705),
+    y = n(461213),
+    b = n(203982),
+    j = n(723702),
+    R = n(518960),
+    M = n(545428),
+    D = n(38198),
+    O = n(447155),
+    L = n(652215),
+    P = n(696016),
+    w = n(985018),
+    k = n(91167);
+let U = l.memo(function (e) {
+    let { className: t, channel: s, draftType: U, editorTextContent: G, setValue: F, canOnlyUseTextCommands: H } = e,
+        B = (0, _.Us)(),
         V = l.useRef(null),
-        K = (0, r.bG)([N.A], () => N.A.getActivities()),
-        W = (0, A.Et)(),
-        z = (0, r.bG)([m.A], () => m.A.getLastClipsSession()),
-        Y = (0, r.yK)([m.A], () => m.A.getNewClipIds()),
-        q = (0, r.bG)([I.Ay], () => null == I.Ay.getCurrentSidebarChannelId(s.id)),
-        { showClipsHeaderEntrypoint: J } = h.L_.useConfig({ location: "ChannelAttachButton" }),
-        { onShareClick: $ } = (0, g.A)(s.id),
-        Z = (0, r.bG)([f.HP], () => f.HP.hasHotspot(f._2.CLIPS_CHANNEL_ATTACH_REMINDER)),
-        X = (0, o.red)((e) => (0, o.fDT)(e, L.nm)),
-        Q = (0, r.bG)([T.A], () => T.A.hasLayers()),
-        ee = (0, r.bG)([m.A], () => m.A.hasClips()),
-        [et, en] = l.useState(null),
-        ei = (0, h.sw)() && (W || ee),
-        el = s.isPrivate(),
-        es = (0, r.bG)([v.A], () => el || (v.A.can(O.xBc.ATTACH_FILES, s) && v.A.can(O.xBc.SEND_MESSAGES, s))),
-        ea = (0, d.A)(z);
-    function er() {
+        K = l.useRef(null),
+        W = (0, r.bG)([y.A], () => y.A.getActivities()),
+        z = (0, A.Et)(),
+        Y = (0, r.bG)([m.A], () => m.A.getLastClipsSession()),
+        q = (0, r.yK)([m.A], () => m.A.getNewClipIds()),
+        J = (0, r.bG)([I.Ay], () => null == I.Ay.getCurrentSidebarChannelId(s.id)),
+        $ = (0, r.yK)(
+            [T.A],
+            () => (s.type === L.rbe.DM ? W.filter((e) => !T.A.getParty(e.party?.id)?.has(s.getRecipientId())) : W),
+            [W, s],
+        ),
+        { showClipsHeaderEntrypoint: Z } = h.L_.useConfig({ location: "ChannelAttachButton" }),
+        { onShareClick: X } = (0, g.A)(s.id),
+        Q = (0, r.bG)([f.HP], () => f.HP.hasHotspot(f._2.CLIPS_CHANNEL_ATTACH_REMINDER)),
+        ee = (0, o.red)((e) => (0, o.fDT)(e, P.nm)),
+        et = (0, r.bG)([v.A], () => v.A.hasLayers()),
+        en = (0, r.bG)([m.A], () => m.A.hasClips()),
+        [ei, el] = l.useState(null),
+        es = (0, h.sw)() && (z || en),
+        ea = s.isPrivate(),
+        er = (0, r.bG)([N.A], () => ea || (N.A.can(L.xBc.ATTACH_FILES, s) && N.A.can(L.xBc.SEND_MESSAGES, s))),
+        eo = (0, d.A)(Y);
+    function ec() {
         (0, o.mMO)(
             async () => {
                 let { default: e } = await Promise.all([n.e("4918"), n.e("84228")]).then(n.bind(n, 543428));
-                return (t) => (0, i.jsx)(e, { ...t, channelId: s.id, onClipClick: (e) => $({ clips: [e] }) });
+                return (t) => (0, i.jsx)(e, { ...t, channelId: s.id, onClipClick: (e) => X({ clips: [e] }) });
             },
-            { modalKey: L.nm },
+            { modalKey: P.nm },
         ),
-            en(null);
+            el(null);
     }
-    ea?.newClipIds.length !== z?.newClipIds.length &&
-        (z?.newClipIds.length ?? 0) > 0 &&
-        null == et &&
-        Z &&
-        q &&
-        !X &&
-        !J &&
-        !Q &&
-        en("recentClips"),
+    eo?.newClipIds.length !== Y?.newClipIds.length &&
+        (Y?.newClipIds.length ?? 0) > 0 &&
+        null == ei &&
+        Q &&
+        J &&
+        !ee &&
+        !Z &&
+        !et &&
+        el("recentClips"),
         l.useEffect(() => {
             let e = (e) => {
                 let { channelId: t } = e;
-                t === s.id && B.current?.activateUploadDialogue();
+                t === s.id && V.current?.activateUploadDialogue();
             };
             return (
-                y._.subscribe(O.jej.UPLOAD_FILE, e),
+                b._.subscribe(L.jej.UPLOAD_FILE, e),
                 () => {
-                    y._.unsubscribe(O.jej.UPLOAD_FILE, e);
+                    b._.unsubscribe(L.jej.UPLOAD_FILE, e);
                 }
             );
         });
-    let eo = (0, C.n)(s),
-        ec = (0, C.Tb)(s),
-        ed = !S.D_.useSetting() && !(0, b.isAndroidWeb)() && null != window.ResizeObserver,
-        eu = (0, E.I7)(s ?? void 0),
-        eh = (0, x.Sc)(),
-        em = (0, u.b)(),
-        eA = Y?.length ?? 0,
-        ep = (0, D.A)({
-            canAttachFiles: es,
-            canStartThreads: eo || ec,
-            useSlate: ed,
-            hasClips: ei,
-            canUseApplicationCommands: !F,
+    let ed = (0, C.n)(s),
+        eu = (0, C.Tb)(s),
+        eh = !S.D_.useSetting() && !(0, j.isAndroidWeb)() && null != window.ResizeObserver,
+        em = (0, E.I7)(s ?? void 0),
+        eA = (0, x.Sc)(),
+        ep = (0, u.b)(),
+        eg = q?.length ?? 0,
+        ef = (0, O.A)({
+            canAttachFiles: er,
+            canStartThreads: ed || eu,
+            useSlate: eh,
+            hasClips: es,
+            canUseApplicationCommands: !H,
             channel: s,
-            activities: K,
-            newClipsCount: eA,
-            canPostPolls: eu,
-            appContext: H,
-            canSendScheduledMessages: eh,
-            canSummarizeThreads: em,
+            activities: $,
+            newClipsCount: eg,
+            canPostPolls: em,
+            appContext: B,
+            canSendScheduledMessages: eA,
+            canSummarizeThreads: ep,
         });
-    if (0 === ep.length) return null;
-    let eg = (0, i.jsx)(o.pa$, { size: "refresh_sm", color: "currentColor", colorClass: w.dW }),
-        ef = (0, i.jsx)(o.YNO, {
-            targetElementRef: V,
-            shouldShow: null != et,
+    if (0 === ef.length) return null;
+    let e_ = (0, i.jsx)(o.pa$, { size: "refresh_sm", color: "currentColor", colorClass: k.dW }),
+        eE = (0, i.jsx)(o.YNO, {
+            targetElementRef: K,
+            shouldShow: null != ei,
             animation: o.YNO.Animation.NONE,
-            align: "recentClips" === et ? "center" : "left",
+            align: "recentClips" === ei ? "center" : "left",
             position: "top",
-            positionKey: et ?? "null",
+            positionKey: ei ?? "null",
             onRequestOpen: () => {
-                en("attachMenu");
+                el("attachMenu");
             },
             onRequestClose: () => {
-                (0, o.ueM)() || en(null);
+                (0, o.ueM)() || el(null);
             },
             renderPopout: (e) => {
-                switch (et) {
+                switch (ei) {
                     case "recentClips":
-                        return (0, i.jsx)(p.A, { ...e, onOpenClips: er, lastClipsSession: z });
+                        return (0, i.jsx)(p.A, { ...e, onOpenClips: ec, lastClipsSession: Y });
                     case "attachMenu":
-                        return (0, i.jsx)(M.A, {
+                        return (0, i.jsx)(D.A, {
                             ...e,
-                            onClose: () => en(null),
-                            options: ep,
+                            onClose: () => el(null),
+                            options: ef,
                             channel: s,
-                            onFileUpload: () => B.current?.activateUploadDialogue(),
-                            draftType: k,
-                            editorTextContent: U,
-                            setValue: G,
-                            openClips: er,
+                            onFileUpload: () => V.current?.activateUploadDialogue(),
+                            draftType: U,
+                            editorTextContent: G,
+                            setValue: F,
+                            openClips: ec,
                         });
                     default:
                         throw Error("Invalid popout type provided");
                 }
             },
             children: (e) =>
-                (0, i.jsx)(R.A, {
-                    ref: V,
-                    className: a()(w.g$, t),
-                    childClassName: w.wh,
+                (0, i.jsx)(M.A, {
+                    ref: K,
+                    className: a()(k.g$, t),
+                    childClassName: k.wh,
                     isActive: !1,
-                    "aria-label": P.intl.string(P.t.d56gCa),
-                    onDoubleClick: es ? () => B.current?.activateUploadDialogue() : void 0,
+                    "aria-label": w.intl.string(w.t.d56gCa),
+                    onDoubleClick: er ? () => V.current?.activateUploadDialogue() : void 0,
                     "aria-haspopup": "menu",
                     ...e,
-                    children: eg,
+                    children: e_,
                 }),
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", {
-                className: w.EJ,
+                className: k.EJ,
                 children: (0, i.jsx)(c.A, {
-                    ref: B,
+                    ref: V,
                     onChange: (e) => {
                         var t, n;
                         (t = e.currentTarget.files),
                             null != (n = e.currentTarget.err) && "ETOOLARGE" === n.code
-                                ? (0, j.V)(s, [])
-                                : (0, j.R)(t, s, k, { requireConfirm: !0, origin: "file_picker" }),
-                            y._.dispatchToLastSubscribed(O.jej.TEXTAREA_FOCUS),
+                                ? (0, R.V)(s, [])
+                                : (0, R.R)(t, s, U, { requireConfirm: !0, origin: "file_picker" }),
+                            b._.dispatchToLastSubscribed(L.jej.TEXTAREA_FOCUS),
                             (e.currentTarget.value = "");
                     },
                     multiple: s.rateLimitPerUser <= 0,
@@ -174,7 +180,7 @@ let k = l.memo(function (e) {
                     "aria-hidden": !0,
                 }),
             }),
-            (0, i.jsx)("div", { className: w.Jd, children: ef }),
+            (0, i.jsx)("div", { className: k.Jd, children: eE }),
         ],
     });
 });
