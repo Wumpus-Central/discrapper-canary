@@ -1,5 +1,6 @@
 e.exports = {
     kL: "container__956c6",
+    FG: "contentWrapper__956c6",
     z: "rewardDescriptionContainer__956c6",
     U6: "pulse__956c6",
     t_: "confetti__956c6",

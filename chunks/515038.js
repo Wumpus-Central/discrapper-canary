@@ -1,4 +1,4 @@
-n.d(t, { A: () => N });
+n.d(t, { A: () => I });
 var a = n(627968),
     i = n(64700),
     s = n(503698),
@@ -14,192 +14,201 @@ var a = n(627968),
     p = n(890687),
     g = n(710969),
     _ = n(92246),
-    f = n(453384),
-    v = n(646764),
-    b = n(398025),
-    j = n(516226),
-    A = n(720875),
-    C = n(713457),
-    y = n(419367),
+    f = n(895253),
+    v = n(453384),
+    b = n(646764),
+    j = n(398025),
+    A = n(516226),
+    C = n(720875),
+    y = n(713457),
+    S = n(419367),
     T = n(985018),
-    S = n(582251);
-let E = async () => await n.e("40119").then(n.t.bind(n, 718698, 19));
-function N(e) {
+    E = n(652254);
+let N = async () => await n.e("40119").then(n.t.bind(n, 718698, 19));
+function I(e) {
     let {
             quest: t,
             questContent: n,
             isHovering: s,
-            contentPosition: N,
+            contentPosition: I,
             rowIndex: k,
-            isVisibleInViewport: O,
-            onReceiveErrorHints: R,
-            sourceQuestContent: w,
+            isVisibleInViewport: R,
+            onReceiveErrorHints: w,
+            sourceQuestContent: D,
         } = e,
-        D = i.useRef(null),
-        P = (0, _.mq)(t.config),
-        M = (0, _.mH)(t.config),
-        L = t.userStatus?.enrolledAt != null,
-        { ref: U, scrollHeight: B } = (0, c.wR)(),
-        G = 104 !== B,
-        { onAssetLoadComplete: F } = i.useContext(j.M),
-        { expansionSpring: V } = (0, d.zhh)({ expansionSpring: +!!s, config: { ...y.N, clamp: !0 } }),
-        W = t.userStatus?.completedAt != null,
-        H = t.userStatus?.claimedAt != null,
-        K = (0, _.ks)(t.config),
-        z = (0, _._Z)(t.config),
-        { completedRatio: $, completedRatioDisplay: q } = (0, p.O9)(t),
-        Q = (0, x.gj)(t, w, m.Ob.QuestHome, D),
-        Y = i.useMemo(
+        P = i.useRef(null),
+        M = (0, p.Oq)(),
+        L = (0, p.SD)(t),
+        U = (0, _.mq)(t.config),
+        B = (0, _.mH)(t.config),
+        G = t.userStatus?.enrolledAt != null,
+        { ref: F, scrollHeight: V } = (0, c.wR)(),
+        W = 104 !== V,
+        { onAssetLoadComplete: H } = i.useContext(A.M),
+        { expansionSpring: K } = (0, d.zhh)({ expansionSpring: +!!s, config: { ...S.N, clamp: !0 } }),
+        z = t.userStatus?.completedAt != null,
+        $ = t.userStatus?.claimedAt != null,
+        q = (0, _.ks)(t.config),
+        Q = (0, _._Z)(t.config),
+        { completedRatio: Y, completedRatioDisplay: J } = (0, p.O9)(t),
+        X = (0, x.gj)(t, D, m.Ob.QuestHome, P),
+        Z = i.useMemo(
             () =>
-                H && K
+                $ && q
                     ? T.intl.format(T.t["8Op4c4"], {
                           balanceHook: () =>
                               (0, a.jsxs)(
-                                  I,
+                                  O,
                                   {
                                       questId: t.id,
                                       children: [
-                                          (0, a.jsx)(h.A, { shouldUseThemeColor: !0, className: S.Kq, customSize: 14 }),
-                                          z,
+                                          (0, a.jsx)(h.A, { shouldUseThemeColor: !0, className: E.Kq, customSize: 14 }),
+                                          Q,
                                       ],
                                   },
                                   t.id,
                               ),
                       })
-                    : H
-                      ? (0, a.jsx)(I, { questId: t.id, children: P })
-                      : K
+                    : $
+                      ? (0, a.jsx)(O, { questId: t.id, children: U })
+                      : q
                         ? T.intl.format(T.t.ro1sze, {
                               balanceHook: () =>
                                   (0, a.jsxs)(
-                                      I,
+                                      O,
                                       {
                                           questId: t.id,
                                           children: [
                                               (0, a.jsx)(h.A, {
                                                   shouldUseThemeColor: !0,
-                                                  className: S.Kq,
+                                                  className: E.Kq,
                                                   customSize: 14,
                                               }),
-                                              z,
+                                              Q,
                                           ],
                                       },
                                       t.id,
                                   ),
                           })
                         : T.intl.format(T.t["0IUT4Y"], {
-                              rewardWithArticleHook: () => (0, a.jsx)(I, { questId: t.id, children: M }, t.id),
+                              rewardWithArticleHook: () => (0, a.jsx)(O, { questId: t.id, children: B }, t.id),
                           }),
-            [P, H, M, t.id, z, K],
+            [U, $, B, t.id, Q, q],
         ),
-        J = i.useMemo(() => {
-            if (null != Q)
+        ee = i.useMemo(() => {
+            if (null != X)
                 return (0, a.jsx)(d.Text, {
                     variant: "text-sm/medium",
                     color: "text-muted",
-                    className: S.h_,
-                    children: Q,
+                    className: E.h_,
+                    children: X,
                 });
-        }, [Q]),
-        X = (0, o.bG)([u.A], () => u.A.useReducedMotion);
+        }, [X]),
+        et = (0, o.bG)([u.A], () => u.A.useReducedMotion);
     return (0, a.jsxs)("div", {
-        className: S.kL,
-        ref: D,
+        className: E.kL,
+        ref: P,
         children: [
-            (0, a.jsxs)(r.animated.div, {
-                style: { maxHeight: V.to([0, 1], [104, (B ?? 0) + 12]) },
-                className: S.z,
+            (0, a.jsx)(f.A, { visible: M && L, glow: !0 }),
+            (0, a.jsxs)("div", {
+                className: E.FG,
                 children: [
-                    (0, a.jsx)(A.A, {
-                        showPlaceholder: !O,
-                        width: 80,
-                        height: 80,
-                        children: (0, a.jsxs)("div", {
-                            className: S.c6,
-                            children: [
-                                !H && W && (0, a.jsx)("div", { className: S.Nz }),
-                                L
-                                    ? (0, a.jsxs)("div", {
-                                          className: S.Tr,
-                                          children: [
-                                              W &&
-                                                  (0, a.jsx)(d.akl, {
-                                                      importData: E,
-                                                      className: S.t_,
-                                                      loop: !1,
-                                                      autoplay: !1,
-                                                      shouldAnimate: !X,
-                                                  }),
-                                              (0, a.jsx)(f.A, {
-                                                  size: 76,
-                                                  percentComplete: $,
-                                                  percentCompleteText: s && !(0, g.Ic)(t) ? q : void 0,
-                                                  children: (0, a.jsx)(v.A, {
-                                                      quest: t,
-                                                      questContent: n,
-                                                      autoplay: s,
-                                                      onLoadComplete: F,
-                                                      lazyLoad: !0,
-                                                      fullWidth: !0,
-                                                      sourceQuestContent: w,
-                                                  }),
-                                              }),
-                                          ],
-                                      })
-                                    : (0, a.jsx)(v.A, {
-                                          quest: t,
-                                          autoplay: s,
-                                          questContent: n,
-                                          className: S.eB,
-                                          onLoadComplete: F,
-                                          lazyLoad: !0,
-                                          sourceQuestContent: w,
-                                      }),
-                            ],
-                        }),
-                    }),
-                    (0, a.jsxs)("div", {
-                        ref: U,
-                        className: l()(S.FS, { [S.wq]: !G }),
+                    (0, a.jsxs)(r.animated.div, {
+                        style: { maxHeight: K.to([0, 1], [104, (V ?? 0) + 12]) },
+                        className: E.z,
                         children: [
-                            (0, a.jsx)(d.Heading, {
-                                variant: "eyebrow",
-                                color: "text-brand",
-                                className: S.G$,
-                                children: T.intl.format(T.t.EAYZAr, { questName: t.config.messages.questName }),
+                            (0, a.jsx)(C.A, {
+                                showPlaceholder: !R,
+                                width: 80,
+                                height: 80,
+                                children: (0, a.jsxs)("div", {
+                                    className: E.c6,
+                                    children: [
+                                        !$ && z && (0, a.jsx)("div", { className: E.Nz }),
+                                        G
+                                            ? (0, a.jsxs)("div", {
+                                                  className: E.Tr,
+                                                  children: [
+                                                      z &&
+                                                          (0, a.jsx)(d.akl, {
+                                                              importData: N,
+                                                              className: E.t_,
+                                                              loop: !1,
+                                                              autoplay: !1,
+                                                              shouldAnimate: !et,
+                                                          }),
+                                                      (0, a.jsx)(v.A, {
+                                                          size: 76,
+                                                          percentComplete: Y,
+                                                          percentCompleteText: s && !(0, g.Ic)(t) ? J : void 0,
+                                                          children: (0, a.jsx)(b.A, {
+                                                              quest: t,
+                                                              questContent: n,
+                                                              autoplay: s,
+                                                              onLoadComplete: H,
+                                                              lazyLoad: !0,
+                                                              fullWidth: !0,
+                                                              sourceQuestContent: D,
+                                                          }),
+                                                      }),
+                                                  ],
+                                              })
+                                            : (0, a.jsx)(b.A, {
+                                                  quest: t,
+                                                  autoplay: s,
+                                                  questContent: n,
+                                                  className: E.eB,
+                                                  onLoadComplete: H,
+                                                  lazyLoad: !0,
+                                                  sourceQuestContent: D,
+                                              }),
+                                    ],
+                                }),
                             }),
-                            (0, a.jsx)(d.Text, {
-                                variant: "text-md/semibold",
-                                color: "text-strong",
-                                className: S.wx,
-                                children: Y,
+                            (0, a.jsxs)("div", {
+                                ref: F,
+                                className: l()(E.FS, { [E.wq]: !W }),
+                                children: [
+                                    (0, a.jsx)(d.Heading, {
+                                        variant: "eyebrow",
+                                        color: "text-brand",
+                                        className: E.G$,
+                                        children: T.intl.format(T.t.EAYZAr, { questName: t.config.messages.questName }),
+                                    }),
+                                    (0, a.jsx)(d.Text, {
+                                        variant: "text-md/semibold",
+                                        color: "text-strong",
+                                        className: E.wx,
+                                        children: Z,
+                                    }),
+                                    ee,
+                                ],
                             }),
-                            J,
+                            W &&
+                                (0, a.jsx)(r.animated.div, {
+                                    style: { opacity: (0, j.a)(K.to([0, 1], [1, 0])) },
+                                    className: E.hS,
+                                }),
                         ],
                     }),
-                    G &&
-                        (0, a.jsx)(r.animated.div, {
-                            style: { opacity: (0, b.a)(V.to([0, 1], [1, 0])) },
-                            className: S.hS,
-                        }),
+                    (0, a.jsx)(y.A, {
+                        quest: t,
+                        questContent: n,
+                        contentPosition: I,
+                        rowIndex: k,
+                        onReceiveErrorHints: w,
+                        sourceQuestContent: D,
+                    }),
                 ],
-            }),
-            (0, a.jsx)(C.A, {
-                quest: t,
-                questContent: n,
-                contentPosition: N,
-                rowIndex: k,
-                onReceiveErrorHints: R,
-                sourceQuestContent: w,
             }),
         ],
     });
 }
-let I = i.memo(function (e) {
+let O = i.memo(function (e) {
     let { questId: t, children: n } = e;
     return (0, a.jsx)(
         d.Text,
-        { variant: "text-md/semibold", color: "text-strong", tag: "span", className: S.wx, children: n },
+        { variant: "text-md/semibold", color: "text-strong", tag: "span", className: E.wx, children: n },
         `${t}_reward`,
     );
 });
