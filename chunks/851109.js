@@ -1,8 +1,7 @@
 "use strict";
-n.d(t, { GE: () => c, RK: () => s, U5: () => a, X8: () => u, yF: () => o });
+n.d(t, { GE: () => u, RK: () => s, U5: () => i, X8: () => l, yF: () => a });
 var r = n(600975),
-    i = n(428835),
-    a = (function (e) {
+    i = (function (e) {
         return (e.POPOUT = "popout"), (e.SIDEBAR = "sidebar"), (e.LEGACY = "legacy"), e;
     })({}),
     s = (function (e) {
@@ -13,10 +12,10 @@ var r = n(600975),
             e
         );
     })({}),
-    o = (function (e) {
+    a = (function (e) {
         return (e.TABS = "tabs"), (e.DROPDOWN = "dropdown"), e;
     })({});
-let l = (0, r.C)({
+let o = (0, r.C)({
         kind: "user",
         id: "2025-04_desktop_notification_center",
         label: "New Notification Center (Desktop)",
@@ -48,5 +47,10 @@ let l = (0, r.C)({
             },
         ],
     }),
-    u = (e) => (0, i.u5)(l, e),
-    c = (e) => (0, i.P2)(l, e);
+    l = (e) =>
+        o.useExperiment({ location: e.location }, { autoTrackExposure: e.autoTrackExposure ?? !0, disable: e.disable }),
+    u = (e) =>
+        o.getCurrentConfig(
+            { location: e.location },
+            { autoTrackExposure: e.autoTrackExposure ?? !0, disable: e.disable },
+        );
