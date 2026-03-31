@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { bi: () => m, sI: () => h });
+n.d(t, { sI: () => h });
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -12,14 +12,14 @@ var i = n(311907),
     d = n(994322),
     _ = n(22802),
     f = n(985018),
-    p = n(352143);
+    p = n(441849);
 function h(e, t, n) {
     let {
         highlightAdminWarningIfElevated: i,
         useFlexboxLayout: s,
         keybindClassName: a,
     } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-    return (0, r.jsx)(E, {
+    return (0, r.jsx)(m, {
         keybind: e,
         message: t,
         messageWithoutKeybind: n,
@@ -28,14 +28,7 @@ function h(e, t, n) {
         keybindClassName: a,
     });
 }
-let m = (e, t) =>
-    (0, r.jsx)(r.Fragment, {
-        children: f.intl.format(t, {
-            keybind: e,
-            keybindHook: (t, n) => (0, r.jsx)(s.e7I, { shortcut: e, className: p.w, keyClassName: p.bx }, n),
-        }),
-    });
-function E(e) {
+function m(e) {
     let {
             keybind: t,
             message: n,

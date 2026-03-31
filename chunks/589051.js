@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { E: () => E, H: () => c, M8: () => m, NI: () => h, aS: () => d, o0: () => f, sq: () => l });
+n.d(t, { E: () => h, H: () => c, M8: () => p, NI: () => f, aS: () => d, sq: () => l });
 var r = n(812729),
     i = n.n(r),
     s = n(600975),
@@ -96,18 +96,7 @@ function d(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return u.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-let _ = (0, s.C)({
-    id: "2025-11_overlay_welcome_notification",
-    label: "Overlay Welcome Notification",
-    kind: "user",
-    defaultConfig: { enabled: !1 },
-    treatments: [{ id: 1, label: "Modular Experience", config: { enabled: !0 } }],
-});
-function f(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return _.getCurrentConfig({ location: e }, { autoTrackExposure: t });
-}
-let p = (0, a.mj)({
+let _ = (0, a.mj)({
     name: "2025-11-overlay-chat",
     kind: "user",
     defaultConfig: { hasChat: !1, hasFriendList: !1, showNowPlayingForDifferentGames: !1 },
@@ -117,12 +106,12 @@ let p = (0, a.mj)({
         3: { hasChat: !0, hasFriendList: !0, showNowPlayingForDifferentGames: !0 },
     },
 });
-function h(e) {
-    return p.getConfig({ location: e });
+function f(e) {
+    return _.getConfig({ location: e });
 }
-function m(e) {
-    return p.useConfig({ location: e });
+function p(e) {
+    return _.useConfig({ location: e });
 }
-function E() {
-    d("OVERLAY_INITIALIZED"), f("OVERLAY_INITIALIZED"), h("OVERLAY_INITIALIZED");
+function h() {
+    d("OVERLAY_INITIALIZED"), f("OVERLAY_INITIALIZED");
 }
