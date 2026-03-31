@@ -1,17 +1,15 @@
 "use strict";
-n.d(t, { EL: () => d, PJ: () => o, xW: () => _, zF: () => c }), n(321073);
+n.d(t, { EL: () => u, PJ: () => a, xW: () => c, zF: () => l });
 var r = n(284009),
     i = n.n(r),
     s = n(735438),
-    a = n(728458),
-    o = (function (e) {
+    a = (function (e) {
         return (e.ROOT = "root"), (e.FOLDER = "folder"), (e.GUILD = "guild"), e;
     })({});
-function l() {
+function o() {
     return Math.floor(0x100000000 * Math.random());
 }
-let u = 0;
-class c {
+class l {
     root;
     nodes;
     version;
@@ -27,24 +25,11 @@ class c {
         return { rootChildrenIds: this.root.children.map((e) => e.id), nodes: e };
     }
     loadSnapshot(e) {
-        u++;
-        let t = null,
-            n = [];
-        try {
-            for (let r in ((this.nodes = e.nodes), this.nodes)) {
-                let e = this.nodes[r];
-                n.push(r), (t = e), (e.children = e.childrenIds.map((e) => this.nodes[e])), delete e.childrenIds;
-            }
-            (this.root.children = e.rootChildrenIds.map((e) => this.nodes[e])), this.version++;
-        } catch (e) {
-            throw (
-                (a.A.addBreadcrumb({
-                    message: "GuildTree snapshot load failed",
-                    data: { numSnapshotsLoaded: u, currentNode: t, nodesIterated: n },
-                }),
-                e)
-            );
+        for (let t in ((this.nodes = e.nodes), this.nodes)) {
+            let e = this.nodes[t];
+            "childrenIds" in e && ((e.children = e.childrenIds.map((e) => this.nodes[e])), delete e.childrenIds);
         }
+        (this.root.children = e.rootChildrenIds.map((e) => this.nodes[e])), this.version++;
     }
     moveNextTo(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -117,8 +102,8 @@ class c {
         return (0, s.clone)(e);
     }
     convertToFolder(e) {
-        let t = l();
-        for (; null != this.getNode(t); ) t = l();
+        let t = o();
+        for (; null != this.getNode(t); ) t = o();
         let n = { type: "folder", id: t, expanded: !1, children: [] };
         return this.replaceNode(e, n), this.removeNode(e), this.addNode(e, n, !1), this.version++, n;
     }
@@ -156,10 +141,10 @@ class c {
             this.version++;
     }
 }
-function d(e, t) {
+function u(e, t) {
     return { type: "guild", id: e, parentId: t, children: [], unavailable: !1 };
 }
-function _(e, t, n) {
+function c(e, t, n) {
     return {
         type: "folder",
         id: e.folderId,
