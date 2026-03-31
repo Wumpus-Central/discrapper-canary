@@ -70,10 +70,10 @@ let y = (e) => (0, r.jsx)(v, { ...e }),
     b = (e) => null == e || "" === e,
     D = (e) => {
         let { children: t } = e,
-            { errorMessage: n, notificationMessage: s, warningMessage: a } = (0, E.u)();
+            { errorMessage: n, warningMessage: s } = (0, E.u)();
         return i.useMemo(
             () =>
-                b(n) && b(s) && b(a)
+                b(n) && b(s)
                     ? null != t
                         ? (0, r.jsx)("div", { className: S.dD, children: t })
                         : null
@@ -81,12 +81,11 @@ let y = (e) => (0, r.jsx)(v, { ...e }),
                           className: S.dD,
                           children: [
                               b(n) ? null : (0, r.jsx)(o.wx6, { type: "critical", children: n }),
-                              b(s) ? null : (0, r.jsx)(o.wx6, { type: "info", children: s }),
-                              b(a) ? null : (0, r.jsx)(o.wx6, { type: "warning", children: a }),
+                              b(s) ? null : (0, r.jsx)(o.wx6, { type: "warning", children: s }),
                               t,
                           ],
                       }),
-            [n, s, a, t],
+            [n, s, t],
         );
     },
     L = (e) =>
