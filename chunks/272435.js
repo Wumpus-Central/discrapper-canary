@@ -15,6 +15,7 @@ e.exports = {
     M_: "compactBackground__22cef",
     S8: "compactGemWrapper__22cef",
     fi: "compactContent__22cef",
+    Kk: "icon__22cef",
     zc: "iconContainer__22cef",
     oT: "messageLink__22cef",
     nx: "compactActions__22cef",
