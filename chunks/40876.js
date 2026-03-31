@@ -333,16 +333,6 @@ let i = {
         inlineRequire: () => n(435736).Ay,
         neverLoadBeforeConnectionOpen: !0,
     },
-    OverlayNegativeWidgetExperimentManager: {
-        actions: [
-            "POST_CONNECTION_OPEN",
-            "OVERLAY_SET_NOTIFICATION_DISABLED_SETTING",
-            "EXPERIMENT_OVERRIDE_BUCKET",
-            "LAYOUT_SET_PINNED",
-        ],
-        inlineRequire: () => n(757989).A,
-        neverLoadBeforeConnectionOpen: !0,
-    },
     BugReporterManager: {
         actions: [
             "POST_CONNECTION_OPEN",

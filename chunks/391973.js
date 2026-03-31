@@ -5,7 +5,6 @@ n.d(t, {
     Vz: () => o,
     cC: () => h,
     jn: () => f,
-    qH: () => m,
     uD: () => u,
     uF: () => p,
     uv: () => d,
@@ -56,7 +55,4 @@ function p(e) {
 }
 function h(e, t) {
     r.h.dispatch({ type: "LAYOUT_SET_WIDGET_META", widgetId: e, meta: t });
-}
-function m(e, t) {
-    return r.h.dispatch({ type: "LAYOUT_SET_DEFAULT_CONFIG", widgetType: e, defaultConfig: t });
 }
