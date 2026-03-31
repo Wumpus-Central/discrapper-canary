@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Cs: () => a, KS: () => s, SW: () => l, XY: () => o, pt: () => i, qn: () => r });
+n.d(t, { Cs: () => o, KS: () => a, SW: () => u, XY: () => l, pt: () => i, qn: () => r, zw: () => s });
 var r = (function (e) {
         return (e.BLOCKLIST = "blocklist"), (e.ALLOWLIST = "allowlist"), e;
     })({}),
@@ -16,7 +16,8 @@ var r = (function (e) {
             e
         );
     })({});
-let s = "steelseries",
-    a = "kontrolfreek",
-    o = "logitech",
-    l = new Set(["steelseries", "kontrolfreek"]);
+let s = "2026-04-nitro-control",
+    a = "steelseries",
+    o = "kontrolfreek",
+    l = "logitech",
+    u = new Set(["steelseries", "kontrolfreek"]);
