@@ -22,5 +22,4 @@ let i = {
     getAudioPid: (e) => r.Ay.getAudioPid(e),
     generateSessionFromPid: (e) => r.Ay.generateSessionFromPid(e),
     getAppHardwareAccelerationEnabled: () => r.Ay.getEnableHardwareAcceleration(),
-    getDiscordIsElevated: () => r.Ay.getDiscordIsElevated(),
 };
