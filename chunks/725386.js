@@ -1,31 +1,49 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => f });
 var i = n(64700),
-    l = n(540185),
-    a = n(417597),
-    r = n(395332),
-    s = n(287809),
-    o = n(403362),
-    d = n(633075),
-    c = n(289173),
-    u = n(667049),
-    g = n(229231);
-function m(e) {
-    let t = (0, a.bG)([s.default], () => s.default.getCurrentUser()),
-        n = (0, u.A)(t?.id),
-        m = (0, r.DB)(e);
-    return i.useMemo(() => {
-        let e = new Set(n.filter((e) => e instanceof d.R).map((e) => e.applicationId)),
-            t = new Set(n.map((e) => e.type));
-        return g.Zc.flatMap((n) =>
-            n === l.x.APPLICATION
-                ? null == m
-                    ? []
-                    : m.filter((t) => !e.has(t.applicationId)).map((e) => new d.R({ applicationId: e.applicationId }))
-                : (0, c.hL)(n)
-                  ? t.has(n)
-                      ? []
-                      : new c.Yy({ type: n, games: [] })
-                  : void (0, o.xb)(n),
-        );
-    }, [m, n]);
+    a = n(540185),
+    l = n(417597),
+    s = n(382483),
+    r = n(385113),
+    o = n(369374),
+    c = n(395332),
+    d = n(287809),
+    u = n(403362),
+    g = n(633075),
+    m = n(289173),
+    p = n(667049),
+    x = n(229231);
+function f(e) {
+    let { enabled: t } = o.A.useConfig({ location: e.location }),
+        n = (0, l.bG)([d.default], () => d.default.getCurrentUser()),
+        f = (0, p.A)(n?.id),
+        h = (0, c.w$)(e),
+        _ = (0, l.bG)([r.A], () => r.A.getAllConfigsByApplication());
+    return (
+        i.useEffect(() => {
+            t && (0, s.W)();
+        }, [t]),
+        i.useMemo(() => {
+            let e = new Set(f.filter((e) => e instanceof g.R).map((e) => e.applicationId)),
+                n = new Set(f.map((e) => e.type));
+            return x.Zc.flatMap((i) =>
+                i === a.x.APPLICATION
+                    ? t
+                        ? Object.values(_)
+                              .map((e) => e[0])
+                              .filter(u.Vq)
+                              .filter((t) => !e.has(t.application_id))
+                              .map((e) => new g.R({ applicationId: e.application_id }))
+                        : null == h
+                          ? []
+                          : h
+                                .filter((t) => !e.has(t.applicationId))
+                                .map((e) => new g.R({ applicationId: e.applicationId }))
+                    : (0, m.hL)(i)
+                      ? n.has(i)
+                          ? []
+                          : new m.Yy({ type: i, games: [] })
+                      : void (0, u.xb)(i),
+            );
+        }, [t, _, h, f])
+    );
 }
