@@ -533,9 +533,9 @@ let r = {
             TABLE_ROW_BORDER_RADIUS: {
                 resolve(e) {
                     let { enabledExperiments: t } = e;
-                    if (0 === t.length) return 8;
-                    for (let e of t) if ("mobile-visual-refresh" === e) return 16;
-                    return 8;
+                    if (0 === t.length) return 16;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 12;
+                    return 16;
                 },
             },
             TABLE_ROW_CONTENT_HEIGHT: {

@@ -67546,7 +67546,7 @@ html.disable-forced-colors * {
     --mobile-table-row-arrow-margin-end: 0px;
     --mobile-table-row-arrow-margin-start: 14px;
     --mobile-table-row-arrow-width: 8px;
-    --mobile-table-row-border-radius: 8px;
+    --mobile-table-row-border-radius: 16px;
     --mobile-table-row-content-height: 36px;
     --mobile-table-row-divider-padding: 56px;
     --mobile-table-row-height: 60px;
@@ -67625,7 +67625,7 @@ html.disable-forced-colors * {
     --mobile-table-row-arrow-margin-end: 8px;
     --mobile-table-row-arrow-margin-start: 8px;
     --mobile-table-row-arrow-width: 12px;
-    --mobile-table-row-border-radius: 16px;
+    --mobile-table-row-border-radius: 12px;
     --mobile-table-row-content-height: 32px;
     --mobile-table-row-height: 56px;
     --mobile-user-profile-about-me-heading-text-style: text-sm/medium;
