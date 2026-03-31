@@ -20,7 +20,7 @@ var i = n(735438),
     I = n(565150),
     T = n(900482),
     S = n(972711),
-    y = n(554707),
+    y = n(777088),
     v = n(652215);
 let N = new l.A("CloudUpload.tsx");
 class C extends Error {
@@ -119,7 +119,6 @@ class b extends I.Ay {
     reactNativeFileIndex;
     error;
     reactNativeFilePrepped = !1;
-    allowOptimization = !0;
     startTime;
     uploadAnalytics = new O();
     uploadAttempts = 0;
