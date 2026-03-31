@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => P });
+n.d(t, { A: () => M });
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -12,74 +12,73 @@ var i = n(311907),
     d = n(709309),
     _ = n(359549),
     f = n(373966),
-    p = n(793574),
-    h = n(688810),
-    m = n(308335),
-    E = n(82149),
-    g = n(961350),
-    A = n(790381),
-    I = n(266080),
-    T = n(939496),
-    S = n(934173),
-    y = n(502695),
-    v = n(691041),
-    N = n(793838),
-    C = n(668880),
-    R = n(72742),
-    O = n(312784),
-    b = n(985629),
-    D = n(684207),
-    L = n(938442),
-    w = n(652215),
-    M = n(996988);
-function P(e) {
-    let { user: t, activity: n, onAction: P, onClose: x, application: k, containerClassName: U } = e,
-        { themeType: G } = (0, T.E)(),
-        F = (0, i.bG)([g.default], () => g.default.getId() === t.id),
-        V = (0, _.J)(k),
-        B = (0, m.o)(n?.application_id ?? k?.id),
-        { analyticsLocations: H } = (0, h.Ay)(p.A.USER_PROFILE_ACTIVITY_BUTTONS),
-        j = (0, d.A)("user_profile_activity_buttons", n?.application_id),
-        Y = G === M.d.MODAL || G === M.d.MODAL_V2,
-        W = G === M.d.POPOUT,
-        K = (() =>
-            F
-                ? W && n?.type === w.$pd.PLAYING && k?.id != null
-                    ? (0, r.jsx)(f.A, { applicationId: k.id, onAction: P, onClose: x })
+    p = n(913948),
+    h = n(793574),
+    m = n(688810),
+    E = n(308335),
+    g = n(82149),
+    A = n(961350),
+    I = n(790381),
+    T = n(266080),
+    S = n(939496),
+    y = n(934173),
+    v = n(502695),
+    N = n(691041),
+    C = n(793838),
+    R = n(668880),
+    O = n(72742),
+    b = n(312784),
+    D = n(985629),
+    L = n(652215),
+    w = n(996988);
+function M(e) {
+    let { user: t, activity: n, onAction: M, onClose: P, application: x, containerClassName: k } = e,
+        { themeType: U } = (0, S.E)(),
+        G = (0, i.bG)([A.default], () => A.default.getId() === t.id),
+        F = (0, _.J)(x),
+        V = (0, E.o)(n?.application_id ?? x?.id),
+        { analyticsLocations: B } = (0, m.Ay)(h.A.USER_PROFILE_ACTIVITY_BUTTONS),
+        H = (0, d.A)("user_profile_activity_buttons", n?.application_id),
+        j = U === w.d.MODAL || U === w.d.MODAL_V2,
+        Y = U === w.d.POPOUT,
+        W = (() =>
+            G
+                ? Y && n?.type === L.$pd.PLAYING && x?.id != null
+                    ? (0, r.jsx)(f.A, { applicationId: x.id, onAction: M, onClose: P })
                     : null
-                : B || !V || null == k || Y
+                : V || !F || null == x || j
                   ? (0, a.A)(n)
-                      ? (0, r.jsx)(v.A, { user: t, activity: n, onAction: P, onClose: x })
+                      ? (0, r.jsx)(N.A, { user: t, activity: n, onAction: M, onClose: P })
                       : (0, u.A)(n)
-                        ? (0, r.jsx)(C.A, { platformType: w.fg2.XBOX, icon: () => (0, r.jsx)(I.A, {}), onAction: P })
-                        : 1 === j.length
-                          ? (0, r.jsx)(D.A, { distributor: j[0], onAction: P, onClose: x })
-                          : j.length > 1
-                            ? (0, r.jsx)(L.A, {
-                                  distributorCTAConfigs: j,
-                                  gameName: n?.name ?? "",
-                                  onAction: P,
-                                  onClose: x,
+                        ? (0, r.jsx)(R.A, { platformType: L.fg2.XBOX, icon: () => (0, r.jsx)(T.A, {}), onAction: M })
+                        : H.length > 0
+                          ? (0, r.jsx)(p.A, {
+                                distributorCTAConfigs: H,
+                                gameName: n?.name ?? "",
+                                fullWidth: U !== w.d.MODAL_V2,
+                                stopPropagation: !0,
+                                onAction: M,
+                                onClose: P,
+                            })
+                          : (0, l.A)(n)
+                            ? (0, r.jsx)(R.A, {
+                                  platformType: L.fg2.PLAYSTATION,
+                                  icon: () => (0, r.jsx)(I.A, {}),
+                                  onAction: M,
                               })
-                            : (0, l.A)(n)
-                              ? (0, r.jsx)(C.A, {
-                                    platformType: w.fg2.PLAYSTATION,
-                                    icon: () => (0, r.jsx)(A.A, {}),
-                                    onAction: P,
-                                })
-                              : (0, c.A)(n)
-                                ? (0, r.jsx)(O.A, { activity: n, onAction: P })
-                                : (0, s.A)(n, w.jUm.JOIN) || (0, o.A)(n)
-                                  ? (0, r.jsx)(v.A, { user: t, activity: n, onAction: P, onClose: x })
-                                  : n?.type === w.$pd.HANG_STATUS
-                                    ? (0, r.jsx)(y.A, { user: t, activity: n, onAction: P, onClose: x })
-                                    : n?.buttons != null && n?.buttons.length >= 1
-                                      ? (0, r.jsx)(S.A, { user: t, activity: n, onAction: P })
-                                      : (0, s.A)(n, w.jUm.INSTANCE)
-                                        ? (0, r.jsx)(N.A, { user: t, activity: n, onAction: P })
-                                        : (0, E.Cy)(n)
-                                          ? (0, r.jsx)(R.A, { activity: n, onAction: P, onClose: x })
-                                          : null
-                  : (0, r.jsx)(b.A, { application: k, onAction: P, onClose: x, analyticsLocations: H }))();
-    return null == K ? null : (0, r.jsx)("div", { className: U, children: K });
+                            : (0, c.A)(n)
+                              ? (0, r.jsx)(b.A, { activity: n, onAction: M })
+                              : (0, s.A)(n, L.jUm.JOIN) || (0, o.A)(n)
+                                ? (0, r.jsx)(N.A, { user: t, activity: n, onAction: M, onClose: P })
+                                : n?.type === L.$pd.HANG_STATUS
+                                  ? (0, r.jsx)(v.A, { user: t, activity: n, onAction: M, onClose: P })
+                                  : n?.buttons != null && n?.buttons.length >= 1
+                                    ? (0, r.jsx)(y.A, { user: t, activity: n, onAction: M })
+                                    : (0, s.A)(n, L.jUm.INSTANCE)
+                                      ? (0, r.jsx)(C.A, { user: t, activity: n, onAction: M })
+                                      : (0, g.Cy)(n)
+                                        ? (0, r.jsx)(O.A, { activity: n, onAction: M, onClose: P })
+                                        : null
+                  : (0, r.jsx)(D.A, { application: x, onAction: M, onClose: P, analyticsLocations: B }))();
+    return null == W ? null : (0, r.jsx)("div", { className: k, children: W });
 }
