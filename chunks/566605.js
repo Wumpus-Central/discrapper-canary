@@ -1,44 +1,40 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(64700),
     a = n(311907),
     l = n(704824),
     s = n(429913),
     r = n(633075),
     o = n(667049),
-    c = n(287809),
-    d = n(403362),
-    u = n(369374),
-    g = n(395332);
-function m(e) {
-    let { enabled: t } = u.A.useConfig({ location: e.location }),
-        n = (0, a.bG)([c.default], () => c.default.getCurrentUser()),
-        m = (0, g.w$)({ location: e.location }),
-        p = i.useMemo(() => m?.filter((e) => e.isEligibleForSuggestions()), [m]),
-        x = i.useMemo(() => p?.map((e) => e.applicationId) ?? [], [p]),
-        f = (0, s.A)(x),
-        { tokens: h, fetched: _ } = (0, l.j)(x),
-        A = (0, o.A)(n?.id),
-        I = null == n || null == p || null == h || !_;
+    d = n(287809),
+    c = n(403362),
+    u = n(395332);
+function g(e) {
+    let t = (0, a.bG)([d.default], () => d.default.getCurrentUser()),
+        n = (0, u.DB)({ location: e.location }),
+        g = i.useMemo(() => n?.filter((e) => e.isEligibleForSuggestions()), [n]),
+        m = i.useMemo(() => g?.map((e) => e.applicationId) ?? [], [g]),
+        x = (0, s.A)(m),
+        { tokens: p, fetched: f } = (0, l.j)(m),
+        h = (0, o.A)(t?.id),
+        _ = null == t || null == g || null == p || !f;
     return i.useMemo(
         () =>
-            I
-                ? { isLoading: I }
-                : t
-                  ? { isLoading: I, suggestions: [], currentUser: n }
-                  : {
-                        isLoading: I,
-                        suggestions: p
-                            .map((e) => {
-                                let t = f.find((t) => t?.id === e.applicationId);
-                                return null == t ||
-                                    null == h.find((t) => t.application.id === e.applicationId) ||
-                                    null != A.find((t) => t instanceof r.R && t.applicationId === e.applicationId)
-                                    ? null
-                                    : { config: e, application: t, dismissibleContent: e.suggestedWidgetLinkedDc };
-                            })
-                            .filter(d.Vq),
-                        currentUser: n,
-                    },
-        [t, I, p, n, f, h, A],
+            _
+                ? { isLoading: _ }
+                : {
+                      isLoading: _,
+                      suggestions: g
+                          .map((e) => {
+                              let t = x.find((t) => t?.id === e.applicationId);
+                              return null == t ||
+                                  null == p.find((t) => t.application.id === e.applicationId) ||
+                                  null != h.find((t) => t instanceof r.R && t.applicationId === e.applicationId)
+                                  ? null
+                                  : { config: e, application: t, dismissibleContent: e.suggestedWidgetLinkedDc };
+                          })
+                          .filter(c.Vq),
+                      currentUser: t,
+                  },
+        [_, g, t, x, p, h],
     );
 }
