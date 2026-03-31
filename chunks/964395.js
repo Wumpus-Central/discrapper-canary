@@ -12,15 +12,15 @@ var n = t(627968),
     g = t(657331),
     x = t(287809),
     p = t(954571),
-    f = t(975571),
-    A = t(371794),
+    A = t(975571),
+    f = t(371794),
     h = t(439303),
     I = t(44724),
     m = t(995393),
     E = t(652215),
     j = t(518477),
     S = t(985018),
-    k = t(4196);
+    k = t(863413);
 function b(e) {
     let { content: l, onClick: t, ariaLabel: s, className: a } = e;
     return (0, n.jsx)(r.DUT, { className: i()(k.gb, a), onClick: t, "aria-label": s, children: l });
@@ -45,11 +45,11 @@ function R(e) {
                 cta_type: m.ST.LEARN_MORE,
                 location_stack: C,
             }),
-                window.open(f.A.getArticleURL(E.MVz.SOCIAL_LAYER_STOREFRONT));
+                window.open(A.A.getArticleURL(E.MVz.SOCIAL_LAYER_STOREFRONT));
         }, [v, C]);
     if (null == t) return null;
-    let T = null != t.logoAssetId ? (0, A.YE)(t.applicationId, t.logoAssetId, 75) : null,
-        O = null != t.lightThemeLogoAssetId ? (0, A.YE)(t.applicationId, t.lightThemeLogoAssetId, 75) : null,
+    let T = null != t.logoAssetId ? (0, f.YE)(t.applicationId, t.logoAssetId, 75) : null,
+        O = null != t.lightThemeLogoAssetId ? (0, f.YE)(t.applicationId, t.lightThemeLogoAssetId, 75) : null,
         y = null;
     return (
         (y = R ? (T ?? O) : (O ?? T)),

@@ -24,8 +24,8 @@ var i = n(311907),
     y = n(360563),
     v = n(996988),
     N = n(985018),
-    C = n(45803),
-    R = n(886308);
+    C = n(392416),
+    R = n(74209);
 function O(e) {
     let {
             user: t,
@@ -37,8 +37,8 @@ function O(e) {
             channelId: w,
             onClose: M,
         } = e,
-        x = c.Ay.getName(b?.id, w, t),
-        P = (0, i.bG)([d.A], () => d.A.getUserProfile(t.id)?.application),
+        P = c.Ay.getName(b?.id, w, t),
+        x = (0, i.bG)([d.A], () => d.A.getUserProfile(t.id)?.application),
         k = (0, i.bG)([a.A, l.A], () => a.A.getChannel(l.A.getChannelId())),
         U = (0, i.bG)([o.Ay], () => o.Ay.isMember(b?.id, t.id)),
         G = (0, i.bG)([u.A], () => u.A.hidePersonalInformation);
@@ -51,7 +51,7 @@ function O(e) {
                 user: t,
                 guildId: b?.id,
                 onOpenProfile: L,
-                nickname: x,
+                nickname: P,
                 pronouns: O?.pronouns,
                 tags: (0, r.jsx)(f.A, { displayProfile: O, themeType: v.d.POPOUT, onClose: M }),
                 nicknameIcons: G ? null : (0, r.jsx)(I.A, { userId: t.id, isVisible: D, onOpenProfile: L }),
@@ -66,11 +66,11 @@ function O(e) {
             }),
             (0, r.jsx)(T.A, { user: t, bio: O?.bio, hidePersonalInformation: G, onClose: M }),
             (0, r.jsx)(m.A, { user: t, currentUser: n, guildId: b?.id, onOpenUserProfileModal: L, onClose: M }),
-            P?.popularApplicationCommandIds != null &&
+            x?.popularApplicationCommandIds != null &&
                 null != k &&
                 (0, r.jsx)(_.A, {
-                    applicationId: P.id,
-                    commandIds: P.popularApplicationCommandIds,
+                    applicationId: x.id,
+                    commandIds: x.popularApplicationCommandIds,
                     channel: k,
                     guildId: b?.id,
                     onClick: M,

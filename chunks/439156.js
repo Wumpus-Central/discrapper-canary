@@ -12,9 +12,9 @@ var r = n(627968),
     _ = n(220628),
     m = n(933337),
     f = n(568065),
-    A = n(333354),
+    A = n(136708),
     g = n(985018),
-    x = n(21795);
+    x = n(480112);
 function v(e) {
     let {
             guildId: t,
@@ -23,8 +23,8 @@ function v(e) {
             iconSize: v,
             size: h,
             grow: E,
-            className: b,
-            expressiveCta: I,
+            className: I,
+            expressiveCta: b,
             onError: j,
         } = e,
         { onActivate: S, isLoading: C, error: w } = (0, _.A)(t, n),
@@ -60,7 +60,7 @@ function v(e) {
             delay: 100,
             "aria-label": null != P ? P : R ? g.intl.string(A.default.TZsu1U) : void 0,
             children: (0, r.jsx)("div", {
-                className: s()(x.zr, { [x._o]: E, [x.nB]: !E }, b),
+                className: s()(x.zr, { [x._o]: E, [x.nB]: !E }, I),
                 children: (() => {
                     let { text: e, icon: t } = (function (e) {
                         let { cost: t, isActive: n, compact: i, iconSize: l } = e,
@@ -78,7 +78,7 @@ function v(e) {
                               };
                     })({ cost: n.cost, isActive: R, compact: l, iconSize: v });
                     return (0, r.jsx)(a.$nd, {
-                        variant: R ? "secondary" : I ? "expressive" : "primary",
+                        variant: R ? "secondary" : b ? "expressive" : "primary",
                         "aria-label": g.intl.string(R ? A.default.TZsu1U : A.default.gSxlHf),
                         disabled: T,
                         onClick: (e) => {

@@ -23,8 +23,8 @@ var i = n(503698),
     S = n(652215),
     y = n(360469),
     v = n(985018),
-    N = n(654249),
-    C = n(284839);
+    N = n(704110),
+    C = n(40257);
 let R = !0;
 function O(e) {
     let { game: t } = e,
@@ -119,10 +119,10 @@ function b(e, t) {
                   children: v.intl.string(v.t.KWDIrh),
               })
             : v.intl.string(v.t.KWDIrh),
-        x = null != e ? (0, r.jsx)(O, { game: e }) : (0, r.jsx)("img", { src: n(513653), className: N.Kk, alt: "" });
+        P = null != e ? (0, r.jsx)(O, { game: e }) : (0, r.jsx)("img", { src: n(513653), className: N.Kk, alt: "" });
     return {
         className: i ? C.fV : void 0,
-        icon: x,
+        icon: P,
         title: M,
         hint: w,
         ...y,

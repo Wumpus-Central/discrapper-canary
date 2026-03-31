@@ -1,43 +1,43 @@
-a.d(t, { A: () => A });
-var s = a(627968);
+a.d(t, { A: () => _ });
+var n = a(627968);
 a(64700);
-var l = a(503698),
-    n = a.n(l),
+var i = a(503698),
+    s = a.n(i),
     r = a(397927),
-    i = a(376092),
-    d = a(76197);
-function A(e) {
+    l = a(376092),
+    d = a(676770);
+function _(e) {
     let {
         grantedPermissions: t,
         disabledPermissions: a,
-        grantedPermissionsHeader: l,
-        disabledPermissionsHeader: A,
+        grantedPermissionsHeader: i,
+        disabledPermissionsHeader: _,
         className: o,
     } = e;
-    return (0, s.jsxs)("div", {
-        className: n()(d.p_, o),
+    return (0, n.jsxs)("div", {
+        className: s()(d.p_, o),
         children: [
             null != t && t.length > 0
-                ? (0, s.jsxs)(s.Fragment, {
+                ? (0, n.jsxs)(n.Fragment, {
                       children: [
-                          null != l
-                              ? (0, s.jsx)(r.Heading, {
+                          null != i
+                              ? (0, n.jsx)(r.Heading, {
                                     variant: "heading-sm/semibold",
                                     color: "text-strong",
                                     className: d.wx,
-                                    children: l,
+                                    children: i,
                                 })
                               : null,
-                          (0, s.jsx)("div", {
+                          (0, n.jsx)("div", {
                               className: d.kL,
                               children: t.map((e) =>
-                                  (0, s.jsxs)(
+                                  (0, n.jsxs)(
                                       "div",
                                       {
                                           className: d.EK,
                                           children: [
-                                              (0, s.jsx)(r.A9s, { size: "xs", color: "currentColor", className: d.z6 }),
-                                              (0, s.jsx)(r.Text, { variant: "text-sm/normal", children: (0, i.hx)(e) }),
+                                              (0, n.jsx)(r.A9s, { size: "xs", color: "currentColor", className: d.z6 }),
+                                              (0, n.jsx)(r.Text, { variant: "text-sm/normal", children: (0, l.hx)(e) }),
                                           ],
                                       },
                                       e.toString(),
@@ -48,26 +48,26 @@ function A(e) {
                   })
                 : null,
             null != a && a.length > 0
-                ? (0, s.jsxs)(s.Fragment, {
+                ? (0, n.jsxs)(n.Fragment, {
                       children: [
-                          null != A
-                              ? (0, s.jsx)(r.Heading, {
+                          null != _
+                              ? (0, n.jsx)(r.Heading, {
                                     variant: "heading-sm/semibold",
                                     color: "text-strong",
                                     className: d.wx,
-                                    children: A,
+                                    children: _,
                                 })
                               : null,
-                          (0, s.jsx)("div", {
+                          (0, n.jsx)("div", {
                               className: d.kL,
                               children: a.map((e) =>
-                                  (0, s.jsxs)(
+                                  (0, n.jsxs)(
                                       "div",
                                       {
                                           className: d.EK,
                                           children: [
-                                              (0, s.jsx)(r.PGe, { size: "xs", color: "currentColor", className: d.$A }),
-                                              (0, s.jsx)(r.Text, { variant: "text-sm/normal", children: (0, i.hx)(e) }),
+                                              (0, n.jsx)(r.PGe, { size: "xs", color: "currentColor", className: d.$A }),
+                                              (0, n.jsx)(r.Text, { variant: "text-sm/normal", children: (0, l.hx)(e) }),
                                           ],
                                       },
                                       e.toString(),

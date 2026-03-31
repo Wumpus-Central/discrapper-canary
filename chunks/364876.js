@@ -10,7 +10,7 @@ var i = t(877624),
     d = t(810498),
     c = t(298305),
     p = t(985018),
-    m = t(625489);
+    m = t(75800);
 function E() {
     let e = (0, r.bG)([u.A], () => {
             let e = u.A.getMarketingComponentByType(i.C.GIFT_CUSTOMIZATION_BANNER);
@@ -22,13 +22,13 @@ function E() {
         t = (0, o.T)(e?.asset),
         E = (0, o.T)(e?.backgroundAsset),
         _ = e?.gradient,
-        x =
+        S =
             null != _ && null != _.colors && _.colors.length >= 2
                 ? (0, d.K5)({ gradient: _.colors, angle: _.angle ?? void 0 })
                 : void 0,
-        S = (0, d.gc)(E);
-    null != S && ((S.backgroundSize = "cover, auto"), (S.backgroundPosition = "right center, 0% 0%"));
-    let P = (0, d.x)(S, x);
+        x = (0, d.gc)(E);
+    null != x && ((x.backgroundSize = "cover, auto"), (x.backgroundPosition = "right center, 0% 0%"));
+    let P = (0, d.x)(x, S);
     return null == e || null == n
         ? null
         : (0, l.jsxs)("div", {

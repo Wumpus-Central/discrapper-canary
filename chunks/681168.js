@@ -12,8 +12,8 @@ var a = n(503698),
     m = n(915089),
     p = n(818348),
     A = n(985018),
-    h = n(54199),
-    C = n(120371);
+    h = n(841780),
+    C = n(676946);
 function E(e) {
     let { className: t, clickableClassName: n, clickable: a, children: i } = e,
         o = (0, m.GV)();
@@ -52,8 +52,8 @@ function N(e) {
             subtitle: C,
             thumbnailUrl: N,
             titleClickable: I,
-            subtitleClickable: f,
-            thumbnailClickable: _,
+            subtitleClickable: _,
+            thumbnailClickable: f,
             providerIconProps: g,
             style: T = {},
         } = e,
@@ -74,7 +74,7 @@ function N(e) {
                         (0, l.jsx)(E, {
                             className: h.iT,
                             clickableClassName: h.vk,
-                            clickable: _,
+                            clickable: f,
                             children: (0, l.jsx)(o.V, { src: N, constrain: "width", size: 64, "aria-hidden": !0 }),
                         }),
                         (0, l.jsxs)("div", {
@@ -99,7 +99,7 @@ function N(e) {
                                           children: [
                                               (0, l.jsx)(s.hKd, { size: 2 }),
                                               (0, l.jsx)(x, {
-                                                  clickable: f,
+                                                  clickable: _,
                                                   className: h.sd,
                                                   children: (0, l.jsx)(s.Text, {
                                                       variant: "text-sm/normal",

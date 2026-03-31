@@ -23,7 +23,7 @@ var r = n(627968),
     y = n(652215),
     v = n(360469),
     N = n(985018),
-    C = n(795474);
+    C = n(55529);
 function R(e) {
     let {
             className: t,
@@ -37,16 +37,16 @@ function R(e) {
             numWishlistItems: w = 2,
             cardSpec: M,
         } = e,
-        x = (0, l.h)(s),
-        P = (0, A.A)(x?.id),
+        P = (0, l.h)(s),
+        x = (0, A.A)(P?.id),
         k = (0, c.GG)("social_layer_storefront_gifting_breadcrumb");
     (0, d.T)({ location: "social_layer_storefront_gifting_breadcrumb" });
     let U = i.useMemo(() => {
             if (k) return null;
-            let e = null != P ? P.getIconURL(v.iu.SMALL) : void 0;
+            let e = null != x ? x.getIconURL(v.iu.SMALL) : void 0;
             return null != e ? (0, r.jsx)("img", { className: C.In, src: e, alt: "" }) : void 0;
-        }, [P, k]),
-        G = i.useMemo(() => (P?.id != null ? [P.id] : []), [P]),
+        }, [x, k]),
+        G = i.useMemo(() => (x?.id != null ? [x.id] : []), [x]),
         {
             status: F,
             recommendations: V,
@@ -74,7 +74,7 @@ function R(e) {
                           {
                               sku: n.sku,
                               source: i.length > 0 ? _.uS.WISHLIST : _.uS.POPULAR,
-                              application: P,
+                              application: x,
                               showIcons: t,
                               guildId: D,
                               channelId: L,
@@ -99,7 +99,7 @@ function R(e) {
                           n.skuId,
                       );
             });
-        }, [O, L, D, k, j, B, Y, W, R, P, H, M]);
+        }, [O, L, D, k, j, B, Y, W, R, x, H, M]);
     i.useEffect(() => {
         0 !== V.length &&
             m.default.track(y.HAw.COMMERCE_SHOP_GIFTING_BREADCRUMB_VIEWED, {

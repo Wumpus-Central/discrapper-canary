@@ -14,10 +14,10 @@ var n = s(627968),
     g = s(176201),
     b = s(178758),
     f = s(652215),
-    h = s(743981),
-    p = s(985018),
-    j = s(429817),
-    k = s(28578);
+    p = s(743981),
+    h = s(985018),
+    j = s(558976),
+    k = s(744295);
 function C() {
     let [e, t] = a.useState(() => {
             let e = Math.floor(Math.random() * b.Oz.length);
@@ -39,7 +39,7 @@ function C() {
                     username: "Cherry",
                     usernameStyle: s,
                     usernameClassName: l()(r, k.q),
-                    message: p.intl.string(p.t["6OSasb"]),
+                    message: h.intl.string(h.t["6OSasb"]),
                 }),
             }),
             (0, n.jsx)(d.default, {
@@ -56,7 +56,7 @@ function C() {
 }
 function v(e) {
     let { guildId: t } = e,
-        [s, r] = a.useState(h.bl.HEART),
+        [s, r] = a.useState(p.bl.HEART),
         l = (0, x.A)(),
         i = a.useMemo(() => ({ unlockedBadges: l.unlockedBadges.slice(0, 10), lockedBadges: [] }), [l]);
     return (0, n.jsxs)("div", {
@@ -68,7 +68,7 @@ function v(e) {
                     avatar: c.A,
                     username: "Roka",
                     usernameStyle: { color: "var(--brand-400)" },
-                    message: p.intl.string(p.t["6OSasb"]),
+                    message: h.intl.string(h.t["6OSasb"]),
                     decorations: (0, n.jsx)(m.M, { guildId: t, tag: "GGEZ", badge: s }),
                 }),
             }),

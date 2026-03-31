@@ -1,25 +1,25 @@
-n.d(t, { X: () => c, x: () => u });
-var l = n(627968),
-    a = n(64700),
-    r = n(503698),
-    i = n.n(r),
-    s = n(931220);
-let d = {
+a.d(t, { X: () => c, x: () => d });
+var n = a(627968),
+    i = a(64700),
+    r = a(503698),
+    l = a.n(r),
+    s = a(52403);
+let o = {
         SIZE: { default: void 0, reduced: s.k2 },
         COLOR: { default: void 0, muted: s.JF },
         WEIGHT: { default: void 0, reduced: s.Xj },
     },
-    o = a.createContext({ className: void 0, size: "default", color: "default", weight: "default" });
+    _ = i.createContext({ className: void 0, size: "default", color: "default", weight: "default" });
 function c() {
-    return a.useContext(o);
+    return i.useContext(_);
 }
-function u(e) {
-    let { children: t, size: n, color: r, weight: u } = e,
-        _ = c(),
-        m = a.useMemo(() => {
-            let e = { className: void 0, size: n ?? _.size, color: r ?? _.color, weight: u ?? _.weight },
-                t = i()(d.SIZE[e.size], d.COLOR[e.color], d.WEIGHT[e.weight]);
-            return "" !== t && (e.className = i()(s.zr, t)), e;
-        }, [n, r, u, _]);
-    return (0, l.jsx)(o.Provider, { value: m, children: t });
+function d(e) {
+    let { children: t, size: a, color: r, weight: d } = e,
+        u = c(),
+        f = i.useMemo(() => {
+            let e = { className: void 0, size: a ?? u.size, color: r ?? u.color, weight: d ?? u.weight },
+                t = l()(o.SIZE[e.size], o.COLOR[e.color], o.WEIGHT[e.weight]);
+            return "" !== t && (e.className = l()(s.zr, t)), e;
+        }, [a, r, d, u]);
+    return (0, n.jsx)(_.Provider, { value: f, children: t });
 }

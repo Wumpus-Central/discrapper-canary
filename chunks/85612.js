@@ -11,8 +11,8 @@ var i = n(627968),
     h = n(793574),
     m = n(688810),
     A = n(385318),
-    g = n(480890),
-    p = n(267102),
+    p = n(480890),
+    g = n(267102),
     f = n(625841),
     _ = n(202639),
     E = n(336060),
@@ -21,10 +21,10 @@ var i = n(627968),
     S = n(954571),
     I = n(474090),
     T = n(927578),
-    N = n(971778),
-    v = n(494783),
-    b = n(342887),
-    y = n(606451),
+    v = n(971778),
+    N = n(494783),
+    y = n(342887),
+    b = n(606451),
     j = n(177392),
     R = n(185494),
     M = n(15910),
@@ -33,9 +33,9 @@ var i = n(627968),
     L = n(806931),
     P = n(788868),
     w = n(731854),
-    k = n(734317),
+    k = n(3683),
     U = n(985018),
-    G = n(365145);
+    G = n(69096);
 function F(e) {
     let { onSettingsButtonClick: t, wide: n, showOutputDevices: s = !1, showSearchBar: F = !0 } = e,
         [H, B] = l.useState(""),
@@ -51,10 +51,10 @@ function F(e) {
         });
     (0, U.useSyncMessages)(k.messagesLoader);
     let Y = (0, o.bG)([C.default], () => (0, I.ki)(C.default.getCurrentUser())),
-        q = (0, o.bG)([N.A], () => N.A.getCatalogUpdateTime()),
+        q = (0, o.bG)([v.A], () => v.A.getCatalogUpdateTime()),
         [J, $] = l.useState(!1),
         [Z, X] = l.useState(!1),
-        { activeVoice: Q } = (0, v.f)(),
+        { activeVoice: Q } = (0, N.f)(),
         ee = (0, c.zhh)({
             transform: J ? "translateY(-8px) scale(0.96)" : "translateY(0px) scale(1)",
             config: { duration: 150, mass: 1, stiffness: 711.1, damping: 40 },
@@ -66,11 +66,11 @@ function F(e) {
         }),
         ei = l.useRef(null);
     (0, d.Ay)(() => {
-        (0, b.md)(), S.default.track(O.HAw.VOICE_FILTER_PICKER_OPENED, { active_voice_filter_id: Q ?? null });
+        (0, y.md)(), S.default.track(O.HAw.VOICE_FILTER_PICKER_OPENED, { active_voice_filter_id: Q ?? null });
     });
     let el = l.useCallback(() => B(""), [B]),
         es = l.useRef(null),
-        ea = (0, p.Us)() !== O.BRT.OVERLAY;
+        ea = (0, g.Us)() !== O.BRT.OVERLAY;
     return (0, i.jsx)(m.f5, {
         value: V,
         children: (0, i.jsxs)("div", {
@@ -133,7 +133,7 @@ function F(e) {
                         ],
                     }),
                 (0, i.jsx)(j.H, {}),
-                (0, i.jsx)(y.m, {}),
+                (0, i.jsx)(b.m, {}),
                 (0, i.jsx)(R.l, {}),
                 (0, i.jsxs)("div", {
                     className: a()(G.N$, { [G.rd]: null != Q }),
@@ -166,7 +166,7 @@ function F(e) {
                                     renderOutputDevices: s,
                                     renderOutputVolume: s,
                                     onClose: t,
-                                    onInteraction: (0, g.s)("AudioDeviceMenu", K, { entrypoint: L.GK.THREE_DOT }),
+                                    onInteraction: (0, p.s)("AudioDeviceMenu", K, { entrypoint: L.GK.THREE_DOT }),
                                     minimal: !0,
                                 }),
                             children: (e) =>

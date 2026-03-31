@@ -13,8 +13,8 @@ var r = n(627968),
     f = n(688810),
     p = n(357186),
     h = n(932001),
-    m = n(979474),
-    E = n(810498),
+    m = n(810498),
+    E = n(233971),
     g = n(40493),
     A = n(412260),
     I = n(186111),
@@ -28,8 +28,8 @@ var r = n(627968),
     O = n(652215),
     b = n(49999),
     D = n(985018),
-    L = n(23769),
-    w = n(351671);
+    L = n(807538),
+    w = n(526636);
 function M(e) {
     let t = i.useCallback(() => Promise.resolve({ default: e.boxAnimationUrl }), [e.boxAnimationUrl]);
     return (0, r.jsx)(R.A, {
@@ -44,7 +44,7 @@ function M(e) {
         }),
     });
 }
-function x(e) {
+function P(e) {
     let { Component: t, events: n, play: s } = (0, c.T)(),
         a = i.useCallback(() => Promise.resolve({ default: e.trinketAnimationUrl }), [e.trinketAnimationUrl]),
         o = i.useCallback(() => Promise.resolve({ default: e.trinketGlowAnimationUrl }), [e.trinketGlowAnimationUrl]),
@@ -73,7 +73,7 @@ function x(e) {
         }),
     });
 }
-let P = S.A.Millis.DAYS_30;
+let x = S.A.Millis.DAYS_30;
 function k(e) {
     let { disabled: t, channel: n } = e,
         { analyticsLocations: s } = (0, f.Ay)(_.A.GIFT_BUTTON),
@@ -96,14 +96,14 @@ function k(e) {
         U = w?.gradient,
         G =
             null != U && null != U.colors && U.colors.length >= 2
-                ? (0, E.K5)({ gradient: U.colors, angle: U.angle ?? void 0 }, { defaultAngle: 180 })
+                ? (0, m.K5)({ gradient: U.colors, angle: U.angle ?? void 0 }, { defaultAngle: 180 })
                 : void 0,
         F = i.useMemo(() => {
             if (G?.background != null) return { "--custom-promotion-gradient": G.background };
         }, [G]),
         V = !(0, v.uJ)(w?.boxAnimationUrl),
         B = (!(0, v.uJ)(w?.trinketAnimationUrl) || !(0, v.uJ)(w?.trinketGlowAnimationUrl)) && !V,
-        H = null != k && !t && S && D >= P,
+        H = null != k && !t && S && D >= x,
         [j, Y] = (0, h.RF)(
             H ? u.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null,
             (0, p.c)(u.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK),
@@ -111,7 +111,7 @@ function k(e) {
         W = null != j,
         K = c || W,
         $ = (0, N.R1)(n),
-        { openGiftModal: z } = (0, m.$)({
+        { openGiftModal: z } = (0, E.$)({
             giftRecipient: $,
             analyticsLocations: s,
             analyticsObject: {
@@ -136,7 +136,7 @@ function k(e) {
             V && w?.boxAnimationUrl != null
                 ? (0, r.jsx)(M, { boxAnimationUrl: w.boxAnimationUrl, hovered: K, onClick: q })
                 : B
-                  ? (0, r.jsx)(x, {
+                  ? (0, r.jsx)(P, {
                         trinketAnimationUrl: w?.trinketAnimationUrl ?? null,
                         trinketGlowAnimationUrl: w?.trinketGlowAnimationUrl ?? null,
                         hovered: K,

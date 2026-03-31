@@ -11,13 +11,13 @@ var i = n(627968),
     h = n(661191),
     m = n(796774),
     A = n(209932),
-    g = n(536432),
-    p = n(933204),
+    p = n(536432),
+    g = n(933204),
     f = n(805143),
     _ = n(375366),
     E = n(69217);
 n(980504);
-var x = n(653906);
+var x = n(74611);
 function C(e) {
     let {
             guildId: t,
@@ -26,10 +26,10 @@ function C(e) {
             height: S,
             keepOpen: I,
             interactive: T = !0,
-            analyticsSource: N,
-            onClose: v,
+            analyticsSource: v,
+            onClose: N,
         } = e,
-        b = (function (e) {
+        y = (function (e) {
             let [t, n] = (0, a.yK)([A.A], () => [A.A.getSounds(), A.A.getFavorites()]);
             return l.useMemo(() => {
                 let i = [],
@@ -43,23 +43,23 @@ function C(e) {
                 return l.forEach((e) => s(e, !0)), l.forEach((e) => s(e, !1)), i;
             }, [t, n, e]);
         })((0, f.Y)(n, !0)),
-        y = (0, p.T)(),
+        b = (0, g.T)(),
         j = l.useRef(null),
         [R, M] = l.useState(void 0),
         D = (0, a.bG)([u.A], () => u.A.getMediaSessionId()),
         { analyticsLocations: O } = (0, o.Ay)(r.A.SOUNDBOARD_WHEEL),
         L = l.useCallback(
             (e) => {
-                (0, g.Ak)(e, n.id, O), v();
+                (0, p.Ak)(e, n.id, O), N();
             },
-            [O, n.id, v],
+            [O, n.id, N],
         );
     l.useEffect(() => {
         m.E7(), d.bW.loadIfNecessary();
     }, []),
         l.useEffect(() => {
-            0 === b.length && 0 === y.length && v();
-        }, [b.length, y, v]),
+            0 === y.length && 0 === b.length && N();
+        }, [y.length, b, N]),
         l.useEffect(
             () => () => {
                 let e = j.current;
@@ -71,7 +71,7 @@ function C(e) {
             {
                 type: s.ImpressionTypes.POPOUT,
                 name: s.ImpressionNames.SOUNDBOARD_POPOUT,
-                properties: { source: N, guild_id: t, media_session_id: D },
+                properties: { source: v, guild_id: t, media_session_id: D },
             },
             { disableTrack: !T },
         );
@@ -81,31 +81,31 @@ function C(e) {
         w = l.useCallback(
             (e) => {
                 if (null == e) return void P(null);
-                let t = b[e];
+                let t = y[e];
                 null != t && P(t);
             },
-            [P, b],
+            [P, y],
         ),
         k = l.useCallback(
             (e) => {
                 if (null == e) return;
-                let t = b[e];
+                let t = y[e];
                 null != t && L(t);
             },
-            [b, L],
+            [y, L],
         ),
         U = l.useMemo(
             () =>
-                b.map((e) =>
+                y.map((e) =>
                     (0, i.jsx)(
                         E.Ay,
                         { interactive: T, className: x.a, sound: e, focused: R === e.soundId, channel: n },
                         e.soundId,
                     ),
                 ),
-            [R, n, T, b],
+            [R, n, T, y],
         );
-    return 0 === b.length
+    return 0 === y.length
         ? null
         : (0, i.jsx)(o.f5, {
               value: O,
@@ -118,7 +118,7 @@ function C(e) {
                   activeItem: R,
                   onItemSelect: w,
                   onItemAction: k,
-                  onClose: v,
+                  onClose: N,
                   interactive: T,
                   children: U,
               }),

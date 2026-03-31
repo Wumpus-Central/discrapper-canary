@@ -21,7 +21,7 @@ var n = s(627968),
     C = s(998694),
     A = s(438166),
     S = s(652215),
-    v = s(471312);
+    v = s(16464);
 let I = { flattenProductVariants: !0 };
 function L(e) {
     let { isFetchingCategories: t, scrollerRef: s, tab: l } = e,
@@ -35,12 +35,12 @@ function L(e) {
         D = r.useCallback(() => {
             s?.current?.scrollToTop({ animate: !0 });
         }, [s]),
-        w = y?.join("");
+        H = y?.join("");
     r.useEffect(() => {
         D();
-    }, [w, D]);
-    let H = (0, m.p)(),
-        F = r.useMemo(() => H(P), [H, P]);
+    }, [H, D]);
+    let w = (0, m.p)(),
+        F = r.useMemo(() => w(P), [w, P]);
     r.useEffect(() => {
         t ||
             (0, f.z)({

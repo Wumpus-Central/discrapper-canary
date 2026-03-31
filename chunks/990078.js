@@ -9,7 +9,7 @@ var r = n(627968),
     u = n(348275),
     c = n(505679),
     d = n(747781),
-    _ = n(958263);
+    _ = n(85730);
 function f(e) {
     let {
             children: t,
@@ -45,7 +45,7 @@ function f(e) {
             targetElementRef: w,
             trigger: M,
         } = (0, d.D)({ children: t, targetElementRef: b, asContainer: h, containerTag: m, ariaHidden: N, ...C }),
-        [x, P] = i.useState(!1),
+        [P, x] = i.useState(!1),
         { defaultLayerContext: k } = (0, a.G98)(),
         U = i.useMemo(
             () =>
@@ -65,15 +65,15 @@ function f(e) {
             [n, f, p],
         ),
         G = null != U && ("string" != typeof U || "" !== U),
-        F = L || x;
+        F = L || P;
     i.useEffect(() => {
-        L && G ? P(!0) : G || P(!1);
+        L && G ? x(!0) : G || x(!1);
     }, [L, G]);
     let V = i.useCallback(() => {
-            P(!1);
+            x(!1);
         }, []),
         B = (0, c.j)({ shouldShow: L, onExitComplete: V });
-    if (!G && (L || !x)) return t;
+    if (!G && (L || !P)) return t;
     if (null == t || (!h && !i.isValidElement(t))) return null;
     let H = v ?? (0, u.Xj)(n),
         j = B((e, t) =>

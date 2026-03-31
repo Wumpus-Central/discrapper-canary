@@ -26,7 +26,7 @@ var r = n(627968),
     C = n(652215),
     R = n(996988),
     O = n(985018),
-    b = n(886308);
+    b = n(74209);
 function D(e) {
     let {
             user: t,
@@ -35,8 +35,8 @@ function D(e) {
             messageId: L,
             roleId: w,
             setPopoutRef: M,
-            closePopout: x,
-            disableUserProfileLink: P = __OVERLAY__,
+            closePopout: P,
+            disableUserProfileLink: x = __OVERLAY__,
             newAnalyticsLocations: k = [],
             disableAutoFocus: U = !1,
             onClickContainer: G,
@@ -51,11 +51,11 @@ function D(e) {
         M?.(j?.current);
     }, [j, M]);
     let W = () => {
-            x?.(),
+            P?.(),
                 V.dispatch(C.jej.POPOUT_CLOSE),
                 (0, E.openUserProfileModal)({ sourceAnalyticsLocations: B, hideRestrictedProfile: !0, ...H });
         },
-        K = !P && (0, l.A)(t.id),
+        K = !x && (0, l.A)(t.id),
         $ = () =>
             K
                 ? (0, r.jsx)(s.Drp, {
@@ -111,7 +111,7 @@ function D(e) {
                                         guildId: n,
                                         nickname: f.Ay.getName(n, D, t),
                                         onOpenProfile: K ? W : void 0,
-                                        tags: (0, r.jsx)(A.A, { displayProfile: F, themeType: R.d.POPOUT, onClose: x }),
+                                        tags: (0, r.jsx)(A.A, { displayProfile: F, themeType: R.d.POPOUT, onClose: P }),
                                     }),
                                     (0, r.jsx)(T.E, {
                                         userId: t.id,

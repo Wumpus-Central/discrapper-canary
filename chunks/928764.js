@@ -11,20 +11,20 @@ var i = n(627968),
     h = n(56562),
     m = n(765671),
     A = n(304072),
-    g = n(390395),
-    p = n(659195),
+    p = n(390395),
+    g = n(659195),
     f = n(505527),
     _ = n(467073),
     E = n(960538),
     x = n(898280),
     C = n(573163),
-    S = n(483202),
+    S = n(260821),
     I = n(226698),
     T = n(376708),
-    N = n(715757),
-    v = n(390897),
-    b = n(704860),
-    y = n(152007),
+    v = n(715757),
+    N = n(390897),
+    y = n(704860),
+    b = n(152007),
     j = n(867455),
     R = n(734057),
     M = n(147036),
@@ -34,10 +34,10 @@ var i = n(627968),
     P = n(853742),
     w = n(652215),
     k = n(985018),
-    U = n(641131),
-    G = n(12131),
-    F = n(486025),
-    H = n(303621);
+    U = n(733045),
+    G = n(537790),
+    F = n(767474),
+    H = n(276170);
 function B(e) {
     let { channel: t } = e,
         s = t.isArchivedThread(),
@@ -55,7 +55,7 @@ function B(e) {
               variant: "secondary",
               text: s ? k.intl.string(U.default["2Y4vkk"]) : k.intl.string(U.default.YIbR4r),
               onClick: () => {
-                  !0 === o.w.get(v.f)
+                  !0 === o.w.get(N.f)
                       ? u()
                       : (0, d.mMO)(async () => {
                             let { default: e } = await Promise.resolve().then(n.bind(n, 390897));
@@ -74,17 +74,17 @@ function B(e) {
 function V(e) {
     let { postId: t, isFirstMessage: n, isLastItem: s = !1, parentChannelId: o } = e,
         { ref: I, width: T } = (0, m.Ay)(),
-        [v, U] = l.useState(3),
+        [N, U] = l.useState(3),
         [V, K] = l.useState(!n),
         [W, z] = (0, A.A)(!1, 2e3),
         Y = (0, r.bG)([R.A], () => R.A.getChannel(t), [t]),
         { firstMessage: q } = (0, L.OA)(Y),
-        J = (0, r.bG)([y.A], () => y.A.hasJoined(t)),
+        J = (0, r.bG)([b.A], () => b.A.hasJoined(t)),
         { disableReactionUpdates: $, disableReactionCreates: Z, isLurking: X, isPendingMember: Q } = (0, _.A)(Y),
-        ee = (0, N.W1)(Y),
+        ee = (0, v.W1)(Y),
         et = (0, r.bG)([R.A], () => R.A.getChannel(o)),
         en = (0, O.Ck)(et),
-        ei = (0, r.bG)([g.A], () => g.A.shouldDisplayPrompt(t) && !0 === n, [t, n]),
+        ei = (0, r.bG)([p.A], () => p.A.shouldDisplayPrompt(t) && !0 === n, [t, n]),
         el = l.useCallback(
             (e) => {
                 let t = e[0];
@@ -128,7 +128,7 @@ function V(e) {
                 ref: I,
                 children: [
                     ee
-                        ? (0, i.jsx)("div", { className: G.kX, children: (0, i.jsx)(b.A, { message: q, channel: Y }) })
+                        ? (0, i.jsx)("div", { className: G.kX, children: (0, i.jsx)(y.A, { message: q, channel: Y }) })
                         : (0, i.jsxs)("div", {
                               className: a()(G.hY, { [G.Lq]: es }),
                               children: [
@@ -160,7 +160,7 @@ function V(e) {
                                       disableReactionUpdates: $,
                                       isLurking: X,
                                       isPendingMember: Q,
-                                      maxReactions: v,
+                                      maxReactions: N,
                                       className: G.Br,
                                       useChatFontScaling: !1,
                                       isForumToolbar: !0,
@@ -237,7 +237,7 @@ function V(e) {
                     }),
                 ],
             }),
-            ei && (0, i.jsx)(p.A, { threadId: t }),
+            ei && (0, i.jsx)(g.A, { threadId: t }),
             (0, i.jsx)(x.A, { channel: Y, isLastItem: s }),
         ],
     });

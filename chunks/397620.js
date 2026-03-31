@@ -4,7 +4,7 @@ var i = n(627968),
     l = n(503698),
     a = n.n(l),
     r = n(397927),
-    o = n(65125);
+    o = n(304384);
 let d = function (e) {
     let {
             tabs: t,
@@ -15,22 +15,22 @@ let d = function (e) {
             orientation: u = "horizontal",
         } = e,
         m = d ?? t[0],
-        [_, g] = s.useState(m ?? t[0]);
+        [g, _] = s.useState(m ?? t[0]);
     s.useEffect(() => {
-        g(m);
+        _(m);
     }, [m]);
-    let x = s.useMemo(() => {
-        let e = _.component;
+    let A = s.useMemo(() => {
+        let e = g.component;
         return (0, i.jsx)(e, {});
-    }, [_]);
+    }, [g]);
     return (0, i.jsxs)("div", {
         className: a()(o.P5, { [o.Vd]: "vertical" === u }),
         children: [
             (0, i.jsx)(r.VQ0, {
                 className: a()(o.$H, { [o.Vd]: "vertical" === u }, l),
-                selectedItem: _.id,
+                selectedItem: g.id,
                 onItemSelect: (e) => {
-                    g(t.find((t) => t.id === e) ?? t[0]), c?.(e);
+                    _(t.find((t) => t.id === e) ?? t[0]), c?.(e);
                 },
                 orientation: u,
                 type: "vertical" === u ? "side" : "top",
@@ -39,7 +39,7 @@ let d = function (e) {
                     (0, i.jsx)(
                         r.VQ0.Item,
                         {
-                            className: a()(o.Mf, { [o.Vd]: "vertical" === u, [o.wH]: e.id === _.id }),
+                            className: a()(o.Mf, { [o.Vd]: "vertical" === u, [o.wH]: e.id === g.id }),
                             id: e.id,
                             "aria-label": e.title,
                             children: e.title,
@@ -49,10 +49,10 @@ let d = function (e) {
                 ),
             }),
             (0, i.jsx)(r.VQ0.Panel, {
-                id: _.id,
-                "aria-labelledby": _.title,
+                id: g.id,
+                "aria-labelledby": g.title,
                 className: a()(o.NM, n, { [o.Vd]: "vertical" === u }),
-                children: x,
+                children: A,
             }),
         ],
     });

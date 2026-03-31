@@ -28,15 +28,15 @@ var r = n(627968),
     O = n(652215),
     b = n(996988),
     D = n(985018),
-    L = n(886308);
+    L = n(74209);
 function w(e) {
     let {
             user: t,
             currentUser: n,
             displayProfile: w,
             guild: M,
-            isHoveringOrFocusing: x,
-            onOpenProfile: P,
+            isHoveringOrFocusing: P,
+            onOpenProfile: x,
             channelId: k,
             onClose: U,
         } = e,
@@ -58,13 +58,13 @@ function w(e) {
             (0, r.jsx)(S.A, {
                 user: t,
                 guildId: M?.id,
-                onOpenProfile: P,
+                onOpenProfile: x,
                 onClose: U,
                 usernameIcon: t.hasAvatarForGuild(M?.id) && (0, r.jsx)(N.A, { user: t, nickname: G }),
                 nickname: G,
                 pronouns: w?.pronouns,
                 tags: (0, r.jsx)(_.A, { displayProfile: w, themeType: b.d.POPOUT, onClose: U }),
-                nicknameIcons: H ? null : (0, r.jsx)(y.A, { userId: t.id, isVisible: x, onOpenProfile: P }),
+                nicknameIcons: H ? null : (0, r.jsx)(y.A, { userId: t.id, isVisible: P, onOpenProfile: x }),
             }),
             F === O.eA$.PENDING_INCOMING &&
                 (0, r.jsx)(T.A.Overlay, {
@@ -85,7 +85,7 @@ function w(e) {
                 ),
             ),
             (0, r.jsx)(E.A, { user: t }),
-            !j && (0, r.jsx)(R.A, { user: t, onOpenProfile: (e) => P?.({ tabSection: e }) }),
+            !j && (0, r.jsx)(R.A, { user: t, onOpenProfile: (e) => x?.({ tabSection: e }) }),
             w?.private && (0, r.jsx)(T.A.Overlay, { children: (0, r.jsx)(m.A, { username: G }) }),
             t.isProvisional
                 ? (0, r.jsx)(T.A.Overlay, {
@@ -98,9 +98,9 @@ function w(e) {
                       }),
                   })
                 : (0, r.jsx)(v.A, { user: t, bio: w?.bio, hidePersonalInformation: H, onClose: U }),
-            Y && (0, r.jsx)(I.A, { user: t, widgets: w?.widgets, onOpenUserProfileModal: P }),
+            Y && (0, r.jsx)(I.A, { user: t, widgets: w?.widgets, onOpenUserProfileModal: x }),
             j && (0, r.jsx)(f.A, { isPremiumUser: W, onInteraction: U }),
-            (0, r.jsx)(A.A, { user: t, currentUser: n, guildId: M?.id, onOpenUserProfileModal: P, onClose: U }),
+            (0, r.jsx)(A.A, { user: t, currentUser: n, guildId: M?.id, onOpenUserProfileModal: x, onClose: U }),
             null != M && (0, r.jsx)(C.A, { userId: t.id, guild: M }),
         ],
     });

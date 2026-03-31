@@ -11,7 +11,7 @@ var a = n(627968),
     m = n(550730),
     h = n(439895),
     x = n(652215),
-    p = n(751156);
+    p = n(7875);
 let g = (e) => {
         let { setTab: t } = e,
             n = (0, o.bG)([c.A], () => c.A.getWindowOpen(x.MLl.DEVTOOLS_POPOUT));

@@ -10,7 +10,7 @@ var s = a(627968),
     _ = a(954571),
     N = a(652215),
     A = a(985018),
-    u = a(764083);
+    u = a(71864);
 class I extends l.Component {
     shouldScrollToTop(e) {
         let { location: t } = e;

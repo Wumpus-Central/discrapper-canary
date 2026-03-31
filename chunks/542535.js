@@ -31,8 +31,8 @@ var r = n(627968),
     L = n(758836),
     w = n(788868),
     M = n(854232),
-    x = n(985018),
-    P = n(232972);
+    P = n(985018),
+    x = n(26985);
 let k = (e) => {
     let { badge: t, tieredTenureBadge: n } = e;
     return void 0 !== n && t.id !== M.K ? (0, r.jsx)(p.A, { profileBadge: t, tenureBadge: n }) : t.description;
@@ -56,8 +56,8 @@ function U(e) {
         $ = (0, O.AP)(W?.id ?? null),
         z = (0, R.A)($).some((e) => e.id === A.A.ORB_PROFILE_BADGE);
     return (0, r.jsx)("div", {
-        className: a()(P.k, n),
-        "aria-label": x.intl.string(x.t.VWV0y5),
+        className: a()(x.k, n),
+        "aria-label": P.intl.string(P.t.VWV0y5),
         role: "group",
         children: t.map((e, t) => {
             let n = e.id === A.A.ORB_PROFILE_BADGE,
@@ -109,9 +109,9 @@ function U(e) {
                     alt: " ",
                     "aria-hidden": !0,
                     src: e.iconSrc ?? (0, b.L7)(e.icon),
-                    className: a()(P.q, s),
+                    className: a()(x.q, s),
                 }),
-                x = null != G && G(e.id),
+                P = null != G && G(e.id),
                 $ = {
                     onClick: y,
                     onMouseEnter: N,
@@ -150,7 +150,7 @@ function U(e) {
                         targetElementRef: B,
                         delay: b.In,
                         showSubtext: !z && !e.isPreviewMode,
-                        forceOpen: x,
+                        forceOpen: P,
                         children: n,
                     },
                     `${e.id}-${t}`,
@@ -160,7 +160,7 @@ function U(e) {
                 Z = k({ badge: e, tieredTenureBadge: d && e.id !== M.K ? i : void 0 });
             return (0, r.jsx)(
                 o.m,
-                { __unsupportedReactNodeAsText: Z, forceOpen: x, delay: b.In, ariaHidden: !0, children: q },
+                { __unsupportedReactNodeAsText: Z, forceOpen: P, delay: b.In, ariaHidden: !0, children: q },
                 `${e.id}-${t}`,
             );
         }),

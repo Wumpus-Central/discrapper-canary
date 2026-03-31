@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => P }), n(321073);
+n.d(t, { A: () => x }), n(321073);
 var r = n(627968),
     i = n(64700),
     s = n(205327),
@@ -27,8 +27,8 @@ var r = n(627968),
     R = n(652215),
     O = n(272984),
     b = n(985018),
-    D = n(770564),
-    L = n(191999);
+    D = n(451535),
+    L = n(38608);
 function w(e, t) {
     return b.intl.formatToPlainString(b.t.h2yWWX, { username: t.username, activity: e });
 }
@@ -38,7 +38,7 @@ let M = (e, t, n) => {
         a = m.Ay.getName(t.guild_id, t.id, n);
     return b.intl.formatToMarkdownString(s, { artist: r, userName: a, media: i }).replaceAll("*", "");
 };
-function x(e) {
+function P(e) {
     let { activity: t } = e,
         n = t.timestamps,
         { now: s } = (0, C.e)(),
@@ -67,11 +67,11 @@ function x(e) {
               ],
           });
 }
-function P(e) {
+function x(e) {
     let t,
         n,
         m,
-        { channel: v, entry: C, closePopout: D, onReaction: P, onVoiceChannelPreview: k } = e,
+        { channel: v, entry: C, closePopout: D, onReaction: x, onVoiceChannelPreview: k } = e,
         { largeImage: U } = (0, E.nO)({ entry: C }),
         { activity: G, currentEntry: F, artist: V, title: B, user: H } = (0, S.u7)(C),
         { primaryColor: j, secondaryColor: Y } = (0, T.A)(U?.src),
@@ -153,14 +153,14 @@ function P(e) {
         onClickTitle: n,
         subtitle: z,
         badges: null,
-        children: G.timestamps?.start != null && (0, r.jsx)(x, { activity: G }),
+        children: G.timestamps?.start != null && (0, r.jsx)(P, { activity: G }),
     });
     return (0, r.jsxs)(y.YN, {
         children: [
             Z,
             (0, r.jsx)(y.Eh, {
                 children: (0, r.jsx)(y.fD, {
-                    onReaction: P,
+                    onReaction: x,
                     onVoiceChannelPreview: k,
                     user: H,
                     channel: v,

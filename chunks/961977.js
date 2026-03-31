@@ -12,8 +12,8 @@ var n = t(627968),
     g = t(476438),
     x = t(652215),
     p = t(49999),
-    f = t(985018),
-    A = t(8226);
+    A = t(985018),
+    f = t(333687);
 function h(e) {
     let { location: l } = e,
         t = (0, _.n)({ location: l }),
@@ -31,7 +31,7 @@ function h(e) {
     !t || m)
         ? null
         : (0, n.jsxs)(r.$Td, {
-              className: A.U,
+              className: f.U,
               color: r.Hv$.BRAND,
               children: [
                   (0, n.jsx)(r.PMB, {
@@ -40,18 +40,18 @@ function h(e) {
                   }),
                   (0, n.jsx)(a.Cp8, { size: "xs", color: "currentColor" }),
                   (0, n.jsxs)("div", {
-                      className: A.f,
+                      className: f.f,
                       children: [
                           (0, n.jsxs)(a.EYj, {
                               variant: "text-sm/bold",
                               color: "currentColor",
-                              children: [f.intl.string(f.t.yYEZGi), null != c && ` (${c})`],
+                              children: [A.intl.string(A.t.yYEZGi), null != c && ` (${c})`],
                           }),
                           (0, n.jsx)(a.EYj, { variant: "text-sm/bold", color: "currentColor", children: "—" }),
                           (0, n.jsx)(a.EYj, {
                               variant: "text-sm/medium",
                               color: "currentColor",
-                              children: f.intl.format(f.t.RUuXiA, { applicationName: f.intl.string(f.t.Uu8hke) }),
+                              children: A.intl.format(A.t.RUuXiA, { applicationName: A.intl.string(A.t.Uu8hke) }),
                           }),
                       ],
                   }),

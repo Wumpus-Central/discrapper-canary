@@ -1,185 +1,185 @@
-a.d(t, { A: () => O });
-var r = a(627968),
-    n = a(64700),
-    i = a(503698),
-    s = a.n(i),
-    l = a(892227),
-    d = a(732955),
-    o = a(462887),
-    c = a(397927),
-    u = a(241524),
-    _ = a(736653),
-    m = a(303136),
-    p = a(649032),
-    b = a(320118),
-    f = a(976860),
-    g = a(780964),
-    h = a(840065),
-    A = a(975571),
-    x = a(872725),
-    R = a(566119),
-    C = a(94264),
-    v = a(652215),
-    E = a(758836),
-    N = a(901123),
-    I = a(49370),
-    S = a(985018),
-    y = a(327557),
-    T = a(909340),
-    P = a(455482);
-let D = A.A.getArticleURL(v.MVz.ORBS_REWARDS_FAQ);
-function j(e) {
-    (0, R.o8)(e), window.open(D, "_blank");
+r.d(t, { A: () => O });
+var a = r(627968),
+    n = r(64700),
+    s = r(503698),
+    i = r.n(s),
+    l = r(892227),
+    o = r(732955),
+    d = r(462887),
+    c = r(397927),
+    u = r(241524),
+    m = r(736653),
+    _ = r(303136),
+    p = r(649032),
+    f = r(320118),
+    h = r(976860),
+    b = r(780964),
+    x = r(840065),
+    g = r(975571),
+    C = r(872725),
+    A = r(566119),
+    R = r(94264),
+    v = r(652215),
+    j = r(758836),
+    E = r(901123),
+    N = r(723468),
+    y = r(985018),
+    I = r(102600),
+    P = r(909340),
+    S = r(455482);
+let T = g.A.getArticleURL(v.MVz.ORBS_REWARDS_FAQ);
+function w(e) {
+    (0, A.o8)(e), window.open(T, "_blank");
 }
 let O = (e) => {
     let { className: t } = e,
-        { passesGeneralUIInvariant: a, programReward: i } = (0, b.F)({ location: "PremiumTenureRewardsOrbsCard" }),
-        A = (0, u.A)("(min-width: 720px)"),
-        D = (0, _.DP)(),
-        O = n.useMemo(() => ({ hueRotate: 25, glowAmount: (0, o.M)(D) ? 2 : 8, blurAmount: 10 }), [D]);
-    if (!a || null == i) return null;
-    let U = (function (e, t) {
-        let a = e.program_current_state,
+        { passesGeneralUIInvariant: r, programReward: s } = (0, f.F)({ location: "PremiumTenureRewardsOrbsCard" }),
+        g = (0, u.A)("(min-width: 720px)"),
+        T = (0, m.DP)(),
+        O = n.useMemo(() => ({ hueRotate: 25, glowAmount: (0, d.M)(T) ? 2 : 8, blurAmount: 10 }), [T]);
+    if (!r || null == s) return null;
+    let D = (function (e, t) {
+        let r = e.program_current_state,
             n =
                 null != e.next_reward_date && "" !== e.next_reward_date
                     ? (0, l.default)(new Date(e.next_reward_date), new Date())
                     : null,
-            i = e?.total_rewarded_from_program;
-        switch (a) {
+            s = e?.total_rewarded_from_program;
+        switch (r) {
             case p.L.ACTIVE:
                 if (null == n || n < 0) return null;
                 return {
-                    displayTotalLifetimeRewards: null != i,
+                    displayTotalLifetimeRewards: null != s,
                     displayProgressBar: !0,
-                    actionButton: (0, r.jsx)(d.$nd, {
-                        text: S.intl.string(I.default.BxjHiu),
+                    actionButton: (0, a.jsx)(o.$nd, {
+                        text: y.intl.string(N.default.BxjHiu),
                         variant: t ? "overlay-primary" : "secondary",
                         onClick: () => {
-                            (0, R.WD)(a), (0, f.pX)(N.BV.COLLECTIBLES_SHOP_WITH_TAB(E.G2.ORBS));
+                            (0, A.WD)(r), (0, h.pX)(E.BV.COLLECTIBLES_SHOP_WITH_TAB(j.G2.ORBS));
                         },
                     }),
-                    headerText: S.intl.format(I.default.BxLJQL, { days: Math.max(1, n), orbsCount: e.reward_amount }),
-                    subheaderText: S.intl.format(I.default.tUV1vV, { helpdeskArticle: () => j(a) }),
+                    headerText: y.intl.format(N.default.BxLJQL, { days: Math.max(1, n), orbsCount: e.reward_amount }),
+                    subheaderText: y.intl.format(N.default.tUV1vV, { helpdeskArticle: () => w(r) }),
                 };
             case p.L.PAYMENT_PROCESSING:
                 return {
                     displayTotalLifetimeRewards: !1,
                     displayProgressBar: !1,
-                    actionButton: (0, r.jsx)(d.$nd, {
-                        text: S.intl.string(I.default.KVCfnE),
+                    actionButton: (0, a.jsx)(o.$nd, {
+                        text: y.intl.string(N.default.KVCfnE),
                         variant: t ? "overlay-primary" : "secondary",
                         onClick: () => {
-                            (0, R.CC)(a), (0, h.openUserSettings)(g.X.BILLING_PANEL);
+                            (0, A.CC)(r), (0, x.openUserSettings)(b.X.BILLING_PANEL);
                         },
                     }),
-                    headerText: S.intl.string(I.default.uuZJXR),
-                    subheaderText: S.intl.format(I.default.dkeEV7, { helpdeskArticle: () => j(a) }),
+                    headerText: y.intl.string(N.default.uuZJXR),
+                    subheaderText: y.intl.format(N.default.dkeEV7, { helpdeskArticle: () => w(r) }),
                 };
             case p.L.PAYMENT_ERROR:
                 return {
-                    displayTotalLifetimeRewards: null != i,
+                    displayTotalLifetimeRewards: null != s,
                     displayProgressBar: !1,
-                    actionButton: (0, r.jsx)(d.NPJ, {
+                    actionButton: (0, a.jsx)(o.NPJ, {
                         theme: t ? v.NJ8.DARKER : void 0,
                         children: (e) =>
-                            (0, r.jsx)("span", {
+                            (0, a.jsx)("span", {
                                 className: e,
-                                children: (0, r.jsx)(d.$nd, {
-                                    text: S.intl.string(I.default.KVCfnE),
+                                children: (0, a.jsx)(o.$nd, {
+                                    text: y.intl.string(N.default.KVCfnE),
                                     variant: "critical-secondary",
                                     onClick: () => {
-                                        (0, R.ue)(a), (0, h.openUserSettings)(g.X.BILLING_PANEL);
+                                        (0, A.ue)(r), (0, x.openUserSettings)(b.X.BILLING_PANEL);
                                     },
                                 }),
                             }),
                     }),
-                    headerText: S.intl.string(I.default["+O9Asn"]),
-                    subheaderText: S.intl.format(I.default.nWKEBZ, { helpdeskArticle: () => j(a) }),
+                    headerText: y.intl.string(N.default["+O9Asn"]),
+                    subheaderText: y.intl.format(N.default.nWKEBZ, { helpdeskArticle: () => w(r) }),
                 };
             case p.L.PROGRAM_ROLLBACK:
                 return {
-                    displayTotalLifetimeRewards: null != i,
+                    displayTotalLifetimeRewards: null != s,
                     displayProgressBar: null != n,
-                    actionButton: (0, r.jsx)(d.$nd, {
-                        text: S.intl.string(I.default["wLAd/+"]),
+                    actionButton: (0, a.jsx)(o.$nd, {
+                        text: y.intl.string(N.default["wLAd/+"]),
                         variant: t ? "overlay-primary" : "secondary",
                         onClick: () => {
-                            (0, R.WD)(a), (0, f.pX)(N.BV.COLLECTIBLES_SHOP_WITH_TAB(E.G2.ORBS));
+                            (0, A.WD)(r), (0, h.pX)(E.BV.COLLECTIBLES_SHOP_WITH_TAB(j.G2.ORBS));
                         },
                     }),
-                    headerText: S.intl.string(I.default.zF0HnJ),
-                    subheaderText: S.intl.format(I.default["5tzNTa"], { helpdeskArticle: () => j(a) }),
+                    headerText: y.intl.string(N.default.zF0HnJ),
+                    subheaderText: y.intl.format(N.default["5tzNTa"], { helpdeskArticle: () => w(r) }),
                 };
             case p.L.PREMIUM_CHURNING:
                 return {
-                    displayTotalLifetimeRewards: null != i,
+                    displayTotalLifetimeRewards: null != s,
                     displayProgressBar: null != n,
-                    actionButton: (0, r.jsx)(d.$nd, {
-                        text: S.intl.string(I.default.FToh6D),
+                    actionButton: (0, a.jsx)(o.$nd, {
+                        text: y.intl.string(N.default.FToh6D),
                         variant: t ? "overlay-primary" : "secondary",
-                        icon: d.tvc,
+                        icon: o.tvc,
                         onClick: () => {
-                            (0, R.Jv)(a), (0, h.openUserSettings)(g.X.SUBSCRIPTIONS_PANEL);
+                            (0, A.Jv)(r), (0, x.openUserSettings)(b.X.SUBSCRIPTIONS_PANEL);
                         },
                     }),
-                    headerText: S.intl.string(I.default.ISnOet),
-                    subheaderText: S.intl.format(I.default["vjaRZ/"], { helpdeskArticle: () => j(a) }),
+                    headerText: y.intl.string(N.default.ISnOet),
+                    subheaderText: y.intl.format(N.default["vjaRZ/"], { helpdeskArticle: () => w(r) }),
                 };
             default:
                 return null;
         }
-    })(i, A);
-    if (null == U) return null;
-    let { displayTotalLifetimeRewards: M, displayProgressBar: L, actionButton: w, headerText: B, subheaderText: k } = U;
-    return (0, r.jsx)("div", {
-        className: s()(y.Hc, t),
-        children: (0, r.jsxs)(x.A, {
+    })(s, g);
+    if (null == D) return null;
+    let { displayTotalLifetimeRewards: M, displayProgressBar: U, actionButton: L, headerText: B, subheaderText: k } = D;
+    return (0, a.jsx)("div", {
+        className: i()(I.Hc, t),
+        children: (0, a.jsxs)(C.A, {
             cardType: c.sl2.CUSTOM,
-            cardClassName: y.Nr,
+            cardClassName: I.Nr,
             glowing: !0,
             ...O,
             children: [
-                (0, r.jsx)(m.A, { className: y.Ki, src: T.A }),
-                (0, r.jsxs)("div", {
-                    className: y.zK,
+                (0, a.jsx)(_.A, { className: I.Ki, src: P.A }),
+                (0, a.jsxs)("div", {
+                    className: I.zK,
                     children: [
-                        (0, r.jsx)("img", { src: P.A, className: y._e, alt: "", "aria-hidden": !0 }),
-                        (0, r.jsx)("div", { className: y.mR }),
+                        (0, a.jsx)("img", { src: S.A, className: I._e, alt: "", "aria-hidden": !0 }),
+                        (0, a.jsx)("div", { className: I.mR }),
                     ],
                 }),
-                (0, r.jsxs)("div", {
-                    className: y.FS,
+                (0, a.jsxs)("div", {
+                    className: I.FS,
                     children: [
-                        (0, r.jsx)(d.NPJ, {
-                            theme: A ? v.NJ8.DARKER : void 0,
+                        (0, a.jsx)(o.NPJ, {
+                            theme: g ? v.NJ8.DARKER : void 0,
                             children: (e) =>
-                                (0, r.jsx)("div", {
-                                    className: s()(e, y.aZ),
-                                    children: (0, r.jsx)(d.Exy, { type: "beta", variant: "expressive" }),
+                                (0, a.jsx)("div", {
+                                    className: i()(e, I.aZ),
+                                    children: (0, a.jsx)(o.Exy, { type: "beta", variant: "expressive" }),
                                 }),
                         }),
-                        (0, r.jsx)(d.DZT, { variant: "heading-xl/bold", className: y.R_, children: B }),
-                        (0, r.jsx)(d.EYj, { variant: "text-md/medium", className: y.G3, children: k }),
-                        L && (0, r.jsx)(C.A, { className: y.L$ }),
+                        (0, a.jsx)(o.DZT, { variant: "heading-xl/bold", className: I.R_, children: B }),
+                        (0, a.jsx)(o.EYj, { variant: "text-md/medium", className: I.G3, children: k }),
+                        U && (0, a.jsx)(R.A, { className: I.L$ }),
                         M &&
-                            i.total_rewarded_from_program > 0 &&
-                            (0, r.jsxs)("div", {
-                                className: y.fB,
+                            s.total_rewarded_from_program > 0 &&
+                            (0, a.jsxs)("div", {
+                                className: I.fB,
                                 children: [
-                                    (0, r.jsx)(d.EYj, {
+                                    (0, a.jsx)(o.EYj, {
                                         variant: "text-md/medium",
-                                        className: y.G3,
-                                        children: S.intl.string(I.default["/1mWUn"]),
+                                        className: I.G3,
+                                        children: y.intl.string(N.default["/1mWUn"]),
                                     }),
-                                    (0, r.jsx)(d.Cp8, { size: "sm", color: "currentColor" }),
-                                    (0, r.jsx)(d.EYj, {
+                                    (0, a.jsx)(o.Cp8, { size: "sm", color: "currentColor" }),
+                                    (0, a.jsx)(o.EYj, {
                                         variant: "text-md/medium",
-                                        className: y.G3,
-                                        children: i.total_rewarded_from_program,
+                                        className: I.G3,
+                                        children: s.total_rewarded_from_program,
                                     }),
                                 ],
                             }),
-                        (0, r.jsx)("div", { className: y.WT, children: (0, r.jsx)(d.e2v, { children: w }) }),
+                        (0, a.jsx)("div", { className: I.WT, children: (0, a.jsx)(o.e2v, { children: L }) }),
                     ],
                 }),
             ],

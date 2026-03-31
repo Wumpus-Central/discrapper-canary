@@ -1,16 +1,16 @@
 "use strict";
-i.d(t, { A: () => m });
-var n = i(627968),
-    s = i(64700),
-    a = i(503698),
-    l = i.n(a),
-    r = i(397927),
-    o = i(652215),
-    d = i(985018),
-    c = i(672073),
-    u = i(885106);
+n.d(t, { A: () => A });
+var i = n(627968),
+    s = n(64700),
+    a = n(503698),
+    l = n.n(a),
+    r = n(397927),
+    o = n(652215),
+    d = n(985018),
+    c = n(92056),
+    u = n(153335);
 let h = 0,
-    _ = (e) => {
+    p = (e) => {
         switch (e) {
             case o.G6Q.TOP_LEFT:
                 return d.intl.string(d.t.xlchpU);
@@ -24,23 +24,23 @@ let h = 0,
                 return d.intl.string(d.t.AlY4Za);
         }
     },
-    p = [o.G6Q.DISABLED, o.G6Q.TOP_LEFT, o.G6Q.TOP_RIGHT, o.G6Q.BOTTOM_LEFT, o.G6Q.BOTTOM_RIGHT];
-function f(e) {
-    let { position: t, onChange: i } = e,
+    f = [o.G6Q.DISABLED, o.G6Q.TOP_LEFT, o.G6Q.TOP_RIGHT, o.G6Q.BOTTOM_LEFT, o.G6Q.BOTTOM_RIGHT];
+function _(e) {
+    let { position: t, onChange: n } = e,
         [a] = s.useState(() => `notification-position-selector-${h++}`),
-        f =
+        _ =
             t === o.G6Q.DISABLED
                 ? d.intl.string(d.t.R6LxVf)
-                : d.intl.formatToPlainString(d.t["XXHDM/"], { position: _(t) });
-    return (0, n.jsxs)("div", {
+                : d.intl.formatToPlainString(d.t["XXHDM/"], { position: p(t) });
+    return (0, i.jsxs)("div", {
         children: [
-            (0, n.jsx)(r.vN3, {
+            (0, i.jsx)(r.vN3, {
                 within: !0,
                 offset: -2,
-                children: (0, n.jsx)("div", {
+                children: (0, i.jsx)("div", {
                     className: l()(c.iE, { [c.wX]: t === o.G6Q.DISABLED }),
-                    children: p.map((e) =>
-                        (0, n.jsxs)(
+                    children: f.map((e) =>
+                        (0, i.jsxs)(
                             "label",
                             {
                                 className: l()({
@@ -52,15 +52,15 @@ function f(e) {
                                     [c.RV]: e === o.G6Q.BOTTOM_LEFT,
                                 }),
                                 children: [
-                                    _(e),
+                                    p(e),
                                     e === o.G6Q.DISABLED
-                                        ? (0, n.jsx)(r.KTN, { size: "md", color: "currentColor", className: c.WO })
+                                        ? (0, i.jsx)(r.KTN, { size: "md", color: "currentColor", className: c.WO })
                                         : null,
-                                    (0, n.jsx)("input", {
+                                    (0, i.jsx)("input", {
                                         type: "radio",
                                         name: a,
                                         value: e,
-                                        onChange: (t) => i(t, e),
+                                        onChange: (t) => n(t, e),
                                         className: c.hH,
                                     }),
                                 ],
@@ -70,9 +70,9 @@ function f(e) {
                     ),
                 }),
             }),
-            (0, n.jsx)(r.Text, { variant: "text-sm/normal", className: u.Ot, children: f }),
+            (0, i.jsx)(r.Text, { variant: "text-sm/normal", className: u.Ot, children: _ }),
         ],
     });
 }
-f.Positions = o.G6Q;
-let m = f;
+_.Positions = o.G6Q;
+let A = _;

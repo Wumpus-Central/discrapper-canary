@@ -10,7 +10,7 @@ var r = n(627968),
     c = n(403362),
     d = n(832208),
     _ = n(985018),
-    f = n(62727);
+    f = n(898324);
 let p = "US",
     h = "CA",
     m = 5,
@@ -196,7 +196,7 @@ let b = { [p]: o.D, [h]: s.i },
                 : f.bt,
         renderInput: (e) => (0, r.jsx)(l.ksK, { ...e }),
     }),
-    x = (e, t) => ({
+    P = (e, t) => ({
         name: "line2",
         id: y,
         title: () => _.intl.string(_.t.i2Z0gI),
@@ -216,7 +216,7 @@ let b = { [p]: o.D, [h]: s.i },
                 : f.JH,
         renderInput: (e) => (0, r.jsx)(l.ksK, { ...e }),
     }),
-    P = (e, t) => ({
+    x = (e, t) => ({
         name: "city",
         id: v,
         title: () => _.intl.string(_.t.bUSWlw),
@@ -347,16 +347,16 @@ let b = { [p]: o.D, [h]: s.i },
         };
     },
     G = {
-        modalUS: [[w], [M], [x], [P], [U, k]],
-        modalInternational: [[w], [M], [x], [P], [U], [k]],
-        modalUSWithName: [[w], [L], [M], [x], [P], [U, k]],
-        modalInternationalWithName: [[w], [L], [M], [x], [P], [U], [k]],
-        settingsUS: [[L], [M, x], [P, U, k], [w]],
-        settingsUSMobile: [[L], [M], [x], [P], [U], [k], [w]],
-        settingsInternational: [[L], [M, x], [P], [U, k], [w]],
-        settingsInternationalMobile: [[L], [M], [x], [P], [U], [k], [w]],
-        settingsInternationalWithoutName: [[M, x], [P], [U, k], [w]],
-        settingsInternationalWithoutNameMobile: [[M], [x], [P], [U], [k], [w]],
+        modalUS: [[w], [M], [P], [x], [U, k]],
+        modalInternational: [[w], [M], [P], [x], [U], [k]],
+        modalUSWithName: [[w], [L], [M], [P], [x], [U, k]],
+        modalInternationalWithName: [[w], [L], [M], [P], [x], [U], [k]],
+        settingsUS: [[L], [M, P], [x, U, k], [w]],
+        settingsUSMobile: [[L], [M], [P], [x], [U], [k], [w]],
+        settingsInternational: [[L], [M, P], [x], [U, k], [w]],
+        settingsInternationalMobile: [[L], [M], [P], [x], [U], [k], [w]],
+        settingsInternationalWithoutName: [[M, P], [x], [U, k], [w]],
+        settingsInternationalWithoutNameMobile: [[M], [P], [x], [U], [k], [w]],
     };
 class F extends i.PureComponent {
     static Layouts = R;

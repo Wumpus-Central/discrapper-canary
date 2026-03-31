@@ -17,7 +17,7 @@ var i = n(627968),
     x = n(306417),
     f = n(290794),
     C = n(985018),
-    I = n(724109);
+    I = n(79606);
 function E(e) {
     let { percentage: t, label: n, canShowVoterDetails: r, answerId: l } = e,
         o = (0, m.GV)(),

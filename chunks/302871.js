@@ -1,4 +1,4 @@
-n.d(t, { u: () => g });
+n.d(t, { u: () => _ });
 var i = n(627968),
     s = n(311907),
     l = n(397927),
@@ -9,8 +9,8 @@ var i = n(627968),
     c = n(428130),
     u = n(123857),
     m = n(985018),
-    _ = n(94888);
-let g = (0, o.E2)(d.X.APPEARANCE_CLIENT_THEMES, {
+    g = n(682441);
+let _ = (0, o.E2)(d.X.APPEARANCE_CLIENT_THEMES, {
     useSearchTerms: () => [m.intl.string(m.t.Ksh3ik), m.intl.string(m.t["0EzVst"]), m.intl.string(m.t.OCOOiI)],
     Component: () => {
         let e = (0, s.bG)([a.A], () => a.A.useForcedColors);
@@ -20,7 +20,7 @@ let g = (0, o.E2)(d.X.APPEARANCE_CLIENT_THEMES, {
                     tag: "legend",
                     variant: "heading-xl/normal",
                     color: "text-strong",
-                    className: _.D,
+                    className: g.D,
                     children: m.intl.string(m.t.Ksh3ik),
                 }),
                 e

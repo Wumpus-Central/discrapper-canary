@@ -31,11 +31,11 @@ var r = n(627968),
     L = n(56129),
     w = n(360469),
     M = n(5867),
-    x = n(652215),
-    P = n(806931),
-    k = n(98762),
-    U = n(156576),
-    G = n(778437);
+    P = n(652215),
+    x = n(806931),
+    k = n(696093),
+    U = n(706069),
+    G = n(962294);
 function F(e) {
     let { channel: t, isLoading: n } = e,
         [s, f] = i.useState(!1),
@@ -68,7 +68,7 @@ function F(e) {
         })),
         Z = j || null != K,
         X = (0, b.A)(t?.id),
-        Q = X && z?.type !== P.lp.ACTIVITY,
+        Q = X && z?.type !== x.lp.ACTIVITY,
         J = !X && V === M.Gd.PIP,
         ee = Z && (Q || J) && null == Y,
         et = (!Z || ee) && !W,
@@ -80,7 +80,7 @@ function F(e) {
                     t.id,
                     (0, m.Qt)({ applicationId: p.applicationId, instanceId: p.compositeInstanceId }),
                 );
-            let e = t.getGuildId() ?? x.ME;
+            let e = t.getGuildId() ?? P.ME;
             d.A.channelListScrollTo(e, t.id), (0, g.uh)(e, t.id);
         }
         null == K && (0, _.bz)();
@@ -90,7 +90,7 @@ function F(e) {
     }
     function es(e) {
         let { onActive: n, onForceIdle: i, idle: a, isActivityInTextChannel: o, users: l } = e;
-        return et && null != p && ($?.type === P.lp.ACTIVITY || o)
+        return et && null != p && ($?.type === x.lp.ACTIVITY || o)
             ? p.config?.useInteractivePIP
                 ? (0, r.jsx)(L.tM, {
                       onJumpToChannel: er,

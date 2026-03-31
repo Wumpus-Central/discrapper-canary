@@ -30,8 +30,8 @@ var r = n(627968),
     D = n(806931),
     L = n(788868),
     w = n(985018),
-    M = n(170602);
-function x(e) {
+    M = n(24999);
+function P(e) {
     let t = (0, o.bG)([A.A], () => (A.A.isConnected() ? A.A.getChannelId() : null)),
         [n, r] = i.useState([]);
     return (
@@ -50,9 +50,9 @@ function x(e) {
         n
     );
 }
-function P(e, t, n) {
+function x(e, t, n) {
     let r = (0, _.A)(),
-        s = x(e),
+        s = P(e),
         l = (0, o.yK)([I.default], () => n?.map(I.default.getUser).filter(S.Vq) ?? [], [n]);
     return i.useMemo(
         () => a().uniqWith([...(null != t ? [t] : []), ...l, ...s, ...r], (e, t) => e.id === t.id),
@@ -94,9 +94,9 @@ let U = (e) => {
             giftingOrigin: v,
             additionalUserIds: N,
         } = (0, f.Pv)(),
-        { selectedSkuId: D, application: x } = (0, p.P5)(),
+        { selectedSkuId: D, application: P } = (0, p.P5)(),
         U = (0, o.bG)([I.default], () => I.default.getCurrentUser()),
-        G = P(U?.id, a, N),
+        G = x(U?.id, a, N),
         F = (0, o.bG)([T.A], () => (null != D ? T.A.get(D) : null), [D]),
         V = (0, y.fq)(F),
         B = (0, y.xf)(F),
@@ -165,7 +165,7 @@ let U = (e) => {
                             (0, r.jsxs)("div", {
                                 className: M.vz,
                                 children: [
-                                    null != x && (0, r.jsx)(C.Q, { application: x }),
+                                    null != P && (0, r.jsx)(C.Q, { application: P }),
                                     (0, r.jsx)(l.Text, { variant: "text-sm/semibold", children: F.name }),
                                 ],
                             }),

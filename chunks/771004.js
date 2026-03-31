@@ -1,8 +1,8 @@
 n.d(t, { A: () => v, h: () => p });
 var a = n(627968),
-    i = n(64700),
-    l = n(503698),
-    r = n.n(l),
+    l = n(64700),
+    i = n(503698),
+    r = n.n(i),
     s = n(934551),
     c = n(158954),
     o = n(827734),
@@ -12,19 +12,19 @@ var a = n(627968),
     x = n(305080),
     h = n(936636),
     f = n(985018),
-    g = n(282063),
-    _ = n(48757);
+    g = n(325952),
+    _ = n(679080);
 function p(e) {
     let { detectedGame: t, trackAction: n } = e,
-        [l, x] = i.useState(t?.summaryLocalized != null),
-        [p, v] = i.useState(!0),
-        [A, j] = i.useState(!1),
-        C = i.useRef(null),
-        { width: E, height: I } = (0, u.A)();
-    return (i.useEffect(() => {
-        let e = C.current;
+        [i, x] = l.useState(t?.summaryLocalized != null),
+        [p, v] = l.useState(!0),
+        [A, j] = l.useState(!1),
+        E = l.useRef(null),
+        { width: C, height: I } = (0, u.A)();
+    return (l.useEffect(() => {
+        let e = E.current;
         null != e && j(e.scrollHeight - e.clientHeight > 1 || !p);
-    }, [C, E, I, p]),
+    }, [E, C, I, p]),
     null == t.summary)
         ? null
         : (0, a.jsxs)("div", {
@@ -38,17 +38,17 @@ function p(e) {
                               (0, a.jsx)(c.EYj, {
                                   variant: "text-xs/medium",
                                   color: "text-default",
-                                  children: l
+                                  children: i
                                       ? f.intl.format(f.t.aZ2iIp, { onShowOriginal: () => x(!1) })
                                       : f.intl.format(f.t["/2ylF4"], { onShowTranslated: () => x(!0) }),
                               }),
                           ],
                       }),
                   (0, a.jsx)(c.EYj, {
-                      ref: C,
+                      ref: E,
                       lineClamp: p ? 8 : void 0,
                       variant: "text-sm/normal",
-                      children: l ? t.summaryLocalized : t.summary,
+                      children: i ? t.summaryLocalized : t.summary,
                   }),
                   A &&
                       (0, a.jsx)(d.DUT, {
@@ -67,38 +67,38 @@ function p(e) {
 }
 function v(e) {
     let { detectedGame: t, trackAction: n } = e,
-        [l, s] = i.useState(!1),
-        [o, d] = i.useState(null),
-        h = i.useRef(null),
+        [i, s] = l.useState(!1),
+        [o, d] = l.useState(null),
+        h = l.useRef(null),
         { width: _, height: p } = (0, u.A)(),
         { isTwoColumn: v } = (0, x.c)(),
-        A = i.useMemo(() => (v ? 8 : 5), [v]),
-        j = i.useCallback((e) => d(e > A), [A]);
-    i.useEffect(() => {
+        A = l.useMemo(() => (v ? 8 : 5), [v]),
+        j = l.useCallback((e) => d(e > A), [A]);
+    l.useEffect(() => {
         d(null);
     }, [t.summary, A, _, p]),
-        i.useEffect(() => {
+        l.useEffect(() => {
             let e = h.current;
             if (null == e || null != o) return;
             let t = parseInt(window.getComputedStyle(e).lineHeight, 10);
             isNaN(t) || j(Math.floor(e.offsetHeight / t));
         }, [h, o, j]);
-    let C = i.useCallback(() => {
-        let e = !l;
+    let E = l.useCallback(() => {
+        let e = !i;
         n(e ? m.Ws.ShowMore : m.Ws.ShowLess), s(e);
-    }, [l, n]);
+    }, [i, n]);
     if (null == t.summary) return null;
-    let E = l ? f.intl.string(f.t["6MwJo/"]) : f.intl.string(f.t.lBeKY2);
+    let C = i ? f.intl.string(f.t["6MwJo/"]) : f.intl.string(f.t.lBeKY2);
     return (0, a.jsxs)("div", {
         className: r()(g.fi, g.mX),
         children: [
             (0, a.jsx)(c.EYj, {
                 ref: h,
-                lineClamp: l || null == o ? void 0 : A,
+                lineClamp: i || null == o ? void 0 : A,
                 variant: "text-md/medium",
                 children: t.summary,
             }),
-            o && (0, a.jsx)(c.QWc, { onClick: C, text: E }),
+            o && (0, a.jsx)(c.QWc, { onClick: E, text: C }),
         ],
     });
 }

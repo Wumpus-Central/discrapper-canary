@@ -8,7 +8,7 @@ var i = t(627968),
     d = t(711014),
     c = t(403362),
     u = t(985018),
-    m = t(401736);
+    m = t(18911);
 let A = "MAIN_PROFILE";
 function p(e) {
     let { selectedGuildId: l, onChange: t } = e,

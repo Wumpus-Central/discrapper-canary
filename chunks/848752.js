@@ -5,7 +5,7 @@ var n = a(627968),
     s = a.n(l),
     r = a(397927),
     o = a(532197),
-    c = a(594439);
+    c = a(65668);
 let d = { CENTER: c.Hu, LEFT: c.Vl };
 class u extends i.PureComponent {
     static Align = d;

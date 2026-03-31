@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => _ });
 var i = n(627968),
     s = n(64700),
     l = n(397927),
@@ -7,9 +7,9 @@ var i = n(627968),
     o = n(670492),
     d = n(957565),
     c = n(985018),
-    u = n(27671),
-    m = n(885106);
-function _(e) {
+    u = n(238696),
+    m = n(153335);
+function g(e) {
     let {
             code: { code: t, consumed: n },
         } = e,
@@ -34,9 +34,9 @@ function _(e) {
         }),
     });
 }
-function g(e) {
+function _(e) {
     let { backupCodes: t } = e,
-        n = s.useCallback((e) => e.map((e) => (0, i.jsx)(_, { code: e }, e.code)), []),
+        n = s.useCallback((e) => e.map((e) => (0, i.jsx)(g, { code: e }, e.code)), []),
         d = s.useCallback(async () => {
             let e = o.A.getVerificationKey();
             await a.A.confirmViewBackupCodes(e, !0);

@@ -10,21 +10,21 @@ var s = n(503698),
     c = n(509536),
     u = n(721923),
     m = n(864310),
-    _ = n(71393),
-    g = n(473145),
-    x = n(652215),
-    A = n(985018),
-    h = n(576);
+    g = n(71393),
+    _ = n(473145),
+    A = n(652215),
+    x = n(985018),
+    h = n(449159);
 let p = function (e) {
     let { className: t, guildId: n, boostingVariant: s } = e,
-        p = (0, a.bG)([_.A], () => _.A.getGuild(n), [n]),
-        f = (0, m.A)(p?.id).total;
+        p = (0, a.bG)([g.A], () => g.A.getGuild(n), [n]),
+        T = (0, m.A)(p?.id).total;
     return null == p
         ? (0, i.jsx)("div", {
               className: l()(t, h.bo),
               children: (0, i.jsx)("div", {
                   className: h.$g,
-                  children: (0, i.jsx)(o.Text, { variant: "text-lg/bold", children: A.intl.string(A.t["6Kwwuo"]) }),
+                  children: (0, i.jsx)(o.Text, { variant: "text-lg/bold", children: x.intl.string(x.t["6Kwwuo"]) }),
               }),
           })
         : (0, i.jsxs)("div", {
@@ -45,13 +45,13 @@ let p = function (e) {
                                   (0, i.jsx)(o.Text, {
                                       variant: "text-sm/bold",
                                       color: "text-muted",
-                                      children: A.intl.format(A.t["pob/cL"], { subscriptions: f }),
+                                      children: x.intl.format(x.t["pob/cL"], { subscriptions: T }),
                                   }),
                                   (0, i.jsx)("div", { className: h.me }),
                                   (0, i.jsx)(o.Text, {
                                       variant: "text-sm/bold",
                                       color: "text-muted",
-                                      children: (0, g.gb)(p.premiumTier, { useLevels: !1 }),
+                                      children: (0, _.gb)(p.premiumTier, { useLevels: !1 }),
                                   }),
                               ],
                           }),
@@ -61,23 +61,23 @@ let p = function (e) {
                       ? (0, i.jsx)(u.A, {
                             guild: p,
                             analyticsLocation: {
-                                page: x.liQ.GUILD_BOOSTING_USER_SETTINGS,
-                                section: x.JJy.GUILD_BOOSTING_RECOMMENDED_SERVER_BOOST_THIS_SERVER_CTA,
-                                object: x.ZSU.BUTTON_CTA,
-                                objectType: x.AnalyticsObjectTypes.BUY,
+                                page: A.liQ.GUILD_BOOSTING_USER_SETTINGS,
+                                section: A.JJy.GUILD_BOOSTING_RECOMMENDED_SERVER_BOOST_THIS_SERVER_CTA,
+                                object: A.ZSU.BUTTON_CTA,
+                                objectType: A.AnalyticsObjectTypes.BUY,
                             },
                             pauseAnimation: !0,
                             size: r.$n.Sizes.MEDIUM,
                             color: r.$n.Colors.PRIMARY,
-                            buttonText: A.intl.string(A.t.aBHecF),
+                            buttonText: x.intl.string(x.t.aBHecF),
                         })
                       : (0, i.jsx)(o.Button, {
                             variant: "secondary",
-                            text: A.intl.string(A.t.KLOhbO),
+                            text: x.intl.string(x.t.KLOhbO),
                             onClick: () => {
                                 (0, c.K4)({
                                     guildId: p.id,
-                                    location: { section: x.JJy.GUILD_BOOSTING_RECOMMENDED_SERVER_GO_TO_SERVER_CTA },
+                                    location: { section: A.JJy.GUILD_BOOSTING_RECOMMENDED_SERVER_GO_TO_SERVER_CTA },
                                 });
                             },
                         }),

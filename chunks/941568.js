@@ -7,7 +7,7 @@ var a = n(627968),
     c = n(397927),
     o = n(688810),
     d = n(607470),
-    u = n(720462),
+    u = n(951707),
     m = n(46054),
     x = n(409626),
     h = n(21091),
@@ -15,8 +15,8 @@ var a = n(627968),
     g = n(305080),
     _ = n(954506),
     p = n(985018),
-    v = n(95225),
-    A = n(782691);
+    v = n(576404),
+    A = n(830684);
 function j(e, t) {
     return m.A.parse(e, !0, { allowHeading: !0, allowList: !0, allowLinks: !0, channelId: t });
 }

@@ -1,8 +1,8 @@
 n.d(t, { h: () => j });
 var i = n(627968),
-    l = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    a = n(64700),
+    l = n(503698),
+    s = n.n(l),
     r = n(688807),
     o = n(152621),
     d = n(287809),
@@ -11,24 +11,24 @@ var i = n(627968),
     g = n(823016),
     m = n(788593),
     x = n(858808),
-    p = n(685049),
+    p = n(907430),
     f = n(617086),
     h = n(985018),
-    _ = n(522500),
-    A = n(51631);
+    _ = n(496527),
+    A = n(303566);
 function I(e) {
-    let { index: t, widgetType: n, game: a, coverImageUrl: s, gameName: r, children: o } = e,
+    let { index: t, widgetType: n, game: l, coverImageUrl: s, gameName: r, children: o } = e,
         { manageFocusOnReorder: d } = (0, g.r)(),
-        m = l.useRef(null);
+        m = a.useRef(null);
     return (0, i.jsx)(u.mG, {
         index: t,
-        itemId: a.applicationId,
+        itemId: l.applicationId,
         listType: n,
         itemType: "GAME_COVER",
         itemPreviewProps: { imageSrc: s, gameName: r, getWidth: () => m.current?.offsetWidth },
         "aria-label": h.intl.formatToPlainString(h.t["0dR3gw"], { positionNumber: t + 1 }),
         onReorder: (e, t) => (0, c.Un)(n, e, t),
-        onEnd: () => d(a.applicationId),
+        onEnd: () => d(l.applicationId),
         className: A.kL,
         dropBeforeClassName: A.A,
         dropAfterClassName: A.Ze,
@@ -40,8 +40,8 @@ function j(e) {
     let {
             game: t,
             userId: n,
-            widgetType: l,
-            guildId: a,
+            widgetType: a,
+            guildId: l,
             channelId: c,
             disableInteraction: h = !1,
             index: j,
@@ -55,7 +55,7 @@ function j(e) {
         R = C?.id === n,
         k = !h && R,
         { isDragging: O } = (0, r.V)((e) => ({ isDragging: e.isDragging() })),
-        L = () =>
+        w = () =>
             (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(m.A, {
@@ -73,14 +73,14 @@ function j(e) {
                         (0, i.jsx)(p.d, {
                             userId: n,
                             applicationId: t.applicationId,
-                            guildId: a,
+                            guildId: l,
                             channelId: c,
                             className: A.Ez,
                         }),
                     k &&
                         (0, i.jsx)(x.A, {
                             game: t,
-                            widgetType: l,
+                            widgetType: a,
                             className: A.vS,
                             iconSize: "xs",
                             onRemove: () => v?.(t.applicationId),
@@ -90,6 +90,6 @@ function j(e) {
     return N
         ? (0, i.jsx)("div", { className: _.mD })
         : k
-          ? (0, i.jsx)(I, { widgetType: l, index: j ?? 0, game: t, coverImageUrl: E, gameName: b, children: L() })
-          : (0, i.jsx)("div", { className: A.kL, children: L() });
+          ? (0, i.jsx)(I, { widgetType: a, index: j ?? 0, game: t, coverImageUrl: E, gameName: b, children: w() })
+          : (0, i.jsx)("div", { className: A.kL, children: w() });
 }

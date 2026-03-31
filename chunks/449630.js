@@ -51,8 +51,8 @@ var a = n(627968),
     X = n(652215),
     Z = n(996988),
     ee = n(985018),
-    et = n(337637),
-    en = n(886308);
+    et = n(229598),
+    en = n(74209);
 function ea(e) {
     let { currentUser: t, onClose: n, setPopoutRef: s, highlightBadge: ea, className: ei } = e,
         es = __OVERLAY__,

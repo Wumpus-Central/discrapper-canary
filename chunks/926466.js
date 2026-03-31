@@ -1,8 +1,8 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => p });
 var i = n(627968),
-    a = n(64700),
-    l = n(503698),
-    r = n.n(l),
+    l = n(64700),
+    a = n(503698),
+    r = n.n(a),
     s = n(735438),
     o = n(421380),
     d = n(397927),
@@ -10,16 +10,16 @@ var i = n(627968),
     u = n(954571),
     A = n(652215),
     h = n(985018),
-    _ = n(436965);
+    _ = n(66762);
 let m = (0, s.debounce)(c.Ay.trackWithMetadata, 500),
-    g = function (e) {
+    p = function (e) {
         let {
             guild: t,
             title: n,
-            message: l,
+            message: a,
             image: s,
-            type: g,
-            imageStyles: p,
+            type: p,
+            imageStyles: g,
             imageMarginX: E,
             imageMarginTop: I,
             trackingSource: f,
@@ -29,25 +29,25 @@ let m = (0, s.debounce)(c.Ay.trackWithMetadata, 500),
             cta: S,
             ctaColor: x,
             centerText: v,
-            className: y,
+            className: b,
         } = e;
-        a.useEffect(() => {
-            m(A.HAw.CHANNEL_NOTICE_VIEWED, { notice_type: g, guild_id: t.id });
-        }, [t.id, g]);
-        let b = null;
+        l.useEffect(() => {
+            m(A.HAw.CHANNEL_NOTICE_VIEWED, { notice_type: p, guild_id: t.id });
+        }, [t.id, p]);
+        let y = null;
         "function" == typeof S
-            ? (b = S())
+            ? (y = S())
             : null != S &&
-              (b = (0, i.jsx)(o.$n, {
+              (y = (0, i.jsx)(o.$n, {
                   "data-migration-pending": !0,
                   className: _.x6,
                   size: o.$n.Sizes.SMALL,
                   onClick: () => {
-                      null != g &&
+                      null != p &&
                           u.default.track(A.HAw.CHANNEL_NOTICE_CTA_CLICKED, {
                               source: f,
                               guild_id: t.id,
-                              notice_type: g,
+                              notice_type: p,
                           }),
                           N?.();
                   },
@@ -66,24 +66,24 @@ let m = (0, s.debounce)(c.Ay.trackWithMetadata, 500),
                   children: n,
               }));
         let L = null;
-        "function" == typeof l
-            ? (L = l())
-            : null != l &&
+        "function" == typeof a
+            ? (L = a())
+            : null != a &&
               (L = (0, i.jsx)(d.Text, {
                   className: r()({ [_.gX]: v }),
                   variant: "text-sm/normal",
                   color: "text-muted",
-                  children: l,
+                  children: a,
               }));
         let R = null != E ? `${E}px` : "16px";
         return (0, i.jsxs)("div", {
-            className: r()(_.kL, y),
+            className: r()(_.kL, b),
             children: [
                 !0 === C
                     ? null
                     : (0, i.jsx)(d.DUT, {
                           onClick: () => {
-                              c.Ay.trackWithMetadata(A.HAw.CHANNEL_NOTICE_CLOSED, { notice_type: g }), T?.();
+                              c.Ay.trackWithMetadata(A.HAw.CHANNEL_NOTICE_CLOSED, { notice_type: p }), T?.();
                           },
                           className: _.VN,
                           "aria-label": h.intl.string(h.t.WAI6xu),
@@ -95,10 +95,10 @@ let m = (0, s.debounce)(c.Ay.trackWithMetadata, 500),
                         style: { marginTop: `${I}px`, marginLeft: R, marginRight: R },
                         children:
                             "string" == typeof s
-                                ? (0, i.jsx)("img", { className: _.Sl, style: p, src: s, alt: "" })
+                                ? (0, i.jsx)("img", { className: _.Sl, style: g, src: s, alt: "" })
                                 : s,
                     }),
-                (0, i.jsxs)("div", { className: _.iU, children: [O, L, b] }),
+                (0, i.jsxs)("div", { className: _.iU, children: [O, L, y] }),
             ],
         });
     };

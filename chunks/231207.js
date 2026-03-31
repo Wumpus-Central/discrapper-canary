@@ -21,14 +21,14 @@ var a = n(627968),
     A = n(44120),
     C = n(532794),
     y = n(216678),
-    S = n(194509),
-    T = n(761705),
+    T = n(194509),
+    S = n(761705),
     E = n(448362),
     N = n(71393),
     I = n(166403),
     k = n(652215),
     O = n(788868),
-    R = n(318296);
+    R = n(19897);
 function w(e) {
     let { selectedGuildForGuildSub: t } = e,
         n = (0, v.uk)(t?.id)[0];
@@ -54,8 +54,8 @@ let D = function () {
         { analyticsLocations: K } = (0, x.Ay)(h.A.PAYMENT_FLOW_TEST_PAGE),
         [z, $] = i.useState(""),
         [q, Q] = i.useState(k.dJq),
-        { balance: Y, isFetching: J, error: X } = (0, T.W)(),
-        { isSubmitting: Z, responseMessage: ee, redeemVirtualCurrency: et } = (0, T.Q)(),
+        { balance: Y, isFetching: J, error: X } = (0, S.W)(),
+        { isSubmitting: Z, responseMessage: ee, redeemVirtualCurrency: et } = (0, S.Q)(),
         [en, ea] = i.useState(k.dJq),
         [ei, es] = i.useState(""),
         [el, er] = i.useState(k.dJq),
@@ -86,7 +86,7 @@ let D = function () {
                                 selectionMode: "single",
                                 fullWidth: !0,
                             }),
-                            (0, a.jsx)(S.A, {
+                            (0, a.jsx)(T.A, {
                                 subscriptionTier: e,
                                 premiumModalAnalyticsLocation: {},
                                 color: d.XD.PRIMARY,

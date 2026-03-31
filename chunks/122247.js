@@ -10,7 +10,7 @@ var i = n(627968),
     c = n(378427),
     u = n(411335),
     m = n(985018),
-    g = n(188024);
+    g = n(36057);
 function x(e) {
     let { rule: t, onChangeRule: n } = e,
         [x, h] = s.useState(t.triggerMetadata?.mentionTotalLimit),

@@ -1,8 +1,8 @@
 n.r(t), n.d(t, { default: () => v });
 var i = n(627968),
-    a = n(64700),
-    l = n(503698),
-    r = n.n(l),
+    l = n(64700),
+    a = n(503698),
+    r = n.n(a),
     s = n(481613),
     o = n.n(s),
     d = n(607399),
@@ -12,12 +12,12 @@ var i = n(627968),
     h = n(397927),
     _ = n(315982),
     m = n(961350),
-    g = n(287809),
-    p = n(954571),
+    p = n(287809),
+    g = n(954571),
     E = n(53505),
     I = n(652215),
     f = n(985018),
-    C = n(342453);
+    C = n(28690);
 let T = [
         { getOs: () => f.intl.string(f.t.NK5ySJ), icon: C.Bt, url: () => (0, E.oW)("osx", !1), platformKey: 0 },
         { getOs: () => f.intl.string(f.t.OvKGE6), icon: C.KF, url: () => (0, E.oW)("win", !1), platformKey: 1 },
@@ -36,30 +36,30 @@ let T = [
         { getOs: () => f.intl.string(f.t.wuQpJD), icon: C.yA, url: () => I.AMi.ANDROID, platformKey: 4 },
     ],
     S = (e) => {
-        let { os: t, url: n, onClick: l } = e,
-            r = a.useRef(null),
-            [s, o] = a.useState(!1),
-            d = a.useCallback(
+        let { os: t, url: n, onClick: a } = e,
+            r = l.useRef(null),
+            [s, o] = l.useState(!1),
+            d = l.useCallback(
                 (e) => {
-                    let { closePopout: a } = e;
+                    let { closePopout: l } = e;
                     return Array.isArray(n)
                         ? (0, i.jsx)(h.W1t, {
                               "data-menu-migrated": !0,
                               navId: "download-app-menu",
                               "aria-label": f.intl.string(f.t["+1H47t"]),
-                              onClose: a,
+                              onClose: l,
                               onSelect: void 0,
                               children: n.map((e) =>
                                   (0, i.jsx)(
                                       h.Drp,
-                                      { id: e.url(), label: e.getText(), action: () => l(t, e.url()) },
+                                      { id: e.url(), label: e.getText(), action: () => a(t, e.url()) },
                                       e.url(),
                                   ),
                               ),
                           })
                         : null;
                 },
-                [t, n, l],
+                [t, n, a],
             );
         return Array.isArray(n)
             ? (0, i.jsx)(h.YNO, {
@@ -83,7 +83,7 @@ let T = [
               })
             : (0, i.jsx)(A.$nd, {
                   text: f.intl.string(f.t["1WjMbC"]),
-                  onClick: () => l(t, n()),
+                  onClick: () => a(t, n()),
                   variant: "primary",
                   size: "sm",
                   fullWidth: !0,
@@ -91,13 +91,13 @@ let T = [
               });
     },
     x = (e) => {
-        let { platform: t, onClick: n, onMouseEnter: a, isActive: l } = e,
+        let { platform: t, onClick: n, onMouseEnter: l, isActive: a } = e,
             { getOs: s, icon: o, url: d, platformKey: c } = t,
             u = s(),
             A = r()(C.Kk, o);
         return (0, i.jsx)("li", {
-            className: r()(C.iD, { [C.vu]: l }),
-            onMouseEnter: () => a(c),
+            className: r()(C.iD, { [C.vu]: a }),
+            onMouseEnter: () => l(c),
             children: (0, i.jsxs)("div", {
                 className: C.FG,
                 children: [
@@ -119,11 +119,11 @@ let T = [
         });
     };
 function v(e) {
-    let { source: t, onClose: n, transitionState: l } = e,
-        s = (0, u.bG)([g.default], () => g.default.getCurrentUser()),
+    let { source: t, onClose: n, transitionState: a } = e,
+        s = (0, u.bG)([p.default], () => p.default.getCurrentUser()),
         E = (0, u.bG)([m.default], () => m.default.getFingerprint()),
         S = null == s || s.isClaimed(),
-        [v, y] = a.useState(
+        [v, b] = l.useState(
             (function () {
                 switch (o().os?.family) {
                     case "OS X":
@@ -146,9 +146,9 @@ function v(e) {
                 }
             })(),
         );
-    function b(e, i) {
+    function y(e, i) {
         (null != c.getToken() || null != E) &&
-            p.default.track(I.HAw.DOWNLOAD_APP, {
+            g.default.track(I.HAw.DOWNLOAD_APP, {
                 platform: e,
                 ptb: !1,
                 released: !0,
@@ -159,17 +159,17 @@ function v(e) {
             S ? window.open(i, "_blank") : (n(), _.R());
     }
     function O(e) {
-        y(e);
+        b(e);
     }
     return (
-        a.useEffect(() => {
-            p.default.track(I.HAw.OPEN_MODAL, { type: "Download App", source: { location: t } });
+        l.useEffect(() => {
+            g.default.track(I.HAw.OPEN_MODAL, { type: "Download App", source: { location: t } });
         }, [t]),
         (0, i.jsx)(A.aFV, {
             title: f.intl.string(f.t["BK8LK+"]),
             actions: void 0,
             onClose: n,
-            transitionState: l,
+            transitionState: a,
             preview: (0, i.jsx)(h.Text, { variant: "text-sm/normal", children: f.intl.format(f.t["RJS+1P"], {}) }),
             children: (0, i.jsxs)("div", {
                 className: C.kL,
@@ -189,7 +189,7 @@ function v(e) {
                                     children: T.map((e) =>
                                         (0, i.jsx)(
                                             x,
-                                            { isActive: v === e.platformKey, platform: e, onClick: b, onMouseEnter: O },
+                                            { isActive: v === e.platformKey, platform: e, onClick: y, onMouseEnter: O },
                                             e.platformKey,
                                         ),
                                     ),
@@ -211,7 +211,7 @@ function v(e) {
                                 children: N.map((e) =>
                                     (0, i.jsx)(
                                         x,
-                                        { isActive: v === e.platformKey, platform: e, onClick: b, onMouseEnter: O },
+                                        { isActive: v === e.platformKey, platform: e, onClick: y, onMouseEnter: O },
                                         e.platformKey,
                                     ),
                                 ),

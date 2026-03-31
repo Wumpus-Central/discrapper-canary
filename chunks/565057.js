@@ -21,12 +21,12 @@ var n = s(627968),
     C = s(561769),
     A = s(484469),
     S = s(917987),
-    v = s(781815),
+    v = s(4196),
     I = s(938191),
     L = s(758836),
     j = s(652215),
     k = s(985018),
-    T = s(297046);
+    T = s(572199);
 let O = (e) => {
     let {
             isLoading: t,
@@ -41,9 +41,9 @@ let O = (e) => {
         M = (0, i.bG)([_.default], () => _.default.getCurrentUser()),
         P = p.Ay.canUseCollectibles(M),
         D = (0, E.W)("FeedBlock"),
-        w = (0, I.yB)("FeedBlock"),
+        H = (0, I.yB)("FeedBlock"),
         {
-            sortType: H,
+            sortType: w,
             setSortType: F,
             sortedItems: G,
             sortOptions: U,
@@ -91,7 +91,7 @@ let O = (e) => {
                               ],
                           }),
                           (0, n.jsxs)("div", {
-                              className: a()(T.IE, { [I.jP]: w }),
+                              className: a()(T.IE, { [I.jP]: H }),
                               children: [
                                   (0, n.jsx)(c.Text, {
                                       variant: "text-md/medium",
@@ -108,7 +108,7 @@ let O = (e) => {
                                               let { label: t, value: s } = e;
                                               return { id: s, label: t, value: s };
                                           },
-                                          value: H,
+                                          value: w,
                                           selectionMode: "single",
                                           fullWidth: !0,
                                       }),

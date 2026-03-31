@@ -1,8 +1,8 @@
 n.d(t, { A: () => E });
 var i = n(627968),
-    a = n(64700),
-    l = n(735438),
-    r = n.n(l),
+    l = n(64700),
+    a = n(735438),
+    r = n.n(a),
     s = n(421380),
     o = n(397927),
     d = n(58149),
@@ -11,17 +11,17 @@ var i = n(627968),
     A = n(926466),
     h = n(652215),
     _ = n(985018),
-    m = n(231632);
-let g = r().debounce(d.Ay.trackWithMetadata, 500),
-    p = (e) => {
+    m = n(68377);
+let p = r().debounce(d.Ay.trackWithMetadata, 500),
+    g = (e) => {
         let {
             guild: t,
             title: n,
-            message: l,
+            message: a,
             image: r,
             type: u,
             imageMarginX: A,
-            imageMarginTop: p,
+            imageMarginTop: g,
             trackingSource: E,
             undismissable: I,
             onDismissed: f,
@@ -29,8 +29,8 @@ let g = r().debounce(d.Ay.trackWithMetadata, 500),
             cta: T,
             ctaColor: N,
         } = e;
-        a.useEffect(() => {
-            g(h.HAw.CHANNEL_NOTICE_VIEWED, { notice_type: u, guild_id: t.id });
+        l.useEffect(() => {
+            p(h.HAw.CHANNEL_NOTICE_VIEWED, { notice_type: u, guild_id: t.id });
         }, [t.id, u]);
         let S = null;
         "function" == typeof T
@@ -70,7 +70,7 @@ let g = r().debounce(d.Ay.trackWithMetadata, 500),
                 null != r &&
                     (0, i.jsx)("div", {
                         className: m.ZS,
-                        style: { marginTop: `${p}px`, marginLeft: x, marginRight: x },
+                        style: { marginTop: `${g}px`, marginLeft: x, marginRight: x },
                         children: "string" == typeof r ? (0, i.jsx)("img", { className: m.Sl, src: r, alt: "" }) : r,
                     }),
                 (0, i.jsxs)("div", {
@@ -79,7 +79,7 @@ let g = r().debounce(d.Ay.trackWithMetadata, 500),
                         null != n
                             ? (0, i.jsx)(o.Heading, { variant: "heading-md/semibold", className: m.DD, children: n })
                             : null,
-                        (0, i.jsx)(o.Text, { variant: "text-sm/normal", children: l }),
+                        (0, i.jsx)(o.Text, { variant: "text-sm/normal", children: a }),
                         S,
                     ],
                 }),
@@ -88,5 +88,5 @@ let g = r().debounce(d.Ay.trackWithMetadata, 500),
     },
     E = function (e) {
         let { showRedesignedChannelNotice: t } = (0, u.P)(!0);
-        return t ? (0, i.jsx)(A.A, { ...e }) : (0, i.jsx)(p, { ...e });
+        return t ? (0, i.jsx)(A.A, { ...e }) : (0, i.jsx)(g, { ...e });
     };

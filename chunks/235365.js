@@ -1,58 +1,58 @@
-a.d(t, { A: () => h, L: () => g });
-var r = a(627968),
-    n = a(64700),
-    i = a(503698),
-    s = a.n(i),
-    l = a(230109),
-    d = a(732955),
-    o = a(688810),
-    c = a(320118),
-    u = a(954571),
-    _ = a(128620),
-    m = a(652215),
-    p = a(49370),
-    b = a(985018),
-    f = a(18738);
-let g = "orbs",
-    h = (e) => {
-        let { className: t, location: a } = e,
-            { analyticsLocations: i } = (0, o.Ay)(a),
-            h = n.useRef(null),
-            A = n.useRef(!1),
-            { passesGeneralUIInvariant: x, programReward: R } = (0, c.F)({
+r.d(t, { A: () => x, L: () => b });
+var a = r(627968),
+    n = r(64700),
+    s = r(503698),
+    i = r.n(s),
+    l = r(230109),
+    o = r(732955),
+    d = r(688810),
+    c = r(320118),
+    u = r(954571),
+    m = r(128620),
+    _ = r(652215),
+    p = r(723468),
+    f = r(985018),
+    h = r(577057);
+let b = "orbs",
+    x = (e) => {
+        let { className: t, location: r } = e,
+            { analyticsLocations: s } = (0, d.Ay)(r),
+            x = n.useRef(null),
+            g = n.useRef(!1),
+            { passesGeneralUIInvariant: C, programReward: A } = (0, c.F)({
                 location: "PremiumTenureRewardsOrbsSection",
             });
-        return x
-            ? (0, r.jsx)(o.f5, {
-                  value: i,
-                  children: (0, r.jsx)(l.L, {
-                      innerRef: h,
+        return C
+            ? (0, a.jsx)(d.f5, {
+                  value: s,
+                  children: (0, a.jsx)(l.L, {
+                      innerRef: x,
                       onChange: (e) => {
                           e &&
-                              !A.current &&
-                              ((A.current = !0),
-                              u.default.track(m.HAw.PREMIUM_TENURE_REWARDS_ORBS_SECTION_IMPRESSION, {
-                                  program_state: R?.program_current_state,
+                              !g.current &&
+                              ((g.current = !0),
+                              u.default.track(_.HAw.PREMIUM_TENURE_REWARDS_ORBS_SECTION_IMPRESSION, {
+                                  program_state: A?.program_current_state,
                               }));
                       },
                       threshold: 0.5,
-                      children: (0, r.jsxs)("div", {
-                          ref: h,
-                          id: g,
-                          className: s()(f.uW, f.Uv, f.qr, t),
+                      children: (0, a.jsxs)("div", {
+                          ref: x,
+                          id: b,
+                          className: i()(h.uW, h.Uv, h.qr, t),
                           children: [
-                              (0, r.jsx)(d.DZT, {
+                              (0, a.jsx)(o.DZT, {
                                   variant: "display-sm",
-                                  className: f.R_,
+                                  className: h.R_,
                                   style: { textAlign: "start" },
-                                  children: b.intl.string(p.default.EdGvBM),
+                                  children: f.intl.string(p.default.EdGvBM),
                               }),
-                              (0, r.jsx)(d.EYj, {
+                              (0, a.jsx)(o.EYj, {
                                   variant: "text-md/medium",
-                                  className: s()(f.VA, f.dO),
-                                  children: b.intl.string(p.default["2KoHRF"]),
+                                  className: i()(h.VA, h.dO),
+                                  children: f.intl.string(p.default["2KoHRF"]),
                               }),
-                              (0, r.jsx)(_.A, {}),
+                              (0, a.jsx)(m.A, {}),
                           ],
                       }),
                   }),

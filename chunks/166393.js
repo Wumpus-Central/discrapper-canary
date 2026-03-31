@@ -18,7 +18,7 @@ var n = a(627968),
     f = a(487953),
     b = a(111737),
     C = a(652215),
-    v = a(503400);
+    v = a(44167);
 let j = c.K.APPLICATION_DIRECTORY;
 function I(e) {
     let { collection: t, index: a, onSelectApplication: l } = e,

@@ -32,8 +32,8 @@ var u = n(311907),
     L = n(263063),
     w = n(721592),
     M = n(378570),
-    x = n(832163),
-    P = n(565688),
+    P = n(832163),
+    x = n(565688),
     k = n(533562),
     U = n(93879),
     G = n(798048),
@@ -69,7 +69,7 @@ var u = n(311907),
     ep = n(381941),
     eh = n(699976),
     em = n(985018),
-    eE = n(191999);
+    eE = n(38608);
 function eg(e) {
     let { children: t } = e;
     return (0, r.jsx)("div", { className: eE.SW, children: t });
@@ -105,9 +105,9 @@ function eT(e) {
         { embeddedActivity: L } = (0, es.A)(a),
         w = eR(L),
         M = null != D && 0 === o.length ? [D] : o,
-        x = M.length > 0,
-        P = M.length >= 2,
-        [k, U] = i.useState(!x),
+        P = M.length > 0,
+        x = M.length >= 2,
+        [k, U] = i.useState(!P),
         G = J.Ay.getName(t?.guild_id, t?.id, n),
         F =
             null != t && E
@@ -226,7 +226,7 @@ function eT(e) {
                                           })
                                     : void 0,
                             }),
-                            x &&
+                            P &&
                                 (0, r.jsx)(p.DUT, {
                                     onClick: () => z(!1),
                                     className: eE.i3,
@@ -243,7 +243,7 @@ function eT(e) {
                         (0, r.jsxs)("div", {
                             className: eE.fh,
                             children: [
-                                !P &&
+                                !x &&
                                     (0, r.jsx)(
                                         p.Button,
                                         {
@@ -412,8 +412,8 @@ function eN(e) {
             { onOpened: () => m?.(e_.PA.OPENED_GAME_PROFILE) },
         ),
         { largeImage: v, smallImage: N } = (0, ee.nO)({ entry: A, showCoverImage: f }),
-        C = (0, P.w)({ location: "content_inventory" }),
-        b = (0, u.bG)([x.A], () => x.A.getDetectableIdsToApplicationIds()),
+        C = (0, x.w)({ location: "content_inventory" }),
+        b = (0, u.bG)([P.A], () => P.A.getDetectableIdsToApplicationIds()),
         D = I ? y : void 0;
     return (0, r.jsxs)("div", {
         className: eE.au,
@@ -519,8 +519,8 @@ function eC(e) {
         { activity: L, activityApplication: w, fallbackApplication: M } = (0, es.A)(I),
         { largeImage: F, smallImage: V } = (0, ee.D8)(L, w ?? M),
         { largeImage: H } = (0, ee.nO)({ entry: I }),
-        K = (0, P.w)({ location: "content_inventory" }),
-        $ = (0, u.bG)([x.A], () => x.A.getDetectableIdsToApplicationIds());
+        K = (0, x.w)({ location: "content_inventory" }),
+        $ = (0, u.bG)([P.A], () => P.A.getDetectableIdsToApplicationIds());
     return (0, r.jsxs)("div", {
         className: eE.au,
         children: [

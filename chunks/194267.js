@@ -28,11 +28,11 @@ var r = n(627968),
     O = n(654487),
     b = n(652215),
     D = n(985018),
-    L = n(650746);
+    L = n(73509);
 let w = 10,
     M = 20,
-    x = 15,
-    P = 4,
+    P = 15,
+    x = 4,
     k = 5,
     U = 8,
     G = 10;
@@ -118,9 +118,9 @@ let V = (e) => {
                         async () => {
                             let { default: e } = await Promise.all([
                                 n.e("42006"),
-                                n.e("93612"),
-                                n.e("67202"),
-                                n.e("98238"),
+                                n.e("21957"),
+                                n.e("18037"),
+                                n.e("26750"),
                             ]).then(n.bind(n, 225732));
                             return (t) =>
                                 (0, r.jsx)(e, {
@@ -142,8 +142,8 @@ let V = (e) => {
                         r = e.clientY - t.top,
                         i = t.width / 2,
                         s = t.height / 2,
-                        a = -(((r - s) / s) * x),
-                        o = ((n - i) / i) * x;
+                        a = -(((r - s) / s) * P),
+                        o = ((n - i) / i) * P;
                     A.current.style.transform = `rotateX(${a}deg) rotateY(${o}deg)`;
                 },
                 [g],
@@ -259,7 +259,7 @@ function j(e) {
         ),
         N = i.useMemo(() => {
             let e = v.length;
-            return e <= P ? P - e : e === k ? 0 : e <= U ? U - e : G - e;
+            return e <= x ? x - e : e === k ? 0 : e <= U ? U - e : G - e;
         }, [v.length]),
         C = !E && 0 === v.length,
         O = g || C;

@@ -2,9 +2,9 @@ n.d(t, { A: () => d });
 var l = n(627968);
 n(64700);
 var a = n(397927),
-    r = n(730134),
-    i = n(985018),
-    s = n(83760);
+    i = n(730134),
+    r = n(985018),
+    s = n(596383);
 let d = (e) => {
     let { user: t } = e;
     return (0, l.jsxs)("div", {
@@ -13,14 +13,14 @@ let d = (e) => {
             (0, l.jsx)(a.Heading, {
                 className: s.wx,
                 variant: "heading-sm/semibold",
-                children: i.intl.string(i.t.Rsth7z),
+                children: r.intl.string(r.t.Rsth7z),
             }),
             (0, l.jsx)("div", {
                 className: s.f1,
                 children: (0, l.jsxs)("div", {
                     className: s.eF,
                     children: [
-                        (0, l.jsx)(r.A, { className: s.Hk, user: t, size: a._3J.SIZE_40 }),
+                        (0, l.jsx)(i.A, { className: s.Hk, user: t, size: a._3J.SIZE_40 }),
                         (0, l.jsxs)("div", {
                             children: [
                                 null != t.globalName &&

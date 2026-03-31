@@ -1,8 +1,8 @@
 n.d(t, { A: () => w });
 var i = n(627968),
-    a = n(64700),
-    l = n(503698),
-    r = n.n(l),
+    l = n(64700),
+    a = n(503698),
+    r = n.n(a),
     s = n(311907),
     o = n(827734),
     d = n(397927),
@@ -12,8 +12,8 @@ var i = n(627968),
     h = n(707592),
     _ = n(698441),
     m = n(935159),
-    g = n(473019),
-    p = n(435328),
+    p = n(695400),
+    g = n(435328),
     E = n(539446),
     I = n(508654),
     f = n(9448),
@@ -23,36 +23,36 @@ var i = n(627968),
     S = n(63995),
     x = n(69407),
     v = n(446600),
-    y = n(964175),
-    b = n(342296),
+    b = n(964175),
+    y = n(342296),
     O = n(576705),
     L = n(287809),
     R = n(182028),
     P = n(652215),
     D = n(988794),
     M = n(985018),
-    j = n(436965);
+    j = n(66762);
 function w(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
-        l = (0, E.V)(t.id),
+        a = (0, E.V)(t.id),
         u = (0, I.BP)(t.id),
-        b = (0, s.bG)([v.A], () => v.A.getStageInstanceByChannel(l?.id), [l]),
+        y = (0, s.bG)([v.A], () => v.A.getStageInstanceByChannel(a?.id), [a]),
         { isStageNoticeHidden: w, isEventNoticeHidden: G } = (0, s.cf)(
-            [g.A],
+            [p.A],
             () => ({
-                isStageNoticeHidden: g.A.isLiveChannelNoticeHidden({ stageId: b?.id }),
-                isEventNoticeHidden: g.A.isLiveChannelNoticeHidden({ eventId: u?.id }),
+                isStageNoticeHidden: p.A.isLiveChannelNoticeHidden({ stageId: y?.id }),
+                isEventNoticeHidden: p.A.isLiveChannelNoticeHidden({ eventId: u?.id }),
             }),
-            [b, u],
+            [y, u],
         ),
-        k = l?.id,
+        k = a?.id,
         V = (0, s.yK)([S.A], () => [...new Set(S.A.getMutableParticipants(k, x.ip.SPEAKER).map((e) => e.user))], [k]),
         B = (0, s.bG)([S.A], () => (null != k ? S.A.getParticipantCount(k, x.ip.AUDIENCE) : 0), [k]),
-        H = (0, s.bG)([O.A], () => O.A.can(P.xBc.CONNECT, l)),
-        F = (0, y.A)(l?.id),
+        H = (0, s.bG)([O.A], () => O.A.can(P.xBc.CONNECT, a)),
+        F = (0, b.A)(a?.id),
         Y = u?.creator_id,
         W = (0, s.bG)([L.default], () => L.default.getUser(Y), [Y]);
-    a.useEffect(() => {
+    l.useEffect(() => {
         null != Y && (0, c.wz)(Y);
     }, [Y]);
     let {
@@ -65,33 +65,33 @@ function w(e) {
         users: Z,
         overflowUsers: J,
         onClose: ee,
-    } = a.useMemo(
+    } = l.useMemo(
         () =>
             (function (e) {
                 let {
                         guildEvent: t,
                         stageInstance: n,
-                        activeChannel: a,
-                        canConnect: l,
+                        activeChannel: l,
+                        canConnect: a,
                         myRole: r,
                         eventCreator: s,
                         speakers: o,
                         listenerCount: c,
                         isEventNoticeHidden: u,
                         isStageNoticeHidden: h,
-                        isStudyRoomNotice: g,
+                        isStudyRoomNotice: p,
                     } = e,
-                    E = null != n && null != a && !h,
+                    E = null != n && null != l && !h,
                     I = null != t ? (0, C.G3)(t) : null;
-                if (g && null != a) {
-                    let e = (0, A.gU)(a);
+                if (p && null != l) {
+                    let e = (0, A.gU)(l);
                     return {
                         noticeType: 3,
-                        title: `📚☕ ${a.name}`,
+                        title: `📚☕ ${l.name}`,
                         location: M.intl.string(M.t.LZA6Na),
                         locationIcon:
                             null != e ? (0, i.jsx)(e, { size: "xs", color: "currentColor", className: j.NR }) : null,
-                        canListenIn: l,
+                        canListenIn: a,
                         buttonText: M.intl.string(M.t.wBoE6L),
                         users: [],
                         overflowUsers: null,
@@ -107,7 +107,7 @@ function w(e) {
                             {
                                 noticeType: 0,
                                 title: n.topic,
-                                location: a.name,
+                                location: l.name,
                                 locationIcon: (0, i.jsx)(d.qux, {
                                     size: "custom",
                                     color: "currentColor",
@@ -115,7 +115,7 @@ function w(e) {
                                     height: 16,
                                     className: j.NR,
                                 }),
-                                canListenIn: l,
+                                canListenIn: a,
                                 buttonText: e,
                                 onClose: () => (0, m.iF)({ stageId: n?.id }),
                                 users: o.length > 5 ? o.slice(0, 5) : o,
@@ -150,7 +150,7 @@ function w(e) {
                         {
                             noticeType: 0,
                             title: n.topic,
-                            location: a.name,
+                            location: l.name,
                             locationIcon: (0, i.jsx)(d.qux, {
                                 size: "custom",
                                 color: "currentColor",
@@ -158,7 +158,7 @@ function w(e) {
                                 height: 16,
                                 className: j.NR,
                             }),
-                            canListenIn: l,
+                            canListenIn: a,
                             buttonText: e,
                             onClose: () => (0, m.iF)({ stageId: n?.id }),
                             users: o.length > 5 ? o.slice(0, 5) : o,
@@ -192,7 +192,7 @@ function w(e) {
                     return {
                         noticeType: 1,
                         title: t.name,
-                        location: (0, p.l)(e, !0),
+                        location: (0, g.l)(e, !0),
                         locationIcon: (0, i.jsx)(d.BT6, {
                             size: "custom",
                             color: "currentColor",
@@ -226,16 +226,16 @@ function w(e) {
                                       ],
                                   }),
                     };
-                } else if (t.entity_type === D.Ps.VOICE && null != a) {
-                    let e = (0, A.gU)(a),
+                } else if (t.entity_type === D.Ps.VOICE && null != l) {
+                    let e = (0, A.gU)(l),
                         n = _.Ay.getUserCount(t.id, I);
                     return {
                         noticeType: 2,
                         title: t.name,
-                        location: a.name,
+                        location: l.name,
                         locationIcon:
                             null != e ? (0, i.jsx)(e, { size: "xs", color: "currentColor", className: j.NR }) : null,
-                        canListenIn: l,
+                        canListenIn: a,
                         buttonText: M.intl.string(M.t.nxUtoQ),
                         onClose: () => (0, m.iF)({ eventId: t?.id }),
                         users: null == s ? [] : [s],
@@ -265,8 +265,8 @@ function w(e) {
                 return { noticeType: null };
             })({
                 guildEvent: u,
-                stageInstance: b,
-                activeChannel: l,
+                stageInstance: y,
+                activeChannel: a,
                 canConnect: H,
                 myRole: F,
                 eventCreator: W,
@@ -276,7 +276,7 @@ function w(e) {
                 isStageNoticeHidden: w,
                 isStudyRoomNotice: n,
             }),
-        [u, b, l, H, F, W, V, B, G, w, n],
+        [u, y, a, H, F, W, V, B, G, w, n],
     );
     return null == K
         ? null
@@ -335,9 +335,9 @@ function w(e) {
                                 text: X,
                                 onClick: () => {
                                     if (Q)
-                                        null != l &&
-                                            null != l.getGuildId() &&
-                                            ((0, N.av)(l), (0, T.uh)(l.getGuildId(), l.id));
+                                        null != a &&
+                                            null != a.getGuildId() &&
+                                            ((0, N.av)(a), (0, T.uh)(a.getGuildId(), a.id));
                                     else {
                                         if (null == u) return;
                                         (0, h.uR)({ eventId: u.id });
@@ -352,9 +352,9 @@ function w(e) {
 }
 function U(e) {
     let { user: t, guildId: n } = e,
-        l = a.useRef(null);
-    return (0, i.jsx)(b.A, {
-        targetElementRef: l,
+        a = l.useRef(null);
+    return (0, i.jsx)(y.A, {
+        targetElementRef: a,
         user: t,
         guildId: n,
         newAnalyticsLocations: [u.A.AVATAR],
@@ -362,7 +362,7 @@ function U(e) {
         children: (e) =>
             (0, i.jsx)(d.euF, {
                 ...e,
-                ref: l,
+                ref: a,
                 src: t.getAvatarURL(n, 24),
                 "aria-label": t.username,
                 size: d._3J.SIZE_24,

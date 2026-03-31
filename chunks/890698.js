@@ -24,7 +24,7 @@ var i = n(627968),
     j = n(330936),
     S = n(172799),
     T = n(985018),
-    C = n(693727);
+    C = n(4370);
 let y = () =>
         (0, i.jsxs)(s.Fragment, {
             children: [
@@ -70,8 +70,8 @@ let y = () =>
             { currentUser: k } = (0, d.cf)([x.default], () => ({ currentUser: x.default.getCurrentUser() }));
         if (null == r) return null;
         let D = null != r.guild ? (I.fh(r.guild) ? r.guild : I.DY(r.guild)) : null,
-            P = null != r.channel ? (0, f.OY)(r.channel) : null,
-            U = null != r.target_application ? new A.Ay(r.target_application) : null,
+            U = null != r.channel ? (0, f.OY)(r.channel) : null,
+            P = null != r.target_application ? new A.Ay(r.target_application) : null,
             B = h || null == r.inviter ? null : new E.A(r.inviter),
             G =
                 !(
@@ -96,10 +96,10 @@ let y = () =>
                         null != B
                             ? T.intl.formatToPlainString(T.t.UW1Cav, { username: N.Ay.getFormattedName(B) })
                             : T.intl.string(T.t.ENSuN3))),
-                G && null == U && (t = (0, i.jsx)(u.$v, { className: C.Kk, guild: D, size: u.$v.Sizes.SMALL })),
+                G && null == P && (t = (0, i.jsx)(u.$v, { className: C.Kk, guild: D, size: u.$v.Sizes.SMALL })),
                 (n = D.name),
-                null != U &&
-                    ((n = U.name),
+                null != P &&
+                    ((n = P.name),
                     (s = (0, i.jsxs)("div", {
                         children: [
                             (0, i.jsx)(u.tK, { className: C.R9, children: T.intl.string(T.t["3gg9fF"]) }),
@@ -118,13 +118,13 @@ let y = () =>
                             }),
                         ],
                     })));
-        else if (null != P) {
+        else if (null != U) {
             if (null == B) throw Error("no inviter in group DM invite");
             let e = N.Ay.getFormattedName(B);
-            null != P.name && "" !== P.name
+            null != U.name && "" !== U.name
                 ? ((F = T.intl.formatToPlainString(T.t["5u47va"], { username: e })),
-                  (n = P.name),
-                  null != P.icon && (t = (0, i.jsx)(u.F4, { channel: P, size: c._3J.SIZE_32 })))
+                  (n = U.name),
+                  null != U.icon && (t = (0, i.jsx)(u.F4, { channel: U, size: c._3J.SIZE_32 })))
                 : ((F = T.intl.string(T.t.OsdY8B)), (n = e));
         } else if (null != B) {
             let e = N.Ay.getFormattedName(B, !0);
@@ -147,7 +147,7 @@ let y = () =>
             justify: "center",
             align: "center",
             children: [
-                (0, i.jsx)(b, { application: U, guild: D, user: G ? B : null, compact: V }),
+                (0, i.jsx)(b, { application: P, guild: D, user: G ? B : null, compact: V }),
                 null != _
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
@@ -179,7 +179,7 @@ let y = () =>
                             direction: "vertical",
                             gap: 4,
                             children:
-                                null != U || V || r?.guild?.id === j.TA
+                                null != P || V || r?.guild?.id === j.TA
                                     ? null
                                     : (0, i.jsx)(u.R1, {
                                           online: r.approximate_presence_count,

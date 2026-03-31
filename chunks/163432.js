@@ -8,11 +8,11 @@ var i = n(627968),
     c = n(403362),
     d = n(175203),
     u = n(806931),
-    h = n(29243);
+    h = n(162284);
 let m = 112,
     A = (16 / 9) * 112 + 8,
-    g = 10 * o.A.Millis.SECOND;
-function p(e) {
+    p = 10 * o.A.Millis.SECOND;
+function g(e) {
     let t = r.default.getId();
     return e.type === u.lp.USER && e.user.id === t && e.voiceState?.selfVideo;
 }
@@ -26,7 +26,7 @@ function f(e, t) {
     l.useEffect(() => {
         let e = setTimeout(() => {
             _(Date.now());
-        }, g);
+        }, p);
         return () => {
             clearTimeout(e);
         };
@@ -50,7 +50,7 @@ function f(e, t) {
                                 return (
                                     e.speaking
                                         ? (l = "\x03")
-                                        : t - e.lastSpoke < g
+                                        : t - e.lastSpoke < p
                                           ? (l = "\x04")
                                           : e.voiceState?.selfVideo && (l = "\x05"),
                                     `${l}${((n = e.lastSpoke), (i = String(864e13).length), String(864e13 - n).padStart(i, "0"))}${(0, a.A)(e.userNick, e.user)}`
@@ -59,7 +59,7 @@ function f(e, t) {
                     })(e, n),
                 ),
                 [m, A] = (0, s.partition)(l, u.Xw),
-                f = m.findIndex(p),
+                f = m.findIndex(g),
                 _ = null;
             -1 !== f && ((_ = m[f]), m.splice(f, 1));
             let x = null == _ || h ? e : e - i - o,
@@ -67,27 +67,27 @@ function f(e, t) {
                 S = Math.min((x - o) / C - o, i),
                 I = Math.max(0, C - A.length),
                 T = A.slice(0, C),
-                N = m.slice(0, I),
-                v = Array(I);
+                v = m.slice(0, I),
+                N = Array(I);
             if (I > 0) {
                 let e = [];
-                for (let t of N) {
+                for (let t of v) {
                     let n = E.current[t.id];
-                    null != n && n < I ? (v[n] = t) : e.push(t);
+                    null != n && n < I ? (N[n] = t) : e.push(t);
                 }
-                for (let t = 0; t < v.length; t++) {
-                    if (null != v[t]) continue;
+                for (let t = 0; t < N.length; t++) {
+                    if (null != N[t]) continue;
                     let n = e.shift();
                     if (null == n) break;
-                    v[t] = n;
+                    N[t] = n;
                 }
             }
-            let b = v.filter(c.Vq);
-            E.current = (0, s.keyBy)((0, s.range)(b.length), (e) => b[e].id);
-            let y = [...T, ...b];
+            let y = N.filter(c.Vq);
+            E.current = (0, s.keyBy)((0, s.range)(y.length), (e) => y[e].id);
+            let b = [...T, ...y];
             return (
-                null != _ && (h && y.length >= C ? (y[Math.max(0, y.length - 1)] = _) : y.push(_)),
-                { visibleParticipants: y, participantTileWidth: S }
+                null != _ && (h && b.length >= C ? (b[Math.max(0, b.length - 1)] = _) : b.push(_)),
+                { visibleParticipants: b, participantTileWidth: S }
             );
         }, [e, t, f, m, h, d, o, r, i]);
     return { visibleParticipants: x, participantTileWidth: C };
@@ -109,7 +109,7 @@ function _(e) {
         className: h.zr,
         children: t.map((e) => {
             if (null == e) return null;
-            let t = p(e);
+            let t = g(e);
             return (0, i.jsx)(
                 "div",
                 {

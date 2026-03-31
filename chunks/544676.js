@@ -8,8 +8,8 @@ var n = i(627968),
     c = i(793574),
     o = i(688810),
     u = i(359047),
-    A = i(769591),
-    g = i(36942),
+    g = i(769591),
+    A = i(36942),
     E = i(260509),
     h = i(961350),
     p = i(287809),
@@ -17,13 +17,13 @@ var n = i(627968),
     S = i(810263),
     b = i(911612),
     N = i(664967),
-    f = i(56646),
-    G = i(507238),
-    L = i(881136),
-    y = i(813597),
+    y = i(834265),
+    f = i(507238),
+    G = i(881136),
+    L = i(813597),
     M = i(21605),
-    x = i(684509),
-    v = i(153594),
+    v = i(684509),
+    x = i(153594),
     D = i(531335),
     j = i(652215),
     O = i(985018);
@@ -35,10 +35,10 @@ function m(e) {
             return s()(null != e, "GuildContextMenu: user cannot be undefined"), (0, E.bM)(t, e);
         }, [t]),
         I = (0, D.A)({ guild: t, source: j.PE1.GUILD_CONTEXT_MENU, channel: null }),
-        U = (0, v.A)(o),
-        T = (0, G.A)(t),
-        R = (0, L.A)(t),
-        C = (0, x.A)(t),
+        U = (0, x.A)(o),
+        T = (0, f.A)(t),
+        R = (0, G.A)(t),
+        C = (0, v.A)(t),
         P = (0, _.A)({
             guildId: t.id,
             userId: h.default.getId(),
@@ -51,11 +51,11 @@ function m(e) {
         k = (0, b.A)(t),
         B = (0, u.A)(t.id),
         X = (0, S.A)(t),
-        V = (0, f.A)(t, { section: j.JJy.GUILD_LIST }),
-        w = (0, g.A)(t.id),
-        H = (0, y.A)(t.id),
+        V = (0, y.A)(t, { section: j.JJy.GUILD_LIST }),
+        w = (0, A.A)(t.id),
+        H = (0, L.A)(t.id),
         Y = (0, N.A)(t),
-        F = (0, A.os)("GuildContextMenu"),
+        F = (0, g.os)("GuildContextMenu"),
         W = (0, M.c)(t);
     function J() {
         (0, a.mMO)(async () => {
@@ -82,7 +82,7 @@ function m(e) {
                                       let { default: e } = await Promise.all([
                                           i.e("53609"),
                                           i.e("62026"),
-                                          i.e("12646"),
+                                          i.e("36710"),
                                       ]).then(i.bind(i, 585265));
                                       return (i) => (0, n.jsx)(e, { ...i, guild: t });
                                   }),
@@ -128,7 +128,7 @@ function m(e) {
                                             let { default: e } = await Promise.all([
                                                 i.e("53609"),
                                                 i.e("62026"),
-                                                i.e("12646"),
+                                                i.e("36710"),
                                             ]).then(i.bind(i, 585265));
                                             return (i) => (0, n.jsx)(e, { ...i, guild: t });
                                         }),

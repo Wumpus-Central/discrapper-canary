@@ -11,7 +11,7 @@ var r = n(627968),
     d = n(572808),
     _ = n(9045),
     f = n(806931),
-    p = n(63587);
+    p = n(935086);
 let h = 13e3,
     m = (e, t) => e.type === f.lp.USER && e.speaking && e.user.id !== t,
     E = (e) => {
@@ -46,12 +46,12 @@ let h = 13e3,
                     }),
                 [w, t],
             ),
-            [x, P] = i.useState(!1),
+            [P, x] = i.useState(!1),
             [k, U] = i.useState(0),
             [G, F] = i.useState(0);
         return (
             i.useEffect(() => {
-                P(!1);
+                x(!1);
             }, [v, D]),
             i.useEffect(() => {
                 let e = y.current;
@@ -62,7 +62,7 @@ let h = 13e3,
             i.useEffect(() => {
                 if (!T) return;
                 let e = S.current;
-                if (null == e || !0 === x) return;
+                if (null == e || !0 === P) return;
                 let t = C(),
                     n = D.findIndex((e) => e === t);
                 N(t),
@@ -70,9 +70,9 @@ let h = 13e3,
                     [...e.children].forEach((e, t) => {
                         if ("VIDEO" !== e.nodeName) return;
                         let r = e;
-                        (r.currentTime = 0), t === n && (r.play(), P(!0));
+                        (r.currentTime = 0), t === n && (r.play(), x(!0));
                     });
-            }, [x, D, C, N, T]),
+            }, [P, D, C, N, T]),
             i.useEffect(() => {
                 T && (L?.speaking ? O(c.f.TALKING) : R === c.f.TALKING && O(c.f.IDLE));
             }, [L, R, O, T]),
@@ -128,12 +128,12 @@ let h = 13e3,
                                         if (R === c.f.HEAD_TURN && b?.headTurn?.includes(e)) {
                                             O(c.f.HEAD_TURN_BACK);
                                             let e = setTimeout(() => {
-                                                P(!1), y.current.delete(e);
+                                                x(!1), y.current.delete(e);
                                             }, 2e3);
                                             y.current.add(e);
                                         } else
                                             R === c.f.HEAD_TURN_BACK && b?.headTurnBack?.includes(e) && O(c.f.IDLE),
-                                                P(!1);
+                                                x(!1);
                                     },
                                     autoPlay: !1,
                                     loop: !1,

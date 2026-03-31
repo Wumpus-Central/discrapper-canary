@@ -9,29 +9,29 @@ var i = n(627968),
     c = n(73153),
     u = n(631670),
     m = n(974544),
-    _ = n(793574),
-    g = n(688810),
-    x = n(512213),
-    A = n(429619),
+    g = n(793574),
+    _ = n(688810),
+    A = n(512213),
+    x = n(429619),
     h = n(451909),
     p = n(202639),
-    f = n(407217),
-    T = n(919395),
-    S = n(884546),
-    E = n(287070),
+    T = n(407217),
+    f = n(919395),
+    E = n(884546),
+    S = n(287070),
     b = n(196291),
     C = n(101058),
-    v = n(836602),
-    N = n(814390),
+    N = n(836602),
+    v = n(814390),
     I = n(351906),
     j = n(287809),
     y = n(954571),
     O = n(927578),
     R = n(890668),
-    L = n(780207),
-    P = n(652215),
+    P = n(780207),
+    L = n(652215),
     D = n(985018),
-    G = n(21861);
+    G = n(752366);
 function M() {
     let e = (0, r.bG)([j.default], () => {
             let e = j.default.getCurrentUser();
@@ -42,37 +42,37 @@ function M() {
             pendingBio: n,
             pendingAvatar: l,
             pendingNameplate: M,
-            showNotice: U,
-            ...k
-        } = (0, r.cf)([v.A], () => ({ ...v.A.getPendingChanges(), showNotice: v.A.showNotice() })),
+            showNotice: k,
+            ...U
+        } = (0, r.cf)([N.A], () => ({ ...N.A.getPendingChanges(), showNotice: N.A.showNotice() })),
         w = (0, C.V7)({ userId: e.id, image: l }),
-        V = (0, T.lw)({ pendingValue: M, userValue: e?.collectibles?.nameplate }),
-        B = (0, N.A)() && null != n ? h.Ay.parse(void 0, n).content : n,
+        V = (0, f.lw)({ pendingValue: M, userValue: e?.collectibles?.nameplate }),
+        B = (0, v.A)() && null != n ? h.Ay.parse(void 0, n).content : n,
         F = O.Ay.canUsePremiumProfileCustomization(e),
-        { analyticsLocations: H, newestAnalyticsLocation: z } = (0, g.Ay)(_.A.USER_SETTINGS_USER_PROFILE);
+        { analyticsLocations: H, newestAnalyticsLocation: z } = (0, _.Ay)(g.A.USER_SETTINGS_USER_PROFILE);
     s.useEffect(() => () => c.h.wait(u.IM), []);
     let [Y, X] = s.useState(!1),
         K = !F,
         W = s.useRef(null);
     return t
         ? (0, i.jsx)(m.A, {})
-        : (0, i.jsxs)(g.f5, {
+        : (0, i.jsxs)(_.f5, {
               value: H,
               children: [
-                  (0, i.jsx)(A.A, {}),
-                  (0, i.jsx)(S.A, {
-                      profilePreview: (0, i.jsx)(E.A, {
+                  (0, i.jsx)(x.A, {}),
+                  (0, i.jsx)(E.A, {
+                      profilePreview: (0, i.jsx)(S.A, {
                           user: e,
                           canUsePremiumCustomization: F,
-                          onUpsellClick: L.A,
+                          onUpsellClick: P.A,
                           pendingBio: B,
-                          ...k,
+                          ...U,
                           pendingAvatar: w,
                       }),
-                      nameplatePreview: (0, i.jsx)(x.A, {
+                      nameplatePreview: (0, i.jsx)(A.A, {
                           user: e,
                           nameplate: V,
-                          ...k,
+                          ...U,
                           className: null == V ? G.tJ : void 0,
                           isHighlighted: !0,
                       }),
@@ -89,11 +89,11 @@ function M() {
                       }),
                   }),
                   K &&
-                      !U &&
+                      !k &&
                       (0, i.jsx)(p.d, {
                           className: G.EL,
                           showUpsell: !Y,
-                          text: D.intl.format(D.t.TmfgI2, { onClick: () => (0, f.K)({ analyticsSource: z }) }),
+                          text: D.intl.format(D.t.TmfgI2, { onClick: () => (0, T.K)({ analyticsSource: z }) }),
                           textVariant: "heading-md/medium",
                           useUpdatedStyling: !0,
                           button: (0, i.jsx)("div", {
@@ -101,7 +101,7 @@ function M() {
                               children: (0, i.jsx)(d.Button, {
                                   variant: "overlay-primary",
                                   onClick: () => {
-                                      y.default.track(P.HAw.TRY_IT_OUT_PRESET_CLICKED, {
+                                      y.default.track(L.HAw.TRY_IT_OUT_PRESET_CLICKED, {
                                           cta_variant: "floating_action_button",
                                       }),
                                           W?.current?.scrollIntoView({ behavior: "smooth" });

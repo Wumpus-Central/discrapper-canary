@@ -7,7 +7,7 @@ var r = n(627968),
     o = n(936504),
     l = n(158954),
     u = n(985018),
-    c = n(661321);
+    c = n(58298);
 let d = { FILLED: c.WL, OUTLINED: c.uu, LINK: c.M_, BLANK: c.Ev },
     _ = {
         BRAND: c.x8,
@@ -72,8 +72,8 @@ function m(e) {
             children: L,
             rel: w,
             buttonRef: M,
-            focusProps: x,
-            "aria-label": P,
+            focusProps: P,
+            "aria-label": x,
             submittingStartedLabel: k,
             submittingFinishedLabel: U,
             ...G
@@ -81,18 +81,18 @@ function m(e) {
         F = E || g,
         V = F && (null != O || null != b),
         B = V ? null : T,
-        H = p(x, t),
+        H = p(P, t),
         j = i.useRef(!1);
     i.useEffect(() => {
         !0 === g && ((j.current = !0), l.ORC.announce(k ?? u.intl.string(u.t.pfChQr))),
             !1 === g && !0 === j.current && l.ORC.announce(U ?? u.intl.string(u.t.SVParY));
     }, [g, k, U]);
     let Y = (0, r.jsx)(l.vN3, {
-        ...x,
+        ...P,
         offset: H,
         children: (0, r.jsxs)("button", {
             ...(F ? null : G),
-            "aria-label": P,
+            "aria-label": x,
             "aria-busy": !!g || void 0,
             ref: M,
             onClick: F ? (e) => e.preventDefault() : v,

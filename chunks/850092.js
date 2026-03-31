@@ -3,16 +3,16 @@ n.d(t, { A: () => c });
 var r = n(627968),
     i = n(64700),
     s = n(397927),
-    a = n(925946),
-    o = n(935520),
+    a = n(935520),
+    o = n(429521),
     l = n(985018),
-    u = n(886308);
+    u = n(74209);
 function c(e) {
     let { userId: t, onSendWave: n } = e,
-        { enabled: c } = o.A.useConfig({ location: "Friend Request Toast" }),
+        { enabled: c } = a.A.useConfig({ location: "Friend Request Toast" }),
         [d, _] = i.useState(null),
         [f, p] = i.useState(!1),
-        h = (0, a.A)(t),
+        h = (0, o.A)(t),
         m = i.useCallback(async () => {
             p(!0), await h(n, _), p(!1);
         }, [n, h]);

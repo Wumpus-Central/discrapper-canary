@@ -1,8 +1,8 @@
 n.d(t, { A: () => D }), n(321073);
 var i = n(627968),
-    a = n(64700),
-    l = n(503698),
-    r = n.n(l),
+    l = n(64700),
+    a = n(503698),
+    r = n.n(a),
     s = n(615300),
     o = n(311907),
     d = n(73939),
@@ -12,12 +12,12 @@ var i = n(627968),
     h = n(775121),
     _ = n(268218),
     m = n(361158),
-    g = n(97469),
-    p = n(186111),
+    p = n(97469),
+    g = n(186111),
     E = n(203982),
     I = n(652215),
     f = n(985018),
-    C = n(708015);
+    C = n(679328);
 let T = (0, _.Fe)({
         createPromise: () => Promise.resolve().then(n.bind(n, 944771)),
         webpackId: 944771,
@@ -25,7 +25,7 @@ let T = (0, _.Fe)({
     }),
     N = (0, _.Fe)({
         createPromise: () =>
-            Promise.all([n.e("43600"), n.e("68587"), n.e("91872"), n.e("78888")]).then(n.bind(n, 667587)),
+            Promise.all([n.e("43600"), n.e("68587"), n.e("33144"), n.e("78888")]).then(n.bind(n, 667587)),
         webpackId: 667587,
         name: "ChannelSettings",
     }),
@@ -44,12 +44,12 @@ let T = (0, _.Fe)({
                 n.e("16301"),
                 n.e("22191"),
                 n.e("25961"),
-                n.e("91872"),
+                n.e("33144"),
                 n.e("35894"),
                 n.e("50796"),
                 n.e("8458"),
                 n.e("11810"),
-                n.e("34656"),
+                n.e("4260"),
                 n.e("98700"),
             ]).then(n.bind(n, 422559)),
         webpackId: 422559,
@@ -61,14 +61,14 @@ let T = (0, _.Fe)({
         [I.zgK.COLLECTIBLES_SHOP]: () => (0, i.jsx)(S, {}),
         [I.zgK.COMPONENT_PLAYGROUND]: () => (0, i.jsx)(T, {}),
     },
-    y = "SHOWN",
-    b = "HIDDEN",
+    b = "SHOWN",
+    y = "HIDDEN",
     O = { friction: 10, tension: 100 };
 function L() {
-    return a.useEffect(() => (h.A.enable(), h.A.enableTemp(A.w), () => h.A.disableTemp()), []), null;
+    return l.useEffect(() => (h.A.enable(), h.A.enableTemp(A.w), () => h.A.disableTemp()), []), null;
 }
-class R extends a.PureComponent {
-    containerRef = a.createRef();
+class R extends l.PureComponent {
+    containerRef = l.createRef();
     static getDerivedStateFromProps(e, t) {
         return e.mode !== t.mode ? { animating: !0, mode: e.mode } : null;
     }
@@ -78,15 +78,15 @@ class R extends a.PureComponent {
         super(e);
         let t = 1,
             n = 1;
-        e.mode === b && ((t = 0.93), (n = 0)),
+        e.mode === y && ((t = 0.93), (n = 0)),
             (this.state = { animating: !1, scale: new s.A.Value(t), opacity: new s.A.Value(n), mode: e.mode });
     }
     componentDidUpdate(e) {
         let { mode: t } = this.props,
             { mode: n } = e;
         if (t !== n) {
-            if (t === y && n === b) return this.animateIn();
-            if (t === b && n === y) return this.animateUnder();
+            if (t === b && n === y) return this.animateIn();
+            if (t === y && n === b) return this.animateUnder();
         }
     }
     componentWillEnter(e) {
@@ -122,10 +122,10 @@ class R extends a.PureComponent {
     }
     render() {
         let { animating: e } = this.state,
-            { name: t, mode: n, children: a, baseLayer: l, ...o } = this.props,
-            d = n === b,
+            { name: t, mode: n, children: l, baseLayer: a, ...o } = this.props,
+            d = n === y,
             u = e || d ? this.getAnimatedStyle() : null,
-            A = !d && !l,
+            A = !d && !a,
             h = (0, i.jsx)(s.A.div, {
                 ref: (e) => (this.containerRef.current = null != e ? e.componentRef : void 0),
                 "data-layer": t ?? "base",
@@ -146,12 +146,12 @@ class R extends a.PureComponent {
                       })(t)
                     : void 0,
                 role: A ? "dialog" : void 0,
-                className: r()(C.qd, { [C.n3]: l, [C.bW]: e, "stop-animations": n === b }),
+                className: r()(C.qd, { [C.n3]: a, [C.bW]: e, "stop-animations": n === y }),
                 style: u,
                 ...o,
-                children: a,
+                children: l,
             });
-        return l ? h : (0, i.jsx)(c.Oky, { containerRef: this.containerRef, children: h });
+        return a ? h : (0, i.jsx)(c.Oky, { containerRef: this.containerRef, children: h });
     }
     getAnimatedStyle() {
         let { baseLayer: e } = this.props,
@@ -160,7 +160,7 @@ class R extends a.PureComponent {
         return { opacity: t, transform: i.enabled || e ? void 0 : [{ scale: n }, { translateZ: 0 }] };
     }
 }
-class P extends a.PureComponent {
+class P extends l.PureComponent {
     componentDidMount() {
         E._.subscribe(I.jej.LAYER_POP_ESCAPE_KEY, u.jH);
     }
@@ -169,24 +169,24 @@ class P extends a.PureComponent {
     }
     renderLayers() {
         let { children: e, layers: t, hasFullScreenLayer: n } = this.props,
-            { length: a } = t,
-            l = [];
+            { length: l } = t,
+            a = [];
         return (
-            l.push((0, i.jsx)(R, { mode: 0 !== a || n ? b : y, baseLayer: !0, children: e }, "layer-base")),
-            t.forEach((e, t) => l.push(this.renderComponent(e, t, a))),
-            l
+            a.push((0, i.jsx)(R, { mode: 0 !== l || n ? y : b, baseLayer: !0, children: e }, "layer-base")),
+            t.forEach((e, t) => a.push(this.renderComponent(e, t, l))),
+            a
         );
     }
     renderComponent(e, t, n) {
-        let a;
+        let l;
         return (
-            (a = "string" == typeof e ? v[e]() : (0, i.jsx)(e, {})),
+            (l = "string" == typeof e ? v[e]() : (0, i.jsx)(e, {})),
             (0, i.jsxs)(
                 R,
                 {
                     name: "string" == typeof e ? e : void 0,
-                    mode: t === n - 1 ? y : b,
-                    children: [(0, i.jsx)(L, {}), a],
+                    mode: t === n - 1 ? b : y,
+                    children: [(0, i.jsx)(L, {}), l],
                 },
                 `layer-${t}`,
             )
@@ -212,10 +212,10 @@ class P extends a.PureComponent {
     }
 }
 function D(e) {
-    let t = (0, g.NC)(),
-        n = (0, o.bG)([p.A], () => p.A.getLayers()),
-        a = (0, m.xr)(
+    let t = (0, p.NC)(),
+        n = (0, o.bG)([g.A], () => g.A.getLayers()),
+        l = (0, m.xr)(
             (e) => e.fullScreenLayers.length > 0 && !e.fullScreenLayers.some((e) => e.options.showAppUnderLayer),
         );
-    return (0, i.jsx)(P, { ...e, sidebarTheme: t, layers: n, hasFullScreenLayer: a });
+    return (0, i.jsx)(P, { ...e, sidebarTheme: t, layers: n, hasFullScreenLayer: l });
 }

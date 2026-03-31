@@ -4,7 +4,7 @@ n(64700);
 var l = n(503698),
     s = n.n(l),
     a = n(225180),
-    r = n(295485);
+    r = n(3074);
 function o(e) {
     let { gameId: t } = e,
         n = (0, a.A)(t, "cover");

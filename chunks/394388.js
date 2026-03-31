@@ -1,7 +1,7 @@
 n.d(t, { A: () => M });
 var i = n(627968),
-    a = n(64700),
-    l = n(311907),
+    l = n(64700),
+    a = n(311907),
     r = n(554146),
     s = n(397927),
     o = n(155718),
@@ -9,27 +9,27 @@ var i = n(627968),
     d = n(793574),
     u = n(367727),
     _ = n(509536),
-    m = n(881635),
-    A = n(363487),
+    A = n(881635),
+    m = n(363487),
     E = n(828162),
-    I = n(71393),
-    T = n(888675),
-    f = n(652215),
-    N = n(49999),
-    g = n(985018),
-    C = n(333354),
-    h = n(884967),
+    T = n(71393),
+    I = n(888675),
+    N = n(652215),
+    g = n(49999),
+    f = n(985018),
+    C = n(136708),
+    h = n(7232),
     p = n(274993),
-    x = n(218924);
-function R(e) {
-    let { title: t, body: n, guild: a, analyticsLocations: r } = e,
-        o = (0, l.bG)([c.A], () => c.A.useReducedMotion);
+    S = n(218924);
+function x(e) {
+    let { title: t, body: n, guild: l, analyticsLocations: r } = e,
+        o = (0, a.bG)([c.A], () => c.A.useReducedMotion);
     return (0, i.jsxs)("div", {
         className: h.kL,
         children: [
             (0, i.jsx)("div", {
                 className: h.ZS,
-                children: (0, i.jsx)("img", { className: h.Sl, src: o ? x.A : p.A, alt: "Boost gem" }),
+                children: (0, i.jsx)("img", { className: h.Sl, src: o ? S.A : p.A, alt: "Boost gem" }),
             }),
             (0, i.jsxs)("div", {
                 className: h.Qs,
@@ -48,24 +48,24 @@ function R(e) {
                 ],
             }),
             (0, i.jsx)("div", {
-                children: (0, i.jsx)(m.A, {
-                    guild: a,
+                children: (0, i.jsx)(A.A, {
+                    guild: l,
                     analyticsLocations: r,
-                    analyticsLocation: { page: f.liQ.GUILD_CHANNEL, section: f.JJy.CHANNEL_TEXT_AREA },
+                    analyticsLocation: { page: N.liQ.GUILD_CHANNEL, section: N.JJy.CHANNEL_TEXT_AREA },
                 }),
             }),
         ],
     });
 }
-function S(e) {
+function R(e) {
     let { guild: t } = e;
-    a.useEffect(() => {
-        (0, u.uh)(r.M.FIRST_BOOSTER_UPSELL_OVERSEER, { dismissAction: N.i.AUTO_DISMISS, guildId: t.id });
+    l.useEffect(() => {
+        (0, u.uh)(r.M.FIRST_BOOSTER_UPSELL_OVERSEER, { dismissAction: g.i.AUTO_DISMISS, guildId: t.id });
     }, [t.id]);
-    let n = (0, A.A)(t.id);
-    return (0, i.jsx)(R, {
-        title: g.intl.string(C.default.qGDEON),
-        body: g.intl.format(C.default["s+HTdX"], {
+    let n = (0, m.A)(t.id);
+    return (0, i.jsx)(x, {
+        title: f.intl.string(C.default.qGDEON),
+        body: f.intl.format(C.default["s+HTdX"], {
             viewAllPerks: (e) =>
                 (0, i.jsx)(s.DUT, {
                     tag: "a",
@@ -76,8 +76,8 @@ function S(e) {
                             : (0, _.K4)({
                                   guildId: t.id,
                                   location: {
-                                      section: f.JJy.CHANNEL_TEXT_AREA,
-                                      object: f.ZSU.BOOST_ANNOUNCEMENT_UPSELL,
+                                      section: N.JJy.CHANNEL_TEXT_AREA,
+                                      object: N.ZSU.BOOST_ANNOUNCEMENT_UPSELL,
                                   },
                               });
                     },
@@ -90,15 +90,15 @@ function S(e) {
 }
 function O(e) {
     let { boostingPrompt: t, guild: n } = e;
-    return t.guildBoostUpsellType === o.Mk.FIRST_BOOSTER ? (0, i.jsx)(S, { guild: n }) : null;
+    return t.guildBoostUpsellType === o.Mk.FIRST_BOOSTER ? (0, i.jsx)(R, { guild: n }) : null;
 }
 function M(e) {
     let { boostingPrompt: t, channel: n } = e,
-        a = n.guild_id,
-        r = (0, l.bG)([I.A], () => I.A.getGuild(a), [a]);
+        l = n.guild_id,
+        r = (0, a.bG)([T.A], () => T.A.getGuild(l), [l]);
     return null == r
         ? null
-        : (0, i.jsx)(T.A, {
+        : (0, i.jsx)(I.A, {
               contentClassName: h.FG,
               iconContainerClassName: h.zc,
               iconNode: (0, i.jsx)(s.XFE, { colorClass: h.Kk }),

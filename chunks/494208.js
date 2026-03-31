@@ -7,7 +7,7 @@ var i = n(627968),
     o = n(707539),
     c = n(617011),
     d = n(985018),
-    u = n(94287);
+    u = n(857476);
 function h(e) {
     let { channel: t } = e,
         [n, h] = l.useState(!1),

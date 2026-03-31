@@ -1,7 +1,7 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => p });
 var i = n(627968),
-    a = n(64700),
-    l = n(835245),
+    l = n(64700),
+    a = n(835245),
     r = n(607399),
     s = n(732955),
     o = n(397927),
@@ -11,15 +11,15 @@ var i = n(627968),
     A = n(652215),
     h = n(613057),
     _ = n(985018),
-    m = n(34960);
-function g(e) {
+    m = n(583779);
+function p(e) {
     let { applicationId: t } = e.match.params,
-        [g, p] = a.useState(!1),
-        E = a.useRef(!1),
-        [I, f] = a.useState(null),
-        C = !c.isPlatformEmbedded && !r.Fr && !g,
-        T = a.useMemo(() => (0, l.A)(), []);
-    return (a.useEffect(() => {
+        [p, g] = l.useState(!1),
+        E = l.useRef(!1),
+        [I, f] = l.useState(null),
+        C = !c.isPlatformEmbedded && !r.Fr && !p,
+        T = l.useMemo(() => (0, a.A)(), []);
+    return (l.useEffect(() => {
         C &&
             !0 !== E.current &&
             (Promise.resolve()
@@ -60,7 +60,7 @@ function g(e) {
                   children: [
                       (0, i.jsx)(o.Heading, { variant: "heading-xxl/bold", children: _.intl.string(_.t.csrAMJ) }),
                       (0, i.jsx)(o.Text, { variant: "text-xs/semibold", children: _.intl.string(_.t["m1+IBn"]) }),
-                      (0, i.jsx)(s.$nd, { variant: "primary", text: _.intl.string(_.t.fIv16B), onClick: () => p(!0) }),
+                      (0, i.jsx)(s.$nd, { variant: "primary", text: _.intl.string(_.t.fIv16B), onClick: () => g(!0) }),
                   ],
               })
             : (0, i.jsxs)("div", {

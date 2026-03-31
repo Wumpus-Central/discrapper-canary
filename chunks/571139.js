@@ -1,74 +1,74 @@
-n.d(t, { A: () => g }), n(321073);
+n.d(t, { A: () => N }), n(321073);
 var i = n(627968);
 n(64700);
 var l = n(503698),
-    r = n.n(l),
-    s = n(873263),
-    a = n(311907),
+    s = n.n(l),
+    a = n(873263),
+    r = n(311907),
     o = n(314116),
     c = n(397927),
-    u = n(334465),
-    d = n(71393),
-    _ = n(967198),
-    E = n(624458),
-    T = n(202384),
-    A = n(513461),
-    I = n(709977),
+    d = n(334465),
+    u = n(71393),
+    h = n(967198),
+    A = n(624458),
+    _ = n(202384),
+    m = n(513461),
+    g = n(709977),
     p = n(212455),
-    N = n(652215),
-    m = n(746080),
-    R = n(985018),
-    h = n(79790),
-    S = n(215433);
-let g = () => {
-    let e = (0, a.bG)([_.A], () => _.A.getGuildId(), []),
-        t = (0, a.bG)([d.A], () => d.A.getGuild(e), [e]),
-        l = (0, a.bG)([p.A], () => (null != e ? p.A.getRequest(e) : null), [e]),
-        g = (0, s.zy)(),
-        C = (0, u.B)(g.pathname, N.BVt.CHANNEL(t?.id, m.VV.GUILD_ONBOARDING))?.isExact === !0;
-    if (null == t || !(0, I.Qd)(t) || C) return null;
-    let O = l?.applicationStatus ?? A.B5.STARTED,
+    f = n(652215),
+    x = n(746080),
+    E = n(985018),
+    I = n(610749),
+    C = n(375986);
+let N = () => {
+    let e = (0, r.bG)([h.A], () => h.A.getGuildId(), []),
+        t = (0, r.bG)([u.A], () => u.A.getGuild(e), [e]),
+        l = (0, r.bG)([p.A], () => (null != e ? p.A.getRequest(e) : null), [e]),
+        N = (0, a.zy)(),
+        T = (0, d.B)(N.pathname, f.BVt.CHANNEL(t?.id, x.VV.GUILD_ONBOARDING))?.isExact === !0;
+    if (null == t || !(0, g.Qd)(t) || T) return null;
+    let S = l?.applicationStatus ?? m.B5.STARTED,
+        b = null,
         y = null,
-        x = null,
-        f = null,
-        P = [h.lm, S.lm];
-    switch (O) {
-        case A.B5.SUBMITTED:
-            (y = R.intl.string(R.t["5iLvSx"])),
-                (x = R.intl.string(R.t.mqtdmQ)),
-                (f = () => {
+        v = null,
+        j = [I.lm, C.lm];
+    switch (S) {
+        case m.B5.SUBMITTED:
+            (b = E.intl.string(E.t["5iLvSx"])),
+                (y = E.intl.string(E.t.mqtdmQ)),
+                (v = () => {
                     (0, o.A)({
-                        title: R.intl.string(R.t.aIz1oV),
-                        subtitle: R.intl.string(R.t["13tjTU"]),
+                        title: E.intl.string(E.t.aIz1oV),
+                        subtitle: E.intl.string(E.t["13tjTU"]),
                         variant: "primary",
-                        confirmText: R.intl.string(R.t["cY+Oob"]),
-                        onConfirm: () => E.A.removeGuildJoinRequest(t.id),
+                        confirmText: E.intl.string(E.t["cY+Oob"]),
+                        onConfirm: () => A.A.removeGuildJoinRequest(t.id),
                     });
                 });
             break;
-        case A.B5.REJECTED:
-            (y = R.intl.string(R.t.lk30cY)),
-                (x = R.intl.string(R.t["8RrsHr"])),
-                (f = () => {
+        case m.B5.REJECTED:
+            (b = E.intl.string(E.t.lk30cY)),
+                (y = E.intl.string(E.t["8RrsHr"])),
+                (v = () => {
                     (0, c.mMO)(async () => {
                         let { default: e } = await n.e("37548").then(n.bind(n, 856103));
                         return (n) => (0, i.jsx)(e, { guildId: t.id, ...n });
                     });
                 }),
-                P.push(h.z3);
+                j.push(I.z3);
             break;
         default:
-            (y = R.intl.string(R.t.G5YKXP)),
-                (x = R.intl.string(R.t["r8/DT+"])),
-                (f = () => {
-                    (0, T.Ze)(t.id);
+            (b = E.intl.string(E.t.G5YKXP)),
+                (y = E.intl.string(E.t["r8/DT+"])),
+                (v = () => {
+                    (0, _.Ze)(t.id);
                 });
     }
     return (0, i.jsxs)("div", {
-        className: r()(...P),
+        className: s()(...j),
         children: [
-            (0, i.jsx)(c.Text, { className: h.wx, variant: "text-sm/normal", children: y }),
-            (0, i.jsx)(c.Button, { variant: "overlay-primary", size: "sm", onClick: f, text: x }),
+            (0, i.jsx)(c.Text, { className: I.wx, variant: "text-sm/normal", children: b }),
+            (0, i.jsx)(c.Button, { variant: "overlay-primary", size: "sm", onClick: v, text: y }),
         ],
     });
 };

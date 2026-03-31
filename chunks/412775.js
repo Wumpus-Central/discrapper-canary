@@ -1,83 +1,83 @@
-t.d(n, { A: () => C });
+t.d(n, { A: () => E });
 var i = t(627968);
 t(64700);
 var s = t(311907),
-    r = t(397927),
-    a = t(821269),
-    l = t(437774),
+    l = t(397927),
+    r = t(821269),
+    a = t(437774),
     o = t(773669),
     d = t(967198),
     c = t(351906),
     u = t(183555),
     A = t(346713),
     _ = t(484509),
-    m = t(389996),
-    x = t(46937),
-    p = t(361311),
-    f = t(743987),
-    h = t(900179),
+    x = t(389996),
+    p = t(46937),
+    m = t(361311),
+    I = t(743987),
+    f = t(900179),
     g = t(280645),
-    I = t(928223),
-    j = t(518477),
-    b = t(985018),
-    v = t(824860);
-function C(e) {
-    let { user: n, displayProfile: t, onClose: C } = e,
+    h = t(928223),
+    b = t(518477),
+    j = t(985018),
+    C = t(47049);
+function E(e) {
+    let { user: n, displayProfile: t, onClose: E } = e,
         { trackUserProfileAction: N } = (0, u.NJ)(),
-        y = (0, s.bG)([d.A], () => d.A.getGuildId()),
-        E = (0, a.q)({ userId: n.id }),
-        T = (0, s.bG)([c.A], () => c.A.hidePersonalInformation),
+        v = (0, s.bG)([d.A], () => d.A.getGuildId()),
+        T = (0, r.q)({ userId: n.id }),
+        y = (0, s.bG)([c.A], () => c.A.hidePersonalInformation),
         L = (0, s.bG)([o.default], () => o.default.locale),
         P = (0, _.A)(n.id),
         O = (0, A.A)(n.id);
-    return (0, i.jsxs)(r.IpV, {
+    return (0, i.jsxs)(l.IpV, {
         fade: !0,
-        className: v.XG,
+        className: C.XG,
         children: [
-            t?.bio != null && t?.bio !== "" && !T && (0, i.jsx)(m.A, { userBio: t.bio, setLineClamp: !1 }),
+            t?.bio != null && t?.bio !== "" && !y && (0, i.jsx)(x.A, { userBio: t.bio, setLineClamp: !1 }),
             t?.guildId != null && (0, i.jsx)(g.A, { userId: n.id, guildId: t.guildId }),
             n.isProvisional &&
-                (0, i.jsx)(h.A, {
-                    heading: b.intl.string(b.t.Iyka0U),
-                    headingIcon: (0, i.jsx)(r.EpV, { size: "xxs", color: r.LU0.colors.TEXT_STRONG }),
+                (0, i.jsx)(f.A, {
+                    heading: j.intl.string(j.t.Iyka0U),
+                    headingIcon: (0, i.jsx)(l.EpV, { size: "xxs", color: l.LU0.colors.TEXT_STRONG }),
                     headingColor: "text-default",
-                    children: (0, i.jsx)(l.T, { userId: n.id }),
+                    children: (0, i.jsx)(a.T, { userId: n.id }),
                 }),
-            E.length > 0 &&
-                (0, i.jsx)(h.A, {
-                    heading: b.intl.string(b.t["Uv/eTx"]),
-                    children: (0, i.jsx)(p.A, { applicationIds: E }),
+            T.length > 0 &&
+                (0, i.jsx)(f.A, {
+                    heading: j.intl.string(j.t["Uv/eTx"]),
+                    children: (0, i.jsx)(m.A, { applicationIds: T }),
                 }),
-            (0, i.jsx)(h.A, {
-                heading: b.intl.string(b.t.a6XYD9),
-                children: (0, i.jsx)(f.A, { userId: n.id, guildId: t?.guildId, tooltipDelay: j.In }),
+            (0, i.jsx)(f.A, {
+                heading: j.intl.string(j.t.a6XYD9),
+                children: (0, i.jsx)(I.A, { userId: n.id, guildId: t?.guildId, tooltipDelay: b.In }),
             }),
             P.length > 0 &&
-                (0, i.jsx)(h.A, {
-                    heading: b.intl.string(b.t["3fe7U5"]),
-                    scrollTargetId: j.bk.CONNECTIONS,
-                    children: (0, i.jsx)(x.Ay, { connectedAccounts: P, className: v.oQ, userId: n.id, locale: L }),
+                (0, i.jsx)(f.A, {
+                    heading: j.intl.string(j.t["3fe7U5"]),
+                    scrollTargetId: b.bk.CONNECTIONS,
+                    children: (0, i.jsx)(p.Ay, { connectedAccounts: P, className: C.oQ, userId: n.id, locale: L }),
                 }),
             O.length > 0 &&
-                (0, i.jsx)(h.A, {
-                    heading: b.intl.string(b.t.PHjkRE),
+                (0, i.jsx)(f.A, {
+                    heading: j.intl.string(j.t.PHjkRE),
                     children: O.map((e) =>
                         (0, i.jsx)(
-                            x.Wc,
+                            p.Wc,
                             {
-                                className: v.MI,
+                                className: C.MI,
                                 applicationRoleConnection: e,
                                 locale: L,
                                 onApplicationClicked: () => {
-                                    N({ action: "PRESS_APP_CONNECTION" }), C();
+                                    N({ action: "PRESS_APP_CONNECTION" }), E();
                                 },
-                                selectedGuildId: y ?? void 0,
+                                selectedGuildId: v ?? void 0,
                             },
                             e.application.id,
                         ),
                     ),
                 }),
-            (0, i.jsx)(I.A, { userId: n.id }),
+            (0, i.jsx)(h.A, { userId: n.id }),
         ],
     });
 }

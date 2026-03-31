@@ -9,8 +9,8 @@ var i = n(627968),
     c = n(652215),
     u = n(788868),
     m = n(985018),
-    _ = n(45812);
-let g = [
+    g = n(775165);
+let _ = [
     {
         getPerkHeading: () => m.intl.string(m.t.tIiwuj),
         getPerkPreviewLightTheme: () => n(604203),
@@ -148,7 +148,7 @@ function A(e) {
         l = s === c.TVA.NONE ? "text-muted" : "text-strong",
         r = s === c.TVA.NONE || null == s ? "heading-xl/normal" : "heading-xl/bold";
     return (0, i.jsxs)("th", {
-        className: a()(_.PG, n),
+        className: a()(g.PG, n),
         scope: "col",
         children: [
             (0, i.jsx)(o.Heading, { color: l, variant: r, children: t }),
@@ -165,12 +165,12 @@ function x(e) {
     let t,
         { className: n, textVariant: s = "text-md/bold", value: l } = e;
     if ("boolean" == typeof l) {
-        let e = a()(_.Jk, { [_.I$]: l });
+        let e = a()(g.Jk, { [g.I$]: l });
         t = l
             ? (0, i.jsx)(o.A9s, { size: "md", color: "currentColor", className: e })
             : (0, i.jsx)(o.PGe, { size: "md", color: "currentColor", className: e });
     } else t = (0, i.jsx)(o.Text, { color: "interactive-text-active", variant: s, children: l });
-    return (0, i.jsx)("td", { className: a()(_.xR, n), children: t });
+    return (0, i.jsx)("td", { className: a()(g.xR, n), children: t });
 }
 function h(e) {
     let { currentTier: t } = e,
@@ -189,9 +189,9 @@ function h(e) {
     return null == n
         ? null
         : (0, i.jsx)("div", {
-              className: a()(_.ER, { [_.GH]: n === c.TVA.TIER_2, [_.z5]: n === c.TVA.TIER_3 }),
+              className: a()(g.ER, { [g.GH]: n === c.TVA.TIER_2, [g.z5]: n === c.TVA.TIER_3 }),
               children: (0, i.jsx)(o.Text, {
-                  className: _.uQ,
+                  className: g.uQ,
                   color: "always-white",
                   variant: "text-xs/bold",
                   children: t === c.TVA.TIER_3 ? m.intl.string(m.t.d849Up) : m.intl.string(m.t.dZeX1z),
@@ -202,13 +202,13 @@ function p(e) {
     let { isFocused: t, handleFocus: n, handleRowBlur: l, theme: d, row: c, hideTier0: u } = e,
         m = s.useRef(null);
     return (0, i.jsxs)("tr", {
-        className: _.__invalid_tableRow,
+        className: g.__invalid_tableRow,
         children: [
             (0, i.jsx)("th", {
-                className: a()(_.xR, _.uB),
+                className: a()(g.xR, g.uB),
                 scope: "row",
                 children: (0, i.jsx)(o.DUT, {
-                    className: a()(_.VC, _.xR, _.Rk),
+                    className: a()(g.VC, g.xR, g.Rk),
                     onFocus: n,
                     onBlur: l,
                     onMouseEnter: n,
@@ -221,7 +221,7 @@ function p(e) {
                         position: "bottom",
                         renderPopout: () =>
                             (0, i.jsx)("img", {
-                                className: _.Mz,
+                                className: g.Mz,
                                 src: (0, r.Mw)(d) ? c.getPerkPreviewDarkTheme() : c.getPerkPreviewLightTheme(),
                                 alt: "",
                             }),
@@ -251,24 +251,24 @@ let T = function (e) {
         children: [
             !u &&
                 (0, i.jsx)(o.Heading, {
-                    className: _.R_,
+                    className: g.R_,
                     variant: "heading-xxl/extrabold",
                     children: m.intl.string(m.t["9GGb9k"]),
                 }),
             (0, i.jsxs)("div", {
-                className: _.wY,
+                className: g.wY,
                 children: [
                     null != r && (0, i.jsx)(h, { currentTier: r.premiumTier }),
                     (0, i.jsxs)("table", {
-                        className: _.tp,
+                        className: g.tp,
                         cellPadding: 0,
                         cellSpacing: 0,
                         children: [
                             (0, i.jsx)("thead", {
                                 children: (0, i.jsxs)("tr", {
-                                    className: _.__invalid_tableRow,
+                                    className: g.__invalid_tableRow,
                                     children: [
-                                        (0, i.jsx)(A, { className: _.VC, children: m.intl.string(m.t.F5MY0k) }),
+                                        (0, i.jsx)(A, { className: g.VC, children: m.intl.string(m.t.F5MY0k) }),
                                         !x && (0, i.jsx)(A, { tier: c.TVA.NONE, children: m.intl.string(m.t.mx8j2m) }),
                                         (0, i.jsx)(A, { tier: c.TVA.TIER_1, children: m.intl.string(m.t.nzXtaS) }),
                                         (0, i.jsx)(A, { tier: c.TVA.TIER_2, children: m.intl.string(m.t["h33/uW"]) }),
@@ -277,8 +277,8 @@ let T = function (e) {
                                 }),
                             }),
                             (0, i.jsx)("tbody", {
-                                className: _.__invalid_tableBody,
-                                children: g.map((e, s) => {
+                                className: g.__invalid_tableBody,
+                                children: _.map((e, s) => {
                                     let a = n === s;
                                     return void 0 === e.predicate
                                         ? (0, i.jsx)(

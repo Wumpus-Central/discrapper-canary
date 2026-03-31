@@ -5,7 +5,7 @@ n(503698);
 var s = n(382222),
     r = n(397927),
     a = n(985018),
-    d = n(47409);
+    d = n(555960);
 function o(e) {
     let { testimonial: t, className: n } = e,
         { message: l, profilePic: s, adminTitle: o, emphasisColor: c = "interactive-text-default" } = t;

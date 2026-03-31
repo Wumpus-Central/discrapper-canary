@@ -14,7 +14,7 @@ var r = n(627968),
     p = n(971745),
     h = n(652215),
     m = n(985018),
-    E = n(921629);
+    E = n(39610);
 let g = i.lazy(() => Promise.all([n.e("47950"), n.e("87680")]).then(n.bind(n, 148259))),
     A = 7,
     I = () => Promise.resolve();
@@ -154,10 +154,10 @@ function N(e) {
             },
             [n, s],
         ),
-        x = (e) => {
+        P = (e) => {
             s((0, u.LX)(e));
         },
-        P = (0, r.jsxs)(r.Fragment, {
+        x = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(i.Suspense, {
                     fallback: null,
@@ -165,7 +165,7 @@ function N(e) {
                         onChange: M,
                         onChangeComplete: (e) => {
                             let { hex: t } = e;
-                            return x(t);
+                            return P(t);
                         },
                         color: b.pending.hsl,
                     }),
@@ -202,7 +202,7 @@ function N(e) {
             ],
         }),
         k = S ?? _.l;
-    return (0, r.jsx)(k, { "aria-label": m.intl.string(m.t.WTqQ5e), className: a()(E.zi, y), children: P });
+    return (0, r.jsx)(k, { "aria-label": m.intl.string(m.t.WTqQ5e), className: a()(E.zi, y), children: x });
 }
 let C = i.memo(N);
 function R(e) {

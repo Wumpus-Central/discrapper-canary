@@ -22,7 +22,7 @@ var r = n(627968),
     S = n(483084),
     y = n(641668),
     v = n(715022),
-    N = n(27576);
+    N = n(782587);
 let C = 24,
     R = 36;
 function O(e) {
@@ -37,8 +37,8 @@ function O(e) {
             shouldFocusWrap: L,
             placeholder: w = t.SELECT_PLACEHOLDER,
             name: M,
-            form: x,
-            autoComplete: P,
+            form: P,
+            autoComplete: x,
             maxOptionsVisible: k = 5,
             options: U,
             formatOption: G,
@@ -199,9 +199,9 @@ function O(e) {
                 }),
                 (0, r.jsx)(A.H, {
                     name: M,
-                    form: x,
+                    form: P,
                     disabled: eu,
-                    autoComplete: P,
+                    autoComplete: x,
                     selectionMode: n,
                     selectedItems: em,
                     onSelectionChange: eg,

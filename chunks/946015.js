@@ -1,16 +1,16 @@
-n.d(t, { s: () => x });
+n.d(t, { s: () => A });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
     a = n.n(l),
-    r = n(20976),
-    o = n(432748);
+    r = n(890425),
+    o = n(117457);
 let d = { VERTICAL: r.yG, HORIZONTAL: r.OZ, HORIZONTAL_REVERSE: r.y0 },
     c = { START: r.KF, END: r.HA, CENTER: r.pb, BETWEEN: r.G1, AROUND: r.nm },
     u = { NO_WRAP: r.B, WRAP: r.aR, WRAP_REVERSE: r.KM },
     m = { START: r.j$, END: r.S_, CENTER: r.YO, STRETCH: r.ai },
-    _ = { SMALL: o.sf, LARGE: o.S6 };
-class g extends s.PureComponent {
+    g = { SMALL: o.sf, LARGE: o.S6 };
+class _ extends s.PureComponent {
     static defaultProps = { className: o.Gu, style: {}, wrap: !1 };
     render() {
         let { children: e, className: t, shrink: n, grow: l, basis: r, style: d, wrap: c, ...u } = this.props,
@@ -30,13 +30,13 @@ class g extends s.PureComponent {
         return (0, i.jsx)("div", { ...m, children: e });
     }
 }
-class x extends s.PureComponent {
-    static Child = g;
+class A extends s.PureComponent {
+    static Child = _;
     static Direction = d;
     static Align = m;
     static Justify = c;
     static Wrap = u;
-    static Gutter = _;
+    static Gutter = g;
     static defaultProps = {
         direction: d.HORIZONTAL,
         justify: c.START,
@@ -59,10 +59,10 @@ class x extends s.PureComponent {
                 grow: c,
                 basis: u,
                 style: m,
-                gutter: _,
-                ...g
+                gutter: g,
+                ..._
             } = this.props,
-            x = { flexShrink: d, flexGrow: c, flexBasis: u, ...m };
-        return (0, i.jsx)("div", { style: x, className: a()(o.Uu, n, s, l, r, _, t), ...g, children: e });
+            A = { flexShrink: d, flexGrow: c, flexBasis: u, ...m };
+        return (0, i.jsx)("div", { style: A, className: a()(o.Uu, n, s, l, r, g, t), ..._, children: e });
     }
 }
