@@ -1,6 +1,7 @@
 e.exports = {
     LF: "inputField__085ad",
     qX: "inputFieldRange__085ad inputField__085ad",
+    e2: "inputFieldFullWidth__085ad inputField__085ad",
     Nz: "picker__085ad",
     qf: "placeholder__085ad",
     wO: "inputGroup__085ad",

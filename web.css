@@ -2336,7 +2336,7 @@
     opacity: .5
 }
 
-.textButton__7a01b:hover .text__7a01b,
+.textButton__7a01b:hover:not(:disabled) .text__7a01b,
 :where(.decorate-links) .text__7a01b {
     text-decoration: underline
 }
