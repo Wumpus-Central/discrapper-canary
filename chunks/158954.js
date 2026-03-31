@@ -119,6 +119,7 @@ n.d(t, {
     Kck: () => z.TopicsIcon,
     KjF: () => el.Kj,
     L5T: () => z.SpotifyNeutralIcon,
+    L71: () => Z.NitroWishlistingWumpusRive,
     L9S: () => z.IdIcon,
     LIQ: () => z.ThemeMidnightIcon,
     LK_: () => z.WaveformIcon,

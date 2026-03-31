@@ -38,35 +38,42 @@ function T(e) {
             children: u,
             cardStyle: h,
             skuPreviewStyle: m,
-            disableHoverOrFocus: g,
-            onHoverOrFocusChange: I,
-            onClick: T,
-            "aria-label": S,
+            skuAssetClassName: g,
+            disableHoverOrFocus: I,
+            onHoverOrFocusChange: T,
+            onClick: S,
+            "aria-label": y,
         } = e,
-        y = i.useRef(null),
-        { isHoveringOrFocusing: v } = (0, d.A)(y),
-        N = i.useRef(I),
-        C = (0, l.bG)([c.A], () => c.A.getApplication(t.applicationId));
+        v = i.useRef(null),
+        { isHoveringOrFocusing: N } = (0, d.A)(v),
+        C = i.useRef(T),
+        R = (0, l.bG)([c.A], () => c.A.getApplication(t.applicationId));
     return (
         i.useEffect(() => {
-            N.current = I;
-        }, [I]),
+            C.current = T;
+        }, [T]),
         i.useEffect(() => {
-            N.current?.(v);
-        }, [v]),
+            C.current?.(N);
+        }, [N]),
         (0, r.jsxs)(o.sqX, {
-            ref: y,
+            ref: v,
             className: a()(E.Nr, h),
-            onClick: T,
-            "aria-label": S,
+            onClick: S,
+            "aria-label": y,
             style: A(s),
             children: [
                 (0, r.jsx)(o.AC4, { children: (0, r.jsx)(o.H, { children: (0, f.TC)(t) }) }),
                 (0, r.jsx)("div", {
                     className: a()(E.ev, m),
-                    children: (0, r.jsx)(_.Ay, { sku: t, isFocused: !g && v, user: n }),
+                    children: (0, r.jsx)(_.Ay, {
+                        sku: t,
+                        isFocused: !I && N,
+                        user: n,
+                        eventTargetRef: v,
+                        assetClassName: g,
+                    }),
                 }),
-                (0, r.jsx)(p.P, { spec: s, application: C }),
+                (0, r.jsx)(p.P, { spec: s, application: R }),
                 u,
             ],
         })

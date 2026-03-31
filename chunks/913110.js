@@ -8,4 +8,7 @@ e.exports = {
     M4: "nameplatePreview__517e1",
     N1: "nameplatePreviewRescaler__517e1",
     hT: "bundlePreview__517e1",
+    yv: "premiumPreview__517e1",
+    GY: "premiumBackdrop__517e1",
+    MO: "premiumRive__517e1",
 };
