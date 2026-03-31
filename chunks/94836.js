@@ -1,4 +1,4 @@
-n.d(t, { A: () => C, a: () => E });
+n.d(t, { A: () => E, a: () => N });
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -13,12 +13,12 @@ var a = n(627968),
     h = n(652176),
     f = n(371794),
     g = n(409626),
-    p = n(368546),
-    _ = n(985018),
+    _ = n(368546),
+    p = n(985018),
     v = n(282063),
-    j = n(426401),
-    A = n(791129);
-function C(e) {
+    A = n(426401),
+    j = n(791129);
+function E(e) {
     let { detectedGame: t, trackAction: n } = e,
         i = l.useRef(null),
         r = l.useMemo(() => {
@@ -39,21 +39,21 @@ function C(e) {
                       className: v.bV,
                       variant: "text-md/semibold",
                       color: "text-strong",
-                      children: _.intl.string(_.t.bNdK5x),
+                      children: p.intl.string(p.t.bNdK5x),
                   }),
                   (0, a.jsxs)("div", {
-                      className: s ? j.DA : j.pZ,
+                      className: s ? A.DA : A.pZ,
                       children: [
                           (0, a.jsx)(o.zCo, {
                               ref: i,
-                              className: j.ec,
+                              className: A.ec,
                               orientation: "horizontal",
                               children: r.map((e, t) =>
                                   (0, a.jsx)(
                                       o.DUT,
                                       {
-                                          className: j.gw,
-                                          focusProps: { offset: 4, ringClassName: j.jR },
+                                          className: A.gw,
+                                          focusProps: { offset: 4, ringClassName: A.jR },
                                           onClick: () => {
                                               n(g.Ws.ClickImage),
                                                   (0, x.R)({
@@ -65,8 +65,8 @@ function C(e) {
                                           },
                                           children: (0, a.jsx)("img", {
                                               src: e.url,
-                                              className: j.Zm,
-                                              alt: _.intl.formatToPlainString(_.t.COYYrn, { game: name }),
+                                              className: A.Zm,
+                                              alt: p.intl.formatToPlainString(p.t.COYYrn, { game: name }),
                                           }),
                                       },
                                       t,
@@ -75,19 +75,19 @@ function C(e) {
                           }),
                           s &&
                               (0, a.jsxs)("div", {
-                                  className: j.NA,
+                                  className: A.NA,
                                   children: [
-                                      (0, a.jsx)("div", { className: j.EJ }),
+                                      (0, a.jsx)("div", { className: A.EJ }),
                                       (0, a.jsx)(o.DUT, {
-                                          className: j.G9,
+                                          className: A.G9,
                                           onClick: () => c(-1),
-                                          children: (0, a.jsx)(o.rJJ, { className: j.UE, color: "currentColor" }),
+                                          children: (0, a.jsx)(o.rJJ, { className: A.UE, color: "currentColor" }),
                                       }),
-                                      (0, a.jsx)("div", { className: j.Pj }),
+                                      (0, a.jsx)("div", { className: A.Pj }),
                                       (0, a.jsx)(o.DUT, {
-                                          className: j.G9,
+                                          className: A.G9,
                                           onClick: () => c(1),
-                                          children: (0, a.jsx)(o.EdP, { className: j.UE, color: "currentColor" }),
+                                          children: (0, a.jsx)(o.EdP, { className: A.UE, color: "currentColor" }),
                                       }),
                                   ],
                               }),
@@ -96,30 +96,30 @@ function C(e) {
               ],
           });
 }
-let I = l.memo(function (e) {
+let C = l.memo(function (e) {
         let { item: t, index: n, isSelected: i, isPlaying: s, onSelect: d, gameName: u } = e,
             m = l.useCallback(() => d(n), [d, n]);
         return (0, a.jsx)(o.DUT, {
-            className: r()(A.JS, i && A.Y4),
+            className: r()(j.JS, i && j.Y4),
             onClick: m,
             children: (0, a.jsxs)("div", {
-                className: A.ub,
+                className: j.ub,
                 children: [
                     (0, a.jsx)("img", {
                         src: "VIDEO" === t.type ? (t.poster ?? t.url) : t.url,
-                        className: A.xn,
-                        alt: _.intl.formatToPlainString(_.t.COYYrn, { game: u }),
+                        className: j.xn,
+                        alt: p.intl.formatToPlainString(p.t.COYYrn, { game: u }),
                     }),
                     "VIDEO" === t.type &&
                         (0, a.jsx)("div", {
-                            className: A.UZ,
+                            className: j.UZ,
                             children: (0, a.jsx)(c.DMX, { playing: i && s, size: "sm" }),
                         }),
                 ],
             }),
         });
     }),
-    b = l.memo(function (e) {
+    I = l.memo(function (e) {
         let {
                 item: t,
                 reducedMotion: n,
@@ -131,45 +131,49 @@ let I = l.memo(function (e) {
             } = e,
             d = l.useRef(null);
         return (
-            (0, p.A)({ videoRef: i, canvasRef: d, enabled: !n }),
+            (0, _.A)({ videoRef: i, canvasRef: d, enabled: !n }),
             (0, a.jsxs)(a.Fragment, {
                 children: [
-                    !n && (0, a.jsx)("canvas", { ref: d, className: A.HW, "aria-hidden": "true" }),
-                    (0, a.jsx)(m.A, {
-                        src: t.url,
-                        poster: t.poster ?? "",
-                        width: t.width ?? 1920,
-                        height: t.height ?? 1080,
-                        naturalWidth: t.width ?? 1920,
-                        naturalHeight: t.height ?? 1080,
-                        maxWidth: 1 / 0,
-                        maxHeight: 1 / 0,
-                        autoPlay: !n,
-                        autoMute: !0,
-                        useFullWidth: !0,
-                        responsive: !0,
-                        renderLinkComponent: h.bU,
-                        onPlay: s,
-                        onPause: c,
-                        onFullscreenChange: o,
-                        mediaPlayerClassName: A.T9,
-                        videoRef: i,
-                        mediaPlayerRef: r,
+                    !n && (0, a.jsx)("canvas", { ref: d, className: j.HW, "aria-hidden": "true" }),
+                    (0, a.jsx)("div", {
+                        className: j.tN,
+                        children: (0, a.jsx)(m.A, {
+                            src: t.url,
+                            poster: t.poster ?? "",
+                            width: t.width ?? 1920,
+                            height: t.height ?? 1080,
+                            naturalWidth: t.width ?? 1920,
+                            naturalHeight: t.height ?? 1080,
+                            maxWidth: 1 / 0,
+                            maxHeight: 1 / 0,
+                            autoPlay: !n,
+                            autoMute: !0,
+                            useFullWidth: !0,
+                            responsive: !0,
+                            renderLinkComponent: h.bU,
+                            onPlay: s,
+                            onPause: c,
+                            onFullscreenChange: o,
+                            mediaPlayerClassName: j.T9,
+                            videoRef: i,
+                            mediaPlayerRef: r,
+                        }),
                     }),
                 ],
             })
         );
     });
-function E(e) {
+function N(e) {
     let { detectedGame: t, trackAction: n } = e,
         [i, r] = l.useState(0),
-        [c, m] = l.useState(t.artwork),
-        [h, p] = l.useState(t.screenshots),
-        v = l.useRef(null),
-        j = l.useRef(null),
-        C = (0, s.bG)([d.A], () => d.A.useReducedMotion);
-    (c !== t.artwork || h !== t.screenshots) && (m(t.artwork), p(t.screenshots), r(0));
-    let E = l.useMemo(() => {
+        [c, m] = l.useState(null),
+        [h, _] = l.useState(t.artwork),
+        [v, A] = l.useState(t.screenshots),
+        E = l.useRef(null),
+        N = l.useRef(null),
+        b = (0, s.bG)([d.A], () => d.A.useReducedMotion);
+    (h !== t.artwork || v !== t.screenshots) && (_(t.artwork), A(t.screenshots), r(0));
+    let S = l.useMemo(() => {
             let e = (t.trailers ?? []).map((e) => {
                     let t = (0, f.YE)(e.application_id, e.id, e.width, "mp4");
                     return {
@@ -184,90 +188,119 @@ function E(e) {
                 n = t.artwork.map((e) => ({ url: e, type: "IMAGE" }));
             return [...e, ...t.screenshots.map((e) => ({ url: e, type: "IMAGE" })), ...n];
         }, [t.trailers, t.artwork, t.screenshots]),
-        N = E.length > 0 ? Math.min(i, E.length - 1) : 0,
-        S = E[N],
-        k = S?.type === "VIDEO",
-        [T, y] = l.useState(!1),
-        L = l.useRef(null),
-        O = l.useCallback(() => {
-            n(k ? g.Ws.ClickTrailer : g.Ws.ClickImage);
-            let e = v.current,
-                t = L.current,
+        T = S.length > 0 ? Math.min(i, S.length - 1) : 0,
+        k = S[T],
+        y = k?.type === "VIDEO",
+        L = l.useCallback(
+            (e) => {
+                let t = S[T],
+                    n = S[e];
+                t?.type === "IMAGE" && n?.type === "IMAGE" && t.url !== n.url ? m(t.url) : m(null), r(e);
+            },
+            [S, T],
+        ),
+        [O, R] = l.useState(!1),
+        G = l.useRef(null),
+        M = l.useCallback(() => {
+            n(y ? g.Ws.ClickTrailer : g.Ws.ClickImage);
+            let e = E.current,
+                t = G.current,
                 a = null != e && !e.paused,
                 l = e?.muted ?? !0,
                 i = e?.currentTime ?? 0;
             t?.setPlay(!1);
-            let s = E.map((e, t) => {
+            let s = S.map((e, t) => {
                 if ("VIDEO" === e.type) {
-                    let n = t === N;
-                    return { ...e, autoPlay: !!n && a, autoMute: !n || l, initialTimeSec: n ? i : void 0, videoRef: j };
+                    let n = t === T;
+                    return { ...e, autoPlay: !!n && a, autoMute: !n || l, initialTimeSec: n ? i : void 0, videoRef: N };
                 }
                 return e;
             });
             (0, x.R)({
                 items: s,
-                startingIndex: N,
+                startingIndex: T,
                 shouldHideMediaOptions: !0,
                 location: "GameProfileMedia",
                 onIndexChange: r,
                 onClose: () => {
-                    let e = j.current,
-                        t = L.current,
+                    let e = N.current,
+                        t = G.current,
                         n = null != e ? !e.paused : a;
                     e?.pause(),
                         null != t && null != e
                             ? (t.setTime(e.currentTime, !1), n && t.setPlay(!0), t.setMuted(e.muted))
                             : n && t?.setPlay(!0),
-                        y(n);
+                        R(n);
                 },
             });
-        }, [n, E, N, k]),
-        R = l.useCallback(() => y(!0), []),
-        G = l.useCallback(() => y(!1), []),
-        M = l.useCallback(
+        }, [n, S, T, y]),
+        P = l.useCallback(() => R(!0), []),
+        w = l.useCallback(() => R(!1), []),
+        V = l.useCallback(() => m(null), []),
+        D = l.useCallback(
             (e) => {
-                e && O();
+                e && M();
             },
-            [O],
+            [M],
         );
-    return 0 === E.length
+    return 0 === S.length
         ? null
         : (0, a.jsxs)("div", {
-              className: A.kL,
+              className: j.kL,
               children: [
-                  k
+                  y
                       ? (0, a.jsx)("div", {
-                            className: A.ND,
+                            className: j.ND,
                             children: (0, a.jsx)(
-                                b,
+                                I,
                                 {
-                                    item: S,
-                                    reducedMotion: C,
-                                    videoRef: v,
-                                    mediaPlayerRef: L,
-                                    onPlay: R,
-                                    onPause: G,
-                                    onFullscreenChange: M,
+                                    item: k,
+                                    reducedMotion: b,
+                                    videoRef: E,
+                                    mediaPlayerRef: G,
+                                    onPlay: P,
+                                    onPause: w,
+                                    onFullscreenChange: D,
                                 },
-                                `${N}-${S.url}`,
+                                `${T}-${k.url}`,
                             ),
                         })
-                      : (0, a.jsx)(o.DUT, {
-                            className: A.gv,
-                            onClick: O,
-                            children: (0, a.jsx)("img", {
-                                src: S.url,
-                                className: A.c8,
-                                alt: _.intl.formatToPlainString(_.t.COYYrn, { game: t.name }),
-                            }),
+                      : (0, a.jsxs)("div", {
+                            className: j.wp,
+                            children: [
+                                null != c &&
+                                    !b &&
+                                    (0, a.jsx)(
+                                        "div",
+                                        {
+                                            className: j.Jy,
+                                            onAnimationEnd: V,
+                                            children: (0, a.jsx)("img", { src: c, className: j.Db, alt: "" }),
+                                        },
+                                        c,
+                                    ),
+                                (0, a.jsx)(o.DUT, {
+                                    className: j.gv,
+                                    onClick: M,
+                                    children: (0, a.jsx)(
+                                        "img",
+                                        {
+                                            src: k.url,
+                                            className: j.c8,
+                                            alt: p.intl.formatToPlainString(p.t.COYYrn, { game: t.name }),
+                                        },
+                                        k.url,
+                                    ),
+                                }),
+                            ],
                         }),
                   (0, a.jsx)(u.A, {
                       gap: "xs",
                       iconButtonSize: "sm",
-                      children: E.map((e, n) =>
+                      children: S.map((e, n) =>
                           (0, a.jsx)(
-                              I,
-                              { item: e, index: n, isPlaying: T, isSelected: n === N, onSelect: r, gameName: t.name },
+                              C,
+                              { item: e, index: n, isPlaying: O, isSelected: n === T, onSelect: L, gameName: t.name },
                               `${n}-${e.url}`,
                           ),
                       ),
