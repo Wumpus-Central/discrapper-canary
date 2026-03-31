@@ -1,12 +1,12 @@
-n.d(t, { A: () => M }), n(321073), n(323874), n(14289), n(35956);
+n.d(t, { A: () => V }), n(321073), n(323874), n(14289), n(35956);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
     s = n.n(l),
     o = n(311907),
     a = n(554146),
-    d = n(397927),
-    u = n(793574),
+    u = n(397927),
+    d = n(793574),
     c = n(932001),
     p = n(742589),
     _ = n(976860),
@@ -14,90 +14,88 @@ var r = n(627968),
     f = n(14081),
     A = n(843095),
     g = n(645619),
-    x = n(929250),
-    v = n(489306),
-    h = n(363487),
-    E = n(884928),
-    b = n(884684),
+    x = n(489306),
+    v = n(363487),
+    h = n(884928),
+    E = n(884684),
     I = n(182859),
-    j = n(983398),
-    S = n(194867),
-    C = n(149854),
-    w = n(864450),
-    y = n(697865),
-    L = n(297407),
-    k = n(436207),
-    N = n(271484),
-    R = n(915667),
-    T = n(800007),
-    P = n(568065),
-    O = n(652215),
-    G = n(49999),
-    D = n(333354),
-    V = n(985018),
+    b = n(983398),
+    j = n(194867),
+    S = n(149854),
+    C = n(864450),
+    w = n(697865),
+    y = n(297407),
+    L = n(436207),
+    k = n(271484),
+    N = n(915667),
+    R = n(800007),
+    T = n(568065),
+    P = n(652215),
+    O = n(49999),
+    G = n(333354),
+    D = n(985018),
     U = n(453165);
-function M(e) {
+function V(e) {
     let { guildId: t, powerupListingId: l } = e;
-    (0, E.A)(t);
-    let M = (0, m.C$)(t, "GuildPowerupsOverview");
-    (0, v.Pq)(t);
-    let W = (0, o.bG)([g.A], () => g.A.getStateForGuild(t)),
-        B = (0, h.A)(t),
-        F = (0, x.h)("GuildPowerupsOverview"),
-        J = i.useRef(!1),
-        { shouldShow: K, modalConfig: z } = (0, k.A)(t, "GuildPowerupsOverview"),
-        $ = null == l && null != z,
-        X = [];
-    K && $ && X.push(a.M.VANITY_URL_POWERUP_ROLLBACK_MODAL);
-    let [H, Y] = (0, c.kn)(X),
-        Q = (0, b.MO)(t, M),
-        q = Q.flatMap((e) => e.listings)
+    (0, h.A)(t);
+    let V = (0, m.C$)(t, "GuildPowerupsOverview");
+    (0, x.Pq)(t);
+    let M = (0, o.bG)([g.A], () => g.A.getStateForGuild(t)),
+        W = (0, v.A)(t),
+        B = i.useRef(!1),
+        { shouldShow: F, modalConfig: J } = (0, L.A)(t, "GuildPowerupsOverview"),
+        K = null == l && null != J,
+        z = [];
+    F && K && z.push(a.M.VANITY_URL_POWERUP_ROLLBACK_MODAL);
+    let [$, X] = (0, c.kn)(z),
+        Y = (0, E.MO)(t, V),
+        H = Y.flatMap((e) => e.listings)
             .filter((e) => "multiPerk" === e.type)
             .map((e) => e.group),
-        Z = (0, N.g)(q, t);
+        Q = (0, k.g)(H, t);
     return (i.useEffect(() => {
-        if (null != l && !J.current)
-            for (let e of Q)
+        if (null != l && !B.current)
+            for (let e of Y)
                 for (let n of e.listings) {
                     if (("singleLevel" === n.type || "singlePerk" === n.type) && n.powerup.skuId === l) {
-                        (0, R.A)(t, n.powerup), (J.current = !0);
+                        (0, N.A)(t, n.powerup), (B.current = !0);
                         return;
                     }
                     if ("multiPerk" === n.type && (n.group === l || n.powerups.some((e) => e.skuId === l))) {
-                        J.current = !0;
-                        let e = Z[n.group];
+                        B.current = !0;
+                        let e = Q[n.group];
                         if (null == e) return;
                         e.openModal(n.powerups, {
                             onModalClose: () => {
                                 let e = new URL(window.location.href);
-                                e.searchParams.delete(P.G0);
+                                e.searchParams.delete(T.G0);
                                 let t = e.pathname + e.search + e.hash;
-                                (0, _.bG)(t), (J.current = !1);
+                                (0, _.bG)(t), (B.current = !1);
                             },
                         });
                         return;
                     }
-                    if ("gameServer" === n.type && l === T.W5) {
-                        (0, A.A)({ guildId: t, analyticsLocation: u.A.GUILD_POWERUPS_OVERVIEW }), (J.current = !0);
+                    if ("gameServer" === n.type && l === R.W5) {
+                        (0, A.A)({ guildId: t, analyticsLocation: d.A.GUILD_POWERUPS_OVERVIEW }), (B.current = !0);
                         return;
                     }
                 }
-    }, [t, l, Q, Z]),
+    }, [t, l, Y, Q]),
     i.useEffect(() => {
-        if (null != H && null != z) {
+        if (null != $ && null != J) {
             let e = {
                 onCloseCallback: () => {
-                    Y(G.i.USER_DISMISS);
+                    X(O.i.USER_DISMISS);
                 },
-                modalKey: `dismissible_content_${H}`,
+                modalKey: `dismissible_content_${$}`,
             };
-            (0, d.mMO)(async () => {
+            (0, u.mMO)(async () => {
                 let { default: e } = await n.e("86618").then(n.bind(n, 442241));
-                return (t) => (0, r.jsx)(e, { modalConfig: z, markAsDismissed: Y, ...t });
+                return (t) => (0, r.jsx)(e, { modalConfig: J, markAsDismissed: X, ...t });
             }, e);
         }
-    }, [t, H, Y, z]),
-    W?.powerupCatalog == null)
+    }, [t, $, X, J]),
+    M?.powerupCatalog == null)
         ? null
         : (0, r.jsxs)("div", {
               className: U.kL,
@@ -107,32 +105,32 @@ function M(e) {
                       hideSearch: !0,
                       toolbar: (0, r.jsx)("div", {}),
                       children: [
-                          (0, r.jsx)(p.A.Icon, { icon: d._Jp, "aria-label": "" }),
-                          (0, r.jsx)(p.A.Title, { children: V.intl.string(D.default.yv3DJJ) }),
+                          (0, r.jsx)(p.A.Icon, { icon: u._Jp, "aria-label": "" }),
+                          (0, r.jsx)(p.A.Title, { children: D.intl.string(G.default.yv3DJJ) }),
                       ],
                   }),
                   (0, r.jsxs)("div", {
                       className: U.hQ,
                       children: [
-                          (0, r.jsx)(d.IpV, {
+                          (0, r.jsx)(u.IpV, {
                               className: U.DO,
-                              children: Q.map((e) => {
+                              children: Y.map((e) => {
                                   let { type: n, listings: i } = e,
                                       { title: l, description: o } = (function (e) {
                                           switch (e) {
-                                              case P.o9.LEVEL:
+                                              case T.o9.LEVEL:
                                                   return {
-                                                      title: V.intl.string(D.default["TXY/b0"]),
-                                                      description: V.intl.string(D.default.aJv4PB),
+                                                      title: D.intl.string(G.default["TXY/b0"]),
+                                                      description: D.intl.string(G.default.aJv4PB),
                                                   };
-                                              case P.o9.PERK:
+                                              case T.o9.PERK:
                                                   return {
-                                                      title: V.intl.string(D.default.TV3Vm8),
-                                                      description: V.intl.string(D.default.STx9hp),
+                                                      title: D.intl.string(G.default.TV3Vm8),
+                                                      description: D.intl.string(G.default.STx9hp),
                                                   };
                                           }
                                       })(n),
-                                      a = n === P.o9.LEVEL ? d.IpV : "div";
+                                      a = n === T.o9.LEVEL ? u.IpV : "div";
                                   return (0, r.jsxs)(
                                       "div",
                                       {
@@ -141,12 +139,12 @@ function M(e) {
                                               (0, r.jsxs)("div", {
                                                   className: U.kn,
                                                   children: [
-                                                      (0, r.jsx)(d.Heading, {
+                                                      (0, r.jsx)(u.Heading, {
                                                           color: "text-strong",
                                                           variant: "heading-lg/semibold",
                                                           children: l,
                                                       }),
-                                                      (0, r.jsx)(d.Text, {
+                                                      (0, r.jsx)(u.Text, {
                                                           color: "text-muted",
                                                           variant: "text-sm/medium",
                                                           children: o,
@@ -155,13 +153,13 @@ function M(e) {
                                               }),
                                               (0, r.jsx)(a, {
                                                   orientation: "horizontal",
-                                                  className: s()(U.qJ, U.kn, { [U.dU]: n === P.o9.LEVEL }),
+                                                  className: s()(U.qJ, U.kn, { [U.dU]: n === T.o9.LEVEL }),
                                                   fade: !0,
                                                   children: i.map((e, n) => {
                                                       switch (e.type) {
                                                           case "singleLevel":
                                                               return (0, r.jsx)(
-                                                                  j.A,
+                                                                  b.A,
                                                                   {
                                                                       guildId: t,
                                                                       index: n,
@@ -172,13 +170,13 @@ function M(e) {
                                                               );
                                                           case "singlePerk":
                                                               return (0, r.jsx)(
-                                                                  C.A,
+                                                                  S.A,
                                                                   { guildId: t, powerup: e.powerup, badge: e.badge },
                                                                   `powerup-${e.powerup.skuId}`,
                                                               );
                                                           case "multiPerk":
                                                               return (0, r.jsx)(
-                                                                  S.A,
+                                                                  j.A,
                                                                   { guildId: t, group: e.group, powerups: e.powerups },
                                                                   `powerup-group-${e.group}`,
                                                               );
@@ -200,26 +198,24 @@ function M(e) {
                           (0, r.jsxs)("div", {
                               className: U.so,
                               children: [
-                                  B
-                                      ? (0, r.jsx)(w.A, { guildId: t, showVideoCard: F })
-                                      : F
-                                        ? (0, r.jsxs)("div", {
-                                              className: U.CG,
-                                              children: [
-                                                  (0, r.jsx)(I.A, {
-                                                      guildId: t,
-                                                      variant: "member",
-                                                      analyticsLocation: {
-                                                          page: O.liQ.GUILD_POWERUPS_OVERVIEW,
-                                                          section: O.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
-                                                          object: O.ZSU.CARD,
-                                                      },
-                                                  }),
-                                                  (0, r.jsx)(y.A, { guildId: t, showVideoCard: !0 }),
-                                              ],
-                                          })
-                                        : (0, r.jsx)(y.A, { guildId: t }),
-                                  (0, r.jsx)(L.A, { guildId: t }),
+                                  W
+                                      ? (0, r.jsx)(C.A, { guildId: t })
+                                      : (0, r.jsxs)("div", {
+                                            className: U.CG,
+                                            children: [
+                                                (0, r.jsx)(I.A, {
+                                                    guildId: t,
+                                                    variant: "member",
+                                                    analyticsLocation: {
+                                                        page: P.liQ.GUILD_POWERUPS_OVERVIEW,
+                                                        section: P.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
+                                                        object: P.ZSU.CARD,
+                                                    },
+                                                }),
+                                                (0, r.jsx)(w.A, { guildId: t }),
+                                            ],
+                                        }),
+                                  (0, r.jsx)(y.A, { guildId: t }),
                               ],
                           }),
                       ],
