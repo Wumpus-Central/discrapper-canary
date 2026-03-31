@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => S, T2: () => y, r$: () => I });
+n.d(t, { Ay: () => v, T2: () => N, r$: () => T });
 var r = n(627968),
     i = n(64700),
     s = n(681154),
@@ -14,22 +14,27 @@ var r = n(627968),
     p = n(622543),
     h = n(576622),
     m = n(403362),
-    E = n(850046),
-    g = n(385771);
-let A = i.createContext({ markAsVisible: () => {}, useInjectEntriesWithPreviewData: (e) => e });
-function I(e) {
+    E = n(369374),
+    g = n(850046),
+    A = n(385771);
+let I = i.createContext({ markAsVisible: () => {}, useInjectEntriesWithPreviewData: (e) => e });
+function T(e) {
+    let { enabled: t } = E.A.useConfig({ location: "ContentInventoryApplicationWidgetPreviewDataProvider" });
+    return t ? e.children : (0, r.jsx)(S, { children: e.children });
+}
+function S(e) {
     let [t, n] = i.useState(new Set()),
         s = i.useCallback((e) => {
             n((t) => (t.has(e) ? t : new Set(t).add(e)));
         }, []);
-    return (0, r.jsx)(A.Provider, {
-        value: { markAsVisible: s, useInjectEntriesWithPreviewData: (e) => T(e, t) },
+    return (0, r.jsx)(I.Provider, {
+        value: { markAsVisible: s, useInjectEntriesWithPreviewData: (e) => y(e, t) },
         children: e.children,
     });
 }
-function T(e, t) {
-    let n = (0, g.A)(),
-        { data: r, isLoading: A } = (0, _.FY)(),
+function y(e, t) {
+    let n = (0, A.A)(),
+        { data: r, isLoading: E } = (0, _.FY)(),
         I = i.useMemo(() => new Set(r?.map((e) => e.applicationId) ?? []), [r]),
         T = i.useMemo(
             () =>
@@ -78,7 +83,7 @@ function T(e, t) {
         if (L.length > 0) for (let e of L) (0, h.A)(e);
     }, [L]);
     let M = i.useMemo(() => (null != r ? Object.fromEntries(r.map((e) => [e.applicationId, e])) : null), [r]),
-        P = A || y || O.length > 0 || b || L.length > 0 || w,
+        P = E || y || O.length > 0 || b || L.length > 0 || w,
         x = i.useMemo(() => {
             if (!P && void 0 !== e)
                 return e.map((e) => {
@@ -89,7 +94,7 @@ function T(e, t) {
                     if (null == r) return e;
                     let i = e.author_id in R ? R[e.author_id]?.find((e) => e.application_id === t.id) : null;
                     if (null == i || null == i.profile) return e;
-                    let a = (0, E.M)(r, t, i.profile, n);
+                    let a = (0, g.M)(r, t, i.profile, n);
                     if (null == a) return e;
                     let o = D[e.author_id]?.widgets?.some((e) => e instanceof f.R && e.applicationId === t.id) ?? !1;
                     return { ...e, applicationWidgetPreview: { previewData: a, hasWidget: o } };
@@ -103,10 +108,10 @@ function T(e, t) {
         k
     );
 }
-function S(e) {
-    return i.useContext(A).useInjectEntriesWithPreviewData(e);
+function v(e) {
+    return i.useContext(I).useInjectEntriesWithPreviewData(e);
 }
-function y(e) {
-    let { markAsVisible: t } = i.useContext(A);
+function N(e) {
+    let { markAsVisible: t } = i.useContext(I);
     i.useEffect(() => t(e), [t, e]);
 }
