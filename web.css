@@ -67507,6 +67507,9 @@ html.disable-forced-colors * {
     --mobile-chat-input-expression-offset-top: 6px;
     --mobile-chat-input-icon-size: medium;
     --mobile-chat-input-pill-padding: 2px;
+    --mobile-coachmark-body-border-radius: 16px;
+    --mobile-coachmark-body-width: 260px;
+    --mobile-coachmark-button-spacing: 12px;
     --mobile-control-checkbox-border-radius: 8px;
     --mobile-control-checkbox-border-width: 2px;
     --mobile-control-checkbox-size-default: 24px;
@@ -67591,6 +67594,9 @@ html.disable-forced-colors * {
     --mobile-chat-input-expression-offset-left: 12px;
     --mobile-chat-input-expression-offset-top: 10px;
     --mobile-chat-input-icon-size: small20;
+    --mobile-coachmark-body-border-radius: 12px;
+    --mobile-coachmark-body-width: 240px;
+    --mobile-coachmark-button-spacing: 16px;
     --mobile-control-checkbox-border-radius: 4px;
     --mobile-control-checkbox-border-width: 1.2px;
     --mobile-control-radio-icon-border-width: 1.2px;
