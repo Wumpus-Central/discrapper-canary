@@ -1,32 +1,72 @@
-n.d(t, { A: () => u });
+n.d(t, { A: () => p });
 var a = n(627968),
     i = n(64700),
     s = n(158954),
     l = n(397927),
     r = n(839214),
     o = n(849823),
-    d = n(840065);
-let c = (0, r.D)(() => ({ urlString: "", error: null }));
-function u() {
-    let e = c.useField("error"),
-        t = i.useCallback(() => {
-            let e = c.getField("urlString");
-            if (null == e || "" === e) return void c.setState({ error: "URL is required" });
+    d = n(840065),
+    c = n(957565),
+    u = n(652215),
+    m = n(355097);
+let h = (0, r.D)(() => ({ urlString: "", error: null })),
+    x = Object.entries(m.od).map((e) => {
+        let [t, n] = e;
+        return { id: t, label: n, value: t };
+    });
+function p() {
+    let [e, t] = i.useState(),
+        n = h.useField("urlString"),
+        r = h.useField("error"),
+        p = i.useCallback(() => {
+            let e = h.getField("urlString");
+            if (null == e || "" === e) return void h.setState({ error: "URL is required" });
             let t = (0, o.default)({ path: e });
             ((0, o.trackParseSettingsUrl)(t, "devtools"), null == t.target)
-                ? c.setState({ error: "String did not match expected format" })
+                ? h.setState({ error: "String did not match expected format" })
                 : (0, d.openUserSettings)(t.target, { path: t.path });
         }, []);
     return (0, a.jsxs)(s.nVY, {
         label: "Settings Deep Link Tool",
         children: [
+            (0, a.jsx)(l.ZiE, {
+                label: "[optional] Choose a path",
+                clearable: !0,
+                value: e,
+                placeholder: "Select a settings path",
+                options: x,
+                selectionMode: "single",
+                onSelectionChange: (e) => {
+                    if ((t(e), null != e)) {
+                        let [t, n] = m.od[e].split("/");
+                        h.setState({ urlString: u.BVt.SETTINGS(t, n), error: null });
+                    }
+                },
+                fullWidth: !0,
+            }),
             (0, a.jsx)(l.ksK, {
                 label: "URL",
                 placeholder: "e.g. /settings/appearance",
-                onChange: (e) => c.setState({ urlString: e, error: null }),
+                value: n,
+                onChange: (e) => h.setState({ urlString: e, error: null }),
             }),
-            (0, a.jsx)(s.$nd, { variant: "primary", onClick: t, text: "Open User Settings for URL" }),
-            null != e && (0, a.jsx)(s.EYj, { variant: "text-sm/normal", color: "text-feedback-critical", children: e }),
+            (0, a.jsxs)(s.e2v, {
+                children: [
+                    (0, a.jsx)(s.$nd, {
+                        variant: "primary",
+                        onClick: p,
+                        text: "Open User Settings for URL",
+                        disabled: "" === n,
+                    }),
+                    (0, a.jsx)(s.$nd, {
+                        variant: "secondary",
+                        onClick: () => (0, c.C)(`${window.location.origin}${n}`),
+                        disabled: "" === n,
+                        text: "Copy URL",
+                    }),
+                ],
+            }),
+            null != r && (0, a.jsx)(s.EYj, { variant: "text-sm/normal", color: "text-feedback-critical", children: r }),
         ],
     });
 }
