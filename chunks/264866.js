@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => h });
 var r = n(299855),
     i = n.n(r),
     s = n(574381),
@@ -8,12 +8,11 @@ var r = n(299855),
     l = n(451988),
     u = n(73153),
     c = n(77729),
-    d = n(837921),
-    _ = n(502075);
-let f = 5e3,
-    p = 1500,
-    h = new a.Vy("InputWatcher");
-class m {
+    d = n(502075);
+let _ = 5e3,
+    f = 1500,
+    p = new a.Vy("InputWatcher");
+class h {
     mediaEngine;
     mediaEngineStore;
     stateChangeTimeout = new l.Ep();
@@ -28,26 +27,27 @@ class m {
             (this.inputDetected = void 0);
     }
     fetchInputDeviceOSConfig = async () => {
-        if ((0, s.uF)() && i().satisfies(c.A?.os.release, _.PH))
+        if ((0, s.uF)() && i().satisfies(c.A?.os.release, d.PH))
             try {
                 let e = this.mediaEngineStore.getInputDeviceId(),
                     t = this.mediaEngineStore.getInputDevices()[e]?.guid;
                 if (null != t && "" !== t) {
-                    await d.Ay.ensureModule("discord_voice");
-                    let [e, n] = await Promise.all([
+                    let e = n(837921).Ay;
+                    await e.ensureModule("discord_voice");
+                    let [r, i] = await Promise.all([
                         this.mediaEngine.getDeviceOSVolume(t),
                         this.mediaEngine.getDeviceOSMuted(t),
                     ]);
-                    u.h.dispatch({ type: "AUDIO_INPUT_DEVICE_OS_CONFIG_FETCHED", osVolume: e, osMuted: n });
+                    u.h.dispatch({ type: "AUDIO_INPUT_DEVICE_OS_CONFIG_FETCHED", osVolume: r, osMuted: i });
                 }
             } catch (e) {
-                h.warn(`Failed to get device OS volume and/or mute state: ${e}`);
+                p.warn(`Failed to get device OS volume and/or mute state: ${e}`);
             }
     };
     handleSilence = (e) => {
         let t = !e;
-        this.stateChangeTimeout.start(t ? p : f, async () => {
-            h.info("Silence:", e),
+        this.stateChangeTimeout.start(t ? f : _, async () => {
+            p.info("Silence:", e),
                 (this.inputDetected = t),
                 (this.lastUpdateTime = performance.now()),
                 e && (await this.fetchInputDeviceOSConfig()),

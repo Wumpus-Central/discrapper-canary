@@ -1,8 +1,8 @@
 n.d(t, { A: () => F });
 var a = n(627968),
     i = n(64700),
-    l = n(311907),
-    s = n(843282),
+    s = n(311907),
+    l = n(843282),
     r = n(732955),
     o = n(421380),
     d = n(397927),
@@ -10,10 +10,10 @@ var a = n(627968),
     u = n(403362),
     m = n(178540),
     h = n(859703),
-    p = n(341915),
-    x = n(12251),
-    g = n(33621),
-    _ = n(551456),
+    x = n(341915),
+    p = n(12251),
+    g = n(551456),
+    _ = n(112142),
     f = n(714510),
     v = n(890687),
     b = n(18437),
@@ -21,8 +21,8 @@ var a = n(627968),
     A = n(971649),
     C = n(651892),
     y = n(710969),
-    T = n(901406),
-    S = n(792620),
+    S = n(901406),
+    T = n(792620),
     E = n(814793),
     N = n(201805),
     I = n(212614),
@@ -30,8 +30,8 @@ var a = n(627968),
     O = n(545986),
     R = n(654487),
     w = n(985018),
-    D = n(421193);
-let M = [
+    D = n(376936);
+let P = [
     {
         value: R.fO.DESKTOP,
         get label() {
@@ -45,7 +45,7 @@ let M = [
         },
     },
 ];
-function P(e) {
+function M(e) {
     let t,
         n,
         { value: i } = e;
@@ -84,8 +84,8 @@ function U(e) {
     return {
         externalLinkCta: (0, C.wr)(t),
         handleOpenExternalLink: i.useCallback(() => {
-            (0, T.pu)(t, {
-                content: p.uF.QUEST_HOME_DESKTOP,
+            (0, S.pu)(t, {
+                content: x.uF.QUEST_HOME_DESKTOP,
                 ctaContent: j.Cy.OPEN_GAME_LINK,
                 impressionId: a,
                 sourceQuestContent: n,
@@ -94,8 +94,8 @@ function U(e) {
     };
 }
 function B(e) {
-    let { quest: t, questContent: n, sourceQuestContent: i, onClick: l, text: s } = e,
-        { enabled: o } = _.K.useConfig({ location: R.rE.QUEST_LEARN_MORE_CTA }),
+    let { quest: t, questContent: n, sourceQuestContent: i, onClick: s, text: l } = e,
+        { enabled: o } = g.K.useConfig({ location: R.rE.QUEST_LEARN_MORE_CTA }),
         { externalLinkCta: c, handleOpenExternalLink: u } = U({ quest: t, sourceQuestContent: i });
     return o
         ? (0, a.jsxs)(r.e2v, {
@@ -104,7 +104,7 @@ function B(e) {
               wrap: !1,
               children: [
                   (0, a.jsx)(r.$nd, { variant: "secondary", text: c, onClick: u }),
-                  (0, a.jsx)(r.$nd, { variant: "primary", onClick: l ?? void 0, text: s }),
+                  (0, a.jsx)(r.$nd, { variant: "primary", onClick: s ?? void 0, text: l }),
               ],
           })
         : (0, a.jsxs)(r.e2v, {
@@ -126,22 +126,22 @@ function B(e) {
                           });
                       },
                   }),
-                  (0, a.jsx)(r.$nd, { variant: "primary", onClick: l ?? void 0, text: s }),
+                  (0, a.jsx)(r.$nd, { variant: "primary", onClick: s ?? void 0, text: l }),
               ],
           });
 }
 function G(e) {
     let { quest: t, sourceQuestContent: n, formattedExpirationDate: i } = e,
-        { enabled: l } = _.K.useConfig({ location: R.rE.QUEST_LEARN_MORE_CTA }),
-        { externalLinkCta: s, handleOpenExternalLink: o } = U({ quest: t, sourceQuestContent: n }),
+        { enabled: s } = g.K.useConfig({ location: R.rE.QUEST_LEARN_MORE_CTA }),
+        { externalLinkCta: l, handleOpenExternalLink: o } = U({ quest: t, sourceQuestContent: n }),
         d = w.intl.format(w.t["14o6QY"], { expiryDate: i });
-    return l
+    return s
         ? (0, a.jsxs)(r.e2v, {
               direction: "horizontal",
               fullWidth: !0,
               wrap: !1,
               children: [
-                  (0, a.jsx)(r.$nd, { variant: "secondary", text: s, onClick: o }),
+                  (0, a.jsx)(r.$nd, { variant: "secondary", text: l, onClick: o }),
                   (0, a.jsx)(r.$nd, { variant: "secondary", disabled: !0, text: d, fullWidth: !0 }),
               ],
           })
@@ -156,12 +156,12 @@ function F(e) {
     let {
             quest: t,
             questContent: n,
-            onReceiveErrorHints: _,
+            onReceiveErrorHints: g,
             contentPosition: A,
-            rowIndex: T,
+            rowIndex: S,
             sourceQuestContent: U,
         } = e,
-        F = (0, l.bG)([c.A], () => c.A.useReducedMotion),
+        F = (0, s.bG)([c.A], () => c.A.useReducedMotion),
         V = (0, N.Xf)({ useReducedMotion: F }),
         W = (0, b.Ut)(),
         H = (0, v.RR)({ quest: t }),
@@ -171,7 +171,7 @@ function F(e) {
             isClaiming: $,
             isEnrolling: q,
             isQuestEnrollmentBlocked: Q,
-        } = (0, l.cf)([h.A], () => ({
+        } = (0, s.cf)([h.A], () => ({
             isClaiming: h.A.isClaimingReward(t.id) || h.A.isFetchingRewardCode(t.id),
             isEnrolling: h.A.isEnrolling(t.id),
             isQuestEnrollmentBlocked: null != h.A.questEnrollmentBlockedUntil,
@@ -182,29 +182,29 @@ function F(e) {
         Z = (0, y.if)(t),
         ee = !(0, y.Ic)(t),
         et = (0, v.In)(t),
-        en = (0, S.IO)(t),
-        ea = (0, S.K$)(t),
-        ei = (0, S.Cr)(t),
-        el = (0, v.fc)(t),
-        [es, er, eo] = (0, v.Qo)(t, el),
+        en = (0, T.IO)(t),
+        ea = (0, T.K$)(t),
+        ei = (0, T.Cr)(t),
+        es = (0, v.fc)(t),
+        [el, er, eo] = (0, v.Qo)(t, es),
         ed = ee && et === v.F3.ACCEPTED,
-        ec = ed && es === p.X0.SELECT,
+        ec = ed && el === x.X0.SELECT,
         eu = ed && !ec && er.length > 1,
-        em = g.t.useConfig({ location: R.rE.QUEST_HOME_DESKTOP }),
+        em = _.t.useConfig({ location: R.rE.QUEST_HOME_DESKTOP }),
         eh = (0, k.Pd)(t),
-        ep = (0, m.O)((e) => e.clearErrorHints),
-        ex = i.useCallback(
+        ex = (0, m.O)((e) => e.clearErrorHints),
+        ep = i.useCallback(
             (e) => {
-                eo(e), e === R.fO.DESKTOP && (_([]), ep(t.id));
+                eo(e), e === R.fO.DESKTOP && (g([]), ex(t.id));
             },
-            [eo, _, ep, t.id],
+            [eo, g, ex, t.id],
         ),
         { text: eg, onClick: e_ } = (0, N._c)({
             progressState: et,
             quest: t,
             questContent: n,
             questContentPosition: A,
-            questContentRowIndex: T,
+            questContentRowIndex: S,
             inGiftInventory: !0,
             isVideoQuest: en,
             inGameQuest: ei,
@@ -219,35 +219,35 @@ function F(e) {
                         questContent: n,
                         questContentCTA: j.Cy.DEFIBRILLATOR,
                         questContentPosition: A,
-                        questContentRowIndex: T,
+                        questContentRowIndex: S,
                         sourceQuestContent: U,
                     });
             },
             afterRequest: (e) => {
-                V.stopAnimation(), _(e);
+                V.stopAnimation(), g(e);
             },
         }),
         eb = t.userStatus?.claimedAt != null,
         { launchInGameActivity: ej } = (0, v.zW)(t),
         eA = (0, f.NA)({ quest: t, shortText: !0 }),
-        eC = x.s5.useConfig({ location: R.rE.QUESTS_CARD }),
+        eC = p.s5.useConfig({ location: R.rE.QUESTS_CARD }),
         ey =
             eC.enabled &&
-            (eC.variant === x.tL.LEARN_MORE_CTA_ONLY ||
-                eC.variant === x.tL.COMBINE_LEARN_MORE_CTA_AND_EXPRESSIVE_BUTTON),
-        eT = (0, v.do)({
+            (eC.variant === p.tL.LEARN_MORE_CTA_ONLY ||
+                eC.variant === p.tL.COMBINE_LEARN_MORE_CTA_AND_EXPRESSIVE_BUTTON),
+        eS = (0, v.do)({
             quest: t,
             content: n,
             ctaContent:
-                eC.variant === x.tL.LEARN_MORE_CTA_ONLY
+                eC.variant === p.tL.LEARN_MORE_CTA_ONLY
                     ? j.Cy.LEARN_MORE_CTA_AND_EXPRESSIVE_BUTTON_TREATMENT_TWO_OPEN_GAME_LINK
                     : j.Cy.LEARN_MORE_CTA_AND_EXPRESSIVE_BUTTON_TREATMENT_THREE_OPEN_GAME_LINK,
             sourceQuestContent: U,
         }),
-        eS = null;
+        eT = null;
     if (ey) {
         let e = (0, C.wr)(t);
-        eS = (0, a.jsx)(r.$nd, { variant: "secondary", text: e, onClick: eT });
+        eT = (0, a.jsx)(r.$nd, { variant: "secondary", text: e, onClick: eS });
     }
     let eE = null;
     return (Z && X
@@ -314,7 +314,7 @@ function F(e) {
                                       fullWidth: !0,
                                       wrap: !1,
                                       children: [
-                                          eh === k.UA.UNENROLLED ? eS : null,
+                                          eh === k.UA.UNENROLLED ? eT : null,
                                           (0, a.jsx)(I.A, {
                                               quest: t,
                                               surface: k.V3.QUEST_HOME_TILE_FOOTER,
@@ -339,14 +339,14 @@ function F(e) {
                     }))
                   : Y && !eb
                     ? (eE = ec
-                          ? (0, a.jsx)(s.Pw, {
+                          ? (0, a.jsx)(l.Pw, {
                                 className: D.dd,
                                 isSelected: () => !1,
-                                options: M,
+                                options: P,
                                 placeholder: w.intl.string(w.t.drVw4T),
-                                renderOptionLabel: P,
+                                renderOptionLabel: M,
                                 renderOptionValue: L,
-                                select: ex,
+                                select: ep,
                                 serialize: (e) => {
                                     switch (e) {
                                         case R.fO.DESKTOP:
@@ -371,7 +371,7 @@ function F(e) {
                                       analyticsCtxQuestContentPosition: A,
                                   }),
                               })
-                            : (0, S.g5)(t) && !K && es !== p.X0.DESKTOP
+                            : (0, T.g5)(t) && !K && el !== x.X0.DESKTOP
                               ? H
                                   ? (0, a.jsx)("div", {
                                         className: D.x6,
@@ -449,7 +449,7 @@ function F(e) {
                                     fullWidth: !0,
                                     wrap: !1,
                                     children: [
-                                        eS,
+                                        eT,
                                         em.enabled &&
                                         eh === k.UA.UNENROLLED &&
                                         em.enabledQuestStates.has(k.UA.UNENROLLED)
@@ -481,23 +481,23 @@ function F(e) {
                   eu &&
                       (0, a.jsx)("div", {
                           className: D.qz,
-                          children: (0, a.jsx)(s.Pw, {
+                          children: (0, a.jsx)(l.Pw, {
                               className: D.xZ,
                               isSelected: (e) => {
-                                  switch (es) {
-                                      case p.X0.DESKTOP:
+                                  switch (el) {
+                                      case x.X0.DESKTOP:
                                           return e === R.fO.DESKTOP;
-                                      case p.X0.CONSOLE:
+                                      case x.X0.CONSOLE:
                                           return e === R.fO.CONSOLE;
                                       default:
                                           return !1;
                                   }
                               },
-                              options: M,
+                              options: P,
                               placeholder: w.intl.string(w.t.drVw4T),
-                              renderOptionLabel: P,
+                              renderOptionLabel: M,
                               renderOptionValue: L,
-                              select: ex,
+                              select: ep,
                               serialize: (e) => {
                                   switch (e) {
                                       case R.fO.DESKTOP:

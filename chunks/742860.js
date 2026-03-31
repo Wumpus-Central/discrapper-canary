@@ -16,13 +16,13 @@ var a = n(627968),
     _ = n(341915),
     f = n(405670),
     v = n(12251),
-    b = n(33621),
+    b = n(112142),
     j = n(714510),
     A = n(890687),
     C = n(579473),
     y = n(590202),
-    T = n(651892),
-    S = n(901406),
+    S = n(651892),
+    T = n(901406),
     E = n(792620),
     N = n(814793),
     I = n(241124),
@@ -134,7 +134,7 @@ function Z(e) {
         { quest: o, onGameSheetOpen: c, onGameSheetClose: m, taskDetails: h } = i.useContext(F.T),
         { expansionSpring: p } = i.useContext(M.PW),
         f = i.useRef(null),
-        S = (0, d.bG)([g.A], () => g.A.isEnrolling(o.id), [o]),
+        T = (0, d.bG)([g.A], () => g.A.isEnrolling(o.id), [o]),
         E = i.useMemo(() => (0, C.tW)(o, C.fY.QUEST_BAR_HERO), [o]),
         N = (0, j.NA)({ quest: o }),
         R = i.useMemo(() => (0, C.tW)(o, C.fY.HERO_IMAGE), [o]),
@@ -166,7 +166,7 @@ function Z(e) {
                     : y.Cy.LEARN_MORE_CTA_AND_EXPRESSIVE_BUTTON_TREATMENT_THREE_OPEN_GAME_LINK,
             sourceQuestContent: _.uF.QUEST_BAR_V2,
         }),
-        K = (0, T.wr)(o);
+        K = (0, S.wr)(o);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)("div", {
@@ -209,7 +209,7 @@ function Z(e) {
                                         : (0, a.jsx)(u.Button, {
                                               variant: G,
                                               onClick: t ? s : void 0,
-                                              loading: S,
+                                              loading: T,
                                               text: N,
                                               size: "sm",
                                               icon: (0, D.Oz)(o),
@@ -262,7 +262,7 @@ function ee(e) {
         b = (0, A.RR)({ quest: s }),
         j = (0, E.vv)(s),
         C = (0, A.I3)(s),
-        T = i.useCallback(() => {
+        S = i.useCallback(() => {
             (0, D.d5)({
                 quest: s,
                 questContent: _.uF.QUEST_BAR_V2,
@@ -300,7 +300,7 @@ function ee(e) {
                     (0, a.jsx)(G.T, {
                         children:
                             !u &&
-                            !(0, S.W1)(s) &&
+                            !(0, T.W1)(s) &&
                             (0, o.YW)(x)
                                 .with(_.X0.SELECT, () =>
                                     (0, a.jsx)(K.A, {
@@ -314,7 +314,7 @@ function ee(e) {
                     }),
                     (0, a.jsxs)(G.T, {
                         children: [
-                            j && (0, a.jsx)(J, { onClick: T }),
+                            j && (0, a.jsx)(J, { onClick: S }),
                             (0, a.jsx)(L.f, {
                                 awaitingConsoleConnections: b,
                                 hasMadeProgress: m,

@@ -1,9 +1,9 @@
-a.d(t, { A: () => i });
-var r = a(64700),
-    n = a(287809),
-    s = a(657331);
+r.d(t, { A: () => i });
+var a = r(64700),
+    n = r(287809),
+    s = r(657331);
 function i() {
-    return (0, r.useCallback)(() => {
+    return (0, a.useCallback)(() => {
         let e = n.default.getCurrentUser();
         null != e && (0, s.openUserProfileModal)({ userId: e.id });
     }, []);
