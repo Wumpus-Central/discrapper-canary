@@ -13,7 +13,7 @@ var i = n(627968),
     _ = n(73153),
     p = n(830215),
     g = n(6981),
-    m = n(351671),
+    m = n(574052),
     A = n(15552),
     f = n(212640),
     E = n(854378),
@@ -33,8 +33,8 @@ var i = n(627968),
     w = n(210714),
     k = n(933924),
     D = n(961350),
-    P = n(115036),
-    U = n(650048),
+    U = n(115036),
+    P = n(650048),
     B = n(954571),
     G = n(203982),
     F = n(723702),
@@ -45,8 +45,8 @@ var i = n(627968),
     K = n(652215),
     z = n(401755),
     Q = n(985018),
-    q = n(228723),
-    Y = n(473169);
+    q = n(534754),
+    Y = n(885106);
 function J() {
     return (0, i.jsx)(E.Ay, { children: (0, i.jsx)(h.y$y, {}) });
 }
@@ -141,7 +141,7 @@ class X extends s.PureComponent {
             (this.setState({ redirecting: !0 }),
             n ? p.A.verifySSOToken("login").then(() => this.transitionSSO(t)) : this.transitionSSO(t));
     }
-    handleAuthSuccess(e) {
+    handleAuthSuccess = (e) => {
         this.setState({ errors: {} }),
             B.default.track(K.HAw.LOGIN_SUCCESSFUL, {
                 source: K.mdB.QR_CODE,
@@ -151,7 +151,7 @@ class X extends s.PureComponent {
                 login_method: "remote_auth",
                 login_instance_id: e ?? null,
             });
-    }
+    };
     transitionSSO(e) {
         let { transitionTo: t, redirectTo: n, replaceWith: i } = this.props,
             s = null != e ? (0, a.parse)(e.search) : {};
@@ -657,14 +657,14 @@ class X extends s.PureComponent {
 }
 let $ = function (e) {
     (0, L.K)();
-    let t = (0, c.cf)([P.A, U.A, D.default, T.A, b.A], () => ({
+    let t = (0, c.cf)([U.A, P.A, D.default, T.A, b.A], () => ({
         authenticated: D.default.isAuthenticated(),
-        handoffAvailable: P.A.isHandoffAvailable(),
-        user: P.A.user,
+        handoffAvailable: U.A.isHandoffAvailable(),
+        user: U.A.user,
         loginStatus: D.default.getLoginStatus(),
         mfaTicket: D.default.getMFATicket(),
         mfaMethods: D.default.getMFAMethods(),
-        defaultRoute: U.A.defaultRoute,
+        defaultRoute: P.A.defaultRoute,
         country: b.A.getCountryCode(),
         hasLoggedInAccounts: T.A.getHasLoggedInAccounts(),
     }));
