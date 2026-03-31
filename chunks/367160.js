@@ -21,7 +21,7 @@ var r = n(627968),
     T = n(888751),
     S = n(788868),
     y = n(985018),
-    v = n(756366);
+    v = n(523376);
 let N = (e) => {
     let {
             referralTrialOfferId: t,
@@ -175,7 +175,6 @@ let N = (e) => {
                   selectedPlanId: n,
                   priceOptions: eS,
                   planOptions: q,
-                  eligibleForMultiMonthPlans: !1,
                   subscriptionPeriodEnd: B,
                   discountInvoiceItems: z,
               })

@@ -12,7 +12,7 @@ var r = n(627968),
     _ = n(692440),
     f = n(299301),
     p = n(985018),
-    h = n(756366);
+    h = n(523376);
 let m = (e) => {
     let {
             disabled: t,
@@ -36,7 +36,7 @@ let m = (e) => {
             currencySelectComponent: w,
             legalContent: M,
         } = e,
-        x = i.useMemo(() => {
+        P = i.useMemo(() => {
             let e = [];
             return (
                 n &&
@@ -51,7 +51,7 @@ let m = (e) => {
                 e
             );
         }, [E, g, A, n, m]),
-        P = i.useMemo(() => (0, c.l6)(R, T?.checkoutContext?.available_plans), [R, T]),
+        x = i.useMemo(() => (0, c.l6)(R, T?.checkoutContext?.available_plans), [R, T]),
         k = i.useMemo(() => (y ? (0, r.jsx)(a.P, { planSkuId: N.skuId }) : null), [y, N.skuId]),
         U = (0, c.J$)(R.paymentSourceId),
         G = null,
@@ -61,10 +61,9 @@ let m = (e) => {
               disabled: t,
               headingSubText: I,
               planOptions: O,
-              eligibleForMultiMonthPlans: !1,
               selectedPlanId: C,
               showPlanStatusSubText: !0,
-              priceOptions: P,
+              priceOptions: x,
           }))
         : null != T &&
           (G = (0, r.jsx)(u._, {
@@ -79,7 +78,7 @@ let m = (e) => {
         B = v ? null : S;
     return (0, r.jsx)(s.rg, {
         shouldShowGlobalNotices: !0,
-        upperInlineNoticeProps: x,
+        upperInlineNoticeProps: P,
         paymentSelectContent: (0, r.jsxs)(r.Fragment, { children: [L, w] }),
         subscriptionDetailsContent: V,
         purchaseItemContent: G,

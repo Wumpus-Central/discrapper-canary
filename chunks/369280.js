@@ -31,15 +31,15 @@ var r = n(627968),
     L = n(735164),
     w = n(778307),
     M = n(218075),
-    x = n(446929),
-    P = n(299301),
+    P = n(446929),
+    x = n(299301),
     k = n(841247),
     U = n(422268),
     G = n(88001),
     F = n(652215),
-    V = n(519412),
+    V = n(518582),
     B = n(985018),
-    H = n(110448);
+    H = n(461397);
 function j(e) {
     let t,
         {
@@ -114,11 +114,7 @@ function j(e) {
             startedPaymentFlowWithPaymentSources: eo.current,
         }),
         eL = n?.isPausedAllowsResumeButNotUpdates,
-        ew = i.useMemo(
-            () =>
-                (0, b.Tm)({ skuId: ei, isPremium: ea, multiMonthPlans: [], currentSubscription: n, defaultPlanId: es }),
-            [ei, n, es, ea],
-        );
+        ew = i.useMemo(() => (0, b.Tm)({ skuId: ei, isPremium: ea, defaultPlanId: es }), [ei, es, ea]);
     t =
         ee || eL
             ? B.intl.string(B.t.nyzoFb)
@@ -128,13 +124,13 @@ function j(e) {
                 ? (0, b.ff)(n, eg)
                 : B.intl.formatToPlainString(B.t["sBpy9/"], { planName: eg.name });
     let eM = i.useRef(null),
-        [ex, eP] = i.useState(null),
+        [eP, ex] = i.useState(null),
         [ek, eU] = i.useState(void 0),
         eG = i.useMemo(
             () => ({
                 shouldUseUnifiedCheckoutUI: er,
                 unifiedSubscriptionDetailsNode: eM,
-                setUnifiedPlainNoticeText: eP,
+                setUnifiedPlainNoticeText: ex,
                 setOverrideRenewalDate: eU,
             }),
             [er],
@@ -198,7 +194,7 @@ function j(e) {
                       paymentSourceType: em,
                       isInvoiceBilledImmediately: eV,
                       invoiceSummaryTypeWithPreview: {
-                          type: P.N$.PREMIUM_SWITCH_PLAN,
+                          type: x.N$.PREMIUM_SWITCH_PLAN,
                           invoicePreview: ed,
                           renewalInvoicePreview: eS,
                       },
@@ -250,7 +246,7 @@ function j(e) {
               isPremiumGroupPurchase: ec,
               paymentRestrictionBannerType: ej,
               invoiceError: Z,
-              unifiedPlainNoticeText: ex,
+              unifiedPlainNoticeText: eP,
               invoicePreview: ed,
               invoicePreviewComponent: eF,
               shouldShowPlanSelectAndPromoBanner: eq,
@@ -274,10 +270,9 @@ function j(e) {
                       (0, r.jsxs)("div", {
                           children: [
                               eZ,
-                              (0, r.jsx)(x.$p, {
+                              (0, r.jsx)(P.$p, {
                                   disabled: eb,
                                   planOptions: ew,
-                                  eligibleForMultiMonthPlans: !1,
                                   selectedPlanId: W,
                                   planGroup: X,
                                   showTotal: !1,

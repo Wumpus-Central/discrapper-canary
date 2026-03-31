@@ -42,11 +42,11 @@ n.d(t, {
     aE: () => eQ,
     aZ: () => e7,
     bx: () => eh,
-    e1: () => tP,
+    e1: () => tx,
     ee: () => eJ,
     ff: () => ej,
     iv: () => tB,
-    jh: () => ex,
+    jh: () => eP,
     ji: () => eS,
     kX: () => eN,
     ki: () => eU,
@@ -100,9 +100,9 @@ var r = n(284009),
     L = n(100544),
     w = n(788868),
     M = n(88001),
-    x = n(818348),
-    P = n(985018),
-    k = n(519412);
+    P = n(818348),
+    x = n(985018),
+    k = n(518582);
 let U = {
         PAYMENT_SOURCE_MANAGEMENT: "https://support.apple.com/HT201266",
         BILLING_HISTORY: "https://support.apple.com/HT201266",
@@ -257,9 +257,9 @@ function Q(e) {
 function J(e) {
     switch (e) {
         case w.Ff.MONTH:
-            return P.intl.string(P.t.FPybU7);
+            return x.intl.string(x.t.FPybU7);
         case w.Ff.YEAR:
-            return P.intl.string(P.t.tfqrhj);
+            return x.intl.string(x.t.tfqrhj);
         case w.Ff.DAY:
         case w.Ff.WEEK:
         default:
@@ -273,24 +273,24 @@ function ee(e, t, n) {
     if (t || n)
         switch (e) {
             case w.WT.MONTH:
-                let a = P.intl.formatToPlainString(s === w.PremiumTypes.TIER_0 ? P.t.NPKsLz : P.t.poEovT, {
-                    timeInterval: P.intl.string(P.t.FPybU7),
+                let a = x.intl.formatToPlainString(s === w.PremiumTypes.TIER_0 ? x.t.NPKsLz : x.t.poEovT, {
+                    timeInterval: x.intl.string(x.t.FPybU7),
                 });
-                return i ? a : P.intl.string(P.t.Mh9bTt);
+                return i ? a : x.intl.string(x.t.Mh9bTt);
             case w.WT.YEAR:
-                let o = P.intl.formatToPlainString(s === w.PremiumTypes.TIER_0 ? P.t.NPKsLz : P.t.poEovT, {
-                    timeInterval: P.intl.string(P.t.tfqrhj),
+                let o = x.intl.formatToPlainString(s === w.PremiumTypes.TIER_0 ? x.t.NPKsLz : x.t.poEovT, {
+                    timeInterval: x.intl.string(x.t.tfqrhj),
                 });
-                return i ? o : P.intl.string(P.t.DRgqMo);
+                return i ? o : x.intl.string(x.t.DRgqMo);
             default:
                 throw Error("Unexpected interval");
         }
     switch (e) {
         case w.WT.MONTH:
-            if (1 !== r) return P.intl.formatToPlainString(P.t["0UlZnH"], { intervalCount: r });
-            return P.intl.string(P.t.DKzs96);
+            if (1 !== r) return x.intl.formatToPlainString(x.t["0UlZnH"], { intervalCount: r });
+            return x.intl.string(x.t.DKzs96);
         case w.WT.YEAR:
-            return P.intl.string(P.t["/Q4HRN"]);
+            return x.intl.string(x.t["/Q4HRN"]);
         default:
             throw Error("Unexpected interval");
     }
@@ -298,9 +298,9 @@ function ee(e, t, n) {
 function et(e) {
     switch (e) {
         case w.WT.MONTH:
-            return P.intl.string(P.t.FPybU7);
+            return x.intl.string(x.t.FPybU7);
         case w.WT.YEAR:
-            return P.intl.string(P.t.tfqrhj);
+            return x.intl.string(x.t.tfqrhj);
         default:
             throw Error("Unexpected interval");
     }
@@ -318,50 +318,50 @@ function er(e) {
     switch (e) {
         case w.gD.PREMIUM_MONTH_TIER_0:
             return t
-                ? P.intl.format(P.t.TZXHNj, { duration: r })
+                ? x.intl.format(x.t.TZXHNj, { duration: r })
                 : n
-                  ? P.intl.string(P.t["81iAgs"])
-                  : P.intl.string(P.t["0efVPy"]);
+                  ? x.intl.string(x.t["81iAgs"])
+                  : x.intl.string(x.t["0efVPy"]);
         case w.gD.PREMIUM_YEAR_TIER_0:
             return t
-                ? P.intl.format(P.t.eqRhC7, { duration: r })
+                ? x.intl.format(x.t.eqRhC7, { duration: r })
                 : n
-                  ? P.intl.string(P.t.UvzqY1)
-                  : P.intl.string(P.t.eoVuBn);
+                  ? x.intl.string(x.t.UvzqY1)
+                  : x.intl.string(x.t.eoVuBn);
         case w.gD.PREMIUM_MONTH_TIER_1:
-            return n ? P.intl.string(P.t["g/dH5g"]) : P.intl.string(P.t["7O6qSq"]);
+            return n ? x.intl.string(x.t["g/dH5g"]) : x.intl.string(x.t["7O6qSq"]);
         case w.gD.PREMIUM_YEAR_TIER_1:
-            return n ? P.intl.string(P.t.pdZJaq) : P.intl.string(P.t.Md5xbi);
+            return n ? x.intl.string(x.t.pdZJaq) : x.intl.string(x.t.Md5xbi);
         case w.gD.PREMIUM_MONTH_TIER_2:
             return t
-                ? P.intl.format(P.t.aI6QXz, { duration: r })
+                ? x.intl.format(x.t.aI6QXz, { duration: r })
                 : n
-                  ? P.intl.string(P.t.SmVbHc)
-                  : P.intl.string(P.t.FKYNC6);
+                  ? x.intl.string(x.t.SmVbHc)
+                  : x.intl.string(x.t.FKYNC6);
         case w.gD.PREMIUM_GROUP_MONTH:
-            return n ? P.intl.string(P.t.SmVbHc) : P.intl.string(P.t.FKYNC6);
+            return n ? x.intl.string(x.t.SmVbHc) : x.intl.string(x.t.FKYNC6);
         case w.gD.PREMIUM_YEAR_TIER_2:
             return t
-                ? P.intl.format(P.t["1wBcPi"], { duration: r })
+                ? x.intl.format(x.t["1wBcPi"], { duration: r })
                 : n
-                  ? P.intl.string(P.t.JIq4O1)
-                  : P.intl.string(P.t["cfu/5d"]);
+                  ? x.intl.string(x.t.JIq4O1)
+                  : x.intl.string(x.t["cfu/5d"]);
         case w.gD.PREMIUM_3_MONTH_TIER_2:
-            return P.intl.string(P.t.wCbINr);
+            return x.intl.string(x.t.wCbINr);
         case w.gD.PREMIUM_6_MONTH_TIER_2:
-            return P.intl.string(P.t["e3/ArU"]);
+            return x.intl.string(x.t["e3/ArU"]);
         case w.gD.PREMIUM_MONTH_GUILD:
-            return n ? P.intl.string(P.t["6ZR3By"]) : P.intl.string(P.t["h80cx/"]);
+            return n ? x.intl.string(x.t["6ZR3By"]) : x.intl.string(x.t["h80cx/"]);
         case w.gD.PREMIUM_YEAR_GUILD:
-            return n ? P.intl.string(P.t.YDpAzZ) : P.intl.string(P.t.ZHkls0);
+            return n ? x.intl.string(x.t.YDpAzZ) : x.intl.string(x.t.ZHkls0);
         case w.gD.PREMIUM_3_MONTH_GUILD:
-            return P.intl.string(P.t.EZHHB6);
+            return x.intl.string(x.t.EZHHB6);
         case w.gD.PREMIUM_6_MONTH_GUILD:
-            return P.intl.string(P.t.X2KDO2);
+            return x.intl.string(x.t.X2KDO2);
         case w.gD.PREMIUM_MONTH_LEGACY:
-            return P.intl.string(P.t.PD6k79);
+            return x.intl.string(x.t.PD6k79);
         case w.gD.PREMIUM_YEAR_LEGACY:
-            return P.intl.string(P.t.LtJgTC);
+            return x.intl.string(x.t.LtJgTC);
     }
     let i = Error("Unsupported plan");
     throw ((0, S.pM)(i, { tags: { planId: e } }), i);
@@ -369,11 +369,11 @@ function er(e) {
 function ei(e) {
     switch (e) {
         case w.pe.TIER_0:
-            return P.intl.string(P.t["t9uG/o"]);
+            return x.intl.string(x.t["t9uG/o"]);
         case w.pe.TIER_1:
-            return P.intl.string(P.t.FSOz78);
+            return x.intl.string(x.t.FSOz78);
         case w.pe.TIER_2:
-            return P.intl.string(P.t.lG6a5x);
+            return x.intl.string(x.t.lG6a5x);
     }
     let t = Error("Unsupported sku");
     throw ((0, S.pM)(t, { tags: { skuId: e } }), t);
@@ -381,7 +381,7 @@ function ei(e) {
 function es(e) {
     let t = w.hd[e]?.premiumType,
         n = null != t ? w.Mr[t] : null;
-    if (null != n) return P.intl.string(n);
+    if (null != n) return x.intl.string(n);
     let r = Error("Unsupported plan");
     throw ((0, S.pM)(r, { tags: { planId: e } }), r);
 }
@@ -394,11 +394,11 @@ function eo(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     switch (e) {
         case w.PremiumTypes.TIER_0:
-            return t ? "Basic" : P.intl.string(P.t["t9uG/o"]);
+            return t ? "Basic" : x.intl.string(x.t["t9uG/o"]);
         case w.PremiumTypes.TIER_1:
-            return t ? "Classic" : P.intl.string(P.t.FSOz78);
+            return t ? "Classic" : x.intl.string(x.t.FSOz78);
         case w.PremiumTypes.TIER_2:
-            return P.intl.string(P.t.lG6a5x);
+            return x.intl.string(x.t.lG6a5x);
     }
 }
 function el(e) {
@@ -424,19 +424,19 @@ function el(e) {
         A = w.M4 + (i ? eh(t.additionalPlans) : 0),
         I = p
             ? g
-                ? P.intl.format(P.t["cd+hqB"], { price: r })
-                : P.intl.format(P.t.NUkcpF, { price: r })
-            : P.intl.string(P.t.zYx3Y6),
+                ? x.intl.format(x.t["cd+hqB"], { price: r })
+                : x.intl.format(x.t.NUkcpF, { price: r })
+            : x.intl.string(x.t.zYx3Y6),
         T = p
             ? g
-                ? P.intl.format(P.t.VsKcFB, { price: r })
-                : P.intl.format(P.t.hJ5xEX, { price: r })
-            : P.intl.string(P.t["8rSipI"]),
+                ? x.intl.format(x.t.VsKcFB, { price: r })
+                : x.intl.format(x.t.hJ5xEX, { price: r })
+            : x.intl.string(x.t["8rSipI"]),
         S = p
             ? g
-                ? P.intl.format(P.t["jRy6/J"], { price: r, num: A })
-                : P.intl.format(P.t.tTNE8M, { price: r, num: A })
-            : P.intl.format(P.t["U+z/HJ"], { num: A });
+                ? x.intl.format(x.t["jRy6/J"], { price: r, num: A })
+                : x.intl.format(x.t.tTNE8M, { price: r, num: A })
+            : x.intl.format(x.t["U+z/HJ"], { num: A });
     switch (n) {
         case w.gD.PREMIUM_MONTH_TIER_0:
         case w.gD.PREMIUM_YEAR_TIER_0:
@@ -444,27 +444,27 @@ function el(e) {
                 case D.Dmq.CANCELED:
                     return p
                         ? g
-                            ? P.intl.format(P.t["USi/nc"], { price: r })
-                            : P.intl.format(P.t["FS//l2"], { price: r })
-                        : P.intl.string(P.t.JshLzq);
+                            ? x.intl.format(x.t["USi/nc"], { price: r })
+                            : x.intl.format(x.t["FS//l2"], { price: r })
+                        : x.intl.string(x.t.JshLzq);
                 case D.Dmq.ACCOUNT_HOLD:
                     return p
                         ? g
-                            ? P.intl.format(P.t["5mv+2i"], { price: r })
-                            : P.intl.format(P.t.nkAEfZ, { price: r })
-                        : P.intl.format(P.t.SsLIXS, {});
+                            ? x.intl.format(x.t["5mv+2i"], { price: r })
+                            : x.intl.format(x.t.nkAEfZ, { price: r })
+                        : x.intl.format(x.t.SsLIXS, {});
                 case D.Dmq.UNPAID:
-                    return P.intl.format(P.t.cmkbFB, {});
+                    return x.intl.format(x.t.cmkbFB, {});
                 case D.Dmq.PAUSE_PENDING:
                     let v = null != t.pauseEndsAt ? a()(t.pauseEndsAt).diff(t.currentPeriodEnd, "days") : null;
                     return null != v
-                        ? P.intl.format(P.t.WUfOD5, { pauseDate: t.currentPeriodEnd, pauseDuration: v })
-                        : P.intl.format(P.t.VlWufv, { pauseDate: t.currentPeriodEnd });
+                        ? x.intl.format(x.t.WUfOD5, { pauseDate: t.currentPeriodEnd, pauseDuration: v })
+                        : x.intl.format(x.t.VlWufv, { pauseDate: t.currentPeriodEnd });
                 case D.Dmq.PAUSED:
                     if (c) return I;
-                    return P.intl.format(P.t["6RTdZA"], { resumeDate: t.pauseEndsAt });
+                    return x.intl.format(x.t["6RTdZA"], { resumeDate: t.pauseEndsAt });
                 case D.Dmq.PAST_DUE:
-                    return P.intl.format(P.t["d+0vwo"], {
+                    return x.intl.format(x.t["d+0vwo"], {
                         endDate: (0, y.i$)(eS(t).expiresDate, "LL"),
                         onClick: () => {
                             (0, u.A)("https://support.discord.com/hc/articles/23082866222871");
@@ -479,27 +479,27 @@ function el(e) {
                 case D.Dmq.CANCELED:
                     return p
                         ? g
-                            ? P.intl.format(P.t.cXy8Bp, { price: r })
-                            : P.intl.format(P.t["C/XsHt"], { price: r })
-                        : P.intl.string(P.t.K6tYFa);
+                            ? x.intl.format(x.t.cXy8Bp, { price: r })
+                            : x.intl.format(x.t["C/XsHt"], { price: r })
+                        : x.intl.string(x.t.K6tYFa);
                 case D.Dmq.ACCOUNT_HOLD:
                     return p
                         ? g
-                            ? P.intl.format(P.t.HBkIBi, { price: r })
-                            : P.intl.format(P.t.ZsO1Sx, { price: r })
-                        : P.intl.format(P.t["0+/WH7"], {});
+                            ? x.intl.format(x.t.HBkIBi, { price: r })
+                            : x.intl.format(x.t.ZsO1Sx, { price: r })
+                        : x.intl.format(x.t["0+/WH7"], {});
                 case D.Dmq.UNPAID:
-                    return P.intl.format(P.t.McIzwj, {});
+                    return x.intl.format(x.t.McIzwj, {});
                 case D.Dmq.PAUSE_PENDING:
                     let N = null != t.pauseEndsAt ? a()(t.pauseEndsAt).diff(t.currentPeriodEnd, "days") : null;
                     return null != N
-                        ? P.intl.format(P.t.WUfOD5, { pauseDate: t.currentPeriodEnd, pauseDuration: N })
-                        : P.intl.format(P.t.VlWufv, { pauseDate: t.currentPeriodEnd });
+                        ? x.intl.format(x.t.WUfOD5, { pauseDate: t.currentPeriodEnd, pauseDuration: N })
+                        : x.intl.format(x.t.VlWufv, { pauseDate: t.currentPeriodEnd });
                 case D.Dmq.PAUSED:
                     if (c) return T;
-                    return P.intl.format(P.t["6RTdZA"], { resumeDate: t.pauseEndsAt });
+                    return x.intl.format(x.t["6RTdZA"], { resumeDate: t.pauseEndsAt });
                 case D.Dmq.PAST_DUE:
-                    return P.intl.format(P.t["d+0vwo"], {
+                    return x.intl.format(x.t["d+0vwo"], {
                         endDate: (0, y.i$)(eS(t).expiresDate, "LL"),
                         onClick: () => {
                             (0, u.A)("https://support.discord.com/hc/articles/23082866222871");
@@ -517,31 +517,31 @@ function el(e) {
                 case D.Dmq.CANCELED:
                     return p
                         ? g
-                            ? P.intl.format(P.t.xoFgRh, { price: r, num: A })
-                            : P.intl.format(P.t.nXdbKo, { price: r, num: A })
-                        : P.intl.format(P.t.EcSdRH, { num: A });
+                            ? x.intl.format(x.t.xoFgRh, { price: r, num: A })
+                            : x.intl.format(x.t.nXdbKo, { price: r, num: A })
+                        : x.intl.format(x.t.EcSdRH, { num: A });
                 case D.Dmq.ACCOUNT_HOLD:
                     return p
                         ? g
-                            ? P.intl.format(P.t["5C/0QG"], { price: r, num: A })
-                            : P.intl.format(P.t.xfYkhu, { price: r, num: A })
-                        : P.intl.format(P.t.ivjxcn, { num: A });
+                            ? x.intl.format(x.t["5C/0QG"], { price: r, num: A })
+                            : x.intl.format(x.t.xfYkhu, { price: r, num: A })
+                        : x.intl.format(x.t.ivjxcn, { num: A });
                 case D.Dmq.UNPAID:
-                    return P.intl.format(P.t["0HopYf"], { num: A });
+                    return x.intl.format(x.t["0HopYf"], { num: A });
                 case D.Dmq.PAUSE_PENDING:
                     let C = null != t.pauseEndsAt ? a()(t.pauseEndsAt).diff(t.currentPeriodEnd, "days") : null;
                     return null != C
-                        ? P.intl.format(P.t.WUfOD5, { pauseDate: t.currentPeriodEnd, pauseDuration: C })
-                        : P.intl.format(P.t.VlWufv, { pauseDate: t.currentPeriodEnd });
+                        ? x.intl.format(x.t.WUfOD5, { pauseDate: t.currentPeriodEnd, pauseDuration: C })
+                        : x.intl.format(x.t.VlWufv, { pauseDate: t.currentPeriodEnd });
                 case D.Dmq.PAUSED:
                     if (c) return S;
-                    return P.intl.format(P.t["6RTdZA"], { resumeDate: t.pauseEndsAt });
+                    return x.intl.format(x.t["6RTdZA"], { resumeDate: t.pauseEndsAt });
                 case D.Dmq.BILLING_RETRY:
-                    return P.intl.format(P.t["IlJ/HV"], {
+                    return x.intl.format(x.t["IlJ/HV"], {
                         endDate: a()(t.currentPeriodStart).add(w.bx, "days").toDate(),
                     });
                 case D.Dmq.PAST_DUE:
-                    return P.intl.format(P.t["d+0vwo"], {
+                    return x.intl.format(x.t["d+0vwo"], {
                         endDate: (0, y.i$)(eS(t).expiresDate, "LL"),
                         onClick: () => {
                             (0, u.A)("https://support.discord.com/hc/articles/23082866222871");
@@ -550,14 +550,14 @@ function el(e) {
                 default:
                     return s
                         ? n === w.gD.PREMIUM_YEAR_TIER_2
-                            ? P.intl.format(P.t["+qqh6g"], { percent: o?.percentage ?? w.Cq, regularPrice: _ })
+                            ? x.intl.format(x.t["+qqh6g"], { percent: o?.percentage ?? w.Cq, regularPrice: _ })
                             : g
-                              ? P.intl.formatToPlainString(P.t["3ZiutU"], {
+                              ? x.intl.formatToPlainString(x.t["3ZiutU"], {
                                     percent: o?.percentage ?? w._$,
                                     regularPrice: _,
                                     numMonths: o?.duration ?? w.OJ,
                                 })
-                              : P.intl.formatToPlainString(P.t["G6+XOT"], {
+                              : x.intl.formatToPlainString(x.t["G6+XOT"], {
                                     percent: o?.percentage ?? w._$,
                                     regularPrice: _,
                                     numMonths: o?.duration ?? w.OJ,
@@ -600,10 +600,10 @@ function ec(e) {
             let { planId: t } = e;
             return w.pW.has(t);
         }),
-        s = i?.planId === w.gD.PREMIUM_MONTH_GUILD || i?.planId === w.gD.PREMIUM_YEAR_GUILD ? P.t.Pi5yMJ : null,
-        a = null != s ? P.intl.formatToPlainString(s, { num: i?.quantity }) : void 0;
+        s = i?.planId === w.gD.PREMIUM_MONTH_GUILD || i?.planId === w.gD.PREMIUM_YEAR_GUILD ? x.t.Pi5yMJ : null,
+        a = null != s ? x.intl.formatToPlainString(s, { num: i?.quantity }) : void 0;
     if (null != r && null != a)
-        return P.intl.formatToPlainString(P.t.FN5T9r, { premiumDescription: r, premiumGuildDescription: a });
+        return x.intl.formatToPlainString(x.t.FN5T9r, { premiumDescription: r, premiumGuildDescription: a });
     if (null != r) return r;
     if (null != a) return a;
     throw Error("Subscription without premium or premium guild subscription");
@@ -612,41 +612,28 @@ function ed(e) {
     return e === w.pe.TIER_0 || e === w.pe.TIER_1 || e === w.pe.TIER_2;
 }
 function e_(e) {
-    let { skuId: t, isPremium: n, multiMonthPlans: r, currentSubscription: i, defaultPlanId: s } = e;
+    let { skuId: t, isPremium: n, defaultPlanId: r } = e;
     if (null == t || !n) return [];
-    let a = void 0 !== s && t === w.hd[s].skuId ? s : void 0,
-        o = [];
+    let i = void 0 !== r && t === w.hd[r].skuId ? r : void 0,
+        s = [];
     switch (t) {
         case w.pe.TIER_0:
-            o = [w.gD.PREMIUM_YEAR_TIER_0, w.gD.PREMIUM_MONTH_TIER_0];
+            s = [w.gD.PREMIUM_YEAR_TIER_0, w.gD.PREMIUM_MONTH_TIER_0];
             break;
         case w.pe.TIER_1:
-            o = [w.gD.PREMIUM_MONTH_TIER_1];
+            s = [w.gD.PREMIUM_MONTH_TIER_1];
             break;
         case w.pe.TIER_2:
-            let l = r;
-            if (null != i) {
-                let e = i.items[0].planId;
-                if (w.Er.has(e)) {
-                    let t = w.hd[e];
-                    l = [...w.Er].filter((e) => {
-                        let n = w.hd[e];
-                        return (
-                            n.interval === t.interval && n.intervalCount === t.intervalCount && n.skuId === w.pe.TIER_2
-                        );
-                    });
-                } else l = [];
-            }
-            o = [w.gD.PREMIUM_YEAR_TIER_2, ...l, w.gD.PREMIUM_MONTH_TIER_2];
+            s = [w.gD.PREMIUM_YEAR_TIER_2, w.gD.PREMIUM_MONTH_TIER_2];
             break;
         default:
             throw Error(`Unexpected SKU: ${t}`);
     }
-    if (void 0 !== a) {
-        let e = o.indexOf(a);
-        o.splice(e, 1), o.unshift(a);
+    if (void 0 !== i) {
+        let e = s.indexOf(i);
+        s.splice(e, 1), s.unshift(i);
     }
-    return o;
+    return s;
 }
 function ef(e) {
     let t = w.hd[e];
@@ -760,24 +747,24 @@ function ey(e, t) {
               )
             : (0, b.$g)(s.total, s.currency);
     if (E.default.getCurrentUser()?.isOnReverseTrial())
-        return P.intl.format(P.t["7ZS2m1"], { trialEnd: e.currentPeriodEnd });
-    if (e.status === D.Dmq.CANCELED) return P.intl.format(P.t["Whp/qk"], { endDate: t.subscriptionPeriodStart });
+        return x.intl.format(x.t["7ZS2m1"], { trialEnd: e.currentPeriodEnd });
+    if (e.status === D.Dmq.CANCELED) return x.intl.format(x.t["Whp/qk"], { endDate: t.subscriptionPeriodStart });
     if (e.status === D.Dmq.PAUSE_PENDING)
-        return P.intl.format(P.t.uBLUGU, { pauseDate: e.currentPeriodEnd, resumeDate: e.pauseEndsAt });
+        return x.intl.format(x.t.uBLUGU, { pauseDate: e.currentPeriodEnd, resumeDate: e.pauseEndsAt });
     if (e.status === D.Dmq.PAUSED)
         return i.fractionalState !== w.xc.NONE
-            ? P.intl.format(P.t.Q18lRK, { renewalDate: i.endsAt.toDate(), price: o })
+            ? x.intl.format(x.t.Q18lRK, { renewalDate: i.endsAt.toDate(), price: o })
             : null == e.pauseEndsAt
               ? r
-                  ? P.intl.format(P.t.KTYQCg, { planName: P.intl.string(P.t.Ipxkog), price: o })
-                  : P.intl.string(P.t.fMz6Lg)
+                  ? x.intl.format(x.t.KTYQCg, { planName: x.intl.string(x.t.Ipxkog), price: o })
+                  : x.intl.string(x.t.fMz6Lg)
               : r
-                ? P.intl.format(P.t.zcgtzf, {
-                      planName: P.intl.string(P.t.Ipxkog),
+                ? x.intl.format(x.t.zcgtzf, {
+                      planName: x.intl.string(x.t.Ipxkog),
                       resumeDate: e.pauseEndsAt,
                       price: o,
                   })
-                : P.intl.format(P.t["V8+l6k"], { resumeDate: e.pauseEndsAt });
+                : x.intl.format(x.t["V8+l6k"], { resumeDate: e.pauseEndsAt });
     if (e.status === D.Dmq.PAST_DUE) {
         let t = eS(e).expiresDate;
         return (e.isPurchasedViaGoogle &&
@@ -787,44 +774,44 @@ function ey(e, t) {
             e.metadata?.apple_grace_period_expires_date != null &&
             (t = a()(e.metadata.apple_grace_period_expires_date)),
         e.isPurchasedExternally)
-            ? P.intl.format(P.t.U2hb3W, {
+            ? x.intl.format(x.t.U2hb3W, {
                   endDate: t.toDate(),
-                  paymentGatewayName: x.qm[e.paymentGateway],
+                  paymentGatewayName: P.qm[e.paymentGateway],
                   paymentSourceLink: eZ(e.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT"),
               })
-            : P.intl.format(P.t.qEIzyi, { endDate: t.toDate(), price: o });
+            : x.intl.format(x.t.qEIzyi, { endDate: t.toDate(), price: o });
     }
     {
         if (e.status === D.Dmq.BILLING_RETRY)
-            return P.intl.format(P.t.EMTLOT, {
+            return x.intl.format(x.t.EMTLOT, {
                 endDate: a()(e.currentPeriodStart).add(w.bx, "days").toDate(),
                 price: o,
             });
         if (e.status === D.Dmq.ACCOUNT_HOLD)
             return e.isPurchasedViaGoogle && !(0, C.isAndroid)()
-                ? P.intl.format(P.t["dtcxw+"], {
+                ? x.intl.format(x.t["dtcxw+"], {
                       endDate: a()(e.currentPeriodStart).add(w.ph, "days").toDate(),
-                      paymentGatewayName: x.qm[e.paymentGateway],
+                      paymentGatewayName: P.qm[e.paymentGateway],
                       paymentSourceLink: eZ(e.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT"),
                   })
-                : P.intl.format(P.t.EMTLOT, {
+                : x.intl.format(x.t.EMTLOT, {
                       endDate: a()(e.currentPeriodStart).add(w.ph, "days").toDate(),
                       price: o,
                   });
-        if (eO(e)) return P.intl.format(P.t.awpB0C, { prepaidEndDate: e.currentPeriodEnd });
-        if (e.status === D.Dmq.UNPAID) return P.intl.format(P.t.CzTKom, { maxProcessingTimeInDays: w.G4 });
+        if (eO(e)) return x.intl.format(x.t.awpB0C, { prepaidEndDate: e.currentPeriodEnd });
+        if (e.status === D.Dmq.UNPAID) return x.intl.format(x.t.CzTKom, { maxProcessingTimeInDays: w.G4 });
         if (e.isPurchasedExternally)
-            return P.intl.format(P.t.ZlWXgR, {
+            return x.intl.format(x.t.ZlWXgR, {
                 renewalDate: t.subscriptionPeriodStart,
-                paymentGatewayName: x.qm[e.paymentGateway],
+                paymentGatewayName: P.qm[e.paymentGateway],
                 subscriptionManagementLink: eZ(e.paymentGateway, "SUBSCRIPTION_MANAGEMENT"),
             });
         let n = new Date(t.subscriptionPeriodStart);
         return (
             e.isBoostOnly || e.hasAnyPremiumGroup || (n = ev(n, i.unactivatedUnits)),
             r
-                ? P.intl.format(P.t.Vl3cED, { planName: P.intl.string(P.t.Ipxkog), renewalDate: n, price: o })
-                : P.intl.format(P.t.Q18lRK, { renewalDate: n, price: o })
+                ? x.intl.format(x.t.Vl3cED, { planName: x.intl.string(x.t.Ipxkog), renewalDate: n, price: o })
+                : x.intl.format(x.t.Q18lRK, { renewalDate: n, price: o })
         );
     }
 }
@@ -844,7 +831,7 @@ function ev(e, t, n, r) {
 function eN(e) {
     let t = tV(e.unactivatedUnits);
     if (!(t > 0 && e.fractionalState === w.xc.NONE)) return "";
-    let n = { days: P.t.fYmirx, hours: P.t["C3RO+g"], minutes: P.t.r77oHc },
+    let n = { days: x.t.fYmirx, hours: x.t["C3RO+g"], minutes: x.t.r77oHc },
         r = (0, c.Vb)((0, y.Tf)(0, t * v.A.Millis.HOUR));
     return (0, y.uN)(r, n);
 }
@@ -855,8 +842,8 @@ function eR(e) {
     let t = null;
     return (
         null != e.renewalMutations &&
-            (t = e.renewalMutations.planId !== e.planId ? P.intl.string(P.t["0rzJ4J"]) : P.intl.string(P.t["9dLQ0/"])),
-        null != e.trialEndsAt && (t = P.intl.string(P.t.a9Mdb3)),
+            (t = e.renewalMutations.planId !== e.planId ? x.intl.string(x.t["0rzJ4J"]) : x.intl.string(x.t["9dLQ0/"])),
+        null != e.trialEndsAt && (t = x.intl.string(x.t.a9Mdb3)),
         t
     );
 }
@@ -866,7 +853,7 @@ function eO(e) {
 function eb(e) {
     if (null == e) return !1;
     let t = A.A.getPaymentSource(e);
-    return null != t && x.AD.has(t.type);
+    return null != t && P.AD.has(t.type);
 }
 function eD(e) {
     let { renewalMutations: t, additionalPlans: n, status: r } = e,
@@ -891,32 +878,32 @@ function ew(e) {
     let f = s?.taxInclusive ?? t.latestInvoice?.taxInclusive ?? !0;
     if (eL(t))
         return t.isPurchasedViaGoogle
-            ? P.intl.format(P.t["3/WTrI"], { quantity: d })
+            ? x.intl.format(x.t["3/WTrI"], { quantity: d })
             : f
-              ? P.intl.format(P.t["0ozBSB"], { quantity: d, rate: (0, b.CE)(r, c.interval, c.intervalCount) })
-              : P.intl.format(P.t["yjsv/s"], { quantity: d, rate: (0, b.CE)(r, c.interval, c.intervalCount) });
+              ? x.intl.format(x.t["0ozBSB"], { quantity: d, rate: (0, b.CE)(r, c.interval, c.intervalCount) })
+              : x.intl.format(x.t["yjsv/s"], { quantity: d, rate: (0, b.CE)(r, c.interval, c.intervalCount) });
     switch (t.status) {
         case D.Dmq.ACCOUNT_HOLD:
             return t.isPurchasedViaGoogle
-                ? P.intl.format(P.t.Nlf3nc, { quantity: d, boostQuantity: d })
+                ? x.intl.format(x.t.Nlf3nc, { quantity: d, boostQuantity: d })
                 : f
-                  ? P.intl.format(P.t.oiRy7v, {
+                  ? x.intl.format(x.t.oiRy7v, {
                         quantity: d,
                         boostQuantity: d,
                         rate: (0, b.CE)(r, c.interval, c.intervalCount),
                     })
-                  : P.intl.format(P.t["0QxOAi"], {
+                  : x.intl.format(x.t["0QxOAi"], {
                         quantity: d,
                         boostQuantity: d,
                         rate: (0, b.CE)(r, c.interval, c.intervalCount),
                     });
         case D.Dmq.PAUSE_PENDING:
         case D.Dmq.PAUSED:
-            if (null != a && !a.isFractionalPremiumActive) return P.intl.string(P.t.CduWAm);
-            return P.intl.format(P.t["5iud9s"], { quantity: d });
+            if (null != a && !a.isFractionalPremiumActive) return x.intl.string(x.t.CduWAm);
+            return x.intl.format(x.t["5iud9s"], { quantity: d });
         case D.Dmq.PAST_DUE:
             if (t.isBoostOnly)
-                return P.intl.format(P.t["d+0vwo"], {
+                return x.intl.format(x.t["d+0vwo"], {
                     endDate: (0, y.i$)(eS(t).expiresDate, "LL"),
                     onClick: () => {
                         (0, u.A)("https://support.discord.com/hc/articles/23082866222871");
@@ -924,10 +911,10 @@ function ew(e) {
                 });
         default:
             return t.isPurchasedViaGoogle
-                ? P.intl.format(P.t["5iud9s"], { quantity: d })
+                ? x.intl.format(x.t["5iud9s"], { quantity: d })
                 : f
-                  ? P.intl.format(P.t.eDwrLA, { quantity: d, rate: (0, b.CE)(r, c.interval, c.intervalCount) })
-                  : P.intl.format(P.t.ijSDcI, { quantity: d, rate: (0, b.CE)(r, c.interval, c.intervalCount) });
+                  ? x.intl.format(x.t.eDwrLA, { quantity: d, rate: (0, b.CE)(r, c.interval, c.intervalCount) })
+                  : x.intl.format(x.t.ijSDcI, { quantity: d, rate: (0, b.CE)(r, c.interval, c.intervalCount) });
     }
 }
 function eM(e, t, n) {
@@ -941,13 +928,13 @@ function eM(e, t, n) {
         }
     else r = j(e.id, !1, i);
     let s = (0, b.$g)(r.amount, r.currency);
-    return e.currency !== x.Yr.USD && !0 === n && (s = s.concat("*")), s;
+    return e.currency !== P.Yr.USD && !0 === n && (s = s.concat("*")), s;
 }
-function ex(e, t, n) {
+function eP(e, t, n) {
     let r = eM(e, t, n);
     return (0, b.CE)(r, e.interval, e.intervalCount);
 }
-function eP(e, t) {
+function ex(e, t) {
     let { planId: n } = e;
     if (e.status === D.Dmq.CANCELED || e.status === D.Dmq.PAUSE_PENDING) return n;
     i()(null != t, "Expected invoicePreview");
@@ -1023,37 +1010,37 @@ function ej(e, t, n) {
     if (null != e)
         switch (r) {
             case w.gD.PREMIUM_MONTH_TIER_0:
-                return P.intl.string(P.t["0ggVqN"]);
+                return x.intl.string(x.t["0ggVqN"]);
             case w.gD.PREMIUM_YEAR_TIER_0:
-                return P.intl.string(P.t["jm+ZQw"]);
+                return x.intl.string(x.t["jm+ZQw"]);
             case w.gD.PREMIUM_MONTH_TIER_1:
-                return P.intl.string(P.t.uph4Jx);
+                return x.intl.string(x.t.uph4Jx);
             case w.gD.PREMIUM_YEAR_TIER_1:
-                return P.intl.string(P.t["D/l7Yt"]);
+                return x.intl.string(x.t["D/l7Yt"]);
             case w.gD.PREMIUM_MONTH_TIER_2:
             case w.gD.PREMIUM_GROUP_MONTH:
-                return P.intl.string(P.t["5l1MuV"]);
+                return x.intl.string(x.t["5l1MuV"]);
             case w.gD.PREMIUM_YEAR_TIER_2:
-                return P.intl.string(P.t.G0mISV);
+                return x.intl.string(x.t.G0mISV);
         }
     switch (r) {
         case w.gD.PREMIUM_MONTH_TIER_0:
-            return n ? P.intl.string(P.t.cRCCJ3) : P.intl.string(P.t["/G3aKw"]);
+            return n ? x.intl.string(x.t.cRCCJ3) : x.intl.string(x.t["/G3aKw"]);
         case w.gD.PREMIUM_YEAR_TIER_0:
-            return n ? P.intl.string(P.t.cRCCJ3) : P.intl.string(P.t["2eQpsL"]);
+            return n ? x.intl.string(x.t.cRCCJ3) : x.intl.string(x.t["2eQpsL"]);
         case w.gD.PREMIUM_MONTH_TIER_1:
-            return n ? P.intl.string(P.t.cRCCJ3) : P.intl.string(P.t.gueLg5);
+            return n ? x.intl.string(x.t.cRCCJ3) : x.intl.string(x.t.gueLg5);
         case w.gD.PREMIUM_YEAR_TIER_1:
-            return n ? P.intl.string(P.t.cRCCJ3) : P.intl.string(P.t["MhH/vW"]);
+            return n ? x.intl.string(x.t.cRCCJ3) : x.intl.string(x.t["MhH/vW"]);
         case w.gD.PREMIUM_MONTH_TIER_2:
-            return n ? P.intl.string(P.t.cRCCJ3) : P.intl.string(P.t.LQVQIq);
+            return n ? x.intl.string(x.t.cRCCJ3) : x.intl.string(x.t.LQVQIq);
         case w.gD.PREMIUM_GROUP_MONTH:
-            return P.intl.formatToPlainString(k.default.LwdrNi, { premiumGroupProductName: (0, M.DP)() });
+            return x.intl.formatToPlainString(k.default.LwdrNi, { premiumGroupProductName: (0, M.DP)() });
         case w.gD.PREMIUM_YEAR_TIER_2:
-            return n ? P.intl.string(P.t.cRCCJ3) : P.intl.string(P.t["0nfg1x"]);
+            return n ? x.intl.string(x.t.cRCCJ3) : x.intl.string(x.t["0nfg1x"]);
         case w.gD.PREMIUM_3_MONTH_TIER_2:
         case w.gD.PREMIUM_6_MONTH_TIER_2:
-            return P.intl.formatToPlainString(P.t.BCD4fT, { intervalCount: t.intervalCount });
+            return x.intl.formatToPlainString(x.t.BCD4fT, { intervalCount: t.intervalCount });
         case w.gD.NONE_MONTH:
         case w.gD.NONE_YEAR:
         case w.gD.NONE_3_MONTH:
@@ -1062,7 +1049,7 @@ function ej(e, t, n) {
         case w.gD.PREMIUM_YEAR_GUILD:
         case w.gD.PREMIUM_3_MONTH_GUILD:
         case w.gD.PREMIUM_6_MONTH_GUILD:
-            return P.intl.string(P.t.eUEeCt);
+            return x.intl.string(x.t.eUEeCt);
     }
     let i = Error("User is purchasing an unsupported plan");
     throw ((0, S.pM)(i, { tags: { planId: r } }), i);
@@ -1073,7 +1060,7 @@ function eY(e) {
     return i()(null != n, "Missing subscriptionPlan"), { intervalType: n.interval, intervalCount: n.intervalCount };
 }
 function eW() {
-    let e = x.Yr.USD;
+    let e = P.Yr.USD;
     try {
         e = j(w.gD.PREMIUM_MONTH_TIER_2, !1, !1, void 0, !1).currency;
     } catch {}
@@ -1085,19 +1072,19 @@ function eK(e) {
         case w.WT.DAY:
             if (n >= 7 && n % 7 == 0)
                 return r
-                    ? P.intl.formatToPlainString(P.t.fRNBRX, { weeks: n / 7 })
-                    : P.intl.formatToPlainString(P.t.EIpHEj, { weeks: n / 7 });
+                    ? x.intl.formatToPlainString(x.t.fRNBRX, { weeks: n / 7 })
+                    : x.intl.formatToPlainString(x.t.EIpHEj, { weeks: n / 7 });
             return r
-                ? P.intl.formatToPlainString(P.t["6Cdzoy"], { days: n })
-                : P.intl.formatToPlainString(P.t["kbBj/h"], { days: n });
+                ? x.intl.formatToPlainString(x.t["6Cdzoy"], { days: n })
+                : x.intl.formatToPlainString(x.t["kbBj/h"], { days: n });
         case w.WT.MONTH:
             return r
-                ? P.intl.formatToPlainString(P.t.x5MgxS, { months: n })
-                : P.intl.formatToPlainString(P.t["4SEnCZ"], { months: n });
+                ? x.intl.formatToPlainString(x.t.x5MgxS, { months: n })
+                : x.intl.formatToPlainString(x.t["4SEnCZ"], { months: n });
         case w.WT.YEAR:
             return r
-                ? P.intl.formatToPlainString(P.t["h+63yl"], { years: n })
-                : P.intl.formatToPlainString(P.t["9DFiHk"], { years: n });
+                ? x.intl.formatToPlainString(x.t["h+63yl"], { years: n })
+                : x.intl.formatToPlainString(x.t["9DFiHk"], { years: n });
         default:
             throw Error("Unsupported interval duration.");
     }
@@ -1108,12 +1095,12 @@ function e$(e) {
         i = (0, b.$g)(0, r, { maximumFractionDigits: 0, minimumFractionDigits: 0 });
     switch (t) {
         case w.WT.DAY:
-            if (n >= 7 && n % 7 == 0) return P.intl.formatToPlainString(P.t.C6i5Jt, { weeks: n / 7, price: i });
-            return P.intl.formatToPlainString(P.t.cR9ifw, { days: n, price: i });
+            if (n >= 7 && n % 7 == 0) return x.intl.formatToPlainString(x.t.C6i5Jt, { weeks: n / 7, price: i });
+            return x.intl.formatToPlainString(x.t.cR9ifw, { days: n, price: i });
         case w.WT.MONTH:
-            return P.intl.formatToPlainString(P.t["8FZfNo"], { months: n, price: i });
+            return x.intl.formatToPlainString(x.t["8FZfNo"], { months: n, price: i });
         case w.WT.YEAR:
-            return P.intl.formatToPlainString(P.t.xzAcST, { years: n, price: i });
+            return x.intl.formatToPlainString(x.t.xzAcST, { years: n, price: i });
         default:
             throw Error("Unsupported interval duration.");
     }
@@ -1131,19 +1118,19 @@ function eq(e) {
         case w.WT.DAY:
             if (n >= 7 && n % 7 == 0)
                 return r
-                    ? P.intl.formatToPlainString(P.t.iVZYyl, { weeks: n / 7 })
-                    : P.intl.formatToPlainString(P.t.EmoBD2, { weeks: n / 7 });
+                    ? x.intl.formatToPlainString(x.t.iVZYyl, { weeks: n / 7 })
+                    : x.intl.formatToPlainString(x.t.EmoBD2, { weeks: n / 7 });
             return r
-                ? P.intl.formatToPlainString(P.t.jzH70Z, { days: n })
-                : P.intl.formatToPlainString(P.t["k2UNz+"], { days: n });
+                ? x.intl.formatToPlainString(x.t.jzH70Z, { days: n })
+                : x.intl.formatToPlainString(x.t["k2UNz+"], { days: n });
         case w.WT.MONTH:
             return r
-                ? P.intl.formatToPlainString(P.t.erUSmA, { months: n })
-                : P.intl.formatToPlainString(P.t.kridzK, { months: n });
+                ? x.intl.formatToPlainString(x.t.erUSmA, { months: n })
+                : x.intl.formatToPlainString(x.t.kridzK, { months: n });
         case w.WT.YEAR:
             return r
-                ? P.intl.formatToPlainString(P.t.IfYQVC, { years: n })
-                : P.intl.formatToPlainString(P.t.PClsrw, { years: n });
+                ? x.intl.formatToPlainString(x.t.IfYQVC, { years: n })
+                : x.intl.formatToPlainString(x.t.PClsrw, { years: n });
         default:
             throw Error("Unsupported interval duration.");
     }
@@ -1346,12 +1333,12 @@ function tw() {
 function tM(e) {
     return e === w.Tt ? w.h7 : e === w.yo ? w.CA : w.CQ;
 }
-function tx() {
+function tP() {
     return w.CQ;
 }
-function tP(e) {
+function tx(e) {
     let t = (0, p.N)("getOfferNoticeThreshold");
-    return 0 !== t ? t : tk(e) ? tM(e.trial_id) : tU(e) ? tx() : w.CQ;
+    return 0 !== t ? t : tk(e) ? tM(e.trial_id) : tU(e) ? tP() : w.CQ;
 }
 function tk(e) {
     return null != e && "trial_id" in e;
@@ -1360,8 +1347,8 @@ function tU(e) {
     return null != e && "discount_id" in e;
 }
 function tG(e) {
-    if (e === w.WT.YEAR) return P.intl.string(P.t.tfqrhj);
-    if (e === w.WT.MONTH) return P.intl.string(P.t.FPybU7);
+    if (e === w.WT.YEAR) return x.intl.string(x.t.tfqrhj);
+    if (e === w.WT.MONTH) return x.intl.string(x.t.FPybU7);
     throw Error(`Invalid interval type: ${e}`);
 }
 function tF(e) {
@@ -1438,7 +1425,7 @@ let t$ = Object.freeze({
     isSwitchingPlansDisabled: eC,
     getSwitchingPlansDisabledMessage: eR,
     isNoneSubscription: m.m1,
-    getPlanIdFromInvoice: eP,
+    getPlanIdFromInvoice: ex,
     getStatusFromInvoice: ek,
     isBaseSubscriptionCanceled: eU,
     getPremiumGuildIntervalPrice: eV,
