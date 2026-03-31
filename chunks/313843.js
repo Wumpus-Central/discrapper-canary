@@ -10,8 +10,8 @@ var a = n(627968),
     u = n(503364),
     m = n(305080),
     x = n(985018),
-    h = n(605408);
-function f(e) {
+    h = n(230845);
+function g(e) {
     let { game: t } = e,
         n = t.supplementalData,
         [i] = l.useState(() => Math.random()),
@@ -30,7 +30,7 @@ function f(e) {
         }, [n, i]);
     return (0, o.uJ)(r) ? null : (0, a.jsx)("div", { className: h.y1, style: { backgroundImage: `url("${r}")` } });
 }
-function g(e) {
+function f(e) {
     let { game: t } = e,
         n = t.supplementalData,
         l = (n?.genres ?? t.genres ?? []).map(c.du).join(", ");
@@ -99,7 +99,7 @@ let v = function (e) {
         I = n.getIconURL(80);
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsx)(f, { game: t }),
+            (0, a.jsx)(g, { game: t }),
             (0, a.jsxs)("div", {
                 ref: p,
                 className: r()(h.f3, A && h.XP),
@@ -108,7 +108,7 @@ let v = function (e) {
                     (0, a.jsxs)("div", {
                         className: h.dh,
                         children: [
-                            null != I && (0, a.jsx)("img", { src: I, alt: "", className: h.V$ }),
+                            null != I && (0, a.jsx)("img", { src: I, alt: "", className: h.V$, draggable: !1 }),
                             (0, a.jsxs)("div", {
                                 className: h.hm,
                                 children: [
@@ -135,7 +135,7 @@ let v = function (e) {
                         children: [
                             null != t.l30Rank && (0, a.jsx)(_, { rank: t.l30Rank }),
                             (0, a.jsx)(s.DZT, { ref: v, variant: "heading-xxl/semibold", children: C }),
-                            (0, a.jsx)(g, { game: t }),
+                            (0, a.jsx)(f, { game: t }),
                         ],
                     }),
                 ],
