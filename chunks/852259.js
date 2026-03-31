@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     KQ: "messagesPopoutWrap__0aee3",
     m4: "messagesPopout__0aee3",

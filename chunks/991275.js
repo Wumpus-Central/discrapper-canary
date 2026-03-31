@@ -31,8 +31,8 @@ var r = n(627968),
     L = n(201275),
     w = n(657048),
     M = n(728321),
-    x = n(342296),
-    P = n(773669),
+    P = n(342296),
+    x = n(773669),
     k = n(963307),
     U = n(317525),
     G = n(309010),
@@ -81,7 +81,7 @@ let q = W.Ay.getEnableHardwareAcceleration(),
                         let { default: e } = await Promise.all([
                                 n.e("41927"),
                                 n.e("97262"),
-                                n.e("3795"),
+                                n.e("11478"),
                                 n.e("42128"),
                                 n.e("97283"),
                                 n.e("84841"),
@@ -100,7 +100,7 @@ let q = W.Ay.getEnableHardwareAcceleration(),
                     H._.dispatchToLastSubscribed(K.jej.INSERT_TEXT, { plainText: e, rawText: t }),
                     m.A.startTyping(A.id);
             }, [c, A.id]),
-            P = i.useCallback(
+            x = i.useCallback(
                 (e) => {
                     null != I &&
                         (e.stopPropagation(),
@@ -111,7 +111,7 @@ let q = W.Ay.getEnableHardwareAcceleration(),
                 },
                 [I],
             );
-        return (0, r.jsx)(x.A, {
+        return (0, r.jsx)(P.A, {
             targetElementRef: R,
             user: c,
             guildId: I,
@@ -147,7 +147,7 @@ let q = W.Ay.getEnableHardwareAcceleration(),
                     guildId: I,
                     isMobile: S,
                     isVR: y,
-                    onClickPremiumGuildIcon: P,
+                    onClickPremiumGuildIcon: x,
                     selected: O,
                     itemProps: C,
                     nameplate: N,
@@ -175,7 +175,7 @@ let q = W.Ay.getEnableHardwareAcceleration(),
     et = i.memo(function (e) {
         let { id: t, title: s, count: a, guildId: o, className: l } = e,
             u = (0, L.$7)({ roleId: t, guildId: o, size: 16 }),
-            c = (0, _.bG)([P.default], () => (null == a ? null : new Intl.NumberFormat(P.default.locale).format(a)), [
+            c = (0, _.bG)([x.default], () => (null == a ? null : new Intl.NumberFormat(x.default.locale).format(a)), [
                 a,
             ]),
             d = i.useCallback(

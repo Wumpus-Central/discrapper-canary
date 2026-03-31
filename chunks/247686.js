@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     lF: "participants__4783a",
     Kk: "icon__4783a",

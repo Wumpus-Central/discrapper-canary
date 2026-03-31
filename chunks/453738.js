@@ -1,8 +1,7 @@
-"use strict";
 n.d(t, { A: () => N });
 var i = n(627968),
-    s = n(64700),
-    l = n(311907),
+    l = n(64700),
+    s = n(311907),
     a = n(397927),
     r = n(835835),
     o = n(381849),
@@ -11,8 +10,8 @@ var i = n(627968),
     u = n(661191),
     h = n(256331),
     A = n(141850),
-    m = n(736339),
-    _ = n(701952),
+    _ = n(736339),
+    m = n(701952),
     g = n(652215),
     p = n(968353);
 function f(e, t) {
@@ -25,24 +24,24 @@ function x(e, t) {
     for (let n of e) if (!t.has(n)) return !1;
     return !0;
 }
-let C = ["high", "medium", "low"],
-    E = s.memo(function (e) {
+let E = ["high", "medium", "low"],
+    I = l.memo(function (e) {
         let { moderation: t } = e,
             n = null != t && 1 === t.status,
-            l = null != t && !t.flagged_title && !t.flagged_summary && !t.flagged_key_points,
-            r = s.useMemo(() => {
+            s = null != t && !t.flagged_title && !t.flagged_summary && !t.flagged_key_points,
+            r = l.useMemo(() => {
                 if (null == t) return { passed: 0, failed: 0, unknown: 0 };
                 let e = t.flagged_message_count ?? t.flagged_message_ids.length,
                     n = t.total_message_count ?? 0,
                     i = 0,
-                    s = 0;
+                    l = 0;
                 return (
                     null == t.flagged_message_count && 0 === t.flagged_message_ids.length
-                        ? (s = n)
+                        ? (l = n)
                         : null != t.flagged_message_count
                           ? (i = Math.max(0, n - e))
-                          : (s = Math.max(0, n - e)),
-                    { passed: i, failed: e, unknown: s }
+                          : (l = Math.max(0, n - e)),
+                    { passed: i, failed: e, unknown: l }
                 );
             }, [t]),
             o =
@@ -62,7 +61,7 @@ let C = ["high", "medium", "low"],
                           return (
                               e.severity ===
                               ((n = t.flagged_summary_details.map((e) => e.severity)),
-                              C.find((e) => n.includes(e)) ?? null)
+                              E.find((e) => n.includes(e)) ?? null)
                           );
                       }) ?? null)
                     : null,
@@ -108,8 +107,8 @@ let C = ["high", "medium", "low"],
                             children: [
                                 (0, i.jsx)(a.Text, {
                                     variant: "text-md/semibold",
-                                    color: null == t ? "text-muted" : l ? "status-positive" : "status-danger",
-                                    children: null == t ? "—" : l ? "✓" : "✗",
+                                    color: null == t ? "text-muted" : s ? "status-positive" : "status-danger",
+                                    children: null == t ? "—" : s ? "✓" : "✗",
                                 }),
                                 (0, i.jsx)(a.Text, {
                                     variant: "text-xs/normal",
@@ -117,7 +116,7 @@ let C = ["high", "medium", "low"],
                                     children: "Summary",
                                 }),
                                 null != t &&
-                                    !l &&
+                                    !s &&
                                     (0, i.jsxs)(a.Text, {
                                         variant: "text-xs/normal",
                                         color: "text-muted",
@@ -134,7 +133,7 @@ let C = ["high", "medium", "low"],
                                         ],
                                     }),
                                 null != t &&
-                                    !l &&
+                                    !s &&
                                     (null != d || null != u) &&
                                     (0, i.jsx)(a.Text, {
                                         variant: "text-xs/normal",
@@ -181,31 +180,31 @@ let C = ["high", "medium", "low"],
             ],
         });
     }),
-    I = s.memo(function (e) {
+    C = l.memo(function (e) {
         let {
                 conversation: t,
                 color: n,
-                isInViewport: l,
+                isInViewport: s,
                 scrollTarget: r,
                 onJump: d,
                 onHoverStart: h,
                 onHoverEnd: A,
             } = e,
-            m = s.useRef(null);
-        s.useEffect(() => {
-            null != r && null != m.current && m.current.scrollIntoView({ behavior: "smooth", block: "center" });
+            _ = l.useRef(null);
+        l.useEffect(() => {
+            null != r && null != _.current && _.current.scrollIntoView({ behavior: "smooth", block: "center" });
         }, [r]);
         let g = u.default.extractTimestamp(t.start_message_id),
             f = u.default.extractTimestamp(t.end_message_id),
             x = (0, c.e)({ timestamp: g }),
-            C = Math.max(1, Math.round((f - g) / 1e3)),
-            I = (0, o.WR)({ seconds: C, getFormatter: o.i }),
+            E = Math.max(1, Math.round((f - g) / 1e3)),
+            C = (0, o.WR)({ seconds: E, getFormatter: o.i }),
             N = t.summary_map?.entries.find((e) => "TOPIC_EXTRACTION_SUMMARY" === e.summary_type),
-            b = null != N ? (0, _.i)(N.content_json) : null;
+            T = null != N ? (0, m.i)(N.content_json) : null;
         return (0, i.jsxs)(a.DUT, {
-            innerRef: m,
-            className: `${p.Nm}${l ? ` ${p.Sk}` : ""}`,
-            style: { backgroundColor: l ? n.replace(/,\s*0\.12\)$/, ", 0.24)") : n },
+            innerRef: _,
+            className: `${p.Nm}${s ? ` ${p.Sk}` : ""}`,
+            style: { backgroundColor: s ? n.replace(/,\s*0\.12\)$/, ", 0.24)") : n },
             onClick: () => d(t),
             onMouseEnter: () => h(t.id),
             onMouseLeave: A,
@@ -214,9 +213,9 @@ let C = ["high", "medium", "low"],
                     className: p.PY,
                     children: (0, i.jsx)(a.Text, {
                         variant: "text-md/medium",
-                        color: null != b ? "text-default" : "text-muted",
+                        color: null != T ? "text-default" : "text-muted",
                         className: p.So,
-                        children: b?.title ?? "Summary not available",
+                        children: T?.title ?? "Summary not available",
                     }),
                 }),
                 (0, i.jsxs)(a.Text, {
@@ -226,7 +225,7 @@ let C = ["high", "medium", "low"],
                     children: [
                         x,
                         " ago \xb7 ",
-                        I,
+                        C,
                         " duration \xb7 ",
                         t.message_count,
                         " messages \xb7 ",
@@ -234,18 +233,18 @@ let C = ["high", "medium", "low"],
                         " users",
                     ],
                 }),
-                b?.brief_summary != null &&
+                T?.brief_summary != null &&
                     (0, i.jsx)(a.Text, {
                         variant: "text-xs/normal",
                         color: "text-default",
                         className: p.g5,
-                        children: b.brief_summary,
+                        children: T.brief_summary,
                     }),
-                null != b &&
-                    b.key_points.length > 0 &&
+                null != T &&
+                    T.key_points.length > 0 &&
                     (0, i.jsx)("ul", {
                         className: p.JP,
-                        children: b.key_points.map((e, t) =>
+                        children: T.key_points.map((e, t) =>
                             (0, i.jsx)(
                                 "li",
                                 {
@@ -332,29 +331,29 @@ let C = ["high", "medium", "low"],
                         }),
                     ],
                 }),
-                (0, i.jsx)(E, { moderation: t.moderation }),
+                (0, i.jsx)(I, { moderation: t.moderation }),
             ],
         });
     });
 function N(e) {
     let { channel: t } = e,
-        n = (0, l.bG)([m.A], () => m.A.getChannelConversations(t.id), [t.id], f),
-        o = (0, l.bG)([m.A], () => m.A.getVisibleConversationIds(t.id), [t.id], x),
-        c = (0, l.bG)([m.A], () => m.A.hasMoreConversations(t.id, "before"), [t.id]),
-        u = (0, l.bG)([m.A], () => m.A.hasMoreConversations(t.id, "after"), [t.id]),
-        _ = (0, l.bG)([m.A], () => m.A.isPendingFetch(t.id), [t.id]),
-        C = (0, l.bG)([h.A], () => h.A.isHighlightingEnabled(), []),
-        E = (0, l.bG)([m.A], () => m.A.getScrollToConversation(t.id), [t.id]),
-        N = s.useCallback(
+        n = (0, s.bG)([_.A], () => _.A.getChannelConversations(t.id), [t.id], f),
+        o = (0, s.bG)([_.A], () => _.A.getVisibleConversationIds(t.id), [t.id], x),
+        c = (0, s.bG)([_.A], () => _.A.hasMoreConversations(t.id, "before"), [t.id]),
+        u = (0, s.bG)([_.A], () => _.A.hasMoreConversations(t.id, "after"), [t.id]),
+        m = (0, s.bG)([_.A], () => _.A.isPendingFetch(t.id), [t.id]),
+        E = (0, s.bG)([h.A], () => h.A.isHighlightingEnabled(), []),
+        I = (0, s.bG)([_.A], () => _.A.getScrollToConversation(t.id), [t.id]),
+        N = l.useCallback(
             (e) => {
                 (0, A.UA)(t.id, e);
             },
             [t.id],
         ),
-        b = s.useCallback(() => {
+        T = l.useCallback(() => {
             (0, A.UA)(null, null);
         }, []),
-        S = s.useCallback((e) => {
+        S = l.useCallback((e) => {
             (0, A.xI)(e.channel_id, e.id), (0, d.pX)(g.BVt.CHANNEL(e.guild_id, e.channel_id, e.start_message_id));
         }, []);
     return (0, i.jsxs)("aside", {
@@ -367,8 +366,8 @@ function N(e) {
                 children: (0, i.jsx)("div", {
                     className: p.y6,
                     children: (0, i.jsx)(a.K0, {
-                        icon: C ? a.bMW : a.G3N,
-                        "aria-label": C ? "Hide highlights" : "Show highlights",
+                        icon: E ? a.bMW : a.G3N,
+                        "aria-label": E ? "Hide highlights" : "Show highlights",
                         variant: "secondary",
                         size: "sm",
                         onClick: A.Eg,
@@ -384,30 +383,30 @@ function N(e) {
                             children: (0, i.jsx)(a.DUT, {
                                 className: p.Qf,
                                 onClick: function () {
-                                    if (0 === n.length || _) return;
+                                    if (0 === n.length || m) return;
                                     let e = n[0].conversation;
                                     (0, A.WF)({ channelId: t.id, before: e.start_message_id });
                                 },
                                 children: (0, i.jsx)(a.Text, {
                                     variant: "text-sm/medium",
                                     color: "text-link",
-                                    children: _ ? "Loading..." : "Load previous conversations",
+                                    children: m ? "Loading..." : "Load previous conversations",
                                 }),
                             }),
                         }),
-                    0 !== n.length || _
+                    0 !== n.length || m
                         ? n.map((e) => {
                               let { conversation: t, color: n } = e;
                               return (0, i.jsx)(
-                                  I,
+                                  C,
                                   {
                                       conversation: t,
                                       color: n,
                                       isInViewport: o.has(t.id),
-                                      scrollTarget: E?.conversationId === t.id ? E.seq : null,
+                                      scrollTarget: I?.conversationId === t.id ? I.seq : null,
                                       onJump: S,
                                       onHoverStart: N,
-                                      onHoverEnd: b,
+                                      onHoverEnd: T,
                                   },
                                   t.id,
                               );
@@ -424,14 +423,14 @@ function N(e) {
                             children: (0, i.jsx)(a.DUT, {
                                 className: p.Qf,
                                 onClick: function () {
-                                    if (0 === n.length || _) return;
+                                    if (0 === n.length || m) return;
                                     let e = n[n.length - 1].conversation;
                                     (0, A.WF)({ channelId: t.id, after: e.end_message_id });
                                 },
                                 children: (0, i.jsx)(a.Text, {
                                     variant: "text-sm/medium",
                                     color: "text-link",
-                                    children: _ ? "Loading..." : "Load newer conversations",
+                                    children: m ? "Loading..." : "Load newer conversations",
                                 }),
                             }),
                         }),

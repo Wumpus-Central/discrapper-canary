@@ -1,12 +1,11 @@
-"use strict";
 n.d(t, { A: () => u });
 var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    a = n.n(l),
+    l = n(64700),
+    s = n(503698),
+    a = n.n(s),
     r = n(397927),
     o = n(985018),
-    c = n(801985);
+    c = n(675586);
 function d(e) {
     let { text: t, hasScrolled: n } = e;
     return (0, i.jsxs)("div", {
@@ -26,21 +25,21 @@ function d(e) {
     });
 }
 function u() {
-    let [e, t] = s.useState(),
-        [n, l] = s.useState(),
-        [a, r] = s.useState(!1),
-        [c, u] = s.useState(!1);
+    let [e, t] = l.useState(),
+        [n, s] = l.useState(),
+        [a, r] = l.useState(!1),
+        [c, u] = l.useState(!1);
     return (
-        s.useEffect(() => {
+        l.useEffect(() => {
             null == e || null == n ? r(!1) : r(e < n);
         }, [e, n]),
         {
-            horizontalScrollNotice: s.useMemo(
+            horizontalScrollNotice: l.useMemo(
                 () => (a ? (0, i.jsx)(d, { text: o.intl.string(o.t.RfAAH9), hasScrolled: c }) : null),
                 [a, c],
             ),
             handleScroll: () => u(!0),
-            handleSetScrollerRef: (e) => l(e?.getScrollerState()?.scrollWidth),
+            handleSetScrollerRef: (e) => s(e?.getScrollerState()?.scrollWidth),
             handleSetContainerRef: (e) => t(e?.clientWidth),
         }
     );

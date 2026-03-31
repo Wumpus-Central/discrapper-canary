@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     E3: "base_e42a84",
     dQ: "sparkle_e42a84 base_e42a84",

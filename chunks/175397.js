@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     SW: "popout__76f04",
     DD: "title__76f04",

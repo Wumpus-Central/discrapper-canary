@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__664ff",
     X_: "chatOpen__664ff",

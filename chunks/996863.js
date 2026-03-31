@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     u1: "spinner__2692d",
     d$: "tutorial__2692d",

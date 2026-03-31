@@ -1,27 +1,28 @@
-n.d(t, { i: () => m });
-var i = n(64700),
-    l = n(311907),
-    a = n(531260),
-    r = n(287809),
-    s = n(474090),
-    o = n(526292),
-    d = n(89366),
-    c = n(851746),
-    u = n(788868);
-let m = function () {
+"use strict";
+s.d(t, { i: () => E });
+var r = s(64700),
+    i = s(311907),
+    n = s(531260),
+    a = s(287809),
+    l = s(474090),
+    u = s(526292),
+    c = s(89366),
+    o = s(851746),
+    d = s(788868);
+let E = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        t = (0, l.bG)([r.default], () => r.default.getCurrentUser()),
-        n = (0, o.k5)(),
-        m = (0, d.QQ)(),
-        _ = (0, a.A)(),
-        h =
+        t = (0, i.bG)([a.default], () => a.default.getCurrentUser()),
+        s = (0, u.k5)(),
+        E = (0, c.QQ)(),
+        _ = (0, n.A)(),
+        R =
             t?.verified === !0 &&
-            (0, s.YE)(t, u.PremiumTypes.TIER_2) &&
+            (0, l.YE)(t, d.PremiumTypes.TIER_2) &&
             _.fetched &&
-            _.fractionalState !== u.xc.FP_ONLY &&
-            !n &&
-            !m;
-    i.useEffect(() => {
-        h && !e && c.A.checkAndFetchReferralsRemaining();
-    }, [h, e]);
+            _.fractionalState !== d.xc.FP_ONLY &&
+            !s &&
+            !E;
+    r.useEffect(() => {
+        R && !e && o.A.checkAndFetchReferralsRemaining();
+    }, [R, e]);
 };

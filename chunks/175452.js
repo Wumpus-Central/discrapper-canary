@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { Ay: () => l });
+n.d(t, { Ay: () => s });
 var i = n(585342),
-    s = n(505543);
-function l(e) {
-    let t = (0, s.A)(e),
+    l = n(505543);
+function s(e) {
+    let t = (0, l.A)(e),
         n = (0, i.A)(e, !0).moderator;
     return !t && n ? 1 : 0;
 }

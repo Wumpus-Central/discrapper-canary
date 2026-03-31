@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     TE: "chat_f75fb0",
     js: "threadSidebarOpen_f75fb0",

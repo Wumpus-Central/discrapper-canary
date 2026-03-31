@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => _ });
 var i = n(627968);
 n(64700);
-var s = n(311907),
-    l = n(397927),
-    r = n(652793),
-    a = n(855725),
+var l = n(311907),
+    s = n(397927),
+    a = n(652793),
+    r = n(855725),
     o = n(976860),
     c = n(309010),
     d = n(64071),
@@ -14,19 +13,19 @@ var s = n(311907),
 let A = [
         {
             key: "JOIN_SERVERS",
-            renderIcon: (e) => (0, i.jsx)(l.QGJ, { size: "md", color: "currentColor", className: e }),
+            renderIcon: (e) => (0, i.jsx)(s.QGJ, { size: "md", color: "currentColor", className: e }),
             getName: () => h.intl.string(h.t.K50GHd),
             handler: (e, t) => (0, o.uh)(e.id, t.id),
         },
         {
             key: "ADD_SERVERS",
-            renderIcon: (e) => (0, i.jsx)(l.j96, { size: "md", color: "currentColor", className: e }),
+            renderIcon: (e) => (0, i.jsx)(s.j96, { size: "md", color: "currentColor", className: e }),
             getName: () => h.intl.string(h.t.emRpdS),
             handler: (e, t) =>
-                (0, l.mMO)(async () => {
-                    let { default: s } = await n.e("6759").then(n.bind(n, 953722));
+                (0, s.mMO)(async () => {
+                    let { default: l } = await n.e("6759").then(n.bind(n, 953722));
                     return (n) =>
-                        (0, i.jsx)(s, {
+                        (0, i.jsx)(l, {
                             ...n,
                             directoryGuildName: e.name,
                             directoryGuildId: e.id,
@@ -36,33 +35,33 @@ let A = [
         },
         {
             key: "INVITE_MEMBERS",
-            renderIcon: (e) => (0, i.jsx)(l.DpX, { className: e }),
+            renderIcon: (e) => (0, i.jsx)(s.DpX, { className: e }),
             getName: () => h.intl.string(h.t.MJQOuJ),
             handler: (e, t) =>
-                (0, l.mMO)(async () => {
-                    let { default: s } = await Promise.all([n.e("43600"), n.e("52537")]).then(n.bind(n, 234355));
-                    return (n) => (0, i.jsx)(s, { ...n, guild: e, channel: t, source: u.PE1.HUB_SIDEBAR });
+                (0, s.mMO)(async () => {
+                    let { default: l } = await Promise.all([n.e("43600"), n.e("67505")]).then(n.bind(n, 234355));
+                    return (n) => (0, i.jsx)(l, { ...n, guild: e, channel: t, source: u.PE1.HUB_SIDEBAR });
                 }),
         },
     ],
-    p = (e) => {
+    _ = (e) => {
         let { guild: t, channel: n } = e,
-            l = (0, s.bG)([c.A], () => null != n && c.A.getChannelId() === n.id),
+            s = (0, l.bG)([c.A], () => null != n && c.A.getChannelId() === n.id),
             o = (0, d.x)(n);
         return (0, i.jsx)(i.Fragment, {
             children: A.map((e) => {
-                let { key: s, getName: c, handler: d, renderIcon: u } = e,
-                    h = l && "JOIN_SERVERS" === s,
-                    A = `${s}-${t.id}`;
+                let { key: l, getName: c, handler: d, renderIcon: u } = e,
+                    h = s && "JOIN_SERVERS" === l,
+                    A = `${l}-${t.id}`;
                 return (0, i.jsx)(
-                    r.G,
+                    a.G,
                     {
                         id: A,
                         renderIcon: u,
                         text: c(),
                         selected: h,
                         onClick: null != n ? () => d(t, n) : void 0,
-                        trailing: "JOIN_SERVERS" === s && o > 0 ? (0, a.w)(o) : null,
+                        trailing: "JOIN_SERVERS" === l && o > 0 ? (0, r.w)(o) : null,
                     },
                     A,
                 );

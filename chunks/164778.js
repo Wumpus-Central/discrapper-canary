@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     jC: "popoutContainer__02e2b",
     Sl: "image__02e2b",

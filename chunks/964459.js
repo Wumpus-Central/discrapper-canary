@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => l });
 var i = n(64700);
-let s = () => {
+let l = () => {
     let e = i.useRef(!0);
     return (
         i.useEffect(

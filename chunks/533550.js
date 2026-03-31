@@ -1,15 +1,14 @@
-"use strict";
 n.d(t, { RX: () => o, q8: () => d });
 var i = n(64700),
-    s = n(942381),
-    l = n(265690),
-    r = n(121894);
-let a = (0, l.h)((e) => ({ upsellsByGuildId: {} }));
+    l = n(942381),
+    s = n(265690),
+    a = n(121894);
+let r = (0, s.h)((e) => ({ upsellsByGuildId: {} }));
 function o(e) {
-    return a((t) => {
+    return r((t) => {
         let n = {};
         return null == e ? n : (t.upsellsByGuildId[e] ?? n);
-    }, s.x);
+    }, l.x);
 }
 function c(e) {
     if (null == e) return !1;
@@ -21,21 +20,21 @@ function c(e) {
 }
 function d(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        s = i.useRef(null);
+        l = i.useRef(null);
     return (
         i.useLayoutEffect(() => {
-            let i = s.current,
-                l = () => {
+            let i = l.current,
+                s = () => {
                     requestAnimationFrame(() => {
                         var i;
                         (i = {
                             name: t,
                             guildId: e,
                             disabled: n,
-                            boundingRect: s.current?.getBoundingClientRect() ?? null ?? null,
+                            boundingRect: l.current?.getBoundingClientRect() ?? null ?? null,
                         }),
-                            (0, r.r)(() => {
-                                a.setState((e) => ({
+                            (0, a.r)(() => {
+                                r.setState((e) => ({
                                     upsellsByGuildId: {
                                         ...(e.upsellsByGuildId ?? {}),
                                         [i.guildId]: { ...(e.upsellsByGuildId[i.guildId] ?? {}), [i.name]: i },
@@ -44,20 +43,20 @@ function d(e, t) {
                             });
                     });
                 };
-            if (null == i) return l(), () => {};
+            if (null == i) return s(), () => {};
             let o = (function (e) {
                 let t = e.parentNode;
                 for (; null != t && t !== document.body && !c(t); ) t = t.parentNode;
                 return c(t) ? t : null;
             })(i);
             return (
-                l(),
-                o?.addEventListener("scroll", l, { passive: !0 }),
+                s(),
+                o?.addEventListener("scroll", s, { passive: !0 }),
                 () => {
-                    o?.removeEventListener("scroll", l);
+                    o?.removeEventListener("scroll", s);
                 }
             );
         }, [e, t, n]),
-        s
+        l
     );
 }

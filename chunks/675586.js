@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Re: "horizontalBounce__3e795",
     kL: "container__3e795",

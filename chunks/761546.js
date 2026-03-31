@@ -1,46 +1,47 @@
-n.d(t, { A: () => o });
-var i = n(627968);
-n(64700);
-var a = n(172218),
-    l = n(397927),
-    r = n(437290),
-    s = n(68341);
-function o(e) {
+"use strict";
+s.d(t, { A: () => u });
+var r = s(627968);
+s(64700);
+var i = s(172218),
+    n = s(397927),
+    a = s(437290),
+    l = s(68341);
+function u(e) {
     let {
             users: t,
-            isUserSelected: n,
-            onSelectionChange: o,
+            isUserSelected: s,
+            onSelectionChange: u,
             isFetching: c,
-            onFetchMore: d,
-            isUserDisabled: u,
-            searchQuery: _ = "",
-            emptySearchContent: m,
-            className: A,
-            tooltipConfig: E,
+            onFetchMore: o,
+            isUserDisabled: d,
+            searchQuery: E = "",
+            emptySearchContent: _,
+            className: R,
+            tooltipConfig: p,
         } = e,
-        I = (0, a.K)((e) => {
-            e && !c && d?.();
+        I = (0, i.K)((e) => {
+            e && !c && o?.();
         });
-    return _.length > 0 && 0 === t.length && null != m
-        ? (0, i.jsxs)("div", {
-              className: s.t,
+    return E.length > 0 && 0 === t.length && null != _
+        ? (0, r.jsxs)("div", {
+              className: l.t,
               children: [
-                  (0, i.jsx)(l.Heading, { variant: "heading-md/semibold", color: "text-strong", children: m.header }),
-                  (0, i.jsx)(l.Text, { variant: "text-md/medium", color: "text-subtle", children: m.body }),
+                  (0, r.jsx)(n.Heading, { variant: "heading-md/semibold", color: "text-strong", children: _.header }),
+                  (0, r.jsx)(n.Text, { variant: "text-md/medium", color: "text-subtle", children: _.body }),
               ],
           })
-        : (0, i.jsxs)(l.d_W, {
-              className: A,
+        : (0, r.jsxs)(n.d_W, {
+              className: R,
               children: [
                   t.map((e) =>
-                      (0, i.jsx)(
-                          r.A,
-                          { user: e, checked: n(e), disabled: !!u?.(e), onChange: o, tooltipConfig: E },
+                      (0, r.jsx)(
+                          a.A,
+                          { user: e, checked: s(e), disabled: !!d?.(e), onChange: u, tooltipConfig: p },
                           e.id,
                       ),
                   ),
-                  c && (0, i.jsx)(l.y$y, {}),
-                  (0, i.jsx)("div", { ref: I }),
+                  c && (0, r.jsx)(n.y$y, {}),
+                  (0, r.jsx)("div", { ref: I }),
               ],
           });
 }

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__243fe",
     hY: "popoutHeader__243fe",

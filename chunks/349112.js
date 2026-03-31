@@ -15,7 +15,7 @@ var i = n(503698),
     x = n(103355),
     v = n(988794),
     f = n(985018),
-    p = n(473190);
+    p = n(602363);
 function A(t) {
     let { recurrenceId: e, originalScheduledStartTime: i, guildEventId: A, onClick: j, isActive: y } = t,
         E = (0, s.bG)([h.Ay], () => h.Ay.getGuildScheduledEvent(A)),
@@ -33,7 +33,7 @@ function A(t) {
             t.stopPropagation(),
                 null != C &&
                     (0, c.L3)(t, async () => {
-                        let { default: t } = await Promise.all([n.e("77371"), n.e("3795"), n.e("97580")]).then(
+                        let { default: t } = await Promise.all([n.e("77371"), n.e("11478"), n.e("97580")]).then(
                             n.bind(n, 406406),
                         );
                         return (n) =>

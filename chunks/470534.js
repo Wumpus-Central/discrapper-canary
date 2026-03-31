@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container_e131a9",
     vW: "inner_e131a9",

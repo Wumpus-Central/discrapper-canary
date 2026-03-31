@@ -1,10 +1,9 @@
-"use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => _ });
 var i = n(311907),
-    s = n(181079),
-    l = n(734057),
-    r = n(607567),
-    a = n(403362),
+    l = n(181079),
+    s = n(734057),
+    a = n(607567),
+    r = n(403362),
     o = n(996439),
     c = n(661191),
     d = n(63995),
@@ -12,21 +11,21 @@ var i = n(311907),
     h = n(652215);
 function A(e) {
     let { voiceState: t, userNick: n, user: i } = e,
-        s = (0, r.hz)(t, n);
-    return { user: i, voiceState: t, nick: n, comparator: s };
+        l = (0, a.hz)(t, n);
+    return { user: i, voiceState: t, nick: n, comparator: l };
 }
-function p(e) {
+function _(e) {
     let [t] = (0, i.bG)(
-        [d.A, l.A, s.A],
+        [d.A, s.A, l.A],
         () => {
             let t;
             return [
                 (t =
                     e === h.YYv
                         ? c.default
-                              .keys(s.A.getFavoriteChannels())
-                              .map((e) => l.A.getChannel(e))
-                              .filter(a.Vq)
+                              .keys(l.A.getFavoriteChannels())
+                              .map((e) => s.A.getChannel(e))
+                              .filter(r.Vq)
                               .filter((e) => e.isGuildStageVoice())
                         : d.A.getChannels(e)).reduce((e, t) => {
                     let n = d.A.getMutableParticipants(t.id, u.ip.SPEAKER);

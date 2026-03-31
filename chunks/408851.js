@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     zr: "root__4ad81",
     Qw: "art__4ad81",

@@ -13,7 +13,7 @@ var r = n(627968),
     f = n(562153),
     p = n(427262),
     h = n(985018),
-    m = n(232358);
+    m = n(175075);
 function E() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c._3J.SIZE_24;
     switch (e) {
@@ -154,10 +154,10 @@ function y(e) {
             "aria-hidden": L,
         } = e,
         [w, M] = i.useState(!1),
-        x = i.useRef(null),
-        P = t.length - s,
-        k = P + 1,
-        U = P > 0 && !S && !L,
+        P = i.useRef(null),
+        x = t.length - s,
+        k = x + 1,
+        U = x > 0 && !S && !L,
         G = () =>
             (0, r.jsx)(c.lGe, {
                 className: m.XM,
@@ -184,9 +184,9 @@ function y(e) {
                                         async () => {
                                             let { default: t } = await Promise.all([
                                                 n.e("97262"),
-                                                n.e("3795"),
+                                                n.e("11478"),
                                                 n.e("32418"),
-                                                n.e("75351"),
+                                                n.e("73417"),
                                             ]).then(n.bind(n, 668569));
                                             return (n) => (0, r.jsx)(t, { ...n, user: e, guildId: o, channelId: l });
                                         },
@@ -203,7 +203,7 @@ function y(e) {
                 ? (0, r.jsx)(
                       c.YNO,
                       {
-                          targetElementRef: x,
+                          targetElementRef: P,
                           renderPopout: G,
                           shouldShow: w,
                           position: "bottom",
@@ -211,7 +211,7 @@ function y(e) {
                           children: (e) =>
                               (0, r.jsx)(c.DUT, {
                                   ...e,
-                                  innerRef: x,
+                                  innerRef: P,
                                   className: m.x6,
                                   onFocus: C,
                                   onClick: (e) => {

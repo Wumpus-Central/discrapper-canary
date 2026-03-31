@@ -1,8 +1,7 @@
-"use strict";
 n.d(t, { A: () => h });
 var i = n(627968),
-    s = n(64700),
-    l = n(837381),
+    l = n(64700),
+    s = n(837381),
     a = n(397927),
     r = n(791606),
     o = n(486020),
@@ -10,8 +9,8 @@ var i = n(627968),
     d = n(550591),
     u = n(78043);
 function h(e) {
-    let [t, h] = s.useState(!1),
-        A = (0, l.Vd)(`guild-${e.id}`);
+    let [t, h] = l.useState(!1),
+        A = (0, s.Vd)(`guild-${e.id}`);
     return (0, i.jsx)(c.c, {
         children: (0, i.jsx)(d.A, {
             text: e.name,

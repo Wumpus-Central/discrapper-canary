@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     wx: "header__7f9c0",
     vK: "banner__7f9c0",

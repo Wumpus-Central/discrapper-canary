@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => l });
 var i = n(64700);
-function s() {
+function l() {
     let [e, t] = (0, i.useState)(window.innerWidth >= 1132);
     return (
         (0, i.useEffect)(() => {

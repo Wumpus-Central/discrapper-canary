@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     zC: "messageContainer_f6bd5f",
     $5: "messageSpinner_f6bd5f",

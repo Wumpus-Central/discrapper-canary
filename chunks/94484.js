@@ -1,10 +1,9 @@
-"use strict";
 n.d(t, { A: () => o });
 var i = n(627968),
-    s = n(64700),
-    l = n(342494),
-    r = n(985018),
-    a = n(282222);
+    l = n(64700),
+    s = n(342494),
+    a = n(985018),
+    r = n(282222);
 function o(e) {
     let {
         targetElementRef: t,
@@ -15,13 +14,13 @@ function o(e) {
         position: u = "right",
         align: h = "top",
         caretConfig: A = { align: "start" },
-        applicationName: p,
+        applicationName: _,
     } = e;
-    s.useEffect(() => {
+    l.useEffect(() => {
         n?.();
     }, [n]);
-    let g = { type: "image", src: a.A, aspectRatio: "16/9" };
-    return (0, i.jsx)(l.AM, {
+    let m = { type: "image", src: r.A, aspectRatio: "16/9" };
+    return (0, i.jsx)(s.AM, {
         size: "lg",
         shouldShow: !0,
         position: u,
@@ -30,10 +29,10 @@ function o(e) {
         alignmentStrategy: "edge",
         align: h,
         onRequestClose: o,
-        actions: [{ text: r.intl.string(r.t.RzWDqY), variant: "primary", onClick: c, onMouseDown: d }],
+        actions: [{ text: a.intl.string(a.t.RzWDqY), variant: "primary", onClick: c, onMouseDown: d }],
         targetElementRef: t,
-        title: r.intl.format(r.t.TpuAkN, { applicationName: p }),
-        body: r.intl.format(r.t.TlwPZw, { applicationName: p }),
-        graphic: g,
+        title: a.intl.format(a.t.TpuAkN, { applicationName: _ }),
+        body: a.intl.format(a.t.TlwPZw, { applicationName: _ }),
+        graphic: m,
     });
 }

@@ -1,34 +1,33 @@
-"use strict";
-n.d(t, { A: () => E }), n(321073);
+n.d(t, { A: () => I }), n(321073);
 var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    r = n.n(l),
-    a = n(615300),
+    l = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    r = n(615300),
     o = n(311907),
     c = n(73939),
     d = n(582754),
     u = n(397927),
     h = n(736653),
     A = n(531685),
-    m = n(85448),
-    p = n(806931),
+    _ = n(85448),
+    m = n(806931),
     g = n(944802),
-    _ = n(435115),
+    p = n(435115),
     f = n(593716);
 let x = {
     SCALE_MIN: 0.7,
     SCALE_MAX: 1,
     DURATION_IN: 300,
     DURATION_OUT: 170,
-    EASING_IN: a.A.Easing.inOut(a.A.Easing.back()),
-    EASING_OUT: a.A.Easing.quad,
+    EASING_IN: r.A.Easing.inOut(r.A.Easing.back()),
+    EASING_OUT: r.A.Easing.quad,
 };
-class C extends s.PureComponent {
-    scaleAnimation = new a.A.Value(0);
-    spriteAnimation = new a.A.Value(0);
-    spriteOpacity = new a.A.Value(0);
-    widthAnimation = new a.A.Value(0);
+class E extends l.PureComponent {
+    scaleAnimation = new r.A.Value(0);
+    spriteAnimation = new r.A.Value(0);
+    spriteOpacity = new r.A.Value(0);
+    widthAnimation = new r.A.Value(0);
     componentDidMount() {
         this.componentDidAppear();
     }
@@ -40,25 +39,25 @@ class C extends s.PureComponent {
         let { scaleAnimation: t, widthAnimation: n } = this;
         t.setValue(0),
             n.setValue(0),
-            a.A.parallel([
-                a.A.timing(t, { toValue: 1, duration: x.DURATION_IN, easing: x.EASING_IN }),
-                a.A.timing(n, { toValue: 1, duration: 200 }),
+            r.A.parallel([
+                r.A.timing(t, { toValue: 1, duration: x.DURATION_IN, easing: x.EASING_IN }),
+                r.A.timing(n, { toValue: 1, duration: 200 }),
             ]).start(e);
     }
     componentWillLeave(e) {
-        let { scaleAnimation: t, spriteAnimation: n, spriteOpacity: i, widthAnimation: s } = this;
+        let { scaleAnimation: t, spriteAnimation: n, spriteOpacity: i, widthAnimation: l } = this;
         i.setValue(1), n.setValue(0);
-        let l = [];
-        for (let e = 0; e < 23; e++) l.push(a.A.timing(n, { toValue: -26 * e, duration: 17 }));
-        a.A.sequence([
-            a.A.timing(t, { toValue: 0, duration: x.DURATION_OUT, easing: x.EASING_OUT }),
-            a.A.sequence(l),
-            a.A.timing(s, { toValue: 0, duration: 125 }),
+        let s = [];
+        for (let e = 0; e < 23; e++) s.push(r.A.timing(n, { toValue: -26 * e, duration: 17 }));
+        r.A.sequence([
+            r.A.timing(t, { toValue: 0, duration: x.DURATION_OUT, easing: x.EASING_OUT }),
+            r.A.sequence(s),
+            r.A.timing(l, { toValue: 0, duration: 125 }),
         ]).start(e);
     }
     getScaleStyle() {
         let { scaleAnimation: e } = this;
-        return a.A.accelerate({
+        return r.A.accelerate({
             transform: [{ scale: e.interpolate({ inputRange: [0, 1], outputRange: [x.SCALE_MIN, x.SCALE_MAX] }) }],
             opacity: e,
         });
@@ -77,51 +76,51 @@ class C extends s.PureComponent {
     }
     render() {
         let { theme: e, children: t, className: n } = this.props,
-            s = (0, d.Mw)(e),
-            l = r()(g._y, { [f.cp]: s, [f.QB]: !s });
-        return (0, i.jsxs)(a.A.div, {
+            l = (0, d.Mw)(e),
+            s = a()(g._y, { [f.cp]: l, [f.QB]: !l });
+        return (0, i.jsxs)(r.A.div, {
             role: "listitem",
-            className: r()(g.kY, n),
+            className: a()(g.kY, n),
             style: this.getWidthStyle(),
             children: [
                 (0, i.jsx)("div", {
-                    className: r()(g.XY, _.xM, _.wq, _.Hu),
-                    children: (0, i.jsx)(a.A.div, { className: l, style: this.getSpriteStyle() }),
+                    className: a()(g.XY, p.xM, p.wq, p.Hu),
+                    children: (0, i.jsx)(r.A.div, { className: s, style: this.getSpriteStyle() }),
                 }),
-                (0, i.jsx)(a.A.div, { style: this.getScaleStyle(), children: t }),
+                (0, i.jsx)(r.A.div, { style: this.getScaleStyle(), children: t }),
             ],
         });
     }
 }
-function E(e) {
+function I(e) {
     var t;
-    let { participants: n, onContextMenu: s, className: l, onClick: a, width: d, guildId: _ } = e,
+    let { participants: n, onContextMenu: l, className: s, onClick: r, width: d, guildId: p } = e,
         f = (0, h.Ay)(),
         x = ((t = n.length), ((0, u.FT9)(u._3J.SIZE_80) + 16) * t > d ? u._3J.SIZE_40 : u._3J.SIZE_80),
-        E = (0, o.bG)([A.A], () => A.A.isFocused()),
-        I = n.map((e) => {
-            if (e.type !== p.lp.USER) return null;
-            let { user: t, voiceState: n, speaking: l, ringing: r } = e;
+        I = (0, o.bG)([A.A], () => A.A.isFocused()),
+        C = n.map((e) => {
+            if (e.type !== m.lp.USER) return null;
+            let { user: t, voiceState: n, speaking: s, ringing: a } = e;
             return (0, i.jsx)(
-                C,
+                E,
                 {
                     className: g.Wp,
                     width: (0, u.FT9)(x),
                     theme: f,
                     children: (0, i.jsx)(u.sqX, {
                         "aria-label": t.username,
-                        onClick: (t) => a?.(e, t),
-                        onContextMenu: (t) => s?.(e, t),
+                        onClick: (t) => r?.(e, t),
+                        onContextMenu: (t) => l?.(e, t),
                         children: (0, i.jsx)(
-                            m.A,
+                            _.A,
                             {
                                 userId: t.id,
-                                src: t.getAvatarURL(_, (0, u.FT9)(x), l && E),
+                                src: t.getAvatarURL(p, (0, u.FT9)(x), s && I),
                                 size: x,
                                 muted: n?.isVoiceMuted() ?? !1,
                                 deafen: n?.isVoiceDeafened() ?? !1,
-                                speaking: l,
-                                ringing: r,
+                                speaking: s,
+                                ringing: a,
                             },
                             e.id,
                         ),
@@ -130,5 +129,5 @@ function E(e) {
                 t.id,
             );
         });
-    return (0, i.jsx)(c.F, { component: "div", role: "list", className: r()(g.zr, l), children: I });
+    return (0, i.jsx)(c.F, { component: "div", role: "list", className: a()(g.zr, s), children: C });
 }

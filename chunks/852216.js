@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     nd: "panel__5dec7",
     rf: "body__5dec7",

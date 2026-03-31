@@ -1,106 +1,105 @@
-"use strict";
-n.d(t, { A: () => ea, l: () => el });
+n.d(t, { A: () => er, l: () => es });
 var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    r = n.n(l),
-    a = n(735438),
+    l = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    r = n(735438),
     o = n(311907),
     c = n(506774),
     d = n(397927),
     u = n(73153),
     h = n(765671),
     A = n(964486),
-    m = n(793574),
-    p = n(688810),
+    _ = n(793574),
+    m = n(688810),
     g = n(313961),
-    _ = n(520698),
+    p = n(520698),
     f = n(43189),
     x = n(518530),
-    C = n(384059),
-    E = n(267102),
-    I = n(574172),
+    E = n(384059),
+    I = n(267102),
+    C = n(574172),
     N = n(869146),
-    b = n(976860),
+    T = n(976860),
     S = n(461782),
-    T = n(20465),
-    v = n(156652),
-    y = n(128286),
+    b = n(20465),
+    y = n(156652),
+    v = n(128286),
     j = n(619344),
     R = n(821747),
     O = n(961350),
     L = n(249288),
     M = n(71393),
     D = n(576705),
-    G = n(309010),
-    U = n(723702),
+    U = n(309010),
+    G = n(723702),
     P = n(837921),
-    w = n(323443),
-    k = n(113783),
-    V = n(69407),
-    B = n(446600),
+    k = n(323443),
+    w = n(113783),
+    B = n(69407),
+    V = n(446600),
     H = n(571909),
     F = n(374873),
     K = n(623413),
-    Y = n(707251),
-    W = n(357819),
+    W = n(707251),
+    Y = n(357819),
     z = n(717965),
     q = n(696842),
     X = n(895903),
-    Q = n(542372),
-    J = n(533233),
+    J = n(542372),
+    Q = n(533233),
     $ = n(652215),
     Z = n(806931),
     ee = n(985018),
-    et = n(173232);
+    et = n(323167);
 let en = "HasBeenInStageChannel",
     ei = (e) => {
-        (0, C.X)(m.A.VOICE_CONTROL_TRAY, C.O.STAY_ON_TOP, e), I.setAlwaysOnTop($.MLl.CHANNEL_CALL_POPOUT, e);
+        (0, E.X)(_.A.VOICE_CONTROL_TRAY, E.O.STAY_ON_TOP, e), C.setAlwaysOnTop($.MLl.CHANNEL_CALL_POPOUT, e);
     };
-function es(e) {
+function el(e) {
     let {
             channel: t,
             appContext: n,
-            popoutOpen: l,
-            popoutWindow: r,
-            popoutWindowAlwaysOnTop: a,
+            popoutOpen: s,
+            popoutWindow: a,
+            popoutWindowAlwaysOnTop: r,
             selectedParticipant: c,
         } = e,
-        { parentAnalyticsLocation: d } = (0, p.Ay)(),
+        { parentAnalyticsLocation: d } = (0, m.Ay)(),
         h = t.getGuildId(),
-        A = (0, o.bG)([G.A], () => G.A.getMostRecentSelectedTextChannelId(h), [h]),
-        m = O.default.getId(),
+        A = (0, o.bG)([U.A], () => U.A.getMostRecentSelectedTextChannelId(h), [h]),
+        _ = O.default.getId(),
         f =
             !(0, o.bG)([g.A], () => g.A.isFullscreenInContext(n)) &&
-            (!U.isPlatformEmbedded || P.Ay.supportsFeature($.BYE.POPOUT_WINDOWS)),
-        x = null != c && c.type !== Z.lp.ACTIVITY && c.user.id !== m,
-        E = s.useMemo(() => r?.window ?? window, [r]),
-        N = (0, Q.A)({ channel: t, appContext: n, popoutOpen: l, popoutWindow: r, currentWindow: E }),
-        S = n === $.BRT.POPOUT && U.isPlatformEmbedded && P.Ay.supportsFeature($.BYE.POPOUT_WINDOWS);
+            (!G.isPlatformEmbedded || P.Ay.supportsFeature($.BYE.POPOUT_WINDOWS)),
+        x = null != c && c.type !== Z.lp.ACTIVITY && c.user.id !== _,
+        I = l.useMemo(() => a?.window ?? window, [a]),
+        N = (0, J.A)({ channel: t, appContext: n, popoutOpen: s, popoutWindow: a, currentWindow: I }),
+        S = n === $.BRT.POPOUT && G.isPlatformEmbedded && P.Ay.supportsFeature($.BYE.POPOUT_WINDOWS);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             x
                 ? (0, i.jsx)(R.A, {
-                      context: (0, _.A)(c.type),
+                      context: (0, p.A)(c.type),
                       userId: c.user.id,
-                      currentWindow: E,
+                      currentWindow: I,
                       sliderClassName: et.MQ,
                       location: d,
                   })
                 : null,
-            S ? (0, i.jsx)(j.A, { popoutWindowAlwaysOnTop: a, onToggleStayOnTop: ei }) : null,
+            S ? (0, i.jsx)(j.A, { popoutWindowAlwaysOnTop: r, onToggleStayOnTop: ei }) : null,
             f
-                ? (0, i.jsx)(y.A, {
-                      popoutOpen: l,
+                ? (0, i.jsx)(v.A, {
+                      popoutOpen: s,
                       onOpenPopout: () => {
-                          (0, C.X)(d, C.O.POPOUT, !0),
+                          (0, E.X)(d, E.O.POPOUT, !0),
                               (() => {
                                   let e = t.getGuildId();
-                                  null != e && null != A && (0, b.uh)(e, A), I.openChannelCallPopout(t);
+                                  null != e && null != A && (0, T.uh)(e, A), C.openChannelCallPopout(t);
                               })();
                       },
                       onClosePopout: () => {
-                          (0, C.X)(d, C.O.POPOUT, !1), u.h.wait(() => I.close($.MLl.CHANNEL_CALL_POPOUT));
+                          (0, E.X)(d, E.O.POPOUT, !1), u.h.wait(() => C.close($.MLl.CHANNEL_CALL_POPOUT));
                       },
                   })
                 : null,
@@ -108,41 +107,41 @@ function es(e) {
         ],
     });
 }
-function el(e) {
+function es(e) {
     let { channel: t } = e,
-        n = (0, E.Us)(),
-        s = (0, o.bG)([D.A], () => D.A.can($.xBc.CREATE_INSTANT_INVITE, t)),
-        l = (0, o.bG)([M.A], () => M.A.getGuild(t.guild_id)),
-        r = (0, o.bG)([B.A], () => B.A.getStageInstanceByChannel(t.id)),
-        a = s || r?.invite_code != null;
-    return null != l && a
+        n = (0, I.Us)(),
+        l = (0, o.bG)([D.A], () => D.A.can($.xBc.CREATE_INSTANT_INVITE, t)),
+        s = (0, o.bG)([M.A], () => M.A.getGuild(t.guild_id)),
+        a = (0, o.bG)([V.A], () => V.A.getStageInstanceByChannel(t.id)),
+        r = l || a?.invite_code != null;
+    return null != s && r
         ? (0, i.jsx)(q.A, { size: "md", channel: t, appContext: n, analyticsLocation: $.liQ.GUILD_CHANNEL })
         : null;
 }
-function er(e) {
+function ea(e) {
     let t,
         {
             channel: n,
-            toggleRequestToSpeakSidebar: l,
+            toggleRequestToSpeakSidebar: s,
             showRequestToSpeakSidebar: c,
             popoutWindow: d,
             popoutWindowAlwaysOnTop: u,
             popoutOpen: h,
             popoutType: A,
-            chatOpen: _,
+            chatOpen: p,
             idleProps: x,
         } = e,
-        { analyticsLocations: C } = (0, p.Ay)(m.A.VOICE_CONTROL_TRAY),
-        I = (0, E.Us)(),
-        N = (0, o.bG)([G.A], () => G.A.getVoiceChannelId() === n.id, [n.id]),
-        b = (0, o.bG)([D.A], () => D.A.can($.xBc.CONNECT, n)),
-        S = (0, k.E5)(n.id, V.ip.SPEAKER),
-        y = (0, o.bG)([g.A], () => g.A.getSelectedParticipant(n.id)),
-        j = h && I !== $.BRT.POPOUT,
-        [R, O] = s.useState(0),
-        M = s.useMemo(
+        { analyticsLocations: E } = (0, m.Ay)(_.A.VOICE_CONTROL_TRAY),
+        C = (0, I.Us)(),
+        N = (0, o.bG)([U.A], () => U.A.getVoiceChannelId() === n.id, [n.id]),
+        T = (0, o.bG)([D.A], () => D.A.can($.xBc.CONNECT, n)),
+        S = (0, w.E5)(n.id, B.ip.SPEAKER),
+        v = (0, o.bG)([g.A], () => g.A.getSelectedParticipant(n.id)),
+        j = h && C !== $.BRT.POPOUT,
+        [R, O] = l.useState(0),
+        M = l.useMemo(
             () =>
-                (0, a.debounce)(
+                (0, r.debounce)(
                     (e) => {
                         let { scrollTop: t } = e.target;
                         O(t);
@@ -152,50 +151,50 @@ function er(e) {
                 ),
             [],
         ),
-        { isOnStartStageScreen: U } = (0, H.Ay)();
+        { isOnStartStageScreen: G } = (0, H.Ay)();
     (0, H.vI)(n);
     let P = (0, o.bG)([L.A], () => L.A.getToastsEnabled(n.id)),
-        B = (0, J.A)(n) ? (null != y ? "84px" : "124px") : null != y ? "0px" : "48px";
+        V = (0, Q.A)(n) ? (null != v ? "84px" : "124px") : null != v ? "0px" : "48px";
     return (
-        U && (B = "0px"),
-        (t = U
+        G && (V = "0px"),
+        (t = G
             ? (0, i.jsx)(X.A, {
                   channel: n,
                   onContinueClick: () => {
-                      (0, H.ek)(!1), N || (0, w.cy)(n);
+                      (0, H.ek)(!1), N || (0, k.cy)(n);
                   },
               })
             : N
-              ? (0, i.jsx)(W.A, { channel: n, onScroll: M, popoutType: A })
-              : (0, i.jsx)(K.A, { participants: S, channel: n, hasConnectPermission: b })),
-        (0, i.jsx)(v.A, {
-            style: { height: `calc(100% - ${B})`, paddingTop: B },
-            disableGradients: !N || (0 === R && v.x.TOP),
+              ? (0, i.jsx)(Y.A, { channel: n, onScroll: M, popoutType: A })
+              : (0, i.jsx)(K.A, { participants: S, channel: n, hasConnectPermission: T })),
+        (0, i.jsx)(y.A, {
+            style: { height: `calc(100% - ${V})`, paddingTop: V },
+            disableGradients: !N || (0 === R && y.x.TOP),
             renderBottomCenter: () =>
                 N
-                    ? (0, i.jsx)(p.f5, { value: C, children: (0, i.jsx)(z.A, { channel: n, isOnStartStageScreen: U }) })
+                    ? (0, i.jsx)(m.f5, { value: E, children: (0, i.jsx)(z.A, { channel: n, isOnStartStageScreen: G }) })
                     : null,
             renderBottomRight: () =>
                 N
-                    ? (0, i.jsx)(p.f5, {
-                          value: C,
-                          children: (0, i.jsx)(es, {
+                    ? (0, i.jsx)(m.f5, {
+                          value: E,
+                          children: (0, i.jsx)(el, {
                               channel: n,
-                              appContext: I,
+                              appContext: C,
                               popoutOpen: h,
                               popoutWindow: d,
                               popoutWindowAlwaysOnTop: u,
-                              selectedParticipant: y,
+                              selectedParticipant: v,
                           }),
                       })
                     : null,
             renderHeader: () =>
-                (0, i.jsx)(Y.A, { toggleRequestToSpeakSidebar: l, showRequestToSpeakSidebar: c, channel: n }),
+                (0, i.jsx)(W.A, { toggleRequestToSpeakSidebar: s, showRequestToSpeakSidebar: c, channel: n }),
             renderChatToasts: () =>
-                !P || _ || j
+                !P || p || j
                     ? null
                     : (0, i.jsx)(f.Ay, {
-                          children: (0, i.jsx)(T.A, { className: r()(et.T6, { [et.c3]: c }), channelId: n.id }),
+                          children: (0, i.jsx)(b.A, { className: a()(et.T6, { [et.c3]: c }), channelId: n.id }),
                       }),
             screenMessage: j ? { mainText: ee.intl.string(ee.t.J5bXZU) } : null,
             ...x,
@@ -203,20 +202,20 @@ function er(e) {
         })
     );
 }
-function ea(e) {
-    let { channel: t, popoutType: l } = e,
-        [a, u] = s.useState(!1),
-        _ = s.useCallback(() => {
-            u(!a);
-        }, [a, u]),
-        { popoutWindow: C, popoutWindowAlwaysOnTop: I } = (0, o.cf)([N.A], () => ({
+function er(e) {
+    let { channel: t, popoutType: s } = e,
+        [r, u] = l.useState(!1),
+        p = l.useCallback(() => {
+            u(!r);
+        }, [r, u]),
+        { popoutWindow: E, popoutWindowAlwaysOnTop: C } = (0, o.cf)([N.A], () => ({
             popoutWindow: N.A.getWindow($.MLl.CHANNEL_CALL_POPOUT),
             popoutWindowAlwaysOnTop: N.A.getIsAlwaysOnTop($.MLl.CHANNEL_CALL_POPOUT),
         })),
-        b = null != C && !C.closed,
-        { analyticsLocations: T } = (0, p.Ay)(m.A.STAGE_CHANNEL_CALL),
-        v = (0, E.Us)(),
-        y = (0, o.bG)([g.A], () => g.A.getChatOpen(t.id), [t.id]),
+        T = null != E && !E.closed,
+        { analyticsLocations: b } = (0, m.Ay)(_.A.STAGE_CHANNEL_CALL),
+        y = (0, I.Us)(),
+        v = (0, o.bG)([g.A], () => g.A.getChatOpen(t.id), [t.id]),
         j = (0, o.bG)([M.A], () => M.A.getGuild(t.guild_id), [t.guild_id]);
     (0, A.Ay)(() => {
         null == c.w.get(en) &&
@@ -227,9 +226,9 @@ function ea(e) {
             c.w.set(en, Date.now()));
     });
     let { width: R = 0, ref: O } = (0, h.Ay)(),
-        L = !b || v === $.BRT.POPOUT;
-    return (0, i.jsx)(p.f5, {
-        value: T,
+        L = !T || y === $.BRT.POPOUT;
+    return (0, i.jsx)(m.f5, {
+        value: b,
         children: (0, i.jsxs)(f.qh, {
             children: [
                 (0, i.jsxs)("div", {
@@ -240,28 +239,28 @@ function ea(e) {
                             theme: $.NJ8.DARK,
                             children: (e) =>
                                 (0, i.jsx)("div", {
-                                    className: r()(et.ik, e, { [et.pR]: a, [et.gy]: a || y }),
+                                    className: a()(et.ik, e, { [et.pR]: r, [et.gy]: r || v }),
                                     children: (0, i.jsx)(S.Ay, {
                                         timeout: 2e3,
                                         children: (e) =>
-                                            (0, i.jsx)(er, {
+                                            (0, i.jsx)(ea, {
                                                 channel: t,
-                                                toggleRequestToSpeakSidebar: _,
-                                                showRequestToSpeakSidebar: a,
-                                                popoutWindow: C,
-                                                popoutWindowAlwaysOnTop: I,
-                                                popoutOpen: b,
-                                                popoutType: l,
-                                                chatOpen: y,
+                                                toggleRequestToSpeakSidebar: p,
+                                                showRequestToSpeakSidebar: r,
+                                                popoutWindow: E,
+                                                popoutWindowAlwaysOnTop: C,
+                                                popoutOpen: T,
+                                                popoutType: s,
+                                                chatOpen: v,
                                                 idleProps: e,
                                             }),
                                     }),
                                 }),
                         }),
-                        a ? (0, i.jsx)(F.A, { channel: t, toggleRequestToSpeakSidebar: _, chatOpen: y }) : null,
+                        r ? (0, i.jsx)(F.A, { channel: t, toggleRequestToSpeakSidebar: p, chatOpen: v }) : null,
                         (0, i.jsx)("div", {
                             className: et.B2,
-                            children: y && L && (0, i.jsx)(x.A, { channel: t, guild: j, maxWidth: R - 550 }),
+                            children: v && L && (0, i.jsx)(x.A, { channel: t, guild: j, maxWidth: R - 550 }),
                         }),
                     ],
                 }),

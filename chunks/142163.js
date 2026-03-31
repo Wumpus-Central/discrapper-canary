@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     qc: "folderGroup__48112",
     GO: "folderGroupBackground__48112",

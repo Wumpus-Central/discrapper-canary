@@ -30,9 +30,9 @@ var r = n(627968),
     D = n(287809),
     L = n(427262),
     w = n(985018),
-    x = n(206314),
-    M = n(377086);
-function P(e) {
+    M = n(782691),
+    P = n(732497);
+function x(e) {
     let { member: t, guildId: s, channelId: a, role: o } = e,
         u = i.useRef(null),
         c = (0, l.bG)([b.A], () => b.A.getGuild(s)?.ownerId, [s]),
@@ -70,11 +70,11 @@ function P(e) {
                                       let { default: e } = await Promise.all([
                                           n.e("41927"),
                                           n.e("97262"),
-                                          n.e("3795"),
+                                          n.e("11478"),
                                           n.e("42128"),
                                           n.e("97283"),
                                           n.e("84841"),
-                                          n.e("82669"),
+                                          n.e("19901"),
                                       ]).then(n.bind(n, 107632));
                                       return (t) =>
                                           (0, r.jsx)(e, { ...t, user: f, guildId: s, channel: p, showMediaItems: !0 });
@@ -119,7 +119,7 @@ function k(e) {
         T = i.useMemo(
             () =>
                 null != m
-                    ? h.map((e) => (0, r.jsx)(P, { member: e, guildId: s, channelId: o, role: m }, e.userId))
+                    ? h.map((e) => (0, r.jsx)(x, { member: e, guildId: s, channelId: o, role: m }, e.userId))
                     : [],
             [o, s, m, h],
         );
@@ -128,18 +128,18 @@ function k(e) {
         : (0, r.jsx)(u.C.Provider, {
               value: void 0,
               children: (0, r.jsx)("div", {
-                  className: x.qm,
+                  className: M.qm,
                   ref: d,
                   ...t,
                   children: (0, r.jsxs)(c.HOs, {
-                      className: x.bY,
+                      className: M.bY,
                       children: [
-                          (0, r.jsx)(E.Y, { id: n, guildId: s, title: m.name, count: I, className: x.sd }),
+                          (0, r.jsx)(E.Y, { id: n, guildId: s, title: m.name, count: I, className: M.sd }),
                           T,
                           null == I || I <= T.length
                               ? null
                               : (0, r.jsx)(g.A, {
-                                    className: x.sd,
+                                    className: M.sd,
                                     children: w.intl.formatToPlainString(w.t["9oMmZC"], { count: I - T.length }),
                                 }),
                       ],
@@ -161,7 +161,7 @@ function U(e) {
         b = (e) =>
             (0, r.jsxs)(T.A, {
                 ref: R,
-                className: x.Dz,
+                className: M.Dz,
                 color: N ? E.color : null,
                 roleColors: N ? C : null,
                 ...e,
@@ -171,7 +171,7 @@ function U(e) {
                         (0, r.jsx)(c.WYI, {
                             color: (0, o.Hl)(E.color),
                             colors: C,
-                            className: M.m,
+                            className: P.m,
                             background: !1,
                             tooltip: !1,
                         }),

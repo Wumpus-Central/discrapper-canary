@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     my: "avatar__49508",
     yF: "divider__49508",

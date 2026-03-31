@@ -1,66 +1,65 @@
-"use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => _ });
 var i = n(627968),
-    s = n(64700),
-    l = n(533781),
-    r = n(265872),
-    a = n(688810),
+    l = n(64700),
+    s = n(533781),
+    a = n(265872),
+    r = n(688810),
     o = n(384059),
     c = n(421773),
     d = n(729081),
     u = n(709562),
     h = n(376086),
     A = n(985018);
-function p(e) {
-    let { channel: t, themeable: n, whichPopoutIsOpen: p, setWhichPopoutIsOpen: g } = e,
-        { parentAnalyticsLocation: m } = (0, a.Ay)(),
-        _ = s.useRef(null),
-        { isHovered: f, setIsHovered: x, onMouseEnter: C, onMouseLeave: E } = (0, c.A)(200, 300),
+function _(e) {
+    let { channel: t, themeable: n, whichPopoutIsOpen: _, setWhichPopoutIsOpen: m } = e,
+        { parentAnalyticsLocation: g } = (0, r.Ay)(),
+        p = l.useRef(null),
+        { isHovered: f, setIsHovered: x, onMouseEnter: E, onMouseLeave: I } = (0, c.A)(200, 300),
         {
-            Component: I,
-            play: b,
-            events: { onMouseEnter: N, onMouseLeave: S },
-        } = (0, l.T)(),
-        T = s.useCallback(
+            Component: C,
+            play: N,
+            events: { onMouseEnter: T, onMouseLeave: S },
+        } = (0, s.T)(),
+        b = l.useCallback(
             (e) => {
-                "focus" !== e.type && (C(), N());
+                "focus" !== e.type && (E(), T());
             },
-            [C, N],
+            [E, T],
         ),
-        v = s.useCallback(() => {
-            null == p && (E(), S());
-        }, [E, S, p]),
-        y = s.useCallback(() => {
-            (0, o.X)(m, o.O.GIFTING),
-                p === h.P.GIFTING ? (g?.(void 0), E()) : (null != p ? (b(), C()) : b(), g?.(h.P.GIFTING));
-        }, [C, E, m, b, g, p]);
-    return (0, i.jsx)(r.Y, {
-        targetElementRef: _,
-        shouldShow: (f && (p === h.P.GIFTING || null == p)) || p === h.P.GIFTING,
-        animation: r.Y.Animation.FADE,
+        y = l.useCallback(() => {
+            null == _ && (I(), S());
+        }, [I, S, _]),
+        v = l.useCallback(() => {
+            (0, o.X)(g, o.O.GIFTING),
+                _ === h.P.GIFTING ? (m?.(void 0), I()) : (null != _ ? (N(), E()) : N(), m?.(h.P.GIFTING));
+        }, [E, I, g, N, m, _]);
+    return (0, i.jsx)(a.Y, {
+        targetElementRef: p,
+        shouldShow: (f && (_ === h.P.GIFTING || null == _)) || _ === h.P.GIFTING,
+        animation: a.Y.Animation.FADE,
         animationPosition: "top",
         position: "top",
         align: "center",
         spacing: 16,
         onRequestClose: () => {
-            x(!1), g?.(void 0);
+            x(!1), m?.(void 0);
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return (0, i.jsx)(d.A, { channel: t, closePopout: n, isHovered: f, onMouseEnter: C, onMouseLeave: E });
+            return (0, i.jsx)(d.A, { channel: t, closePopout: n, isHovered: f, onMouseEnter: E, onMouseLeave: I });
         },
         children: () =>
             (0, i.jsx)(u.l, {
-                ref: _,
+                ref: p,
                 isTrayButton: !0,
                 themeable: n,
                 "aria-label": A.intl.string(A.t.PEjaCx),
-                iconComponent: I,
-                onClick: y,
-                onMouseEnter: T,
-                onMouseLeave: v,
-                isActive: f || p === h.P.GIFTING,
-                color: f || p === h.P.GIFTING ? "primaryDark" : void 0,
+                iconComponent: C,
+                onClick: v,
+                onMouseEnter: b,
+                onMouseLeave: y,
+                isActive: f || _ === h.P.GIFTING,
+                color: f || _ === h.P.GIFTING ? "primaryDark" : void 0,
             }),
     });
 }

@@ -1,71 +1,70 @@
-"use strict";
-n.d(t, { A: () => C });
+n.d(t, { A: () => E });
 var i = n(627968),
-    s = n(64700),
-    l = n(735438),
-    r = n.n(l),
-    a = n(311907),
+    l = n(64700),
+    s = n(735438),
+    a = n.n(s),
+    r = n(311907),
     o = n(73153),
     c = n(334738),
     d = n(835369),
     u = n(218152),
     h = n(970278),
     A = n(747926),
-    p = n(734057),
-    g = n(403362),
-    m = n(661191),
-    _ = n(652215),
+    _ = n(734057),
+    m = n(403362),
+    g = n(661191),
+    p = n(652215),
     f = n(37411),
-    x = n(357976);
-function C(e) {
-    let { channel: t, channelRecord: n, deleteChannel: l } = e,
-        C = (0, a.yK)(
-            [h.A, p.A],
+    x = n(440649);
+function E(e) {
+    let { channel: t, channelRecord: n, deleteChannel: s } = e,
+        E = (0, r.yK)(
+            [h.A, _.A],
             () =>
-                r()(h.A.getThreadsForParent(n.guild_id, n.id))
+                a()(h.A.getThreadsForParent(n.guild_id, n.id))
                     .values()
                     .filter((e) => {
                         let { id: n } = e;
-                        return m.default.compare(n, t.oldestReadMessageId) > 0;
+                        return g.default.compare(n, t.oldestReadMessageId) > 0;
                     })
                     .map((e) => {
                         let { id: t } = e;
-                        return p.A.getChannel(t);
+                        return _.A.getChannel(t);
                     })
-                    .filter(g.Vq)
-                    .sort((e, t) => m.default.compare(e.id, t.id))
+                    .filter(m.Vq)
+                    .sort((e, t) => g.default.compare(e.id, t.id))
                     .value(),
             [t.oldestReadMessageId, n.guild_id, n.id],
         ),
-        E = s.useCallback((e, t) => {
+        I = l.useCallback((e, t) => {
             (0, A.JA)(e, t, f.H9.INBOX);
         }, []);
     return (
-        s.useEffect(() => {
+        l.useEffect(() => {
             null == n ||
                 !t.isFullyLoaded ||
                 t.hasError ||
                 t.collapsed ||
-                0 !== C.length ||
+                0 !== E.length ||
                 o.h.wait(() => {
                     (0, c.ack)(
                         t.channelId,
                         {
-                            section: _.JJy.INBOX,
-                            object: _.ZSU.ACK_INBOX_FORUM_NO_POSTS,
-                            objectType: _.AnalyticsObjectTypes.ACK_AUTOMATIC,
+                            section: p.JJy.INBOX,
+                            object: p.ZSU.ACK_INBOX_FORUM_NO_POSTS,
+                            objectType: p.AnalyticsObjectTypes.ACK_AUTOMATIC,
                         },
                         !0,
                     ),
-                        l(t.channelId);
+                        s(t.channelId);
                 });
         }),
         (0, i.jsx)("div", {
             className: x.k,
-            children: C.map((e) =>
+            children: E.map((e) =>
                 (0, i.jsx)(
                     u.Cp,
-                    { channel: n, children: (0, i.jsx)(d.Ay, { className: x.u, threadId: e.id, goToThread: E }) },
+                    { channel: n, children: (0, i.jsx)(d.Ay, { className: x.u, threadId: e.id, goToThread: I }) },
                     e.id,
                 ),
             ),

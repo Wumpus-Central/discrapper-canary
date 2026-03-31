@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Om: "dot__148e9",
     GS: "maskPopout__148e9",

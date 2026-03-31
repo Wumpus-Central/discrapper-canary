@@ -21,7 +21,7 @@ var r = n(627968),
     T = n(806931),
     S = n(652215),
     y = n(985018),
-    v = n(405434);
+    v = n(625409);
 let N = 150;
 function C(e, t) {
     switch (e) {
@@ -107,7 +107,7 @@ function D(e) {
         D = (0, h.A)(),
         [L, w] = i.useState(!1),
         M = i.useRef(new c.J_(N, () => w(!1))),
-        x = (0, u.yK)([E.A, g.default], () => {
+        P = (0, u.yK)([E.A, g.default], () => {
             if (o.type === T.lp.STREAM) {
                 let e = E.A.getViewerIds(o.id);
                 return e.length > 0 ? e.map((e) => g.default.getUser(e)).filter(A.Vq) : b;
@@ -121,7 +121,7 @@ function D(e) {
     i.useEffect(() => {
         D && (M.current.cancel(), w(!1));
     }, [D]);
-    let P = i.useCallback(() => {
+    let x = i.useCallback(() => {
             M.current.cancel(), w(!0);
         }, []),
         k = i.useCallback(() => {
@@ -129,34 +129,34 @@ function D(e) {
         }, []),
         U = i.useCallback(
             (e, t) => {
-                P(),
+                x(),
                     (0, f.L3)(
                         e,
                         async () => {
                             let { default: e } = await Promise.all([
                                 n.e("97262"),
-                                n.e("3795"),
+                                n.e("11478"),
                                 n.e("32418"),
-                                n.e("75351"),
+                                n.e("73417"),
                             ]).then(n.bind(n, 668569));
                             return (n) => (0, r.jsx)(e, { ...n, user: t });
                         },
                         { onClose: k },
                     );
             },
-            [k, P],
+            [k, x],
         );
-    if (0 === x.length) return null;
+    if (0 === P.length) return null;
     if (m)
         return (0, r.jsx)(O, {
             maxVisibleUsers: y,
-            users: x,
+            users: P,
             guildId: s,
             channelId: t,
             className: d,
             participantType: o.type,
         });
-    let G = l()(x)
+    let G = l()(P)
         .take(y)
         .map((e) =>
             (0, r.jsx)(
@@ -167,12 +167,12 @@ function D(e) {
         )
         .value();
     return (
-        x.length > y &&
-            (G[G.length - 1] = (0, r.jsxs)("div", { className: v.ju, children: ["+", x.length - y + 1] }, "overflow")),
+        P.length > y &&
+            (G[G.length - 1] = (0, r.jsxs)("div", { className: v.ju, children: ["+", P.length - y + 1] }, "overflow")),
         (0, r.jsx)(p.A, {
             section: S.JJy.STREAM_VIEWER_POPOUT,
             children: (0, r.jsx)("div", {
-                onMouseEnter: P,
+                onMouseEnter: x,
                 onMouseLeave: k,
                 children: (0, r.jsx)(_.YNO, {
                     targetElementRef: C,
@@ -182,7 +182,7 @@ function D(e) {
                             handleUserContextMenu: U,
                             guildId: s,
                             channelId: t,
-                            users: x,
+                            users: P,
                             disableInteraction: I,
                         }),
                     shouldShow: L && !D,

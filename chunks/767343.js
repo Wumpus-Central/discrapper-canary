@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Ie: "empty__99e7c",
     TK: "headerText__99e7c",

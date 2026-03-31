@@ -1,13 +1,12 @@
-"use strict";
 n.d(t, { A3: () => u, DN: () => d, _t: () => h, mR: () => o, zP: () => c });
 var i = n(284009),
-    s = n.n(i),
-    l = n(735438),
-    r = n.n(l),
-    a = n(946116);
+    l = n.n(i),
+    s = n(735438),
+    a = n.n(s),
+    r = n(946116);
 function o(e) {
     return (
-        s()(e.type === a.fx.GUILD, "Directory entries must be connected to a guild!"),
+        l()(e.type === r.fx.GUILD, "Directory entries must be connected to a guild!"),
         {
             channelId: e.directory_channel_id,
             guildId: e.entity_id,
@@ -28,11 +27,11 @@ function o(e) {
 }
 let c = 5;
 function d(e) {
-    return r().orderBy(e, [(e) => e.approximateMemberCount], ["desc"]);
+    return a().orderBy(e, [(e) => e.approximateMemberCount], ["desc"]);
 }
 function u(e) {
     var t;
-    return ((t = e.filter((e) => e.featurableInDirectory)), r().orderBy(t, [(e) => e.createdAt], ["desc"])).slice(0, c);
+    return ((t = e.filter((e) => e.featurableInDirectory)), a().orderBy(t, [(e) => e.createdAt], ["desc"])).slice(0, c);
 }
 function h(e) {
     return d(e);

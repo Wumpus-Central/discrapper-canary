@@ -1,15 +1,14 @@
-"use strict";
 n.d(t, { A: () => c });
 var i = n(627968);
 n(64700);
-var s = n(311907),
-    l = n(397927),
+var l = n(311907),
+    s = n(397927),
     a = n(713654),
     r = n(71393),
-    o = n(234021);
+    o = n(318496);
 function c(e) {
     let { channel: t } = e,
-        n = (0, s.bG)([r.A], () => r.A.getGuild(t.guild_id)),
+        n = (0, l.bG)([r.A], () => r.A.getGuild(t.guild_id)),
         c = (0, a.gU)(t, n);
     return null == c
         ? null
@@ -17,7 +16,7 @@ function c(e) {
               className: o.hY,
               children: [
                   (0, i.jsx)(c, { className: o.p }),
-                  (0, i.jsx)(l.Text, {
+                  (0, i.jsx)(s.Text, {
                       variant: "text-md/semibold",
                       color: "interactive-text-default",
                       className: o.HA,

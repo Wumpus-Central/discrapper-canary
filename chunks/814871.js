@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Rc: "carouselMaxWidth_b8429c",
     XG: "scroller_b8429c",

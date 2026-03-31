@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kZ: "draggable__55bab",
     BN: "moreContainer__55bab",

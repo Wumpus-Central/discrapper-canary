@@ -1,20 +1,19 @@
-"use strict";
-n.d(t, { A: () => a });
+n.d(t, { A: () => r });
 var i = n(627968);
 n(64700);
-var s = n(175203),
-    l = n(430452),
-    r = n(348702);
-function a(e) {
-    let { aspectRatio: t, className: n, children: a, width: o, ...c } = e,
-        d = l.Ay.getVideoComponent();
+var l = n(175203),
+    s = n(430452),
+    a = n(657079);
+function r(e) {
+    let { aspectRatio: t, className: n, children: r, width: o, ...c } = e,
+        d = s.Ay.getVideoComponent();
     return (0, i.jsx)("div", {
         style: { width: o },
-        className: r.A,
+        className: a.A,
         children: (0, i.jsxs)("div", {
-            className: r.e,
+            className: a.e,
             style: { aspectRatio: t },
-            children: [(0, i.jsx)(s.Ay, { className: n, videoComponent: d, width: o, ...c }), a],
+            children: [(0, i.jsx)(l.Ay, { className: n, videoComponent: d, width: o, ...c }), r],
         }),
     });
 }

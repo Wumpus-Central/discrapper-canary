@@ -1,59 +1,60 @@
-n.d(t, { A: () => u });
-var i = n(627968),
-    l = n(64700),
-    a = n(503698),
-    r = n.n(a),
-    s = n(990078),
-    o = n(397927),
-    d = n(854627),
-    c = n(429974);
-function u(e) {
-    let { user: t, checked: n, onChange: a, disabled: u, tooltipConfig: m } = e,
-        _ = l.useRef(null),
-        { avatarSrc: h, eventHandlers: p } = (0, d.A)({ userId: t?.id, size: o._3J.SIZE_32 }),
-        g = t.globalName ?? t.username;
-    return (0, i.jsx)(s.m, {
-        text: m?.isActive(t, u) ? m.text(t) : null,
+"use strict";
+s.d(t, { A: () => d });
+var r = s(627968),
+    i = s(64700),
+    n = s(503698),
+    a = s.n(n),
+    l = s(990078),
+    u = s(397927),
+    c = s(854627),
+    o = s(874793);
+function d(e) {
+    let { user: t, checked: s, onChange: n, disabled: d, tooltipConfig: E } = e,
+        _ = i.useRef(null),
+        { avatarSrc: R, eventHandlers: p } = (0, c.A)({ userId: t?.id, size: u._3J.SIZE_32 }),
+        I = t.globalName ?? t.username;
+    return (0, r.jsx)(l.m, {
+        text: E?.isActive(t, d) ? E.text(t) : null,
         position: "top",
         anchorRef: _,
         asContainer: !0,
-        children: (0, i.jsxs)(o.DUT, {
-            className: r()(c.kL, { [c.vk]: !u }),
+        children: (0, r.jsxs)(u.DUT, {
+            className: a()(o.kL, { [o.vk]: !d }),
             onClick: () => {
-                u || a(t, !n);
+                d || n(t, !s);
             },
             children: [
-                (0, i.jsx)("div", {
-                    className: c.dj,
-                    children: (0, i.jsx)(o.euF, {
-                        className: r()({ [c.SU]: u }),
-                        src: h,
-                        "aria-label": g,
-                        size: o._3J.SIZE_32,
+                (0, r.jsx)("div", {
+                    className: o.dj,
+                    children: (0, r.jsx)(u.euF, {
+                        className: a()({ [o.SU]: d }),
+                        src: R,
+                        "aria-label": I,
+                        size: u._3J.SIZE_32,
                         ...p,
                     }),
                 }),
-                (0, i.jsxs)("div", {
-                    className: c.QV,
+                (0, r.jsxs)("div", {
+                    className: o.QV,
                     children: [
-                        (0, i.jsx)(o.Text, {
-                            className: c.nT,
-                            color: u ? "text-muted" : "text-default",
+                        (0, r.jsx)(u.Text, {
+                            className: o.nT,
+                            color: d ? "text-muted" : "text-default",
                             variant: "text-md/semibold",
-                            children: g,
+                            children: I,
                         }),
-                        (0, i.jsx)(o.Text, {
-                            className: c.nT,
-                            color: u ? "text-muted" : "text-subtle",
+                        (0, r.jsx)(u.Text, {
+                            className: o.nT,
+                            color: d ? "text-muted" : "text-subtle",
                             variant: "text-xs/normal",
                             children: t.username,
                         }),
                     ],
                 }),
-                (0, i.jsx)("div", {
+                (0, r.jsx)("div", {
                     ref: _,
-                    className: c.kv,
-                    children: (0, i.jsx)(o.Checkbox, { disabled: u, checked: n, label: "" }),
+                    className: o.kv,
+                    children: (0, r.jsx)(u.Checkbox, { disabled: d, checked: s, label: "" }),
                 }),
             ],
         }),

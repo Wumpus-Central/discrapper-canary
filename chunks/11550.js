@@ -1,10 +1,9 @@
-"use strict";
 n.d(t, { A: () => A });
 var i = n(311907),
-    s = n(73153),
-    l = n(961350),
-    r = n(698441),
-    a = n(357801),
+    l = n(73153),
+    s = n(961350),
+    a = n(698441),
+    r = n(357801),
     o = n(988794);
 let c = {},
     d = {};
@@ -18,7 +17,7 @@ class h extends i.Ay.PersistedStore {
     static displayName = "UpcomingEventNoticesStore";
     static persistKey = "UpcomingEventNotices";
     initialize(e) {
-        this.waitFor(l.default, r.Ay),
+        this.waitFor(s.default, a.Ay),
             null != e && ((c = e.upcomingEventDismissals ?? {}), (d = e.upcomingEventSeenTimestamps ?? {}));
     }
     getGuildEventNoticeDismissalTime(e) {
@@ -37,7 +36,7 @@ class h extends i.Ay.PersistedStore {
         return { upcomingEventDismissals: c, upcomingEventSeenTimestamps: d };
     }
 }
-let A = new h(s.h, {
+let A = new h(l.h, {
     UPCOMING_GUILD_EVENT_NOTICE_HIDE: function (e) {
         let { eventId: t } = e,
             n = { ...c };
@@ -53,11 +52,11 @@ let A = new h(s.h, {
     },
     GUILD_SCHEDULED_EVENT_USER_ADD: function (e) {
         let { userId: t, guildEventId: n } = e;
-        if (t !== l.default.getId()) return;
-        let i = r.Ay.getGuildScheduledEvent(n);
+        if (t !== s.default.getId()) return;
+        let i = a.Ay.getGuildScheduledEvent(n);
         if (null == i || i.status !== o.XG.SCHEDULED || null != c[n]) return;
-        let s = d[n];
-        if ((0, a.F)(i, void 0, s, !1) === o.w0.NEW_EVENT) {
+        let l = d[n];
+        if ((0, r.F)(i, void 0, l, !1) === o.w0.NEW_EVENT) {
             let e = { ...c };
             (e[n] = Date.now()), (c = e);
         }

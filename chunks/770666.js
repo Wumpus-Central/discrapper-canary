@@ -1,19 +1,18 @@
-"use strict";
 n.d(t, { A: () => c });
 var i = n(311907),
-    s = n(931991),
-    l = n(808728),
-    r = n(71393),
-    a = n(576705),
+    l = n(931991),
+    s = n(808728),
+    a = n(71393),
+    r = n(576705),
     o = n(652215);
 function c(e, t) {
-    return (0, i.bG)([r.A, l.Ay, a.A], () => {
-        let n = r.A.getGuild(e);
-        if (a.A.can(o.xBc.ADMINISTRATOR, n) || a.A.can(o.xBc.CREATE_EVENTS, n)) return !0;
-        for (let { channel: n } of l.Ay.getChannels(e)[l.vM])
+    return (0, i.bG)([a.A, s.Ay, r.A], () => {
+        let n = a.A.getGuild(e);
+        if (r.A.can(o.xBc.ADMINISTRATOR, n) || r.A.can(o.xBc.CREATE_EVENTS, n)) return !0;
+        for (let { channel: n } of s.Ay.getChannels(e)[s.vM])
             if (null == t || n.type === t) {
-                let [e] = (0, s.p_)(n);
-                if (a.A.can(e, n)) return !0;
+                let [e] = (0, l.p_)(n);
+                if (r.A.can(e, n)) return !0;
             }
         return !1;
     }, [e, t]);

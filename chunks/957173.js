@@ -1,4 +1,3 @@
-"use strict";
-n.d(t, { X: () => s });
+n.d(t, { X: () => l });
 var i,
-    s = (((i = {}).REAL_NAME_PROMPT = "REAL_NAME_PROMPT"), i);
+    l = (((i = {}).REAL_NAME_PROMPT = "REAL_NAME_PROMPT"), i);

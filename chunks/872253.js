@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     U0: "lineContainer__9897f",
     my: "avatar__9897f",

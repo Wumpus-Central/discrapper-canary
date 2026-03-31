@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     iE: "wrapper_fa8995",
     Qs: "content_fa8995",

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     y9: "memberSinceWrapper_c4eb81",
     R1: "memberSince_c4eb81",

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     iE: "wrapper_d144f8",
     aC: "target_d144f8",

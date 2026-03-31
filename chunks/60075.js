@@ -1,16 +1,16 @@
 l.d(t, {
-    D5: () => f,
+    D5: () => g,
     Ec: () => b,
-    KF: () => P,
+    KF: () => A,
     LF: () => m,
     NA: () => x,
     Z1: () => h,
-    lz: () => T,
-    mi: () => R,
-    s2: () => A,
+    lz: () => j,
+    mi: () => P,
+    s2: () => T,
     t$: () => p,
-    yJ: () => j,
-    yi: () => C,
+    yJ: () => C,
+    yi: () => S,
     z_: () => E,
 });
 var a = l(627968),
@@ -41,7 +41,7 @@ function p() {
 function m() {
     let e = n.useCallback(() => {
         (0, i.mMO)(async () => {
-            let { default: e } = await l.e("159").then(l.bind(l, 530951));
+            let { default: e } = await l.e("22540").then(l.bind(l, 530951));
             return (t) => (0, a.jsx)(e, { source: {}, ...t });
         });
     }, []);
@@ -108,7 +108,7 @@ let y = [
         { id: "profile_effect", label: "Profile Effect", value: d.e.PROFILE_EFFECT_MODAL_UPSELL },
         { id: "nameplate", label: "Nameplate", value: d.e.NAMEPLATE_MODAL_UPSELL },
     ],
-    g = {
+    f = {
         [d.e.AVATAR_DECORATION_MODAL_UPSELL]: {
             title: "Express Yourself with Avatar Decorations",
             body: "Stand out with unique avatar decorations exclusive to Nitro subscribers.",
@@ -125,10 +125,10 @@ let y = [
             glowUp: "Show off your style with a custom nameplate, available with Nitro.",
         },
     };
-function f() {
+function g() {
     let [e, t] = n.useState(d.e.AVATAR_DECORATION_MODAL_UPSELL),
         r = n.useCallback(() => {
-            let { title: t, body: n, glowUp: r } = g[e];
+            let { title: t, body: n, glowUp: r } = f[e];
             (0, i.mMO)(async () => {
                 let { default: i } = await Promise.all([l.e("59701"), l.e("64864")]).then(l.bind(l, 948265));
                 return (l) =>
@@ -201,11 +201,11 @@ function E() {
         ],
     });
 }
-let S = [
+let _ = [
     { id: "avatar", label: "Avatar", value: c.HL.AVATAR },
     { id: "banner", label: "Banner", value: c.HL.BANNER },
 ];
-function j() {
+function C() {
     let [e, t] = n.useState(c.HL.AVATAR),
         u = (0, r.bG)([s.default], () => s.default.getCurrentUser()),
         d = n.useCallback(() => {
@@ -224,7 +224,7 @@ function j() {
                     placeholder: "Select type",
                     onSelectionChange: (e) => t(e),
                     value: e,
-                    options: S,
+                    options: _,
                     selectionMode: "single",
                     fullWidth: !0,
                 }),
@@ -233,7 +233,7 @@ function j() {
         ],
     });
 }
-function T() {
+function j() {
     let e = (0, r.bG)([s.default], () => s.default.getCurrentUser()),
         t = n.useCallback(() => {
             null != e &&
@@ -251,7 +251,7 @@ function T() {
         }),
     });
 }
-function C() {
+function S() {
     let e = n.useCallback(() => {
         (0, i.mMO)(async () => {
             let { default: e } = await l.e("95743").then(l.bind(l, 210402));
@@ -267,7 +267,7 @@ function C() {
         }),
     });
 }
-function A() {
+function T() {
     let e = n.useCallback(() => {
         (0, i.mMO)(async () => {
             let { default: e } = await l.e("90617").then(l.bind(l, 663072));
@@ -283,7 +283,7 @@ function A() {
         }),
     });
 }
-function P() {
+function A() {
     let e = n.useCallback(() => {
         (0, i.mMO)(async () => {
             let { default: e } = await l.e("65281").then(l.bind(l, 547352));
@@ -299,7 +299,7 @@ function P() {
         }),
     });
 }
-function R() {
+function P() {
     let e = n.useCallback(() => {
         (0, i.mMO)(async () => {
             let { default: e } = await l.e("31852").then(l.bind(l, 219732));

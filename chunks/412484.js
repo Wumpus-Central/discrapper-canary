@@ -1,73 +1,72 @@
-"use strict";
-n.d(t, { Ay: () => T, NH: () => j, T: () => y });
+n.d(t, { Ay: () => b, NH: () => j, T: () => v });
 var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    r = n.n(l),
-    a = n(481613),
-    o = n.n(a),
+    l = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    r = n(481613),
+    o = n.n(r),
     c = n(837381),
     d = n(311907),
     u = n(397927),
     h = n(73153),
     A = n(964486),
-    p = n(775602),
-    g = n(928039),
-    m = n(954571),
-    _ = n(203982),
+    _ = n(775602),
+    m = n(928039),
+    g = n(954571),
+    p = n(203982),
     f = n(723702),
     x = n(157296),
-    C = n(963702),
-    E = n(792967),
-    I = n(712209),
-    b = n(652215),
-    N = n(985018),
-    S = n(852570);
-function T(e) {
-    var t, n, l, a, x, T;
-    let { onJump: y, showTutorial: j, setSeenTutorial: R, closePopout: O } = e,
-        L = s.useRef(null),
-        [M, D] = (0, I.Ay)(L),
-        { loadState: G, channels: U } = M,
+    E = n(963702),
+    I = n(792967),
+    C = n(712209),
+    N = n(652215),
+    T = n(985018),
+    S = n(996863);
+function b(e) {
+    var t, n, s, r, x, b;
+    let { onJump: v, showTutorial: j, setSeenTutorial: R, closePopout: O } = e,
+        L = l.useRef(null),
+        [M, D] = (0, C.Ay)(L),
+        { loadState: U, channels: G } = M,
         { maybeLoadMore: P } = D,
-        w = (0, d.bG)([p.A], () => p.A.messageGroupSpacing);
+        k = (0, d.bG)([_.A], () => _.A.messageGroupSpacing);
     (t = L),
         (n = M),
-        (l = D),
-        s.useLayoutEffect(() => {
+        (s = D),
+        l.useLayoutEffect(() => {
             let { scrollToChannelIndex: e } = n;
-            l.clearScrollToChannelIndex();
+            s.clearScrollToChannelIndex();
             let { current: i } = t;
             if (null == i || null == e) return;
-            let s = i.getScrollerNode()?.children;
-            if (null == s) return;
-            let r = s[e];
-            if (null == r) return;
-            let { scrollTop: a, offsetHeight: o } = i.getScrollerState();
-            (r.offsetTop < a || r.offsetTop > a + o) && i.scrollTo({ to: r.offsetTop });
+            let l = i.getScrollerNode()?.children;
+            if (null == l) return;
+            let a = l[e];
+            if (null == a) return;
+            let { scrollTop: r, offsetHeight: o } = i.getScrollerState();
+            (a.offsetTop < r || a.offsetTop > r + o) && i.scrollTo({ to: a.offsetTop });
         }),
-        (a = M),
+        (r = M),
         (x = D),
-        s.useEffect(() => {
+        l.useEffect(() => {
             let e = () => {
-                let e = a.channels.find((e) => !e.collapsed);
+                let e = r.channels.find((e) => !e.collapsed);
                 null != e && x.markChannelRead(e);
             };
             return (
-                _._.subscribe(b.jej.MARK_TOP_INBOX_CHANNEL_READ, e),
+                p._.subscribe(N.jej.MARK_TOP_INBOX_CHANNEL_READ, e),
                 () => {
-                    _._.unsubscribe(b.jej.MARK_TOP_INBOX_CHANNEL_READ, e);
+                    p._.unsubscribe(N.jej.MARK_TOP_INBOX_CHANNEL_READ, e);
                 }
             );
-        }, [x, a.channels]),
-        (T = D),
-        s.useEffect(() => {
+        }, [x, r.channels]),
+        (b = D),
+        l.useEffect(() => {
             let e = (e) => {
                 ((0, f.isMac)() || (0, f.isMacWeb)() ? e.metaKey : e.ctrlKey) &&
                     !e.shiftKey &&
                     !e.altKey &&
                     "z" === e.key &&
-                    T.undoMarkChannelRead();
+                    b.undoMarkChannelRead();
             };
             return (
                 document.addEventListener("keydown", e),
@@ -75,11 +74,11 @@ function T(e) {
                     document.removeEventListener("keydown", e);
                 }
             );
-        }, [T]),
-        s.useEffect(() => {
-            m.default.track(b.HAw.OPEN_POPOUT, { type: "Inbox" });
+        }, [b]),
+        l.useEffect(() => {
+            g.default.track(N.HAw.OPEN_POPOUT, { type: "Inbox" });
         }, []),
-        s.useEffect(
+        l.useEffect(
             () => (
                 h.h.subscribe("CONNECTION_OPEN", O),
                 () => {
@@ -90,21 +89,21 @@ function T(e) {
         ),
         (0, A.Ay)(
             () => (
-                _._.subscribe(b.jej.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead),
+                p._.subscribe(N.jej.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead),
                 () => {
-                    _._.unsubscribe(b.jej.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead);
+                    p._.unsubscribe(N.jej.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead);
                 }
             ),
         );
-    let k = (0, g.A)("unreads", L);
-    return 0 === U.length
-        ? (0, i.jsx)(C.A, {
+    let w = (0, m.A)("unreads", L);
+    return 0 === G.length
+        ? (0, i.jsx)(E.A, {
               Icon: u.K$s,
-              header: N.intl.string(N.t["6XMM+D"]),
-              tip: o().os?.family === "OS X" ? N.intl.string(N.t.w9uDOW) : N.intl.string(N.t.BiUJC6),
+              header: T.intl.string(T.t["6XMM+D"]),
+              tip: o().os?.family === "OS X" ? T.intl.string(T.t.w9uDOW) : T.intl.string(T.t.BiUJC6),
           })
         : (0, i.jsx)(c.hD, {
-              navigator: k,
+              navigator: w,
               children: (0, i.jsx)(c.PR, {
                   children: (e) => {
                       let { ref: t, ...n } = e;
@@ -113,19 +112,19 @@ function T(e) {
                               (L.current = e), (t.current = e?.getScrollerNode() ?? null);
                           },
                           ...n,
-                          onScroll: G === I.mJ.Done ? void 0 : P,
-                          className: r()(S.XG, `group-spacing-${w}`),
+                          onScroll: U === C.mJ.Done ? void 0 : P,
+                          className: a()(S.XG, `group-spacing-${k}`),
                           children: [
-                              j ? (0, i.jsx)(v, { setSeenTutorial: R }) : null,
-                              (0, E.A)(U, D, y),
-                              G === I.mJ.Done ? null : (0, i.jsx)(u.y$y, { className: S.u1 }),
+                              j ? (0, i.jsx)(y, { setSeenTutorial: R }) : null,
+                              (0, I.A)(G, D, v),
+                              U === C.mJ.Done ? null : (0, i.jsx)(u.y$y, { className: S.u1 }),
                           ],
                       });
                   },
               }),
           });
 }
-function v(e) {
+function y(e) {
     let { setSeenTutorial: t } = e;
     return (0, i.jsxs)("div", {
         className: S.d$,
@@ -136,12 +135,12 @@ function v(e) {
                     (0, i.jsx)(u.Heading, {
                         className: S.__invalid_tutorialHeader,
                         variant: "heading-md/semibold",
-                        children: N.intl.string(N.t.vZPktJ),
+                        children: T.intl.string(T.t.vZPktJ),
                     }),
                     (0, i.jsx)(u.Text, {
                         color: "text-default",
                         variant: "text-sm/normal",
-                        children: N.intl.string(N.t.vWkIII),
+                        children: T.intl.string(T.t.vWkIII),
                     }),
                     (0, i.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
@@ -149,7 +148,7 @@ function v(e) {
                         children: (0, i.jsx)(u.Button, {
                             variant: "primary",
                             size: "sm",
-                            text: N.intl.string(N.t["+IrDzN"]),
+                            text: T.intl.string(T.t["+IrDzN"]),
                             onClick: t,
                         }),
                     }),
@@ -158,12 +157,12 @@ function v(e) {
         ],
     });
 }
-function y() {
-    return (0, i.jsx)(C.A, {
+function v() {
+    return (0, i.jsx)(E.A, {
         Icon: u.K$s,
         disableStars: !0,
-        header: N.intl.string(N.t["KG/ynf"]),
-        tip: N.intl.string(N.t.cvcKzX),
+        header: T.intl.string(T.t["KG/ynf"]),
+        tip: T.intl.string(T.t.cvcKzX),
     });
 }
-let j = () => (0, i.jsx)(x.A, { onClick: () => _._.dispatch(b.jej.INBOX_MARK_ALL_UNREADS_READ) });
+let j = () => (0, i.jsx)(x.A, { onClick: () => p._.dispatch(N.jej.INBOX_MARK_ALL_UNREADS_READ) });

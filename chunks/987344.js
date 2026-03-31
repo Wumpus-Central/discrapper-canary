@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => s });
 var i = n(64700),
-    s = n(967198);
-function l(e) {
+    l = n(967198);
+function s(e) {
     i.useEffect(() => {
         let t = null;
         function n() {
-            let n = s.A.getGuildId();
+            let n = l.A.getGuildId();
             n !== t && ((t = n ?? null), e(n ?? null, !1));
         }
         return (
-            s.A.addChangeListener(n),
+            l.A.addChangeListener(n),
             () => {
-                s.A.removeChangeListener(n);
+                l.A.removeChangeListener(n);
             }
         );
     }, [e]);

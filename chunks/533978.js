@@ -1,42 +1,41 @@
-"use strict";
-n.d(t, { A: () => b });
+n.d(t, { A: () => T });
 var i = n(627968),
-    s = n(64700),
-    l = n(311907),
-    r = n(554146),
-    a = n(621956),
+    l = n(64700),
+    s = n(311907),
+    a = n(554146),
+    r = n(621956),
     o = n(265872),
     c = n(442433),
     d = n(688810),
     u = n(384059),
     h = n(480890),
     A = n(160761),
-    p = n(421773),
-    g = n(536432),
-    m = n(674168),
-    _ = n(989799),
+    _ = n(421773),
+    m = n(536432),
+    g = n(674168),
+    p = n(989799),
     f = n(173660),
     x = n(430452),
-    C = n(246356),
-    E = n(709562),
-    I = n(376086),
+    E = n(246356),
+    I = n(709562),
+    C = n(376086),
     N = n(985018);
-function b(e) {
-    let { channel: t, themeable: b, whichPopoutIsOpen: S, setWhichPopoutIsOpen: T } = e,
+function T(e) {
+    let { channel: t, themeable: T, whichPopoutIsOpen: S, setWhichPopoutIsOpen: b } = e,
         { parentAnalyticsLocation: y } = (0, d.Ay)(),
         {
             Component: v,
             play: j,
             events: { onMouseEnter: R, onMouseLeave: O },
-        } = (0, a.E)(),
+        } = (0, r.E)(),
         L = t.getGuildId(),
         { mute: M, suppress: D } = (0, f.A)(t),
-        G = (0, l.bG)([x.Ay], () => x.Ay.isDeaf()),
-        U = M || D || G,
-        P = (0, g.VE)({ isSoundboardButtonDisabled: U }),
-        [w, k] = (0, A.DP)(P),
-        { analyticsLocations: V } = (0, d.Ay)(),
-        { isHovered: B, setIsHovered: H, onMouseEnter: F, onMouseLeave: K } = (0, p.A)(200, 300);
+        U = (0, s.bG)([x.Ay], () => x.Ay.isDeaf()),
+        G = M || D || U,
+        P = (0, m.VE)({ isSoundboardButtonDisabled: G }),
+        [k, w] = (0, A.DP)(P),
+        { analyticsLocations: B } = (0, d.Ay)(),
+        { isHovered: V, setIsHovered: H, onMouseEnter: F, onMouseLeave: K } = (0, _.A)(200, 300);
     function W(e) {
         null != L &&
             (0, c.L3)(e, async () => {
@@ -44,7 +43,7 @@ function b(e) {
                 return (t) =>
                     (0, i.jsx)(e, {
                         guildId: L,
-                        sourceAnalyticsLocations: V,
+                        sourceAnalyticsLocations: B,
                         ...t,
                         onInteraction: (0, h.s)("SoundboardContextMenu", y),
                     });
@@ -52,54 +51,54 @@ function b(e) {
     }
     function Y() {
         (0, u.X)(y, u.O.SOUNDBOARD),
-            S === I.P.SOUNDBOARD ? (T?.(void 0), K()) : (null != S ? (j(), F()) : j(), T?.(I.P.SOUNDBOARD));
+            S === C.P.SOUNDBOARD ? (b?.(void 0), K()) : (null != S ? (j(), F()) : j(), b?.(C.P.SOUNDBOARD));
     }
-    let z = s.useRef(null);
+    let z = l.useRef(null);
     return (0, i.jsx)(o.Y, {
         targetElementRef: z,
-        shouldShow: (B && (S === I.P.SOUNDBOARD || null == S)) || S === I.P.SOUNDBOARD,
+        shouldShow: (V && (S === C.P.SOUNDBOARD || null == S)) || S === C.P.SOUNDBOARD,
         animation: o.Y.Animation.FADE,
         animationPosition: "top",
         position: "top",
         align: "center",
         spacing: 16,
         onRequestClose: () => {
-            H(!1), T?.(void 0);
+            H(!1), b?.(void 0);
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return U
+            return G
                 ? null
-                : (0, i.jsx)(C.A, {
+                : (0, i.jsx)(E.A, {
                       children: (0, i.jsx)("div", {
                           onMouseEnter: F,
                           onMouseLeave: K,
-                          children: (0, i.jsx)(_.A, {
+                          children: (0, i.jsx)(p.A, {
                               guildId: L,
                               channel: t,
                               onClose: n,
                               gridNotice:
-                                  w === r.M.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
-                                  (0, i.jsx)(m.m, { onClose: n, markAsDismissed: k }),
+                                  k === a.M.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
+                                  (0, i.jsx)(g.m, { onClose: n, markAsDismissed: w }),
                               analyticsSource: "action bar button",
                           }),
                       }),
                   });
         },
         children: () =>
-            (0, i.jsx)(E.l, {
+            (0, i.jsx)(I.l, {
                 ref: z,
                 isTrayButton: !0,
-                themeable: b,
+                themeable: T,
                 label: M
                     ? N.intl.string(N.t["Ox4/zU"])
                     : D
                       ? N.intl.string(N.t["+YBKYI"])
-                      : G
+                      : U
                         ? N.intl.string(N.t.X1lQli)
                         : void 0,
                 iconComponent: v,
-                disabled: U,
+                disabled: G,
                 onContextMenu: W,
                 onClick: Y,
                 onMouseEnter: (e) => {
@@ -108,8 +107,8 @@ function b(e) {
                 onMouseLeave: () => {
                     null == S && (K(), O());
                 },
-                isActive: B || S === I.P.SOUNDBOARD,
-                color: B || S === I.P.SOUNDBOARD ? "primaryDark" : void 0,
+                isActive: V || S === C.P.SOUNDBOARD,
+                color: V || S === C.P.SOUNDBOARD ? "primaryDark" : void 0,
             }),
     });
 }

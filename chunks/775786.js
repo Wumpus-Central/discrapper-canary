@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     My: "containerColumn_fcb27c",
     kL: "container_fcb27c",

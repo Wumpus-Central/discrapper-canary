@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { A: () => k });
+n.d(t, { A: () => w });
 var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    a = n.n(l),
+    l = n(64700),
+    s = n(503698),
+    a = n.n(s),
     r = n(311907),
     o = n(397927),
     c = n(33358),
@@ -11,98 +10,98 @@ var i = n(627968),
     u = n(207133),
     h = n(704413),
     A = n(9842),
-    m = n(253932),
-    _ = n(734057),
-    p = n(994500),
-    g = n(661191),
+    _ = n(253932),
+    m = n(734057),
+    g = n(994500),
+    p = n(661191),
     f = n(988012),
     x = n(141468),
     E = n(694318),
-    C = n(143413),
-    I = n(763754),
+    I = n(143413),
+    C = n(763754),
     N = n(467073),
-    b = n(491182),
+    T = n(491182),
     S = n(860227),
-    T = n(756369),
-    v = n(538355),
-    y = n(522871),
+    b = n(756369),
+    y = n(538355),
+    v = n(522871),
     j = n(715628),
     R = n(752636),
     O = n(675722),
     L = n(268719),
     M = n(234957),
     D = n(888675),
-    G = n(652215),
-    U = n(985018),
+    U = n(652215),
+    G = n(985018),
     P = n(213607),
-    w = n(480972);
-let k = s.memo(function e(t) {
+    k = n(480972);
+let w = l.memo(function e(t) {
     let n,
         {
-            channel: s,
-            message: l,
+            channel: l,
+            message: s,
             compact: o = !1,
             className: D,
             onContextMenu: P,
-            onClick: k,
-            disableInteraction: B = !1,
+            onClick: w,
+            disableInteraction: V = !1,
             hasThread: H,
             treatSpam: F,
         } = t,
-        K = G.sl8.has(l.type) ? l.messageReference : void 0,
+        K = U.sl8.has(s.type) ? s.messageReference : void 0,
         W = (0, r.bG)([A.A], () => A.A.getMessageByReference(K)),
-        Y = (0, r.bG)([_.A], () =>
-            l.type === G.lAJ.THREAD_STARTER_MESSAGE && W.state === A.a.LOADED
-                ? _.A.getChannel(W.message.channel_id)
+        Y = (0, r.bG)([m.A], () =>
+            s.type === U.lAJ.THREAD_STARTER_MESSAGE && W.state === A.a.LOADED
+                ? m.A.getChannel(W.message.channel_id)
                 : null,
         ),
-        z = m.X6.useSetting(),
-        q = m.hD.useSetting(),
-        X = m.rs.useSetting(),
-        Q = m.kt.useSetting(),
-        J = (0, d.S)((l.editedTimestamp ?? l.timestamp).valueOf()),
-        $ = (0, u.A)(s?.id),
-        { disableReactionCreates: Z } = (0, N.A)(s),
+        z = _.X6.useSetting(),
+        q = _.hD.useSetting(),
+        X = _.rs.useSetting(),
+        J = _.kt.useSetting(),
+        Q = (0, d.S)((s.editedTimestamp ?? s.timestamp).valueOf()),
+        $ = (0, u.A)(l?.id),
+        { disableReactionCreates: Z } = (0, N.A)(l),
         {
             content: ee,
             hasSpoilerEmbeds: et,
             hasBailedAst: en,
-        } = (0, v.A)(l, {
+        } = (0, y.A)(s, {
             hideSimpleEmbedContent: q && X,
-            allowList: J,
-            allowHeading: J,
+            allowList: Q,
+            allowHeading: Q,
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
-        ei = (0, I.Ay)(l),
-        es = (0, r.bG)(
-            [_.A],
-            () => l.hasFlag(G.pr7.HAS_THREAD) && _.A.getChannel(g.default.castMessageIdAsChannelId(l.id)),
+        ei = (0, C.Ay)(s),
+        el = (0, r.bG)(
+            [m.A],
+            () => s.hasFlag(U.pr7.HAS_THREAD) && m.A.getChannel(p.default.castMessageIdAsChannelId(s.id)),
         ),
-        el = l.type === G.lAJ.THREAD_STARTER_MESSAGE && W.state === A.a.LOADED && null != Y,
-        ea = !el && void 0 === n,
-        er = (0, y.A)({ message: l, channel: s, enabled: ea }),
-        eo = (0, c.P)(l),
-        ec = (0, f._f)(l.id, l.channel_id),
-        ed = (0, h.A)(l),
-        eu = (0, S.fF)(l);
-    return el
+        es = s.type === U.lAJ.THREAD_STARTER_MESSAGE && W.state === A.a.LOADED && null != Y,
+        ea = !es && void 0 === n,
+        er = (0, v.A)({ message: s, channel: l, enabled: ea }),
+        eo = (0, c.P)(s),
+        ec = (0, f._f)(s.id, s.channel_id),
+        ed = (0, h.A)(s),
+        eu = (0, S.fF)(s);
+    return es
         ? (0, i.jsx)(e, { ...t, message: W.message, channel: Y, hasThread: !1 })
-        : (p.A.isBlockedForMessage(l)
-                ? (n = U.t["+FcYM/"])
-                : p.A.isIgnoredForMessage(l)
-                  ? (n = U.t["VFWjc+"])
-                  : (0, E.kf)(l) && F && (n = U.t.xfkfTK),
+        : (g.A.isBlockedForMessage(s)
+                ? (n = G.t["+FcYM/"])
+                : g.A.isIgnoredForMessage(s)
+                  ? (n = G.t["VFWjc+"])
+                  : (0, E.kf)(s) && F && (n = G.t.xfkfTK),
             void 0 !== n)
-          ? (0, i.jsx)(V, { className: D, compact: o, count: 1, collapsedReason: n })
-          : (0, i.jsx)(b.A, {
+          ? (0, i.jsx)(B, { className: D, compact: o, count: 1, collapsedReason: n })
+          : (0, i.jsx)(T.A, {
                 compact: o,
-                className: a()(D, { [w.M1]: (0, x.ec)(l), [w.XN]: B, [w._A]: t.isGroupStart }),
-                childrenRepliedMessage: (0, M.A)(l, s, K, W, o),
-                childrenHeader: (0, R.A)({ ...t, author: ei, guildId: s.guild_id }),
-                childrenAccessories: (0, i.jsx)(T.iV, {
-                    channel: s,
-                    message: l,
+                className: a()(D, { [k.M1]: (0, x.ec)(s), [k.XN]: V, [k._A]: t.isGroupStart }),
+                childrenRepliedMessage: (0, M.A)(s, l, K, W, o),
+                childrenHeader: (0, R.A)({ ...t, author: ei, guildId: l.guild_id }),
+                childrenAccessories: (0, i.jsx)(b.iV, {
+                    channel: l,
+                    message: s,
                     hasSpoilerEmbeds: et,
                     hasBailedAst: en,
                     compact: o,
@@ -116,39 +115,39 @@ let k = s.memo(function e(t) {
                     inlineAttachmentMedia: z,
                     inlineEmbedMedia: q,
                     renderEmbeds: X,
-                    gifAutoPlay: Q,
+                    gifAutoPlay: J,
                     poll: ed,
-                    showListsAndHeaders: J,
-                    showMaskedLinks: J,
+                    showListsAndHeaders: Q,
+                    showMaskedLinks: Q,
                     shouldHideMediaOptions: $,
                     enabledContentHarmTypeFlags: eo,
                     ctaButtonType: ec,
                 }),
-                childrenExecutedCommand: (0, L.A)(l, s, o),
+                childrenExecutedCommand: (0, L.A)(s, l, o),
                 childrenMessageContent: (0, j.A)(t, ee),
                 childrenSystemMessage: (0, O.A)(t),
                 onContextMenu: P,
-                onClick: k,
-                hasThread: !1 !== H && null != es && l.hasFlag(G.pr7.HAS_THREAD),
-                hasReply: l.type === G.lAJ.REPLY,
-                isSystemMessage: (0, C.A)(l),
+                onClick: w,
+                hasThread: !1 !== H && null != el && s.hasFlag(U.pr7.HAS_THREAD),
+                hasReply: s.type === U.lAJ.REPLY,
+                isSystemMessage: (0, I.A)(s),
                 messageRef: er,
                 author: ei,
                 "aria-labelledby": eu,
-                "aria-roledescription": U.intl.string(U.t.BAB0yK),
+                "aria-roledescription": G.intl.string(G.t.BAB0yK),
             });
 });
-function V(e) {
-    let { className: t, count: n, compact: s, collapsedReason: l } = e;
-    return (0, i.jsx)(b.A, {
+function B(e) {
+    let { className: t, count: n, compact: l, collapsedReason: s } = e;
+    return (0, i.jsx)(T.A, {
         className: t,
-        compact: s,
+        compact: l,
         role: "group",
         childrenMessageContent: (0, i.jsx)(D.A, {
-            compact: s,
+            compact: l,
             className: P.L9,
             iconNode: (0, i.jsx)(o.PGe, { size: "md", color: "currentColor", className: P.Q6 }),
-            children: (0, i.jsx)("div", { className: P.Fo, children: U.intl.format(l, { count: n }) }),
+            children: (0, i.jsx)("div", { className: P.Fo, children: G.intl.format(s, { count: n }) }),
         }),
     });
 }

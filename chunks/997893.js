@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     oO: "popover__1bad5",
     vW: "inner__1bad5",

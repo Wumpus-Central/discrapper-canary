@@ -1,22 +1,21 @@
-"use strict";
-n.d(t, { V: () => r });
+n.d(t, { V: () => a });
 var i = n(64700),
-    s = n(506774),
-    l = n(964486);
-function r(e, t) {
-    let [n, r] = i.useState(() => {
-        let n = s.w.get(e);
+    l = n(506774),
+    s = n(964486);
+function a(e, t) {
+    let [n, a] = i.useState(() => {
+        let n = l.w.get(e);
         return null != n ? n : t;
     });
     return (
-        (0, l.Ay)(() => {
-            null == s.w.get(e) && s.w.set(e, t);
+        (0, s.Ay)(() => {
+            null == l.w.get(e) && l.w.set(e, t);
         }),
         [
             n,
             i.useCallback(
                 (t) => {
-                    r(t), s.w.set(e, t);
+                    a(t), l.w.set(e, t);
                 },
                 [e],
             ),

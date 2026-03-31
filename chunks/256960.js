@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Er: "voiceCallWrapper_a21736",
     HA: "videoGridWrapper_a21736",

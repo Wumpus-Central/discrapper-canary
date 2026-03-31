@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { $q: () => f, E9: () => I, H2: () => p, W0: () => m, j3: () => g, j6: () => E, jA: () => A, tQ: () => _ });
+n.d(t, { $q: () => f, E9: () => I, H2: () => p, W0: () => m, j3: () => E, j6: () => g, jA: () => A, tQ: () => _ });
 var r = n(627968);
 n(64700);
 var i = n(192308),
-    a = n(378570),
-    s = n(961350),
+    s = n(378570),
+    a = n(961350),
     o = n(312006),
     l = n(571909),
     u = n(366098),
@@ -13,7 +13,7 @@ var i = n(192308),
 function _(e, t) {
     (0, i.openModalLazy)(
         async () => {
-            let { default: t } = await Promise.all([n.e("3795"), n.e("86317")]).then(n.bind(n, 467164));
+            let { default: t } = await Promise.all([n.e("11478"), n.e("86317")]).then(n.bind(n, 467164));
             return (n) => (0, r.jsx)(t, { ...n, channel: e });
         },
         { contextKey: t === c.BRT.POPOUT ? d.KX : d.SY },
@@ -22,7 +22,7 @@ function _(e, t) {
 function f(e, t) {
     (0, i.openModalLazy)(
         async () => {
-            let { default: t } = await Promise.all([n.e("3795"), n.e("35934")]).then(n.bind(n, 25997));
+            let { default: t } = await Promise.all([n.e("11478"), n.e("35934")]).then(n.bind(n, 25997));
             return (n) => (0, r.jsx)(t, { ...n, channel: e });
         },
         { contextKey: t === c.BRT.POPOUT ? d.KX : d.SY },
@@ -30,7 +30,7 @@ function f(e, t) {
 }
 function p(e) {}
 function h(e) {
-    (0, a.iN)(e.id);
+    (0, s.iN)(e.id);
 }
 function m(e, t) {
     (0, i.openModalLazy)(async () => {
@@ -38,17 +38,17 @@ function m(e, t) {
         return (n) => (0, r.jsx)(i, { ...n, channel: e, onAccept: t });
     });
 }
-function g(e, t) {
+function E(e, t) {
     (0, i.openModalLazy)(
         async () => {
-            let { default: t } = await Promise.all([n.e("3795"), n.e("70102")]).then(n.bind(n, 118101));
+            let { default: t } = await Promise.all([n.e("11478"), n.e("70102")]).then(n.bind(n, 118101));
             return (n) => (0, r.jsx)(t, { ...n, channel: e });
         },
         { contextKey: t === c.BRT.POPOUT ? d.KX : d.SY },
     );
 }
-function E(e) {
-    let t = s.default.getId(),
+function g(e) {
+    let t = a.default.getId(),
         n = (0, u.G1)(e),
         r = (0, u.Gc)(e);
     return !o.Ay.isModerator(t, e) && (n > 0 || r > 0);

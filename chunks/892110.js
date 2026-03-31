@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { l: () => r });
+n.d(t, { l: () => a });
 var i = n(989349),
-    s = n.n(i),
-    l = n(661191);
-let r = (e) => {
-    let t = l.default.extractTimestamp(e);
-    return !s()().isBefore(s()(t).add(s().duration(15, "days")));
+    l = n.n(i),
+    s = n(661191);
+let a = (e) => {
+    let t = s.default.extractTimestamp(e);
+    return !l()().isBefore(l()(t).add(l().duration(15, "days")));
 };

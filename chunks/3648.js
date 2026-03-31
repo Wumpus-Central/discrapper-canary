@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { A: () => g, Z: () => _ });
+n.d(t, { A: () => p, Z: () => m });
 var i = n(627968);
 n(64700);
-var s = n(397927),
-    l = n(793574),
+var l = n(397927),
+    s = n(793574),
     a = n(627363),
     r = n(576030),
     o = n(957785),
@@ -11,17 +10,17 @@ var s = n(397927),
     d = n(366523),
     u = n(788868),
     h = n(985018),
-    A = n(407494),
-    m = n(101616);
-function _(e, t) {
+    A = n(738895),
+    _ = n(522999);
+function m(e, t) {
     let {
             moreCount: n,
-            onViewWishlist: s,
+            onViewWishlist: l,
             isSingleCard: a = !1,
-            profileOwner: m,
-            wishlistId: _,
-            cardSize: p,
-            analyticsLocations: g,
+            profileOwner: _,
+            wishlistId: m,
+            cardSize: g,
+            analyticsLocations: p,
         } = t,
         f = null != n && n > 0,
         x = {
@@ -36,14 +35,14 @@ function _(e, t) {
             wishlistItem: e,
             onCardClick: () => {
                 f
-                    ? s()
+                    ? l()
                     : (0, c.a)(
                           e.sku,
-                          { isGift: !0, giftRecipient: m, giftingOrigin: u.vQ.USER_PROFILE_WISHLIST },
+                          { isGift: !0, giftRecipient: _, giftingOrigin: u.vQ.USER_PROFILE_WISHLIST },
                           {
                               analyticsLocations: [
-                                  ...g,
-                                  l.A.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON,
+                                  ...p,
+                                  s.A.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON,
                               ],
                           },
                       );
@@ -60,22 +59,22 @@ function _(e, t) {
                 }),
             moreCount: n,
             isSingleCard: a,
-            wishlistId: _,
-            cardSize: p,
+            wishlistId: m,
+            cardSize: g,
         },
         e.skuId,
     );
 }
-function p(e) {
+function g(e) {
     let { item: t, card: n, analyticsLocations: r, profileOwner: o } = e,
         { data: d } = (0, a.YY)(t.sku.applicationId);
     return (0, i.jsxs)("div", {
-        className: m.D5,
+        className: _.D5,
         children: [
             n,
             (0, i.jsx)("div", {
-                className: m.S7,
-                children: (0, i.jsxs)(s.DUT, {
+                className: _.S7,
+                children: (0, i.jsxs)(l.DUT, {
                     onClick: () => {
                         (0, c.a)(
                             t.sku,
@@ -83,20 +82,20 @@ function p(e) {
                             {
                                 analyticsLocations: [
                                     ...r,
-                                    l.A.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON,
+                                    s.A.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON,
                                 ],
                             },
                         );
                     },
-                    className: m.Hh,
+                    className: _.Hh,
                     children: [
-                        (0, i.jsx)(s.Text, {
+                        (0, i.jsx)(l.Text, {
                             variant: "text-sm/semibold",
                             color: "text-default",
                             lineClamp: 2,
                             children: t.skuName,
                         }),
-                        (0, i.jsx)(s.Text, {
+                        (0, i.jsx)(l.Text, {
                             variant: "text-xs/medium",
                             color: "text-default",
                             children: h.intl.format(h.t["CqpEC+"], { applicationName: d?.name }),
@@ -107,15 +106,15 @@ function p(e) {
         ],
     });
 }
-function g(e, t) {
-    let { profileOwner: n, analyticsLocations: s, wishlistId: l, onViewWishlist: a } = t,
-        r = _(e, {
+function p(e, t) {
+    let { profileOwner: n, analyticsLocations: l, wishlistId: s, onViewWishlist: a } = t,
+        r = m(e, {
             index: 0,
             profileOwner: n,
-            analyticsLocations: s,
+            analyticsLocations: l,
             onViewWishlist: a,
             isSingleCard: !0,
-            wishlistId: l,
+            wishlistId: s,
         });
-    return (0, i.jsx)(p, { item: e, card: r, profileOwner: n, analyticsLocations: s });
+    return (0, i.jsx)(g, { item: e, card: r, profileOwner: n, analyticsLocations: l });
 }

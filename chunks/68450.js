@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     HA: "channelName_cb862a",
     gy: "unread_cb862a",

@@ -1,11 +1,10 @@
-"use strict";
 n.d(t, { S: () => d });
 var i = n(64700),
-    s = n(635377),
-    l = n.n(s),
+    l = n(635377),
+    s = n.n(l),
     a = n(998304),
     r = n(515718);
-let o = new (l())({ max: 50 });
+let o = new (s())({ max: 50 });
 async function c(e) {
     let t = o.get(e);
     if (null != t) return t;
@@ -27,9 +26,9 @@ async function c(e) {
 }
 function d(e) {
     let [t, n] = i.useState(() => (null != e ? o.get(e) : void 0)),
-        [s, l] = i.useState();
-    if (null != e && e !== s) {
-        l(e);
+        [l, s] = i.useState();
+    if (null != e && e !== l) {
+        s(e);
         let t = o.get(e);
         null != t
             ? n(t)

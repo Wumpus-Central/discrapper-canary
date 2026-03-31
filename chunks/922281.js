@@ -1,33 +1,31 @@
-r.d(t, { A: () => u });
-var s = r(627968);
-r(64700);
-var n = r(397927),
-    l = r(58736),
-    a = r(851580),
-    i = r(44022),
-    o = r(985018);
-function u(e) {
-    let { onOpen: t, onClose: r, className: u } = e;
-    return (0, s.jsx)(i.$, {
+n.d(t, { A: () => d });
+var i = n(627968);
+n(64700);
+var l = n(397927),
+    a = n(189252),
+    r = n(851580),
+    s = n(44022),
+    o = n(985018);
+function d(e) {
+    let { onOpen: t, onClose: n } = e;
+    return (0, i.jsx)(s.$, {
         onOpen: t,
-        onClose: r,
+        onClose: n,
         popoutPosition: "bottom",
         popoutAlign: "right",
-        children: (e, t, r, i, c) =>
-            (0, s.jsxs)(s.Fragment, {
+        children: (e, t, n, s, d) =>
+            (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, s.jsx)(l.In, {
-                        ...r,
-                        ref: c,
-                        className: u,
+                    (0, i.jsx)(a.A, {
+                        ...n,
+                        ref: d,
                         onClick: e,
-                        icon: n.cFy,
-                        "aria-label": o.intl.string(o.t["2pAkDA"]),
-                        tooltip: t ? null : o.intl.string(o.t["2pAkDA"]),
+                        icon: l.cFy,
+                        tooltip: o.intl.string(o.t["2pAkDA"]),
                         selected: t,
-                        showBadge: i,
+                        showBadge: s,
                     }),
-                    (0, s.jsx)(a.v, { location: "bookmarks-button", targetElementRef: c }),
+                    (0, i.jsx)(r.v, { location: "bookmarks-button", targetElementRef: d }),
                 ],
             }),
     });

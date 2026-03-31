@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     RV: "akaBadge__488b1",
     wm: "nicknames__488b1",

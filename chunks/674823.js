@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container_ea5470",
     Yu: "panelSpacing_ea5470",

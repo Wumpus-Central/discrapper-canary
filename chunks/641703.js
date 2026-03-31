@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => s });
 var i = n(417597),
-    s = n(734057);
-function l(e) {
-    let t = (0, i.bG)([s.A], () => s.A.getChannel(e));
+    l = n(734057);
+function s(e) {
+    let t = (0, i.bG)([l.A], () => l.A.getChannel(e));
     return t?.isPrivate() ?? !1;
 }

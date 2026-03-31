@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     U6: "pulse__3b43f",
     kL: "container__3b43f",

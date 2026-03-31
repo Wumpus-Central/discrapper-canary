@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     pm: "gradientBackground__41626",
     M: "leftDarkEllipse__41626",

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     rs: "quickswitcher_ac6cb0",
     hF: "input_ac6cb0",

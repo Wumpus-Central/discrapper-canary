@@ -1,9 +1,8 @@
-"use strict";
 n.d(t, { A: () => D }), n(321073);
 var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    a = n.n(l),
+    l = n(64700),
+    s = n(503698),
+    a = n.n(s),
     r = n(735438),
     o = n.n(r),
     c = n(837381),
@@ -11,30 +10,30 @@ var i = n(627968),
     u = n(397927),
     h = n(928039),
     A = n(793574),
-    m = n(688810),
-    _ = n(222823),
-    p = n(203982),
-    g = n(661191),
+    _ = n(688810),
+    m = n(222823),
+    g = n(203982),
+    p = n(661191),
     f = n(851109),
     x = n(932883),
     E = n(39324),
-    C = n(320697),
-    I = n(394953),
+    I = n(320697),
+    C = n(394953),
     N = n(628325),
-    b = n(524628),
+    T = n(524628),
     S = n(849077),
-    T = n(652215),
-    v = n(228160),
-    y = n(985018),
+    b = n(652215),
+    y = n(228160),
+    v = n(985018),
     j = n(852259);
 function R(e) {
     e.stopPropagation();
 }
 function O(e) {
-    let { group: t, isOpen: n, toggleOpenedState: s } = e;
+    let { group: t, isOpen: n, toggleOpenedState: l } = e;
     return (0, i.jsx)(u.DUT, {
         "aria-expanded": n,
-        onClick: s,
+        onClick: l,
         className: a()(j.TP, { [j.yZ]: !n }),
         children: (0, i.jsxs)(u.BJc, {
             gap: 4,
@@ -45,7 +44,7 @@ function O(e) {
                     variant: "text-sm/medium",
                     color: "text-subtle",
                     className: j.P7,
-                    children: (0, r.capitalize)(y.intl.string(S.v7[t]).toLowerCase()),
+                    children: (0, r.capitalize)(v.intl.string(S.v7[t]).toLowerCase()),
                 }),
                 (0, i.jsx)(u.abt, { size: "xxs", className: j.ai }),
             ],
@@ -54,7 +53,7 @@ function O(e) {
 }
 let L = [S.Ur.UNREAD, S.Ur.TODAY, S.Ur.YESTERDAY, S.Ur.OLDER];
 function M() {
-    let { analyticsLocations: e } = (0, m.Ay)(A.A.NOTIFICATIONS_INBOX);
+    let { analyticsLocations: e } = (0, _.Ay)(A.A.NOTIFICATIONS_INBOX);
     return (0, i.jsx)("div", {
         className: j.y7,
         children: (0, i.jsxs)(u.BJc, {
@@ -75,14 +74,14 @@ function M() {
                             variant: "text-sm/medium",
                             color: "text-muted",
                             style: { textAlign: "center" },
-                            children: y.intl.string(v.default["O+racd"]),
+                            children: v.intl.string(y.default["O+racd"]),
                         }),
                     ],
                 }),
                 (0, i.jsx)(u.Button, {
                     variant: "secondary",
-                    onClick: () => (0, I.tZ)(e),
-                    text: y.intl.string(v.default.klSpfs),
+                    onClick: () => (0, C.tZ)(e),
+                    text: v.intl.string(y.default.klSpfs),
                 }),
             ],
         }),
@@ -92,41 +91,41 @@ function D(e) {
     let t,
         {
             messages: n,
-            unreadMessages: l,
+            unreadMessages: s,
             loadMore: r,
             renderLoadingState: A,
-            renderMessageGroup: m,
-            scrollerClassName: v,
-            className: y,
+            renderMessageGroup: _,
+            scrollerClassName: y,
+            className: v,
             listName: D,
-            ignoreGrouping: G = !1,
+            ignoreGrouping: U = !1,
         } = e,
-        U = (0, x.op)(),
-        P = s.useRef(null),
-        w = (0, h.A)(D, P),
-        { entrypoint: k, notificationCenterVariant: V } = (0, f.X8)({ location: "NotificationsInboxSidebarList" }),
+        G = (0, x.op)(),
+        P = l.useRef(null),
+        k = (0, h.A)(D, P),
+        { entrypoint: w, notificationCenterVariant: B } = (0, f.X8)({ location: "NotificationsInboxSidebarList" }),
         {
-            isLoading: B,
+            isLoading: V,
             isLoadingComplete: H,
             hasLoadedEver: F,
-        } = (0, d.cf)([C.A], () => ({
-            isLoading: C.A.isLoading,
-            isLoadingComplete: C.A.isLoadingComplete,
-            hasLoadedEver: C.A.hasLoadedEver,
+        } = (0, d.cf)([I.A], () => ({
+            isLoading: I.A.isLoading,
+            isLoadingComplete: I.A.isLoadingComplete,
+            hasLoadedEver: I.A.hasLoadedEver,
         })),
-        K = !F && B,
+        K = !F && V,
         { messageCategoryOpenStates: W, toggleOpenState: Y } = (0, E.A)(),
         z =
-            ((t = (0, d.yK)([C.A], () => C.A.getNotifyingChannelIds() ?? [])),
-            (0, d.bG)([C.A, _.Ay], () => {
-                let e = C.A.getChannelInfoMap();
+            ((t = (0, d.yK)([I.A], () => I.A.getNotifyingChannelIds() ?? [])),
+            (0, d.bG)([I.A, m.Ay], () => {
+                let e = I.A.getChannelInfoMap();
                 for (let n of t) {
                     let t = e[n];
-                    if ((null == t || t.loadState === S.Ve.UNLOADED) && _.Ay.hasUnread(n)) return !0;
+                    if ((null == t || t.loadState === S.Ve.UNLOADED) && m.Ay.hasUnread(n)) return !0;
                 }
                 return !1;
             }, [t]));
-    s.useEffect(() => {
+    l.useEffect(() => {
         function e() {
             P.current?.scrollPageUp({ animate: !0 });
         }
@@ -134,26 +133,26 @@ function D(e) {
             P.current?.scrollPageDown({ animate: !0 });
         }
         return (
-            p._.subscribe(T.jej.SCROLL_PAGE_DOWN, t),
-            p._.subscribe(T.jej.SCROLL_PAGE_UP, e),
+            g._.subscribe(b.jej.SCROLL_PAGE_DOWN, t),
+            g._.subscribe(b.jej.SCROLL_PAGE_UP, e),
             () => {
-                p._.unsubscribe(T.jej.SCROLL_PAGE_DOWN, t), p._.unsubscribe(T.jej.SCROLL_PAGE_UP, e);
+                g._.unsubscribe(b.jej.SCROLL_PAGE_DOWN, t), g._.unsubscribe(b.jej.SCROLL_PAGE_UP, e);
             }
         );
     }, []);
-    let q = s.useCallback(() => {
+    let q = l.useCallback(() => {
             let e = P.current?.getScrollerState();
             if (null == e) return;
             let t = 0.5 * e.offsetHeight;
             e.scrollHeight - (e.scrollTop + e.offsetHeight) <= t && r?.(S.VA.USER_SCROLL);
         }, [r]),
-        X = s.useMemo(() => {
+        X = l.useMemo(() => {
             let e = { [S.Ur.UNREAD]: [], [S.Ur.TODAY]: [], [S.Ur.YESTERDAY]: [], [S.Ur.OLDER]: [] },
                 t = { [S.Ur.UNREAD]: [], [S.Ur.TODAY]: [], [S.Ur.YESTERDAY]: [], [S.Ur.OLDER]: [] },
                 i = { [S.Ur.UNREAD]: {}, [S.Ur.TODAY]: {}, [S.Ur.YESTERDAY]: {}, [S.Ur.OLDER]: {} };
             return (
-                (n.length > 0 || l.length > 0) &&
-                    (o().each(l, (e) => {
+                (n.length > 0 || s.length > 0) &&
+                    (o().each(s, (e) => {
                         e.kind === S.yL.MENTION
                             ? t[S.Ur.UNREAD].push(e)
                             : e.channelId in i[S.Ur.UNREAD]
@@ -161,7 +160,7 @@ function D(e) {
                               : (i[S.Ur.UNREAD][e.channelId] = [e]);
                     }),
                     o().each(n, (e) => {
-                        let n = (0, I.i7)(e);
+                        let n = (0, C.i7)(e);
                         e.kind === S.yL.MENTION
                             ? t[n].push(e)
                             : e.channelId in i[n]
@@ -170,25 +169,25 @@ function D(e) {
                     }),
                     o().each(L, (n) => {
                         [...Object.values(i[n]).map((e) => e.reverse()), ...t[n].map((e) => [e])]
-                            .sort((e, t) => g.default.compare(t[0].id, e[0].id))
+                            .sort((e, t) => p.default.compare(t[0].id, e[0].id))
                             .forEach((t) => {
                                 e[n].push(t);
                             });
                     })),
                 e
             );
-        }, [n, l]),
-        Q = 0 === n.length && 0 === l.length && H,
-        J = 0 === n.length && 0 === l.length && !F && B,
-        $ = s.useMemo(() => {
+        }, [n, s]),
+        J = 0 === n.length && 0 === s.length && H,
+        Q = 0 === n.length && 0 === s.length && !F && V,
+        $ = l.useMemo(() => {
             let e = [];
             return (
-                J
+                Q
                     ? e.push(A())
-                    : Q
+                    : J
                       ? e.push((0, i.jsx)(M, {}, "empty-state"))
-                      : G
-                        ? (e.push(...l.map((e) => m([e], !0))), e.push(...n.map((e) => m([e], !1))))
+                      : U
+                        ? (e.push(...s.map((e) => _([e], !0))), e.push(...n.map((e) => _([e], !1))))
                         : o().each(L, (t) => {
                               0 !== X[t].length &&
                                   (e.push(
@@ -199,61 +198,61 @@ function D(e) {
                                               isOpen: W[t],
                                               toggleOpenedState: () => {
                                                   let e = W[t];
-                                                  Y(t), (0, x.Ut)({ section: t, enabled: !e, viewId: U });
+                                                  Y(t), (0, x.Ut)({ section: t, enabled: !e, viewId: G });
                                               },
                                           },
                                           t,
                                       ),
                                   ),
-                                  W[t] && e.push(...X[t].map((e) => m(e, t === S.Ur.UNREAD))));
+                                  W[t] && e.push(...X[t].map((e) => _(e, t === S.Ur.UNREAD))));
                           }),
                 e
             );
-        }, [n, l, A, W, Y, X, G, m, Q, J, U]),
+        }, [n, s, A, W, Y, X, U, _, J, Q, G]),
         Z = $[$.length - 1],
-        ee = s.isValidElement(Z) && Z.type === O,
+        ee = l.isValidElement(Z) && Z.type === O,
         et = (0, N.S)((e) => e.setInboxReadState);
-    s.useEffect(() => {
-        J || et(0 === X.UNREAD.length);
-    }, [X, J, et]);
-    let en = (n.length > 0 || l.length > 0) && null != r && B;
+    l.useEffect(() => {
+        Q || et(0 === X.UNREAD.length);
+    }, [X, Q, et]);
+    let en = (n.length > 0 || s.length > 0) && null != r && V;
     !(function (e) {
         let { loadingInitial: t, messagesByCategory: n } = e,
-            i = s.useRef(!1),
-            l = n.UNREAD.length > 0,
+            i = l.useRef(!1),
+            s = n.UNREAD.length > 0,
             { setOpenStateFromUnreads: a } = (0, E.A)();
-        s.useEffect(() => {
-            t || i.current || (a(l), (i.current = !0));
-        }, [a, l, t]);
+        l.useEffect(() => {
+            t || i.current || (a(s), (i.current = !0));
+        }, [a, s, t]);
     })({ messagesByCategory: X, loadingInitial: K });
-    let ei = s.useCallback(() => {
+    let ei = l.useCallback(() => {
         let e = L.filter((e) => W[e]).reduce((e, t) => e + X[t].length, 0),
             t = P.current?.getScrollerState();
         return null == t ? 0 : Math.max(0, Math.ceil(t.offsetHeight / 64) - e);
     }, [W, X]);
-    s.useEffect(() => {
-        J || B || 0 >= ei() || ((!ee || z) && r?.(S.VA.FILL_SCROLLER));
-    }, [ei, r, J, B, ee, z]);
-    let es = s.useMemo(() => {
+    l.useEffect(() => {
+        Q || V || 0 >= ei() || ((!ee || z) && r?.(S.VA.FILL_SCROLLER));
+    }, [ei, r, Q, V, ee, z]);
+    let el = l.useMemo(() => {
         let e = Math.min(Math.max(2, ei()), 20);
-        return (0, i.jsx)(b.A, { withHeader: !1, size: e });
+        return (0, i.jsx)(T.A, { withHeader: !1, size: e });
     }, [ei]);
     return (
         (0, x.Hi)({
-            notificationCenterVariant: V,
-            entrypoint: k,
+            notificationCenterVariant: B,
+            entrypoint: w,
             messages: n,
-            unreadMessages: l,
+            unreadMessages: s,
             messagesByCategory: X,
-            viewId: U,
+            viewId: G,
         }),
         (0, i.jsx)("div", {
-            className: a()(y, j.KQ),
+            className: a()(v, j.KQ),
             onClick: R,
             onDoubleClick: R,
             "aria-label": e["aria-label"],
             children: (0, i.jsx)(c.hD, {
-                navigator: w,
+                navigator: k,
                 children: (0, i.jsx)(c.PR, {
                     children: (e) => {
                         let { ref: t, ...n } = e;
@@ -261,11 +260,11 @@ function D(e) {
                             ref: (e) => {
                                 (P.current = e), (t.current = e?.getScrollerNode() ?? null);
                             },
-                            className: a()(j.m4, v),
+                            className: a()(j.m4, y),
                             onScroll: q,
                             fade: !0,
                             ...n,
-                            children: [$, en && !ee ? es : null],
+                            children: [$, en && !ee ? el : null],
                         });
                     },
                 }),

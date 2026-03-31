@@ -1,13 +1,12 @@
-"use strict";
-n.d(t, { Ay: () => c, Bx: () => a, bf: () => o, vs: () => l });
+n.d(t, { Ay: () => c, Bx: () => r, bf: () => o, vs: () => s });
 var i,
-    s = n(64700),
-    l = (((i = {})[(i.NONE = 0)] = "NONE"), (i[(i.NO_INVITE = 1)] = "NO_INVITE"), (i[(i.MINIMAL = 2)] = "MINIMAL"), i);
-let r = s.createContext(0);
-function a() {
-    return s.useContext(r);
+    l = n(64700),
+    s = (((i = {})[(i.NONE = 0)] = "NONE"), (i[(i.NO_INVITE = 1)] = "NO_INVITE"), (i[(i.MINIMAL = 2)] = "MINIMAL"), i);
+let a = l.createContext(0);
+function r() {
+    return l.useContext(a);
 }
 function o(e) {
     return null == e ? 0 : e <= 550 ? 2 : +(e <= 650);
 }
-let c = r;
+let c = a;

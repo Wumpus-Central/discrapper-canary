@@ -1,18 +1,17 @@
-"use strict";
 n.d(t, { A: () => A });
 var i = n(311907),
-    s = n(73153),
-    l = n(187508),
-    r = n(927813),
-    a = n(661191),
+    l = n(73153),
+    s = n(187508),
+    a = n(927813),
+    r = n(661191),
     o = n(322387);
-let c = 90 * r.A.Millis.DAY,
+let c = 90 * a.A.Millis.DAY,
     d = { tab: null, localItemAcks: {}, hasNewMentions: !1, isDataStale: !1, isRefreshing: !1 };
 class u extends i.Ay.PersistedStore {
     static displayName = "NotificationCenterStore";
     static persistKey = "NotificationCenterStore";
     initialize(e) {
-        this.waitFor(l.Ay),
+        this.waitFor(s.Ay),
             null != e &&
                 (((d = e).localItemAcks = (function (e) {
                     let t = {};
@@ -28,7 +27,7 @@ class u extends i.Ay.PersistedStore {
         return d.tab ?? o.$w.ForYou;
     }
     isLocalItemAcked(e) {
-        return null != e.local_id && (null != d.localItemAcks[e.local_id] || a.default.age(e.id) > c);
+        return null != e.local_id && (null != d.localItemAcks[e.local_id] || r.default.age(e.id) > c);
     }
     hasNewMentions() {
         return d.hasNewMentions;
@@ -46,7 +45,7 @@ class u extends i.Ay.PersistedStore {
 function h() {
     (d.hasNewMentions = !1), (d.isDataStale = !1), (d.isRefreshing = !1);
 }
-let A = new u(s.h, {
+let A = new u(l.h, {
     MESSAGE_CREATE: function (e) {
         let { message: t } = e;
     },

@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => g });
 var i = n(627968),
-    s = n(311907),
-    l = n(827734),
+    l = n(311907),
+    s = n(827734),
     a = n(990078),
     r = n(397927),
     o = n(313961),
@@ -11,11 +10,11 @@ var i = n(627968),
     u = n(274372),
     h = n(572164),
     A = n(806931),
-    m = n(985018),
-    _ = n(639291);
-let p = (e) => {
+    _ = n(985018),
+    m = n(613069);
+let g = (e) => {
     let { channelId: t } = e;
-    return (0, s.bG)([d.A, o.A, u.A, c.Ay], () => {
+    return (0, l.bG)([d.A, o.A, u.A, c.Ay], () => {
         if (null == t) return !1;
         let e = d.A.getCurrentUserActiveStream(),
             n = c.Ay.getVisibleGame()?.windowHandle;
@@ -25,21 +24,21 @@ let p = (e) => {
         );
     })
         ? (0, i.jsx)(a.m, {
-              text: m.intl.string(m.t.DJXW3G),
+              text: _.intl.string(_.t.DJXW3G),
               children: (0, i.jsxs)("div", {
-                  className: _.g0,
+                  className: m.g0,
                   children: [
                       (0, i.jsx)(r.fkz, {
                           icon: r.xgA,
                           shape: r.EGs.ROUND_LEFT,
-                          color: l.A.unsafe_rawColors.PRIMARY_500.css,
-                          className: _.Z7,
+                          color: s.A.unsafe_rawColors.PRIMARY_500.css,
+                          className: m.Z7,
                       }),
                       (0, i.jsx)(r.LpS, {
-                          text: m.intl.string(m.t.pCMkDb),
+                          text: _.intl.string(_.t.pCMkDb),
                           shape: r.EGs.ROUND_RIGHT,
-                          color: l.A.unsafe_rawColors.PRIMARY_500.css,
-                          className: _.lm,
+                          color: s.A.unsafe_rawColors.PRIMARY_500.css,
+                          className: m.lm,
                       }),
                   ],
               }),

@@ -437,9 +437,12 @@ let z = l.memo(function (e) {
             w = (e, t) => {
                 p ||
                     (0, u.L3)(e, async () => {
-                        let { default: e } = await Promise.all([i.e("97262"), i.e("87997"), i.e("84991")]).then(
-                            i.bind(i, 180812),
-                        );
+                        let { default: e } = await Promise.all([
+                            i.e("97262"),
+                            i.e("11478"),
+                            i.e("87997"),
+                            i.e("38142"),
+                        ]).then(i.bind(i, 180812));
                         return (
                             (0, O.YX)(G.uss.VOICE_V3, { type: O.Z5.VOICE, value: O.IP.SETTINGS_OPENED, userId: t.id }),
                             (i) =>

@@ -1,30 +1,29 @@
-"use strict";
 n.d(t, { C: () => A });
 var i = n(627968),
-    s = n(64700),
-    l = n(562465),
-    r = n(990078),
-    a = n(397927),
+    l = n(64700),
+    s = n(562465),
+    a = n(990078),
+    r = n(397927),
     o = n(147087),
     c = n(320501),
     d = n(652215),
     u = n(985018);
 async function h(e) {
     try {
-        let t = await l.Bo.post({ url: d.Rsh.AI_TITLE, body: { content: e }, oldFormErrors: !0, rejectWithError: !1 });
+        let t = await s.Bo.post({ url: d.Rsh.AI_TITLE, body: { content: e }, oldFormErrors: !0, rejectWithError: !1 });
         return t.ok ? (t.body?.title ?? null) : null;
     } catch (e) {
         return null;
     }
 }
 function A(e) {
-    let { parentChannel: t, parentMessageId: n, updateThreadSettings: l, threadSettings: d, textAreaState: A } = e,
-        [p, g] = s.useState(!1),
-        [m, _] = s.useState(!1),
+    let { parentChannel: t, parentMessageId: n, updateThreadSettings: s, threadSettings: d, textAreaState: A } = e,
+        [_, m] = l.useState(!1),
+        [g, p] = l.useState(!1),
         f = (0, o.b)(),
-        x = s.useCallback(async () => {
+        x = l.useCallback(async () => {
             if (f) {
-                g(!0);
+                m(!0);
                 try {
                     let e = null;
                     if (null != n) {
@@ -33,60 +32,60 @@ function A(e) {
                     } else A.textValue.trim().length >= 10 && (e = A.textValue);
                     if (null != e) {
                         let t = await h(e);
-                        null != t && "" !== t.trim() && l({ name: t });
+                        null != t && "" !== t.trim() && s({ name: t });
                     }
                 } finally {
-                    g(!1);
+                    m(!1);
                 }
             }
-        }, [t.id, n, l, f, A.textValue]);
-    s.useEffect(() => {
-        _(!1), g(!1), t.id === d.parentChannelId && n !== d.parentMessageId && l({ name: "" });
-    }, [n, l, t.id, d.parentChannelId, d.parentMessageId]),
-        s.useEffect(() => {
-            (null != d.name && "" !== d.name.trim()) || m || (f && null != n && (_(!0), x()));
-        }, [t.id, n, l, d.name, m, f, x]);
-    let C = s.useCallback(
+        }, [t.id, n, s, f, A.textValue]);
+    l.useEffect(() => {
+        p(!1), m(!1), t.id === d.parentChannelId && n !== d.parentMessageId && s({ name: "" });
+    }, [n, s, t.id, d.parentChannelId, d.parentMessageId]),
+        l.useEffect(() => {
+            (null != d.name && "" !== d.name.trim()) || g || (f && null != n && (p(!0), x()));
+        }, [t.id, n, s, d.name, g, f, x]);
+    let E = l.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                 if (f)
                     return {
-                        icon: a.Dud,
+                        icon: r.Dud,
                         onClick: x,
                         "aria-label": u.intl.string(u.t.ZF2oBs),
-                        disabled: e || p || (null == n && A.textValue.trim().length < 10),
+                        disabled: e || _ || (null == n && A.textValue.trim().length < 10),
                         tooltip: u.intl.string(u.t.ZF2oBs),
-                        loading: p,
+                        loading: _,
                     };
             },
-            [f, x, p, n, A.textValue],
+            [f, x, _, n, A.textValue],
         ),
-        E = s.useCallback(
+        I = l.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                 return f
-                    ? (0, i.jsx)(r.m, {
+                    ? (0, i.jsx)(a.m, {
                           text: u.intl.string(u.t.ZF2oBs),
-                          children: (0, i.jsx)(a.K0, {
-                              icon: a.Dud,
+                          children: (0, i.jsx)(r.K0, {
+                              icon: r.Dud,
                               variant: "secondary",
                               size: "sm",
                               "aria-label": u.intl.string(u.t.ZF2oBs),
                               onClick: x,
-                              disabled: e || p || (null == n && A.textValue.trim().length < 10),
-                              loading: p,
+                              disabled: e || _ || (null == n && A.textValue.trim().length < 10),
+                              loading: _,
                               type: "button",
                           }),
                       })
                     : null;
             },
-            [f, p, n, A.textValue, x],
+            [f, _, n, A.textValue, x],
         );
     return {
-        isGeneratingAI: p,
+        isGeneratingAI: _,
         generateAIName: x,
         enableAIFeatures: f,
-        renderAiGenerateButton: E,
-        getThreadNameInputAccessory: C,
+        renderAiGenerateButton: I,
+        getThreadNameInputAccessory: E,
     };
 }

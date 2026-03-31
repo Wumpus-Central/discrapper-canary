@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     zr: "root_b18605",
     y6: "headerToggle_b18605",

@@ -1,9 +1,8 @@
-"use strict";
 n.d(t, { A: () => f });
 var i = n(627968);
 n(64700);
-var s = n(311907),
-    l = n(827734),
+var l = n(311907),
+    s = n(827734),
     a = n(397927),
     r = n(931991),
     o = n(734057),
@@ -12,35 +11,35 @@ var s = n(311907),
     u = n(698441),
     h = n(935159),
     A = n(508654),
-    m = n(974930),
-    _ = n(47868),
-    p = n(985018),
-    g = n(275237);
+    _ = n(974930),
+    m = n(47868),
+    g = n(985018),
+    p = n(275237);
 function f(e) {
     let { channelId: t, showDismiss: f = !0 } = e,
-        x = (0, s.bG)([o.A], () => o.A.getChannel(t), [t]),
+        x = (0, l.bG)([o.A], () => o.A.getChannel(t), [t]),
         E = (0, A.RO)(t),
-        C = null != (0, A.Qs)(t),
-        { canManageGuildEvent: I } = (0, r.nr)(x),
-        N = (0, s.bG)([c.A], () => E.filter((e) => !c.A.isEventDismissed(e.id)), [E]),
-        b = (0, s.cf)([u.Ay], () => N.reduce((e, t) => ((e[t.id] = u.Ay.getUserCount(t.id, (0, m.G3)(t))), e), {}), [
+        I = null != (0, A.Qs)(t),
+        { canManageGuildEvent: C } = (0, r.nr)(x),
+        N = (0, l.bG)([c.A], () => E.filter((e) => !c.A.isEventDismissed(e.id)), [E]),
+        T = (0, l.cf)([u.Ay], () => N.reduce((e, t) => ((e[t.id] = u.Ay.getUserCount(t.id, (0, _.G3)(t))), e), {}), [
             N,
         ]);
-    return N.length < 1 || C
+    return N.length < 1 || I
         ? null
         : (0, i.jsx)(i.Fragment, {
               children: N.map((e) =>
                   (0, i.jsx)(
-                      _.A,
+                      m.A,
                       {
                           icon: (0, i.jsx)(a.CTc, { size: "custom", color: "currentColor", height: 20, width: 20 }),
-                          color: l.A.unsafe_rawColors.GREEN_360.css,
-                          title: p.intl.formatToPlainString(I(e) ? p.t["1vGXqM"] : p.t.xMJyla, { eventName: e.name }),
-                          description: p.intl.formatToPlainString(p.t.PTebCR, {
-                              startTime: (0, m.CC)(e.scheduled_start_time).startDateTimeString,
+                          color: s.A.unsafe_rawColors.GREEN_360.css,
+                          title: g.intl.formatToPlainString(C(e) ? g.t["1vGXqM"] : g.t.xMJyla, { eventName: e.name }),
+                          description: g.intl.formatToPlainString(g.t.PTebCR, {
+                              startTime: (0, _.CC)(e.scheduled_start_time).startDateTimeString,
                           }),
                           onClick: () => {
-                              I(e)
+                              C(e)
                                   ? (0, a.mMO)(async () => {
                                         let { default: t } = await Promise.all([
                                             n.e("51354"),
@@ -57,8 +56,8 @@ function f(e) {
                                     return (t = e.id), void (0, h.Nt)(t);
                                 }
                               : void 0,
-                          userCount: b[e.id],
-                          className: g.f,
+                          userCount: T[e.id],
+                          className: p.f,
                       },
                       e.id,
                   ),

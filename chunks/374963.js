@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     om: "block__8dcfb",
     vk: "clickable__8dcfb",

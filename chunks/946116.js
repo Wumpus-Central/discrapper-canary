@@ -1,39 +1,38 @@
-"use strict";
-n.d(t, { Y1: () => A, fx: () => u, g2: () => g, m8: () => h, mU: () => p, ul: () => m });
+n.d(t, { Y1: () => A, fx: () => u, g2: () => m, m8: () => h, mU: () => _, ul: () => g });
 var i,
-    s,
     l,
-    r,
-    a = n(136722),
+    s,
+    a,
+    r = n(136722),
     o = n(488926),
     c = n(652215),
     d = n(985018),
     u = (((i = {})[(i.GUILD = 0)] = "GUILD"), (i[(i.GUILD_SCHEDULED_EVENT = 1)] = "GUILD_SCHEDULED_EVENT"), i),
     h =
-        (((s = {}).GUILD_TEMPLATES = "guild-templates"),
-        (s.CUSTOMIZE_NEW_GUILD = "customize-new-guild"),
-        (s.CHOOSE_GUILD = "choose-guild"),
-        (s.CUSTOMIZE_EXISTING_GUILD = "customize-existing-guild"),
-        (s.CONFIRMATION = "confirmation"),
-        s),
-    A =
-        (((l = {}).CREATE = "CREATE"),
-        (l.HUB_SCHOOL_CLUB = "HUB_SCHOOL_CLUB"),
-        (l.HUB_STUDY = "HUB_STUDY"),
-        (l.HUB_CLASS = "HUB_CLASS"),
-        (l.HUB_SOCIAL = "HUB_SOCIAL"),
-        (l.HUB_MAJOR = "HUB_MAJOR"),
-        (l.HUB_DORM = "HUB_DORM"),
+        (((l = {}).GUILD_TEMPLATES = "guild-templates"),
+        (l.CUSTOMIZE_NEW_GUILD = "customize-new-guild"),
+        (l.CHOOSE_GUILD = "choose-guild"),
+        (l.CUSTOMIZE_EXISTING_GUILD = "customize-existing-guild"),
+        (l.CONFIRMATION = "confirmation"),
         l),
-    p =
-        (((r = {})[(r.ALL = -1)] = "ALL"),
-        (r[(r.UNCATEGORIZED = 0)] = "UNCATEGORIZED"),
-        (r[(r.SCHOOL_CLUB = 1)] = "SCHOOL_CLUB"),
-        (r[(r.CLASS = 2)] = "CLASS"),
-        (r[(r.STUDY_SOCIAL = 3)] = "STUDY_SOCIAL"),
-        (r[(r.MISC = 5)] = "MISC"),
-        r);
-function g(e) {
+    A =
+        (((s = {}).CREATE = "CREATE"),
+        (s.HUB_SCHOOL_CLUB = "HUB_SCHOOL_CLUB"),
+        (s.HUB_STUDY = "HUB_STUDY"),
+        (s.HUB_CLASS = "HUB_CLASS"),
+        (s.HUB_SOCIAL = "HUB_SOCIAL"),
+        (s.HUB_MAJOR = "HUB_MAJOR"),
+        (s.HUB_DORM = "HUB_DORM"),
+        s),
+    _ =
+        (((a = {})[(a.ALL = -1)] = "ALL"),
+        (a[(a.UNCATEGORIZED = 0)] = "UNCATEGORIZED"),
+        (a[(a.SCHOOL_CLUB = 1)] = "SCHOOL_CLUB"),
+        (a[(a.CLASS = 2)] = "CLASS"),
+        (a[(a.STUDY_SOCIAL = 3)] = "STUDY_SOCIAL"),
+        (a[(a.MISC = 5)] = "MISC"),
+        a);
+function m(e) {
     return "883060064561299456" === e
         ? [
               { id: "club", value: 1, label: d.intl.string(d.t["Z+MPN/"]) },
@@ -48,7 +47,7 @@ function g(e) {
               { id: "misc", value: 5, label: d.intl.string(d.t["0Bg9La"]) },
           ];
 }
-function m() {
+function g() {
     return {
         CREATE: {
             id: "CREATE",
@@ -82,7 +81,7 @@ function m() {
                     name: "officers (example)",
                     mentionable: !0,
                     hoist: !0,
-                    permissions: a.kg(
+                    permissions: r.kg(
                         o.qN,
                         c.xBc.MANAGE_ROLES,
                         c.xBc.MANAGE_CHANNELS,

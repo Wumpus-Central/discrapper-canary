@@ -1,21 +1,20 @@
-"use strict";
-n.d(t, { Ay: () => l });
+n.d(t, { Ay: () => s });
 var i = n(405018),
-    s = n(652215);
-function l(e) {
-    let { channel: t, locked: n, video: l, selected: r } = e;
+    l = n(652215);
+function s(e) {
+    let { channel: t, locked: n, video: s, selected: a } = e;
     return (
         (function (e) {
-            let { channel: t, video: n, considerMaxStageVoiceUserLimit: l = !0 } = e,
-                { limit: r } = (0, i.A)(t),
-                a = -1;
-            return (t.userLimit > 0 && (a = t.userLimit),
-            n && r > 0 && (a = a > 0 ? Math.min(a, r) : r),
-            l && a === s.RCc)
+            let { channel: t, video: n, considerMaxStageVoiceUserLimit: s = !0 } = e,
+                { limit: a } = (0, i.A)(t),
+                r = -1;
+            return (t.userLimit > 0 && (r = t.userLimit),
+            n && a > 0 && (r = r > 0 ? Math.min(r, a) : a),
+            s && r === l.RCc)
                 ? 0
-                : a;
-        })({ channel: t, video: l }) > 0 &&
+                : r;
+        })({ channel: t, video: s }) > 0 &&
         !n &&
-        !r
+        !a
     );
 }

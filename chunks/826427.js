@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     nM: "row_b1f768",
     Dl: "rowGuildName_b1f768",

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     x6: "button__67645",
     Xr: "redGlow__67645",

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container_f37cb1",
     rt: "animatedBannerHoverLayer_f37cb1",

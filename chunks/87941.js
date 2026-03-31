@@ -1,14 +1,13 @@
-"use strict";
-n.d(t, { q: () => a });
+n.d(t, { q: () => r });
 var i = n(873263),
-    s = n(394953),
-    l = n(366811),
-    r = n(652215);
-function a() {
-    let e = (0, l.A)((e) => e.guildId),
+    l = n(394953),
+    s = n(366811),
+    a = n(652215);
+function r() {
+    let e = (0, s.A)((e) => e.guildId),
         { pathname: t } = (0, i.zy)(),
-        n = t.startsWith(r.BVt.GUILD_DISCOVERY) || t.startsWith(r.BVt.GLOBAL_DISCOVERY),
-        a = t.startsWith(r.BVt.GUILD_MEMBER_VERIFICATION("")),
-        o = (0, s.lI)();
-    return null == e && !(n || a || o);
+        n = t.startsWith(a.BVt.GUILD_DISCOVERY) || t.startsWith(a.BVt.GLOBAL_DISCOVERY),
+        r = t.startsWith(a.BVt.GUILD_MEMBER_VERIFICATION("")),
+        o = (0, l.lI)();
+    return null == e && !(n || r || o);
 }

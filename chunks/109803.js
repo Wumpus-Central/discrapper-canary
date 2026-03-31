@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     QO: "ragingDemon_ac6454",
     RK: "visible_ac6454",

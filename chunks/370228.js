@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { L: () => r });
+n.d(t, { L: () => a });
 var i = n(311907),
-    s = n(576705),
-    l = n(818348);
-function r(e) {
-    return (0, i.bG)([s.A], () => s.A.can(l.xB.REQUEST_TO_SPEAK, e));
+    l = n(576705),
+    s = n(818348);
+function a(e) {
+    return (0, i.bG)([l.A], () => l.A.can(s.xB.REQUEST_TO_SPEAK, e));
 }

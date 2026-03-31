@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { L7: () => p, qA: () => f });
+n.d(t, { L7: () => g, qA: () => f });
 var i = n(627968),
-    s = n(311907),
-    l = n(397927),
+    l = n(311907),
+    s = n(397927),
     a = n(253932),
     r = n(780964),
     o = n(840065),
@@ -11,39 +10,39 @@ var i = n(627968),
     u = n(365258),
     h = n(704037),
     A = n(536482),
-    m = n(985018),
-    _ = n(830910);
-let p = () => {
+    _ = n(985018),
+    m = n(830910);
+let g = () => {
     (0, o.openUserSettings)(r.X.ACTIVITY_PRIVACY_PANEL);
 };
-function g(e) {
+function p(e) {
     let { children: t, onClick: n } = e;
-    return (0, i.jsxs)(l.DUT, {
-        className: _.E1,
+    return (0, i.jsxs)(s.DUT, {
+        className: m.E1,
         onClick: n,
         children: [
-            (0, i.jsx)("div", { className: _.j3, children: t }),
-            (0, i.jsx)(l._BQ, { color: l.LU0.colors.TEXT_SUBTLE, size: "xs" }),
+            (0, i.jsx)("div", { className: m.j3, children: t }),
+            (0, i.jsx)(s._BQ, { color: s.LU0.colors.TEXT_SUBTLE, size: "xs" }),
         ],
     });
 }
 function f(e) {
     let { onClosePopout: t } = e,
         n = a.tz.useSetting(),
-        r = (0, s.bG)([c.Ay], () => c.Ay.getFlattenedGuildIds()),
+        r = (0, l.bG)([c.Ay], () => c.Ay.getFlattenedGuildIds()),
         o = (0, d.Kk)(),
-        _ = r.filter((e) => !o.has(e)),
-        f = (0, u.AB)(_);
+        m = r.filter((e) => !o.has(e)),
+        f = (0, u.AB)(m);
     return 0 === r.length
         ? null
-        : (0, i.jsxs)(g, {
+        : (0, i.jsxs)(p, {
               onClick: () => {
-                  t(), p();
+                  t(), g();
               },
               children: [
-                  (0, i.jsx)(l.Text, {
+                  (0, i.jsx)(s.Text, {
                       variant: "text-sm/semibold",
-                      children: m.intl.string(n ? A.default["3GrhnF"] : A.default["54ycKJ"]),
+                      children: _.intl.string(n ? A.default["3GrhnF"] : A.default["54ycKJ"]),
                   }),
                   (0, i.jsx)(h.l, { guildIds: f, prioritizeSelectedGuild: !0 }),
               ],

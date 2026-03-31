@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     wL: "searchHeader_ae7890",
     g$: "searchHeaderWithSubtitle_ae7890",

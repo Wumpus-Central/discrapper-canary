@@ -1,23 +1,22 @@
-"use strict";
-n.d(t, { A: () => r });
+n.d(t, { A: () => a });
 var i = n(627968);
 n(64700);
-var s = n(397927),
-    l = n(283354);
-let r = (e) => {
-    let { entry: t, hideEditButton: n, children: r, onRequestOpen: a, onRequestClose: o, targetElementRef: c } = e;
-    return (0, i.jsx)(s.YNO, {
+var l = n(397927),
+    s = n(283354);
+let a = (e) => {
+    let { entry: t, hideEditButton: n, children: a, onRequestOpen: r, onRequestClose: o, targetElementRef: c } = e;
+    return (0, i.jsx)(l.YNO, {
         targetElementRef: c,
-        onRequestOpen: a,
+        onRequestOpen: r,
         onRequestClose: o,
-        animation: s.YNO.Animation.NONE,
+        animation: l.YNO.Animation.NONE,
         position: "bottom",
         spacing: 4,
         align: "right",
         renderPopout: (e) => {
-            let { closePopout: s } = e;
-            return (0, i.jsx)(l.default, { entry: t, closePopout: s, hideEditButton: n });
+            let { closePopout: l } = e;
+            return (0, i.jsx)(s.default, { entry: t, closePopout: l, hideEditButton: n });
         },
-        children: r,
+        children: a,
     });
 };

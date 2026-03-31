@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     nM: "row__6fddf",
     u4: "rowContent__6fddf",

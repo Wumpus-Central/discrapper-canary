@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     A2: "previewChannelRow_d59199",
     wH: "selected_d59199",

@@ -1,24 +1,23 @@
-"use strict";
-n.d(t, { Ay: () => E, g4: () => b, qv: () => I });
+n.d(t, { Ay: () => I, g4: () => N, qv: () => C });
 var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    r = n.n(l),
-    a = n(284009),
-    o = n.n(a),
+    l = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    r = n(284009),
+    o = n.n(r),
     c = n(522437),
     d = n(686956),
     u = n(954571),
     h = n(263715),
     A = n(550591),
-    p = n(652215),
-    g = n(985018),
-    m = n(581277);
-function _(e) {
-    let t = s.useRef(null),
+    _ = n(652215),
+    m = n(985018),
+    g = n(584914);
+function p(e) {
+    let t = l.useRef(null),
         n = e.map((e) => e[0]);
     return (
-        s.useLayoutEffect(() => {
+        l.useLayoutEffect(() => {
             let n = requestAnimationFrame(() => {
                 let n = t.current;
                 if (null != n) for (let [t, i] of e) t ? n.classList.add(i) : n.classList.remove(i);
@@ -40,38 +39,38 @@ function f(e, t) {
                 (!i || e.type !== h.PJ.FOLDER || t.type !== h.PJ.FOLDER) &&
                 (e.type !== h.PJ.FOLDER || null == t.parentId),
             drop(e) {
-                let { nodeId: s } = e;
-                i && t.type !== h.PJ.FOLDER && u.default.track(p.HAw.GUILD_FOLDER_CREATED), d.A.moveById(s, t.id, n, i);
+                let { nodeId: l } = e;
+                i && t.type !== h.PJ.FOLDER && u.default.track(_.HAw.GUILD_FOLDER_CREATED), d.A.moveById(l, t.id, n, i);
             },
             collect: (e) => ({ canDrop: e.canDrop(), isOver: e.isOver() }),
         }
     );
 }
 function x(e) {
-    let { name: t, targetNode: n, combine: l, below: r } = e,
-        a = s.useMemo(() => f([h.PJ.GUILD, h.PJ.FOLDER], n, r, l), [n, r, l]),
-        [{ canDrop: o, isOver: d }, u] = (0, c.H)(a),
-        A = _([
-            [o, m.OP],
-            [d, m.NQ],
+    let { name: t, targetNode: n, combine: s, below: a } = e,
+        r = l.useMemo(() => f([h.PJ.GUILD, h.PJ.FOLDER], n, a, s), [n, a, s]),
+        [{ canDrop: o, isOver: d }, u] = (0, c.H)(r),
+        A = p([
+            [o, g.OP],
+            [d, g.NQ],
         ]);
     return (0, i.jsx)("div", {
         ref: (e) => {
             (A.current = e), u(e);
         },
-        "data-dnd-name": g.intl.formatToPlainString(g.t["A5aDw+"], { itemName: t }),
-        className: m.aC,
+        "data-dnd-name": m.intl.formatToPlainString(m.t["A5aDw+"], { itemName: t }),
+        className: g.aC,
     });
 }
-function C(e) {
-    let { name: t, targetNode: n, onDragOverChanged: l } = e,
-        [{ canDrop: a, isOver: o }, d] = (0, c.H)(() => f([h.PJ.GUILD], n, !0, !0));
-    s.useEffect(() => {
-        l?.(o);
-    }, [l, o]);
-    let u = _([
-        [a, m.OP],
-        [o, m.NQ],
+function E(e) {
+    let { name: t, targetNode: n, onDragOverChanged: s } = e,
+        [{ canDrop: r, isOver: o }, d] = (0, c.H)(() => f([h.PJ.GUILD], n, !0, !0));
+    l.useEffect(() => {
+        s?.(o);
+    }, [s, o]);
+    let u = p([
+        [r, g.OP],
+        [o, g.NQ],
     ]);
     return (0, i.jsx)(A.A, {
         text: t,
@@ -82,48 +81,48 @@ function C(e) {
             ref: (e) => {
                 (u.current = e), d(e);
             },
-            "data-dnd-name": g.intl.formatToPlainString(g.t.qiQ0QI, { itemName: t }),
-            className: r()(m.dw, {}),
+            "data-dnd-name": m.intl.formatToPlainString(m.t.qiQ0QI, { itemName: t }),
+            className: a()(g.dw, {}),
         }),
     });
 }
-let E = s.memo(function (e) {
-    let { name: t, targetNode: n, noCombine: s = !1, below: l = !1, onDragOverChanged: r } = e,
-        a = !s && null == n.parentId;
+let I = l.memo(function (e) {
+    let { name: t, targetNode: n, noCombine: l = !1, below: s = !1, onDragOverChanged: a } = e,
+        r = !l && null == n.parentId;
     return (0, i.jsxs)("div", {
-        className: m.iE,
+        className: g.iE,
         "aria-hidden": !0,
         children: [
-            (0, i.jsx)(x, { name: t, targetNode: n, below: l }),
-            a ? (0, i.jsx)(C, { name: t, targetNode: n, onDragOverChanged: r }) : null,
+            (0, i.jsx)(x, { name: t, targetNode: n, below: s }),
+            r ? (0, i.jsx)(E, { name: t, targetNode: n, onDragOverChanged: a }) : null,
         ],
     });
 });
-function I(e) {
+function C(e) {
     let { name: t, targetNode: n } = e,
-        [{ canDrop: s, isOver: l }, r] = (0, c.H)(() => f([h.PJ.GUILD], n, !0, !0)),
-        a = _([[l, m.a7]]),
-        o = _([
-            [l, m.NQ],
-            [s, m.OP],
+        [{ canDrop: l, isOver: s }, a] = (0, c.H)(() => f([h.PJ.GUILD], n, !0, !0)),
+        r = p([[s, g.a7]]),
+        o = p([
+            [s, g.NQ],
+            [l, g.OP],
         ]);
     return (0, i.jsx)("div", {
-        ref: a,
-        className: m.Ro,
+        ref: r,
+        className: g.Ro,
         "aria-hidden": !0,
         children: (0, i.jsx)("div", {
-            className: m.aO,
+            className: g.aO,
             children: (0, i.jsx)("div", {
                 ref: (e) => {
-                    (o.current = e), r(e);
+                    (o.current = e), a(e);
                 },
                 "aria-label": `At end of ${t}`,
-                className: m.aC,
+                className: g.aC,
             }),
         }),
     });
 }
-function b(e) {
+function N(e) {
     let { children: t } = e,
         [, n] = (0, c.H)({ accept: [] });
     return (0, i.jsx)("div", {

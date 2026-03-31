@@ -1,5 +1,4 @@
-"use strict";
+n.d(t, { X: () => i });
 function i(e) {
     return e.length > 0;
 }
-n.d(t, { X: () => i });

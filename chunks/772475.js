@@ -1,9 +1,8 @@
-"use strict";
 n.d(t, { A: () => u });
 var i = n(627968);
 n(64700);
-var s = n(503698),
-    l = n.n(s),
+var l = n(503698),
+    s = n.n(l),
     a = n(397927),
     r = n(709562),
     o = n(985018),
@@ -11,7 +10,7 @@ var s = n(503698),
 function d(e) {
     let { className: t, count: n } = e;
     return (0, i.jsxs)("div", {
-        className: l()(c.zr, c.Yd, t),
+        className: s()(c.zr, c.Yd, t),
         children: [
             (0, i.jsx)(a.nFg, { size: "md", color: "currentColor", className: c.Kk }),
             null != n && (0, i.jsx)(a.Text, { color: "none", className: c.U9, variant: "text-md/normal", children: n }),

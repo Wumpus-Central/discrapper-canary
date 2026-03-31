@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__7aaec",
     pK: "containerPadding__7aaec",

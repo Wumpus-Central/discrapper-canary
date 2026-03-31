@@ -1,25 +1,24 @@
-"use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => m });
 var i = n(627968);
 n(64700);
-var s = n(311907),
-    l = n(397927),
-    r = n(688810),
-    a = n(979474),
+var l = n(311907),
+    s = n(397927),
+    a = n(688810),
+    r = n(233971),
     o = n(746174),
     c = n(961350),
     d = n(994500),
     u = n(993401),
     h = n(518477),
     A = n(652215),
-    m = n(985018);
-function p(e) {
+    _ = n(985018);
+function m(e) {
     let { user: t } = e,
-        { analyticsLocations: n } = (0, r.Ay)(),
-        p = (0, s.bG)([c.default], () => c.default.getId() === t.id),
-        g = (0, s.bG)([d.A], () => d.A.isBlockedOrIgnored(t.id) || d.A.isSpam(t.id)),
-        _ = (0, o.j)("UserProfileGiftingBannerButton"),
-        { openGiftModal: f } = (0, a.$)({
+        { analyticsLocations: n } = (0, a.Ay)(),
+        m = (0, l.bG)([c.default], () => c.default.getId() === t.id),
+        g = (0, l.bG)([d.A], () => d.A.isBlockedOrIgnored(t.id) || d.A.isSpam(t.id)),
+        p = (0, o.j)("UserProfileGiftingBannerButton"),
+        { openGiftModal: f } = (0, r.$)({
             giftRecipient: t,
             analyticsLocations: n,
             analyticsObject: {
@@ -30,7 +29,7 @@ function p(e) {
             },
             location: "user-profile-gifting-banner-button",
         });
-    return null == t || t.bot || p || g || !_
+    return null == t || t.bot || m || g || !p
         ? null
-        : (0, i.jsx)(u.br, { icon: l.okO, tooltipText: m.intl.string(m.t.PEjaCx), action: h.pt.GIFT, onClick: f });
+        : (0, i.jsx)(u.br, { icon: s.okO, tooltipText: _.intl.string(_.t.PEjaCx), action: h.pt.GIFT, onClick: f });
 }

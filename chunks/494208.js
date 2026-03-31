@@ -1,8 +1,7 @@
-"use strict";
 n.d(t, { A: () => h });
 var i = n(627968),
-    s = n(64700),
-    l = n(397927),
+    l = n(64700),
+    s = n(397927),
     a = n(323073),
     r = n(58736),
     o = n(707539),
@@ -11,26 +10,26 @@ var i = n(627968),
     u = n(94287);
 function h(e) {
     let { channel: t } = e,
-        [n, h] = s.useState(!1),
-        A = s.useRef(null),
-        m = (0, a.vL)(t),
-        _ = s.useCallback(() => {
+        [n, h] = l.useState(!1),
+        A = l.useRef(null),
+        _ = (0, a.vL)(t),
+        m = l.useCallback(() => {
             h(!1);
         }, []),
-        p = s.useCallback(() => {
+        g = l.useCallback(() => {
             n || (0, o.D3)("Popout"), h(!n);
         }, [n]);
-    return (0, i.jsx)(l.YNO, {
+    return (0, i.jsx)(s.YNO, {
         targetElementRef: A,
-        animation: l.YNO.Animation.NONE,
+        animation: s.YNO.Animation.NONE,
         position: "bottom",
         align: "right",
         autoInvert: !1,
         shouldShow: n,
-        onRequestClose: _,
+        onRequestClose: m,
         renderPopout: function () {
-            return (0, i.jsx)(l.lGe, {
-                children: (0, i.jsx)(c.A, { className: u.T, channel: t, onClose: _, context: "popout" }),
+            return (0, i.jsx)(s.lGe, {
+                children: (0, i.jsx)(c.A, { className: u.T, channel: t, onClose: m, context: "popout" }),
             });
         },
         clickTrap: !0,
@@ -40,11 +39,11 @@ function h(e) {
                 ...e,
                 ref: A,
                 className: u.Kk,
-                onClick: p,
-                icon: l.ysw,
+                onClick: g,
+                icon: s.ysw,
                 "aria-label": d.intl.string(d.t.B2panI),
                 tooltip: n ? null : d.intl.string(d.t.B2panI),
-                disabled: m,
+                disabled: _,
                 selected: n,
             });
         },

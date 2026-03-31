@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Nr: "card__6d190",
     ax: "cardSmall__6d190 card__6d190",

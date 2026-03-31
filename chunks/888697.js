@@ -1,10 +1,9 @@
-"use strict";
-n.d(t, { _: () => l, e: () => a });
+n.d(t, { _: () => s, e: () => a });
 var i = n(73153),
-    s = n(435183);
-async function l(e, t) {
-    i.h.dispatch({ type: "HANGOUT_WINDOW_IMAGE_SELECTED", url: t }), await s.Ay.updateVoiceChannelStatus(e, t);
+    l = n(435183);
+async function s(e, t) {
+    i.h.dispatch({ type: "HANGOUT_WINDOW_IMAGE_SELECTED", url: t }), await l.Ay.updateVoiceChannelStatus(e, t);
 }
 function a(e) {
-    s.Ay.updateVoiceChannelStatus(e, "");
+    l.Ay.updateVoiceChannelStatus(e, "");
 }

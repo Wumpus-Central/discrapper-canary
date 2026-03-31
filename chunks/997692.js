@@ -1,9 +1,8 @@
-"use strict";
 n.d(t, { C: () => h, D: () => A });
 var i = n(627968);
 n(64700);
-var s = n(311907),
-    l = n(116833),
+var l = n(311907),
+    s = n(116833),
     a = n(342494),
     r = n(522055),
     o = n(294726),
@@ -11,16 +10,16 @@ var s = n(311907),
     d = n(66883);
 function u(e) {
     let { title: t, body: n, ctaText: o, runningGameId: c, targetElementRef: u, onClick: h, onClose: A } = e,
-        p = (0, s.bG)([r.A], () => null != c && r.A.getGlobalCatalogGame(c)?.can_market === !0, [c]);
+        _ = (0, l.bG)([r.A], () => null != c && r.A.getGlobalCatalogGame(c)?.can_market === !0, [c]);
     return (0, i.jsx)(a.AM, {
         size: "lg",
         title: t,
         body: n,
         graphic:
-            p && null != c
+            _ && null != c
                 ? {
                       type: "dynamic",
-                      component: l.DynamicGraphicComponent.GAME_SERVER_GAME_INSTRUCTIONS_ASSET,
+                      component: s.DynamicGraphicComponent.GAME_SERVER_GAME_INSTRUCTIONS_ASSET,
                       props: { gameId: c },
                       aspectRatio: "6/4",
                   }

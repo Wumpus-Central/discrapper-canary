@@ -1,5 +1,4 @@
-"use strict";
+n.d(t, { A: () => i });
 function i(e, t) {
     return { shouldShow: !1, notificationConfig: null };
 }
-n.d(t, { A: () => i });

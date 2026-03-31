@@ -1,9 +1,8 @@
-"use strict";
 n.d(t, { A: () => j });
 var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    a = n.n(l),
+    l = n(64700),
+    s = n(503698),
+    a = n.n(s),
     r = n(837381),
     o = n(311907),
     c = n(3026),
@@ -11,28 +10,28 @@ var i = n(627968),
     u = n(308528),
     h = n(442433),
     A = n(152007),
-    m = n(747926),
-    _ = n(734057),
-    p = n(222823),
-    g = n(977997),
+    _ = n(747926),
+    m = n(734057),
+    g = n(222823),
+    p = n(977997),
     f = n(607567),
     x = n(892896),
     E = n(884415),
-    C = n(775946),
-    I = n(588224),
+    I = n(775946),
+    C = n(588224),
     N = n(37411),
-    b = n(985018),
+    T = n(985018),
     S = n(928409),
-    T = n(567431),
-    v = n(570302);
-function y(e) {
-    let { style: t, withGuildIcon: n, inverted: s } = e,
-        l = { className: a()(v.GI, { [v.a7]: n }, { [v.BJ]: s }), style: t },
+    b = n(567431),
+    y = n(570302);
+function v(e) {
+    let { style: t, withGuildIcon: n, inverted: l } = e,
+        s = { className: a()(y.GI, { [y.a7]: n }, { [y.BJ]: l }), style: t },
         { density: r } = (0, d.wRf)();
     switch (r) {
         case "cozy":
             return (0, i.jsxs)("svg", {
-                ...l,
+                ...s,
                 width: "10",
                 height: "20",
                 viewBox: "0 0 10 20",
@@ -51,7 +50,7 @@ function y(e) {
             });
         case "compact":
             return (0, i.jsxs)("svg", {
-                ...l,
+                ...s,
                 width: "10",
                 height: "19",
                 viewBox: "0 0 10 19",
@@ -70,7 +69,7 @@ function y(e) {
             });
         default:
             return (0, i.jsxs)("svg", {
-                ...l,
+                ...s,
                 width: "10",
                 height: "19",
                 viewBox: "0 0 10 19",
@@ -89,57 +88,57 @@ function y(e) {
             });
     }
 }
-let j = s.memo(function (e) {
-    let { thread: t, isSelectedChannel: l, isSelectedVoice: v, isLast: j, withGuildIcon: R } = e,
+let j = l.memo(function (e) {
+    let { thread: t, isSelectedChannel: s, isSelectedVoice: y, isLast: j, withGuildIcon: R } = e,
         O = (0, o.bG)([f.Ay], () => f.Ay.getVoiceStatesForChannel(t), [t]),
-        L = (0, o.bG)([g.A], () => g.A.hasVideo(t.id)),
+        L = (0, o.bG)([p.A], () => p.A.hasVideo(t.id)),
         {
             unread: M,
             mentionCount: D,
-            isMentionLowImportance: G,
-        } = (0, o.cf)([p.Ay], () => ({
-            unread: p.Ay.hasUnread(t.id),
-            mentionCount: p.Ay.getMentionCount(t.id),
-            isMentionLowImportance: p.Ay.getIsMentionLowImportance(t.id),
+            isMentionLowImportance: U,
+        } = (0, o.cf)([g.Ay], () => ({
+            unread: g.Ay.hasUnread(t.id),
+            mentionCount: g.Ay.getMentionCount(t.id),
+            isMentionLowImportance: g.Ay.getIsMentionLowImportance(t.id),
         })),
-        U = (0, o.bG)([A.A], () => A.A.isMuted(t.id)),
-        P = s.useCallback(
+        G = (0, o.bG)([A.A], () => A.A.isMuted(t.id)),
+        P = l.useCallback(
             (e) => {
-                (0, m.JA)(t, !e.shiftKey, N.H9.CHANNEL_LIST);
+                (0, _.JA)(t, !e.shiftKey, N.H9.CHANNEL_LIST);
             },
             [t],
         ),
-        w = s.useCallback(() => {
+        k = l.useCallback(() => {
             u.A.preload(t.guild_id, t.id);
         }, [t.guild_id, t.id]),
-        k = s.useCallback(
+        w = l.useCallback(
             (e) => {
-                let s = _.A.getChannel(t.id);
-                null != s &&
+                let l = m.A.getChannel(t.id);
+                null != l &&
                     (0, h.L3)(e, async () => {
                         let { default: e } = await n.e("33").then(n.bind(n, 44536));
-                        return (t) => (0, i.jsx)(e, { ...t, channel: s });
+                        return (t) => (0, i.jsx)(e, { ...t, channel: l });
                     });
             },
             [t.id],
         ),
-        V = null == O ? 0 : O.length,
-        { role: B, ...H } = (0, r.rm)(t.id),
-        F = s.useRef(null),
+        B = null == O ? 0 : O.length,
+        { role: V, ...H } = (0, r.rm)(t.id),
+        F = l.useRef(null),
         K =
             D > 0
-                ? b.intl.formatToPlainString(b.t["ZL7+I6"], { channelName: t.name, mentionCount: D })
+                ? T.intl.formatToPlainString(T.t["ZL7+I6"], { channelName: t.name, mentionCount: D })
                 : M
-                  ? b.intl.formatToPlainString(b.t.YlVvmc, { channelName: t.name })
-                  : b.intl.formatToPlainString(b.t["0nZpiF"], { channelName: t.name });
+                  ? T.intl.formatToPlainString(T.t.YlVvmc, { channelName: t.name })
+                  : T.intl.formatToPlainString(T.t["0nZpiF"], { channelName: t.name });
     return (0, i.jsxs)("li", {
-        role: B,
-        className: a()(S.fx, { [S.wH]: l }),
+        role: V,
+        className: a()(S.fx, { [S.wH]: s }),
         children: [
-            (0, i.jsx)(y, { withGuildIcon: R }),
+            (0, i.jsx)(v, { withGuildIcon: R }),
             j
                 ? null
-                : (0, i.jsx)(y, {
+                : (0, i.jsx)(v, {
                       withGuildIcon: R,
                       inverted: !0,
                       style: { transform: "rotateX(180deg) translateY(-9px)" },
@@ -149,30 +148,30 @@ let j = s.memo(function (e) {
                 ringTarget: F,
                 offset: { top: 2, bottom: 2, right: 4 },
                 children: (0, i.jsxs)("div", {
-                    className: a()(S.Ki, T.iE, T.ZS, { [T.J1]: l, [T.F4]: !l && U, [T.V2]: !U && !l && M, [T.lY]: R }),
-                    onMouseDown: w,
-                    onContextMenu: k,
+                    className: a()(S.Ki, b.iE, b.ZS, { [b.J1]: s, [b.F4]: !s && G, [b.V2]: !G && !s && M, [b.lY]: R }),
+                    onMouseDown: k,
+                    onContextMenu: w,
                     children: [
-                        !M || U || l ? null : (0, i.jsx)("div", { className: a()(T.gy, T.WS) }),
+                        !M || G || s ? null : (0, i.jsx)("div", { className: a()(b.gy, b.WS) }),
                         (0, i.jsx)(d.DUT, {
                             ...H,
                             innerRef: F,
-                            className: T.nf,
+                            className: b.nf,
                             onClick: P,
                             "aria-label": K,
                             focusProps: { enabled: !1 },
                             children: (0, i.jsxs)("div", {
-                                className: a()(T.Y5, T.__invalid_threadMainContent),
+                                className: a()(b.Y5, b.__invalid_threadMainContent),
                                 children: [
-                                    (0, i.jsx)(c.A, { className: T.UU, "aria-hidden": !0, children: t.name }),
+                                    (0, i.jsx)(c.A, { className: b.UU, "aria-hidden": !0, children: t.name }),
                                     (0, i.jsxs)("div", {
-                                        className: T.Y_,
+                                        className: b.Y_,
                                         children: [
-                                            V > 0 && t.userLimit > 0
-                                                ? (0, i.jsx)(E.A, { userCount: V, video: L, channel: t })
+                                            B > 0 && t.userLimit > 0
+                                                ? (0, i.jsx)(E.A, { userCount: B, video: L, channel: t })
                                                 : null,
                                             (0, x.A)(D)
-                                                ? (0, i.jsx)(C.A, { mentionsCount: D, isMentionLowImportance: G })
+                                                ? (0, i.jsx)(I.A, { mentionsCount: D, isMentionLowImportance: U })
                                                 : null,
                                         ],
                                     }),
@@ -182,9 +181,9 @@ let j = s.memo(function (e) {
                     ],
                 }),
             }),
-            (0, i.jsx)(I.A, {
+            (0, i.jsx)(C.A, {
                 channel: t,
-                collapsed: !v && 1 !== O.length,
+                collapsed: !y && 1 !== O.length,
                 collapsedMax: 6,
                 voiceStates: O,
                 isThread: !0,

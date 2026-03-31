@@ -1,54 +1,53 @@
-"use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => p });
 var i = n(627968),
-    s = n(64700),
-    l = n(934551),
-    r = n(397927),
-    a = n(793574),
+    l = n(64700),
+    s = n(934551),
+    a = n(397927),
+    r = n(793574),
     o = n(688810),
     c = n(792656),
     d = n(422258),
     u = n(93055),
     h = n(788868),
     A = n(665606),
-    m = n(985018),
-    p = n(210276),
+    _ = n(985018),
+    m = n(147705),
     g = n(988572);
-function _(e) {
+function p(e) {
     let { theme: t } = e,
-        { hasAccess: _ } = (0, u.TW)("favorites_empty_state"),
-        { analyticsLocations: f } = (0, o.Ay)(a.A.FAVORITES_GUILD_HOME),
-        x = s.useCallback(() => {
-            (0, r.mMO)(async () => {
+        { hasAccess: p } = (0, u.TW)("favorites_empty_state"),
+        { analyticsLocations: f } = (0, o.Ay)(r.A.FAVORITES_GUILD_HOME),
+        x = l.useCallback(() => {
+            (0, a.mMO)(async () => {
                 let { default: e } = await n.e("59839").then(n.bind(n, 889186));
                 return (t) => (0, i.jsx)(e, { ...t, source: "favorites_empty_state" });
             });
         }, []);
     return (0, i.jsx)(o.f5, {
         value: f,
-        children: (0, i.jsx)(r.ppr, {
+        children: (0, i.jsx)(a.ppr, {
             theme: t,
-            children: (0, i.jsxs)(r.BJc, {
+            children: (0, i.jsxs)(a.BJc, {
                 direction: "vertical",
                 align: "center",
                 gap: "md",
                 children: [
-                    (0, i.jsx)(r._V3, { zoomable: !1, src: g.A, width: 197, height: 107 }),
-                    (0, i.jsx)(r.SGT, {
-                        className: p.Y,
-                        noteClassName: p.A,
-                        note: m.intl.string(A.default["+SuGKb"]),
-                        children: m.intl.string(A.default["wh+Rz1"]),
+                    (0, i.jsx)(a._V3, { zoomable: !1, src: g.A, width: 197, height: 107 }),
+                    (0, i.jsx)(a.SGT, {
+                        className: m.Y,
+                        noteClassName: m.A,
+                        note: _.intl.string(A.default["+SuGKb"]),
+                        children: _.intl.string(A.default["wh+Rz1"]),
                     }),
-                    _
-                        ? (0, i.jsx)(r.Button, {
-                              text: m.intl.string(A.default["6kk0gM"]),
+                    p
+                        ? (0, i.jsx)(a.Button, {
+                              text: _.intl.string(A.default["6kk0gM"]),
                               onClick: x,
-                              icon: l.PlusMediumIcon,
+                              icon: s.PlusMediumIcon,
                           })
                         : (0, i.jsx)(c.A, {
                               subscriptionTier: h.pe.TIER_2,
-                              defaultTextOverride: m.intl.string(A.default.yYVbdv),
+                              defaultTextOverride: _.intl.string(A.default.yYVbdv),
                               onSubscribeModalClose: (e) => {
                                   e && (0, d.tV)(!0, "favorites_empty_state");
                               },

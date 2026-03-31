@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { dH: () => r, kX: () => a });
+n.d(t, { dH: () => a, kX: () => r });
 var i = n(311907),
-    s = n(800828),
-    l = n(994500);
-function r(e) {
+    l = n(800828),
+    s = n(994500);
+function a(e) {
     let [t, n] = e;
     return t.getPendingCount() + n.getPendingIncomingCount();
 }
-function a() {
-    return (0, i.bG)([l.A, s.A], () => r([l.A, s.A]));
+function r() {
+    return (0, i.bG)([s.A, l.A], () => a([s.A, l.A]));
 }

@@ -1,27 +1,26 @@
-"use strict";
 n.d(t, { q: () => A }), n(321073);
 var i = n(64700),
-    s = n(311907),
-    l = n(361610),
-    r = n(964486),
-    a = n(36124),
+    l = n(311907),
+    s = n(361610),
+    a = n(964486),
+    r = n(36124),
     o = n(317525),
     c = n(219065),
     d = n(818348),
     u = n(985018);
 let h = [];
 function A(e, t) {
-    (0, r.Ay)(() => {
-        t?.id != null && (0, l.Ey)(t.id, e, a.LD);
+    (0, a.Ay)(() => {
+        t?.id != null && (0, s.Ey)(t.id, e, r.LD);
     });
-    let n = (0, s.bG)([o.A], () => (null != t ? o.A.getSortedRoles(t.id) : [])),
-        { version: A, members: p } = (0, s.cf)([c.A], () => ({
+    let n = (0, l.bG)([o.A], () => (null != t ? o.A.getSortedRoles(t.id) : [])),
+        { version: A, members: _ } = (0, l.cf)([c.A], () => ({
             version: c.A.getMemberListVersion(e),
             members: c.A.getMemberListSections(e),
         })),
-        g = null == t,
-        m = i.useMemo(() => {
-            if (g) return h;
+        m = null == t,
+        g = i.useMemo(() => {
+            if (m) return h;
             let e = n.filter((e) => e.hoist).map((e) => ({ id: e.id, label: e.name }));
             return (
                 e.push(
@@ -30,9 +29,9 @@ function A(e, t) {
                 ),
                 e.map((e) => {
                     let { id: t, label: n } = e;
-                    return { label: n, userIds: p?.[t]?.userIds ?? [], id: t, roleId: t };
+                    return { label: n, userIds: _?.[t]?.userIds ?? [], id: t, roleId: t };
                 })
             );
-        }, [n, p, A, g]);
-    return null != p ? m : h;
+        }, [n, _, A, m]);
+    return null != _ ? g : h;
 }

@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { _: () => i });
 let i = (0, n(945810).mj)({
     name: "2026-02-gsh-game-detection-upsell",

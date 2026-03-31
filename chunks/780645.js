@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { $: () => r });
+n.d(t, { $: () => a });
 var i = n(627968),
-    s = n(64700),
-    l = n(442433);
-function r(e) {
-    return s.useCallback(
+    l = n(64700),
+    s = n(442433);
+function a(e) {
+    return l.useCallback(
         (t) => {
-            (0, l.L3)(t, async () => {
+            (0, s.L3)(t, async () => {
                 let { default: t } = await n.e("38167").then(n.bind(n, 342186));
                 return (n) => (0, i.jsx)(t, { ...n, navId: e });
             });

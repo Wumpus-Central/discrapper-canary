@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Eb: "activity__7ba6e",
     S3: "partyMembers__7ba6e",

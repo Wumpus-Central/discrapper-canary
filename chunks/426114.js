@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     lY: "animation_f2170c",
     vk: "clickable_f2170c",
