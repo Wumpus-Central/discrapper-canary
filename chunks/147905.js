@@ -14,8 +14,8 @@ var n = i(627968),
     h = i(717558),
     p = i(964486),
     x = i(775602),
-    f = i(659974),
-    I = i(66004),
+    f = i(66004),
+    I = i(556525),
     S = i(142524),
     E = i(534400),
     v = i(342296),
@@ -31,7 +31,7 @@ var n = i(627968),
     O = i(810412),
     G = i(652215),
     D = i(985018),
-    P = i(901245);
+    P = i(222128);
 function M(e) {
     switch (e) {
         case G.OSZ.LARGE:
@@ -142,7 +142,7 @@ let z = l.memo(function (e) {
         return (0, n.jsx)("div", {
             className: P.QZ,
             style: { top: r, left: r, width: a, height: a },
-            children: (0, n.jsx)(I.A, {
+            children: (0, n.jsx)(f.A, {
                 userId: i,
                 channelId: l,
                 guildId: s,
@@ -162,7 +162,7 @@ let z = l.memo(function (e) {
                 displayUserMode: A,
                 size: p = G.OSZ.LARGE,
                 onClick: x,
-                onContextMenu: I,
+                onContextMenu: f,
                 context: v,
                 guildId: j,
                 isSettingsPreview: b = !1,
@@ -229,9 +229,9 @@ let z = l.memo(function (e) {
             ),
             eA = l.useCallback(
                 (e) => {
-                    s || I?.(e, r);
+                    s || f?.(e, r);
                 },
-                [s, I, r],
+                [s, f, r],
             ),
             em = l.useCallback(() => {
                 s || (null != eo && L(r.id));
@@ -320,7 +320,7 @@ let z = l.memo(function (e) {
                             isSpeaking: er,
                             voiceDb: ef,
                             speakingStylesConfig: {
-                                spreadDirection: f.O.INSET_ONLY,
+                                spreadDirection: I.O.INSET_ONLY,
                                 maxInnerSpreadRadius: 4,
                                 hideIfVolumeMissing: !0,
                             },
@@ -344,7 +344,7 @@ let z = l.memo(function (e) {
                             isSpeaking: er,
                             voiceDb: ef,
                             speakingStylesConfig: {
-                                spreadDirection: f.O.INSET_ONLY,
+                                spreadDirection: I.O.INSET_ONLY,
                                 maxInnerSpreadRadius: 4,
                                 hideIfVolumeMissing: !0,
                             },
@@ -441,7 +441,7 @@ let z = l.memo(function (e) {
                             i.e("97262"),
                             i.e("11478"),
                             i.e("87997"),
-                            i.e("38142"),
+                            i.e("36468"),
                         ]).then(i.bind(i, 180812));
                         return (
                             (0, O.YX)(G.uss.VOICE_V3, { type: O.Z5.VOICE, value: O.IP.SETTINGS_OPENED, userId: t.id }),
