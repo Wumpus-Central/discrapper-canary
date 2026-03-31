@@ -14,5 +14,4 @@ e.exports = {
     Oh: "ctaBarReducedMargin__00843",
     mR: "persistentCtaSpacer__00843",
     Q: "perksTable__00843",
-    Qc: "videoHeading__00843",
 };
