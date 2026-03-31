@@ -1,54 +1,62 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => h });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(939496),
-    l = n(746002),
-    u = n(996988),
-    c = n(352017);
-function d(e) {
+    o = n(43990),
+    l = n(311907),
+    u = n(939496),
+    c = n(544028),
+    d = n(746002),
+    _ = n(996988),
+    f = n(868572);
+function p(e) {
     let { skuId: t, layer: n } = e,
-        i = (0, l.getCollectiblesItemAssetUrl)({
+        i = (0, d.getCollectiblesItemAssetUrl)({
             skuId: t,
-            assetFormat: l.CollectiblesItemAssetFormat.STATIC,
+            assetFormat: d.CollectiblesItemAssetFormat.STATIC,
             assetId: n.id,
         });
     return null == i
         ? null
         : (0, r.jsx)("div", {
-              className: a()(c.S_, {
-                  [c.im]: "staple" === n.type,
-                  [c.H$]: "rail" === n.type,
-                  [c.Wm]: "front" === n.order,
-                  [c.aX]: "back" === n.order,
-                  [c.Mn]: "top" === n.anchor,
-                  [c.sQ]: "bottom" === n.anchor,
-                  [c.kb]: "left" === n.anchor,
-                  [c.no]: !0 === n.responsive,
+              className: a()(f.S_, {
+                  [f.im]: "staple" === n.type,
+                  [f.H$]: "rail" === n.type,
+                  [f.Wm]: "front" === n.order,
+                  [f.aX]: "back" === n.order,
+                  [f.Mn]: "top" === n.anchor,
+                  [f.sQ]: "bottom" === n.anchor,
+                  [f.kb]: "left" === n.anchor,
+                  [f.no]: !0 === n.responsive,
               }),
               children: (0, r.jsx)("img", { src: i, alt: "" }),
           });
 }
-function _(e) {
+function h(e) {
     let { frame: t } = e,
-        { themeType: n } = (0, o.E)(),
-        s = i.useMemo(
+        n = (0, l.bG)([c.A], () => c.A.theme),
+        { themeType: s } = (0, u.E)(),
+        d = i.useMemo(
             () =>
-                n === u.d.MODAL_V2
+                s === _.d.MODAL_V2
                     ? t.layers.filter((e) => "bottom" !== e.anchor)
-                    : n === u.d.SIDEBAR
+                    : s === _.d.SIDEBAR
                       ? t.layers.filter((e) => "staple" === e.type && "bottom" !== e.anchor)
                       : t.layers,
-            [n, t.layers],
+            [s, t.layers],
         );
-    return 0 === s.length
+    return 0 === d.length
         ? null
-        : (0, r.jsx)("div", {
-              className: c.hH,
-              "aria-label": t.label,
-              role: "img",
-              children: s.map((e) => (0, r.jsx)(d, { skuId: t.skuId, layer: e }, e.id)),
+        : (0, r.jsx)(o.N, {
+              theme: n,
+              children: (e) =>
+                  (0, r.jsx)("div", {
+                      className: a()(f.hH, e),
+                      "aria-label": t.label,
+                      role: "img",
+                      children: d.map((e) => (0, r.jsx)(p, { skuId: t.skuId, layer: e }, e.id)),
+                  }),
           });
 }
