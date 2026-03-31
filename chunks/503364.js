@@ -1,7 +1,7 @@
 n.d(t, { A: () => u, N: () => m });
 var a = n(627968),
-    l = n(64700),
-    i = n(990078),
+    i = n(64700),
+    l = n(990078),
     r = n(397927),
     s = n(442433),
     c = n(50268),
@@ -9,10 +9,10 @@ var a = n(627968),
     d = n(985018);
 function u(e) {
     let { applicationId: t, className: n, trackAction: u } = e,
-        m = l.useRef(null),
+        m = i.useRef(null),
         x = (0, c.A)({ id: t, label: d.intl.string(d.t["FfCL+6"]) }),
-        f = (0, o.n)(t, u);
-    return null == x && null == f
+        h = (0, o.n)(t, u);
+    return null == x && null == h
         ? null
         : (0, a.jsx)(r.YNO, {
               targetElementRef: m,
@@ -30,12 +30,12 @@ function u(e) {
                       "aria-label": d.intl.string(d.t.PNeFgW),
                       onSelect: () => {},
                       children: (0, a.jsxs)(a.Fragment, {
-                          children: [(0, a.jsx)(r.rXV, { children: x }), (0, a.jsx)(r.rXV, { children: f })],
+                          children: [(0, a.jsx)(r.rXV, { children: x }), (0, a.jsx)(r.rXV, { children: h })],
                       }),
                   });
               },
               children: (e) =>
-                  (0, a.jsx)(i.m, {
+                  (0, a.jsx)(l.m, {
                       text: d.intl.string(d.t["UKOtz+"]),
                       children: (0, a.jsx)(r.DUT, {
                           innerRef: m,
@@ -48,13 +48,13 @@ function u(e) {
 }
 function m(e) {
     let { applicationId: t, onClose: n, className: u, trackAction: m } = e,
-        x = l.useRef(null),
-        f = (0, c.A)({ id: t, label: d.intl.string(d.t["FfCL+6"]) }),
-        h = (0, o.n)(t, m);
+        x = i.useRef(null),
+        h = (0, c.A)({ id: t, label: d.intl.string(d.t["FfCL+6"]) }),
+        f = (0, o.n)(t, m);
     return (0, a.jsxs)("div", {
         className: u,
         children: [
-            (null != f || null != h) &&
+            (null != h || null != f) &&
                 (0, a.jsx)(r.YNO, {
                     targetElementRef: x,
                     align: "top",
@@ -70,12 +70,12 @@ function m(e) {
                             "aria-label": d.intl.string(d.t.PNeFgW),
                             onSelect: () => {},
                             children: (0, a.jsxs)(a.Fragment, {
-                                children: [(0, a.jsx)(r.rXV, { children: h }), (0, a.jsx)(r.rXV, { children: f })],
+                                children: [(0, a.jsx)(r.rXV, { children: f }), (0, a.jsx)(r.rXV, { children: h })],
                             }),
                         });
                     },
                     children: (e) =>
-                        (0, a.jsx)(i.m, {
+                        (0, a.jsx)(l.m, {
                             text: d.intl.string(d.t["UKOtz+"]),
                             children: (0, a.jsx)("div", {
                                 ...e,
@@ -83,16 +83,16 @@ function m(e) {
                                 children: (0, a.jsx)(r.K0, {
                                     icon: r.jNK,
                                     variant: "overlay-secondary",
-                                    color: "currentColor",
+                                    size: "sm",
                                     "aria-label": d.intl.string(d.t["UKOtz+"]),
                                 }),
                             }),
                         }),
                 }),
             (0, a.jsx)(r.K0, {
-                icon: r.d$L,
+                icon: r.PGe,
                 variant: "overlay-secondary",
-                color: "currentColor",
+                size: "sm",
                 onClick: n,
                 "aria-label": d.intl.string(d.t.cpT0Cq),
             }),
