@@ -1,10 +1,11 @@
-n.d(t, { A: () => a });
-var i = n(803306),
-    l = n(622543);
+"use strict";
+i.d(t, { A: () => a });
+var n = i(803306),
+    s = i(622543);
 function a(e, t) {
-    if (l.A.isFetchingFriends(e)) return;
-    let n = l.A.getMutualFriendsCount(e);
-    if (0 === n) return;
-    let a = l.A.getMutualFriends(e);
-    if (null == n || null == a || a.length !== n) return (0, i.q0)(e, t);
+    if (s.A.isFetchingFriends(e)) return;
+    let i = s.A.getMutualFriendsCount(e);
+    if (0 === i) return;
+    let a = s.A.getMutualFriends(e);
+    if (null == i || null == a || a.length !== i) return (0, n.q0)(e, t);
 }

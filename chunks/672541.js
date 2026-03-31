@@ -2,9 +2,9 @@
 n.d(t, { G4: () => C }), n(321073);
 var r = n(627968),
     i = n(64700),
-    s = n(608805),
-    a = n(736843),
-    o = n(69882),
+    s = n(736843),
+    a = n(69882),
+    o = n(742810),
     l = n(169797),
     u = n(93159),
     c = n(166532),
@@ -29,8 +29,8 @@ let I = (e) => {
         let {
                 skuId: t,
                 analyticsSourceLocation: n,
-                analyticsLocations: a,
-                orbProductContext: o,
+                analyticsLocations: s,
+                orbProductContext: a,
                 isRedeeming: l,
                 orbRedemptionError: u,
                 onRedeemVirtualCurrency: c,
@@ -45,13 +45,13 @@ let I = (e) => {
             } = (0, h.HG)({
                 skuId: t,
                 analyticsSourceLocation: n,
-                analyticsLocations: a,
-                orbProductContext: o,
+                analyticsLocations: s,
+                orbProductContext: a,
                 orbRedemptionError: u,
                 onRedeemVirtualCurrency: c,
             }),
             { disabled: S, tooltipText: y, text: v } = (0, m.J6)({ orbBalance: f, orbPriceAmount: _ }),
-            N = (0, s.D7)({ location: "orb_checkout_review_step" }),
+            N = (0, o.D7)({ location: "orb_checkout_review_step" }),
             C = (0, i.useMemo)(
                 () => ({ onClick: p, loading: l, text: v, disabled: S, tooltipText: y }),
                 [p, l, v, S, y],
@@ -101,7 +101,7 @@ let I = (e) => {
         let {
                 renderStep: t,
                 paymentModalStepProps: n,
-                sharedCheckoutContext: { skuId: i, analyticsLocations: s, analyticsSourceLocation: a },
+                sharedCheckoutContext: { skuId: i, analyticsLocations: s, analyticsSourceLocation: o },
             } = e,
             { handleClose: u } = n;
         (0, h.e1)({ handleClose: u });
@@ -109,7 +109,7 @@ let I = (e) => {
             m = I({
                 skuId: i,
                 analyticsLocations: s,
-                analyticsSourceLocation: a,
+                analyticsSourceLocation: o,
                 orbProductContext: c,
                 isRedeeming: d,
                 orbRedemptionError: f,
@@ -119,7 +119,7 @@ let I = (e) => {
             let { primaryButtonProps: e, ...t } = m;
             return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(_.dZ, { children: (0, r.jsx)(o.rg, { ...t }) }),
+                    (0, r.jsx)(_.dZ, { children: (0, r.jsx)(a.rg, { ...t }) }),
                     (0, r.jsx)(_.UX, { children: (0, r.jsx)(l.lo, { primaryButtonProps: e }) }),
                 ],
             });
@@ -130,7 +130,7 @@ let I = (e) => {
         let { onClose: t, step: n } = e;
         return (0, r.jsx)(d.A, { isOrbCheckout: !0, step: n, onClose: () => t(!1) });
     },
-    y = (0, a.Mz)(),
+    y = (0, s.Mz)(),
     v = (0, i.createContext)({
         isRedeeming: !1,
         orbRedemptionError: null,
