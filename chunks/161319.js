@@ -1,4 +1,4 @@
-r.d(t, { Recurring3PModal: () => y, u: () => P }), r(321073);
+r.d(t, { Recurring3PModal: () => S, u: () => T }), r(321073);
 var a = r(627968),
     n = r(64700),
     s = r(158954),
@@ -9,57 +9,67 @@ var a = r(627968),
     c = r(405269),
     u = r(975571),
     m = r(927578),
-    _ = r(792656),
-    p = r(264779),
-    f = r(597758),
-    h = r(35587),
-    b = r(412260),
-    x = r(852218),
-    g = r(729640),
-    C = r(116011),
-    A = r(788868),
-    R = r(652215),
-    v = r(985018),
-    j = r(276478);
-let N = () =>
-        Object.entries(C.oL).map((e) => {
+    _ = r(398523),
+    p = r(881373),
+    f = r(792656),
+    h = r(264779),
+    b = r(597758),
+    x = r(35587),
+    g = r(412260),
+    C = r(852218),
+    A = r(729640),
+    R = r(116011),
+    v = r(788868),
+    j = r(652215),
+    E = r(985018),
+    N = r(276478);
+let y = (e) => {
+        let { partnerIds: t } = e;
+        return (
+            null != t
+                ? Object.entries(R.oL).filter((e) => {
+                      let [r] = e;
+                      return t.includes(r);
+                  })
+                : Object.entries(R.oL)
+        ).map((e) => {
             let [t, r] = e;
             return (0, a.jsx)(
                 "div",
                 {
-                    className: j.lA,
+                    className: N.lA,
                     children: (0, a.jsxs)("div", {
-                        className: j.LV,
+                        className: N.LV,
                         children: [
                             (0, a.jsxs)("div", {
-                                className: j.JN,
+                                className: N.JN,
                                 children: [
                                     (0, a.jsx)("div", {
-                                        className: j.MC,
+                                        className: N.MC,
                                         children: (0, a.jsx)(s.XAi, { size: "refresh_sm" }),
                                     }),
                                     (0, a.jsxs)("div", {
-                                        className: j.yO,
+                                        className: N.yO,
                                         children: [
                                             (0, a.jsx)(s.DZT, {
                                                 variant: "heading-lg/semibold",
                                                 color: "text-strong",
-                                                children: v.intl.string(r.title),
+                                                children: E.intl.formatToPlainString(r.title, r.titleParams ?? {}),
                                             }),
                                             (0, a.jsx)(s.DZT, {
                                                 variant: "heading-sm/medium",
                                                 color: "text-subtle",
-                                                children: v.intl.string(r.body),
+                                                children: E.intl.formatToPlainString(r.body, r.bodyParams ?? {}),
                                             }),
                                         ],
                                     }),
                                 ],
                             }),
                             (0, a.jsx)("div", {
-                                className: j.R4,
+                                className: N.R4,
                                 children: (0, a.jsx)(l._V3, {
                                     src: r.asset,
-                                    className: j.Ys,
+                                    className: N.Ys,
                                     width: 100,
                                     height: 100,
                                     zoomable: !1,
@@ -70,8 +80,9 @@ let N = () =>
                 },
                 t,
             );
-        }),
-    E = (e) => {
+        });
+    },
+    I = (e) => {
         let { promotionRecurrences: t } = e,
             [r, i] = n.useState(t.length > 1),
             [l, o] = n.useState([]);
@@ -81,107 +92,118 @@ let N = () =>
             }, [t]),
             (0, a.jsxs)("div", {
                 children: [
-                    l.map((e) => (0, a.jsx)(C.wx, { recurrence: e, showPartnerLogo: !0, showPartnerImage: !0 }, e.id)),
+                    l.map((e) => (0, a.jsx)(R.wx, { recurrence: e, showPartnerLogo: !0, showPartnerImage: !0 }, e.id)),
                     r &&
                         (0, a.jsx)(s.DUT, {
-                            className: j.K8,
+                            className: N.K8,
                             onClick: () => {
                                 i(!1), o([...l, ...t.slice(1)]);
                             },
                             children: (0, a.jsx)(s.EYj, {
                                 variant: "text-sm/medium",
                                 color: "text-subtle",
-                                children: v.intl.string(v.t.rjjZxV),
+                                children: E.intl.string(E.t.rjjZxV),
                             }),
                         }),
                 ],
             })
         );
     },
-    I = (e) =>
-        e.promotionType === x.pt.THIRD_PARTY_OUTBOUND_RECURRING
+    P = (e) =>
+        e.promotionType === C.pt.THIRD_PARTY_OUTBOUND_RECURRING
             ? (e.partnerId?.toLowerCase() ?? null)
             : e.outboundTitle.toLowerCase(),
-    y = (e) => {
+    S = (e) => {
         let t,
             r,
-            { transitionState: n, onClose: l } = e,
-            { promotionsLoaded: d, claimedOutboundPromotionCodeMap: x } = (0, h.y7)(),
-            y = (0, i.yK)([b.A], () => b.A.outboundRecurringPromotions),
-            P = (0, i.bG)([o.default], () => o.default.getCurrentUser()),
-            T = !1 === m.Ay.isPremiumExactly(P, A.PremiumTypes.TIER_2),
-            S = P?.isFractionalPremiumWithNoStandardSub(),
-            w = null == P || T || S;
-        if (!1 === d) return (0, a.jsx)(s.y$y, {});
-        let O = ((e) => {
-            let { promotions: t, codesByPromotion: r } = e,
-                a = {};
+            l,
+            d,
+            { transitionState: S, onClose: T, partnerIds: w } = e,
+            O =
+                ((t = _.A.useExperiment({ location: "Recurring3PModal" }).enabled),
+                (r = (0, p.YS)({ location: "Recurring3PModal" }).functionalityEnabled),
+                n.useMemo(() => {
+                    let e = [];
+                    return t && e.push(C.KS, C.Cs), r && e.push(C.XY), null != w ? w.filter((t) => e.includes(t)) : e;
+                }, [t, r, w])),
+            { promotionsLoaded: D, claimedOutboundPromotionCodeMap: M } = (0, x.y7)(),
+            U = (0, i.yK)([g.A], () => g.A.outboundRecurringPromotions),
+            L = (0, i.bG)([o.default], () => o.default.getCurrentUser()),
+            B = !1 === m.Ay.isPremiumExactly(L, v.PremiumTypes.TIER_2),
+            k = L?.isFractionalPremiumWithNoStandardSub(),
+            G = null == L || B || k;
+        if (!1 === D) return (0, a.jsx)(s.y$y, {});
+        let V = ((e) => {
+            let { promotions: t, codesByPromotion: r, partnerIds: a } = e,
+                n = {};
             return (
                 t
                     .filter(
-                        (e) => !0 === (0, p.HB)({ promotionPartner: e.outboundTitle, promotionType: e.promotionType }),
+                        (e) => !0 === (0, h.HB)({ promotionPartner: e.outboundTitle, promotionType: e.promotionType }),
                     )
                     .forEach((e) => {
-                        let t = I(e),
-                            n = ((e) => {
+                        let t = P(e),
+                            s = ((e) => {
                                 let { promotion: t } = e,
-                                    r = I(t);
-                                return null == r ? null : (C.oL[r] ?? null);
+                                    r = P(t);
+                                return null == r ? null : (R.oL[r] ?? null);
                             })({ promotion: e });
-                        if (null == t || null == n) return;
-                        t in a || (a[t] = []);
-                        let s = {
+                        if (null == t || null == s || (null != a && !a.includes(t))) return;
+                        t in n || (n[t] = []);
+                        let i = {
                             id: e.id,
                             partnerId: t,
                             startDate: e.startDate,
                             endDate: e.endDate,
                             code: r[e.id] ?? null,
-                            ...n,
+                            ...s,
+                            title: E.intl.formatToPlainString(s.title, s.titleParams ?? {}),
+                            body: E.intl.formatToPlainString(s.body, s.bodyParams ?? {}),
                         };
-                        a[t].push(s);
+                        n[t].push(i);
                     }),
-                a
+                n
             );
-        })({ promotions: y, codesByPromotion: x });
+        })({ promotions: U, codesByPromotion: M, partnerIds: O });
         return (0, a.jsx)(s.Modal, {
-            title: v.intl.string(v.t["7ioAjs"]),
-            subtitle: v.intl.format(v.t.LOYRxB, { helpCenterLink: u.A.getArticleURL(R.MVz.RECURRING_PROMOTION) }),
+            title: E.intl.string(E.t["7ioAjs"]),
+            subtitle: E.intl.format(E.t.LOYRxB, { helpCenterLink: u.A.getArticleURL(j.MVz.RECURRING_PROMOTION) }),
             actions: [],
             preview: (() => {
-                if (!0 === w)
-                    return (0, a.jsx)(_.A, {
-                        subscriptionTier: A.pe.TIER_2,
+                if (!0 === G)
+                    return (0, a.jsx)(f.A, {
+                        subscriptionTier: v.pe.TIER_2,
                         fullWidth: !0,
                         onClick: () => {
-                            l();
+                            T();
                         },
                         onSubscribeModalClose: (e) => {
-                            if (e) return f.Ay.fetchActivePromotions();
+                            if (e) return b.Ay.fetchActivePromotions();
                         },
                     });
             })(),
-            transitionState: n,
-            onClose: l,
+            transitionState: S,
+            onClose: T,
             children:
-                ((t = (0, c.N5)()),
-                (r = (0, c.P6)()),
-                w
-                    ? (0, a.jsx)(N, {})
+                ((l = (0, c.N5)()),
+                (d = (0, c.P6)()),
+                G
+                    ? (0, a.jsx)(y, { partnerIds: O })
                     : (0, a.jsxs)("div", {
-                          className: j.kL,
+                          className: N.kL,
                           children: [
                               (0, a.jsx)("div", {
-                                  className: j.Ps,
+                                  className: N.Ps,
                                   children: (0, a.jsx)(s.EYj, {
                                       variant: "text-md/medium",
                                       color: "text-subtle",
-                                      children: v.intl.format(v.t["43kZKL"], { days: r }),
+                                      children: E.intl.format(E.t["43kZKL"], { days: d }),
                                   }),
                               }),
-                              (0, a.jsx)("div", { className: j.G9, children: (0, a.jsx)(g.P, { percentage: t }) }),
+                              (0, a.jsx)("div", { className: N.G9, children: (0, a.jsx)(A.P, { percentage: l }) }),
                               (0, a.jsx)("div", {
-                                  className: j.kR,
-                                  children: Object.entries(O)
+                                  className: N.kR,
+                                  children: Object.entries(V)
                                       .sort((e, t) => {
                                           let [r] = e,
                                               [a] = t;
@@ -189,19 +211,19 @@ let N = () =>
                                       })
                                       .map((e) => {
                                           let [t, r] = e;
-                                          return (0, a.jsx)(E, { promotionRecurrences: r }, t);
+                                          return (0, a.jsx)(I, { promotionRecurrences: r }, t);
                                       }),
                               }),
                           ],
                       })),
         });
     },
-    P = (e) => {
-        let { analyticsLocations: t } = e;
-        d.default.track(R.HAw.RECURRING_PROMOTION_MODAL_OPENED, { location_stack: t }),
-            f.Ay.fetchActivePromotions(),
+    T = (e) => {
+        let { analyticsLocations: t, partnerIds: n } = e;
+        d.default.track(j.HAw.RECURRING_PROMOTION_MODAL_OPENED, { location_stack: t }),
+            b.Ay.fetchActivePromotions(),
             (0, l.mMO)(async () => {
                 let { Recurring3PModal: e } = await Promise.resolve().then(r.bind(r, 161319));
-                return (t) => (0, a.jsx)(e, { ...t });
+                return (t) => (0, a.jsx)(e, { ...t, partnerIds: n });
             });
     };

@@ -1,4 +1,4 @@
-r.d(t, { oL: () => j, wx: () => P });
+r.d(t, { oL: () => E, wx: () => S });
 var a = r(627968),
     n = r(64700),
     s = r(158954),
@@ -9,40 +9,45 @@ var a = r(627968),
     c = r(405269),
     u = r(975571),
     m = r(728458),
-    _ = r(264779),
-    p = r(852218),
-    f = r(699443),
-    h = r(729640),
-    b = r(652215),
-    x = r(653624),
-    g = r(985018),
-    C = r(276478),
-    A = r(861223),
+    _ = r(881373),
+    p = r(264779),
+    f = r(852218),
+    h = r(699443),
+    b = r(729640),
+    x = r(652215),
+    g = r(653624),
+    C = r(985018),
+    A = r(276478),
     R = r(870378),
-    v = r(8496);
-let j = {
-        [p.XY]: {
-            title: x.default.jkdhZq,
-            body: x.default.Yl5ww1,
-            bodyWithExpiration: x.default.Yl5ww1,
+    v = r(208556),
+    j = r(8496);
+let E = {
+        [f.XY]: {
+            title: g.default.LsJ9hj,
+            titleParams: { discountPercent: _.aW },
+            body: g.default.Yl5ww1,
+            bodyWithExpiration: g.default["6KjkUa"],
             redemptionURL: "https://www.logitech.com/",
-            logos: { dark: (0, a.jsx)(f.a1, {}), light: (0, a.jsx)(f.Gn, {}) },
-            asset: A,
-        },
-        [p.KS]: {
-            title: g.t.sfGgOG,
-            body: g.t.igiSKe,
-            bodyWithExpiration: g.t.w8CXUl,
-            redemptionURL: "https://steelseries.com/",
-            logos: { dark: (0, a.jsx)(f.a1, {}), light: (0, a.jsx)(f.Gn, {}) },
+            logos: {
+                dark: (0, a.jsx)(n.Fragment, {}, "logitech-logo-dark"),
+                light: (0, a.jsx)(n.Fragment, {}, "logitech-logo-light"),
+            },
             asset: v.A,
         },
-        [p.Cs]: {
-            title: g.t["9N8obd"],
-            body: g.t["34g+Z3"],
-            bodyWithExpiration: g.t.rqmpXc,
+        [f.KS]: {
+            title: C.t.sfGgOG,
+            body: C.t.igiSKe,
+            bodyWithExpiration: C.t.w8CXUl,
+            redemptionURL: "https://steelseries.com/",
+            logos: { dark: (0, a.jsx)(h.a1, {}), light: (0, a.jsx)(h.Gn, {}) },
+            asset: j.A,
+        },
+        [f.Cs]: {
+            title: C.t["9N8obd"],
+            body: C.t["34g+Z3"],
+            bodyWithExpiration: C.t.rqmpXc,
             redemptionURL: "https://www.kontrolfreek.com/",
-            logos: { dark: (0, a.jsx)(f.WF, {}), light: (0, a.jsx)(f.s, {}) },
+            logos: { dark: (0, a.jsx)(h.WF, {}), light: (0, a.jsx)(h.s, {}) },
             asset: R.A,
         },
     },
@@ -50,21 +55,21 @@ let j = {
         let e = (0, c.N5)(),
             t = (0, c.P6)();
         return (0, a.jsxs)("div", {
-            className: `${C.G9} ${C.sQ}`,
+            className: `${A.G9} ${A.sQ}`,
             children: [
                 (0, a.jsx)(s.EYj, {
                     variant: "text-sm/normal",
                     color: "text-muted",
-                    className: C.kT,
-                    children: g.intl.format(x.default["65EEvD"], { days: t }),
+                    className: A.kT,
+                    children: C.intl.format(g.default["65EEvD"], { days: t }),
                 }),
-                (0, a.jsx)(h.P, { percentage: e }),
+                (0, a.jsx)(b.P, { percentage: e }),
             ],
         });
     },
-    E = (e) => {
+    y = (e) => {
         let { children: t } = e;
-        return (0, a.jsx)("div", { className: C.oP, children: (0, a.jsx)("div", { className: C.t0, children: t }) });
+        return (0, a.jsx)("div", { className: A.oP, children: (0, a.jsx)("div", { className: A.t0, children: t }) });
     },
     I = (e) => {
         let { recurrence: t } = e,
@@ -82,12 +87,12 @@ let j = {
             [o, c] = n.useState(() => i);
         if (null != t.code)
             return (0, a.jsx)("div", {
-                className: C.oP,
+                className: A.oP,
                 children: (0, a.jsxs)("div", {
-                    className: C.t0,
+                    className: A.t0,
                     children: [
                         (0, a.jsx)("div", {
-                            className: C.cD,
+                            className: A.cD,
                             children: (0, a.jsx)(s.EYj, {
                                 variant: "text-md/medium",
                                 color: "text-strong",
@@ -98,17 +103,17 @@ let j = {
                         (0, a.jsx)(s.$nd, {
                             variant: "overlay-primary",
                             size: "sm",
-                            text: g.intl.formatToPlainString(g.t.DF68t7, { redemptionURL: t.redemptionURL }),
+                            text: C.intl.formatToPlainString(C.t.DF68t7, { redemptionURL: t.redemptionURL }),
                             onClick: () => {
                                 window.open(t.redemptionURL, "_blank"),
-                                    d.default.track(b.HAw.RECURRING_PROMOTION_CLAIMED);
+                                    d.default.track(x.HAw.RECURRING_PROMOTION_CLAIMED);
                             },
                         }),
                     ],
                 }),
             });
     },
-    y = (e) => {
+    P = (e) => {
         let { recurrence: t, canBeClaimed: r, hasClaimError: n, setCode: i, setHasClaimError: l, className: o } = e;
         return r
             ? n
@@ -119,7 +124,7 @@ let j = {
                           variant: "critical-secondary",
                           size: "sm",
                           disabled: !0,
-                          text: g.intl.string(g.t["8LKchl"]),
+                          text: C.intl.string(C.t["8LKchl"]),
                       }),
                   })
                 : (0, a.jsx)("div", {
@@ -128,9 +133,9 @@ let j = {
                           icon: s.XAi,
                           variant: "overlay-primary",
                           size: "sm",
-                          text: g.intl.string(g.t.vwASIl),
+                          text: C.intl.string(C.t.vwASIl),
                           onClick: () => {
-                              (0, _.kd)({ promotionId: t.id, analyticsLocations: [] })
+                              (0, p.kd)({ promotionId: t.id, analyticsLocations: [] })
                                   .then((e) => {
                                       i(e.code);
                                   })
@@ -142,7 +147,7 @@ let j = {
                   })
             : null;
     },
-    P = (e) => {
+    S = (e) => {
         var t;
         let r,
             d,
@@ -150,65 +155,67 @@ let j = {
                 recurrence: c,
                 titleClassName: m,
                 showPartnerLogo: _ = !1,
-                showPartnerImage: f = !1,
+                showPartnerImage: p = !1,
                 titleVariant: h = "primary",
-                displayCTAInDedicatedFooter: x = !1,
+                displayCTAInDedicatedFooter: b = !1,
             } = e,
-            [A, R] = n.useState(c.code),
-            [v, P] = n.useState(!1),
-            T =
+            [g, R] = n.useState(c.code),
+            [v, j] = n.useState(!1),
+            S =
                 ((t = c.partnerId),
                 (r = (0, i.bG)([o.A], () => (0, s.Mwr)(o.A.theme))),
-                null == (d = j[t]) ? null : r ? d.logos.dark : d.logos.light),
-            S = null == A;
+                null == (d = E[t]) ? null : r ? d.logos.dark : d.logos.light),
+            T = null == g;
         return (0, a.jsxs)("div", {
-            className: C.lA,
+            className: A.lA,
             children: [
                 (0, a.jsxs)("div", {
-                    className: C.LV,
+                    className: A.LV,
                     children: [
                         (0, a.jsxs)("div", {
-                            className: C.JN,
+                            className: A.JN,
                             children: [
-                                _ && T,
+                                _ && S,
                                 (0, a.jsxs)("div", {
-                                    className: null != m ? `${C.yO} ${m}` : C.yO,
+                                    className: null != m ? `${A.yO} ${m}` : A.yO,
                                     children: [
                                         (0, a.jsx)(s.DZT, {
                                             variant: "secondary" === h ? "heading-md/semibold" : "heading-lg/semibold",
                                             color: "text-strong",
-                                            children: g.intl.string(c.title),
+                                            children: c.title,
                                         }),
                                         (0, a.jsx)(s.DZT, {
                                             variant: "heading-sm/medium",
                                             color: "text-subtle",
                                             children: v
-                                                ? g.intl.format(g.t.i2EuFO, {
-                                                      helpdeskArticle: u.A.getArticleURL(b.MVz.RECURRING_PROMOTION),
+                                                ? C.intl.format(C.t.i2EuFO, {
+                                                      helpdeskArticle: u.A.getArticleURL(x.MVz.RECURRING_PROMOTION),
                                                   })
-                                                : S
-                                                  ? g.intl.string(c.body)
-                                                  : g.intl.format(c.bodyWithExpiration, { date: c.endDate }),
+                                                : T
+                                                  ? c.body
+                                                  : null != c.bodyWithExpiration
+                                                    ? C.intl.format(c.bodyWithExpiration, { date: c.endDate })
+                                                    : c.body,
                                         }),
                                     ],
                                 }),
-                                !x &&
-                                    (0, a.jsx)(y, {
+                                !b &&
+                                    (0, a.jsx)(P, {
                                         recurrence: c,
-                                        canBeClaimed: S,
+                                        canBeClaimed: T,
                                         hasClaimError: v,
                                         setCode: R,
-                                        setHasClaimError: P,
+                                        setHasClaimError: j,
                                     }),
                             ],
                         }),
-                        f &&
+                        p &&
                             (0, a.jsx)("div", {
-                                className: C.R4,
+                                className: A.R4,
                                 children: (0, a.jsx)(l._V3, {
                                     src: c.asset ?? "",
-                                    className: C.Ys,
-                                    imageClassName: c.partnerId === p.XY ? C.Cy : void 0,
+                                    className: A.Ys,
+                                    imageClassName: c.partnerId === f.XY ? A.Cy : void 0,
                                     width: 100,
                                     height: 100,
                                     zoomable: !1,
@@ -216,18 +223,18 @@ let j = {
                             }),
                     ],
                 }),
-                x && (0, a.jsx)(N, {}),
-                null != A && (0, a.jsx)(I, { recurrence: { ...c, code: A } }),
-                x &&
-                    null == A &&
-                    (0, a.jsx)(E, {
-                        children: (0, a.jsx)(y, {
+                b && (0, a.jsx)(N, {}),
+                null != g && (0, a.jsx)(I, { recurrence: { ...c, code: g } }),
+                b &&
+                    null == g &&
+                    (0, a.jsx)(y, {
+                        children: (0, a.jsx)(P, {
                             recurrence: c,
-                            canBeClaimed: S,
+                            canBeClaimed: T,
                             hasClaimError: v,
                             setCode: R,
-                            setHasClaimError: P,
-                            className: C.qx,
+                            setHasClaimError: j,
+                            className: A.qx,
                         }),
                     }),
             ],

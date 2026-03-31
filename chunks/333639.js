@@ -1,16 +1,17 @@
-n.d(t, { e: () => o });
+n.d(t, { e: () => d });
 var i = n(627968);
 n(64700);
-var a = n(435371),
-    l = n(653624),
-    r = n(985018),
-    s = n(8496);
-function o(e) {
+var l = n(435371),
+    a = n(881373),
+    r = n(653624),
+    s = n(985018),
+    o = n(208556);
+function d(e) {
     let { children: t } = e;
-    return (0, i.jsx)(a.un, {
-        body: r.intl.string(l.default["8Gl8gP"]),
-        title: r.intl.string(l.default.OlObRa),
-        asset: (0, i.jsx)("img", { src: s.A, alt: "", "aria-hidden": !0, style: { borderRadius: 8 } }),
+    return (0, i.jsx)(l.un, {
+        body: s.intl.format(r.default.zinfZi, { discountPercent: a.aW }),
+        title: s.intl.string(r.default.OlObRa),
+        asset: (0, i.jsx)("img", { src: o.A, alt: "", "aria-hidden": !0, style: { borderRadius: 8 } }),
         assetSize: 80,
         padding: "lg",
         position: "right",
