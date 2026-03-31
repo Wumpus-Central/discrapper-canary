@@ -5,9 +5,9 @@ var r = n(627968),
     s = n(158954),
     a = n(827734),
     o = n(812745),
-    l = n(756366),
+    l = n(523376),
     u = n(985018),
-    c = n(355767);
+    c = n(478969);
 let d = "new_payment_source_id";
 function _(e) {
     let {
@@ -23,7 +23,8 @@ function _(e) {
         } = e,
         A = i.useMemo(() => {
             let e = _.map((e) => {
-                let t = e.icon ? (0, r.jsx)("img", { src: (0, o.Nj)(e.icon), alt: "", className: c.s7 }) : void 0;
+                let t =
+                    null != e.icon ? (0, r.jsx)("img", { src: (0, o.Nj)(e.icon), alt: "", className: c.s7 }) : void 0;
                 return {
                     id: e.id,
                     value: e.id,

@@ -36,7 +36,7 @@ var n = s(627968),
     P = s(652215),
     D = s(650583),
     H = s(985018),
-    w = s(229781);
+    w = s(173422);
 let F = (e) => {
         let { children: t, shouldAddEventListener: s, onClose: n } = e,
             l = (0, c.useHasAnyModalOpen)();
@@ -60,7 +60,7 @@ let F = (e) => {
         let c = (0, B.yB)("CollectiblesShop"),
             { onClose: D } = (0, N.tR)(),
             { currentTab: G, hasFilters: U } = (0, j.v)(),
-            V = r.useMemo(() => (t === M.G2.HOME && G && U() ? G : t), [t, G, U]),
+            V = r.useMemo(() => (t === M.G2.HOME && null != G && U() ? G : t), [t, G, U]),
             { categories: K, refreshCategories: W } = (0, v.Ay)({ logPerf: !0 }, { sessionId: s, tab: V }),
             z = r.useMemo(() => [...K.values()], [K]),
             [Y, $] = r.useState(),

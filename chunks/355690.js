@@ -11,7 +11,7 @@ var n = i(627968),
     m = i(885737),
     g = i(239093),
     p = i(652215),
-    N = i(521705);
+    N = i(288034);
 function A(e) {
     let { classificationId: t, transitionState: i, initialSlide: A = g.yN.SPEED_BUMP, onClose: h } = e,
         [j, u] = a.useState(A),
@@ -27,11 +27,11 @@ function A(e) {
         }, [h]),
         v = a.useCallback(() => {
             let e = g.A8[j]?.next;
-            e ? u(e) : T();
+            null != e ? u(e) : T();
         }, [j, T]),
         k = a.useCallback(() => {
             let e = g.A8[j]?.prev;
-            e ? u(e) : T();
+            null != e ? u(e) : T();
         }, [j, T]);
     return (0, n.jsx)(l.EOs, {
         "data-migration-pending": !0,

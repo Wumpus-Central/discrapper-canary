@@ -1,11 +1,11 @@
-n.d(t, { A: () => y });
+n.d(t, { A: () => T });
 var a = n(582754),
-    s = n(736653),
-    i = n(439174),
+    i = n(736653),
+    s = n(439174),
     l = n(881141),
     r = n(788868),
     o = n(164741),
-    d = n(118713),
+    d = n(341094),
     c = n(115245),
     u = n(915880),
     m = n(203683),
@@ -20,7 +20,7 @@ var a = n(582754),
     j = n(128640),
     A = n(146925),
     C = n(789996);
-let S = {
+let y = {
         [r.Ac.PREMIUM_TENURE_1_MONTH]: { dark: " #D76C1F, #F79C53", light: " #8E2A0B, #D4681C" },
         [r.Ac.PREMIUM_TENURE_3_MONTH]: { dark: " #8F9E9E, #C0CBD1", light: " #53555F, #697979" },
         [r.Ac.PREMIUM_TENURE_6_MONTH]: { dark: " #ED8200, #FFCE46", light: " #744400, #CC7000" },
@@ -30,7 +30,7 @@ let S = {
         [r.Ac.PREMIUM_TENURE_60_MONTH]: { dark: " #E83068, #FF8F70", light: " #881141, #DD1852" },
         [r.Ac.PREMIUM_TENURE_72_MONTH]: { dark: " #829AE8, #DDB4FF, #A2D6FF", light: " #6881D4, #956CB8, #5491A0" },
     },
-    T = {
+    S = {
         [r.Ac.PREMIUM_TENURE_1_MONTH]: { dark: o.A, light: g.A },
         [r.Ac.PREMIUM_TENURE_3_MONTH]: { dark: d.A, light: _.A },
         [r.Ac.PREMIUM_TENURE_6_MONTH]: { dark: c.A, light: f.A },
@@ -40,22 +40,22 @@ let S = {
         [r.Ac.PREMIUM_TENURE_60_MONTH]: { dark: x.A, light: A.A },
         [r.Ac.PREMIUM_TENURE_72_MONTH]: { dark: p.A, light: C.A },
     };
-function y() {
+function T() {
     let e = (0, l.A)(),
-        t = (0, a.Mw)((0, s.Ay)());
-    if (!e) return null;
-    let n = S[e],
-        o = T[e],
+        t = (0, a.Mw)((0, i.Ay)());
+    if (null == e) return null;
+    let n = y[e],
+        o = S[e],
         d = {
-            currentBadge: (0, i.e0)(e),
+            currentBadge: (0, s.e0)(e),
             currentBadgeTextGradient: t ? n?.dark : n?.light,
             levelUpVideoSrc: t ? o?.dark : o?.light,
         },
         c = r.sp.indexOf(e);
     if (c > 0) {
         let e = r.sp[c - 1],
-            n = S[e];
-        (d.prevBadge = (0, i.e0)(e)), (d.prevBadgeTextGradient = t ? n?.dark : n?.light);
+            n = y[e];
+        (d.prevBadge = (0, s.e0)(e)), (d.prevBadgeTextGradient = t ? n?.dark : n?.light);
     }
     return d;
 }

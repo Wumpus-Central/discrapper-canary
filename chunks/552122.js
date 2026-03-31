@@ -14,12 +14,12 @@ function a() {
     return e >= r.A.startTimeMs && e <= r.A.endTimeMs;
 }
 function o() {
-    return i() && r.A.soundpack ? r.A.soundpack : null;
+    return i() && null != r.A.soundpack ? r.A.soundpack : null;
 }
 let l = {
     isEligible: i,
     useHolidaySoundpack: function () {
-        return s() && r.A.soundpack && null != r.A.soundpackLabel
+        return s() && null != r.A.soundpack && null != r.A.soundpackLabel
             ? { soundpack: r.A.soundpack, soundpackLabel: r.A.soundpackLabel }
             : null;
     },

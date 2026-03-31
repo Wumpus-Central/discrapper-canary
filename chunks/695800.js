@@ -41,7 +41,7 @@ function m(e) {
         targetPremiumGuildTier: d,
     } = e;
     (0, l.zV)(c.HAw.PREMIUM_GUILD_PROMOTION_OPENED, {
-        location: { section: i, object: c.ZSU.LEARN_MORE, objectType: d ? (0, o.k1)(d) : void 0 },
+        location: { section: i, object: c.ZSU.LEARN_MORE, objectType: null != d ? (0, o.k1)(d) : void 0 },
         guild_id: t.id,
         location_stack: n,
     }),
