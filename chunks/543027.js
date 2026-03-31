@@ -20,7 +20,7 @@ function f(e, t) {
     let n = (0, i.bG)([a.A], () => a.A.currentOrder),
         d = (0, i.bG)([a.A], () => a.A.currentOrderId),
         f = (0, i.bG)([a.A], () => a.A.isCreatingOrder),
-        p = l.A.useExperiment({ location: "payment_modal" }).enabled,
+        p = l.A.useConfig({ location: "payment_modal" }).enabled,
         h = (0, r.useRef)(null),
         m = (0, r.useRef)(""),
         E = (0, r.useRef)(!1),
