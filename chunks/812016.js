@@ -1,32 +1,31 @@
-"use strict";
-r.d(t, { I: () => o });
-var n = r(627968);
-r(64700);
-var i = r(397927),
-    s = r(224016),
-    a = r(985018),
-    l = r(20865),
-    c = r(461727);
-let o = () => {
-    let e = [a.t.E1NP2x, a.t.kpMomJ, a.t.xT1Vfn, a.t.myyAEr, a.t.zTk8Ul];
-    return (0, n.jsxs)("div", {
+n.d(t, { I: () => c });
+var r = n(627968);
+n(64700);
+var a = n(397927),
+    i = n(224016),
+    s = n(985018),
+    l = n(20865),
+    o = n(461727);
+let c = () => {
+    let e = [s.t.E1NP2x, s.t.kpMomJ, s.t.xT1Vfn, s.t.myyAEr, s.t.zTk8Ul];
+    return (0, r.jsxs)("div", {
         className: l.kL,
         children: [
-            (0, n.jsx)("img", { src: c.A, alt: "", className: l.ym }),
-            (0, n.jsx)(s.A, { color: "white" }),
-            (0, n.jsx)("div", {
+            (0, r.jsx)("img", { src: o.A, alt: "", className: l.ym }),
+            (0, r.jsx)(i.A, { color: "white" }),
+            (0, r.jsx)("div", {
                 className: l.PX,
                 children: e.map((e, t) =>
-                    (0, n.jsxs)(
+                    (0, r.jsxs)(
                         "div",
                         {
                             className: l.UJ,
                             children: [
-                                (0, n.jsx)(i.Uzd, { color: i.LU0.colors.WHITE }),
-                                (0, n.jsx)(i.Text, {
+                                (0, r.jsx)(a.Uzd, { color: a.LU0.colors.WHITE }),
+                                (0, r.jsx)(a.Text, {
                                     variant: "text-sm/medium",
                                     color: "always-white",
-                                    children: a.intl.string(e),
+                                    children: s.intl.string(e),
                                 }),
                             ],
                         },

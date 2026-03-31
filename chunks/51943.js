@@ -72,7 +72,7 @@ function m(e) {
                     i.e("56475"),
                     i.e("59541"),
                     i.e("54469"),
-                    i.e("47428"),
+                    i.e("3243"),
                 ]).then(i.bind(i, 544676));
                 return (t) => (0, n.jsx)(e, { ...t, guild: m });
             });

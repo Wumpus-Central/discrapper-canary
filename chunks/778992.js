@@ -1,30 +1,29 @@
-"use strict";
-r.d(t, { X: () => i });
-var n = r(64700);
-function i(e) {
-    let { slideCount: t, intervalMs: r = 3e3 } = e,
-        [i, s] = (0, n.useState)(0),
-        [a, l] = (0, n.useState)(!1),
-        c = (0, n.useCallback)(
+n.d(t, { X: () => a });
+var r = n(64700);
+function a(e) {
+    let { slideCount: t, intervalMs: n = 3e3 } = e,
+        [a, i] = (0, r.useState)(0),
+        [s, l] = (0, r.useState)(!1),
+        o = (0, r.useCallback)(
             (e) => {
-                a ||
+                s ||
                     e < 0 ||
                     e >= t ||
                     (l(!0),
                     setTimeout(() => {
-                        s(e), l(!1);
+                        i(e), l(!1);
                     }, 300));
             },
-            [a, t, 300],
+            [s, t, 300],
         );
     return (
-        (0, n.useEffect)(() => {
+        (0, r.useEffect)(() => {
             if (t <= 1) return;
             let e = setInterval(() => {
-                c((i + 1) % t);
-            }, r);
+                o((a + 1) % t);
+            }, n);
             return () => clearInterval(e);
-        }, [t, r, i, c]),
-        { activeSlide: i, isTransitioning: a }
+        }, [t, n, a, o]),
+        { activeSlide: a, isTransitioning: s }
     );
 }

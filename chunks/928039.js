@@ -1,12 +1,11 @@
-"use strict";
-a.d(t, { A: () => l });
+a.d(t, { A: () => o });
 var n = a(64700),
     i = a(884362),
     r = a(311907),
-    s = a(775602);
-function l(e, t, a) {
-    let l = (0, r.bG)([s.A], () => s.A.keyboardModeEnabled),
-        o = n.useCallback(
+    l = a(775602);
+function o(e, t, a) {
+    let o = (0, r.bG)([l.A], () => l.A.keyboardModeEnabled),
+        s = n.useCallback(
             (e) => {
                 let a = document.querySelector(e),
                     n = t.current;
@@ -34,8 +33,8 @@ function l(e, t, a) {
         );
     return (0, i.Ay)({
         id: e,
-        isEnabled: l,
-        setFocus: o,
+        isEnabled: o,
+        setFocus: s,
         scrollToStart: _,
         scrollToEnd: c,
         orientation: a?.orientation,

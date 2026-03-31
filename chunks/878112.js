@@ -1,23 +1,22 @@
-"use strict";
-r.d(t, { A: () => v });
-var n = r(627968),
-    i = r(64700),
-    s = r(575593),
-    a = r(990078),
-    l = r(397927),
-    o = r(688810),
-    c = r(44120),
-    d = r(954571),
-    u = r(440938),
-    m = r(238184),
-    p = r(766172),
-    h = r(652215),
-    x = r(788868),
-    f = r(985018);
+n.d(t, { A: () => v });
+var r = n(627968),
+    a = n(64700),
+    i = n(575593),
+    s = n(990078),
+    l = n(397927),
+    o = n(688810),
+    c = n(44120),
+    d = n(954571),
+    u = n(440938),
+    m = n(238184),
+    p = n(766172),
+    h = n(652215),
+    x = n(788868),
+    f = n(985018);
 let v = (e) => {
     let {
             product: t,
-            primary: r,
+            primary: n,
             selectedVariantIndex: v,
             returnRef: g,
             onSuccess: _,
@@ -26,8 +25,8 @@ let v = (e) => {
             giftRecipient: C,
             giftingOrigin: N = x.vQ.SHOP_PAGE,
         } = e,
-        { analyticsLocations: b } = (0, o.Ay)(),
-        I = i.useRef(null),
+        { analyticsLocations: I } = (0, o.Ay)(),
+        b = a.useRef(null),
         R = (0, u.uM)(),
         T = (0, m.A)(),
         E = (e) => {
@@ -37,7 +36,7 @@ let v = (e) => {
                     sku_id: t.skuId,
                     page_section: R?.pageSection,
                     page_category: R?.pageCategory,
-                    tile_type: s.R[t.type],
+                    tile_type: i.R[t.type],
                     tile_position: String(R?.tilePosition),
                     cta_name: "gift button",
                     page_type: T || "home",
@@ -47,7 +46,7 @@ let v = (e) => {
                     isGift: !0,
                     giftRecipient: C,
                     giftingOrigin: N,
-                    analyticsLocations: b,
+                    analyticsLocations: I,
                     returnRef: g,
                     onClose:
                         null != _
@@ -58,20 +57,20 @@ let v = (e) => {
                 });
         };
     return j
-        ? (0, n.jsx)(l.Button, {
-              variant: r ? "primary" : "secondary",
+        ? (0, r.jsx)(l.Button, {
+              variant: n ? "primary" : "secondary",
               icon: l.okO,
               onClick: E,
               text: f.intl.string(f.t.gmnzqM),
               fullWidth: !0,
           })
-        : (0, n.jsx)(a.m, {
+        : (0, r.jsx)(s.m, {
               text: f.intl.string(f.t["JCFN/y"]),
               delay: A,
-              children: (0, n.jsx)(l.K0, {
+              children: (0, r.jsx)(l.K0, {
                   "aria-label": f.intl.string(f.t["JCFN/y"]),
-                  buttonRef: I,
-                  variant: r ? "primary" : "secondary",
+                  buttonRef: b,
+                  variant: n ? "primary" : "secondary",
                   icon: l.okO,
                   size: "md",
                   onClick: E,

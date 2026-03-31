@@ -1,7 +1,7 @@
 n.d(t, { Cr: () => T, I1: () => y, Nj: () => S, R6: () => j, SX: () => N, UB: () => L, YE: () => R }), n(938796);
 var i = n(627968),
-    a = n(64700),
-    r = n(665260),
+    r = n(64700),
+    a = n(665260),
     l = n(311907),
     s = n(571356),
     o = n(990078),
@@ -32,7 +32,7 @@ function T(e) {
         placeholderVersion: t.placeholder_version,
         contentType: t.content_type,
         originalContentType: t.original_content_type,
-        srcIsAnimated: (0, r.Lt)(t.flags ?? 0, E.sbO.IS_ANIMATED),
+        srcIsAnimated: (0, a.Lt)(t.flags ?? 0, E.sbO.IS_ANIMATED),
         sourceMetadata: {
             message: e.message,
             identifier: { type: "attachment", attachmentId: t.id, filename: t.filename, title: t.title, size: t.size },
@@ -43,47 +43,56 @@ function T(e) {
 function y(e) {
     let t = e.item.originalItem,
         { newEmbedUi: n } = c.Q.useConfig({ location: "VideoComponentForMessageAttachment" }),
-        _ = (0, r.Lt)(t.flags ?? 0, E.sbO.IS_CLIP),
+        _ = (0, a.Lt)(t.flags ?? 0, E.sbO.IS_CLIP),
         h = (0, l.bG)([A.A], () => A.A.getBasicChannel(e.message.channel_id)?.guild_id),
-        g = a.useCallback(
+        g = r.useCallback(
             () =>
-                _
-                    ? n
-                        ? (0, i.jsx)(u.A, {
-                              createdAt: null != t.clip_created_at ? Date.parse(t.clip_created_at) : void 0,
-                              participantIds:
-                                  t.clip_participants?.map((e) => {
-                                      let { id: t } = e;
-                                      return t;
-                                  }) ?? [],
-                              applicationId: t.application?.id,
-                              title: t.title,
-                              guildId: h,
-                          })
-                        : (0, i.jsx)(o.m, {
-                              text: b.intl.string(b.t["/fgfWh"]),
-                              children: (0, i.jsxs)("div", {
-                                  className: v.M,
-                                  children: [
-                                      (0, i.jsx)(d.xgA, { size: "xs", color: "currentColor" }),
-                                      (0, i.jsx)(s.E, {
-                                          variant: "text-xs/semibold",
-                                          color: "always-white",
-                                          children: b.intl.string(b.t.oA4afG),
-                                      }),
-                                  ],
-                              }),
-                          })
-                    : null,
+                !_ || n
+                    ? null
+                    : (0, i.jsx)(o.m, {
+                          text: b.intl.string(b.t["/fgfWh"]),
+                          children: (0, i.jsxs)("div", {
+                              className: v.M,
+                              children: [
+                                  (0, i.jsx)(d.xgA, { size: "xs", color: "currentColor" }),
+                                  (0, i.jsx)(s.E, {
+                                      variant: "text-xs/semibold",
+                                      color: "always-white",
+                                      children: b.intl.string(b.t.oA4afG),
+                                  }),
+                              ],
+                          }),
+                      }),
+            [_, n],
+        ),
+        x = r.useCallback(
+            (e) => {
+                let { playerState: r, isControlBarExpanded: a } = e;
+                return _ && n
+                    ? (0, i.jsx)(u.A, {
+                          createdAt: null != t.clip_created_at ? Date.parse(t.clip_created_at) : void 0,
+                          participantIds:
+                              t.clip_participants?.map((e) => {
+                                  let { id: t } = e;
+                                  return t;
+                              }) ?? [],
+                          applicationId: t.application?.id,
+                          title: t.title,
+                          guildId: h,
+                          playerState: r,
+                          isControlBarExpanded: a,
+                      })
+                    : null;
+            },
             [t, _, n, h],
         ),
-        x = f.A.toURLSafe(t.proxy_url);
-    if (null == x) return null;
-    if ((x.searchParams.append("format", "webp"), _ && n)) {
-        let { width: n, height: a, naturalWidth: r, naturalHeight: l } = e,
-            s = (0, m.AE)({ src: x.toString(), width: n, height: a });
+        T = f.A.toURLSafe(t.proxy_url);
+    if (null == T) return null;
+    if ((T.searchParams.append("format", "webp"), _ && n)) {
+        let { width: n, height: r, naturalWidth: a, naturalHeight: l } = e,
+            s = (0, m.AE)({ src: T.toString(), width: n, height: r });
         return (0, i.jsx)("div", {
-            style: { width: "100%", aspectRatio: `${n} / ${a}` },
+            style: { width: "100%", aspectRatio: `${n} / ${r}` },
             children: (0, i.jsx)(p.A, {
                 src: t.url,
                 downloadUrl: t.url,
@@ -92,8 +101,8 @@ function y(e) {
                 posterPlaceholder: t.placeholder,
                 posterPlaceholderVersion: t.placeholder_version,
                 active: !1,
-                orientation: r >= l ? "landscape" : "portrait",
-                renderOverlay: g,
+                orientation: a >= l ? "landscape" : "portrait",
+                renderPersistentOverlay: x,
                 targetTimeSec: 1 / 0,
                 parentTransitionState: null,
                 onOptimisticProgressUpdate: () => {},
@@ -104,13 +113,13 @@ function y(e) {
     return (0, I.$o)({
         ...e,
         alt: t.description,
-        poster: x.toString(),
+        poster: T.toString(),
         fileSize: t.size,
         fileName: (0, C.A)(t),
         src: t.url,
         placeholder: t.placeholder,
         placeholderVersion: t.placeholder_version,
-        srcIsAnimated: (0, r.Lt)(t.flags ?? 0, E.sbO.IS_ANIMATED),
+        srcIsAnimated: (0, a.Lt)(t.flags ?? 0, E.sbO.IS_ANIMATED),
         renderOverlayContent: g,
         sourceMetadata: {
             message: e.message,
@@ -125,20 +134,20 @@ function S(e) {
 function N(e) {
     let { message: t, item: n } = e,
         i = n.originalItem,
-        r = (0, h.dx)(h.k0.VOICE_MESSAGE, i.id),
-        l = a.useCallback(
-            (e, n, a) => {
+        a = (0, h.dx)(h.k0.VOICE_MESSAGE, i.id),
+        l = r.useCallback(
+            (e, n, r) => {
                 (0, g.wQ)(t.id, i.duration_secs ?? null, n, t.author.id);
             },
             [t, i.duration_secs],
         ),
-        s = a.useCallback(
+        s = r.useCallback(
             (e, n) => {
                 (0, g.dP)(t.id, i.duration_secs ?? null, e, t.author.id, n);
             },
             [t, i.duration_secs],
         ),
-        o = a.useCallback(
+        o = r.useCallback(
             (e) => {
                 (0, g._O)(t.id, e?.message ?? null);
             },
@@ -154,7 +163,7 @@ function N(e) {
         onPlay: l,
         onPause: s,
         onError: o,
-        playbackCacheKey: r,
+        playbackCacheKey: a,
     });
 }
 function j(e) {
@@ -171,8 +180,8 @@ function R(e) {
 }
 function P(e) {
     let { attachment: t, message: n } = e,
-        a = n.channel_id,
-        r = (0, l.bG)([A.A], () => A.A.getBasicChannel(a)?.guild_id),
+        r = n.channel_id,
+        a = (0, l.bG)([A.A], () => A.A.getBasicChannel(r)?.guild_id),
         { clip_created_at: s, clip_participants: o, title: d, application: c } = t;
     return (0, i.jsx)(_.A, {
         createdAt: null != s ? Date.parse(s) : void 0,
@@ -183,6 +192,6 @@ function P(e) {
             }) ?? [],
         applicationId: c?.id,
         title: d,
-        guildId: r,
+        guildId: a,
     });
 }

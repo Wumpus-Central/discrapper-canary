@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     st: "panelGroup__2f37f",
     Hk: "rightAligned__2f37f",

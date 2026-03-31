@@ -1,6 +1,7 @@
 e.exports = {
     oK: "overlayHeader__4774c",
     Lu: "overlayGradient__4774c",
+    pd: "minimized__4774c",
     s$: "overlayContent__4774c",
     yR: "textInfo__4774c",
     $: "titleRow__4774c",

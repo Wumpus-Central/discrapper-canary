@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     ch: "classificationContainer_a48d6b",
     uW: "section_a48d6b",

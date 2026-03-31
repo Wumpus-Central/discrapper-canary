@@ -1,18 +1,17 @@
-"use strict";
-a.d(t, { A: () => h });
+a.d(t, { A: () => g });
 var n = a(627968),
     i = a(64700),
     r = a(503698),
-    s = a.n(r),
+    l = a.n(r),
     o = a(97808),
-    l = a(863610),
+    s = a(863610),
     _ = a(397927),
     c = a(573435);
 a(883392);
 var d = a(942158);
 let u = {},
     f = 1 / 4;
-function p(e) {
+function m(e) {
     let { height: t, fillColor: a } = e;
     return (0, n.jsx)("div", {
         style: {
@@ -24,16 +23,16 @@ function p(e) {
             height: t,
             width: 2.5 * t,
         },
-        children: (0, n.jsx)(l.n, { className: d.r$, dotRadius: t * f }),
+        children: (0, n.jsx)(s.n, { className: d.r$, dotRadius: t * f }),
     });
 }
-function m(e) {
+function p(e) {
     let { isTyping: t, statusCoords: a, status: i } = e,
         r = (0, _.S31)(_.clD.ONLINE);
     return t
         ? (0, n.jsx)("div", {
               style: { position: "absolute", top: a.y, left: a.x },
-              children: (0, n.jsx)(p, { height: a.height, fillColor: r }),
+              children: (0, n.jsx)(m, { height: a.height, fillColor: r }),
           })
         : null != i
           ? (0, n.jsx)(_.nW6, { size: a.height, status: i, style: { position: "absolute", top: a.y, left: a.x } })
@@ -43,7 +42,7 @@ function A(e) {
     let { src: t, size: a } = e;
     return (0, n.jsx)("img", { className: d.tM, src: t, alt: "", width: a, height: a });
 }
-let g = {
+let h = {
         [_._3J.SIZE_16]: {
             default: c.hW.DIAGONAL_FACEPILE_16,
             typing: c.hW.DIAGONAL_FACEPILE_TYPING_16,
@@ -111,10 +110,10 @@ let g = {
             back: c.hW.DIAGONAL_FACEPILE_BACK_120,
         },
     },
-    h = function (e) {
+    g = function (e) {
         var t;
-        let { backSrc: a, frontSrc: r, size: l, isTyping: f, status: p, style: h, className: b, ...I } = e,
-            { size: v } = _.vCh[l],
+        let { backSrc: a, frontSrc: r, size: s, isTyping: f, status: m, style: g, className: b, ...I } = e,
+            { size: v } = _.vCh[s],
             {
                 statusCoords: C,
                 frontAvatarOffsetPx: y,
@@ -129,7 +128,7 @@ let g = {
                     r = `${v}-${f}`;
                 return (
                     u[r] ??
-                    ((a = +(t = (e = _.vCh[l]).size / 1.5)),
+                    ((a = +(t = (e = _.vCh[s]).size / 1.5)),
                     (n = 0.5 * t),
                     (i = {
                         statusCoords: (0, o.Rb)(e, _.clD.ONLINE, { isTyping: f, isMobile: !1, isVR: !1 }),
@@ -141,14 +140,14 @@ let g = {
                     (u[r] = i),
                     i)
                 );
-            }, [v, f, l]),
-            S = ((t = null != p), f ? g[l].typing : t ? g[l].status : g[l].default),
-            T = g[l].back;
+            }, [v, f, s]),
+            S = ((t = null != m), f ? h[s].typing : t ? h[s].status : h[s].default),
+            T = h[s].back;
         return (0, n.jsxs)("div", {
-            style: { width: v, height: v, ...h },
+            style: { width: v, height: v, ...g },
             "aria-label": I["aria-label"],
             "aria-hidden": I["aria-hidden"],
-            className: s()(d.kL, b),
+            className: l()(d.kL, b),
             children: [
                 (0, n.jsxs)(c.Ay, {
                     mask: S,
@@ -163,11 +162,11 @@ let g = {
                         }),
                         (0, n.jsx)("div", {
                             style: { position: "absolute", top: y, left: y },
-                            children: (0, n.jsx)(A, { src: r, size: x, isTyping: f, status: p }),
+                            children: (0, n.jsx)(A, { src: r, size: x, isTyping: f, status: m }),
                         }),
                     ],
                 }),
-                (0, n.jsx)(m, { statusCoords: C, status: p, isTyping: f }),
+                (0, n.jsx)(p, { statusCoords: C, status: m, isTyping: f }),
             ],
         });
     };

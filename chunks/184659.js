@@ -1,26 +1,25 @@
-"use strict";
-r.d(t, { z: () => u });
-var n = r(627968),
-    i = r(311907),
-    s = r(287070),
-    a = r(101058),
-    l = r(836602),
-    c = r(927578),
-    o = r(132198),
-    d = r(194866);
+n.d(t, { z: () => u });
+var r = n(627968),
+    a = n(311907),
+    i = n(287070),
+    s = n(101058),
+    l = n(836602),
+    o = n(927578),
+    c = n(132198),
+    d = n(194866);
 let u = (e) => {
     let { user: t } = e,
-        r = c.Ay.canUsePremiumProfileCustomization(t),
-        { pendingAvatar: u, ...m } = (0, i.cf)([l.A], () => l.A.getPendingChanges()),
-        p = (0, a.V7)({ userId: t.id, image: u });
-    return (0, n.jsx)("div", {
+        n = o.Ay.canUsePremiumProfileCustomization(t),
+        { pendingAvatar: u, ...m } = (0, a.cf)([l.A], () => l.A.getPendingChanges()),
+        p = (0, s.V7)({ userId: t.id, image: u });
+    return (0, r.jsx)("div", {
         className: d.k,
-        children: (0, n.jsx)(s.A, {
+        children: (0, r.jsx)(i.A, {
             ...m,
             pendingAvatar: p,
             user: t,
-            pendingBadges: [(0, o._)()],
-            canUsePremiumCustomization: r,
+            pendingBadges: [(0, c._)()],
+            canUsePremiumCustomization: n,
             disabledInputs: !0,
             hideExampleButton: !0,
         }),
