@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { A: () => s }), n(321073);
+n.d(t, { A: () => a }), n(321073);
 var r = n(752163);
 function i(e) {
     return { id: e.payloadType, name: e.mimeType.split("/").slice(1)[0] };
 }
-function a(e) {
+function s(e) {
     return null === e || 0 === e;
 }
-function s(e, t, n, s, o) {
+function a(e, t, n, a, o) {
     let l = {},
         u = {},
         c = [],
@@ -32,7 +32,7 @@ function s(e, t, n, s, o) {
     for (let e of d) {
         let t = u[e.codecId];
         if (null == t) continue;
-        let s = {
+        let a = {
             type: e.kind,
             ssrc: e.ssrc,
             timestamp: e.timestamp,
@@ -43,11 +43,11 @@ function s(e, t, n, s, o) {
             packetsSent: e.packetsSent,
             bitrateTarget: e.targetBitrate,
         };
-        if ("audio" === e.kind) f.push({ ...s, type: "audio" });
+        if ("audio" === e.kind) f.push({ ...a, type: "audio" });
         else if ("video" === e.kind && o) {
             let t = null !== e.frameWidth ? { width: e.frameWidth, height: e.frameHeight } : void 0;
             f.push({
-                ...s,
+                ...a,
                 framesEncoded: e.framesEncoded,
                 keyFramesEncoded: e.keyFramesEncoded,
                 firCount: e.firCount,
@@ -55,20 +55,22 @@ function s(e, t, n, s, o) {
                 pliCount: e.pliCount,
                 qpSum: e.qpSum,
                 averageEncodeTime:
-                    null == e.framesEncoded || a(e.totalEncodeTime)
+                    null == e.framesEncoded || s(e.totalEncodeTime)
                         ? void 0
                         : ((1e3 * e.totalEncodeTime) / e.framesEncoded).toFixed(1),
                 resolution: t,
                 framesSent: e.framesSent,
                 frameRateInput: e.framesPerSecond,
+                encoderImplementationName: e.encoderImplementation,
+                powerEfficientEncoder: e.powerEfficientEncoder,
                 type: "video",
             });
         }
     }
     let p = {};
     for (let e of c) {
-        let a = u[e.codecId];
-        if (null == a) continue;
+        let s = u[e.codecId];
+        if (null == s) continue;
         let o = t(e.ssrc);
         if (null == o) continue;
         let l = {
@@ -77,9 +79,9 @@ function s(e, t, n, s, o) {
             timestamp: e.timestamp,
             sinkWant: (0, r.D)(n, e.ssrc, "video" === e.kind),
             sinkWantAsInt: (0, r.q)(n, e.ssrc),
-            sinkWantLocal: (0, r.D)(s, e.ssrc, "video" === e.kind),
-            sinkWantLocalAsInt: (0, r.q)(s, e.ssrc),
-            codec: i(a),
+            sinkWantLocal: (0, r.D)(a, e.ssrc, "video" === e.kind),
+            sinkWantLocalAsInt: (0, r.q)(a, e.ssrc),
+            codec: i(s),
             bytesReceived: e.bytesReceived,
             packetsReceived: e.packetsReceived,
             packetsLost: e.packetsLost,
@@ -116,7 +118,8 @@ function s(e, t, n, s, o) {
                 totalFramesDuration: 1e3 * (e.totalInterFrameDelay ?? 0),
                 sumOfSquaredFramesDurations: e.totalSquaredInterFrameDelay,
                 qpSum: e.qpSum,
-                decoderImplementationName: "WebRTC",
+                decoderImplementationName: e.decoderImplementation ?? "WebRTC",
+                powerEfficientDecoder: e.powerEfficientDecoder,
             });
         }
     }

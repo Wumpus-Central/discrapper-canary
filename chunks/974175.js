@@ -1,4 +1,4 @@
-r.d(t, { R: () => F, f8: () => u, q7: () => D }), r(321073), r(134528), r(947204);
+r.d(t, { R: () => v, f8: () => u, q7: () => D }), r(321073), r(134528), r(947204);
 var n = r(627968),
     a = r(64700),
     i = r(796873),
@@ -65,8 +65,8 @@ let u = {
     framesReceived: "Frames Received",
     framesSent: "Frames Sent",
     freezeCount: "Freeze Count",
-    hostname: "Hostname",
     hdrFrames: "HDR Frames",
+    hostname: "Hostname",
     hybridCaptureMethodSwitches: "Hybrid Capture Method Switches",
     hybridDxgiFrames: "Hybrid DXGI Frames",
     hybridGdiBitBltFrames: "Hybrid GDI BitBlt Frames",
@@ -101,6 +101,8 @@ let u = {
     pauseCount: "Pause Count",
     ping: "Ping",
     pliCount: "PLI",
+    powerEfficientDecoder: "Power Efficient Decoder",
+    powerEfficientEncoder: "Power Efficient Encoder",
     preemptiveExpandRate: "Pre-emptive Expand Rate",
     qpSum: "QP Sum",
     qualityDecodeErrors: "Encoder Quality Decode Errors",
@@ -149,20 +151,20 @@ function h(e) {
 function y(e) {
     return `${e.toFixed(0)}%`;
 }
-function A(e) {
+function f(e) {
     return e ? "Yes" : "No";
 }
-function f(e) {
+function A(e) {
     return 20 * Math.log(e);
 }
 function g(e) {
     let { last: t } = e;
     return `${t} ms`;
 }
-function v(e) {
+function F(e) {
     return e.toFixed(2);
 }
-let F = {
+let v = {
         audioJitterBuffer: !0,
         audioJitterDelay: !0,
         audioJitterTarget: !0,
@@ -197,15 +199,15 @@ let F = {
     },
     C = {
         accelerateRate: y,
-        audioDetected: A,
+        audioDetected: f,
         audioLevel: function (e) {
-            return e <= 0 ? "-∞ dB" : `${f(e).toFixed(2)} dB`;
+            return e <= 0 ? "-∞ dB" : `${A(e).toFixed(2)} dB`;
         },
         availableOutgoingBitrate: c,
         averageDecodeTime: h,
         averageEncodeTime: h,
-        bandwidthLimitedFrameRate: A,
-        bandwidthLimitedResolution: A,
+        bandwidthLimitedFrameRate: f,
+        bandwidthLimitedResolution: f,
         bitrate: c,
         bitrateTarget: c,
         bytesReceived: m,
@@ -214,18 +216,18 @@ let F = {
             let { id: t, name: r } = e;
             return (r = (r = "" === r ? "unknown" : r) ?? "unknown"), `${r[0].toUpperCase()}${r.slice(1)} (${t})`;
         },
-        cpuLimitedResolution: A,
+        cpuLimitedResolution: f,
+        currentDelay: h,
         currentSampleRate: function (e) {
             return e % 100 == 0 ? `${e / 1e3} kHz` : `${e} Hz`;
         },
-        currentDelay: h,
         decoderImplementationName: p,
         delayEstimate: h,
         encoderImplementationName: p,
         encoderQualityPsnr: function (e) {
             return `${Math.max(e, 0).toFixed(2)} dB`;
         },
-        encoderQualityVmaf: v,
+        encoderQualityVmaf: F,
         encodeUsage: y,
         expandRate: y,
         filter: p,
@@ -239,6 +241,8 @@ let F = {
         outboundBitrateEstimate: c,
         pacerDelay: h,
         ping: h,
+        powerEfficientDecoder: f,
+        powerEfficientEncoder: f,
         preemptiveExpandRate: y,
         receiverBitrateEstimate: c,
         relativePlayoutDelay: g,
@@ -249,15 +253,15 @@ let F = {
             return `${t}x${r}`;
         },
         sampleRateMismatchPercent: y,
-        screenshareCapturedFps: v,
-        screenshareCapturedFpsUnique: v,
+        screenshareCapturedFps: F,
+        screenshareCapturedFpsUnique: F,
         secondaryDecodedRate: y,
         secureFramesProtocolVersion: function (e) {
             return e > 0 ? `Version ${e}` : "Disabled";
         },
         speechExpandRate: y,
         targetDelay: h,
-        videoEntropy: v,
+        videoEntropy: F,
         videohookBackend: function (e) {
             let t = ["N/A", "Direct3D 9", "Direct3D 10", "Direct3D 11", "Direct3D 12", "OpenGL", "Vulkan"];
             return e < t.length ? t[e] : "Unknown";
@@ -265,11 +269,11 @@ let F = {
     },
     b = {
         audioLevel: function (e) {
-            return Math.max(f(e), -100) + 100;
+            return Math.max(A(e), -100) + 100;
         },
     },
-    x = (e) => e,
-    E = (e) => {
+    E = (e) => e,
+    x = (e) => {
         let [t] = a.useState([]);
         return (
             t.push({ value: e.value, time: Date.now() }),
@@ -279,14 +283,14 @@ let F = {
     };
 function D(e) {
     let { label: t, value: r, section: a } = e,
-        i = C[t] ?? x,
+        i = C[t] ?? E,
         s = b[t],
         c =
             l.iA[t] &&
             (Array.isArray(r) && r.length > 0 && "number" == typeof r[0].value
                 ? (0, n.jsx)(o.A, { converter: s, dataPoints: r, width: 300, height: 100 })
                 : "number" == typeof r
-                  ? (0, n.jsx)(E, { converter: s, value: r, width: 300, height: 100 })
+                  ? (0, n.jsx)(x, { converter: s, value: r, width: 300, height: 100 })
                   : void 0),
         m = Array.isArray(r) ? r.at(-1)?.value : r;
     return (0, n.jsx)(d.A, { label: t, valueRendered: i(m), section: a, renderGraph: c, children: u[t] ?? t });

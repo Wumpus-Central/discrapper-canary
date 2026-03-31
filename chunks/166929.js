@@ -76,6 +76,7 @@ var c = (function (e) {
             (e.WMF_SW = "wmf_sw"),
             (e.WMF_HW = "wmf_hw"),
             (e.WMF_DIRECT_3D = "wmf_direct_3d"),
+            (e.WMF_CHROME = "wmf_chrome"),
             (e.UNCATEGORIZED = "uncategorized"),
             (e.UNKNOWN = "unknown"),
             e
@@ -93,11 +94,13 @@ var c = (function (e) {
             (e.QUALCOMM = "qualcomm"),
             (e.MEDIATEK = "mediatek"),
             (e.UNCATEGORIZED = "uncategorized"),
+            (e.D3D11VIDEODECODER = "d3d11videodecoder"),
             (e.UNKNOWN = "unknown"),
             e
         );
     })({});
 let f = Object.freeze({
+        mediafoundationvideoencodeaccelerator: "wmf_chrome",
         "nvidia: cuda": "nvidia_cuda",
         "nvidia: direct3d": "nvidia_direct_3d",
         "amd: direct3d": "amd_direct_3d",
@@ -130,6 +133,7 @@ let f = Object.freeze({
         "omx.qcom": "qualcomm",
         "c2.mtk": "mediatek",
         "omx.mtk": "mediatek",
+        d3d11videodecoder: "d3d11videodecoder",
     });
 var h = (function (e) {
     return (
