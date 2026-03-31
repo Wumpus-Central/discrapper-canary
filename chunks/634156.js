@@ -1,16 +1,16 @@
-n.d(t, { i: () => a });
+n.d(t, { i: () => s });
 var r = n(627968);
 n(64700);
 var l = n(827734),
-    i = n(260612),
-    s = n(953727);
-let a = (e) => {
-    let { size: t = "md", width: n, height: a, color: o = l.A.colors.INTERACTIVE_TEXT_DEFAULT, ...u } = e,
-        c = (0, i.J)(t),
+    a = n(260612),
+    i = n(953727);
+let s = (e) => {
+    let { size: t = "md", width: n, height: s, color: o = l.A.colors.INTERACTIVE_TEXT_DEFAULT, ...u } = e,
+        c = (0, a.J)(t),
         d = c?.width ?? n,
-        m = c?.height ?? a;
+        m = c?.height ?? s;
     return (0, r.jsxs)("svg", {
-        ...(0, s.A)(u),
+        ...(0, i.A)(u),
         xmlns: "http://www.w3.org/2000/svg",
         width: d,
         height: m,

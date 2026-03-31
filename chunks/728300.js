@@ -10,14 +10,15 @@ async function n(e) {
         width: l,
         height: s,
         imageRotation: f = 0,
-        resizeWidth: c = null,
-        resizeHeight: m = null,
-        format: u,
+        flipHorizontal: c = !1,
+        resizeWidth: m = null,
+        resizeHeight: u = null,
+        format: d,
     } = e;
     try {
         let e;
         (e =
-            "webp" === u
+            "webp" === d
                 ? await (0, o.a6)({
                       webp: r,
                       x: t,
@@ -25,8 +26,9 @@ async function n(e) {
                       width: l,
                       height: s,
                       imageRotation: f,
-                      resizeWidth: c,
-                      resizeHeight: m,
+                      flipHorizontal: c,
+                      resizeWidth: m,
+                      resizeHeight: u,
                   })
                 : await (0, a.N)({
                       gif: r,
@@ -35,8 +37,9 @@ async function n(e) {
                       width: l,
                       height: s,
                       imageRotation: f,
-                      resizeWidth: c,
-                      resizeHeight: m,
+                      flipHorizontal: c,
+                      resizeWidth: m,
+                      resizeHeight: u,
                   })),
             self.postMessage({ type: i.lA.CROP_ANIMATED_IMAGE_COMPLETE, result: e });
     } catch (t) {
@@ -55,6 +58,7 @@ self.addEventListener("message", (e) => {
             width: r.width,
             height: r.height,
             imageRotation: r.imageRotation,
+            flipHorizontal: r.flipHorizontal,
             resizeWidth: r.resizeWidth,
             resizeHeight: r.resizeHeight,
             format: r.format,

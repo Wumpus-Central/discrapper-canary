@@ -1,23 +1,23 @@
-n.d(t, { I: () => a });
+n.d(t, { I: () => s });
 var r = n(627968);
 n(64700);
 var l = n(827734),
-    i = n(260612),
-    s = n(953727);
-let a = (e) => {
+    a = n(260612),
+    i = n(953727);
+let s = (e) => {
     let {
             size: t = "md",
             width: n,
-            height: a,
+            height: s,
             color: o = l.A.colors.INTERACTIVE_TEXT_DEFAULT,
             colorClass: u = "",
             ...c
         } = e,
-        d = (0, i.J)(t),
+        d = (0, a.J)(t),
         m = d?.width ?? n,
-        p = d?.height ?? a;
+        p = d?.height ?? s;
     return (0, r.jsx)("svg", {
-        ...(0, s.A)(c),
+        ...(0, i.A)(c),
         xmlns: "http://www.w3.org/2000/svg",
         width: m,
         height: p,

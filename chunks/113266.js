@@ -36,7 +36,7 @@ var i = n(627968),
     k = n(652215),
     U = n(980504),
     P = n(985018),
-    w = n(656489);
+    w = n(973770);
 let B = L.isPlatformEmbedded || "Safari" !== o().name;
 function F() {
     let e = (0, d.bG)([D.A], () => D.A.getProps().guild),
@@ -169,7 +169,7 @@ function K(e) {
               text: P.intl.string(P.t["/uNYPJ"]),
               onClick: function () {
                   (0, g.mMO)(async () => {
-                      let { default: e } = await Promise.all([n.e("40556"), n.e("18550")]).then(n.bind(n, 228884));
+                      let { default: e } = await Promise.all([n.e("40556"), n.e("43198")]).then(n.bind(n, 6503));
                       return (n) => (0, i.jsx)(e, { ...n, guildId: t.id });
                   });
               },
@@ -305,8 +305,8 @@ function Y(e) {
                               onClick: function (e) {
                                   e.stopPropagation(),
                                       (0, g.mMO)(async () => {
-                                          let { default: e } = await Promise.all([n.e("40556"), n.e("18550")]).then(
-                                              n.bind(n, 228884),
+                                          let { default: e } = await Promise.all([n.e("40556"), n.e("43198")]).then(
+                                              n.bind(n, 6503),
                                           );
                                           return (n) => (0, i.jsx)(e, { ...n, guildId: o.id, existingSound: t });
                                       });

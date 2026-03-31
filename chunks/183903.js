@@ -55,7 +55,7 @@ function M(e) {
             let t = await (0, x.VO)(j);
             (0, r.mMO)(
                 async () => {
-                    let { default: a } = await Promise.all([n.e("40556"), n.e("90241")]).then(n.bind(n, 228884)),
+                    let { default: a } = await Promise.all([n.e("40556"), n.e("35613")]).then(n.bind(n, 6503)),
                         r = e?.guild_id != null ? d.A.getGuild(e.guild_id) : null,
                         l = null != r && (0, c.ie)(r, p.A, g.default).canCreateExpressions,
                         o = null == j.name || "" === j.name ? (0, v.cM)(b.default.extractTimestamp(j.id)) : j.name,
@@ -157,7 +157,7 @@ function M(e) {
                                                 async () => {
                                                     let { default: e } = await Promise.all([
                                                         n.e("19632"),
-                                                        n.e("34982"),
+                                                        n.e("31646"),
                                                     ]).then(n.bind(n, 723028));
                                                     return (t) => (0, i.jsx)(e, { ...t, channelId: M, clip: j });
                                                 },

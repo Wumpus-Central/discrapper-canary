@@ -4,7 +4,7 @@ var r = n(627968),
     a = n(503698),
     i = n.n(a),
     s = n(382222),
-    o = n(737149);
+    o = n(960694);
 let u = (e) => {
     let {
             segment: t,
@@ -33,7 +33,7 @@ let u = (e) => {
         j = R ? (0, s.to)([A, c], (e, t) => (N ? Math.max(0, e - t) : Math.min(e, C - t))) : A,
         P = Math.max(0, (p ?? 0) - g),
         D = { borderRadius: `${f}px` },
-        L = l.useMemo(
+        M = l.useMemo(
             () =>
                 m
                     ?.map((e) => ({ startPx: e.start * d, endPx: (e.start + e.size) * d }))
@@ -58,7 +58,7 @@ let u = (e) => {
                         className: o.Bw,
                         style: { left: N ? c.to((e) => -(g + e)) : -g },
                         children: [
-                            L?.map((e) =>
+                            M?.map((e) =>
                                 (0, r.jsx)(
                                     "div",
                                     {

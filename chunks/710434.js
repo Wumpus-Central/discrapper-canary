@@ -1,164 +1,37 @@
-n.d(t, { A: () => p });
-var i = n(627968),
-    s = n(64700),
-    l = n(417597),
-    r = n(397927),
-    a = n(58149),
-    o = n(408213),
-    c = n(60175),
-    d = n(46054),
-    u = n(954571),
-    m = n(652215),
-    _ = n(985018),
-    x = n(702486);
-function p(e) {
-    let {
-            guild: t,
-            prompts: n,
-            completeOnboarding: p,
-            setCurrentStep: g,
-            disableTracking: h,
-            previousPromptIndex: f,
-        } = e,
-        A = s.useRef(null),
-        v = (0, l.bG)([c.A], () => c.A.getRulesPrompt(t.id)),
-        [N, j] = s.useState(v?.response ?? !1),
-        [b, E] = s.useState(!1),
-        C = (0, l.bG)([c.A], () => c.A.get(t.id)),
-        I = s.useRef(null),
-        O = s.useRef(null),
-        T = s.useCallback(async () => {
-            if (null != C && null != v) {
-                E(!0);
-                try {
-                    await o.Ay.submitVerificationForm(t.id, { ...C, formFields: [{ ...v, response: N }] });
-                } catch {}
-                p();
-            }
-        }, [t.id, C, v, N, p]);
-    function y(e) {
-        let [t] = e;
-        t.isIntersecting && j(!0);
-    }
-    return (s.useEffect(() => {
-        let e = new IntersectionObserver(y, { root: I.current, rootMargin: "0px", threshold: 0 }),
-            t = O.current;
-        return (
-            null != t && null != t.lastElementChild && e.observe(t.lastElementChild),
-            () => {
-                null != t && null != t.lastElementChild && e.unobserve(t.lastElementChild);
-            }
-        );
-    }, [O, I]),
-    null == v)
-        ? null
-        : (0, i.jsx)("div", {
-              className: x.J1,
-              children: (0, i.jsxs)("div", {
-                  className: x.mK,
-                  ref: I,
-                  children: [
-                      (0, i.jsxs)(r.ChK, {
-                          className: x.gT,
-                          ref: A,
-                          children: [
-                              (0, i.jsx)(r.Text, {
-                                  variant: "text-sm/medium",
-                                  color: "text-muted",
-                                  children: _.intl.string(_.t["b1JC+l"]),
-                              }),
-                              (0, i.jsx)(r.Heading, {
-                                  variant: "heading-xl/semibold",
-                                  children: _.intl.string(_.t.prJqwT),
-                              }),
-                              (0, i.jsx)("div", {
-                                  className: x.qE,
-                                  ref: O,
-                                  children: v.values.map((e, n) =>
-                                      (0, i.jsxs)(
-                                          "div",
-                                          {
-                                              className: x.gJ,
-                                              children: [
-                                                  (0, i.jsx)(r.Text, {
-                                                      variant: "text-sm/normal",
-                                                      color: "text-muted",
-                                                      children: `${n + 1}.`,
-                                                  }),
-                                                  (0, i.jsx)(r.Text, {
-                                                      variant: "text-sm/normal",
-                                                      className: x.RQ,
-                                                      children: d.A.parseGuildVerificationFormRule(e, !0, {
-                                                          channelId: t.rulesChannelId,
-                                                      }),
-                                                  }),
-                                              ],
-                                          },
-                                          `term-${n}`,
-                                      ),
-                                  ),
-                              }),
-                          ],
-                      }),
-                      (0, i.jsx)("div", { className: x.Lw }),
-                      (0, i.jsxs)("div", {
-                          className: x.N3,
-                          children: [
-                              (0, i.jsx)("div", {
-                                  className: x.X1,
-                                  children:
-                                      -1 !== f &&
-                                      "cover" !== f &&
-                                      (0, i.jsx)(r.Button, {
-                                          variant: "secondary",
-                                          size: "md",
-                                          text: _.intl.string(_.t["13/7kX"]),
-                                          onClick: () => {
-                                              !h &&
-                                                  (u.default.track(m.HAw.GUILD_ONBOARDING_STEP_COMPLETED, {
-                                                      ...(0, a.H$)(t.id),
-                                                      step: -1,
-                                                      skipped: !1,
-                                                      back: !0,
-                                                      options_selected: 0,
-                                                      in_onboarding: !0,
-                                                      is_final_step: !1,
-                                                  }),
-                                                  "number" == typeof f &&
-                                                      f >= 0 &&
-                                                      u.default.track(m.HAw.GUILD_ONBOARDING_STEP_VIEWED, {
-                                                          ...(0, a.H$)(t.id),
-                                                          step: f,
-                                                          required: n[f].required,
-                                                      })),
-                                                  g(f);
-                                          },
-                                          icon: r.Zge,
-                                          iconPosition: "start",
-                                      }),
-                              }),
-                              (0, i.jsxs)("div", {
-                                  className: x.Oh,
-                                  children: [
-                                      (0, i.jsx)(r.Text, {
-                                          className: x.BK,
-                                          variant: "text-xs/normal",
-                                          color: "text-muted",
-                                          children: N ? _.intl.string(_.t.arAe3I) : _.intl.string(_.t.D0CVAc),
-                                      }),
-                                      (0, i.jsx)(r.Button, {
-                                          variant: "primary",
-                                          size: "md",
-                                          text: `${_.intl.string(_.t["8SuVoE"])} 🎉`,
-                                          onClick: T,
-                                          disabled: !N || b,
-                                          loading: b,
-                                      }),
-                                  ],
-                              }),
-                          ],
-                      }),
-                  ],
-              }),
-          });
-}
+n.d(t, { q: () => s });
+var r = n(627968);
+n(64700);
+var l = n(827734),
+    a = n(260612),
+    i = n(953727);
+let s = (e) => {
+    let { size: t = "md", width: n, height: s, color: o = l.A.colors.INTERACTIVE_TEXT_DEFAULT, ...u } = e,
+        c = (0, a.J)(t),
+        d = c?.width ?? n,
+        m = c?.height ?? s;
+    return (0, r.jsxs)("svg", {
+        ...(0, i.A)(u),
+        xmlns: "http://www.w3.org/2000/svg",
+        width: d,
+        height: m,
+        fill: "none",
+        viewBox: "0 0 32 32",
+        children: [
+            (0, r.jsx)("path", {
+                d: "M169.545 229.312v7.919l14.838-10.253v46.348h7.669v-55.434h-6.169l-16.338 11.42ZM225.979 274.576c13.087 0 21.34-11.003 21.34-28.842 0-17.756-8.253-29.093-21.34-29.093-13.004 0-21.173 11.254-21.173 29.009 0 17.923 8.169 28.926 21.173 28.926Zm0-7.335c-8.419 0-13.004-8.336-13.004-21.591 0-13.087 4.585-21.673 13.004-21.673 8.503 0 13.171 8.669 13.171 21.757 0 13.171-4.668 21.507-13.171 21.507Z",
+                style: { fill: "string" == typeof o ? o : o.css, fillRule: "nonzero" },
+                transform: "translate(-25.102 -30.774) scale(.19361)",
+            }),
+            (0, r.jsx)("path", {
+                d: "M137.108 31.459a160.22 160.22 0 0 0-30.316-2.894c-88.439 0-160.24 71.801-160.24 160.241 0 88.439 71.801 160.24 160.24 160.24 88.499 0 160.241-71.742 160.241-160.24h-31.365c0 71.176-57.699 128.876-128.876 128.876-71.128 0-128.876-57.748-128.876-128.876 0-71.129 57.748-128.877 128.876-128.877 8.183 0 16.347.78 24.382 2.328l5.934-30.798Z",
+                style: { fill: "string" == typeof o ? o : o.css },
+                transform: "matrix(-.0886 .03775 .03775 .0886 17.716 -4.317)",
+            }),
+            (0, r.jsx)("path", {
+                d: "M144.616 190.007V96.608l197.822 69.184-197.822 69.185v-44.97Z",
+                style: { fill: "string" == typeof o ? o : o.css },
+                transform: "matrix(-.0222 .01458 .04451 .06777 3.48 -8.53)",
+            }),
+        ],
+    });
+};

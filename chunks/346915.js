@@ -6,8 +6,9 @@ async function a({
     width: o,
     height: i,
     imageRotation: n = 0,
-    resizeWidth: l = null,
-    resizeHeight: s = null,
+    flipHorizontal: l = !1,
+    resizeWidth: s = null,
+    resizeHeight: f = null,
 }) {
-    return (await t.e("47580").then(t.bind(t, 844183))).crop_and_rotate_gif(e, r, a, o, i, n, l, s);
+    return (await t.e("47580").then(t.bind(t, 844183))).crop_and_rotate_gif(e, r, a, o, i, n, l, s, f);
 }

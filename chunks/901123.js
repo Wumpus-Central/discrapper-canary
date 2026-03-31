@@ -1,15 +1,14 @@
 "use strict";
-n.d(t, { BV: () => _, Cr: () => c, ME: () => a, YY: () => o, c$: () => u, gN: () => l });
+n.d(t, { BV: () => d, Cr: () => u, ME: () => s, YY: () => a, c$: () => l, gN: () => o });
 var r = n(323125);
 n(436317);
-var i = n(435220),
-    s = n(162157);
-let a = "@me",
-    o = "@favorites",
-    l = "@inbox",
-    u = "@guilds-empty-nux",
-    c = [a, o, u, l, "@guild-upsell-list"],
-    d = Object.freeze({
+var i = n(435220);
+let s = "@me",
+    a = "@favorites",
+    o = "@inbox",
+    l = "@guilds-empty-nux",
+    u = [s, a, l, o, "@guild-upsell-list"],
+    c = Object.freeze({
         INDEX: "/",
         APP: "/app",
         APP_WITH_INVITE_AND_GUILD_ONBOARDING: (e) => `/app/invite-with-guild-onboarding/${e}`,
@@ -39,7 +38,7 @@ let a = "@me",
         ME: "/channels/@me",
         MESSAGE_REQUESTS: "/message-requests",
         CHANNEL: (e, t, n) => {
-            let r = null == t ? `/channels/${e || a}` : `/channels/${e || a}/${t}`;
+            let r = null == t ? `/channels/${e || s}` : `/channels/${e || s}/${t}`;
             return null == n ? r : `${r}/${n}`;
         },
         CHANNEL_THREAD_VIEW: (e, t, n, r) => {
@@ -63,7 +62,7 @@ let a = "@me",
         GUILD_TEMPLATE_LOGIN: (e) => `/template/${e}/login`,
         GIFT_CODE: (e) => `/gifts/${e}`,
         GIFT_CODE_LOGIN: (e) => `/gifts/${e}/login`,
-        WELCOME: (e, t) => (null != t ? `/welcome/${e ?? a}/${t}` : `/welcome/${e ?? a}`),
+        WELCOME: (e, t) => (null != t ? `/welcome/${e ?? s}/${t}` : `/welcome/${e ?? s}`),
         VERIFY: "/verify",
         VERIFY_REQUEST: "/verify-request",
         RESET: "/reset",
@@ -148,7 +147,8 @@ let a = "@me",
         APPLICATION_DIRECTORY: "/application-directory",
         APPLICATION_DIRECTORY_PROFILE: (e) => `/application-directory/${e}`,
         APPLICATION_DIRECTORY_PROFILE_SECTION: (e, t) => `/application-directory/${e}/${t}`,
-        APPLICATION_DIRECTORY_PROFILE_STORE_SKU: (e, t) => `/application-directory/${e}/${s.h.STORE}/${t}`,
+        APPLICATION_DIRECTORY_PROFILE_STORE_SKU: (e, t) =>
+            `/application-directory/${e}/${i.ApplicationDirectoryProfileSections.STORE}/${t}`,
         APPLICATION_DIRECTORY_SEARCH: "/application-directory/search",
         FAMILY_CENTER: "/family-center",
         SERVER_SHOP: (e) => `/channels/${e}/shop`,
@@ -182,4 +182,4 @@ let a = "@me",
         QUEST_PREVIEW_TOOL_2: (e) => `/quest-home?tab=preview_tool&quest_id=${e}`,
         ICYMI: "/icymi",
     }),
-    _ = (0, r.dN)(d, [":", "?", "@"]);
+    d = (0, r.dN)(c, [":", "?", "@"]);

@@ -143,16 +143,16 @@ async function f(e, r, t) {
                 );
             f.HEAPU8.set(n.data, m);
             let u = 4 * r,
-                b = f._WebPPictureImportRGBA(s, m, u);
-            if ((f._free(m), 0 === b)) {
+                h = f._WebPPictureImportRGBA(s, m, u);
+            if ((f._free(m), 0 === h)) {
                 let e = (function (e, r) {
                     let t = e.HEAP32[(r + 168) >> 2];
                     return o[t] ?? `Unknown error code: ${t}`;
                 })(f, s);
                 throw (f._WebPPictureFree(s), f._free(s), Error(`Failed to import RGBA data for frame ${a}: ${e}`));
             }
-            let h = f._WebPAnimEncoderAdd(d, s, l, _);
-            if ((f._WebPPictureFree(s), f._free(s), 0 === h)) {
+            let b = f._WebPAnimEncoderAdd(d, s, l, _);
+            if ((f._WebPPictureFree(s), f._free(s), 0 === b)) {
                 let e = i(f, d);
                 throw Error(`Failed to add frame ${a} to WebP encoder: ${e}`);
             }
@@ -187,18 +187,24 @@ async function c(e) {
         width: o,
         height: i,
         imageRotation: n = 0,
-        resizeWidth: l = null,
-        resizeHeight: c = null,
-        quality: m = 75,
+        flipHorizontal: l = !1,
+        resizeWidth: c = null,
+        resizeHeight: m = null,
+        quality: u = 75,
     } = e;
     if (!(r instanceof Uint8Array)) throw Error("webp must be a Uint8Array");
     if (!Number.isInteger(t) || !Number.isInteger(a)) throw Error(`Crop position must be integers, got x=${t}, y=${a}`);
     if (!Number.isInteger(o) || o <= 0 || !Number.isInteger(i) || i <= 0)
         throw Error(`Crop dimensions must be positive integers, got width=${o}, height=${i}`);
     if (t < 0 || a < 0) throw Error(`Crop position cannot be negative, got x=${t}, y=${a}`);
-    let { frames: u, width: d, height: _ } = await s(r);
-    if (t + o > d || a + i > _) throw Error(`Crop region (${t},${a},${o}x${i}) exceeds image bounds (${d}x${_})`);
-    let b = u.map((e) => ({
+    let { frames: d, width: _, height: h } = await s(r),
+        b = d,
+        E = _,
+        p = h;
+    if (t < 0 || a < 0 || t + o > _ || a + i > h)
+        throw Error(`Crop region (${t},${a},${o}x${i}) exceeds source image bounds (${_}x${h})`);
+    if (
+        ((b = b.map((e) => ({
             data: (function (e) {
                 let { data: r, origWidth: t, origHeight: a, crop: o } = e,
                     { x: i, y: n, width: l, height: s } = o;
@@ -214,13 +220,27 @@ async function c(e) {
                     f.set(r.subarray(a, a + s), o);
                 }
                 return f;
-            })({ data: e.data, origWidth: d, origHeight: _, crop: { x: t, y: a, width: o, height: i } }),
+            })({ data: e.data, origWidth: E, origHeight: p, crop: { x: t, y: a, width: o, height: i } }),
             timestamp: e.timestamp,
-        })),
-        h = o,
-        E = i;
-    if (
-        (0 !== n &&
+        }))),
+        (E = o),
+        (p = i),
+        l &&
+            (b = b.map((e) => ({
+                data: (function (e, r, t) {
+                    let a = new Uint8Array(r * t * 4);
+                    for (let o = 0; o < t; o++)
+                        for (let t = 0; t < r; t++) {
+                            let i = (o * r + t) * 4,
+                                n = r - 1 - t,
+                                l = (o * r + n) * 4;
+                            (a[l] = e[i]), (a[l + 1] = e[i + 1]), (a[l + 2] = e[i + 2]), (a[l + 3] = e[i + 3]);
+                        }
+                    return a;
+                })(e.data, E, p),
+                timestamp: e.timestamp,
+            }))),
+        0 !== n &&
             ((b = b.map((e) => ({
                 data: (function (e, r, t, a) {
                     let o = ((a % 360) + 360) % 360;
@@ -250,18 +270,18 @@ async function c(e) {
                             (l[m] = e[c]), (l[m + 1] = e[c + 1]), (l[m + 2] = e[c + 2]), (l[m + 3] = e[c + 3]);
                         }
                     return { data: l, width: i, height: n };
-                })(e.data, h, E, n).data,
+                })(e.data, E, p, n).data,
                 timestamp: e.timestamp,
             }))),
-            (90 === n || 270 === n) && ([h, E] = [E, h])),
-        null != l || null != c)
+            (90 === n || 270 === n) && ([E, p] = [p, E])),
+        null != c || null != m)
     ) {
-        let e = l ?? h,
-            r = c ?? E;
-        null != l && null == c
-            ? (r = Math.round((E / h) * l))
-            : null != c && null == l && (e = Math.round((h / E) * c)),
-            (e !== h || r !== E) &&
+        let e = c ?? E,
+            r = m ?? p;
+        null != c && null == m
+            ? (r = Math.round((p / E) * c))
+            : null != m && null == c && (e = Math.round((E / p) * m)),
+            (e !== E || r !== p) &&
                 ((b = b.map((t) => ({
                     data: (function (e, r, t, a, o) {
                         if (a === r && o === t) return e;
@@ -274,11 +294,11 @@ async function c(e) {
                                 (i[c] = e[f]), (i[c + 1] = e[f + 1]), (i[c + 2] = e[f + 2]), (i[c + 3] = e[f + 3]);
                             }
                         return i;
-                    })(t.data, h, E, e, r),
+                    })(t.data, E, p, e, r),
                     timestamp: t.timestamp,
                 }))),
-                (h = e),
-                (E = r));
+                (E = e),
+                (p = r));
     }
-    return await f(b, h, E, { quality: m });
+    return await f(b, E, p, { quality: u });
 }

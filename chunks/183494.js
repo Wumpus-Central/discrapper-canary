@@ -7,9 +7,9 @@ var r = n(627968),
     o = n(876230),
     u = n(61491),
     c = n(397927),
-    d = n(624600),
-    m = n(972441),
-    p = n(737149);
+    d = n(972441),
+    m = n(645871),
+    p = n(960694);
 let h = { tension: 300, friction: 30, clamp: !0 };
 function f(e) {
     let {
@@ -33,10 +33,10 @@ function f(e) {
             onScrubBack: j,
             onScrubForward: P,
             indicatorConfig: D,
-            "data-testid": L,
+            "data-testid": M,
         } = e,
         {
-            contRef: M,
+            contRef: L,
             boundingRect: k,
             handleMouseEnter: I,
             handleMouseLeave: B,
@@ -47,7 +47,7 @@ function f(e) {
             isHovering: G,
             handleClick: Q,
             ariaProps: $,
-        } = (0, m.A)({
+        } = (0, d.A)({
             onScrubBack: j,
             onScrubForward: P,
             maxSeekableTime: b,
@@ -114,8 +114,8 @@ function f(e) {
         );
     return (0, r.jsx)("div", {
         className: p.jD,
-        ref: M,
-        "data-testid": L,
+        ref: L,
+        "data-testid": M,
         style: {
             "--custom-timeline-height": `${null != T && G ? T : A}px`,
             "--custom-initial-timeline-height": `${R}px`,
@@ -137,7 +137,7 @@ function f(e) {
                         null != k &&
                         Z.map((e, t) =>
                             (0, r.jsx)(
-                                d.A,
+                                m.A,
                                 {
                                     segment: e,
                                     playbackPxSpring: z,
