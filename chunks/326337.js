@@ -2,8 +2,8 @@
 n.d(t, { I: () => y, h: () => S });
 var r = n(311907),
     i = n(775602),
-    a = n(253932),
-    s = n(531685),
+    s = n(253932),
+    a = n(531685),
     o = n(133816),
     l = n(652215);
 let u = 145,
@@ -14,13 +14,13 @@ let u = 145,
     p = 15,
     h = 91,
     m = 65,
-    g = 1.05,
-    E = 10;
+    E = 1.05,
+    g = 10;
 function A(e, t, n) {
     return Math.max(t, Math.min(n, e));
 }
 function I() {
-    return Math.max(s.A.windowSize().height - u, c);
+    return Math.max(a.A.windowSize().height - u, c);
 }
 function T(e, t, n, r, i) {
     return A(Math.ceil(Math.ceil(e / (t * (i / l.hH7.FONT_SIZE_DEFAULT))) * n), r, l.EMb);
@@ -31,11 +31,11 @@ function S() {
     if ("off" === t) return l.EMb;
     let n = I(),
         r = i.A.fontSize,
-        s = a.hH.getSetting();
-    return "conservative" === t ? T(n, s ? _ : d, f, p, r) : T(n, s ? m : h, g, E, r);
+        a = s.hH.getSetting();
+    return "conservative" === t ? T(n, a ? _ : d, f, p, r) : T(n, a ? m : h, E, g, r);
 }
 function y(e, t) {
     let n = o.O.useConfig({ location: "useMessageLimit" }).strategy,
-        i = (0, r.bG)([s.A], () => ("off" === n ? 0 : Math.max(s.A.windowSize().height - u, c)), [n]);
-    return "off" === n ? l.EMb : "conservative" === n ? T(i, e ? _ : d, f, p, t) : T(i, e ? m : h, g, E, t);
+        i = (0, r.bG)([a.A], () => ("off" === n ? 0 : Math.max(a.A.windowSize().height - u, c)), [n]);
+    return "off" === n ? l.EMb : "conservative" === n ? T(i, e ? _ : d, f, p, t) : T(i, e ? m : h, E, g, t);
 }
