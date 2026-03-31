@@ -575,6 +575,7 @@ var r = (function (e) {
                 "GAME_SERVER_HOSTING_BATCH_RELEASE_V3_COACHMARK"),
             (e[(e.ML_REVERSE_TRIAL_UPSELL_MODAL = 723)] = "ML_REVERSE_TRIAL_UPSELL_MODAL"),
             (e[(e.ML_REVERSE_TRIAL_FOLLOWUP_UPSELL_MODAL = 724)] = "ML_REVERSE_TRIAL_FOLLOWUP_UPSELL_MODAL"),
+            (e[(e.GAME_SHOP_NEW_DROP_POPOVER = 725)] = "GAME_SHOP_NEW_DROP_POPOVER"),
             e
         );
     })({}),
