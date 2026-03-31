@@ -56,6 +56,7 @@ var r = (function (e) {
         (e[(e.QUEST_ACTIVITY_HEADER = 51)] = "QUEST_ACTIVITY_HEADER"),
         (e[(e.USER_PROFILE_HEADER = 52)] = "USER_PROFILE_HEADER"),
         (e[(e.USER_SETTINGS = 53)] = "USER_SETTINGS"),
+        (e[(e.NITRO_HOME_PERK_CARD = 54)] = "NITRO_HOME_PERK_CARD"),
         e
     );
 })({});
