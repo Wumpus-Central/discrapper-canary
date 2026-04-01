@@ -607,7 +607,6 @@ function eZ(e, t) {
                 (0, s.YW)(t)
                     .with({ percentComplete: 0 }, () => null)
                     .with({ taskType: a.n.PLAY_ON_DESKTOP }, () => Z.fO.DESKTOP)
-                    .with({ taskType: a.n.PLAY_ON_DESKTOP_V2 }, () => Z.fO.DESKTOP)
                     .with({ taskType: a.n.PLAY_ACTIVITY }, () => Z.fO.DESKTOP)
                     .with({ taskType: a.n.WATCH_VIDEO }, () => Z.fO.DESKTOP)
                     .with({ taskType: a.n.WATCH_VIDEO_ON_MOBILE }, () => Z.fO.DESKTOP)

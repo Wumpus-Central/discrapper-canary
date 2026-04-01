@@ -32,7 +32,7 @@ let d = [
                             e ===
                             ((t = c.tasks),
                             (n = i.n.PLAY_ON_PLAYSTATION in t || i.n.PLAY_ON_XBOX in t),
-                            (a = i.n.PLAY_ON_DESKTOP in t || i.n.PLAY_ON_DESKTOP_V2 in t),
+                            (a = i.n.PLAY_ON_DESKTOP in t),
                             (s = i.n.STREAM_ON_DESKTOP in t),
                             (l = i.n.WATCH_VIDEO in t),
                             (r = i.n.PLAY_ACTIVITY in t),

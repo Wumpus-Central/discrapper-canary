@@ -6,7 +6,6 @@ var r = (function (e) {
         (e.PLAY_ON_DESKTOP = "PLAY_ON_DESKTOP"),
         (e.PLAY_ON_XBOX = "PLAY_ON_XBOX"),
         (e.PLAY_ON_PLAYSTATION = "PLAY_ON_PLAYSTATION"),
-        (e.PLAY_ON_DESKTOP_V2 = "PLAY_ON_DESKTOP_V2"),
         (e.WATCH_VIDEO = "WATCH_VIDEO"),
         (e.WATCH_VIDEO_ON_MOBILE = "WATCH_VIDEO_ON_MOBILE"),
         (e.PLAY_ACTIVITY = "PLAY_ACTIVITY"),
@@ -19,7 +18,6 @@ let i = {
     ALL: new Set([
         "PLAY_ACTIVITY",
         "PLAY_ON_DESKTOP",
-        "PLAY_ON_DESKTOP_V2",
         "PLAY_ON_PLAYSTATION",
         "PLAY_ON_XBOX",
         "STREAM_ON_DESKTOP",
