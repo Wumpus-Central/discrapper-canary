@@ -18,31 +18,44 @@ async function u(e) {
     let i = l?.createBufferSource();
     return null != i && null != r && (i.buffer = r), i;
 }
-async function c(e, t) {
-    let n = await u(e);
-    return null == n || null == l ? null : (n.connect(t).connect(l.destination), n.start(), n);
+function c(e, t, n) {
+    return e.connect(n).connect(t.destination), e.start(), e;
 }
 function d(e) {
     let t = (0, i.bG)([a.A], () => a.A.soundVolume);
-    return (0, r.useCallback)(() => {
+    return (0, r.useCallback)(async () => {
         let n = l?.createGain();
-        if (null != n) return (n.gain.value = t), c(e, n);
+        if (null == n) return;
+        n.gain.value = t;
+        let r = await u(e);
+        return null == r || null == l ? null : c(r, l, n);
     }, [e, t]);
 }
 function _(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = (0, r.useRef)(null),
         s = (0, r.useRef)(l?.createGain()),
-        o = (0, i.bG)([a.A], () => a.A.musicVolume);
+        o = (0, i.bG)([a.A], () => a.A.musicVolume),
+        d = (0, r.useRef)(!0);
     (0, r.useEffect)(() => {
         (async () => {
             null != n.current && (n.current.stop(), (n.current = null)),
                 null != s.current &&
-                    (t || ((n.current = await c(e, s.current)), null != n.current && (n.current.loop = !0)));
+                    !t &&
+                    ((n.current = await u(e)),
+                    null != n.current &&
+                        null != l &&
+                        d.current &&
+                        (c(n.current, l, s.current), null != n.current && (n.current.loop = !0)));
         })();
     }, [t, e]),
         (0, r.useEffect)(() => {
             null != s.current && (s.current.gain.value = o);
         }, [o]),
-        (0, r.useEffect)(() => () => n.current?.stop(), []);
+        (0, r.useEffect)(
+            () => () => {
+                (d.current = !1), n.current?.stop();
+            },
+            [],
+        );
 }
