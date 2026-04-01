@@ -6,8 +6,8 @@ n.d(t, {
     VH: () => o,
     W_: () => l,
     XK: () => u,
-    hj: () => s,
-    kw: () => a,
+    hj: () => a,
+    kw: () => s,
     sm: () => r,
     z4: () => _,
 });
@@ -15,8 +15,8 @@ var r = (function (e) {
     return (e.ANY = "$any"), (e.ALL = "$all"), e;
 })({});
 let i = "RPC_PRIVATE_SCOPE",
-    a = "RPC_PRIVATE_LIMITED_SCOPE",
-    s = "RPC_LOCAL_SCOPE",
+    s = "RPC_PRIVATE_LIMITED_SCOPE",
+    a = "RPC_LOCAL_SCOPE",
     o = "RPC_AUTHENTICATED_SCOPE",
     l = "RPC_EMBEDDED_APP_SCOPE";
 var u = (function (e) {
@@ -38,6 +38,7 @@ var u = (function (e) {
         (e.QUEST_PREVIEW_TOOL = "QUEST_PREVIEW_TOOL"),
         (e.ONE_TIME_LOGIN = "ONE_TIME_LOGIN"),
         (e.PLAYGROUND = "PLAYGROUND"),
+        (e.GORILLA = "GORILLA"),
         e
     );
 })({});
@@ -68,6 +69,8 @@ function c(e) {
             return "activities";
         case "PLAYGROUND":
             return "playground";
+        case "GORILLA":
+            return "gorilla";
         default:
             return e;
     }

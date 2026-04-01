@@ -3,9 +3,9 @@ n.d(t, { A: () => _ }), n(73153);
 var r = n(439372);
 n(354138);
 var i = n(292572),
-    a = n(122906);
+    s = n(122906);
 n(970163);
-var s = n(128391);
+var a = n(128391);
 n(299091);
 var o = n(167189),
     l = n(254160),
@@ -19,7 +19,7 @@ function c(e) {
             if (t === o.I.INVITE);
             else if (t === o.I.TEMPLATE)
                 (0, l.f)(async () => {
-                    null == a.A.getGuildTemplate(n) && (await i.A.resolveGuildTemplate(n));
+                    null == s.A.getGuildTemplate(n) && (await i.A.resolveGuildTemplate(n));
                 });
             else if (t === o.I.BUILD_OVERRIDE || t === o.I.MANUAL_BUILD_OVERRIDE);
             else if (t === o.I.EVENT);
@@ -36,12 +36,13 @@ function c(e) {
             else if (t === o.I.APP_OAUTH2_LINK);
             else if (t === o.I.COLLECTIBLES_SHOP);
             else if (t === o.I.EXPERIMENT);
+            else if (t === o.I.GORILLA_DEEP_LINK);
             else throw Error(`Unknown coded link type: ${t}`);
         });
 }
 class d extends r.A {
     constructor() {
-        super(), (0, s.A)(this, c);
+        super(), (0, a.A)(this, c);
     }
 }
 let _ = new d();

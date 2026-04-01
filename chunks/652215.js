@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
-    $4X: () => eP,
+    $4X: () => ex,
     $8o: () => ea,
     $OG: () => tw,
     $aF: () => to,
     $jw: () => nv,
     $pd: () => eQ,
     AD1: () => h.AD,
-    AKn: () => rC,
+    AKn: () => rN,
     AMi: () => tZ,
     AO_: () => nI,
     AaC: () => nW,
@@ -63,7 +63,7 @@ n.d(t, {
     KE7: () => T,
     KIY: () => tK,
     KL3: () => ew,
-    Kby: () => nC,
+    Kby: () => nN,
     KcG: () => h.Kc,
     Ks6: () => nD,
     LU7: () => r_,
@@ -76,7 +76,7 @@ n.d(t, {
     ME: () => f.ME,
     MLl: () => rl,
     MRS: () => o.M,
-    MVz: () => nx,
+    MVz: () => nP,
     MdR: () => tu,
     Mmu: () => tO,
     NA2: () => eG,
@@ -98,7 +98,7 @@ n.d(t, {
     Pq7: () => h.Pq,
     Puh: () => n8,
     PvD: () => es,
-    Q4z: () => tP,
+    Q4z: () => tx,
     Q7O: () => h.Q7,
     QCW: () => nQ,
     RCc: () => tt,
@@ -121,14 +121,14 @@ n.d(t, {
     TZK: () => eZ,
     T_y: () => tg,
     TbF: () => eY,
-    ThZ: () => tN,
+    ThZ: () => tC,
     TpD: () => tQ,
     U2_: () => h.U2,
     UNo: () => eR,
     UVF: () => Q,
-    Ue3: () => eC,
+    Ue3: () => eN,
     Umv: () => e_,
-    UqL: () => tC,
+    UqL: () => tN,
     Ut1: () => eq,
     Uyk: () => nr,
     VFs: () => e$,
@@ -138,7 +138,7 @@ n.d(t, {
     WA1: () => eB,
     WMy: () => m.WM,
     WTw: () => n1,
-    WxW: () => rN,
+    WxW: () => rC,
     Wzo: () => h.Wz,
     X7G: () => th,
     X8x: () => rt,
@@ -156,7 +156,7 @@ n.d(t, {
     YYv: () => f.YY,
     Yri: () => h.Yr,
     YvQ: () => R,
-    Z86: () => nP,
+    Z86: () => nx,
     ZE4: () => h.ZE,
     ZGg: () => eK,
     ZSU: () => tD,
@@ -168,11 +168,11 @@ n.d(t, {
     __0: () => h.__,
     _i_: () => tr,
     _tK: () => tJ,
-    a3B: () => nN,
+    a3B: () => nC,
     aUe: () => E,
     aVn: () => L,
     ajI: () => ei,
-    b7d: () => C,
+    b7d: () => N,
     bFR: () => F,
     bNI: () => nk,
     bb8: () => B,
@@ -184,7 +184,7 @@ n.d(t, {
     d0r: () => eU,
     d3x: () => r.D,
     d68: () => l.d,
-    d7Q: () => eN,
+    d7Q: () => eC,
     dD: () => ri,
     dHA: () => h.dH,
     dJq: () => ef,
@@ -198,11 +198,11 @@ n.d(t, {
     eAD: () => e0,
     eGj: () => ep,
     eQT: () => e1,
-    elq: () => P,
+    elq: () => x,
     ewM: () => tq,
     f5z: () => Z,
-    fAW: () => x,
-    fHV: () => ex,
+    fAW: () => P,
+    fHV: () => eP,
     fg2: () => tY,
     fic: () => rL,
     frM: () => h.fr,
@@ -258,7 +258,7 @@ n.d(t, {
     lid: () => ne,
     m3P: () => O,
     m_i: () => ro,
-    mdB: () => tx,
+    mdB: () => tP,
     meB: () => h.me,
     mnr: () => rM,
     mu: () => eW,
@@ -279,7 +279,7 @@ n.d(t, {
     ogj: () => U,
     orn: () => eT,
     p2C: () => tn,
-    p_A: () => N,
+    p_A: () => C,
     p_j: () => nM,
     pr7: () => W,
     pwA: () => q,
@@ -565,7 +565,7 @@ var r = n(989441),
             e
         );
     })({}),
-    N = (function (e) {
+    C = (function (e) {
         return (
             (e.OVERVIEW = "OVERVIEW"),
             (e.PERMISSIONS = "PERMISSIONS"),
@@ -589,7 +589,7 @@ var r = n(989441),
             e
         );
     })({}),
-    C = (function (e) {
+    N = (function (e) {
         return (e.TOPIC = "TOPIC"), e;
     })({}),
     R = (function (e) {
@@ -702,7 +702,7 @@ var r = n(989441),
             e
         );
     })({}),
-    P = (function (e) {
+    x = (function (e) {
         return (
             (e.RESOLVING = "RESOLVING"),
             (e.RESOLVED = "RESOLVED"),
@@ -717,7 +717,7 @@ var r = n(989441),
             e
         );
     })({}),
-    x = (function (e) {
+    P = (function (e) {
         return (e.OPENING = "OPENING"), (e.OPEN = "OPEN"), (e.OPEN_FAIL = "OPEN_FAIL"), e;
     })({}),
     k = (function (e) {
@@ -1915,6 +1915,10 @@ let ef = "",
         CONFERENCE_MODE_VOICE_CHANNEL_USERS: (e) => `/conference-mode/channels/${e}/users`,
         CONFERENCE_MODE_EVENTS: "/conference-mode/events",
         CONFERENCE_MODE_CONFERENCES: "/conference-mode/conference",
+        GORILLA_COUNTERS: "/gorilla/counters",
+        GORILLA_USER_DATA: "/gorilla/user-data/@me",
+        GORILLA_START_ACTIVITY: (e) => `/gorilla/activity/${e}/start`,
+        GORILLA_COMPLETE_ACTIVITY: (e) => `/gorilla/activity/${e}/complete`,
         GUILD_MIGRATE_PIN_PERMISSION: (e) => `/guilds/${e}/migrate-pin-permission`,
         GET_APPLICATION_TOKENS: (e) => `/oauth2/applications/${e}/tokens`,
         GUILD_MIGRATE_SLOWMODE_PERMISSION: (e) => `/guilds/${e}/migrate-bypass-slowmode-permission`,
@@ -1953,8 +1957,8 @@ var eI = (function (e) {
 let eS = 100,
     ey = 200,
     ev = 30,
-    eN = 30,
-    eC = 25,
+    eC = 30,
+    eN = 25,
     eR = 120,
     eO = 60,
     eb = 150,
@@ -1962,8 +1966,8 @@ let eS = 100,
     eL = 4e3,
     ew = 250,
     eM = 100,
-    eP = 1e3,
-    ex = 100,
+    ex = 1e3,
+    eP = 100,
     ek = 256,
     eU = 32,
     eG = 190,
@@ -2339,7 +2343,7 @@ var tS = (function (e) {
             e
         );
     })({}),
-    tN = (function (e) {
+    tC = (function (e) {
         return (
             (e.GUILD_CREATE_INVITE_SUGGESTION = "Guild Create Invite Suggestion"),
             (e.ADD_FRIENDS_TO_DM = "Add Friends to DM"),
@@ -2423,7 +2427,7 @@ var tS = (function (e) {
             e
         );
     })({}),
-    tC = (function (e) {
+    tN = (function (e) {
         return (
             (e.JOIN = "join"),
             (e.ASK_TO_JOIN = "ask to join"),
@@ -3211,7 +3215,7 @@ let tw = { page: "Direct", object: "Web URL" },
         SECURE_FRAMES_VERIFIED_DEVICES: "Secure Frames Verified Devices",
         REACTION_NOTIFICATIONS: "Reaction Notifications",
     });
-var tP = (function (e) {
+var tx = (function (e) {
         return (
             (e.APPLICATION_STORE = "Application Store Verified Guild Invite - Lurker"),
             (e.CHAT_INPUT_BLOCKER = "Chat Input Blocker - Lurker Mode"),
@@ -3228,7 +3232,7 @@ var tP = (function (e) {
             e
         );
     })({}),
-    tx = (function (e) {
+    tP = (function (e) {
         return (
             (e.QR_CODE = "QR Code Login"),
             (e.MOBILE_WEB_HANDOFF = "Mobile Web Handoff"),
@@ -4596,6 +4600,8 @@ var no = (function (e) {
             (e.MOBILE_FILE_PICKER_ERROR = "mobile_file_picker_error"),
             (e.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED = "premium_uncancel_winback_cta_clicked"),
             (e.EASTER_EGG_INTERACTED = "easter_egg_interacted"),
+            (e.APRIL_FOOLS_2026_OPENED = "april_fools_2026_opened"),
+            (e.APRIL_FOOLS_2026_VIDEO_CLICKED = "april_fools_2026_video_clicked"),
             (e.RPC_COMMAND_SENT = "rpc_command_sent"),
             (e.RPC_SERVER_ERROR_CAUGHT = "rpc_server_error_caught"),
             (e.RPC_SUBSCRIPTION_REQUESTED = "rpc_subscription_requested"),
@@ -5661,7 +5667,7 @@ var nA = (function (e) {
         );
     })({});
 let nv = 50;
-var nN = (function (e) {
+var nC = (function (e) {
         return (
             (e.AGREEMENTS = "AGREEMENTS"),
             (e.REQUIRE_CAPTCHA = "REQUIRE_CAPTCHA"),
@@ -5677,7 +5683,7 @@ var nN = (function (e) {
             e
         );
     })({}),
-    nC = (function (e) {
+    nN = (function (e) {
         return (e.UPDATE_PASSWORD = "update_password"), e;
     })({}),
     nR = (function (e) {
@@ -5756,11 +5762,11 @@ var nb = (function (e) {
     nM = (function (e) {
         return (e.GIF = "GIF"), (e.STICKER = "STICKER"), e;
     })({});
-let nP = Object.freeze({
+let nx = Object.freeze({
     GIF: { type: "GIF", command: "gif", title: "Gif", commandId: "-16" },
     TENOR: { type: "GIF", command: "tenor", title: "Tenor", commandId: "-9" },
 });
-var nx = (function (e) {
+var nP = (function (e) {
         return (
             (e.ENABLE_MIC_FIREFOX = "204392448"),
             (e.PUSH_TO_TALK_ADMINISTRATOR_MODE = "205082178"),
@@ -6273,8 +6279,8 @@ var ry = (function (e) {
     rv = (function (e) {
         return (e[(e.AUTO = 1)] = "AUTO"), (e[(e.FULL = 2)] = "FULL"), e;
     })({});
-let rN = 100,
-    rC = /(mfa\.[a-z0-9_-]{20,})|([a-z0-9_-]{23,28}\.[a-z0-9_-]{6,7}\.[a-z0-9_-]{27})/i;
+let rC = 100,
+    rN = /(mfa\.[a-z0-9_-]{20,})|([a-z0-9_-]{23,28}\.[a-z0-9_-]{6,7}\.[a-z0-9_-]{27})/i;
 var rR = (function (e) {
     return (e[(e.NULL = 0)] = "NULL"), (e[(e.DISABLED = 1)] = "DISABLED"), (e[(e.ENABLED = 2)] = "ENABLED"), e;
 })({});

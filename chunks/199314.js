@@ -1,0 +1,21 @@
+"use strict";
+e.exports = {
+    MY: "page_dc9a93",
+    wx: "header_dc9a93",
+    am: "headerScrolled_dc9a93",
+    jF: "achievementHeaderTitle_dc9a93",
+    Ov: "achievementHeaderImage_dc9a93",
+    vd: "achievementsList_dc9a93",
+    ZJ: "achievementItem_dc9a93",
+    bl: "achievementItemLocked_dc9a93",
+    in: "achievementItemContainer_dc9a93",
+    qE: "achievementItemImage_dc9a93",
+    io: "achievementItemName_dc9a93",
+    nY: "achievementItemUnlockDescription_dc9a93",
+    Lo: "descriptionLine_dc9a93",
+    pR: "achievementItemDescription_dc9a93",
+    IX: "achievementItemProgress_dc9a93",
+    D3: "achievementItemProgressBar_dc9a93",
+    z2: "achievementItemProgressText_dc9a93",
+    ph: "unlockedLevels_dc9a93",
+};

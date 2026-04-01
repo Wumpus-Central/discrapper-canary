@@ -22,8 +22,8 @@ var r = n(889137),
     S = n(167189),
     y = n(833291),
     v = n(626584),
-    N = n(390248),
-    C = n(885918),
+    C = n(390248),
+    N = n(885918),
     R = n(142120),
     O = n(992771),
     b = n(834757),
@@ -31,8 +31,8 @@ var r = n(889137),
     L = n(51271),
     w = n(844944),
     M = n(122906),
-    P = n(21599),
-    x = n(346542),
+    x = n(21599),
+    P = n(346542),
     k = n(279208),
     U = n(917878),
     G = n(586872),
@@ -78,8 +78,8 @@ var el = n(299091),
     eS = n(157559),
     ey = n(652215),
     ev = n(768349),
-    eN = n(401755),
-    eC = n(381941),
+    eC = n(401755),
+    eN = n(381941),
     eR = n(985018);
 let eO = null,
     eb = new v.A("MessageActionCreators"),
@@ -104,7 +104,7 @@ function eM(e) {
     (0, y.Ay)(t).forEach((e) => {
         let { type: t, code: u, url: c } = e;
         if (t === S.I.INVITE)
-            eP({
+            ex({
                 inviteKey: u,
                 channelId: n,
                 messageId: r,
@@ -114,7 +114,7 @@ function eM(e) {
             });
         else if (t === S.I.TEMPLATE) {
             let e = M.A.getGuildTemplate(u);
-            if (null == e || e.state === eN.QB.RESOLVING) return;
+            if (null == e || e.state === eC.QB.RESOLVING) return;
             _.Ay.trackWithMetadata(ey.HAw.GUILD_TEMPLATE_LINK_SENT, {
                 guild_template_code: u,
                 guild_template_name: e.name,
@@ -152,10 +152,11 @@ function eM(e) {
             _.Ay.trackWithMetadata(ey.HAw.APP_OAUTH2_LINK_EMBED_URL_SENT, { application_id: u }),
                 (0, g.KL)(u, ev.J.OAUTH, l);
         else if (t === S.I.COLLECTIBLES_SHOP);
+        else if (t === S.I.GORILLA_DEEP_LINK);
         else throw Error(`Unknown coded link type: ${t}`);
     });
 }
-function eP(e) {
+function ex(e) {
     let {
             inviteKey: t,
             channelId: n,
@@ -166,8 +167,8 @@ function eP(e) {
         } = e,
         o = ea.default.getId(),
         l = el.A.getInvite(t),
-        u = (0, P.y$)(t),
-        c = null != l && (0, x.oK)(l),
+        u = (0, x.y$)(t),
+        c = null != l && (0, P.oK)(l),
         d = l?.target_application?.id;
     null != d && c && (0, g.KL)(d, ev.J.ACTIVITY_INVITE, o);
     let f = eo.A.getChannel(n);
@@ -207,7 +208,7 @@ function eP(e) {
                 message_id: r,
                 send_type: ey.gfq.DIRECT_MESSAGE,
                 invite_guild_scheduled_event_id: u.guildScheduledEventId,
-                invite_instance_id: (0, P._U)(u.baseCode, r) ?? null,
+                invite_instance_id: (0, x._U)(u.baseCode, r) ?? null,
                 ...a,
             }),
             _.Ay.trackWithMetadata(ey.HAw.INVITE_SENT, t);
@@ -226,13 +227,13 @@ function eP(e) {
                 message_id: r,
                 send_type: ey.gfq.DIRECT_MESSAGE,
                 invite_guild_scheduled_event_id: u.guildScheduledEventId,
-                invite_instance_id: (0, P._U)(u.baseCode, r) ?? null,
+                invite_instance_id: (0, x._U)(u.baseCode, r) ?? null,
                 ...a,
             }),
             _.Ay.trackWithMetadata(ey.HAw.INVITE_SENT, e));
     }
 }
-function ex(e, t, n, r, i) {
+function eP(e, t, n, r, i) {
     (0, eE.e7)(e).forEach((e) => {
         let s = eo.A.getChannel(t);
         null != s &&
@@ -444,8 +445,8 @@ let eV = {
                     })),
                 o = (0, W.m)();
             eB.sendBotMessage(e, s, a, o),
-                (0, N.hv)({
-                    action: N.rY.EXPLICIT_MEDIA_FALSE_POSITIVE_CLYDE_MESSAGE_SENT,
+                (0, C.hv)({
+                    action: C.rY.EXPLICIT_MEDIA_FALSE_POSITIVE_CLYDE_MESSAGE_SENT,
                     messageId: o,
                     channelId: e,
                     context: n,
@@ -827,7 +828,7 @@ ${s}`),
                 body: { sticker_ids: [t], allowed_mentions: i, message_reference: r },
                 oldFormErrors: !0,
                 rejectWithError: !1,
-                context: { location: eC.Hx.GREET },
+                context: { location: eN.Hx.GREET },
             }).then(
                 (n) => (
                     j.A.donateSentMessage(n.body.content, e),
@@ -850,7 +851,7 @@ ${s}`),
             return eB._sendMessage(
                 e,
                 { content: "", tts: !1, validNonShortcutEmojis: [], invalidEmojis: [] },
-                { ...n, poll: t, location: eC.Hx.POLL_CREATION },
+                { ...n, poll: t, location: eN.Hx.POLL_CREATION },
             );
         },
         validateMessage(e, t, n) {
@@ -893,8 +894,8 @@ ${s}`),
                     withCheckpoint: b,
                 } = n,
                 M = n.flags ?? 0,
-                [P, x] = (0, en.A)(a);
-            P && ((a = x), (M = (0, s.UI)(M, ey.pr7.SUPPRESS_NOTIFICATIONS)));
+                [x, P] = (0, en.A)(a);
+            x && ((a = P), (M = (0, s.UI)(M, ey.pr7.SUPPRESS_NOTIFICATIONS)));
             let k = !1,
                 U = n.messageReference?.type === ey.SH7.FORWARD;
             if (
@@ -1030,7 +1031,7 @@ ${s}`),
                                         poll: g,
                                     }),
                                     null != n.alsoForwardToChannelId &&
-                                        C.A.sendForward((0, B.rh)(_.body), n.alsoForwardToChannelId)
+                                        N.A.sendForward((0, B.rh)(_.body), n.alsoForwardToChannelId)
                                             .then(() => {
                                                 eU({
                                                     referencedMessageId: _.body?.id,
@@ -1081,7 +1082,7 @@ ${s}`),
                                         location: f ?? "chat_input",
                                         inviteAnalyticsMetadata: p,
                                     }),
-                                    ex(a, e, _.body.id, f ?? "chat_input", !!n.isGiftLinkSentOnBehalfOfUser),
+                                    eP(a, e, _.body.id, f ?? "chat_input", !!n.isGiftLinkSentOnBehalfOfUser),
                                     null != n.gifMetadata && ek(n.gifMetadata, e, _.body.id, f ?? "chat_input"),
                                     null != r &&
                                         l.h.dispatch({
@@ -1122,7 +1123,7 @@ ${s}`),
                                             : _.body.code === ey.t02.POGGERMODE_TEMPORARILY_DISABLED
                                               ? l.h.dispatch({ type: "POGGERMODE_TEMPORARILY_DISABLED" })
                                               : _.body.code === ey.t02.EXPLICIT_CONTENT
-                                                ? (t = eC.ty.EXPLICIT_CONTENT)
+                                                ? (t = eN.ty.EXPLICIT_CONTENT)
                                                 : null != g || U || null != S || eB.sendClydeError(e, _.body.code);
                                 s
                                     ? eB.deleteMessage(e, $, !0)
@@ -1136,11 +1137,11 @@ ${s}`),
                                               noSendFailed: !0,
                                           }),
                                       _.hasErr ||
-                                          t !== eC.ty.EXPLICIT_CONTENT ||
+                                          t !== eN.ty.EXPLICIT_CONTENT ||
                                           eB.sendExplicitMediaClydeError(
                                               e,
                                               _.body?.attachments,
-                                              N.SW.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED,
+                                              C.SW.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED,
                                           ),
                                       l.h.dispatch({
                                           type: "MESSAGE_SEND_FAILED",
@@ -1279,6 +1280,6 @@ ${s}`),
                     });
             }
         },
-        trackInvite: eP,
+        trackInvite: ex,
     },
     eH = eB;

@@ -15,37 +15,37 @@ var i = l(627968),
     C = l(587895),
     v = l(607470),
     g = l(734057),
-    f = l(71393),
-    j = l(287809),
+    j = l(71393),
+    f = l(287809),
     y = l(549685),
     A = l(954571),
-    I = l(405269),
-    N = l(403362),
+    N = l(405269),
+    I = l(403362),
     b = l(661191),
     E = l(274372),
     k = l(372684),
     M = l(399925),
     w = l(226421),
     L = l(665039),
-    H = l(718812),
-    S = l(543428),
+    S = l(718812),
+    H = l(543428),
     T = l(652215),
     P = l(985018),
-    V = l(746869);
+    V = l(621970);
 let D = function (e) {
     let { clip: t, actionsDisabled: a, isNew: r, onClick: d } = e,
-        C = (0, o.yK)([j.default], () => t.users.map((e) => j.default.getUser(e)).filter(N.Vq)),
+        C = (0, o.yK)([f.default], () => t.users.map((e) => f.default.getUser(e)).filter(I.Vq)),
         v = (0, o.bG)([g.A], () => (null != t.channelId ? g.A.getChannel(t.channelId) : null)),
-        y = (0, o.bG)([f.A], () => (null != t.guildId ? f.A.getGuild(t.guildId) : null)),
+        y = (0, o.bG)([j.A], () => (null != t.guildId ? j.A.getGuild(t.guildId) : null)),
         { analyticsLocations: M } = (0, x.Ay)(h.A.CLIPS_GALLERY_ITEM),
-        { selectedClipIds: w, toggleClipSelection: L, isMultiSelectMode: H } = s.useContext(S.$),
+        { selectedClipIds: w, toggleClipSelection: L, isMultiSelectMode: S } = s.useContext(H.$),
         [D, _] = s.useState(!1),
-        O = s.useRef(null),
+        z = s.useRef(null),
         K = (0, c.A)(t.editMetadata?.start ?? 0),
         U = w.has(t.id),
         F = t.type === k.nQ.SCREENSHOT,
         Y = "" === t.applicationName && v?.name != null && "" !== v.name ? v.name : t.applicationName,
-        $ = (0, I.Fe)(new Date(b.default.extractTimestamp(t.id))),
+        $ = (0, N.Fe)(new Date(b.default.extractTimestamp(t.id))),
         B = s.useMemo(() => {
             let e = [];
             return (
@@ -58,17 +58,17 @@ let D = function (e) {
             );
         }, [Y, y?.name, v?.name, t.activity?.state, t.activity?.details, t.type]),
         Q = s.useCallback(() => {
-            let e = O.current;
+            let e = z.current;
             null != e && (e.pause(), (e.src = ""));
         }, []),
         X = s.useCallback(() => {
             if (!0 === F) return;
-            let e = O.current;
-            null != e && e.paused && ((e.currentTime = K.current), O.current?.play());
+            let e = z.current;
+            null != e && e.paused && ((e.currentTime = K.current), z.current?.play());
         }, [F, K]),
         q = s.useCallback(() => {
             if (!0 === F) return;
-            let e = O.current;
+            let e = z.current;
             null != e && (e.pause(), (e.currentTime = t.editMetadata?.start ?? 0));
         }, [F, t.editMetadata?.start]),
         Z = s.useCallback(
@@ -82,12 +82,12 @@ let D = function (e) {
         }, []),
         J = s.useCallback(
             (e) => {
-                _(!0), O.current?.pause();
-                let s = H && w.size > 0 ? E.A.getClips().filter((e) => w.has(e.id)) : [t];
+                _(!0), z.current?.pause();
+                let s = S && w.size > 0 ? E.A.getClips().filter((e) => w.has(e.id)) : [t];
                 (0, p.L3)(
                     e,
                     async () => {
-                        let { default: e } = await Promise.all([l.e("80628"), l.e("80559")]).then(l.bind(l, 183903));
+                        let { default: e } = await l.e("80628").then(l.bind(l, 183903));
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
@@ -109,7 +109,7 @@ let D = function (e) {
                     { onClose: W },
                 );
             },
-            [t, H, w, a, Q, W],
+            [t, S, w, a, Q, W],
         ),
         ee = s.useCallback(
             (e) => {
@@ -120,10 +120,10 @@ let D = function (e) {
         et = s.useCallback(
             (e) => {
                 a ||
-                    (e.shiftKey ? (e.preventDefault(), L(t.id)) : H ? L(t.id) : null != d && d(t),
+                    (e.shiftKey ? (e.preventDefault(), L(t.id)) : S ? L(t.id) : null != d && d(t),
                     A.default.track(T.HAw.CLIP_GALLERY_CARD_CLICKED));
             },
-            [a, H, L, t, d],
+            [a, S, L, t, d],
         );
     return (0, i.jsx)(x.f5, {
         value: M,
@@ -138,11 +138,11 @@ let D = function (e) {
             onMouseOver: X,
             onMouseLeave: q,
             children: [
-                (0, i.jsx)(R, { clip: t, isNew: r, videoRef: O, onOpenContextMenu: J, actionsDisabled: a }),
+                (0, i.jsx)(R, { clip: t, isNew: r, videoRef: z, onOpenContextMenu: J, actionsDisabled: a }),
                 (0, i.jsxs)("div", {
                     className: V.wI,
                     children: [
-                        (0, i.jsx)(z, { clip: t }),
+                        (0, i.jsx)(O, { clip: t }),
                         (0, i.jsxs)("div", {
                             className: V.i0,
                             children: [
@@ -320,7 +320,7 @@ function R(e) {
 }
 function G(e) {
     let { clip: t } = e,
-        l = (0, H.h)(t),
+        l = (0, S.h)(t),
         s = "" !== l;
     return (0, i.jsx)(m.Text, {
         className: V.NV,
@@ -354,7 +354,7 @@ function _(e) {
                     children: (0, i.jsx)(m.TAc, { size: "custom", width: 64, height: 64 }),
                 });
 }
-function z(e) {
+function O(e) {
     let { clip: t } = e,
         l = (0, o.bG)([C.A], () => (null != t.applicationId ? C.A.getApplication(t.applicationId) : null)),
         s = l?.getIconURL(32);

@@ -1,116 +1,147 @@
-i.d(e, { A: () => b });
+i.d(t, { A: () => W });
 var n = i(627968);
 i(64700);
-var l = i(503698),
-    r = i.n(l),
+var a = i(503698),
+    l = i.n(a),
     s = i(284009),
-    a = i.n(s),
+    r = i.n(s),
     o = i(311907),
-    d = i(397927),
-    u = i(707606),
-    c = i(573648),
-    A = i(235986),
-    m = i(159426),
-    h = i(25528),
-    p = i(655724),
-    g = i(82149),
-    f = i(734057),
+    c = i(397927),
+    d = i(707606),
+    u = i(573648),
+    m = i(235986),
+    _ = i(352306),
+    p = i(829203),
+    h = i(267102),
+    A = i(159426),
+    g = i(25528),
+    f = i(655724),
+    v = i(82149),
+    S = i(657331),
+    I = i(734057),
     T = i(287809),
-    S = i(977997),
+    C = i(977997),
     E = i(874546),
-    C = i(90644),
-    v = i(61330),
-    _ = i(153331),
-    I = i(33852),
-    y = i(834425),
-    x = i(284525),
-    N = i(730430),
-    j = i(443493),
-    D = i(462226),
-    O = i(329151),
-    P = i(738080),
-    U = i(648246),
-    L = i(305637),
-    R = i(652215),
-    M = i(540807);
-let b = (0, u.A)((t) => {
-    let {
-            activity: e,
-            embeddedActivity: i,
-            user: l,
-            applicationStream: s,
-            className: u,
-            guildId: b,
-            channelId: V,
-            source: G,
-            buttonVariant: H,
-            type: w,
-            onAction: F,
-        } = t,
-        B = (0, o.bG)([T.default], () => {
-            let t = T.default.getCurrentUser();
-            return a()(null != t, "UserActivityActions: currentUser cannot be undefined"), t;
-        }),
-        W = w === _.O.STREAM_PREVIEW || null != s,
-        k = (0, C.A)(e),
-        Y = k || W ? A.A.Direction.HORIZONTAL : A.A.Direction.VERTICAL,
-        z = e?.type === R.$pd.HANG_STATUS,
-        $ = (0, o.bG)([S.A, f.A], () => (z ? f.A.getChannel(S.A.getVoiceStateForUser(l.id)?.channelId) : null)),
-        J = (0, o.bG)([f.A], () => (null != V ? f.A.getChannel(V) : null), [V]),
-        { enableRequestToStream: K } = m.m.useExperiment(
-            { guildId: b ?? J?.guild_id, location: "UserActivityActions" },
-            { autoTrackExposure: !1 },
-        ),
-        Z = null != J && K && (0, h.F9)(e),
-        q = Y === A.A.Direction.VERTICAL;
-    return (0, n.jsx)(A.A, {
-        grow: 0,
-        align: A.A.Align.STRETCH,
-        direction: Y,
-        wrap: q ? A.A.Wrap.WRAP : A.A.Wrap.NO_WRAP,
-        className: r()(u, M.jx, q ? M.Vd : M.xM),
-        children: (() => {
-            if (!(0, E.A)(e)) {
-                if ((0, v.A)(e))
-                    return (0, n.jsx)(I.A, { platform: c.A.get(R.fg2.XBOX), variant: H, onAction: F, icon: d.YWd });
-                if (e?.platform === R.yTV.PS4 || e?.platform === R.yTV.PS5)
-                    return (0, n.jsx)(I.A, {
-                        variant: H,
-                        platform: c.A.get(R.fg2.PLAYSTATION),
-                        onAction: F,
-                        icon: d.Xj,
-                    });
-            }
-            if (k) {
-                let t = (0, n.jsx)(P.A, { activity: e, user: l, guildId: b, channelId: V, source: G, onAction: F }),
-                    i = (0, n.jsx)(O.A, { activity: e, user: l, source: G, onAction: F });
-                return (0, n.jsxs)(d.ButtonGroup, { size: "sm", fullWidth: !0, children: [i, t] });
-            }
-            if ((0, g.Cy)(e)) {
-                let t = (0, g.UW)(e);
-                return null == t
-                    ? null
-                    : (0, n.jsx)(j.A, { guildId: t.guildId, channelId: t.channelId, variant: H, onAction: F });
-            }
-            return W
-                ? (0, n.jsx)(L.A, { isCurrentUser: B.id === l.id, applicationStream: s, onAction: F })
-                : z && null != $
-                  ? (0, n.jsx)(N.A, { userId: l.id, variant: H, hangStatusChannel: $, onAction: F })
-                  : (0, n.jsxs)(n.Fragment, {
-                        children: [
-                            Z && (0, n.jsx)(p.B, { userId: l.id, channel: J, onAction: F }),
-                            (0, n.jsx)(U.A, { activity: e, variant: Z ? "secondary" : H, onAction: F }),
-                            (0, n.jsx)(x.A, {
-                                activity: e,
-                                embeddedActivity: i,
-                                user: l,
-                                variant: Z ? "secondary" : H,
-                                onAction: F,
-                            }),
-                            (0, n.jsx)(D.A, { activity: e, user: l, variant: Z ? "secondary" : H, onAction: F }),
-                            (0, n.jsx)(y.A, { user: l, activity: e, variant: Z ? "secondary" : H, onAction: F }),
-                        ],
-                    });
-        })(),
+    y = i(90644),
+    x = i(61330),
+    N = i(153331),
+    b = i(33852),
+    L = i(834425),
+    P = i(284525),
+    j = i(730430),
+    D = i(443493),
+    O = i(462226),
+    U = i(329151),
+    R = i(738080),
+    M = i(648246),
+    w = i(305637),
+    V = i(652215),
+    G = i(346640),
+    H = i(985018),
+    F = i(540807);
+let k = (e) => {
+        let { user: t, buttonVariant: i, activity: a, onAction: l } = e,
+            s = (0, h.aL)();
+        return (0, n.jsx)(
+            L.A,
+            {
+                user: t,
+                variant: i,
+                activity: a,
+                onAction: () => {
+                    _.s.getConfig({ location: "rich_presence" }).enabled &&
+                        (s.dispatch(V.jej.POPOUT_CLOSE),
+                        (0, S.closeUserProfileModal)(),
+                        (0, p.A)({ source: "rich_presence" }),
+                        l?.());
+                },
+            },
+            "custom-activity-button",
+        );
+    },
+    W = (0, d.A)((e) => {
+        let {
+                activity: t,
+                embeddedActivity: i,
+                user: a,
+                applicationStream: s,
+                className: d,
+                guildId: _,
+                channelId: p,
+                source: h,
+                buttonVariant: S,
+                type: W,
+                onAction: B,
+            } = e,
+            Y = (0, o.bG)([T.default], () => {
+                let e = T.default.getCurrentUser();
+                return r()(null != e, "UserActivityActions: currentUser cannot be undefined"), e;
+            }),
+            z = W === N.O.STREAM_PREVIEW || null != s,
+            $ = (0, y.A)(t),
+            J = $ || z ? m.A.Direction.HORIZONTAL : m.A.Direction.VERTICAL,
+            K = t?.type === V.$pd.HANG_STATUS,
+            q = (0, o.bG)([C.A, I.A], () => (K ? I.A.getChannel(C.A.getVoiceStateForUser(a.id)?.channelId) : null)),
+            X = (0, o.bG)([I.A], () => (null != p ? I.A.getChannel(p) : null), [p]),
+            { enableRequestToStream: Z } = A.m.useExperiment(
+                { guildId: _ ?? X?.guild_id, location: "UserActivityActions" },
+                { autoTrackExposure: !1 },
+            ),
+            Q = null != X && Z && (0, g.F9)(t);
+        if (t?.application_id === G.L8)
+            return (
+                (t = { ...t, buttons: [H.intl.string(H.t.E4kW5O)] }),
+                (0, n.jsx)(k, { user: a, buttonVariant: S, activity: t, onAction: B })
+            );
+        let ee = J === m.A.Direction.VERTICAL;
+        return (0, n.jsx)(m.A, {
+            grow: 0,
+            align: m.A.Align.STRETCH,
+            direction: J,
+            wrap: ee ? m.A.Wrap.WRAP : m.A.Wrap.NO_WRAP,
+            className: l()(d, F.jx, ee ? F.Vd : F.xM),
+            children: (() => {
+                if (!(0, E.A)(t)) {
+                    if ((0, x.A)(t))
+                        return (0, n.jsx)(b.A, { platform: u.A.get(V.fg2.XBOX), variant: S, onAction: B, icon: c.YWd });
+                    if (t?.platform === V.yTV.PS4 || t?.platform === V.yTV.PS5)
+                        return (0, n.jsx)(b.A, {
+                            variant: S,
+                            platform: u.A.get(V.fg2.PLAYSTATION),
+                            onAction: B,
+                            icon: c.Xj,
+                        });
+                }
+                if ($) {
+                    let e = (0, n.jsx)(R.A, { activity: t, user: a, guildId: _, channelId: p, source: h, onAction: B }),
+                        i = (0, n.jsx)(U.A, { activity: t, user: a, source: h, onAction: B });
+                    return (0, n.jsxs)(c.ButtonGroup, { size: "sm", fullWidth: !0, children: [i, e] });
+                }
+                if ((0, v.Cy)(t)) {
+                    let e = (0, v.UW)(t);
+                    return null == e
+                        ? null
+                        : (0, n.jsx)(D.A, { guildId: e.guildId, channelId: e.channelId, variant: S, onAction: B });
+                }
+                return z
+                    ? (0, n.jsx)(w.A, { isCurrentUser: Y.id === a.id, applicationStream: s, onAction: B })
+                    : K && null != q
+                      ? (0, n.jsx)(j.A, { userId: a.id, variant: S, hangStatusChannel: q, onAction: B })
+                      : (0, n.jsxs)(n.Fragment, {
+                            children: [
+                                Q && (0, n.jsx)(f.B, { userId: a.id, channel: X, onAction: B }),
+                                (0, n.jsx)(M.A, { activity: t, variant: Q ? "secondary" : S, onAction: B }),
+                                (0, n.jsx)(P.A, {
+                                    activity: t,
+                                    embeddedActivity: i,
+                                    user: a,
+                                    variant: Q ? "secondary" : S,
+                                    onAction: B,
+                                }),
+                                (0, n.jsx)(O.A, { activity: t, user: a, variant: Q ? "secondary" : S, onAction: B }),
+                                (0, n.jsx)(L.A, { user: a, activity: t, variant: Q ? "secondary" : S, onAction: B }),
+                            ],
+                        });
+            })(),
+        });
     });
-});

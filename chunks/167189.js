@@ -20,6 +20,7 @@ var r = (function (e) {
         (e.SOCIAL_LAYER_STOREFRONT = "SOCIAL_LAYER_STOREFRONT"),
         (e.QUESTS_EMBED = "QUESTS_EMBED"),
         (e.COLLECTIBLES_SHOP = "COLLECTIBLES_SHOP"),
+        (e.GORILLA_DEEP_LINK = "GORILLA_DEEP_LINK"),
         e
     );
 })({});

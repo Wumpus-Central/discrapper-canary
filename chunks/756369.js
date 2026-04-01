@@ -210,6 +210,7 @@ class e2 extends a.Component {
                   } else if (n === b.I.APP_OAUTH2_LINK) return (0, i.jsx)(f.A, { applicationId: a, message: e }, a);
                   else if (n === b.I.COLLECTIBLES_SHOP) return null;
                   else if (n === b.I.EXPERIMENT) return null;
+                  else if (n === b.I.GORILLA_DEEP_LINK) return null;
                   else throw Error(`Unknown coded link type: ${n}`);
               });
     }

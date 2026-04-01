@@ -1,49 +1,26 @@
 "use strict";
-n.d(t, { A: () => d });
-var i = n(627968),
-    s = n(64700),
-    l = n(372598),
-    r = n(53594),
-    a = n(449585),
-    o = n(864557);
-function d(e) {
-    let { rule: t, onChangeRule: n } = e,
-        d = s.useMemo(() => (0, r.J6)(t.triggerType), [t.triggerType]),
-        c = a.Bx(t.guildId),
-        u = s.useMemo(() => (0, l.XO)(), []),
-        m = (e, i) => {
-            if (null == i) return;
-            let s = t.actions.some((e) => e.type === i.type),
-                l = [...t.actions, i];
-            if (s) {
-                let n = t.actions.filter((e) => e.type !== i.type);
-                l = e ? [...n, i] : n;
-            }
-            n({ ...t, actions: l });
-        };
-    return (0, i.jsx)(i.Fragment, {
-        children: d.map((e) => {
-            let n = t.actions.find((t) => t.type === e);
-            return (0, i.jsx)(
-                o.A,
-                {
-                    guildId: t.guildId,
-                    triggerType: t.triggerType,
-                    action: n ?? u[e],
-                    toggled: null != n,
-                    onToggleAction: async (n) => {
-                        let i = t.actions.find((t) => t.type === e),
-                            s = null != i,
-                            l = u[e],
-                            r = n ? i : l;
-                        if (null != r && (!s || n)) {
-                            let n = c[e];
-                            null != n ? m(!0, await n(t, r)) : m(!0, r);
-                        } else m(!1, s ? i : l);
-                    },
-                },
-                e,
-            );
-        }),
+n.d(t, { A: () => f });
+var r = n(627968),
+    i = n(790225),
+    s = n(489748),
+    a = n(816758),
+    o = n(178090),
+    l = n(346640),
+    u = n(429311),
+    c = n(985018),
+    d = n(595898),
+    _ = n(748009);
+function f(e) {
+    let { achievementId: t, achievementProgress: n } = e,
+        f = l.l8[t],
+        p = (0, i.lO)(f, n),
+        h = (0, i.Ou)(f, n);
+    return (0, r.jsxs)(a.A, {
+        className: d.o,
+        children: [
+            (0, r.jsx)("img", { className: d.d, src: _.A, alt: c.intl.string(u.default.bOc6lJ) }),
+            (0, r.jsx)(o.A, { variant: "heading-xxl/normal", children: p }),
+            null != h && h > 0 ? (0, r.jsx)(s.A, { level: h, color: "white" }) : null,
+        ],
     });
 }
