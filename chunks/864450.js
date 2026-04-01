@@ -1,4 +1,4 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => v });
 var r = n(627968);
 n(64700);
 var i = n(158954),
@@ -8,51 +8,49 @@ var i = n(158954),
     a = n(721923),
     u = n(71393),
     d = n(975571),
-    c = n(953382),
-    p = n(864310),
-    _ = n(931936),
-    m = n(289588),
-    f = n(568065),
+    c = n(864310),
+    p = n(931936),
+    _ = n(289588),
+    m = n(568065),
     A = n(652215),
-    g = n(333354),
-    x = n(985018),
-    v = n(204861);
-function h(e) {
+    f = n(333354),
+    g = n(985018),
+    x = n(204861);
+function v(e) {
     let { guildId: t } = e,
         n = (0, l.bG)([u.A], () => u.A.getGuild(t)),
-        { available: h, spent: E, total: I } = (0, p.A)(t),
-        b = (0, c.q)("GuildPowerupsBoostInfoContainerAdmin");
+        { available: v, spent: h, total: E } = (0, c.A)(t);
     if (null != n)
         return (0, r.jsxs)("div", {
-            className: v.kL,
+            className: x.kL,
             children: [
                 (0, r.jsxs)("div", {
-                    className: v.N1,
+                    className: x.N1,
                     children: [
                         (0, r.jsx)(i.EYj, {
                             variant: "eyebrow",
                             color: "text-subtle",
-                            children: x.intl.string(g.default.hjvcLO),
+                            children: g.intl.string(f.default.hjvcLO),
                         }),
                         (0, r.jsx)(i.EYj, {
-                            className: v.C2,
+                            className: x.C2,
                             variant: "text-xs/semibold",
-                            children: x.intl.format(g.default.fXE30d, {
+                            children: g.intl.format(f.default.fXE30d, {
                                 helpDeskArticle: d.A.getArticleURL(A.MVz.GUILD_BOOSTING_FAQ),
                             }),
                         }),
                     ],
                 }),
                 (0, r.jsxs)("div", {
-                    className: v.hQ,
+                    className: x.hQ,
                     children: [
-                        (0, r.jsx)(m.A, { count: h, type: f.yG.AVAILABLE }),
-                        (0, r.jsx)(m.A, { count: E, type: f.yG.SPENT }),
-                        (0, r.jsx)(m.A, { count: I, type: f.yG.TOTAL }),
+                        (0, r.jsx)(_.A, { count: v, type: m.yG.AVAILABLE }),
+                        (0, r.jsx)(_.A, { count: h, type: m.yG.SPENT }),
+                        (0, r.jsx)(_.A, { count: E, type: m.yG.TOTAL }),
                     ],
                 }),
                 (0, r.jsx)(a.A, {
-                    className: b ? void 0 : v.S6,
+                    className: x.S6,
                     guild: n,
                     analyticsLocation: {
                         page: A.liQ.GUILD_POWERUPS_OVERVIEW,
@@ -60,15 +58,13 @@ function h(e) {
                     },
                     color: s.XD.CUSTOM,
                     size: s.lO.LARGE,
-                    fullWidth: b,
-                    useExpressiveButton: b,
                     icon: (0, r.jsx)(o._Jp, {
-                        className: v.Ng,
+                        className: x.Ng,
                         size: "sm",
                         color: o.LU0.unsafe_rawColors.GUILD_BOOSTING_PINK,
                     }),
                 }),
-                (0, r.jsx)(_.A, { guildId: t }),
+                (0, r.jsx)(p.A, { guildId: t }),
             ],
         });
 }

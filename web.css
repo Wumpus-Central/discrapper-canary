@@ -21102,6 +21102,56 @@ img.thumbnail__0f2e8 {
     }
 }
 
+.toast__810c3 {
+    border: none;
+    border-radius: 32px;
+    padding: 10px 16px
+}
+
+.icon__810c3 {
+    height: 20px;
+    margin-inline-end: 8px;
+    width: 20px
+}
+
+.toast__3fde7 {
+    align-items: center;
+    background-color: var(--background-surface-highest);
+    border: 1px solid var(--border-normal);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-high);
+    color: var(--text-strong);
+    display: flex;
+    line-height: 24px;
+    margin-bottom: 12px;
+    padding: var(--space-8) var(--space-12)
+}
+
+.toast__3fde7[data-type=success] {
+    background-color: var(--notice-background-positive);
+    color: var(--notice-text-positive)
+}
+
+.toast__3fde7[data-type=failure] {
+    background-color: var(--notice-background-critical);
+    color: var(--notice-text-critical)
+}
+
+.content__3fde7 {
+    color: currentColor
+}
+
+.icon__3fde7 {
+    height: 16px;
+    margin-inline-end: 8px;
+    margin-top: -2px;
+    width: 16px
+}
+
+.clipIcon__3fde7 {
+    color: var(--text-strong)
+}
+
 .rowContainer__1e702 {
     display: flex;
     flex-direction: row;
@@ -33423,44 +33473,6 @@ html:not(.chat-input) .inputInner_b1f01d {
 .successToast_a35754 {
     display: flex;
     gap: 40px
-}
-
-.toast__3fde7 {
-    align-items: center;
-    background-color: var(--background-surface-highest);
-    border: 1px solid var(--border-normal);
-    border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-high);
-    color: var(--text-strong);
-    display: flex;
-    line-height: 24px;
-    margin-bottom: 12px;
-    padding: var(--space-8) var(--space-12)
-}
-
-.toast__3fde7[data-type=success] {
-    background-color: var(--notice-background-positive);
-    color: var(--notice-text-positive)
-}
-
-.toast__3fde7[data-type=failure] {
-    background-color: var(--notice-background-critical);
-    color: var(--notice-text-critical)
-}
-
-.content__3fde7 {
-    color: currentColor
-}
-
-.icon__3fde7 {
-    height: 16px;
-    margin-inline-end: 8px;
-    margin-top: -2px;
-    width: 16px
-}
-
-.clipIcon__3fde7 {
-    color: var(--text-strong)
 }
 
 .banner__43147 {
