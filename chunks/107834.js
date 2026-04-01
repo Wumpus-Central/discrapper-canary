@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => E });
 var i = n(627968);
 n(64700);
 var s = n(503698),
@@ -10,25 +10,38 @@ var s = n(503698),
     c = n(490415),
     u = n(736653),
     m = n(742589),
-    g = n(287809),
-    _ = n(927578),
-    x = n(652215),
-    A = n(788868),
-    h = n(985018),
-    p = n(670324);
-let T = a.Ay.connectStores([g.default], () => ({ user: g.default.getCurrentUser() }))(
+    g = n(65470),
+    _ = n(400669),
+    x = n(909536),
+    A = n(287809),
+    h = n(927578),
+    p = n(652215),
+    T = n(788868),
+    f = n(985018),
+    S = n(670324);
+let E = a.Ay.connectStores([A.default], () => ({ user: A.default.getCurrentUser() }))(
     (0, c.A)((e) => {
         let { isAuthenticated: t, user: n } = e,
-            s = (0, _.TW)(n, A.PremiumTypes.TIER_2),
-            a = (0, u.Ay)();
+            s = (0, h.TW)(n, T.PremiumTypes.TIER_2),
+            a = (0, u.Ay)(),
+            c = (0, x.Gh)("nitro_home_header");
         return (0, i.jsx)(d.A, {
-            section: x.JJy.NAVIGATION,
+            section: p.JJy.NAVIGATION,
             children: (0, i.jsx)(o.NPJ, {
                 theme: a,
                 children: (e) =>
                     (0, i.jsxs)(m.A, {
                         isAuthenticated: t,
-                        className: l()(e, { [p.xD]: !s && !(0, r.Mw)(a), [p.lO]: !s && (0, r.Mw)(a) }),
+                        className: l()(e, { [S.xD]: !s && !(0, r.Mw)(a), [S.lO]: !s && (0, r.Mw)(a) }),
+                        toolbar: c
+                            ? (0, i.jsxs)("div", {
+                                  className: S.fI,
+                                  children: [
+                                      (0, i.jsx)(_.l, { size: "sm", className: S.ij }),
+                                      (0, i.jsx)(g.A, { variant: "secondary", size: "sm" }),
+                                  ],
+                              })
+                            : void 0,
                         role: "navigation",
                         children: [
                             (0, i.jsx)(m.A.Icon, {
@@ -36,7 +49,7 @@ let T = a.Ay.connectStores([g.default], () => ({ user: g.default.getCurrentUser(
                                 "aria-hidden": !0,
                                 color: s ? void 0 : o.LU0.unsafe_rawColors.PREMIUM_TIER_2_PINK.css,
                             }),
-                            (0, i.jsx)(m.A.Title, { children: h.intl.string(h.t.Ipxkog) }),
+                            (0, i.jsx)(m.A.Title, { children: f.intl.string(f.t.Ipxkog) }),
                         ],
                     }),
             }),
