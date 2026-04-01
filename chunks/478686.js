@@ -3,18 +3,20 @@ n.d(t, {
         function e(t, n, s) {
             let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
             if (!n.has(t.key)) return null;
-            if (!(0, i.nW)(t))
+            if (!(0, i.nW)(t)) {
+                let { usePredicate: e, ...n } = t;
                 return (
                     s.register({
-                        node: t,
+                        node: n,
                         parentSidebarItemKey: l.sidebarItem,
                         parentPanelKey: l.panel?.key,
                         parentTabKey: l.tab?.key,
                         parentCategoryKey: l.category?.key,
                         parentAccordionKey: l.accordion?.key,
                     }),
-                    t
+                    n
                 );
+            }
             let a = l;
             t.type === i.Z6.SIDEBAR_ITEM && (a = { sidebarItem: t.key, panel: t.layout[0] }),
                 t.type === i.Z6.PANEL && (a = { sidebarItem: l.sidebarItem, panel: t }),
@@ -28,17 +30,18 @@ n.d(t, {
                 !("StronglyDiscouragedCustomComponent" in t || (t.type === i.Z6.SIDEBAR_ITEM && "onClick" in t))
             )
                 return null;
-            let o = { ...t, layout: r };
+            let { usePredicate: o, ...d } = t,
+                c = { ...d, layout: r };
             return (
                 s.register({
-                    node: o,
+                    node: c,
                     parentSidebarItemKey: a.sidebarItem,
                     parentPanelKey: a.panel?.key,
                     parentTabKey: a.tab?.key,
                     parentCategoryKey: a.category?.key,
                     parentAccordionKey: a.accordion?.key,
                 }),
-                o
+                c
             );
         },
 });
