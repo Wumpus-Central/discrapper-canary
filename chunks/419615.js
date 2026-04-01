@@ -1,8 +1,8 @@
 n.d(t, { A: () => m });
 var i = n(119966),
-    r = n(478437),
+    l = n(478437),
     a = n(344351),
-    l = n(179771),
+    r = n(179771),
     s = n(420970),
     o = n(795816),
     d = n(933958),
@@ -13,12 +13,12 @@ var i = n(119966),
     _ = n(818348);
 let m = {
     [_.e$.INVITE_USER_EMBEDDED]: (0, s.T)(_.e$.INVITE_USER_EMBEDDED, {
-        scope: { [A.sm.ANY]: [l.F.RELATIONSHIPS_READ] },
+        scope: { [A.sm.ANY]: [r.F.DM_CHANNELS_MESSAGES_WRITE, r.F.ACTIVITIES_INVITES_WRITE] },
         async handler(e) {
             let t,
                 {
                     socket: n,
-                    args: { user_id: l, content: s },
+                    args: { user_id: r, content: s },
                 } = e,
                 A = n.application.id;
             if (null == A) throw new i.G({ errorCode: _.Lw.INVALID_COMMAND }, "No application.");
@@ -37,7 +37,7 @@ let m = {
                 case a.T.PRIVATE_CHANNEL_MESSAGE:
                     let p = c.A.getChannel(m.channel_id);
                     if (null == p) throw new i.G({ errorCode: _.Lw.INVALID_CHANNEL }, "Invalid channel");
-                    if (p.type === r.r.DM)
+                    if (p.type === l.r.DM)
                         throw new i.G({ errorCode: _.Lw.INVALID_CHANNEL }, "Cannot send invite to a DM");
                     t = p;
                     break;
@@ -48,7 +48,7 @@ let m = {
                 await (0, o.Ue)({
                     channelId: t.id,
                     applicationId: A,
-                    userId: l,
+                    userId: r,
                     prefixedContent: s,
                     location: "RPC_ACTIVITY_INVITE_USER",
                     inviteAnalyticsMetadata: { source: h.PE1.ACTIVITY_INVITE },
