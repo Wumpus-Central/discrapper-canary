@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => T });
+n.d(t, { A: () => S });
 var r = n(64700),
     i = n(284009),
     s = n.n(i),
@@ -68,7 +68,10 @@ let A = (e) => {
 function I(e, t) {
     return null != t && !p.A.fetchingAllEntitlements && (!p.A.fetchedAllEntitlements || e);
 }
-function T() {
+function T(e, t) {
+    return null != t && !p.A.applicationIdsFetching.has(g.tv) && (!p.A.applicationIdsFetched.has(g.tv) || e);
+}
+function S() {
     let {
             forceFetch: e,
             excludeReverseTrial: t,
@@ -81,9 +84,9 @@ function T() {
         o = (0, u.bG)([p.A], () => p.A.fetchedAllEntitlements),
         l = (0, u.yK)([p.A], () => p.A.getUnactivatedFractionalPremiumUnits()),
         h = (0, u.bG)([f.A], () => f.A.getPremiumTypeSubscription()),
-        [m, g] = r.useState(
+        [m, S] = r.useState(
             A({
-                isFetching: I(e, i) || p.A.fetchingAllEntitlements,
+                isFetching: I(e, i) || p.A.fetchingAllEntitlements || T(e, i) || p.A.applicationIdsFetching.has(g.tv),
                 entitlements: s,
                 unactivatedFractionalPremiumUnits: l,
                 currentUser: i,
@@ -94,7 +97,7 @@ function T() {
         );
     return (
         (0, d.Ay)(() => {
-            I(e, i) && (0, c.qw)({ entitlementType: E.zF_.FRACTIONAL_REDEMPTION });
+            I(e, i) && (0, c.qw)({ entitlementType: E.zF_.FRACTIONAL_REDEMPTION }), T(e, i) && (0, c.LM)(g.tv);
         }),
         r.useEffect(() => {
             let e = A({
@@ -105,7 +108,7 @@ function T() {
                 fetchedAllEntitlements: o,
                 excludeReverseTrialFromCountdown: n,
             });
-            g((t) => ((0, a.isEqual)(t, e) ? t : e));
+            S((t) => ((0, a.isEqual)(t, e) ? t : e));
         }, [i, s, h, l, o, n]),
         m
     );
