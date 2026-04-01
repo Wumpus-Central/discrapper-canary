@@ -107,9 +107,17 @@ function j(e) {
         Y = n.userStatus?.enrolledAt != null,
         W = n.userStatus?.completedAt != null,
         K = (0, p.fc)(n),
-        q = (0, C.vA)(n),
-        z = (0, m.NA)({ quest: n }),
-        $ = q ? z : P.intl.string(P.t.l7E81v);
+        q = (0, m.mU)({
+            quest: n,
+            taskDetails: K,
+            location: L.rE.ACTIVITY_PANEL,
+            questContent: h.uF.ACTIVITY_PANEL,
+            sourceQuestContent: h.uF.ACTIVITY_PANEL,
+            gameProfileSource: d.Ob.QuestActivityPanel,
+        }),
+        z = (0, C.vA)(n),
+        $ = (0, m.NA)({ quest: n }),
+        Q = z ? $ : P.intl.string(P.t.l7E81v);
     return (0, i.jsxs)("div", {
         ref: (e) => {
             t.current = e;
@@ -145,15 +153,13 @@ function j(e) {
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(M, { quest: n }),
-                        (0, i.jsx)(y.A, {
-                            autoplay: g,
-                            className: D.t3,
-                            quest: n,
-                            questContent: h.uF.ACTIVITY_PANEL,
-                            location: L.rE.ACTIVITY_PANEL,
-                            taskDetails: K,
-                            sourceQuestContent: h.uF.ACTIVITY_PANEL,
-                            gameProfileSource: d.Ob.QuestActivityPanel,
+                        (0, i.jsx)("div", {
+                            className: D.GA,
+                            children: (0, i.jsx)(o.Text, {
+                                variant: "text-sm/normal",
+                                color: "text-default",
+                                children: q,
+                            }),
                         }),
                     ],
                 }),
@@ -175,7 +181,7 @@ function j(e) {
                     !Y &&
                         (0, i.jsxs)(o.ButtonGroup, {
                             size: "sm",
-                            direction: q ? "vertical" : "horizontal",
+                            direction: z ? "vertical" : "horizontal",
                             fullWidth: !0,
                             children: [
                                 (0, i.jsx)(o.Button, {
@@ -196,7 +202,7 @@ function j(e) {
                                       })
                                     : (0, i.jsx)(o.Button, {
                                           variant: "primary",
-                                          text: $,
+                                          text: Q,
                                           onClick: V,
                                           loading: c,
                                           icon: (0, O.Oz)(n),

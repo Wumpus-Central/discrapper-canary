@@ -23,7 +23,6 @@ e.exports = {
     Sx: "postEnrollmentBackgroundExpanded__24e2c",
     LT: "previewPlayButtonCont__24e2c",
     t: "previewPlayButton__24e2c",
-    Ph: "premiumOrbsGlow__24e2c",
     AK: "contentCollapsedBackgroundWrapper__24e2c",
     LC: "contentCollapsedBackground__24e2c",
     Ge: "blur__24e2c",
