@@ -1,100 +1,97 @@
 "use strict";
-n.d(t, { A: () => Q, I: () => U }), n(323874), n(14289), n(35956), n(142703), n(321073), n(938796);
+n.d(t, { A: () => z, I: () => P }), n(323874), n(14289), n(35956), n(142703);
 var r = n(735438),
     i = n.n(r),
-    a = n(481613),
-    s = n.n(a),
-    o = n(665260),
-    l = n(77729),
-    u = n(47167),
-    c = n(626584),
-    d = n(22007),
-    _ = n(794036),
-    f = n(975970),
-    p = n(105613),
-    h = n(474228),
-    m = n(400492),
-    g = n(312671),
-    E = n(458640),
-    A = n(378058),
-    I = n(734057),
-    T = n(803224),
-    y = n(994500),
-    S = n(351906),
-    v = n(287809),
-    C = n(954571),
-    b = n(486020),
-    N = n(562153),
-    R = n(723702),
-    O = n(837921),
-    D = n(652215);
-let L = R.isPlatformEmbedded && (0, R.isWindows)(),
-    w = L && 10 > parseFloat(l.A.os.release),
-    x = !0;
-if (L && !w) {
-    let [e, , t] = l.A.os.release.split(".");
-    x = parseInt(e) > 10 || parseInt(t) >= 15063;
+    s = n(481613),
+    a = n.n(s),
+    o = n(77729),
+    l = n(47167),
+    u = n(626584),
+    c = n(22007),
+    d = n(794036),
+    _ = n(105613),
+    f = n(474228),
+    p = n(400492),
+    h = n(312671),
+    m = n(458640),
+    E = n(734057),
+    g = n(803224),
+    A = n(994500),
+    I = n(351906),
+    T = n(287809),
+    S = n(954571),
+    y = n(486020),
+    v = n(562153),
+    N = n(723702),
+    C = n(837921),
+    R = n(652215);
+let O = N.isPlatformEmbedded && (0, N.isWindows)(),
+    b = O && 10 > parseFloat(o.A.os.release),
+    D = !0;
+if (O && !b) {
+    let [e, , t] = o.A.os.release.split(".");
+    D = parseInt(e) > 10 || parseInt(t) >= 15063;
 }
-let P = new c.A("NotificationUtils"),
-    M =
-        (L && x) ||
-        ("Chrome" === s().name && 47 > parseFloat(s().version)) ||
-        ("Firefox" === s().name && 52 > parseFloat(s().version));
-async function k() {
-    if (l.A?.features.supports("notifications"))
+let L = new u.A("NotificationUtils"),
+    w =
+        (O && D) ||
+        ("Chrome" === a().name && 47 > parseFloat(a().version)) ||
+        ("Firefox" === a().name && 52 > parseFloat(a().version));
+async function M() {
+    if (o.A?.features.supports("notifications"))
         try {
-            return await O.Ay.invoke("NOTIFICATIONS_GET_SETTINGS");
+            return await C.Ay.invoke("NOTIFICATIONS_GET_SETTINGS");
         } catch (e) {
-            P.warn("Fetching native notification settings failed with error: ", e);
+            L.warn("Fetching native notification settings failed with error: ", e);
         }
     return null;
 }
-function U(e) {
+function P(e) {
     return `discord://${location.host}${e}`;
 }
-function G(e) {
+function x(e) {
     try {
         let t = new URL(e, location.origin);
         if ("discord:" === t.protocol) return t.pathname;
     } catch (e) {}
     return null;
 }
-async function V() {
-    let e = await k();
+async function k() {
+    let e = await M();
     return e?.authorizationStatus === "authorized" && e?.sound === !0;
 }
-function F(e, t) {
-    return (0, E.A)(t ?? g.A.getSoundpack())[e] ?? e;
+function U(e, t) {
+    return (0, m.A)(t ?? h.A.getSoundpack())[e] ?? e;
 }
-async function B(e) {
+async function G(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         n = arguments.length > 2 ? arguments[2] : void 0;
-    if (await V())
+    if (await k())
         try {
-            await O.Ay.invoke("NOTIFICATIONS_SEND_NOTIFICATION", { sound: F(e, n) });
+            await C.Ay.invoke("NOTIFICATIONS_SEND_NOTIFICATION", { sound: U(e, n) });
             return;
         } catch (e) {
-            P.warn("Native notification sound failed with error: ", e);
+            L.warn("Native notification sound failed with error: ", e);
         }
-    (0, m.Ak)(e, t, void 0, n);
+    (0, p.Ak)(e, t, void 0, n);
 }
-let j = i().throttle(B, 1e3, { leading: !0 });
-function H() {
-    O.Ay.flashFrame(!1);
+let F = i().throttle(G, 1e3, { leading: !0 });
+function V() {
+    C.Ay.flashFrame(!1);
 }
-L && (window.addEventListener("focus", H), O.Ay.on("MAIN_WINDOW_FOCUS", H));
-let Y = window.Notification;
-if (w) {
+O && (window.addEventListener("focus", V), C.Ay.on("MAIN_WINDOW_FOCUS", V));
+let B = window.Notification;
+if (b) {
     let e = {};
-    O.Ay.on("NOTIFICATION_CLICK", (t, n) => {
+    C.Ay.on("NOTIFICATION_CLICK", (t, n) => {
         let r = e[n];
         null != r && (r.onclick(), r.close());
     }),
-        O.Ay.send("NOTIFICATIONS_CLEAR"),
-        (Y = class {
+        C.Ay.send("NOTIFICATIONS_CLEAR"),
+        (B = class {
             static permission = "granted";
             static _id = 0;
-            id = Y._id++;
+            id = B._id++;
             title;
             body;
             icon;
@@ -106,16 +103,16 @@ if (w) {
             }
             constructor(t, { body: n, icon: r }) {
                 t.includes("\0")
-                    ? (P.warn("Notification title contains null character, setting to empty string"), (this.title = ""))
+                    ? (L.warn("Notification title contains null character, setting to empty string"), (this.title = ""))
                     : (this.title = t),
                     n.includes("\0")
-                        ? (P.warn("Notification body contains null character, setting to empty string"),
+                        ? (L.warn("Notification body contains null character, setting to empty string"),
                           (this.body = ""))
                         : (this.body = n),
                     (this.icon = r),
                     setImmediate(() => this.onshow()),
                     (e[this.id] = this),
-                    O.Ay.send("NOTIFICATION_SHOW", {
+                    C.Ay.send("NOTIFICATION_SHOW", {
                         id: this.id,
                         title: this.title,
                         body: this.body,
@@ -123,43 +120,43 @@ if (w) {
                     });
             }
             close() {
-                null != e[this.id] && (delete e[this.id], O.Ay.send("NOTIFICATION_CLOSE", this.id), this.onclose());
+                null != e[this.id] && (delete e[this.id], C.Ay.send("NOTIFICATION_CLOSE", this.id), this.onclose());
             }
         });
 }
-let W = {};
-if (l.A?.features.supports("notifications")) {
+let H = {};
+if (o.A?.features.supports("notifications")) {
     try {
-        O.Ay.on("NOTIFICATIONS_RECEIVED_RESPONSE", (e, t, n, r, i) => {
-            if ("dismiss" === t) return void delete W[n];
+        C.Ay.on("NOTIFICATIONS_RECEIVED_RESPONSE", (e, t, n, r, i) => {
+            if ("dismiss" === t) return void delete H[n];
             {
-                let e = W[n];
-                if ((R.isPlatformEmbedded ? O.Ay.focus() : window.focus(), null != e)) {
+                let e = H[n];
+                if ((N.isPlatformEmbedded ? C.Ay.focus() : window.focus(), null != e)) {
                     e.options?.omitClickTracking ||
-                        (C.default.track(D.HAw.NOTIFICATION_ACTION, { action: "CLICK", ...e.trackingProps }),
-                        C.default.track(D.HAw.NOTIFICATION_CLICKED, e.clickTrackingProps)),
+                        (S.default.track(R.HAw.NOTIFICATION_ACTION, { action: "CLICK", ...e.trackingProps }),
+                        S.default.track(R.HAw.NOTIFICATION_CLICKED, e.clickTrackingProps)),
                         e.options?.onClick?.(r);
                     return;
                 }
                 if (null != i) {
-                    let e = G(i);
-                    null != e && (0, d.A)(e);
+                    let e = x(i);
+                    null != e && (0, c.A)(e);
                 }
             }
         }),
-            O.Ay.invoke("NOTIFICATIONS_REMOVE_ALL_NOTIFICATIONS");
+            C.Ay.invoke("NOTIFICATIONS_REMOVE_ALL_NOTIFICATIONS");
     } catch (e) {
-        P.warn("Native notification setup failed with error: ", e);
+        L.warn("Native notification setup failed with error: ", e);
     }
-    l.A?.features.supports("notifications_provisional") &&
-        $().then((e) => {
-            e || O.Ay.invoke("NOTIFICATIONS_GET_AUTHORIZATION", !0).catch(() => {});
+    o.A?.features.supports("notifications_provisional") &&
+        W().then((e) => {
+            e || C.Ay.invoke("NOTIFICATIONS_GET_AUTHORIZATION", !0).catch(() => {});
         });
 }
-function K(e) {
-    if (l.A?.features.supports("notifications"))
+function j(e) {
+    if (o.A?.features.supports("notifications"))
         try {
-            O.Ay.invoke("NOTIFICATIONS_GET_AUTHORIZATION")
+            C.Ay.invoke("NOTIFICATIONS_GET_AUTHORIZATION")
                 .then((t) => {
                     e(t);
                 })
@@ -168,147 +165,131 @@ function K(e) {
                 });
             return;
         } catch (e) {
-            P.warn("Native notification authorization failed with error: ", e);
+            L.warn("Native notification authorization failed with error: ", e);
         }
-    null != Y &&
-        Y.requestPermission(async () => {
-            null != e && e(await z());
+    null != B &&
+        B.requestPermission(async () => {
+            null != e && e(await Y());
         });
 }
-async function z() {
-    if (l.A?.features.supports("notifications")) {
-        let e = await k();
+async function Y() {
+    if (o.A?.features.supports("notifications")) {
+        let e = await M();
         return e?.authorizationStatus === "authorized" || e?.authorizationStatus === "provisional";
     }
-    return null != Y && "granted" === Y.permission;
+    return null != B && "granted" === B.permission;
 }
-async function $() {
-    return l.A?.features.supports("notifications")
-        ? (await k())?.authorizationStatus !== "undetermined"
-        : null != Y && "default" !== Y.permission;
+async function W() {
+    return o.A?.features.supports("notifications")
+        ? (await M())?.authorizationStatus !== "undetermined"
+        : null != B && "default" !== B.permission;
 }
-function q(e) {
+function K(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         n = arguments.length > 2 ? arguments[2] : void 0;
-    e.includes("message") ? j(e, t, n) : B(e, t, n);
+    e.includes("message") ? F(e, t, n) : G(e, t, n);
 }
-async function Z(e, t, n, r, i) {
-    let a,
-        s = await k(),
-        l = s?.authorizationStatus === "authorized" || s?.authorizationStatus === "provisional",
-        c = null != s ? l : await z(),
-        d = l,
-        m = S.A.disableNotifications && null == i.overrideStreamerMode,
-        g = !R.isPlatformEmbedded || ((0, R.isMac)() && d) || O.Ay.shouldDisplayNotifications(),
-        E = !m && c && g,
-        w = { ...r, action: void 0, ping: void 0, banner: void 0, badge: void 0 },
-        U = w,
-        G = w;
-    if (((r.banner = await (0, p.N)()), !E)) {
+async function $(e, t, n, r, i) {
+    let s,
+        a = await M(),
+        o = a?.authorizationStatus === "authorized" || a?.authorizationStatus === "provisional",
+        u = null != a ? o : await Y(),
+        c = o,
+        p = I.A.disableNotifications && null == i.overrideStreamerMode,
+        h = !N.isPlatformEmbedded || ((0, N.isMac)() && c) || C.Ay.shouldDisplayNotifications(),
+        m = !p && u && h,
+        b = { ...r, action: void 0, ping: void 0, banner: void 0, badge: void 0 },
+        P = b,
+        x = b;
+    if (((r.banner = await (0, _.N)()), !m)) {
         null != i.sound &&
             !1 !== i.playSoundIfDisabled &&
-            (q(i.sound, i.volume ?? 1, i.soundpack),
+            (K(i.sound, i.volume ?? 1, i.soundpack),
             (r.ping = !0),
-            i.omitViewTracking || C.default.track(D.HAw.NOTIFICATION_ACTION, { action: "VIEW", ...r }));
+            i.omitViewTracking || S.default.track(R.HAw.NOTIFICATION_ACTION, { action: "VIEW", ...r }));
         return;
     }
-    t.includes("\0") && (P.warn("Notification title contains null character, setting to empty string"), (t = "")),
-        n.includes("\0") && (P.warn("Notification body contains null character, setting to empty string"), (n = ""));
-    let V = i?.tag ?? null,
-        B = d && s?.sound === !0 && s?.authorizationStatus === "authorized",
-        j = (e, t) => {
+    t.includes("\0") && (L.warn("Notification title contains null character, setting to empty string"), (t = "")),
+        n.includes("\0") && (L.warn("Notification body contains null character, setting to empty string"), (n = ""));
+    let k = i?.tag ?? null,
+        G = c && a?.sound === !0 && a?.authorizationStatus === "authorized",
+        F = (e, t) => {
             i.onShown?.(),
                 i.omitViewTracking ||
-                    (C.default.track(D.HAw.NOTIFICATION_ACTION, { action: "VIEW", ...t }),
-                    C.default.track(D.HAw.NOTIFICATION_VIEWED, G)),
-                M && setTimeout(() => e.close(), 5e3);
+                    (S.default.track(R.HAw.NOTIFICATION_ACTION, { action: "VIEW", ...t }),
+                    S.default.track(R.HAw.NOTIFICATION_VIEWED, x)),
+                w && setTimeout(() => e.close(), 5e3);
         };
     if (
-        (null == i.sound || B || (q(i.sound, i.volume ?? 1, i.soundpack), (r.ping = !0)),
-        i.isUserAvatar && null != e && (e = await (0, h.w)(e)),
-        L && T.A.taskbarFlash && O.Ay.flashFrame(!0),
-        d)
+        (null == i.sound || G || (K(i.sound, i.volume ?? 1, i.soundpack), (r.ping = !0)),
+        i.isUserAvatar && null != e && (e = await (0, f.w)(e)),
+        O && g.A.taskbarFlash && C.Ay.flashFrame(!0),
+        c)
     ) {
-        let a = { title: t, body: n };
-        null != e && (a.icon = e),
-            i?.sound != null && (a.sound = F(i.sound, i.soundpack)),
-            i?.tag != null && (a.identifier = i.tag),
-            i?.fallbackDeepLink != null && (a.fallbackDeepLink = i.fallbackDeepLink),
-            Array.isArray(i.actions) && (a.actions = i.actions);
-        let s = f.A.getCurrentConfig(
-            { location: "showNotification" },
-            { autoTrackExposure: !0, disable: null == i.messageRecord },
-        );
-        if (null != i.messageRecord && s.enabled) {
+        let s = { title: t, body: n };
+        if (
+            (null != e && (s.icon = e),
+            i?.sound != null && (s.sound = U(i.sound, i.soundpack)),
+            i?.tag != null && (s.identifier = i.tag),
+            i?.fallbackDeepLink != null && (s.fallbackDeepLink = i.fallbackDeepLink),
+            Array.isArray(i.actions) && (s.actions = i.actions),
+            null != i.messageRecord && (0, N.isMac)())
+        ) {
             let e = i.messageRecord.channel_id,
                 t = i.messageRecord.author;
-            a.threadIdentifier = e;
-            let n = I.A.getChannel(e);
-            null != n && (a.groupName = (0, u.m1)(n, v.default, y.A));
+            s.threadIdentifier = e;
+            let n = E.A.getChannel(e);
+            null != n && (s.groupName = (0, l.m1)(n, T.default, A.A));
             let r = n?.getGuildId();
-            if (
-                ((a.senderIdentifier = t.id),
-                (a.senderDisplayName = N.Ay.getName(r, e, t)),
-                (a.senderAvatar = t.getAvatarURL(r, 128, !1, !1)),
-                (a.attachments = []),
-                s.includeStickers)
-            )
-                for (let e of (0, A.o6)(i.messageRecord)) {
-                    let t = (0, A.zg)(e, { isPreview: !0 });
-                    null != t && a.attachments.push({ url: t, type: "image/png" });
-                }
-            if (s.includeImages)
-                for (let e of i.messageRecord.attachments)
-                    !(0, o.Lt)(e.flags ?? 0, D.sbO.CONTAINS_EXPLICIT_MEDIA) &&
-                        !(0, o.Lt)(e.flags ?? 0, D.sbO.IS_SPOILER) &&
-                        e.content_type?.startsWith("image/") &&
-                        a.attachments.push({ url: e.proxy_url, type: e.content_type });
-            null != i.emoji &&
-                _.A.getConfig({ location: "showNotification" }).enabled &&
-                (a.emoji = i.emoji.map((e) => ({ url: (0, b._O)({ id: e.id, animated: !1, size: 96 }), ...e })));
+            (s.senderIdentifier = t.id),
+                (s.senderDisplayName = v.Ay.getName(r, e, t)),
+                (s.senderAvatar = t.getAvatarURL(r, 128, !1, !1)),
+                null != i.emoji &&
+                    d.A.getConfig({ location: "showNotification" }).enabled &&
+                    (s.emoji = i.emoji.map((e) => ({ url: (0, y._O)({ id: e.id, animated: !1, size: 96 }), ...e })));
         }
         try {
-            let e = await O.Ay.invoke("NOTIFICATIONS_SEND_NOTIFICATION", a);
-            W[e] = { options: i, trackingProps: r, clickTrackingProps: U };
+            let e = await C.Ay.invoke("NOTIFICATIONS_SEND_NOTIFICATION", s);
+            H[e] = { options: i, trackingProps: r, clickTrackingProps: P };
             let t = {
                 close() {
                     try {
-                        O.Ay.invoke("NOTIFICATIONS_REMOVE_NOTIFICATIONS", [e]);
+                        C.Ay.invoke("NOTIFICATIONS_REMOVE_NOTIFICATIONS", [e]);
                     } catch (e) {
-                        P.warn("Native notification removal failed with error: ", e);
+                        L.warn("Native notification removal failed with error: ", e);
                     }
                 },
             };
-            return j(t, r), { notification: t, trackingProps: r };
+            return F(t, r), { notification: t, trackingProps: r };
         } catch (e) {
-            P.warn("Native notification failed with error: ", e);
+            L.warn("Native notification failed with error: ", e);
         }
     }
-    null != i.sound && d && (q(i.sound, i.volume ?? 1, i.soundpack), (r.ping = !0));
-    let H = { icon: e, body: n, tag: V, silent: !0 };
+    null != i.sound && c && (K(i.sound, i.volume ?? 1, i.soundpack), (r.ping = !0));
+    let V = { icon: e, body: n, tag: k, silent: !0 };
     try {
-        a = new Y(t, H);
+        s = new B(t, V);
     } catch (e) {
         return;
     }
-    return (j(a, r),
-    (a.onclick = (e) => {
-        R.isPlatformEmbedded ? O.Ay.focus() : (window.focus(), a.close()),
+    return (F(s, r),
+    (s.onclick = (e) => {
+        N.isPlatformEmbedded ? C.Ay.focus() : (window.focus(), s.close()),
             i.omitClickTracking ||
-                (C.default.track(D.HAw.NOTIFICATION_ACTION, { action: "CLICK", ...r }),
-                C.default.track(D.HAw.NOTIFICATION_CLICKED, U));
+                (S.default.track(R.HAw.NOTIFICATION_ACTION, { action: "CLICK", ...r }),
+                S.default.track(R.HAw.NOTIFICATION_CLICKED, P));
         let t = "";
         i.onClick?.(t);
     }),
-    x)
-        ? { notification: a, trackingProps: r }
+    D)
+        ? { notification: s, trackingProps: r }
         : {
               notification: {
                   close() {
-                      a?.onclose?.();
+                      s?.onclose?.();
                   },
               },
               trackingProps: r,
           };
 }
-let Q = { hasPermission: z, requestPermission: K, showNotification: Z, playNotificationSound: B };
+let z = { hasPermission: Y, requestPermission: j, showNotification: $, playNotificationSound: G };
