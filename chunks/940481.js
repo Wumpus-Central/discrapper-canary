@@ -5,17 +5,17 @@ var n = s(627968),
     l = s(311907),
     i = s(397927),
     o = s(645619),
-    c = s(503852),
-    d = s(43594),
+    d = s(503852),
+    c = s(43594),
     u = s(363487),
-    _ = s(490557),
-    m = s(214676),
+    m = s(490557),
+    _ = s(214676),
     x = s(499623),
     g = s(448836),
     b = s(428050),
     f = s(568065),
-    p = s(333354),
-    h = s(985018),
+    h = s(333354),
+    p = s(985018),
     j = s(614070);
 function k(e) {
     let { guildId: t, powerup: s, ...k } = e,
@@ -23,22 +23,22 @@ function k(e) {
         N = a.useMemo(() => {
             switch (s.skuId) {
                 case r.SL:
-                    return (0, n.jsx)(m.L, { guildId: t });
+                    return (0, n.jsx)(_.L, { guildId: t });
                 case r.aN:
-                    return (0, n.jsx)(m.T, {});
+                    return (0, n.jsx)(_.T, {});
                 case r.FB:
                     return (0, n.jsx)(b.A, {});
                 default:
                     return;
             }
         }, [s, t]);
-    (0, c.Z)(t, s, c.q.DETAIL);
+    (0, d.Z)(t, s, d.q.DETAIL);
     let S = (0, u.A)(t),
-        A = (0, d.D)("GuildPowerupPerkModal"),
+        A = (0, c.D)("GuildPowerupPerkModal"),
         I = f.wr[s.skuId],
-        E = null != I ? f.a8[I] : null,
-        T = (0, l.bG)([o.A], () => o.A.getStateForGuild(t)),
-        w = null != E ? T?.allPowerups[E] : null;
+        T = null != I ? f.a8[I] : null,
+        w = (0, l.bG)([o.A], () => o.A.getStateForGuild(t)),
+        E = null != T ? w?.allPowerups[T] : null;
     return (0, n.jsxs)(i.EOs, {
         "data-migration-pending": !0,
         className: j.yl,
@@ -56,7 +56,7 @@ function k(e) {
                         children: [
                             (0, n.jsx)(i.hLv, {
                                 className: j.Rp,
-                                children: (0, n.jsx)(_.l, { className: j.UZ, powerup: s }),
+                                children: (0, n.jsx)(m.l, { className: j.UZ, powerup: s }),
                             }),
                             (0, n.jsxs)("div", {
                                 className: j.hQ,
@@ -67,11 +67,26 @@ function k(e) {
                                         variant: "text-sm/normal",
                                         children: s.description,
                                     }),
-                                    null != w &&
+                                    null != s.deactivationCooldownPeriodDays &&
+                                        s.deactivationCooldownPeriodDays > 0 &&
+                                        (0, n.jsxs)("div", {
+                                            className: j.sh,
+                                            children: [
+                                                (0, n.jsx)(i.mir, { size: "xs", color: i.LU0.colors.TEXT_MUTED }),
+                                                (0, n.jsx)(i.Text, {
+                                                    variant: "text-sm/medium",
+                                                    color: "text-muted",
+                                                    children: p.intl.formatToPlainString(h.default.GMhQcE, {
+                                                        cooldownDays: s.deactivationCooldownPeriodDays,
+                                                    }),
+                                                }),
+                                            ],
+                                        }),
+                                    null != E &&
                                         (0, n.jsx)(i.Text, {
                                             className: j.h_,
                                             variant: "text-sm/normal",
-                                            children: h.intl.formatToPlainString(p.default.NAFGkH, { level: w.title }),
+                                            children: p.intl.formatToPlainString(h.default.NAFGkH, { level: E.title }),
                                         }),
                                     (0, n.jsx)(x.F, { powerup: s }),
                                     null != C &&
