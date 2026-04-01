@@ -1,6 +1,6 @@
 "use strict";
 let r, i, s, a, o, l;
-n.d(t, { A: () => Z }), n(938796);
+n.d(t, { A: () => q }), n(938796);
 var u = n(735438),
     c = n.n(u),
     d = n(989349),
@@ -105,7 +105,7 @@ let k = c().debounce(() => {
     if (null == a || null == s) return !1;
     let e = a.toJS(),
         t = s.toJS();
-    O.every((n) => e[n] === t[n]) && a !== s && ((a = s), q.emitChange());
+    O.every((n) => e[n] === t[n]) && a !== s && ((a = s), z.emitChange());
 }, 500);
 function U(e) {
     let {
@@ -198,25 +198,21 @@ function j(e) {
     return n;
 }
 function Y(e) {
-    let { channel: t } = e;
-    return null != a && H(t.id);
-}
-function W(e) {
     let { channelId: t } = e;
     return H(t);
 }
-function K(e) {
+function W(e) {
     let {
         channel: { id: t },
     } = e;
     if (null == a || a.id !== t) return !1;
     S = T.XlH.CLOSED;
 }
-function $(e) {
+function K(e) {
     let { overwriteId: t } = e;
     l = t;
 }
-class z extends f.Ay.Store {
+class $ extends f.Ay.Store {
     static displayName = "ChannelSettingsStore";
     initialize() {
         this.waitFor(I.A);
@@ -259,22 +255,21 @@ class z extends f.Ay.Store {
         };
     }
 }
-let q = new z(h.h, {
+let z = new $(h.h, {
         CHANNEL_SETTINGS_INIT: D,
         CHANNEL_SETTINGS_SUBMIT: M,
         CHANNEL_SETTINGS_SUBMIT_SUCCESS: x,
         CHANNEL_SETTINGS_SUBMIT_FAILURE: P,
         CHANNEL_SETTINGS_CLOSE: w,
-        CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: W,
-        CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS: W,
-        CHANNEL_SETTINGS_OVERWRITE_SELECT: $,
+        CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: Y,
+        CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS: Y,
+        CHANNEL_SETTINGS_OVERWRITE_SELECT: K,
         CHANNEL_SETTINGS_UPDATE: U,
         CHANNEL_SETTINGS_SET_SECTION: L,
         CHANNEL_SETTINGS_LOADED_INVITES: F,
         CHANNEL_UPDATES: j,
-        THREAD_UPDATE: Y,
-        CHANNEL_DELETE: K,
+        CHANNEL_DELETE: W,
         INSTANT_INVITE_REVOKE_SUCCESS: V,
         INSTANT_INVITE_CREATE_SUCCESS: B,
     }),
-    Z = q;
+    q = z;
