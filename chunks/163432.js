@@ -120,7 +120,6 @@ function _(e) {
                         selected: l === e.id,
                         channel: o,
                         className: h.Vs,
-                        fit: d.Yl.COVER,
                         onClick: r,
                         onDoubleClick: s,
                         onContextMenu: a,
