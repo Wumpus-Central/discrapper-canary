@@ -42,8 +42,8 @@ var o = n(397927),
     S = n(859703),
     y = n(405670),
     v = n(245853),
-    C = n(972495),
-    N = n(579473),
+    N = n(972495),
+    C = n(579473),
     R = n(561844),
     O = n(590202),
     b = n(851936),
@@ -139,7 +139,7 @@ let q = 0.2;
 function Z(e) {
     let t = (0, b.L)({ quest: e }),
         n = { location: k.rE.QUESTS_BAR };
-    if (!(0, C.l)(n) || Math.random() > q) return;
+    if (!(0, N.l)(n) || Math.random() > q) return;
     let r = (0, D.A)(e);
     t.log(`Showing survey ${r.id}`), (0, P.m)({ questId: e.id, survey: r });
 }
@@ -175,7 +175,7 @@ function Q(e) {
     }
     let { setCaptionEnabled: d, muted: _, volume: f, captionEnabled: p } = y.Ay.getState(),
         { enabled: h, variant: m } = v.Ig.getConfig({ location: k.rE.VIDEO_MODAL }),
-        E = null != (0, N.tW)(t, N.fY.VIDEO_PLAYER_CAPTION, void 0, !1);
+        E = null != (0, C.tW)(t, C.fY.VIDEO_PLAYER_CAPTION, void 0, !1);
     _ &&
         h &&
         (m === v.sy.AUTO_ENABLE_CAPTIONS && E && !p
@@ -257,7 +257,7 @@ function er(e, t) {
 }
 function ei(e) {
     (0, o.mMO)(async () => {
-        let { default: t } = await Promise.all([n.e("8407"), n.e("27818")]).then(n.bind(n, 518420));
+        let { default: t } = await Promise.all([n.e("77406"), n.e("27818")]).then(n.bind(n, 518420));
         return (n) => (0, r.jsx)(t, { ...n, questId: e.id });
     });
 }

@@ -5,7 +5,7 @@ n(64700);
 var i = n(397927);
 function s(e) {
     (0, i.mMO)(async () => {
-        let { default: t } = await Promise.all([n.e("8407"), n.e("4583"), n.e("52179")]).then(n.bind(n, 281201));
+        let { default: t } = await Promise.all([n.e("77406"), n.e("4583"), n.e("52179")]).then(n.bind(n, 281201));
         return (n) => (0, r.jsx)(t, { analyticsLocation: e, ...n });
     });
 }

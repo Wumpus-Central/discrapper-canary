@@ -71,7 +71,7 @@ let L = (0, h.Fe)({
         name: "LinkAuthorize",
     }),
     F = (0, h.Fe)({
-        createPromise: () => Promise.all([n.e("8407"), n.e("16864")]).then(n.bind(n, 60883)),
+        createPromise: () => Promise.all([n.e("77406"), n.e("16864")]).then(n.bind(n, 60883)),
         webpackId: 60883,
         name: "ActivateDevice",
     }),
@@ -180,7 +180,7 @@ let L = (0, h.Fe)({
     B = (0, h.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("8407"),
+                n.e("77406"),
                 n.e("48330"),
                 n.e("37372"),
                 n.e("88890"),

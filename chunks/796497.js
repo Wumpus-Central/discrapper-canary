@@ -15,7 +15,7 @@ function c() {
         text: e,
         onClick: () => {
             (0, s.mMO)(async () => {
-                let { default: e } = await Promise.all([n.e("8407"), n.e("84268")]).then(n.bind(n, 320742));
+                let { default: e } = await Promise.all([n.e("77406"), n.e("84268")]).then(n.bind(n, 320742));
                 return (t) => (0, i.jsx)(e, { ...t });
             }),
                 l.default.track(r.HAw.FAMILY_CENTER_ACTION, { action: a.qb.ShowQRCodeModal });

@@ -866,7 +866,7 @@ let v = {
         return (n) => (0, a.jsx)(i, { ...n, currentUser: e, otherUser: t });
     },
     FamilyCenterQRCodeModal: async () => {
-        let { default: e } = await Promise.all([n.e("8407"), n.e("72875")]).then(n.bind(n, 320742));
+        let { default: e } = await Promise.all([n.e("77406"), n.e("72875")]).then(n.bind(n, 320742));
         return (t) => (0, a.jsx)(e, { ...t });
     },
     PremiumGroupFriendsSelectorModal: async () => {

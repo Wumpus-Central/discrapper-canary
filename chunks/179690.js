@@ -19,7 +19,7 @@ let l = {
     enableMFA: async function () {
         await new Promise((t) => {
             (0, i.mMO)(async () => {
-                let { default: e } = await Promise.all([n.e("8407"), n.e("78811")]).then(n.bind(n, 333737));
+                let { default: e } = await Promise.all([n.e("77406"), n.e("78811")]).then(n.bind(n, 333737));
                 return (n) => (0, s.jsx)(e, { ...n, handleEnableMFASuccess: t });
             });
         }),

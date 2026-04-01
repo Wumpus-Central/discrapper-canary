@@ -62,7 +62,7 @@ function g(e) {
                               ? (0, a.A)({ platformType: l.type, location: "Console Transfer Item" })
                               : l.type === _.fg2.XBOX
                                 ? (0, s.mMO)(async () => {
-                                      let { default: t } = await Promise.all([n.e("8407"), n.e("67670")]).then(
+                                      let { default: t } = await Promise.all([n.e("77406"), n.e("67670")]).then(
                                           n.bind(n, 188072),
                                       );
                                       return (n) => (0, i.jsx)(t, { ...n, channel: e });
