@@ -30,20 +30,21 @@ let A = (e) => {
             impressionName: A,
             impressionProperties: I,
             disableClickTrap: T = !1,
+            repositionOnContentChange: S = !1,
         } = e,
-        S = i.useRef(null),
-        y = i.useMemo(() => ({ current: c }), [c]),
-        v = i.useRef(n);
+        y = i.useRef(null),
+        v = i.useMemo(() => ({ current: c }), [c]),
+        C = i.useRef(n);
     i.useEffect(() => {
-        v.current = n;
+        C.current = n;
     }),
         i.useEffect(() => {
-            let e = S.current?.elementRef.current;
+            let e = y.current?.elementRef.current;
             if (null == e) return;
             let t = (e) => {
                 let t = e.target,
-                    n = S.current?.elementRef.current;
-                (null != n && (0, u.HG$)(n, t)) || (g(), v.current());
+                    n = y.current?.elementRef.current;
+                (null != n && (0, u.HG$)(n, t)) || (g(), C.current());
             };
             return (
                 e.ownerDocument?.addEventListener("click", t, !0),
@@ -60,30 +61,31 @@ let A = (e) => {
     }),
         i.useEffect(() => () => N.current?.(), []),
         i.useLayoutEffect(() => {
-            S.current?.updatePosition();
+            y.current?.updatePosition();
         }),
         (0, d.A)({ type: s.ImpressionTypes.MENU, name: A, properties: I });
-    let C = (0, f.aL)(),
-        R = i.useCallback(() => {
-            C.dispatch(E.jej.POPOUT_SHOW);
-        }, [C]),
+    let R = (0, f.aL)(),
         O = i.useCallback(() => {
-            C.dispatch(E.jej.POPOUT_HIDE);
-        }, [C]),
-        b = (0, l.D)("ContextMenu"),
-        D = c.ownerDocument;
-    return b
+            R.dispatch(E.jej.POPOUT_SHOW);
+        }, [R]),
+        b = i.useCallback(() => {
+            R.dispatch(E.jej.POPOUT_HIDE);
+        }, [R]),
+        D = (0, l.D)("ContextMenu"),
+        L = c.ownerDocument;
+    return D
         ? (0, r.jsx)(a.Ow, {
               spacing: 0,
               open: !0,
-              ownerDocument: D,
+              ownerDocument: L,
               onOpenChange: (e) => {
-                  e ? R() : (O(), g(), v.current());
+                  e ? O() : (b(), g(), C.current());
               },
               overrideTargetRect: p,
               placement: (0, a.Pv)(h ?? "right", m ?? "top"),
               blockPointerEvents: !T,
               crossAccessFlip: !1,
+              autoUpdate: S,
               renderLayer: (e) => {
                   let { update: n } = e;
                   return t({ position: h }, n);
@@ -91,14 +93,14 @@ let A = (e) => {
               children: () => null,
           })
         : (0, r.jsx)(_.nE, {
-              onMount: R,
-              onUnmount: O,
-              targetRef: y,
+              onMount: O,
+              onUnmount: b,
+              targetRef: v,
               overrideTargetRect: p,
               position: h ?? "right",
               align: m ?? "top",
               autoInvert: !0,
-              ref: S,
+              ref: y,
               nudgeAlignIntoViewport: !0,
               clickTrap: !T,
               children: t,
@@ -158,6 +160,7 @@ class I extends i.PureComponent {
                   impressionName: s.impressionName,
                   impressionProperties: s.impressionProperties,
                   disableClickTrap: s.disableClickTrap ?? !1,
+                  repositionOnContentChange: s.repositionOnContentChange,
                   children: (n, r) => {
                       let { position: a } = n;
                       return l({ position: a, theme: i, onHeightUpdate: r, config: s, target: t, context: e });

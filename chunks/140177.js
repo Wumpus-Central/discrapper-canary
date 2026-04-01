@@ -17,8 +17,8 @@ var r = n(627968),
     E = n(492375),
     g = n(249431),
     A = n(652215),
-    I = n(747359),
-    T = n(830412);
+    I = n(696084),
+    T = n(782691);
 class S extends i.PureComponent {
     containerRef = i.createRef();
     state;
@@ -235,7 +235,7 @@ class S extends i.PureComponent {
                     let { default: e } = await n.e("58127").then(n.bind(n, 446514));
                     return (n) => (0, r.jsx)(e, { ...n, editor: t, text: m.VW.getSelectedText(t, !0) });
                 },
-                { align: a, enableSpellCheck: i === A.BRT.APP },
+                { align: a, enableSpellCheck: i === A.BRT.APP, repositionOnContentChange: !0 },
             );
         } else blur();
     }
