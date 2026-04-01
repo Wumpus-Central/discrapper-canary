@@ -1,12 +1,12 @@
-n.d(t, { $: () => B, J: () => w });
+n.d(t, { $: () => w, J: () => k });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
     a = n.n(s),
     r = n(284009),
     o = n.n(r),
-    c = n(989349),
-    d = n.n(c),
+    d = n(989349),
+    c = n.n(d),
     u = n(110259),
     h = n(837381),
     A = n(311907),
@@ -32,9 +32,8 @@ var i = n(627968),
     M = n(371349),
     D = n(652215),
     U = n(985018),
-    G = n(219717);
-let P = { offset: { left: 4, right: -12 } };
-function k(e) {
+    G = n(828102);
+function P(e) {
     let { closePopout: t } = e;
     return (0, i.jsx)(_.lGe, {
         "aria-label": U.intl.string(U.t["2pAkDA"]),
@@ -42,12 +41,12 @@ function k(e) {
             className: G.jC,
             children: [
                 (0, i.jsx)(E.Y9, { icon: _.cFy, title: U.intl.string(U.t["2pAkDA"]) }),
-                (0, i.jsx)(w, { closePopout: t }),
+                (0, i.jsx)(k, { closePopout: t }),
             ],
         }),
     });
 }
-function w(e) {
+function k(e) {
     let { closePopout: t } = e,
         n = (0, R.A)();
     return ((0, p.A)(
@@ -61,17 +60,17 @@ function w(e) {
     ),
     0 === n.length)
         ? (0, i.jsx)(L.g, {})
-        : (0, i.jsx)(V, { savedMessageKeys: n, closePopout: t });
+        : (0, i.jsx)(B, { savedMessageKeys: n, closePopout: t });
 }
-function B(e) {
+function w(e) {
     let { onOpen: t, onClose: n, children: s, popoutPosition: a, popoutAlign: r } = e,
-        [o, c] = l.useState(!1),
-        d = l.useRef(null),
+        [o, d] = l.useState(!1),
+        c = l.useRef(null),
         u = l.useCallback(() => {
-            c(!1), o && n?.();
+            d(!1), o && n?.();
         }, [n, o]),
         h = l.useCallback(() => {
-            c(!o), o ? n?.() : t?.();
+            d(!o), o ? n?.() : t?.();
         }, [n, t, o]);
     l.useEffect(
         () => (T._.subscribe(D.jej.TOGGLE_FOR_LATER, h), () => void T._.unsubscribe(D.jej.TOGGLE_FOR_LATER, h)),
@@ -79,7 +78,7 @@ function B(e) {
     );
     let m = (0, A.bG)([v.A], () => v.A.hasOverdueReminder(), []);
     return (0, i.jsx)(_.YNO, {
-        targetElementRef: d,
+        targetElementRef: c,
         animation: _.YNO.Animation.NONE,
         position: a,
         align: r,
@@ -87,16 +86,16 @@ function B(e) {
         shouldShow: o,
         onRequestClose: u,
         renderPopout: function () {
-            return (0, i.jsx)(k, { closePopout: u });
+            return (0, i.jsx)(P, { closePopout: u });
         },
         ignoreModalClicks: !0,
         children: (e, t) => {
             let { isShown: n } = t;
-            return s(h, n, e, m, d);
+            return s(h, n, e, m, c);
         },
     });
 }
-function V(e) {
+function B(e) {
     let { savedMessageKeys: t, closePopout: n } = e,
         s = l.useRef(null),
         a = (0, g.A)("for-later", s),
@@ -120,7 +119,7 @@ function V(e) {
                         className: G.VB,
                         ...a,
                         children: t.map((e) =>
-                            (0, i.jsx)(F, { savedMessageKey: e, closePopout: n, throttledNow: r }, e.messageId),
+                            (0, i.jsx)(H, { savedMessageKey: e, closePopout: n, throttledNow: r }, e.messageId),
                         ),
                     });
                 },
@@ -128,7 +127,7 @@ function V(e) {
         })
     );
 }
-function H(e) {
+function V(e) {
     let { savedMessage: t, closePopout: n, throttledNow: s } = e,
         r = (0, y.vr)(t),
         o = l.useCallback(
@@ -140,13 +139,13 @@ function H(e) {
                         message_id: t.saveData.messageId,
                         message_author_id: t.message?.author.id,
                         type: null != t.saveData.dueAt ? j.Yf.REMINDER : j.Yf.BOOKMARK,
-                        due_duration: null != t.saveData.dueAt ? d()().diff(t.saveData.dueAt) : void 0,
+                        due_duration: null != t.saveData.dueAt ? c()().diff(t.saveData.dueAt) : void 0,
                     });
             },
             [n, t, r],
         ),
-        c = (0, A.bG)([C.A], () => !!(r?.type === D.rbe.UNKNOWN || r?.isPrivate()) || C.A.can(D.xBc.VIEW_CHANNEL, r));
-    return null != r && null != t.message && c
+        d = (0, A.bG)([C.A], () => !!(r?.type === D.rbe.UNKNOWN || r?.isPrivate()) || C.A.can(D.xBc.VIEW_CHANNEL, r));
+    return null != r && null != t.message && d
         ? (0, i.jsxs)("div", {
               className: G.zC,
               children: [
@@ -161,12 +160,12 @@ function H(e) {
                           className: G.iU,
                           compact: I.hH.getSetting(),
                           animateAvatar: !1,
-                          focusProps: P,
                           trackAnnouncementViews: !0,
+                          tabIndex: -1,
                       },
                       t.message.id,
                   ),
-                  (0, i.jsx)(x.Ay, { className: G.S3, children: (0, i.jsx)(K, { savedMessage: t, jumpToMessage: o }) }),
+                  (0, i.jsx)(x.Ay, { className: G.S3, children: (0, i.jsx)(F, { savedMessage: t, jumpToMessage: o }) }),
               ],
           })
         : (0, i.jsxs)("div", {
@@ -197,12 +196,12 @@ function H(e) {
               ],
           });
 }
-function F(e) {
+function H(e) {
     let { savedMessageKey: t, closePopout: n, throttledNow: l } = e,
         s = (0, A.bG)([v.A], () => v.A.getSavedMessage(t.channelId, t.messageId));
-    return null == s ? null : (0, i.jsx)(H, { savedMessage: s, closePopout: n, throttledNow: l });
+    return null == s ? null : (0, i.jsx)(V, { savedMessage: s, closePopout: n, throttledNow: l });
 }
-function K(e) {
+function F(e) {
     let { savedMessage: t, jumpToMessage: l } = e;
     return (o()(null != t.message, "Saved message must be cached for For Later action buttons"),
     null != t.saveData.dueAt)
