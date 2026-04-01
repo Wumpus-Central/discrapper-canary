@@ -9,7 +9,7 @@ var r = n(311907),
     u = n(788868);
 function c(e, t, n) {
     return (
-        null != e &&
+        !(null == e || e.isPremiumGroupMember()) &&
         (!!((0, l.ki)(e, u.PremiumTypes.TIER_2) || t.some((e) => null != e.premiumGuildSubscription)) ||
             n.some((t) => {
                 let n = i.Ay.getMember(t, e.id);
