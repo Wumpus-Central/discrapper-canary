@@ -17,8 +17,8 @@ var n = s(627968),
     f = s(599062),
     x = s(159439),
     E = s(998694),
-    C = s(666413),
-    b = s(573455),
+    b = s(666413),
+    C = s(573455),
     A = s(565057),
     S = s(227205),
     v = s(457414),
@@ -28,15 +28,15 @@ var n = s(627968),
     k = s(613258),
     T = s(152568),
     O = s(758836),
-    y = s(652215),
-    N = s(985018),
-    R = s(419447);
+    N = s(652215),
+    y = s(985018),
+    R = s(297046);
 let B = (e) => {
         let { handleTransition: t, numVisibleItems: s, isFetchingCategories: l, tab: c } = e,
             { noCache: d, includeUnpublished: _ } = (0, E.A)(),
             [x, k] = r.useState(!1),
-            y = (0, g.uM)(),
-            B = y?.sessionId ?? "";
+            N = (0, g.uM)(),
+            B = N?.sessionId ?? "";
         r.useEffect(() => {
             (0, p.z)({
                 sessionId: B,
@@ -74,10 +74,10 @@ let B = (e) => {
                     className: a()(R.g4, R.Of),
                     children: [
                         (0, n.jsx)(S.A, { isLoading: M, handleTransition: t, tab: c }),
-                        (0, n.jsx)(b.A, { isLoading: M, handleTransition: t, categories: [] }),
+                        (0, n.jsx)(C.A, { isLoading: M, handleTransition: t, categories: [] }),
                         (0, n.jsx)(A.A, {
                             isLoading: M,
-                            title: c === O.G2.ORBS ? N.intl.string(N.t.dFgeuZ) : N.intl.string(N.t.NSv5KV),
+                            title: c === O.G2.ORBS ? y.intl.string(y.t.dFgeuZ) : y.intl.string(y.t.NSv5KV),
                             numVisibleItems: s,
                             tab: c,
                         }),
@@ -95,7 +95,7 @@ let B = (e) => {
                                     break;
                                 case i.g.FEATURED:
                                     _ = (0, n.jsx)(
-                                        b.A,
+                                        C.A,
                                         { isLoading: M, handleTransition: t, featuredBlockRecord: e },
                                         d,
                                     );
@@ -106,7 +106,7 @@ let B = (e) => {
                                         A.A,
                                         {
                                             title:
-                                                c === O.G2.ORBS ? N.intl.string(N.t.dFgeuZ) : N.intl.string(N.t.NSv5KV),
+                                                c === O.G2.ORBS ? y.intl.string(y.t.dFgeuZ) : y.intl.string(y.t.NSv5KV),
                                             isLoading: l,
                                             numVisibleItems: s,
                                             sortedSkuIds: h,
@@ -130,7 +130,7 @@ let B = (e) => {
                                     _ = (0, n.jsx)(j.A, { handleTransition: t, shelf: e, tab: c }, d);
                                     break;
                                 case i.g.COUNTDOWN_TIMER:
-                                    (_ = (0, n.jsx)(C.S, { countdownTimerBlock: e, isVisible: x }, d)), (g = !0);
+                                    (_ = (0, n.jsx)(b.S, { countdownTimerBlock: e, isVisible: x }, d)), (g = !0);
                                     break;
                                 case i.g.IMMERSIVE_BANNER:
                                     _ = (0, n.jsx)(
@@ -145,33 +145,36 @@ let B = (e) => {
                                 case i.g.MARVEL_RIVALS_PROMOTIONAL_BANNER: {
                                     let { isDismissed: t } = (0, u.En)(o.M.COLLECTIBLES_SHOP_MARVEL_RIVALS_ORBS_REWARD);
                                     if (t) return null;
-                                    return (0, n.jsx)(m.rW, {
-                                        blockType: e.type,
-                                        children: (0, n.jsx)(
-                                            I.A,
-                                            {
+                                    return (0, n.jsx)(
+                                        m.rW,
+                                        {
+                                            blockType: e.type,
+                                            children: (0, n.jsx)(I.A, {
                                                 onDismiss: () => {
                                                     (0, u.d6)(o.M.COLLECTIBLES_SHOP_MARVEL_RIVALS_ORBS_REWARD, {});
                                                 },
                                                 skuIds: e.skuIds,
                                                 endTime: e.endTime,
                                                 tab: c,
-                                            },
-                                            d,
-                                        ),
-                                    });
+                                            }),
+                                        },
+                                        d,
+                                    );
                                 }
                                 default:
                                     return null;
                             }
-                            return (0, n.jsx)(m.rW, {
-                                blockType: e.type,
-                                children: (0, n.jsx)(
-                                    "div",
-                                    { className: a()(R.v1, R.Of, { [R.J1]: 0 === d || g }), children: _ },
-                                    d,
-                                ),
-                            });
+                            return (0, n.jsx)(
+                                m.rW,
+                                {
+                                    blockType: e.type,
+                                    children: (0, n.jsx)("div", {
+                                        className: a()(R.v1, R.Of, { [R.J1]: 0 === d || g }),
+                                        children: _,
+                                    }),
+                                },
+                                d,
+                            );
                         })(e, r > 0 ? D[r - 1] : null, r),
                     ),
                 });
@@ -224,14 +227,14 @@ let B = (e) => {
                                         children: [
                                             (0, n.jsx)(c.Heading, {
                                                 variant: "heading-md/semibold",
-                                                children: N.intl.string(N.t.Yr70c4),
+                                                children: y.intl.string(y.t.Yr70c4),
                                             }),
                                             (0, n.jsx)(c.Button, {
                                                 variant: "primary",
-                                                text: N.intl.string(N.t.AfrvRD),
+                                                text: y.intl.string(y.t.AfrvRD),
                                                 onClick: () => {
                                                     t({ sourceButton: "shop all button", shouldAnimate: !0 }),
-                                                        _.default.track(y.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                        _.default.track(N.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                             collectibles_shop_session_id: u?.sessionId,
                                                             page_type: s,
                                                             page_category: s === O.G2.HOME ? void 0 : u?.pageCategory,
