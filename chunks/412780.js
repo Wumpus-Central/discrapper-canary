@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => j, Bz: () => N, EM: () => d, Xi: () => v, iA: () => h }), n(321073);
+n.d(t, { Ay: () => Y, Bz: () => N, EM: () => d, Xi: () => v, iA: () => h }), n(134528), n(947204), n(321073);
 var r = n(311907),
     i = n(205693),
     s = n(73153),
@@ -77,33 +77,36 @@ function N(e) {
     let [t, n] = e.split(":");
     return { context: t, section: n };
 }
-function C() {
+function C(e) {
+    return Array.isArray(e) ? e.at(-1)?.value : e;
+}
+function R() {
     Object.values(c.x).forEach((e) => {
         f[e] = {};
     });
 }
-function R() {
+function O() {
     null != S && (S.destroy(), (S = null));
 }
-function O(e) {
+function b(e) {
     _ = e.section ?? d;
 }
-function b() {
-    R();
-}
-function D(e) {
-    null != e.channelId && (C(), p.clear(), y.clear());
+function D() {
+    O();
 }
 function L(e) {
+    null != e.channelId && (R(), p.clear(), y.clear());
+}
+function w(e) {
     if (null === e.streamId) {
         let t = g(e.userId, e.context);
         p.set(t, c.r8.NO_OVERRIDE);
     }
 }
-function w(e) {
+function M(e) {
     _ = e.section;
 }
-function M(e, t, n) {
+function x(e, t, n) {
     return {
         screenshareCapturedFps: Math.max(
             0,
@@ -139,7 +142,7 @@ function M(e, t, n) {
         ),
     };
 }
-function x(e) {
+function P(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now(),
         r = {};
@@ -152,12 +155,12 @@ function x(e) {
                 for (let e = 0; e < s.length; e++) {
                     let r = t[e],
                         i = "object" == typeof r ? r : {};
-                    a.push(x(s[e], i, n));
+                    a.push(P(s[e], i, n));
                 }
             } else r[i] = s;
         else if ("object" == typeof s && null !== s) {
             let t = "object" == typeof e && null !== e ? e : {};
-            r[i] = x(s, t, n);
+            r[i] = P(s, t, n);
         } else if (i in h && "number" == typeof s) {
             let t = (r[i] = Array.isArray(e) ? e : []);
             t.push({ value: s, time: n }), t.length > m && t.shift();
@@ -165,18 +168,18 @@ function x(e) {
     }
     return r;
 }
-function P(e) {
+function k(e) {
     let { connectionStats: t } = e;
     Object.values(c.x).forEach((e) => {
         t.filter((t) => {
             let { context: n } = t;
             return n === e;
         }).forEach((t, n) => {
-            k({ context: e, stats: t.stats, index: n });
+            U({ context: e, stats: t.stats, index: n });
         });
     });
 }
-function k(e) {
+function U(e) {
     let { context: t, stats: n, index: r } = e,
         i = f[t];
     if (null != n) {
@@ -195,19 +198,19 @@ function k(e) {
                 a = i[r]?.screenshare;
             if ((y.set(e, o), null != s && null != a)) {
                 let e = (o - s) / 1e3;
-                e > 0 && (u = { ...n, screenshare: { ...n.screenshare, ...M(n.screenshare, a, e) } });
+                e > 0 && (u = { ...n, screenshare: { ...n.screenshare, ...x(n.screenshare, a, e) } });
             }
         }
-        i[r] = x(u, i[r], o);
+        i[r] = P(u, i[r], o);
     } else delete i[r];
 }
-function U(e) {
+function G(e) {
     a._w();
 }
-function G(e) {
+function F(e) {
     let { path: t } = e,
         n = o.Ay.getMediaEngine();
-    if ((R(), !n.supports(c.O5.CONNECTION_REPLAY) || 0 === t.length)) return;
+    if ((O(), !n.supports(c.O5.CONNECTION_REPLAY) || 0 === t.length)) return;
     let r = n.createReplayConnection(c.x.DEFAULT, t);
     null != r &&
         ((S = r),
@@ -222,19 +225,19 @@ function G(e) {
         }),
         s.h.wait(() => a.ho()));
 }
-function F(e) {
+function V(e) {
     I = I.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId);
 }
-function V(e) {
+function B(e) {
     let { value: t } = e;
     T = t;
 }
-function B(e) {
+function H(e) {
     let { userId: t, context: n, quality: r } = e;
     p.set(g(t, n), r);
 }
-C();
-class H extends r.Ay.Store {
+R();
+class j extends r.Ay.Store {
     initialize() {
         this.waitFor(o.Ay, l.default);
     }
@@ -246,20 +249,19 @@ class H extends r.Ay.Store {
         let n = this.getAllStats(t),
             r = n[0]?.rtp?.inbound[e],
             i = r?.find((e) => "video" === e.type);
-        return { codec: i?.codec.name, resolution: i?.resolution, bitrateEstimate: void 0 };
+        return { codec: i?.codec.name, resolution: i?.resolution, bitrateEstimate: void 0, fps: C(i?.frameRateRender) };
     }
     getOutboundStats(e) {
-        let t,
-            n = this.getAllStats(e),
-            r = n[0]?.transport,
-            i = n[0]?.rtp?.outbound,
-            s = i?.find((e) => "video" === e.type);
-        return (
-            Array.isArray(r?.availableOutgoingBitrate) &&
-                r.availableOutgoingBitrate.length > 0 &&
-                (t = r.availableOutgoingBitrate[r.availableOutgoingBitrate.length - 1].value),
-            { codec: s?.codec.name, resolution: s?.resolution, bitrateEstimate: t }
-        );
+        let t = this.getAllStats(e),
+            n = t[0]?.transport,
+            r = t[0]?.rtp?.outbound,
+            i = r?.find((e) => "video" === e.type);
+        return {
+            codec: i?.codec.name,
+            resolution: i?.resolution,
+            bitrateEstimate: C(n?.availableOutgoingBitrate),
+            fps: C(i?.frameRateEncode),
+        };
     }
     getAllStats() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.x.DEFAULT;
@@ -276,16 +278,16 @@ class H extends r.Ay.Store {
         return p.has(n) ? p.get(n) : c.r8.NO_OVERRIDE;
     }
 }
-let j = new H(s.h, {
-    RTC_DEBUG_MODAL_OPEN: O,
-    RTC_DEBUG_MODAL_CLOSE: b,
-    RTC_DEBUG_MODAL_SET_SECTION: w,
-    RTC_DEBUG_MODAL_OPEN_REPLAY: U,
-    RTC_DEBUG_MODAL_OPEN_REPLAY_AT_PATH: G,
-    RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT: F,
-    RTC_DEBUG_SET_RECORDING_FLAG: V,
-    RTC_DEBUG_SET_SIMULCAST_OVERRIDE: B,
-    VOICE_CHANNEL_SELECT: D,
-    RTC_CONNECTION_VIDEO: L,
-    MEDIA_ENGINE_CONNECTION_STATS: P,
+let Y = new j(s.h, {
+    RTC_DEBUG_MODAL_OPEN: b,
+    RTC_DEBUG_MODAL_CLOSE: D,
+    RTC_DEBUG_MODAL_SET_SECTION: M,
+    RTC_DEBUG_MODAL_OPEN_REPLAY: G,
+    RTC_DEBUG_MODAL_OPEN_REPLAY_AT_PATH: F,
+    RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT: V,
+    RTC_DEBUG_SET_RECORDING_FLAG: B,
+    RTC_DEBUG_SET_SIMULCAST_OVERRIDE: H,
+    VOICE_CHANNEL_SELECT: L,
+    RTC_CONNECTION_VIDEO: w,
+    MEDIA_ENGINE_CONNECTION_STATS: k,
 });
