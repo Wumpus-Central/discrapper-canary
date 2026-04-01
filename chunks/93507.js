@@ -346,7 +346,6 @@ class O extends l.A {
     setNativeDesktopVideoSourcePickerActive(e) {}
     presentNativeScreenSharePicker(e) {}
     releaseNativeDesktopVideoSourcePickerStream() {}
-    setMaybePreprocessMute(e) {}
     getSystemMicrophoneMode() {
         return Promise.resolve("");
     }

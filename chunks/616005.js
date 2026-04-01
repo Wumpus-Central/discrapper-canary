@@ -1,18 +1,17 @@
 "use strict";
-n.d(t, { Q: () => c });
+n.d(t, { Q: () => u });
 var r = n(70298),
     i = n(973522),
-    a = n(15285),
-    s = n(971778),
-    o = n(321034);
-function l() {
+    s = n(15285),
+    a = n(321034);
+function o() {
     let e = {};
     {
-        let t = o.A.getMemoryUsageElectronRenderer();
+        let t = a.A.getMemoryUsageElectronRenderer();
         null != t && (e.client_heartbeat_renderer_memory = t);
-        let n = o.A.getMemoryUsageElectronRendererUsedHeapSize();
+        let n = a.A.getMemoryUsageElectronRendererUsedHeapSize();
         null != n && (e.client_heartbeat_renderer_memory_used_heap = n);
-        let r = o.A.getMemoryUsageElectronProcessTypeDetails();
+        let r = a.A.getMemoryUsageElectronProcessTypeDetails();
         null != r &&
             ((e.electron_process_memory_private = [
                 r.unknown?.wss_priv_kb ?? -1,
@@ -33,20 +32,19 @@ function l() {
     }
     return e;
 }
-function u() {
+function l() {
     let e = {};
     {
-        let t = a.Ay.getCurrentGameForAnalytics();
+        let t = s.Ay.getCurrentGameForAnalytics();
         null != t &&
             ((e.client_heartbeat_current_game_id = t.id),
             (e.client_heartbeat_current_game_name = t.name),
             (e.client_heartbeat_current_game_executable = (0, i.Ic)(t.exePath)),
             (e.client_heartbeat_current_game_distributor = t.distributor),
-            (e.uses_client_mods = (0, r.b)())),
-            s.A.isNativeModuleLoaded() && (e.voice_filters_native_module_loaded = !0);
+            (e.uses_client_mods = (0, r.b)()));
     }
     return e;
 }
-function c() {
-    return { ...l(), ...u() };
+function u() {
+    return { ...o(), ...l() };
 }

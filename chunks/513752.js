@@ -22,8 +22,6 @@ let p = (e, t) => {
             duration: c.A.getDuration(),
             media_session_id: c.A.getMediaSessionId(),
             ...(0, i.JK)(c.A.getGuildId(), c.A.getChannelId(), t),
-            duration_speaking_voice_filter_ids: r?.duration_speaking_voice_filter_ids ?? null,
-            duration_speaking_voice_filter_ms: r?.duration_speaking_voice_filter_ms ?? null,
             duration_muted_ms: r?.duration_muted_ms ?? null,
             output_audio_route_type: f.A.getCurrentRouteType(),
         };

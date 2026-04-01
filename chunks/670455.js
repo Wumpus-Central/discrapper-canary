@@ -10,24 +10,23 @@ n.d(t, {
     X: () => _,
     bO: () => d,
     fs: () => u,
-    h0: () => s,
+    h0: () => a,
     j6: () => p,
-    u0: () => a,
+    u0: () => s,
     uf: () => o,
 });
 var r = n(873298),
     i = (function (e) {
         return (e.BAD = "bad"), (e.NEUTRAL = "neutral"), (e.GOOD = "good"), e;
     })({});
-let a = 1024;
-var s = (function (e) {
+let s = 1024;
+var a = (function (e) {
     return (e.AV = "AV"), (e.SOCIAL = "SOCIAL"), (e.SEARCH = "SEARCH"), (e.SAFETY = "SAFETY"), e;
 })({});
 let o = [
         r.iL.VIDEO_BACKGROUND,
         r.iL.STREAM,
         r.iL.ACTIVITY,
-        r.iL.VOICE_FILTER,
         r.iL.VOICE,
         r.iL.IN_APP_REPORTS,
         r.iL.BLOCK_USER,

@@ -430,14 +430,6 @@ let i = {
     StaffMemberPreloaderManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(751446).A },
     SubscriptionManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(344584).A },
     SystemServiceManager: { actions: ["POST_CONNECTION_OPEN", "LOGOUT"], inlineRequire: () => n(199944).A },
-    VoiceFiltersCatalogManager: {
-        actions: [
-            "POST_CONNECTION_OPEN",
-            "VOICE_FILTER_CATALOG_FETCH_SUCCESS",
-            "VOICE_FILTER_DEV_TOOLS_SET_UPDATE_TIME",
-        ],
-        inlineRequire: () => n(327593).A,
-    },
     ThreadManager: {
         actions: ["CHANNEL_DELETE", "MESSAGE_CREATE", "GUILD_DELETE"],
         inlineRequire: () => n(444261).A,
@@ -498,28 +490,6 @@ let i = {
     VoiceChannelSettingsManager: {
         actions: ["CHANNEL_UPDATES", "VOICE_STATE_UPDATES"],
         inlineRequire: () => n(857500).A,
-    },
-    VoiceFilterLoopbackManager: {
-        actions: [
-            "RTC_CONNECTION_STATE",
-            "VOICE_FILTER_LOOPBACK_TOGGLE",
-            "VOICE_FILTER_APPLIED",
-            "AUDIO_TOGGLE_SELF_MUTE",
-            "AUDIO_SET_TEMPORARY_SELF_MUTE",
-            "AUDIO_SET_SELF_MUTE",
-        ],
-        inlineRequire: () => n(423805).A,
-        hasStoreChangeListeners: !0,
-    },
-    VoiceFilterManager: {
-        actions: [
-            "VOICE_FILTER_REQUEST_SWITCH",
-            "VOICE_FILTER_DOWNLOAD_FAILED",
-            "VOICE_FILTER_DOWNLOAD_CANCELED",
-            "VOICE_FILTER_APPLIED",
-            "VOICE_FILTER_APPLY_FAILED",
-        ],
-        inlineRequire: () => n(401245).A,
     },
     VoicePermissionManager: {
         actions: ["VOICE_CHANNEL_SELECT", "VOICE_STATE_UPDATES"],

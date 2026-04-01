@@ -2,8 +2,8 @@
 n.d(t, { A: () => m, k: () => h }), n(142703);
 var r = n(473318),
     i = n.n(r),
-    a = n(128080),
-    s = n.n(a),
+    s = n(128080),
+    a = n.n(s),
     o = n(904986),
     l = n(205693),
     u = n(405163),
@@ -145,8 +145,8 @@ class m extends o.A {
         ) {
             let r = t.capture.width / t.capture.height,
                 i = Math.sqrt(e.remoteSinkWantsPixelCount * r),
-                a = t.capture.width / i;
-            n = a < 1 ? void 0 : a;
+                s = t.capture.width / i;
+            n = s < 1 ? void 0 : s;
         }
         this.logger.verbose(
             `BaseWebRTCConnection.updateVideoQuality: resolutionScaleFactor: ${n}, encodingVideoWidth: ${e.encodingVideoWidth}, remoteSinkWantsMaxFramerate: ${e.remoteSinkWantsMaxFramerate}, encodingVideoMaxBitRate: ${e.encodingVideoMaxBitRate}, localWant: ${this.getLocalWant()}`,
@@ -157,16 +157,16 @@ class m extends o.A {
                 { parameter: 3, value: e.remoteSinkWantsMaxFramerate },
             ]);
         let i = e.encodingVideoWidth,
-            a = e.encodingVideoHeight;
-        if (null != i && null != a)
+            s = e.encodingVideoHeight;
+        if (null != i && null != s)
             for (let e of r.getTracks()) {
                 let t = e.getConstraints(),
                     n = t.width?.max,
                     r = t.height?.max;
-                (n !== i || r !== a) &&
-                    (this.logger.info(`BaseWebRTCConnection.updateVideoQuality: old: ${n} x ${r}, new: ${i} x ${a}`),
+                (n !== i || r !== s) &&
+                    (this.logger.info(`BaseWebRTCConnection.updateVideoQuality: old: ${n} x ${r}, new: ${i} x ${s}`),
                     (t.width = { max: i }),
-                    (t.height = { max: a }),
+                    (t.height = { max: s }),
                     e.applyConstraints(t));
             }
     }
@@ -241,7 +241,7 @@ class m extends o.A {
             for (let t of this.videoStreamParameters) {
                 let r = e.findIndex((e) => e.rid === t.rid);
                 if (-1 === r) return void n(Error("Invalid rid"));
-                s()(this.videoStreamParameters[r], e[r]) || (this.videoStreamParameters[r] = { ...e[r] });
+                a()(this.videoStreamParameters[r], e[r]) || (this.videoStreamParameters[r] = { ...e[r] });
             }
             t();
         });
@@ -337,8 +337,4 @@ class m extends o.A {
     prepareMLSCommitTransition(e, t, n) {}
     processMLSWelcome(e, t, n) {}
     getMLSPairwiseFingerprint(e, t, n) {}
-    getVoiceFilterId() {
-        return null;
-    }
-    setVoiceFilterId(e) {}
 }

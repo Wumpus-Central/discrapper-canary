@@ -61,8 +61,6 @@ class A extends s.A {
                   (this.audioSubsystem = (0, d.lE)().getUseLegacyAudioDevice() ? h.rB.LEGACY : h.rB.STANDARD),
             null != e.pingVoiceThread && this.watchdogTick(),
             null != e.setActiveSinksChangeCallback && e.setActiveSinksChangeCallback(this.handleActiveSinksChange),
-            e.setLoopbackPlaybackGainMultiplier?.(h.QP),
-            e.setVoiceFiltersFailedCallback?.((e) => this.emit(o.bg.VoiceFiltersFailed, e)),
             (0, l.A)(this),
             I(this);
     }
@@ -185,7 +183,7 @@ class A extends s.A {
         return (
             r.on(o.yq.Destroy, (e) => {
                 this.connections.delete(e),
-                    this.connectionsEmpty() && ((0, d.i0)(h.E6.NORMAL), (0, d.lE)().setNativeThreadsPriority?.(0));
+                    this.connectionsEmpty() && ((0, d.i0)(p.E6.NORMAL), (0, d.lE)().setNativeThreadsPriority?.(0));
             }),
             r.on(o.yq.Connected, () => {
                 r.setVideoBroadcast(this.shouldConnectionBroadcastVideo(r));
@@ -194,7 +192,7 @@ class A extends s.A {
                 this.emit(o.bg.Silence, e);
             }),
             this.connections.add(r),
-            (0, d.i0)(n.processPriority ?? h.E6.HIGH),
+            (0, d.i0)(n.processPriority ?? p.E6.HIGH),
             null != n.threadPriorityConfiguration &&
                 (0, d.lE)().setNativeThreadsPriority?.(n.threadPriorityConfiguration),
             this.emit(o.bg.Connection, r),
@@ -517,8 +515,6 @@ class A extends s.A {
                 automaticGainControlConfig: t.automaticGainControlConfig,
                 noiseCancellation: t.noiseCancellation,
                 noiseCancellationDuringProcessing: t.noiseCancellationDuringProcessing,
-                voiceFilters: t.voiceFilters,
-                loopbackUseAudioMode: t.loopbackUseAudioMode,
             }),
             null != (0, d.lE)().setEmitVADLevel2
                 ? (0, d.lE)().setEmitVADLevel2(e || this.listenerCount(o.bg.VoiceActivity) > 0)
@@ -529,9 +525,6 @@ class A extends s.A {
                       noiseCancellation: t.noiseCancellation,
                       noiseCancellationDuringProcessing: t.noiseCancellationDuringProcessing,
                   });
-    }
-    setMaybePreprocessMute(e) {
-        (0, d.lE)().setMaybePreprocessMute?.(e);
     }
     getLoopback() {
         return !1;
@@ -576,10 +569,10 @@ class A extends s.A {
         return null == n
             ? null
             : (n.on(o.yq.Destroy, (e) => {
-                  this.connections.delete(e), this.connectionsEmpty() && (0, d.i0)(h.E6.NORMAL);
+                  this.connections.delete(e), this.connectionsEmpty() && (0, d.i0)(p.E6.NORMAL);
               }),
               this.connections.add(n),
-              (0, d.i0)(h.E6.HIGH),
+              (0, d.i0)(p.E6.HIGH),
               this.emit(o.bg.Connection, n),
               n);
     }

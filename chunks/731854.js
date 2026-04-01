@@ -2,52 +2,51 @@
 n.d(t, {
     $I: () => o,
     Al: () => u,
-    CO: () => J,
+    CO: () => Q,
     Cl: () => x,
     Cn: () => _,
-    Dk: () => H,
-    E6: () => ee,
+    Dk: () => B,
+    E6: () => J,
     HE: () => p,
     Hz: () => d,
-    K3: () => Q,
-    KR: () => R,
-    Ku: () => W,
-    ME: () => z,
-    O5: () => Y,
+    K3: () => X,
+    KR: () => C,
+    Ku: () => Y,
+    ME: () => $,
+    O5: () => j,
     PR: () => h,
-    QP: () => N,
     Rv: () => f,
     TB: () => a,
-    UK: () => $,
-    X1: () => B,
-    XA: () => M,
+    UK: () => K,
+    X1: () => V,
+    XA: () => w,
     Xg: () => S,
-    Y4: () => P,
-    YU: () => V,
+    Y4: () => M,
+    YU: () => F,
     Zi: () => T,
     d_: () => y,
     dx: () => E,
-    eQ: () => F,
-    ei: () => Z,
+    eQ: () => G,
+    ei: () => q,
     fS: () => r.fS,
-    fd: () => X,
+    fd: () => Z,
     kO: () => m,
-    kc: () => w,
-    l2: () => C,
-    lo: () => k,
-    mI: () => q,
-    n8: () => b,
-    nJ: () => G,
+    kc: () => L,
+    l2: () => N,
+    lo: () => P,
+    mI: () => z,
+    n8: () => O,
+    nJ: () => U,
     nO: () => v,
-    oL: () => U,
+    oL: () => k,
     oh: () => s,
     qe: () => A,
-    qm: () => D,
+    qm: () => b,
     r8: () => c,
-    rB: () => K,
-    sG: () => L,
-    tl: () => j,
-    us: () => O,
+    rB: () => W,
+    sG: () => D,
+    tl: () => H,
+    us: () => R,
     vt: () => g,
     x: () => i,
     yt: () => l,
@@ -112,20 +111,19 @@ let d = 100,
     S = -25,
     y = 1 / 15,
     v = 0.8,
-    N = 0.4,
-    C = 6e5,
-    R = 16e3,
-    O = 1e7,
-    b = 5e3,
-    D = 15e3,
-    L = 30,
-    w = 20,
-    M = 12,
-    P = 100,
+    N = 6e5,
+    C = 16e3,
+    R = 1e7,
+    O = 5e3,
+    b = 15e3,
+    D = 30,
+    L = 20,
+    w = 12,
+    M = 100,
     x = 50,
-    k = 35e5,
-    U = 9e6,
-    G = [
+    P = 35e5,
+    k = 9e6,
+    U = [
         "remoteSinkWantsPixelCount",
         "remoteSinkWantsMaxFramerate",
         "encodingVideoMinBitRate",
@@ -133,18 +131,18 @@ let d = 100,
         "encodingVideoBitRate",
         "streamParameters",
     ],
-    F = {
+    G = {
         videoBudget: { width: 1280, height: 720, framerate: 30 },
         videoCapture: { width: 1280, height: 720, framerate: 30 },
         videoBitrate: { min: 15e4, max: 25e5 },
         desktopBitrate: { min: 5e5, max: 35e5, target: 6e5 },
         videoBitrateFloor: 15e4,
     },
-    V = 0.02,
-    B = 6e4,
-    H = ">=22.0.0",
-    j = 9e5;
-var Y = (function (e) {
+    F = 0.02,
+    V = 6e4,
+    B = ">=22.0.0",
+    H = 9e5;
+var j = (function (e) {
         return (
             (e.AUTO_ENABLE = "AUTO_ENABLE"),
             (e.ATTENUATION = "ATTENUATION"),
@@ -190,7 +188,6 @@ var Y = (function (e) {
             (e.REMOTE_USER_MULTI_STREAM = "REMOTE_USER_MULTI_STREAM"),
             (e.NOISE_SUPPRESSION = "NOISE_SUPPRESSION"),
             (e.NOISE_CANCELLATION = "NOISE_CANCELLATION"),
-            (e.VOICE_FILTERS = "VOICE_FILTERS"),
             (e.AUTOMATIC_GAIN_CONTROL = "AUTOMATIC_GAIN_CONTROL"),
             (e.CLIPS = "CLIPS"),
             (e.CLIPS_V3 = "CLIPS_V3"),
@@ -210,10 +207,10 @@ var Y = (function (e) {
             e
         );
     })({}),
-    W = (function (e) {
+    Y = (function (e) {
         return (e.NATIVE = "NATIVE"), (e.WEBRTC = "WEBRTC"), (e.DUMMY = "DUMMY"), e;
     })({}),
-    K = (function (e) {
+    W = (function (e) {
         return (
             (e.LEGACY = "legacy"),
             (e.STANDARD = "standard"),
@@ -222,7 +219,7 @@ var Y = (function (e) {
             e
         );
     })({}),
-    $ = (function (e) {
+    K = (function (e) {
         return (
             (e.OPUS = "opus"),
             (e.VP8 = "VP8"),
@@ -234,7 +231,7 @@ var Y = (function (e) {
             e
         );
     })({}),
-    z = (function (e) {
+    $ = (function (e) {
         return (
             (e[(e.NONE = 0)] = "NONE"),
             (e[(e.VOICE = 1)] = "VOICE"),
@@ -244,13 +241,13 @@ var Y = (function (e) {
             e
         );
     })({}),
-    q = (function (e) {
+    z = (function (e) {
         return (e.AUDIO = "audio"), (e.VIDEO = "video"), (e.SCREEN = "screen"), (e.TEST = "test"), e;
     })({}),
-    Z = (function (e) {
+    q = (function (e) {
         return (e.FIXED = "fixed"), (e.SOURCE = "source"), e;
     })({}),
-    X = (function (e) {
+    Z = (function (e) {
         return (
             (e.VIDEOTOOLBOX_RATE_CONTROL = "videotoolbox_rate_control"),
             (e.SIGNAL_AV1 = "signal_av1"),
@@ -270,10 +267,10 @@ var Y = (function (e) {
             e
         );
     })({}),
-    Q = (function (e) {
+    X = (function (e) {
         return (e[(e.AUTO = 1)] = "AUTO"), (e[(e.FULL = 2)] = "FULL"), e;
     })({}),
-    J = (function (e) {
+    Q = (function (e) {
         return (
             (e[(e.CPU_OVERUSE = 1)] = "CPU_OVERUSE"),
             (e[(e.FAILED = 2)] = "FAILED"),
@@ -282,7 +279,7 @@ var Y = (function (e) {
             e
         );
     })({}),
-    ee = (function (e) {
+    J = (function (e) {
         return (
             (e[(e.LOW = 2)] = "LOW"),
             (e[(e.BELOW_NORMAL = 1)] = "BELOW_NORMAL"),

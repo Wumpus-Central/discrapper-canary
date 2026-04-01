@@ -22,6 +22,5 @@ var r = n(823598),
         a.Ay.getDiscordUtils().setProcessPriority(e);
     },
     getVoiceEngine: () => a.Ay.getVoiceEngine(),
-    getVoiceFilters: () => a.Ay.getVoiceFilters(),
     getOpenH264LibraryPath: () => a.Ay.getOpenH264LibraryPath(),
 });

@@ -45,8 +45,8 @@ let O = new Set([
     L = "lastImageSaveDirectory",
     w = /[<>:"/\\|?*@]/g,
     M = /(\.[a-zA-Z0-9]+):[^.]*$/,
-    P = /(\.[a-zA-Z0-9]+)%3A.+$/,
-    x = /[^a-zA-Z0-9]/g,
+    x = /(\.[a-zA-Z0-9]+)%3A.+$/,
+    P = /[^a-zA-Z0-9]/g,
     k = /\.[^.]*$/;
 var U = (function (e) {
     return (e.SAVED = "saved"), (e.CANCELED = "canceled"), (e.ERRORED = "errored"), e;
@@ -57,7 +57,7 @@ function G(e) {
         return (t = (t = t.replace(M, "$1")).replace(/(.+)@([a-zA-Z0-9]+)$/, "$1.$2")).replace(w, "_");
     } catch {
         return e
-            .replace(P, "$1")
+            .replace(x, "$1")
             .replace(/(.+)%40([a-zA-Z0-9]+)$/, "$1.$2")
             .replace(w, "_");
     }
@@ -262,9 +262,6 @@ let W = {
                 ? (null === D && (D = this.getDiscordUtils().getDiscordIsElevated()), D)
                 : null;
         },
-        getVoiceFilters() {
-            return this.requireModule("discord_voice_filters");
-        },
         getGameUtils() {
             return this.requireModule("discord_game_utils");
         },
@@ -353,7 +350,7 @@ let W = {
             o = G(o);
             let l = a.searchParams.get("format");
             if (null != l) {
-                let e = l.replace(x, "").toLowerCase();
+                let e = l.replace(P, "").toLowerCase();
                 if (e.length > 0) {
                     let t = o.replace(k, "");
                     o = `${t}.${e}`;
@@ -388,20 +385,6 @@ let W = {
                 o = await E.fileManager.saveWithDialog(a, r, void 0);
             return null == o ? null : o;
         },
-        async downloadVoiceFilterFile(e, t, n) {
-            i()(f.isPlatformEmbedded, "Download voice filter file method called outside native app");
-            let r = p.A.toURLSafe(e);
-            return (
-                i()(r, "Could not download voice filter, fileSrc was not a valid path"),
-                await E.fileManager.maybeDownloadVoiceFilterFile(e, t, n)
-            );
-        },
-        stopVoiceFilterDownloads() {
-            E.fileManager.stopVoiceFilterDownloads();
-        },
-        canCheckVoiceFilterFilesExist: () => "function" == typeof E.fileManager.checkVoiceFilterFilesExist,
-        checkVoiceFilterFilesExist: async (e) => await E.fileManager.checkVoiceFilterFilesExist(e),
-        cleanupUnusedVoiceFilterFiles: async (e) => await E.fileManager.cleanupUnusedVoiceFilterFiles(e),
         async downloadMLModelFile(e, t, n) {
             i()(f.isPlatformEmbedded, "Download ML model file method called outside native app");
             let r = p.A.toURLSafe(e);

@@ -259,7 +259,6 @@ var r = n(852015),
             (e[(e.ACTIVITY = 3)] = "ACTIVITY"),
             (e[(e.IN_APP_REPORTS = 4)] = "IN_APP_REPORTS"),
             (e[(e.BLOCK_USER = 6)] = "BLOCK_USER"),
-            (e[(e.VOICE_FILTER = 7)] = "VOICE_FILTER"),
             (e[(e.SEARCH_RESULTS = 8)] = "SEARCH_RESULTS"),
             (e[(e.AGE_VERIFICATION = 9)] = "AGE_VERIFICATION"),
             e

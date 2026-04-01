@@ -949,7 +949,7 @@ class ey extends _.A {
                     this._systemResources.setLastBattery(),
                     (this._noiseCancellationError = 0),
                     (this._voiceDuration = new en.A(this.userId, m)),
-                    this._voiceDuration.start(m.getSelfMute(), m.getSelfDeaf(), m.getVoiceFilterId()),
+                    this._voiceDuration.start(m.getSelfMute(), m.getSelfDeaf()),
                     (this.protocol = r),
                     r)
                 ) {

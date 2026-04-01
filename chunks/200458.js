@@ -2,8 +2,8 @@
 n.d(t, { A: () => o });
 var r = n(935172),
     i = n(499979);
-let a = [1, 100, 1e3, 1e4],
-    s = [100, 500, 1e3, 5e3];
+let s = [1, 100, 1e3, 1e4],
+    a = [100, 500, 1e3, 5e3];
 class o {
     userId;
     connection;
@@ -16,7 +16,6 @@ class o {
     muted;
     deafened;
     noiseCancellation;
-    voiceFilterSpeaking;
     timesUntilSpeakingDurationMilestonesMs = new Map();
     speakingMinimumChunks = new Map();
     speakingMinimumChunkCounts = new Map();
@@ -31,13 +30,11 @@ class o {
             (this.connected = new i.W0(this.timestampProducer)),
             (this.muted = new i.W0(this.timestampProducer)),
             (this.deafened = new i.W0(this.timestampProducer)),
-            (this.noiseCancellation = new i.w6(t.getNoiseCancellation(), this.timestampProducer)),
-            (this.voiceFilterSpeaking = new Map());
+            (this.noiseCancellation = new i.w6(t.getNoiseCancellation(), this.timestampProducer));
     }
     start() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-            t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+            t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         this.listeningUsers.clear(),
             this.listening.reset(),
             this.speaking.reset(),
@@ -46,7 +43,6 @@ class o {
             this.deafened.reset(),
             this.connected.reset(),
             this.noiseCancellation.reset(),
-            this.voiceFilterSpeaking.clear(),
             this.timesUntilSpeakingDurationMilestonesMs.clear(),
             this.speakingMinimumChunks.clear(),
             this.speakingMinimumChunkCounts.clear(),
@@ -62,29 +58,18 @@ class o {
             }),
             this.connection.on(r.y.Deafen, (e) => {
                 this.onDeafened(e);
-            }),
-            this.onVoiceFilterChanged(n),
-            this.connection.on(r.y.VoiceFilterChanged, (e) => {
-                this.onVoiceFilterChanged(e);
             });
     }
-    _getVoiceFilterStopWatch(e) {
-        if (null == e) return null;
-        let t = this.voiceFilterSpeaking.get(e);
-        return null == t && ((t = new i.W0(this.timestampProducer)), this.voiceFilterSpeaking.set(e, t)), t;
-    }
     onSpeaking(e) {
-        let t = this._getVoiceFilterStopWatch(this.connection.getVoiceFilterId());
-        if (e) this.speaking.start(), this.participation.start(), t?.start(), this.speechEventCount++;
+        if (e) this.speaking.start(), this.participation.start(), this.speechEventCount++;
         else {
             let e = this.connected.lastStartTime,
-                n = this.speaking.lastStartTime,
-                r = this.speaking.lastElapsed;
+                t = this.speaking.lastStartTime,
+                n = this.speaking.lastElapsed;
             this.addSpeechChunk(),
                 this.speaking.stop(),
                 this.listening.isRunning() || this.participation.stop(),
-                t?.stop(),
-                this.computeSpeakingDurationMilestones(e, n, r);
+                this.computeSpeakingDurationMilestones(e, t, n);
         }
     }
     onListening(e, t) {
@@ -100,14 +85,10 @@ class o {
     onDeafened(e) {
         e ? this.deafened.start() : this.deafened.stop();
     }
-    onVoiceFilterChanged(e) {
-        this.voiceFilterSpeaking.forEach((e) => e.stop()),
-            this.speaking.isRunning() && this._getVoiceFilterStopWatch(e)?.start();
-    }
     computeSpeakingDurationMilestones(e, t, n) {
         if (null == e || null == t) return;
         let r = this.speaking.elapsed().asMilliseconds();
-        a.filter((e) => !this.timesUntilSpeakingDurationMilestonesMs.has(e))
+        s.filter((e) => !this.timesUntilSpeakingDurationMilestonesMs.has(e))
             .filter((e) => r >= e)
             .forEach((r) => {
                 let i = t - e + r - n;
@@ -118,7 +99,7 @@ class o {
         let e = this.speaking.lastStartTime;
         if (null == e) return;
         let t = this.timestampProducer.now() - e;
-        s.filter((e) => t >= e).forEach((e) => {
+        a.filter((e) => t >= e).forEach((e) => {
             let n = this.speakingMinimumChunks.get(e) ?? 0;
             this.speakingMinimumChunks.set(e, n + t);
             let r = this.speakingMinimumChunkCounts.get(e) ?? 0;
@@ -139,16 +120,7 @@ class o {
             this.connected.stop(),
             this.muted.stop(),
             (this.noiseCancellation.value = !1),
-            this.voiceFilterSpeaking.forEach((e) => e.stop()),
             this.computeSpeakingDurationMilestones(e, t, n);
-    }
-    getVoiceFilterSpeakingDurationMs() {
-        return new Map(
-            [...this.voiceFilterSpeaking.entries()].map((e) => {
-                let [t, n] = e;
-                return [t, n.elapsed().asMilliseconds()];
-            }),
-        );
     }
     getDurationStats() {
         let e = this.speaking.lastStartTime,
@@ -167,13 +139,9 @@ class o {
                 duration_connected_ms: this.connected.elapsed().asMilliseconds(),
                 duration_muted_ms: this.muted.elapsed().asMilliseconds(),
                 duration_deafened_ms: this.deafened.elapsed().asMilliseconds(),
-                duration_speaking_voice_filter_ids: [...this.voiceFilterSpeaking.keys()],
                 duration_noise_cancellation_enabled_ms: this.noiseCancellation.totalDuration(),
-                duration_speaking_voice_filter_ms: [...this.voiceFilterSpeaking.values()].map((e) =>
-                    e.elapsed().asMilliseconds(),
-                ),
                 speech_event_count: this.speechEventCount,
-                ...a
+                ...s
                     .filter((e) => this.timesUntilSpeakingDurationMilestonesMs.has(e))
                     .reduce(
                         (e, t) => ({
@@ -182,7 +150,7 @@ class o {
                         }),
                         {},
                     ),
-                ...s
+                ...a
                     .filter((e) => this.speakingMinimumChunks.has(e) || n >= e)
                     .reduce(
                         (e, t) => ({

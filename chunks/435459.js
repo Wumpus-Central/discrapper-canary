@@ -22,7 +22,7 @@ let c = {
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Notifications_Opt.lottie":
         () => n.e("5252").then(n.t.bind(n, 323823, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Servers_CombinedEE.lottie":
-        () => n.e("65154").then(n.t.bind(n, 893030, 17)),
+        () => n.e("65154").then(n.t.bind(n, 670649, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Servers_Opt.lottie":
         () => n.e("77248").then(n.t.bind(n, 342787, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_You_Opt.lottie": () =>
@@ -45,8 +45,6 @@ let c = {
         n.e("43734").then(n.t.bind(n, 733813, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/web/Microphone.lottie": () =>
         n.e("26620").then(n.t.bind(n, 890007, 17)),
-    "discord_common/js/packages/tokens/tools/platforms/lottie/originals/web/MicrophoneVoiceFilter.lottie": () =>
-        n.e("60360").then(n.t.bind(n, 900699, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/web/OrbsEarnSpend.lottie": () =>
         n.e("92568").then(n.t.bind(n, 149707, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/web/OrbsEarnSpendLightTheme.lottie": () =>
@@ -172,7 +170,7 @@ let c = {
     "discord_app/images/burst_reactions/BurstReaction_Whirlwind_v01_Lottie.lottiejson": () =>
         n.e("35583").then(n.t.bind(n, 668994, 19)),
     "discord_app/images/burst_reactions/mobile/fullscreen/SuperReactions_Mobile_Send_Spotlight_v1.lottiejson": () =>
-        n.e("25481").then(n.t.bind(n, 911573, 19)),
+        n.e("47862").then(n.t.bind(n, 911573, 19)),
     "discord_app/images/burst_reactions/mobile/SuperReactions_Mobile_Anime_v1.lottiejson": () =>
         n.e("46711").then(n.t.bind(n, 23434, 19)),
     "discord_app/images/burst_reactions/mobile/SuperReactions_Mobile_Arcade_v1.lottiejson": () =>

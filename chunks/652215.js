@@ -7,7 +7,7 @@ n.d(t, {
     $jw: () => nv,
     $pd: () => eQ,
     AD1: () => h.AD,
-    AKn: () => rN,
+    AKn: () => rC,
     AMi: () => tZ,
     AO_: () => nI,
     AaC: () => nW,
@@ -63,7 +63,7 @@ n.d(t, {
     KE7: () => T,
     KIY: () => tK,
     KL3: () => ew,
-    Kby: () => nN,
+    Kby: () => nC,
     KcG: () => h.Kc,
     Ks6: () => nD,
     LU7: () => r_,
@@ -121,14 +121,14 @@ n.d(t, {
     TZK: () => eZ,
     T_y: () => tg,
     TbF: () => eY,
-    ThZ: () => tC,
+    ThZ: () => tN,
     TpD: () => tQ,
     U2_: () => h.U2,
     UNo: () => eR,
     UVF: () => Q,
-    Ue3: () => eN,
+    Ue3: () => eC,
     Umv: () => e_,
-    UqL: () => tN,
+    UqL: () => tC,
     Ut1: () => eq,
     Uyk: () => nr,
     VFs: () => e$,
@@ -138,7 +138,7 @@ n.d(t, {
     WA1: () => eB,
     WMy: () => m.WM,
     WTw: () => n1,
-    WxW: () => rC,
+    WxW: () => rN,
     Wzo: () => h.Wz,
     X7G: () => th,
     X8x: () => rt,
@@ -168,11 +168,11 @@ n.d(t, {
     __0: () => h.__,
     _i_: () => tr,
     _tK: () => tJ,
-    a3B: () => nC,
+    a3B: () => nN,
     aUe: () => E,
     aVn: () => L,
     ajI: () => ei,
-    b7d: () => N,
+    b7d: () => C,
     bFR: () => F,
     bNI: () => nk,
     bb8: () => B,
@@ -184,7 +184,7 @@ n.d(t, {
     d0r: () => eU,
     d3x: () => r.D,
     d68: () => l.d,
-    d7Q: () => eC,
+    d7Q: () => eN,
     dD: () => ri,
     dHA: () => h.dH,
     dJq: () => ef,
@@ -279,7 +279,7 @@ n.d(t, {
     ogj: () => U,
     orn: () => eT,
     p2C: () => tn,
-    p_A: () => C,
+    p_A: () => N,
     p_j: () => nM,
     pr7: () => W,
     pwA: () => q,
@@ -565,7 +565,7 @@ var r = n(989441),
             e
         );
     })({}),
-    C = (function (e) {
+    N = (function (e) {
         return (
             (e.OVERVIEW = "OVERVIEW"),
             (e.PERMISSIONS = "PERMISSIONS"),
@@ -589,7 +589,7 @@ var r = n(989441),
             e
         );
     })({}),
-    N = (function (e) {
+    C = (function (e) {
         return (e.TOPIC = "TOPIC"), e;
     })({}),
     R = (function (e) {
@@ -692,7 +692,6 @@ var r = n(989441),
             (e.REGISTER = "REGISTER"),
             (e.MACOS_19_DEPRECATED_MESSAGE = "MACOS_19_DEPRECATED_MESSAGE"),
             (e.SYSTEM_SERVICE_WARNING = "SYSTEM_SERVICE_WARNING"),
-            (e.VOICE_FILTERS_ERROR = "VOICE_FILTERS_ERROR"),
             (e.SAFETY_SUSPENDED_USER_WARNING = "SAFETY_SUSPENDED_USER_WARNING"),
             (e.VOICE_DARE_OFFER = "VOICE_DARE_OFFER"),
             (e.PTT_NO_KEYBIND_WARNING = "PTT_NO_KEYBIND_WARNING"),
@@ -1906,7 +1905,6 @@ let ef = "",
         SEND_POWERUPS_SYSTEM_MESSAGE: (e) => `/guilds/${e}/powerups-system-message`,
         SAFETY_FLOWS_TASK: "/safety-flows/task",
         SAFETY_FLOWS_RESEND_VERIFICATION_CODE: "/safety-flows/resend/email/reverification/pincode",
-        VOICE_FILTERS_CATALOG: "/voice-filters/catalog",
         APEX_EXPERIMENTS_METADATA: "/apex/experiments/metadata",
         APEX_EXPERIMENTS: "/apex/experiments",
         CONFERENCE_MODE_GUILDS: "/conference-mode/guilds",
@@ -1957,8 +1955,8 @@ var eI = (function (e) {
 let eS = 100,
     ey = 200,
     ev = 30,
-    eC = 30,
-    eN = 25,
+    eN = 30,
+    eC = 25,
     eR = 120,
     eO = 60,
     eb = 150,
@@ -2099,7 +2097,6 @@ let e1 = 128,
         ROLE_SUBSCRIPTION_STORE_PAGE: (e) => `https:${window.GLOBAL_ENV.MARKETING_ENDPOINT}/servers/${e}`,
         INVITES_HELP: "https://support.discord.com/hc/en-us/articles/208866998-Invites-101",
         SAFETY_CENTER: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/safetycenter`,
-        VOICE_FILTERS_BLOG: "https://discord.com/blog/voice-filters",
     }),
     tm = Object.freeze({
         DEVELOPER_PORTAL: "/developers",
@@ -2343,7 +2340,7 @@ var tS = (function (e) {
             e
         );
     })({}),
-    tC = (function (e) {
+    tN = (function (e) {
         return (
             (e.GUILD_CREATE_INVITE_SUGGESTION = "Guild Create Invite Suggestion"),
             (e.ADD_FRIENDS_TO_DM = "Add Friends to DM"),
@@ -2420,14 +2417,13 @@ var tS = (function (e) {
             (e.FRIEND_ANNIVERSARIES_CHAT = "Friend Anniversaries Chat"),
             (e.FRIEND_ANNIVERSARIES_ACTION_BUTTON = "Friend Anniversaries Action Button"),
             (e.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK = "Friend Anniversaries Action Button Coachmark"),
-            (e.VOICE_FILTERS = "Voice Filters Popout"),
             (e.FRIENDS_POPOUT = "Friends Popout"),
             (e.ROBLOX_CONNECTION_ACTION_SHEET = "Roblox Connection Action Sheet"),
             (e.GIFT_SELECTION_MODAL = "Gift Selection Modal"),
             e
         );
     })({}),
-    tN = (function (e) {
+    tC = (function (e) {
         return (
             (e.JOIN = "join"),
             (e.ASK_TO_JOIN = "ask to join"),
@@ -2901,8 +2897,6 @@ var tb = (function (e) {
             (e.REVERSE_TRIAL_BANNER = "Reverse Trial Banner"),
             (e.WEB_SETTING_TREE_TOOL = "Web Setting Tree Tool"),
             (e.THIRD_PARTY_ACCESS = "Third Party Access"),
-            (e.VOICE_FILTERS_FLOATING_UPSELL = "Voice Filters Floating Upsell"),
-            (e.VOICE_FILTERS_UPSELL_MODAL = "Voice Filters Upsell Modal"),
             (e.EDIT_CUSTOM_STATUS_MODAL = "Edit Custom Status Modal"),
             (e.EDIT_CUSTOM_STATUS_MODAL_WITH_PREVIEW = "Edit Custom Status Modal With Preview"),
             (e.PERMADECOS_MARKETING_UPSELL = "Permadecos Marketing Upsell"),
@@ -3427,7 +3421,6 @@ var tx = (function (e) {
             (e.SHOW_ACCOUNT_PROFILE_POPOUT = "SHOW_ACCOUNT_PROFILE_POPOUT"),
             (e.QUEST_GAME_LINK_OPENED = "QUEST_GAME_LINK_OPENED"),
             (e.QUEST_APP_STORE_OVERLAY_FINISHED = "QUEST_APP_STORE_OVERLAY_FINISHED"),
-            (e.OPEN_VOICE_FILTER_POPOUT = "OPEN_VOICE_FILTER_POPOUT"),
             (e.SHAKE_PROFILE_MODAL = "SHAKE_PROFILE_MODAL"),
             (e.SHAKE_SETTINGS_MODAL = "SHAKE_SETTINGS_MODAL"),
             (e.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED = "WOW_MOMENT_CONFIRMATION_MODAL_CLOSED"),
@@ -5146,20 +5139,6 @@ var no = (function (e) {
             (e.INVITE_ACCEPT_DISMISSED = "invite_accept_dismissed"),
             (e.INVITE_ACCEPT_DETAILS_VIEWED = "invite_accept_details_viewed"),
             (e.INVITE_ACCEPT_SOCIAL_LINK_CLICKED = "invite_accept_social_link_clicked"),
-            (e.VOICE_FILTER_LIMITED_TIME_VOICE_SELECTED = "voice_filter_limited_time_voice_selected"),
-            (e.VOICE_FILTER_FEEDBACK = "voice_filter_feedback"),
-            (e.VOICE_FILTER_PICKER_OPENED = "voice_filter_picker_opened"),
-            (e.VOICE_FILTER_ENABLED = "voice_filter_enabled"),
-            (e.VOICE_FILTER_ERROR = "voice_filter_error"),
-            (e.VOICE_FILTER_DISABLED = "voice_filter_disabled"),
-            (e.VOICE_FILTER_DOWNLOAD_ATTEMPTED = "voice_filter_download_attempted"),
-            (e.VOICE_FILTER_ACTIVATE_FAILED = "voice_filter_activate_failed"),
-            (e.VOICE_FILTER_PLAYBACK_TOGGLED = "voice_filter_playback_toggled"),
-            (e.VOICE_FILTER_PREVIEW_PLAYED = "voice_filter_preview_played"),
-            (e.VOICE_FILTER_PICKER_SCROLLED = "voice_filter_picker_scrolled"),
-            (e.VOICE_FILTER_MIC_SELECTOR_OPENED = "voice_filter_mic_selector_opened"),
-            (e.VOICE_FILTER_MIC_SELECTOR_INPUT_SELECTED = "voice_filter_mic_selector_input_selected"),
-            (e.VOICE_FILTER_VOICE_SETTINGS_CLICKED = "voice_filter_voice_settings_clicked"),
             (e.ACTIVITY_PANEL_GAME_CARD_ACTIVITY_POPOUT_REFOCUS_CLICKED =
                 "activity_panel_game_card_activity_popout_refocus_clicked"),
             (e.ACTIVITY_POPOUT_POP_OUT_BUTTON_CLICKED = "activity_popout_pop_out_button_clicked"),
@@ -5668,7 +5647,7 @@ var nA = (function (e) {
         );
     })({});
 let nv = 50;
-var nC = (function (e) {
+var nN = (function (e) {
         return (
             (e.AGREEMENTS = "AGREEMENTS"),
             (e.REQUIRE_CAPTCHA = "REQUIRE_CAPTCHA"),
@@ -5684,7 +5663,7 @@ var nC = (function (e) {
             e
         );
     })({}),
-    nN = (function (e) {
+    nC = (function (e) {
         return (e.UPDATE_PASSWORD = "update_password"), e;
     })({}),
     nR = (function (e) {
@@ -6280,8 +6259,8 @@ var ry = (function (e) {
     rv = (function (e) {
         return (e[(e.AUTO = 1)] = "AUTO"), (e[(e.FULL = 2)] = "FULL"), e;
     })({});
-let rC = 100,
-    rN = /(mfa\.[a-z0-9_-]{20,})|([a-z0-9_-]{23,28}\.[a-z0-9_-]{6,7}\.[a-z0-9_-]{27})/i;
+let rN = 100,
+    rC = /(mfa\.[a-z0-9_-]{20,})|([a-z0-9_-]{23,28}\.[a-z0-9_-]{6,7}\.[a-z0-9_-]{27})/i;
 var rR = (function (e) {
     return (e[(e.NULL = 0)] = "NULL"), (e[(e.DISABLED = 1)] = "DISABLED"), (e[(e.ENABLED = 2)] = "ENABLED"), e;
 })({});

@@ -114,7 +114,6 @@ function O(e) {
                     case b.e.PROFILE_EFFECT_MODAL_UPSELL:
                     case b.e.AVATAR_DECORATION_MODAL_UPSELL:
                     case b.e.FOR_LATER_MODAL_UPSELL:
-                    case b.e.VOICE_FILTERS_UPSELL:
                         return !0;
                     default:
                         return !1;

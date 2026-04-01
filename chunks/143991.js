@@ -1,8 +1,8 @@
-n.d(t, { A: () => F });
+n.d(t, { A: () => H });
 var i = n(627968),
-    r = n(64700),
-    l = n(735438),
-    a = n(311907),
+    l = n(64700),
+    a = n(735438),
+    r = n(311907),
     s = n(933958),
     o = n(969151),
     d = n(91242),
@@ -23,18 +23,18 @@ var i = n(627968),
     S = n(309010),
     x = n(485296),
     v = n(977997),
-    y = n(607567),
-    b = n(403362),
+    b = n(607567),
+    y = n(403362),
     O = n(652215);
 function L(e, t, n, i) {
-    r.useEffect(() => {
-        let r = t(),
-            l = new a.ru(e, () => {
+    l.useEffect(() => {
+        let l = t(),
+            a = new r.ru(e, () => {
                 let e = t(),
-                    l = n(r, e);
-                null == l || T.A.isSoundDisabled(l) || (0, h.Ak)(l, i ?? 0.4), (r = e);
+                    a = n(l, e);
+                null == a || T.A.isSoundDisabled(a) || (0, h.Ak)(a, i ?? 0.4), (l = e);
             });
-        return l.attach("useSound"), () => l.detach();
+        return a.attach("useSound"), () => a.detach();
     });
 }
 function R() {
@@ -52,13 +52,13 @@ function R() {
                 let {
                     inVoiceChannel: n,
                     selfMute: i,
-                    selfDeaf: r,
-                    audioPermissionReady: l,
-                    shouldSkipMuteUnmuteSound: a,
+                    selfDeaf: l,
+                    audioPermissionReady: a,
+                    shouldSkipMuteUnmuteSound: r,
                 } = t;
-                if (e.selfDeaf !== r) return r ? "deafen" : "undeafen";
-                if (l && (n || e.audioPermissionReady) && e.selfMute !== i)
-                    return a ? void C.Ay.notifyMuteUnmuteSoundWasSkipped() : i ? "mute" : "unmute";
+                if (e.selfDeaf !== l) return l ? "deafen" : "undeafen";
+                if (a && (n || e.audioPermissionReady) && e.selfMute !== i)
+                    return r ? void C.Ay.notifyMuteUnmuteSoundWasSkipped() : i ? "mute" : "unmute";
             },
         ),
         null
@@ -72,14 +72,14 @@ function P() {
             (e, t) => {
                 let { videoEnabled: n, inVoiceChannel: i } = t;
                 if (!(0, _.q)()) return;
-                let { videoEnabled: r, inVoiceChannel: l } = e;
-                if (r !== n && l && i) return n ? "camera_on" : "camera_off";
+                let { videoEnabled: l, inVoiceChannel: a } = e;
+                if (l !== n && a && i) return n ? "camera_on" : "camera_off";
             },
         ),
         null
     );
 }
-function j() {
+function D() {
     return (
         L(
             [I.A, N.A, S.A, c.default],
@@ -88,27 +88,27 @@ function j() {
                     t = e?.type,
                     n = e?.getGuildId(),
                     i = N.A.getWasEverRtcConnected(),
-                    r = N.A.getState();
+                    l = N.A.getState();
                 return {
                     channelType: t,
                     guildId: n,
-                    connected: r === O.S7L.RTC_CONNECTED,
-                    connectHasStarted: (!i && r !== O.S7L.DISCONNECTED) || r === O.S7L.RTC_CONNECTED,
+                    connected: l === O.S7L.RTC_CONNECTED,
+                    connectHasStarted: (!i && l !== O.S7L.DISCONNECTED) || l === O.S7L.RTC_CONNECTED,
                     awaitingRemote: null != c.default.getAwaitingRemoteSessionInfo(),
                     connectedRemote: null != c.default.getRemoteSessionId(),
                 };
             },
             (e, t) => {
-                let { channelType: n, connected: i, connectHasStarted: r, awaitingRemote: l, connectedRemote: a } = t,
+                let { channelType: n, connected: i, connectHasStarted: l, awaitingRemote: a, connectedRemote: r } = t,
                     s = e.channelType,
                     o = e.connectedRemote,
                     d = e.connected;
-                if ((!e.connectHasStarted && r) || (a && !o)) {
+                if ((!e.connectHasStarted && l) || (r && !o)) {
                     if (null != n && p.Do.has(n)) return;
                     return "user_join";
                 }
                 if (d && !i) {
-                    if (l || a || (null != s && p.Do.has(s))) return;
+                    if (a || r || (null != s && p.Do.has(s))) return;
                     return "disconnect";
                 }
             },
@@ -116,7 +116,7 @@ function j() {
         null
     );
 }
-function D() {
+function M() {
     return (
         L(
             [x.A],
@@ -131,21 +131,7 @@ function D() {
         null
     );
 }
-function M() {
-    return (
-        L(
-            [C.Ay],
-            () => C.Ay.getActiveVoiceFilter(),
-            (e, t) => {
-                if (e !== t)
-                    if (null != t) return null != e ? "voice_filter_swap" : "voice_filter_on";
-                    else return "voice_filter_off";
-            },
-        ),
-        null
-    );
-}
-function w() {
+function j() {
     return (
         L(
             [C.Ay],
@@ -160,7 +146,7 @@ function w() {
         null
     );
 }
-function U() {
+function w() {
     return (
         L(
             [x.A],
@@ -175,7 +161,7 @@ function U() {
         null
     );
 }
-function G() {
+function U() {
     return (
         L(
             [v.A],
@@ -187,7 +173,7 @@ function G() {
         null
     );
 }
-function k() {
+function G() {
     return (
         L(
             [S.A, v.A],
@@ -204,7 +190,7 @@ function k() {
         null
     );
 }
-function V() {
+function k() {
     return (
         L(
             [S.A, g.A, E.default, v.A, I.A],
@@ -213,29 +199,29 @@ function V() {
                     t,
                     n = S.A.getVoiceChannelId(),
                     i = E.default.getId(),
-                    r = [],
-                    l = null,
-                    a = 0,
+                    l = [],
+                    a = null,
+                    r = 0,
                     s = g.A.getAllActiveStreams();
                 if (null != n) {
                     let i = I.A.getChannel(n);
                     null != i &&
                         ((e = i.type),
-                        (t = y.Ay.countVoiceStatesForChannel(i.id) - !!v.A.isInChannel(i.id)),
-                        (r = g.A.getAllApplicationStreamsForChannel(i.id).map((e) => e.ownerId)));
+                        (t = b.Ay.countVoiceStatesForChannel(i.id) - !!v.A.isInChannel(i.id)),
+                        (l = g.A.getAllApplicationStreamsForChannel(i.id).map((e) => e.ownerId)));
                 }
                 let o = null;
                 return (
                     (o = 1 === s.length ? s[0] : g.A.getCurrentUserActiveStream()),
                     o?.state === O.XYD.CONNECTING && (o = null),
-                    null != o && ((l = (0, u._z)(o)), (a = g.A.getViewerIds(l).filter((e) => e !== i).length)),
+                    null != o && ((a = (0, u._z)(o)), (r = g.A.getViewerIds(a).filter((e) => e !== i).length)),
                     {
                         channelType: e,
                         voiceChannelId: n,
                         voiceChannelUserCount: t,
-                        streamingUserIds: r,
-                        singleActiveStreamKey: l,
-                        singleActiveStreamViewerCount: a,
+                        streamingUserIds: l,
+                        singleActiveStreamKey: a,
+                        singleActiveStreamViewerCount: r,
                         currentUserId: i,
                         allActiveStreams: s,
                     }
@@ -245,9 +231,9 @@ function V() {
                 let {
                     channelType: n,
                     voiceChannelId: i,
-                    voiceChannelUserCount: r,
-                    streamingUserIds: l,
-                    singleActiveStreamKey: a,
+                    voiceChannelUserCount: l,
+                    streamingUserIds: a,
+                    singleActiveStreamKey: r,
                     singleActiveStreamViewerCount: s,
                     currentUserId: o,
                 } = t;
@@ -265,26 +251,26 @@ function V() {
                     (null != n && p.Do.has(n))
                 )
                     return;
-                let d = null != a && e.singleActiveStreamKey === a,
-                    c = l.some((t) => !e.streamingUserIds.includes(t)),
+                let d = null != r && e.singleActiveStreamKey === r,
+                    c = a.some((t) => !e.streamingUserIds.includes(t)),
                     u = e.allActiveStreams.map((e) => e.ownerId),
-                    A = e.streamingUserIds.some((e) => !l.includes(e) && (e === o || u.includes(e)));
+                    A = e.streamingUserIds.some((e) => !a.includes(e) && (e === o || u.includes(e)));
                 if (c) return "stream_started";
                 if (A) return "stream_ended";
                 if (e.singleActiveStreamViewerCount <= 25 && d && s > e.singleActiveStreamViewerCount)
                     return "stream_user_joined";
                 if (
                     null != e.voiceChannelUserCount &&
-                    null != r &&
+                    null != l &&
                     e.voiceChannelUserCount <= 25 &&
-                    r > e.voiceChannelUserCount
+                    l > e.voiceChannelUserCount
                 )
                     return "user_join";
                 if (
                     null != e.voiceChannelUserCount &&
-                    null != r &&
+                    null != l &&
                     e.voiceChannelUserCount <= 25 &&
-                    r < e.voiceChannelUserCount
+                    l < e.voiceChannelUserCount
                 )
                     return "user_leave";
                 else if (e.singleActiveStreamViewerCount <= 25 && d && s < e.singleActiveStreamViewerCount)
@@ -294,7 +280,7 @@ function V() {
         null
     );
 }
-function B() {
+function V() {
     return (
         L(
             [S.A, s.Ay, d.A, E.default],
@@ -303,19 +289,19 @@ function B() {
                     t = S.A.getChannelId(),
                     n = s.Ay.getConnectedActivityLocation(),
                     i = (0, o.H)(n),
-                    r = E.default.getId(),
-                    l = (0, b.Vq)(t) ? s.Ay.getEmbeddedActivitiesForChannel(t) : s.Am,
-                    a = (0, b.Vq)(e) ? s.Ay.getEmbeddedActivitiesForChannel(e) : s.Am,
-                    c = (0, b.Vq)(i) ? s.Ay.getEmbeddedActivitiesForChannel(i) : s.Am,
-                    u = (0, b.Vq)(n) ? s.Ay.getSelfEmbeddedActivityForLocation(n) : null;
+                    l = E.default.getId(),
+                    a = (0, y.Vq)(t) ? s.Ay.getEmbeddedActivitiesForChannel(t) : s.Am,
+                    r = (0, y.Vq)(e) ? s.Ay.getEmbeddedActivitiesForChannel(e) : s.Am,
+                    c = (0, y.Vq)(i) ? s.Ay.getEmbeddedActivitiesForChannel(i) : s.Am,
+                    u = (0, y.Vq)(n) ? s.Ay.getSelfEmbeddedActivityForLocation(n) : null;
                 return {
                     connectedActivityLocation: n,
                     voiceChannelId: e,
-                    currentUserId: r,
-                    channelActivities: l,
+                    currentUserId: l,
+                    channelActivities: a,
                     connectedChannelActivities: c,
                     userConnectedActivity: u,
-                    voiceChannelActivities: a,
+                    voiceChannelActivities: r,
                     connectedFrame: d.A.getConnectedFrame(),
                 };
             },
@@ -323,36 +309,36 @@ function B() {
                 let n,
                     {
                         connectedActivityLocation: i,
-                        voiceChannelId: r,
-                        currentUserId: l,
-                        channelActivities: a,
+                        voiceChannelId: l,
+                        currentUserId: a,
+                        channelActivities: r,
                         connectedChannelActivities: s,
                         userConnectedActivity: o,
                         voiceChannelActivities: d,
                         connectedFrame: c,
                     } = t,
                     u = d.some((e) => e.applicationId === o?.applicationId && e.launchId === o.launchId);
-                if ((0, b.Vq)(r)) {
-                    let t = e.voiceChannelActivities.find((e) => e.userIds.has(l)),
-                        i = d.find((e) => e.userIds.has(l));
+                if ((0, y.Vq)(l)) {
+                    let t = e.voiceChannelActivities.find((e) => e.userIds.has(a)),
+                        i = d.find((e) => e.userIds.has(a));
                     e.voiceChannelActivities.length < d.length &&
-                        (0, b.Vq)(e.voiceChannelId) &&
+                        (0, y.Vq)(e.voiceChannelId) &&
                         (n = "activity_launch"),
-                        void 0 === i && (0, b.Vq)(t) && (n = "activity_end"),
-                        void 0 === t && (0, b.Vq)(i) && i.userIds.size > 1 && (n = "activity_user_join"),
-                        (0, b.Vq)(i) &&
-                            (0, b.Vq)(t) &&
+                        void 0 === i && (0, y.Vq)(t) && (n = "activity_end"),
+                        void 0 === t && (0, y.Vq)(i) && i.userIds.size > 1 && (n = "activity_user_join"),
+                        (0, y.Vq)(i) &&
+                            (0, y.Vq)(t) &&
                             (i.userIds.size > t.userIds.size && (n = "activity_user_join"),
                             i.userIds.size < t.userIds.size && (n = "activity_user_left"));
                 }
                 if (!u) {
                     e.connectedChannelActivities.length < s.length &&
-                        e.channelActivities.length < a.length &&
+                        e.channelActivities.length < r.length &&
                         (n = "activity_launch");
                     let t = e.userConnectedActivity;
-                    null == o && (0, b.Vq)(t) && (n = "activity_end"),
-                        (0, b.Vq)(o) &&
-                            (0, b.Vq)(t) &&
+                    null == o && (0, y.Vq)(t) && (n = "activity_end"),
+                        (0, y.Vq)(o) &&
+                            (0, y.Vq)(t) &&
                             (o.userIds.size > t.userIds.size && (n = "activity_user_join"),
                             o.userIds.size < t.userIds.size && (n = "activity_user_left"));
                 }
@@ -381,7 +367,7 @@ function B() {
         null
     );
 }
-function H() {
+function B() {
     return (
         L(
             [A.A, S.A],
@@ -392,14 +378,14 @@ function H() {
                 inVoice: null != S.A.getVoiceChannelId(),
             }),
             (e, t) => {
-                let { hangStatus: n, customHangStatus: i, gameActivityHangStatus: r } = t;
+                let { hangStatus: n, customHangStatus: i, gameActivityHangStatus: l } = t;
                 if (
                     e.inVoice &&
                     ((null != n && n !== e.hangStatus) ||
                         (null != i &&
                             (i.status !== e.customHangStatus?.status ||
-                                !(0, l.isEqual)(i.emoji, e.customHangStatus?.emoji))) ||
-                        (null != r && e.gameActivityHangStatus !== r))
+                                !(0, a.isEqual)(i.emoji, e.customHangStatus?.emoji))) ||
+                        (null != l && e.gameActivityHangStatus !== l))
                 )
                     return "hang_status_select";
             },
@@ -408,21 +394,20 @@ function H() {
         null
     );
 }
-function F() {
+function H() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(R, {}),
             (0, i.jsx)(P, {}),
-            (0, i.jsx)(j, {}),
             (0, i.jsx)(D, {}),
-            (0, i.jsx)(w, {}),
+            (0, i.jsx)(M, {}),
+            (0, i.jsx)(j, {}),
+            (0, i.jsx)(U, {}),
+            (0, i.jsx)(k, {}),
             (0, i.jsx)(G, {}),
             (0, i.jsx)(V, {}),
-            (0, i.jsx)(k, {}),
+            (0, i.jsx)(w, {}),
             (0, i.jsx)(B, {}),
-            (0, i.jsx)(M, {}),
-            (0, i.jsx)(U, {}),
-            (0, i.jsx)(H, {}),
         ],
     });
 }

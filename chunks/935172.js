@@ -46,7 +46,6 @@ var r = (function (e) {
         (e.MLSFailure = "mls-failure"),
         (e.SecureFramesUpdate = "secure-frames-update"),
         (e.SdpError = "sdp-error"),
-        (e.VoiceFilterChanged = "voice-filter-changed"),
         (e.UsersMerged = "users-merged"),
         e
     );

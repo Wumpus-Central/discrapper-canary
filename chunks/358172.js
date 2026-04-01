@@ -38,7 +38,6 @@ let n = {
             id: "premium-video-backgrounds-upsell",
             controls: {},
         },
-        { name: "Voice Filters Upsell", component: a.s2, id: "voice-filters-upsell", controls: {} },
         {
             name: "Premium Guild Member Profile Upsell",
             component: a.KF,

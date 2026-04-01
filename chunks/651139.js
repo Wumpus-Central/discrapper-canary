@@ -22,7 +22,6 @@ var r = (function (e) {
         (e.NativeScreenSharePickerCancel = "native-screenshare-picker-cancelled"),
         (e.NativeScreenSharePickerError = "native-screenshare-picker-error"),
         (e.AudioDeviceModuleError = "audio-device-module-error"),
-        (e.VoiceFiltersFailed = "voice-filters-failed"),
         (e.VideoCodecError = "video-codec-error"),
         (e.VoiceQueueMetrics = "voice-queue-metrics"),
         (e.SystemMicrophoneModeChange = "system-microphone-mode-change"),

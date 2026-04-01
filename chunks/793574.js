@@ -401,7 +401,6 @@ var r = (function (e) {
         (e.GUILD_SETTINGS_BOOST_PERKS_PAGE = "guild settings boost perks page"),
         (e.GUILD_MEMBER_MOD_VIEW = "guild member mod view"),
         (e.GUILD_MEMBER_APPLICATION_REVIEW = "guild member application review"),
-        (e.VOICE_FILTER_POPOUT = "voice filter popout"),
         (e.FOR_LATER_HELPERS = "for later helpers"),
         (e.FOR_LATER_POPOUT = "for later popout"),
         (e.GUILD_PRODUCT_EMBED_CARD = "guild product embed card"),

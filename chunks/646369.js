@@ -60,7 +60,6 @@ class C extends f.A {
     noiseCancellationDuringProcessing = !1;
     noiseCancellationAfterProcessing = !1;
     vadAfterWebrtc = !1;
-    voiceFilterId = null;
     attenuationFactor = 0.5;
     attenuateWhileSpeakingSelf = !1;
     attenuateWhileSpeakingOthers = !0;
@@ -205,7 +204,6 @@ class C extends f.A {
                                         noiseCancellationDuringProcessing: this.noiseCancellationDuringProcessing,
                                         noiseCancellationAfterProcessing: this.noiseCancellationAfterProcessing,
                                         vadAfterWebrtc: this.vadAfterWebrtc,
-                                        voiceFilters: null != this.voiceFilterId,
                                     }),
                                     n.setNoInputThreshold(-100),
                                     n.setNoInputCallback(this.handleNoInput),
@@ -541,14 +539,6 @@ class C extends f.A {
     }
     getNoiseCancellation() {
         return this.noiseCancellation;
-    }
-    getVoiceFilterId() {
-        return this.voiceFilterId;
-    }
-    setVoiceFilterId(e) {
-        (this.voiceFilterId = e),
-            this.emit(h.yq.VoiceFilterChanged, e),
-            (0, g.lE)().setTransportOptions({ voiceFilters: null != this.voiceFilterId });
     }
     setQoS(e) {
         (this.qos = e), this.conn.setTransportOptions({ qos: this.qos });

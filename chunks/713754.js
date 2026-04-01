@@ -10,7 +10,6 @@ n.d(t, {
     ME: () => r.ME,
     O5: () => r.O5,
     PE: () => i,
-    QP: () => r.QP,
     TB: () => r.TB,
     UK: () => r.UK,
     dx: () => r.dx,

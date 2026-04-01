@@ -66,11 +66,6 @@ var r = {
     "./user_leave.mp3": "99997",
     "./user_moved.mp3": "225713",
     "./vibing_wumpus.mp3": "500639",
-    "./voice_filter_loopback_off.mp3": "104063",
-    "./voice_filter_loopback_on.mp3": "723083",
-    "./voice_filter_off.mp3": "569841",
-    "./voice_filter_on.mp3": "912581",
-    "./voice_filter_swap.mp3": "807627",
     "./winter_call_calling.mp3": "460899",
     "./winter_call_ringing.mp3": "236485",
     "./winter_deafen.mp3": "517939",
@@ -82,9 +77,9 @@ var r = {
     "./winter_user_leave.mp3": "348371",
 };
 function i(e) {
-    return n(a(e));
+    return n(s(e));
 }
-function a(e) {
+function s(e) {
     if (!n.o(r, e)) {
         var t = Error("Cannot find module '" + e + "'");
         throw ((t.code = "MODULE_NOT_FOUND"), t);
@@ -94,6 +89,6 @@ function a(e) {
 (i.keys = function () {
     return Object.keys(r);
 }),
-    (i.resolve = a),
+    (i.resolve = s),
     (e.exports = i),
     (i.id = 696354);
