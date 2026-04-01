@@ -25,6 +25,7 @@ let l = {
         TENANT_CHECKOUT_FLOW_CONFIG: i.WT,
     },
     [a.C.PREMIUM_CHECKOUT]: { implemented: !1, flowType: a.C.PREMIUM_CHECKOUT },
+    [a.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT]: { implemented: !1, flowType: a.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT },
     [a.C.PREMIUM_APPS_OTP_CHECKOUT]: { implemented: !1, flowType: a.C.PREMIUM_APPS_OTP_CHECKOUT },
     [a.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT]: { implemented: !1, flowType: a.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT },
     [a.C.GUILD_PRODUCT_CHECKOUT]: { implemented: !1, flowType: a.C.GUILD_PRODUCT_CHECKOUT },
