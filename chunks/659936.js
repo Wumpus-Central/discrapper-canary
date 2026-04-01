@@ -8,11 +8,12 @@ var i = n(627968),
     c = n(620632),
     d = n(805495),
     u = n(513156);
-function m() {
-    let { surfaceConfig: e, data: t } = (0, s.Q)(),
-        n = (0, c.g)(e.components.hero_image?.fields.image, t, [c.o.UNFURLED_MEDIA]);
+function m(e) {
+    let { small: t = !1 } = e,
+        { surfaceConfig: n, data: a } = (0, s.Q)(),
+        m = (0, c.g)(n.components.hero_image?.fields.image, a, [c.o.UNFURLED_MEDIA]);
     return (0, i.jsxs)("div", {
-        className: u.kL,
+        className: l()(u.kL, { [u.PG]: t }),
         children: [
             (0, i.jsxs)("div", {
                 className: u.Qs,
@@ -35,8 +36,8 @@ function m() {
             (0, i.jsx)("div", {
                 className: u.ZS,
                 children:
-                    null != n
-                        ? (0, i.jsx)(o.A, { alt: "", media: n.media, className: l()(u.c8, d.g) })
+                    null != m
+                        ? (0, i.jsx)(o.A, { alt: "", media: m.media, className: l()(u.c8, d.g) })
                         : (0, i.jsx)(r.A, { className: u.pm }),
             }),
         ],

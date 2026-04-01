@@ -19,29 +19,29 @@ let p = {
     [s.m.WIDGET_BOTTOM]: { stats_grid_3x2_widget_bottom: () => (0, i.jsx)(d.A, {}) },
     [s.m.MINI_PROFILE]: { hero_stat_preview_mini_profile: () => (0, i.jsx)(c.A, {}) },
     [s.m.ACTIVITY_ACCESSORY]: { text_with_icon_activity_accessory: () => (0, i.jsx)(r.A, {}) },
-    [s.m.ADD_WIDGET_PREVIEW]: { hero_preview_add_widget_preview: () => (0, i.jsx)(o.A, {}) },
+    [s.m.ADD_WIDGET_PREVIEW]: { hero_preview_add_widget_preview: (e) => (0, i.jsx)(o.A, { ...e }) },
 };
 function x(e) {
-    let { surface: t, surfaceConfig: n, data: s, locale: r, header: o, onClick: c } = e,
-        d = a.useMemo(
+    let { surface: t, surfaceConfig: n, data: s, locale: r, header: o, onClick: c, layoutProps: d } = e,
+        u = a.useMemo(
             () => new Intl.NumberFormat(r, { notation: "compact", compactDisplay: "short", roundingMode: "floor" }),
             [r],
         ),
-        u = a.useMemo(() => new l.Y(r, { style: "narrow" }), [r]);
+        g = a.useMemo(() => new l.Y(r, { style: "narrow" }), [r]);
     if (null == n) return null;
-    let g = p[t]?.[n.layout];
-    return null == g
+    let x = p[t]?.[n.layout];
+    return null == x
         ? null
         : (0, i.jsx)(m.Provider, {
               value: {
                   surfaceConfig: n,
                   data: s,
                   locale: r,
-                  numberFormat: d,
-                  durationFormat: u,
+                  numberFormat: u,
+                  durationFormat: g,
                   header: o,
                   onClick: c,
               },
-              children: g(),
+              children: x(d),
           });
 }

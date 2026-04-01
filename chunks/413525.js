@@ -1,6 +1,7 @@
 e.exports = {
     kL: "container__3f982",
     PG: "sizeSmall__3f982",
+    iW: "containerV2__3f982",
     Qs: "content__3f982",
     wx: "header__3f982",
     yF: "divider__3f982",
