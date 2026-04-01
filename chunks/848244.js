@@ -1,3 +1,3 @@
-t.exports = JSON.parse(
-    '{"XJ4UpB":["Vaihda kuva"],"XV4qT6":["Poista kuva"],"CLSbjS":["Ilmianna kuva"],"1OwLy1":["Lis\xe4\xe4"],"HkszWk":["Valitse GIF"],"SQb1dl":["Inspiroidu"],"2THN2i":["Ideoita aloittamiseen."],"dDID2M":["\xc4skett\xe4iset kuvat"],"9Xxm0y":["Tarkasta \xe4skett\xe4iset latauksesi."],"+y6KsI":["Aseta kuva, jotta muut tiet\xe4v\xe4t, mit\xe4 tapahtuu."],"yyPbqI":["Lis\xe4\xe4 tieto siit\xe4, mit\xe4 olet tekem\xe4ss\xe4"],"BIdpHb":["Tulossa pian"],"bjP2Do":["Lataa kuva"],"NGcIOF":["Aseta tunnelma"]}',
+a.exports = JSON.parse(
+    '{"XJ4UpB":["Vaihda kuva"],"XV4qT6":["Poista kuva"],"CLSbjS":["Ilmianna kuva"],"1OwLy1":["Lis\xe4\xe4"],"HkszWk":["Valitse GIF"],"aBnIyR":["Valitse kuva"],"SQb1dl":["Inspiroidu"],"2THN2i":["Ideoita aloittamiseen."],"dDID2M":["\xc4skett\xe4iset kuvat"],"9Xxm0y":["Tarkasta \xe4skett\xe4iset latauksesi."],"+y6KsI":["Aseta kuva, jotta muut tiet\xe4v\xe4t, mit\xe4 tapahtuu."],"yyPbqI":["Lis\xe4\xe4 tieto siit\xe4, mit\xe4 olet tekem\xe4ss\xe4"],"BIdpHb":["Tulossa pian"],"bjP2Do":["Lataa kuva"],"NGcIOF":["Aseta tunnelma"]}',
 );
