@@ -25,44 +25,46 @@ function p(e) {
         },
         [],
     );
-    let x = (0, r.bG)([u.A], () => u.A.getLastLeftUserId(t.id), [t.id]),
-        E = (0, r.bG)([h.default], () => (null != x ? h.default.getUser(x) : null), [x]),
-        I = A.Ay.useName(t.guild_id, t.id, E),
-        C = (0, d.A)({ userId: E?.id, guildId: t.guild_id }),
-        N = (0, c.a)({ displayNameStyles: C }),
-        T = () => {
+    let x = (0, r.bG)([u.A, h.default], () => {
+            let e = u.A.getLastLeftUserId(t.id);
+            return null != e ? h.default.getUser(e) : null;
+        }, [t.id]),
+        E = A.Ay.useName(t.guild_id, t.id, x),
+        I = (0, d.A)({ userId: x?.id, guildId: t.guild_id }),
+        C = (0, c.a)({ displayNameStyles: I }),
+        N = () => {
             clearTimeout(f.current), (f.current = setTimeout(() => s(!0), 100));
         },
-        S = () => {
+        T = () => {
             clearTimeout(f.current), (f.current = setTimeout(() => s(!1), 100));
         };
-    return null == x || null == E
+    return null == x
         ? null
         : (0, i.jsx)(o.YNO, {
               targetElementRef: p,
               position: "right",
               shouldShow: n,
-              onRequestOpen: T,
-              onRequestClose: S,
+              onRequestOpen: N,
+              onRequestClose: T,
               useMouseEnter: !0,
               spacing: 17,
               renderPopout: () =>
-                  (0, i.jsx)(_.A, { channel: t, source: "ghost_user", onMouseEnter: T, onMouseLeave: S }),
+                  (0, i.jsx)(_.A, { channel: t, source: "ghost_user", onMouseEnter: N, onMouseLeave: T }),
               children: (e) => {
                   let { onClick: n, ...l } = e;
                   return (0, i.jsxs)(o.DUT, {
                       innerRef: p,
                       className: g.nM,
                       "aria-haspopup": "dialog",
-                      onClick: T,
+                      onClick: N,
                       ...l,
-                      onMouseLeave: S,
+                      onMouseLeave: T,
                       children: [
                           (0, i.jsxs)("div", {
                               className: g.R3,
                               children: [
                                   (0, i.jsx)(o.euF, {
-                                      src: E.getAvatarURL(t.guild_id, 24),
+                                      src: x.getAvatarURL(t.guild_id, 24),
                                       size: o._3J.SIZE_24,
                                       "aria-hidden": !0,
                                       status: o.clD.INVISIBLE,
@@ -75,13 +77,13 @@ function p(e) {
                               variant: "text-sm/normal",
                               className: g.Pf,
                               children: m.intl.format(m.t.TlVwqn, {
-                                  user: I,
+                                  user: E,
                                   userHook: (e, t) =>
                                       (0, i.jsx)(
                                           o.Text,
                                           {
                                               variant: "text-sm/semibold",
-                                              className: a()(g.Xh, N),
+                                              className: a()(g.Xh, C),
                                               color: "text-muted",
                                               children: e,
                                           },

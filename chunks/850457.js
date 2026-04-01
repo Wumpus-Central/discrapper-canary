@@ -199,7 +199,7 @@ function O(e) {
               onMouseEnter: a,
               onMouseLeave: o,
               children: [
-                  (0, i.jsx)(R, { channel: t }),
+                  "voice_channel" === n ? (0, i.jsx)(R, { channel: t }) : null,
                   (0, i.jsx)(r.HOs, {
                       children: (0, i.jsxs)("div", {
                           className: b.PI,
