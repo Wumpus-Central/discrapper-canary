@@ -1,37 +1,50 @@
-t.d(n, { default: () => p });
-var a = t(627968),
-    s = t(397927),
-    i = t(976860),
-    r = t(523084),
-    l = t(225180),
-    d = t(285286),
-    c = t(652215),
-    o = t(746080),
-    u = t(738072),
-    m = t(985018),
-    _ = t(62296),
-    f = t(501442);
-function p(e) {
-    let { gameServerGame: n, guildId: t, status: p, ...x } = e,
-        g = (0, l.A)(n.gameId, "cover");
-    return (0, a.jsx)(r.A, {
-        title: m.intl.string("created" === p ? u.default["4lLdBM"] : u.default.VPDgHa),
-        description: m.intl.formatToPlainString(u.default.yL6BiH, { provider: (0, d.A)(n.provider) }),
-        image: (0, a.jsx)("div", {
-            className: f.Z,
-            children: (0, a.jsx)("img", { className: f.S, alt: "", src: g ?? "" }),
-        }),
-        button: (0, a.jsx)("div", {
-            "data-button-hoisted-classname-wrapper": !0,
-            className: _.x6,
-            children: (0, a.jsx)(s.Button, {
-                variant: "primary",
-                text: m.intl.string(u.default.VkItSr),
-                onClick: () => {
-                    (0, i.pX)(c.BVt.CHANNEL(t, o.VV.GAME_SERVERS)), x.onClose();
-                },
-            }),
-        }),
-        ...x,
-    });
+a.d(t, { default: () => _ });
+var n = a(627968),
+    r = a(397927),
+    i = a(976860),
+    s = a(43594),
+    l = a(523084),
+    c = a(225180),
+    o = a(285286),
+    d = a(652215),
+    u = a(746080),
+    m = a(738072),
+    f = a(985018),
+    p = a(62296),
+    x = a(501442);
+function _(e) {
+    let { gameServerGame: t, guildId: a, status: _, ...g } = e,
+        v = (0, c.A)(t.gameId, "cover"),
+        h = (0, s.D)("GameServerSuccessModal"),
+        b = f.intl.string("created" === _ ? m.default["4lLdBM"] : m.default.VPDgHa),
+        C = f.intl.formatToPlainString(m.default.yL6BiH, { provider: (0, o.A)(t.provider) }),
+        j = () => {
+            (0, i.pX)(d.BVt.CHANNEL(a, u.VV.GAME_SERVERS)), g.onClose();
+        };
+    return "control" !== h
+        ? (0, n.jsx)(r.kpP, {
+              ...g,
+              graphic: { type: "image", src: v ?? "", aspectRatio: "16/9" },
+              title: b,
+              actions: [{ variant: "primary", text: f.intl.string(m.default.VkItSr), onClick: j }],
+              children: (0, n.jsx)(r.Text, { variant: "text-md/normal", children: C }),
+          })
+        : (0, n.jsx)(l.A, {
+              title: b,
+              description: C,
+              image: (0, n.jsx)("div", {
+                  className: x.Z,
+                  children: (0, n.jsx)("img", { className: x.S, alt: "", src: v ?? "" }),
+              }),
+              button: (0, n.jsx)("div", {
+                  "data-button-hoisted-classname-wrapper": !0,
+                  className: p.x6,
+                  children: (0, n.jsx)(r.Button, {
+                      variant: "primary",
+                      text: f.intl.string(m.default.VkItSr),
+                      onClick: j,
+                  }),
+              }),
+              ...g,
+          });
 }
