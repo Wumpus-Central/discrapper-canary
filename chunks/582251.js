@@ -10,6 +10,7 @@ e.exports = {
     FS: "textContainer__956c6",
     wq: "justifyCenter__956c6",
     G$: "questName__956c6",
+    xv: "subtitleRow__956c6",
     wx: "header__956c6",
     Kq: "orbsBalanceIcon__956c6",
     h_: "description__956c6",

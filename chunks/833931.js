@@ -27,4 +27,5 @@ e.exports = {
     AK: "contentCollapsedBackgroundWrapper__24e2c",
     LC: "contentCollapsedBackground__24e2c",
     Ge: "blur__24e2c",
+    zf: "instructionRow__24e2c",
 };

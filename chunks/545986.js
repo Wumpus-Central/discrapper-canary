@@ -1,14 +1,15 @@
 "use strict";
 n.d(t, {
     Df: () => Y,
-    Fy: () => er,
-    Oz: () => es,
+    Fy: () => ei,
+    Oz: () => ea,
     QA: () => ee,
     Zc: () => $,
     cf: () => j,
     d5: () => Q,
-    e0: () => ei,
+    e0: () => es,
     f7: () => B,
+    gC: () => er,
     hJ: () => W,
     l9: () => X,
     m6: () => K,
@@ -41,8 +42,8 @@ var o = n(397927),
     S = n(859703),
     y = n(405670),
     v = n(245853),
-    N = n(972495),
-    C = n(579473),
+    C = n(972495),
+    N = n(579473),
     R = n(561844),
     O = n(590202),
     b = n(851936),
@@ -50,8 +51,8 @@ var o = n(397927),
     L = n(710969),
     w = n(792620),
     M = n(814793),
-    P = n(753386),
-    x = n(964168),
+    x = n(753386),
+    P = n(964168),
     k = n(654487),
     U = n(652215),
     G = n(488995),
@@ -138,9 +139,9 @@ let q = 0.2;
 function Z(e) {
     let t = (0, b.L)({ quest: e }),
         n = { location: k.rE.QUESTS_BAR };
-    if (!(0, N.l)(n) || Math.random() > q) return;
+    if (!(0, C.l)(n) || Math.random() > q) return;
     let r = (0, D.A)(e);
-    t.log(`Showing survey ${r.id}`), (0, x.m)({ questId: e.id, survey: r });
+    t.log(`Showing survey ${r.id}`), (0, P.m)({ questId: e.id, survey: r });
 }
 function X() {
     return Promise.all([n.e("57174"), n.e("92868"), n.e("91652"), n.e("29636"), n.e("7634"), n.e("68317")]).then(
@@ -156,7 +157,7 @@ function Q(e) {
         autoplay: l = !0,
         skipEnrollmentCheck: u = !1,
     } = e;
-    if ((0, w.K$)(t)) return void er(t);
+    if ((0, w.K$)(t)) return void ei(t);
     let c = (0, i.A)();
     if (!u && t.userStatus?.enrolledAt == null && !(0, L.Ic)(t)) {
         S.A.isEnrolling(t.id) ||
@@ -174,7 +175,7 @@ function Q(e) {
     }
     let { setCaptionEnabled: d, muted: _, volume: f, captionEnabled: p } = y.Ay.getState(),
         { enabled: h, variant: m } = v.Ig.getConfig({ location: k.rE.VIDEO_MODAL }),
-        E = null != (0, C.tW)(t, C.fY.VIDEO_PLAYER_CAPTION, void 0, !1);
+        E = null != (0, N.tW)(t, N.fY.VIDEO_PLAYER_CAPTION, void 0, !1);
     _ &&
         h &&
         (m === v.sy.AUTO_ENABLE_CAPTIONS && E && !p
@@ -194,9 +195,9 @@ function Q(e) {
                     });
             },
             {
-                modalKey: (0, P.cZ)(t.id),
+                modalKey: (0, x.cZ)(t.id),
                 backdropStyle: o.F2Z.IMMERSIVE,
-                onCloseCallback: () => (0, P.vm)({ questId: t.id, sourceQuestContent: s, videoSessionId: c }),
+                onCloseCallback: () => (0, x.vm)({ questId: t.id, sourceQuestContent: s, videoSessionId: c }),
             },
         );
 }
@@ -248,13 +249,19 @@ function en(e) {
             t || (0, f.bG)({ pathname: U.BVt.QUEST_HOME, hash: e });
         });
 }
-function er(e) {
+function er(e, t) {
+    (0, o.mMO)(async () => {
+        let { default: i } = await n.e("62101").then(n.bind(n, 50292));
+        return (n) => (0, r.jsx)(i, { ...n, multiplier: e, eligibleToReceivePremiumRewards: t });
+    });
+}
+function ei(e) {
     (0, o.mMO)(async () => {
         let { default: t } = await Promise.all([n.e("8407"), n.e("27818")]).then(n.bind(n, 518420));
         return (n) => (0, r.jsx)(t, { ...n, questId: e.id });
     });
 }
-async function ei(e, t) {
+async function es(e, t) {
     let { type: n } = await (0, T.Oy)(e.id, {
         questContent: t.questContent,
         questContentCTA: t.questContentCTA,
@@ -279,6 +286,6 @@ async function ei(e, t) {
         case T.WM.PREVIOUS_IN_FLIGHT_REQUEST:
     }
 }
-function es(e) {
+function ea(e) {
     if ((0, M.vA)(e)) return e.config.features.includes(k.Li.CLOUD_GAMING_ACTIVITY) ? o.hpF : o._xR;
 }

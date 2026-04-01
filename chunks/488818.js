@@ -6,6 +6,7 @@ e.exports = {
     je: "questRewardEmbedSm_fbc6f7",
     ks: "questRewardEmbedXs_fbc6f7",
     oW: "taskDetails_fbc6f7",
+    KI: "instructionsRow_fbc6f7",
     $p: "taskInstructions_fbc6f7",
     CU: "learnMoreLink_fbc6f7",
     zr: "root_fbc6f7",

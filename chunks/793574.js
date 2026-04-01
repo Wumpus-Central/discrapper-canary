@@ -48,6 +48,7 @@ var r = (function (e) {
         (e.VIRTUAL_CURRENCY_ORB_PROFILE_BADGE = "virtual currency orb profile badge"),
         (e.INTRO_TO_ORBS_QUEST = "intro to orbs quest"),
         (e.INTRO_TO_ORBS_QUEST_BANNER = "intro to orbs quest banner"),
+        (e.QUEST_ORB_MULTIPLIER_INFO_MODAL = "quest orb multiplier info modal"),
         (e.MOBILE_ORBS_REWARD_CLAIM_MODAL = "mobile orbs reward claim modal"),
         (e.ORBS_BALANCE_MENU = "orbs balance menu"),
         (e.PREMIUM_PAYMENT_ACTION_SHEET = "premium payment action sheet"),
