@@ -4,4 +4,6 @@ e.exports = {
     wx: "header_b08638",
     cS: "collapseButton_b08638",
     XG: "scroller_b08638",
+    Os: "group_b08638",
+    AM: "groupLabel_b08638",
 };

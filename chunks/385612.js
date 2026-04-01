@@ -14,32 +14,35 @@ var l = n(427262),
     d = n(339984),
     _ = n(985018);
 function f(e) {
-    let { uploadType: t, guildId: i, analyticsSource: o, filters: l, isTryItOut: f = !1 } = e;
-    (0, s.mMO)(async () => {
-        let { default: e } = await Promise.all([
-            n.e("14138"),
-            n.e("49924"),
-            n.e("59701"),
-            n.e("53653"),
-            n.e("42271"),
-        ]).then(n.bind(n, 551028));
-        return (n) =>
-            (0, r.jsx)(e, {
-                filters: l,
-                maxFileSizeBytes: c.j,
-                imageSpecifications: t === d.HL.BANNER ? _.intl.string(_.t.IhzZlo) : void 0,
-                onComplete: (e) => {
-                    let { assetOrigin: n, imageUri: r, file: s, originalAsset: l } = e,
-                        c = s.name.replace(/\.[^/.]+$/, ""),
-                        d = (0, a.Rh)({ filename: c, assetOrigin: n }),
-                        _ = (0, a.XB)({ assetOrigin: n, imageUri: r, description: d, originalAsset: l });
-                    (0, u.H)({ image: _, file: s, uploadType: t, guildId: i, analyticsSource: o, isTryItOut: f });
-                },
-                uploadType: t,
-                showUpsellHeader: !0,
-                ...n,
-            });
-    });
+    let { uploadType: t, guildId: i, analyticsSource: o, filters: l, isTryItOut: f = !1, stackingBehavior: p } = e;
+    (0, s.mMO)(
+        async () => {
+            let { default: e } = await Promise.all([
+                n.e("91757"),
+                n.e("49924"),
+                n.e("59701"),
+                n.e("53653"),
+                n.e("77179"),
+            ]).then(n.bind(n, 551028));
+            return (n) =>
+                (0, r.jsx)(e, {
+                    filters: l,
+                    maxFileSizeBytes: c.j,
+                    imageSpecifications: t === d.HL.BANNER ? _.intl.string(_.t.IhzZlo) : void 0,
+                    onComplete: (e) => {
+                        let { assetOrigin: n, imageUri: r, file: s, originalAsset: l } = e,
+                            c = s.name.replace(/\.[^/.]+$/, ""),
+                            d = (0, a.Rh)({ filename: c, assetOrigin: n }),
+                            _ = (0, a.XB)({ assetOrigin: n, imageUri: r, description: d, originalAsset: l });
+                        (0, u.H)({ image: _, file: s, uploadType: t, guildId: i, analyticsSource: o, isTryItOut: f });
+                    },
+                    uploadType: t,
+                    showUpsellHeader: !0,
+                    ...n,
+                });
+        },
+        { stackingBehavior: p },
+    );
 }
 function p(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
