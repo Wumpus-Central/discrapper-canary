@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => F });
+n.d(t, { A: () => V });
 var r = n(488428),
     i = n(110259),
     s = n(179771),
@@ -29,10 +29,11 @@ var r = n(488428),
     b = n(912851),
     D = n(652215),
     L = n(360469),
-    w = n(985018);
-let M = 3,
+    w = n(332988),
+    M = n(985018);
+let P = 3,
     x = new f.A("GamesActionCreators");
-function P(e) {
+function k(e) {
     let {
         applicationId: t,
         secret: n,
@@ -64,7 +65,7 @@ function P(e) {
             }
         }
     }
-    G({ applicationId: t, channelId: r, embedded: s, source: a, locationObject: o, analyticsLocations: l })
+    F({ applicationId: t, channelId: r, embedded: s, source: a, locationObject: o, analyticsLocations: l })
         .then((e) =>
             0 === e
                 ? null
@@ -75,10 +76,10 @@ function P(e) {
         })
         .catch(() => u.h.dispatch({ type: "ACTIVITY_JOIN_FAILED", applicationId: t }));
 }
-function k(e, t) {
+function U(e, t) {
     return null == e || "" === e ? null : { distributor: e, sku: t };
 }
-function U(e) {
+function G(e) {
     return o.Bo.post({
         url: D.Rsh.OAUTH2_AUTHORIZE,
         query: { client_id: e, response_type: "token", scope: [s.F.IDENTIFY].join(" ") },
@@ -100,7 +101,7 @@ function U(e) {
         },
     );
 }
-async function G(e) {
+async function F(e) {
     let {
         applicationId: t,
         branchId: n,
@@ -136,7 +137,7 @@ async function G(e) {
         if (null == e) throw Error("Missing dispatch game when launching");
         let i = T.A.getLibraryApplication(t, n);
         if (null == i) throw Error("Missing library application when launching");
-        l = U(t).then((t) => v.A.launchDispatchApplication(e, t, g.default.locale, i.getBranchName(), r));
+        l = G(t).then((t) => v.A.launchDispatchApplication(e, t, g.default.locale, i.getBranchName(), r));
     } else {
         let e = d.A.getApplication(t);
         l = null != e ? v.A.launch(e) : v.A.launchGame(t);
@@ -150,12 +151,12 @@ async function G(e) {
                   u.h.dispatch({ type: "GAME_LAUNCH_SUCCESS", applicationId: t, pids: e });
               })
               .catch((e) => {
-                  b.A.show(D.kqX.LAUNCH_GAME_FAILURE, w.intl.string(w.t.YZEBdj)),
+                  b.A.show(D.kqX.LAUNCH_GAME_FAILURE, M.intl.string(M.t.YZEBdj)),
                       u.h.dispatch({ type: "GAME_LAUNCH_FAIL", applicationId: t, error: _ });
               }))
         : (u.h.dispatch({ type: "GAME_LAUNCH_FAIL", applicationId: t, error: _ }), Promise.reject(_));
 }
-let F = {
+let V = {
     addGame(e, t) {
         u.h.dispatch({ type: "RUNNING_GAME_ADD_OVERRIDE", pid: e }),
             y.default.track(D.HAw.RUNNING_GAME_OVERRIDE_ADDED, { game_name: t });
@@ -222,7 +223,7 @@ let F = {
         u.h.wait(() => {
             u.h.dispatch({ type: "GAMES_DATABASE_FETCH" }),
                 C.A.get({
-                    url: D.Rsh.GAMES_DETECTABLE,
+                    url: w.s,
                     headers: { "If-None-Match": e },
                     retries: 1,
                     oldFormErrors: !0,
@@ -290,7 +291,7 @@ let F = {
         u.h.wait(() => {
             u.h.dispatch({ type: "NON_GAMES_DATABASE_FETCH" }),
                 C.A.get({
-                    url: D.Rsh.NON_GAMES_DETECTABLE,
+                    url: w.u,
                     headers: { "If-None-Match": e },
                     retries: 1,
                     trackedActionData: {
@@ -334,10 +335,10 @@ let F = {
                         name: t,
                         os: (0, N.getPlatformName)(),
                         icon: n,
-                        distributor_application: k(i, s),
+                        distributor_application: U(i, s),
                         executable: l,
                         publisher: r,
-                        report_version: M,
+                        report_version: P,
                     },
                     retries: 1,
                     oldFormErrors: !0,
@@ -361,7 +362,7 @@ let F = {
     deleteEntry(e) {
         u.h.dispatch({ type: "RUNNING_GAME_DELETE_ENTRY", game: e });
     },
-    launch: G,
+    launch: F,
     async join(e) {
         let {
             userId: t,
@@ -394,7 +395,7 @@ let F = {
                 u = await R.A.getJoinSecret(t, n, r, i, s);
             return (
                 null == _ &&
-                    P({
+                    k({
                         applicationId: r,
                         secret: u,
                         channelId: i,
@@ -411,5 +412,5 @@ let F = {
             return u.h.dispatch({ type: "ACTIVITY_JOIN_FAILED", applicationId: r }), !1;
         }
     },
-    joinWithSecret: P,
+    joinWithSecret: k,
 };
