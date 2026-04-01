@@ -1,55 +1,55 @@
-function a(n, e) {
-    let t = e && e.cache ? e.cache : o,
-        a = e && e.serializer ? e.serializer : s;
-    return (
-        e && e.strategy
-            ? e.strategy
-            : function (n, e) {
-                  var t, a;
-                  let s = 1 === n.length ? r : i;
-                  return (t = e.cache.create()), (a = e.serializer), s.bind(this, n, t, a);
-              }
-    )(n, { cache: t, serializer: a });
+"use strict";
+function r(e, t) {
+    let n = t && t.cache ? t.cache : f,
+        r = t && t.serializer ? t.serializer : d;
+    return (t && t.strategy ? t.strategy : l)(e, { cache: n, serializer: r });
 }
-function r(n, e, t, a) {
-    let r = null == a || "number" == typeof a || "boolean" == typeof a ? a : t(a),
-        i = e.get(r);
-    return void 0 === i && ((i = n.call(this, a)), e.set(r, i)), i;
+function i(e) {
+    return null == e || "number" == typeof e || "boolean" == typeof e;
 }
-function i(n, e, t) {
-    let a = Array.prototype.slice.call(arguments, 3),
-        r = t(a),
-        i = e.get(r);
-    return void 0 === i && ((i = n.apply(this, a)), e.set(r, i)), i;
+function s(e, t, n, r) {
+    let s = i(r) ? r : n(r),
+        a = t.get(s);
+    return void 0 === a && ((a = e.call(this, r)), t.set(s, a)), a;
 }
-t.d(e, { B: () => a, W: () => d });
-let s = function () {
+function a(e, t, n) {
+    let r = Array.prototype.slice.call(arguments, 3),
+        i = n(r),
+        s = t.get(i);
+    return void 0 === s && ((s = e.apply(this, r)), t.set(i, s)), s;
+}
+function o(e, t, n, r, i) {
+    return n.bind(t, e, r, i);
+}
+function l(e, t) {
+    let n = 1 === e.length ? s : a;
+    return o(e, this, n, t.cache.create(), t.serializer);
+}
+function u(e, t) {
+    return o(e, this, a, t.cache.create(), t.serializer);
+}
+function c(e, t) {
+    return o(e, this, s, t.cache.create(), t.serializer);
+}
+n.d(t, { B: () => r, W: () => p });
+let d = function () {
     return JSON.stringify(arguments);
 };
-class u {
+class _ {
     cache;
     constructor() {
         this.cache = Object.create(null);
     }
-    get(n) {
-        return this.cache[n];
+    get(e) {
+        return this.cache[e];
     }
-    set(n, e) {
-        this.cache[n] = e;
+    set(e, t) {
+        this.cache[e] = t;
     }
 }
-let o = {
+let f = {
         create: function () {
-            return new u();
+            return new _();
         },
     },
-    d = {
-        variadic: function (n, e) {
-            var t, a;
-            return (t = e.cache.create()), (a = e.serializer), i.bind(this, n, t, a);
-        },
-        monadic: function (n, e) {
-            var t, a;
-            return (t = e.cache.create()), (a = e.serializer), r.bind(this, n, t, a);
-        },
-    };
+    p = { variadic: u, monadic: c };

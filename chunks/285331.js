@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     zr: "root__60f8b",
     DD: "title__60f8b",

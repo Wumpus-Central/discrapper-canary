@@ -1,47 +1,48 @@
-n.d(t, { A: () => x, Q: () => g });
-var i = n(627968),
-    a = n(64700),
-    l = n(430111),
-    s = n(598748),
-    r = n(286043),
-    o = n(659936),
-    c = n(179856),
-    d = n(169935),
-    u = n(705880);
-let m = a.createContext(null);
-function g() {
-    let e = a.useContext(m);
+"use strict";
+n.d(t, { A: () => h, Q: () => f });
+var r = n(627968),
+    i = n(64700),
+    s = n(430111),
+    a = n(598748),
+    o = n(286043),
+    l = n(659936),
+    u = n(179856),
+    c = n(169935),
+    d = n(705880);
+let _ = i.createContext(null);
+function f() {
+    let e = i.useContext(_);
     if (null == e) throw Error("useLayoutRendererContext must be used within a LayoutRenderer");
     return e;
 }
 let p = {
-    [s.m.WIDGET_TOP]: { hero_overview_widget_top: () => (0, i.jsx)(u.A, {}) },
-    [s.m.WIDGET_BOTTOM]: { stats_grid_3x2_widget_bottom: () => (0, i.jsx)(d.A, {}) },
-    [s.m.MINI_PROFILE]: { hero_stat_preview_mini_profile: () => (0, i.jsx)(c.A, {}) },
-    [s.m.ACTIVITY_ACCESSORY]: { text_with_icon_activity_accessory: () => (0, i.jsx)(r.A, {}) },
-    [s.m.ADD_WIDGET_PREVIEW]: { hero_preview_add_widget_preview: (e) => (0, i.jsx)(o.A, { ...e }) },
+    [a.m.WIDGET_TOP]: { hero_overview_widget_top: () => (0, r.jsx)(d.A, {}) },
+    [a.m.WIDGET_BOTTOM]: { stats_grid_3x2_widget_bottom: () => (0, r.jsx)(c.A, {}) },
+    [a.m.MINI_PROFILE]: { hero_stat_preview_mini_profile: () => (0, r.jsx)(u.A, {}) },
+    [a.m.ACTIVITY_ACCESSORY]: { text_with_icon_activity_accessory: () => (0, r.jsx)(o.A, {}) },
+    [a.m.ADD_WIDGET_PREVIEW]: { hero_preview_add_widget_preview: (e) => (0, r.jsx)(l.A, { ...e }) },
 };
-function x(e) {
-    let { surface: t, surfaceConfig: n, data: s, locale: r, header: o, onClick: c, layoutProps: d } = e,
-        u = a.useMemo(
-            () => new Intl.NumberFormat(r, { notation: "compact", compactDisplay: "short", roundingMode: "floor" }),
-            [r],
+function h(e) {
+    let { surface: t, surfaceConfig: n, data: a, locale: o, header: l, onClick: u, layoutProps: c } = e,
+        d = i.useMemo(
+            () => new Intl.NumberFormat(o, { notation: "compact", compactDisplay: "short", roundingMode: "floor" }),
+            [o],
         ),
-        g = a.useMemo(() => new l.Y(r, { style: "narrow" }), [r]);
+        f = i.useMemo(() => new s.Y(o, { style: "narrow" }), [o]);
     if (null == n) return null;
-    let x = p[t]?.[n.layout];
-    return null == x
+    let h = p[t]?.[n.layout];
+    return null == h
         ? null
-        : (0, i.jsx)(m.Provider, {
+        : (0, r.jsx)(_.Provider, {
               value: {
                   surfaceConfig: n,
-                  data: s,
-                  locale: r,
-                  numberFormat: u,
-                  durationFormat: g,
-                  header: o,
-                  onClick: c,
+                  data: a,
+                  locale: o,
+                  numberFormat: d,
+                  durationFormat: f,
+                  header: l,
+                  onClick: u,
               },
-              children: x(d),
+              children: h(c),
           });
 }

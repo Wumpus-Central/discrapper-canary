@@ -1,11 +1,13 @@
-t.d(e, { U: () => s });
-var a = t(589844),
-    r = t(676040),
-    i = t(518375);
-function s(n, e, t) {
+"use strict";
+n.d(t, { U: () => a });
+var r = n(589844),
+    i = n(676040),
+    s = n(518375);
+function a(e, t, n) {
+    let a = "best fit";
     return (
-        void 0 !== t &&
-            ((t = (0, r.BT)(t)), (0, i.W)(t, "localeMatcher", "string", ["lookup", "best fit"], "best fit")),
-        (0, a.s)(Array.from(n), e)
+        void 0 !== n &&
+            ((n = (0, i.BT)(n)), (a = (0, s.W)(n, "localeMatcher", "string", ["lookup", "best fit"], "best fit"))),
+        (0, r.s)(Array.from(e), t)
     );
 }

@@ -33,7 +33,6 @@ async function o(e, t, o) {
             async () => {
                 let { default: t } = await Promise.all([
                     n.e("10614"),
-                    n.e("72127"),
                     n.e("28936"),
                     n.e("68859"),
                     n.e("94857"),
@@ -41,8 +40,8 @@ async function o(e, t, o) {
                     n.e("55905"),
                     n.e("25699"),
                     n.e("10117"),
-                    n.e("85440"),
-                    n.e("62625"),
+                    n.e("11129"),
+                    n.e("68254"),
                 ]).then(n.bind(n, 779735));
                 return (n) =>
                     (0, r.jsx)(t, {

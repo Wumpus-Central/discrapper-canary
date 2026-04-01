@@ -1,20 +1,21 @@
-n.d(t, { A: () => o });
-var i = n(64700),
-    a = n(311907),
-    l = n(403362),
-    s = n(382483),
-    r = n(385113);
-function o(e) {
-    let t = (0, a.bG)([r.A], () => r.A.getFeaturedFetchState()),
-        n = (0, a.yK)([r.A], () => e.filter((e) => r.A.getFetchState(e) === r.e.NOT_FETCHED)),
-        o = (0, a.yK)([r.A], () => e.map((e) => r.A.getConfig(e)).filter(l.Vq));
+"use strict";
+n.d(t, { A: () => l });
+var r = n(64700),
+    i = n(311907),
+    s = n(403362),
+    a = n(382483),
+    o = n(385113);
+function l(e) {
+    let t = (0, i.bG)([o.A], () => o.A.getFeaturedFetchState()),
+        n = (0, i.yK)([o.A], () => e.filter((e) => o.A.getFetchState(e) === o.e.NOT_FETCHED)),
+        l = (0, i.yK)([o.A], () => e.map((e) => o.A.getConfig(e)).filter(s.Vq));
     return (
-        i.useEffect(() => {
-            (0, s.W)();
+        r.useEffect(() => {
+            (0, a.W)();
         }, []),
-        i.useEffect(() => {
-            if (t === r.e.SUCCESS || t === r.e.FAILURE) for (let e of n) (0, s.u)(e);
+        r.useEffect(() => {
+            if (t === o.e.SUCCESS || t === o.e.FAILURE) for (let e of n) (0, a.u)(e);
         }, [t, n]),
-        o
+        l
     );
 }

@@ -1,16 +1,17 @@
-t.d(e, { N: () => i });
-var a = t(127960),
-    r = t(839006);
-function i(n, e, t) {
-    let i;
-    (0, r.V1)(-1 === n.indexOf("-u-"), "Expected locale to not have a Unicode locale extension");
-    let s = "-u";
-    for (let n of e) s += `-${n}`;
-    for (let n of t) {
-        let { key: e, value: t } = n;
-        (s += `-${e}`), "" !== t && (s += `-${t}`);
+"use strict";
+n.d(t, { N: () => s });
+var r = n(127960),
+    i = n(839006);
+function s(e, t, n) {
+    let s;
+    (0, i.V1)(-1 === e.indexOf("-u-"), "Expected locale to not have a Unicode locale extension");
+    let a = "-u";
+    for (let e of t) a += `-${e}`;
+    for (let e of n) {
+        let { key: t, value: n } = e;
+        (a += `-${t}`), "" !== n && (a += `-${n}`);
     }
-    if ("-u" === s) return (0, a.t)(n);
-    let u = n.indexOf("-x-");
-    return (i = -1 === u ? n + s : n.slice(0, u) + s + n.slice(u)), (0, a.t)(i);
+    if ("-u" === a) return (0, r.t)(e);
+    let o = e.indexOf("-x-");
+    return (s = -1 === o ? e + a : e.slice(0, o) + a + e.slice(o)), (0, r.t)(s);
 }

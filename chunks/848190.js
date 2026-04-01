@@ -1,5 +1,6 @@
-t.d(e, { p: () => a });
-let a = {
+"use strict";
+n.d(t, { p: () => r });
+let r = {
     supplemental: {
         languageMatching: {
             "written-new": [

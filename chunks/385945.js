@@ -1,51 +1,52 @@
-n.d(t, { A: () => c });
-var i = n(627968),
-    a = n(158954),
-    l = n(612185),
-    s = n(620632),
-    r = n(552283),
-    o = n(694199);
-function c(e) {
+"use strict";
+n.d(t, { A: () => u });
+var r = n(627968),
+    i = n(158954),
+    s = n(612185),
+    a = n(620632),
+    o = n(552283),
+    l = n(126606);
+function u(e) {
     let {
             component: t,
             variant: n,
-            color: c,
-            required: d = !1,
-            className: u,
-            lineClamp: m,
-            imagePosition: g = "right",
+            color: u,
+            required: c = !1,
+            className: d,
+            lineClamp: _,
+            imagePosition: f = "right",
         } = e,
-        { data: p } = (0, l.Q)();
-    if (null == t) return d ? (0, i.jsx)(r.A, { variant: n, className: u }) : null;
-    let x = (0, s.g)(t.fields.text, p, [s.o.STRING]),
-        f = (0, s.g)(t.fields.label, p, [s.o.STRING]),
-        _ = (0, s.g)(t.fields.icon, p, [s.o.UNFURLED_MEDIA]),
-        h =
-            null != _
-                ? (0, i.jsx)("img", {
+        { data: p } = (0, s.Q)();
+    if (null == t) return c ? (0, r.jsx)(o.A, { variant: n, className: d }) : null;
+    let h = (0, a.g)(t.fields.text, p, [a.o.STRING]),
+        m = (0, a.g)(t.fields.label, p, [a.o.STRING]),
+        E = (0, a.g)(t.fields.icon, p, [a.o.UNFURLED_MEDIA]),
+        g =
+            null != E
+                ? (0, r.jsx)("img", {
                       alt: "",
-                      src: _.media.url,
-                      width: _.media.width,
-                      height: _.media.height,
-                      className: o.K,
+                      src: E.media.url,
+                      width: E.media.width,
+                      height: E.media.height,
+                      className: l.K,
                   })
                 : null;
-    return (0, i.jsx)(a.BJc, {
+    return (0, r.jsx)(i.BJc, {
         direction: "horizontal",
         gap: 0,
-        className: u,
+        className: d,
         children:
-            null == x && null == f
-                ? (0, i.jsx)(r.A, { variant: n })
-                : (0, i.jsxs)(a.EYj, {
+            null == h && null == m
+                ? (0, r.jsx)(o.A, { variant: n })
+                : (0, r.jsxs)(i.EYj, {
                       variant: n,
-                      color: c,
-                      lineClamp: m,
+                      color: u,
+                      lineClamp: _,
                       children: [
-                          null != h && "left" === g ? (0, i.jsxs)(i.Fragment, { children: [h, " "] }) : null,
-                          null != f && "" !== f.value && `${f.value}: `,
-                          null != x && "" !== x.value ? x.value : "–",
-                          null != h && "right" === g ? (0, i.jsxs)(i.Fragment, { children: [" ", h] }) : null,
+                          null != g && "left" === f ? (0, r.jsxs)(r.Fragment, { children: [g, " "] }) : null,
+                          null != m && "" !== m.value && `${m.value}: `,
+                          null != h && "" !== h.value ? h.value : "–",
+                          null != g && "right" === f ? (0, r.jsxs)(r.Fragment, { children: [" ", g] }) : null,
                       ],
                   }),
     });

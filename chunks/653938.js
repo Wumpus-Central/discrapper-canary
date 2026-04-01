@@ -1,19 +1,20 @@
-t.d(e, { k: () => r });
-var a = t(839006);
-function r(n, e, t) {
-    let r,
-        i,
-        s = [],
-        u = e.reduce((n, e) => {
-            let t = e.replace(a.KB, "");
-            return s.push(t), (n[t] = e), n;
+"use strict";
+n.d(t, { k: () => i });
+var r = n(839006);
+function i(e, t, n) {
+    let i,
+        s,
+        a = [],
+        o = t.reduce((e, t) => {
+            let n = t.replace(r.KB, "");
+            return a.push(n), (e[n] = t), e;
         }, {}),
-        o = (0, a.B4)(s, n);
-    return (o.matchedSupportedLocale &&
-        o.matchedDesiredLocale &&
-        ((r = o.matchedSupportedLocale),
-        (i = u[o.matchedDesiredLocale].slice(o.matchedDesiredLocale.length) || void 0)),
-    r)
-        ? { locale: r, extension: i }
-        : { locale: t() };
+        l = (0, r.B4)(a, e);
+    return (l.matchedSupportedLocale &&
+        l.matchedDesiredLocale &&
+        ((i = l.matchedSupportedLocale),
+        (s = o[l.matchedDesiredLocale].slice(l.matchedDesiredLocale.length) || void 0)),
+    i)
+        ? { locale: i, extension: s }
+        : { locale: n() };
 }

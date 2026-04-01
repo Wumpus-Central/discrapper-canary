@@ -1,41 +1,42 @@
-n.d(t, { A: () => d });
-var i = n(627968),
-    a = n(612185),
-    l = n(495029),
-    s = n(385945),
-    r = n(620632),
-    o = n(805495),
-    c = n(911148);
-function d() {
-    let { surfaceConfig: e, data: t, header: n } = (0, a.Q)(),
-        d = (0, r.g)(e.components.hero_image?.fields.image, t, [r.o.UNFURLED_MEDIA]);
-    return (0, i.jsxs)("div", {
-        className: c.zr,
+"use strict";
+n.d(t, { A: () => c });
+var r = n(627968),
+    i = n(612185),
+    s = n(495029),
+    a = n(385945),
+    o = n(620632),
+    l = n(317742),
+    u = n(285331);
+function c() {
+    let { surfaceConfig: e, data: t, header: n } = (0, i.Q)(),
+        c = (0, o.g)(e.components.hero_image?.fields.image, t, [o.o.UNFURLED_MEDIA]);
+    return (0, r.jsxs)("div", {
+        className: u.zr,
         children: [
-            (0, i.jsxs)("div", {
-                className: c.hQ,
+            (0, r.jsxs)("div", {
+                className: u.hQ,
                 children: [
                     n,
-                    (0, i.jsxs)("div", {
-                        className: c.Qs,
+                    (0, r.jsxs)("div", {
+                        className: u.Qs,
                         children: [
-                            (0, i.jsx)(s.A, {
+                            (0, r.jsx)(a.A, {
                                 component: e.components.title,
                                 variant: "text-lg/medium",
                                 required: !0,
-                                className: c.DD,
+                                className: u.DD,
                             }),
-                            (0, i.jsx)(s.A, {
+                            (0, r.jsx)(a.A, {
                                 component: e.components.subtitle_1,
                                 variant: "text-sm/normal",
                                 color: "text-subtle",
                             }),
-                            (0, i.jsx)(s.A, {
+                            (0, r.jsx)(a.A, {
                                 component: e.components.subtitle_2,
                                 variant: "text-sm/normal",
                                 color: "text-subtle",
                             }),
-                            (0, i.jsx)(s.A, {
+                            (0, r.jsx)(a.A, {
                                 component: e.components.subtitle_3,
                                 variant: "text-sm/normal",
                                 color: "text-subtle",
@@ -44,12 +45,12 @@ function d() {
                     }),
                 ],
             }),
-            null != d
-                ? (0, i.jsx)("div", {
-                      className: c.ZS,
-                      children: (0, i.jsx)("img", { alt: "", src: d.media.url, className: o.g }),
+            null != c
+                ? (0, r.jsx)("div", {
+                      className: u.ZS,
+                      children: (0, r.jsx)("img", { alt: "", src: c.media.url, className: l.g }),
                   })
-                : (0, i.jsx)(l.A, { className: c.h2 }),
+                : (0, r.jsx)(s.A, { className: u.h2 }),
         ],
     });
 }

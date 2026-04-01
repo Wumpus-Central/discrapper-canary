@@ -1,13 +1,14 @@
-t.d(e, { q: () => r });
-let a = new WeakMap();
-function r(n, e) {
-    let t = a.get(n);
-    t || ((t = new Set(n)), a.set(n, t));
-    let r = e;
+"use strict";
+n.d(t, { q: () => i });
+let r = new WeakMap();
+function i(e, t) {
+    let n = r.get(e);
+    n || ((n = new Set(e)), r.set(e, n));
+    let i = t;
     for (;;) {
-        if (t.has(r)) return r;
-        let n = r.lastIndexOf("-");
-        if (!~n) return;
-        n >= 2 && "-" === r[n - 2] && (n -= 2), (r = r.slice(0, n));
+        if (n.has(i)) return i;
+        let e = i.lastIndexOf("-");
+        if (!~e) return;
+        e >= 2 && "-" === i[e - 2] && (e -= 2), (i = i.slice(0, e));
     }
 }

@@ -1,42 +1,43 @@
-t.d(e, { B: () => d });
-var a = t(653938),
-    r = t(570343),
-    i = t(691581),
-    s = t(86827),
-    u = t(596223),
-    o = t(839006);
-function d(n, e, t, d, l, c) {
+"use strict";
+n.d(t, { B: () => u });
+var r = n(653938),
+    i = n(570343),
+    s = n(691581),
+    a = n(86827),
+    o = n(596223),
+    l = n(839006);
+function u(e, t, n, u, c, d) {
     let _, f;
-    null == (_ = "lookup" === t.localeMatcher ? (0, s.V)(Array.from(n), e, c) : (0, a.k)(Array.from(n), e, c)) &&
-        (_ = { locale: c(), extension: "" });
-    let h = _.locale,
-        y = l[h],
-        m = { locale: "en", dataLocale: h };
-    f = _.extension ? (0, u.v)(_.extension).keywords : [];
-    let w = [];
-    for (let n of d) {
-        let e,
-            a = y?.[n] ?? [];
-        (0, o.V1)(Array.isArray(a), `keyLocaleData for ${n} must be an array`);
-        let i = a[0];
-        (0, o.V1)(void 0 === i || "string" == typeof i, "value must be a string or undefined");
-        let s = f.find((e) => e.key === n);
-        if (s) {
-            let t = s.value;
-            "" !== t
-                ? a.indexOf(t) > -1 && (e = { key: n, value: (i = t) })
-                : a.indexOf("true") > -1 && (e = { key: n, value: (i = "true") });
+    null == (_ = "lookup" === n.localeMatcher ? (0, a.V)(Array.from(e), t, d) : (0, r.k)(Array.from(e), t, d)) &&
+        (_ = { locale: d(), extension: "" });
+    let p = _.locale,
+        h = c[p],
+        m = { locale: "en", dataLocale: p };
+    f = _.extension ? (0, o.v)(_.extension).keywords : [];
+    let E = [];
+    for (let e of u) {
+        let t,
+            r = h?.[e] ?? [];
+        (0, l.V1)(Array.isArray(r), `keyLocaleData for ${e} must be an array`);
+        let s = r[0];
+        (0, l.V1)(void 0 === s || "string" == typeof s, "value must be a string or undefined");
+        let a = f.find((t) => t.key === e);
+        if (a) {
+            let n = a.value;
+            "" !== n
+                ? r.indexOf(n) > -1 && (t = { key: e, value: (s = n) })
+                : r.indexOf("true") > -1 && (t = { key: e, value: (s = "true") });
         }
-        let u = t[n];
+        let o = n[e];
         if (
-            ((0, o.V1)(null == u || "string" == typeof u, "optionsValue must be a string or undefined"),
-            "string" == typeof u)
+            ((0, l.V1)(null == o || "string" == typeof o, "optionsValue must be a string or undefined"),
+            "string" == typeof o)
         ) {
-            let e = n.toLowerCase();
-            "" === (u = (0, r.t)(e, u)) && (u = "true");
+            let t = e.toLowerCase();
+            "" === (o = (0, i.t)(t, o)) && (o = "true");
         }
-        u !== i && a.indexOf(u) > -1 && ((i = u), (e = void 0)), e && w.push(e), (m[n] = i);
+        o !== s && r.indexOf(o) > -1 && ((s = o), (t = void 0)), t && E.push(t), (m[e] = s);
     }
     let g = [];
-    return w.length > 0 && ((g = []), (h = (0, i.N)(h, g, w))), (m.locale = h), m;
+    return E.length > 0 && ((g = []), (p = (0, s.N)(p, g, E))), (m.locale = p), m;
 }

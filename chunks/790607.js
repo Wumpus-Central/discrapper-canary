@@ -1,7 +1,8 @@
-t.d(e, { W: () => a });
-function a(n, e, t, a) {
-    if (void 0 === n) return a;
-    let r = Number(n);
-    if (isNaN(r) || r < e || r > t) throw RangeError(`${r} is outside of range [${e}, ${t}]`);
-    return Math.floor(r);
+"use strict";
+function r(e, t, n, r) {
+    if (void 0 === e) return r;
+    let i = Number(e);
+    if (isNaN(i) || i < t || i > n) throw RangeError(`${i} is outside of range [${t}, ${n}]`);
+    return Math.floor(i);
 }
+n.d(t, { W: () => r });

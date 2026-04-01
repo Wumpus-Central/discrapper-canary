@@ -1,31 +1,30 @@
-n.d(t, {
-    g: () =>
-        function e(t, n, i) {
-            if (null == t) return null;
-            if (t.value_type === l.o.DATA) {
-                let a = n[t.value],
-                    l = t.presentation_type;
-                return null != a && r[l]?.includes(a.type) && i.includes(a.type)
-                    ? { ...a, presentationType: l }
-                    : "fallback" in t && null != t.fallback
-                      ? e(t.fallback, n, i)
-                      : null;
-            }
-            return t.value_type === l.o.CUSTOM_STRING
-                ? t.presentation_type === a.P.TEXT && i.includes("string")
-                    ? { type: "string", value: t.value, presentationType: a.P.TEXT }
-                    : null
-                : null;
-        },
-    o: () => s,
-});
-var i,
-    a = n(894279),
-    l = n(500620),
-    s = (((i = {}).STRING = "string"), (i.NUMBER = "number"), (i.UNFURLED_MEDIA = "unfurled_media"), i);
-let r = {
-    [a.P.TEXT]: ["string"],
-    [a.P.NUMBER]: ["number"],
-    [a.P.IMAGE]: ["unfurled_media"],
-    [a.P.DURATION]: ["number"],
+"use strict";
+n.d(t, { g: () => o, o: () => s });
+var r = n(894279),
+    i = n(500620),
+    s = (function (e) {
+        return (e.STRING = "string"), (e.NUMBER = "number"), (e.UNFURLED_MEDIA = "unfurled_media"), e;
+    })({});
+let a = {
+    [r.P.TEXT]: ["string"],
+    [r.P.NUMBER]: ["number"],
+    [r.P.IMAGE]: ["unfurled_media"],
+    [r.P.DURATION]: ["number"],
 };
+function o(e, t, n) {
+    if (null == e) return null;
+    if (e.value_type === i.o.DATA) {
+        let r = t[e.value],
+            i = e.presentation_type;
+        return null != r && a[i]?.includes(r.type) && n.includes(r.type)
+            ? { ...r, presentationType: i }
+            : "fallback" in e && null != e.fallback
+              ? o(e.fallback, t, n)
+              : null;
+    }
+    return e.value_type === i.o.CUSTOM_STRING
+        ? e.presentation_type === r.P.TEXT && n.includes("string")
+            ? { type: "string", value: e.value, presentationType: r.P.TEXT }
+            : null
+        : null;
+}

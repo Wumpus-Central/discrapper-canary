@@ -1,70 +1,74 @@
-t.d(e, { m: () => u });
-var a = t(243399),
-    r = t(206311),
-    i = t(411211),
-    s = t(501974);
-function u(n, e) {
-    let t = [],
-        u = !1,
+"use strict";
+n.d(t, { m: () => o });
+var r = n(243399),
+    i = n(206311),
+    s = n(411211),
+    a = n(501974);
+function o(e, t) {
+    let n = [],
         o = !1,
-        d = (0, s.n)(n),
-        l = d.dataLocale,
-        c = i.Y.localeData[l];
-    if (!c) throw TypeError("Invalid locale");
-    let _ = d.numberingSystem,
-        f = c.digitalFormat[_];
-    for (let n = 0; n < r.u.length && !u; n++) {
-        let i = r.u[n],
-            s = e[i.valueField],
-            l = d[i.styleSlot],
-            c = d[i.displaySlot],
-            { unit: _, numberFormatUnit: h } = i,
-            y = Object.create(null);
-        ("seconds" === _ || "milliseconds" === _ || "microseconds" === _) &&
-            "numeric" === ("seconds" === _ ? d.milliseconds : "milliseconds" === _ ? d.microseconds : d.nanoseconds) &&
-            ("seconds" === _
-                ? (s += e.milliseconds / 1e3 + e.microseconds / 1e6 + e.nanoseconds / 1e9)
-                : "milliseconds" === _
-                  ? (s += e.microseconds / 1e3 + e.nanoseconds / 1e6)
-                  : (s += e.nanoseconds / 1e3),
-            void 0 === d.fractionalDigits
-                ? ((y.maximumFractionDigits = 9), (y.minimumFractionDigits = 0))
-                : ((y.maximumFractionDigits = d.fractionalDigits), (y.minimumFractionDigits = d.fractionalDigits)),
-            (y.roundingMode = "trunc"),
-            (u = !0));
-        if (0 !== s || "auto" !== c) {
-            let n;
-            (y.numberingSystem = d.numberingSystem),
-                "2-digit" === l && (y.minimumIntegerDigits = 2),
-                "2-digit" !== l && "numeric" !== l && ((y.style = "unit"), (y.unit = h), (y.unitDisplay = l));
-            let e = (0, a.Nt)(d.locale, y);
-            o ? (n = t[t.length - 1]).push({ type: "literal", value: f }) : (n = []),
-                e.formatToParts(s).forEach(({ type: e, value: t }) => {
-                    n.push({ type: e, value: t, unit: h });
+        l = !1,
+        u = (0, a.n)(e),
+        c = u.dataLocale,
+        d = s.Y.localeData[c];
+    if (!d) throw TypeError("Invalid locale");
+    let _ = u.numberingSystem,
+        f = d.digitalFormat[_];
+    for (let e = 0; e < i.u.length && !o; e++) {
+        let s = i.u[e],
+            a = t[s.valueField],
+            c = u[s.styleSlot],
+            d = u[s.displaySlot],
+            { unit: _, numberFormatUnit: p } = s,
+            h = Object.create(null);
+        if ("seconds" === _ || "milliseconds" === _ || "microseconds" === _) {
+            let e;
+            "numeric" ===
+                (e = "seconds" === _ ? u.milliseconds : "milliseconds" === _ ? u.microseconds : u.nanoseconds) &&
+                ("seconds" === _
+                    ? (a += t.milliseconds / 1e3 + t.microseconds / 1e6 + t.nanoseconds / 1e9)
+                    : "milliseconds" === _
+                      ? (a += t.microseconds / 1e3 + t.nanoseconds / 1e6)
+                      : (a += t.nanoseconds / 1e3),
+                void 0 === u.fractionalDigits
+                    ? ((h.maximumFractionDigits = 9), (h.minimumFractionDigits = 0))
+                    : ((h.maximumFractionDigits = u.fractionalDigits), (h.minimumFractionDigits = u.fractionalDigits)),
+                (h.roundingMode = "trunc"),
+                (o = !0));
+        }
+        if (0 !== a || "auto" !== d) {
+            let e;
+            (h.numberingSystem = u.numberingSystem),
+                "2-digit" === c && (h.minimumIntegerDigits = 2),
+                "2-digit" !== c && "numeric" !== c && ((h.style = "unit"), (h.unit = p), (h.unitDisplay = c));
+            let t = (0, r.Nt)(u.locale, h);
+            l ? (e = n[n.length - 1]).push({ type: "literal", value: f }) : (e = []),
+                t.formatToParts(a).forEach(({ type: t, value: n }) => {
+                    e.push({ type: t, value: n, unit: p });
                 }),
-                o || (("2-digit" === l || "numeric" === l) && (o = !0), t.push(n));
-        } else o = !1;
+                l || (("2-digit" === c || "numeric" === c) && (l = !0), n.push(e));
+        } else l = !1;
     }
-    let h = Object.create(null);
-    h.type = "unit";
-    let y = d.style;
-    "digital" === y && (y = "short"), (h.style = y);
-    let m = (0, a.A4)(d.locale, h),
-        w = [];
-    for (let n of t) {
-        let e = "";
-        for (let { value: t } of n) e += t;
-        w.push(e);
+    let p = Object.create(null);
+    p.type = "unit";
+    let h = u.style;
+    "digital" === h && (h = "short"), (p.style = h);
+    let m = (0, r.A4)(u.locale, p),
+        E = [];
+    for (let e of n) {
+        let t = "";
+        for (let { value: n } of e) t += n;
+        E.push(t);
     }
-    let g = m.formatToParts(w),
-        p = 0,
-        v = t.length,
-        b = [];
-    for (let { type: n, value: e } of g)
-        if ("element" === n) {
-            for (let n of ((0, a.V1)(p < v, "Index out of bounds"), t[p])) b.push(n);
-            p++;
-        } else (0, a.V1)("literal" === n, "Type must be literal"), b.push({ type: "literal", value: e });
-    return b;
+    let g = m.formatToParts(E),
+        A = 0,
+        I = n.length,
+        T = [];
+    for (let { type: e, value: t } of g)
+        if ("element" === e) {
+            for (let e of ((0, r.V1)(A < I, "Index out of bounds"), n[A])) T.push(e);
+            A++;
+        } else (0, r.V1)("literal" === e, "Type must be literal"), T.push({ type: "literal", value: t });
+    return T;
 }
-t(854840);
+n(632459);

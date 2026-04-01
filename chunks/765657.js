@@ -1,12 +1,13 @@
-t.d(e, { H: () => i }), t(854840);
-var a = t(748578),
-    r = t(996923);
-function i(n) {
-    if ("object" != typeof n) {
-        if ("string" == typeof n) throw RangeError("Invalid duration format");
+"use strict";
+n.d(t, { H: () => s }), n(632459);
+var r = n(748578),
+    i = n(996923);
+function s(e) {
+    if ("object" != typeof e) {
+        if ("string" == typeof e) throw RangeError("Invalid duration format");
         throw TypeError("Invalid duration");
     }
-    let e = {
+    let t = {
         years: 0,
         months: 0,
         weeks: 0,
@@ -19,28 +20,28 @@ function i(n) {
         nanoseconds: 0,
     };
     if (
-        (void 0 !== n.days && (e.days = (0, r.D)(n.days)),
-        void 0 !== n.hours && (e.hours = (0, r.D)(n.hours)),
-        void 0 !== n.microseconds && (e.microseconds = (0, r.D)(n.microseconds)),
-        void 0 !== n.milliseconds && (e.milliseconds = (0, r.D)(n.milliseconds)),
-        void 0 !== n.minutes && (e.minutes = (0, r.D)(n.minutes)),
-        void 0 !== n.months && (e.months = (0, r.D)(n.months)),
-        void 0 !== n.nanoseconds && (e.nanoseconds = (0, r.D)(n.nanoseconds)),
-        void 0 !== n.seconds && (e.seconds = (0, r.D)(n.seconds)),
-        void 0 !== n.weeks && (e.weeks = (0, r.D)(n.weeks)),
-        void 0 !== n.years && (e.years = (0, r.D)(n.years)),
-        void 0 === n.years &&
-            void 0 === n.months &&
-            void 0 === n.weeks &&
-            void 0 === n.days &&
-            void 0 === n.hours &&
-            void 0 === n.minutes &&
-            void 0 === n.seconds &&
-            void 0 === n.milliseconds &&
-            void 0 === n.microseconds &&
-            void 0 === n.nanoseconds)
+        (void 0 !== e.days && (t.days = (0, i.D)(e.days)),
+        void 0 !== e.hours && (t.hours = (0, i.D)(e.hours)),
+        void 0 !== e.microseconds && (t.microseconds = (0, i.D)(e.microseconds)),
+        void 0 !== e.milliseconds && (t.milliseconds = (0, i.D)(e.milliseconds)),
+        void 0 !== e.minutes && (t.minutes = (0, i.D)(e.minutes)),
+        void 0 !== e.months && (t.months = (0, i.D)(e.months)),
+        void 0 !== e.nanoseconds && (t.nanoseconds = (0, i.D)(e.nanoseconds)),
+        void 0 !== e.seconds && (t.seconds = (0, i.D)(e.seconds)),
+        void 0 !== e.weeks && (t.weeks = (0, i.D)(e.weeks)),
+        void 0 !== e.years && (t.years = (0, i.D)(e.years)),
+        void 0 === e.years &&
+            void 0 === e.months &&
+            void 0 === e.weeks &&
+            void 0 === e.days &&
+            void 0 === e.hours &&
+            void 0 === e.minutes &&
+            void 0 === e.seconds &&
+            void 0 === e.milliseconds &&
+            void 0 === e.microseconds &&
+            void 0 === e.nanoseconds)
     )
         throw TypeError("Invalid duration format");
-    if (!(0, a.e)(e)) throw RangeError("Invalid duration format");
-    return e;
+    if (!(0, r.e)(t)) throw RangeError("Invalid duration format");
+    return t;
 }

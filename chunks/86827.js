@@ -1,12 +1,13 @@
-t.d(e, { V: () => i });
-var a = t(183580),
-    r = t(839006);
-function i(n, e, t) {
-    let i = { locale: "" };
-    for (let t of e) {
-        let e = t.replace(r.KB, ""),
-            s = (0, a.q)(n, e);
-        if (s) return (i.locale = s), t !== e && (i.extension = t.slice(e.length, t.length)), i;
+"use strict";
+n.d(t, { V: () => s });
+var r = n(183580),
+    i = n(839006);
+function s(e, t, n) {
+    let s = { locale: "" };
+    for (let n of t) {
+        let t = n.replace(i.KB, ""),
+            a = (0, r.q)(e, t);
+        if (a) return (s.locale = a), n !== t && (s.extension = n.slice(t.length, n.length)), s;
     }
-    return (i.locale = t()), i;
+    return (s.locale = n()), s;
 }
