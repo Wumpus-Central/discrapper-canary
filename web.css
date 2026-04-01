@@ -35400,6 +35400,10 @@ html:not(.chat-input) .inputInner_b1f01d {
     transition: transform .2s ease
 }
 
+.premiumCardHover__517e1 {
+    transform: scale(.8) translateY(-22px)
+}
+
 .itemIcon_a647f7 {
     align-items: center;
     display: flex;

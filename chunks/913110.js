@@ -11,4 +11,5 @@ e.exports = {
     yv: "premiumPreview__517e1",
     GY: "premiumBackdrop__517e1",
     MO: "premiumRive__517e1",
+    iR: "premiumCardHover__517e1",
 };
