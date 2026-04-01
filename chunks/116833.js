@@ -12,9 +12,7 @@ var r = n(64700),
             (e[(e.SOCIAL_LAYER_SKU_PREVIEW = 6)] = "SOCIAL_LAYER_SKU_PREVIEW"),
             (e[(e.GUILD_POWERUPS_COACHMARK_ASSET = 7)] = "GUILD_POWERUPS_COACHMARK_ASSET"),
             (e[(e.BADGE_IMAGE_WITH_PROGRESS_CIRCLE = 8)] = "BADGE_IMAGE_WITH_PROGRESS_CIRCLE"),
-            (e[(e.GUILD_POWERUPS_PROGRESS_BAR_COACHMARK_GRAPHIC = 9)] =
-                "GUILD_POWERUPS_PROGRESS_BAR_COACHMARK_GRAPHIC"),
-            (e[(e.QUEST_ACTIVITY_UNENROLLED = 10)] = "QUEST_ACTIVITY_UNENROLLED"),
+            (e[(e.QUEST_ACTIVITY_UNENROLLED = 9)] = "QUEST_ACTIVITY_UNENROLLED"),
             e
         );
     })({});
@@ -28,8 +26,7 @@ let s = {
         6: () => n.e("58529").then(n.bind(n, 275256)),
         7: () => n.e("58407").then(n.bind(n, 939034)),
         8: () => n.e("823").then(n.bind(n, 713290)),
-        9: () => n.e("37103").then(n.bind(n, 152338)),
-        10: () => n.e("71695").then(n.bind(n, 392498)),
+        9: () => n.e("71695").then(n.bind(n, 392498)),
     },
     a = {
         0: r.lazy(s[0]),
@@ -42,5 +39,4 @@ let s = {
         7: r.lazy(s[7]),
         8: r.lazy(s[8]),
         9: r.lazy(s[9]),
-        10: r.lazy(s[10]),
     };

@@ -14,7 +14,7 @@ var s = n(158954),
     g = n(989860),
     x = n(652215),
     h = n(985018),
-    _ = n(632275);
+    _ = n(601544);
 function p() {
     let { analyticsLocations: e } = (0, a.Ay)(r.A.GUILD_SETTINGS_BOOST_PERKS_PAGE),
         t = (0, l.bG)([d.A], () => d.A.getProps().guild, []),
@@ -34,11 +34,7 @@ function p() {
                           color: "text-strong",
                           children: h.intl.string(h.t.UKgg5N),
                       }),
-                      (0, i.jsx)(g.I, {
-                          guildId: t?.id,
-                          canManageGuild: p,
-                          premiumProgressBarEnabled: t.premiumProgressBarEnabled,
-                      }),
+                      (0, i.jsx)(g.I, { canManageGuild: p, premiumProgressBarEnabled: t.premiumProgressBarEnabled }),
                       (0, i.jsx)("div", { className: _.y }),
                       (0, i.jsx)(c.l, { guild: t, canManageGuild: p }),
                       (0, i.jsx)("div", { className: _.y }),
