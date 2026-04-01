@@ -14268,7 +14268,7 @@
   "a0DdWJ": "Once you have incoming friend requests, you can access them here!",
   "hlDSV2": "No Incoming Friend Requests",
   "jdr4sO": "Friend Requests",
-  "AyvfXR": "!!**!!{event_name}!!**!! started in !!**!!{guild_name}!!**!!.",
+  "AyvfXR": "**!!{event_name}!!** started in **!!{guild_name}!!**.",
   "uIomXw": "**!!{username}!!** sent you a friend request.",
   "g5xyIC": "**!!{user}!!**, **!!{user2}!!**, and **!!{count}!! others** have sent you friend requests.",
   "5Uzkdp": "You accepted **!!{username}!!**’s friend request.",
