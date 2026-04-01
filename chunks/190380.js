@@ -22,20 +22,20 @@ var r = n(627968),
     S = n(823292);
 let y = { scale: 1 },
     v = { scale: 0 },
-    C = 100,
-    N = [I.A, T.A];
+    N = 100,
+    C = [I.A, T.A];
 function R(e) {
     let { x: t, y: n, onClick: s } = e,
         _ = (0, i.useRef)(null),
         [f, h] = (0, i.useState)(!1),
-        m = (0, u.zhh)({ from: y, to: v, config: { duration: p.JU } }),
+        m = (0, u.zhh)({ from: y, to: v, config: { duration: p.JU } }, "animate-always"),
         E = (0, i.useMemo)(() => (0.5 > Math.random() ? o.A : l.A), []),
         A = (0, i.useCallback)(() => {
             f ||
                 (h(!0),
                 (_.current = setTimeout(() => {
                     s();
-                }, 2 * C)));
+                }, 2 * N)));
         }, [s, f]);
     return (
         (0, i.useEffect)(
@@ -52,7 +52,7 @@ function R(e) {
                 clickSound: E,
                 disabled: f,
                 children: f
-                    ? (0, r.jsx)(c.A, { className: g.aC, srcs: N, updateInterval: C, loop: !1 })
+                    ? (0, r.jsx)(c.A, { className: g.aC, srcs: C, updateInterval: N, loop: !1 })
                     : (0, r.jsx)("img", { src: S.A, alt: "target", className: g.aC }),
             }),
         })

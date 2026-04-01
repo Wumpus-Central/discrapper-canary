@@ -37,6 +37,6 @@ function h(e) {
             };
             return t.start(s().random(d, _), e), () => t.stop();
         }, [n, m, h, t]),
-        f(g, E)
+        f(0 === u.currentCount ? 0 : g, E)
     );
 }
