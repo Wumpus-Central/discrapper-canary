@@ -3,7 +3,7 @@ var r = n(627968),
     l = n(64700),
     a = n(503698),
     i = n.n(a),
-    s = n(382222),
+    s = n(773690),
     o = n(311907),
     u = n(827734),
     c = n(876230),
@@ -17,7 +17,7 @@ var r = n(627968),
     v = n(634156),
     g = n(652215),
     b = n(985018),
-    y = n(256181);
+    y = n(246878);
 function S(e) {
     let {
             videoRef: t,
@@ -50,8 +50,8 @@ function S(e) {
         } = e,
         z = (0, o.bG)([p.A], () => p.A.useReducedMotion),
         X = (0, o.bG)([p.A], () => p.A.keyboardModeEnabled),
-        [W, V] = l.useState(L ? 0 : M),
-        [H, J] = l.useState(!1),
+        [W, H] = l.useState(L ? 0 : M),
+        [V, J] = l.useState(!1),
         [Z, q] = l.useState(!1),
         [{ volumeAnimSpring: ee }, et] = (0, m.zhh)(() => ({
             from: { volumeAnimSpring: 0 },
@@ -69,12 +69,16 @@ function S(e) {
         }, [w, j]),
         el = l.useCallback(
             (e) => {
-                null != t.current && (e !== t.current.volume && (t.current.volume = e), e !== W && V(e));
+                null != t.current && (e !== t.current.volume && (t.current.volume = e), e !== W && H(e));
             },
             [t, W],
         ),
         ea = l.useCallback(() => {
-            null != t.current && (0 === W ? (el(M), Y(!1), F(M)) : (F(W), el(0), Y(!0)));
+            if (null != t.current)
+                if (0 === W) {
+                    let e = 0 === M ? 0.3 : M;
+                    el(e), Y(!1), F(e);
+                } else F(W), el(0), Y(!0);
         }, [t, W, el, M, Y, F]),
         ei = () => {
             J(!0);
@@ -123,12 +127,12 @@ function S(e) {
         ),
         l.useEffect(
             () => (
-                et({ volumeAnimSpring: Z || H ? 1 : 0, immediate: z }),
+                et({ volumeAnimSpring: Z || V ? 1 : 0, immediate: z }),
                 () => {
                     ee.stop();
                 }
             ),
-            [Z, H, et, z, ee],
+            [Z, V, et, z, ee],
         );
     let eu = 0 === W ? m._RO : W < 0.5 ? m.S24 : m.HKD,
         { icon: ec, label: ed } = f.eC[n];
@@ -217,12 +221,12 @@ function S(e) {
                                 },
                                 children: (0, r.jsx)(d.A, {
                                     mini: !0,
-                                    initialValue: W,
+                                    value: W,
                                     keyboardStep: 0.1,
                                     minValue: 0,
                                     maxValue: 1,
                                     onValueChange: (e) => {
-                                        el(e), F(e), Z && (q(!1), $(!1)), L && e > 0 && Y(!1);
+                                        el(e), F(e), Z && (q(!1), $(!1)), L && e > 0 ? Y(!1) : L || 0 !== e || Y(!0);
                                     },
                                     asValueChanges: (e) => {
                                         el(e), Z || (q(!0), $(!0));
