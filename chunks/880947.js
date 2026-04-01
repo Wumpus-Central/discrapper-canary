@@ -2,55 +2,58 @@
 n.d(t, { N: () => c });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(187322),
     l = n(331322),
     u = n(842867);
 function c(e, t, n) {
-    let a = (0, u.dG)(e);
-    return i.forwardRef(function (c, d) {
+    let s = (0, u.dG)(e);
+    return i.forwardRef(function (o, c) {
         let {
                 children: _,
                 className: f,
                 dir: p = "ltr",
                 orientation: h = "vertical",
                 overflow: m = "scroll",
-                fade: g = !1,
-                customTheme: E = !1,
+                fade: E = !1,
+                customTheme: g = !1,
                 paddingFix: A = !0,
                 style: I,
                 gap: T,
-                experimental_useStack: y,
-                disableFocusRingScope: S = !1,
+                experimental_useStack: S,
+                disableFocusRingScope: y = !1,
                 ...v
-            } = c,
-            { scrollerRef: C, getScrollerState: b } = (0, u.s$)(),
-            N = (0, u.kR)(C, h);
+            } = o,
+            { scrollerRef: N, getScrollerState: C } = (0, u.s$)(),
+            R = (0, u.kR)(N, h);
         i.useImperativeHandle(
-            d,
-            () => ({ getScrollerNode: () => C.current, getScrollerState: b, ...(0, u.cJ)(C, b, N, h) }),
-            [C, b, h, N],
+            c,
+            () => ({ getScrollerNode: () => N.current, getScrollerState: C, ...(0, u.cJ)(N, C, R, h) }),
+            [N, C, h, R],
         );
-        let R = S ? i.Fragment : o.xp,
-            O = (0, u._I)({ paddingFix: A, orientation: h, dir: p, className: f, scrollerRef: C, specs: a });
-        return y
+        let O = (0, u._I)({ paddingFix: A, orientation: h, dir: p, className: f, scrollerRef: N, specs: s });
+        return S
             ? (0, r.jsx)(l.B, {
                   gap: T,
-                  ref: C,
-                  className: s()(f, { [e]: !0, [t]: g, [n]: E }),
+                  ref: N,
+                  className: a()(f, { [e]: !0, [t]: E, [n]: g }),
                   style: (0, u.Ze)(I, h, m),
                   dir: p,
                   ...v,
-                  children: (0, r.jsxs)(R, { containerRef: C, children: [_, O] }),
+                  children: (0, r.jsxs)(d, { disableFocusRingScope: y, containerRef: N, children: [_, O] }),
               })
             : (0, r.jsx)("div", {
-                  ref: C,
-                  className: s()(f, { [e]: !0, [t]: g, [n]: E }),
+                  ref: N,
+                  className: a()(f, { [e]: !0, [t]: E, [n]: g }),
                   style: (0, u.Ze)(I, h, m),
                   dir: p,
                   ...v,
-                  children: (0, r.jsxs)(R, { containerRef: C, children: [_, O] }),
+                  children: (0, r.jsxs)(d, { disableFocusRingScope: y, containerRef: N, children: [_, O] }),
               });
     });
+}
+function d(e) {
+    let { disableFocusRingScope: t, containerRef: n, children: i } = e;
+    return t ? i : (0, r.jsx)(o.xp, { containerRef: n, children: i });
 }
