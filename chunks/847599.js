@@ -7,16 +7,16 @@ n.d(t, {
     Im: () => l,
     St: () => _,
     UT: () => f,
-    Vh: () => g,
-    WU: () => s,
+    Vh: () => E,
+    WU: () => a,
     _7: () => o,
     mU: () => h,
     oQ: () => m,
-    q1: () => a,
+    q1: () => s,
 });
 var r = n(954571),
     i = n(652215),
-    a = (function (e) {
+    s = (function (e) {
         return (
             (e.GET_STARTED_MODAL = "get_started_modal"),
             (e.RETRY_MODAL = "retry_modal"),
@@ -44,7 +44,7 @@ var r = n(954571),
             e
         );
     })({}),
-    s = (function (e) {
+    a = (function (e) {
         return (
             (e[(e.PRIMARY = 1)] = "PRIMARY"),
             (e[(e.RETRY = 2)] = "RETRY"),
@@ -76,6 +76,7 @@ var r = n(954571),
             (e.GUILD_LARGE_SERVER_UNDERAGE = "guild_large_server_underage"),
             (e.NSFW_EMBEDDED_ACTIVITY = "nsfw_embedded_activity"),
             (e.NSFW_APP_LISTING = "nsfw_app_listing"),
+            (e.SPOILER_CHANNEL = "spoiler_channel"),
             e
         );
     })({}),
@@ -89,8 +90,8 @@ var r = n(954571),
 function d(e, t, n) {
     r.default.track(i.HAw.AGE_VERIFICATION_MODAL_VIEWED, { modal_session_id: e, modal_version: t, entry_point: n });
 }
-function _(e, t, n, a) {
-    r.default.track(i.HAw.AGE_VERIFICATION_MODAL_CLICKED, { modal_session_id: e, modal_version: t, cta: n, method: a });
+function _(e, t, n, s) {
+    r.default.track(i.HAw.AGE_VERIFICATION_MODAL_CLICKED, { modal_session_id: e, modal_version: t, cta: n, method: s });
 }
 function f(e, t) {
     r.default.track(i.HAw.AGE_VERIFICATION_DM_CLICKED, { cta: e, channel_id: t });
@@ -98,12 +99,12 @@ function f(e, t) {
 function p(e, t, n) {
     r.default.track(i.HAw.NSFW_SPACE_WARNING_MODAL_VIEWED, { channel_id: t, guild_id: n, modal_type: e });
 }
-function h(e, t, n, a) {
-    r.default.track(i.HAw.NSFW_SPACE_WARNING_MODAL_CLICKED, { cta: e, modal_type: t, channel_id: n, guild_id: a });
+function h(e, t, n, s) {
+    r.default.track(i.HAw.NSFW_SPACE_WARNING_MODAL_CLICKED, { cta: e, modal_type: t, channel_id: n, guild_id: s });
 }
 var m = (function (e) {
     return (e.VERIFIED_TEEN = "verified_teen"), (e.VERIFIED_ADULT = "verified_adult"), (e.ERROR = "error"), e;
 })({});
-function g(e) {
+function E(e) {
     r.default.track(i.HAw.AGE_VERIFICATION_TOAST_VIEWED, { toast_type: e });
 }

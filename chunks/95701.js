@@ -538,6 +538,9 @@ class ep extends ed {
     isModeratorReportChannel() {
         return this.hasFlag(E.lx.IS_MODERATOR_REPORT_CHANNEL);
     }
+    isSpoilerChannel() {
+        return this.hasFlag(E.lx.IS_SPOILER_CHANNEL);
+    }
     get accessPermissions() {
         return eu(this.type);
     }

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Gr: () => s, T4: () => u, VV: () => r, aQ: () => c, jq: () => a, lx: () => l, mP: () => o, qW: () => i });
+n.d(t, { Gr: () => a, T4: () => u, VV: () => r, aQ: () => c, jq: () => s, lx: () => l, mP: () => o, qW: () => i });
 var r = (function (e) {
     return (
         (e.ROLE_SUBSCRIPTIONS = "role-subscriptions"),
@@ -19,10 +19,10 @@ var r = (function (e) {
     );
 })({});
 let i = new Set(Object.values(r));
-function a(e) {
+function s(e) {
     return i.has(e);
 }
-function s(e, t) {
+function a(e, t) {
     return `${e}-${t}`;
 }
 function o(e) {
@@ -45,6 +45,7 @@ let l = Object.freeze({
     IS_JOIN_REQUEST_INTERVIEW_CHANNEL: 65536,
     OBFUSCATED: 131072,
     IS_MODERATOR_REPORT_CHANNEL: 524288,
+    IS_SPOILER_CHANNEL: 2097152,
 });
 var u = (function (e) {
     return (
