@@ -1,8 +1,6 @@
 "use strict";
-n.d(t, { i: () => s });
-var r = n(945810),
-    i = n(332628);
-let a = (0, r.mj)({
+n.d(t, { i: () => i });
+let r = (0, n(945810).mj)({
     name: "2025-09-image-attachment-mezzanine-v2",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -12,8 +10,7 @@ let a = (0, r.mj)({
         2: { enabled: !0, maxFileSizeBytes: 262144 },
     },
 });
-function s(e) {
-    let { location: t } = e,
-        { isInHoldout: n } = i.i.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
-    return n ? { enabled: !1 } : a.getConfig({ location: t });
+function i(e) {
+    let { location: t } = e;
+    return r.getConfig({ location: t });
 }
