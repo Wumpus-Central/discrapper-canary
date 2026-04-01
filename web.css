@@ -32654,6 +32654,7 @@ html:not(.chat-input) .inputInner_b1f01d {
     display: flex;
     flex-direction: column;
     gap: var(--space-16);
+    min-width: 200px;
     padding: var(--space-12)
 }
 
