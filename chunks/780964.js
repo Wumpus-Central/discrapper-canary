@@ -104,7 +104,6 @@ var r = (function (e) {
         (e.NOTIFICATION_SELECTION_FIELD_SET = "notification_selection_field_set"),
         (e.DESKTOP_NOTIFICATIONS = "desktop_notifications"),
         (e.GO_LIVE_NOTIFICATIONS = "go_live_notifications"),
-        (e.VOICE_ACTIVITY_NOTIFICATIONS = "voice_activity_notifications"),
         (e.REACTION_NOTIFICATIONS = "reaction_notifications"),
         (e.GDM_ALL_REACTION_NOTIFICATIONS = "gdm_all_reaction_notifications"),
         (e.FRIEND_ONLINE_NOTIFICATIONS = "friend_online_notifications"),

@@ -1,18 +1,17 @@
-i.d(e, { H: () => g });
-var n = i(419954),
-    l = i(780964),
-    s = i(807276),
-    r = i(952549),
-    a = i(172689),
-    u = i(931975),
-    o = i(189540),
-    d = i(534771),
-    T = i(549093),
-    A = i(334218),
-    S = i(803119),
-    E = i(985018);
-let g = (0, n.FW)(l.X.NOTIFICATION_SELECTION_FIELD_SET, {
+n.d(t, { H: () => _ });
+var i = n(419954),
+    s = n(780964),
+    l = n(807276),
+    a = n(952549),
+    r = n(172689),
+    o = n(931975),
+    d = n(189540),
+    c = n(534771),
+    u = n(549093),
+    m = n(334218),
+    g = n(985018);
+let _ = (0, i.FW)(s.X.NOTIFICATION_SELECTION_FIELD_SET, {
     variant: "compact",
-    useTitle: () => E.intl.string(E.t.FEVRDV),
-    buildLayout: () => [o.L, S.q, s.Z, r.E, A.N, a.M, d.q, T.q, u.q],
+    useTitle: () => g.intl.string(g.t.FEVRDV),
+    buildLayout: () => [d.L, l.Z, a.E, m.N, r.M, c.q, u.q, o.q],
 });
