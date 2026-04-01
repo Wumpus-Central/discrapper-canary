@@ -602,9 +602,6 @@ class ey extends _.A {
         let { enabled: n, dontEmitVolumeOnlySpeakingEvents: r } = A.A.getConfig({ location: "_chooseExperiments" });
         n && t.push("should_analyze_user_voice_volume"),
             r && t.push("dont_emit_volume_only_speaking_events"),
-            t.push("keyframe_on_join"),
-            t.push("network_aware_socket"),
-            (0, j.isWindows)() && t.push("clear_cuda_cache"),
             (this._selectedExperiments = t);
     }
     _handleConnecting(e) {

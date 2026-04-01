@@ -1,7 +1,7 @@
 n.d(t, { p: () => o });
 var a = n(155718),
-    i = n(731068),
-    l = n(77350),
+    l = n(731068),
+    i = n(77350),
     r = n(141468),
     s = n(383233);
 let c = /^#{1,3}\s+(.+)$/;
@@ -21,14 +21,14 @@ function o(e) {
                     let t = e.components.find((e) => e.type === a.I5.MEDIA_GALLERY),
                         n = t?.items[0]?.media;
                     if (null != n) {
-                        let e = (0, i.FE)(n);
+                        let e = (0, l.FE)(n);
                         if ("INVALID" === e) return;
                         return { url: n.proxyUrl ?? n.url, type: "VIDEO" === e ? "video" : "image" };
                     }
                 }
-                let t = e.attachments.find((e) => (0, l.tT)(e.content_type));
+                let t = e.attachments.find((e) => (0, i.tT)(e.content_type));
                 if (null != t) return { url: t.proxy_url, type: "image" };
-                let n = e.attachments.find((e) => (0, l.XB)(e.content_type));
+                let n = e.attachments.find((e) => (0, i.XB)(e.content_type));
                 if (null != n) return { url: n.proxy_url, type: "video" };
                 let r = e.embeds.find((e) => null != e.video && null != e.thumbnail);
                 if (r?.thumbnail != null) return { url: r.thumbnail.proxyURL ?? r.thumbnail.url, type: "image" };
@@ -36,7 +36,17 @@ function o(e) {
             { title: m, body: x } =
                 null != (n = (-1 === (t = d.indexOf("\n")) ? d : d.slice(0, t)).match(c))
                     ? { title: n[1].trim(), body: -1 === t ? "" : d.slice(t + 1).trimStart() }
-                    : { body: d };
-        return { id: o.id, mediaUrl: u?.url, mediaType: u?.type, title: m, body: x, content: d };
+                    : { body: d },
+            h = e.reactions?.reduce((e, t) => e + t.count, 0) ?? 0;
+        return {
+            id: o.id,
+            mediaUrl: u?.url,
+            mediaType: u?.type,
+            title: m,
+            body: x,
+            content: d,
+            timestamp: e.timestamp,
+            reactionCount: h,
+        };
     });
 }

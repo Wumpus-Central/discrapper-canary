@@ -13,6 +13,8 @@ e.exports = {
     h_: "description__250d5",
     My: "mainDescription__250d5",
     Gd: "smallDescription__250d5",
+    ov: "metadataRow__250d5",
+    a5: "reactionInfo__250d5",
     YC: "imageLoading__250d5",
     RT: "imageLoaded__250d5",
     ns: "imageSpinner__250d5",
