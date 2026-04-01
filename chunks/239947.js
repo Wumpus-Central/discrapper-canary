@@ -256,6 +256,7 @@ var r = (function (e) {
             (e.VOICE_CHANNEL_BLOCKED_USER_WARNING = "impression_voice_channel_blocked_user_warning"),
             (e.VOICE_FEEDBACK_MODAL = "impression_voice_feedback_modal"),
             (e.VOICE_FILTER_FEEDBACK_MODAL = "impression_voice_filter_feedback_modal"),
+            (e.VOICE_INVITE_EMBED = "impression_voice_invite_embed"),
             (e.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT = "impression_voice_invite_suggestions_entrypoint"),
             (e.VOICE_INVITE_SUGGESTIONS_POPOVER = "impression_voice_invite_suggestions_popover"),
             (e.VOICE_USER_ACTIVITY_POPOUT = "impression_voice_user_activity_popout"),

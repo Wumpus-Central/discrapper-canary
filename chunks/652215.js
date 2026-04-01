@@ -3724,6 +3724,7 @@ var no = (function (e) {
             (e.PERMANENT_INVITE_COMMUNITY_UPSELL_CLICKED = "guild_permanent_links_community_upsell_clicked"),
             (e.INVITE_SERVER_CLICKED = "invite_server_clicked"),
             (e.INVITE_EMBED_ACTIONED = "invite_embed_actioned"),
+            (e.VOICE_INVITE_EMBED_BREADCRUMB_CLICKED = "voice_invite_embed_breadcrumb_clicked"),
             (e.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT_CLOSED = "voice_invite_suggestions_entrypoint_closed"),
             (e.INVITE_CTA_CLICKED = "invite_cta_clicked"),
             (e.NATIVE_SHARE_SHEET_APP_CLICKED = "native_share_sheet_app_clicked"),

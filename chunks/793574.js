@@ -164,6 +164,7 @@ var r = (function (e) {
         (e.INVITE_EMBED = "invite embed"),
         (e.VOICE_INVITE_SUGGESTIONS = "voice invite suggestions"),
         (e.VOICE_INVITE_SUGGESTIONS_POPOVER = "voice invite suggestions popover"),
+        (e.VOICE_INVITE_STREAM_PREVIEW = "voice invite stream preview"),
         (e.NEW_GUILD_BUTTON = "new guild button"),
         (e.CHARACTER_COUNT = "character count"),
         (e.CHANNEL_HEADER = "channel header"),
