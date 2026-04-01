@@ -1,4 +1,4 @@
-n.d(t, { W: () => o });
+n.d(t, { W: () => o, u: () => c });
 var i = n(562465),
     a = n(73153),
     l = n(728458),
@@ -17,6 +17,20 @@ async function o() {
             });
         } catch (e) {
             a.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_FAILURE" }), l.A.captureException(e);
+        }
+    }
+}
+async function c(e) {
+    let { force: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        n = s.A.getFetchState(e);
+    if (t || (n !== s.e.FETCHING && n !== s.e.SUCCESS)) {
+        a.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FETCH_START", applicationId: e });
+        try {
+            let t = await i.Bo.get({ url: r.Rsh.APPLICATION_WIDGET_CONFIGS(e), rejectWithError: !0 });
+            a.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS", applicationId: e, configs: t.body });
+        } catch (t) {
+            a.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FETCH_FAILURE", applicationId: e }),
+                l.A.captureException(t);
         }
     }
 }
