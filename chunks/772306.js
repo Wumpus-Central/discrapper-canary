@@ -1,22 +1,21 @@
 "use strict";
-n.d(t, { A: () => I });
+n.d(t, { A: () => A });
 var r = n(627968),
     i = n(64700),
-    s = n(311907),
-    a = n(927813),
-    o = n(133636),
-    l = n(816758),
-    u = n(178090),
-    c = n(346640),
-    d = n(429311),
-    _ = n(985018),
-    f = n(254277);
-let p = new Date("2026-04-01T17:00:00.000+00:00").getTime(),
-    h = new Date("2026-04-07T17:00:00.000+00:00").getTime(),
-    m = 30 * a.A.Millis.SECOND;
-function E() {
+    s = n(927813),
+    a = n(376484),
+    o = n(816758),
+    l = n(178090),
+    u = n(346640),
+    c = n(429311),
+    d = n(985018),
+    _ = n(254277);
+let f = new Date("2026-04-01T17:00:00.000+00:00").getTime(),
+    p = new Date("2026-04-07T17:00:00.000+00:00").getTime(),
+    h = 30 * s.A.Millis.SECOND;
+function m() {
     return (0, r.jsxs)("svg", {
-        className: f.H8,
+        className: _.H8,
         width: "8",
         height: "15",
         viewBox: "0 0 8 15",
@@ -62,9 +61,9 @@ function E() {
         ],
     });
 }
-function g() {
+function E() {
     return (0, r.jsxs)("svg", {
-        className: f.H8,
+        className: _.H8,
         width: "8",
         height: "15",
         viewBox: "0 0 8 15",
@@ -110,45 +109,45 @@ function g() {
         ],
     });
 }
-function A(e) {
+function g(e) {
     let { percentage: t } = e;
-    return (0, r.jsx)(l.A, {
-        className: f.xU,
-        children: (0, r.jsxs)(l.A, {
-            className: f.M0,
+    return (0, r.jsx)(o.A, {
+        className: _.xU,
+        children: (0, r.jsxs)(o.A, {
+            className: _.M0,
             color: "black",
             children: [
-                (0, r.jsx)("div", { className: f.I6 }),
-                (0, r.jsx)(l.A, { className: f.qB, color: "red", style: { width: `${t}%` } }),
+                (0, r.jsx)("div", { className: _.I6 }),
+                (0, r.jsx)(o.A, { className: _.qB, color: "red", style: { width: `${t}%` } }),
             ],
         }),
     });
 }
-function I() {
+function A() {
     let [e, t] = (0, i.useState)(Date.now()),
-        n = (0, s.bG)([o.A], () => o.A.getCounter(c.EC.ENEMY_DAMAGE)),
-        a = h - p,
-        l = Math.max(Math.min(((h - e) / a) * 100, 100), 0);
+        n = p - f,
+        s = Math.max(Math.min(((p - e) / n) * 100, 100), 0),
+        o = (0, a.A)(u.EC.ENEMY_DAMAGE);
     return (
         (0, i.useEffect)(() => {
             let e = setInterval(() => {
                 t(Date.now());
-            }, m);
+            }, h);
             return () => clearInterval(e);
         }, []),
         (0, r.jsxs)("div", {
-            className: f.kL,
+            className: _.kL,
             children: [
                 (0, r.jsxs)("div", {
-                    className: f.Pf,
+                    className: _.Pf,
                     children: [
-                        (0, r.jsx)(u.A, { variant: "heading-xxl/normal", children: _.intl.string(d.default.GWYxMh) }),
-                        (0, r.jsxs)(u.A, { variant: "heading-xl/normal", children: [n.currentCount, " / ???"] }),
+                        (0, r.jsx)(l.A, { variant: "heading-xxl/normal", children: d.intl.string(c.default.GWYxMh) }),
+                        (0, r.jsxs)(l.A, { variant: "heading-xl/normal", children: [o, " / ???"] }),
                     ],
                 }),
                 (0, r.jsxs)("div", {
-                    className: f.hr,
-                    children: [(0, r.jsx)(E, {}), (0, r.jsx)(A, { percentage: l }), (0, r.jsx)(g, {})],
+                    className: _.hr,
+                    children: [(0, r.jsx)(m, {}), (0, r.jsx)(g, { percentage: s }), (0, r.jsx)(E, {})],
                 }),
             ],
         })
