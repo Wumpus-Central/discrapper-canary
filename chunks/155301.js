@@ -1,4 +1,4 @@
-n.d(t, { A: () => u });
+n.d(t, { A: () => m });
 var i = n(627968),
     l = n(64700),
     r = n(459793),
@@ -6,12 +6,12 @@ var i = n(627968),
     s = n(927578),
     o = n(937008),
     d = n(156312),
-    c = n(534479);
-function u(e) {
-    let { initialStep: t, initialPlanId: n, guildId: u, setAnalyticsData: m } = e,
+    c = n(534479),
+    u = n(615310);
+function m(e) {
+    let { initialStep: t, initialPlanId: n, guildId: m, setAnalyticsData: p } = e,
         {
-            blockedPayments: p,
-            setStep: f,
+            blockedPayments: f,
             hasFetchedSubscriptions: x,
             hasFetchedSubscriptionPlans: g,
             currencyLoading: h,
@@ -22,28 +22,29 @@ function u(e) {
             setSubscriptionMetadataRequest: v,
             displayCurrency: C,
         } = (0, d.P5)(),
-        { isGift: _ } = (0, o.Pv)(),
-        [y, N] = l.useState(!x || !g || h);
+        _ = (0, u.l)(),
+        { isGift: y } = (0, o.Pv)(),
+        [N, E] = l.useState(!x || !g || h);
     return (l.useEffect(() => {
-        N(!x || !g || h);
+        E(!x || !g || h);
     }, [h, g, x]),
     l.useEffect(() => {
-        null != u && v({ guild_id: u });
-    }, [u, v]),
+        null != m && v({ guild_id: m });
+    }, [m, v]),
     l.useEffect(() => {
         j(n);
         let e = null != n ? a.A.get(n) : null;
-        y ||
-            p ||
-            (m((t) => {
-                let n = null != e ? (0, s.y8)(e.id, !1, _, { paymentSourceId: S.paymentSourceId }) : void 0;
+        N ||
+            f ||
+            (p((t) => {
+                let n = null != e ? (0, s.y8)(e.id, !1, y, { paymentSourceId: S.paymentSourceId }) : void 0;
                 return { ...t, subscription_plan_id: e?.id, price: n?.amount, regular_price: e?.price, currency: C };
             }),
-            null != e && (A(e?.skuId), f(t)));
-    }, [p, n, _, y, S, C, b, m, j, A, f, t]),
-    y)
+            null != e && (A(e?.skuId), _(t)));
+    }, [f, n, y, N, S, C, b, p, j, A, _, t]),
+    N)
         ? (0, i.jsx)(c.A, {})
-        : p
+        : f
           ? (0, i.jsx)(r.oO, {})
           : null;
 }

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { L: () => N });
+n.d(t, { L: () => C });
 var r = n(627968),
     i = n(64700),
     s = n(284009),
@@ -17,18 +17,18 @@ var r = n(627968),
     E = n(937008),
     g = n(156312),
     A = n(166532),
-    I = n(652215),
-    T = n(788868),
-    S = n(818348),
-    y = n(554418);
-function v(e, t) {
+    I = n(615310),
+    T = n(652215),
+    S = n(788868),
+    y = n(818348),
+    v = n(554418);
+function N(e, t) {
     return e in t;
 }
-function N(e) {
+function C(e) {
     let { renderHeader: t, handleClose: n } = e,
         {
             selectedSkuId: s,
-            step: N,
             selectedPlan: C,
             purchaseState: R,
             purchaseType: O,
@@ -37,56 +37,57 @@ function N(e) {
             isDisplayingWowMomentConfirmation: L,
             isPremiumGroupPurchase: w,
             isEligibleForTrial: M,
-            isEligibleForDiscount: P,
-            storeCountryFromCheckoutContext: x,
+            isEligibleForDiscount: x,
+            storeCountryFromCheckoutContext: P,
         } = (0, g.P5)(),
-        { isGift: k, selectedGiftStyle: U, giftRecipient: G } = (0, E.Pv)(),
-        F = (0, l.wI)("PaymentModalHeader"),
-        V = b?.productLine === I.EZt.COLLECTIBLES,
-        B = b?.productLine === I.EZt.SOCIAL_LAYER_GAME_ITEM,
-        H = k && (0, m.Ik)(G) && N === A.pn.CONFIRM && null != U && !V && !B,
-        j = null != t && null != N,
-        Y = [A.pn.SKU_SELECT, A.pn.SELECT_FREE_SKU],
-        W = null != N && !Y.includes(N) && null != s,
-        K = (0, u.D7)({ location: "PaymentModalHeader" });
+        k = (0, I.bB)(),
+        { isGift: U, selectedGiftStyle: G, giftRecipient: F } = (0, E.Pv)(),
+        V = (0, l.wI)("PaymentModalHeader"),
+        B = b?.productLine === T.EZt.COLLECTIBLES,
+        H = b?.productLine === T.EZt.SOCIAL_LAYER_GAME_ITEM,
+        j = U && (0, m.Ik)(F) && k === A.pn.CONFIRM && null != G && !B && !H,
+        Y = null != t && null != k,
+        W = [A.pn.SKU_SELECT, A.pn.SELECT_FREE_SKU],
+        K = null != k && !W.includes(k) && null != s,
+        $ = (0, u.D7)({ location: "PaymentModalHeader" });
     return i.useMemo(() => {
-        if (null == N) return;
-        if (K && c.M.includes(N)) {
+        if (null == k) return;
+        if ($ && c.M.includes(k)) {
             let e = (0, c.u)({
-                step: N,
+                step: k,
                 skuId: s ?? (null != b ? b.id : null),
                 showTrialBadge: M,
-                showPromoBadge: P,
-                storeCountryFromCheckoutContext: x,
-                isStoreCountryDisplayEnabled: F,
+                showPromoBadge: x,
+                storeCountryFromCheckoutContext: P,
+                isStoreCountryDisplayEnabled: V,
             });
             return (0, r.jsx)(d.s3, { ...e });
         }
         let e = null;
         return (
-            H
+            j
                 ? (e = (0, r.jsxs)("div", {
-                      className: y.kL,
+                      className: v.kL,
                       children: [
-                          (0, r.jsx)(f.A, { defaultAnimationState: _.oA.LOOP, giftStyle: U, className: y.qq }),
-                          (0, r.jsx)(o.s_y, { onClick: n, className: y.b, "data-migration-pending": !0 }),
+                          (0, r.jsx)(f.A, { defaultAnimationState: _.oA.LOOP, giftStyle: G, className: v.qq }),
+                          (0, r.jsx)(o.s_y, { onClick: n, className: v.b, "data-migration-pending": !0 }),
                       ],
                   }))
-                : j
-                  ? (e = t(C ?? null, n, N))
-                  : O === S.VV.ONE_TIME
-                    ? (e = (0, r.jsx)(h.fs, { step: N, onClose: n }))
-                    : W &&
-                      (a()(v(s, T.WN), `invalid sku id: ${s}`),
+                : Y
+                  ? (e = t(C ?? null, n, k))
+                  : O === y.VV.ONE_TIME
+                    ? (e = (0, r.jsx)(h.fs, { step: k, onClose: n }))
+                    : K &&
+                      (a()(N(s, S.WN), `invalid sku id: ${s}`),
                       (e = (0, r.jsx)(p.A, {
-                          currentStep: N ?? void 0,
+                          currentStep: k ?? void 0,
                           purchaseState: R,
-                          premiumType: T.WN[s],
+                          premiumType: S.WN[s],
                           onClose: n,
                           showTrialBadge: M,
-                          showDiscountBadge: P,
-                          isGift: k,
-                          giftRecipient: G,
+                          showDiscountBadge: x,
+                          isGift: U,
+                          giftRecipient: F,
                           isEligibleForTrial: M,
                           enablePremiumBrandRefresh: D,
                           isDisplayingWowMomentConfirmation: L,
@@ -94,5 +95,5 @@ function N(e) {
                       }))),
             e
         );
-    }, [K, F, x, U, n, R, t, C, b, s, N, M, P, H, W, j, O, k, G, D, L, w]);
+    }, [$, V, P, G, n, R, t, C, b, s, k, M, x, j, K, Y, O, U, F, D, L, w]);
 }

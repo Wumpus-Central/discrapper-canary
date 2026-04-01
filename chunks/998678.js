@@ -30,9 +30,10 @@ var r = n(627968),
     D = n(166532),
     L = n(69494),
     w = n(19311),
-    M = n(482132),
-    P = n(617745),
-    x = n(869177),
+    M = n(482132);
+n(615310);
+var x = n(617745),
+    P = n(869177),
     k = n(921925),
     U = n(615405),
     G = n(825755),
@@ -156,7 +157,7 @@ function em(e) {
                 return { steps: [D.pn.ADD_PAYMENT_STEPS] };
         }
     }
-    let [eP, ex] = i.useState(eT),
+    let [ex, eP] = i.useState(eT),
         [ek, eU] = i.useState(null),
         [eG, eF] = i.useState(eM(eT));
     i.useEffect(() => {
@@ -181,9 +182,9 @@ function em(e) {
     let eY = i.useCallback(
         function (e) {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-            eU(null), ex(e), t && I({ currentStep: eP, toStep: e });
+            eU(null), eP(e), t && I({ currentStep: ex, toStep: e });
         },
-        [eP, I],
+        [ex, I],
     );
     function eW(e) {
         (0, u.showToast)(
@@ -191,7 +192,7 @@ function em(e) {
                 position: u.ToastPosition.BOTTOM,
             }),
         ),
-            A(eP, e),
+            A(ex, e),
             eY(eT, !1);
     }
     let [eK, e$] = i.useState(null),
@@ -243,7 +244,7 @@ function em(e) {
             addressElementKey: ty,
             remountAddressElement: tv,
         } = (0, R.Lw)({
-            step: eP,
+            step: ex,
             continueSessionToInitialStep: es,
             paymentElementsEnabled: eI,
             handleStepChange: eY,
@@ -257,7 +258,7 @@ function em(e) {
             (e, t) => (eI && null != t && (0, v.PE)(e) ? () => tE(e) : () => eY(D.pn.PAYMENT_TYPE)),
             [eI, tE, eY],
         );
-    switch (eP) {
+    switch (ex) {
         case D.pn.ATTEMPT_GOOGLE_PAY:
         case D.pn.ATTEMPT_APPLE_PAY:
         case D.pn.PAYMENT_TYPE:
@@ -326,12 +327,12 @@ function em(e) {
                     tO();
                 }
             };
-            if (eP === D.pn.ATTEMPT_GOOGLE_PAY || eP === D.pn.ATTEMPT_APPLE_PAY) {
-                let e = ee.intl.string(eP === D.pn.ATTEMPT_APPLE_PAY ? ee.t.czhXDv : ee.t.Zj2xQ0),
-                    i = ee.intl.string(eP === D.pn.ATTEMPT_APPLE_PAY ? ee.t.WoXvJL : ee.t.wnVVr0);
-                (t = (0, r.jsx)(x.V, {
+            if (ex === D.pn.ATTEMPT_GOOGLE_PAY || ex === D.pn.ATTEMPT_APPLE_PAY) {
+                let e = ee.intl.string(ex === D.pn.ATTEMPT_APPLE_PAY ? ee.t.czhXDv : ee.t.Zj2xQ0),
+                    i = ee.intl.string(ex === D.pn.ATTEMPT_APPLE_PAY ? ee.t.WoXvJL : ee.t.wnVVr0);
+                (t = (0, r.jsx)(P.V, {
                     onChooseType: tC,
-                    paymentRequestWallet: eP === D.pn.ATTEMPT_APPLE_PAY ? "applePay" : "googlePay",
+                    paymentRequestWallet: ex === D.pn.ATTEMPT_APPLE_PAY ? "applePay" : "googlePay",
                     onStripePaymentMethodReceived: tb,
                     onPaymentRequestFailure: () => {
                         tC(J.he.CARD), eU(e);
@@ -436,14 +437,14 @@ function em(e) {
         case D.pn.AWAITING_BROWSER_CHECKOUT:
         case D.pn.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY:
         case D.pn.AWAITING_BROWSER_CHECKOUT_APPLE_PAY:
-            let tP = () => {
+            let tx = () => {
                     eF(ey), eY(eI ? D.pn.PAYMENT_ELEMENT : D.pn.CREDIT_CARD_INFORMATION);
                 },
-                tx = () => {
+                tP = () => {
                     eI ? (tg(), g?.()) : (eF(eO), eY(D.pn.PAYMENT_TYPE));
                 };
-            (t = (0, r.jsx)(P.t, { step: eP, onPurchaseComplete: () => A(eP), onHandoffFailure: tP })),
-                (n = (0, r.jsx)(P.q, { onPrimaryClick: tP, onBackClick: tx }));
+            (t = (0, r.jsx)(x.t, { step: ex, onPurchaseComplete: () => A(ex), onHandoffFailure: tx })),
+                (n = (0, r.jsx)(x.q, { onPrimaryClick: tx, onBackClick: tP }));
             break;
         case D.pn.EPS_INFORMATION:
             t = (0, r.jsx)(C.A, {
@@ -709,7 +710,7 @@ function em(e) {
             t = (0, r.jsx)(ef, {});
             break;
         default:
-            throw Error(`Unexpected step: ${eP}`);
+            throw Error(`Unexpected step: ${ex}`);
     }
     let t$ = eI && tp,
         tz = t$ ? "combined_stripe_elements" : void 0,
@@ -719,7 +720,7 @@ function em(e) {
             animatedNodeClassName: en.L2,
             fillParent: !0,
             overrideKey: tz,
-            step: eP,
+            step: ex,
             steps: eG.steps,
             sideMargin: 20,
             children: [
@@ -730,7 +731,7 @@ function em(e) {
                     }),
                 t$ &&
                     (0, r.jsx)(R.e4, {
-                        step: eP,
+                        step: ex,
                         analyticsContext:
                             null != U ? { activitySessionId: eA, contextMetadata: eg, analyticsData: U } : void 0,
                         paymentElementSelectedType: tm,
@@ -746,7 +747,7 @@ function em(e) {
                 t,
             ],
         }),
-        tZ = eP === D.pn.PAYMENT_TYPE && 0 === m.length ? null : n;
+        tZ = ex === D.pn.PAYMENT_TYPE && 0 === m.length ? null : n;
     return K
         ? (0, r.jsxs)(r.Fragment, {
               children: [
@@ -758,7 +759,7 @@ function em(e) {
         : (0, r.jsx)(z.A, {
               shouldUseManaModal: em,
               steps: T ?? eG.steps,
-              currentStep: S ?? eP,
+              currentStep: S ?? ex,
               overrideKey: tz,
               paymentError: p.paymentError,
               header: O,
@@ -812,8 +813,8 @@ function eE(e) {
             }
         );
     }, []);
-    let [M, P] = i.useState(!1),
-        [x, k] = i.useState(!1),
+    let [M, x] = i.useState(!1),
+        [P, k] = i.useState(!1),
         [U, H] = i.useState(null),
         j = i.useRef(null),
         Y = (0, l.bG)([F.A], () => F.A.isAwaitingAuthentication),
@@ -834,8 +835,8 @@ function eE(e) {
             billingAddressState: m,
             setBillingAddressState: E,
             isSubmittingCurrentStep: M,
-            setIsSubmittingCurrentStep: P,
-            hasRedirectURL: x,
+            setIsSubmittingCurrentStep: x,
+            hasRedirectURL: P,
             setHasRedirectURL: k,
             braintreeEmail: C,
             braintreeNonce: R,

@@ -142,13 +142,14 @@ class T {
             I = a ?? void 0;
         return (0, s.mMO)(
             async () => {
-                let { WrappedUnifiedPaymentModal: e } = await n.e("87298").then(n.bind(n, 246681));
-                return (t) =>
+                let { WrappedUnifiedPaymentModal: e } = await n.e("87298").then(n.bind(n, 246681)),
+                    t = this.generateCheckoutStepConfigs({ isGift: !!(null != o && o.isGift) });
+                return (n) =>
                     (0, r.jsx)(e, {
                         checkoutFlow: this.checkoutFlow,
                         checkoutFlowConfiguration: this.checkoutFlowConfiguration,
                         tenantCheckoutFlowConfig: this.tenantCheckoutFlowConfig,
-                        stepConfigs: this.generateCheckoutStepConfigs({ isGift: !!(null != o && o.isGift) }),
+                        stepConfigs: t,
                         onComplete: (e) => {
                             null != l && l(e), (A = !0);
                         },
@@ -159,7 +160,7 @@ class T {
                         applicationId: g,
                         analyticsLocations: p,
                         analyticsSourceLocation: f,
-                        renderModalProps: t,
+                        renderModalProps: n,
                         giftContextProps: o,
                         flowSpecificOptions: I,
                     });

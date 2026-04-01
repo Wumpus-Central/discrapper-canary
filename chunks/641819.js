@@ -1,6 +1,6 @@
-t.d(n, { j: () => h });
-var l = t(627968),
-    i = t(64700),
+t.d(n, { j: () => g });
+var i = t(627968),
+    l = t(64700),
     r = t(284009),
     s = t.n(r),
     a = t(311907),
@@ -12,72 +12,74 @@ var l = t(627968),
     m = t(91053),
     E = t(287809),
     _ = t(937008),
-    x = t(156312),
-    S = t(166532),
+    S = t(156312),
+    x = t(166532),
     P = t(482132),
-    T = t(985018),
-    I = t(706360);
-function h(e) {
+    T = t(615310),
+    I = t(985018),
+    h = t(706360);
+function g(e) {
     let { handleStepChange: n } = e,
-        { selectedPlan: t, selectedSkuId: r, step: h } = (0, x.P5)(),
-        { setSelectedGiftingPromotionReward: g, selectedGiftingPromotionReward: A, claimableRewards: f } = (0, _.Pv)(),
-        j = (0, a.bG)([E.default], () => E.default.getCurrentUser()),
-        R = (0, a.yK)([p.A], () => p.A.getGiftPromotionRewardSkuIds()),
-        M = (0, c.U)(f, A),
-        [C, y] = i.useState(M),
-        [N, O] = i.useState(!1);
-    i.useEffect(() => {
-        N || null != A || null == M || (g(M), y(M));
-    }, [M, N, A, g]),
+        { selectedPlan: t, selectedSkuId: r } = (0, S.P5)(),
+        g = (0, T.bB)(),
+        { setSelectedGiftingPromotionReward: A, selectedGiftingPromotionReward: f, claimableRewards: j } = (0, _.Pv)(),
+        R = (0, a.bG)([E.default], () => E.default.getCurrentUser()),
+        M = (0, a.yK)([p.A], () => p.A.getGiftPromotionRewardSkuIds()),
+        C = (0, c.U)(j, f),
+        [N, O] = l.useState(C),
+        [y, v] = l.useState(!1);
+    l.useEffect(() => {
+        y || null != f || null == C || (A(C), O(C));
+    }, [C, y, f, A]),
         s()(null != t, "Expected plan to selected"),
         s()(null != r, "Expected selectedSkuId"),
-        s()(null != h, "Step should be set");
-    let v = i.useMemo(() => null != C && (f ?? []).includes(C), [C, f]),
-        b = i.useMemo(() => 0 === R.length || null == C || !v, [R, C, v]);
-    i.useEffect(() => {
-        if (0 === R.length) {
-            y(void 0), g(void 0);
+        s()(null != g, "Step should be set");
+    let b = l.useMemo(() => null != N && (j ?? []).includes(N), [N, j]),
+        k = l.useMemo(() => 0 === M.length || null == N || !b, [M, N, b]);
+    l.useEffect(() => {
+        if (0 === M.length) {
+            O(void 0), A(void 0);
             return;
         }
-        (null != C && v && R.includes(C)) || null == C || (y(void 0), g(void 0));
-    }, [R, v, C, g]);
-    let k = (e) => {
-            g(e), y(e), O(!0);
+        (null != N && b && M.includes(N)) || null == N || (O(void 0), A(void 0));
+    }, [M, b, N, A]);
+    let U = (e) => {
+            A(e), O(e), v(!0);
         },
-        w = R.map((e) =>
-            (0, l.jsx)(
+        w = M.map((e) =>
+            (0, i.jsx)(
                 d.k,
-                { skuId: e, claimed: null != f && !f.includes(e), user: j, onSelect: k, selectedSkuId: C },
+                { skuId: e, claimed: null != j && !j.includes(e), user: R, onSelect: U, selectedSkuId: N },
                 e,
             ),
         ),
-        U = (0, l.jsx)(P.UX, {
-            children: (0, l.jsx)(m.Z, {
+        D = (0, i.jsx)(P.UX, {
+            children: (0, i.jsx)(m.Z, {
                 onStepChange: n,
-                onBackClick: () => n(S.pn.PLAN_SELECT),
+                onBackClick: () => n(x.pn.PLAN_SELECT),
                 shouldRenderUpdatedPaymentModal: !0,
                 showBackButton: !0,
                 planOptions: [t.id],
                 selectedPlanId: t.id,
-                isNextDisabled: b,
+                isNextDisabled: k,
             }),
         });
-    return (0, l.jsxs)(l.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, l.jsx)(o.rQ0, {
+            (0, i.jsx)(o.rQ0, {
                 titleTextVariant: "heading-lg/semibold",
-                title: T.intl.string(T.t.OEtqpm),
-                subtitle: T.intl.string(T.t.h2nMp0),
+                title: I.intl.string(I.t.OEtqpm),
+                subtitle: I.intl.string(I.t.h2nMp0),
             }),
-            (0, l.jsx)(o.cwr, {
-                children: (0, l.jsx)(u.BJc, {
+            (0, i.jsx)(o.cwr, {
+                children: (0, i.jsx)(u.BJc, {
                     direction: "vertical",
                     justify: "center",
                     align: "center",
-                    children: (0, l.jsx)("div", { className: I.Dq, children: w }),
+                    children: (0, i.jsx)("div", { className: h.Dq, children: w }),
                 }),
             }),
-            U,
+            D,
         ],
     });
 }

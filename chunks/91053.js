@@ -1,4 +1,4 @@
-t.d(n, { Z: () => _ });
+t.d(n, { Z: () => S });
 var i = t(627968),
     l = t(64700),
     r = t(311907),
@@ -6,12 +6,13 @@ var i = t(627968),
     a = t(937008),
     o = t(156312),
     u = t(166532),
-    d = t(166403),
-    c = t(810498),
-    p = t(683433),
-    m = t(344159),
-    E = t(985018);
-function _(e) {
+    d = t(615310),
+    c = t(166403),
+    p = t(810498),
+    m = t(683433),
+    E = t(344159),
+    _ = t(985018);
+function S(e) {
     let {
             onStepChange: n,
             selectedPlanId: t,
@@ -19,38 +20,38 @@ function _(e) {
             onBackClick: u,
             showBackButton: d,
             planOptions: c,
-            shouldRenderUpdatedPaymentModal: m = !1,
-            isTrial: _,
-            isNextDisabled: T = !1,
+            shouldRenderUpdatedPaymentModal: p = !1,
+            isTrial: E,
+            isNextDisabled: S = !1,
         } = e,
-        { paymentSources: h, selectedPlan: x } = (0, o.P5)(),
-        { isGift: g, claimableRewards: I } = (0, a.Pv)();
-    r = r ?? h;
+        { paymentSources: P, selectedPlan: T } = (0, o.P5)(),
+        { isGift: I, claimableRewards: h } = (0, a.Pv)();
+    r = r ?? P;
     let {
-            variant: S,
+            variant: g,
             text: A,
             onClick: f,
             disabled: j,
-        } = P({
+        } = x({
             onStepChange: n,
-            selectedPlanId: (t = t ?? x?.id),
-            isGift: g,
-            claimableRewards: I,
+            selectedPlanId: (t = t ?? T?.id),
+            isGift: I,
+            claimableRewards: h,
             paymentSources: r,
-            shouldRenderUpdatedPaymentModal: m,
-            isTrial: _,
-            isNextDisabled: T,
+            shouldRenderUpdatedPaymentModal: p,
+            isTrial: E,
+            isNextDisabled: S,
         }),
-        M = l.useMemo(
+        R = l.useMemo(
             () =>
                 null != t && c.includes(t)
-                    ? [{ variant: S, text: A, onClick: f, disabled: j }]
-                    : [{ variant: "primary", text: E.intl.string(E.t.XqMe3N), disabled: !0 }],
-            [S, A, f, j, t, c],
+                    ? [{ variant: g, text: A, onClick: f, disabled: j }]
+                    : [{ variant: "primary", text: _.intl.string(_.t.XqMe3N), disabled: !0 }],
+            [g, A, f, j, t, c],
         );
-    return (0, i.jsx)(s.H7u, { leading: d && null != u ? (0, i.jsx)(p.A, { onClick: u }) : void 0, actions: M });
+    return (0, i.jsx)(s.H7u, { leading: d && null != u ? (0, i.jsx)(m.A, { onClick: u }) : void 0, actions: R });
 }
-let P = (e) => {
+let x = (e) => {
     let {
             onStepChange: n,
             selectedPlanId: t,
@@ -58,18 +59,19 @@ let P = (e) => {
             claimableRewards: l,
             paymentSources: s,
             shouldRenderUpdatedPaymentModal: a,
-            isTrial: p,
-            isNextDisabled: _ = !1,
+            isTrial: m,
+            isNextDisabled: S = !1,
         } = e,
-        P = (0, r.bG)([d.A], () => d.A.getPremiumTypeSubscription()),
-        { step: T, selectedPlan: h } = (0, o.P5)(),
-        { hasEntitlements: x } = (0, m.X)(t, i),
-        g = (null != P && null != P.paymentSourceId) || Object.keys(s).length > 0 || (x && !p);
-    var I = a ? E.intl.string(E.t.PDTjLN) : E.intl.string(E.t.XqMe3N),
-        S = u.pn.ADD_PAYMENT_STEPS;
+        x = (0, r.bG)([c.A], () => c.A.getPremiumTypeSubscription()),
+        { selectedPlan: P } = (0, o.P5)(),
+        T = (0, d.bB)(),
+        { hasEntitlements: I } = (0, E.X)(t, i),
+        h = (null != x && null != x.paymentSourceId) || Object.keys(s).length > 0 || (I && !m);
+    var g = a ? _.intl.string(_.t.PDTjLN) : _.intl.string(_.t.XqMe3N),
+        A = u.pn.ADD_PAYMENT_STEPS;
     return (
-        g && (S = u.pn.REVIEW),
-        (0, c.px)(h, i, l) && T !== u.pn.SELECT_FREE_SKU && (S = u.pn.SELECT_FREE_SKU),
-        { variant: "primary", text: I, onClick: () => n(S), disabled: _ }
+        h && (A = u.pn.REVIEW),
+        (0, p.px)(P, i, l) && T !== u.pn.SELECT_FREE_SKU && (A = u.pn.SELECT_FREE_SKU),
+        { variant: "primary", text: g, onClick: () => n(A), disabled: S }
     );
 };
