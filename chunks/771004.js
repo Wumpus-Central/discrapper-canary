@@ -1,4 +1,4 @@
-n.d(t, { A: () => v, h: () => p });
+n.d(t, { A: () => v, h: () => _ });
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -13,18 +13,18 @@ var a = n(627968),
     h = n(936636),
     g = n(985018),
     f = n(282063),
-    _ = n(48757);
-function p(e) {
+    p = n(48757);
+function _(e) {
     let { detectedGame: t, trackAction: n } = e,
         [i, x] = l.useState(t?.summaryLocalized != null),
-        [p, v] = l.useState(!0),
+        [_, v] = l.useState(!0),
         [A, j] = l.useState(!1),
         E = l.useRef(null),
         { width: C, height: I } = (0, u.A)();
     return (l.useEffect(() => {
         let e = E.current;
-        null != e && j(e.scrollHeight - e.clientHeight > 1 || !p);
-    }, [E, C, I, p]),
+        null != e && j(e.scrollHeight - e.clientHeight > 1 || !_);
+    }, [E, C, I, _]),
     null == t.summary)
         ? null
         : (0, a.jsxs)("div", {
@@ -46,7 +46,7 @@ function p(e) {
                       }),
                   (0, a.jsx)(c.EYj, {
                       ref: E,
-                      lineClamp: p ? 8 : void 0,
+                      lineClamp: _ ? 8 : void 0,
                       variant: "text-sm/normal",
                       children: i ? t.summaryLocalized : t.summary,
                   }),
@@ -54,51 +54,56 @@ function p(e) {
                       (0, a.jsx)(d.DUT, {
                           className: f.vk,
                           onClick: () => {
-                              n(p ? m.Ws.ShowMore : m.Ws.ShowLess), v(!p);
+                              n(_ ? m.Ws.ShowMore : m.Ws.ShowLess), v(!_);
                           },
                           children: (0, a.jsx)(c.EYj, {
                               variant: "text-sm/semibold",
-                              children: p ? g.intl.string(g.t.lBeKY2) : g.intl.string(g.t["6MwJo/"]),
+                              children: _ ? g.intl.string(g.t.lBeKY2) : g.intl.string(g.t["6MwJo/"]),
                           }),
                       }),
-                  (0, a.jsx)(h.A, { className: _.B, detectedGame: t }),
+                  (0, a.jsx)(h.A, { className: p.B, detectedGame: t }),
               ],
           });
 }
 function v(e) {
     let { detectedGame: t, trackAction: n } = e,
-        [i, s] = l.useState(!1),
-        [o, d] = l.useState(null),
-        h = l.useRef(null),
-        { width: _, height: p } = (0, u.A)(),
-        { isTwoColumn: v } = (0, x.c)(),
-        A = l.useMemo(() => (v ? 8 : 5), [v]),
-        j = l.useCallback((e) => d(e > A), [A]);
-    l.useEffect(() => {
-        d(null);
-    }, [t.summary, A, _, p]),
-        l.useEffect(() => {
-            let e = h.current;
-            if (null == e || null != o) return;
-            let t = parseInt(window.getComputedStyle(e).lineHeight, 10);
-            isNaN(t) || j(Math.floor(e.offsetHeight / t));
-        }, [h, o, j]);
-    let E = l.useCallback(() => {
-        let e = !i;
-        n(e ? m.Ws.ShowMore : m.Ws.ShowLess), s(e);
-    }, [i, n]);
+        i = l.useRef(null),
+        {
+            isExpanded: s,
+            showToggle: o,
+            handleToggleExpanded: d,
+        } = (function (e, t) {
+            let [n, a] = l.useState("full");
+            l.useEffect(() => {
+                let t = e.current;
+                if (null == t) return;
+                let n = new ResizeObserver(() => {
+                    let t = e.current;
+                    null != t &&
+                        a((e) => ("expanded" === e ? e : t.scrollHeight - t.clientHeight > 1 ? "collapsed" : "full"));
+                });
+                return n.observe(t), () => n.disconnect();
+            }, [e]);
+            let i = l.useCallback(() => {
+                "expanded" === n
+                    ? (t(m.Ws.ShowLess), a("collapsed"))
+                    : "collapsed" === n && (t(m.Ws.ShowMore), a("expanded"));
+            }, [t, n]);
+            return {
+                isExpanded: "expanded" === n,
+                showToggle: "expanded" === n || "collapsed" === n,
+                handleToggleExpanded: i,
+            };
+        })(i, n),
+        { isTwoColumn: u } = (0, x.c)(),
+        h = l.useMemo(() => (u ? 8 : 5), [u]);
     if (null == t.summary) return null;
-    let C = i ? g.intl.string(g.t["6MwJo/"]) : g.intl.string(g.t.lBeKY2);
+    let p = s ? g.intl.string(g.t["6MwJo/"]) : g.intl.string(g.t.lBeKY2);
     return (0, a.jsxs)("div", {
         className: r()(f.fi, f.mX),
         children: [
-            (0, a.jsx)(c.EYj, {
-                ref: h,
-                lineClamp: i || null == o ? void 0 : A,
-                variant: "text-md/medium",
-                children: t.summary,
-            }),
-            o && (0, a.jsx)(c.QWc, { onClick: E, text: C }),
+            (0, a.jsx)(c.EYj, { ref: i, lineClamp: s ? void 0 : h, variant: "text-md/medium", children: t.summary }),
+            o && (0, a.jsx)(c.QWc, { onClick: d, text: p }),
         ],
     });
 }
