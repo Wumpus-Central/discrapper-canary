@@ -1,45 +1,37 @@
 "use strict";
-n.d(t, { Sw: () => l, VG: () => s, s7: () => u, sE: () => o });
+n.d(t, { Sw: () => o, VG: () => a, s7: () => l });
 var r = n(575593),
     i = n(623373),
-    a = n(985018);
-let s = (e) => {
+    s = n(985018);
+let a = (e) => {
         if (null == e) return "";
-        let t = a.intl.string(a.t.z7y5vF);
+        let t = s.intl.string(s.t.z7y5vF);
         return "baseVariantName" in e && null != e.baseVariantName && e.variantLabel !== t
-            ? a.intl.formatToPlainString(a.t.BZN5k2, {
+            ? s.intl.formatToPlainString(s.t.BZN5k2, {
                   baseVariantName: e.baseVariantName,
                   variantLabel: e.variantLabel,
               })
             : e.name;
     },
-    o = (e) =>
-        null == e
-            ? ""
-            : "baseVariantName" in e && null != e.baseVariantName
-              ? e.baseVariantName
-              : null != e.variants && e.variants.length > 0
-                ? e.variants[0].baseVariantName
-                : e.name,
-    l = (e) => {
+    o = (e) => {
         if (null == e) return "";
-        let t = a.intl.string(a.t.z7y5vF);
+        let t = s.intl.string(s.t.z7y5vF);
         return null != e.baseVariantName && e.variantLabel !== t
-            ? a.intl.formatToPlainString(a.t.BZN5k2, {
+            ? s.intl.formatToPlainString(s.t.BZN5k2, {
                   baseVariantName: e.baseVariantName,
                   variantLabel: e.variantLabel,
               })
             : e.name;
     },
-    u = (e) => {
-        let t = o(e);
+    l = (e) => {
+        let t = a(e);
         switch ((0, i.YW)(e)) {
             case r.R.AVATAR_DECORATION:
-                return a.intl.formatToPlainString(a.t.lvBzLi, { product: t });
+                return s.intl.formatToPlainString(s.t.lvBzLi, { product: t });
             case r.R.PROFILE_EFFECT:
-                return a.intl.formatToPlainString(a.t.eR7moP, { product: t });
+                return s.intl.formatToPlainString(s.t.eR7moP, { product: t });
             case r.R.NAMEPLATE:
-                return a.intl.formatToPlainString(a.t.YFOwHj, { product: t });
+                return s.intl.formatToPlainString(s.t.YFOwHj, { product: t });
             default:
                 return t;
         }
