@@ -1,30 +1,40 @@
-i.d(e, { $: () => A });
-var n = i(627968);
-i(64700);
-var l = i(311907),
-    s = i(397927),
-    r = i(77729),
-    a = i(274372),
-    u = i(399925),
-    o = i(419954),
-    d = i(780964),
-    T = i(985018);
-let A = (0, o.E2)(d.X.CLIPS_STORAGE_LOCATION, {
-    useSearchTerms: () => [T.intl.string(T.t.s4773E), T.intl.string(T.t.svjwGh)],
+n.d(t, { $: () => g });
+var i = n(627968),
+    s = n(64700),
+    l = n(311907),
+    a = n(397927),
+    r = n(77729),
+    o = n(274372),
+    d = n(399925),
+    c = n(419954),
+    u = n(780964),
+    m = n(985018);
+let g = (0, c.E2)(u.X.CLIPS_STORAGE_LOCATION, {
+    useSearchTerms: () => [m.intl.string(m.t.s4773E), m.intl.string(m.t.svjwGh)],
     Component: () => {
-        let t = (0, l.bG)([a.A], () => a.A.getSettings().storageLocation),
-            e = async () => {
-                let t = await r.A.fileManager.showOpenDialog({ properties: ["openDirectory", "createDirectory"] });
-                t.length > 0 && u.HU(t[0]);
+        let e = (0, l.bG)([o.A], () => o.A.getSettings().storageLocation),
+            t = s.useRef(!1),
+            n = async () => {
+                if (!t.current) {
+                    t.current = !0;
+                    try {
+                        let e = await r.A.fileManager.showOpenDialog({
+                            properties: ["openDirectory", "createDirectory"],
+                        });
+                        e.length > 0 && d.HU(e[0]);
+                    } finally {
+                        t.current = !1;
+                    }
+                }
             };
-        return (0, n.jsx)(s.D0$, {
-            label: T.intl.string(T.t.s4773E),
-            description: T.intl.string(T.t.svjwGh),
+        return (0, i.jsx)(a.D0$, {
+            label: m.intl.string(m.t.s4773E),
+            description: m.intl.string(m.t.svjwGh),
             layout: "horizontal",
-            children: (0, n.jsx)(s.DUT, {
-                "aria-label": T.intl.formatToPlainString(T.t.iMONTj, { storageLocation: t }),
-                onClick: e,
-                children: (0, n.jsx)(s.ksK, { tabIndex: -1, value: t, editable: !1, "aria-hidden": !0 }),
+            children: (0, i.jsx)(a.DUT, {
+                "aria-label": m.intl.formatToPlainString(m.t.iMONTj, { storageLocation: e }),
+                onClick: n,
+                children: (0, i.jsx)(a.ksK, { tabIndex: -1, value: e, editable: !1, "aria-hidden": !0 }),
             }),
         });
     },
