@@ -9,34 +9,39 @@ var i = n(627968),
     c = n(827734),
     u = n(397927),
     m = n(827343),
-    _ = n(915089),
-    g = n(419954),
+    g = n(915089),
+    _ = n(419954),
     x = n(430452),
     A = n(780964),
     h = n(731854),
     p = n(985018),
-    f = n(342976),
-    T = n(189039);
-let S = (0, _.Ld)();
+    T = n(361113),
+    f = n(206536);
+let S = (0, g.Ld)();
 function E(e) {
     let { isSpeaking: t, className: n, id: s, ariaDescribedBy: l, ariaLabelledBy: r, disabled: o } = e;
     return (0, i.jsx)("div", {
-        className: a()(f.$I, n),
+        role: "meter",
+        className: a()(T.$I, n),
         id: s,
         "aria-describedby": l,
         "aria-labelledby": r,
-        children: (0, i.jsx)("div", { className: a()(f.Jx, f.NU, { [f.zY]: t && !o, [f.r9]: o }) }),
+        "aria-valuenow": t && !o ? 100 : 0,
+        "aria-valuemin": 0,
+        "aria-valuemax": 100,
+        "aria-valuetext": t && !o ? p.intl.string(p.t.haLKZ0) : p.intl.string(p.t.X2hJL7),
+        children: (0, i.jsx)("div", { className: a()(T.Jx, T.NU, { [T.zY]: t && !o, [T.r9]: o }) }),
     });
 }
 function b(e) {
     let { volume: t, id: n, ariaDescribedBy: s, ariaLabelledBy: l, disabled: o } = e,
-        { threshold: d, autoThreshold: _ } = (0, r.cf)([x.Ay], () => ({
+        { threshold: d, autoThreshold: g } = (0, r.cf)([x.Ay], () => ({
             threshold: x.Ay.getModeOptions().threshold,
             autoThreshold: x.Ay.getModeOptions().autoThreshold,
         })),
-        g = (0, r.bG)([x.Ay], () => x.Ay.getMode());
+        _ = (0, r.bG)([x.Ay], () => x.Ay.getMode());
     return (0, i.jsx)("section", {
-        className: a()(f.Mo, f.jW),
+        className: a()(T.Mo, T.jW),
         id: n,
         "aria-describedby": s,
         "aria-labelledby": l,
@@ -45,23 +50,23 @@ function b(e) {
             onValueRender: (e) => `${(-((100 - e) * 1)).toFixed(0)}dB`,
             onValueChange: (e) => {
                 var t;
-                return (t = -((100 - e) * 1)), void m.A.setMode(g, { threshold: t, autoThreshold: _ });
+                return (t = -((100 - e) * 1)), void m.A.setMode(_, { threshold: t, autoThreshold: g });
             },
             barStyles: { background: c.A.unsafe_rawColors.GREEN_360.css },
             fillStyles: { background: c.A.unsafe_rawColors.YELLOW_300.css },
             "aria-labelledby": S,
             disabled: o,
             children: (0, i.jsxs)("div", {
-                className: a()(f.NU, f.TL, f.Jx, T.bar),
+                className: a()(T.NU, T.TL, T.Jx, f.bar),
                 children: [
-                    (0, i.jsx)("div", { className: a()(f.GS, f.SH), style: { width: o ? 0 : t + 100 + "%" } }),
+                    (0, i.jsx)("div", { className: a()(T.GS, T.SH), style: { width: o ? 0 : t + 100 + "%" } }),
                     (0, i.jsx)("div", { className: "grow" }),
                 ],
             }),
         }),
     });
 }
-let C = (0, g.E2)(A.X.VOICE_INPUT_SENSITIVITY_FIELD_SET, {
+let C = (0, _.E2)(A.X.VOICE_INPUT_SENSITIVITY_FIELD_SET, {
     useSearchTerms: () => [p.intl.string(p.t["sqUm+k"]), p.intl.string(p.t.I1Zuq0), p.intl.string(p.t.nuFtHH)],
     usePredicate: () => (0, r.bG)([x.Ay], () => x.Ay.isInputProfileCustom()),
     Component: function () {
@@ -96,27 +101,27 @@ let C = (0, g.E2)(A.X.VOICE_INPUT_SENSITIVITY_FIELD_SET, {
                     { volume: e, isSpeaking: n }
                 );
             })(),
-            _ = (0, r.bG)([x.Ay], () => x.Ay.isEnabled()),
-            g = s.useMemo(
+            g = (0, r.bG)([x.Ay], () => x.Ay.isEnabled()),
+            _ = s.useMemo(
                 () =>
-                    !_ &&
+                    !g &&
                     (0, i.jsx)("div", {
-                        className: f.B4,
+                        className: T.B4,
                         children: (0, i.jsx)(u.wx6, {
                             type: "warning",
                             children: p.intl.format(p.t["O13I+O"], { onEnableClick: () => m.A.enable(!0) }),
                         }),
                     }),
-                [_],
+                [g],
             ),
             A = s.useMemo(() => (e ? p.intl.string(p.t.JsbzjA) : p.intl.string(p.t.MLmyMY)), [e]),
-            T = s.useId(),
+            f = s.useId(),
             S = s.useId();
         return l
             ? (0, i.jsxs)("fieldset", {
                   "aria-describedby": S,
                   children: [
-                      (0, i.jsx)(u.AC4, { tag: "legend", id: T, children: p.intl.string(p.t.GByLar) }),
+                      (0, i.jsx)(u.AC4, { tag: "legend", id: f, children: p.intl.string(p.t.GByLar) }),
                       (0, i.jsx)(u.AC4, { id: S, children: A }),
                       (0, i.jsxs)(u.BJc, {
                           direction: "vertical",
@@ -132,13 +137,13 @@ let C = (0, g.E2)(A.X.VOICE_INPUT_SENSITIVITY_FIELD_SET, {
                               e
                                   ? (0, i.jsx)(E, {
                                         isSpeaking: c,
-                                        className: f.UJ,
+                                        className: T.UJ,
                                         ariaDescribedBy: S,
-                                        ariaLabelledBy: T,
+                                        ariaLabelledBy: f,
                                         disabled: t,
                                     })
-                                  : (0, i.jsx)(b, { volume: a, ariaDescribedBy: S, ariaLabelledBy: T, disabled: t }),
-                              g,
+                                  : (0, i.jsx)(b, { volume: a, ariaDescribedBy: S, ariaLabelledBy: f, disabled: t }),
+                              _,
                           ],
                       }),
                   ],
@@ -155,7 +160,7 @@ let C = (0, g.E2)(A.X.VOICE_INPUT_SENSITIVITY_FIELD_SET, {
                               e
                                   ? (0, i.jsx)(E, {
                                         isSpeaking: c,
-                                        className: f.UJ,
+                                        className: T.UJ,
                                         id: n.controlId,
                                         ariaDescribedBy: n.describedById,
                                         ariaLabelledBy: n.labelId,
@@ -169,7 +174,7 @@ let C = (0, g.E2)(A.X.VOICE_INPUT_SENSITIVITY_FIELD_SET, {
                                         disabled: t,
                                     }),
                       }),
-                      g,
+                      _,
                   ],
               });
     },
