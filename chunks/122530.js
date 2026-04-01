@@ -6,7 +6,6 @@ e.exports = {
     R_: "heading__11054",
     tb: "headingGameTile__11054",
     UD: "headingCopy__11054",
-    GA: "instructions__11054",
     uz: "ctas__11054",
     t3: "rewardTileWithInstructions__11054",
 };
