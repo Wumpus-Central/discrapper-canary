@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { A: () => A, x: () => E });
+n.d(t, { A: () => A, x: () => g });
 var r = n(64700),
     i = n(812729),
-    a = n.n(i),
-    s = n(296489),
-    o = n.n(s),
+    s = n.n(i),
+    a = n(296489),
+    o = n.n(a),
     l = n(110259),
     u = n(73153),
     c = n(964486),
@@ -14,27 +14,28 @@ var r = n(64700),
     p = n(954571),
     h = n(58149),
     m = n(686757);
-let g = (0, l.trackMaker)({
+let E = (0, l.trackMaker)({
     analyticEventConfigs: p.AnalyticEventConfigs,
     dispatcher: u.h,
     TRACK_ACTION_NAME: "TRACK",
 });
-function E(e) {
+function g(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { name: n, type: r, properties: i } = e;
+        n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        { name: r, type: i, properties: s } = e;
     if (e.type === l.ImpressionTypes.MODAL && null == e.name && (0, m.uJ)().some((e) => e._stackContext?.isSlide))
         return;
-    (0, m.Vm)(e);
-    let a = i?.guild_id ?? f.A.getGuildId(),
-        s = i?.channel_id ?? _.A.getChannelId(a),
-        o = (0, p.expandEventProperties)({
-            impression_type: r,
+    n || (0, m.Vm)(e);
+    let a = s?.guild_id ?? f.A.getGuildId(),
+        o = s?.channel_id ?? _.A.getChannelId(a),
+        u = (0, p.expandEventProperties)({
+            impression_type: i,
             location: (0, m.g$)(),
             ...(0, h.H$)(a),
-            ...(0, h.dI)(d.A.getChannel(s)),
-            ...i,
+            ...(0, h.dI)(d.A.getChannel(o)),
+            ...s,
         });
-    t ? (0, m.eE)(null, null) : (null != n && null != r && ((0, p.debugLogEvent)(n, o), g(n, o)), (0, m.eE)(n, o));
+    t ? (0, m.eE)(null, null) : (null != r && null != i && ((0, p.debugLogEvent)(r, u), E(r, u)), (0, m.eE)(r, u));
 }
 function A(e) {
     let t =
@@ -43,15 +44,15 @@ function A(e) {
                 : { disableTrack: !1, trackOnInitialLoad: !1 },
         n = arguments.length > 2 ? arguments[2] : void 0,
         i = r.useRef(void 0),
-        s = r.useRef(void 0),
+        a = r.useRef(void 0),
         l = () => {
-            let r = !a()(i.current, e);
+            let r = !s()(i.current, e);
             r && (i.current = e);
-            let l = !a()(s.current, n);
-            if ((l && (s.current = n), !r && !l)) return;
+            let l = !s()(a.current, n);
+            if ((l && (a.current = n), !r && !l)) return;
             let u = { ...e, sequenceId: o()("impression_") };
             return (
-                E(u, t.disableTrack),
+                g(u, t.disableTrack),
                 () => {
                     null != u && (0, m.u5)(u);
                 }

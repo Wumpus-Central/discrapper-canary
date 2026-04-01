@@ -208,6 +208,7 @@ var r = (function (e) {
             (e.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR = "impression_role_subscription_listing_template_selector"),
             (e.ROLE_SUBSCRIPTION_LISTING_UPSELL_ERROR_PAGE = "impression_role_subscription_listing_upsell_error_page"),
             (e.SHELF_ACTIVITY_DETAILS = "impression_shelf_activity_details"),
+            (e.SHOP_CARD = "impression_shop_card"),
             (e.SHOP_PRODUCT_DETAIL = "impression_shop_product_detail"),
             (e.SNOWSGIVING = "impression_snowsgiving"),
             (e.SOUNDBOARD_POPOUT = "impression_soundboard_popout"),
