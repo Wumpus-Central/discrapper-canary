@@ -74,7 +74,9 @@ function m() {
         claimedEndedOutboundPromotions: S.filter((e) => {
             let { promotion: t } = e;
             return (
-                !R.has(t.id) && !1 === (0, d.HB)({ promotionPartner: t.outboundTitle, promotionType: t.promotionType })
+                !R.has(t.id) &&
+                !1 === (0, d.HB)({ promotionPartner: t.outboundTitle, promotionType: t.promotionType }) &&
+                !(0, d.dG)(t)
             );
         }).filter((e) => (0, d.OP)(e.promotion)),
         claimedOutboundPromotionCodeMap: N,
