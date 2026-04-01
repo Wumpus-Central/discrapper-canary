@@ -1,69 +1,68 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => A });
 var i = n(627968),
     s = n(64700),
-    r = n(397927),
+    l = n(397927),
     a = n(793574),
-    l = n(688810),
+    r = n(688810),
     o = n(823092),
-    c = n(954571),
-    d = n(979286),
+    d = n(954571),
+    c = n(979286),
     u = n(492499),
-    _ = n(652215),
-    m = n(788868),
-    A = n(985018),
-    g = n(844551);
-let E = () => {
-    let { analyticsLocations: e } = (0, l.Ay)(a.A.COLLECTIBLES_PROFILE_SETTINGS_UPSELL),
+    m = n(652215),
+    g = n(788868),
+    _ = n(985018),
+    x = n(378926);
+let A = () => {
+    let { analyticsLocations: e } = (0, r.Ay)(a.A.COLLECTIBLES_PROFILE_SETTINGS_UPSELL),
         t = s.useRef(null),
-        { asset: n, popoutAsset: E, title: h, body: p, version: C, revertTextColor: x } = (0, u.M)(),
-        T = s.useContext(o.gl),
-        I = T?.navigateWithValidation ?? ((e) => e());
+        { asset: n, popoutAsset: A, title: h, body: p, version: T, revertTextColor: f } = (0, u.M)(),
+        { navigateWithValidation: S } = (0, o.L_)();
     return (
         s.useEffect(() => {
-            c.default.track(_.HAw.PREMIUM_UPSELL_VIEWED, {
-                type: m.e.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
+            d.default.track(m.HAw.PREMIUM_UPSELL_VIEWED, {
+                type: g.e.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
                 location_stack: e,
-                version: C,
+                version: T,
             });
-        }, [e, C]),
+        }, [e, T]),
         (0, i.jsxs)("div", {
             ref: t,
-            className: g.kL,
+            className: x.kL,
             style: { backgroundImage: `url(${n})` },
             children: [
                 (0, i.jsx)("div", {
-                    className: g.JS,
+                    className: x.JS,
                     "aria-hidden": !0,
                     role: "presentation",
-                    children: (0, i.jsx)("img", { src: E, className: g.Qw, alt: "" }),
+                    children: (0, i.jsx)("img", { src: A, className: x.Qw, alt: "" }),
                 }),
                 (0, i.jsxs)("div", {
-                    className: g.Em,
+                    className: x.Em,
                     children: [
-                        (0, i.jsx)(r.Heading, {
+                        (0, i.jsx)(l.Heading, {
                             variant: "heading-lg/extrabold",
-                            color: x ? "text-overlay-dark" : "currentColor",
-                            className: g.DD,
+                            color: f ? "text-overlay-dark" : "currentColor",
+                            className: x.DD,
                             children: h,
                         }),
-                        (0, i.jsx)(r.Text, {
+                        (0, i.jsx)(l.Text, {
                             variant: "text-sm/normal",
-                            color: x ? "text-overlay-dark" : "currentColor",
+                            color: f ? "text-overlay-dark" : "currentColor",
                             children: p,
                         }),
                     ],
                 }),
-                (0, i.jsx)(r.Button, {
+                (0, i.jsx)(l.Button, {
                     onClick: () => {
-                        I(() =>
-                            (0, d.Cz)({
+                        S(() =>
+                            (0, c.Cz)({
                                 analyticsLocations: e,
                                 analyticsSource: a.A.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
                             }),
                         );
                     },
                     variant: "overlay-primary",
-                    text: A.intl.string(A.t.fYfGgK),
+                    text: _.intl.string(_.t.fYfGgK),
                 }),
             ],
         })
