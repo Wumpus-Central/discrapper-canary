@@ -13,7 +13,6 @@ e.exports = {
     W3: "trialPriceLine_e4d803",
     SV: "afterTrialPriceLine_e4d803",
     zp: "spinnerWrapper_e4d803",
-    KB: "trialHeader_e4d803",
     Os: "giftMainAnimation_e4d803",
     Ni: "premiumGroupNotice_e4d803",
 };

@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { IJ: () => _, N$: () => d, eb: () => h, yf: () => f });
+n.d(t, { IJ: () => _, N$: () => d, eb: () => p, yf: () => f });
 var r = n(627968);
 n(64700);
 var i = n(397927),
-    a = n(580630),
-    s = n(735164),
-    o = n(934581),
+    s = n(580630),
+    a = n(735164),
+    o = n(156962),
     l = n(692440),
     u = n(985018),
-    c = n(982571),
+    c = n(110448),
     d = (function (e) {
         return (
             (e.PREMIUM_GIFT = "PREMIUM_GIFT"),
@@ -26,8 +26,8 @@ let _ = new Set(["PREMIUM_DEFAULT", "PREMIUM_SWITCH_PLAN"]),
             isGift: n,
             oneTimePurchaseNitroGiftInvoicePreview: r,
             trialInvoicePreview: i,
-            proratedInvoicePreview: a,
-            renewalInvoicePreview: s,
+            proratedInvoicePreview: s,
+            renewalInvoicePreview: a,
             planSwitchLoading: o,
         } = e;
         return null != t
@@ -35,26 +35,26 @@ let _ = new Set(["PREMIUM_DEFAULT", "PREMIUM_SWITCH_PLAN"]),
             : n && null != r
               ? { type: "PREMIUM_GIFT", invoicePreview: r }
               : null != i
-                ? { type: "PREMIUM_WITH_TRIAL", invoicePreview: i, renewalInvoicePreview: s }
-                : null == a || null == s || o
+                ? { type: "PREMIUM_WITH_TRIAL", invoicePreview: i, renewalInvoicePreview: a }
+                : null == s || null == a || o
                   ? { type: "LOADING", invoicePreview: null }
-                  : { type: "PREMIUM_DEFAULT", invoicePreview: a, renewalInvoicePreview: s };
+                  : { type: "PREMIUM_DEFAULT", invoicePreview: s, renewalInvoicePreview: a };
     },
-    h = (e) => {
+    p = (e) => {
         let {
             invoiceSummaryTypeWithPreview: t,
             priceOptions: n,
             trialFooterMessageOverride: d,
             hideSubscriptionDetails: _,
             referralTrialOfferId: f,
-            isTrial: h,
-            inReverseTrial: p,
-            fractionalPremiumInfo: g,
+            isTrial: p,
+            inReverseTrial: h,
+            fractionalPremiumInfo: m,
             plan: E,
-            showFractionalPremiumBanner: A,
-            isPrepaid: I,
-            isCustomGift: T,
-            enablePremiumBrandRefresh: y,
+            showFractionalPremiumBanner: g,
+            isPrepaid: A,
+            isCustomGift: I,
+            enablePremiumBrandRefresh: T,
         } = e;
         if (null == t || "LOADING" === t.type) return null;
         let { invoicePreview: S } = t;
@@ -62,15 +62,15 @@ let _ = new Set(["PREMIUM_DEFAULT", "PREMIUM_SWITCH_PLAN"]),
             return (0, r.jsx)(l.DP, {
                 plan: E,
                 className: c.SU,
-                isPrepaidPaymentSource: I,
-                isCustomGift: T,
+                isPrepaidPaymentSource: A,
+                isCustomGift: I,
                 invoicePreview: S,
             });
         if ("PREMIUM_WITH_TRIAL" === t.type)
             return (0, r.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(s.pK, { negativeMarginTop: !p, invisible: !0 }),
-                    (0, r.jsxs)(s.Yx, {
+                    (0, r.jsx)(a.pK, { negativeMarginTop: !h, invisible: !0 }),
+                    (0, r.jsxs)(a.Yx, {
                         className: c.SU,
                         children: [
                             (0, r.jsxs)("div", {
@@ -83,7 +83,7 @@ let _ = new Set(["PREMIUM_DEFAULT", "PREMIUM_SWITCH_PLAN"]),
                                     (0, r.jsx)(i.Text, {
                                         variant: "text-md/normal",
                                         children: u.intl.format(u.t.hXcaLT, {
-                                            price: (0, a.$g)(0, S.currency, {
+                                            price: (0, s.$g)(0, S.currency, {
                                                 minimumFractionDigits: 0,
                                                 maximumFractionDigits: 0,
                                             }),
@@ -100,25 +100,30 @@ let _ = new Set(["PREMIUM_DEFAULT", "PREMIUM_SWITCH_PLAN"]),
             let e,
                 { renewalInvoicePreview: i } = t;
             return (
-                h && S.subscriptionPeriodEnd !== i.subscriptionPeriodEnd && (e = S.subscriptionPeriodEnd),
+                p && S.subscriptionPeriodEnd !== i.subscriptionPeriodEnd && (e = S.subscriptionPeriodEnd),
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        A && (0, r.jsx)(o.vi, { fractionalPremiumInfo: g, enablePremiumBrandRefresh: y }),
-                        (0, r.jsxs)(s.Yx, {
+                        g &&
+                            (0, r.jsx)(o.vi, {
+                                fractionalPremiumInfo: m,
+                                enablePremiumBrandRefresh: T,
+                                variant: h ? o.uA.REVERSE_TRIAL : void 0,
+                            }),
+                        (0, r.jsxs)(a.Yx, {
                             className: c.SU,
                             children: [
-                                (0, r.jsx)(s.Xd, { children: u.intl.string(u.t["2eh+Co"]) }),
+                                (0, r.jsx)(a.Xd, { children: u.intl.string(u.t["2eh+Co"]) }),
                                 (0, r.jsx)(l.mT, {
                                     invoice: S,
                                     newPlan: E,
-                                    isPrepaidPaymentSource: I,
+                                    isPrepaidPaymentSource: A,
                                     referralTrialOfferId: f,
                                 }),
-                                I
+                                A
                                     ? null
                                     : (0, r.jsx)(l.m0, {
                                           renewalInvoice: i,
-                                          isTrial: h,
+                                          isTrial: p,
                                           priceOptions: n,
                                           overrideRenewalDate: e,
                                           trialFooterMessageOverride: d,
