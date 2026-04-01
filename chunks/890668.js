@@ -12,14 +12,14 @@ var s = n(284009),
     m = n(200790),
     g = n(230084),
     _ = n(339442),
-    A = n(900254),
-    x = n(431982),
+    x = n(900254),
+    A = n(431982),
     h = n(730588),
     p = n(593629),
     T = n(164599),
     f = n(63675),
-    E = n(617514),
-    S = n(546849),
+    S = n(617514),
+    E = n(546849),
     b = n(101058),
     C = n(84540),
     N = n(836602),
@@ -28,7 +28,7 @@ var s = n(284009),
     j = n(287809),
     y = n(927578),
     O = n(985018),
-    R = n(35048);
+    R = n(125955);
 function P() {
     let e = (0, a.bG)([j.default], () => {
             let e = j.default.getCurrentUser();
@@ -73,7 +73,7 @@ function P() {
                 user: e,
             }),
             (0, i.jsx)(
-                S.A,
+                E.A,
                 {
                     sectionTitle: O.intl.string(O.t["+T3RI/"]),
                     errors: w.pronouns,
@@ -83,7 +83,7 @@ function P() {
                 },
                 "pronouns",
             ),
-            (0, i.jsx)(E.A, {}),
+            (0, i.jsx)(S.A, {}),
             (0, i.jsx)(
                 g.A,
                 {
@@ -98,7 +98,7 @@ function P() {
                 "avatar",
             ),
             (0, i.jsx)(m.A, { user: e, sectionTitle: O.intl.string(O.t["7v0T9P"]) }, "decoration"),
-            (0, i.jsx)(x.A, { user: e }),
+            (0, i.jsx)(A.A, { user: e }),
             (0, i.jsx)(T.A, { user: e, sectionTitle: O.intl.string(O.t.wR5wOo) }, "effect"),
             F
                 ? (0, i.jsxs)(i.Fragment, {
@@ -149,7 +149,7 @@ function P() {
                     pendingPrimaryGuildId: U,
                     onChange: (e) => (0, C.p)({ primaryGuildId: e }),
                 }),
-            null != X && (0, i.jsx)(A.A, { legacyUsername: X, pendingLegacyUsernameDisabled: k }, "legacy_username"),
+            null != X && (0, i.jsx)(x.A, { legacyUsername: X, pendingLegacyUsernameDisabled: k }, "legacy_username"),
         ],
     });
 }

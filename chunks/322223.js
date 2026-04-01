@@ -5,8 +5,8 @@ var i = n(627968),
     a = n(397927),
     r = n(263063),
     o = n(134413),
-    c = n(221950),
-    d = n(71393),
+    d = n(221950),
+    c = n(71393),
     u = n(309010),
     h = n(967198),
     A = n(954571),
@@ -16,16 +16,16 @@ var i = n(627968),
     p = n(652215),
     f = n(746080),
     x = n(985018),
-    E = n(95473);
+    E = n(592528);
 function I(e) {
     let { onDismiss: t } = e,
         I = (0, s.bG)([h.A], () => h.A.getGuildId()),
         C = (0, s.bG)([u.A], () => (null != I ? u.A.getChannelId(I) : null), [I]),
         N = I ?? null,
-        T = (0, s.bG)([d.A], () => (null != N ? d.A.getGuild(N) : null), [N]),
+        T = (0, s.bG)([c.A], () => (null != N ? c.A.getGuild(N) : null), [N]),
         { shouldShowIncidentActions: S, incidentData: b, isUnderLockdown: y } = (0, _.Li)(N),
         v = (0, o.fw)(T?.id ?? p.dJq),
-        j = l.useCallback(() => null != T && (0, c.aZ)(T.id), [T]);
+        j = l.useCallback(() => null != T && (0, d.aZ)(T.id), [T]);
     if (null == T || null == b || !S) return null;
     let R = (e) => {
             e && v && C !== f.VV.MEMBER_SAFETY && j()

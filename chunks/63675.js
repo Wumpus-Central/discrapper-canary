@@ -12,9 +12,9 @@ var s = n(503698),
     m = n(101928),
     g = n(927578),
     _ = n(911180),
-    A = n(128450),
-    x = n(985018),
-    h = n(514245);
+    x = n(128450),
+    A = n(985018),
+    h = n(5008);
 function p(e) {
     let {
             user: t,
@@ -24,8 +24,8 @@ function p(e) {
             preventDisabled: p,
             guildId: T,
             className: f,
-            showPremiumIcon: E = !0,
-            showResetThemeButton: S = !1,
+            showPremiumIcon: S = !0,
+            showResetThemeButton: E = !1,
             forcedDivider: b,
         } = e,
         C = (0, u.Ay)(t.id, T),
@@ -43,11 +43,11 @@ function p(e) {
     let R = (e) => {
         a(r()(e, C?.themeColors) ? void 0 : e);
     };
-    return (0, i.jsx)(A.A, {
-        title: x.intl.string(x.t.DMeO2X),
+    return (0, i.jsx)(x.A, {
+        title: A.intl.string(A.t.DMeO2X),
         disabled: !I && !p,
         className: l()(h.__invalid_profileThemesSection, f),
-        showPremiumIcon: E,
+        showPremiumIcon: S,
         forcedDivider: b,
         children: (0, i.jsxs)("div", {
             className: h.hd,
@@ -64,7 +64,7 @@ function p(e) {
                             color: "text-default",
                             variant: "text-xs/normal",
                             "aria-hidden": !0,
-                            children: x.intl.string(x.t.C3KTQk),
+                            children: A.intl.string(A.t.C3KTQk),
                         }),
                     }),
                 }),
@@ -80,11 +80,11 @@ function p(e) {
                             color: "text-default",
                             variant: "text-xs/normal",
                             "aria-hidden": !0,
-                            children: x.intl.string(x.t["8elvy6"]),
+                            children: A.intl.string(A.t["8elvy6"]),
                         }),
                     }),
                 }),
-                S &&
+                E &&
                     null != T &&
                     (0, i.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
@@ -92,7 +92,7 @@ function p(e) {
                         children: (0, i.jsx)(d.Button, {
                             variant: "secondary",
                             size: "sm",
-                            text: x.intl.string(x.t["L+GmoR"]),
+                            text: A.intl.string(A.t["L+GmoR"]),
                             onClick: () => R([null, null]),
                         }),
                     }),

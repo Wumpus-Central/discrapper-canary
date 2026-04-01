@@ -1,4 +1,4 @@
-n.d(t, { A: () => S });
+n.d(t, { A: () => T });
 var a = n(627968),
     i = n(64700),
     s = n(503698),
@@ -18,8 +18,8 @@ var a = n(627968),
     v = n(263834),
     b = n(865116),
     j = n(716371),
-    A = n(664558),
-    C = n(793877);
+    A = n(49977),
+    C = n(310086);
 function y() {
     let e = (0, d.yK)([f.default], () => f.default.getSortedChannels()[1]),
         [t, n] = i.useState(e.length > 0 ? e[0].channelId : void 0),
@@ -65,13 +65,13 @@ function y() {
         ],
     });
 }
-function T() {
+function S() {
     let e = i.useCallback(() => {
         u.A.openPrivateChannel({ recipientIds: [j.K] });
     }, []);
     return (0, a.jsx)(c.Button, { variant: "primary", size: "sm", text: "Open System DM", onClick: e });
 }
-function S() {
+function T() {
     let e = (0, d.bG)([b.Ay], () => b.Ay.allByCategory(b.xW.MESSAGING), [], d.My).map((e) => {
         let [t, n, { label: i }] = e;
         return (0, a.jsx)(c.dOG, { label: i, description: t, checked: n, onChange: (e) => (0, v.L)(t, e) }, t);
@@ -83,7 +83,7 @@ function S() {
             (0, a.jsx)("div", { className: A.yF }),
             (0, a.jsx)(y, {}),
             (0, a.jsx)("div", { className: A.yF }),
-            (0, a.jsx)(T, {}),
+            (0, a.jsx)(S, {}),
         ],
     });
 }

@@ -5,8 +5,8 @@ var i = n(627968),
     a = n.n(s),
     r = n(158954),
     o = n(311907),
-    c = n(990078),
-    d = n(397927),
+    d = n(990078),
+    c = n(397927),
     u = n(442433),
     h = n(390435),
     A = n(775121),
@@ -30,7 +30,7 @@ var i = n(627968),
     O = n(826050),
     L = n(652215),
     M = n(985018),
-    D = n(992928);
+    D = n(598855);
 let U = () =>
     (0, i.jsxs)("div", {
         className: D.p$,
@@ -38,7 +38,7 @@ let U = () =>
             (0, i.jsx)("div", { className: D.lv, children: M.intl.string(M.t.bpbATE) }),
             (0, i.jsx)("div", {
                 className: D.PA,
-                children: (0, i.jsx)(d.MzZ, {
+                children: (0, i.jsx)(c.MzZ, {
                     href: y.A.getArticleURL(L.MVz.QUICK_SWITCHER_TUTORIAL),
                     children: M.intl.string(M.t["4iPfEO"]),
                 }),
@@ -94,7 +94,7 @@ let P = o.Ay.connectStores([C.Ay, f.A], (e) => {
     })(R.KJ);
 function H(e, t, n) {
     return (0, i.jsx)(
-        c.m,
+        d.m,
         { __unsupportedReactNodeAsText: n, children: (0, i.jsx)("span", { className: D.ZT, children: t }) },
         e,
     );
@@ -152,16 +152,16 @@ class F extends l.PureComponent {
                         n.e("16301"),
                         n.e("22191"),
                         n.e("25961"),
-                        n.e("33144"),
+                        n.e("91872"),
                         n.e("35894"),
                         n.e("50796"),
                         n.e("8458"),
                         n.e("11810"),
-                        n.e("4260"),
+                        n.e("34656"),
                         n.e("30453"),
                         n.e("56475"),
                         n.e("54469"),
-                        n.e("70522"),
+                        n.e("48892"),
                     ]).then(n.bind(n, 544676));
                     return (n) => (0, i.jsx)(e, { ...n, guild: t.record, onSelect: v.jD, hideSettings: !0 });
                 });
@@ -224,7 +224,7 @@ class F extends l.PureComponent {
                 });
             case _.rD.USER:
                 return (0, u.L3)(e, async () => {
-                    let { default: e } = await Promise.all([n.e("97262"), n.e("32418"), n.e("84821")]).then(
+                    let { default: e } = await Promise.all([n.e("97262"), n.e("32418"), n.e("54631")]).then(
                         n.bind(n, 668569),
                     );
                     return (n) => (0, i.jsx)(e, { ...n, user: t.record, onSelect: v.jD });
@@ -287,7 +287,7 @@ class F extends l.PureComponent {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(S.EG, { event: L.jej.GLOBAL_CLIPBOARD_PASTE, handler: this.handleGlobalPaste }),
-                (0, i.jsx)(d.vN3, {
+                (0, i.jsx)(c.vN3, {
                     children: (0, i.jsx)("input", {
                         className: D.hF,
                         "aria-label": M.intl.string(M.t.ZvKwYa),
@@ -320,7 +320,7 @@ class F extends l.PureComponent {
                 ? (0, i.jsx)(U, {})
                 : 0 === t.length
                   ? null
-                  : (0, i.jsx)(d.Eie, {
+                  : (0, i.jsx)(c.Eie, {
                         innerId: this._listId,
                         innerRole: "listbox",
                         "aria-label": M.intl.string(M.t.Wef5Do),

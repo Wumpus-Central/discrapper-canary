@@ -11,14 +11,14 @@ var i = n(627968),
     m = n(535646),
     g = n(511484),
     _ = n(202639),
-    A = n(811611),
-    x = n(407217),
+    x = n(811611),
+    A = n(407217),
     h = n(101058),
     p = n(207803),
     T = n(84540),
     f = n(836602),
-    E = n(954571),
-    S = n(515718),
+    S = n(954571),
+    E = n(515718),
     b = n(927578),
     C = n(919395),
     N = n(884546),
@@ -33,7 +33,7 @@ var i = n(627968),
     D = n(788868),
     G = n(355097),
     M = n(985018),
-    k = n(63261);
+    k = n(686294);
 function U(e) {
     let { user: t, isVisible: n, shouldShow: U } = e,
         w = b.Ay.isPremium(t),
@@ -63,7 +63,7 @@ function U(e) {
                 (Y?.startsWith("https:") === !0
                     ? fetch(Y)
                           .then((e) => e.blob())
-                          .then((e) => (0, S.We)(e))
+                          .then((e) => (0, E.We)(e))
                           .then((e) => {
                               (0, T.p)({ avatar: z, themeColors: H, banner: e });
                           })
@@ -74,11 +74,11 @@ function U(e) {
                       ? (0, T.p)({ avatar: z, themeColors: H, banner: Y })
                       : (0, T.p)({ avatar: z, themeColors: H }),
                 (0, C.WU)(z),
-                E.default.track(L.HAw.TRY_IT_OUT_PRESET_SELECTED, { preset: X }));
+                S.default.track(L.HAw.TRY_IT_OUT_PRESET_SELECTED, { preset: X }));
         };
     s.useEffect(() => {
         n &&
-            E.default.track(L.HAw.PREMIUM_UPSELL_VIEWED, {
+            S.default.track(L.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: D.e.PREMIUM_PROFILE_TRY_IT_OUT,
                 location: { page: L.liQ.USER_SETTINGS },
                 location_stack: Q,
@@ -166,7 +166,7 @@ function U(e) {
                               showUpsell: !0,
                               text: M.intl.format(M.t.TmfgI2, {
                                   onClick: () => {
-                                      (0, x.K)({ analyticsSource: q, onSubscribeFinish: J });
+                                      (0, A.K)({ analyticsSource: q, onSubscribeFinish: J });
                                   },
                               }),
                               button: w
@@ -180,7 +180,7 @@ function U(e) {
                           (0, i.jsxs)("div", {
                               children: [
                                   (0, i.jsx)("div", { className: k.BU }),
-                                  (0, i.jsx)(A.Ay, {
+                                  (0, i.jsx)(x.Ay, {
                                       type: D.e.CUSTOM_PROFILE_TRY_OUT_UPSELL,
                                       subscriptionTier: D.pe.TIER_2,
                                   }),

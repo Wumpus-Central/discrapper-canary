@@ -6,22 +6,22 @@ var l = n(311907),
     a = n(397927),
     r = n(931991),
     o = n(734057),
-    c = n(87401),
-    d = n(707592),
+    d = n(87401),
+    c = n(707592),
     u = n(698441),
     h = n(935159),
     A = n(508654),
     _ = n(974930),
     m = n(47868),
     g = n(985018),
-    p = n(537512);
+    p = n(275237);
 function f(e) {
     let { channelId: t, showDismiss: f = !0 } = e,
         x = (0, l.bG)([o.A], () => o.A.getChannel(t), [t]),
         E = (0, A.RO)(t),
         I = null != (0, A.Qs)(t),
         { canManageGuildEvent: C } = (0, r.nr)(x),
-        N = (0, l.bG)([c.A], () => E.filter((e) => !c.A.isEventDismissed(e.id)), [E]),
+        N = (0, l.bG)([d.A], () => E.filter((e) => !d.A.isEventDismissed(e.id)), [E]),
         T = (0, l.cf)([u.Ay], () => N.reduce((e, t) => ((e[t.id] = u.Ay.getUserCount(t.id, (0, _.G3)(t))), e), {}), [
             N,
         ]);
@@ -44,11 +44,11 @@ function f(e) {
                                         let { default: t } = await Promise.all([
                                             n.e("51354"),
                                             n.e("77223"),
-                                            n.e("953"),
+                                            n.e("93676"),
                                         ]).then(n.bind(n, 199226));
                                         return (n) => (0, i.jsx)(t, { ...n, event: e });
                                     })
-                                  : (0, d.uR)({ eventId: e.id });
+                                  : (0, c.uR)({ eventId: e.id });
                           },
                           onDismiss: f
                               ? () => {

@@ -1,19 +1,19 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => x });
 var i = n(627968);
 n(64700);
 var s = n(503698),
     l = n.n(s),
-    a = n(382222),
+    a = n(773690),
     r = n(397927),
     o = n(793574),
     d = n(688810),
     c = n(927578),
     u = n(473702),
     m = n(985018),
-    g = n(73785),
+    g = n(288492),
     _ = n(67423);
-let A = function (e) {
-    let { isVisible: t, premiumSubscription: s, churnDiscountOffer: A, discountedPrice: x } = e,
+let x = function (e) {
+    let { isVisible: t, premiumSubscription: s, churnDiscountOffer: x, discountedPrice: A } = e,
         { analyticsLocations: h } = (0, d.Ay)(o.A.CHURN_DISCOUNT_PERSISTENT_CTA),
         p = (0, r.zhh)({
             transform: t ? "translateY(-100%)" : "translateY(0%)",
@@ -33,15 +33,15 @@ let A = function (e) {
                         (0, i.jsx)(r.Heading, {
                             variant: "heading-md/semibold",
                             color: "text-strong",
-                            children: m.intl.format(m.t["3yZP0G"], { percent: A.discount.amount }),
+                            children: m.intl.format(m.t["3yZP0G"], { percent: x.discount.amount }),
                         }),
                         (0, i.jsx)(r.Text, {
                             variant: "text-sm/medium",
                             color: "text-default",
                             children: m.intl.format(m.t["3Q4wCy"], {
-                                numMonths: A.discount.user_usage_limit,
-                                discountedPrice: x,
-                                billingPeriod: (0, c.Ke)(A.discount.user_usage_limit_interval),
+                                numMonths: x.discount.user_usage_limit,
+                                discountedPrice: A,
+                                billingPeriod: (0, c.Ke)(x.discount.user_usage_limit_interval),
                             }),
                         }),
                     ],
@@ -56,7 +56,7 @@ let A = function (e) {
                             let { PremiumBrandRefreshSubscriptionCancellationModal: e } = await Promise.all([
                                 n.e("41353"),
                                 n.e("35432"),
-                                n.e("62843"),
+                                n.e("18398"),
                             ]).then(n.bind(n, 281439));
                             return (t) =>
                                 (0, i.jsx)(e, {

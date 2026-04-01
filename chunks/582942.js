@@ -12,13 +12,13 @@ var l = n(503698),
     m = n(136086),
     x = n(885151),
     h = n(409626),
-    f = n(422069),
-    g = n(611656),
+    g = n(422069),
+    f = n(611656),
     _ = n(459746),
     p = n(225732),
     v = n(985018),
-    A = n(325952),
-    j = n(92750);
+    A = n(282063),
+    j = n(379093);
 let E = (e) => {
     let { game: t, onClose: n, trackClick: l } = e,
         i = (0, c.bG)([u.A], () => u.A.getApplication(t.applicationId));
@@ -43,8 +43,8 @@ let E = (e) => {
 };
 function C(e) {
     let { applicationId: t, onClose: n, trackAction: l, similarGames: r, similarGamesError: o } = e,
-        u = (0, c.bG)([f.A, m.A], () => {
-            let e = void 0 === f.A.getSimilarGames(t) && null == f.A.getSimilarGamesError(t),
+        u = (0, c.bG)([g.A, m.A], () => {
+            let e = void 0 === g.A.getSimilarGames(t) && null == g.A.getSimilarGamesError(t),
                 n = r.some((e) => m.A.isFetching(e));
             return e || n;
         }),
@@ -52,7 +52,7 @@ function C(e) {
             r
                 .map((e) => m.A.getGame(e))
                 .filter((e) => null != e)
-                .filter((e) => (0, g.oS)(e.applicationId))
+                .filter((e) => (0, f.oS)(e.applicationId))
                 .slice(0, 5),
         );
     return ((0, x.k)(t), (0, x.W)(r), u && null == o)

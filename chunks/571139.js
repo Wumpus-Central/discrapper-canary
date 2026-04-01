@@ -6,8 +6,8 @@ var l = n(503698),
     a = n(873263),
     r = n(311907),
     o = n(314116),
-    c = n(397927),
-    d = n(334465),
+    d = n(397927),
+    c = n(334465),
     u = n(71393),
     h = n(967198),
     A = n(624458),
@@ -18,14 +18,14 @@ var l = n(503698),
     f = n(652215),
     x = n(746080),
     E = n(985018),
-    I = n(610749),
-    C = n(375986);
+    I = n(79790),
+    C = n(215433);
 let N = () => {
     let e = (0, r.bG)([h.A], () => h.A.getGuildId(), []),
         t = (0, r.bG)([u.A], () => u.A.getGuild(e), [e]),
         l = (0, r.bG)([p.A], () => (null != e ? p.A.getRequest(e) : null), [e]),
         N = (0, a.zy)(),
-        T = (0, d.B)(N.pathname, f.BVt.CHANNEL(t?.id, x.VV.GUILD_ONBOARDING))?.isExact === !0;
+        T = (0, c.B)(N.pathname, f.BVt.CHANNEL(t?.id, x.VV.GUILD_ONBOARDING))?.isExact === !0;
     if (null == t || !(0, g.Qd)(t) || T) return null;
     let S = l?.applicationStatus ?? m.B5.STARTED,
         b = null,
@@ -50,7 +50,7 @@ let N = () => {
             (b = E.intl.string(E.t.lk30cY)),
                 (y = E.intl.string(E.t["8RrsHr"])),
                 (v = () => {
-                    (0, c.mMO)(async () => {
+                    (0, d.mMO)(async () => {
                         let { default: e } = await n.e("37548").then(n.bind(n, 856103));
                         return (n) => (0, i.jsx)(e, { guildId: t.id, ...n });
                     });
@@ -67,8 +67,8 @@ let N = () => {
     return (0, i.jsxs)("div", {
         className: s()(...j),
         children: [
-            (0, i.jsx)(c.Text, { className: I.wx, variant: "text-sm/normal", children: b }),
-            (0, i.jsx)(c.Button, { variant: "overlay-primary", size: "sm", onClick: v, text: y }),
+            (0, i.jsx)(d.Text, { className: I.wx, variant: "text-sm/normal", children: b }),
+            (0, i.jsx)(d.Button, { variant: "overlay-primary", size: "sm", onClick: v, text: y }),
         ],
     });
 };

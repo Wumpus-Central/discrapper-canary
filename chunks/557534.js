@@ -5,8 +5,8 @@ var i = n(627968),
     a = n.n(s),
     r = n(311907),
     o = n(990078),
-    c = n(397927),
-    d = n(435183),
+    d = n(397927),
+    c = n(435183),
     u = n(5180),
     h = n(698441),
     A = n(855687),
@@ -21,7 +21,7 @@ var i = n(627968),
     C = n(343360),
     N = n(652215),
     T = n(985018),
-    S = n(99566);
+    S = n(928409);
 function b(e, t, n) {
     return null != t && !!t && !(0, C.ws)(n, e.type);
 }
@@ -47,14 +47,14 @@ function v(e) {
         : (0, i.jsx)(o.m, {
               asContainer: !0,
               text: T.intl.string(T.t["3gUsJb"]),
-              children: (0, i.jsx)(c.DUT, {
+              children: (0, i.jsx)(d.DUT, {
                   className: a()(S.Xs, s ? S.Tf : void 0, h ? S.bw : S.UI),
                   onClick: function () {
-                      d.Ay.open(t.id);
+                      c.Ay.open(t.id);
                   },
                   tabIndex: l,
                   "aria-label": T.intl.string(T.t["3gUsJb"]),
-                  children: (0, i.jsx)(c.Zes, { size: "xs", color: "currentColor", className: S.gE }),
+                  children: (0, i.jsx)(d.Zes, { size: "xs", color: "currentColor", className: S.gE }),
               }),
           });
 }
@@ -62,7 +62,7 @@ function j(e) {
     let {
             channel: t,
             isDefaultChannel: s = !1,
-            locked: d,
+            locked: c,
             tabIndex: u,
             forceShowButtons: _,
             hasChannelInfo: p = !1,
@@ -75,8 +75,8 @@ function j(e) {
             t?.type === N.rbe.GUILD_VOICE ? T.intl.string(T.t["EE+P0H"]) : T.intl.string(T.t["0jeAXt"]),
         ),
         j = l.useRef(null);
-    if (d || !y || t.isModeratorReportChannel() || t.isThread()) return null;
-    let R = (0, i.jsx)(c.Rvf, { size: "xs", className: S.gE, "aria-hidden": !0, color: "currentColor" });
+    if (c || !y || t.isModeratorReportChannel() || t.isThread()) return null;
+    let R = (0, i.jsx)(d.Rvf, { size: "xs", className: S.gE, "aria-hidden": !0, color: "currentColor" });
     return (
         s &&
             (R = (0, i.jsx)(g.A, {
@@ -88,15 +88,15 @@ function j(e) {
         (0, i.jsx)(o.m, {
             asContainer: !0,
             text: v,
-            children: (0, i.jsx)(c.DUT, {
+            children: (0, i.jsx)(d.DUT, {
                 className: a()(S.Xs, _ ? S.Tf : void 0, p ? S.bw : S.UI),
                 onClick: function () {
                     if (null != I) {
                         let e = f.A.getAllActiveStreams().filter(
                             (e) => e.state !== N.XYD.ENDED && e.channelId === t.id,
                         );
-                        (0, c.mMO)(async () => {
-                            let { default: l } = await Promise.all([n.e("43600"), n.e("71281")]).then(
+                        (0, d.mMO)(async () => {
+                            let { default: l } = await Promise.all([n.e("43600"), n.e("67505")]).then(
                                 n.bind(n, 234355),
                             );
                             return (n) =>
@@ -123,13 +123,13 @@ function R(e) {
     return (0, i.jsx)(o.m, {
         asContainer: !0,
         text: T.intl.string(T.t["ROh4T+"]),
-        children: (0, i.jsx)(c.DUT, {
+        children: (0, i.jsx)(d.DUT, {
             className: S.Xs,
             onClick: () => {
                 (0, _.Ol)(t.guild_id, t.id);
             },
             "aria-label": T.intl.string(T.t["ROh4T+"]),
-            children: (0, i.jsx)(c.PGe, { size: "xs", color: "currentColor", className: S.gE }),
+            children: (0, i.jsx)(d.PGe, { size: "xs", color: "currentColor", className: S.gE }),
         }),
     });
 }
@@ -138,13 +138,13 @@ function O(e) {
     return (0, i.jsx)(o.m, {
         asContainer: !0,
         text: T.intl.string(T.t["N2c/Un"]),
-        children: (0, i.jsx)(c.DUT, {
+        children: (0, i.jsx)(d.DUT, {
             className: S.Xs,
             onClick: () => {
                 (0, _.jA)(t.guild_id, t.id, !0, { section: N.JJy.CHANNEL_LIST });
             },
             "aria-label": T.intl.string(T.t["N2c/Un"]),
-            children: (0, i.jsx)(c.A9s, { size: "xs", color: "currentColor", className: S.gE }),
+            children: (0, i.jsx)(d.A9s, { size: "xs", color: "currentColor", className: S.gE }),
         }),
     });
 }

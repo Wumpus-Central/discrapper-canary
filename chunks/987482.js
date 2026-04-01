@@ -17,7 +17,7 @@ var i = n(627968),
     E = n(53505),
     I = n(652215),
     f = n(985018),
-    C = n(28690);
+    C = n(342453);
 let T = [
         { getOs: () => f.intl.string(f.t.NK5ySJ), icon: C.Bt, url: () => (0, E.oW)("osx", !1), platformKey: 0 },
         { getOs: () => f.intl.string(f.t.OvKGE6), icon: C.KF, url: () => (0, E.oW)("win", !1), platformKey: 1 },

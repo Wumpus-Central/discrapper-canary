@@ -11,7 +11,7 @@ var l = n(627968),
     _ = n(17372),
     m = n(369053),
     x = n(482578),
-    p = n(26111),
+    p = n(248492),
     g = n(133134),
     h = n(374966),
     A = n(803957),
@@ -34,8 +34,8 @@ var l = n(627968),
     G = n(66535),
     L = n(12613),
     D = n(842012),
-    B = n(666580),
-    P = n(588684),
+    P = n(666580),
+    B = n(588684),
     U = n(316862),
     H = n(563218),
     V = n(617071),
@@ -45,11 +45,11 @@ var l = n(627968),
     K = n(908675),
     $ = n(503985),
     Q = n(145996),
-    Y = n(964448),
-    q = n(652215),
-    Z = n(985018),
-    J = n(733045),
-    X = n(859117);
+    q = n(964448),
+    Y = n(652215),
+    J = n(985018),
+    Z = n(641131),
+    X = n(687404);
 let ee = ["user_urf", "message_urf", "guild_urf", "media_takedown"];
 function et(e, t) {
     let { elements: n } = e;
@@ -108,7 +108,7 @@ let el = (e) => {
             }),
             [t, eg, eh, eA, ev, eT, em, eM, ew],
         ),
-        eB = a.useMemo(
+        eP = a.useMemo(
             () =>
                 (0, m.ks)(
                     {
@@ -123,7 +123,7 @@ let el = (e) => {
                 ),
             [eg, eh, eA, ev, em, eT, ew, eM],
         ),
-        eP = a.useCallback(
+        eB = a.useCallback(
             (e, t) => {
                 let n = { ...eM };
                 e in eM ? delete n[e] : (n[e] = t), eR(n);
@@ -172,19 +172,19 @@ let el = (e) => {
     let eV = a.useCallback(
             (e) => {
                 switch (e) {
-                    case q.t02.UNKNOWN_TIDA_CONTENT: {
-                        let e = Z.intl.string(Z.t["2EPoxE"]);
+                    case Y.t02.UNKNOWN_TIDA_CONTENT: {
+                        let e = J.intl.string(J.t["2EPoxE"]);
                         eE(e), ed?.("MEDIA_TAKEDOWN_CONTENT_DETAILS", e);
                         break;
                     }
-                    case q.t02.INVALID_SIGNATURE_MISMATCH:
-                        eE(Z.intl.string(Z.t.kXrnQM));
+                    case Y.t02.INVALID_SIGNATURE_MISMATCH:
+                        eE(J.intl.string(J.t.kXrnQM));
                         break;
-                    case q.t02.INVALID_FORM_BODY:
-                        eE(Z.intl.string(Z.t.VjAAuP));
+                    case Y.t02.INVALID_FORM_BODY:
+                        eE(J.intl.string(J.t.VjAAuP));
                         break;
                     default:
-                        eC ? eE(Z.intl.string(J.default.psKFdJ)) : eE(Z.intl.string(Z.t.h6D8Vy));
+                        eC ? eE(J.intl.string(Z.default.psKFdJ)) : eE(J.intl.string(J.t.h6D8Vy));
                 }
             },
             [eC, ed],
@@ -220,9 +220,9 @@ let el = (e) => {
         ),
         ez = a.useCallback(
             (e) => {
-                "Enter" !== e.key || eB || eI || null == t.button || (e.preventDefault(), eW(t.button));
+                "Enter" !== e.key || eP || eI || null == t.button || (e.preventDefault(), eW(t.button));
             },
-            [eB, eI, t.button, eW],
+            [eP, eI, t.button, eW],
         );
     a.useEffect(() => {
         t.is_auto_submit && !eS && (ey(!0), es(eD(["", t.id])));
@@ -230,8 +230,8 @@ let el = (e) => {
     let eK = (0, u.fY)(el),
         e$ = null != et(t, "ignore_users") && ("message" === n.name || "first_dm" === n.name || "user" === n.name),
         eQ = (0, c.Z)(),
-        eY = (0, o.GR)(),
-        eq = eQ && eY.length > 0 && null != et(t, "share_with_parents");
+        eq = (0, o.GR)(),
+        eY = eQ && eq.length > 0 && null != et(t, "share_with_parents");
     return (0, l.jsxs)("div", {
         className: X.kL,
         onKeyDown: ez,
@@ -278,10 +278,10 @@ let el = (e) => {
                         let { elements: t } = e;
                         return t.some((e) => {
                             let { type: t } = e;
-                            return Y.T.includes(t);
+                            return q.T.includes(t);
                         });
                     })(t) &&
-                        (0, l.jsxs)(P.A, {
+                        (0, l.jsxs)(B.A, {
                             children: [
                                 e$ &&
                                     (0, l.jsx)(M.A, {
@@ -289,7 +289,7 @@ let el = (e) => {
                                         channelId: eL,
                                         reportId: ec,
                                     }),
-                                eq && (0, l.jsx)(V.A, { parents: eY }),
+                                eY && (0, l.jsx)(V.A, { parents: eq }),
                                 null != et(t, "block_users") &&
                                     ("message" === n.name ||
                                         "first_dm" === n.name ||
@@ -356,13 +356,13 @@ let el = (e) => {
                         "guild_discovery" === n.name &&
                         (0, l.jsx)(S.A, { entry: n.record }),
                     null != et(t, "app_preview") && "application" === n.name && (0, l.jsx)(p.A, { entry: n.record }),
-                    null != em && (0, l.jsx)(L.A, { element: em, onChange: eP, state: eM }),
+                    null != em && (0, l.jsx)(L.A, { element: em, onChange: eB, state: eM }),
                     ee.includes(n.name) && null != eT && (0, l.jsx)(b.A, { element: eT, onChange: eU, state: ew }),
                     ee.includes(n.name) &&
                         null != eh &&
                         eh.length > 0 &&
                         (0, l.jsx)("div", { children: (0, l.jsx)(C.A, { elements: eh, onChange: eU, state: ew }) }),
-                    ev.map((e) => (0, l.jsx)(B.A, { element: e, onChange: eU, state: ew }, e.name)),
+                    ev.map((e) => (0, l.jsx)(P.A, { element: e, onChange: eU, state: ew }, e.name)),
                     null != eb &&
                         (function (e, t, n) {
                             let { visible_when: l } = e.data;
@@ -401,7 +401,7 @@ let el = (e) => {
             (0, l.jsx)(x.A, {
                 button: t.button,
                 submitting: eI,
-                disableNext: eB,
+                disableNext: eP,
                 isModeratorReport: eC,
                 onClick: eW,
                 onBackClicked: e.onNavigateBack,

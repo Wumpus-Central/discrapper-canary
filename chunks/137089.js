@@ -5,8 +5,8 @@ var i = n(627968),
     a = n.n(s),
     r = n(311907),
     o = n(104171),
-    c = n(186369),
-    d = n(970812),
+    d = n(186369),
+    c = n(970812),
     u = n(395504),
     h = n(543465),
     A = n(147036),
@@ -14,8 +14,8 @@ var i = n(627968),
     m = n(85808),
     g = n(823142);
 n(83766);
-var p = n(99566),
-    f = n(520487);
+var p = n(928409),
+    f = n(116648);
 let x = l.memo(function (e) {
     let { guildChannels: t, guildChannelsVersion: n } = e,
         s = l.useMemo(() => t.getCategoryFromSection(t.voiceChannelsSectionNumber), [t, n]);
@@ -33,9 +33,9 @@ function E(e) {
         density: o,
     } = e;
     if (t === n.voiceChannelsSectionNumber) return 44;
-    let { hasDivider: c, canHaveVoiceSummary: d } = (0, m.B3)(n, a, t),
-        u = c ? (r ? 9 : 12) : 0;
-    if (!d || t === _.PU) return u;
+    let { hasDivider: d, canHaveVoiceSummary: c } = (0, m.B3)(n, a, t),
+        u = d ? (r ? 9 : 12) : 0;
+    if (!c || t === _.PU) return u;
     let h = n.getNamedCategoryFromSection(t);
     return null == h
         ? u
@@ -62,7 +62,7 @@ let C = l.memo(function (e) {
         { hasDivider: T, canHaveVoiceSummary: S } = l.useMemo(() => (0, m.B3)(n, N, t), [n, N, t, s]),
         b = l.useMemo(() => (t === _.PU ? null : n.getCategoryFromSection(t)), [n, t, s]),
         y = (0, u.jN)(E),
-        { enableWaveformIcon: v } = (0, c.b)(E, "ChannelListSectionFooter"),
+        { enableWaveformIcon: v } = (0, d.b)(E, "ChannelListSectionFooter"),
         j = (0, r.yK)([h.Ay], () => {
             if (null == b || !b.isCollapsed || !S) return [];
             let e = b.getChannelRecords(),
@@ -92,7 +92,7 @@ let C = l.memo(function (e) {
                           showUserPopout: !0,
                           guildId: E,
                           renderLeadingIcon: v
-                              ? (e) => (0, i.jsx)(d.A, { color: "currentColor", className: a()(e, p.Gj) })
+                              ? (e) => (0, i.jsx)(c.A, { color: "currentColor", className: a()(e, p.Gj) })
                               : void 0,
                       }),
                   }),

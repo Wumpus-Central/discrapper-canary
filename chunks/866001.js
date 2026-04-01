@@ -21,10 +21,10 @@ var a = n(627968),
     A = n(708403),
     C = n(260880),
     y = n(303054),
-    T = n(231643),
-    S = n(652215),
-    E = n(689599),
-    N = n(793877);
+    S = n(231643),
+    T = n(652215),
+    E = n(35226),
+    N = n(310086);
 function I(e) {
     return parseFloat(e.toFixed(3));
 }
@@ -55,7 +55,7 @@ let R = [
     {
         id: "action",
         name: "Action",
-        group: T.fu.NONE,
+        group: S.fu.NONE,
         render(e) {
             let { actionLog: t } = e,
                 n = c()(t.createdAt);
@@ -83,7 +83,7 @@ let R = [
     {
         id: "traces",
         name: "Store Handlers",
-        group: T.fu.NONE,
+        group: S.fu.NONE,
         render(e) {
             let { actionLog: t } = e;
             return (0, a.jsx)(O, { actionLog: t });
@@ -102,7 +102,7 @@ function w(e) {
                               name: (0, a.jsxs)(a.Fragment, {
                                   children: [(0, a.jsx)(f.A, { className: E.ik }), "Error"],
                               }),
-                              group: T.fu.NONE,
+                              group: S.fu.NONE,
                               render(e) {
                                   let { actionLog: t } = e;
                                   return (0, a.jsxs)(a.Fragment, {
@@ -131,7 +131,7 @@ function w(e) {
                     : R,
             [t],
         ),
-        { TabBar: r, renderSelectedTab: o } = (0, T.Ay)({ tabs: s }, [s]);
+        { TabBar: r, renderSelectedTab: o } = (0, S.Ay)({ tabs: s }, [s]);
     return (0, a.jsxs)(C.A, {
         className: E.rf,
         minHeight: 100,
@@ -151,7 +151,7 @@ function w(e) {
                             let n = JSON.stringify(
                                 Object.keys((e = t.action)).reduce((t, n) => {
                                     var a;
-                                    return (t[n] = ((a = e[n]), S.AKn.test(a) ? "REDACTED" : a)), t;
+                                    return (t[n] = ((a = e[n]), T.AKn.test(a) ? "REDACTED" : a)), t;
                                 }, {}),
                                 null,
                                 2,
@@ -241,8 +241,8 @@ function M() {
             [r],
         ),
         C = t.trim().length > 0,
-        T = i.useMemo(() => (C ? m : g ? d : r), [r, m, C, g, d]),
-        S = g ? "Enable Event Tracking" : "Pause Event Tracking";
+        S = i.useMemo(() => (C ? m : g ? d : r), [r, m, C, g, d]),
+        T = g ? "Enable Event Tracking" : "Pause Event Tracking";
     return (0, a.jsxs)("div", {
         ref: e,
         className: l()(N.nd, E.nd),
@@ -251,12 +251,12 @@ function M() {
                 className: E.KE,
                 children: [
                     (0, a.jsx)(u.m, {
-                        text: S,
+                        text: T,
                         children: (0, a.jsx)(h.K0, {
                             size: "sm",
                             variant: g ? "primary" : "active",
                             icon: g ? h.udU : h.E$n,
-                            "aria-label": S,
+                            "aria-label": T,
                             onClick: () => A(!g),
                         }),
                     }),
@@ -271,7 +271,7 @@ function M() {
             }),
             (0, a.jsx)(y.A, {
                 columns: D,
-                data: T,
+                data: S,
                 selectedRowKey: v?.id.toString(),
                 onClickRow: (e) => b(e.actionLog),
             }),

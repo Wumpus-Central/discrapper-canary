@@ -11,31 +11,31 @@ var i = n(627968),
     m = n(793574),
     g = n(688810),
     _ = n(531260),
-    A = n(160946),
-    x = n(287809),
+    x = n(160946),
+    A = n(287809),
     h = n(166403),
     p = n(927578),
     T = n(40185),
     f = n(89366),
-    E = n(422936),
-    S = n(234419),
+    S = n(422936),
+    E = n(234419),
     b = n(863156),
     C = n(194509),
     N = n(396375),
     v = n(511484),
-    I = n(231265),
-    j = n(795269),
+    I = n(774774),
+    j = n(231265),
     y = n(38720),
     O = n(788868),
     R = n(985018),
-    P = n(257890),
+    P = n(70667),
     L = n(196093),
     D = n(979653),
     G = n(255631),
     M = n(193023);
 let k = () => {
-        let e = (0, I._)();
-        return (0, i.jsx)(j.ir, { text: e, className: P.QR, colorOptions: j.at.PREMIUM_TIER_2_NEW_GRADIENT_FILL });
+        let e = (0, j._)();
+        return (0, i.jsx)(I.HU, { text: e, className: P.QR, colorOptions: I.at.PREMIUM_TIER_2_NEW_GRADIENT_FILL });
     },
     U = () =>
         (0, i.jsx)("div", {
@@ -103,23 +103,23 @@ let k = () => {
             {
                 className: n,
                 hideCTAs: l = !1,
-                headingOverride: I,
+                headingOverride: j,
                 hidePill: L = !1,
                 selectedPlanColumnClassName: D,
                 selectedPlanTier: G = O.PremiumTypes.TIER_2,
             } = e,
             { analyticsLocations: M } = (0, g.Ay)(m.A.PREMIUM_MARKETING_PLAN_COMPARISON),
             F = (0, r.bG)([h.A], () => h.A.hasFetchedSubscriptions()),
-            H = (0, A.Y)(O.T7),
+            H = (0, x.Y)(O.T7),
             z = (0, u.Ay)(),
             Y = (0, o.qB)(z),
-            X = (0, r.bG)([x.default], () => x.default.getCurrentUser()),
+            X = (0, r.bG)([A.default], () => A.default.getCurrentUser()),
             K = null != X && X.isPremiumWithPremiumGroup(),
             W = (0, p.YE)(X, O.PremiumTypes.TIER_2),
-            Z = (0, S.V)(),
+            Z = (0, E.V)(),
             q = Z?.subscription_trial?.sku_id,
             Q = (0, f.Us)(),
-            J = (0, E.O)(),
+            J = (0, S.O)(),
             $ = null != J && (0, v.U9)(J, O.pe.TIER_2),
             ee = (0, v.N1)(O.gD.PREMIUM_MONTH_TIER_2),
             et = `${ee}/${(0, p.FJ)(O.WT.MONTH)}`,
@@ -194,19 +194,19 @@ let k = () => {
             (t = L
                 ? null
                 : null != q || null != Q
-                  ? (0, i.jsx)(j.ir, {
+                  ? (0, i.jsx)(I.HU, {
                         text: null != q ? R.intl.string(R.t.IBYG5U) : R.intl.string(R.t.ce1v3V),
                         className: P.ls,
                         colorOptions:
                             q === O.pe.TIER_0
                                 ? Y
-                                    ? j.at.PREMIUM_TIER_0_GRADIENT_FILL
-                                    : j.at.PREMIUM_TIER_0_WHITE_FILL
+                                    ? I.at.PREMIUM_TIER_0_GRADIENT_FILL
+                                    : I.at.PREMIUM_TIER_0_WHITE_FILL
                                 : Y
                                   ? W
-                                      ? j.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL
-                                      : j.at.PREMIUM_TIER_2_NEW_GRADIENT_FILL
-                                  : j.at.PREMIUM_TIER_2_WHITE_FILL,
+                                      ? I.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL
+                                      : I.at.PREMIUM_TIER_2_NEW_GRADIENT_FILL
+                                  : I.at.PREMIUM_TIER_2_WHITE_FILL,
                     })
                   : ea
                     ? (0, i.jsx)(k, {})
@@ -221,7 +221,7 @@ let k = () => {
                     (0, i.jsx)(c.Heading, {
                         className: a()(P.Qw, P.__invalid_textColor),
                         variant: "heading-xxl/extrabold",
-                        children: I ?? R.intl.string(R.t.FIbMh9),
+                        children: j ?? R.intl.string(R.t.FIbMh9),
                     }),
                     K && (0, i.jsx)(b.A, { premiumGroupRole: X.premiumGroupRole, className: P.vg }),
                     (0, i.jsxs)("div", {

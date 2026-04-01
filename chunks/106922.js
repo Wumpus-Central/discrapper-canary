@@ -11,14 +11,14 @@ var i = n(627968),
     m = n(230109),
     g = n(732955),
     _ = n(582754),
-    A = n(421380),
-    x = n(397927),
+    x = n(421380),
+    A = n(397927),
     h = n(73153),
     p = n(384904),
     T = n(73825),
     f = n(736653),
-    E = n(793574),
-    S = n(688810),
+    S = n(793574),
+    E = n(688810),
     b = n(86379),
     C = n(531260),
     N = n(160946),
@@ -53,7 +53,7 @@ var i = n(627968),
     ee = n(88001),
     et = n(652215),
     en = n(985018),
-    ei = n(26754),
+    ei = n(699357),
     es = n(396785),
     el = n(956537);
 let ea = "to_premium_home_button",
@@ -80,7 +80,7 @@ function ec(e) {
                               : Z.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
                       }),
                   (a || !r) && (0, i.jsx)("div", { className: ei.on }),
-                  (0, i.jsx)(x.Heading, {
+                  (0, i.jsx)(A.Heading, {
                       variant: "heading-md/normal",
                       color: "always-white",
                       className: ei.KB,
@@ -110,15 +110,15 @@ function eu() {
         c = null !== s && null !== s.planIdFromItems;
     if (!c && !o.isFractionalPremiumActive && !r) return null;
     let m = o.isFractionalPremiumActive,
-        A = null !== s && s.hasActiveTrial;
+        x = null !== s && s.hasActiveTrial;
     return (0, i.jsxs)("div", {
-        className: a()(ei.$Y, { [ei.J5]: e || A }),
+        className: a()(ei.$Y, { [ei.J5]: e || x }),
         children: [
             (0, i.jsxs)("div", {
                 className: ei.jp,
                 children: [
                     r
-                        ? (0, i.jsx)(x.Heading, {
+                        ? (0, i.jsx)(A.Heading, {
                               variant: "display-md",
                               color: "always-white",
                               className: ei._K,
@@ -135,7 +135,7 @@ function eu() {
                                         className: ei.rd,
                                         colorOptions: Z.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
                                     }),
-                                    (0, i.jsx)(x.Heading, {
+                                    (0, i.jsx)(A.Heading, {
                                         variant: "heading-md/normal",
                                         color: "always-white",
                                         className: ei.sQ,
@@ -162,7 +162,7 @@ function eu() {
                                                 ? Z.at.PREMIUM_TIER_2_WHITE_FILL
                                                 : Z.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
                                         }),
-                                        (0, i.jsx)(x.Heading, {
+                                        (0, i.jsx)(A.Heading, {
                                             variant: "heading-md/normal",
                                             color: "always-white",
                                             className: ei.KB,
@@ -268,15 +268,15 @@ function em(e) {
             (0, i.jsxs)("div", {
                 className: ei.QT,
                 children: [
-                    (0, i.jsx)(x.Heading, {
+                    (0, i.jsx)(A.Heading, {
                         className: ei.u_,
                         style: u,
                         variant: "heading-lg/extrabold",
                         children: n.header,
                     }),
-                    (0, i.jsx)(x.Text, { className: ei.Oi, style: u, variant: "text-xs/medium", children: n.body }),
+                    (0, i.jsx)(A.Text, { className: ei.Oi, style: u, variant: "text-xs/medium", children: n.body }),
                     null != n.additionalTerms &&
-                        (0, i.jsx)(x.Text, {
+                        (0, i.jsx)(A.Text, {
                             className: ei.KW,
                             style: u,
                             variant: "text-xxs/normal",
@@ -302,12 +302,12 @@ function eg() {
             (0, i.jsxs)("div", {
                 className: ei.b4,
                 children: [
-                    (0, i.jsx)(x.Heading, {
+                    (0, i.jsx)(A.Heading, {
                         className: ei.Vz,
                         variant: "heading-xl/extrabold",
                         children: en.intl.string(en.t["3KomGa"]),
                     }),
-                    (0, i.jsx)(x.Text, {
+                    (0, i.jsx)(A.Text, {
                         className: ei.Oi,
                         variant: "text-sm/normal",
                         children: en.intl.string(en.t.yQ06u1),
@@ -315,7 +315,7 @@ function eg() {
                     (0, i.jsx)(X.A, {
                         className: a()(ei.Tp, ei._c),
                         textOptions: { textOverride: en.intl.string(en.t.Ve9Ge6), textClassName: ei.VV },
-                        color: A.$n.Colors.CUSTOM,
+                        color: x.$n.Colors.CUSTOM,
                         onClick: () => {
                             G.default.track(et.HAw.PREMIUM_SETTINGS_INTERACTED, { cta_type: eo, target: ed });
                         },
@@ -327,20 +327,20 @@ function eg() {
 }
 let e_ = function () {
     let e = (0, b.Hp)(),
-        { analyticsLocations: t } = (0, S.Ay)(E.A.PREMIUM_SETTINGS),
+        { analyticsLocations: t } = (0, E.Ay)(S.A.PREMIUM_SETTINGS),
         n = (0, u.bG)([P.default], () => P.default.getCurrentUser()),
         l = (0, u.bG)([L.A], () => L.A.getPremiumTypeSubscription()),
         a = (0, u.bG)([L.A], () => L.A.hasFetchedSubscriptions()),
         r = (0, N.Y)($.T7),
         [o, g] = s.useState(!0),
         _ = (0, C.A)({ forceFetch: !0 }),
-        A = (0, u.bG)([F.A], () => {
+        x = (0, u.bG)([F.A], () => {
             let e = F.A.getMarketingComponentByType(c.C.BILLING_SETTINGS_NITRO_GIFT_BANNER);
             return null == e || "billingSettingsNitroGiftBanner" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.billingSettingsNitroGiftBanner;
         }),
-        f = !(d.Fr || d.v1) && null != A,
+        f = !(d.Fr || d.v1) && null != x,
         j = s.useRef(null);
     (0, z.i)();
     let y = (0, H.m)();
@@ -355,15 +355,15 @@ let e_ = function () {
         M = _.fetched && _.isFractionalPremiumActive,
         k = n?.isPremiumWithPremiumGroup();
     if (!D && !M && !o && !k) return (0, i.jsx)(I.A, { title: en.intl.string(en.t.dyq9TR), note: null });
-    if ((!D && !M && !k) || o) return (0, i.jsx)(x.y$y, {});
+    if ((!D && !M && !k) || o) return (0, i.jsx)(A.y$y, {});
     let U = !!l?.hasActiveTrial;
-    return (0, i.jsx)(S.f5, {
+    return (0, i.jsx)(E.f5, {
         value: t,
         children: (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)("div", {
                     children: [
-                        f && (0, i.jsx)(em, { config: A }),
+                        f && (0, i.jsx)(em, { config: x }),
                         (0, i.jsx)(eu, {}),
                         y && (0, i.jsx)(Y.A, { isInSettings: !0 }),
                         !f && (0, i.jsx)(eg, {}),

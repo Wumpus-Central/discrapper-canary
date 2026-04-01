@@ -21,7 +21,7 @@ var i = n(627968),
     E = n(920814),
     b = n(235665),
     v = n(985018),
-    T = n(66996);
+    T = n(915047);
 function y(e) {
     let { onClick: t } = e;
     return (0, i.jsxs)(o.DUT, {

@@ -10,7 +10,7 @@ var i = n(503698),
     u = n(263577),
     c = n(662010),
     d = n(985018),
-    _ = n(59577);
+    _ = n(893762);
 let f = { none: void 0, default: _.cH, crunchyroll: s()(_.cH, _.sl) };
 var p = (function (e) {
     return (e.SIZE_60 = "size-60"), (e.SIZE_72 = "size-72"), (e.SIZE_100 = "size-100"), e;

@@ -3,7 +3,7 @@ var a = n(627968),
     i = n(64700),
     s = n(503698),
     l = n.n(s),
-    r = n(382222),
+    r = n(773690),
     o = n(311907),
     d = n(475743),
     c = n(676594),
@@ -21,8 +21,8 @@ var a = n(627968),
     A = n(139210),
     C = n(568329),
     y = n(818276),
-    T = n(742860),
-    S = n(783569),
+    S = n(742860),
+    T = n(783569),
     E = n(963713),
     N = n(717695),
     I = n(899592),
@@ -31,7 +31,7 @@ var a = n(627968),
     R = n(20732),
     w = n(654487);
 n(272111);
-var D = n(407974);
+var D = n(57291);
 function P(e) {
     let { isExpanded: t, questId: n } = e;
     return (
@@ -147,7 +147,7 @@ function L(e) {
                         style: { height: et.to({ range: [0, 1], output: [0, e_] }) },
                         children: (0, a.jsx)(r.animated.div, {
                             className: l()(D.FG, { [D.E$]: Q, [D.KA]: W }),
-                            children: (0, a.jsx)(S.R, {
+                            children: (0, a.jsx)(T.R, {
                                 springConfig: en,
                                 isExpanded: Q,
                                 children: (0, a.jsx)(C.oK, {
@@ -171,7 +171,7 @@ function L(e) {
                                                 { ref: eh, className: D.Qs, overlayRef: ex },
                                                 K ? "collapsed-with-rewards" : "collapsed-without-rewards",
                                             ),
-                                            (0, a.jsx)(T.A, {
+                                            (0, a.jsx)(S.A, {
                                                 className: D.Qs,
                                                 overlayRef: ex,
                                                 ref: em,

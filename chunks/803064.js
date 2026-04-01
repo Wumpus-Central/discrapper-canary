@@ -15,7 +15,7 @@ var i = n(627968),
     h = n(339984),
     _ = n(478644),
     p = n(985018),
-    A = n(574283);
+    A = n(927548);
 let f = function (e) {
     let { guild: t } = e,
         f = t.features.has(g.GuildFeatures.BANNER),
@@ -28,7 +28,7 @@ let f = function (e) {
                               n.e("59701"),
                               n.e("35929"),
                               n.e("74571"),
-                              n.e("15167"),
+                              n.e("9992"),
                           ]).then(n.bind(n, 142630));
                           return (n) =>
                               (0, i.jsx)(l, {

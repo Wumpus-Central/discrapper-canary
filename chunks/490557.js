@@ -5,19 +5,19 @@ var i = n(627968),
     a = n(512750),
     r = n(990208),
     o = n(568065),
-    c = n(853235),
-    d = n(107836);
+    d = n(46046),
+    c = n(107836);
 function u(e) {
     let { className: t } = e;
-    return (0, i.jsx)("img", { className: t, alt: "", src: d });
+    return (0, i.jsx)("img", { className: t, alt: "", src: c });
 }
 function h(e) {
-    let { className: t, powerup: n, isHovering: l, forceStaticImage: d } = e,
-        h = (0, r.A)(n, l, d);
+    let { className: t, powerup: n, isHovering: l, forceStaticImage: c } = e,
+        h = (0, r.A)(n, l, c);
     switch (n.type) {
         case o.o9.LEVEL:
             return (0, i.jsx)(u, {});
         case o.o9.PERK:
-            return (0, i.jsx)("img", { alt: "", src: h, className: s()(c.T, { [c.W]: n.skuId === a.aN }, t) });
+            return (0, i.jsx)("img", { alt: "", src: h, className: s()(d.T, { [d.W]: n.skuId === a.aN }, t) });
     }
 }

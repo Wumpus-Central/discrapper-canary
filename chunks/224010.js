@@ -125,11 +125,11 @@ let A = (t) => {
                     (0, c.mMO)(async () => {
                         let { default: t } = await Promise.all([
                             s.e("57174"),
-                            s.e("36671"),
+                            s.e("91652"),
                             s.e("68859"),
                             s.e("92414"),
                             s.e("9407"),
-                            s.e("35362"),
+                            s.e("5920"),
                         ]).then(s.bind(s, 956450));
                         return (e) => (0, i.jsx)(t, { classificationId: l, source: f.XN.StandingTab, ...e });
                     });

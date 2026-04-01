@@ -5,8 +5,8 @@ var i = n(627968),
     a = n.n(s),
     r = n(172218),
     o = n(311907),
-    c = n(397927),
-    d = n(308528),
+    d = n(397927),
+    c = n(308528),
     u = n(442433),
     h = n(676002),
     A = n(811024),
@@ -36,7 +36,7 @@ var i = n(627968),
 n(281405);
 var P = n(652215),
     k = n(349828),
-    w = n(99566);
+    w = n(928409);
 class B extends M.Ay {
     state = { shouldShowThreadsPopout: !1, shouldShowActivities: !1 };
     channelItemRef = l.createRef();
@@ -78,7 +78,7 @@ class B extends M.Ay {
         this.handleActivitiesPopoutClose(), this.handleThreadsPopoutClose();
         let { channel: e } = this.props,
             t = e.getGuildId();
-        d.A.preload(t ?? P.ME, e.id);
+        c.A.preload(t ?? P.ME, e.id);
     };
     renderPopout = (e) => {
         let { channel: t, sorting: n, embeddedApps: l, channelIsContentGated: s } = this.props,
@@ -111,7 +111,7 @@ class B extends M.Ay {
                         n.e("97262"),
                         n.e("42128"),
                         n.e("39778"),
-                        n.e("22283"),
+                        n.e("34408"),
                     ]).then(n.bind(n, 385913));
                     return (n) => (0, i.jsx)(e, { ...n, user: l, channel: t, showModalItems: !1 });
                 });
@@ -144,7 +144,7 @@ class B extends M.Ay {
                 unread: s,
                 hasActiveThreads: r,
                 hasMoreActiveThreads: o,
-                mentionCount: d,
+                mentionCount: c,
                 connectChannelDropTarget: u,
                 connectChannelDragSource: h,
                 connectDragPreview: A,
@@ -171,7 +171,7 @@ class B extends M.Ay {
                 onMouseEnter: O || L ? this.handleMouseEnter : void 0,
                 onMouseLeave: O || L ? this.handleMouseLeave : void 0,
                 children: [
-                    (0, i.jsx)(c.YNO, {
+                    (0, i.jsx)(d.YNO, {
                         targetElementRef: R,
                         position: "right",
                         renderPopout: this.renderPopout,
@@ -187,7 +187,7 @@ class B extends M.Ay {
                                 selected: !x && n,
                                 muted: l,
                                 unread: s,
-                                mentionCount: d,
+                                mentionCount: c,
                                 hasActiveThreads: r,
                                 subtitle: M?.subtitle,
                                 subtitleColor: M?.color,
@@ -201,7 +201,7 @@ class B extends M.Ay {
                                 "aria-label": (0, g.Ay)({
                                     channel: e,
                                     unread: s,
-                                    mentionCount: d,
+                                    mentionCount: c,
                                     isSubscriptionGated: m,
                                 }),
                                 children: [
@@ -231,7 +231,7 @@ class B extends M.Ay {
 }
 let V = (0, h.a)(B);
 function H(e) {
-    let { channel: t, guild: n, disableSorting: s, isFavoriteCategory: a, muted: c, selected: d } = e,
+    let { channel: t, guild: n, disableSorting: s, isFavoriteCategory: a, muted: d, selected: c } = e,
         { hasActiveThreads: u, hasMoreActiveThreads: h } = (0, N.NR)(t),
         g = (0, o.cf)([j.Ay], () => ({
             unread: j.Ay.hasUnread(t.id),
@@ -257,11 +257,11 @@ function H(e) {
         G = (0, D.A)({
             channel: t,
             isChannelCollapsed: !1,
-            isChannelSelected: d,
+            isChannelSelected: c,
             isSubscriptionGated: O,
             needSubscriptionToAccess: b,
             isNewChannel: C,
-            muted: c,
+            muted: d,
             enableActivities: U,
             resolvedUnreadSetting: p,
         }),
@@ -274,7 +274,7 @@ function H(e) {
         ),
         { showMenuItemPopover: K, markMenuItemPopoverAsDismissed: W } = (0, x.z)({
             location: "TextChannel",
-            isChannelSelected: d,
+            isChannelSelected: c,
             isTargetInViewport: B,
             channelType: t.type,
             isPopoverAllowed: n.id !== k.Vc,

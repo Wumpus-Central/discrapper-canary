@@ -5,8 +5,8 @@ var i = n(627968),
     a = n.n(s),
     r = n(311907),
     o = n(3026),
-    c = n(990078),
-    d = n(397927),
+    d = n(990078),
+    c = n(397927),
     u = n(367513),
     h = n(442433),
     A = n(676002),
@@ -41,8 +41,8 @@ n(281405);
 var V = n(652215),
     H = n(349828),
     F = n(985018),
-    K = n(99566),
-    W = n(799535);
+    K = n(928409),
+    W = n(822294);
 class Y extends P.Ay {
     channelItemRef = l.createRef();
     state = { shouldShowGuildVerificationPopout: !1 };
@@ -106,16 +106,16 @@ class Y extends P.Ay {
     renderOpenChatButton = () => {
         let { channel: e, locked: t, forceShowButtons: n } = this.props;
         if (!t)
-            return (0, i.jsx)(c.m, {
+            return (0, i.jsx)(d.m, {
                 asContainer: !0,
                 text: F.intl.string(F.t.ZXxLQg),
-                children: (0, i.jsx)(d.DUT, {
+                children: (0, i.jsx)(c.DUT, {
                     className: a()(K.Xs, n ? K.Tf : null),
                     onClick: () => {
                         u.A.updateChatOpen(e.id, !0), this.handleClickChat();
                     },
                     "aria-label": F.intl.string(F.t.ZXxLQg),
-                    children: (0, i.jsx)(d.oyn, { size: "xs", color: "currentColor", className: K.gE }),
+                    children: (0, i.jsx)(c.oyn, { size: "xs", color: "currentColor", className: K.gE }),
                 }),
             });
     };
@@ -155,7 +155,7 @@ class Y extends P.Ay {
                 className: a()(this.getModeClass(), { [K.r9]: this.isDisabled() }),
                 "data-dnd-name": e.name,
                 children: [
-                    (0, i.jsx)(d.YNO, {
+                    (0, i.jsx)(c.YNO, {
                         targetElementRef: this.channelItemRef,
                         position: "right",
                         renderPopout: this.renderPopout,
@@ -163,7 +163,7 @@ class Y extends P.Ay {
                         onRequestClose: this.closeGuildVerificationPopout,
                         shouldShow: C,
                         children: () =>
-                            (0, i.jsx)(c.m, {
+                            (0, i.jsx)(d.m, {
                                 text: this.getTooltipText(),
                                 children: (0, i.jsxs)(w.Ay, {
                                     ref: this.channelItemRef,
@@ -212,8 +212,8 @@ class Y extends P.Ay {
 let z = (0, A.a)((0, _.F)(Y));
 function q(e) {
     let { guild: t, channel: n, disableSorting: l, isFavoriteCategory: s, collapsed: a, voiceStates: o } = e,
-        c = (0, r.cf)([M.Ay], () => ({ unread: M.Ay.hasUnread(n.id), mentionCount: M.Ay.getMentionCount(n.id) })),
-        d = (0, r.bG)([D.Ay], () => D.Ay.resolveUnreadSetting(n)),
+        d = (0, r.cf)([M.Ay], () => ({ unread: M.Ay.hasUnread(n.id), mentionCount: M.Ay.getMentionCount(n.id) })),
+        c = (0, r.bG)([D.Ay], () => D.Ay.resolveUnreadSetting(n)),
         u = (0, r.cf)([j.A, O.A, L.A], () => {
             let e = j.A.getChannel(n.parent_id),
                 i = O.A.getCheck(n.guild_id);
@@ -253,12 +253,12 @@ function q(e) {
         stageInstance: _,
         isSubscriptionGated: g,
         needSubscriptionToAccess: p,
-        ...c,
+        ...d,
         ...u,
         ...e,
         isFavoriteSuggestion: s && !x,
         forceShowButtons: C,
         channelInfo: I,
-        resolvedUnreadSetting: d,
+        resolvedUnreadSetting: c,
     });
 }

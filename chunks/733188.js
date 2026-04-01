@@ -1,4 +1,4 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => S });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
@@ -11,10 +11,10 @@ var i = n(627968),
     m = n(95701),
     g = n(486020),
     _ = n(253932),
-    A = n(652215),
-    x = n(985018),
-    h = n(539232);
-let p = new m.nA({ id: "1337", guild_id: "1337", type: A.rbe.GUILD_TEXT, name: "preview" }),
+    x = n(652215),
+    A = n(985018),
+    h = n(80281);
+let p = new m.nA({ id: "1337", guild_id: "1337", type: x.rbe.GUILD_TEXT, name: "preview" }),
     T = [
         { status: a.clD.IDLE, discriminator: "2" },
         { status: a.clD.DND, discriminator: "3" },
@@ -22,15 +22,15 @@ let p = new m.nA({ id: "1337", guild_id: "1337", type: A.rbe.GUILD_TEXT, name: "
     ];
 function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-    return (0, o.rh)({ ...(0, d.Ay)({ channelId: p.id, content: e }), state: A.cmJ.SENT, reactions: t });
+    return (0, o.rh)({ ...(0, d.Ay)({ channelId: p.id, content: e }), state: x.cmJ.SENT, reactions: t });
 }
-function E() {
+function S() {
     let e = _.hH.useSetting(),
         t = _.jW.useSetting(),
         n = s.useMemo(
             () => [
                 f(
-                    x.intl.formatToPlainString(x.t.BknJRT, {}),
+                    A.intl.formatToPlainString(A.t.BknJRT, {}),
                     t
                         ? [
                               {
@@ -50,7 +50,7 @@ function E() {
                           ]
                         : [],
                 ),
-                f(x.intl.formatToPlainString(x.t["4rDfgM"], {})),
+                f(A.intl.formatToPlainString(A.t["4rDfgM"], {})),
             ],
             [t],
         ),
@@ -62,7 +62,7 @@ function E() {
                     variant: "text-md/medium",
                     color: "text-muted",
                     className: h.Vf,
-                    children: x.intl.string(x.t.RC22qg),
+                    children: A.intl.string(A.t.RC22qg),
                 }),
                 (0, i.jsxs)(a.IpV, {
                     className: h.VH,
@@ -70,7 +70,7 @@ function E() {
                         (0, i.jsx)("ol", {
                             className: h.DZ,
                             style: { gap: o },
-                            "aria-label": x.intl.string(x.t.xfjsEV),
+                            "aria-label": A.intl.string(A.t.xfjsEV),
                             children: n.map((t) =>
                                 (0, i.jsx)(
                                     "li",
@@ -100,14 +100,14 @@ function E() {
                                                 isMobile: s,
                                                 size: a._3J.SIZE_32,
                                                 src: g.Ay.getDefaultAvatarURL(void 0, n),
-                                                "aria-label": x.intl.string(x.t.VKE5TK),
+                                                "aria-label": A.intl.string(A.t.VKE5TK),
                                             },
                                             t,
                                         );
                                     }),
                                 }),
                                 (0, i.jsx)(a.Button, {
-                                    text: x.intl.string(x.t["2RHHgz"]),
+                                    text: A.intl.string(A.t["2RHHgz"]),
                                     size: "sm",
                                     variant: "primary",
                                 }),

@@ -16,7 +16,7 @@ var a = n(627968),
     m = n(339984);
 n(363385);
 var x = n(985018),
-    E = n(941668);
+    E = n(593335);
 function p(e) {
     let { avatar: t, index: n, onSelectRecentAvatar: i, onDeleteRecentAvatar: s, avatarButtonRef: r } = e,
         { id: u, storageHash: A, description: d = x.intl.string(x.t.lqaIxI) } = t,
@@ -88,7 +88,7 @@ function T(e) {
                         { filename: u, type: d } = (0, A.yM)(l, s);
                     (0, o.mMO)(
                         async () => {
-                            let { default: t } = await Promise.all([n.e("35929"), n.e("74571"), n.e("3142")]).then(
+                            let { default: t } = await Promise.all([n.e("35929"), n.e("74571"), n.e("29077")]).then(
                                 n.bind(n, 142630),
                             );
                             return (n) =>

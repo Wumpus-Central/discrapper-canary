@@ -11,14 +11,14 @@ var i = n(627968),
     m = n(912851),
     g = n(793574),
     _ = n(688810),
-    A = n(178856),
-    x = n(915089),
+    x = n(178856),
+    A = n(915089),
     h = n(465932),
     p = n(263063),
     T = n(543767),
     f = n(420139),
-    E = n(790284),
-    S = n(976860),
+    S = n(790284),
+    E = n(976860),
     b = n(780964),
     C = n(12901),
     N = n(840065),
@@ -32,7 +32,7 @@ var i = n(627968),
     L = n(746080),
     D = n(355097),
     G = n(985018),
-    M = n(77764);
+    M = n(943138);
 let k = (e) => {
         let { label: t, value: n, showInfoIcon: s, infoIconTooltipText: l } = e;
         return (0, i.jsxs)("div", {
@@ -96,8 +96,8 @@ let k = (e) => {
                             })
                           : (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    !t && !l && (0, i.jsx)(A.A, { label: G.intl.string(G.t.FRbWR8), onClick: o }),
-                                    (0, i.jsx)(A.A, { label: G.intl.string(G.t.Dx0lF7), onClick: a }),
+                                    !t && !l && (0, i.jsx)(x.A, { label: G.intl.string(G.t.FRbWR8), onClick: o }),
+                                    (0, i.jsx)(x.A, { label: G.intl.string(G.t.Dx0lF7), onClick: a }),
                                 ],
                             }),
                   }),
@@ -110,11 +110,11 @@ let k = (e) => {
                 groupListing: l,
                 guild: r,
                 expanded: g,
-                handleToggleExpanded: A,
+                handleToggleExpanded: x,
                 subscriptionInfo: T,
             } = (0, I.A)(t),
             [f, v] = s.useState(!1),
-            V = (0, x.GV)(),
+            V = (0, A.GV)(),
             { analyticsLocations: B } = (0, _.Ay)(),
             { shouldHideGuildPurchaseEntryPoints: F } = (0, h.MH)(r?.id),
             H = t?.isPurchasedViaAppleGeneric;
@@ -140,7 +140,7 @@ let k = (e) => {
             className: M.kL,
             children: [
                 (0, i.jsx)(j.A, {
-                    onClick: A,
+                    onClick: x,
                     className: M.N1,
                     children: (e) => {
                         let { areaRef: t, handleStopPropagation: s } = e;
@@ -198,7 +198,7 @@ let k = (e) => {
                                     ],
                                 }),
                                 (0, i.jsx)(c.DUT, {
-                                    onClick: s(A),
+                                    onClick: s(x),
                                     "aria-label": G.intl.string(G.t.e5eQOy),
                                     "aria-controls": V,
                                     "aria-expanded": g,
@@ -250,14 +250,14 @@ let k = (e) => {
                                       },
                                       onChangePlanClick: () => {
                                           null != r &&
-                                              ((0, S.pX)(P.BVt.CHANNEL(r.id, L.VV.ROLE_SUBSCRIPTIONS)),
+                                              ((0, E.pX)(P.BVt.CHANNEL(r.id, L.VV.ROLE_SUBSCRIPTIONS)),
                                               (0, C.default)(),
                                               m.A.show(
                                                   P.kqX.BACK_TO_PREVIOUS_SCREEN,
                                                   void 0,
                                                   G.intl.string(G.t.DvbaM4),
                                                   () => {
-                                                      E.A.setState({ subsection: D.nR }),
+                                                      S.A.setState({ subsection: D.nR }),
                                                           (0, N.openUserSettings)(b.X.SUBSCRIPTIONS_PANEL);
                                                   },
                                               ));

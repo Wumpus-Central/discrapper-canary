@@ -14,7 +14,7 @@ var a = n(627968),
     p = n(991347),
     g = n(871317),
     _ = n(698638),
-    f = n(62080);
+    f = n(324611);
 function v() {
     let [e, t] = (0, i.useState)(!1),
         [n, s] = (0, i.useState)(!1),
@@ -22,7 +22,7 @@ function v() {
         x = (0, u.Ay)((e) => e.toolsCache),
         { setToolsCache: g, removeToolsCache: v } = (0, u.DE)(),
         { setImgCache: y } = (0, u.TW)(),
-        T = (0, i.useCallback)(
+        S = (0, i.useCallback)(
             (e) => {
                 let t = x[e];
                 null != t
@@ -33,7 +33,7 @@ function v() {
             },
             [x],
         ),
-        S = (0, i.useCallback)((e) => {
+        T = (0, i.useCallback)((e) => {
             c((t) => (null == t ? null : { ...t, palette: e }));
         }, []),
         E = (0, i.useCallback)(
@@ -76,7 +76,7 @@ function v() {
                                 (0, a.jsx)(p.A, {
                                     selected: r?.palette?.name,
                                     onSelect: (e) => {
-                                        r?.previewToolKey != null && g(r.previewToolKey, r.previewToolKey, e), S(e);
+                                        r?.previewToolKey != null && g(r.previewToolKey, r.previewToolKey, e), T(e);
                                     },
                                 }),
                         ],
@@ -109,12 +109,12 @@ function v() {
                                 className: f.is,
                                 children: Object.values(x).map((e) => {
                                     let { url: t } = e;
-                                    return (0, a.jsx)(j, { src: t, onSetStatic: T, removeAsset: E }, t);
+                                    return (0, a.jsx)(j, { src: t, onSetStatic: S, removeAsset: E }, t);
                                 }),
                             }),
                             (0, a.jsx)(C, {
                                 label: "gradient override",
-                                onChange: (e) => S({ name: m.AK, darkBackground: e, lightBackground: e }),
+                                onChange: (e) => T({ name: m.AK, darkBackground: e, lightBackground: e }),
                             }),
                             (0, a.jsx)(A, { label: "set", onClick: () => {} }),
                         ],
@@ -172,9 +172,9 @@ function b(e) {
                     (0, a.jsx)(l.Text, { variant: "text-sm/semibold", children: "Memberlist" }),
                     (0, a.jsx)(y, { nameplate: t }),
                     (0, a.jsx)(l.Text, { variant: "text-sm/semibold", children: "DMs" }),
-                    (0, a.jsx)(T, { nameplate: t }),
-                    (0, a.jsx)(l.Text, { variant: "text-sm/semibold", children: "RTC" }),
                     (0, a.jsx)(S, { nameplate: t }),
+                    (0, a.jsx)(l.Text, { variant: "text-sm/semibold", children: "RTC" }),
+                    (0, a.jsx)(T, { nameplate: t }),
                     (0, a.jsx)("div", { className: f.Di, onMouseDown: m }),
                 ],
             }),
@@ -251,7 +251,7 @@ function y(e) {
         }),
     });
 }
-function T(e) {
+function S(e) {
     let { nameplate: t } = e;
     return (0, a.jsx)("div", {
         className: f.VH,
@@ -268,7 +268,7 @@ function T(e) {
         }),
     });
 }
-function S(e) {
+function T(e) {
     let { nameplate: t } = e;
     return (0, a.jsx)("div", {
         className: f.VH,

@@ -1,10 +1,10 @@
-n.d(t, { s: () => A });
+n.d(t, { s: () => x });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
     a = n.n(l),
-    r = n(890425),
-    o = n(117457);
+    r = n(20976),
+    o = n(432748);
 let d = { VERTICAL: r.yG, HORIZONTAL: r.OZ, HORIZONTAL_REVERSE: r.y0 },
     c = { START: r.KF, END: r.HA, CENTER: r.pb, BETWEEN: r.G1, AROUND: r.nm },
     u = { NO_WRAP: r.B, WRAP: r.aR, WRAP_REVERSE: r.KM },
@@ -30,7 +30,7 @@ class _ extends s.PureComponent {
         return (0, i.jsx)("div", { ...m, children: e });
     }
 }
-class A extends s.PureComponent {
+class x extends s.PureComponent {
     static Child = _;
     static Direction = d;
     static Align = m;
@@ -62,7 +62,7 @@ class A extends s.PureComponent {
                 gutter: g,
                 ..._
             } = this.props,
-            A = { flexShrink: d, flexGrow: c, flexBasis: u, ...m };
-        return (0, i.jsx)("div", { style: A, className: a()(o.Uu, n, s, l, r, g, t), ..._, children: e });
+            x = { flexShrink: d, flexGrow: c, flexBasis: u, ...m };
+        return (0, i.jsx)("div", { style: x, className: a()(o.Uu, n, s, l, r, g, t), ..._, children: e });
     }
 }

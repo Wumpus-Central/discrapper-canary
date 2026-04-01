@@ -1,4 +1,4 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => x });
 var i = n(627968),
     s = n(64700),
     l = n(397927),
@@ -10,11 +10,11 @@ var i = n(627968),
     u = n(652215),
     m = n(53516),
     g = n(985018),
-    _ = n(238696);
-function A(e) {
+    _ = n(27671);
+function x(e) {
     let t,
         n,
-        { currentUser: A, togglingSMS: x } = e,
+        { currentUser: x, togglingSMS: A } = e,
         [h, p] = s.useState(!1),
         T = s.useCallback(
             (e) => {
@@ -28,12 +28,12 @@ function A(e) {
                 modalKey: m.V,
             });
         }, []),
-        E = s.useCallback(() => {
+        S = s.useCallback(() => {
             f();
         }, [f]),
-        S = s.useCallback(() => {
-            null == A.phone ? f({ onAddedPhone: a.A.enableSMS }) : a.A.enableSMS();
-        }, [A, f]),
+        E = s.useCallback(() => {
+            null == x.phone ? f({ onAddedPhone: a.A.enableSMS }) : a.A.enableSMS();
+        }, [x, f]),
         b = s.useCallback(() => {
             (0, l.qfG)((e) =>
                 (0, i.jsx)(o.default, {
@@ -45,10 +45,10 @@ function A(e) {
             );
         }, []),
         C = s.useCallback((e) => (null == e ? "" : `${"*".repeat(e.length - 4)}${e.slice(-4)}`), []),
-        N = null != A.phone,
-        v = A.hasFlag(u.nhx.MFA_SMS);
+        N = null != x.phone,
+        v = x.hasFlag(u.nhx.MFA_SMS);
     if (N || v) {
-        let e = h ? A.phone : C(A.phone);
+        let e = h ? x.phone : C(x.phone);
         n = (0, i.jsxs)(l.Text, {
             variant: "text-sm/normal",
             children: [
@@ -66,11 +66,11 @@ function A(e) {
             variant: "critical-secondary",
             size: "sm",
             text: g.intl.string(g.t.KLWnit),
-            loading: x,
+            loading: A,
             onClick: b,
         });
     else {
-        let e = (0, c.B)(A);
+        let e = (0, c.B)(x);
         t = (0, i.jsxs)(l.ButtonGroup, {
             size: "sm",
             children: [
@@ -78,8 +78,8 @@ function A(e) {
                     variant: "primary",
                     size: "sm",
                     text: e ?? g.intl.string(g.t.DZQe23),
-                    onClick: S,
-                    loading: x,
+                    onClick: E,
+                    loading: A,
                     disabled: null != e,
                 }),
                 N
@@ -87,7 +87,7 @@ function A(e) {
                           variant: "secondary",
                           size: "sm",
                           text: g.intl.string(g.t.Ulqq6K),
-                          onClick: E,
+                          onClick: S,
                       })
                     : null,
             ],

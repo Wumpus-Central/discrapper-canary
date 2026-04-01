@@ -5,20 +5,20 @@ var i = n(627968),
     a = n.n(s),
     r = n(311907),
     o = n(442433),
-    c = n(676002),
-    d = n(734057),
+    d = n(676002),
+    c = n(734057),
     u = n(808728),
     h = n(576705),
     A = n(557534),
     _ = n(166444),
     m = n(652215),
     g = n(790782),
-    p = n(99566);
-let f = (0, c.a)(function (e) {
+    p = n(928409);
+let f = (0, d.a)(function (e) {
     let {
             guild: t,
             selectedChannelId: s,
-            position: c,
+            position: d,
             disableManageChannels: f,
             sorting: x,
             sortingType: E,
@@ -27,11 +27,11 @@ let f = (0, c.a)(function (e) {
             connectChannelDropTarget: N,
             tabIndex: T,
         } = e,
-        S = (0, r.bG)([d.A, u.Ay], () => {
+        S = (0, r.bG)([c.A, u.Ay], () => {
             let e = u.Ay.getDirectoryChannelIds(t.id);
-            return 0 === e.length ? null : d.A.getChannel(e[0]);
+            return 0 === e.length ? null : c.A.getChannel(e[0]);
         }),
-        b = (0, r.bG)([d.A], () => d.A.getChannel(S?.parent_id)),
+        b = (0, r.bG)([c.A], () => c.A.getChannel(S?.parent_id)),
         y = s === S?.id,
         v = (0, r.bG)([h.A], () =>
             null != b ? h.A.can(m.xBc.MANAGE_CHANNELS, b) : null != t && h.A.can(m.xBc.MANAGE_CHANNELS, t),
@@ -47,7 +47,7 @@ let f = (0, c.a)(function (e) {
             [S],
         );
     if (null == S) return null;
-    let R = (0, A.O6)(c, I),
+    let R = (0, A.O6)(d, I),
         O = (0, A.h$)(S, x, E),
         L = (0, i.jsx)("div", {
             className: a()(R, { [p.r9]: O, [p.wH]: y }),

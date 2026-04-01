@@ -6,7 +6,7 @@ var a = n(311907),
     r = n(263063),
     s = n(71393),
     d = n(985018),
-    o = n(935964);
+    o = n(68765);
 let c = (e) => {
     let { event: t } = e,
         n = (0, a.bG)([s.A], () => s.A.getGuild(t.guild_id));

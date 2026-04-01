@@ -30,7 +30,7 @@ n(646363);
 var L = n(652215),
     R = n(788868),
     P = n(985018),
-    D = n(998838);
+    D = n(63461);
 let M = [];
 function j() {
     d.A.transitionToSection(L.m3P.ADD_FRIEND, { explicit: !0 });

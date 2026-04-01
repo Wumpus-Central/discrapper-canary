@@ -4,13 +4,13 @@ n(64700);
 var l = n(732955),
     s = n(397927),
     a = n(652215),
-    r = n(76400);
+    r = n(578125);
 function o(e) {
-    let { buttonText: t, onGoBack: n, onDismiss: o, showCloseButton: c } = e;
+    let { buttonText: t, onGoBack: n, onDismiss: o, showCloseButton: d } = e;
     return (0, i.jsxs)(s.$Td, {
         className: r.eR,
         children: [
-            c && (0, i.jsx)(s.PMB, { onClick: o, className: r.b, noticeType: a.kqX.BACK_TO_PREVIOUS_SCREEN }),
+            d && (0, i.jsx)(s.PMB, { onClick: o, className: r.b, noticeType: a.kqX.BACK_TO_PREVIOUS_SCREEN }),
             (0, i.jsx)(l.$nd, { text: t, variant: "overlay-secondary", size: "sm", icon: s.rJJ, onClick: n }),
         ],
     });

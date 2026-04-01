@@ -1,4 +1,4 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => A });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
@@ -11,10 +11,10 @@ var i = n(627968),
     m = n(736455),
     g = n(876587),
     _ = n(985018),
-    A = n(69894);
-let x = (e) => {
+    x = n(320519);
+let A = (e) => {
     let { navBarSections: t, activeSectionId: n } = e,
-        x = {
+        A = {
             [m.k.HOME]: _.intl.string(_.t.uGRXjS),
             [m.k.WHATS_NEW]: _.intl.string(_.t["mfcR/v"]),
             [m.k.BEST_OF_NITRO]: _.intl.string(_.t.xQKkE8),
@@ -26,25 +26,25 @@ let x = (e) => {
         T = s.useRef(null),
         f = Object.values(t).sort((e, t) => e.order - t.order);
     return (0, i.jsxs)(r.A, {
-        className: A.TQ,
+        className: x.TQ,
         transparent: !0,
         children: [
             (0, i.jsxs)("div", {
-                className: A.Wc,
+                className: x.Wc,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: A.wG,
+                        className: x.wG,
                         children: [
-                            (0, i.jsx)(a.tvc, { className: A.nE, colorClass: A.oG }),
+                            (0, i.jsx)(a.tvc, { className: x.nE, colorClass: x.oG }),
                             (0, i.jsx)("div", {
-                                className: A.zc,
+                                className: x.zc,
                                 children: f.map((e) => {
                                     let t = n === e.id,
-                                        s = x[e.id];
+                                        s = A[e.id];
                                     return (0, i.jsxs)(
                                         a.DUT,
                                         {
-                                            className: A.S0,
+                                            className: x.S0,
                                             onClick: e.scrollToSection,
                                             children: [
                                                 (0, i.jsx)(a.Text, {
@@ -52,7 +52,7 @@ let x = (e) => {
                                                     color: "text-strong",
                                                     children: s,
                                                 }),
-                                                t && (0, i.jsx)("div", { className: A.W0 }),
+                                                t && (0, i.jsx)("div", { className: x.W0 }),
                                             ],
                                         },
                                         s,
@@ -62,7 +62,7 @@ let x = (e) => {
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: A.MQ,
+                        className: x.MQ,
                         children: [
                             p && (0, i.jsx)(u.l, { ref: T, size: "sm" }),
                             (0, i.jsx)(c.A, { size: "sm", variant: "overlay-secondary" }),

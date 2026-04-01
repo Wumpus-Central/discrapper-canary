@@ -5,8 +5,8 @@ var i = n(627968),
     a = n.n(s),
     r = n(837381),
     o = n(311907),
-    c = n(3026),
-    d = n(397927),
+    d = n(3026),
+    c = n(397927),
     u = n(308528),
     h = n(442433),
     A = n(152007),
@@ -21,13 +21,13 @@ var i = n(627968),
     C = n(588224),
     N = n(37411),
     T = n(985018),
-    S = n(99566),
-    b = n(11464),
-    y = n(251843);
+    S = n(928409),
+    b = n(567431),
+    y = n(570302);
 function v(e) {
     let { style: t, withGuildIcon: n, inverted: l } = e,
         s = { className: a()(y.GI, { [y.a7]: n }, { [y.BJ]: l }), style: t },
-        { density: r } = (0, d.wRf)();
+        { density: r } = (0, c.wRf)();
     switch (r) {
         case "cozy":
             return (0, i.jsxs)("svg", {
@@ -143,7 +143,7 @@ let j = l.memo(function (e) {
                       inverted: !0,
                       style: { transform: "rotateX(180deg) translateY(-9px)" },
                   }),
-            (0, i.jsx)(d.vN3, {
+            (0, i.jsx)(c.vN3, {
                 focusTarget: F,
                 ringTarget: F,
                 offset: { top: 2, bottom: 2, right: 4 },
@@ -153,7 +153,7 @@ let j = l.memo(function (e) {
                     onContextMenu: w,
                     children: [
                         !M || G || s ? null : (0, i.jsx)("div", { className: a()(b.gy, b.WS) }),
-                        (0, i.jsx)(d.DUT, {
+                        (0, i.jsx)(c.DUT, {
                             ...H,
                             innerRef: F,
                             className: b.nf,
@@ -163,7 +163,7 @@ let j = l.memo(function (e) {
                             children: (0, i.jsxs)("div", {
                                 className: a()(b.Y5, b.__invalid_threadMainContent),
                                 children: [
-                                    (0, i.jsx)(c.A, { className: b.UU, "aria-hidden": !0, children: t.name }),
+                                    (0, i.jsx)(d.A, { className: b.UU, "aria-hidden": !0, children: t.name }),
                                     (0, i.jsxs)("div", {
                                         className: b.Y_,
                                         children: [

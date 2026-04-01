@@ -5,8 +5,8 @@ var i = n(627968),
     a = n(827734),
     r = n(397927),
     o = n(858177),
-    c = n(47167),
-    d = n(475889),
+    d = n(47167),
+    c = n(475889),
     u = n(291594),
     h = n(693879),
     A = n(769015),
@@ -22,12 +22,12 @@ var i = n(627968),
     N = n(562153),
     T = n(652215),
     S = n(985018),
-    b = n(930935);
+    b = n(4568);
 function y(e) {
     let { event: t, guildId: n, channelId: l } = e,
         a = (0, s.bG)([I.default], () => I.default.getUser(t.userId)),
-        c = (0, o.O)(t.applicationId ?? null),
-        d = N.Ay.useName(n, l, a),
+        d = (0, o.O)(t.applicationId ?? null),
+        c = N.Ay.useName(n, l, a),
         h = (0, m.A)({
             location: "VoiceChannelHistory",
             applicationId: t.applicationId ?? void 0,
@@ -41,7 +41,7 @@ function y(e) {
                   (0, i.jsx)("div", { className: b.Wz }),
                   (0, i.jsx)("div", {
                       className: b.xW,
-                      children: (0, i.jsx)(A.A, { game: c, className: b.AW, "aria-hidden": !0 }),
+                      children: (0, i.jsx)(A.A, { game: d, className: b.AW, "aria-hidden": !0 }),
                   }),
                   (0, i.jsxs)("div", {
                       className: b.Kw,
@@ -57,24 +57,24 @@ function y(e) {
                                       children: (0, i.jsx)(r.Text, {
                                           variant: "text-sm/semibold",
                                           tag: "span",
-                                          children: d,
+                                          children: c,
                                       }),
                                   }),
                                   activityName:
-                                      null != h && null != c
+                                      null != h && null != d
                                           ? (0, i.jsx)(u.A, {
                                                 tag: "span",
                                                 onClick: h,
                                                 children: (0, i.jsx)(r.Text, {
                                                     variant: "text-sm/semibold",
                                                     tag: "span",
-                                                    children: c.name,
+                                                    children: d.name,
                                                 }),
                                             })
                                           : (0, i.jsx)(r.Text, {
                                                 variant: "text-sm/semibold",
                                                 tag: "span",
-                                                children: c?.name ?? S.intl.string(S.t.GIWFlF),
+                                                children: d?.name ?? S.intl.string(S.t.GIWFlF),
                                             }),
                               }),
                           }),
@@ -170,8 +170,8 @@ function j(e) {
 }
 function R(e) {
     let { channel: t } = e,
-        n = (0, d.H)(t),
-        l = (0, c.Ay)(t);
+        n = (0, c.H)(t),
+        l = (0, d.Ay)(t);
     return (0, i.jsxs)("div", {
         className: b.hY,
         children: [
@@ -186,12 +186,12 @@ function O(e) {
     l.useEffect(() => {
         (0, f.q)(t.id);
     }, [t.id]);
-    let c = (0, s.bG)([x.A], () => x.A.getHistory(t.id), [t.id]),
-        d = c.length > 0;
+    let d = (0, s.bG)([x.A], () => x.A.getHistory(t.id), [t.id]),
+        c = d.length > 0;
     return (l.useEffect(() => {
-        d && C.default.track(T.HAw.OPEN_POPOUT, { type: "Voice Channel History", channel_id: t.id, source: n });
-    }, [d, t.id, n]),
-    d)
+        c && C.default.track(T.HAw.OPEN_POPOUT, { type: "Voice Channel History", channel_id: t.id, source: n });
+    }, [c, t.id, n]),
+    c)
         ? (0, i.jsxs)("div", {
               role: "dialog",
               "aria-label": S.intl.string(S.t.N0ED9s),
@@ -214,7 +214,7 @@ function O(e) {
                               }),
                               (0, i.jsx)("ol", {
                                   className: b.Gz,
-                                  children: c.map((e) =>
+                                  children: d.map((e) =>
                                       (0, i.jsx)(j, { event: e, guildId: t.guild_id, channelId: t.id }, e.key),
                                   ),
                               }),

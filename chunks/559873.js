@@ -5,8 +5,8 @@ var i = n(627968),
     a = n(990078),
     r = n(397927),
     o = n(73153),
-    c = n(334738),
-    d = n(461678),
+    d = n(334738),
+    c = n(461678),
     u = n(880457),
     h = n(164684),
     A = n(85109),
@@ -17,7 +17,7 @@ var i = n(627968),
     f = n(849077),
     x = n(652215),
     E = n(985018),
-    I = n(487397);
+    I = n(68450);
 let C = {
     [f.Th.MENTION]: [f.kR.SETTINGS],
     [f.Th.REPLY]: [f.kR.SETTINGS],
@@ -26,8 +26,8 @@ let C = {
     [f.Th.MESSAGE]: [f.kR.SETTINGS],
 };
 function N(e) {
-    let { label: t, onClick: n, message: s, Icon: o, interactionType: c } = e,
-        [d, u] = (0, l.useState)(!1),
+    let { label: t, onClick: n, message: s, Icon: o, interactionType: d } = e,
+        [c, u] = (0, l.useState)(!1),
         h = (0, m.op)();
     return (0, i.jsx)(a.m, {
         text: t,
@@ -39,14 +39,14 @@ function N(e) {
         children: (0, i.jsx)(r.DUT, {
             className: I.XI,
             onClick: (e) => {
-                (0, m.Ml)({ message: s, interactionType: c, viewId: h }), e.stopPropagation(), n(s);
+                (0, m.Ml)({ message: s, interactionType: d, viewId: h }), e.stopPropagation(), n(s);
             },
-            children: (0, i.jsx)(o, { size: d ? "sm" : "xs", className: I.gE }),
+            children: (0, i.jsx)(o, { size: c ? "sm" : "xs", className: I.gE }),
         }),
     });
 }
 function T(e) {
-    let { channel: t, message: n, label: s, Icon: o, Menu: c, interactionType: d, actionType: u } = e,
+    let { channel: t, message: n, label: s, Icon: o, Menu: d, interactionType: c, actionType: u } = e,
         h = (0, m.op)(),
         [A, _] = (0, l.useState)(!1),
         [g, f] = (0, l.useState)(!1),
@@ -66,7 +66,7 @@ function T(e) {
             (0, i.jsx)(r.lGe, {
                 onClick: (e) => e.stopPropagation(),
                 returnRef: x,
-                children: (0, i.jsx)(c, { "data-menu-migrated": !0, renderPopoutProps: e, channel: t, message: n }),
+                children: (0, i.jsx)(d, { "data-menu-migrated": !0, renderPopoutProps: e, channel: t, message: n }),
             }),
         children: (e) =>
             (0, i.jsx)(a.m, {
@@ -81,7 +81,7 @@ function T(e) {
                     className: I.XI,
                     onClick: (e) => {
                         let t;
-                        (0, m.Ml)({ message: n, interactionType: d, viewId: h }),
+                        (0, m.Ml)({ message: n, interactionType: c, viewId: h }),
                             e.stopPropagation(),
                             f((t = !g)),
                             t ? E(n.id, u) : C(n.id, u);
@@ -104,7 +104,7 @@ let S = {
         label: E.intl.string(E.t.e6RscS),
         onClick: (e) => {
             o.h.dispatch({ type: "NOTIFICATIONS_INBOX_ITEM_ACK", messageId: e.id, channelId: e.channel_id }),
-                c.ack(
+                d.ack(
                     e.channel_id,
                     { object: x.ZSU.MARK_MESSAGE_AS_READ_BUTTON, objectType: x.AnalyticsObjectTypes.ACK_MANUAL },
                     !0,
@@ -170,7 +170,7 @@ let S = {
             let { channel: t, renderPopoutProps: n } = e;
             return t.isThread()
                 ? (0, i.jsx)(_.A, { ...n, channel: t, navId: "thread-context", label: E.intl.string(E.t["1NBjqb"]) })
-                : (0, i.jsx)(d.A, { ...n, channel: t, navId: "channel-context", label: E.intl.string(E.t.Xm41aV) });
+                : (0, i.jsx)(c.A, { ...n, channel: t, navId: "channel-context", label: E.intl.string(E.t.Xm41aV) });
         },
     },
 };

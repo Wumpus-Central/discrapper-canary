@@ -11,20 +11,20 @@ var i = n(627968),
     m = n(419954),
     g = n(933297),
     _ = n(836602),
-    A = n(591179),
-    x = n(854627),
+    x = n(591179),
+    A = n(854627),
     h = n(657331),
     p = n(961350),
     T = n(287809),
     f = n(780964),
-    E = n(633817),
-    S = n(652215),
+    S = n(633817),
+    E = n(652215),
     b = n(985018),
-    C = n(77311);
+    C = n(361964);
 let N = [{ badgeType: g.Xi.NEW, dismissibleContent: a.M.DISPLAY_NAME_STYLES_NEW_BADGE }],
     v = () => {
         let e = (0, l.bG)([T.default], () => T.default.getCurrentUser()),
-            { avatarSrc: t, avatarDecorationSrc: n } = (0, x.A)({ userId: e?.id, size: r._3J.SIZE_48 });
+            { avatarSrc: t, avatarDecorationSrc: n } = (0, A.A)({ userId: e?.id, size: r._3J.SIZE_48 });
         return null == e
             ? null
             : (0, i.jsxs)("div", {
@@ -67,16 +67,16 @@ let N = [{ badgeType: g.Xi.NEW, dismissibleContent: a.M.DISPLAY_NAME_STYLES_NEW_
         notice: { stores: [_.A], element: u.A },
         initialize: () => () =>
             o.h.wait(() => {
-                (0, d.F7)(), c.A.clearSubsection(S.nc_.PROFILE_CUSTOMIZATION);
+                (0, d.F7)(), c.A.clearSubsection(E.nc_.PROFILE_CUSTOMIZATION);
             }),
-        buildLayout: () => [E.I],
+        buildLayout: () => [S.I],
     }),
     j = (0, m.i4)(f.X.PROFILE_SIDEBAR_ITEM, {
         useTitle: () => b.intl.string(b.t["vi7f+q"]),
         icon: O,
         StronglyDiscouragedCustomComponent: v,
         getDismissibleBadges: () => N,
-        usePredicate: () => !(0, A.X)("user_settings_sidebar"),
+        usePredicate: () => !(0, x.X)("user_settings_sidebar"),
         buildLayout: () => [I],
     }),
     y = (0, m.i4)(f.X.PROFILE_SIDEBAR_ITEM_WYSIWYG, {
@@ -84,7 +84,7 @@ let N = [{ badgeType: g.Xi.NEW, dismissibleContent: a.M.DISPLAY_NAME_STYLES_NEW_
         icon: O,
         StronglyDiscouragedCustomComponent: v,
         getDismissibleBadges: () => N,
-        usePredicate: () => (0, A.X)("user_settings_sidebar"),
+        usePredicate: () => (0, x.X)("user_settings_sidebar"),
         onClick: () => {
             let e = p.default.getId();
             (0, h.openUserProfileModal)({ userId: e });
@@ -93,6 +93,6 @@ let N = [{ badgeType: g.Xi.NEW, dismissibleContent: a.M.DISPLAY_NAME_STYLES_NEW_
     });
 function O() {
     let e = (0, l.bG)([T.default], () => T.default.getCurrentUser()),
-        { avatarSrc: t, avatarDecorationSrc: n } = (0, x.A)({ userId: e?.id, size: r._3J.SIZE_48 });
+        { avatarSrc: t, avatarDecorationSrc: n } = (0, A.A)({ userId: e?.id, size: r._3J.SIZE_48 });
     return (0, i.jsx)(r.euF, { src: t, avatarDecoration: n, size: r._3J.SIZE_20, "aria-hidden": !0 });
 }

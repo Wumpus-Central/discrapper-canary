@@ -4,7 +4,7 @@ var i = n(627968),
     l = n(503698),
     a = n.n(l),
     r = n(397927),
-    o = n(304384);
+    o = n(65125);
 let d = function (e) {
     let {
             tabs: t,
@@ -19,7 +19,7 @@ let d = function (e) {
     s.useEffect(() => {
         _(m);
     }, [m]);
-    let A = s.useMemo(() => {
+    let x = s.useMemo(() => {
         let e = g.component;
         return (0, i.jsx)(e, {});
     }, [g]);
@@ -52,7 +52,7 @@ let d = function (e) {
                 id: g.id,
                 "aria-labelledby": g.title,
                 className: a()(o.NM, n, { [o.Vd]: "vertical" === u }),
-                children: A,
+                children: x,
             }),
         ],
     });

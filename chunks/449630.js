@@ -21,8 +21,8 @@ var a = n(627968),
     A = n(206835),
     C = n(183555),
     y = n(950191),
-    T = n(657331),
-    S = n(718019),
+    S = n(657331),
+    T = n(718019),
     E = n(31432),
     N = n(915614),
     I = n(223330),
@@ -51,8 +51,8 @@ var a = n(627968),
     X = n(652215),
     Z = n(996988),
     ee = n(985018),
-    et = n(229598),
-    en = n(74209);
+    et = n(337637),
+    en = n(886308);
 function ea(e) {
     let { currentUser: t, onClose: n, setPopoutRef: s, highlightBadge: ea, className: ei } = e,
         es = __OVERLAY__,
@@ -77,8 +77,8 @@ function ea(e) {
         eA = (0, A.A)({ analyticsLocations: eo }),
         eC = (0, W.TW)(t),
         ey = i.useRef(null),
-        eT = i.useRef(null),
-        eS = i.useRef((0, H.A)((e) => e.shouldRenderTenureLevelUp)),
+        eS = i.useRef(null),
+        eT = i.useRef((0, H.A)((e) => e.shouldRenderTenureLevelUp)),
         eE = i.useMemo(() => (0, v.A)(), []),
         [eN, eI] = i.useState(!0);
     i.useEffect(() => {
@@ -87,7 +87,7 @@ function ea(e) {
         }, 500);
     }, []);
     let ek = (e) => {
-            n?.(), (0, T.openUserProfileModal)({ customStatusPrompt: eE, sourceAnalyticsLocations: eo, ...ed, ...e });
+            n?.(), (0, S.openUserProfileModal)({ customStatusPrompt: eE, sourceAnalyticsLocations: eo, ...ed, ...e });
         },
         eO = el?.widgets != null && el.widgets.length > 0,
         eR = i.useCallback(() => {
@@ -96,8 +96,8 @@ function ea(e) {
         ew = i.useCallback(() => {
             eA(), eR();
         }, [eA, eR]),
-        eD = (0, x.JY)({ location: "UserProfileAccountPopout" }),
-        eP = (0, x.on)({ location: "UserProfileAccountPopout" }),
+        eD = (0, x.QR)({ location: "UserProfileAccountPopout" }),
+        eP = (0, x.zd)({ location: "UserProfileAccountPopout" }),
         eM = i.useId();
     return (0, a.jsx)(h.f5, {
         value: eo,
@@ -133,7 +133,7 @@ function ea(e) {
                                         className: en.wx,
                                         children: [
                                             (0, a.jsx)(N.A, { user: t, displayProfile: el, themeType: Z.d.POPOUT }),
-                                            (0, a.jsx)(S.A, {
+                                            (0, a.jsx)(T.A, {
                                                 user: t,
                                                 displayProfile: el,
                                                 themeType: Z.d.POPOUT,
@@ -164,7 +164,7 @@ function ea(e) {
                                                     themeType: Z.d.POPOUT,
                                                     onClose: n,
                                                     shouldOpenBadgeTooltip: null != ea ? (e) => e === ea : void 0,
-                                                    shouldGlowTenureBadge: eS.current,
+                                                    shouldGlowTenureBadge: eT.current,
                                                 }),
                                                 nicknameIcons: (0, a.jsx)(P.A, { user: t, isVisible: em }),
                                             }),
@@ -199,7 +199,7 @@ function ea(e) {
                                                                     label: ee.intl.string(ee.t.s5vZlQ),
                                                                     icon: c.R2l,
                                                                     onClick: ew,
-                                                                    ref: eT,
+                                                                    ref: eS,
                                                                 }),
                                                                 (0, a.jsx)($.N3, {
                                                                     action: "PRESS_SET_STATUS",
@@ -324,11 +324,11 @@ function ea(e) {
                                     }),
                                     null != er && (0, a.jsx)(_.A, { frame: er }),
                                     el?.profileEffect != null &&
-                                        !eS.current &&
+                                        !eT.current &&
                                         (0, a.jsx)(p.A, { skuId: el.profileEffect.skuId, isHovering: eh }),
                                 ],
                             }),
-                            eD && eP ? (0, a.jsx)(z.A, { targetElementRef: eT, onClose: n }) : null,
+                            eD && eP ? (0, a.jsx)(z.A, { targetElementRef: eS, onClose: n }) : null,
                             (0, a.jsx)(j.A, {}),
                         ],
                     }),

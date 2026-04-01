@@ -11,14 +11,14 @@ var i = n(627968),
     m = n(974544),
     g = n(793574),
     _ = n(688810),
-    A = n(512213),
-    x = n(429619),
+    x = n(512213),
+    A = n(429619),
     h = n(451909),
     p = n(202639),
     T = n(407217),
     f = n(919395),
-    E = n(884546),
-    S = n(287070),
+    S = n(884546),
+    E = n(287070),
     b = n(196291),
     C = n(101058),
     N = n(836602),
@@ -31,7 +31,7 @@ var i = n(627968),
     P = n(780207),
     L = n(652215),
     D = n(985018),
-    G = n(752366);
+    G = n(21861);
 function M() {
     let e = (0, r.bG)([j.default], () => {
             let e = j.default.getCurrentUser();
@@ -59,9 +59,9 @@ function M() {
         : (0, i.jsxs)(_.f5, {
               value: H,
               children: [
-                  (0, i.jsx)(x.A, {}),
-                  (0, i.jsx)(E.A, {
-                      profilePreview: (0, i.jsx)(S.A, {
+                  (0, i.jsx)(A.A, {}),
+                  (0, i.jsx)(S.A, {
+                      profilePreview: (0, i.jsx)(E.A, {
                           user: e,
                           canUsePremiumCustomization: F,
                           onUpsellClick: P.A,
@@ -69,7 +69,7 @@ function M() {
                           ...U,
                           pendingAvatar: w,
                       }),
-                      nameplatePreview: (0, i.jsx)(A.A, {
+                      nameplatePreview: (0, i.jsx)(x.A, {
                           user: e,
                           nameplate: V,
                           ...U,

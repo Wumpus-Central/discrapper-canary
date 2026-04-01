@@ -5,8 +5,8 @@ var i = n(627968),
     a = n.n(s),
     r = n(311907),
     o = n(397927),
-    c = n(33358),
-    d = n(384231),
+    d = n(33358),
+    c = n(384231),
     u = n(207133),
     h = n(704413),
     A = n(9842),
@@ -33,8 +33,8 @@ var i = n(627968),
     D = n(888675),
     U = n(652215),
     G = n(985018),
-    P = n(790610),
-    k = n(10029);
+    P = n(213607),
+    k = n(480972);
 let w = l.memo(function e(t) {
     let n,
         {
@@ -59,7 +59,7 @@ let w = l.memo(function e(t) {
         q = _.hD.useSetting(),
         X = _.rs.useSetting(),
         J = _.kt.useSetting(),
-        Q = (0, d.S)((s.editedTimestamp ?? s.timestamp).valueOf()),
+        Q = (0, c.S)((s.editedTimestamp ?? s.timestamp).valueOf()),
         $ = (0, u.A)(l?.id),
         { disableReactionCreates: Z } = (0, N.A)(l),
         {
@@ -81,9 +81,9 @@ let w = l.memo(function e(t) {
         es = s.type === U.lAJ.THREAD_STARTER_MESSAGE && W.state === A.a.LOADED && null != Y,
         ea = !es && void 0 === n,
         er = (0, v.A)({ message: s, channel: l, enabled: ea }),
-        eo = (0, c.P)(s),
-        ec = (0, f._f)(s.id, s.channel_id),
-        ed = (0, h.A)(s),
+        eo = (0, d.P)(s),
+        ed = (0, f._f)(s.id, s.channel_id),
+        ec = (0, h.A)(s),
         eu = (0, S.fF)(s);
     return es
         ? (0, i.jsx)(e, { ...t, message: W.message, channel: Y, hasThread: !1 })
@@ -116,12 +116,12 @@ let w = l.memo(function e(t) {
                     inlineEmbedMedia: q,
                     renderEmbeds: X,
                     gifAutoPlay: J,
-                    poll: ed,
+                    poll: ec,
                     showListsAndHeaders: Q,
                     showMaskedLinks: Q,
                     shouldHideMediaOptions: $,
                     enabledContentHarmTypeFlags: eo,
-                    ctaButtonType: ec,
+                    ctaButtonType: ed,
                 }),
                 childrenExecutedCommand: (0, L.A)(s, l, o),
                 childrenMessageContent: (0, j.A)(t, ee),

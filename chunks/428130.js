@@ -11,46 +11,46 @@ var i = n(627968),
     m = n(963852),
     g = n(763754),
     _ = n(20851),
-    A = n(544028),
-    x = n(253932),
+    x = n(544028),
+    A = n(253932),
     h = n(780964),
     p = n(840065),
     T = n(123857),
     f = n(652215),
-    E = n(381941),
-    S = n(985018),
-    b = n(12698),
-    C = n(153335);
+    S = n(381941),
+    E = n(985018),
+    b = n(421361),
+    C = n(885106);
 let N = { COZY: "cozy", COMPACT: "compact" },
     v = "1337",
     I = (e) => {
         let t = 0;
         return [
             (0, u.rh)({
-                ...(0, m.Ay)({ channelId: v, content: S.intl.string(S.t.oZxkEq) }),
+                ...(0, m.Ay)({ channelId: v, content: E.intl.string(E.t.oZxkEq) }),
                 state: f.cmJ.SENT,
                 id: `${t++}`,
             }),
             (0, u.rh)({
                 ...(0, m.Ay)({
                     channelId: v,
-                    content: (0, o.Mw)(e) ? S.intl.string(S.t["WGb/v7"]) : S.intl.string(S.t["62m4mz"]),
+                    content: (0, o.Mw)(e) ? E.intl.string(E.t["WGb/v7"]) : E.intl.string(E.t["62m4mz"]),
                 }),
                 state: f.cmJ.SENT,
                 id: `${t++}`,
             }),
             (0, u.rh)({
-                ...(0, m.Ay)({ channelId: v, content: S.intl.string(S.t.a0Byo5) }),
+                ...(0, m.Ay)({ channelId: v, content: E.intl.string(E.t.a0Byo5) }),
                 state: f.cmJ.SENT,
                 id: `${t++}`,
             }),
             (0, u.rh)({
-                ...(0, m.Ay)({ channelId: v, content: S.intl.string(S.t.bmwEWJ) }),
+                ...(0, m.Ay)({ channelId: v, content: E.intl.string(E.t.bmwEWJ) }),
                 state: f.cmJ.SENT,
                 id: `${t++}`,
             }),
             (0, u.rh)({
-                ...(0, m.Ay)({ channelId: v, content: S.intl.string(S.t["hK9QW/"]) }),
+                ...(0, m.Ay)({ channelId: v, content: E.intl.string(E.t["hK9QW/"]) }),
                 state: f.cmJ.SENT,
                 id: `${t}`,
             }),
@@ -65,12 +65,12 @@ let N = { COZY: "cozy", COMPACT: "compact" },
                     children: [
                         (0, i.jsxs)(d.Text, {
                             variant: "text-md/medium",
-                            children: [" ", S.intl.string(S.t["0EzVst"])],
+                            children: [" ", E.intl.string(E.t["0EzVst"])],
                         }),
                         (0, i.jsx)(d.Text, {
                             variant: "text-sm/normal",
                             color: "text-subtle",
-                            children: S.intl.string(S.t.PV3dGX),
+                            children: E.intl.string(E.t.PV3dGX),
                         }),
                     ],
                 }),
@@ -78,23 +78,23 @@ let N = { COZY: "cozy", COMPACT: "compact" },
             ],
         }),
     y = () =>
-        S.intl.format(S.t.Jae48E, {
+        E.intl.format(E.t.Jae48E, {
             onClick: () => {
                 (0, p.openUserSettings)(h.X.SYNC_FORCED_COLORS);
             },
         }),
     O = () =>
-        S.intl.format(S.t["5LEQdc"], {
+        E.intl.format(E.t["5LEQdc"], {
             onAccessibilityClick: () => {
                 (0, p.openUserSettings)(h.X.ACCESSIBILITY_PANEL);
             },
         }),
     R = () => {
-        let e = x.hH.useSetting(),
-            t = x.hD.useSetting(),
-            n = x.rs.useSetting(),
-            { theme: l, messageGroupSpacing: u } = (0, r.cf)([A.A, c.A], () => ({
-                theme: A.A.theme,
+        let e = A.hH.useSetting(),
+            t = A.hD.useSetting(),
+            n = A.rs.useSetting(),
+            { theme: l, messageGroupSpacing: u } = (0, r.cf)([x.A, c.A], () => ({
+                theme: x.A.theme,
                 messageGroupSpacing: c.A.messageGroupSpacing,
             })),
             [m] = s.useState(() => I(f.NJ8.DARK)),
@@ -103,7 +103,7 @@ let N = { COZY: "cozy", COMPACT: "compact" },
             T = (0, o.Mw)(l) ? m : h;
         return (0, i.jsx)(d.M1G, {
             children: (0, i.jsx)(d.ZpM, {
-                className: a()(b.VH, C.C2, e ? b.Me : void 0, `group-spacing-${null != u ? u : e ? E.y5 : E.ES}`),
+                className: a()(b.VH, C.C2, e ? b.Me : void 0, `group-spacing-${null != u ? u : e ? S.y5 : S.ES}`),
                 outline: !0,
                 "aria-hidden": !0,
                 children: T.map((t, n) =>

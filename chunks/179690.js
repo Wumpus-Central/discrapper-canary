@@ -1,28 +1,28 @@
-n.d(t, { Ay: () => r, sy: () => a });
-var i = n(627968);
+n.d(e, { Ay: () => l, sy: () => r });
+var s = n(627968);
 n(64700);
-var l = n(397927),
-    s = n(652215);
-function a() {
-    let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return new Promise((t) => {
-        (0, l.mMO)(
+var i = n(397927),
+    a = n(652215);
+function r() {
+    let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
+    return new Promise((e) => {
+        (0, i.mMO)(
             async () => {
-                let { default: t } = await n.e("28429").then(n.bind(n, 549404));
-                return (n) => (0, i.jsx)(t, { ...n, isTotp: e });
+                let { default: e } = await n.e("28429").then(n.bind(n, 549404));
+                return (n) => (0, s.jsx)(e, { ...n, isTotp: t });
             },
-            { onCloseCallback: t, onCloseRequest: s.FXj },
+            { onCloseCallback: e, onCloseRequest: a.FXj },
         );
     });
 }
-let r = {
+let l = {
     enableMFA: async function () {
-        await new Promise((e) => {
-            (0, l.mMO)(async () => {
-                let { default: t } = await Promise.all([n.e("50906"), n.e("78811")]).then(n.bind(n, 333737));
-                return (n) => (0, i.jsx)(t, { ...n, handleEnableMFASuccess: e });
+        await new Promise((t) => {
+            (0, i.mMO)(async () => {
+                let { default: e } = await Promise.all([n.e("8407"), n.e("78811")]).then(n.bind(n, 333737));
+                return (n) => (0, s.jsx)(e, { ...n, handleEnableMFASuccess: t });
             });
         }),
-            await a();
+            await r();
     },
 };

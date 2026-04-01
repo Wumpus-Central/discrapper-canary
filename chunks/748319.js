@@ -21,8 +21,8 @@ var a = n(627968),
     A = n(29160),
     C = n(793574),
     y = n(688810),
-    T = n(521502),
-    S = n(380610),
+    S = n(521502),
+    T = n(380610),
     E = n(313961),
     N = n(18235),
     I = n(183184),
@@ -75,13 +75,13 @@ var a = n(627968),
     eA = n(994314),
     eC = n(485599),
     ey = n(809991),
-    eT = n(226513),
-    eS = n(383952),
+    eS = n(226513),
+    eT = n(383952),
     eE = n(245750),
     eN = n(652215),
     eI = n(731854),
     ek = n(985018),
-    eO = n(683393);
+    eO = n(64734);
 let eR = ej.Ay.getEnableHardwareAcceleration() ? h.JsQ : h.euF,
     ew = 2.5 * e_.A.Millis.SECOND,
     eD = 2 * e_.A.Millis.MINUTE,
@@ -109,7 +109,7 @@ function eL(e) {
         {
             updateOpenPopoutRef: C,
             highlightBadge: y,
-            setHighlightBadge: T,
+            setHighlightBadge: S,
         } = (function () {
             let e = i.useRef(null),
                 t = i.useCallback((t) => {
@@ -136,7 +136,7 @@ function eL(e) {
                 { updateOpenPopoutRef: t, highlightBadge: s ? n : void 0, setHighlightBadge: a }
             );
         })(),
-        S = (0, P.K)(x);
+        T = (0, P.K)(x);
     return null == o
         ? null
         : (0, a.jsx)(p.A, {
@@ -171,14 +171,14 @@ function eL(e) {
                   fixed: !0,
                   ignoreModalClicks: !0,
                   onRequestClose: () => {
-                      u(), T(void 0);
+                      u(), S(void 0);
                   },
                   children: (e) => {
                       C(e);
                       let { onMouseEnter: t, onMouseDown: i, ...u } = e;
                       return (0, a.jsxs)("div", {
                           ref: b,
-                          style: S,
+                          style: T,
                           onMouseEnter: t,
                           onMouseDown: i,
                           onClick: (t) => {
@@ -557,14 +557,14 @@ function eB(e) {
             deviceChangedTooltipType: A,
             shouldShowPTTJoinTooltip: C = !1,
             dismissTooltips: y,
-            speaking: T,
+            speaking: S,
         } = e,
-        S = (0, P.K)(b);
+        T = (0, P.K)(b);
     return (0, a.jsxs)("div", {
         className: eO.Uo,
-        style: S,
+        style: T,
         children: [
-            (0, a.jsx)(eS.A, {
+            (0, a.jsx)(eT.A, {
                 accountContainerRef: j,
                 selfMute: n,
                 serverMute: s,
@@ -581,9 +581,9 @@ function eB(e) {
                 shouldShowSpeakingWhilePTTTooltip: d,
                 shouldShowPTTJoinTooltip: C,
                 dismissTooltips: y,
-                speaking: T,
+                speaking: S,
             }),
-            (0, a.jsx)(eT.A, {
+            (0, a.jsx)(eS.A, {
                 selfDeaf: t,
                 serverDeaf: l,
                 onClick: h,
@@ -658,7 +658,7 @@ function eF() {
         }),
         { mute: _, selfMute: f, suppress: v } = (0, et.A)(p),
         { selfDeaf: b, deaf: j } = (0, ee.A)(p),
-        A = (0, c.bG)([T.A], () => ((0, S.kK)() ? T.A.getCurrentBuildOverride().overrides?.discord_web : null)),
+        A = (0, c.bG)([S.A], () => ((0, T.kK)() ? S.A.getCurrentBuildOverride().overrides?.discord_web : null)),
         N = (0, c.bG)([ed.Ay], () => ed.Ay.getSpeakingWhileMuted()),
         I = (0, c.bG)([E.A], () => E.A.isFullscreenInContext()),
         k = (0, c.bG)([eo.A], () => eo.A.hasLayers()),

@@ -11,11 +11,11 @@ var i = n(627968),
     m = n(823092),
     g = n(963935),
     _ = n(894858),
-    A = n(272053),
-    x = n(397274),
+    x = n(272053),
+    A = n(397274),
     h = n(641324),
     p = n(46373),
-    T = n(326029);
+    T = n(32145);
 function f(e) {
     let { notice: t, children: n } = e,
         { showNotice: l, handleStoreUpdate: a } = (0, m.L_)(),
@@ -41,7 +41,7 @@ function f(e) {
     }, [t, l]);
     return (0, i.jsxs)(i.Fragment, { children: [n, (0, i.jsx)(o.F, { component: "div", children: u })] });
 }
-function E(e) {
+function S(e) {
     let { decoration: t } = e,
         n = t.component;
     return (0, i.jsx)("div", {
@@ -50,7 +50,7 @@ function E(e) {
         children: (0, i.jsx)(n, {}),
     });
 }
-function S(e) {
+function E(e) {
     let { panelKey: t, notice: n, children: l } = e,
         a = s.useRef(null);
     return (0, i.jsx)(f, {
@@ -60,7 +60,7 @@ function S(e) {
             {
                 className: T.XG,
                 ref: (e) => {
-                    x.A.setPanelScrollerRef(e);
+                    A.A.setPanelScrollerRef(e);
                 },
                 children: (0, i.jsx)("div", {
                     className: T.nd,
@@ -77,7 +77,7 @@ function b(e) {
     return (0, i.jsxs)("div", {
         className: T.LZ,
         children: [
-            null != n && (0, i.jsx)(E, { decoration: n }),
+            null != n && (0, i.jsx)(S, { decoration: n }),
             t.map((e, n) =>
                 (0, i.jsxs)(
                     s.Fragment,
@@ -107,7 +107,7 @@ function C(e) {
         i.set(t, n[0].key), _.A.setState({ currentTabKeys: i });
     }, [n, t]);
     let o = n.find((e) => e.key === r) ?? n[0];
-    return (0, i.jsxs)(S, {
+    return (0, i.jsxs)(E, {
         panelKey: t,
         notice: l,
         children: [
@@ -115,7 +115,7 @@ function C(e) {
                 className: T.$H,
                 selectedItem: r,
                 onItemSelect: (e) => {
-                    A.A.navigate(e, {
+                    x.A.navigate(e, {
                         onTransitionStart: () => {
                             let t = n.find((t) => t.key === e);
                             t?.onItemSelect?.();
@@ -142,7 +142,7 @@ function C(e) {
 }
 function N(e) {
     let { panelKey: t, notice: n, decoration: s, layout: l } = e;
-    return (0, i.jsx)(S, { panelKey: t, notice: n, children: (0, i.jsx)(b, { layout: l, decoration: s }) });
+    return (0, i.jsx)(E, { panelKey: t, notice: n, children: (0, i.jsx)(b, { layout: l, decoration: s }) });
 }
 function v(e) {
     let { node: t } = e,

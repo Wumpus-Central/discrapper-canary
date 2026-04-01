@@ -5,7 +5,7 @@ var a = n(397927),
     i = n(573435),
     r = n(486020),
     s = n(985018),
-    d = n(488751);
+    d = n(90360);
 let o = (e) => {
     let { entry: t } = e,
         { id: n, icon: o, name: c } = t,

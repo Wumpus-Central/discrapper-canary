@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => y, q0: () => f });
+n.d(t, { Ay: () => y, q0: () => _ });
 var i = n(627968),
     s = n(64700),
     a = n(503698),
@@ -9,14 +9,14 @@ var i = n(627968),
     d = n(990078),
     c = n(397927),
     u = n(652215),
-    h = n(17870);
+    h = n(644943);
 let p = u.UVF.DEFAULT,
-    f = 1,
-    _ = s.createContext({ type: p, opacity: f }),
+    _ = 1,
+    f = s.createContext({ type: p, opacity: _ }),
     A = s.createContext(void 0),
     g = (e) => {
         let { children: t, className: n, ...s } = e;
-        return (0, i.jsx)(_.Consumer, {
+        return (0, i.jsx)(f.Consumer, {
             children: (e) => {
                 let { type: a } = e;
                 return (0, i.jsx)(A.Consumer, {
@@ -32,7 +32,7 @@ class m extends s.PureComponent {
         let { disableScroll: e, children: t, className: n } = this.props;
         return (0, i.jsx)(A.Consumer, {
             children: (s) =>
-                (0, i.jsx)(_.Consumer, {
+                (0, i.jsx)(f.Consumer, {
                     children: (a) => {
                         let r = l()(h.body, h[o()(a.type)], n);
                         return e
@@ -44,8 +44,8 @@ class m extends s.PureComponent {
     }
 }
 let x = (e) => {
-        let { type: t = p, width: n, height: s, children: a, className: r, opacity: d = f, onClick: c } = e;
-        return (0, i.jsx)(_.Provider, {
+        let { type: t = p, width: n, height: s, children: a, className: r, opacity: d = _, onClick: c } = e;
+        return (0, i.jsx)(f.Provider, {
             value: { type: t, opacity: d },
             children: (0, i.jsx)("div", {
                 className: l()(h.widget, h[o()(t)], r),
@@ -66,7 +66,7 @@ let x = (e) => {
     let { children: t, opacityOverride: n } = e;
     if (null == t) return null;
     let a = [g, m, E];
-    return (0, i.jsx)(_.Consumer, {
+    return (0, i.jsx)(f.Consumer, {
         children: (e) => {
             let { opacity: l } = e,
                 r = { backgroundColor: `rgba(54, 57, 63, ${"" + (n ?? l)})` };

@@ -6,8 +6,8 @@ var l = n(417597),
     a = n(882997),
     r = n(731474),
     o = n(383501),
-    c = n(977997),
-    d = n(458829),
+    d = n(977997),
+    c = n(458829),
     u = n(857253),
     h = n(694967),
     A = n(431516),
@@ -19,7 +19,7 @@ function g(e) {
         p = g?.channelId === e.id,
         f = (0, r.J)(e) && !e.isPrivate(),
         x = (0, r.A)(e),
-        E = (!(0, l.bG)([c.A], () => c.A.isInChannel(e.id)) && x) || f,
+        E = (!(0, l.bG)([d.A], () => d.A.isInChannel(e.id)) && x) || f,
         I = (0, h.A)();
     if (!p && 0 === I.length) return null;
     let C = (0, A.A)(void 0);
@@ -28,7 +28,7 @@ function g(e) {
               label: m.intl.string(m.t.PlwgdU),
               id: "handoff",
               action: () => {
-                  (0, d.x)(g);
+                  (0, c.x)(g);
               },
               icon: C,
               leadingAccessory: { type: "icon", icon: C },
@@ -36,7 +36,7 @@ function g(e) {
           })
         : I.map((l) => {
               var r, o;
-              let c = (0, A.A)(l.type);
+              let d = (0, A.A)(l.type);
               return (0, i.jsx)(
                   s.Drp,
                   {
@@ -62,7 +62,7 @@ function g(e) {
                               ? (0, a.A)({ platformType: l.type, location: "Console Transfer Item" })
                               : l.type === _.fg2.XBOX
                                 ? (0, s.mMO)(async () => {
-                                      let { default: t } = await Promise.all([n.e("94201"), n.e("67670")]).then(
+                                      let { default: t } = await Promise.all([n.e("8407"), n.e("67670")]).then(
                                           n.bind(n, 188072),
                                       );
                                       return (n) => (0, i.jsx)(t, { ...n, channel: e });
@@ -73,8 +73,8 @@ function g(e) {
                                       return (n) => (0, i.jsx)(t, { ...n, platform: l.type, channel: e });
                                   });
                       },
-                      icon: c,
-                      leadingAccessory: { type: "icon", icon: c },
+                      icon: d,
+                      leadingAccessory: { type: "icon", icon: d },
                       disabled: E,
                   },
                   l.id,

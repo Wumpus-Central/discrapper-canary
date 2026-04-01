@@ -5,8 +5,8 @@ var i = n(627968),
     a = n.n(s),
     r = n(311907),
     o = n(397927),
-    c = n(80682),
-    d = n(845056),
+    d = n(80682),
+    c = n(845056),
     u = n(685399),
     h = n(323073),
     A = n(643501),
@@ -33,8 +33,8 @@ var i = n(627968),
     D = n(652215),
     U = n(699976),
     G = n(985018),
-    P = n(71228),
-    k = n(467935);
+    P = n(510495),
+    k = n(442078);
 function w(e) {
     let {
             channel: t,
@@ -47,7 +47,7 @@ function w(e) {
             setIsHangStatusEmojiPickerOpen: F,
         } = e,
         K = l.useMemo(() => ({ [t.guild_id]: [n.id] }), [t.guild_id, n.id]);
-    (0, c.Eq)(K, "VoiceUserActivities");
+    (0, d.Eq)(K, "VoiceUserActivities");
     let W = (0, u.Ay)(t),
         Y = l.useMemo(() => W.filter((e) => e.embeddedActivity.userIds.has(n.id)), [W, n.id]),
         z = Array.from((0, u.Rz)(Y).values()),
@@ -61,7 +61,7 @@ function w(e) {
         [$, Z] = (0, r.yK)([R.A, y.A, v.A, A.default], () => (0, _.eo)(t, R.A, y.A, v.A, A.default)),
         ee = (0, r.bG)([b.default], () => b.default.getId()),
         et = (0, r.bG)([j.A], () => (0, m.nr)(J, j.A), [J]),
-        en = (0, d.m)(n, w ?? et),
+        en = (0, c.m)(n, w ?? et),
         ei = (0, r.bG)([O.Ay], () => O.Ay.getVoiceStatesForChannel(t).find((e) => e.user.id === n.id) ?? null, [
             t,
             n.id,
@@ -71,11 +71,11 @@ function w(e) {
         ea = (0, I.m)({ location: "voice_channel_activities" }),
         er = (0, r.bG)([E.A], () => E.A.getDetectableIdsToApplicationIds()),
         eo = (0, r.bG)([b.default], () => b.default.getId() === n.id && !X),
-        ec = (0, h.r9)() && (0, h.UK)(t.id),
-        ed = null != J && !ec,
+        ed = (0, h.r9)() && (0, h.UK)(t.id),
+        ec = null != J && !ed,
         eu = en.length + z.length > 0,
         eh = null != V,
-        eA = ed || eu || (eh && es);
+        eA = ec || eu || (eh && es);
     return (l.useEffect(() => {
         (eo && es) ||
             (eA &&
@@ -111,7 +111,7 @@ function w(e) {
                               ],
                           })
                         : null,
-                    null == J || null == B || ec
+                    null == J || null == B || ed
                         ? null
                         : (0, i.jsx)(g.P, {
                               stream: J,

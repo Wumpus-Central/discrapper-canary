@@ -21,9 +21,9 @@ var a = l(627968),
     _ = l(788868),
     C = l(652215),
     j = l(901123),
-    S = l(723468),
+    S = l(49370),
     T = l(985018),
-    A = l(577656),
+    A = l(182393),
     P = l(268920),
     k = l(633217),
     R = l(909340);
@@ -32,10 +32,10 @@ let I = () =>
 function N() {
     (0, E.RQ)(), (0, h.pX)(`${j.BV.NITRO_HOME}?section=${v.L}`);
 }
-function M() {
+function D() {
     (0, E.gP)(), (0, h.pX)(`${j.BV.NITRO_HOME}?section=${v.L}`);
 }
-function D() {
+function M() {
     (0, E.b)(), window.open(y.A.getArticleURL(C.MVz.ORBS_FAQ), "_blank");
 }
 function O(e) {
@@ -125,8 +125,8 @@ function O(e) {
                                             color: k ? "text-default" : "text-muted",
                                             className: A.CU,
                                             children: k
-                                                ? T.intl.format(S.default.juvXqj, { deepLinkToNitroOrbs: M })
-                                                : T.intl.format(S.default.fhAVek, { helpdeskArticle: D }),
+                                                ? T.intl.format(S.default.juvXqj, { deepLinkToNitroOrbs: D })
+                                                : T.intl.format(S.default.fhAVek, { helpdeskArticle: M }),
                                         }),
                                     ],
                                 }),

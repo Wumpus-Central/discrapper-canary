@@ -5,19 +5,19 @@ var i = n(627968),
     a = n(192308),
     r = n(990078),
     o = n(397927),
-    c = n(932001),
-    d = n(652793),
+    d = n(932001),
+    c = n(652793),
     u = n(976860),
     h = n(652215),
     A = n(746080),
     _ = n(49999),
-    m = n(738072),
+    m = n(294726),
     g = n(985018),
-    p = n(208811),
-    f = n(99566);
+    p = n(81152),
+    f = n(928409);
 let x = l.memo(function (e) {
     let { guildId: t, selected: x } = e,
-        [E, I] = (0, c.ww)([s.M.GAME_SERVER_HOSTING_NEW_BADGE], t),
+        [E, I] = (0, d.ww)([s.M.GAME_SERVER_HOSTING_NEW_BADGE], t),
         C = E === s.M.GAME_SERVER_HOSTING_NEW_BADGE,
         N = l.useCallback(() => {
             I(_.i.USER_DISMISS), (0, u.pX)(h.BVt.CHANNEL(t, A.VV.GAME_SERVERS));
@@ -58,7 +58,7 @@ let x = l.memo(function (e) {
                     }),
             ],
         });
-    return (0, i.jsx)(d.G, {
+    return (0, i.jsx)(c.G, {
         className: f.Ki,
         id: `game-server-empty-${t}`,
         renderIcon: (e) => (0, i.jsx)(o._xR, { size: "md", className: e, color: "currentColor" }),

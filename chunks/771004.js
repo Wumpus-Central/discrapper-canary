@@ -11,9 +11,9 @@ var a = n(627968),
     m = n(409626),
     x = n(305080),
     h = n(936636),
-    f = n(985018),
-    g = n(325952),
-    _ = n(679080);
+    g = n(985018),
+    f = n(282063),
+    _ = n(48757);
 function p(e) {
     let { detectedGame: t, trackAction: n } = e,
         [i, x] = l.useState(t?.summaryLocalized != null),
@@ -28,19 +28,19 @@ function p(e) {
     null == t.summary)
         ? null
         : (0, a.jsxs)("div", {
-              className: r()(g.fi, g.mX),
+              className: r()(f.fi, f.mX),
               children: [
                   null != t.summaryLocalized &&
                       (0, a.jsxs)("div", {
-                          className: r()(g.nM, g.Lc),
+                          className: r()(f.nM, f.Lc),
                           children: [
                               (0, a.jsx)(s.PencilSparkleIcon, { color: o.A.colors.TEXT_DEFAULT, size: "xs" }),
                               (0, a.jsx)(c.EYj, {
                                   variant: "text-xs/medium",
                                   color: "text-default",
                                   children: i
-                                      ? f.intl.format(f.t.aZ2iIp, { onShowOriginal: () => x(!1) })
-                                      : f.intl.format(f.t["/2ylF4"], { onShowTranslated: () => x(!0) }),
+                                      ? g.intl.format(g.t.aZ2iIp, { onShowOriginal: () => x(!1) })
+                                      : g.intl.format(g.t["/2ylF4"], { onShowTranslated: () => x(!0) }),
                               }),
                           ],
                       }),
@@ -52,13 +52,13 @@ function p(e) {
                   }),
                   A &&
                       (0, a.jsx)(d.DUT, {
-                          className: g.vk,
+                          className: f.vk,
                           onClick: () => {
                               n(p ? m.Ws.ShowMore : m.Ws.ShowLess), v(!p);
                           },
                           children: (0, a.jsx)(c.EYj, {
                               variant: "text-sm/semibold",
-                              children: p ? f.intl.string(f.t.lBeKY2) : f.intl.string(f.t["6MwJo/"]),
+                              children: p ? g.intl.string(g.t.lBeKY2) : g.intl.string(g.t["6MwJo/"]),
                           }),
                       }),
                   (0, a.jsx)(h.A, { className: _.B, detectedGame: t }),
@@ -88,9 +88,9 @@ function v(e) {
         n(e ? m.Ws.ShowMore : m.Ws.ShowLess), s(e);
     }, [i, n]);
     if (null == t.summary) return null;
-    let C = i ? f.intl.string(f.t["6MwJo/"]) : f.intl.string(f.t.lBeKY2);
+    let C = i ? g.intl.string(g.t["6MwJo/"]) : g.intl.string(g.t.lBeKY2);
     return (0, a.jsxs)("div", {
-        className: r()(g.fi, g.mX),
+        className: r()(f.fi, f.mX),
         children: [
             (0, a.jsx)(c.EYj, {
                 ref: h,

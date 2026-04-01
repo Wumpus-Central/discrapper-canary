@@ -7,7 +7,7 @@ var i = n(627968),
     a = n(310419),
     o = n(488995),
     d = n(985018),
-    c = n(171790);
+    c = n(18317);
 function u(e) {
     let { guildId: t, section: n } = e;
     (0, r.transitionToGlobalDiscovery)({

@@ -1,7 +1,7 @@
 t.d(n, { _: () => E });
-var l = t(627968);
+var i = t(627968);
 t(64700);
-var i = t(877624),
+var l = t(877624),
     r = t(311907),
     s = t(397927),
     a = t(937008),
@@ -10,10 +10,10 @@ var i = t(877624),
     d = t(810498),
     c = t(298305),
     p = t(985018),
-    m = t(75800);
+    m = t(625489);
 function E() {
     let e = (0, r.bG)([u.A], () => {
-            let e = u.A.getMarketingComponentByType(i.C.GIFT_CUSTOMIZATION_BANNER);
+            let e = u.A.getMarketingComponentByType(l.C.GIFT_CUSTOMIZATION_BANNER);
             return null == e || "giftCustomizationBanner" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.giftCustomizationBanner;
@@ -31,20 +31,20 @@ function E() {
     let P = (0, d.x)(x, S);
     return null == e || null == n
         ? null
-        : (0, l.jsxs)("div", {
+        : (0, i.jsxs)("div", {
               className: m.qD,
               style: P,
               children: [
-                  (0, l.jsx)("div", {
+                  (0, i.jsx)("div", {
                       className: m.my,
-                      children: (0, l.jsx)(c.A, {
+                      children: (0, i.jsx)(c.A, {
                           claimableRewards: n,
                           maxRewardImageSrc: t ?? "",
                           size: s._3J.SIZE_40,
                           imageScaling: 1.25,
                       }),
                   }),
-                  (0, l.jsx)(s.Text, {
+                  (0, i.jsx)(s.Text, {
                       variant: "text-md/medium",
                       className: m._M,
                       color: "always-white",

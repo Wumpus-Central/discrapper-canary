@@ -1,7 +1,7 @@
 n.d(t, { A: () => j, N: () => I }), n(321073);
 var i = n(627968),
     s = n(64700),
-    l = n(382222),
+    l = n(773690),
     a = n(417597),
     r = n(397927),
     o = n(775602),
@@ -11,14 +11,14 @@ var i = n(627968),
     m = n(71393),
     g = n(473145),
     _ = n(927578),
-    A = n(661191),
-    x = n(311092),
+    x = n(661191),
+    A = n(311092),
     h = n(233413),
     p = n(400297),
     T = n(652215),
     f = n(788868),
-    E = n(985018),
-    S = n(152243);
+    S = n(985018),
+    E = n(73468);
 function b(e) {
     let {
             guildTier: t,
@@ -32,49 +32,49 @@ function b(e) {
             if (o) {
                 let e = d.currentPeriodEnd;
                 return (
-                    d.isPausedForFractionalPremium && (e = c.endsAt.toDate()), E.intl.format(E.t.Z4ULRD, { date: e })
+                    d.isPausedForFractionalPremium && (e = c.endsAt.toDate()), S.intl.format(S.t.Z4ULRD, { date: e })
                 );
             }
-            let e = null != n.premiumGuildSubscription ? A.default.extractTimestamp(n.premiumGuildSubscription.id) : 0;
-            return E.intl.formatToPlainString(E.t.lY2Bur, { date: new Date(e) });
+            let e = null != n.premiumGuildSubscription ? x.default.extractTimestamp(n.premiumGuildSubscription.id) : 0;
+            return S.intl.formatToPlainString(S.t.lY2Bur, { date: new Date(e) });
         }, [n, o, d, c]),
         m = s.useMemo(
             () =>
                 (function (e) {
                     if (null == e || e === T.TVA.NONE) return "";
                     let t = [
-                        E.intl.formatToPlainString(E.t["dLlKX/"], { numEmojiSlots: f.TG[e].limits.emoji }),
-                        E.intl.formatToPlainString(E.t["+ANIfv"], { numStickerSlots: f.TG[e].limits.stickers }),
-                        E.intl.formatToPlainString(E.t["4gt60b"], {
+                        S.intl.formatToPlainString(S.t["dLlKX/"], { numEmojiSlots: f.TG[e].limits.emoji }),
+                        S.intl.formatToPlainString(S.t["+ANIfv"], { numStickerSlots: f.TG[e].limits.stickers }),
+                        S.intl.formatToPlainString(S.t["4gt60b"], {
                             numSoundboardSlots: f.TG[e].limits.soundboardSounds,
                         }),
-                        E.intl.formatToPlainString(E.t.XahSjZ, {
+                        S.intl.formatToPlainString(S.t.XahSjZ, {
                             resolution: f.TG[e].limits.screenShareQualityResolution,
                             framerate: f.TG[e].limits.screenShareQualityFramerate,
                         }),
-                        E.intl.formatToPlainString(E.t.NbNs7S, { bitrate: f.TG[e].limits.bitrate / 1e3 }),
-                        E.intl.formatToPlainString(E.t.VVKcpn, { filesize: f.TG[e].limits.fileSize / 1024 / 1024 }),
-                        E.intl.formatToPlainString(E.t.TbpCvv, { numVideoStageSeats: f.TG[e].limits.stageVideoUsers }),
-                        E.intl.string(E.t.LDyX3i),
-                        E.intl.string(E.t.YtGlPW),
+                        S.intl.formatToPlainString(S.t.NbNs7S, { bitrate: f.TG[e].limits.bitrate / 1e3 }),
+                        S.intl.formatToPlainString(S.t.VVKcpn, { filesize: f.TG[e].limits.fileSize / 1024 / 1024 }),
+                        S.intl.formatToPlainString(S.t.TbpCvv, { numVideoStageSeats: f.TG[e].limits.stageVideoUsers }),
+                        S.intl.string(S.t.LDyX3i),
+                        S.intl.string(S.t.YtGlPW),
                     ];
-                    e >= T.TVA.TIER_2 && (t.push(E.intl.string(E.t.SztbtN)), t.push(E.intl.string(E.t["3GK91n"]))),
-                        e >= T.TVA.TIER_3 && t.push(E.intl.string(E.t["XUUJd+"]));
+                    e >= T.TVA.TIER_2 && (t.push(S.intl.string(S.t.SztbtN)), t.push(S.intl.string(S.t["3GK91n"]))),
+                        e >= T.TVA.TIER_3 && t.push(S.intl.string(S.t["XUUJd+"]));
                     let n = t[Math.floor(Math.random() * t.length)];
-                    return E.intl.format(E.t["/dOAmQ"], { perk: n });
+                    return S.intl.format(S.t["/dOAmQ"], { perk: n });
                 })(t),
             [t],
         ),
         g = (0, r.pnh)(a, { from: { opacity: 0 }, enter: { opacity: 1 }, leave: { opacity: 0 } }, "animate-always");
     return o || t === T.TVA.NONE
         ? (0, i.jsx)("div", {
-              className: S.xm,
+              className: E.xm,
               children: (0, i.jsx)(r.Text, { variant: "text-sm/medium", color: "text-muted", children: u }),
           })
         : g((e, t) =>
               (0, i.jsx)(l.animated.div, {
                   style: e,
-                  className: S.xm,
+                  className: E.xm,
                   children: (0, i.jsx)(r.Text, { variant: "text-sm/medium", color: "text-muted", children: t ? m : u }),
               }),
           );
@@ -88,24 +88,24 @@ function C(e) {
             showAltText: m,
             isLastGuildBoostSlot: _,
         } = e,
-        A = (0, a.bG)([o.A], () => o.A.useReducedMotion),
+        x = (0, a.bG)([o.A], () => o.A.useReducedMotion),
         p = s.useMemo(() => (null != n.cooldownEndsAt ? new Date(n.cooldownEndsAt) : null), [n]),
         T = s.useMemo(() => null != p && p > new Date(), [p]),
         f = (0, g.I5)(n),
         C = (0, d.A)(),
         N = s.useRef(null);
     return (0, i.jsxs)("div", {
-        className: S.PW,
+        className: E.PW,
         children: [
             (0, i.jsxs)("div", {
-                className: S.$U,
+                className: E.$U,
                 children: [
-                    (0, i.jsx)(h.A, { isCanceled: f, hasCooldown: T, useReducedMotion: A }),
+                    (0, i.jsx)(h.A, { isCanceled: f, hasCooldown: T, useReducedMotion: x }),
                     (0, i.jsx)("div", {
-                        className: S.vh,
+                        className: E.vh,
                         children:
                             null != p && T && !f
-                                ? (0, i.jsx)(x.A, { className: S.xm, cooldown: p.getTime() })
+                                ? (0, i.jsx)(A.A, { className: E.xm, cooldown: p.getTime() })
                                 : (0, i.jsx)(b, {
                                       guildTier: t,
                                       guildBoostSlot: n,
@@ -133,14 +133,14 @@ function C(e) {
                             (0, i.jsx)(r.DUT, {
                                 ...e,
                                 innerRef: N,
-                                "aria-label": E.intl.string(E.t.PdRCRg),
-                                className: S.oU,
+                                "aria-label": S.intl.string(S.t.PdRCRg),
+                                className: E.oU,
                                 children: (0, i.jsx)(r.FHP, { size: "md", color: "currentColor" }),
                             }),
                     }),
                 ],
             }),
-            !_ && (0, i.jsx)("div", { className: S.eX }),
+            !_ && (0, i.jsx)("div", { className: E.eX }),
         ],
     });
 }
@@ -154,7 +154,7 @@ function N(e) {
         } = e,
         o = (0, a.bG)([m.A], () => m.A.getGuild(t), [t]);
     return (0, i.jsxs)("div", {
-        className: S.ag,
+        className: E.ag,
         children: [
             (0, i.jsx)(p.A, { guildId: t, boostingVariant: !1 }),
             n.map((e, t) =>
@@ -177,17 +177,17 @@ function N(e) {
 function v(e) {
     let { guildId: t, appliedGuildBoosts: n, premiumSubscription: s } = e,
         l = (0, a.bG)([m.A], () => m.A.getGuild(t), [t]),
-        r = A.default.fromTimestamp(Date.now());
+        r = x.default.fromTimestamp(Date.now());
     if (
         (n.forEach((e) => {
-            (null == r || 0 > A.default.compare(e.id, r)) && (r = e.id);
+            (null == r || 0 > x.default.compare(e.id, r)) && (r = e.id);
         }),
         null == r)
     )
         return null;
     let o = u.A.createFromServer(
         {
-            id: A.default.fromTimestamp(Date.now()),
+            id: x.default.fromTimestamp(Date.now()),
             subscription_id: s.id,
             canceled: !1,
             premium_guild_subscription: { id: r, guild_id: t },
@@ -196,7 +196,7 @@ function v(e) {
         s,
     );
     return (0, i.jsxs)("div", {
-        className: S.ag,
+        className: E.ag,
         children: [
             (0, i.jsx)(p.A, { guildId: t, boostingVariant: !1 }),
             n.map((e, t) =>
@@ -231,17 +231,17 @@ function I(e) {
     return null == n || 0 === t.length
         ? null
         : (0, i.jsxs)("div", {
-              className: S.iE,
+              className: E.iE,
               children: [
                   (0, i.jsx)("div", {
-                      className: S.kL,
-                      children: A.default
+                      className: E.kL,
+                      children: x.default
                           .keys(l)
                           .map((e) =>
                               (0, i.jsx)(v, { guildId: e, premiumSubscription: n, appliedGuildBoosts: l[e] }, e),
                           ),
                   }),
-                  (0, i.jsx)("div", { className: S.vK }),
+                  (0, i.jsx)("div", { className: E.vK }),
               ],
           });
 }
@@ -277,11 +277,11 @@ function j(e) {
     if (null == n || 0 === Object.keys(r).length) return null;
     let d = o > _.Ay.getNumIncludedPremiumGuildSubscriptionSlots(n.planId);
     return (0, i.jsxs)("div", {
-        className: S.iE,
+        className: E.iE,
         children: [
             (0, i.jsx)("div", {
-                className: S.kL,
-                children: A.default
+                className: E.kL,
+                children: x.default
                     .keys(r)
                     .map((e) =>
                         (0, i.jsx)(
@@ -297,7 +297,7 @@ function j(e) {
                         ),
                     ),
             }),
-            (0, i.jsx)("div", { className: S.vK }),
+            (0, i.jsx)("div", { className: E.vK }),
         ],
     });
 }

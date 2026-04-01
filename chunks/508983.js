@@ -39,7 +39,7 @@ var i = n(627968),
     F = n(705751),
     w = n(200700),
     B = n(985018),
-    V = n(852697);
+    V = n(96476);
 function X(e, t) {
     let { popouts: n, selected: i, setPopout: a } = (0, y.A)(e.id, G.Fd),
         { usernameProfile: r, avatarProfile: s } = n,

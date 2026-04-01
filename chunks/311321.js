@@ -5,7 +5,7 @@ var l = e(665260),
     s = e(397927),
     r = e(652215),
     a = e(985018),
-    d = e(62647);
+    d = e(712980);
 let u = { size: "md", color: s.LU0.colors.INTERACTIVE_TEXT_DEFAULT };
 function o(n) {
     let { subscriptions: i, color: e = "text-default" } = n,

@@ -21,14 +21,14 @@ var a = n(627968),
     A = n(499156),
     C = n(277342),
     y = n(430452),
-    T = n(383501),
-    S = n(350535),
+    S = n(383501),
+    T = n(350535),
     E = n(42473),
     N = n(731854),
     I = n(985018),
-    k = n(83214),
-    O = n(85247),
-    R = n(458756),
+    k = n(807880),
+    O = n(479360),
+    R = n(545229),
     w = n(973324);
 function D(e) {
     let t,
@@ -53,7 +53,7 @@ function D(e) {
         q = (0, o.bG)([y.Ay], () => y.Ay.getMode() === N.TB.PUSH_TO_TALK),
         Q = (0, o.bG)([y.Ay], () => y.Ay.getSettings().modeOptions.shortcut),
         Y = (0, o.bG)([p.A], () => p.A.getIsTutorialActive(g.v.MUTE_TUTORIAL)),
-        J = (0, o.bG)([T.A], () => null != T.A.getChannelId()),
+        J = (0, o.bG)([S.A], () => null != S.A.getChannelId()),
         { name: X } = (0, b.x5)(N.oh.AUDIO_INPUT),
         { enabledInputProfiles: Z } = (0, j.d)({ location: "MicrophoneButton" }),
         ee = i.useRef(null),
@@ -69,7 +69,7 @@ function D(e) {
         : H || V
           ? {
                 tooltipType: "green_void_do_not_use",
-                tooltipText: I.intl.format(I.t.c1qUOQ, { keybind: S.dI(Q).toLocaleUpperCase() }),
+                tooltipText: I.intl.format(I.t.c1qUOQ, { keybind: T.dI(Q).toLocaleUpperCase() }),
                 tooltipForceOpen: !0,
             }
           : { tooltipText: eo };

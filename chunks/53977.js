@@ -1,24 +1,24 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => p });
 var i = n(627968),
     a = n(64700),
     l = n(397927),
     s = n(566605),
     r = n(379848),
     o = n(183555),
-    d = n(357541),
-    c = n(814221),
+    c = n(357541),
+    d = n(814221),
     u = n(266713),
-    g = n(985018),
-    m = n(324679);
-function x() {
+    m = n(985018),
+    g = n(54676);
+function p() {
     let { trackUserProfileAction: e, trackUserProfileEditAction: t } = (0, o.NJ)(),
-        x = a.useRef(!1),
+        p = a.useRef(!1),
         {
-            suggestions: p,
+            suggestions: x,
             currentUser: f,
-            isLoading: h,
+            isLoading: _,
         } = (0, s.A)({ location: "UserProfileModalV2ApplicationWidgetsEmptyState" }),
-        _ = p?.[0],
+        h = x?.[0],
         A = a.useCallback(() => {
             t({ action: "PRESS_ADD_WIDGET" }),
                 (0, l.mMO)(
@@ -31,38 +31,38 @@ function x() {
         }, [t]);
     if (
         (a.useEffect(() => {
-            h ||
-                null == _ ||
-                x.current ||
-                (e({ action: "VIEW_APPLICATION_WIDGETS_EMPTY_STATE", applicationId: _.application.id }),
-                (x.current = !0));
-        }, [h, e, _]),
-        h)
+            _ ||
+                null == h ||
+                p.current ||
+                (e({ action: "VIEW_APPLICATION_WIDGETS_EMPTY_STATE", applicationId: h.application.id }),
+                (p.current = !0));
+        }, [_, e, h]),
+        _)
     )
-        return (0, i.jsx)("div", { className: m.Lq, children: (0, i.jsx)(l.y$y, {}) });
-    if (null == _) return (0, i.jsx)(u.A, {});
+        return (0, i.jsx)("div", { className: g.Lq, children: (0, i.jsx)(l.y$y, {}) });
+    if (null == h) return (0, i.jsx)(u.A, {});
     let I = (0, i.jsxs)(l.BJc, {
         gap: 4,
-        className: m.wx,
+        className: g.wx,
         children: [
             (0, i.jsx)(l.Heading, {
                 variant: "heading-md/medium",
                 color: "text-strong",
-                children: g.intl.string(g.t["oqalC+"]),
+                children: m.intl.string(m.t["oqalC+"]),
             }),
             (0, i.jsx)(l.Text, {
                 variant: "text-sm/normal",
                 color: "text-subtle",
-                children: g.intl.format(g.t.YnNFWa, { applicationName: _.application.name }),
+                children: m.intl.format(m.t.YnNFWa, { applicationName: h.application.name }),
             }),
         ],
     });
     return (0, i.jsx)(r.Ay, {
-        contentTypes: [_.dismissibleContent],
+        contentTypes: [h.dismissibleContent],
         bypassAutoDismiss: !0,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: n } = e;
-            return t === _.dismissibleContent
+            return t === h.dismissibleContent
                 ? (0, i.jsxs)(l.BJc, {
                       gap: 16,
                       align: "center",
@@ -70,10 +70,10 @@ function x() {
                           (0, i.jsx)(l.hKd, { size: 32 }),
                           I,
                           (0, i.jsx)("div", {
-                              className: m.Zj,
-                              children: (0, i.jsx)(d.A, { user: f, application: _.application, onDismiss: n }),
+                              className: g.Zj,
+                              children: (0, i.jsx)(c.A, { user: f, application: h.application, onDismiss: n }),
                           }),
-                          (0, i.jsx)(c.A, {}),
+                          (0, i.jsx)(d.A, {}),
                       ],
                   })
                 : (0, i.jsxs)(l.BJc, {
@@ -84,7 +84,7 @@ function x() {
                           I,
                           (0, i.jsx)(l.Button, {
                               icon: l.j96,
-                              text: g.intl.string(g.t["lBG2s/"]),
+                              text: m.intl.string(m.t["lBG2s/"]),
                               size: "md",
                               color: "secondary",
                               onClick: A,

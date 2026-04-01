@@ -5,14 +5,14 @@ var i = n(627968),
     a = n(397927),
     r = n(791606),
     o = n(486020),
-    c = n(900848),
-    d = n(772972),
-    u = n(543536);
+    d = n(900848),
+    c = n(550591),
+    u = n(78043);
 function h(e) {
     let [t, h] = l.useState(!1),
         A = (0, s.Vd)(`guild-${e.id}`);
-    return (0, i.jsx)(c.c, {
-        children: (0, i.jsx)(d.A, {
+    return (0, i.jsx)(d.c, {
+        children: (0, i.jsx)(c.A, {
             text: e.name,
             children: (0, i.jsx)(a.Qk9, {
                 className: u.o,

@@ -16,8 +16,8 @@ var a = n(627968),
     _ = n(42473),
     f = n(731854),
     v = n(985018),
-    b = n(85247),
-    j = n(106863);
+    b = n(479360),
+    j = n(622154);
 function A(e) {
     let {
             selfDeaf: t,
@@ -26,8 +26,8 @@ function A(e) {
             onClick: A,
             iconForeground: C,
             nameplate: y,
-            shouldShowOutputDeviceChangedTooltip: T,
-            dismissTooltips: S,
+            shouldShowOutputDeviceChangedTooltip: S,
+            dismissTooltips: T,
         } = e,
         E = t || n,
         {
@@ -49,7 +49,7 @@ function A(e) {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (
-                        S(),
+                        T(),
                         (0, a.jsx)(m.f5, {
                             value: P,
                             children: (0, a.jsx)(x.A, {
@@ -111,16 +111,16 @@ function A(e) {
                                 onContextMenu: i,
                                 plated: null != y,
                                 redGlow: E,
-                                tooltipType: T ? "green_void_do_not_use" : void 0,
-                                tooltipForceOpen: T,
-                                tooltipPositionKey: T
+                                tooltipType: S ? "green_void_do_not_use" : void 0,
+                                tooltipForceOpen: S,
+                                tooltipPositionKey: S
                                     ? v.intl.formatToPlainString(v.t["f+DDY/"], { outputDeviceName: w })
                                     : void 0,
                                 tooltipShouldShow: !d,
-                                tooltipText: T
+                                tooltipText: S
                                     ? v.intl.format(v.t["f+DDY/"], { outputDeviceName: w })
                                     : v.intl.string(v.t.aA4Vce),
-                                "aria-label": T
+                                "aria-label": S
                                     ? v.intl.formatToPlainString(v.t["f+DDY/"], { outputDeviceName: w })
                                     : v.intl.string(v.t.aA4Vce),
                             }),

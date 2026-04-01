@@ -5,8 +5,8 @@ var i = n(627968),
     a = n.n(s),
     r = n(284009),
     o = n.n(r),
-    c = n(110259),
-    d = n(311907),
+    d = n(110259),
+    c = n(311907),
     u = n(435371),
     h = n(397927),
     A = n(846293),
@@ -33,20 +33,20 @@ var i = n(627968),
     D = n(582904),
     U = n(652215),
     G = n(985018),
-    P = n(97220),
-    k = n(467935),
-    w = n(276170);
+    P = n(997893),
+    k = n(442078),
+    w = n(303621);
 let B = "VoiceInviteSuggestionsPopover";
 function V(e) {
-    let { channel: t, onHoverOrFocus: s, setPopoutRef: r, closePopout: d } = e,
+    let { channel: t, onHoverOrFocus: s, setPopoutRef: r, closePopout: c } = e,
         u = l.useRef(null),
         A = (0, N.A)(u),
         _ = (0, D.kt)({ channel: t }),
         { enabled: m } = b.A.useExperiment({ guildId: t.guild_id, location: "VoiceInviteSuggestionsPopover" }),
         { analyticsLocations: g } = (0, E.Ay)(x.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
     (0, I.A)({
-        name: c.ImpressionNames.VOICE_INVITE_SUGGESTIONS_POPOVER,
-        type: c.ImpressionTypes.POPOUT,
+        name: d.ImpressionNames.VOICE_INVITE_SUGGESTIONS_POPOVER,
+        type: d.ImpressionTypes.POPOUT,
         properties: { voice_channel_id: t.id, voice_guild_id: t.guild_id, location_stack: g },
     }),
         l.useEffect(() => {
@@ -59,13 +59,13 @@ function V(e) {
         let e = j.A.getGuild(t.guild_id);
         o()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, h.mMO)(async () => {
-                let { default: l } = await Promise.all([n.e("43600"), n.e("28136"), n.e("93662")]).then(
+                let { default: l } = await Promise.all([n.e("43600"), n.e("28136"), n.e("89886")]).then(
                     n.bind(n, 234355),
                 );
                 return (n) => (0, i.jsx)(l, { ...n, guild: e, channel: t, source: U.PE1.VOICE_INVITE_SUGGESTIONS });
             }),
-            d();
-    }, [t, d]);
+            c();
+    }, [t, c]);
     return (0, i.jsx)("div", {
         ref: u,
         "aria-label": G.intl.string(G.t.o53CL2),
@@ -111,7 +111,7 @@ function H(e) {
     let { channel: t, user: n, ringingEnabled: s } = e,
         r = t.guild_id,
         o = l.useRef(null),
-        c = (0, d.bG)([v.Ay], () => v.Ay.getMember(r, n.id), [r, n.id]),
+        d = (0, c.bG)([v.Ay], () => v.Ay.getMember(r, n.id), [r, n.id]),
         { isHoveringOrFocusing: x } = (0, N.A)(o),
         [E, I] = l.useState(null),
         {
@@ -126,7 +126,7 @@ function H(e) {
             status: F,
             isMobileOnline: K,
             activities: W,
-        } = (0, d.cf)(
+        } = (0, c.cf)(
             [L.A],
             () => ({
                 status: L.A.getStatus(n.id, r),
@@ -186,7 +186,7 @@ function H(e) {
             avatarSrc: et,
             eventHandlers: en,
         } = (0, T.A)({ userId: n.id, size: h._3J.SIZE_24, animateOnHover: !x, guildId: r });
-    if (null == c) return null;
+    if (null == d) return null;
     let ei = M.Ay.getName(n),
         el = G.intl.string(G.t.jYnGPG),
         es = F !== h.clD.OFFLINE ? F : void 0,

@@ -5,8 +5,8 @@ var i = n(627968),
     a = n.n(s),
     r = n(936504),
     o = n(299855),
-    c = n.n(o),
-    d = n(311907),
+    d = n.n(o),
+    c = n(311907),
     u = n(582754),
     h = n(397927),
     A = n(157559),
@@ -30,7 +30,7 @@ var i = n(627968),
     O = n(235986),
     L = n(420216),
     M = n(984870),
-    D = n(403881),
+    D = n(626262),
     U = n(813803),
     G = n(487329),
     P = n(102609),
@@ -59,8 +59,8 @@ var i = n(627968),
     ea = n(780964),
     er = n(840065),
     eo = n(459321),
-    ec = n(594609),
-    ed = n(734057),
+    ed = n(594609),
+    ec = n(734057),
     eu = n(430452),
     eh = n(383501),
     eA = n(967198),
@@ -77,7 +77,7 @@ var i = n(627968),
     eT = n(831502),
     eS = n(731854),
     eb = n(985018),
-    ey = n(571655);
+    ey = n(381703);
 let ev = (e) => {
         let { error: t, allowClick: n = !1 } = e,
             l = (0, G.B1)(t)?.errorCode,
@@ -121,7 +121,7 @@ let ev = (e) => {
         });
     };
 function eR(e) {
-    return (0, eE.isWindows)() && c().satisfies(S.A?.os.release, eC.PH)
+    return (0, eE.isWindows)() && d().satisfies(S.A?.os.release, eC.PH)
         ? `ms-settings:sound-properties?endpointId=${e}`
         : "ms-settings:sound";
 }
@@ -131,11 +131,11 @@ function eO(e) {
         { noticeType: l } = e,
         s = (0, J.x5)(eS.oh.AUDIO_INPUT),
         a = s?.guid ?? "",
-        { inputDeviceOSMuted: r, inputDeviceOSVolume: o } = (0, d.cf)([eu.Ay], () => ({
+        { inputDeviceOSMuted: r, inputDeviceOSVolume: o } = (0, c.cf)([eu.Ay], () => ({
             inputDeviceOSMuted: eu.Ay.getInputDeviceOSMuted(),
             inputDeviceOSVolume: eu.Ay.getInputDeviceOSVolume(),
         })),
-        c = !1;
+        d = !1;
     return (
         !0 === r
             ? ((t = eb.intl.string(eb.t.ppW3ri)),
@@ -145,7 +145,7 @@ function eO(e) {
                 (n = (0, i.jsx)(h.eCN, { href: eR(a), noticeType: l, children: eb.intl.string(eb.t.QghSIq) })))
               : eu.Ay.supports(eS.O5.LOOPBACK)
                 ? ((t = eb.intl.string(eb.t.dNAJ18)),
-                  (c = !0),
+                  (d = !0),
                   (n = (0, i.jsx)(h.zr9, {
                       onClick: () => {
                           (0, er.openUserSettings)(ea.X.VOICE_AND_VIDEO_PANEL);
@@ -164,11 +164,11 @@ function eO(e) {
                 (0, i.jsx)(h.PMB, {
                     noticeType: l,
                     onClick: () => {
-                        eL(), (0, ec.h)();
+                        eL(), (0, ed.h)();
                     },
                 }),
                 t,
-                (0, i.jsx)(ev, { allowClick: c, error: G.iy.NO_AUDIO_INPUT_DETECTED }),
+                (0, i.jsx)(ev, { allowClick: d, error: G.iy.NO_AUDIO_INPUT_DETECTED }),
                 n,
             ],
         })
@@ -178,12 +178,12 @@ function eL(e) {
     p.A.dismiss(null != e ? { untilAtLeast: a()(e) } : void 0);
 }
 let eM = l.memo(function () {
-    let e = (0, d.bG)([e_.default], () => e_.default.getCurrentUser()),
-        t = (0, d.bG)([eA.A], () => eA.A.getGuildId()),
-        s = (0, d.bG)([ep.Ay], () => ep.Ay.getNotice()),
+    let e = (0, c.bG)([e_.default], () => e_.default.getCurrentUser()),
+        t = (0, c.bG)([eA.A], () => eA.A.getGuildId()),
+        s = (0, c.bG)([ep.Ay], () => ep.Ay.getNotice()),
         { analyticsLocations: a } = (0, v.Ay)(),
         o = (0, T.Ay)(),
-        c = (0, F.H)(t),
+        d = (0, F.H)(t),
         p = (0, Z.V)();
     if (
         (l.useEffect(() => {
@@ -222,7 +222,7 @@ let eM = l.memo(function () {
     if (null != y) return (0, i.jsx)(U._, { dismissibleContent: y, noticeType: s.type });
     if (null != G) return (0, i.jsx)(M.T, { dismissibleContent: G });
     if (null != J) return (0, i.jsx)(L.r, { dismissibleContent: J, noticeType: s.type });
-    let ec = s.metadata?.premiumType;
+    let ed = s.metadata?.premiumType;
     switch (s.type) {
         case eI.kqX.PTT_NO_KEYBIND_WARNING:
             return (0, i.jsx)(eo.A, {});
@@ -332,7 +332,7 @@ let eM = l.memo(function () {
                     (0, i.jsx)(h.Z_L, {
                         onClick: () => {
                             let e = eh.A.getRemoteDisconnectVoiceChannelId();
-                            null != e && null != ed.A.getChannel(e) && x.default.selectVoiceChannel(e);
+                            null != e && null != ec.A.getChannel(e) && x.default.selectVoiceChannel(e);
                         },
                         noticeType: s.type,
                         children: eb.intl.string(eb.t.vD60Pv),
@@ -353,7 +353,7 @@ let eM = l.memo(function () {
                     (0, i.jsx)(h.Z_L, {
                         onClick: () => {
                             let e = eh.A.getLastSessionVoiceChannelId();
-                            null != e && null != ed.A.getChannel(e) && x.default.selectVoiceChannel(e);
+                            null != e && null != ec.A.getChannel(e) && x.default.selectVoiceChannel(e);
                         },
                         noticeType: s.type,
                         children: eb.intl.string(eb.t.vD60Pv),
@@ -392,7 +392,7 @@ let eM = l.memo(function () {
                     eb.intl.string(eb.t["f+Zaol"]),
                     (0, i.jsx)(h.Z_L, {
                         noticeType: s.type,
-                        onClick: () => (c && null != t ? (0, H.Ze)(t) : R.R()),
+                        onClick: () => (d && null != t ? (0, H.Ze)(t) : R.R()),
                         children: eb.intl.string(eb.t.fiNVin),
                     }),
                 ],
@@ -685,9 +685,9 @@ let eM = l.memo(function () {
         case eI.kqX.PREMIUM_UNCANCEL:
             return (0, i.jsxs)(h.$Td, {
                 color:
-                    ec === eN.PremiumTypes.TIER_1
+                    ed === eN.PremiumTypes.TIER_1
                         ? h.Hv$.PREMIUM_TIER_1
-                        : ec === eN.PremiumTypes.TIER_0
+                        : ed === eN.PremiumTypes.TIER_0
                           ? h.Hv$.PREMIUM_TIER_0
                           : h.Hv$.PREMIUM_TIER_2,
                 children: [
@@ -698,9 +698,9 @@ let eM = l.memo(function () {
                         },
                     }),
                     (0, i.jsx)(h.tvc, { size: "md", color: "currentColor", className: ey.PC }),
-                    ec === eN.PremiumTypes.TIER_1
+                    ed === eN.PremiumTypes.TIER_1
                         ? eb.intl.formatToPlainString(eb.t.fXv4wm, { daysLeft: s.metadata.daysLeft })
-                        : ec === eN.PremiumTypes.TIER_0
+                        : ed === eN.PremiumTypes.TIER_0
                           ? eb.intl.formatToPlainString(eb.t.ZOHZMr, { daysLeft: s.metadata.daysLeft })
                           : eb.intl.formatToPlainString(eb.t.outyHh, { daysLeft: s.metadata.daysLeft }),
                     (0, i.jsx)(h.Z_L, {
@@ -712,22 +712,22 @@ let eM = l.memo(function () {
                                         n.e("41353"),
                                         n.e("62175"),
                                         n.e("14704"),
-                                        n.e("99590"),
+                                        n.e("2550"),
                                     ]).then(n.bind(n, 174705));
                                     return (t) =>
                                         (0, i.jsx)(e, {
                                             ...t,
                                             daysLeft: s.metadata.daysLeft,
-                                            premiumType: ec,
+                                            premiumType: ed,
                                             analyticsSource: "Nag Bar",
                                             premiumSubscription: s.metadata.premiumSubscription,
                                         });
                                 });
                         },
                         children:
-                            ec === eN.PremiumTypes.TIER_1
+                            ed === eN.PremiumTypes.TIER_1
                                 ? eb.intl.string(eb.t.BkbUPM)
-                                : ec === eN.PremiumTypes.TIER_0
+                                : ed === eN.PremiumTypes.TIER_0
                                   ? eb.intl.string(eb.t.Px978X)
                                   : eb.intl.string(eb.t.LW5tCE),
                     }),
@@ -806,9 +806,9 @@ let eM = l.memo(function () {
                             eL(s.metadata?.premiumSubscription?.currentPeriodEnd);
                         },
                     }),
-                    ec === eN.PremiumTypes.TIER_1
+                    ed === eN.PremiumTypes.TIER_1
                         ? eb.intl.formatToPlainString(eb.t.b6QUvf, { daysLeft: s.metadata.daysLeft })
-                        : ec === eN.PremiumTypes.TIER_0
+                        : ed === eN.PremiumTypes.TIER_0
                           ? eb.intl.formatToPlainString(eb.t["tURZ/M"], { daysLeft: s.metadata.daysLeft })
                           : eb.intl.formatToPlainString(eb.t.AyC74I, { daysLeft: s.metadata.daysLeft }),
                     (0, i.jsx)(h.Z_L, {
@@ -818,9 +818,9 @@ let eM = l.memo(function () {
                                 (0, er.openUserSettings)(ea.X.SUBSCRIPTIONS_PANEL);
                         },
                         children:
-                            ec === eN.PremiumTypes.TIER_1
+                            ed === eN.PremiumTypes.TIER_1
                                 ? eb.intl.string(eb.t.lboF5O)
-                                : ec === eN.PremiumTypes.TIER_0
+                                : ed === eN.PremiumTypes.TIER_0
                                   ? eb.intl.string(eb.t["4UPwOq"])
                                   : eb.intl.string(eb.t["P/VvGb"]),
                     }),

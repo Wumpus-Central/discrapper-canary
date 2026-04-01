@@ -6,8 +6,8 @@ var l = n(503698),
     a = n(311907),
     r = n(990078),
     o = n(397927),
-    c = n(730134),
-    d = n(440594),
+    d = n(730134),
+    c = n(440594),
     u = n(429913),
     h = n(309698),
     A = n(47167),
@@ -35,8 +35,8 @@ var l = n(503698),
     U = n(652215),
     G = n(818348),
     P = n(985018),
-    k = n(35471),
-    w = n(830684);
+    k = n(972708),
+    w = n(782691);
 function B(e) {
     let { focusedParticipant: t, channel: n } = e,
         l = (0, C.Us)(),
@@ -58,7 +58,7 @@ function V(e) {
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(c.A, { className: k.my, size: o._3J.SIZE_24, user: t, animate: !1 }),
+                  (0, i.jsx)(d.A, { className: k.my, size: o._3J.SIZE_24, user: t, animate: !1 }),
                   (0, i.jsx)(o.Text, { className: k.W$, variant: "text-md/medium", color: s, children: a }),
               ],
           });
@@ -68,7 +68,7 @@ function H(e) {
         { focusedApplication: n, focusedParticipant: l, channel: s } = e,
         a = (0, b.$F)(s),
         r = (0, g.Qs)(s.id),
-        c = null != r ? (0, p.G3)(r) : null,
+        d = null != r ? (0, p.G3)(r) : null,
         u = null != r;
     if (l?.type === D.lp.ACTIVITY)
         null != n &&
@@ -80,7 +80,7 @@ function H(e) {
                         className: k.W$,
                         variant: "text-md/normal",
                         color: "none",
-                        children: (0, d.A)(n.name),
+                        children: (0, c.A)(n.name),
                     }),
                     a && (0, i.jsx)(B, { channel: s, focusedParticipant: l }),
                 ],
@@ -95,11 +95,11 @@ function H(e) {
                 a && (0, i.jsx)(B, { channel: s, focusedParticipant: l }),
             ],
         });
-    } else u && (t = (0, i.jsx)(f.A, { guildEvent: r, recurrenceId: c }));
+    } else u && (t = (0, i.jsx)(f.A, { guildEvent: r, recurrenceId: d }));
     return (0, i.jsx)("div", { className: k.kL, children: t });
 }
 function F(e) {
-    let { channel: t, guild: l, appContext: c, inCall: d, isChatOpen: m, exitFullScreen: g } = e,
+    let { channel: t, guild: l, appContext: d, inCall: c, isChatOpen: m, exitFullScreen: g } = e,
         { focusedParticipant: p } = (0, a.cf)(
             [j.A],
             () => ({
@@ -114,7 +114,7 @@ function F(e) {
         y = P.intl.string(P.t.BVZqJl);
     t.isDM() ? (y = P.intl.string(P.t.jN2DfZ)) : t.isGroupDM() && (y = P.intl.string(P.t["e5y+gm"]));
     let v = (0, a.bG)([h.A], () => h.A.getChannelStatus(t)),
-        L = t.isGuildVoice() && d && null != v && v.length > 0,
+        L = t.isGuildVoice() && c && null != v && v.length > 0,
         U = (0, R.Ay)(t),
         B = L
             ? (0, i.jsx)(r.m, {
@@ -170,8 +170,8 @@ function F(e) {
                         childrenBottom: B,
                         toolbar: (0, i.jsx)(O.A, {
                             channel: t,
-                            appContext: c,
-                            inCall: d,
+                            appContext: d,
+                            inCall: c,
                             isChatOpen: m,
                             exitFullScreen: g,
                         }),

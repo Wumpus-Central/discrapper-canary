@@ -21,7 +21,7 @@ var n = s(627968),
     C = s(998694),
     A = s(438166),
     S = s(652215),
-    v = s(16464);
+    v = s(471312);
 let I = { flattenProductVariants: !0 };
 function L(e) {
     let { isFetchingCategories: t, scrollerRef: s, tab: l } = e,

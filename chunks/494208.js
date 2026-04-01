@@ -5,9 +5,9 @@ var i = n(627968),
     a = n(323073),
     r = n(58736),
     o = n(707539),
-    c = n(617011),
-    d = n(985018),
-    u = n(857476);
+    d = n(617011),
+    c = n(985018),
+    u = n(94287);
 function h(e) {
     let { channel: t } = e,
         [n, h] = l.useState(!1),
@@ -29,7 +29,7 @@ function h(e) {
         onRequestClose: m,
         renderPopout: function () {
             return (0, i.jsx)(s.lGe, {
-                children: (0, i.jsx)(c.A, { className: u.T, channel: t, onClose: m, context: "popout" }),
+                children: (0, i.jsx)(d.A, { className: u.T, channel: t, onClose: m, context: "popout" }),
             });
         },
         clickTrap: !0,
@@ -41,8 +41,8 @@ function h(e) {
                 className: u.Kk,
                 onClick: g,
                 icon: s.ysw,
-                "aria-label": d.intl.string(d.t.B2panI),
-                tooltip: n ? null : d.intl.string(d.t.B2panI),
+                "aria-label": c.intl.string(c.t.B2panI),
+                tooltip: n ? null : c.intl.string(c.t.B2panI),
                 disabled: _,
                 selected: n,
             });

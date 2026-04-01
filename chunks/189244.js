@@ -14,7 +14,7 @@ var i = n(311907),
     x = n(287809),
     p = n(850730),
     g = n(385803),
-    _ = n(749929);
+    _ = n(37760);
 function f() {
     (0, u.Bf)();
     let e = (0, i.bG)([x.default], () => x.default.getCurrentUser()),
@@ -27,9 +27,9 @@ function f() {
         A = e?.avatarDecoration?.skuId,
         C = e?.collectibles?.nameplate?.skuId,
         y = null != A ? (b.find((e) => e.skuId === A) ?? null) : null,
-        T = null != C ? (j.find((e) => e.skuId === C) ?? null) : null,
-        S = (0, i.bG)([o.A], () => o.A.getProduct(y?.skuId)),
-        E = (0, i.bG)([o.A], () => o.A.getProduct(T?.skuId)),
+        S = null != C ? (j.find((e) => e.skuId === C) ?? null) : null,
+        T = (0, i.bG)([o.A], () => o.A.getProduct(y?.skuId)),
+        E = (0, i.bG)([o.A], () => o.A.getProduct(S?.skuId)),
         N = (0, i.bG)([r.A], () => r.A.fontSize),
         I = (0, i.bG)([r.A], () => r.A.messageGroupSpacing),
         k = h.Xi.useSetting();
@@ -79,7 +79,7 @@ function f() {
                         }),
                         (0, a.jsxs)(l.Text, {
                             variant: "text-md/normal",
-                            children: ["Avatar Decoration: ", S?.name ?? "None"],
+                            children: ["Avatar Decoration: ", T?.name ?? "None"],
                         }),
                         (0, a.jsxs)(l.Text, {
                             variant: "text-md/normal",

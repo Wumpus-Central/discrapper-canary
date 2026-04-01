@@ -1,27 +1,27 @@
-t.d(n, { A: () => f });
+t.d(n, { A: () => g });
 var i = t(627968);
 t(64700);
-var s = t(311907),
-    l = t(397927),
+var a = t(311907),
+    s = t(397927),
     r = t(734057),
-    a = t(309010),
+    l = t(309010),
     o = t(622543),
     d = t(987112),
     c = t(389996),
     u = t(743987),
-    A = t(900179),
-    _ = t(280645),
+    _ = t(900179),
+    p = t(280645),
     x = t(928223),
-    p = t(518477),
-    m = t(985018),
-    I = t(47049);
-function f(e) {
-    let { user: n, displayProfile: t, guildId: f, onClose: g } = e,
-        h = (0, s.bG)([o.A], () => o.A.getUserProfile(n.id)?.application),
-        b = (0, s.bG)([r.A, a.A], () => r.A.getChannel(a.A.getChannelId()));
-    return (0, i.jsxs)(l.IpV, {
+    A = t(518477),
+    f = t(985018),
+    m = t(824860);
+function g(e) {
+    let { user: n, displayProfile: t, guildId: g, onClose: I } = e,
+        h = (0, a.bG)([o.A], () => o.A.getUserProfile(n.id)?.application),
+        b = (0, a.bG)([r.A, l.A], () => r.A.getChannel(l.A.getChannelId()));
+    return (0, i.jsxs)(s.IpV, {
         fade: !0,
-        className: I.XG,
+        className: m.XG,
         children: [
             (0, i.jsx)(c.E, { userBio: t?.bio, setLineClamp: !1 }),
             h?.popularApplicationCommandIds != null &&
@@ -30,13 +30,13 @@ function f(e) {
                     applicationId: h.id,
                     commandIds: h.popularApplicationCommandIds,
                     channel: b,
-                    guildId: f,
-                    onClick: g,
+                    guildId: g,
+                    onClick: I,
                 }),
-            t?.guildId != null && (0, i.jsx)(_.A, { userId: n.id, guildId: t.guildId }),
-            (0, i.jsx)(A.A, {
-                heading: m.intl.string(m.t["A//N4k"]),
-                children: (0, i.jsx)(u.A, { userId: n.id, guildId: f, tooltipDelay: p.In }),
+            t?.guildId != null && (0, i.jsx)(p.A, { userId: n.id, guildId: t.guildId }),
+            (0, i.jsx)(_.A, {
+                heading: f.intl.string(f.t["A//N4k"]),
+                children: (0, i.jsx)(u.A, { userId: n.id, guildId: g, tooltipDelay: A.In }),
             }),
             (0, i.jsx)(x.A, { userId: n.id }),
         ],

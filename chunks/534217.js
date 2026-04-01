@@ -12,13 +12,13 @@ var s = n(503698),
     m = n(326084),
     g = n(851746),
     _ = n(617461),
-    A = n(664654),
-    x = n(303682),
+    x = n(664654),
+    A = n(303682),
     h = n(652215),
     p = n(985018),
-    T = n(10103),
+    T = n(989348),
     f = n(544879);
-let E = (e) => {
+let S = (e) => {
         let { user: t } = e,
             { avatarSrc: n, eventHandlers: s } = (0, o.A)({ userId: t.id, size: r._3J.SIZE_24 });
         return (0, i.jsx)(
@@ -27,7 +27,7 @@ let E = (e) => {
             t.id,
         );
     },
-    S = (e) => {
+    E = (e) => {
         let { slotIndex: t } = e;
         return (0, i.jsx)("div", { className: T.p, children: t });
     },
@@ -37,12 +37,12 @@ let E = (e) => {
             className: T.L$,
             children: (() => {
                 let e = [];
-                for (let n = 0; n < A.Z; n++)
+                for (let n = 0; n < x.Z; n++)
                     if (t?.[n] !== void 0) {
-                        let s = (0, i.jsx)(E, { user: t[n] }, t[n].id);
+                        let s = (0, i.jsx)(S, { user: t[n] }, t[n].id);
                         e.push(s);
                     } else {
-                        let t = (0, i.jsx)(S, { slotIndex: n + 1 }, n);
+                        let t = (0, i.jsx)(E, { slotIndex: n + 1 }, n);
                         e.push(t);
                     }
                 return e;
@@ -57,17 +57,17 @@ let E = (e) => {
             background: T.cq,
             strokeSize: 0.8,
             ringColorOverrideClassName: T.e0,
-            overlayClassName: t === A.Z ? T.ys : void 0,
+            overlayClassName: t === x.Z ? T.ys : void 0,
             children: (0, i.jsx)(r._V3, { src: f.A, height: 93, width: 93, zoomable: !1 }),
         });
     },
     N = (e) => {
         let { className: t } = e,
-            { referralSentUsers: s } = (0, A.J)(),
+            { referralSentUsers: s } = (0, x.J)(),
             o = (0, a.bG)([g.A], () => g.A.getRecipientStatus()),
             u = (0, a.bG)([g.A], () => g.A.getHasEligibleFriends()),
-            f = o.size === A.Z && [...o.values()].every((e) => e === m.aK.REDEEMED),
-            E = o.size === A.Z;
+            f = o.size === x.Z && [...o.values()].every((e) => e === m.aK.REDEEMED),
+            S = o.size === x.Z;
         return (0, i.jsxs)("div", {
             className: l()(T.kL, t),
             children: [
@@ -92,7 +92,7 @@ let E = (e) => {
                                             ? p.intl.format(p.t["zWhX/Q"], {
                                                   helpdeskArticle: c.A.getArticleURL(h.MVz.REFERRAL_PROGRAM),
                                               })
-                                            : s.length === A.Z
+                                            : s.length === x.Z
                                               ? !0 === f
                                                   ? p.intl.format(p.t["1aEjsH"], {
                                                         helpdeskArticle: c.A.getArticleURL(h.MVz.REFERRAL_PROGRAM),
@@ -108,7 +108,7 @@ let E = (e) => {
                         }),
                         (0, i.jsx)(r.Button, {
                             variant: "primary",
-                            disabled: !1 === u || !0 === E,
+                            disabled: !1 === u || !0 === S,
                             text: (() => {
                                 switch (_.$.getConfig({ location: "ReferralBanner" }).variation) {
                                     case _.e.CONTROL:
@@ -136,7 +136,7 @@ let E = (e) => {
                                             return (n) => (0, i.jsx)(e, { ...n, startingScreen: t });
                                         });
                                 })({
-                                    startingScreen: x.SelectFriendsModalScreens.SELECT_FRIENDS,
+                                    startingScreen: A.SelectFriendsModalScreens.SELECT_FRIENDS,
                                     analyticsLocations: [],
                                 }),
                         }),

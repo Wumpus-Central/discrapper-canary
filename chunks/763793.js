@@ -5,8 +5,8 @@ var i = n(627968),
     a = n.n(s),
     r = n(110259),
     o = n(311907),
-    c = n(397927),
-    d = n(367513),
+    d = n(397927),
+    c = n(367513),
     u = n(442433),
     h = n(401843),
     A = n(793574),
@@ -31,7 +31,7 @@ var i = n(627968),
     L = n(289105),
     M = n(652215),
     D = n(806931),
-    U = n(9295);
+    U = n(905686);
 let G = 16 / 9,
     P = (e) => {
         let {
@@ -41,12 +41,12 @@ let G = 16 / 9,
                 guildId: a,
                 user: r,
                 width: o,
-                isModerator: d,
+                isModerator: c,
                 onContextMenu: u,
                 popoutType: h,
             } = e,
             A = l.useRef(null),
-            { reducedMotion: _ } = l.useContext(c.CZY),
+            { reducedMotion: _ } = l.useContext(d.CZY),
             { blocked: m, ignored: g, id: p } = t;
         return (0, i.jsx)(T.A, {
             targetElementRef: A,
@@ -55,7 +55,7 @@ let G = 16 / 9,
             channelId: s.id,
             clickTrap: !0,
             children: (e) =>
-                (0, i.jsx)(c.DUT, {
+                (0, i.jsx)(d.DUT, {
                     innerRef: A,
                     onContextMenu: (e) => u(n, e),
                     ...e,
@@ -73,7 +73,7 @@ let G = 16 / 9,
                             pulseSpeakingIndicator: !_.enabled,
                             width: o,
                             onContextMenu: u,
-                            children: d && (0, i.jsx)(L.A, {}),
+                            children: c && (0, i.jsx)(L.A, {}),
                         },
                         p,
                     ),
@@ -90,7 +90,7 @@ let G = 16 / 9,
                 onContextMenu: u,
                 popoutType: A,
             } = e,
-            { reducedMotion: _ } = l.useContext(c.CZY),
+            { reducedMotion: _ } = l.useContext(d.CZY),
             { id: m, blocked: p, ignored: I } = t,
             N = (0, o.yK)([S.A], () => S.A.getAllActiveStreams(), []),
             { selectedParticipant: T, largeStream: b } = (0, o.cf)([g.A], () => ({
@@ -108,9 +108,9 @@ let G = 16 / 9,
                     }
                     T?.id === e.id
                         ? b
-                            ? (d.A.selectParticipant(s.id, null), d.A.updateStageStreamSize(s.id, !1))
-                            : d.A.updateStageStreamSize(s.id, !0)
-                        : (d.A.updateStageStreamSize(s.id, !1), d.A.selectParticipant(s.id, e.id));
+                            ? (c.A.selectParticipant(s.id, null), c.A.updateStageStreamSize(s.id, !1))
+                            : c.A.updateStageStreamSize(s.id, !0)
+                        : (c.A.updateStageStreamSize(s.id, !1), c.A.selectParticipant(s.id, e.id));
                 },
                 [N, s, T, b],
             );
@@ -136,8 +136,8 @@ let G = 16 / 9,
         );
     },
     w = l.memo(function (e) {
-        let { participant: t, channel: l, width: s, popoutType: c } = e,
-            { newestAnalyticsLocation: d } = (0, _.Ay)(A.A.STAGE_TILE),
+        let { participant: t, channel: l, width: s, popoutType: d } = e,
+            { newestAnalyticsLocation: c } = (0, _.Ay)(A.A.STAGE_TILE),
             h = (0, I.Us)(),
             f = l.getGuildId(),
             x = b.default.getId();
@@ -168,7 +168,7 @@ let G = 16 / 9,
                                             stream: e.stream,
                                             appContext: h,
                                             exitFullscreen: () => {},
-                                            onInteraction: (0, p.s)("StreamContextMenu", d, {
+                                            onInteraction: (0, p.s)("StreamContextMenu", c, {
                                                 entrypoint: a,
                                                 targetUserId: E.id,
                                                 tileType: D.qs.STREAM,
@@ -187,7 +187,7 @@ let G = 16 / 9,
                                     menuItemProps: t,
                                     entrypoint: D.GK.THREE_DOT,
                                     targetUserId: E.id,
-                                    location: d,
+                                    location: c,
                                     tileType: D.qs.USER,
                                 }),
                             );
@@ -198,7 +198,7 @@ let G = 16 / 9,
                                     n.e("97262"),
                                     n.e("42128"),
                                     n.e("84841"),
-                                    n.e("36382"),
+                                    n.e("50970"),
                                 ]).then(n.bind(n, 107632));
                                 return (t) =>
                                     (0, i.jsx)(e, {
@@ -209,7 +209,7 @@ let G = 16 / 9,
                                         showMediaItems: !0,
                                         showStageChannelItems: !0,
                                         showChatItems: !1,
-                                        onInteraction: (0, p.s)("GuildChannelUserContextMenu", d, {
+                                        onInteraction: (0, p.s)("GuildChannelUserContextMenu", c, {
                                             targetUserId: E.id,
                                             tileType: D.qs.USER,
                                         }),
@@ -229,7 +229,7 @@ let G = 16 / 9,
                   width: s,
                   isModerator: T,
                   onContextMenu: y,
-                  popoutType: c,
+                  popoutType: d,
               })
             : (0, i.jsx)(P, {
                   stageParticipant: t,
@@ -240,6 +240,6 @@ let G = 16 / 9,
                   width: s,
                   isModerator: T,
                   onContextMenu: y,
-                  popoutType: c,
+                  popoutType: d,
               });
     });

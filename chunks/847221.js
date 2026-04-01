@@ -5,15 +5,15 @@ var i = n(627968),
     a = n.n(s),
     r = n(311907),
     o = n(397927),
-    c = n(609425),
-    d = n(73392),
+    d = n(609425),
+    c = n(73392),
     u = n(769022),
     h = n(287809),
     A = n(562153),
     _ = n(850457);
 n(281405);
 var m = n(985018),
-    g = n(803899);
+    g = n(77676);
 function p(e) {
     let { channel: t } = e,
         [n, s] = l.useState(!1),
@@ -28,8 +28,8 @@ function p(e) {
     let x = (0, r.bG)([u.A], () => u.A.getLastLeftUserId(t.id), [t.id]),
         E = (0, r.bG)([h.default], () => (null != x ? h.default.getUser(x) : null), [x]),
         I = A.Ay.useName(t.guild_id, t.id, E),
-        C = (0, c.A)({ userId: E?.id, guildId: t.guild_id }),
-        N = (0, d.a)({ displayNameStyles: C }),
+        C = (0, d.A)({ userId: E?.id, guildId: t.guild_id }),
+        N = (0, c.a)({ displayNameStyles: C }),
         T = () => {
             clearTimeout(f.current), (f.current = setTimeout(() => s(!0), 100));
         },

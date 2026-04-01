@@ -12,17 +12,17 @@ var s = n(503698),
     m = n(742589),
     g = n(287809),
     _ = n(927578),
-    A = n(652215),
-    x = n(788868),
+    x = n(652215),
+    A = n(788868),
     h = n(985018),
-    p = n(71971);
+    p = n(670324);
 let T = a.Ay.connectStores([g.default], () => ({ user: g.default.getCurrentUser() }))(
     (0, c.A)((e) => {
         let { isAuthenticated: t, user: n } = e,
-            s = (0, _.TW)(n, x.PremiumTypes.TIER_2),
+            s = (0, _.TW)(n, A.PremiumTypes.TIER_2),
             a = (0, u.Ay)();
         return (0, i.jsx)(d.A, {
-            section: A.JJy.NAVIGATION,
+            section: x.JJy.NAVIGATION,
             children: (0, i.jsx)(o.NPJ, {
                 theme: a,
                 children: (e) =>

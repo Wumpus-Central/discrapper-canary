@@ -5,8 +5,8 @@ var i = n(627968),
     a = n.n(s),
     r = n(311907),
     o = n(308528),
-    c = n(442433),
-    d = n(676002),
+    d = n(442433),
+    c = n(676002),
     u = n(963027),
     h = n(976860),
     A = n(734057),
@@ -16,7 +16,7 @@ var i = n(627968),
     p = n(166444),
     f = n(652215),
     x = n(790782),
-    E = n(99566);
+    E = n(928409);
 function I(e, t) {
     let n = t.getGuildId();
     if (null == n) throw Error("TextChannel, preloadChannel: Channel does not have a guildId");
@@ -27,7 +27,7 @@ class C extends g.Ay {
         let { channel: t } = this.props,
             l = _.A.getGuild(t.getGuildId());
         null != l &&
-            (0, c.L3)(e, async () => {
+            (0, d.L3)(e, async () => {
                 let { default: e } = await n.e("15669").then(n.bind(n, 313140));
                 return (n) => (0, i.jsx)(e, { ...n, channel: t, guild: l });
             });
@@ -69,7 +69,7 @@ class C extends g.Ay {
         return r ? n(l(o)) : o;
     }
 }
-let N = (0, d.a)(C),
+let N = (0, c.a)(C),
     T = l.memo(function (e) {
         let { channel: t, guild: n, disableSorting: l } = e,
             s = (0, r.cf)([A.A, m.A], () => {
