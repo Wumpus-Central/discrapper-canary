@@ -17,7 +17,7 @@ var i = n(64700),
     N = n(652215),
     b = n(788868),
     A = n(985018),
-    p = n(755157);
+    p = n(103659);
 let I = { rewardSkuIds: [], promotionEndDate: null };
 function j(t, e, n) {
     let j = t.config.features.includes(C.Li.NITRO_CONTROL_CTA),
@@ -67,7 +67,7 @@ function j(t, e, n) {
             : O && null != R && R > new Date()
               ? {
                     title: A.intl.string(p.default.E0XZQW),
-                    subtitle: A.intl.format(p.default["Ri/ZGz"], {
+                    subtitle: A.intl.format(E ? p.default["PyQY5+"] : p.default["Ri/ZGz"], {
                         date: R,
                         helpCenterLink: m.A.getArticleURL(N.MVz.NITRO_CONTROL_CAMPAIGN),
                     }),
