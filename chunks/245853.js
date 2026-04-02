@@ -106,3 +106,9 @@ let m = (0, r.mj)({
 function E() {
     return m.definition.defaultConfig.variant;
 }
+(0, r.mj)({
+    name: "2026-03-video-quest-player-refactor",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});
