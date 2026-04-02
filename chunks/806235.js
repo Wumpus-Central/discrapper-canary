@@ -1,16 +1,16 @@
 n.d(t, { A: () => c });
 var a = n(627968),
-    s = n(64700),
-    i = n(311907),
+    i = n(64700),
+    s = n(311907),
     l = n(397927),
     r = n(274372),
     o = n(372684),
     d = n(399925);
 function c() {
-    let { mlPipelinesEnabled: e } = (0, i.cf)([r.A], () => ({
+    let { mlPipelinesEnabled: e } = (0, s.cf)([r.A], () => ({
             mlPipelinesEnabled: r.A.getSettings().mlPipelinesEnabled,
         })),
-        [t, n] = s.useState(
+        [t, n] = i.useState(
             () => (
                 void 0 === window.__CLIPS_DEBUG__ &&
                     (window.__CLIPS_DEBUG__ = { emotion: !1, yell: !1, wakeWord: !1, whisper: !1 }),
@@ -22,11 +22,11 @@ function c() {
                 }
             ),
         ),
-        [c, u] = s.useState(o.rb.KILL),
-        [m, h] = s.useState(1),
-        [x, p] = s.useState(""),
-        [g, _] = s.useState(""),
-        f = s.useCallback(
+        [c, u] = i.useState(o.rb.KILL),
+        [m, h] = i.useState(1),
+        [x, p] = i.useState(""),
+        [g, _] = i.useState(""),
+        f = i.useCallback(
             (e) => {
                 let a = !t[e];
                 void 0 === window.__CLIPS_DEBUG__ &&
@@ -60,6 +60,14 @@ function c() {
                             (0, a.jsx)(l.Button, {
                                 text: "Yelling",
                                 onClick: () => d.Ts({ type: o.Gy.YELLING, userId: "123" }),
+                            }),
+                            (0, a.jsx)(l.Button, {
+                                text: "Laughter",
+                                onClick: () => d.Ts({ type: o.Gy.LAUGHTER, label: "laughter", confidence: 1 }),
+                            }),
+                            (0, a.jsx)(l.Button, {
+                                text: "Shouting",
+                                onClick: () => d.Ts({ type: o.Gy.LAUGHTER, label: "shouting", confidence: 1 }),
                             }),
                         ],
                     }),
@@ -145,6 +153,11 @@ function c() {
                             label: "Whisper Transcription",
                             checked: e.whisperTranscription,
                             onChange: (t) => d.dR({ ...e, whisperTranscription: t }),
+                        }),
+                        (0, a.jsx)(l.dOG, {
+                            label: "Laughter / Shouting Detector (V3)",
+                            checked: e.laughterDetector,
+                            onChange: (t) => d.dR({ ...e, laughterDetector: t }),
                         }),
                     ],
                 }),

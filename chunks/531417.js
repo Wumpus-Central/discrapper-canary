@@ -61,6 +61,9 @@ class A extends s.A {
                   (this.audioSubsystem = (0, d.lE)().getUseLegacyAudioDevice() ? h.rB.LEGACY : h.rB.STANDARD),
             null != e.pingVoiceThread && this.watchdogTick(),
             null != e.setActiveSinksChangeCallback && e.setActiveSinksChangeCallback(this.handleActiveSinksChange),
+            e.setOnClipsMlDetection?.((e) => {
+                Array.isArray(e) && e.length > 0 && this.emit(o.bg.ClipsMlDetection, e);
+            }),
             (0, l.A)(this),
             I(this);
     }

@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => E });
 var r = n(205693),
     i = n(439372),
-    a = n(608960),
-    s = n(209932),
+    s = n(608960),
+    a = n(209932),
     o = n(961350),
     l = n(274372),
     u = n(661978),
@@ -11,8 +11,9 @@ var r = n(205693),
     d = n(572164),
     _ = n(399925);
 let f = 1e4,
-    p = 1e4;
-class h extends i.A {
+    p = 1e4,
+    h = 15e3;
+class m extends i.A {
     timeline;
     scheduledClipTimeout = null;
     scheduledClipSignal = null;
@@ -39,9 +40,9 @@ class h extends i.A {
     }
     handleSoundboardPlayStart(e) {
         if (!(0, d.TD)()) return;
-        let t = s.A.getSoundById(e.soundId);
+        let t = a.A.getSoundById(e.soundId);
         if (null == t) return;
-        let n = a.A.getGuildEmojis(t.guildId)?.[t.emojiId ?? ""];
+        let n = s.A.getGuildEmojis(t.guildId)?.[t.emojiId ?? ""];
         this.process({
             type: c.Gy.SOUNDBOARD,
             playing: !0,
@@ -55,9 +56,9 @@ class h extends i.A {
     }
     handleSoundboardPlayEnd(e) {
         if (!(0, d.TD)()) return;
-        let t = s.A.getSoundById(e.soundId);
+        let t = a.A.getSoundById(e.soundId);
         if (null == t) return;
-        let n = a.A.getGuildEmojis(t.guildId)?.[t.emojiId ?? ""];
+        let n = s.A.getGuildEmojis(t.guildId)?.[t.emojiId ?? ""];
         this.process({
             type: c.Gy.SOUNDBOARD,
             playing: !1,
@@ -98,6 +99,15 @@ class h extends i.A {
                 )
                     return;
                 this.scheduleClip(e);
+                break;
+            case c.Gy.LAUGHTER:
+                if (
+                    this.scheduledClipSignal?.type === c.Gy.GAME_EVENT ||
+                    this.scheduledClipSignal?.type === c.Gy.PHRASE ||
+                    performance.now() - this.lastClipTimestamp < h
+                )
+                    return;
+                this.scheduleClip(e);
         }
     }
     read() {
@@ -133,4 +143,4 @@ class h extends i.A {
         this.timeline.updateLength(l.A.getSettings().clipsLength);
     }
 }
-let m = new h();
+let E = new m();

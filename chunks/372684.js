@@ -1,11 +1,12 @@
 "use strict";
-n.d(t, { Gy: () => r, k9: () => i, nQ: () => a, rb: () => s });
+n.d(t, { Gy: () => r, k9: () => i, nQ: () => s, rb: () => a });
 var r = (function (e) {
         return (
             (e.MANUAL = "manual"),
             (e.DISTRIBUTED = "distributed"),
             (e.PHRASE = "phrase"),
             (e.YELLING = "yelling"),
+            (e.LAUGHTER = "laughter"),
             (e.GAME_EVENT = "game_event"),
             (e.SPEAKING = "speaking"),
             (e.SOUNDBOARD = "soundboard"),
@@ -21,10 +22,10 @@ var r = (function (e) {
             e
         );
     })({}),
-    a = (function (e) {
+    s = (function (e) {
         return (e.CLIP = "clip"), (e.SCREENSHOT = "screenshot"), (e.VOICE_CLIP = "voice_clip"), e;
     })({}),
-    s = (function (e) {
+    a = (function (e) {
         return (
             (e.KILL = "kill"),
             (e.MULTIKILL = "multikill"),

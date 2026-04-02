@@ -18,6 +18,7 @@ var r = (function (e) {
         (e.ClipsRecordingRestartNeeded = "clips-recording-restart-needed"),
         (e.ClipsInitFailure = "clips-init-failure"),
         (e.ClipsRecordingEnded = "clips-recording-ended"),
+        (e.ClipsMlDetection = "clips-ml-detection"),
         (e.NativeScreenSharePickerUpdate = "native-screenshare-picker-updated"),
         (e.NativeScreenSharePickerCancel = "native-screenshare-picker-cancelled"),
         (e.NativeScreenSharePickerError = "native-screenshare-picker-error"),

@@ -7,7 +7,7 @@ n.d(t, {
     MI: () => Y,
     Mt: () => P,
     PW: () => ee,
-    Su: () => $,
+    Su: () => z,
     Ts: () => er,
     VO: () => X,
     XK: () => K,
@@ -15,14 +15,14 @@ n.d(t, {
     dR: () => et,
     e6: () => J,
     eQ: () => w,
-    fd: () => M,
+    fd: () => x,
     h$: () => G,
-    jA: () => z,
+    jA: () => $,
     l0: () => ei,
     oH: () => Z,
     pM: () => en,
     w7: () => es,
-    yO: () => x,
+    yO: () => M,
     yT: () => j,
     yd: () => H,
 }),
@@ -51,9 +51,9 @@ var r = n(205693),
     v = n(439818),
     N = n(520165),
     C = n(572164),
-    b = n(142135),
-    R = n(93532),
-    O = n(956050),
+    R = n(142135),
+    O = n(93532),
+    b = n(956050),
     D = n(696016),
     L = n(652215);
 async function w(e) {
@@ -62,7 +62,7 @@ async function w(e) {
         A.default.track(L.HAw.CLIPS_SETTINGS_UPDATED, { allow_voice_recording: t }),
         s.h.dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" });
 }
-async function x(e) {
+async function M(e) {
     let { clipsEnabled: t, guildId: n, trackAnalytics: r = !1 } = e;
     await s.h.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
@@ -75,7 +75,7 @@ async function x(e) {
                 ...(!t && { decoupled_clips_enabled: !1 }),
             });
 }
-function M(e) {
+function x(e) {
     let { enabled: t, trackAnalytics: n = !1 } = e;
     s.h.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
@@ -185,7 +185,7 @@ async function B(e) {
             A.default.track(L.HAw.CLIP_SAVED, n);
         let r = "";
         try {
-            r = await (0, O.m)(a.A.clips.getClipProtocolURLFromPath(c), 0);
+            r = await (0, b.m)(a.A.clips.getClipProtocolURLFromPath(c), 0);
         } catch (e) {
             D.nx.warn("Failed to generate clip thumbnail:", e);
         }
@@ -236,14 +236,14 @@ async function H(e) {
                 try {
                     let e = (0, i.lE)(),
                         t = await e.getNextVideoOutputFrame(n);
-                    return (0, O.n)(t);
+                    return (0, b.n)(t);
                 } catch (e) {
                     return;
                 }
         })();
     s.h.dispatch({ type: "CLIPS_SAVE_CLIP_START", clipType: y, streamKey: I, thumbnail: v, clipMethod: t });
     let N = "manual" === t ? (0, c.Ak)("clip_save", 0.5) : null,
-        b = performance.now();
+        R = performance.now();
     try {
         if ("auto" === t) {
             let e = S.A.getSettings().maxAutoClips,
@@ -273,7 +273,7 @@ async function H(e) {
             (0, c.Ak)("clip_error", 0.5),
             s.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR" });
     }
-    D.nx.info(`${S.A.getSettings().clipsLength / 1e3}s clip save took ${Math.round(performance.now() - b)}ms`);
+    D.nx.info(`${S.A.getSettings().clipsLength / 1e3}s clip save took ${Math.round(performance.now() - R)}ms`);
 }
 async function j(e, t) {
     let n, r;
@@ -312,14 +312,14 @@ async function j(e, t) {
         clipMethod: t ?? "manual",
     });
     let C = (0, c.Ak)("clip_save", 0.5),
-        b = performance.now();
+        R = performance.now();
     try {
         let e = { ...m, filepath: I, length: 0, thumbnail: "" },
             t = JSON.stringify(e),
             r = (await _.saveScreenshot(I, t, 90, void 0, n)).toString("base64");
         (e.thumbnail = `data:image/jpeg;base64,${r}`),
             s.h.dispatch({ type: "CLIPS_SAVE_CLIP", clip: e }),
-            D.nx.info(`Screenshot save took ${Math.round(performance.now() - b)}ms`),
+            D.nx.info(`Screenshot save took ${Math.round(performance.now() - R)}ms`),
             D.nx.log("Successfully saved screenshot to:", I);
     } catch (e) {
         throw (
@@ -338,7 +338,7 @@ async function W(e, t) {
     let n = S.A.getClips().find((t) => t.id === e);
     if (null == n) return;
     let r = { ...n, ...t };
-    null != (await (0, b.q)(r)) &&
+    null != (await (0, R.q)(r)) &&
         (await h.Ay.getMediaEngine().updateClipMetadata(r.filepath, JSON.stringify(r)),
         A.default.track(L.HAw.CLIP_EDITED, { clip_id: r.id }),
         s.h.dispatch({ type: "CLIPS_UPDATE_METADATA", clip: r }));
@@ -346,10 +346,10 @@ async function W(e, t) {
 async function K(e) {
     await W(e.id, { isFavorite: !e.isFavorite });
 }
-function z() {
+function $() {
     s.h.dispatch({ type: "CLIPS_CLEAR_CLIPS_SESSION" });
 }
-function $() {
+function z() {
     s.h.dispatch({ type: "CLIPS_CLEAR_NEW_CLIP_IDS" });
 }
 async function q(e) {
@@ -357,7 +357,7 @@ async function q(e) {
     let t = await a.A.clips.loadClipsDirectory(e),
         n = [];
     for (let e of t) {
-        let t = await (0, b.q)({ ...e.metadata, filepath: e.filepath });
+        let t = await (0, R.q)({ ...e.metadata, filepath: e.filepath });
         null != t && n.push(t);
     }
     s.h.dispatch({ type: "CLIPS_LOAD_DIRECTORY_SUCCESS", clips: n });
@@ -379,7 +379,7 @@ async function X(e) {
                 soundboardAudio: !0,
             },
         );
-    return e.type === y.nQ.SCREENSHOT ? n : (0, R.A)(n);
+    return e.type === y.nQ.SCREENSHOT ? n : (0, O.A)(n);
 }
 function Q(e) {
     s.h.dispatch({ type: "CLIPS_SET_EXPORTING", clipIds: e });
@@ -399,7 +399,8 @@ function et(e) {
         (t("emotion_classifier", e.emotionClassifier),
         t("wake_word_detector", e.wakeWordDetector),
         t("yell_detector", e.yellDetector),
-        t("whisper_transcription", e.whisperTranscription)),
+        t("whisper_transcription", e.whisperTranscription),
+        t("laughter_shouting", e.laughterDetector)),
         s.h.dispatch({
             type: "CLIPS_SETTINGS_UPDATE",
             settings: { mlPipelinesEnabled: { ...S.A.getSettings().mlPipelinesEnabled, ...e } },
