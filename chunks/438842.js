@@ -10,13 +10,13 @@ var r = n(627968),
     c = n(573435),
     d = n(885151),
     _ = n(486020),
-    f = n(439570);
+    f = n(355345);
 let p = 10,
     h = 2;
 function m(e) {
     let { game: t, activityLevel: n, hideTooltip: i } = e,
         { data: s } = (0, d.k)(t.id),
-        a = s?.supplementalData?.iconHash,
+        a = s?.iconHash,
         m = null != a ? _.Ay.getGameAssetURL({ id: t.id, hash: a, size: 24 }) : t.getIconURL(24);
     if (null == m) return null;
     let E = !i,
@@ -87,7 +87,7 @@ function g(e) {
 function A(e) {
     let { gamesToDisplay: t, lastGameToDisplay: n, remainingGames: s, activity: o } = e,
         { data: c } = (0, d.k)(n?.id),
-        p = c?.supplementalData?.iconHash,
+        p = c?.iconHash,
         h = null != p ? _.Ay.getGameAssetURL({ id: n.id, hash: p, size: 24 }) : n?.getIconURL(24),
         A = i.useMemo(() => {
             if (null == n) return null;

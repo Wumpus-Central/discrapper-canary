@@ -1,20 +1,21 @@
 "use strict";
-n.d(t, { Ay: () => f, kJ: () => _, lg: () => d }), n(938796);
+n.d(t, { Ay: () => p, kJ: () => f, lg: () => _ }), n(938796);
 var r = n(101359),
     i = n(136722),
     s = n(315069),
     a = n(486020),
     o = n(431209),
     l = n(427157),
-    u = n(360469);
-let c = { [u.I4]: 7, [u.qA]: 12 };
-function d(e) {
+    u = n(360469),
+    c = n(705751);
+let d = { [u.I4]: 7, [u.qA]: 12 };
+function _(e) {
     let t = { os: e.os, name: e.name };
     return (
         null != e.arguments && (t.arguments = e.arguments), null != e.is_launcher && (t.isLauncher = e.is_launcher), t
     );
 }
-class _ extends s.A {
+class f extends s.A {
     id;
     name;
     icon;
@@ -31,7 +32,7 @@ class _ extends s.A {
     parentId;
     connectionEntrypointUrl;
     static createFromServer(e) {
-        return new _({
+        return new f({
             ...e,
             coverImage: e.cover_image,
             primarySkuId: e.primary_sku_id,
@@ -78,7 +79,7 @@ class _ extends s.A {
             : null;
     }
 }
-class f extends _ {
+class p extends f {
     overlay;
     overlayWarn;
     overlayCompatibilityHook;
@@ -112,7 +113,7 @@ class f extends _ {
     deepLinkUri;
     applicationAccountLinkBenefitConfig;
     static createFromServer(e) {
-        return new f({
+        return new p({
             ...e,
             coverImage: e.cover_image,
             primarySkuId: e.primary_sku_id,
@@ -150,7 +151,7 @@ class f extends _ {
             categories: e.categories,
             linkedGames: e.linked_games?.map((e) => ({
                 ...e,
-                application: null != e.application ? f.createFromServer(e.application) : void 0,
+                application: null != e.application ? p.createFromServer(e.application) : void 0,
             })),
             deepLinkUri: e.deeplink_uri,
             applicationAccountLinkBenefitConfig: e.application_account_link_benefit_config,
@@ -169,7 +170,7 @@ class f extends _ {
             (this.storeListingSkuId = e.storeListingSkuId),
             (this.guildId = e.guildId),
             (this.guild = e.guild),
-            (this.executables = (e.executables ?? []).map(d)),
+            (this.executables = (e.executables ?? []).map(_)),
             (this.hashes = e.hashes ?? []),
             (this.eulaId = e.eulaId),
             (this.slug = e.slug),
@@ -190,14 +191,19 @@ class f extends _ {
             (this.linkedGames =
                 e.linked_games?.map((e) => ({
                     ...e,
-                    application: null != e.application ? f.createFromServer(e.application) : void 0,
+                    application: null != e.application ? p.createFromServer(e.application) : void 0,
                 })) ?? e.linkedGames),
             (this.deepLinkUri = e.deepLinkUri ?? e.deeplink_uri),
             (this.applicationAccountLinkBenefitConfig =
                 e.applicationAccountLinkBenefitConfig ?? e.application_account_link_benefit_config);
     }
+    getCanonicalGameId() {
+        return this.type === c.S7.GAME
+            ? this.id
+            : (this.linkedGames?.find((e) => e.application?.type === c.S7.GAME)?.id ?? this.id);
+    }
     mergeFromApplicationUpdate(e) {
-        return new f({
+        return new p({
             id: e.id ?? this.id,
             name: e.name ?? this.name,
             icon: e.icon ?? this.icon,
@@ -250,7 +256,7 @@ class f extends _ {
         });
     }
     getMaxParticipants() {
-        return this.maxParticipants ?? c[this.id] ?? 0;
+        return this.maxParticipants ?? d[this.id] ?? 0;
     }
     supportsIntegrationTypes() {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
@@ -261,7 +267,7 @@ class f extends _ {
         return null != this.storeListingSkuId ? this.storeListingSkuId : this.primarySkuId;
     }
     get supportsOutOfProcessOverlay() {
-        return f.supportsOutOfProcessOverlay(this.overlayMethods);
+        return p.supportsOutOfProcessOverlay(this.overlayMethods);
     }
     static supportsOutOfProcessOverlay(e) {
         let t = r.b.OUT_OF_PROCESS;

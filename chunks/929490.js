@@ -34,6 +34,7 @@ class a extends r.A {
     platforms;
     websites;
     companies;
+    iconHash;
     coverImageHash;
     bannerHash;
     screenshotHashes;
@@ -64,6 +65,7 @@ class a extends r.A {
             (this.platforms = t?.platforms ?? e.platforms ?? []),
             (this.websites = t?.websites ?? e.websites ?? []),
             (this.companies = e.companies),
+            (this.iconHash = t?.icon_hash ?? e.icon_hash),
             (this.coverImageHash = e.cover_image_hash),
             (this.bannerHash = e.banner_hash),
             (this.screenshotHashes = e.screenshot_hashes),

@@ -13,9 +13,11 @@ function l(e) {
     };
 }
 function u(e) {
-    (0, s.W)(e.gameApplicationIds);
-    let t = (0, i.A)(e.gameApplicationIds);
-    return r.useMemo(() => t.filter(a.Vq), [t]);
+    let t = (0, i.A)(e.gameApplicationIds),
+        n = r.useMemo(() => t.filter(a.Vq).map((e) => e.getCanonicalGameId()), [t]);
+    (0, s.W)(n);
+    let o = (0, i.A)(n);
+    return r.useMemo(() => o.filter(a.Vq), [o]);
 }
 function c(e) {
     let t = e.gameActivity,
