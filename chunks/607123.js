@@ -17,7 +17,7 @@ var r = n(627968),
     E = n(403362),
     g = n(652215),
     A = n(778712),
-    I = n(913110);
+    I = n(538189);
 function T(e) {
     let { sku: t, isFocused: n, user: s } = e,
         a = i.useMemo(() => (0, _.T)(t), [t]);
@@ -63,15 +63,15 @@ function S(e) {
     });
 }
 function y(e) {
-    let { eventTargetRef: t, assetClassName: n } = e,
-        i = (0, u.bG)([c.A], () => c.A.useReducedMotion);
+    let { eventTargetRef: t, assetClassName: n, disableHover: i } = e,
+        s = (0, u.bG)([c.A], () => c.A.useReducedMotion);
     return (0, r.jsxs)("div", {
         className: I.yv,
         children: [
             (0, r.jsx)("div", { className: I.GY }),
             (0, r.jsx)(l.L71, {
                 className: a()(I.MO, n),
-                dataBinding: { reducedMotion: i },
+                dataBinding: { reducedMotion: i || s },
                 eventTargetRef: t,
                 fit: "contain",
             }),
@@ -79,7 +79,7 @@ function y(e) {
     });
 }
 function v(e) {
-    let { sku: t, isFocused: n, user: i, eventTargetRef: s, assetClassName: a } = e;
+    let { sku: t, isFocused: n, user: i, eventTargetRef: s, assetClassName: a, disableHover: o } = e;
     switch (t.productLine) {
         case g.EZt.COLLECTIBLES:
             return (0, r.jsx)(T, { sku: t, isFocused: n, user: i });
@@ -90,7 +90,7 @@ function v(e) {
         case g.EZt.GUILD_ROLE:
             return null;
         case g.EZt.PREMIUM:
-            return (0, r.jsx)(y, { eventTargetRef: s, assetClassName: a });
+            return (0, r.jsx)(y, { eventTargetRef: s, assetClassName: a, disableHover: o });
         case g.EZt.GUILD_PRODUCT:
             return null;
         default:

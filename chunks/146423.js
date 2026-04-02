@@ -14,7 +14,7 @@ var r = n(627968),
     p = n(627001),
     h = n(778712),
     m = n(985018),
-    E = n(869350),
+    E = n(351465),
     g = n(476324);
 function A(e) {
     return { width: e.size, height: e.size };
@@ -40,26 +40,27 @@ function T(e) {
             skuPreviewStyle: m,
             skuAssetClassName: g,
             disableHoverOrFocus: I,
-            onHoverOrFocusChange: T,
-            onClick: S,
-            "aria-label": y,
+            disableRiveHover: T,
+            onHoverOrFocusChange: S,
+            onClick: y,
+            "aria-label": v,
         } = e,
-        v = i.useRef(null),
-        { isHoveringOrFocusing: N } = (0, d.A)(v),
-        C = i.useRef(T),
-        R = (0, l.bG)([c.A], () => c.A.getApplication(t.applicationId));
+        N = i.useRef(null),
+        { isHoveringOrFocusing: C } = (0, d.A)(N),
+        R = i.useRef(S),
+        O = (0, l.bG)([c.A], () => c.A.getApplication(t.applicationId));
     return (
         i.useEffect(() => {
-            C.current = T;
-        }, [T]),
+            R.current = S;
+        }, [S]),
         i.useEffect(() => {
-            C.current?.(N);
-        }, [N]),
+            R.current?.(C);
+        }, [C]),
         (0, r.jsxs)(o.sqX, {
-            ref: v,
+            ref: N,
             className: a()(E.Nr, h),
-            onClick: S,
-            "aria-label": y,
+            onClick: y,
+            "aria-label": v,
             style: A(s),
             children: [
                 (0, r.jsx)(o.AC4, { children: (0, r.jsx)(o.H, { children: (0, f.TC)(t) }) }),
@@ -67,13 +68,14 @@ function T(e) {
                     className: a()(E.ev, m),
                     children: (0, r.jsx)(_.Ay, {
                         sku: t,
-                        isFocused: !I && N,
+                        isFocused: !I && C,
                         user: n,
-                        eventTargetRef: v,
+                        eventTargetRef: T ? void 0 : N,
                         assetClassName: g,
+                        disableHover: T,
                     }),
                 }),
-                (0, r.jsx)(p.P, { spec: s, application: R }),
+                (0, r.jsx)(p.P, { spec: s, application: O }),
                 u,
             ],
         })
