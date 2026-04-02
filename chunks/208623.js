@@ -2,7 +2,7 @@
 n.d(t, { A: () => P });
 var r = n(627968),
     i = n(64700),
-    s = n(773690),
+    s = n(687498),
     a = n(158954),
     o = n(311907),
     l = n(475743),
@@ -22,8 +22,8 @@ var r = n(627968),
     S = n(80465);
 let y = 80,
     v = 40,
-    C = 12,
-    N = 4,
+    N = 12,
+    C = 4,
     R = 34;
 function O(e) {
     let { iconSrc: t, ariaLabel: n, onClick: s } = e,
@@ -49,6 +49,7 @@ function b(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(c.A, {
+                className: E.Cg,
                 children: (0, r.jsxs)(_.A, { variant: "heading-xxl/normal", children: ["+", s, " XP"] }),
             }),
             (0, r.jsx)("img", { src: n, alt: "", className: E.Ei }),
@@ -121,13 +122,13 @@ function x() {
                     rx: "50%",
                     ry: "50%",
                 }),
-                (0, r.jsx)("circle", { cx: v, cy: v, r: R, stroke: "#000", strokeWidth: C }),
+                (0, r.jsx)("circle", { cx: v, cy: v, r: R, stroke: "#000", strokeWidth: N }),
                 (0, r.jsx)(s.animated.circle, {
                     cx: v,
                     cy: v,
                     r: R,
                     stroke: "#FFF",
-                    strokeWidth: N,
+                    strokeWidth: C,
                     strokeDasharray: 2 * Math.PI * R,
                     transform: `rotate(-90 ${v} ${v})`,
                     style: h,

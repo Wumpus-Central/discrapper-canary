@@ -32639,7 +32639,8 @@ html:not(.chat-input) .inputInner_b1f01d {
     gap: var(--space-8)
 }
 
-.xpGain_f61205 {
+.xpGain_f61205,
+.xpGainTextContainer_f61205 {
     background-color: var(--white)
 }
 

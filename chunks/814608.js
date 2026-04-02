@@ -9,5 +9,6 @@ e.exports = {
     WB: "levelText_f61205",
     NL: "xpGains_f61205",
     ww: "xpGain_f61205",
+    Cg: "xpGainTextContainer_f61205",
     Ei: "xpGainAsset_f61205",
 };
