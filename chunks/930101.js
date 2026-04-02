@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { H: () => T, X: () => y });
+n.d(t, { H: () => T, X: () => S });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(835245),
     l = n(435371),
     u = n(397927),
@@ -14,16 +14,16 @@ var r = n(627968),
     p = n(767143),
     h = n(652176),
     m = n(652215),
-    g = n(307731),
-    E = n(788868),
+    E = n(307731),
+    g = n(788868),
     A = n(985018),
-    I = n(611853);
+    I = n(262340);
 let T = (e) => {
-        let { node: t, tooltipPosition: n = h.Uk.position, enableClick: a = !0, channelId: o, messageId: d } = e,
+        let { node: t, tooltipPosition: n = h.Uk.position, enableClick: s = !0, channelId: o, messageId: d } = e,
             _ = i.useRef(null),
             f = t.originalMatch?.[0],
-            [m, g] = i.useState(!1),
-            E = (e) =>
+            [m, E] = i.useState(!1),
+            g = (e) =>
                 (0, r.jsx)(c.A, {
                     emojiName: t.name,
                     size: e ?? (t.jumboable ? "jumbo" : "default"),
@@ -35,56 +35,57 @@ let T = (e) => {
                 }),
             T = (e) =>
                 (0, r.jsx)(l.un, {
-                    asset: E("jumbo"),
+                    asset: g("jumbo"),
                     title: t.name ?? "",
-                    body: a ? A.intl.string(A.t["515vjG"]) : "",
+                    body: s ? A.intl.string(A.t["515vjG"]) : "",
                     ariaHidden: !0,
                     ...h.Uk,
                     position: n,
                     shouldShow: !m,
                     onTooltipShow: () => {
-                        a && S({ emojiNode: t, isCustomEmoji: !1 });
+                        s && y({ emojiNode: t, isCustomEmoji: !1 });
                     },
                     children: (0, r.jsx)(u.DUT, {
                         ...e,
                         innerRef: _,
                         tag: "span",
                         onClick: (t) => {
-                            g(!0), e?.onClick?.(t);
+                            E(!0), e?.onClick?.(t);
                         },
-                        className: s()(I.qq, { [I._Y]: a, [I.gp]: t.jumboable }),
-                        children: E(),
+                        className: a()(I.qq, { [I._Y]: s, [I.gp]: t.jumboable }),
+                        children: g(),
                     }),
                 });
-        if (!a) return T();
-        let y = (e) => (0, r.jsx)(p.MV, { ...e, node: t });
+        if (!s) return T();
+        let S = (e) => (0, r.jsx)(p.MV, { ...e, node: t });
         return (0, r.jsx)(u.YNO, {
             animation: u.YNO.Animation.TRANSLATE,
+            scrollBehavior: "close",
             align: "center",
             autoInvert: !0,
             nudgeAlignIntoViewport: !0,
             position: "right",
             onRequestClose: () => {
-                g(!1);
+                E(!1);
             },
-            renderPopout: y,
+            renderPopout: S,
             targetElementRef: _,
             children: T,
         });
     },
-    y = (e) => {
+    S = (e) => {
         let {
                 node: t,
                 isInteracting: n,
-                tooltipPosition: a = h.Uk.position,
+                tooltipPosition: s = h.Uk.position,
                 enableClick: d = !0,
-                channelId: E,
+                channelId: g,
                 messageId: T,
             } = e,
-            [y, v] = i.useState(String(Date.now())),
-            [C, b] = i.useState(!1),
-            [N, R] = i.useState(!1),
-            O = i.useRef(null),
+            [S, v] = i.useState(String(Date.now())),
+            [N, C] = i.useState(!1),
+            [R, O] = i.useState(!1),
+            b = i.useRef(null),
             D = (e) =>
                 (0, r.jsx)(c.A, {
                     emojiName: t.name,
@@ -92,7 +93,7 @@ let T = (e) => {
                     emojiId: t.emojiId,
                     animated: t.animated,
                     isInteracting: n,
-                    channelId: E,
+                    channelId: g,
                     messageId: T,
                 }),
             L = (0, o.A)(),
@@ -103,54 +104,55 @@ let T = (e) => {
                     body: d ? A.intl.string(A.t["515vjG"]) : "",
                     ariaHidden: !0,
                     ...h.Uk,
-                    position: a,
-                    shouldShow: !N,
+                    position: s,
+                    shouldShow: !R,
                     onTooltipShow: () => {
-                        b(!0),
+                        C(!0),
                             d &&
-                                (S({ emojiNode: t, isCustomEmoji: !0, nonce: L }),
-                                (0, _.K)(g.Vl.CustomEmojiTooltipShown));
+                                (y({ emojiNode: t, isCustomEmoji: !0, nonce: L }),
+                                (0, _.K)(E.Vl.CustomEmojiTooltipShown));
                     },
                     children: (0, r.jsx)(u.DUT, {
                         ...e,
-                        innerRef: O,
+                        innerRef: b,
                         onMouseEnter: () => {
                             e?.onMouseEnter?.();
                         },
                         onClick: d
                             ? (t) => {
-                                  b(!1), R(!0), e?.onClick?.(t);
+                                  C(!1), O(!0), e?.onClick?.(t);
                               }
                             : void 0,
                         onMouseLeave: () => {
-                            C && (f.default.track(m.HAw.CLOSE_POPOUT, { nonce: L }), b(!1));
+                            N && (f.default.track(m.HAw.CLOSE_POPOUT, { nonce: L }), C(!1));
                         },
                         tag: "span",
-                        className: s()(I.qq, { [I._Y]: d, [I.gp]: t.jumboable }),
+                        className: a()(I.qq, { [I._Y]: d, [I.gp]: t.jumboable }),
                         children: D(),
                     }),
                 });
         if (!d) return w();
-        let x = (e) => (0, r.jsx)(p.iP, { ...e, node: t, refreshPositionKey: () => v(String(Date.now())), nonce: L });
+        let M = (e) => (0, r.jsx)(p.iP, { ...e, node: t, refreshPositionKey: () => v(String(Date.now())), nonce: L });
         return (0, r.jsx)(u.YNO, {
             animation: u.YNO.Animation.FADE,
+            scrollBehavior: "close",
             align: "center",
             onRequestClose: () => {
-                f.default.track(m.HAw.CLOSE_POPOUT, { nonce: L }), b(!1), R(!1);
+                f.default.track(m.HAw.CLOSE_POPOUT, { nonce: L }), C(!1), O(!1);
             },
             autoInvert: !0,
             nudgeAlignIntoViewport: !0,
             position: "right",
-            renderPopout: x,
-            positionKey: y,
-            targetElementRef: O,
+            renderPopout: M,
+            positionKey: S,
+            targetElementRef: b,
             children: w,
         });
     },
-    S = (e) => {
+    y = (e) => {
         let { emojiNode: t, isCustomEmoji: n, nonce: r } = e;
         d.Ay.trackWithMetadata(m.HAw.EXPRESSION_TOOLTIP_VIEWED, {
-            type: E.e.EMOJI_IN_MESSAGE_HOVER,
+            type: g.e.EMOJI_IN_MESSAGE_HOVER,
             expression_id: t.emojiId,
             expression_name: t.name,
             is_animated: t.animated,
