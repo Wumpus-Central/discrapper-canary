@@ -1,8 +1,12 @@
-s.d(e, { Qd: () => i, Qg: () => n });
+"use strict";
+n.d(t, { Qd: () => s, Qg: () => a });
 let r = Object.prototype.toString;
-function i(t) {
-    return "[object Object]" === r.call(t);
+function i(e, t) {
+    return r.call(e) === `[object ${t}]`;
 }
-function n(t) {
-    return !!(t && t.then && "function" == typeof t.then);
+function s(e) {
+    return i(e, "Object");
+}
+function a(e) {
+    return !!(e && e.then && "function" == typeof e.then);
 }

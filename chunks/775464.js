@@ -1,29 +1,30 @@
-s.d(e, { z: () => d });
-var r = s(887525),
-    i = s(128377),
-    n = s(875565),
-    o = s(75109);
-class a {
-    constructor(t, e) {
-        let s, r;
-        (s = t || new i.H()), (r = e || new i.H()), (this._stack = [{ scope: s }]), (this._isolationScope = r);
+"use strict";
+n.d(t, { z: () => _ });
+var r = n(887525),
+    i = n(128377),
+    s = n(875565),
+    a = n(75109);
+class o {
+    constructor(e, t) {
+        let n, r;
+        (n = e || new i.H()), (r = t || new i.H()), (this._stack = [{ scope: n }]), (this._isolationScope = r);
     }
-    withScope(t) {
-        let e,
-            s = this._pushScope();
+    withScope(e) {
+        let t,
+            n = this._pushScope();
         try {
-            e = t(s);
-        } catch (t) {
-            throw (this._popScope(), t);
+            t = e(n);
+        } catch (e) {
+            throw (this._popScope(), e);
         }
-        return (0, n.Qg)(e)
-            ? e.then(
-                  (t) => (this._popScope(), t),
-                  (t) => {
-                      throw (this._popScope(), t);
+        return (0, s.Qg)(t)
+            ? t.then(
+                  (e) => (this._popScope(), e),
+                  (e) => {
+                      throw (this._popScope(), e);
                   },
               )
-            : (this._popScope(), e);
+            : (this._popScope(), t);
     }
     getClient() {
         return this.getStackTop().client;
@@ -38,35 +39,35 @@ class a {
         return this._stack[this._stack.length - 1];
     }
     _pushScope() {
-        let t = this.getScope().clone();
-        return this._stack.push({ client: this.getClient(), scope: t }), t;
+        let e = this.getScope().clone();
+        return this._stack.push({ client: this.getClient(), scope: e }), e;
     }
     _popScope() {
         return !(this._stack.length <= 1) && !!this._stack.pop();
     }
 }
-function c() {
-    let t = (0, o.E)(),
-        e = (0, o.S)(t);
-    return (e.stack = e.stack || new a((0, r.r)(), (0, r.q)()));
+function l() {
+    let e = (0, a.E)(),
+        t = (0, a.S)(e);
+    return (t.stack = t.stack || new o((0, r.r)(), (0, r.q)()));
 }
-function h(t) {
-    return c().withScope(t);
+function u(e) {
+    return l().withScope(e);
 }
-function u(t, e) {
-    let s = c();
-    return s.withScope(() => ((s.getStackTop().scope = t), e(t)));
+function c(e, t) {
+    let n = l();
+    return n.withScope(() => ((n.getStackTop().scope = e), t(e)));
 }
-function _(t) {
-    return c().withScope(() => t(c().getIsolationScope()));
+function d(e) {
+    return l().withScope(() => e(l().getIsolationScope()));
 }
-function d() {
+function _() {
     return {
-        withIsolationScope: _,
-        withScope: h,
-        withSetScope: u,
-        withSetIsolationScope: (t, e) => _(e),
-        getCurrentScope: () => c().getScope(),
-        getIsolationScope: () => c().getIsolationScope(),
+        withIsolationScope: d,
+        withScope: u,
+        withSetScope: c,
+        withSetIsolationScope: (e, t) => d(t),
+        getCurrentScope: () => l().getScope(),
+        getIsolationScope: () => l().getIsolationScope(),
     };
 }
