@@ -3,7 +3,7 @@ var i = n(627968),
     a = n(64700),
     r = n(503698),
     l = n.n(r),
-    s = n(382222),
+    s = n(687498),
     o = n(494012),
     d = n(158954),
     c = n(311907),
@@ -22,8 +22,8 @@ var i = n(627968),
     b = n(453384),
     v = n(201805),
     T = n(212614),
-    y = n(79545),
-    S = n(646764),
+    S = n(79545),
+    y = n(646764),
     N = n(398025),
     j = n(545986),
     L = n(654487),
@@ -51,7 +51,7 @@ function D(e) {
         J = (0, I._Z)(t.config),
         { completedRatio: X, completedRatioDisplay: Z } = (0, A.O9)(t),
         $ = (0, g.gj)(t, v, _.Ob.QuestEmbed, D),
-        ee = (0, y.Pd)(t),
+        ee = (0, S.Pd)(t),
         et = a.useMemo(
             () =>
                 Q && K
@@ -145,7 +145,7 @@ function D(e) {
                                               size: 76,
                                               percentComplete: X,
                                               percentCompleteText: r && !H ? Z : void 0,
-                                              children: (0, i.jsx)(S.A, {
+                                              children: (0, i.jsx)(y.A, {
                                                   quest: t,
                                                   questContent: n,
                                                   autoplay: r,
@@ -156,7 +156,7 @@ function D(e) {
                                           }),
                                       ],
                                   })
-                                : (0, i.jsx)(S.A, {
+                                : (0, i.jsx)(y.A, {
                                       quest: t,
                                       autoplay: r,
                                       questContent: n,
@@ -224,11 +224,11 @@ function D(e) {
                                   onClick: ea,
                               }),
                               el.enabled &&
-                              (ee === y.UA.UNENROLLED || ee === y.UA.ENROLLED) &&
+                              (ee === S.UA.UNENROLLED || ee === S.UA.ENROLLED || ee === S.UA.INCOMPLETE) &&
                               el.enabledQuestStates.has(ee)
                                   ? (0, i.jsx)(T.A, {
                                         quest: t,
-                                        surface: y.V3.QUEST_EMBED,
+                                        surface: S.V3.QUEST_EMBED,
                                         analyticsCtxQuestContent: n,
                                         analyticsCtxSourceQuestContent: v,
                                         analyticsCtxQuestContentPosition: E,

@@ -23,8 +23,8 @@ var a = n(503698),
     b = n(201805),
     v = n(442734),
     T = n(212614),
-    y = n(79545),
-    S = n(646764),
+    S = n(79545),
+    y = n(646764),
     N = n(545986),
     j = n(654487),
     L = n(652215),
@@ -102,7 +102,7 @@ let D = (e) => {
         }),
         Q = (0, s.bG)([h.A], () => null != h.A.questEnrollmentBlockedUntil, []),
         K = p.t.useConfig({ location: j.rE.QUEST_HOME_DESKTOP }),
-        J = (0, y.Pd)(t),
+        J = (0, S.Pd)(t),
         X = (0, s.bG)([u.default], () => u.default.locale),
         Z = (0, A.Oq)(),
         $ = (0, A.SD)(t),
@@ -129,7 +129,7 @@ let D = (e) => {
                                         className: P.FL,
                                         children: (0, i.jsx)(d.EpV, { color: d.LU0.colors.WHITE }),
                                     }),
-                                (0, i.jsx)(S.A, {
+                                (0, i.jsx)(y.A, {
                                     autoplay: b,
                                     className: r()({ [P.Lu]: "lg" === a, [P.je]: "sm" === a, [P.ks]: "xs" === a }),
                                     learnMoreStyle: "text",
@@ -261,11 +261,11 @@ let D = (e) => {
                                   }),
                                   !et &&
                                       (K.enabled &&
-                                      (J === y.UA.UNENROLLED || J === y.UA.ENROLLED) &&
+                                      (J === S.UA.UNENROLLED || J === S.UA.ENROLLED || J === S.UA.INCOMPLETE) &&
                                       K.enabledQuestStates.has(J)
                                           ? (0, i.jsx)(T.A, {
                                                 quest: t,
-                                                surface: y.V3.QUEST_EMBED,
+                                                surface: S.V3.QUEST_EMBED,
                                                 analyticsCtxQuestContent: n,
                                                 analyticsCtxSourceQuestContent: B,
                                                 analyticsCtxQuestContentPosition: U,
