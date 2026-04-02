@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { g: () => h, l: () => m });
+n.d(t, { g: () => m, l: () => E });
 var r = n(627968),
     i = n(64700),
     s = n(311907),
@@ -9,37 +9,39 @@ var r = n(627968),
     u = n(574499),
     c = n(771781),
     d = n(909536),
-    _ = n(961350),
-    f = n(788868),
-    p = n(985018);
-let h = { type: "image", src: n(201682).A },
-    m = i.forwardRef(function (e, t) {
-        let { className: n, disabled: i, size: m } = e,
-            E = f.pe.TIER_2,
-            g = p.intl.string(p.t.lG6a5x),
-            A = (0, d.Gh)("premium-wishlist-button-nux"),
-            I = (0, s.bG)([_.default], () => _.default.getId()),
-            {
-                isWishlisted: T,
-                isBusy: S,
-                isFirstTimeWishlister: y,
-                handleToggle: v,
-            } = (0, u.c)({ userId: I, skuId: E, nuxGraphic: A ? h : void 0, onNuxShow: A ? l.D : void 0 }),
-            N = (0, c.mB)(a.M.PREMIUM_WISHLIST_COACHMARK);
+    _ = n(594832),
+    f = n(961350),
+    p = n(788868),
+    h = n(985018);
+let m = { type: "image", src: n(201682).A },
+    E = i.forwardRef(function (e, t) {
+        let { className: n, disabled: i, size: E } = e,
+            g = p.pe.TIER_2,
+            A = h.intl.string(h.t.lG6a5x),
+            I = (0, d.Gh)("premium-wishlist-button-nux"),
+            T = (0, s.bG)([f.default], () => f.default.getId());
+        (0, _.pE)();
+        let {
+                isWishlisted: S,
+                isBusy: y,
+                isFirstTimeWishlister: v,
+                handleToggle: N,
+            } = (0, u.c)({ userId: T, skuId: g, nuxGraphic: I ? m : void 0, onNuxShow: I ? l.D : void 0 }),
+            C = (0, c.mB)(a.M.PREMIUM_WISHLIST_COACHMARK);
         return (0, r.jsx)("div", {
             ref: t,
             children: (0, r.jsx)(o._, {
-                skuId: E,
-                productName: g,
+                skuId: g,
+                productName: A,
                 className: n,
                 disabled: i,
-                size: m,
-                isWishlisted: T,
-                isBusy: S,
-                isFirstTimeWishlister: y,
-                onClick: v,
-                shouldShowTooltip: !N,
-                tooltipConfig: { add: p.intl.string(p.t.cjmnm6) },
+                size: E,
+                isWishlisted: S,
+                isBusy: y,
+                isFirstTimeWishlister: v,
+                onClick: N,
+                shouldShowTooltip: !C,
+                tooltipConfig: { add: h.intl.string(h.t.cjmnm6) },
             }),
         });
     });
