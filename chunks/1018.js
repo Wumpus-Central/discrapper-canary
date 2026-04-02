@@ -9,5 +9,7 @@ let r = (0, n(945810).mj)({
         2: { gradientBackground: !0, subscribeButtonVariant: "overlay-primary" },
         3: { gradientBackground: !0, subscribeButtonVariant: "primary" },
         4: { gradientBackground: !0, useLegacyButton: !0 },
+        5: { gradientBackground: !1, subscribeButtonVariant: "overlay-primary" },
+        6: { gradientBackground: !1, subscribeButtonVariant: "primary" },
     },
 });
