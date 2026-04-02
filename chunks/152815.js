@@ -10,23 +10,23 @@ var s = n(158954),
     c = n(116011),
     u = n(881373),
     m = n(125877),
-    _ = n(653624),
-    g = n(985018),
-    x = n(276478);
+    g = n(284498),
+    _ = n(985018),
+    x = n(616825);
 let A = {
-        Logitech30P: { title: _.default.jkdhZq, titleParams: { discountPercent: u.aW }, body: _.default.Yl5ww1 },
+        Logitech30P: { title: g.default.jkdhZq, titleParams: { discountPercent: u.aW }, body: g.default.Yl5ww1 },
         Logitech5PNI: {
-            title: _.default.zeBjoX,
+            title: g.default.zeBjoX,
             titleParams: { discountPercent: u.y$ },
-            body: _.default.fC4abC,
+            body: g.default.fC4abC,
             bodyParams: { months: 6 },
         },
-        Logitech5PGS: { title: _.default.ogcfac, titleParams: { discountPercent: u.K2 }, body: _.default.Yl5ww1 },
+        Logitech5PGS: { title: g.default.ogcfac, titleParams: { discountPercent: u.K2 } },
     },
     h = {
         logitech: {
-            modalTitle: _.default["2I7nK+"],
-            modalSubtitle: { message: _.default.W8jOD0, values: { termsUrl: "https://www.logitech.com/terms" } },
+            modalTitle: g.default["2I7nK+"],
+            modalSubtitle: { message: g.default.W8jOD0, values: { termsUrl: "https://www.logitech.com/terms" } },
             landingUrl: "https://www.logitech.com/",
         },
     },
@@ -35,8 +35,8 @@ let A = {
         return {
             id: e.id,
             partnerId: e.partnerId ?? "",
-            title: null != n ? g.intl.formatToPlainString(n.title, n.titleParams ?? {}) : "",
-            body: null != n ? g.intl.formatToPlainString(n.body, n.bodyParams ?? {}) : "",
+            title: null != n ? _.intl.formatToPlainString(n.title, n.titleParams ?? {}) : "",
+            body: null != n && null != n.body ? _.intl.formatToPlainString(n.body, n.bodyParams ?? {}) : "",
             startDate: e.startDate,
             endDate: e.endDate,
             redemptionURL: e.outboundRedemptionPageLink,
@@ -52,8 +52,8 @@ let A = {
             }),
             { promotionsLoaded: T, claimedOutboundPromotionCodeMap: f } = (0, o.y7)();
         if (!T) return (0, i.jsx)(s.y$y, {});
-        let S = r?.modalSubtitle != null ? g.intl.format(r.modalSubtitle.message, r.modalSubtitle.values) : void 0,
-            E = null == r ? t : g.intl.string(r.modalTitle);
+        let S = r?.modalSubtitle != null ? _.intl.format(r.modalSubtitle.message, r.modalSubtitle.values) : void 0,
+            E = null == r ? t : _.intl.string(r.modalTitle);
         return (0, i.jsx)(s.Modal, {
             title: E,
             subtitle: S,
@@ -69,7 +69,7 @@ let A = {
                                 (0, i.jsx)(s.EYj, {
                                     variant: "text-md/medium",
                                     color: "text-subtle",
-                                    children: g.intl.string(_.default["9Y2p6p"]),
+                                    children: _.intl.string(g.default["9Y2p6p"]),
                                 }),
                                 (0, i.jsx)("div", {
                                     className: x.kR,
@@ -97,7 +97,7 @@ let A = {
                                 (0, i.jsx)(s.EYj, {
                                     variant: "text-md/medium",
                                     color: "text-subtle",
-                                    children: g.intl.string(_.default.Wm58LR),
+                                    children: _.intl.string(g.default.Wm58LR),
                                 }),
                                 (0, i.jsx)("div", {
                                     className: x.kR,
