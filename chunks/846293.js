@@ -200,7 +200,7 @@ let em = function (e, t) {
                 (!(
                     (r.nsfw && !i.nsfwAllowed) ||
                     (r.isGuildVocalOrThread() && (0, I.Tv)(e)) ||
-                    (r.isGuildVocalOrThread() && (0, k.maybeOpenSpoilerGateForVoiceChannel)(e))
+                    (r.isGuildVocalOrThread() && (0, k.M)(e))
                 ) &&
                     (t?.guildScheduledEvent != null
                         ? ep(t)
