@@ -128,8 +128,9 @@ let A = (t) => {
                             s.e("91652"),
                             s.e("68859"),
                             s.e("92414"),
+                            s.e("35139"),
                             s.e("9407"),
-                            s.e("5920"),
+                            s.e("59705"),
                         ]).then(s.bind(s, 956450));
                         return (e) => (0, i.jsx)(t, { classificationId: l, source: f.XN.StandingTab, ...e });
                     });

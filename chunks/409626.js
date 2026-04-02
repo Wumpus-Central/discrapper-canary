@@ -67,6 +67,7 @@ var r = n(835245),
             (e.QuestActivityPanel = "quest_activity_panel"),
             (e.QuestEmbed = "quest_embed"),
             (e.QuestLiveStream = "quest_live_stream"),
+            (e.ClipEmbed = "clip_embed"),
             e
         );
     })({}),

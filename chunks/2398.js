@@ -8,5 +8,6 @@ e.exports = {
     gr: "titleIcon__4774c",
     yu: "metadata__4774c",
     DD: "title__4774c",
+    On: "clickableGameName__4774c",
     HD: "avatars__4774c",
 };

@@ -1,44 +1,43 @@
-"use strict";
-a.d(t, { A: () => u });
-var s = a(627968),
-    r = a(64700),
-    n = a(503698),
-    i = a.n(n),
-    l = a(615300),
-    o = a(397927),
-    c = a(652215),
-    d = a(444968);
-class u extends r.Component {
-    static contextType = o.CZY;
+i.d(e, { A: () => c });
+var s = i(627968),
+    n = i(64700),
+    a = i(503698),
+    h = i.n(a),
+    l = i(615300),
+    r = i(397927),
+    o = i(652215),
+    d = i(102041);
+class c extends n.Component {
+    static contextType = r.CZY;
     anim = new l.A.Value(0);
     componentDidMount() {
         this.props.show && this.animate(1);
     }
-    componentDidUpdate(e) {
-        e.show !== this.props.show && this.animate(+!!this.props.show);
+    componentDidUpdate(t) {
+        t.show !== this.props.show && this.animate(+!!this.props.show);
     }
-    animate = (e) => {
-        l.A.spring(this.anim, { toValue: e, friction: 10, tension: 100 }).start();
+    animate = (t) => {
+        l.A.spring(this.anim, { toValue: t, friction: 10, tension: 100 }).start();
     };
     getAnimatedStyle() {
-        let { anim: e } = this,
-            { reducedMotion: t } = this.context;
+        let { anim: t } = this,
+            { reducedMotion: e } = this.context;
         return {
-            opacity: e,
-            transform: t.enabled
+            opacity: t,
+            transform: e.enabled
                 ? void 0
                 : [
-                      { translateY: e.interpolate({ inputRange: [0, 1], outputRange: ["-100px", "0px"] }) },
+                      { translateY: t.interpolate({ inputRange: [0, 1], outputRange: ["-100px", "0px"] }) },
                       { translateZ: 0 },
                   ],
         };
     }
     render() {
         return (0, s.jsx)(l.A.a, {
-            href: c.BVt.INDEX,
+            href: o.BVt.INDEX,
             target: "_blank",
             rel: "noopener",
-            className: i()(d.w, this.props.className),
+            className: h()(d.w, this.props.className),
             style: this.getAnimatedStyle(),
         });
     }
