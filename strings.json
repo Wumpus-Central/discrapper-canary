@@ -20646,7 +20646,7 @@
   "TQs67g": "$[!!{username}!!]({{usernameHook}}) has purchased [!!{productName}!!](!!{productName}!!)!",
   "w4iXs+": "[!!{username}!!](!!{username}!!) has purchased !!{productName}!!!",
   "m7Lwas": "$[!!{username}!!]({{usernameHook}}) messaged you from $[!!{gameName}!!]({{gameIconHook}}). In-game chat may not include rich messaging features such as images, polls, or apps. [Learn More](Learn More)",
-  "92erOB": "[**!!{username}!!**](**!!{username}!!**) messaged you from **!!{gameName}!!**. In-game chat may not include rich messaging features such as images, polls, or apps. [Learn More](Learn More)",
+  "92erOB": "[!!{username}!!](!!{username}!!) messaged you from **!!{gameName}!!**. In-game chat may not include rich messaging features such as images, polls, or apps. [Learn More](Learn More)",
   "oa9mvZ": "Join the call",
   "R7vZGZ": "$[!!{username}!!]({{usernameHook}}) pinned a message to this channel. See all [pinned messages](pinned messages).",
   "6TrHq2": "[!!{username}!!](!!{username}!!) pinned a message to this channel. See all [pinned messages](pinned messages).",
