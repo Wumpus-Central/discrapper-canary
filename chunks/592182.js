@@ -40,7 +40,7 @@ var l = i(503698),
     w = i(652215),
     F = i(346640),
     B = i(985018),
-    W = i(758630);
+    W = i(540807);
 let k = (t) => {
         let { user: e, buttonVariant: i, activity: l, onAction: r } = t,
             s = (0, h.aL)();
@@ -116,11 +116,7 @@ let k = (t) => {
                         });
                 }
                 if (ti.length > 0)
-                    return (0, n.jsx)(b.A, {
-                        distributorCTAConfigs: ti,
-                        gameName: e?.name ?? "",
-                        buttonVariant: "overlay-primary",
-                    });
+                    return (0, n.jsx)(b.A, { distributorCTAConfigs: ti, buttonVariant: "overlay-primary" });
                 if (K) {
                     let t = (0, n.jsx)(G.A, { activity: e, user: l, guildId: m, channelId: A, source: h, onAction: $ }),
                         i = (0, n.jsx)(M.A, { activity: e, user: l, source: h, onAction: $ });

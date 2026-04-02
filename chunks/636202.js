@@ -31,8 +31,8 @@ var r = n(627968),
     L = n(176563),
     w = n(322789),
     M = n(506326),
-    P = n(910692),
-    x = n(18282),
+    x = n(910692),
+    P = n(18282),
     k = n(299846),
     U = n(652215),
     G = n(985018);
@@ -97,12 +97,12 @@ let F = [...w.n, M.Yq],
             }),
             ep =
                 null == J
-                    ? (0, r.jsx)(P.BC, {
+                    ? (0, r.jsx)(x.BC, {
                           channel: t,
                           headerIcons:
                               null == es
                                   ? null
-                                  : (0, r.jsx)(x.A, { onClick: eo, Icon: es, "aria-label": G.intl.string(G.t.YR4cHH) }),
+                                  : (0, r.jsx)(P.A, { onClick: eo, Icon: es, "aria-label": G.intl.string(G.t.YR4cHH) }),
                           userDescription: (0, R.JM)(n) ? G.t.vPg1JT : G.t.rPqqts,
                           title: K,
                           subtitle: W,
@@ -113,14 +113,10 @@ let F = [...w.n, M.Yq],
                           trackRankingItemInteraction: H,
                           children:
                               eu.length > 0
-                                  ? (0, r.jsx)(h.A, {
-                                        distributorCTAConfigs: eu,
-                                        gameName: K ?? "",
-                                        buttonVariant: "overlay-primary",
-                                    })
+                                  ? (0, r.jsx)(h.A, { distributorCTAConfigs: eu, buttonVariant: "overlay-primary" })
                                   : null,
                       })
-                    : (0, r.jsx)(P.Fl, {
+                    : (0, r.jsx)(x.Fl, {
                           channel: t,
                           title: n.extra.game_name,
                           subtitle: W,
@@ -148,11 +144,11 @@ let F = [...w.n, M.Yq],
                     : null,
                 eh,
             ].filter(y.Vq);
-        return (0, r.jsxs)(P.YN, {
+        return (0, r.jsxs)(x.YN, {
             children: [
                 ep,
-                (0, r.jsx)(P.Eh, {
-                    children: (0, r.jsx)(P.fD, {
+                (0, r.jsx)(x.Eh, {
+                    children: (0, r.jsx)(x.fD, {
                         onReaction: S,
                         onVoiceChannelPreview: w,
                         user: Y,

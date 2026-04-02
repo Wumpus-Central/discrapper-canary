@@ -7,33 +7,32 @@ var r = n(627968),
 function o(e) {
     let {
             distributorCTAConfigs: t,
-            gameName: n,
-            buttonVariant: o = "secondary",
-            fullWidth: l = !0,
-            stopPropagation: u = !1,
-            onAction: c,
-            onClose: d,
+            buttonVariant: n = "secondary",
+            fullWidth: o = !0,
+            stopPropagation: l = !1,
+            onAction: u,
+            onClose: c,
         } = e,
-        _ = i.useRef(null),
-        [f, p] = i.useState(!1);
+        d = i.useRef(null),
+        [_, f] = i.useState(!1);
     if (0 === t.length) return null;
-    let h = (e, t) => {
-        c?.({ action: t }), d?.(), window.open(e, "_blank", "noopener,noreferrer");
+    let p = (e, t) => {
+        u?.({ action: t }), c?.(), window.open(e, "_blank", "noopener,noreferrer");
     };
     if (1 === t.length) {
-        let { ctaConfig: e, skuId: n } = t[0];
+        let { ctaConfig: e, skuId: i } = t[0];
         return (0, r.jsx)(s.Button, {
-            variant: o,
+            variant: n,
             size: "sm",
             icon: e.icon,
             text: e.getLabel(),
-            fullWidth: l,
+            fullWidth: o,
             onClick: (t) => {
-                u && t.stopPropagation(), h(e.getStoreUrl(n), e.analyticsAction);
+                l && t.stopPropagation(), p(e.getStoreUrl(i), e.analyticsAction);
             },
         });
     }
-    let m = t.flatMap((e, t) => {
+    let h = t.flatMap((e, t) => {
         let { ctaConfig: n, skuId: i } = e,
             a = [];
         return (
@@ -46,7 +45,7 @@ function o(e) {
                         label: n.getStoreName(),
                         iconLeft: n.icon,
                         leadingAccessory: { type: "icon", icon: n.icon },
-                        action: () => h(n.getStoreUrl(i), n.analyticsAction),
+                        action: () => p(n.getStoreUrl(i), n.analyticsAction),
                     },
                     n.distributor,
                 ),
@@ -55,37 +54,37 @@ function o(e) {
         );
     });
     return (0, r.jsx)(s.YNO, {
-        targetElementRef: _,
+        targetElementRef: d,
         position: "bottom",
-        onRequestOpen: () => p(!0),
-        onRequestClose: () => p(!1),
+        onRequestOpen: () => f(!0),
+        onRequestClose: () => f(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, r.jsx)("div", {
                 onClick: (e) => e.stopPropagation(),
-                style: { width: _.current?.offsetWidth },
+                style: { width: d.current?.offsetWidth },
                 children: (0, r.jsx)(s.W1t, {
                     "data-menu-migrated": !0,
                     navId: "play-on-distributor-menu",
                     onClose: t,
                     onSelect: void 0,
                     "aria-label": a.intl.string(a.t["3XhYOS"]),
-                    children: (0, r.jsx)(s.rXV, { children: m }),
+                    children: (0, r.jsx)(s.rXV, { children: h }),
                 }),
             });
         },
         children: (e) =>
             (0, r.jsx)(s.Button, {
-                buttonRef: _,
-                variant: o,
+                buttonRef: d,
+                variant: n,
                 size: "sm",
-                icon: f ? s.tN5 : s.abt,
+                icon: _ ? s.tN5 : s.abt,
                 iconPosition: "end",
-                text: a.intl.formatToPlainString(a.t.ZDZEJN, { name: n }),
-                fullWidth: l,
+                text: a.intl.string(a.t.nSHoxC),
+                fullWidth: o,
                 ...e,
                 onClick: (t) => {
-                    u && t.stopPropagation(), e.onClick?.(t);
+                    l && t.stopPropagation(), e.onClick?.(t);
                 },
             }),
     });

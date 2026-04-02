@@ -65,7 +65,6 @@ function G(e) {
             if ($.length > 0)
                 return (0, r.jsx)(h.A, {
                     distributorCTAConfigs: $,
-                    gameName: n?.name ?? "",
                     fullWidth: H !== k.d.MODAL_V2,
                     stopPropagation: !0,
                     onAction: G,
