@@ -153,6 +153,14 @@ let r = {
                     return 12;
                 },
             },
+            CHANNEL_LIST_TITLE_TEXT_STYLE: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return "redesign/heading-18/bold";
+                    for (let e of t) if ("mobile-visual-refresh" === e) return "heading-lg/semibold";
+                    return "redesign/heading-18/bold";
+                },
+            },
             CHANNEL_NAME_CHANNEL_BORDER_WIDTH: {
                 resolve(e) {
                     let { enabledExperiments: t } = e;
@@ -478,7 +486,7 @@ let r = {
                 resolve(e) {
                     let { enabledExperiments: t } = e;
                     if (0 === t.length) return "redesign/channel-title/semibold";
-                    for (let e of t) if ("mobile-visual-refresh" === e) return "text-md/semibold";
+                    for (let e of t) if ("mobile-visual-refresh" === e) return "redesign/heading-18/semibold";
                     return "redesign/channel-title/semibold";
                 },
             },
@@ -622,6 +630,14 @@ let r = {
                     return 16;
                 },
             },
+            VOICE_PANEL_DISCONNECT_BUTTON_MIN_WIDTH: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 0;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 64;
+                    return 0;
+                },
+            },
             VOICE_PANEL_GUTTER: {
                 resolve(e) {
                     let { enabledExperiments: t } = e;
@@ -636,6 +652,14 @@ let r = {
                     if (0 === t.length) return 12;
                     for (let e of t) if ("mobile-visual-refresh" === e) return 16;
                     return 12;
+                },
+            },
+            VOICE_TILE_BORDER_RADIUS: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 24;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 12;
+                    return 24;
                 },
             },
         },
