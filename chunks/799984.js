@@ -57,7 +57,7 @@ class h {
     }
     async watchSteamProcess(e) {
         try {
-            let t = await s.GH(e, { game_events_session: "steam" });
+            let t = await s.GH(e);
             if (null != t) {
                 o.warn("Steam game events watcher failed to attach", { pid: e, error: t }),
                     this.trackedProcesses.delete(e);
