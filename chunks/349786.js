@@ -11,7 +11,11 @@ function c() {
     let e = (0, a.wI)("StatefulCheckoutStoreRelocationNotice"),
         { paymentSourceId: t } = (0, l.P5)(),
         { relocationCountry: n, relocationCurrencyCode: c } = (0, s.cf)([u.A], () => {
-            let e = null != t ? u.A.getPaymentSourceRecords().find((e) => e.id === t) : null;
+            let e =
+                null != t
+                    ? (u.A.getPaymentSourceRecords().find((e) => e.id === t) ??
+                      u.A.getSubscriptionPreviewPaymentSourceRecords().find((e) => e.id === t))
+                    : null;
             return {
                 relocationCountry: e?.relocationCountry ?? null,
                 relocationCurrencyCode: e?.relocationCurrencyCode ?? null,
