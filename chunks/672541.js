@@ -1,144 +1,127 @@
 "use strict";
-n.d(t, { G4: () => C }), n(321073);
+n.d(t, { G4: () => v }), n(321073);
 var r = n(627968),
     i = n(64700),
     s = n(736843),
     a = n(69882),
-    o = n(742810),
-    l = n(169797),
-    u = n(93159),
-    c = n(166532),
-    d = n(685944),
-    _ = n(482132),
-    f = n(908419),
-    p = n(775420),
-    h = n(440612),
-    m = n(324384),
-    E = n(459750),
-    g = n(985018);
-function A() {
-    let { immediateDelivery: e } = (0, f.U)(),
-        t = (0, m.z)();
-    return (0, r.jsx)(u._P, {
-        variant: { type: u.I0.OrbsRedemption, purchaseButtonText: t },
+    o = n(169797),
+    l = n(93159),
+    u = n(166532),
+    c = n(482132),
+    d = n(908419),
+    _ = n(775420),
+    f = n(440612),
+    p = n(459750),
+    h = n(985018);
+let m = () => h.intl.string(h.t.wmcDyu),
+    E = (e) => {
+        let { orbBalance: t, orbPriceAmount: n } = e,
+            { disabled: r, tooltipText: s } = (0, i.useMemo)(
+                () =>
+                    null == n
+                        ? { disabled: !0, tooltipText: h.intl.string(h.t["c/rcUu"]) }
+                        : null == t || n > t
+                          ? { disabled: !0, tooltipText: h.intl.string(h.t.keFvXM) }
+                          : { disabled: !1, tooltipText: null },
+                [n, t],
+            );
+        return { disabled: r, tooltipText: s, text: m() };
+    };
+function g() {
+    let { immediateDelivery: e } = (0, d.U)(),
+        t = m();
+    return (0, r.jsx)(l._P, {
+        variant: { type: l.I0.OrbsRedemption, purchaseButtonText: t },
         paymentSourceType: null,
         immediateDelivery: e,
     });
 }
-let I = (e) => {
+let A = (e) => {
         let {
                 skuId: t,
                 analyticsSourceLocation: n,
                 analyticsLocations: s,
                 orbProductContext: a,
-                isRedeeming: l,
-                orbRedemptionError: u,
-                onRedeemVirtualCurrency: c,
+                isRedeeming: o,
+                orbRedemptionError: l,
+                onRedeemVirtualCurrency: u,
             } = e,
             {
-                isStepLoading: d,
-                orbPriceAmount: _,
-                orbBalanceToDisplay: f,
-                onClickCheckout: p,
-                showCollectiblesDiscountWarning: I,
-                errorMessage: T,
-            } = (0, h.HG)({
+                isStepLoading: c,
+                orbPriceAmount: d,
+                orbBalanceToDisplay: _,
+                onClickCheckout: m,
+                showCollectiblesDiscountWarning: A,
+                errorMessage: I,
+            } = (0, f.HG)({
                 skuId: t,
                 analyticsSourceLocation: n,
                 analyticsLocations: s,
                 orbProductContext: a,
-                orbRedemptionError: u,
-                onRedeemVirtualCurrency: c,
+                orbRedemptionError: l,
+                onRedeemVirtualCurrency: u,
             }),
-            { disabled: S, tooltipText: y, text: v } = (0, m.J6)({ orbBalance: f, orbPriceAmount: _ }),
-            N = (0, o.D7)({ location: "orb_checkout_review_step" }),
-            C = (0, i.useMemo)(
-                () => ({ onClick: p, loading: l, text: v, disabled: S, tooltipText: y }),
-                [p, l, v, S, y],
+            { disabled: T, tooltipText: S, text: y } = E({ orbBalance: _, orbPriceAmount: d }),
+            v = (0, i.useMemo)(
+                () => ({ onClick: m, loading: o, text: y, disabled: T, tooltipText: S }),
+                [m, o, y, T, S],
             ),
-            R = I ? g.intl.format(g.t.fsOXXO, {}) : null,
-            O = (0, i.useMemo)(() => {
-                if (null != R || null != T) {
+            N = A ? h.intl.format(h.t.fsOXXO, {}) : null;
+        return {
+            isStepLoading: c,
+            upperInlineNoticeProps: (0, i.useMemo)(() => {
+                if (null != N || null != I) {
                     let e = [];
                     return (
-                        null != R && e.push({ type: "warning", message: R, key: "orb-checkout-warning-notice" }),
-                        null != T && e.push({ type: "critical", message: T, key: "orb-checkout-error-notice" }),
+                        null != N && e.push({ type: "warning", message: N, key: "orb-checkout-warning-notice" }),
+                        null != I && e.push({ type: "critical", message: I, key: "orb-checkout-error-notice" }),
                         e
                     );
                 }
                 return null;
-            }, [R, T]);
-        return N
-            ? {
-                  shouldUseUnifiedCheckoutUI: !0,
-                  isStepLoading: d,
-                  upperInlineNoticeProps: O,
-                  purchaseItemContent: (0, r.jsx)(E.e, { skuId: t, orbPriceAmount: _ }),
-                  paymentSelectContent: (0, r.jsx)(E.Q, { orbBalance: f }),
-                  legalContent: (0, r.jsx)(A, {}),
-                  primaryButtonProps: C,
-                  invoiceSummaryContent: null,
-                  invoiceTotalDueLabel: null,
-                  invoiceTotalDueValue: null,
-              }
-            : {
-                  shouldUseUnifiedCheckoutUI: !1,
-                  isStepLoading: d,
-                  skuId: t,
-                  reviewBodyContent: (0, r.jsx)(m.cL, {
-                      skuId: t,
-                      orbPriceAmount: _,
-                      orbBalance: f,
-                      renderWithoutContainer: !0,
-                  }),
-                  reviewBodyLegalContent: null,
-                  primaryCTAButtonProps: C,
-                  warningMessage: R,
-                  errorMessage: T,
-              };
+            }, [N, I]),
+            purchaseItemContent: (0, r.jsx)(p.e, { skuId: t, orbPriceAmount: d }),
+            paymentSelectContent: (0, r.jsx)(p.Q, { orbBalance: _ }),
+            legalContent: (0, r.jsx)(g, {}),
+            primaryButtonProps: v,
+            invoiceSummaryContent: null,
+            invoiceTotalDueLabel: null,
+            invoiceTotalDueValue: null,
+        };
     },
-    T = (e) => {
+    I = (e) => {
         let {
-                renderStep: t,
-                paymentModalStepProps: n,
-                sharedCheckoutContext: { skuId: i, analyticsLocations: s, analyticsSourceLocation: o },
+                paymentModalStepProps: t,
+                sharedCheckoutContext: { skuId: n, analyticsLocations: i, analyticsSourceLocation: s },
             } = e,
-            { handleClose: u } = n;
-        (0, h.e1)({ handleClose: u });
-        let { orbProductContext: c, isRedeeming: d, orbRedemptionError: f, onRedeemVirtualCurrency: p } = N(),
-            m = I({
-                skuId: i,
-                analyticsLocations: s,
-                analyticsSourceLocation: o,
-                orbProductContext: c,
+            { handleClose: l } = t;
+        (0, f.e1)({ handleClose: l });
+        let { orbProductContext: u, isRedeeming: d, orbRedemptionError: _, onRedeemVirtualCurrency: p } = y(),
+            { primaryButtonProps: h, ...m } = A({
+                skuId: n,
+                analyticsLocations: i,
+                analyticsSourceLocation: s,
+                orbProductContext: u,
                 isRedeeming: d,
-                orbRedemptionError: f,
+                orbRedemptionError: _,
                 onRedeemVirtualCurrency: p,
             });
-        if (m.shouldUseUnifiedCheckoutUI) {
-            let { primaryButtonProps: e, ...t } = m;
-            return (0, r.jsxs)(r.Fragment, {
-                children: [
-                    (0, r.jsx)(_.dZ, { children: (0, r.jsx)(a.rg, { ...t }) }),
-                    (0, r.jsx)(_.UX, { children: (0, r.jsx)(l.lo, { primaryButtonProps: e }) }),
-                ],
-            });
-        }
-        return t({ paymentModalStepProps: n, unifiedStepProps: m });
+        return (0, r.jsxs)(r.Fragment, {
+            children: [
+                (0, r.jsx)(c.dZ, { children: (0, r.jsx)(a.rg, { ...m }) }),
+                (0, r.jsx)(c.UX, { children: (0, r.jsx)(o.lo, { primaryButtonProps: h }) }),
+            ],
+        });
     },
-    S = (e) => {
-        let { onClose: t, step: n } = e;
-        return (0, r.jsx)(d.A, { isOrbCheckout: !0, step: n, onClose: () => t(!1) });
-    },
-    y = (0, s.Mz)(),
-    v = (0, i.createContext)({
+    T = (0, s.Mz)(),
+    S = (0, i.createContext)({
         isRedeeming: !1,
         orbRedemptionError: null,
         orbProductContext: null,
         onRedeemVirtualCurrency: () => {},
     }),
-    N = () => (0, i.useContext)(v),
-    C = {
+    y = () => (0, i.useContext)(S),
+    v = {
         UnifiedCheckoutContextProvider: (e) => {
             let {
                     skuId: t,
@@ -153,17 +136,17 @@ let I = (e) => {
                 {
                     orbProductContext: c,
                     isRedeeming: d,
-                    orbRedemptionError: _,
-                    onRedeemVirtualCurrency: f,
-                } = (0, p.e6)({ skuId: t, loadId: n, onCheckoutSuccess: u, analyticsLocations: i }),
-                m = (0, h.My)({
+                    orbRedemptionError: p,
+                    onRedeemVirtualCurrency: h,
+                } = (0, _.e6)({ skuId: t, loadId: n, onCheckoutSuccess: u, analyticsLocations: i }),
+                m = (0, f.My)({
                     onClose: a.onClose,
                     skuId: t,
                     analyticsLocations: i,
                     analyticsSourceLocation: s,
                     orbProductContext: c,
                 });
-            return (0, r.jsx)(y.Provider, {
+            return (0, r.jsx)(T.Provider, {
                 value: {
                     sharedCheckoutContext: {
                         loadId: n,
@@ -175,12 +158,11 @@ let I = (e) => {
                     paymentModalProps: m,
                     renderModalProps: a,
                 },
-                children: (0, r.jsx)(v.Provider, {
-                    value: { orbProductContext: c, isRedeeming: d, orbRedemptionError: _, onRedeemVirtualCurrency: f },
+                children: (0, r.jsx)(S.Provider, {
+                    value: { orbProductContext: c, isRedeeming: d, orbRedemptionError: p, onRedeemVirtualCurrency: h },
                     children: l,
                 }),
             });
         },
-        UnifiedCheckoutCustomHeader: S,
-        UnifiedCheckoutStepDefinitions: { [c.pn.REVIEW]: { StepController: T } },
+        UnifiedCheckoutStepDefinitions: { [u.pn.REVIEW]: { StepController: I } },
     };

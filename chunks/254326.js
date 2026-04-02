@@ -1,156 +1,168 @@
 "use strict";
-n.d(t, { OU: () => v });
+n.d(t, { OU: () => R });
 var r = n(627968),
     i = n(64700),
+    s = n(732955),
     a = n(688810),
-    s = n(736843),
-    o = n(937008),
-    l = n(156312),
-    u = n(166532),
-    c = n(165823),
-    d = n(975189),
-    _ = n(503516),
-    f = n(652215),
-    h = n(818348);
-let p = (0, i.createContext)({
+    o = n(736843),
+    l = n(937008),
+    u = n(156312),
+    c = n(166532),
+    d = n(165823),
+    _ = n(975189),
+    f = n(503516),
+    p = n(652215),
+    h = n(818348),
+    m = n(985018);
+let E = (0, i.createContext)({
         setCustomConfettiVisible: () => {},
         confettiCanvas: null,
         hideConfirmStepConfetti: !1,
         skuIDs: [],
         analyticsLocations: [],
     }),
-    g = () => (0, i.useContext)(p),
-    E = (e) => {
+    g = () => (0, i.useContext)(E),
+    A = (e) => {
         let { analyticsLocations: t, hideConfirmStepConfetti: n, confettiCanvas: i } = g();
-        return (0, r.jsx)(d.v, { analyticsLocations: t, hideConfetti: n, confettiCanvas: i, ...e });
+        return (0, r.jsx)(_.v, { analyticsLocations: t, hideConfetti: n, confettiCanvas: i, ...e });
     },
-    A = { renderStep: (e) => (0, r.jsx)(E, { ...e }), options: c.yC },
-    I = (e) => {
+    I = { renderStep: (e) => (0, r.jsx)(A, { ...e }), options: d.yC },
+    T = (e) => {
         let { skuId: t, analyticsLocations: n, children: s, ...o } = e,
             {
-                environment: u,
-                confettiCanvas: d,
+                environment: l,
+                confettiCanvas: c,
                 setConfettiCanvas: _,
                 customConfettiVisible: f,
-                setCustomConfettiVisible: g,
-                customConfettiDisplayOptions: E,
-                hideConfirmStepConfetti: A,
-            } = (0, c.Ub)({ skuId: t }),
-            { analyticsLocations: I } = (0, c.NW)({ analyticsLocations: n ?? [] }),
-            T = (0, c.v1)({ skuId: t }),
-            y = (0, i.useMemo)(
+                setCustomConfettiVisible: p,
+                customConfettiDisplayOptions: m,
+                hideConfirmStepConfetti: g,
+            } = (0, d.Ub)({ skuId: t }),
+            { analyticsLocations: A } = (0, d.NW)({ analyticsLocations: n ?? [] }),
+            I = (0, d.v1)({ skuId: t }),
+            T = (0, i.useMemo)(
                 () => ({
-                    analyticsLocations: I,
-                    skuIDs: T,
-                    setCustomConfettiVisible: g,
-                    hideConfirmStepConfetti: A,
-                    confettiCanvas: d,
+                    analyticsLocations: A,
+                    skuIDs: I,
+                    setCustomConfettiVisible: p,
+                    hideConfirmStepConfetti: g,
+                    confettiCanvas: c,
                 }),
-                [I, T, g, A, d],
+                [A, I, p, g, c],
             );
         return (0, r.jsxs)(a.f5, {
-            value: I,
+            value: A,
             children: [
-                (0, r.jsx)(c.Kg, {
-                    environment: u,
+                (0, r.jsx)(d.Kg, {
+                    environment: l,
                     setConfettiCanvas: _,
-                    customConfettiDisplayOptions: E,
+                    customConfettiDisplayOptions: m,
                     customConfettiVisible: f,
                 }),
-                (0, r.jsx)(l.PaymentContextProvider, {
+                (0, r.jsx)(u.PaymentContextProvider, {
                     ...o,
-                    skuIDs: T,
+                    skuIDs: I,
                     stepConfigs: o.stepConfigs,
                     activeSubscription: null,
                     purchaseType: h.VV.ONE_TIME,
                     excludeSubscriptionPlansBySKU: !0,
-                    children: (0, r.jsx)(p.Provider, { value: y, children: s }),
+                    children: (0, r.jsx)(E.Provider, { value: T, children: s }),
                 }),
             ],
         });
     },
-    T = (e) => {
-        let { onClose: t, step: n } = e,
-            { isGift: i } = (0, o.Pv)();
-        return (0, r.jsx)(c.kj, { step: n, onClose: () => t(!1), isGift: i });
+    S = (0, o.Mz)(),
+    y = (e) => {
+        let {
+                skuId: t,
+                loadId: n,
+                analyticsSourceLocation: s,
+                renderModalProps: a,
+                onClose: o,
+                onComplete: l,
+                flowSpecificOptions: u,
+                children: c,
+            } = e,
+            _ = a.onClose,
+            f = (e) => {
+                _(), o?.(e);
+            },
+            { skuIDs: h, setCustomConfettiVisible: m, analyticsLocations: E } = g(),
+            {
+                paymentModalSkuId: A,
+                paymentModalOnClose: I,
+                paymentModalOnComplete: T,
+            } = (0, d.ot)({ onClose: f, onComplete: l, skuIDs: h, setCustomConfettiVisible: m }),
+            y = (0, i.useMemo)(
+                () => ({
+                    loadId: n,
+                    skuId: t,
+                    analyticsLocations: E,
+                    analyticsSourceLocation: s,
+                    flowSpecificOptions: u,
+                }),
+                [n, t, E, s, u],
+            ),
+            v = (0, i.useMemo)(
+                () => ({
+                    skuId: A,
+                    onClose: I,
+                    onComplete: T,
+                    applicationId: p.FYj,
+                    initialPlanId: null,
+                    analyticsLocations: E,
+                    onStepChange: u.onStepChange,
+                    hideShadow: !0,
+                    transitionState: a.transitionState,
+                    returnRef: a.returnRef,
+                }),
+                [A, I, T, E, u.onStepChange, a.transitionState, a.returnRef],
+            );
+        return (0, r.jsx)(S.Provider, {
+            value: { sharedCheckoutContext: y, paymentModalProps: v, renderModalProps: a },
+            children: c,
+        });
     },
-    y = (0, s.Mz)(),
-    S = (e) => {
+    v = (e) => {
         let { renderStep: t, paymentModalStepProps: n } = e,
             { handleStepChange: r, handleClose: i } = n,
             {
-                renderLeftColumn: a,
-                renderRightColumn: s,
+                renderLeftColumn: s,
+                renderRightColumn: a,
                 ctaDisabled: o,
                 loading: l,
-            } = (0, _.e)({ handleStepChange: r, handleClose: i });
+            } = (0, f.e)({ handleStepChange: r, handleClose: i });
         return t({
             paymentModalStepProps: n,
             unifiedStepProps: {
                 layout: "two-column",
-                renderLeftColumn: a,
-                renderRightColumn: s,
+                renderLeftColumn: s,
+                renderRightColumn: a,
                 primaryCTAButtonProps: { loading: l, disabled: o },
             },
         });
     },
-    v = {
-        CustomPaymentContextProvider: I,
-        UnifiedCheckoutContextProvider: (e) => {
-            let {
-                    skuId: t,
-                    loadId: n,
-                    analyticsSourceLocation: a,
-                    renderModalProps: s,
-                    onClose: o,
-                    onComplete: l,
-                    flowSpecificOptions: u,
-                    children: d,
-                } = e,
-                _ = s.onClose,
-                h = (e) => {
-                    _(), o?.(e);
-                },
-                { skuIDs: p, setCustomConfettiVisible: E, analyticsLocations: A } = g(),
-                {
-                    paymentModalSkuId: I,
-                    paymentModalOnClose: T,
-                    paymentModalOnComplete: S,
-                } = (0, c.ot)({ onClose: h, onComplete: l, skuIDs: p, setCustomConfettiVisible: E }),
-                v = (0, i.useMemo)(
-                    () => ({
-                        loadId: n,
-                        skuId: t,
-                        analyticsLocations: A,
-                        analyticsSourceLocation: a,
-                        flowSpecificOptions: u,
-                    }),
-                    [n, t, A, a, u],
-                ),
-                C = (0, i.useMemo)(
-                    () => ({
-                        skuId: I,
-                        onClose: T,
-                        onComplete: S,
-                        applicationId: f.FYj,
-                        initialPlanId: null,
-                        analyticsLocations: A,
-                        onStepChange: u.onStepChange,
-                        hideShadow: !0,
-                        transitionState: s.transitionState,
-                        returnRef: s.returnRef,
-                    }),
-                    [I, T, S, A, u.onStepChange, s.transitionState, s.returnRef],
-                );
-            return (0, r.jsx)(y.Provider, {
-                value: { sharedCheckoutContext: v, paymentModalProps: C, renderModalProps: s },
-                children: d,
-            });
+    N = {
+        [c.pn.GIFT_CUSTOMIZATION]: () => m.intl.string(m.t["JCFN/y"]),
+        [c.pn.AWAITING_PURCHASE_TOKEN_AUTH]: () => m.intl.string(m.t.lDbi6H),
+        [c.pn.CONFIRM]: () => "",
+    },
+    C = (e) => {
+        let { step: t } = e,
+            n = N[t];
+        return null == n ? null : (0, r.jsx)(s.rQ0, { title: n(), titleTextVariant: "heading-lg/semibold" });
+    },
+    R = {
+        CustomPaymentContextProvider: T,
+        UnifiedCheckoutContextProvider: y,
+        UnifiedCheckoutCustomHeader: (e) => {
+            let { step: t } = e,
+                { isGift: n } = (0, l.Pv)();
+            return n ? (0, r.jsx)(C, { step: t }) : null;
         },
-        UnifiedCheckoutCustomHeader: T,
         UnifiedCheckoutStepDefinitions: {
-            [u.pn.GIFT_CUSTOMIZATION]: { StepController: S },
-            [u.pn.REVIEW]: { legacyStepConfig: !0 },
+            [c.pn.GIFT_CUSTOMIZATION]: { StepController: v },
+            [c.pn.REVIEW]: { legacyStepConfig: !0 },
         },
-        CUSTOM_CONFIRM_STEP_CONFIG: A,
+        CUSTOM_CONFIRM_STEP_CONFIG: I,
     };

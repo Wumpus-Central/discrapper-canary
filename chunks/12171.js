@@ -1,4 +1,4 @@
-n.d(t, { A: () => S });
+n.d(t, { A: () => E });
 var a = n(627968),
     i = n(64700),
     s = n(417597),
@@ -6,16 +6,16 @@ var a = n(627968),
     r = n(397927),
     o = n(384904),
     d = n(219887),
-    c = n(608805),
+    c = n(742810),
     u = n(500380),
     m = n(102609),
     h = n(217222),
     x = n(961350),
     p = n(295405),
     g = n(652215),
-    _ = n(786020),
-    f = n(960576),
-    v = n(310086);
+    _ = n(616873),
+    f = n(659573),
+    v = n(793877);
 let b = [
         { label: "3DS and Failed Cards", value: "", disabled: !0 },
         { label: "Other", value: "OTHER" },
@@ -708,7 +708,7 @@ let b = [
         { label: "Saskatchewan", value: "SK" },
         { label: "Yukon", value: "YT" },
     ],
-    T = {
+    S = {
         NONE: null,
         AB: {
             name: "Alberta Legislature Building",
@@ -828,18 +828,18 @@ let b = [
             country: "CA",
         },
     };
-function S() {
+function E() {
     let [e, t] = i.useState("US"),
         [n, d] = i.useState(null),
         [c, m] = i.useState(null),
         [h, x] = i.useState(null),
-        [g, S] = i.useState(null),
-        [E, N] = i.useState("pm_card_us"),
-        [k, O] = i.useState(!1),
+        [g, E] = i.useState(null),
+        [T, N] = i.useState("pm_card_us"),
+        [O, R] = i.useState(!1),
         D = Object.values((0, s.bG)([p.A], () => p.A.paymentSources)),
-        P = j[e],
-        M = async () => {
-            let t = E;
+        M = j[e],
+        P = async () => {
+            let t = T;
             "" === t && (t = "pm_card_us"),
                 await l.Bo.post({
                     url: "/debug/payment-source",
@@ -887,7 +887,7 @@ function S() {
                                         };
                                     }),
                                 onSelectionChange: (e) => {
-                                    t(e), N(j[e][0].value), O(1 === j[e].length);
+                                    t(e), N(j[e][0].value), R(1 === j[e].length);
                                 },
                             }),
                             "US" === e &&
@@ -915,26 +915,26 @@ function S() {
                                         return { id: t, value: t, label: n };
                                     }),
                                     onSelectionChange: (e) => {
-                                        x(e), S(T[e] ?? null);
+                                        x(e), E(S[e] ?? null);
                                     },
                                 }),
                             (0, a.jsx)(r.l6P, {
                                 selectionMode: "single",
                                 label: "Card Token",
                                 hideLabel: !0,
-                                value: E,
-                                options: P.map((e) => {
+                                value: T,
+                                options: M.map((e) => {
                                     let { value: t, label: n } = e;
                                     return { id: t, value: t, label: n };
                                 }),
                                 onSelectionChange: N,
-                                disabled: k,
+                                disabled: O,
                             }),
                             (0, a.jsx)(r.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Create Stripe Credit Card",
-                                onClick: M,
+                                onClick: P,
                             }),
                             D.length > 0 &&
                                 (0, a.jsx)(r.Button, {
@@ -956,7 +956,7 @@ function S() {
                         variant: "text-lg/bold",
                         children: "Generate Gift Card PIN",
                     }),
-                    (0, a.jsx)(R, {}),
+                    (0, a.jsx)(k, {}),
                     (0, a.jsx)(r.Text, {
                         style: { marginTop: "24px", marginBottom: "16px" },
                         variant: "text-lg/bold",
@@ -974,7 +974,7 @@ function S() {
         })
     );
 }
-let E = [
+let T = [
     { id: "none", value: "none", label: "No Override (use server assignment)" },
     { id: "0", value: "0", label: "Control (0) — Legacy checkout" },
     { id: "1", value: "1", label: "Treatment (1) — Unified checkout" },
@@ -992,7 +992,7 @@ function N(e) {
             },
             [t],
         );
-    return (0, a.jsx)(r.l6P, { selectionMode: "single", label: t, value: n, options: [...E], onSelectionChange: l });
+    return (0, a.jsx)(r.l6P, { selectionMode: "single", label: t, value: n, options: [...T], onSelectionChange: l });
 }
 function I() {
     return (0, a.jsxs)(r.BJc, {
@@ -1000,20 +1000,19 @@ function I() {
         gap: 8,
         children: [
             (0, a.jsx)(N, { experimentName: c.W2.definition.name }),
-            (0, a.jsx)(N, { experimentName: c.uD.definition.name }),
             (0, a.jsx)(N, { experimentName: c.nG.definition.name }),
         ],
     });
 }
-let k = [
+let O = [
         { id: "US", value: "US", label: "United States (USD)" },
         { id: "CA", value: "CA", label: "Canada (CAD)" },
         { id: "FR", value: "FR", label: "France (EUR)" },
         { id: "GB", value: "GB", label: "United Kingdom (GBP)" },
         { id: "DE", value: "DE", label: "Germany (EUR)" },
     ],
-    O = { US: "usd", CA: "cad", FR: "eur", GB: "gbp", DE: "eur" };
-function R() {
+    R = { US: "usd", CA: "cad", FR: "eur", GB: "gbp", DE: "eur" };
+function k() {
     let [e, t] = i.useState("US"),
         [n, s] = i.useState("500"),
         [o, d] = i.useState(null),
@@ -1028,7 +1027,7 @@ function R() {
                 try {
                     let t = await l.Bo.post({
                         url: "/billing/gift-card/create-on-demand-pin",
-                        body: { country: e, currency: O[e], amount: g },
+                        body: { country: e, currency: R[e], amount: g },
                         rejectWithError: !0,
                     });
                     d(t.body.pin);
@@ -1052,7 +1051,7 @@ function R() {
                         selectionMode: "single",
                         label: "Gift Card Country",
                         value: e,
-                        options: k,
+                        options: O,
                         onSelectionChange: t,
                     }),
                     (0, a.jsx)(r.ksK, {

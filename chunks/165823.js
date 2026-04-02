@@ -1,72 +1,66 @@
 "use strict";
-n.d(t, { Kg: () => S, NW: () => E, Ub: () => I, kj: () => v, ot: () => y, v1: () => T, yC: () => A });
+n.d(t, { Kg: () => I, NW: () => h, Ub: () => E, ot: () => A, v1: () => g, yC: () => m });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(106778),
     l = n(73153),
     u = n(793574),
     c = n(688810),
     d = n(213530),
-    _ = n(231018),
-    f = n(685944),
-    h = n(158216),
-    p = n(758836),
-    g = n(186319);
-let E = (e) => {
+    _ = n(158216),
+    f = n(758836),
+    p = n(555505);
+let h = (e) => {
         let { analyticsLocations: t } = e,
             { analyticsLocations: n } = (0, c.Ay)([...t, u.A.COLLECTIBLES_PAYMENT_MODAL]);
         return { analyticsLocations: n };
     },
-    A = { sliderBodyClassName: g.Bz },
-    I = (e) => {
+    m = { sliderBodyClassName: p.Bz },
+    E = (e) => {
         let { skuId: t } = e,
             n = i.useRef(new o.OH()),
-            [r, a] = i.useState(null),
-            [s, l] = i.useState(!1),
-            u = i.useMemo(() => (0, h.AB)({ purchaseType: p.gs.FIAT, skuId: t }), [t]);
+            [r, s] = i.useState(null),
+            [a, l] = i.useState(!1),
+            u = i.useMemo(() => (0, _.AB)({ purchaseType: f.gs.FIAT, skuId: t }), [t]);
         return {
             environment: n,
             confettiCanvas: r,
-            setConfettiCanvas: a,
-            customConfettiVisible: s,
+            setConfettiCanvas: s,
+            customConfettiVisible: a,
             setCustomConfettiVisible: l,
             customConfettiDisplayOptions: u,
             hideConfirmStepConfetti: null != u,
         };
     },
-    T = (e) => {
+    g = (e) => {
         let { skuId: t } = e;
         return null != t ? [t] : [];
     },
-    y = (e) => {
-        let { skuIDs: t, onClose: n, onComplete: r, setCustomConfettiVisible: a } = e,
-            s = t[0] ?? null,
+    A = (e) => {
+        let { skuIDs: t, onClose: n, onComplete: r, setCustomConfettiVisible: s } = e,
+            a = t[0] ?? null,
             o = i.useCallback(() => {
-                a(!0), r?.();
-            }, [r, a]);
+                s(!0), r?.();
+            }, [r, s]);
         return {
-            paymentModalSkuId: s,
+            paymentModalSkuId: a,
             paymentModalOnClose: i.useCallback(
                 (e) => {
-                    a(!1), n(e), l.h.dispatch({ type: "SKU_PURCHASE_MODAL_CLOSE", error: null });
+                    s(!1), n(e), l.h.dispatch({ type: "SKU_PURCHASE_MODAL_CLOSE", error: null });
                 },
-                [n, a],
+                [n, s],
             ),
             paymentModalOnComplete: o,
         };
     },
-    S = (e) => {
-        let { environment: t, setConfettiCanvas: n, customConfettiDisplayOptions: i, customConfettiVisible: a } = e;
+    I = (e) => {
+        let { environment: t, setConfettiCanvas: n, customConfettiDisplayOptions: i, customConfettiVisible: s } = e;
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(o.Fk, { ref: n, className: g.Lb, environment: t.current }),
-                (0, r.jsx)(d.K, { options: i, className: s()(g.Oh, { [g.R]: !a }) }),
+                (0, r.jsx)(o.Fk, { ref: n, className: p.Lb, environment: t.current }),
+                (0, r.jsx)(d.K, { options: i, className: a()(p.Oh, { [p.R]: !s }) }),
             ],
         });
-    },
-    v = (e) => {
-        let { step: t, onClose: n, isGift: i } = e;
-        return i ? (0, r.jsx)(_.A, { step: t }) : (0, r.jsx)(f.A, { step: t, onClose: () => n(!1) });
     };

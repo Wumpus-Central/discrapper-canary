@@ -45345,42 +45345,6 @@ screen and (max-width:485px) {
     top: -120px
 }
 
-.headerContainer__9abb9 {
-    background-color: var(--background-base-low);
-    border-start-end-radius: calc(var(--custom-border-radius) + 2px);
-    border-start-start-radius: calc(var(--custom-border-radius) + 2px);
-    box-sizing: border-box;
-    height: 146px;
-    min-height: 146px;
-    position: relative
-}
-
-.closeButton__9abb9 {
-    inset-inline-end: 16px;
-    position: absolute;
-    top: 16px
-}
-
-.headerImage__9abb9,
-.headerImageContainer__9abb9 {
-    height: 100%;
-    width: 100%
-}
-
-.headerImage__9abb9 {
-    border-start-end-radius: var(--radius-md);
-    border-start-start-radius: var(--radius-md);
-    -o-object-fit: cover;
-    object-fit: cover
-}
-
-.orbCheckoutHeaderVideo__9abb9 {
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: left top;
-    object-position: left top
-}
-
 .modalOverrideSliderBody__34eac {
     padding: 0;
     width: 440px
@@ -45893,72 +45857,6 @@ screen and (max-width:485px) {
 .viewItemButton__7b8d0 {
     max-width: 100%;
     width: 100%
-}
-
-.orbIconSVG__85200 {
-    height: 18px
-}
-
-.full-motion .loading__85200 {
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-    animation-name: spin__85200;
-    animation-timing-function: linear
-}
-
-@keyframes spin__85200 {
-    0% {
-        transform: rotate(0deg)
-    }
-
-    to {
-        transform: rotate(1turn)
-    }
-}
-
-.stepBody__83734 {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-8);
-    padding-top: var(--space-16)
-}
-
-.warningContainer__83734 {
-    align-items: center;
-    background-color: var(--background-feedback-warning);
-    border-radius: var(--radius-sm);
-    display: flex;
-    flex-direction: row;
-    gap: var(--space-10);
-    padding: var(--space-8)
-}
-
-.paymentSourceWrapper__83734 {
-    margin: 16px 0
-}
-
-.paymentSourceItem__83734 {
-    align-items: center;
-    cursor: default;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 14px 16px
-}
-
-.purchaseDetailsSpinner__83734 {
-    height: 20px
-}
-
-.orbAmountTag__83734 {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    gap: 4px
-}
-
-.displayFlex__83734 {
-    display: flex
 }
 
 .purchaseItemGraphic__2455b {
