@@ -48,8 +48,8 @@ var a = n(627968),
     Q = n(454719),
     Y = n(342296),
     J = n(780964),
-    X = n(77735),
-    Z = n(840065),
+    X = n(858897),
+    Z = n(533488),
     ee = n(167579),
     et = n(173660),
     en = n(41580),
@@ -248,7 +248,7 @@ class eU extends i.PureComponent {
     };
     handleOpenAccountSettings = () => {
         this.dismissTooltips(),
-            ec.A.isConnected() ? (0, Z.openUserSettings)(J.X.VOICE_AND_VIDEO_PANEL) : (0, Z.openUserSettings)();
+            ec.A.isConnected() ? (0, X.openUserSettings)(J.X.VOICE_AND_VIDEO_PANEL) : (0, X.openUserSettings)();
     };
     handleOpenSettingsContextMenu = (e) => {
         let { currentUser: t } = this.props;
@@ -265,7 +265,7 @@ class eU extends i.PureComponent {
             (0, x.L3)(e, async () => {
                 let { default: e } = await n.e("78827").then(n.bind(n, 385318));
                 return () => {
-                    let { enabledInputProfiles: n } = (0, X.d)({ location: "Account" });
+                    let { enabledInputProfiles: n } = (0, Z.d)({ location: "Account" });
                     return (0, a.jsx)(y.f5, {
                         value: t,
                         children: (0, a.jsx)(e, {

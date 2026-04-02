@@ -4,7 +4,7 @@ n.d(t, {
     BX: () => B,
     CK: () => D,
     Cz: () => N,
-    JJ: () => x,
+    JJ: () => P,
     Jp: () => w,
     LX: () => k,
     Or: () => G,
@@ -15,7 +15,7 @@ n.d(t, {
     gB: () => L,
     gn: () => b,
     h$: () => U,
-    iJ: () => P,
+    iJ: () => x,
     ue: () => V,
 });
 var r = n(782111),
@@ -47,7 +47,7 @@ n(457421), n(295811);
 let N = (e) => {
         let { tab: t, ...r } = e;
         {
-            let { default: e } = n(12901),
+            let { default: e } = n(779733),
                 { default: i } = n(408166);
             C(r), e(), i(), (0, c.pX)(null != t ? v.BVt.COLLECTIBLES_SHOP_WITH_TAB(t) : v.BVt.COLLECTIBLES_SHOP);
         }
@@ -146,7 +146,7 @@ let N = (e) => {
     M = async (e, t) => {
         _.A.isFetchingProduct(e) || (await w(e, t));
     },
-    P = async (e) => {
+    x = async (e) => {
         o.h.dispatch({ type: "COLLECTIBLES_CLAIM", skuId: e });
         try {
             let t = await a.Bo.put({ url: v.Rsh.COLLECTIBLES_CLAIM, body: { sku_id: e }, rejectWithError: !0 });
@@ -156,7 +156,7 @@ let N = (e) => {
             throw (o.h.dispatch({ type: "COLLECTIBLES_CLAIM_FAILURE", skuId: e, error: t }), t);
         }
     },
-    x = async (e, t) => {
+    P = async (e, t) => {
         try {
             return (
                 await a.Bo.get({

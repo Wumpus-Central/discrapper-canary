@@ -1,4 +1,4 @@
-n.d(t, { L: () => f });
+n.d(t, { L: () => T });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
@@ -11,19 +11,19 @@ var c = n(814278),
     u = n(699978);
 n(818143);
 var m = n(657331),
-    _ = n(287809),
-    g = n(427262),
+    g = n(287809),
+    _ = n(427262),
     x = n(985018),
-    A = n(465001);
+    A = n(921942);
 function h(e) {
     let { userId: t, count: n } = e,
         { analyticsLocations: u } = (0, d.Ay)(),
-        h = (0, l.bG)([_.default], () => _.default.getUser(t)),
-        p = g.Ay.getFormattedName(h),
-        f = s.useCallback(() => {
+        h = (0, l.bG)([g.default], () => g.default.getUser(t)),
+        p = _.Ay.getFormattedName(h),
+        T = s.useCallback(() => {
             (0, c.kj)(t);
         }, [t]),
-        T = s.useCallback(() => (0, m.openUserProfileModal)({ userId: t, sourceAnalyticsLocations: u }), [t, u]);
+        f = s.useCallback(() => (0, m.openUserProfileModal)({ userId: t, sourceAnalyticsLocations: u }), [t, u]);
     return (
         s.useEffect(() => {
             (0, r.wz)(t);
@@ -37,7 +37,7 @@ function h(e) {
                     children: [
                         (0, i.jsx)(a.DUT, {
                             className: A.Xh,
-                            onClick: T,
+                            onClick: f,
                             children: (0, i.jsx)(a.Text, {
                                 variant: "text-md/semibold",
                                 color: "interactive-text-active",
@@ -51,7 +51,7 @@ function h(e) {
                         }),
                     ],
                 }),
-                (0, i.jsx)(a.DUT, { onClick: f, className: A.Qz, children: (0, i.jsx)(a.ucK, { size: "xs" }) }),
+                (0, i.jsx)(a.DUT, { onClick: T, className: A.Qz, children: (0, i.jsx)(a.ucK, { size: "xs" }) }),
             ],
         })
     );
@@ -84,7 +84,7 @@ function p(e) {
         ],
     });
 }
-function f(e) {
+function T(e) {
     let { userId: t } = e,
         n = (0, u.k)(t);
     return (0, i.jsxs)(i.Fragment, {
@@ -105,4 +105,4 @@ function f(e) {
         ],
     });
 }
-n(885106);
+n(153335);

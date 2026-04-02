@@ -1,4 +1,4 @@
-n.d(t, { I: () => A });
+n.d(t, { I: () => x });
 var i = n(627968),
     s = n(64700),
     l = n(397927),
@@ -8,11 +8,11 @@ var i = n(627968),
     d = n(558001);
 n(866945);
 var c = n(933297),
-    u = n(12901),
+    u = n(779733),
     m = n(835002),
-    _ = n(985018),
-    g = n(842130);
-function A() {
+    g = n(985018),
+    _ = n(870236);
+function x() {
     let e = (0, r.uM)(),
         t = (0, o.vx)(),
         n = s.useCallback(() => {
@@ -20,7 +20,7 @@ function A() {
                 a.A.openPrivateChannel({ recipientIds: t }),
                 (0, d.N)(m.YA.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE, m.YX.LEARN_MORE);
         }, [t]),
-        A = s.useCallback(() => {
+        x = s.useCallback(() => {
             (0, d.N)(m.YA.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE, m.YX.VIEWED);
         }, []);
     return s.useMemo(() => {
@@ -28,12 +28,12 @@ function A() {
             return {
                 type: c.lT.INLINE_NOTICE,
                 noticeType: "info",
-                trackView: A,
+                trackView: x,
                 useText: () =>
-                    _.intl.format(g.default.i284fU, {
+                    g.intl.format(_.default.i284fU, {
                         hook: (e, t) => (0, i.jsx)(l.MzZ, { onClick: n, children: e }, t),
                         count: t.length,
                     }),
             };
-    }, [n, e, t.length, A]);
+    }, [n, e, t.length, x]);
 }

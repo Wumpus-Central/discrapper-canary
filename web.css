@@ -21935,40 +21935,40 @@ img.thumbnail__0f2e8 {
     padding: var(--space-8)
 }
 
-.root_e3f97f {
+.root__102a4 {
     align-items: center;
     border-radius: var(--radius-xs);
     display: flex;
     padding: 8px
 }
 
-.icon_e3f97f {
+.icon__102a4 {
     flex-shrink: 0;
     height: 24px;
     margin-inline-end: 10px;
     width: 24px
 }
 
-.text_e3f97f {
+.text__102a4 {
     flex: 1;
     text-align: start
 }
 
-.info_e3f97f {
+.info__102a4 {
     background-color: var(--background-feedback-info);
     border: 1px solid var(--icon-feedback-info)
 }
 
-.info_e3f97f .icon_e3f97f {
+.info__102a4 .icon__102a4 {
     color: var(--icon-feedback-info)
 }
 
-.warning_e3f97f {
+.warning__102a4 {
     background-color: var(--background-feedback-warning);
     border: 1px solid var(--icon-feedback-warning)
 }
 
-.warning_e3f97f .icon_e3f97f {
+.warning__102a4 .icon__102a4 {
     box-sizing: border-box;
     color: var(--icon-feedback-warning);
     height: 20px;

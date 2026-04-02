@@ -8,27 +8,27 @@ var i = n(627968),
     d = n(271866),
     c = n(956518),
     u = n(235986),
-    _ = n(147964),
-    m = n(985018),
-    g = n(361151),
-    A = n(473169);
-let x = /^\d+$|^$/;
+    m = n(147964),
+    g = n(985018),
+    _ = n(35458),
+    x = n(153335);
+let A = /^\d+$|^$/;
 function h(e) {
     let { onClose: t, transitionState: n } = e,
         {
             authorizedApplicationId: h,
             authorizationError: p,
             authorizing: T,
-        } = (0, a.cf)([_.A], () => ({
-            authorizedApplicationId: _.A.testModeApplicationId,
-            authorizationError: _.A.error,
-            authorizing: _.A.isFetchingAuthorization,
+        } = (0, a.cf)([m.A], () => ({
+            authorizedApplicationId: m.A.testModeApplicationId,
+            authorizationError: m.A.error,
+            authorizing: m.A.isFetchingAuthorization,
         })),
-        [E, S] = s.useState(h ?? ""),
-        [f, C] = s.useState("8080"),
-        [b, N] = s.useState("localhost"),
-        I = x.test(E);
-    async function v() {
+        [f, S] = s.useState(h ?? ""),
+        [E, b] = s.useState("8080"),
+        [C, N] = s.useState("localhost"),
+        v = A.test(f);
+    async function I() {
         d.SH();
         let e = (function (e, t, n) {
             if (null == e) return null;
@@ -38,39 +38,39 @@ function h(e) {
                 case "proxy":
                     return (0, c.Ay)(n);
             }
-        })(b, f, E);
-        null != (await d.q1(E, e)) && t();
+        })(C, E, f);
+        null != (await d.q1(f, e)) && t();
     }
     s.useEffect(() => () => o.h.wait(() => d.SH()), []);
-    let j = null != h && h === E,
+    let j = null != h && h === f,
         y = j
             ? function () {
                   d.cL(), S(""), N(null);
               }
-            : v,
-        R = s.useMemo(
+            : I,
+        O = s.useMemo(
             () => [
                 {
                     loading: T,
-                    disabled: !I || 0 === E.length || ("localhost" === b && 0 === f.length),
+                    disabled: !v || 0 === f.length || ("localhost" === C && 0 === E.length),
                     variant: j ? "critical-primary" : "active",
-                    text: j ? m.intl.string(m.t.d6TR3I) : m.intl.string(m.t.qwuK5I),
+                    text: j ? g.intl.string(g.t.d6TR3I) : g.intl.string(g.t.qwuK5I),
                     onClick: y,
                 },
             ],
-            [E.length, T, j, I, f.length, y, b],
+            [f.length, T, j, v, E.length, y, C],
         );
     return (0, i.jsxs)(l.Modal, {
-        title: m.intl.string(m.t.f8fzky),
-        subtitle: m.intl.string(m.t.a6Vill),
-        actions: R,
+        title: g.intl.string(g.t.f8fzky),
+        subtitle: g.intl.string(g.t.a6Vill),
+        actions: O,
         onClose: t,
         transitionState: n,
         children: [
             null == p
                 ? null
                 : (0, i.jsx)("div", {
-                      className: A.SX,
+                      className: x.SX,
                       children: (0, i.jsx)(r.wx6, { type: "critical", children: p }),
                   }),
             (0, i.jsxs)(u.A, {
@@ -78,13 +78,13 @@ function h(e) {
                 align: u.A.Align.START,
                 children: [
                     (0, i.jsx)("div", {
-                        className: g.I,
+                        className: _.I,
                         children: (0, i.jsx)(r.ksK, {
-                            label: m.intl.string(m.t.P6TzgI),
+                            label: g.intl.string(g.t.P6TzgI),
                             required: !0,
-                            value: E,
+                            value: f,
                             maxLength: 19,
-                            error: I ? null : m.intl.string(m.t.gPNgKO),
+                            error: v ? null : g.intl.string(g.t.gPNgKO),
                             onChange: function (e) {
                                 S(e);
                             },
@@ -92,15 +92,15 @@ function h(e) {
                         }),
                     }),
                     (0, i.jsx)("div", {
-                        className: g.I,
+                        className: _.I,
                         children: (0, i.jsx)(r.l6P, {
                             selectionMode: "single",
-                            label: m.intl.string(m.t["/GTqXG"]),
-                            disabled: !I || "" === E,
-                            value: b,
+                            label: g.intl.string(g.t["/GTqXG"]),
+                            disabled: !v || "" === f,
+                            value: C,
                             options: [
-                                { value: "localhost", label: m.intl.string(m.t["+Y9Y6r"]), id: "localhost" },
-                                { value: "proxy", label: m.intl.string(m.t.uaksyW), id: "proxy" },
+                                { value: "localhost", label: g.intl.string(g.t["+Y9Y6r"]), id: "localhost" },
+                                { value: "proxy", label: g.intl.string(g.t.uaksyW), id: "proxy" },
                             ],
                             onSelectionChange: function (e) {
                                 N(e);
@@ -108,16 +108,16 @@ function h(e) {
                             placeholder: "URL Origin Type",
                         }),
                     }),
-                    "localhost" !== b
+                    "localhost" !== C
                         ? null
                         : (0, i.jsx)("div", {
-                              className: g.I,
+                              className: _.I,
                               children: (0, i.jsx)(r.ksK, {
                                   required: !0,
-                                  label: m.intl.string(m.t.fF4zxq),
-                                  value: f,
+                                  label: g.intl.string(g.t.fF4zxq),
+                                  value: E,
                                   maxLength: 5,
-                                  onChange: (e) => C(e),
+                                  onChange: (e) => b(e),
                                   disabled: T,
                               }),
                           }),

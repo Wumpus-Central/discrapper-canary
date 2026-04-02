@@ -7,7 +7,7 @@ var i = n(627968),
     a = n(827734),
     c = n(397927),
     d = n(404374),
-    u = n(379848),
+    u = n(932001),
     h = n(40185),
     m = n(552736),
     p = n(422936),
@@ -15,8 +15,8 @@ var i = n(627968),
     E = n(603488),
     f = n(105390),
     g = n(49999),
-    x = n(788868),
-    v = n(738386);
+    v = n(788868),
+    x = n(112918);
 function A() {
     let e,
         t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -25,10 +25,10 @@ function A() {
         l = (0, h.cg)(),
         a = null != (0, m.A)(),
         c = l || a,
-        d = n?.trial_id === x.Dw,
-        v = [];
-    c && v.push(o.M.BOGO_2025_NITRO_TAB_BADGE);
-    let [A, _] = (0, u.kn)(v, void 0, !0);
+        d = n?.trial_id === v.Dw,
+        x = [];
+    c && x.push(o.M.BOGO_2025_NITRO_TAB_BADGE);
+    let [A, _] = (0, u.kn)(x, void 0, !0);
     return (
         s.useEffect(() => {
             !0 === t && A === o.M.BOGO_2025_NITRO_TAB_BADGE && _(g.i.AUTO_DISMISS);
@@ -50,8 +50,8 @@ function _(e) {
             (0, i.jsx)(c.tvc, { size: "sm", color: s ? a.A.unsafe_rawColors.WHITE.css : d.k0.PREMIUM_TIER_2 });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsxs)("div", { className: l()(v.gj, { [v.wH]: s && !r }), children: [n, o] }),
-            (0, i.jsx)("div", { className: l()(v.Tp, { [v._I]: !r && s }) }),
+            (0, i.jsxs)("div", { className: l()(x.gj, { [x.wH]: s && !r }), children: [n, o] }),
+            (0, i.jsx)("div", { className: l()(x.Tp, { [x._I]: !r && s }) }),
         ],
     });
 }

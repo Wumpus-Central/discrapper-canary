@@ -5,14 +5,14 @@ var i = n(627968),
     a = n(582754),
     r = n(397927),
     o = n(736653),
-    d = n(12901),
+    d = n(779733),
     c = n(954571),
     u = n(341915),
     m = n(590202),
-    _ = n(545986),
-    g = n(652215),
+    g = n(545986),
+    _ = n(652215),
     x = n(985018),
-    A = n(608821),
+    A = n(857391),
     h = n(641701);
 function p() {
     let e = (0, a.Mw)((0, o.Ay)()),
@@ -25,8 +25,8 @@ function p() {
         ),
         n = s.useCallback(() => {
             (0, d.default)(),
-                (0, _.navigateToQuestHome)({ fromContent: u.uF.QUEST_HOME_MOVE_CALLOUT }),
-                c.default.track(g.HAw.QUEST_CONTENT_CLICKED, {
+                (0, g.navigateToQuestHome)({ fromContent: u.uF.QUEST_HOME_MOVE_CALLOUT }),
+                c.default.track(_.HAw.QUEST_CONTENT_CLICKED, {
                     cta_name: m.Cy.VIEW_QUESTS,
                     click_id: (0, l.A)(),
                     is_targeted: !1,

@@ -5,8 +5,8 @@ var r = n(627968),
     s = n(73153),
     a = n(790284),
     o = n(272053),
-    l = n(960545),
-    u = n(995377),
+    l = n(175665),
+    u = n(904481),
     c = n(355097);
 let d = "USER_SETTINGS_MODAL_MODAL_KEY";
 async function _(e) {
@@ -58,7 +58,7 @@ async function _(e) {
                     n.e("68890"),
                     n.e("30453"),
                     n.e("37901"),
-                    n.e("34660"),
+                    n.e("2081"),
                     n.e("38213"),
                     n.e("62733"),
                     n.e("83518"),
@@ -72,10 +72,10 @@ async function _(e) {
                     n.e("7803"),
                     n.e("84704"),
                     n.e("67646"),
-                    n.e("24111"),
+                    n.e("95977"),
                     n.e("15232"),
-                    n.e("80044"),
-                ]).then(n.bind(n, 796150));
+                    n.e("29990"),
+                ]).then(n.bind(n, 55622));
                 return (n) => (0, r.jsx)(t, { ...n, target: e });
             },
             { modalKey: d, stackingBehavior: _, stackNextByDefault: !0, contextKey: i.SYi },

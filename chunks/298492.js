@@ -4,16 +4,16 @@ s(64700);
 var r = s(503698),
     i = s.n(r),
     n = s(397927),
-    c = s(308528),
-    l = s(854627),
-    _ = s(12901),
+    l = s(308528),
+    c = s(854627),
+    _ = s(779733),
     d = s(427262),
-    u = s(519412),
+    u = s(518582),
     E = s(985018),
-    m = s(712685);
+    m = s(177192);
 let o = (e) => {
     let { recipient: t, isSuccess: s, onClose: r } = e,
-        { avatarSrc: o, eventHandlers: h } = (0, l.A)({ userId: t?.id, size: n._3J.SIZE_56 }),
+        { avatarSrc: o, eventHandlers: h } = (0, c.A)({ userId: t?.id, size: n._3J.SIZE_56 }),
         R = d.Ay.getName(t),
         M = !s;
     return (0, a.jsxs)("div", {
@@ -46,7 +46,7 @@ let o = (e) => {
                     icon: n.oyn,
                     onClick: () => {
                         var e;
-                        return (e = t.id), void ((0, _.default)(), c.A.openPrivateChannel({ recipientIds: e }), r());
+                        return (e = t.id), void ((0, _.default)(), l.A.openPrivateChannel({ recipientIds: e }), r());
                     },
                 }),
         ],

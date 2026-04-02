@@ -1,83 +1,83 @@
 "use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => _ });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    l = n(397927),
+    l = n(503698),
+    a = n.n(l),
+    s = n(397927),
     o = n(975807),
-    c = n(212031),
-    u = n(975571),
-    d = n(809465),
-    m = n(652215),
+    u = n(212031),
+    c = n(975571),
+    d = n(228093),
+    h = n(652215),
     f = n(985018),
-    h = n(535790);
+    m = n(583800);
 function p(e) {
     let { onClose: t } = e;
-    return (0, r.jsx)(l.W1t, {
+    return (0, r.jsx)(s.W1t, {
         "data-menu-migrated-auto": !0,
         navId: "settings-footer-more-menu",
         onClose: t,
         onSelect: () => {},
         "aria-label": "More options",
-        children: (0, r.jsxs)(l.rXV, {
+        children: (0, r.jsxs)(s.rXV, {
             children: [
-                (0, r.jsx)(l.Drp, { id: "changelog", label: f.intl.string(f.t.LRmNAl), action: () => (0, c.j)(!0) }),
-                (0, r.jsx)(l.Drp, {
+                (0, r.jsx)(s.Drp, { id: "changelog", label: f.intl.string(f.t.LRmNAl), action: () => (0, u.j)(!0) }),
+                (0, r.jsx)(s.Drp, {
                     id: "acknowledgements",
                     label: f.intl.string(f.t["0nUKy3"]),
-                    action: () => (0, o.A)(m.X7G.ACKNOWLEDGEMENTS),
+                    action: () => (0, o.A)(h.X7G.ACKNOWLEDGEMENTS),
                 }),
-                (0, r.jsx)(l.Drp, { id: "support", label: f.intl.string(f.t["Yl/Riu"]), action: () => (0, o.A)(u.C) }),
+                (0, r.jsx)(s.Drp, { id: "support", label: f.intl.string(f.t["Yl/Riu"]), action: () => (0, o.A)(c.C) }),
             ],
         }),
     });
 }
-function g() {
+function _() {
     let e = i.useRef(null);
     return (0, r.jsxs)("div", {
         children: [
             (0, r.jsx)(d.A, {}),
             (0, r.jsxs)("div", {
-                className: h.yJ,
+                className: m.yJ,
                 children: [
-                    (0, r.jsx)(l.MzZ, {
-                        href: m.X7G.PRIVACY,
-                        children: (0, r.jsx)(l.Text, {
+                    (0, r.jsx)(s.MzZ, {
+                        href: h.X7G.PRIVACY,
+                        children: (0, r.jsx)(s.Text, {
                             tag: "span",
                             variant: "text-xxs/normal",
                             color: "currentColor",
                             children: f.intl.string(f.t["Knf/f/"]),
                         }),
                     }),
-                    (0, r.jsx)("span", { className: h.xE, "aria-hidden": "true", children: "•" }),
-                    (0, r.jsx)(l.MzZ, {
-                        href: m.X7G.TERMS,
-                        children: (0, r.jsx)(l.Text, {
+                    (0, r.jsx)("span", { className: m.xE, "aria-hidden": "true", children: "•" }),
+                    (0, r.jsx)(s.MzZ, {
+                        href: h.X7G.TERMS,
+                        children: (0, r.jsx)(s.Text, {
                             tag: "span",
                             variant: "text-xxs/normal",
                             color: "currentColor",
                             children: f.intl.string(f.t.uFSTGq),
                         }),
                     }),
-                    (0, r.jsx)("span", { className: h.xE, "aria-hidden": "true", children: "•" }),
-                    (0, r.jsx)(l.YNO, {
+                    (0, r.jsx)("span", { className: m.xE, "aria-hidden": "true", children: "•" }),
+                    (0, r.jsx)(s.YNO, {
                         targetElementRef: e,
                         position: "top",
                         align: "center",
                         spacing: 0,
-                        animation: l.YNO.Animation.NONE,
+                        animation: s.YNO.Animation.NONE,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
                             return (0, r.jsx)(p, { onClose: t });
                         },
                         children: (t, n) =>
-                            (0, r.jsx)(l.MzZ, {
+                            (0, r.jsx)(s.MzZ, {
                                 ...t,
                                 ref: e,
                                 useDefaultUnderlineStyles: !1,
-                                className: s()(h.Mj, { [h.vu]: n.isShown }),
-                                children: (0, r.jsx)(l.Text, {
+                                className: a()(m.Mj, { [m.vu]: n.isShown }),
+                                children: (0, r.jsx)(s.Text, {
                                     tag: "span",
                                     variant: "text-xxs/normal",
                                     color: "currentColor",
