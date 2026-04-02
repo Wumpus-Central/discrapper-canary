@@ -34,7 +34,7 @@ var n = a(627968),
     k = a(435220),
     G = a(652215),
     M = a(985018),
-    U = a(265535);
+    U = a(947736);
 function w(e) {
     let { applicationId: t, hideDetailHeaderButtons: a, onClickBack: l } = e,
         r = (0, o.bG)([v.A], () => v.A.getApplication(t)),
@@ -142,24 +142,25 @@ let V = function () {
             onTabsAvailableWidthChange: ed,
             onCollapsedSearchBarClick: eu,
             onSearchBarBlur: em,
+            tabsClassName: eh,
         } = (0, u.p)({
             isSearchBarVisible: !0,
             isSearchBarEmpty: "" === el.trim(),
             searchBarState: ec,
             setSearchBarState: (e) => C.A.setState({ searchBarState: e }),
         }),
-        eh = i.useCallback(
+        ep = i.useCallback(
             (e) => {
                 Q(e), ei && er(), l();
             },
             [ei, er, Q, l],
         ),
-        ep = i.useCallback((e) => (0, T.YR)({ applicationId: e }), []),
-        e_ = en || ei,
-        eg = i.useCallback(() => {
+        e_ = i.useCallback((e) => (0, T.YR)({ applicationId: e }), []),
+        eg = en || ei,
+        ex = i.useCallback(() => {
             null != (0, y.Bn)() ? (0, g.aX)() : (0, T.eM)();
         }, []),
-        ex = i.useMemo(
+        eA = i.useMemo(
             () =>
                 (0, r.debounce)((e) => {
                     let { scrollTop: t, offsetHeight: a, scrollHeight: n, location: i } = e;
@@ -171,17 +172,17 @@ let V = function () {
                 }, 200),
             [],
         ),
-        eA = i.useCallback(
+        ef = i.useCallback(
             (e, a) => {
                 t(e),
-                    ex({
+                    eA({
                         scrollTop: e.currentTarget.scrollTop,
                         offsetHeight: e.currentTarget.offsetHeight,
                         scrollHeight: e.currentTarget.scrollHeight,
                         location: a,
                     });
             },
-            [ex, t],
+            [eA, t],
         );
     return (0, n.jsxs)("div", {
         className: s()(U.nw, { [U.Yz]: e }),
@@ -191,15 +192,15 @@ let V = function () {
                 className: U.WH,
                 children: [
                     (0, n.jsxs)(m.Ay, {
-                        variant: e_ ? m.Z5.RELATIVE : m.Z5.OVERLAY,
+                        variant: eg ? m.Z5.RELATIVE : m.Z5.OVERLAY,
                         children: [
-                            !e_ && (0, n.jsx)(m.ns, { scrollPosition: a }),
+                            !eg && (0, n.jsx)(m.ns, { scrollPosition: a }),
                             en
-                                ? (0, n.jsx)(w, { applicationId: B, hideDetailHeaderButtons: J, onClickBack: eg })
+                                ? (0, n.jsx)(w, { applicationId: B, hideDetailHeaderButtons: J, onClickBack: ex })
                                 : (0, n.jsxs)(n.Fragment, {
                                       children: [
                                           ei
-                                              ? (0, n.jsx)(m.XQ, { icon: c.Zge, onClick: eg })
+                                              ? (0, n.jsx)(m.XQ, { icon: c.Zge, onClick: ex })
                                               : (0, n.jsx)(m.T4, { icon: c.k9F }),
                                           ei
                                               ? (0, n.jsx)(c.Heading, {
@@ -214,9 +215,10 @@ let V = function () {
                                                               }),
                                                 })
                                               : (0, n.jsx)(h.A, {
+                                                    className: eh,
                                                     tabs: Z,
                                                     selectedTab: $,
-                                                    onTabSelect: eh,
+                                                    onTabSelect: ep,
                                                     onAvailableWidthChange: ed,
                                                 }),
                                           (0, n.jsx)(p.A, {
@@ -235,20 +237,20 @@ let V = function () {
                     }),
                     en
                         ? (0, n.jsx)(P.A, {
-                              onScroll: (e) => eA(e, y.ev.APPLICATION),
-                              onSelectApplication: ep,
+                              onScroll: (e) => ef(e, y.ev.APPLICATION),
+                              onSelectApplication: e_,
                               applicationId: B,
                               initialTab: F,
                               onButtonsVisibilityChange: q,
                           })
                         : ei
-                          ? (0, n.jsx)(O.A, { onSelectApplication: ep, onScroll: (e) => eA(e, y.ev.SEARCH) })
+                          ? (0, n.jsx)(O.A, { onSelectApplication: e_, onScroll: (e) => ef(e, y.ev.SEARCH) })
                           : $ === k.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID.toString()
-                            ? (0, n.jsx)(D.A, { onScroll: (e) => eA(e, y.ev.HOME), onSelectApplication: ep })
+                            ? (0, n.jsx)(D.A, { onScroll: (e) => ef(e, y.ev.HOME), onSelectApplication: e_ })
                             : (0, n.jsx)(R.A, {
                                   tabId: Number($),
-                                  onScroll: (e) => eA(e, y.ev.CATEGORY),
-                                  onSelectApplication: ep,
+                                  onScroll: (e) => ef(e, y.ev.CATEGORY),
+                                  onSelectApplication: e_,
                               }),
                 ],
             }),
