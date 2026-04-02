@@ -2,18 +2,18 @@
 n.d(t, { E: () => h, QuestRewardModalUnverified: () => p });
 var r = n(627968),
     i = n(64700),
-    a = n(158954),
-    s = n(311907),
+    s = n(158954),
+    a = n(311907),
     o = n(397927),
     l = n(830215),
     u = n(287809),
     c = n(710969),
     d = n(985018),
-    _ = n(603702),
-    f = n(222872);
+    _ = n(366927),
+    f = n(37229);
 function p(e) {
     let { transitionState: t, onClose: n } = e,
-        p = (0, s.bG)([u.default], () => u.default.getCurrentUser()?.email),
+        p = (0, a.bG)([u.default], () => u.default.getCurrentUser()?.email),
         [h, m] = i.useState({ status: "unknown" });
     i.useEffect(() => {
         m({ status: "loading" }),
@@ -24,18 +24,18 @@ function p(e) {
                 },
             );
     }, []);
-    let g =
+    let E =
         "error" === h.status
             ? d.intl.string(d.t.vjying)
             : "success" === h.status
               ? d.intl.format(d.t.qP5xYc, { emailAddress: p, emailAddressLink: `mailto:${p}` })
               : void 0;
-    return (0, r.jsxs)(a.ExpressiveModal, {
+    return (0, r.jsxs)(s.ExpressiveModal, {
         transitionState: t,
         onClose: n,
         graphic: "loading" === h.status ? void 0 : { type: "image", src: f },
         title: "loading" === h.status ? void 0 : d.intl.string(d.t.c8eASM),
-        subtitle: g,
+        subtitle: E,
         actions:
             "loading" === h.status ? void 0 : [{ variant: "secondary", text: d.intl.string(d.t.cpT0Cq), onClick: n }],
         children: [

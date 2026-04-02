@@ -4,7 +4,7 @@ n(64700);
 var r = n(397927),
     i = n(985018),
     s = n(128393),
-    l = n(222872);
+    l = n(37229);
 function o(t) {
     let { email: e, onClose: n, transitionState: o } = t;
     return (0, a.jsx)(r.kpP, {

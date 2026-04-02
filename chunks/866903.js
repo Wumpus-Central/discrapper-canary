@@ -1,8 +1,8 @@
 "use strict";
 n.d(t, { A: () => o });
 var r = n(780964),
-    i = n(840065),
-    s = n(857266);
+    i = n(858897),
+    s = n(436620);
 function a(e) {
     switch (e) {
         case s.J.MY_GAMES:
