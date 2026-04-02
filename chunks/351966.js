@@ -8,14 +8,14 @@ var r = n(627968),
     l = n(311907),
     u = n(775602),
     c = n(218394),
-    d = n(940622);
+    d = n(219220),
+    _ = n(940622);
 n(881106);
-var _ = n(649802),
-    f = n(90368),
-    p = n(496867),
-    h = n(679606),
-    m = n(672311),
-    E = n(616200),
+var f = n(649802),
+    p = n(90368),
+    h = n(496867),
+    m = n(679606),
+    E = n(672311),
     g = n(182787);
 let A = (e) => {
         let {
@@ -26,22 +26,22 @@ let A = (e) => {
                 useOpacityOnHover: u = !0,
                 autoPlay: c = !0,
                 restartMethod: d,
-                profileEffectConfig: p,
-                delayIntro: E = !0,
+                profileEffectConfig: _,
+                delayIntro: h = !0,
                 layerData: A,
             } = e,
             I = i.useRef(null),
             [T, S] = i.useState([]),
             [y, v] = i.useState(0),
             [N, C] = i.useState(0),
-            { accessibilityLabel: R } = p,
-            O = E ? 500 : 0.1,
+            { accessibilityLabel: R } = _,
+            O = h ? 500 : 0.1,
             [b, D] = i.useState(-O),
             {
                 stop: L,
                 reset: w,
                 ticking: M,
-            } = (0, f.A)((e) => {
+            } = (0, p.A)((e) => {
                 D((t) => t + e);
             }),
             x = i.useRef(O);
@@ -49,8 +49,8 @@ let A = (e) => {
             x.current = O;
         }),
             i.useEffect(() => {
-                D(-x.current), S((0, h.u)(p.effects));
-            }, [p]),
+                D(-x.current), S((0, m.u)(_.effects));
+            }, [_]),
             i.useEffect(() => {
                 let e = 0,
                     t = 1 / 0;
@@ -70,8 +70,8 @@ let A = (e) => {
                         l &&
                         !M.current &&
                         (w(),
-                        p.animationType === o.l.ANIMATION_TYPE_PERSISTENT ? D(d === _.H.FromStart ? 0 : y) : D(0));
-            }, [l, P, y, s, L, w, M, p.animationType, c, d]),
+                        _.animationType === o.l.ANIMATION_TYPE_PERSISTENT ? D(d === f.H.FromStart ? 0 : y) : D(0));
+            }, [l, P, y, s, L, w, M, _.animationType, c, d]),
             (0, r.jsx)("div", {
                 ref: I,
                 className: a()(g.yC, { [g.yo]: l && u }),
@@ -82,12 +82,12 @@ let A = (e) => {
                     children: T.map((e, i) => {
                         if (
                             !M.current &&
-                            p.animationType === o.l.ANIMATION_TYPE_PERSISTENT &&
-                            null != p.staticFrameSrc &&
+                            _.animationType === o.l.ANIMATION_TYPE_PERSISTENT &&
+                            null != _.staticFrameSrc &&
                             0 === i &&
                             !0 === c
                         ) {
-                            let { staticFrameSrc: n } = p;
+                            let { staticFrameSrc: n } = _;
                             return (0, r.jsx)(
                                 "img",
                                 {
@@ -101,10 +101,10 @@ let A = (e) => {
                             );
                         }
                         return (0, r.jsx)(
-                            m.A,
+                            E.A,
                             {
                                 layerConfig: e,
-                                animationType: p.animationType,
+                                animationType: _.animationType,
                                 ticking: M.current,
                                 time: b,
                                 hasPlayedThrough: P,
@@ -143,31 +143,31 @@ let A = (e) => {
     T = (e) => {
         let t = (0, c.j)(),
             n = (0, l.bG)([u.A], () => u.A.useReducedMotion),
-            i = (0, p.V)(e.skuId),
-            s = (0, d.C)(i?.config),
-            a = (0, h.b)(i?.config),
-            _ = s ?? a,
-            { autoPlay: f = !0, isHovering: m } = e,
+            i = (0, h.V)(e.skuId),
+            s = (0, _.C)(i?.config),
+            a = (0, m.b)(i?.config),
+            f = s ?? a,
+            { autoPlay: p = !0, isHovering: E } = e,
             g = !!(
                 (!t && e.shopPreview) ||
                 (!t && i?.config.animationType === o.l.ANIMATION_TYPE_PERSISTENT) ||
                 n ||
-                (!1 === f && !1 === m)
+                (!1 === p && !1 === E)
             ),
-            { loaded: T, layerData: S } = (0, E.A)(i, !1 === g);
+            { loaded: T, layerData: S } = (0, d.A)({ skuId: i?.skuId, layers: i?.config.effects, playing: !1 === g });
         return null != i &&
-            null != _ &&
+            null != f &&
             (t || e.shopPreview || i.config.animationType !== o.l.ANIMATION_TYPE_INTERMITTENT)
             ? g
                 ? (0, r.jsx)(I, {
                       useThumbnail: e.useThumbnail,
-                      config: _,
+                      config: f,
                       bannerAdjustment: e.bannerAdjustment,
                       isHovering: e.isHovering,
                       useOpacityOnHover: e.useOpacityOnHover,
                   })
                 : T
-                  ? (0, r.jsx)(A, { profileEffectConfig: _, layerData: S, ...e })
+                  ? (0, r.jsx)(A, { profileEffectConfig: f, layerData: S, ...e })
                   : null
             : null;
     };
