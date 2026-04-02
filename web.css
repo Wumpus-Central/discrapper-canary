@@ -35439,6 +35439,10 @@ html:not(.chat-input) .inputInner_b1f01d {
     width: 100%
 }
 
+.full-motion .profileFrameLayer__7d80f {
+    animation: fadeIn__7d80f .15s ease-in
+}
+
 .profileFrameLayer__7d80f>img {
     width: 100%
 }
@@ -35508,6 +35512,16 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .profileFrameLayer__7d80f.rail__7d80f.bottom__7d80f {
     bottom: -60px
+}
+
+@keyframes fadeIn__7d80f {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 .toastContainer_a35754 {
