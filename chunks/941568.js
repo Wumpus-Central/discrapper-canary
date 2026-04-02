@@ -13,13 +13,13 @@ var a = n(627968),
     h = n(890060),
     g = n(409626),
     f = n(21091),
-    p = n(385064),
-    _ = n(305080),
+    _ = n(385064),
+    p = n(305080),
     v = n(954506),
     A = n(652215),
     j = n(985018),
-    E = n(576404),
-    C = n(830684);
+    E = n(95225),
+    C = n(782691);
 function I(e, t) {
     return m.A.parse(e, !0, { allowHeading: !0, allowList: !0, allowLinks: !0, channelId: t });
 }
@@ -28,7 +28,7 @@ function b(e) {
         [u, m] = l.useState(!1),
         g = "main" === t,
         f = l.useCallback(() => m(!0), []),
-        p = l.useCallback(
+        _ = l.useCallback(
             (e) => {
                 if (
                     !(
@@ -40,12 +40,12 @@ function b(e) {
             },
             [d, n.id],
         ),
-        _ = n.media?.width != null && n.media?.height != null ? n.media.width / n.media.height : 16 / 9,
+        p = n.media?.width != null && n.media?.height != null ? n.media.width / n.media.height : 16 / 9,
         v = n.media?.proxyUrl ?? n.media?.url,
         b = (null != v ? (0, h.V)(v) : null) ?? v;
     return (0, a.jsxs)(o.DUT, {
         className: g ? E.cG : E.IU,
-        onClick: p,
+        onClick: _,
         children: [
             null != n.media &&
                 null != b &&
@@ -53,7 +53,7 @@ function b(e) {
                     className: g ? E._v : E.eZ,
                     children: (0, a.jsx)(c.y, {
                         readyState: u ? A.Rv1.READY : A.Rv1.LOADING,
-                        aspectRatio: _,
+                        aspectRatio: p,
                         placeholder: n.media.placeholder,
                         placeholderVersion: n.media.placeholderVersion,
                         placeholderStyle: { width: "100%", height: "100%", objectFit: "cover" },
@@ -110,14 +110,14 @@ function b(e) {
 function N(e) {
     let { gameId: t, trackAction: n } = e,
         { analyticsLocations: i } = (0, d.Ay)(),
-        { officialInvite: r, closeModal: s } = (0, _.c)(),
+        { officialInvite: r, closeModal: s } = (0, p.c)(),
         { messages: c, guildId: o, channelId: m } = (0, f.A)(t),
         x = l.useCallback(() => {
             let e = r?.guild?.id ?? o;
             null != e &&
                 (n(g.Ws.Announcements),
                 s(),
-                (0, p.A)({ invite: r, guildId: e, channelId: m, analyticsLocationStack: i }));
+                (0, _.A)({ invite: r, guildId: e, channelId: m, analyticsLocationStack: i }));
         }, [n, s, r, o, m, i]),
         h = l.useCallback(
             (e) => {
@@ -125,7 +125,7 @@ function N(e) {
                 null != t &&
                     (n(g.Ws.AnnouncementsItem),
                     s(),
-                    (0, p.A)({ invite: r, guildId: t, channelId: m, messageId: e, analyticsLocationStack: i }));
+                    (0, _.A)({ invite: r, guildId: t, channelId: m, messageId: e, analyticsLocationStack: i }));
             },
             [n, s, r, o, m, i],
         );

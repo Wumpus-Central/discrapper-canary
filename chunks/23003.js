@@ -16,7 +16,7 @@ var a,
     b = r(462463),
     g = r(780964),
     x = r(358776),
-    C = r(840065),
+    C = r(858897),
     A = r(676279),
     R = r(975571),
     v = r(852218),
@@ -26,12 +26,12 @@ var a,
     y = r(88001),
     I = r(652215),
     P = r(355097),
-    S = r(284498),
-    T = r(518582),
-    w = r(723468),
+    S = r(653624),
+    T = r(519412),
+    w = r(49370),
     O = r(985018),
-    D = r(674547),
-    M = r(241015),
+    D = r(520650),
+    M = r(927961),
     U = r(817577),
     L = r(861223),
     B = r(748222),
@@ -190,7 +190,7 @@ let e_ = () => {
                 onClick: () => {
                     {
                         let t = (0, x.Ci)("openClientThemes"),
-                            { openUserSettings: a } = r(840065);
+                            { openUserSettings: a } = r(858897);
                         a(t ? g.X.DISPLAY_THEME_CATEGORY : g.X.APPEARANCE_PANEL, { analyticsLocations: e });
                     }
                 },

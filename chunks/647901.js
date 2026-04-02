@@ -3,7 +3,7 @@ var n = a(627968),
     i = a(64700),
     r = a(503698),
     l = a.n(r),
-    s = a(52403);
+    s = a(931220);
 let o = {
         SIZE: { default: void 0, reduced: s.k2 },
         COLOR: { default: void 0, muted: s.JF },

@@ -19,11 +19,11 @@ var i,
     C = n(674378),
     I = n(723702),
     E = n(541830),
-    v = n(715671),
-    b = n(598429),
+    b = n(715671),
+    v = n(598429),
     T = n(652215),
     S = n(985018),
-    y = n(54720),
+    y = n(162533),
     N =
         (((i = N || {}).PLAY = "play"),
         (i.NOW_PLAYING = "now_playing"),
@@ -104,11 +104,11 @@ class L extends r.Component {
     };
     handleInstall = () => {
         let { libraryApplication: e, source: t } = this.props;
-        v.installApplication(e.id, e.branchId, t);
+        b.installApplication(e.id, e.branchId, t);
     };
     handleUpdate = () => {
         let { libraryApplication: e } = this.props;
-        v.updateApplication(e.id, e.branchId);
+        b.updateApplication(e.id, e.branchId);
     };
     onClickHandlers = {
         add_to_library: this.handleAddToLibrary,
@@ -144,7 +144,7 @@ class L extends r.Component {
             analyticsListSort: o,
             analyticsListIndex: d,
         } = this.props;
-        return (0, a.jsx)(b.A, {
+        return (0, a.jsx)(v.A, {
             applicationId: e.id,
             libraryApplication: e,
             fullWidth: t,

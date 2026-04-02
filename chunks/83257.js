@@ -6,15 +6,15 @@ var i = n(627968),
     o = n(139286),
     a = n(726249),
     c = n(379848),
-    d = n(965304),
-    u = n(632678),
+    d = n(631254),
+    u = n(949302),
     h = n(203982),
     m = n(728458),
     p = n(820284),
     S = n(361739),
     E = n(652215),
     f = n(985018),
-    g = n(776471);
+    g = n(52130);
 let v = Object.freeze({ shouldPreventNavigation: !1, onPreventNavigation: null, sidebarOpen: !0 }),
     x = 1.4,
     A = 15,
@@ -109,7 +109,7 @@ class b extends s.PureComponent {
                 ariaLabel: o,
                 onClick: a,
                 variant: c,
-                icon: u,
+                icon: d,
                 className: h,
                 newIndicator: m,
                 newIndicatorDismissibleContentTypes: p,
@@ -120,12 +120,12 @@ class b extends s.PureComponent {
             ? (v = (0, i.jsx)(l.Text, { variant: "text-md/normal", color: "text-muted", children: e.decoration }))
             : null != n && p?.includes(n) && !t
               ? (v = m ?? (0, i.jsx)(l.LpS, { text: f.intl.string(f.t.y2b7CA) }))
-              : null != u
-                ? (v = u)
+              : null != d
+                ? (v = d)
                 : null != S && S > 0 && (v = (0, i.jsx)(l.hVq, { count: S }));
         let x =
             s === E.nc_.PREMIUM
-                ? (0, i.jsx)(d.A, { label: r, isSelected: t, decoration: v })
+                ? (0, i.jsx)(u.A, { label: r, isSelected: t, decoration: v })
                 : null == v
                   ? r
                   : (0, i.jsxs)("div", { className: g.l, children: [r, v] });
@@ -149,7 +149,7 @@ class b extends s.PureComponent {
                     orientation: "vertical",
                     "aria-label": n,
                     children: [
-                        s ? (0, i.jsx)("div", { className: g.O, children: (0, i.jsx)(u.A, {}) }) : null,
+                        s ? (0, i.jsx)("div", { className: g.O, children: (0, i.jsx)(d.A, {}) }) : null,
                         e.map((e, t) => {
                             if (null != e.tabPredicate && !e.tabPredicate()) return null;
                             switch (e.section) {

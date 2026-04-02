@@ -13,41 +13,41 @@ var a = l(627968),
     h = l(976860),
     x = l(309954),
     b = l(287809),
-    f = l(975571),
-    y = l(474090),
+    y = l(975571),
+    f = l(474090),
     g = l(94264),
     v = l(235365),
     E = l(566119),
     _ = l(788868),
     C = l(652215),
-    j = l(901123),
-    S = l(723468),
+    S = l(901123),
+    j = l(49370),
     T = l(985018),
-    A = l(577656),
+    A = l(182393),
     P = l(268920),
     k = l(633217),
     I = l(909340);
 let R = () =>
     (0, a.jsx)("div", { className: A.s, children: (0, a.jsx)(p.A, { src: k.A, fallbackImage: P.A, className: A.Cb }) });
 function N() {
-    (0, E.RQ)(), (0, h.pX)(`${j.BV.NITRO_HOME}?section=${v.L}`);
+    (0, E.RQ)(), (0, h.pX)(`${S.BV.NITRO_HOME}?section=${v.L}`);
 }
 function D() {
-    (0, E.gP)(), (0, h.pX)(`${j.BV.NITRO_HOME}?section=${v.L}`);
+    (0, E.gP)(), (0, h.pX)(`${S.BV.NITRO_HOME}?section=${v.L}`);
 }
 function M() {
-    (0, E.b)(), window.open(f.A.getArticleURL(C.MVz.ORBS_FAQ), "_blank");
+    (0, E.b)(), window.open(y.A.getArticleURL(C.MVz.ORBS_FAQ), "_blank");
 }
 function O(e) {
-    let { targetElementRef: t, shouldShow: l, onRequestClose: r, ctaText: h, ctaOnClick: f } = e,
+    let { targetElementRef: t, shouldShow: l, onRequestClose: r, ctaText: h, ctaOnClick: y } = e,
         { passesGeneralUIInvariant: v, programReward: E } = (0, m.F)({
             location: "PremiumTenureRewardsOrbsBalancePopover",
         }),
-        j = (0, s.bG)([b.default], () => b.default.getCurrentUser()),
+        S = (0, s.bG)([b.default], () => b.default.getCurrentUser()),
         { balance: P } = (0, x.W)(),
-        k = !(0, y.ki)(j),
+        k = !(0, f.ki)(S),
         O = n.useMemo(() => {
-            let e = (0, y.YE)(j, _.PremiumTypes.TIER_2);
+            let e = (0, f.YE)(S, _.PremiumTypes.TIER_2);
             if (!v || k) return null;
             if (e && null != E) {
                 let e = (0, o.default)(new Date(E.next_reward_date), new Date());
@@ -56,7 +56,7 @@ function O(e) {
                         (0, a.jsx)(c.EYj, {
                             variant: "text-xs/normal",
                             color: "text-default",
-                            children: T.intl.format(S.default["AvL/At"], {
+                            children: T.intl.format(j.default["AvL/At"], {
                                 days: Math.max(1, e),
                                 deepLinkToNitroOrbs: N,
                             }),
@@ -66,7 +66,7 @@ function O(e) {
                 });
             }
             return null;
-        }, [j, k, E, v]),
+        }, [S, k, E, v]),
         L = (P ?? 0) >= 4100;
     return (0, a.jsx)(u.x, {
         targetElementRef: t,
@@ -106,7 +106,7 @@ function O(e) {
                                                             (0, a.jsx)(c.EYj, {
                                                                 variant: "text-xs/normal",
                                                                 color: "text-muted",
-                                                                children: T.intl.string(S.default.KclK9z),
+                                                                children: T.intl.string(j.default.KclK9z),
                                                             }),
                                                         ],
                                                     }),
@@ -117,7 +117,7 @@ function O(e) {
                                             text: h,
                                             variant: "primary",
                                             size: "sm",
-                                            onClick: f,
+                                            onClick: y,
                                             fullWidth: !0,
                                         }),
                                         (0, a.jsx)(c.EYj, {
@@ -125,8 +125,8 @@ function O(e) {
                                             color: k ? "text-default" : "text-muted",
                                             className: A.CU,
                                             children: k
-                                                ? T.intl.format(S.default.juvXqj, { deepLinkToNitroOrbs: D })
-                                                : T.intl.format(S.default.fhAVek, { helpdeskArticle: M }),
+                                                ? T.intl.format(j.default.juvXqj, { deepLinkToNitroOrbs: D })
+                                                : T.intl.format(j.default.fhAVek, { helpdeskArticle: M }),
                                         }),
                                     ],
                                 }),

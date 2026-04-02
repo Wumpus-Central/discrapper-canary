@@ -1,8 +1,8 @@
-n.d(t, { A: () => ea });
+n.d(t, { A: () => el });
 var i = n(627968),
-    l = n(64700),
-    a = n(503698),
-    r = n.n(a),
+    a = n(64700),
+    l = n(503698),
+    r = n.n(l),
     s = n(837381),
     o = n(731738),
     d = n(311907),
@@ -27,7 +27,7 @@ var i = n(627968),
     y = n(210714),
     O = n(544028),
     L = n(780964),
-    R = n(840065),
+    R = n(858897),
     P = n(761640),
     D = n(734057),
     M = n(186111),
@@ -49,44 +49,44 @@ var i = n(627968),
     Q = n(652215),
     X = n(49999),
     Z = n(985018),
-    J = n(464726),
-    ee = n(513544);
+    J = n(2219),
+    ee = n(358943);
 function et() {
-    let e = l.useRef(null),
+    let e = a.useRef(null),
         t = (0, F.W)(),
         n = (0, Y.A)(),
-        a = (0, V.k)(),
+        l = (0, V.k)(),
         d = (0, G.w)(),
-        c = l.useCallback(() => {
+        c = a.useCallback(() => {
             (0, A.showToast)((0, A.createToast)(Z.intl.string(Z.t["EDYbS+"]), A.ToastType.FAILURE));
         }, []),
         { rejectAll: u } = (0, B.t)({ onError: c }),
         h = (0, p.A)("message-requests-list"),
         { channelId: _ } = (0, H.N)(),
-        m = l.useCallback(() => {
+        m = a.useCallback(() => {
             u(n.map((e) => e.channel.id));
         }, [n, u]),
-        g = l.useCallback(
+        g = a.useCallback(
             (e) => {
                 let { row: t } = e,
-                    l = n[t],
+                    a = n[t],
                     s = n[t + 1]?.channel?.id,
-                    o = l.channel.id;
+                    o = a.channel.id;
                 return (0, i.jsx)(
                     q.A,
                     {
                         index: t,
                         className: r()({ [J.wH]: null != _ && _ === o, [J.wZ]: null != _ && _ === s }),
-                        channel: l.channel,
-                        user: l.user,
-                        hasSingleMessageRequest: a,
+                        channel: a.channel,
+                        user: a.user,
+                        hasSingleMessageRequest: l,
                     },
                     o,
                 );
             },
-            [a, n, _],
+            [l, n, _],
         ),
-        E = l.useCallback(
+        E = a.useCallback(
             () =>
                 (0, i.jsxs)(
                     I.A,
@@ -125,15 +125,15 @@ function et() {
               navigator: h,
               children: (0, i.jsx)(s.PR, {
                   children: (t) => {
-                      let { ref: l, role: a, ...r } = t;
+                      let { ref: a, role: l, ...r } = t;
                       return (0, i.jsx)(
                           A.B8B,
                           {
                               className: J.p_,
-                              innerRole: a,
+                              innerRole: l,
                               innerAriaLabel: Z.intl.string(Z.t.e7GWjQ),
                               ref: (t) => {
-                                  (e.current = t), (l.current = t?.getScrollerNode() ?? null);
+                                  (e.current = t), (a.current = t?.getScrollerNode() ?? null);
                               },
                               paddingTop: 24,
                               paddingBottom: 24,
@@ -154,20 +154,20 @@ function et() {
 }
 function en(e) {
     let { pageWidth: t, onSidebarResize: n } = e,
-        l = (0, d.bG)([P.Ay], () => P.Ay.getSidebarState(P.fe)),
-        a = (0, d.bG)([D.A], () => D.A.getChannel(l?.channelId));
-    if (null == l || l.type !== b.PE.VIEW_MESSAGE_REQUEST || null == a || !a.isPrivate()) return null;
+        a = (0, d.bG)([P.Ay], () => P.Ay.getSidebarState(P.fe)),
+        l = (0, d.bG)([D.A], () => D.A.getChannel(a?.channelId));
+    if (null == a || a.type !== b.PE.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
     let r = t - Q.ItT;
     return (0, i.jsx)(g.A, {
         sidebarType: g.X.MessageRequestSidebar,
         maxWidth: r,
         onWidthChange: n,
-        children: (0, i.jsx)(E.A, { channel: a, baseChannelId: P.fe }),
+        children: (0, i.jsx)(E.A, { channel: l, baseChannelId: P.fe }),
     });
 }
 let ei = (e) => {
     let t = (0, k.A)();
-    return (l.useEffect(() => {
+    return (a.useEffect(() => {
         (0, C.Vh)(c.M.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
     }, []),
     null == e.targetElementRef.current || M.A.hasLayers() || (0, A.ueM)())
@@ -175,15 +175,15 @@ let ei = (e) => {
         : (0, i.jsx)(T.Ay, {
               contentTypes: [c.M.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
               children: (n) => {
-                  let { visibleContent: l, markAsDismissed: a } = n,
+                  let { visibleContent: a, markAsDismissed: l } = n,
                       r = {
                           position: "bottom",
                           caretConfig: { position: "top", align: "center" },
                           shouldShow: !0,
-                          onRequestClose: () => a(X.i.USER_DISMISS),
+                          onRequestClose: () => l(X.i.USER_DISMISS),
                           targetElementRef: e.targetElementRef,
                       };
-                  return l === c.M.MESSAGE_REQUEST_SETTINGS_COACH_MARK
+                  return a === c.M.MESSAGE_REQUEST_SETTINGS_COACH_MARK
                       ? (0, i.jsxs)(i.Fragment, {
                             children: [
                                 e.children,
@@ -193,7 +193,7 @@ let ei = (e) => {
                                           title: Z.intl.string(Z.t.hRT8tc),
                                           body: Z.intl.string(Z.t.apPgJG),
                                           actions: [
-                                              { text: Z.intl.string(Z.t.LNoAQW), onClick: () => a(X.i.TAKE_ACTION) },
+                                              { text: Z.intl.string(Z.t.LNoAQW), onClick: () => l(X.i.TAKE_ACTION) },
                                           ],
                                       })
                                     : (0, i.jsx)(u.AM, {
@@ -209,12 +209,12 @@ let ei = (e) => {
                                                               L.X
                                                                   .CONTENT_AND_SOCIAL_PERMISSIONS_MESSAGE_REQUESTS_SETTING,
                                                           ),
-                                                          a(X.i.TAKE_ACTION);
+                                                          l(X.i.TAKE_ACTION);
                                                   },
                                               },
                                               {
                                                   text: Z.intl.string(Z.t.LNoAQW),
-                                                  onClick: () => a(X.i.USER_DISMISS),
+                                                  onClick: () => l(X.i.USER_DISMISS),
                                                   variant: "secondary",
                                               },
                                           ],
@@ -225,11 +225,11 @@ let ei = (e) => {
               },
           });
 };
-function el(e) {
+function ea(e) {
     let { section: t } = e;
     return t === $.zz.SPAM ? (0, i.jsx)(z.A, {}) : (0, i.jsx)(et, {});
 }
-let ea = (0, _.A)(function (e) {
+let el = (0, _.A)(function (e) {
     let { width: t } = e,
         n = (0, F.W)();
     (0, m.Ay)(() => {
@@ -238,9 +238,9 @@ let ea = (0, _.A)(function (e) {
             j.default.track(Q.HAw.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }),
             S.A.increment({ name: o.K.MESSAGE_REQUEST_VIEW });
     });
-    let a = (0, d.bG)([O.A], () => O.A.theme),
+    let l = (0, d.bG)([O.A], () => O.A.theme),
         s = (0, W.I)(),
-        [c, u] = l.useState(!1),
+        [c, u] = a.useState(!1),
         _ = (0, d.bG)([P.Ay], () => {
             let e = P.Ay.getSidebarState(P.fe);
             return null != e && e.type === b.PE.VIEW_MESSAGE_REQUEST ? e : null;
@@ -249,11 +249,11 @@ let ea = (0, _.A)(function (e) {
         g = null != _,
         E = (0, U.c)(p),
         I = (0, w.A)(p),
-        C = l.useRef(null);
-    l.useEffect(() => {
+        C = a.useRef(null);
+    a.useEffect(() => {
         null != p && !E && I && g && ((0, x.iN)(p), v.A.closeChannelSidebar(P.fe));
     }, [p, I, g, E]);
-    let [T, L] = l.useState($.zz.REQUESTS),
+    let [T, L] = a.useState($.zz.REQUESTS),
         R = (e) => {
             L(e);
         };
@@ -265,7 +265,7 @@ let ea = (0, _.A)(function (e) {
                     className: r()(ee.TE, J.kL, { [ee.js]: g, [ee.jl]: g && c }),
                     children: [
                         (0, i.jsx)(A.NPJ, {
-                            theme: a,
+                            theme: l,
                             children: (e) =>
                                 (0, i.jsxs)(N.A, {
                                     className: e,
@@ -304,7 +304,7 @@ let ea = (0, _.A)(function (e) {
                                     ],
                                 }),
                         }),
-                        (0, i.jsx)("div", { className: ee.Qs, children: (0, i.jsx)(el, { section: T }) }),
+                        (0, i.jsx)("div", { className: ee.Qs, children: (0, i.jsx)(ea, { section: T }) }),
                     ],
                 }),
                 g &&

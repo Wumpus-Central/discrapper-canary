@@ -19,8 +19,8 @@ var i = n(627968),
     C = n(13403),
     I = n(536189),
     E = n(652215),
-    v = n(272984),
-    b = n(71747);
+    b = n(272984),
+    v = n(772234);
 function T(e) {
     let { partyMembers: t, partySize: n, maxPartySize: a, guildId: r, activityActionType: s } = e,
         o = Math.max(n, t.length),
@@ -29,7 +29,7 @@ function T(e) {
     for (; c.length < n && c.length < 8; ) c.push(f.mt);
     for (; c.length < a && c.length < 8; ) c.push(null);
     return (0, i.jsxs)("div", {
-        className: b.UF,
+        className: v.UF,
         children: [
             c.length > 0 &&
                 (0, i.jsx)(f.Ay, {
@@ -44,7 +44,7 @@ function T(e) {
     });
 }
 function S(e) {
-    let { analyticsLocations: t, app: n, channel: l, message: g, hideParty: b, onView: S } = e,
+    let { analyticsLocations: t, app: n, channel: l, message: g, hideParty: v, onView: S } = e,
         y = (0, s.b)(n),
         N = (0, r.bG)([c.default], () => c.default.getId()),
         j = (0, r.bG)([m.A], () => {
@@ -83,11 +83,11 @@ function S(e) {
                 }),
             [D, P, w, l.guild_id, g.activity?.type],
         );
-    return (0, v.pH)(j?.party?.id) || y.id === d.HT.id
+    return (0, b.pH)(j?.party?.id) || y.id === d.HT.id
         ? (0, i.jsx)(I.A, {
               application: y,
               currentUserPresenceActivity: L,
-              hideParty: b,
+              hideParty: v,
               message: g,
               onView: S,
               partyStatusElement: M,
@@ -102,7 +102,7 @@ function S(e) {
                 channel: l,
                 currentUserId: N,
                 currentUserPresenceActivity: L,
-                hideParty: b,
+                hideParty: v,
                 message: g,
                 onView: S,
                 partyStatusElement: M,

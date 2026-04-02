@@ -1,3 +1,71 @@
-e.exports = JSON.parse(
-    '{"iK1QsY":["Adaugă canalul la favorite"],"w1MU8Y":["Adaugă utilizatorul la favoriți"],"xB/0Z9":["Caută \xeen canalele de text și DM-uri"],"d3yO98":["Activitate recentă"],"uC6Lhg":["Canale de text recente"],"HGimIS":["Rezultatele căutării"],"GKTlS6":["Favorite"],"trKJoT":["\xcen joc"],"OV3KfO":["Caută canale de voce"],"eiie2x":["Activitate acum"],"OskevP":["Favorite"],"C+ojiQ":["Prieteni \xeen canale de voce"],"DUIbKP":["Rezultatele căutării"],"9ME4wE":["Sugestii canale de voce"],"4l56iz":["Intră și tu pe ",[8,"channelIcon",[]]," ",[1,"channelName"]],"VMcw8s":["Dă clic aici sau ",[8,"keybindHook",[[1,"keybind"]]]," pentru a deschide chatul"],"PBVXVW":["Shift + clic pentru a \xeenchide toate chaturile"],"ERApc4":["\xcenchide chatul din overlay"],"x1k3cO":["joacă acum ",[1,"gameName"]],"uhJexs":["Discuții"],"xpv/t5":["Selectează un chat pentru a \xeencepe să trimiți mesaje."],"tYPfF2":["Minimizează textul din voce"],"KWrMk5":["Deschide chatul din overlay"],"2yFtJ1":["Chaturi recente din overlay"],"dvUElD":["Scoate canalul de la favorite"],"Xr8XHk":["Scoate utilizatorul de la favoriți"]}',
-);
+n.d(t, { A: () => C });
+var i = n(627968),
+    a = n(64700),
+    l = n(503698),
+    r = n.n(l),
+    s = n(311907),
+    o = n(397927),
+    d = n(765671),
+    c = n(4616),
+    u = n(743674),
+    A = n(426660),
+    h = n(71393),
+    _ = n(486020),
+    m = n(998304),
+    p = n(817818),
+    g = n(967305),
+    E = n(985018),
+    I = n(336693),
+    f = n(418195);
+function C(e) {
+    let { guildId: t, channelId: n } = e,
+        { ref: l, width: C, height: T } = (0, d.Ay)(),
+        N = a.useCallback(() => {
+            null != t && null != n && ((0, p.sy)(t), (0, g.default)({ guildId: t, returnChannelId: n }));
+        }, [t, n]),
+        S = (0, s.bG)([h.A], () => h.A.getGuild(t)),
+        x = a.useMemo(() => (null == S ? null : _.Ay.getGuildSplashURL({ id: S.id, splash: S.splash })), [S]),
+        v = (0, u.S)(x);
+    return (0, i.jsxs)("div", {
+        className: r()(I.kf, f.iW, { [f.Me]: null == x }),
+        ref: l,
+        children: [
+            null != x
+                ? (0, i.jsx)(c.A, { className: f.xX, src: x, width: C, height: T, imageClassName: f.Iv })
+                : (0, i.jsx)(A.A, {}),
+            null != v &&
+                null != x &&
+                (0, i.jsx)("div", {
+                    className: f.D7,
+                    style: { background: `linear-gradient(180deg, ${(0, m.cb)(v, 0.16)} 0%, ${(0, m.cb)(v, 1)} 100%)` },
+                }),
+            null != x && (0, i.jsx)("div", { className: f.D7 }),
+            (0, i.jsxs)("div", {
+                className: r()(I.Cj, I.Vw),
+                children: [
+                    (0, i.jsxs)("div", {
+                        className: I.wx,
+                        children: [
+                            (0, i.jsx)(o.Heading, {
+                                variant: "heading-xxl/normal",
+                                color: "always-white",
+                                children: E.intl.string(E.t.CCmhpF),
+                            }),
+                            (0, i.jsx)(o.Text, {
+                                variant: "text-lg/normal",
+                                color: "always-white",
+                                children: E.intl.string(E.t.gRAHcZ),
+                            }),
+                        ],
+                    }),
+                    (0, i.jsx)(o.Button, {
+                        variant: "overlay-primary",
+                        size: "md",
+                        text: E.intl.string(E.t.VVFjAC),
+                        onClick: N,
+                    }),
+                ],
+            }),
+        ],
+    });
+}

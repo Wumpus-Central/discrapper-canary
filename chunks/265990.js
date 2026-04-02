@@ -1,8 +1,8 @@
 n.d(t, { A: () => G }), n(321073);
 var i = n(627968),
-    l = n(64700),
-    a = n(735438),
-    r = n.n(a),
+    a = n(64700),
+    l = n(735438),
+    r = n.n(l),
     s = n(311907),
     o = n(397927),
     d = n(711950),
@@ -30,7 +30,7 @@ n(646363);
 var L = n(652215),
     R = n(788868),
     P = n(985018),
-    D = n(998838);
+    D = n(63461);
 let M = [];
 function j() {
     d.A.transitionToSection(L.m3P.ADD_FRIEND, { explicit: !0 });
@@ -43,69 +43,69 @@ function w() {
 }
 function U(e) {
     let { section: t, showSpamCta: n } = e,
-        a = l.useMemo(() => (n ? w : t !== L.m3P.PENDING ? j : void 0), [n, t]);
-    return (0, i.jsx)("div", { className: D.y7, children: (0, i.jsx)(S.A, { type: t, onClick: a }, t) });
+        l = a.useMemo(() => (n ? w : t !== L.m3P.PENDING ? j : void 0), [n, t]);
+    return (0, i.jsx)("div", { className: D.y7, children: (0, i.jsx)(S.A, { type: t, onClick: l }, t) });
 }
 let G = function (e) {
     let { titleId: t } = e,
         { analyticsLocations: n } = (0, h.Ay)(A.A.FRIENDS_LIST),
-        { rows: a, section: d } = (0, s.cf)([f.Ay], () => f.Ay.getState()),
+        { rows: l, section: d } = (0, s.cf)([f.Ay], () => f.Ay.getState()),
         j = (0, s.bG)([C.A], () => C.A.isFocused()),
         { relationshipCount: G, hasBlockedOrIgnored: k } = (0, s.cf)([I.A], () => ({
             relationshipCount: I.A.getRelationshipCount(),
             hasBlockedOrIgnored: I.A.getBlockedOrIgnoredIDs().length > 0,
         })),
         { enabled: V } = T.A.useConfig({ location: "PeopleList" }),
-        [B, H] = l.useState([]),
-        F = l.useCallback((e) => {
+        [B, H] = a.useState([]),
+        F = a.useCallback((e) => {
             let { enabled: t } = T.A.getConfig({ location: "Friend Request Accept" });
             t && H((t) => [...t, e]);
         }, []);
     d !== L.m3P.PENDING && B.length > 0 && H([]);
-    let [Y, W] = l.useState(() => {
+    let [Y, W] = a.useState(() => {
             let e = {};
             for (let t of Object.values(L.m3P)) e[t] = "";
             return e;
         }),
         K = (0, m.p)(A.A.FRIENDS_LIST),
-        [q, z] = l.useState(!1),
-        $ = l.useCallback(
+        [q, z] = a.useState(!1),
+        $ = a.useCallback(
             (e, t) => {
-                let { key: n, ...l } = e;
+                let { key: n, ...a } = e;
                 switch (d) {
                     case L.m3P.PENDING:
-                        return (0, i.jsx)(x.A, { ...l, isFocused: j, onAcceptFriendRequest: () => F(e) }, n);
+                        return (0, i.jsx)(x.A, { ...a, isFocused: j, onAcceptFriendRequest: () => F(e) }, n);
                     case L.m3P.SUGGESTIONS:
-                        return (0, i.jsx)(O.A, { ...l, isFocused: j }, n);
+                        return (0, i.jsx)(O.A, { ...a, isFocused: j }, n);
                     case L.m3P.ALL:
                         return (0, i.jsx)(
                             N.A,
-                            { ...l, isFocused: j, sectionIndex: t, hasFriendAnniversarySection: K },
+                            { ...a, isFocused: j, sectionIndex: t, hasFriendAnniversarySection: K },
                             `${t}-${n}`,
                         );
                     case L.m3P.ONLINE:
                     default:
-                        return (0, i.jsx)(N.A, { ...l, isFocused: j }, n);
+                        return (0, i.jsx)(N.A, { ...a, isFocused: j }, n);
                 }
             },
             [d, j, K, F],
         ),
-        Q = l.useCallback(
+        Q = a.useCallback(
             (e) => {
                 W({ ...Y, [d]: e });
             },
             [Y, d],
         ),
-        X = l.useCallback(() => {
+        X = a.useCallback(() => {
             W({ ...Y, [d]: "" });
         }, [Y, d]),
-        Z = l.useMemo(
+        Z = a.useMemo(
             () =>
-                d === L.m3P.PENDING && (a.filter(L.m3P.SPAM).length > 0 || a.filter(L.m3P.PENDING_IGNORED).length > 0),
-            [a, d],
+                d === L.m3P.PENDING && (l.filter(L.m3P.SPAM).length > 0 || l.filter(L.m3P.PENDING_IGNORED).length > 0),
+            [l, d],
         ),
-        J = l.useMemo(() => {
-            let e = a.filter(d, Y[d]);
+        J = a.useMemo(() => {
+            let e = l.filter(d, Y[d]);
             return (
                 V &&
                     d === L.m3P.PENDING &&
@@ -118,9 +118,9 @@ let G = function (e) {
                         .value()),
                 e
             );
-        }, [B, V, a, Y, d]),
+        }, [B, V, l, Y, d]),
         ee = d === L.m3P.PENDING,
-        et = l.useMemo(() => {
+        et = a.useMemo(() => {
             if (!ee) return M;
             let e = [];
             return (
@@ -132,14 +132,14 @@ let G = function (e) {
             );
         }, [ee, J]);
     (0, _.A)(et, ee);
-    let en = l.useMemo(
+    let en = a.useMemo(
             () =>
                 d === L.m3P.ALL && K && J.some((e) => e.giftIntentType === R.np.FRIEND_ANNIVERSARY)
                     ? J.filter((e) => e.giftIntentType === R.np.FRIEND_ANNIVERSARY).length
                     : 0,
             [J, d, K],
         ),
-        ei = l.useMemo(() => {
+        ei = a.useMemo(() => {
             switch (d) {
                 case L.m3P.PENDING:
                     let e = [],
@@ -168,21 +168,21 @@ let G = function (e) {
                     return [J];
             }
         }, [J, d, q, K]),
-        el = l.useMemo(() => J.filter((e) => e.type === L.eA$.PENDING_INCOMING).length, [J]),
-        ea = d === L.m3P.PENDING && el > 0 && el >= 5,
-        er = l.useCallback(
+        ea = a.useMemo(() => J.filter((e) => e.type === L.eA$.PENDING_INCOMING).length, [J]),
+        el = d === L.m3P.PENDING && ea > 0 && ea >= 5,
+        er = a.useCallback(
             (e) => {
-                e.stopPropagation(), c.A.confirmClearPendingRelationships(el);
+                e.stopPropagation(), c.A.confirmClearPendingRelationships(ea);
             },
-            [el],
+            [ea],
         ),
-        es = l.useCallback(() => {
+        es = a.useCallback(() => {
             z((e) => !e);
         }, []),
-        eo = l.useCallback(
+        eo = a.useCallback(
             (e) => {
                 let n = ei[e],
-                    l = (function (e, t, n, i) {
+                    a = (function (e, t, n, i) {
                         switch (e) {
                             case L.m3P.ONLINE:
                                 return P.intl.formatToPlainString(P.t.BagU2U, { online: t.toString() });
@@ -211,8 +211,8 @@ let G = function (e) {
                           {
                               className: D.Gf,
                               children: [
-                                  (0, i.jsx)(y.A, { id: t, title: l }),
-                                  ea &&
+                                  (0, i.jsx)(y.A, { id: t, title: a }),
+                                  el &&
                                       (0, i.jsx)("div", {
                                           className: D.mt,
                                           children: (0, i.jsx)(o.QWc, {
@@ -224,13 +224,13 @@ let G = function (e) {
                                       }),
                               ],
                           },
-                          l,
+                          a,
                       )
-                    : (0, i.jsx)("div", { className: D.Gf, children: (0, i.jsx)(y.A, { id: t, title: l }) }, l);
+                    : (0, i.jsx)("div", { className: D.Gf, children: (0, i.jsx)(y.A, { id: t, title: a }) }, a);
             },
-            [ei, d, t, ea, er],
+            [ei, d, t, el, er],
         ),
-        ed = l.useCallback(
+        ed = a.useCallback(
             (e) =>
                 d === L.m3P.ALL && 0 === e && K && en > g.ZD
                     ? (0, i.jsx)("div", {
@@ -248,10 +248,10 @@ let G = function (e) {
             [d, en, q, es, K],
         );
     if (
-        (l.useEffect(() => {
+        (a.useEffect(() => {
             d === L.m3P.ALL && (0, p.Ad)();
         }, [d]),
-        l.useEffect(() => {
+        a.useEffect(() => {
             z(!1);
         }, [d, en]),
         0 === J.length && "" === Y[d])

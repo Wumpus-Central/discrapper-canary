@@ -33,9 +33,9 @@ var r = n(627968),
     M = n(5867),
     x = n(652215),
     P = n(806931),
-    k = n(696093),
-    U = n(706069),
-    G = n(962294);
+    k = n(98762),
+    U = n(156576),
+    G = n(778437);
 function F(e) {
     let { channel: t, isLoading: n } = e,
         [s, f] = i.useState(!1),

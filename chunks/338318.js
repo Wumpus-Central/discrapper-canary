@@ -31,7 +31,7 @@ var i = n(627968),
     P = n(780207),
     L = n(652215),
     D = n(985018),
-    G = n(752366);
+    G = n(21861);
 function M() {
     let e = (0, r.bG)([j.default], () => {
             let e = j.default.getCurrentUser();

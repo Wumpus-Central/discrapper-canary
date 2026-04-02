@@ -19,8 +19,8 @@ var i = n(627968),
     C = n(403362),
     I = n(456060),
     E = n(131724),
-    v = n(987709),
-    b = n(850670),
+    b = n(987709),
+    v = n(850670),
     T = n(206589),
     S = n(154297),
     y = n(467078),
@@ -32,7 +32,7 @@ var i = n(627968),
     w = n(652215),
     D = n(768349),
     M = n(985018),
-    k = n(71747);
+    k = n(772234);
 function O(e) {
     let { presenceActivity: t, remoteJoinPlatform: n, isGameLaunchable: r } = e,
         o = (0, L.z4)({ platforms: t?.supported_platforms, currentPlatform: w.yTV.DESKTOP, isGameLaunchable: r }),
@@ -120,7 +120,7 @@ function U(e) {
                     : null,
             [$, V?.timestamps?.end],
         ),
-        et = (0, b.v)(t),
+        et = (0, v.v)(t),
         en = (0, x.s)(n.id),
         ei = a.useMemo(
             () =>
@@ -162,7 +162,7 @@ function U(e) {
             isGameLaunchable: el,
         }),
         ec = (0, E.M)(V, q, t, n),
-        eu = (0, v.E)(V, t, n, S),
+        eu = (0, b.E)(V, t, n, S),
         e_ = (0, T.w)(q, V),
         em = (0, y.L)(V),
         eh = (0, o.bG)(

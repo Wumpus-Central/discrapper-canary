@@ -1,7 +1,7 @@
 n.d(t, { A: () => p });
 var i = n(627968),
-    l = n(64700),
-    a = n(835245),
+    a = n(64700),
+    l = n(835245),
     r = n(607399),
     s = n(732955),
     o = n(397927),
@@ -11,15 +11,15 @@ var i = n(627968),
     A = n(652215),
     h = n(613057),
     _ = n(985018),
-    m = n(583779);
+    m = n(34960);
 function p(e) {
     let { applicationId: t } = e.match.params,
-        [p, g] = l.useState(!1),
-        E = l.useRef(!1),
-        [I, f] = l.useState(null),
+        [p, g] = a.useState(!1),
+        E = a.useRef(!1),
+        [I, f] = a.useState(null),
         C = !c.isPlatformEmbedded && !r.Fr && !p,
-        T = l.useMemo(() => (0, a.A)(), []);
-    return (l.useEffect(() => {
+        T = a.useMemo(() => (0, l.A)(), []);
+    return (a.useEffect(() => {
         C &&
             !0 !== E.current &&
             (Promise.resolve()

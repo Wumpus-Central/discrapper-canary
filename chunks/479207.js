@@ -29,7 +29,7 @@ var i = n(627968),
     N = n(652215),
     b = n(731854),
     R = n(985018),
-    M = n(84425);
+    M = n(144660);
 let L = s.memo(function (e) {
         let { participant: t, channel: n, context: s } = e,
             l = t.user?.id;
@@ -57,7 +57,7 @@ let L = s.memo(function (e) {
                     let l = e.user;
                     (0, v.YX)(N.uss.VIDEO, { type: v.Z5.CAMERA, value: v.IP.SETTINGS_OPENED, userId: l?.id }),
                         (0, d.L3)(s, async () => {
-                            let { default: e } = await Promise.all([n.e("97262"), n.e("87997"), n.e("7202")]).then(
+                            let { default: e } = await Promise.all([n.e("97262"), n.e("87997"), n.e("77012")]).then(
                                 n.bind(n, 180812),
                             );
                             return (n) =>

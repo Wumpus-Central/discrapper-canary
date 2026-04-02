@@ -1,8 +1,8 @@
 n.d(t, { A: () => E });
 var i = n(627968),
-    l = n(64700),
-    a = n(735438),
-    r = n.n(a),
+    a = n(64700),
+    l = n(735438),
+    r = n.n(l),
     s = n(421380),
     o = n(397927),
     d = n(58149),
@@ -11,13 +11,13 @@ var i = n(627968),
     A = n(926466),
     h = n(652215),
     _ = n(985018),
-    m = n(68377);
+    m = n(231632);
 let p = r().debounce(d.Ay.trackWithMetadata, 500),
     g = (e) => {
         let {
             guild: t,
             title: n,
-            message: a,
+            message: l,
             image: r,
             type: u,
             imageMarginX: A,
@@ -29,7 +29,7 @@ let p = r().debounce(d.Ay.trackWithMetadata, 500),
             cta: T,
             ctaColor: N,
         } = e;
-        l.useEffect(() => {
+        a.useEffect(() => {
             p(h.HAw.CHANNEL_NOTICE_VIEWED, { notice_type: u, guild_id: t.id });
         }, [t.id, u]);
         let S = null;
@@ -79,7 +79,7 @@ let p = r().debounce(d.Ay.trackWithMetadata, 500),
                         null != n
                             ? (0, i.jsx)(o.Heading, { variant: "heading-md/semibold", className: m.DD, children: n })
                             : null,
-                        (0, i.jsx)(o.Text, { variant: "text-sm/normal", children: a }),
+                        (0, i.jsx)(o.Text, { variant: "text-sm/normal", children: l }),
                         S,
                     ],
                 }),

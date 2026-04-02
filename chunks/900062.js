@@ -1,9 +1,9 @@
 n.d(t, { A: () => s });
 var i = n(627968);
 n(64700);
-var l = n(397927),
-    a = n(51183),
-    r = n(930289);
+var a = n(397927),
+    l = n(51183),
+    r = n(74034);
 function s(e) {
     let { item: t } = e;
     if ("contentInventory" !== t.data.kind) return null;
@@ -26,10 +26,10 @@ function s(e) {
                     o &&
                         (0, i.jsx)("div", {
                             className: r.qq,
-                            children: (0, i.jsx)(a.A, { emoji: s, animate: !0, hideTooltip: !1 }),
+                            children: (0, i.jsx)(l.A, { emoji: s, animate: !0, hideTooltip: !1 }),
                         }),
                     d &&
-                        (0, i.jsx)(l.Text, {
+                        (0, i.jsx)(a.Text, {
                             variant: "text-md/normal",
                             color: "text-strong",
                             className: r.qS,

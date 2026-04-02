@@ -8,7 +8,7 @@ var s = i(627968),
     d = i(86070),
     c = i(517164),
     u = i(780964),
-    C = i(840065),
+    C = i(858897),
     E = i(961350),
     x = i(591179),
     _ = i(657331),
@@ -16,7 +16,7 @@ var s = i(627968),
     h = i(754495),
     p = i(939075),
     A = i(985018),
-    b = i(527447);
+    b = i(46386);
 function m(t) {
     let { user: e, entry: i, transitionState: m, onAction: y, onClose: I, onOpenGameSettings: k } = t,
         [L, R] = (0, l.yK)([c.A], () => [c.A.isDeletingEntryHistory, c.A.deleteOutboxEntryError]),

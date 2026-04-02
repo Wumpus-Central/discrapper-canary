@@ -6,7 +6,7 @@ var i = n(503698),
     s = n.n(i),
     a = n(397927),
     o = n(235986),
-    l = n(59392);
+    l = n(601938);
 function u(e) {
     return e < 400 ? "small" : e < 1e3 ? "medium" : "large";
 }

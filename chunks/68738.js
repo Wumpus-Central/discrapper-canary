@@ -7,8 +7,8 @@ var a = n(627968),
     o = n(734057),
     d = n(71393),
     c = n(287809),
-    u = n(616873),
-    m = n(793877);
+    u = n(786020),
+    m = n(310086);
 let h = {
         ClipsContextMenu: async () => {
             let { default: e } = await n.e("44751").then(n.bind(n, 575538));
@@ -52,19 +52,19 @@ let h = {
                     n.e("22191"),
                     n.e("25961"),
                     n.e("8018"),
-                    n.e("33424"),
-                    n.e("33144"),
+                    n.e("79463"),
+                    n.e("91872"),
                     n.e("35894"),
                     n.e("50796"),
                     n.e("8458"),
                     n.e("11810"),
-                    n.e("4260"),
+                    n.e("34656"),
                     n.e("17537"),
-                    n.e("1637"),
+                    n.e("37207"),
                     n.e("54816"),
                     n.e("56475"),
                     n.e("54469"),
-                    n.e("30076"),
+                    n.e("54465"),
                 ]).then(n.bind(n, 544676)),
                 t = Object.values(d.A.getGuilds())[0];
             return null == t ? () => null : (n) => (0, a.jsx)(e, { ...n, guild: t });
@@ -102,7 +102,7 @@ let h = {
                 });
         },
         StaffOnlyEntryDebugMenu: async () => {
-            let { default: e } = await n.e("66965").then(n.bind(n, 949881)),
+            let { default: e } = await n.e("89346").then(n.bind(n, 949881)),
                 { ContentInventoryEntryType: t } = await Promise.resolve().then(n.bind(n, 681154)),
                 { ContentInventoryAuthorType: i } = await Promise.resolve().then(n.bind(n, 6161)),
                 s = c.default.getCurrentUser(),
@@ -118,7 +118,7 @@ let h = {
             return () => (0, a.jsx)(e, { entry: l, requestId: "mock-request-123" });
         },
         AddQuestionsContextMenu: async () => {
-            let { AddQuestionsContextMenu: e } = await Promise.all([n.e("11810"), n.e("69094")]).then(
+            let { AddQuestionsContextMenu: e } = await Promise.all([n.e("11810"), n.e("72732")]).then(
                     n.bind(n, 892921),
                 ),
                 t = Object.values(d.A.getGuilds())[0];

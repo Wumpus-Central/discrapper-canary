@@ -18,9 +18,9 @@ var i = n(627968),
     f = n(878831),
     C = n(768349),
     I = n(985018),
-    E = n(71747),
-    v = n(463209);
-function b(e) {
+    E = n(772234),
+    b = n(155626);
+function v(e) {
     let { message: t, applicationName: n, iconSrc: a, channel: r, currentUserId: s, viewAction: d } = e,
         c = (0, m.Ay)(t),
         u = (0, h.P)({ user: t.author, channelId: r.id, guildId: r.guild_id, messageId: t.id })(c);
@@ -38,7 +38,7 @@ function b(e) {
                         (0, i.jsx)("img", {
                             alt: I.intl.string(I.t["2B/phM"]),
                             src: a,
-                            className: l()(v.Gt, _.M.XSMALL),
+                            className: l()(b.Gt, _.M.XSMALL),
                         }),
                         (0, i.jsx)(o.Text, { variant: "text-sm/semibold", color: "text-muted", children: n }),
                     ],
@@ -57,7 +57,7 @@ function T(e) {
             currentUserId: m,
             launchableAppId: h,
             isEmbeddedApplication: p,
-            tryWithGdnAction: v,
+            tryWithGdnAction: b,
             staticBannerSrc: T,
             onClickContent: S,
             iconSrc: y,
@@ -86,7 +86,7 @@ function T(e) {
                               },
                           },
                       ])
-                    : null != v && ((e = [v]), (i = !1)),
+                    : null != b && ((e = [b]), (i = !1)),
                 e.length > 0)
             )
                 if (!(0, x.p)(t.id, M, n.id, j)) return { actions: [], hasAccountLinkButton: !1 };
@@ -105,7 +105,7 @@ function T(e) {
                         }),
                         (a = !0));
             return { actions: e, hasAccountLinkButton: a };
-        }, [p, h, v, M, j, n.id, t.id, R, P, L, w]),
+        }, [p, h, b, M, j, n.id, t.id, R, P, L, w]),
         U = k.some((e) => e.trackingArea === u.kY.CLOUD_PLAY);
     (0, f.A)(U, L);
     let B = k.length > 0,
@@ -121,7 +121,7 @@ function T(e) {
             [t, r, l, m, B],
         );
     return 0 === k.length
-        ? (0, i.jsx)(b, { message: t, applicationName: r, iconSrc: y, channel: l, currentUserId: m, viewAction: S })
+        ? (0, i.jsx)(v, { message: t, applicationName: r, iconSrc: y, channel: l, currentUserId: m, viewAction: S })
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(c.h, {

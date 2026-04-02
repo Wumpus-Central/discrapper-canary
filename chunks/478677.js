@@ -1,8 +1,8 @@
 n.d(t, { A: () => g });
 var i = n(627968),
-    l = n(64700),
-    a = n(503698),
-    r = n.n(a),
+    a = n(64700),
+    l = n(503698),
+    r = n.n(l),
     s = n(311907),
     o = n(397927),
     d = n(87664),
@@ -11,16 +11,16 @@ var i = n(627968),
     A = n(198525),
     h = n(652215),
     _ = n(985018),
-    m = n(349661),
-    p = n(651099);
+    m = n(446e3),
+    p = n(891408);
 let g = function (e) {
     let { quest: t } = e,
-        [n, a] = l.useState(!1),
-        g = l.useRef(null),
+        [n, l] = a.useState(!1),
+        g = a.useRef(null),
         E = (0, s.bG)([c.default], () => c.default.getCurrentUser()),
         I = u.Ay.useName(E),
         f = (0, d.A)(E?.id),
-        C = l.useCallback(
+        C = a.useCallback(
             (e) =>
                 (0, i.jsx)(A.A, {
                     name: I,
@@ -29,7 +29,7 @@ let g = function (e) {
                     applicationStream: f,
                     ...e,
                     closePopout: () => {
-                        a(!1);
+                        l(!1);
                     },
                 }),
             [t, f, I],
@@ -52,7 +52,7 @@ let g = function (e) {
                         renderPopout: C,
                         position: "bottom",
                         shouldShow: n,
-                        onRequestClose: () => a(!1),
+                        onRequestClose: () => l(!1),
                         nudgeAlignIntoViewport: !1,
                         useRawTargetDimensions: !0,
                         animation: o.YNO.Animation.NONE,
@@ -64,7 +64,7 @@ let g = function (e) {
                                 ref: g,
                                 className: r()(p.Tn, { [p.wH]: n }),
                                 children: (0, i.jsx)(o.DUT, {
-                                    onClick: () => a(!n),
+                                    onClick: () => l(!n),
                                     tabIndex: 0,
                                     children: (0, i.jsxs)("div", {
                                         className: p.lm,

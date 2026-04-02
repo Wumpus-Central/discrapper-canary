@@ -9,8 +9,8 @@ var l = a(627968),
     d = a(252449),
     c = a(429364),
     m = a(696016),
-    h = a(889904),
-    p = a(825040);
+    h = a(14363),
+    p = a(695241);
 function f(e, t) {
     let { applicationAudioEnabled: a, voiceAudioEnabled: l, soundboardAudioEnabled: n, isVoiceClip: i } = t;
     if (!i && a && l && n)

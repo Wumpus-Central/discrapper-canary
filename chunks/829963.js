@@ -10,7 +10,7 @@ var i = n(627968),
     u = n(206589),
     _ = n(768349),
     m = n(985018),
-    h = n(71747);
+    h = n(772234);
 function p(e) {
     let {
             application: t,
@@ -24,24 +24,24 @@ function p(e) {
             onView: I,
             guildId: E,
         } = e,
-        v = (0, u.w)(f, g),
-        b = (0, d.Gq)(g, n.author, "Invite Embed"),
+        b = (0, u.w)(f, g),
+        v = (0, d.Gq)(g, n.author, "Invite Embed"),
         T = a.useMemo(() => {
             let e = [];
             return (
-                v ||
+                b ||
                     e.push({
-                        label: b.label ?? m.intl.string(m.t.VJlc0S),
+                        label: v.label ?? m.intl.string(m.t.VJlc0S),
                         trackingArea: s.kY.SYNC,
                         onClick: () => {
-                            b.onClick();
+                            v.onClick();
                         },
-                        disabled: b.disabled,
-                        disabledReason: b.disabled ? b.tooltip : void 0,
+                        disabled: v.disabled,
+                        disabledReason: v.disabled ? v.tooltip : void 0,
                     }),
                 e
             );
-        }, [v, b]),
+        }, [b, v]),
         S =
             null != g && null != g.details && null != g.state
                 ? m.intl.formatToPlainString(m.t.JCvHtx, { track: g.details, artist: g.state })

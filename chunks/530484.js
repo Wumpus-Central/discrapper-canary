@@ -12,7 +12,7 @@ var l = n(311907),
     h = n(652793),
     A = n(790782),
     _ = n(985018),
-    m = n(11464);
+    m = n(567431);
 function g(e) {
     let { guild: t, selected: g } = e,
         { hasUnread: p, mentionCount: f } = (0, l.cf)(
@@ -26,7 +26,7 @@ function g(e) {
         x = (0, l.bG)([u.Ay], () => u.Ay.isMuteScheduledEventsEnabled(t.id));
     async function E() {
         await (0, a.mMO)(async () => {
-            let { default: e } = await Promise.all([n.e("51354"), n.e("7453"), n.e("11049")]).then(n.bind(n, 926956));
+            let { default: e } = await Promise.all([n.e("51354"), n.e("7453"), n.e("9561")]).then(n.bind(n, 926956));
             return (n) => (0, i.jsx)(e, { ...n, guildId: t.id });
         }),
             (0, o.Dr)(s.M.GUILD_HEADER_EVENT_UPSELL);

@@ -1,22 +1,22 @@
-t.d(s, { default: () => o });
-var n = t(627968),
-    r = t(192480),
-    i = t(178090),
-    a = t(602425),
-    c = t(350601),
-    l = t(985018),
-    d = t(31142);
-function o(e) {
-    return (0, n.jsxs)(r.A, {
-        ...e,
+e.d(s, { default: () => d });
+var n = e(627968),
+    i = e(192480),
+    c = e(178090),
+    r = e(602425),
+    a = e(429311),
+    l = e(985018),
+    o = e(447635);
+function d(t) {
+    return (0, n.jsxs)(i.A, {
+        ...t,
         children: [
-            (0, n.jsx)(i.A, { variant: "text-lg/normal", children: l.intl.string(c.default.gm2Zoj) }),
+            (0, n.jsx)(c.A, { variant: "text-lg/normal", children: l.intl.string(a.default.gm2Zoj) }),
             (0, n.jsx)("div", {
-                className: d.q,
-                children: (0, n.jsx)(a.A, {
-                    textClassName: d.x,
+                className: o.q,
+                children: (0, n.jsx)(r.A, {
+                    textClassName: o.x,
                     text: l.intl.string(l.t["/g10LC"]),
-                    onClick: e.onClose,
+                    onClick: t.onClose,
                 }),
             }),
         ],

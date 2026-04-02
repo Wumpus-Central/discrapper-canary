@@ -7,7 +7,7 @@ var s = a(627968),
     o = a(980302),
     c = a(818348),
     d = a(563853),
-    _ = a(878283);
+    _ = a(19676);
 let N = c.sE.MAIN_NAVIGATION_MENU;
 function A(e) {
     let { TrackClick: t, title: a, links: A, onClose: u, onOpen: I, isOpen: k = !1, isMobile: h, avoidRouter: p } = e,

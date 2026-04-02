@@ -19,13 +19,13 @@ var i = n(627968),
     C = n(832163),
     I = n(207654),
     E = n(317560),
-    v = n(533406),
-    b = n(971146),
+    b = n(533406),
+    v = n(971146),
     T = n(300182),
     S = n(183802),
     y = n(652215),
     N = n(985018),
-    j = n(336135);
+    j = n(23542);
 function L(e) {
     let { guildId: t, skuId: n, channel: L } = e,
         R = (0, l.bG)([A.A], () => A.A.isFetchingForSKU(n)),
@@ -56,7 +56,7 @@ function L(e) {
         q = a.useCallback(() => {
             null != P &&
                 G &&
-                (0, v.a)(
+                (0, b.a)(
                     P,
                     { isGift: !1 },
                     { analyticsLocations: [d.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_PURCHASE_BUTTON], guildId: t },
@@ -64,7 +64,7 @@ function L(e) {
         }, [P, t, G]),
         W = a.useCallback(() => {
             null != P &&
-                (0, v.a)(
+                (0, b.a)(
                     P,
                     { isGift: !0, giftRecipient: B ?? void 0 },
                     { analyticsLocations: [d.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_GIFT_BUTTON] },
@@ -90,7 +90,7 @@ function L(e) {
                             (0, i.jsxs)("div", {
                                 className: j.lI,
                                 children: [
-                                    O && null != k && (0, i.jsx)(b.V, { application: k }),
+                                    O && null != k && (0, i.jsx)(v.V, { application: k }),
                                     (0, i.jsxs)("div", {
                                         className: j.PB,
                                         children: [

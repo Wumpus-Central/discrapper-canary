@@ -15,7 +15,7 @@ var i = n(627968),
     A = n(397274),
     h = n(641324),
     p = n(46373),
-    T = n(326029);
+    T = n(32145);
 function f(e) {
     let { notice: t, children: n } = e,
         { showNotice: l, handleStoreUpdate: a } = (0, m.L_)(),

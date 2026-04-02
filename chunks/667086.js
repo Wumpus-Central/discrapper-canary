@@ -1,8 +1,8 @@
 n.d(t, { A: () => b });
 var i = n(627968),
-    l = n(64700),
-    a = n(503698),
-    r = n.n(a),
+    a = n(64700),
+    l = n(503698),
+    r = n.n(l),
     s = n(877227),
     o = n(311907),
     d = n(319354),
@@ -18,13 +18,13 @@ var i = n(627968),
     I = n(596540),
     f = n(652215),
     C = n(985018),
-    T = n(21310);
+    T = n(173733);
 let N = { cozy: 0, default: 0, compact: 0 },
     S = { cozy: 36, default: 24, compact: 14 },
     x = { cozy: 95, default: 84, compact: 72 };
 function v(e) {
-    let { onClick: t, selectedOverride: n = !1, popoutProps: a, ref: s, focusSectionProps: o } = e,
-        [_, p] = l.useState(!1),
+    let { onClick: t, selectedOverride: n = !1, popoutProps: l, ref: s, focusSectionProps: o } = e,
+        [_, p] = a.useState(!1),
         I = (0, g.lI)(),
         f = n || I,
         v = n || f,
@@ -50,7 +50,7 @@ function v(e) {
                     innerRef: s,
                     className: T.OV,
                     ...o,
-                    ...a,
+                    ...l,
                     onMouseEnter: () => {
                         p(!0);
                     },
@@ -58,7 +58,7 @@ function v(e) {
                         p(!1);
                     },
                     onClick: () => {
-                        t?.(), a?.onClick?.();
+                        t?.(), l?.onClick?.();
                     },
                     children: [
                         (0, i.jsx)("div", {
@@ -87,10 +87,10 @@ function v(e) {
 }
 function b() {
     let { focusSectionProps: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        t = l.useRef(null),
+        t = a.useRef(null),
         { notificationCenterVariant: n } = (0, p.X8)({ location: "NotificationsInboxButton" }),
-        a = (0, o.bG)([_.A], () => _.A.getChannelId()),
-        r = l.useMemo(() => f.BVt.CHANNEL(f.gNP, a ?? void 0), [a]),
+        l = (0, o.bG)([_.A], () => _.A.getChannelId()),
+        r = a.useMemo(() => f.BVt.CHANNEL(f.gNP, l ?? void 0), [l]),
         d = (0, E.HN)();
     return n === p.U5.SIDEBAR
         ? (0, i.jsx)(v, {
@@ -105,14 +105,14 @@ function b() {
                 popoutPosition: "bottom",
                 popoutAlign: "left",
                 spacing: 2,
-                children: (n, l, a) =>
+                children: (n, a, l) =>
                     (0, i.jsx)(v, {
                         ref: t,
-                        selectedOverride: l,
+                        selectedOverride: a,
                         onClick: () => {
                             d(), n();
                         },
-                        popoutProps: a,
+                        popoutProps: l,
                         focusSectionProps: e,
                     }),
             })

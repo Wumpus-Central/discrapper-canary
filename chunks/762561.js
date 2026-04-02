@@ -36,7 +36,7 @@ var i = n(627968),
     P = n(518477),
     k = n(996988),
     w = n(985018),
-    B = n(49615);
+    B = n(374146);
 function V(e) {
     let { user: t, currentUser: n, channel: V } = e,
         H = __OVERLAY__,

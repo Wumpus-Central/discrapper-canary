@@ -16,7 +16,7 @@ var n = i(627968),
     f = i(954571),
     S = i(821589),
     T = i(652215),
-    E = i(650417);
+    E = i(78016);
 function C(t) {
     let { type: e, source: i, activity: l, applicationStream: r, user: s, guildId: a, channelId: d, onAction: u } = t;
     return (0, n.jsx)(o.A, {
@@ -43,10 +43,10 @@ let v = a.A.Types,
                 showChannelDetails: v = !1,
                 ...y
             } = t,
-            I = (0, r.bG)([g.A, A.A], () => A.A.getChannel(g.A.getVoiceStateForUser(i.id)?.channelId)),
-            _ = (0, c.v)("UserActivityContainer", I),
+            _ = (0, r.bG)([g.A, A.A], () => A.A.getChannel(g.A.getVoiceStateForUser(i.id)?.channelId)),
+            I = (0, c.v)("UserActivityContainer", _),
             N = (0, r.bG)([m.A], () => (o ? m.A.getAnyStreamForUser(i.id) : null)),
-            x = e?.type === T.$pd.HANG_STATUS && _ ? I : null,
+            x = e?.type === T.$pd.HANG_STATUS && I ? _ : null,
             j = (0, r.bG)([h.A, g.A, A.A], () =>
                 (0, s.A)(e, T.jUm.EMBEDDED)
                     ? h.A.getGuild(
@@ -65,14 +65,14 @@ let v = a.A.Types,
             });
         return (l.useEffect(() => {
             e?.type === T.$pd.HANG_STATUS &&
-                _ &&
+                I &&
                 f.default.track(T.HAw.VIEW_HANG_STATUS, {
                     source: "UserActivity",
                     other_user_id: i.id,
                     ...(0, u.A)(x?.id),
                 });
-        }, [e?.type, _, x, i.id]),
-        e?.type !== T.$pd.HANG_STATUS || _)
+        }, [e?.type, I, x, i.id]),
+        e?.type !== T.$pd.HANG_STATUS || I)
             ? (0, n.jsx)(a.A, {
                   ...y,
                   activity: e,
@@ -81,7 +81,7 @@ let v = a.A.Types,
                   hideHeader: E,
                   activityGuild: j ?? P,
                   showChannelDetails: v,
-                  channel: v ? I : void 0,
+                  channel: v ? _ : void 0,
                   enableUserHoverActivities: y.enableUserHoverActivities,
                   renderActions: S ? () => (0, n.jsx)(C, { ...y, applicationStream: N, activity: e, user: i }) : null,
                   onOpenSpotifyTrack: p.Mp,

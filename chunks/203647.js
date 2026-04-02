@@ -18,7 +18,7 @@ var i = n(627968),
     A = n(823016),
     I = n(18983),
     j = n(985018),
-    v = n(81441);
+    v = n(415234);
 function T(e) {
     let { item: t, index: n, wishlistId: a, onReorder: l, children: s } = e,
         { manageFocusOnReorder: r } = (0, A.r)();

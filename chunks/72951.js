@@ -6,7 +6,7 @@ var i = n(627968),
     s = n(397927),
     o = n(47167),
     d = n(713654),
-    c = n(359657);
+    c = n(9674);
 function u(e) {
     let { className: t, channel: n, guild: a, onClick: u } = e,
         _ = (0, d.gU)(n, a),
