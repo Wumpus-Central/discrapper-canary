@@ -81,6 +81,7 @@ function P(e) {
                 transitionState: t,
                 size: c.rIJ.DYNAMIC,
                 className: a()(k.CR, { [k.VX]: "landscape" === w, [k.Zy]: "portrait" === w }),
+                fullscreenOnMobile: !1,
                 parentComponent: "Modal",
                 children: [
                     !B &&
