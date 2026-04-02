@@ -15,6 +15,8 @@ e.exports = {
     r$: "logoContainer__38ccf",
     wm: "logo__38ccf",
     sj: "priceSectionContainer__38ccf",
+    TS: "promotionalPriceContainer__38ccf",
+    of: "strikethrough__38ccf",
     qw: "offerNoticeContainer__38ccf",
     Yu: "offerNoticeContent__38ccf",
     fb: "offerNoticeBody__38ccf",

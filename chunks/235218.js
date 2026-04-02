@@ -9,11 +9,11 @@ var r = n(627968),
     u = n(793574),
     c = n(688810),
     d = n(429913),
-    _ = n(657331),
-    f = n(798048),
-    p = n(111085),
-    h = n(594832),
-    m = n(871123),
+    _ = n(993046),
+    f = n(657331),
+    p = n(798048),
+    h = n(111085),
+    m = n(594832),
     E = n(44724),
     g = n(317560),
     A = n(533406),
@@ -30,7 +30,7 @@ function C(e) {
             hideButtonIcon: s = !1,
             showPrice: C = !1,
             showIcons: R = !1,
-            source: O = h.uS.WISHLIST,
+            source: O = m.uS.WISHLIST,
             heartColor: b = "red",
             onWishlistItemClick: D,
             analyticsLocations: L,
@@ -42,22 +42,27 @@ function C(e) {
         G = (0, d.h)(U),
         F = i.useRef(null),
         { analyticsLocations: V } = (0, c.Ay)(...(L ?? []), u.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD),
-        B = (0, o.bG)([p.A], () => null != t && p.A.hasSentGift(M.skuId, t.id), [M.skuId, t]) || !0 === M.isOwned,
-        H = M.skuName,
+        B = (0, o.bG)([h.A], () => null != t && h.A.hasSentGift(M.skuId, t.id), [M.skuId, t]),
+        { normalPrice: H, discountedPrice: j } = (0, _.o)({ sku: k, priceSetAssignmentPurchaseType: T.lid.DEFAULT }),
+        { normalPrice: Y, discountedPrice: W } = (0, _.o)({ sku: k, priceSetAssignmentPurchaseType: T.lid.GIFT }),
+        K = null != j ? j : H,
+        $ = null != W ? W : Y,
+        z = B || !0 === M.isOwned,
+        q = M.skuName,
         {
-            buttonCTALabel: j,
-            buttonIcon: Y,
-            handleCardClick: W,
+            buttonCTALabel: Z,
+            buttonIcon: X,
+            handleCardClick: Q,
         } = i.useMemo(
             () =>
-                x || B
+                x || z
                     ? {
-                          buttonCTALabel: C ? (0, m.p3)(k, T.lid.DEFAULT) : y.intl.string(y.t.FdGl5A),
+                          buttonCTALabel: C ? K : y.intl.string(y.t.FdGl5A),
                           buttonIcon: void 0,
                           handleCardClick: () => {
                               G?.guildId != null &&
                                   (x
-                                      ? ((0, _.closeUserProfileModal)(),
+                                      ? ((0, f.closeUserProfileModal)(),
                                         (0, E.default)({ guildId: G.guildId, skuId: k.id, slug: k.slug }))
                                       : (0, g.R)({
                                             skuId: k.id,
@@ -68,7 +73,7 @@ function C(e) {
                           },
                       }
                     : {
-                          buttonCTALabel: C ? (0, m.p3)(k, T.lid.GIFT) : y.intl.string(y.t.ilhtIa),
+                          buttonCTALabel: C ? $ : y.intl.string(y.t.ilhtIa),
                           buttonIcon: s ? void 0 : l.okO,
                           handleCardClick: () => {
                               D?.(),
@@ -84,12 +89,12 @@ function C(e) {
                                   );
                           },
                       },
-            [x, B, C, k, s, G, t, n, P, D, V],
+            [x, z, C, k, s, G, t, n, K, $, P, D, V],
         ),
-        K = i.useCallback(
+        J = i.useCallback(
             () =>
                 R
-                    ? O === h.uS.WISHLIST
+                    ? O === m.uS.WISHLIST
                         ? (0, r.jsx)("div", {
                               className: v.Fx,
                               children: (0, r.jsx)(l.C3E, {
@@ -100,7 +105,7 @@ function C(e) {
                                   colorClass: a()({ [v.e_]: "white" === b, [v.Be]: "red" === b }),
                               }),
                           })
-                        : O === h.uS.POPULAR
+                        : O === m.uS.POPULAR
                           ? (0, r.jsx)("div", {
                                 className: v.Fx,
                                 children: (0, r.jsx)(l.Y3C, {
@@ -115,7 +120,7 @@ function C(e) {
                     : null,
             [R, O, b],
         ),
-        $ = i.useCallback(
+        ee = i.useCallback(
             () =>
                 (0, r.jsx)(I.e, {
                     shape: "custom",
@@ -126,16 +131,16 @@ function C(e) {
                 }),
             [k],
         );
-    return (0, r.jsx)(f.A, {
+    return (0, r.jsx)(p.A, {
         ...w,
         source: O,
         cardRef: F,
-        accessibleLabel: H,
-        onCardClick: W,
-        buttonCTALabel: j,
-        buttonIcon: Y,
-        isOwned: B,
-        renderItemPreview: $,
-        renderSourceIcon: K,
+        accessibleLabel: q,
+        onCardClick: Q,
+        buttonCTALabel: Z,
+        buttonIcon: X,
+        isOwned: z,
+        renderItemPreview: ee,
+        renderSourceIcon: J,
     });
 }

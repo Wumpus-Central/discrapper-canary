@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => I, h: () => g });
+n.d(t, { A: () => A, h: () => E });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -7,48 +7,50 @@ var r = n(627968),
     o = n(311907),
     l = n(397927),
     u = n(525723),
-    c = n(871123),
+    c = n(993046),
     d = n(287809),
-    _ = n(580630),
-    f = n(178213),
-    p = n(652215),
-    h = n(985018),
-    m = n(498700);
-function E(e) {
+    _ = n(178213),
+    f = n(652215),
+    p = n(985018),
+    h = n(498700);
+function m(e) {
     return { margin: e.buttonInset };
 }
-function g(e) {
-    let { sku: t, wishlistOwner: n, isOwned: r, hideIcon: s, shortText: a, location: m } = e,
-        E = (0, o.bG)([d.default], () => d.default.getCurrentUser()),
-        g = (0, f.AZ)(m ?? "User Profile Wishlist Overlay Button"),
-        A = (0, u.Xi)(t),
-        I = null == n || n.id === E?.id || r;
+function E(e) {
+    let { sku: t, wishlistOwner: n, isOwned: r, hideIcon: s, shortText: a, location: h } = e,
+        m = (0, o.bG)([d.default], () => d.default.getCurrentUser()),
+        E = (0, _.AZ)(h ?? "User Profile Wishlist Overlay Button"),
+        g = (0, u.Xi)(t),
+        A = null == n || n.id === m?.id || r,
+        { normalPrice: I, discountedPrice: T } = (0, c.o)({
+            sku: t,
+            priceSetAssignmentPurchaseType: A ? f.lid.DEFAULT : f.lid.GIFT,
+        });
     return i.useMemo(() => {
-        if (g && null != t && !r) {
-            if (null != A)
+        if (E && null != t && !r) {
+            if (null != g)
                 return {
-                    label: h.intl.formatToPlainString(h.t.AYcXGW, { discountOfferAmount: A.amount }),
+                    label: p.intl.formatToPlainString(p.t.AYcXGW, { discountOfferAmount: g.amount }),
                     icon: void 0,
                     isPromptingPurchase: !0,
                 };
-            let e = I ? p.lid.DEFAULT : p.lid.GIFT,
-                n = t.productLine === p.EZt.SOCIAL_LAYER_GAME_ITEM ? (0, c.y8)(t, e) : t.getPrice(E?.premiumType);
-            if (null != n) return { label: (0, _.$g)(n.amount, n.currency), icon: void 0, isPromptingPurchase: !0 };
+            let e = T ?? I;
+            if (e?.length > 0) return { label: e, icon: void 0, isPromptingPurchase: !0 };
         }
-        return I
+        return A
             ? {
-                  label: a ? h.intl.string(h.t["99GFiS"]) : h.intl.string(h.t.FdGl5A),
+                  label: a ? p.intl.string(p.t["99GFiS"]) : p.intl.string(p.t.FdGl5A),
                   icon: void 0,
                   isPromptingPurchase: !1,
               }
             : {
-                  label: a ? h.intl.string(h.t["3wFtNJ"]) : h.intl.string(h.t.ilhtIa),
+                  label: a ? p.intl.string(p.t["3wFtNJ"]) : p.intl.string(p.t.ilhtIa),
                   icon: s ? void 0 : l.okO,
                   isPromptingPurchase: !0,
               };
-    }, [g, t, r, a, s, A, I, E?.premiumType]);
+    }, [E, t, r, a, s, g, A, I, T]);
 }
-function A(e) {
+function g(e) {
     let { spec: t, label: n, icon: s, onClick: o, isHoveringOrFocusing: u, fullWidth: c = !1 } = e,
         d = i.useCallback(
             (e) => {
@@ -57,8 +59,8 @@ function A(e) {
             [o],
         );
     return (0, r.jsx)("div", {
-        className: a()(m.L, { [m.K]: u }),
-        style: E(t),
+        className: a()(h.L, { [h.K]: u }),
+        style: m(t),
         children: (0, r.jsx)(l.Button, {
             variant: "primary",
             size: "sm",
@@ -70,7 +72,7 @@ function A(e) {
         }),
     });
 }
-function I(e) {
+function A(e) {
     let { spec: t, onClick: n, isHoveringOrFocusing: i, label: s, icon: a } = e;
-    return (0, r.jsx)(A, { spec: t, label: s, icon: a, onClick: n, isHoveringOrFocusing: i, fullWidth: !0 });
+    return (0, r.jsx)(g, { spec: t, label: s, icon: a, onClick: n, isHoveringOrFocusing: i, fullWidth: !0 });
 }

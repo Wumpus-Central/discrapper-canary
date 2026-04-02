@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Z: () => U }), n(321073);
+n.d(t, { Z: () => G }), n(321073);
 var r = n(627968),
     i = n(64700),
     s = n(735438),
@@ -16,23 +16,24 @@ var r = n(627968),
     m = n(238017),
     E = n(285719),
     g = n(650588),
-    A = n(383501),
-    I = n(287809),
-    T = n(67480),
-    S = n(403362),
-    y = n(871123),
-    v = n(832163),
-    N = n(44724),
-    C = n(980094),
-    R = n(421161),
-    O = n(366523),
-    b = n(652215),
-    D = n(806931),
-    L = n(788868),
-    w = n(985018),
-    M = n(170602);
-function x(e) {
-    let t = (0, o.bG)([A.A], () => (A.A.isConnected() ? A.A.getChannelId() : null)),
+    A = n(993046),
+    I = n(383501),
+    T = n(287809),
+    S = n(67480),
+    y = n(403362),
+    v = n(871123),
+    N = n(832163),
+    C = n(44724),
+    R = n(980094),
+    O = n(421161),
+    b = n(366523),
+    D = n(652215),
+    L = n(806931),
+    w = n(788868),
+    M = n(985018),
+    x = n(170602);
+function P(e) {
+    let t = (0, o.bG)([I.A], () => (I.A.isConnected() ? I.A.getChannelId() : null)),
         [n, r] = i.useState([]);
     return (
         i.useEffect(() => {
@@ -40,40 +41,40 @@ function x(e) {
                 i = [],
                 s = new Set();
             for (let t of n)
-                (!(0, D.Xw)(t) && !(0, D.Ay)(t)) ||
+                (!(0, L.Xw)(t) && !(0, L.Ay)(t)) ||
                     t.user.id === e ||
                     s.has(t.user.id) ||
                     (s.add(t.user.id), i.push(t));
-            i.sort((e, t) => ((0, D.Ay)(e) && !(0, D.Ay)(t) ? -1 : (0, D.Ay)(t) && !(0, D.Ay)(e) ? 1 : 0)),
+            i.sort((e, t) => ((0, L.Ay)(e) && !(0, L.Ay)(t) ? -1 : (0, L.Ay)(t) && !(0, L.Ay)(e) ? 1 : 0)),
                 r(i.map((e) => e.user));
         }, [t, e]),
         n
     );
 }
-function P(e, t, n) {
+function k(e, t, n) {
     let r = (0, _.A)(),
-        s = x(e),
-        l = (0, o.yK)([I.default], () => n?.map(I.default.getUser).filter(S.Vq) ?? [], [n]);
+        s = P(e),
+        l = (0, o.yK)([T.default], () => n?.map(T.default.getUser).filter(y.Vq) ?? [], [n]);
     return i.useMemo(
         () => a().uniqWith([...(null != t ? [t] : []), ...l, ...s, ...r], (e, t) => e.id === t.id),
         [t, l, s, r],
     );
 }
-function k(e) {
+function U(e) {
     let { handleClose: t, guild: n, sku: s } = e,
         a = i.useCallback(() => {
-            (0, N.X)({ guildId: n.id });
+            (0, C.X)({ guildId: n.id });
         }, [n.id]),
         o = i.useCallback(() => {
             t();
-            let e = v.A.getStorefrontState(n.id)?.activePage;
-            window.location.pathname.includes(b.BVt.CHANNELS_GAME_SHOP(n.id, e ?? 0, s.id)) ||
-                ((0, l.s7G)(), (0, N.default)({ guildId: n.id, pageIndex: e ?? 0, skuId: s.id, slug: s.slug }));
+            let e = N.A.getStorefrontState(n.id)?.activePage;
+            window.location.pathname.includes(D.BVt.CHANNELS_GAME_SHOP(n.id, e ?? 0, s.id)) ||
+                ((0, l.s7G)(), (0, C.default)({ guildId: n.id, pageIndex: e ?? 0, skuId: s.id, slug: s.slug }));
         }, [n.id, s.id, s.slug, t]);
     return (0, r.jsx)("div", {
-        className: M.$O,
+        className: x.$O,
         children: (0, r.jsx)(l.QWc, {
-            text: w.intl.string(w.t.ImioFL),
+            text: M.intl.string(M.t.ImioFL),
             onMouseDown: a,
             onClick: o,
             textVariant: "text-sm/medium",
@@ -81,7 +82,7 @@ function k(e) {
         }),
     });
 }
-let U = (e) => {
+let G = (e) => {
     let { handleStepChange: t, handleClose: n } = e,
         {
             customGiftMessage: i = "",
@@ -89,84 +90,85 @@ let U = (e) => {
             giftRecipient: a,
             emojiConfetti: c,
             soundEffect: _,
-            setEmojiConfetti: A,
-            setSoundEffect: S,
-            giftingOrigin: v,
-            additionalUserIds: N,
+            setEmojiConfetti: I,
+            setSoundEffect: y,
+            giftingOrigin: N,
+            additionalUserIds: C,
         } = (0, f.Pv)(),
-        { selectedSkuId: D, application: x } = (0, p.P5)(),
-        U = (0, o.bG)([I.default], () => I.default.getCurrentUser()),
-        G = P(U?.id, a, N),
-        F = (0, o.bG)([T.A], () => (null != D ? T.A.get(D) : null), [D]),
-        V = (0, y.fq)(F),
-        B = (0, y.xf)(F),
-        H = (0, R.j)(F, { shouldFetchIfMissing: !0 }),
-        j = async (e, t) => {},
-        Y = () =>
+        { selectedSkuId: L, application: P } = (0, p.P5)(),
+        G = (0, o.bG)([T.default], () => T.default.getCurrentUser()),
+        F = k(G?.id, a, C),
+        V = (0, o.bG)([S.A], () => (null != L ? S.A.get(L) : null), [L]),
+        { normalPrice: B, discountedPrice: H } = (0, A.o)({ sku: V, priceSetAssignmentPurchaseType: D.lid.GIFT }),
+        j = (0, v.fq)(V),
+        Y = (0, v.xf)(V),
+        W = (0, O.j)(V, { shouldFetchIfMissing: !0 }),
+        K = async (e, t) => {},
+        $ = () =>
             (0, r.jsx)(h.A, {
                 onTextChange: (e) => s?.(e),
                 pendingText: i,
                 currentText: i,
                 disableThemedBackground: !0,
-                className: M.iX,
-                innerClassName: M.pt,
+                className: x.iX,
+                innerClassName: x.pt,
             }),
-        W = () =>
-            null != a && (v === L.vQ.USER_PROFILE_WISHLIST || v === L.vQ.DM_CHANNEL_WISHLIST)
+        z = () =>
+            null != a && (N === w.vQ.USER_PROFILE_WISHLIST || N === w.vQ.DM_CHANNEL_WISHLIST)
                 ? (0, r.jsx)(E.Z, { giftRecipient: a })
-                : (0, r.jsx)(d.A, { selectedSkuId: D, validateSelectedGift: j, recipients: G }),
-        K = (e) => {
-            null != S && S(null == e ? void 0 : e);
+                : (0, r.jsx)(d.A, { selectedSkuId: L, validateSelectedGift: K, recipients: F }),
+        q = (e) => {
+            null != y && y(null == e ? void 0 : e);
         },
-        $ = () =>
+        Z = () =>
             (0, r.jsxs)("div", {
-                className: M.mT,
+                className: x.mT,
                 children: [
-                    null != V &&
-                        (0, r.jsx)(O.A, {
-                            containerClassName: M.T3,
-                            cardImage: V,
-                            cardBackgroundImage: B,
-                            altText: F?.name ?? "",
+                    null != j &&
+                        (0, r.jsx)(b.A, {
+                            containerClassName: x.T3,
+                            cardImage: j,
+                            cardBackgroundImage: Y,
+                            altText: V?.name ?? "",
                             shape: "square",
                         }),
                     (0, r.jsxs)("div", {
-                        className: M._T,
+                        className: x._T,
                         children: [
-                            (0, r.jsx)(g.A, { sound: _, onSelect: K }),
-                            (0, r.jsx)(m.A, { setEmojiConfetti: A, emojiConfetti: null == c ? void 0 : c }),
+                            (0, r.jsx)(g.A, { sound: _, onSelect: q }),
+                            (0, r.jsx)(m.A, { setEmojiConfetti: I, emojiConfetti: null == c ? void 0 : c }),
                         ],
                     }),
                 ],
             }),
-        z = () => {
-            if (null == F) return null;
-            let e = (0, y.p3)(F, b.lid.GIFT);
+        X = () => {
+            if (null == V) return null;
+            let e = H ?? B;
             return (0, r.jsxs)("div", {
-                className: M.AN,
+                className: x.AN,
                 children: [
-                    (0, r.jsx)(l.zEo, { className: M.jr, children: w.intl.string(w.t.PpoJzt) }),
+                    (0, r.jsx)(l.zEo, { className: x.jr, children: M.intl.string(M.t.PpoJzt) }),
                     (0, r.jsxs)("div", {
-                        className: M.Wx,
+                        className: x.Wx,
                         children: [
                             (0, r.jsx)("div", {
-                                className: M.Xb,
+                                className: x.Xb,
                                 children:
-                                    null != F &&
                                     null != V &&
-                                    (0, r.jsx)(O.A, {
-                                        containerClassName: M.Iy,
-                                        cardImage: V,
-                                        cardBackgroundImage: B,
-                                        altText: F.name,
+                                    null != j &&
+                                    (0, r.jsx)(b.A, {
+                                        containerClassName: x.Iy,
+                                        cardImage: j,
+                                        cardBackgroundImage: Y,
+                                        altText: V.name,
                                         shape: "square",
                                     }),
                             }),
                             (0, r.jsxs)("div", {
-                                className: M.vz,
+                                className: x.vz,
                                 children: [
-                                    null != x && (0, r.jsx)(C.Q, { application: x }),
-                                    (0, r.jsx)(l.Text, { variant: "text-sm/semibold", children: F.name }),
+                                    null != P && (0, r.jsx)(R.Q, { application: P }),
+                                    (0, r.jsx)(l.Text, { variant: "text-sm/semibold", children: V.name }),
                                 ],
                             }),
                             (0, r.jsx)(l.Text, { variant: "text-md/semibold", children: e }),
@@ -175,30 +177,30 @@ let U = (e) => {
                 ],
             });
         },
-        q = () => {
-            let e = F?.orbsReward;
+        Q = () => {
+            let e = V?.orbsReward;
             return (0, r.jsxs)("div", {
-                className: M.Tc,
+                className: x.Tc,
                 children: [
-                    W(),
-                    Y(),
                     z(),
-                    null != F &&
-                        (0, y.Ri)(F) &&
-                        (0, r.jsx)(l.wx6, { type: "info", children: w.intl.string(w.t.lORYb6) }),
+                    $(),
+                    X(),
+                    null != V &&
+                        (0, v.Ri)(V) &&
+                        (0, r.jsx)(l.wx6, { type: "info", children: M.intl.string(M.t.lORYb6) }),
                     null != e &&
                         e > 0 &&
-                        (0, r.jsx)(u.J, { Icon: l.Cp8, text: w.intl.format(w.t["ZV+aS9"], { orbCount: e }) }),
-                    null != H && null != F && (0, r.jsx)(k, { handleClose: n, sku: F, guild: H }),
+                        (0, r.jsx)(u.J, { Icon: l.Cp8, text: M.intl.format(M.t["ZV+aS9"], { orbCount: e }) }),
+                    null != W && null != V && (0, r.jsx)(U, { handleClose: n, sku: V, guild: W }),
                 ],
             });
         };
     return {
-        renderStepBody: () => (0, r.jsxs)("div", { className: M.Du, children: [$(), q()] }),
-        getLeftColumnComponent: $,
-        getRightColumnComponent: q,
+        renderStepBody: () => (0, r.jsxs)("div", { className: x.Du, children: [Z(), Q()] }),
+        getLeftColumnComponent: Z,
+        getRightColumnComponent: Q,
         onStepChange: t,
         onBackClick: n,
-        disabled: null == a || a.id === U?.id || i.length > L.Jo,
+        disabled: null == a || a.id === G?.id || i.length > w.Jo,
     };
 };
