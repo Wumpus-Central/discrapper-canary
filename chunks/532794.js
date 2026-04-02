@@ -105,6 +105,7 @@ function O(e) {
                                         product: e,
                                         analyticsLocations: L ?? [],
                                         purchaseType: C.gs.PROMOTIONAL,
+                                        overrideGradientColor: "nitro-pink",
                                     });
                             }
                         };

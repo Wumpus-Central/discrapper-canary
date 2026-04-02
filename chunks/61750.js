@@ -15,13 +15,14 @@ let a = (e) => {
         itemConsumed: d,
         purchaseType: _ = s.gs.FIAT,
         overrideGraphic: f,
-        rentalDuration: p,
-        rentalExpiresAt: h,
+        overrideGradientColor: p,
+        rentalDuration: h,
+        rentalExpiresAt: m,
     } = e;
     (0, i.mMO)(
         async () => {
             if (t.skuId === s.Dp.FRACTIONAL_PREMIUM || t.skuId === s.Dp.ORB_PROFILE_BADGE) {
-                let { default: e } = await Promise.all([n.e("46952"), n.e("95481")]).then(n.bind(n, 328064));
+                let { default: e } = await Promise.all([n.e("21957"), n.e("95481")]).then(n.bind(n, 328064));
                 return (n) =>
                     (0, r.jsx)(e, {
                         product: t,
@@ -33,7 +34,7 @@ let a = (e) => {
                         ...n,
                     });
             }
-            let { default: e } = await Promise.all([n.e("46952"), n.e("92643")]).then(n.bind(n, 393870));
+            let { default: e } = await Promise.all([n.e("21957"), n.e("92643")]).then(n.bind(n, 393870));
             return (n) =>
                 (0, r.jsx)(e, {
                     product: t,
@@ -43,8 +44,9 @@ let a = (e) => {
                     shouldShowPromotionalExperience: u,
                     purchaseType: _,
                     overrideGraphic: f,
-                    rentalDuration: p,
-                    rentalExpiresAt: h,
+                    overrideGradientColor: p,
+                    rentalDuration: h,
+                    rentalExpiresAt: m,
                     ...n,
                 });
         },

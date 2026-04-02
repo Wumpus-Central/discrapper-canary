@@ -16,9 +16,9 @@ var r = n(106778),
     A = n(306710),
     O = n(623373),
     R = n(660653),
-    I = n(536572),
-    _ = n(524246),
-    C = n(14368),
+    C = n(536572),
+    I = n(524246),
+    _ = n(14368),
     L = n(213530),
     m = n(961883),
     b = n(758836),
@@ -35,11 +35,12 @@ let g = (t) => {
             shouldShowPromotionalExperience: M,
             purchaseType: P = b.gs.FIAT,
             overrideGraphic: N,
+            overrideGradientColor: D,
         } = t,
-        D = (0, c.Q)(n),
-        x = (0, O.rb)(n, D),
-        { analyticsLocations: B } = (0, u.Ay)([...k, d.A.COLLECTIBLES_COLLECTED_MODAL]),
-        { hasRequiredProductItems: F } = ((t) => {
+        x = (0, c.Q)(n),
+        B = (0, O.rb)(n, x),
+        { analyticsLocations: F } = (0, u.Ay)([...k, d.A.COLLECTIBLES_COLLECTED_MODAL]),
+        { hasRequiredProductItems: U } = ((t) => {
             let { firstProfileEffect: e, firstAvatarDecoration: n, firstNameplate: i } = (0, h.f5)(t),
                 r = (0, p.aw)(t);
             return {
@@ -49,84 +50,85 @@ let g = (t) => {
                 isBundle: r,
                 hasRequiredProductItems: r ? (0, R.uh)(t) : null != n || null != e || null != i,
             };
-        })(x),
-        U = (0, o.A)({ analyticsLocations: B }),
-        w = T.intl.string(T.t.eZrmtq),
+        })(B),
+        w = (0, o.A)({ analyticsLocations: F }),
+        V = T.intl.string(T.t.eZrmtq),
         {
-            environment: V,
-            modalRef: j,
-            confettiCanvas: G,
-            setConfettiCanvas: H,
-            customConfettiDisplayOptions: W,
-        } = (0, m.mO)(x, P),
-        z = (0, I.VG)(x);
-    (0, m.$V)(x, B);
-    let { handleUseNow: K, isApplying: Q } = (0, E.p)({ product: x, onSuccess: g, onError: g }),
-        Y = (0, m.$k)({
-            product: x,
+            environment: j,
+            modalRef: G,
+            confettiCanvas: H,
+            setConfettiCanvas: W,
+            customConfettiDisplayOptions: z,
+        } = (0, m.mO)(B, P),
+        K = (0, C.VG)(B);
+    (0, m.$V)(B, F);
+    let { handleUseNow: Q, isApplying: Y } = (0, E.p)({ product: B, onSuccess: g, onError: g }),
+        q = (0, m.$k)({
+            product: B,
             overrideTitle: S,
             isVariantsGroupEnabled: !0,
             shouldShowPromotionalExperience: M,
-            productName: z,
+            productName: K,
         }),
-        q = (0, m.v8)({
-            product: x,
+        J = (0, m.v8)({
+            product: B,
             overrideDescription: v,
-            productName: z,
+            productName: K,
             shouldShowPromotionalExperience: M,
-            promotionalRewardCollectedText: w,
+            promotionalRewardCollectedText: V,
         }),
-        J = (0, m.aG)({
-            product: x,
+        Z = (0, m.aG)({
+            product: B,
             onClose: g,
-            analyticsLocations: B,
-            hasRequiredProductItems: F,
-            handleUseNow: K,
-            isApplying: Q,
-            openProfileSettings: U,
+            analyticsLocations: F,
+            hasRequiredProductItems: U,
+            handleUseNow: Q,
+            isApplying: Y,
+            openProfileSettings: w,
         }),
-        { enabled: Z } = (0, f.P)("CollectiblesCollectedModal"),
-        $ = "6/4";
-    switch (x.type) {
+        { enabled: $ } = (0, f.P)("CollectiblesCollectedModal"),
+        X = "6/4";
+    switch (B.type) {
         case a.R.NAMEPLATE:
         case a.R.AVATAR_DECORATION:
-            $ = "16/9";
+            X = "16/9";
             break;
         case a.R.BUNDLE:
-            $ = Z ? "16/9" : "6/4";
+            X = $ ? "16/9" : "6/4";
             break;
         case a.R.PROFILE_EFFECT:
         default:
-            $ = "6/4";
+            X = "6/4";
     }
-    let { confettiColors: X } = (0, A.A)(x.styles),
-        tt = N ?? {
+    let { confettiColors: tt } = (0, A.A)(B.styles),
+        te = N ?? {
             type: "dynamic",
             component: s.Oz7.COLLECTIBLES_PREVIEW,
-            aspectRatio: $,
-            props: { product: x, forCollectedModal: !0 },
+            aspectRatio: X,
+            props: { product: B, forCollectedModal: !0 },
         };
     return (0, i.jsx)(u.f5, {
-        value: B,
+        value: F,
         children: (0, i.jsxs)("div", {
-            ref: j,
+            ref: G,
             children: [
-                (0, i.jsx)(r.Fk, { ref: H, className: y.L, environment: V }),
+                (0, i.jsx)(r.Fk, { ref: W, className: y.L, environment: j }),
                 (0, i.jsx)(l.ExpressiveModal, {
-                    graphic: tt,
-                    title: Y,
-                    subtitle: q ?? void 0,
+                    graphic: te,
+                    title: q,
+                    subtitle: J ?? void 0,
                     onClose: g,
                     transitionState: e,
-                    actions: J,
+                    actions: Z,
+                    gradientColor: D ?? void 0,
                 }),
-                null != W
-                    ? (0, i.jsx)(L.K, { options: W })
-                    : (0, i.jsx)(_.A, {
-                          confettiTarget: j.current,
-                          confettiCanvas: G,
-                          sprites: (0, C.rA)(x.categorySkuId),
-                          colors: X?.map((t) => t.toHexString()),
+                null != z
+                    ? (0, i.jsx)(L.K, { options: z })
+                    : (0, i.jsx)(I.A, {
+                          confettiTarget: G.current,
+                          confettiCanvas: H,
+                          sprites: (0, _.rA)(B.categorySkuId),
+                          colors: tt?.map((t) => t.toHexString()),
                       }),
             ],
         }),
