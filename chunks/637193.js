@@ -1,11 +1,14 @@
-n.d(t, { p: () => l });
-var i = n(627968);
-n(64700);
-var s = n(397927);
-let l = (e) => {
-    let { analyticsLocations: t, guildId: l, initialSelectedNameplate: a } = e;
-    (0, s.mMO)(async () => {
-        let { default: e } = await n.e("42491").then(n.bind(n, 303318));
-        return (n) => (0, i.jsx)(e, { ...n, guildId: l, analyticsLocations: t, initialSelectedNameplate: a });
-    });
+r.d(t, { p: () => i });
+var a = r(627968);
+r(64700);
+var n = r(397927);
+let i = (e) => {
+    let { analyticsLocations: t, guildId: i, initialSelectedNameplate: s, stackingBehavior: l } = e;
+    (0, n.mMO)(
+        async () => {
+            let { default: e } = await r.e("42491").then(r.bind(r, 303318));
+            return (r) => (0, a.jsx)(e, { ...r, guildId: i, analyticsLocations: t, initialSelectedNameplate: s });
+        },
+        { stackingBehavior: l },
+    );
 };
