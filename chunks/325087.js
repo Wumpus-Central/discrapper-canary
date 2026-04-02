@@ -17,6 +17,7 @@ function c(e) {
         }, [n]),
         (0, i.jsx)(a.AM, {
             actions: [{ text: o.intl.string(o.t.facYnD), variant: "primary", onClick: A }],
+            alignmentStrategy: "edge",
             align: "top",
             body: o.intl.string(o.t.o4NGXc),
             caretConfig: { align: "start" },
