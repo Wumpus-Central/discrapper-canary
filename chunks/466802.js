@@ -19,19 +19,19 @@ var i = n(627968),
     C = n(75825),
     I = n(976860),
     E = n(871123),
-    b = n(317560),
-    v = n(780964),
+    v = n(317560),
+    b = n(780964),
     T = n(840065),
-    y = n(961350),
-    S = n(30793),
+    S = n(961350),
+    y = n(30793),
     N = n(189081),
     j = n(287809),
     L = n(67480),
     R = n(56739),
     P = n(954571),
     w = n(45938),
-    M = n(927578),
-    D = n(615396),
+    D = n(927578),
+    M = n(615396),
     k = n(427262),
     O = n(937266),
     U = n(652215),
@@ -54,8 +54,11 @@ class V extends a.PureComponent {
         let { width: e } = this.props;
         return e >= u.Tm;
     }
+    get isClientUpdateRequired() {
+        return this.props.resolveErrorCode === U.t02.INVALID_GIFT_REDEMPTION_CLIENT_UPDATE_REQUIRED;
+    }
     handleViewInventory() {
-        (0, T.openUserSettings)(v.X.GIFT_PANEL);
+        (0, T.openUserSettings)(b.X.GIFT_PANEL);
     }
     renderTitle = () => (this.props.isSelfGift ? G.intl.string(G.t.mT9B49) : G.intl.string(G.t.Vo5yHw));
     renderActions = () =>
@@ -67,7 +70,12 @@ class V extends a.PureComponent {
                   onClick: this.handleViewInventory,
               })
             : (0, i.jsx)(c.Button, { variant: "primary", size: "sm", text: G.intl.string(G.t.bUvv1f), disabled: !0 });
-    renderTagline = () => (this.props.isSelfGift ? G.intl.string(G.t.eEM3dq) : G.intl.string(G.t.tB8S6u));
+    renderTagline = () =>
+        this.isClientUpdateRequired
+            ? G.intl.string(G.t.QXgO5w)
+            : this.props.isSelfGift
+              ? G.intl.string(G.t.eEM3dq)
+              : G.intl.string(G.t.tB8S6u);
     render() {
         return (0, i.jsx)(u.ug, {
             isHorizontal: this.isHorizontal,
@@ -92,7 +100,7 @@ class q extends a.Component {
                 : (0, I.pX)(U.BVt.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } });
     };
     handleVerificationClick = (e) => {
-        e.stopPropagation(), e.preventDefault(), (0, T.openUserSettings)(v.X.ACCOUNT_PANEL);
+        e.stopPropagation(), e.preventDefault(), (0, T.openUserSettings)(b.X.ACCOUNT_PANEL);
     };
     handleAccept = (e) => {
         let { channelId: t, code: n, content: i, type: a, giftInfo: r } = this.props;
@@ -109,13 +117,13 @@ class q extends a.Component {
         let { giftCode: t, sku: n, skuApplication: i } = this.props;
         null != n && (0, E.bF)(n) && null != i && null != i.guildId
             ? (e.preventDefault(),
-              (0, b.R)({
+              (0, v.R)({
                   skuId: n.id,
                   applicationId: i.id,
                   isStorefront: !1,
                   analyticsLocations: [h.A.GIFT_CODE_EMBED],
               }))
-            : null != t && t.isSubscription && (e.preventDefault(), (0, T.openUserSettings)(v.X.NITRO_PANEL));
+            : null != t && t.isSubscription && (e.preventDefault(), (0, T.openUserSettings)(b.X.NITRO_PANEL));
     };
     handleClaimPromotion = (e) => {
         e.stopPropagation(), e.preventDefault();
@@ -161,7 +169,7 @@ class q extends a.Component {
             r =
                 (!e.isSubscription && null != t) ||
                 (!e.isSelfRedeemable && a) ||
-                (e.isExistingPremiumSubscriptionDisallowed && (0, M.TW)(n)),
+                (e.isExistingPremiumSubscriptionDisallowed && (0, D.TW)(n)),
             l = e.redeemed || r || e.isClaimed || !n.verified,
             s = e.redeemed
                 ? G.intl.string(G.t.BTihou)
@@ -284,7 +292,7 @@ class q extends a.Component {
         });
     }
     render() {
-        let { giftCode: e, resolved: t, width: n, isSelfGift: a } = this.props;
+        let { giftCode: e, resolved: t, resolveErrorCode: n, width: a, isSelfGift: r } = this.props;
         if (null != e && null != e.promotion)
             return (0, i.jsx)(O.k, {
                 skuId: e.skuId,
@@ -293,38 +301,43 @@ class q extends a.Component {
                 renderCustomActions: () => this.renderPromotionActions(),
                 renderCustomTitle: () => G.intl.string(G.t.X4p5uH),
                 renderCustomTagline: () => G.intl.string(G.t.VIuwD7),
-                width: n,
+                width: a,
             });
         if (null == e || e.revoked)
-            if (t) return (0, i.jsx)(V, { isSelfGift: a, width: n });
-            else return (0, i.jsx)(u.Wb, { isHorizontal: n >= u.Tm });
+            if (t) return (0, i.jsx)(V, { isSelfGift: r, width: a, resolveErrorCode: n });
+            else return (0, i.jsx)(u.Wb, { isHorizontal: a >= u.Tm });
         return (0, g.hU)(e) ? (0, i.jsx)("div", { className: F.mp, children: this.renderEmbed() }) : this.renderEmbed();
     }
 }
 let W = (0, m.A)((0, _.A)(q)),
     z = function (e) {
         let { code: t, author: n } = e,
-            { giftCode: a, resolved: r } = (0, d.cf)([S.A], () => ({
-                giftCode: S.A.get(t),
-                resolved: S.A.getIsResolved(t),
-            })),
-            l = (0, d.bG)([j.default], () => (null != a && null != a.userId ? j.default.getUser(a.userId) : null)),
-            s = (0, d.bG)([L.A], () => (null != a ? L.A.get(a.skuId) : null)),
-            o = (0, d.bG)([N.A], () =>
-                null != s && a?.entitlementBranches != null ? w.YI(a.entitlementBranches, s, N.A) : null,
+            {
+                giftCode: a,
+                resolved: r,
+                resolveErrorCode: l,
+            } = (0, d.cf)([y.A], () => {
+                let e = y.A.getError(t);
+                return { giftCode: y.A.get(t), resolved: y.A.getIsResolved(t), resolveErrorCode: e?.code ?? null };
+            }),
+            s = (0, d.bG)([j.default], () => (null != a && null != a.userId ? j.default.getUser(a.userId) : null)),
+            o = (0, d.bG)([L.A], () => (null != a ? L.A.get(a.skuId) : null)),
+            c = (0, d.bG)([N.A], () =>
+                null != o && a?.entitlementBranches != null ? w.YI(a.entitlementBranches, o, N.A) : null,
             ),
-            c = (0, p.h)(s?.applicationId),
-            u = (0, D.zz)(a?.subscriptionPlanId),
-            _ = (0, d.bG)([y.default], () => (null != a ? y.default.getId() === a.userId : y.default.getId() === n.id));
+            u = (0, p.h)(o?.applicationId),
+            _ = (0, M.zz)(a?.subscriptionPlanId),
+            m = (0, d.bG)([S.default], () => (null != a ? S.default.getId() === a.userId : S.default.getId() === n.id));
         return (0, i.jsx)(W, {
             ...e,
-            skuApplication: c,
+            skuApplication: u,
             giftCode: a,
             resolved: r,
-            gifter: l,
-            libraryApplication: o,
-            subscriptionPlan: u,
-            sku: s,
-            isSelfGift: _,
+            resolveErrorCode: l,
+            gifter: s,
+            libraryApplication: c,
+            subscriptionPlan: _,
+            sku: o,
+            isSelfGift: m,
         });
     };

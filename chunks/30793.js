@@ -121,8 +121,8 @@ let x = new G(o.h, {
             return (C = C.filter((e) => e !== t.code)), h.includes(t.code) || (h = [...h, t.code]), R(t);
         },
         GIFT_CODE_RESOLVE_FAILURE: function (e) {
-            let { code: t } = e;
-            (C = C.filter((e) => e !== t)), h.includes(t) || (h = [...h, t]);
+            let { code: t, error: l } = e;
+            (C = C.filter((e) => e !== t)), h.includes(t) || (h = [...h, t]), null != l && (p[t] = l);
         },
         GIFT_CODE_REDEEM: function (e) {
             let { code: t } = e;
