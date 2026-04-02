@@ -14,7 +14,7 @@ e.exports = {
     ij: "wishlistButton__38ccf",
     r$: "logoContainer__38ccf",
     wm: "logo__38ccf",
-    p6: "priceContainer__38ccf",
+    sj: "priceSectionContainer__38ccf",
     qw: "offerNoticeContainer__38ccf",
     Yu: "offerNoticeContent__38ccf",
     fb: "offerNoticeBody__38ccf",
