@@ -548,6 +548,7 @@ var r = (function (e) {
         (e.GIFT_CODE_EMBED = "gift code embed"),
         (e.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED = "slayer storefront product details embed"),
         (e.SLAYER_STOREFRONT_SHOP_TAB = "slayer storefront shop tab"),
+        (e.SLAYER_STOREFRONT_VC_GIFTING_PANEL = "slayer storefront vc gifting panel"),
         (e.AGE_GROUP = "age group"),
         (e.MOBILE_ACCOUNT_LINK_LARGE_BANNER = "mobile account link large banner"),
         (e.MOBILE_ACCOUNT_LINK_MEDIUM_BANNER = "mobile account link medium banner"),

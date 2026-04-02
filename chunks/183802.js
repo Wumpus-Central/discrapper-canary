@@ -32,8 +32,8 @@ var r,
     k = n(310962),
     v = n(44724),
     B = n(345938),
-    y = n(533406),
-    j = n(971146),
+    j = n(533406),
+    y = n(971146),
     U = n(665711),
     G = n(366523),
     w = n(300182),
@@ -44,7 +44,7 @@ var r,
     W = n(995393),
     K = n(652215),
     z = n(985018),
-    q = n(105791);
+    q = n(359170);
 let X = [
         [0, 50],
         [0, 50],
@@ -161,10 +161,11 @@ function tt(t) {
         { primaryIconAsset: tf, primaryIconLabel: tI } = i.useMemo(() => (0, h.Cv)(P, P?.applicationId), [P]),
         tS = (0, _.bG)([p.A], () => (null != $ ? (p.A.getStorefrontState($)?.activePage ?? 0) : 0)),
         tC = i.useMemo(() => {
-            if (P?.tenantMetadata?.socialLayer?.expiresAt == null) return null;
-            let t = d()(),
-                e = Math.max(d()(P.tenantMetadata.socialLayer.expiresAt).diff(t, "days"), 1);
-            return e <= 3 ? z.intl.format(z.t.PWw4Vp, { days: e }) : null;
+            let t = P?.tenantMetadata?.socialLayer?.expiresAt;
+            if (null == t) return null;
+            let e = d()(),
+                n = Math.max(d()(t).diff(e, "days"), 1);
+            return n <= 3 ? z.intl.format(z.t.PWw4Vp, { days: n }) : null;
         }, [P?.tenantMetadata?.socialLayer?.expiresAt]),
         tH = (0, h.xf)(P),
         tO = i.useMemo(() => {
@@ -284,7 +285,7 @@ function tt(t) {
                                                   tk &&
                                                       (0, s.jsx)("div", {
                                                           className: q.S1,
-                                                          children: (0, s.jsx)(j.V, {
+                                                          children: (0, s.jsx)(y.V, {
                                                               application: tt,
                                                               textColor: "always-white",
                                                           }),
@@ -361,7 +362,7 @@ function tt(t) {
                                                         onClick: (t) => {
                                                             t.stopPropagation(),
                                                                 tR(W.bB.BUY_BUTTON),
-                                                                (0, y.a)(
+                                                                (0, j.a)(
                                                                     P,
                                                                     { isGift: !1 },
                                                                     {
@@ -395,7 +396,7 @@ function tt(t) {
                                                   onGift: (t) => {
                                                       t.stopPropagation(),
                                                           tR(W.bB.GIFT_BUTTON),
-                                                          (0, y.a)(
+                                                          (0, j.a)(
                                                               P,
                                                               { isGift: !0 },
                                                               {
