@@ -61,10 +61,10 @@ function v(e) {
             A.selectedCraftingClasses.size < Object.keys(o.xO).length &&
             (A.selectedCraftingClasses.add(t.craftingClass), (A = { ...A }));
 }
-function C() {
+function N() {
     c = !1;
 }
-function N(e) {
+function C(e) {
     e.counters.forEach((e) => {
         p[e.id] = l(e.previousCount, e.currentCount);
     }),
@@ -76,7 +76,7 @@ function R(e) {
 }
 function O(e) {
     let { activity: t, userData: n, changes: i } = e;
-    null != d && ((E = n.xp - d.xp), (m[t] = E), (m = { ...m })),
+    null != d && (E = n.xp - d.xp) > 0 && ((m[t] = E), (m = { ...m })),
         (d = n),
         (h[t] = i),
         t === o.$p.GATHERING
@@ -192,11 +192,11 @@ let M = new w(s.h, {
     GORILLA_FETCH_USER_DATA_FAILURE: S,
     GORILLA_UPDATE_USER_DATA_START: y,
     GORILLA_UPDATE_USER_DATA_SUCCESS: v,
-    GORILLA_UPDATE_USER_DATA_FAILURE: C,
+    GORILLA_UPDATE_USER_DATA_FAILURE: N,
     GORILLA_START_ACTIVITY_SUCCESS: R,
     GORILLA_COMPLETE_ACTIVITY_SUCCESS: O,
     GORILLA_CLEAR_ACTIVITY_REWARDS: b,
-    GORILLA_FETCH_COUNTERS_SUCCESS: N,
+    GORILLA_FETCH_COUNTERS_SUCCESS: C,
     GORILLA_SET_VOLUME: D,
     LOGOUT: L,
 });

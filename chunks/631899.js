@@ -2,7 +2,7 @@
 n.d(t, { A: () => S });
 var r = n(627968),
     i = n(64700),
-    s = n(773690),
+    s = n(687498),
     a = n(158954),
     o = n(311907),
     l = n(133636),
@@ -51,17 +51,19 @@ function T(e) {
                             className: g.ey,
                             children: [
                                 Object.keys(t).map((e) => (0, r.jsx)(I, { resource: e, amount: t[e] ?? 0 }, e)),
-                                (0, r.jsxs)(c.A, {
-                                    className: g.CZ,
-                                    children: [
-                                        (0, r.jsx)(f.A, {
-                                            className: g.Ht,
-                                            variant: "text-lg/bold",
-                                            children: E.intl.string(m.default["9brroY"]),
-                                        }),
-                                        (0, r.jsxs)(f.A, { variant: "text-lg/bold", children: ["+", u] }),
-                                    ],
-                                }),
+                                u > 0
+                                    ? (0, r.jsxs)(c.A, {
+                                          className: g.CZ,
+                                          children: [
+                                              (0, r.jsx)(f.A, {
+                                                  className: g.Ht,
+                                                  variant: "text-lg/bold",
+                                                  children: E.intl.string(m.default["9brroY"]),
+                                              }),
+                                              (0, r.jsxs)(f.A, { variant: "text-lg/bold", children: ["+", u] }),
+                                          ],
+                                      })
+                                    : null,
                             ],
                         }),
                     ],
