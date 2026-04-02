@@ -9,5 +9,30 @@ let r = (0, i.mj)({
         1: { enabled: !0, enabledQuestStates: new Set([a.UA.UNENROLLED]) },
         2: { enabled: !0, enabledQuestStates: new Set([a.UA.UNENROLLED, a.UA.ENROLLED]) },
         3: { enabled: !0, enabledQuestStates: new Set([a.UA.UNENROLLED, a.UA.ENROLLED, a.UA.INCOMPLETE]) },
+        4: {
+            enabled: !0,
+            enabledQuestStates: new Set([a.UA.UNENROLLED, a.UA.ENROLLED, a.UA.INCOMPLETE, a.UA.COMPLETED]),
+        },
+        5: {
+            enabled: !0,
+            enabledQuestStates: new Set([
+                a.UA.UNENROLLED,
+                a.UA.ENROLLED,
+                a.UA.INCOMPLETE,
+                a.UA.COMPLETED,
+                a.UA.CLAIMED,
+            ]),
+        },
+        6: {
+            enabled: !0,
+            enabledQuestStates: new Set([
+                a.UA.UNENROLLED,
+                a.UA.ENROLLED,
+                a.UA.INCOMPLETE,
+                a.UA.COMPLETED,
+                a.UA.CLAIMED,
+                a.UA.EXPIRED,
+            ]),
+        },
     },
 });
