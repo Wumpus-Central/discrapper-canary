@@ -10,7 +10,7 @@ var r = i(300233),
     c = i(136179),
     C = i(250253),
     u = i(652215),
-    x = i(235201);
+    x = i(495410);
 function h(t) {
     let { guildId: e } = t,
         i = (0, n.uk)(e)[0],
@@ -40,5 +40,5 @@ function h(t) {
 }
 function _(t) {
     let { guildId: e } = t;
-    return (0, s.jsx)(r.H, { guildId: e, refetchOnMount: !0, children: (0, s.jsx)(h, { guildId: e }) });
+    return (0, s.jsx)(r.H, { guildId: e, children: (0, s.jsx)(h, { guildId: e }) });
 }
