@@ -22,12 +22,12 @@ var r = n(627968),
     S = n(732919),
     y = n(166341),
     v = n(771859),
-    C = n(417602),
-    N = n(431720),
+    N = n(417602),
+    C = n(431720),
     R = n(421116),
     O = n(346640),
     b = n(985018),
-    D = n(393144),
+    D = n(296957),
     L = n(607011);
 function w(e) {
     let { onClose: t } = e;
@@ -72,7 +72,7 @@ function w(e) {
     let j = (0, i.useCallback)(() => {
             switch (P) {
                 case O.Q0.PATCH_NOTES:
-                    return (0, r.jsx)(N.A, { setScreen: k });
+                    return (0, r.jsx)(C.A, { setScreen: k });
                 case O.Q0.INTRO:
                     return (0, r.jsx)(v.A, { setScreen: k });
                 case O.Q0.COMBAT_CLASS_SELECTION:
@@ -84,7 +84,7 @@ function w(e) {
                 case O.Q0.COMBAT:
                     return (0, r.jsx)(T.A, { setScreen: k });
                 case O.Q0.MAIN:
-                    return (0, r.jsx)(C.A, { setScreen: k });
+                    return (0, r.jsx)(N.A, { setScreen: k });
                 case O.Q0.STATS:
                     return (0, r.jsx)(R.A, { setScreen: k });
                 case O.Q0.ACHIEVEMENTS:
@@ -98,7 +98,7 @@ function w(e) {
         }, [t]),
         K = (0, i.useCallback)(() => {
             (0, l.mMO)(async () => {
-                let { default: e } = await n.e("84445").then(n.bind(n, 740908));
+                let { default: e } = await Promise.resolve().then(n.bind(n, 740908));
                 return (t) => (0, r.jsx)(e, { ...t, setScreen: k });
             });
         }, []);

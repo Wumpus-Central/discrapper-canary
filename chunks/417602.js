@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => R });
+n.d(t, { A: () => O });
 var r = n(627968),
     i = n(158954),
     s = n(311907),
@@ -12,103 +12,123 @@ var r = n(627968),
     _ = n(772306),
     f = n(208623),
     p = n(198580),
-    h = n(264379),
-    m = n(346640),
-    E = n(429311),
-    g = n(985018),
-    A = n(457007),
-    I = n(260405),
-    T = n(649747),
-    S = n(47588),
-    y = n(755117),
-    v = n(338958);
+    h = n(740908),
+    m = n(264379),
+    E = n(346640),
+    g = n(350601),
+    A = n(985018),
+    I = n(962906),
+    T = n(260405),
+    S = n(649747),
+    y = n(47588),
+    v = n(755117),
+    N = n(338958);
 let C = 500,
-    N = [S.A, y.A, v.A];
-function R(e) {
+    R = [y.A, v.A, N.A];
+function O(e) {
     let { setScreen: t } = e,
         {
             canCraft: n,
-            canFight: S,
-            craftingClass: y,
-            combatClass: v,
+            canFight: y,
+            craftingClass: v,
+            combatClass: N,
         } = (0, s.cf)([a.A], () => {
             let e = a.A.getCraftingClass(),
                 t = a.A.getCombatClass();
             return {
-                canCraft: null != e && m.zX[e].consumesFrom.every((e) => a.A.getCounter(e).currentCount > 0),
-                canFight: null != t && m.P6[t].consumesFrom.every((e) => a.A.getCounter(e).currentCount > 0),
+                canCraft: null != e && E.zX[e].consumesFrom.every((e) => a.A.getCounter(e).currentCount > 0),
+                canFight: null != t && E.P6[t].consumesFrom.every((e) => a.A.getCounter(e).currentCount > 0),
                 craftingClass: e,
                 combatClass: t,
             };
         }),
-        R = () => {
+        O = () => {
             (0, l.PT)(o.R.TWENTY, 1);
         };
     return (0, r.jsx)("div", {
-        className: A.iW,
+        className: I.iW,
         children: (0, r.jsxs)("div", {
-            className: A.kL,
+            className: I.kL,
             children: [
                 (0, r.jsx)(_.A, {}),
                 (0, r.jsxs)("div", {
-                    className: A.Qs,
+                    className: I.Qs,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: A.ES,
+                            className: I.ES,
                             children: [
                                 (0, r.jsx)(p.A, {
-                                    label: g.intl.string(E.default["eKL6+6"]),
-                                    resources: [m.EC.MAGIC, m.EC.ARMOR, m.EC.WEAPON],
+                                    label: A.intl.string(g.default["eKL6+6"]),
+                                    resources: [E.EC.MAGIC, E.EC.ARMOR, E.EC.WEAPON],
                                 }),
                                 (0, r.jsx)(p.A, {
-                                    label: g.intl.string(E.default.Xs0p95),
-                                    resources: [m.EC.LEATHER, m.EC.METAL, m.EC.WOOD],
+                                    label: A.intl.string(g.default.Xs0p95),
+                                    resources: [E.EC.LEATHER, E.EC.METAL, E.EC.WOOD],
                                 }),
                             ],
                         }),
                         (0, r.jsxs)("div", {
-                            className: A.to,
+                            className: I.to,
                             children: [
                                 (0, r.jsx)(u.A, {
-                                    className: A.m9,
-                                    srcs: N,
-                                    alt: g.intl.string(E.default.GWYxMh),
+                                    className: I.m9,
+                                    srcs: R,
+                                    alt: A.intl.string(g.default.GWYxMh),
                                     updateInterval: C,
                                 }),
                                 (0, r.jsx)(c.A, {}),
-                                (0, r.jsx)(i.DUT, { className: A.Wj, "aria-label": "", onClick: R }),
+                                (0, r.jsx)(i.DUT, { className: I.Wj, "aria-label": "", onClick: O }),
                             ],
                         }),
-                        (0, r.jsx)("div", {
-                            className: A.ES,
-                            children: (0, r.jsx)(p.A, {
-                                label: g.intl.string(E.default.fCieSS),
-                                resources: [m.EC.HEALERS, m.EC.TANKS],
-                            }),
+                        (0, r.jsxs)("div", {
+                            className: I.ES,
+                            children: [
+                                (0, r.jsx)(p.A, {
+                                    label: A.intl.string(g.default.ecnJXx),
+                                    resources: [
+                                        E.$6.HEALER,
+                                        E.$6.TANK,
+                                        E.$6.DPS,
+                                        E.xO.MAGIC_CRAFTER,
+                                        E.xO.ARMOR_CRAFTER,
+                                        E.xO.WEAPON_CRAFTER,
+                                    ],
+                                    smallIcons: !0,
+                                    action: (0, r.jsx)(h.h, {
+                                        setScreen: t,
+                                        tooltipText: A.intl.string(g.default["sTE/Mu"]),
+                                        iconButtonClassName: I.H_,
+                                    }),
+                                }),
+                                (0, r.jsx)(p.A, {
+                                    label: A.intl.string(g.default.fCieSS),
+                                    resources: [E.EC.HEALERS, E.EC.TANKS],
+                                }),
+                            ],
                         }),
                     ],
                 }),
                 (0, r.jsxs)("div", {
-                    className: A.o1,
+                    className: I.o1,
                     children: [
                         (0, r.jsx)(f.A, { setScreen: t }),
                         (0, r.jsxs)("div", {
-                            className: A.SJ,
+                            className: I.SJ,
                             children: [
-                                (0, r.jsx)(h.A, {}),
+                                (0, r.jsx)(m.A, {}),
                                 (0, r.jsx)(d.A, {
-                                    activity: m.$p.CRAFTING,
-                                    text: g.intl.string(E.default.DWkAjh),
-                                    asset: null != y ? m.zX[y].asset : I.A,
-                                    onClick: () => t(m.Q0.CRAFTING),
+                                    activity: E.$p.CRAFTING,
+                                    text: A.intl.string(g.default.DWkAjh),
+                                    asset: null != v ? E.zX[v].asset : T.A,
+                                    onClick: () => t(E.Q0.CRAFTING),
                                     disabled: !n,
                                 }),
                                 (0, r.jsx)(d.A, {
-                                    activity: m.$p.COMBAT,
-                                    text: g.intl.string(E.default.YU5pl5),
-                                    asset: null != v ? m.P6[v].asset : T.A,
-                                    disabled: !S,
-                                    onClick: () => t(m.Q0.COMBAT),
+                                    activity: E.$p.COMBAT,
+                                    text: A.intl.string(g.default.YU5pl5),
+                                    asset: null != N ? E.P6[N].asset : S.A,
+                                    disabled: !y,
+                                    onClick: () => t(E.Q0.COMBAT),
                                 }),
                             ],
                         }),

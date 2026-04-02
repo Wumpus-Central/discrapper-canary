@@ -1,196 +1,200 @@
-t.d(s, { default: () => k });
-var n = t(627968),
-    l = t(64700),
-    a = t(503698),
-    r = t.n(a),
-    i = t(989349),
-    c = t.n(i),
-    o = t(311907),
-    d = t(287809),
-    u = t(927813),
-    m = t(251358),
-    x = t(133636),
-    v = t(257044),
-    f = t(192480),
-    g = t(640884),
-    h = t(178090),
-    b = t(683926),
-    A = t(547678),
-    j = t(346640),
-    _ = t(429311),
-    C = t(985018),
-    p = t(462285),
-    w = t(696545),
-    N = t(173607);
-function M(e) {
-    let { closeModal: s, setScreen: t } = e,
-        [a, r] = (0, l.useState)(!1);
-    return (0, n.jsxs)("div", {
-        className: p.H_,
+"use strict";
+n.d(t, { default: () => O, h: () => R });
+var r = n(627968),
+    i = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(989349),
+    l = n.n(o),
+    u = n(311907),
+    c = n(287809),
+    d = n(927813),
+    _ = n(251358),
+    f = n(133636),
+    p = n(257044),
+    h = n(192480),
+    m = n(640884),
+    E = n(178090),
+    g = n(683926),
+    A = n(547678),
+    I = n(346640),
+    T = n(350601),
+    S = n(985018),
+    y = n(934840),
+    v = n(696545),
+    N = n(173607);
+function C(e) {
+    let { closeModal: t, setScreen: n } = e,
+        [s, a] = (0, i.useState)(!1),
+        o = () => {
+            n(I.Q0.PATCH_NOTES), t();
+        };
+    return (0, r.jsxs)("div", {
+        className: y.H_,
         children: [
-            (0, n.jsx)(b.A, { visible: a, text: C.intl.string(_.default["ZKTI/z"]) }),
-            (0, n.jsx)(v.A, {
-                contentClassName: p.gb,
-                onClick: () => {
-                    t(j.Q0.PATCH_NOTES), s();
-                },
+            (0, r.jsx)(g.A, { visible: s, text: S.intl.string(T.default["ZKTI/z"]) }),
+            (0, r.jsx)(p.A, {
+                contentClassName: y.gb,
+                onClick: o,
                 color: "white",
-                "aria-label": C.intl.string(_.default["ZKTI/z"]),
-                onMouseEnter: () => r(!0),
-                onMouseLeave: () => r(!1),
-                children: (0, n.jsx)("img", { src: N.A, alt: "" }),
+                "aria-label": S.intl.string(T.default["ZKTI/z"]),
+                onMouseEnter: () => a(!0),
+                onMouseLeave: () => a(!1),
+                children: (0, r.jsx)("img", { src: N.A, alt: "" }),
             }),
         ],
     });
 }
-function T(e) {
-    let { closeModal: s, setScreen: t, ignoreCooldown: a, tooltipText: i } = e,
-        d = (0, o.bG)([x.A], () => x.A.isUpdatingUserData()),
-        f = (0, o.bG)([x.A], () => null != x.A.getCombatClass() && null != x.A.getCraftingClass()),
-        g = (0, o.bG)([x.A], () => x.A.getClassSelectedAt()),
-        h = (0, l.useRef)(null),
-        [A, N] = (0, l.useState)(new Date().getTime()),
-        [M, T] = (0, l.useState)(!1),
-        k = null != g ? A - g.getTime() : j.AW,
-        E = j.AW - k,
-        S = !a && E > 0,
-        L = S ? c().utc(E).format("HH:mm:ss") : null,
-        D = async () => {
-            d || (await (0, m.nb)({}), t(j.Q0.COMBAT_CLASS_SELECTION), s());
+function R(e) {
+    let { closeModal: t, setScreen: n, ignoreCooldown: s, tooltipText: o, iconButtonClassName: c } = e,
+        h = (0, u.bG)([f.A], () => f.A.isUpdatingUserData()),
+        m = (0, u.bG)([f.A], () => null != f.A.getCombatClass() && null != f.A.getCraftingClass()),
+        E = (0, u.bG)([f.A], () => f.A.getClassSelectedAt()),
+        A = (0, i.useRef)(null),
+        [N, C] = (0, i.useState)(new Date().getTime()),
+        [R, O] = (0, i.useState)(!1),
+        b = null != E ? N - E.getTime() : I.AW,
+        D = I.AW - b,
+        L = !s && D > 0,
+        w = L ? l().utc(D).format("HH:mm:ss") : null,
+        M = async () => {
+            h || (await (0, _.nb)({}), n(I.Q0.COMBAT_CLASS_SELECTION), t?.());
         };
     return (
-        (0, l.useEffect)(
+        (0, i.useEffect)(
             () => (
-                (h.current = setInterval(() => N(new Date().getTime()), u.A.Millis.SECOND)),
-                () => clearInterval(h.current)
+                (A.current = setInterval(() => C(new Date().getTime()), d.A.Millis.SECOND)),
+                () => clearInterval(A.current)
             ),
             [],
         ),
-        (0, l.useEffect)(() => {
-            E <= 0 && clearInterval(h.current);
-        }, [E]),
-        (0, n.jsxs)("div", {
-            className: p.H_,
+        (0, i.useEffect)(() => {
+            D <= 0 && clearInterval(A.current);
+        }, [D]),
+        (0, r.jsxs)("div", {
+            className: y.H_,
             children: [
-                (0, n.jsx)(b.A, {
-                    visible: M,
-                    text: null != L ? C.intl.format(_.default.Qw7Hn5, { formattedCooldown: L }) : i,
+                (0, r.jsx)(g.A, {
+                    visible: R,
+                    text: null != w ? S.intl.format(T.default.Qw7Hn5, { formattedCooldown: w }) : o,
                 }),
-                (0, n.jsx)(v.A, {
-                    contentClassName: p.gb,
-                    onClick: D,
+                (0, r.jsx)(p.A, {
+                    contentClassName: c,
+                    onClick: M,
                     color: "white",
-                    "aria-label": C.intl.string(_.default["sTE/Mu"]),
-                    disabled: !f || S,
-                    onMouseEnter: () => T(!0),
-                    onMouseLeave: () => T(!1),
-                    children: (0, n.jsx)("img", { className: r()({ [p.Zm]: d }), src: w.A, alt: "" }),
+                    "aria-label": S.intl.string(T.default["sTE/Mu"]),
+                    disabled: !m || L,
+                    onMouseEnter: () => O(!0),
+                    onMouseLeave: () => O(!1),
+                    children: (0, r.jsx)("img", { className: a()({ [y.Zm]: h }), src: v.A, alt: "" }),
                 }),
             ],
         })
     );
 }
-function k(e) {
-    let { setScreen: s, ...t } = e,
-        a = (0, o.bG)([x.A], () => x.A.soundVolume),
-        r = (0, o.bG)([x.A], () => x.A.musicVolume),
-        i = (0, o.bG)([d.default], () => d.default.getCurrentUser()?.isStaff() ?? !1),
-        c = (0, l.useCallback)(
+function O(e) {
+    let { setScreen: t, ...n } = e,
+        s = (0, u.bG)([f.A], () => f.A.soundVolume),
+        a = (0, u.bG)([f.A], () => f.A.musicVolume),
+        o = (0, u.bG)([c.default], () => c.default.getCurrentUser()?.isStaff() ?? !1),
+        l = (0, i.useCallback)(
             (e) => {
-                (0, m.zv)({ soundVolume: e / 100, musicVolume: r });
-            },
-            [r],
-        ),
-        u = (0, l.useCallback)(
-            (e) => {
-                (0, m.zv)({ soundVolume: a, musicVolume: e / 100 });
+                (0, _.zv)({ soundVolume: e / 100, musicVolume: a });
             },
             [a],
+        ),
+        d = (0, i.useCallback)(
+            (e) => {
+                (0, _.zv)({ soundVolume: s, musicVolume: e / 100 });
+            },
+            [s],
         );
-    return (0, n.jsxs)(f.A, {
-        ...t,
+    return (0, r.jsxs)(h.A, {
+        ...n,
         children: [
-            (0, n.jsx)(h.A, {
+            (0, r.jsx)(E.A, {
                 variant: "heading-xxl/normal",
-                className: p.DD,
-                children: C.intl.string(_.default.xX7sUM),
+                className: y.DD,
+                children: S.intl.string(T.default.xX7sUM),
             }),
-            (0, n.jsxs)("div", {
-                className: p.W0,
+            (0, r.jsxs)("div", {
+                className: y.W0,
                 children: [
-                    (0, n.jsxs)("div", {
-                        className: p.$K,
+                    (0, r.jsxs)("div", {
+                        className: y.$K,
                         children: [
-                            (0, n.jsxs)("div", {
-                                className: p.Ry,
+                            (0, r.jsxs)("div", {
+                                className: y.Ry,
                                 children: [
-                                    (0, n.jsx)(h.A, {
+                                    (0, r.jsx)(E.A, {
                                         variant: "text-lg/normal",
-                                        children: C.intl.string(_.default.U8kWWQ),
+                                        children: S.intl.string(T.default.U8kWWQ),
                                     }),
-                                    (0, n.jsxs)(h.A, {
-                                        variant: "text-md/normal",
-                                        children: [Math.round(100 * r), "%"],
-                                    }),
-                                ],
-                            }),
-                            (0, n.jsx)(g.A, { percentage: 100 * r, onClick: u }),
-                        ],
-                    }),
-                    (0, n.jsxs)("div", {
-                        className: p.$K,
-                        children: [
-                            (0, n.jsxs)("div", {
-                                className: p.Ry,
-                                children: [
-                                    (0, n.jsx)(h.A, {
-                                        variant: "text-lg/normal",
-                                        children: C.intl.string(_.default["3DqH/j"]),
-                                    }),
-                                    (0, n.jsxs)(h.A, {
+                                    (0, r.jsxs)(E.A, {
                                         variant: "text-md/normal",
                                         children: [Math.round(100 * a), "%"],
                                     }),
                                 ],
                             }),
-                            (0, n.jsx)(g.A, { percentage: 100 * a, onClick: c }),
+                            (0, r.jsx)(m.A, { percentage: 100 * a, onClick: d }),
                         ],
                     }),
-                    (0, n.jsxs)("div", {
-                        className: p.SF,
+                    (0, r.jsxs)("div", {
+                        className: y.$K,
                         children: [
-                            (0, n.jsx)(h.A, {
-                                variant: "text-lg/normal",
-                                children: C.intl.string(_.default["ibkUQ/"]),
-                            }),
-                            (0, n.jsx)(A.A, {}),
-                        ],
-                    }),
-                    (0, n.jsxs)("div", {
-                        className: p.aO,
-                        children: [
-                            (0, n.jsx)(h.A, { variant: "text-md/normal", children: C.intl.string(_.default.jFYQgq) }),
-                            (0, n.jsxs)("div", {
-                                className: p.qr,
+                            (0, r.jsxs)("div", {
+                                className: y.Ry,
                                 children: [
-                                    (0, n.jsx)(M, { closeModal: t.onClose, setScreen: s }),
-                                    (0, n.jsx)(T, {
-                                        closeModal: t.onClose,
-                                        setScreen: s,
-                                        tooltipText: C.intl.string(_.default["sTE/Mu"]),
+                                    (0, r.jsx)(E.A, {
+                                        variant: "text-lg/normal",
+                                        children: S.intl.string(T.default["3DqH/j"]),
                                     }),
-                                    i
-                                        ? (0, n.jsx)(T, {
-                                              closeModal: t.onClose,
-                                              setScreen: s,
+                                    (0, r.jsxs)(E.A, {
+                                        variant: "text-md/normal",
+                                        children: [Math.round(100 * s), "%"],
+                                    }),
+                                ],
+                            }),
+                            (0, r.jsx)(m.A, { percentage: 100 * s, onClick: l }),
+                        ],
+                    }),
+                    (0, r.jsxs)("div", {
+                        className: y.SF,
+                        children: [
+                            (0, r.jsx)(E.A, {
+                                variant: "text-lg/normal",
+                                children: S.intl.string(T.default["ibkUQ/"]),
+                            }),
+                            (0, r.jsx)(A.A, {}),
+                        ],
+                    }),
+                    (0, r.jsxs)("div", {
+                        className: y.aO,
+                        children: [
+                            (0, r.jsx)(E.A, { variant: "text-md/normal", children: S.intl.string(T.default.jFYQgq) }),
+                            (0, r.jsxs)("div", {
+                                className: y.qr,
+                                children: [
+                                    (0, r.jsx)(C, { closeModal: n.onClose, setScreen: t }),
+                                    (0, r.jsx)(R, {
+                                        closeModal: n.onClose,
+                                        setScreen: t,
+                                        tooltipText: S.intl.string(T.default["sTE/Mu"]),
+                                        iconButtonClassName: y.gb,
+                                    }),
+                                    o
+                                        ? (0, r.jsx)(R, {
+                                              closeModal: n.onClose,
+                                              setScreen: t,
                                               ignoreCooldown: !0,
                                               tooltipText: "Change class (staff)",
+                                              iconButtonClassName: y.gb,
                                           })
                                         : null,
-                                    (0, n.jsx)(h.A, {
+                                    (0, r.jsx)(E.A, {
                                         variant: "text-sm/normal",
-                                        className: p.PJ,
-                                        children: C.intl.string(_.default.oVwO4O),
+                                        className: y.PJ,
+                                        children: S.intl.string(T.default.oVwO4O),
                                     }),
                                 ],
                             }),

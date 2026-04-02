@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     DD: "title__41b81",
     W0: "settings__41b81",

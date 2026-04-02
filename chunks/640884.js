@@ -1,38 +1,36 @@
-t.d(s, { A: () => i });
-var n = t(627968),
-    l = t(64700),
-    a = t(91299),
-    r = t(549719);
-function i(e) {
-    let { percentage: s, className: t, onClick: i } = e,
-        c = (0, l.useRef)(null),
-        o = (0, l.useCallback)(
+"use strict";
+n.d(t, { A: () => o });
+var r = n(627968),
+    i = n(64700),
+    s = n(91299),
+    a = n(549719);
+function o(e) {
+    let { percentage: t, className: n, onClick: o } = e,
+        l = (0, i.useRef)(null),
+        u = (0, i.useCallback)(
             (e) => {
-                if (null == c.current) return;
-                let s = Math.min(Math.max(((e.clientX - c.current.left) / c.current.width) * 100, 0), 100);
-                i?.(s);
+                if (null == l.current) return;
+                let t = Math.min(Math.max(((e.clientX - l.current.left) / l.current.width) * 100, 0), 100);
+                o?.(t);
             },
-            [i],
+            [o],
         ),
-        d = (0, l.useCallback)(() => {
-            window.removeEventListener("mousemove", o);
-        }, [o]);
+        c = (0, i.useCallback)(() => {
+            window.removeEventListener("mousemove", u);
+        }, [u]),
+        d = (e) => {
+            (l.current = e.currentTarget.getBoundingClientRect()),
+                u(e),
+                window.addEventListener("mousemove", u),
+                window.addEventListener("mouseup", c, { once: !0 });
+        };
     return (
-        (0, l.useEffect)(
+        (0, i.useEffect)(
             () => () => {
-                window.removeEventListener("mousemove", o), window.removeEventListener("mouseup", d);
+                window.removeEventListener("mousemove", u), window.removeEventListener("mouseup", c);
             },
-            [o, d],
+            [u, c],
         ),
-        (0, n.jsx)(a.A, {
-            className: t,
-            onMouseDown: (e) => {
-                (c.current = e.currentTarget.getBoundingClientRect()),
-                    o(e),
-                    window.addEventListener("mousemove", o),
-                    window.addEventListener("mouseup", d, { once: !0 });
-            },
-            children: (0, n.jsx)(r.A, { percentage: s }),
-        })
+        (0, r.jsx)(s.A, { className: n, onMouseDown: d, children: (0, r.jsx)(a.A, { percentage: t }) })
     );
 }
