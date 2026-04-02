@@ -40,7 +40,7 @@ var r = n(627968),
     V = n(652215),
     B = n(985018),
     H = n(756366),
-    j = n(342444);
+    j = n(157795);
 function Y(e) {
     let { application: t, sku: n, isEmbeddedIAP: i } = e;
     return !0 !== i
@@ -315,27 +315,30 @@ function $(e) {
                                       ? (0, r.jsx)(F.hl, { sku: o, skuPricePreview: h, application: l })
                                       : (0, r.jsx)(F.Uw, { sku: o, value: "" }),
                           }),
-                          (0, r.jsxs)("div", {
+                          (0, r.jsx)("div", {
                               className: j.Jv,
-                              children: [
+                              children:
                                   null != C
-                                      ? (0, r.jsx)(I.od, {
-                                            tdsWalletSource: C,
-                                            checked: O,
-                                            onChange: b,
-                                            fieldLabel: B.intl.string(B.t["mmDvV+"]),
-                                            itemAmount: h?.amount,
-                                            className: j.kV,
+                                      ? (0, r.jsxs)(u.D0$, {
+                                            label: B.intl.string(B.t["mmDvV+"]),
+                                            children: [
+                                                (0, r.jsx)(I.od, {
+                                                    giftCardWallet: C,
+                                                    checked: O,
+                                                    onChange: b,
+                                                    itemAmount: h?.amount,
+                                                    className: j.kV,
+                                                }),
+                                                (0, r.jsx)(f.A, {
+                                                    ...S,
+                                                    selectedPaymentSourceId: M,
+                                                    onChange: L,
+                                                    disabled: O,
+                                                    label: "",
+                                                }),
+                                            ],
                                         })
-                                      : null,
-                                  (0, r.jsx)(f.A, {
-                                      ...S,
-                                      selectedPaymentSourceId: null != C ? M : S.selectedPaymentSourceId,
-                                      onChange: null != C ? L : S.onChange,
-                                      label: null != C ? void 0 : S.label,
-                                      disabled: O && null != C,
-                                  }),
-                              ],
+                                      : (0, r.jsx)(f.A, { ...S }),
                           }),
                           R ? (0, r.jsx)(I.Z4, { onComplete: x, className: j.SO }) : null,
                           null != P && (0, r.jsx)(z, { ...P }),
