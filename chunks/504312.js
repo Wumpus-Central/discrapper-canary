@@ -13,11 +13,11 @@ var a = l(627968),
     h = l(826469),
     x = l(812745),
     b = l(71393),
-    f = l(287809),
-    y = l(295405),
+    y = l(287809),
+    f = l(295405),
     g = l(652215),
     v = l(788868),
-    E = l(895375);
+    E = l(681588);
 let _ = {
         name: "Primitive: Nitro Plan Select",
         id: "unified-checkout-nitro-plan-select",
@@ -35,13 +35,13 @@ let _ = {
                     rightShowSubtext: h,
                     rightSubtextStrikethrough: x,
                 } = e,
-                [b, f] = n.useState(0);
+                [b, y] = n.useState(0);
             return (0, a.jsxs)("div", {
                 className: E.Cd,
                 children: [
                     (0, a.jsx)(m.q7, {
                         selection: b,
-                        onChange: f,
+                        onChange: y,
                         planOptions: [
                             {
                                 id: 0,
@@ -90,8 +90,8 @@ let _ = {
         },
     },
     C = { "nitro-wheel": u.tvc, gift: u.okO, orbs: u.Cp8 },
-    j = i.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
-    S = {
+    S = i.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
+    j = {
         name: "Modal: Unified Checkout Stateless Modal",
         id: "unified-checkout-stateless-modal",
         component: function (e) {
@@ -150,7 +150,7 @@ let _ = {
                     { label: "None", value: "none" },
                 ],
             },
-            countryCode: { label: "Country Code", type: "select", defaultValue: o.d.US, options: j },
+            countryCode: { label: "Country Code", type: "select", defaultValue: o.d.US, options: S },
             headerBadgeText: { label: "Header Pill Text", type: "text", defaultValue: "PROMO" },
             headerBadgeHasIcon: { label: "Header Badge Has Icon", type: "boolean", defaultValue: !1 },
             gradientColor: {
@@ -192,7 +192,7 @@ let _ = {
     P = {
         title: "Unified Checkout",
         stories: [
-            S,
+            j,
             {
                 name: "Primitive: Order Summary Accordion",
                 id: "unified-checkout-order-summary",
@@ -273,7 +273,7 @@ let _ = {
                         targetType: c,
                     } = e;
                     function p(e, p) {
-                        let h = f.default.getCurrentUser(),
+                        let h = y.default.getCurrentUser(),
                             x = b.A.getGuildsArray()[0];
                         return (0, a.jsx)(m.f7, {
                             header: l ? t : void 0,
@@ -371,14 +371,14 @@ let _ = {
                 id: "unified-checkout-payment-source-selector",
                 component: (e) => {
                     let { label: t, giftCardsEnabled: l, disabled: r, hidePersonalInformation: i } = e,
-                        o = (0, s.bG)([y.A], () => Object.values(y.A.paymentSources)),
+                        o = (0, s.bG)([f.A], () => Object.values(f.A.paymentSources)),
                         [p, x] = n.useState(void 0);
                     n.useEffect(() => {
                         (0, d.$o)();
                     }, []);
                     let b = n.useMemo(() => o.map((e) => new h.A(e, !0, [])), [o]),
                         {
-                            dropdownPaymentSources: f,
+                            dropdownPaymentSources: y,
                             dropdownPaymentSourceId: g,
                             giftCardWallet: v,
                             isGiftCardCreditsChecked: E,
@@ -398,7 +398,7 @@ let _ = {
                                     null != v ? { giftCardWallet: v, checked: E, onChange: _ } : null,
                                 paymentSourceDropdownProps: {
                                     selectedPaymentSourceId: g,
-                                    paymentSources: f,
+                                    paymentSources: y,
                                     hidePersonalInformation: i,
                                     onChange: C,
                                 },
@@ -494,7 +494,24 @@ let _ = {
                     return (0, a.jsx)(m.s7, { storeCountry: t });
                 },
                 controls: {
-                    storeCountry: { label: "Store Country", type: "select", defaultValue: o.d.US, options: j },
+                    storeCountry: { label: "Store Country", type: "select", defaultValue: o.d.US, options: S },
+                },
+            },
+            {
+                name: "Primitive: Store Relocation Notice",
+                id: "checkout-store-relocation-notice",
+                component: (e) => {
+                    let { relocationCountry: t, relocationCurrencyCode: l } = e;
+                    return (0, a.jsx)(m.ch, { relocationCountry: t, relocationCurrencyCode: l });
+                },
+                controls: {
+                    relocationCountry: {
+                        label: "Relocation Country",
+                        type: "select",
+                        defaultValue: o.d.US,
+                        options: S,
+                    },
+                    relocationCurrencyCode: { label: "Relocation Currency Code", type: "text", defaultValue: "USD" },
                 },
             },
         ],

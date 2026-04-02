@@ -6,8 +6,13 @@ class i {
     enabled;
     allowedCurrencies;
     relocationCountry;
-    constructor(e, t, n, r = null) {
-        (this.source = e), (this.enabled = t), (this.allowedCurrencies = n), (this.relocationCountry = r);
+    relocationCurrencyCode;
+    constructor(e, t, n, r = null, i = null) {
+        (this.source = e),
+            (this.enabled = t),
+            (this.allowedCurrencies = n),
+            (this.relocationCountry = r),
+            (this.relocationCurrencyCode = i);
     }
     get id() {
         return this.source.id;
@@ -39,6 +44,12 @@ class i {
             username: e.username,
             bank: e.bank,
         };
-        return new i(r.Ay.createFromServer(t), e.enabled, e.allowed_currencies, e.relocation_country ?? null);
+        return new i(
+            r.Ay.createFromServer(t),
+            e.enabled,
+            e.allowed_currencies ?? [],
+            e.relocation_info?.country ?? null,
+            e.relocation_info?.currency ?? null,
+        );
     }
 }

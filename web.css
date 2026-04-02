@@ -44849,6 +44849,12 @@ screen and (max-width:485px) {
     margin-bottom: var(--space-8)
 }
 
+.content_d60bcd ul {
+    list-style: disc;
+    margin: var(--space-4) 0 0;
+    padding-inline-start: var(--space-16)
+}
+
 .subscriptionCostRowAmount__3d62f {
     font-weight: var(--font-weight-medium)
 }

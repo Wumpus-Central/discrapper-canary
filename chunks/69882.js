@@ -17,9 +17,9 @@ var r = n(627968),
     E = n(147422),
     g = n(93159),
     A = n(270537),
-    I = n(756366),
+    I = n(523376),
     T = n(985018),
-    S = n(150163);
+    S = n(387042);
 let y = (e) => (0, r.jsx)(v, { ...e }),
     v = (e) => {
         let { unifiedStepProps: t } = e,
@@ -70,22 +70,21 @@ let y = (e) => (0, r.jsx)(v, { ...e }),
     b = (e) => null == e || "" === e,
     D = (e) => {
         let { children: t } = e,
-            { errorMessage: n, warningMessage: s } = (0, E.u)();
+            { errorMessage: n, warningMessage: s, richNotices: a } = (0, E.u)();
         return i.useMemo(
             () =>
-                b(n) && b(s)
-                    ? null != t
-                        ? (0, r.jsx)("div", { className: S.dD, children: t })
-                        : null
+                b(n) && b(s) && !(a.length > 0) && null == t
+                    ? null
                     : (0, r.jsxs)("div", {
                           className: S.dD,
                           children: [
                               b(n) ? null : (0, r.jsx)(o.wx6, { type: "critical", children: n }),
                               b(s) ? null : (0, r.jsx)(o.wx6, { type: "warning", children: s }),
+                              a.map(O),
                               t,
                           ],
                       }),
-            [n, s, t],
+            [n, s, a, t],
         );
     },
     L = (e) =>
