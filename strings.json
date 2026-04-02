@@ -22241,6 +22241,7 @@
   "yKwZc2": "Manage account linking",
   "aTULMB": "Auth callback not detected. If you called the function and are still seeing this, check logs for details",
   "eg0mNa": "Cannot link because no valid linking flows are available",
+  "cCvdJy": "Open Game Profile",
   "OEkrCx": "This flow will be used",
   "no+FQS": "The first available linking flow will be used, starting at the top",
   "PFxxJa": "If your game is running and it can't connect to Discord, try viewing your game's logs to debug",

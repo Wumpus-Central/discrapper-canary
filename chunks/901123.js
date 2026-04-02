@@ -80,6 +80,7 @@ let s = "@me",
         OAUTH2_AUTHORIZED: "/oauth2/authorized",
         OAUTH2_ERROR: "/oauth2/error",
         SETTINGS: (e, t) => `/settings/${e}${null != t ? `/${t}` : ""}`,
+        DEVELOPER_ACTIVATE_APPLICATION_TEST_MODE: "/settings/advanced/activate-application-test-mode",
         SNOWSGIVING: "/snowsgiving",
         PLAYGROUND: (e, t) => {
             let n = "/playground";

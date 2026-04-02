@@ -23,7 +23,7 @@ var r = n(627968),
     y = n(544028),
     v = n(780964),
     N = n(358776),
-    C = n(840065),
+    C = n(858897),
     R = n(909536),
     O = n(954571),
     b = n(467135),
@@ -39,7 +39,7 @@ var r = n(627968),
     F = n(788868),
     V = n(520650),
     B = n(985018),
-    H = n(152290);
+    H = n(431497);
 let j = 0,
     Y = 5e3;
 function W(e) {
@@ -339,7 +339,7 @@ function en(e) {
     let { onSaveTheme: t, canApply: n, metadata: i } = e,
         s = (0, I.L)(F.PremiumTypes.TIER_2),
         o = (0, R.St)("custom_themes_editor_footer"),
-        u = (0, E.fy)().metadata?.from === E.xv.SHARE_MESSAGE;
+        u = i?.from === E.xv.SHARE_MESSAGE;
     (0, M.wb)(s, h.A.CUSTOM_THEMES_EDITOR);
     let c = () => {
             if (((0, M.uk)(), (0, g.Dr)(l.M.CUSTOM_THEME_COACHMARK), i?.from === E.xv.SETTING)) {

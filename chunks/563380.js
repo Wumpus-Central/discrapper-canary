@@ -1,95 +1,105 @@
 "use strict";
-n.d(t, { A: () => N });
+n.d(t, { A: () => O });
 var r = n(627968),
-    i = n(503698),
-    s = n.n(i),
-    a = n(284009),
-    o = n.n(a),
-    l = n(158954),
-    u = n(311907),
-    c = n(397927),
-    d = n(824552),
-    _ = n(933958),
-    f = n(869003),
-    p = n(793574),
-    h = n(688810),
-    m = n(429913),
-    E = n(793943),
-    g = n(134861),
-    A = n(147964),
-    I = n(362490),
-    T = n(487431),
-    S = n(271469),
-    y = n(985018),
-    v = n(410758);
-function N() {
-    let e = (0, m.h)(A.A.testModeApplicationId),
-        { analyticsLocations: t } = (0, h.Ay)(p.A.SDK_DEBUG_TOOLS),
+    i = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(284009),
+    l = n.n(o),
+    u = n(158954),
+    c = n(311907),
+    d = n(397927),
+    _ = n(824552),
+    f = n(933958),
+    p = n(869003),
+    h = n(793574),
+    m = n(688810),
+    E = n(429913),
+    g = n(793943),
+    A = n(409626),
+    I = n(692969),
+    T = n(134861),
+    S = n(147964),
+    y = n(362490),
+    v = n(487431),
+    N = n(271469),
+    C = n(985018),
+    R = n(818741);
+function O() {
+    let e = (0, E.h)(S.A.testModeApplicationId),
+        { analyticsLocations: t } = (0, m.Ay)(h.A.SDK_DEBUG_TOOLS),
+        n = (0, g.fy)().metadata,
+        s = i.useRef(!1),
         {
-            canStartAuthorization: n,
-            hasAlreadyLinked: i,
-            startAuthorization: a,
-            chosenFlow: N,
-            connectionApp: C,
-            debug: { isSubscribedToAuthorizeRequest: R, oauth2Token: O, hasConnectionEntrypointUrl: b, validFlows: D },
-        } = (0, I.RD)(e, { debug: !0 }),
-        L = (0, u.bG)([g.A], () => null != e && g.A.isConnected(e.id)),
-        w = (0, u.bG)([_.Ay], () => _.Ay.getSelfEmbeddedActivities()),
-        M = "authorization_debug",
-        x = [{ id: "authorization_debug", name: y.intl.string(S.default.vR0zs6) }],
-        P = () =>
+            canStartAuthorization: o,
+            hasAlreadyLinked: O,
+            startAuthorization: b,
+            chosenFlow: D,
+            connectionApp: L,
+            debug: { isSubscribedToAuthorizeRequest: w, oauth2Token: M, hasConnectionEntrypointUrl: x, validFlows: P },
+        } = (0, y.RD)(e, { debug: !0 }),
+        k = (0, c.bG)([T.A], () => null != e && T.A.isConnected(e.id)),
+        U = (0, c.bG)([f.Ay], () => f.Ay.getSelfEmbeddedActivities()),
+        G = e?.id ?? "",
+        F = (0, I.A)({ applicationId: G, source: A.Ob.DevTools, trackEntryPointImpression: !1, forceV2: !0 });
+    i.useEffect(() => {
+        n?.shouldAutoOpenGameProfile !== !0 || null == F || s.current || ((s.current = !0), F());
+    }, [n, F]);
+    let V = "authorization_debug",
+        B = [{ id: "authorization_debug", name: C.intl.string(N.default.vR0zs6) }],
+        H = () =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)("div", {
-                        className: v.wx,
+                        className: R.wx,
                         children: (0, r.jsx)("div", {
-                            className: v.if,
-                            children: (0, r.jsx)(l.DZT, {
+                            className: R.if,
+                            children: (0, r.jsx)(u.DZT, {
                                 variant: "heading-lg/extrabold",
-                                children: y.intl.format(S.default.KoK4J9, { appName: "" }),
+                                children: C.intl.format(N.default.KoK4J9, { appName: "" }),
                             }),
                         }),
                     }),
-                    (0, r.jsx)("div", { className: v.rf, children: (0, r.jsx)(l.y$y, { className: v.u1 }) }),
+                    (0, r.jsx)("div", { className: R.rf, children: (0, r.jsx)(u.y$y, { className: R.u1 }) }),
                 ],
             }),
-        k = () => (
-            o()(null != e, "Application should be defined when rendering the test mode panel"),
+        j = () => (
+            l()(null != e, "Application should be defined when rendering the test mode panel"),
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)("div", {
-                        className: v.wx,
+                        className: R.wx,
                         children: [
                             (0, r.jsx)("div", {
-                                className: v.if,
-                                children: (0, r.jsx)(l.DZT, {
+                                className: R.if,
+                                children: (0, r.jsx)(u.DZT, {
                                     variant: "heading-lg/extrabold",
-                                    children: y.intl.format(S.default.KoK4J9, { appName: e.name }),
+                                    children: C.intl.format(N.default.KoK4J9, { appName: e.name }),
                                 }),
                             }),
-                            (0, r.jsx)(l.K0, {
+                            (0, r.jsx)(u.K0, {
                                 variant: "icon-only",
-                                icon: l.UlM,
+                                icon: u.UlM,
                                 "aria-label": "Close",
-                                onClick: () => (0, E.Jp)(),
+                                onClick: () => (0, g.Jp)(),
                             }),
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: v.rf,
+                        className: R.rf,
                         children: [
-                            (0, r.jsx)(c.VQ0, {
-                                className: v.$H,
-                                selectedItem: M,
+                            (0, r.jsx)(d.VQ0, {
+                                className: R.$H,
+                                selectedItem: V,
                                 onItemSelect: () => {},
                                 orientation: "horizontal",
                                 type: "top",
                                 look: "brand",
-                                children: x.map((e) =>
+                                children: B.map((e) =>
                                     (0, r.jsx)(
-                                        c.VQ0.Item,
+                                        d.VQ0.Item,
                                         {
-                                            className: s()(v.Mf, { [v.wH]: e.id === M }),
+                                            className: a()(R.Mf, { [R.wH]: e.id === V }),
                                             id: e.id,
                                             "aria-label": e.name,
                                             children: e.name,
@@ -98,89 +108,96 @@ function N() {
                                     ),
                                 ),
                             }),
-                            (0, r.jsx)(l.EYj, {
+                            (0, r.jsx)(u.EYj, {
                                 variant: "text-md/medium",
                                 color: "text-subtle",
-                                children: y.intl.string(S.default["no+FQS"]),
+                                children: C.intl.string(N.default["no+FQS"]),
                             }),
-                            (0, r.jsx)(T.VT, {
-                                overallStatus: R ? T.nW.OVERALL_GOOD : L ? T.nW.WARN : T.nW.OVERALL_BAD,
-                                name: y.intl.string(S.default.AGLx00),
+                            (0, r.jsx)(v.VT, {
+                                overallStatus: w ? v.nW.OVERALL_GOOD : k ? v.nW.WARN : v.nW.OVERALL_BAD,
+                                name: C.intl.string(N.default.AGLx00),
                                 steps: [
                                     {
-                                        status: L ? T.nW.GOOD : T.nW.BAD,
-                                        text: y.intl.string(S.default.kxF9br),
-                                        description: L ? null : y.intl.string(S.default.PFxxJa),
-                                        learnMoreLink: L
+                                        status: k ? v.nW.GOOD : v.nW.BAD,
+                                        text: C.intl.string(N.default.kxF9br),
+                                        description: k ? null : C.intl.string(N.default.PFxxJa),
+                                        learnMoreLink: k
                                             ? null
                                             : "https://discord.com/developers/docs/discord-social-sdk/how-to/debug-log",
                                     },
                                     {
-                                        status: R ? T.nW.GOOD : L ? T.nW.WARN : T.nW.BAD,
-                                        text: y.intl.string(S.default.S94dzs),
-                                        description: R || !L ? null : y.intl.string(S.default.aTULMB),
+                                        status: w ? v.nW.GOOD : k ? v.nW.WARN : v.nW.BAD,
+                                        text: C.intl.string(N.default.S94dzs),
+                                        description: w || !k ? null : C.intl.string(N.default.aTULMB),
                                         learnMoreLink:
-                                            R || !L
+                                            w || !k
                                                 ? null
                                                 : "https://discord.com/developers/docs/discord-social-sdk/how-to/debug-log",
                                     },
                                 ],
-                                isChosen: N === I._M.RPC,
+                                isChosen: D === y._M.RPC,
                             }),
-                            (0, r.jsx)(T.VT, {
-                                overallStatus: b ? T.nW.OVERALL_GOOD : T.nW.OVERALL_BAD,
-                                name: y.intl.string(S.default.K3ObrU),
+                            (0, r.jsx)(v.VT, {
+                                overallStatus: x ? v.nW.OVERALL_GOOD : v.nW.OVERALL_BAD,
+                                name: C.intl.string(N.default.K3ObrU),
                                 steps: [
                                     {
-                                        status: b ? T.nW.GOOD : T.nW.BAD,
-                                        text: y.intl.string(S.default["8a7IrV"]),
-                                        description: b
-                                            ? y.intl.formatToPlainString(S.default["9iLeL2"], {
-                                                  url: C?.connectionEntrypointUrl,
+                                        status: x ? v.nW.GOOD : v.nW.BAD,
+                                        text: C.intl.string(N.default["8a7IrV"]),
+                                        description: x
+                                            ? C.intl.formatToPlainString(N.default["9iLeL2"], {
+                                                  url: L?.connectionEntrypointUrl,
                                               })
                                             : null,
                                     },
                                 ],
-                                isChosen: N === I._M.WEB,
+                                isChosen: D === y._M.WEB,
                             }),
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: v.qr,
+                        className: R.qr,
                         children: [
-                            (0, r.jsx)(T.Sy, {
-                                status: i ? T.nW.OVERALL_GOOD : T.nW.OVERALL_BAD,
-                                text: y.intl.string(y.t["Vu/zmQ"]),
+                            (0, r.jsx)(v.Sy, {
+                                status: O ? v.nW.OVERALL_GOOD : v.nW.OVERALL_BAD,
+                                text: C.intl.string(C.t["Vu/zmQ"]),
                             }),
-                            0 === D.length &&
-                                (0, r.jsx)(l.EYj, {
+                            0 === P.length &&
+                                (0, r.jsx)(u.EYj, {
                                     style: { minWidth: 0, overflow: "hidden" },
                                     variant: "text-md/medium",
-                                    children: y.intl.string(S.default.eg0mNa),
+                                    children: C.intl.string(N.default.eg0mNa),
                                 }),
-                            (0, r.jsx)(l.$nd, {
+                            (0, r.jsx)(u.$nd, {
                                 variant: "secondary",
-                                disabled: !n || i,
-                                onClick: () => a({ analyticsLocations: t }),
-                                text: y.intl.string(S.default.w0pN4R),
+                                disabled: !o || O,
+                                onClick: () => b({ analyticsLocations: t }),
+                                text: C.intl.string(N.default.w0pN4R),
                                 fullWidth: !0,
                             }),
-                            null != O &&
-                                (0, r.jsx)(l.$nd, {
+                            null != M &&
+                                (0, r.jsx)(u.$nd, {
                                     variant: "secondary",
                                     onClick: () => {
-                                        d.A.delete(O.id);
-                                        let t = w.get(e.id);
+                                        _.A.delete(M.id);
+                                        let t = U.get(e.id);
                                         null != t &&
-                                            f.A.leaveActivity({
+                                            p.A.leaveActivity({
                                                 location: t.location,
                                                 applicationId: e.id,
                                                 showFeedback: !1,
                                             });
                                     },
-                                    text: y.intl.string(S.default.tkIymA),
+                                    text: C.intl.string(N.default.tkIymA),
                                     fullWidth: !0,
                                 }),
+                            (0, r.jsx)(u.$nd, {
+                                variant: "secondary",
+                                onClick: F ?? void 0,
+                                disabled: null == F,
+                                text: C.intl.string(N.default.cCvdJy),
+                                fullWidth: !0,
+                            }),
                         ],
                     }),
                 ],
@@ -188,7 +205,7 @@ function N() {
         );
     return (0, r.jsx)("div", {
         "data-app-right-panel": !0,
-        className: v.nE,
-        children: (0, r.jsx)(l.Fmo, { children: null != e ? k() : P() }),
+        className: R.nE,
+        children: (0, r.jsx)(u.Fmo, { children: null != e ? j() : H() }),
     });
 }

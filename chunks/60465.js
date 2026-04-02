@@ -6,7 +6,7 @@ var r = n(627968),
     a = n(397927);
 let o = {
     openGameProfileModal: function (e) {
-        let { applicationId: t, gameProfileModalChecks: i, source: o, sourceUserId: l, appContext: u } = e;
+        let { applicationId: t, gameProfileModalChecks: i, source: o, sourceUserId: l, appContext: u, forceV2: c } = e;
         s()(
             i.shouldOpenGameProfile,
             "Passed a false value for [gameProfileModalChecks]. Are you using the useShouldOpenGameProfile hook correctly?",
@@ -18,12 +18,20 @@ let o = {
             (0, a.mMO)(
                 async () => {
                     let { default: e } = await Promise.all([
-                        n.e("42006"),
+                        n.e("18976"),
                         n.e("21957"),
-                        n.e("67202"),
-                        n.e("98238"),
+                        n.e("18037"),
+                        n.e("16222"),
                     ]).then(n.bind(n, 225732));
-                    return (n) => (0, r.jsx)(e, { applicationId: t, source: o, sourceUserId: l, ...n, appContext: u });
+                    return (n) =>
+                        (0, r.jsx)(e, {
+                            applicationId: t,
+                            source: o,
+                            sourceUserId: l,
+                            ...n,
+                            appContext: u,
+                            forceV2: c,
+                        });
                 },
                 { contextKey: null != u ? (0, a.TId)(u) : void 0 },
             );
