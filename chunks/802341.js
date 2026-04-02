@@ -60,7 +60,7 @@ function p(e) {
         g = (0, s.bG)([m.A], () => {
             if (null == a) return !1;
             let e = (0, u.r9)() && (0, u.UK)(a.id);
-            return (a.isPrivate() || m.A.can(h.xBc.CONNECT, a)) && !e;
+            return (a.isPrivate() || (m.A.can(h.xBc.VIEW_CHANNEL, a) && m.A.can(h.xBc.CONNECT, a))) && !e;
         });
     return null != i && null != a && a.isGuildVocal() && g && !r
         ? (0, l.jsx)(f, {
