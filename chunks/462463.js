@@ -3,8 +3,9 @@ var a = r(64700),
     n = r(287809),
     s = r(657331);
 function i() {
+    let { analyticsLocations: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     return (0, a.useCallback)(() => {
-        let e = n.default.getCurrentUser();
-        null != e && (0, s.openUserProfileModal)({ userId: e.id });
-    }, []);
+        let t = n.default.getCurrentUser();
+        null != t && (0, s.openUserProfileModal)({ userId: t.id, sourceAnalyticsLocations: e });
+    }, [e]);
 }

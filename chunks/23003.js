@@ -14,8 +14,8 @@ var a,
     f = r(206835),
     h = r(591179),
     b = r(462463),
-    x = r(780964),
-    g = r(358776),
+    g = r(780964),
+    x = r(358776),
     C = r(840065),
     A = r(676279),
     R = r(975571),
@@ -23,8 +23,8 @@ var a,
     E = r(161319),
     N = r(992315),
     j = r(788868),
-    I = r(88001),
-    y = r(652215),
+    y = r(88001),
+    I = r(652215),
     P = r(355097),
     S = r(653624),
     T = r(519412),
@@ -78,10 +78,10 @@ var a,
 let e_ = () => {
     let { analyticsLocations: e } = (0, u.Ay)(c.A.PREMIUM_MARKETING_BENTO_BOX),
         t = (0, h.X)("useBentoBoxes"),
-        a = (0, b.A)(),
+        a = (0, b.A)({ analyticsLocations: e }),
         n = (0, f.A)({ scrollPosition: P._F.TRY_IT_OUT, analyticsLocations: e }),
         s = (0, l.useCallback)(() => {
-            (0, C.openUserSettings)(x.X.PROFILE_PANEL, { analyticsLocations: e }, () =>
+            (0, C.openUserSettings)(g.X.PROFILE_PANEL, { analyticsLocations: e }, () =>
                 (0, _.L)({ analyticsLocations: e }),
             );
         }, [e]),
@@ -89,7 +89,7 @@ let e_ = () => {
             (0, p.A)({ subscriptionTier: j.pe.TIER_2, initialPlanId: j.gD.PREMIUM_GROUP_MONTH, analyticsLocations: e });
         }, [e]),
         eu = (0, A.TM)(),
-        em = R.A.getArticleURL(y.MVz.REFERRAL_PROGRAM),
+        em = R.A.getArticleURL(I.MVz.REFERRAL_PROGRAM),
         e_ = {
             premiumGroup: { thumbnail: U, assetUrl: U },
             serverProfiles: { thumbnail: B, assetUrl: eu ? eo.Ay : ed.Ay },
@@ -143,17 +143,17 @@ let e_ = () => {
             },
             premiumGroup: {
                 name: "premiumGroup",
-                title: O.intl.formatToPlainString(T.default.VFEDDB, { premiumGroupProductName: (0, I.DP)() }),
+                title: O.intl.formatToPlainString(T.default.VFEDDB, { premiumGroupProductName: (0, y.DP)() }),
                 description: O.intl.formatToPlainString(T.default.WudmR3, {
-                    totalSeats: I.aw,
-                    premiumGroupProductName: (0, I.DP)(),
+                    totalSeats: y.aw,
+                    premiumGroupProductName: (0, y.DP)(),
                 }),
                 previewImage: e_.premiumGroup.thumbnail,
                 videoUrl: e_.premiumGroup.assetUrl,
                 actions: [
                     {
                         variant: "primary",
-                        text: O.intl.formatToPlainString(T.default.LwdrNi, { premiumGroupProductName: (0, I.DP)() }),
+                        text: O.intl.formatToPlainString(T.default.LwdrNi, { premiumGroupProductName: (0, y.DP)() }),
                         onClick: ec,
                         icon: d.tvc,
                         iconPosition: "start",
@@ -189,9 +189,9 @@ let e_ = () => {
                 previewImage: e_.yourSpace.thumbnail,
                 onClick: () => {
                     {
-                        let t = (0, g.Ci)("openClientThemes"),
+                        let t = (0, x.Ci)("openClientThemes"),
                             { openUserSettings: a } = r(840065);
-                        a(t ? x.X.DISPLAY_THEME_CATEGORY : x.X.APPEARANCE_PANEL, { analyticsLocations: e });
+                        a(t ? g.X.DISPLAY_THEME_CATEGORY : g.X.APPEARANCE_PANEL, { analyticsLocations: e });
                     }
                 },
                 videoUrl: e_.yourSpace.assetUrl,
@@ -216,7 +216,7 @@ let e_ = () => {
                 description: O.intl.string(w.default.wMi514),
                 descriptionCta: O.intl.string(O.t.hvVgAZ),
                 onClick: () => {
-                    window.open(R.A.getArticleURL(y.MVz.ORBS_REWARDS_FAQ), "_blank");
+                    window.open(R.A.getArticleURL(I.MVz.ORBS_REWARDS_FAQ), "_blank");
                 },
                 previewImage: e_.orbRewards.thumbnail,
                 previewImageStyle: "overlay",
@@ -240,9 +240,9 @@ let e_ = () => {
             if (null == t) throw Error(`useBentoBoxes: missing bento config for ${e}`);
             return t;
         },
-        [eh, eb, ex] = (0, N.A)();
+        [eh, eb, eg] = (0, N.A)();
     return {
-        whatsNewBoxes: [[ef(eh)], [ef(eb), ef(ex)]],
+        whatsNewBoxes: [[ef(eh)], [ef(eb), ef(eg)]],
         bestOfBoxes: [[ef("showYourStyle")], [ef("yourSpace")], [ef("emojis"), ef("noLimits")]],
     };
 };
