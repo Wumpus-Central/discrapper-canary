@@ -1,14 +1,13 @@
-"use strict";
-n.d(t, { Di: () => s, TA: () => r });
-var i,
-    s =
-        (((i = {}).STUDENT_PROMPT = "STUDENT_PROMPT"),
-        (i.VERIFY_EMAIL = "VERIFY_EMAIL"),
-        (i.VERIFY_PIN = "VERIFY_PIN"),
-        (i.SELECT_SCHOOL = "SELECT_SCHOOL"),
-        (i.SELECT_SCHOOL_SEARCH = "SELECT_SCHOOL_SEARCH"),
-        (i.SUBMIT_SCHOOL = "SUBMIT_SCHOOL"),
-        (i.EMAIL_CONFIRMATION = "EMAIL_CONFIRMATION"),
-        (i.EMAIL_WAITLIST = "EMAIL_WAITLIST"),
-        i);
-let r = "884924873015689226";
+l.d(t, { Di: () => i, TA: () => a });
+var n,
+    i =
+        (((n = {}).STUDENT_PROMPT = "STUDENT_PROMPT"),
+        (n.VERIFY_EMAIL = "VERIFY_EMAIL"),
+        (n.VERIFY_PIN = "VERIFY_PIN"),
+        (n.SELECT_SCHOOL = "SELECT_SCHOOL"),
+        (n.SELECT_SCHOOL_SEARCH = "SELECT_SCHOOL_SEARCH"),
+        (n.SUBMIT_SCHOOL = "SUBMIT_SCHOOL"),
+        (n.EMAIL_CONFIRMATION = "EMAIL_CONFIRMATION"),
+        (n.EMAIL_WAITLIST = "EMAIL_WAITLIST"),
+        n);
+let a = "884924873015689226";

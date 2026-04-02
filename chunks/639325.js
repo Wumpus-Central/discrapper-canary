@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     cG: "closeButtonContainer__62e7a",
     g3: "modalContainerV1__62e7a",

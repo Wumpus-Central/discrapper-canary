@@ -937,7 +937,7 @@ let v = {
         return (t) => (0, a.jsx)(e, { ...t });
     },
     AcceptInviteModal: async () => {
-        let { default: e } = await Promise.all([n.e("83155"), n.e("35333")]).then(n.bind(n, 563038));
+        let { default: e } = await Promise.all([n.e("64161"), n.e("83155"), n.e("35333")]).then(n.bind(n, 563038));
         return (t) => (0, a.jsx)(e, { ...t });
     },
     PremiumGroupSubscribeModal: async () => {

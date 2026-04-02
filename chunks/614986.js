@@ -1,162 +1,181 @@
 "use strict";
-n.d(t, { A: () => D });
+n.d(t, { A: () => M });
 var i = n(627968),
     s = n(64700),
-    r = n(382222),
-    l = n(311907),
-    a = n(397927),
-    o = n(73153),
-    d = n(846293),
-    c = n(900662),
-    u = n(765671),
-    h = n(854378),
-    _ = n(210714),
-    p = n(961350),
-    g = n(71393),
-    m = n(299091),
-    A = n(954571),
-    f = n(486020),
-    E = n(403362),
-    x = n(21599),
-    I = n(949155),
-    N = n(663572),
-    v = n(131929),
-    j = n(172799),
-    S = n(652215),
-    T = n(985018),
-    C = n(500577);
-function y() {
-    return (0, i.jsx)("div", { className: C.$k, children: (0, i.jsx)(a.y$y, {}) });
+    r = n(687498),
+    l = n(280513),
+    a = n(311907),
+    o = n(397927),
+    d = n(73153),
+    c = n(846293),
+    u = n(900662),
+    h = n(765671),
+    _ = n(854378),
+    p = n(9994),
+    g = n(210714),
+    m = n(961350),
+    A = n(71393),
+    f = n(299091),
+    E = n(954571),
+    x = n(486020),
+    I = n(403362),
+    N = n(860689),
+    v = n(21599),
+    C = n(949155),
+    j = n(663572),
+    S = n(439680),
+    T = n(131929),
+    y = n(66027),
+    b = n(172799),
+    R = n(652215),
+    O = n(985018),
+    L = n(974818);
+function w() {
+    return (0, i.jsx)("div", { className: L.$k, children: (0, i.jsx)(o.y$y, {}) });
 }
-let b = (e) => {
+function k(e) {
     let t = e?.state == null && e?.channel == null;
     if (null == e || null == e.state || t) return 0;
     let n = e.state;
     switch (n) {
-        case S.elq.RESOLVED:
-        case S.elq.ACCEPTED:
-        case S.elq.APP_NOT_OPENED:
-        case S.elq.APP_OPENED:
-        case S.elq.ACCEPTING:
-        case S.elq.APP_OPENING:
+        case R.elq.RESOLVED:
+        case R.elq.ACCEPTED:
+        case R.elq.APP_NOT_OPENED:
+        case R.elq.APP_OPENED:
+        case R.elq.ACCEPTING:
+        case R.elq.APP_OPENING:
             return 1;
-        case S.elq.EXPIRED:
-        case S.elq.BANNED:
-        case S.elq.ERROR:
+        case R.elq.EXPIRED:
+        case R.elq.BANNED:
+        case R.elq.ERROR:
             return 2;
-        case S.elq.RESOLVING:
+        case R.elq.RESOLVING:
             return 0;
         default:
-            (0, E.xb)(n);
+            (0, I.xb)(n);
     }
-};
-function R(e) {
+}
+function D(e) {
     let { invite: t, onAcceptInvite: n } = e;
-    return t?.state === S.elq.BANNED
-        ? (0, i.jsx)(c.N, { text: T.intl.string(T.t["5AkWAd"]), buttonCta: T.intl.string(T.t["8osdkn"]), onClick: n })
-        : (0, i.jsx)(c.N, { text: T.intl.string(T.t["usP+Mb"]), buttonCta: T.intl.string(T.t["8osdkn"]), onClick: n });
+    return t?.state === R.elq.BANNED
+        ? (0, i.jsx)(u.N, { text: O.intl.string(O.t["5AkWAd"]), buttonCta: O.intl.string(O.t["8osdkn"]), onClick: n })
+        : (0, i.jsx)(u.N, { text: O.intl.string(O.t["usP+Mb"]), buttonCta: O.intl.string(O.t["8osdkn"]), onClick: n });
 }
-function O(e) {
-    let { children: t, cardChildren: n, startAnimHeightPx: l, innerStyle: o, ...d } = e,
-        { invite: c } = d,
-        [h, _] = s.useState(b(c)),
-        { ref: p, height: g } = (0, u.Ay)(),
-        m = (0, a.zhh)({ height: null != g && 0 !== g ? `${g}px` : `${l}px`, config: r.config.stiff });
-    return (
-        s.useEffect(() => {
-            let e = b(c);
-            e !== h && _(e);
-        }, [c, h]),
-        (0, i.jsxs)(r.animated.div, {
-            className: C.qF,
-            style: m,
-            children: [
-                (0, i.jsx)(r.animated.div, {
-                    className: C.NS,
-                    style: m,
-                    children: (0, i.jsx)("section", { ref: p, className: o?.(h), children: t(h) }),
-                }),
-                n,
-            ],
-        })
-    );
-}
-function L(e) {
-    let { invite: t } = e;
-    return null != t && (0, I.Fk)(t)
-        ? (0, i.jsx)(O, {
-              startAnimHeightPx: 0,
-              innerStyle: () => C.ui,
-              ...e,
-              children: (e) => (null == t ? null : 1 === e ? (0, i.jsx)(v.s, { invite: t }) : null),
-          })
-        : null;
-}
-function w(e) {
-    let { invite: t } = e,
-        n = { 1: C._r, 2: C.Gm, 0: C.Kt };
-    return (0, i.jsx)(O, {
-        startAnimHeightPx: 200,
-        innerStyle: (e) => n[e],
-        ...e,
-        children: (n) =>
-            ((n) => {
-                if (null == t) return (0, i.jsx)(y, {});
-                switch (n) {
-                    case 1:
-                        return (0, i.jsx)(N.A, { ...e, invite: t });
-                    case 2:
-                        return (0, i.jsx)(R, { ...e, invite: t });
-                    default:
-                        return (0, i.jsx)(y, {});
-                }
-            })(n),
+function U(e) {
+    let { children: t, cardChildren: n, startAnimHeightPx: s, sectionClassName: l, inviteCardClassName: a = L.qF } = e,
+        { ref: d, height: c } = (0, h.Ay)(),
+        u = (0, o.zhh)({ height: null != c && 0 !== c ? `${c}px` : `${s}px`, config: r.config.stiff });
+    return (0, i.jsxs)(r.animated.div, {
+        className: a,
+        style: u,
+        children: [
+            (0, i.jsx)(r.animated.div, {
+                className: L.NS,
+                style: u,
+                children: (0, i.jsx)("section", { ref: d, className: l, children: t }),
+            }),
+            n,
+        ],
     });
 }
-function k(e) {
+function P(e) {
+    let { invite: t } = e;
+    if (null == t || !(0, C.Fk)(t)) return null;
+    let n = k(t);
+    return (0, i.jsx)(U, {
+        startAnimHeightPx: 0,
+        sectionClassName: L.ui,
+        children: 1 === n ? (0, i.jsx)(T.s, { invite: t }) : null,
+    });
+}
+let B = { 1: L._r, 2: L.Gm, 0: L.Kt };
+function G(e) {
+    let t,
+        { invite: n } = e,
+        r = k(n),
+        { enabled: a } = y.n.useConfig({ location: "AcceptInviteMobile" }),
+        o = null != n ? (0, p.oO)(n) : null,
+        d = n?.guild != null ? (0, N.DY)(n.guild) : null,
+        c =
+            a &&
+            null != o &&
+            (function (e) {
+                if (null == e || !l.i.VISIBLE.has(e.visibility)) return !1;
+                let t = null != e.description && e.description.length > 0,
+                    n = null != e.traits && e.traits.filter((e) => e.label.length > 0).length > 0,
+                    i = null != e.gameApplicationIds && e.gameApplicationIds.length > 0;
+                return t && (n || i);
+            })(o) &&
+            null != d &&
+            null != n &&
+            !(0, C.Fk)(n);
+    if (
+        (s.useEffect(() => {
+            c && y.n.getConfig({ location: "AcceptInviteMobile.hasProfile" });
+        }, [c]),
+        null == n)
+    )
+        t = (0, i.jsx)(w, {});
+    else
+        switch (r) {
+            case 1:
+                t = c
+                    ? (0, i.jsx)(S.A, { invite: n, guild: d, profile: o, onAcceptInvite: e.onAcceptInvite })
+                    : (0, i.jsx)(j.A, { ...e, invite: n });
+                break;
+            case 2:
+                t = (0, i.jsx)(D, { ...e, invite: n });
+                break;
+            default:
+                t = (0, i.jsx)(w, {});
+        }
+    let u = 1 === r && c ? L.c4 : L.qF;
+    return (0, i.jsx)(U, { startAnimHeightPx: 200, sectionClassName: B[r], inviteCardClassName: u, children: t });
+}
+function F(e) {
     let { invite: t, onAcceptInvite: n } = e,
         { guild: s } = t ?? {},
         r = {};
     if (s?.splash != null) {
-        let e = f.Ay.getGuildSplashURL({ id: s.id, splash: s.splash });
+        let e = x.Ay.getGuildSplashURL({ id: s.id, splash: s.splash });
         null != e && ((r.backgroundImage = `url(${e})`), (r.backgroundSize = "cover"));
     }
-    return (0, i.jsxs)(h.Ay, {
-        theme: S.NJ8.DARK,
-        className: C.G3,
+    return (0, i.jsxs)(_.Ay, {
+        theme: R.NJ8.DARK,
+        className: L.G3,
         style: r,
-        contentClassName: C.__,
-        children: [(0, i.jsx)(w, { ...e, onAcceptInvite: n }), (0, i.jsx)(L, { ...e })],
+        contentClassName: L.__,
+        children: [(0, i.jsx)(G, { ...e, onAcceptInvite: n }), (0, i.jsx)(P, { ...e })],
     });
 }
-function D(e) {
+function M(e) {
     let { inviteKey: t, transitionTo: n } = e,
-        r = (0, l.bG)([m.A], () => m.A.getInvite(t));
+        r = (0, a.bG)([f.A], () => f.A.getInvite(t));
     return (
         s.useEffect(() => {
-            let e = p.default.getAnalyticsToken();
-            null != e && o.h.dispatch({ type: "SET_ANALYTICS_TOKEN", analyticsToken: e, userId: p.default.getId() }),
-                (0, _.d)("invite_mobile"),
-                A.default.track(S.HAw.INVITE_VIEWED, { invite_code: t }, { flush: !0 });
+            let e = m.default.getAnalyticsToken();
+            null != e && d.h.dispatch({ type: "SET_ANALYTICS_TOKEN", analyticsToken: e, userId: m.default.getId() }),
+                (0, g.d)("invite_mobile"),
+                E.default.track(R.HAw.INVITE_VIEWED, { invite_code: t }, { flush: !0 });
         }, []),
-        (0, i.jsx)(k, {
+        (0, i.jsx)(F, {
             invite: r,
             onAcceptInvite: (e) => {
                 let n, i, s, l;
                 e?.preventDefault(),
-                    A.default.track(S.HAw.INVITE_APP_OPENED, {
-                        invite_code: (0, x.m0)(t),
+                    E.default.track(R.HAw.INVITE_APP_OPENED, {
+                        invite_code: (0, v.m0)(t),
                         guild_id: r?.guild?.id,
                         channel_id: r?.channel?.id,
                         inviter_id: r?.inviter?.id,
-                        invite_type: null != r && r?.type != null ? j.Xd[r?.type] : void 0,
-                        user_is_member: null != r && null != r.guild && null != g.A.getGuild(r.guild.id),
+                        invite_type: null != r && r?.type != null ? b.Xd[r?.type] : void 0,
+                        user_is_member: null != r && null != r.guild && null != A.A.getGuild(r.guild.id),
                         size_total: r?.approximate_member_count,
                     }),
-                    (n = null != r && r.state !== S.elq.EXPIRED && r.state !== S.elq.BANNED ? t : void 0),
-                    (s = null != (i = p.default.getFingerprint()) ? i : p.default.getId()),
+                    (n = null != r && r.state !== R.elq.EXPIRED && r.state !== R.elq.BANNED ? t : void 0),
+                    (s = null != (i = m.default.getFingerprint()) ? i : m.default.getId()),
                     (l = null != r && r?.type != null ? Number(r?.type) : void 0),
-                    d.Ay.openApp(n, void 0, s, void 0, l);
+                    c.Ay.openApp(n, void 0, s, void 0, l);
             },
             transitionTo: n,
         })
