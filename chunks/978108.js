@@ -7,6 +7,10 @@ e.exports = {
     kO: "previewSelector__77347",
     Vj: "panelModeControl__77347",
     UK: "panelModeControlOption__77347",
+    v7: "assetControls__77347",
+    cj: "assetControlRow__77347",
+    Me: "assetControlLabel__77347",
+    TQ: "heroLogoSlider__77347",
     _f: "validationSummary__77347",
     ck: "validationIssuesList__77347",
 };

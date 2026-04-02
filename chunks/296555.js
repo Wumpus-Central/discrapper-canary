@@ -1,4 +1,4 @@
-n.d(t, { B: () => T, G: () => y });
+n.d(t, { B: () => T, G: () => S });
 var a = n(627968),
     i = n(64700),
     s = n(397927),
@@ -91,19 +91,72 @@ let h = i.createContext({ setDropHandler: () => {} }),
                   ],
               });
     },
-    b = (e) => {
+    b = new Set([c.RN.HERO_BANNER_STATIC, c.RN.HERO_BANNER_ANIMATED, c.RN.HERO_BANNER_RIVE]),
+    j = (e) => {
         let { clearAssets: t, clearIgnoredFiles: n } = e,
             { collectionAssets: l } = (0, o.NE)(),
-            { deleteCollectionAsset: r, clearAssets: d } = (0, o.JE)(),
-            c = i.useMemo(() => Object.values(l).map((e) => ({ label: e.name, value: e.type })), [l]),
-            u = i.useCallback((e) => r(e), [r]),
-            h = i.useCallback(() => {
+            {
+                deleteCollectionAsset: r,
+                clearAssets: d,
+                heroLogoMaxHeight: u,
+                setHeroLogoMaxHeight: h,
+                heroResponsive: x,
+                setHeroResponsive: p,
+            } = (0, o.JE)(),
+            g = i.useMemo(() => Object.values(l).map((e) => ({ label: e.name, value: e.type })), [l]),
+            _ = g.some((e) => e.value === c.RN.HERO_LOGO),
+            f = g.some((e) => b.has(e.value)),
+            v = i.useCallback((e) => r(e), [r]),
+            j = i.useCallback(() => {
                 d(), t(), n();
             }, [d, t, n]);
-        return 0 === c.length
+        return 0 === g.length
             ? null
             : (0, a.jsxs)(a.Fragment, {
                   children: [
+                      (0, a.jsx)(s.hKd, { size: 16 }),
+                      (_ || f) &&
+                          (0, a.jsxs)("div", {
+                              className: m.v7,
+                              children: [
+                                  _ &&
+                                      (0, a.jsxs)("div", {
+                                          className: m.cj,
+                                          children: [
+                                              (0, a.jsx)(s.Text, {
+                                                  variant: "text-md/normal",
+                                                  className: m.Me,
+                                                  children: "Logo size",
+                                              }),
+                                              (0, a.jsx)(s.Apm, {
+                                                  className: m.TQ,
+                                                  minValue: 90,
+                                                  maxValue: 200,
+                                                  initialValue: u ?? 90,
+                                                  handleSize: 10,
+                                                  onValueChange: (e) => h(Math.round(e)),
+                                                  onValueRender: (e) => `${Math.round(e)}px`,
+                                                  "aria-label": "Hero logo max height",
+                                              }),
+                                              (0, a.jsx)(s.Text, {
+                                                  variant: "text-sm/normal",
+                                                  children: `${u ?? 90}px`,
+                                              }),
+                                          ],
+                                      }),
+                                  f &&
+                                      (0, a.jsxs)("div", {
+                                          className: m.sy,
+                                          children: [
+                                              (0, a.jsx)(s.dOG, { checked: x, onChange: p }),
+                                              (0, a.jsx)(s.Text, {
+                                                  variant: "text-md/normal",
+                                                  children: "Responsive Hero",
+                                              }),
+                                          ],
+                                      }),
+                              ],
+                          }),
                       (0, a.jsx)(s.hKd, { size: 16 }),
                       (0, a.jsxs)("div", {
                           className: m.wR,
@@ -112,13 +165,13 @@ let h = i.createContext({ setDropHandler: () => {} }),
                               (0, a.jsx)(s.Button, {
                                   variant: "critical-primary",
                                   size: "sm",
-                                  onClick: h,
+                                  onClick: j,
                                   text: "Clear All",
                               }),
                           ],
                       }),
                       (0, a.jsx)("ul", {
-                          children: c.map((e) =>
+                          children: g.map((e) =>
                               (0, a.jsxs)(
                                   "li",
                                   {
@@ -127,7 +180,7 @@ let h = i.createContext({ setDropHandler: () => {} }),
                                           (0, a.jsx)(s.K0, {
                                               variant: "icon-only",
                                               size: "sm",
-                                              onClick: () => u(e.value),
+                                              onClick: () => v(e.value),
                                               icon: s.PGe,
                                               "aria-label": "Remove asset",
                                           }),
@@ -141,7 +194,7 @@ let h = i.createContext({ setDropHandler: () => {} }),
                   ],
               });
     },
-    j = (e) => {
+    A = (e) => {
         let { ignoredFiles: t, handleClearIgnoredFiles: n } = e;
         return 0 === t.length
             ? null
@@ -170,7 +223,7 @@ let h = i.createContext({ setDropHandler: () => {} }),
                   ],
               });
     },
-    A = () => {
+    C = () => {
         let { validateShopAssetPackage: e, reset: t, validationComplete: n, warnings: l, errors: r } = (0, u.y)(),
             o = Object.entries(r),
             d = Object.entries(l),
@@ -298,7 +351,7 @@ let h = i.createContext({ setDropHandler: () => {} }),
             })
         );
     },
-    C = () => {
+    y = () => {
         let { previewEnabled: e, setPreviewEnabled: t, clearAssets: n } = (0, o.JE)(),
             { ignoredFilenames: l, clearAssets: r, clearIgnoredFilenames: d, processAndUpsertAssets: u } = (0, c.ds)(),
             { setDropHandler: x } = i.useContext(h),
@@ -334,13 +387,13 @@ let h = i.createContext({ setDropHandler: () => {} }),
                     }),
                     (0, a.jsx)(f, {}),
                     (0, a.jsx)(v, {}),
-                    (0, a.jsx)(b, { clearAssets: r, clearIgnoredFiles: d }),
-                    (0, a.jsx)(j, { ignoredFiles: l, handleClearIgnoredFiles: d }),
+                    (0, a.jsx)(j, { clearAssets: r, clearIgnoredFiles: d }),
+                    (0, a.jsx)(A, { ignoredFiles: l, handleClearIgnoredFiles: d }),
                 ],
             })
         );
     },
-    y = () => {
+    S = () => {
         let [e, t] = i.useState("preview");
         return (0, a.jsxs)("div", {
             className: m.kL,
@@ -356,8 +409,8 @@ let h = i.createContext({ setDropHandler: () => {} }),
                     optionClassName: m.UK,
                 }),
                 (0, a.jsx)(s.hKd, { size: 8 }),
-                "preview" === e && (0, a.jsx)(C, {}),
-                "validate" === e && (0, a.jsx)(A, {}),
+                "preview" === e && (0, a.jsx)(y, {}),
+                "validate" === e && (0, a.jsx)(C, {}),
                 (0, a.jsx)(s.hKd, { size: 16 }),
             ],
         });

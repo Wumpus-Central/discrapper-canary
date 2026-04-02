@@ -1,5 +1,5 @@
 "use strict";
-s.d(t, { A: () => _ });
+s.d(t, { A: () => m });
 var n = s(627968);
 s(64700);
 var r = s(503698),
@@ -9,8 +9,8 @@ var r = s(503698),
     o = s(993408),
     c = s(196231),
     d = s(985018),
-    u = s(201073);
-let g = (e) => {
+    u = s(297046);
+let _ = (e) => {
         let { handleTransition: t, featuredBlockRecord: s } = e;
         return (0, n.jsx)("div", {
             className: l()(u.n9, u.YB),
@@ -29,6 +29,7 @@ let g = (e) => {
                                   c.S,
                                   {
                                       subblock: e,
+                                      enablePreview: 0 === s,
                                       badgeText: (0, o.HF)(e.unpublishedAt) ? d.intl.string(d.t["h/uBCR"]) : void 0,
                                       handleTransition: t,
                                   },
@@ -41,7 +42,7 @@ let g = (e) => {
             ),
         });
     },
-    m = (e) => {
+    g = (e) => {
         let { handleTransition: t, categories: s } = e;
         if (null == s || s.length < 2) return null;
         let [r, a] = s;
@@ -58,6 +59,7 @@ let g = (e) => {
                     null != r &&
                         (0, n.jsx)(c.S, {
                             category: r,
+                            enablePreview: !0,
                             badgeText: (0, o.HF)(r.unpublishedAt) ? d.intl.string(d.t["h/uBCR"]) : void 0,
                             handleTransition: t,
                         }),
@@ -71,7 +73,7 @@ let g = (e) => {
             }),
         });
     },
-    _ = (e) => {
+    m = (e) => {
         let { isLoading: t, handleTransition: s, categories: r, featuredBlockRecord: a } = e;
         return t
             ? (0, n.jsxs)("div", {
@@ -88,6 +90,6 @@ let g = (e) => {
                   ],
               })
             : null != a
-              ? (0, n.jsx)(g, { featuredBlockRecord: a, handleTransition: s, isLoading: !1 })
-              : (0, n.jsx)(m, { categories: r, handleTransition: s, isLoading: !1 });
+              ? (0, n.jsx)(_, { featuredBlockRecord: a, handleTransition: s, isLoading: !1 })
+              : (0, n.jsx)(g, { categories: r, handleTransition: s, isLoading: !1 });
     };

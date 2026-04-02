@@ -13,7 +13,11 @@ let c = (0, s.v)((e) => ({
         avatarDecorationAssets: {},
         previewProfileEffectSkuId: null,
         previewAvatarDecorationKey: null,
+        heroLogoMaxHeight: null,
+        heroResponsive: !1,
         setPreviewEnabled: (t) => e({ previewEnabled: t }),
+        setHeroLogoMaxHeight: (t) => e({ heroLogoMaxHeight: t }),
+        setHeroResponsive: (t) => e({ heroResponsive: t }),
         upsertCollectionAsset: (t, n) =>
             (0, a.r)(() => {
                 e((e) => {
@@ -73,6 +77,8 @@ let c = (0, s.v)((e) => ({
                             previewEnabled: !1,
                             previewProfileEffectSkuId: null,
                             previewAvatarDecorationKey: null,
+                            heroLogoMaxHeight: null,
+                            heroResponsive: !1,
                         }
                     ),
                 );
