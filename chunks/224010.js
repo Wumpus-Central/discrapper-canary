@@ -18,7 +18,7 @@ var i = s(627968),
     f = s(239093),
     E = s(652215),
     T = s(985018),
-    p = s(915541);
+    p = s(924018);
 let A = (t) => {
         let { status: e, onClick: s, opened: a, count: l } = t;
         return (0, i.jsxs)(c.DUT, {
@@ -129,7 +129,7 @@ let A = (t) => {
                             s.e("68859"),
                             s.e("92414"),
                             s.e("9407"),
-                            s.e("5920"),
+                            s.e("41993"),
                         ]).then(s.bind(s, 956450));
                         return (e) => (0, i.jsx)(t, { classificationId: l, source: f.XN.StandingTab, ...e });
                     });

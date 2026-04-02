@@ -1,4 +1,4 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => f });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -13,28 +13,28 @@ var i = n(627968),
     m = n(302614),
     p = n(321090),
     A = n(392164),
-    x = n(165366);
-function E(e) {
+    x = n(69125);
+function f(e) {
     let { locked: t, pinned: n, anchorLeft: l } = e,
-        E = (0, a.bG)([h.A], () => h.A.getSocket()),
-        f = (0, a.bG)([p.A], () => p.A.isGPUBoosted());
+        f = (0, a.bG)([h.A], () => h.A.getSocket()),
+        E = (0, a.bG)([p.A], () => p.A.isGPUBoosted());
     (0, c.ZX)();
     let S = (0, a.bG)([g.A], () => g.A.getWindow(A.f)),
-        [I, T] = (0, c.DQ)(E),
+        [I, T] = (0, c.DQ)(f),
         {
             currentFPS: v,
             averageFrameTime: C,
             timeSinceLastDrop: j,
             onResetFrameData: y,
             droppedFramesRef: w,
-            renderedFrameCount: O,
-            bufferFramecountRef: _,
+            renderedFrameCount: _,
+            bufferFramecountRef: O,
             frameCheckerEffect: N,
         } = (0, c.Dj)(!0, I, !0),
-        [b, R, M] = (0, c.F5)(E),
+        [b, R, M] = (0, c.F5)(f),
         [L, z] = (0, c.km)(b, N, S),
         D = performance.now() - T.current < c.Jc,
-        k = R(C, _.current);
+        k = R(C, O.current);
     (0, u.Ay)(
         () => (
             L(),
@@ -145,7 +145,7 @@ function E(e) {
                                           variant: "code",
                                           color: "text-subtle",
                                           className: x.af,
-                                          children: ["(", ((w.current / O.current) * 100).toFixed(3), "%)"],
+                                          children: ["(", ((w.current / _.current) * 100).toFixed(3), "%)"],
                                       }),
                                   ],
                               }),
@@ -171,7 +171,7 @@ function E(e) {
                                           tag: "span",
                                           variant: "code",
                                           color: "text-strong",
-                                          children: O.current.toFixed(0),
+                                          children: _.current.toFixed(0),
                                       }),
                                   ],
                               }),
@@ -222,7 +222,7 @@ function E(e) {
                               }),
                           }),
                       }),
-                  f &&
+                  E &&
                       (0, i.jsx)(d.Text, {
                           tag: "span",
                           variant: "code",

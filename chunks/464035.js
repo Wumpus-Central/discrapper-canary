@@ -22,7 +22,7 @@ var l = n(627968),
     N = n(661191),
     f = n(652215),
     S = n(985018),
-    v = n(8734);
+    v = n(711661);
 class w extends a.PureComponent {
     constructor(e) {
         super(e);

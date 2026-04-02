@@ -19,11 +19,11 @@ var i,
     C = n(674378),
     I = n(723702),
     E = n(541830),
-    b = n(715671),
-    v = n(598429),
+    v = n(715671),
+    b = n(598429),
     T = n(652215),
-    y = n(985018),
-    S = n(162533),
+    S = n(985018),
+    y = n(54720),
     N =
         (((i = N || {}).PLAY = "play"),
         (i.NOW_PLAYING = "now_playing"),
@@ -57,25 +57,25 @@ class L extends r.Component {
         switch (("uninstalling" !== e && (this._uninstallStringIndex = null), e)) {
             case "install":
             case "unsupported_os":
-                return y.intl.string(y.t.nL0WvC);
+                return S.intl.string(S.t.nL0WvC);
             case "update":
-                return y.intl.string(y.t.tkhwp9);
+                return S.intl.string(S.t.tkhwp9);
             case "paused":
-                return y.intl.string(y.t["6EKrh4"]);
+                return S.intl.string(S.t["6EKrh4"]);
             case "locate":
-                return y.intl.string(y.t["nIj+a0"]);
+                return S.intl.string(S.t["nIj+a0"]);
             case "uninstalling":
                 let t = [
-                    y.intl.string(y.t.r9wmKn),
-                    y.intl.string(y.t["6CpimS"]),
-                    y.intl.string(y.t.ysbNDc),
-                    y.intl.string(y.t["TLnXx/"]),
-                    y.intl.string(y.t.Qi8mne),
-                    y.intl.string(y.t.yvMu3S),
-                    y.intl.string(y.t["PnNUZ/"]),
-                    y.intl.string(y.t.hU2TEJ),
-                    y.intl.string(y.t["YyY51/"]),
-                    y.intl.string(y.t.PbHJb3),
+                    S.intl.string(S.t.r9wmKn),
+                    S.intl.string(S.t["6CpimS"]),
+                    S.intl.string(S.t.ysbNDc),
+                    S.intl.string(S.t["TLnXx/"]),
+                    S.intl.string(S.t.Qi8mne),
+                    S.intl.string(S.t.yvMu3S),
+                    S.intl.string(S.t["PnNUZ/"]),
+                    S.intl.string(S.t.hU2TEJ),
+                    S.intl.string(S.t["YyY51/"]),
+                    S.intl.string(S.t.PbHJb3),
                 ];
                 return (
                     null == this._uninstallStringIndex &&
@@ -83,13 +83,13 @@ class L extends r.Component {
                     t[this._uninstallStringIndex]
                 );
             case "queued":
-                return y.intl.string(y.t.TiJg5l);
+                return S.intl.string(S.t.TiJg5l);
             case "downloading":
-                return y.intl.string(y.t.Tdhepf);
+                return S.intl.string(S.t.Tdhepf);
             case "preorder_wait":
-                return y.intl.string(y.t.xiXyPc);
+                return S.intl.string(S.t.xiXyPc);
             case "add_to_library":
-                return y.intl.string(y.t.r3fwuQ);
+                return S.intl.string(S.t.r3fwuQ);
             default:
                 throw Error("Unexpected button state");
         }
@@ -104,11 +104,11 @@ class L extends r.Component {
     };
     handleInstall = () => {
         let { libraryApplication: e, source: t } = this.props;
-        b.installApplication(e.id, e.branchId, t);
+        v.installApplication(e.id, e.branchId, t);
     };
     handleUpdate = () => {
         let { libraryApplication: e } = this.props;
-        b.updateApplication(e.id, e.branchId);
+        v.updateApplication(e.id, e.branchId);
     };
     onClickHandlers = {
         add_to_library: this.handleAddToLibrary,
@@ -144,7 +144,7 @@ class L extends r.Component {
             analyticsListSort: o,
             analyticsListIndex: d,
         } = this.props;
-        return (0, a.jsx)(v.A, {
+        return (0, a.jsx)(b.A, {
             applicationId: e.id,
             libraryApplication: e,
             fullWidth: t,
@@ -161,13 +161,13 @@ class L extends r.Component {
         let { fullWidth: n, size: i, disabledVariant: r = "secondary", tooltipPosition: s } = this.props,
             o = this.renderProgressBar();
         return (0, a.jsxs)("div", {
-            className: null != o ? S.c : void 0,
+            className: null != o ? y.c : void 0,
             children: [
                 (0, a.jsxs)("div", {
-                    className: S.Yr,
+                    className: y.Yr,
                     children: [
                         (0, a.jsx)(l.$nd, { text: this.getText(e), fullWidth: n, size: i, variant: r, disabled: !0 }),
-                        (0, a.jsx)(d.m, { text: t, position: s, children: (0, a.jsx)("div", { className: S.p5 }) }),
+                        (0, a.jsx)(d.m, { text: t, position: s, children: (0, a.jsx)("div", { className: y.p5 }) }),
                     ],
                 }),
                 o,
@@ -185,14 +185,14 @@ class L extends r.Component {
             size: c.iCB.Sizes.XSMALL,
             foregroundColor: n.paused ? o.A.unsafe_rawColors.PRIMARY_500.css : o.A.unsafe_rawColors.GREEN_360.css,
             backgroundColor: o.A.unsafe_rawColors.TRANSPARENT.css,
-            className: S.qB,
+            className: y.qB,
         });
     }
     renderActionButton(e, t) {
         let { fullWidth: n, size: i, actionButtonVariant: r = "primary", isCloudSyncing: s } = this.props,
             o = this.renderProgressBar();
         return (0, a.jsxs)("div", {
-            className: null != o ? S.c : void 0,
+            className: null != o ? y.c : void 0,
             children: [
                 (0, a.jsx)(l.$nd, {
                     text: this.getText(e),
@@ -214,15 +214,15 @@ class L extends r.Component {
             let e;
             return this.renderDisabledButton(
                 n,
-                null != (e = E.zJ(t.sku)) ? y.intl.formatToPlainString(y.t.Aqe2ZC, { date: e }) : null,
+                null != (e = E.zJ(t.sku)) ? S.intl.formatToPlainString(S.t.Aqe2ZC, { date: e }) : null,
             );
         }
         if ("unsupported_os" === n)
             return this.renderDisabledButton(
                 n,
-                y.intl.formatToPlainString(y.t.LBm0A4, { operatingSystem: y.intl.string(y.t["0/xHFO"]) }),
+                S.intl.formatToPlainString(S.t.LBm0A4, { operatingSystem: S.intl.string(S.t["0/xHFO"]) }),
             );
-        if ("install" === n && e) return this.renderDisabledButton(n, y.intl.string(y.t.QUSQIA));
+        if ("install" === n && e) return this.renderDisabledButton(n, S.intl.string(S.t.QUSQIA));
         let i = this.onClickHandlers[n];
         return null == i ? this.renderDisabledButton(n) : this.renderActionButton(n, i);
     }

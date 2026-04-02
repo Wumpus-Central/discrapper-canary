@@ -21,7 +21,7 @@ var n = s(627968),
     C = s(998694),
     A = s(438166),
     S = s(652215),
-    v = s(471312);
+    v = s(16464);
 let I = { flattenProductVariants: !0 };
 function L(e) {
     let { isFetchingCategories: t, scrollerRef: s, tab: l } = e,
@@ -30,17 +30,17 @@ function L(e) {
         { noCache: k, includeUnpublished: T } = (0, C.A)(),
         O = (0, g.W)("CollectiblesFilterResults"),
         N = (0, i.bG)([c.default], () => c.default.getCurrentUser()),
-        { skus: y, currentPage: R, totalCount: B, isFetchingResults: M } = (0, p.S)(),
-        P = (0, i.yK)([_.A], () => _.A.getProductsBySkus(y)),
+        { skus: y, currentPage: R, totalCount: B, isFetchingResults: P } = (0, p.S)(),
+        M = (0, i.yK)([_.A], () => _.A.getProductsBySkus(y)),
         D = r.useCallback(() => {
             s?.current?.scrollToTop({ animate: !0 });
         }, [s]),
-        H = y?.join("");
+        w = y?.join("");
     r.useEffect(() => {
         D();
-    }, [H, D]);
-    let w = (0, m.p)(),
-        F = r.useMemo(() => w(P), [w, P]);
+    }, [w, D]);
+    let H = (0, m.p)(),
+        F = r.useMemo(() => H(M), [H, M]);
     r.useEffect(() => {
         t ||
             (0, f.z)({
@@ -54,7 +54,7 @@ function L(e) {
     let G = r.useRef(null),
         { setQueryPageSize: U, setQueryPageOffset: V, queryPageSize: K } = (0, h.v)(),
         [W, z] = r.useState(!1),
-        Y = t || M || null == N;
+        Y = t || P || null == N;
     r.useEffect(() => {
         Y ? z(!1) : F.length > 0 && z(!0);
     }, [Y, F.length]);

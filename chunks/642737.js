@@ -1,4 +1,4 @@
-t.d(l, { A: () => p }), t(667532);
+t.d(l, { A: () => x }), t(667532);
 var i = t(627968),
     n = t(64700),
     s = t(311907),
@@ -8,16 +8,16 @@ var i = t(627968),
     d = t(711014),
     c = t(403362),
     u = t(985018),
-    m = t(401736);
+    m = t(18911);
 let A = "MAIN_PROFILE";
-function p(e) {
+function x(e) {
     let { selectedGuildId: l, onChange: t } = e,
-        p = (0, s.bG)([d.Ay], () => d.Ay.getFlattenedGuildIds()),
-        x = (0, s.bG)([o.A], () => o.A.getGuilds()),
+        x = (0, s.bG)([d.Ay], () => d.Ay.getFlattenedGuildIds()),
+        p = (0, s.bG)([o.A], () => o.A.getGuilds()),
         g = n.useMemo(() => {
-            let e = p
+            let e = x
                 .map((e) => {
-                    let l = x[e];
+                    let l = p[e];
                     return null == l
                         ? null
                         : {
@@ -42,7 +42,7 @@ function p(e) {
                 }),
                 e
             );
-        }, [p, x]),
+        }, [x, p]),
         f = n.useCallback(
             (e) => {
                 t(e === A ? null : e);

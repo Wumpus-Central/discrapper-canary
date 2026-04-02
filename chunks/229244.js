@@ -22,17 +22,17 @@ var a = n(627968),
     C = n(223344),
     y = n(589939),
     S = n(443960),
-    T = n(899860),
-    E = n(633581),
+    E = n(899860),
+    T = n(633581),
     N = n(508575),
     I = n(847807),
-    k = n(364329),
-    O = n(545986),
-    R = n(927813),
-    w = n(163459);
+    O = n(364329),
+    R = n(545986),
+    k = n(927813),
+    w = n(549592);
 let D = ["png", "gif", "webp"],
-    P = [...D, "jpg", "jpeg"],
-    M = Array.from(new Set([...P, "gif", "mp4", "webm"]));
+    M = [...D, "jpg", "jpeg"],
+    P = Array.from(new Set([...M, "gif", "mp4", "webm"]));
 function L() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { streamProgressSeconds: t = 0, completedAt: n = null, enrolledAt: a = null, claimedAt: i = null } = e;
@@ -111,7 +111,7 @@ function G() {
         c = i.useCallback((e) => {
             s({ ...e, preview: !0 });
         }, []),
-        [u, U] = i.useState(k.b.UNENROLLED),
+        [u, U] = i.useState(O.b.UNENROLLED),
         [G, F] = i.useState(!1),
         [V, W] = i.useState(!1),
         [H, K] = i.useState(null),
@@ -207,11 +207,11 @@ function G() {
         c({ ...t, config: { ...t.config, colors: { ...t.config.colors, [e]: n } } });
     }
     function X() {
-        (0, x.tU)(t.config) && (0, O.hJ)(t, h.uF.GIFT_INVENTORY_FOR_YOU, h.uF.INTERNAL_PREVIEW_TOOL, !0);
+        (0, x.tU)(t.config) && (0, R.hJ)(t, h.uF.GIFT_INVENTORY_FOR_YOU, h.uF.INTERNAL_PREVIEW_TOOL, !0);
     }
     let Z = i.useMemo(() => {
             for (let [e, n] of Object.entries(t.config.taskConfigV2.tasks)) if (null != n.target) return n.target;
-            return 10 * R.A.Seconds.MINUTE;
+            return 10 * k.A.Seconds.MINUTE;
         }, [t.config.taskConfigV2.tasks]),
         ee = i.useMemo(() => o.n.WATCH_VIDEO in t.config.taskConfigV2.tasks, [t.config.taskConfigV2.tasks]);
     l()(!1 !== t.preview && null != t.preview, "Preview config must have property preview: true");
@@ -222,27 +222,27 @@ function G() {
             (0, a.jsx)(m.Heading, { variant: "heading-lg/bold", className: w.R_, children: "Quest Preview Tool" }),
             (0, a.jsx)("div", {
                 className: w.OA,
-                children: (0, a.jsx)(E.A, {
+                children: (0, a.jsx)(T.A, {
                     onSelect: function (e) {
                         K(e),
                             null == e ||
                                 (U(
                                     (function (e) {
-                                        if (null == e.userStatus) return k.b.UNENROLLED;
-                                        if (null != e.userStatus.claimedAt) return k.b.CLAIMED;
-                                        if (null != e.userStatus.completedAt) return k.b.COMPLETED_100;
+                                        if (null == e.userStatus) return O.b.UNENROLLED;
+                                        if (null != e.userStatus.claimedAt) return O.b.CLAIMED;
+                                        if (null != e.userStatus.completedAt) return O.b.COMPLETED_100;
                                         let t = (0, p.Yh)(e),
                                             n = t.progressSeconds,
                                             a = t.targetSeconds;
                                         return n / a >= 1
-                                            ? k.b.COMPLETED_100
+                                            ? O.b.COMPLETED_100
                                             : n / a >= 0.75
-                                              ? k.b.COMPLETED_75
+                                              ? O.b.COMPLETED_75
                                               : n / a >= 0.5
-                                                ? k.b.COMPLETED_50
+                                                ? O.b.COMPLETED_50
                                                 : n / a >= 0.25
-                                                  ? k.b.COMPLETED_25
-                                                  : k.b.ENROLLED;
+                                                  ? O.b.COMPLETED_25
+                                                  : O.b.ENROLLED;
                                     })(e),
                                 ),
                                 c(e));
@@ -265,26 +265,26 @@ function G() {
             (0, a.jsxs)("div", {
                 className: w.OA,
                 children: [
-                    (0, a.jsx)(T.A, {
+                    (0, a.jsx)(E.A, {
                         title: "Quest Name",
                         assetKey: "questName",
                         onMessageChange: Q,
                         initialValue: t.config.messages.questName,
                     }),
-                    (0, a.jsx)(T.A, {
+                    (0, a.jsx)(E.A, {
                         title: "Game Title",
                         assetKey: "gameTitle",
                         onMessageChange: Q,
                         initialValue: t.config.messages.gameTitle,
                     }),
-                    (0, a.jsx)(T.A, {
+                    (0, a.jsx)(E.A, {
                         title: "Game Publisher",
                         assetKey: "gamePublisher",
                         onMessageChange: Q,
                         initialValue: t.config.messages.gamePublisher,
                     }),
                     ee &&
-                        (0, a.jsx)(T.A, {
+                        (0, a.jsx)(E.A, {
                             title: "Video Title",
                             assetKey: "videoTitle",
                             onMessageChange: function (e, n) {
@@ -315,35 +315,35 @@ function G() {
                         title: "Hero",
                         assetKey: "hero",
                         onFileChange: $,
-                        filters: M,
+                        filters: P,
                         initialValue: t.config.assets.hero,
                     }),
                     (0, a.jsx)(S.A, {
                         title: "Hero Video (optional)",
                         assetKey: "heroVideo",
                         onFileChange: $,
-                        filters: M,
+                        filters: P,
                         initialValue: t.config.assets.heroVideo ?? void 0,
                     }),
                     (0, a.jsx)(S.A, {
                         title: "Quest Bar Hero",
                         assetKey: "questBarHero",
                         onFileChange: $,
-                        filters: M,
+                        filters: P,
                         initialValue: t.config.assets.questBarHero,
                     }),
                     (0, a.jsx)(S.A, {
                         title: "Quest Bar Hero Video (optional)",
                         assetKey: "questBarHeroVideo",
                         onFileChange: $,
-                        filters: M,
+                        filters: P,
                         initialValue: t.config.assets.questBarHeroVideo ?? void 0,
                     }),
                     (0, a.jsx)(S.A, {
                         title: "Game Tile",
                         assetKey: "gameTile",
                         onFileChange: $,
-                        filters: [...P, "svg"],
+                        filters: [...M, "svg"],
                         initialValue: t.config.assets.gameTile,
                     }),
                     (0, a.jsx)(S.A, {
@@ -360,21 +360,21 @@ function G() {
                                     title: "Quest Video",
                                     assetKey: "videoPlayerVideo",
                                     onFileChange: q,
-                                    filters: M,
+                                    filters: P,
                                     initialValue: et?.assets.video.url,
                                 }),
                                 (0, a.jsx)(S.A, {
                                     title: "Quest Video (Low Resolution)",
                                     assetKey: "videoPlayerVideoLowRes",
                                     onFileChange: q,
-                                    filters: M,
+                                    filters: P,
                                     initialValue: et?.assets.videoLowRes?.url,
                                 }),
                                 (0, a.jsx)(S.A, {
                                     title: "Video Player Thumbnail (optional)",
                                     assetKey: "videoPlayerThumbnail",
                                     onFileChange: q,
-                                    filters: P,
+                                    filters: M,
                                     initialValue: et?.assets.video.thumbnail,
                                 }),
                             ],
@@ -394,13 +394,13 @@ function G() {
                             (0, a.jsxs)("div", {
                                 className: w.OA,
                                 children: [
-                                    (0, a.jsx)(T.A, {
+                                    (0, a.jsx)(E.A, {
                                         title: "Name",
                                         assetKey: "name",
                                         onMessageChange: (e, t) => Y(e, t, n),
                                         initialValue: e.messages.name,
                                     }),
-                                    (0, a.jsx)(T.A, {
+                                    (0, a.jsx)(E.A, {
                                         title: "Name With Article",
                                         assetKey: "nameWithArticle",
                                         onMessageChange: (e, t) => Y(e, t, n),
@@ -435,7 +435,7 @@ function G() {
                                                         });
                                                     }
                                                 })(e, a, n),
-                                            filters: M,
+                                            filters: P,
                                             initialValue: e.asset,
                                         }),
                                     (0, a.jsxs)(m.BJc, {
@@ -487,16 +487,16 @@ function G() {
                         ],
                     }),
                     (0, a.jsx)("div", { className: w.OA, children: (0, a.jsx)(I.A, {}) }),
-                    (0, a.jsx)(k.A, {
+                    (0, a.jsx)(O.A, {
                         onChange: function (e) {
                             switch ((U(e), e)) {
-                                case k.b.UNENROLLED:
+                                case O.b.UNENROLLED:
                                     c({ ...t, userStatus: null });
                                     break;
-                                case k.b.ENROLLED:
+                                case O.b.ENROLLED:
                                     c({ ...t, userStatus: L({ enrolledAt: new Date().toISOString() }) });
                                     break;
-                                case k.b.COMPLETED_25:
+                                case O.b.COMPLETED_25:
                                     c({
                                         ...t,
                                         userStatus: L({
@@ -505,7 +505,7 @@ function G() {
                                         }),
                                     });
                                     break;
-                                case k.b.COMPLETED_50:
+                                case O.b.COMPLETED_50:
                                     c({
                                         ...t,
                                         userStatus: L({
@@ -514,7 +514,7 @@ function G() {
                                         }),
                                     });
                                     break;
-                                case k.b.COMPLETED_75:
+                                case O.b.COMPLETED_75:
                                     c({
                                         ...t,
                                         userStatus: L({
@@ -523,7 +523,7 @@ function G() {
                                         }),
                                     });
                                     break;
-                                case k.b.COMPLETED_100:
+                                case O.b.COMPLETED_100:
                                     c({
                                         ...t,
                                         userStatus: L({
@@ -533,7 +533,7 @@ function G() {
                                         }),
                                     });
                                     break;
-                                case k.b.CLAIMED:
+                                case O.b.CLAIMED:
                                     c({
                                         ...t,
                                         userStatus: L({
@@ -673,7 +673,7 @@ function G() {
                                                 n.e("92868"),
                                                 n.e("29636"),
                                                 n.e("7634"),
-                                                n.e("5501"),
+                                                n.e("36855"),
                                             ]).then(n.bind(n, 201257));
                                             return (n) =>
                                                 (0, a.jsx)(e, {

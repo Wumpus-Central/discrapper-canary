@@ -12,12 +12,12 @@ var i = n(627968),
     A = n(253932),
     m = n(576705),
     p = n(486020),
-    f = n(203982),
-    h = n(690521),
+    h = n(203982),
+    f = n(690521),
     y = n(652215),
     E = n(307731),
     _ = n(985018),
-    S = n(186785);
+    S = n(36732);
 function b(e, t) {
     let { reducedMotion: n } = l.useContext(o.CZY),
         a = (0, g.Id)(t),
@@ -25,7 +25,7 @@ function b(e, t) {
         p = (0, d.D6)(t.getGuildId());
     if (!A.jW.getSetting() || !r) return null;
     let S = p
-        .filter((e) => !h.Ay.isEmojiFilteredOrLocked({ emoji: e, channel: t, intention: E.b_.REACTION }))
+        .filter((e) => !f.Ay.isEmojiFilteredOrLocked({ emoji: e, channel: t, intention: E.b_.REACTION }))
         .slice(0, 12)
         .map((l, a) =>
             (0, i.jsx)(
@@ -38,7 +38,7 @@ function b(e, t) {
                     leadingAccessory: {
                         type: "emoji",
                         emojiId: l.id,
-                        src: null == l.id ? h.Ay.getURL(l.optionallyDiverseSequence ?? "") : void 0,
+                        src: null == l.id ? f.Ay.getURL(l.optionallyDiverseSequence ?? "") : void 0,
                         animated: l.animated,
                     },
                     action: () => {
@@ -54,7 +54,7 @@ function b(e, t) {
         label: _.intl.string(_.t.lfIHs4),
         leadingAccessory: { type: "icon", icon: o.nm2 },
         action: () => {
-            f._.dispatchKeyed(y.zOV.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
+            h._.dispatchKeyed(y.zOV.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
         },
         color: "default",
         children: (0, i.jsxs)(i.Fragment, {
@@ -68,7 +68,7 @@ function b(e, t) {
                     icon: o.nm2,
                     leadingAccessory: { type: "icon", icon: o.ShF },
                     action: () => {
-                        f._.dispatchKeyed(y.zOV.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
+                        h._.dispatchKeyed(y.zOV.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
                     },
                 }),
             ],
@@ -82,7 +82,7 @@ function v(e) {
         src:
             null != t.id
                 ? p.Ay.getEmojiURL({ id: t.id, animated: t.animated && (!n || a), size: 18 })
-                : h.Ay.getURL(t.optionallyDiverseSequence ?? ""),
+                : f.Ay.getURL(t.optionallyDiverseSequence ?? ""),
         alt: "",
     });
 }

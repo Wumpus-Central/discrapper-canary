@@ -11,20 +11,20 @@ var i = n(627968),
     h = n(964486),
     m = n(684339),
     A = n(164617),
-    p = n(402216),
-    g = n(626584),
+    g = n(402216),
+    p = n(626584),
     f = n(525505),
     _ = n(753727),
     E = n(638480),
-    x = n(607407),
-    C = n(872363),
+    C = n(607407),
+    x = n(872363),
     S = n(901690),
     I = n(919706),
     T = n(616356),
-    v = n(961350),
-    N = n(734057),
-    y = n(430452),
-    b = n(531685),
+    N = n(961350),
+    b = n(734057),
+    v = n(430452),
+    y = n(531685),
     j = n(200749),
     R = n(70171),
     M = n(566331),
@@ -37,8 +37,8 @@ var i = n(627968),
     U = n(806931),
     G = n(731854),
     F = n(985018),
-    H = n(633916);
-let B = new g.A("StreamTile");
+    H = n(32685);
+let B = new p.A("StreamTile");
 function V(e) {
     let { participant: t, selected: n, focused: l, idle: s, width: a, premiumIndicator: o } = e,
         c = (0, r.bG)([T.A], () => T.A.getActiveStreamForUser(t.user.id, t.stream.guildId)),
@@ -48,8 +48,8 @@ function V(e) {
             n || l ? null : (0, i.jsx)(P.A, { participant: t }),
             l || null == c || c.state === k.XYD.ENDED || c.state === k.XYD.FAILED
                 ? null
-                : (0, i.jsx)(C.A, {
-                      size: p.Ay.Sizes.SMALL,
+                : (0, i.jsx)(x.A, {
+                      size: g.Ay.Sizes.SMALL,
                       className: H.Ok,
                       participant: t,
                       showQuality: !d && !s,
@@ -64,24 +64,24 @@ function K(e) {
             participant: t,
             selected: n,
             onVideoResize: s,
-            fit: p,
-            popoutType: g,
-            width: C,
+            fit: g,
+            popoutType: p,
+            width: x,
             wrapperClassName: P,
             paused: w = !1,
         } = e,
-        V = y.Ay.getVideoComponent(),
-        K = (0, r.bG)([v.default], () => v.default.getId()),
+        V = v.Ay.getVideoComponent(),
+        K = (0, r.bG)([N.default], () => N.default.getId()),
         W = (0, _.A)(),
-        { stream: z, user: Y, streamId: q } = t,
-        J = (0, r.bG)([N.A], () => N.A.getChannel(z.channelId)),
-        $ = (0, r.bG)([T.A], () => T.A.getActiveStreamForUser(Y.id, z.guildId), [Y.id, z.guildId]),
+        { stream: z, user: q, streamId: Y } = t,
+        J = (0, r.bG)([b.A], () => b.A.getChannel(z.channelId)),
+        $ = (0, r.bG)([T.A], () => T.A.getActiveStreamForUser(q.id, z.guildId), [q.id, z.guildId]),
         Z = (0, r.bG)([T.A], () => T.A.getAllActiveStreams().length > 0),
-        X = (0, r.bG)([b.A], () => b.A.isFocused()),
+        X = (0, r.bG)([y.A], () => y.A.isFocused()),
         Q = $?.ownerId === K,
-        ee = Q && !X && g === A.N.NO_POPOUT,
-        et = null != $ ? (0, E.A)($, Y, Y.id === K, ee) : null,
-        en = C < 195;
+        ee = Q && !X && p === A.N.NO_POPOUT,
+        et = null != $ ? (0, E.A)($, q, q.id === K, ee) : null,
+        en = x < 195;
     (0, h.Ay)(() => {
         !Z && J?.isGuildStageVoice() && !Q && ((0, u.A9)(z), d.A.updateStageStreamSize(z.channelId, !1));
     });
@@ -89,44 +89,44 @@ function K(e) {
     if (
         (l.useEffect(() => {
             B.info(
-                `Stream Tile State - activeStream: ${null != $} | selected: ${n} | Video: ${null != V} | MediaEngine: ${y.Ay.supports(G.O5.VIDEO)}`,
+                `Stream Tile State - activeStream: ${null != $} | selected: ${n} | Video: ${null != V} | MediaEngine: ${v.Ay.supports(G.O5.VIDEO)}`,
             );
         }, [V, $, n]),
         W)
     )
-        return (0, i.jsx)(L.A, { stream: t.stream, isSmall: en, selected: n, isSelfStream: Y.id === K });
-    if ($?.state === k.XYD.ENDED) return (0, i.jsx)(M.A, { selected: n, stream: $, width: C });
+        return (0, i.jsx)(L.A, { stream: t.stream, isSmall: en, selected: n, isSelfStream: q.id === K });
+    if ($?.state === k.XYD.ENDED) return (0, i.jsx)(M.A, { selected: n, stream: $, width: x });
     if (null != ei || $?.state === k.XYD.FAILED)
-        return (0, i.jsx)(D.A, { avError: ei?.type, avErrorContext: ei, selected: n, stream: t.stream, width: C });
-    if (t.type === U.lp.HIDDEN_STREAM) return (0, i.jsx)(O.A, { selected: n, participant: t, width: C });
-    if (null != $ && !n && null != V && y.Ay.supports(G.O5.VIDEO))
+        return (0, i.jsx)(D.A, { avError: ei?.type, avErrorContext: ei, selected: n, stream: t.stream, width: x });
+    if (t.type === U.lp.HIDDEN_STREAM) return (0, i.jsx)(O.A, { selected: n, participant: t, width: x });
+    if (null != $ && !n && null != V && v.Ay.supports(G.O5.VIDEO))
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(
                     S.A,
                     {
                         onResize: s,
-                        wrapperClassName: a()(g !== A.N.CALL_TILE ? H.tN : void 0, P),
+                        wrapperClassName: a()(p !== A.N.CALL_TILE ? H.tN : void 0, P),
                         className: H.Qs,
-                        streamId: q,
+                        streamId: Y,
                         videoComponent: V,
-                        fit: p,
+                        fit: g,
                         paused: w || $?.state === k.XYD.PAUSED || ee,
                         videoSpinnerContext: Q ? m.u.SELF_STREAM : m.u.REMOTE_STREAM,
-                        userId: Y.id,
+                        userId: q.id,
                         streamKey: t.id,
                     },
-                    q,
+                    Y,
                 ),
-                null != et ? (0, i.jsx)(I.A, { size: (0, j.J)(C), ...et }) : null,
-                (0, i.jsx)(R.A, { stream: z, popoutType: g }),
+                null != et ? (0, i.jsx)(I.A, { size: (0, j.J)(x), ...et }) : null,
+                (0, i.jsx)(R.A, { stream: z, popoutType: p }),
             ],
         });
     else
         return (0, i.jsxs)("div", {
             className: a()(H.Qs, H.Rh, { [H.EX]: en }),
             children: [
-                (0, i.jsx)(x.A, {
+                (0, i.jsx)(C.A, {
                     noImage: !0,
                     noText: !0,
                     className: a()(H.HL, { [H.gH]: null == $ }),
@@ -141,7 +141,7 @@ function K(e) {
                                   children: (0, i.jsx)(c.Button, {
                                       variant: "secondary",
                                       size: en ? "sm" : "md",
-                                      text: C < 175 ? F.intl.string(F.t.I6JG46) : F.intl.string(F.t["7Xq/nV"]),
+                                      text: x < 175 ? F.intl.string(F.t.I6JG46) : F.intl.string(F.t["7Xq/nV"]),
                                   }),
                               }),
                               Z

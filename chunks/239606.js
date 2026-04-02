@@ -3,15 +3,15 @@ var i = t(627968),
     n = t(64700),
     s = t(503698),
     a = t.n(s),
-    r = t(773690),
+    r = t(687498),
     o = t(311907),
     d = t(397927),
     c = t(770178),
     u = t(80682),
     m = t(793574),
     A = t(688810),
-    p = t(351966),
-    x = t(361628),
+    x = t(351966),
+    p = t(361628),
     g = t(744808),
     f = t(915089),
     h = t(713517),
@@ -64,12 +64,12 @@ var i = t(627968),
     eu = t(878210),
     em = t(515054),
     eA = t(513265),
-    ep = t(160983),
-    ex = t(518477),
+    ex = t(160983),
+    ep = t(518477),
     eg = t(652215),
     ef = t(996988),
     eh = t(985018),
-    ej = t(572841);
+    ej = t(87862);
 let eI = { "compact-sm": { avatarOffsetX: 16 }, "compact-xs": { avatarSize: d._3J.SIZE_96, avatarOffsetX: 16 } };
 function ev(e) {
     let {
@@ -80,7 +80,7 @@ function ev(e) {
             channelId: u,
             displayProfile: m,
             nickname: A,
-            hasEntered: x,
+            hasEntered: p,
             customStatusPrompt: g,
             onClose: f,
         } = e,
@@ -126,7 +126,7 @@ function ev(e) {
                         guildId: s,
                         channelId: u,
                         themeType: ef.d.MODAL_V2,
-                        hasEntered: x,
+                        hasEntered: p,
                         prompt: y ? L : null,
                     }),
                 ],
@@ -213,7 +213,7 @@ function ev(e) {
                         }),
                     (0, i.jsx)(ec.A, {
                         heading: eh.intl.string(eh.t.a6XYD9),
-                        children: (0, i.jsx)(J.A, { userId: l.id, guildId: m?.guildId, tooltipDelay: ex.In }),
+                        children: (0, i.jsx)(J.A, { userId: l.id, guildId: m?.guildId, tooltipDelay: ep.In }),
                     }),
                     m?.guildId != null &&
                         (0, i.jsx)(et.A, {
@@ -226,7 +226,7 @@ function ev(e) {
                     es.length > 0 &&
                         (0, i.jsx)(ec.A, {
                             heading: eh.intl.string(eh.t["3fe7U5"]),
-                            scrollTargetId: ex.bk.CONNECTIONS,
+                            scrollTargetId: ep.bk.CONNECTIONS,
                             children: (0, i.jsx)(ea.A, {
                                 connections: es,
                                 userId: l.id,
@@ -236,7 +236,7 @@ function ev(e) {
                     er.length > 0 &&
                         (0, i.jsx)(ec.A, {
                             heading: eh.intl.string(eh.t.PHjkRE),
-                            scrollTargetId: ex.bk.APPS,
+                            scrollTargetId: ep.bk.APPS,
                             children: (0, i.jsx)(ei.A, {
                                 applicationRoleConnections: er,
                                 onClose: f,
@@ -246,7 +246,7 @@ function ev(e) {
                     (0, i.jsx)(ed.A, { userId: l.id }),
                 ],
             }),
-            m?.profileEffect != null && (0, i.jsx)(p.A, { skuId: m?.profileEffect.skuId, isHovering: b }),
+            m?.profileEffect != null && (0, i.jsx)(x.A, { skuId: m?.profileEffect.skuId, isHovering: b }),
         ],
     });
 }
@@ -267,7 +267,7 @@ function ey(e) {
             currentUser: t,
             guildId: s,
             originGuildId: c,
-            channelId: p,
+            channelId: x,
             messageId: h,
             roleId: j,
             sessionId: I,
@@ -284,7 +284,7 @@ function ey(e) {
         B = n.useMemo(() => (null != D ? { [D]: [l.id] } : {}), [D, l.id]);
     (0, u.Eq)(B, "UserProfileModalV2");
     let z = (0, S.Ay)(l.id, D),
-        W = (0, x.A)(z?.profileFrame?.skuId, "UserProfileModalV2"),
+        W = (0, p.A)(z?.profileFrame?.skuId, "UserProfileModalV2"),
         K = (0, O.X)("UserProfileModalV2"),
         $ = U && K,
         [H, Z] = n.useState(!0),
@@ -294,18 +294,18 @@ function ey(e) {
     let q = (0, k.fC)(),
         ee = (0, d.zhh)({ opacity: +(null != q.interactionType), config: { duration: 150 } }),
         el = (0, L.Nx)() ? null : z?.getBannerURL({ canAnimate: !1, size: 1024 }),
-        et = (0, ep.A)({ user: l, currentUser: t }),
+        et = (0, ex.A)({ user: l, currentUser: t }),
         { analyticsLocations: ei } = (0, A.Ay)([...R, m.A.USER_PROFILE_MODAL_V2]),
         en = (0, b.pb)({
             layout: "MODAL_V2",
             userId: l.id,
             sourceSessionId: I,
             guildId: D,
-            channelId: p,
+            channelId: x,
             messageId: h,
             roleId: j,
         }),
-        ea = C.Ay.useName(z?.guildId, p, l),
+        ea = C.Ay.useName(z?.guildId, x, l),
         ed = (0, f.GV)(),
         ec = eh.intl.format(eh.t.KRe1Fk, { name: ea });
     return (0, i.jsx)(A.f5, {
@@ -386,7 +386,7 @@ function ey(e) {
                                                             user: l,
                                                             currentUser: t,
                                                             guildId: D,
-                                                            channelId: p,
+                                                            channelId: x,
                                                             displayProfile: z,
                                                             nickname: ea,
                                                             originGuildId: c,
@@ -399,7 +399,7 @@ function ey(e) {
                                                             currentUser: t,
                                                             displayProfile: z,
                                                             guildId: D,
-                                                            channelId: p,
+                                                            channelId: x,
                                                             items: et,
                                                             initialSection: v,
                                                             onClose: _,

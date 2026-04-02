@@ -6,28 +6,28 @@ var a = l(627968),
     o = l(892227),
     s = l(311907),
     u = l(964892),
-    c = l(916845),
-    d = l(732955),
+    d = l(916845),
+    c = l(732955),
     p = l(303136),
     m = l(320118),
     h = l(976860),
     x = l(309954),
     b = l(287809),
-    y = l(975571),
-    f = l(474090),
+    f = l(975571),
+    y = l(474090),
     g = l(94264),
     v = l(235365),
     E = l(566119),
     _ = l(788868),
     C = l(652215),
     j = l(901123),
-    S = l(49370),
+    S = l(723468),
     T = l(985018),
-    A = l(182393),
+    A = l(577656),
     P = l(268920),
     k = l(633217),
-    R = l(909340);
-let I = () =>
+    I = l(909340);
+let R = () =>
     (0, a.jsx)("div", { className: A.s, children: (0, a.jsx)(p.A, { src: k.A, fallbackImage: P.A, className: A.Cb }) });
 function N() {
     (0, E.RQ)(), (0, h.pX)(`${j.BV.NITRO_HOME}?section=${v.L}`);
@@ -36,24 +36,24 @@ function D() {
     (0, E.gP)(), (0, h.pX)(`${j.BV.NITRO_HOME}?section=${v.L}`);
 }
 function M() {
-    (0, E.b)(), window.open(y.A.getArticleURL(C.MVz.ORBS_FAQ), "_blank");
+    (0, E.b)(), window.open(f.A.getArticleURL(C.MVz.ORBS_FAQ), "_blank");
 }
 function O(e) {
-    let { targetElementRef: t, shouldShow: l, onRequestClose: r, ctaText: h, ctaOnClick: y } = e,
+    let { targetElementRef: t, shouldShow: l, onRequestClose: r, ctaText: h, ctaOnClick: f } = e,
         { passesGeneralUIInvariant: v, programReward: E } = (0, m.F)({
             location: "PremiumTenureRewardsOrbsBalancePopover",
         }),
         j = (0, s.bG)([b.default], () => b.default.getCurrentUser()),
         { balance: P } = (0, x.W)(),
-        k = !(0, f.ki)(j),
+        k = !(0, y.ki)(j),
         O = n.useMemo(() => {
-            let e = (0, f.YE)(j, _.PremiumTypes.TIER_2);
+            let e = (0, y.YE)(j, _.PremiumTypes.TIER_2);
             if (!v || k) return null;
             if (e && null != E) {
                 let e = (0, o.default)(new Date(E.next_reward_date), new Date());
                 return (0, a.jsxs)(a.Fragment, {
                     children: [
-                        (0, a.jsx)(d.EYj, {
+                        (0, a.jsx)(c.EYj, {
                             variant: "text-xs/normal",
                             color: "text-default",
                             children: T.intl.format(S.default["AvL/At"], {
@@ -76,21 +76,21 @@ function O(e) {
         gradientColor: "blue",
         modal: !0,
         closeOnClickOutside: !0,
-        children: (0, a.jsx)(d.NPJ, {
+        children: (0, a.jsx)(c.NPJ, {
             theme: L ? C.NJ8.DARKER : void 0,
             children: (e) =>
                 (0, a.jsxs)("div", {
                     className: i()(e, A.j),
                     children: [
-                        L && (0, a.jsx)(p.A, { src: R.A, className: A.yG }),
+                        L && (0, a.jsx)(p.A, { src: I.A, className: A.yG }),
                         (0, a.jsxs)("div", {
                             className: A.Qs,
                             children: [
-                                (0, a.jsx)(c.q, { onClick: r }),
+                                (0, a.jsx)(d.q, { onClick: r }),
                                 (0, a.jsxs)("div", {
                                     className: A.hQ,
                                     children: [
-                                        (0, a.jsx)(I, {}),
+                                        (0, a.jsx)(R, {}),
                                         (0, a.jsxs)("div", {
                                             className: A.y$,
                                             children: [
@@ -98,12 +98,12 @@ function O(e) {
                                                     (0, a.jsxs)("div", {
                                                         className: A.E2,
                                                         children: [
-                                                            (0, a.jsx)(d.EYj, {
+                                                            (0, a.jsx)(c.EYj, {
                                                                 variant: "display-lg",
                                                                 className: A.K,
                                                                 children: P ?? 0,
                                                             }),
-                                                            (0, a.jsx)(d.EYj, {
+                                                            (0, a.jsx)(c.EYj, {
                                                                 variant: "text-xs/normal",
                                                                 color: "text-muted",
                                                                 children: T.intl.string(S.default.KclK9z),
@@ -113,14 +113,14 @@ function O(e) {
                                                 O,
                                             ],
                                         }),
-                                        (0, a.jsx)(d.$nd, {
+                                        (0, a.jsx)(c.$nd, {
                                             text: h,
                                             variant: "primary",
                                             size: "sm",
-                                            onClick: y,
+                                            onClick: f,
                                             fullWidth: !0,
                                         }),
-                                        (0, a.jsx)(d.EYj, {
+                                        (0, a.jsx)(c.EYj, {
                                             variant: "text-xs/normal",
                                             color: k ? "text-default" : "text-muted",
                                             className: A.CU,

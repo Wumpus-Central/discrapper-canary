@@ -23,7 +23,7 @@ var i = n(627968),
     S = n(268719),
     x = n(234957),
     R = n(652215),
-    O = n(480972);
+    O = n(10029);
 let M = l.memo(function (e) {
     let {
             message: t,
@@ -45,8 +45,8 @@ let M = l.memo(function (e) {
         H = (0, d.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
         {
             content: F,
-            hasSpoilerEmbeds: w,
-            hasBailedAst: B,
+            hasSpoilerEmbeds: B,
+            hasBailedAst: w,
         } = (0, N.A)(t, {
             hideSimpleEmbedContent: D,
             allowList: G || H,
@@ -73,7 +73,7 @@ let M = l.memo(function (e) {
         childrenRepliedMessage: (0, x.A)(t, L, V, X, n),
         childrenExecutedCommand: (0, S.A)(t, L, n),
         childrenHeader: (0, h.A)({ ...e, guildId: L.guild_id, author: K, roleIcon: W }),
-        childrenAccessories: e.hideAccessories ? void 0 : (0, f.J)(e, w, B),
+        childrenAccessories: e.hideAccessories ? void 0 : (0, f.J)(e, B, w),
         childrenMessageContent: (0, C.A)(e, F),
         childrenSystemMessage: (0, p.A)({ ...e, disableInteraction: b }),
         onContextMenu: a,

@@ -7,8 +7,8 @@ var i = n(627968),
     r = n(397927),
     o = n(652215),
     d = n(985018),
-    c = n(672073),
-    u = n(885106);
+    c = n(92056),
+    u = n(153335);
 let h = 0,
     p = (e) => {
         switch (e) {
@@ -24,11 +24,11 @@ let h = 0,
                 return d.intl.string(d.t.AlY4Za);
         }
     },
-    _ = [o.G6Q.DISABLED, o.G6Q.TOP_LEFT, o.G6Q.TOP_RIGHT, o.G6Q.BOTTOM_LEFT, o.G6Q.BOTTOM_RIGHT];
-function f(e) {
+    f = [o.G6Q.DISABLED, o.G6Q.TOP_LEFT, o.G6Q.TOP_RIGHT, o.G6Q.BOTTOM_LEFT, o.G6Q.BOTTOM_RIGHT];
+function _(e) {
     let { position: t, onChange: n } = e,
         [a] = s.useState(() => `notification-position-selector-${h++}`),
-        f =
+        _ =
             t === o.G6Q.DISABLED
                 ? d.intl.string(d.t.R6LxVf)
                 : d.intl.formatToPlainString(d.t["XXHDM/"], { position: p(t) });
@@ -39,7 +39,7 @@ function f(e) {
                 offset: -2,
                 children: (0, i.jsx)("div", {
                     className: l()(c.iE, { [c.wX]: t === o.G6Q.DISABLED }),
-                    children: _.map((e) =>
+                    children: f.map((e) =>
                         (0, i.jsxs)(
                             "label",
                             {
@@ -70,9 +70,9 @@ function f(e) {
                     ),
                 }),
             }),
-            (0, i.jsx)(r.Text, { variant: "text-sm/normal", className: u.Ot, children: f }),
+            (0, i.jsx)(r.Text, { variant: "text-sm/normal", className: u.Ot, children: _ }),
         ],
     });
 }
-f.Positions = o.G6Q;
-let A = f;
+_.Positions = o.G6Q;
+let A = _;

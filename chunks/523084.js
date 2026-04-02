@@ -7,7 +7,7 @@ var r = n(627968),
     o = n(775602),
     d = n(524246),
     u = n(14368),
-    c = n(944053);
+    c = n(62296);
 function p(t) {
     let { title: e, description: n, image: p, button: f, ..._ } = t,
         m = (0, l.bG)([o.A], () => o.A.useReducedMotion),

@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => x });
 var i = n(627968);
 n(64700);
 var a = n(311907),
@@ -9,12 +9,12 @@ var a = n(311907),
     c = n(622249),
     d = n(742710),
     u = n(192),
-    m = n(899149);
-function g(e) {
+    g = n(23024);
+function m(e) {
     let { games: t, user: n, widgetType: a, ...l } = e,
         { registerItemRef: r, manageFocusOnDelete: o } = (0, s.r)();
     return (0, i.jsx)("ul", {
-        className: m.h,
+        className: g.h,
         children: t.map((e, t) =>
             (0, i.jsx)(
                 "li",
@@ -34,26 +34,26 @@ function g(e) {
         ),
     });
 }
-function p(e) {
-    let { user: t, widgetType: n, disableInteraction: d, games: m } = e,
-        p = (0, a.bG)([l.default], () => l.default.getId() === t.id),
-        { getManageButtonForWidget: x } = (0, u.r)(),
-        f = x(n),
-        { expanded: _, setExpanded: h } = (0, o.B)(),
-        A = _ ? m : m.slice(0, 2),
-        I = m.length > 2,
-        v = (0, i.jsxs)(i.Fragment, {
+function x(e) {
+    let { user: t, widgetType: n, disableInteraction: d, games: g } = e,
+        x = (0, a.bG)([l.default], () => l.default.getId() === t.id),
+        { getManageButtonForWidget: p } = (0, u.r)(),
+        f = p(n),
+        { expanded: h, setExpanded: _ } = (0, o.B)(),
+        A = h ? g : g.slice(0, 2),
+        I = g.length > 2,
+        j = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(g, { ...e, games: A }),
-                I && (0, i.jsx)(c.A, { expanded: _, onClick: () => h((e) => !e) }),
+                (0, i.jsx)(m, { ...e, games: A }),
+                I && (0, i.jsx)(c.A, { expanded: h, onClick: () => _((e) => !e) }),
             ],
         });
-    return p && !d
+    return x && !d
         ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(r.A, { widgetType: n, gameCount: m.length }),
-                  (0, i.jsx)(s.B, { emptyListFallbackRef: f, children: v }),
+                  (0, i.jsx)(r.A, { widgetType: n, gameCount: g.length }),
+                  (0, i.jsx)(s.B, { emptyListFallbackRef: f, children: j }),
               ],
           })
-        : v;
+        : j;
 }

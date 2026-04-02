@@ -14,7 +14,7 @@ var a = n(503698),
     h = n(405269),
     p = n(403362),
     g = n(985018),
-    A = n(2398);
+    A = n(653455);
 let x = function (e) {
     let {
             createdAt: t,
@@ -27,8 +27,8 @@ let x = function (e) {
         } = e,
         I = (0, _.h)(a),
         E = (0, o.yK)([m.default], () => n.map((e) => m.default.getUser(e)).filter(p.Vq) ?? []),
-        b = null != t ? (0, h.Fe)(new Date(t)) : null,
-        v = s()([I?.name, b]);
+        v = null != t ? (0, h.Fe)(new Date(t)) : null,
+        b = s()([I?.name, v]);
     return (0, i.jsxs)("div", {
         className: r()(A.oK, { [A.pd]: f === d.Q6.PLAYING && !C }),
         children: [
@@ -51,12 +51,12 @@ let x = function (e) {
                                     }),
                                 ],
                             }),
-                            v.length > 0 &&
+                            b.length > 0 &&
                                 (0, i.jsx)(u.Text, {
                                     className: A.yu,
                                     variant: "text-sm/normal",
                                     color: "always-white",
-                                    children: v.join(" \xb7 "),
+                                    children: b.join(" \xb7 "),
                                 }),
                         ],
                     }),

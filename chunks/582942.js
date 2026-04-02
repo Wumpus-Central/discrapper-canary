@@ -14,11 +14,11 @@ var l = n(503698),
     h = n(409626),
     g = n(422069),
     f = n(611656),
-    _ = n(459746),
-    p = n(225732),
+    p = n(459746),
+    _ = n(225732),
     v = n(985018),
-    A = n(282063),
-    j = n(379093);
+    A = n(325952),
+    j = n(92750);
 let E = (e) => {
     let { game: t, onClose: n, trackClick: l } = e,
         i = (0, c.bG)([u.A], () => u.A.getApplication(t.applicationId));
@@ -31,13 +31,13 @@ let E = (e) => {
                 l(h.Ws.ClickSimilarGame, t.applicationId),
                     (0, d.mMO)(() =>
                         Promise.resolve((e) =>
-                            (0, a.jsx)(p.default, { applicationId: t.applicationId, source: h.Ob.SimilarGames, ...e }),
+                            (0, a.jsx)(_.default, { applicationId: t.applicationId, source: h.Ob.SimilarGames, ...e }),
                         ),
                     ),
                     await new Promise((e) => setTimeout(e, 10)),
                     n();
             },
-            children: (0, a.jsx)(_.A, { game: t, application: i, className: j.n1, size: _.w.SMALL }),
+            children: (0, a.jsx)(p.A, { game: t, application: i, className: j.n1, size: p.w.SMALL }),
         }),
     });
 };

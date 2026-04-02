@@ -16,8 +16,8 @@ var a = n(627968),
     _ = n(42473),
     f = n(731854),
     v = n(985018),
-    b = n(479360),
-    j = n(622154);
+    b = n(85247),
+    j = n(106863);
 function A(e) {
     let {
             selfDeaf: t,
@@ -27,31 +27,31 @@ function A(e) {
             iconForeground: C,
             nameplate: y,
             shouldShowOutputDeviceChangedTooltip: S,
-            dismissTooltips: T,
+            dismissTooltips: E,
         } = e,
-        E = t || n,
+        T = t || n,
         {
             Component: N,
             play: I,
-            events: { onMouseEnter: k, onMouseLeave: O },
-        } = (0, d.I)(E ? "undeafen" : "deafen"),
-        R = n ? r.TJE : N,
+            events: { onMouseEnter: O, onMouseLeave: R },
+        } = (0, d.I)(T ? "undeafen" : "deafen"),
+        k = n ? r.TJE : N,
         { name: w } = (0, g.x5)(f.oh.AUDIO_OUTPUT),
         D = (0, h.A)(t, n, s),
-        { analyticsLocations: P } = (0, m.Ay)(u.A.AUDIO_OUTPUT_BUTTON),
-        M = i.useRef(null);
+        { analyticsLocations: M } = (0, m.Ay)(u.A.AUDIO_OUTPUT_BUTTON),
+        P = i.useRef(null);
     return (
-        i.useEffect(() => () => I(), [E, I]),
+        i.useEffect(() => () => I(), [T, I]),
         (0, a.jsx)(m.f5, {
-            value: P,
+            value: M,
             children: (0, a.jsx)(c.YNO, {
-                targetElementRef: M,
+                targetElementRef: P,
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (
-                        T(),
+                        E(),
                         (0, a.jsx)(m.f5, {
-                            value: P,
+                            value: M,
                             children: (0, a.jsx)(x.A, {
                                 onInteraction: (0, p.s)("AudioDeviceMenu", u.A.ACCOUNT),
                                 onClose: t,
@@ -71,29 +71,29 @@ function A(e) {
                         { isShown: d } = t,
                         c = d ? r.tN5 : r.abt;
                     return (0, a.jsxs)("div", {
-                        ref: M,
-                        className: l()(b.Lh, { [b.v8]: E, [b.q6]: d }),
+                        ref: P,
+                        className: l()(b.Lh, { [b.v8]: T, [b.q6]: d }),
                         children: [
                             (0, a.jsx)(_.A, {
-                                "aria-checked": E,
+                                "aria-checked": T,
                                 "aria-label": v.intl.string(v.t.wjcRFX),
                                 className: b.eT,
                                 disabled: s,
-                                icon: (0, a.jsx)(R, {
+                                icon: (0, a.jsx)(k, {
                                     size: "custom",
                                     width: 20,
                                     height: 20,
-                                    color: E ? o.A.colors.ICON_VOICE_MUTED : "currentColor",
+                                    color: T ? o.A.colors.ICON_VOICE_MUTED : "currentColor",
                                     className: C,
                                 }),
-                                iconForeground: E ? j.o : void 0,
+                                iconForeground: T ? j.o : void 0,
                                 innerClassName: l()({ [j.T]: n }),
                                 onClick: A,
                                 onContextMenu: i,
-                                onMouseEnter: k,
-                                onMouseLeave: O,
+                                onMouseEnter: O,
+                                onMouseLeave: R,
                                 plated: null != y,
-                                redGlow: E,
+                                redGlow: T,
                                 role: "switch",
                                 tooltipText: D,
                             }),
@@ -105,12 +105,12 @@ function A(e) {
                                     size: "custom",
                                     width: 12,
                                     height: 12,
-                                    color: E ? o.A.colors.ICON_VOICE_MUTED : "currentColor",
+                                    color: T ? o.A.colors.ICON_VOICE_MUTED : "currentColor",
                                 }),
                                 onClick: i,
                                 onContextMenu: i,
                                 plated: null != y,
-                                redGlow: E,
+                                redGlow: T,
                                 tooltipType: S ? "green_void_do_not_use" : void 0,
                                 tooltipForceOpen: S,
                                 tooltipPositionKey: S

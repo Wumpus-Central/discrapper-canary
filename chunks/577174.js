@@ -11,7 +11,7 @@ var i = n(627968),
     m = n(736455),
     g = n(876587),
     _ = n(985018),
-    x = n(320519);
+    x = n(69894);
 let A = (e) => {
     let { navBarSections: t, activeSectionId: n } = e,
         A = {

@@ -1,4 +1,4 @@
-n.d(t, { A: () => C }), n(321073);
+n.d(t, { A: () => x }), n(321073);
 var i = n(627968),
     l = n(64700),
     s = n(110259),
@@ -11,25 +11,25 @@ var i = n(627968),
     h = n(661191),
     m = n(796774),
     A = n(209932),
-    p = n(536432),
-    g = n(933204),
+    g = n(536432),
+    p = n(933204),
     f = n(805143),
     _ = n(375366),
     E = n(69217);
 n(980504);
-var x = n(653906);
-function C(e) {
+var C = n(74611);
+function x(e) {
     let {
             guildId: t,
             channel: n,
-            width: C,
+            width: x,
             height: S,
             keepOpen: I,
             interactive: T = !0,
-            analyticsSource: v,
-            onClose: N,
+            analyticsSource: N,
+            onClose: b,
         } = e,
-        y = (function (e) {
+        v = (function (e) {
             let [t, n] = (0, a.yK)([A.A], () => [A.A.getSounds(), A.A.getFavorites()]);
             return l.useMemo(() => {
                 let i = [],
@@ -43,23 +43,23 @@ function C(e) {
                 return l.forEach((e) => s(e, !0)), l.forEach((e) => s(e, !1)), i;
             }, [t, n, e]);
         })((0, f.Y)(n, !0)),
-        b = (0, g.T)(),
+        y = (0, p.T)(),
         j = l.useRef(null),
         [R, M] = l.useState(void 0),
         D = (0, a.bG)([u.A], () => u.A.getMediaSessionId()),
         { analyticsLocations: O } = (0, o.Ay)(r.A.SOUNDBOARD_WHEEL),
         L = l.useCallback(
             (e) => {
-                (0, p.Ak)(e, n.id, O), N();
+                (0, g.Ak)(e, n.id, O), b();
             },
-            [O, n.id, N],
+            [O, n.id, b],
         );
     l.useEffect(() => {
         m.E7(), d.bW.loadIfNecessary();
     }, []),
         l.useEffect(() => {
-            0 === y.length && 0 === b.length && N();
-        }, [y.length, b, N]),
+            0 === v.length && 0 === y.length && b();
+        }, [v.length, y, b]),
         l.useEffect(
             () => () => {
                 let e = j.current;
@@ -71,7 +71,7 @@ function C(e) {
             {
                 type: s.ImpressionTypes.POPOUT,
                 name: s.ImpressionNames.SOUNDBOARD_POPOUT,
-                properties: { source: v, guild_id: t, media_session_id: D },
+                properties: { source: N, guild_id: t, media_session_id: D },
             },
             { disableTrack: !T },
         );
@@ -81,36 +81,36 @@ function C(e) {
         w = l.useCallback(
             (e) => {
                 if (null == e) return void P(null);
-                let t = y[e];
+                let t = v[e];
                 null != t && P(t);
             },
-            [P, y],
+            [P, v],
         ),
         k = l.useCallback(
             (e) => {
                 if (null == e) return;
-                let t = y[e];
+                let t = v[e];
                 null != t && L(t);
             },
-            [y, L],
+            [v, L],
         ),
         U = l.useMemo(
             () =>
-                y.map((e) =>
+                v.map((e) =>
                     (0, i.jsx)(
                         E.Ay,
-                        { interactive: T, className: x.a, sound: e, focused: R === e.soundId, channel: n },
+                        { interactive: T, className: C.a, sound: e, focused: R === e.soundId, channel: n },
                         e.soundId,
                     ),
                 ),
-            [R, n, T, y],
+            [R, n, T, v],
         );
-    return 0 === y.length
+    return 0 === v.length
         ? null
         : (0, i.jsx)(o.f5, {
               value: O,
               children: (0, i.jsx)(_.A, {
-                  wheelWidth: C,
+                  wheelWidth: x,
                   wheelHeight: S,
                   itemWidth: 96,
                   itemHeight: 52,
@@ -118,7 +118,7 @@ function C(e) {
                   activeItem: R,
                   onItemSelect: w,
                   onItemAction: k,
-                  onClose: N,
+                  onClose: b,
                   interactive: T,
                   children: U,
               }),

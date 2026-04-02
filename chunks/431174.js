@@ -1,10 +1,10 @@
-n.d(t, { j: () => y }), n(801541);
+n.d(t, { j: () => S }), n(801541);
 var i = n(627968),
     a = n(64700),
     r = n(503698),
     l = n.n(r),
     s = n(126031),
-    o = n(773690),
+    o = n(687498),
     d = n(889137),
     c = n(615300),
     u = n(990078),
@@ -17,36 +17,36 @@ var i = n(627968),
     x = n(306417),
     f = n(290794),
     C = n(985018),
-    I = n(724109);
+    I = n(79606);
 function E(e) {
     let { percentage: t, label: n, canShowVoterDetails: r, answerId: l } = e,
         o = (0, m.GV)(),
         { channelId: d, messageId: c } = (0, f.Tu)(),
         [A, x] = a.useState(""),
         [C, E] = a.useState(!1),
-        b = "" !== A && C,
-        v = a.useCallback(() => {
+        v = "" !== A && C,
+        b = a.useCallback(() => {
             x((0, g.$m)(c, d, l));
         }, [c, d, l]),
         T = a.useCallback(() => {
-            v(), E(!0);
-        }, [v]),
-        y = a.useCallback(() => {
+            b(), E(!0);
+        }, [b]),
+        S = a.useCallback(() => {
             E(!1);
         }, []),
-        S = a.useCallback(() => {
+        y = a.useCallback(() => {
             (0, p.e)({ channelId: d, messageId: c, answerId: l });
         }, [d, c, l]);
     return (
         a.useEffect(() => {
             if (C)
                 return (
-                    h.A.addReactChangeListener(v),
+                    h.A.addReactChangeListener(b),
                     () => {
-                        h.A.removeReactChangeListener(v);
+                        h.A.removeReactChangeListener(b);
                     }
                 );
-        }, [C, v]),
+        }, [C, b]),
         (0, i.jsxs)("div", {
             className: I.AA,
             children: [
@@ -61,15 +61,15 @@ function E(e) {
                                             scaleFontToUserSetting: !0,
                                             children: A,
                                         }),
-                                        forceOpen: b,
+                                        forceOpen: v,
                                         "aria-label": !1,
                                         children: (0, i.jsx)(_.QWc, {
                                             onMouseEnter: T,
-                                            onMouseLeave: y,
+                                            onMouseLeave: S,
                                             onFocus: T,
-                                            onBlur: y,
-                                            onClick: S,
-                                            "aria-describedby": b ? o : void 0,
+                                            onBlur: S,
+                                            onClick: y,
+                                            "aria-describedby": v ? o : void 0,
                                             text: n,
                                             variant: "secondary",
                                             textVariant: "text-xs/semibold",
@@ -77,15 +77,15 @@ function E(e) {
                                     })
                                   : (0, i.jsx)(_.QWc, {
                                         onMouseEnter: T,
-                                        onMouseLeave: y,
+                                        onMouseLeave: S,
                                         onFocus: T,
-                                        onBlur: y,
-                                        onClick: S,
+                                        onBlur: S,
+                                        onClick: y,
                                         text: n,
                                         variant: "secondary",
                                         textVariant: "text-xs/semibold",
                                     }),
-                              b && (0, i.jsx)(s.s, { id: o, children: A }),
+                              v && (0, i.jsx)(s.s, { id: o, children: A }),
                           ],
                       })
                     : (0, i.jsx)(_.Text, {
@@ -104,7 +104,7 @@ function E(e) {
         })
     );
 }
-function b(e) {
+function v(e) {
     let { percentage: t, shouldAnimate: n } = e,
         a = (0, _.zhh)(
             {
@@ -116,7 +116,7 @@ function b(e) {
         );
     return (0, i.jsx)(o.animated.span, { className: I.an, style: a, "aria-hidden": !0 });
 }
-function v(e) {
+function b(e) {
     let { answersInteraction: t, isSelected: n, didSelfVote: a, isVictor: r, isExpired: l, className: s } = e;
     return (0, d.YW)({ answersInteraction: t, didSelfVote: a })
         .with({ answersInteraction: A.CQ.RADIO_BUTTONS }, () =>
@@ -139,7 +139,7 @@ function T(e) {
     return (0, i.jsxs)("div", {
         className: l()(I.Fk, { [I.EK]: a !== A.CQ.LIST, [I.wH]: d }),
         children: [
-            r ? (0, i.jsx)(b, { percentage: t.votesPercentage, shouldAnimate: m }) : null,
+            r ? (0, i.jsx)(v, { percentage: t.votesPercentage, shouldAnimate: m }) : null,
             null != t.pollMedia.emoji && (0, i.jsx)(x.Fb, { className: I.Zg, emoji: t.pollMedia.emoji }),
             (0, i.jsx)(_.Text, {
                 className: I.Pf,
@@ -156,7 +156,7 @@ function T(e) {
                     canShowVoterDetails: o,
                     answerId: t.answerId,
                 }),
-            (0, i.jsx)(v, {
+            (0, i.jsx)(b, {
                 answersInteraction: a,
                 isSelected: d,
                 didSelfVote: c,
@@ -167,7 +167,7 @@ function T(e) {
         ],
     });
 }
-function y(e) {
+function S(e) {
     let { isExpired: t, answersInteraction: n, canShowVoteCounts: a, canTapAnswers: r, ...l } = e;
     return (0, i.jsx)(x.Fh, {
         className: I.ry,

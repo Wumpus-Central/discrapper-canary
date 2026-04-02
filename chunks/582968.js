@@ -2,7 +2,7 @@ n.d(t, { A: () => r });
 var i = n(627968),
     l = n(503698),
     s = n.n(l),
-    a = n(67471);
+    a = n(670140);
 function r() {
     return (0, i.jsxs)("div", {
         className: a.kL,

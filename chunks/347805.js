@@ -8,18 +8,18 @@ var i = t(627968),
     d = t(351906),
     c = t(652215),
     u = t(985018),
-    m = t(828950);
+    m = t(36755);
 function A(e) {
-    let { autoFocus: l = !1, className: t, userId: A, onUpdate: p } = e,
-        x = (0, s.bG)([d.A], () => d.A.hidePersonalInformation),
+    let { autoFocus: l = !1, className: t, userId: A, onUpdate: x } = e,
+        p = (0, s.bG)([d.A], () => d.A.hidePersonalInformation),
         { loading: g, note: f } = (0, o.A)(A),
         h = n.useRef(null);
     return (n.useEffect(() => {
-        if (!l || x) return;
+        if (!l || p) return;
         let e = h.current;
         e?.selectionStart != null && (e.focus(), e.setSelection(e.value.length, e.value.length));
-    }, [l, x]),
-    x)
+    }, [l, p]),
+    p)
         ? null
         : (0, i.jsx)("div", {
               className: t,
@@ -31,7 +31,7 @@ function A(e) {
                   "aria-label": u.intl.string(u.t.PbMNh2),
                   onBlur: (e) => {
                       let l = e.currentTarget.value;
-                      (f ?? "") !== l && (p?.(), r.A.updateNote(A, l));
+                      (f ?? "") !== l && (x?.(), r.A.updateNote(A, l));
                   },
                   onKeyPress: (e) => {
                       13 === e.which

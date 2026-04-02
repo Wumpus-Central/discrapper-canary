@@ -28,8 +28,8 @@ var r = n(627968),
     O = n(652215),
     b = n(49999),
     D = n(985018),
-    L = n(23769),
-    w = n(351671);
+    L = n(807538),
+    w = n(526636);
 function M(e) {
     let t = i.useCallback(() => Promise.resolve({ default: e.boxAnimationUrl }), [e.boxAnimationUrl]);
     return (0, r.jsx)(R.A, {
@@ -44,7 +44,7 @@ function M(e) {
         }),
     });
 }
-function P(e) {
+function x(e) {
     let { Component: t, events: n, play: s } = (0, c.T)(),
         a = i.useCallback(() => Promise.resolve({ default: e.trinketAnimationUrl }), [e.trinketAnimationUrl]),
         o = i.useCallback(() => Promise.resolve({ default: e.trinketGlowAnimationUrl }), [e.trinketGlowAnimationUrl]),
@@ -73,7 +73,7 @@ function P(e) {
         }),
     });
 }
-let x = S.A.Millis.DAYS_30;
+let P = S.A.Millis.DAYS_30;
 function k(e) {
     let { disabled: t, channel: n } = e,
         { analyticsLocations: s } = (0, f.Ay)(_.A.GIFT_BUTTON),
@@ -103,7 +103,7 @@ function k(e) {
         }, [G]),
         V = !(0, v.uJ)(w?.boxAnimationUrl),
         B = (!(0, v.uJ)(w?.trinketAnimationUrl) || !(0, v.uJ)(w?.trinketGlowAnimationUrl)) && !V,
-        H = null != k && !t && S && D >= x,
+        H = null != k && !t && S && D >= P,
         [j, Y] = (0, h.RF)(
             H ? u.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null,
             (0, p.c)(u.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK),
@@ -136,7 +136,7 @@ function k(e) {
             V && w?.boxAnimationUrl != null
                 ? (0, r.jsx)(M, { boxAnimationUrl: w.boxAnimationUrl, hovered: K, onClick: q })
                 : B
-                  ? (0, r.jsx)(P, {
+                  ? (0, r.jsx)(x, {
                         trinketAnimationUrl: w?.trinketAnimationUrl ?? null,
                         trinketGlowAnimationUrl: w?.trinketGlowAnimationUrl ?? null,
                         hovered: K,

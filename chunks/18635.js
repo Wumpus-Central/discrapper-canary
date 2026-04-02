@@ -24,7 +24,7 @@ var i = n(627968),
     x = n(652215),
     v = n(204925),
     b = n(985018),
-    y = n(347894);
+    y = n(10581);
 function O() {
     return (0, i.jsx)("div", {
         className: y.N3,

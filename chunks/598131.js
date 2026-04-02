@@ -11,7 +11,7 @@ var l = n(627968),
     _ = n(17372),
     m = n(369053),
     x = n(482578),
-    p = n(248492),
+    p = n(26111),
     g = n(133134),
     h = n(374966),
     A = n(803957),
@@ -34,9 +34,9 @@ var l = n(627968),
     G = n(66535),
     L = n(12613),
     D = n(842012),
-    P = n(666580),
-    B = n(588684),
-    U = n(316862),
+    B = n(666580),
+    U = n(588684),
+    P = n(316862),
     H = n(563218),
     V = n(617071),
     F = n(883471),
@@ -47,9 +47,9 @@ var l = n(627968),
     Q = n(145996),
     q = n(964448),
     Y = n(652215),
-    J = n(985018),
-    Z = n(641131),
-    X = n(687404);
+    Z = n(985018),
+    J = n(733045),
+    X = n(859117);
 let ee = ["user_urf", "message_urf", "guild_urf", "media_takedown"];
 function et(e, t) {
     let { elements: n } = e;
@@ -108,7 +108,7 @@ let el = (e) => {
             }),
             [t, eg, eh, eA, ev, eT, em, eM, ew],
         ),
-        eP = a.useMemo(
+        eB = a.useMemo(
             () =>
                 (0, m.ks)(
                     {
@@ -123,14 +123,14 @@ let el = (e) => {
                 ),
             [eg, eh, eA, ev, em, eT, ew, eM],
         ),
-        eB = a.useCallback(
+        eU = a.useCallback(
             (e, t) => {
                 let n = { ...eM };
                 e in eM ? delete n[e] : (n[e] = t), eR(n);
             },
             [eM],
         ),
-        eU = a.useCallback(
+        eP = a.useCallback(
             function (e, t) {
                 let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
                     l = arguments.length > 3 ? arguments[3] : void 0,
@@ -173,18 +173,18 @@ let el = (e) => {
             (e) => {
                 switch (e) {
                     case Y.t02.UNKNOWN_TIDA_CONTENT: {
-                        let e = J.intl.string(J.t["2EPoxE"]);
+                        let e = Z.intl.string(Z.t["2EPoxE"]);
                         eE(e), ed?.("MEDIA_TAKEDOWN_CONTENT_DETAILS", e);
                         break;
                     }
                     case Y.t02.INVALID_SIGNATURE_MISMATCH:
-                        eE(J.intl.string(J.t.kXrnQM));
+                        eE(Z.intl.string(Z.t.kXrnQM));
                         break;
                     case Y.t02.INVALID_FORM_BODY:
-                        eE(J.intl.string(J.t.VjAAuP));
+                        eE(Z.intl.string(Z.t.VjAAuP));
                         break;
                     default:
-                        eC ? eE(J.intl.string(Z.default.psKFdJ)) : eE(J.intl.string(J.t.h6D8Vy));
+                        eC ? eE(Z.intl.string(J.default.psKFdJ)) : eE(Z.intl.string(Z.t.h6D8Vy));
                 }
             },
             [eC, ed],
@@ -220,9 +220,9 @@ let el = (e) => {
         ),
         ez = a.useCallback(
             (e) => {
-                "Enter" !== e.key || eP || eI || null == t.button || (e.preventDefault(), eW(t.button));
+                "Enter" !== e.key || eB || eI || null == t.button || (e.preventDefault(), eW(t.button));
             },
-            [eP, eI, t.button, eW],
+            [eB, eI, t.button, eW],
         );
     a.useEffect(() => {
         t.is_auto_submit && !eS && (ey(!0), es(eD(["", t.id])));
@@ -281,7 +281,7 @@ let el = (e) => {
                             return q.T.includes(t);
                         });
                     })(t) &&
-                        (0, l.jsxs)(B.A, {
+                        (0, l.jsxs)(U.A, {
                             children: [
                                 e$ &&
                                     (0, l.jsx)(M.A, {
@@ -329,7 +329,7 @@ let el = (e) => {
                                     (0, l.jsx)(f.A, { application: n.record, reportId: ec }),
                                 null != et(t, "deauthorize_app") &&
                                     "application" === n.name &&
-                                    (0, l.jsx)(U.A, { application: n.record, reportId: ec }),
+                                    (0, l.jsx)(P.A, { application: n.record, reportId: ec }),
                             ],
                         }),
                     null != et(t, "settings_upsells") &&
@@ -356,13 +356,13 @@ let el = (e) => {
                         "guild_discovery" === n.name &&
                         (0, l.jsx)(S.A, { entry: n.record }),
                     null != et(t, "app_preview") && "application" === n.name && (0, l.jsx)(p.A, { entry: n.record }),
-                    null != em && (0, l.jsx)(L.A, { element: em, onChange: eB, state: eM }),
-                    ee.includes(n.name) && null != eT && (0, l.jsx)(b.A, { element: eT, onChange: eU, state: ew }),
+                    null != em && (0, l.jsx)(L.A, { element: em, onChange: eU, state: eM }),
+                    ee.includes(n.name) && null != eT && (0, l.jsx)(b.A, { element: eT, onChange: eP, state: ew }),
                     ee.includes(n.name) &&
                         null != eh &&
                         eh.length > 0 &&
-                        (0, l.jsx)("div", { children: (0, l.jsx)(C.A, { elements: eh, onChange: eU, state: ew }) }),
-                    ev.map((e) => (0, l.jsx)(P.A, { element: e, onChange: eU, state: ew }, e.name)),
+                        (0, l.jsx)("div", { children: (0, l.jsx)(C.A, { elements: eh, onChange: eP, state: ew }) }),
+                    ev.map((e) => (0, l.jsx)(B.A, { element: e, onChange: eP, state: ew }, e.name)),
                     null != eb &&
                         (function (e, t, n) {
                             let { visible_when: l } = e.data;
@@ -377,11 +377,11 @@ let el = (e) => {
                             return null != a && n?.[a.name]?.value === l.value;
                         })(eb, t, ew) &&
                         (0, l.jsx)(w.A, { element: eb }),
-                    null != eA && (0, l.jsx)(v.A, { element: eA, onChange: eU, state: ew }),
+                    null != eA && (0, l.jsx)(v.A, { element: eA, onChange: eP, state: ew }),
                     ee.includes(n.name) &&
                         null != eg &&
                         eg.length > 0 &&
-                        (0, l.jsx)(I.A, { elements: eg, onChange: eU, state: ew }),
+                        (0, l.jsx)(I.A, { elements: eg, onChange: eP, state: ew }),
                     ((null != t.children && t.children.length > 0) || (null != ep && ep.length > 0)) &&
                         (0, l.jsxs)("div", {
                             className: X.qI,
@@ -401,7 +401,7 @@ let el = (e) => {
             (0, l.jsx)(x.A, {
                 button: t.button,
                 submitting: eI,
-                disableNext: eP,
+                disableNext: eB,
                 isModeratorReport: eC,
                 onClick: eW,
                 onBackClicked: e.onNavigateBack,

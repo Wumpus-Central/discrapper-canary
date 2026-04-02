@@ -26,7 +26,7 @@ var r = n(627968),
     C = n(652215),
     R = n(996988),
     O = n(985018),
-    b = n(886308);
+    b = n(74209);
 function D(e) {
     let {
             user: t,
@@ -35,8 +35,8 @@ function D(e) {
             channelId: L,
             messageId: w,
             roleId: M,
-            closePopout: P,
-            setPopoutRef: x,
+            closePopout: x,
+            setPopoutRef: P,
             disableUserProfileLink: k = __OVERLAY__,
             newAnalyticsLocations: U = [],
             disableAutoFocus: G = !1,
@@ -50,10 +50,10 @@ function D(e) {
         W = i.useRef(null),
         { isHoveringOrFocusing: K } = (0, c.A)(W);
     i.useEffect(() => {
-        x?.(W?.current);
-    }, [W, x]);
+        P?.(W?.current);
+    }, [W, P]);
     let $ = (e) => {
-            P?.(),
+            x?.(),
                 B.dispatch(C.jej.POPOUT_CLOSE),
                 (0, E.openUserProfileModal)({ sourceAnalyticsLocations: V, hideRestrictedProfile: !0, ...H, ...e });
         },
@@ -106,7 +106,7 @@ function D(e) {
                                     (0, r.jsx)(y.A, {
                                         user: t,
                                         themeType: R.d.POPOUT,
-                                        onCloseProfile: P,
+                                        onCloseProfile: x,
                                         disableToolbar: !0,
                                     }),
                                 ],
@@ -119,9 +119,9 @@ function D(e) {
                                 isHoveringOrFocusing: K,
                                 onOpenProfile: k ? void 0 : $,
                                 channelId: L,
-                                onClose: P,
+                                onClose: x,
                             }),
-                            (0, r.jsx)(N.A, { user: t, guildId: D, channelId: L, onClose: P, disableAutoFocus: G }),
+                            (0, r.jsx)(N.A, { user: t, guildId: D, channelId: L, onClose: x, disableAutoFocus: G }),
                         ],
                     }),
                 ],

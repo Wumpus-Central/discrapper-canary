@@ -1,4 +1,4 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => p });
 var a = n(627968),
     l = n(64700),
     i = n(397927),
@@ -11,19 +11,19 @@ var a = n(627968),
     m = n(936636),
     x = n(424994),
     h = n(985018),
-    g = n(706445);
+    g = n(12388);
 function f() {
     return (0, a.jsx)(i.Text, { variant: "text-sm/normal", color: "text-subtle", children: h.intl.string(h.t.GruYxV) });
 }
-let _ = function (e) {
-    let { application: t, detectedGame: n, trackAction: _ } = e,
-        p = l.useMemo(() => n.genres.map(r.du).join(", "), [n]),
+let p = function (e) {
+    let { application: t, detectedGame: n, trackAction: p } = e,
+        _ = l.useMemo(() => n.genres.map(r.du).join(", "), [n]),
         v = n.publishers.join(", "),
         A = n.developers.join(", "),
         j = n.firstReleaseDate,
         E = (0, o.A)(n),
         C = (0, c.Y)(n),
-        I = !(0, s.uJ)(p),
+        I = !(0, s.uJ)(_),
         b = !(0, s.uJ)(v),
         N = !(0, s.uJ)(A),
         S = !(0, s.uJ)(j),
@@ -56,7 +56,7 @@ let _ = function (e) {
                                       variant: "text-sm/normal",
                                       color: "text-subtle",
                                       className: g.Gu,
-                                      children: p,
+                                      children: _,
                                   })
                                 : (0, a.jsx)(f, {}),
                         ],
@@ -150,7 +150,7 @@ let _ = function (e) {
                             k
                                 ? (0, a.jsx)("div", {
                                       className: g.Gu,
-                                      children: C.map((e) => (0, a.jsx)(u.K, { website: e, trackAction: _ }, e.url)),
+                                      children: C.map((e) => (0, a.jsx)(u.K, { website: e, trackAction: p }, e.url)),
                                   })
                                 : (0, a.jsx)(f, {}),
                         ],
@@ -173,7 +173,7 @@ let _ = function (e) {
                     }),
                 ],
             }),
-            (0, a.jsx)("div", { className: g.OQ, children: (0, a.jsx)(d.A, { application: t, trackAction: _ }) }),
+            (0, a.jsx)("div", { className: g.OQ, children: (0, a.jsx)(d.A, { application: t, trackAction: p }) }),
         ],
     });
 };

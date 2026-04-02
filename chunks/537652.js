@@ -4,7 +4,7 @@ var r = n(627968);
 n(64700);
 var i = n(503698),
     s = n.n(i),
-    a = n(20079);
+    a = n(343856);
 let o = (e) => {
     let { message: t, className: n, noResultsImageURL: i, forceLightTheme: o, suggestions: l } = e,
         u = null != i ? { backgroundImage: `url(${i})` } : {};

@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => E });
 var a = n(627968),
     i = n(64700),
     s = n(503698),
@@ -18,8 +18,8 @@ var a = n(627968),
     v = n(263834),
     b = n(865116),
     j = n(716371),
-    A = n(49977),
-    C = n(310086);
+    A = n(664558),
+    C = n(793877);
 function y() {
     let e = (0, d.yK)([f.default], () => f.default.getSortedChannels()[1]),
         [t, n] = i.useState(e.length > 0 ? e[0].channelId : void 0),
@@ -71,7 +71,7 @@ function S() {
     }, []);
     return (0, a.jsx)(c.Button, { variant: "primary", size: "sm", text: "Open System DM", onClick: e });
 }
-function T() {
+function E() {
     let e = (0, d.bG)([b.Ay], () => b.Ay.allByCategory(b.xW.MESSAGING), [], d.My).map((e) => {
         let [t, n, { label: i }] = e;
         return (0, a.jsx)(c.dOG, { label: i, description: t, checked: n, onChange: (e) => (0, v.L)(t, e) }, t);

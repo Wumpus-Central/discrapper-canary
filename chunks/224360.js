@@ -1,4 +1,4 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => h });
 var i = n(627968);
 n(64700);
 var a = n(503698),
@@ -9,51 +9,51 @@ var a = n(503698),
     c = n(915089),
     d = n(152621),
     u = n(61881),
-    m = n(788593),
-    g = n(985018),
-    p = n(522500),
-    x = n(97717);
+    g = n(788593),
+    m = n(985018),
+    x = n(496527),
+    p = n(853228);
 function f(e) {
     let { applicationId: t, userId: n, onClick: a } = e,
         { coverImageUrl: l, gameName: c, isLoading: f } = (0, d.A)(t),
-        _ = (0, s.bG)([u.A], () => u.A.suggestedFetchIsLoading),
-        h = g.intl.formatToPlainString(g.t["3mb1s5"], { game: c });
-    return f || _
-        ? (0, i.jsx)("div", { className: p.mD })
+        h = (0, s.bG)([u.A], () => u.A.suggestedFetchIsLoading),
+        _ = m.intl.formatToPlainString(m.t["3mb1s5"], { game: c });
+    return f || h
+        ? (0, i.jsx)("div", { className: x.mD })
         : (0, i.jsx)(r.m, {
-              text: h,
+              text: _,
               ariaHidden: !0,
               children: (0, i.jsxs)(o.DUT, {
-                  className: x.c9,
+                  className: p.c9,
                   onClick: a,
-                  "aria-label": h,
+                  "aria-label": _,
                   children: [
-                      (0, i.jsx)(m.A, {
-                          className: x.Iv,
+                      (0, i.jsx)(g.A, {
+                          className: p.Iv,
                           imageSrc: l,
                           gameName: c,
                           applicationId: t,
                           userId: n,
                           disableInteraction: !0,
                       }),
-                      (0, i.jsx)(o.pa$, { size: "md", className: x.Xv, color: o.LU0.colors.WHITE }),
+                      (0, i.jsx)(o.pa$, { size: "md", className: p.Xv, color: o.LU0.colors.WHITE }),
                   ],
               }),
           });
 }
-function _(e) {
+function h(e) {
     let { userId: t, games: n, onDismiss: a, onClick: s, className: r } = e,
         d = (0, c.GV)();
     return (0, i.jsxs)("aside", {
-        className: l()(x.kL, r),
+        className: l()(p.kL, r),
         "aria-labelledby": d,
         children: [
             (0, i.jsxs)("div", {
-                className: x.wx,
+                className: p.wx,
                 children: [
                     (0, i.jsx)(o.DUT, {
-                        className: x.r,
-                        "aria-label": g.intl.string(g.t["pUR+3g"]),
+                        className: p.r,
+                        "aria-label": m.intl.string(m.t["pUR+3g"]),
                         onClick: a,
                         children: (0, i.jsx)(o.PGe, { size: "sm", color: "currentColor" }),
                     }),
@@ -61,12 +61,12 @@ function _(e) {
                         id: d,
                         variant: "text-xs/medium",
                         color: "text-subtle",
-                        children: g.intl.string(g.t.zMUr6Z),
+                        children: m.intl.string(m.t.zMUr6Z),
                     }),
                 ],
             }),
             (0, i.jsx)("ul", {
-                className: x.Vg,
+                className: p.Vg,
                 children: n.map((e) => {
                     let { applicationId: n } = e;
                     return (0, i.jsx)(

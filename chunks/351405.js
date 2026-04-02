@@ -1,4 +1,4 @@
-n.d(t, { P: () => y }), n(321073);
+n.d(t, { P: () => S }), n(321073);
 var i = n(627968),
     a = n(64700),
     r = n(311907),
@@ -19,8 +19,8 @@ var i = n(627968),
     C = n(13403),
     I = n(536189),
     E = n(652215),
-    b = n(272984),
-    v = n(772234);
+    v = n(272984),
+    b = n(71747);
 function T(e) {
     let { partyMembers: t, partySize: n, maxPartySize: a, guildId: r, activityActionType: s } = e,
         o = Math.max(n, t.length),
@@ -29,7 +29,7 @@ function T(e) {
     for (; c.length < n && c.length < 8; ) c.push(f.mt);
     for (; c.length < a && c.length < 8; ) c.push(null);
     return (0, i.jsxs)("div", {
-        className: v.UF,
+        className: b.UF,
         children: [
             c.length > 0 &&
                 (0, i.jsx)(f.Ay, {
@@ -43,9 +43,9 @@ function T(e) {
         ],
     });
 }
-function y(e) {
-    let { analyticsLocations: t, app: n, channel: l, message: g, hideParty: v, onView: y } = e,
-        S = (0, s.b)(n),
+function S(e) {
+    let { analyticsLocations: t, app: n, channel: l, message: g, hideParty: b, onView: S } = e,
+        y = (0, s.b)(n),
         N = (0, r.bG)([c.default], () => c.default.getId()),
         j = (0, r.bG)([m.A], () => {
             if (null == g.application) return m.A.findActivity(g.author.id, (e) => e.type === E.$pd.LISTENING);
@@ -57,14 +57,14 @@ function y(e) {
                 );
             }
         }, [g, l, N]),
-        L = (0, r.bG)([_.A, h.A], () => _.A.getApplicationActivity(S.id) ?? h.A.getApplicationActivity(S.id, !0), [
-            S.id,
+        L = (0, r.bG)([_.A, h.A], () => _.A.getApplicationActivity(y.id) ?? h.A.getApplicationActivity(y.id, !0), [
+            y.id,
         ]),
         R = (0, r.yK)([u.A], () => (null == j || null == j.party ? [] : Array.from(u.A.getParty(j.party.id) ?? [])), [
             j,
         ]),
         { partySize: P, maxPartySize: w } = (0, x._)(j),
-        M = a.useMemo(
+        D = a.useMemo(
             () =>
                 R.map((e) => {
                     let t = p.default.getUser(e);
@@ -72,40 +72,40 @@ function y(e) {
                 }),
             [R],
         ),
-        D = a.useMemo(
+        M = a.useMemo(
             () =>
                 (0, i.jsx)(T, {
-                    partyMembers: M,
+                    partyMembers: D,
                     partySize: P,
                     maxPartySize: w,
                     guildId: l.guild_id,
                     activityActionType: g.activity?.type,
                 }),
-            [M, P, w, l.guild_id, g.activity?.type],
+            [D, P, w, l.guild_id, g.activity?.type],
         );
-    return (0, b.pH)(j?.party?.id) || S.id === d.HT.id
+    return (0, v.pH)(j?.party?.id) || y.id === d.HT.id
         ? (0, i.jsx)(I.A, {
-              application: S,
+              application: y,
               currentUserPresenceActivity: L,
-              hideParty: v,
+              hideParty: b,
               message: g,
-              onView: y,
-              partyStatusElement: D,
+              onView: S,
+              partyStatusElement: M,
               presenceActivity: j,
               guildId: l.guild_id,
           })
         : g.activity?.type === E.xL.STREAM_REQUEST
-          ? (0, i.jsx)(o.A, { analyticsLocations: t, application: S, channel: l, currentUserId: N, message: g })
+          ? (0, i.jsx)(o.A, { analyticsLocations: t, application: y, channel: l, currentUserId: N, message: g })
           : (0, i.jsx)(C.A, {
                 analyticsLocations: t,
-                application: S,
+                application: y,
                 channel: l,
                 currentUserId: N,
                 currentUserPresenceActivity: L,
-                hideParty: v,
+                hideParty: b,
                 message: g,
-                onView: y,
-                partyStatusElement: D,
+                onView: S,
+                partyStatusElement: M,
                 presenceActivity: j,
             });
 }

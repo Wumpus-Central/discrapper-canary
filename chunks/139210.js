@@ -3,7 +3,7 @@ var a = n(627968),
     i = n(64700),
     s = n(503698),
     l = n.n(s),
-    r = n(773690),
+    r = n(687498),
     o = n(397927),
     d = n(341915),
     c = n(590202),
@@ -18,7 +18,7 @@ var a = n(627968),
     v = n(223352);
 n(272111);
 var b = n(985018),
-    j = n(45855);
+    j = n(448194);
 let A = (0, r.animated)(x.Ay),
     C = () => {
         let e = (0, u.go)(),
@@ -31,14 +31,14 @@ let A = (0, r.animated)(x.Ay),
                 isExpansionAnimationComplete: y,
                 quest: S,
             } = i.useContext(f.T),
-            T = i.useCallback(() => {
+            E = i.useCallback(() => {
                 (0, g.Zc)(S, {
                     content: d.uF.QUEST_BAR_V2,
                     ctaContent: c.Cy.OPEN_DISCLOSURE,
                     sourceQuestContent: d.uF.QUEST_BAR_V2,
                 });
             }, [S]),
-            E = i.useCallback(() => {
+            T = i.useCallback(() => {
                 (0, m.pu)(S, {
                     content: d.uF.QUEST_BAR_V2,
                     ctaContent: c.Cy.OPEN_GAME_LINK,
@@ -48,7 +48,7 @@ let A = (0, r.animated)(x.Ay),
             }, [e, S]),
             N = C && y,
             I = (0, a.jsx)(o.DUT, {
-                onClick: E,
+                onClick: T,
                 className: l()(j.vk, { [j.wm]: N }),
                 children: (0, a.jsx)(A, {
                     quest: S,
@@ -76,7 +76,7 @@ let A = (0, r.animated)(x.Ay),
                     children: [
                         (0, a.jsxs)(o.DUT, {
                             className: j.y8,
-                            onClick: T,
+                            onClick: E,
                             children: [
                                 (0, a.jsx)(o.Text, {
                                     color: "always-white",

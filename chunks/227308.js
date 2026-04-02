@@ -11,16 +11,16 @@ var i = n(627968),
     u = n(941023),
     h = n(714983),
     p = n(592598),
-    _ = n(672396),
-    f = n(652215),
-    A = n(975455);
+    f = n(672396),
+    _ = n(652215),
+    A = n(84616);
 function g(e) {
     let { locked: t, keybind: n } = e,
         a = s.useRef(null),
         h = (0, o.yK)([d.A], () => d.A.getNotifications()),
         g = (0, o.bG)([c.default], () => c.default.getNotificationPositionMode());
-    if ((0, o.bG)([p.A], () => p.A.isNotificationDisabled(_.KS.TextChat)) || g === f.G6Q.DISABLED) return null;
-    let x = h.filter((e) => !t || e.status !== f.yFH.TIMED_OUT),
+    if ((0, o.bG)([p.A], () => p.A.isNotificationDisabled(f.KS.TextChat)) || g === _.G6Q.DISABLED) return null;
+    let x = h.filter((e) => !t || e.status !== _.yFH.TIMED_OUT),
         E = (0, r.groupBy)(x, (e) => e.type);
     return (0, i.jsx)(u.A, {
         contentDomRef: a,

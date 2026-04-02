@@ -4,16 +4,16 @@ var n = s(627968),
     r = s(158954),
     l = s(975571),
     i = s(652215),
-    o = s(333354),
-    c = s(985018),
-    d = s(1752);
+    o = s(136708),
+    d = s(985018),
+    c = s(609161);
 function u(e) {
     let { powerup: t } = e;
     return t.skuId === a.FB
         ? (0, n.jsx)(r.EYj, {
-              className: d.C,
+              className: c.C,
               variant: "text-sm/medium",
-              children: c.intl.format(o.default.fXE30d, { helpDeskArticle: l.A.getArticleURL(i.MVz.GUILD_VANITY_URL) }),
+              children: d.intl.format(o.default.fXE30d, { helpDeskArticle: l.A.getArticleURL(i.MVz.GUILD_VANITY_URL) }),
           })
         : null;
 }

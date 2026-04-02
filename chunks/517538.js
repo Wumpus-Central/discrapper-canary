@@ -24,8 +24,8 @@ var a = n(627968),
     x = n(74848),
     p = n(430452),
     g = n(731854),
-    _ = n(4791),
-    f = n(310086);
+    _ = n(359242),
+    f = n(793877);
 function v(e) {
     let { recording: t } = e;
     return (0, a.jsxs)(a.Fragment, {
@@ -96,18 +96,18 @@ function j() {
         [j, A] = i.useState(null),
         C = i.useRef(null),
         y = i.useRef(null),
-        [S, T] = i.useState(0.5),
+        [S, E] = i.useState(0.5),
         {
-            krispModels: E,
+            krispModels: T,
             krispModelOverride: N,
             inputMode: I,
-            echoCancellation: k,
-            autoThreshold: O,
-            vadUseKrisp: R,
+            echoCancellation: O,
+            autoThreshold: R,
+            vadUseKrisp: k,
             vadKrispActivationThreshold: w,
             noiseCancellation: D,
-            noiseSuppression: P,
-            noiseSuppressionSupported: M,
+            noiseSuppression: M,
+            noiseSuppressionSupported: P,
             noiseCancellationSupported: L,
             noiseCancellationEnableStats: U,
             vadDuringPreProcess: B,
@@ -126,7 +126,7 @@ function j() {
             noiseCancellationEnableStats: p.Ay.getKrispEnableStats(),
             vadDuringPreProcess: p.Ay.getModeOptions().vadDuringPreProcess,
         })),
-        G = D ? "KRISP" : P ? "STANDARD" : "NONE",
+        G = D ? "KRISP" : M ? "STANDARD" : "NONE",
         F = (0, m.v)(),
         V = i.useCallback(() => {
             C.current?.stop(), (C.current = null), A(null);
@@ -156,7 +156,7 @@ function j() {
     let K = [];
     return (
         L && K.push({ id: "krisp", label: "Krisp", value: "KRISP" }),
-        M && K.push({ id: "standard", label: "Standard", value: "STANDARD" }),
+        P && K.push({ id: "standard", label: "Standard", value: "STANDARD" }),
         K.push({ id: "disabled", label: "Disabled", value: "NONE" }),
         (0, a.jsx)(d.IpV, {
             className: f.nd,
@@ -193,7 +193,7 @@ function j() {
                                     label: "Krisp Model Override",
                                     clearable: !0,
                                     value: N,
-                                    options: E.map((e) => ({ label: e, value: e, id: e })),
+                                    options: T.map((e) => ({ label: e, value: e, id: e })),
                                     onSelectionChange: (e) => {
                                         c.A.setKrispModelOverride(e ?? "");
                                     },
@@ -212,18 +212,18 @@ function j() {
                             children: [
                                 (0, a.jsx)(d.dOG, {
                                     label: "Auto Threshold",
-                                    checked: O,
+                                    checked: R,
                                     onChange: (e) => c.A.setMode(g.TB.VOICE_ACTIVITY, { autoThreshold: e }),
                                 }),
-                                O &&
+                                R &&
                                     (0, a.jsxs)(a.Fragment, {
                                         children: [
                                             (0, a.jsx)(d.dOG, {
                                                 label: "Use Krisp VAD",
-                                                checked: R,
+                                                checked: k,
                                                 onChange: (e) => c.A.setMode(g.TB.VOICE_ACTIVITY, { vadUseKrisp: e }),
                                             }),
-                                            R &&
+                                            k &&
                                                 (0, a.jsx)(d.Apm, {
                                                     label: "Krisp VAD Activation Threshold",
                                                     initialValue: w,
@@ -245,7 +245,7 @@ function j() {
                         }),
                     (0, a.jsx)(d.dOG, {
                         label: "Echo Cancellation",
-                        checked: k,
+                        checked: O,
                         onChange: (e) => c.A.setEchoCancellation(e),
                     }),
                     (0, a.jsxs)(d.BJc, {
@@ -280,7 +280,7 @@ function j() {
                                                           audioBuffer: s,
                                                           createdAt: Date.now(),
                                                           suppression: G,
-                                                          echoCancellation: k,
+                                                          echoCancellation: O,
                                                           krispSuppressionLevel: v,
                                                       },
                                                   ]);
@@ -294,7 +294,7 @@ function j() {
                         label: "Volume",
                         initialValue: S,
                         asValueChanges: function (e) {
-                            null != y.current && ((y.current.gain.value = e), T(e));
+                            null != y.current && ((y.current.gain.value = e), E(e));
                         },
                         minValue: 0,
                         maxValue: 1,

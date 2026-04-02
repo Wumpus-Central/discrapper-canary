@@ -22,13 +22,13 @@ var a = n(627968),
     C = n(499156),
     y = n(430452),
     S = n(383501),
-    T = n(350535),
-    E = n(42473),
+    E = n(350535),
+    T = n(42473),
     N = n(731854),
     I = n(985018),
-    k = n(807880),
-    O = n(479360),
-    R = n(545229),
+    O = n(83214),
+    R = n(85247),
+    k = n(458756),
     w = n(973324);
 function D(e) {
     let t,
@@ -69,7 +69,7 @@ function D(e) {
         : H || V
           ? {
                 tooltipType: "green_void_do_not_use",
-                tooltipText: I.intl.format(I.t.c1qUOQ, { keybind: T.dI(Q).toLocaleUpperCase() }),
+                tooltipText: I.intl.format(I.t.c1qUOQ, { keybind: E.dI(Q).toLocaleUpperCase() }),
                 tooltipForceOpen: !0,
             }
           : { tooltipText: eo };
@@ -112,12 +112,12 @@ function D(e) {
                         o = s ? r.tN5 : r.abt;
                     return (0, a.jsxs)("div", {
                         ref: ee,
-                        className: l()(O.Lh, { [O.v8]: et, [O.q6]: s }),
+                        className: l()(R.Lh, { [R.v8]: et, [R.q6]: s }),
                         children: [
-                            (0, a.jsx)(E.A, {
+                            (0, a.jsx)(T.A, {
                                 "aria-checked": et,
                                 "aria-label": I.intl.string(I.t.w4m945),
-                                className: O.eT,
+                                className: R.eT,
                                 disabled: M,
                                 icon: (0, a.jsx)(er, {
                                     size: "custom",
@@ -138,16 +138,16 @@ function D(e) {
                                 redGlow: et,
                                 role: "switch",
                                 ...t,
-                                children: ed ? (0, a.jsx)("div", { className: l()(R.U, { [R.z]: z }) }) : null,
+                                children: ed ? (0, a.jsx)("div", { className: l()(k.U, { [k.z]: z }) }) : null,
                             }),
-                            (0, a.jsx)(E.A, {
+                            (0, a.jsx)(T.A, {
                                 "aria-label": W
                                     ? I.intl.formatToPlainString(I.t["18wnuD"], { inputDeviceName: X })
                                     : I.intl.string(I.t.fRzCbB),
-                                className: l()(O.UT, { [O.q6]: s }),
+                                className: l()(R.UT, { [R.q6]: s }),
                                 disabled: M,
                                 icon: (0, a.jsx)(o, {
-                                    className: O.$$,
+                                    className: R.$$,
                                     size: "custom",
                                     width: 12,
                                     height: 12,
@@ -181,8 +181,8 @@ function D(e) {
                     p.N(_.v.MUTE_TUTORIAL);
                 },
                 position: "top",
-                title: I.intl.string(k.default.VG4zAf),
-                body: I.intl.string(k.default["8VIRzR"]),
+                title: I.intl.string(O.default.VG4zAf),
+                body: I.intl.string(O.default["8VIRzR"]),
             }),
         ],
     });

@@ -11,38 +11,38 @@ var i = n(627968),
     h = n(397927),
     m = n(435183),
     A = n(155718),
-    p = n(47167),
-    g = n(685374),
+    g = n(47167),
+    p = n(685374),
     f = n(569989),
     _ = n(997509),
     E = n(46054),
-    x = n(34457),
-    C = n(317525),
+    C = n(34457),
+    x = n(317525),
     S = n(71393),
     I = n(576705),
     T = n(287809),
-    v = n(488926),
-    N = n(427262),
-    y = n(314307),
-    b = n(234567),
+    N = n(488926),
+    b = n(427262),
+    v = n(314307),
+    y = n(234567),
     j = n(652215),
     R = n(985018),
-    M = n(650373),
-    D = n(782691);
+    M = n(22748),
+    D = n(830684);
 function O(e) {
     let { channel: t } = e,
         [n, s] = l.useState(!1),
-        r = (0, p.Ay)(t, !0),
+        r = (0, g.Ay)(t, !0),
         O = t.guild_id,
-        L = (0, d.bG)([C.A], () => (null != O ? C.A.getSortedRoles(O) : void 0)),
+        L = (0, d.bG)([x.A], () => (null != O ? x.A.getSortedRoles(O) : void 0)),
         P = (0, d.bG)([T.default, S.A], () => T.default.getUser(S.A.getGuild(O)?.ownerId)),
-        w = l.useMemo(() => (null != L ? L.filter((e) => !(0, x.Oy)(e)) : []), [L]),
+        w = l.useMemo(() => (null != L ? L.filter((e) => !(0, C.Oy)(e)) : []), [L]),
         k = l.useMemo(
             () =>
                 o()(w)
                     .filter((e) => {
                         if (null == O) return !1;
-                        let n = v.aH({ forceRoles: { [e.id]: e }, context: t });
+                        let n = N.aH({ forceRoles: { [e.id]: e }, context: t });
                         return c.X8(n, c.kg(j.xBc.ADMINISTRATOR, j.xBc.VIEW_CHANNEL));
                     })
                     .value(),
@@ -57,8 +57,8 @@ function O(e) {
             }
             return o()(e)
                 .filter((e) => {
-                    let n = v.$3({ permission: j.xBc.ADMINISTRATOR, user: e, context: t }),
-                        i = t.permissionOverwrites[e.id] ?? v.x3,
+                    let n = N.$3({ permission: j.xBc.ADMINISTRATOR, user: e, context: t }),
+                        i = t.permissionOverwrites[e.id] ?? N.x3,
                         l = c.zy(i.allow, j.xBc.VIEW_CHANNEL);
                     return n || l;
                 })
@@ -66,12 +66,12 @@ function O(e) {
         }, [t, P]),
         G = I.A.can(j.xBc.MANAGE_CHANNELS, t) || I.A.can(j.xBc.MANAGE_ROLES, t),
         F = l.useCallback(() => s(!1), []);
-    return (0, i.jsxs)(y.Ay, {
+    return (0, i.jsxs)(v.Ay, {
         channelId: t.id,
         children: [
-            (0, i.jsx)(y.WK, { locked: !0, channelType: t.type }),
-            (0, i.jsx)(y.cr, { children: R.intl.format(R.t.I3R7Vn, { channelName: r }) }),
-            (0, i.jsx)(y.j1, {
+            (0, i.jsx)(v.WK, { locked: !0, channelType: t.type }),
+            (0, i.jsx)(v.cr, { children: R.intl.format(R.t.I3R7Vn, { channelName: r }) }),
+            (0, i.jsx)(v.j1, {
                 className: D.PT,
                 children: R.intl.format(R.t.QuwqjG, {
                     channelName: r,
@@ -108,7 +108,7 @@ function O(e) {
                         if (1 !== U.length || k.length > 0)
                             return (0, i.jsx)(u.A, { guildId: t.guild_id, className: M.HD, maxUsers: 5, users: U });
                         let e = U[0],
-                            n = N.Ay.getName(e);
+                            n = b.Ay.getName(e);
                         return (0, i.jsxs)("div", {
                             className: M.HD,
                             children: [
@@ -138,7 +138,7 @@ function O(e) {
                             s = e.tags?.guild_connections !== void 0;
                         return G
                             ? (0, i.jsx)(
-                                  b.A,
+                                  y.A,
                                   {
                                       className: a()(M.JC, { [M.HV]: n === k.length - 1 }),
                                       roleName: e.name,
@@ -167,7 +167,7 @@ function O(e) {
             n
                 ? (0, i.jsx)(h.aFV, {
                       renderModal: (e) =>
-                          (0, i.jsx)(g.default, { ...e, onClose: () => (F(), e.onClose()), channelId: t.id }),
+                          (0, i.jsx)(p.default, { ...e, onClose: () => (F(), e.onClose()), channelId: t.id }),
                       onCloseRequest: () => s(!1),
                   })
                 : null,

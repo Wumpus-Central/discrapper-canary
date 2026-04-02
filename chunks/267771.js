@@ -1,18 +1,13 @@
-n.d(t, { A: () => a });
-var i = n(64700),
-    l = n(568065),
-    s = n(652215);
-function a(e) {
-    return (0, i.useMemo)(() => {
-        if (null == e) return 0;
-        let t = e?.features.has(s.GuildFeatures.PREMIUM_TIER_3_OVERRIDE) === !0 ? 0 : s.M2T[s.TVA.TIER_3],
-            n = Object.values(l.sy),
-            i = Object.values(l.YV);
-        return (
-            n.concat(i).forEach((n) => {
-                null == n.includedInLevel && (n.isEnabled?.(e.id) ?? !0) && (t += n.boostPrice);
-            }),
-            t
-        );
-    }, [e]);
-}
+e.exports = {
+    hd: "sectionContainer__5a4b6",
+    yF: "divider__5a4b6",
+    bV: "sectionHeader__5a4b6",
+    hQ: "contentContainer__5a4b6",
+    vU: "appContainer__5a4b6",
+    nT: "appHeader__5a4b6",
+    my: "avatar__5a4b6",
+    gn: "titleContainer__5a4b6",
+    JB: "appName__5a4b6",
+    m4: "appCategory__5a4b6",
+    i3: "appDescription__5a4b6",
+};

@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => h, GU: () => A });
+n.d(t, { Ay: () => h, GU: () => f });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -10,14 +10,14 @@ var i = n(503698),
     d = n(689906),
     c = n(224331),
     p = n(568065),
-    _ = n(333354),
+    _ = n(136708),
     m = n(985018),
-    f = n(58962);
-function A(e) {
+    A = n(229925);
+function f(e) {
     let { className: t, guildId: n, powerup: i, onClick: o } = e,
         a = (0, d.A)(n, i);
     return (0, r.jsx)("div", {
-        className: l()(f.FS, t),
+        className: l()(A.FS, t),
         children: (0, r.jsx)(s.$nd, {
             variant: "primary",
             fullWidth: !0,
@@ -32,7 +32,7 @@ function g(e) {
     let { className: t, guildId: n, powerup: i, onClick: o } = e,
         a = (0, c.A)(n, i);
     return (0, r.jsx)("div", {
-        className: l()(f.FS, t),
+        className: l()(A.FS, t),
         children: (0, r.jsx)(s.$nd, {
             variant: "primary",
             fullWidth: !0,
@@ -47,9 +47,9 @@ function x(e) {
     let { className: t, guildId: n, powerup: i } = e,
         o = (0, c.A)(n, i);
     return (0, r.jsx)("div", {
-        className: l()(f.kL, t),
+        className: l()(A.kL, t),
         children: (0, r.jsx)("div", {
-            className: f.FS,
+            className: A.FS,
             children: (0, r.jsx)(s.$nd, {
                 variant: "primary",
                 fullWidth: !0,
@@ -64,10 +64,10 @@ function v(e) {
         { showToggleButton: d, isPowerupActive: c, showConfigureButton: p } = (0, o.A)(n, i),
         _ = !c;
     return (0, r.jsxs)("div", {
-        className: l()(f.kL, t),
+        className: l()(A.kL, t),
         children: [
             d && (0, r.jsx)(u.A, { guildId: n, powerup: i, onError: a, grow: _, compact: !_, expressiveCta: s }),
-            p ? (0, r.jsx)(A, { guildId: n, powerup: i }) : c ? (0, r.jsx)(g, { guildId: n, powerup: i }) : null,
+            p ? (0, r.jsx)(f, { guildId: n, powerup: i }) : c ? (0, r.jsx)(g, { guildId: n, powerup: i }) : null,
         ],
     });
 }

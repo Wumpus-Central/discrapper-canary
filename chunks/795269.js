@@ -5,7 +5,7 @@ n(64700);
 var i = n(503698),
     s = n.n(i),
     a = n(397927),
-    o = n(83580);
+    o = n(679099);
 function l(e) {
     let { text: t, className: n } = e;
     return (0, r.jsx)("div", {

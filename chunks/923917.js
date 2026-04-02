@@ -31,8 +31,8 @@ var r = n(627968),
     L = n(267102),
     w = n(666347),
     M = n(97469),
-    P = n(975616),
-    x = n(611635),
+    x = n(975616),
+    P = n(611635),
     k = n(723702),
     U = n(677134),
     G = n(837921),
@@ -40,7 +40,7 @@ var r = n(627968),
     V = n(869146),
     B = n(652215),
     H = n(392164),
-    j = n(237618);
+    j = n(31411);
 function Y(e) {
     let { withTitleBar: t, isFullScreen: n } = e;
     return t && k.isPlatformEmbedded && !n;
@@ -139,7 +139,7 @@ class W extends i.Component {
             T = n === H.f ? w.A : O.A;
         return (0, r.jsx)(u.Kd, {
             children: (0, r.jsx)(
-                P.e,
+                x.e,
                 {
                     windowKey: n,
                     themeOverride: f,
@@ -200,7 +200,7 @@ class W extends i.Component {
 }
 let K = i.forwardRef(function (e, t) {
         let { guestWindow: n, className: s, children: o } = e,
-            { lang: u, style: c, className: d } = (0, x.xb)();
+            { lang: u, style: c, className: d } = (0, P.xb)();
         return (
             i.useEffect(() => {
                 let e = n.document.documentElement;

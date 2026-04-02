@@ -9,7 +9,7 @@ var i = n(627968),
     c = n(652215),
     u = n(788868),
     m = n(985018),
-    g = n(45812);
+    g = n(775165);
 let _ = [
     {
         getPerkHeading: () => m.intl.string(m.t.tIiwuj),

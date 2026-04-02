@@ -1,8 +1,8 @@
-r.d(t, { A: () => x, L: () => b });
+r.d(t, { A: () => g, L: () => b });
 var a = r(627968),
     n = r(64700),
-    s = r(503698),
-    i = r.n(s),
+    i = r(503698),
+    s = r.n(i),
     l = r(230109),
     o = r(732955),
     d = r(688810),
@@ -10,36 +10,36 @@ var a = r(627968),
     u = r(954571),
     m = r(128620),
     _ = r(652215),
-    p = r(49370),
+    p = r(723468),
     f = r(985018),
-    h = r(18738);
+    h = r(577057);
 let b = "orbs",
-    x = (e) => {
+    g = (e) => {
         let { className: t, location: r } = e,
-            { analyticsLocations: s } = (0, d.Ay)(r),
-            x = n.useRef(null),
-            g = n.useRef(!1),
+            { analyticsLocations: i } = (0, d.Ay)(r),
+            g = n.useRef(null),
+            x = n.useRef(!1),
             { passesGeneralUIInvariant: C, programReward: A } = (0, c.F)({
                 location: "PremiumTenureRewardsOrbsSection",
             });
         return C
             ? (0, a.jsx)(d.f5, {
-                  value: s,
+                  value: i,
                   children: (0, a.jsx)(l.L, {
-                      innerRef: x,
+                      innerRef: g,
                       onChange: (e) => {
                           e &&
-                              !g.current &&
-                              ((g.current = !0),
+                              !x.current &&
+                              ((x.current = !0),
                               u.default.track(_.HAw.PREMIUM_TENURE_REWARDS_ORBS_SECTION_IMPRESSION, {
                                   program_state: A?.program_current_state,
                               }));
                       },
                       threshold: 0.5,
                       children: (0, a.jsxs)("div", {
-                          ref: x,
+                          ref: g,
                           id: b,
-                          className: i()(h.uW, h.Uv, h.qr, t),
+                          className: s()(h.uW, h.Uv, h.qr, t),
                           children: [
                               (0, a.jsx)(o.DZT, {
                                   variant: "display-sm",
@@ -49,7 +49,7 @@ let b = "orbs",
                               }),
                               (0, a.jsx)(o.EYj, {
                                   variant: "text-md/medium",
-                                  className: i()(h.VA, h.dO),
+                                  className: s()(h.VA, h.dO),
                                   children: f.intl.string(p.default["2KoHRF"]),
                               }),
                               (0, a.jsx)(m.A, {}),

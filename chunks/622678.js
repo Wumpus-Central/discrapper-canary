@@ -9,8 +9,8 @@ var r = n(627968),
     u = n(397927),
     c = n(812745),
     d = n(985018),
-    _ = n(342883),
-    f = n(199228);
+    _ = n(908742),
+    f = n(91731);
 let p = function (e) {
     let t = i.useRef(null),
         { stripeType: n, flipped: a, updateCompleted: p, onFocus: h, onBlur: m } = e,
@@ -104,8 +104,8 @@ let p = function (e) {
         [w, O],
     );
     let M = (0, u.rdh)(l.A.colors.TEXT_SUBTLE).hex(),
-        P = (0, u.rdh)(l.A.colors.TEXT_STRONG).hex();
-    function x() {
+        x = (0, u.rdh)(l.A.colors.TEXT_STRONG).hex();
+    function P() {
         return o()(_.vB, { [_.Tn]: null !== y, [_.iH]: A, [_.yD]: "cardNumber" === n });
     }
     function k() {
@@ -116,19 +116,19 @@ let p = function (e) {
                         (0, r.jsx)(c.Ay, { className: _.Ie, type: E, flipped: a }),
                         (0, r.jsx)(s.CardNumberElement, {
                             options: { style: N, placeholder: d.intl.string(d.t.gPRHfw), disableLink: !1 },
-                            className: x(),
+                            className: P(),
                         }),
                     ],
                 });
             case "cardExpiry":
                 return (0, r.jsx)(s.CardExpiryElement, {
                     options: { style: N, placeholder: d.intl.string(d.t.xeEWQ6) },
-                    className: x(),
+                    className: P(),
                 });
             case "cardCvc":
                 return (0, r.jsx)(s.CardCvcElement, {
                     options: { style: N, placeholder: d.intl.string(d.t.wZz04F) },
-                    className: x(),
+                    className: P(),
                 });
         }
     }
@@ -142,12 +142,12 @@ let p = function (e) {
                 base: {
                     fontFamily: r,
                     fontWeight: n.getPropertyValue("font-weight"),
-                    color: P,
+                    color: x,
                     fontSize: n.getPropertyValue("font-size"),
                     "::placeholder": { color: M },
                 },
             });
-        }, [t, M, P]),
+        }, [t, M, x]),
         (0, r.jsxs)("div", {
             className: _.Zm,
             "data-stripe-type": n,

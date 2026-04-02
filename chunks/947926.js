@@ -3,7 +3,7 @@ var a = n(627968),
     i = n(64700),
     s = n(503698),
     l = n.n(s),
-    r = n(773690),
+    r = n(687498),
     o = n(311907),
     d = n(475743),
     c = n(676594),
@@ -22,17 +22,17 @@ var a = n(627968),
     C = n(568329),
     y = n(818276),
     S = n(742860),
-    T = n(783569),
-    E = n(963713),
+    E = n(783569),
+    T = n(963713),
     N = n(717695),
     I = n(899592),
-    k = n(546350),
-    O = n(922532),
-    R = n(20732),
+    O = n(546350),
+    R = n(922532),
+    k = n(20732),
     w = n(654487);
 n(272111);
-var D = n(57291);
-function P(e) {
+var D = n(407974);
+function M(e) {
     let { isExpanded: t, questId: n } = e;
     return (
         (0, x.H6)({
@@ -44,7 +44,7 @@ function P(e) {
         null
     );
 }
-function M() {
+function P() {
     return (
         i.useEffect(() => {
             c.l.trigger();
@@ -76,7 +76,7 @@ function L(e) {
             expansionSpring: ee,
             visibilitySpring: et,
             springConfig: en,
-        } = (0, k.w)({ isQuestAccepted: W, isQuestCompleted: K, isQuestBarVisible: q }),
+        } = (0, O.w)({ isQuestAccepted: W, isQuestCompleted: K, isQuestBarVisible: q }),
         {
             handleCtxMenuOpened: ea,
             handleCtxMenuClosed: ei,
@@ -87,7 +87,7 @@ function L(e) {
             handleBlur: ed,
             handleMouseEnter: ec,
             handleMouseLeave: eu,
-        } = (0, O.m)({
+        } = (0, R.m)({
             quest: t,
             isExpanded: Q,
             setIsExpanded: Y,
@@ -97,7 +97,7 @@ function L(e) {
             prevIsQuestAccepted: H,
             impressionRef: G,
         });
-    (0, R.S)({
+    (0, k.S)({
         quest: t,
         hasAssetsError: z,
         isEligibleForQuests: s,
@@ -135,7 +135,7 @@ function L(e) {
                 children: [
                     q &&
                         (0, a.jsxs)(a.Fragment, {
-                            children: [(0, a.jsx)(P, { questId: V, isExpanded: Q }), (0, a.jsx)(M, {})],
+                            children: [(0, a.jsx)(M, { questId: V, isExpanded: Q }), (0, a.jsx)(P, {})],
                         }),
                     (0, a.jsx)(r.animated.div, {
                         "aria-hidden": !q,
@@ -147,14 +147,14 @@ function L(e) {
                         style: { height: et.to({ range: [0, 1], output: [0, e_] }) },
                         children: (0, a.jsx)(r.animated.div, {
                             className: l()(D.FG, { [D.E$]: Q, [D.KA]: W }),
-                            children: (0, a.jsx)(T.R, {
+                            children: (0, a.jsx)(E.R, {
                                 springConfig: en,
                                 isExpanded: Q,
                                 children: (0, a.jsx)(C.oK, {
                                     expandedContentRef: em,
                                     collapsedContentRef: eh,
                                     expansionSpring: ee,
-                                    children: (0, a.jsxs)(E.C, {
+                                    children: (0, a.jsxs)(T.C, {
                                         quest: t,
                                         taskDetails: ep,
                                         isExpanded: Q,

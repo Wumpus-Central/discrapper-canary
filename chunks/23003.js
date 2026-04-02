@@ -1,8 +1,8 @@
 r.d(t, { A0: () => eu, Ay: () => e_, NI: () => em, Tb: () => ec });
 var a,
     n,
-    s,
-    i = r(627968),
+    i,
+    s = r(627968),
     l = r(64700),
     o = r(192308),
     d = r(397927),
@@ -26,12 +26,12 @@ var a,
     y = r(88001),
     I = r(652215),
     P = r(355097),
-    S = r(653624),
-    T = r(519412),
-    w = r(49370),
+    S = r(284498),
+    T = r(518582),
+    w = r(723468),
     O = r(985018),
-    D = r(520650),
-    M = r(927961),
+    D = r(674547),
+    M = r(241015),
     U = r(817577),
     L = r(861223),
     B = r(748222),
@@ -55,32 +55,32 @@ var a,
     er = r(170467),
     ea = r(909340),
     en = r(455482),
-    es = r(573573),
-    ei = r(233572),
+    ei = r(573573),
+    es = r(233572),
     el = r(437466),
     eo = r(23145),
     ed = r(56582),
     ec = (((a = {}).CONTAINED = "contained"), (a.OVERLAY = "overlay"), a),
     eu = (((n = {}).SMALL = "small"), (n.MEDIUM = "medium"), (n.LARGE = "large"), n),
     em =
-        (((s = {}).REFERRAL_PROGRAM = "referralProgram"),
-        (s.SERVER_PROFILES = "serverProfiles"),
-        (s.SHOW_YOUR_STYLE = "showYourStyle"),
-        (s.YOUR_SPACE = "yourSpace"),
-        (s.EMOJIS = "emojis"),
-        (s.NO_LIMITS = "noLimits"),
-        (s.CUSTOM_THEMES = "customThemes"),
-        (s.DISPLAY_NAME_STYLES = "displayNameStyles"),
-        (s.PREMIUM_GROUP = "premiumGroup"),
-        (s.ORB_REWARDS = "orbRewards"),
-        (s.THREE_P_PROMOTIONS = "threePPromotions"),
-        s);
+        (((i = {}).REFERRAL_PROGRAM = "referralProgram"),
+        (i.SERVER_PROFILES = "serverProfiles"),
+        (i.SHOW_YOUR_STYLE = "showYourStyle"),
+        (i.YOUR_SPACE = "yourSpace"),
+        (i.EMOJIS = "emojis"),
+        (i.NO_LIMITS = "noLimits"),
+        (i.CUSTOM_THEMES = "customThemes"),
+        (i.DISPLAY_NAME_STYLES = "displayNameStyles"),
+        (i.PREMIUM_GROUP = "premiumGroup"),
+        (i.ORB_REWARDS = "orbRewards"),
+        (i.THREE_P_PROMOTIONS = "threePPromotions"),
+        i);
 let e_ = () => {
     let { analyticsLocations: e } = (0, u.Ay)(c.A.PREMIUM_MARKETING_BENTO_BOX),
         t = (0, h.X)("useBentoBoxes"),
         a = (0, b.A)({ analyticsLocations: e }),
         n = (0, f.A)({ scrollPosition: P._F.TRY_IT_OUT, analyticsLocations: e }),
-        s = (0, l.useCallback)(() => {
+        i = (0, l.useCallback)(() => {
             (0, C.openUserSettings)(g.X.PROFILE_PANEL, { analyticsLocations: e }, () =>
                 (0, _.L)({ analyticsLocations: e }),
             );
@@ -93,7 +93,7 @@ let e_ = () => {
         e_ = {
             premiumGroup: { thumbnail: U, assetUrl: U },
             serverProfiles: { thumbnail: B, assetUrl: eu ? eo.Ay : ed.Ay },
-            customThemes: { thumbnail: ei.A, assetUrl: eu ? es.A : el.A },
+            customThemes: { thumbnail: es.A, assetUrl: eu ? ei.A : el.A },
             displayNameStyles: { thumbnail: G.A, assetUrl: eu ? k.A : V.A },
             referralProgram: { thumbnail: X.A, assetUrl: eu ? Z.A : $.A },
             showYourStyle: { thumbnail: J.A, assetUrl: eu ? q.A : Q.A },
@@ -137,7 +137,7 @@ let e_ = () => {
                 description: O.intl.string(M.default.MFNXZh),
                 descriptionCta: O.intl.string(O.t.jVcuVY),
                 previewImage: e_.displayNameStyles.thumbnail,
-                onClick: t ? a : s,
+                onClick: t ? a : i,
                 badgeText: O.intl.string(O.t.y2b7CA).toLocaleUpperCase(),
                 videoUrl: e_.displayNameStyles.assetUrl,
             },
@@ -164,7 +164,7 @@ let e_ = () => {
                         onClick: () => {
                             (0, o.openModalLazy)(async () => {
                                 let { default: e } = await r.e("69595").then(r.bind(r, 526710));
-                                return (t) => (0, i.jsx)(e, { ...t });
+                                return (t) => (0, s.jsx)(e, { ...t });
                             });
                         },
                     },

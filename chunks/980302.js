@@ -6,7 +6,7 @@ var l = a(134402),
     r = a(489569),
     n = a(137540),
     o = a(818348),
-    c = a(566043);
+    c = a(27134);
 let d = o.sE.MAIN_NAVIGATION_MENU;
 function _(e) {
     let { isOpen: t, dropdownLinks: a, TrackClick: _, avoidRouter: N, id: A, "aria-label": u } = e,

@@ -3,7 +3,7 @@ var i = n(627968);
 n(64700);
 var s = n(397927),
     l = n(985018),
-    a = n(465905);
+    a = n(96200);
 function r(e) {
     let { currentUser: t, disabled: n, handleDisableAccount: r, handleDeleteAccount: o } = e,
         d = t.isClaimed();

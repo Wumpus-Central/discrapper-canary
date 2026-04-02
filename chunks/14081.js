@@ -1,4 +1,4 @@
-n.d(t, { A: () => b });
+n.d(t, { A: () => j });
 var r = n(627968),
     i = n(64700),
     l = n(503698),
@@ -11,32 +11,32 @@ var r = n(627968),
     p = n(744201),
     _ = n(522055),
     m = n(881756),
-    f = n(793506),
-    A = n(843095),
+    A = n(793506),
+    f = n(843095),
     g = n(568065),
     x = n(800007),
-    v = n(294726),
+    v = n(738072),
     h = n(985018),
-    E = n(849289),
-    I = n(848820);
-function b(e) {
+    E = n(242030),
+    I = n(4799);
+function j(e) {
     let { guildId: t } = e,
         n = i.useRef(null),
-        { state: l, lowestGameServerCost: b } = (0, a.cf)([_.A], () => ({
+        { state: l, lowestGameServerCost: j } = (0, a.cf)([_.A], () => ({
             state: _.A.getStateForGuild(t),
             lowestGameServerCost: _.A.getLowestGameCostForGuild(t),
         })),
-        j = (0, f.A)(t),
+        b = (0, A.A)(t),
         { gameName: S, gameName2: C } = (0, m.A)(),
-        { textColor: w } = (0, p.A)(j?.type === "active");
+        { textColor: w } = (0, p.A)(b?.type === "active");
     return null == l
         ? null
         : (0, r.jsxs)(c.NI, {
               label: h.intl.string(v.default["B3OfL/"]),
               badge: g.ys[x.W5],
-              isActive: j?.type === "active",
-              isWarning: j?.type === "expiring",
-              onClick: () => (0, A.A)({ guildId: t, analyticsLocation: d.A.GUILD_POWERUPS_OVERVIEW }),
+              isActive: b?.type === "active",
+              isWarning: b?.type === "expiring",
+              onClick: () => (0, f.A)({ guildId: t, analyticsLocation: d.A.GUILD_POWERUPS_OVERVIEW }),
               children: [
                   (0, r.jsx)("div", {
                       className: s()(I.ZS, E.Sl),
@@ -51,7 +51,7 @@ function b(e) {
                   (0, r.jsx)(c.Ft, {
                       title: h.intl.string(v.default["B3OfL/"]),
                       textColor: w,
-                      footer: (0, r.jsx)(c.$L, { cost: b ?? 0, costDecorator: "+", status: j }),
+                      footer: (0, r.jsx)(c.$L, { cost: j ?? 0, costDecorator: "+", status: b }),
                       children: (0, r.jsx)(o.EYj, {
                           className: E.h_,
                           color: w,
@@ -69,7 +69,7 @@ function b(e) {
                                   : h.intl.string(v.default.b62EHM),
                           onClick: (e) => {
                               e.stopPropagation(),
-                                  (0, A.A)({ guildId: t, analyticsLocation: d.A.GUILD_POWERUPS_OVERVIEW });
+                                  (0, f.A)({ guildId: t, analyticsLocation: d.A.GUILD_POWERUPS_OVERVIEW });
                           },
                       }),
                   }),

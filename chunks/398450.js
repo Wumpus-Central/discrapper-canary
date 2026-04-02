@@ -4,7 +4,7 @@ n(64700);
 var s = n(397927),
     r = n(235986),
     i = n(985018),
-    a = n(39634);
+    a = n(524447);
 let o = {
     SlideContent: function (e) {
         let { children: t, scrollbarType: n } = e;

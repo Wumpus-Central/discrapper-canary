@@ -8,7 +8,7 @@ var r = n(627968),
     l = n(151271),
     u = n(240864),
     c = n(887695),
-    d = n(241356);
+    d = n(19397);
 let _ = 20,
     f = i.forwardRef(function (e, t) {
         let {
@@ -51,7 +51,7 @@ let _ = 20,
                 scrollOffset: _,
                 searchQuery: D,
             }),
-            P = i.useCallback(
+            x = i.useCallback(
                 (e) => {
                     M(e),
                         p({
@@ -68,8 +68,8 @@ let _ = 20,
             );
         return (
             i.useEffect(() => {
-                null != b.current && P(b.current.getScrollerNode()?.scrollTop ?? 0);
-            }, [P, b]),
+                null != b.current && x(b.current.getScrollerNode()?.scrollTop ?? 0);
+            }, [x, b]),
             (0, c.FV)({ searchQuery: D, activeCategoryIndex: L, listRef: b }),
             i.useImperativeHandle(
                 t,
@@ -111,7 +111,7 @@ let _ = 20,
                         : (0, r.jsx)(a.A, {
                               role: "none presentation",
                               listPadding: f,
-                              onScroll: P,
+                              onScroll: x,
                               renderRow: h,
                               renderSection: m,
                               renderSectionHeader: E,

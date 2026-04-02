@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(773690),
+    o = n(687498),
     l = n(311907),
     u = n(397927),
     c = n(387755),
@@ -31,8 +31,8 @@ var r = n(627968),
     L = n(503509),
     w = n(531685),
     M = n(954571),
-    P = n(486020),
-    x = n(203982),
+    x = n(486020),
+    P = n(203982),
     k = n(427262),
     U = n(313961),
     G = n(850226),
@@ -42,8 +42,8 @@ var r = n(627968),
     H = n(650583),
     j = n(731854),
     Y = n(985018),
-    W = n(25051),
-    K = n(778437);
+    W = n(881348),
+    K = n(962294);
 let $ = 80,
     z = 40,
     q = 32;
@@ -87,7 +87,7 @@ function X(e) {
         C = i.useRef(null),
         q = (0, l.bG)([w.A], () => w.A.windowSize()),
         X = (0, l.bG)([R.A], () => R.A.getGuild(S.guild_id)),
-        Q = null != X ? P.Ay.getGuildIconURL({ id: X.id, icon: X.icon, size: z }) : null,
+        Q = null != X ? x.Ay.getGuildIconURL({ id: X.id, icon: X.icon, size: z }) : null,
         J = (0, g.Y)(S, z, !0) ?? Q,
         ee = (0, A.Ay)(S),
         et = (0, l.yK)([D.Ay, U.A], () =>
@@ -119,9 +119,9 @@ function X(e) {
     }, [S]),
         i.useEffect(
             () => (
-                x._.subscribe(B.jej.CALL_ACCEPT, ec),
+                P._.subscribe(B.jej.CALL_ACCEPT, ec),
                 () => {
-                    x._.unsubscribe(B.jej.CALL_ACCEPT, ec);
+                    P._.unsubscribe(B.jej.CALL_ACCEPT, ec);
                 }
             ),
             [ec],

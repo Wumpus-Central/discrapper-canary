@@ -19,20 +19,20 @@ var i = n(627968),
     C = n(832163),
     I = n(207654),
     E = n(317560),
-    b = n(533406),
-    v = n(971146),
+    v = n(533406),
+    b = n(971146),
     T = n(300182),
     S = n(183802),
     y = n(652215),
     N = n(985018),
-    j = n(23542);
+    j = n(336135);
 function L(e) {
     let { guildId: t, skuId: n, channel: L } = e,
         R = (0, l.bG)([A.A], () => A.A.isFetchingForSKU(n)),
         P = (0, l.bG)([g.A], () => g.A.get(n)),
         w = P?.applicationId,
-        M = (0, l.bG)([u.A], () => null != w && u.A.isFetchingApplication(w)),
-        D = (0, l.bG)([u.A], () => null != w && u.A.didFetchingApplicationFail(w)),
+        D = (0, l.bG)([u.A], () => null != w && u.A.isFetchingApplication(w)),
+        M = (0, l.bG)([u.A], () => null != w && u.A.didFetchingApplicationFail(w)),
         k = (0, m.h)(w),
         O = (0, I.b)({ location: "product_details_embed" }),
         { analyticsLocations: U } = (0, c.Ay)(d.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED);
@@ -56,7 +56,7 @@ function L(e) {
         q = a.useCallback(() => {
             null != P &&
                 G &&
-                (0, b.a)(
+                (0, v.a)(
                     P,
                     { isGift: !1 },
                     { analyticsLocations: [d.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_PURCHASE_BUTTON], guildId: t },
@@ -64,14 +64,14 @@ function L(e) {
         }, [P, t, G]),
         W = a.useCallback(() => {
             null != P &&
-                (0, b.a)(
+                (0, v.a)(
                     P,
                     { isGift: !0, giftRecipient: B ?? void 0 },
                     { analyticsLocations: [d.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_GIFT_BUTTON] },
                 );
         }, [P, B]),
-        z = null != w && null == k && !D;
-    return (R || M || z) && (null == P || null == k)
+        z = null != w && null == k && !M;
+    return (R || D || z) && (null == P || null == k)
         ? (0, i.jsx)("div", { className: j.kL, children: (0, i.jsx)(o.y$y, { className: j.u1 }) })
         : null != P && null != k && (0, _.A)(k) && k.guildId === t
           ? (0, i.jsxs)("div", {
@@ -90,7 +90,7 @@ function L(e) {
                             (0, i.jsxs)("div", {
                                 className: j.lI,
                                 children: [
-                                    O && null != k && (0, i.jsx)(v.V, { application: k }),
+                                    O && null != k && (0, i.jsx)(b.V, { application: k }),
                                     (0, i.jsxs)("div", {
                                         className: j.PB,
                                         children: [

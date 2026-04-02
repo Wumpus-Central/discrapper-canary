@@ -37,9 +37,9 @@ var i = n(627968),
     G = n(381941),
     H = n(652215),
     F = n(705751),
-    w = n(200700),
-    B = n(985018),
-    V = n(96476);
+    B = n(200700),
+    w = n(985018),
+    V = n(852697);
 function X(e, t) {
     let { popouts: n, selected: i, setPopout: a } = (0, y.A)(e.id, G.Fd),
         { usernameProfile: r, avatarProfile: s } = n,
@@ -100,11 +100,11 @@ function J(e) {
             try {
                 switch (parseInt(e.actionType)) {
                     case I.G.DELETE_USER_MESSAGE:
-                        return B.intl.formatToPlainString(B.t.BtKE9h, { userName: i, timestamp: l.fromNow() });
+                        return w.intl.formatToPlainString(w.t.BtKE9h, { userName: i, timestamp: l.fromNow() });
                     case I.G.SET_COMPLETED:
-                        return B.intl.formatToPlainString(B.t.dyo9US, { userName: i, timestamp: l.fromNow() });
+                        return w.intl.formatToPlainString(w.t.dyo9US, { userName: i, timestamp: l.fromNow() });
                     case I.G.SUBMIT_FEEDBACK:
-                        return B.intl.formatToPlainString(B.t["C9/kIO"], { userName: i, timestamp: l.fromNow() });
+                        return w.intl.formatToPlainString(w.t["C9/kIO"], { userName: i, timestamp: l.fromNow() });
                     default:
                         return a;
                 }
@@ -205,7 +205,7 @@ function Z(e) {
         e_ = l.useCallback(() => {
             (0, f.E5)(a.id, s, I.G.DELETE_USER_MESSAGE);
         }, [s, a.id]),
-        eA = (0, w.getFriendlyDurationString)(Number(et)),
+        eA = (0, B.getFriendlyDurationString)(Number(et)),
         em = null != en,
         eE = y && null != ee && (null == ei || !ei.actions.hasOwnProperty(I.G.DELETE_USER_MESSAGE)),
         eT = a.embeds.length > 0 ? a.embeds[0].fields.find((e) => "channel_id" === e.rawName)?.rawValue : null,
@@ -233,7 +233,7 @@ function Z(e) {
                                     color: "text-brand",
                                     tag: "span",
                                     className: V.Xh,
-                                    children: B.intl.string(B.t.hG1StD),
+                                    children: w.intl.string(w.t.hG1StD),
                                 }),
                                 (0, i.jsx)(T.A, { type: F.nu.SYSTEM_DM, className: V.Al }),
                                 (0, i.jsx)(Q, {
@@ -275,7 +275,7 @@ function Z(e) {
                                                             variant: "text-xs/medium",
                                                             color: "text-muted",
                                                             tag: "span",
-                                                            children: B.intl.format(B.t.SYIUTR, { keyword: Z }),
+                                                            children: w.intl.format(w.t.SYIUTR, { keyword: Z }),
                                                         }),
                                                         (0, i.jsx)("div", { className: r()(V.Om, V.Gx) }),
                                                     ],
@@ -285,7 +285,7 @@ function Z(e) {
                                                     variant: "text-xs/medium",
                                                     color: "text-muted",
                                                     tag: "span",
-                                                    children: B.intl.format(B.t.ZoOyKB, { ruleName: G }),
+                                                    children: w.intl.format(w.t.ZoOyKB, { ruleName: G }),
                                                 }),
                                             null != eA &&
                                                 (0, i.jsxs)(i.Fragment, {
@@ -296,7 +296,7 @@ function Z(e) {
                                                             color: "text-muted",
                                                             tag: "span",
                                                             className: V.__invalid_footerText,
-                                                            children: B.intl.format(B.t["3LYql6"], { duration: eA }),
+                                                            children: w.intl.format(w.t["3LYql6"], { duration: eA }),
                                                         }),
                                                     ],
                                                 }),
@@ -309,7 +309,7 @@ function Z(e) {
                                                             color: "text-muted",
                                                             tag: "span",
                                                             className: V.nx,
-                                                            children: B.intl.format(B.t["26bB2M"], {
+                                                            children: w.intl.format(w.t["26bB2M"], {
                                                                 reason: (0, N.o2)(el),
                                                             }),
                                                         }),
@@ -353,7 +353,7 @@ function Z(e) {
                                             variant: "primary",
                                             size: "sm",
                                             textVariant: "text-xs/normal",
-                                            text: B.intl.string(B.t.DEoVWZ),
+                                            text: w.intl.string(w.t.DEoVWZ),
                                             onClick: (e) => {
                                                 eo.onContextMenuModerateUser?.(e);
                                             },
@@ -371,7 +371,7 @@ function Z(e) {
                                                       variant: "primary",
                                                       size: "sm",
                                                       textVariant: "text-xs/normal",
-                                                      text: B.intl.string(B.t.jtkj06),
+                                                      text: w.intl.string(w.t.jtkj06),
                                                   }),
                                               }),
                                           ],
@@ -385,7 +385,7 @@ function Z(e) {
                                         variant: "primary",
                                         size: "sm",
                                         textVariant: "text-xs/normal",
-                                        text: B.intl.string(B.t["94JbM3"]),
+                                        text: w.intl.string(w.t["94JbM3"]),
                                     }),
                                 }),
                                 eE
@@ -399,7 +399,7 @@ function Z(e) {
                                                       variant: "primary",
                                                       size: "sm",
                                                       textVariant: "text-xs/normal",
-                                                      text: B.intl.string(B.t["3A52tY"]),
+                                                      text: w.intl.string(w.t["3A52tY"]),
                                                   }),
                                               }),
                                           ],

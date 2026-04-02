@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(503698),
     s = n.n(i),
     a = n(178090),
-    o = n(905817);
+    o = n(89242);
 function l() {
     return (0, r.jsxs)("svg", {
         className: o.Os,

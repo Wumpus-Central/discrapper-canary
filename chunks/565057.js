@@ -21,12 +21,12 @@ var n = s(627968),
     C = s(561769),
     A = s(484469),
     S = s(917987),
-    v = s(781815),
+    v = s(4196),
     I = s(938191),
     L = s(758836),
     j = s(652215),
     k = s(985018),
-    T = s(297046);
+    T = s(572199);
 let O = (e) => {
     let {
             isLoading: t,
@@ -38,18 +38,18 @@ let O = (e) => {
             buttonContainerClassName: R,
             orbsSupportedOnly: B,
         } = e,
-        M = (0, i.bG)([_.default], () => _.default.getCurrentUser()),
-        P = p.Ay.canUseCollectibles(M),
+        P = (0, i.bG)([_.default], () => _.default.getCurrentUser()),
+        M = p.Ay.canUseCollectibles(P),
         D = (0, E.W)("FeedBlock"),
-        H = (0, I.yB)("FeedBlock"),
+        w = (0, I.yB)("FeedBlock"),
         {
-            sortType: w,
+            sortType: H,
             setSortType: F,
             sortedItems: G,
             sortOptions: U,
             shuffleProducts: V,
             showRecommendationOption: K,
-        } = (0, v.A)({ sortedSkuIds: l, isPremiumUser: P, prioritizeUserDiscounts: N, orbsSupportedOnly: B }),
+        } = (0, v.A)({ sortedSkuIds: l, isPremiumUser: M, prioritizeUserDiscounts: N, orbsSupportedOnly: B }),
         W = (0, i.bG)([u.A], () => u.A.useReducedMotion),
         z = (0, i.bG)([g.A], () => g.A.isFocused()),
         Y = !W && z,
@@ -64,7 +64,7 @@ let O = (e) => {
             },
             [Z, F, X],
         );
-    return null == M
+    return null == P
         ? null
         : (0, n.jsxs)("div", {
               className: a()(T.lD, T.YB),
@@ -91,7 +91,7 @@ let O = (e) => {
                               ],
                           }),
                           (0, n.jsxs)("div", {
-                              className: a()(T.IE, { [I.jP]: H }),
+                              className: a()(T.IE, { [I.jP]: w }),
                               children: [
                                   (0, n.jsx)(c.Text, {
                                       variant: "text-md/medium",
@@ -108,7 +108,7 @@ let O = (e) => {
                                               let { label: t, value: s } = e;
                                               return { id: s, label: t, value: s };
                                           },
-                                          value: w,
+                                          value: H,
                                           selectionMode: "single",
                                           fullWidth: !0,
                                       }),

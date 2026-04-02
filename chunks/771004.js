@@ -12,8 +12,8 @@ var a = n(627968),
     x = n(305080),
     h = n(936636),
     g = n(985018),
-    f = n(282063),
-    p = n(48757);
+    f = n(325952),
+    p = n(679080);
 function _(e) {
     let { detectedGame: t, trackAction: n } = e,
         [i, x] = l.useState(t?.summaryLocalized != null),

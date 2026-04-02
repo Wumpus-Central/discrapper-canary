@@ -26,13 +26,13 @@ var r = n(627968),
     C = n(60809),
     R = n(652215),
     O = n(985018),
-    b = n(91224);
+    b = n(744179);
 function D(e) {
     let { application: t, context: s, className: D, sectionName: L } = e,
         w = i.useRef(null),
         M = (0, o.bG)([y.A], () => y.A.entrypoint()),
-        P = (0, v.Pp)(t),
-        x = (0, p.Ie)(P),
+        x = (0, v.Pp)(t),
+        P = (0, p.Ie)(x),
         k = (0, d.G)(t.id),
         U = (0, o.bG)([g.A], () => g.A.getGuildId() ?? void 0, []),
         G = {
@@ -51,7 +51,7 @@ function D(e) {
         children: [
             (0, r.jsx)(l.DUT, {
                 onClick: () => {
-                    let e = H ? (0, _.W)({ applicationId: t.id, referrerId: F?.id }) : (0, _.V)({ id: t.id, ...P });
+                    let e = H ? (0, _.W)({ applicationId: t.id, referrerId: F?.id }) : (0, _.V)({ id: t.id, ...x });
                     (0, T.C)(e, () =>
                         (0, l.showToast)((0, l.createToast)(O.intl.string(O.t["L/PwZf"]), l.ToastType.SUCCESS)),
                     ),
@@ -87,7 +87,7 @@ function D(e) {
                                                     let { default: e } = await Promise.all([
                                                         n.e("90365"),
                                                         n.e("33563"),
-                                                        n.e("70227"),
+                                                        n.e("83455"),
                                                     ]).then(n.bind(n, 719847));
                                                     return (n) =>
                                                         (0, r.jsx)(e, {
@@ -99,15 +99,15 @@ function D(e) {
                                                 });
                                             },
                                         }),
-                                    x
+                                    P
                                         ? (0, r.jsx)(l.Drp, {
                                               id: "add-app",
                                               label: O.intl.string(O.t.NgXl3C),
                                               action: () => {
-                                                  null == P.customInstallUrl &&
+                                                  null == x.customInstallUrl &&
                                                       (0, u.zV)(R.HAw.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, G),
                                                       (0, S.o)({
-                                                          ...P,
+                                                          ...x,
                                                           oauth2Callback: (e) => {
                                                               let { location: t } = e;
                                                               null != t &&

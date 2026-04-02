@@ -18,8 +18,8 @@ var r = n(627968),
     g = n(788868),
     A = n(652215),
     I = n(985018),
-    T = n(664627),
-    S = n(110992),
+    T = n(13874),
+    S = n(277355),
     y = n(417294),
     v = n(947639),
     N = n(644242),
@@ -50,8 +50,8 @@ function R(e) {
                 (0, u.jH)(),
                 (0, d.pX)(A.BVt.APPLICATION_STORE);
         },
-        P = (0, h.V)(),
-        x = i.useCallback(() => (0, p.LE)(P, g.pe.TIER_2) ?? I.intl.string(I.t.pj0XBN), [P]),
+        x = (0, h.V)(),
+        P = i.useCallback(() => (0, p.LE)(x, g.pe.TIER_2) ?? I.intl.string(I.t.pj0XBN), [x]),
         k = (0, E.A)(g.pe.TIER_2);
     t = w ? ((0, f.TM)() ? y.A : v.A) : (0, f.TM)() ? N.A : C.A;
     let U = w ? "nitro-pink" : "green";
@@ -107,7 +107,7 @@ function R(e) {
                                     onClick: () => {
                                         b();
                                     },
-                                    defaultTextOverride: x(),
+                                    defaultTextOverride: P(),
                                     fullWidth: !0,
                                 }),
                             ],

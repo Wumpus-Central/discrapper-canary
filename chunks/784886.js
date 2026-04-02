@@ -22,15 +22,15 @@ var r = n(627968),
     S = n(652215),
     y = n(788868),
     v = n(985018),
-    N = n(599159);
+    N = n(60230);
 let C = (0, E.createChannelRecord)({ id: "1", type: S.rbe.DM });
 function R(e) {
     let { user: t, guildId: s, channelId: E, onClose: S, disableAutoFocus: R = !1, upsell: O = !1 } = e,
         { newestAnalyticsLocation: b, analyticsLocations: D } = (0, c.Ay)(),
         { trackUserProfileAction: L } = (0, A.NJ)(),
         w = (0, m.j)("UserProfilePopoutDirectMessageSection"),
-        [M, P] = i.useState(""),
-        [x, k] = i.useState((0, _.x7)(M)),
+        [M, x] = i.useState(""),
+        [P, k] = i.useState((0, _.x7)(M)),
         U = i.useRef(!1),
         G = i.useRef(null),
         F = i.useRef(null),
@@ -69,9 +69,9 @@ function R(e) {
         placeholder: v.intl.formatToPlainString(v.t["0ZQw/X"], { name: g.Ay.getName(s, E, t) }),
         channel: C,
         textValue: M,
-        richValue: x,
+        richValue: P,
         onChange: (e, t, n) => {
-            t !== M && (P(t), k(n));
+            t !== M && (x(t), k(n));
         },
         focused: U.current,
         onFocus: () => {

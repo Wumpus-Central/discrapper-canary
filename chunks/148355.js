@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => x, h: () => b });
+n.d(t, { A: () => P, h: () => b });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
     o = n(284009),
     l = n.n(o),
-    u = n(773690),
+    u = n(687498),
     c = n(311907),
     d = n(230109),
     _ = n(397927),
@@ -18,7 +18,7 @@ var r = n(627968),
     g = n(842086),
     A = n(378058),
     I = n(985018),
-    T = n(473760);
+    T = n(6877);
 let S = (e) => e.preventDefault(),
     y = 0.7,
     v = 33,
@@ -243,7 +243,7 @@ let D = (e) => {
                                     (0, r.jsx)(u.animated.div, {
                                         className: T.tm,
                                         style: e,
-                                        children: (0, r.jsx)(P, {
+                                        children: (0, r.jsx)(x, {
                                             className: T.__invalid_overlaySticker,
                                             disableAnimation: t,
                                             enlargeOnInteraction: !1,
@@ -270,7 +270,7 @@ let D = (e) => {
             )
         );
     },
-    P = (e) => {
+    x = (e) => {
         let {
                 isInteracting: t = !1,
                 disableAnimation: n = !1,
@@ -323,4 +323,4 @@ let D = (e) => {
             `${c.id},${u}`,
         );
     },
-    x = P;
+    P = x;

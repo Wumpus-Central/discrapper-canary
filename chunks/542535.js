@@ -22,8 +22,8 @@ var r = n(627968),
     S = n(287809),
     y = n(954571),
     v = n(474090),
-    C = n(439174),
-    N = n(183555),
+    N = n(439174),
+    C = n(183555),
     R = n(672385),
     O = n(262),
     b = n(950191),
@@ -34,7 +34,7 @@ var r = n(627968),
     x = n(788868),
     P = n(854232),
     k = n(985018),
-    U = n(232972);
+    U = n(26985);
 let G = (e) => {
     let { badge: t, tieredTenureBadge: n } = e;
     return void 0 !== n && t.id !== P.K ? (0, r.jsx)(h.A, { profileBadge: t, tenureBadge: n }) : t.description;
@@ -53,7 +53,7 @@ function F(e) {
         j = i.useRef(null),
         Y = i.useRef(null),
         { analyticsLocations: W } = (0, d.Ay)(c.A.BADGE),
-        { context: K, trackUserProfileAction: $ } = (0, N.NJ)(),
+        { context: K, trackUserProfileAction: $ } = (0, C.NJ)(),
         z = S.default.getCurrentUser(),
         q = (0, v.CC)(z?.premiumType, x.PremiumTypes.TIER_2),
         Z = (0, b.AP)(z?.id ?? null),
@@ -64,11 +64,11 @@ function F(e) {
         role: "group",
         children: t.map((e, t) => {
             let n = e.id === I.A.ORB_PROFILE_BADGE,
-                i = (0, C.e0)(e.id),
+                i = (0, N.e0)(e.id),
                 d = null != i || e.id === P.K,
                 S = h?.userId === z?.id,
                 v = e.id === M.tH,
-                N = (t) => {
+                C = (t) => {
                     if (($({ action: "PRESS_BADGE" }), (0, R.R9)({ badge: e.id, analyticsLocations: W, ...K }), n))
                         return void (0, _.Cz)({
                             tab: w.G2.ORBS,
@@ -117,7 +117,7 @@ function F(e) {
                 }),
                 Z = null != V && V(e.id),
                 Q = {
-                    onClick: N,
+                    onClick: C,
                     onMouseEnter: b,
                     href: e.link,
                     "aria-label": e.description,

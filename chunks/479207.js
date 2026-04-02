@@ -14,8 +14,8 @@ var i = n(627968),
     p = n(87001),
     A = n(175203),
     x = n(163432),
-    E = n(734057),
-    f = n(430452),
+    f = n(734057),
+    E = n(430452),
     S = n(309010),
     I = n(256415),
     T = n(996439),
@@ -24,16 +24,16 @@ var i = n(627968),
     j = n(129537),
     y = n(412477),
     w = n(916494),
-    O = n(897720),
-    _ = n(392164),
+    _ = n(897720),
+    O = n(392164),
     N = n(652215),
     b = n(731854),
     R = n(985018),
-    M = n(144660);
+    M = n(84425);
 let L = s.memo(function (e) {
         let { participant: t, channel: n, context: s } = e,
             l = t.user?.id;
-        return (0, a.bG)([f.Ay], () => null != t.user && null != s && null != n && f.Ay.isLocalVideoDisabled(l, s), [
+        return (0, a.bG)([E.Ay], () => null != t.user && null != s && null != n && E.Ay.isLocalVideoDisabled(l, s), [
             l,
             t.user,
             s,
@@ -57,7 +57,7 @@ let L = s.memo(function (e) {
                     let l = e.user;
                     (0, v.YX)(N.uss.VIDEO, { type: v.Z5.CAMERA, value: v.IP.SETTINGS_OPENED, userId: l?.id }),
                         (0, d.L3)(s, async () => {
-                            let { default: e } = await Promise.all([n.e("97262"), n.e("87997"), n.e("77012")]).then(
+                            let { default: e } = await Promise.all([n.e("97262"), n.e("87997"), n.e("7202")]).then(
                                 n.bind(n, 180812),
                             );
                             return (n) =>
@@ -131,13 +131,13 @@ let L = s.memo(function (e) {
             (0, C.j_)({ locked: a, pinned: d.pinned, widget: d.type, isPreviewingInGame: !1 }, A);
         }, [a, d, A]);
         let x = s.useMemo(() => ({ opacity: d.opacity }), [d.opacity]),
-            E = s.useMemo(() => r()({ [M.wb]: !0, [M.Vd]: !p, [M.R]: !A && a }), [p, A, a]);
+            f = s.useMemo(() => r()({ [M.wb]: !0, [M.Vd]: !p, [M.R]: !A && a }), [p, A, a]);
         return 0 !== n.length || a
             ? null == u
                 ? null
                 : (0, i.jsx)("div", {
                       ref: m,
-                      className: E,
+                      className: f,
                       style: x,
                       children: (0, i.jsx)(z, {
                           context: t,
@@ -159,7 +159,7 @@ let L = s.memo(function (e) {
     }),
     k = (e) => {
         let { widget: t, computedSize: n, borderWidth: i, padding: s, containerSpecs: l } = e;
-        if (!(0, O.cv)(t)) return n;
+        if (!(0, _.cv)(t)) return n;
         let r = "boolean" != typeof t.meta.horizontal || t.meta.horizontal,
             a = 2 * i + 2 * s,
             o = r
@@ -169,7 +169,7 @@ let L = s.memo(function (e) {
         return (0, w.$G)(o, d);
     };
 function P(e) {
-    let t = (0, a.bG)([S.A, E.A], () => E.A.getChannel(S.A.getVoiceChannelId())),
+    let t = (0, a.bG)([S.A, f.A], () => f.A.getChannel(S.A.getVoiceChannelId())),
         n = 2 * e.padding + 2 * e.borderWidth,
         l = t?.id,
         [r, o] = (0, a.bG)(
@@ -180,7 +180,7 @@ function P(e) {
         ),
         d = "boolean" != typeof e.widget.meta.horizontal || e.widget.meta.horizontal,
         { width: g = e.width - n, height: m = e.height - n, ref: A } = (0, c.Ay)(e.locked, e.widget.pinned),
-        { participantTileWidth: f, visibleParticipants: I } = (0, x.i4)(d ? g : m, r, {
+        { participantTileWidth: E, visibleParticipants: I } = (0, x.i4)(d ? g : m, r, {
             tileWidth: 192,
             tileMinWidth: 120,
             tileMargin: 4,
@@ -188,7 +188,7 @@ function P(e) {
             cropSelfVideo: !0,
             version: o,
         }),
-        v = (0, a.bG)([p.A], () => p.A.getWindowState(_.f)),
+        v = (0, a.bG)([p.A], () => p.A.getWindowState(O.f)),
         C = {
             id: e.widget.id,
             containerSize: { containerHeight: m, containerWidth: g },
@@ -237,8 +237,8 @@ function P(e) {
             channel: t,
             participants: I,
             participantsVersion: o,
-            width: d ? f : (g ?? e.width),
-            height: d ? (m ?? e.height) : f,
+            width: d ? E : (g ?? e.width),
+            height: d ? (m ?? e.height) : E,
             containerRef: A,
         })
     );

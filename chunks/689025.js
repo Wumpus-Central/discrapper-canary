@@ -41,8 +41,8 @@ n(281405);
 var V = n(652215),
     H = n(349828),
     F = n(985018),
-    K = n(928409),
-    W = n(822294);
+    K = n(99566),
+    W = n(799535);
 class Y extends P.Ay {
     channelItemRef = l.createRef();
     state = { shouldShowGuildVerificationPopout: !1 };

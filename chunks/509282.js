@@ -19,15 +19,15 @@ var i = n(627968),
     C = n(954571),
     I = n(957565),
     E = n(943775),
-    b = n(997997),
-    v = n(658575),
+    v = n(997997),
+    b = n(658575),
     T = n(376374),
-    y = n(652215),
-    S = n(435220),
+    S = n(652215),
+    y = n(435220),
     N = n(985018),
-    j = n(518435);
+    j = n(252330);
 let L = (0, s.UT)([x.A, f.A, g.A], {
-        getQueryId: y.fic.SKU,
+        getQueryId: S.fic.SKU,
         get: (e) => {
             if (null == e) return;
             let t = x.A.get(e),
@@ -41,7 +41,7 @@ let L = (0, s.UT)([x.A, f.A, g.A], {
         },
     }),
     R = (0, s.UT)([x.A], {
-        getQueryId: y.fic.__DO_NOT_USE__STOREFRONT_MESSAGE_EMBED_PARENT_SKU,
+        getQueryId: S.fic.__DO_NOT_USE__STOREFRONT_MESSAGE_EMBED_PARENT_SKU,
         get: (e) => (null == e ? null : (x.A.getParentSKU(e) ?? null)),
         load: async (e, t) => {
             l()(null != e && null != t, "appId is null"), await (0, c.JI)(t);
@@ -49,7 +49,7 @@ let L = (0, s.UT)([x.A, f.A, g.A], {
     });
 function P(e) {
     let { appId: t, message: r } = e,
-        l = (0, v.G)(t),
+        l = (0, b.G)(t),
         { data: c } = (0, u.YY)(t),
         [m, h, g, x] = (0, s.yK)([_.A, A.A, p.A], () => {
             let e = _.A.getApplication(t),
@@ -76,29 +76,29 @@ function P(e) {
     if (!l || null == c) return null;
     let L = () => {
         (0, o.mMO)(async () => {
-            let { default: e } = await Promise.all([n.e("33563"), n.e("7194")]).then(n.bind(n, 719847));
+            let { default: e } = await Promise.all([n.e("33563"), n.e("88596")]).then(n.bind(n, 719847));
             return (n) =>
                 (0, i.jsx)(e, { transitionState: n.transitionState, onClose: n.onClose, appId: t, guildId: g });
         });
     };
-    return (0, i.jsx)(M, {
+    return (0, i.jsx)(D, {
         appName: c.name,
         title: N.intl.formatToPlainString(N.t.XDRjs5, { appName: c.name }),
         description: T,
-        link: `${location.protocol}//${location.host}${y.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(c.id, S.GlobalDiscoveryAppsSections.STORE)}`,
+        link: `${location.protocol}//${location.host}${S.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(c.id, y.GlobalDiscoveryAppsSections.STORE)}`,
         onLinkCopy: () => {
-            (0, b.K)(t, b.C.STORE_EMBED);
+            (0, v.K)(t, v.C.STORE_EMBED);
         },
         iconSrc: x,
         onIconClick: () => {
-            L(), C.default.track(y.HAw.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, { application_id: t, area: "app_icon" });
+            L(), C.default.track(S.HAw.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, { application_id: t, area: "app_icon" });
         },
         children: (0, i.jsx)("div", {
             className: j.mZ,
             children: (0, i.jsx)(o.Button, {
                 onClick: () => {
                     L(),
-                        C.default.track(y.HAw.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
+                        C.default.track(S.HAw.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                             application_id: t,
                             area: "open_store_button",
                         });
@@ -126,22 +126,22 @@ function w(e) {
         { data: A } = (0, u.YY)(c?.applicationId),
         x = (0, s.bG)([p.A], () => p.A.getBasicChannel(l.channel_id)?.guild_id, [l]),
         f = a.useMemo(() => (null != A ? (0, E.A)(A, 45) : void 0), [A]),
-        I = (0, v.G)(A?.id ?? ""),
+        I = (0, b.G)(A?.id ?? ""),
         { openModal: P, subscriptionPurchaseButtonState: w } = (0, h.A)({ skuId: r, initialSubscribeForGuild: x });
     if (!I || null == A || null == c) return null;
-    let D = c.type === y.Puh.SUBSCRIPTION,
-        k = !!D && (0, m.bg)(c.flags),
+    let M = c.type === S.Puh.SUBSCRIPTION,
+        k = !!M && (0, m.bg)(c.flags),
         O = () => {
             (0, o.mMO)(async () => {
-                let { default: e } = await Promise.all([n.e("33563"), n.e("7194")]).then(n.bind(n, 719847));
+                let { default: e } = await Promise.all([n.e("33563"), n.e("88596")]).then(n.bind(n, 719847));
                 return (t) =>
                     (0, i.jsx)(e, { transitionState: t.transitionState, onClose: t.onClose, appId: A.id, guildId: x });
             });
         },
         U = () => {
             (0, o.mMO)(async () => {
-                let e = D ? (await Promise.resolve().then(n.bind(n, 168393))).SubscriptionDetailsModal : null,
-                    t = D ? null : (await Promise.resolve().then(n.bind(n, 963179))).ItemDetailsModal;
+                let e = M ? (await Promise.resolve().then(n.bind(n, 168393))).SubscriptionDetailsModal : null,
+                    t = M ? null : (await Promise.resolve().then(n.bind(n, 963179))).ItemDetailsModal;
                 return (n) => {
                     let a = () => {
                         n.onClose(), O();
@@ -168,7 +168,7 @@ function w(e) {
                 };
             });
         },
-        B = D
+        B = M
             ? k
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
@@ -187,24 +187,24 @@ function w(e) {
             : g?.description?.trim();
     "" === B && (B = void 0);
     let G = () => {
-        C.default.track(y.HAw.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+        C.default.track(S.HAw.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
             application_id: A.id,
             sku_id: c.id,
             area: "purchase_button",
         });
     };
-    return (0, i.jsx)(M, {
+    return (0, i.jsx)(D, {
         appName: A.name,
         title: c.name,
         description: B,
-        link: `${location.protocol}//${location.host}${y.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(A.id, S.GlobalDiscoveryAppsSections.STORE)}`,
+        link: `${location.protocol}//${location.host}${S.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(A.id, y.GlobalDiscoveryAppsSections.STORE)}`,
         onLinkCopy: () => {
-            (0, b.K)(A.id, b.C.SKU_EMBED, r);
+            (0, v.K)(A.id, v.C.SKU_EMBED, r);
         },
         iconSrc: f,
         onIconClick: () => {
             O(),
-                C.default.track(y.HAw.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+                C.default.track(S.HAw.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                     application_id: A.id,
                     sku_id: c.id,
                     area: "app_icon",
@@ -217,7 +217,7 @@ function w(e) {
                     variant: "secondary",
                     onClick: () => {
                         U(),
-                            C.default.track(y.HAw.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+                            C.default.track(S.HAw.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                                 application_id: A.id,
                                 sku_id: c.id,
                                 area: "view_details",
@@ -225,7 +225,7 @@ function w(e) {
                     },
                     text: N.intl.string(N.t.DXYfjO),
                 }),
-                D
+                M
                     ? null != _
                         ? (0, i.jsx)(T.rc, {
                               onClick: P,
@@ -243,7 +243,7 @@ function w(e) {
         }),
     });
 }
-function M(e) {
+function D(e) {
     let { appName: t, title: n, description: a, link: r, iconSrc: l, onIconClick: s, onLinkCopy: d, children: c } = e;
     return (0, i.jsxs)("div", {
         className: j.iE,

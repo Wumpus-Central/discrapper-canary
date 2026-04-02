@@ -12,8 +12,8 @@ var i = n(311907),
     d = n(603880),
     _ = n(635917),
     f = n(985018),
-    p = n(846606),
-    h = n(421361);
+    p = n(593909),
+    h = n(12698);
 function m(e) {
     let { disabled: t, size: n } = e,
         [s] = (0, i.yK)([c.A], () => [c.A.getCurrentDesktopIcon()]),
