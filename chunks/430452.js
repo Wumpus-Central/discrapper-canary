@@ -781,7 +781,7 @@ function nc() {
         e4.setSidechainCompression(e.sidechainCompression),
         e4.setSidechainCompressionStrength(e.sidechainCompressionStrength),
         e4.setAudioInputBypassSystemProcessing(e.bypassSystemInputProcessing),
-        eg.Ay?.setOpenH264Enabled?.(e.openH264Enabled);
+        (0, em.isLinux)() && eg.Ay?.setOpenH264Enabled?.(e.openH264Enabled);
 }
 function nd() {
     e8 || e4.enable().then(() => C.h.dispatch({ type: "MEDIA_ENGINE_SET_AUDIO_ENABLED", enabled: !0, unmute: !1 }));
