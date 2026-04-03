@@ -22,7 +22,7 @@ function p() {
             newUserMinAgeRequiredOverridden: d.A.newUserMinAgeRequiredOverridden,
         })),
         [p, g] = i.useState(""),
-        [_, f] = i.useState(20),
+        [f, _] = i.useState(20),
         v = i.useMemo(
             () =>
                 Object.keys(l.M)
@@ -33,9 +33,9 @@ function p() {
         b = i.useCallback(
             (e) => {
                 let t = e.currentTarget;
-                t.scrollHeight - t.scrollTop <= t.clientHeight + 100 && _ < v.length && f((e) => e + 100);
+                t.scrollHeight - t.scrollTop <= t.clientHeight + 100 && f < v.length && _((e) => e + 100);
             },
-            [_, v.length],
+            [f, v.length],
         );
     return (0, a.jsx)(r.ChK, {
         onScroll: b,
@@ -48,26 +48,20 @@ function p() {
                         (0, a.jsxs)(r.BJc, {
                             gap: 4,
                             children: [
-                                (0, a.jsxs)(r.BJc, {
-                                    gap: 4,
-                                    direction: "horizontal",
-                                    children: [
-                                        (0, a.jsx)(r.Button, {
-                                            variant: "primary",
-                                            text: "Reset Daily Cap",
-                                            onClick: () => (0, o.Ab)(),
-                                        }),
-                                        (0, a.jsx)(r.Button, {
-                                            variant: "primary",
-                                            text: "Undismiss All DCs",
-                                            onClick: () => (0, h.nT)(),
-                                        }),
-                                        (0, a.jsx)(r.Button, {
-                                            variant: "primary",
-                                            text: "Dismiss All DCs",
-                                            onClick: () => (0, h.D1)(),
-                                        }),
-                                    ],
+                                (0, a.jsx)(r.Button, {
+                                    variant: "primary",
+                                    text: "Reset Daily Cap",
+                                    onClick: () => (0, o.Ab)(),
+                                }),
+                                (0, a.jsx)(r.Button, {
+                                    variant: "primary",
+                                    text: "Undismiss All DCs",
+                                    onClick: () => (0, h.nT)(),
+                                }),
+                                (0, a.jsx)(r.Button, {
+                                    variant: "primary",
+                                    text: "Dismiss All DCs",
+                                    onClick: () => (0, h.D1)(),
                                 }),
                                 (0, a.jsx)(r.Text, {
                                     variant: "text-sm/normal",
@@ -94,7 +88,7 @@ function p() {
                     label: "All Dismissible Contents",
                     children: [
                         (0, a.jsx)(r.IWV, { query: p, onChange: g, onClear: () => g("") }),
-                        (0, a.jsx)(c.A, { items: v.slice(0, _) }),
+                        (0, a.jsx)(c.A, { items: v.slice(0, f) }),
                     ],
                 }),
             ],
