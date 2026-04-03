@@ -1,150 +1,198 @@
 "use strict";
-n.d(t, { A: () => S });
+n.d(t, { A: () => C });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    l = n.n(a),
+    l = n(503698),
+    a = n.n(l),
     s = n(284009),
     o = n.n(s),
-    c = n(382222),
-    u = n(942381),
+    u = n(687498),
+    c = n(942381),
     d = n(837381),
-    h = n(319354),
-    _ = n(397927),
-    f = n(775602),
-    m = n(253932),
-    p = n(894858),
+    h = n(935399),
+    f = n(319354),
+    m = n(397927),
+    p = n(775602),
+    _ = n(253932),
+    v = n(894858),
     y = n(272053),
-    v = n(189857),
-    g = n(674085),
-    b = n(188180),
-    x = n(890690),
-    E = n(480270);
-function A(e) {
-    let { category: t, onClick: n, active: i, dismissibleBadge: a } = e,
-        { useTitle: s, useSubnavLabel: c, key: u } = t,
+    g = n(397274),
+    x = n(189857),
+    E = n(674085),
+    A = n(188180),
+    S = n(890690),
+    b = n(480270);
+function N(e) {
+    let { category: t, onClick: n, active: i, dismissibleBadge: l } = e,
+        { useTitle: s, useSubnavLabel: u, key: c } = t,
         h = s?.(),
-        f = c?.() ?? h;
+        f = u?.() ?? h;
     return (
         o()(null != f, "[SettingsSubnavigationCategory] Category must have a title"),
         (0, r.jsx)(d.tG, {
-            id: u,
+            id: c,
             children: (e) =>
                 (0, r.jsxs)(
-                    _.DUT,
+                    m.DUT,
                     {
                         onClick: n,
-                        className: l()(E.AS, { [E.vu]: i }),
+                        className: a()(b.AS, { [b.vu]: i }),
                         ...e,
-                        children: [f, null != a && !i && (0, r.jsx)(g.A, { badge: a })],
+                        children: [f, null != l && !i && (0, r.jsx)(E.A, { badge: l })],
                     },
-                    u,
+                    c,
                 ),
         })
     );
 }
-function S(e) {
-    let { categories: t, visibleContent: n, dismissibleBadges: a } = e,
-        [l, s] = i.useState(() => {
-            let e = p.A.getField("currentCategoryKey"),
-                n = t.find((t) => t.key === e);
-            return n?.key ?? t[0].key;
-        });
+function C(e) {
+    let { active: t, categories: n, visibleContent: l, dismissibleBadges: a } = e,
+        [s, o] = i.useState(() => {
+            let e = v.A.getField("currentCategoryKey"),
+                t = n.find((t) => t.key === e);
+            return t?.key ?? n[0].key;
+        }),
+        [u, d] = i.useState(t);
     i.useEffect(
         () =>
-            p.A.subscribe(
+            v.A.subscribe(
                 (e) => {
                     let { currentCategoryKey: t } = e;
                     return t;
                 },
                 (e) => {
-                    let n = t.find((t) => t.key === e);
-                    null != n && s(n.key);
+                    let r = t ? n.find((t) => t.key === e) : null;
+                    null != r && (d(!0), o(r.key));
                 },
-                { equalityFn: u.x },
+                { equalityFn: c.x, fireImmediately: !0 },
             ),
-        [t],
+        [n, t],
     );
-    let o = i.useMemo(
-            () =>
-                Math.max(
-                    t.findIndex((e) => e.key === l),
-                    0,
-                ),
-            [t, l],
-        ),
+    let h = i.useMemo(
+        () =>
+            Math.max(
+                n.findIndex((e) => e.key === s),
+                0,
+            ),
+        [n, s],
+    );
+    i.useEffect(() => {
+        if (!t) {
+            let e = f.current;
+            null != e &&
+                ((e.style.height = `${e.scrollHeight}px`),
+                window.getComputedStyle(e).height,
+                (e.style.height = "0"),
+                Promise.allSettled(e.getAnimations().map((e) => e.finished)).then(() => {
+                    d(!1);
+                }));
+        }
+    }, [t]);
+    let f = i.useRef(null),
+        [m, p] = i.useState(t ? "auto" : "0");
+    return (
+        (0, S.u)(n, t),
+        (0, r.jsx)("div", {
+            className: b.lK,
+            style: { height: m, opacity: +!!t },
+            ref: f,
+            children:
+                u &&
+                (0, r.jsx)(j, {
+                    index: h,
+                    activeKey: s,
+                    categories: n,
+                    visibleContent: l,
+                    dismissibleBadges: a,
+                    onMount: function () {
+                        let e = f.current;
+                        null != e &&
+                            ((e.style.height = `${e.scrollHeight}px`),
+                            Promise.all(e.getAnimations().map((e) => e.finished))
+                                .then(() => {
+                                    (e.style.height = "auto"),
+                                        g.A.scrollSidebarNodeIntoView(e, { animate: !0, block: "nearest" });
+                                })
+                                .catch(() => {}));
+                    },
+                }),
+        })
+    );
+}
+function j(e) {
+    let { index: t, activeKey: n, categories: l, visibleContent: a, dismissibleBadges: s, onMount: o } = e,
         {
-            thumbRef: d,
-            trackRef: g,
-            thumbAnchorRef: S,
-            springs: N,
+            thumbRef: c,
+            trackRef: d,
+            thumbAnchorRef: v,
+            springs: g,
         } = (function (e) {
-            let t = m.Xi.useSetting(),
+            let t = _.Xi.useSetting(),
                 n = i.useRef(null),
                 r = i.useRef(null),
-                a = i.useRef(null),
-                l = i.useRef(!0),
+                l = i.useRef(null),
+                a = i.useRef(!0),
                 s = i.useRef(t),
-                [o, c] = (0, _.zhh)(() => ({ y: 0, height: 0, config: { mass: 0.1, friction: 20, tension: 300 } }));
+                [o, u] = (0, m.zhh)(() => ({ y: 0, height: 0, config: { mass: 0.1, friction: 20, tension: 300 } }));
             return (
                 i.useLayoutEffect(() => {
                     let e = s.current !== t,
                         i = () => {
-                            if (null == n.current || null == r.current || null == a.current) return;
-                            let [i, u] = [n.current.getBoundingClientRect(), a.current.getBoundingClientRect()],
+                            if (null == n.current || null == r.current || null == l.current) return;
+                            let [i, c] = [n.current.getBoundingClientRect(), l.current.getBoundingClientRect()],
                                 d = i.width / 2,
-                                h = (u.y - i.y) / d,
-                                _ = u.height / d;
-                            l.current || e || f.A.useReducedMotion
-                                ? (o.y.set(h), o.height.set(_))
-                                : c({ y: h, height: _ }),
-                                (l.current = !1),
+                                h = (c.y - i.y) / d,
+                                f = c.height / d;
+                            a.current || e || p.A.useReducedMotion
+                                ? (o.y.set(h), o.height.set(f))
+                                : u({ y: h, height: f }),
+                                (a.current = !1),
                                 (s.current = t);
                         },
-                        u = null;
+                        c = null;
                     return (
                         e
-                            ? (u = requestAnimationFrame(() => {
-                                  (u = null), i();
+                            ? (c = requestAnimationFrame(() => {
+                                  (c = null), i();
                               }))
                             : i(),
                         () => {
-                            null != u && cancelAnimationFrame(u);
+                            null != c && cancelAnimationFrame(c);
                         }
                     );
-                }, [e, c, o.y, o.height, t]),
-                { thumbRef: r, trackRef: n, thumbAnchorRef: a, springs: o }
+                }, [e, u, o.y, o.height, t]),
+                { thumbRef: r, trackRef: n, thumbAnchorRef: l, springs: o }
             );
-        })(o);
+        })(t);
     return (
-        (0, x.u)(t),
+        (0, h.Ay)(o),
         (0, r.jsxs)("div", {
-            className: E.o8,
+            className: b.o8,
             role: "list",
             style: {
-                "--custom-nav-count": t.length,
-                "--custom-nav-index": o,
+                "--custom-nav-count": l.length,
+                "--custom-nav-index": t,
                 "--custom-nav-width": "2px",
-                "--custom-icon-size": `${h.E[b.V]}px`,
+                "--custom-icon-size": `${f.E[A.V]}px`,
             },
             children: [
                 (0, r.jsx)("div", {
-                    className: E.u4,
+                    className: b.u4,
                     "aria-hidden": "true",
-                    ref: g,
-                    children: (0, r.jsx)(c.animated.div, { className: E.FF, style: N, ref: d }),
+                    ref: d,
+                    children: (0, r.jsx)(u.animated.div, { className: b.FF, style: g, ref: c }),
                 }),
-                (0, r.jsx)("div", { className: E.gu, "aria-hidden": "true", ref: S }),
-                t.map((e) => {
-                    let t = (0, v.H)(e.key, n, a);
+                (0, r.jsx)("div", { className: b.gu, "aria-hidden": "true", ref: v }),
+                l.map((e) => {
+                    let t = (0, x.H)(e.key, a, s);
                     return (0, r.jsx)(
-                        A,
+                        N,
                         {
                             onClick: () => {
                                 var t;
                                 return (t = e.key), void y.A.navigate(t, { showNavigationMobile: !1 });
                             },
-                            active: e.key === l,
+                            active: e.key === n,
                             category: e,
                             dismissibleBadge: t,
                         },

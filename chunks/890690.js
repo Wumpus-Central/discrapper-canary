@@ -1,52 +1,53 @@
 "use strict";
-n.d(t, { u: () => l }), n(321073);
+n.d(t, { u: () => a }), n(321073);
 var r = n(64700),
     i = n(894858),
-    a = n(397274);
-function l(e) {
-    let t = r.useRef(null),
-        n = r.useRef(new Set());
+    l = n(397274);
+function a(e, t) {
+    let n = r.useRef(null),
+        a = r.useRef(new Set());
     r.useEffect(() => {
-        let e = a.A.getPanelScrollerNode();
+        if (!t) return;
+        let e = l.A.getPanelScrollerNode();
         if (null == e) return;
         let r = Array.from(e.querySelectorAll("[data-settings-category-key]")).filter(
                 (e) => null != e.getAttribute("data-settings-category-key"),
             ),
-            l = new Map(),
-            s = [];
+            s = new Map(),
+            o = [];
         return (
             r.forEach((e) => {
                 let t = e.getAttribute("data-settings-category-key");
-                null != t && (l.set(e, t), s.push(t));
+                null != t && (s.set(e, t), o.push(t));
             }),
-            (t.current = new IntersectionObserver(
+            (n.current = new IntersectionObserver(
                 (e) => {
                     if (
                         (e.forEach((e) => {
-                            let { isIntersecting: t, target: r } = e,
-                                i = l.get(r);
-                            null != i && (t ? n.current.add(i) : n.current.delete(i));
+                            let { isIntersecting: t, target: n } = e,
+                                r = s.get(n);
+                            null != r && (t ? a.current.add(r) : a.current.delete(r));
                         }),
-                        !a.A.getIsSidebarCategoryAutoSelectEnabled())
+                        !l.A.getIsSidebarCategoryAutoSelectEnabled())
                     )
                         return;
                     let t = [];
                     if (
-                        (s.forEach((e) => {
-                            n.current.has(e) && t.push(e);
+                        (o.forEach((e) => {
+                            a.current.has(e) && t.push(e);
                         }),
                         0 === t.length)
                     )
                         return;
-                    let r = t[0];
-                    i.A.getField("currentCategoryKey") !== r && i.A.setState({ currentCategoryKey: r });
+                    let n = t[0];
+                    i.A.getField("currentCategoryKey") !== n && i.A.setState({ currentCategoryKey: n });
                 },
                 { root: e, rootMargin: "0px 100000px 0px 100000px", threshold: 1 },
             )),
-            r.forEach((e) => t.current?.observe(e)),
+            r.forEach((e) => n.current?.observe(e)),
             () => {
-                r.forEach((e) => t.current?.unobserve(e)), t.current?.disconnect(), (t.current = null);
+                r.forEach((e) => n.current?.unobserve(e)), n.current?.disconnect(), (n.current = null);
             }
         );
-    }, [e]);
+    }, [e, t]);
 }
