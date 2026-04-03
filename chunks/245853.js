@@ -111,4 +111,10 @@ function E() {
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
-});
+}),
+    (0, r.mj)({
+        name: "2026-03-mobile-quest-home-red-dot-notification",
+        kind: "user",
+        defaultConfig: { enabled: !1 },
+        variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+    });

@@ -23,12 +23,14 @@ n.d(t, {
     jh: () => W,
     lk: () => $,
     lx: () => Q,
+    qV: () => ep,
     qY: () => ea,
     r8: () => en,
     uI: () => es,
     vD: () => k,
     xB: () => eo,
     yO: () => ei,
+    zh: () => ef,
 }),
     n(323874),
     n(14289),
@@ -555,4 +557,10 @@ async function ed() {
 }
 function e_(e) {
     a.h.dispatch({ type: "UNENROLLED_ACTIVITY_QUEST_DISMISS", questId: e });
+}
+function ef(e, t) {
+    a.h.dispatch({ type: "AD_CONTENT_MARK_SEEN", adCreativeType: e, contentIds: t });
+}
+function ep(e, t) {
+    a.h.dispatch({ type: "AD_CONTENT_MARK_UNSEEN", adCreativeType: e, contentIds: t });
 }
