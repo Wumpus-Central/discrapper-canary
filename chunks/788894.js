@@ -450,6 +450,112 @@ let r = {
                     return "text-xs/medium";
                 },
             },
+            MEDIA_KEYBOARD_BAR_BORDER_RADIUS: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 0x7fffffff;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 16;
+                    return 0x7fffffff;
+                },
+            },
+            MEDIA_KEYBOARD_BAR_BORDER_WIDTH: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 0;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 1;
+                    return 0;
+                },
+            },
+            MEDIA_KEYBOARD_BAR_BUTTONS_MARGIN_HORIZONTAL: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 24;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 0;
+                    return 24;
+                },
+            },
+            MEDIA_KEYBOARD_BAR_GAP: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 16;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 4;
+                    return 16;
+                },
+            },
+            MEDIA_KEYBOARD_BAR_MARGIN_HORIZONTAL: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 16;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 12;
+                    return 16;
+                },
+            },
+            MEDIA_KEYBOARD_BAR_PADDING_HORIZONTAL: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 0;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 8;
+                    return 0;
+                },
+            },
+            MEDIA_KEYBOARD_BUTTON_BORDER_RADIUS: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 0;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 8;
+                    return 0;
+                },
+            },
+            MEDIA_KEYBOARD_BUTTON_ICON_COLOR_ACTIVE: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return "text-default";
+                    for (let e of t) if ("mobile-visual-refresh" === e) return "icon-strong";
+                    return "text-default";
+                },
+            },
+            MEDIA_KEYBOARD_BUTTON_ICON_COLOR_DISABLED: { resolve: () => "text-muted" },
+            MEDIA_KEYBOARD_BUTTON_ICON_COLOR_INACTIVE: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return "text-default";
+                    for (let e of t) if ("mobile-visual-refresh" === e) return "icon-subtle";
+                    return "text-default";
+                },
+            },
+            MEDIA_KEYBOARD_BUTTON_PADDING: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 0;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 4;
+                    return 0;
+                },
+            },
+            MEDIA_KEYBOARD_BUTTON_TEXT_COLOR_ACTIVE: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return "text-default";
+                    for (let e of t) if ("mobile-visual-refresh" === e) return "text-strong";
+                    return "text-default";
+                },
+            },
+            MEDIA_KEYBOARD_BUTTON_TEXT_COLOR_DISABLED: { resolve: () => "text-muted" },
+            MEDIA_KEYBOARD_BUTTON_TEXT_COLOR_INACTIVE: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return "text-default";
+                    for (let e of t) if ("mobile-visual-refresh" === e) return "text-subtle";
+                    return "text-default";
+                },
+            },
+            MEDIA_KEYBOARD_BUTTON_TEXT_VARIANT: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return "text-xs/semibold";
+                    for (let e of t) if ("mobile-visual-refresh" === e) return "text-xs/medium";
+                    return "text-xs/semibold";
+                },
+            },
             MESSAGES_HEADER_BUTTON_GAP: {
                 resolve(e) {
                     let { enabledExperiments: t } = e;
