@@ -1,29 +1,30 @@
-n.d(t, { BC: () => A });
+n.d(t, { BC: () => E });
 var l = n(735438),
     i = n(448761),
     r = n(311907),
     s = n(931046),
     a = n(427930),
     u = n(77350),
-    o = n(763754),
-    d = n(961350),
-    c = n(994500),
-    h = n(287809),
-    g = n(638075),
-    I = n(652215),
+    o = n(944052),
+    d = n(763754),
+    c = n(961350),
+    h = n(994500),
+    g = n(287809),
+    I = n(638075),
+    A = n(652215),
     f = n(985018);
-function A(e, t) {
-    let { isBlocked: n, isIgnored: A } = (0, r.cf)(
-            [c.A],
-            () => ({ isBlocked: c.A.isBlocked(e.author.id), isIgnored: c.A.isIgnored(e.author.id) }),
+function E(e, t) {
+    let { isBlocked: n, isIgnored: E } = (0, r.cf)(
+            [h.A],
+            () => ({ isBlocked: h.A.isBlocked(e.author.id), isIgnored: h.A.isIgnored(e.author.id) }),
             [e.author.id],
         ),
-        E = (0, s.Ay)(t.id, e.id),
-        m = (0, r.bG)([d.default], () => d.default.getId()),
-        S = (0, o.Ay)(e).nick,
-        p = e.type !== i.l.USER_JOIN && e.author.id === m ? f.intl.string(f.t.LuZzxn) : S,
-        N = (0, r.bG)([h.default], () => (e.mentions.length > 0 ? h.default.getUser(e.mentions[0]) : void 0)),
-        T = (0, o.d8)(N, t).nick;
+        m = (0, s.Ay)(t.id, e.id),
+        S = (0, r.bG)([c.default], () => c.default.getId()),
+        _ = (0, d.Ay)(e).nick,
+        p = e.type !== i.l.USER_JOIN && e.author.id === S ? f.intl.string(f.t.LuZzxn) : _,
+        N = (0, r.bG)([g.default], () => (e.mentions.length > 0 ? g.default.getUser(e.mentions[0]) : void 0)),
+        T = (0, d.d8)(N, t).nick;
     return (function (e, t) {
         let { isBlocked: n, isIgnored: r, authorNick: s } = t;
         if (n) return { type: "text", text: f.intl.string(f.t.XAkOo2) };
@@ -48,7 +49,7 @@ function A(e, t) {
                 if (1 === e.embeds.length && e.embeds[0].url === e.content && null != e.embeds[0].rawTitle)
                     return { type: "markup", markup: e.embeds[0].rawTitle };
                 if (null != e.content && "" !== e.content) return { type: "message", message: e };
-                if (e.hasFlag(I.pr7.IS_VOICE_MESSAGE)) return { type: "text", text: f.intl.string(f.t.slFYgi) };
+                if (e.hasFlag(A.pr7.IS_VOICE_MESSAGE)) return { type: "text", text: f.intl.string(f.t.slFYgi) };
                 if (e.attachments.length > 0) {
                     let t = e.attachments.every((e) => (0, u.u)(e.filename)),
                         n = !t && e.attachments.every((e) => (0, u.AE)(e.filename)),
@@ -123,7 +124,7 @@ function A(e, t) {
             })(e);
             if (null != t) return { ...t, authorLabel: s };
         }
-        let o = (function (e, t) {
+        let d = (function (e, t) {
             let { currentUserId: n, authorNick: r, otherUser: s, otherUserNick: a, isCallActive: u } = t;
             return e.type === i.l.RECIPIENT_ADD && null != a
                 ? {
@@ -181,7 +182,7 @@ function A(e, t) {
                           : e.type === i.l.USER_JOIN
                             ? {
                                   type: "text",
-                                  text: f.intl.formatToPlainString(g.A.getSystemMessageUserJoin(e.id), {
+                                  text: f.intl.formatToPlainString(I.A.getSystemMessageUserJoin(e.id), {
                                       username: r,
                                       usernameHook: l.identity,
                                   }),
@@ -198,18 +199,55 @@ function A(e, t) {
                                 }
                               : e.type === i.l.PREMIUM_REFERRAL
                                 ? { type: "text", text: f.intl.formatToPlainString(f.t.lieTqU, { username: r }) }
-                                : void 0;
+                                : e.type === i.l.STAGE_START
+                                  ? {
+                                        type: "text",
+                                        text: f.intl.formatToPlainString(f.t.aZtRW8, {
+                                            username: r,
+                                            usernameOnClick: l.identity,
+                                            topic: e.content,
+                                        }),
+                                    }
+                                  : e.type === i.l.STAGE_END
+                                    ? {
+                                          type: "text",
+                                          text: f.intl.formatToPlainString(f.t.vMJhvG, {
+                                              username: r,
+                                              usernameOnClick: l.identity,
+                                              topic: e.content,
+                                          }),
+                                      }
+                                    : e.type === i.l.STAGE_SPEAKER
+                                      ? {
+                                            type: "text",
+                                            text: f.intl.formatToPlainString(f.t.V4uCm4, {
+                                                username: r,
+                                                usernameOnClick: l.identity,
+                                            }),
+                                        }
+                                      : e.type === i.l.STAGE_TOPIC
+                                        ? {
+                                              type: "text",
+                                              text: f.intl.formatToPlainString(f.t.ro3RM0, {
+                                                  username: r,
+                                                  usernameOnClick: l.identity,
+                                                  topic: e.content,
+                                              }),
+                                          }
+                                        : e.type === i.l.VOICE_SESSION
+                                          ? { type: "text", text: (0, o.fn)(e) }
+                                          : void 0;
         })(e, t);
-        if (null != o) return o;
+        if (null != d) return d;
     })(e, {
         message: e,
         channel: t,
-        currentUserId: m,
+        currentUserId: S,
         authorNick: p,
         otherUser: N,
         otherUserNick: T,
         isBlocked: n,
-        isIgnored: A,
-        isCallActive: E,
+        isIgnored: E,
+        isCallActive: m,
     });
 }

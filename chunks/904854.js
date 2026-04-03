@@ -1,33 +1,31 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => f });
 var i = n(627968),
-    a = n(64700),
-    l = n(158954),
+    l = n(64700),
+    a = n(158954),
     r = n(311907),
     s = n(397927),
     o = n(802341),
     c = n(538451),
-    d = n(21119),
-    u = n(907459),
-    _ = n(734057),
-    m = n(287809),
-    A = n(562153),
-    E = n(763754),
-    I = n(447215),
+    d = n(734057),
+    u = n(562153),
+    _ = n(944052),
+    A = n(480012),
+    m = n(763754),
+    E = n(447215),
     T = n(888675),
-    f = n(502197),
-    N = n(985018),
-    g = n(443300);
-function C(e) {
-    let { users: t, guildId: n, channelId: a } = e;
+    I = n(985018),
+    N = n(139487);
+function g(e) {
+    let { users: t, guildId: n, channelId: l } = e;
     return (0, i.jsx)(s.lGe, {
-        className: g.XM,
+        className: N.XM,
         children: (0, i.jsx)(s.HOs, {
-            className: g.XG,
+            className: N.XG,
             children: (0, i.jsx)("div", {
                 children: t.map((e) =>
                     (0, i.jsx)(
                         c.A,
-                        { user: e, guildId: n ?? void 0, channelId: a, nick: A.Ay.getNickname(n, a, e) },
+                        { user: e, guildId: n ?? void 0, channelId: l, nick: u.Ay.getNickname(n, l, e) },
                         e.id,
                     ),
                 ),
@@ -35,44 +33,32 @@ function C(e) {
         }),
     });
 }
-function h(e) {
+function f(e) {
     let { message: t, channel: n, compact: c } = e,
-        A = (0, f.K)(t),
-        h = (0, r.yK)(
-            [m.default],
-            () =>
-                t.call?.participants != null
-                    ? t.call.participants
-                          .map((e) => m.default.getUser(e))
-                          .filter((e) => null != e)
-                          .filter((e) => e.id !== t.author.id)
-                    : [],
-            [t.author.id, t.call],
-        ),
-        p = (0, r.bG)([d.A], () => d.A.getUserAffinitiesMap(), []),
-        x = a.useMemo(() => (0, u.L)(h, p, "VoiceSession - participants"), [h, p]),
-        R = t.messageReference?.channel_id,
-        S = (0, r.bG)([_.A], () => _.A.getChannel(R)),
-        O = (function (e, t, n, l, r, c) {
-            let d = (0, I.P)({ user: n, channelId: t.id, guildId: t.guild_id, messageId: e.id }),
-                u = (0, I.P)({ user: l[0], channelId: t.id, guildId: t.guild_id, messageId: e.id }),
-                _ = (0, I.P)({ user: l[1], channelId: t.id, guildId: t.guild_id, messageId: e.id }),
-                m = (0, E.Ay)(e),
-                [A, T] = l,
-                f = (0, E.d8)(A, t),
-                h = (0, E.d8)(T, t),
+        u = (0, A.A)(t),
+        f = (0, _.X7)(t),
+        C = t.messageReference?.channel_id,
+        h = (0, r.bG)([d.A], () => d.A.getChannel(C)),
+        p = (function (e, t, n, a, r, c) {
+            let d = (0, E.P)({ user: n, channelId: t.id, guildId: t.guild_id, messageId: e.id }),
+                u = (0, E.P)({ user: a[0], channelId: t.id, guildId: t.guild_id, messageId: e.id }),
+                _ = (0, E.P)({ user: a[1], channelId: t.id, guildId: t.guild_id, messageId: e.id }),
+                A = (0, m.Ay)(e),
+                [T, f] = a,
+                C = (0, m.d8)(T, t),
+                h = (0, m.d8)(f, t),
                 p = (function (e, t) {
-                    let n = a.useRef(null),
-                        [l, r] = a.useState(!1),
-                        o = a.useCallback((n) => (0, i.jsx)(C, { users: n, guildId: e, channelId: t }), [e, t]);
-                    return a.useCallback(
-                        (e) => (t, a) =>
+                    let n = l.useRef(null),
+                        [a, r] = l.useState(!1),
+                        o = l.useCallback((n) => (0, i.jsx)(g, { users: n, guildId: e, channelId: t }), [e, t]);
+                    return l.useCallback(
+                        (e) => (t, l) =>
                             (0, i.jsx)(
                                 s.YNO,
                                 {
                                     targetElementRef: n,
                                     renderPopout: () => o(e),
-                                    shouldShow: l,
+                                    shouldShow: a,
                                     position: "bottom",
                                     onRequestClose: () => r(!1),
                                     children: (e) =>
@@ -87,12 +73,12 @@ function h(e) {
                                             children: t,
                                         }),
                                 },
-                                a,
+                                l,
                             ),
-                        [l, o],
+                        [a, o],
                     );
                 })(t.guild_id, t.id),
-                x = a.useCallback(
+                S = l.useCallback(
                     (e, t) =>
                         null == c
                             ? e
@@ -100,7 +86,7 @@ function h(e) {
                                   o.T,
                                   {
                                       channel: c,
-                                      childWrapperClassName: g.c6,
+                                      childWrapperClassName: N.c6,
                                       children: (0, i.jsx)(s.DUT, { tag: "a", children: e }),
                                   },
                                   t,
@@ -108,34 +94,34 @@ function h(e) {
                     [c],
                 );
             return null == r
-                ? N.intl.format(N.t["eX6e/3"], { username: m.nick, usernameHook: d(m), channelHook: x })
-                : N.intl.format(N.t.YUbgR8, {
-                      userCount: l.length + 1,
-                      username: m.nick,
-                      usernameHook: d(m),
-                      username2: f.nick,
-                      username2Hook: u(f),
+                ? I.intl.format(I.t["eX6e/3"], { username: A.nick, usernameHook: d(A), channelHook: S })
+                : I.intl.format(I.t.YUbgR8, {
+                      userCount: a.length + 1,
+                      username: A.nick,
+                      usernameHook: d(A),
+                      username2: C.nick,
+                      username2Hook: u(C),
                       username3: h.nick,
                       username3Hook: _(h),
-                      otherCount: l.length - 1,
-                      othersHook: p([n, ...l]),
+                      otherCount: a.length - 1,
+                      othersHook: p([n, ...a]),
                       duration: r,
                   });
-        })(t, n, t.author, x, A, S),
-        M = a.useMemo(() => {
-            let e = (0, i.jsx)(l.HKD, { size: "md", color: s.LU0.colors.STATUS_POSITIVE });
-            return null == S || null != A
+        })(t, n, t.author, f, u, h),
+        S = l.useMemo(() => {
+            let e = (0, i.jsx)(a.HKD, { size: "md", color: s.LU0.colors.STATUS_POSITIVE });
+            return null == h || null != u
                 ? e
                 : (0, i.jsx)(o.T, {
-                      channel: S,
-                      children: (0, i.jsx)(l.HKD, { size: "md", color: s.LU0.colors.STATUS_POSITIVE }),
+                      channel: h,
+                      children: (0, i.jsx)(a.HKD, { size: "md", color: s.LU0.colors.STATUS_POSITIVE }),
                   });
-        }, [S, A]);
+        }, [h, u]);
     return (0, i.jsx)(T.A, {
-        iconNode: M,
-        iconContainerClassName: g.zc,
+        iconNode: S,
+        iconContainerClassName: N.zc,
         timestamp: t.timestamp,
         compact: c,
-        children: O,
+        children: p,
     });
 }
