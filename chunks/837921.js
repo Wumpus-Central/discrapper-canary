@@ -198,6 +198,12 @@ let W = {
         setProcessObserverCollectExecutableFingerprint(e) {
             this.getDiscordUtils().setProcessObserverCollectExecutableFingerprint?.(e);
         },
+        getExecutableFingerprintForProcess(e) {
+            return new Promise((t) => {
+                let n = this.getDiscordUtils()?.getExecutableFingerprintForProcess;
+                null != n ? n(e, (e) => t(null != e && "" !== e ? e : null)) : t(null);
+            });
+        },
         setGameDetectionCallback(e) {
             this.getDiscordUtils().setGameDetectionCallback?.((t, n) =>
                 e(

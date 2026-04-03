@@ -518,7 +518,7 @@ function e4(e) {
     null != n && t(n.id, n.name, e.pids ?? []);
 }
 function e5() {
-    j && M.Ay.setProcessObserverCollectExecutableFingerprint((0, U.P)("running-game-store")),
+    j && M.Ay.setProcessObserverCollectExecutableFingerprint((0, U.Q)("running-game-store")),
         h.A.hasLoadedExperiments && Y.length > 0 && (eV(Y), (Y = []));
 }
 function e7(e) {
@@ -737,6 +737,9 @@ class e8 extends l.Ay.Store {
     }
     shouldContinueWithoutElevatedProcessForPID(e) {
         return null != ec && ec === e;
+    }
+    canCollectExecutableFingerprintsForRunningGames() {
+        return j && (0, U.M)("running-game-store");
     }
     getCandidateGames() {
         return X.filter((e) => e.hidden || null == e.id).filter((e) => void 0 === es.gameOverrides[eR(e)]);
