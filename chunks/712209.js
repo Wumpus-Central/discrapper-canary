@@ -1,12 +1,12 @@
-n.d(t, { Ay: () => q, mJ: () => B, sz: () => V, xB: () => w }), n(321073);
+n.d(t, { Ay: () => X, mJ: () => V, sz: () => H, xB: () => B }), n(321073);
 var i,
     l,
     s = n(64700),
     a = n(143236),
     r = n(284009),
     o = n.n(r),
-    c = n(735438),
-    d = n.n(c),
+    d = n(735438),
+    c = n.n(d),
     u = n(73153),
     h = n(843472),
     A = n(334738),
@@ -14,28 +14,29 @@ var i,
     m = n(323073),
     g = n(181079),
     p = n(567035),
-    f = n(455234),
-    x = n(863005),
-    E = n(970278),
-    I = n(152007),
-    C = n(607508),
-    N = n(594061),
-    T = n(617617),
-    S = n(95701),
-    b = n(734057),
-    y = n(808728),
-    v = n(71393),
-    j = n(320501),
-    R = n(576705),
-    O = n(222823),
-    L = n(711014),
-    M = n(543465),
-    D = n(927813),
-    U = n(403362),
-    G = n(661191),
-    P = n(652215),
-    k = n(37411),
-    w =
+    f = n(202803),
+    x = n(455234),
+    E = n(863005),
+    I = n(970278),
+    C = n(152007),
+    N = n(607508),
+    T = n(594061),
+    S = n(617617),
+    b = n(95701),
+    y = n(734057),
+    v = n(808728),
+    j = n(71393),
+    R = n(320501),
+    O = n(576705),
+    L = n(222823),
+    M = n(711014),
+    D = n(543465),
+    U = n(927813),
+    G = n(403362),
+    P = n(661191),
+    k = n(652215),
+    w = n(37411),
+    B =
         (((i = {})[(i.Favorite = 0)] = "Favorite"),
         (i[(i.PrivateChannel = 1)] = "PrivateChannel"),
         (i[(i.HighImportanceMentioned = 2)] = "HighImportanceMentioned"),
@@ -46,9 +47,9 @@ var i,
         (i[(i.NoNotifications = 7)] = "NoNotifications"),
         (i[(i.ReallyOldChannel = 8)] = "ReallyOldChannel"),
         i),
-    B = (((l = {}).Loading = "loading"), (l.Loaded = "loaded"), (l.Done = "done"), l);
-let V = 25;
-class H extends a.EventEmitter {
+    V = (((l = {}).Loading = "loading"), (l.Loaded = "loaded"), (l.Done = "done"), l);
+let H = 25;
+class F extends a.EventEmitter {
     state;
     scrollerRef;
     undoStack = [];
@@ -80,17 +81,20 @@ class H extends a.EventEmitter {
             this.setState({ channels: i, loadState: n ? this.state.loadState : "done" });
     }
     populateInitialStateFromStore(e) {
-        if ("messages" === e.type) return F(e, !1);
+        if ("messages" === e.type) {
+            let t = K(e, !1);
+            return t.messages.some(f.$r) ? (h.A.clearChannel(e.channelId), { ...e, messages: [] }) : t;
+        }
         if ("nsfw" === e.type) return { ...e, isFullyLoaded: !0, hasLoadedAnything: !0 };
         if ("forum" === e.type) {
-            let t = E.A.hasLoaded(e.guildId);
+            let t = I.A.hasLoaded(e.guildId);
             return { ...e, isFullyLoaded: t, hasLoadedAnything: !0 };
         }
-        (0, U.xb)(e);
+        (0, G.xb)(e);
     }
     reloadMessages = () => {
         this.setState({
-            channels: this.state.channels.map((e) => ("messages" === e.type && e.hasLoadedAnything ? F(e, !1, !0) : e)),
+            channels: this.state.channels.map((e) => ("messages" === e.type && e.hasLoadedAnything ? K(e, !1, !0) : e)),
         });
     };
     getNumUnreadChannels = () => this.state.channels.length;
@@ -100,9 +104,9 @@ class H extends a.EventEmitter {
             A.ack(
                 t,
                 {
-                    section: P.JJy.INBOX,
-                    object: P.ZSU.ACK_INBOX_NEWEST_UNREAD_MESSAGE,
-                    objectType: P.AnalyticsObjectTypes.ACK_AUTOMATIC,
+                    section: k.JJy.INBOX,
+                    object: k.ZSU.ACK_INBOX_NEWEST_UNREAD_MESSAGE,
+                    objectType: k.AnalyticsObjectTypes.ACK_AUTOMATIC,
                 },
                 !0,
                 void 0,
@@ -122,7 +126,7 @@ class H extends a.EventEmitter {
         if (null == e) return;
         A.ack(
             e.channelId,
-            { section: P.JJy.INBOX, object: P.ZSU.UNDO_MARK_AS_READ, objectType: P.AnalyticsObjectTypes.ACK_MANUAL },
+            { section: k.JJy.INBOX, object: k.ZSU.UNDO_MARK_AS_READ, objectType: k.AnalyticsObjectTypes.ACK_MANUAL },
             !0,
             void 0,
             e.oldestReadMessageId,
@@ -132,13 +136,13 @@ class H extends a.EventEmitter {
         t < 0 ? n.push(e) : n.splice(t, 0, e), this.setState({ scrollToChannelIndex: t, channels: n });
     };
     markGuildRead = (e) => {
-        u.h.wait(() => (0, p.A)([e], P.JJy.INBOX)),
+        u.h.wait(() => (0, p.A)([e], k.JJy.INBOX)),
             this.setState({ channels: this.state.channels.filter((t) => t.guildId !== e) }),
             this.maybeLoadMore();
     };
     deleteChannel = (e) => {
         this.setState({
-            scrollToChannelIndex: d().findIndex(this.state.channels, (t) => t.channelId === e),
+            scrollToChannelIndex: c().findIndex(this.state.channels, (t) => t.channelId === e),
             channels: this.state.channels.filter((t) => t.channelId !== e),
         }),
             this.maybeLoadMore();
@@ -150,17 +154,17 @@ class H extends a.EventEmitter {
     toggle = (e) => {
         let { channelId: t, guildId: n } = e,
             { channels: i, collapsedChannels: l, loadState: s } = this.state,
-            a = d().findIndex(i, (e) => e.channelId === t),
+            a = c().findIndex(i, (e) => e.channelId === t),
             r = i[a],
             o = !r.collapsed;
         (l[t] = o),
-            (0, N.ji)(
+            (0, T.ji)(
                 n,
                 t,
                 (e) => {
                     e.collapsedInInbox = o;
                 },
-                N.Sb.FREQUENT_USER_ACTION,
+                T.Sb.FREQUENT_USER_ACTION,
             ),
             this.setState({
                 scrollToChannelIndex: a,
@@ -174,11 +178,11 @@ class H extends a.EventEmitter {
         this.setState({ scrollToChannelIndex: null });
     }
     handleUserGuildSettingsStoreChange = () => {
-        let e = this.state.channels.filter((e) => !M.Ay.isGuildOrCategoryOrChannelMuted(e.guildId, e.channelId));
+        let e = this.state.channels.filter((e) => !D.Ay.isGuildOrCategoryOrChannelMuted(e.guildId, e.channelId));
         e.length !== this.state.channels.length && this.setState({ channels: e });
     };
     handleJoinedThreadsStoreChange = () => {
-        let e = this.state.channels.filter((e) => !I.A.isMuted(e.channelId));
+        let e = this.state.channels.filter((e) => !C.A.isMuted(e.channelId));
         e.length !== this.state.channels.length && this.setState({ channels: e });
     };
     handleActiveThreadsStoreChange = () => {
@@ -186,7 +190,7 @@ class H extends a.EventEmitter {
             if ("forum" !== e.type) return e;
             {
                 if (!e.hasLoadedAnything) return e;
-                let t = E.A.hasLoaded(e.guildId);
+                let t = I.A.hasLoaded(e.guildId);
                 return { ...e, isFullyLoaded: t, hasLoadedAnything: !0 };
             }
         });
@@ -196,7 +200,7 @@ class H extends a.EventEmitter {
         h.A.clearChannel(e.channelId);
         let t = h.A.fetchMessages({
             channelId: e.channelId,
-            limit: P.EMb,
+            limit: k.EMb,
             jump: { messageId: e.oldestReadMessageId, flash: !0 },
         });
         return (
@@ -209,7 +213,7 @@ class H extends a.EventEmitter {
                         loadState: "loaded",
                         channels: this.updateChannel(e.channelId, (e) => {
                             o()("messages" === e.type, "channel cannot change type");
-                            let n = F(e, !0);
+                            let n = K(e, !0);
                             return (
                                 (0 === n.messages.length || n.messages.length === e.messages.length) &&
                                     (n = { ...n, hasLoadedAnything: !0, isFullyLoaded: !0, hasError: !t }),
@@ -226,7 +230,7 @@ class H extends a.EventEmitter {
                             (e) => (
                                 o()("messages" === e.type, "channel cannot change type"),
                                 {
-                                    ...F(e, !0),
+                                    ...K(e, !0),
                                     isFullyLoaded: !0,
                                     hasError: !0,
                                     hasLoadedAnything: !0,
@@ -251,20 +255,20 @@ class H extends a.EventEmitter {
             }
     }
 }
-function F(e, t) {
+function K(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        i = j.A.getMessages(e.channelId),
+        i = R.A.getMessages(e.channelId),
         l = i
             .toArray()
             .filter(
                 (t) =>
-                    G.default.compare(t.id, e.oldestReadMessageId) > 0 &&
-                    0 >= G.default.compare(t.id, e.newestUnreadMessageId),
+                    P.default.compare(t.id, e.oldestReadMessageId) > 0 &&
+                    0 >= P.default.compare(t.id, e.newestUnreadMessageId),
             );
     if (l.length === e.messages.length && l.every((t, n) => e.messages[n] === t) && n) return e;
     let s = null != i.getAfter(e.oldestReadMessageId) || l[0]?.id === e.oldestUnreadMessageId,
         a = l[l.length - 1],
-        r = G.default.compare(a?.id, e.newestUnreadMessageId) >= 0 || l.length >= V;
+        r = P.default.compare(a?.id, e.newestUnreadMessageId) >= 0 || l.length >= H;
     return {
         ...e,
         messages: l,
@@ -273,15 +277,15 @@ function F(e, t) {
         isFullyLoaded: e.isFullyLoaded || (s && r) || (t && !i.hasMoreAfter),
     };
 }
-function K() {
+function W() {
     var e;
     let t,
         n = (function () {
             let e = {},
-                t = T.A.settings.guilds?.guilds ?? {};
+                t = S.A.settings.guilds?.guilds ?? {};
             for (let n in t)
                 for (let i in t[n].channels) {
-                    let l = b.A.getChannel(i);
+                    let l = y.A.getChannel(i);
                     (i in e && l?.guild_id !== n) || (e[i] = t[n].channels[i].collapsedInInbox);
                 }
             return e;
@@ -289,46 +293,46 @@ function K() {
         i =
             ((e = n),
             (t = []),
-            b.A.getSortedPrivateChannels().forEach((n) => W(e, t, null, n.id)),
-            L.Ay.getFlattenedGuildIds().forEach((n) => {
+            y.A.getSortedPrivateChannels().forEach((n) => Y(e, t, null, n.id)),
+            M.Ay.getFlattenedGuildIds().forEach((n) => {
                 if (null == n) return;
-                let i = y.Ay.getSelectableChannelIds(n),
-                    l = x.A.getActiveJoinedUnreadThreadsForGuild(n);
+                let i = v.Ay.getSelectableChannelIds(n),
+                    l = E.A.getActiveJoinedUnreadThreadsForGuild(n);
                 i.forEach((i) => {
-                    W(e, t, n, i);
+                    Y(e, t, n, i);
                     let s = l[i] ?? {};
-                    for (let i in s) W(e, t, n, i);
+                    for (let i in s) Y(e, t, n, i);
                 });
             }),
-            d().sortBy(t, (e) => e.sortOrder)),
-        l = d()
+            c().sortBy(t, (e) => e.sortOrder)),
+        l = c()
             .uniq(i.map((e) => e.guildId))
-            .filter(U.Vq);
+            .filter(G.Vq);
     return (
         u.h.dispatch({ type: "INBOX_OPEN", guildIds: l }),
         { collapsedChannels: n, loadState: "loaded", channels: i, scrollToChannelIndex: null }
     );
 }
-function W(e, t, n, i) {
+function Y(e, t, n, i) {
     if (null == i) return;
-    let l = b.A.getChannel(i);
-    if (null == l || (!S.Le.has(l.type) && M.Ay.isGuildOrCategoryOrChannelMuted(n, l.id))) return;
+    let l = y.A.getChannel(i);
+    if (null == l || (!b.Le.has(l.type) && D.Ay.isGuildOrCategoryOrChannelMuted(n, l.id))) return;
     if (l.isPrivate()) {
-        if (0 === O.Ay.getMentionCount(i)) return;
-    } else if (!(0, f.Y)(l) && 0 === O.Ay.getMentionCount(i)) return;
-    if ((!l.isPrivate() && !R.A.can(P.xBc.READ_MESSAGE_HISTORY, l)) || (0, m.qR)(l)) return;
-    let s = O.Ay.ackMessageId(i);
+        if (0 === L.Ay.getMentionCount(i)) return;
+    } else if (!(0, x.Y)(l) && 0 === L.Ay.getMentionCount(i)) return;
+    if ((!l.isPrivate() && !O.A.can(k.xBc.READ_MESSAGE_HISTORY, l)) || (0, m.qR)(l)) return;
+    let s = L.Ay.ackMessageId(i);
     if (null == s) {
-        let e = v.A.getGuild(l.guild_id);
+        let e = j.A.getGuild(l.guild_id);
         if (null == e || null == e.joinedAt) return;
-        s = G.default.fromTimestamp(e.joinedAt.getTime());
+        s = P.default.fromTimestamp(e.joinedAt.getTime());
     }
-    let a = O.Ay.getOldestUnreadMessageId(i),
-        r = O.Ay.lastMessageId(i),
-        o = O.Ay.getMentionCount(i),
-        c = o > 0 || l.isPrivate();
-    if (null == r || G.default.compare(s, r) >= 0) return;
-    let d = {
+    let a = L.Ay.getOldestUnreadMessageId(i),
+        r = L.Ay.lastMessageId(i),
+        o = L.Ay.getMentionCount(i),
+        d = o > 0 || l.isPrivate();
+    if (null == r || P.default.compare(s, r) >= 0) return;
+    let c = {
         guildId: n,
         channelId: i,
         oldestReadMessageId: s,
@@ -339,43 +343,43 @@ function W(e, t, n, i) {
         hasLoadedFirst: !1,
         isFullyLoaded: !1,
         hasError: !1,
-        hasMentionsOrUnreads: c,
+        hasMentionsOrUnreads: d,
         mentionCount: o,
         sortOrder: (function (e, t, n) {
-            let i = b.A.getChannel(t);
+            let i = y.A.getChannel(t);
             if (g.A.isFavorite(t)) return 0;
             if (i.isPrivate()) return 1;
-            if (O.Ay.getMentionCount(t) > 0) return O.Ay.getIsMentionLowImportance(t) ? 3 : 2;
+            if (L.Ay.getMentionCount(t) > 0) return L.Ay.getIsMentionLowImportance(t) ? 3 : 2;
             if (null != n) {
-                let e = G.default.extractTimestamp(n);
-                if (Date.now() - e > z) return 8;
-                if (Date.now() - e > Y) return 6;
+                let e = P.default.extractTimestamp(n);
+                if (Date.now() - e > q) return 8;
+                if (Date.now() - e > z) return 6;
             }
             if (i.isThread()) {
-                let e = (0, C.l)(i);
-                return e === k.CP.ALL_MESSAGES ? 4 : e === k.CP.NO_MESSAGES ? 7 : 5;
+                let e = (0, N.l)(i);
+                return e === w.CP.ALL_MESSAGES ? 4 : e === w.CP.NO_MESSAGES ? 7 : 5;
             }
             {
-                let n = M.Ay.getChannelMessageNotifications(e, t),
-                    i = n === P.orn.NULL ? M.Ay.getMessageNotifications(e) : n;
-                return i === P.orn.ALL_MESSAGES ? 4 : i === P.orn.NO_MESSAGES ? 7 : 5;
+                let n = D.Ay.getChannelMessageNotifications(e, t),
+                    i = n === k.orn.NULL ? D.Ay.getMessageNotifications(e) : n;
+                return i === k.orn.ALL_MESSAGES ? 4 : i === k.orn.NO_MESSAGES ? 7 : 5;
             }
         })(n, i, r),
         order: 0,
     };
     (0, m.qR)(l)
-        ? t.push({ ...d, type: "nsfw" })
+        ? t.push({ ...c, type: "nsfw" })
         : l.isForumLikeChannel()
-          ? t.push({ ...d, type: "forum" })
-          : t.push({ ...d, type: "messages", messages: [] });
+          ? t.push({ ...c, type: "forum" })
+          : t.push({ ...c, type: "messages", messages: [] });
 }
-let Y = 2 * D.A.Millis.DAY,
-    z = 10 * D.A.Millis.DAY;
-function q(e) {
-    let [t, n] = s.useState(() => new H(K(), e)),
+let z = 2 * U.A.Millis.DAY,
+    q = 10 * U.A.Millis.DAY;
+function X(e) {
+    let [t, n] = s.useState(() => new F(W(), e)),
         [i, l] = s.useState(!1),
         a = s.useRef(Date.now()),
-        [r, o] = s.useState(() => K());
+        [r, o] = s.useState(() => W());
     s.useEffect(() => {
         let e = (e) => o(e);
         return (
@@ -389,41 +393,41 @@ function q(e) {
         s.useEffect(() => {
             if (null == r || r.channels.length > 0 || i) return;
             let t = Date.now(),
-                s = K();
-            0 === s.channels.length || t - a.current < 10 * D.A.Millis.SECOND
+                s = W();
+            0 === s.channels.length || t - a.current < 10 * U.A.Millis.SECOND
                 ? l(!0)
-                : ((a.current = Date.now()), n(new H(s, e)));
+                : ((a.current = Date.now()), n(new F(s, e)));
         }, [r, i, e]);
-    let c = s.useRef(t);
+    let d = s.useRef(t);
     return (
         s.useLayoutEffect(() => {
-            c.current = t;
+            d.current = t;
         }),
         s.useLayoutEffect(() => {
-            r?.channels, r?.loadState, c.current.maybeLoadMore();
+            r?.channels, r?.loadState, d.current.maybeLoadMore();
         }, [r?.channels, r?.loadState]),
         s.useEffect(
-            () => (j.A.addChangeListener(t.reloadMessages), () => j.A.removeChangeListener(t.reloadMessages)),
+            () => (R.A.addChangeListener(t.reloadMessages), () => R.A.removeChangeListener(t.reloadMessages)),
             [t.reloadMessages],
         ),
         s.useEffect(
             () => (
-                M.Ay.addChangeListener(t.handleUserGuildSettingsStoreChange),
-                () => M.Ay.removeChangeListener(t.handleUserGuildSettingsStoreChange)
+                D.Ay.addChangeListener(t.handleUserGuildSettingsStoreChange),
+                () => D.Ay.removeChangeListener(t.handleUserGuildSettingsStoreChange)
             ),
             [t],
         ),
         s.useEffect(
             () => (
-                I.A.addChangeListener(t.handleJoinedThreadsStoreChange),
-                () => I.A.removeChangeListener(t.handleJoinedThreadsStoreChange)
+                C.A.addChangeListener(t.handleJoinedThreadsStoreChange),
+                () => C.A.removeChangeListener(t.handleJoinedThreadsStoreChange)
             ),
             [t],
         ),
         s.useEffect(
             () => (
-                E.A.addChangeListener(t.handleActiveThreadsStoreChange),
-                () => E.A.removeChangeListener(t.handleActiveThreadsStoreChange)
+                I.A.addChangeListener(t.handleActiveThreadsStoreChange),
+                () => I.A.removeChangeListener(t.handleActiveThreadsStoreChange)
             ),
             [t],
         ),
