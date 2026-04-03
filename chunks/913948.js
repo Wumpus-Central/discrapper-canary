@@ -62,7 +62,7 @@ function o(e) {
             let { closePopout: t } = e;
             return (0, r.jsx)("div", {
                 onClick: (e) => e.stopPropagation(),
-                style: { width: d.current?.offsetWidth },
+                style: { width: "fit-content", minWidth: d.current?.offsetWidth },
                 children: (0, r.jsx)(s.W1t, {
                     "data-menu-migrated": !0,
                     navId: "play-on-distributor-menu",
