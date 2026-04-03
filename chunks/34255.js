@@ -1,75 +1,78 @@
-i.d(s, { default: () => h });
-var n = i(627968),
-    e = i(64700),
-    a = i(550644),
-    r = i(158954),
-    c = i(87719),
-    d = i(783420),
-    l = i(788868),
-    o = i(49999),
-    x = i(985018),
-    _ = i(164466);
-function h(t) {
-    let { renderModalProps: s, markAsDismissed: i } = t,
-        { onClose: h, transitionState: f } = s,
-        { headingId: u } = (0, r.k34)();
+n.d(i, { default: () => f });
+var s = n(627968),
+    e = n(64700),
+    a = n(550644),
+    r = n(158954),
+    c = n(927578),
+    d = n(580630),
+    o = n(87719),
+    l = n(783420),
+    x = n(788868),
+    _ = n(49999),
+    m = n(985018),
+    h = n(164466);
+function f(t) {
+    let { renderModalProps: i, markAsDismissed: n } = t,
+        { onClose: f, transitionState: u } = i,
+        { headingId: p } = (0, r.k34)(),
+        b = (0, d.$g)(0, (0, c.Rr)(), { minimumFractionDigits: 0, maximumFractionDigits: 0 });
     return (
         e.useEffect(
             () => () => {
-                i(o.i.AUTO_DISMISS);
+                n(_.i.AUTO_DISMISS);
             },
-            [i],
+            [n],
         ),
-        (0, n.jsx)(d.A, {
-            subscriptionTier: l.pe.TIER_2,
+        (0, s.jsx)(l.A, {
+            subscriptionTier: x.pe.TIER_2,
             children: (t) => {
-                let { onClick: s } = t;
-                return (0, n.jsx)(r.dWK, {
-                    transitionState: f,
-                    onClose: h,
+                let { onClick: i } = t;
+                return (0, s.jsx)(r.dWK, {
+                    transitionState: u,
+                    onClose: f,
                     size: "md",
                     paddingSize: "lg",
-                    children: (0, n.jsxs)(r.hLv, {
+                    children: (0, s.jsxs)(r.hLv, {
                         color: "nitro-pink",
-                        className: _.D7,
+                        className: h.D7,
                         children: [
-                            (0, n.jsx)("div", { className: _.cG, children: (0, n.jsx)(r.s_y, { shouldColorMix: !0 }) }),
-                            (0, n.jsx)("div", {
-                                className: _.tW,
-                                children: (0, n.jsx)(a.x, { alt: "", width: 400, height: "auto" }),
+                            (0, s.jsx)("div", { className: h.cG, children: (0, s.jsx)(r.s_y, { shouldColorMix: !0 }) }),
+                            (0, s.jsx)("div", {
+                                className: h.tW,
+                                children: (0, s.jsx)(a.x, { alt: "", width: 400, height: "auto" }),
                             }),
-                            (0, n.jsxs)("div", {
-                                className: _.Qs,
+                            (0, s.jsxs)("div", {
+                                className: h.Qs,
                                 children: [
-                                    (0, n.jsx)(r.DZT, {
-                                        id: u,
+                                    (0, s.jsx)(r.DZT, {
+                                        id: p,
                                         variant: "display-md",
                                         color: "text-strong",
-                                        className: _.wx,
-                                        children: x.intl.string(x.t["M/ytwa"]),
+                                        className: h.wx,
+                                        children: m.intl.string(m.t["M/ytwa"]),
                                     }),
-                                    (0, n.jsx)(r.EYj, {
+                                    (0, s.jsx)(r.EYj, {
                                         variant: "text-md/normal",
                                         color: "text-subtle",
-                                        className: _.rf,
-                                        children: x.intl.string(x.t.xMkRkc),
+                                        className: h.rf,
+                                        children: m.intl.formatToPlainString(m.t.xMkRkc, { price: b }),
                                     }),
-                                    (0, n.jsxs)("div", {
-                                        className: _.v0,
+                                    (0, s.jsxs)("div", {
+                                        className: h.v0,
                                         children: [
-                                            (0, n.jsx)(r.$nd, {
+                                            (0, s.jsx)(r.$nd, {
                                                 variant: "secondary",
                                                 size: "md",
-                                                onClick: () => (0, c.x)(h),
-                                                text: x.intl.string(x.t.j7LkaR),
+                                                onClick: () => (0, o.x)(f),
+                                                text: m.intl.string(m.t.j7LkaR),
                                             }),
-                                            (0, n.jsx)(r.$nd, {
+                                            (0, s.jsx)(r.$nd, {
                                                 variant: "expressive",
                                                 size: "md",
                                                 icon: r.tvc,
-                                                text: x.intl.string(x.t.mPWeSh),
+                                                text: m.intl.formatToPlainString(m.t.mPWeSh, { price: b }),
                                                 onClick: async (t) => {
-                                                    await h(), s(t);
+                                                    await f(), i(t);
                                                 },
                                             }),
                                         ],
