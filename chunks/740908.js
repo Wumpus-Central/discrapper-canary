@@ -18,9 +18,9 @@ var r = n(627968),
     g = n(683926),
     A = n(547678),
     I = n(346640),
-    T = n(350601),
+    T = n(429311),
     S = n(985018),
-    y = n(934840),
+    y = n(462285),
     v = n(696545),
     N = n(173607);
 function C(e) {
@@ -47,46 +47,46 @@ function C(e) {
 }
 function R(e) {
     let { closeModal: t, setScreen: n, ignoreCooldown: s, tooltipText: o, iconButtonClassName: c } = e,
-        h = (0, u.bG)([f.A], () => f.A.isUpdatingUserData()),
-        m = (0, u.bG)([f.A], () => null != f.A.getCombatClass() && null != f.A.getCraftingClass()),
-        E = (0, u.bG)([f.A], () => f.A.getClassSelectedAt()),
-        A = (0, i.useRef)(null),
-        [N, C] = (0, i.useState)(new Date().getTime()),
-        [R, O] = (0, i.useState)(!1),
-        b = null != E ? N - E.getTime() : I.AW,
-        D = I.AW - b,
-        L = !s && D > 0,
-        w = L ? l().utc(D).format("HH:mm:ss") : null,
-        M = async () => {
-            h || (await (0, _.nb)({}), n(I.Q0.COMBAT_CLASS_SELECTION), t?.());
+        _ = (0, u.bG)([f.A], () => f.A.isUpdatingUserData()),
+        h = (0, u.bG)([f.A], () => null != f.A.getCombatClass() && null != f.A.getCraftingClass()),
+        m = (0, u.bG)([f.A], () => f.A.getClassSelectedAt()),
+        E = (0, i.useRef)(null),
+        [A, N] = (0, i.useState)(new Date().getTime()),
+        [C, R] = (0, i.useState)(!1),
+        O = null != m ? A - m.getTime() : I.AW,
+        b = I.AW - O,
+        D = !s && b > 0,
+        L = D ? l().utc(b).format("HH:mm:ss") : null,
+        w = () => {
+            _ || (n(I.Q0.COMBAT_CLASS_SELECTION), t?.());
         };
     return (
         (0, i.useEffect)(
             () => (
-                (A.current = setInterval(() => C(new Date().getTime()), d.A.Millis.SECOND)),
-                () => clearInterval(A.current)
+                (E.current = setInterval(() => N(new Date().getTime()), d.A.Millis.SECOND)),
+                () => clearInterval(E.current)
             ),
             [],
         ),
         (0, i.useEffect)(() => {
-            D <= 0 && clearInterval(A.current);
-        }, [D]),
+            b <= 0 && clearInterval(E.current);
+        }, [b]),
         (0, r.jsxs)("div", {
             className: y.H_,
             children: [
                 (0, r.jsx)(g.A, {
-                    visible: R,
-                    text: null != w ? S.intl.format(T.default.Qw7Hn5, { formattedCooldown: w }) : o,
+                    visible: C,
+                    text: null != L ? S.intl.format(T.default.Qw7Hn5, { formattedCooldown: L }) : o,
                 }),
                 (0, r.jsx)(p.A, {
                     contentClassName: c,
-                    onClick: M,
+                    onClick: w,
                     color: "white",
                     "aria-label": S.intl.string(T.default["sTE/Mu"]),
-                    disabled: !m || L,
-                    onMouseEnter: () => O(!0),
-                    onMouseLeave: () => O(!1),
-                    children: (0, r.jsx)("img", { className: a()({ [y.Zm]: h }), src: v.A, alt: "" }),
+                    disabled: !h || D,
+                    onMouseEnter: () => R(!0),
+                    onMouseLeave: () => R(!1),
+                    children: (0, r.jsx)("img", { className: a()({ [y.Zm]: _ }), src: v.A, alt: "" }),
                 }),
             ],
         })
