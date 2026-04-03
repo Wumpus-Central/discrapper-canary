@@ -18,8 +18,8 @@ var i = n(627968),
     T = n(829219),
     f = n(859703),
     S = n(341915),
-    E = n(890687),
-    b = n(590202),
+    b = n(890687),
+    E = n(590202),
     C = n(591179),
     N = n(462463),
     v = n(780964),
@@ -38,11 +38,11 @@ var i = n(627968),
     w = n(788868),
     V = n(88001),
     B = n(654487),
-    F = n(284498),
-    H = n(518582),
-    z = n(103659),
+    F = n(653624),
+    H = n(519412),
+    z = n(755157),
     Y = n(985018),
-    X = n(600708),
+    X = n(547807),
     K = n(998663),
     W = n(817577),
     Z = n(419455),
@@ -60,7 +60,7 @@ function ei() {
         es = (0, D.O9)(),
         el = (0, P.YS)({ location: "useWhatsNewPerkCards" }).functionalityEnabled,
         ea = (0, O.R)({ location: "PremiumWhatsNewSection" }),
-        er = R.A.useExperiment({ location: "PremiumWhatsNewSection" }).enabled,
+        er = R.A.useConfig({ location: "PremiumWhatsNewSection" }).enabled,
         eo = (0, a.bG)([y.A], () => y.A.getPremiumTypeSubscription()),
         ed = eo?.hasActiveTrial ?? !1,
         ec = (0, a.bG)(
@@ -68,7 +68,7 @@ function ei() {
             () => [...f.A.quests.values()].find((e) => e.config.features.includes(B.Li.NITRO_CONTROL_CTA)) ?? null,
         ),
         eu = (0, N.A)({ analyticsLocations: e }),
-        { launchInGameActivity: em } = (0, E.zW)(ec),
+        { launchInGameActivity: em } = (0, b.zW)(ec),
         eg = (0, s.useCallback)(() => {
             (0, j.openUserSettings)(v.X.PROFILE_PANEL, { analyticsLocations: e }, () =>
                 (0, A.L)({ analyticsLocations: e }),
@@ -88,7 +88,7 @@ function ei() {
                 (ec.userStatus?.enrolledAt == null
                     ? (0, T.Oy)(ec.id, {
                           questContent: S.uF.NITRO_HOME_PERK_CARD,
-                          questContentCTA: b.Cy.START_QUEST,
+                          questContentCTA: E.Cy.START_QUEST,
                           sourceQuestContent: S.uF.NITRO_HOME_PERK_CARD,
                       }).then((e) => {
                           switch (e.type) {

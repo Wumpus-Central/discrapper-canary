@@ -1,9 +1,8 @@
 "use strict";
-n.d(t, { l: () => u });
+n.d(t, { l: () => l });
 var r = n(99066),
-    i = n(398523),
-    s = n(500094),
-    a = n(840251),
-    o = n(688151);
-let l = [r.t4, s.A, i.A],
-    u = new a.E(l, o.$G.CONNECTION_OPEN, { location: "app open" });
+    i = n(500094),
+    s = n(840251),
+    a = n(688151);
+let o = [r.t4, i.A],
+    l = new s.E(o, a.$G.CONNECTION_OPEN, { location: "app open" });
