@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { A: () => x });
+n.d(t, { A: () => P });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(382222),
+    o = n(687498),
     l = n(172218),
     u = n(311907),
     c = n(397927),
@@ -43,14 +43,16 @@ function D(e) {
         } = e,
         { analyticsLocations: w } = (0, f.Ay)(),
         M = n !== N.b_.INACTIVE,
-        P = (0, m.A)(t),
-        x = (0, u.bG)([d.A], () => d.A.useReducedMotion),
+        x = (0, m.A)(t),
+        P = (0, u.bG)([d.A], () => d.A.useReducedMotion),
         k = i.useRef(null),
         [U, G] = i.useState(!1),
         [F, V] = i.useState(!1),
-        B = F,
-        H = F && null != T && "" !== T && !x ? T : g,
-        j = i.useCallback(() => {
+        [B, H] = i.useState(!1),
+        j = F || B,
+        Y = j,
+        W = j && null != T && "" !== T && !P ? T : g,
+        K = i.useCallback(() => {
             let e = I.A.getGuild(t);
             null != e &&
                 (0, S.g)({
@@ -63,31 +65,40 @@ function D(e) {
                     guild: e,
                 });
         }, [t, w]),
-        Y = i.useCallback(() => {
+        $ = i.useCallback(() => {
             L(), (0, A.A)(t, _.A.GUILD_POWERUPS_MARKETING, O.skuId);
         }, [t, O.skuId, L]),
-        W = { tension: 400, friction: 30 },
-        K = (0, c.zhh)({ scale: B ? 0.85 : 1, y: B ? -32 : 0, config: W }),
-        $ = (0, c.zhh)({ scale: B ? 0.7 : 1, y: B ? -35 : 0, config: W }),
-        z = (0, c.zhh)({ y: B ? -32 : 0, config: W }),
-        q = (0, c.zhh)({ opacity: +!!B, transform: B ? "translateY(0)" : "translateY(16px)", config: W }),
-        Z = i.useCallback((e) => {
+        z = { tension: 400, friction: 30 },
+        q = (0, c.zhh)({ scale: Y ? 0.85 : 1, y: Y ? -32 : 0, config: z }),
+        Z = (0, c.zhh)({ scale: Y ? 0.7 : 1, y: Y ? -35 : 0, config: z }),
+        X = (0, c.zhh)({ y: Y ? -32 : 0, config: z }),
+        Q = (0, c.zhh)({ opacity: +!!Y, transform: Y ? "translateY(0)" : "translateY(16px)", config: z }),
+        J = i.useCallback((e) => {
             e && G(!0);
         }, []),
-        X = (0, l.K)(Z),
-        Q = O.skuId === v.W5;
+        ee = i.useCallback(() => {
+            H(!0);
+        }, []),
+        et = i.useCallback((e) => {
+            let t = e.relatedTarget;
+            (null != t && e.currentTarget.contains(t)) || H(!1);
+        }, []),
+        en = (0, l.K)(J),
+        er = O.skuId === v.W5;
     return (0, r.jsxs)("div", {
         className: a()(b.Nr, { [b.fM]: U }),
+        onFocus: ee,
+        onBlur: et,
         onMouseEnter: () => V(!0),
         onMouseLeave: () => V(!1),
         children: [
-            (0, r.jsx)("div", { className: b.sL, ref: X }),
+            (0, r.jsx)("div", { className: b.sL, ref: en }),
             (0, r.jsx)("div", {
                 className: b.kQ,
-                children: Q
+                children: er
                     ? (0, r.jsx)(o.animated.div, {
                           className: b.bm,
-                          style: { transform: (0, o.to)([$.scale, $.y], (e, t) => `scale(${e}) translateY(${t}px)`) },
+                          style: { transform: (0, o.to)([Z.scale, Z.y], (e, t) => `scale(${e}) translateY(${t}px)`) },
                           children: (0, r.jsx)(c.E_w, {
                               withReducedMotion: "halt",
                               eventTargetRef: k,
@@ -98,13 +109,13 @@ function D(e) {
                       })
                     : (0, r.jsx)(o.animated.img, {
                           className: b.bm,
-                          src: H,
+                          src: W,
                           alt: "",
-                          style: { transform: (0, o.to)([K.scale, K.y], (e, t) => `scale(${e}) translateY(${t}px)`) },
+                          style: { transform: (0, o.to)([q.scale, q.y], (e, t) => `scale(${e}) translateY(${t}px)`) },
                       }),
             }),
             (0, r.jsxs)(o.animated.div, {
-                style: { ...z, transform: z.y.to((e) => `translateY(${e}px)`) },
+                style: { ...X, transform: X.y.to((e) => `translateY(${e}px)`) },
                 className: b.Qs,
                 children: [
                     (0, r.jsxs)("div", {
@@ -148,7 +159,7 @@ function D(e) {
                 ],
             }),
             (0, r.jsxs)(o.animated.div, {
-                style: q,
+                style: Q,
                 className: b.NC,
                 children: [
                     (0, r.jsx)("div", {
@@ -156,17 +167,17 @@ function D(e) {
                         children: (0, r.jsx)(c.Button, {
                             variant: "primary",
                             text: C.intl.string(C.t.oPAx73),
-                            onClick: j,
+                            onClick: K,
                             fullWidth: !0,
                         }),
                     }),
-                    P &&
+                    x &&
                         (0, r.jsx)("div", {
                             className: b.x6,
                             children: (0, r.jsx)(c.Button, {
                                 variant: "secondary",
                                 text: C.intl.string(C.t.GoCQxU),
-                                onClick: Y,
+                                onClick: $,
                                 fullWidth: !0,
                             }),
                         }),
@@ -201,7 +212,7 @@ function L(e) {
 }
 let w = 6,
     M = new Map([[v.W5, "+"]]),
-    P = i.forwardRef((e, t) => {
+    x = i.forwardRef((e, t) => {
         let { guild: n, onClose: s } = e;
         i.useEffect(() => {
             h.A.shouldFetchCatalogForGuild(n.id) && (0, p.AK)(n.id),
@@ -252,5 +263,5 @@ let w = 6,
                   ],
               });
     });
-P.displayName = "GuildBoostingMarketingPerkCards";
-let x = P;
+x.displayName = "GuildBoostingMarketingPerkCards";
+let P = x;
