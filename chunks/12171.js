@@ -1,4 +1,4 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => T });
 var a = n(627968),
     i = n(64700),
     s = n(417597),
@@ -6,17 +6,18 @@ var a = n(627968),
     r = n(397927),
     o = n(384904),
     d = n(219887),
-    c = n(742810),
-    u = n(500380),
-    m = n(102609),
-    h = n(217222),
-    x = n(961350),
-    p = n(295405),
-    g = n(652215),
-    _ = n(616873),
-    f = n(659573),
-    v = n(793877);
-let b = [
+    c = n(459357),
+    u = n(742810),
+    m = n(500380),
+    h = n(102609),
+    x = n(217222),
+    p = n(961350),
+    g = n(295405),
+    f = n(652215),
+    _ = n(786020),
+    v = n(960576),
+    b = n(310086);
+let j = [
         { label: "3DS and Failed Cards", value: "", disabled: !0 },
         { label: "Other", value: "OTHER" },
         { label: "Americas", value: "", disabled: !0 },
@@ -80,7 +81,7 @@ let b = [
         { label: "Taiwan", value: "TW" },
         { label: "Thailand", value: "TH" },
     ],
-    j = {
+    A = {
         OTHER: [
             { label: "Always Authenticate", value: "pm_card_authenticationRequired" },
             { label: "Decline after attaching", value: "pm_card_chargeCustomerFail" },
@@ -176,7 +177,7 @@ let b = [
             { label: "Visa (debit)", value: "pm_card_th_debit" },
         ],
     },
-    A = [
+    C = [
         { label: "None", value: "NONE" },
         { label: "Alabama", value: "AL" },
         { label: "Alaska", value: "AK" },
@@ -230,7 +231,7 @@ let b = [
         { label: "Wisconsin", value: "WI" },
         { label: "Wyoming", value: "WY" },
     ],
-    C = {
+    y = {
         NONE: null,
         AL: {
             name: "Alabama State Capitol",
@@ -692,7 +693,7 @@ let b = [
             country: "US",
         },
     },
-    y = [
+    E = [
         { label: "None", value: "NONE" },
         { label: "Alberta", value: "AB" },
         { label: "British Columbia", value: "BC" },
@@ -828,22 +829,22 @@ let b = [
             country: "CA",
         },
     };
-function E() {
+function T() {
     let [e, t] = i.useState("US"),
         [n, d] = i.useState(null),
-        [c, m] = i.useState(null),
+        [c, u] = i.useState(null),
         [h, x] = i.useState(null),
-        [g, E] = i.useState(null),
+        [p, f] = i.useState(null),
         [T, N] = i.useState("pm_card_us"),
-        [O, R] = i.useState(!1),
-        D = Object.values((0, s.bG)([p.A], () => p.A.paymentSources)),
-        M = j[e],
-        P = async () => {
+        [I, O] = i.useState(!1),
+        k = Object.values((0, s.bG)([g.A], () => g.A.paymentSources)),
+        w = A[e],
+        D = async () => {
             let t = T;
             "" === t && (t = "pm_card_us"),
                 await l.Bo.post({
                     url: "/debug/payment-source",
-                    body: { token: t, address: "US" === e ? c : "CA" === e ? g : null },
+                    body: { token: t, address: "US" === e ? c : "CA" === e ? p : null },
                     rejectWithError: !1,
                 }),
                 await (0, o.$o)();
@@ -859,7 +860,7 @@ function E() {
             (0, o.$o)();
         }, []),
         (0, a.jsx)(r.IpV, {
-            className: v.nd,
+            className: b.nd,
             children: (0, a.jsxs)("div", {
                 className: _.l$,
                 children: [
@@ -875,7 +876,7 @@ function E() {
                                 selectionMode: "single",
                                 label: "Card Type",
                                 value: e,
-                                options: b
+                                options: j
                                     .filter((e) => !("disabled" in e && e.disabled))
                                     .map((e) => {
                                         let { value: t, label: n } = e;
@@ -883,11 +884,11 @@ function E() {
                                             id: t,
                                             value: t,
                                             label: n,
-                                            leading: (0, a.jsx)("img", { alt: "", className: f.bI, src: (0, u.t)(t) }),
+                                            leading: (0, a.jsx)("img", { alt: "", className: v.bI, src: (0, m.t)(t) }),
                                         };
                                     }),
                                 onSelectionChange: (e) => {
-                                    t(e), N(j[e][0].value), R(1 === j[e].length);
+                                    t(e), N(A[e][0].value), O(1 === A[e].length);
                                 },
                             }),
                             "US" === e &&
@@ -896,12 +897,12 @@ function E() {
                                     label: "US Address",
                                     hideLabel: !0,
                                     value: n,
-                                    options: A.map((e) => {
+                                    options: C.map((e) => {
                                         let { value: t, label: n } = e;
                                         return { id: t, value: t, label: n };
                                     }),
                                     onSelectionChange: (e) => {
-                                        d(e), m(C[e] ?? null);
+                                        d(e), u(y[e] ?? null);
                                     },
                                 }),
                             "CA" === e &&
@@ -910,12 +911,12 @@ function E() {
                                     label: "CA Address",
                                     hideLabel: !0,
                                     value: h,
-                                    options: y.map((e) => {
+                                    options: E.map((e) => {
                                         let { value: t, label: n } = e;
                                         return { id: t, value: t, label: n };
                                     }),
                                     onSelectionChange: (e) => {
-                                        x(e), E(S[e] ?? null);
+                                        x(e), f(S[e] ?? null);
                                     },
                                 }),
                             (0, a.jsx)(r.l6P, {
@@ -923,20 +924,20 @@ function E() {
                                 label: "Card Token",
                                 hideLabel: !0,
                                 value: T,
-                                options: M.map((e) => {
+                                options: w.map((e) => {
                                     let { value: t, label: n } = e;
                                     return { id: t, value: t, label: n };
                                 }),
                                 onSelectionChange: N,
-                                disabled: O,
+                                disabled: I,
                             }),
                             (0, a.jsx)(r.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Create Stripe Credit Card",
-                                onClick: P,
+                                onClick: D,
                             }),
-                            D.length > 0 &&
+                            k.length > 0 &&
                                 (0, a.jsx)(r.Button, {
                                     variant: "primary",
                                     size: "sm",
@@ -956,63 +957,74 @@ function E() {
                         variant: "text-lg/bold",
                         children: "Generate Gift Card PIN",
                     }),
-                    (0, a.jsx)(k, {}),
+                    (0, a.jsx)(M, {}),
                     (0, a.jsx)(r.Text, {
                         style: { marginTop: "24px", marginBottom: "16px" },
                         variant: "text-lg/bold",
                         children: "Experiment Overrides",
                     }),
-                    (0, a.jsx)(I, {}),
+                    (0, a.jsx)(R, {}),
                     (0, a.jsx)(r.Text, {
                         style: { marginTop: "24px", marginBottom: "16px" },
                         variant: "text-lg/bold",
                         children: "Existing Payment Sources",
                     }),
-                    D.map((e) => (0, a.jsx)(w, { paymentSource: e }, e.id)),
+                    k.map((e) => (0, a.jsx)(P, { paymentSource: e }, e.id)),
                 ],
             }),
         })
     );
 }
-let T = [
-    { id: "none", value: "none", label: "No Override (use server assignment)" },
-    { id: "0", value: "0", label: "Control (0) — Legacy checkout" },
-    { id: "1", value: "1", label: "Treatment (1) — Unified checkout" },
-];
-function N(e) {
-    let { experimentName: t } = e,
-        n = (0, s.bG)([h.A, x.default], () => {
-            let e = x.default.getId(),
-                n = h.A.getAssignment("user", e, t);
+let N = [
+        { id: "none", value: "none", label: "No Override (use server assignment)" },
+        { id: "0", value: "0", label: "Control (0)" },
+        { id: "1", value: "1", label: "Treatment (1)" },
+    ],
+    I = [
+        { id: "none", value: "none", label: "No Override (use server assignment)" },
+        { id: "0", value: "0", label: "Control (0) — Legacy checkout" },
+        { id: "1", value: "1", label: "Treatment (1) — Unified checkout" },
+    ],
+    O = [
+        { id: "none", value: "none", label: "No Override (use server assignment)" },
+        { id: "0", value: "0", label: "Control (0) — Gift cards disabled" },
+        { id: "1", value: "1", label: "Treatment (1) — Gift cards enabled" },
+    ];
+function k(e) {
+    let { experimentName: t, options: n = N } = e,
+        l = (0, s.bG)([x.A, p.default], () => {
+            let e = p.default.getId(),
+                n = x.A.getAssignment("user", e, t);
             return n?.isOverride === !0 ? String(n.variantId) : "none";
         }),
-        l = i.useCallback(
+        o = i.useCallback(
             (e) => {
-                (0, m.t$)(m.l5.APEX, t, "none" === e ? null : Number(e));
+                (0, h.t$)(h.l5.APEX, t, "none" === e ? null : Number(e));
             },
             [t],
         );
-    return (0, a.jsx)(r.l6P, { selectionMode: "single", label: t, value: n, options: [...T], onSelectionChange: l });
+    return (0, a.jsx)(r.l6P, { selectionMode: "single", label: t, value: l, options: [...n], onSelectionChange: o });
 }
-function I() {
+function R() {
     return (0, a.jsxs)(r.BJc, {
         direction: "vertical",
         gap: 8,
         children: [
-            (0, a.jsx)(N, { experimentName: c.W2.definition.name }),
-            (0, a.jsx)(N, { experimentName: c.nG.definition.name }),
+            (0, a.jsx)(k, { experimentName: u.W2.definition.name, options: I }),
+            (0, a.jsx)(k, { experimentName: u.nG.definition.name, options: I }),
+            (0, a.jsx)(k, { experimentName: c.A.definition.name, options: O }),
         ],
     });
 }
-let O = [
+let w = [
         { id: "US", value: "US", label: "United States (USD)" },
         { id: "CA", value: "CA", label: "Canada (CAD)" },
         { id: "FR", value: "FR", label: "France (EUR)" },
         { id: "GB", value: "GB", label: "United Kingdom (GBP)" },
         { id: "DE", value: "DE", label: "Germany (EUR)" },
     ],
-    R = { US: "usd", CA: "cad", FR: "eur", GB: "gbp", DE: "eur" };
-function k() {
+    D = { US: "usd", CA: "cad", FR: "eur", GB: "gbp", DE: "eur" };
+function M() {
     let [e, t] = i.useState("US"),
         [n, s] = i.useState("500"),
         [o, d] = i.useState(null),
@@ -1020,14 +1032,14 @@ function k() {
         [m, h] = i.useState(!1),
         [x, p] = i.useState(null),
         g = parseInt(n, 10),
-        _ = !isNaN(g) && g >= 500 && g <= 5e3,
-        f = async () => {
-            if (_) {
+        f = !isNaN(g) && g >= 500 && g <= 5e3,
+        _ = async () => {
+            if (f) {
                 u(!0), p(null), d(null), h(!1);
                 try {
                     let t = await l.Bo.post({
                         url: "/billing/gift-card/create-on-demand-pin",
-                        body: { country: e, currency: R[e], amount: g },
+                        body: { country: e, currency: D[e], amount: g },
                         rejectWithError: !0,
                     });
                     d(t.body.pin);
@@ -1051,7 +1063,7 @@ function k() {
                         selectionMode: "single",
                         label: "Gift Card Country",
                         value: e,
-                        options: O,
+                        options: w,
                         onSelectionChange: t,
                     }),
                     (0, a.jsx)(r.ksK, {
@@ -1066,9 +1078,9 @@ function k() {
                         variant: "primary",
                         size: "sm",
                         text: "Generate Gift Card PIN",
-                        onClick: f,
+                        onClick: _,
                         loading: c,
-                        disabled: !_,
+                        disabled: !f,
                     }),
                 ],
             }),
@@ -1093,17 +1105,17 @@ function k() {
         ],
     });
 }
-function w(e) {
+function P(e) {
     let { paymentSource: t } = e,
         n = async () => {
-            await l.Bo.patch({ url: g.Rsh.BILLING_PAYMENT_SOURCE(t.id), body: { default: !0 }, rejectWithError: !1 }),
+            await l.Bo.patch({ url: f.Rsh.BILLING_PAYMENT_SOURCE(t.id), body: { default: !0 }, rejectWithError: !1 }),
                 await (0, o.$o)();
         };
     return (0, a.jsxs)("div", {
         className: _.bd,
         children: [
             (0, a.jsx)(d.A, { locale: "en-US", paymentSource: t, showLabels: !0, showPaymentSourceIcon: !0 }, t.id),
-            (0, a.jsx)("img", { alt: t.country, className: f.bI, src: (0, u.t)(t.country) }),
+            (0, a.jsx)("img", { alt: t.country, className: v.bI, src: (0, m.t)(t.country) }),
             t.isDefault
                 ? (0, a.jsx)(r.Text, { variant: "text-sm/medium", children: "(Default)" })
                 : (0, a.jsx)(r.Button, { variant: "secondary", size: "sm", text: "Set as Default", onClick: n }),
