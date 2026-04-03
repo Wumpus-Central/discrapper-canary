@@ -490,57 +490,58 @@ function eC(e) {
             title: t,
             subtitle: n,
             badges: s,
-            stream: a,
-            onClickThumbnail: o,
-            onClickTitle: l,
-            onClickSubtitle: c,
-            onUserPopoutClosed: d,
-            trackRankingItemInteraction: _,
-            ...f
+            children: a,
+            stream: o,
+            onClickThumbnail: l,
+            onClickTitle: c,
+            onClickSubtitle: d,
+            onUserPopoutClosed: _,
+            trackRankingItemInteraction: f,
+            ...h
         } = e,
-        h = (0, B.GG)("content_inventory_memberlist_streaming_content_popout"),
-        m = (0, u.bG)([j.A], () => j.A.getChannel(a?.channelId)),
-        [A] = i.useMemo(() => (0, b.eo)(m, q.A, Y.A, W.A, C.default), [m]),
-        { entry: I } = f,
-        T = (0, et.zD)(I),
-        S = T ? I.extra?.application_id : void 0,
-        y = (0, k.W)();
-    null != y && (S = y);
-    let v = (0, O.A)(
+        m = (0, B.GG)("content_inventory_memberlist_streaming_content_popout"),
+        A = (0, u.bG)([j.A], () => j.A.getChannel(o?.channelId)),
+        [I] = i.useMemo(() => (0, b.eo)(A, q.A, Y.A, W.A, C.default), [A]),
+        { entry: T } = h,
+        S = (0, et.zD)(T),
+        y = S ? T.extra?.application_id : void 0,
+        v = (0, k.W)();
+    null != v && (y = v);
+    let N = (0, O.A)(
             {
                 location: "ContentPopout",
-                applicationId: S,
+                applicationId: y,
                 source: R.Ob.ActivityCard,
                 trackEntryPointImpression: !0,
-                sourceUserId: I.author_id,
+                sourceUserId: T.author_id,
             },
-            { onOpened: () => _?.(e_.PA.OPENED_GAME_PROFILE) },
+            { onOpened: () => f?.(e_.PA.OPENED_GAME_PROFILE) },
         ),
-        N = T ? v : void 0,
-        { activity: L, activityApplication: w, fallbackApplication: M } = (0, es.A)(I),
-        { largeImage: F, smallImage: V } = (0, ee.D8)(L, w ?? M),
-        { largeImage: H } = (0, ee.nO)({ entry: I }),
-        K = (0, P.w)({ location: "content_inventory" }),
-        $ = (0, u.bG)([x.A], () => x.A.getDetectableIdsToApplicationIds());
+        L = S ? N : void 0,
+        { activity: w, activityApplication: M, fallbackApplication: F } = (0, es.A)(T),
+        { largeImage: V, smallImage: H } = (0, ee.D8)(w, M ?? F),
+        { largeImage: K } = (0, ee.nO)({ entry: T }),
+        $ = (0, P.w)({ location: "content_inventory" }),
+        z = (0, u.bG)([x.A], () => x.A.getDetectableIdsToApplicationIds());
     return (0, r.jsxs)("div", {
         className: eE.au,
         children: [
-            (0, r.jsx)(ey, { ...f, onUserPopoutClosed: d }),
+            (0, r.jsx)(ey, { ...h, onUserPopoutClosed: _ }),
             (0, r.jsxs)(eA, {
-                backgroundImgSrc: H?.src,
+                backgroundImgSrc: K?.src,
                 className: eE.uR,
                 children: [
                     (0, r.jsx)(ev, {
-                        onClick: A
+                        onClick: I
                             ? () => {
-                                  E.default.selectVoiceChannel(a.channelId), (0, g.Nl)(a);
+                                  E.default.selectVoiceChannel(o.channelId), (0, g.Nl)(o);
                               }
                             : void 0,
                         children: (0, r.jsxs)("div", {
                             className: eE.nh,
                             children: [
-                                (0, r.jsx)(D.A, { className: eE.j7, stream: a }),
-                                A &&
+                                (0, r.jsx)(D.A, { className: eE.j7, stream: o }),
+                                I &&
                                     (0, r.jsx)("div", {
                                         className: eE.NE,
                                         children: (0, r.jsx)(p.Text, {
@@ -555,13 +556,13 @@ function eC(e) {
                     (0, r.jsxs)("div", {
                         className: eE.$6,
                         children: [
-                            null != F &&
+                            null != V &&
                                 (0, r.jsx)("div", {
                                     className: eE.Fb,
                                     children: (0, r.jsx)(er.d, {
-                                        image: F,
-                                        smallImage: V,
-                                        onClick: o ?? N,
+                                        image: V,
+                                        smallImage: H,
+                                        onClick: l ?? L,
                                         size: er.w.SIZE_72,
                                     }),
                                 }),
@@ -569,7 +570,7 @@ function eC(e) {
                                 className: eE.gv,
                                 children: [
                                     (0, r.jsx)(ev, {
-                                        onClick: l ?? N,
+                                        onClick: c ?? L,
                                         children: (0, r.jsx)(p.Heading, {
                                             variant: "heading-md/semibold",
                                             className: eE.nk,
@@ -579,7 +580,7 @@ function eC(e) {
                                     }),
                                     null != n
                                         ? (0, r.jsx)(ev, {
-                                              onClick: c ?? N,
+                                              onClick: d ?? L,
                                               children: (0, r.jsx)(p.Text, {
                                                   variant: "text-sm/normal",
                                                   className: eE.zA,
@@ -593,18 +594,19 @@ function eC(e) {
                             }),
                         ],
                     }),
+                    a,
                 ],
             }),
-            K && null != S && null != $[S]
+            $ && null != y && null != z[y]
                 ? (0, r.jsx)(U.A, {
                       className: eE.zu,
-                      applicationId: S,
-                      userIds: [I.author_id],
+                      applicationId: y,
+                      userIds: [T.author_id],
                       cardSize: G.Y.SMALL_SQUARE,
                       location: "content_popout",
-                      guildId: f.channel?.guild_id,
-                      channelId: f.channel?.id,
-                      numWishlistItems: h ? 3 : 2,
+                      guildId: h.channel?.guild_id,
+                      channelId: h.channel?.id,
+                      numWishlistItems: m ? 3 : 2,
                       cardSpec: eh.Z.SIZE_90,
                   })
                 : null,

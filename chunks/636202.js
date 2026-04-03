@@ -126,6 +126,10 @@ let F = [...w.n, M.Yq],
                           stream: J,
                           onUserPopoutClosed: B,
                           trackRankingItemInteraction: H,
+                          children:
+                              eu.length > 0
+                                  ? (0, r.jsx)(h.A, { distributorCTAConfigs: eu, buttonVariant: "overlay-primary" })
+                                  : null,
                       }),
             eh =
                 !ed && ec
