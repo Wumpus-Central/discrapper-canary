@@ -111,6 +111,7 @@ var r = (function (e) {
         (e.GAME_UPDATE_NOTIFICATIONS = "game_update_notifications"),
         (e.FRIEND_ANNIVERSARY_NOTIFICATIONS = "friend_anniversary_notifications"),
         (e.SERVER_TRENDING_NOTIFICATIONS = "server_trending_notifications"),
+        (e.UPCOMING_SERVER_EVENT_NOTIFICATIONS = "upcoming_server_event_notifications"),
         (e.EXPERIMENTAL_UNREADS = "experimental_unreads"),
         (e.NOTIFICATIONS_SOUNDS_CATEGORY = "notifications_sounds_category"),
         (e.NOTIFICATION_HOLIDAY_SOUNDPACK = "notification_holiday_soundpack"),

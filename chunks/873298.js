@@ -1880,6 +1880,7 @@ class ep extends a.G {
             { no: 19, name: "enable_summary_reminder_notifications", kind: "message", T: () => o._t },
             { no: 20, name: "enable_gdm_all_reaction_notifications", kind: "message", T: () => o._t },
             { no: 21, name: "enable_friend_gaming_activity_notifications", kind: "message", T: () => o._t },
+            { no: 22, name: "enable_upcoming_server_event_notifications", kind: "message", T: () => o._t },
         ]);
     }
     create(e) {
@@ -2030,6 +2031,14 @@ class ep extends a.G {
                         s.enableFriendGamingActivityNotifications,
                     );
                     break;
+                case 22:
+                    s.enableUpcomingServerEventNotifications = o._t.internalBinaryRead(
+                        e,
+                        e.uint32(),
+                        n,
+                        s.enableUpcomingServerEventNotifications,
+                    );
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -2121,6 +2130,14 @@ class ep extends a.G {
                     .internalBinaryWrite(
                         e.enableFriendGamingActivityNotifications,
                         t.tag(21, r.O0.LengthDelimited).fork(),
+                        n,
+                    )
+                    .join(),
+            e.enableUpcomingServerEventNotifications &&
+                o._t
+                    .internalBinaryWrite(
+                        e.enableUpcomingServerEventNotifications,
+                        t.tag(22, r.O0.LengthDelimited).fork(),
                         n,
                     )
                     .join();
