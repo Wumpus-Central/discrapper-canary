@@ -64,15 +64,18 @@ function y(e) {
     });
 }
 function v(e) {
-    let { eventTargetRef: t, assetClassName: n, disableHover: i } = e,
-        s = (0, u.bG)([d.A], () => d.A.useReducedMotion);
+    let { eventTargetRef: t, assetClassName: n, disableHover: s } = e,
+        o = (0, u.bG)([d.A], () => d.A.useReducedMotion),
+        { theme: _, saturation: f } = (0, l.wRf)(),
+        { highContrastModeEnabled: p } = i.useContext(l.CZY),
+        [h, m, E, g] = c.A.colors.TEXT_DEFAULT.resolve({ theme: _, saturation: f, highContrastModeEnabled: p }).rgba();
     return (0, r.jsxs)("div", {
         className: T.yv,
         children: [
             (0, r.jsx)("div", { className: T.GY }),
             (0, r.jsx)(l.u84, {
                 className: a()(T.MO, n),
-                dataBinding: { reducedMotion: i || s, logoColor: c.A.colors.TEXT_DEFAULT },
+                dataBinding: { reducedMotion: s || o, logoColor: { r: h, g: m, b: E, a: g } },
                 eventTargetRef: t,
                 fit: "contain",
             }),
