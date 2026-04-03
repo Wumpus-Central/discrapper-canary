@@ -37,8 +37,8 @@ var r = n(784622),
     S = n(184633),
     y = n(352489),
     v = n(905972),
-    C = n(229664),
-    N = n(46925);
+    N = n(229664),
+    C = n(46925);
 let R = "1344176506041139230";
 var O = (function (e) {
         return (e.GATHERING = "gathering"), (e.CRAFTING = "crafting"), (e.COMBAT = "combat"), e;
@@ -89,7 +89,7 @@ let w = {
         },
         weapon_crafter: {
             name: p.default["cJ5cb/"],
-            asset: C.A,
+            asset: N.A,
             invalidCombatClass: "dps",
             consumesFrom: ["wood", "metal"],
             description: p.default.mxdqec,
@@ -125,7 +125,7 @@ let w = {
     },
     x = {
         leather: { name: p.default.F7ZnSA, asset: I.A },
-        wood: { name: p.default.jkCzLT, asset: N.A },
+        wood: { name: p.default.jkCzLT, asset: C.A },
         metal: { name: p.default.Zx9rBh, asset: y.A },
         magic: { name: p.default.mfXQS5, asset: S.A },
         armor: { name: p.default.amhMgq, asset: m.A },
@@ -134,7 +134,7 @@ let w = {
         tanks: { name: p.default.TYhfqQ, asset: v.A },
         enemy_damage: { name: p.default.WqOVmv, asset: g.A },
     };
-p.default.OAahQa, N.A;
+p.default.OAahQa, C.A;
 var P = (function (e) {
     return (
         (e[(e.PATCH_NOTES = 0)] = "PATCH_NOTES"),
@@ -150,7 +150,7 @@ var P = (function (e) {
     );
 })({});
 let k = { gathering: 0, crafting: 2 * _.A.Millis.MINUTE, combat: 3 * _.A.Millis.MINUTE },
-    U = _.A.Millis.DAY,
+    U = _.A.Millis.HOUR,
     G = "april_fools_2026",
     F = { healer: 3, tank: 30, dps: 10 },
     V = {
