@@ -1,82 +1,81 @@
-n.d(t, { A: () => m });
-var r = n(627968),
-    l = n(64700),
-    i = n(735438),
+n.d(t, { A: () => h });
+var i = n(627968),
+    s = n(64700),
+    l = n(735438),
     a = n(451988),
-    s = n(397927),
+    r = n(397927),
     o = n(954571),
-    c = n(957565),
-    u = n(927813),
-    d = n(652215),
-    p = n(985018);
-let f = u.A.Millis.SECOND,
-    g = 2 * f,
-    h = u.A.Millis.HALF_SECOND,
-    v = [
-        () => p.intl.string(p.t.MSaeTe),
-        () => p.intl.string(p.t.UmrCw7),
-        () => p.intl.string(p.t.gKE0Jq),
-        () => p.intl.string(p.t["4DSKbi"]),
-        () => p.intl.string(p.t["+8ENdT"]),
-        () => p.intl.string(p.t.GlWHv8),
-        () => p.intl.string(p.t.hIzxU9),
-        () => p.intl.string(p.t["26uMPL"]),
-        () => p.intl.string(p.t.uFs7R2),
-        () => p.intl.string(p.t.bLXdcY),
-        () => p.intl.string(p.t.gPg9fS),
+    d = n(957565),
+    c = n(927813),
+    u = n(652215),
+    m = n(985018);
+let g = c.A.Millis.SECOND,
+    _ = 2 * g,
+    x = c.A.Millis.HALF_SECOND,
+    A = [
+        () => m.intl.string(m.t.MSaeTe),
+        () => m.intl.string(m.t.UmrCw7),
+        () => m.intl.string(m.t.gKE0Jq),
+        () => m.intl.string(m.t["4DSKbi"]),
+        () => m.intl.string(m.t["+8ENdT"]),
+        () => m.intl.string(m.t.GlWHv8),
+        () => m.intl.string(m.t.hIzxU9),
+        () => m.intl.string(m.t["26uMPL"]),
+        () => m.intl.string(m.t.uFs7R2),
+        () => m.intl.string(m.t.bLXdcY),
+        () => m.intl.string(m.t.gPg9fS),
     ];
-function m(e) {
-    let { text: t, copyValue: n, children: u, onCopy: p, "aria-label": m, delay: b = h, dataMeticulousIgnore: A } = e,
-        [E, y] = l.useState(0),
-        [x, S] = l.useState(!1),
-        [k, C] = l.useState(!1),
-        [I] = l.useState(() => new a.Ep()),
-        [N] = l.useState(() => new a.Ep());
+function h(e) {
+    let { text: t, copyValue: n, children: c, onCopy: m, "aria-label": h, delay: p = x, dataMeticulousIgnore: T } = e,
+        [f, S] = s.useState(0),
+        [b, E] = s.useState(!1),
+        [C, N] = s.useState(!1),
+        [v] = s.useState(() => new a.Ep()),
+        [I] = s.useState(() => new a.Ep());
     if (
-        (l.useEffect(
+        (s.useEffect(
             () => () => {
-                I.stop(), N.stop();
+                v.stop(), I.stop();
             },
-            [I, N],
+            [v, I],
         ),
-        !c.p5)
+        !d.p5)
     )
-        return (0, r.jsx)(r.Fragment, { children: u({}) });
-    let D = E >= v.length - 1,
-        w = D ? s.oMw.RED : s.oMw.GREEN,
-        M = x ? w : s.oMw.PRIMARY;
-    return (0, r.jsx)(s.STz, {
+        return (0, i.jsx)(i.Fragment, { children: c({}) });
+    let j = f >= A.length - 1,
+        y = b ? r.oMw.GREEN : r.oMw.PRIMARY;
+    return (0, i.jsx)(r.STz, {
         text: (() => {
-            if (!x) return t;
-            let e = (0, i.clamp)(E - 1, 0, v.length - 1),
-                n = v[e] ?? v[0];
-            return (0, r.jsx)(s.bfh, { isShaking: D, children: n() });
+            if (!b) return t;
+            let e = (0, l.clamp)(f - 1, 0, A.length - 1),
+                n = A[e] ?? A[0];
+            return (0, i.jsx)(r.bfh, { isShaking: j, children: n() });
         })(),
-        delay: b,
-        "aria-label": m,
-        dataMeticulousIgnore: A,
-        color: M,
-        forceOpen: k,
+        delay: p,
+        "aria-label": h,
+        dataMeticulousIgnore: T,
+        color: y,
+        forceOpen: C,
         onAnimationRest: (e, t) => {
-            !k && x && t.phase === d.lLE.LEAVE && S(!1);
+            !C && b && t.phase === u.lLE.LEAVE && E(!1);
         },
         children: (e) => {
-            let { onClick: t, onMouseEnter: r, ...l } = e;
-            return u({
-                ...l,
+            let { onClick: t, onMouseEnter: i, ...s } = e;
+            return c({
+                ...s,
                 onClick: () => {
                     t?.(),
-                        p?.(),
-                        (0, c.C)(n),
-                        o.default.track(d.HAw.TEXT_COPIED),
-                        k || y(E + 1),
-                        C(!0),
-                        S(!0),
-                        I.start(f, () => C(!1)),
-                        N.start(g, () => y(0));
+                        m?.(),
+                        (0, d.C)(n),
+                        o.default.track(u.HAw.TEXT_COPIED),
+                        C || S(f + 1),
+                        N(!0),
+                        E(!0),
+                        v.start(g, () => N(!1)),
+                        I.start(_, () => S(0));
                 },
                 onMouseEnter: () => {
-                    x ? (I.stop(), C(!1)) : r?.();
+                    b ? (v.stop(), N(!1)) : i?.();
                 },
             });
         },
