@@ -11371,6 +11371,7 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 .container__4d95d {
     display: grid;
     max-width: 50vw;
+    min-width: 302px;
     width: 100%
 }
 
@@ -11483,7 +11484,8 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 
 .languageIcon__4d95d {
     cursor: pointer;
-    display: flex
+    display: flex;
+    flex-shrink: 0
 }
 
 .downloadAnchor__4d95d {
