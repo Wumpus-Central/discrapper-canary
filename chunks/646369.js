@@ -631,46 +631,47 @@ class C extends f.A {
             if (null != e.desktopDescription) {
                 let {
                     id: t,
-                    soundshareId: n,
-                    useLoopback: r,
-                    useVideoHook: i,
-                    useGraphicsCaptureApiLevel: s,
-                    useCaptureDeviceForEncode: a,
-                    useGraphicsCapture: o,
-                    useQuartzCapturer: l,
-                    allowScreenCaptureKit: u,
-                    videoHookStaleFrameTimeoutMs: c,
-                    graphicsCaptureStaleFrameTimeoutMs: d,
-                    hdrCaptureMode: _,
-                    enableGlobalFramePoolLock: f,
-                    useGraphicsCaptureDirtyRegions: p,
+                    soundshareId: s,
+                    useLoopback: a,
+                    useVideoHook: o,
+                    useGraphicsCaptureApiLevel: l,
+                    useCaptureDeviceForEncode: u,
+                    useGraphicsCapture: c,
+                    useQuartzCapturer: d,
+                    allowScreenCaptureKit: _,
+                    videoHookStaleFrameTimeoutMs: f,
+                    graphicsCaptureStaleFrameTimeoutMs: p,
+                    hdrCaptureMode: h,
+                    enableGlobalFramePoolLock: m,
+                    useGraphicsCaptureDirtyRegions: E,
                 } = e.desktopDescription;
-                this.setSoundshareSource(n, r);
-                let [h, m] = null != t ? t.split(":") : ["", ""];
+                this.setSoundshareSource(s, a);
+                let [g, A] = null != t ? t.split(":") : ["", ""];
                 null != t
                     ? this.logger.info(
-                          `capturing desktop (type: ${h}, handle: ${m}, use-video-hook: ${i.toString()}, use-graphics-capture: ${o?.toString()}, use-graphics-capture-api-level: ${s?.toString()}, use-capture-device-for-encode: ${a?.toString()}).`,
+                          `capturing desktop (type: ${g}, handle: ${A}, use-video-hook: ${o.toString()}, use-graphics-capture: ${c?.toString()}, use-graphics-capture-api-level: ${l?.toString()}, use-capture-device-for-encode: ${u?.toString()}).`,
                       )
                     : this.logger.info("capturing desktop (type: <stop>)."),
                     null != this.conn.setDesktopSourceWithOptions
                         ? null != t
-                            ? this.conn.setDesktopSourceWithOptions({
-                                  type: h,
-                                  sourceId: m,
-                                  useVideoHook: i,
-                                  useGraphicsCapture: o,
-                                  useGraphicsCaptureApiLevel: s,
-                                  useCaptureDeviceForEncode: a,
-                                  useQuartzCapturer: l,
-                                  allowScreenCaptureKit: u,
-                                  videoHookStaleFrameTimeoutMs: c,
-                                  graphicsCaptureStaleFrameTimeoutMs: d,
-                                  hdrCaptureMode: _,
-                                  enableGlobalFramePoolLock: f,
-                                  useGraphicsCaptureDirtyRegions: p,
-                              })
+                            ? (this.setDesktopEncodingOptions(r, i, n),
+                              this.conn.setDesktopSourceWithOptions({
+                                  type: g,
+                                  sourceId: A,
+                                  useVideoHook: o,
+                                  useGraphicsCapture: c,
+                                  useGraphicsCaptureApiLevel: l,
+                                  useCaptureDeviceForEncode: u,
+                                  useQuartzCapturer: d,
+                                  allowScreenCaptureKit: _,
+                                  videoHookStaleFrameTimeoutMs: f,
+                                  graphicsCaptureStaleFrameTimeoutMs: p,
+                                  hdrCaptureMode: h,
+                                  enableGlobalFramePoolLock: m,
+                                  useGraphicsCaptureDirtyRegions: E,
+                              }))
                             : this.conn.clearDesktopSource()
-                        : this.conn.setDesktopSource(`wumpus-${m}`, i, h);
+                        : this.conn.setDesktopSource(`wumpus-${A}`, o, g);
             } else if (null != e.cameraDescription) {
                 let { videoDeviceGuid: t, audioDeviceGuid: n } = e.cameraDescription;
                 this.conn.setGoLiveDevices({ videoInputDeviceId: t, audioInputDeviceId: n });
