@@ -4121,6 +4121,7 @@ var nl = (function (e) {
             (e.QUEST_HOME_FILTERS_CHANGED = "quest_home_filters_changed"),
             (e.QUEST_GAME_SHEET_ERROR = "quest_game_sheet_error"),
             (e.QUEST_HOME_ONBOARDING_POPOVER_RENDERED = "quest_home_onboarding_popover_rendered"),
+            (e.QUEST_HOME_MOBILE_DEEP_LINK_MISSING_QUEST = "quest_home_mobile_deep_link_missing_quest"),
             (e.QUEST_VIDEO_APP_FOCUSED = "quest_video_app_focused"),
             (e.QUEST_VIDEO_APP_UNFOCUSED = "quest_video_app_unfocused"),
             (e.QUEST_VIDEO_BUFFERING_ENDED = "quest_video_buffering_ended"),
