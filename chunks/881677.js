@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { B: () => p });
+n.d(t, { B: () => h });
 var r = n(627968),
     i = n(64700),
     s = n(417597),
@@ -9,43 +9,44 @@ var r = n(627968),
     u = n(156312),
     c = n(166532),
     d = n(49420),
-    _ = n(534479),
-    f = n(652215);
-function p(e) {
+    _ = n(987616),
+    f = n(534479),
+    p = n(652215);
+function h(e) {
     let { handleStepChange: t } = e,
         {
             blockedPayments: n,
-            hasFetchedSkus: p,
             paymentSources: h,
             hasFetchedPaymentSources: m,
             application: E,
-            skusById: g,
-            selectedSkuId: A,
+            selectedSkuId: g,
         } = (0, u.P5)(),
-        { isGift: I } = (0, l.Pv)(),
-        [T, S] = i.useState(!0),
-        [y, v] = (0, s.yK)([o.A], () => [o.A.isFetchingCategories, o.A.error]);
+        A = (0, _.gU)(),
+        I = (0, _.Hu)(),
+        { isGift: T } = (0, l.Pv)(),
+        [S, y] = i.useState(!0),
+        [v, N] = (0, s.yK)([o.A], () => [o.A.isFetchingCategories, o.A.error]);
     return (i.useEffect(() => {
         let e = null != E;
-        p && m && e && S(y);
-    }, [p, m, E, y]),
+        I && m && e && y(v);
+    }, [I, m, E, v]),
     i.useEffect(() => {
-        if (T || n || null == A) return;
-        let e = g[A];
-        I &&
-        (e?.productLine === f.EZt.COLLECTIBLES ||
-            e?.productLine === f.EZt.APPLICATION ||
-            e?.productLine === f.EZt.SOCIAL_LAYER_GAME_ITEM)
+        if (S || n || null == g) return;
+        let e = A[g];
+        T &&
+        (e?.productLine === p.EZt.COLLECTIBLES ||
+            e?.productLine === p.EZt.APPLICATION ||
+            e?.productLine === p.EZt.SOCIAL_LAYER_GAME_ITEM)
             ? t(c.pn.GIFT_CUSTOMIZATION)
             : 0 === Object.keys(h).length
               ? t(c.pn.ADD_PAYMENT_STEPS)
               : t(c.pn.REVIEW);
-    }, [T, n, t, h, I, g, A]),
-    T)
-        ? (0, r.jsx)(_.A, {})
+    }, [S, n, t, h, T, A, g]),
+    S)
+        ? (0, r.jsx)(f.A, {})
         : n
           ? (0, r.jsx)(a.oO, {})
-          : null != v
+          : null != N
             ? (0, r.jsx)(d.A, {})
             : null;
 }

@@ -5,79 +5,75 @@ var i = n(627968),
     a = n(775602),
     s = n(21161),
     o = n(163437),
-    c = n(490744),
-    d = n(594508),
+    d = n(490744),
+    c = n(594508),
     u = n(156312),
     m = n(166532),
     p = n(19311),
-    x = n(534479),
-    f = n(482132),
-    g = n(921925),
-    h = n(376747),
-    b = n(985018);
+    f = n(534479),
+    x = n(482132),
+    g = n(987616),
+    h = n(921925),
+    b = n(376747),
+    A = n(985018);
 function j(e) {
     let t,
         n,
-        { showBenefits: j, handleClose: A, onSubscriptionConfirmation: S } = e,
-        {
-            updatedSubscription: v,
-            readySlideId: C,
-            selectedSku: N,
-            selectedStoreListing: T,
-            application: _,
-        } = (0, u.P5)(),
-        E = (0, r.A)(h.Y),
-        { createMultipleConfettiAt: y } = l.useContext(s.x),
-        P = N?.name ?? "",
+        { showBenefits: j, handleClose: S, onSubscriptionConfirmation: v } = e,
+        { updatedSubscription: C, readySlideId: _, selectedStoreListing: y, application: N } = (0, u.P5)(),
+        E = (0, g.S3)(),
+        T = (0, r.A)(b.Y),
+        { createMultipleConfettiAt: P } = l.useContext(s.x),
+        I = E?.name ?? "",
         k = () => {
-            A(), S?.();
+            S(), v?.();
         },
-        I = C === m.pn.CONFIRM,
-        R = (0, o.bg)(N?.flags ?? 0),
-        w =
-            null != T && T.benefits.length > 0
-                ? b.intl.formatToPlainString(b.t["+IQQVM"], { benefitCount: T.benefits.length })
+        w = _ === m.pn.CONFIRM,
+        R = (0, o.bg)(E?.flags ?? 0),
+        D =
+            null != y && y.benefits.length > 0
+                ? A.intl.formatToPlainString(A.t["+IQQVM"], { benefitCount: y.benefits.length })
                 : null;
     return (
         j
-            ? E
-                ? (t = (0, i.jsx)(d.E, {
-                      title: b.intl.format(b.t.ea6tZr, { tierName: P }),
+            ? T
+                ? (t = (0, i.jsx)(c.E, {
+                      title: A.intl.format(A.t.ea6tZr, { tierName: I }),
                       subtitle:
-                          null != T && T.benefits.length > 0
-                              ? b.intl.formatToPlainString(b.t.HNepft, { benefits: w })
+                          null != y && y.benefits.length > 0
+                              ? A.intl.formatToPlainString(A.t.HNepft, { benefits: D })
                               : null,
                       onConfirm: k,
-                      confirmCta: b.intl.string(b.t.nlkywz),
+                      confirmCta: A.intl.string(A.t.nlkywz),
                   }))
                 : ((t =
-                      null != T && null != _
-                          ? (0, i.jsx)(c.Uf, {
-                                icon: T.thumbnail,
-                                storeListingBenefits: T.benefits,
-                                application: _,
-                                title: b.intl.format(b.t["Q+qktS"], { tier: P }),
-                                subtitle: b.intl.string(b.t.ECKxXU),
+                      null != y && null != N
+                          ? (0, i.jsx)(d.Uf, {
+                                icon: y.thumbnail,
+                                storeListingBenefits: y.benefits,
+                                application: N,
+                                title: A.intl.format(A.t["Q+qktS"], { tier: I }),
+                                subtitle: A.intl.string(A.t.ECKxXU),
                                 description: R
-                                    ? b.intl.format(b.t["MAtQk/"], { applicationName: _?.name })
-                                    : b.intl.format(b.t.vHkMF4, { tier: P }),
+                                    ? A.intl.format(A.t["MAtQk/"], { applicationName: N?.name })
+                                    : A.intl.format(A.t.vHkMF4, { tier: I }),
                             })
-                          : (0, i.jsx)(x.A, {})),
+                          : (0, i.jsx)(f.A, {})),
                   (n = (0, i.jsx)(p.Ay, {
                       onPrimary: k,
                       primaryCTA: p.ti.CONTINUE,
-                      primaryText: b.intl.string(b.t["JtWl+a"]),
+                      primaryText: A.intl.string(A.t["JtWl+a"]),
                   })))
-            : (t = E
-                  ? (0, i.jsx)(d.v, { tierName: P, onConfirm: k, subscription: v })
-                  : (0, i.jsx)(c.XG, { tierName: P, onConfirm: k, subscription: v })),
+            : (t = T
+                  ? (0, i.jsx)(c.v, { tierName: I, onConfirm: k, subscription: C })
+                  : (0, i.jsx)(d.XG, { tierName: I, onConfirm: k, subscription: C })),
         l.useEffect(() => {
-            a.A.useReducedMotion && I && y(window.innerWidth / 2, window.innerHeight / 2);
-        }, [y, I]),
+            a.A.useReducedMotion && w && P(window.innerWidth / 2, window.innerHeight / 2);
+        }, [P, w]),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsxs)(f.dZ, { children: [(0, i.jsx)(g.A, {}), t] }),
-                null != n && (0, i.jsx)(f.UX, { children: n }),
+                (0, i.jsxs)(x.dZ, { children: [(0, i.jsx)(h.A, {}), t] }),
+                null != n && (0, i.jsx)(x.UX, { children: n }),
             ],
         })
     );
