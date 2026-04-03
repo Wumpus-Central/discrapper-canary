@@ -40,6 +40,10 @@ let o = (e) => {
             (n.profileEffect?.skuId === l?.profileEffect?.skuId
                 ? (c.pendingProfileEffect = void 0)
                 : (c.pendingProfileEffect = n.profileEffect)),
+        "profileFrame" in n &&
+            (n.profileFrame?.skuId === l?.profileFrame?.skuId
+                ? (c.pendingProfileFrame = void 0)
+                : (c.pendingProfileFrame = n.profileFrame)),
         "banner" in n &&
             ((null != t && n.banner === u?.banner) || (null == t && n.banner === o.banner)
                 ? (c.pendingBanner = void 0)

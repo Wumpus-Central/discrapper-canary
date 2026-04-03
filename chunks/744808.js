@@ -43,9 +43,10 @@ function p(e) {
                         : t.layers,
             [n, t.layers],
         ),
-        { layerData: p, loaded: h } = (0, d.A)({ skuId: t.skuId, layers: c });
-    return h
-        ? (0, r.jsx)(o.N, {
+        { layerData: p } = (0, d.A)({ skuId: t.skuId, layers: c });
+    return 0 === c.length
+        ? null
+        : (0, r.jsx)(o.N, {
               theme: s,
               children: (e) =>
                   (0, r.jsx)("div", {
@@ -54,6 +55,5 @@ function p(e) {
                       role: "img",
                       children: c.map((e) => (0, r.jsx)(f, { skuId: t.skuId, layer: e, data: p[e.id] }, e.id)),
                   }),
-          })
-        : null;
+          });
 }
