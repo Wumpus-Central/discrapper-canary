@@ -5,8 +5,8 @@ var i = n(627968),
     s = n.n(a),
     r = n(575593),
     o = n(397927),
-    d = n(793574),
-    c = n(688810),
+    c = n(793574),
+    d = n(688810),
     u = n(183555),
     g = n(661492),
     m = n(808247),
@@ -16,17 +16,18 @@ var i = n(627968),
     h = n(652215),
     _ = n(518477),
     A = n(985018),
-    I = n(614094);
-let j = f.Z.SIZE_90;
-function v(e) {
+    I = n(353787),
+    j = n(913110);
+let v = f.Z.SIZE_90;
+function E(e) {
     let {
             sku: t,
             wishlistOwner: n,
             style: a,
             skuPreviewStyle: r,
             setIsHoveringOrFocusing: o,
-            onClick: d,
-            "aria-label": c,
+            onClick: c,
+            "aria-label": d,
             wishlistId: g,
             children: m,
         } = e,
@@ -38,17 +39,17 @@ function v(e) {
                 skuId: t.id,
                 productLines: new Set([t.productLine]),
             }),
-                d();
-        }, [d, t.id, t.productLine, p, g]);
+                c();
+        }, [c, t.id, t.productLine, p, g]);
     return (0, i.jsx)(x.A, {
         sku: t,
         user: n,
-        spec: j,
+        spec: v,
         cardStyle: s()(I.Nr, a),
         skuPreviewStyle: s()(I.ev, r),
         onHoverOrFocusChange: o,
         onClick: f,
-        "aria-label": c,
+        "aria-label": d,
         children: m,
     });
 }
@@ -58,8 +59,8 @@ function T(e) {
             analyticsLocations: n,
             isHoveringOrFocusing: a,
             handleOpenUserProfileModal: r,
-            skuPreviewStyle: d,
-            wishlistOwner: c,
+            skuPreviewStyle: c,
+            wishlistOwner: d,
             ...u
         } = e,
         [x, f] = l.useState(!1),
@@ -76,11 +77,11 @@ function T(e) {
                 }
             }
         }, [t, n, x, r]),
-        j = l.useMemo(() => s()({ [I.zW]: a || x }, d), [a, x, d]);
-    return (0, i.jsx)(v, {
+        j = l.useMemo(() => s()({ [I.zW]: a || x }, c), [a, x, c]);
+    return (0, i.jsx)(E, {
         "aria-label": A.intl.formatToPlainString(A.t.xRjJBe, { productName: (0, g.TC)(t) }),
         sku: t,
-        wishlistOwner: c,
+        wishlistOwner: d,
         skuPreviewStyle: j,
         onClick: h,
         isHoveringOrFocusing: a,
@@ -88,12 +89,12 @@ function T(e) {
         children: (0, i.jsx)(p.oU, { isHoveringOrFocusing: a, loading: x }),
     });
 }
-function E(e) {
+function b(e) {
     let { sku: t, analyticsLocations: n, ...l } = e,
-        { analyticsLocations: a } = (0, c.Ay)(...(n ?? []), d.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD);
+        { analyticsLocations: a } = (0, d.Ay)(...(n ?? []), c.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD);
     return (0, i.jsx)(T, { sku: t, analyticsLocations: a, ...l });
 }
-function b(e) {
+function C(e) {
     let { sku: t, ...n } = e,
         a = l.useMemo(() => {
             switch (t?.tenantMetadata?.collectibles?.type) {
@@ -108,14 +109,20 @@ function b(e) {
         }, [t?.tenantMetadata?.collectibles?.type]);
     return (0, i.jsx)(T, { sku: t, skuPreviewStyle: a, ...n });
 }
+function S(e) {
+    let { sku: t, ...n } = e;
+    return (0, i.jsx)(T, { sku: t, skuPreviewStyle: j.MO, ...n });
+}
 function N(e) {
     let { sku: t, ...n } = e,
         [a, s] = l.useState(!1);
     switch (t.productLine) {
         case h.EZt.SOCIAL_LAYER_GAME_ITEM:
-            return (0, i.jsx)(E, { sku: t, isHoveringOrFocusing: a, setIsHoveringOrFocusing: s, ...n });
-        case h.EZt.COLLECTIBLES:
             return (0, i.jsx)(b, { sku: t, isHoveringOrFocusing: a, setIsHoveringOrFocusing: s, ...n });
+        case h.EZt.COLLECTIBLES:
+            return (0, i.jsx)(C, { sku: t, isHoveringOrFocusing: a, setIsHoveringOrFocusing: s, ...n });
+        case h.EZt.PREMIUM:
+            return (0, i.jsx)(S, { sku: t, isHoveringOrFocusing: a, setIsHoveringOrFocusing: s, ...n });
         default:
             return null;
     }
