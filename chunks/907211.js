@@ -2128,6 +2128,10 @@ let { Themes: r } = n(680049).zv,
                 [r.LIGHT]: { raw: "PRIMARY_600", opacity: 1 },
                 [r.MIDNIGHT]: { raw: "PLUM_4", opacity: 1 },
                 [r.DARKER]: { raw: "PLUM_6", opacity: 1 },
+                userProfileThemes: {
+                    dark: { raw: "OPACITY_WHITE_96", opacity: 0.96 },
+                    light: { raw: "OPACITY_BLACK_96", opacity: 0.96 },
+                },
             },
             TEXT_FEEDBACK_CRITICAL: {
                 category: "text",
@@ -2170,6 +2174,10 @@ let { Themes: r } = n(680049).zv,
                 [r.LIGHT]: { raw: "PRIMARY_460", opacity: 1 },
                 [r.MIDNIGHT]: { raw: "PLUM_10", opacity: 1 },
                 [r.DARKER]: { raw: "PLUM_10", opacity: 1 },
+                userProfileThemes: {
+                    dark: { raw: "OPACITY_WHITE_76", opacity: 0.76 },
+                    light: { raw: "OPACITY_BLACK_76", opacity: 0.76 },
+                },
             },
             TEXT_OVERLAY_DARK: {
                 category: "text",
@@ -2226,6 +2234,10 @@ let { Themes: r } = n(680049).zv,
                 [r.LIGHT]: { raw: "PRIMARY_500", opacity: 1 },
                 [r.MIDNIGHT]: { raw: "PLUM_8", opacity: 1 },
                 [r.DARKER]: { raw: "PLUM_9", opacity: 1 },
+                userProfileThemes: {
+                    dark: { raw: "OPACITY_WHITE_88", opacity: 0.88 },
+                    light: { raw: "OPACITY_BLACK_88", opacity: 0.88 },
+                },
             },
             TEXT_VOICE_CONNECTED: {
                 category: "text",

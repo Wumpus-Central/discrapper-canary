@@ -64315,6 +64315,9 @@ html.disable-forced-colors * {
 }
 
 .custom-user-profile-theme.theme-dark {
+    --text-default: hsl(var(--opacity-white-96-hsl)/0.9607843137254902);
+    --text-muted: hsl(var(--opacity-white-76-hsl)/0.7607843137254902);
+    --text-subtle: hsl(var(--opacity-white-88-hsl)/0.8784313725490196);
     --user-profile-activity-toolbar-background: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --user-profile-background-hover: hsl(var(--opacity-white-4-hsl)/0.0392156862745098);
     --user-profile-border: hsl(var(--opacity-white-8-hsl)/0.0784313725490196);
@@ -64326,6 +64329,9 @@ html.disable-forced-colors * {
 }
 
 .custom-user-profile-theme.theme-light {
+    --text-default: hsl(var(--opacity-black-96-hsl)/0.9607843137254902);
+    --text-muted: hsl(var(--opacity-black-76-hsl)/0.7607843137254902);
+    --text-subtle: hsl(var(--opacity-black-88-hsl)/0.8784313725490196);
     --user-profile-activity-toolbar-background: hsl(var(--opacity-white-48-hsl)/0.47843137254901963);
     --user-profile-background-hover: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
     --user-profile-border: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);

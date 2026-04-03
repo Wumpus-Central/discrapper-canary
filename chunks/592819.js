@@ -81,7 +81,12 @@ let N = {
                         }
                     }
             }
-            if (n?.gradient != null && "gradient" in r) {
+            if (n?.isProfileTheme && "userProfileThemes" in r) {
+                let e = r.userProfileThemes,
+                    t = n?.gradient?.theme,
+                    i = null != t ? e[t] : null;
+                null != i && ((o = A[i.raw]), (l = i.opacity));
+            } else if (n?.gradient != null && "gradient" in r) {
                 let e = r.gradient[n?.gradient.theme];
                 if (null != e) {
                     let t = i()(e.color in A ? A[e.color] : n?.gradient.colors[e.color]);
