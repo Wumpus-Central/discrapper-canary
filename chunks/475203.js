@@ -13,6 +13,8 @@ e.exports = {
     $I: "barButtonMain__0f481 barButtonBase__0f481",
     Ln: "span__0f481",
     hQ: "barButtonAlt__0f481 barButtonBase__0f481",
+    _o: "buttonWrapper__0f481",
+    vE: "markAsReadText__0f481",
     d3: "errorLoadingBarAlt__0f481",
     YL: "tooltip__0f481",
     Ld: "tooltipEmojiName__0f481",

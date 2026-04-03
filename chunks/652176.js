@@ -57,7 +57,7 @@ var r = n(627968),
     F = n(521732),
     V = n(650583),
     B = n(985018),
-    H = n(702926);
+    H = n(475203);
 let j = { delay: 300, position: "top" },
     Y = (e) => (t) => {
         e?.(t), (0, P.ls)(t);
@@ -379,14 +379,18 @@ function es(e) {
                   }),
                   (0, r.jsx)(d.vN3, {
                       offset: 4,
-                      children: (0, r.jsxs)("button", {
-                          type: "button",
-                          onClick: l,
-                          className: H.hQ,
-                          children: [
-                              B.intl.string(B.t.e6RscS),
-                              (0, r.jsx)(d.MBj, { size: "md", color: "currentColor", className: H.t3 }),
-                          ],
+                      within: !0,
+                      children: (0, r.jsx)("div", {
+                          className: H._o,
+                          children: (0, r.jsxs)("button", {
+                              type: "button",
+                              onClick: l,
+                              className: H.hQ,
+                              children: [
+                                  (0, r.jsx)("span", { className: H.vE, children: B.intl.string(B.t.e6RscS) }),
+                                  (0, r.jsx)(d.MBj, { size: "md", color: "currentColor", className: H.t3 }),
+                              ],
+                          }),
                       }),
                   }),
               ],
