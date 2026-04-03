@@ -1,10 +1,13 @@
-n.d(t, { A: () => o });
+n.d(t, { A: () => d });
 var i = n(627968);
 n(64700);
 var a = n(873263),
+    l = n(718446),
     r = n(33666),
-    l = n(793998),
-    s = n(652215);
-function o() {
-    return "teen" === (0, r.A)() ? (0, i.jsx)(a.rd, { to: s.BVt.SETTINGS("family-center") }) : (0, i.jsx)(l.A, {});
+    s = n(793998),
+    o = n(355097);
+function d() {
+    return "teen" === (0, r.A)()
+        ? (0, i.jsx)(a.rd, { to: (0, l.settingsPathToRoute)(o.od.FAMILY_CENTER) })
+        : (0, i.jsx)(s.A, {});
 }

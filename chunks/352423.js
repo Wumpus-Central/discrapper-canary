@@ -22,8 +22,8 @@ var r = n(607399),
     S = n(268313),
     y = n(21599),
     v = n(376943),
-    C = n(22007),
-    N = n(807876),
+    N = n(22007),
+    C = n(807876),
     R = n(971276),
     O = n(545986),
     b = n(976860),
@@ -257,7 +257,7 @@ function K(e) {
     }
     if (null != x && K && F.A.isAppRoute(x)) {
         let e = { navigationReplace: !1, openChannel: !0 };
-        return null != U && (e.search = U), null != j && (e.hash = j), (t) => (t?.preventDefault(), (0, C.A)(x, e), !0);
+        return null != U && (e.search = U), null != j && (e.hash = j), (t) => (t?.preventDefault(), (0, N.A)(x, e), !0);
     }
     if (null != x && K) {
         let { getOAuth2AuthorizeProps: t, openOAuth2ModalWithCreateGuildModal: r } = n(200330),
@@ -277,17 +277,17 @@ function K(e) {
         return (e) => {
             e?.preventDefault();
             let t = k.A.getGuildId();
-            null != $.guildId && "" !== $.guildId && $.guildId !== t && (0, C.A)(B.BVt.CHANNEL($.guildId));
+            null != $.guildId && "" !== $.guildId && $.guildId !== t && (0, N.A)(B.BVt.CHANNEL($.guildId));
             let n = T.Ay.getGuildScheduledEvent($.guildEventId);
             return null != n && (0, I.uR)({ eventId: n.id }), !0;
         };
     if (K && x?.startsWith("/settings/")) {
-        let { default: e, trackParseSettingsUrl: t } = n(849823),
-            { openUserSettings: r } = n(840065);
+        let { openUserSettings: e } = n(858897),
+            { parseSettingsUrl: t, trackParseSettingsUrl: r } = n(718446);
         return (n) => {
             n?.preventDefault();
-            let i = e({ path: x, search: U });
-            return t(i, "link_click"), r(i.target, { analyticsLocations: s, path: i.path, searchParams: i.params }), !0;
+            let i = t({ path: x, search: U });
+            return r(i, "link_click"), e(i.target, { analyticsLocations: s, path: i.path, searchParams: i.params }), !0;
         };
     }
     if (K && x?.startsWith("/playground")) {
@@ -302,7 +302,7 @@ function K(e) {
           ? (e) => (e?.preventDefault(), (0, b.pX)(B.BVt.QUEST_HOME + (U ?? "")), !0)
           : K && x?.startsWith("/quest-preview")
             ? (e) => {
-                  if ((e?.preventDefault(), (0, N.U)({ location: H.rE.NAVIGATE_TO_QUEST_HOME_UTIL })))
+                  if ((e?.preventDefault(), (0, C.U)({ location: H.rE.NAVIGATE_TO_QUEST_HOME_UTIL })))
                       return (0, b.pX)(B.BVt.QUEST_HOME + `?tab=preview_tool&quest_id=${x.split("/").at(-1)}`), !0;
               }
             : K && x?.startsWith("/discovery/servers")

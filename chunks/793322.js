@@ -15,7 +15,7 @@ var r = n(397927),
     h = n(22007),
     m = n(378570),
     E = n(345942),
-    g = n(849823),
+    g = n(718446),
     A = n(95701),
     I = n(734057),
     T = n(189081),
@@ -167,8 +167,8 @@ function H(e) {
             break;
         case d.rD.IN_APP_NAVIGATION:
             if (e.record.type === _.t1.SETTINGS) {
-                let { openUserSettings: t } = n(840065),
-                    r = (0, g.default)({ path: e.record.path });
+                let { openUserSettings: t } = n(858897),
+                    r = (0, g.parseSettingsUrl)({ path: e.record.path });
                 (0, g.trackParseSettingsUrl)(r, "quickswitcher"), t(r.target, { path: r.path });
             } else if (e.record.type === _.t1.PLAYGROUND) {
                 if (!(0, p.mz)("quickswitcher_action")) return;

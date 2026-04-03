@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, { default: () => p, trackParseSettingsUrl: () => f });
+n.r(t), n.d(t, { parseSettingsUrl: () => h, settingsPathToRoute: () => c, trackParseSettingsUrl: () => p });
 var r = n(492462),
     i = n(954571),
     s = n(780964),
@@ -8,13 +8,17 @@ var r = n(492462),
     l = n(652215);
 let u = /[_\s]|%20/g;
 function c(e) {
-    return null == e ? "" : e.toLowerCase().replace(u, "-");
+    let t = e.split("/");
+    return l.BVt.SETTINGS(t[0], t[1]);
 }
 function d(e) {
+    return null == e ? "" : e.toLowerCase().replace(u, "-");
+}
+function _(e) {
     return Object.values(o.od).includes(e);
 }
-function _() {
-    let e = (0, a.Ci)("parseSettingsUrl");
+function f() {
+    let e = (0, a.Ci)("UserSettingsURLUtils");
     return {
         [o.od.ACCOUNT]: s.X.ACCOUNT_PANEL,
         [o.od.ACCOUNT_STANDING]: s.X.ACCOUNT_STANDING_CATEGORY,
@@ -57,7 +61,7 @@ function _() {
         [o.od.DEVELOPER_OPTIONS]: s.X.DEVELOPER_OPTIONS_PANEL,
     };
 }
-function f(e, t) {
+function p(e, t) {
     let { target: n, path: r } = e;
     null == n
         ? i.default.track(l.HAw.USER_SETTINGS_URL_PARSING_FAILED, {
@@ -66,14 +70,14 @@ function f(e, t) {
           })
         : i.default.track(l.HAw.USER_SETTINGS_URL_PARSED, { user_settings_url_path: r, user_settings_url_origin: t });
 }
-function p(e) {
+function h(e) {
     let { path: t, search: n } = e,
         [, , i, s] = t.split("?")[0].split("/"),
-        a = c(i),
-        o = [a, c(s)].filter(Boolean).join("/"),
-        l = _();
+        a = d(i),
+        o = [a, d(s)].filter(Boolean).join("/"),
+        l = f();
     return {
-        target: (d(o) ? l[o] : void 0) ?? (d(a) ? l[a] : void 0),
+        target: (_(o) ? l[o] : void 0) ?? (_(a) ? l[a] : void 0),
         path: o,
         params: (0, r.parse)(n ?? location.search),
     };

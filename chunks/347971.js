@@ -4,8 +4,8 @@ var a = n(627968),
     s = n(158954),
     l = n(397927),
     r = n(839214),
-    o = n(849823),
-    d = n(840065),
+    o = n(718446),
+    d = n(858897),
     c = n(957565),
     u = n(652215),
     m = n(355097);
@@ -21,7 +21,7 @@ function p() {
         p = i.useCallback(() => {
             let e = h.getField("urlString");
             if (null == e || "" === e) return void h.setState({ error: "URL is required" });
-            let t = (0, o.default)({ path: e });
+            let t = (0, o.parseSettingsUrl)({ path: e });
             ((0, o.trackParseSettingsUrl)(t, "devtools"), null == t.target)
                 ? h.setState({ error: "String did not match expected format" })
                 : (0, d.openUserSettings)(t.target, { path: t.path });
