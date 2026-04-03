@@ -23,7 +23,7 @@ var r = n(627968),
     y = n(985018);
 function v(e) {
     let { enabled: t } = u.A.useConfig({ location: "UserProfileStackedWidgetPreviews" });
-    return t ? (0, r.jsx)(O, { ...e }) : (0, r.jsx)(R, { ...e });
+    return t ? (0, r.jsx)(R, { ...e }) : (0, r.jsx)(C, { ...e });
 }
 function N(e) {
     let { onOpenUserProfileModal: t } = e,
@@ -37,14 +37,7 @@ function N(e) {
         }, [r, n, s]);
     return { openModal: s, onExpand: a };
 }
-function C(e, t, n, i) {
-    let s = !1;
-    for (let a of e)
-        a instanceof g.Yy &&
-            !s &&
-            (i.push((0, r.jsx)(T.A, { widgets: e, onClick: t, ...n }, "collection-breadcrumb")), (s = !0));
-}
-function R(e) {
+function C(e) {
     let { user: t, widgets: n = [], ...s } = e,
         { openModal: a, onExpand: o } = N({ user: t, widgets: n, ...s }),
         l = i.useMemo(() => n.filter((e) => e instanceof E.R), [n]),
@@ -52,83 +45,99 @@ function R(e) {
         d = (0, c.A)(t.id, u),
         _ = i.useCallback(
             (e) => {
-                let t = [];
-                for (let i of n)
-                    if (i instanceof E.R) {
-                        let n = d[i.applicationId];
+                let t = [],
+                    i = !1;
+                for (let s of n)
+                    if (s instanceof E.R) {
+                        let n = d[s.applicationId];
                         null != n &&
                             t.push(
                                 (0, r.jsx)(
                                     I.A,
                                     { type: "v1", previewData: n, onClick: a, ...e },
-                                    `application-widget-${i.applicationId}`,
+                                    `application-widget-${s.applicationId}`,
                                 ),
                             );
-                    }
-                return C(n, a, e, t), t;
+                    } else
+                        s instanceof g.Yy &&
+                            !i &&
+                            (t.push((0, r.jsx)(T.A, { widgets: n, onClick: a, ...e }, "collection-breadcrumb")),
+                            (i = !0));
+                return t;
             },
             [d, a, n],
         );
     return 0 === n.length ? null : (0, r.jsx)(A.A, { renderCards: _, heading: y.intl.string(y.t.Y55Tua), onExpand: o });
 }
-function O(e) {
+function R(e) {
     let { user: t, widgets: n = [], ...l } = e,
         { openModal: u, onExpand: c } = N({ user: t, widgets: n, ...l }),
         m = i.useMemo(() => n.filter((e) => e instanceof E.R), [n]),
-        g = i.useMemo(() => m.map((e) => e.applicationId), [m]),
-        T = (0, _.A)(g),
-        S = i.useMemo(() => new Map(T.filter(h.Vq).map((e) => [e.id, e])), [T]),
-        v = (0, d.A)(g),
-        R = i.useMemo(() => new Map(v.map((e) => [e.application_id, e])), [v]),
-        { data: O } = (0, f.P)(t.id),
-        b = i.useMemo(() => new Map(O?.map((e) => [e.application_id, e])), [O]),
-        D = (0, o.bG)([p.default], () => p.default.locale),
-        L = i.useMemo(
+        S = i.useMemo(() => m.map((e) => e.applicationId), [m]),
+        v = (0, _.A)(S),
+        C = i.useMemo(() => new Map(v.filter(h.Vq).map((e) => [e.id, e])), [v]),
+        R = (0, d.A)(S),
+        O = i.useMemo(() => new Map(R.map((e) => [e.application_id, e])), [R]),
+        { data: b } = (0, f.P)(t.id),
+        D = i.useMemo(() => new Map(b?.map((e) => [e.application_id, e])), [b]),
+        L = (0, o.bG)([p.default], () => p.default.locale),
+        w = i.useMemo(
             () =>
-                0 === S.size || 0 === R.size || 0 === b.size
-                    ? []
-                    : m
-                          .map((e) => {
-                              let t = S.get(e.applicationId),
-                                  n = R.get(e.applicationId),
-                                  r = b.get(e.applicationId);
-                              if (null == t || null == n || null == r) return null;
-                              let i = n.surfaces;
-                              if (null == i || null == i[a.m.MINI_PROFILE]) return null;
-                              let o = (0, s.VG)(r.profile);
-                              return { widget: e, surfaceConfigs: n.surfaces, data: o, application: t };
-                          })
-                          .filter(h.Vq),
-            [m, S, R, b],
+                0 === C.size || 0 === O.size || 0 === D.size
+                    ? null
+                    : new Map(
+                          m
+                              .map((e) => {
+                                  let t = C.get(e.applicationId),
+                                      n = O.get(e.applicationId),
+                                      r = D.get(e.applicationId);
+                                  if (null == t || null == n || null == r) return null;
+                                  let i = n.surfaces;
+                                  if (null == i || null == i[a.m.MINI_PROFILE]) return null;
+                                  let o = (0, s.VG)(r.profile);
+                                  return [e, { surfaceConfigs: n.surfaces, data: o, application: t }];
+                              })
+                              .filter(h.Vq),
+                      ),
+            [m, C, O, D],
         ),
-        w = i.useCallback(
+        M = i.useCallback(
             (e) => {
-                let t = [];
-                for (let { widget: n, surfaceConfigs: i, data: s, application: a } of L)
-                    t.push(
-                        (0, r.jsx)(
-                            I.A,
-                            {
-                                type: "v2",
-                                application: a,
-                                rendererProps: {
-                                    data: s,
-                                    locale: D,
-                                    surfaceConfigs: i,
-                                    applicationAssets: [],
-                                    localizedStrings: [],
-                                    isLoading: !1,
-                                    hasIdentity: !0,
+                let t = [],
+                    i = !1;
+                for (let s of n)
+                    if (s instanceof E.R) {
+                        let n = w?.get(s);
+                        if (null == n) continue;
+                        t.push(
+                            (0, r.jsx)(
+                                I.A,
+                                {
+                                    type: "v2",
+                                    application: n.application,
+                                    rendererProps: {
+                                        data: n.data,
+                                        locale: L,
+                                        surfaceConfigs: n.surfaceConfigs,
+                                        applicationAssets: [],
+                                        localizedStrings: [],
+                                        isLoading: !1,
+                                        hasIdentity: !0,
+                                    },
+                                    onClick: u,
+                                    ...e,
                                 },
-                                onClick: u,
-                                ...e,
-                            },
-                            `application-widget-${n.applicationId}`,
-                        ),
-                    );
-                return C(n, u, e, t), t;
+                                `application-widget-${s.applicationId}`,
+                            ),
+                        );
+                    } else
+                        s instanceof g.Yy &&
+                            !i &&
+                            (t.push((0, r.jsx)(T.A, { widgets: n, onClick: u, ...e }, "collection-breadcrumb")),
+                            (i = !0));
+                return t;
             },
-            [n, u, L, D],
+            [n, u, w, L],
         );
-    return 0 === n.length ? null : (0, r.jsx)(A.A, { renderCards: w, heading: y.intl.string(y.t.Y55Tua), onExpand: c });
+    return 0 === n.length ? null : (0, r.jsx)(A.A, { renderCards: M, heading: y.intl.string(y.t.Y55Tua), onExpand: c });
 }
