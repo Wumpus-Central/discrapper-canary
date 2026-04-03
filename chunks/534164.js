@@ -4,9 +4,12 @@ function t() {
     window.DiscordDevSession = { start: s, stop: r, started: !1 };
 }
 function s() {
-    null == window.GLOBAL_ENV.DEV_SESSION_KEY
+    let e = __BILLING_STANDALONE__
+        ? window.GLOBAL_ENV.DEV_SESSION_KEY_BILLING_STANDALONE
+        : window.GLOBAL_ENV.DEV_SESSION_KEY;
+    null == e
         ? console.log("Meticulous token not found")
-        : ((0, n.Lw)({ recordingToken: window.GLOBAL_ENV.DEV_SESSION_KEY, isProduction: !1 }),
+        : ((0, n.Lw)({ recordingToken: e, isProduction: !1 }),
           null != window.DiscordDevSession && (window.DiscordDevSession.started = !0),
           console.log("Meticulous session recording started"));
 }
