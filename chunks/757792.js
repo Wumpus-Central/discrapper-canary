@@ -33,8 +33,6 @@ let u = {
         [i.M.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE]: 0,
         [i.M.BOGO_2025_ANNOUNCEMENT_MODAL]: 0,
         [i.M.NITRO_DROP_REWARD]: 0,
-        [i.M.QUEST_HOME_ENTRYPOINT_ONBOARDING]: 0,
-        [i.M.QUEST_HOME_ENTRYPOINT_TAKEOVER_BADGE]: 0,
     },
     c = a.A.Millis.DAY;
 function d(e) {
