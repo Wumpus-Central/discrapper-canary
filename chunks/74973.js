@@ -10,6 +10,7 @@ class i {
     refTargetBackground;
     badgeIcon;
     badgeText;
+    hoverGradient;
     constructor(e) {
         (this.type = r.G.TAB_TOOLTIP),
             (this.title = e.title),
@@ -19,7 +20,8 @@ class i {
             (this.version = e.version),
             (this.refTargetBackground = e.refTargetBackground),
             (this.badgeIcon = e.badgeIcon),
-            (this.badgeText = e.badgeText);
+            (this.badgeText = e.badgeText),
+            (this.hoverGradient = e.hoverGradient);
     }
     static fromServer(e) {
         return new i({
@@ -28,6 +30,7 @@ class i {
             refTargetBackground: e.ref_target_background,
             badgeIcon: e.badge_icon,
             badgeText: e.badge_text,
+            hoverGradient: e.hover_gradient,
         });
     }
 }
