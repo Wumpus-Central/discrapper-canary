@@ -40,16 +40,22 @@ class a extends r.A {
     screenshotHashes;
     screenshotUrls;
     trailers;
-    supplementalData;
     l30Rank;
+    summaryLocalized;
+    media;
+    firstReleaseDate;
+    shopCollectionIds;
+    steamReleaseStatus;
+    reviews;
+    opencriticUrl;
+    supplementalData;
     get applicationId() {
         return this.id;
     }
     constructor(e) {
-        super();
-        const t = e.supplemental_game_data;
-        (this.id = e.id),
-            (this.name = t?.name ?? e.name),
+        super(),
+            (this.id = e.id),
+            (this.name = e.name),
             (this.description = e.description),
             (this.aliases = e.aliases ?? []),
             (this.executables = (e.executables ?? []).map(i.lg)),
@@ -59,44 +65,52 @@ class a extends r.A {
             (this.hook = e.hook ?? !0),
             (this.supportsOutOfProcessOverlay = i.Ay.supportsOutOfProcessOverlay(e.overlay_methods)),
             (this.thirdPartySkus = e.third_party_skus ?? []),
-            (this.themes = t?.themes ?? e.themes ?? []),
+            (this.themes = e.themes ?? []),
             (this.linkedApplications = e.linked_applications),
-            (this.genres = t?.genres ?? e.genres ?? []),
-            (this.platforms = t?.platforms ?? e.platforms ?? []),
-            (this.websites = t?.websites ?? e.websites ?? []),
+            (this.genres = e.genres ?? []),
+            (this.platforms = e.platforms ?? []),
+            (this.websites = e.websites ?? []),
             (this.companies = e.companies),
-            (this.iconHash = t?.icon_hash ?? e.icon_hash),
+            (this.iconHash = e.icon_hash),
             (this.coverImageHash = e.cover_image_hash),
             (this.bannerHash = e.banner_hash),
             (this.screenshotHashes = e.screenshot_hashes),
-            (this.screenshotUrls = t?.screenshot_urls ?? e.screenshot_urls),
+            (this.screenshotUrls = e.screenshot_urls),
             (this.trailers = e.trailers),
             (this.l30Rank = e.l30_rank),
-            null != t &&
-                (this.supplementalData = {
-                    applicationId: e.id,
-                    name: t.name,
-                    summary: t.summary,
-                    summaryLocalized: t.summary_localized,
-                    websites: t.websites,
-                    themes: t.themes,
-                    genres: t.genres,
-                    platforms: t.platforms,
-                    artwork: t.artwork_urls,
-                    screenshots: t.screenshot_urls,
-                    iconHash: t.icon_hash,
-                    coverImageUrl: t.cover_image_url,
-                    firstReleaseDate: t.first_release_date,
-                    publishers: t.publisher_names ?? [],
-                    developers: t.developer_names ?? [],
-                    trailers: e.trailers,
-                    shopCollectionIds: e.shop_collection_ids,
-                    steamReleaseStatus: t.steam_release_status,
-                    reviews: s(t.reviews),
-                    opencriticUrl: t.opencritic_url,
-                    steam_id: t.steam_id,
-                    announcementsChannelId: t.announcements_channel_id,
-                    l30Rank: t.l30_rank,
-                });
+            (this.summaryLocalized = e.summary_localized),
+            (this.media = e.media),
+            (this.firstReleaseDate = e.first_release_date),
+            (this.shopCollectionIds = e.shop_collection_ids),
+            (this.steamReleaseStatus = e.steam_release_status),
+            (this.reviews = s(e.reviews)),
+            (this.opencriticUrl = e.opencritic_url);
+        const t = e.supplemental_game_data;
+        null != t &&
+            (this.supplementalData = {
+                applicationId: e.id,
+                name: t.name,
+                summary: t.summary,
+                summaryLocalized: t.summary_localized,
+                websites: t.websites,
+                themes: t.themes,
+                genres: t.genres,
+                platforms: t.platforms,
+                artwork: t.artwork_urls,
+                screenshots: t.screenshot_urls,
+                iconHash: t.icon_hash,
+                coverImageUrl: t.cover_image_url,
+                firstReleaseDate: t.first_release_date,
+                publishers: t.publisher_names ?? [],
+                developers: t.developer_names ?? [],
+                trailers: e.trailers,
+                shopCollectionIds: e.shop_collection_ids,
+                steamReleaseStatus: t.steam_release_status,
+                reviews: s(t.reviews),
+                opencriticUrl: t.opencritic_url,
+                steam_id: t.steam_id,
+                announcementsChannelId: t.announcements_channel_id,
+                l30Rank: t.l30_rank,
+            });
     }
 }

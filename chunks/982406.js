@@ -1,23 +1,23 @@
-n.d(t, { A: () => _ });
-var i = n(627968),
-    a = n(64700),
-    r = n(503698),
-    l = n.n(r),
-    s = n(776231),
-    o = n(664111),
-    d = n(67281),
-    c = n(838541),
-    u = n(878159);
-function _(e) {
-    let { attachment: t, posterUrl: n, guildId: r, className: _ } = e,
-        m = t.width ?? 0,
-        h = t.height ?? 0,
-        p = m >= h ? "landscape" : "portrait",
-        g = (0, s.AE)({ src: n, width: m, height: h }),
-        A = a.useCallback(
+a.d(t, { A: () => u });
+var n = a(627968),
+    r = a(64700),
+    o = a(503698),
+    i = a.n(o),
+    c = a(776231),
+    l = a(664111),
+    _ = a(67281),
+    s = a(838541),
+    d = a(878159);
+function u(e) {
+    let { attachment: t, posterUrl: a, guildId: o, className: u } = e,
+        p = t.width ?? 0,
+        m = t.height ?? 0,
+        b = p >= m ? "landscape" : "portrait",
+        f = (0, c.AE)({ src: a, width: p, height: m }),
+        C = r.useCallback(
             (e) => {
-                let { playerState: n, isControlBarExpanded: a } = e;
-                return (0, i.jsx)(d.A, {
+                let { playerState: a, isControlBarExpanded: r } = e;
+                return (0, n.jsx)(_.A, {
                     createdAt: null != t.clip_created_at ? Date.parse(t.clip_created_at) : void 0,
                     participantIds:
                         t.clip_participants?.map((e) => {
@@ -26,26 +26,27 @@ function _(e) {
                         }) ?? [],
                     applicationId: t.application?.id,
                     title: t.title,
-                    guildId: r,
-                    playerState: n,
-                    isControlBarExpanded: a,
+                    guildId: o,
+                    playerState: a,
+                    isControlBarExpanded: r,
                 });
             },
-            [t, r],
+            [t, o],
         );
-    return (0, i.jsx)("div", {
-        className: l()(u.k, _),
-        style: { aspectRatio: `${m} / ${h}`, maxHeight: c.Rk },
-        children: (0, i.jsx)(o.A, {
+    return (0, n.jsx)("div", {
+        className: i()(d.k, u),
+        style: { aspectRatio: `${p} / ${m}`, maxHeight: s.Rk },
+        children: (0, n.jsx)(l.A, {
             src: t.url,
             downloadUrl: t.url,
             downloadContentType: t.content_type,
-            poster: g,
+            poster: f,
             posterPlaceholder: t.placeholder,
             posterPlaceholderVersion: t.placeholder_version,
             active: !1,
-            orientation: p,
-            renderPersistentOverlay: A,
+            orientation: b,
+            loadingSpinnerPosition: "center",
+            renderPersistentOverlay: C,
             targetTimeSec: 1 / 0,
             parentTransitionState: null,
             onOptimisticProgressUpdate: () => {},

@@ -48,6 +48,7 @@ e.exports = {
     J5: "endScreenIcon_b824c5",
     SU: "verticalDivider_b824c5",
     S: "loadingSpinner_b824c5",
+    F: "centered_b824c5",
     o$: "captionContainer_b824c5",
     qh: "captionText_b824c5",
     yf: "playPausePopCont_b824c5",
