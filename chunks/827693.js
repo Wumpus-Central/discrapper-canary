@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => x, R: () => _ });
 var i = n(627968),
     s = n(311907),
     l = n(397927),
@@ -9,58 +9,67 @@ var i = n(627968),
     c = n(473145),
     u = n(652215),
     m = n(985018),
-    _ = n(639317);
-function g(e) {
+    g = n(927552);
+function _(e) {
+    let { guild: t, className: n } = e,
+        { total: s } = (0, o.A)(t.id);
+    return (0, i.jsxs)("div", {
+        className: n ?? g.OA,
+        children: [
+            (0, i.jsx)(a.Ay, { className: g.$f, guild: t, size: a.Ay.Sizes.MEDIUM }),
+            (0, i.jsxs)("div", {
+                className: g.gI,
+                children: [
+                    (0, i.jsx)(l.Text, {
+                        variant: "heading-md/semibold",
+                        color: "text-default",
+                        tag: "span",
+                        children: t.name,
+                    }),
+                    (0, i.jsxs)("div", {
+                        className: g.ew,
+                        children: [
+                            (0, i.jsxs)("div", {
+                                className: g.QW,
+                                children: [
+                                    (0, i.jsx)(l._Jp, {
+                                        className: g.Wz,
+                                        color: l.LU0.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH,
+                                    }),
+                                    (0, i.jsx)(l.Text, {
+                                        variant: "text-xs/semibold",
+                                        color: "text-subtle",
+                                        children: m.intl.format(m.t["pob/cL"], { subscriptions: s }),
+                                    }),
+                                ],
+                            }),
+                            t.premiumTier !== u.TVA.NONE &&
+                                (0, i.jsxs)(i.Fragment, {
+                                    children: [
+                                        (0, i.jsx)("div", { className: g.zk }),
+                                        (0, i.jsx)(l.Text, {
+                                            variant: "text-xs/semibold",
+                                            color: "text-subtle",
+                                            children: (0, c.gb)(t.premiumTier, { useLevels: !1 }),
+                                        }),
+                                    ],
+                                }),
+                        ],
+                    }),
+                ],
+            }),
+        ],
+    });
+}
+function x(e) {
     let { guildId: t } = e,
-        n = (0, s.bG)([d.A], () => d.A.getGuild(t), [t]),
-        { total: g } = (0, o.A)(n?.id);
+        n = (0, s.bG)([d.A], () => d.A.getGuild(t), [t]);
     return null == n
         ? null
         : (0, i.jsxs)("div", {
-              className: _.Nr,
+              className: g.Nr,
               children: [
-                  (0, i.jsxs)("div", {
-                      className: _.OA,
-                      children: [
-                          (0, i.jsx)(a.Ay, { className: _.$f, guild: n, size: a.Ay.Sizes.LARGER }),
-                          (0, i.jsxs)("div", {
-                              className: _.gI,
-                              children: [
-                                  (0, i.jsx)(l.Text, {
-                                      variant: "heading-md/semibold",
-                                      color: "text-default",
-                                      tag: "span",
-                                      children: n.name,
-                                  }),
-                                  (0, i.jsxs)("div", {
-                                      className: _.ew,
-                                      children: [
-                                          (0, i.jsxs)("div", {
-                                              className: _.QW,
-                                              children: [
-                                                  (0, i.jsx)(l._Jp, {
-                                                      className: _.Wz,
-                                                      color: l.LU0.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH,
-                                                  }),
-                                                  (0, i.jsx)(l.Text, {
-                                                      variant: "text-xs/semibold",
-                                                      color: "text-subtle",
-                                                      children: m.intl.format(m.t["pob/cL"], { subscriptions: g }),
-                                                  }),
-                                              ],
-                                          }),
-                                          (0, i.jsx)("div", { className: _.zk }),
-                                          (0, i.jsx)(l.Text, {
-                                              variant: "text-xs/semibold",
-                                              color: "text-subtle",
-                                              children: (0, c.gb)(n.premiumTier, { useLevels: !1 }),
-                                          }),
-                                      ],
-                                  }),
-                              ],
-                          }),
-                      ],
-                  }),
+                  (0, i.jsx)(_, { guild: n }),
                   (0, i.jsx)(l.Button, {
                       variant: "secondary",
                       size: "sm",
