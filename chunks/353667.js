@@ -50,7 +50,7 @@ function S(e) {
         children: (0, i.jsx)(n, {}),
     });
 }
-function E(e) {
+function b(e) {
     let { panelKey: t, notice: n, children: l } = e,
         a = s.useRef(null);
     return (0, i.jsx)(f, {
@@ -72,7 +72,7 @@ function E(e) {
         ),
     });
 }
-function b(e) {
+function E(e) {
     let { layout: t, decoration: n } = e;
     return (0, i.jsxs)("div", {
         className: T.LZ,
@@ -107,7 +107,7 @@ function C(e) {
         i.set(t, n[0].key), _.A.setState({ currentTabKeys: i });
     }, [n, t]);
     let o = n.find((e) => e.key === r) ?? n[0];
-    return (0, i.jsxs)(E, {
+    return (0, i.jsxs)(b, {
         panelKey: t,
         notice: l,
         children: [
@@ -130,19 +130,13 @@ function C(e) {
                     return (0, i.jsx)(d.VQ0.Item, { id: t, children: n() }, t);
                 }),
             }),
-            (0, i.jsx)(d.VQ0.Panel, {
-                id: r,
-                children:
-                    null != o.StronglyDiscouragedCustomComponent
-                        ? (0, i.jsx)(o.StronglyDiscouragedCustomComponent, {})
-                        : (0, i.jsx)(b, { layout: o.layout, decoration: a }),
-            }),
+            (0, i.jsx)(d.VQ0.Panel, { id: r, children: (0, i.jsx)(E, { layout: o.layout, decoration: a }) }),
         ],
     });
 }
 function N(e) {
     let { panelKey: t, notice: n, decoration: s, layout: l } = e;
-    return (0, i.jsx)(E, { panelKey: t, notice: n, children: (0, i.jsx)(b, { layout: l, decoration: s }) });
+    return (0, i.jsx)(b, { panelKey: t, notice: n, children: (0, i.jsx)(E, { layout: l, decoration: s }) });
 }
 function v(e) {
     let { node: t } = e,
