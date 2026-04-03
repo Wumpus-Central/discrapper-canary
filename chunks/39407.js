@@ -211,7 +211,7 @@ function W(e) {
                                     }),
                                     el?.profileEffect != null &&
                                         (0, r.jsx)(_.A, { skuId: el?.profileEffect?.skuId, isHovering: eh }),
-                                    null != eu && (0, r.jsx)(p.A, { frame: eu }),
+                                    null != eu && (0, r.jsx)(p.A, { frame: eu, layout: "POPOUT" }),
                                 ],
                             }),
                         }),
