@@ -1,10 +1,12 @@
-n.d(e, { A: () => u });
-var i = n(984083),
-    r = n(142120),
-    l = n(366811),
-    s = n(612716),
-    a = n(976860),
-    o = n(652215);
+"use strict";
+n.d(t, { A: () => d });
+var r = n(984083),
+    i = n(142120),
+    s = n(366811),
+    a = n(612716),
+    o = n(976860),
+    l = n(652215);
+let u = 10;
 class c {
     unlistenHistory;
     unlistenKeyboardChange;
@@ -14,88 +16,88 @@ class c {
     timer = -1;
     connected = !1;
     initialize() {
-        this.cleanup(), (this.unlistenHistory = (0, a.JK)().listen(this.handleRouteChange));
-        let { pathname: t } = (0, a.JK)().location;
-        l.A.getState().resetPath(t),
-            (this.unlistenKeyboardChange = l.A.subscribe(this.handleKeybindRouteChange)),
-            r.A.addChangeListener(this.handleConnectionChange);
+        this.cleanup(), (this.unlistenHistory = (0, o.JK)().listen(this.handleRouteChange));
+        let { pathname: e } = (0, o.JK)().location;
+        s.A.getState().resetPath(e),
+            (this.unlistenKeyboardChange = s.A.subscribe(this.handleKeybindRouteChange)),
+            i.A.addChangeListener(this.handleConnectionChange);
     }
     handleConnectionChange = () => {
-        let t = r.A.isConnected(),
-            e = t && !this.connected;
-        (this.connected = t),
-            e && ((this.routeChangeCount = 0), this.executeRouteRewrites((0, a.JK)().location, "REPLACE"));
+        let e = i.A.isConnected(),
+            t = e && !this.connected;
+        (this.connected = e),
+            t && ((this.routeChangeCount = 0), this.executeRouteRewrites((0, o.JK)().location, "REPLACE"));
     };
-    handleRouteChange = (t, e) => {
-        if ("POP" !== e) {
-            if (this.executeRouteRewrites(t, e)) return;
-            if (!(0, s.o)(t)) return void (0, a.bG)(o.BVt.ME);
+    handleRouteChange = (e, t) => {
+        if ("POP" !== t) {
+            if (this.executeRouteRewrites(e, t)) return;
+            if (!(0, a.o)(e)) return void (0, o.bG)(l.BVt.ME);
         }
-        let n = l.A.getState();
-        for (let i of (n.basePath !== t.pathname && n.resetPath(t.pathname), this.listeners))
+        let n = s.A.getState();
+        for (let r of (n.basePath !== e.pathname && n.resetPath(e.pathname), this.listeners))
             try {
-                i(t, e);
-            } catch (t) {
-                console.warn("RouteManager.listen: A route listener has caused an error", t.message);
+                r(e, t);
+            } catch (e) {
+                console.warn("RouteManager.listen: A route listener has caused an error", e.message);
             }
         this.routeChangeCount = 0;
     };
-    executeRouteRewrites(t, e) {
-        if (((this.routeChangeCount += 1), this.routeChangeCount < 10))
+    executeRouteRewrites(e, t) {
+        if (((this.routeChangeCount += 1), this.routeChangeCount < u))
             for (let n of this.rewrites) {
-                let r = (0, a.JK)().location.pathname,
-                    l = n(t, e);
-                if (null != l)
+                let i = (0, o.JK)().location.pathname,
+                    s = n(e, t);
+                if (null != s)
                     return (
-                        (0, i.Z)({
+                        (0, r.Z)({
                             message: "RouteManager.handleRouteChange: A route rewrite is replacing the current route",
-                            data: { replacePath: l.path, previousPath: r },
+                            data: { replacePath: s.path, previousPath: i },
                         }),
-                        (0, a.bG)(l.path, l.state),
+                        (0, o.bG)(s.path, s.state),
                         !0
                     );
             }
         else throw Error("RouteManager: Something has gone horribly wrong with rewrites");
         return !1;
     }
-    handleKeybindRouteChange = (t) => {
-        let { path: e } = t;
-        -1 !== this.timer && clearTimeout(this.timer), null != e && (this.timer = setTimeout(this.flushRoute, 200));
+    handleKeybindRouteChange = (e) => {
+        let { path: t } = e;
+        -1 !== this.timer && clearTimeout(this.timer), null != t && (this.timer = setTimeout(this.flushRoute, 200));
     };
     flushRoute = () => {
         clearTimeout(this.timer);
-        let t = l.A.getState();
-        null != t.path && (0, a.pX)(t.path);
+        let e = s.A.getState();
+        null != e.path && (0, o.pX)(e.path);
     };
     cleanup() {
         this.unlistenHistory?.(),
             (this.unlistenHistory = void 0),
             this.unlistenKeyboardChange?.(),
             (this.unlistenKeyboardChange = void 0),
-            r.A.removeChangeListener(this.handleConnectionChange);
+            i.A.removeChangeListener(this.handleConnectionChange);
     }
-    addRouteChangeListener(t) {
+    addRouteChangeListener(e) {
         return (
-            null != this.unlistenHistory && t((0, a.JK)().location, "REPLACE"),
-            this.listeners.add(t),
-            () => this.removeRouteChangeListener(t)
+            null != this.unlistenHistory && e((0, o.JK)().location, "REPLACE"),
+            this.listeners.add(e),
+            () => this.removeRouteChangeListener(e)
         );
     }
-    addRouteRewriter(t) {
+    addRouteRewriter(e) {
         if (null != this.unlistenHistory) {
-            let e = t((0, a.JK)().location, (0, a.JK)().action);
-            null != e && (0, a.bG)(e.path, e.state);
+            let t = e((0, o.JK)().location, (0, o.JK)().action);
+            null != t && (0, o.bG)(t.path, t.state);
         }
-        return this.rewrites.add(t), () => this.removeRouteRewriter(t);
+        return this.rewrites.add(e), () => this.removeRouteRewriter(e);
     }
-    removeRouteChangeListener(t) {
-        this.listeners.delete(t);
+    removeRouteChangeListener(e) {
+        this.listeners.delete(e);
     }
-    removeRouteRewriter(t) {
-        this.rewrites.delete(t);
+    removeRouteRewriter(e) {
+        this.rewrites.delete(e);
     }
     getHistory() {
-        return (0, a.JK)();
+        return (0, o.JK)();
     }
 }
-let u = new c();
+let d = new c();
