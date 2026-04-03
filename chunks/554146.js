@@ -578,6 +578,7 @@ var r = (function (e) {
             (e[(e.GAME_SHOP_NEW_DROP_POPOVER = 725)] = "GAME_SHOP_NEW_DROP_POPOVER"),
             (e[(e.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL = 726)] = "PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL"),
             (e[(e.WISHLISTING_NITRO_TAB_NEW_BADGE = 727)] = "WISHLISTING_NITRO_TAB_NEW_BADGE"),
+            (e[(e.QUEST_HOME_NEW_QUEST_BADGE = 728)] = "QUEST_HOME_NEW_QUEST_BADGE"),
             e
         );
     })({}),
