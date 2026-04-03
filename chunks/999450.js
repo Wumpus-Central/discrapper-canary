@@ -1,47 +1,45 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => f });
 var a = n(627968),
-    i = n(64700),
-    l = n(877227),
-    r = n(793574),
-    s = n(688810),
-    c = n(44724),
+    l = n(64700),
+    i = n(793574),
+    r = n(688810),
+    s = n(44724),
     o = n(317560),
-    d = n(563988),
-    u = n(409626),
-    m = n(305080),
-    x = n(954506),
-    h = n(652215),
-    f = n(985018);
-function g(e) {
+    c = n(563988),
+    d = n(409626),
+    u = n(305080),
+    m = n(954506),
+    x = n(652215),
+    h = n(985018);
+function f(e) {
     let { trackAction: t } = e,
-        { socialLayerStorefrontRecommendationsData: n, closeModal: g } = (0, m.c)(),
-        { analyticsLocations: _ } = (0, s.Ay)([r.A.GAME_PROFILE]),
-        p = i.useCallback(() => {
-            n?.guildId != null && (t(u.Ws.GameShop), g(), (0, c.default)({ guildId: n.guildId }));
-        }, [n, t, g]),
-        v = i.useCallback(
+        { socialLayerStorefrontRecommendationsData: n, closeModal: f } = (0, u.c)(),
+        { analyticsLocations: g } = (0, r.Ay)([i.A.GAME_PROFILE]),
+        p = l.useCallback(() => {
+            n?.guildId != null && (t(d.Ws.GameShop), f(), (0, s.default)({ guildId: n.guildId }));
+        }, [n, t, f]),
+        _ = l.useCallback(
             (e, a) => {
-                let i = n?.guildId;
-                null != i &&
-                    (t(u.Ws.GameShopItem),
-                    g(),
+                let l = n?.guildId;
+                null != l &&
+                    (t(d.Ws.GameShopItem),
                     (0, o.R)({
                         skuId: e,
                         applicationId: a,
                         isStorefront: !1,
-                        analyticsLocations: _,
+                        analyticsLocations: g,
                         onClose: () => {
-                            (0, l.JK)().location.pathname.indexOf(h.BVt.CHANNELS_GAME_SHOP(i)) >= 0 && g();
+                            location.pathname.indexOf(x.BVt.CHANNELS_GAME_SHOP(l)) >= 0 && f();
                         },
                     }));
             },
-            [t, g, _, n],
+            [t, f, g, n],
         );
     if (null == n) return null;
-    let { skuIds: A } = n;
-    return (0, a.jsx)(x.A, {
-        title: f.intl.string(f.t.WDdlUb),
+    let { skuIds: v } = n;
+    return (0, a.jsx)(m.A, {
+        title: h.intl.string(h.t.WDdlUb),
         onClickViewAll: p,
-        children: (0, a.jsx)(d.R, { skuIds: A, analyticsLocations: _, onCardClick: v }),
+        children: (0, a.jsx)(c.R, { skuIds: v, analyticsLocations: g, onCardClick: _ }),
     });
 }
