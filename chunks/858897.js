@@ -81,7 +81,15 @@ async function f(e) {
                     ]).then(n.bind(n, 55622));
                     return (n) => (0, r.jsx)(t, { ...n, target: e });
                 },
-                { modalKey: _, stackingBehavior: f, stackNextByDefault: !0, contextKey: i.SYi },
+                {
+                    modalKey: _,
+                    stackingBehavior: f,
+                    stackNextByDefault: !0,
+                    contextKey: i.SYi,
+                    onCloseRequest: () => {
+                        null != o.A.closeWithValidation ? o.A.closeWithValidation() : (0, i.OoC)(_, i.SYi);
+                    },
+                },
             );
         h?.();
     }

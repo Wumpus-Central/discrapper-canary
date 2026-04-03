@@ -7,11 +7,15 @@ var r = n(775602),
 class o {
     accessibleDirectory = null;
     navigateWithValidation = null;
+    closeWithValidation = null;
     onViewChange = null;
     accordionExpandResolvers = new Map();
     init(e) {
-        let { accessibleDirectory: t, navigateWithValidation: n, onViewChange: r } = e;
-        (this.accessibleDirectory = t), (this.navigateWithValidation = n), (this.onViewChange = r);
+        let { accessibleDirectory: t, navigateWithValidation: n, closeWithValidation: r, onViewChange: i } = e;
+        (this.accessibleDirectory = t),
+            (this.navigateWithValidation = n),
+            (this.closeWithValidation = r),
+            (this.onViewChange = i);
     }
     async maybeWaitForAccordionExpansion(e) {
         null != e &&
@@ -95,7 +99,8 @@ class o {
         (this.accessibleDirectory = null),
             (this.navigateWithValidation = null),
             (this.onViewChange = null),
-            this.accordionExpandResolvers.clear();
+            this.accordionExpandResolvers.clear(),
+            (this.closeWithValidation = null);
     }
 }
 let l = new o();
