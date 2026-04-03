@@ -1,13 +1,13 @@
-l.d(t, { W: () => s });
+l.d(t, { W: () => o });
 var a = l(64700),
     n = l(311907),
     r = l(786953),
     i = l(505274);
-function s() {
+function o(e) {
     let {
-        balance: e,
-        isFetching: t,
-        error: l,
+        balance: t,
+        isFetching: l,
+        error: o,
     } = (0, n.cf)([i.A], () => ({
         balance: i.A.balance,
         isFetching: i.A.isFetchingBalance,
@@ -15,8 +15,8 @@ function s() {
     }));
     return (
         (0, a.useEffect)(() => {
-            null !== e || null !== l || t || (0, r.Bf)();
-        }, [e, l, t]),
-        { balance: e, isFetching: t, error: l }
+            e?.disableFetch || null !== t || null !== o || i.A.isFetchingBalance || (0, r.Bf)();
+        }, [t, o, e?.disableFetch]),
+        { balance: t, isFetching: l, error: o }
     );
 }
