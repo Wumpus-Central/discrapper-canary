@@ -2,8 +2,8 @@
 let r;
 n.d(t, { d: () => _ });
 var i = n(627968),
-    a = n(64700),
-    s = n(745262),
+    s = n(64700),
+    a = n(745262),
     o = n(158954);
 let l = 1,
     u = 15,
@@ -30,15 +30,15 @@ let l = 1,
         "border-width",
         "box-sizing",
     ],
-    _ = a.forwardRef(function (e, t) {
-        let { style: n, autoFocus: r = !1, disabled: s = !1, autoCorrect: l = "off", ...u } = e,
-            c = a.useRef(null),
+    _ = s.forwardRef(function (e, t) {
+        let { style: n, autoFocus: r = !1, disabled: a = !1, autoCorrect: l = "off", ...u } = e,
+            c = s.useRef(null),
             d = (e) => {
                 (c.current = e), "function" == typeof t ? t(c.current) : null != t && (t.current = e);
             },
-            [_, p] = a.useState(() => f(c.current, u.rows, u.value));
+            [_, p] = s.useState(() => f(c.current, u.rows, u.value));
         return (
-            a.useLayoutEffect(() => {
+            s.useLayoutEffect(() => {
                 p(f(c.current, u.rows, u.value));
             }, [u.rows, u.value]),
             (0, i.jsx)(o.vN3, {
@@ -47,7 +47,7 @@ let l = 1,
                     ref: d,
                     style: { ...n, height: _ },
                     autoFocus: r,
-                    disabled: s,
+                    disabled: a,
                     autoCorrect: l,
                 }),
             })
@@ -57,30 +57,30 @@ function f(e, t, n) {
     if (null == e) return;
     (n = n ?? e.value),
         null == r && null != document.body && ((r = document.createElement("textarea")), document.body.appendChild(r));
-    let { paddingSize: i, borderSize: a, boxSizing: s, sizingStyle: o } = h(e),
-        { minHeight: l, maxHeight: u } = p(o, i, a, s);
+    let { paddingSize: i, borderSize: s, boxSizing: a, sizingStyle: o } = h(e),
+        { minHeight: l, maxHeight: u } = p(o, i, s, a);
     r.setAttribute("style", o + ";" + c),
         (r.value = n),
         null != t ? r.setAttribute("rows", `${t}`) : r.removeAttribute("rows");
-    let d = r.scrollHeight;
-    return "border-box" === s ? (d += a) : "content-box" === s && (d -= i), (d = Math.max(l, Math.min(d, u)));
+    let d = Math.ceil(r.scrollHeight + 1);
+    return "border-box" === a ? (d += s) : "content-box" === a && (d -= i), (d = Math.max(l, Math.min(d, u)));
 }
 function p(e, t, n, i) {
     null == r && null != document.body && ((r = document.createElement("textarea")), document.body.appendChild(r)),
         r.setAttribute("style", e + ";" + c),
         r.setAttribute("rows", `${l}`),
         (r.value = "");
-    let a = r.scrollHeight;
-    r.setAttribute("rows", `${u}`), (r.value = "");
     let s = r.scrollHeight;
+    r.setAttribute("rows", `${u}`), (r.value = "");
+    let a = r.scrollHeight;
     return (
-        "border-box" === i ? ((a += n), (s += n)) : "content-box" === i && ((a -= t), (s -= t)),
-        { minHeight: a, maxHeight: s }
+        "border-box" === i ? ((s += n), (a += n)) : "content-box" === i && ((s -= t), (a -= t)),
+        { minHeight: s, maxHeight: a }
     );
 }
 function h(e) {
     let t = window.getComputedStyle(e),
-        n = (0, s.G)(
+        n = (0, a.G)(
             t.getPropertyValue("box-sizing"),
             t.getPropertyValue("-moz-box-sizing"),
             t.getPropertyValue("-webkit-box-sizing"),
