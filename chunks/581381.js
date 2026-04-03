@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => ea, MX: () => L });
+n.d(t, { Ay: () => es, MX: () => D });
 var r = n(294845),
     i = n.n(r),
     s = n(543222),
@@ -24,33 +24,32 @@ var r = n(294845),
     v = n(457699),
     N = n(811602),
     C = n(282108),
-    b = n(797019),
-    R = n(493364),
+    R = n(797019),
     O = n(652215),
-    D = n(355097);
-let L = 3e3,
-    w = 800,
-    x = {};
+    b = n(355097);
+let D = 3e3,
+    L = 800,
+    w = {};
 function M(e) {
     return `${e.channel_id}:${e.id}`;
 }
-function P() {
-    Object.values(x).forEach((e) => {
+function x() {
+    Object.values(w).forEach((e) => {
         let { timeout: t } = e;
         clearTimeout(t);
     }),
-        (x = {});
+        (w = {});
 }
-function k(e, t) {
+function P(e, t) {
     if (null == e.id || null == e.channel_id) return !1;
     let n = M(e);
-    if (null != x[n]) {
-        let { timeout: r, setAt: i } = x[n];
-        return U(e, t, i), clearTimeout(r), delete x[n], !0;
+    if (null != w[n]) {
+        let { timeout: r, setAt: i } = w[n];
+        return k(e, t, i), clearTimeout(r), delete w[n], !0;
     }
     return !1;
 }
-function U(e, t, n) {
+function k(e, t, n) {
     if (t === y.VL.UPDATE) {
         let t = e.attachments ?? [],
             n = e.embeds ?? [],
@@ -67,8 +66,8 @@ function U(e, t, n) {
     }
     (0, y.rA)(n, t);
 }
-function G(e) {
-    if (k(e, y.VL.TIMEOUT)) {
+function U(e) {
+    if (P(e, y.VL.TIMEOUT)) {
         let t = m.A.getMessage(e.channel_id, e.id);
         if (null != t) {
             let { attachmentIds: n, embedIds: r } = (0, C.M)(t);
@@ -77,7 +76,7 @@ function G(e) {
         l.h.dispatch({ type: "MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT", messageId: e.id, channelId: e.channel_id });
     }
 }
-let F = (e, t) => {
+let G = (e, t) => {
     if (0 !== e.length) {
         if (t) return void (0, T.jd)(e);
         (0, T.j1)(
@@ -86,36 +85,36 @@ let F = (e, t) => {
         );
     }
 };
-function V(e) {
-    return null == x[M(e)];
+function F(e) {
+    return null == w[M(e)];
 }
-function B(e, t) {
+function V(e, t) {
     let { forceBatchScan: n = !1, jitter: r = !1 } = t ?? {},
         i = t?.isMessageUpdate
-            ? e.filter((e) => (0, C.s9)(e) && (0, C.mS)(e)).filter(V)
-            : e.filter((e) => (0, C.s9)(e)).filter(V);
+            ? e.filter((e) => (0, C.s9)(e) && (0, C.mS)(e)).filter(F)
+            : e.filter((e) => (0, C.s9)(e)).filter(F);
     i.forEach((e) => {
         let t = M(e);
-        null == x[t] &&
+        null == w[t] &&
             (d.A.increment({ name: o.K.EXPLICIT_MEDIA_SCAN_CLIENT_TIMEOUT_CREATE }),
-            (x[t] = {
+            (w[t] = {
                 setAt: Date.now(),
                 timeout: setTimeout(() => {
-                    G(e);
-                }, L),
+                    U(e);
+                }, D),
             }));
     });
     let s = n || new Set(i.map((e) => e.channel_id)).size > 1;
     r
         ? setTimeout(() => {
-              F(
-                  i.filter((e) => null != x[M(e)]),
+              G(
+                  i.filter((e) => null != w[M(e)]),
                   s,
               );
-          }, Math.random() * w)
-        : F(i, s);
+          }, Math.random() * L)
+        : G(i, s);
 }
-function H(e) {
+function B(e) {
     let t = {},
         n = {};
     return (
@@ -168,7 +167,7 @@ function H(e) {
         { channelLookup: t, messageLookup: n }
     );
 }
-function j(e) {
+function H(e) {
     function t(e) {
         return null != e;
     }
@@ -192,10 +191,10 @@ function j(e) {
     r.length > 0 && (n = [...n, ...r]);
     let i = a()(n, (e, t) => e.id === t.id && e.channel_id === t.channel_id),
         s = i.filter((e) => (0, C.mS)(e)),
-        o = H(i);
+        o = B(i);
     return { messagesPendingScan: s, attributesByMessageId: o.messageLookup, attributesByChannelId: o.channelLookup };
 }
-function Y(e) {
+function j(e) {
     function t(e) {
         return null != e;
     }
@@ -217,11 +216,11 @@ function Y(e) {
     r.length > 0 && (n = [...n, ...r]);
     let i = a()(n, (e, t) => e.id === t.id && e.channel_id === t.channel_id),
         s = i.filter((e) => (0, C.mS)(e)),
-        o = H(i);
+        o = B(i);
     return { messagesPendingScan: s, attributesByChannelId: o.channelLookup, attributesByMessageId: o.messageLookup };
 }
-function W(e, t) {
-    let { messagesPendingScan: n, attributesByChannelId: r, attributesByMessageId: i } = j(e);
+function Y(e, t) {
+    let { messagesPendingScan: n, attributesByChannelId: r, attributesByMessageId: i } = H(e);
     return (
         A.default.entries(r).forEach((e) => {
             let [t, n] = e;
@@ -233,7 +232,7 @@ function W(e, t) {
                 numOfEmbedsPendingScan: n.numOfEmbedsPendingScan,
             });
         }),
-        (0, b.y)() &&
+        (0, R.y)() &&
             A.default.entries(i).forEach((e) => {
                 let [t, n] = e;
                 (0, y.bz)({
@@ -249,11 +248,11 @@ function W(e, t) {
                     numOfSelfHarmEmbeds: n.numOfSelfHarmEmbeds,
                 });
             }),
-        n.length > 0 && (B(n, t), !0)
+        n.length > 0 && (V(n, t), !0)
     );
 }
-function K(e) {
-    let { messagesPendingScan: t, attributesByChannelId: n, attributesByMessageId: r } = Y(e);
+function W(e) {
+    let { messagesPendingScan: t, attributesByChannelId: n, attributesByMessageId: r } = j(e);
     return (
         A.default.entries(n).forEach((e) => {
             let [t, n] = e;
@@ -265,7 +264,7 @@ function K(e) {
                 numOfEmbedsPendingScan: n.numOfEmbedsPendingScan,
             });
         }),
-        (0, b.y)() &&
+        (0, R.y)() &&
             A.default.entries(r).forEach((e) => {
                 let [t, n] = e;
                 (0, y.bz)({
@@ -281,10 +280,10 @@ function K(e) {
                     numOfSelfHarmEmbeds: n.numOfSelfHarmEmbeds,
                 });
             }),
-        t.length > 0 && (B(t), !0)
+        t.length > 0 && (V(t), !0)
     );
 }
-function z(e) {
+function K(e) {
     let { message: t } = e;
     if (
         null == t.channel_id ||
@@ -299,13 +298,13 @@ function z(e) {
             m.A.getMessage(t.channel_id, t.id) ??
             v.A.getMessage(t.id, t.channel_id) ??
             _.A.getMessage(t.channel_id, t.id)?.message;
-        null == e || (0, C.mS)((0, c.IU)(e, t)) || k(e, y.VL.UPDATE);
+        null == e || (0, C.mS)((0, c.IU)(e, t)) || P(e, y.VL.UPDATE);
     }
     let n = E.A.getChannelId(),
         r = p.Ay.getCurrentSidebarChannelId(n);
     if (t.channel_id !== n && t.channel_id !== r) return !1;
     let i = m.A.getMessage(t.channel_id, t.id);
-    return null != i && W([i], { isMessageUpdate: !0 });
+    return null != i && Y([i], { isMessageUpdate: !0 });
 }
 function $(e) {
     let { channelId: t, message: n, optimistic: r, isPushNotification: i } = e;
@@ -317,82 +316,82 @@ function $(e) {
     if (!o) return !1;
     let u = l?.isPrivate() ?? !0,
         c = l?.memberCount == null || l?.memberCount > 100;
-    return W([n], { jitter: u && c });
+    return Y([n], { jitter: u && c });
 }
-function q(e) {
+function z(e) {
     let { channelId: t, messages: n } = e;
     if (null == t || null == n) return !1;
     let r = E.A.getChannelId(),
         i = p.Ay.getCurrentSidebarChannelId(r);
-    return (t === r || t === i) && W(n);
+    return (t === r || t === i) && Y(n);
 }
-function Z(e) {
+function q(e) {
     let { data: t } = e,
         n = !1;
     return (
         t.forEach((e) => {
             let { messages: t } = e,
                 r = i()(t);
-            n = W(a()(r, (e, t) => e.id === t.id && e.channel_id === t.channel_id)) || n;
+            n = Y(a()(r, (e, t) => e.id === t.id && e.channel_id === t.channel_id)) || n;
         }),
         n
     );
 }
-function X(e) {
+function Z(e) {
     let { pins: t } = e;
-    return W(
+    return Y(
         t.map((e) => {
             let { message: t } = e;
             return t;
         }),
     );
 }
-function Q(e) {
+function X(e) {
     let { guildId: t, threads: n } = e;
-    return null != n && g.A.getGuildId() === t && W(A.default.keys(n).map((e) => n[e].first_message));
+    return null != n && g.A.getGuildId() === t && Y(A.default.keys(n).map((e) => n[e].first_message));
+}
+function Q(e) {
+    let { guildId: t, firstMessages: n } = e;
+    return null != n && g.A.getGuildId() === t && Y(n, { forceBatchScan: !0 });
 }
 function J(e) {
-    let { guildId: t, firstMessages: n } = e;
-    return null != n && g.A.getGuildId() === t && W(n, { forceBatchScan: !0 });
+    let { channelId: t } = e;
+    return null != t && er(t);
 }
 function ee(e) {
     let { channelId: t } = e;
-    return null != t && ei(t);
+    return null != t && t === E.A.getChannelId() && er(t);
 }
 function et(e) {
-    let { channelId: t } = e;
-    return (0, R.B)(), null != t && t === E.A.getChannelId() && ei(t);
+    let { settings: t, local: n } = e;
+    if (!n || t.type !== b.oD.PRELOADED_USER_SETTINGS) return !1;
+    let r = E.A.getChannelId();
+    return null != r && er(r);
 }
 function en(e) {
-    let { settings: t, local: n } = e;
-    if (!n || t.type !== D.oD.PRELOADED_USER_SETTINGS) return !1;
-    let r = E.A.getChannelId();
-    return null != r && ei(r);
+    let { channelId: t, chatOpen: n } = e;
+    return !!n && er(t);
 }
 function er(e) {
-    let { channelId: t, chatOpen: n } = e;
-    return !!n && ei(t);
-}
-function ei(e) {
     let t = m.A.getMessages(e);
-    return 0 !== t.length && K(t);
+    return 0 !== t.length && W(t);
 }
-class es extends u.A {
+class ei extends u.A {
     actions = {
-        LOAD_MESSAGES_SUCCESS: q,
-        LOAD_FORUM_POSTS: Q,
-        LOAD_THREADS_SUCCESS: J,
-        LOAD_ARCHIVED_THREADS_SUCCESS: J,
-        SIDEBAR_VIEW_CHANNEL: ee,
+        LOAD_MESSAGES_SUCCESS: z,
+        LOAD_FORUM_POSTS: X,
+        LOAD_THREADS_SUCCESS: Q,
+        LOAD_ARCHIVED_THREADS_SUCCESS: Q,
+        SIDEBAR_VIEW_CHANNEL: J,
         MESSAGE_CREATE: $,
-        MESSAGE_UPDATE: z,
-        LOGOUT: P,
-        SEARCH_MESSAGES_SUCCESS: Z,
-        MOD_VIEW_SEARCH_MESSAGES_SUCCESS: Z,
-        CHANNEL_SELECT: et,
-        LOAD_PINNED_MESSAGES_SUCCESS: X,
-        USER_SETTINGS_PROTO_UPDATE: en,
-        CHANNEL_RTC_UPDATE_CHAT_OPEN: er,
+        MESSAGE_UPDATE: K,
+        LOGOUT: x,
+        SEARCH_MESSAGES_SUCCESS: q,
+        MOD_VIEW_SEARCH_MESSAGES_SUCCESS: q,
+        CHANNEL_SELECT: ee,
+        LOAD_PINNED_MESSAGES_SUCCESS: Z,
+        USER_SETTINGS_PROTO_UPDATE: et,
+        CHANNEL_RTC_UPDATE_CHAT_OPEN: en,
     };
 }
-let ea = new es();
+let es = new ei();
