@@ -110,7 +110,7 @@ function ee(e) {
             let e = t ?? (0, l.A)();
             return L.A.addBreadcrumb({ message: `Checkout session ID: ${e}` }), { loadId: e, startTime: Date.now() };
         }),
-        { selectedSkuId: eV, selectedPlan: eB, setSelectedSkuId: eH, setSelectedPlanId: ej } = (0, w.A)(),
+        { selectedSkuId: eV, selectedPlanId: eB, setSelectedSkuId: eH, setSelectedPlanId: ej } = (0, w.A)(),
         [eY, eW] = (0, u.yK)([C.A], () => [C.A.purchaseTokenAuthState, C.A.purchaseTokenHash]),
         [eK, e$, ez, eq] = (0, u.yK)([W.A], () => [W.A.browserCheckoutState, W.A.loadId, W.A.skuId, W.A.planId]),
         [eZ, eX] = i.useState(null),
@@ -121,7 +121,7 @@ function ee(e) {
         [e5, e7] = i.useState(void 0),
         [e8, e9] = i.useState([]),
         [te, tt] = i.useState([]),
-        tn = i.useMemo(() => null == eB || (0, D.ys)(eB.id), [eB]),
+        tn = i.useMemo(() => null == eB || (0, D.ys)(eB), [eB]),
         tr = i.useRef(null != n ? n.planId : null);
     i.useEffect(() => {
         null == tr.current && null != n && (tr.current = n.planId);
@@ -170,19 +170,18 @@ function ee(e) {
         tC = tv ? q.Ot : void 0,
         { enabled: tR } = (0, A.Y)({ location: "PaymentContext" }),
         tO = (0, M.$w)(),
-        tb = i.useMemo(() => null != eB && eB.id === z.gD.PREMIUM_GROUP_MONTH, [eB]),
+        tb = i.useMemo(() => null != eB && eB === z.gD.PREMIUM_GROUP_MONTH, [eB]),
         tD = (0, v.V)(eu ?? void 0),
         tL = !tb && !J && null != tD && null != eV && z.TP[tD.trial_id].skus.includes(eV),
         tw = (0, y.O)(),
         tM = tw?.discount?.plan_ids.some((e) => z.hd[e].skuId === eV),
         tx = !!(!tb && !J && null != tw && null != eV && tM),
-        tP = null != eB ? eB.id : null,
-        tk = null != eg && null != em[eg] ? em[eg]?.type : null,
-        tU = i.useMemo(
-            () => ({ payment_source_id: eg, payment_gateway: es, payment_source_type: tk, checkout_flow: a }),
-            [eg, es, tk, a],
+        tP = null != eg && null != em[eg] ? em[eg]?.type : null,
+        tk = i.useMemo(
+            () => ({ payment_source_id: eg, payment_gateway: es, payment_source_type: tP, checkout_flow: a }),
+            [eg, es, tP, a],
         ),
-        tG = (0, p.Db)();
+        tU = (0, p.Db)();
     return (0, r.jsx)(Z.Provider, {
         value: {
             stripe: ec,
@@ -233,7 +232,7 @@ function ee(e) {
             setModalOverlayNode: e1,
             selectedSkuId: eV,
             selectedStoreListing: tI,
-            selectedPlan: eB,
+            selectedPlanId: eB,
             setSelectedSkuId: eH,
             setSelectedPlanId: ej,
             readySlideId: e5,
@@ -277,14 +276,14 @@ function ee(e) {
             stripe: ec,
             children: (0, r.jsx)(I.j, {
                 shouldRethrowError: b,
-                locationStack: tG,
+                locationStack: tU,
                 onUnhandledError: X,
                 loadId: eF.loadId,
                 selectedSkuId: eV,
-                selectedPlanId: tP,
+                selectedPlanId: eB,
                 isGift: J,
                 purchaseType: en,
-                additionalAnalyticsData: tU,
+                additionalAnalyticsData: tk,
                 children: ee,
             }),
         }),

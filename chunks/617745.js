@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { q: () => y, t: () => T });
+n.d(t, { q: () => S, t: () => T });
 var r = n(627968),
     i = n(64700),
-    a = n(732955),
-    s = n(397927),
+    s = n(732955),
+    a = n(397927),
     o = n(384904),
     l = n(73825),
     u = n(683433),
@@ -11,33 +11,34 @@ var r = n(627968),
     d = n(937008),
     _ = n(156312),
     f = n(166532),
+    p = n(970077),
     h = n(814626),
-    p = n(652215),
-    g = n(788868),
-    E = n(985018),
-    A = n(926701);
+    m = n(652215),
+    E = n(788868),
+    g = n(985018),
+    A = n(900006);
 let I = 1e3,
     T = (e) => {
         let t,
-            { step: n, onPurchaseComplete: a, onHandoffFailure: u } = e,
+            { step: n, onPurchaseComplete: s, onHandoffFailure: u } = e,
             {
-                selectedPlan: T,
-                setSelectedPlanId: y,
+                setSelectedPlanId: T,
                 setSelectedSkuId: S,
-                browserCheckoutState: v,
-                browserCheckoutStateLoadId: C,
-                browserCheckoutStateSkuId: b,
-                browserCheckoutStatePlanId: N,
+                browserCheckoutState: y,
+                browserCheckoutStateLoadId: v,
+                browserCheckoutStateSkuId: N,
+                browserCheckoutStatePlanId: C,
                 contextMetadata: R,
             } = (0, _.P5)(),
-            { isGift: O } = (0, d.Pv)(),
+            O = (0, p.A)(),
+            { isGift: b } = (0, d.Pv)(),
             [D, L] = i.useState(!1);
         switch (n) {
             case f.pn.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY:
-                t = p.do8.GOOGLE_PAY;
+                t = m.do8.GOOGLE_PAY;
                 break;
             case f.pn.AWAITING_BROWSER_CHECKOUT_APPLE_PAY:
-                t = p.do8.APPLE_PAY;
+                t = m.do8.APPLE_PAY;
         }
         return (
             i.useEffect(() => {
@@ -47,8 +48,8 @@ let I = 1e3,
                         (0, o.Ze)(R.loadId),
                         (0, c.my)(
                             {
-                                planId: T?.id ?? g.gD.PREMIUM_MONTH_TIER_2,
-                                isGift: O,
+                                planId: O?.id ?? E.gD.PREMIUM_MONTH_TIER_2,
+                                isGift: b,
                                 loadId: R.loadId,
                                 paymentMethodType: t,
                             },
@@ -56,33 +57,33 @@ let I = 1e3,
                         ));
                 }, I);
                 return () => clearTimeout(e);
-            }, [T, O, R, u, L, D, t]),
+            }, [O, b, R, u, L, D, t]),
             i.useEffect(() => {
-                null !== b && (g.oz.includes(b) && ((0, l.ur)(b), (0, o.hP)()), S(b)),
-                    null !== N && y(N),
-                    C === R.loadId && v === h.k.DONE && a();
-            }, [S, y, v, C, b, N, R, a]),
+                null !== N && (E.oz.includes(N) && ((0, l.ur)(N), (0, o.hP)()), S(N)),
+                    null !== C && T(C),
+                    v === R.loadId && y === h.k.DONE && s();
+            }, [S, T, y, v, N, C, R, s]),
             (0, r.jsxs)("div", {
                 className: A.rf,
                 children: [
-                    (0, r.jsx)(s.Heading, { variant: "heading-xl/bold", children: E.intl.string(E.t.C4HYfy) }),
-                    (0, r.jsx)(s.Text, {
+                    (0, r.jsx)(a.Heading, { variant: "heading-xl/bold", children: g.intl.string(g.t.C4HYfy) }),
+                    (0, r.jsx)(a.Text, {
                         variant: "text-md/normal",
                         className: A.h_,
-                        children: E.intl.string(E.t.xfG7Jp),
+                        children: g.intl.string(g.t.xfG7Jp),
                     }),
                 ],
             })
         );
     },
-    y = (e) => {
+    S = (e) => {
         let { onPrimaryClick: t, onBackClick: n } = e;
-        return (0, r.jsx)(a.jlY, {
+        return (0, r.jsx)(s.jlY, {
             children: (0, r.jsxs)("div", {
                 className: A.kL,
                 children: [
                     (0, r.jsx)(u.A, { onClick: n }),
-                    (0, r.jsx)(u.F, { onClick: t, children: E.intl.string(E.t["4Qvmmj"]) }),
+                    (0, r.jsx)(u.F, { onClick: t, children: g.intl.string(g.t["4Qvmmj"]) }),
                 ],
             }),
         });
