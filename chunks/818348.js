@@ -281,6 +281,7 @@ let G = Object.freeze({
         SEND_POLLS: i.jB(49),
         PIN_MESSAGES: i.jB(51),
         BYPASS_SLOWMODE: i.jB(52),
+        MANAGE_OFFICIAL_MESSAGES: i.jB(53),
         CONNECT: i.jB(20),
         SPEAK: i.jB(21),
         MUTE_MEMBERS: i.jB(22),

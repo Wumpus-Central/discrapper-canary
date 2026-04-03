@@ -1,19 +1,19 @@
 "use strict";
 n.d(t, {
     SP: () => l,
-    Vi: () => s,
+    Vi: () => a,
     bK: () => _,
     dH: () => d,
     dR: () => u,
     e$: () => c,
     hs: () => o,
     pj: () => f,
-    wX: () => a,
+    wX: () => s,
 });
 var r = n(136722),
     i = n(652215);
-let a = "publicSuccessModalSeen",
-    s = "667560445975986187",
+let s = "publicSuccessModalSeen",
+    a = "667560445975986187",
     o = "669627189624307712",
     l = "1",
     u = [
@@ -30,6 +30,7 @@ let a = "publicSuccessModalSeen",
         i.xBc.CREATE_EVENTS,
         i.xBc.MODERATE_MEMBERS,
         i.xBc.MENTION_EVERYONE,
+        i.xBc.MANAGE_OFFICIAL_MESSAGES,
     ],
     c = r.kg(...u),
     d = 1e3,

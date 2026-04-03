@@ -1,7 +1,7 @@
-n.d(i, {
+e.d(i, {
     BK: () => _,
     LZ: () => o,
-    Nk: () => p,
+    Nk: () => M,
     Si: () => N,
     eD: () => S,
     iG: () => g,
@@ -12,10 +12,10 @@ n.d(i, {
     qI: () => T,
     xd: () => d,
 }),
-    n(321073);
-var e = n(403362),
-    r = n(818348),
-    E = n(985018);
+    e(321073);
+var n = e(403362),
+    r = e(818348),
+    E = e(985018);
 function s(t) {
     let i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return (
@@ -162,6 +162,11 @@ function S(t) {
             description: E.t.S2ZE5c,
             flag: r.xB.BYPASS_SLOWMODE,
         },
+        [r.xB.MANAGE_OFFICIAL_MESSAGES.toString()]: {
+            title: E.intl.string(E.t.Aj9ruN),
+            description: E.t.pfEgBm,
+            flag: r.xB.MANAGE_OFFICIAL_MESSAGES,
+        },
         [r.xB.READ_MESSAGE_HISTORY.toString()]: {
             title: E.intl.string(E.t.l9ufaR),
             description: E.t.rmHPFR,
@@ -285,8 +290,8 @@ function S(t) {
 }
 function o(t) {
     let i,
-        n,
         e,
+        n,
         o,
         A,
         a = S(t),
@@ -304,7 +309,7 @@ function o(t) {
             i.push(r.xB.MANAGE_WEBHOOKS),
             i.push(r.xB.MANAGE_GUILD),
             s({ title: E.intl.string(E.t["mYck+B"]), permissions: l(i, a) })),
-            ((n = [
+            ((e = [
                 r.xB.CREATE_INSTANT_INVITE,
                 r.xB.CHANGE_NICKNAME,
                 r.xB.MANAGE_NICKNAMES,
@@ -312,8 +317,8 @@ function o(t) {
                 r.xB.BAN_MEMBERS,
                 r.xB.MODERATE_MEMBERS,
             ]),
-            s({ title: E.intl.string(E.t.Ny49TN), permissions: l(n, a) })),
-            ((e = [
+            s({ title: E.intl.string(E.t.Ny49TN), permissions: l(e, a) })),
+            ((n = [
                 r.xB.SEND_MESSAGES,
                 r.xB.SEND_MESSAGES_IN_THREADS,
                 r.xB.CREATE_PUBLIC_THREADS,
@@ -327,6 +332,7 @@ function o(t) {
                 r.xB.MENTION_EVERYONE,
                 r.xB.MANAGE_MESSAGES,
                 r.xB.PIN_MESSAGES,
+                r.xB.MANAGE_OFFICIAL_MESSAGES,
                 r.xB.BYPASS_SLOWMODE,
                 r.xB.MANAGE_THREADS,
                 r.xB.READ_MESSAGE_HISTORY,
@@ -334,8 +340,8 @@ function o(t) {
                 r.xB.SEND_VOICE_MESSAGES,
                 r.xB.SEND_POLLS,
             ]),
-            t.inSoundmojiExperiment || (e = e.filter((t) => t !== r.xB.USE_EXTERNAL_SOUNDS)),
-            s({ title: E.intl.string(E.t.cKobO5), permissions: l(e, a) })),
+            t.inSoundmojiExperiment || (n = n.filter((t) => t !== r.xB.USE_EXTERNAL_SOUNDS)),
+            s({ title: E.intl.string(E.t.cKobO5), permissions: l(n, a) })),
             ((o = [
                 r.xB.CONNECT,
                 r.xB.SPEAK,
@@ -369,11 +375,11 @@ function o(t) {
     );
 }
 function A(t, i) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { showManageWebhooks: !0 };
+    let e = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { showManageWebhooks: !0 };
     return {
         title: i,
         permissions: l(
-            n?.showManageWebhooks
+            e?.showManageWebhooks
                 ? [r.xB.VIEW_CHANNEL, r.xB.MANAGE_CHANNELS, r.xB.MANAGE_ROLES, r.xB.MANAGE_WEBHOOKS]
                 : [r.xB.VIEW_CHANNEL, r.xB.MANAGE_CHANNELS, r.xB.MANAGE_ROLES],
             t,
@@ -383,8 +389,8 @@ function A(t, i) {
 function a(t, i) {
     return { title: i, permissions: l([r.xB.CREATE_INSTANT_INVITE], t) };
 }
-function _(t, i, n) {
-    let e = [
+function _(t, i, e) {
+    let n = [
         r.xB.SEND_MESSAGES,
         r.xB.SEND_MESSAGES_IN_THREADS,
         r.xB.CREATE_PUBLIC_THREADS,
@@ -398,6 +404,7 @@ function _(t, i, n) {
         r.xB.MENTION_EVERYONE,
         r.xB.MANAGE_MESSAGES,
         r.xB.PIN_MESSAGES,
+        r.xB.MANAGE_OFFICIAL_MESSAGES,
         r.xB.BYPASS_SLOWMODE,
         r.xB.MANAGE_THREADS,
         r.xB.READ_MESSAGE_HISTORY,
@@ -406,10 +413,10 @@ function _(t, i, n) {
         r.xB.SEND_POLLS,
     ];
     return (
-        n.inSoundmojiExperiment || (e = e.filter((t) => t !== r.xB.USE_EXTERNAL_SOUNDS)),
-        (n.showPrivateThreads && n.showCreateThreads) || (e = e.filter((t) => t !== r.xB.CREATE_PRIVATE_THREADS)),
-        n.showCreateThreads || (e = e.filter((t) => t !== r.xB.CREATE_PUBLIC_THREADS)),
-        { title: i, description: n.sectionDescription, permissions: l(e, t) }
+        e.inSoundmojiExperiment || (n = n.filter((t) => t !== r.xB.USE_EXTERNAL_SOUNDS)),
+        (e.showPrivateThreads && e.showCreateThreads) || (n = n.filter((t) => t !== r.xB.CREATE_PRIVATE_THREADS)),
+        e.showCreateThreads || (n = n.filter((t) => t !== r.xB.CREATE_PUBLIC_THREADS)),
+        { title: i, description: e.sectionDescription, permissions: l(n, t) }
     );
 }
 function g(t, i) {
@@ -433,8 +440,8 @@ function g(t, i) {
         ),
     };
 }
-function B(t, i, n) {
-    let e = [
+function B(t, i, e) {
+    let n = [
         r.xB.SEND_MESSAGES,
         r.xB.EMBED_LINKS,
         r.xB.ATTACH_FILES,
@@ -451,29 +458,29 @@ function B(t, i, n) {
         r.xB.SEND_POLLS,
     ];
     return (
-        n.inSoundmojiExperiment || (e = e.filter((t) => t !== r.xB.USE_EXTERNAL_SOUNDS)),
-        { title: i, description: n.sectionDescription, permissions: l(e, t) }
+        e.inSoundmojiExperiment || (n = n.filter((t) => t !== r.xB.USE_EXTERNAL_SOUNDS)),
+        { title: i, description: e.sectionDescription, permissions: l(n, t) }
     );
 }
 function N(t, i) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { showActivities: !0 };
+    let e = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { showActivities: !0 };
     return {
         title: i,
         permissions: l(
             [
                 r.xB.USE_APPLICATION_COMMANDS,
-                n.showActivities ? r.xB.USE_EMBEDDED_ACTIVITIES : null,
+                e.showActivities ? r.xB.USE_EMBEDDED_ACTIVITIES : null,
                 r.xB.USE_EXTERNAL_APPS,
-            ].filter(e.Vq),
+            ].filter(n.Vq),
             t,
         ),
     };
 }
-function x(t, i, n) {
+function x(t, i, e) {
     return {
         title: i,
         permissions: l(
-            n
+            e
                 ? [r.xB.CONNECT, r.xB.STREAM, r.xB.MUTE_MEMBERS, r.xB.MOVE_MEMBERS]
                 : [r.xB.CONNECT, r.xB.MUTE_MEMBERS, r.xB.MOVE_MEMBERS],
             t,
@@ -486,6 +493,6 @@ function T(t, i) {
 function d(t, i) {
     return { title: i, permissions: l([r.xB.CREATE_EVENTS, r.xB.MANAGE_EVENTS], t) };
 }
-function p(t) {
+function M(t) {
     return null == t ? t : "string" == typeof t ? t.trim() : "function" == typeof t ? E.intl.format(t, {}) : t;
 }
