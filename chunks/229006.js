@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
     Dv: () => T,
-    Hi: () => C,
+    Hi: () => N,
     Rd: () => E,
     S: () => m,
     Wv: () => R,
@@ -53,6 +53,7 @@ function d(e) {
         completedAt: e.completed_at,
         claimedAt: e.claimed_at,
         claimedTier: e.claimed_tier ?? null,
+        orbQuantityClaimed: e.orb_quantity_claimed ?? null,
         lastStreamHeartbeatAt: e.last_stream_heartbeat_at,
         streamProgressSeconds: e.stream_progress_seconds,
         dismissedQuestContent: e.dismissed_quest_content,
@@ -162,7 +163,7 @@ function y(e) {
 function v(e) {
     return { ctaType: e.cta_type, title: e.title, questId: e.quest_id };
 }
-function N(e) {
+function C(e) {
     return {
         linearGradientStart: e.linear_gradient_start,
         linearGradientEnd: e.linear_gradient_end,
@@ -174,7 +175,7 @@ function N(e) {
         tooltipSubtitle: e.tooltip_subtitle,
     };
 }
-function C(e) {
+function N(e) {
     let t = {
         placementType: s.gh.QUEST_HOME_BANNER,
         campaignId: e.campaign_id,
@@ -189,12 +190,12 @@ function C(e) {
     };
     return (
         null != e.asset_hero_video && (t.assetHeroVideo = S(e.asset_hero_video)),
-        null != e.quest_home_entrypoint && (t.questHomeEntrypoint = N(e.quest_home_entrypoint)),
+        null != e.quest_home_entrypoint && (t.questHomeEntrypoint = C(e.quest_home_entrypoint)),
         t
     );
 }
 function R(e) {
     if (1 !== e.version || !(s.gh.QUEST_HOME_BANNER in e.placements)) return null;
     let t = e.placements[s.gh.QUEST_HOME_BANNER];
-    return null == t ? null : C(t);
+    return null == t ? null : N(t);
 }

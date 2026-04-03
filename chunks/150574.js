@@ -1,8 +1,8 @@
 n.d(t, { A: () => y });
 var i = n(627968),
-    r = n(64700),
-    a = n(503698),
-    l = n.n(a),
+    a = n(64700),
+    l = n(503698),
+    r = n.n(l),
     s = n(575593),
     o = n(440703),
     d = n(311907),
@@ -10,124 +10,133 @@ var i = n(627968),
     u = n(397927),
     A = n(765671),
     h = n(736653),
-    _ = n(291661),
+    _ = n(162232),
     m = n(607470),
     p = n(287809),
     g = n(954571),
     E = n(341915),
-    f = n(890687),
-    I = n(579473),
+    I = n(890687),
+    f = n(579473),
     C = n(590202),
-    N = n(734736),
-    T = n(247455),
+    T = n(734736),
+    N = n(247455),
     S = n(57718),
     x = n(652215),
     v = n(985018),
-    b = n(834600);
-let y = (0, r.memo)(function (e) {
+    b = n(864833);
+let y = (0, a.memo)(function (e) {
     let { quest: t } = e,
-        [n, a] = (0, r.useState)(!1),
-        [y, L] = (0, r.useState)(24),
-        [O, R] = (0, r.useState)(!1),
-        P = (0, r.useRef)(null),
-        j = (0, r.useRef)(null),
-        D = (0, r.useRef)(null),
-        w = (0, d.bG)([p.default], () => p.default.getCurrentUser()),
-        { ref: M, height: U = 0 } = (0, A.Ay)(),
+        [n, l] = (0, a.useState)(!1),
+        [y, O] = (0, a.useState)(24),
+        [L, R] = (0, a.useState)(!1),
+        P = (0, a.useRef)(null),
+        D = (0, a.useRef)(null),
+        M = (0, a.useRef)(null),
+        j = (0, d.bG)([p.default], () => p.default.getCurrentUser()),
+        { ref: w, height: U = 0 } = (0, A.Ay)(),
         G = (0, h.Ay)(),
-        k = (0, f.S5)(t.userStatus?.claimedAt, { month: "numeric", day: "numeric" }),
+        k = (0, I.S5)(t.userStatus?.claimedAt, { month: "numeric", day: "numeric" }),
         V = t.userStatus?.claimedTier ?? 0,
         B = t.config.rewards[V],
         H = B?.type === o.l.FRACTIONAL_PREMIUM,
         F = B?.type === o.l.COLLECTIBLE,
         Y = B?.type === o.l.VIRTUAL_CURRENCY,
         W = B?.collectibleProduct?.items?.[0],
-        q = W?.type === s.R.AVATAR_DECORATION ? W : null;
+        K = W?.type === s.R.AVATAR_DECORATION ? W : null,
+        q = a.useMemo(
+            () =>
+                null == B
+                    ? null
+                    : !0 === Y && t.userStatus?.orbQuantityClaimed != null
+                      ? v.intl.format(v.t["nLXlh+"], { orbAmount: t.userStatus.orbQuantityClaimed })
+                      : B.name,
+            [B, Y, t],
+        );
     (0, A.i4)(P, (e) => {
         let { height: t } = e;
-        if (!F || null == t || null == j.current || null == P.current || null == D.current) return;
+        if (!F || null == t || null == D.current || null == P.current || null == M.current) return;
         let n = P.current.getBoundingClientRect(),
-            i = j.current.getBoundingClientRect(),
-            r = D.current.getBoundingClientRect();
-        L((i.top - n.top - r.height) / 2);
+            i = D.current.getBoundingClientRect(),
+            a = M.current.getBoundingClientRect();
+        O((i.top - n.top - a.height) / 2);
     });
     let z = (0, c.Mw)(G),
-        K = (0, r.useMemo)(() => null != t.config.cosponsorMetadata, [t]),
-        $ = (0, r.useMemo)(() => (0, I.tW)(t, I.fY.REWARD), [t]),
-        Q = n ? U + 8 : 0,
-        { content_position: X, row_index: Z, ...J } = (0, C.fF)(E.uF.TROPHY_CASE_CARD),
-        ee = () => {
-            a(!0), g.default.track(x.HAw.QUEST_HOVER, { quest_id: t.id, ...J });
-        },
+        $ = a.useMemo(() => null != t.config.cosponsorMetadata, [t]),
+        Q = a.useMemo(() => (0, f.tW)(t, f.fY.REWARD), [t]),
+        X = n ? U + 8 : 0,
+        { content_position: Z, row_index: J, ...ee } = (0, C.fF)(E.uF.TROPHY_CASE_CARD),
         et = () => {
-            a(!1);
+            l(!0), g.default.track(x.HAw.QUEST_HOVER, { quest_id: t.id, ...ee });
         },
-        en = (e) => {
+        en = () => {
+            l(!1);
+        },
+        ei = (e) => {
             R(!0), g.default.track(x.HAw.QUEST_ASSET_LOADING_FAILURE, { source: e, asset_id: e, quest_id: t.id });
         };
-    return null == B || O
+    return null == B || L
         ? null
         : (0, i.jsx)(u.vN3, {
               children: (0, i.jsxs)("div", {
                   ref: P,
                   tabIndex: 0,
-                  onFocus: ee,
-                  onBlur: et,
-                  onMouseEnter: ee,
-                  onMouseLeave: et,
-                  className: l()(b.kL, { [b.yo]: n }),
+                  onFocus: et,
+                  onBlur: en,
+                  onMouseEnter: et,
+                  onMouseLeave: en,
+                  className: r()(b.kL, { [b.yo]: n }),
                   children: [
-                      null != w &&
+                      null != j &&
                           F &&
-                          null != q &&
+                          null != K &&
                           (0, i.jsx)("div", {
-                              ref: D,
+                              ref: M,
                               className: b.FX,
                               style: { top: y },
                               children: (0, i.jsx)(_.A, {
-                                  avatarDecorationOverride: q,
-                                  user: w,
+                                  avatarDecorationOverride: K,
+                                  user: j,
                                   guildId: null,
                                   animateOnHover: !n,
                               }),
                           }),
                       H
-                          ? (0, i.jsx)(N.A, { className: b.Sl })
+                          ? (0, i.jsx)(T.A, { className: b.Sl })
                           : Y
-                            ? (0, i.jsx)(T.A, {
+                            ? (0, i.jsx)(N.A, {
                                   className: b.Sl,
                                   isAnimated: n,
                                   questName: t.config.messages.questName,
                               })
-                            : $.isAnimated
+                            : Q.isAnimated
                               ? (0, i.jsx)(m.A, {
                                     className: b.JU,
                                     autoPlay: !1,
                                     children: (0, i.jsx)("source", {
-                                        src: $.url,
-                                        type: $.mimetype ?? void 0,
-                                        onError: () => en($.url),
+                                        src: Q.url,
+                                        type: Q.mimetype ?? void 0,
+                                        onError: () => ei(Q.url),
                                     }),
                                 })
                               : (0, i.jsx)("img", {
                                     className: b.Sl,
-                                    src: $.url,
+                                    src: Q.url,
                                     alt: t.config.messages.questName,
-                                    onError: () => en($.url),
+                                    onError: () => ei(Q.url),
                                 }),
-                      (0, i.jsx)("div", { className: l()(b.Lw, { [b.en]: z, [b.So]: !z }) }),
+                      (0, i.jsx)("div", { className: r()(b.Lw, { [b.en]: z, [b.So]: !z }) }),
                       (0, i.jsx)("div", {
-                          ref: j,
+                          ref: D,
                           className: b.r$,
-                          style: { transform: `translateY(-${Q}px)` },
+                          style: { transform: `translateY(-${X}px)` },
                           children: (0, i.jsx)(S.Ay, {
-                              logotypeClassName: l()(b.wm, { [b.A0]: K }),
+                              logotypeClassName: r()(b.wm, { [b.A0]: $ }),
                               quest: t,
                               withGameTile: !1,
                           }),
                       }),
                       (0, i.jsxs)("div", {
-                          ref: M,
+                          ref: w,
                           className: b.zH,
                           children: [
                               (0, i.jsx)(u.Heading, {
@@ -140,7 +149,7 @@ let y = (0, r.memo)(function (e) {
                                   variant: "text-sm/medium",
                                   color: z ? "text-muted" : "always-white",
                                   style: { opacity: z ? 1 : 0.75 },
-                                  children: v.intl.format(v.t["kXVcV+"], { reward: B.name, claimedDate: k }),
+                                  children: v.intl.format(v.t["kXVcV+"], { reward: q, claimedDate: k }),
                               }),
                           ],
                       }),
