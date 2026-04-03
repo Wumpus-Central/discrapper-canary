@@ -1,6 +1,1 @@
-var o = e(524152),
-    n = TypeError;
-r.exports = function (r, t) {
-    if (o(t, r)) return r;
-    throw new n("Incorrect invocation");
-};
+var o=e(524152),n=TypeError;r.exports=function(r,t){if(o(t,r))return r;throw new n("Incorrect invocation")}invocation")}
