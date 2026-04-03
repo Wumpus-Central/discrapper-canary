@@ -29767,12 +29767,24 @@ img.thumbnail__0f2e8 {
     inset-inline-start: 50px
 }
 
+.imageFilePreviewImg_b78547 {
+    height: auto;
+    margin-inline-start: var(--space-16);
+    max-height: 150px;
+    max-width: calc(100% - var(--space-16)*2);
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: left;
+    object-position: left;
+    width: -moz-min-content;
+    width: min-content
+}
+
 .fileIcon_b78547 {
     background-position: 50%;
     background-repeat: no-repeat;
     flex-shrink: 0;
     height: 130px;
-    margin-bottom: 16px;
     margin-top: -16px;
     width: 100px
 }

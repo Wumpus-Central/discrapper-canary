@@ -34,6 +34,7 @@ var r = {
     popOne: "popOne_b78547",
     sparkleOne: "sparkleOne_b78547",
     sparkleTwo: "sparkleTwo_b78547",
+    imageFilePreviewImg: "imageFilePreviewImg_b78547",
     fileIcon: "fileIcon_b78547",
     video: "video_b78547",
     acrobat: "acrobat_b78547",
