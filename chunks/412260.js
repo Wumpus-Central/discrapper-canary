@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => P });
+n.d(t, { A: () => x });
 var r = n(311907),
     i = n(73153),
     s = n(617617),
@@ -200,10 +200,13 @@ class M extends r.Ay.PersistedStore {
             recurring: Object.values(g).filter((t) => t.partnerId === e),
         };
     }
-    getGiftPromotionRewardSkuIds() {
+    getGiftPromotion() {
         let e = E[u.pt.GIFT_PROMOTION],
             t = Object.keys(e);
-        return 0 === t.length ? [] : e[t[0]].rewardSkuIds;
+        return 0 === t.length ? null : e[t[0]];
+    }
+    getGiftPromotionRewardSkuIds() {
+        return this.getGiftPromotion()?.rewardSkuIds ?? [];
     }
     getMarketingMomentPromotion() {
         let e = E[u.pt.MARKETING_MOMENT],
@@ -216,7 +219,7 @@ class M extends r.Ay.PersistedStore {
         return this.getMarketingMomentPromotion()?.rewardSkuIds ?? [];
     }
 }
-let P = new M(i.h, {
+let x = new M(i.h, {
     ACTIVE_PROMOTIONS_FETCH_SUCCESS: v,
     ACTIVE_PROMOTIONS_FETCH: N,
     ACTIVE_PROMOTIONS_FETCH_FAIL: C,
