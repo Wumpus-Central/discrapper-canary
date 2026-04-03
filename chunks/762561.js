@@ -1,4 +1,4 @@
-n.d(t, { A: () => V });
+n.d(t, { A: () => H });
 var i = n(627968),
     l = n(64700),
     s = n(687498),
@@ -11,145 +11,147 @@ var i = n(627968),
     h = n(351966),
     A = n(361628),
     _ = n(713517),
-    m = n(594832),
-    g = n(183555),
-    p = n(622543),
-    f = n(950191),
-    x = n(679492),
-    E = n(657331),
-    I = n(718019),
-    C = n(915614),
-    N = n(439053),
-    T = n(312381),
-    S = n(379654),
-    b = n(946356),
-    y = n(490752),
-    v = n(587168),
-    j = n(193738),
-    R = n(615952),
-    O = n(853397),
-    L = n(159218),
-    M = n(534189),
-    D = n(747524),
-    U = n(179242),
-    G = n(968975),
-    P = n(518477),
-    k = n(996988),
-    w = n(985018),
-    B = n(374146);
-function V(e) {
-    let { user: t, currentUser: n, channel: V } = e,
-        H = __OVERLAY__,
-        F = (0, f.Ay)(t.id),
-        K = (0, A.A)(F?.profileFrame?.skuId, "UserProfileSidebar"),
-        W = (0, d.Ay)(),
-        { analyticsLocations: Y } = (0, u.Ay)(c.A.USER_PROFILE_SIDEBAR),
-        z = (0, g.pb)({ layout: "SIDEBAR", userId: t.id, channelId: V.id }),
-        q = l.useRef(null),
-        { isHoveringOrFocusing: X, isHovering: J } = (0, _.A)(q),
-        Q = (0, x.fC)(),
-        $ = (0, o.zhh)({ opacity: +(null != Q.interactionType), config: { duration: 150 } }),
-        Z = (e) => {
-            (0, E.openUserProfileModal)({ sourceAnalyticsLocations: Y, hideRestrictedProfile: !0, ...z, ...e });
+    m = n(673843),
+    g = n(594832),
+    p = n(183555),
+    f = n(622543),
+    x = n(950191),
+    E = n(679492),
+    I = n(657331),
+    C = n(718019),
+    N = n(915614),
+    T = n(439053),
+    S = n(312381),
+    b = n(379654),
+    y = n(946356),
+    v = n(490752),
+    j = n(587168),
+    R = n(193738),
+    O = n(615952),
+    L = n(853397),
+    M = n(159218),
+    D = n(534189),
+    U = n(747524),
+    G = n(179242),
+    P = n(968975),
+    k = n(518477),
+    w = n(996988),
+    B = n(985018),
+    V = n(374146);
+function H(e) {
+    let { user: t, currentUser: n, channel: H } = e,
+        F = __OVERLAY__,
+        K = (0, x.Ay)(t.id),
+        W = (0, A.A)(K?.profileFrame?.skuId, "UserProfileSidebar"),
+        Y = (0, d.Ay)(),
+        { analyticsLocations: z } = (0, u.Ay)(c.A.USER_PROFILE_SIDEBAR),
+        q = (0, p.pb)({ layout: "SIDEBAR", userId: t.id, channelId: H.id }),
+        X = l.useRef(null),
+        { isHoveringOrFocusing: J, isHovering: Q } = (0, _.A)(X),
+        $ = (0, E.fC)(),
+        Z = (0, o.zhh)({ opacity: +(null != $.interactionType), config: { duration: 150 } }),
+        ee = (e) => {
+            (0, I.openUserProfileModal)({ sourceAnalyticsLocations: z, hideRestrictedProfile: !0, ...q, ...e });
         },
-        ee = F?.widgets != null && F.widgets.length > 0,
-        { defaultWishlistId: et } = (0, r.cf)([p.A], () => ({ defaultWishlistId: p.A.getFirstWishlistId(t.id) })),
-        { wishlist: en } = (0, m.fw)({ wishlistId: et, userId: t.id }),
-        ei = l.useMemo(() => (null == en ? null : en.items.filter((e) => !e.isOwned)), [en]);
+        et = K?.widgets != null && K.widgets.length > 0,
+        { defaultWishlistId: en } = (0, r.cf)([f.A], () => ({ defaultWishlistId: f.A.getFirstWishlistId(t.id) })),
+        { wishlist: ei } = (0, g.fw)({ wishlistId: en, userId: t.id });
+    (0, m.A)(ei);
+    let el = l.useMemo(() => (null == ei ? null : ei.items.filter((e) => !e.isOwned)), [ei]);
     return (0, i.jsx)(u.f5, {
-        value: Y,
-        children: (0, i.jsx)(g.of, {
-            value: z,
-            isLoaded: F?.isLoaded,
-            children: (0, i.jsx)(x.Hl, {
-                value: Q,
-                children: (0, i.jsxs)(b.A, {
-                    ref: q,
+        value: z,
+        children: (0, i.jsx)(p.of, {
+            value: q,
+            isLoaded: K?.isLoaded,
+            children: (0, i.jsx)(E.Hl, {
+                value: $,
+                children: (0, i.jsxs)(y.A, {
+                    ref: X,
                     user: t,
-                    displayProfile: F,
-                    themeType: k.d.SIDEBAR,
-                    themeOverride: W,
-                    privateBanner: F?.private === !0 ? (0, i.jsx)(T.A, {}) : void 0,
+                    displayProfile: K,
+                    themeType: w.d.SIDEBAR,
+                    themeOverride: Y,
+                    privateBanner: K?.private === !0 ? (0, i.jsx)(S.A, {}) : void 0,
                     children: [
-                        null != Q.interactionType && (0, i.jsx)(s.animated.div, { style: $, className: B.tB }),
+                        null != $.interactionType && (0, i.jsx)(s.animated.div, { style: Z, className: V.tB }),
                         (0, i.jsxs)(a.d_W, {
-                            className: null != K ? B.It : void 0,
+                            className: null != W ? V.It : void 0,
                             children: [
-                                (0, i.jsxs)(v.A, {
+                                (0, i.jsxs)(j.A, {
                                     children: [
-                                        (0, i.jsx)(j.A, { user: t, themeType: k.d.SIDEBAR }),
-                                        (0, i.jsx)(R.A, { user: t }),
-                                        t.bot ? (0, i.jsx)(y.A, { user: t }) : (0, i.jsx)(O.yo, { user: t }),
+                                        (0, i.jsx)(R.A, { user: t, themeType: w.d.SIDEBAR }),
+                                        (0, i.jsx)(O.A, { user: t }),
+                                        t.bot ? (0, i.jsx)(v.A, { user: t }) : (0, i.jsx)(L.yo, { user: t }),
                                     ],
                                 }),
                                 (0, i.jsxs)("div", {
-                                    className: B.wx,
+                                    className: V.wx,
                                     children: [
+                                        (0, i.jsx)(N.A, {
+                                            user: t,
+                                            displayProfile: K,
+                                            themeType: w.d.SIDEBAR,
+                                            animateOnHoverOrFocusOnly: !J,
+                                            className: V.vK,
+                                        }),
+                                        (0, i.jsx)(T.A, { userId: t.id, className: V.oR }),
                                         (0, i.jsx)(C.A, {
                                             user: t,
-                                            displayProfile: F,
-                                            themeType: k.d.SIDEBAR,
-                                            animateOnHoverOrFocusOnly: !X,
-                                            className: B.vK,
+                                            displayProfile: K,
+                                            channelId: H.id,
+                                            themeType: w.d.SIDEBAR,
+                                            onOpenProfile: F ? void 0 : ee,
                                         }),
-                                        (0, i.jsx)(N.A, { userId: t.id, className: B.oR }),
-                                        (0, i.jsx)(I.A, {
+                                        (0, i.jsx)(M.A, {
                                             user: t,
-                                            displayProfile: F,
-                                            channelId: V.id,
-                                            themeType: k.d.SIDEBAR,
-                                            onOpenProfile: H ? void 0 : Z,
-                                        }),
-                                        (0, i.jsx)(L.A, {
-                                            user: t,
-                                            channelId: V.id,
-                                            themeType: k.d.SIDEBAR,
+                                            channelId: H.id,
+                                            themeType: w.d.SIDEBAR,
                                             disableToolbar: t.bot,
                                         }),
                                     ],
                                 }),
-                                (0, i.jsx)(M.A, {
+                                (0, i.jsx)(D.A, {
                                     user: t,
                                     currentUser: n,
-                                    displayProfile: F,
-                                    channel: V,
-                                    isHoveringOrFocusing: null == Q.interactionType && X,
-                                    onOpenProfile: H ? void 0 : Z,
+                                    displayProfile: K,
+                                    channel: H,
+                                    isHoveringOrFocusing: null == $.interactionType && J,
+                                    onOpenProfile: F ? void 0 : ee,
                                 }),
-                                ee &&
+                                et &&
                                     (0, i.jsx)("div", {
-                                        className: B.sJ,
-                                        children: (0, i.jsx)(S.A, {
+                                        className: V.sJ,
+                                        children: (0, i.jsx)(b.A, {
                                             user: t,
-                                            widgets: F.widgets,
-                                            onOpenUserProfileModal: Z,
+                                            widgets: K.widgets,
+                                            onOpenUserProfileModal: ee,
                                         }),
                                     }),
-                                null != ei &&
-                                    ei.length > 0 &&
+                                null != el &&
+                                    el.length > 0 &&
                                     (0, i.jsx)("div", {
-                                        className: B.vS,
-                                        children: (0, i.jsx)(G.A, {
+                                        className: V.vS,
+                                        children: (0, i.jsx)(P.A, {
                                             profileOwner: t,
-                                            unownedWishlistItems: ei,
-                                            wishlistId: et,
-                                            title: w.intl.string(w.t["7lZ31J"]),
+                                            unownedWishlistItems: el,
+                                            wishlistId: en,
+                                            title: B.intl.string(B.t["7lZ31J"]),
                                             onClick: () => {
-                                                Z?.({ tabSection: P.RP.WISHLIST });
+                                                ee?.({ tabSection: k.RP.WISHLIST });
                                             },
                                         }),
                                     }),
-                                (0, i.jsx)(U.A, { user: t, channelId: V.id }),
+                                (0, i.jsx)(G.A, { user: t, channelId: H.id }),
                             ],
                         }),
-                        !H &&
-                            (0, i.jsx)(D.A, {
-                                context: z,
-                                analyticsLocations: Y,
-                                profileFrame: K,
-                                handleOpenProfile: Z,
+                        !F &&
+                            (0, i.jsx)(U.A, {
+                                context: q,
+                                analyticsLocations: z,
+                                profileFrame: W,
+                                handleOpenProfile: ee,
                             }),
-                        F?.profileEffect != null && (0, i.jsx)(h.A, { skuId: F?.profileEffect?.skuId, isHovering: J }),
+                        K?.profileEffect != null && (0, i.jsx)(h.A, { skuId: K?.profileEffect?.skuId, isHovering: Q }),
                     ],
                 }),
             }),
