@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => v, JY: () => y });
+n.d(t, { Ay: () => N, JY: () => v });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -7,33 +7,34 @@ var r = n(627968),
     o = n(575593),
     l = n(158954),
     u = n(311907),
-    c = n(775602),
-    d = n(139136),
-    _ = n(474012),
-    f = n(929283),
-    p = n(245068),
-    h = n(761365),
-    m = n(366523),
-    E = n(403362),
-    g = n(652215),
-    A = n(778712),
-    I = n(538189);
-function T(e) {
+    c = n(827734),
+    d = n(775602),
+    _ = n(139136),
+    f = n(474012),
+    p = n(929283),
+    h = n(245068),
+    m = n(761365),
+    E = n(366523),
+    g = n(403362),
+    A = n(652215),
+    I = n(778712),
+    T = n(913110);
+function S(e) {
     let { sku: t, isFocused: n, user: s } = e,
-        a = i.useMemo(() => (0, _.T)(t), [t]);
+        a = i.useMemo(() => (0, f.T)(t), [t]);
     if (null == a) return null;
     if ("bundle" === a.type)
         return (0, r.jsx)("div", {
-            className: I.hT,
-            children: (0, r.jsx)(p.X, { product: a, isHighlighted: n, user: s }),
+            className: T.hT,
+            children: (0, r.jsx)(h.X, { product: a, isHighlighted: n, user: s }),
         });
     switch (a.item.type) {
         case o.R.AVATAR_DECORATION:
-            return (0, r.jsx)(f.i, { user: s, avatarSize: A._3.SIZE_80, item: a.item, isHighlighted: n });
+            return (0, r.jsx)(p.i, { user: s, avatarSize: I._3.SIZE_80, item: a.item, isHighlighted: n });
         case o.R.PROFILE_EFFECT:
             return (0, r.jsx)("div", {
-                className: I.xC,
-                children: (0, r.jsx)(d.A, {
+                className: T.xC,
+                children: (0, r.jsx)(_.A, {
                     skuId: a.item.skuId,
                     isHighlighted: n,
                     removeSetHeight: !0,
@@ -42,58 +43,58 @@ function T(e) {
             });
         case o.R.NAMEPLATE:
             return (0, r.jsx)("div", {
-                className: I.M4,
+                className: T.M4,
                 children: (0, r.jsx)("div", {
-                    className: I.N1,
-                    children: (0, r.jsx)(h.A, { user: s, nameplate: a.item, isHighlighted: n, size: "small" }),
+                    className: T.N1,
+                    children: (0, r.jsx)(m.A, { user: s, nameplate: a.item, isHighlighted: n, size: "small" }),
                 }),
             });
         default:
             return null;
     }
 }
-function S(e) {
+function y(e) {
     let { sku: t, isFocused: n } = e;
-    return (0, r.jsx)(m.e, {
+    return (0, r.jsx)(E.e, {
         shape: "custom",
-        containerClassName: a()(I.JS, n && I.P3),
-        backgroundImageClassName: I.m1,
-        foregroundImageClassName: I.aF,
+        containerClassName: a()(T.JS, n && T.P3),
+        backgroundImageClassName: T.m1,
+        foregroundImageClassName: T.aF,
         sku: t,
     });
 }
-function y(e) {
+function v(e) {
     let { eventTargetRef: t, assetClassName: n, disableHover: i } = e,
-        s = (0, u.bG)([c.A], () => c.A.useReducedMotion);
+        s = (0, u.bG)([d.A], () => d.A.useReducedMotion);
     return (0, r.jsxs)("div", {
-        className: I.yv,
+        className: T.yv,
         children: [
-            (0, r.jsx)("div", { className: I.GY }),
-            (0, r.jsx)(l.L71, {
-                className: a()(I.MO, n),
-                dataBinding: { reducedMotion: i || s },
+            (0, r.jsx)("div", { className: T.GY }),
+            (0, r.jsx)(l.u84, {
+                className: a()(T.MO, n),
+                dataBinding: { reducedMotion: i || s, logoColor: c.A.colors.TEXT_DEFAULT },
                 eventTargetRef: t,
                 fit: "contain",
             }),
         ],
     });
 }
-function v(e) {
+function N(e) {
     let { sku: t, isFocused: n, user: i, eventTargetRef: s, assetClassName: a, disableHover: o } = e;
     switch (t.productLine) {
-        case g.EZt.COLLECTIBLES:
-            return (0, r.jsx)(T, { sku: t, isFocused: n, user: i });
-        case g.EZt.SOCIAL_LAYER_GAME_ITEM:
-            return (0, r.jsx)(S, { sku: t, isFocused: n });
-        case g.EZt.APPLICATION:
-        case g.EZt.BOOST:
-        case g.EZt.GUILD_ROLE:
+        case A.EZt.COLLECTIBLES:
+            return (0, r.jsx)(S, { sku: t, isFocused: n, user: i });
+        case A.EZt.SOCIAL_LAYER_GAME_ITEM:
+            return (0, r.jsx)(y, { sku: t, isFocused: n });
+        case A.EZt.APPLICATION:
+        case A.EZt.BOOST:
+        case A.EZt.GUILD_ROLE:
             return null;
-        case g.EZt.PREMIUM:
-            return (0, r.jsx)(y, { eventTargetRef: s, assetClassName: a, disableHover: o });
-        case g.EZt.GUILD_PRODUCT:
+        case A.EZt.PREMIUM:
+            return (0, r.jsx)(v, { eventTargetRef: s, assetClassName: a, disableHover: o });
+        case A.EZt.GUILD_PRODUCT:
             return null;
         default:
-            (0, E.xb)(t.productLine);
+            (0, g.xb)(t.productLine);
     }
 }
