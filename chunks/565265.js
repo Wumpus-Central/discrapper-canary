@@ -5,8 +5,8 @@ var i = n(627968),
     a = n.n(s),
     r = n(621466),
     o = n(397927),
-    c = n(442433),
-    d = n(46054),
+    d = n(442433),
+    c = n(46054),
     u = n(742589),
     h = n(985018),
     A = n(170028),
@@ -29,8 +29,8 @@ class g extends l.Component {
     };
     handleContextMenu = (e) => {
         let { channel: t, guild: l } = this.props;
-        (0, c.L3)(e, async () => {
-            let { default: e } = await Promise.all([n.e("70303"), n.e("17425"), n.e("40878")]).then(n.bind(n, 340968));
+        (0, d.L3)(e, async () => {
+            let { default: e } = await Promise.all([n.e("17425"), n.e("88191")]).then(n.bind(n, 340968));
             return (n) => (0, i.jsx)(e, { ...n, channel: t, guild: l, includeTopic: !0 });
         });
     };
@@ -53,7 +53,7 @@ class g extends l.Component {
                                   className: A.h8,
                               }),
                               null == e.linkedLobby || t
-                                  ? d.A.parseTopic(e.topic, !0, { channelId: e.id })
+                                  ? c.A.parseTopic(e.topic, !0, { channelId: e.id })
                                   : h.intl.string(h.t["XJVlf/"]),
                           ],
                       }),

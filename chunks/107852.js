@@ -9,7 +9,6 @@ e.exports = {
     fc: "clanTag__972a0",
     Y_: "clanTagMuted__972a0",
     Q2: "interactiveSelected__972a0",
-    xx: "avatarWithText__972a0",
     nf: "link__972a0",
     $J: "linkButton__972a0",
     e_: "linkButtonIcon__972a0",
@@ -28,6 +27,8 @@ e.exports = {
     XD: "activityStatusText__972a0",
     G$: "decorator__972a0",
     dm: "dm__972a0",
+    xx: "avatarWithText__972a0",
     KQ: "waveButton__972a0",
     lU: "channelNameMeasurement__972a0",
+    a1: "tabHoverGradient__972a0",
 };

@@ -204,6 +204,7 @@ n.d(t, {
     U1e: () => z.CirclePlusIcon,
     UC$: () => z.CalendarPlusIcon,
     UaP: () => z.LanguageIcon,
+    Ucn: () => Z.TabHoverGradientRive,
     Uk3: () => z.TvIcon,
     UlM: () => z.XLargeBoldIcon,
     Utq: () => eW.Ut,

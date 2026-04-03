@@ -5,8 +5,8 @@ var i = n(627968),
     a = n(397927),
     r = n(442433),
     o = n(793574),
-    c = n(47167),
-    d = n(598104),
+    d = n(47167),
+    c = n(598104),
     u = n(73028),
     h = n(665691),
     A = n(954571),
@@ -29,7 +29,7 @@ let p = (e) => {
     f = l.memo(function (e) {
         let { channel: t } = e,
             l = t.id,
-            h = (0, c.Ay)(t);
+            h = (0, d.Ay)(t);
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(s.m, {
@@ -45,7 +45,7 @@ let p = (e) => {
                             (0, r.L3)(
                                 e,
                                 () =>
-                                    Promise.all([n.e("97262"), n.e("70303"), n.e("60200"), n.e("29108")])
+                                    Promise.all([n.e("97262"), n.e("60200"), n.e("21969")])
                                         .then(n.bind(n, 4027))
                                         .then((e) => {
                                             let { default: n } = e;
@@ -63,7 +63,7 @@ let p = (e) => {
                         },
                         "aria-label": m.intl.string(m.t["5Q9+/L"]),
                         children: [
-                            (0, i.jsx)(d.A, {
+                            (0, i.jsx)(c.A, {
                                 className: g.gn,
                                 "aria-hidden": !0,
                                 channel: t,

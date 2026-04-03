@@ -136,8 +136,8 @@ let X = (e) => {
                 void 0,
                 !0,
             ),
-            [e7, e6] = (0, m.Cc)(eL ? o.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER : null, eb ?? "", void 0, !0),
-            e9 =
+            [e7, e9] = (0, m.Cc)(eL ? o.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER : null, eb ?? "", void 0, !0),
+            e6 =
                 null != eQ &&
                 "premiumTabTooltip" === eQ.properties.properties.oneofKind &&
                 eZ === o.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE,
@@ -149,9 +149,9 @@ let X = (e) => {
                     (null != eW && eK($.i.AUTO_DISMISS),
                     null != eq && ez($.i.AUTO_DISMISS),
                     null != eZ && eJ($.i.AUTO_DISMISS),
-                    null != e7 && e6($.i.AUTO_DISMISS),
+                    null != e7 && e9($.i.AUTO_DISMISS),
                     null != e0 && e1($.i.AUTO_DISMISS));
-            }, [eK, N, eW, ez, eq, eZ, eJ, e7, e6, e0, e1]),
+            }, [eK, N, eW, ez, eq, eZ, eJ, e7, e9, e0, e1]),
             !X({ selected: N }))
         )
             return null;
@@ -247,7 +247,7 @@ let X = (e) => {
                       ? (te = W.L.ORBS_INTRO)
                       : eL && e7 === o.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER
                         ? (te = W.L.ORBS_DROP)
-                        : e9
+                        : e6
                           ? (te = W.L.TOOLTIP)
                           : e5
                             ? (te = W.L.L_PREMIUM_SUB_TOOLTIP)
@@ -259,6 +259,8 @@ let X = (e) => {
             selected: N,
             route: J,
             icon: c.tvc,
+            showHoverGradient: !1,
+            nitroHoverGradient: !0,
             text: (0, i.jsx)(d.A, { children: el ? Q.intl.string(Q.t["4gwVVn"]) : Q.intl.string(Q.t.Ipxkog) }),
             locationState: ee,
             onClick: () => {
@@ -281,7 +283,7 @@ let X = (e) => {
             orbsRewardAmount: eC,
             lastGrantedRewardAmount: ey,
             dismissCoachMark: ez,
-            dismissOrbsDropPopover: e6,
+            dismissOrbsDropPopover: e9,
             dismissMarketingPopover: e1,
             fpEndsAt: ek,
             children: tt,

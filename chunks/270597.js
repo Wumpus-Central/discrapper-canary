@@ -50,7 +50,7 @@ function o(e) {
                                             .resolve({ theme: h, saturation: m, highContrastModeEnabled: E })
                                             .rgba();
                                         t.viewModelInstance?.color(i)?.rgba(n, r, s, 255 * a);
-                                    } else t.viewModelInstance?.color(i)?.rgba(e.r, e.g, e.b, e.a ?? 255);
+                                    } else t.viewModelInstance?.color(i)?.rgba(e.r, e.g, e.b, (e.a ?? 1) * 255);
                                 }
                                 break;
                             case "number":
