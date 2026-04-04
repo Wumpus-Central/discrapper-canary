@@ -908,6 +908,7 @@ var W = (function (e) {
             (e[(e.SENT_BY_SOCIAL_LAYER_INTEGRATION = 65536)] = "SENT_BY_SOCIAL_LAYER_INTEGRATION"),
             (e[(e.HIDDEN_SUSPENDED_USER = 131072)] = "HIDDEN_SUSPENDED_USER"),
             (e[(e.IS_FIRST_BOOSTER = 262144)] = "IS_FIRST_BOOSTER"),
+            (e[(e.IS_GUILD_OFFICIAL = 524288)] = "IS_GUILD_OFFICIAL"),
             e
         );
     })({}),

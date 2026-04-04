@@ -1,5 +1,6 @@
-e.d(i, { A: () => n });
-let n = (0, e(600975).C)({
+"use strict";
+n.d(t, { A: () => r });
+let r = (0, n(600975).C)({
     kind: "guild",
     id: "2026-03_guild_official_messages",
     label: "Guild Official Messages",
