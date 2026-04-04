@@ -1,52 +1,18 @@
-r.d(t, { h: () => l }), r(321073);
-let n = 0,
-    a = null;
-function l(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    try {
-        let r = (function (e) {
-            if (2 === n) return null;
-            0 === n &&
-                (function (e) {
-                    let t = e;
-                    for (; null != t && t !== document.body; ) {
-                        for (let t of Object.keys(e))
-                            if (t.startsWith("__reactFiber$")) {
-                                (a = t), (n = 1);
-                                return;
-                            }
-                        t = t.parentElement;
-                    }
-                    null == a && (n = 2);
-                })(e);
-            let t = a,
-                r = e;
-            for (; null != r && r !== document.body; ) {
-                if (t in r) return r[t];
-                r = r.parentElement;
-            }
-            return null;
-        })(e);
-        if (null != r)
-            return (function (e, t) {
-                let r = [],
-                    n = e;
-                for (; null != n; ) {
-                    let e = n?._debugSource?.fileName,
-                        a = n?._debugSource?.lineNumber;
-                    if (null != e && null != a) {
-                        let n = `${e}:${a}`;
-                        if (t) {
-                            let e = n.split("/discord/");
-                            0 !== e.length && r.push(e[e.length - 1]);
-                        } else r.push(n);
-                    }
-                    n = n?._debugOwner;
-                }
-                return r;
-            })(r, t);
-        return null;
-    } catch {
-        return null;
-    }
-}
+n.d(t, { z: () => m });
+var i = n(311907),
+    s = n(955572),
+    l = n(775602),
+    a = n(419954),
+    r = n(975571),
+    o = n(780964),
+    d = n(358776),
+    c = n(652215),
+    u = n(985018);
+let m = (0, a.zD)(o.X.REDUCED_MOTION, {
+    useTitle: () => u.intl.string(u.t.b3XBzg),
+    useSubtitle: (0, d.Ci)("Motion")
+        ? () => u.intl.format(u.t.XqvxJc, { helpdeskArticle: r.A.getArticleURL(c.MVz.REDUCED_MOTION) })
+        : void 0,
+    useValue: () => (0, i.bG)([l.A], () => l.A.useReducedMotion),
+    setValue: (e) => (0, s.qz)(e ? "reduce" : "no-preference"),
+});

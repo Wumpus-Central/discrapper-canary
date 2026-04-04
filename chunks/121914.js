@@ -14,8 +14,8 @@ var i,
     p = n(71393),
     A = n(222823),
     x = n(994500),
-    E = n(485296),
-    f = n(741961),
+    f = n(485296),
+    E = n(741961),
     S = n(287809),
     I = n(1193),
     T = n(145567),
@@ -23,9 +23,9 @@ var i,
     C = n(651813),
     j = n(919843),
     y = n(534765),
-    w = n(34307),
-    O = n(652215),
-    _ = n(985018),
+    w = n(256688),
+    _ = n(652215),
+    O = n(985018),
     N = n(129839),
     b = (((i = {}).DEFAULT = "DEFAULT"), (i.CHANNEL_TYPE = "CHANNEL_TYPE"), i);
 let R = l.memo(function (e) {
@@ -34,7 +34,7 @@ let R = l.memo(function (e) {
         b = (0, o.bG)([I.A], () => I.A.getSelectedChannelId() === t, [t]),
         R = (0, o.bG)([I.A], () => I.A.getVoiceChatMinimized()),
         M = (0, u.rdh)(u.LU0.colors.ICON_STATUS_ONLINE),
-        L = (0, o.bG)([E.A], () => !!r && !!(E.A.isAnyoneElseSpeaking() || E.A.isCurrentUserSpeaking()), [r]),
+        L = (0, o.bG)([f.A], () => !!r && !!(f.A.isAnyoneElseSpeaking() || f.A.isCurrentUserSpeaking()), [r]),
         [z, D] = l.useState(!1),
         { mentionCount: k, isMentionLowImportance: P } = (0, o.cf)(
             [A.Ay],
@@ -54,17 +54,17 @@ let R = l.memo(function (e) {
             channel: H,
         } = (0, o.cf)([m.A, p.A, S.default, x.A], () => {
             let e = m.A.getChannel(t) ?? null;
-            if (null == e) return { label: _.intl.string(_.t.zLZPmk), user: null, guild: null, channel: null };
+            if (null == e) return { label: O.intl.string(O.t.zLZPmk), user: null, guild: null, channel: null };
             let n = (0, c.m1)(e, S.default, x.A);
             return { label: n, user: (0, C.j)(e, S.default), guild: (0, C.P)(e, p.A), channel: e };
         }, [t]);
     l.useEffect(() => {
         null == H && (0, j.b)(t);
     }, [H, t]);
-    let Y = (0, o.bG)([f.A, S.default], () => {
+    let Y = (0, o.bG)([E.A, S.default], () => {
             if (null == H) return !1;
             let e = S.default.getCurrentUser()?.id ?? null,
-                t = f.A.getTypingUsers(H.id);
+                t = E.A.getTypingUsers(H.id);
             for (let n in t) if (n !== e) return !0;
             return !1;
         }, [H]),
@@ -112,8 +112,8 @@ let R = l.memo(function (e) {
         F = H?.isPrivate() ?? !1,
         K = U?.name ?? "",
         B = F ? void 0 : G,
-        q = F ? G : "" !== K ? K : G,
-        Q = (() => {
+        Q = F ? G : "" !== K ? K : G,
+        q = (() => {
             if (null == H || F) return null;
             let e = (0, h.gU)(H, U);
             return (e ??= u.oyn), (0, s.jsx)(e, { size: "sm", color: u.LU0.colors.INTERACTIVE_ICON_DEFAULT });
@@ -122,8 +122,8 @@ let R = l.memo(function (e) {
         ? (0, s.jsx)("div", { className: N.R })
         : (0, s.jsx)(d.u, {
               title: B,
-              body: q,
-              asset: Q,
+              body: Q,
+              asset: q,
               assetSize: 20,
               "aria-label": G,
               children: (0, s.jsxs)(u.DUT, {
@@ -133,7 +133,7 @@ let R = l.memo(function (e) {
                           (0, T.D$)({
                               target: { kind: T.bB.CHANNEL, channelId: t, guildId: U?.id ?? null, messageId: null },
                               source: w.B.MANUAL,
-                              widgetType: O.uss.TEXT_CHAT_V3,
+                              widgetType: _.uss.TEXT_CHAT_V3,
                           });
                   },
                   onContextMenu: X,

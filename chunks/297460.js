@@ -9,9 +9,9 @@ var i = t(311907),
     u = t(1193),
     o = t(589051),
     c = t(145567),
-    A = t(34307),
+    A = t(256688),
     g = t(652215),
-    f = t(822889),
+    f = t(895867),
     h = t(985018);
 function E(e, n) {
     let { hasChat: t } = (0, o.M8)("useOverlayTextChatToggleMenuItem"),

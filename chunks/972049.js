@@ -1,41 +1,41 @@
-r.d(t, { dL: () => _, nY: () => b }), r(321073);
+r.d(t, { dL: () => M, nY: () => b }), r(321073);
 var n = r(64700),
-    a = r(21574),
+    a = r(799193),
     l = r(763424),
     i = r(283014),
-    o = r(992520),
-    u = r(175678),
-    s = r(265337),
+    s = r(992520),
+    o = r(175678),
+    u = r(265337),
     c = r(517576),
     d = r(249214),
     f = r(908665);
-let h = [i.A, o.A, u.A, c.A, s.A, f.A, d.A],
+let h = [i.A, s.A, o.A, c.A, u.A, f.A, d.A],
     b = "data-accessibility-violation",
     m = "function" == typeof navigator?.scheduling?.isInputPending,
-    g = null,
     p = null,
+    g = null,
     v = 0,
     A = 0,
     w = null,
     y = { hash: 0, violations: new Map() },
     $ = () => {},
-    x = document.body;
+    _ = document.body;
 function k() {
     (v = 0), (A = 0), (w = null), (y = { hash: 0, violations: new Map() });
 }
+function x() {
+    g = requestIdleCallback(N);
+}
 function I() {
-    p = requestIdleCallback(E);
+    (w = null), (A = 0), v < h.length - 1 ? ((v += 1), x()) : ($(y), k());
 }
 function N() {
-    (w = null), (A = 0), v < h.length - 1 ? ((v += 1), I()) : ($(y), k());
-}
-function E() {
     let e = h[v];
     if (
-        (null == w && (w = null != e.selector ? Array.from(x.querySelectorAll(e.selector)) : e.select(x)),
+        (null == w && (w = null != e.selector ? Array.from(_.querySelectorAll(e.selector)) : e.select(_)),
         0 === w.length)
     )
-        return N();
+        return I();
     let t = performance.now() + 16,
         r = { includeContinuous: !0 };
     for (; A < w.length && !(navigator.scheduling.isInputPending(r) || performance.now() >= t); ) {
@@ -43,38 +43,38 @@ function E() {
             r = e.check(t);
         if (r !== l.o) {
             let n = (0, a.h)(t),
-                l = L(
+                l = S(
                     `${r}_${e.id}_${
                         null == n
                             ? (function (e) {
                                   let t = "",
                                       r = e;
                                   for (; null != r; ) (t += r.className), (r = r.parentElement);
-                                  return L(t);
+                                  return S(t);
                               })(t)
                             : n.join("\n")
                     }`,
                 );
-            y.hash = L(`${y.hash}${l}`);
+            y.hash = S(`${y.hash}${l}`);
             let i = l.toString(),
-                o = `${e.id}_${l}`,
-                u = y.violations.get(e.id) ?? { rule: e, instances: new Map() },
-                s = u.instances.get(o) ?? [],
+                s = `${e.id}_${l}`,
+                o = y.violations.get(e.id) ?? { rule: e, instances: new Map() },
+                u = o.instances.get(s) ?? [],
                 c = { element: t, message: r, trace: n ?? [], hash: i };
-            s.push(c), u.instances.set(o, s), y.violations.set(e.id, u);
+            u.push(c), o.instances.set(s, u), y.violations.set(e.id, o);
         }
     }
-    if (A < w.length - 1) return I();
-    N();
+    if (A < w.length - 1) return x();
+    I();
 }
-let M = (e) => {
+let E = (e) => {
     0 !== e.filter((e) => "attributes" !== e.type || e.attributeName !== b).length &&
         (k(),
-        null != g && (clearTimeout(g), (g = null)),
         null != p && (clearTimeout(p), (p = null)),
-        (g = setTimeout(I, 250)));
+        null != g && (clearTimeout(g), (g = null)),
+        (p = setTimeout(x, 250)));
 };
-function _(e, t) {
+function M(e, t) {
     let r = (0, n.useRef)(t);
     (0, n.useLayoutEffect)(() => {
         r.current = t;
@@ -82,15 +82,15 @@ function _(e, t) {
         (0, n.useLayoutEffect)(() => {
             if (m && null != e) {
                 let t;
-                ($ = r.current), (x = e);
-                let n = ((t = new MutationObserver(M)).observe(e, { attributes: !0, childList: !0, subtree: !0 }), t);
+                ($ = r.current), (_ = e);
+                let n = ((t = new MutationObserver(E)).observe(e, { attributes: !0, childList: !0, subtree: !0 }), t);
                 return () => {
                     ($ = () => {}), n.disconnect();
                 };
             }
         }, [e]);
 }
-function L(e) {
+function S(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
         r = 0xdeadbeef ^ t,
         n = 0x41c6ce57 ^ t;

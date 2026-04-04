@@ -1,13 +1,13 @@
-i.d(e, { i: () => T });
-var n = i(419954),
-    l = i(780964),
-    s = i(894389),
-    r = i(949350),
-    a = i(501750),
-    u = i(92348),
-    o = i(646704),
-    d = i(985018);
-let T = (0, n.WI)(l.X.BILLING_SECTION, {
-    useTitle: () => d.intl.string(d.t["4uOdGr"]),
-    buildLayout: () => [a.y, u.w, o.i, r.Q, s.b],
+n.d(t, { i: () => u });
+var i = n(419954),
+    s = n(780964),
+    l = n(55713),
+    a = n(729074),
+    r = n(981098),
+    o = n(236792),
+    d = n(343468),
+    c = n(985018);
+let u = (0, i.WI)(s.X.BILLING_SECTION, {
+    useTitle: () => c.intl.string(c.t["4uOdGr"]),
+    buildLayout: () => [r.y, o.w, d.i, a.Q, l.b],
 });
