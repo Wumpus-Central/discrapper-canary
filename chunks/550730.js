@@ -1,39 +1,38 @@
-n.d(t, { A: () => j }), n(508300);
+n.d(t, { A: () => b }), n(508300);
 var a = n(627968),
     i = n(64700),
     s = n(503698),
     l = n.n(s),
     r = n(835245),
-    o = n(311907),
-    d = n(397927),
-    c = n(157559),
-    u = n(817363),
+    o = n(397927),
+    d = n(157559),
+    c = n(817363),
+    u = n(993408),
     m = n(315949),
     h = n(559474),
-    x = n(920394),
-    p = n(816866),
-    g = n(87558),
-    _ = n(918550),
-    f = n(525221);
-let v = "Make sure you're only uploading text files!",
-    b = (e) => {
+    x = n(816866),
+    p = n(87558),
+    g = n(918550),
+    _ = n(525221);
+let f = "Make sure you're only uploading text files!",
+    v = (e) => {
         let { effect: t, onClick: n } = e,
-            { deleteConfig: i } = (0, p.wu)();
-        return (0, a.jsxs)(d.DUT, {
-            className: f.B0,
+            { deleteConfig: i } = (0, x.wu)();
+        return (0, a.jsxs)(o.DUT, {
+            className: _.B0,
             onClick: () => {
                 n(t);
             },
             children: [
                 (0, a.jsx)("div", {
-                    className: f.yV,
+                    className: _.yV,
                     style: { backgroundImage: `url(${t.config?.effects?.[0]?.base64})` },
                 }),
                 (0, a.jsxs)("div", {
-                    className: f.eL,
+                    className: _.eL,
                     children: [
-                        (0, a.jsx)(d.Text, { variant: "text-md/bold", children: t.name }),
-                        (0, a.jsx)(d.Button, {
+                        (0, a.jsx)(o.Text, { variant: "text-md/bold", children: t.name }),
+                        (0, a.jsx)(o.Button, {
                             variant: "critical-secondary",
                             text: "Delete",
                             onClick: (e) => {
@@ -45,30 +44,30 @@ let v = "Make sure you're only uploading text files!",
             ],
         });
     };
-function j() {
-    let { profileEffects: e, upsertConfig: t, clearAll: n } = (0, p.wu)(),
-        [s, j] = i.useState(),
-        A = i.useRef(null),
-        C = (0, o.yK)([x.A], () => x.A.getAllProfileEffects());
-    (0, m.A)();
-    let [y, T] = i.useState(""),
+function b() {
+    let { profileEffects: e, upsertConfig: t, clearAll: n } = (0, x.wu)(),
+        [s, b] = i.useState(),
+        j = i.useRef(null),
+        { categories: A } = (0, m.A)(),
+        C = i.useMemo(() => (0, u.Wj)(A), [A]),
+        [y, E] = i.useState(""),
         S = i.useMemo(
             () =>
                 "" === y
                     ? C
                     : C.filter((e) => {
                           let t = y.toLowerCase(),
-                              n = e.config.title?.toLowerCase() ?? "",
-                              a = e.config.description?.toLowerCase() ?? "";
+                              n = e.title?.toLowerCase() ?? "",
+                              a = e.description?.toLowerCase() ?? "";
                           return n.includes(t) || a.includes(t);
                       }),
             [y, C],
         ),
-        E = i.useCallback(
+        T = i.useCallback(
             (e, n) => {
-                if (null == n || !e.type.startsWith("text/")) return (0, h.Ni)(v);
+                if (null == n || !e.type.startsWith("text/")) return (0, h.Ni)(f);
                 let [a, i] = n.split(",");
-                if (!a.includes("text/plain")) return (0, h.Ni)(v);
+                if (!a.includes("text/plain")) return (0, h.Ni)(f);
                 let s = JSON.parse(atob(i));
                 (s.skuId = (0, r.A)()), t(s), (0, h.GF)("Profile Effect (maybe??) imported!");
             },
@@ -78,31 +77,31 @@ function j() {
             (e) => {
                 e.currentTarget?.files == null
                     ? (0, h.Ni)("Error uploading file. Try again!")
-                    : (0, h.KE)(e.currentTarget.files, E, h.Ni);
+                    : (0, h.KE)(e.currentTarget.files, T, h.Ni);
             },
-            [E],
+            [T],
         );
     return (0, a.jsxs)("div", {
-        className: f.zr,
+        className: _.zr,
         children: [
             null == s &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsxs)("div", {
-                            className: f.nz,
+                            className: _.nz,
                             children: [
                                 (0, a.jsxs)("div", {
-                                    className: l()(f.uW, f.nM),
+                                    className: l()(_.uW, _.nM),
                                     children: [
-                                        (0, a.jsx)(d.Heading, {
+                                        (0, a.jsx)(o.Heading, {
                                             variant: "heading-xl/bold",
                                             children: "Custom Profile Effects",
                                         }),
-                                        (0, a.jsx)(d.Button, {
+                                        (0, a.jsx)(o.Button, {
                                             variant: "critical-secondary",
                                             text: "Clear All",
                                             onClick: async () => {
-                                                (await c.A.confirm({
+                                                (await d.A.confirm({
                                                     title: "Clear All Profile Effects",
                                                     body: "Are you sure you want to clear all profile effects? This cannot be undone.",
                                                     confirmText: "Clear All",
@@ -113,14 +112,14 @@ function j() {
                                     ],
                                 }),
                                 (0, a.jsx)("div", {
-                                    className: f.Iv,
+                                    className: _.Iv,
                                     children: Object.values(e).map((e) =>
                                         (0, a.jsx)(
-                                            b,
+                                            v,
                                             {
                                                 effect: e,
                                                 onClick: (e) => {
-                                                    j(e);
+                                                    b(e);
                                                 },
                                             },
                                             e.skuId,
@@ -130,20 +129,20 @@ function j() {
                             ],
                         }),
                         (0, a.jsxs)("div", {
-                            className: l()(f.nM, f._N, f.uW),
+                            className: l()(_.nM, _._N, _.uW),
                             children: [
                                 (0, a.jsxs)("div", {
-                                    className: f.au,
+                                    className: _.au,
                                     children: [
-                                        (0, a.jsx)(d.Text, {
+                                        (0, a.jsx)(o.Text, {
                                             variant: "text-md/normal",
                                             color: "always-white",
                                             children: "Import Shared Config",
                                         }),
-                                        (0, a.jsx)(u.A, { ref: A, onChange: N, multiple: !1 }),
+                                        (0, a.jsx)(c.A, { ref: j, onChange: N, multiple: !1 }),
                                     ],
                                 }),
-                                (0, a.jsx)(d.Button, {
+                                (0, a.jsx)(o.Button, {
                                     variant: "primary",
                                     text: "Create New Effect",
                                     onClick: () => {
@@ -154,66 +153,64 @@ function j() {
                         }),
                         (0, a.jsx)("hr", {}),
                         (0, a.jsxs)("div", {
-                            className: f.uW,
+                            className: _.uW,
                             children: [
-                                (0, a.jsx)(d.Heading, { variant: "heading-xl/bold", children: "All Effects" }),
-                                (0, a.jsx)(d.ksK, {
+                                (0, a.jsx)(o.Heading, { variant: "heading-xl/bold", children: "All Effects" }),
+                                (0, a.jsx)(o.ksK, {
                                     value: y,
                                     onChange: (e) => {
-                                        T(e);
+                                        E(e);
                                     },
                                 }),
                                 (0, a.jsx)("div", {
-                                    className: f.xm,
+                                    className: _.xm,
                                     children: S.map((e) =>
                                         (0, a.jsx)(
-                                            d.DUT,
+                                            o.DUT,
                                             {
-                                                className: f.S5,
-                                                style: { backgroundImage: `url(${e.config.thumbnailPreviewSrc})` },
+                                                className: _.S5,
+                                                style: { backgroundImage: `url(${e.thumbnailPreviewSrc})` },
                                                 onClick: () => {
                                                     let t = {
-                                                        [g.qH.THUMBNAIL]:
-                                                            null != e.config.thumbnailPreviewSrc &&
-                                                            "" !== e.config.thumbnailPreviewSrc
+                                                        [p.qH.THUMBNAIL]:
+                                                            null != e.thumbnailPreviewSrc &&
+                                                            "" !== e.thumbnailPreviewSrc
                                                                 ? {
-                                                                      src: e.config.thumbnailPreviewSrc,
+                                                                      src: e.thumbnailPreviewSrc,
                                                                       name: "thumbnail.png",
                                                                       base64: "",
                                                                   }
                                                                 : null,
-                                                        [g.qH.STATIC]:
-                                                            null != e.config.staticFrameSrc &&
-                                                            "" !== e.config.staticFrameSrc
+                                                        [p.qH.STATIC]:
+                                                            null != e.staticFrameSrc && "" !== e.staticFrameSrc
                                                                 ? {
-                                                                      src: e.config.staticFrameSrc,
+                                                                      src: e.staticFrameSrc,
                                                                       name: "static.png",
                                                                       base64: "",
                                                                   }
                                                                 : null,
-                                                        [g.qH.REDUCED_MOTION]:
-                                                            null != e.config.reducedMotionSrc &&
-                                                            "" !== e.config.reducedMotionSrc
+                                                        [p.qH.REDUCED_MOTION]:
+                                                            null != e.reducedMotionSrc && "" !== e.reducedMotionSrc
                                                                 ? {
-                                                                      src: e.config.reducedMotionSrc,
+                                                                      src: e.reducedMotionSrc,
                                                                       name: "reduced_motion.png",
                                                                       base64: "",
                                                                   }
                                                                 : null,
                                                     };
-                                                    j({
+                                                    b({
                                                         skuId: e.skuId,
-                                                        name: e.config.title,
+                                                        name: e.title,
                                                         readonly: !0,
-                                                        config: { effects: e.config.effects, stillFrames: t },
+                                                        config: { effects: e.effects, stillFrames: t },
                                                     });
                                                 },
                                                 children: (0, a.jsx)("div", {
-                                                    className: f.Hd,
-                                                    children: (0, a.jsx)(d.Text, {
+                                                    className: _.Hd,
+                                                    children: (0, a.jsx)(o.Text, {
                                                         variant: "text-md/normal",
                                                         color: "always-white",
-                                                        children: e.config.title,
+                                                        children: e.title,
                                                     }),
                                                 }),
                                             },
@@ -225,7 +222,7 @@ function j() {
                         }),
                     ],
                 }),
-            null != s && (0, a.jsx)(_.A, { effect: s }),
+            null != s && (0, a.jsx)(g.A, { effect: s }),
         ],
     });
 }

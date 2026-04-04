@@ -36,7 +36,6 @@ function u() {
         { isClaiming: l, fetchPurchasesError: u, claimError: c, isFetching: n, purchases: d, hasPreviouslyFetched: _ }
     );
 }
-n(259248);
 let c = () => u(!0),
     d = function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
