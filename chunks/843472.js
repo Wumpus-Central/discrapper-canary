@@ -1224,10 +1224,23 @@ ${s}`),
             });
         },
         async suppressEmbeds(e, t) {
-            await ei.A.unarchiveThreadIfNecessary(e),
+            await ei.A.unarchiveThreadIfNecessary(e);
+            let n = ed.A.getMessage(e, t);
+            null != n &&
                 a.Bo.patch({
                     url: eN.Rsh.MESSAGE(e, t),
-                    body: { flags: eN.pr7.SUPPRESS_EMBEDS },
+                    body: { flags: (0, s.lA)(n.flags, eN.pr7.SUPPRESS_EMBEDS, !0) },
+                    oldFormErrors: !0,
+                    rejectWithError: !1,
+                });
+        },
+        async patchMessageGuildOfficial(e, t, n) {
+            await ei.A.unarchiveThreadIfNecessary(e);
+            let r = ed.A.getMessage(e, t);
+            null != r &&
+                a.Bo.patch({
+                    url: eN.Rsh.MESSAGE(e, t),
+                    body: { flags: (0, s.lA)(r.flags, eN.pr7.IS_GUILD_OFFICIAL, n) },
                     oldFormErrors: !0,
                     rejectWithError: !1,
                 });

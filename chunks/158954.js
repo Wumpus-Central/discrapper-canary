@@ -99,6 +99,7 @@ n.d(t, {
     Hnu: () => z.SettingsInfoIcon,
     I$d: () => z.TextLockIcon,
     I9m: () => z.LinkExternalSmallIcon,
+    IdC: () => z.ChatMinusIcon,
     Ihz: () => z.DoorEnterIcon,
     IpV: () => g.Ip,
     J$p: () => Z.BoostGemLevelTwoRive,
