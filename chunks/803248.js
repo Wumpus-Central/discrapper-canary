@@ -224,4 +224,6 @@ Object.freeze({
     s.PREMIUM_TIER_2_MONTHLY,
     s.PREMIUM_TIER_2_YEARLY,
     i.HF,
+    s.PREMIUM_TIER_2_MONTHLY,
+    i.V2,
     s.PREMIUM_TIER_2_MONTHLY;
