@@ -5,8 +5,8 @@ var i = n(627968),
     a = n(554146),
     r = n(621956),
     o = n(265872),
-    c = n(442433),
-    d = n(688810),
+    d = n(442433),
+    c = n(688810),
     u = n(384059),
     h = n(480890),
     A = n(160761),
@@ -22,7 +22,7 @@ var i = n(627968),
     N = n(985018);
 function T(e) {
     let { channel: t, themeable: T, whichPopoutIsOpen: S, setWhichPopoutIsOpen: b } = e,
-        { parentAnalyticsLocation: y } = (0, d.Ay)(),
+        { parentAnalyticsLocation: y } = (0, c.Ay)(),
         {
             Component: v,
             play: j,
@@ -34,11 +34,11 @@ function T(e) {
         G = M || D || U,
         P = (0, m.VE)({ isSoundboardButtonDisabled: G }),
         [k, w] = (0, A.DP)(P),
-        { analyticsLocations: B } = (0, d.Ay)(),
+        { analyticsLocations: B } = (0, c.Ay)(),
         { isHovered: V, setIsHovered: H, onMouseEnter: F, onMouseLeave: K } = (0, _.A)(200, 300);
     function W(e) {
         null != L &&
-            (0, c.L3)(e, async () => {
+            (0, d.L3)(e, async () => {
                 let { default: e } = await n.e("51111").then(n.bind(n, 323002));
                 return (t) =>
                     (0, i.jsx)(e, {
@@ -53,9 +53,12 @@ function T(e) {
         (0, u.X)(y, u.O.SOUNDBOARD),
             S === C.P.SOUNDBOARD ? (b?.(void 0), K()) : (null != S ? (j(), F()) : j(), b?.(C.P.SOUNDBOARD));
     }
-    let z = l.useRef(null);
+    let z = l.useCallback(() => {
+            null == S && b?.(C.P.SOUNDBOARD);
+        }, [S, b]),
+        q = l.useRef(null);
     return (0, i.jsx)(o.Y, {
-        targetElementRef: z,
+        targetElementRef: q,
         shouldShow: (V && (S === C.P.SOUNDBOARD || null == S)) || S === C.P.SOUNDBOARD,
         animation: o.Y.Animation.FADE,
         animationPosition: "top",
@@ -73,6 +76,7 @@ function T(e) {
                       children: (0, i.jsx)("div", {
                           onMouseEnter: F,
                           onMouseLeave: K,
+                          onMouseDown: z,
                           children: (0, i.jsx)(p.A, {
                               guildId: L,
                               channel: t,
@@ -87,7 +91,7 @@ function T(e) {
         },
         children: () =>
             (0, i.jsx)(I.l, {
-                ref: z,
+                ref: q,
                 isTrayButton: !0,
                 themeable: T,
                 label: M
