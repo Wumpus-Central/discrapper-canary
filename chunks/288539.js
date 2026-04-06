@@ -49,23 +49,36 @@ function I(e) {
         O = (0, a.bG)([f.A], () => f.A.getChannel(I)),
         b = null != O ? O.getGuildId() : null,
         D =
-            y || null == R || null == b || null == I
+            y || null == R || null == I || null == O
                 ? void 0
                 : (e) => {
-                      null != O &&
-                          (0, o.L3)(e, async () => {
-                              let { default: e } = await Promise.all([
-                                  n.e("41927"),
-                                  n.e("97262"),
-                                  n.e("11478"),
-                                  n.e("42128"),
-                                  n.e("97283"),
-                                  n.e("84841"),
-                                  n.e("19901"),
-                              ]).then(n.bind(n, 107632));
-                              return (t) =>
-                                  (0, r.jsx)(e, { ...t, viewingChannelId: v, user: R, channel: O, guildId: b });
-                          });
+                      null != b
+                          ? (0, o.L3)(e, async () => {
+                                let { default: e } = await Promise.all([
+                                    n.e("41927"),
+                                    n.e("97262"),
+                                    n.e("11478"),
+                                    n.e("42128"),
+                                    n.e("97283"),
+                                    n.e("84841"),
+                                    n.e("19901"),
+                                ]).then(n.bind(n, 107632));
+                                return (t) =>
+                                    (0, r.jsx)(e, { ...t, viewingChannelId: v, user: R, channel: O, guildId: b });
+                            })
+                          : O.isDM() &&
+                            (0, o.L3)(e, async () => {
+                                let { default: e } = await Promise.all([
+                                    n.e("41927"),
+                                    n.e("97262"),
+                                    n.e("11478"),
+                                    n.e("42128"),
+                                    n.e("97283"),
+                                    n.e("39778"),
+                                    n.e("17857"),
+                                ]).then(n.bind(n, 385913));
+                                return (t) => (0, r.jsx)(e, { ...t, user: R, channel: O, targetIsUser: !0 });
+                            });
                   },
         L = g.Ay.useName(R),
         w = (0, a.bG)([f.A, p.Ay, h.A], () => E.Ay.getNickname(b, I, R));
