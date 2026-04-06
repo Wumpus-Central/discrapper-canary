@@ -1,11 +1,10 @@
 e.exports = {
+    kL: "container_effb26",
     o0: "graphContainer_effb26",
-    me: "separator_effb26",
-    xB: "popoutText_effb26",
-    xJ: "popoutTextDetails_effb26",
-    Vf: "popoutBottom_effb26",
-    Ce: "debugButton_effb26",
-    d3: "copyStatsButton_effb26",
-    ro: "textWithIcon_effb26",
-    uO: "secured_effb26",
+    VU: "userSelectText_effb26",
+    ew: "statsRow_effb26",
+    zS: "statsText_effb26",
+    pw: "devButtons_effb26",
+    n2: "copyButtonWrapper_effb26",
+    CU: "learnMoreLink_effb26",
 };
