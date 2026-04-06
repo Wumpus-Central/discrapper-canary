@@ -174,6 +174,7 @@ var r = (function (e) {
             (e.ICYMI_ONBOARDING_TOPICS = "impression_icymi_onboarding_topics"),
             (e.IGNORE_USER_CONFIRMATION = "impression_ignore_user_confirmation"),
             (e.INVITE_ACCEPT = "impression_invite_accept"),
+            (e.INVITE_EMBED = "impression_invite_embed"),
             (e.LOCALIZED_PRICING_UPSELL_VIEWED = "impression_localized_pricing_upsell_viewed"),
             (e.MASKED_LINK_MODAL = "impression_masked_link_modal"),
             (e.MESSAGE_ALSO_SEND_TO_CHANNEL = "impression_message_also_send_to_channel"),

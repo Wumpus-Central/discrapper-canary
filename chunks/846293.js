@@ -214,7 +214,16 @@ let em = function (e, t) {
         (0, O.Fd)(e) && null != n ? em(n) : await J.A.transitionToGuildSync(t);
     };
 function eg(e, t) {
-    let { invite: n, action: r, inviter_id: i, invite_message_id: s, invite_instance_id: a } = e;
+    let {
+        invite: n,
+        action: r,
+        inviter_id: i,
+        invite_message_id: s,
+        invite_instance_id: a,
+        application_id: o,
+        stream_key: l,
+        number_of_users_in_channel: u,
+    } = e;
     z.default.track(et.HAw.INVITE_EMBED_ACTIONED, {
         action: r,
         invite_code: n.code,
@@ -222,6 +231,9 @@ function eg(e, t) {
         inviter_id: i ?? null,
         invite_message_id: s ?? null,
         invite_instance_id: a ?? null,
+        application_id: o ?? null,
+        stream_key: l ?? null,
+        number_of_users_in_channel: u ?? null,
         location_stack: t ?? null,
     });
 }
