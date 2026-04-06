@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { W: () => l, u: () => u });
+n.d(t, { Wq: () => l, i$: () => u, un: () => c });
 var r = n(562465),
     i = n(73153),
     s = n(728458),
@@ -11,17 +11,25 @@ async function l() {
         i.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_START" });
         try {
             let e = await r.Bo.get({ url: o.Rsh.WIDGET_CONFIGS_FEATURED, rejectWithError: !0 });
-            i.h.dispatch({
-                type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS",
-                applicationIds: e.body.application_ids,
-                configs: e.body.configs,
-            });
+            i.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS", configs: e.body.configs });
         } catch (e) {
             i.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_FAILURE" }), s.A.captureException(e);
         }
     }
 }
-async function u(e) {
+async function u() {
+    let { force: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+    if (e || (a.A.getDeveloperFetchState() !== a.e.FETCHING && a.A.getDeveloperFetchState() !== a.e.SUCCESS)) {
+        i.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_START" });
+        try {
+            let e = await r.Bo.get({ url: o.Rsh.WIDGET_CONFIGS_DEVELOPER, rejectWithError: !0 });
+            i.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS", configs: e.body.configs });
+        } catch (e) {
+            i.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_FAILURE" }), s.A.captureException(e);
+        }
+    }
+}
+async function c(e) {
     let { force: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = a.A.getFetchState(e);
     if (t || (n !== a.e.FETCHING && n !== a.e.SUCCESS)) {

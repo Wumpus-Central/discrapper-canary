@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => h });
 var i = n(64700),
     l = n(540185),
     a = n(417597),
@@ -6,44 +6,46 @@ var i = n(64700),
     r = n(385113),
     o = n(369374),
     c = n(395332),
-    d = n(287809),
-    u = n(403362),
-    g = n(633075),
-    m = n(289173),
-    x = n(667049),
-    p = n(229231);
-function f(e) {
+    d = n(253932),
+    u = n(287809),
+    g = n(403362),
+    m = n(633075),
+    x = n(289173),
+    p = n(667049),
+    f = n(229231);
+function h(e) {
     let { enabled: t } = o.A.useConfig({ location: e.location }),
-        n = (0, a.bG)([d.default], () => d.default.getCurrentUser()),
-        f = (0, x.A)(n?.id),
-        h = (0, c.w$)(e),
-        _ = (0, a.bG)([r.A], () => r.A.getAllConfigsByApplication());
+        n = d.Q_.useSetting(),
+        h = (0, a.bG)([u.default], () => u.default.getCurrentUser()),
+        _ = (0, p.A)(h?.id),
+        A = (0, c.w$)(e),
+        I = (0, a.bG)([r.A], () => r.A.getAllConfigsByApplication());
     return (
         i.useEffect(() => {
-            t && (0, s.W)();
-        }, [t]),
+            t && ((0, s.Wq)(), n && (0, s.i$)());
+        }, [t, n]),
         i.useMemo(() => {
-            let e = new Set(f.filter((e) => e instanceof g.R).map((e) => e.applicationId)),
-                n = new Set(f.map((e) => e.type));
-            return p.Zc.flatMap((i) =>
+            let e = new Set(_.filter((e) => e instanceof m.R).map((e) => e.applicationId)),
+                n = new Set(_.map((e) => e.type));
+            return f.Zc.flatMap((i) =>
                 i === l.x.APPLICATION
                     ? t
-                        ? Object.values(_)
+                        ? Object.values(I)
                               .map((e) => e[0])
-                              .filter(u.Vq)
+                              .filter(g.Vq)
                               .filter((t) => !e.has(t.application_id))
-                              .map((e) => new g.R({ applicationId: e.application_id }))
-                        : null == h
+                              .map((e) => new m.R({ applicationId: e.application_id }))
+                        : null == A
                           ? []
-                          : h
-                                .filter((t) => !e.has(t.applicationId))
-                                .map((e) => new g.R({ applicationId: e.applicationId }))
-                    : (0, m.hL)(i)
+                          : A.filter((t) => !e.has(t.applicationId)).map(
+                                (e) => new m.R({ applicationId: e.applicationId }),
+                            )
+                    : (0, x.hL)(i)
                       ? n.has(i)
                           ? []
-                          : new m.Yy({ type: i, games: [] })
-                      : void (0, u.xb)(i),
+                          : new x.Yy({ type: i, games: [] })
+                      : void (0, g.xb)(i),
             );
-        }, [t, _, h, f])
+        }, [t, I, A, _])
     );
 }

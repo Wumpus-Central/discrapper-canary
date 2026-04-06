@@ -1,21 +1,28 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => u });
 var r = n(64700),
     i = n(311907),
-    s = n(403362),
-    a = n(382483),
-    o = n(385113);
-function l(e) {
-    let t = (0, i.bG)([o.A], () => o.A.getFeaturedFetchState()),
-        n = (0, i.yK)([o.A], () => e.filter((e) => o.A.getFetchState(e) === o.e.NOT_FETCHED)),
-        l = (0, i.yK)([o.A], () => e.map((e) => o.A.getConfig(e)).filter(s.Vq));
+    s = n(253932),
+    a = n(403362),
+    o = n(382483),
+    l = n(385113);
+function u(e) {
+    let t = s.Q_.useSetting(),
+        n = (0, i.bG)([l.A], () => l.A.getFeaturedFetchState()),
+        u = (0, i.bG)([l.A], () => l.A.getDeveloperFetchState()),
+        c = (0, i.yK)([l.A], () => e.filter((e) => l.A.getFetchState(e) === l.e.NOT_FETCHED)),
+        d = (0, i.yK)([l.A], () => e.map((e) => l.A.getConfig(e)).filter(a.Vq));
     return (
         r.useEffect(() => {
-            (0, a.W)();
+            (0, o.Wq)();
         }, []),
         r.useEffect(() => {
-            if (t === o.e.SUCCESS || t === o.e.FAILURE) for (let e of n) (0, a.u)(e);
-        }, [t, n]),
-        l
+            t && (0, o.i$)();
+        }, [t]),
+        r.useEffect(() => {
+            if (n !== l.e.NOT_FETCHED && n !== l.e.FETCHING && (!t || (u !== l.e.NOT_FETCHED && u !== l.e.FETCHING)))
+                for (let e of c) (0, o.un)(e);
+        }, [u, n, c, t]),
+        d
     );
 }
