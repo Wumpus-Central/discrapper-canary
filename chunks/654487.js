@@ -4,7 +4,7 @@ n.d(t, {
     B3: () => D,
     BQ: () => k,
     CI: () => I,
-    Fw: () => C,
+    Fw: () => N,
     GD: () => A,
     J6: () => b,
     K3: () => M,
@@ -16,7 +16,7 @@ n.d(t, {
     WQ: () => F,
     ZV: () => f,
     aA: () => h,
-    aJ: () => N,
+    aJ: () => C,
     eA: () => v,
     ej: () => S,
     fO: () => E,
@@ -90,6 +90,8 @@ var r = n(735438),
             (e.QUEST_LEARN_MORE_CTA = "quest_learn_more_cta"),
             (e.QUEST_ACTIVITY_HEADER = "quest_activity_header"),
             (e.QUEST_ACTIVITY_UNENROLLED_MODAL = "quest_activity_unenrolled_modal"),
+            (e.NITRO_HOME_MARKETING = "nitro_home_marketing"),
+            (e.NITRO_HOME_TAB = "nitro_home_tab"),
             e
         );
     })({});
@@ -127,8 +129,8 @@ var v = (function (e) {
         e
     );
 })({});
-let C = "1333839522189938740",
-    N = "1410358070831480904",
+let N = "1333839522189938740",
+    C = "1410358070831480904",
     R = "1420556874629251124",
     O = "1402418703554842694",
     b = new Set([l.yW.DESKTOP_ACCOUNT_PANEL_AREA, l.yW.MOBILE_HOME_DOCK_AREA, l.yW.QUEST_HOME_BANNER_DESKTOP]),

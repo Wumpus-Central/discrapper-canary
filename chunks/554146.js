@@ -581,6 +581,7 @@ var r = (function (e) {
             (e[(e.QUEST_HOME_NEW_QUEST_BADGE = 728)] = "QUEST_HOME_NEW_QUEST_BADGE"),
             (e[(e.PREMIUM_MARKETING_MOMENT_USER_SETTINGS_OFFER_BADGE = 729)] =
                 "PREMIUM_MARKETING_MOMENT_USER_SETTINGS_OFFER_BADGE"),
+            (e[(e.NITRO_TAB_QUEST_ORB_MULTIPLIER_TOOLTIP = 730)] = "NITRO_TAB_QUEST_ORB_MULTIPLIER_TOOLTIP"),
             e
         );
     })({}),
