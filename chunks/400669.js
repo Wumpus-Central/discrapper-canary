@@ -15,32 +15,32 @@ var r = n(627968),
     h = n(985018);
 let m = { type: "image", src: n(201682).A },
     E = i.forwardRef(function (e, t) {
-        let { className: n, disabled: i, size: E } = e,
-            g = p.pe.TIER_2,
-            A = h.intl.string(h.t.lG6a5x),
-            I = (0, d.Gh)("premium-wishlist-button-nux"),
-            T = (0, s.bG)([f.default], () => f.default.getId());
+        let { className: n, disabled: i, size: E, location: g } = e,
+            A = p.pe.TIER_2,
+            I = h.intl.string(h.t.lG6a5x),
+            T = (0, d.Gh)("premium-wishlist-button-nux"),
+            S = (0, s.bG)([f.default], () => f.default.getId());
         (0, _.pE)();
         let {
-                isWishlisted: S,
-                isBusy: y,
-                isFirstTimeWishlister: v,
-                handleToggle: N,
-            } = (0, u.c)({ userId: T, skuId: g, nuxGraphic: I ? m : void 0, onNuxShow: I ? l.D : void 0 }),
-            C = (0, c.mB)(a.M.PREMIUM_WISHLIST_COACHMARK);
+                isWishlisted: y,
+                isBusy: v,
+                isFirstTimeWishlister: N,
+                handleToggle: C,
+            } = (0, u.c)({ userId: S, location: g, skuId: A, nuxGraphic: T ? m : void 0, onNuxShow: T ? l.D : void 0 }),
+            R = (0, c.mB)(a.M.PREMIUM_WISHLIST_COACHMARK);
         return (0, r.jsx)("div", {
             ref: t,
             children: (0, r.jsx)(o._, {
-                skuId: g,
-                productName: A,
+                skuId: A,
+                productName: I,
                 className: n,
                 disabled: i,
                 size: E,
-                isWishlisted: S,
-                isBusy: y,
-                isFirstTimeWishlister: v,
-                onClick: N,
-                shouldShowTooltip: !C,
+                isWishlisted: y,
+                isBusy: v,
+                isFirstTimeWishlister: N,
+                onClick: C,
+                shouldShowTooltip: !R,
                 tooltipConfig: { add: h.intl.string(h.t.cjmnm6) },
             }),
         });

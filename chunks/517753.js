@@ -8,7 +8,7 @@ var i = s(421380),
     o = s(404374),
     c = s(422936),
     d = s(234419),
-    u = s(465794),
+    u = s(725807),
     f = s(511484),
     h = s(400669),
     x = s(909536),
@@ -17,23 +17,23 @@ var i = s(421380),
     _ = s(788868),
     g = s(191850),
     j = s(985018),
-    v = s(827025);
+    v = s(591960);
 function A(e) {
     let { onClose: t } = e,
         { analyticsLocations: s } = (0, a.Ay)(l.A.GO_LIVE_MODAL_V2),
         A = (0, x.St)("hd_streaming_upsell_ribbon"),
-        y = (0, d.V)(),
-        S = (0, c.O)(),
-        C = y?.subscription_trial?.sku_id === _.pe.TIER_2 || (0, f.U9)(S, _.pe.TIER_2),
+        S = (0, d.V)(),
+        y = (0, c.O)(),
+        C = S?.subscription_trial?.sku_id === _.pe.TIER_2 || (0, f.U9)(y, _.pe.TIER_2),
         b = j.intl.string(g.default["+f+cqk"]);
     return (
         C &&
-            (null != y
+            (null != S
                 ? (b = (0, p.FY)({
-                      intervalType: y?.subscription_trial?.interval,
-                      intervalCount: y?.subscription_trial?.interval_count,
+                      intervalType: S?.subscription_trial?.interval,
+                      intervalCount: S?.subscription_trial?.interval_count,
                   }))
-                : null != S && (b = j.intl.formatToPlainString(j.t.bkQ4bH, { percent: S.discount.amount }))),
+                : null != y && (b = j.intl.formatToPlainString(j.t.bkQ4bH, { percent: y.discount.amount }))),
         (0, r.jsxs)("div", {
             className: v.zr,
             children: [
@@ -53,7 +53,12 @@ function A(e) {
                 (0, r.jsxs)("div", {
                     className: v.OQ,
                     children: [
-                        A && (0, r.jsx)(h.l, { size: "sm", className: v.ij }),
+                        A &&
+                            (0, r.jsx)(h.l, {
+                                size: "sm",
+                                className: v.ij,
+                                location: l.A.PREMIUM_WISHLIST_STREAM_UPSELL,
+                            }),
                         (0, r.jsx)(u.A, {
                             className: v.lI,
                             iconClassName: v.PC,

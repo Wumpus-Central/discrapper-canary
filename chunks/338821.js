@@ -50,7 +50,7 @@ var r = n(627968),
     Z = n(698279),
     X = n(788868),
     Q = n(985018),
-    J = n(192139);
+    J = n(582214);
 let ee = 16,
     et = 48,
     en = 32,
@@ -414,7 +414,13 @@ function ed(e) {
                         hoveredNitroLockedSound: eN,
                         subscribeButtonVariantOverride: eP.subscribeButtonVariant,
                         useLegacyButton: eP.useLegacyButton,
-                        leadingAction: ek ? (0, r.jsx)(N.l, { size: "sm", className: J.ij }) : void 0,
+                        leadingAction: ek
+                            ? (0, r.jsx)(N.l, {
+                                  size: "sm",
+                                  className: J.ij,
+                                  location: f.A.PREMIUM_WISHLIST_SOUNDBOARD_UPSELL,
+                              })
+                            : void 0,
                     })
                 );
             }

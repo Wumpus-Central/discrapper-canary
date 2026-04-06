@@ -22,7 +22,7 @@ var r = n(627968),
     S = n(450232),
     y = n(780964),
     v = n(358776),
-    N = n(840065),
+    N = n(858897),
     C = n(909536),
     R = n(287809),
     O = n(954571),
@@ -37,7 +37,7 @@ var r = n(627968),
     U = n(49999),
     G = n(788868),
     F = n(985018),
-    V = n(218098);
+    V = n(871061);
 let B = () =>
         (0, r.jsx)("div", {
             className: V.nV,
@@ -120,11 +120,11 @@ let B = () =>
                 { no: F.t["3D5yo/"], "sv-SE": F.t["3D5yo/"], uk: F.t["3D5yo/"], de: F.t["3D5yo/"] },
                 F.t["dqH+qr"],
             ),
-            h = (0, o.YW)({ isPreview: s, isCoachmark: n, forceShowCloseButton: a })
+            m = (0, o.YW)({ isPreview: s, isCoachmark: n, forceShowCloseButton: a })
                 .with({ isCoachmark: !0 }, { forceShowCloseButton: !0 }, () => F.intl.string(F.t.cpT0Cq))
                 .with({ isPreview: !0 }, () => p)
                 .otherwise(() => F.intl.string(F.t.Olc2K3)),
-            m = (0, r.jsx)(j, {
+            E = (0, r.jsx)(j, {
                 onSubscribeSuccess: () => {
                     u(!0);
                 },
@@ -137,10 +137,17 @@ let B = () =>
                     (_
                         ? (0, r.jsxs)("div", {
                               className: V.rV,
-                              children: [(0, r.jsx)(T.l, { size: "sm", className: V.Tf }), m],
+                              children: [
+                                  (0, r.jsx)(T.l, {
+                                      size: "sm",
+                                      className: V.Tf,
+                                      location: h.A.PREMIUM_WISHLIST_CLIENT_THEMES_EDITOR,
+                                  }),
+                                  E,
+                              ],
                           })
-                        : m),
-                (0, r.jsx)(c.$nd, { fullWidth: !0, onClick: f, variant: "secondary", text: h }),
+                        : E),
+                (0, r.jsx)(c.$nd, { fullWidth: !0, onClick: f, variant: "secondary", text: m }),
             ],
         });
     },

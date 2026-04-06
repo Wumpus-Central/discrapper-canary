@@ -377,7 +377,14 @@ function en(e) {
                       o
                           ? (0, r.jsxs)("div", {
                                 className: H.rV,
-                                children: [(0, r.jsx)(T.l, { size: "sm", className: H.Tf }), f],
+                                children: [
+                                    (0, r.jsx)(T.l, {
+                                        size: "sm",
+                                        className: H.Tf,
+                                        location: h.A.PREMIUM_WISHLIST_CUSTOM_THEMES_EDITOR,
+                                    }),
+                                    f,
+                                ],
                             })
                           : f,
                       (0, r.jsx)(d.$nd, {
