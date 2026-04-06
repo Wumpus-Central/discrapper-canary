@@ -1,19 +1,19 @@
 n.d(t, { A: () => _ });
 var i = n(627968),
-    r = n(64700),
-    a = n(397927),
+    a = n(64700),
+    r = n(397927),
     l = n(843472),
     s = n(309010),
-    o = n(64983),
+    o = n(926466),
     d = n(652215),
     c = n(49999),
     u = n(985018),
     A = n(988726);
-class h extends r.PureComponent {
+class h extends a.PureComponent {
     handleInvite = () => {
         let { guild: e } = this.props;
-        (0, a.mMO)(async () => {
-            let { default: t } = await Promise.all([n.e("43600"), n.e("42821")]).then(n.bind(n, 234355));
+        (0, r.mMO)(async () => {
+            let { default: t } = await Promise.all([n.e("43600"), n.e("12629")]).then(n.bind(n, 234355));
             return (n) => (0, i.jsx)(t, { ...n, guild: e, source: d.PE1.INVITE_NOTICE });
         });
     };

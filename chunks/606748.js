@@ -1,8 +1,8 @@
 n.d(t, { A: () => u });
 var i = n(627968);
 n(64700);
-var r = n(64983),
-    a = n(450510),
+var a = n(926466),
+    r = n(450510),
     l = n(976860),
     s = n(323443),
     o = n(652215),
@@ -10,13 +10,13 @@ var r = n(64983),
     c = n(213242);
 let u = (e) => {
     let { channel: t, guild: n } = e;
-    return (0, i.jsx)(r.A, {
+    return (0, i.jsx)(a.A, {
         guild: n,
         onDismissed: () => {
-            (0, a.sF)(a._2.HUB_STUDY_ROOM_NOTICE);
+            (0, r.sF)(r._2.HUB_STUDY_ROOM_NOTICE);
         },
         onClick: () => {
-            (0, a.sF)(a._2.HUB_STUDY_ROOM_NOTICE),
+            (0, r.sF)(r._2.HUB_STUDY_ROOM_NOTICE),
                 null != t && null != t.getGuildId() && ((0, s.av)(t), (0, l.uh)(t.getGuildId(), t.id));
         },
         title: d.intl.string(d.t["4Y2AS7"]),

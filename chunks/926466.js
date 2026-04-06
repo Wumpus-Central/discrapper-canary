@@ -1,104 +1,86 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => m });
 var i = n(627968),
     a = n(64700),
-    l = n(503698),
-    r = n.n(l),
-    s = n(735438),
-    o = n(421380),
-    d = n(397927),
-    c = n(58149),
-    u = n(954571),
-    A = n(652215),
-    h = n(985018),
-    _ = n(436965);
-let m = (0, s.debounce)(c.Ay.trackWithMetadata, 500),
-    p = function (e) {
+    r = n(735438),
+    l = n.n(r),
+    s = n(421380),
+    o = n(397927),
+    d = n(58149),
+    c = n(954571),
+    u = n(652215),
+    A = n(985018),
+    h = n(436965);
+let _ = l().debounce(d.Ay.trackWithMetadata, 500),
+    m = (e) => {
         let {
             guild: t,
             title: n,
-            message: l,
-            image: s,
-            type: p,
-            imageStyles: g,
-            imageMarginX: E,
-            imageMarginTop: I,
-            trackingSource: f,
-            undismissable: C,
-            onDismissed: T,
-            onClick: N,
-            cta: S,
-            ctaColor: x,
-            centerText: v,
-            className: b,
+            message: r,
+            image: l,
+            type: m,
+            imageMarginX: p,
+            imageMarginTop: g,
+            trackingSource: E,
+            undismissable: I,
+            onDismissed: f,
+            onClick: C,
+            cta: T,
+            ctaColor: N,
         } = e;
         a.useEffect(() => {
-            m(A.HAw.CHANNEL_NOTICE_VIEWED, { notice_type: p, guild_id: t.id });
-        }, [t.id, p]);
-        let y = null;
-        "function" == typeof S
-            ? (y = S())
-            : null != S &&
-              (y = (0, i.jsx)(o.$n, {
+            _(u.HAw.CHANNEL_NOTICE_VIEWED, { notice_type: m, guild_id: t.id });
+        }, [t.id, m]);
+        let S = null;
+        "function" == typeof T
+            ? (S = T())
+            : null != T &&
+              (S = (0, i.jsx)(s.$n, {
                   "data-migration-pending": !0,
-                  className: _.x6,
-                  size: o.$n.Sizes.SMALL,
+                  className: h.HM,
+                  size: s.$n.Sizes.SMALL,
                   onClick: () => {
-                      null != p &&
-                          u.default.track(A.HAw.CHANNEL_NOTICE_CTA_CLICKED, {
-                              source: f,
+                      null != m &&
+                          c.default.track(u.HAw.CHANNEL_NOTICE_CTA_CLICKED, {
+                              source: E,
                               guild_id: t.id,
-                              notice_type: p,
+                              notice_type: m,
                           }),
-                          N?.();
+                          C?.();
                   },
                   fullWidth: !0,
-                  color: x,
-                  children: S,
+                  color: N,
+                  children: T,
               }));
-        let O = null;
-        "function" == typeof n
-            ? (O = n())
-            : null != n &&
-              (O = (0, i.jsx)(d.Text, {
-                  variant: "text-md/medium",
-                  color: "text-strong",
-                  className: r()(_.DD, { [_.vG]: null == s }, { [_.gX]: v }),
-                  children: n,
-              }));
-        let L = null;
-        "function" == typeof l
-            ? (L = l())
-            : null != l &&
-              (L = (0, i.jsx)(d.Text, {
-                  className: r()({ [_.gX]: v }),
-                  variant: "text-sm/normal",
-                  color: "text-muted",
-                  children: l,
-              }));
-        let R = null != E ? `${E}px` : "16px";
+        let x = null != p ? `${p}px` : "16px";
         return (0, i.jsxs)("div", {
-            className: r()(_.kL, b),
+            className: h.kX,
             children: [
-                !0 === C
+                !0 === I
                     ? null
-                    : (0, i.jsx)(d.DUT, {
+                    : (0, i.jsx)(o.DUT, {
                           onClick: () => {
-                              c.Ay.trackWithMetadata(A.HAw.CHANNEL_NOTICE_CLOSED, { notice_type: p }), T?.();
+                              d.Ay.trackWithMetadata(u.HAw.CHANNEL_NOTICE_CLOSED, { notice_type: m }), f?.();
                           },
-                          className: _.VN,
-                          "aria-label": h.intl.string(h.t.WAI6xu),
-                          children: (0, i.jsx)(d.PGe, { size: "md", color: "currentColor", className: _.ut }),
+                          className: h.VN,
+                          "aria-label": A.intl.string(A.t.WAI6xu),
+                          children: (0, i.jsx)(o.PGe, { size: "md", color: "currentColor", className: h.ut }),
                       }),
-                null != s &&
+                null != l &&
                     (0, i.jsx)("div", {
-                        className: _.ZS,
-                        style: { marginTop: `${I}px`, marginLeft: R, marginRight: R },
-                        children:
-                            "string" == typeof s
-                                ? (0, i.jsx)("img", { className: _.Sl, style: g, src: s, alt: "" })
-                                : s,
+                        className: h.ZS,
+                        style: { marginTop: `${g}px`, marginLeft: x, marginRight: x },
+                        children: "string" == typeof l ? (0, i.jsx)("img", { className: h.Sl, src: l, alt: "" }) : l,
                     }),
-                (0, i.jsxs)("div", { className: _.iU, children: [O, L, y] }),
+                (0, i.jsxs)("div", {
+                    className: h.iU,
+                    children: [
+                        null != n
+                            ? (0, i.jsx)(o.Heading, { variant: "heading-md/semibold", className: h.DD, children: n })
+                            : null,
+                        (0, i.jsx)(o.Text, { variant: "text-sm/normal", children: r }),
+                        S,
+                    ],
+                }),
             ],
         });
     };

@@ -1,9 +1,9 @@
 n.d(t, { A: () => _ }), n(321073);
 var i = n(627968),
-    r = n(64700),
-    a = n(311907),
+    a = n(64700),
+    r = n(311907),
     l = n(587895),
-    s = n(64983),
+    s = n(926466),
     o = n(997509),
     d = n(143582),
     c = n(915043),
@@ -15,8 +15,8 @@ function _(e) {
         { guild: n } = e,
         _ = (0, c.$s)(n),
         m = () => (0, d.Hc)(n.id),
-        p = r.useMemo(() => new Set(_.map((e) => e.applicationId)), [_]),
-        g = (0, a.yK)([l.A], () => {
+        p = a.useMemo(() => new Set(_.map((e) => e.applicationId)), [_]),
+        g = (0, r.yK)([l.A], () => {
             let e = [];
             for (let t of p) {
                 let n = l.A.getApplication(t);
