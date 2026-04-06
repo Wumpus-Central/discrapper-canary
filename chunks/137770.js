@@ -1,117 +1,125 @@
-n.d(t, { A: () => S }), n(321073);
+n.d(t, { A: () => b }), n(321073);
 var i = n(627968),
     s = n(64700),
     l = n(503698),
     a = n.n(l),
     r = n(311907),
-    o = n(397927),
-    d = n(983511),
-    c = n(342744),
-    u = n(987144),
-    m = n(166403),
-    g = n(473145),
-    _ = n(927578),
-    x = n(311092),
-    A = n(652215),
-    h = n(788868),
-    p = n(985018),
-    T = n(143753),
-    f = n(410229);
-function S(e) {
+    o = n(502572),
+    d = n(397927),
+    c = n(983511),
+    u = n(342744),
+    m = n(987144),
+    g = n(166403),
+    _ = n(473145),
+    x = n(927578),
+    A = n(311092),
+    h = n(652215),
+    p = n(788868),
+    T = n(985018),
+    f = n(143753),
+    S = n(410229);
+function b(e) {
     let { guildBoostSlots: t, fractionalPremiumState: l } = e,
-        d = (0, r.bG)([m.A], () => m.A.getPremiumTypeSubscription()),
-        { unappliedSlots: c, numActiveSlots: x } = s.useMemo(() => {
+        c = (0, r.bG)([g.A], () => g.A.getPremiumTypeSubscription()),
+        { unappliedSlots: u, numActiveSlots: A } = s.useMemo(() => {
             let e = [],
                 n = 0;
-            for (let i of t) !(0, g.I5)(i) && n++, null == i.premiumGuildSubscription && e.push(i);
+            for (let i of t) !(0, _.I5)(i) && n++, null == i.premiumGuildSubscription && e.push(i);
             return { unappliedSlots: e, numActiveSlots: n };
         }, [t]),
-        S = x > (null != d ? _.Ay.getNumIncludedPremiumGuildSubscriptionSlots(d.planId) : 0),
-        b = d?.isPausedOrPausePending === !0 && l === h.xc.NONE;
-    return 0 === c.length
+        b = A > (null != c ? x.Ay.getNumIncludedPremiumGuildSubscriptionSlots(c.planId) : 0),
+        C = c?.isPausedOrPausePending === !0 && l === p.xc.NONE;
+    return 0 === u.length
         ? null
         : (0, i.jsxs)("div", {
-              className: T.Nr,
+              className: f.Nr,
               children: [
                   (0, i.jsxs)("div", {
-                      className: T.MY,
+                      className: f.MY,
                       children: [
                           (0, i.jsxs)("div", {
-                              className: T._L,
+                              className: f._L,
                               children: [
                                   (0, i.jsxs)("div", {
-                                      className: T.MD,
+                                      className: f.MD,
                                       children: [
-                                          (0, i.jsx)("img", { alt: "", className: T.F8, src: f.A }),
+                                          (0, i.jsx)("img", { alt: "", className: f.F8, src: S.A }),
                                           (0, i.jsx)("div", {
-                                              className: a()(T.qS, "theme-dark"),
-                                              children: (0, i.jsx)("span", { className: T.Vv, children: c.length }),
+                                              className: a()(f.qS, "theme-dark"),
+                                              children: (0, i.jsx)("span", { className: f.Vv, children: u.length }),
                                           }),
                                       ],
                                   }),
                                   (0, i.jsxs)("div", {
-                                      className: T.Qp,
+                                      className: f.Qp,
                                       children: [
-                                          (0, i.jsx)(o.Text, {
+                                          (0, i.jsx)(d.Text, {
                                               variant: "heading-md/semibold",
                                               color: "text-default",
                                               tag: "span",
-                                              children: p.intl.format(p.t.BPadnO, {
-                                                  numUnappliedGuildBoostSlots: c.length,
+                                              children: T.intl.format(T.t.BPadnO, {
+                                                  numUnappliedGuildBoostSlots: u.length,
                                               }),
                                           }),
-                                          (0, i.jsx)(o.Text, {
+                                          (0, i.jsx)(d.Text, {
                                               variant: "text-xs/semibold",
                                               color: "text-subtle",
-                                              children: p.intl.format(p.t.Kaw82o, {
-                                                  numUnappliedGuildBoostSlots: c.length,
+                                              children: T.intl.format(T.t.Kaw82o, {
+                                                  numUnappliedGuildBoostSlots: u.length,
                                               }),
                                           }),
                                       ],
                                   }),
                               ],
                           }),
-                          (0, i.jsx)(o.Button, {
-                              variant: "primary",
-                              size: "sm",
-                              icon: o._Jp,
-                              text: p.intl.string(p.t.BMx1iy),
-                              disabled: b,
-                              onClick: () => {
-                                  (0, o.mMO)(async () => {
-                                      let { default: e } = await Promise.resolve().then(n.bind(n, 770101));
-                                      return (t) =>
-                                          (0, i.jsx)(e, {
-                                              ...t,
-                                              onSelectGuild: (e) => {
-                                                  t.onClose(),
-                                                      (0, u.g)({
-                                                          analyticsLocations: [],
-                                                          analyticsLocation: {
-                                                              page: A.liQ.GUILD_BOOSTING_USER_SETTINGS,
-                                                              section: A.JJy.SETTINGS_PREMIUM,
-                                                              object: A.ZSU.BUTTON_CTA,
-                                                              objectType: A.AnalyticsObjectTypes.BUY,
-                                                          },
-                                                          guild: e,
-                                                      });
-                                              },
+                          (0, i.jsx)(o.A, {
+                              shouldShow: C,
+                              text: T.intl.string(T.t.mOWsF1),
+                              "aria-label": T.intl.string(T.t.mOWsF1),
+                              children: (e) =>
+                                  (0, i.jsx)(d.Button, {
+                                      ...e,
+                                      variant: "primary",
+                                      size: "sm",
+                                      icon: d._Jp,
+                                      text: T.intl.string(T.t.BMx1iy),
+                                      disabled: C,
+                                      onClick: () => {
+                                          (0, d.mMO)(async () => {
+                                              let { default: e } = await Promise.resolve().then(n.bind(n, 770101));
+                                              return (t) =>
+                                                  (0, i.jsx)(e, {
+                                                      ...t,
+                                                      onSelectGuild: (e) => {
+                                                          t.onClose(),
+                                                              (0, m.g)({
+                                                                  analyticsLocations: [],
+                                                                  analyticsLocation: {
+                                                                      page: h.liQ.GUILD_BOOSTING_USER_SETTINGS,
+                                                                      section: h.JJy.SETTINGS_PREMIUM,
+                                                                      object: h.ZSU.BUTTON_CTA,
+                                                                      objectType: h.AnalyticsObjectTypes.BUY,
+                                                                  },
+                                                                  guild: e,
+                                                              });
+                                                      },
+                                                  });
                                           });
-                                  });
-                              },
+                                      },
+                                  }),
                           }),
                       ],
                   }),
-                  c.map((e, t) =>
+                  u.map((e, t) =>
                       (0, i.jsx)(
                           E,
                           {
                               slot: e,
-                              isLast: t === c.length - 1,
-                              isCancelable: S && !(0, g.I5)(e),
-                              isCanceled: (0, g.I5)(e),
-                              premiumSubscription: d,
-                              modificationsDisabled: b,
+                              isLast: t === u.length - 1,
+                              isCancelable: b && !(0, _.I5)(e),
+                              isCanceled: (0, _.I5)(e),
+                              premiumSubscription: c,
+                              modificationsDisabled: C,
                           },
                           e.id,
                       ),
@@ -121,68 +129,68 @@ function S(e) {
 }
 function E(e) {
     let t,
-        { slot: n, isLast: l, isCancelable: r, isCanceled: u, premiumSubscription: m, modificationsDisabled: g } = e,
+        { slot: n, isLast: l, isCancelable: r, isCanceled: o, premiumSubscription: m, modificationsDisabled: g } = e,
         _ = s.useRef(null),
-        A = s.useMemo(() => (null != n.cooldownEndsAt ? new Date(n.cooldownEndsAt) : null), [n.cooldownEndsAt]);
+        x = s.useMemo(() => (null != n.cooldownEndsAt ? new Date(n.cooldownEndsAt) : null), [n.cooldownEndsAt]);
     t =
-        u && null != m
-            ? (0, i.jsx)(o.Text, {
+        o && null != m
+            ? (0, i.jsx)(d.Text, {
                   variant: "text-sm/medium",
                   color: "text-subtle",
-                  children: p.intl.format(p.t.Z4ULRD, { date: m.currentPeriodEnd }),
+                  children: T.intl.format(T.t.Z4ULRD, { date: m.currentPeriodEnd }),
               })
-            : n.isOnCooldown() && null != A
-              ? (0, i.jsx)(x.A, { cooldown: A.getTime() })
-              : (0, i.jsx)(o.Text, {
+            : n.isOnCooldown() && null != x
+              ? (0, i.jsx)(A.A, { cooldown: x.getTime() })
+              : (0, i.jsx)(d.Text, {
                     variant: "text-sm/medium",
                     color: "text-subtle",
-                    children: p.intl.string(p.t["2mcafz"]),
+                    children: T.intl.string(T.t["2mcafz"]),
                 });
-    let h = r || u;
+    let h = r || o;
     return (0, i.jsxs)("div", {
-        className: a()(T.iq, { [T.Mt]: l }),
+        className: a()(f.iq, { [f.Mt]: l }),
         children: [
             (0, i.jsxs)("div", {
-                className: T.kd,
-                children: [(0, i.jsx)("img", { alt: "", className: T.bB, src: f.A }), t],
+                className: f.kd,
+                children: [(0, i.jsx)("img", { alt: "", className: f.bB, src: S.A }), t],
             }),
             h &&
-                (0, i.jsx)(o.YNO, {
+                (0, i.jsx)(d.YNO, {
                     targetElementRef: _,
                     renderPopout: (e) => {
                         let { closePopout: t } = e;
-                        return (0, i.jsxs)(o.W1t, {
+                        return (0, i.jsxs)(d.W1t, {
                             navId: "unapplied-boost-actions",
-                            "aria-label": p.intl.string(p.t.ogxXGq),
+                            "aria-label": T.intl.string(T.t.ogxXGq),
                             onSelect: void 0,
                             onClose: t,
                             children: [
                                 r &&
-                                    (0, i.jsx)(o.Drp, {
+                                    (0, i.jsx)(d.Drp, {
                                         id: "cancel-boost",
-                                        label: p.intl.string(p.t.twFU3R),
+                                        label: T.intl.string(T.t.twFU3R),
                                         color: "danger",
                                         disabled: g,
-                                        subtext: g ? p.intl.string(p.t.mOWsF1) : void 0,
+                                        subtext: g ? T.intl.string(T.t.mOWsF1) : void 0,
                                         action: () => {
                                             t(),
-                                                (0, o.mMO)(
+                                                (0, d.mMO)(
                                                     async () => (e) =>
-                                                        (0, i.jsx)(d.default, { ...e, guildBoostSlot: n }),
+                                                        (0, i.jsx)(c.default, { ...e, guildBoostSlot: n }),
                                                 );
                                         },
                                     }),
-                                u &&
-                                    (0, i.jsx)(o.Drp, {
+                                o &&
+                                    (0, i.jsx)(d.Drp, {
                                         id: "uncancel-boost",
-                                        label: p.intl.string(p.t["2glQNp"]),
+                                        label: T.intl.string(T.t["2glQNp"]),
                                         disabled: g,
-                                        subtext: g ? p.intl.string(p.t.mOWsF1) : void 0,
+                                        subtext: g ? T.intl.string(T.t.mOWsF1) : void 0,
                                         action: () => {
                                             t(),
-                                                (0, o.mMO)(
+                                                (0, d.mMO)(
                                                     async () => (e) =>
-                                                        (0, i.jsx)(c.default, { ...e, guildBoostSlotId: n.id }),
+                                                        (0, i.jsx)(u.default, { ...e, guildBoostSlotId: n.id }),
                                                 );
                                         },
                                     }),
@@ -192,12 +200,12 @@ function E(e) {
                     align: "right",
                     position: "bottom",
                     children: (e) =>
-                        (0, i.jsx)(o.DUT, {
+                        (0, i.jsx)(d.DUT, {
                             innerRef: _,
-                            "aria-label": p.intl.string(p.t["UKOtz+"]),
-                            className: T.Mj,
+                            "aria-label": T.intl.string(T.t["UKOtz+"]),
+                            className: f.Mj,
                             ...e,
-                            children: (0, i.jsx)(o.jNK, { size: "xs", color: o.LU0.colors.INTERACTIVE_TEXT_DEFAULT }),
+                            children: (0, i.jsx)(d.jNK, { size: "xs", color: d.LU0.colors.INTERACTIVE_TEXT_DEFAULT }),
                         }),
                 }),
         ],
