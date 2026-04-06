@@ -23,5 +23,4 @@ e.exports = {
     NQ: "constrainedRow_a27e58",
     Fj: "usernameRow_a27e58",
     HR: "usernameInnerRow_a27e58",
-    c1: "textRevealer_a27e58",
 };

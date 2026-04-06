@@ -1,35 +1,75 @@
-n.d(t, { D: () => o });
+n.d(t, { D: () => m });
 var i = n(627968),
     s = n(64700),
-    a = n(397927),
-    l = n(791498),
-    r = n(244242);
-function o(e) {
+    l = n(397927),
+    a = n(933297),
+    r = n(791498),
+    o = n(244242);
+function d(e) {
+    let { trailingContent: t } = e;
+    return (0, i.jsx)(t.StronglyDiscouragedCustomComponent, {});
+}
+function c(e) {
+    let { trailingContent: t } = e,
+        n = t.useText();
+    return (0, i.jsx)(l.Text, { variant: "text-md/medium", children: n });
+}
+function u(e) {
+    let { trailingContent: t } = e;
+    switch (t.type) {
+        case a._1.TEXT:
+            return (0, i.jsx)(c, { trailingContent: t });
+        case a._1.STRONGLY_DISCOURAGED_CUSTOM:
+            return (0, i.jsx)(d, { trailingContent: t });
+    }
+}
+function m(e) {
     let { node: t } = e,
-        { useLabel: n, useTitle: o, useSubtitle: c, useVariant: d, useDisabled: u, onClick: _ } = t,
-        [m, A] = s.useState(!1),
-        g = (0, l.q)(t),
-        h = o(),
-        x = c?.(),
-        p = n(),
+        {
+            useLabel: n,
+            useTitle: a,
+            useAriaLabel: d,
+            useSubtitle: c,
+            useVariant: m,
+            useDisabled: g,
+            useTrailingContent: _,
+            onClick: x,
+        } = t,
+        [A, h] = s.useState(!1),
+        p = (0, r.q)(t),
+        T = a(),
+        f = c?.(),
+        S = n(),
         E = d?.(),
-        C = u?.();
-    return (0, i.jsx)(r.L, {
-        children: (0, i.jsx)(a.D0$, {
-            label: h,
-            description: x,
+        b = m?.(),
+        C = g?.(),
+        N = _?.();
+    return (0, i.jsx)(o.L, {
+        children: (0, i.jsx)(l.D0$, {
+            label: T,
+            description: f,
             disabled: C,
             layout: "horizontal",
-            children: (0, i.jsx)(a.Button, {
-                onClick: () => {
-                    g();
-                    let e = _();
-                    e instanceof Promise && (A(!0), e.finally(() => A(!1)));
-                },
-                text: p,
-                variant: E,
-                disabled: C,
-                loading: m,
+            children: (0, i.jsxs)(l.BJc, {
+                direction: "horizontal",
+                align: "center",
+                justify: "end",
+                gap: "md",
+                children: [
+                    null != N && (0, i.jsx)(u, { trailingContent: N }),
+                    (0, i.jsx)(l.Button, {
+                        onClick: () => {
+                            p();
+                            let e = x();
+                            e instanceof Promise && (h(!0), e.finally(() => h(!1)));
+                        },
+                        text: S,
+                        "aria-label": E,
+                        variant: b,
+                        disabled: C,
+                        loading: A,
+                    }),
+                ],
             }),
         }),
     });
