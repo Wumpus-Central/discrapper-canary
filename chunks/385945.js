@@ -16,11 +16,11 @@ function u(e) {
             lineClamp: _,
             imagePosition: f = "right",
         } = e,
-        { data: p } = (0, s.Q)();
+        { resolveFieldValue: p } = (0, s.Q)();
     if (null == t) return c ? (0, r.jsx)(o.A, { variant: n, className: d }) : null;
-    let h = (0, a.g)(t.fields.text, p, [a.o.STRING]),
-        m = (0, a.g)(t.fields.label, p, [a.o.STRING]),
-        E = (0, a.g)(t.fields.icon, p, [a.o.UNFURLED_MEDIA]),
+    let h = p(t.fields.text, [a.o.STRING]),
+        m = p(t.fields.label, [a.o.STRING]),
+        E = p(t.fields.icon, [a.o.MEDIA]),
         g =
             null != E
                 ? (0, r.jsx)("img", {

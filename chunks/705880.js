@@ -8,8 +8,8 @@ var r = n(627968),
     l = n(317742),
     u = n(285331);
 function c() {
-    let { surfaceConfig: e, data: t, header: n } = (0, i.Q)(),
-        c = (0, o.g)(e.components.hero_image?.fields.image, t, [o.o.UNFURLED_MEDIA]);
+    let { surfaceConfig: e, resolveFieldValue: t, header: n } = (0, i.Q)(),
+        c = t(e.components.hero_image?.fields.image, [o.o.MEDIA]);
     return (0, r.jsxs)("div", {
         className: u.zr,
         children: [

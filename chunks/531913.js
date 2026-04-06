@@ -18,12 +18,10 @@ function _(e, t) {
         h = r.useMemo(() => (0, i.VG)(n?.profile ?? void 0), [n?.profile]),
         m = (0, s.bG)([o.A], () => o.A.getFetchState(e) !== o.e.FETCHED);
     return {
-        data: h,
         locale: _,
         surfaceConfigs: p?.surfaces ?? {},
-        applicationAssets: c,
-        localizedStrings: d,
         isLoading: m,
         hasIdentity: null != n,
+        resolutionContext: { data: h, applicationAssets: c, getApplicationAssetUrl: () => "", localizedStrings: d },
     };
 }

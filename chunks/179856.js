@@ -12,8 +12,8 @@ var r = n(627968),
     _ = n(317742),
     f = n(101941);
 function p() {
-    let { surfaceConfig: e, data: t, header: n, onClick: i } = (0, o.Q)(),
-        p = (0, d.g)(e.components.hero_image?.fields.image, t, [d.o.UNFURLED_MEDIA]);
+    let { surfaceConfig: e, resolveFieldValue: t, header: n, onClick: i } = (0, o.Q)(),
+        p = t(e.components.hero_image?.fields.image, [d.o.MEDIA]);
     return (0, r.jsxs)("div", {
         className: f.zr,
         children: [

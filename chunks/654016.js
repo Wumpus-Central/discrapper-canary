@@ -10,7 +10,7 @@ var r = n(627968),
     c = n(759169);
 function d(e) {
     let { component: t, required: n = !1 } = e,
-        { data: d, numberFormat: _, durationFormat: f } = (0, a.Q)();
+        { resolveFieldValue: d, numberFormat: _, durationFormat: f } = (0, a.Q)();
     if (null == t)
         return n
             ? (0, r.jsxs)("div", {
@@ -20,9 +20,9 @@ function d(e) {
                   ],
               })
             : null;
-    let p = (0, l.g)(t.fields.value, d, [l.o.STRING, l.o.NUMBER]),
-        h = (0, l.g)(t.fields.label, d, [l.o.STRING]),
-        m = (0, l.g)(t.fields.icon, d, [l.o.UNFURLED_MEDIA]),
+    let p = d(t.fields.value, [l.o.STRING, l.o.NUMBER]),
+        h = d(t.fields.label, [l.o.STRING]),
+        m = d(t.fields.icon, [l.o.MEDIA]),
         E = () => {
             if (null == p) return null;
             if (p.type === l.o.STRING) return p.value;

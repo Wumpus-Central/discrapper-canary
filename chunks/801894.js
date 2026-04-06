@@ -18,7 +18,7 @@ function o(e) {
         else if ("number" == typeof r) n[e] = { type: i.o.NUMBER, value: r };
         else if ("object" == typeof r && "url" in r && "proxy_url" in r && "loading_state" in r) {
             if (!s(r)) continue;
-            n[e] = { type: i.o.UNFURLED_MEDIA, media: { url: r.proxy_url, width: r.width, height: r.height } };
+            n[e] = { type: i.o.MEDIA, media: { url: r.proxy_url, width: r.width, height: r.height } };
         }
     return n;
 }
@@ -32,7 +32,7 @@ function l(e) {
         else if (e.type === r.f.MEDIA) {
             if (!s(e.value)) continue;
             n[e.name] = {
-                type: i.o.UNFURLED_MEDIA,
+                type: i.o.MEDIA,
                 media: { url: e.value.proxy_url, width: e.value.width, height: e.value.height },
             };
         }

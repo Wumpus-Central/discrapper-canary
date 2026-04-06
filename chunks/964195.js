@@ -110,14 +110,7 @@ function C(e) {
               children: [
                   (0, r.jsx)("div", {
                       className: I.Qs,
-                      children: (0, r.jsx)(o.kH, {
-                          surface: l.m.ACTIVITY_ACCESSORY,
-                          surfaceConfig: n,
-                          data: t.data,
-                          locale: t.locale,
-                          applicationAssets: t.applicationAssets,
-                          localizedStrings: t.localizedStrings,
-                      }),
+                      children: (0, r.jsx)(o.kH, { ...t, surface: l.m.ACTIVITY_ACCESSORY, surfaceConfig: n }),
                   }),
                   i &&
                       (0, r.jsx)(c.DUT, {

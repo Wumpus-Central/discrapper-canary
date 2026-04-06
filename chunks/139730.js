@@ -116,12 +116,9 @@ function g(e) {
               children: (0, r.jsx)(_.A.Overlay, {
                   className: a()(p.iW, i),
                   children: (0, r.jsx)(o.kH, {
+                      ...n,
                       surface: l.m.MINI_PROFILE,
                       surfaceConfig: f,
-                      data: n.data,
-                      locale: n.locale,
-                      applicationAssets: n.applicationAssets,
-                      localizedStrings: n.localizedStrings,
                       header: (0, r.jsx)(h, { applicationName: t.name, applicationIcon: t.getIconURL(16) }),
                   }),
               }),

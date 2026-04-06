@@ -11,8 +11,8 @@ var r = n(627968),
     d = n(939589);
 function _(e) {
     let { small: t = !1 } = e,
-        { surfaceConfig: n, data: i } = (0, a.Q)(),
-        _ = (0, u.g)(n.components.hero_image?.fields.image, i, [u.o.UNFURLED_MEDIA]);
+        { surfaceConfig: n, resolveFieldValue: i } = (0, a.Q)(),
+        _ = i(n.components.hero_image?.fields.image, [u.o.MEDIA]);
     return (0, r.jsxs)("div", {
         className: s()(d.kL, { [d.PG]: t }),
         children: [
