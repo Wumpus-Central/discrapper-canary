@@ -11,5 +11,4 @@ e.exports = {
     On: "clickableGameName__4774c",
     HD: "avatars__4774c",
     RB: "participantAvatar__4774c",
-    sZ: "participantOverflow__4774c",
 };

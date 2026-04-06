@@ -6,28 +6,29 @@ var r = a(503698),
     i = a(311907),
     c = a(876230),
     l = a(990078),
-    _ = a(397927),
-    s = a(429913),
+    s = a(397927),
+    _ = a(429913),
     d = a(885151),
-    u = a(409626),
-    p = a(692969),
+    p = a(409626),
+    u = a(692969),
     m = a(287809),
     b = a(405269),
     f = a(403362),
     C = a(963135),
-    g = a(985018),
-    h = a(2398);
-function v(e) {
+    g = a(331446),
+    h = a(985018),
+    v = a(2398);
+function x(e) {
     let { applicationId: t, separator: a } = e,
-        r = (0, s.h)(t),
+        r = (0, _.h)(t),
         { data: o } = (0, d.k)(t),
-        i = (0, p.A)({ applicationId: t, location: "ClipEmbed", source: u.Ob.ClipEmbed }),
+        i = (0, u.A)({ applicationId: t, location: "ClipEmbed", source: p.Ob.ClipEmbed }),
         c = o?.supplementalData?.name ?? r?.name;
     return null == c
         ? null
         : null != i
           ? (0, n.jsxs)(n.Fragment, {
-                children: [(0, n.jsx)(_.DUT, { tag: "span", className: h.On, onClick: i, children: c }), a],
+                children: [(0, n.jsx)(s.DUT, { tag: "span", className: v.On, onClick: i, children: c }), a],
             })
           : (0, n.jsxs)(n.Fragment, { children: [c, a] });
 }
@@ -36,65 +37,60 @@ let I = function (e) {
             createdAt: t,
             participantIds: a,
             applicationId: r,
-            title: s,
+            title: _,
             guildId: d,
-            playerState: u = c.Q6.PAUSED,
-            isControlBarExpanded: p = !0,
+            playerState: p = c.Q6.PAUSED,
+            isControlBarExpanded: u = !0,
         } = e,
         I = (0, i.yK)([m.default], () => a.map((e) => m.default.getUser(e)).filter(f.Vq) ?? []),
-        x = null != t ? (0, b.Fe)(new Date(t)) : null;
+        y = null != t ? (0, b.Fe)(new Date(t)) : null;
     return (0, n.jsxs)("div", {
-        className: o()(h.oK, { [h.pd]: u === c.Q6.PLAYING && !p }),
+        className: o()(v.oK, { [v.pd]: p === c.Q6.PLAYING && !u }),
         children: [
-            (0, n.jsx)("div", { className: h.Lu }),
+            (0, n.jsx)("div", { className: v.Lu }),
             (0, n.jsxs)("div", {
-                className: h.s$,
+                className: v.s$,
                 children: [
                     (0, n.jsxs)("div", {
-                        className: h.yR,
+                        className: v.yR,
                         children: [
                             (0, n.jsxs)("div", {
-                                className: h.$,
+                                className: v.$,
                                 children: [
                                     (0, n.jsx)(l.m, {
                                         asContainer: !0,
-                                        text: g.intl.string(g.t["/fgfWh"]),
-                                        children: (0, n.jsx)(_.xgA, { className: h.gr, size: "xs", color: "white" }),
+                                        text: h.intl.string(h.t["/fgfWh"]),
+                                        children: (0, n.jsx)(s.xgA, { className: v.gr, size: "xs", color: "white" }),
                                     }),
-                                    (0, n.jsx)(_.Text, {
-                                        className: h.DD,
+                                    (0, n.jsx)(s.Text, {
+                                        className: v.DD,
                                         variant: "text-md/semibold",
                                         color: "always-white",
-                                        children: null != s && s.length > 0 ? s : g.intl.string(g.t.Cyxddp),
+                                        children: null != _ && _.length > 0 ? _ : h.intl.string(h.t.Cyxddp),
                                     }),
                                 ],
                             }),
-                            (null != r || null != x) &&
-                                (0, n.jsxs)(_.Text, {
-                                    className: h.yu,
+                            (null != r || null != y) &&
+                                (0, n.jsxs)(s.Text, {
+                                    className: v.yu,
                                     variant: "text-sm/normal",
                                     color: "always-white",
                                     children: [
-                                        (0, n.jsx)(v, { applicationId: r, separator: null != x ? " \xb7 " : void 0 }),
-                                        x,
+                                        (0, n.jsx)(x, { applicationId: r, separator: null != y ? " \xb7 " : void 0 }),
+                                        y,
                                     ],
                                 }),
                         ],
                     }),
                     I.length > 0 &&
                         (0, n.jsxs)("div", {
-                            className: h.HD,
+                            className: v.HD,
                             role: "group",
-                            "aria-label": g.intl.string(g.t.WTozwe),
+                            "aria-label": h.intl.string(h.t.WTozwe),
                             children: [
                                 I.slice(0, 4).map((e) => (0, n.jsx)(C.A, { user: e, guildId: d }, e.id)),
                                 I.length > 4 &&
-                                    (0, n.jsxs)(_.Text, {
-                                        className: h.sZ,
-                                        variant: "text-xs/medium",
-                                        color: "interactive-text-default",
-                                        children: ["+", I.length - 4],
-                                    }),
+                                    (0, n.jsx)(g.w, { participants: I, maxVisibleParticipants: 4, guildId: d }),
                             ],
                         }),
                 ],
