@@ -1,16 +1,15 @@
-"use strict";
-n.d(t, { AE: () => a, Mw: () => l, j_: () => r });
+n.d(t, { AE: () => r, Mw: () => l, j_: () => s });
 var i = n(73153),
-    s = n(157257);
-function a(e) {
+    a = n(157257);
+function r(e) {
     return (!e.isPreviewingInGame && !e.locked) || e.pinned;
 }
 function l(e, t, n) {
-    (e.locked !== t.locked || e.pinned !== t.pinned || n(e) !== n(t) || a(e) !== a(t)) && r(t, n(t));
+    (e.locked !== t.locked || e.pinned !== t.pinned || n(e) !== n(t) || r(e) !== r(t)) && s(t, n(t));
 }
-function r(e, t) {
-    let n = a(e),
-        l = s.A.getGame();
+function s(e, t) {
+    let n = r(e),
+        l = a.A.getGame();
     i.h.dispatch({
         type: "OVERLAY_WIDGET_CHANGED",
         gameName: l?.name ?? null,

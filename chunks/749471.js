@@ -89,8 +89,7 @@ function N(e, t) {
                         }));
         }
     let N = (0, u.k8)(i.M.OVERLAY_OOP_WELCOME_NUX),
-        C = () =>
-            (0, h.sI)((0, m.Jn)(), I.t["z8/sgJ"], I.intl.string(I.t.jZkzVJ), { highlightAdminWarningIfElevated: y }),
+        C = () => (0, h.sI)((0, m.Jn)(), I.t["z8/sgJ"], { highlightAdminWarningIfElevated: y }),
         R = I.intl.string(I.t.KWDIrh);
     return {
         icon: null != e ? (0, r.jsx)(v, { game: e }) : (0, r.jsx)("img", { src: n(513653), className: T.Kk, alt: "" }),
