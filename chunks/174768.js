@@ -100,15 +100,23 @@ function z() {
     }
     let n = [],
         r = new Set(),
-        i = K((e) => e === t || j.includes(e) || r.has(e));
-    if (i.length > 0)
-        for (let e of (n.push((0, u.jF)(O.intl.string(O.t["4B63jZ"]))), i)) r.add(e.channelId), n.push(e.record);
-    let s = T.Ay.getMentionChannelIds()
-        .filter((e) => e !== t && !j.includes(e) && !r.has(e))
+        i = [];
+    for (let e = 1; e < j.length; e += 1) {
+        let t = $(j[e]);
+        null != t &&
+            ((t.type !== u.rD.TEXT_CHANNEL && t.type !== u.rD.VOICE_CHANNEL) ||
+                I.A.can(R.xBc.VIEW_CHANNEL, t.record)) &&
+            (i.push(t), r.size < w && r.add(j[e]));
+    }
+    let s = K((e) => e === t || r.has(e));
+    if (s.length > 0)
+        for (let e of (n.push((0, u.jF)(O.intl.string(O.t["4B63jZ"]))), s)) r.add(e.channelId), n.push(e.record);
+    let a = T.Ay.getMentionChannelIds()
+        .filter((e) => e !== t && !r.has(e))
         .map((e) => $(e))
         .filter(C.Vq)
         .reverse();
-    if (s.length > 0) for (let e of (n.push((0, u.jF)(O.intl.string(O.t["61Df13"]))), s)) r.add(e.record.id), n.push(e);
+    if (a.length > 0) for (let e of (n.push((0, u.jF)(O.intl.string(O.t["61Df13"]))), a)) r.add(e.record.id), n.push(e);
     if (null != e) {
         let i = E.Ay.getSelectableChannelIds(e)
             .filter((e) => {
@@ -117,7 +125,6 @@ function z() {
                     !(
                         null == n ||
                         e === t ||
-                        j.includes(e) ||
                         r.has(e) ||
                         v.Ay.isChannelMuted(n.guild_id, e) ||
                         (null != n.parent_id && v.Ay.isChannelMuted(n.guild_id, n.parent_id))
@@ -129,21 +136,13 @@ function z() {
         Object.values(_.A.getActiveJoinedUnreadThreadsForGuild(e)).forEach((e) => {
             for (let t in e) {
                 let e = $(t);
-                null == e || r.has(e.record.id) || j.includes(t) || i.push(e);
+                null == e || r.has(e.record.id) || i.push(e);
             }
         }),
             i.length > 0 && (n.push((0, u.jF)(O.intl.string(O.t.ieCAhD))), (n = n.concat(i)));
     }
-    let a = Math.min((n.length > 0 ? w : L) + 1, j.length),
-        o = [];
-    for (let e = 1; e < a; e += 1) {
-        let t = $(j[e]);
-        null != t &&
-            ((t.type !== u.rD.TEXT_CHANNEL && t.type !== u.rD.VOICE_CHANNEL) ||
-                I.A.can(R.xBc.VIEW_CHANNEL, t.record)) &&
-            (o.push(t), r.add(t.record.id));
-    }
-    return o.length > 0 && (n = [(0, u.jF)(O.intl.string(O.t["80lOZ1"])), ...o, ...n]), n;
+    let o = n.length > 0 ? w : L;
+    return i.length > o && i.splice(o), i.length > 0 && (n = [(0, u.jF)(O.intl.string(O.t["80lOZ1"])), ...i, ...n]), n;
 }
 function q(e, t) {
     switch (G) {
