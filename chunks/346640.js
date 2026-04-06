@@ -146,6 +146,7 @@ var P = (function (e) {
         (e[(e.COMBAT = 6)] = "COMBAT"),
         (e[(e.STATS = 7)] = "STATS"),
         (e[(e.ACHIEVEMENTS = 8)] = "ACHIEVEMENTS"),
+        (e[(e.END = 9)] = "END"),
         e
     );
 })({});

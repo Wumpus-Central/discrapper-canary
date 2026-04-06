@@ -111,6 +111,9 @@ class w extends i.Ay.PersistedStore {
     getState() {
         return A;
     }
+    hasFetchedUserData() {
+        return null != d;
+    }
     getCraftingClass() {
         return d?.craftingClass;
     }

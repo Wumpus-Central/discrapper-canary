@@ -1,136 +1,138 @@
 "use strict";
-n.d(t, { A: () => P });
+n.d(t, { A: () => U });
 var r = n(627968),
     i = n(64700),
-    s = n(687498),
-    a = n(158954),
-    o = n(311907),
-    l = n(475743),
-    u = n(133636),
-    c = n(816758),
-    d = n(257044),
-    _ = n(178090),
-    f = n(683926),
-    p = n(346640),
-    h = n(429311),
-    m = n(985018),
-    E = n(814608),
-    g = n(787212),
-    A = n(524794),
-    I = n(260405),
-    T = n(649747),
-    S = n(80465);
-let y = 80,
-    v = 40,
-    N = 12,
-    C = 4,
-    R = 34;
-function O(e) {
+    s = n(503698),
+    a = n.n(s),
+    o = n(687498),
+    l = n(158954),
+    u = n(311907),
+    c = n(475743),
+    d = n(133636),
+    _ = n(816758),
+    f = n(257044),
+    p = n(178090),
+    h = n(683926),
+    m = n(346640),
+    E = n(429311),
+    g = n(985018),
+    A = n(814608),
+    I = n(787212),
+    T = n(524794),
+    S = n(260405),
+    y = n(649747),
+    v = n(80465);
+let N = 80,
+    C = 40,
+    R = 12,
+    O = 4,
+    b = 34;
+function D(e) {
     let { iconSrc: t, ariaLabel: n, onClick: s } = e,
         [a, o] = (0, i.useState)(!1);
     return (0, r.jsxs)("div", {
-        className: E.x6,
+        className: A.x6,
         onMouseEnter: () => o(!0),
         onMouseLeave: () => o(!1),
         children: [
-            (0, r.jsx)(f.A, { visible: a, text: n }),
-            (0, r.jsx)(d.A, {
-                contentClassName: E.IO,
+            (0, r.jsx)(h.A, { visible: a, text: n }),
+            (0, r.jsx)(f.A, {
+                contentClassName: A.IO,
                 onClick: s,
                 "aria-label": n,
-                children: (0, r.jsx)("img", { src: t, alt: "", className: E.iA }),
+                children: (0, r.jsx)("img", { src: t, alt: "", className: A.iA }),
             }),
         ],
     });
 }
-function b(e) {
+function L(e) {
     let { xp: t, asset: n } = e,
         [s] = (0, i.useState)(t);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(c.A, {
-                className: E.Cg,
-                children: (0, r.jsxs)(_.A, { variant: "heading-xxl/normal", children: ["+", s, " XP"] }),
+            (0, r.jsx)(_.A, {
+                className: A.Cg,
+                children: (0, r.jsxs)(p.A, { variant: "heading-xxl/normal", children: ["+", s, " XP"] }),
             }),
-            (0, r.jsx)("img", { src: n, alt: "", className: E.Ei }),
+            (0, r.jsx)("img", { src: n, alt: "", className: A.Ei }),
         ],
     });
 }
-function D() {
-    let e = (0, o.bG)([u.A], () => u.A.getLastXPGains()),
+function w() {
+    let e = (0, u.bG)([d.A], () => d.A.getLastXPGains()),
         t = Object.keys(e),
-        { craftingClass: n, combatClass: i } = (0, o.cf)([u.A], () => ({
-            craftingClass: u.A.getCraftingClass(),
-            combatClass: u.A.getCombatClass(),
+        { craftingClass: n, combatClass: i } = (0, u.cf)([d.A], () => ({
+            craftingClass: d.A.getCraftingClass(),
+            combatClass: d.A.getCombatClass(),
         })),
-        l = null != n ? p.zX[n].asset : I.A,
-        c = null != i ? p.P6[i].asset : T.A,
-        d = (0, a.pnh)(t, {
+        s = null != n ? m.zX[n].asset : S.A,
+        a = null != i ? m.P6[i].asset : y.A,
+        c = (0, l.pnh)(t, {
             from: { opacity: 0, transform: "translateX(-20px)" },
             enter: { opacity: 1, transform: "translateX(0px)" },
             leave: { opacity: 0, transform: "translateX(-20px)" },
             trail: 200,
         });
     return (0, r.jsx)("div", {
-        className: E.NL,
-        children: d((t, n) => {
-            let i = n === p.$p.GATHERING ? A.A : n === p.$p.CRAFTING ? l : c;
-            return (0, r.jsx)(s.animated.div, {
-                className: E.ww,
+        className: A.NL,
+        children: c((t, n) => {
+            let i = n === m.$p.GATHERING ? T.A : n === m.$p.CRAFTING ? s : a;
+            return (0, r.jsx)(o.animated.div, {
+                className: A.ww,
                 style: t,
-                children: (0, r.jsx)(b, { xp: e[n] ?? 0, asset: i }),
+                children: (0, r.jsx)(L, { xp: e[n] ?? 0, asset: i }),
             });
         }),
     });
 }
-let L = 1.5,
-    w = 100;
-function M(e) {
-    return Math.floor(w * Math.pow(e, L));
+let M = 1.5,
+    x = 100;
+function P(e) {
+    return Math.floor(x * Math.pow(e, M));
 }
-function x() {
-    let e = (0, o.bG)([u.A], () => u.A.getXP()),
-        t = (0, o.bG)([u.A], () => u.A.getLevel()),
-        n = M(t),
-        c = M(t + 1) - n,
-        d = (e - n) / c,
-        f = (0, l.A)(d) ?? 0,
-        p = (0, i.useRef)(null),
-        [h] = (0, a.zhh)(() => ({ ref: p, strokeDashoffset: 2 * Math.PI * R * (1 - d) }));
+function k() {
+    let e = (0, u.bG)([d.A], () => d.A.getXP()),
+        t = (0, u.bG)([d.A], () => d.A.getLevel()),
+        n = P(t),
+        s = P(t + 1) - n,
+        a = (e - n) / s,
+        _ = (0, c.A)(a) ?? 0,
+        f = (0, i.useRef)(null),
+        [h] = (0, l.zhh)(() => ({ ref: f, strokeDashoffset: 2 * Math.PI * b * (1 - a) }));
     return (
         (0, i.useEffect)(() => {
             (async () => {
-                d < f &&
-                    (await p.current?.start({ strokeDashoffset: 2 * Math.PI * R * 0 }),
-                    await p.current?.start({ strokeDashoffset: 2 * Math.PI * R * 1, immediate: !0 })),
-                    p.current?.start({ strokeDashoffset: 2 * Math.PI * R * (1 - d) });
+                a < _ &&
+                    (await f.current?.start({ strokeDashoffset: 2 * Math.PI * b * 0 }),
+                    await f.current?.start({ strokeDashoffset: 2 * Math.PI * b * 1, immediate: !0 })),
+                    f.current?.start({ strokeDashoffset: 2 * Math.PI * b * (1 - a) });
             })();
-        }, [d, f]),
+        }, [a, _]),
         (0, r.jsxs)("svg", {
-            className: E.s4,
+            className: A.s4,
             xmlns: "http://www.w3.org/2000/svg",
-            width: y,
-            height: y,
+            width: N,
+            height: N,
             fill: "none",
             children: [
                 (0, r.jsx)("rect", {
-                    x: v - R,
-                    y: v - R,
-                    width: 2 * R,
-                    height: 2 * R,
+                    x: C - b,
+                    y: C - b,
+                    width: 2 * b,
+                    height: 2 * b,
                     fill: "#FFF",
                     rx: "50%",
                     ry: "50%",
                 }),
-                (0, r.jsx)("circle", { cx: v, cy: v, r: R, stroke: "#000", strokeWidth: N }),
-                (0, r.jsx)(s.animated.circle, {
-                    cx: v,
-                    cy: v,
-                    r: R,
+                (0, r.jsx)("circle", { cx: C, cy: C, r: b, stroke: "#000", strokeWidth: R }),
+                (0, r.jsx)(o.animated.circle, {
+                    cx: C,
+                    cy: C,
+                    r: b,
                     stroke: "#FFF",
-                    strokeWidth: C,
-                    strokeDasharray: 2 * Math.PI * R,
-                    transform: `rotate(-90 ${v} ${v})`,
+                    strokeWidth: O,
+                    strokeDasharray: 2 * Math.PI * b,
+                    transform: `rotate(-90 ${C} ${C})`,
                     style: h,
                 }),
                 (0, r.jsx)("path", {
@@ -148,36 +150,38 @@ function x() {
                 (0, r.jsx)("foreignObject", {
                     x: 0,
                     y: 0,
-                    width: y,
-                    height: y,
-                    children: (0, r.jsx)(_.A, { className: E.WB, variant: "heading-xxl/bold", children: t }),
+                    width: N,
+                    height: N,
+                    children: (0, r.jsx)(p.A, { className: A.WB, variant: "heading-xxl/bold", children: t }),
                 }),
             ],
         })
     );
 }
-function P(e) {
-    let { setScreen: t } = e;
-    return (0, r.jsxs)("div", {
-        className: E.iE,
-        children: [
-            (0, r.jsx)(D, {}),
-            (0, r.jsxs)(c.A, {
-                className: E.nd,
-                children: [
-                    (0, r.jsx)(x, {}),
-                    (0, r.jsx)(O, {
-                        iconSrc: S.A,
-                        ariaLabel: m.intl.string(h.default.JRs3DC),
-                        onClick: () => t(p.Q0.STATS),
-                    }),
-                    (0, r.jsx)(O, {
-                        iconSrc: g.A,
-                        ariaLabel: m.intl.string(h.default.xE3lEA),
-                        onClick: () => t(p.Q0.ACHIEVEMENTS),
-                    }),
-                ],
-            }),
-        ],
-    });
+function U(e) {
+    let { setScreen: t, className: n } = e;
+    return (0, u.bG)([d.A], () => d.A.hasFetchedUserData())
+        ? (0, r.jsxs)("div", {
+              className: a()(A.iE, n),
+              children: [
+                  (0, r.jsx)(w, {}),
+                  (0, r.jsxs)(_.A, {
+                      className: A.nd,
+                      children: [
+                          (0, r.jsx)(k, {}),
+                          (0, r.jsx)(D, {
+                              iconSrc: v.A,
+                              ariaLabel: g.intl.string(E.default.JRs3DC),
+                              onClick: () => t(m.Q0.STATS),
+                          }),
+                          (0, r.jsx)(D, {
+                              iconSrc: I.A,
+                              ariaLabel: g.intl.string(E.default.xE3lEA),
+                              onClick: () => t(m.Q0.ACHIEVEMENTS),
+                          }),
+                      ],
+                  }),
+              ],
+          })
+        : null;
 }

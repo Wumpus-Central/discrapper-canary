@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => w });
+n.d(t, { A: () => k });
 var r = n(627968),
     i = n(64700),
     s = n(736469),
@@ -8,93 +8,95 @@ var r = n(627968),
     l = n(397927),
     u = n(775121),
     c = n(251358),
-    d = n(485533),
-    _ = n(133636),
-    f = n(537885),
-    p = n(577767),
-    h = n(728257),
-    m = n(257044),
-    E = n(610223),
-    g = n(178090),
-    A = n(869379),
-    I = n(616505),
-    T = n(168137),
-    S = n(732919),
-    y = n(166341),
-    v = n(771859),
-    N = n(417602),
-    C = n(431720),
-    R = n(421116),
-    O = n(346640),
-    b = n(985018),
-    D = n(296957),
-    L = n(607011);
-function w(e) {
+    d = n(352306),
+    _ = n(485533),
+    f = n(133636),
+    p = n(537885),
+    h = n(577767),
+    m = n(728257),
+    E = n(257044),
+    g = n(610223),
+    A = n(178090),
+    I = n(869379),
+    T = n(616505),
+    S = n(168137),
+    y = n(732919),
+    v = n(166341),
+    N = n(797842),
+    C = n(771859),
+    R = n(417602),
+    O = n(431720),
+    b = n(421116),
+    D = n(346640),
+    L = n(985018),
+    w = n(393144),
+    M = n(607011);
+function x(e) {
     let { onClose: t } = e;
-    (0, f.A)(), (0, E.T)(s.A);
+    (0, p.A)(), (0, g.T)(s.A);
     let {
-            isFetchingUserData: w,
-            combatClass: M,
+            isFetchingUserData: d,
+            combatClass: N,
             craftingClass: x,
-        } = (0, o.cf)([_.A], () => ({
-            isFetchingUserData: _.A.isFetchingUserData(),
-            combatClass: _.A.getCombatClass(),
-            craftingClass: _.A.getCraftingClass(),
+        } = (0, o.cf)([f.A], () => ({
+            isFetchingUserData: f.A.isFetchingUserData(),
+            combatClass: f.A.getCombatClass(),
+            craftingClass: f.A.getCraftingClass(),
         })),
         [P, k] = (0, i.useState)(null),
         [U, G] = (0, i.useState)(x),
-        [F, V] = (0, i.useState)(M);
+        [F, V] = (0, i.useState)(N);
     (0, i.useEffect)(() => {
-        V(M);
-    }, [M]),
+        V(N);
+    }, [N]),
         (0, i.useEffect)(() => {
             G(x);
         }, [x]);
     let B = (0, i.useCallback)(
             async (e) => {
-                e === O.Q0.MAIN && (await (0, c.nb)({ combatClass: F, craftingClass: U })), k(e);
+                e === D.Q0.MAIN && (await (0, c.nb)({ combatClass: F, craftingClass: U })), k(e);
             },
             [F, U],
         ),
-        H = (0, i.useCallback)((e) => F === O.zX[e].invalidCombatClass, [F]);
+        H = (0, i.useCallback)((e) => F === D.zX[e].invalidCombatClass, [F]);
     (0, i.useEffect)(() => {
-        null != P || w || k(O.Q0.PATCH_NOTES);
-    }, [w, P]),
+        null != P || d || k(D.Q0.PATCH_NOTES);
+    }, [d, P]),
         (0, i.useEffect)(
             () => (
-                d.A.initialize(),
+                _.A.initialize(),
                 () => {
-                    d.A.terminate();
+                    _.A.terminate();
                 }
             ),
             [],
         );
     let j = (0, i.useCallback)(() => {
             switch (P) {
-                case O.Q0.PATCH_NOTES:
+                case D.Q0.PATCH_NOTES:
+                    return (0, r.jsx)(O.A, { setScreen: k });
+                case D.Q0.INTRO:
                     return (0, r.jsx)(C.A, { setScreen: k });
-                case O.Q0.INTRO:
-                    return (0, r.jsx)(v.A, { setScreen: k });
-                case O.Q0.COMBAT_CLASS_SELECTION:
-                    return (0, r.jsx)(S.A, { setScreen: k, handleSelect: V, selectedClass: F });
-                case O.Q0.CRAFTING_CLASS_SELECTION:
-                    return (0, r.jsx)(y.A, { setScreen: B, handleSelect: G, selectedClass: U, isDisabled: H });
-                case O.Q0.CRAFTING:
-                    return (0, r.jsx)(A.A, { setScreen: k });
-                case O.Q0.COMBAT:
-                    return (0, r.jsx)(T.A, { setScreen: k });
-                case O.Q0.MAIN:
-                    return (0, r.jsx)(N.A, { setScreen: k });
-                case O.Q0.STATS:
-                    return (0, r.jsx)(R.A, { setScreen: k });
-                case O.Q0.ACHIEVEMENTS:
+                case D.Q0.COMBAT_CLASS_SELECTION:
+                    return (0, r.jsx)(y.A, { setScreen: k, handleSelect: V, selectedClass: F });
+                case D.Q0.CRAFTING_CLASS_SELECTION:
+                    return (0, r.jsx)(v.A, { setScreen: B, handleSelect: G, selectedClass: U, isDisabled: H });
+                case D.Q0.CRAFTING:
                     return (0, r.jsx)(I.A, { setScreen: k });
+                case D.Q0.COMBAT:
+                    return (0, r.jsx)(S.A, { setScreen: k });
+                case D.Q0.MAIN:
+                    return (0, r.jsx)(R.A, { setScreen: k });
+                case D.Q0.STATS:
+                    return (0, r.jsx)(b.A, { setScreen: k });
+                case D.Q0.ACHIEVEMENTS:
+                    return (0, r.jsx)(T.A, { setScreen: k });
             }
         }, [B, P, F, U, H]),
-        Y = (0, i.useMemo)(() => (0, p.x)(t), [t]);
+        Y = (0, i.useMemo)(() => (0, h.x)(t), [t]);
     (0, i.useEffect)(() => (u.A.enable(), u.A.enableTemp(Y), () => u.A.disableTemp()), [Y]);
     let W = (0, i.useCallback)(() => {
-            (0, p.k)(t);
+            (0, h.k)(t);
         }, [t]),
         K = (0, i.useCallback)(() => {
             (0, l.mMO)(async () => {
@@ -102,24 +104,24 @@ function w(e) {
                 return (t) => (0, r.jsx)(e, { ...t, setScreen: k });
             });
         }, []);
-    return (0, r.jsx)(h.A, {
+    return (0, r.jsx)(m.A, {
         children: (0, r.jsxs)("div", {
-            className: D.kL,
+            className: w.kL,
             children: [
                 (0, r.jsxs)("div", {
-                    className: D.o1,
+                    className: w.o1,
                     children: [
-                        (0, r.jsx)(m.A, {
+                        (0, r.jsx)(E.A, {
                             onClick: K,
-                            "aria-label": b.intl.string(b.t["3D5yo/"]),
-                            className: D.x6,
-                            children: (0, r.jsx)("img", { src: L.A, alt: "" }),
+                            "aria-label": L.intl.string(L.t["3D5yo/"]),
+                            className: w.x6,
+                            children: (0, r.jsx)("img", { src: M.A, alt: "" }),
                         }),
-                        (0, r.jsx)(m.A, {
+                        (0, r.jsx)(E.A, {
                             onClick: W,
-                            "aria-label": b.intl.string(b.t.cpT0Cq),
-                            className: D.x6,
-                            children: (0, r.jsx)(g.A, {
+                            "aria-label": L.intl.string(L.t.cpT0Cq),
+                            className: w.x6,
+                            children: (0, r.jsx)(A.A, {
                                 color: "always-white",
                                 variant: "heading-xl/normal",
                                 outlined: !0,
@@ -128,8 +130,50 @@ function w(e) {
                         }),
                     ],
                 }),
-                w ? (0, r.jsx)(a.y$y, {}) : j(),
+                d ? (0, r.jsx)(a.y$y, {}) : j(),
             ],
         }),
     });
+}
+function P(e) {
+    let { onClose: t } = e,
+        [n, s] = (0, i.useState)(D.Q0.END),
+        a = (0, i.useCallback)(() => {
+            switch (n) {
+                case D.Q0.STATS:
+                    return (0, r.jsx)(b.A, { setScreen: s });
+                case D.Q0.ACHIEVEMENTS:
+                    return (0, r.jsx)(T.A, { setScreen: s });
+                case D.Q0.END:
+                default:
+                    return (0, r.jsx)(N.A, { setScreen: s });
+            }
+        }, [n]);
+    return (0, r.jsx)(m.A, {
+        children: (0, r.jsxs)("div", {
+            className: w.kL,
+            children: [
+                (0, r.jsx)("div", {
+                    className: w.o1,
+                    children: (0, r.jsx)(E.A, {
+                        onClick: t,
+                        "aria-label": L.intl.string(L.t.cpT0Cq),
+                        className: w.x6,
+                        children: (0, r.jsx)(A.A, {
+                            color: "always-white",
+                            variant: "heading-xl/normal",
+                            outlined: !0,
+                            children: "X",
+                        }),
+                    }),
+                }),
+                a(),
+            ],
+        }),
+    });
+}
+function k(e) {
+    let { onClose: t } = e,
+        { eventOver: n } = d.s.useConfig({ location: "gorilla" });
+    return n ? (0, r.jsx)(P, { onClose: t }) : (0, r.jsx)(x, { onClose: t });
 }
