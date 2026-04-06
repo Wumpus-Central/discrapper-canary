@@ -24,5 +24,5 @@ function u(e) {
     return o(e.skuName, t);
 }
 function c(e) {
-    return !(0, i.G0)(e) && e.type !== r.R.EXTERNAL_SKU;
+    return !(0, i.G0)(e) && e.type !== r.R.EXTERNAL_SKU && e.type !== r.R.PROFILE_FRAME;
 }
