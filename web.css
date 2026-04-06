@@ -57665,6 +57665,7 @@ screen and (max-width:485px) {
     padding-inline-start: calc(100/var(--custom-zoom, 100)*(var(--custom-guild-list-width) + var(--space-md)))
 }
 
+.platform-linux .bar_c38106,
 .platform-win .bar_c38106 {
     padding-inline-end: 0
 }
