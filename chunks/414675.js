@@ -6,6 +6,7 @@ e.exports = {
     ZY: "heroTitle__0ea1a",
     Sl: "image__0ea1a",
     Qq: "text__0ea1a",
+    F9: "embedded__0ea1a",
     v2: "v2__0ea1a",
     vX: "containerHeaderV2__0ea1a",
     qd: "headerTitle__0ea1a",

@@ -461,12 +461,12 @@ function el(e) {
         o,
         c,
         d,
-        { user: x, widget: f, cta: p, subtle: h = !1 } = e,
-        _ = W(e),
+        { user: x, widget: f, cta: p, subtle: h = !1, embedded: _ = !1 } = e,
+        A = W(e),
         {
-            isLoading: A,
-            hasData: j,
-            components: v,
+            isLoading: j,
+            hasData: v,
+            components: E,
         } = ((t = x.id),
         (n = f.applicationId),
         (a = (0, I.A)()),
@@ -540,72 +540,72 @@ function el(e) {
             });
         }, [o, r, a])),
         { isLoading: c, hasData: null != r, components: d });
-    return null == v
+    return null == E
         ? null
         : (0, i.jsxs)(M.A, {
               ...e,
               userId: x.id,
               widget: f,
-              className: s()(F.Y5, h && F.aK),
-              headerTitle: _.headerTitle,
+              className: s()(F.Y5, { [F.aK]: h, [F.F9]: _ }),
+              headerTitle: A.headerTitle,
               headerClassName: F.wx,
               additionalManageWidgetMenuItems:
-                  null != _.game
+                  null != A.game
                       ? (0, i.jsx)(m.Drp, {
                             id: "view-game-profile",
                             label: "View Game Profile",
                             icon: m._xR,
-                            action: _.openGameProfileModal,
+                            action: A.openGameProfileModal,
                         })
                       : null,
               children: [
-                  (0, i.jsx)(ei, { widget: f, children: (0, i.jsx)(z, { component: v }) }),
+                  (0, i.jsx)(ei, { widget: f, children: (0, i.jsx)(z, { component: E }) }),
                   (0, i.jsx)(H, {
-                      isCurrentUser: _.isCurrentUser,
-                      isLoading: A,
-                      hasData: j,
-                      showConnectCta: _.showConnectCta,
-                      showReconnectCta: _.showReconnectCta,
-                      handleConnect: _.handleConnect,
+                      isCurrentUser: A.isCurrentUser,
+                      isLoading: j,
+                      hasData: v,
+                      showConnectCta: A.showConnectCta,
+                      showReconnectCta: A.showReconnectCta,
+                      handleConnect: A.handleConnect,
                       cta: p,
                   }),
               ],
           });
 }
 function ea(e) {
-    let { user: t, widget: n, cta: l, subtle: a = !1 } = e,
-        c = W(e),
-        d = (0, A.A)(t.id, n.applicationId),
-        u = d.surfaceConfigs[o.m.WIDGET_TOP],
-        g = d.surfaceConfigs[o.m.WIDGET_BOTTOM];
-    return null == u || null == g
+    let { user: t, widget: n, cta: l, subtle: a = !1, embedded: c = !1 } = e,
+        d = W(e),
+        u = (0, A.A)(t.id, n.applicationId),
+        g = u.surfaceConfigs[o.m.WIDGET_TOP],
+        x = u.surfaceConfigs[o.m.WIDGET_BOTTOM];
+    return null == g || null == x
         ? null
         : (0, i.jsxs)(M.A, {
               ...e,
               userId: t.id,
               widget: n,
-              className: s()(F.Y5, F.v2, a && F.aK),
+              className: s()(F.Y5, F.v2, { [F.aK]: a, [F.F9]: c }),
               headerClassName: F.vX,
               additionalManageWidgetMenuItems:
-                  null != c.game
+                  null != d.game
                       ? (0, i.jsx)(m.Drp, {
                             id: "view-game-profile",
                             label: "View Game Profile",
                             icon: m._xR,
-                            action: c.openGameProfileModal,
+                            action: d.openGameProfileModal,
                         })
                       : null,
               children: [
-                  (0, i.jsx)(r.kH, { ...d, surface: o.m.WIDGET_TOP, surfaceConfig: u, header: c.headerTitle }),
+                  (0, i.jsx)(r.kH, { ...u, surface: o.m.WIDGET_TOP, surfaceConfig: g, header: d.headerTitle }),
                   (0, i.jsx)(m.cGx, {}),
-                  (0, i.jsx)(r.kH, { ...d, surface: o.m.WIDGET_BOTTOM, surfaceConfig: g }),
+                  (0, i.jsx)(r.kH, { ...u, surface: o.m.WIDGET_BOTTOM, surfaceConfig: x }),
                   (0, i.jsx)(H, {
-                      isCurrentUser: c.isCurrentUser,
-                      isLoading: d.isLoading,
-                      hasData: d.hasIdentity,
-                      showConnectCta: c.showConnectCta,
-                      showReconnectCta: c.showReconnectCta,
-                      handleConnect: c.handleConnect,
+                      isCurrentUser: d.isCurrentUser,
+                      isLoading: u.isLoading,
+                      hasData: u.hasIdentity,
+                      showConnectCta: d.showConnectCta,
+                      showReconnectCta: d.showReconnectCta,
+                      handleConnect: d.handleConnect,
                       cta: l,
                       v2: !0,
                   }),
