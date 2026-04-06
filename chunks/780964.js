@@ -14,6 +14,7 @@ var r = (function (e) {
         (e.ACCOUNT_SECURITY_TAB = "account_security_tab"),
         (e.ACCOUNT_PROFILE_CATEGORY = "account_profile_category"),
         (e.ACCOUNT_PROFILE_SETTING = "account_profile_setting"),
+        (e.ACCOUNT_PASSWORD_SECURITY_CATEGORY = "account_password_security_category"),
         (e.ACCOUNT_AUTHENTICATION_CATEGORY = "account_authentication_category"),
         (e.ACCOUNT_TWO_FACTOR_CRYPTO_NOTICE = "account_two_factor_crypto_notice"),
         (e.ACCOUNT_UNVERIFIED_USER_NOTICE = "account_unverified_user_notice"),
