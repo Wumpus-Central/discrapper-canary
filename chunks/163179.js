@@ -4,7 +4,8 @@ var r = n(257120);
 let i = /(?:\s*#?((?:"(\\\\|\\"|[^\\"])*")|(?:[^\s]+)))/i,
     s = /(?:\s*([^\s]+))/;
 function a(e) {
-    return RegExp(`(?:\\s*(-?(?:${e.map((e) => r.A.escape(e)).join("|")})))`, "i");
+    let t = [...e].sort((e, t) => t.length - e.length);
+    return RegExp(`(?:\\s*(-?(?:${t.map((e) => r.A.escape(e)).join("|")})))`, "i");
 }
 function o(e, t, n) {
     let r = n.getMatch(1),
