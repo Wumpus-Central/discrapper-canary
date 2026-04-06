@@ -13,7 +13,6 @@ e.exports = {
     Xi: "eyebrowText_b5b7aa",
     iI: "utilButtonWrapper_b5b7aa",
     A9: "utilButtonIcon_b5b7aa",
-    WB: "utilButtonIconInformation_b5b7aa",
     Iu: "partnerBranding_b5b7aa",
     ND: "partnerLogotypes_b5b7aa",
     E_: "bottomRow_b5b7aa",
