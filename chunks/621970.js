@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     QN: "clipItem__1d12e",
     r9: "disabled__1d12e",
     in: "focused__1d12e",
@@ -6,12 +6,13 @@ e.exports = {
     ne: "clipThumbOverlay__1d12e",
     wH: "selected__1d12e",
     OH: "clipBadge__1d12e",
-    jt: "clipTemporaryBadge__1d12e",
+    E9: "clipBottomBadges__1d12e",
     fT: "clipThumb__1d12e",
     Is: "clipThumbEmpty__1d12e",
     QB: "clipThumbContainer__1d12e",
     X7: "clipProgressBar__1d12e",
     Z2: "clipProgressFill__1d12e",
+    Ad: "newBadge__1d12e",
     wI: "clipMetadata__1d12e",
     gS: "clipIcon__1d12e",
     NH: "clipIconImage__1d12e",

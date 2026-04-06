@@ -121,7 +121,6 @@ n.d(t, {
     L5T: () => z.SpotifyNeutralIcon,
     L9S: () => z.IdIcon,
     LIQ: () => z.ThemeMidnightIcon,
-    LK_: () => z.WaveformIcon,
     LVO: () => z.DpadIcon,
     L_e: () => z.GlobeEarthIcon,
     Lf3: () => z.BurgerIcon,

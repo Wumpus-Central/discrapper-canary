@@ -1,10 +1,10 @@
-e.exports = {
+_.exports = {
     pz: "sidebar__75f8c",
     aN: "sidebarHeader__75f8c",
     wp: "sidebarContent__75f8c",
     om: "sidebarSection__75f8c",
     a9: "sectionLabel__75f8c",
-    CW: "gamesList__75f8c",
+    Ep: "sidebarItemList__75f8c",
     MV: "gameItem__75f8c",
     tk: "gameItemContent__75f8c",
     wH: "selected__75f8c",

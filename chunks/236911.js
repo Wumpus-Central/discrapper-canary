@@ -1,10 +1,11 @@
-e.exports = {
+_.exports = {
     f4: "centeringWrapper__10841",
     fL: "timelineWrapper__10841",
     lx: "timelineHeader__10841",
     PH: "timelineContainer__10841",
     s2: "playPauseButtonWrapper__10841",
     IO: "timeline__10841",
+    QT: "timelineCropOverlay__10841",
     ou: "waveform__10841",
     Dg: "timelineDragging__10841",
     Fi: "timelineVideo__10841",

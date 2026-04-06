@@ -1,147 +1,187 @@
-l.d(t, { $: () => j, default: () => f });
-var i = l(627968),
-    s = l(64700),
-    a = l(311907),
-    n = l(990078),
-    r = l(521489),
-    d = l(397927),
-    c = l(793574),
-    o = l(688810),
-    u = l(274372),
-    m = l(794905),
-    p = l(219480),
-    h = l(650995),
-    x = l(792852),
-    C = l(409067),
-    v = l(985018),
-    g = l(144894);
-let j = s.createContext({
+l.d(t, { $: () => E, default: () => k });
+var a = l(627968),
+    n = l(64700),
+    i = l(503698),
+    s = l.n(i),
+    r = l(311907),
+    o = l(990078),
+    d = l(521489),
+    c = l(397927),
+    u = l(775602),
+    m = l(793574),
+    h = l(688810),
+    p = l(274372),
+    x = l(247181),
+    f = l(309777),
+    g = l(429364),
+    v = l(794905),
+    j = l(219480),
+    b = l(650995),
+    C = l(792852),
+    y = l(409067),
+    N = l(985018),
+    A = l(702351);
+let E = n.createContext({
     selectedClipIds: new Set(),
     toggleClipSelection: () => {},
     clearSelection: () => {},
     isMultiSelectMode: !1,
 });
-function f(e) {
-    let { channelId: t, onClose: f, onClipClick: y, ...A } = e,
-        { analyticsLocations: N } = (0, o.Ay)(c.A.CLIPS_GALLERY),
-        [I, b] = s.useState(new Set()),
-        { clipsByGame: E, filteredClips: k, favoriteClips: M, allClips: w } = (0, C.a)(),
-        { onShareClick: L } = (0, m.A)(t),
-        S = (0, a.bG)([u.A], () => u.A.getExportingClipIds().length > 0),
-        H = (0, x.P)((e) => e.selectedGameId),
-        T = s.useMemo(
-            () => (null == H || "favorites" === H ? null : (E.find((e) => e.applicationId === H) ?? null)),
-            [H, E],
+function k(e) {
+    let { channelId: t, onClose: i, onClipClick: k, transitionState: I, ...S } = e,
+        { analyticsLocations: w } = (0, h.Ay)(m.A.CLIPS_GALLERY),
+        [L, M] = n.useState(new Set()),
+        { clipsByGame: T, filteredClips: R, favoriteClips: D, allClips: O } = (0, y.a)(),
+        { onShareClick: P } = (0, v.A)(t),
+        U = (0, r.bG)([p.A], () => p.A.getExportingClipIds().length > 0),
+        [G, V] = n.useState("gallery"),
+        [H, $] = n.useState(null),
+        [z, _] = n.useState(c.ip4.HIDDEN),
+        K = n.useRef(null),
+        F = (0, C.P)((e) => e.selectedGameId),
+        B = n.useMemo(
+            () => (null == F || "favorites" === F ? null : (T.find((e) => e.applicationId === F) ?? null)),
+            [F, T],
         ),
-        P = s.useMemo(() => ("favorites" === H ? M : (T?.filteredClips ?? k)), [H, T, k, M]),
-        V = s.useMemo(
-            () => ("favorites" === H ? v.intl.string(v.t["9rlCk1"]) : (T?.name ?? v.intl.string(v.t.dPVrEv))),
-            [H, T],
+        Y = n.useMemo(() => ("favorites" === F ? D : (B?.filteredClips ?? R)), [F, B, R, D]),
+        X = n.useMemo(
+            () => ("favorites" === F ? N.intl.string(N.t["9rlCk1"]) : (B?.name ?? N.intl.string(N.t.dPVrEv))),
+            [F, B],
         ),
-        D = s.useCallback((e) => {
-            b((t) => {
+        Q = n.useCallback((e) => {
+            M((t) => {
                 let l = new Set(t);
                 return l.has(e) ? l.delete(e) : l.add(e), l;
             });
         }, []),
-        R = s.useCallback(() => {
-            b(new Set());
+        q = n.useCallback((e) => {
+            $(e), V("editing"), u.A.useReducedMotion && _(c.ip4.ENTERED);
         }, []),
-        G = I.size > 0,
-        _ = s.useCallback(() => {
-            let e = w.filter((e) => I.has(e.id));
-            (0, d.mMO)(
+        Z = n.useCallback(() => {
+            u.A.useReducedMotion && $(null), V("gallery");
+        }, []),
+        W = n.useCallback(() => {
+            M(new Set());
+        }, []),
+        J = L.size > 0,
+        ee = n.useCallback(() => {
+            let e = O.filter((e) => L.has(e.id));
+            (0, c.mMO)(
                 async () => {
                     let { default: t } = await l.e("13367").then(l.bind(l, 223818));
                     return (l) =>
-                        (0, i.jsx)(t, {
+                        (0, a.jsx)(t, {
                             ...l,
                             clips: e,
                             onAfterDelete: () => {
-                                R(), l.onClose();
+                                W(), l.onClose();
                             },
                         });
                 },
                 { stackingBehavior: "stack" },
             );
-        }, [w, I, R]),
-        O = s.useCallback(async () => {
-            let e = w.filter((e) => I.has(e.id));
-            await L({ clips: e }), R();
-        }, [w, I, L, R]),
-        z = s.useMemo(
-            () => ({ selectedClipIds: I, toggleClipSelection: D, clearSelection: R, isMultiSelectMode: G }),
-            [I, D, R, G],
+        }, [O, L, W]),
+        et = n.useCallback(async () => {
+            let e = O.filter((e) => L.has(e.id));
+            await P({ clips: e }), W();
+        }, [O, L, P, W]),
+        el = n.useMemo(
+            () => ({ selectedClipIds: L, toggleClipSelection: Q, clearSelection: W, isMultiSelectMode: J }),
+            [L, Q, W, J],
         );
-    return (0, i.jsx)(o.f5, {
-        value: N,
-        children: (0, i.jsx)(j.Provider, {
-            value: z,
-            children: (0, i.jsx)(r.N, {
-                onClose: f,
-                ...A,
-                children: (0, i.jsxs)("div", {
-                    className: g.jT,
+    return (0, a.jsx)(h.f5, {
+        value: w,
+        children: (0, a.jsx)(E.Provider, {
+            value: el,
+            children: (0, a.jsx)(d.N, {
+                onClose: i,
+                transitionState: I,
+                ...S,
+                children: (0, a.jsxs)("div", {
+                    className: A.jT,
+                    ref: K,
                     children: [
-                        (0, i.jsx)(h.A, { clipsByGame: E, filteredClips: k, favoriteClips: M, allClips: w }),
-                        (0, i.jsxs)("div", {
-                            className: g.Qs,
+                        (0, a.jsxs)("div", {
+                            className: s()(A.PD, "gallery" === G && A.vu),
                             children: [
-                                (0, i.jsxs)("div", {
-                                    className: g.$Q,
+                                (0, a.jsx)(b.A, { clipsByGame: T, filteredClips: R, favoriteClips: D, allClips: O }),
+                                (0, a.jsxs)("div", {
+                                    className: A.Qs,
                                     children: [
-                                        (0, i.jsx)(d.Heading, {
-                                            variant: "heading-md/medium",
-                                            color: "text-default",
-                                            children: V,
-                                        }),
-                                        (0, i.jsxs)("div", {
-                                            className: g.$s,
+                                        (0, a.jsxs)("div", {
+                                            className: A.$Q,
                                             children: [
-                                                G &&
-                                                    (0, i.jsxs)(i.Fragment, {
-                                                        children: [
-                                                            (0, i.jsx)(n.m, {
-                                                                text: v.intl.string(v.t.RDE0Sc),
-                                                                children: (0, i.jsx)(d.K0, {
-                                                                    onClick: O,
-                                                                    icon: d.liv,
-                                                                    size: "sm",
-                                                                    variant: "icon-only",
-                                                                    "aria-label": v.intl.string(v.t.RDE0Sc),
-                                                                    loading: S,
-                                                                }),
+                                                (0, a.jsx)(c.Heading, {
+                                                    variant: "heading-md/medium",
+                                                    color: "text-default",
+                                                    children: X,
+                                                }),
+                                                (0, a.jsxs)("div", {
+                                                    className: A.$s,
+                                                    children: [
+                                                        J &&
+                                                            (0, a.jsxs)(a.Fragment, {
+                                                                children: [
+                                                                    (0, a.jsx)(o.m, {
+                                                                        text: N.intl.string(N.t.RDE0Sc),
+                                                                        children: (0, a.jsx)(c.K0, {
+                                                                            onClick: et,
+                                                                            icon: c.liv,
+                                                                            size: "sm",
+                                                                            variant: "icon-only",
+                                                                            "aria-label": N.intl.string(N.t.RDE0Sc),
+                                                                            loading: U,
+                                                                        }),
+                                                                    }),
+                                                                    (0, a.jsx)(o.m, {
+                                                                        text: N.intl.string(N.t.oyYWHE),
+                                                                        children: (0, a.jsx)(c.K0, {
+                                                                            onClick: ee,
+                                                                            icon: c.ucK,
+                                                                            size: "sm",
+                                                                            variant: "icon-only",
+                                                                            "aria-label": N.intl.string(N.t.oyYWHE),
+                                                                        }),
+                                                                    }),
+                                                                ],
                                                             }),
-                                                            (0, i.jsx)(n.m, {
-                                                                text: v.intl.string(v.t.oyYWHE),
-                                                                children: (0, i.jsx)(d.K0, {
-                                                                    onClick: _,
-                                                                    icon: d.ucK,
-                                                                    size: "sm",
-                                                                    variant: "icon-only",
-                                                                    "aria-label": v.intl.string(v.t.oyYWHE),
-                                                                }),
-                                                            }),
-                                                        ],
-                                                    }),
-                                                (0, i.jsx)(d.K0, {
-                                                    onClick: f,
-                                                    icon: d.d$L,
-                                                    size: "sm",
-                                                    variant: "icon-only",
-                                                    "aria-label": v.intl.string(v.t.cpT0Cq),
+                                                        (0, a.jsx)(c.K0, {
+                                                            onClick: i,
+                                                            icon: c.d$L,
+                                                            size: "sm",
+                                                            variant: "icon-only",
+                                                            "aria-label": N.intl.string(N.t.cpT0Cq),
+                                                        }),
+                                                    ],
                                                 }),
                                             ],
                                         }),
+                                        (0, a.jsx)(j.A, {
+                                            onEdit: q,
+                                            channelId: t,
+                                            filteredClips: Y,
+                                            totalClipCount: O.length,
+                                            onClipClick: k,
+                                        }),
                                     ],
                                 }),
-                                (0, i.jsx)(p.A, {
-                                    channelId: t,
-                                    filteredClips: P,
-                                    totalClipCount: w.length,
-                                    onClipClick: y,
-                                }),
                             ],
+                        }),
+                        (0, a.jsx)("div", {
+                            className: s()(A.jN, "editing" === G && A.vu),
+                            onTransitionEnd: () => {
+                                "gallery" === G ? ($(null), _(c.ip4.HIDDEN)) : "editing" === G && _(c.ip4.ENTERED);
+                            },
+                            children:
+                                null != H &&
+                                (0, a.jsxs)(g.p, {
+                                    clip: H,
+                                    modalContainerRef: K,
+                                    children: [
+                                        (0, a.jsx)(x.A, { clip: H, transitionState: z, onClose: Z }),
+                                        (0, a.jsx)(f.A, { channelId: t, clip: H, onClose: i }),
+                                    ],
+                                }),
                         }),
                     ],
                 }),

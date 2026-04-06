@@ -1,42 +1,41 @@
-l.d(t, { A: () => A }), l(321073);
-var i = l(627968),
-    s = l(64700),
-    a = l(110259),
-    n = l(311907),
+l.d(t, { A: () => C }), l(321073);
+var a = l(627968),
+    n = l(64700),
+    i = l(110259),
+    s = l(311907),
     r = l(397927),
-    d = l(139286),
-    c = l(962125),
-    o = l(661191),
+    o = l(139286),
+    d = l(962125),
+    c = l(661191),
     u = l(274372),
     m = l(399925),
-    p = l(555957),
-    h = l(714973),
-    x = l(696016),
-    C = l(985018),
-    v = l(186515);
+    h = l(555957),
+    p = l(714973),
+    x = l(985018),
+    f = l(186515);
 let g = 16 / 9,
-    j = [0, 16, 0, 16],
-    f = j[1] + j[3];
-function y(e, t) {
+    v = [0, 16, 0, 16],
+    j = v[1] + v[3];
+function b(e, t) {
     return Math.ceil(t / e);
 }
-function A(e) {
-    let { channelId: t, filteredClips: A, totalClipCount: N, onClipClick: I } = e,
-        [b, E] = s.useState(!0),
-        [k, M] = s.useState({ width: 0, height: 0 }),
-        w = (0, n.bG)([u.A], () => u.A.getSettings().storageLocation),
-        L = (0, n.yK)([u.A], () => u.A.getNewClipIds()),
-        S = (0, n.bG)([u.A], () => u.A.getExportingClipIds().length > 0);
-    (0, d.A)(
+function C(e) {
+    let { filteredClips: t, totalClipCount: l, onClipClick: C, onEdit: y } = e,
+        [N, A] = n.useState(!0),
+        [E, k] = n.useState({ width: 0, height: 0 }),
+        I = (0, s.bG)([u.A], () => u.A.getSettings().storageLocation),
+        S = (0, s.yK)([u.A], () => u.A.getNewClipIds()),
+        w = (0, s.bG)([u.A], () => u.A.getExportingClipIds().length > 0);
+    (0, o.A)(
         {
-            type: a.ImpressionTypes.MODAL,
-            name: a.ImpressionNames.CLIP_GALLERY_VIEWED,
-            properties: { number_of_clips_loaded: A.length },
+            type: i.ImpressionTypes.MODAL,
+            name: i.ImpressionNames.CLIP_GALLERY_VIEWED,
+            properties: { number_of_clips_loaded: t.length },
         },
-        { disableTrack: b },
-        [A.length, b],
+        { disableTrack: N },
+        [t.length, N],
     ),
-        s.useEffect(
+        n.useEffect(
             () => (
                 (0, m.jA)(),
                 () => {
@@ -45,99 +44,88 @@ function A(e) {
             ),
             [],
         );
-    let H = s.useMemo(() => {
+    let L = n.useMemo(() => {
             let e = [],
-                t = new Map(),
-                l = [],
-                i = new Date();
-            i.setHours(0, 0, 0, 0);
-            let s = i.getTime();
+                l = new Map(),
+                a = [],
+                n = new Date();
+            n.setHours(0, 0, 0, 0);
+            let i = n.getTime();
             if (
-                (A.forEach((e) => {
-                    let i = o.default.extractTimestamp(e.id),
-                        a = new Date(i);
-                    if ((a.setHours(0, 0, 0, 0), a.getTime() === s)) l.push(e);
+                (t.forEach((e) => {
+                    let t = c.default.extractTimestamp(e.id),
+                        n = new Date(t);
+                    if ((n.setHours(0, 0, 0, 0), n.getTime() === i)) a.push(e);
                     else {
-                        let l = new Date(i).toLocaleDateString("en-US", { month: "long", year: "numeric" }),
-                            s = t.get(l) ?? [];
-                        t.set(l, [...s, e]);
+                        let a = new Date(t).toLocaleDateString("en-US", { month: "long", year: "numeric" }),
+                            n = l.get(a) ?? [];
+                        l.set(a, [...n, e]);
                     }
                 }),
-                l.length > 0)
+                a.length > 0)
             ) {
-                let t = l.some((e) => e.isTemporary);
+                let t = a.some((e) => e.isTemporary);
                 e.push({
                     type: "today",
-                    title: C.intl.string(C.t["kB2R/0"]),
-                    description: t ? C.intl.string(C.t["6AXirz"]) : void 0,
-                    clips: l,
+                    title: x.intl.string(x.t["kB2R/0"]),
+                    description: t ? x.intl.string(x.t["6AXirz"]) : void 0,
+                    clips: a,
                 });
             }
             return (
-                Array.from(t.entries()).forEach((t) => {
-                    let [l, i] = t;
-                    e.push({ type: "monthyear", title: l, clips: i });
+                Array.from(l.entries()).forEach((t) => {
+                    let [l, a] = t;
+                    e.push({ type: "monthyear", title: l, clips: a });
                 }),
                 e
             );
-        }, [A]),
-        { width: T } = k,
-        { tileWidth: P, columns: V } = s.useMemo(() => {
+        }, [t]),
+        { width: M } = E,
+        { tileWidth: T, columns: R } = n.useMemo(() => {
             var e;
-            let t, l, i, s, a;
+            let l, a, n, i, s;
             return (
-                (e = A.length),
-                (i = 16 * ((l = Math.max(1, Math.floor(((t = T - f) + 16) / 336))) - 1)),
-                (s = Math.max(320, (t - i) / l)),
-                (a = y(l, e)),
-                { tileWidth: s, columns: l, rows: a }
+                (e = t.length),
+                (n = 16 * ((a = Math.max(1, Math.floor(((l = M - j) + 16) / 336))) - 1)),
+                (i = Math.max(320, (l - n) / a)),
+                (s = b(a, e)),
+                { tileWidth: i, columns: a, rows: s }
             );
-        }, [A.length, T]);
-    s.useEffect(() => {
+        }, [t.length, M]);
+    n.useEffect(() => {
         !(async function () {
-            E(!0);
+            A(!0);
             try {
-                await m.Fb(w);
+                await m.Fb(I);
             } finally {
-                E(!1);
+                A(!1);
             }
         })();
-    }, [w]);
-    let D = s.useCallback(
-            (e) => {
-                (0, r.mMO)(
-                    async () => {
-                        let { default: s } = await l.e("29621").then(l.bind(l, 723028));
-                        return (l) => (0, i.jsx)(s, { ...l, channelId: t, clip: e });
-                    },
-                    { modalKey: x.DQ, stackingBehavior: "stack" },
-                );
-            },
-            [t],
-        ),
-        R = s.useMemo(() => H.map((e) => y(V, e.clips.length)), [H, V]),
-        G = s.useMemo(() => R.reduce((e, t) => e + t, 0), [R]),
-        _ = Math.floor(P / g),
-        O = s.useCallback(
+    }, [I]);
+    let D = n.useMemo(() => L.map((e) => b(R, e.clips.length)), [L, R]),
+        O = n.useMemo(() => D.reduce((e, t) => e + t, 0), [D]),
+        P = Math.floor(T / g),
+        U = n.useCallback(
             (e, t) => {
-                let { sectionIndex: l, sectionRowIndex: s } = t,
-                    a = H[l];
-                if (null == a) return null;
-                let n = s * V,
-                    r = a.clips.slice(n, n + V);
-                return (0, i.jsx)(
+                let { sectionIndex: l, sectionRowIndex: n } = t,
+                    i = L[l];
+                if (null == i) return null;
+                let s = n * R,
+                    r = i.clips.slice(s, s + R);
+                return (0, a.jsx)(
                     "div",
                     {
-                        className: v.UX,
+                        className: f.UX,
                         children: r.map((e) =>
-                            (0, i.jsx)(
+                            (0, a.jsx)(
                                 "div",
                                 {
-                                    style: { width: P },
-                                    children: (0, i.jsx)(p.A, {
-                                        actionsDisabled: S,
-                                        isNew: L.includes(e.id),
-                                        onClick: I ?? D,
+                                    style: { width: T },
+                                    children: (0, a.jsx)(h.A, {
+                                        actionsDisabled: w,
+                                        isNew: S.includes(e.id),
+                                        onClick: C ?? y,
+                                        onEdit: y,
                                         clip: e,
                                     }),
                                 },
@@ -145,38 +133,38 @@ function A(e) {
                             ),
                         ),
                     },
-                    `row-${l}-${s}`,
+                    `row-${l}-${n}`,
                 );
             },
-            [H, V, P, S, L, D, I],
+            [L, R, T, w, S, C, y],
         ),
-        z = s.useCallback(
+        G = n.useCallback(
             (e) => {
-                let t = H[e];
+                let t = L[e];
                 return t?.description != null ? 66 : 44;
             },
-            [H],
+            [L],
         ),
-        K = s.useCallback(
+        V = n.useCallback(
             (e) => {
-                let t = H[e];
+                let t = L[e];
                 return null == t
                     ? null
-                    : (0, i.jsxs)(
+                    : (0, a.jsxs)(
                           "div",
                           {
-                              className: v.aE,
+                              className: f.aE,
                               children: [
-                                  (0, i.jsx)(r.Heading, {
+                                  (0, a.jsx)(r.Heading, {
                                       variant: "text-md/semibold",
                                       color: "text-default",
                                       children: t.title,
                                   }),
                                   null != t.description &&
-                                      (0, i.jsx)(r.Text, {
+                                      (0, a.jsx)(r.Text, {
                                           variant: "text-sm/normal",
                                           color: "text-subtle",
-                                          className: v.yV,
+                                          className: f.yV,
                                           children: t.description,
                                       }),
                               ],
@@ -184,20 +172,20 @@ function A(e) {
                           `header-${e}`,
                       );
             },
-            [H],
+            [L],
         );
-    return b || 0 !== H.length
-        ? b
-            ? (0, i.jsx)("div", { className: v.dc, children: (0, i.jsx)(r.y$y, {}) })
-            : (0, i.jsx)(c.A, {
-                  listPadding: j,
-                  renderRow: O,
-                  renderSectionHeader: K,
-                  rowCount: G,
-                  rowCountBySection: R,
-                  rowHeight: _ + 68 + 16,
-                  sectionHeaderHeight: z,
-                  onResize: M,
+    return N || 0 !== L.length
+        ? N
+            ? (0, a.jsx)("div", { className: f.dc, children: (0, a.jsx)(r.y$y, {}) })
+            : (0, a.jsx)(d.A, {
+                  listPadding: v,
+                  renderRow: U,
+                  renderSectionHeader: V,
+                  rowCount: O,
+                  rowCountBySection: D,
+                  rowHeight: P + 68 + 16,
+                  sectionHeaderHeight: G,
+                  onResize: k,
               })
-        : (0, i.jsx)(h.A, { isEmptyBecauseQuery: N > 0 });
+        : (0, a.jsx)(p.A, { isEmptyBecauseQuery: l > 0 });
 }
