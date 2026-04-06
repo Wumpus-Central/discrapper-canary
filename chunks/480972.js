@@ -3,6 +3,7 @@ e.exports = {
     SH: "nitroMessage__5126c",
     DX: "automodMessage__5126c",
     mK: "mentioned__5126c",
+    Sg: "guildOfficialMessage__5126c",
     $n: "replying__5126c",
     Nt: "messageListItem__5126c",
     iU: "message__5126c",

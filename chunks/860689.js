@@ -70,6 +70,7 @@ function c(e, t, n) {
         premiumFeatures: null != e.premium_features ? N(e.premium_features) : null,
         moderatorReporting: null != e.moderator_reporting ? R(e.moderator_reporting) : null,
         gameApplicationIds: e.game_application_ids ?? null,
+        officialMessageColor: e.official_message_color ?? null,
     });
 }
 function d(e, t) {
@@ -215,6 +216,7 @@ function I(e) {
         premiumFeatures: e.premiumFeatures ?? null,
         moderatorReporting: e.moderatorReporting ?? null,
         gameApplicationIds: e.gameApplicationIds ?? null,
+        officialMessageColor: e.officialMessageColor ?? null,
     });
 }
 function T(e) {
@@ -257,6 +259,7 @@ function T(e) {
         latest_onboarding_question_id: e.latestOnboardingQuestionId,
         profile: e.profile,
         moderator_reporting: null != e.moderatorReporting ? O(e.moderatorReporting) : null,
+        official_message_color: e.officialMessageColor,
         incidents_data: null,
         game_application_ids: e.gameApplicationIds,
     };

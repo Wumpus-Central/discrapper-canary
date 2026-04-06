@@ -48,6 +48,7 @@ let U = !0,
         "discoverySplash",
         "publicUpdatesChannelId",
         "premiumProgressBarEnabled",
+        "officialMessageColor",
     ],
     F = [
         "brandColorPrimary",

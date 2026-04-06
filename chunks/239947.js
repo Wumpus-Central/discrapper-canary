@@ -140,6 +140,7 @@ var r = (function (e) {
             (e.GUILD_SETTINGS_MEMBER_VERIFICATION = "impression_guild_settings_member_verification"),
             (e.GUILD_SETTINGS_MEMBERS = "impression_guild_settings_members"),
             (e.GUILD_SETTINGS_MODERATION = "impression_guild_settings_moderation"),
+            (e.GUILD_SETTINGS_OFFICIAL_MESSAGES = "impression_guild_settings_official_messages"),
             (e.GUILD_SETTINGS_OVERVIEW = "impression_guild_settings_overview"),
             (e.GUILD_SETTINGS_PARTNER = "impression_guild_settings_partner"),
             (e.GUILD_SETTINGS_PROFILE = "impression_guild_settings_profile"),

@@ -65,9 +65,10 @@ let y = new l.A("GuildSettingsActionCreators"),
                 n.e("50796"),
                 n.e("53662"),
                 n.e("41606"),
+                n.e("94253"),
                 n.e("8458"),
                 n.e("11810"),
-                n.e("34656"),
+                n.e("85200"),
                 n.e("68890"),
                 n.e("30453"),
                 n.e("17537"),
@@ -77,7 +78,7 @@ let y = new l.A("GuildSettingsActionCreators"),
                 n.e("54816"),
                 n.e("56475"),
                 n.e("59541"),
-                n.e("95921"),
+                n.e("93498"),
             ]).then(n.bind(n, 422559)),
                 g.A.getGuild(e)?.features.has(T.GuildFeatures.COMMUNITY) &&
                     (t === T.BEX.GUILD_AUTOMOD && ((t = T.BEX.SAFETY), (i = T.nd0.SAFETY_AUTOMOD)),
@@ -173,9 +174,10 @@ let y = new l.A("GuildSettingsActionCreators"),
                     premiumProgressBarEnabled: O,
                     profile: b,
                     moderatorReportingEnabled: D,
+                    officialMessageColor: L,
                 } = t,
-                L = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                w = {
+                w = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                M = {
                     name: n,
                     description: r,
                     icon: i,
@@ -199,13 +201,14 @@ let y = new l.A("GuildSettingsActionCreators"),
                     ...(null != O ? { premium_progress_bar_enabled: O } : null),
                     profile: null != b ? (0, u.N)(b) : b,
                     moderator_reporting_enabled: D,
+                    official_message_color: L,
                 };
             return (
                 a.h.dispatch({ type: "GUILD_SETTINGS_SUBMIT" }),
                 s.Bo.patch({
                     url: T.Rsh.GUILD(e),
-                    query: { for_discovery: L.isForDiscovery },
-                    body: w,
+                    query: { for_discovery: w.isForDiscovery },
+                    body: M,
                     oldFormErrors: !0,
                     rejectWithError: !1,
                 }).then(
@@ -217,7 +220,7 @@ let y = new l.A("GuildSettingsActionCreators"),
                         if (
                             (a.h.dispatch({ type: "GUILD_SETTINGS_SUBMIT_FAILURE", errors: e.body }),
                             y.error("Failed to save guild settings", { errors: e.body }),
-                            L.throwErr)
+                            w.throwErr)
                         )
                             throw e.body;
                     },

@@ -1,8 +1,8 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => p });
 var i = n(627968);
 n(64700);
-var a = n(827734),
-    l = n(3026),
+var l = n(827734),
+    a = n(3026),
     s = n(582754),
     r = n(397927),
     o = n(442433),
@@ -12,11 +12,11 @@ var a = n(827734),
     g = n(518477),
     m = n(996988),
     x = n(752318);
-let p = (0, r.FT9)(r._3J.SIZE_16);
-function f(e) {
-    let { user: t, guild: f, nick: h, onSelect: _ } = e,
+let f = (0, r.FT9)(r._3J.SIZE_16);
+function p(e) {
+    let { user: t, guild: p, nick: h, onSelect: _ } = e,
         { theme: A, themeType: I } = (0, u.E)(),
-        j = t.hasAvatarForGuild(f.id);
+        j = t.hasAvatarForGuild(p.id);
     return (0, i.jsxs)(r.DUT, {
         focusProps: I === m.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
         className: x.nM,
@@ -60,9 +60,10 @@ function f(e) {
                     n.e("50796"),
                     n.e("53662"),
                     n.e("41606"),
+                    n.e("94253"),
                     n.e("8458"),
                     n.e("11810"),
-                    n.e("34656"),
+                    n.e("85200"),
                     n.e("68890"),
                     n.e("30453"),
                     n.e("17537"),
@@ -72,18 +73,18 @@ function f(e) {
                     n.e("56475"),
                     n.e("59541"),
                     n.e("54469"),
-                    n.e("19936"),
+                    n.e("81861"),
                 ]).then(n.bind(n, 544676));
-                return (t) => (0, i.jsx)(e, { ...t, guild: f });
+                return (t) => (0, i.jsx)(e, { ...t, guild: p });
             });
         },
         children: [
             (0, i.jsx)(c.Ay, {
                 tabIndex: -1,
-                guild: f,
+                guild: p,
                 showBadge: !0,
-                className: null != f.icon ? x.Kk : x.lN,
-                badgeStrokeColor: (0, s.Mw)(A) ? a.A.unsafe_rawColors.PRIMARY_600.css : a.A.unsafe_rawColors.WHITE.css,
+                className: null != p.icon ? x.Kk : x.lN,
+                badgeStrokeColor: (0, s.Mw)(A) ? l.A.unsafe_rawColors.PRIMARY_600.css : l.A.unsafe_rawColors.WHITE.css,
                 badgeTooltipColor: r.oMw.PRIMARY,
                 badgeTooltipDelay: g.In,
                 size: c.Ay.Sizes.MEDIUM,
@@ -92,22 +93,22 @@ function f(e) {
             (0, i.jsxs)("div", {
                 className: x.zH,
                 children: [
-                    (0, i.jsx)("div", { className: x.UU, children: f.name }),
+                    (0, i.jsx)("div", { className: x.UU, children: p.name }),
                     j &&
                         (0, i.jsxs)("div", {
                             className: x.C9,
                             children: [
                                 (0, i.jsx)(r.euF, {
-                                    src: t.getAvatarURL(f.id, p),
+                                    src: t.getAvatarURL(p.id, f),
                                     size: r._3J.SIZE_16,
                                     className: x.my,
                                     "aria-hidden": !0,
                                 }),
                                 (0, i.jsx)(r.Text, {
                                     variant: "text-xs/medium",
-                                    children: (0, i.jsx)(l.A, {
+                                    children: (0, i.jsx)(a.A, {
                                         delay: g.In,
-                                        children: h ?? d.Ay.getName(f.id, void 0, t),
+                                        children: h ?? d.Ay.getName(p.id, void 0, t),
                                     }),
                                 }),
                             ],
@@ -116,7 +117,7 @@ function f(e) {
                         null != h &&
                         (0, i.jsx)(r.Text, {
                             variant: "text-xs/medium",
-                            children: (0, i.jsx)(l.A, { delay: g.In, children: h }),
+                            children: (0, i.jsx)(a.A, { delay: g.In, children: h }),
                         }),
                 ],
             }),

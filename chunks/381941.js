@@ -3,16 +3,17 @@ n.d(t, {
     ES: () => a,
     Fd: () => l,
     Gt: () => _,
-    Hx: () => g,
+    Hx: () => A,
     N0: () => c,
-    VP: () => m,
-    ZG: () => E,
+    VP: () => E,
+    ZG: () => g,
     _W: () => p,
+    aj: () => h,
     k8: () => d,
     mZ: () => u,
     q4: () => f,
     qh: () => s,
-    ty: () => h,
+    ty: () => m,
     y5: () => o,
 });
 var r = n(158390),
@@ -39,8 +40,9 @@ let s = [0, 4, 8, 16, 24],
     d = 32,
     _ = 64,
     f = "---new-messages-bar",
-    p = "SPOILER_";
-var h = (function (e) {
+    p = "SPOILER_",
+    h = 0x99aab5;
+var m = (function (e) {
     return (
         (e.ERROR_SOURCE_UNKNOWN = "ERROR_SOURCE_UNKNOWN"),
         (e.PRECOMPRESSION_SUM_TOO_LARGE = "PRECOMPRESSION_SUM_TOO_LARGE"),
@@ -52,9 +54,9 @@ var h = (function (e) {
         e
     );
 })({});
-let m = 0xc800000,
-    E = { timeout: 60 * i.A.Millis.SECOND, retries: 3, backoff: new r.A() };
-var g = (function (e) {
+let E = 0xc800000,
+    g = { timeout: 60 * i.A.Millis.SECOND, retries: 3, backoff: new r.A() };
+var A = (function (e) {
     return (
         (e.PUSH_NOTIFICATION = "push_notification"),
         (e.CHAT_INPUT = "chat_input"),

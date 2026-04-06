@@ -60,6 +60,7 @@ let u = "Guild",
         premiumFeatures: null,
         moderatorReporting: null,
         gameApplicationIds: null,
+        officialMessageColor: null,
     });
 function _(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],

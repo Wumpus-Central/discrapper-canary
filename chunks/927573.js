@@ -1,26 +1,25 @@
-"use strict";
-n.d(t, { $s: () => c, Qy: () => r, T$: () => o, Ug: () => a, _4: () => l, mu: () => u });
-var i,
-    s = n(985018);
-let l = 5,
-    r = 10,
+n.d(e, { $s: () => d, Qy: () => i, T$: () => c, Ug: () => a, _4: () => r, mu: () => u });
+var s,
+    l = n(985018);
+let r = 5,
+    i = 10,
     a = 30;
-var o =
-    (((i = {})[(i.DISPLAY = 0)] = "DISPLAY"),
-    (i[(i.PERMISSIONS = 1)] = "PERMISSIONS"),
-    (i[(i.MEMBERS = 2)] = "MEMBERS"),
-    (i[(i.VERIFICATIONS = 3)] = "VERIFICATIONS"),
-    i);
-let d = {
-    afk_channel_id: () => s.intl.string(s.t.KuYcnU),
-    public_updates_channel_id: () => s.intl.string(s.t.vAyDGU),
-    safety_alerts_channel_id: () => s.intl.string(s.t.sMkYE8),
-    system_channel_id: () => s.intl.string(s.t.NASFnq),
+var c =
+    (((s = {})[(s.DISPLAY = 0)] = "DISPLAY"),
+    (s[(s.PERMISSIONS = 1)] = "PERMISSIONS"),
+    (s[(s.MEMBERS = 2)] = "MEMBERS"),
+    (s[(s.VERIFICATIONS = 3)] = "VERIFICATIONS"),
+    s);
+let o = {
+    afk_channel_id: () => l.intl.string(l.t.KuYcnU),
+    public_updates_channel_id: () => l.intl.string(l.t.vAyDGU),
+    safety_alerts_channel_id: () => l.intl.string(l.t.sMkYE8),
+    system_channel_id: () => l.intl.string(l.t.NASFnq),
 };
-function c(e) {
-    if (0 === Object.keys(e).length) return null;
-    let t = Object.keys(e)[0],
-        n = d[t]?.();
-    return null != n ? `(${n}) ${e[t]}` : e[t];
+function d(t) {
+    if (0 === Object.keys(t).length) return null;
+    let e = Object.keys(t)[0],
+        n = o[e]?.();
+    return null != n ? `(${n}) ${t[e]}` : t[e];
 }
 let u = "https://discord.gg";

@@ -1,8 +1,8 @@
 n.d(t, { A: () => D }), n(321073);
 var i = n(627968),
     a = n(64700),
-    l = n(503698),
-    r = n.n(l),
+    r = n(503698),
+    l = n.n(r),
     s = n(615300),
     o = n(311907),
     d = n(73939),
@@ -47,9 +47,10 @@ let T = (0, _.Fe)({
                 n.e("91872"),
                 n.e("35894"),
                 n.e("50796"),
+                n.e("94253"),
                 n.e("8458"),
                 n.e("11810"),
-                n.e("34656"),
+                n.e("85200"),
                 n.e("98700"),
             ]).then(n.bind(n, 422559)),
         webpackId: 422559,
@@ -122,10 +123,10 @@ class R extends a.PureComponent {
     }
     render() {
         let { animating: e } = this.state,
-            { name: t, mode: n, children: a, baseLayer: l, ...o } = this.props,
+            { name: t, mode: n, children: a, baseLayer: r, ...o } = this.props,
             d = n === y,
             u = e || d ? this.getAnimatedStyle() : null,
-            A = !d && !l,
+            A = !d && !r,
             h = (0, i.jsx)(s.A.div, {
                 ref: (e) => (this.containerRef.current = null != e ? e.componentRef : void 0),
                 "data-layer": t ?? "base",
@@ -146,12 +147,12 @@ class R extends a.PureComponent {
                       })(t)
                     : void 0,
                 role: A ? "dialog" : void 0,
-                className: r()(C.qd, { [C.n3]: l, [C.bW]: e, "stop-animations": n === y }),
+                className: l()(C.qd, { [C.n3]: r, [C.bW]: e, "stop-animations": n === y }),
                 style: u,
                 ...o,
                 children: a,
             });
-        return l ? h : (0, i.jsx)(c.Oky, { containerRef: this.containerRef, children: h });
+        return r ? h : (0, i.jsx)(c.Oky, { containerRef: this.containerRef, children: h });
     }
     getAnimatedStyle() {
         let { baseLayer: e } = this.props,
@@ -170,11 +171,11 @@ class P extends a.PureComponent {
     renderLayers() {
         let { children: e, layers: t, hasFullScreenLayer: n } = this.props,
             { length: a } = t,
-            l = [];
+            r = [];
         return (
-            l.push((0, i.jsx)(R, { mode: 0 !== a || n ? y : b, baseLayer: !0, children: e }, "layer-base")),
-            t.forEach((e, t) => l.push(this.renderComponent(e, t, a))),
-            l
+            r.push((0, i.jsx)(R, { mode: 0 !== a || n ? y : b, baseLayer: !0, children: e }, "layer-base")),
+            t.forEach((e, t) => r.push(this.renderComponent(e, t, a))),
+            r
         );
     }
     renderComponent(e, t, n) {
@@ -195,7 +196,7 @@ class P extends a.PureComponent {
     renderArtisanalHack() {
         return (0, i.jsx)(c.NPJ, {
             theme: this.props.sidebarTheme,
-            children: (e) => (0, i.jsx)("div", { className: r()(C.bg, e) }),
+            children: (e) => (0, i.jsx)("div", { className: l()(C.bg, e) }),
         });
     }
     render() {
@@ -204,7 +205,7 @@ class P extends a.PureComponent {
                 this.renderArtisanalHack(),
                 (0, i.jsx)(d.F, {
                     component: "div",
-                    className: r()(C.ZF, this.props.className),
+                    className: l()(C.ZF, this.props.className),
                     children: this.renderLayers(),
                 }),
             ],

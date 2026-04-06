@@ -448,6 +448,7 @@ var r = (function (e) {
         (e.GO_LIVE_MODAL_V2 = "go live modal v2"),
         (e.GO_LIVE_MODAL_SETTINGS_SELECTION = "go live modal settings selection"),
         (e.CHECKPOINT = "checkpoint"),
+        (e.GUILD_SETTINGS_OFFICIAL_MESSAGES = "guild settings official messages"),
         (e.APP_DMS_QUICK_LAUNCHER = "app_dms_quick_launcher"),
         (e.APP_DMS_QUICK_LAUNCHER_FRECENCY = "app_dms_quick_launcher_frecency"),
         (e.APP_DMS_QUICK_LAUNCHER_RECOMMENDATIONS = "app_dms_quick_launcher_recommendations"),

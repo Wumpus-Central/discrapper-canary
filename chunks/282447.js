@@ -1,8 +1,8 @@
 n.d(t, { A: () => d });
 var i = n(627968),
     a = n(64700),
-    l = n(308528),
-    r = n(442433),
+    r = n(308528),
+    l = n(442433),
     s = n(707606),
     o = n(71393);
 function d(e) {
@@ -18,10 +18,10 @@ function d(e) {
                 });
             }
             handleMessageUser(e, t) {
-                return l.A.openPrivateChannel({ recipientIds: t.id });
+                return r.A.openPrivateChannel({ recipientIds: t.id });
             }
             handleUserContextMenu(e, t, a) {
-                (0, r.L3)(
+                (0, l.L3)(
                     e,
                     async () => {
                         let { default: e } = await Promise.all([n.e("97262"), n.e("32418"), n.e("54631")]).then(
@@ -33,7 +33,7 @@ function d(e) {
                 );
             }
             handleGuildContextMenu(e, t) {
-                (0, r.L3)(e, async () => {
+                (0, l.L3)(e, async () => {
                     let { default: e } = await Promise.all([
                         n.e("43600"),
                         n.e("68587"),
@@ -45,9 +45,10 @@ function d(e) {
                         n.e("91872"),
                         n.e("35894"),
                         n.e("50796"),
+                        n.e("94253"),
                         n.e("8458"),
                         n.e("11810"),
-                        n.e("34656"),
+                        n.e("85200"),
                         n.e("54469"),
                         n.e("52191"),
                     ]).then(n.bind(n, 544676));
@@ -57,7 +58,7 @@ function d(e) {
             handleChannelContextMenu(e, t) {
                 let a = o.A.getGuild(t.getGuildId());
                 if (null == a) return null;
-                (0, r.L3)(e, async () => {
+                (0, l.L3)(e, async () => {
                     let { default: e } = await n.e("67596").then(n.bind(n, 113255));
                     return (n) => (0, i.jsx)(e, { ...n, channel: t, guild: a });
                 });
