@@ -19,7 +19,7 @@ function c(e) {
 }
 function p(e) {
     let { onClick: t, type: l, accessibleLabel: n } = e,
-        r = "remove" === l ? s.intl.string(s.t["2A+piL"]) : s.intl.string(s.t.GaEG4t);
+        r = "remove" === l ? s.intl.string(s.t.N86XcP) : s.intl.string(s.t.wgIPss);
     return (0, a.jsx)(o.m, {
         text: r,
         ariaHidden: !0,
