@@ -671,10 +671,11 @@ class k extends a.G {
             { no: 3, name: "start_time", kind: "message", T: () => y },
             { no: 4, name: "end_time", kind: "message", T: () => y },
             { no: 5, name: "days", kind: "enum", repeat: 1, T: () => ["discord_protos.users.v1.DayOfWeek", c] },
+            { no: 6, name: "enabled", kind: "scalar", T: 8 },
         ]);
     }
     create(e) {
-        let t = { ruleId: "", label: "", days: [] };
+        let t = { ruleId: "", label: "", days: [], enabled: !1 };
         return (
             globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
@@ -703,6 +704,9 @@ class k extends a.G {
                     if (i === r.O0.LengthDelimited) for (let t = e.int32() + e.pos; e.pos < t; ) s.days.push(e.int32());
                     else s.days.push(e.int32());
                     break;
+                case 6:
+                    s.enabled = e.bool();
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -725,6 +729,7 @@ class k extends a.G {
             for (let n = 0; n < e.days.length; n++) t.int32(e.days[n]);
             t.join();
         }
+        !1 !== e.enabled && t.tag(6, r.O0.Varint).bool(e.enabled);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
