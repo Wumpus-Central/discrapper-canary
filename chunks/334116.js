@@ -1,38 +1,41 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => I });
 var i = n(627968),
     a = n(73153),
-    r = n(272355),
-    l = n(958005),
-    s = n(268218),
-    o = n(574172),
-    d = n(652215);
+    r = n(391973),
+    l = n(272355),
+    s = n(958005),
+    o = n(268218),
+    d = n(555528),
+    c = n(574172),
+    u = n(652215),
+    A = n(644434);
 n(314452);
-let c = (0, s.Fe)({
+let h = (0, o.Fe)({
         createPromise: () => n.e("71138").then(n.bind(n, 140539)),
         webpackId: 140539,
         name: "PopoutWindowChannelCall",
     }),
-    u = (0, s.Fe)({
+    _ = (0, o.Fe)({
         createPromise: () => n.e("36133").then(n.bind(n, 943472)),
         webpackId: 943472,
         name: "PopoutWindowCallTile",
     }),
-    A = (0, s.Fe)({
+    m = (0, o.Fe)({
         createPromise: () => n.e("36308").then(n.bind(n, 911315)),
         webpackId: 911315,
         name: "PopoutWindowStageChannelCall",
     }),
-    h = (0, s.Fe)({
+    p = (0, o.Fe)({
         createPromise: () => n.e("71138").then(n.bind(n, 414760)),
         webpackId: 414760,
         name: "PopoutWindowRTCDebug",
     }),
-    _ = (0, s.Fe)({
-        createPromise: () => n.e("13492").then(n.bind(n, 860051)),
+    g = (0, o.Fe)({
+        createPromise: () => Promise.all([n.e("71447"), n.e("13492")]).then(n.bind(n, 860051)),
         webpackId: 860051,
         name: "PopoutWindowActivity",
     });
-class m extends r.A {
+class E extends l.A {
     _observer = null;
     _initialize() {
         a.h.subscribe("CHANNEL_CALL_POPOUT_WINDOW_OPEN", this.handleOpenChannelCallPopout),
@@ -50,19 +53,19 @@ class m extends r.A {
     }
     handleOpenChannelCallPopout(e) {
         let { channel: t } = e;
-        o.open(
-            d.MLl.CHANNEL_CALL_POPOUT,
+        c.open(
+            u.MLl.CHANNEL_CALL_POPOUT,
             (e) =>
                 t.isGuildStageVoice()
-                    ? (0, i.jsx)(A, { windowKey: e, channelId: t.id })
-                    : (0, i.jsx)(c, { windowKey: e, channelId: t.id }),
+                    ? (0, i.jsx)(m, { windowKey: e, channelId: t.id })
+                    : (0, i.jsx)(h, { windowKey: e, channelId: t.id }),
             { defaultWidth: 854, defaultHeight: 480 },
         );
     }
     handleOpenCallTilePopout = (e) => {
         let { channelId: t, participantId: n } = e,
-            a = (0, l.A)(t, n);
-        o.open(a, (e) => (0, i.jsx)(u, { windowKey: e, channelId: t, participantId: n }), {
+            a = (0, s.A)(t, n);
+        c.open(a, (e) => (0, i.jsx)(_, { windowKey: e, channelId: t, participantId: n }), {
             defaultWidth: 854,
             defaultHeight: 480,
         });
@@ -75,7 +78,7 @@ class m extends r.A {
                         if (e.nodeType === Node.ELEMENT_NODE && "LINK" === e.tagName && "stylesheet" === e.rel) {
                             let t = e.href,
                                 n = e.integrity;
-                            o.addStylesheet(t, n);
+                            c.addStylesheet(t, n);
                         }
                 }
         })),
@@ -85,16 +88,17 @@ class m extends r.A {
         null != this._observer && (this._observer.disconnect(), (this._observer = null));
     }
     handleOpenRTCDebugPopout() {
-        o.open(d.MLl.RTC_DEBUG_POPOUT, (e) => (0, i.jsx)(h, { windowKey: e }), {
+        c.open(u.MLl.RTC_DEBUG_POPOUT, (e) => (0, i.jsx)(p, { windowKey: e }), {
             defaultWidth: 854,
             defaultHeight: 480,
         });
     }
     handleOpenActivityPopout() {
-        o.open(d.MLl.ACTIVITY_POPOUT, (e) => (0, i.jsx)(_, { windowKey: e }), {
-            defaultWidth: 854,
-            defaultHeight: 480,
-        });
+        (0, r.Vz)(A.G, d.A.getDefaultLayout(A.G, 4), 4),
+            c.open(u.MLl.ACTIVITY_POPOUT, (e) => (0, i.jsx)(g, { windowKey: e }), {
+                defaultWidth: 854,
+                defaultHeight: 480,
+            });
     }
 }
-let p = new m();
+let I = new E();

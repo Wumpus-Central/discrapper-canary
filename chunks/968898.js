@@ -84,7 +84,7 @@ function C(e) {
                           children: (0, n.jsx)(u.Text, {
                               variant: "text-xs/semibold",
                               color: "text-strong",
-                              children: (0, f.sI)((0, I.Jn)(), E.t["1XA04X"], {
+                              children: (0, f.sI)((0, I.Jn)(), E.t["1XA04X"], E.intl.string(E.t.uZZGzf), {
                                   useFlexboxLayout: !0,
                                   highlightAdminWarningIfElevated: !1,
                                   keybindClassName: v.P,

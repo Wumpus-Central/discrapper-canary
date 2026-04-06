@@ -6198,6 +6198,7 @@ var ru = (function (e) {
             (e.RTC_DEBUG_POPOUT = "DISCORD_RTC_DEBUG_POPOUT"),
             (e.CHANNEL_POPOUT = "DISCORD_CHANNEL_POPOUT"),
             (e.ACTIVITY_POPOUT = "DISCORD_ACTIVITY_POPOUT"),
+            (e.OVERLAY_POPOUT = "DISCORD_OVERLAY_POPOUT"),
             (e.DEVTOOLS_POPOUT = "DISCORD_DEVTOOLS_POPOUT"),
             e
         );

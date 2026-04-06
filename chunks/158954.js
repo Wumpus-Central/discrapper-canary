@@ -363,6 +363,7 @@ n.d(t, {
     lI8: () => z.UserClockIcon,
     lVW: () => eS.l,
     lX7: () => z.SendMessageIcon,
+    ld1: () => z.WindowTopOutlineIcon,
     liv: () => z.ShareIcon,
     lmn: () => z.ShieldIcon,
     m5V: () => z.ShieldLockIcon,
