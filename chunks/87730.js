@@ -30,28 +30,31 @@ let h = (e) => e.stopPropagation(),
         i.useEffect(() => {
             (y || T) && n && s(!1);
         }, [y, T, n, s]);
-        let v = g || y || T,
+        let v = g || I || y || T,
             N = i.useCallback(() => {
                 v || s(!n);
             }, [s, n, v]);
-        return I || T
+        return T
             ? null
-            : (0, r.jsx)(l.DUT, {
+            : (0, r.jsxs)(l.DUT, {
                   className: a()(p.k, E),
                   onClick: N,
                   role: "checkbox",
                   "aria-checked": n,
                   "aria-disabled": v,
                   tabIndex: 0,
-                  children: (0, r.jsx)(l.DUT, {
-                      onClick: h,
-                      children: (0, r.jsx)(l.Checkbox, {
-                          checked: n && !y && !T,
-                          onChange: N,
-                          disabled: v,
-                          label: f.intl.string(_.default["febr+T"]),
-                          description: S ?? void 0,
+                  children: [
+                      (0, r.jsx)(l.DUT, {
+                          onClick: h,
+                          children: (0, r.jsx)(l.Checkbox, {
+                              checked: n && !y && !T,
+                              onChange: N,
+                              disabled: v,
+                              label: f.intl.string(_.default["febr+T"]),
+                              description: I ? void 0 : (S ?? void 0),
+                          }),
                       }),
-                  }),
+                      I && (0, r.jsx)(l.y$y, { type: l.y$y.Type.PULSING_ELLIPSIS }),
+                  ],
               });
     };

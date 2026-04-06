@@ -4,10 +4,10 @@ var r = n(627968),
     i = n(64700),
     s = n(575593),
     a = n(158954),
-    o = n(637141),
-    l = n(262427),
-    u = n(725836),
-    c = n(69882),
+    o = n(262427),
+    l = n(725836),
+    u = n(69882),
+    c = n(93159),
     d = n(270537),
     _ = n(241989),
     f = n(993408),
@@ -98,7 +98,7 @@ let y = (e) => e.name,
                 sku: n,
                 skuPricePreview: s,
                 paymentSelectContent: a,
-                legalContent: o,
+                legalContent: c,
                 isGift: f,
                 giftRecipient: p,
                 upperInlineNoticeProps: h,
@@ -120,19 +120,19 @@ let y = (e) => e.name,
             ),
             w = i.useMemo(() => {
                 let e = (0, g.PN)(s, { isGift: f });
-                return null != e ? (0, r.jsx)(l.J, { ...e }) : null;
+                return null != e ? (0, r.jsx)(o.J, { ...e }) : null;
             }, [s, f]),
-            { setCheckoutHeaderConfigs: M, checkoutHeaderConfigs: x } = (0, u.ck)();
+            { setCheckoutHeaderConfigs: M, checkoutHeaderConfigs: x } = (0, l.ck)();
         return (
             i.useEffect(() => {
                 null != w && null == x.headerBadgeText && M({ ...x, headerBadgeText: T.intl.string(S.default.Fjpyfj) });
             }, [w, M, x]),
-            (0, r.jsx)(c.rg, {
+            (0, r.jsx)(u.rg, {
                 shouldShowGlobalNotices: !0,
                 purchaseItemContent: (0, r.jsx)(_.f7, { ...b, price: N }),
                 invoiceSummaryContent: C,
                 paymentSelectContent: a,
-                legalContent: o,
+                legalContent: c,
                 promotionalNoticeContent: w,
                 upperInlineNoticeProps: h,
                 footerInlineNoticeProps: m,
@@ -142,58 +142,66 @@ let y = (e) => e.name,
         );
     };
 function D(e) {
-    let { hasLegalTermsFlash: t, legalTermsNodeRef: n, onPaymentSourceChange: s, handlePaymentSourceAdd: a } = e,
+    let { hasLegalTermsFlash: t, legalTermsNodeRef: n, handlePaymentSourceAdd: s } = e,
         {
-            sku: l,
-            application: u,
-            skuPricePreview: d,
-            isGift: _,
-            paymentSourceDropdownProps: f,
-            purchaseTermsAndLegalContent: p,
-            isStepLoading: h,
-            giftRecipient: m,
-            warningAndErrorMessages: E,
+            sku: a,
+            application: o,
+            skuPricePreview: l,
+            isGift: d,
+            paymentSourceDropdownProps: _,
+            purchaseTermsAndLegalContent: f,
+            isStepLoading: p,
+            giftRecipient: h,
+            warningAndErrorMessages: m,
+            giftCardsEnabled: E,
+            giftCardCheckboxProps: A,
+            disabled: I,
         } = (0, g.X)({
             hasLegalTermsFlash: t,
             legalTermsNodeRef: n,
-            onPaymentSourceChange: s,
-            handlePaymentSourceAdd: a,
+            handlePaymentSourceAdd: s,
             shouldUseUnifiedCheckoutUI: !0,
         }),
-        A = (0, r.jsx)(o.A, { ...f, shouldUseUnifiedCheckoutUI: !0 }),
-        I = i.useMemo(() => {
+        S = (0, r.jsx)(c.nL, {
+            label: T.intl.string(T.t["u+Cw58"]),
+            giftCardsEnabled: E,
+            giftCardCheckboxProps: A,
+            paymentSourceDropdownProps: { ..._, shouldUseUnifiedCheckoutUI: !0 },
+            disabled: I,
+        }),
+        y = i.useMemo(() => {
             let e = [];
             return (
-                null != E.testModeWarning &&
-                    e.push({ type: "warning", message: E.testModeWarning, key: "test-mode-warning-notice" }),
-                null != E.devShelfError &&
-                    e.push({ type: "critical", message: E.devShelfError, key: "dev-shelf-error-notice" }),
+                null != m.testModeWarning &&
+                    e.push({ type: "warning", message: m.testModeWarning, key: "test-mode-warning-notice" }),
+                null != m.devShelfError &&
+                    e.push({ type: "critical", message: m.devShelfError, key: "dev-shelf-error-notice" }),
                 e.length > 0 ? e : null
             );
-        }, [E.testModeWarning, E.devShelfError]),
-        T = i.useMemo(() => {
+        }, [m.testModeWarning, m.devShelfError]),
+        v = i.useMemo(() => {
             let e = [];
             return (
-                null != E.socialLayerGameItemDisclaimer &&
+                null != m.socialLayerGameItemDisclaimer &&
                     e.push({
                         type: "info",
-                        message: E.socialLayerGameItemDisclaimer,
+                        message: m.socialLayerGameItemDisclaimer,
                         key: "social-layer-game-item-disclaimer-notice",
                     }),
                 e.length > 0 ? e : null
             );
-        }, [E.socialLayerGameItemDisclaimer]);
-    return h
-        ? (0, r.jsx)(c.Ed, {})
+        }, [m.socialLayerGameItemDisclaimer]);
+    return p
+        ? (0, r.jsx)(u.Ed, {})
         : (0, r.jsx)(b, {
-              application: u,
-              giftRecipient: m,
-              isGift: _,
-              sku: l,
-              skuPricePreview: d,
-              paymentSelectContent: A,
-              legalContent: p,
-              upperInlineNoticeProps: I,
-              footerInlineNoticeProps: T,
+              application: o,
+              giftRecipient: h,
+              isGift: d,
+              sku: a,
+              skuPricePreview: l,
+              paymentSelectContent: S,
+              legalContent: f,
+              upperInlineNoticeProps: y,
+              footerInlineNoticeProps: v,
           });
 }

@@ -1,8 +1,8 @@
 n.d(t, { A: () => T }), n(938796);
 var i = n(627968),
-    l = n(64700),
-    r = n(284009),
-    a = n.n(r),
+    r = n(64700),
+    l = n(284009),
+    a = n.n(l),
     s = n(311907),
     o = n(397927),
     d = n(304072),
@@ -19,16 +19,16 @@ var i = n(627968),
     j = n(534479),
     S = n(482132),
     v = n(970077),
-    C = n(987616),
-    _ = n(921925),
-    y = n(367160),
-    N = n(985018),
+    _ = n(987616),
+    C = n(921925),
+    N = n(367160),
+    y = n(985018),
     E = n(950637);
 function T(e) {
     let {
             backButtonEligible: t,
             prevStep: n,
-            handleStepChange: r,
+            handleStepChange: l,
             trialFooterMessageOverride: T,
             reviewWarningMessage: P,
             planGroup: I,
@@ -47,73 +47,72 @@ function T(e) {
             priceOptions: G,
             purchaseError: M,
             setCurrency: Y,
-            setPaymentSourceId: W,
-            setPurchaseState: q,
-            purchaseState: Q,
-            subscriptionMetadataRequest: V,
-            setHasAcceptedTerms: Z,
+            setPurchaseState: W,
+            purchaseState: q,
+            subscriptionMetadataRequest: Q,
+            setHasAcceptedTerms: V,
         } = (0, x.P5)(),
-        X = (0, v.A)(),
-        $ = (0, C.S3)();
-    a()(null != X, "Expected plan to be selected");
-    let z = l.useRef(null),
-        [K, J] = (0, d.A)(!1, 500),
-        ee = V?.guild_id,
-        et = (0, s.bG)([f.A], () => f.A.getGuild(ee), [ee]),
-        [en, ei] = l.useState(null),
-        el = (0, p.bg)($?.flags ?? 0);
-    l.useEffect(() => {
-        null != M && null != z.current && z.current.scrollIntoView({ behavior: "smooth" });
+        Z = (0, v.A)(),
+        X = (0, _.S3)();
+    a()(null != Z, "Expected plan to be selected");
+    let $ = r.useRef(null),
+        [z, K] = (0, d.A)(!1, 500),
+        J = Q?.guild_id,
+        ee = (0, s.bG)([f.A], () => f.A.getGuild(J), [J]),
+        [et, en] = r.useState(null),
+        ei = (0, p.bg)(X?.flags ?? 0);
+    r.useEffect(() => {
+        null != M && null != $.current && $.current.scrollIntoView({ behavior: "smooth" });
     }, [M]);
-    let er = l.useCallback(
+    let er = r.useCallback(
             (e) => {
-                U(e), r(g.pn.CONFIRM);
+                U(e), l(g.pn.CONFIRM);
             },
-            [r, U],
+            [l, U],
         ),
-        ea = (0, c.D7)({ location: "payment_modal_review_step" }),
-        es = l.useRef(null);
-    if (Q === h.h.PURCHASING) return (0, i.jsx)(j.A, {});
-    let eo = () => {
-            r(g.pn.ADD_PAYMENT_STEPS);
+        el = (0, c.D7)({ location: "payment_modal_review_step" }),
+        ea = r.useRef(null);
+    if (q === h.h.PURCHASING) return (0, i.jsx)(j.A, {});
+    let es = () => {
+            l(g.pn.ADD_PAYMENT_STEPS);
         },
-        ed = ea ? y._ : u.A,
-        ec = null;
-    ea ||
-        (ec = (0, i.jsxs)(i.Fragment, {
+        eo = el ? N._ : u.A,
+        ed = null;
+    el ||
+        (ed = (0, i.jsxs)(i.Fragment, {
             children: [
-                el &&
+                ei &&
                     (0, i.jsxs)("div", {
                         className: E.Uq,
                         children: [
                             (0, i.jsx)(o.Text, {
                                 variant: "eyebrow",
                                 color: "text-default",
-                                children: N.intl.string(N.t.nf5LOU),
+                                children: y.intl.string(y.t.nf5LOU),
                             }),
                             (0, i.jsx)(o.Text, {
                                 variant: "text-xs/medium",
                                 color: "interactive-text-default",
-                                children: N.intl.format(N.t.y4n0GS, { applicationName: F?.name }),
+                                children: y.intl.format(y.t.y4n0GS, { applicationName: F?.name }),
                             }),
                         ],
                     }),
-                !el &&
+                !ei &&
                     (0, i.jsx)("div", {
                         className: E.Vw,
                         children: (0, i.jsx)(o.D0$, {
-                            label: N.intl.string(N.t["5qyruI"]),
+                            label: y.intl.string(y.t["5qyruI"]),
                             children: (0, i.jsxs)("div", {
                                 className: E.YS,
                                 children: [
                                     (0, i.jsx)(o.Text, {
                                         variant: "text-md/normal",
-                                        children: N.intl.string(N.t.dBih7e),
+                                        children: y.intl.string(y.t.dBih7e),
                                     }),
                                     (0, i.jsx)(o.Text, {
                                         variant: "text-md/normal",
                                         lineClamp: 1,
-                                        children: et?.name ?? N.intl.string(N.t.dtwqPR),
+                                        children: ee?.name ?? y.intl.string(y.t.dtwqPR),
                                     }),
                                 ],
                             }),
@@ -121,32 +120,31 @@ function T(e) {
                     }),
             ],
         }));
-    let eu = ea ? null : (0, i.jsx)(b.A, { className: E.jD }),
-        em = ea ? null : (0, i.jsx)(_.A, {});
+    let ec = el ? null : (0, i.jsx)(b.A, { className: E.jD }),
+        eu = el ? null : (0, i.jsx)(C.A, {});
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            eu,
+            ec,
             (0, i.jsxs)(S.dZ, {
                 children: [
-                    em,
-                    ec,
+                    eu,
+                    ed,
                     null == B
-                        ? (0, i.jsx)(ed, {
-                              selectedPlanId: X.id,
+                        ? (0, i.jsx)(eo, {
+                              selectedPlanId: Z.id,
                               planGroup: I,
                               paymentSources: O,
-                              onPaymentSourceChange: (e) => W(null != e ? e.id : null),
                               priceOptions: G,
                               currencies: L,
                               onCurrencyChange: (e) => Y(e),
-                              handlePaymentSourceAdd: () => r(g.pn.ADD_PAYMENT_STEPS),
-                              setHasAcceptedTerms: Z,
-                              legalTermsNodeRef: es,
-                              hasLegalTermsFlash: K,
+                              handlePaymentSourceAdd: () => l(g.pn.ADD_PAYMENT_STEPS),
+                              setHasAcceptedTerms: V,
+                              legalTermsNodeRef: ea,
+                              hasLegalTermsFlash: z,
                               trialFooterMessageOverride: T,
                               reviewWarningMessage: P,
-                              metadata: el ? void 0 : V,
-                              purchaseState: Q,
+                              metadata: ei ? void 0 : Q,
+                              purchaseState: q,
                               hideSubscriptionDetails: !0,
                               handleClose: D,
                           })
@@ -154,44 +152,43 @@ function T(e) {
                               premiumSubscription: B,
                               paymentSources: O,
                               priceOptions: G,
-                              onPaymentSourceChange: (e) => W(null != e ? e.id : null),
-                              onPaymentSourceAdd: eo,
-                              planId: X.id,
-                              setHasAcceptedTerms: Z,
-                              legalTermsNodeRef: es,
-                              hasLegalTermsFlash: K,
-                              invoiceError: en,
+                              onPaymentSourceAdd: es,
+                              planId: Z.id,
+                              setHasAcceptedTerms: V,
+                              legalTermsNodeRef: ea,
+                              hasLegalTermsFlash: z,
+                              invoiceError: et,
                               onInvoiceError: (e) => {
-                                  ei(e);
+                                  en(e);
                               },
                               planGroup: I,
                               currencies: L,
                               onCurrencyChange: (e) => Y(e),
                               hasOpenInvoice: null != k,
-                              purchaseState: Q,
+                              purchaseState: q,
                               handleClose: D,
-                              shouldUseUnifiedCheckoutUI: ea,
+                              shouldUseUnifiedCheckoutUI: el,
                           }),
                 ],
             }),
             (0, i.jsx)(S.UX, {
                 children: (0, i.jsx)(A.A, {
                     premiumSubscription: B ?? null,
-                    setPurchaseState: q,
-                    onBack: () => null != n && r(n),
+                    setPurchaseState: W,
+                    onBack: () => null != n && l(n),
                     onNext: er,
-                    legalTermsNodeRef: es,
-                    flashLegalTerms: () => J(!0),
+                    legalTermsNodeRef: ea,
+                    flashLegalTerms: () => K(!0),
                     analyticsLocation: R,
                     baseAnalyticsData: w,
                     flowStartTime: H.startTime,
                     planGroup: I,
                     openInvoiceId: k,
-                    metadata: el ? void 0 : V,
+                    metadata: ei ? void 0 : Q,
                     backButtonEligible: t,
-                    invoiceError: en,
-                    disablePurchase: V?.guild_id == null && !el,
-                    onPaymentSourceAdd: eo,
+                    invoiceError: et,
+                    disablePurchase: Q?.guild_id == null && !ei,
+                    onPaymentSourceAdd: es,
                 }),
             }),
         ],

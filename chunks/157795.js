@@ -8,7 +8,6 @@ e.exports = {
     nI: "skuHeadingText_b44961",
     lm: "socialLayerGameItemDisclaimer_b44961",
     Jv: "paymentMethodContainer_b44961",
-    kV: "giftCardCreditsCheckbox_b44961",
     SO: "giftCardRedemptionLink_b44961",
     sA: "oneTimePurchaseRewardNotice_b44961",
 };

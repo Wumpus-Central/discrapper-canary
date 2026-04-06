@@ -5,9 +5,9 @@ var a = l(627968),
     i = l(96337),
     o = l(997101),
     s = l(417597),
-    u = l(397927),
-    d = l(384904),
-    c = l(918022),
+    d = l(397927),
+    c = l(384904),
+    u = l(918022),
     p = l(169797),
     m = l(93159),
     h = l(826469),
@@ -17,8 +17,8 @@ var a = l(627968),
     f = l(295405),
     g = l(652215),
     v = l(788868),
-    E = l(681588);
-let _ = {
+    _ = l(895375);
+let E = {
         name: "Primitive: Nitro Plan Select",
         id: "unified-checkout-nitro-plan-select",
         component: (e) => {
@@ -29,15 +29,15 @@ let _ = {
                     leftSubtext: i,
                     leftShowSubtext: o,
                     leftSubtextStrikethrough: s,
-                    rightTitleDescriber: d,
-                    rightPrimaryText: c,
+                    rightTitleDescriber: c,
+                    rightPrimaryText: u,
                     rightSubtext: p,
                     rightShowSubtext: h,
                     rightSubtextStrikethrough: x,
                 } = e,
                 [b, y] = n.useState(0);
             return (0, a.jsxs)("div", {
-                className: E.Cd,
+                className: _.Cd,
                 children: [
                     (0, a.jsx)(m.q7, {
                         selection: b,
@@ -53,13 +53,13 @@ let _ = {
                             {
                                 id: 1,
                                 title: (0, a.jsx)(m.ec, { size: "sm", color: "text-strong", premiumType: t }),
-                                titleDescriber: d,
-                                primaryText: c,
+                                titleDescriber: c,
+                                primaryText: u,
                                 subtext: h ? (0, a.jsx)(m.Lo, { strikethrough: x, price: p }) : void 0,
                             },
                         ],
                     }),
-                    (0, a.jsxs)(u.Text, { variant: "text-sm/normal", children: ["Selected plan index: ", b] }),
+                    (0, a.jsxs)(d.Text, { variant: "text-sm/normal", children: ["Selected plan index: ", b] }),
                 ],
             });
         },
@@ -89,27 +89,27 @@ let _ = {
             },
         },
     },
-    C = { "nitro-wheel": u.tvc, gift: u.okO, orbs: u.Cp8 },
-    S = i.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
-    j = {
+    C = { "nitro-wheel": d.tvc, gift: d.okO, orbs: d.Cp8 },
+    j = i.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
+    S = {
         name: "Modal: Unified Checkout Stateless Modal",
         id: "unified-checkout-stateless-modal",
         component: function (e) {
             let { primaryButtonText: t, primaryButtonIcon: l, headerBadgeHasIcon: n, ...r } = e,
-                i = n ? u.gqV : void 0;
-            return (0, a.jsxs)(u.BJc, {
+                i = n ? d.gqV : void 0;
+            return (0, a.jsxs)(d.BJc, {
                 gap: 16,
                 align: "center",
                 children: [
-                    (0, a.jsx)(u.Text, {
+                    (0, a.jsx)(d.Text, {
                         variant: "text-md/normal",
                         children: "Click the button below to open the Unified Checkout modal",
                     }),
-                    (0, a.jsx)(u.Button, {
+                    (0, a.jsx)(d.Button, {
                         variant: "primary",
                         text: "Open Unified Checkout Modal",
                         onClick: () =>
-                            (0, u.qfG)(
+                            (0, d.qfG)(
                                 (e) =>
                                     (0, a.jsx)(p.oH, {
                                         ...e,
@@ -122,7 +122,7 @@ let _ = {
                                             icon: "none" !== l ? C[l] : void 0,
                                         },
                                         onBackClick: e.onClose,
-                                        children: (0, a.jsx)(u.BJc, {
+                                        children: (0, a.jsx)(d.BJc, {
                                             gap: 16,
                                             children: (0, a.jsx)("div", {
                                                 style: { border: "1px solid blue", height: 500 },
@@ -150,7 +150,7 @@ let _ = {
                     { label: "None", value: "none" },
                 ],
             },
-            countryCode: { label: "Country Code", type: "select", defaultValue: o.d.US, options: S },
+            countryCode: { label: "Country Code", type: "select", defaultValue: o.d.US, options: j },
             headerBadgeText: { label: "Header Pill Text", type: "text", defaultValue: "PROMO" },
             headerBadgeHasIcon: { label: "Header Badge Has Icon", type: "boolean", defaultValue: !1 },
             gradientColor: {
@@ -192,7 +192,7 @@ let _ = {
     P = {
         title: "Unified Checkout",
         stories: [
-            j,
+            S,
             {
                 name: "Primitive: Order Summary Accordion",
                 id: "unified-checkout-order-summary",
@@ -207,7 +207,7 @@ let _ = {
                     return (
                         l && n && r.push({ id: 3, label: "Discount Applied", amount: -100 }),
                         (0, a.jsx)("div", {
-                            className: E.SG,
+                            className: _.SG,
                             children: (0, a.jsx)(m.Vm, { label: t, lineItems: r, currency: g.Yri.USD }),
                         })
                     );
@@ -218,7 +218,7 @@ let _ = {
                     hasLineItems: { label: "Has Line Items", type: "boolean", defaultValue: !0 },
                 },
             },
-            _,
+            E,
             {
                 name: "Primitive: Subscription Details Accordion",
                 id: "unified-checkout-subscription-details",
@@ -237,12 +237,12 @@ let _ = {
                                       id: 2,
                                       label: "Server Boost",
                                       amount: 499,
-                                      icon: (0, a.jsx)(u.tvc, { size: "xs" }),
+                                      icon: (0, a.jsx)(d.tvc, { size: "xs" }),
                                   },
                               ]
                             : [];
                     return (0, a.jsx)("div", {
-                        className: E.SG,
+                        className: _.SG,
                         children: (0, a.jsx)(m._D, {
                             label: t,
                             lineItems: n,
@@ -269,8 +269,8 @@ let _ = {
                         price: i,
                         hasPriceIcon: o,
                         hasStrikethroughPrice: s,
-                        strikethroughPrice: d,
-                        targetType: c,
+                        strikethroughPrice: c,
+                        targetType: u,
                     } = e;
                     function p(e, p) {
                         let h = y.default.getCurrentUser(),
@@ -281,20 +281,20 @@ let _ = {
                             label: `${n} ${p}`,
                             description: r,
                             price: i,
-                            PriceIcon: o ? u.tvc : void 0,
-                            priceSubText: s ? d : void 0,
+                            PriceIcon: o ? d.tvc : void 0,
+                            priceSubText: s ? c : void 0,
                             priceSubTextHasStrikethrough: s,
                             graphic: (0, a.jsx)(e, {}),
                             target:
-                                "gift" === c
+                                "gift" === u
                                     ? { type: "gift", user: h }
-                                    : "guildSubscription" === c
+                                    : "guildSubscription" === u
                                       ? { type: "guildSubscription", guild: x }
                                       : void 0,
                         });
                     }
                     return (0, a.jsxs)("div", {
-                        className: E.SG,
+                        className: _.SG,
                         children: [
                             p(m.JW, "Nitro"),
                             p(m.DH, "Nitro Basic"),
@@ -329,34 +329,32 @@ let _ = {
                 name: "Primitive: Payment Select",
                 id: "unified-checkout-payment-select",
                 component: (e) => {
-                    let { label: t, disabled: l, error: i, errorMessage: o } = e,
-                        s = [
+                    let { disabled: t, error: l, errorMessage: i } = e,
+                        o = [
                             { id: "visa-1234", label: "Visa ending in 1234", icon: x.Be.VISA },
                             { id: "mastercard-5678", label: "Mastercard ending in 5678", icon: x.Be.MASTERCARD },
                             { id: "paypal", label: "user@example.com", icon: x.Be.PAYPAL },
                             { id: "amex-9012", label: "Amex ending in 9012", icon: x.Be.AMEX },
                         ],
-                        [d, c] = n.useState(s[0].id);
+                        [s, c] = n.useState(o[0].id);
                     return (0, a.jsxs)("div", {
                         children: [
                             (0, a.jsx)(m.v7, {
-                                label: t,
-                                value: d,
-                                options: s,
+                                value: s,
+                                options: o,
                                 onChange: c,
                                 onNew: r.noop,
-                                disabled: l,
-                                error: i ? o : void 0,
+                                disabled: t,
+                                error: l ? i : void 0,
                             }),
-                            (0, a.jsxs)(u.Text, {
+                            (0, a.jsxs)(d.Text, {
                                 variant: "text-sm/normal",
-                                children: ["Selected payment: ", d ?? "None"],
+                                children: ["Selected payment: ", s ?? "None"],
                             }),
                         ],
                     });
                 },
                 controls: {
-                    label: { label: "Label", type: "text", defaultValue: "Payment Method" },
                     disabled: { label: "Disabled", type: "boolean", defaultValue: !1 },
                     error: { label: "Show Error", type: "boolean", defaultValue: !1 },
                     errorMessage: {
@@ -374,17 +372,15 @@ let _ = {
                         o = (0, s.bG)([f.A], () => Object.values(f.A.paymentSources)),
                         [p, x] = n.useState(void 0);
                     n.useEffect(() => {
-                        (0, d.$o)();
+                        (0, c.$o)();
                     }, []);
                     let b = n.useMemo(() => o.map((e) => new h.A(e, !0, [])), [o]),
                         {
                             dropdownPaymentSources: y,
                             dropdownPaymentSourceId: g,
-                            giftCardWallet: v,
-                            isGiftCardCreditsChecked: E,
-                            handleGiftCardCreditsToggle: _,
-                            handleDropdownPaymentSourceChange: C,
-                        } = (0, c.Y)({
+                            handleDropdownPaymentSourceChange: v,
+                            giftCardCheckboxProps: _,
+                        } = (0, u.Y)({
                             checkoutPaymentSources: b,
                             setPaymentSourceId: x,
                             location: "revenue_playground",
@@ -394,17 +390,16 @@ let _ = {
                             (0, a.jsx)(m.nL, {
                                 label: t,
                                 giftCardsEnabled: l,
-                                giftCardCheckboxProps:
-                                    null != v ? { giftCardWallet: v, checked: E, onChange: _ } : null,
+                                giftCardCheckboxProps: _,
                                 paymentSourceDropdownProps: {
                                     selectedPaymentSourceId: g,
                                     paymentSources: y,
                                     hidePersonalInformation: i,
-                                    onChange: C,
+                                    onChange: v,
                                 },
                                 disabled: r,
                             }),
-                            (0, a.jsxs)(u.Text, {
+                            (0, a.jsxs)(d.Text, {
                                 variant: "text-sm/normal",
                                 children: ["Effective payment source: ", p ?? "None"],
                             }),
@@ -455,10 +450,10 @@ let _ = {
                 component: function () {
                     return (0, a.jsxs)("div", {
                         children: [
-                            (0, a.jsx)(u.Text, { variant: "text-sm/normal", children: "Stateless Component:" }),
+                            (0, a.jsx)(d.Text, { variant: "text-sm/normal", children: "Stateless Component:" }),
                             (0, a.jsx)(m.y, { onClick: g.tEg }),
                             (0, a.jsx)("br", {}),
-                            (0, a.jsx)(u.Text, { variant: "text-sm/normal", children: "Link with Modal:" }),
+                            (0, a.jsx)(d.Text, { variant: "text-sm/normal", children: "Link with Modal:" }),
                             (0, a.jsx)(m.Z4, { onComplete: g.tEg }),
                         ],
                     });
@@ -494,7 +489,7 @@ let _ = {
                     return (0, a.jsx)(m.s7, { storeCountry: t });
                 },
                 controls: {
-                    storeCountry: { label: "Store Country", type: "select", defaultValue: o.d.US, options: S },
+                    storeCountry: { label: "Store Country", type: "select", defaultValue: o.d.US, options: j },
                 },
             },
             {
@@ -509,7 +504,7 @@ let _ = {
                         label: "Relocation Country",
                         type: "select",
                         defaultValue: o.d.US,
-                        options: S,
+                        options: j,
                     },
                     relocationCurrencyCode: { label: "Relocation Currency Code", type: "text", defaultValue: "USD" },
                 },

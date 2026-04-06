@@ -5,24 +5,23 @@ var r = n(627968),
     s = n(158954),
     a = n(827734),
     o = n(812745),
-    l = n(523376),
+    l = n(756366),
     u = n(985018),
-    c = n(478969);
+    c = n(891652);
 let d = "new_payment_source_id";
 function _(e) {
     let {
-            label: t,
-            value: n,
-            options: _,
-            onChange: f,
-            onNew: p,
-            noticeMessage: h,
-            newPaymentMethodOptionLabel: m,
-            disabled: E = !1,
-            error: g,
+            value: t,
+            options: n,
+            onChange: _,
+            onNew: f,
+            noticeMessage: p,
+            newPaymentMethodOptionLabel: h,
+            disabled: m = !1,
+            error: E,
         } = e,
-        A = i.useMemo(() => {
-            let e = _.map((e) => {
+        g = i.useMemo(() => {
+            let e = n.map((e) => {
                 let t =
                     null != e.icon ? (0, r.jsx)("img", { src: (0, o.Nj)(e.icon), alt: "", className: c.s7 }) : void 0;
                 return {
@@ -38,49 +37,50 @@ function _(e) {
                 e.push({
                     id: d,
                     value: d,
-                    label: m ?? u.intl.string(l.default.rNF29q),
+                    label: h ?? u.intl.string(l.default.rNF29q),
                     leading: void 0,
                     description: void 0,
                 }),
                 e
             );
-        }, [_, m]),
-        I = i.useCallback(
+        }, [n, h]),
+        A = i.useCallback(
             (e) => {
-                e === d ? p() : null != e && f(e);
+                e === d ? f() : null != e && _(e);
             },
-            [p, f],
+            [f, _],
         ),
-        T = (0, r.jsxs)(r.Fragment, {
+        I = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(s.l6P, {
-                    label: t,
+                    label: u.intl.string(u.t["u+Cw58"]),
+                    hideLabel: !0,
                     placeholder: u.intl.string(l.default.rNF29q),
-                    value: n,
-                    options: A,
-                    onSelectionChange: I,
+                    value: t,
+                    options: g,
+                    onSelectionChange: A,
                     selectionMode: "single",
-                    disabled: E || 0 === _.length,
-                    errorMessage: g,
+                    disabled: m || 0 === n.length,
+                    errorMessage: E,
                     fullWidth: !0,
                 }),
-                null != h
+                null != p
                     ? (0, r.jsxs)("div", {
                           className: c.T4,
                           children: [
                               (0, r.jsx)(s.mir, { size: "xs", color: a.A.colors.TEXT_FEEDBACK_INFO }),
-                              (0, r.jsx)(s.EYj, { variant: "text-xs/normal", color: "text-subtle", children: h }),
+                              (0, r.jsx)(s.EYj, { variant: "text-xs/normal", color: "text-subtle", children: p }),
                           ],
                       })
                     : null,
             ],
         });
-    return 0 !== _.length || E
-        ? T
+    return 0 !== n.length || m
+        ? I
         : (0, r.jsx)(s.DUT, {
-              onClick: p,
+              onClick: f,
               "aria-label": u.intl.string(l.default.rNF29q),
               className: c.OV,
-              children: T,
+              children: I,
           });
 }
