@@ -18,7 +18,8 @@ let c =
     d.pr7.SUPPRESS_EMBEDS |
     d.pr7.SUPPRESS_NOTIFICATIONS |
     d.pr7.URGENT |
-    d.pr7.IS_COMPONENTS_V2;
+    d.pr7.IS_COMPONENTS_V2 |
+    d.pr7.IS_GUILD_OFFICIAL;
 function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.A,
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.A,
