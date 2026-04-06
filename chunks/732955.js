@@ -320,7 +320,6 @@ n.d(t, {
     lI8: () => r.lI8,
     lVW: () => r.lVW,
     lX7: () => r.lX7,
-    ld1: () => r.ld1,
     liv: () => r.liv,
     lmn: () => r.lmn,
     m5V: () => r.m5V,

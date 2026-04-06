@@ -1,79 +1,75 @@
-n.d(t, { A: () => C, E: () => f });
-var a = n(627968),
-    i = n(64700),
-    o = n(311907),
+n.d(t, { A: () => h, E: () => I });
+var i = n(627968),
+    l = n(64700),
+    a = n(311907),
     r = n(397927),
-    l = n(475743),
-    c = n(587895),
-    _ = n(200042),
-    s = n(574172),
+    o = n(475743),
+    s = n(587895),
+    c = n(574172),
     d = n(473553),
     u = n(933958),
-    p = n(57220),
-    m = n(969151),
-    b = n(833147),
-    A = n(780376),
-    x = n(652215),
-    h = n(561963);
-function f(e) {
-    let { activity: t, renderHeader: n, renderActivityIFrameWithLoadedData: u, isLoading: m = !1 } = e,
-        b = i.useRef(null),
-        A = (0, l.A)(t);
-    i.useEffect(() => {
+    p = n(969151),
+    A = n(833147),
+    m = n(780376),
+    f = n(652215),
+    x = n(823226);
+function I(e) {
+    let { activity: t, renderHeader: n, renderActivityIFrameWithLoadedData: u, isLoading: p = !1 } = e,
+        A = l.useRef(null),
+        m = (0, o.A)(t);
+    l.useEffect(() => {
         null != t
-            ? clearTimeout(b.current)
-            : null != A &&
+            ? clearTimeout(A.current)
+            : null != m &&
               null == t &&
-              (b.current = window.setTimeout(() => {
-                  (0, s.close)(x.MLl.ACTIVITY_POPOUT);
+              (A.current = window.setTimeout(() => {
+                  (0, c.close)(f.MLl.ACTIVITY_POPOUT);
               }, 5e3));
-    }, [A, t]);
-    let f = (0, o.bG)([c.A], () => {
-            let e = t?.applicationId;
-            return null == e ? void 0 : c.A.getApplication(e);
-        }),
-        C = (0, p.V)();
-    return (0, a.jsx)("div", {
-        className: h.kL,
+    }, [m, t]);
+    let I = (0, a.bG)([s.A], () => {
+        let e = t?.applicationId;
+        return null == e ? void 0 : s.A.getApplication(e);
+    });
+    return (0, i.jsx)("div", {
+        className: x.kL,
         children:
-            null == t || null == f || m
-                ? (0, a.jsx)(r.y$y, { className: h.pU })
-                : (0, a.jsx)("div", {
-                      className: h.U$,
-                      children: (0, a.jsxs)("div", {
-                          className: h.kq,
+            null == t || null == I || p
+                ? (0, i.jsx)(r.y$y, { className: x.pU })
+                : (0, i.jsx)("div", {
+                      className: x.U$,
+                      children: (0, i.jsxs)("div", {
+                          className: x.kq,
                           children: [
-                              (0, a.jsx)("div", { className: h.N1, children: n({ application: f }) }),
-                              (0, a.jsx)(d.A, { applicationId: f.id }),
-                              (0, a.jsx)("div", { className: h.Wc, children: u({ application: f }) }),
-                              C ? (0, a.jsx)(_.A, { isEmbeddedActivity: !0 }) : null,
+                              (0, i.jsx)("div", { className: x.N1, children: n({ application: I }) }),
+                              (0, i.jsx)(d.A, { applicationId: I.id }),
+                              (0, i.jsx)("div", { className: x.Wc, children: u({ application: I }) }),
                           ],
                       }),
                   }),
     });
 }
-function C() {
+function h() {
     let {
             embeddedActivity: e,
             channelId: t,
             guildId: n,
-        } = (0, o.cf)([u.Ay], () => {
+        } = (0, a.cf)([u.Ay], () => {
             let e = u.Ay.getCurrentEmbeddedActivity(),
-                t = (0, m.H)(e?.location),
-                n = (0, m.D)(e?.location);
+                t = (0, p.H)(e?.location),
+                n = (0, p.D)(e?.location);
             return { embeddedActivity: e, channelId: t, guildId: n };
         }),
-        r = (0, o.bG)([u.Ay], () => e?.applicationId != null && u.Ay.isProxyTicketRefreshing(e.applicationId), [e]),
-        l = i.useCallback(
+        r = (0, a.bG)([u.Ay], () => e?.applicationId != null && u.Ay.isProxyTicketRefreshing(e.applicationId), [e]),
+        o = l.useCallback(
             (e) => {
                 let { application: n } = e;
-                return (0, a.jsx)(A.A, { applicationId: n.id, channelId: t });
+                return (0, i.jsx)(m.A, { applicationId: n.id, channelId: t });
             },
             [t],
         ),
-        c = i.useCallback(
-            (i) => {
-                let { application: o } = i,
+        s = l.useCallback(
+            (l) => {
+                let { application: a } = l,
                     r = {};
                 null != e &&
                     ((r.instance_id = e.compositeInstanceId ?? e.launchId ?? ""),
@@ -83,10 +79,10 @@ function C() {
                     (r.custom_id = e.customId),
                     null != n && "" !== n && (r.guild_id = n),
                     null != t && "" !== t && (r.channel_id = t));
-                let l = e?.url;
-                return (0, a.jsx)(b.A, { application: o, queryParams: r, url: l });
+                let o = e?.url;
+                return (0, i.jsx)(A.A, { application: a, queryParams: r, url: o });
             },
             [t, n, e],
         );
-    return (0, a.jsx)(f, { activity: e, isLoading: r, renderHeader: l, renderActivityIFrameWithLoadedData: c });
+    return (0, i.jsx)(I, { activity: e, isLoading: r, renderHeader: o, renderActivityIFrameWithLoadedData: s });
 }

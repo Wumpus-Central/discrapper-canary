@@ -1,17 +1,12 @@
 "use strict";
-n.d(t, { A: () => c, b: () => u });
+n.d(t, { A: () => o, b: () => a });
 var r = n(311907),
-    i = n(415109),
-    a = n(57220),
-    s = n(869146),
-    o = n(392164),
-    l = n(652215);
-function u() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s.A,
-        t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : (0, i.Y)();
-    return e.getWindow(o.f) ?? (t ? e.getWindow(l.MLl.ACTIVITY_POPOUT) : void 0) ?? window;
+    i = n(869146),
+    s = n(392164);
+function a() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : i.A;
+    return e.getWindow(s.f) ?? window;
 }
-function c() {
-    let e = (0, a.V)();
-    return (0, r.bG)([s.A], () => u(s.A, e));
+function o() {
+    return (0, r.bG)([i.A], () => a(i.A));
 }

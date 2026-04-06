@@ -24,7 +24,7 @@ var i = n(684013),
     y = n(581730),
     v = n(672396),
     N = n(652215),
-    C = n(822889),
+    C = n(895867),
     R = n(985018);
 let O = 2,
     b = (e) => {
@@ -51,8 +51,7 @@ function D(e, t, n, c) {
                 ? (0, o.Ay)(t, { noStyleAndInteraction: !0, formatInline: !0, hideSimpleEmbedContent: !1 }).content
                 : w,
         unreadAccessory: (e) => (d ? (0, r.jsx)(a.A, { unread: !0, hovered: e }) : null),
-        hint: (e, t) =>
-            e || !t ? null : (0, S.sI)((0, y.Jn)(), d ? C.default.VMcw8s : R.t.ykjOAJ, R.intl.string(R.t.jZkzVJ)),
+        hint: (e, t) => (e || !t ? null : (0, S.sI)((0, y.Jn)(), d ? C.default.VMcw8s : R.t.ykjOAJ)),
         maxBodyLines: O,
         renderFooter: (n, i, s) =>
             d

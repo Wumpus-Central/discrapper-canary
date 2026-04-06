@@ -69,12 +69,15 @@ function F(e) {
                 S = h?.userId === z?.id,
                 v = e.id === M.tH,
                 C = (t) => {
-                    if (($({ action: "PRESS_BADGE" }), (0, R.R9)({ badge: e.id, analyticsLocations: W, ...K }), n))
-                        return void (0, _.Cz)({
+                    if (($({ action: "PRESS_BADGE" }), (0, R.R9)({ badge: e.id, analyticsLocations: W, ...K }), n)) {
+                        (0, _.Cz)({
                             tab: w.G2.ORBS,
                             analyticsLocations: W,
                             analyticsSource: c.A.VIRTUAL_CURRENCY_ORB_PROFILE_BADGE,
-                        });
+                        }),
+                            F?.();
+                        return;
+                    }
                     if (d) {
                         if (
                             (t.preventDefault(),
