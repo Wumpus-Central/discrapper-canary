@@ -251,11 +251,13 @@ let eK = {
     [ex.kqX.GIFTING_PROMOTION_REMINDER]: {
         predicate: () => {
             let { enabled: e } = P.J.getConfig({ location: "NoticeStore" }),
-                t = j.A.getMarketingComponentByType(a.C.GIFT_REMINDER_NAGBAR);
+                t = j.A.getMarketingComponentByType(a.C.GIFT_REMINDER_NAGBAR),
+                n = j.A.getGiftPromotion()?.id;
             return (
                 e &&
                 null != t &&
-                (0, I.En)(o.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK).isDismissed &&
+                null != n &&
+                (0, T.u$)(o.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK, n).isDismissed &&
                 !eX(ex.kqX.GIFTING_PROMOTION_REMINDER)
             );
         },
