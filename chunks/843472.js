@@ -38,10 +38,10 @@ var r = n(889137),
     G = n(586872),
     F = n(99341),
     V = n(925518),
-    B = n(472282),
-    H = n(141468),
-    j = n(407580),
-    Y = n(130201),
+    B = n(141468),
+    H = n(407580),
+    j = n(130201),
+    Y = n(311685),
     W = n(963852),
     K = n(195880),
     $ = n(488004),
@@ -518,7 +518,7 @@ let eH = {
                     oldFormErrors: !0,
                     rejectWithError: !1,
                 });
-            if (r.body.length > 0) return (0, H.rh)(r.body[0]);
+            if (r.body.length > 0) return (0, B.rh)(r.body[0]);
         },
         fetchMessages(e) {
             let {
@@ -755,7 +755,7 @@ let eH = {
             r = { ...r, nonce: s };
             let a = () => ej._sendMessage(e, t, r),
                 o = F.Ay.backgroundify(a, void 0);
-            return (j.A.recordMessageSendAttempt(e, s, r), ed.A.isReady(e))
+            return (H.A.recordMessageSendAttempt(e, s, r), ed.A.isReady(e))
                 ? o()
                 : n && e !== A.E
                   ? (ew.info(`Waiting for channel ${e} to be ready before sending.`),
@@ -833,7 +833,7 @@ ${s}`),
                 context: { location: eO.Hx.GREET },
             }).then(
                 (n) => (
-                    Y.A.donateSentMessage(n.body.content, e),
+                    j.A.donateSentMessage(n.body.content, e),
                     ej.receiveMessage(e, n.body),
                     l.h.dispatch({ type: "STICKER_TRACK_USAGE", stickerIds: [t] }),
                     n
@@ -900,11 +900,7 @@ ${s}`),
             x && ((a = P), (M = (0, s.UI)(M, eN.pr7.SUPPRESS_NOTIFICATIONS)));
             let k = el.A.getChannel(e),
                 U = eu.A.getGuild(k?.guild_id);
-            null != U &&
-                U.features.has(eN.GuildFeatures.VERIFIED) &&
-                B.A.getCurrentConfig({ guildId: U.id, location: "_sendMessage" }).enabled &&
-                e_.A.can(eN.xBc.MANAGE_OFFICIAL_MESSAGES, k) &&
-                (M = (0, s.UI)(M, eN.pr7.IS_GUILD_OFFICIAL));
+            (0, Y.Q)(U, k, "_sendMessage") && (M = (0, s.UI)(M, eN.pr7.IS_GUILD_OFFICIAL));
             let F = !1,
                 V = n.messageReference?.type === eN.SH7.FORWARD;
             if (
@@ -1034,13 +1030,13 @@ ${s}`),
                         (_) => {
                             let m = Date.now() - s;
                             if (_.ok) {
-                                Y.A.donateSentMessage(a, e),
+                                j.A.donateSentMessage(a, e),
                                     ej.receiveMessage(e, _.body, !0, {
                                         sendAnalytics: { duration: m, queueSize: o },
                                         poll: g,
                                     }),
                                     null != n.alsoForwardToChannelId &&
-                                        C.A.sendForward((0, H.rh)(_.body), n.alsoForwardToChannelId)
+                                        C.A.sendForward((0, B.rh)(_.body), n.alsoForwardToChannelId)
                                             .then(() => {
                                                 eF({
                                                     referencedMessageId: _.body?.id,
@@ -1072,7 +1068,7 @@ ${s}`),
                                         joinRequestUserId: n,
                                     });
                                 }
-                                j.A.recordMessageSendApiResponse(J),
+                                H.A.recordMessageSendApiResponse(J),
                                     l.h.dispatch({
                                         type: "SLOWMODE_RESET_COOLDOWN",
                                         slowmodeType: eh.R.SendMessage,
