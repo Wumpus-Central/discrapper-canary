@@ -288,7 +288,7 @@ function K(e) {
     if (
         null == t.channel_id ||
         null == t.id ||
-        t.author?.id === f.default.getId() ||
+        (0, C.nx)(t).authorId === f.default.getId() ||
         (null == t.embeds && null == t.attachments && !(0, y.aY)(t)) ||
         (t.embeds?.length === 0 && t.attachments?.length === 0 && !(0, y.aY)(t))
     )
@@ -308,7 +308,7 @@ function K(e) {
 }
 function $(e) {
     let { channelId: t, message: n, optimistic: r, isPushNotification: i } = e;
-    if (r || i || null == t || n.author?.id === f.default.getId()) return !1;
+    if (r || i || null == t || (0, C.nx)(n).authorId === f.default.getId()) return !1;
     let s = E.A.getChannelId(),
         a = p.Ay.getCurrentSidebarChannelId(s),
         o = t === s || t === a,

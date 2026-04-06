@@ -2,27 +2,27 @@
 n.d(t, {
     $V: () => D,
     Fg: () => A,
-    KM: () => y,
+    KM: () => S,
     LE: () => w,
-    M: () => N,
+    M: () => R,
     O8: () => T,
-    b: () => R,
-    c2: () => P,
-    f: () => V,
+    b: () => O,
+    c2: () => x,
+    f: () => F,
     gh: () => L,
-    ku: () => E,
-    mS: () => C,
-    nx: () => F,
-    qo: () => O,
-    s9: () => b,
-    y5: () => S,
+    ku: () => g,
+    mS: () => N,
+    nx: () => V,
+    qo: () => b,
+    s9: () => C,
+    y5: () => y,
 }),
     n(938796),
     n(321073);
 var r = n(665260),
     i = n(873298),
-    a = n(155718),
-    s = n(865116),
+    s = n(155718),
+    a = n(865116),
     o = n(427930),
     l = n(731068),
     u = n(734057),
@@ -33,33 +33,33 @@ var r = n(665260),
     p = n(930125),
     h = n(900819),
     m = n(811602);
-let g = -1,
-    E = () => Object.values(m.Jn).filter((e) => null == e.isEligible || e.isEligible?.()),
+let E = -1,
+    g = () => Object.values(m.Jn).filter((e) => null == e.isEligible || e.isEligible?.()),
     A = (e) => {
-        let { channelId: t, authorId: n } = F(e);
+        let { channelId: t, authorId: n } = V(e);
         return null == t || null == e ? m.LO.NONE : I(t, n);
     },
     I = (e, t) => {
         let n = _.default.getCurrentUser();
         if (null == n || t === n.id) return m.LO.NONE;
-        let r = P(e, t, [u.A, d.A]);
+        let r = x(e, t, [u.A, d.A]);
         return null == r ? m.LO.NONE : T(r);
     },
     T = (e) => {
-        let t = E();
+        let t = g();
         return null == e
             ? m.LO.NONE
-            : w(t.map((t) => (V(t.getUserSettingsWithDefaults()[e]) ? t.harmType : null)).filter(f.Vq));
+            : w(t.map((t) => (F(t.getUserSettingsWithDefaults()[e]) ? t.harmType : null)).filter(f.Vq));
     };
-function y(e) {
+function S(e) {
     let t = A(e);
-    return S(e, t);
+    return y(e, t);
 }
-function S(e, t) {
+function y(e, t) {
     if (t === m.LO.NONE || null == e) return !1;
     if (
-        e.attachments?.some((e) => R({ type: p.D.Attachment, media: e }, t).length > 0) ||
-        e.embeds?.some((e) => R({ type: p.D.Embed, media: e }, t).length > 0)
+        e.attachments?.some((e) => O({ type: p.D.Attachment, media: e }, t).length > 0) ||
+        e.embeds?.some((e) => O({ type: p.D.Embed, media: e }, t).length > 0)
     )
         return !0;
     let n = null;
@@ -68,21 +68,21 @@ function S(e, t) {
         null == n || 0 === n.length)
     )
         return !1;
-    for (let e of n) if (S(e.message, t)) return !0;
+    for (let e of n) if (y(e.message, t)) return !0;
     return !1;
 }
 function v(e) {
     return (Array.isArray(e) ? e : [e])
         .flatMap((e) => {
             switch (e.type) {
-                case a.I5.MEDIA_GALLERY:
+                case s.I5.MEDIA_GALLERY:
                     return e.items.map((e) => e.media);
-                case a.I5.THUMBNAIL:
+                case s.I5.THUMBNAIL:
                     return e.media;
-                case a.I5.FILE:
+                case s.I5.FILE:
                     return e.file;
-                case a.I5.SECTION:
-                case a.I5.ACTION_ROW:
+                case s.I5.SECTION:
+                case s.I5.ACTION_ROW:
                     return e.components.flatMap(v);
                 default:
                     return [];
@@ -90,7 +90,7 @@ function v(e) {
         })
         .map((e) => ("proxy_url" in e ? (0, l.Uv)(e) : e));
 }
-function C(e, t) {
+function N(e, t) {
     let n = t ?? A(e);
     if (n === m.LO.NONE) return !1;
     if (
@@ -105,13 +105,13 @@ function C(e, t) {
         null == r || 0 === r.length)
     )
         return !1;
-    for (let e of r) if (C(e.message, n)) return !0;
+    for (let e of r) if (N(e.message, n)) return !0;
     return !1;
 }
-function b(e) {
-    return !(null != e.components && v(e.components).some((e) => e.loadingState === a.TD.LOADING)) && !0;
+function C(e) {
+    return !(null != e.components && v(e.components).some((e) => e.loadingState === s.TD.LOADING)) && !0;
 }
-function N(e) {
+function R(e) {
     let t = A(e);
     if (t === m.LO.NONE) return { attachmentIds: [], embedIds: [] };
     let n = e.attachments?.filter((e) => D({ type: p.D.Attachment, media: e }, t)),
@@ -121,23 +121,23 @@ function N(e) {
         embedIds: r?.map((e, t) => `embed_${t}`).filter(Boolean) ?? [],
     };
 }
-function R(e, t) {
+function O(e, t) {
     if (t === m.LO.NONE) return [];
-    let n = x(t);
+    let n = M(t);
     return 0 === n.length ? [] : n.filter((t) => L(t, e)).map((e) => m.Jn[e].obscureReason);
 }
-function O(e, t) {
+function b(e, t) {
     if (t === m.LO.NONE) return !1;
-    let n = x(t);
+    let n = M(t);
     return 0 !== n.length && n.filter((t) => L(t, e)).length > 0;
 }
 function D(e, t) {
-    if (t === m.LO.NONE || s.Ay.get("explicit_media_redaction_ignore_pending_scan")) return !1;
-    let n = x(t);
+    if (t === m.LO.NONE || a.Ay.get("explicit_media_redaction_ignore_pending_scan")) return !1;
+    let n = M(t);
     if (0 === n.length) return !1;
     switch (e.type) {
         case p.D.Embed:
-            return M(e.media, n);
+            return P(e.media, n);
         case p.D.Attachment:
             return k(e.media, n);
         case p.D.GenericMedia:
@@ -149,7 +149,7 @@ function D(e, t) {
 function L(e, t) {
     if (null == e) return !1;
     let n = m.Jn[e];
-    if (null != n.devSettingKey && s.Ay.get(n.devSettingKey)) return !0;
+    if (null != n.devSettingKey && a.Ay.get(n.devSettingKey)) return !0;
     switch (t.type) {
         case p.D.Embed:
             return (0, r.Lt)(t.media.flags ?? 0, n.embedFlag);
@@ -176,26 +176,26 @@ function w(e) {
         }
     return t;
 }
-function x(e) {
+function M(e) {
     if (e === m.LO.NONE) return [];
     let t = [];
-    for (let n of E()) (e & n.bitmask) > 0 && t.push(n.harmType);
+    for (let n of g()) (e & n.bitmask) > 0 && t.push(n.harmType);
     return t;
 }
-function P(e, t) {
+function x(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [u.A, d.A],
         [r, i] = n,
-        a = r.getChannel(e),
-        s = _.default.getCurrentUser();
-    return null == s || t === s.id || null == a
+        s = r.getChannel(e),
+        a = _.default.getCurrentUser();
+    return null == a || t === a.id || null == s
         ? null
-        : a.isDM() || a.isGroupDM()
+        : s.isDM() || s.isGroupDM()
           ? null != t && i.getFriendIDs().includes(t)
               ? p.v.FRIEND_DM
               : p.v.NON_FRIEND_DM
           : p.v.GUILD;
 }
-function M(e, t) {
+function P(e, t) {
     return (
         !(
             0 === t.length ||
@@ -224,20 +224,26 @@ function U(e, t) {
 }
 function G(e, t) {
     let n = h.A.validContentScanVersion;
-    return e !== g && (t.includes(m.kn.GORE) || t.includes(m.kn.SELF_HARM) ? null == e || e < n : null == e);
-}
-function V(e) {
-    return null != e && [i.TO.BLOCK, i.TO.BLUR].includes(e);
+    return e !== E && (t.includes(m.kn.GORE) || t.includes(m.kn.SELF_HARM) ? null == e || e < n : null == e);
 }
 function F(e) {
+    return null != e && [i.TO.BLOCK, i.TO.BLUR].includes(e);
+}
+function V(e) {
     let t = null,
         n = null;
     if (null == e) return { channelId: t, authorId: n };
-    if (
-        ("channel_id" in e && (t = e.channel_id), "messageReference" in e && (0, o.A)(e) && null != e.messageReference)
-    ) {
-        let t = c.A.getMessage(e.messageReference.channel_id, e.messageReference.message_id);
-        null != t && (n = t.author?.id);
+    "channel_id" in e && (t = e.channel_id);
+    let [r, i] =
+        "messageReference" in e
+            ? [e.messageReference, (0, o.A)(e)]
+            : "message_reference" in e
+              ? [e.message_reference, (0, o.m)(e)]
+              : [];
+    if (null != r && i) {
+        if (null == r.message_id) return { channelId: t, authorId: n };
+        let e = c.A.getMessage(r.channel_id, r.message_id);
+        null != e && (n = e.author?.id);
     } else "author" in e ? (n = e.author?.id) : "author_id" in e && (n = e.author_id);
     return { channelId: t, authorId: n };
 }
