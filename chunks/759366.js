@@ -1,32 +1,46 @@
 "use strict";
-n.d(t, { A: () => c });
+n.d(t, { A: () => _ });
 var r = n(311907),
-    i = n(73153);
-let a = new Set(),
-    s = !1;
-function o(e) {
-    return a.add(e.questId), !0;
+    i = n(73153),
+    s = n(661191);
+let a = 20,
+    o = new Set(),
+    l = !1;
+function u(e) {
+    return (
+        o.size >= a &&
+            (o = new Set(
+                o
+                    .values()
+                    .toArray()
+                    .sort(s.default.compare)
+                    .slice(Math.floor(a / 2))
+                    .map((e) => e.toString()),
+            )),
+        o.add(e.questId),
+        !0
+    );
 }
-function l(e) {
-    return (s = e.autoEnroll), !0;
+function c(e) {
+    return (l = e.autoEnroll), !0;
 }
 !(function () {
-    (a = new Set()), (s = !1);
+    (o = new Set()), (l = !1);
 })();
-class u extends r.Ay.PersistedStore {
+class d extends r.Ay.PersistedStore {
     static displayName = "UnenrolledActivityQuestStore";
     static persistKey = "UnenrolledActivityQuestStore";
     initialize(e) {
-        (a = new Set(e?.dismissedQuestIds ?? [])), (s = e?.autoEnroll ?? !1);
+        (o = new Set(e?.dismissedQuestIds ?? [])), (l = e?.autoEnroll ?? !1);
     }
     getState() {
-        return { dismissedQuestIds: Array.from(a), autoEnroll: s };
+        return { dismissedQuestIds: [...o], autoEnroll: l };
     }
     isDismissed(e) {
-        return null != e && a.has(e);
+        return null != e && o.has(e);
     }
     getDismissedQuestIds() {
-        return new Set(a);
+        return o;
     }
 }
-let c = new u(i.h, { UNENROLLED_ACTIVITY_QUEST_DISMISS: o, UNENROLLED_ACTIVITY_QUEST_AUTO_ENROLL: l });
+let _ = new d(i.h, { UNENROLLED_ACTIVITY_QUEST_DISMISS: u, UNENROLLED_ACTIVITY_QUEST_AUTO_ENROLL: c });
