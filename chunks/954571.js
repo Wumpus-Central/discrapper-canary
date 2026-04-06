@@ -64,7 +64,6 @@ let k = {
             ? void 0
             : { throttlePeriod: O, throttleKeys: (e) => [e.guild_id, e.channel_id, e.location_section] },
     [m.HAw.GUILD_VIEWED]: { throttlePeriod: O, throttleKeys: (e) => [e.guild_id, e.is_pending] },
-    [m.HAw.FRIENDS_LIST_CLICKED]: { throttlePeriod: O, throttleKeys: (e) => [e.tab_opened] },
     [m.HAw.FRIENDS_LIST_VIEWED]: { throttlePeriod: O, throttleKeys: (e) => [e.tab_opened] },
     [m.HAw.NOW_PLAYING_CARD_HOVERED]: { throttlePeriod: O, throttleKeys: (e) => [e.tab_opened] },
     [m.HAw.START_SPEAKING]: { throttlePeriod: O, throttleKeys: (e) => [e.server] },
