@@ -27,10 +27,12 @@ var f = (function (e) {
         (e[(e.FACIAL_AGE_ESTIMATION = 1)] = "FACIAL_AGE_ESTIMATION"),
         (e[(e.ID_VERIFICATION = 2)] = "ID_VERIFICATION"),
         (e[(e.MODULAR = 3)] = "MODULAR"),
+        (e[(e.GOOGLE_WALLET = 9)] = "GOOGLE_WALLET"),
         e
     );
 })({});
 let p = {
     1: { title: o.default["2yLvkS"], description: o.default.eJmat5 },
     2: { title: o.default.dwkwo0, description: o.default.ZdmRwW },
+    9: { title: o.default.Y9sLpR, description: o.default.dah4bF },
 };

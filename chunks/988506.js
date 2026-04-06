@@ -61,6 +61,7 @@ var r = n(852015),
             (e[(e.EMAIL_DOMAIN = 6)] = "EMAIL_DOMAIN"),
             (e[(e.OS_SIGNAL = 7)] = "OS_SIGNAL"),
             (e[(e.ML_AGE_INFERENCE = 8)] = "ML_AGE_INFERENCE"),
+            (e[(e.GOOGLE_WALLET = 9)] = "GOOGLE_WALLET"),
             e
         );
     })({}),
