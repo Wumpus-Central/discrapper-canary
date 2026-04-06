@@ -14280,7 +14280,7 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     object-position: right;
     pointer-events: none;
     position: absolute;
-    transition: opacity .3s ease, transform .3s ease;
+    transition: opacity .3s ease;
     width: auto
 }
 
