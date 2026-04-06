@@ -37058,19 +37058,17 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .staticPreview__6d099 {
     height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: bottom;
-    object-position: bottom;
-    width: 100%
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: auto
 }
 
 .full-motion .staticPreview__6d099 {
-    transition: transform .3s ease-in-out
+    transition: transform .25s ease
 }
 
 .staticPreviewHighlighted__6d099 {
-    transform: scale(1.08)
+    transform: scale(.85)
 }
 
 .theme-dark .avatar__6d099 {

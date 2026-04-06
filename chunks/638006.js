@@ -22,7 +22,7 @@ let k = (e) => {
         let { product: t, isCardHovered: r } = e,
             l = (0, p.YW)(t),
             { isPurchased: a, isPartiallyOwnedBundle: u } = (0, m.h)(t),
-            o = l === s.R.PROFILE_EFFECT || l === s.R.BUNDLE;
+            o = l === s.R.PROFILE_EFFECT;
         return (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsx)("div", {
