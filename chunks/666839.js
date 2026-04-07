@@ -1,17 +1,25 @@
-r.d(e, { A: () => o });
-var i = r(627968);
+r.d(t, { A: () => o });
+var n = r(627968);
 r(64700);
 var l = r(298072),
-    n = r(561769),
+    i = r(561769),
     s = r(139146),
-    a = r(407723);
-let u = (t) => {
-        let { product: e, selectedVariantIndex: r, isCardHovered: l } = t;
-        return (0, i.jsx)(s.R, { product: e, selectedVariantIndex: r, isCardHovered: l, className: a.i });
+    a = r(673136);
+let u = (e) => {
+        let { product: t, selectedVariantIndex: r, isCardHovered: l, onTrackClick: i } = e;
+        return (0, n.jsx)(s.R, {
+            product: t,
+            selectedVariantIndex: r,
+            isCardHovered: l,
+            className: a.i,
+            onTrackClick: i,
+        });
     },
-    o = (t) => {
-        let { skuId: e, isCardHovered: r } = t,
-            s = (0, n.Vm)(e),
-            a = (0, l.Q)(s);
-        return null == s ? null : (0, i.jsx)(u, { product: s, selectedVariantIndex: a, isCardHovered: r });
+    o = (e) => {
+        let { skuId: t, isCardHovered: r, onTrackClick: s } = e,
+            a = (0, i.Vm)(t),
+            o = (0, l.Q)(a);
+        return null == a
+            ? null
+            : (0, n.jsx)(u, { product: a, selectedVariantIndex: o, isCardHovered: r, onTrackClick: s });
     };

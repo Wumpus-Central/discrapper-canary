@@ -10,10 +10,10 @@ var a = n(990078),
     d = n(985018),
     u = n(480313);
 function m(e) {
-    let { product: t } = e,
-        n = (0, l.yt)(t, c.lid.PREMIUM_TIER_2);
-    if (null == n) return null;
-    let m = (0, s.RS)(n.amount, n.currency);
+    let { product: t, onTrackClick: n } = e,
+        m = (0, l.yt)(t, c.lid.PREMIUM_TIER_2);
+    if (null == m) return null;
+    let h = (0, s.RS)(m.amount, m.currency);
     return (0, r.jsxs)("div", {
         className: u.k,
         children: [
@@ -25,8 +25,8 @@ function m(e) {
             (0, r.jsx)(i.Text, {
                 variant: "text-xs/medium",
                 children: d.intl.format(d.t.Sv8iic, {
-                    price: m,
-                    subscribeNowHook: (e) => (0, r.jsx)(o.Z, { text: e }),
+                    price: h,
+                    subscribeNowHook: (e) => (0, r.jsx)(o.Z, { text: e, onTrackClick: n }),
                 }),
             }),
         ],

@@ -1,17 +1,19 @@
-n.d(t, { A: () => l });
-var r = n(627968);
-n(64700);
-var a = n(397927),
+n.d(t, { A: () => o });
+var r = n(627968),
+    a = n(397927),
     i = n(450481),
-    s = n(985018);
-let l = (e) => {
-    let { product: t, onSuccess: n } = e,
-        { handleUseNow: l, isApplying: o } = (0, i.p)({ product: t, onSuccess: n });
+    s = n(758836),
+    l = n(985018);
+let o = (e) => {
+    let { product: t, onSuccess: n, onTrackClick: o } = e,
+        { handleUseNow: c, isApplying: d } = (0, i.p)({ product: t, onSuccess: n });
     return (0, r.jsx)(a.Button, {
         variant: "primary",
-        onClick: l,
-        loading: o,
-        text: s.intl.string(s.t.MAS7uK),
+        onClick: () => {
+            o?.(s.sH.USE_NOW), c();
+        },
+        loading: d,
+        text: l.intl.string(l.t.MAS7uK),
         fullWidth: !0,
     });
 };

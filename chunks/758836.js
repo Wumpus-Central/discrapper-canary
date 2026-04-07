@@ -17,6 +17,7 @@ n.d(t, {
     md: () => N,
     pQ: () => L,
     rr: () => E,
+    sH: () => P,
     uY: () => g,
     x3: () => C,
 });
@@ -430,3 +431,19 @@ let b = { ORB_PROFILE_BADGE: "1342211853484429445", FRACTIONAL_PREMIUM: _.j.PREM
         { sortType: d.$.POPULARITY, sortDirection: c.A.DESC },
     ],
     x = [{ categorySkuId: "1440063059895779408", rewardSkuId: "1440063059862487193" }];
+var P = (function (e) {
+    return (
+        (e.BUY_WITH_FIAT = "buy_with_fiat"),
+        (e.BUY_WITH_ORBS = "buy_with_orbs"),
+        (e.SEND_AS_GIFT = "send_as_gift"),
+        (e.SUBSCRIBE_NOW = "subscribe_now"),
+        (e.ADD_TO_WISHLIST = "add_to_wishlist"),
+        (e.REMOVE_FROM_WISHLIST = "remove_from_wishlist"),
+        (e.CLOSE_DETAIL = "close_detail"),
+        (e.COPY_LINK = "copy_link"),
+        (e.USE_NOW = "use_now"),
+        (e.UNLOCK_WITH_NITRO = "unlock_with_nitro"),
+        (e.ADD_TO_COLLECTION = "add_to_collection"),
+        e
+    );
+})({});

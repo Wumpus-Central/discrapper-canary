@@ -29,10 +29,11 @@ function m(e) {
             discount: a,
             product: c,
             hasSufficientOrbs: m,
+            onTrackClick: h,
             isProductDisabled: p,
-            discountOfferAmount: h,
+            discountOfferAmount: x,
         } = e,
-        x = null != h;
+        f = null != x;
     return 0 === t.length
         ? null
         : t[0].currency === o.Yr.DISCORD_ORB
@@ -47,12 +48,12 @@ function m(e) {
                                 product: c,
                                 discount: a,
                                 isPremiumUser: n,
-                                hideStrikethroughPrice: !n || x,
+                                hideStrikethroughPrice: !n || f,
                                 nitroIconType: "tooltip",
                                 nitroIconSize: "xs",
-                                discountOfferAmount: h,
+                                discountOfferAmount: x,
                             }),
-                            n || x ? null : (0, r.jsx)(s.A, { product: c }),
+                            n || f ? null : (0, r.jsx)(s.A, { product: c, onTrackClick: h }),
                         ],
                     }),
                     t.length > 1 &&
