@@ -11,7 +11,7 @@ var i = n(627968),
     u = n(458334),
     m = n(927573),
     g = n(985018),
-    x = n(286420);
+    x = n(146583);
 function h() {
     let [e, t] = s.useState(!0);
     return {
@@ -22,19 +22,19 @@ function h() {
     };
 }
 function _(e) {
-    let { guild: t, role: h, selectedSection: _, setSelectedSection: A } = e,
-        p = s.useCallback(
+    let { guild: t, role: h, selectedSection: _, setSelectedSection: p } = e,
+        A = s.useCallback(
             (e) => {
-                A(e);
+                p(e);
             },
-            [A],
+            [p],
         ),
         f = (0, l.bG)([c.A], () => c.A.getRoleMemberCount(t.id)?.[h.id], [h.id, t.id]),
         j = (0, d.Oy)(h),
         N = (0, u.A)(t.id, h);
     s.useEffect(() => {
-        j && A(m.T$.PERMISSIONS);
-    }, [j, A]);
+        j && p(m.T$.PERMISSIONS);
+    }, [j, p]);
     let E = (0, o.x)(t, h);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -63,13 +63,14 @@ function _(e) {
                 ],
             }),
             null != N ? (0, i.jsx)(r.po8, { messageType: r.YCn.WARNING, children: N }) : null,
+            (0, i.jsx)(r.hKd, { size: 6 }),
             (0, i.jsxs)(r.VQ0, {
                 className: x.$H,
                 "aria-label": g.intl.string(g.t["+1H47t"]),
                 selectedItem: _,
                 type: "top",
                 look: "brand",
-                onItemSelect: p,
+                onItemSelect: A,
                 children: [
                     (0, i.jsx)(r.VQ0.Item, {
                         className: x.YU,
