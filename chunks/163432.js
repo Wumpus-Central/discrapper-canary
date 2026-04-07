@@ -32,7 +32,7 @@ function f(e, t) {
         };
     }, [t]);
     let E = l.useRef({}),
-        { visibleParticipants: C, participantTileWidth: x } = l.useMemo(() => {
+        { visibleParticipants: x, participantTileWidth: C } = l.useMemo(() => {
             let n = Date.now(),
                 l = (0, s.sortBy)(t, (e) =>
                     (function (e) {
@@ -62,35 +62,35 @@ function f(e, t) {
                 f = m.findIndex(p),
                 _ = null;
             -1 !== f && ((_ = m[f]), m.splice(f, 1));
-            let C = null == _ || h ? e : e - i - o,
-                x = Math.max(0, Math.min(Math.floor((C - o) / (r + o)), d, t.length)),
-                S = Math.min((C - o) / x - o, i),
-                I = Math.max(0, x - A.length),
-                T = A.slice(0, x),
-                N = m.slice(0, I),
-                b = Array(I);
-            if (I > 0) {
+            let x = null == _ || h ? e : e - i - o,
+                C = Math.max(0, Math.min(Math.floor((x - o) / (r + o)), d, t.length)),
+                S = Math.min((x - o) / C - o, i),
+                T = Math.max(0, C - A.length),
+                N = A.slice(0, C),
+                I = m.slice(0, T),
+                v = Array(T);
+            if (T > 0) {
                 let e = [];
-                for (let t of N) {
+                for (let t of I) {
                     let n = E.current[t.id];
-                    null != n && n < I ? (b[n] = t) : e.push(t);
+                    null != n && n < T ? (v[n] = t) : e.push(t);
                 }
-                for (let t = 0; t < b.length; t++) {
-                    if (null != b[t]) continue;
+                for (let t = 0; t < v.length; t++) {
+                    if (null != v[t]) continue;
                     let n = e.shift();
                     if (null == n) break;
-                    b[t] = n;
+                    v[t] = n;
                 }
             }
-            let v = b.filter(c.Vq);
-            E.current = (0, s.keyBy)((0, s.range)(v.length), (e) => v[e].id);
-            let y = [...T, ...v];
+            let b = v.filter(c.Vq);
+            E.current = (0, s.keyBy)((0, s.range)(b.length), (e) => b[e].id);
+            let y = [...N, ...b];
             return (
-                null != _ && (h && y.length >= x ? (y[Math.max(0, y.length - 1)] = _) : y.push(_)),
+                null != _ && (h && y.length >= C ? (y[Math.max(0, y.length - 1)] = _) : y.push(_)),
                 { visibleParticipants: y, participantTileWidth: S }
             );
         }, [e, t, f, m, h, d, o, r, i]);
-    return { visibleParticipants: C, participantTileWidth: x };
+    return { visibleParticipants: x, participantTileWidth: C };
 }
 function _(e) {
     let {
@@ -120,6 +120,7 @@ function _(e) {
                         selected: l === e.id,
                         channel: o,
                         className: h.Vs,
+                        fit: d.Yl.COVER,
                         onClick: r,
                         onDoubleClick: s,
                         onContextMenu: a,
