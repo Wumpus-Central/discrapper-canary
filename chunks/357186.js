@@ -14,7 +14,6 @@ function f(e) {
     switch (e) {
         case i.M.COLLECTIBLES_SHOP_ENTRY_MARKETING:
             return u.A.getMarketingBySurface(r.R.DESKTOP_SHOP_BUTTON)?.version ?? 0;
-        case i.M.GIFTING_PROMOTION_MOBILE_FIRST_TIME_HALFSHEET:
         case i.M.GIFTING_PROMOTION_REMINDER:
             return (0, d.p)();
         case i.M.ACTIVITIES_VOICE_LAUNCHER_BADGE:
