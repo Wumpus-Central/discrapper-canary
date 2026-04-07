@@ -146,7 +146,7 @@ function M(e) {
                             (0, i.jsxs)("div", {
                                 className: P.lI,
                                 children: [
-                                    B && null != U && (0, i.jsx)(N.V, { application: U }),
+                                    B && (0, i.jsx)(N.V, {}),
                                     (0, i.jsxs)("div", {
                                         className: P.PB,
                                         children: [
