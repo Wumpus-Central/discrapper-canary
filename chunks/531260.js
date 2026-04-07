@@ -68,8 +68,8 @@ let A = (e) => {
 function I(e, t) {
     return null != t && !p.A.fetchingAllEntitlements && (!p.A.fetchedAllEntitlements || e);
 }
-function T(e, t) {
-    return null != t && !p.A.applicationIdsFetching.has(g.tv) && (!p.A.applicationIdsFetched.has(g.tv) || e);
+function T(e) {
+    return null != e && !p.A.applicationIdsFetching.has(g.tv) && !p.A.applicationIdsFetched.has(g.tv);
 }
 function S() {
     let {
@@ -86,7 +86,7 @@ function S() {
         h = (0, u.bG)([f.A], () => f.A.getPremiumTypeSubscription()),
         [m, S] = r.useState(
             A({
-                isFetching: I(e, i) || p.A.fetchingAllEntitlements || T(e, i) || p.A.applicationIdsFetching.has(g.tv),
+                isFetching: I(e, i) || p.A.fetchingAllEntitlements || T(i) || p.A.applicationIdsFetching.has(g.tv),
                 entitlements: s,
                 unactivatedFractionalPremiumUnits: l,
                 currentUser: i,
@@ -97,7 +97,7 @@ function S() {
         );
     return (
         (0, d.Ay)(() => {
-            I(e, i) && (0, c.qw)({ entitlementType: E.zF_.FRACTIONAL_REDEMPTION }), T(e, i) && (0, c.LM)(g.tv);
+            I(e, i) && (0, c.qw)({ entitlementType: E.zF_.FRACTIONAL_REDEMPTION }), T(i) && (0, c.LM)(g.tv);
         }),
         r.useEffect(() => {
             let e = A({
