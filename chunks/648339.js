@@ -20,25 +20,23 @@ function u(e) {
 }
 function c(e) {
     let { story: t, controlsLayout: n } = e,
-        s = i.useMemo(() => u(t), [t]),
-        [c, d] = i.useState(s);
-    i.useEffect(() => {
-        d(u(t));
-    }, [t]);
-    let _ = () => {
+        [s, c] = i.useState(t.id),
+        [d, _] = i.useState(() => u(t));
+    s !== t.id && (c(t.id), _(u(t)));
+    let f = () => {
             let e = t.component;
-            return (0, r.jsx)(e, { ...c });
+            return (0, r.jsx)(e, { ...d }, t.id);
         },
-        f = "hidden" !== n && null != t.controls;
+        p = "hidden" !== n && null != t.controls;
     return (0, r.jsxs)("div", {
         className: a()(l.iW, { [l.vT]: "bottom" === n, [l.Ix]: "right" === n }),
         children: [
-            (0, r.jsx)("div", { className: l.Ji, children: (0, r.jsx)("div", { className: l.Dw, children: _() }) }),
-            f &&
+            (0, r.jsx)("div", { className: l.Ji, children: (0, r.jsx)("div", { className: l.Dw, children: f() }) }),
+            p &&
                 null != t.controls &&
                 (0, r.jsx)("div", {
                     className: a()(l.ne, { [l.WK]: "bottom" === n, [l.BT]: "right" === n }),
-                    children: (0, r.jsx)(o.i, { controls: t.controls, props: c, onPropsChange: d }),
+                    children: (0, r.jsx)(o.i, { controls: t.controls, props: d, onPropsChange: _ }),
                 }),
         ],
     });

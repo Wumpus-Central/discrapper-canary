@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { J$: () => A, WM: () => h, cZ: () => g, eG: () => p, vm: () => E, zh: () => m, zv: () => _ });
+n.d(t, { J$: () => I, WM: () => h, cZ: () => g, eG: () => p, vd: () => A, vm: () => E, zh: () => m, zv: () => _ });
 var r = n(544180),
     i = n(829219),
     s = n(859703),
@@ -52,6 +52,9 @@ function E(e) {
 function g(e) {
     return `VIDEO-QUEST-${e}`;
 }
-function A(e) {
+function A(e, t) {
+    return e >= t - 1 ? Math.max(e, t) : e;
+}
+function I(e) {
     return !!(0, u.vv)(e) && (0, n(192308).hasModalOpen)(g(e.id));
 }

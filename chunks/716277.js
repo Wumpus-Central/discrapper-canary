@@ -10,8 +10,9 @@ e.exports = {
     YK: "seekableBar__68788",
     Ey: "timeDisplay__68788",
     Ub: "grabber__68788",
+    we: "smoothPlayback__68788",
+    DT: "glowBar__68788",
     $v: "segmentWrapper__68788",
     WJ: "segmentBufferClip__68788",
     Bw: "segmentBufferContent__68788",
-    DT: "glowBar__68788",
 };
