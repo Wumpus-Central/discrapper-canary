@@ -198,7 +198,8 @@ async function j(e, t) {
         let n = (0, D.Li)(t.questContent),
             r = (0, D.L4)(t.questContent),
             i = (0, D.yI)(t.questContent, e),
-            o = await s.Bo.post({
+            o = (0, D.Gp)(t.questContent, e),
+            l = await s.Bo.post({
                 url: M.Rsh.QUESTS_ENROLL(e),
                 body: {
                     location: t.questContent,
@@ -206,11 +207,12 @@ async function j(e, t) {
                     metadata_raw: null != n ? n : null,
                     metadata_sealed: null != r ? r : null,
                     traffic_metadata_raw: null != i ? i : null,
+                    traffic_metadata_sealed: null != o ? o : null,
                 },
                 rejectWithError: !0,
             });
         return (
-            a.h.dispatch({ type: "QUESTS_ENROLL_SUCCESS", enrolledQuestUserStatus: (0, L.tp)(o.body) }),
+            a.h.dispatch({ type: "QUESTS_ENROLL_SUCCESS", enrolledQuestUserStatus: (0, L.tp)(l.body) }),
             { type: "success" }
         );
     } catch (t) {
