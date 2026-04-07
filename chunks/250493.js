@@ -1,48 +1,53 @@
 "use strict";
-n.d(t, { A: () => d });
-var r = n(627968);
-n(64700);
-var i = n(382222),
-    s = n(421380),
-    a = n(397927),
-    o = n(263063),
-    l = n(721923),
-    u = n(652215),
-    c = n(399534);
-let d = function (e) {
-    let { closeLayer: t, guild: n, isVisible: d } = e,
-        _ = (0, a.zhh)({
-            transform: d ? "translateY(-100%)" : "translateY(0%)",
+n.d(t, { A: () => _ });
+var r = n(627968),
+    i = n(64700),
+    s = n(687498),
+    a = n(421380),
+    o = n(397927),
+    l = n(263063),
+    u = n(721923),
+    c = n(652215),
+    d = n(399534);
+let _ = function (e) {
+    let { closeLayer: t, guild: n, isVisible: _ } = e,
+        f = i.useRef(null),
+        p = (0, o.zhh)({
+            transform: _ ? "translateY(-100%)" : "translateY(0%)",
             config: { tension: 120, friction: 12 },
         });
-    return (0, r.jsx)(i.animated.div, {
-        className: c.iE,
-        style: _,
-        children: (0, r.jsxs)("div", {
-            className: c.iJ,
-            children: [
-                (0, r.jsxs)("div", {
-                    className: c.OA,
-                    children: [
-                        (0, r.jsx)(o.Ay, { className: c.$f, guild: n, size: o.Ay.Sizes.SMALL }),
-                        (0, r.jsx)(a.Text, { className: c.J5, variant: "text-md/semibold", children: n.name }),
-                    ],
-                }),
-                (0, r.jsx)(l.A, {
-                    className: c.lI,
-                    guild: n,
-                    analyticsLocation: {
-                        page: u.liQ.PREMIUM_GUILD_USER_MODAL,
-                        section: u.JJy.PREMIUM_GUILD_USER_MODAL_FLOATING_CTA_BAR,
-                        object: u.ZSU.BUTTON_CTA,
-                        objectType: u.AnalyticsObjectTypes.BUY,
-                    },
-                    closeLayer: t,
-                    pauseAnimation: !d,
-                    size: s.$n.Sizes.SMALL,
-                    useExpressiveButton: !0,
-                }),
-            ],
+    return (0, r.jsx)(s.animated.div, {
+        className: d.iE,
+        style: p,
+        children: (0, r.jsx)("div", {
+            ref: f,
+            className: d.iJ,
+            children: (0, r.jsxs)(o.xpW, {
+                containerRef: f,
+                children: [
+                    (0, r.jsxs)("div", {
+                        className: d.OA,
+                        children: [
+                            (0, r.jsx)(l.Ay, { className: d.$f, guild: n, size: l.Ay.Sizes.SMALL }),
+                            (0, r.jsx)(o.Text, { className: d.J5, variant: "text-md/semibold", children: n.name }),
+                        ],
+                    }),
+                    (0, r.jsx)(u.A, {
+                        className: d.lI,
+                        guild: n,
+                        analyticsLocation: {
+                            page: c.liQ.PREMIUM_GUILD_USER_MODAL,
+                            section: c.JJy.PREMIUM_GUILD_USER_MODAL_FLOATING_CTA_BAR,
+                            object: c.ZSU.BUTTON_CTA,
+                            objectType: c.AnalyticsObjectTypes.BUY,
+                        },
+                        closeLayer: t,
+                        pauseAnimation: !_,
+                        size: a.$n.Sizes.SMALL,
+                        useExpressiveButton: !0,
+                    }),
+                ],
+            }),
         }),
     });
 };
