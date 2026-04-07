@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { N4: () => m, l9: () => h });
+n.d(t, { N4: () => E, l9: () => m });
 var r = n(562465),
     i = n(73153),
     s = n(615405),
@@ -9,46 +9,54 @@ n(416853), n(918467);
 var l = n(993046),
     u = n(970207),
     c = n(652215);
-let d = 12 * a.A.Millis.HOUR,
-    _ = +a.A.Millis.HOUR;
-function f(e) {
-    return e?.type === "error" ? _ : d;
+let d = 50,
+    _ = 12 * a.A.Millis.HOUR,
+    f = 10 * a.A.Millis.MINUTE;
+function p(e, t) {
+    return e?.type === "error" ? f : (0, u.g6)({ location: t });
 }
-function p(e) {
-    if (!(0, u.y)({ location: "shouldFetchStorefrontPrices" }))
-        return { shouldFetch: !1, filteredSkuIds: [], applicationId: null };
+function h(e, t) {
+    if (!(0, u.yS)({ location: t })) return { shouldFetch: !1, filteredSkuIds: [], applicationId: null };
     if ("application" === e.type) {
-        let t = o.A.getFetchStateForApplicationId(e.applicationId),
-            n = f(t);
-        return null != t && ("loading" === t.type || t.fetchedAt > Date.now() - n)
+        let n = o.A.getFetchStateForApplicationId(e.applicationId),
+            r = p(n, t);
+        return null != n && ("loading" === n.type || n.fetchedAt > Date.now() - r)
             ? { shouldFetch: !1, filteredSkuIds: [], applicationId: e.applicationId }
             : { shouldFetch: !0, filteredSkuIds: [], applicationId: e.applicationId };
     }
     {
-        let t = e.skuIds.filter((e) => {
-            let t = o.A.getFetchStateForSkuId(e);
-            if (null == t) return !0;
-            let n = f(t);
-            return "loading" !== t.type && t.fetchedAt < Date.now() - n;
-        });
-        return 0 === t.length
+        let n = e.skuIds
+            .filter((e) => {
+                let n = o.A.getFetchStateForSkuId(e);
+                if (null == n) return !0;
+                let r = p(n, t);
+                return "loading" !== n.type && n.fetchedAt < Date.now() - r;
+            })
+            .sort((e, t) => {
+                let n = o.A.getFetchStateForSkuId(e),
+                    r = o.A.getFetchStateForSkuId(t);
+                return null == n && null != r ? -1 : +(null != n && null == r);
+            });
+        return 0 === n.length
             ? { shouldFetch: !1, filteredSkuIds: [], applicationId: null }
-            : { shouldFetch: !0, filteredSkuIds: t.map((e) => e), applicationId: null };
+            : { shouldFetch: !0, filteredSkuIds: n.slice(0, d), applicationId: null };
     }
 }
-async function h(e) {
-    await E({ type: "application", applicationId: e });
-}
 async function m(e) {
-    await E({ type: "skus", skuIds: e });
+    let { applicationId: t, location: n } = e;
+    await g({ type: "application", applicationId: t }, n);
 }
 async function E(e) {
-    let { shouldFetch: t, filteredSkuIds: n, applicationId: a } = p(e);
-    if (!t) return;
-    let o = null != a ? { type: "application", applicationId: a } : { type: "skus", skuIds: n };
+    let { skuIds: t, location: n } = e;
+    await g({ type: "skus", skuIds: t }, n);
+}
+async function g(e, t) {
+    let { shouldFetch: n, filteredSkuIds: a, applicationId: o } = h(e, t);
+    if (!n) return;
+    let u = null != o ? { type: "application", applicationId: o } : { type: "skus", skuIds: a };
     try {
-        i.h.dispatch({ type: "SKUS_PRICING_FETCH_START", priceId: o });
-        let e = null != a ? { application_id: a } : { sku_ids: n },
+        i.h.dispatch({ type: "SKUS_PRICING_FETCH_START", priceId: u });
+        let e = null != o ? { application_id: o } : { sku_ids: a },
             t = (
                 await r.Bo.get({
                     url: c.Rsh.STOREFRONT_PRICES,
@@ -56,8 +64,8 @@ async function E(e) {
                     rejectWithError: !0,
                 })
             ).body;
-        i.h.dispatch({ type: "SKUS_PRICING_FETCH_SUCCESS", priceId: o, data: (0, l.O)(t) });
+        i.h.dispatch({ type: "SKUS_PRICING_FETCH_SUCCESS", priceId: u, data: (0, l.O)(t) });
     } catch {
-        i.h.dispatch({ type: "SKUS_PRICING_FETCH_FAIL", priceId: o });
+        i.h.dispatch({ type: "SKUS_PRICING_FETCH_FAIL", priceId: u });
     }
 }

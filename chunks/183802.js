@@ -268,11 +268,11 @@ function te(t) {
                                               lineClamp: 1,
                                               children: r,
                                           }),
-                                          (0, s.jsx)(T.Text, {
+                                          (0, s.jsxs)(T.Text, {
                                               variant: "text-md/bold",
                                               color: "text-feedback-positive",
                                               lineClamp: 1,
-                                              children: a,
+                                              children: ["(", a, ")"],
                                           }),
                                       ],
                                   }),
