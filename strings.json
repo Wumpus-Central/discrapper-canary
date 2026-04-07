@@ -21783,7 +21783,7 @@
   "oZE5pU": "No recent activity in this channel.",
   "N0ED9s": "What You Missed",
   "CKIMrx": "**!!{user}!!** played **!!{activityName}!!**",
-  "TlVwqn": "$[!!{user}!!]({{userHook}})$[ was here]({{labelHook}})",
+  "TlVwqn": "$[!!{user}!!]({{userHook}}) $[was here]({{labelHook}})",
   "8mtcq3": "{n, plural, one {Someone you ignored is} other {People you ignored are} } here.",
   "Z21Rp9": "If you join, they will still be ignored.",
   "bwibp1": "{n, plural, one {Someone you ignored is} other {People you ignored are} } here. If you join, they will still be ignored.",
