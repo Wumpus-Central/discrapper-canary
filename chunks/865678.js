@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => ef, w: () => ex }), n(938796), n(667532);
+n.d(t, { A: () => eA, w: () => em }), n(938796), n(667532);
 var l = n(627968),
     i = n(64700),
     s = n(503698),
@@ -16,18 +16,18 @@ var l = n(627968),
     p = n(435183),
     A = n(534963),
     f = n(820284),
-    b = n(432371),
-    C = n(323073),
+    C = n(432371),
+    b = n(323073),
     j = n(47167),
     N = n(355622),
     v = n(408018),
     _ = n(133343),
     y = n(235986),
-    S = n(915089),
-    E = n(375499),
-    T = n(937773),
-    M = n(770335),
-    I = n(7584),
+    T = n(915089),
+    S = n(375499),
+    E = n(937773),
+    I = n(770335),
+    M = n(7584),
     R = n(200463),
     L = n(633839),
     w = n(235640),
@@ -60,26 +60,25 @@ var ei = n(37411),
     es = n(985018),
     ea = n(89427),
     er = n(885106);
-let eo = (0, S.Ld)(),
-    ed = (0, S.Ld)(),
-    ec = (0, S.Ld)(),
-    eu = (0, P.createChannelRecord)({ id: "1", type: et.rbe.DM }),
-    eh = {
+let eo = (0, T.Ld)(),
+    ed = (0, T.Ld)(),
+    ec = (0, T.Ld)(),
+    eu = {
         popoutLocation: {
             page: et.liQ.CHANNEL_SETTINGS,
             section: et.JJy.CHANNEL_DEFAULT_REACTION,
             object: et.ZSU.EMOJI_PICKER_BUTTON,
         },
     },
-    eg = {
+    eh = {
         popoutLocation: {
             page: et.liQ.CHANNEL_SETTINGS,
             section: et.JJy.CHANNEL_NAME,
             object: et.ZSU.EMOJI_PICKER_BUTTON,
         },
     },
-    em = "AUTOMATIC_RTC_REGION",
-    ex = u.Ay.connectStores([H.A], () => {
+    eg = "AUTOMATIC_RTC_REGION",
+    em = u.Ay.connectStores([H.A], () => {
         let { channel: e, submitting: t } = H.A.getProps();
         return {
             channel: e,
@@ -106,8 +105,8 @@ let eo = (0, S.Ld)(),
                     videoQualityMode: m,
                     defaultReactionEmoji: A,
                     availableTags: f,
-                    defaultSortOrder: b,
-                    defaultForumLayout: C,
+                    defaultSortOrder: C,
+                    defaultForumLayout: b,
                     defaultTagSetting: j,
                 } = e;
                 e.isThread() && 0 === (t = (0, k.A)(t, !0)).length
@@ -134,20 +133,20 @@ let eo = (0, S.Ld)(),
                           videoQualityMode: m,
                           defaultReactionEmoji: A,
                           availableTags: f,
-                          defaultSortOrder: b,
-                          defaultForumLayout: C,
+                          defaultSortOrder: C,
+                          defaultForumLayout: b,
                           defaultTagSetting: j,
                       });
             },
         };
     })(h.A);
-function ep(e) {
+function ex(e) {
     let { onEmojiPicked: t, channel: n, guildId: s } = e,
         a = i.useRef(null),
         r = i.useCallback(
             (e) => {
                 let { closePopout: i } = e;
-                return (0, l.jsx)(T.A, {
+                return (0, l.jsx)(E.A, {
                     channel: n,
                     guildId: s,
                     pickerIntention: el.b_.NO_CUSTOM_EMOJI,
@@ -155,10 +154,10 @@ function ep(e) {
                     onNavigateAway: i,
                     onSelectEmoji: (e) => {
                         let { emoji: n, willClose: l } = e;
-                        null != n && n.type === M.i.UNICODE && t(n.surrogates), l && i();
+                        null != n && n.type === I.i.UNICODE && t(n.surrogates), l && i();
                     },
                     showOnlyUnicode: !0,
-                    analyticsOverride: eg,
+                    analyticsOverride: eh,
                 });
             },
             [n, s, t],
@@ -171,7 +170,7 @@ function ep(e) {
         align: "right",
         children: (e, t) => {
             let { isShown: n } = t;
-            return (0, l.jsx)(E.A, {
+            return (0, l.jsx)(S.A, {
                 ...e,
                 ref: a,
                 active: n,
@@ -182,10 +181,25 @@ function ep(e) {
         },
     });
 }
-class eA extends i.PureComponent {
+class ep extends i.PureComponent {
     defaultReactionButtonRef = i.createRef();
     nameInputRef = i.createRef();
     cursorPosition = 0;
+    channelTopicTextAreaChannel = null;
+    channelTopicTextAreaGuildId = void 0;
+    getChannelTopicTextAreaChannel(e) {
+        let t = e ?? void 0;
+        return (
+            (null == this.channelTopicTextAreaChannel || this.channelTopicTextAreaGuildId !== t) &&
+                ((this.channelTopicTextAreaGuildId = t),
+                (this.channelTopicTextAreaChannel = (0, P.createChannelRecord)({
+                    id: "1",
+                    type: et.rbe.DM,
+                    guild_id: t,
+                }))),
+            this.channelTopicTextAreaChannel
+        );
+    }
     constructor(e) {
         super(e);
         const t = this.props.channel?.topic ?? "";
@@ -236,11 +250,11 @@ class eA extends i.PureComponent {
                 isOwner: p,
                 showSpoilerChannelSetting: A,
             } = this.props,
-            b = P.Le.has(e.type),
+            C = P.Le.has(e.type),
             j = e.isForumLikeChannel(),
             v = j && e.availableTags?.every((e) => e.moderated),
             y = J.default.getCurrentUser()?.isStaff() === !0,
-            S = P.IY.has(e.type)
+            T = P.IY.has(e.type)
                 ? (0, l.jsx)(m.D0$, {
                       label: j ? es.intl.string(es.t.yR6HwZ) : es.intl.string(es.t.X8jMDh),
                       children: (0, l.jsx)(_.Ay, {
@@ -250,7 +264,7 @@ class eA extends i.PureComponent {
                           maxCharacterCount: j ? 4096 : 1024,
                           onChange: this.handleChangeRichTopic,
                           placeholder: es.intl.string(es.t["71fbmh"]),
-                          channel: eu,
+                          channel: this.getChannelTopicTextAreaChannel(e.guild_id ?? g?.id),
                           textValue: this.state.textTopicValue,
                           richValue: this.state.richTopicValue,
                           type: j ? N.oU.FORUM_CHANNEL_GUIDELINES : N.oU.CHANNEL_TOPIC,
@@ -269,12 +283,12 @@ class eA extends i.PureComponent {
                       }),
                   })
                 : null,
-            E =
+            S =
                 j && y
                     ? (0, l.jsx)(m.fs1, {
                           label: es.intl.string(es.t.qk2jdY),
                           placeholder: es.intl.string(es.t.DDjD1H),
-                          value: I.Ay.translateSurrogatesToInlineEmoji(e.template ?? ""),
+                          value: M.Ay.translateSurrogatesToInlineEmoji(e.template ?? ""),
                           onChange: this.handleChangeTemplate,
                           error: this.getError("template"),
                           maxLength: 256,
@@ -283,7 +297,7 @@ class eA extends i.PureComponent {
                           showCharacterCount: !0,
                       })
                     : null,
-            T = e.isForumLikeChannel()
+            E = e.isForumLikeChannel()
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(m.cGx, {}),
@@ -303,7 +317,7 @@ class eA extends i.PureComponent {
                       ],
                   })
                 : null,
-            M = e.isForumLikeChannel()
+            I = e.isForumLikeChannel()
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(m.cGx, {}),
@@ -408,7 +422,7 @@ class eA extends i.PureComponent {
                       onSelectionChange: this.handleChangeDefaultTagSetting,
                   })
                 : null,
-            B = b ? u : s,
+            B = C ? u : s,
             V = (0, l.jsx)($.A, {
                 label: es.intl.string(es.t.tTHx98),
                 helperText: this.getSlowmodeHelpText(),
@@ -445,7 +459,7 @@ class eA extends i.PureComponent {
                     : V
                 : null,
             F =
-                b && null != e.threadMetadata
+                C && null != e.threadMetadata
                     ? (0, l.jsx)(f.A, {
                           page: et.liQ.CHANNEL_SETTINGS,
                           children: (0, l.jsx)(D.A, {
@@ -468,7 +482,7 @@ class eA extends i.PureComponent {
                           }),
                       })
                     : null,
-            W = (0, C.Gc)(e),
+            W = (0, b.Gc)(e),
             z = null != g && (0, U.wh)(g),
             Z = "none";
         W ? (Z = "nsfw") : e.isSpoilerChannel() && (Z = "spoiler");
@@ -506,7 +520,7 @@ class eA extends i.PureComponent {
                                     label: es.intl.string(es.t.Es25Yf),
                                     description: es.intl.string(es.t["9eUgwR"]),
                                     onChange: this.handleNSFWChange,
-                                    checked: (0, C.Gc)(e),
+                                    checked: (0, b.Gc)(e),
                                     disabled: !s || null != e.linkedLobby || z,
                                 }),
                                 null != e.linkedLobby
@@ -553,7 +567,7 @@ class eA extends i.PureComponent {
                       }),
                   })
                 : null,
-            eh = this.props.showChannelSummariesSettings
+            eu = this.props.showChannelSummariesSettings
                 ? (0, l.jsx)(m.dOG, {
                       label: es.intl.string(es.t.id3ozj),
                       description: es.intl.format(es.t.feJW1z, {
@@ -567,7 +581,7 @@ class eA extends i.PureComponent {
                       disabled: !s || !g?.features.has(et.GuildFeatures.SUMMARIES_ENABLED_BY_USER),
                   })
                 : null,
-            eg = e.isMediaChannel()
+            eh = e.isMediaChannel()
                 ? (0, l.jsx)(m.dOG, {
                       label: es.intl.string(es.t.u8LZOt),
                       description: es.intl.string(es.t.J4wCc7),
@@ -580,10 +594,10 @@ class eA extends i.PureComponent {
             ? ((i = es.intl.string(es.t.OCAkGP)), (n = "category-name"))
             : e.isForumPost()
               ? ((i = es.intl.string(es.t.uyVrTN)), (n = "post-title"))
-              : b
+              : C
                 ? ((i = es.intl.string(es.t.j3XWjD)), (n = "thread-name"))
                 : ((i = es.intl.string(es.t.PVbHDl)), (n = "channel-name"));
-        let em = p ? c : s;
+        let eg = p ? c : s;
         return (0, l.jsxs)(m.BJc, {
             gap: 24,
             children: [
@@ -597,12 +611,12 @@ class eA extends i.PureComponent {
                     error: this.getError("name"),
                     name: n,
                     autoFocus: !0,
-                    disabled: !em,
+                    disabled: !eg,
                     maxLength: et.Ign,
-                    trailing: em
+                    trailing: eg
                         ? {
                               type: "emoji",
-                              button: (0, l.jsx)(ep, {
+                              button: (0, l.jsx)(ex, {
                                   onEmojiPicked: this.insertEmojiAtPosition,
                                   channel: e,
                                   guildId: e?.guild_id,
@@ -610,10 +624,10 @@ class eA extends i.PureComponent {
                           }
                         : void 0,
                 }),
+                T,
                 S,
                 E,
-                T,
-                M,
+                I,
                 H,
                 F,
                 R,
@@ -622,9 +636,9 @@ class eA extends i.PureComponent {
                 Y,
                 q,
                 el,
-                eh,
+                eu,
                 er,
-                eg,
+                eh,
             ],
         });
     }
@@ -710,9 +724,9 @@ class eA extends i.PureComponent {
                 .map((e) => ({ id: e.id, label: e.name, value: e.id }))).unshift({
                 id: "auto",
                 label: es.intl.string(es.t.JEmsap),
-                value: em,
+                value: eg,
             });
-        let a = e.rtcRegion ?? em;
+        let a = e.rtcRegion ?? eg;
         return (0, l.jsx)(m.l6P, {
             selectionMode: "single",
             label: es.intl.string(es.t["Ms8bX+"]),
@@ -762,7 +776,7 @@ class eA extends i.PureComponent {
     renderEmojiPicker = (e) => {
         let { closePopout: t } = e,
             { channel: n } = this.props;
-        return (0, l.jsx)(T.A, {
+        return (0, l.jsx)(E.A, {
             guildId: n?.guild_id,
             closePopout: t,
             onSelectEmoji: (e) => {
@@ -771,7 +785,7 @@ class eA extends i.PureComponent {
             },
             pickerIntention: el.b_.COMMUNITY_CONTENT,
             channel: n,
-            analyticsOverride: eh,
+            analyticsOverride: eu,
         });
     };
     handleRequireTagChanged = (e) => {
@@ -810,7 +824,7 @@ class eA extends i.PureComponent {
             }, 0);
     };
     handleChangeTopic = (e) => {
-        (0, p.fy)({ topic: I.Ay.translateInlineEmojiToSurrogates(e) });
+        (0, p.fy)({ topic: M.Ay.translateInlineEmojiToSurrogates(e) });
     };
     handleChangeRichTopic = (e, t, n) => {
         this.setState({ textTopicValue: t, richTopicValue: n }), this.handleChangeTopic(t);
@@ -821,7 +835,7 @@ class eA extends i.PureComponent {
         });
     }
     handleChangeTemplate = (e) => {
-        (0, p.fy)({ template: I.Ay.translateInlineEmojiToSurrogates(e) });
+        (0, p.fy)({ template: M.Ay.translateInlineEmojiToSurrogates(e) });
     };
     handleChangeDefaultReactionEmoji = (e) => {
         let t =
@@ -881,7 +895,7 @@ class eA extends i.PureComponent {
         (0, p.fy)({ defaultAutoArchiveDuration: e });
     };
     handleRegionChange = (e) => {
-        (0, p.fy)({ rtcRegion: e === em ? null : e });
+        (0, p.fy)({ rtcRegion: e === eg ? null : e });
     };
     handleVideoQualityModeChange = (e) => {
         (0, p.fy)({ videoQualityMode: e });
@@ -905,7 +919,7 @@ class eA extends i.PureComponent {
         (0, p.fy)({ flags: n });
     };
 }
-function ef() {
+function eA() {
     let { errors: e, channel: t, submitting: n, subsection: s } = (0, u.cf)([H.A], () => H.A.getProps()),
         a = (0, u.bG)([W.A], () => W.A.getRegions(t?.getGuildId() ?? null)),
         r = (0, u.bG)([B.A], () => B.A.theme),
@@ -920,8 +934,8 @@ function ef() {
         x = V.default.getId(),
         p = (0, R.p)(),
         A = t?.id,
-        f = (0, b.cI)(t, !1, !0),
-        C = q.A.useExperiment(
+        f = (0, C.cI)(t, !1, !0),
+        b = q.A.useExperiment(
             { guildId: t?.guild_id, location: "ChannelSettingsOverview" },
             { autoTrackExposure: !0 },
         ).enabled,
@@ -931,7 +945,7 @@ function ef() {
             },
             [A, p],
         );
-    return (0, l.jsx)(eA, {
+    return (0, l.jsx)(ep, {
         errors: e,
         channel: t,
         channelName: m,
@@ -948,6 +962,6 @@ function ef() {
         isOwner: t?.isOwner(x),
         handleSetDefaultLayout: N,
         showChannelSummariesSettings: f,
-        showSpoilerChannelSetting: C,
+        showSpoilerChannelSetting: b,
     });
 }
