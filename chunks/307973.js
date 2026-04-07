@@ -1,37 +1,38 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(627968),
     s = n(503698),
-    r = n.n(s),
+    l = n.n(s),
     a = n(608416),
-    l = n(285637),
+    r = n(676440),
     o = n(194225),
-    c = n(104400),
-    d = n(737968),
+    d = n(104400),
+    c = n(737968),
     u = n(275869),
-    _ = n(979250);
-let m = (e) => {
+    m = n(979250);
+let g = (e) => {
     let {
         isMotionReduced: t,
         containerVisibilityPercentage: n,
         boltContainerClassName: s,
-        carContainerClassName: m,
-        hammerContainerClassName: A,
-        keyContainerClassName: g,
-        starContainerClassName: E,
+        carContainerClassName: g,
+        hammerContainerClassName: _,
+        keyContainerClassName: x,
+        starContainerClassName: A,
         boltAssetClassName: h,
         carAssetClassName: p,
-        hammerAssetClassName: C,
-        keyAssetClassName: x,
-        starAssetClassName: T,
-        animationSpeedScale: I = 1,
+        hammerAssetClassName: T,
+        keyAssetClassName: f,
+        starAssetClassName: S,
+        animationSpeedScale: b = 1,
+        blurScale: E = 1,
     } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             null != s &&
                 (0, i.jsx)("div", {
-                    className: r()(l.nJ, s),
+                    className: l()(r.nJ, s),
                     children: (0, i.jsx)(a.Ay, {
-                        blurAnimationData: { startBlurRadius: 10, endBlurRadius: 0, duration: a.$G },
+                        blurAnimationData: { startBlurRadius: 10 * E, endBlurRadius: 0, duration: a.$G },
                         scaleAnimationData: { startScale: 0.85, endScale: 1, duration: a.$G },
                         yAxisAnimationData: { range: 15, duration: a.XN, path: a.aV.COSINE },
                         parallaxAnimationData:
@@ -45,13 +46,13 @@ let m = (e) => {
                                 : void 0,
                         animateXAxisWiggle: !0,
                         isMotionReduced: t,
-                        animationSpeedScale: I,
+                        animationSpeedScale: b,
                         children: (0, i.jsx)("img", { src: o.A, className: h, alt: "" }),
                     }),
                 }),
-            null != m &&
+            null != g &&
                 (0, i.jsx)("div", {
-                    className: r()(l.IN, m),
+                    className: l()(r.IN, g),
                     children: (0, i.jsx)(a.Ay, {
                         yAxisAnimationData: { range: 15, duration: a.XN, path: a.aV.COSINE },
                         parallaxAnimationData:
@@ -65,13 +66,13 @@ let m = (e) => {
                                 : void 0,
                         animateXAxisWiggle: !0,
                         isMotionReduced: t,
-                        animationSpeedScale: I,
-                        children: (0, i.jsx)("img", { src: c.A, className: p, alt: "" }),
+                        animationSpeedScale: b,
+                        children: (0, i.jsx)("img", { src: d.A, className: p, alt: "" }),
                     }),
                 }),
-            null != A &&
+            null != _ &&
                 (0, i.jsx)("div", {
-                    className: r()(l.Gj, A),
+                    className: l()(r.Gj, _),
                     children: (0, i.jsx)(a.Ay, {
                         yAxisAnimationData: { range: 15, duration: a.XN, path: a.aV.SINE },
                         parallaxAnimationData:
@@ -85,15 +86,15 @@ let m = (e) => {
                                 : void 0,
                         animateXAxisWiggle: !0,
                         isMotionReduced: t,
-                        animationSpeedScale: I,
-                        children: (0, i.jsx)("img", { src: d.A, className: C, alt: "" }),
+                        animationSpeedScale: b,
+                        children: (0, i.jsx)("img", { src: c.A, className: T, alt: "" }),
                     }),
                 }),
-            null != g &&
+            null != x &&
                 (0, i.jsx)("div", {
-                    className: r()(l.FV, g),
+                    className: l()(r.FV, x),
                     children: (0, i.jsx)(a.Ay, {
-                        blurAnimationData: { startBlurRadius: 5, endBlurRadius: 0, duration: a.Mp },
+                        blurAnimationData: { startBlurRadius: 5 * E, endBlurRadius: 0, duration: a.Mp },
                         scaleAnimationData: { startScale: 0.85, endScale: 1, duration: a.Mp },
                         yAxisAnimationData: { range: 15, duration: a.XN, path: a.aV.SINE },
                         parallaxAnimationData:
@@ -107,15 +108,15 @@ let m = (e) => {
                                 : void 0,
                         animateXAxisWiggle: !0,
                         isMotionReduced: t,
-                        animationSpeedScale: I,
-                        children: (0, i.jsx)("img", { src: u.A, className: x, alt: "" }),
+                        animationSpeedScale: b,
+                        children: (0, i.jsx)("img", { src: u.A, className: f, alt: "" }),
                     }),
                 }),
-            null != E &&
+            null != A &&
                 (0, i.jsx)("div", {
-                    className: r()(l.E1, E),
+                    className: l()(r.E1, A),
                     children: (0, i.jsx)(a.Ay, {
-                        blurAnimationData: { startBlurRadius: 0, endBlurRadius: 2, duration: a.$G },
+                        blurAnimationData: { startBlurRadius: 0, endBlurRadius: 2 * E, duration: a.$G },
                         scaleAnimationData: { startScale: 1, endScale: 0.85, duration: a.$G },
                         yAxisAnimationData: { range: 20, duration: a.Mp, path: a.aV.COSINE },
                         parallaxAnimationData:
@@ -129,8 +130,8 @@ let m = (e) => {
                                 : void 0,
                         animateXAxisWiggle: !0,
                         isMotionReduced: t,
-                        animationSpeedScale: I,
-                        children: (0, i.jsx)("img", { src: _.A, className: T, alt: "" }),
+                        animationSpeedScale: b,
+                        children: (0, i.jsx)("img", { src: m.A, className: S, alt: "" }),
                     }),
                 }),
         ],

@@ -80,7 +80,7 @@ var r = n(284009),
     d = n(626584),
     _ = n(367888),
     f = n(493740),
-    p = n(832343),
+    p = n(965387),
     h = n(817857),
     m = n(832946),
     E = n(287809),
@@ -746,8 +746,10 @@ function ey(e, t) {
                   s.currency,
               )
             : (0, b.$g)(s.total, s.currency);
-    if (E.default.getCurrentUser()?.isOnReverseTrial())
-        return P.intl.format(P.t["7ZS2m1"], { trialEnd: e.currentPeriodEnd });
+    if (E.default.getCurrentUser()?.isOnReverseTrial()) {
+        let t = null != i.currentEntitlementEndsAt ? i.currentEntitlementEndsAt.toDate() : e.currentPeriodEnd;
+        return P.intl.format(P.t["7ZS2m1"], { trialEnd: t });
+    }
     if (e.status === D.Dmq.CANCELED) return P.intl.format(P.t["Whp/qk"], { endDate: t.subscriptionPeriodStart });
     if (e.status === D.Dmq.PAUSE_PENDING)
         return P.intl.format(P.t.uBLUGU, { pauseDate: e.currentPeriodEnd, resumeDate: e.pauseEndsAt });

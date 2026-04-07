@@ -8,6 +8,7 @@ let o = () => {
     let e = (0, s.bG)([l.A], () => l.A.useReducedMotion);
     return (0, i.jsx)(a.A, {
         isMotionReduced: e,
+        blurScale: 0.4,
         starContainerClassName: r.cI,
         hammerContainerClassName: r.qg,
         keyContainerClassName: r.h2,
