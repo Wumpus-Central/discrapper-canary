@@ -16,16 +16,15 @@ function f(e) {
     return (0, s.bG)([l.A, a.A], () => {
         if (null == e) return null;
         let t = l.A.getGame(e),
-            n = t?.supplementalData,
-            s = a.A.getApplication(e);
-        if (n?.steamReleaseStatus === r.Y.RETIRED_ABANDONED) return null;
-        if (s?.linkedGames?.some((e) => e.type === o.Mh.OFFICIAL)) {
+            n = a.A.getApplication(e);
+        if (t?.steamReleaseStatus === r.Y.RETIRED_ABANDONED) return null;
+        if (n?.linkedGames?.some((e) => e.type === o.Mh.OFFICIAL)) {
             let e = t?.thirdPartySkus?.find((e) => e.distributor === c.d3x.STEAM),
                 n = e?.id;
             return (0, u.uJ)(n) ? null : _(n);
         }
-        if (n?.websites == null) return null;
-        let d = n.websites.find((e) => e.category === i.V.STEAM);
-        return d?.url ?? null;
+        if (t?.websites == null) return null;
+        let s = t.websites.find((e) => e.category === i.V.STEAM);
+        return s?.url ?? null;
     }, [e]);
 }

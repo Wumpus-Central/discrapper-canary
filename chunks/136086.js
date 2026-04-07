@@ -51,7 +51,7 @@ class h extends r.Ay.Store {
         return c.has(e);
     }
     getCoverImageUrl(e, t) {
-        let n = o.get(e)?.supplementalData?.coverImageUrl;
+        let n = o.get(e)?.getCoverURL();
         if (null == n) return null;
         if (null == t) return n;
         let r = s.A.toURLSafe(n);

@@ -1,37 +1,37 @@
-i.d(t, { A: () => h });
-var l = i(627968),
-    n = i(64700),
-    a = i(503698),
-    s = i.n(a),
-    r = i(47762),
-    o = i(990078),
-    d = i(397927),
-    c = i(573435),
-    u = i(885151),
-    m = i(985018),
-    x = i(355345);
-function g(e) {
-    let { game: t, activityLevel: i } = e,
-        { data: n } = (0, u.k)(t.id),
-        a = n?.supplementalData?.coverImageUrl;
-    if (null == a) return null;
-    let s = i?.level === r._.HIGH;
+t.d(i, { A: () => x });
+var l = t(627968),
+    s = t(64700),
+    n = t(503698),
+    a = t.n(n),
+    r = t(47762),
+    o = t(990078),
+    d = t(397927),
+    c = t(573435),
+    u = t(885151),
+    m = t(985018),
+    _ = t(355345);
+function h(e) {
+    let { game: i, activityLevel: t } = e,
+        { data: s } = (0, u.k)(i.id),
+        n = s?.getCoverURL();
+    if (null == n) return null;
+    let a = t?.level === r._.HIGH;
     return (0, l.jsx)(o.m, {
         position: "bottom",
-        "aria-label": t.name,
-        text: t.name,
+        "aria-label": i.name,
+        text: i.name,
         children: (0, l.jsxs)("div", {
-            className: x.Xy,
+            className: _.Xy,
             children: [
-                (0, l.jsx)("img", { className: x._s, src: a, alt: t.name }),
-                s &&
+                (0, l.jsx)("img", { className: _._s, src: n, alt: i.name }),
+                a &&
                     (0, l.jsx)(c.Ay, {
                         mask: c.hW.GAMEPLAY_HIGH_ACTIVITY_ICON,
                         width: 16,
                         height: 16,
-                        className: x.Sy,
+                        className: _.Sy,
                         children: (0, l.jsx)("div", {
-                            className: x.oZ,
+                            className: _.oZ,
                             children: (0, l.jsx)(d.Y3C, {
                                 color: d.LU0.unsafe_rawColors.ORANGE_330.css,
                                 width: 12,
@@ -44,52 +44,52 @@ function g(e) {
         }),
     });
 }
-function h(e) {
-    let { gamesToDisplay: t, lastGameToDisplay: i, remainingGames: a, activity: r, onExpandClick: c } = e,
-        [h, _] = n.useState(!1),
-        { data: p } = (0, u.k)(i?.id),
-        A = n.useCallback(() => {
-            c?.(), _(!0);
+function x(e) {
+    let { gamesToDisplay: i, lastGameToDisplay: t, remainingGames: n, activity: r, onExpandClick: c } = e,
+        [x, g] = s.useState(!1),
+        { data: p } = (0, u.k)(t?.id),
+        A = s.useCallback(() => {
+            c?.(), g(!0);
         }, [c]),
-        j = n.useMemo(() => {
-            if (null == i) return null;
-            let e = p?.supplementalData?.coverImageUrl;
+        E = s.useMemo(() => {
+            if (null == t) return null;
+            let e = p?.getCoverURL();
             return null == e
                 ? null
-                : 0 === a.length || h
-                  ? (0, l.jsx)(g, { game: i, activityLevel: r?.[i.id] })
+                : 0 === n.length || x
+                  ? (0, l.jsx)(h, { game: t, activityLevel: r?.[t.id] })
                   : (0, l.jsx)(o.m, {
                         position: "bottom",
                         "aria-label": m.intl.string(m.t.yohc6E),
                         text: m.intl.string(m.t.yohc6E),
                         children: (0, l.jsxs)(d.DUT, {
-                            className: s()(x.Xy, x.oL, x.vk),
+                            className: a()(_.Xy, _.oL, _.vk),
                             onClick: A,
-                            "aria-label": `Show ${a.length} more games`,
+                            "aria-label": `Show ${n.length} more games`,
                             children: [
-                                (0, l.jsx)("img", { className: s()(x._s, x.tJ), src: e, alt: i.name }),
-                                (0, l.jsx)("div", { className: x.Fg }),
+                                (0, l.jsx)("img", { className: a()(_._s, _.tJ), src: e, alt: t.name }),
+                                (0, l.jsx)("div", { className: _.Fg }),
                                 (0, l.jsx)("div", {
-                                    className: x.AZ,
+                                    className: _.AZ,
                                     children: (0, l.jsx)(d.Text, {
                                         variant: "text-xs/normal",
                                         color: "always-white",
-                                        children: `+${a.length}`,
+                                        children: `+${n.length}`,
                                     }),
                                 }),
                             ],
                         }),
                     });
-        }, [i, p, a, r, h, A]);
-    if (null == t || 0 === t.length) return null;
-    let E = h && a.length > 0 ? a : [];
+        }, [t, p, n, r, x, A]);
+    if (null == i || 0 === i.length) return null;
+    let j = x && n.length > 0 ? n : [];
     return (0, l.jsxs)(d.BJc, {
         direction: "horizontal",
         gap: 8,
         wrap: !0,
         children: [
-            t.map((e) => (0, l.jsx)(g, { game: e, activityLevel: r?.[e.id] }, e.id)),
-            h && a.length > 0 ? E.map((e) => (0, l.jsx)(g, { game: e, activityLevel: r?.[e.id] }, e.id)) : j,
+            i.map((e) => (0, l.jsx)(h, { game: e, activityLevel: r?.[e.id] }, e.id)),
+            x && n.length > 0 ? j.map((e) => (0, l.jsx)(h, { game: e, activityLevel: r?.[e.id] }, e.id)) : E,
         ],
     });
 }

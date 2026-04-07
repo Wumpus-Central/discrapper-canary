@@ -30,12 +30,11 @@ let E = function (e, t) {
             ? ["no match"]
             : ((0, d.n)(t, m.gfo.GAME_PROFILE_DISABLED) && n.push("profile disabled"),
               e.themes.includes(a.W.EROTIC) && n.push("nsfw"),
-              (null == e.summary || 0 === e.summary.length) && n.push("no summary"),
-              (null == e.summary || 0 === e.summary.length) && n.push("no summary"),
+              (null == e.description || 0 === e.description.length) && n.push("no summary"),
               n);
     },
     A = (e, t) => 0 === g(e, t).length,
-    I = (e) => A(_.A.getGame(e)?.supplementalData, u.A.getApplication(e)),
+    I = (e) => A(_.A.getGame(e), u.A.getApplication(e)),
     T = (e) => {
         let { applicationId: t = "", source: n, trackEntryPointImpression: i = !0 } = e,
             a = r.useRef(!1),
@@ -49,7 +48,7 @@ let E = function (e, t) {
                 [t, p],
             );
         (0, c.A)(d ? m : []), (0, f.W)(d ? m : []);
-        let I = (0, l.bG)([_.A, u.A], () => m.find((e) => A(_.A.getGame(e)?.supplementalData, u.A.getApplication(e)))),
+        let I = (0, l.bG)([_.A, u.A], () => m.find((e) => A(_.A.getGame(e), u.A.getApplication(e)))),
             T = (0, l.bG)([_.A, u.A], () => m.every((e) => !_.A.isFetching(e) && !u.A.isFetchingApplication(e)));
         return (
             r.useEffect(() => {
@@ -57,7 +56,7 @@ let E = function (e, t) {
                     let e = null != I ? _.A.getGame(I) : _.A.getGame(p.id);
                     if (null != e) {
                         s()(null != n, "Cannot track a Game Profile Entry Point Impressions without a source.");
-                        let t = g(e.supplementalData, p);
+                        let t = g(e, p);
                         E(null != I, e.applicationId, t, n), (a.current = !0);
                     }
                 }

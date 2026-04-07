@@ -44,7 +44,7 @@ function A(e) {
         { largeImage: a, smallImage: o } = T(r, i),
         { largeImage: u } = I(r, s ?? i),
         { data: c } = (0, l.k)((s ?? i)?.id),
-        d = c?.supplementalData?.coverImageUrl,
+        d = c?.getCoverURL(),
         _ = E(t);
     return null != a
         ? { largeImage: a, smallImage: o }

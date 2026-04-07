@@ -6,7 +6,7 @@ var r = n(627968),
     a = n.n(s),
     o = n(158954),
     l = n(985018),
-    u = n(179722),
+    u = n(716833),
     c = (function (e) {
         return (e[(e.SMALL = 0)] = "SMALL"), (e[(e.LARGE = 1)] = "LARGE"), e;
     })({});
@@ -20,8 +20,9 @@ function d(e) {
         },
         m = () => {
             _(!1);
-        };
-    return null == t.coverImageUrl || d
+        },
+        E = t.getCoverURL();
+    return null == E || d
         ? (0, r.jsxs)("div", {
               className: a()(u.N, c),
               children: [
@@ -42,7 +43,7 @@ function d(e) {
           })
         : (0, r.jsx)("img", {
               className: c,
-              src: t.coverImageUrl,
+              src: E,
               alt: l.intl.formatToPlainString(l.t["3ev90U"], { game: f }),
               onError: h,
               onLoad: m,

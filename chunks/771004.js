@@ -1,31 +1,31 @@
-n.d(t, { A: () => v, h: () => p });
+n.d(t, { A: () => v, h: () => _ });
 var a = n(627968),
-    l = n(64700),
-    i = n(503698),
-    r = n.n(i),
+    i = n(64700),
+    l = n(503698),
+    r = n.n(l),
     s = n(934551),
-    c = n(158954),
-    o = n(827734),
+    o = n(158954),
+    c = n(827734),
     d = n(397927),
     u = n(981355),
     m = n(409626),
     x = n(305080),
-    h = n(936636),
-    g = n(985018),
+    g = n(936636),
+    h = n(985018),
     f = n(282063),
-    _ = n(48757);
-function p(e) {
-    let { detectedGame: t, trackAction: n } = e,
-        [i, x] = l.useState(t?.summaryLocalized != null),
-        [p, v] = l.useState(!0),
-        [A, j] = l.useState(!1),
-        E = l.useRef(null),
-        { width: C, height: I } = (0, u.A)();
-    return (l.useEffect(() => {
+    p = n(48757);
+function _(e) {
+    let { game: t, trackAction: n } = e,
+        [l, x] = i.useState(t?.summaryLocalized != null),
+        [_, v] = i.useState(!0),
+        [A, j] = i.useState(!1),
+        E = i.useRef(null),
+        { width: b, height: C } = (0, u.A)();
+    return (i.useEffect(() => {
         let e = E.current;
-        null != e && j(e.scrollHeight - e.clientHeight > 1 || !p);
-    }, [E, C, I, p]),
-    null == t.summary)
+        null != e && j(e.scrollHeight - e.clientHeight > 1 || !_);
+    }, [E, b, C, _]),
+    null == t.description)
         ? null
         : (0, a.jsxs)("div", {
               className: r()(f.fi, f.mX),
@@ -34,47 +34,47 @@ function p(e) {
                       (0, a.jsxs)("div", {
                           className: r()(f.nM, f.Lc),
                           children: [
-                              (0, a.jsx)(s.PencilSparkleIcon, { color: o.A.colors.TEXT_DEFAULT, size: "xs" }),
-                              (0, a.jsx)(c.EYj, {
+                              (0, a.jsx)(s.PencilSparkleIcon, { color: c.A.colors.TEXT_DEFAULT, size: "xs" }),
+                              (0, a.jsx)(o.EYj, {
                                   variant: "text-xs/medium",
                                   color: "text-default",
-                                  children: i
-                                      ? g.intl.format(g.t.aZ2iIp, { onShowOriginal: () => x(!1) })
-                                      : g.intl.format(g.t["/2ylF4"], { onShowTranslated: () => x(!0) }),
+                                  children: l
+                                      ? h.intl.format(h.t.aZ2iIp, { onShowOriginal: () => x(!1) })
+                                      : h.intl.format(h.t["/2ylF4"], { onShowTranslated: () => x(!0) }),
                               }),
                           ],
                       }),
-                  (0, a.jsx)(c.EYj, {
+                  (0, a.jsx)(o.EYj, {
                       ref: E,
-                      lineClamp: p ? 8 : void 0,
+                      lineClamp: _ ? 8 : void 0,
                       variant: "text-sm/normal",
-                      children: i ? t.summaryLocalized : t.summary,
+                      children: l ? t.summaryLocalized : t.description,
                   }),
                   A &&
                       (0, a.jsx)(d.DUT, {
                           className: f.vk,
                           onClick: () => {
-                              n(p ? m.Ws.ShowMore : m.Ws.ShowLess), v(!p);
+                              n(_ ? m.Ws.ShowMore : m.Ws.ShowLess), v(!_);
                           },
-                          children: (0, a.jsx)(c.EYj, {
+                          children: (0, a.jsx)(o.EYj, {
                               variant: "text-sm/semibold",
-                              children: p ? g.intl.string(g.t.lBeKY2) : g.intl.string(g.t["6MwJo/"]),
+                              children: _ ? h.intl.string(h.t.lBeKY2) : h.intl.string(h.t["6MwJo/"]),
                           }),
                       }),
-                  (0, a.jsx)(h.A, { className: _.B, detectedGame: t }),
+                  (0, a.jsx)(g.A, { className: p.B, game: t }),
               ],
           });
 }
 function v(e) {
-    let { detectedGame: t, trackAction: n } = e,
-        i = l.useRef(null),
+    let { game: t, trackAction: n } = e,
+        l = i.useRef(null),
         {
             isExpanded: s,
-            showToggle: o,
+            showToggle: c,
             handleToggleExpanded: d,
         } = (function (e, t) {
-            let [n, a] = l.useState("full");
-            l.useEffect(() => {
+            let [n, a] = i.useState("full");
+            i.useEffect(() => {
                 let t = e.current;
                 if (null == t) return;
                 let n = new ResizeObserver(() => {
@@ -84,7 +84,7 @@ function v(e) {
                 });
                 return n.observe(t), () => n.disconnect();
             }, [e]);
-            let i = l.useCallback(() => {
+            let l = i.useCallback(() => {
                 "expanded" === n
                     ? (t(m.Ws.ShowLess), a("collapsed"))
                     : "collapsed" === n && (t(m.Ws.ShowMore), a("expanded"));
@@ -92,18 +92,23 @@ function v(e) {
             return {
                 isExpanded: "expanded" === n,
                 showToggle: "expanded" === n || "collapsed" === n,
-                handleToggleExpanded: i,
+                handleToggleExpanded: l,
             };
-        })(i, n),
+        })(l, n),
         { isTwoColumn: u } = (0, x.c)(),
-        h = l.useMemo(() => (u ? 8 : 5), [u]);
-    if (null == t.summary) return null;
-    let _ = s ? g.intl.string(g.t["6MwJo/"]) : g.intl.string(g.t.lBeKY2);
+        g = i.useMemo(() => (u ? 8 : 5), [u]);
+    if (null == t.description) return null;
+    let p = s ? h.intl.string(h.t["6MwJo/"]) : h.intl.string(h.t.lBeKY2);
     return (0, a.jsxs)("div", {
         className: r()(f.fi, f.mX),
         children: [
-            (0, a.jsx)(c.EYj, { ref: i, lineClamp: s ? void 0 : h, variant: "text-md/medium", children: t.summary }),
-            o && (0, a.jsx)(c.QWc, { onClick: d, text: _ }),
+            (0, a.jsx)(o.EYj, {
+                ref: l,
+                lineClamp: s ? void 0 : g,
+                variant: "text-md/medium",
+                children: t.description,
+            }),
+            c && (0, a.jsx)(o.QWc, { onClick: d, text: p }),
         ],
     });
 }

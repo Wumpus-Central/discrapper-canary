@@ -1,8 +1,10 @@
 "use strict";
-n.d(t, { A: () => a });
+n.d(t, { A: () => l });
 var r = n(315069),
-    i = n(611010);
-function s(e) {
+    i = n(611010),
+    s = n(486020),
+    a = n(130531);
+function o(e) {
     if (e?.steam != null || e?.opencritic != null)
         return {
             steam: null != e.steam ? { rating: e.steam.rating, ratingCount: e.steam.rating_count } : void 0,
@@ -16,7 +18,7 @@ function s(e) {
                     : void 0,
         };
 }
-class a extends r.A {
+class l extends r.A {
     id;
     name;
     description;
@@ -48,7 +50,6 @@ class a extends r.A {
     steamReleaseStatus;
     reviews;
     opencriticUrl;
-    supplementalData;
     get applicationId() {
         return this.id;
     }
@@ -83,34 +84,20 @@ class a extends r.A {
             (this.firstReleaseDate = e.first_release_date),
             (this.shopCollectionIds = e.shop_collection_ids),
             (this.steamReleaseStatus = e.steam_release_status),
-            (this.reviews = s(e.reviews)),
+            (this.reviews = o(e.reviews)),
             (this.opencriticUrl = e.opencritic_url);
-        const t = e.supplemental_game_data;
-        null != t &&
-            (this.supplementalData = {
-                applicationId: e.id,
-                name: t.name,
-                summary: t.summary,
-                summaryLocalized: t.summary_localized,
-                websites: t.websites,
-                themes: t.themes,
-                genres: t.genres,
-                platforms: t.platforms,
-                artwork: t.artwork_urls,
-                screenshots: t.screenshot_urls,
-                iconHash: t.icon_hash,
-                coverImageUrl: t.cover_image_url,
-                firstReleaseDate: t.first_release_date,
-                publishers: t.publisher_names ?? [],
-                developers: t.developer_names ?? [],
-                trailers: e.trailers,
-                shopCollectionIds: e.shop_collection_ids,
-                steamReleaseStatus: t.steam_release_status,
-                reviews: s(t.reviews),
-                opencriticUrl: t.opencritic_url,
-                steam_id: t.steam_id,
-                announcementsChannelId: t.announcements_channel_id,
-                l30Rank: t.l30_rank,
-            });
+    }
+    getCoverURL() {
+        return null == this.media
+            ? null
+            : null != this.media.cover_hash
+              ? (s.Ay.getGameAssetURL({ id: this.id, hash: this.media.cover_hash, keepAspectRatio: !0 }) ?? null)
+              : (this.media.cover_url ?? null);
+    }
+    getArtworkURLs() {
+        return null == this.media ? [] : (0, a.L)(this.id, this.media.artwork_hashes, this.media.artwork_urls);
+    }
+    getCompanyByRole(e) {
+        return this.companies?.filter((t) => t.roles.includes(e)) ?? [];
     }
 }

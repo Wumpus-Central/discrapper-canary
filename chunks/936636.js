@@ -1,14 +1,14 @@
-n.d(t, { A: () => g, s: () => h });
+n.d(t, { A: () => f, s: () => h });
 var a = n(627968);
 n(64700);
-var l = n(503698),
-    i = n.n(l),
+var i = n(503698),
+    l = n.n(i),
     r = n(808380),
     s = n(934551),
     o = n(990078),
     c = n(504186),
     d = n(985018),
-    u = n(851822);
+    u = n(282063);
 function m(e) {
     switch (e) {
         case r.Y.DESKTOP:
@@ -38,10 +38,10 @@ function x(e) {
             return null;
     }
 }
-function f(e) {
+function g(e) {
     let { platforms: t } = e;
     return (0, a.jsx)("div", {
-        className: i()(u.nM, u.Lc),
+        className: l()(u.nM, u.Lc),
         style: { alignItems: "center" },
         children: t.map((e) => (0, a.jsx)(o.m, { text: m(e), children: (0, a.jsx)(x, { platform: e }) }, e)),
     });
@@ -50,13 +50,13 @@ function h(e) {
     let { platform: t } = e;
     return (0, a.jsx)(o.m, { text: m(t), children: (0, a.jsx)(x, { platform: t }) }, t);
 }
-function g(e) {
-    let { detectedGame: t, className: n } = e,
-        l = (0, c.A)(t);
-    return 0 === l.length
+function f(e) {
+    let { game: t, className: n } = e,
+        i = (0, c.A)(t);
+    return 0 === i.length
         ? null
         : (0, a.jsx)("div", {
-              className: i()(u.fi, u.iH, n),
-              children: l.length > 0 && (0, a.jsx)(f, { platforms: l }),
+              className: l()(u.fi, u.iH, n),
+              children: i.length > 0 && (0, a.jsx)(g, { platforms: i }),
           });
 }

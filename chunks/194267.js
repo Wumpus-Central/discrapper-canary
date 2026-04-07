@@ -97,7 +97,7 @@ let V = (e) => {
             m = (0, s.bG)([d.A], () => d.A.getApplication(a.applicationId)),
             g = (0, s.bG)([c.A], () => c.A.useReducedMotion),
             A = i.useRef(null),
-            I = null != a.supplementalData,
+            I = null != a.gameRecord,
             T = () => {
                 p({
                     questId: t.id,
@@ -152,8 +152,8 @@ let V = (e) => {
                 null == A.current || g || (A.current.style.transform = "rotateX(0deg) rotateY(0deg)");
             }, [g]),
             O = () =>
-                null != a.supplementalData
-                    ? (0, r.jsx)(E.A, { game: a.supplementalData, application: m, className: L.xe, size: E.w.SMALL })
+                null != a.gameRecord
+                    ? (0, r.jsx)(E.A, { game: a.gameRecord, application: m, className: L.xe, size: E.w.SMALL })
                     : null != a.fallbackCoverImageUrl
                       ? (0, r.jsx)("img", { src: a.fallbackCoverImageUrl, alt: a.name, className: L.xe })
                       : null;
@@ -245,13 +245,13 @@ function j(e) {
                     ...S.map((e) => ({
                         applicationId: e.applicationId,
                         name: e.name,
-                        supplementalData: e.supplementalData ?? null,
+                        gameRecord: e,
                         fallbackCoverImageUrl: null,
                     })),
                     ...y.map((e) => ({
                         applicationId: e.applicationId,
                         name: e.name,
-                        supplementalData: null,
+                        gameRecord: null,
                         fallbackCoverImageUrl: e.coverImageUrl,
                     })),
                 ].slice(0, w),

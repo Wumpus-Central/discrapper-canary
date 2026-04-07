@@ -1,56 +1,56 @@
-n.d(t, { A: () => v, K: () => j });
+n.d(t, { A: () => A, K: () => j });
 var a = n(627968),
-    l = n(64700),
-    i = n(503698),
-    r = n.n(i),
+    i = n(64700),
+    l = n(503698),
+    r = n.n(l),
     s = n(505779),
-    c = n(990078),
-    o = n(397927),
+    o = n(990078),
+    c = n(397927),
     d = n(409626),
     u = n(37948),
     m = n(985018),
-    x = n(851822),
-    f = n(307291);
+    x = n(282063),
+    g = n(808900);
 let h = [s.V.OFFICIAL, s.V.TWITTER, s.V.YOUTUBE],
-    g = { colorClass: f.wP },
-    _ = { size: "xs", colorClass: f.wP };
-function p(e, t) {
+    f = { colorClass: g.wP },
+    p = { size: "xs", colorClass: g.wP };
+function _(e, t) {
     switch (e.category) {
         case s.V.OFFICIAL:
-            return { icon: (0, a.jsx)(o.L_e, { ...t }), action: d.Ws.WebsiteLink, title: m.intl.string(m.t.fOUKvg) };
+            return { icon: (0, a.jsx)(c.L_e, { ...t }), action: d.Ws.WebsiteLink, title: m.intl.string(m.t.fOUKvg) };
         case s.V.TWITTER:
-            return { icon: (0, a.jsx)(o.p3p, { ...t }), action: d.Ws.XLink, title: m.intl.string(m.t.INic4y) };
+            return { icon: (0, a.jsx)(c.p3p, { ...t }), action: d.Ws.XLink, title: m.intl.string(m.t.INic4y) };
         case s.V.YOUTUBE:
-            return { action: d.Ws.YouTubeLink, icon: (0, a.jsx)(o.CiD, { ...t }), title: m.intl.string(m.t.lNmxbE) };
+            return { action: d.Ws.YouTubeLink, icon: (0, a.jsx)(c.CiD, { ...t }), title: m.intl.string(m.t.lNmxbE) };
         case s.V.FACEBOOK:
-            return { icon: (0, a.jsx)(o.Zc1, { ...t }), action: d.Ws.FacebookLink, title: m.intl.string(m.t.FjyREK) };
+            return { icon: (0, a.jsx)(c.Zc1, { ...t }), action: d.Ws.FacebookLink, title: m.intl.string(m.t.FjyREK) };
         case s.V.INSTAGRAM:
             return {
-                icon: (0, a.jsx)(o.LyU, { ...t }),
+                icon: (0, a.jsx)(c.LyU, { ...t }),
                 action: d.Ws.InstagramLink,
                 title: m.intl.string(m.t["cgR+IK"]),
             };
         case s.V.BLUESKY:
-            return { icon: (0, a.jsx)(o.akf, { ...t }), action: d.Ws.BlueskyLink, title: m.intl.string(m.t["D/PHq5"]) };
+            return { icon: (0, a.jsx)(c.akf, { ...t }), action: d.Ws.BlueskyLink, title: m.intl.string(m.t["D/PHq5"]) };
         case s.V.REDDIT:
-            return { icon: (0, a.jsx)(o.T1e, { ...t }), action: d.Ws.RedditLink, title: m.intl.string(m.t["Hgb+fc"]) };
+            return { icon: (0, a.jsx)(c.T1e, { ...t }), action: d.Ws.RedditLink, title: m.intl.string(m.t["Hgb+fc"]) };
         case s.V.TWITCH:
-            return { icon: (0, a.jsx)(o.aWO, { ...t }), action: d.Ws.TwitchLink, title: m.intl.string(m.t["7xtz4G"]) };
+            return { icon: (0, a.jsx)(c.aWO, { ...t }), action: d.Ws.TwitchLink, title: m.intl.string(m.t["7xtz4G"]) };
         default:
             throw Error("Unknown website category");
     }
 }
-function A(e) {
+function v(e) {
     let { website: t, trackAction: n } = e,
-        { action: i, icon: r, title: s } = p(t, g),
-        d = l.useCallback(() => {
-            n(i);
-        }, [i, n]);
-    return (0, a.jsx)(c.m, {
+        { action: l, icon: r, title: s } = _(t, f),
+        d = i.useCallback(() => {
+            n(l);
+        }, [l, n]);
+    return (0, a.jsx)(o.m, {
         text: s,
-        children: (0, a.jsx)(o.MzZ, {
+        children: (0, a.jsx)(c.MzZ, {
             onClick: d,
-            className: f.yO,
+            className: g.yO,
             href: t.url,
             target: "_blank",
             "aria-label": s,
@@ -58,20 +58,20 @@ function A(e) {
         }),
     });
 }
-let v = function (e) {
-    let { detectedGame: t, trackAction: n } = e;
+let A = function (e) {
+    let { game: t, trackAction: n } = e;
     if (null == t.websites) return null;
-    let l = t.websites
+    let i = t.websites
         .filter((e) => {
             let { category: t } = e;
             return h.includes(t);
         })
         .sort((e, t) => e.category - t.category);
-    return 0 === l.length
+    return 0 === i.length
         ? null
         : (0, a.jsxs)("div", {
               children: [
-                  (0, a.jsx)(o.Heading, {
+                  (0, a.jsx)(c.Heading, {
                       className: x.bV,
                       variant: "text-xs/semibold",
                       color: "text-default",
@@ -79,20 +79,20 @@ let v = function (e) {
                   }),
                   (0, a.jsx)("div", {
                       className: r()(x.nM, x.mX),
-                      children: l.map((e) => (0, a.jsx)(A, { website: e, trackAction: n }, e.url)),
+                      children: i.map((e) => (0, a.jsx)(v, { website: e, trackAction: n }, e.url)),
                   }),
               ],
           });
 };
 function j(e) {
     let { website: t, trackAction: n } = e,
-        i = (0, u.A)(),
-        { action: r, icon: s, title: d } = p(t, _),
-        m = l.useCallback(() => {
-            n(r), i(t.url);
-        }, [r, i, n, t.url]);
-    return (0, a.jsx)(c.m, {
+        l = (0, u.A)(),
+        { action: r, icon: s, title: d } = _(t, p),
+        m = i.useCallback(() => {
+            n(r), l(t.url);
+        }, [r, l, n, t.url]);
+    return (0, a.jsx)(o.m, {
         text: d,
-        children: (0, a.jsx)(o.DUT, { onClick: m, className: f.yO, title: d, children: s }),
+        children: (0, a.jsx)(c.DUT, { onClick: m, className: g.yO, title: d, children: s }),
     });
 }
