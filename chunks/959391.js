@@ -5,12 +5,12 @@ var r = n(627968),
     s = n(311907),
     a = n(397927),
     o = n(450233),
-    l = n(721101),
+    l = n(116673),
     u = n(773669),
     c = n(493822),
     d = n(652215),
     _ = n(985018),
-    f = n(182468);
+    f = n(626005);
 let p = (e) => {
     let t,
         { billingAddressInfo: n, billingError: p, onBillingAddressChange: h, paymentSourceType: m } = e,
@@ -34,7 +34,7 @@ let p = (e) => {
         default:
             t = "en-US" === g ? o.Ay.Layouts.MODAL_US : o.Ay.Layouts.MODAL_INTL;
     }
-    let A = (0, s.bG)([l.A], () => l.A.data?.allowed_billing_address_countries ?? null);
+    let A = (0, l.z)();
     return (
         0 === n.country.length && null != A && A.length > 0 && (n.country = A[0]),
         (0, r.jsxs)(i.Fragment, {
