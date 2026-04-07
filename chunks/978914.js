@@ -1,8 +1,8 @@
 n.d(t, { I: () => A });
 var i = n(735438),
     l = n.n(i),
-    a = n(311907),
-    s = n(562465),
+    s = n(311907),
+    a = n(562465),
     r = n(73153),
     o = n(320501),
     c = n(222823),
@@ -13,11 +13,12 @@ let h = new Set(),
 function A(e) {
     var t;
     let { id: n } = e,
+        { enabled: i = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         {
-            loaded: i,
-            message: l,
-            error: s,
-        } = (0, a.cf)([d.A, o.A, c.Ay], () => {
+            loaded: l,
+            message: a,
+            error: r,
+        } = (0, s.cf)([d.A, o.A, c.Ay], () => {
             let e = c.Ay.lastMessageId(n),
                 t = d.A.getMessageRequestPreview(n);
             if (null == t.message && null != e) {
@@ -26,23 +27,23 @@ function A(e) {
             }
             return t;
         }, [n]),
-        r = (0, a.bG)([d.A], () => d.A.shouldLoadMessageRequestPreview(n), [n]);
+        u = (0, s.bG)([d.A], () => d.A.shouldLoadMessageRequestPreview(n), [n]);
     return (
-        !i && null == l && r && ((t = n), h.add(t), null == m && (m = setTimeout(p, 0))),
-        { loaded: i, error: s, message: l }
+        i && !l && null == a && u && ((t = n), h.add(t), null == m && (m = setTimeout(g, 0))),
+        { loaded: l, error: r, message: a }
     );
 }
-async function p() {
+async function g() {
     try {
-        for (; !l().isEmpty(h); ) await g();
+        for (; !l().isEmpty(h); ) await p();
     } finally {
         m = null;
     }
 }
-async function g() {
+async function p() {
     let e = Array.from(h).slice(0, 25);
     try {
-        let t = await s.Bo.get({
+        let t = await a.Bo.get({
             url: u.Rsh.MESSAGE_REQUESTS_SUPPLEMENTAL_DATA,
             query: { channel_ids: e },
             rejectWithError: !0,
