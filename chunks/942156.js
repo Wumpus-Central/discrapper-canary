@@ -1,43 +1,44 @@
-i.d(e, { A: () => c });
-var s = i(627968),
-    n = i(64700),
-    a = i(503698),
-    h = i.n(a),
-    l = i(615300),
-    r = i(397927),
-    o = i(652215),
-    d = i(102041);
-class c extends n.Component {
-    static contextType = r.CZY;
-    anim = new l.A.Value(0);
+"use strict";
+n.d(t, { A: () => u });
+var i = n(627968),
+    s = n(64700),
+    r = n(503698),
+    l = n.n(r),
+    a = n(615300),
+    o = n(397927),
+    d = n(652215),
+    c = n(102041);
+class u extends s.Component {
+    static contextType = o.CZY;
+    anim = new a.A.Value(0);
     componentDidMount() {
         this.props.show && this.animate(1);
     }
-    componentDidUpdate(t) {
-        t.show !== this.props.show && this.animate(+!!this.props.show);
+    componentDidUpdate(e) {
+        e.show !== this.props.show && this.animate(+!!this.props.show);
     }
-    animate = (t) => {
-        l.A.spring(this.anim, { toValue: t, friction: 10, tension: 100 }).start();
+    animate = (e) => {
+        a.A.spring(this.anim, { toValue: e, friction: 10, tension: 100 }).start();
     };
     getAnimatedStyle() {
-        let { anim: t } = this,
-            { reducedMotion: e } = this.context;
+        let { anim: e } = this,
+            { reducedMotion: t } = this.context;
         return {
-            opacity: t,
-            transform: e.enabled
+            opacity: e,
+            transform: t.enabled
                 ? void 0
                 : [
-                      { translateY: t.interpolate({ inputRange: [0, 1], outputRange: ["-100px", "0px"] }) },
+                      { translateY: e.interpolate({ inputRange: [0, 1], outputRange: ["-100px", "0px"] }) },
                       { translateZ: 0 },
                   ],
         };
     }
     render() {
-        return (0, s.jsx)(l.A.a, {
-            href: o.BVt.INDEX,
+        return (0, i.jsx)(a.A.a, {
+            href: d.BVt.INDEX,
             target: "_blank",
             rel: "noopener",
-            className: h()(d.w, this.props.className),
+            className: l()(c.w, this.props.className),
             style: this.getAnimatedStyle(),
         });
     }

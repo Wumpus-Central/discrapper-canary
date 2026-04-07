@@ -1,82 +1,83 @@
-let s;
-i.d(e, { A: () => R });
-var n = i(627968),
-    a = i(64700),
-    h = i(873263),
-    l = i(607399),
-    r = i(311907),
-    o = i(397927),
-    d = i(220839),
-    c = i(897479),
-    u = i(942156),
-    p = i(25485),
-    m = i(49463),
-    v = i(976860),
-    g = i(426660),
-    E = i(652215),
-    w = i(339086);
-let f = i(843020),
-    x = i(545044),
+"use strict";
+let i;
+n.d(t, { A: () => y });
+var s = n(627968),
+    r = n(64700),
+    l = n(873263),
+    a = n(607399),
+    o = n(311907),
+    d = n(397927),
+    c = n(220839),
+    u = n(897479),
+    h = n(942156),
+    _ = n(574094),
+    p = n(49463),
+    g = n(976860),
+    m = n(426660),
+    A = n(652215),
+    f = n(339086);
+let E = n(843020),
+    x = n(545044),
     I = [
-        E.BVt.LOGIN,
-        E.BVt.LOGIN_HANDOFF,
-        E.BVt.LOGIN_ONE_TIME,
-        E.BVt.REGISTER,
-        E.BVt.INVITE(""),
-        E.BVt.GIFT_CODE(""),
-        E.BVt.GUILD_TEMPLATE_LOGIN(""),
-        E.BVt.GUILD_TEMPLATE(""),
-        E.BVt.DISABLE_EMAIL_NOTIFICATIONS,
-        E.BVt.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
-        E.BVt.BILLING_PREMIUM_SUBSCRIBE,
-        E.BVt.BILLING_PAYMENT_SOURCES_CREATE,
-        E.BVt.BILLING_PAYMENTS,
-        E.BVt.BILLING_PREMIUM_SWITCH_PLAN,
-        E.BVt.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE,
-        E.BVt.GIFT_CARD_REDEEM,
-        E.BVt.VERIFY,
-        E.BVt.VERIFY_HUB_EMAIL,
-        E.BVt.REJECT_IP,
-        E.BVt.REJECT_MFA,
-        E.BVt.AUTHORIZE_IP,
-        E.BVt.AUTHORIZE_PAYMENT,
-        E.BVt.RESET,
-        E.BVt.HANDOFF,
-        E.BVt.REPORT,
-        E.BVt.REPORT_SECOND_LOOK,
-        E.BVt.ACCOUNT_REVERT(""),
+        A.BVt.LOGIN,
+        A.BVt.LOGIN_HANDOFF,
+        A.BVt.LOGIN_ONE_TIME,
+        A.BVt.REGISTER,
+        A.BVt.INVITE(""),
+        A.BVt.GIFT_CODE(""),
+        A.BVt.GUILD_TEMPLATE_LOGIN(""),
+        A.BVt.GUILD_TEMPLATE(""),
+        A.BVt.DISABLE_EMAIL_NOTIFICATIONS,
+        A.BVt.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
+        A.BVt.BILLING_PREMIUM_SUBSCRIBE,
+        A.BVt.BILLING_PAYMENT_SOURCES_CREATE,
+        A.BVt.BILLING_PAYMENTS,
+        A.BVt.BILLING_PREMIUM_SWITCH_PLAN,
+        A.BVt.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE,
+        A.BVt.GIFT_CARD_REDEEM,
+        A.BVt.VERIFY,
+        A.BVt.VERIFY_HUB_EMAIL,
+        A.BVt.REJECT_IP,
+        A.BVt.REJECT_MFA,
+        A.BVt.AUTHORIZE_IP,
+        A.BVt.AUTHORIZE_PAYMENT,
+        A.BVt.RESET,
+        A.BVt.HANDOFF,
+        A.BVt.REPORT,
+        A.BVt.REPORT_SECOND_LOOK,
+        A.BVt.ACCOUNT_REVERT(""),
     ];
-function A(t) {
-    return I.some((e) => t.startsWith(e));
+function N(e) {
+    return I.some((t) => e.startsWith(t));
 }
-let M = (t) => ((s = t), t),
-    _ = [E.BVt.VERIFY, E.BVt.VERIFY_HUB_EMAIL],
-    L = [E.BVt.GIFT_CARD_REDEEM];
-function T(t) {
-    let { children: e } = t,
-        i = (function () {
-            let [t, e] = a.useState(!1),
-                [i, n] = a.useState(!0),
-                h = (0, r.bG)([m.A], () => m.A.hasLoadedExperiments);
-            return ((0, d.A)(() => {}, 300), void 0 !== s)
-                ? s
-                : !i && h
-                  ? (t || e(!0), M("default"))
-                  : i
-                    ? M("default")
+let v = (e) => ((i = e), e),
+    T = [A.BVt.VERIFY, A.BVt.VERIFY_HUB_EMAIL],
+    C = [A.BVt.GIFT_CARD_REDEEM];
+function j(e) {
+    let { children: t } = e,
+        n = (function () {
+            let [e, t] = r.useState(!1),
+                [n, s] = r.useState(!0),
+                l = (0, o.bG)([p.A], () => p.A.hasLoadedExperiments);
+            return ((0, c.A)(() => {}, 300), void 0 !== i)
+                ? i
+                : !n && l
+                  ? (e || t(!0), v("default"))
+                  : n
+                    ? v("default")
                     : "loading";
         })(),
-        l = (0, h.zy)(),
-        o = L.includes(l.pathname),
-        c = _.includes(l.pathname);
-    if (o) return e;
-    switch (i) {
+        a = (0, l.zy)(),
+        d = C.includes(a.pathname),
+        u = T.includes(a.pathname);
+    if (d) return t;
+    switch (n) {
         case "default":
-            return (0, n.jsxs)(n.Fragment, {
+            return (0, s.jsxs)(s.Fragment, {
                 children: [
-                    c ? (0, n.jsx)(g.A, {}) : (0, n.jsx)("img", { className: w.xX, src: f, alt: "" }),
-                    (0, n.jsx)("img", { className: w.F, src: x, alt: "" }),
-                    e,
+                    u ? (0, s.jsx)(m.A, {}) : (0, s.jsx)("img", { className: f.xX, src: E, alt: "" }),
+                    (0, s.jsx)("img", { className: f.F, src: x, alt: "" }),
+                    t,
                 ],
             });
         case "experimental":
@@ -84,9 +85,9 @@ function T(t) {
             return null;
     }
 }
-class S extends a.Component {
-    constructor(t) {
-        super(t), (this.state = { isMobileWidth: window.innerWidth <= 485 });
+class S extends r.Component {
+    constructor(e) {
+        super(e), (this.state = { isMobileWidth: window.innerWidth <= 485 });
     }
     handleResize = () => {
         this.setState({ isMobileWidth: window.innerWidth <= 485 });
@@ -97,52 +98,52 @@ class S extends a.Component {
     componentWillUnmount() {
         window.removeEventListener("resize", this.handleResize);
     }
-    mobileTransitionTo(t, e) {
-        if (A(t)) (0, v.pX)(t, e);
+    mobileTransitionTo(e, t) {
+        if (N(e)) (0, g.pX)(e, t);
         else {
-            let i = null != e && null != e.search ? e.search : null;
-            window.location = null == i ? t : `${t}?${i}`;
+            let n = null != t && null != t.search ? t.search : null;
+            window.location = null == n ? e : `${e}?${n}`;
         }
     }
-    mobileReplaceWith(t) {
-        A(t) ? (0, v.bG)(t) : (window.location = t);
+    mobileReplaceWith(e) {
+        N(e) ? (0, g.bG)(e) : (window.location = e);
     }
     renderDefault() {
-        let { splash: t } = this.props,
-            e = (0, n.jsx)(c.A, {
-                component: a.Fragment,
-                children: a.Children.map(this.props.children, (t) =>
-                    a.cloneElement(t, { transitionTo: v.pX, replaceWith: v.bG }),
+        let { splash: e } = this.props,
+            t = (0, s.jsx)(u.A, {
+                component: r.Fragment,
+                children: r.Children.map(this.props.children, (e) =>
+                    r.cloneElement(e, { transitionTo: g.pX, replaceWith: g.bG }),
                 ),
             });
-        return (0, n.jsx)("div", {
-            className: w.WA,
-            children: (0, n.jsx)(o.Fmo, {
+        return (0, s.jsx)("div", {
+            className: f.WA,
+            children: (0, s.jsx)(d.Fmo, {
                 forceLevel: 1,
                 children:
-                    null != t
-                        ? (0, n.jsxs)(n.Fragment, {
+                    null != e
+                        ? (0, s.jsxs)(s.Fragment, {
                               children: [
-                                  (0, n.jsx)(u.A, { show: !0, className: w.wm }),
-                                  (0, n.jsx)(p.g, { splash: t, children: e }),
+                                  (0, s.jsx)(h.A, { show: !0, className: f.wm }),
+                                  (0, s.jsx)(_.A, { splash: e, children: t }),
                               ],
                           })
-                        : (0, n.jsx)(T, { children: e }),
+                        : (0, s.jsx)(j, { children: t }),
             }),
         });
     }
     renderMobile() {
-        return (0, n.jsx)(c.A, {
-            component: a.Fragment,
-            children: a.Children.map(this.props.children, (t) =>
-                a.cloneElement(t, { transitionTo: this.mobileTransitionTo, replaceWith: this.mobileReplaceWith }),
+        return (0, s.jsx)(u.A, {
+            component: r.Fragment,
+            children: r.Children.map(this.props.children, (e) =>
+                r.cloneElement(e, { transitionTo: this.mobileTransitionTo, replaceWith: this.mobileReplaceWith }),
             ),
         });
     }
     render() {
-        let { isMobileWidth: t } = this.state,
-            e = navigator.userAgent.includes("GameLauncher");
-        return t || l.Fr || l.v1 || e ? this.renderMobile() : this.renderDefault();
+        let { isMobileWidth: e } = this.state,
+            t = navigator.userAgent.includes("GameLauncher");
+        return e || a.Fr || a.v1 || t ? this.renderMobile() : this.renderDefault();
     }
 }
-let R = S;
+let y = S;
