@@ -118,7 +118,10 @@ function K(e) {
     $({ type: "VOICE_STATE_UPDATES", voiceStates: t });
 }
 function $(e) {
-    a.h.dispatch(e).catch((t) => x.sZ.resetSocketOnDispatchError({ error: t, action: e.type }));
+    a.h.dispatch(e).catch((t) => {
+        k.error(`dispatchOrResetSocket error during ${e.type}:`, t),
+            x.sZ.resetSocketOnDispatchError({ error: t, action: e.type });
+    });
 }
 function z(e, t, n) {
     let {
