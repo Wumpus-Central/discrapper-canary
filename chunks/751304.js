@@ -13,22 +13,23 @@ var n = r(627968),
     p = r(713517),
     f = r(440938),
     x = r(161918),
-    g = r(597783),
+    g = r(320447),
+    C = r(597783),
     v = r(859587),
     A = r(918838),
-    C = r(536572),
+    k = r(536572),
     I = r(268959),
-    k = r(387945),
-    b = r(638006),
-    y = r(140877),
-    E = r(834384),
-    j = r(157200),
+    b = r(387945),
+    y = r(638006),
+    E = r(140877),
+    j = r(834384),
+    R = r(157200),
     _ = r(561769),
-    R = r(364616),
-    T = r(666839),
-    L = r(935094),
-    P = r(758836),
-    S = r(551497);
+    T = r(364616),
+    L = r(666839),
+    P = r(935094),
+    S = r(758836),
+    N = r(551497);
 let O = l.memo(function (e) {
         let {
                 product: t,
@@ -38,143 +39,145 @@ let O = l.memo(function (e) {
                 hidePrice: m,
                 hidePrimaryCTA: O,
                 hideSecondaryCTA: V,
-                badgeOverride: N,
-                skipLimitedTimeCheck: w,
+                badgeOverride: w,
+                skipLimitedTimeCheck: B,
                 onClickCard: M,
-                onClickPrimaryCTA: B,
-                onClickSecondaryCTA: H,
+                onClickPrimaryCTA: H,
+                onClickSecondaryCTA: U,
                 onMouseEnter: W,
-                onMouseLeave: U,
-                onFocus: D,
-                onBlur: G,
-                primaryCTAText: F,
-                secondaryCTAIcon: z,
-                productNameClassName: K,
+                onMouseLeave: D,
+                onFocus: G,
+                onBlur: F,
+                primaryCTAText: z,
+                secondaryCTAIcon: K,
+                productNameClassName: Q,
                 badgeClassName: Y,
-                cardClassName: Q,
+                cardClassName: q,
                 prioritizedCurrency: X,
-                aspectRatio: q,
+                aspectRatio: Z,
             } = e,
-            { previewingVariantIndex: Z, handleEntering: $, handleLeaving: J } = (0, L.f)(t),
-            ee = (0, _.gZ)() ?? X,
-            et = (0, x.Mk)(),
-            er = et?.tab,
-            en = (0, f.uM)(),
-            el = l.useMemo(() => (0, _.UU)(t, er, en), [t, er, en]),
-            ei = (0, C.s7)(t),
-            es = l.useRef(null),
-            { isHoveringOrFocusing: ea } = (0, p.A)(es),
-            eu = (0, A.U)(t),
-            eo = (0, u.A)(es, eu),
-            { handleCardVisibilityChange: ec } = (0, g.Z)(t.skuId, er === P.G2.CATALOG ? "full" : er),
-            ed = (0, _.ql)(t, h.A.COLLECTIBLES_SHOP_CARD, el);
-        (0, v.x)(ea, t);
-        let em = t.type === o.R.VARIANTS_GROUP && !a,
-            eh = l.useMemo(() => ({ maxVariantsToShow: 4, onClick: ed }), [ed]),
-            ep = !O || !V,
-            ef = !(m && i) || em,
-            ex = ef || ep,
-            eg = ep || em;
+            { previewingVariantIndex: $, handleEntering: J, handleLeaving: ee } = (0, P.f)(t),
+            et = (0, _.gZ)() ?? X,
+            er = (0, x.Mk)(),
+            en = er?.tab,
+            el = (0, f.uM)(),
+            ei = l.useMemo(() => (0, _.UU)(t, en, el), [t, en, el]),
+            es = (0, k.s7)(t),
+            ea = l.useRef(null),
+            { isHoveringOrFocusing: eu } = (0, p.A)(ea),
+            eo = (0, A.U)(t),
+            ec = (0, u.A)(ea, eo),
+            { handleCardVisibilityChange: ed } = (0, C.Z)(t.skuId, en === S.G2.CATALOG ? "full" : en),
+            em = (0, _.ql)(t, h.A.COLLECTIBLES_SHOP_CARD, ei);
+        (0, v.x)(eu, t);
+        let { enabled: eh } = (0, g.P)("ProductCard"),
+            ep = t.type === o.R.BUNDLE && eh && t.previewAssets?.fgStatic != null,
+            ef = t.type === o.R.VARIANTS_GROUP && !a,
+            ex = l.useMemo(() => ({ maxVariantsToShow: 4, onClick: em }), [em]),
+            eg = !O || !V,
+            eC = !(m && i) || ef,
+            ev = eC || eg,
+            eA = eg || ef;
         return (0, n.jsx)(c.L, {
-            innerRef: es,
-            onChange: ec,
+            innerRef: ea,
+            onChange: ed,
             threshold: 0,
             children: (0, n.jsx)(d.sqX, {
-                ref: eo,
-                onClick: M ?? ed,
-                "aria-label": ei,
-                className: s()(Q, S.ty, { [S.yo]: ea }),
-                onFocus: () => D?.(t.skuId),
-                onBlur: () => G?.(t.skuId),
+                ref: ec,
+                onClick: M ?? em,
+                "aria-label": es,
+                className: s()(q, N.ty, { [N.yo]: eu }),
+                onFocus: () => G?.(t.skuId),
+                onBlur: () => F?.(t.skuId),
                 onMouseEnter: () => W?.(t.skuId),
-                onMouseLeave: () => U?.(t.skuId),
+                onMouseLeave: () => D?.(t.skuId),
                 children: (0, n.jsxs)("div", {
-                    className: S.qt,
-                    style: { aspectRatio: q },
+                    className: N.qt,
+                    style: { aspectRatio: Z },
                     children: [
                         (0, n.jsx)("div", {
-                            className: s()(S.Dq, { [S.$r]: !i || ef || eg }),
-                            children: (0, n.jsx)(b.A, { skuId: t.skuId, isCardHovered: ea, overrideVariantIndex: Z }),
+                            className: s()(N.Dq, { [N.$r]: !i || eC || eA, [N.T9]: ep }),
+                            children: (0, n.jsx)(y.A, { skuId: t.skuId, isCardHovered: eu, overrideVariantIndex: $ }),
                         }),
                         (0, n.jsxs)("div", {
-                            className: S.N1,
+                            className: N.N1,
                             children: [
                                 (0, n.jsx)(I.A, {
                                     skuId: t.skuId,
-                                    badgeOverride: N,
+                                    badgeOverride: w,
                                     className: Y,
-                                    prioritizedCurrency: ee,
-                                    skipLimitedTimeCheck: w,
+                                    prioritizedCurrency: et,
+                                    skipLimitedTimeCheck: B,
                                 }),
-                                !r && (0, n.jsx)(T.A, { skuId: t.skuId, isCardHovered: ea }),
+                                !r && (0, n.jsx)(L.A, { skuId: t.skuId, isCardHovered: eu }),
                             ],
                         }),
-                        ex &&
+                        ev &&
                             (0, n.jsxs)(n.Fragment, {
                                 children: [
-                                    (0, n.jsx)("div", { className: S.wY }),
+                                    (0, n.jsx)("div", { className: N.wY }),
                                     (0, n.jsxs)("div", {
-                                        className: S.xQ,
+                                        className: N.xQ,
                                         children: [
-                                            ef &&
+                                            eC &&
                                                 (0, n.jsxs)("div", {
-                                                    className: S.xE,
+                                                    className: N.xE,
                                                     children: [
                                                         !(i && m) &&
                                                             (0, n.jsxs)("div", {
-                                                                className: S.Ly,
+                                                                className: N.Ly,
                                                                 children: [
                                                                     !i &&
-                                                                        (0, n.jsx)(k.A, {
+                                                                        (0, n.jsx)(b.A, {
                                                                             skuId: t.skuId,
-                                                                            className: s()(K, S.tZ),
+                                                                            className: s()(Q, N.tZ),
                                                                         }),
                                                                     !m &&
                                                                         (0, n.jsx)("div", {
-                                                                            className: S.oh,
+                                                                            className: N.oh,
                                                                             "aria-hidden": !0,
-                                                                            children: (0, n.jsx)(y.A, {
+                                                                            children: (0, n.jsx)(E.A, {
                                                                                 skuId: t.skuId,
-                                                                                prioritizedCurrency: ee,
+                                                                                prioritizedCurrency: et,
                                                                             }),
                                                                         }),
                                                                 ],
                                                             }),
-                                                        em &&
-                                                            (0, n.jsx)(R.A, {
+                                                        ef &&
+                                                            (0, n.jsx)(T.A, {
                                                                 skuId: t.skuId,
-                                                                isCollapsed: !ea,
-                                                                onVariantEnter: $,
-                                                                onVariantExit: J,
-                                                                overflowProps: eh,
+                                                                isCollapsed: !eu,
+                                                                onVariantEnter: J,
+                                                                onVariantExit: ee,
+                                                                overflowProps: ex,
                                                             }),
                                                     ],
                                                 }),
-                                            ep &&
+                                            eg &&
                                                 (0, n.jsx)("div", {
-                                                    className: S.Vs,
+                                                    className: N.Vs,
                                                     children: (0, n.jsxs)(d.ButtonGroup, {
                                                         wrap: !1,
-                                                        className: S.Ld,
+                                                        className: N.Ld,
                                                         fullWidth: !0,
                                                         children: [
                                                             !O &&
-                                                                (0, n.jsx)(E.A, {
-                                                                    skuId: t.skuId,
-                                                                    cardRef: es,
-                                                                    onClick: B,
-                                                                    text: F,
-                                                                    prioritizedCurrency: ee,
-                                                                    onClickAnalytics: el,
-                                                                }),
-                                                            !V &&
                                                                 (0, n.jsx)(j.A, {
                                                                     skuId: t.skuId,
-                                                                    cardRef: es,
+                                                                    cardRef: ea,
                                                                     onClick: H,
-                                                                    icon: z,
-                                                                    prioritizedCurrency: ee,
-                                                                    onClickAnalytics: el,
+                                                                    text: z,
+                                                                    prioritizedCurrency: et,
+                                                                    onClickAnalytics: ei,
+                                                                }),
+                                                            !V &&
+                                                                (0, n.jsx)(R.A, {
+                                                                    skuId: t.skuId,
+                                                                    cardRef: ea,
+                                                                    onClick: U,
+                                                                    icon: K,
+                                                                    prioritizedCurrency: et,
+                                                                    onClickAnalytics: ei,
                                                                 }),
                                                         ],
                                                     }),

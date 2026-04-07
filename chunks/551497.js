@@ -11,6 +11,7 @@ e.exports = {
     Vs: "footerButtonContainer_fcbddd",
     Ld: "footerButtonGroup_fcbddd",
     yo: "hovered_fcbddd",
+    T9: "noHoverLift_fcbddd",
     wY: "footerGradient_fcbddd",
     tZ: "productName_fcbddd",
 };
