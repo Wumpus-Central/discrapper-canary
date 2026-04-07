@@ -1309,7 +1309,10 @@ async function rm() {
             e.getNcModels?.().then((e) => {
                 (tN = e), r.emitChange();
             }),
-            r.emitChange();
+            r.emitChange(),
+            await eg.Ay.ensureModule("discord_voice");
+        let t = eg.Ay.requireModule("discord_voice");
+        t.setupKrispPath?.();
     } catch (t) {
         eP.warn(`Failed to load Krisp module: ${t.message}`), eE.A.captureException(t);
         let e = eM.CO.INITIALIZED;
