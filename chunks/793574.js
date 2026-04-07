@@ -119,6 +119,9 @@ var r = (function (e) {
         (e.GUILD_POWERUPS_MARKETING_VIDEO_MODAL = "guild powerups - marketing video modal"),
         (e.GUILD_BOOSTING_PREMIUM_UPSELL = "guild boosting premium upsell"),
         (e.GUILD_BOOSTING_FIRST_TIME_BOOSTER_UPSELL = "guild boosting first time booster upsell"),
+        (e.GUILD_BOOSTING_ANNOUNCEMENT_MESSAGE = "guild boosting announcement message"),
+        (e.GUILD_BOOSTING_ANNOUNCEMENT_MESSAGE_FIRST_TIME_BOOSTER =
+            "guild boosting announcement message first time booster"),
         (e.RPC = "rpc"),
         (e.BILLING_STANDALONE = "billing standalone"),
         (e.GUILD_CHANNEL_LIST = "guild channel list"),

@@ -1,4 +1,4 @@
-n.d(t, { A: () => w });
+n.d(t, { A: () => B });
 var i,
     l = n(627968),
     a = n(64700),
@@ -23,7 +23,7 @@ var i,
     S = n(888675),
     x = n(652215),
     R = n(985018),
-    O = n(485986),
+    O = n(272435),
     M = n(274993),
     D = n(218924);
 let L = { id: null, name: "❤️", animated: !1 };
@@ -71,6 +71,11 @@ function j(e) {
                     section: x.JJy.CHANNEL_TEXT_AREA,
                     object: x.ZSU.BOOST_ANNOUNCEMENT_UPSELL,
                 },
+                analyticsLocations: [
+                    i
+                        ? _.A.GUILD_BOOSTING_ANNOUNCEMENT_MESSAGE_FIRST_TIME_BOOSTER
+                        : _.A.GUILD_BOOSTING_ANNOUNCEMENT_MESSAGE,
+                ],
             }),
             i &&
                 !s &&
@@ -101,7 +106,7 @@ function y(e) {
     });
 }
 function k(e) {
-    let { guild: t } = e;
+    let { guild: t, firstBooster: n } = e;
     return (0, l.jsx)("div", {
         className: O.nx,
         children: (0, l.jsx)(E.A, {
@@ -112,6 +117,11 @@ function k(e) {
                 section: x.JJy.CHANNEL_TEXT_AREA,
                 object: x.ZSU.BOOST_ANNOUNCEMENT_UPSELL,
             },
+            analyticsLocations: [
+                n
+                    ? _.A.GUILD_BOOSTING_ANNOUNCEMENT_MESSAGE_FIRST_TIME_BOOSTER
+                    : _.A.GUILD_BOOSTING_ANNOUNCEMENT_MESSAGE,
+            ],
         }),
     });
 }
@@ -143,7 +153,6 @@ function G(e) {
     return (0, l.jsxs)("div", {
         className: O.ds,
         children: [
-            (0, l.jsx)(g.A, { className: O.M_, forceReducedMotion: !a }),
             (0, l.jsx)(P, { className: O.S8, imageClassName: O.ar, animate: a }),
             (0, l.jsx)(y, {
                 title: o
@@ -151,7 +160,7 @@ function G(e) {
                     : R.intl.format(R.t.SbSWvY, { username: r.nick, usernameHook: s, numSubscriptions: (0, T.A)(t) }),
                 body: R.intl.format(R.t.dWm8Iu, { learnMoreHook: (e) => (0, l.jsx)(b, { guild: n, children: e }) }),
             }),
-            null != n && (0, l.jsx)(k, { guild: n }),
+            null != n && (0, l.jsx)(k, { guild: n, firstBooster: o }),
         ],
     });
 }
@@ -199,7 +208,7 @@ function F(e) {
         ],
     });
 }
-function w(e) {
+function B(e) {
     let t,
         { message: n, guild: i, usernameHook: a, compact: r } = e;
     t = r

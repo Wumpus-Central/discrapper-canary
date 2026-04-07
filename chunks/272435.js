@@ -13,7 +13,6 @@ e.exports = {
     qr: "footer__22cef",
     Zf: "heartButton__22cef",
     ds: "compactContainer__22cef",
-    M_: "compactBackground__22cef",
     S8: "compactGemWrapper__22cef",
     ar: "compactGemImage__22cef",
     fi: "compactContent__22cef",
