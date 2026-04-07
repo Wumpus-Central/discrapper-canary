@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => T }), n(321073);
+n.d(t, { A: () => b }), n(321073);
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -16,7 +16,7 @@ var i = n(627968),
     _ = n(82566),
     p = n(652215),
     A = n(985018),
-    f = n(959132);
+    f = n(392165);
 function j(e) {
     let { guild: t, channel: s } = e,
         l = (0, h.Rg)(s.id);
@@ -70,17 +70,17 @@ let N = s.memo(function () {
         let { index: t } = e;
         return (0, i.jsx)(d.Text, { variant: "text-xs/normal", className: f.Ks, children: "\xb7" }, `separator-${t}`);
     }),
-    b = s.memo(function (e) {
+    C = s.memo(function (e) {
         let {
                 channel: t,
                 category: s,
                 guild: l,
                 isFirstChannel: g,
                 isLastChannel: j,
-                tooltipDirection: b = "right",
+                tooltipDirection: C = "right",
             } = e,
-            T = (0, h.Rg)(t.id, s.id),
-            C = (0, h.eK)(t.id, s.id),
+            b = (0, h.Rg)(t.id, s.id),
+            T = (0, h.eK)(t.id, s.id),
             I = (0, h.v)(t.id, s.id),
             v = (0, h.fS)(l.id, s.id),
             S = null != (0, _.A)(l).find((e) => e.id === t.id);
@@ -90,11 +90,11 @@ let N = s.memo(function () {
                     asContainer: !0,
                     __unsupportedReactNodeAsText: I ?? v,
                     delay: 500,
-                    position: b,
+                    position: C,
                     children: (0, i.jsxs)(d.DUT, {
-                        className: r()(f.WG, { [f.Qn]: g, [f.wp]: j, [f.r9]: C }),
+                        className: r()(f.WG, { [f.Qn]: g, [f.wp]: j, [f.r9]: T }),
                         onClick: (e) => {
-                            if (!C)
+                            if (!T)
                                 return (
                                     e.stopPropagation(),
                                     (0, u.S)(l.id, t.id)
@@ -113,9 +113,9 @@ let N = s.memo(function () {
                                       let { default: e } = await Promise.all([
                                           n.e("97262"),
                                           n.e("21420"),
-                                          n.e("57287"),
+                                          n.e("2381"),
                                           n.e("40394"),
-                                          n.e("69701"),
+                                          n.e("15512"),
                                       ]).then(n.bind(n, 698193));
                                       return (n) => (0, i.jsx)(e, { ...n, channel: t, guild: l });
                                   })
@@ -123,8 +123,8 @@ let N = s.memo(function () {
                                       let { default: e } = await Promise.all([
                                           n.e("97262"),
                                           n.e("21420"),
-                                          n.e("57287"),
-                                          n.e("34180"),
+                                          n.e("2381"),
+                                          n.e("79841"),
                                       ]).then(n.bind(n, 370372));
                                       return (n) => (0, i.jsx)(e, { ...n, channel: t, guild: l });
                                   });
@@ -142,7 +142,7 @@ let N = s.memo(function () {
                                                 className: f.be,
                                                 variant: "text-md/medium",
                                                 lineClamp: 1,
-                                                color: C ? "text-muted" : "text-default",
+                                                color: T ? "text-muted" : "text-default",
                                                 children: t.name,
                                             }),
                                         }),
@@ -165,7 +165,7 @@ let N = s.memo(function () {
                             (0, i.jsx)("div", {
                                 className: f.tN,
                                 children: (0, u.S)(t.guild_id, t.id)
-                                    ? (0, i.jsx)(d.P7L, { checked: T, disabled: C })
+                                    ? (0, i.jsx)(d.P7L, { checked: b, disabled: T })
                                     : (0, i.jsx)(d.Button, {
                                           size: "sm",
                                           variant: "secondary",
@@ -181,7 +181,7 @@ let N = s.memo(function () {
             ],
         });
     });
-function T(e) {
+function b(e) {
     let { categories: t, guild: n, className: l, hasSidebar: r } = e,
         a = s.useCallback(
             (e) => {
@@ -197,7 +197,7 @@ function T(e) {
                 return null == a
                     ? null
                     : (0, i.jsx)(
-                          b,
+                          C,
                           {
                               category: l.channel,
                               channel: a.channel,

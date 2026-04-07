@@ -582,6 +582,7 @@ var r = (function (e) {
             (e[(e.PREMIUM_MARKETING_MOMENT_USER_SETTINGS_OFFER_BADGE = 729)] =
                 "PREMIUM_MARKETING_MOMENT_USER_SETTINGS_OFFER_BADGE"),
             (e[(e.NITRO_TAB_QUEST_ORB_MULTIPLIER_TOOLTIP = 730)] = "NITRO_TAB_QUEST_ORB_MULTIPLIER_TOOLTIP"),
+            (e[(e.PIN_CHANNEL_NEW_BADGE = 731)] = "PIN_CHANNEL_NEW_BADGE"),
             e
         );
     })({}),

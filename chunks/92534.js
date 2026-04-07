@@ -1,8 +1,8 @@
-n.d(t, { B: () => p });
+n.d(t, { B: () => g });
 var i = n(627968),
     r = n(64700),
-    l = n(308368),
-    a = n(308528),
+    a = n(308368),
+    l = n(308528),
     s = n(442433),
     o = n(49229),
     d = n(956793),
@@ -12,8 +12,8 @@ var i = n(627968),
     h = n(734057),
     _ = n(652215),
     m = n(381941),
-    g = n(985018);
-function p(e) {
+    p = n(985018);
+function g(e) {
     return {
         handlePrimaryAction: r.useCallback(
             (t) => {
@@ -22,7 +22,7 @@ function p(e) {
                         if (null == t.userId) return;
                         (async () => {
                             try {
-                                let e = await a.A.getOrEnsurePrivateChannel(t.userId);
+                                let e = await l.A.getOrEnsurePrivateChannel(t.userId);
                                 d.default.selectPrivateChannel(e);
                             } catch {}
                         })();
@@ -68,7 +68,7 @@ function p(e) {
                         break;
                     case u.c.SEND_ACTIVITY_INVITE:
                         if (null == t.userId || null == t.activity) return;
-                        l.A.sendActivityInviteUser({
+                        a.A.sendActivityInviteUser({
                             type: _.xL.JOIN,
                             userId: t.userId,
                             activity: t.activity,
@@ -77,7 +77,7 @@ function p(e) {
                         break;
                     case u.c.ASK_TO_JOIN:
                         if (null == t.userId || null == t.activity) return;
-                        l.A.sendActivityInviteUser({
+                        a.A.sendActivityInviteUser({
                             type: _.xL.JOIN_REQUEST,
                             userId: t.userId,
                             activity: t.activity,
@@ -90,14 +90,14 @@ function p(e) {
                             n = t.userId;
                         (async () => {
                             try {
-                                let t = await a.A.getOrEnsurePrivateChannel(n);
+                                let t = await l.A.getOrEnsurePrivateChannel(n);
                                 d.default.selectPrivateChannel(t);
                                 let i = h.A.getChannel(t);
                                 if (null == i) return;
                                 !0 === e.extra.fake_inventory_item
                                     ? await (0, c.J)({
                                           channel: i,
-                                          content: g.intl.formatToPlainString(g.t.UVBA9g, {
+                                          content: p.intl.formatToPlainString(p.t.UVBA9g, {
                                               gameName: e.extra.game_name,
                                           }),
                                           whenReady: !0,
@@ -106,7 +106,7 @@ function p(e) {
                                       })
                                     : await (0, c.d)({
                                           channel: i,
-                                          content: g.intl.string(g.t.DwAcMz),
+                                          content: p.intl.string(p.t.DwAcMz),
                                           entry: e,
                                           whenReady: !0,
                                           doNotNotifyOnError: !1,
@@ -134,7 +134,7 @@ function p(e) {
                     (0, s.L3)(
                         e.event,
                         async () => {
-                            let { default: t } = await Promise.all([n.e("97262"), n.e("32418"), n.e("45689")]).then(
+                            let { default: t } = await Promise.all([n.e("97262"), n.e("32418"), n.e("54631")]).then(
                                 n.bind(n, 668569),
                             );
                             return (n) => (0, i.jsx)(t, { ...n, user: e.user, appContext: _.BRT.APP });
@@ -156,7 +156,7 @@ function p(e) {
                             n.e("97262"),
                             n.e("42128"),
                             n.e("39778"),
-                            n.e("72164"),
+                            n.e("34408"),
                         ]).then(n.bind(n, 385913));
                         return (n) => (0, i.jsx)(t, { ...n, user: e.user, channel: e.channel, showModalItems: !1 });
                     });
@@ -171,7 +171,7 @@ function p(e) {
                 case u.K.GUILD_TEXT_CHANNEL:
                     if (null == e.channel || null == e.guild) return;
                     (0, s.L3)(e.event, async () => {
-                        let { default: t } = await Promise.all([n.e("97262"), n.e("57287"), n.e("77666")]).then(
+                        let { default: t } = await Promise.all([n.e("97262"), n.e("2381"), n.e("77666")]).then(
                             n.bind(n, 370372),
                         );
                         return (n) => (0, i.jsx)(t, { ...n, channel: e.channel, guild: e.guild });
@@ -182,7 +182,7 @@ function p(e) {
                     (0, s.L3)(e.event, async () => {
                         let { default: t } = await Promise.all([
                             n.e("97262"),
-                            n.e("57287"),
+                            n.e("2381"),
                             n.e("40394"),
                             n.e("30997"),
                         ]).then(n.bind(n, 698193));
@@ -193,7 +193,7 @@ function p(e) {
                     if (null == e.user || null == e.channelId) return;
                     let t = e.guild?.id ?? null;
                     (0, s.L3)(e.event, async () => {
-                        let { default: r } = await Promise.all([n.e("97262"), n.e("32418"), n.e("45689")]).then(
+                        let { default: r } = await Promise.all([n.e("97262"), n.e("32418"), n.e("54631")]).then(
                             n.bind(n, 668569),
                         );
                         return (n) =>

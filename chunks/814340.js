@@ -177,7 +177,7 @@ class F extends l.PureComponent {
                     case L.rbe.GUILD_FORUM:
                     case L.rbe.GUILD_MEDIA:
                         return (0, u.L3)(e, async () => {
-                            let { default: e } = await Promise.all([n.e("97262"), n.e("57287"), n.e("77666")]).then(
+                            let { default: e } = await Promise.all([n.e("97262"), n.e("2381"), n.e("77666")]).then(
                                 n.bind(n, 370372),
                             );
                             return (t) => (0, i.jsx)(e, { ...t, channel: l, guild: s, onSelect: v.jD });
@@ -187,7 +187,7 @@ class F extends l.PureComponent {
                         return (0, u.L3)(e, async () => {
                             let { default: e } = await Promise.all([
                                 n.e("97262"),
-                                n.e("57287"),
+                                n.e("2381"),
                                 n.e("40394"),
                                 n.e("30997"),
                             ]).then(n.bind(n, 698193));

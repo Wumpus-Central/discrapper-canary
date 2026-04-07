@@ -125,7 +125,7 @@ class B extends M.Ay {
         let l = b.A.getGuild(t.getGuildId());
         null != l &&
             (0, u.L3)(e, async () => {
-                let { default: e } = await Promise.all([n.e("97262"), n.e("57287"), n.e("77666")]).then(
+                let { default: e } = await Promise.all([n.e("97262"), n.e("2381"), n.e("77666")]).then(
                     n.bind(n, 370372),
                 );
                 return (n) => (0, i.jsx)(e, { ...n, channel: t, guild: l });
