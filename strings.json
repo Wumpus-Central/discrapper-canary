@@ -1683,6 +1683,7 @@
   "TXCmfL": "less than an hour ago",
   "LLS19o": "Current Device",
   "zZp618": "Here are all the devices that are currently logged in with your Discord account. You can log out of each one individually or all other devices.\\n\\nIf you see an entry you don't recognize, log out of that device and change your Discord account password immediately.",
+  "G7zwOk": "!!{count}!! {count, plural, one {device} other {devices} }",
   "Dlihx8": "Link New Device",
   "cDHCNY": "Unknown",
   "xx1MWc": "Other Devices",
