@@ -16,25 +16,27 @@ let d = "orb-checkout-payment-modal-key",
                 onCheckoutSuccess: n,
                 analyticsLocations: i = [],
                 analyticsSourceLocation: s,
-                onCloseCallback: u,
+                applicationId: u,
+                onCloseCallback: m,
             } = e,
-            m = (0, r.A)(),
-            h = !1;
-        return p({
-            loadId: m,
+            p = (0, r.A)(),
+            x = !1;
+        return h({
+            loadId: p,
             skuId: t,
             onCheckoutSuccess: (e) => {
-                h || n(e), (h = !0);
+                x || n(e), (x = !0);
             },
+            applicationId: u,
             analyticsLocations: i,
             analyticsSourceLocation: s,
             onCloseCallback: () => {
-                (0, l.S)({ checkoutSucceeded: h }), u?.();
+                (0, l.S)({ checkoutSucceeded: x }), m?.();
             },
             onCloseRequest: () => {
-                h ||
+                x ||
                     (0, o.g)(c.HAw.PAYMENT_FLOW_CANCELED, {
-                        loadId: m,
+                        loadId: p,
                         skuId: t,
                         analyticsLocations: i,
                         analyticsSourceLocation: s,
@@ -43,15 +45,16 @@ let d = "orb-checkout-payment-modal-key",
             },
         });
     },
-    p = (e) => {
+    h = (e) => {
         let {
             loadId: t,
             skuId: n,
             onCheckoutSuccess: r,
             analyticsLocations: a = [],
             analyticsSourceLocation: l,
-            onCloseCallback: o,
-            onCloseRequest: c,
+            applicationId: o,
+            onCloseCallback: c,
+            onCloseRequest: u,
         } = e;
         return (
             i.h.wait(() => {
@@ -60,10 +63,11 @@ let d = "orb-checkout-payment-modal-key",
             (0, s.Tt)().openCheckoutModal({
                 loadId: t,
                 skuId: n,
+                applicationId: o,
                 analyticsLocations: a,
                 analyticsSourceLocation: l,
                 flowSpecificOptions: { onCheckoutSuccess: r },
-                openModalOptions: { onCloseCallback: o, modalKey: d, onCloseRequest: c },
+                openModalOptions: { onCloseCallback: c, modalKey: d, onCloseRequest: u },
             })
         );
     };

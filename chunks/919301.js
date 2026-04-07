@@ -76,8 +76,8 @@ let p = (0, a.Mz)(),
                     [m, c, a, t, o, f],
                 ),
                 g = i.useMemo(
-                    () => ({ skuId: t, loadId: n, flowSpecificOptions: d, analyticsLocations: f }),
-                    [t, n, d, f],
+                    () => ({ skuId: t, loadId: n, applicationId: a, flowSpecificOptions: d, analyticsLocations: f }),
+                    [t, n, a, d, f],
                 ),
                 A = i.useMemo(
                     () => ({ sharedCheckoutContext: g, paymentModalProps: E, renderModalProps: l }),

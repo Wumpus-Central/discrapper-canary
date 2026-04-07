@@ -114,9 +114,9 @@ class T {
             c = this.createDefinedStepConfigsArray([i, s, o, ...(r ? [] : l.hh), u]);
         return null != n && c.push({ key: a.pn.CONFIRM, renderStep: n.renderStep, options: n.options }), c;
     }
-    getApplicationId(e) {
+    getApplicationIdFor1PShopSKU(e) {
         return this.checkoutFlow === c.C.ORB_CHECKOUT
-            ? (0, u.p)(e)
+            ? (0, u.P)(e)
             : this.checkoutFlow === c.C.COLLECTIBLES_CHECKOUT
               ? E.FYj
               : void 0;
@@ -137,7 +137,7 @@ class T {
             h = d ?? (0, i.A)(),
             { modalKey: m } = t,
             E = this.generateRenderHeader(),
-            g = _ ?? this.getApplicationId(c),
+            g = _ ?? this.getApplicationIdFor1PShopSKU(c),
             A = !1,
             I = a ?? void 0;
         return (0, s.mMO)(
