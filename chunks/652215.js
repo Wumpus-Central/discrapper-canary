@@ -5104,6 +5104,7 @@ var nl = (function (e) {
             (e.CDM_LOAD_STATUS = "cdm_load_status"),
             (e.CDM_READY_COMPLETE = "cdm_ready_complete"),
             (e.DESKTOP_TTI = "desktop_tti"),
+            (e.DESKTOP_TTI_V2 = "desktop_tti_v2"),
             (e.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY = "desktop_perf_attributed_module_memory"),
             (e.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY_CALLSTACK = "desktop_perf_attributed_module_memory_callstack"),
             (e.DESKTOP_PERF_CPU_PROFILE = "desktop_perf_cpu_profile"),
