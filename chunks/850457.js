@@ -123,6 +123,7 @@ function v(e) {
                                           u.A,
                                           {
                                               tag: "span",
+                                              className: b.C3,
                                               onClick: () =>
                                                   (0, p.openUserProfileModal)({
                                                       userId: t.userId,
@@ -132,7 +133,6 @@ function v(e) {
                                               children: (0, i.jsx)(r.Text, {
                                                   variant: "text-sm/semibold",
                                                   tag: "span",
-                                                  className: b.C3,
                                                   children: e,
                                               }),
                                           },
