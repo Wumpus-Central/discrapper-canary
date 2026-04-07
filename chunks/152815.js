@@ -17,7 +17,14 @@ var s = n(158954),
     h = n(276478);
 let p = {
         Logitech30P: { title: x.default.jkdhZq, titleParams: { discountPercent: m.aW }, body: x.default.Yl5ww1 },
+        "Logitech G": { title: x.default.jkdhZq, titleParams: { discountPercent: m.aW }, body: x.default.Yl5ww1 },
         Logitech5PNI: {
+            title: x.default.zeBjoX,
+            titleParams: { discountPercent: m.y$ },
+            body: x.default.fC4abC,
+            bodyParams: { months: 6 },
+        },
+        "Logitech 5%": {
             title: x.default.zeBjoX,
             titleParams: { discountPercent: m.y$ },
             body: x.default.fC4abC,
