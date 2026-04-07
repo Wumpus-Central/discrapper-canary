@@ -9,7 +9,7 @@ function o(e) {
     for (let e of (l.A.markGameReported(t), i))
         if ("icon" === e) {
             let e = s[t];
-            null != e && r.A.uploadIcon(t, n, e);
+            null != e && r.Ay.uploadIcon(t, n, e);
             return;
         } else new a.A("GameStoreIconManager").log(`Could not find missing data key: ${e}`);
 }

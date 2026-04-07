@@ -138,7 +138,7 @@ function q(i, t) {
             let e = (0, $.A)(i, k.jUm.EMBEDDED),
                 n = g.A.getVoiceChannelId(),
                 l = _.A.getChannel(n);
-            await o.A.join({
+            await o.Ay.join({
                 userId: t.id,
                 sessionId: i.session_id,
                 applicationId: i.application_id,
@@ -207,7 +207,7 @@ function q(i, t) {
                                                         let { default: t } = await Promise.all([
                                                             e.e("43600"),
                                                             e.e("28136"),
-                                                            e.e("67893"),
+                                                            e.e("72469"),
                                                         ]).then(e.bind(e, 234355));
                                                         return (e) =>
                                                             (0, n.jsx)(t, {

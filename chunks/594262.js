@@ -31,8 +31,8 @@ var r = n(64700),
     L = n(461213),
     w = n(287809),
     M = n(977997),
-    P = n(689168),
-    x = n(194871),
+    x = n(689168),
+    P = n(194871),
     k = n(723702),
     U = n(144914),
     G = n(652215),
@@ -57,14 +57,14 @@ function B(e) {
         J = H.id === Q?.id,
         ee = (0, _.A)({ channelId: (0, d.H)(B?.location), userId: H.id, activity: n }),
         et = (0, i.bG)(
-            [C.A, T.A, x.A, y.A],
+            [C.A, T.A, P.A, y.A],
             () =>
                 X ||
                 (null != Z &&
                     (0, U.A)({
                         LibraryApplicationStore: C.A,
                         LaunchableGameStore: T.A,
-                        DispatchApplicationStore: x.A,
+                        DispatchApplicationStore: P.A,
                         ConnectedAppsStore: y.A,
                         applicationId: Z,
                     })),
@@ -76,8 +76,8 @@ function B(e) {
             }),
         ),
         er = (0, i.bG)(
-            [P.A],
-            () => null != n && null != n.application_id && P.A.getState(n.application_id, G.xL.JOIN) === G.eAD.LOADING,
+            [x.A],
+            () => null != n && null != n.application_id && x.A.getState(n.application_id, G.xL.JOIN) === G.eAD.LOADING,
         ),
         ei = (0, A.h)(Z),
         es = (0, I.e)(ei),
@@ -131,7 +131,7 @@ function B(e) {
             let n = (0, h.A)(t, G.jUm.EMBEDDED),
                 r = D.A.getVoiceChannelId(),
                 i = S.A.getChannel(r);
-            await a.A.join({
+            await a.Ay.join({
                 userId: e.id,
                 sessionId: ep,
                 applicationId: Z,

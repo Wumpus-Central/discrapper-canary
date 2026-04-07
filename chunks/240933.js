@@ -33,7 +33,7 @@ function c(e, t, n, c, d) {
         },
         confirmText: u.intl.string(u.t.VJlc0S),
         onConfirmClick: (s, a) => {
-            r.A.join({ userId: n.id, sessionId: f, applicationId: d, channelId: e.id, messageId: t.id }),
+            r.Ay.join({ userId: n.id, sessionId: f, applicationId: d, channelId: e.id, messageId: t.id }),
                 i.A.updateNotificationStatus(a),
                 g("join");
         },

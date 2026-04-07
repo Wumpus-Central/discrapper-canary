@@ -173,7 +173,7 @@ class M extends i.PureComponent {
                           },
                           onDisable: () => {
                               let e = v.A.getFocusedRunningGame();
-                              null != e && f.A.toggleOverlay(e, !1, !1);
+                              null != e && f.Ay.toggleOverlay(e, !1, !1);
                           },
                           onCrashDisabled: () => {
                               let e = this.pid ?? v.A.getTargetPID();

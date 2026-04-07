@@ -1,4 +1,4 @@
-n.d(t, { A: () => w });
+n.d(t, { A: () => O });
 var a = n(627968),
     i = n(64700),
     s = n(503698),
@@ -13,24 +13,22 @@ var a = n(627968),
     x = n(73153),
     p = n(587895),
     g = n(429913),
-    _ = n(303054),
-    f = n(409626),
-    b = n(692969),
-    v = n(760751),
+    f = n(303054),
+    _ = n(409626),
+    v = n(692969),
+    b = n(760751),
     j = n(403362),
-    C = n(603047),
     A = n(435738),
-    T = n(99753),
-    S = n(868068),
+    C = n(99753),
     y = n(476398),
-    E = n(405311),
-    N = n(424994),
-    I = n(973350),
-    k = n(930821);
-let R = [
+    S = n(405311),
+    E = n(424994),
+    T = n(913351),
+    N = n(310086);
+let I = [
     {
         key: "type",
-        cellClassName: l()(I.Hn, I.T$),
+        cellClassName: l()(T.Hn, T.T$),
         render(e) {
             let { type: t } = e;
             return (0, a.jsx)(h.Text, { variant: "text-md/semibold", children: d.ContentInventoryEntryType[t] });
@@ -38,7 +36,7 @@ let R = [
     },
     {
         key: "count",
-        cellClassName: l()(I.Hn, I.MX),
+        cellClassName: l()(T.Hn, T.MX),
         render(e) {
             let { entries: t } = e;
             return (0, a.jsx)("div", {
@@ -48,16 +46,16 @@ let R = [
     },
     {
         key: "only?",
-        cellClassName: I.Hn,
+        cellClassName: T.Hn,
         render(e) {
             let { type: t } = e;
-            return (0, a.jsx)(O, { type: t });
+            return (0, a.jsx)(k, { type: t });
         },
     },
 ];
-function O(e) {
+function k(e) {
     let { type: t } = e,
-        n = (0, u.bG)([T.A], () => T.A.getFilters()),
+        n = (0, u.bG)([C.A], () => C.A.getFilters()),
         i = n?.types?.has(t) ?? !1;
     return (0, a.jsx)(h.dOG, {
         checked: i,
@@ -68,11 +66,11 @@ function O(e) {
         },
     });
 }
-function w() {
+function O() {
     var e;
     let t,
-        n = (0, u.bG)([T.A], () => T.A.getFeed(N.X1.GLOBAL_FEED)),
-        s = (0, u.bG)([T.A], () => T.A.getDebugImpressionCappingDisabled()),
+        n = (0, u.bG)([C.A], () => C.A.getFeed(E.X1.GLOBAL_FEED)),
+        s = (0, u.bG)([C.A], () => C.A.getDebugImpressionCappingDisabled()),
         l = (0, u.bG)([A.A], () => A.A.getDebugFastImpressionCappingEnabled()),
         r =
             ((e = n?.entries?.map((e) => e.content)),
@@ -80,15 +78,15 @@ function w() {
                 let n = t[e];
                 return { key: `${e}`, type: n[0].content_type, entries: n };
             })),
-        d = (0, u.bG)([T.A], () => T.A.getFeedState(N.X1.GLOBAL_FEED)?.loading === !0),
-        [O, w] = i.useState(""),
-        M = (0, u.bG)(
-            [v.A, p.A],
-            () => (parseInt(O) > 0 ? O : (v.A.searchGamesByName(O)[0] ?? p.A.getApplicationByName(O)?.id)),
-            [O],
+        d = (0, u.bG)([C.A], () => C.A.getFeedState(E.X1.GLOBAL_FEED)?.loading === !0),
+        [k, O] = i.useState(""),
+        w = (0, u.bG)(
+            [b.A, p.A],
+            () => (parseInt(k) > 0 ? k : (b.A.searchGamesByName(k)[0] ?? p.A.getApplicationByName(k)?.id)),
+            [k],
         ),
-        P = (0, b.A)({ applicationId: M, location: "DevToolsContentInventory", source: f.Ob.DevTools }),
-        L = Object.entries(m.w.get("GameProfileModal") ?? {})
+        D = (0, v.A)({ applicationId: w, location: "DevToolsContentInventory", source: _.Ob.DevTools }),
+        M = Object.entries(m.w.get("GameProfileModal") ?? {})
             .filter((e) => {
                 let [t, n] = e;
                 return n;
@@ -97,19 +95,18 @@ function w() {
                 let [t] = e;
                 return t;
             }),
-        U = (0, g.A)(L).filter(j.Vq),
-        B = (0, u.bG)([C.A], () => C.A.getFakeGameToShow());
+        P = (0, g.A)(M).filter(j.Vq);
     return (0, a.jsx)("div", {
-        className: k.nd,
+        className: N.nd,
         children: (0, a.jsxs)(h.IpV, {
-            className: I.Qs,
+            className: T.Qs,
             children: [
                 (0, a.jsxs)(h.BJc, {
                     gap: 8,
                     children: [
                         (0, a.jsx)(h.Text, { variant: "text-md/semibold", children: "Inventory" }),
-                        r.length > 0 && (0, a.jsx)(_.A, { columns: R, data: r }),
-                        (0, a.jsx)(E.A, {}),
+                        r.length > 0 && (0, a.jsx)(f.A, { columns: I, data: r }),
+                        (0, a.jsx)(S.A, {}),
                         (0, a.jsx)(h.Button, {
                             variant: "primary",
                             text: "Refresh Now",
@@ -117,7 +114,7 @@ function w() {
                             onClick: function () {
                                 x.h.dispatch({
                                     type: "CONTENT_INVENTORY_MANUAL_REFRESH",
-                                    feedId: N.X1.GLOBAL_FEED,
+                                    feedId: E.X1.GLOBAL_FEED,
                                     feature: c.M.INBOX,
                                 });
                             },
@@ -171,38 +168,22 @@ function w() {
                         (0, a.jsx)(h.Text, { variant: "text-md/semibold", children: "Game Profile" }),
                         (0, a.jsx)(h.ksK, {
                             placeholder: "App ID or full name",
-                            onChange: (e) => (0 === e.length || e.length >= 18) && w(e),
+                            onChange: (e) => (0 === e.length || e.length >= 18) && O(e),
                             onKeyDown: (e) => {
-                                "Enter" === e.key && (O === e.currentTarget.value ? P?.(e) : w(e.currentTarget.value));
+                                "Enter" === e.key && (k === e.currentTarget.value ? D?.(e) : O(e.currentTarget.value));
                             },
                             error:
-                                O.length > 0 && null == P ? `No game profile for ${M ?? O + " - try by id"}.` : void 0,
-                            helperText: null != P ? "Game profile found" : void 0,
+                                k.length > 0 && null == D ? `No game profile for ${w ?? k + " - try by id"}.` : void 0,
+                            helperText: null != D ? "Game profile found" : void 0,
                         }),
                         (0, a.jsx)("ul", {
-                            children: U.map((e) =>
+                            children: P.map((e) =>
                                 (0, a.jsx)(
                                     "li",
-                                    { children: (0, a.jsx)(D, { application: e }) },
+                                    { children: (0, a.jsx)(R, { application: e }) },
                                     `follow-game-${e.id}`,
                                 ),
                             ),
-                        }),
-                    ],
-                }),
-                (0, a.jsxs)(h.BJc, {
-                    gap: 8,
-                    children: [
-                        (0, a.jsx)(h.Text, { variant: "text-md/semibold", children: "Activity Sharing" }),
-                        (0, a.jsx)(h.l6P, {
-                            label: "Force show game",
-                            options: S.K.map((e) => ({ label: e, value: e, id: e })),
-                            value: B,
-                            onSelectionChange: function (e) {
-                                x.h.dispatch({ type: "CONTENT_INVENTORY_FORCE_SHOW_GAME_SHARING", gameToShow: e });
-                            },
-                            selectionMode: "single",
-                            fullWidth: !0,
                         }),
                     ],
                 }),
@@ -210,9 +191,9 @@ function w() {
         }),
     });
 }
-let D = (e) => {
+let R = (e) => {
     let { application: t } = e,
-        n = (0, b.A)({ applicationId: t.id, location: "DevToolsContentInventory", source: f.Ob.DevTools });
+        n = (0, v.A)({ applicationId: t.id, location: "DevToolsContentInventory", source: _.Ob.DevTools });
     return (0, a.jsx)(h.DUT, {
         onClick: n,
         children: (0, a.jsx)(h.Text, { variant: "text-xs/normal", color: "text-muted", children: t.name }),

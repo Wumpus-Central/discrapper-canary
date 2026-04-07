@@ -1,4 +1,4 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => b });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
@@ -9,45 +9,45 @@ var i = n(627968),
     c = n(15285),
     u = n(810412),
     m = n(206885),
-    _ = n(833551),
-    g = n(663677),
+    g = n(833551),
+    _ = n(663677),
     x = n(847521),
     A = n(9302),
     h = n(505136),
     p = n(370365),
-    f = n(686533),
-    T = n(985018),
+    T = n(686533),
+    f = n(985018),
     S = n(502040);
-function E() {
+function b() {
     let [e, t] = s.useState(!1),
-        { oopEnabled: n, legacyEnabled: E } = (0, l.cf)([_.default], () => _.default.getGlobalEnabledStatus()),
-        b = !(0, A.supportsOutOfProcess)(),
+        { oopEnabled: n, legacyEnabled: b } = (0, l.cf)([g.default], () => g.default.getGlobalEnabledStatus()),
+        E = !(0, A.supportsOutOfProcess)(),
         C = (0, l.yK)([c.Ay], () => c.Ay.getGamesSeen(!0)).filter((e) => !(0, x.n1)(e)),
-        v = (0, d.A)(C.map((e) => e.id)),
-        N = (e) => {
+        N = (0, d.A)(C.map((e) => e.id)),
+        v = (e) => {
             let t = !e && n;
-            o.A.setEnabled(E, e);
+            o.A.setEnabled(b, e);
             let i = c.Ay.getCurrentGameForAnalytics()?.id ?? null;
             (0, u.Q3)(e, u.OverlayToggledClientSettingType.OOP, i),
-                t && (0, g.L)(u.OverlayToggledClientSettingType.OOP, i);
+                t && (0, _.L)(u.OverlayToggledClientSettingType.OOP, i);
         },
         I = (e, t, n) => {
             let { enabledLegacy: i } = n;
-            r.A.toggleOverlay(t, e, i);
+            r.Ay.toggleOverlay(t, e, i);
         },
         j = s.useMemo(
-            () => (m.O ? (b ? T.intl.string(T.t.C7bLTQ) : T.intl.string(T.t.ndgADE)) : T.intl.string(T.t.m7X4az)),
-            [b],
+            () => (m.O ? (E ? f.intl.string(f.t.C7bLTQ) : f.intl.string(f.t.ndgADE)) : f.intl.string(f.t.m7X4az)),
+            [E],
         );
     return 0 === C.length
-        ? (0, i.jsx)(f.A, {
-              title: T.intl.string(T.t["7BlVIs"]),
+        ? (0, i.jsx)(T.A, {
+              title: f.intl.string(f.t["7BlVIs"]),
               description: j,
-              "aria-label": T.intl.string(T.t["7BlVIs"]),
+              "aria-label": f.intl.string(f.t["7BlVIs"]),
               className: S.dA,
               action: (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, i.jsx)(a.dOG, { checked: n, disabled: b, onChange: (e) => N(e) }),
+                      (0, i.jsx)(a.dOG, { checked: n, disabled: E, onChange: (e) => v(e) }),
                       m.O && (0, i.jsx)("div", { className: S.Kz }),
                   ],
               }),
@@ -55,12 +55,12 @@ function E() {
         : (0, i.jsxs)(h.A, {
               onExpand: t,
               className: e ? S.tx : void 0,
-              title: T.intl.string(T.t["7BlVIs"]),
+              title: f.intl.string(f.t["7BlVIs"]),
               description: j,
-              "aria-label": T.intl.string(T.t["7BlVIs"]),
+              "aria-label": f.intl.string(f.t["7BlVIs"]),
               action: (0, i.jsx)(a.DUT, {
-                  onClick: (e) => (0, f.$)(e),
-                  children: (0, i.jsx)(a.dOG, { checked: n, disabled: b, onChange: (e) => N(e) }),
+                  onClick: (e) => (0, T.$)(e),
+                  children: (0, i.jsx)(a.dOG, { checked: n, disabled: E, onChange: (e) => v(e) }),
               }),
               children: [
                   (0, i.jsx)("div", {
@@ -68,7 +68,7 @@ function E() {
                       children: (0, i.jsx)(a.Text, {
                           variant: "text-xs/semibold",
                           color: "text-muted",
-                          children: T.intl.string(T.t.FzoWRo),
+                          children: f.intl.string(f.t.FzoWRo),
                       }),
                   }),
                   (0, i.jsx)(a.IpV, {
@@ -79,14 +79,14 @@ function E() {
                               {
                                   rawGame: e,
                                   clientSettingType: u.OverlayToggledClientSettingType.OOP_GAME,
-                                  gameApplication: v[t],
-                                  supportDisabled: b,
+                                  gameApplication: N[t],
+                                  supportDisabled: E,
                                   getEnabledFromStatus: (e) => {
                                       let { enabledOOP: t } = e;
                                       return t;
                                   },
                                   onChange: I,
-                                  ariaLabel: T.intl.format(T.t.nByTd3, { gameName: e.name }).toString(),
+                                  ariaLabel: f.intl.format(f.t.nByTd3, { gameName: e.name }).toString(),
                               },
                               e.id,
                           ),

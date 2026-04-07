@@ -13,7 +13,7 @@ var i = n(990078),
     _ = n(695311),
     f = n(996988),
     p = n(985018),
-    h = n(380297);
+    h = n(844630);
 function m(e) {
     let { user: t, activity: n, onAction: m, onClose: E } = e,
         { themeType: g } = (0, c.E)(),
@@ -27,7 +27,7 @@ function m(e) {
             fullWidth: g !== f.d.MODAL_V2,
             onClick: (e) => {
                 e.stopPropagation(),
-                    null != T ? a.A.launch({ applicationId: T }) : (m?.({ action: "PRESS_PLAY_BUTTON" }), A());
+                    null != T ? a.Ay.launch({ applicationId: T }) : (m?.({ action: "PRESS_PLAY_BUTTON" }), A());
             },
         });
     if (null == I) return null;

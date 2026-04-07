@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => V });
+n.d(t, { Ay: () => B, xt: () => V });
 var r = n(488428),
     i = n(110259),
     s = n(179771),
@@ -31,8 +31,8 @@ var r = n(488428),
     L = n(360469),
     w = n(332988),
     M = n(985018);
-let P = 3,
-    x = new f.A("GamesActionCreators");
+let x = 3,
+    P = new f.A("GamesActionCreators");
 function k(e) {
     let {
         applicationId: t,
@@ -53,12 +53,12 @@ function k(e) {
                 if (r.startsWith("http")) {
                     let e = window.open(r, "_blank");
                     (null == e || e.closed || void 0 === e.closed) &&
-                        (x.warn("Deep link popup was blocked by browser, trying location.href", { applicationId: t }),
+                        (P.warn("Deep link popup was blocked by browser, trying location.href", { applicationId: t }),
                         (window.location.href = r));
                 } else window.location.href = r;
                 return Promise.resolve();
             } catch (e) {
-                x.warn("Failed to open deep link, falling back to desktop launch", {
+                P.warn("Failed to open deep link, falling back to desktop launch", {
                     applicationId: t,
                     error: e.message,
                 });
@@ -156,7 +156,10 @@ async function F(e) {
               }))
         : (u.h.dispatch({ type: "GAME_LAUNCH_FAIL", applicationId: t, error: _ }), Promise.reject(_));
 }
-let V = {
+function V(e) {
+    u.h.dispatch({ type: "RUNNING_GAME_SET_DEBUG_GAME", game: e });
+}
+let B = {
     addGame(e, t) {
         u.h.dispatch({ type: "RUNNING_GAME_ADD_OVERRIDE", pid: e }),
             y.default.track(D.HAw.RUNNING_GAME_OVERRIDE_ADDED, { game_name: t });
@@ -195,7 +198,7 @@ let V = {
                     null == t
                         ? r(Error("Game utils module not loaded"))
                         : t.identifyGame(e, (t, i) => {
-                              (x.log("Identified game: ", {
+                              (P.log("Identified game: ", {
                                   status: t,
                                   name: i.name,
                                   iconHash: i.iconHash,
@@ -280,7 +283,7 @@ let V = {
                               patterns: [],
                               etag: I.A.blocklistEtag,
                           })
-                        : (x.error("Failed to fetch games blocklist"),
+                        : (P.error("Failed to fetch games blocklist"),
                           u.h.dispatch({ type: "GAMES_BLOCKLIST_FETCH_FAIL" }));
                 },
             );
@@ -319,7 +322,7 @@ let V = {
     reportUnverifiedGame(e) {
         let { name: t, iconHash: n, publisher: r, distributor: i, sku: s, executableName: a } = e,
             l = (0, _.v)(a);
-        x.log("Reporting unverified game: ", {
+        P.log("Reporting unverified game: ", {
             name: t,
             executableName: a,
             iconHash: n,
@@ -338,7 +341,7 @@ let V = {
                         distributor_application: U(i, s),
                         executable: l,
                         publisher: r,
-                        report_version: P,
+                        report_version: x,
                     },
                     retries: 1,
                     oldFormErrors: !0,

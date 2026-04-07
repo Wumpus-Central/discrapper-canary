@@ -9,20 +9,20 @@ var i = n(627968),
     c = n(544420),
     u = n(684013),
     m = n(56562),
-    _ = n(964486),
-    g = n(15285),
+    g = n(964486),
+    _ = n(15285),
     x = n(286237),
     A = n(769015),
     h = n(496885),
     p = n(810412),
-    f = n(41984),
-    T = n(833551),
+    T = n(41984),
+    f = n(833551),
     S = n(663677),
-    E = n(824189),
-    b = n(760751),
+    b = n(824189),
+    E = n(760751),
     C = n(189081),
-    v = n(9302),
-    N = n(505136),
+    N = n(9302),
+    v = n(505136),
     I = n(686533),
     j = n(525923),
     y = n(985018),
@@ -31,41 +31,41 @@ function R() {
     let { runningGame: e, runningGameApplication: t } = (0, x.A)(),
         n = e?.pid,
         l = (0, r.bG)(
-            [T.default],
-            () => (null == e || null == n ? null : T.default.getTrackedGameByPid(n)),
+            [f.default],
+            () => (null == e || null == n ? null : f.default.getTrackedGameByPid(n)),
             [e, n],
             a(),
         ),
-        { enabledLegacy: R, enabledOOP: L } = (0, r.cf)(
-            [b.A, C.A],
+        { enabledLegacy: R, enabledOOP: P } = (0, r.cf)(
+            [E.A, C.A],
             () =>
                 null == e && null == l
                     ? { enabledLegacy: !1, enabledOOP: !1 }
                     : null == e
                       ? { enabledLegacy: l?.legacyEnabled ?? !1, enabledOOP: l?.oopEnabled ?? !1 }
-                      : (0, g.hw)(e, !1, [b.A, C.A]),
+                      : (0, _.hw)(e, !1, [E.A, C.A]),
             [e, l],
         ),
-        P = (0, r.bG)([g.Ay, b.A, C.A], () => (null == e ? null : (0, g.xU)(e, g.Ay, b.A, C.A)), [e], a()),
-        [D, G] = s.useState(L),
+        L = (0, r.bG)([_.Ay, E.A, C.A], () => (null == e ? null : (0, _.xU)(e, _.Ay, E.A, C.A)), [e], a()),
+        [D, G] = s.useState(P),
         [M, U] = s.useState(R),
         [k, w] = s.useState(!1);
     s.useEffect(() => {
-        G(L), U(R);
-    }, [L, R]);
-    let V = !(0, v.supportsLegacy)(),
-        B = !(0, v.supportsOutOfProcess)(),
-        { legacyEnabled: F, oopEnabled: H } = (0, r.cf)([T.default], () => T.default.getGlobalEnabledStatus()),
+        G(P), U(R);
+    }, [P, R]);
+    let V = !(0, N.supportsLegacy)(),
+        B = !(0, N.supportsOutOfProcess)(),
+        { legacyEnabled: F, oopEnabled: H } = (0, r.cf)([f.default], () => f.default.getGlobalEnabledStatus()),
         z = (t, n) => {
             if (null == e) return;
             let i = !1,
                 s = !1;
             switch (n) {
                 case p.OverlayToggledClientSettingType.LEGACY_GAME:
-                    U(t), c.A.toggleOverlay(e, t, D), (i = !t && M);
+                    U(t), c.Ay.toggleOverlay(e, t, D), (i = !t && M);
                     break;
                 case p.OverlayToggledClientSettingType.OOP_GAME:
-                    G(t), c.A.toggleOverlay(e, M, t), (s = !t && D);
+                    G(t), c.Ay.toggleOverlay(e, M, t), (s = !t && D);
                     break;
                 case p.OverlayToggledClientSettingType.LEGACY:
                     u.A.setEnabled(t, H), (0, p.Q3)(t, p.OverlayToggledClientSettingType.LEGACY, e.id ?? null);
@@ -83,13 +83,13 @@ function R() {
         X = !F && !H,
         K = !D && !F && M && !V,
         W = !M && !H && D && !B,
-        Z = l?.overlayMethod === f.Ue.Disabled,
-        q = l?.state === f.AR.OVERLAY_RENDERING && !Z,
+        Z = l?.overlayMethod === T.Ue.Disabled,
+        q = l?.state === T.AR.OVERLAY_RENDERING && !Z,
         Q = l?.state != null && j.wZ.has(l.state) && !Z,
-        J = l?.overlayMethod === f.Ue.OutOfProcess,
-        $ = l?.overlayMethod === f.Ue.OutOfProcessLimitedInteraction,
-        ee = l?.overlayMethod === f.Ue.Hook,
-        et = l?.state === f.AR.OVERLAY_CRASHED || l?.state === f.AR.OVERLAY_CRASHED_DISABLED,
+        J = l?.overlayMethod === T.Ue.OutOfProcess,
+        $ = l?.overlayMethod === T.Ue.OutOfProcessLimitedInteraction,
+        ee = l?.overlayMethod === T.Ue.Hook,
+        et = l?.state === T.AR.OVERLAY_CRASHED || l?.state === T.AR.OVERLAY_CRASHED_DISABLED,
         en = !D && !M,
         [ei, es] = (() => {
             switch (!0) {
@@ -186,8 +186,8 @@ function R() {
                     return [y.intl.string(y.t.ONovP5), null];
             }
         })();
-    (0, _.Ay)(() => {
-        c.A.getDetectableGames();
+    (0, g.Ay)(() => {
+        c.Ay.getDetectableGames();
     });
     let [el, ea] = s.useMemo(
         () =>
@@ -204,13 +204,13 @@ function R() {
     );
     return null == e
         ? null
-        : (0, i.jsxs)(N.A, {
+        : (0, i.jsxs)(v.A, {
               onExpand: w,
               className: k ? O.tx : void 0,
               title: (0, i.jsxs)(i.Fragment, {
                   children: [
-                      t?.name ?? P?.name ?? e?.gameName ?? "",
-                      null != P && P.verified
+                      t?.name ?? L?.name ?? e?.gameName ?? "",
+                      null != L && L.verified
                           ? (0, i.jsx)(o.m, {
                                 text: y.intl.string(y.t["4PJP5p"]),
                                 children: (0, i.jsx)(h.A, {
@@ -253,14 +253,14 @@ function R() {
                                   s = !1;
                               switch (n) {
                                   case "game":
-                                      c.A.toggleOverlay(e, t, t), U(t), G(t), (i = !t && M), (s = !t && D);
+                                      c.Ay.toggleOverlay(e, t, t), U(t), G(t), (i = !t && M), (s = !t && D);
                                       break;
                                   case "global":
                                       u.A.setEnabled(t, t), (i = !t && F), (s = !t && H);
                                       break;
                                   case "both":
                                       u.A.setEnabled(t, t),
-                                          c.A.toggleOverlay(e, t, t),
+                                          c.Ay.toggleOverlay(e, t, t),
                                           U(t),
                                           G(t),
                                           (i = (!t && F) || (!t && M)),
@@ -299,7 +299,7 @@ function R() {
                       },
                   }),
               }),
-              warning: (0, i.jsx)(E.A, { className: O.Hh, game: e }),
+              warning: (0, i.jsx)(b.A, { className: O.Hh, game: e }),
               children: [
                   (0, i.jsx)(I.A, {
                       title: y.intl.string(y.t["7BlVIs"]),

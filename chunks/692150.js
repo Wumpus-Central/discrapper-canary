@@ -6,7 +6,7 @@ var a = n(627968),
     r = n(397927),
     d = n(544420),
     c = n(58736),
-    o = n(801264),
+    o = n(208039),
     u = n(71393),
     _ = n(975571),
     m = n(363487),
@@ -22,7 +22,7 @@ var a = n(627968),
     b = n(652215),
     I = n(294726),
     N = n(985018),
-    E = n(715896);
+    E = n(504175);
 function S(e) {
     let { guildId: t } = e;
     (0, g.tR)(t);
@@ -30,18 +30,18 @@ function S(e) {
         S = (0, l.bG)([u.A], () => u.A.getGuild(t)?.features.has(b.GuildFeatures.GAME_SERVERS) ?? !1);
     (0, C.A)(S ? t : null),
         s.useEffect(() => {
-            S && ((0, x.cq)(t), d.A.getDetectableGames());
+            S && ((0, x.cq)(t), d.Ay.getDetectableGames());
         }, [t, S]);
     let T = (0, m.A)(t),
         R = (0, j.N)("GameServerPage"),
-        M = (0, l.bG)([v.A], () => v.A.getStateForGuild(t)),
-        y = s.useMemo(() => {
-            if (!M?.hasFetchedInstances) return;
-            let e = Object.values(M.instances ?? {});
+        y = (0, l.bG)([v.A], () => v.A.getStateForGuild(t)),
+        M = s.useMemo(() => {
+            if (!y?.hasFetchedInstances) return;
+            let e = Object.values(y.instances ?? {});
             return 0 === e.length
                 ? null
                 : e.map((e, n) => (0, a.jsx)(A.Ay, { guildId: t, instance: e }, `${e.gameId}-${n}`));
-        }, [M?.instances, M?.hasFetchedInstances, t]);
+        }, [y?.instances, y?.hasFetchedInstances, t]);
     return (0, a.jsxs)("div", {
         className: E.kL,
         children: [
@@ -65,12 +65,12 @@ function S(e) {
             (0, a.jsxs)("div", {
                 className: E.hQ,
                 children: [
-                    S && !M?.hasFetchedInstances
+                    S && !y?.hasFetchedInstances
                         ? (0, a.jsx)("div", {
                               className: E.dc,
                               children: (0, a.jsx)(r.y$y, { type: r.tVU.SPINNING_CIRCLE }),
                           })
-                        : null == y
+                        : null == M
                           ? (0, a.jsx)(h.A, { guildId: t })
                           : (0, a.jsxs)("div", {
                                 className: E.nd,
@@ -84,7 +84,7 @@ function S(e) {
                                             }),
                                         }),
                                     (0, a.jsx)(r.IpV, {
-                                        children: (0, a.jsx)("div", { className: E.Y_, children: y }),
+                                        children: (0, a.jsx)("div", { className: E.Y_, children: M }),
                                     }),
                                 ],
                             }),

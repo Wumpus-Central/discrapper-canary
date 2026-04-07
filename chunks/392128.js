@@ -10,7 +10,7 @@ async function l() {
                 let t;
                 if (null == e.name) return null;
                 try {
-                    t = await r.A.identifyGame(e.pid, e.name);
+                    t = await r.Ay.identifyGame(e.pid, e.name);
                 } catch (e) {
                     return null;
                 }

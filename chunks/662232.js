@@ -9,8 +9,8 @@ var i = n(627968),
     c = n(15285),
     u = n(985018),
     m = n(342905),
-    _ = n(778437),
-    g = n(435115),
+    g = n(778437),
+    _ = n(435115),
     x = n(885106);
 function A(e) {
     let { onClose: t } = e,
@@ -18,7 +18,7 @@ function A(e) {
         [l, A] = s.useState(null),
         h = n.map((e) => ({ id: e.pid.toString(), value: e, label: null != e.name ? e.name : "" }));
     return (0, i.jsxs)(o.lGe, {
-        className: a()(m.H, _.Y_),
+        className: a()(m.H, g.Y_),
         "aria-label": u.intl.string(u.t.GTCx0p),
         children: [
             (0, i.jsx)(o.ZiE, {
@@ -32,7 +32,7 @@ function A(e) {
             }),
             (0, i.jsx)(o.cGx, { className: a()(x.Ot, x.QB) }),
             (0, i.jsxs)("div", {
-                className: a()(m.o, g.xM),
+                className: a()(m.o, _.xM),
                 children: [
                     (0, i.jsx)(o.QWc, { variant: "secondary", text: u.intl.string(u.t["ETE/oC"]), onClick: t }),
                     (0, i.jsx)(o.Button, {
@@ -40,7 +40,7 @@ function A(e) {
                         text: u.intl.string(u.t.GTCx0p),
                         disabled: null == l,
                         onClick: function () {
-                            null != l && (d.A.addGame(l.pid, l.name), t());
+                            null != l && (d.Ay.addGame(l.pid, l.name), t());
                         },
                     }),
                 ],

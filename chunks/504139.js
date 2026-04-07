@@ -2,8 +2,8 @@
 n.d(t, { A: () => c });
 var i = n(544420),
     s = n(684013),
-    l = n(742984),
-    a = n(471024),
+    a = n(742984),
+    l = n(471024),
     r = n(684748),
     o = n(672396),
     d = n(985018);
@@ -12,8 +12,8 @@ function c(e, t, n, c, u) {
     let h = t.activity.type,
         p = u.session_id;
     if (null == p) return null;
-    let { icon: A, title: f, body: g } = (0, l.TB)(e, t, n),
-        { trackView: _, trackClick: m } = (0, r.Y)(o.KS.ActivityInvite, {
+    let { icon: f, title: A, body: _ } = (0, a.TB)(e, t, n),
+        { trackView: g, trackClick: m } = (0, r.Y)(o.KS.ActivityInvite, {
             notif_type: o.KS.ActivityInvite,
             notif_user_id: n.id,
             message_id: t.id,
@@ -25,17 +25,17 @@ function c(e, t, n, c, u) {
             activity_name: u.name,
         });
     return {
-        icon: A,
-        title: f,
-        body: g,
-        hint: (e) => (0, a.sI)(e, (0, r.J)(), d.t.aB5xLy),
+        icon: f,
+        title: A,
+        body: _,
+        hint: (e) => (0, l.sI)(e, (0, r.J)(), d.t.aB5xLy),
         onNotificationShow: () => {
-            _();
+            g();
         },
         confirmText: d.intl.string(d.t.VJlc0S),
-        onConfirmClick: (l, a) => {
-            i.A.join({ userId: n.id, sessionId: p, applicationId: c.id, channelId: e.id, messageId: t.id }),
-                s.A.updateNotificationStatus(a),
+        onConfirmClick: (a, l) => {
+            i.Ay.join({ userId: n.id, sessionId: p, applicationId: c.id, channelId: e.id, messageId: t.id }),
+                s.A.updateNotificationStatus(l),
                 m("join");
         },
         onDismissClick: () => {

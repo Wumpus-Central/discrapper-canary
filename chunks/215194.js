@@ -14,23 +14,23 @@ var i = n(627968),
     x = n(997509),
     h = n(555337),
     _ = n(33888),
-    A = n(494492),
-    p = n(377337),
+    p = n(494492),
+    A = n(377337),
     f = n(249434),
     j = n(89145),
     N = n(913443),
     E = n(474215),
-    b = n(561923),
-    T = n(652215),
-    C = n(985018),
-    I = n(754136);
+    C = n(561923),
+    b = n(652215),
+    T = n(985018),
+    I = n(978945);
 let v = function () {
     let { analyticsLocations: e } = (0, d.Ay)(o.A.GUILD_SETTINGS_PROFILE_PAGE),
         t = (0, l.bG)([h.A], () => h.A.getGuild(), []),
         n = t?.id,
         { fetchGuildProfile: v, fetchStatus: S } = (0, u.u)(t?.id),
         y = (0, l.bG)([h.A], () => h.A.getGuildProfile(), []),
-        R = (0, l.bG)([g.A], () => g.A.can(T.xBc.MANAGE_GUILD, t)),
+        R = (0, l.bG)([g.A], () => g.A.can(b.xBc.MANAGE_GUILD, t)),
         O = s.useCallback(
             (e) => {
                 null != n && (x.A.updateGuild({ icon: e }), x.A.updateGuildProfile(n, { icon: e }));
@@ -50,7 +50,7 @@ let v = function () {
         v(!0);
     }, [v]);
     return (s.useEffect(() => {
-        a.A.getDetectableGames();
+        a.Ay.getDetectableGames();
     }, []),
     S === c.X.FETCHED && null == y)
         ? (0, i.jsx)(N.g, { forceFetchGuildProfile: L })
@@ -71,13 +71,13 @@ let v = function () {
                                           (0, i.jsx)(r.Heading, {
                                               variant: "heading-lg/semibold",
                                               color: "text-strong",
-                                              children: C.intl.string(C.t.txdaxf),
+                                              children: T.intl.string(T.t.txdaxf),
                                           }),
                                           (0, i.jsx)(r.Text, {
                                               variant: "text-sm/medium",
                                               color: "text-default",
                                               className: I.h_,
-                                              children: C.intl.string(C.t["5PGZWS"]),
+                                              children: T.intl.string(T.t["5PGZWS"]),
                                           }),
                                       ],
                                   }),
@@ -89,11 +89,11 @@ let v = function () {
                                   (0, i.jsx)("div", { className: I.yF }),
                                   (0, i.jsx)(E.A, { profile: y, canManageGuild: R }),
                                   (0, i.jsx)("div", { className: I.yF }),
-                                  (0, i.jsx)(A.A, { profile: y, canManageGuild: R }),
-                                  (0, i.jsx)("div", { className: I.yF }),
                                   (0, i.jsx)(p.A, { profile: y, canManageGuild: R }),
                                   (0, i.jsx)("div", { className: I.yF }),
-                                  (0, i.jsx)(b.A, { profile: y, canManageGuild: R }),
+                                  (0, i.jsx)(A.A, { profile: y, canManageGuild: R }),
+                                  (0, i.jsx)("div", { className: I.yF }),
+                                  (0, i.jsx)(C.A, { profile: y, canManageGuild: R }),
                               ],
                           }),
                           (0, i.jsx)("div", {

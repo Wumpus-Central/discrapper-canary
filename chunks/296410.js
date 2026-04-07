@@ -1,4 +1,4 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => b });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
@@ -9,49 +9,49 @@ var i = n(627968),
     c = n(15285),
     u = n(810412),
     m = n(206885),
-    _ = n(833551),
-    g = n(663677),
+    g = n(833551),
+    _ = n(663677),
     x = n(847521),
     A = n(9302),
     h = n(505136),
     p = n(370365),
-    f = n(686533),
-    T = n(985018),
+    T = n(686533),
+    f = n(985018),
     S = n(502040);
-function E() {
+function b() {
     let [e, t] = s.useState(!1),
-        { legacyEnabled: n, oopEnabled: E } = (0, l.cf)([_.default], () => _.default.getGlobalEnabledStatus()),
-        b = (0, l.yK)([c.Ay], () => c.Ay.getGamesSeen(!0)).filter((e) => !(0, x.n1)(e)),
-        C = (0, d.A)(b.map((e) => e.id)),
-        v = !(0, A.supportsLegacy)(),
-        N = (e) => {
-            o.A.setEnabled(e, E);
+        { legacyEnabled: n, oopEnabled: b } = (0, l.cf)([g.default], () => g.default.getGlobalEnabledStatus()),
+        E = (0, l.yK)([c.Ay], () => c.Ay.getGamesSeen(!0)).filter((e) => !(0, x.n1)(e)),
+        C = (0, d.A)(E.map((e) => e.id)),
+        N = !(0, A.supportsLegacy)(),
+        v = (e) => {
+            o.A.setEnabled(e, b);
             let t = c.Ay.getCurrentGameForAnalytics()?.id ?? null;
             (0, u.Q3)(e, u.OverlayToggledClientSettingType.LEGACY, t),
-                !e && n && (0, g.L)(u.OverlayToggledClientSettingType.LEGACY, t);
+                !e && n && (0, _.L)(u.OverlayToggledClientSettingType.LEGACY, t);
         },
         I = (e, t, n) => {
             let { enabledOOP: i } = n;
-            r.A.toggleOverlay(t, e, i);
+            r.Ay.toggleOverlay(t, e, i);
         },
         j = s.useMemo(
             () =>
                 (0, A.supportsLegacy)()
-                    ? v
-                        ? T.intl.string(T.t.r9jEVw)
-                        : T.intl.string(T.t.OzInYk)
-                    : T.intl.string(T.t["8Ox6/E"]),
-            [v],
+                    ? N
+                        ? f.intl.string(f.t.r9jEVw)
+                        : f.intl.string(f.t.OzInYk)
+                    : f.intl.string(f.t["8Ox6/E"]),
+            [N],
         );
-    return 0 === b.length
-        ? (0, i.jsx)(f.A, {
-              title: T.intl.string(T.t.BfFpW1),
+    return 0 === E.length
+        ? (0, i.jsx)(T.A, {
+              title: f.intl.string(f.t.BfFpW1),
               description: j,
-              "aria-label": T.intl.string(T.t.BfFpW1),
+              "aria-label": f.intl.string(f.t.BfFpW1),
               className: S.dA,
               action: (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, i.jsx)(a.dOG, { checked: n, disabled: v, onChange: (e) => N(e) }),
+                      (0, i.jsx)(a.dOG, { checked: n, disabled: N, onChange: (e) => v(e) }),
                       m.O && (0, i.jsx)("div", { className: S.Kz }),
                   ],
               }),
@@ -59,12 +59,12 @@ function E() {
         : (0, i.jsxs)(h.A, {
               onExpand: t,
               className: e ? S.tx : void 0,
-              title: T.intl.string(T.t.BfFpW1),
+              title: f.intl.string(f.t.BfFpW1),
               description: j,
-              "aria-label": T.intl.string(T.t.BfFpW1),
+              "aria-label": f.intl.string(f.t.BfFpW1),
               action: (0, i.jsx)(a.DUT, {
-                  onClick: (e) => (0, f.$)(e),
-                  children: (0, i.jsx)(a.dOG, { checked: n, disabled: v, onChange: (e) => N(e) }),
+                  onClick: (e) => (0, T.$)(e),
+                  children: (0, i.jsx)(a.dOG, { checked: n, disabled: N, onChange: (e) => v(e) }),
               }),
               children: [
                   (0, i.jsx)("div", {
@@ -72,25 +72,25 @@ function E() {
                       children: (0, i.jsx)(a.Text, {
                           variant: "text-xs/semibold",
                           color: "text-muted",
-                          children: T.intl.string(T.t.FzoWRo),
+                          children: f.intl.string(f.t.FzoWRo),
                       }),
                   }),
                   (0, i.jsx)(a.IpV, {
                       className: S.XG,
-                      children: b.map((e, t) =>
+                      children: E.map((e, t) =>
                           (0, i.jsx)(
                               p.A,
                               {
                                   rawGame: e,
                                   clientSettingType: u.OverlayToggledClientSettingType.LEGACY_GAME,
-                                  supportDisabled: v,
+                                  supportDisabled: N,
                                   gameApplication: C[t],
                                   getEnabledFromStatus: (e) => {
                                       let { enabledLegacy: t } = e;
                                       return t;
                                   },
                                   onChange: I,
-                                  ariaLabel: T.intl.format(T.t.hvPYsF, { gameName: e.name }).toString(),
+                                  ariaLabel: f.intl.format(f.t.hvPYsF, { gameName: e.name }).toString(),
                               },
                               e.id,
                           ),
