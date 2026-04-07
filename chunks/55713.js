@@ -1,18 +1,19 @@
-n.d(t, { b: () => u });
+n.d(t, { b: () => m });
 var i = n(934551),
-    s = n(419954),
-    l = n(780964),
-    a = n(194157),
-    r = n(60160),
-    o = n(961337),
-    d = n(985018);
-let c = (0, s.t_)(l.X.BILLING_PANEL, {
-        useTitle: () => d.intl.string(d.t.oeUm2s),
-        buildLayout: () => [a.B, r.a, o.Z],
-        hideInStreamerMode: !0,
+    s = n(974544),
+    l = n(419954),
+    a = n(780964),
+    r = n(194157),
+    o = n(60160),
+    d = n(961337),
+    c = n(985018);
+let u = (0, l.t_)(a.X.BILLING_PANEL, {
+        useTitle: () => c.intl.string(c.t.oeUm2s),
+        buildLayout: () => [r.B, o.a, d.Z],
+        useObscuredNotice: s.L,
     }),
-    u = (0, s.i4)(l.X.BILLING_SIDEBAR_ITEM, {
-        useTitle: () => d.intl.string(d.t.oeUm2s),
+    m = (0, l.i4)(a.X.BILLING_SIDEBAR_ITEM, {
+        useTitle: () => c.intl.string(c.t.oeUm2s),
         icon: i.CreditCardIcon,
-        buildLayout: () => [c],
+        buildLayout: () => [u],
     });

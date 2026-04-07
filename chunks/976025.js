@@ -1,23 +1,24 @@
-n.d(t, { z: () => x });
+n.d(t, { z: () => A });
 var i = n(934551),
     s = n(554146),
-    l = n(419954),
-    a = n(933297),
-    r = n(780964),
-    o = n(869802),
-    d = n(543919),
-    c = n(985018);
-let u = [{ badgeType: a.Xi.NEW, dismissibleContent: s.M.NEW_CRUNCHYROLL_CONNECTION }],
-    m = (0, l.zZ)(r.X.CONNECTIONS_ADD_CONNECTIONS_CATEGORY, { buildLayout: () => [o.l] }),
-    g = (0, l.zZ)(r.X.CONNECTIONS_CONNECTED_ACCOUNTS_CATEGORY, { buildLayout: () => [d.W] }),
-    _ = (0, l.t_)(r.X.CONNECTIONS_PANEL, {
-        useTitle: () => c.intl.string(c.t["3fe7U5"]),
-        hideInStreamerMode: !0,
-        buildLayout: () => [m, g],
+    l = n(974544),
+    a = n(419954),
+    r = n(933297),
+    o = n(780964),
+    d = n(869802),
+    c = n(543919),
+    u = n(985018);
+let m = [{ badgeType: r.Xi.NEW, dismissibleContent: s.M.NEW_CRUNCHYROLL_CONNECTION }],
+    g = (0, a.zZ)(o.X.CONNECTIONS_ADD_CONNECTIONS_CATEGORY, { buildLayout: () => [d.l] }),
+    _ = (0, a.zZ)(o.X.CONNECTIONS_CONNECTED_ACCOUNTS_CATEGORY, { buildLayout: () => [c.W] }),
+    x = (0, a.t_)(o.X.CONNECTIONS_PANEL, {
+        useTitle: () => u.intl.string(u.t["3fe7U5"]),
+        useObscuredNotice: l.L,
+        buildLayout: () => [g, _],
     }),
-    x = (0, l.i4)(r.X.CONNECTIONS_SIDEBAR_ITEM, {
-        useTitle: () => c.intl.string(c.t["3fe7U5"]),
+    A = (0, a.i4)(o.X.CONNECTIONS_SIDEBAR_ITEM, {
+        useTitle: () => u.intl.string(u.t["3fe7U5"]),
         icon: i.LinkIcon,
-        getDismissibleBadges: () => u,
-        buildLayout: () => [_],
+        getDismissibleBadges: () => m,
+        buildLayout: () => [x],
     });

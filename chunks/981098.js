@@ -1,25 +1,26 @@
-n.d(t, { y: () => m });
+n.d(t, { y: () => g });
 var i = n(64700),
     s = n(934551),
-    l = n(419954),
-    a = n(933297),
-    r = n(780964),
-    o = n(949302),
-    d = n(389307),
-    c = n(985018);
-let u = (0, l.t_)(r.X.NITRO_PANEL, {
-        useTitle: () => c.intl.string(c.t.Ipxkog),
-        hideInStreamerMode: !0,
-        buildLayout: () => [d.r],
+    l = n(974544),
+    a = n(419954),
+    r = n(933297),
+    o = n(780964),
+    d = n(949302),
+    c = n(389307),
+    u = n(985018);
+let m = (0, a.t_)(o.X.NITRO_PANEL, {
+        useTitle: () => u.intl.string(u.t.Ipxkog),
+        useObscuredNotice: l.L,
+        buildLayout: () => [c.r],
     }),
-    m = (0, l.i4)(r.X.NITRO_SIDEBAR_ITEM, {
-        useTitle: () => c.intl.string(c.t.Ipxkog),
+    g = (0, a.i4)(o.X.NITRO_SIDEBAR_ITEM, {
+        useTitle: () => u.intl.string(u.t.Ipxkog),
         icon: s.NitroWheelIcon,
         usePersistentBadge: function (e) {
             return i.useMemo(
-                () => ({ badgeType: a.Xi.STRONGLY_DISCOURAGED_CUSTOM, useCustomBadge: () => (0, o.e)(e) }),
+                () => ({ badgeType: r.Xi.STRONGLY_DISCOURAGED_CUSTOM, useCustomBadge: () => (0, d.e)(e) }),
                 [e],
             );
         },
-        buildLayout: () => [u],
+        buildLayout: () => [m],
     });

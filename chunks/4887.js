@@ -1,39 +1,40 @@
-n.d(t, { $: () => h, C: () => A });
+n.d(t, { $: () => p, C: () => h });
 var i = n(64700),
     s = n(934551),
     l = n(554146),
-    a = n(200921),
-    r = n(419954),
-    o = n(933297),
-    d = n(780964),
-    c = n(358776),
-    u = n(102255),
-    m = n(416047),
-    g = n(342537),
-    _ = n(985018);
-let x = (0, r.zZ)(d.X.SESSIONS_CATEGORY, {
-        buildLayout: () => [m.I, g.A],
+    a = n(974544),
+    r = n(200921),
+    o = n(419954),
+    d = n(933297),
+    c = n(780964),
+    u = n(358776),
+    m = n(102255),
+    g = n(416047),
+    _ = n(342537),
+    x = n(985018);
+let A = (0, o.zZ)(c.X.SESSIONS_CATEGORY, {
+        buildLayout: () => [g.I, _.A],
         initialize: () => (
-            (0, a.GY)(),
+            (0, r.GY)(),
             () => {
-                (0, a.ZQ)();
+                (0, r.ZQ)();
             }
         ),
         useInlineNotice: function () {
-            return i.useMemo(() => ({ type: o.lT.STRONGLY_DISCOURAGED_CUSTOM, notice: u.jH }), []);
+            return i.useMemo(() => ({ type: d.lT.STRONGLY_DISCOURAGED_CUSTOM, notice: m.jH }), []);
         },
     }),
-    A = (0, r.t_)(d.X.SESSIONS_PANEL, {
-        useTitle: () => ((0, c._A)("SessionsPanel") ? _.intl.string(_.t.mEndXM) : _.intl.string(_.t["+1h0k/"])),
-        hideInStreamerMode: !0,
-        buildLayout: () => [x],
+    h = (0, o.t_)(c.X.SESSIONS_PANEL, {
+        useTitle: () => ((0, u._A)("SessionsPanel") ? x.intl.string(x.t.mEndXM) : x.intl.string(x.t["+1h0k/"])),
+        useObscuredNotice: a.L,
+        buildLayout: () => [A],
     }),
-    h = (0, r.i4)(d.X.SESSIONS_SIDEBAR_ITEM, {
-        useTitle: () => _.intl.string(_.t["+1h0k/"]),
+    p = (0, o.i4)(c.X.SESSIONS_SIDEBAR_ITEM, {
+        useTitle: () => x.intl.string(x.t["+1h0k/"]),
         icon: s.LaptopPhoneIcon,
         getDismissibleBadges: function () {
-            return [{ badgeType: o.Xi.NEW, dismissibleContent: l.M.AUTH_SESSIONS_NEW }];
+            return [{ badgeType: d.Xi.NEW, dismissibleContent: l.M.AUTH_SESSIONS_NEW }];
         },
-        usePredicate: () => !(0, c._A)("SessionsPanel"),
-        buildLayout: () => [A],
+        usePredicate: () => !(0, u._A)("SessionsPanel"),
+        buildLayout: () => [h],
     });

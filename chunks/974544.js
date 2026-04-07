@@ -1,30 +1,36 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => p, L: () => S });
 var i = n(627968);
 n(64700);
 var s = n(503698),
     r = n.n(s),
-    l = n(397927),
-    o = n(780964),
-    a = n(358776),
-    c = n(840065),
-    d = n(985018),
-    u = n(391870);
-function h(e) {
-    let { disableButton: t } = e;
+    l = n(311907),
+    o = n(397927),
+    a = n(780964),
+    c = n(358776),
+    d = n(858897),
+    u = n(351906),
+    h = n(985018),
+    m = n(598745);
+function p(e) {
+    let { className: t } = e;
     return (0, i.jsxs)("div", {
-        className: u.IG,
+        className: r()(m.IG, t),
         children: [
-            (0, i.jsx)("div", { className: u.TE }),
-            (0, i.jsx)(l.DUT, {
-                className: r()(u.Ac, { [u.r9]: t }),
+            (0, i.jsx)("div", { className: m.TE }),
+            (0, i.jsx)(o.DUT, {
+                className: m.Ac,
                 onClick: () => {
-                    if (!0 !== t) {
-                        let e = (0, a.Ci)("StreamerModeEnabled_handleClick");
-                        (0, c.openUserSettings)(e ? o.X.STREAMER_MODE_CATEGORY : o.X.STREAMER_MODE_PANEL);
-                    }
+                    let e = (0, c.Ci)("StreamerModeEnabled_handleClick");
+                    (0, d.openUserSettings)(e ? a.X.STREAMER_MODE_CATEGORY : a.X.STREAMER_MODE_PANEL);
                 },
-                children: d.intl.string(d.t.Br1ls3),
+                children: h.intl.string(h.t.Br1ls3),
             }),
         ],
     });
+}
+function E() {
+    return (0, i.jsx)(p, { className: m.ch });
+}
+function S() {
+    return (0, l.bG)([u.A], () => (u.A.hidePersonalInformation ? E : null));
 }
