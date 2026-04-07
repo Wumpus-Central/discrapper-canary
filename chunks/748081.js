@@ -27,13 +27,13 @@ let o = {
                     return (0, a.jsxs)("div", {
                         style: { display: "flex", gap: "16px", alignItems: "center" },
                         children: [
-                            (0, a.jsx)(n.k, {
+                            (0, a.jsx)(n.kL, {
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: l,
                                 children: (0, a.jsx)(r, {}),
                             }),
-                            (0, a.jsx)(n.k, {
+                            (0, a.jsx)(n.kL, {
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: l,
@@ -55,14 +55,14 @@ let o = {
                     return (0, a.jsxs)("div", {
                         style: { display: "flex", gap: "16px", alignItems: "center" },
                         children: [
-                            (0, a.jsx)(n.N, {
+                            (0, a.jsx)(n.NW, {
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: o,
                                 showOverlay: l,
                                 children: (0, a.jsx)(r, {}),
                             }),
-                            (0, a.jsx)(n.N, {
+                            (0, a.jsx)(n.NW, {
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: o,
@@ -82,12 +82,12 @@ let o = {
             {
                 name: "Edit Button - Deletable",
                 component: function (e) {
-                    let { variant: t, showOverlay: l, accessibleLabel: o, deleteType: s, deleteAccessibleLabel: u } = e,
-                        c = { type: s, accessibleLabel: u, onClick: () => {} };
+                    let { variant: t, showOverlay: l, accessibleLabel: o, deleteType: s, deleteAccessibleLabel: d } = e,
+                        c = { type: s, accessibleLabel: d, onClick: () => {} };
                     return (0, a.jsxs)("div", {
                         style: { display: "flex", gap: "16px", alignItems: "center" },
                         children: [
-                            (0, a.jsx)(n.N, {
+                            (0, a.jsx)(n.NW, {
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: o,
@@ -95,7 +95,7 @@ let o = {
                                 deleteButtonConfig: c,
                                 children: (0, a.jsx)(r, {}),
                             }),
-                            (0, a.jsx)(n.N, {
+                            (0, a.jsx)(n.NW, {
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: o,

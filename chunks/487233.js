@@ -7,8 +7,8 @@ var n = l(311907),
     o = l(919395),
     s = l(385612),
     d = l(101058),
-    u = l(696451),
-    c = l(287809),
+    c = l(696451),
+    u = l(287809),
     p = l(84540),
     m = l(836602),
     h = l(854627),
@@ -17,9 +17,9 @@ var n = l(311907),
     y = l(985018);
 function f(e) {
     let { user: t, guildId: l } = e,
-        { newestAnalyticsLocation: c } = (0, i.Ay)(),
+        { newestAnalyticsLocation: u } = (0, i.Ay)(),
         f = null != l,
-        g = (0, n.bG)([u.Ay], () => (null != l ? u.Ay.getMember(l, t.id) : null)),
+        g = (0, n.bG)([c.Ay], () => (null != l ? c.Ay.getMember(l, t.id) : null)),
         v = (0, n.bG)([m.A], () => m.A.getPendingChanges(l ?? void 0).pendingAvatar),
         _ = (0, d.V7)({ userId: t.id, image: v }),
         { avatarSrc: E } = (0, h.A)({ userId: t.id, guildId: l, avatarOverride: _, size: r._3J.SIZE_56 }),
@@ -30,9 +30,9 @@ function f(e) {
         A = null === v,
         P = (0, o.z5)(v, C),
         k = () =>
-            (0, s.XD)({ uploadType: b.HL.AVATAR, analyticsSource: c, guildId: l ?? void 0, stackingBehavior: "stack" });
+            (0, s.XD)({ uploadType: b.HL.AVATAR, analyticsSource: u, guildId: l ?? void 0, stackingBehavior: "stack" });
     if (!(A ? f && j : T || S || j))
-        return (0, a.jsx)(x.k, {
+        return (0, a.jsx)(x.kL, {
             variant: "square",
             onClick: k,
             accessibleLabel: y.intl.string(y.t["4OynCD"]),
@@ -48,7 +48,7 @@ function f(e) {
                   accessibleLabel: y.intl.string(I ? y.t.Y0mxy1 : y.t.twB3fz),
               }
             : void 0;
-    return (0, a.jsx)(x.N, {
+    return (0, a.jsx)(x.NW, {
         variant: "square",
         onClick: k,
         accessibleLabel: y.intl.string(y.t["4OynCD"]),
@@ -58,6 +58,6 @@ function f(e) {
 }
 function g(e) {
     let { guildId: t } = e,
-        l = (0, n.bG)([c.default], () => c.default.getCurrentUser());
+        l = (0, n.bG)([u.default], () => u.default.getCurrentUser());
     return null == l ? null : (0, a.jsx)(f, { user: l, guildId: t });
 }

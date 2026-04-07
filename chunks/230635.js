@@ -7,8 +7,8 @@ var n = l(311907),
     o = l(601255),
     s = l(162232),
     d = l(562819),
-    u = l(919395),
-    c = l(71393),
+    c = l(919395),
+    u = l(71393),
     p = l(287809),
     m = l(84540),
     h = l(930349),
@@ -28,16 +28,16 @@ function y(e) {
 function f(e) {
     let { user: t, guildId: l } = e,
         { analyticsLocations: r } = (0, i.Ay)(),
-        s = (0, n.bG)([c.A], () => (null != l ? c.A.getGuild(l) : null)),
+        s = (0, n.bG)([u.A], () => (null != l ? u.A.getGuild(l) : null)),
         p = null != l,
-        b = (0, u.a4)({ user: t }),
-        f = (0, u.a4)({ user: t, guildId: l ?? void 0 }),
-        { pendingAvatarDecoration: g } = (0, u.CP)(l ?? void 0),
-        v = (0, o.A)((0, u.lw)({ userValue: b, guildValue: f, pendingValue: g, guildId: l })),
+        b = (0, c.a4)({ user: t }),
+        f = (0, c.a4)({ user: t, guildId: l ?? void 0 }),
+        { pendingAvatarDecoration: g } = (0, c.CP)(l ?? void 0),
+        v = (0, o.A)((0, c.lw)({ userValue: b, guildValue: f, pendingValue: g, guildId: l })),
         _ = void 0 !== g,
         E = () => (0, d.L)({ analyticsLocations: r, guild: s ?? void 0, stackingBehavior: "stack" });
     if (null == v)
-        return (0, a.jsx)(h.k, {
+        return (0, a.jsx)(h.kL, {
             variant: "square",
             onClick: E,
             accessibleLabel: x.intl.string(x.t.HykynS),
@@ -48,10 +48,10 @@ function f(e) {
             ? {
                   onClick: () => (0, m.p)({ guildId: l ?? void 0, avatarDecoration: null }),
                   type: C ? "reset" : "remove",
-                  accessibleLabel: x.intl.string(C ? x.t.GaEG4t : x.t["2A+piL"]),
+                  accessibleLabel: x.intl.string(C ? x.t.pJsnPf : x.t["2U4Bga"]),
               }
             : void 0;
-    return (0, a.jsx)(h.N, {
+    return (0, a.jsx)(h.NW, {
         variant: "square",
         onClick: E,
         accessibleLabel: x.intl.string(x.t.HykynS),
