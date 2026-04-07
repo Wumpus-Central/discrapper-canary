@@ -4,9 +4,7 @@ function t() {
     window.DiscordDevSession = { start: s, stop: r, started: !1 };
 }
 function s() {
-    let e = __BILLING_STANDALONE__
-        ? window.GLOBAL_ENV.DEV_SESSION_KEY_BILLING_STANDALONE
-        : window.GLOBAL_ENV.DEV_SESSION_KEY;
+    let e = window.GLOBAL_ENV.DEV_SESSION_KEY;
     null == e
         ? console.log("Meticulous token not found")
         : ((0, n.Lw)({ recordingToken: e, isProduction: !1 }),
