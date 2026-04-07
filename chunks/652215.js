@@ -3842,6 +3842,7 @@ var nl = (function (e) {
             (e.MEMBER_LIST_NOTICE_CTA_CLICKED = "member_list_notice_cta_clicked"),
             (e.PREMIUM_PROMOTION_OPENED = "premium_promotion_opened"),
             (e.RECURRING_PROMOTION_MODAL_OPENED = "recurring_promotion_modal_opened"),
+            (e.THIRD_PARTY_PROMOTION_MODAL_OPENED = "third_party_promotion_modal_opened"),
             (e.RECURRING_PROMOTION_CLAIMED = "recurring_promotion_claimed"),
             (e.OUTBOUND_PROMOTION_CLAIMED = "outbound_promotion_claimed"),
             (e.PREMIUM_GUILD_PROMOTION_OPENED = "premium_guild_promotion_opened"),
