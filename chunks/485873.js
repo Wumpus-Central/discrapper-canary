@@ -1,24 +1,25 @@
-n.d(t, { A: () => c });
-var r = n(627968);
+n.d(e, { A: () => d });
+var i = n(627968);
 n(64700);
-var a = n(311907),
-    l = n(397927),
-    i = n(827343),
-    u = n(430452),
-    s = n(824744),
-    o = n(985018);
-function c(e) {
-    let t = (0, a.bG)([u.Ay], () => (0, s.M)(u.Ay.getInputVolume()));
-    return (0, r.jsx)(l.aK1, {
+var l = n(311907),
+    r = n(397927),
+    s = n(827343),
+    a = n(430452),
+    o = n(824744),
+    u = n(985018);
+function d(t) {
+    let e = (0, l.bG)([a.Ay], () => (0, o.M)(a.Ay.getInputVolume()));
+    return (0, i.jsx)(r.aK1, {
         id: "input",
-        label: o.intl.string(o.t.OX2Bnr),
-        control: (n, a) =>
-            (0, r.jsx)(l.i42, {
+        label: u.intl.string(u.t.OX2Bnr),
+        interactive: !1,
+        control: (n, l) =>
+            (0, i.jsx)(r.i42, {
                 ...n,
-                ref: a,
-                value: t,
-                onChange: (t) => i.A.setInputVolume((0, s.w)(t), { analyticsLocations: e }),
-                "aria-label": o.intl.string(o.t.OX2Bnr),
+                ref: l,
+                value: e,
+                onChange: (e) => s.A.setInputVolume((0, o.w)(e), { analyticsLocations: t }),
+                "aria-label": u.intl.string(u.t.OX2Bnr),
             }),
     });
 }
