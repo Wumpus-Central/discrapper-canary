@@ -3,7 +3,7 @@ n.d(t, { A: () => l });
 var r = n(315069),
     i = n(611010),
     s = n(486020),
-    a = n(130531);
+    a = n(898736);
 function o(e) {
     if (e?.steam != null || e?.opencritic != null)
         return {
