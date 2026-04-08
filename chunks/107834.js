@@ -18,13 +18,13 @@ var i = n(627968),
     T = n(287809),
     f = n(927578),
     S = n(652215),
-    E = n(788868),
-    b = n(985018),
-    C = n(670324);
+    b = n(788868),
+    E = n(985018),
+    C = n(71971);
 let N = r.Ay.connectStores([T.default], () => ({ user: T.default.getCurrentUser() }))(
     (0, u.A)((e) => {
         let { isAuthenticated: t, user: n } = e,
-            l = (0, f.TW)(n, E.PremiumTypes.TIER_2),
+            l = (0, f.TW)(n, b.PremiumTypes.TIER_2),
             r = (0, m.Ay)(),
             u = (0, p.Gh)("nitro_home_header"),
             T = s.useRef(null);
@@ -59,7 +59,7 @@ let N = r.Ay.connectStores([T.default], () => ({ user: T.default.getCurrentUser(
                                         "aria-hidden": !0,
                                         color: l ? void 0 : d.LU0.unsafe_rawColors.PREMIUM_TIER_2_PINK.css,
                                     }),
-                                    (0, i.jsx)(_.A.Title, { children: b.intl.string(b.t.Ipxkog) }),
+                                    (0, i.jsx)(_.A.Title, { children: E.intl.string(E.t.Ipxkog) }),
                                 ],
                             }),
                             u && (0, i.jsx)(x.O, { targetElementRef: T }),

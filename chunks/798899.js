@@ -1,17 +1,17 @@
 n.d(t, { A: () => u });
 var i = n(627968),
-    a = n(64700),
-    r = n(397927),
-    l = n(572211),
-    s = n(443795),
+    l = n(64700),
+    s = n(397927),
+    a = n(572211),
+    r = n(443795),
     o = n(768349),
     d = n(985018),
-    c = n(772234);
+    c = n(71747);
 function u(e) {
     let { application: t, message: n, header: u, onClickContent: _, onView: m, guildId: h } = e,
-        p = a.useMemo(
+        p = l.useMemo(
             () =>
-                (0, i.jsx)(r.Text, {
+                (0, i.jsx)(s.Text, {
                     variant: "text-xs/medium",
                     className: c.h_,
                     color: "none",
@@ -20,10 +20,10 @@ function u(e) {
                 }),
             [],
         );
-    return (0, i.jsx)(l.h, {
+    return (0, i.jsx)(a.h, {
         header: u,
         title: t.name,
-        iconSrc: s.HT.getWhiteIconURL(),
+        iconSrc: r.HT.getWhiteIconURL(),
         info: p,
         onClickContent: _,
         trackingConfig: {

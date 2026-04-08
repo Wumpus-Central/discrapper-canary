@@ -11,9 +11,9 @@ var l = n(503698),
     u = n(692744),
     h = n(572808),
     A = n(241080),
-    _ = n(588703),
+    _ = n(952057),
     m = n(985018),
-    g = n(374963);
+    g = n(20744);
 let p = (e) => {
         let { soundKey: t, globalMute: n } = e,
             l = (0, d.n)((e) => e.volumes[t]),
@@ -54,8 +54,8 @@ let p = (e) => {
             T = (0, d.n)((e) => e.playRadio),
             S = (0, d.n)((e) => e.setPlayRadio),
             b = (0, d.n)((e) => e.playPrevSong),
-            y = (0, d.n)((e) => e.playNextSong),
-            v = (0, a.bG)([c.A], () => c.A.assets),
+            v = (0, d.n)((e) => e.playNextSong),
+            y = (0, a.bG)([c.A], () => c.A.assets),
             j = (0, A.A)(I, N),
             R = !x && T;
         return (0, i.jsxs)("div", {
@@ -113,7 +113,7 @@ let p = (e) => {
                                     size: "sm",
                                     "aria-label": m.intl.string(_.default["+nt9+r"]),
                                     icon: r.uhT,
-                                    onClick: y,
+                                    onClick: v,
                                 }),
                             ],
                         }),
@@ -137,7 +137,7 @@ let p = (e) => {
                                         (0, i.jsx)("div", {
                                             className: s()(g.D$, { [g.wH]: e === I }),
                                             style: {
-                                                backgroundImage: `url('${v?.genres?.[e]?.thumbnail}')`,
+                                                backgroundImage: `url('${y?.genres?.[e]?.thumbnail}')`,
                                                 backgroundSize: "cover",
                                             },
                                             children: (0, i.jsxs)("div", {

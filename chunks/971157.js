@@ -20,7 +20,7 @@ var i = n(627968),
     N = n(267001),
     j = n(652215),
     T = n(985018),
-    v = n(64250);
+    v = n(944395);
 function C(e) {
     let { application: t, guild: n, integration: l, ...s } = e;
     return (0, i.jsx)(a.ConfirmModal, {

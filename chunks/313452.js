@@ -23,9 +23,9 @@ var i = n(627968),
     T = n(524628),
     S = n(849077),
     b = n(652215),
-    y = n(228160),
-    v = n(985018),
-    j = n(852259);
+    v = n(21786),
+    y = n(985018),
+    j = n(702440);
 function R(e) {
     e.stopPropagation();
 }
@@ -44,7 +44,7 @@ function O(e) {
                     variant: "text-sm/medium",
                     color: "text-subtle",
                     className: j.P7,
-                    children: (0, r.capitalize)(v.intl.string(S.v7[t]).toLowerCase()),
+                    children: (0, r.capitalize)(y.intl.string(S.v7[t]).toLowerCase()),
                 }),
                 (0, i.jsx)(u.abt, { size: "xxs", className: j.ai }),
             ],
@@ -74,14 +74,14 @@ function M() {
                             variant: "text-sm/medium",
                             color: "text-muted",
                             style: { textAlign: "center" },
-                            children: v.intl.string(y.default["O+racd"]),
+                            children: y.intl.string(v.default["O+racd"]),
                         }),
                     ],
                 }),
                 (0, i.jsx)(u.Button, {
                     variant: "secondary",
                     onClick: () => (0, C.tZ)(e),
-                    text: v.intl.string(y.default.klSpfs),
+                    text: y.intl.string(v.default.klSpfs),
                 }),
             ],
         }),
@@ -95,8 +95,8 @@ function D(e) {
             loadMore: r,
             renderLoadingState: A,
             renderMessageGroup: _,
-            scrollerClassName: y,
-            className: v,
+            scrollerClassName: v,
+            className: y,
             listName: D,
             ignoreGrouping: U = !1,
         } = e,
@@ -113,8 +113,8 @@ function D(e) {
             isLoadingComplete: I.A.isLoadingComplete,
             hasLoadedEver: I.A.hasLoadedEver,
         })),
-        K = !F && V,
-        { messageCategoryOpenStates: W, toggleOpenState: Y } = (0, E.A)(),
+        W = !F && V,
+        { messageCategoryOpenStates: K, toggleOpenState: Y } = (0, E.A)(),
         z =
             ((t = (0, c.yK)([I.A], () => I.A.getNotifyingChannelIds() ?? [])),
             (0, c.bG)([I.A, m.Ay], () => {
@@ -177,14 +177,14 @@ function D(e) {
                 e
             );
         }, [n, s]),
-        J = 0 === n.length && 0 === s.length && H,
+        $ = 0 === n.length && 0 === s.length && H,
         Q = 0 === n.length && 0 === s.length && !F && V,
-        $ = l.useMemo(() => {
+        J = l.useMemo(() => {
             let e = [];
             return (
                 Q
                     ? e.push(A())
-                    : J
+                    : $
                       ? e.push((0, i.jsx)(M, {}, "empty-state"))
                       : U
                         ? (e.push(...s.map((e) => _([e], !0))), e.push(...n.map((e) => _([e], !1))))
@@ -195,21 +195,21 @@ function D(e) {
                                           O,
                                           {
                                               group: t,
-                                              isOpen: W[t],
+                                              isOpen: K[t],
                                               toggleOpenedState: () => {
-                                                  let e = W[t];
+                                                  let e = K[t];
                                                   Y(t), (0, x.Ut)({ section: t, enabled: !e, viewId: G });
                                               },
                                           },
                                           t,
                                       ),
                                   ),
-                                  W[t] && e.push(...X[t].map((e) => _(e, t === S.Ur.UNREAD))));
+                                  K[t] && e.push(...X[t].map((e) => _(e, t === S.Ur.UNREAD))));
                           }),
                 e
             );
-        }, [n, s, A, W, Y, X, U, _, J, Q, G]),
-        Z = $[$.length - 1],
+        }, [n, s, A, K, Y, X, U, _, $, Q, G]),
+        Z = J[J.length - 1],
         ee = l.isValidElement(Z) && Z.type === O,
         et = (0, N.S)((e) => e.setInboxReadState);
     l.useEffect(() => {
@@ -224,12 +224,12 @@ function D(e) {
         l.useEffect(() => {
             t || i.current || (a(s), (i.current = !0));
         }, [a, s, t]);
-    })({ messagesByCategory: X, loadingInitial: K });
+    })({ messagesByCategory: X, loadingInitial: W });
     let ei = l.useCallback(() => {
-        let e = L.filter((e) => W[e]).reduce((e, t) => e + X[t].length, 0),
+        let e = L.filter((e) => K[e]).reduce((e, t) => e + X[t].length, 0),
             t = P.current?.getScrollerState();
         return null == t ? 0 : Math.max(0, Math.ceil(t.offsetHeight / 64) - e);
-    }, [W, X]);
+    }, [K, X]);
     l.useEffect(() => {
         Q || V || 0 >= ei() || ((!ee || z) && r?.(S.VA.FILL_SCROLLER));
     }, [ei, r, Q, V, ee, z]);
@@ -247,7 +247,7 @@ function D(e) {
             viewId: G,
         }),
         (0, i.jsx)("div", {
-            className: a()(v, j.KQ),
+            className: a()(y, j.KQ),
             onClick: R,
             onDoubleClick: R,
             "aria-label": e["aria-label"],
@@ -260,11 +260,11 @@ function D(e) {
                             ref: (e) => {
                                 (P.current = e), (t.current = e?.getScrollerNode() ?? null);
                             },
-                            className: a()(j.m4, y),
+                            className: a()(j.m4, v),
                             onScroll: q,
                             fade: !0,
                             ...n,
-                            children: [$, en && !ee ? el : null],
+                            children: [J, en && !ee ? el : null],
                         });
                     },
                 }),

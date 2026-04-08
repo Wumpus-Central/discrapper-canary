@@ -11,8 +11,8 @@ var n = i(627968),
     m = i(985481),
     g = i(652215),
     p = i(985018),
-    N = i(168319),
-    A = i(936745);
+    N = i(18434),
+    A = i(551606);
 function h(e) {
     let { className: t, isDsaEligible: i, onClose: h, onNext: j, onBack: u } = e,
         _ = (0, s.bG)([o.A], () => o.A.getAppealClassificationId()),

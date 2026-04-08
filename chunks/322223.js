@@ -16,19 +16,19 @@ var i = n(627968),
     p = n(652215),
     f = n(746080),
     x = n(985018),
-    E = n(592528);
+    E = n(95473);
 function I(e) {
     let { onDismiss: t } = e,
         I = (0, s.bG)([h.A], () => h.A.getGuildId()),
         C = (0, s.bG)([u.A], () => (null != I ? u.A.getChannelId(I) : null), [I]),
         N = I ?? null,
         T = (0, s.bG)([c.A], () => (null != N ? c.A.getGuild(N) : null), [N]),
-        { shouldShowIncidentActions: S, incidentData: b, isUnderLockdown: y } = (0, _.Li)(N),
-        v = (0, o.fw)(T?.id ?? p.dJq),
+        { shouldShowIncidentActions: S, incidentData: b, isUnderLockdown: v } = (0, _.Li)(N),
+        y = (0, o.fw)(T?.id ?? p.dJq),
         j = l.useCallback(() => null != T && (0, d.aZ)(T.id), [T]);
     if (null == T || null == b || !S) return null;
     let R = (e) => {
-            e && v && C !== f.VV.MEMBER_SAFETY && j()
+            e && y && C !== f.VV.MEMBER_SAFETY && j()
                 ? A.default.track(p.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
                       notice_type: p.kqX.GUILD_RAID_NOTIFICATION,
                       guild_id: T.id,
@@ -41,7 +41,7 @@ function I(e) {
         },
         O = (0, i.jsx)(r.Ay, { className: E.$f, guild: T, size: r.Ay.Sizes.MINI }),
         L = (0, g.ql)(b, T.name);
-    if (null != (b.dmsDisabledUntil ?? b.invitesDisabledUntil) && y)
+    if (null != (b.dmsDisabledUntil ?? b.invitesDisabledUntil) && v)
         return (0, i.jsxs)(a.$Td, {
             className: E.lm,
             color: a.Hv$.NEUTRAL,
@@ -67,7 +67,7 @@ function I(e) {
             : (0, g.Qm)(b)
               ? x.intl.formatToPlainString(x.t["1bSmxr"], { guildName: T.name })
               : x.intl.formatToPlainString(x.t.W87xDE, { guildName: T.name }),
-        D = v && C === f.VV.MEMBER_SAFETY;
+        D = y && C === f.VV.MEMBER_SAFETY;
     return (0, i.jsxs)(a.$Td, {
         className: E.lm,
         color: a.Hv$.WARNING,

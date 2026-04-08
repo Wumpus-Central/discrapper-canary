@@ -1,92 +1,92 @@
-i.d(e, { A: () => y, M: () => v });
-var n = i(627968),
-    l = i(64700),
-    r = i(311907),
-    s = i(833349),
-    a = i(153331),
-    o = i(592182),
-    d = i(587895),
-    u = i(806246),
-    c = i(890330),
-    p = i(172710),
-    m = i(616356),
-    A = i(734057),
-    h = i(71393),
-    g = i(977997),
-    f = i(954571),
-    S = i(821589),
-    T = i(652215),
-    E = i(78016);
-function C(t) {
-    let { type: e, source: i, activity: l, applicationStream: r, user: s, guildId: a, channelId: d, onAction: u } = t;
-    return (0, n.jsx)(o.A, {
-        className: (0, S.t)(E, "actions", e),
-        type: e,
-        source: i,
+n.d(t, { A: () => N, M: () => C });
+var i = n(627968),
+    l = n(64700),
+    s = n(311907),
+    a = n(833349),
+    r = n(153331),
+    o = n(592182),
+    d = n(587895),
+    c = n(806246),
+    u = n(890330),
+    h = n(172710),
+    A = n(616356),
+    _ = n(734057),
+    m = n(71393),
+    g = n(977997),
+    p = n(954571),
+    f = n(821589),
+    x = n(652215),
+    E = n(650417);
+function I(e) {
+    let { type: t, source: n, activity: l, applicationStream: s, user: a, guildId: r, channelId: d, onAction: c } = e;
+    return (0, i.jsx)(o.A, {
+        className: (0, f.t)(E, "actions", t),
+        type: t,
+        source: n,
         activity: l,
-        applicationStream: r,
-        user: s,
-        guildId: a,
+        applicationStream: s,
+        user: a,
+        guildId: r,
         buttonVariant: "primary",
         channelId: d,
-        onAction: u,
+        onAction: c,
     });
 }
-let v = a.A.Types,
-    y = function (t) {
+let C = r.A.Types,
+    N = function (e) {
         let {
-                activity: e,
-                user: i,
+                activity: t,
+                user: n,
                 useStoreStream: o = !0,
-                showActions: S = !0,
+                showActions: f = !0,
                 hideHeader: E = !1,
-                showChannelDetails: v = !1,
-                ...y
-            } = t,
-            _ = (0, r.bG)([g.A, A.A], () => A.A.getChannel(g.A.getVoiceStateForUser(i.id)?.channelId)),
-            I = (0, c.v)("UserActivityContainer", _),
-            N = (0, r.bG)([m.A], () => (o ? m.A.getAnyStreamForUser(i.id) : null)),
-            x = e?.type === T.$pd.HANG_STATUS && I ? _ : null,
-            j = (0, r.bG)([h.A, g.A, A.A], () =>
-                (0, s.A)(e, T.jUm.EMBEDDED)
-                    ? h.A.getGuild(
-                          A.A.getChannel(g.A.getVoiceStateForSession(i.id, e?.session_id)?.channelId)?.getGuildId(),
+                showChannelDetails: C = !1,
+                ...N
+            } = e,
+            T = (0, s.bG)([g.A, _.A], () => _.A.getChannel(g.A.getVoiceStateForUser(n.id)?.channelId)),
+            S = (0, u.v)("UserActivityContainer", T),
+            b = (0, s.bG)([A.A], () => (o ? A.A.getAnyStreamForUser(n.id) : null)),
+            v = t?.type === x.$pd.HANG_STATUS && S ? T : null,
+            y = (0, s.bG)([m.A, g.A, _.A], () =>
+                (0, a.A)(t, x.jUm.EMBEDDED)
+                    ? m.A.getGuild(
+                          _.A.getChannel(g.A.getVoiceStateForSession(n.id, t?.session_id)?.channelId)?.getGuildId(),
                       )
-                    : null != x
-                      ? h.A.getGuild(x.getGuildId())
+                    : null != v
+                      ? m.A.getGuild(v.getGuildId())
                       : null,
             ),
-            P = (0, r.bG)([h.A], () => (null != N ? h.A.getGuild(N.guildId) : null)),
-            L = (0, r.bG)([d.A], () => {
-                if (null != e)
-                    if (null != e.application_id) return d.A.getApplication(e.application_id);
-                    else return d.A.getApplicationByName(e.name);
+            j = (0, s.bG)([m.A], () => (null != b ? m.A.getGuild(b.guildId) : null)),
+            R = (0, s.bG)([d.A], () => {
+                if (null != t)
+                    if (null != t.application_id) return d.A.getApplication(t.application_id);
+                    else return d.A.getApplicationByName(t.name);
                 return null;
             });
         return (l.useEffect(() => {
-            e?.type === T.$pd.HANG_STATUS &&
-                I &&
-                f.default.track(T.HAw.VIEW_HANG_STATUS, {
+            t?.type === x.$pd.HANG_STATUS &&
+                S &&
+                p.default.track(x.HAw.VIEW_HANG_STATUS, {
                     source: "UserActivity",
-                    other_user_id: i.id,
-                    ...(0, u.A)(x?.id),
+                    other_user_id: n.id,
+                    ...(0, c.A)(v?.id),
                 });
-        }, [e?.type, I, x, i.id]),
-        e?.type !== T.$pd.HANG_STATUS || I)
-            ? (0, n.jsx)(a.A, {
-                  ...y,
-                  activity: e,
-                  user: i,
-                  application: L,
+        }, [t?.type, S, v, n.id]),
+        t?.type !== x.$pd.HANG_STATUS || S)
+            ? (0, i.jsx)(r.A, {
+                  ...N,
+                  activity: t,
+                  user: n,
+                  application: R,
                   hideHeader: E,
-                  activityGuild: j ?? P,
-                  showChannelDetails: v,
-                  channel: v ? _ : void 0,
-                  enableUserHoverActivities: y.enableUserHoverActivities,
-                  renderActions: S ? () => (0, n.jsx)(C, { ...y, applicationStream: N, activity: e, user: i }) : null,
-                  onOpenSpotifyTrack: p.Mp,
-                  onOpenSpotifyArtist: p.mN,
-                  onOpenSpotifyAlbum: p.QX,
+                  activityGuild: y ?? j,
+                  showChannelDetails: C,
+                  channel: C ? T : void 0,
+                  enableUserHoverActivities: N.enableUserHoverActivities,
+                  renderActions: f ? () => (0, i.jsx)(I, { ...N, applicationStream: b, activity: t, user: n }) : null,
+                  onOpenSpotifyTrack: h.Mp,
+                  onOpenSpotifyArtist: h.mN,
+                  onOpenSpotifyAlbum: h.QX,
               })
             : null;
     };

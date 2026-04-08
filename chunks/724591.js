@@ -23,8 +23,8 @@ var i = n(627968),
     T = n(652793),
     S = n(652215),
     b = n(49999),
-    y = n(985018),
-    v = n(567431);
+    v = n(985018),
+    y = n(11464);
 let j = l.memo(function (e) {
     let { guild: t, selected: s } = e,
         j = l.useRef(null),
@@ -52,10 +52,10 @@ let j = l.memo(function (e) {
         F = l.useCallback(() => {
             (0, f.X)({ guildId: t.id, forceFetch: V });
         }, [t.id, V]),
-        K = l.useCallback(() => {
+        W = l.useCallback(() => {
             B(b.i.USER_DISMISS);
         }, [B]),
-        W = l.useCallback(
+        K = l.useCallback(
             (e) => {
                 null != t &&
                     (0, h.L3)(e, async () => {
@@ -84,25 +84,25 @@ let j = l.memo(function (e) {
                         }),
                     text: (0, i.jsx)(u.Text, {
                         variant: "text-md/medium",
-                        className: a()(v.UU, n),
-                        children: y.intl.string(y.t.vyaWs7),
+                        className: a()(y.UU, n),
+                        children: v.intl.string(v.t.vyaWs7),
                     }),
                     selected: s,
                     onMouseDown: F,
                     onClick: H,
-                    onContextMenu: W,
+                    onContextMenu: K,
                     trailing: (0, i.jsxs)(i.Fragment, {
                         children: [
                             k &&
                                 (0, i.jsx)(u.LpS, {
-                                    text: y.intl.string(y.t.y2b7CA),
+                                    text: v.intl.string(v.t.y2b7CA),
                                     color: d.A.colors.BACKGROUND_BRAND.css,
                                 }),
                             r,
                         ],
                     }),
                 }),
-            [t.id, s, F, H, W, k],
+            [t.id, s, F, H, K, k],
         ),
         q = l.useMemo(() => {
             if (null == U) return;
@@ -120,14 +120,14 @@ let j = l.memo(function (e) {
                           onActionClick: H,
                           onActionMouseDown: F,
                           onRender: Y,
-                          onRequestClose: K,
+                          onRequestClose: W,
                           targetElementRef: R,
                           skuImageDetails: q,
-                          title: y.intl.string(y.t["7PvvS9"]),
-                          body: y.intl.formatToPlainString(y.t["9J4h1a"], { applicationName: U.applicationName }),
+                          title: v.intl.string(v.t["7PvvS9"]),
+                          body: v.intl.formatToPlainString(v.t["9J4h1a"], { applicationName: U.applicationName }),
                       })
                     : null,
-            [V, U, H, F, Y, K, q],
+            [V, U, H, F, Y, W, q],
         );
     return (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)(E.A, { ref: j, children: z }), !O && !L && !M && X()] });
 });

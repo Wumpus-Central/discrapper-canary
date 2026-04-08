@@ -1,2 +1,2 @@
 "use strict";
-e.exports = { j: "overflow_b0dfc2", E: "lineClamp2Plus_b0dfc2" };
+e.exports = n.p + "6897c8395199e044.woff2";

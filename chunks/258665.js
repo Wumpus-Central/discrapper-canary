@@ -20,11 +20,11 @@ var i = n(627968),
     j = n(860689),
     N = n(427262),
     E = n(820883),
-    b = n(276373),
-    C = n(438407),
+    C = n(276373),
+    b = n(438407),
     T = n(652215),
     I = n(985018),
-    v = n(91404);
+    v = n(165636);
 class S extends s.PureComponent {
     render() {
         let { user: e, onContextMenu: t } = this.props;
@@ -53,13 +53,13 @@ let y = s.forwardRef((e, t) => {
             guild: y,
             onChannelContextMenu: R,
             onContentClick: O,
-            onHeaderClick: L,
-            onTargetContextMenu: G,
+            onHeaderClick: G,
+            onTargetContextMenu: L,
             onUserContextMenu: D,
             theme: M,
         } = e,
         k = s.useRef(null),
-        U = b.checkChangesToRender(l),
+        U = C.checkChangesToRender(l),
         P = v.headerDefault;
     h ? (P = v.headerExpanded) : U && (P = v.headerClickable);
     let w = l.timestampStart.calendar(),
@@ -68,7 +68,7 @@ let y = s.forwardRef((e, t) => {
         w === B
             ? (0, i.jsx)(c.Text, { className: v.timestamp, variant: "text-sm/normal", children: w })
             : (0, i.jsxs)(c.Text, { className: v.timestamp, variant: "text-sm/normal", children: [w, "—", B] });
-    let F = U ? L : T.tEg;
+    let F = U ? G : T.tEg;
     return (0, i.jsx)(a.tG, {
         id: l.id,
         children: (e) =>
@@ -82,7 +82,7 @@ let y = s.forwardRef((e, t) => {
                         onClick: F,
                         ...e,
                         children: [
-                            (0, i.jsx)(C.H, { action: l.action, actionType: l.actionType, targetType: l.targetType }),
+                            (0, i.jsx)(b.H, { action: l.action, actionType: l.actionType, targetType: l.targetType }),
                             (function () {
                                 let {
                                     user: e,
@@ -137,7 +137,7 @@ let y = s.forwardRef((e, t) => {
                                             let e,
                                                 { user: t, target: n, options: s } = l;
                                             e = (0, j.fh)(n) ? n.name : n.toString();
-                                            let r = b.getChangeTitle(l);
+                                            let r = C.getChangeTitle(l);
                                             return null != r
                                                 ? (0, i.jsx)("div", {
                                                       className: v.overflowEllipsis,
@@ -161,12 +161,12 @@ let y = s.forwardRef((e, t) => {
                                                               l.targetType === T.GaG.USER && l.target instanceof _.A
                                                                   ? (0, i.jsx)(
                                                                         S,
-                                                                        { user: l.target, onContextMenu: G },
+                                                                        { user: l.target, onContextMenu: L },
                                                                         t,
                                                                     )
                                                                   : (0, i.jsx)(
                                                                         "span",
-                                                                        { onContextMenu: G, children: e },
+                                                                        { onContextMenu: L, children: e },
                                                                         t,
                                                                     ),
                                                           count: s.count ?? "",
@@ -196,7 +196,7 @@ let y = s.forwardRef((e, t) => {
                         ],
                     }),
                     h ? (0, i.jsx)("div", { className: v.divider }) : null,
-                    h && null != y ? (0, i.jsx)(C.r, { log: l, guild: y, onContentClick: O }) : null,
+                    h && null != y ? (0, i.jsx)(b.r, { log: l, guild: y, onContentClick: O }) : null,
                 ],
             }),
     });

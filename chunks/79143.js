@@ -14,7 +14,7 @@ var i = n(627968),
     x = n(327325),
     h = n(935206),
     _ = n(985018),
-    p = n(986424);
+    p = n(19737);
 function A(e) {
     let {
             guildId: t,
@@ -31,10 +31,10 @@ function A(e) {
         } = e,
         j = s.useRef(null),
         N = s.useRef(null),
-        { drag: E, dragPreview: b, drop: C, isDragging: T } = (0, h.A)(j, c, u, A);
+        { drag: E, dragPreview: C, drop: b, isDragging: T } = (0, h.A)(j, c, u, A);
     return (
         E(N),
-        b(C(j)),
+        C(b(j)),
         (0, i.jsxs)("div", {
             ref: j,
             className: r()(p.Nr, { [p.wy]: T, [p.r9]: f }),

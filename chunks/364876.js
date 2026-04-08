@@ -10,7 +10,7 @@ var l = t(877624),
     d = t(810498),
     c = t(298305),
     p = t(985018),
-    m = t(625489);
+    m = t(75800);
 function E() {
     let e = (0, r.bG)([u.A], () => {
             let e = u.A.getMarketingComponentByType(l.C.GIFT_CUSTOMIZATION_BANNER);
@@ -28,12 +28,12 @@ function E() {
                 : void 0,
         x = (0, d.gc)(E);
     null != x && ((x.backgroundSize = "cover, auto"), (x.backgroundPosition = "right center, 0% 0%"));
-    let P = (0, d.x)(x, S);
+    let T = (0, d.x)(x, S);
     return null == e || null == n
         ? null
         : (0, i.jsxs)("div", {
               className: m.qD,
-              style: P,
+              style: T,
               children: [
                   (0, i.jsx)("div", {
                       className: m.my,

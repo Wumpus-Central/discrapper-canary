@@ -18,8 +18,8 @@ var i = n(627968),
     T = n(40185),
     f = n(89366),
     S = n(422936),
-    E = n(234419),
-    b = n(863156),
+    b = n(234419),
+    E = n(863156),
     C = n(194509),
     N = n(396375),
     v = n(511484),
@@ -28,16 +28,16 @@ var i = n(627968),
     y = n(38720),
     O = n(788868),
     R = n(985018),
-    P = n(70667),
+    P = n(257890),
     L = n(196093),
     D = n(979653),
     G = n(255631),
     M = n(193023);
-let k = () => {
+let U = () => {
         let e = (0, j._)();
         return (0, i.jsx)(I.HU, { text: e, className: P.QR, colorOptions: I.at.PREMIUM_TIER_2_NEW_GRADIENT_FILL });
     },
-    U = () =>
+    k = () =>
         (0, i.jsx)("div", {
             className: P.Wm,
             children: (0, i.jsx)(c.Heading, {
@@ -116,7 +116,7 @@ let k = () => {
             X = (0, r.bG)([A.default], () => A.default.getCurrentUser()),
             K = null != X && X.isPremiumWithPremiumGroup(),
             W = (0, p.YE)(X, O.PremiumTypes.TIER_2),
-            Z = (0, E.V)(),
+            Z = (0, b.V)(),
             q = Z?.subscription_trial?.sku_id,
             Q = (0, f.Us)(),
             J = (0, S.O)(),
@@ -209,8 +209,8 @@ let k = () => {
                                   : I.at.PREMIUM_TIER_2_WHITE_FILL,
                     })
                   : ea
-                    ? (0, i.jsx)(k, {})
-                    : (0, i.jsx)(U, {}));
+                    ? (0, i.jsx)(U, {})
+                    : (0, i.jsx)(k, {}));
         let eo = q === O.pe.TIER_0 || Q === O.PremiumTypes.TIER_0 || G === O.PremiumTypes.TIER_0;
         return (0, i.jsx)(g.f5, {
             value: M,
@@ -223,7 +223,7 @@ let k = () => {
                         variant: "heading-xxl/extrabold",
                         children: j ?? R.intl.string(R.t.FIbMh9),
                     }),
-                    K && (0, i.jsx)(b.A, { premiumGroupRole: X.premiumGroupRole, className: P.vg }),
+                    K && (0, i.jsx)(E.A, { premiumGroupRole: X.premiumGroupRole, className: P.vg }),
                     (0, i.jsxs)("div", {
                         className: P.wY,
                         children: [

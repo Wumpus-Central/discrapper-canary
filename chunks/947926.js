@@ -1,8 +1,8 @@
 n.d(t, { A: () => U, Y: () => L });
 var a = n(627968),
     i = n(64700),
-    s = n(503698),
-    l = n.n(s),
+    l = n(503698),
+    s = n.n(l),
     r = n(687498),
     o = n(311907),
     d = n(475743),
@@ -22,16 +22,16 @@ var a = n(627968),
     C = n(568329),
     y = n(818276),
     S = n(742860),
-    E = n(783569),
-    T = n(963713),
+    T = n(783569),
+    E = n(963713),
     N = n(717695),
     I = n(899592),
-    O = n(546350),
-    R = n(922532),
-    k = n(20732),
+    k = n(546350),
+    O = n(922532),
+    R = n(20732),
     w = n(654487);
 n(272111);
-var D = n(57291);
+var D = n(407974);
 function M(e) {
     let { isExpanded: t, questId: n } = e;
     return (
@@ -55,7 +55,7 @@ function P() {
 function L(e) {
     let { quest: t } = e,
         n = (0, g.L)({ quest: t, location: w.rE.QUESTS_BAR }),
-        s = (0, p.s)(),
+        l = (0, p.s)(),
         c = (0, o.bG)([m.A], () => null != m.A.questEnrollmentBlockedUntil),
         { isQuestBarVisible: L, reason: U } = (0, b.TQ)({ quest: t }),
         B = (0, o.bG)([u.A], () => u.A.hasLayers()),
@@ -66,7 +66,7 @@ function L(e) {
         H = (0, d.A)(W),
         K = t.userStatus?.completedAt != null,
         { hasError: z, isLoading: $ } = (0, f.Gk)(),
-        q = i.useContext(N.Z) || (s && L && !$ && !c),
+        q = i.useContext(N.Z) || (l && L && !$ && !c),
         {
             isExpanded: Q,
             setIsExpanded: Y,
@@ -76,18 +76,18 @@ function L(e) {
             expansionSpring: ee,
             visibilitySpring: et,
             springConfig: en,
-        } = (0, O.w)({ isQuestAccepted: W, isQuestCompleted: K, isQuestBarVisible: q }),
+        } = (0, k.w)({ isQuestAccepted: W, isQuestCompleted: K, isQuestBarVisible: q }),
         {
             handleCtxMenuOpened: ea,
             handleCtxMenuClosed: ei,
-            handleCtxMenuSelection: es,
-            handleGameSheetOpened: el,
+            handleCtxMenuSelection: el,
+            handleGameSheetOpened: es,
             handleGameSheetClosed: er,
             handleFocusWithoutDelay: eo,
             handleBlur: ed,
             handleMouseEnter: ec,
             handleMouseLeave: eu,
-        } = (0, R.m)({
+        } = (0, O.m)({
             quest: t,
             isExpanded: Q,
             setIsExpanded: Y,
@@ -97,10 +97,10 @@ function L(e) {
             prevIsQuestAccepted: H,
             impressionRef: G,
         });
-    (0, k.S)({
+    (0, R.S)({
         quest: t,
         hasAssetsError: z,
-        isEligibleForQuests: s,
+        isEligibleForQuests: l,
         isQuestBarVisible: q,
         isVisibilityAnimationAtRest: Z,
         isLoadingAssets: $,
@@ -118,9 +118,9 @@ function L(e) {
         (i.useEffect(() => {
             F && (0, j.l9)();
         }, [F]),
-        !s || (!q && Z && !$) || z)
+        !l || (!q && Z && !$) || z)
     )
-        return z ? n.log("Not rendered due to asset error") : s || n.log("Not rendered due to ineligibility"), null;
+        return z ? n.log("Not rendered due to asset error") : l || n.log("Not rendered due to ineligibility"), null;
     let e_ = 70 + 78 * !!K;
     return (0, a.jsx)(v.R, {
         questOrQuests: t,
@@ -143,26 +143,26 @@ function L(e) {
                         onMouseEnter: ec,
                         onFocus: eo,
                         onBlur: ed,
-                        className: l()(D.iE, { [D.Xc]: !q, [D.uv]: q && Z }),
+                        className: s()(D.iE, { [D.Xc]: !q, [D.uv]: q && Z }),
                         style: { height: et.to({ range: [0, 1], output: [0, e_] }) },
                         children: (0, a.jsx)(r.animated.div, {
-                            className: l()(D.FG, { [D.E$]: Q, [D.KA]: W }),
-                            children: (0, a.jsx)(E.R, {
+                            className: s()(D.FG, { [D.E$]: Q, [D.KA]: W }),
+                            children: (0, a.jsx)(T.R, {
                                 springConfig: en,
                                 isExpanded: Q,
                                 children: (0, a.jsx)(C.oK, {
                                     expandedContentRef: em,
                                     collapsedContentRef: eh,
                                     expansionSpring: ee,
-                                    children: (0, a.jsxs)(T.C, {
+                                    children: (0, a.jsxs)(E.C, {
                                         quest: t,
                                         taskDetails: ep,
                                         isExpanded: Q,
                                         isExpansionAnimationComplete: X,
                                         onCtxMenuClose: ei,
                                         onCtxMenuOpen: ea,
-                                        onCtxMenuSelect: es,
-                                        onGameSheetOpen: el,
+                                        onCtxMenuSelect: el,
+                                        onGameSheetOpen: es,
                                         onGameSheetClose: er,
                                         collapsedHeight: e_,
                                         children: [

@@ -20,12 +20,12 @@ var i = n(627968),
     j = n(660496),
     N = n(652215),
     E = n(985018),
-    b = n(8271);
-class C extends s.PureComponent {
+    C = n(552592);
+class b extends s.PureComponent {
     render() {
         let { user: e, guild: t } = this.props;
         return (0, i.jsxs)(o.DUT, {
-            className: b.KD,
+            className: C.KD,
             onClick: this.handleShowModal,
             onContextMenu: this.handleContextMenu,
             children: [
@@ -33,10 +33,10 @@ class C extends s.PureComponent {
                     src: e.getAvatarURL(t?.id, 40),
                     "aria-label": e.username,
                     size: o._3J.SIZE_40,
-                    className: b.pX,
+                    className: C.pX,
                 }),
                 (0, i.jsxs)("div", {
-                    className: b.Xh,
+                    className: C.Xh,
                     children: [
                         (0, i.jsx)(o.Text, {
                             variant: "text-md/semibold",
@@ -81,10 +81,10 @@ let T = s.forwardRef(function (e, t) {
         d = s.useCallback(
             (e) => {
                 if (null == r && 0 === e)
-                    return (0, i.jsx)(o.y$y, { className: b.u1, type: o.y$y.Type.SPINNING_CIRCLE }, "spinner");
+                    return (0, i.jsx)(o.y$y, { className: C.u1, type: o.y$y.Type.SPINNING_CIRCLE }, "spinner");
                 let t = l[e],
                     s = r?.get(t?.id ?? "");
-                if (null != t && null != s) return (0, i.jsx)(C, { user: t, ban: s, guild: n }, t.id);
+                if (null != t && null != s) return (0, i.jsx)(b, { user: t, ban: s, guild: n }, t.id);
             },
             [r, n, l],
         );
@@ -135,15 +135,15 @@ function I(e) {
         children: [
             (0, i.jsx)(o.Heading, { variant: "heading-lg/semibold", children: E.intl.string(E.t["7OY0gJ"]) }),
             (0, i.jsx)("div", {
-                className: b.Vu,
+                className: C.Vu,
                 children: (0, i.jsx)(o.Text, {
                     variant: "text-sm/normal",
-                    className: b.h_,
+                    className: C.h_,
                     children: E.intl.format(E.t.JcZ36i, { onModerationClick: u }),
                 }),
             }),
             (0, i.jsxs)("div", {
-                className: b.IA,
+                className: C.IA,
                 children: [
                     (0, i.jsx)(o.IWV, {
                         query: l ?? "",
@@ -155,7 +155,7 @@ function I(e) {
                     }),
                     (0, i.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
-                        className: b.JU,
+                        className: C.JU,
                         children: (0, i.jsx)(o.Button, {
                             variant: "primary",
                             text: E.intl.string(E.t["5h0QOP"]),
@@ -176,7 +176,7 @@ function v() {
         p = d !== g,
         [f] = (0, a.bG)([A.A], () => A.A.getBans(), [], _.D),
         j = f?.size ?? 0,
-        C = (0, m.Ay)(),
+        b = (0, m.Ay)(),
         v = e?.id ?? N.dJq,
         S = s.useRef(null),
         y = s.useCallback(
@@ -210,8 +210,8 @@ function v() {
             [y],
         ),
         O = s.useMemo(() => R(f, t, j), [f, R, t, j]),
-        L = null != f,
-        G = O.length % 1e3 == 0 && O.length > 0 && L,
+        G = null != f,
+        L = O.length % 1e3 == 0 && O.length > 0 && G,
         D = 0 === O.length,
         [M, k] = s.useState({ currentPage: 1, pageSize: 100 });
     s.useEffect(() => {
@@ -228,12 +228,12 @@ function v() {
             (e) => {
                 S.current?.scrollToSectionTop(0),
                     (e + 1) * M.pageSize > O.length &&
-                        G &&
+                        L &&
                         !d &&
                         ((B.current = O[O.length - 1]?.id ?? null), U(B.current)),
-                    (null != P[e - 1] || G) && k((t) => ({ ...t, currentPage: e }));
+                    (null != P[e - 1] || L) && k((t) => ({ ...t, currentPage: e }));
             },
-            [M.pageSize, O, G, P, U, d],
+            [M.pageSize, O, L, P, U, d],
         ),
         B = s.useRef(null);
     s.useEffect(() => {
@@ -243,18 +243,18 @@ function v() {
     return null == e
         ? null
         : (0, i.jsxs)("div", {
-              className: b.kL,
+              className: C.kL,
               children: [
                   (0, i.jsx)(I, { guildId: v, storedSearchQuery: t }),
                   (0, i.jsxs)("div", {
-                      className: b.gs,
+                      className: C.gs,
                       children: [
                           !D && (0, i.jsx)(T, { guild: e, bans: f, sortedBans: F, ref: S }),
-                          !G &&
+                          !L &&
                               D &&
                               (0, i.jsxs)(o.ppr, {
-                                  theme: C,
-                                  className: b.p$,
+                                  theme: b,
+                                  className: C.p$,
                                   children: [
                                       (0, i.jsx)(o.G8R, {
                                           darkSrc: n(29093),
@@ -273,8 +273,8 @@ function v() {
                   }),
                   (0, i.jsx)("div", {
                       children: (0, i.jsx)(o.mgR, {
-                          className: b.JV,
-                          totalCount: O.length + (G ? M.pageSize : 0),
+                          className: C.JV,
+                          totalCount: O.length + (L ? M.pageSize : 0),
                           pageSize: M.pageSize,
                           currentPage: M.currentPage,
                           onPageChange: w,

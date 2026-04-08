@@ -1,31 +1,31 @@
-r.d(t, { A: () => g, L: () => b });
-var a = r(627968),
-    n = r(64700),
+r.d(t, { A: () => g, L: () => h });
+var n = r(627968),
+    a = r(64700),
     i = r(503698),
     s = r.n(i),
     l = r(230109),
-    o = r(732955),
-    d = r(688810),
+    d = r(732955),
+    o = r(688810),
     c = r(320118),
     u = r(954571),
     m = r(128620),
     _ = r(652215),
-    p = r(49370),
+    p = r(723468),
     f = r(985018),
-    h = r(18738);
-let b = "orbs",
+    b = r(577057);
+let h = "orbs",
     g = (e) => {
         let { className: t, location: r } = e,
-            { analyticsLocations: i } = (0, d.Ay)(r),
-            g = n.useRef(null),
-            x = n.useRef(!1),
+            { analyticsLocations: i } = (0, o.Ay)(r),
+            g = a.useRef(null),
+            x = a.useRef(!1),
             { passesGeneralUIInvariant: C, programReward: A } = (0, c.F)({
                 location: "PremiumTenureRewardsOrbsSection",
             });
         return C
-            ? (0, a.jsx)(d.f5, {
+            ? (0, n.jsx)(o.f5, {
                   value: i,
-                  children: (0, a.jsx)(l.L, {
+                  children: (0, n.jsx)(l.L, {
                       innerRef: g,
                       onChange: (e) => {
                           e &&
@@ -36,23 +36,23 @@ let b = "orbs",
                               }));
                       },
                       threshold: 0.5,
-                      children: (0, a.jsxs)("div", {
+                      children: (0, n.jsxs)("div", {
                           ref: g,
-                          id: b,
-                          className: s()(h.uW, h.Uv, h.qr, t),
+                          id: h,
+                          className: s()(b.uW, b.Uv, b.qr, t),
                           children: [
-                              (0, a.jsx)(o.DZT, {
+                              (0, n.jsx)(d.DZT, {
                                   variant: "display-sm",
-                                  className: h.R_,
+                                  className: b.R_,
                                   style: { textAlign: "start" },
                                   children: f.intl.string(p.default.EdGvBM),
                               }),
-                              (0, a.jsx)(o.EYj, {
+                              (0, n.jsx)(d.EYj, {
                                   variant: "text-md/medium",
-                                  className: s()(h.VA, h.dO),
+                                  className: s()(b.VA, b.dO),
                                   children: f.intl.string(p.default["2KoHRF"]),
                               }),
-                              (0, a.jsx)(m.A, {}),
+                              (0, n.jsx)(m.A, {}),
                           ],
                       }),
                   }),

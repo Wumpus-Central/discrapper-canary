@@ -1,157 +1,157 @@
-a.d(t, { A: () => v }), a(321073);
-var l = a(627968),
-    n = a(64700),
-    i = a(735438),
-    s = a(194498),
-    r = a(607470),
-    o = a(372684),
-    u = a(226421),
-    d = a(252449),
-    c = a(429364),
-    m = a(696016),
-    h = a(14363),
-    p = a(695241);
-function f(e, t) {
-    let { applicationAudioEnabled: a, voiceAudioEnabled: l, soundboardAudioEnabled: n, isVoiceClip: i } = t;
-    if (!i && a && l && n)
+l.d(t, { A: () => g }), l(321073);
+var n = l(627968),
+    a = l(64700),
+    i = l(735438),
+    s = l(194498),
+    r = l(607470),
+    d = l(372684),
+    o = l(226421),
+    c = l(252449),
+    u = l(429364),
+    m = l(696016),
+    h = l(889904),
+    p = l(825040);
+function x(e, t) {
+    let { applicationAudioEnabled: l, voiceAudioEnabled: n, soundboardAudioEnabled: a, isVoiceClip: i } = t;
+    if (!i && l && n && a)
         if (e.includes(m.gC.ALL)) return !1;
         else return !0;
-    return e.includes(m.gC.APPLICATION) ? !a : e.includes(m.gC.VOICE) ? !l : !e.includes(m.gC.SOUNDBOARD) || !n;
+    return e.includes(m.gC.APPLICATION) ? !l : e.includes(m.gC.VOICE) ? !n : !e.includes(m.gC.SOUNDBOARD) || !a;
 }
-function g(e) {
-    let { setRef: t, audioTrackLabel: a, src: i, muted: s } = e,
-        r = n.useCallback(
+function f(e) {
+    let { setRef: t, audioTrackLabel: l, src: i, muted: s } = e,
+        r = a.useCallback(
             (e) => {
-                t(e, a);
+                t(e, l);
             },
-            [t, a],
+            [t, l],
         ),
-        o = n.useCallback(
+        d = a.useCallback(
             (e) => {
                 Object.values(e.currentTarget.audioTracks).forEach((e) => {
-                    e.enabled = a === e.label;
+                    e.enabled = l === e.label;
                 });
             },
-            [a],
+            [l],
         );
-    return (0, l.jsx)("audio", {
-        id: `ClipsPlayerAudioTrack:${a}`,
+    return (0, n.jsx)("audio", {
+        id: `ClipsPlayerAudioTrack:${l}`,
         ref: r,
         src: i ?? void 0,
         muted: s,
         preload: "auto",
         className: p.R,
-        onLoadedMetadata: o,
+        onLoadedMetadata: d,
     });
 }
-let v = n.forwardRef(function (e, t) {
-    let { clip: a, applicationAudioEnabled: v, voiceAudioEnabled: x, soundboardAudioEnabled: b } = e,
-        { cropStart: j, cropEnd: _, setVideoPlayerRef: C, videoURL: k, audioURL: y } = (0, c.T)(),
-        N = n.useRef({}),
-        E = n.useRef(!1),
-        [A, S] = n.useState([]),
-        w = n.useCallback(() => {
-            let e = N.current.main;
+let g = a.forwardRef(function (e, t) {
+    let { clip: l, applicationAudioEnabled: g, voiceAudioEnabled: v, soundboardAudioEnabled: j } = e,
+        { cropStart: b, cropEnd: C, setVideoPlayerRef: y, videoURL: N, audioURL: A } = (0, u.T)(),
+        E = a.useRef({}),
+        k = a.useRef(!1),
+        [I, S] = a.useState([]),
+        w = a.useCallback(() => {
+            let e = E.current.main;
             if (null == e) return;
             let t = (0, i.round)(e.currentTime, 3),
-                a = (0, i.round)(j, 3);
-            if (t >= (null != _ ? (0, i.round)(_, 3) : (0, i.round)(e.duration, 3)) || t < a) {
-                for (let e of Object.values(N.current)) null != e && (e.currentTime = j);
+                l = (0, i.round)(b, 3);
+            if (t >= (null != C ? (0, i.round)(C, 3) : (0, i.round)(e.duration, 3)) || t < l) {
+                for (let e of Object.values(E.current)) null != e && (e.currentTime = b);
                 return !0;
             }
-        }, [j, _]),
-        I = n.useCallback((e) => {
+        }, [b, C]),
+        L = a.useCallback((e) => {
             let t = [];
-            for (let a of Object.values(e.currentTarget.audioTracks))
-                a.label.includes(m.gC.APPLICATION)
-                    ? (a.enabled = !0)
-                    : a.label.includes(m.gC.VOICE) || a.label.includes(m.gC.SOUNDBOARD)
-                      ? ((a.enabled = !1), t.includes(a.label) || t.push(a.label))
-                      : (a.enabled = !1);
+            for (let l of Object.values(e.currentTarget.audioTracks))
+                l.label.includes(m.gC.APPLICATION)
+                    ? (l.enabled = !0)
+                    : l.label.includes(m.gC.VOICE) || l.label.includes(m.gC.SOUNDBOARD)
+                      ? ((l.enabled = !1), t.includes(l.label) || t.push(l.label))
+                      : (l.enabled = !1);
             S(t);
         }, []);
     (0, s.A)(() => {
-        E.current && w() && T();
+        k.current && w() && M();
     });
-    let T = n.useCallback(() => {
-            for (let e of ((E.current = !0), w(), Object.values(N.current))) null != e && e.play();
+    let M = a.useCallback(() => {
+            for (let e of ((k.current = !0), w(), Object.values(E.current))) null != e && e.play();
         }, [w]),
-        L = n.useCallback(() => {
-            for (let e of Object.values(N.current)) null != e && e.pause();
+        T = a.useCallback(() => {
+            for (let e of Object.values(E.current)) null != e && e.pause();
         }, []),
-        R = n.useCallback((e) => {
-            for (let t of (N.current.main?.paused && (E.current = !1), Object.values(N.current)))
+        R = a.useCallback((e) => {
+            for (let t of (E.current.main?.paused && (k.current = !1), Object.values(E.current)))
                 null != t && (t.currentTime = e);
         }, []),
-        M = n.useCallback(() => {
-            N.current.main?.paused ? T() : L();
-        }, [T, L]),
-        O = n.useCallback((e) => {
-            N.current.main = e;
+        D = a.useCallback(() => {
+            E.current.main?.paused ? M() : T();
+        }, [M, T]),
+        O = a.useCallback((e) => {
+            E.current.main = e;
         }, []),
-        U = n.useCallback((e, t) => {
-            N.current[t] = e;
+        P = a.useCallback((e, t) => {
+            E.current[t] = e;
         }, []);
-    n.useImperativeHandle(t, () => {
-        let e = { play: T, seek: R, pause: L, videoElement: N.current.main };
-        return C(e), e;
-    }, [T, R, L, C]);
-    let D = n.useCallback(() => {
-        R(j);
-    }, [R, j]);
-    if (null == k) return null;
-    let P = a.type === o.nQ.VOICE_CLIP;
-    return (0, l.jsxs)("div", {
+    a.useImperativeHandle(t, () => {
+        let e = { play: M, seek: R, pause: T, videoElement: E.current.main };
+        return y(e), e;
+    }, [M, R, T, y]);
+    let U = a.useCallback(() => {
+        R(b);
+    }, [R, b]);
+    if (null == N) return null;
+    let G = l.type === d.nQ.VOICE_CLIP;
+    return (0, n.jsxs)("div", {
         className: h.DV,
         children: [
-            P
-                ? (0, l.jsxs)(l.Fragment, {
+            G
+                ? (0, n.jsxs)(n.Fragment, {
                       children: [
-                          (0, l.jsx)("audio", { ref: O, src: k, muted: !0, preload: "auto" }),
-                          (0, l.jsx)(u.A, { className: h.Ap }),
+                          (0, n.jsx)("audio", { ref: O, src: N, muted: !0, preload: "auto" }),
+                          (0, n.jsx)(o.A, { className: h.Ap }),
                       ],
                   })
-                : (0, l.jsx)(r.A, {
-                      onClick: M,
+                : (0, n.jsx)(r.A, {
+                      onClick: D,
                       className: h.Ap,
                       ref: O,
-                      src: k,
-                      muted: f(":all", {
-                          applicationAudioEnabled: v,
-                          voiceAudioEnabled: x,
-                          soundboardAudioEnabled: b,
-                          isVoiceClip: P,
+                      src: N,
+                      muted: x(":all", {
+                          applicationAudioEnabled: g,
+                          voiceAudioEnabled: v,
+                          soundboardAudioEnabled: j,
+                          isVoiceClip: G,
                       }),
                       preload: "auto",
-                      onLoadedData: D,
+                      onLoadedData: U,
                   }),
-            (0, l.jsx)(d.E, { soundboardAudioEnabled: b, voiceAudioEnabled: x, clip: a }),
-            (0, l.jsx)("audio", {
+            (0, n.jsx)(c.E, { soundboardAudioEnabled: j, voiceAudioEnabled: v, clip: l }),
+            (0, n.jsx)("audio", {
                 id: "ClipsPlayerAudioTrack:application",
-                src: y ?? void 0,
-                muted: f(":application", {
-                    applicationAudioEnabled: v,
-                    voiceAudioEnabled: x,
-                    soundboardAudioEnabled: b,
-                    isVoiceClip: P,
+                src: A ?? void 0,
+                muted: x(":application", {
+                    applicationAudioEnabled: g,
+                    voiceAudioEnabled: v,
+                    soundboardAudioEnabled: j,
+                    isVoiceClip: G,
                 }),
                 className: p.R,
                 preload: "auto",
-                ref: (e) => U(e, "main:application"),
-                onLoadedMetadata: I,
+                ref: (e) => P(e, "main:application"),
+                onLoadedMetadata: L,
             }),
-            A.map((e) =>
-                (0, l.jsx)(
-                    g,
+            I.map((e) =>
+                (0, n.jsx)(
+                    f,
                     {
-                        setRef: U,
+                        setRef: P,
                         audioTrackLabel: e,
-                        src: y,
-                        muted: f(e, {
-                            applicationAudioEnabled: v,
-                            voiceAudioEnabled: x,
-                            soundboardAudioEnabled: b,
-                            isVoiceClip: P,
+                        src: A,
+                        muted: x(e, {
+                            applicationAudioEnabled: g,
+                            voiceAudioEnabled: v,
+                            soundboardAudioEnabled: j,
+                            isVoiceClip: G,
                         }),
                     },
                     e,

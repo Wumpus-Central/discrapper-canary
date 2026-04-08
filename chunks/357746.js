@@ -15,9 +15,9 @@ var i = n(627968),
     g = n(828162),
     p = n(249584),
     f = n(49999),
-    x = n(333354),
+    x = n(136708),
     E = n(985018),
-    I = n(384055);
+    I = n(93290);
 function C(e) {
     let { indicator: t } = e;
     if (null == t) return null;
@@ -40,10 +40,10 @@ let N = { animation: { BEG: 0, END: 75 }, LOOP: { BEG: 76, END: 376 } },
                     T?.popout?.markAsDismissed(f.i.INDIRECT_ACTION);
             }, [t, T]),
             b = l.useRef(null),
-            y = (0, o.red)(o.DXt),
-            v = (0, r.bG)([h.A], () => h.A.hasLayers()),
+            v = (0, o.red)(o.DXt),
+            y = (0, r.bG)([h.A], () => h.A.hasLayers()),
             j = (0, u.xr)((e) => e.fullScreenLayers.length > 0),
-            R = y || v || j,
+            R = v || y || j,
             O = l.useCallback(() => {
                 if (T?.popout == null || R) return null;
                 switch (T?.popout?.type) {

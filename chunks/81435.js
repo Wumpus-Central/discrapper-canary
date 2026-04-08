@@ -1,4 +1,4 @@
-n.d(t, { A: () => W });
+n.d(t, { A: () => K });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -23,8 +23,8 @@ var i = n(627968),
     T = n(995273),
     S = n(854627),
     b = n(95701),
-    y = n(260509),
-    v = n(734057),
+    v = n(260509),
+    y = n(734057),
     j = n(256587),
     R = n(71393),
     O = n(851109),
@@ -34,9 +34,9 @@ var i = n(627968),
     U = n(559873),
     G = n(346061),
     P = n(652215),
-    k = n(228160),
+    k = n(21786),
     w = n(985018),
-    B = n(68450);
+    B = n(487397);
 function V(e) {
     let { message: t, channel: n, focusProps: s, isSelected: r, isUnread: o, groupedMessages: h } = e,
         A = n.type === P.rbe.UNKNOWN ? u.N$i : (0, m.gU)(n, null),
@@ -50,7 +50,7 @@ function V(e) {
             animateOnHover: !0,
         }),
         b = n.type !== P.rbe.GUILD_ANNOUNCEMENT || null == p,
-        v = (0, I.y)({ channel: n, message: t, user: t.author, compact: !0, isRepliedMessage: !0 }),
+        y = (0, I.y)({ channel: n, message: t, user: t.author, compact: !0, isRepliedMessage: !0 }),
         O = (0, i.jsx)("div", {
             className: B.Ys,
             inert: !0,
@@ -76,13 +76,13 @@ function V(e) {
                                   "aria-label": "User Avatar",
                                   src: N,
                                   size: u._3J.SIZE_32,
-                                  cornerIconUrl: null != p ? (0, y.Iv)(p, 24) : void 0,
+                                  cornerIconUrl: null != p ? (0, v.Iv)(p, 24) : void 0,
                                   cornerIconOffsetX: 4,
                                   cornerIconOffsetY: 3,
                               })
                             : (0, i.jsx)(G.h, {
                                   "aria-label": "Guild Icon",
-                                  src: (0, y.Iv)(p, 32),
+                                  src: (0, v.Iv)(p, 32),
                                   size: u._3J.SIZE_32,
                                   cornerIconUrl: t.author.getAvatarURL(p.id, 24),
                                   cornerIconOffsetX: 4,
@@ -107,7 +107,7 @@ function V(e) {
                                                       style: { color: E ?? void 0 },
                                                       children: (0, i.jsx)(c.A, { children: O }),
                                                   }),
-                                                  v,
+                                                  y,
                                               ],
                                           })
                                         : (0, i.jsx)(c.A, {
@@ -148,7 +148,7 @@ function V(e) {
                                     }),
                                 ],
                             }),
-                            (0, i.jsx)(K, { message: t, isUnread: o, isSelected: r, channel: n }),
+                            (0, i.jsx)(W, { message: t, isUnread: o, isSelected: r, channel: n }),
                             h.length > 0 &&
                                 (0, i.jsx)(u.BJc, {
                                     gap: 4,
@@ -193,7 +193,7 @@ function F(e) {
         children: n,
     });
 }
-function K(e) {
+function W(e) {
     let { message: t, channel: n, isUnread: s, isSelected: r } = e,
         { previewContent: o, Icon: d } = (function (e) {
             let { message: t, isUnread: n, isSelected: s } = e,
@@ -279,15 +279,15 @@ function K(e) {
         ],
     });
 }
-let W = (0, l.memo)(
+let K = (0, l.memo)(
     function (e) {
         let { message: t, groupedMessages: s, isUnread: r } = e,
             c = t.message,
             A = (0, M.op)(),
             { params: _ } = (0, o.W5)(),
-            m = (0, d.bG)([v.A], () => {
+            m = (0, d.bG)([y.A], () => {
                 if (null == c) return null;
-                let e = v.A.getChannel(t.channelId);
+                let e = y.A.getChannel(t.channelId);
                 return null != e
                     ? e
                     : new b.jb({

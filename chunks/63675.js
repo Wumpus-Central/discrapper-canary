@@ -14,7 +14,7 @@ var s = n(503698),
     _ = n(911180),
     x = n(128450),
     A = n(985018),
-    h = n(5008);
+    h = n(514245);
 function p(e) {
     let {
             user: t,
@@ -25,8 +25,8 @@ function p(e) {
             guildId: T,
             className: f,
             showPremiumIcon: S = !0,
-            showResetThemeButton: E = !1,
-            forcedDivider: b,
+            showResetThemeButton: b = !1,
+            forcedDivider: E,
         } = e,
         C = (0, u.Ay)(t.id, T),
         { primaryColor: N, secondaryColor: v } = (0, m.A)({
@@ -48,7 +48,7 @@ function p(e) {
         disabled: !I && !p,
         className: l()(h.__invalid_profileThemesSection, f),
         showPremiumIcon: S,
-        forcedDivider: b,
+        forcedDivider: E,
         children: (0, i.jsxs)("div", {
             className: h.hd,
             children: [
@@ -84,7 +84,7 @@ function p(e) {
                         }),
                     }),
                 }),
-                E &&
+                b &&
                     null != T &&
                     (0, i.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,

@@ -12,15 +12,15 @@ var i = n(627968),
     g = n(250253),
     _ = n(2242),
     x = n(985018),
-    A = n(15581);
+    A = n(770078);
 let h = (e) => {
         let { transitionState: t, groupListing: n, listing: l, subscription: h, onClose: p } = e,
             T = (0, m.GV)(),
             { analyticsLocations: f } = (0, u.Ay)(c.A.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
             {
                 cancelSubscription: S,
-                error: E,
-                submitting: b,
+                error: b,
+                submitting: E,
             } = ((e) => {
                 let [t, n] = s.useState(!1),
                     [i, l] = s.useState(null);
@@ -54,7 +54,7 @@ let h = (e) => {
             "aria-labelledby": T,
             actions: [
                 { text: x.intl.string(x.t.EP6EPb), variant: "secondary", onClick: p },
-                { variant: "critical-primary", text: x.intl.string(x.t.F6lUDF), onClick: C, loading: b },
+                { variant: "critical-primary", text: x.intl.string(x.t.F6lUDF), onClick: C, loading: E },
             ],
             title: x.intl.string(x.t.O6l5tM),
             subtitle: j,
@@ -62,7 +62,7 @@ let h = (e) => {
             children: (0, i.jsxs)(o.BJc, {
                 gap: 8,
                 children: [
-                    null != E ? (0, i.jsx)(o.wx6, { type: "critical", children: E.message }) : null,
+                    null != b ? (0, i.jsx)(o.wx6, { type: "critical", children: b.message }) : null,
                     (0, i.jsx)(g.x, { listingId: l.id, guildId: n.guild_id, className: A.P }),
                 ],
             }),

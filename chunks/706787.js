@@ -8,7 +8,7 @@ var i = n(627968),
     c = n(775602),
     d = n(927813),
     u = n(614518),
-    h = n(29110);
+    h = n(964701);
 let m = 6 * d.A.Millis.SECOND,
     A = 2 * d.A.Millis.SECOND,
     g = 2 * d.A.Millis.SECOND,
@@ -17,9 +17,9 @@ function f(e) {
     let { userId: t, voiceChannelEffect: n, onComplete: d } = e,
         { emoji: f, sentAt: _ } = n,
         E = (0, a.bG)([c.A], () => c.A.useReducedMotion),
-        [C, x] = l.useState(!0),
+        [x, C] = l.useState(!0),
         S = !E,
-        I = (0, r.pnh)(C, {
+        T = (0, r.pnh)(x, {
             from: { rotate: -120 },
             enter: { rotate: 0 },
             leave: { rotate: -120 },
@@ -36,7 +36,7 @@ function f(e) {
                 ? (0, u.a)(t)
                 : (e = setTimeout(
                       () => {
-                          x(!1), S && (0, u.a)(t);
+                          C(!1), S && (0, u.a)(t);
                       },
                       S ? A : m,
                   )),
@@ -47,7 +47,7 @@ function f(e) {
     }, [_, t, S]),
     S)
         ? null
-        : I((e, t) => {
+        : T((e, t) => {
               let { rotate: n } = e;
               return (
                   t &&

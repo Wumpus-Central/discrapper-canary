@@ -23,15 +23,15 @@ var i = n(627968),
     T = n(342296),
     S = n(616356),
     b = n(961350),
-    y = n(71393),
-    v = n(576705),
+    v = n(71393),
+    y = n(576705),
     j = n(977997),
     R = n(312006),
     O = n(704384),
     L = n(289105),
     M = n(652215),
     D = n(806931),
-    U = n(905686);
+    U = n(9295);
 let G = 16 / 9,
     P = (e) => {
         let {
@@ -103,7 +103,7 @@ let G = 16 / 9,
                         e.type === D.lp.STREAM &&
                         0 === N.filter((t) => (0, x._z)(t) === e.id && t.state !== M.XYD.ENDED).length
                     ) {
-                        if (!(0, E.eo)(s, j.A, y.A, v.A, f.default)[0]) return;
+                        if (!(0, E.eo)(s, j.A, v.A, y.A, f.default)[0]) return;
                         (0, h.A9)((0, x.Iy)(e.id), { forceMultiple: t.shiftKey });
                     }
                     T?.id === e.id
@@ -153,7 +153,7 @@ let G = 16 / 9,
                     properties: { location: "StageTile", is_tile_owner: E.id === x, tile_type: e },
                 });
             },
-            y = (e, t, s, a) => {
+            v = (e, t, s, a) => {
                 switch (e.type) {
                     case D.lp.HIDDEN_STREAM:
                     case D.lp.STREAM:
@@ -198,7 +198,7 @@ let G = 16 / 9,
                                     n.e("97262"),
                                     n.e("42128"),
                                     n.e("84841"),
-                                    n.e("50970"),
+                                    n.e("36382"),
                                 ]).then(n.bind(n, 107632));
                                 return (t) =>
                                     (0, i.jsx)(e, {
@@ -228,7 +228,7 @@ let G = 16 / 9,
                   user: E,
                   width: s,
                   isModerator: T,
-                  onContextMenu: y,
+                  onContextMenu: v,
                   popoutType: d,
               })
             : (0, i.jsx)(P, {
@@ -239,7 +239,7 @@ let G = 16 / 9,
                   user: E,
                   width: s,
                   isModerator: T,
-                  onContextMenu: y,
+                  onContextMenu: v,
                   popoutType: d,
               });
     });

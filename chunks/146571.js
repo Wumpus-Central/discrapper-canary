@@ -8,8 +8,8 @@ var r = s(627968),
     c = s(915089),
     h = s(628387),
     d = s(920768),
-    u = s(83302),
-    p = s(199228);
+    u = s(406709),
+    p = s(91731);
 function m(e) {
     let {
             alpha2: t,
@@ -18,8 +18,8 @@ function m(e) {
             label: m,
             error: C,
             className: A,
-            required: g,
-            value: S,
+            required: S,
+            value: g,
             setRef: E,
             placeholder: f,
             autoFocus: w,
@@ -33,13 +33,13 @@ function m(e) {
         } = e,
         _ = (0, c.GV)(),
         [O, P] = n.useState(!1),
-        L = (0, h.Vl)(a, S);
+        L = (0, h.Vl)(a, g);
     return (0, r.jsx)("div", {
         className: A ?? void 0,
         children: (0, r.jsx)(o.D0$, {
             label: m,
             errorMessage: C,
-            required: g,
+            required: S,
             id: _,
             children: (0, r.jsxs)("div", {
                 className: i()(p.hF, u.hF, T, { [p.z3]: null != C, [p.in]: O }),
@@ -49,11 +49,11 @@ function m(e) {
                         id: _,
                         name: "email",
                         type: a === h.Pd.EMAIL ? "email" : "text",
-                        value: S,
+                        value: g,
                         inputRef: E,
                         placeholder: f,
                         "aria-label": m,
-                        required: g,
+                        required: S,
                         onChange: function (e) {
                             let t = (0, h.Vl)(a, e) ? s : "";
                             v(e, t);

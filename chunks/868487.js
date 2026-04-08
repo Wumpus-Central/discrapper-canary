@@ -1,1 +1,8 @@
-e.exports = { TA: "offerDetailContainer__11ee8", V6: "legalContainer__11ee8", dc: "spinnerContainer__11ee8" };
+"use strict";
+r.d(t, { A: () => i });
+var n = r(330690),
+    o = r(60441),
+    a = r(608589);
+let i = function (e) {
+    return (0, n.A)(e, a.A, o.A);
+};

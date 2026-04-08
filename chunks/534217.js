@@ -16,7 +16,7 @@ var s = n(503698),
     A = n(303682),
     h = n(652215),
     p = n(985018),
-    T = n(989348),
+    T = n(10103),
     f = n(544879);
 let S = (e) => {
         let { user: t } = e,
@@ -27,11 +27,11 @@ let S = (e) => {
             t.id,
         );
     },
-    E = (e) => {
+    b = (e) => {
         let { slotIndex: t } = e;
         return (0, i.jsx)("div", { className: T.p, children: t });
     },
-    b = (e) => {
+    E = (e) => {
         let { referralSentUsers: t } = e;
         return (0, i.jsx)("div", {
             className: T.L$,
@@ -42,7 +42,7 @@ let S = (e) => {
                         let s = (0, i.jsx)(S, { user: t[n] }, t[n].id);
                         e.push(s);
                     } else {
-                        let t = (0, i.jsx)(E, { slotIndex: n + 1 }, n);
+                        let t = (0, i.jsx)(b, { slotIndex: n + 1 }, n);
                         e.push(t);
                     }
                 return e;
@@ -75,7 +75,7 @@ let S = (e) => {
                 (0, i.jsxs)("div", {
                     className: T.IH,
                     children: [
-                        (0, i.jsx)(b, { referralSentUsers: s }),
+                        (0, i.jsx)(E, { referralSentUsers: s }),
                         (0, i.jsxs)("div", {
                             className: T.n4,
                             children: [

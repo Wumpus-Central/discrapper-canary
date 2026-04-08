@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(503698),
     s = n.n(i),
     a = n(178090),
-    o = n(809123);
+    o = n(432);
 let l = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
 function u(e) {
     let { level: t, color: n } = e;

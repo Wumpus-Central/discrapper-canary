@@ -17,7 +17,7 @@ var i = n(627968),
     p = n(780679),
     A = n(411335),
     f = n(985018),
-    j = n(534036);
+    j = n(15919);
 function N(e) {
     let { rule: t, triggerType: n } = e,
         l = s.useMemo(
@@ -48,17 +48,17 @@ function N(e) {
 let E = (e) => {
         e.stopPropagation(), e.preventDefault();
     },
-    b = (e) => {
+    C = (e) => {
         let { className: t, children: n, ...s } = e;
         return (0, i.jsx)(a.DUT, { className: t, onClick: E, onMouseDown: E, onMouseUp: E, ...s, children: n });
     };
-function C(e) {
+function b(e) {
     let { rule: t, onChangeRule: n, onContextMenu: s } = e,
         l = () => n({ ...t, enabled: !t.enabled });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", { className: j.XG, children: (0, i.jsx)(p.A, { rule: t, onChangeRule: n }) }),
-            (0, i.jsxs)(b, {
+            (0, i.jsxs)(C, {
                 className: j.Ik,
                 children: [
                     (0, i.jsx)(a.dOG, { onChange: l, checked: t?.enabled ?? !1 }),
@@ -92,7 +92,7 @@ function I(e) {
         { isLoading: c, saveRule: g } = (0, x.S)(),
         { updateRule: _ } = (0, m.wP)(t.guildId),
         [p, A] = s.useState(t.enabled),
-        C = (0, l.throttle)(async () => {
+        b = (0, l.throttle)(async () => {
             if (!c) {
                 let e = { ...t, enabled: !p };
                 A(!p);
@@ -125,10 +125,10 @@ function I(e) {
                     (0, i.jsx)(N, { rule: t, triggerType: t.triggerType }),
                 ],
             }),
-            (0, i.jsxs)(b, {
+            (0, i.jsxs)(C, {
                 className: j.Ik,
                 children: [
-                    (0, i.jsx)(a.dOG, { onChange: C, checked: p ?? !1 }),
+                    (0, i.jsx)(a.dOG, { onChange: b, checked: p ?? !1 }),
                     !n &&
                         (0, i.jsx)(r.m, {
                             text: f.intl.string(f.t["UKOtz+"]),
@@ -171,7 +171,7 @@ function v(e) {
                     (0, i.jsx)(N, { triggerType: t }),
                 ],
             }),
-            (0, i.jsx)(b, {
+            (0, i.jsx)(C, {
                 className: j.Ik,
                 children: (0, i.jsx)(a.Button, {
                     variant: "primary",
@@ -207,7 +207,7 @@ function S(e) {
         null == t ||
             d ||
             (g = l
-                ? (0, i.jsx)(C, { rule: t, onChangeRule: u, onContextMenu: m })
+                ? (0, i.jsx)(b, { rule: t, onChangeRule: u, onContextMenu: m })
                 : (0, i.jsx)(I, { rule: t, isDefaultRule: r, onContextMenu: m })),
         (0, i.jsx)(a.DUT, { className: j.rs, onContextMenu: m, children: g })
     );

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => Z, Bt: () => Y, zI: () => X });
+n.d(t, { Ay: () => q, Bt: () => Y, zI: () => X });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -16,12 +16,12 @@ var i = n(627968),
     _ = n(157559),
     p = n(554375),
     A = n(971251),
-    f = n(838132),
+    f = n(615751),
     j = n(475743),
     N = n(793574),
     E = n(262295),
-    b = n(936555),
-    C = n(725437),
+    C = n(936555),
+    b = n(725437),
     T = n(952385),
     I = n(810877),
     v = n(945086),
@@ -29,8 +29,8 @@ var i = n(627968),
     y = n(931991),
     R = n(544028),
     O = n(954571),
-    L = n(486020),
-    G = n(690521),
+    G = n(486020),
+    L = n(690521),
     D = n(473145),
     M = n(427262),
     k = n(997509),
@@ -40,13 +40,13 @@ var i = n(627968),
     B = n(652215);
 n(307731);
 var F = n(985018),
-    H = n(997728),
-    V = n(8350);
+    H = n(262303),
+    V = n(903281);
 let z = c().throttle(p.dZ, 1e3),
     W = (e) => {
         let { guildId: t, emoji: n, onEdit: l, editingDisabled: a = !1, isNewlyAdded: o = !1 } = e,
             [d, c] = s.useState(n.name),
-            m = L.Ay.getEmojiURL({ id: n.id, animated: n.animated, size: 32 }),
+            m = G.Ay.getEmojiURL({ id: n.id, animated: n.animated, size: 32 }),
             [g] = (0, h.zhh)(
                 () => ({ from: { scale: 2 }, to: { scale: 1 }, config: { mass: 10, tension: 1500, friction: 115 } }),
                 o ? "respect-motion-settings" : "animate-never",
@@ -84,7 +84,7 @@ let z = c().throttle(p.dZ, 1e3),
                             value: d ?? "",
                             onBlur: () => {
                                 if (d === n.name) return;
-                                let e = G.Ay.sanitizeEmojiName(d);
+                                let e = L.Ay.sanitizeEmojiName(d);
                                 e !== n.name && (0, p.Cp)({ guildId: t, emojiId: n.id, name: e }), c(e);
                             },
                             onChange: (e) => {
@@ -282,7 +282,7 @@ let z = c().throttle(p.dZ, 1e3),
                   },
               }));
     },
-    Z = () => {
+    q = () => {
         let e = s.useRef(null),
             t = s.useRef(0),
             l = (0, g.bG)([P.A], () => P.A.getGuild()),
@@ -298,8 +298,8 @@ let z = c().throttle(p.dZ, 1e3),
             [E, v] = s.useState(!1),
             y = s.useRef(null),
             {
-                maxEmojiSlots: L,
-                availableEmojiSlots: G,
+                maxEmojiSlots: G,
+                availableEmojiSlots: L,
                 staticEmoji: D,
                 totalStaticEmoji: M,
                 animatedEmoji: V,
@@ -318,7 +318,7 @@ let z = c().throttle(p.dZ, 1e3),
             s.useEffect(() => {
                 if (null != x && null == Y) return void X(x);
             }, [x, Y]);
-        let Z = s.useMemo(
+        let q = s.useMemo(
                 () =>
                     null == Y
                         ? new Set()
@@ -329,12 +329,12 @@ let z = c().throttle(p.dZ, 1e3),
                           ),
                 [x, Y],
             ),
-            q = s.useCallback(
+            Z = s.useCallback(
                 function () {
                     let { emoji: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                     null != e
-                        ? (0, C.f)({ guildId: l.id, emoji: e, analyticsLocation: N.A.GUILD_SETTINGS_EMOJI_EDIT_BUTTON })
-                        : (0, C.f)({
+                        ? (0, b.f)({ guildId: l.id, emoji: e, analyticsLocation: N.A.GUILD_SETTINGS_EMOJI_EDIT_BUTTON })
+                        : (0, b.f)({
                               guildId: l.id,
                               analyticsLocation: {
                                   page: B.liQ.GUILD_SETTINGS,
@@ -374,7 +374,7 @@ let z = c().throttle(p.dZ, 1e3),
             },
             en = s.useCallback(
                 async (e, n, i) => {
-                    await (0, C.f)({
+                    await (0, b.f)({
                         userImage: { data: e, file: n, image: i },
                         guildId: l.id,
                         analyticsLocation: { page: B.liQ.GUILD_SETTINGS },
@@ -383,11 +383,11 @@ let z = c().throttle(p.dZ, 1e3),
                 },
                 [l.id],
             ),
-            ei = (0, b.w)(l);
+            ei = (0, C.w)(l);
         return (0, i.jsxs)("div", {
             className: H.Gi,
             children: [
-                0 === G ? null : (0, i.jsx)(f.A, { className: H.Lc, onDrop: et }),
+                0 === L ? null : (0, i.jsx)(f.A, { className: H.Lc, onDrop: et }),
                 (0, i.jsxs)(h.BJc, {
                     gap: 20,
                     children: [
@@ -400,7 +400,7 @@ let z = c().throttle(p.dZ, 1e3),
                                 }),
                                 (0, i.jsx)(h.Text, {
                                     variant: "text-md/normal",
-                                    children: F.intl.format(F.t.TA1BR0, { count: L }),
+                                    children: F.intl.format(F.t.TA1BR0, { count: G }),
                                 }),
                             ],
                         }),
@@ -446,8 +446,8 @@ let z = c().throttle(p.dZ, 1e3),
                             animatedEmoji: V,
                             guild: l,
                             theme: d,
-                            onEdit: (e) => q({ emoji: e }),
-                            newlyAddedEmojiIds: Z,
+                            onEdit: (e) => Z({ emoji: e }),
+                            newlyAddedEmojiIds: q,
                         }),
                     ],
                 }),

@@ -1,4 +1,4 @@
-n.d(t, { A: () => U });
+n.d(t, { A: () => k });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
@@ -18,8 +18,8 @@ var i = n(627968),
     T = n(84540),
     f = n(836602),
     S = n(954571),
-    E = n(515718),
-    b = n(927578),
+    b = n(515718),
+    E = n(927578),
     C = n(919395),
     N = n(884546),
     v = n(597551),
@@ -33,11 +33,11 @@ var i = n(627968),
     D = n(788868),
     G = n(355097),
     M = n(985018),
-    k = n(686294);
-function U(e) {
-    let { user: t, isVisible: n, shouldShow: U } = e,
-        w = b.Ay.isPremium(t),
-        V = b.Ay.canUseAnimatedAvatar(t),
+    U = n(63261);
+function k(e) {
+    let { user: t, isVisible: n, shouldShow: k } = e,
+        w = E.Ay.isPremium(t),
+        V = E.Ay.canUseAnimatedAvatar(t),
         {
             pendingAvatar: B,
             pendingThemeColors: F,
@@ -63,7 +63,7 @@ function U(e) {
                 (Y?.startsWith("https:") === !0
                     ? fetch(Y)
                           .then((e) => e.blob())
-                          .then((e) => (0, E.We)(e))
+                          .then((e) => (0, b.We)(e))
                           .then((e) => {
                               (0, T.p)({ avatar: z, themeColors: H, banner: e });
                           })
@@ -87,22 +87,22 @@ function U(e) {
     let $ = (0, c.V)()?.subscription_trial?.sku_id === D.pe.TIER_2,
         ee = (0, d.O)(),
         et = (0, g.U9)(ee, D.pe.TIER_2);
-    return U
+    return k
         ? (0, i.jsx)(o.f5, {
               value: Z,
               children: (0, i.jsxs)(y.A, {
                   ref: W,
-                  className: k.MT,
+                  className: U.MT,
                   type: y.i.PREMIUM,
                   isShown: !0,
                   hasBackground: !0,
                   children: [
                       (0, i.jsx)(N.A, {
                           stickyPreview: !1,
-                          layoutClassName: k.th,
+                          layoutClassName: U.th,
                           profilePreviewTitle: (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(a.tvc, { size: "md", color: "currentColor", className: k.PC }),
+                                  (0, i.jsx)(a.tvc, { size: "md", color: "currentColor", className: U.PC }),
                                   M.intl.string(M.t.gMlDNd),
                               ],
                           }),
@@ -110,7 +110,7 @@ function U(e) {
                               children: [(0, i.jsx)(m.A, { preset: X, onShuffle: K }), (0, i.jsx)(P.A, { user: t })],
                           }),
                           children: (0, i.jsxs)("div", {
-                              className: k.EN,
+                              className: U.EN,
                               children: [
                                   (0, i.jsxs)("div", {
                                       children: [
@@ -119,14 +119,14 @@ function U(e) {
                                               children: M.intl.string(M.t["2zGdAW"]),
                                           }),
                                           (0, i.jsx)(a.Text, {
-                                              className: k.h_,
+                                              className: U.h_,
                                               variant: "text-sm/normal",
                                               children: M.intl.string(M.t.xeEC20),
                                           }),
                                       ],
                                   }),
                                   (0, i.jsx)(R.A, {
-                                      className: k.fz,
+                                      className: U.fz,
                                       user: t,
                                       pendingAvatarSrc: (0, h.V7)({ userId: t.id, image: z ?? B }),
                                       pendingColors: H ?? F,
@@ -135,7 +135,7 @@ function U(e) {
                                       preventDisabled: !0,
                                   }),
                                   (0, i.jsx)(O.A, {
-                                      className: k.fz,
+                                      className: U.fz,
                                       isTryItOut: !0,
                                       showRemoveBannerButton: null != Y,
                                       onBannerChange: p.xe,
@@ -143,14 +143,14 @@ function U(e) {
                                   }),
                                   !V &&
                                       (0, i.jsx)(I.A, {
-                                          className: k.fz,
+                                          className: U.fz,
                                           isTryItOut: !0,
                                           onAvatarChange: p.e$,
                                           showRemoveAvatarButton: !1,
                                           changeAvatarButtonText: M.intl.string(M.t["7z0D1c"]),
                                           sectionTitle: M.intl.string(M.t.vtFfPX),
                                       }),
-                                  (0, i.jsx)(j.A, { user: t, className: k.fz }),
+                                  (0, i.jsx)(j.A, { user: t, className: U.fz }),
                                   !$ &&
                                       (0, i.jsx)(a.Text, {
                                           variant: "text-sm/normal",
@@ -162,7 +162,7 @@ function U(e) {
                       !$ &&
                           (0, i.jsx)(_.d, {
                               onSubscribeModalClose: J,
-                              className: k.Kv,
+                              className: U.Kv,
                               showUpsell: !0,
                               text: M.intl.format(M.t.TmfgI2, {
                                   onClick: () => {
@@ -179,7 +179,7 @@ function U(e) {
                       $ &&
                           (0, i.jsxs)("div", {
                               children: [
-                                  (0, i.jsx)("div", { className: k.BU }),
+                                  (0, i.jsx)("div", { className: U.BU }),
                                   (0, i.jsx)(x.Ay, {
                                       type: D.e.CUSTOM_PROFILE_TRY_OUT_UPSELL,
                                       subscriptionTier: D.pe.TIER_2,

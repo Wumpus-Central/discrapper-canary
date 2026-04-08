@@ -1,8 +1,8 @@
-n.r(t), n.d(t, { default: () => v });
+n.r(t), n.d(t, { default: () => x });
 var i = n(627968),
-    a = n(64700),
-    l = n(503698),
-    r = n.n(l),
+    r = n(64700),
+    a = n(503698),
+    l = n.n(a),
     s = n(481613),
     o = n.n(s),
     d = n(607399),
@@ -17,7 +17,7 @@ var i = n(627968),
     E = n(53505),
     I = n(652215),
     f = n(985018),
-    C = n(342453);
+    C = n(28690);
 let T = [
         { getOs: () => f.intl.string(f.t.NK5ySJ), icon: C.Bt, url: () => (0, E.oW)("osx", !1), platformKey: 0 },
         { getOs: () => f.intl.string(f.t.OvKGE6), icon: C.KF, url: () => (0, E.oW)("win", !1), platformKey: 1 },
@@ -36,35 +36,35 @@ let T = [
         { getOs: () => f.intl.string(f.t.wuQpJD), icon: C.yA, url: () => I.AMi.ANDROID, platformKey: 4 },
     ],
     S = (e) => {
-        let { os: t, url: n, onClick: l } = e,
-            r = a.useRef(null),
-            [s, o] = a.useState(!1),
-            d = a.useCallback(
+        let { os: t, url: n, onClick: a } = e,
+            l = r.useRef(null),
+            [s, o] = r.useState(!1),
+            d = r.useCallback(
                 (e) => {
-                    let { closePopout: a } = e;
+                    let { closePopout: r } = e;
                     return Array.isArray(n)
                         ? (0, i.jsx)(h.W1t, {
                               "data-menu-migrated": !0,
                               navId: "download-app-menu",
                               "aria-label": f.intl.string(f.t["+1H47t"]),
-                              onClose: a,
+                              onClose: r,
                               onSelect: void 0,
                               children: n.map((e) =>
                                   (0, i.jsx)(
                                       h.Drp,
-                                      { id: e.url(), label: e.getText(), action: () => l(t, e.url()) },
+                                      { id: e.url(), label: e.getText(), action: () => a(t, e.url()) },
                                       e.url(),
                                   ),
                               ),
                           })
                         : null;
                 },
-                [t, n, l],
+                [t, n, a],
             );
         return Array.isArray(n)
             ? (0, i.jsx)(h.YNO, {
                   renderPopout: d,
-                  targetElementRef: r,
+                  targetElementRef: l,
                   align: "left",
                   position: "bottom",
                   onRequestOpen: () => o(!0),
@@ -72,7 +72,7 @@ let T = [
                   children: (e) =>
                       (0, i.jsx)(A.$nd, {
                           ...e,
-                          buttonRef: r,
+                          buttonRef: l,
                           text: f.intl.string(f.t["1WjMbC"]),
                           variant: "primary",
                           size: "sm",
@@ -83,27 +83,27 @@ let T = [
               })
             : (0, i.jsx)(A.$nd, {
                   text: f.intl.string(f.t["1WjMbC"]),
-                  onClick: () => l(t, n()),
+                  onClick: () => a(t, n()),
                   variant: "primary",
                   size: "sm",
                   fullWidth: !0,
                   role: "link",
               });
     },
-    x = (e) => {
-        let { platform: t, onClick: n, onMouseEnter: a, isActive: l } = e,
+    v = (e) => {
+        let { platform: t, onClick: n, onMouseEnter: r, isActive: a } = e,
             { getOs: s, icon: o, url: d, platformKey: c } = t,
             u = s(),
-            A = r()(C.Kk, o);
+            A = l()(C.Kk, o);
         return (0, i.jsx)("li", {
-            className: r()(C.iD, { [C.vu]: l }),
-            onMouseEnter: () => a(c),
+            className: l()(C.iD, { [C.vu]: a }),
+            onMouseEnter: () => r(c),
             children: (0, i.jsxs)("div", {
                 className: C.FG,
                 children: [
                     (0, i.jsxs)("div", {
                         className: C.aA,
-                        children: [(0, i.jsx)("div", { className: A }), (0, i.jsx)("div", { className: r()(C.vu, A) })],
+                        children: [(0, i.jsx)("div", { className: A }), (0, i.jsx)("div", { className: l()(C.vu, A) })],
                     }),
                     (0, i.jsxs)("div", {
                         children: [
@@ -118,12 +118,12 @@ let T = [
             }),
         });
     };
-function v(e) {
-    let { source: t, onClose: n, transitionState: l } = e,
+function x(e) {
+    let { source: t, onClose: n, transitionState: a } = e,
         s = (0, u.bG)([p.default], () => p.default.getCurrentUser()),
         E = (0, u.bG)([m.default], () => m.default.getFingerprint()),
         S = null == s || s.isClaimed(),
-        [v, b] = a.useState(
+        [x, y] = r.useState(
             (function () {
                 switch (o().os?.family) {
                     case "OS X":
@@ -146,7 +146,7 @@ function v(e) {
                 }
             })(),
         );
-    function y(e, i) {
+    function b(e, i) {
         (null != c.getToken() || null != E) &&
             g.default.track(I.HAw.DOWNLOAD_APP, {
                 platform: e,
@@ -159,17 +159,17 @@ function v(e) {
             S ? window.open(i, "_blank") : (n(), _.R());
     }
     function O(e) {
-        b(e);
+        y(e);
     }
     return (
-        a.useEffect(() => {
+        r.useEffect(() => {
             g.default.track(I.HAw.OPEN_MODAL, { type: "Download App", source: { location: t } });
         }, [t]),
         (0, i.jsx)(A.aFV, {
             title: f.intl.string(f.t["BK8LK+"]),
             actions: void 0,
             onClose: n,
-            transitionState: l,
+            transitionState: a,
             preview: (0, i.jsx)(h.Text, { variant: "text-sm/normal", children: f.intl.format(f.t["RJS+1P"], {}) }),
             children: (0, i.jsxs)("div", {
                 className: C.kL,
@@ -185,11 +185,11 @@ function v(e) {
                                     children: f.intl.string(f.t["0KK0bP"]),
                                 }),
                                 (0, i.jsx)("ul", {
-                                    className: r()(C.Bn, C.Fw),
+                                    className: l()(C.Bn, C.Fw),
                                     children: T.map((e) =>
                                         (0, i.jsx)(
-                                            x,
-                                            { isActive: v === e.platformKey, platform: e, onClick: y, onMouseEnter: O },
+                                            v,
+                                            { isActive: x === e.platformKey, platform: e, onClick: b, onMouseEnter: O },
                                             e.platformKey,
                                         ),
                                     ),
@@ -207,11 +207,11 @@ function v(e) {
                                     children: f.intl.string(f.t.RdSNWa),
                                 }),
                             (0, i.jsx)("ul", {
-                                className: r()(C.Bn, C.f$),
+                                className: l()(C.Bn, C.f$),
                                 children: N.map((e) =>
                                     (0, i.jsx)(
-                                        x,
-                                        { isActive: v === e.platformKey, platform: e, onClick: y, onMouseEnter: O },
+                                        v,
+                                        { isActive: x === e.platformKey, platform: e, onClick: b, onMouseEnter: O },
                                         e.platformKey,
                                     ),
                                 ),

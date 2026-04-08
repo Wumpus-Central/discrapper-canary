@@ -10,7 +10,7 @@ var l = n(627968),
     c = n(536048),
     d = n(652215),
     m = n(985018),
-    g = n(3952);
+    g = n(678831);
 let h = i.lazy(() => Promise.all([n.e("369"), n.e("72756")]).then(n.bind(n, 532255)));
 function A(e, t) {
     let {
@@ -22,8 +22,8 @@ function A(e, t) {
             allowList: C = !1,
             allowLinks: N = !1,
             allowDevLinks: E = !1,
-            previewLinkTarget: I = !1,
-            viewingChannelId: _,
+            previewLinkTarget: _ = !1,
+            viewingChannelId: I,
         } = t,
         b = (0, c.I)({ location: "useMessageRenderedContent" }),
         [S, T] = i.useState(!1),
@@ -53,7 +53,7 @@ function A(e, t) {
                               value: {
                                   messageId: e.id,
                                   channelId: e.channel_id,
-                                  viewingChannelId: _,
+                                  viewingChannelId: I,
                                   guildId: (0, a.U)(e),
                                   setHasSpoilerEmbeds: j,
                               },
@@ -72,8 +72,8 @@ function A(e, t) {
                       allowList: C,
                       allowLinks: N,
                       allowDevLinks: E,
-                      previewLinkTarget: I,
-                      viewingChannelId: _,
+                      previewLinkTarget: _,
+                      viewingChannelId: I,
                   });
         }, [
             e.content,
@@ -89,9 +89,9 @@ function A(e, t) {
             v,
             C,
             N,
-            I,
-            E,
             _,
+            E,
+            I,
             b.enabled,
             S,
         ])

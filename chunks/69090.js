@@ -20,8 +20,8 @@ var i = n(627968),
     j = n(676608),
     N = n(657048),
     E = n(576705),
-    b = n(954571),
-    C = n(545868),
+    C = n(954571),
+    b = n(545868),
     T = n(642133),
     I = n(856644),
     v = n(359837),
@@ -29,8 +29,8 @@ var i = n(627968),
     y = n(927573),
     R = n(652215),
     O = n(985018),
-    L = n(775233),
-    G = n(19427);
+    G = n(546010),
+    L = n(512672);
 let D = "DRAGGABLE_ROLE";
 function M(e) {
     let {
@@ -47,13 +47,13 @@ function M(e) {
         g = (0, d.bG)([E.A], () => E.A.getHighestRole(n), [n]),
         h = u.trim();
     s.useEffect(() => {
-        (0, C.L)(n.id);
+        (0, b.L)(n.id);
     }, [n.id]);
     let _ = s.useRef(!1);
     s.useEffect(() => {
         _.current ||
             "" === u.trimStart() ||
-            (b.default.track(R.HAw.SEARCH_STARTED, { search_type: "Roles" }), (_.current = !0));
+            (C.default.track(R.HAw.SEARCH_STARTED, { search_type: "Roles" }), (_.current = !0));
     }, [u]);
     let p = s.useMemo(() => r.filter((e) => (0, I.Vh)(e, h)), [r, h]),
         A = s.useMemo(() => [...r, l], [r, l]),
@@ -94,12 +94,12 @@ function M(e) {
 }
 function k() {
     return (0, i.jsxs)("div", {
-        className: L.tp,
+        className: G.tp,
         children: [
-            (0, i.jsx)("div", { className: G._M }),
+            (0, i.jsx)("div", { className: L._M }),
             (0, i.jsx)(m.nFg, { size: "md", color: "currentColor" }),
             (0, i.jsx)(m.Text, {
-                className: L.Gm,
+                className: G.Gm,
                 variant: "text-md/semibold",
                 color: "text-muted",
                 children: O.intl.string(O.t["vR7M+y"]),
@@ -118,8 +118,8 @@ function U(e) {
             onDragReset: j,
             onDragComplete: N,
             disableHover: E,
-            disableDrag: b,
-            setEditRoleId: C,
+            disableDrag: C,
+            setEditRoleId: b,
             setSelectedSection: T,
         } = e,
         I = (0, v.c)(l, d, t),
@@ -169,13 +169,13 @@ function U(e) {
             ref: (e) => {
                 w(e);
             },
-            className: r()(L.xf, L.Ao),
+            className: r()(G.xf, G.Ao),
         });
     function W() {
-        C(t.id);
+        b(t.id);
     }
     return (0, i.jsxs)(m.DUT, {
-        className: r()(L.xf, { [L.F2]: E, [L.TR]: null != F && c < F, [L.mU]: null != F && c > F }),
+        className: r()(G.xf, { [G.F2]: E, [G.TR]: null != F && c < F, [G.mU]: null != F && c > F }),
         onClick: W,
         onContextMenu: V,
         innerRef: (e) => {
@@ -185,32 +185,32 @@ function U(e) {
         "aria-label": O.intl.formatToPlainString(O.t.Vu0Acc, { name: t.name, count: `${x}` }),
         children: [
             (0, i.jsx)("div", {
-                className: r()(L.co, G._M, { [L.Y6]: S || b }),
+                className: r()(G.co, L._M, { [G.Y6]: S || C }),
                 onMouseEnter: () => M(!0),
                 onMouseLeave: () => M(!1),
                 children: (0, i.jsx)(m.WP0, { size: "xs", color: "currentColor" }),
             }),
             (0, i.jsxs)("div", {
-                className: r()(L.Ji, G.N5),
+                className: r()(G.Ji, L.N5),
                 children: [
                     t.tags?.guild_connections === null
-                        ? (0, i.jsx)(h.A, { className: L.U4, color: t.colorString, size: 24 })
+                        ? (0, i.jsx)(h.A, { className: G.U4, color: t.colorString, size: 24 })
                         : (0, i.jsx)(P, {
                               guildId: l.id,
                               role: t,
                               size: 24,
-                              className: L.UT,
-                              defaultIconClassName: L.a,
+                              className: G.UT,
+                              defaultIconClassName: G.a,
                           }),
-                    null != I ? (0, i.jsx)(v.A, { className: L.s2, tooltipText: I }) : null,
+                    null != I ? (0, i.jsx)(v.A, { className: G.s2, tooltipText: I }) : null,
                     (0, i.jsx)(m.Text, {
-                        className: L.S3,
+                        className: G.S3,
                         color: "text-strong",
                         variant: "text-md/medium",
                         children: t.name,
                     }),
                     t.tags?.subscription_listing_id != null &&
-                        (0, i.jsx)(f.A, { className: L.tU, "aria-label": O.intl.string(O.t.a2Ak8b) }),
+                        (0, i.jsx)(f.A, { className: G.tU, "aria-label": O.intl.string(O.t.a2Ak8b) }),
                     t.tags?.is_guild_product_role === !0 && (0, i.jsx)(_.A, {}),
                 ],
             }),
@@ -219,7 +219,7 @@ function U(e) {
                 "aria-label": O.intl.formatToPlainString(O.t.Fgs8fD, { count: `${x}` }),
                 position: "right",
                 children: (0, i.jsxs)(m.DUT, {
-                    className: r()(L.Tb, G.Hp),
+                    className: r()(G.Tb, L.Hp),
                     onClick: function () {
                         W(), T(y.T$.MEMBERS);
                     },
@@ -228,7 +228,7 @@ function U(e) {
                         (0, i.jsx)(m.nys, {
                             size: "custom",
                             color: "currentColor",
-                            className: L.MV,
+                            className: G.MV,
                             width: 20,
                             height: 20,
                         }),
@@ -236,7 +236,7 @@ function U(e) {
                 }),
             }),
             (0, i.jsxs)("div", {
-                className: r()(L.NC, G.DE),
+                className: r()(G.NC, L.DE),
                 children: [
                     (0, i.jsx)(u.m, {
                         text: S ? O.intl.string(O.t["HO/oXl"]) : O.intl.string(O.t.bt75uw),

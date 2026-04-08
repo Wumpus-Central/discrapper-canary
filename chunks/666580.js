@@ -2,7 +2,7 @@ n.d(t, { A: () => s });
 var l = n(627968),
     a = n(64700),
     i = n(397927),
-    r = n(105769);
+    r = n(34864);
 let s = (e) => {
     let { element: t, onChange: n, state: s } = e,
         d = t.name,
@@ -12,8 +12,8 @@ let s = (e) => {
     a.useEffect(() => {
         m(u);
     }, [u]);
-    let x = a.useMemo(() => c.map((e) => ({ name: e.label, value: e.value })), [c]),
-        p = a.useCallback(
+    let p = a.useMemo(() => c.map((e) => ({ name: e.label, value: e.value })), [c]),
+        g = a.useCallback(
             (e) => {
                 null != e && (m(e), n(d, e));
             },
@@ -27,7 +27,7 @@ let s = (e) => {
                 className: r.P,
                 children: [o, t.should_submit_data && (0, l.jsx)("span", { className: r.m, children: "*" })],
             }),
-            (0, l.jsx)(i.z6M, { value: _, onChange: p, options: x }),
+            (0, l.jsx)(i.z6M, { value: _, onChange: g, options: p }),
         ],
     });
 };

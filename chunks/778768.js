@@ -23,8 +23,8 @@ var i = n(627968),
     T = n(854627),
     S = n(10862),
     b = n(164891),
-    y = n(135635),
-    v = n(696451),
+    v = n(135635),
+    y = n(696451),
     j = n(71393),
     R = n(958590),
     O = n(576705),
@@ -33,9 +33,9 @@ var i = n(627968),
     D = n(582904),
     U = n(652215),
     G = n(985018),
-    P = n(997893),
-    k = n(442078),
-    w = n(303621);
+    P = n(97220),
+    k = n(467935),
+    w = n(276170);
 let B = "VoiceInviteSuggestionsPopover";
 function V(e) {
     let { channel: t, onHoverOrFocus: s, setPopoutRef: r, closePopout: c } = e,
@@ -59,7 +59,7 @@ function V(e) {
         let e = j.A.getGuild(t.guild_id);
         o()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, h.mMO)(async () => {
-                let { default: l } = await Promise.all([n.e("43600"), n.e("28136"), n.e("89886")]).then(
+                let { default: l } = await Promise.all([n.e("43600"), n.e("28136"), n.e("93662")]).then(
                     n.bind(n, 234355),
                 );
                 return (n) => (0, i.jsx)(l, { ...n, guild: e, channel: t, source: U.PE1.VOICE_INVITE_SUGGESTIONS });
@@ -111,7 +111,7 @@ function H(e) {
     let { channel: t, user: n, ringingEnabled: s } = e,
         r = t.guild_id,
         o = l.useRef(null),
-        d = (0, c.bG)([v.Ay], () => v.Ay.getMember(r, n.id), [r, n.id]),
+        d = (0, c.bG)([y.Ay], () => y.Ay.getMember(r, n.id), [r, n.id]),
         { isHoveringOrFocusing: x } = (0, N.A)(o),
         [E, I] = l.useState(null),
         {
@@ -121,11 +121,11 @@ function H(e) {
             disabled: k,
             shouldHideButton: V,
             onClick: H,
-        } = (0, y.A)({ user: n, channel: t, location: B }),
+        } = (0, v.A)({ user: n, channel: t, location: B }),
         {
             status: F,
-            isMobileOnline: K,
-            activities: W,
+            isMobileOnline: W,
+            activities: K,
         } = (0, c.cf)(
             [L.A],
             () => ({
@@ -136,14 +136,14 @@ function H(e) {
             [n.id, r],
         ),
         { activityStatusText: Y, activityStatusIcon: z } = l.useMemo(() => {
-            let e = W.find((e) => e.type !== U.$pd.CUSTOM_STATUS && e.type !== U.$pd.HANG_STATUS);
+            let e = K.find((e) => e.type !== U.$pd.CUSTOM_STATUS && e.type !== U.$pd.HANG_STATUS);
             return { activityStatusText: (0, m.A)(e, !1), activityStatusIcon: null == e ? void 0 : (0, f.f)(e) };
-        }, [W]),
+        }, [K]),
         { voiceChannel: q } = (0, g.A)({ userId: n.id }),
         X = (0, C.Ay)(q),
-        J = (0, h.S31)(h.clD.ONLINE),
+        $ = (0, h.S31)(h.clD.ONLINE),
         Q = "success" === E || "sending" === E,
-        $ = l.useCallback(
+        J = l.useCallback(
             (e) => {
                 e.stopPropagation(), k || H();
             },
@@ -207,7 +207,7 @@ function H(e) {
                 src: et,
                 avatarDecoration: ee,
                 status: es,
-                isMobile: K,
+                isMobile: W,
                 ...en,
             }),
             (0, i.jsxs)("div", {
@@ -219,7 +219,7 @@ function H(e) {
                             className: P.J2,
                             children: [
                                 er
-                                    ? (0, i.jsx)(S.A, { size: "custom", color: J, channel: q, className: P.RI })
+                                    ? (0, i.jsx)(S.A, { size: "custom", color: $, channel: q, className: P.RI })
                                     : null != z
                                       ? (0, i.jsx)(p.A, { icon: z, className: P.RI })
                                       : null,
@@ -255,7 +255,7 @@ function H(e) {
                     text: D,
                     children: (0, i.jsx)(h.DUT, {
                         className: a()(P.D9, w.button, w.secondary, { [P.r9]: k }),
-                        onClick: $,
+                        onClick: J,
                         "aria-disabled": k,
                         children: (0, i.jsx)(b, { size: "xxs", color: j, className: P.Kk }),
                     }),

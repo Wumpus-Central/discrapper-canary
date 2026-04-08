@@ -18,9 +18,9 @@ var i = n(627968),
     T = n(661191),
     f = n(533808),
     S = n(219887),
-    E = n(652215),
-    b = n(985018),
-    C = n(538378);
+    b = n(652215),
+    E = n(985018),
+    C = n(7601);
 class N extends s.PureComponent {
     static defaultProps = { isEditing: !1, hideDivider: !1, onEditClick: () => {} };
     handleEditClick = () => {
@@ -71,7 +71,7 @@ class N extends s.PureComponent {
                                   variant: "secondary",
                                   onClick: this.handleEditClick,
                                   size: "sm",
-                                  text: b.intl.string(b.t.bt75uw),
+                                  text: E.intl.string(E.t.bt75uw),
                               }),
                           ],
                       }),
@@ -107,7 +107,7 @@ let v = s.memo(function (e) {
                                   showLabels: !1,
                                   showPaymentSourceIcon: !0,
                               })
-                            : (0, i.jsx)(c.Text, { variant: "text-sm/medium", children: b.intl.string(b.t["6EEgNt"]) }),
+                            : (0, i.jsx)(c.Text, { variant: "text-sm/medium", children: E.intl.string(E.t["6EEgNt"]) }),
                         (0, i.jsxs)("div", {
                             className: C.zy,
                             children: [
@@ -131,7 +131,7 @@ let v = s.memo(function (e) {
                                     variant: "secondary",
                                     onClick: m,
                                     size: "sm",
-                                    text: b.intl.string(b.t.H2hHyf),
+                                    text: E.intl.string(E.t.H2hHyf),
                                 }),
                             ],
                         }),
@@ -175,7 +175,7 @@ class I extends s.PureComponent {
                 onCloseCallback: () => {
                     (0, m.ET)();
                 },
-                onCloseRequest: E.tEg,
+                onCloseRequest: b.tEg,
             },
         );
     };
@@ -188,12 +188,12 @@ class I extends s.PureComponent {
                     ? (0, i.jsxs)("div", {
                           className: C.z8,
                           children: [
-                              (0, i.jsx)(c.Text, { variant: "text-sm/normal", children: b.intl.string(b.t.aRHpAB) }),
-                              (0, i.jsx)("div", { className: C.Sv, children: b.intl.string(b.t.o9bOIl) }),
+                              (0, i.jsx)(c.Text, { variant: "text-sm/normal", children: E.intl.string(E.t.aRHpAB) }),
+                              (0, i.jsx)("div", { className: C.Sv, children: E.intl.string(E.t.o9bOIl) }),
                           ],
                       })
                     : null,
-                (0, i.jsx)(d.$nd, { onClick: this.handleAddPaymentMethod, text: b.intl.string(b.t.CpOiEO) }),
+                (0, i.jsx)(d.$nd, { onClick: this.handleAddPaymentMethod, text: E.intl.string(E.t.CpOiEO) }),
             ],
         });
     }
@@ -270,13 +270,13 @@ class I extends s.PureComponent {
                                       children: [
                                           (0, i.jsx)(c.XAi, { size: "sm", className: C.hz }),
                                           " ",
-                                          b.intl.string(b.t.W26xGQ),
+                                          E.intl.string(E.t.W26xGQ),
                                       ],
                                   }),
                                   (0, i.jsx)(c.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-subtle",
-                                      children: b.intl.string(b.t.h6V3uK),
+                                      children: E.intl.string(E.t.h6V3uK),
                                   }),
                               ],
                           })

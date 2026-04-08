@@ -4,7 +4,7 @@ n(64700);
 var l = n(732955),
     s = n(397927),
     a = n(652215),
-    r = n(578125);
+    r = n(76400);
 function o(e) {
     let { buttonText: t, onGoBack: n, onDismiss: o, showCloseButton: d } = e;
     return (0, i.jsxs)(s.$Td, {

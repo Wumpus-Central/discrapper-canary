@@ -1,3 +1,14 @@
-i.exports = JSON.parse(
-    '{"SvqMnV":["Jei prisijungsi iki ",[3,"date","MMMM d"],", gausi ribotojo leidimo vardo lentelę. Galėsi naudoti su Nitro. ",[8,"$link",["Taikomos sąlygos"],[[1,"helpCenterLink"]]],"."],"PyQY5+":["Jei naujovinsi iki ",[3,"date","MMMM d"],", gausi ribotojo leidimo vardo lentelę. Galėsi naudoti su Nitro. ",[8,"$link",["Taikomos sąlygos"],[[1,"helpCenterLink"]]],"."],"7OPz+z":["Gauk išskirtinę vardo lentelę"],"1Ng1ci":["Pradėti misiją"],"QBfwzW":["Vėl paleisti misiją"],"VghrI/":["Užbaik 3 Nitro Control raundus ir pelnyk 150 Orbs"],"JXidUB":["Grįžk į laivą ir užkariauk košmaro režimą!"],"lvidGa":["Išgelbėk Wumpus. Pelnyk Orbs."],"S4okiP":["Misija baigta. Žaisti dar kartą?"],"3rpSiP":["Žaisti"],"PforLU":["Nitro Control"],"j/4UAS":["Gauti Nitro"],"u29fVK":["Eiti į Nitro pradžią"],"Ri/ZGz":["Prisijunk prie Nitro iki ",[3,"date","MMMM d"]," ir gauk išskirtinę vardo lentelę. Galėsi naudoti su Nitro. ",[8,"$link",["Taikomos sąlygos"],[[1,"helpCenterLink"]]],"."],"vxubVL":["Prenumeruok Nitro ir pakelk savo Discord patirtį į naują lygį."],"wC4J6d":["Eik į Nitro pradžią, kad sužinotum šviežiausias Nitro naujienas."],"E0XZQW":["Griebk ribotojo leidimo vardo lentelę"],"pVkPgD":["Gauk visą pranašumų pasaulį su Nitro"],"I8cv0h":["Peržvelk, kas naujo"],"SsJkmZ":["Užbaik 3 Nitro Control raundus ir atsiimk 150 Orbs!"],"2rVh2j":["Išgelbėk Wumpus. Pelnyk Orbs."]}',
-);
+"use strict";
+e.exports = {
+    UP: "eyebrow__2b1f5",
+    E3: "base__2b1f5 eyebrow__2b1f5",
+    U1: "textBadge__2b1f5 base__2b1f5 eyebrow__2b1f5",
+    rS: "baseShapeRound__2b1f5",
+    Q2: "baseShapeRoundLeft__2b1f5",
+    Hg: "baseShapeRoundRight__2b1f5",
+    u3: "iconBadge__2b1f5 base__2b1f5 eyebrow__2b1f5",
+    Do: "numberBadge__2b1f5 base__2b1f5 eyebrow__2b1f5",
+    Kk: "icon__2b1f5",
+    Ky: "circleBadge__2b1f5",
+    BE: "premiumBadge__2b1f5",
+};

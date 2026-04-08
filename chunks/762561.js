@@ -23,8 +23,8 @@ var i = n(627968),
     T = n(439053),
     S = n(312381),
     b = n(379654),
-    y = n(946356),
-    v = n(490752),
+    v = n(946356),
+    y = n(490752),
     j = n(587168),
     R = n(193738),
     O = n(615952),
@@ -37,23 +37,23 @@ var i = n(627968),
     k = n(518477),
     w = n(996988),
     B = n(985018),
-    V = n(374146);
+    V = n(49615);
 function H(e) {
     let { user: t, currentUser: n, channel: H } = e,
         F = __OVERLAY__,
-        K = (0, x.Ay)(t.id),
-        W = (0, A.A)(K?.profileFrame?.skuId, "UserProfileSidebar"),
+        W = (0, x.Ay)(t.id),
+        K = (0, A.A)(W?.profileFrame?.skuId, "UserProfileSidebar"),
         Y = (0, d.Ay)(),
         { analyticsLocations: z } = (0, u.Ay)(c.A.USER_PROFILE_SIDEBAR),
         q = (0, p.pb)({ layout: "SIDEBAR", userId: t.id, channelId: H.id }),
         X = l.useRef(null),
-        { isHoveringOrFocusing: J, isHovering: Q } = (0, _.A)(X),
-        $ = (0, E.fC)(),
-        Z = (0, o.zhh)({ opacity: +(null != $.interactionType), config: { duration: 150 } }),
+        { isHoveringOrFocusing: $, isHovering: Q } = (0, _.A)(X),
+        J = (0, E.fC)(),
+        Z = (0, o.zhh)({ opacity: +(null != J.interactionType), config: { duration: 150 } }),
         ee = (e) => {
             (0, I.openUserProfileModal)({ sourceAnalyticsLocations: z, hideRestrictedProfile: !0, ...q, ...e });
         },
-        et = K?.widgets != null && K.widgets.length > 0,
+        et = W?.widgets != null && W.widgets.length > 0,
         { defaultWishlistId: en } = (0, r.cf)([f.A], () => ({ defaultWishlistId: f.A.getFirstWishlistId(t.id) })),
         { wishlist: ei } = (0, g.fw)({ wishlistId: en, userId: t.id });
     (0, m.A)(ei);
@@ -62,26 +62,26 @@ function H(e) {
         value: z,
         children: (0, i.jsx)(p.of, {
             value: q,
-            isLoaded: K?.isLoaded,
+            isLoaded: W?.isLoaded,
             children: (0, i.jsx)(E.Hl, {
-                value: $,
-                children: (0, i.jsxs)(y.A, {
+                value: J,
+                children: (0, i.jsxs)(v.A, {
                     ref: X,
                     user: t,
-                    displayProfile: K,
+                    displayProfile: W,
                     themeType: w.d.SIDEBAR,
                     themeOverride: Y,
-                    privateBanner: K?.private === !0 ? (0, i.jsx)(S.A, {}) : void 0,
+                    privateBanner: W?.private === !0 ? (0, i.jsx)(S.A, {}) : void 0,
                     children: [
-                        null != $.interactionType && (0, i.jsx)(s.animated.div, { style: Z, className: V.tB }),
+                        null != J.interactionType && (0, i.jsx)(s.animated.div, { style: Z, className: V.tB }),
                         (0, i.jsxs)(a.d_W, {
-                            className: null != W ? V.It : void 0,
+                            className: null != K ? V.It : void 0,
                             children: [
                                 (0, i.jsxs)(j.A, {
                                     children: [
                                         (0, i.jsx)(R.A, { user: t, themeType: w.d.SIDEBAR }),
                                         (0, i.jsx)(O.A, { user: t }),
-                                        t.bot ? (0, i.jsx)(v.A, { user: t }) : (0, i.jsx)(L.yo, { user: t }),
+                                        t.bot ? (0, i.jsx)(y.A, { user: t }) : (0, i.jsx)(L.yo, { user: t }),
                                     ],
                                 }),
                                 (0, i.jsxs)("div", {
@@ -89,15 +89,15 @@ function H(e) {
                                     children: [
                                         (0, i.jsx)(N.A, {
                                             user: t,
-                                            displayProfile: K,
+                                            displayProfile: W,
                                             themeType: w.d.SIDEBAR,
-                                            animateOnHoverOrFocusOnly: !J,
+                                            animateOnHoverOrFocusOnly: !$,
                                             className: V.vK,
                                         }),
                                         (0, i.jsx)(T.A, { userId: t.id, className: V.oR }),
                                         (0, i.jsx)(C.A, {
                                             user: t,
-                                            displayProfile: K,
+                                            displayProfile: W,
                                             channelId: H.id,
                                             themeType: w.d.SIDEBAR,
                                             onOpenProfile: F ? void 0 : ee,
@@ -113,9 +113,9 @@ function H(e) {
                                 (0, i.jsx)(D.A, {
                                     user: t,
                                     currentUser: n,
-                                    displayProfile: K,
+                                    displayProfile: W,
                                     channel: H,
-                                    isHoveringOrFocusing: null == $.interactionType && J,
+                                    isHoveringOrFocusing: null == J.interactionType && $,
                                     onOpenProfile: F ? void 0 : ee,
                                 }),
                                 et &&
@@ -123,7 +123,7 @@ function H(e) {
                                         className: V.sJ,
                                         children: (0, i.jsx)(b.A, {
                                             user: t,
-                                            widgets: K.widgets,
+                                            widgets: W.widgets,
                                             onOpenUserProfileModal: ee,
                                         }),
                                     }),
@@ -148,10 +148,10 @@ function H(e) {
                             (0, i.jsx)(U.A, {
                                 context: q,
                                 analyticsLocations: z,
-                                profileFrame: W,
+                                profileFrame: K,
                                 handleOpenProfile: ee,
                             }),
-                        K?.profileEffect != null && (0, i.jsx)(h.A, { skuId: K?.profileEffect?.skuId, isHovering: Q }),
+                        W?.profileEffect != null && (0, i.jsx)(h.A, { skuId: W?.profileEffect?.skuId, isHovering: Q }),
                     ],
                 }),
             }),

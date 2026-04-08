@@ -1,9 +1,9 @@
-n.d(t, { A: () => N, C: () => y });
+n.d(t, { A: () => S, C: () => N });
 var i = n(627968),
-    a = n(64700),
-    r = n(284009),
-    l = n.n(r),
-    s = n(311907),
+    l = n(64700),
+    s = n(284009),
+    a = n.n(s),
+    r = n(311907),
     o = n(397927),
     d = n(241524),
     c = n(289397),
@@ -17,12 +17,12 @@ var i = n(627968),
     x = n(427262),
     f = n(218394),
     C = n(386952),
-    I = n(381969),
-    E = n(920814),
-    b = n(235665),
-    v = n(985018),
-    T = n(915047);
-function S(e) {
+    E = n(381969),
+    I = n(920814),
+    v = n(235665),
+    b = n(985018),
+    T = n(66996);
+function y(e) {
     let { onClick: t } = e;
     return (0, i.jsxs)(o.DUT, {
         onClick: t,
@@ -31,19 +31,19 @@ function S(e) {
             (0, i.jsx)(o.Text, {
                 variant: "text-sm/medium",
                 color: "text-strong",
-                children: v.intl.string(v.t.J4cw1q),
+                children: b.intl.string(b.t.J4cw1q),
             }),
             (0, i.jsx)(o.hKd, { size: 4, horizontal: !0 }),
             (0, i.jsx)(A.A, { direction: A.A.Directions.RIGHT, className: T.wY }),
         ],
     });
 }
-function y(e) {
+function N(e) {
     let { coverImageAsset: t, isPreview: n = !1 } = e,
-        a = h.kt.useSetting(),
-        r = (0, f.j)() && a,
-        [l, s] = (0, m.A)(t, r),
-        o = r
+        l = h.kt.useSetting(),
+        s = (0, f.j)() && l,
+        [a, r] = (0, m.A)(t, s),
+        o = s
             ? (0, i.jsx)(u.A, {
                   autoPlay: !0,
                   loop: !0,
@@ -58,31 +58,31 @@ function y(e) {
                   className: T.N4,
               });
     return (0, i.jsx)("div", {
-        ref: l,
+        ref: a,
         className: T.El,
-        children: null == s || n ? o : (0, i.jsx)("img", { src: s, alt: "", className: T.N4 }),
+        children: null == r || n ? o : (0, i.jsx)("img", { src: r, alt: "", className: T.N4 }),
     });
 }
-function N(e) {
+function S(e) {
     let { guild: t, subscriptionsSettings: n } = e,
-        r = t.id,
-        { nickname: u, nickcolor: m } = (0, s.cf)([p.Ay, g.default], () => {
+        s = t.id,
+        { nickname: u, nickcolor: m } = (0, r.cf)([p.Ay, g.default], () => {
             let e = g.default.getCurrentUser();
-            l()(null != e, "user cannot be null");
-            let t = p.Ay.getMember(r, e.id);
+            a()(null != e, "user cannot be null");
+            let t = p.Ay.getMember(s, e.id);
             return { nickname: t?.nick ?? x.Ay.getName(e), nickcolor: t?.colorString ?? void 0 };
-        }, [r]),
+        }, [s]),
         { isTruncated: h, ExpandableTextContainer: A } = (0, C.e)(),
         f = (n?.description?.trim().length ?? 0) > 0,
-        [N, j] = a.useState(1),
+        [S, j] = l.useState(1),
         L = (0, d.A)("(max-width: 1439px)"),
-        { selectedTab: R, isPhantomPreview: P } = (0, I.k)(),
-        w = R === E.B.GUILD_PRODUCTS_PREVIEW ? v.intl.string(v.t["LvXy/H"]) : v.intl.string(v.t.XyqKh8),
-        D = f
+        { selectedTab: R, isPhantomPreview: P } = (0, E.k)(),
+        D = R === I.B.GUILD_PRODUCTS_PREVIEW ? b.intl.string(b.t["LvXy/H"]) : b.intl.string(b.t.XyqKh8),
+        M = f
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsx)(A, {
-                          lineClamp: L || 2 === N ? 2 : 3,
+                          lineClamp: L || 2 === S ? 2 : 3,
                           children: (0, i.jsx)(o.Text, {
                               variant: "text-sm/normal",
                               color: "text-default",
@@ -93,7 +93,7 @@ function N(e) {
                           (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(o.hKd, { size: 4 }),
-                                  (0, i.jsx)(S, { onClick: () => (0, b.A)({ guildId: r }) }),
+                                  (0, i.jsx)(y, { onClick: () => (0, v.A)({ guildId: s }) }),
                               ],
                           }),
                   ],
@@ -101,7 +101,7 @@ function N(e) {
             : (0, i.jsx)(o.Text, {
                   variant: "text-sm/normal",
                   color: "text-default",
-                  children: P ? w : v.intl.string(v.t["NY/FIW"]),
+                  children: P ? D : b.intl.string(b.t["NY/FIW"]),
               });
     return (0, i.jsxs)("div", {
         className: T.kL,
@@ -131,15 +131,15 @@ function N(e) {
                                     color: "text-strong",
                                     lineClamp: 2,
                                     children: P
-                                        ? v.intl.string(v.t.rtgp7q)
-                                        : v.intl.formatToPlainString(v.t.NZeik9, { guildName: t.name }),
+                                        ? b.intl.string(b.t.rtgp7q)
+                                        : b.intl.formatToPlainString(b.t.NZeik9, { guildName: t.name }),
                                 }),
                             }),
                             (0, i.jsx)(o.hKd, { size: 8 }),
                             (0, i.jsx)(o.Text, {
                                 variant: "text-md/normal",
                                 color: "text-default",
-                                children: v.intl.format(v.t["7JwrlH"], {
+                                children: b.intl.format(b.t["7JwrlH"], {
                                     username: u,
                                     usernameHook: function (e, t) {
                                         return (0, i.jsx)("span", { style: { color: m }, children: e }, t);
@@ -147,12 +147,12 @@ function N(e) {
                                 }),
                             }),
                             (0, i.jsx)(o.hKd, { size: 9 }),
-                            D,
+                            M,
                         ],
                     }),
                 ],
             }),
-            (0, i.jsx)(y, { coverImageAsset: n?.cover_image_asset, isPreview: P }),
+            (0, i.jsx)(N, { coverImageAsset: n?.cover_image_asset, isPreview: P }),
         ],
     });
 }

@@ -1,8 +1,8 @@
 n.d(t, { A: () => V }), n(801541);
 var a = n(627968),
     i = n(64700),
-    s = n(284009),
-    l = n.n(s),
+    l = n(284009),
+    s = n.n(l),
     r = n(889137),
     o = n(412703),
     d = n(440703),
@@ -22,14 +22,14 @@ var a = n(627968),
     C = n(223344),
     y = n(589939),
     S = n(443960),
-    E = n(899860),
-    T = n(633581),
+    T = n(899860),
+    E = n(633581),
     N = n(508575),
     I = n(847807),
-    O = n(364329),
-    R = n(545986),
-    k = n(927813),
-    w = n(163459);
+    k = n(364329),
+    O = n(545986),
+    R = n(927813),
+    w = n(549592);
 let D = ["png", "gif", "webp"],
     M = [...D, "jpg", "jpeg"],
     P = Array.from(new Set([...M, "gif", "mp4", "webm"]));
@@ -107,11 +107,11 @@ let U = "1193992107035983872",
     };
 function G() {
     var e;
-    let [t, s] = i.useState(B),
+    let [t, l] = i.useState(B),
         c = i.useCallback((e) => {
-            s({ ...e, preview: !0 });
+            l({ ...e, preview: !0 });
         }, []),
-        [u, U] = i.useState(O.b.UNENROLLED),
+        [u, U] = i.useState(k.b.UNENROLLED),
         [G, F] = i.useState(!1),
         [V, W] = i.useState(!1),
         [H, K] = i.useState(null),
@@ -145,16 +145,16 @@ function G() {
         let a = t.config.taskConfigV2.tasks,
             i = a[o.n.WATCH_VIDEO];
         if (null == i) return;
-        let s = { ...i.assets };
+        let l = { ...i.assets };
         switch (e) {
             case "videoPlayerVideo":
-                s.video = { url: n };
+                l.video = { url: n };
                 break;
             case "videoPlayerVideoLowRes":
-                s.videoLowRes = { url: n };
+                l.videoLowRes = { url: n };
                 break;
             case "videoPlayerThumbnail":
-                s.video = { ...s.video, thumbnail: n };
+                l.video = { ...l.video, thumbnail: n };
                 break;
             default:
                 return;
@@ -163,7 +163,7 @@ function G() {
             ...t,
             config: {
                 ...t.config,
-                taskConfigV2: { ...t.config.taskConfigV2, tasks: { ...a, [o.n.WATCH_VIDEO]: { ...i, assets: s } } },
+                taskConfigV2: { ...t.config.taskConfigV2, tasks: { ...a, [o.n.WATCH_VIDEO]: { ...i, assets: l } } },
             },
         });
     }
@@ -183,19 +183,19 @@ function G() {
     }
     function Y(e, n, a) {
         if ("name" === e || "nameWithArticle" === e) {
-            var i, s;
+            var i, l;
             c({
                 ...t,
                 config:
                     ((i = t.config),
-                    (s = { [e]: n }),
+                    (l = { [e]: n }),
                     (0, r.YW)(i)
                         .with({ configVersion: 2 }, (e) => ({
                             ...e,
                             rewardsConfig: {
                                 ...e.rewardsConfig,
                                 rewards: e.rewardsConfig.rewards.map((e, t) =>
-                                    t === a ? { ...e, messages: { ...e.messages, ...s } } : e,
+                                    t === a ? { ...e, messages: { ...e.messages, ...l } } : e,
                                 ),
                             },
                         }))
@@ -207,14 +207,14 @@ function G() {
         c({ ...t, config: { ...t.config, colors: { ...t.config.colors, [e]: n } } });
     }
     function X() {
-        (0, x.tU)(t.config) && (0, R.hJ)(t, h.uF.GIFT_INVENTORY_FOR_YOU, h.uF.INTERNAL_PREVIEW_TOOL, !0);
+        (0, x.tU)(t.config) && (0, O.hJ)(t, h.uF.GIFT_INVENTORY_FOR_YOU, h.uF.INTERNAL_PREVIEW_TOOL, !0);
     }
     let Z = i.useMemo(() => {
             for (let [e, n] of Object.entries(t.config.taskConfigV2.tasks)) if (null != n.target) return n.target;
-            return 10 * k.A.Seconds.MINUTE;
+            return 10 * R.A.Seconds.MINUTE;
         }, [t.config.taskConfigV2.tasks]),
         ee = i.useMemo(() => o.n.WATCH_VIDEO in t.config.taskConfigV2.tasks, [t.config.taskConfigV2.tasks]);
-    l()(!1 !== t.preview && null != t.preview, "Preview config must have property preview: true");
+    s()(!1 !== t.preview && null != t.preview, "Preview config must have property preview: true");
     let et = t.config.taskConfigV2.tasks[o.n.WATCH_VIDEO];
     return (0, a.jsxs)(m.IpV, {
         className: w.kL,
@@ -222,27 +222,27 @@ function G() {
             (0, a.jsx)(m.Heading, { variant: "heading-lg/bold", className: w.R_, children: "Quest Preview Tool" }),
             (0, a.jsx)("div", {
                 className: w.OA,
-                children: (0, a.jsx)(T.A, {
+                children: (0, a.jsx)(E.A, {
                     onSelect: function (e) {
                         K(e),
                             null == e ||
                                 (U(
                                     (function (e) {
-                                        if (null == e.userStatus) return O.b.UNENROLLED;
-                                        if (null != e.userStatus.claimedAt) return O.b.CLAIMED;
-                                        if (null != e.userStatus.completedAt) return O.b.COMPLETED_100;
+                                        if (null == e.userStatus) return k.b.UNENROLLED;
+                                        if (null != e.userStatus.claimedAt) return k.b.CLAIMED;
+                                        if (null != e.userStatus.completedAt) return k.b.COMPLETED_100;
                                         let t = (0, p.Yh)(e),
                                             n = t.progressSeconds,
                                             a = t.targetSeconds;
                                         return n / a >= 1
-                                            ? O.b.COMPLETED_100
+                                            ? k.b.COMPLETED_100
                                             : n / a >= 0.75
-                                              ? O.b.COMPLETED_75
+                                              ? k.b.COMPLETED_75
                                               : n / a >= 0.5
-                                                ? O.b.COMPLETED_50
+                                                ? k.b.COMPLETED_50
                                                 : n / a >= 0.25
-                                                  ? O.b.COMPLETED_25
-                                                  : O.b.ENROLLED;
+                                                  ? k.b.COMPLETED_25
+                                                  : k.b.ENROLLED;
                                     })(e),
                                 ),
                                 c(e));
@@ -265,40 +265,40 @@ function G() {
             (0, a.jsxs)("div", {
                 className: w.OA,
                 children: [
-                    (0, a.jsx)(E.A, {
+                    (0, a.jsx)(T.A, {
                         title: "Quest Name",
                         assetKey: "questName",
                         onMessageChange: Q,
                         initialValue: t.config.messages.questName,
                     }),
-                    (0, a.jsx)(E.A, {
+                    (0, a.jsx)(T.A, {
                         title: "Game Title",
                         assetKey: "gameTitle",
                         onMessageChange: Q,
                         initialValue: t.config.messages.gameTitle,
                     }),
-                    (0, a.jsx)(E.A, {
+                    (0, a.jsx)(T.A, {
                         title: "Game Publisher",
                         assetKey: "gamePublisher",
                         onMessageChange: Q,
                         initialValue: t.config.messages.gamePublisher,
                     }),
                     ee &&
-                        (0, a.jsx)(E.A, {
+                        (0, a.jsx)(T.A, {
                             title: "Video Title",
                             assetKey: "videoTitle",
                             onMessageChange: function (e, n) {
                                 let a = t.config.taskConfigV2.tasks,
                                     i = a[o.n.WATCH_VIDEO];
                                 if (null == i) return;
-                                let s = { ...i.messages, [e]: n };
+                                let l = { ...i.messages, [e]: n };
                                 c({
                                     ...t,
                                     config: {
                                         ...t.config,
                                         taskConfigV2: {
                                             ...t.config.taskConfigV2,
-                                            tasks: { ...a, [o.n.WATCH_VIDEO]: { ...i, messages: s } },
+                                            tasks: { ...a, [o.n.WATCH_VIDEO]: { ...i, messages: l } },
                                         },
                                     },
                                 });
@@ -394,13 +394,13 @@ function G() {
                             (0, a.jsxs)("div", {
                                 className: w.OA,
                                 children: [
-                                    (0, a.jsx)(E.A, {
+                                    (0, a.jsx)(T.A, {
                                         title: "Name",
                                         assetKey: "name",
                                         onMessageChange: (e, t) => Y(e, t, n),
                                         initialValue: e.messages.name,
                                     }),
-                                    (0, a.jsx)(E.A, {
+                                    (0, a.jsx)(T.A, {
                                         title: "Name With Article",
                                         assetKey: "nameWithArticle",
                                         onMessageChange: (e, t) => Y(e, t, n),
@@ -487,16 +487,16 @@ function G() {
                         ],
                     }),
                     (0, a.jsx)("div", { className: w.OA, children: (0, a.jsx)(I.A, {}) }),
-                    (0, a.jsx)(O.A, {
+                    (0, a.jsx)(k.A, {
                         onChange: function (e) {
                             switch ((U(e), e)) {
-                                case O.b.UNENROLLED:
+                                case k.b.UNENROLLED:
                                     c({ ...t, userStatus: null });
                                     break;
-                                case O.b.ENROLLED:
+                                case k.b.ENROLLED:
                                     c({ ...t, userStatus: L({ enrolledAt: new Date().toISOString() }) });
                                     break;
-                                case O.b.COMPLETED_25:
+                                case k.b.COMPLETED_25:
                                     c({
                                         ...t,
                                         userStatus: L({
@@ -505,7 +505,7 @@ function G() {
                                         }),
                                     });
                                     break;
-                                case O.b.COMPLETED_50:
+                                case k.b.COMPLETED_50:
                                     c({
                                         ...t,
                                         userStatus: L({
@@ -514,7 +514,7 @@ function G() {
                                         }),
                                     });
                                     break;
-                                case O.b.COMPLETED_75:
+                                case k.b.COMPLETED_75:
                                     c({
                                         ...t,
                                         userStatus: L({
@@ -523,7 +523,7 @@ function G() {
                                         }),
                                     });
                                     break;
-                                case O.b.COMPLETED_100:
+                                case k.b.COMPLETED_100:
                                     c({
                                         ...t,
                                         userStatus: L({
@@ -533,7 +533,7 @@ function G() {
                                         }),
                                     });
                                     break;
-                                case O.b.CLAIMED:
+                                case k.b.CLAIMED:
                                     c({
                                         ...t,
                                         userStatus: L({
@@ -673,7 +673,7 @@ function G() {
                                                 n.e("92868"),
                                                 n.e("29636"),
                                                 n.e("7634"),
-                                                n.e("5501"),
+                                                n.e("36855"),
                                             ]).then(n.bind(n, 201257));
                                             return (n) =>
                                                 (0, a.jsx)(e, {

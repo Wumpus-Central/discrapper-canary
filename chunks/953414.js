@@ -1,8 +1,8 @@
 n.d(t, { A: () => A }), n(321073);
 var a = n(627968),
     i = n(64700),
-    s = n(503698),
-    l = n.n(s),
+    l = n(503698),
+    s = n.n(l),
     r = n(311907),
     o = n(397927),
     d = n(73153),
@@ -11,17 +11,17 @@ var a = n(627968),
     m = n(260880),
     h = n(303054),
     x = n(231643),
-    p = n(310086),
-    g = n(338919);
+    p = n(793877),
+    g = n(59830);
 function _(e, t) {
     return e.store.getName().localeCompare(t.store.getName());
 }
 function f(e) {
     let { store: t, dataGetter: n } = e,
-        [s, l] = i.useState(n(t));
+        [l, s] = i.useState(n(t));
     return (
         i.useEffect(() => {
-            let e = () => l(n(t));
+            let e = () => s(n(t));
             return (
                 e(),
                 t.addChangeListener(e),
@@ -30,15 +30,15 @@ function f(e) {
                 }
             );
         }, [t, n]),
-        (0, a.jsx)(o.IpV, { className: g.Dx, children: (0, a.jsx)(u.A, { data: s }) })
+        (0, a.jsx)(o.IpV, { className: g.Dx, children: (0, a.jsx)(u.A, { data: l }) })
     );
 }
 function v(e) {
     let { store: t } = e,
-        [n, s] = i.useState(() => JSON.stringify(t.__getLocalVars(), null, 2)),
+        [n, l] = i.useState(() => JSON.stringify(t.__getLocalVars(), null, 2)),
         [r, c] = i.useState(null),
         u = i.useCallback(() => {
-            s(JSON.stringify(t.__getLocalVars(), null, 2)), c(null);
+            l(JSON.stringify(t.__getLocalVars(), null, 2)), c(null);
         }, [t]);
     i.useEffect(() => (t.addChangeListener(u), () => t.removeChangeListener(u)), [t, u]);
     let m = i.useCallback(() => {
@@ -72,12 +72,12 @@ function v(e) {
             }
         }, [t, u]);
     return (0, a.jsxs)("div", {
-        className: l()(g.Dx, g.Ef),
+        className: s()(g.Dx, g.Ef),
         children: [
             (0, a.jsx)("textarea", {
                 className: g.Vz,
                 value: n,
-                onChange: (e) => s(e.target.value),
+                onChange: (e) => l(e.target.value),
                 spellCheck: !1,
                 "aria-label": "Edit local variables as JSON",
             }),
@@ -106,7 +106,7 @@ let b = [
 ];
 function j(e) {
     let { store: t, initialHeight: n } = e,
-        s = i.useMemo(() => {
+        l = i.useMemo(() => {
             let e;
             return (
                 (e = [
@@ -160,7 +160,7 @@ function j(e) {
                 e
             );
         }, [t]),
-        { TabBar: r, renderSelectedTab: d } = (0, x.Ay)({ tabs: s }, []);
+        { TabBar: r, renderSelectedTab: d } = (0, x.Ay)({ tabs: l }, []);
     return (0, a.jsxs)(m.A, {
         className: g.rf,
         minHeight: 100,
@@ -168,7 +168,7 @@ function j(e) {
         children: [
             (0, a.jsx)(r, {}),
             (0, a.jsxs)(c.Ay, {
-                className: l()(p.jr, g.nZ),
+                className: s()(p.jr, g.nZ),
                 children: [
                     (0, a.jsx)(c.Ay.Icon, { icon: o.gqV, tooltip: t.getName() }),
                     (0, a.jsx)(c.Ay.Title, { children: t.getName() }),
@@ -181,9 +181,9 @@ function j(e) {
 function A() {
     let e = i.useRef(null),
         [t, n] = i.useState(""),
-        s = r.il.getAll(),
+        l = r.il.getAll(),
         d = i
-            .useMemo(() => s.map((e) => ({ key: e._dispatchToken, store: e })).sort(_), [s])
+            .useMemo(() => l.map((e) => ({ key: e._dispatchToken, store: e })).sort(_), [l])
             .filter((e) =>
                 (function (e, t) {
                     let { store: n } = e;
@@ -191,10 +191,10 @@ function A() {
                 })(e, t),
             ),
         [c, u] = i.useState(),
-        m = s.find((e) => e._dispatchToken === c);
+        m = l.find((e) => e._dispatchToken === c);
     return (0, a.jsxs)("div", {
         ref: e,
-        className: l()(p.nd, g.nd),
+        className: s()(p.nd, g.nd),
         children: [
             (0, a.jsx)("div", {
                 className: g.KE,

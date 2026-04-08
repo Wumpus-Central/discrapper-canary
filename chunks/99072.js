@@ -1,10 +1,10 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => b });
 var i = n(627968);
 n(64700);
-var a = n(311907),
-    r = n(397927),
-    l = n(456060),
-    s = n(793574),
+var l = n(311907),
+    s = n(397927),
+    a = n(456060),
+    r = n(793574),
     o = n(688810),
     d = n(572211),
     c = n(354287),
@@ -18,14 +18,14 @@ var a = n(311907),
     x = n(723702),
     f = n(661191),
     C = n(820672),
-    I = n(768349),
-    E = n(426127),
-    b = n(985018);
-function v(e) {
-    let { currentUserId: t, message: v, application: T, channel: S, analyticsLocations: y, onView: N } = e,
+    E = n(768349),
+    I = n(55705),
+    v = n(985018);
+function b(e) {
+    let { currentUserId: t, message: b, application: T, channel: y, analyticsLocations: N, onView: S } = e,
         { staticBannerSrc: j, videoBannerSrc: L, bannerAspectRatio: R } = (0, u.f)(T),
         P = A.Ay.getApplicationIconURL({ id: T.id, icon: T.icon }),
-        w = (0, a.bG)([_.Ay, p.A], () =>
+        D = (0, l.bG)([_.Ay, p.A], () =>
             _.Ay.getVisibleRunningGames().find((e) => {
                 let { id: t } = e;
                 if (t === T.id) return !0;
@@ -33,31 +33,31 @@ function v(e) {
                 return null != n && t === n.id;
             }),
         ),
-        D = (0, a.bG)([h.A], () => h.A.getCurrentUserActiveStream()),
-        M = (0, a.bG)([g.A], () => g.A.getChannelId()),
-        k = f.default.extractTimestamp(v.id) + C.M < Date.now(),
-        O = (0, i.jsx)(i.Fragment, { children: (0, l.Wf)(v, S, t) }),
-        { analyticsLocations: U } = (0, o.Ay)(y, s.A.REQUEST_TO_STREAM_INVITE_EMBED),
-        B = b.intl.string(E.default["5+172e"]),
+        M = (0, l.bG)([h.A], () => h.A.getCurrentUserActiveStream()),
+        w = (0, l.bG)([g.A], () => g.A.getChannelId()),
+        O = f.default.extractTimestamp(b.id) + C.M < Date.now(),
+        k = (0, i.jsx)(i.Fragment, { children: (0, a.Wf)(b, y, t) }),
+        { analyticsLocations: U } = (0, o.Ay)(N, r.A.REQUEST_TO_STREAM_INVITE_EMBED),
+        B = v.intl.string(I.default["5+172e"]),
         G = !1;
     return (
-        k
-            ? ((B = b.intl.string(E.default.u4QmWl)), (G = !0))
-            : null != D
-              ? ((B = b.intl.string(E.default.P0wwmM)), (G = !0))
-              : M !== S.id
-                ? ((B = b.intl.string(E.default.qRXats)), (G = !0))
-                : null == w && ((B = b.intl.string(E.default["43zohO"])), (G = !0)),
+        O
+            ? ((B = v.intl.string(I.default.u4QmWl)), (G = !0))
+            : null != M
+              ? ((B = v.intl.string(I.default.P0wwmM)), (G = !0))
+              : w !== y.id
+                ? ((B = v.intl.string(I.default.qRXats)), (G = !0))
+                : null == D && ((B = v.intl.string(I.default["43zohO"])), (G = !0)),
         (0, i.jsx)(d.h, {
-            header: b.intl.string(E.default.nAyuPp),
+            header: v.intl.string(I.default.nAyuPp),
             title: T.name,
             staticBannerSrc: j,
             videoBannerSrc: L,
             bannerAspectRatio: R,
             iconSrc: P ?? void 0,
-            info: O,
+            info: k,
             actions:
-                v.author.id === t
+                b.author.id === t
                     ? []
                     : [
                           {
@@ -65,10 +65,10 @@ function v(e) {
                               trackingArea: c.kY.STREAM,
                               disabled: G,
                               onClick: () => {
-                                  null != w &&
+                                  null != D &&
                                       ((0, x.isWindows)()
-                                          ? (0, m.A)(w.pid)
-                                          : (0, r.mMO)(async () => {
+                                          ? (0, m.A)(D.pid)
+                                          : (0, s.mMO)(async () => {
                                                 let { default: e } = await Promise.all([
                                                     n.e("96811"),
                                                     n.e("48697"),
@@ -80,12 +80,12 @@ function v(e) {
                       ],
             trackingConfig: {
                 id: T.id,
-                linkType: I.J.REQUEST_TO_STREAM,
-                guildId: S.guild_id,
-                channelId: S.id,
-                messageId: v.id,
-                onView: N,
-                isDeadEnd: k,
+                linkType: E.J.REQUEST_TO_STREAM,
+                guildId: y.guild_id,
+                channelId: y.id,
+                messageId: b.id,
+                onView: S,
+                isDeadEnd: O,
             },
         })
     );

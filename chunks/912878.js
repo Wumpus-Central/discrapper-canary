@@ -1,8 +1,8 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => T });
 var a = n(627968),
     i = n(64700),
-    s = n(503698),
-    l = n.n(s),
+    l = n(503698),
+    s = n.n(l),
     r = n(253506),
     o = n(665260),
     d = n(311907),
@@ -18,12 +18,12 @@ var a = n(627968),
     v = n(263834),
     b = n(865116),
     j = n(716371),
-    A = n(49977),
-    C = n(310086);
+    A = n(664558),
+    C = n(793877);
 function y() {
     let e = (0, d.yK)([f.default], () => f.default.getSortedChannels()[1]),
         [t, n] = i.useState(e.length > 0 ? e[0].channelId : void 0),
-        { selectedChannel: s, options: l } = (0, d.cf)([p.A, _.default, g.A], () => ({
+        { selectedChannel: l, options: s } = (0, d.cf)([p.A, _.default, g.A], () => ({
             selectedChannel: p.A.getChannel(t),
             options: e.map((e) => {
                 let t = p.A.getChannel(e.channelId);
@@ -39,18 +39,18 @@ function y() {
             }),
         })),
         u = i.useCallback(() => {
-            if (null == s || !s.isPrivate()) return;
-            let e = (0, o.PQ)(s.recipientFlags ?? 0, r.o.DISMISSED_IN_GAME_MESSAGE_NUX);
-            x.A.updatePrivateChannelRecipientFlags(s.id, e);
-        }, [s]),
-        v = !!s?.isPrivate() && (0, o.Lt)(s.recipientFlags ?? 0, r.o.DISMISSED_IN_GAME_MESSAGE_NUX);
+            if (null == l || !l.isPrivate()) return;
+            let e = (0, o.PQ)(l.recipientFlags ?? 0, r.o.DISMISSED_IN_GAME_MESSAGE_NUX);
+            x.A.updatePrivateChannelRecipientFlags(l.id, e);
+        }, [l]),
+        v = !!l?.isPrivate() && (0, o.Lt)(l.recipientFlags ?? 0, r.o.DISMISSED_IN_GAME_MESSAGE_NUX);
     return (0, a.jsxs)("div", {
         className: A.gs,
         children: [
             (0, a.jsx)(c.ZiE, {
                 label: "In-Game NUX Message for DMs",
                 selectionMode: "single",
-                options: l,
+                options: s,
                 placeholder: "Select DM",
                 value: t,
                 onSelectionChange: n,
@@ -71,13 +71,13 @@ function S() {
     }, []);
     return (0, a.jsx)(c.Button, { variant: "primary", size: "sm", text: "Open System DM", onClick: e });
 }
-function E() {
+function T() {
     let e = (0, d.bG)([b.Ay], () => b.Ay.allByCategory(b.xW.MESSAGING), [], d.My).map((e) => {
         let [t, n, { label: i }] = e;
         return (0, a.jsx)(c.dOG, { label: i, description: t, checked: n, onChange: (e) => (0, v.L)(t, e) }, t);
     });
     return (0, a.jsxs)("div", {
-        className: l()(C.nd, A.nd),
+        className: s()(C.nd, A.nd),
         children: [
             e,
             (0, a.jsx)("div", { className: A.yF }),

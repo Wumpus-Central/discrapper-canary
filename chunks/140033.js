@@ -26,10 +26,10 @@ var a = n(627968),
     S = n(365003),
     T = n(680127),
     R = n(858192),
-    M = n(49999),
-    y = n(294726),
+    y = n(49999),
+    M = n(738072),
     G = n(985018),
-    k = n(10342);
+    k = n(6383);
 function L(e) {
     let { guildId: t, instance: n } = e,
         [i, l] = s.useState(!1),
@@ -41,7 +41,7 @@ function L(e) {
         }, [t, n.id]);
     return (0, a.jsx)(u.Button, {
         fullWidth: !0,
-        text: G.intl.string(y.default.TMzy7d),
+        text: G.intl.string(M.default.TMzy7d),
         variant: "secondary",
         loading: i,
         onClick: r,
@@ -50,7 +50,7 @@ function L(e) {
 function D(e) {
     return (0, a.jsx)(u.Button, {
         fullWidth: !0,
-        text: G.intl.string(y.default.tkbVdf),
+        text: G.intl.string(M.default.tkbVdf),
         variant: "secondary",
         icon: u.I9m,
         iconPosition: "end",
@@ -58,12 +58,12 @@ function D(e) {
     });
 }
 function P(e) {
-    return (0, a.jsx)(u.Button, { fullWidth: !0, text: G.intl.string(y.default["fQCcM/"]), variant: "primary", ...e });
+    return (0, a.jsx)(u.Button, { fullWidth: !0, text: G.intl.string(M.default["fQCcM/"]), variant: "primary", ...e });
 }
 function O(e) {
     return (0, a.jsx)(u.Button, {
         fullWidth: !0,
-        text: G.intl.string(y.default.gWMqnI),
+        text: G.intl.string(M.default.gWMqnI),
         variant: "primary",
         icon: u.I9m,
         iconPosition: "end",
@@ -81,7 +81,7 @@ function B(e) {
         }, [t]);
     return (0, a.jsx)(u.Button, {
         fullWidth: !0,
-        text: G.intl.string(y.default.BLEx3k),
+        text: G.intl.string(M.default.BLEx3k),
         variant: "secondary",
         loading: n,
         onClick: l,
@@ -92,7 +92,7 @@ function U(e) {
         n = (0, S.A)(t.providerType, t.gameServerPanelUrl);
     return (0, a.jsx)(u.Button, {
         fullWidth: !0,
-        text: G.intl.string(y.default.bBkeMs),
+        text: G.intl.string(M.default.bBkeMs),
         variant: "secondary",
         onClick: () => {
             null != n && (0, v.h)({ href: n });
@@ -113,7 +113,7 @@ function F(e) {
                     : (0, R.A)({
                           provider: n.providerType,
                           onAccept: () => {
-                              F(M.i.TAKE_ACTION), (0, T.A)(t, n);
+                              F(y.i.TAKE_ACTION), (0, T.A)(t, n);
                           },
                       });
         }, [n, V, F, t, w?.name]),
@@ -169,14 +169,14 @@ function F(e) {
         Q = s.useMemo(() => {
             switch (n.status) {
                 case r.M.STARTING:
-                    if (null == n.gameServerPanelUrl) return G.intl.string(y.default["1A3US2"]);
+                    if (null == n.gameServerPanelUrl) return G.intl.string(M.default["1A3US2"]);
                     return null;
                 case r.M.STARTUP_FAILED:
-                    return G.intl.string(Z ? y.default.Mdoc98 : y.default.osZiRl);
+                    return G.intl.string(Z ? M.default.Mdoc98 : M.default.osZiRl);
                 case r.M.MISSING_STOCK:
-                    return G.intl.string(Z ? y.default.YCakvM : y.default.osZiRl);
+                    return G.intl.string(Z ? M.default.YCakvM : M.default.osZiRl);
                 case r.M.PROVIDER_ERRORED:
-                    return G.intl.string(Z ? y.default.NRyCeY : y.default.osZiRl);
+                    return G.intl.string(Z ? M.default.NRyCeY : M.default.osZiRl);
                 default:
                     return null;
             }
@@ -214,7 +214,7 @@ function F(e) {
                                         (0, a.jsx)(u.Text, {
                                             variant: "text-xs/semibold",
                                             color: "text-muted",
-                                            children: G.intl.string(y.default.bDdi7n),
+                                            children: G.intl.string(M.default.bDdi7n),
                                         }),
                                         (0, a.jsx)(u.Text, {
                                             variant: "text-sm/medium",
@@ -228,7 +228,7 @@ function F(e) {
                                         (0, a.jsx)(u.Text, {
                                             variant: "text-xs/semibold",
                                             color: "text-muted",
-                                            children: G.intl.string(y.default["7phwMG"]),
+                                            children: G.intl.string(M.default["7phwMG"]),
                                         }),
                                         (0, a.jsx)("div", {
                                             className: k.serverIpContainer,
@@ -258,11 +258,11 @@ function F(e) {
                                                                 (0, R.A)({
                                                                     provider: n.providerType,
                                                                     onAccept: () => {
-                                                                        F(M.i.TAKE_ACTION), Y();
+                                                                        F(y.i.TAKE_ACTION), Y();
                                                                     },
                                                                 });
                                                             },
-                                                            children: G.intl.string(y.default["f+F7H3"]),
+                                                            children: G.intl.string(M.default["f+F7H3"]),
                                                         }),
                                         }),
                                     ],
@@ -273,7 +273,7 @@ function F(e) {
                                         (0, a.jsx)(u.Text, {
                                             variant: "text-xs/semibold",
                                             color: "text-muted",
-                                            children: G.intl.string(y.default["n+ZX7y"]),
+                                            children: G.intl.string(M.default["n+ZX7y"]),
                                         }),
                                         (0, a.jsxs)("div", {
                                             className: k.statusContainer,
@@ -294,21 +294,21 @@ function F(e) {
                                                     children: (function (e) {
                                                         switch (e) {
                                                             case r.M.STARTING:
-                                                                return G.intl.string(y.default.SgjaXI);
+                                                                return G.intl.string(M.default.SgjaXI);
                                                             case r.M.STARTUP_FAILED:
-                                                                return G.intl.string(y.default["7C9Z3s"]);
+                                                                return G.intl.string(M.default["7C9Z3s"]);
                                                             case r.M.OFFLINE:
-                                                                return G.intl.string(y.default["Ys/RrB"]);
+                                                                return G.intl.string(M.default["Ys/RrB"]);
                                                             case r.M.ONLINE:
-                                                                return G.intl.string(y.default["60kAzo"]);
+                                                                return G.intl.string(M.default["60kAzo"]);
                                                             case r.M.DELETED:
-                                                                return G.intl.string(y.default.Z1NZwX);
+                                                                return G.intl.string(M.default.Z1NZwX);
                                                             case r.M.MISSING_STOCK:
-                                                                return G.intl.string(y.default["+a5G2l"]);
+                                                                return G.intl.string(M.default["+a5G2l"]);
                                                             case r.M.SLEEPING:
-                                                                return G.intl.string(y.default.y0z8ZO);
+                                                                return G.intl.string(M.default.y0z8ZO);
                                                             case r.M.PROVIDER_ERRORED:
-                                                                return G.intl.string(y.default["6g/oji"]);
+                                                                return G.intl.string(M.default["6g/oji"]);
                                                             default:
                                                                 return "—";
                                                         }
@@ -333,7 +333,7 @@ function F(e) {
                                         (0, a.jsx)(u.Text, {
                                             variant: "text-xs/semibold",
                                             color: "text-muted",
-                                            children: G.intl.string(y.default.mJlz3T),
+                                            children: G.intl.string(M.default.mJlz3T),
                                         }),
                                         (0, a.jsx)(u.Text, {
                                             variant: "text-sm/medium",

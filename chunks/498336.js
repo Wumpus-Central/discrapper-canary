@@ -1,8 +1,8 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => T });
 var a = n(627968),
     i = n(989349),
-    s = n.n(i),
-    l = n(311907),
+    l = n.n(i),
+    s = n(311907),
     r = n(562465),
     o = n(554146),
     d = n(397927),
@@ -19,11 +19,11 @@ var a = n(627968),
     b = n(967198),
     j = n(642020),
     A = n(652215),
-    C = n(819895);
+    C = n(2916);
 async function y(e, t, n) {
     await r.Bo.patch({
         url: A.Rsh.APPLIED_BOOST_MODIFY_END_DATE,
-        body: { applied_boost_ids: t.map((e) => e.id), ends_at: n ? null : s()().add(1, "day") },
+        body: { applied_boost_ids: t.map((e) => e.id), ends_at: n ? null : l()().add(1, "day") },
         rejectWithError: !0,
     }),
         (0, c.VU)(e),
@@ -32,11 +32,11 @@ async function y(e, t, n) {
 async function S(e) {
     await r.Bo.post({ url: A.Rsh.SEND_POWERUPS_SYSTEM_MESSAGE(e), rejectWithError: !0 });
 }
-function E() {
-    let e = (0, l.bG)([b.A], () => b.A.getGuildId()),
-        t = (0, l.bG)([v.A], () => v.A.getGuild(e)?.name),
-        n = (0, l.yK)([_.A], () => [...j.DX, ...j.gh].filter((t) => null != e && (0, h.zs)(t, e))),
-        i = (0, l.yK)([f.A], () => (null != e ? (f.A.getAppliedGuildBoostsForGuild(e) ?? []) : []));
+function T() {
+    let e = (0, s.bG)([b.A], () => b.A.getGuildId()),
+        t = (0, s.bG)([v.A], () => v.A.getGuild(e)?.name),
+        n = (0, s.yK)([_.A], () => [...j.DX, ...j.gh].filter((t) => null != e && (0, h.zs)(t, e))),
+        i = (0, s.yK)([f.A], () => (null != e ? (f.A.getAppliedGuildBoostsForGuild(e) ?? []) : []));
     if (null != e)
         return (0, a.jsxs)(d.IpV, {
             className: C.kL,

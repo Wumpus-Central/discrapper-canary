@@ -5,7 +5,7 @@ var a = n(397927),
     i = n(263063),
     r = n(71393),
     s = n(985018),
-    d = n(944666);
+    d = n(26465);
 let o = (e) => {
     let { stageInstance: t } = e,
         n = r.A.getGuild(t.guild_id);

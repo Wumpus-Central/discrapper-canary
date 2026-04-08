@@ -8,9 +8,9 @@ var a = n(397927),
     o = n(490557),
     d = n(54952),
     u = n(568065),
-    c = n(333354),
+    c = n(136708),
     p = n(985018),
-    f = n(944053);
+    f = n(62296);
 function _(t) {
     let { guildId: e, powerup: n, ..._ } = t;
     if ("control" === (0, i.D)("GuildPowerupActivateModalExperimentWrapper")) {

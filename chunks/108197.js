@@ -21,12 +21,12 @@ var i = n(627968),
     C = n(588224),
     N = n(37411),
     T = n(985018),
-    S = n(928409),
-    b = n(567431),
-    y = n(570302);
-function v(e) {
+    S = n(99566),
+    b = n(11464),
+    v = n(251843);
+function y(e) {
     let { style: t, withGuildIcon: n, inverted: l } = e,
-        s = { className: a()(y.GI, { [y.a7]: n }, { [y.BJ]: l }), style: t },
+        s = { className: a()(v.GI, { [v.a7]: n }, { [v.BJ]: l }), style: t },
         { density: r } = (0, c.wRf)();
     switch (r) {
         case "cozy":
@@ -89,7 +89,7 @@ function v(e) {
     }
 }
 let j = l.memo(function (e) {
-    let { thread: t, isSelectedChannel: s, isSelectedVoice: y, isLast: j, withGuildIcon: R } = e,
+    let { thread: t, isSelectedChannel: s, isSelectedVoice: v, isLast: j, withGuildIcon: R } = e,
         O = (0, o.bG)([f.Ay], () => f.Ay.getVoiceStatesForChannel(t), [t]),
         L = (0, o.bG)([p.A], () => p.A.hasVideo(t.id)),
         {
@@ -125,7 +125,7 @@ let j = l.memo(function (e) {
         B = null == O ? 0 : O.length,
         { role: V, ...H } = (0, r.rm)(t.id),
         F = l.useRef(null),
-        K =
+        W =
             D > 0
                 ? T.intl.formatToPlainString(T.t["ZL7+I6"], { channelName: t.name, mentionCount: D })
                 : M
@@ -135,10 +135,10 @@ let j = l.memo(function (e) {
         role: V,
         className: a()(S.fx, { [S.wH]: s }),
         children: [
-            (0, i.jsx)(v, { withGuildIcon: R }),
+            (0, i.jsx)(y, { withGuildIcon: R }),
             j
                 ? null
-                : (0, i.jsx)(v, {
+                : (0, i.jsx)(y, {
                       withGuildIcon: R,
                       inverted: !0,
                       style: { transform: "rotateX(180deg) translateY(-9px)" },
@@ -158,7 +158,7 @@ let j = l.memo(function (e) {
                             innerRef: F,
                             className: b.nf,
                             onClick: P,
-                            "aria-label": K,
+                            "aria-label": W,
                             focusProps: { enabled: !1 },
                             children: (0, i.jsxs)("div", {
                                 className: a()(b.Y5, b.__invalid_threadMainContent),
@@ -183,7 +183,7 @@ let j = l.memo(function (e) {
             }),
             (0, i.jsx)(C.A, {
                 channel: t,
-                collapsed: !y && 1 !== O.length,
+                collapsed: !v && 1 !== O.length,
                 collapsedMax: 6,
                 voiceStates: O,
                 isThread: !0,

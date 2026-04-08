@@ -1,44 +1,44 @@
-t.d(n, { A: () => m });
+t.d(n, { A: () => f });
 var i = t(627968);
 t(64700);
 var a = t(311907),
-    s = t(397927),
-    l = t(734057),
-    r = t(309010),
-    o = t(622543),
-    d = t(987112),
+    l = t(397927),
+    r = t(734057),
+    s = t(309010),
+    d = t(622543),
+    o = t(987112),
     c = t(389996),
     u = t(743987),
     _ = t(900179),
-    A = t(280645),
-    x = t(928223),
-    p = t(518477),
-    g = t(985018),
-    I = t(824860);
-function m(e) {
-    let { user: n, displayProfile: t, guildId: m, onClose: f } = e,
-        h = (0, a.bG)([o.A], () => o.A.getUserProfile(n.id)?.application),
-        b = (0, a.bG)([l.A, r.A], () => l.A.getChannel(r.A.getChannelId()));
-    return (0, i.jsxs)(s.IpV, {
+    p = t(280645),
+    A = t(928223),
+    g = t(518477),
+    I = t(985018),
+    m = t(47049);
+function f(e) {
+    let { user: n, displayProfile: t, guildId: f, onClose: x } = e,
+        h = (0, a.bG)([d.A], () => d.A.getUserProfile(n.id)?.application),
+        v = (0, a.bG)([r.A, s.A], () => r.A.getChannel(s.A.getChannelId()));
+    return (0, i.jsxs)(l.IpV, {
         fade: !0,
-        className: I.XG,
+        className: m.XG,
         children: [
             (0, i.jsx)(c.E, { userBio: t?.bio, setLineClamp: !1 }),
             h?.popularApplicationCommandIds != null &&
-                null != b &&
-                (0, i.jsx)(d.A, {
+                null != v &&
+                (0, i.jsx)(o.A, {
                     applicationId: h.id,
                     commandIds: h.popularApplicationCommandIds,
-                    channel: b,
-                    guildId: m,
-                    onClick: f,
+                    channel: v,
+                    guildId: f,
+                    onClick: x,
                 }),
-            t?.guildId != null && (0, i.jsx)(A.A, { userId: n.id, guildId: t.guildId }),
+            t?.guildId != null && (0, i.jsx)(p.A, { userId: n.id, guildId: t.guildId }),
             (0, i.jsx)(_.A, {
-                heading: g.intl.string(g.t["A//N4k"]),
-                children: (0, i.jsx)(u.A, { userId: n.id, guildId: m, tooltipDelay: p.In }),
+                heading: I.intl.string(I.t["A//N4k"]),
+                children: (0, i.jsx)(u.A, { userId: n.id, guildId: f, tooltipDelay: g.In }),
             }),
-            (0, i.jsx)(x.A, { userId: n.id }),
+            (0, i.jsx)(A.A, { userId: n.id }),
         ],
     });
 }

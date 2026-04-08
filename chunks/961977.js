@@ -1,4 +1,4 @@
-t.d(l, { A: () => x });
+t.d(l, { A: () => p });
 var n = t(627968),
     s = t(158954),
     a = t(554146),
@@ -9,17 +9,17 @@ var n = t(627968),
     c = t(652215),
     u = t(49999),
     _ = t(985018),
-    g = t(8226);
-function x(e) {
+    g = t(333687);
+function p(e) {
     let { location: l } = e,
-        { shouldRender: t, limitedOfferTimeLeft: x } = (0, d.A)({ location: l }),
-        [p, A] = (0, o.RF)(
+        { shouldRender: t, limitedOfferTimeLeft: p } = (0, d.A)({ location: l }),
+        [x, A] = (0, o.RF)(
             t ? a.M.GAME_SHOP_ORBS_REWARD_BANNER : null,
             (0, r.c)(a.M.GAME_SHOP_ORBS_REWARD_BANNER),
             void 0,
             !0,
         ),
-        f = p !== a.M.GAME_SHOP_ORBS_REWARD_BANNER;
+        f = x !== a.M.GAME_SHOP_ORBS_REWARD_BANNER;
     return !t || f
         ? null
         : (0, n.jsxs)(i.$Td, {
@@ -37,7 +37,7 @@ function x(e) {
                           (0, n.jsxs)(s.EYj, {
                               variant: "text-sm/bold",
                               color: "currentColor",
-                              children: [_.intl.string(_.t.yYEZGi), null != x && ` (${x})`],
+                              children: [_.intl.string(_.t.yYEZGi), null != p && ` (${p})`],
                           }),
                           (0, n.jsx)(s.EYj, { variant: "text-sm/bold", color: "currentColor", children: "—" }),
                           (0, n.jsx)(s.EYj, {

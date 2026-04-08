@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => A });
+n.d(t, { A: () => _ });
 var i = n(627968),
     s = n(64700),
     a = n(503698),
@@ -7,8 +7,8 @@ var i = n(627968),
     r = n(397927),
     o = n(652215),
     d = n(985018),
-    c = n(672073),
-    u = n(885106);
+    c = n(92056),
+    u = n(153335);
 let h = 0,
     p = (e) => {
         switch (e) {
@@ -25,10 +25,10 @@ let h = 0,
         }
     },
     f = [o.G6Q.DISABLED, o.G6Q.TOP_LEFT, o.G6Q.TOP_RIGHT, o.G6Q.BOTTOM_LEFT, o.G6Q.BOTTOM_RIGHT];
-function _(e) {
+function A(e) {
     let { position: t, onChange: n } = e,
         [a] = s.useState(() => `notification-position-selector-${h++}`),
-        _ =
+        A =
             t === o.G6Q.DISABLED
                 ? d.intl.string(d.t.R6LxVf)
                 : d.intl.formatToPlainString(d.t["XXHDM/"], { position: p(t) });
@@ -70,9 +70,9 @@ function _(e) {
                     ),
                 }),
             }),
-            (0, i.jsx)(r.Text, { variant: "text-sm/normal", className: u.Ot, children: _ }),
+            (0, i.jsx)(r.Text, { variant: "text-sm/normal", className: u.Ot, children: A }),
         ],
     });
 }
-_.Positions = o.G6Q;
-let A = _;
+A.Positions = o.G6Q;
+let _ = A;

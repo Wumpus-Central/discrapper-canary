@@ -2,7 +2,7 @@ n.d(t, { A: () => a });
 var i = n(627968);
 n(64700);
 var s = n(397927),
-    l = n(176603);
+    l = n(60812);
 let a = (e) => {
     let { label: t, onClick: n, submitting: a } = e;
     return (0, i.jsx)(s.DUT, {

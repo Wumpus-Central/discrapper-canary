@@ -18,8 +18,8 @@ var i = n(627968),
     T = n(543767),
     f = n(420139),
     S = n(790284),
-    E = n(976860),
-    b = n(780964),
+    b = n(976860),
+    E = n(780964),
     C = n(779733),
     N = n(858897),
     v = n(295405),
@@ -32,8 +32,8 @@ var i = n(627968),
     L = n(746080),
     D = n(355097),
     G = n(985018),
-    M = n(943138);
-let k = (e) => {
+    M = n(77764);
+let U = (e) => {
         let { label: t, value: n, showInfoIcon: s, infoIconTooltipText: l } = e;
         return (0, i.jsxs)("div", {
             className: M.L0,
@@ -57,7 +57,7 @@ let k = (e) => {
             ],
         });
     },
-    U = (e) => {
+    k = (e) => {
         let { subscription: t } = e,
             { analyticsLocations: n } = (0, _.Ay)(),
             [s] = (0, T.Kq)({
@@ -222,14 +222,14 @@ let k = (e) => {
                               (0, i.jsxs)("div", {
                                   className: M.Zx,
                                   children: [
-                                      (0, i.jsx)(k, { label: q, value: Z }),
-                                      (0, i.jsx)(k, {
+                                      (0, i.jsx)(U, { label: q, value: Z }),
+                                      (0, i.jsx)(U, {
                                           label: G.intl.string(G.t.dltUMH),
                                           value: K,
                                           showInfoIcon: Q,
                                           infoIconTooltipText: Q ? G.intl.string(G.t["/q6fpa"]) : void 0,
                                       }),
-                                      (0, i.jsx)(k, { label: G.intl.string(G.t.AOcwWB), value: W }),
+                                      (0, i.jsx)(U, { label: G.intl.string(G.t.AOcwWB), value: W }),
                                   ],
                               }),
                               (0, i.jsx)(c.hKd, { size: 16 }),
@@ -237,7 +237,7 @@ let k = (e) => {
                                   !H &&
                                   (0, i.jsx)(c.D0$, {
                                       label: G.intl.string(G.t.wmMFvA),
-                                      children: (0, i.jsx)(U, { subscription: t }),
+                                      children: (0, i.jsx)(k, { subscription: t }),
                                   }),
                               !J &&
                                   (0, i.jsx)(w, {
@@ -250,7 +250,7 @@ let k = (e) => {
                                       },
                                       onChangePlanClick: () => {
                                           null != r &&
-                                              ((0, E.pX)(P.BVt.CHANNEL(r.id, L.VV.ROLE_SUBSCRIPTIONS)),
+                                              ((0, b.pX)(P.BVt.CHANNEL(r.id, L.VV.ROLE_SUBSCRIPTIONS)),
                                               (0, C.default)(),
                                               m.A.show(
                                                   P.kqX.BACK_TO_PREVIOUS_SCREEN,
@@ -258,7 +258,7 @@ let k = (e) => {
                                                   G.intl.string(G.t.DvbaM4),
                                                   () => {
                                                       S.A.setState({ subsection: D.nR }),
-                                                          (0, N.openUserSettings)(b.X.SUBSCRIPTIONS_PANEL);
+                                                          (0, N.openUserSettings)(E.X.SUBSCRIPTIONS_PANEL);
                                                   },
                                               ));
                                       },

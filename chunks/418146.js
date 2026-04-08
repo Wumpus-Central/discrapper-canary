@@ -18,12 +18,12 @@ var i = n(627968),
     T = n(17460),
     f = n(202949),
     S = n(762678),
-    E = n(900155),
-    b = n(237887),
+    b = n(900155),
+    E = n(237887),
     C = n(444381),
     N = n(49999),
     v = n(985018),
-    I = n(55479),
+    I = n(331290),
     j = n(130324),
     y = n(966040);
 let O = (0, m.t_)(p.X.OVERLAY_PANEL, {
@@ -106,7 +106,7 @@ let O = (0, m.t_)(p.X.OVERLAY_PANEL, {
                       });
             },
         },
-        buildLayout: () => [S.u, E.X, C.D, b.h],
+        buildLayout: () => [S.u, b.X, C.D, E.h],
     }),
     R = (0, m.i4)(p.X.OVERLAY_SIDEBAR_ITEM, {
         useTitle: () => v.intl.string(v.t["9cb1Uz"]),

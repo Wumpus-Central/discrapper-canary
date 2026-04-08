@@ -20,11 +20,11 @@ var i = n(627968),
     C = n(406704),
     S = n(253932),
     T = n(761640),
-    N = n(629016),
-    I = n(186111),
+    I = n(629016),
+    N = n(186111),
     v = n(576705),
-    b = n(461213),
-    y = n(203982),
+    y = n(461213),
+    b = n(203982),
     j = n(723702),
     R = n(518960),
     M = n(545428),
@@ -33,27 +33,27 @@ var i = n(627968),
     L = n(652215),
     P = n(696016),
     k = n(985018),
-    w = n(334556);
+    w = n(91167);
 let U = l.memo(function (e) {
     let { className: t, channel: s, draftType: U, editorTextContent: G, setValue: F, canOnlyUseTextCommands: B } = e,
         H = (0, _.Us)(),
         V = l.useRef(null),
         K = l.useRef(null),
-        W = (0, r.bG)([b.A], () => b.A.getActivities()),
+        W = (0, r.bG)([y.A], () => y.A.getActivities()),
         z = (0, A.Et)(),
         q = (0, r.bG)([m.A], () => m.A.getLastClipsSession()),
         Y = (0, r.yK)([m.A], () => m.A.getNewClipIds()),
         J = (0, r.bG)([T.Ay], () => null == T.Ay.getCurrentSidebarChannelId(s.id)),
         $ = (0, r.yK)(
-            [N.A],
-            () => (s.type === L.rbe.DM ? W.filter((e) => !N.A.getParty(e.party?.id)?.has(s.getRecipientId())) : W),
+            [I.A],
+            () => (s.type === L.rbe.DM ? W.filter((e) => !I.A.getParty(e.party?.id)?.has(s.getRecipientId())) : W),
             [W, s],
         ),
         { showClipsHeaderEntrypoint: Z } = h.L_.useConfig({ location: "ChannelAttachButton" }),
         { onShareClick: X } = (0, p.A)(s.id),
         Q = (0, r.bG)([f.HP], () => f.HP.hasHotspot(f._2.CLIPS_CHANNEL_ATTACH_REMINDER)),
         ee = (0, o.red)((e) => (0, o.fDT)(e, P.nm)),
-        et = (0, r.bG)([I.A], () => I.A.hasLayers()),
+        et = (0, r.bG)([N.A], () => N.A.hasLayers()),
         en = (0, r.bG)([m.A], () => m.A.hasClips()),
         [ei, el] = l.useState(null),
         es = (0, h.sw)() && (z || en),
@@ -63,7 +63,7 @@ let U = l.memo(function (e) {
     function ec() {
         (0, o.mMO)(
             async () => {
-                let { default: e } = await Promise.all([n.e("42784"), n.e("27816")]).then(n.bind(n, 543428));
+                let { default: e } = await Promise.all([n.e("42784"), n.e("24035")]).then(n.bind(n, 543428));
                 return (t) => (0, i.jsx)(e, { ...t, channelId: s.id, onClipClick: (e) => X({ clips: [e] }) });
             },
             { modalKey: P.nm },
@@ -85,9 +85,9 @@ let U = l.memo(function (e) {
                 t === s.id && V.current?.activateUploadDialogue();
             };
             return (
-                y._.subscribe(L.jej.UPLOAD_FILE, e),
+                b._.subscribe(L.jej.UPLOAD_FILE, e),
                 () => {
-                    y._.unsubscribe(L.jej.UPLOAD_FILE, e);
+                    b._.unsubscribe(L.jej.UPLOAD_FILE, e);
                 }
             );
         });
@@ -172,7 +172,7 @@ let U = l.memo(function (e) {
                             null != (n = e.currentTarget.err) && "ETOOLARGE" === n.code
                                 ? (0, R.V)(s, [])
                                 : (0, R.R)(t, s, U, { requireConfirm: !0, origin: "file_picker" }),
-                            y._.dispatchToLastSubscribed(L.jej.TEXTAREA_FOCUS),
+                            b._.dispatchToLastSubscribed(L.jej.TEXTAREA_FOCUS),
                             (e.currentTarget.value = "");
                     },
                     multiple: s.rateLimitPerUser <= 0,

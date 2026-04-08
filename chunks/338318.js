@@ -18,8 +18,8 @@ var i = n(627968),
     T = n(407217),
     f = n(919395),
     S = n(884546),
-    E = n(287070),
-    b = n(196291),
+    b = n(287070),
+    E = n(196291),
     C = n(101058),
     N = n(836602),
     v = n(814390),
@@ -31,7 +31,7 @@ var i = n(627968),
     P = n(780207),
     L = n(652215),
     D = n(985018),
-    G = n(21861);
+    G = n(752366);
 function M() {
     let e = (0, r.bG)([j.default], () => {
             let e = j.default.getCurrentUser();
@@ -42,8 +42,8 @@ function M() {
             pendingBio: n,
             pendingAvatar: l,
             pendingNameplate: M,
-            showNotice: k,
-            ...U
+            showNotice: U,
+            ...k
         } = (0, r.cf)([N.A], () => ({ ...N.A.getPendingChanges(), showNotice: N.A.showNotice() })),
         w = (0, C.V7)({ userId: e.id, image: l }),
         V = (0, f.lw)({ pendingValue: M, userValue: e?.collectibles?.nameplate }),
@@ -61,18 +61,18 @@ function M() {
               children: [
                   (0, i.jsx)(A.A, {}),
                   (0, i.jsx)(S.A, {
-                      profilePreview: (0, i.jsx)(E.A, {
+                      profilePreview: (0, i.jsx)(b.A, {
                           user: e,
                           canUsePremiumCustomization: F,
                           onUpsellClick: P.A,
                           pendingBio: B,
-                          ...U,
+                          ...k,
                           pendingAvatar: w,
                       }),
                       nameplatePreview: (0, i.jsx)(x.A, {
                           user: e,
                           nameplate: V,
-                          ...U,
+                          ...k,
                           className: null == V ? G.tJ : void 0,
                           isHighlighted: !0,
                       }),
@@ -85,11 +85,11 @@ function M() {
                       active: K,
                       children: (0, i.jsx)("div", {
                           ref: W,
-                          children: (0, i.jsx)(b.A, { user: e, shouldShow: K, isVisible: Y }),
+                          children: (0, i.jsx)(E.A, { user: e, shouldShow: K, isVisible: Y }),
                       }),
                   }),
                   K &&
-                      !k &&
+                      !U &&
                       (0, i.jsx)(p.d, {
                           className: G.EL,
                           showUpsell: !Y,

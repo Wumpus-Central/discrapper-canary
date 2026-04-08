@@ -20,14 +20,14 @@ var i = n(627968),
     j = n(997509),
     N = n(396816),
     E = n(856644),
-    b = n(785312),
-    C = n(316506),
+    C = n(785312),
+    b = n(316506),
     T = n(981634),
     I = n(927573),
     v = n(652215),
     S = n(985018),
-    y = n(841707),
-    R = n(407759);
+    y = n(2308),
+    R = n(177424);
 async function O(e, t, n) {
     let s = e.roles.filter((e) => e !== n);
     try {
@@ -48,7 +48,7 @@ async function O(e, t, n) {
         );
     }
 }
-function L(e) {
+function G(e) {
     let { member: t, guildId: l, roleId: o, locked: m } = e,
         x = s.useRef(null),
         h = s.useMemo(() => ({ [l]: [t.id] }), [l, t.id]);
@@ -86,7 +86,7 @@ function L(e) {
         let s = p.default.getUser(t.id);
         null != s &&
             (0, u.L3)(e, async () => {
-                let { default: e } = await Promise.all([n.e("97262"), n.e("91042"), n.e("2646")]).then(
+                let { default: e } = await Promise.all([n.e("97262"), n.e("91042"), n.e("64268")]).then(
                     n.bind(n, 365689),
                 );
                 return (t) => (0, i.jsx)(e, { ...t, user: s, guildId: l, showChatItems: !1 });
@@ -135,7 +135,7 @@ function L(e) {
         })
     );
 }
-function G(e) {
+function L(e) {
     let { handleAddClick: t, locked: n } = e;
     return (0, i.jsx)("div", {
         className: R.Q,
@@ -184,9 +184,9 @@ function D(e) {
             rowHeight: 40,
             renderRow: function (e) {
                 let { row: s } = e;
-                if (0 === p.length) return (0, i.jsx)(G, { handleAddClick: u, locked: a }, "empty");
+                if (0 === p.length) return (0, i.jsx)(L, { handleAddClick: u, locked: a }, "empty");
                 let l = p[s];
-                return (0, i.jsx)(L, { member: l, guildId: t, roleId: n, locked: a }, l.id);
+                return (0, i.jsx)(G, { member: l, guildId: t, roleId: n, locked: a }, l.id);
             },
             onScroll: o,
         }),
@@ -217,8 +217,8 @@ function M(e) {
 function k(e) {
     let { guild: t, role: l, locked: a, setSelectedSection: d } = e,
         [u, m] = s.useState(""),
-        { headerHeight: g, headerRef: x } = (0, b.A)(0),
-        { scrolledToTop: h, handleScroll: _ } = (0, C.u)(),
+        { headerHeight: g, headerRef: x } = (0, C.A)(0),
+        { scrolledToTop: h, handleScroll: _ } = (0, b.u)(),
         p = l.managed || a,
         j = (0, E.K5)(t.id, l.id),
         N = (0, o.bG)([f.A], () => f.A.getRoleMemberCount(t.id)?.[l.id] ?? 0) > j.length,
@@ -244,7 +244,7 @@ function k(e) {
                     children: (0, i.jsxs)("div", {
                         className: r()(R.wx, { [R.l6]: !h }),
                         children: [
-                            (0, i.jsx)(C.A, {
+                            (0, i.jsx)(b.A, {
                                 guild: t,
                                 role: l,
                                 selectedSection: I.T$.MEMBERS,

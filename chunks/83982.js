@@ -1,4 +1,4 @@
-n.d(t, { A: () => k, s: () => w });
+n.d(t, { A: () => w, s: () => k });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -16,23 +16,23 @@ var i = n(627968),
     f = n(550946),
     _ = n(991701),
     E = n(401901),
-    C = n(869146),
-    x = n(854627),
+    x = n(869146),
+    C = n(854627),
     S = n(530804),
-    I = n(961350),
-    T = n(430452),
+    T = n(961350),
+    I = n(430452),
     N = n(531685),
-    b = n(562153),
-    v = n(51082),
-    y = n(566566),
+    v = n(562153),
+    y = n(51082),
+    b = n(566566),
     j = n(289552),
     R = n(652215),
     M = n(731854),
     D = n(985018),
-    O = n(633916);
+    O = n(32685);
 let L = c._3J.SIZE_80,
     P = c._3J.SIZE_40;
-function w(e) {
+function k(e) {
     let { channelId: t, participant: n } = e;
     return (0, S.uy)(t, n.id)
         ? (0, i.jsx)(o.m, {
@@ -45,7 +45,7 @@ function w(e) {
           })
         : (0, i.jsx)(j.A, { userId: n.user.id });
 }
-function k(e) {
+function w(e) {
     let {
             participant: t,
             channel: n,
@@ -54,26 +54,26 @@ function k(e) {
             selected: c,
             popoutType: S,
             fit: j,
-            onVideoResize: w,
-            blocked: k,
+            onVideoResize: k,
+            blocked: w,
             ignored: U,
             noVideoRender: G = !1,
             pulseSpeakingIndicator: F = !1,
-            paused: H = !1,
+            paused: B = !1,
         } = e,
-        B = T.Ay.getVideoComponent(),
-        V = (0, r.bG)([I.default], () => I.default.getId()),
+        H = I.Ay.getVideoComponent(),
+        V = (0, r.bG)([T.default], () => T.default.getId()),
         { user: K, streamId: W, speaking: z } = t,
         q = K.id === V,
-        Y = (0, v.Ay)(t),
+        Y = (0, y.Ay)(t),
         J = (0, r.bG)([N.A], () => N.A.isFocused()),
-        $ = (0, r.bG)([C.A], () => C.A.getWindowFocused(R.MLl.CHANNEL_CALL_POPOUT)),
-        Z = (0, r.bG)([T.Ay], () => null != K.id && T.Ay.isLocalVideoDisabled(K.id, (0, m.A)(t.type)), [K.id, t.type]),
+        $ = (0, r.bG)([x.A], () => x.A.getWindowFocused(R.MLl.CHANNEL_CALL_POPOUT)),
+        Z = (0, r.bG)([I.Ay], () => null != K.id && I.Ay.isLocalVideoDisabled(K.id, (0, m.A)(t.type)), [K.id, t.type]),
         X = (0, f.A)(n.guild_id, K.id),
-        Q = b.Ay.getName(n.getGuildId(), n.id, K) + (X ? ` ${D.intl.string(D.t["pFO/Ph"])}` : ""),
+        Q = v.Ay.getName(n.getGuildId(), n.id, K) + (X ? ` ${D.intl.string(D.t["pFO/Ph"])}` : ""),
         ee = z && ($ || J),
         et = o < 124 ? P : L,
-        { avatarSrc: en, avatarDecorationSrc: ei } = (0, x.A)({
+        { avatarSrc: en, avatarDecorationSrc: ei } = (0, C.A)({
             userId: K.id,
             guildId: n.guild_id,
             size: et,
@@ -91,27 +91,27 @@ function k(e) {
         let { channel: e, selectedParticipant: t, user: n } = eo.current;
         e.isGuildStageVoice() && !Y && t?.id === n.id && d.A.selectParticipant(e.id, null);
     }, [Y]),
-    s && !Z && !G && Y && !c && null != B && T.Ay.supports(M.O5.VIDEO))
+    s && !Z && !G && Y && !c && null != H && I.Ay.supports(M.O5.VIDEO))
         ? null != es && null == ea
-            ? (0, i.jsx)(y.A, { avError: es, userId: t.id, width: o, selected: c })
+            ? (0, i.jsx)(b.A, { avError: es, userId: t.id, width: o, selected: c })
             : (0, i.jsx)(
                   E.A,
                   {
-                      onResize: w,
+                      onResize: k,
                       wrapperClassName: S !== A.N.CALL_TILE ? O.tN : void 0,
                       className: O.Qs,
                       mirror: q,
                       streamId: W,
-                      videoComponent: B,
+                      videoComponent: H,
                       fit: j,
                       videoSpinnerContext: K.id === V ? u.u.SELF_VIDEO : u.u.REMOTE_VIDEO,
-                      paused: H,
+                      paused: B,
                       userId: K.id,
                   },
                   W,
               )
         : (0, i.jsx)("div", {
-              className: a()(O.Qs, { [O.Kx]: k || U }),
+              className: a()(O.Qs, { [O.Kx]: w || U }),
               children: (0, i.jsx)(_.A, {
                   "aria-label": Q,
                   avatarDecoration: ei,

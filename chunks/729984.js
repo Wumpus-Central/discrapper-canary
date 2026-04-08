@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => L, G: () => G });
+n.d(t, { A: () => G, G: () => L });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
@@ -20,19 +20,19 @@ var i = n(627968),
     j = n(863694),
     N = n(107795),
     E = n(655943),
-    b = n(82566),
-    C = n(259866),
+    C = n(82566),
+    b = n(259866),
     T = n(950358),
     I = n(561108),
     v = n(191117),
     S = n(985018),
-    y = n(523941),
-    R = n(782691);
+    y = n(7716),
+    R = n(830684);
 function O(e) {
     let { guild: t } = e,
         r = (0, l.bG)([c.A], () => c.A.getEnabled(t.id)),
         h = (0, l.bG)([x.A], () => x.A.hasFetched(t.id)),
-        _ = (0, b.A)(t),
+        _ = (0, C.A)(t),
         p = (0, l.bG)([j.A], () => j.A.editedDefaultChannelIds),
         A = _.filter((e) => !p.has(e.id)),
         [N, E] = s.useState(!1);
@@ -159,7 +159,7 @@ function O(e) {
               ],
           });
 }
-function L(e) {
+function G(e) {
     let { saveOnClose: t = !1 } = e,
         n = (0, l.bG)([A.A], () => A.A.getGuild()),
         r = (0, l.bG)([c.A], () => c.A.isLoading()),
@@ -214,7 +214,7 @@ function L(e) {
                                 color: "text-default",
                                 children: S.intl.string(S.t.Kq7FAS),
                             }),
-                            (0, i.jsx)(C.mU, { className: y.kr, guildId: n.id }),
+                            (0, i.jsx)(b.mU, { className: y.kr, guildId: n.id }),
                             g
                                 ? null
                                 : (0, i.jsxs)(i.Fragment, {
@@ -267,7 +267,7 @@ function L(e) {
                 ],
             });
 }
-function G() {
+function L() {
     let e = (0, l.bG)([A.A], () => A.A.getProps().guild),
         t = (0, l.bG)([j.A], () => j.A.submitting),
         n = (0, l.bG)([E.A], () => E.A.advancedMode);

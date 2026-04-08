@@ -1,4 +1,4 @@
-n.d(t, { AV: () => R, Ay: () => v, P4: () => j, kD: () => O, sM: () => L });
+n.d(t, { AV: () => R, Ay: () => y, P4: () => j, kD: () => O, sM: () => L });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -21,11 +21,11 @@ var i = n(627968),
     C = n(879124),
     N = n(652215),
     T = n(985018),
-    S = n(458004);
+    S = n(71735);
 function b(e) {
     e.stopPropagation();
 }
-let y = l.memo(function (e) {
+let v = l.memo(function (e) {
         let t,
             {
                 channel: s,
@@ -33,14 +33,14 @@ let y = l.memo(function (e) {
                 connectChannelDropTarget: m,
                 disableManageChannels: I,
                 position: C,
-                sortingPosition: y,
-                hideIcon: v,
+                sortingPosition: v,
+                hideIcon: y,
                 children: j,
             } = e,
             R = (0, o.bG)([E.Ay], () => E.Ay.isChannelMuted(s.getGuildId(), s.id)),
             O = (0, o.bG)([p.A], () => p.A.isCollapsed(s.id)),
             L = (0, o.bG)([x.A], () => x.A.can(N.xBc.MANAGE_CHANNELS, s));
-        t = null != y ? (C > y ? S.mU : S.TR) : S.fx;
+        t = null != v ? (C > v ? S.mU : S.TR) : S.fx;
         let M = l.useCallback(() => {
                 O ? (0, A.fh)(s.id) : (0, A.Gv)(s.id);
             }, [s.id, O]),
@@ -64,7 +64,7 @@ let y = l.memo(function (e) {
                     t = s.getGuildId();
                 null != t &&
                     (0, h.mMO)(async () => {
-                        let { default: l } = await Promise.all([n.e("64233"), n.e("38405")]).then(n.bind(n, 409200));
+                        let { default: l } = await Promise.all([n.e("64233"), n.e("52719")]).then(n.bind(n, 409200));
                         return (n) =>
                             (0, i.jsx)(l, {
                                 ...n,
@@ -104,7 +104,7 @@ let y = l.memo(function (e) {
                                             className: S.UU,
                                             children: (0, i.jsx)(d.A, { children: s.name }),
                                         }),
-                                        v
+                                        y
                                             ? null
                                             : (0, i.jsx)(h.abt, { size: "md", color: "currentColor", className: S.Kk }),
                                     ],
@@ -139,7 +139,7 @@ let y = l.memo(function (e) {
             });
         return null != m && null != u ? m(u(V)) : V;
     }),
-    v = (0, m.a)(y),
+    y = (0, m.a)(v),
     j = l.memo(function (e) {
         let { name: t, onDismiss: n, className: l } = e;
         return (0, i.jsx)("li", {

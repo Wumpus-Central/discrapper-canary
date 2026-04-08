@@ -10,17 +10,17 @@ var n = t(627968),
     u = t(688810),
     _ = t(742589),
     g = t(657331),
-    x = t(287809),
-    p = t(954571),
+    p = t(287809),
+    x = t(954571),
     A = t(975571),
     f = t(371794),
-    h = t(439303),
-    I = t(44724),
+    I = t(439303),
+    h = t(44724),
     m = t(995393),
     E = t(652215),
     j = t(518477),
     S = t(985018),
-    k = t(4196);
+    k = t(863413);
 function b(e) {
     let { content: l, onClick: t, ariaLabel: s, className: a } = e;
     return (0, n.jsx)(r.DUT, { className: i()(k.gb, a), onClick: t, "aria-label": s, children: l });
@@ -28,8 +28,8 @@ function b(e) {
 function R(e) {
     let { guildId: l, storefront: t, selectedPageIndex: a } = e,
         R = (0, r.Mwr)((0, d.Ay)()),
-        N = (0, o.bG)([x.default], () => x.default.getCurrentUser()),
-        v = (0, h.jM)(),
+        N = (0, o.bG)([p.default], () => p.default.getCurrentUser()),
+        v = (0, I.jM)(),
         { analyticsLocations: C } = (0, u.Ay)(),
         L = s.useCallback(() => {
             N?.id != null &&
@@ -40,7 +40,7 @@ function R(e) {
                 });
         }, [N]),
         M = s.useCallback(() => {
-            p.default.track(E.HAw.SLAYER_STOREFRONT_PAGE_ELEMENT_CLICKED, {
+            x.default.track(E.HAw.SLAYER_STOREFRONT_PAGE_ELEMENT_CLICKED, {
                 slayer_storefront_session_id: v?.sessionId,
                 cta_type: m.ST.LEARN_MORE,
                 location_stack: C,
@@ -49,21 +49,21 @@ function R(e) {
         }, [v, C]);
     if (null == t) return null;
     let T = null != t.logoAssetId ? (0, f.YE)(t.applicationId, t.logoAssetId, 75) : null,
-        O = null != t.lightThemeLogoAssetId ? (0, f.YE)(t.applicationId, t.lightThemeLogoAssetId, 75) : null,
-        y = null;
+        y = null != t.lightThemeLogoAssetId ? (0, f.YE)(t.applicationId, t.lightThemeLogoAssetId, 75) : null,
+        O = null;
     return (
-        (y = R ? (T ?? O) : (O ?? T)),
+        (O = R ? (T ?? y) : (y ?? T)),
         (0, n.jsxs)(_.A, {
             disableDoubleClick: !0,
             className: k.N1,
             children: [
                 (0, n.jsxs)(r.DUT, {
                     onClick: () => {
-                        (0, I.default)({ guildId: l, pageIndex: 0 });
+                        (0, h.default)({ guildId: l, pageIndex: 0 });
                     },
                     className: k.gn,
                     children: [
-                        null != y && (0, n.jsx)("img", { className: k.wm, src: y, alt: t.title }),
+                        null != O && (0, n.jsx)("img", { className: k.wm, src: O, alt: t.title }),
                         (0, n.jsx)(_.A.Title, { children: t.title }),
                     ],
                 }),
@@ -74,7 +74,7 @@ function R(e) {
                             _.A.Title,
                             {
                                 onClick: () => {
-                                    (0, I.default)({ guildId: l, pageIndex: t });
+                                    (0, h.default)({ guildId: l, pageIndex: t });
                                 },
                                 wrapperClassName: k.oB,
                                 className: i()(k.xT, { [k.ys]: a === t }),

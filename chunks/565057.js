@@ -3,8 +3,8 @@ s.d(t, { A: () => O });
 var n = s(627968),
     r = s(64700),
     l = s(503698),
-    a = s.n(l),
-    i = s(311907),
+    i = s.n(l),
+    a = s(311907),
     o = s(990078),
     c = s(397927),
     d = s(975807),
@@ -21,24 +21,24 @@ var n = s(627968),
     C = s(561769),
     A = s(484469),
     S = s(917987),
-    v = s(781815),
+    v = s(4196),
     I = s(938191),
     L = s(758836),
     j = s(652215),
     k = s(985018),
-    T = s(297046);
+    T = s(572199);
 let O = (e) => {
     let {
             isLoading: t,
             title: s,
             sortedSkuIds: l,
             numVisibleItems: O,
-            prioritizeUserDiscounts: N,
-            tab: y,
+            prioritizeUserDiscounts: y,
+            tab: N,
             buttonContainerClassName: R,
             orbsSupportedOnly: B,
         } = e,
-        P = (0, i.bG)([_.default], () => _.default.getCurrentUser()),
+        P = (0, a.bG)([_.default], () => _.default.getCurrentUser()),
         M = p.Ay.canUseCollectibles(P),
         D = (0, E.W)("FeedBlock"),
         w = (0, I.yB)("FeedBlock"),
@@ -48,11 +48,11 @@ let O = (e) => {
             sortedItems: G,
             sortOptions: U,
             shuffleProducts: V,
-            showRecommendationOption: K,
-        } = (0, v.A)({ sortedSkuIds: l, isPremiumUser: M, prioritizeUserDiscounts: N, orbsSupportedOnly: B }),
-        W = (0, i.bG)([u.A], () => u.A.useReducedMotion),
-        z = (0, i.bG)([g.A], () => g.A.isFocused()),
-        Y = !W && z,
+            showRecommendationOption: W,
+        } = (0, v.A)({ sortedSkuIds: l, isPremiumUser: M, prioritizeUserDiscounts: y, orbsSupportedOnly: B }),
+        z = (0, a.bG)([u.A], () => u.A.useReducedMotion),
+        K = (0, a.bG)([g.A], () => g.A.isFocused()),
+        Y = !z && K,
         { animationPhase: $, startAnimation: Z } = (0, S.s)(),
         q = (0, f.uM)(),
         X = q?.sessionId ?? "",
@@ -67,7 +67,7 @@ let O = (e) => {
     return null == P
         ? null
         : (0, n.jsxs)("div", {
-              className: a()(T.lD, T.YB),
+              className: i()(T.lD, T.YB),
               children: [
                   (0, n.jsxs)("div", {
                       className: T.$6,
@@ -76,7 +76,7 @@ let O = (e) => {
                               className: T.LD,
                               children: [
                                   (0, n.jsx)(c.Heading, { variant: "heading-lg/semibold", children: s }),
-                                  K &&
+                                  W &&
                                       (0, n.jsx)(o.m, {
                                           text: k.intl.string(k.t["3taPdj"]),
                                           position: "top",
@@ -91,14 +91,14 @@ let O = (e) => {
                               ],
                           }),
                           (0, n.jsxs)("div", {
-                              className: a()(T.IE, { [I.jP]: w }),
+                              className: i()(T.IE, { [I.jP]: w }),
                               children: [
                                   (0, n.jsx)(c.Text, {
                                       variant: "text-md/medium",
                                       children: k.intl.string(k.t.uaX705),
                                   }),
                                   (0, n.jsx)("div", {
-                                      className: a()(R, T.pI),
+                                      className: i()(R, T.pI),
                                       children: (0, n.jsx)(c.l6P, {
                                           label: k.intl.string(k.t.uaX705),
                                           hideLabel: !0,
@@ -168,7 +168,7 @@ let O = (e) => {
                                             children: (0, n.jsx)(b.A, {
                                                 skuId: e.skuId,
                                                 prioritizedCurrency:
-                                                    y === L.G2.ORBS ? C.Hi.ORBS : D ? C.Hi.FIAT : void 0,
+                                                    N === L.G2.ORBS ? C.Hi.ORBS : D ? C.Hi.FIAT : void 0,
                                             }),
                                         }),
                                     },

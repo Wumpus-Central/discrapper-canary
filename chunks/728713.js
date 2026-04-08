@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => L });
+n.d(t, { A: () => G });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -20,13 +20,13 @@ var i = n(627968),
     j = n(576705),
     N = n(792831),
     E = n(396816),
-    b = n(359837),
-    C = n(533448),
+    C = n(359837),
+    b = n(533448),
     T = n(316506),
     I = n(927573),
     v = n(652215),
     S = n(985018),
-    y = n(87024);
+    y = n(914535);
 let R = "DRAGGABLE_ROLE";
 function O(e) {
     let t,
@@ -42,9 +42,9 @@ function O(e) {
             onDragComplete: j,
             roleStyle: N,
         } = e,
-        E = (0, b.c)(s, d, l),
-        C = (0, f.Oy)(l),
-        T = null == E && !C,
+        E = (0, C.c)(s, d, l),
+        b = (0, f.Oy)(l),
+        T = null == E && !b,
         I = l.tags?.guild_connections !== void 0,
         S = (0, A.X_)(s.id, l, l.colorStrings),
         [, O] = (0, a.i)({
@@ -56,7 +56,7 @@ function O(e) {
                 null == n ? p() : j(n.roleId);
             },
         }),
-        [{ dragSourcePosition: L }, G] = (0, o.H)({
+        [{ dragSourcePosition: G }, L] = (0, o.H)({
             accept: R,
             canDrop: () => T,
             collect: (e) => {
@@ -75,7 +75,7 @@ function O(e) {
               ? (0, i.jsx)(u.WYI, { color: D, colors: S, background: !1, tooltip: !1 })
               : (0, i.jsx)(u.RYH, { color: D, colors: S })),
         (0, i.jsxs)(u.VQ0.Item, {
-            className: r()(y.nM, { [y.qo]: null !== L && x < L, [y.BP]: null !== L && x > L }),
+            className: r()(y.nM, { [y.qo]: null !== G && x < G, [y.BP]: null !== G && x > G }),
             id: l.id,
             selectedItem: c,
             itemType: "side",
@@ -88,14 +88,14 @@ function O(e) {
             },
             "aria-label": l.name,
             clickableRef: (e) => {
-                O(G(e?.ref ?? null));
+                O(L(e?.ref ?? null));
             },
             children: [
                 t,
-                null != E ? (0, i.jsx)(b.A, { className: y.s2, tooltipText: E }) : null,
+                null != E ? (0, i.jsx)(C.A, { className: y.s2, tooltipText: E }) : null,
                 (0, i.jsx)(u.Text, {
                     variant: "text-sm/medium",
-                    color: C ? "text-strong" : "interactive-text-active",
+                    color: b ? "text-strong" : "interactive-text-active",
                     lineClamp: 1,
                     children: l.name,
                 }),
@@ -103,14 +103,14 @@ function O(e) {
         })
     );
 }
-function L(e) {
+function G(e) {
     let { guild: t, currentRoleId: n, setCurrentRoleId: l, setSelectedSection: a } = e,
         o = (0, d.bG)([E.A], () => E.A.roles),
         m = (0, d.bG)([j.A], () => j.A.getHighestRole(t)),
         _ = (0, d.bG)([h.A], () => h.A.roleStyle),
         [A, f] = s.useState(o.length),
-        { scrolledToTop: b, handleScroll: v } = (0, T.u)(),
-        { handleDragStart: R, handleDragReset: L, handleDragComplete: G } = (0, C.A)(o),
+        { scrolledToTop: C, handleScroll: v } = (0, T.u)(),
+        { handleDragStart: R, handleDragReset: G, handleDragComplete: L } = (0, b.A)(o),
         D = s.useRef(null),
         M = s.useCallback(
             (e) => {
@@ -132,7 +132,7 @@ function L(e) {
                 className: y.kL,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: r()(y.gn, { [y.P6]: !b }),
+                        className: r()(y.gn, { [y.P6]: !C }),
                         children: [
                             (0, i.jsxs)(u.DUT, {
                                 className: y.DD,
@@ -189,8 +189,8 @@ function L(e) {
                                         onClick: () => l(e.id),
                                         currentPosition: s,
                                         onDragStart: R,
-                                        onDragReset: L,
-                                        onDragComplete: G,
+                                        onDragReset: G,
+                                        onDragComplete: L,
                                         roleStyle: _,
                                     },
                                     e.id,

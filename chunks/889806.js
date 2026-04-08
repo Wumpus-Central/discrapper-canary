@@ -23,8 +23,8 @@ var i = n(627968),
     T = n(734057),
     S = n(696451),
     b = n(71393),
-    y = n(576705),
-    v = n(383501),
+    v = n(576705),
+    y = n(383501),
     j = n(222823),
     R = n(543465),
     O = n(287809),
@@ -36,7 +36,7 @@ var i = n(627968),
 n(281405);
 var P = n(652215),
     k = n(349828),
-    w = n(928409);
+    w = n(99566);
 class B extends M.Ay {
     state = { shouldShowThreadsPopout: !1, shouldShowActivities: !1 };
     channelItemRef = l.createRef();
@@ -111,7 +111,7 @@ class B extends M.Ay {
                         n.e("97262"),
                         n.e("42128"),
                         n.e("39778"),
-                        n.e("34408"),
+                        n.e("22283"),
                     ]).then(n.bind(n, 385913));
                     return (n) => (0, i.jsx)(e, { ...n, user: l, channel: t, showModalItems: !1 });
                 });
@@ -157,11 +157,11 @@ class B extends M.Ay {
                 resolvedUnreadSetting: T,
                 enableActivities: S,
                 showMenuItemPopover: b,
-                markMenuItemPopoverAsDismissed: y,
-                channelItemRef: v,
+                markMenuItemPopoverAsDismissed: v,
+                channelItemRef: y,
                 isSuggestedSection: j,
             } = this.props,
-            R = v ?? this.channelItemRef,
+            R = y ?? this.channelItemRef,
             O = !b && o,
             L = !b && S && null != N && N.length > 0,
             M = (0, p.M)(E),
@@ -223,7 +223,7 @@ class B extends M.Ay {
                                 ],
                             }),
                     }),
-                    b && (0, i.jsx)(f.A, { targetElementRef: R, markMenuItemPopoverAsDismissed: y }),
+                    b && (0, i.jsx)(f.A, { targetElementRef: R, markMenuItemPopoverAsDismissed: v }),
                 ],
             });
         return _ ? u(h(D)) : D;
@@ -239,14 +239,14 @@ function H(e) {
             isLowImportanceMention: j.Ay.getIsMentionLowImportance(t.id),
         })),
         p = (0, o.bG)([R.Ay], () => R.Ay.resolveUnreadSetting(t)),
-        f = (0, o.cf)([T.A, y.A], () => {
+        f = (0, o.cf)([T.A, v.A], () => {
             let e = T.A.getChannel(t.parent_id);
             return {
-                canManageChannel: y.A.can(P.xBc.MANAGE_CHANNELS, t),
+                canManageChannel: v.A.can(P.xBc.MANAGE_CHANNELS, t),
                 canReorderChannel:
                     !0 !== s &&
                     (n.id === k.Vc ||
-                        (null != e ? y.A.can(P.xBc.MANAGE_CHANNELS, e) : y.A.can(P.xBc.MANAGE_CHANNELS, n))),
+                        (null != e ? v.A.can(P.xBc.MANAGE_CHANNELS, e) : v.A.can(P.xBc.MANAGE_CHANNELS, n))),
             };
         }),
         C = (0, o.bG)([I.A], () => I.A.shouldIndicateNewChannel(n.id, t.id)),
@@ -272,14 +272,14 @@ function H(e) {
                 H(e);
             }, []),
         ),
-        { showMenuItemPopover: K, markMenuItemPopoverAsDismissed: W } = (0, x.z)({
+        { showMenuItemPopover: W, markMenuItemPopoverAsDismissed: K } = (0, x.z)({
             location: "TextChannel",
             isChannelSelected: c,
             isTargetInViewport: B,
             channelType: t.type,
             isPopoverAllowed: n.id !== k.Vc,
         });
-    return (0, o.bG)([v.A, S.Ay], () => v.A.getChannelId() !== t.id && S.Ay.isCurrentUserGuest(t.getGuildId()))
+    return (0, o.bG)([y.A, S.Ay], () => y.A.getChannelId() !== t.id && S.Ay.isCurrentUserGuest(t.getGuildId()))
         ? null
         : (0, i.jsx)(V, {
               ...g,
@@ -297,8 +297,8 @@ function H(e) {
               resolvedUnreadSetting: p,
               hasChannelInfo: null != G,
               enableActivities: U,
-              showMenuItemPopover: K,
-              markMenuItemPopoverAsDismissed: W,
+              showMenuItemPopover: W,
+              markMenuItemPopoverAsDismissed: K,
               channelItemRef: F,
           });
 }

@@ -1,4 +1,4 @@
-n.d(t, { A: () => C, c: () => b });
+n.d(t, { A: () => C, c: () => E });
 var i,
     s = n(627968);
 n(64700);
@@ -15,12 +15,12 @@ var l = n(503698),
     x = n(788868),
     A = n(652215),
     h = n(985018),
-    p = n(488149),
+    p = n(8890),
     T = n(137815),
     f = n(967521),
     S = n(767032),
-    E = n(990521),
-    b =
+    b = n(990521),
+    E =
         (((i = {}).SUBSCRIBER_HOME = "SUBSCRIBER_HOME"),
         (i.NITRO_SETTINGS = "SETTINGS"),
         (i.APPLICATION_NITRO_HOME = "APPLICATION_NITRO_HOME"),
@@ -132,7 +132,7 @@ let C = function (e) {
                                     }),
                                     (0, s.jsx)("div", {
                                         className: p.m0,
-                                        children: (0, s.jsx)("img", { alt: "", src: E.A, className: p.$V }),
+                                        children: (0, s.jsx)("img", { alt: "", src: b.A, className: p.$V }),
                                     }),
                                 ],
                             }),

@@ -1,19 +1,19 @@
-s.d(t, { F: () => u });
-var n = s(627968),
-    a = s(512750),
-    r = s(158954),
-    l = s(975571),
-    i = s(652215),
-    o = s(333354),
+s.d(a, { F: () => _ });
+var r = s(627968),
+    t = s(512750),
+    n = s(158954),
+    o = s(975571),
+    l = s(652215),
+    i = s(136708),
     d = s(985018),
-    c = s(1752);
-function u(e) {
-    let { powerup: t } = e;
-    return t.skuId === a.FB
-        ? (0, n.jsx)(r.EYj, {
+    c = s(609161);
+function _(e) {
+    let { powerup: a } = e;
+    return a.skuId === t.FB
+        ? (0, r.jsx)(n.EYj, {
               className: c.C,
               variant: "text-sm/medium",
-              children: d.intl.format(o.default.fXE30d, { helpDeskArticle: l.A.getArticleURL(i.MVz.GUILD_VANITY_URL) }),
+              children: d.intl.format(i.default.fXE30d, { helpDeskArticle: o.A.getArticleURL(l.MVz.GUILD_VANITY_URL) }),
           })
         : null;
 }

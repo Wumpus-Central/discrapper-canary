@@ -24,8 +24,8 @@ var l = n(503698),
     T = n(665691),
     S = n(724759),
     b = n(123973),
-    y = n(241756),
-    v = n(313961),
+    v = n(241756),
+    y = n(313961),
     j = n(532622),
     R = n(546871),
     O = n(416528),
@@ -33,11 +33,11 @@ var l = n(503698),
     M = n(806931),
     D = n(818348),
     U = n(985018),
-    G = n(972708),
-    P = n(782691);
+    G = n(35471),
+    P = n(830684);
 function k(e) {
     let { user: t, channel: n, stream: l, color: s } = e,
-        a = (0, y.A)(n, t, l);
+        a = (0, v.A)(n, t, l);
     return null == t || null == l
         ? null
         : (0, i.jsxs)(i.Fragment, {
@@ -86,15 +86,15 @@ function B(e) {
     let { channel: t, guild: l, appContext: d, inCall: c, isChatOpen: m, exitFullScreen: g } = e,
         p = (0, S.B)({ location: "channel_call_header_toolbar" }),
         { focusedParticipant: f } = (0, a.cf)(
-            [v.A],
+            [y.A],
             () => ({
-                focusedParticipant: v.A.getSelectedParticipant(t.id),
-                participantsOpen: v.A.getParticipantsOpen(t.id),
+                focusedParticipant: y.A.getSelectedParticipant(t.id),
+                participantsOpen: y.A.getParticipantsOpen(t.id),
             }),
             [t.id],
         ),
         b = (0, A.Ay)(t),
-        y = (0, _.gU)(t),
+        v = (0, _.gU)(t),
         [R] = (0, u.A)(f?.type === M.lp.ACTIVITY ? [f.applicationId] : []),
         k = U.intl.string(U.t.BVZqJl);
     t.isDM() ? (k = U.intl.string(U.t.jN2DfZ)) : t.isGroupDM() && (k = U.intl.string(U.t["e5y+gm"]));
@@ -139,7 +139,7 @@ function B(e) {
                   }),
               })
             : null,
-        K = (0, T.bG)({ channelId: t.id });
+        W = (0, T.bG)({ channelId: t.id });
     return (0, i.jsxs)("div", {
         className: G.SC,
         children: [
@@ -167,9 +167,9 @@ function B(e) {
                                 wrapperClassName: G.DD,
                                 children: (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        null != y ? (0, i.jsx)(x.Ay.ChannelIcon, { icon: y, "aria-label": k }) : null,
+                                        null != v ? (0, i.jsx)(x.Ay.ChannelIcon, { icon: v, "aria-label": k }) : null,
                                         b,
-                                        K &&
+                                        W &&
                                             (0, i.jsx)(r.m, {
                                                 text: U.intl.string(U.t.QyZ4Td),
                                                 children: (0, i.jsx)(o.m5V, {

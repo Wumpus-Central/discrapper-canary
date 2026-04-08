@@ -17,7 +17,7 @@ var i = n(889137),
     m = n(937008),
     E = n(652215),
     g = n(985018),
-    A = n(632041);
+    A = n(2668);
 let I = h.Ay.getEnableHardwareAcceleration() ? a.JsQ : a.euF;
 function T(e) {
     let { avatarDecoration: t } = e,

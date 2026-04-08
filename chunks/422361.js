@@ -23,8 +23,8 @@ var i = n(627968),
     T = n(857253),
     S = n(202384),
     b = n(51758),
-    y = n(721592),
-    v = n(508654),
+    v = n(721592),
+    y = n(508654),
     j = n(214660),
     R = n(140547),
     O = n(303333),
@@ -40,20 +40,20 @@ var i = n(627968),
     V = n(222823),
     H = n(543465),
     F = n(977997),
-    K = n(147036),
-    W = n(557534),
+    W = n(147036),
+    K = n(557534),
     Y = n(68437),
     z = n(166444),
     q = n(850457),
     X = n(469178),
-    J = n(562991),
+    $ = n(562991),
     Q = n(588224);
 n(281405);
-var $ = n(652215),
+var J = n(652215),
     Z = n(349828),
     ee = n(985018),
-    et = n(928409);
-class en extends W.Ay {
+    et = n(99566);
+class en extends K.Ay {
     state = { popoutToShow: null, shouldShowGuildVerificationPopout: !1, hovered: !1 };
     ref = l.createRef();
     channelItemRef = l.createRef();
@@ -117,7 +117,7 @@ class en extends W.Ay {
     }
     isFull() {
         let { channel: e } = this.props;
-        return (0, K.Pd)(e, F.A, k.A);
+        return (0, W.Pd)(e, F.A, k.A);
     }
     getModeClass() {
         let { position: e, sortingPosition: t, isUserOver: n } = this.props;
@@ -140,7 +140,7 @@ class en extends W.Ay {
         let { channel: e, connected: t, showEmptyChannelTopic: n } = this.props,
             l = (0, N.M)(this.props.subtitle)?.subtitle,
             { hovered: s } = this.state;
-        return (0, i.jsx)(J.A, {
+        return (0, i.jsx)($.A, {
             onClick: this.handleVoiceStatusClick,
             channel: e,
             connected: t,
@@ -228,21 +228,21 @@ class en extends W.Ay {
                 isSubscriptionGated: T,
                 isFavoriteSuggestion: S,
                 withGuildIcon: b,
-                hasStartTime: y,
-                shouldHighlightChannel: v,
+                hasStartTime: v,
+                shouldHighlightChannel: y,
                 shouldUseAnimatedWaveform: j,
                 voiceStates: R,
             } = this.props,
             { shouldShowGuildVerificationPopout: O } = this.state,
             { enableHistoryHover: L } = (0, G.NH)({ guildId: e.guild_id, location: "VoiceChannel" }),
-            M = v || j,
+            M = y || j,
             D = (0, i.jsxs)("li", {
                 ref: this.ref,
-                className: a()(this.getModeClass(), { [et.r9]: this.isDisabled(), [et.fy]: v }),
+                className: a()(this.getModeClass(), { [et.r9]: this.isDisabled(), [et.fy]: y }),
                 "data-dnd-name": e.name,
                 children: [
                     L && this.getVoiceStatesCount() > 0 && (0, i.jsx)(X.A, { channel: e }),
-                    v &&
+                    y &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)("div", { className: et.UQ }),
@@ -265,7 +265,7 @@ class en extends W.Ay {
                                     children: (0, i.jsxs)(z.Ay, {
                                         ref: this.channelItemRef,
                                         className: et.Ki,
-                                        iconClassName: a()({ [et.Gj]: C || y || M }),
+                                        iconClassName: a()({ [et.Gj]: C || v || M }),
                                         hasActiveEvent: C,
                                         channel: e,
                                         selected: !S && t,
@@ -351,23 +351,23 @@ function el(e) {
             let e = P.A.getChannel(n.parent_id),
                 i = w.A.getCheck(n.guild_id);
             return {
-                canManageChannel: B.A.can($.xBc.MANAGE_CHANNELS, n),
+                canManageChannel: B.A.can(J.xBc.MANAGE_CHANNELS, n),
                 canReorderChannel:
                     !0 !== l &&
                     (t.id === Z.Vc ||
-                        (null != e ? B.A.can($.xBc.MANAGE_CHANNELS, e) : B.A.can($.xBc.MANAGE_CHANNELS, t))),
-                canMoveMembers: B.A.can($.xBc.MOVE_MEMBERS, n),
-                locked: !B.A.can($.xBc.CONNECT, n),
-                bypassLimit: B.A.can($.xBc.MOVE_MEMBERS, n),
+                        (null != e ? B.A.can(J.xBc.MANAGE_CHANNELS, e) : B.A.can(J.xBc.MANAGE_CHANNELS, t))),
+                canMoveMembers: B.A.can(J.xBc.MOVE_MEMBERS, n),
+                locked: !B.A.can(J.xBc.CONNECT, n),
+                bypassLimit: B.A.can(J.xBc.MOVE_MEMBERS, n),
                 unverifiedAccount: !i.canChat,
             };
         }),
         A = (0, r.bG)([F.A], () => F.A.hasVideo(n.id)),
         _ = (0, m.Ay)(n),
         g = (0, I.Ay)(n),
-        x = (0, v.Qs)(n.id),
+        x = (0, y.Qs)(n.id),
         E = (0, r.bG)([f.A], () => null != f.A.getStartTime(n), [n]),
-        { isSubscriptionGated: C, needSubscriptionToAccess: N } = (0, y.A)(n.id),
+        { isSubscriptionGated: C, needSubscriptionToAccess: N } = (0, v.A)(n.id),
         S = (0, T.A)(),
         b = (0, r.bG)([H.Ay], () => H.Ay.isFavorite(t.id, n.id)),
         j = e.connected || S?.channelId === n.id,
@@ -381,8 +381,8 @@ function el(e) {
         ),
         { enableHighlight: U, enableWaveformIcon: G } = (0, p.b)(t.id, "VoiceChannel"),
         k = null != d && d.length > 0,
-        K = U && k,
-        W = G && k,
+        W = U && k,
+        K = G && k,
         z = (0, Y.A)({
             channel: n,
             isChannelSelected: a,
@@ -397,7 +397,7 @@ function el(e) {
     return (0, i.jsx)(ei, {
         channelName: g,
         embeddedApps: _,
-        embeddedActivityType: $.$pd.PLAYING,
+        embeddedActivityType: J.$pd.PLAYING,
         video: A,
         hasActiveEvent: null != x,
         isSubscriptionGated: C,
@@ -415,7 +415,7 @@ function el(e) {
         enableOpenTIVForPing: D,
         hasChannelInfo: null != z,
         hasStartTime: E,
-        shouldHighlightChannel: K,
-        shouldUseAnimatedWaveform: W,
+        shouldHighlightChannel: W,
+        shouldUseAnimatedWaveform: K,
     });
 }

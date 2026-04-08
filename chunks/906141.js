@@ -23,8 +23,8 @@ var i = n(627968),
     T = n(491182),
     S = n(860227),
     b = n(756369),
-    y = n(538355),
-    v = n(522871),
+    v = n(538355),
+    y = n(522871),
     j = n(715628),
     R = n(752636),
     O = n(675722),
@@ -33,8 +33,8 @@ var i = n(627968),
     D = n(888675),
     U = n(652215),
     G = n(985018),
-    P = n(213607),
-    k = n(480972);
+    P = n(790610),
+    k = n(10029);
 let w = l.memo(function e(t) {
     let n,
         {
@@ -48,25 +48,25 @@ let w = l.memo(function e(t) {
             hasThread: H,
             treatSpam: F,
         } = t,
-        K = U.sl8.has(s.type) ? s.messageReference : void 0,
-        W = (0, r.bG)([A.A], () => A.A.getMessageByReference(K)),
+        W = U.sl8.has(s.type) ? s.messageReference : void 0,
+        K = (0, r.bG)([A.A], () => A.A.getMessageByReference(W)),
         Y = (0, r.bG)([m.A], () =>
-            s.type === U.lAJ.THREAD_STARTER_MESSAGE && W.state === A.a.LOADED
-                ? m.A.getChannel(W.message.channel_id)
+            s.type === U.lAJ.THREAD_STARTER_MESSAGE && K.state === A.a.LOADED
+                ? m.A.getChannel(K.message.channel_id)
                 : null,
         ),
         z = _.X6.useSetting(),
         q = _.hD.useSetting(),
         X = _.rs.useSetting(),
-        J = _.kt.useSetting(),
+        $ = _.kt.useSetting(),
         Q = (0, c.S)((s.editedTimestamp ?? s.timestamp).valueOf()),
-        $ = (0, u.A)(l?.id),
+        J = (0, u.A)(l?.id),
         { disableReactionCreates: Z } = (0, N.A)(l),
         {
             content: ee,
             hasSpoilerEmbeds: et,
             hasBailedAst: en,
-        } = (0, y.A)(s, {
+        } = (0, v.A)(s, {
             hideSimpleEmbedContent: q && X,
             allowList: Q,
             allowHeading: Q,
@@ -78,15 +78,15 @@ let w = l.memo(function e(t) {
             [m.A],
             () => s.hasFlag(U.pr7.HAS_THREAD) && m.A.getChannel(p.default.castMessageIdAsChannelId(s.id)),
         ),
-        es = s.type === U.lAJ.THREAD_STARTER_MESSAGE && W.state === A.a.LOADED && null != Y,
+        es = s.type === U.lAJ.THREAD_STARTER_MESSAGE && K.state === A.a.LOADED && null != Y,
         ea = !es && void 0 === n,
-        er = (0, v.A)({ message: s, channel: l, enabled: ea }),
+        er = (0, y.A)({ message: s, channel: l, enabled: ea }),
         eo = (0, d.P)(s),
         ed = (0, f._f)(s.id, s.channel_id),
         ec = (0, h.A)(s),
         eu = (0, S.fF)(s);
     return es
-        ? (0, i.jsx)(e, { ...t, message: W.message, channel: Y, hasThread: !1 })
+        ? (0, i.jsx)(e, { ...t, message: K.message, channel: Y, hasThread: !1 })
         : (g.A.isBlockedForMessage(s)
                 ? (n = G.t["+FcYM/"])
                 : g.A.isIgnoredForMessage(s)
@@ -97,7 +97,7 @@ let w = l.memo(function e(t) {
           : (0, i.jsx)(T.A, {
                 compact: o,
                 className: a()(D, { [k.M1]: (0, x.ec)(s), [k.XN]: V, [k._A]: t.isGroupStart }),
-                childrenRepliedMessage: (0, M.A)(s, l, K, W, o),
+                childrenRepliedMessage: (0, M.A)(s, l, W, K, o),
                 childrenHeader: (0, R.A)({ ...t, author: ei, guildId: l.guild_id }),
                 childrenAccessories: (0, i.jsx)(b.iV, {
                     channel: l,
@@ -115,11 +115,11 @@ let w = l.memo(function e(t) {
                     inlineAttachmentMedia: z,
                     inlineEmbedMedia: q,
                     renderEmbeds: X,
-                    gifAutoPlay: J,
+                    gifAutoPlay: $,
                     poll: ec,
                     showListsAndHeaders: Q,
                     showMaskedLinks: Q,
-                    shouldHideMediaOptions: $,
+                    shouldHideMediaOptions: J,
                     enabledContentHarmTypeFlags: eo,
                     ctaButtonType: ed,
                 }),

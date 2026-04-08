@@ -22,8 +22,8 @@ var i = n(627968),
     N = n(562153),
     T = n(652215),
     S = n(985018),
-    b = n(4568);
-function y(e) {
+    b = n(930935);
+function v(e) {
     let { event: t, guildId: n, channelId: l } = e,
         a = (0, s.bG)([I.default], () => I.default.getUser(t.userId)),
         d = (0, o.O)(t.applicationId ?? null),
@@ -92,7 +92,7 @@ function y(e) {
               ],
           });
 }
-function v(e) {
+function y(e) {
     let { event: t, guildId: n, channelId: l } = e,
         a = (0, s.bG)([I.default], () => I.default.getUser(t.userId)),
         o = N.Ay.useName(n, l, a);
@@ -163,9 +163,9 @@ function v(e) {
 function j(e) {
     let { event: t, guildId: n, channelId: l } = e;
     return t.eventType === E.i.ACTIVITY_ENDED
-        ? (0, i.jsx)(y, { event: t, guildId: n, channelId: l })
+        ? (0, i.jsx)(v, { event: t, guildId: n, channelId: l })
         : t.eventType === E.i.USER_LEFT
-          ? (0, i.jsx)(v, { event: t, guildId: n, channelId: l })
+          ? (0, i.jsx)(y, { event: t, guildId: n, channelId: l })
           : null;
 }
 function R(e) {

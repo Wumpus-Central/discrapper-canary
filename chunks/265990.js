@@ -1,8 +1,8 @@
 n.d(t, { A: () => G }), n(321073);
 var i = n(627968),
-    a = n(64700),
-    l = n(735438),
-    r = n.n(l),
+    r = n(64700),
+    a = n(735438),
+    l = n.n(a),
     s = n(311907),
     o = n(397927),
     d = n(711950),
@@ -21,16 +21,16 @@ var i = n(627968),
     T = n(98165),
     N = n(174279),
     S = n(278066),
-    x = n(594968),
-    v = n(979282),
-    b = n(575474),
-    y = n(535266),
+    v = n(594968),
+    x = n(979282),
+    y = n(575474),
+    b = n(535266),
     O = n(787331);
 n(646363);
 var L = n(652215),
     R = n(788868),
     P = n(985018),
-    D = n(63461);
+    D = n(998838);
 let M = [];
 function j() {
     d.A.transitionToSection(L.m3P.ADD_FRIEND, { explicit: !0 });
@@ -43,74 +43,74 @@ function w() {
 }
 function U(e) {
     let { section: t, showSpamCta: n } = e,
-        l = a.useMemo(() => (n ? w : t !== L.m3P.PENDING ? j : void 0), [n, t]);
-    return (0, i.jsx)("div", { className: D.y7, children: (0, i.jsx)(S.A, { type: t, onClick: l }, t) });
+        a = r.useMemo(() => (n ? w : t !== L.m3P.PENDING ? j : void 0), [n, t]);
+    return (0, i.jsx)("div", { className: D.y7, children: (0, i.jsx)(S.A, { type: t, onClick: a }, t) });
 }
 let G = function (e) {
     let { titleId: t } = e,
         { analyticsLocations: n } = (0, h.Ay)(A.A.FRIENDS_LIST),
-        { rows: l, section: d } = (0, s.cf)([f.Ay], () => f.Ay.getState()),
+        { rows: a, section: d } = (0, s.cf)([f.Ay], () => f.Ay.getState()),
         j = (0, s.bG)([C.A], () => C.A.isFocused()),
         { relationshipCount: G, hasBlockedOrIgnored: k } = (0, s.cf)([I.A], () => ({
             relationshipCount: I.A.getRelationshipCount(),
             hasBlockedOrIgnored: I.A.getBlockedOrIgnoredIDs().length > 0,
         })),
         { enabled: V } = T.A.useConfig({ location: "PeopleList" }),
-        [B, H] = a.useState([]),
-        F = a.useCallback((e) => {
+        [B, H] = r.useState([]),
+        F = r.useCallback((e) => {
             let { enabled: t } = T.A.getConfig({ location: "Friend Request Accept" });
             t && H((t) => [...t, e]);
         }, []);
     d !== L.m3P.PENDING && B.length > 0 && H([]);
-    let [Y, W] = a.useState(() => {
+    let [Y, W] = r.useState(() => {
             let e = {};
             for (let t of Object.values(L.m3P)) e[t] = "";
             return e;
         }),
         K = (0, m.p)(A.A.FRIENDS_LIST),
-        [q, z] = a.useState(!1),
-        $ = a.useCallback(
+        [q, z] = r.useState(!1),
+        $ = r.useCallback(
             (e, t) => {
-                let { key: n, ...a } = e;
+                let { key: n, ...r } = e;
                 switch (d) {
                     case L.m3P.PENDING:
-                        return (0, i.jsx)(x.A, { ...a, isFocused: j, onAcceptFriendRequest: () => F(e) }, n);
+                        return (0, i.jsx)(v.A, { ...r, isFocused: j, onAcceptFriendRequest: () => F(e) }, n);
                     case L.m3P.SUGGESTIONS:
-                        return (0, i.jsx)(O.A, { ...a, isFocused: j }, n);
+                        return (0, i.jsx)(O.A, { ...r, isFocused: j }, n);
                     case L.m3P.ALL:
                         return (0, i.jsx)(
                             N.A,
-                            { ...a, isFocused: j, sectionIndex: t, hasFriendAnniversarySection: K },
+                            { ...r, isFocused: j, sectionIndex: t, hasFriendAnniversarySection: K },
                             `${t}-${n}`,
                         );
                     case L.m3P.ONLINE:
                     default:
-                        return (0, i.jsx)(N.A, { ...a, isFocused: j }, n);
+                        return (0, i.jsx)(N.A, { ...r, isFocused: j }, n);
                 }
             },
             [d, j, K, F],
         ),
-        Q = a.useCallback(
+        Q = r.useCallback(
             (e) => {
                 W({ ...Y, [d]: e });
             },
             [Y, d],
         ),
-        X = a.useCallback(() => {
+        X = r.useCallback(() => {
             W({ ...Y, [d]: "" });
         }, [Y, d]),
-        Z = a.useMemo(
+        Z = r.useMemo(
             () =>
-                d === L.m3P.PENDING && (l.filter(L.m3P.SPAM).length > 0 || l.filter(L.m3P.PENDING_IGNORED).length > 0),
-            [l, d],
+                d === L.m3P.PENDING && (a.filter(L.m3P.SPAM).length > 0 || a.filter(L.m3P.PENDING_IGNORED).length > 0),
+            [a, d],
         ),
-        J = a.useMemo(() => {
-            let e = l.filter(d, Y[d]);
+        J = r.useMemo(() => {
+            let e = a.filter(d, Y[d]);
             return (
                 V &&
                     d === L.m3P.PENDING &&
                     "" === Y[d] &&
-                    (e = r()([...e, ...B])
+                    (e = l()([...e, ...B])
                         .uniqBy("key")
                         .sortBy(
                             (e) => e.nickname?.toLowerCase() ?? e.user?.globalName?.toLowerCase() ?? e.usernameLower,
@@ -118,9 +118,9 @@ let G = function (e) {
                         .value()),
                 e
             );
-        }, [B, V, l, Y, d]),
+        }, [B, V, a, Y, d]),
         ee = d === L.m3P.PENDING,
-        et = a.useMemo(() => {
+        et = r.useMemo(() => {
             if (!ee) return M;
             let e = [];
             return (
@@ -132,14 +132,14 @@ let G = function (e) {
             );
         }, [ee, J]);
     (0, _.A)(et, ee);
-    let en = a.useMemo(
+    let en = r.useMemo(
             () =>
                 d === L.m3P.ALL && K && J.some((e) => e.giftIntentType === R.np.FRIEND_ANNIVERSARY)
                     ? J.filter((e) => e.giftIntentType === R.np.FRIEND_ANNIVERSARY).length
                     : 0,
             [J, d, K],
         ),
-        ei = a.useMemo(() => {
+        ei = r.useMemo(() => {
             switch (d) {
                 case L.m3P.PENDING:
                     let e = [],
@@ -168,21 +168,21 @@ let G = function (e) {
                     return [J];
             }
         }, [J, d, q, K]),
-        ea = a.useMemo(() => J.filter((e) => e.type === L.eA$.PENDING_INCOMING).length, [J]),
-        el = d === L.m3P.PENDING && ea > 0 && ea >= 5,
-        er = a.useCallback(
+        er = r.useMemo(() => J.filter((e) => e.type === L.eA$.PENDING_INCOMING).length, [J]),
+        ea = d === L.m3P.PENDING && er > 0 && er >= 5,
+        el = r.useCallback(
             (e) => {
-                e.stopPropagation(), c.A.confirmClearPendingRelationships(ea);
+                e.stopPropagation(), c.A.confirmClearPendingRelationships(er);
             },
-            [ea],
+            [er],
         ),
-        es = a.useCallback(() => {
+        es = r.useCallback(() => {
             z((e) => !e);
         }, []),
-        eo = a.useCallback(
+        eo = r.useCallback(
             (e) => {
                 let n = ei[e],
-                    a = (function (e, t, n, i) {
+                    r = (function (e, t, n, i) {
                         switch (e) {
                             case L.m3P.ONLINE:
                                 return P.intl.formatToPlainString(P.t.BagU2U, { online: t.toString() });
@@ -211,26 +211,26 @@ let G = function (e) {
                           {
                               className: D.Gf,
                               children: [
-                                  (0, i.jsx)(y.A, { id: t, title: a }),
-                                  el &&
+                                  (0, i.jsx)(b.A, { id: t, title: r }),
+                                  ea &&
                                       (0, i.jsx)("div", {
                                           className: D.mt,
                                           children: (0, i.jsx)(o.QWc, {
                                               text: P.intl.string(P.t.O8k7O4),
-                                              onClick: er,
+                                              onClick: el,
                                               "aria-label": P.intl.string(P.t.O8k7O4),
                                               textVariant: "text-sm/medium",
                                           }),
                                       }),
                               ],
                           },
-                          a,
+                          r,
                       )
-                    : (0, i.jsx)("div", { className: D.Gf, children: (0, i.jsx)(y.A, { id: t, title: a }) }, a);
+                    : (0, i.jsx)("div", { className: D.Gf, children: (0, i.jsx)(b.A, { id: t, title: r }) }, r);
             },
-            [ei, d, t, el, er],
+            [ei, d, t, ea, el],
         ),
-        ed = a.useCallback(
+        ed = r.useCallback(
             (e) =>
                 d === L.m3P.ALL && 0 === e && K && en > g.ZD
                     ? (0, i.jsx)("div", {
@@ -248,10 +248,10 @@ let G = function (e) {
             [d, en, q, es, K],
         );
     if (
-        (a.useEffect(() => {
+        (r.useEffect(() => {
             d === L.m3P.ALL && (0, p.Ad)();
         }, [d]),
-        a.useEffect(() => {
+        r.useEffect(() => {
             z(!1);
         }, [d, en]),
         0 === J.length && "" === Y[d])
@@ -264,12 +264,12 @@ let G = function (e) {
         children: (0, i.jsxs)(u.A, {
             section: L.JJy.FRIENDS_LIST,
             children: [
-                k && (0, i.jsx)(b.g, {}),
+                k && (0, i.jsx)(y.g, {}),
                 (0, i.jsx)("div", {
                     className: D.ON,
                     children: (0, i.jsx)(o.IWV, { query: Y[d], onChange: Q, onClear: X }),
                 }),
-                (0, i.jsx)(v.A, {
+                (0, i.jsx)(x.A, {
                     rows: ei,
                     renderRow: $,
                     renderSection: eo,

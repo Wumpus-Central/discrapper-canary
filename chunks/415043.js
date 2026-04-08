@@ -6,15 +6,15 @@ var a = n(503698),
     s = n(342952),
     r = n(435371),
     o = n(397927),
-    c = n(915089),
-    d = n(20342);
+    d = n(915089),
+    c = n(577373);
 function u(e) {
     let { label: t, className: n, size: a = o._3J.SIZE_16, maxUsers: r = 4, ...u } = e,
-        g = (0, c.GV)();
+        g = (0, d.GV)();
     return (0, i.jsxs)("div", {
-        className: l()(n, d.k),
+        className: l()(n, c.k),
         children: [
-            (0, i.jsx)(s.I, { "aria-labelledby": g, overflowCountClassName: d.j, size: a, maxUsers: r, ...u }),
+            (0, i.jsx)(s.I, { "aria-labelledby": g, overflowCountClassName: c.j, size: a, maxUsers: r, ...u }),
             (0, i.jsx)(o.Text, { variant: "text-xs/normal", color: "text-subtle", id: g, children: t }),
         ],
     });
@@ -24,7 +24,7 @@ function g(e) {
         label: t,
         className: n,
         overflowCountClassName: a,
-        size: c = o._3J.SIZE_16,
+        size: d = o._3J.SIZE_16,
         maxUsers: u = 4,
         onClick: g,
         ...m
@@ -39,9 +39,9 @@ function g(e) {
                 onClick: g,
                 "aria-label": t,
                 children: (0, i.jsx)(s.I, {
-                    size: c,
+                    size: d,
                     maxUsers: u,
-                    overflowCountClassName: l()(d.j, a),
+                    overflowCountClassName: l()(c.j, a),
                     "aria-hidden": !0,
                     ...m,
                 }),

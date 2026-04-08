@@ -23,8 +23,8 @@ var i = n(627968),
     T = n(69407),
     S = n(446600),
     b = n(96566),
-    y = n(175452),
-    v = n(924985),
+    v = n(175452),
+    y = n(924985),
     j = n(734057),
     R = n(71393),
     O = n(834942),
@@ -41,8 +41,8 @@ n(281405);
 var V = n(652215),
     H = n(349828),
     F = n(985018),
-    K = n(928409),
-    W = n(822294);
+    W = n(99566),
+    K = n(799535);
 class Y extends P.Ay {
     channelItemRef = l.createRef();
     state = { shouldShowGuildVerificationPopout: !1 };
@@ -59,11 +59,11 @@ class Y extends P.Ay {
     }
     getModeClass() {
         let { position: e, sortingPosition: t, isUserOver: n } = this.props;
-        if (n) return K.ZS;
+        if (n) return W.ZS;
         if (null != t)
-            if (e > t) return K.mU;
-            else return K.TR;
-        return K.fx;
+            if (e > t) return W.mU;
+            else return W.TR;
+        return W.fx;
     }
     handleClick = () => {
         let { channel: e, locked: t, connected: n, unverifiedAccount: i, isSuggestedSection: l } = this.props,
@@ -110,12 +110,12 @@ class Y extends P.Ay {
                 asContainer: !0,
                 text: F.intl.string(F.t.ZXxLQg),
                 children: (0, i.jsx)(c.DUT, {
-                    className: a()(K.Xs, n ? K.Tf : null),
+                    className: a()(W.Xs, n ? W.Tf : null),
                     onClick: () => {
                         u.A.updateChatOpen(e.id, !0), this.handleClickChat();
                     },
                     "aria-label": F.intl.string(F.t.ZXxLQg),
-                    children: (0, i.jsx)(c.oyn, { size: "xs", color: "currentColor", className: K.gE }),
+                    children: (0, i.jsx)(c.oyn, { size: "xs", color: "currentColor", className: W.gE }),
                 }),
             });
     };
@@ -152,7 +152,7 @@ class Y extends P.Ay {
             } = this.props,
             { shouldShowGuildVerificationPopout: C } = this.state,
             N = (0, i.jsxs)("li", {
-                className: a()(this.getModeClass(), { [K.r9]: this.isDisabled() }),
+                className: a()(this.getModeClass(), { [W.r9]: this.isDisabled() }),
                 "data-dnd-name": e.name,
                 children: [
                     (0, i.jsx)(c.YNO, {
@@ -167,8 +167,8 @@ class Y extends P.Ay {
                                 text: this.getTooltipText(),
                                 children: (0, i.jsxs)(w.Ay, {
                                     ref: this.channelItemRef,
-                                    className: K.Ki,
-                                    iconClassName: a()({ [W.G]: null != _ }),
+                                    className: W.Ki,
+                                    iconClassName: a()({ [K.G]: null != _ }),
                                     channel: e,
                                     selected: !I && t,
                                     connected: n,
@@ -229,8 +229,8 @@ function q(e) {
                 unverifiedAccount: !i.canChat,
             };
         }),
-        h = (0, r.bG)([v.A], () => v.A.isCollapsed(n.parent_id)),
-        A = (0, y.Ay)(n.id),
+        h = (0, r.bG)([y.A], () => y.A.isCollapsed(n.parent_id)),
+        A = (0, v.Ay)(n.id),
         _ = (0, r.bG)([S.A], () => S.A.getStageInstanceByChannel(n.id), [n.id]),
         m = (0, N.zy)(n.id, T.ip.AUDIENCE),
         { isSubscriptionGated: g, needSubscriptionToAccess: p } = (0, f.A)(n.id),

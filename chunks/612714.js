@@ -10,7 +10,7 @@ var i = n(627968),
     u = n(652215),
     m = n(53516),
     g = n(985018),
-    _ = n(4555);
+    _ = n(596192);
 function x(e) {
     let t,
         n,
@@ -31,10 +31,10 @@ function x(e) {
         S = s.useCallback(() => {
             f();
         }, [f]),
-        E = s.useCallback(() => {
+        b = s.useCallback(() => {
             null == x.phone ? f({ onAddedPhone: a.A.enableSMS }) : a.A.enableSMS();
         }, [x, f]),
-        b = s.useCallback(() => {
+        E = s.useCallback(() => {
             (0, l.qfG)((e) =>
                 (0, i.jsx)(o.default, {
                     ...e,
@@ -67,7 +67,7 @@ function x(e) {
             size: "sm",
             text: g.intl.string(g.t.KLWnit),
             loading: A,
-            onClick: b,
+            onClick: E,
         });
     else {
         let e = (0, c.B)(x);
@@ -78,7 +78,7 @@ function x(e) {
                     variant: "primary",
                     size: "sm",
                     text: e ?? g.intl.string(g.t.DZQe23),
-                    onClick: E,
+                    onClick: b,
                     loading: A,
                     disabled: null != e,
                 }),

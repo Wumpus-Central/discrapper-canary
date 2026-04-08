@@ -16,15 +16,15 @@ var i = n(627968),
     f = n(888906),
     _ = n(49229),
     E = n(684136),
-    C = n(964486),
-    x = n(793574),
+    x = n(964486),
+    C = n(793574),
     S = n(58149),
-    I = n(688810),
-    T = n(571694),
+    T = n(688810),
+    I = n(571694),
     N = n(47167),
-    b = n(915089),
-    v = n(66442),
-    y = n(279208),
+    v = n(915089),
+    y = n(66442),
+    b = n(279208),
     j = n(267102),
     R = n(976860),
     M = n(219271),
@@ -32,13 +32,13 @@ var i = n(627968),
     O = n(95701),
     L = n(734057),
     P = n(71393),
-    w = n(958590),
-    k = n(584777),
+    k = n(958590),
+    w = n(584777),
     U = n(383501),
     G = n(222823),
     F = n(994500),
-    H = n(351906),
-    B = n(287809),
+    B = n(351906),
+    H = n(287809),
     V = n(954571),
     K = n(957565),
     W = n(203982),
@@ -53,8 +53,8 @@ var i = n(627968),
     ee = n(652215),
     et = n(650583),
     en = n(985018),
-    ei = n(94521);
-let el = (0, b.Ld)(),
+    ei = n(923710);
+let el = (0, v.Ld)(),
     es = (e) => {
         let { channel: t, onClose: n } = e,
             l = (0, N.Ay)(t) ?? "",
@@ -66,7 +66,7 @@ let el = (0, b.Ld)(),
             children: (0, i.jsxs)("div", {
                 className: ei.us,
                 children: [
-                    (0, i.jsx)(u.euF, { src: (0, T.Y)(t), size: u._3J.SIZE_24, "aria-label": l }),
+                    (0, i.jsx)(u.euF, { src: (0, I.Y)(t), size: u._3J.SIZE_24, "aria-label": l }),
                     (0, i.jsx)("span", { className: ei.J2, children: l }),
                     (0, i.jsx)("span", { className: ei.Pd, children: r()(Y.default.extractTimestamp(s)).fromNow() }),
                 ],
@@ -174,7 +174,7 @@ class er extends l.PureComponent {
     }
     getMaxParticipants() {
         let { channel: e } = this.props,
-            t = B.default.getCurrentUser();
+            t = H.default.getCurrentUser();
         return null != t && t.isStaff() ? ee.$aF : null != e && e.userLimit > 0 ? e.userLimit : ee.wLU;
     }
     getRemaining() {
@@ -213,7 +213,7 @@ class er extends l.PureComponent {
             if (null != e && e.isDM()) {
                 let t = e.getRecipientId();
                 if (null != t) {
-                    let e = B.default.getUser(t),
+                    let e = H.default.getUser(t),
                         n = null != e ? e.username : "";
                     return en.intl.format(en.t["eg+R9x"], { username: n });
                 }
@@ -224,7 +224,7 @@ class er extends l.PureComponent {
         if (this.isNotFriends()) {
             let t = null != e ? e.getRecipientId() : null;
             if (null == t) throw Error("no recipient in DM");
-            let n = B.default.getUser(t),
+            let n = H.default.getUser(t),
                 i = null != n ? n.username : "";
             return en.intl.format(en.t["eg+R9x"], { username: i });
         }
@@ -283,7 +283,7 @@ class er extends l.PureComponent {
                         : (--c < 0 && (c = s.length - 1), this.handleSelectionChange(0, c));
                 break;
             case et.dh.ENTER:
-                e.preventDefault(), e.stopPropagation(), d === k.A.FRIENDS && s.length > c && this.handleSelect(0, c);
+                e.preventDefault(), e.stopPropagation(), d === w.A.FRIENDS && s.length > c && this.handleSelect(0, c);
         }
     }
     renderSearchBar() {
@@ -291,7 +291,7 @@ class er extends l.PureComponent {
         if (this.isNotFriends() || this.isPartyFull() || (!l && !t) || (l && !t && !s)) return null;
         let a = [];
         n.forEach((e) => {
-            let t = B.default.getUser(e);
+            let t = H.default.getUser(e);
             null != t && a.push({ id: e, label: J.Ay.getName(t) });
         });
         let r = l ? en.intl.string(en.t.JaOYyf) : en.intl.string(en.t.K5e6bn);
@@ -343,7 +343,7 @@ class er extends l.PureComponent {
             channel: r,
         } = this.props;
         if (this.isNotFriends() || this.isPartyFull() || (!l && !t) || (l && !t && !a)) return;
-        let o = l ? (s[k.A.FRIENDS]?.length ?? 0) + (s[k.A.GUILD_MEMBERS]?.length ?? 0) : n.length;
+        let o = l ? (s[w.A.FRIENDS]?.length ?? 0) + (s[w.A.GUILD_MEMBERS]?.length ?? 0) : n.length;
         if (l && null == r && a && 0 === o && "" === e)
             return {
                 sections: [1],
@@ -400,7 +400,7 @@ class er extends l.PureComponent {
         return l
             ? {
                   sections:
-                      "" === e ? [s[k.A.FRIENDS]?.length, 1] : [s[k.A.FRIENDS]?.length, s[k.A.GUILD_MEMBERS]?.length],
+                      "" === e ? [s[w.A.FRIENDS]?.length, 1] : [s[w.A.FRIENDS]?.length, s[w.A.GUILD_MEMBERS]?.length],
                   rowHeight: this.getImprovedDMRowHeight,
                   renderSection: this.renderImprovedDMSection,
                   sectionHeight: this.getImprovedDMSectionHeight,
@@ -424,7 +424,7 @@ class er extends l.PureComponent {
             { sectionVisibility: l } = this.state;
         return !1 === l[e]
             ? 0
-            : e === k.A.GUILD_MEMBERS && "" === i
+            : e === w.A.GUILD_MEMBERS && "" === i
               ? 32
               : null == n[e] || 0 === n[e].length
                 ? 0
@@ -449,7 +449,7 @@ class er extends l.PureComponent {
             { sectionVisibility: f } = this.state;
         if (s) {
             if (!1 === f[n]) return null;
-            if (n === k.A.GUILD_MEMBERS && "" === p)
+            if (n === w.A.GUILD_MEMBERS && "" === p)
                 return (0, i.jsx)(
                     "div",
                     {
@@ -466,14 +466,14 @@ class er extends l.PureComponent {
         } else if (n > 0) return null;
         let _ = s ? a[n][l] : r[l];
         if (null == _) return null;
-        let { user: E, comparator: C } = _,
-            x = o.has(E.id),
+        let { user: E, comparator: x } = _,
+            C = o.has(E.id),
             S = ((m || null == A) && E.isStaff() && g?.isStaff()) ?? !1,
-            I = !1;
+            T = !1;
         return (
-            !x && 0 >= this.getRemaining()
-                ? (I = !0)
-                : s && !x && o.size > 0 && n === k.A.GUILD_MEMBERS && ((I = !0), (t = en.intl.string(en.t.z9qAt9))),
+            !C && 0 >= this.getRemaining()
+                ? (T = !0)
+                : s && !C && o.size > 0 && n === w.A.GUILD_MEMBERS && ((T = !0), (t = en.intl.string(en.t.z9qAt9))),
             (0, i.jsx)(
                 Q.A,
                 {
@@ -481,9 +481,9 @@ class er extends l.PureComponent {
                     row: l,
                     user: E,
                     hideDiscriminator: h,
-                    comparator: C,
-                    checked: x,
-                    disabled: I,
+                    comparator: x,
+                    checked: C,
+                    disabled: T,
                     selected: n === d && l === c,
                     onClick: this.handleClick,
                     onMessageClick: this.handleMessageClick,
@@ -513,11 +513,11 @@ class er extends l.PureComponent {
                   ep,
                   {
                       section: t,
-                      heading: t === k.A.FRIENDS ? en.intl.string(en.t.TdEu5X) : en.intl.string(en.t.y29JXs),
+                      heading: t === w.A.FRIENDS ? en.intl.string(en.t.TdEu5X) : en.intl.string(en.t.y29JXs),
                       onToggleVisibility: this.handleToggleSectionVisibility,
                       isOpen: s[t] ?? !0,
                   },
-                  t === k.A.FRIENDS ? en.intl.string(en.t.TdEu5X) : en.intl.string(en.t.y29JXs),
+                  t === w.A.FRIENDS ? en.intl.string(en.t.TdEu5X) : en.intl.string(en.t.y29JXs),
               );
     };
     getImprovedDMSectionHeight = (e) => {
@@ -533,14 +533,14 @@ class er extends l.PureComponent {
         let { channel: e, invite: t, hideInstantInvites: n } = this.props,
             { copied: l } = this.state;
         if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return null;
-        let s = null != t ? (0, y.A)(t.code) : "",
+        let s = null != t ? (0, b.A)(t.code) : "",
             a = s.length > 0;
         return (0, i.jsx)(u.D0$, {
             label: en.intl.string(en.t.t3O2BR),
             helperText: s.length > 0 ? en.intl.format(en.t.ZVdJMy, { numHours: "24" }) : void 0,
             children: (0, i.jsx)(u.e2O, {
                 supportsCopy: K.p5,
-                placeholder: (0, y.A)(en.intl.string(en.t.lPVBqP)),
+                placeholder: (0, b.A)(en.intl.string(en.t.lPVBqP)),
                 value: a ? (n ? en.intl.string(en.t["6HzNgZ"]) : s) : "",
                 buttonColor: d.$n.Colors.BRAND,
                 text: a ? (l ? en.intl.string(en.t.q30c5i) : en.intl.string(en.t.OpuAlK)) : en.intl.string(en.t.qzxqUf),
@@ -556,7 +556,7 @@ class er extends l.PureComponent {
         if (this.isNotFriends()) {
             let e = null != t ? t.getRecipientId() : null;
             if (null == e) throw Error("no recipient in DM");
-            let n = B.default.getUser(e),
+            let n = H.default.getUser(e),
                 i = null != n && F.A.getRelationshipType(n.id) === ee.eA$.PENDING_OUTGOING;
             return {
                 actions: [
@@ -673,7 +673,7 @@ class er extends l.PureComponent {
     };
     handleMessageClick = (e) => {
         let { onClose: t } = this.props;
-        A.A.openPrivateChannel({ recipientIds: [e], location: x.A.NEW_GROUP_DM_INVITE_MODAL }), t();
+        A.A.openPrivateChannel({ recipientIds: [e], location: C.A.NEW_GROUP_DM_INVITE_MODAL }), t();
     };
     handleAddFriendNavigation = () => {
         g.A.transitionToSection(ee.m3P.ADD_FRIEND, { explicit: !0 }), this.props.onClose();
@@ -722,11 +722,11 @@ class er extends l.PureComponent {
                 let t = {};
                 "" !== this.state.newChannelName && (t.name = this.state.newChannelName),
                     null != this.state.previewIcon && (t.icon = this.state.previewIcon),
-                    (null != t.name || null != t.icon) && A.A.updateChannel(e, t, x.A.NEW_GROUP_DM_INVITE_MODAL),
+                    (null != t.name || null != t.icon) && A.A.updateChannel(e, t, C.A.NEW_GROUP_DM_INVITE_MODAL),
                     V.default.track(ee.HAw.GDM_EDIT_INTERACTED, {
                         channel_id: e,
                         channel_type: ee.rbe.GROUP_DM,
-                        location: x.A.NEW_GROUP_DM_INVITE_MODAL,
+                        location: C.A.NEW_GROUP_DM_INVITE_MODAL,
                         new_name_set: "" !== this.state.newChannelName,
                         new_icon_set: null != this.state.previewIcon,
                     });
@@ -810,12 +810,12 @@ class er extends l.PureComponent {
 }
 function eo(e) {
     let { selectedUsers: t, channelName: n, previewIcon: l, onIconChange: s, onIconRemove: a, onChange: r } = e,
-        { analyticsLocations: o } = (0, I.Ay)(x.A.NEW_GROUP_DM_INVITE_MODAL),
-        c = (0, N.Jo)(Array.from(t), B.default, F.A);
+        { analyticsLocations: o } = (0, T.Ay)(C.A.NEW_GROUP_DM_INVITE_MODAL),
+        c = (0, N.Jo)(Array.from(t), H.default, F.A);
     return (0, i.jsxs)("div", {
         className: ei.zj,
         children: [
-            (0, i.jsx)(v.X, {
+            (0, i.jsx)(y.X, {
                 className: ei.r9,
                 channel: null,
                 previewIcon: l,
@@ -843,28 +843,28 @@ function eo(e) {
 }
 function ec(e) {
     let { channel: t, onComplete: n, ...l } = e,
-        s = (0, c.cf)([k.h, w.A, H.A], () => {
+        s = (0, c.cf)([w.h, k.A, B.A], () => {
             let e;
             return (
-                null != t && null != (e = w.A.getInvite(t.id)) && e.isExpired() && (e = null),
+                null != t && null != (e = k.A.getInvite(t.id)) && e.isExpired() && (e = null),
                 {
-                    ...k.h.getState(),
+                    ...w.h.getState(),
                     invite: e,
-                    hideDiscriminator: H.A.hidePersonalInformation,
-                    hideInstantInvites: H.A.hideInstantInvites,
+                    hideDiscriminator: B.A.hidePersonalInformation,
+                    hideInstantInvites: B.A.hideInstantInvites,
                 }
             );
         }),
-        a = (0, c.yK)([k.h], () => k.h.getSections()),
+        a = (0, c.yK)([w.h], () => w.h.getSections()),
         { enabled: r } = $.A.useConfig({ location: null == t ? "New DM" : "Existing DM" }),
-        o = (0, c.bG)([B.default], () => B.default.getCurrentUser()),
+        o = (0, c.bG)([H.default], () => H.default.getCurrentUser()),
         d = (0, c.bG)(
-            [B.default],
+            [H.default],
             () =>
-                !!B.default.getCurrentUser()?.isStaff() &&
+                !!H.default.getCurrentUser()?.isStaff() &&
                 null != t &&
                 !!t.isDM() &&
-                t.recipients.every((e) => B.default.getUser(e)?.isStaff()),
+                t.recipients.every((e) => H.default.getUser(e)?.isStaff()),
             [t],
         ),
         u = (0, c.bG)([P.A], () => P.A.getGuildCount() > 0);
@@ -899,7 +899,7 @@ function ed(e) {
             ),
             [n, o],
         ),
-        (0, C.Ay)(() => {
+        (0, x.Ay)(() => {
             (0, M.u)();
         }),
         { showModal: r, toggleVisible: o }
@@ -923,7 +923,7 @@ function eh(e) {
         h = l.useRef(null),
         m = a ?? (null == t ? u.ggM : u.DpX),
         { showModal: A } = ed({ channel: t, subscribeToGlobalHotkey: d }),
-        g = (0, c.bG)([B.default], () => B.default.getUser(t?.getRecipientId()));
+        g = (0, c.bG)([H.default], () => H.default.getUser(t?.getRecipientId()));
     return g?.bot || g?.isProvisional
         ? null
         : (0, i.jsx)(X.Ay.Icon, {

@@ -1,8 +1,8 @@
 n.d(t, { A: () => C });
 var a = n(627968),
     i = n(64700),
-    s = n(503698),
-    l = n.n(s),
+    l = n(503698),
+    s = n.n(l),
     r = n(687498),
     o = n(397927),
     d = n(341915),
@@ -18,27 +18,27 @@ var a = n(627968),
     v = n(223352);
 n(272111);
 var b = n(985018),
-    j = n(45855);
+    j = n(448194);
 let A = (0, r.animated)(x.Ay),
     C = () => {
         let e = (0, u.go)(),
             { expansionSpring: t } = i.useContext(_.PW),
             {
                 onCtxMenuOpen: n,
-                onCtxMenuClose: s,
+                onCtxMenuClose: l,
                 onCtxMenuSelect: x,
                 isExpanded: C,
                 isExpansionAnimationComplete: y,
                 quest: S,
             } = i.useContext(f.T),
-            E = i.useCallback(() => {
+            T = i.useCallback(() => {
                 (0, g.Zc)(S, {
                     content: d.uF.QUEST_BAR_V2,
                     ctaContent: c.Cy.OPEN_DISCLOSURE,
                     sourceQuestContent: d.uF.QUEST_BAR_V2,
                 });
             }, [S]),
-            T = i.useCallback(() => {
+            E = i.useCallback(() => {
                 (0, m.pu)(S, {
                     content: d.uF.QUEST_BAR_V2,
                     ctaContent: c.Cy.OPEN_GAME_LINK,
@@ -48,8 +48,8 @@ let A = (0, r.animated)(x.Ay),
             }, [e, S]),
             N = C && y,
             I = (0, a.jsx)(o.DUT, {
-                onClick: T,
-                className: l()(j.vk, { [j.wm]: N }),
+                onClick: E,
+                className: s()(j.vk, { [j.wm]: N }),
                 children: (0, a.jsx)(A, {
                     quest: S,
                     withGameTile: !1,
@@ -62,7 +62,7 @@ let A = (0, r.animated)(x.Ay),
                 }),
             });
         return (0, a.jsxs)(r.animated.div, {
-            className: l()(j.iE, j.Ht, { [j.tT]: N }),
+            className: s()(j.iE, j.Ht, { [j.tT]: N }),
             style: { transform: (0, r.to)([t.to({ range: [0, 1], output: [6, 0] })], (e) => `translateY(${e}px)`) },
             children: [
                 (0, a.jsx)(r.animated.div, {
@@ -76,7 +76,7 @@ let A = (0, r.animated)(x.Ay),
                     children: [
                         (0, a.jsxs)(o.DUT, {
                             className: j.y8,
-                            onClick: E,
+                            onClick: T,
                             children: [
                                 (0, a.jsx)(o.Text, {
                                     color: "always-white",
@@ -88,7 +88,7 @@ let A = (0, r.animated)(x.Ay),
                         }),
                         (0, a.jsx)(h.C, {
                             onOpen: n,
-                            onClose: s,
+                            onClose: l,
                             onSelect: x,
                             questContent: d.uF.QUEST_BAR_V2,
                             quest: S,
@@ -98,12 +98,12 @@ let A = (0, r.animated)(x.Ay),
                             children: (e) =>
                                 (0, a.jsx)(o.DUT, {
                                     ...e,
-                                    className: l()(j.uJ, j.rb),
+                                    className: s()(j.uJ, j.rb),
                                     "aria-label": b.intl.string(b.t.DEoVWZ),
                                     children: (0, a.jsx)(o.jNK, {
                                         size: "md",
                                         color: "currentColor",
-                                        className: l()(j.Bx, j.ON),
+                                        className: s()(j.Bx, j.ON),
                                     }),
                                 }),
                         }),

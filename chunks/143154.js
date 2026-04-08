@@ -24,7 +24,7 @@ var i = l(627968),
     y = l(652215),
     I = l(818348),
     k = l(985018),
-    v = l(737265);
+    v = l(79562);
 let T = (e) => {
         let { channelData: a, onClose: l, trackOptionClick: n } = e,
             t = (0, s.bG)([p.A], () => p.A.getChannel(a.channel_id)),

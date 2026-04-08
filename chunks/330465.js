@@ -23,14 +23,14 @@ var i = n(627968),
     T = n(263715),
     S = n(941971),
     b = n(264409),
-    y = n(531053),
-    v = n(647668),
+    v = n(531053),
+    y = n(647668),
     j = n(107385),
     R = n(900848),
     O = n(65611),
     L = n(652215),
     M = n(985018),
-    D = n(604418);
+    D = n(135759);
 let U = { analyticsSource: { page: L.liQ.GUILD_CHANNEL, section: L.JJy.CHANNEL_LIST, object: L.ZSU.CHANNEL } };
 function G(e, t) {
     (0, m.L3)(e, async () => {
@@ -42,17 +42,17 @@ function G(e, t) {
             n.e("16301"),
             n.e("22191"),
             n.e("25961"),
-            n.e("91872"),
+            n.e("33144"),
             n.e("35894"),
             n.e("50796"),
             n.e("94253"),
             n.e("8458"),
             n.e("11810"),
-            n.e("85200"),
+            n.e("90226"),
             n.e("30453"),
             n.e("56475"),
             n.e("54469"),
-            n.e("76087"),
+            n.e("8442"),
         ]).then(n.bind(n, 544676));
         return (n) => (0, i.jsx)(e, { ...n, guild: t });
     });
@@ -70,28 +70,28 @@ let P = l.memo(function (e) {
             unread: V = !1,
             mediaState: H,
             unavailable: F = !1,
-            badge: K = 0,
-            isMentionLowImportance: W,
+            badge: W = 0,
+            isMentionLowImportance: K,
             contextMenu: Y = G,
             draggable: z = !1,
             sorting: q = !1,
             preloadOnClick: X = !0,
-            guildJoinRequestStatus: J,
+            guildJoinRequestStatus: $,
             height: Q,
-            "aria-setsize": $,
+            "aria-setsize": J,
             "aria-posinset": Z,
         } = e,
         { id: ee, parentId: et } = t,
         en = e.upperBadge ?? (F ? (0, O.em)() : null != H ? (0, O.oi)(H) : void 0),
         ei = e.lowerBadge ?? void 0;
-    null == ei && K > 0
+    null == ei && W > 0
         ? (ei =
               (0, O.wN)(
-                  K,
-                  W ? A.LU0.colors.BACKGROUND_MOD_STRONG.css : A.LU0.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
+                  W,
+                  K ? A.LU0.colors.BACKGROUND_MOD_STRONG.css : A.LU0.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
               ) ?? void 0)
-        : null == ei && null != J && (ei = (0, O.eW)({ guildJoinRequestStatus: J }) ?? void 0);
-    let el = e.lowerBadgeSize ?? { width: (0, A.o6S)(K) },
+        : null == ei && null != $ && (ei = (0, O.eW)({ guildJoinRequestStatus: $ }) ?? void 0);
+    let el = e.lowerBadgeSize ?? { width: (0, A.o6S)(W) },
         [{ dragging: es }, ea] = (0, r.i)({
             type: T.PJ.GUILD,
             item: () => (
@@ -156,11 +156,11 @@ let P = l.memo(function (e) {
         ),
         eb = (0, A.rdh)(A.LU0.modules.guildbar.AVATAR_SIZE);
     if (null == k) return null;
-    let ey = k.name;
-    K > 0
-        ? (ey = M.intl.formatToPlainString(M.t["/uzRss"], { guildName: k.name, mentions: K }))
-        : V && (ey = M.intl.formatToPlainString(M.t.lzqe42, { guildName: k.name }));
-    let ev = (0, i.jsx)(b.A, {
+    let ev = k.name;
+    W > 0
+        ? (ev = M.intl.formatToPlainString(M.t["/uzRss"], { guildName: k.name, mentions: W }))
+        : V && (ev = M.intl.formatToPlainString(M.t.lzqe42, { guildName: k.name }));
+    let ey = (0, i.jsx)(b.A, {
             guild: k,
             show: eA,
             active: B,
@@ -173,7 +173,7 @@ let P = l.memo(function (e) {
         }),
         ej = eg
             ? (0, i.jsx)(A.jlP, {
-                  ariaLabel: ey,
+                  ariaLabel: ev,
                   name: k.name,
                   onClick: ep,
                   onMouseEnter: eN,
@@ -184,7 +184,7 @@ let P = l.memo(function (e) {
                   icon: (0, E.Iv)(k, 2 * eb, ec && w, !0),
                   selected: B || ec,
                   ...er,
-                  "aria-setsize": $,
+                  "aria-setsize": J,
                   "aria-posinset": Z,
                   "aria-selected": B,
               })
@@ -199,7 +199,7 @@ let P = l.memo(function (e) {
                       "data-dnd-name": k.name,
                       "data-drop-hovering": eA,
                       children: (0, i.jsx)(A.jlP, {
-                          ariaLabel: ey,
+                          ariaLabel: ev,
                           name: k.name,
                           onClick: ep,
                           onMouseEnter: eN,
@@ -210,14 +210,14 @@ let P = l.memo(function (e) {
                           icon: (0, E.Iv)(k, 2 * eb, ec && w, !0),
                           selected: B || ec,
                           ...er,
-                          "aria-setsize": $,
+                          "aria-setsize": J,
                           "aria-posinset": Z,
                           "aria-selected": B,
                       }),
                   }),
               }),
-        eR = eA || eu ? ev : ej,
-        eO = (0, i.jsx)(y.g4, { children: (0, i.jsx)(j.A, {}) }),
+        eR = eA || eu ? ey : ej,
+        eO = (0, i.jsx)(v.g4, { children: (0, i.jsx)(j.A, {}) }),
         eL = eg
             ? (0, i.jsx)(o.animated.div, {
                   ref: z
@@ -253,8 +253,8 @@ let P = l.memo(function (e) {
         ref: eS,
         children: [
             (0, i.jsx)(S.A, { hovered: !es && ec, selected: !es && B, unread: !es && V, className: D.Io }),
-            (0, i.jsx)(v.A, { guild: k, disabled: q, isDragging: es, children: es ? eO : eL }),
-            z ? (0, i.jsx)(y.Ay, { name: k.name, targetNode: t, onDragOverChanged: eC }) : null,
+            (0, i.jsx)(y.A, { guild: k, disabled: q, isDragging: es, children: es ? eO : eL }),
+            z ? (0, i.jsx)(v.Ay, { name: k.name, targetNode: t, onDragOverChanged: eC }) : null,
         ],
     });
 });

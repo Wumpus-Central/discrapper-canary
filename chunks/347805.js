@@ -1,29 +1,29 @@
-t.d(l, { A: () => A });
-var i = t(627968),
-    n = t(64700),
-    s = t(311907),
-    a = t(397927),
-    r = t(629403),
-    o = t(612630),
-    d = t(351906),
-    c = t(652215),
-    u = t(985018),
-    m = t(828950);
-function A(e) {
-    let { autoFocus: l = !1, className: t, userId: A, onUpdate: x } = e,
-        p = (0, s.bG)([d.A], () => d.A.hidePersonalInformation),
-        { loading: g, note: f } = (0, o.A)(A),
-        h = n.useRef(null);
-    return (n.useEffect(() => {
-        if (!l || p) return;
+n.d(l, { A: () => p });
+var t = n(627968),
+    i = n(64700),
+    s = n(311907),
+    a = n(397927),
+    r = n(629403),
+    o = n(612630),
+    d = n(351906),
+    c = n(652215),
+    u = n(985018),
+    m = n(36755);
+function p(e) {
+    let { autoFocus: l = !1, className: n, userId: p, onUpdate: x } = e,
+        A = (0, s.bG)([d.A], () => d.A.hidePersonalInformation),
+        { loading: g, note: f } = (0, o.A)(p),
+        h = i.useRef(null);
+    return (i.useEffect(() => {
+        if (!l || A) return;
         let e = h.current;
         e?.selectionStart != null && (e.focus(), e.setSelection(e.value.length, e.value.length));
-    }, [l, p]),
-    p)
+    }, [l, A]),
+    A)
         ? null
-        : (0, i.jsx)("div", {
-              className: t,
-              children: (0, i.jsx)(a.d4u, {
+        : (0, t.jsx)("div", {
+              className: n,
+              children: (0, t.jsx)(a.d4u, {
                   ref: h,
                   className: m.P,
                   disabled: g,
@@ -31,7 +31,7 @@ function A(e) {
                   "aria-label": u.intl.string(u.t.PbMNh2),
                   onBlur: (e) => {
                       let l = e.currentTarget.value;
-                      (f ?? "") !== l && (x?.(), r.A.updateNote(A, l));
+                      (f ?? "") !== l && (x?.(), r.A.updateNote(p, l));
                   },
                   onKeyPress: (e) => {
                       13 === e.which

@@ -9,17 +9,17 @@ var i = n(627968),
     d = n(990078),
     c = n(397927),
     u = n(652215),
-    h = n(644943);
+    h = n(17870);
 let p = u.UVF.DEFAULT,
     f = 1,
-    _ = s.createContext({ type: p, opacity: f }),
-    A = s.createContext(void 0),
+    A = s.createContext({ type: p, opacity: f }),
+    _ = s.createContext(void 0),
     g = (e) => {
         let { children: t, className: n, ...s } = e;
-        return (0, i.jsx)(_.Consumer, {
+        return (0, i.jsx)(A.Consumer, {
             children: (e) => {
                 let { type: a } = e;
-                return (0, i.jsx)(A.Consumer, {
+                return (0, i.jsx)(_.Consumer, {
                     children: (e) =>
                         (0, i.jsx)("div", { className: l()(h.bar, h[o()(a)], n), style: e, ...s, children: t }),
                 });
@@ -30,9 +30,9 @@ class m extends s.PureComponent {
     static defaultProps = { disableScroll: !1 };
     render() {
         let { disableScroll: e, children: t, className: n } = this.props;
-        return (0, i.jsx)(A.Consumer, {
+        return (0, i.jsx)(_.Consumer, {
             children: (s) =>
-                (0, i.jsx)(_.Consumer, {
+                (0, i.jsx)(A.Consumer, {
                     children: (a) => {
                         let r = l()(h.body, h[o()(a.type)], n);
                         return e
@@ -45,7 +45,7 @@ class m extends s.PureComponent {
 }
 let x = (e) => {
         let { type: t = p, width: n, height: s, children: a, className: r, opacity: d = f, onClick: c } = e;
-        return (0, i.jsx)(_.Provider, {
+        return (0, i.jsx)(A.Provider, {
             value: { type: t, opacity: d },
             children: (0, i.jsx)("div", {
                 className: l()(h.widget, h[o()(t)], r),
@@ -57,7 +57,7 @@ let x = (e) => {
     },
     E = (e) => {
         let { children: t, className: n, dynamicSize: s = !1 } = e;
-        return (0, i.jsx)(A.Consumer, {
+        return (0, i.jsx)(_.Consumer, {
             children: (e) =>
                 (0, i.jsx)("div", { className: l()(h.content, { [h.staticSize]: !s }, n), style: e, children: t }),
         });
@@ -66,13 +66,13 @@ let x = (e) => {
     let { children: t, opacityOverride: n } = e;
     if (null == t) return null;
     let a = [g, m, E];
-    return (0, i.jsx)(_.Consumer, {
+    return (0, i.jsx)(A.Consumer, {
         children: (e) => {
             let { opacity: l } = e,
                 r = { backgroundColor: `rgba(54, 57, 63, ${"" + (n ?? l)})` };
             if ("string" == typeof t.type) return s.cloneElement(t, { style: r });
             {
-                if (a.includes(t.type)) return (0, i.jsx)(A.Provider, { value: r, children: t });
+                if (a.includes(t.type)) return (0, i.jsx)(_.Provider, { value: r, children: t });
                 let e = t.type.displayName;
                 throw Error(
                     `Widget.Background cannot be wrapped around ${e}. Pass a DOM node or one of ${a.map((e) => "Widget." + e.name).join(",")}`,

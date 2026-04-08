@@ -23,9 +23,9 @@ var i = n(627968),
     T = n(811611),
     S = n(841252),
     b = n(788868),
-    y = n(652215),
-    v = n(985018),
-    j = n(790344),
+    v = n(652215),
+    y = n(985018),
+    j = n(49729),
     R = n(669149);
 function O(e) {
     let {
@@ -47,15 +47,15 @@ function O(e) {
             onClose: V,
             onSubscribeClick: H,
             onSubscribeFinish: F,
-            onSecondaryClick: K,
-            secondaryCTA: W,
+            onSecondaryClick: W,
+            secondaryCTA: K,
             secondaryCTAClassName: Y,
             subscribeButtonText: z,
             showNewBadge: q = !1,
             showBetaBadge: X = !1,
-            enableArtBoxShadow: J = !0,
+            enableArtBoxShadow: $ = !0,
             subscriptionTier: Q = b.pe.TIER_2,
-            isLoading: $ = !1,
+            isLoading: J = !1,
             hideBackButton: Z,
             backButtonText: ee,
             showEnhancedUpsell: et,
@@ -80,7 +80,7 @@ function O(e) {
         ep.current = eg;
     }),
         l.useEffect(() => {
-            if ($) return;
+            if (J) return;
             let {
                 analyticsLocation: e,
                 analyticsLocations: t,
@@ -89,21 +89,21 @@ function O(e) {
                 type: l,
             } = ep.current;
             eu
-                ? g.default.track(y.HAw.PREMIUM_GUILD_UPSELL_VIEWED, {
+                ? g.default.track(v.HAw.PREMIUM_GUILD_UPSELL_VIEWED, {
                       type: `${l} - Tier ${i?.boostedGuildTier}`,
                       guild_id: i?.guild.id,
                       channel_id: i?.channelId,
                       location: e,
                       location_stack: t,
                   })
-                : g.default.track(y.HAw.PREMIUM_UPSELL_VIEWED, {
+                : g.default.track(v.HAw.PREMIUM_UPSELL_VIEWED, {
                       type: l,
                       source: n,
                       location: e,
                       location_stack: t,
                       sku_id: (0, p.mH)(Q),
                   });
-        }, [eu, Q, $]);
+        }, [eu, Q, J]);
     let ef = (0, o.bG)([f.A], () => f.A.affinities),
         ex =
             ef.length > 1 &&
@@ -123,7 +123,7 @@ function O(e) {
     l.useEffect(() => {
         eE || u.xG();
     }, [eE]);
-    let eI = J ? a()(j.JS, j.OV, G) : a()(j.JS, G),
+    let eI = $ ? a()(j.JS, j.OV, G) : a()(j.JS, G),
         eC = null;
     return (
         null != ec.artURL
@@ -145,7 +145,7 @@ function O(e) {
                     "data-migration-pending": !0,
                     scrollbarType: "none",
                     className: a()(et ? j.es : j.Qs, !e_ && U),
-                    children: $
+                    children: J
                         ? (0, i.jsx)(c.y$y, {})
                         : e_
                           ? (0, i.jsx)(T.Ay, {
@@ -190,21 +190,21 @@ function O(e) {
                         (0, i.jsxs)("div", {
                             className: a()(j.E3, { [j.Q_]: et }),
                             children: [
-                                null != W
+                                null != K
                                     ? (0, i.jsx)(d.$n, {
                                           "data-migration-pending": !0,
                                           className: a()(j.Dc, Y, { [j.HZ]: et }),
-                                          onClick: K,
+                                          onClick: W,
                                           size: d.$n.Sizes.SMALL,
                                           color: et ? d.$n.Colors.CUSTOM : d.$n.Colors.PRIMARY,
                                           look: d.$n.Looks.LINK,
-                                          children: W,
+                                          children: K,
                                       })
                                     : null,
                                 (() => {
                                     if (eu)
                                         return (0, i.jsx)(m.A, { analyticsLocation: C, guild: s.guild, onClose: V });
-                                    let e = et ? v.intl.string(v.t.pj0XBN) : void 0;
+                                    let e = et ? y.intl.string(y.t.pj0XBN) : void 0;
                                     return (
                                         e_ &&
                                             (null != eh
@@ -213,7 +213,7 @@ function O(e) {
                                                       intervalCount: eh?.subscription_trial?.interval_count,
                                                   }))
                                                 : null != eA &&
-                                                  (e = v.intl.formatToPlainString(v.t.bkQ4bH, {
+                                                  (e = y.intl.formatToPlainString(y.t.bkQ4bH, {
                                                       percent: eA.discount.amount,
                                                   }))),
                                         (0, i.jsx)(I.A, {
@@ -238,7 +238,7 @@ function O(e) {
                             (0, i.jsx)(c.Button, {
                                 variant: "secondary",
                                 size: "sm",
-                                text: null != ee ? ee : v.intl.string(v.t["13/7kX"]),
+                                text: null != ee ? ee : y.intl.string(y.t["13/7kX"]),
                                 onClick: V,
                             }),
                     ],
@@ -267,14 +267,14 @@ function L(e) {
         g = (0, E.V)(),
         f = (0, x.O)(),
         I = !m && (g?.subscription_trial?.sku_id === _ || (0, N.U9)(f, _)) && null == a,
-        T = v.intl.string(v.t.pj0XBN);
+        T = y.intl.string(y.t.pj0XBN);
     I &&
         (null != g
             ? (T = (0, p.FY)({
                   intervalType: g?.subscription_trial?.interval,
                   intervalCount: g?.subscription_trial?.interval_count,
               }))
-            : null != f && (T = v.intl.formatToPlainString(v.t.bkQ4bH, { percent: f.discount.amount })));
+            : null != f && (T = y.intl.formatToPlainString(y.t.bkQ4bH, { percent: f.discount.amount })));
     let S = null;
     return (
         h ? (S = "new") : A && (S = "beta"),

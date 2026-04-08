@@ -14,8 +14,8 @@ var i = n(627968),
     g = n(652215),
     p = n(731854),
     f = n(985018),
-    _ = n(452088),
-    E = n(97262);
+    _ = n(643915),
+    E = n(683981);
 let x = function (e) {
     let [t, n] = (0, l.useState)(!1);
     (0, l.useEffect)(() => {
@@ -112,9 +112,9 @@ let x = function (e) {
                 ],
             });
         }, [e, S]),
-        { connectionState: N, connectionTypeText: I } = e,
+        { connectionState: I, connectionTypeText: N } = e,
         v = c.Q_.getSetting(),
-        b = {
+        y = {
             [g.S7L.AWAITING_ENDPOINT]: f.intl.format(f.t.Eu2vUR, { url: g.qF7.STATUS }),
             [g.S7L.CONNECTING]: f.intl.string(f.t["y+E8aD"]),
             [g.S7L.AUTHENTICATING]: f.intl.string(f.t["5lGIZH"]),
@@ -127,13 +127,13 @@ let x = function (e) {
             [g.S7L.RTC_CONNECTED]: T,
             [g.S7L.NO_ROUTE]: f.intl.format(f.t["2tgQnk"], { url: m.A.getArticleURL(g.MVz.VOICE_CONNECTION_ERRORS) }),
             [g.S7L.RTC_DISCONNECTED]: f.intl.string(f.t.fOX25I),
-        }[N];
+        }[I];
     return (0, i.jsxs)("div", {
         className: _.kL,
         children: [
-            "function" == typeof b
-                ? b()
-                : (0, i.jsx)(a.Text, { tag: "p", variant: "text-sm/normal", color: "text-muted", children: b }),
+            "function" == typeof y
+                ? y()
+                : (0, i.jsx)(a.Text, { tag: "p", variant: "text-sm/normal", color: "text-muted", children: y }),
             v &&
                 d.Ay.supports(p.O5.DIAGNOSTICS) &&
                 !__OVERLAY__ &&
@@ -186,7 +186,7 @@ let x = function (e) {
                 className: E.g4,
                 children: [
                     (0, i.jsx)(a.XAi, { size: "xxs", color: a.LU0.colors.TEXT_FEEDBACK_POSITIVE.css }),
-                    (0, i.jsx)(a.Text, { variant: "text-xs/medium", color: "text-feedback-positive", children: I }),
+                    (0, i.jsx)(a.Text, { variant: "text-xs/medium", color: "text-feedback-positive", children: N }),
                 ],
             }),
             !v &&

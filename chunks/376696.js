@@ -12,8 +12,8 @@ var i = n(627968),
     A = n(643501),
     _ = n(279250),
     m = n(834757),
-    p = n(727353),
-    g = n(140547),
+    g = n(727353),
+    p = n(140547),
     f = n(636920),
     x = n(958140),
     E = n(832163),
@@ -32,8 +32,8 @@ var i = n(627968),
     M = n(652215),
     D = n(699976),
     U = n(985018),
-    G = n(510495),
-    P = n(442078);
+    G = n(71228),
+    P = n(467935);
 function k(e) {
     let {
             channel: t,
@@ -61,7 +61,7 @@ function k(e) {
         Z = (0, r.bG)([b.default], () => b.default.getId()),
         ee = (0, r.bG)([j.A], () => (0, m.nr)(X, j.A), [X]),
         et = (0, c.m)(n, k ?? ee),
-        { enableHangStatus: en } = (0, g.$j)({ guildId: t.guild_id, location: "VoiceUserActivities" }),
+        { enableHangStatus: en } = (0, p.$j)({ guildId: t.guild_id, location: "VoiceUserActivities" }),
         ei = (0, I.m)({ location: "voice_channel_activities" }),
         el = (0, r.bG)([E.A], () => E.A.getDetectableIdsToApplicationIds()),
         es = (0, r.bG)([b.default], () => b.default.getId() === n.id && !q),
@@ -107,7 +107,7 @@ function k(e) {
                         : null,
                     null == X || null == w || ea
                         ? null
-                        : (0, i.jsx)(p.P, {
+                        : (0, i.jsx)(g.P, {
                               stream: X,
                               activeStream: $,
                               streamActivity: ee,

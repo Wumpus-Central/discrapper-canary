@@ -1,8 +1,8 @@
 n.d(t, { A: () => g });
 var i = n(627968),
-    a = n(64700),
-    l = n(503698),
-    r = n.n(l),
+    r = n(64700),
+    a = n(503698),
+    l = n.n(a),
     s = n(311907),
     o = n(397927),
     d = n(87664),
@@ -11,16 +11,16 @@ var i = n(627968),
     A = n(198525),
     h = n(652215),
     _ = n(985018),
-    m = n(446e3),
-    p = n(891408);
+    m = n(349661),
+    p = n(651099);
 let g = function (e) {
     let { quest: t } = e,
-        [n, l] = a.useState(!1),
-        g = a.useRef(null),
+        [n, a] = r.useState(!1),
+        g = r.useRef(null),
         E = (0, s.bG)([c.default], () => c.default.getCurrentUser()),
         I = u.Ay.useName(E),
         f = (0, d.A)(E?.id),
-        C = a.useCallback(
+        C = r.useCallback(
             (e) =>
                 (0, i.jsx)(A.A, {
                     name: I,
@@ -29,7 +29,7 @@ let g = function (e) {
                     applicationStream: f,
                     ...e,
                     closePopout: () => {
-                        l(!1);
+                        a(!1);
                     },
                 }),
             [t, f, I],
@@ -52,7 +52,7 @@ let g = function (e) {
                         renderPopout: C,
                         position: "bottom",
                         shouldShow: n,
-                        onRequestClose: () => l(!1),
+                        onRequestClose: () => a(!1),
                         nudgeAlignIntoViewport: !1,
                         useRawTargetDimensions: !0,
                         animation: o.YNO.Animation.NONE,
@@ -62,9 +62,9 @@ let g = function (e) {
                         children: () =>
                             (0, i.jsx)("div", {
                                 ref: g,
-                                className: r()(p.Tn, { [p.wH]: n }),
+                                className: l()(p.Tn, { [p.wH]: n }),
                                 children: (0, i.jsx)(o.DUT, {
-                                    onClick: () => l(!n),
+                                    onClick: () => a(!n),
                                     tabIndex: 0,
                                     children: (0, i.jsxs)("div", {
                                         className: p.lm,
