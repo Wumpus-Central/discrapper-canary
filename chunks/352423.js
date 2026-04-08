@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, { default: () => K }), n(323874), n(14289), n(35956), n(134528), n(947204);
+n.r(t), n.d(t, { default: () => Y }), n(323874), n(14289), n(35956), n(134528), n(947204);
 var r = n(607399),
     i = n(696292),
     s = n(73153),
@@ -23,60 +23,58 @@ var r = n(607399),
     y = n(21599),
     v = n(376943),
     N = n(22007),
-    C = n(807876),
-    R = n(971276),
-    O = n(545986),
-    b = n(976860),
-    D = n(788995),
-    L = n(556022);
+    C = n(971276),
+    R = n(545986),
+    O = n(976860),
+    b = n(788995),
+    D = n(556022);
 n(345953);
-var w = n(961350),
-    M = n(696451),
-    x = n(299091),
-    P = n(309010),
-    k = n(967198),
-    U = n(711014),
-    G = n(954571),
-    F = n(998218),
-    V = n(975807),
-    B = n(652215);
-n(758836);
-var H = n(654487);
-async function j(e, t, n) {
-    await s.h.dispatch({ type: "INVITE_MODAL_OPEN", invite: e, code: t, context: B.BRT.APP, invite_instance_id: n });
+var L = n(961350),
+    w = n(696451),
+    M = n(299091),
+    x = n(309010),
+    P = n(967198),
+    k = n(711014),
+    U = n(954571),
+    G = n(998218),
+    F = n(975807),
+    V = n(652215);
+async function B(e, t, n) {
+    await s.h.dispatch({ type: "INVITE_MODAL_OPEN", invite: e, code: t, context: V.BRT.APP, invite_instance_id: n });
 }
-async function Y(e, t) {
+async function H(e, t) {
     let n = (0, y._U)(e.code, t),
-        r = x.A.getInvite(e.code);
+        r = M.A.getInvite(e.code);
     if (null == r) {
         let { invite: t } = await o.Ay.resolveInvite(e.code, "Markdown Link", { inviteInstanceId: n });
         r = t;
     }
     if (null == r) return;
-    if (r.state === B.elq.EXPIRED || r.state === B.elq.BANNED || r.state === B.elq.ERROR)
-        return void (await j(r, e.code, n));
-    let i = U.Ay.getFlattenedGuildIds(),
+    if (r.state === V.elq.EXPIRED || r.state === V.elq.BANNED || r.state === V.elq.ERROR)
+        return void (await B(r, e.code, n));
+    let i = k.Ay.getFlattenedGuildIds(),
         s = r?.guild?.id,
         a = null != s && i.includes(s),
         l = !1;
     if (a && null != r.roles && r.roles.length > 0) {
-        let e = w.default.getId(),
-            t = M.Ay.getMember(s, e),
+        let e = L.default.getId(),
+            t = w.Ay.getMember(s, e),
             n = new Set(t?.roles ?? []);
         l = r.roles.some((e) => !n.has(e.id));
     }
-    a && !l ? o.Ay.transitionToInviteSync(r) : await j(r, e.code, n);
+    a && !l ? o.Ay.transitionToInviteSync(r) : await B(r, e.code, n);
 }
-let W = { skipExtensionCheck: void 0, analyticsLocations: [] };
-function K(e) {
+n(758836);
+let j = { skipExtensionCheck: void 0, analyticsLocations: [] };
+function Y(e) {
     let {
             skipExtensionCheck: t,
             analyticsLocations: s,
             messageId: o,
-        } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : W,
+        } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : j,
         y = (0, E.br)(e);
     if (null != y && (y.type === m.I.INVITE || y.type === m.I.EMBEDDED_ACTIVITY_INVITE))
-        return (e) => (e?.preventDefault(), Y(y, o), !0);
+        return (e) => (e?.preventDefault(), H(y, o), !0);
     if (
         null != y &&
         (y.type === m.I.APP_DIRECTORY_PROFILE ||
@@ -90,15 +88,15 @@ function K(e) {
                     y.type === m.I.APP_DIRECTORY_PROFILE || y.type === m.I.APP_DIRECTORY_STOREFRONT
                         ? { applicationId: i, skuId: void 0 }
                         : ((0, f.u)(i) ?? { applicationId: void 0, skuId: void 0 }),
-                o = k.A.getGuildId() ?? void 0;
+                o = P.A.getGuildId() ?? void 0;
             return (
                 null == s
-                    ? (0, V.A)(e)
-                    : (G.default.track(B.HAw.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
+                    ? (0, F.A)(e)
+                    : (U.default.track(V.HAw.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
                           application_id: s,
                           device_platform: r.Fr ? "mobile_web" : "desktop_web",
                           guild_id: o,
-                          channel_id: P.A.getChannelId(),
+                          channel_id: x.A.getChannelId(),
                       }),
                       n
                           .e("38042")
@@ -199,11 +197,11 @@ function K(e) {
                 !0
             );
         };
-    if (null != y && y.type === m.I.QUESTS_EMBED && (0, R.s)())
+    if (null != y && y.type === m.I.QUESTS_EMBED && (0, C.s)())
         return (e) => {
             let t, r;
             e?.preventDefault();
-            let { search: s } = F.A.toURLSafe(y.url) ?? {};
+            let { search: s } = G.A.toURLSafe(y.url) ?? {};
             if (null != s) {
                 let e = new URLSearchParams(s);
                 (t = e.get("sort") ?? void 0), (r = e.get("filter") ?? void 0);
@@ -223,18 +221,18 @@ function K(e) {
             if ((e?.preventDefault(), g.s.getConfig({ location: "coded_link" }).enabled))
                 return (0, A.A)({ source: "coded_link" }), !0;
         };
-    let { host: w, hostname: M, pathname: x, search: U, hash: j } = F.A.toURLSafe(e) ?? {},
-        K = F.A.isDiscordHostname(M ?? null) || F.A.isDiscordLocalhost(w ?? null, M ?? null);
-    if (K && (x?.startsWith("/application-directory") || x?.startsWith("/discovery/applications"))) {
-        let e = x.split("/"),
-            t = x?.startsWith("/discovery/applications"),
+    let { host: L, hostname: w, pathname: M, search: k, hash: B } = G.A.toURLSafe(e) ?? {},
+        Y = G.A.isDiscordHostname(w ?? null) || G.A.isDiscordLocalhost(L ?? null, w ?? null);
+    if (Y && (M?.startsWith("/application-directory") || M?.startsWith("/discovery/applications"))) {
+        let e = M.split("/"),
+            t = M?.startsWith("/discovery/applications"),
             r = e[t ? 3 : 2],
             i = "search" === r,
             s = t && "categories" === r && "featured" !== e[4];
         return (t) => {
             let r, a, o;
             if ((t?.preventDefault(), i)) {
-                let e = new URLSearchParams(U);
+                let e = new URLSearchParams(k);
                 (r = e.get("q") ?? void 0), (a = e.get("category_id") ?? void 0), (o = e.get("page") ?? void 0);
             } else s && (a = e[4]);
             return (
@@ -255,11 +253,11 @@ function K(e) {
             );
         };
     }
-    if (null != x && K && F.A.isAppRoute(x)) {
+    if (null != M && Y && G.A.isAppRoute(M)) {
         let e = { navigationReplace: !1, openChannel: !0 };
-        return null != U && (e.search = U), null != j && (e.hash = j), (t) => (t?.preventDefault(), (0, N.A)(x, e), !0);
+        return null != k && (e.search = k), null != B && (e.hash = B), (t) => (t?.preventDefault(), (0, N.A)(M, e), !0);
     }
-    if (null != x && K) {
+    if (null != M && Y) {
         let { getOAuth2AuthorizeProps: t, openOAuth2ModalWithCreateGuildModal: r } = n(200330),
             i = t(e);
         if (null != i)
@@ -267,45 +265,46 @@ function K(e) {
                 e?.preventDefault(),
                 null != y &&
                     y.type === m.I.APP_OAUTH2_LINK &&
-                    _.Ay.trackWithMetadata(B.HAw.APP_OAUTH2_LINK_EMBED_URL_CLICKED, { application_id: i.clientId }),
+                    _.Ay.trackWithMetadata(V.HAw.APP_OAUTH2_LINK_EMBED_URL_CLICKED, { application_id: i.clientId }),
                 r(i),
                 !0
             );
     }
-    let $ = (0, v.SK)(x);
-    if (null != x && K && null != $)
+    let W = (0, v.SK)(M);
+    if (null != M && Y && null != W)
         return (e) => {
             e?.preventDefault();
-            let t = k.A.getGuildId();
-            null != $.guildId && "" !== $.guildId && $.guildId !== t && (0, N.A)(B.BVt.CHANNEL($.guildId));
-            let n = T.Ay.getGuildScheduledEvent($.guildEventId);
+            let t = P.A.getGuildId();
+            null != W.guildId && "" !== W.guildId && W.guildId !== t && (0, N.A)(V.BVt.CHANNEL(W.guildId));
+            let n = T.Ay.getGuildScheduledEvent(W.guildEventId);
             return null != n && (0, I.uR)({ eventId: n.id }), !0;
         };
-    if (K && x?.startsWith("/settings/")) {
+    if (Y && M?.startsWith("/settings/")) {
         let { openUserSettings: e } = n(858897),
             { parseSettingsUrl: t, trackParseSettingsUrl: r } = n(718446);
         return (n) => {
             n?.preventDefault();
-            let i = t({ path: x, search: U });
+            let i = t({ path: M, search: k });
             return r(i, "link_click"), e(i.target, { analyticsLocations: s, path: i.path, searchParams: i.params }), !0;
         };
     }
-    if (K && x?.startsWith("/playground")) {
+    if (Y && M?.startsWith("/playground")) {
         let { parsePlaygroundUrl: e } = n(682492),
             { openPlayground: t } = n(965042),
-            { collection: r, story: i } = e(x);
+            { collection: r, story: i } = e(M);
         return (e) => (e?.preventDefault(), t(r, i), !0);
     }
-    return K && x?.startsWith("/discovery/quests")
-        ? (e) => (e?.preventDefault(), (0, O.navigateToQuestHome)({ fromContent: i.u.QUEST_BADGE }), !0)
-        : K && x?.startsWith("/quest-home")
-          ? (e) => (e?.preventDefault(), (0, b.pX)(B.BVt.QUEST_HOME + (U ?? "")), !0)
-          : K && x?.startsWith("/quest-preview")
-            ? (e) => {
-                  if ((e?.preventDefault(), (0, C.U)({ location: H.rE.NAVIGATE_TO_QUEST_HOME_UTIL })))
-                      return (0, b.pX)(B.BVt.QUEST_HOME + `?tab=preview_tool&quest_id=${x.split("/").at(-1)}`), !0;
-              }
-            : K && x?.startsWith("/discovery/servers")
+    return Y && M?.startsWith("/discovery/quests")
+        ? (e) => (e?.preventDefault(), (0, R.navigateToQuestHome)({ fromContent: i.u.QUEST_BADGE }), !0)
+        : Y && M?.startsWith("/quest-home")
+          ? (e) => (e?.preventDefault(), (0, O.pX)(V.BVt.QUEST_HOME + (k ?? "")), !0)
+          : Y && M?.startsWith("/quest-preview")
+            ? (e) => (
+                  e?.preventDefault(),
+                  (0, O.pX)(V.BVt.QUEST_HOME + `?tab=preview_tool&quest_id=${M.split("/").at(-1)}`),
+                  !0
+              )
+            : Y && M?.startsWith("/discovery/servers")
               ? (e) => (
                     e?.preventDefault(),
                     n
@@ -318,7 +317,7 @@ function K(e) {
                         }),
                     !0
                 )
-              : t || null == (0, L.m)(e)
+              : t || null == (0, D.m)(e)
                 ? void 0
-                : (t) => (t?.preventDefault(), D.A.show(e), !0);
+                : (t) => (t?.preventDefault(), b.A.show(e), !0);
 }
