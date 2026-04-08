@@ -9,7 +9,7 @@ var a = n(311907),
     d = n(622249),
     c = n(742710),
     u = n(192),
-    g = n(899149);
+    g = n(23024);
 function m(e) {
     let { games: t, user: n, widgetType: a, ...l } = e,
         { registerItemRef: r, manageFocusOnDelete: o } = (0, s.r)();

@@ -9,7 +9,7 @@ var r = s(627968),
     l = s(287809),
     d = s(464477),
     h = s(985018),
-    _ = s(19408);
+    _ = s(516967);
 let p = (e) => {
     let { image: t, label: s, text: n, children: i } = e;
     return (0, r.jsxs)("div", {

@@ -5,8 +5,8 @@ var l = n(397927),
     s = n(792831),
     a = n(226694),
     r = n(985018),
-    o = n(104333),
-    d = n(971519),
+    o = n(46570),
+    d = n(624042),
     c = n(578576);
 let u = (e) => {
     let t,
@@ -17,11 +17,11 @@ let u = (e) => {
             handleClearSearch: A,
             handleSearchKeyPress: _,
             handleCreateOrAddGuild: m,
-            searchResults: g,
-            searchFetching: p,
+            searchResults: p,
+            searchFetching: g,
         } = e;
-    if (p) t = (0, i.jsx)("div", { className: o.$$, children: (0, i.jsx)(l.y$y, { className: o.u1 }) });
-    else if (0 === g.length) {
+    if (g) t = (0, i.jsx)("div", { className: o.$$, children: (0, i.jsx)(l.y$y, { className: o.u1 }) });
+    else if (0 === p.length) {
         let e =
             null != m
                 ? r.intl.format(r.t.qWFupn, {
@@ -43,7 +43,7 @@ let u = (e) => {
                 (0, i.jsx)(l.Text, { variant: "text-md/normal", color: "text-default", className: d.av, children: e }),
             ],
         });
-    } else t = (0, i.jsx)("div", { className: o.vY, children: g.map((e) => (0, i.jsx)(a.A, { entry: e }, e.guildId)) });
+    } else t = (0, i.jsx)("div", { className: o.vY, children: p.map((e) => (0, i.jsx)(a.A, { entry: e }, e.guildId)) });
     return (0, i.jsx)("div", {
         className: o.$$,
         children: (0, i.jsxs)(l.ArX, {
@@ -63,7 +63,7 @@ let u = (e) => {
                                 (0, i.jsx)(l.Heading, {
                                     variant: "heading-xl/semibold",
                                     className: d.s7,
-                                    children: r.intl.format(r.t.UkOHRd, { numResults: g.length, query: h }),
+                                    children: r.intl.format(r.t.UkOHRd, { numResults: p.length, query: h }),
                                 }),
                             ],
                         }),

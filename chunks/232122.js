@@ -8,7 +8,7 @@ var r = n(627968),
     l = n(975571),
     u = n(652215),
     c = n(985018),
-    d = n(440263);
+    d = n(35682);
 let _ = [
     { getQuestion: () => c.intl.string(c.t.C4J8UB), getAnswer: () => c.intl.string(c.t.nhkk6k) },
     {

@@ -12,13 +12,13 @@ var i = n(627968),
     A = n(183555),
     _ = n(672385),
     m = n(950191),
-    g = n(249790),
-    p = n(946356),
+    p = n(249790),
+    g = n(946356),
     f = n(254828),
     x = n(783123),
     E = n(996988),
     I = n(985018),
-    C = n(38351),
+    C = n(914538),
     N = n(724693);
 function T(e) {
     let { user: t, channel: n, onHide: T } = e,
@@ -33,7 +33,7 @@ function T(e) {
         children: (0, i.jsx)(A.of, {
             value: j,
             isLoaded: S?.isLoaded,
-            children: (0, i.jsx)(p.A, {
+            children: (0, i.jsx)(g.A, {
                 ref: R,
                 user: t,
                 displayProfile: S,
@@ -50,7 +50,7 @@ function T(e) {
                                     (0, i.jsxs)("div", {
                                         className: C.N1,
                                         children: [
-                                            (0, i.jsx)(g.A, { user: t }),
+                                            (0, i.jsx)(p.A, { user: t }),
                                             (0, i.jsx)(r.Heading, {
                                                 variant: "heading-lg/bold",
                                                 children: I.intl.string(I.t.b33pLD),

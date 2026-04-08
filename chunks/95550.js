@@ -50,7 +50,7 @@ var i = n(627968),
     Z = n(652215),
     X = n(650583),
     Q = n(985018),
-    ee = n(94521);
+    ee = n(923710);
 let et = (0, v.Ld)(),
     en = (e) => {
         let { channel: t, onClose: n } = e,

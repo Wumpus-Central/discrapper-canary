@@ -20,7 +20,7 @@ var i = n(627968),
     S = n(219887),
     b = n(652215),
     E = n(985018),
-    C = n(538378);
+    C = n(7601);
 class N extends s.PureComponent {
     static defaultProps = { isEditing: !1, hideDivider: !1, onEditClick: () => {} };
     handleEditClick = () => {

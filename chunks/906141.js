@@ -12,8 +12,8 @@ var i = n(627968),
     A = n(9842),
     _ = n(253932),
     m = n(734057),
-    g = n(994500),
-    p = n(661191),
+    p = n(994500),
+    g = n(661191),
     f = n(988012),
     x = n(141468),
     E = n(694318),
@@ -33,8 +33,8 @@ var i = n(627968),
     D = n(888675),
     U = n(652215),
     G = n(985018),
-    P = n(213607),
-    k = n(480972);
+    P = n(790610),
+    k = n(10029);
 let w = l.memo(function e(t) {
     let n,
         {
@@ -59,8 +59,8 @@ let w = l.memo(function e(t) {
         q = _.hD.useSetting(),
         X = _.rs.useSetting(),
         $ = _.kt.useSetting(),
-        Q = (0, c.S)((s.editedTimestamp ?? s.timestamp).valueOf()),
-        J = (0, u.A)(l?.id),
+        J = (0, c.S)((s.editedTimestamp ?? s.timestamp).valueOf()),
+        Q = (0, u.A)(l?.id),
         { disableReactionCreates: Z } = (0, N.A)(l),
         {
             content: ee,
@@ -68,15 +68,15 @@ let w = l.memo(function e(t) {
             hasBailedAst: en,
         } = (0, v.A)(s, {
             hideSimpleEmbedContent: q && X,
-            allowList: Q,
-            allowHeading: Q,
+            allowList: J,
+            allowHeading: J,
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
         ei = (0, C.Ay)(s),
         el = (0, r.bG)(
             [m.A],
-            () => s.hasFlag(U.pr7.HAS_THREAD) && m.A.getChannel(p.default.castMessageIdAsChannelId(s.id)),
+            () => s.hasFlag(U.pr7.HAS_THREAD) && m.A.getChannel(g.default.castMessageIdAsChannelId(s.id)),
         ),
         es = s.type === U.lAJ.THREAD_STARTER_MESSAGE && K.state === A.a.LOADED && null != Y,
         ea = !es && void 0 === n,
@@ -87,9 +87,9 @@ let w = l.memo(function e(t) {
         eu = (0, S.fF)(s);
     return es
         ? (0, i.jsx)(e, { ...t, message: K.message, channel: Y, hasThread: !1 })
-        : (g.A.isBlockedForMessage(s)
+        : (p.A.isBlockedForMessage(s)
                 ? (n = G.t["+FcYM/"])
-                : g.A.isIgnoredForMessage(s)
+                : p.A.isIgnoredForMessage(s)
                   ? (n = G.t["VFWjc+"])
                   : (0, E.kf)(s) && F && (n = G.t.xfkfTK),
             void 0 !== n)
@@ -117,9 +117,9 @@ let w = l.memo(function e(t) {
                     renderEmbeds: X,
                     gifAutoPlay: $,
                     poll: ec,
-                    showListsAndHeaders: Q,
-                    showMaskedLinks: Q,
-                    shouldHideMediaOptions: J,
+                    showListsAndHeaders: J,
+                    showMaskedLinks: J,
+                    shouldHideMediaOptions: Q,
                     enabledContentHarmTypeFlags: eo,
                     ctaButtonType: ed,
                 }),

@@ -22,7 +22,7 @@ var a = n(627968),
     C = n(201805),
     y = n(818348),
     S = n(985018),
-    E = n(533029);
+    E = n(2912);
 function T(e) {
     let { quest: t, errorHints: n, transitionState: s, onClose: A, sourceQuestContent: T } = e,
         [I, k] = (0, i.useState)(n),

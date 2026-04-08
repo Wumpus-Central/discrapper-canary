@@ -11,11 +11,11 @@ var i = n(627968),
     g = n(823016),
     m = n(788593),
     x = n(858808),
-    f = n(685049),
+    f = n(907430),
     p = n(617086),
     h = n(985018),
-    _ = n(522500),
-    A = n(51631);
+    _ = n(496527),
+    A = n(303566);
 function I(e) {
     let { index: t, widgetType: n, game: l, coverImageUrl: s, gameName: r, children: o } = e,
         { manageFocusOnReorder: d } = (0, g.r)(),

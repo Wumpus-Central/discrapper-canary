@@ -6,7 +6,7 @@ var i = n(627968),
     a = n(443795),
     o = n(768349),
     d = n(985018),
-    c = n(772234);
+    c = n(71747);
 function u(e) {
     let { application: t, message: n, header: u, onClickContent: _, onView: m, guildId: h } = e,
         p = l.useMemo(

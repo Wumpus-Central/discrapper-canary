@@ -10,7 +10,7 @@ var i = n(627968),
     c = n(308072),
     u = n(298818),
     m = n(985018),
-    g = n(406228);
+    g = n(66903);
 function x(e) {
     let { gameApplicationIds: t, handleChange: n, disabled: s } = e,
         { options: l, matchSorterOptions: r } = (0, o.R)();

@@ -13,8 +13,8 @@ var i = n(627968),
     _ = n(562153),
     m = n(850457);
 n(281405);
-var g = n(985018),
-    p = n(77676);
+var p = n(985018),
+    g = n(803899);
 function f(e) {
     let { channel: t } = e,
         [s, f] = l.useState(!1),
@@ -41,7 +41,7 @@ function f(e) {
                             n.e("97262"),
                             n.e("42128"),
                             n.e("84841"),
-                            n.e("50970"),
+                            n.e("36382"),
                         ]).then(n.bind(n, 107632));
                         return (n) => (0, i.jsx)(e, { ...n, user: I, guildId: t.guild_id, channel: t });
                     });
@@ -68,7 +68,7 @@ function f(e) {
                   let { onClick: n, ...l } = e;
                   return (0, i.jsxs)(o.DUT, {
                       innerRef: x,
-                      className: p.nM,
+                      className: g.nM,
                       "aria-haspopup": "dialog",
                       onClick: b,
                       onContextMenu: S,
@@ -76,7 +76,7 @@ function f(e) {
                       onMouseLeave: v,
                       children: [
                           (0, i.jsxs)("div", {
-                              className: p.R3,
+                              className: g.R3,
                               children: [
                                   (0, i.jsx)(o.euF, {
                                       src: I.getAvatarURL(t.guild_id, 24),
@@ -85,20 +85,20 @@ function f(e) {
                                       status: o.clD.INVISIBLE,
                                       statusColor: "currentColor",
                                   }),
-                                  (0, i.jsx)(o.O4, { className: p.SM }),
+                                  (0, i.jsx)(o.O4, { className: g.SM }),
                               ],
                           }),
                           (0, i.jsx)(o.Text, {
                               variant: "text-sm/normal",
-                              className: p.Pf,
-                              children: g.intl.format(g.t.TlVwqn, {
+                              className: g.Pf,
+                              children: p.intl.format(p.t.TlVwqn, {
                                   user: C,
                                   userHook: (e, t) =>
                                       (0, i.jsx)(
                                           o.Text,
                                           {
                                               variant: "text-sm/semibold",
-                                              className: a()(p.Xh, T),
+                                              className: a()(g.Xh, T),
                                               color: "text-muted",
                                               children: e,
                                           },
@@ -109,7 +109,7 @@ function f(e) {
                                           o.Text,
                                           {
                                               variant: "text-sm/normal",
-                                              className: p.cp,
+                                              className: g.cp,
                                               color: "text-muted",
                                               children: e,
                                           },

@@ -1,4 +1,4 @@
-n.d(t, { L7: () => g, qA: () => f });
+n.d(t, { L7: () => p, qA: () => f });
 var i = n(627968),
     l = n(311907),
     s = n(397927),
@@ -9,13 +9,13 @@ var i = n(627968),
     c = n(115063),
     u = n(365258),
     h = n(704037),
-    A = n(536482),
+    A = n(730844),
     _ = n(985018),
-    m = n(830910);
-let g = () => {
+    m = n(33595);
+let p = () => {
     (0, o.openUserSettings)(r.X.ACTIVITY_PRIVACY_PANEL);
 };
-function p(e) {
+function g(e) {
     let { children: t, onClick: n } = e;
     return (0, i.jsxs)(s.DUT, {
         className: m.E1,
@@ -35,9 +35,9 @@ function f(e) {
         f = (0, u.AB)(m);
     return 0 === r.length
         ? null
-        : (0, i.jsxs)(p, {
+        : (0, i.jsxs)(g, {
               onClick: () => {
-                  t(), g();
+                  t(), p();
               },
               children: [
                   (0, i.jsx)(s.Text, {

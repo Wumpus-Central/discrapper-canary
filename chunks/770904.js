@@ -12,11 +12,11 @@ var i = n(627968),
     A = n(186111),
     _ = n(249584),
     m = n(652215),
-    g = n(746080),
-    p = n(49999),
-    f = n(294726),
+    p = n(746080),
+    g = n(49999),
+    f = n(738072),
     x = n(985018),
-    E = n(866153);
+    E = n(64668);
 let I = l.memo(function (e) {
     let { guildId: t, selected: n } = e,
         I = (0, r.useHasAnyModalOpen)(),
@@ -32,7 +32,7 @@ let I = l.memo(function (e) {
             [S, y],
         ),
         R = l.useCallback(() => {
-            j(p.i.USER_DISMISS), (0, h.pX)(m.BVt.CHANNEL(t, g.VV.GAME_SERVERS));
+            j(g.i.USER_DISMISS), (0, h.pX)(m.BVt.CHANNEL(t, p.VV.GAME_SERVERS));
         }, [t, j]),
         O = l.useRef(null),
         L = v === a.M.GAME_SERVER_HOSTING_NEW_COACHMARK,

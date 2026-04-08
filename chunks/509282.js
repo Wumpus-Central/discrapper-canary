@@ -25,7 +25,7 @@ var i = n(627968),
     y = n(652215),
     N = n(435220),
     S = n(985018),
-    j = n(518435);
+    j = n(252330);
 let L = (0, a.UT)([x.A, f.A, g.A], {
         getQueryId: y.fic.SKU,
         get: (e) => {
@@ -76,7 +76,7 @@ function P(e) {
     if (!r || null == c) return null;
     let L = () => {
         (0, o.mMO)(async () => {
-            let { default: e } = await Promise.all([n.e("33563"), n.e("7194")]).then(n.bind(n, 719847));
+            let { default: e } = await Promise.all([n.e("33563"), n.e("88596")]).then(n.bind(n, 719847));
             return (n) =>
                 (0, i.jsx)(e, { transitionState: n.transitionState, onClose: n.onClose, appId: t, guildId: g });
         });
@@ -133,7 +133,7 @@ function D(e) {
         k = !!w && (0, m.bg)(c.flags),
         O = () => {
             (0, o.mMO)(async () => {
-                let { default: e } = await Promise.all([n.e("33563"), n.e("7194")]).then(n.bind(n, 719847));
+                let { default: e } = await Promise.all([n.e("33563"), n.e("88596")]).then(n.bind(n, 719847));
                 return (t) =>
                     (0, i.jsx)(e, { transitionState: t.transitionState, onClose: t.onClose, appId: A.id, guildId: x });
             });

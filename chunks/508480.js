@@ -3,7 +3,7 @@ var i = n(627968),
     s = n(417597),
     l = n(775602),
     a = n(307973),
-    r = n(674247);
+    r = n(16164);
 let o = () => {
     let e = (0, s.bG)([l.A], () => l.A.useReducedMotion);
     return (0, i.jsx)(a.A, {

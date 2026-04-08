@@ -8,7 +8,7 @@ var n = t(627968),
     d = t(351906),
     c = t(652215),
     u = t(985018),
-    m = t(828950);
+    m = t(36755);
 function x(e) {
     let { autoFocus: l = !1, className: t, userId: x, onUpdate: p } = e,
         A = (0, s.bG)([d.A], () => d.A.hidePersonalInformation),

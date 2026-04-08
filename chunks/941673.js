@@ -31,7 +31,7 @@ var r = n(627968),
     L = n(806931),
     w = n(788868),
     M = n(985018),
-    x = n(170602);
+    x = n(24999);
 function P(e) {
     let t = (0, o.bG)([I.A], () => (I.A.isConnected() ? I.A.getChannelId() : null)),
         [n, r] = i.useState([]);

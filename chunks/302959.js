@@ -12,11 +12,11 @@ var i = n(627968),
     A = n(616356),
     _ = n(734057),
     m = n(71393),
-    g = n(977997),
-    p = n(954571),
+    p = n(977997),
+    g = n(954571),
     f = n(821589),
     x = n(652215),
-    E = n(78016);
+    E = n(650417);
 function I(e) {
     let { type: t, source: n, activity: l, applicationStream: s, user: a, guildId: r, channelId: d, onAction: c } = e;
     return (0, i.jsx)(o.A, {
@@ -43,14 +43,14 @@ let C = r.A.Types,
                 showChannelDetails: C = !1,
                 ...N
             } = e,
-            T = (0, s.bG)([g.A, _.A], () => _.A.getChannel(g.A.getVoiceStateForUser(n.id)?.channelId)),
+            T = (0, s.bG)([p.A, _.A], () => _.A.getChannel(p.A.getVoiceStateForUser(n.id)?.channelId)),
             S = (0, u.v)("UserActivityContainer", T),
             b = (0, s.bG)([A.A], () => (o ? A.A.getAnyStreamForUser(n.id) : null)),
             v = t?.type === x.$pd.HANG_STATUS && S ? T : null,
-            y = (0, s.bG)([m.A, g.A, _.A], () =>
+            y = (0, s.bG)([m.A, p.A, _.A], () =>
                 (0, a.A)(t, x.jUm.EMBEDDED)
                     ? m.A.getGuild(
-                          _.A.getChannel(g.A.getVoiceStateForSession(n.id, t?.session_id)?.channelId)?.getGuildId(),
+                          _.A.getChannel(p.A.getVoiceStateForSession(n.id, t?.session_id)?.channelId)?.getGuildId(),
                       )
                     : null != v
                       ? m.A.getGuild(v.getGuildId())
@@ -66,7 +66,7 @@ let C = r.A.Types,
         return (l.useEffect(() => {
             t?.type === x.$pd.HANG_STATUS &&
                 S &&
-                p.default.track(x.HAw.VIEW_HANG_STATUS, {
+                g.default.track(x.HAw.VIEW_HANG_STATUS, {
                     source: "UserActivity",
                     other_user_id: n.id,
                     ...(0, c.A)(v?.id),

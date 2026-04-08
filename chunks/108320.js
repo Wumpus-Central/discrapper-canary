@@ -1,18 +1,14 @@
-"use strict";
-e.exports = {
-    JC: "role_af3987",
-    m4: "roleDot_af3987",
-    AP: "connectionRoleIcon_af3987",
-    UT: "roleIcon_af3987",
-    b6: "roleTag_af3987",
-    nO: "hasRemoveButton_af3987",
-    DT: "removeButton_af3987",
-    MR: "roleListContainer_af3987",
-    JK: "listContentsInteractive_af3987",
-    nt: "listContentsStatic_af3987",
-    S3: "roleName_af3987",
-    s6: "pillButton_af3987 role_af3987",
-    X1: "expandButton_af3987",
-    c9: "addButton_af3987",
-    MS: "showLabel_af3987",
-};
+n.d(t, { w: () => c });
+var i = n(419954),
+    s = n(780964),
+    l = n(391917),
+    a = n(492606),
+    r = n(22539),
+    o = n(779595),
+    d = n(3123);
+let c = (0, i.zZ)(s.X.WINDOWS_CATEGORY, {
+    buildLayout: () => [l.P, o.N, a.y, d.V],
+    initialize: () => {
+        (0, r._s)();
+    },
+});

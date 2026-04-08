@@ -13,7 +13,7 @@ var i = n(627968),
     p = n(592598),
     f = n(672396),
     A = n(652215),
-    _ = n(975455);
+    _ = n(84616);
 function g(e) {
     let { locked: t, keybind: n } = e,
         a = s.useRef(null),

@@ -6,7 +6,7 @@ var a = n(627968),
     s = n(769015),
     o = n(287809),
     c = n(486020),
-    d = n(998518);
+    d = n(52653);
 let u = i.memo(function (e) {
     let { application: t } = e,
         n = (0, l.bG)([o.default], () => o.default.getCurrentUser()),

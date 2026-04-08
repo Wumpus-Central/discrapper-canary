@@ -9,7 +9,7 @@ var r = n(627968),
     u = n(70142),
     c = n(825755),
     d = n(985018),
-    _ = n(207382);
+    _ = n(98005);
 class f extends i.PureComponent {
     componentDidMount() {
         null != this.props.venmoClient && o.fB();

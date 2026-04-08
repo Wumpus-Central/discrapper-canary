@@ -21,7 +21,7 @@ var n = r(627968),
     T = r(768570),
     I = r(652215),
     m = r(985018),
-    L = r(10691);
+    L = r(158008);
 let x = [];
 function C(e) {
     let { resultsState: t, searchContext: r, selectedChannel: C, setSearchQuery: N } = e,

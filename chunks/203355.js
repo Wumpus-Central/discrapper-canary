@@ -37,7 +37,7 @@ var i = n(627968),
     U = n(806931),
     G = n(731854),
     F = n(985018),
-    B = n(633916);
+    B = n(32685);
 let H = new g.A("StreamTile");
 function V(e) {
     let { participant: t, selected: n, focused: l, idle: s, width: a, premiumIndicator: o } = e,

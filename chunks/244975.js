@@ -12,8 +12,8 @@ var i = n(627968),
     A = n(688810),
     _ = n(611371),
     m = n(721923),
-    g = n(954571),
-    p = n(927578),
+    p = n(954571),
+    g = n(927578),
     f = n(560138),
     x = n(422936),
     E = n(234419),
@@ -25,7 +25,7 @@ var i = n(627968),
     b = n(788868),
     v = n(652215),
     y = n(985018),
-    j = n(790344),
+    j = n(49729),
     R = n(669149);
 function O(e) {
     let {
@@ -54,8 +54,8 @@ function O(e) {
             showNewBadge: q = !1,
             showBetaBadge: X = !1,
             enableArtBoxShadow: $ = !0,
-            subscriptionTier: Q = b.pe.TIER_2,
-            isLoading: J = !1,
+            subscriptionTier: J = b.pe.TIER_2,
+            isLoading: Q = !1,
             hideBackButton: Z,
             backButtonText: ee,
             showEnhancedUpsell: et,
@@ -72,38 +72,38 @@ function O(e) {
         eu = null != s,
         eh = (0, E.V)(),
         eA = (0, x.O)(),
-        e_ = !el && (eh?.subscription_trial?.sku_id === Q || (0, N.U9)(eA, Q)) && !eu,
+        e_ = !el && (eh?.subscription_trial?.sku_id === J || (0, N.U9)(eA, J)) && !eu,
         { analyticsLocations: em } = (0, A.Ay)(h.A.PREMIUM_UPSELL_MODAL),
-        eg = { analyticsLocation: C, analyticsLocations: em, analyticsSource: r, guildBoostProps: s, type: n },
-        ep = l.useRef(eg);
+        ep = { analyticsLocation: C, analyticsLocations: em, analyticsSource: r, guildBoostProps: s, type: n },
+        eg = l.useRef(ep);
     l.useEffect(() => {
-        ep.current = eg;
+        eg.current = ep;
     }),
         l.useEffect(() => {
-            if (J) return;
+            if (Q) return;
             let {
                 analyticsLocation: e,
                 analyticsLocations: t,
                 analyticsSource: n,
                 guildBoostProps: i,
                 type: l,
-            } = ep.current;
+            } = eg.current;
             eu
-                ? g.default.track(v.HAw.PREMIUM_GUILD_UPSELL_VIEWED, {
+                ? p.default.track(v.HAw.PREMIUM_GUILD_UPSELL_VIEWED, {
                       type: `${l} - Tier ${i?.boostedGuildTier}`,
                       guild_id: i?.guild.id,
                       channel_id: i?.channelId,
                       location: e,
                       location_stack: t,
                   })
-                : g.default.track(v.HAw.PREMIUM_UPSELL_VIEWED, {
+                : p.default.track(v.HAw.PREMIUM_UPSELL_VIEWED, {
                       type: l,
                       source: n,
                       location: e,
                       location_stack: t,
-                      sku_id: (0, p.mH)(Q),
+                      sku_id: (0, g.mH)(J),
                   });
-        }, [eu, Q, J]);
+        }, [eu, J, Q]);
     let ef = (0, o.bG)([f.A], () => f.A.affinities),
         ex =
             ef.length > 1 &&
@@ -145,7 +145,7 @@ function O(e) {
                     "data-migration-pending": !0,
                     scrollbarType: "none",
                     className: a()(et ? j.es : j.Qs, !e_ && U),
-                    children: J
+                    children: Q
                         ? (0, i.jsx)(c.y$y, {})
                         : e_
                           ? (0, i.jsx)(T.Ay, {
@@ -208,7 +208,7 @@ function O(e) {
                                     return (
                                         e_ &&
                                             (null != eh
-                                                ? (e = (0, p.FY)({
+                                                ? (e = (0, g.FY)({
                                                       intervalType: eh?.subscription_trial?.interval,
                                                       intervalCount: eh?.subscription_trial?.interval_count,
                                                   }))
@@ -220,7 +220,7 @@ function O(e) {
                                             className: ei,
                                             showGradient: et || en,
                                             premiumModalAnalyticsLocation: C,
-                                            subscriptionTier: Q,
+                                            subscriptionTier: J,
                                             size: d.$n.Sizes.SMALL,
                                             color: et || en ? d.$n.Colors.CUSTOM : d.$n.Colors.GREEN,
                                             onClick: () => {
@@ -264,21 +264,21 @@ function L(e) {
             subscriptionTier: _ = b.pe.TIER_2,
             hidePremiumOfferUpsell: m,
         } = e,
-        g = (0, E.V)(),
+        p = (0, E.V)(),
         f = (0, x.O)(),
-        I = !m && (g?.subscription_trial?.sku_id === _ || (0, N.U9)(f, _)) && null == a,
+        I = !m && (p?.subscription_trial?.sku_id === _ || (0, N.U9)(f, _)) && null == a,
         T = y.intl.string(y.t.pj0XBN);
     I &&
-        (null != g
-            ? (T = (0, p.FY)({
-                  intervalType: g?.subscription_trial?.interval,
-                  intervalCount: g?.subscription_trial?.interval_count,
+        (null != p
+            ? (T = (0, g.FY)({
+                  intervalType: p?.subscription_trial?.interval,
+                  intervalCount: p?.subscription_trial?.interval_count,
               }))
             : null != f && (T = y.intl.formatToPlainString(y.t.bkQ4bH, { percent: f.discount.amount })));
     let S = null;
     return (
         h ? (S = "new") : A && (S = "beta"),
-        null != g && (S = "free_trial"),
+        null != p && (S = "free_trial"),
         (0, i.jsx)(C.A, {
             subscriptionTier: _,
             children: (e) => {

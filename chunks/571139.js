@@ -13,20 +13,20 @@ var l = n(503698),
     A = n(624458),
     _ = n(202384),
     m = n(513461),
-    g = n(709977),
-    p = n(212455),
+    p = n(709977),
+    g = n(212455),
     f = n(652215),
     x = n(746080),
     E = n(985018),
-    I = n(79790),
-    C = n(215433);
+    I = n(610749),
+    C = n(375986);
 let N = () => {
     let e = (0, r.bG)([h.A], () => h.A.getGuildId(), []),
         t = (0, r.bG)([u.A], () => u.A.getGuild(e), [e]),
-        l = (0, r.bG)([p.A], () => (null != e ? p.A.getRequest(e) : null), [e]),
+        l = (0, r.bG)([g.A], () => (null != e ? g.A.getRequest(e) : null), [e]),
         N = (0, a.zy)(),
         T = (0, c.B)(N.pathname, f.BVt.CHANNEL(t?.id, x.VV.GUILD_ONBOARDING))?.isExact === !0;
-    if (null == t || !(0, g.Qd)(t) || T) return null;
+    if (null == t || !(0, p.Qd)(t) || T) return null;
     let S = l?.applicationStatus ?? m.B5.STARTED,
         b = null,
         v = null,

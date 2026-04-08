@@ -26,8 +26,8 @@ var i = n(627968),
     b = n(927573),
     v = n(652215),
     S = n(985018),
-    y = n(841707),
-    R = n(407759);
+    y = n(2308),
+    R = n(177424);
 async function O(e, t, n) {
     let s = e.roles.filter((e) => e !== n);
     try {
@@ -86,7 +86,7 @@ function G(e) {
         let s = p.default.getUser(t.id);
         null != s &&
             (0, u.L3)(e, async () => {
-                let { default: e } = await Promise.all([n.e("97262"), n.e("91042"), n.e("2646")]).then(
+                let { default: e } = await Promise.all([n.e("97262"), n.e("91042"), n.e("64268")]).then(
                     n.bind(n, 365689),
                 );
                 return (t) => (0, i.jsx)(e, { ...t, user: s, guildId: l, showChatItems: !1 });

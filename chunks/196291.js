@@ -33,7 +33,7 @@ var i = n(627968),
     D = n(788868),
     G = n(355097),
     M = n(985018),
-    U = n(686294);
+    U = n(63261);
 function k(e) {
     let { user: t, isVisible: n, shouldShow: k } = e,
         w = E.Ay.isPremium(t),

@@ -12,8 +12,8 @@ var i = n(627968),
     A = n(104171),
     _ = n(47167),
     m = n(713654),
-    g = n(427930),
-    p = n(427209),
+    p = n(427930),
+    g = n(427209),
     f = n(763754),
     x = n(291812),
     E = n(449859),
@@ -34,22 +34,22 @@ var i = n(627968),
     U = n(559873),
     G = n(346061),
     P = n(652215),
-    k = n(228160),
+    k = n(21786),
     w = n(985018),
-    B = n(68450);
+    B = n(487397);
 function V(e) {
     let { message: t, channel: n, focusProps: s, isSelected: r, isUnread: o, groupedMessages: h } = e,
         A = n.type === P.rbe.UNKNOWN ? u.N$i : (0, m.gU)(n, null),
-        g = (0, _.Ay)(n, !1),
-        p = (0, d.bG)([R.A], () => R.A.getGuild(n.getGuildId())),
+        p = (0, _.Ay)(n, !1),
+        g = (0, d.bG)([R.A], () => R.A.getGuild(n.getGuildId())),
         { nick: x, colorString: E } = (0, f.Ay)(t),
         { avatarSrc: N, eventHandlers: T } = (0, S.A)({
             userId: t.author.id,
             size: u._3J.SIZE_32,
-            guildId: p?.id,
+            guildId: g?.id,
             animateOnHover: !0,
         }),
-        b = n.type !== P.rbe.GUILD_ANNOUNCEMENT || null == p,
+        b = n.type !== P.rbe.GUILD_ANNOUNCEMENT || null == g,
         y = (0, I.y)({ channel: n, message: t, user: t.author, compact: !0, isRepliedMessage: !0 }),
         O = (0, i.jsx)("div", {
             className: B.Ys,
@@ -58,8 +58,8 @@ function V(e) {
         });
     return (
         (0, l.useEffect)(() => {
-            null != p && j.A.requestMember(p.id, t.author.id);
-        }, [p, t.author.id]),
+            null != g && j.A.requestMember(g.id, t.author.id);
+        }, [g, t.author.id]),
         (0, i.jsx)(u.vN3, {
             ...s,
             children: (0, i.jsxs)("div", {
@@ -76,15 +76,15 @@ function V(e) {
                                   "aria-label": "User Avatar",
                                   src: N,
                                   size: u._3J.SIZE_32,
-                                  cornerIconUrl: null != p ? (0, v.Iv)(p, 24) : void 0,
+                                  cornerIconUrl: null != g ? (0, v.Iv)(g, 24) : void 0,
                                   cornerIconOffsetX: 4,
                                   cornerIconOffsetY: 3,
                               })
                             : (0, i.jsx)(G.h, {
                                   "aria-label": "Guild Icon",
-                                  src: (0, v.Iv)(p, 32),
+                                  src: (0, v.Iv)(g, 32),
                                   size: u._3J.SIZE_32,
-                                  cornerIconUrl: t.author.getAvatarURL(p.id, 24),
+                                  cornerIconUrl: t.author.getAvatarURL(g.id, 24),
                                   cornerIconOffsetX: 4,
                                   cornerIconOffsetY: 3,
                               }),
@@ -115,7 +115,7 @@ function V(e) {
                                                   variant: "text-md/semibold",
                                                   style: { color: E ?? void 0 },
                                                   className: B.Xh,
-                                                  children: p.name,
+                                                  children: g.name,
                                               }),
                                           }),
                                     (0, i.jsxs)(u.BJc, {
@@ -144,7 +144,7 @@ function V(e) {
                                         variant: "text-sm/medium",
                                         lineClamp: 1,
                                         className: a()(B.HA, { [B.gy]: o, [B.wH]: r }),
-                                        children: [g, !b && ` \xb7 ${x}`],
+                                        children: [p, !b && ` \xb7 ${x}`],
                                     }),
                                 ],
                             }),
@@ -211,7 +211,7 @@ function W(e) {
                     l = "" === t.content,
                     o = t.embeds.some((e) => e.type === P.Auw.GIFV),
                     d = ((e = t.embeds.some((e) => e.type === P.Auw.GIFV)), t.attachments.length + +!!e),
-                    c = (0, g.A)(t),
+                    c = (0, p.A)(t),
                     h = t.stickerItems.length > 0,
                     A = t.isPoll(),
                     _ = t.type === P.lAJ.POLL_RESULT,
@@ -223,7 +223,7 @@ function W(e) {
                     : d > 1
                       ? (E = u.sYc)
                       : c
-                        ? (E = p.A)
+                        ? (E = g.A)
                         : A || _
                           ? (E = u.YRe)
                           : h
@@ -297,21 +297,21 @@ let K = (0, l.memo)(
                           name: w.intl.string(w.t.J90oLW),
                       });
             }),
-            g = (0, D.s)((e) => e.isMenuOpenForMessage(c?.id ?? null)),
-            { notificationCenterVariant: p } = (0, O.X8)({ location: "NotificationsInboxMessageUnit" }),
+            p = (0, D.s)((e) => e.isMenuOpenForMessage(c?.id ?? null)),
+            { notificationCenterVariant: g } = (0, O.X8)({ location: "NotificationsInboxMessageUnit" }),
             f = l.useMemo(() => `${c?.author.username}: ${m?.name}`, [c?.author.username, m?.name]),
             x = s?.map((e) => e.message).filter((e) => null != e) ?? [];
         return null == c || null == m
             ? null
             : (0, i.jsx)(u.sqX, {
                   "aria-label": f,
-                  className: a()(B.FJ, { [B.wH]: c.id === _.messageId, [B.Yj]: g }),
+                  className: a()(B.FJ, { [B.wH]: c.id === _.messageId, [B.Yj]: p }),
                   onClick: () => {
                       L.A.inboxItemClick({
                           message: c,
                           channel: m,
                           isUnread: r,
-                          isSidebar: p === O.U5.SIDEBAR,
+                          isSidebar: g === O.U5.SIDEBAR,
                           viewId: A,
                       });
                   },

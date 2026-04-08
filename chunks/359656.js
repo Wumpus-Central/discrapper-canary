@@ -5,13 +5,13 @@ var i = n(627968),
     a = n.n(s),
     r = n(397927),
     o = n(183555),
-    d = n(75415);
+    d = n(266348);
 function c(e) {
     let { section: t, header: n, items: s, listClassName: c, onExpand: u } = e,
         { trackUserProfileAction: h } = (0, o.NJ)(),
         A = l.useId(),
         [_, m] = l.useState(!1),
-        g = _ ? r.abt : r._BQ;
+        p = _ ? r.abt : r._BQ;
     return (0, i.jsxs)("section", {
         className: d.uW,
         children: [
@@ -28,7 +28,7 @@ function c(e) {
                         color: "text-default",
                         children: [n, " — ", s.length],
                     }),
-                    (0, i.jsx)(g, { size: "md" }),
+                    (0, i.jsx)(p, { size: "md" }),
                 ],
             }),
             s.length > 0 && (0, i.jsx)("ul", { id: A, hidden: !_, className: a()(d.p_, c), children: s }),

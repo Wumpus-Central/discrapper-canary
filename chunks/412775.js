@@ -20,7 +20,7 @@ var a = t(311907),
     x = t(928223),
     v = t(518477),
     E = t(985018),
-    b = t(824860);
+    b = t(47049);
 function C(e) {
     let { user: n, displayProfile: t, onClose: C } = e,
         { trackUserProfileAction: y } = (0, u.NJ)(),

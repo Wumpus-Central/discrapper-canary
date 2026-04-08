@@ -4,7 +4,7 @@ var a = n(627968),
     s = n(843282),
     l = n(397927),
     r = n(927813),
-    o = n(512134);
+    o = n(49329);
 let d = [
         { value: 1, label: "Stream Desktop" },
         { value: 0, label: "Play Desktop" },

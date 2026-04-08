@@ -12,7 +12,7 @@ var i = n(627968),
     g = n(736455),
     _ = n(876587),
     x = n(985018),
-    A = n(320519);
+    A = n(69894);
 let h = (e) => {
     let { navBarSections: t, activeSectionId: n } = e,
         h = {

@@ -12,16 +12,16 @@ var i = n(627968),
     A = n(888697),
     _ = n(581007),
     m = n(522435),
-    g = n(493819),
-    p = n(722884),
-    f = n(148690),
+    p = n(493819),
+    g = n(722884),
+    f = n(924804),
     x = n(985018),
-    E = n(591454);
+    E = n(73131);
 function I(e) {
     let { channel: t, imageUrl: n, isConnected: s } = e,
         r = (0, h.S)(n),
         c = l.useCallback(() => {
-            (0, p.A)({ channel: t });
+            (0, g.A)({ channel: t });
         }, [t]),
         _ = l.useCallback(() => {
             (0, A.e)(t.id);
@@ -37,13 +37,13 @@ function I(e) {
                 ? (0, i.jsx)("div", {
                       className: E.ZS,
                       style: I,
-                      children: (0, i.jsx)(g.A, { src: n, className: E.Sl }),
+                      children: (0, i.jsx)(p.A, { src: n, className: E.Sl }),
                   })
                 : (0, i.jsx)(d.DUT, {
                       className: a()(E.ZS, E.jI),
                       style: I,
                       onClick: m,
-                      children: (0, i.jsx)(g.A, { src: n, className: E.Sl }),
+                      children: (0, i.jsx)(p.A, { src: n, className: E.Sl }),
                   }),
             s
                 ? (0, i.jsxs)("div", {
@@ -74,7 +74,7 @@ function I(e) {
 function C(e) {
     let { channel: t } = e,
         n = l.useCallback(() => {
-            (0, p.A)({ channel: t });
+            (0, g.A)({ channel: t });
         }, [t]);
     return (0, i.jsx)("div", {
         className: E._o,

@@ -12,8 +12,8 @@ var i = n(627968),
     A = n(157559),
     _ = n(827343),
     m = n(830215),
-    g = n(503703),
-    p = n(912851),
+    p = n(503703),
+    g = n(912851),
     f = n(169604),
     x = n(956793),
     E = n(785796),
@@ -30,7 +30,7 @@ var i = n(627968),
     O = n(235986),
     L = n(420216),
     M = n(984870),
-    D = n(626262),
+    D = n(403881),
     U = n(813803),
     G = n(487329),
     P = n(102609),
@@ -47,8 +47,8 @@ var i = n(627968),
     q = n(598733),
     X = n(801644),
     $ = n(74848),
-    Q = n(4630),
-    J = n(532794),
+    J = n(4630),
+    Q = n(532794),
     Z = n(234419),
     ee = n(532423),
     et = n(814249),
@@ -66,8 +66,8 @@ var i = n(627968),
     eA = n(383501),
     e_ = n(967198),
     em = n(287809),
-    eg = n(67480),
-    ep = n(147964),
+    ep = n(67480),
+    eg = n(147964),
     ef = n(519057),
     ex = n(954571),
     eE = n(975571),
@@ -78,7 +78,7 @@ var i = n(627968),
     eS = n(831502),
     eb = n(731854),
     ev = n(985018),
-    ey = n(381703);
+    ey = n(571655);
 let ej = (e) => {
         let { error: t, allowClick: n = !1 } = e,
             l = (0, G.B1)(t)?.errorCode,
@@ -176,7 +176,7 @@ function eL(e) {
     );
 }
 function eM(e) {
-    p.A.dismiss(null != e ? { untilAtLeast: a()(e) } : void 0);
+    g.A.dismiss(null != e ? { untilAtLeast: a()(e) } : void 0);
 }
 let eD = l.memo(function () {
     let e = (0, c.bG)([em.default], () => em.default.getCurrentUser()),
@@ -185,23 +185,23 @@ let eD = l.memo(function () {
         { analyticsLocations: a } = (0, y.Ay)(),
         o = (0, T.Ay)(),
         d = (0, F.H)(t),
-        p = (0, Z.V)();
+        g = (0, Z.V)();
     if (
         (l.useEffect(() => {
             if (s?.type != null) {
                 let e;
                 if (
-                    null == p &&
+                    null == g &&
                     (s.type === eC.kqX.PREMIUM_TIER_2_TRIAL_ENDING || s.type === eC.kqX.PREMIUM_TIER_0_TRIAL_ENDING)
                 )
                     return;
                 let n = {};
                 null != t && (n.guild_id = t),
-                    p?.trial_id != null && (n.trial_id = p.trial_id),
+                    g?.trial_id != null && (n.trial_id = g.trial_id),
                     (e = { notice_type: s.type, ...n }),
                     ex.default.track(eC.HAw.APP_NOTICE_VIEWED, e);
             }
-        }, [s?.type, t, p]),
+        }, [s?.type, t, g]),
         l.useEffect(() => {
             if (null != s && s.type === eC.kqX.SURVEY && null != s.metadata) {
                 let { metadata: e } = s,
@@ -489,7 +489,7 @@ let eD = l.memo(function () {
         case eC.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
             if (null == s.metadata) return null;
             let { skuId: eG, applicationId: eP } = s.metadata,
-                ek = eg.A.get(eG),
+                ek = ep.A.get(eG),
                 ew = j.A.getApplication(eP);
             if (null == ek || null == ew) return null;
             let eB = { page: eC.liQ.IN_APP };
@@ -497,7 +497,7 @@ let eD = l.memo(function () {
                 color: h.Hv$.PREMIUM_TIER_1,
                 children: [
                     (0, i.jsx)(h.PMB, {
-                        onClick: () => g.X(ek.id),
+                        onClick: () => p.X(ek.id),
                         noticeType: eC.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK,
                     }),
                     (0, i.jsx)(h.tvc, { size: "md", color: "currentColor", className: ey.PC }),
@@ -505,11 +505,11 @@ let eD = l.memo(function () {
                     (0, i.jsx)(h.Z_L, {
                         noticeType: eC.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK,
                         onClick: () =>
-                            (0, Q.j)({
+                            (0, J.j)({
                                 applicationId: ew.id,
                                 skuId: ek.id,
                                 openPremiumPaymentModal: () => {
-                                    (0, J.A)({
+                                    (0, Q.A)({
                                         initialPlanId: null,
                                         subscriptionTier: eT.pe.TIER_2,
                                         analyticsLocations: a,
@@ -519,7 +519,7 @@ let eD = l.memo(function () {
                                 analyticsLocations: a,
                                 analyticsLocationObject: eB,
                                 context: __OVERLAY__ ? eC.BRT.OVERLAY : eC.BRT.APP,
-                            }).then(() => g.X(ek.id)),
+                            }).then(() => p.X(ek.id)),
                         children: ev.intl.string(ev.t.KEwPYx),
                     }),
                 ],
@@ -527,7 +527,7 @@ let eD = l.memo(function () {
         case eC.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL: {
             if (null == s.metadata) return null;
             let { skuId: e, applicationId: t } = s.metadata,
-                n = eg.A.get(e),
+                n = ep.A.get(e),
                 l = j.A.getApplication(t);
             if (null == n || null == l) return null;
             return (0, i.jsxs)(h.$Td, {
@@ -652,7 +652,7 @@ let eD = l.memo(function () {
             });
         case eC.kqX.APPLICATION_TEST_MODE:
             if (null == s.metadata) return null;
-            if (null != ep.A.testModeEmbeddedApplicationId)
+            if (null != eg.A.testModeEmbeddedApplicationId)
                 return (0, i.jsx)(h.$Td, {
                     color: h.Hv$.WARNING,
                     children: (0, i.jsxs)(O.A, {
@@ -713,7 +713,7 @@ let eD = l.memo(function () {
                                         n.e("41353"),
                                         n.e("62175"),
                                         n.e("14704"),
-                                        n.e("2550"),
+                                        n.e("99590"),
                                     ]).then(n.bind(n, 174705));
                                     return (t) =>
                                         (0, i.jsx)(e, {

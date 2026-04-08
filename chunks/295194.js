@@ -7,8 +7,8 @@ var i = n(627968),
     o = n(73473),
     d = n(327247),
     c = n(867461),
-    u = n(917332),
-    _ = n(78409);
+    u = n(217885),
+    _ = n(720450);
 function m(e) {
     let { quest: t, location: n, questContentPosition: s, sourceQuestContent: m } = e,
         [h, p] = l.useState(!1),

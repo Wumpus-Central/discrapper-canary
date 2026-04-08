@@ -28,7 +28,7 @@ var i = n(627968),
     j = n(183802),
     L = n(652215),
     R = n(985018),
-    P = n(23542);
+    P = n(336135);
 function D(e) {
     let { sku: t, normalPrice: n, discountedPrice: s, discountPercent: o } = e,
         d = l.useMemo(

@@ -18,8 +18,8 @@ var a = n(627968),
     v = n(954506),
     A = n(652215),
     j = n(985018),
-    E = n(95225),
-    b = n(782691);
+    E = n(576404),
+    b = n(830684);
 function I(e, t) {
     return m.A.parse(e, !0, { allowHeading: !0, allowList: !0, allowLinks: !0, channelId: t });
 }

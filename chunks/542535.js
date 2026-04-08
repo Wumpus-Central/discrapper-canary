@@ -34,7 +34,7 @@ var r = n(627968),
     x = n(788868),
     P = n(854232),
     k = n(985018),
-    U = n(232972);
+    U = n(26985);
 let G = (e) => {
     let { badge: t, tieredTenureBadge: n } = e;
     return void 0 !== n && t.id !== P.K ? (0, r.jsx)(h.A, { profileBadge: t, tenureBadge: n }) : t.description;

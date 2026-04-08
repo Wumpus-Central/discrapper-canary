@@ -13,8 +13,8 @@ var l = n(311907),
     A = n(508654),
     _ = n(974930),
     m = n(47868),
-    g = n(985018),
-    p = n(275237);
+    p = n(985018),
+    g = n(537512);
 function f(e) {
     let { channelId: t, showDismiss: f = !0 } = e,
         x = (0, l.bG)([o.A], () => o.A.getChannel(t), [t]),
@@ -34,8 +34,8 @@ function f(e) {
                       {
                           icon: (0, i.jsx)(a.CTc, { size: "custom", color: "currentColor", height: 20, width: 20 }),
                           color: s.A.unsafe_rawColors.GREEN_360.css,
-                          title: g.intl.formatToPlainString(C(e) ? g.t["1vGXqM"] : g.t.xMJyla, { eventName: e.name }),
-                          description: g.intl.formatToPlainString(g.t.PTebCR, {
+                          title: p.intl.formatToPlainString(C(e) ? p.t["1vGXqM"] : p.t.xMJyla, { eventName: e.name }),
+                          description: p.intl.formatToPlainString(p.t.PTebCR, {
                               startTime: (0, _.CC)(e.scheduled_start_time).startDateTimeString,
                           }),
                           onClick: () => {
@@ -44,7 +44,7 @@ function f(e) {
                                         let { default: t } = await Promise.all([
                                             n.e("51354"),
                                             n.e("77223"),
-                                            n.e("93676"),
+                                            n.e("953"),
                                         ]).then(n.bind(n, 199226));
                                         return (n) => (0, i.jsx)(t, { ...n, event: e });
                                     })
@@ -57,7 +57,7 @@ function f(e) {
                                 }
                               : void 0,
                           userCount: T[e.id],
-                          className: p.f,
+                          className: g.f,
                       },
                       e.id,
                   ),

@@ -14,7 +14,7 @@ var s = n(503698),
     g = n(863694),
     x = n(992711),
     h = n(985018),
-    _ = n(980993);
+    _ = n(11088);
 function p(e) {
     let { guild: t, scrollToQuestions: n } = e,
         s = (0, r.bG)([g.A], () => g.A.editedDefaultChannelIds),

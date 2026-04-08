@@ -52,7 +52,7 @@ var i = n(627968),
     q = n(652215),
     $ = n(381941),
     ee = n(985018),
-    et = n(438488);
+    et = n(34501);
 let en = Q.Li.TOP;
 class ei extends s.Component {
     textAreaRef = s.createRef();
@@ -319,7 +319,7 @@ class es extends s.PureComponent {
         null != t &&
             null != s &&
             (0, u.L3)(e, async () => {
-                let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("39778"), n.e("34408")]).then(
+                let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("39778"), n.e("22283")]).then(
                     n.bind(n, 385913),
                 );
                 return (n) => (0, i.jsx)(e, { ...n, user: s, channelSelected: !0, channel: t });

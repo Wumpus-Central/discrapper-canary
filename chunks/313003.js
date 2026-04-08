@@ -1,3 +1,34 @@
-t.exports = JSON.parse(
-    '{"LsJ9hj":["罗技产品 ",[1,"discountPercent"],"% 折扣"],"8Gl8gP":["每月专属折扣码，助您打造梦幻外设。仅限 Nitro 会员。"],"HINTfJ":["查看优惠"],"Yl5ww1":["适用于罗技 G 系列产品，新品及 PRO 系列除外。"],"jkdhZq":["全部产品 ",[1,"discountPercent"],"% 折扣"],"fC4abC":["新品上架后的前 ",[2,"months"]," 个月内可享优惠。"],"zeBjoX":["新品 ",[1,"discountPercent"],"% 折扣"],"ogcfac":["PRO 系列产品 ",[1,"discountPercent"],"% 折扣"],"65EEvD":["新优惠码码将在 ",[2,"days"]," 后发放"],"W8jOD0":["每次购买仅限使用一个代码。",[8,"$link",["适用条款"],[[1,"termsUrl"]]],"。"],"2I7nK+":["罗技折扣"],"/UNTlE":["每月均可领取罗技 G 系列 ",[1,"discountPercent"],"% 折扣，还能专享 PRO 系列与新品一次性优惠。",[8,"$link",["适用条款"],[[1,"termsUrl"]]],"。"],"bZLaD+":["解锁奖励"],"zinfZi":["每月领取全新优惠码，尽享罗技 G 系列 ",[1,"discountPercent"],"% 折扣。"],"OlObRa":["花小钱，升大级"],"A+56/R":["Nitro 会员每月可领取罗技 G 系列 ",[1,"discountPercent"],"% 优惠码。"],"9Y2p6p":["每月奖励"],"Wm58LR":["一次性折扣"]}',
-);
+a.d(e, { default: () => _ });
+var n = a(627968),
+    i = a(64700),
+    r = a(397927),
+    l = a(198982),
+    o = a(997509),
+    s = a(809505),
+    c = a(242273),
+    d = a(652215),
+    u = a(985018);
+function _(t) {
+    let { guild: e, onClose: a, hideColors: _ } = t,
+        [b, p] = i.useState(e.verificationLevel),
+        [C, g] = i.useState(null),
+        h = e.features.has(d.GuildFeatures.COMMUNITY),
+        v = (0, s.vd)(h, _).filter((t) => !t.disabled),
+        x = i.useCallback(async () => {
+            null != C && g(null);
+            try {
+                await o.A.saveGuild(e.id, { verificationLevel: b }), o.A.updateGuild({ verificationLevel: b }), a();
+            } catch (t) {
+                g(new l.LG(t).getAnyErrorMessage());
+            }
+        }, [C, e.id, b, a]);
+    return (0, n.jsx)(c.A, {
+        ...t,
+        title: u.intl.string(u.t.DpRdYK),
+        description: u.intl.format(u.t.iuRk2j, {}),
+        errorText: C,
+        onConfirm: x,
+        onCancel: a,
+        children: (0, n.jsx)(r.z6M, { value: b, options: v, onChange: (t) => p(t) }),
+    });
+}

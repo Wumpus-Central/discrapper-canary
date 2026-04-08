@@ -11,7 +11,7 @@ var i = n(627968),
     u = n(50249),
     m = n(652215),
     g = n(985018),
-    x = n(2571);
+    x = n(864590);
 function h(e) {
     let { color: t, children: n } = e;
     return (0, i.jsxs)("div", {

@@ -8,7 +8,7 @@ var r = n(397927),
     o = n(652215),
     d = n(49999),
     c = n(985018),
-    u = n(436965),
+    u = n(66762),
     A = n(208907);
 let h = (e) => {
     let t = (0, i.jsx)(r.e7I, { shortcut: a.R.binds["0"], keyClassName: u.Eb });

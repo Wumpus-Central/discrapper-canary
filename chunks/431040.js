@@ -13,7 +13,7 @@ var a = n(627968),
     g = n(936636),
     h = n(424994),
     f = n(985018),
-    p = n(706445);
+    p = n(12388);
 function _() {
     return (0, a.jsx)(l.Text, { variant: "text-sm/normal", color: "text-subtle", children: f.intl.string(f.t.GruYxV) });
 }

@@ -12,8 +12,8 @@ var i = n(627968),
     A = n(793574),
     _ = n(688810),
     m = n(222823),
-    g = n(203982),
-    p = n(661191),
+    p = n(203982),
+    g = n(661191),
     f = n(851109),
     x = n(932883),
     E = n(39324),
@@ -23,9 +23,9 @@ var i = n(627968),
     T = n(524628),
     S = n(849077),
     b = n(652215),
-    v = n(228160),
+    v = n(21786),
     y = n(985018),
-    j = n(852259);
+    j = n(702440);
 function R(e) {
     e.stopPropagation();
 }
@@ -133,10 +133,10 @@ function D(e) {
             P.current?.scrollPageDown({ animate: !0 });
         }
         return (
-            g._.subscribe(b.jej.SCROLL_PAGE_DOWN, t),
-            g._.subscribe(b.jej.SCROLL_PAGE_UP, e),
+            p._.subscribe(b.jej.SCROLL_PAGE_DOWN, t),
+            p._.subscribe(b.jej.SCROLL_PAGE_UP, e),
             () => {
-                g._.unsubscribe(b.jej.SCROLL_PAGE_DOWN, t), g._.unsubscribe(b.jej.SCROLL_PAGE_UP, e);
+                p._.unsubscribe(b.jej.SCROLL_PAGE_DOWN, t), p._.unsubscribe(b.jej.SCROLL_PAGE_UP, e);
             }
         );
     }, []);
@@ -169,7 +169,7 @@ function D(e) {
                     }),
                     o().each(L, (n) => {
                         [...Object.values(i[n]).map((e) => e.reverse()), ...t[n].map((e) => [e])]
-                            .sort((e, t) => p.default.compare(t[0].id, e[0].id))
+                            .sort((e, t) => g.default.compare(t[0].id, e[0].id))
                             .forEach((t) => {
                                 e[n].push(t);
                             });
@@ -178,11 +178,11 @@ function D(e) {
             );
         }, [n, s]),
         $ = 0 === n.length && 0 === s.length && H,
-        Q = 0 === n.length && 0 === s.length && !F && V,
-        J = l.useMemo(() => {
+        J = 0 === n.length && 0 === s.length && !F && V,
+        Q = l.useMemo(() => {
             let e = [];
             return (
-                Q
+                J
                     ? e.push(A())
                     : $
                       ? e.push((0, i.jsx)(M, {}, "empty-state"))
@@ -208,13 +208,13 @@ function D(e) {
                           }),
                 e
             );
-        }, [n, s, A, K, Y, X, U, _, $, Q, G]),
-        Z = J[J.length - 1],
+        }, [n, s, A, K, Y, X, U, _, $, J, G]),
+        Z = Q[Q.length - 1],
         ee = l.isValidElement(Z) && Z.type === O,
         et = (0, N.S)((e) => e.setInboxReadState);
     l.useEffect(() => {
-        Q || et(0 === X.UNREAD.length);
-    }, [X, Q, et]);
+        J || et(0 === X.UNREAD.length);
+    }, [X, J, et]);
     let en = (n.length > 0 || s.length > 0) && null != r && V;
     !(function (e) {
         let { loadingInitial: t, messagesByCategory: n } = e,
@@ -231,8 +231,8 @@ function D(e) {
         return null == t ? 0 : Math.max(0, Math.ceil(t.offsetHeight / 64) - e);
     }, [K, X]);
     l.useEffect(() => {
-        Q || V || 0 >= ei() || ((!ee || z) && r?.(S.VA.FILL_SCROLLER));
-    }, [ei, r, Q, V, ee, z]);
+        J || V || 0 >= ei() || ((!ee || z) && r?.(S.VA.FILL_SCROLLER));
+    }, [ei, r, J, V, ee, z]);
     let el = l.useMemo(() => {
         let e = Math.min(Math.max(2, ei()), 20);
         return (0, i.jsx)(T.A, { withHeader: !1, size: e });
@@ -264,7 +264,7 @@ function D(e) {
                             onScroll: q,
                             fade: !0,
                             ...n,
-                            children: [J, en && !ee ? el : null],
+                            children: [Q, en && !ee ? el : null],
                         });
                     },
                 }),

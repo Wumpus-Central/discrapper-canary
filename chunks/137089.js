@@ -12,14 +12,14 @@ var i = n(627968),
     A = n(147036),
     _ = n(32603),
     m = n(85808),
-    g = n(823142);
+    p = n(823142);
 n(83766);
-var p = n(928409),
-    f = n(116648);
+var g = n(99566),
+    f = n(520487);
 let x = l.memo(function (e) {
     let { guildChannels: t, guildChannelsVersion: n } = e,
         s = l.useMemo(() => t.getCategoryFromSection(t.voiceChannelsSectionNumber), [t, n]);
-    return null == s ? null : (0, i.jsx)(g.AV, { category: s });
+    return null == s ? null : (0, i.jsx)(p.AV, { category: s });
 });
 function E(e) {
     let {
@@ -53,7 +53,7 @@ let C = l.memo(function (e) {
             sectionIndex: t,
             guildChannels: n,
             guildChannelsVersion: s,
-            voiceStates: g,
+            voiceStates: p,
             guildId: E,
             selectedChannelId: I,
             selectedVoiceChannelId: C,
@@ -75,8 +75,8 @@ let C = l.memo(function (e) {
             return t;
         }, [b, S, E, v]),
         R = l.useMemo(
-            () => (0, A.fK)({ channels: j, selectedChannelId: I, selectedVoiceChannelId: C, voiceStates: g }),
-            [j, I, C, g],
+            () => (0, A.fK)({ channels: j, selectedChannelId: I, selectedVoiceChannelId: C, voiceStates: p }),
+            [j, I, C, p],
         );
     if (t === n.voiceChannelsSectionNumber) return (0, i.jsx)(x, { guildChannels: n, guildChannelsVersion: s });
     let O = T ? (0, i.jsx)("div", { className: f.ts }) : null;
@@ -92,7 +92,7 @@ let C = l.memo(function (e) {
                           showUserPopout: !0,
                           guildId: E,
                           renderLeadingIcon: y
-                              ? (e) => (0, i.jsx)(c.A, { color: "currentColor", className: a()(e, p.Gj) })
+                              ? (e) => (0, i.jsx)(c.A, { color: "currentColor", className: a()(e, g.Gj) })
                               : void 0,
                       }),
                   }),

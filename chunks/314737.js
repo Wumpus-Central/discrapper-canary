@@ -16,7 +16,7 @@ var i = n(627968),
     _ = n(157559),
     p = n(554375),
     A = n(971251),
-    f = n(838132),
+    f = n(615751),
     j = n(475743),
     N = n(793574),
     E = n(262295),
@@ -40,8 +40,8 @@ var i = n(627968),
     B = n(652215);
 n(307731);
 var F = n(985018),
-    H = n(997728),
-    V = n(8350);
+    H = n(262303),
+    V = n(903281);
 let z = c().throttle(p.dZ, 1e3),
     W = (e) => {
         let { guildId: t, emoji: n, onEdit: l, editingDisabled: a = !1, isNewlyAdded: o = !1 } = e,

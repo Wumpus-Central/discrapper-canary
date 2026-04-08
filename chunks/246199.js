@@ -5,7 +5,7 @@ var l = n(627968),
     s = n(503698),
     a = n.n(s),
     r = n(821589),
-    o = n(570720);
+    o = n(75753);
 let d = { XSMALL: o.xsmall, SMALL: o.small, MEDIUM: o.medium, LARGE: o.large };
 class c extends i.PureComponent {
     static Sizes = d;

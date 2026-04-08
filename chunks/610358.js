@@ -281,7 +281,7 @@ function y() {
                         secondaryValue: "dm",
                     }),
                         (0, a.L3)(e.event, async () => {
-                            let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("6787")]).then(
+                            let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("47895")]).then(
                                 n.bind(n, 92016),
                             );
                             return (n) =>
@@ -354,7 +354,7 @@ function y() {
                         secondaryValue: "guild-voice-user",
                     }),
                         (0, a.L3)(e.event, async () => {
-                            let { default: i } = await Promise.all([n.e("97262"), n.e("87997"), n.e("77012")]).then(
+                            let { default: i } = await Promise.all([n.e("97262"), n.e("87997"), n.e("7202")]).then(
                                 n.bind(n, 180812),
                             );
                             return (n) =>

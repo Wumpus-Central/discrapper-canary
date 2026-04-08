@@ -26,8 +26,8 @@ var i = n(627968),
     b = n(561108),
     v = n(191117),
     S = n(985018),
-    y = n(523941),
-    R = n(782691);
+    y = n(7716),
+    R = n(830684);
 function O(e) {
     let { guild: t } = e,
         r = (0, l.bG)([c.A], () => c.A.getEnabled(t.id)),

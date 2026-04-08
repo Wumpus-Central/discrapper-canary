@@ -9,7 +9,7 @@ var i = n(627968),
 n(646363);
 var c = n(652215),
     u = n(788868),
-    A = n(63461);
+    A = n(998838);
 let h = function (e) {
     let { rows: t, renderRow: n, renderSection: h, footer: _, sectionFilter: m, renderSectionFooter: p } = e,
         g = (e) => {
