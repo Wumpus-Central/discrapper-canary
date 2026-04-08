@@ -833,9 +833,11 @@ function ti() {
     );
 }
 function ts(e) {
-    let t = T.H1.useSetting();
+    let t = T.H1.useSetting(),
+        n = e.userStatus?.enrolledAt != null;
     return r.useCallback(() => {
-        let n = t ? d.w.AD_IMPRESSION_QUEST_BAR_OPT_OUT : d.w.AD_IMPRESSION_QUEST_BAR_OPT_IN;
-        (0, A.hs)(n, { quest_id: e });
-    }, [t, e]);
+        if (n) return;
+        let r = t ? d.w.AD_IMPRESSION_QUEST_BAR_OPT_OUT : d.w.AD_IMPRESSION_QUEST_BAR_OPT_IN;
+        (0, A.hs)(r, { quest_id: e.id });
+    }, [t, n, e.id]);
 }
