@@ -51,7 +51,7 @@ let N = (0, r.t_)(u.X.ACCOUNT_PANEL, {
         useTitle: () => S.intl.string(S.t["ldCE/p"]),
         initialize: C,
         useObscuredNotice: a.L,
-        buildLayout: () => [_.u, x.v],
+        buildLayout: () => [_.u, x.v, h._],
     }),
     I = (0, r.i4)(u.X.ACCOUNT_SIDEBAR_ITEM, {
         useTitle: () => ((0, m.pC)("Account") ? S.intl.string(S.t["ldCE/p"]) : S.intl.string(S.t["JAIM/m"])),

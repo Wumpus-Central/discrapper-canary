@@ -4,7 +4,7 @@ var s = n(627968),
     i = n(732955),
     l = n(397927),
     o = n(985018),
-    r = n(574592);
+    r = n(755430);
 function E(e) {
     let {
             title: t,
@@ -16,14 +16,15 @@ function E(e) {
             onError: h,
             skipErrorMsgAbortCode: R,
             onPasswordChange: I,
+            variant: p = "primary",
         } = e,
-        [p, _] = a.useState(""),
-        [f, g] = a.useState(null),
-        [C, m] = a.useState(!1),
-        A = a.useCallback(async () => {
+        [_, f] = a.useState(""),
+        [g, C] = a.useState(null),
+        [m, A] = a.useState(!1),
+        y = a.useCallback(async () => {
             await c();
         }, [c]),
-        y =
+        F =
             a.Children.count(E) > 0
                 ? (0, s.jsx)(l.ZpM, {
                       type: l.ZpM.Types.WARNING,
@@ -34,8 +35,8 @@ function E(e) {
     return (0, s.jsx)("form", {
         onSubmit: (e) => {
             e.preventDefault(),
-                m(!0),
-                u(p)
+                A(!0),
+                u(_)
                     .then(
                         (e) => c(e ?? void 0),
                         (e) => {
@@ -45,22 +46,22 @@ function E(e) {
                                 (t = e.body),
                                 (null == R || t?.code !== R) &&
                                     (e.body.password
-                                        ? (g(e.body.password), m(!1))
-                                        : e.body.message && (g(e.body.message), m(!1))));
+                                        ? (C(e.body.password), A(!1))
+                                        : e.body.message && (C(e.body.message), A(!1))));
                         },
                     )
-                    .finally(() => m(!1));
+                    .finally(() => A(!1));
         },
         children: (0, s.jsxs)(i.aFV, {
             title: t,
             actions: [
-                { text: o.intl.string(o.t["ETE/oC"]), onClick: A, variant: "secondary" },
-                { text: n ?? o.intl.string(o.t["cY+Oob"]), type: "submit", disabled: C || 0 === p.length },
+                { text: o.intl.string(o.t["ETE/oC"]), onClick: y, variant: "secondary" },
+                { text: n ?? o.intl.string(o.t["cY+Oob"]), type: "submit", variant: p, disabled: m || 0 === _.length },
             ],
-            onClose: A,
+            onClose: y,
             transitionState: d,
             children: [
-                y,
+                F,
                 (0, s.jsxs)("div", {
                     className: r.YK,
                     children: [
@@ -69,18 +70,18 @@ function E(e) {
                             label: o.intl.string(o.t["CIGa+7"]),
                             autoComplete: "current-password",
                             autoFocus: !0,
-                            value: p,
+                            value: _,
                             onChange: (e) => {
-                                I?.(e), _(e);
+                                I?.(e), f(e);
                             },
                             required: !0,
                         }),
-                        null != f && "" !== f
+                        null != g && "" !== g
                             ? (0, s.jsxs)(l.Text, {
                                   variant: "text-xs/normal",
                                   color: "text-feedback-critical",
                                   className: r.z3,
-                                  children: [" ", f, " "],
+                                  children: [" ", g, " "],
                               })
                             : null,
                     ],
