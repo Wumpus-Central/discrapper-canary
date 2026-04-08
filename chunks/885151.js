@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { I: () => l, x: () => u });
+n.d(t, { W: () => u, k: () => l });
 var r = n(64700),
     i = n(311907),
-    s = n(920495),
-    a = n(311043),
+    s = n(799448),
+    a = n(136086),
     o = n(652215);
 let l = (0, i.UT)(a.A, {
     getQueryId: o.fic.GAME,

@@ -63,18 +63,16 @@ function G(e) {
     let { guildId: t, guildEvent: n, onChange: s, isFocusReady: a } = e,
         { entityType: c, channelId: o } = n,
         x = (0, r.bG)([u.A], () => u.A.getChannel(o), [o]),
-        h = i.useRef(null),
-        m = i.useRef(void 0);
+        h = i.useRef(null);
     i.useEffect(() => {
-        let e = a && !m.current;
-        (m.current = a), e && c === C.Ps.EXTERNAL && h.current?.focus();
+        a && c === C.Ps.EXTERNAL && h.current?.focus();
     }, [a, c]);
-    let g = (e) => {
+    let m = (e) => {
             s({ channelId: e?.id ?? null });
         },
-        j = (0, E.k5)(n),
-        A = (0, E.dy)(c),
-        N = (0, v.Fd)(n);
+        g = (0, E.k5)(n),
+        j = (0, E.dy)(c),
+        A = (0, v.Fd)(n);
     return null == c || c === C.Ps.NONE
         ? null
         : c === C.Ps.EXTERNAL
@@ -86,12 +84,12 @@ function G(e) {
                 },
                 placeholder: y.intl.string(y.t.mkCMia),
                 maxLength: C.vj,
-                value: j ?? "",
+                value: g ?? "",
                 inputRef: h,
             })
-          : null == A
+          : null == j
             ? null
-            : (0, l.jsx)(I, { guildId: t, channelType: A, onSelectChannel: g, channel: x, entityType: c, disabled: N });
+            : (0, l.jsx)(I, { guildId: t, channelType: j, onSelectChannel: m, channel: x, entityType: c, disabled: A });
 }
 function k(e) {
     let { guildId: t, guildEvent: n, onChange: s } = e,

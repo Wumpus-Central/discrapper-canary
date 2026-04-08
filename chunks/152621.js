@@ -1,10 +1,10 @@
 n.d(t, { A: () => r });
 var i = n(417597),
     a = n(760751),
-    l = n(454908),
+    l = n(885151),
     s = n(985018);
 function r(e, t) {
-    let { data: n, isLoading: r } = (0, l.I)(e),
+    let { data: n, isLoading: r } = (0, l.k)(e),
         o = (0, i.bG)([a.A], () => a.A.getDetectableGame(e));
     return {
         coverImageUrl: n?.getCoverURL(),
