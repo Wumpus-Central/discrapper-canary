@@ -12,7 +12,7 @@ function c(e) {
         { enabled: c } = a.A.useConfig({ location: "Friend Request Toast" }),
         [d, _] = i.useState(null),
         [f, p] = i.useState(!1),
-        h = (0, o.A)(t),
+        h = (0, o.A)(t, "User Profile Friend Request Toast"),
         m = i.useCallback(async () => {
             p(!0), await h(n, _), p(!1);
         }, [n, h]);

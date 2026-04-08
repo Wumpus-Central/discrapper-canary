@@ -3977,6 +3977,7 @@ var nl = (function (e) {
             (e.FRIEND_FINDER_INITIAL_LOADED = "friend_finder_initial_loaded"),
             (e.USERNAME_SEARCH_TAPPED = "username_search_tapped"),
             (e.NOW_PLAYING_CARD_HOVERED = "now_playing_card_hovered"),
+            (e.FRIEND_REQUEST_ACCEPT_MESSAGE_CLICKED = "friend_request_accept_message_clicked"),
             (e.CONNECTIONS_XBOX_RELINK_COACHMARK_VIEWED = "connections_xbox_relink_coachmark_viewed"),
             (e.CONNECTIONS_XBOX_RELINK_COACHMARK_CLICKED = "connections_xbox_relink_coachmark_clicked"),
             (e.CONNECTIONS_NEW_CONSOLE_COACHMARK_VIEWED = "connections_new_console_coachmark_viewed"),
