@@ -15,8 +15,14 @@ var r = n(627968),
     x = n(423393);
 let A = () => 80,
     h = (e) => {
-        let { children: t, className: n, isSelected: i = !1, ...s } = e;
-        return (0, r.jsx)(a.DUT, { className: l()(g.BP, n, { [g.wH]: i }), ...s, onClick: s.onSelect, children: t });
+        let { children: t, className: n, isSelected: i, ...s } = e;
+        return (0, r.jsx)(a.DUT, {
+            "aria-pressed": i,
+            className: l()(g.BP, n, { [g.wH]: i }),
+            ...s,
+            onClick: s.onSelect,
+            children: t,
+        });
     },
     _ = (e) => {
         let { profileEffect: t, innerRef: n, section: s, isSelected: l, canUsePremiumCollectibles: a, ...c } = e,

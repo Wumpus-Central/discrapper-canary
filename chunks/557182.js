@@ -2,8 +2,8 @@ r.d(t, { A: () => j });
 var s = r(627968),
     i = r(64700),
     n = r(503698),
-    l = r.n(n),
-    a = r(397927),
+    a = r.n(n),
+    l = r(397927),
     o = r(713517),
     c = r(927578),
     d = r(898461),
@@ -13,40 +13,46 @@ var s = r(627968),
     A = r(215689),
     h = r(985018),
     g = r(788917);
-let _ = () => 80,
-    p = (e) => {
-        let { children: t, className: r, onSelect: i, isSelected: n = !1, ...o } = e;
-        return (0, s.jsx)(a.DUT, { className: l()(g.eA, n ? g.wH : void 0, r), ...o, onClick: i, children: t });
+let p = () => 80,
+    _ = (e) => {
+        let { children: t, className: r, onSelect: i, isSelected: n, ...o } = e;
+        return (0, s.jsx)(l.DUT, {
+            "aria-pressed": n,
+            className: a()(g.eA, n ? g.wH : void 0, r),
+            ...o,
+            onClick: i,
+            children: t,
+        });
     },
     v = (e) => {
         let {
                 user: t,
                 avatarDecoration: r,
                 innerRef: n,
-                section: l,
-                canUsePremiumCollectibles: a,
+                section: a,
+                canUsePremiumCollectibles: l,
                 isSelected: c = !1,
                 ...d
             } = e,
             m = i.useRef(null),
             { isHoveringOrFocusing: h } = (0, o.A)(n ?? m),
-            { avatarDecorationSrc: _ } = (0, A.A)({
+            { avatarDecorationSrc: p } = (0, A.A)({
                 user: t,
                 avatarDecorationOverride: r,
                 size: 80,
                 onlyAnimateOnHoverOrFocus: !h,
             });
-        return (0, s.jsxs)(p, {
+        return (0, s.jsxs)(_, {
             innerRef: n ?? m,
             isSelected: c,
             ...d,
             children: [
-                null != _ && (0, s.jsx)("img", { className: g.Pw, src: _, alt: r.label }),
+                null != p && (0, s.jsx)("img", { className: g.Pw, src: p, alt: r.label }),
                 (0, s.jsx)(u.A, {
                     skuId: r.skuId,
-                    canUsePremiumCollectibles: a,
-                    isPurchaseSection: l === x.wn.PURCHASE,
-                    isPremiumSection: l === x.wn.PREMIUM_PURCHASE,
+                    canUsePremiumCollectibles: l,
+                    isPurchaseSection: a === x.wn.PURCHASE,
+                    isPremiumSection: a === x.wn.PREMIUM_PURCHASE,
                 }),
             ],
         });
@@ -57,12 +63,12 @@ let _ = () => 80,
                 guild: r,
                 pendingAvatarDecoration: i,
                 selectedAvatarDecorationRef: n,
-                onSelect: l,
+                onSelect: a,
                 onOpenShop: o,
             } = e,
             u = (0, x.Ay)(),
             A = c.Ay.canUseCollectibles(t);
-        return (0, s.jsx)(a.a0_, {
+        return (0, s.jsx)(l.a0_, {
             fade: !0,
             className: g.p_,
             columns: 3,
@@ -75,19 +81,19 @@ let _ = () => 80,
             paddingHorizontal: 12,
             paddingVertical: 0,
             removeEdgeItemGutters: !0,
-            renderItem: (e, c, _, j) => {
+            renderItem: (e, c, p, j) => {
                 let { section: y, items: I } = u[e],
                     C = I[c];
                 if (C === x.dP)
                     return (0, s.jsxs)(
-                        p,
+                        _,
                         {
-                            style: { ..._ },
+                            style: { ...p },
                             isSelected: null === i,
-                            onSelect: () => l(null),
+                            onSelect: () => a(null),
                             children: [
-                                (0, s.jsx)(a.KTN, { size: "md", color: "currentColor", className: g.Kk }),
-                                (0, s.jsx)(a.Text, {
+                                (0, s.jsx)(l.KTN, { size: "md", color: "currentColor", className: g.Kk }),
+                                (0, s.jsx)(l.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-strong",
                                     children: (0, m.uZ)(t, r) ? h.intl.string(h.t.CHf9iJ) : h.intl.string(h.t.PoWNfe),
@@ -98,19 +104,19 @@ let _ = () => 80,
                     );
                 if (C === x.ZK)
                     return (0, s.jsxs)(
-                        p,
+                        _,
                         {
-                            style: _,
+                            style: p,
                             onSelect: o,
                             children: [
-                                (0, s.jsx)(a.U1X, {
+                                (0, s.jsx)(l.U1X, {
                                     size: "custom",
                                     width: 23,
                                     height: 23,
                                     color: "currentColor",
                                     className: g.sV,
                                 }),
-                                (0, s.jsx)(a.Text, {
+                                (0, s.jsx)(l.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-strong",
                                     children: h.intl.string(h.t.pWG4ze),
@@ -124,14 +130,14 @@ let _ = () => 80,
                     return (0, s.jsx)(
                         v,
                         {
-                            style: { ..._ },
+                            style: { ...p },
                             user: t,
                             avatarDecoration: C,
                             section: y,
                             innerRef: e ? n : void 0,
                             canUsePremiumCollectibles: A,
                             isSelected: e,
-                            onSelect: () => l(C),
+                            onSelect: () => a(C),
                         },
                         j,
                     );
@@ -143,11 +149,11 @@ let _ = () => 80,
                 return (0, s.jsx)("div", {
                     className: g.so,
                     style: { ...t, position: "absolute" },
-                    children: (0, s.jsx)(a.Heading, { variant: "heading-md/semibold", children: r }),
+                    children: (0, s.jsx)(l.Heading, { variant: "heading-md/semibold", children: r }),
                 });
             },
             getSectionHeight: (e) => u[e].height,
             getItemKey: (e, t) => u[e].items[t].skuId,
-            getItemHeight: _,
+            getItemHeight: p,
         });
     };

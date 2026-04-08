@@ -11,13 +11,14 @@ var n = l(627968),
     m = l(683917),
     p = l(512213),
     x = l(985018),
-    A = l(352784);
+    A = l(337721);
 let g = (e) => {
         let { currentUser: t, nameplate: l, section: i, canUsePremiumCollectibles: o, isSelected: d, onClick: g } = e,
             h = (0, s.useRef)(null),
             { isHoveringOrFocusing: _ } = (0, c.A)(h);
         return (0, n.jsxs)(a.DUT, {
             innerRef: h,
+            "aria-pressed": d,
             "aria-label": l.label ?? x.intl.string(x.t.x5CoXR),
             className: A.Hj,
             onClick: g,
@@ -51,6 +52,7 @@ let g = (e) => {
                                     className: A.VQ,
                                     children: [
                                         (0, n.jsxs)(a.DUT, {
+                                            "aria-pressed": null == l,
                                             className: r()(A.H5, { [A.wH]: null == l }),
                                             onClick: () => i(null),
                                             children: [
