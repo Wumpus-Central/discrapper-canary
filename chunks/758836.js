@@ -444,6 +444,10 @@ var P = (function (e) {
         (e.USE_NOW = "use_now"),
         (e.UNLOCK_WITH_NITRO = "unlock_with_nitro"),
         (e.ADD_TO_COLLECTION = "add_to_collection"),
+        (e.BUNDLE_VIEW_AVATAR_DECORATION = "bundle_view_avatar_decoration"),
+        (e.BUNDLE_VIEW_PROFILE_EFFECT = "bundle_view_profile_effect"),
+        (e.BUNDLE_VIEW_NAMEPLATE = "bundle_view_nameplate"),
+        (e.FULL_PROFILE_PREVIEW = "full_profile_preview"),
         e
     );
 })({});
