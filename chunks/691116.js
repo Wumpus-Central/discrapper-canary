@@ -15,6 +15,7 @@ function d(e) {
     return null == u || null == m
         ? null
         : (0, i.jsx)(a.U, {
+              role: "link",
               title: m,
               description: n,
               trailingElement: (0, i.jsxs)(s.BJc, {

@@ -97,6 +97,7 @@ var r = (function (e) {
         (e.SESSIONS_CATEGORY = "sessions_sessions_category"),
         (e.SESSIONS_CURRENT_SESSION_SETTING = "sessions_current_session_setting"),
         (e.SESSIONS_OTHER_SESSIONS_SETTING = "sessions_other_sessions_setting"),
+        (e.SESSIONS_LOGOUT_ALL_SESSIONS_SETTING = "sessions_logout_all_sessions_setting"),
         (e.AUTHORIZED_APPS_SIDEBAR_ITEM = "authorized_apps_sidebar_item"),
         (e.AUTHORIZED_APPS_PANEL = "authorized_apps_panel"),
         (e.AUTHORIZED_APPS_CATEGORY = "authorized_apps_category"),

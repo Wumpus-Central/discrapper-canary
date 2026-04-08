@@ -90,7 +90,6 @@ n.d(t, {
     Fmo: () => i.Fmo,
     Fzq: () => i.Fzq,
     G3N: () => i.G3N,
-    G47: () => i.G47,
     G8R: () => eT.G8,
     GE8: () => i.GE8,
     GT3: () => i.GT3,

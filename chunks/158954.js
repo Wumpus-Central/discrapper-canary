@@ -224,6 +224,7 @@ n.d(t, {
     WD7: () => er.W,
     WHe: () => p.W,
     WP0: () => z.DragIcon,
+    WZu: () => z.LaptopPhoneIcon,
     Wdr: () => J.Wd,
     We5: () => z.LinkExternalMediumIcon,
     WxK: () => z.BrowserIcon,
