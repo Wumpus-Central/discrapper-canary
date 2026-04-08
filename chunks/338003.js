@@ -1,29 +1,28 @@
-t.d(l, { O: () => d });
+t.d(l, { O: () => o });
 var n = t(627968);
 t(64700);
 var i = t(397927),
-    s = t(793574),
-    a = t(407217),
-    r = t(985018),
-    o = t(383341);
-function d() {
+    s = t(407217),
+    a = t(985018),
+    r = t(383341);
+function o() {
     let e = () => {
-        (0, a.K)({ analyticsSource: s.A.USER_PROFILE_MODAL_V2, stackingBehavior: "stack" });
+        (0, s.K)({ stackingBehavior: "stack" });
     };
     return (0, n.jsxs)(i.hLv, {
         color: "nitro-pink",
-        className: o.k,
+        className: r.k,
         children: [
             (0, n.jsx)(i.Text, {
                 variant: "text-sm/medium",
                 color: "text-default",
-                children: r.intl.format(r.t.TmfgI2, { onClick: e }),
+                children: a.intl.format(a.t.TmfgI2, { onClick: e }),
             }),
             (0, n.jsx)(i.Button, {
                 variant: "expressive",
                 size: "md",
                 icon: i.tvc,
-                text: r.intl.string(r.t.pj0XBN),
+                text: a.intl.string(a.t.pj0XBN),
                 onClick: e,
                 fullWidth: !0,
             }),

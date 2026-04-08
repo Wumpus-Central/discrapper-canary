@@ -17,13 +17,9 @@ function f(e) {
     let { uploadType: t, guildId: i, analyticsSource: o, filters: l, isTryItOut: f = !1, stackingBehavior: p } = e;
     (0, s.mMO)(
         async () => {
-            let { default: e } = await Promise.all([
-                n.e("91757"),
-                n.e("49924"),
-                n.e("59701"),
-                n.e("53653"),
-                n.e("77179"),
-            ]).then(n.bind(n, 551028));
+            let { default: e } = await Promise.all([n.e("81028"), n.e("79149"), n.e("53653"), n.e("90796")]).then(
+                n.bind(n, 551028),
+            );
             return (n) =>
                 (0, r.jsx)(e, {
                     filters: l,

@@ -16,17 +16,17 @@ var n = a(627968),
     g = a(652215),
     f = a(339984),
     x = a(985018),
-    N = a(392491);
+    N = a(765305);
 function b(e) {
-    let { transitionState: t, onClose: s, onComplete: b, uploadType: E, showUpsellHeader: R, analyticsPage: y } = e,
-        [I, L] = i.useState(!1),
-        j = (0, o.k34)(),
-        { analyticsLocations: w, newestAnalyticsLocation: v } = (0, d.Ay)(c.A.GIF_PICKER);
-    async function P(e) {
+    let { transitionState: t, onClose: s, onComplete: b, uploadType: E, showUpsellHeader: R, analyticsPage: I } = e,
+        [j, y] = i.useState(!1),
+        L = (0, o.k34)(),
+        { analyticsLocations: v } = (0, d.Ay)(c.A.GIF_PICKER);
+    async function w(e) {
         let t,
             { gifSrc: i } = e;
-        if (null == i || I) return;
-        L(!0);
+        if (null == i || j) return;
+        y(!0);
         let l = (0, h.s)(i),
             r = await fetch(l),
             c = await r.blob(),
@@ -53,7 +53,7 @@ function b(e) {
         s(),
             (0, o.mMO)(
                 async () => {
-                    let { default: e } = await Promise.all([a.e("35929"), a.e("74571"), a.e("67449")]).then(
+                    let { default: e } = await Promise.all([a.e("35929"), a.e("74571"), a.e("97759")]).then(
                         a.bind(a, 142630),
                     );
                     return (t) =>
@@ -66,20 +66,20 @@ function b(e) {
                             ...t,
                         });
                 },
-                { contextKey: j },
+                { contextKey: L },
             );
     }
     i.useEffect(() => {
         A.default.track(g.HAw.OPEN_MODAL, {
             type: g.JJy.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
-            location_stack: w,
-            location: { page: y },
+            location_stack: v,
+            location: { page: I },
         });
-    }, [w, y]);
-    let S = E === f.HL.AVATAR || E === f.HL.BANNER,
-        $ = (0, p.b)(!S);
+    }, [v, I]);
+    let P = E === f.HL.AVATAR || E === f.HL.BANNER,
+        $ = (0, p.b)(!P);
     return (0, n.jsx)(d.f5, {
-        value: w,
+        value: v,
         children: (0, n.jsxs)(r.dWK, {
             onClose: s,
             transitionState: t,
@@ -91,7 +91,7 @@ function b(e) {
                         className: N.It,
                         children: (0, n.jsx)(m.A, {
                             type: E,
-                            analyticsPage: y,
+                            analyticsPage: I,
                             analyticsSection: g.JJy.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
                             isGIF: !0,
                         }),
@@ -100,15 +100,13 @@ function b(e) {
                     className: N.SD,
                     children: [
                         (0, n.jsx)(u.A, {
-                            className: l()(N.XC, { [N.bX]: I }),
-                            onSelectGIF: P,
+                            className: l()(N.XC, { [N.bX]: j }),
+                            onSelectGIF: w,
                             headingColor: "text-subtle",
                             hideFavorites: !0,
                         }),
-                        I && (0, n.jsx)(o.y$y, { className: N.u1 }),
-                        R &&
-                            $ &&
-                            (0, n.jsx)(_.A, { uploadType: E, analyticsSource: v, showUpsell: !0, className: N.Kt }),
+                        j && (0, n.jsx)(o.y$y, { className: N.u1 }),
+                        R && $ && (0, n.jsx)(_.A, { uploadType: E, showUpsell: !0, className: N.Kt }),
                     ],
                 }),
             ],

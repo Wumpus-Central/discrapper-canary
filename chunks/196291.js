@@ -28,8 +28,8 @@ var i = n(627968),
     y = n(212168),
     O = n(730588),
     R = n(63675),
-    P = n(253604),
-    L = n(652215),
+    L = n(253604),
+    P = n(652215),
     D = n(788868),
     G = n(355097),
     M = n(985018),
@@ -53,12 +53,8 @@ function k(e) {
         { preset: X, onShuffle: K } = (0, u.A)(),
         W = s.useRef(null);
     (0, v.A)(W, G._F.TRY_IT_OUT);
-    let {
-            analyticsLocations: Z,
-            newestAnalyticsLocation: q,
-            sourceAnalyticsLocations: Q,
-        } = (0, o.Ay)(r.A.USER_SETTINGS_TRY_OUT_PREMIUM),
-        J = (e) => {
+    let { analyticsLocations: Z, sourceAnalyticsLocations: q } = (0, o.Ay)(r.A.USER_SETTINGS_TRY_OUT_PREMIUM),
+        Q = (e) => {
             e &&
                 (Y?.startsWith("https:") === !0
                     ? fetch(Y)
@@ -74,19 +70,19 @@ function k(e) {
                       ? (0, T.p)({ avatar: z, themeColors: H, banner: Y })
                       : (0, T.p)({ avatar: z, themeColors: H }),
                 (0, C.WU)(z),
-                S.default.track(L.HAw.TRY_IT_OUT_PRESET_SELECTED, { preset: X }));
+                S.default.track(P.HAw.TRY_IT_OUT_PRESET_SELECTED, { preset: X }));
         };
     s.useEffect(() => {
         n &&
-            S.default.track(L.HAw.PREMIUM_UPSELL_VIEWED, {
+            S.default.track(P.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: D.e.PREMIUM_PROFILE_TRY_IT_OUT,
-                location: { page: L.liQ.USER_SETTINGS },
-                location_stack: Q,
+                location: { page: P.liQ.USER_SETTINGS },
+                location_stack: q,
             });
-    }, [Q, t, n]);
-    let $ = (0, c.V)()?.subscription_trial?.sku_id === D.pe.TIER_2,
-        ee = (0, d.O)(),
-        et = (0, g.U9)(ee, D.pe.TIER_2);
+    }, [q, t, n]);
+    let J = (0, c.V)()?.subscription_trial?.sku_id === D.pe.TIER_2,
+        $ = (0, d.O)(),
+        ee = (0, g.U9)($, D.pe.TIER_2);
     return k
         ? (0, i.jsx)(o.f5, {
               value: Z,
@@ -107,7 +103,7 @@ function k(e) {
                               ],
                           }),
                           profilePreview: (0, i.jsxs)(i.Fragment, {
-                              children: [(0, i.jsx)(m.A, { preset: X, onShuffle: K }), (0, i.jsx)(P.A, { user: t })],
+                              children: [(0, i.jsx)(m.A, { preset: X, onShuffle: K }), (0, i.jsx)(L.A, { user: t })],
                           }),
                           children: (0, i.jsxs)("div", {
                               className: U.EN,
@@ -151,7 +147,7 @@ function k(e) {
                                           sectionTitle: M.intl.string(M.t.vtFfPX),
                                       }),
                                   (0, i.jsx)(j.A, { user: t, className: U.fz }),
-                                  !$ &&
+                                  !J &&
                                       (0, i.jsx)(a.Text, {
                                           variant: "text-sm/normal",
                                           children: M.intl.string(M.t["smo74/"]),
@@ -159,24 +155,24 @@ function k(e) {
                               ],
                           }),
                       }),
-                      !$ &&
+                      !J &&
                           (0, i.jsx)(_.d, {
-                              onSubscribeModalClose: J,
+                              onSubscribeModalClose: Q,
                               className: U.Kv,
                               showUpsell: !0,
                               text: M.intl.format(M.t.TmfgI2, {
                                   onClick: () => {
-                                      (0, A.K)({ analyticsSource: q, onSubscribeFinish: J });
+                                      (0, A.K)({ onSubscribeFinish: Q });
                                   },
                               }),
                               button: w
                                   ? M.intl.string(M.t.AfRWI8)
-                                  : et
-                                    ? M.intl.formatToPlainString(M.t.bkQ4bH, { percent: ee?.discount.amount })
+                                  : ee
+                                    ? M.intl.formatToPlainString(M.t.bkQ4bH, { percent: $?.discount.amount })
                                     : M.intl.string(M.t.pj0XBN),
                               position: "inline",
                           }),
-                      $ &&
+                      J &&
                           (0, i.jsxs)("div", {
                               children: [
                                   (0, i.jsx)("div", { className: U.BU }),

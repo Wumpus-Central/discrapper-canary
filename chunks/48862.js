@@ -15,11 +15,11 @@ var r = n(627968),
     h = n(954571),
     m = n(652215),
     E = n(985018),
-    g = n(133440);
+    g = n(272446);
 function A() {
     (0, u.mMO)(async () => {
-        let { default: e } = await Promise.all([n.e("14138"), n.e("49924"), n.e("66756")]).then(n.bind(n, 220763));
-        return (t) => (0, r.jsx)(e, { channel: null, ...t });
+        let { default: e } = await Promise.all([n.e("81028"), n.e("50866")]).then(n.bind(n, 220763));
+        return (t) => (0, r.jsx)(e, { ...t });
     });
 }
 function I(e) {

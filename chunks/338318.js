@@ -28,8 +28,8 @@ var i = n(627968),
     y = n(351906),
     O = n(287809),
     R = n(954571),
-    P = n(927578),
-    L = n(890668),
+    L = n(927578),
+    P = n(890668),
     D = n(780207),
     G = n(652215),
     M = n(985018),
@@ -50,13 +50,13 @@ function k() {
         B = (0, N.V7)({ userId: e.id, image: l }),
         F = (0, S.lw)({ pendingValue: k, userValue: e?.collectibles?.nameplate }),
         H = (0, I.A)() && null != n ? h.Ay.parse(void 0, n).content : n,
-        z = P.Ay.canUsePremiumProfileCustomization(e),
+        z = L.Ay.canUsePremiumProfileCustomization(e),
         Y = (0, j.St)("edit-profile-upsell"),
-        { analyticsLocations: X, newestAnalyticsLocation: K } = (0, _.Ay)(g.A.USER_SETTINGS_USER_PROFILE);
+        { analyticsLocations: X } = (0, _.Ay)(g.A.USER_SETTINGS_USER_PROFILE);
     s.useEffect(() => () => c.h.wait(u.IM), []);
-    let [W, Z] = s.useState(!1),
-        q = !z,
-        Q = s.useRef(null);
+    let [K, W] = s.useState(!1),
+        Z = !z,
+        q = s.useRef(null);
     return t
         ? (0, i.jsx)(m.A, {})
         : (0, i.jsxs)(_.f5, {
@@ -79,24 +79,24 @@ function k() {
                           className: null == F ? U.tJ : void 0,
                           isHighlighted: !0,
                       }),
-                      children: (0, i.jsx)(L.A, {}),
+                      children: (0, i.jsx)(P.A, {}),
                   }),
                   (0, i.jsx)(o.L, {
-                      innerRef: Q,
-                      onChange: (e) => Z(e),
+                      innerRef: q,
+                      onChange: (e) => W(e),
                       threshold: 0.25,
-                      active: q,
+                      active: Z,
                       children: (0, i.jsx)("div", {
-                          ref: Q,
-                          children: (0, i.jsx)(C.A, { user: e, shouldShow: q, isVisible: W }),
+                          ref: q,
+                          children: (0, i.jsx)(C.A, { user: e, shouldShow: Z, isVisible: K }),
                       }),
                   }),
-                  q &&
+                  Z &&
                       !w &&
                       (0, i.jsx)(p.d, {
                           className: U.EL,
-                          showUpsell: !W,
-                          text: M.intl.format(M.t.TmfgI2, { onClick: () => (0, f.K)({ analyticsSource: K }) }),
+                          showUpsell: !K,
+                          text: M.intl.format(M.t.TmfgI2, { onClick: () => (0, f.K)({}) }),
                           textVariant: "heading-md/medium",
                           useUpdatedStyling: !0,
                           leadingAction: Y
@@ -110,7 +110,7 @@ function k() {
                                       R.default.track(G.HAw.TRY_IT_OUT_PRESET_CLICKED, {
                                           cta_variant: "floating_action_button",
                                       }),
-                                          Q?.current?.scrollIntoView({ behavior: "smooth" });
+                                          q?.current?.scrollIntoView({ behavior: "smooth" });
                                   },
                                   text: M.intl.string(M.t.uw9zI7),
                                   icon: d.tvc,
