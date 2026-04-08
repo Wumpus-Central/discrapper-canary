@@ -87,11 +87,17 @@ class l extends r.A {
             (this.reviews = o(e.reviews)),
             (this.opencriticUrl = e.opencritic_url);
     }
-    getCoverURL() {
+    getCoverURL(e) {
         return null == this.media
             ? null
             : null != this.media.cover_hash
-              ? (s.Ay.getGameAssetURL({ id: this.id, hash: this.media.cover_hash, keepAspectRatio: !0 }) ?? null)
+              ? (s.Ay.getGameAssetURL({
+                    id: this.id,
+                    hash: this.media.cover_hash,
+                    keepAspectRatio: !0,
+                    format: s.QB ? "webp" : "png",
+                    size: e,
+                }) ?? null)
               : (this.media.cover_url ?? null);
     }
     getArtworkURLs() {
