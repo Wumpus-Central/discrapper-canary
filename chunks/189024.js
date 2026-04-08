@@ -1,4 +1,4 @@
-n.d(t, { A: () => eo });
+n.d(t, { A: () => er });
 var i = n(627968),
     s = n(64700),
     l = n(367622),
@@ -29,237 +29,230 @@ var i = n(627968),
     O = n(858897),
     R = n(166403),
     P = n(975571),
-    L = n(730784),
-    D = n(398523),
-    G = n(881373),
-    M = n(152815),
-    U = n(612669),
-    k = n(852218),
-    w = n(161319),
-    V = n(920050),
-    B = n(9458),
-    F = n(788868),
-    H = n(88001),
-    z = n(652215),
-    Y = n(654487),
-    X = n(653624),
-    K = n(519412),
-    W = n(755157),
-    Z = n(985018),
-    q = n(547807),
-    Q = n(998663),
-    J = n(817577),
-    $ = n(419455),
-    ee = n(716925),
-    et = n(288604),
-    en = n(223157),
-    ei = n(863882),
-    es = n(893160),
-    el = n(384565),
-    ea = n(365580),
-    er = n(509442);
-function eo() {
+    L = n(398523),
+    D = n(881373),
+    G = n(152815),
+    M = n(612669),
+    U = n(852218),
+    k = n(161319),
+    w = n(920050),
+    V = n(9458),
+    B = n(788868),
+    F = n(88001),
+    H = n(652215),
+    z = n(654487),
+    Y = n(653624),
+    X = n(519412),
+    K = n(755157),
+    W = n(985018),
+    Z = n(547807),
+    q = n(998663),
+    Q = n(817577),
+    J = n(419455),
+    $ = n(716925),
+    ee = n(288604),
+    et = n(223157),
+    en = n(863882),
+    ei = n(893160),
+    es = n(384565),
+    el = n(365580),
+    ea = n(509442);
+function er() {
     let { analyticsLocations: e } = (0, g.Ay)(m.A.PREMIUM_MARKETING_PERK_CARD),
         t = (0, v.X)("useWhatsNewPerkCards"),
-        eo = (0, c.Ay)(),
-        ed = (0, U.O9)(),
-        ec = (0, G.YS)({ location: "useWhatsNewPerkCards" }).functionalityEnabled,
-        eu = (0, L.R)({ location: "PremiumWhatsNewSection" }),
-        em = D.A.useConfig({ location: "PremiumWhatsNewSection" }).enabled,
-        eg = (0, a.bG)([R.A], () => R.A.getPremiumTypeSubscription()),
-        e_ = eg?.hasActiveTrial ?? !1,
-        ex = (0, a.bG)(
+        er = (0, c.Ay)(),
+        eo = (0, M.O9)(),
+        ed = (0, D.YS)({ location: "useWhatsNewPerkCards" }).functionalityEnabled,
+        ec = L.A.useConfig({ location: "PremiumWhatsNewSection" }).enabled,
+        eu = (0, a.bG)([R.A], () => R.A.getPremiumTypeSubscription()),
+        em = eu?.hasActiveTrial ?? !1,
+        eg = (0, a.bG)(
             [f.A],
-            () => [...f.A.quests.values()].find((e) => e.config.features.includes(Y.Li.NITRO_CONTROL_CTA)) ?? null,
+            () => [...f.A.quests.values()].find((e) => e.config.features.includes(z.Li.NITRO_CONTROL_CTA)) ?? null,
         ),
-        eA = (0, I.A)({ analyticsLocations: e }),
-        { launchInGameActivity: eh } = (0, E.zW)(ex),
-        ep = (0, s.useCallback)(() => {
+        e_ = (0, I.A)({ analyticsLocations: e }),
+        { launchInGameActivity: ex } = (0, E.zW)(eg),
+        eA = (0, s.useCallback)(() => {
             (0, O.openUserSettings)(j.X.PROFILE_PANEL, { analyticsLocations: e }, () =>
                 (0, A.L)({ analyticsLocations: e }),
             );
         }, [e]),
-        eT = (0, s.useCallback)(() => {
+        eh = (0, s.useCallback)(() => {
             (0, O.openUserSettings)(j.X.PROFILE_PANEL, { analyticsLocations: e }, () =>
                 (0, _.L)({ analyticsLocations: e }),
             );
         }, [e]),
-        ef = (0, s.useCallback)(() => {
+        ep = (0, s.useCallback)(() => {
             let e = (0, y.Ci)("openCustomAppSettings") ? j.X.DISPLAY_IN_APP_ICON_CATEGORY : j.X.APPEARANCE_IN_APP_ICON;
             (0, O.openUserSettings)(e);
         }, []),
-        eS = (0, s.useCallback)(() => {
-            null != ex &&
-                (ex.userStatus?.enrolledAt == null
-                    ? (0, T.Oy)(ex.id, {
+        eT = (0, s.useCallback)(() => {
+            null != eg &&
+                (eg.userStatus?.enrolledAt == null
+                    ? (0, T.Oy)(eg.id, {
                           questContent: S.uF.NITRO_HOME_PERK_CARD,
                           questContentCTA: C.Cy.START_QUEST,
                           sourceQuestContent: S.uF.NITRO_HOME_PERK_CARD,
                       }).then((e) => {
                           switch (e.type) {
                               case T.WM.SUCCESS:
-                                  eh();
+                                  ex();
                                   break;
                               case T.WM.CAPTCHA_FAILED:
-                                  d.A.show({ title: Z.intl.string(Z.t["/CidxO"]), body: Z.intl.string(Z.t.HQdHg6) });
+                                  d.A.show({ title: W.intl.string(W.t["/CidxO"]), body: W.intl.string(W.t.HQdHg6) });
                                   break;
                               case T.WM.UNKNOWN_ERROR:
-                                  d.A.show({ title: Z.intl.string(Z.t.R0RpRX), body: Z.intl.string(Z.t.OXD41D) });
+                                  d.A.show({ title: W.intl.string(W.t.R0RpRX), body: W.intl.string(W.t.OXD41D) });
                           }
                       })
-                    : eh());
-        }, [ex, eh]),
-        eb = () => {
-            (0, u.A)(H.TE);
+                    : ex());
+        }, [eg, ex]),
+        ef = () => {
+            (0, u.A)(F.TE);
         },
-        eE = (0, s.useCallback)(() => {
-            if (eu) {
-                if (e_)
-                    return void (0, o.mMO)(async () => {
-                        let { default: e } = await n.e("99709").then(n.bind(n, 516044));
-                        return (t) => (0, i.jsx)(e, { ...t });
-                    });
-                (0, p.A)({
-                    subscriptionTier: F.pe.TIER_2,
-                    initialPlanId: F.gD.PREMIUM_GROUP_MONTH,
-                    analyticsLocations: e,
-                });
-            } else
-                (0, o.mMO)(async () => {
-                    let { default: e } = await n.e("69595").then(n.bind(n, 526710));
-                    return (t) => (0, i.jsx)(e, { ...t });
-                });
-        }, [eu, e, e_]),
-        eC = (0, B.A)(e),
-        { shouldShowBonusOrbsUX: eN, multiplier: ev } = (0, b.Dl)(Y.rE.NITRO_HOME_MARKETING),
-        { currentDate: eI, nDaysInMonth: ej } = (0, s.useMemo)(() => {
+        eS = (0, s.useCallback)(() => {
+            em
+                ? (0, o.mMO)(async () => {
+                      let { default: e } = await n.e("99709").then(n.bind(n, 516044));
+                      return (t) => (0, i.jsx)(e, { ...t });
+                  })
+                : (0, p.A)({
+                      subscriptionTier: B.pe.TIER_2,
+                      initialPlanId: B.gD.PREMIUM_GROUP_MONTH,
+                      analyticsLocations: e,
+                  });
+        }, [e, em]),
+        eb = (0, V.A)(e),
+        { shouldShowBonusOrbsUX: eE, multiplier: eC } = (0, b.Dl)(z.rE.NITRO_HOME_MARKETING),
+        { currentDate: eN, nDaysInMonth: ev } = (0, s.useMemo)(() => {
             let e = new Date();
             return { currentDate: e, nDaysInMonth: new Date(e.getFullYear(), e.getMonth() + 1, 0).getDate() };
         }, []);
     return (0, s.useMemo)(() => {
         let n = null;
-        if (null != ex) {
-            let e = ex.userStatus?.completedAt != null;
+        if (null != eg) {
+            let e = eg.userStatus?.completedAt != null;
             n = {
-                id: V.NITRO_CONTROL_QUEST_CARD_ID,
-                title: Z.intl.string(e ? W.default.S4okiP : W.default.lvidGa),
-                description: Z.intl.string(e ? W.default.JXidUB : W.default["VghrI/"]),
-                pillText: Z.intl.string(W.default["3rpSiP"]),
-                primaryAsset: (0, r.Mw)(eo) ? ea.A : el.A,
-                ctaText: Z.intl.string(e ? W.default.QBfwzW : W.default["1Ng1ci"]),
-                onCtaClick: eS,
+                id: w.NITRO_CONTROL_QUEST_CARD_ID,
+                title: W.intl.string(e ? K.default.S4okiP : K.default.lvidGa),
+                description: W.intl.string(e ? K.default.JXidUB : K.default["VghrI/"]),
+                pillText: W.intl.string(K.default["3rpSiP"]),
+                primaryAsset: (0, r.Mw)(er) ? el.A : es.A,
+                ctaText: W.intl.string(e ? K.default.QBfwzW : K.default["1Ng1ci"]),
+                onCtaClick: eT,
             };
         }
         let s = [
                 n,
-                ec
-                    ? {
-                          id: V.LOGITECH_3PP_CARD_ID,
-                          title: Z.intl.string(X.default.OlObRa),
-                          description: Z.intl.format(X.default["/UNTlE"], {
-                              discountPercent: G.aW,
-                              termsUrl: P.A.getArticleURL(z.MVz.LOGITECH_PROMOTION),
-                          }),
-                          subscriptionRequired: !0,
-                          progress: eI.getDate() / ej,
-                          ctaText: Z.intl.string(X.default["bZLaD+"]),
-                          onCtaClick: () => (0, M.P)({ partnerId: k.XY }),
-                          blurTint: "#2E213D",
-                          backgroundAssetUrl: ei.A,
-                          pillText: Z.intl.string(Z.t.y2b7CA),
-                          caption: (0, i.jsx)("img", { src: en.A, alt: "Logitech" }),
-                      }
-                    : null,
                 ed
                     ? {
-                          id: V.PREMIUM_GROUP_CARD_ID,
-                          title: Z.intl.string(K.default.YkvksF),
+                          id: w.LOGITECH_3PP_CARD_ID,
+                          title: W.intl.string(Y.default.OlObRa),
+                          description: W.intl.format(Y.default["/UNTlE"], {
+                              discountPercent: D.aW,
+                              termsUrl: P.A.getArticleURL(H.MVz.LOGITECH_PROMOTION),
+                          }),
+                          subscriptionRequired: !0,
+                          progress: eN.getDate() / ev,
+                          ctaText: W.intl.string(Y.default["bZLaD+"]),
+                          onCtaClick: () => (0, G.P)({ partnerId: U.XY }),
+                          blurTint: "#2E213D",
+                          backgroundAssetUrl: en.A,
+                          pillText: W.intl.string(W.t.y2b7CA),
+                          caption: (0, i.jsx)("img", { src: et.A, alt: "Logitech" }),
+                      }
+                    : null,
+                eo
+                    ? {
+                          id: w.PREMIUM_GROUP_CARD_ID,
+                          title: W.intl.string(X.default.YkvksF),
                           description: (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  Z.intl.formatToPlainString(K.default.JlyGQj, {
-                                      totalSeats: H.aw,
-                                      premiumGroupProductName: (0, H.DP)(),
+                                  W.intl.formatToPlainString(X.default.JlyGQj, {
+                                      totalSeats: F.aw,
+                                      premiumGroupProductName: (0, F.DP)(),
                                   }),
                                   (0, i.jsx)("div", {
-                                      className: q.LF,
+                                      className: Z.LF,
                                       children: (0, i.jsx)(h.A, {
-                                          onClick: eb,
-                                          children: Z.intl.string(K.default.yYyGJH),
+                                          onClick: ef,
+                                          children: W.intl.string(X.default.yYyGJH),
                                       }),
                                   }),
                               ],
                           }),
-                          pillText: Z.intl.string(Z.t.oW0eUd),
-                          primaryAsset: J,
-                          ...(eu ? { ctaIcon: o.tvc, ctaIconPosition: "start" } : {}),
-                          ctaText: Z.intl.string(eu ? Z.t.IJI7yk : Z.t.jVcuVY),
-                          onCtaClick: eE,
+                          pillText: W.intl.string(W.t.oW0eUd),
+                          primaryAsset: Q,
+                          ctaIcon: o.tvc,
+                          ctaIconPosition: "start",
+                          ctaText: W.intl.string(W.t.IJI7yk),
+                          onCtaClick: eS,
                       }
                     : null,
-                em
+                ec
                     ? {
-                          id: V.RECURRING_3P_PROMOTIONS_CARD_ID,
-                          title: Z.intl.string(Z.t.m7PucM),
-                          description: Z.intl.format(Z.t.zh1X7u, {}),
+                          id: w.RECURRING_3P_PROMOTIONS_CARD_ID,
+                          title: W.intl.string(W.t.m7PucM),
+                          description: W.intl.format(W.t.zh1X7u, {}),
                           subscriptionRequired: !0,
-                          pillText: Z.intl.string(Z.t.oW0eUd),
-                          caption: (0, i.jsx)("img", { src: Q, alt: "SteelSeries" }),
-                          backgroundAssetUrl: es.A,
-                          progress: eI.getDate() / ej,
-                          ctaText: Z.intl.string(Z.t.w7s5Qr),
-                          onCtaClick: () => (0, w.u)({ analyticsLocations: e, partnerIds: [k.KS, k.Cs] }),
+                          pillText: W.intl.string(W.t.oW0eUd),
+                          caption: (0, i.jsx)("img", { src: q, alt: "SteelSeries" }),
+                          backgroundAssetUrl: ei.A,
+                          progress: eN.getDate() / ev,
+                          ctaText: W.intl.string(W.t.w7s5Qr),
+                          onCtaClick: () => (0, k.u)({ analyticsLocations: e, partnerIds: [U.KS, U.Cs] }),
                           blurTint: "#2E213D",
                       }
                     : null,
-                eN
+                eE
                     ? {
-                          id: V.QUEST_ORB_MULTIPLIER_CARD_ID,
-                          title: Z.intl.string(Z.t.F2MShO),
-                          description: Z.intl.format(Z.t.NpUfej, { bonusOrbMultiplier: ev }),
-                          pillText: Z.intl.string(Z.t.oW0eUd),
-                          primaryAsset: ee.A,
-                          ctaText: Z.intl.string(Z.t.jVcuVY),
-                          onCtaClick: () => (0, N.pX)(z.BVt.QUEST_HOME),
+                          id: w.QUEST_ORB_MULTIPLIER_CARD_ID,
+                          title: W.intl.string(W.t.F2MShO),
+                          description: W.intl.format(W.t.NpUfej, { bonusOrbMultiplier: eC }),
+                          pillText: W.intl.string(W.t.oW0eUd),
+                          primaryAsset: $.A,
+                          ctaText: W.intl.string(W.t.jVcuVY),
+                          onCtaClick: () => (0, N.pX)(H.BVt.QUEST_HOME),
                       }
                     : null,
                 {
-                    id: V.DISPLAY_NAME_STYLES_CARD_ID,
-                    title: Z.intl.string(Z.t.OLtTrt),
-                    description: Z.intl.string(Z.t["di/pXR"]),
-                    onCtaClick: t ? eA : ep,
-                    ctaText: Z.intl.string(Z.t.jVcuVY),
-                    primaryAsset: $.A,
-                    pillText: Z.intl.string(Z.t.y2b7CA),
+                    id: w.DISPLAY_NAME_STYLES_CARD_ID,
+                    title: W.intl.string(W.t.OLtTrt),
+                    description: W.intl.string(W.t["di/pXR"]),
+                    onCtaClick: t ? e_ : eA,
+                    ctaText: W.intl.string(W.t.jVcuVY),
+                    primaryAsset: J.A,
+                    pillText: W.intl.string(W.t.y2b7CA),
                 },
                 {
-                    id: V.CLIENT_THEMES_CARD_ID,
-                    title: Z.intl.string(Z.t.acc6h6),
-                    description: Z.intl.formatToPlainString(Z.t.WQazjs, { themeCount: 20 }),
-                    primaryAsset: er.A,
-                    ctaText: Z.intl.string(Z.t.jVcuVY),
+                    id: w.CLIENT_THEMES_CARD_ID,
+                    title: W.intl.string(W.t.acc6h6),
+                    description: W.intl.formatToPlainString(W.t.WQazjs, { themeCount: 20 }),
+                    primaryAsset: ea.A,
+                    ctaText: W.intl.string(W.t.jVcuVY),
                     onCtaClick: () => {
                         (0, x.nf)(x.HP.CUSTOM_THEME);
                     },
                 },
                 {
-                    id: V.PERMADECOS_CARD_ID,
-                    title: Z.intl.string(Z.t.L14NZN),
-                    description: Z.intl.string(Z.t.eCZkAI),
+                    id: w.PERMADECOS_CARD_ID,
+                    title: W.intl.string(W.t.L14NZN),
+                    description: W.intl.string(W.t.eCZkAI),
                     primaryAsset: (0, i.jsx)(l.u7P, { alt: "", ariaHidden: !0 }),
-                    ctaText: Z.intl.string(Z.t.jVcuVY),
-                    onCtaClick: t ? eA : eT,
+                    ctaText: W.intl.string(W.t.jVcuVY),
+                    onCtaClick: t ? e_ : eh,
                 },
                 {
-                    id: V.CUSTOM_APP_ICONS_CARD_ID,
-                    title: Z.intl.string(Z.t["GU+wqh"]),
-                    description: Z.intl.string(Z.t["1uPk1Z"]),
-                    primaryAsset: et.A,
-                    ctaText: Z.intl.string(Z.t.y9TxXV),
-                    onCtaClick: ef,
+                    id: w.CUSTOM_APP_ICONS_CARD_ID,
+                    title: W.intl.string(W.t["GU+wqh"]),
+                    description: W.intl.string(W.t["1uPk1Z"]),
+                    primaryAsset: ee.A,
+                    ctaText: W.intl.string(W.t.y9TxXV),
+                    onCtaClick: ep,
                 },
             ],
             a = (s = s.filter((e) => null != e))[0].featured,
             d = a ? 5 : 6;
-        return s.splice(+!!a, 0, eC), s.length > d && s.splice(d, s.length - d), s;
-    }, [eC, ex, eo, eS, ed, eu, em, eN, ev, ej, eI, e, ep, ef, eT, eE, eA, t, ec]);
+        return s.splice(+!!a, 0, eb), s.length > d && s.splice(d, s.length - d), s;
+    }, [eb, eg, er, eT, eo, ec, eE, eC, ev, eN, e, eA, ep, eh, eS, e_, t, ed]);
 }
