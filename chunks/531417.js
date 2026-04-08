@@ -334,6 +334,7 @@ class A extends s.A {
                 frameRate: n,
                 width: i,
                 height: s,
+                videoEncoderExperiments: e.videoEncoderExperiments,
             });
         let [E, g] = null != a ? a.split(":") : ["", ""];
         t.setClipsSource({ id: g, soundshareId: null != l ? l : 0 });
