@@ -91,7 +91,7 @@ function y(e) {
             i &&
                 null != t &&
                 null == A &&
-                _.A.captureException(Error("SKU price not found for wishlist item."), { extra: { skuId: t.id } });
+                _.A.captureException(Error("SKU price not found for item."), { extra: { skuId: t.id } });
         }, [i, t, A]),
         { normalPrice: A, discountedPrice: I, discountPercent: T }
     );
