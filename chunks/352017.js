@@ -10,5 +10,4 @@ e.exports = {
     sQ: "bottom__7d80f",
     H$: "rail__7d80f",
     no: "responsive__7d80f",
-    kb: "left__7d80f",
 };

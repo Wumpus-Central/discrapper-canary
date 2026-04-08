@@ -4,11 +4,11 @@ n(64700);
 var l = n(665260),
     a = n(397927),
     r = n(843472),
-    s = n(311685),
+    s = n(475481),
     o = n(652215),
     d = n(985018);
 function c(e, t) {
-    let n = (0, s.V)(t.guild_id, t, "MessageContextMenu"),
+    let n = (0, s.Vc)(t.guild_id, t, "MessageContextMenu"),
         c = (0, l.Lt)(e.flags, o.pr7.IS_GUILD_OFFICIAL);
     return n
         ? c

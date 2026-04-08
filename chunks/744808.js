@@ -23,7 +23,6 @@ function f(e) {
                   [_.aX]: "back" === n.order,
                   [_.Mn]: "top" === n.anchor,
                   [_.sQ]: "bottom" === n.anchor,
-                  [_.kb]: "left" === n.anchor,
                   [_.no]: !0 === n.responsive,
               }),
               children: (0, r.jsx)("img", { src: s, alt: "", "aria-hidden": !0 }),

@@ -41,7 +41,7 @@ var r = n(889137),
     B = n(141468),
     H = n(407580),
     j = n(130201),
-    Y = n(311685),
+    Y = n(475481),
     W = n(963852),
     K = n(195880),
     $ = n(488004),
@@ -900,7 +900,7 @@ ${s}`),
             x && ((a = P), (M = (0, s.UI)(M, eN.pr7.SUPPRESS_NOTIFICATIONS)));
             let k = el.A.getChannel(e),
                 U = eu.A.getGuild(k?.guild_id);
-            (0, Y.Q)(U, k, "_sendMessage") && (M = (0, s.UI)(M, eN.pr7.IS_GUILD_OFFICIAL));
+            (0, Y.Qz)(U, k, "_sendMessage") && (M = (0, s.UI)(M, eN.pr7.IS_GUILD_OFFICIAL));
             let F = !1,
                 V = n.messageReference?.type === eN.SH7.FORWARD;
             if (

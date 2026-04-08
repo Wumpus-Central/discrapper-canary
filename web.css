@@ -35582,15 +35582,10 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .profileFrameLayer__7d80f.rail__7d80f>img {
     bottom: 0;
+    height: 100%;
     margin: auto;
-    max-height: 100%;
     position: absolute;
     top: 0
-}
-
-.profileFrameLayer__7d80f.rail__7d80f.left__7d80f>img {
-    -o-object-fit: cover;
-    object-fit: cover
 }
 
 .profileFrameLayer__7d80f.rail__7d80f.top__7d80f {
