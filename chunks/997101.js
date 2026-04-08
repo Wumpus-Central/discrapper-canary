@@ -844,6 +844,7 @@ let i = {
             "WY",
         ]),
     },
+    EMBARGOED_BILLING_ADDRESS_COUNTRIES: new Set(["KP", "SY"]),
     ALLOWED_BILLING_ADDRESS_COUNTRIES: new Set([
         "AC",
         "AD",
