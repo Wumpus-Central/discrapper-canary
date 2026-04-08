@@ -22,7 +22,7 @@ var l = n(627968),
     C = n(988794),
     T = n(652215),
     y = n(985018),
-    b = n(430322);
+    b = n(679835);
 let I = (e) => {
         let { guildId: t, channelType: n, channel: i, onSelectChannel: s, disabled: a, entityType: r } = e,
             o = n === T.rbe.GUILD_STAGE_VOICE,
@@ -138,7 +138,7 @@ function k(e) {
             return n;
         }, [c, o, u, g, h.length, m.length]);
     return (0, l.jsx)(d.z6M, {
-        value: n.entityType,
+        value: p.find((e) => e.value === n.entityType)?.value ?? null,
         options: p,
         onChange: E,
         disabled: f,
@@ -180,7 +180,7 @@ function _(e) {
                                       n.e("8018"),
                                       n.e("93142"),
                                       n.e("64233"),
-                                      n.e("51975"),
+                                      n.e("73652"),
                                   ]).then(n.bind(n, 409200));
                                   return (n) =>
                                       (0, l.jsx)(e, { ...n, channelType: T.rbe.GUILD_STAGE_VOICE, guildId: t });
