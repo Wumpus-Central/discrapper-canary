@@ -88,7 +88,7 @@ function A(e) {
     let { gamesToDisplay: t, lastGameToDisplay: n, remainingGames: s, activity: o } = e,
         { data: c } = (0, d.k)(n?.id),
         p = c?.iconHash,
-        h = null != p ? _.Ay.getGameAssetURL({ id: n.id, hash: p, size: 24 }) : n?.getIconURL(24),
+        h = null != p && null != n ? _.Ay.getGameAssetURL({ id: n.id, hash: p, size: 24 }) : n?.getIconURL(24),
         A = i.useMemo(() => {
             if (null == n) return null;
             let e = h;
