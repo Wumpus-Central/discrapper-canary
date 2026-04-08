@@ -339,6 +339,7 @@ function V(e) {
                     : (0, r.jsxs)(o.BJc, {
                           direction: "vertical",
                           gap: 8,
+                          padding: { bottom: 8 },
                           children: [(0, r.jsx)(y.A, {}), (0, r.jsx)(v.A, {})],
                       }),
             [V],

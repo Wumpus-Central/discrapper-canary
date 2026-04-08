@@ -21,7 +21,7 @@ var r = n(627968),
     T = n(888751),
     S = n(788868),
     y = n(985018),
-    v = n(756366);
+    v = n(523376);
 let N = (e) => {
     let {
             referralTrialOfferId: t,
@@ -151,45 +151,52 @@ let N = (e) => {
                     : ei && e.push({ type: "info", message: (0, g.Nn)(), key: "premium-group-purchase-notice" }),
                 e.length > 0 ? e : null
             );
-        }, [el, eT, en, w, eg, V, ei]);
-    if (null == em || em.type === h.N$.LOADING) return (0, r.jsx)(l.Ed, {});
-    let eN = null != eE ? eE.subscription_trial : void 0,
-        eC = (0, m.l6)(N, em?.invoicePreview?.checkoutContext?.available_plans),
-        eR =
+        }, [el, eT, en, w, eg, V, ei]),
+        eN = (0, m.l6)(N, null != em ? em.invoicePreview?.checkoutContext?.available_plans : void 0),
+        eC = {
+            shouldShowGlobalNotices: !0,
+            upperInlineNoticeProps: ev,
+            planSelectContent: q
+                ? (0, r.jsx)(A.XH, {
+                      disabled: L.disabled,
+                      selectedPlanId: n,
+                      priceOptions: eN,
+                      planOptions: z,
+                      subscriptionPeriodEnd: V,
+                      discountInvoiceItems: $,
+                  })
+                : void 0,
+            paymentSelectContent: eh,
+            promotionalNoticeContent: ey,
+        };
+    if (null == em) return (0, r.jsx)(l.rg, { ...eC, legalContent: null });
+    if (em.type === h.N$.LOADING) return (0, r.jsx)(l.Ed, {});
+    let eR = null != eE ? eE.subscription_trial : void 0,
+        eO =
             em.type === h.N$.PREMIUM_WITH_TRIAL
                 ? null
                 : (0, r.jsx)(A.W9, {
                       invoiceSummaryTypeWithPreview: em,
                       subscriptionPlan: W,
                       isPrepaidPaymentSource: K,
-                      subscriptionTrial: eN,
+                      subscriptionTrial: eR,
                       isCustomGift: Z,
                   }),
-        eO = null;
+        eb = null;
     if (
         !K &&
         (h.IJ.has(em.type) || em.type === h.N$.PREMIUM_WITH_TRIAL) &&
         "renewalInvoicePreview" in em &&
         null != em.renewalInvoicePreview
     ) {
-        let e = (0, T.Gj)(em.invoicePreview, em.renewalInvoicePreview, eN, {
+        let e = (0, T.Gj)(em.invoicePreview, em.renewalInvoicePreview, eR, {
             discountOffer: M,
             isSubscriptionUpdate: null != et,
             fractionalPremiumInfo: en,
         });
-        eO = (0, r.jsx)(c._, { ...e });
+        eb = (0, r.jsx)(c._, { ...e });
     }
-    let eb = q
-            ? (0, r.jsx)(A.XH, {
-                  disabled: L.disabled,
-                  selectedPlanId: n,
-                  priceOptions: eC,
-                  planOptions: z,
-                  subscriptionPeriodEnd: V,
-                  discountInvoiceItems: $,
-              })
-            : void 0,
-        eD = q
+    let eD = q
             ? void 0
             : (0, r.jsx)(I._, {
                   type: em.type,
@@ -217,16 +224,12 @@ let N = (e) => {
                 ? (0, T.ib)(em.invoicePreview.currency)
                 : (0, o.kw)({ subscriptionInvoiceRecord: em.invoicePreview });
     return (0, r.jsx)(l.rg, {
-        shouldShowGlobalNotices: !0,
-        upperInlineNoticeProps: ev,
-        planSelectContent: eb,
+        ...eC,
         purchaseItemContent: eD,
-        subscriptionDetailsContent: eO,
-        paymentSelectContent: eh,
-        invoiceSummaryContent: eR,
+        subscriptionDetailsContent: eb,
+        invoiceSummaryContent: eO,
         legalContent: eL,
         invoiceTotalDueValue: ew,
         invoiceTotalDueLabel: y.intl.string(v.default.R0cZsM),
-        promotionalNoticeContent: ey,
     });
 };
