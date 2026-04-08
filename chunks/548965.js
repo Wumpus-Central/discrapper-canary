@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { ML: () => u, P4: () => h, hw: () => I, iQ: () => E, pX: () => T, pd: () => m }), n(321073);
+n.d(t, { FH: () => A, ML: () => u, P4: () => h, hw: () => T, iQ: () => E, pX: () => S, pd: () => m }), n(321073);
 var r = n(284009),
     i = n.n(r),
     s = n(306173),
@@ -131,15 +131,15 @@ class g extends d {
         super(e), (this.label = t), (this.treatmentCount = n);
     }
 }
-new g("2026-01-android-rmle", "Android Pull Mode Rendering", 4),
-    new g("2026-02-android-fresco-cache", "Android Fresco Cache", 3),
+let A = new g("2026-01-android-rmle", "Android Pull Mode Rendering", 4);
+new g("2026-02-android-fresco-cache", "Android Fresco Cache", 3),
     new _("2026-02-android-chat-mosaic-shared-pool", "Android Chat Mosaic Shared Pool"),
-    new _("2026-03_mobile-hermes-occupancy-target", "Android Hermes Occupancy Target");
-let A = !1;
-function I() {
-    return A;
-}
+    new _("2026-03-mobile-hermes-occupancy-target", "Android Hermes Occupancy Target");
+let I = !1;
 function T() {
+    return I;
+}
+function S() {
     (0, s.xd)() &&
-        (l.info("Clearing libdiscore experiment cache and disabling sync"), (A = !0), (0, s.Ih)().clearCache());
+        (l.info("Clearing libdiscore experiment cache and disabling sync"), (I = !0), (0, s.Ih)().clearCache());
 }
