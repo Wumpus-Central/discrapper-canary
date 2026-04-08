@@ -1,4 +1,4 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => y });
 var i = n(311907),
     l = n(713402),
     s = n(73153),
@@ -81,7 +81,7 @@ function b() {
         })() || e
     );
 }
-class y extends i.Ay.Store {
+class v extends i.Ay.Store {
     initialize() {
         this.waitFor(r.A, a.A, c.A, o.A, d.default);
     }
@@ -102,7 +102,7 @@ class y extends i.Ay.Store {
         return f.get(e);
     }
 }
-let v = new y(s.h, {
+let y = new v(s.h, {
     VOICE_CHANNEL_SELECT: function (e) {
         let t = d.default.getCurrentUser()?.id,
             { channelId: n, currentVoiceChannelId: i } = e;
@@ -192,6 +192,9 @@ let v = new y(s.h, {
     VOICE_CHANNEL_HISTORY_UPDATE_LAST_FETCH_TIME: function (e) {
         let { channelId: t, timestamp: n } = e;
         f.set(t, n);
+    },
+    CONNECTION_OPEN: function () {
+        return 0 !== p.size && (p.clear(), f.clear(), x.clear(), E.clear(), !0);
     },
     RELATIONSHIP_UPDATE: b,
     RELATIONSHIP_ADD: b,

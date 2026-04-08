@@ -1,28 +1,30 @@
 "use strict";
 n.d(t, {
-    ES: () => a,
-    Fd: () => l,
-    Gt: () => _,
-    Hx: () => A,
-    N0: () => c,
-    VP: () => E,
-    ZG: () => g,
-    _W: () => p,
-    aj: () => h,
-    k8: () => d,
-    mZ: () => u,
-    q4: () => f,
-    qh: () => s,
-    ty: () => m,
-    y5: () => o,
+    ES: () => o,
+    Fd: () => u,
+    Gt: () => f,
+    Hx: () => y,
+    L: () => A,
+    N0: () => d,
+    VP: () => T,
+    ZG: () => S,
+    _W: () => h,
+    aj: () => m,
+    k8: () => _,
+    mZ: () => c,
+    q4: () => p,
+    qh: () => a,
+    ty: () => I,
+    y5: () => l,
 });
 var r = n(158390),
-    i = n(927813);
+    i = n(317097),
+    s = n(927813);
 n(652215);
-let s = [0, 4, 8, 16, 24],
-    a = 16,
-    o = 0,
-    l = Object.freeze({
+let a = [0, 4, 8, 16, 24],
+    o = 16,
+    l = 0,
+    u = Object.freeze({
         referencedAvatarProfile: !1,
         referencedUsernameProfile: !1,
         interactionAvatarProfile: !1,
@@ -35,14 +37,24 @@ let s = [0, 4, 8, 16, 24],
         moreUtilities: !1,
         contextMenu: !1,
     }),
-    u = 16,
     c = 16,
-    d = 32,
-    _ = 64,
-    f = "---new-messages-bar",
-    p = "SPOILER_",
-    h = 0x99aab5;
-var m = (function (e) {
+    d = 16,
+    _ = 32,
+    f = 64,
+    p = "---new-messages-bar",
+    h = "SPOILER_",
+    m = 0x99aab5,
+    E = 0.16,
+    g = 0.2;
+function A(e) {
+    return {
+        "--custom-guild-official-message": (0, i.$k)(e, !0),
+        "--custom-guild-official-message-hsl": (0, i.BK)(e, !0),
+        "--custom-guild-official-message-alpha": E,
+        "--custom-guild-official-message-selected-alpha": g,
+    };
+}
+var I = (function (e) {
     return (
         (e.ERROR_SOURCE_UNKNOWN = "ERROR_SOURCE_UNKNOWN"),
         (e.PRECOMPRESSION_SUM_TOO_LARGE = "PRECOMPRESSION_SUM_TOO_LARGE"),
@@ -54,9 +66,9 @@ var m = (function (e) {
         e
     );
 })({});
-let E = 0xc800000,
-    g = { timeout: 60 * i.A.Millis.SECOND, retries: 3, backoff: new r.A() };
-var A = (function (e) {
+let T = 0xc800000,
+    S = { timeout: 60 * s.A.Millis.SECOND, retries: 3, backoff: new r.A() };
+var y = (function (e) {
     return (
         (e.PUSH_NOTIFICATION = "push_notification"),
         (e.CHAT_INPUT = "chat_input"),
