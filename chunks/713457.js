@@ -244,7 +244,7 @@ function G(e) {
                   fullWidth: !0,
               }),
           }))
-        : J && eu.enabled && em === I.UA.COMPLETED && eu.enabledQuestStates.has(em)
+        : eu.enabled && (em === I.UA.COMPLETED || em === I.UA.CLAIMED) && eu.enabledQuestStates.has(em)
           ? (eS = et
                 ? (0, a.jsx)(U, {
                       quest: t,
