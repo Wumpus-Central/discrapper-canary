@@ -1,87 +1,98 @@
 "use strict";
-n.d(t, { O: () => A, o: () => T });
+n.d(t, { O: () => T, o: () => y });
 var r = n(64700),
     i = n(735438),
     s = n.n(i),
     a = n(311907),
     o = n(871123),
     l = n(773669),
-    u = n(287809),
-    c = n(580630),
-    d = n(561573),
-    _ = n(288106),
-    f = n(652215);
-function p(e) {
+    u = n(178213),
+    c = n(287809),
+    d = n(580630),
+    _ = n(728458),
+    f = n(561573),
+    p = n(288106),
+    h = n(652215);
+function m(e) {
     return { pricingResultId: e.pricing_result_id, rewardResultIds: e.reward_result_ids };
 }
-function h(e) {
+function E(e) {
     return e.map((e) => ({ currency: e.currency, amount: e.amount }));
 }
-function m(e) {
+function g(e) {
     return s().mapValues(e, (e) =>
         s().mapValues(e, (e) => ({
-            userPrice: h(e.user_price),
-            prices: s().mapValues(e.prices, (e) => s().mapValues(e, (e) => h(e))),
+            userPrice: E(e.user_price),
+            prices: s().mapValues(e.prices, (e) => s().mapValues(e, (e) => E(e))),
         })),
     );
 }
-function E(e) {
+function A(e) {
     return { type: e.type, amount: e.amount };
 }
-function g(e) {
-    return s().mapValues(e, (e) => s().mapValues(e, (e) => E(e)));
+function I(e) {
+    return s().mapValues(e, (e) => s().mapValues(e, (e) => A(e)));
 }
-function A(e) {
+function T(e) {
     return {
-        skuPriceMap: s().mapValues(e.sku_price_map, (e) => p(e)),
-        pricingResultIdMap: m(e.pricing_result_id_map),
-        rewardResultIdMap: g(e.reward_result_id_map),
+        skuPriceMap: s().mapValues(e.sku_price_map, (e) => m(e)),
+        pricingResultIdMap: g(e.pricing_result_id_map),
+        rewardResultIdMap: I(e.reward_result_id_map),
     };
 }
-let I = (e) => {
-    if (null == e) return _.QK.SELF_PURCHASE;
+let S = (e) => {
+    if (null == e) return p.QK.SELF_PURCHASE;
     switch (e) {
-        case f.lid.DEFAULT:
-            return _.QK.SELF_PURCHASE;
-        case f.lid.GIFT:
-            return _.QK.GIFT;
+        case h.lid.DEFAULT:
+            return p.QK.SELF_PURCHASE;
+        case h.lid.GIFT:
+            return p.QK.GIFT;
         default:
-            return _.QK.SELF_PURCHASE;
+            return p.QK.SELF_PURCHASE;
     }
 };
-function T(e) {
-    let { sku: t, priceSetAssignmentPurchaseType: n = f.lid.DEFAULT } = e,
-        i = (0, a.bG)([d.A], () => d.A.getPricesForSkuId(t?.id ?? null)),
-        s = (0, a.yK)([d.A], () => d.A.getRewardsForSkuId(t?.id) ?? []),
-        p = (0, a.bG)([u.default], () => u.default.getCurrentUser()),
-        h = (0, a.bG)([l.default], () => l.default.locale),
+function y(e) {
+    let { sku: t, priceSetAssignmentPurchaseType: n = h.lid.DEFAULT } = e,
+        i = (0, u.AZ)("useSKUPrice"),
+        s = (0, a.bG)([f.A], () => f.A.getPricesForSkuId(t?.id ?? null)),
+        m = (0, a.yK)([f.A], () => f.A.getRewardsForSkuId(t?.id) ?? []),
+        E = (0, a.bG)([c.default], () => c.default.getCurrentUser()),
+        g = (0, a.bG)([l.default], () => l.default.locale),
         {
-            normalPrice: m,
-            discountedPrice: E,
-            discountPercent: g,
+            normalPrice: A,
+            discountedPrice: I,
+            discountPercent: T,
         } = r.useMemo(() => {
-            if (null == t) return { normalPrice: "", discountedPrice: null, discountPercent: null };
-            if (null == i) {
-                let e = t.productLine === f.EZt.SOCIAL_LAYER_GAME_ITEM ? (0, o.y8)(t, n) : t.getPrice(p?.premiumType);
+            if (null == t) return { normalPrice: null, discountedPrice: null, discountPercent: null };
+            if (null == s) {
+                let e = t.productLine === h.EZt.SOCIAL_LAYER_GAME_ITEM ? (0, o.y8)(t, n) : t.getPrice(E?.premiumType);
                 return {
-                    normalPrice: null != e ? (0, c.$g)(e.amount, e.currency) : "",
+                    normalPrice: null != e && e.amount > 0 ? (0, d.$g)(e.amount, e.currency) : null,
                     discountedPrice: null,
                     discountPercent: null,
                 };
             }
-            let e = I(n),
-                r = i[e] ?? i[_.QK.SELF_PURCHASE],
-                a = r?.userPrice?.find((e) => e.currency !== f.Yri.DISCORD_ORB),
-                l = s.find((t) => t[e]?.type === _.Ns.DISCOUNT),
-                u = null != l ? l[e] : null,
-                d = null != u ? a : null,
-                m = null != u && u.amount > 0 ? u.amount : null,
-                E = null != u ? r?.prices[f.FBC.BASE]?.[_.v8.NORMAL]?.find((e) => e.currency !== f.Yri.DISCORD_ORB) : a;
+            let e = S(n),
+                r = s[e] ?? s[p.QK.SELF_PURCHASE],
+                i = r?.userPrice?.find((e) => e.currency !== h.Yri.DISCORD_ORB),
+                a = m.find((t) => t[e]?.type === p.Ns.DISCOUNT),
+                l = null != a ? a[e] : null,
+                u = null != l ? i : null,
+                c = null != l && l.amount > 0 ? l.amount : null,
+                _ = null != l ? r?.prices[h.FBC.BASE]?.[p.v8.NORMAL]?.find((e) => e.currency !== h.Yri.DISCORD_ORB) : i;
             return {
-                normalPrice: null != E ? (0, c.$g)(E.amount, E.currency) : "",
-                discountedPrice: null != d ? (0, c.$g)(d.amount, d.currency) : null,
-                discountPercent: null != m ? (0, c.l9)(h, -m / 100) : null,
+                normalPrice: null != _ && _.amount > 0 ? (0, d.$g)(_.amount, _.currency) : null,
+                discountedPrice: null != u ? (0, d.$g)(u.amount, u.currency) : null,
+                discountPercent: null != c ? (0, d.l9)(g, -c / 100) : null,
             };
-        }, [t, n, p?.premiumType, i, s, h]);
-    return { normalPrice: m, discountedPrice: E, discountPercent: g };
+        }, [t, n, E?.premiumType, s, m, g]);
+    return (
+        r.useEffect(() => {
+            i &&
+                null != t &&
+                null == A &&
+                _.A.captureException(Error("SKU price not found for wishlist item."), { extra: { skuId: t.id } });
+        }, [i, t, A]),
+        { normalPrice: A, discountedPrice: I, discountPercent: T }
+    );
 }

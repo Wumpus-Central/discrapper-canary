@@ -37,7 +37,7 @@ var a = n(627968),
     M = n(188275),
     B = n(652215),
     F = n(985018),
-    H = n(136242);
+    H = n(564343);
 function G(e) {
     let { sku: t } = e,
         {
@@ -45,27 +45,29 @@ function G(e) {
             discountedPrice: l,
             discountPercent: i,
         } = (0, g.o)({ sku: t, priceSetAssignmentPurchaseType: B.lid.DEFAULT });
-    return null != i && null != l
-        ? (0, a.jsxs)("div", {
-              className: H.TS,
-              children: [
-                  (0, a.jsx)(c.Heading, {
-                      className: H.of,
-                      variant: "heading-md/medium",
-                      color: "text-muted",
-                      lineClamp: 1,
-                      children: n,
-                  }),
-                  (0, a.jsx)(c.Heading, { variant: "heading-md/bold", color: "text-strong", children: l }),
-                  (0, a.jsxs)(c.Heading, {
-                      variant: "heading-md/bold",
-                      color: "text-feedback-positive",
-                      lineClamp: 1,
-                      children: ["(", i, ")"],
-                  }),
-              ],
-          })
-        : (0, a.jsx)(c.Heading, { variant: "heading-md/semibold", color: "text-strong", children: n });
+    return null == n
+        ? null
+        : null != i && null != l
+          ? (0, a.jsxs)("div", {
+                className: H.TS,
+                children: [
+                    (0, a.jsx)(c.Heading, {
+                        className: H.of,
+                        variant: "heading-md/medium",
+                        color: "text-muted",
+                        lineClamp: 1,
+                        children: n,
+                    }),
+                    (0, a.jsx)(c.Heading, { variant: "heading-md/bold", color: "text-strong", children: l }),
+                    (0, a.jsxs)(c.Heading, {
+                        variant: "heading-md/bold",
+                        color: "text-feedback-positive",
+                        lineClamp: 1,
+                        children: ["(", i, ")"],
+                    }),
+                ],
+            })
+          : (0, a.jsx)(c.Heading, { variant: "heading-md/semibold", color: "text-strong", children: n });
 }
 function W(e) {
     let {

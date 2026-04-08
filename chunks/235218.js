@@ -21,7 +21,7 @@ var r = n(627968),
     T = n(652215),
     S = n(788868),
     y = n(985018),
-    v = n(474259);
+    v = n(934026);
 let N = 20;
 function C(e) {
     let {
@@ -57,7 +57,7 @@ function C(e) {
             () =>
                 x || z
                     ? {
-                          buttonCTALabel: C ? K : y.intl.string(y.t.FdGl5A),
+                          buttonCTALabel: C && null != K ? K : y.intl.string(y.t.FdGl5A),
                           buttonIcon: void 0,
                           handleCardClick: () => {
                               G?.guildId != null &&
@@ -73,7 +73,7 @@ function C(e) {
                           },
                       }
                     : {
-                          buttonCTALabel: C ? $ : y.intl.string(y.t.ilhtIa),
+                          buttonCTALabel: C && null != $ ? $ : y.intl.string(y.t.ilhtIa),
                           buttonIcon: s ? void 0 : l.okO,
                           handleCardClick: () => {
                               D?.(),
@@ -137,7 +137,7 @@ function C(e) {
         cardRef: F,
         accessibleLabel: q,
         onCardClick: Q,
-        buttonCTALabel: Z,
+        buttonCTALabel: Z ?? y.intl.string(y.t.FdGl5A),
         buttonIcon: X,
         isOwned: z,
         renderItemPreview: ee,

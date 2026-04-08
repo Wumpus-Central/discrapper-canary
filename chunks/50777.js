@@ -2,8 +2,8 @@ n.d(t, { A: () => M });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
-    a = n.n(s),
-    r = n(158954),
+    r = n.n(s),
+    a = n(158954),
     o = n(311907),
     d = n(990078),
     c = n(397927),
@@ -42,7 +42,7 @@ function D(e) {
                               children: R.intl.format(R.t.GiVd2Q, {
                                   orbCount: t.orbsReward,
                                   orbIconHook: () =>
-                                      (0, i.jsx)(r.Cp8, { size: "xs", color: "currentColor" }, "orbs-icon"),
+                                      (0, i.jsx)(a.Cp8, { size: "xs", color: "currentColor" }, "orbs-icon"),
                               }),
                           }),
                       })
@@ -51,17 +51,18 @@ function D(e) {
         ),
         u = null != o && null != s;
     return (0, i.jsx)("div", {
-        className: a()(P.PB, { [P.un]: u }),
+        className: r()(P.PB, { [P.un]: u }),
         children: u
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, i.jsx)(c.Text, {
-                          className: P.of,
-                          variant: "text-md/medium",
-                          color: "text-muted",
-                          lineClamp: 1,
-                          children: n,
-                      }),
+                      null != n &&
+                          (0, i.jsx)(c.Text, {
+                              className: P.of,
+                              variant: "text-md/medium",
+                              color: "text-muted",
+                              lineClamp: 1,
+                              children: n,
+                          }),
                       (0, i.jsx)(c.Text, { variant: "text-md/bold", lineClamp: 1, children: s }),
                       (0, i.jsxs)(c.Text, {
                           variant: "text-md/bold",
@@ -73,17 +74,20 @@ function D(e) {
                   ],
               })
             : (0, i.jsxs)(i.Fragment, {
-                  children: [(0, i.jsx)(c.Text, { variant: "text-md/bold", lineClamp: 1, children: n }), d],
+                  children: [
+                      null != n && (0, i.jsx)(c.Text, { variant: "text-md/bold", lineClamp: 1, children: n }),
+                      d,
+                  ],
               }),
     });
 }
 function M(e) {
     let { guildId: t, skuId: n, channel: s } = e,
-        a = (0, o.bG)([C.A], () => C.A.isFetchingForSKU(n)),
+        r = (0, o.bG)([C.A], () => C.A.isFetchingForSKU(n)),
         M = (0, A.A)({ skuId: n, location: "SocialLayerStorefrontProductDetailsEmbed" }),
         w = M?.applicationId,
-        O = (0, o.bG)([m.A], () => null != w && m.A.isFetchingApplication(w)),
-        k = (0, o.bG)([m.A], () => null != w && m.A.didFetchingApplicationFail(w)),
+        k = (0, o.bG)([m.A], () => null != w && m.A.isFetchingApplication(w)),
+        O = (0, o.bG)([m.A], () => null != w && m.A.didFetchingApplicationFail(w)),
         U = (0, p.h)(w),
         B = (0, b.b)({ location: "product_details_embed" }),
         { analyticsLocations: G } = (0, _.Ay)(u.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED);
@@ -126,68 +130,58 @@ function M(e) {
                     { analyticsLocations: [u.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_GIFT_BUTTON] },
                 );
         }, [M, F]),
-        X = null != w && null == U && !k;
-    return (a || O || X) && (null == M || null == U)
-        ? (0, i.jsx)("div", { className: P.kL, children: (0, i.jsx)(c.y$y, { className: P.u1 }) })
-        : null != M && null != U && (0, h.A)(U) && U.guildId === t
-          ? (0, i.jsxs)("div", {
-                className: P.kL,
+        X = null != w && null == U && !O;
+    if ((r || k || X) && (null == M || null == U))
+        return (0, i.jsx)("div", { className: P.kL, children: (0, i.jsx)(c.y$y, { className: P.u1 }) });
+    if (null == M || null == U || !(0, h.A)(U) || U.guildId !== t) return null;
+    let Z = Y ?? W;
+    return (0, i.jsxs)("div", {
+        className: P.kL,
+        children: [
+            (0, i.jsx)(j.A, { className: P.Nr, skuId: n, variant: j.s.EMBEDDED, onClick: Q, analyticsLocations: G }),
+            (0, i.jsxs)("div", {
+                className: P.zH,
                 children: [
-                    (0, i.jsx)(j.A, {
-                        className: P.Nr,
-                        skuId: n,
-                        variant: j.s.EMBEDDED,
-                        onClick: Q,
-                        analyticsLocations: G,
-                    }),
                     (0, i.jsxs)("div", {
-                        className: P.zH,
+                        className: P.lI,
                         children: [
+                            B && (0, i.jsx)(N.V, {}),
                             (0, i.jsxs)("div", {
-                                className: P.lI,
+                                className: P.PB,
                                 children: [
-                                    B && (0, i.jsx)(N.V, {}),
-                                    (0, i.jsxs)("div", {
-                                        className: P.PB,
-                                        children: [
-                                            null != V &&
-                                                (0, i.jsx)("img", { src: V.toString(), alt: q, className: P.ye }),
-                                            (0, i.jsx)(c.Text, {
-                                                variant: "text-md/medium",
-                                                lineClamp: 1,
-                                                children: M.name,
-                                            }),
-                                        ],
-                                    }),
-                                    (0, i.jsx)(D, { sku: M, normalPrice: W, discountedPrice: Y, discountPercent: z }),
+                                    null != V && (0, i.jsx)("img", { src: V.toString(), alt: q, className: P.ye }),
+                                    (0, i.jsx)(c.Text, { variant: "text-md/medium", lineClamp: 1, children: M.name }),
                                 ],
                             }),
-                            (0, i.jsxs)(r.e2v, {
-                                wrap: !1,
-                                fullWidth: !0,
-                                children: [
-                                    (0, i.jsx)(d.m, {
-                                        text: H ? void 0 : R.intl.string(R.t.IqlPbQ),
-                                        children: (0, i.jsx)(r.$nd, {
-                                            variant: H ? "secondary" : "primary",
-                                            onClick: Q,
-                                            text: R.intl.string(R.t.KLBTgF),
-                                            fullWidth: !0,
-                                        }),
-                                    }),
-                                    H &&
-                                        (0, i.jsx)(r.$nd, {
-                                            variant: "primary",
-                                            onClick: K,
-                                            text: R.intl.format(R.t.Xp5WTn, { price: Y ?? W }),
-                                            fullWidth: !0,
-                                        }),
-                                    (0, i.jsx)(S.A, { onGift: J }),
-                                ],
+                            (0, i.jsx)(D, { sku: M, normalPrice: W, discountedPrice: Y, discountPercent: z }),
+                        ],
+                    }),
+                    (0, i.jsxs)(a.e2v, {
+                        wrap: !1,
+                        fullWidth: !0,
+                        children: [
+                            (0, i.jsx)(d.m, {
+                                text: H ? void 0 : R.intl.string(R.t.IqlPbQ),
+                                children: (0, i.jsx)(a.$nd, {
+                                    variant: H ? "secondary" : "primary",
+                                    onClick: Q,
+                                    text: R.intl.string(R.t.KLBTgF),
+                                    fullWidth: !0,
+                                }),
                             }),
+                            H &&
+                                (0, i.jsx)(a.$nd, {
+                                    variant: "primary",
+                                    onClick: K,
+                                    text:
+                                        null != Z ? R.intl.format(R.t.Xp5WTn, { price: Z }) : R.intl.string(R.t.boqtTA),
+                                    fullWidth: !0,
+                                }),
+                            (0, i.jsx)(S.A, { onGift: J }),
                         ],
                     }),
                 ],
-            })
-          : null;
+            }),
+        ],
+    });
 }

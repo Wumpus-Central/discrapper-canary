@@ -16,7 +16,7 @@ var r = n(627968),
     m = n(652215),
     E = n(788868),
     g = n(985018),
-    A = n(498700);
+    A = n(507075);
 function I(e) {
     return { margin: e.buttonInset };
 }
@@ -44,7 +44,7 @@ function T(e) {
                     isPromptingPurchase: !0,
                 };
             let e = N ?? v;
-            if (e?.length > 0) return { label: e, icon: void 0, isPromptingPurchase: !0 };
+            if (null != e) return { label: e, icon: void 0, isPromptingPurchase: !0 };
             if (null != C)
                 try {
                     let e = (0, f.JM)(C.id, !1, !y);
