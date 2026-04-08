@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { Ay: () => A, u_: () => E, um: () => h });
+n.d(t, { Ay: () => A, u_: () => g, um: () => h });
 var r = n(873298),
     i = n(406935),
-    a = n(582754),
-    s = n(73153),
+    s = n(582754),
+    a = n(73153),
     o = n(47671),
     l = n(284016),
     u = n(973654),
@@ -45,7 +45,7 @@ function m(e) {
             return r.Sx.DARK;
     }
 }
-function g(e) {
+function E(e) {
     return {
         backgroundGradientPresetId:
             null != e.backgroundGradientPresetId ? i.ZQ.create({ value: e.backgroundGradientPresetId }) : void 0,
@@ -60,15 +60,15 @@ function g(e) {
                 : void 0,
     };
 }
-function E(e) {
+function g(e) {
     let { backgroundGradientPresetId: t, customUserThemeSettings: n, theme: r, useSystemTheme: i } = e,
         o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.Sb.INFREQUENT_USER_ACTION,
         c = "system" === r ? p.Q_.ON : p.Q_.OFF,
         d = null != i ? i : c;
     if (
-        (s.h.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { useSystemTheme: d } }),
-        null == t && "system" !== r && (0, a.Mw)(r) && (0, u.NA)({ [p.Fc.DARK]: r }),
-        s.h.dispatch({
+        (a.h.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { useSystemTheme: d } }),
+        null == t && "system" !== r && (0, s.Mw)(r) && (0, u.NA)({ [p.Fc.DARK]: r }),
+        a.h.dispatch({
             type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
             changes: {
                 appearance: {
@@ -85,20 +85,20 @@ function E(e) {
             "appearance",
             (e) => {
                 (e.theme = m(r)),
-                    (e.clientThemeSettings = g({ backgroundGradientPresetId: t, customUserThemeSettings: n }));
+                    (e.clientThemeSettings = E({ backgroundGradientPresetId: t, customUserThemeSettings: n }));
             },
             o,
         );
 }
 let A = {
     overrideLocale(e) {
-        s.h.dispatch({ type: "USER_SETTINGS_LOCALE_OVERRIDE", locale: e });
+        a.h.dispatch({ type: "USER_SETTINGS_LOCALE_OVERRIDE", locale: e });
     },
     updatedUnsyncedSettings(e) {
-        s.h.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: e });
+        a.h.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: e });
     },
     setShouldSyncTextSettings(e) {
-        s.h.dispatch({
+        a.h.dispatch({
             type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
             changes: {
                 text: {
@@ -118,8 +118,24 @@ let A = {
             },
         });
     },
-    setShouldSyncAppearanceSettings(e) {
-        s.h.dispatch({
+    async setShouldSyncAppearanceSettings(e) {
+        if (e)
+            try {
+                await _.wc.updateAsync(
+                    "appearance",
+                    (e) => {
+                        (e.theme = m(c.A.theme)),
+                            (e.clientThemeSettings = E({
+                                backgroundGradientPresetId: o.A.gradientPreset?.id,
+                                customUserThemeSettings: d.eh.getSetting()?.customUserThemeSettings,
+                            }));
+                    },
+                    _.Sb.INFREQUENT_USER_ACTION,
+                );
+            } catch {
+                return;
+            }
+        a.h.dispatch({
             type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
             changes: {
                 appearance: {
@@ -136,11 +152,11 @@ let A = {
         });
     },
     applySettingsOverride(e) {
-        s.h.dispatch({ type: "USER_SETTINGS_OVERRIDE_APPLY", settings: e });
+        a.h.dispatch({ type: "USER_SETTINGS_OVERRIDE_APPLY", settings: e });
     },
     clearSettingsOverride() {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-        s.h.dispatch({ type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: t });
+        a.h.dispatch({ type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: t });
     },
     updateLocale: (e) =>
         _.wc.updateAsync(
@@ -151,7 +167,7 @@ let A = {
             _.Sb.INFREQUENT_USER_ACTION,
         ),
     updateTheme(e) {
-        s.h.dispatch({
+        a.h.dispatch({
             type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
             changes: { appearance: { settings: { theme: e } } },
         }),
