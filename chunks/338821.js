@@ -50,7 +50,7 @@ var r = n(627968),
     Z = n(698279),
     X = n(788868),
     Q = n(985018),
-    J = n(582214);
+    J = n(192139);
 let ee = 16,
     et = 48,
     en = 32,
@@ -419,6 +419,7 @@ function ed(e) {
                                   size: "sm",
                                   className: J.ij,
                                   location: f.A.PREMIUM_WISHLIST_SOUNDBOARD_UPSELL,
+                                  forceDarkTheme: !0,
                               })
                             : void 0,
                     })

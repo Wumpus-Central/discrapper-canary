@@ -15,32 +15,33 @@ var r = n(627968),
     h = n(985018);
 let m = { type: "image", src: n(201682).A },
     E = i.forwardRef(function (e, t) {
-        let { className: n, disabled: i, size: E, location: g } = e,
-            A = p.pe.TIER_2,
-            I = h.intl.string(h.t.lG6a5x),
-            T = (0, d.Gh)("premium-wishlist-button-nux"),
-            S = (0, s.bG)([f.default], () => f.default.getId());
+        let { className: n, disabled: i, size: E, location: g, forceDarkTheme: A } = e,
+            I = p.pe.TIER_2,
+            T = h.intl.string(h.t.lG6a5x),
+            S = (0, d.Gh)("premium-wishlist-button-nux"),
+            y = (0, s.bG)([f.default], () => f.default.getId());
         (0, _.pE)();
         let {
-                isWishlisted: y,
-                isBusy: v,
-                isFirstTimeWishlister: N,
-                handleToggle: C,
-            } = (0, u.c)({ userId: S, location: g, skuId: A, nuxGraphic: T ? m : void 0, onNuxShow: T ? l.D : void 0 }),
-            R = (0, c.mB)(a.M.PREMIUM_WISHLIST_COACHMARK);
+                isWishlisted: v,
+                isBusy: N,
+                isFirstTimeWishlister: C,
+                handleToggle: R,
+            } = (0, u.c)({ userId: y, location: g, skuId: I, nuxGraphic: S ? m : void 0, onNuxShow: S ? l.D : void 0 }),
+            O = (0, c.mB)(a.M.PREMIUM_WISHLIST_COACHMARK);
         return (0, r.jsx)("div", {
             ref: t,
+            className: A ? "theme-dark" : void 0,
             children: (0, r.jsx)(o._, {
-                skuId: A,
-                productName: I,
+                skuId: I,
+                productName: T,
                 className: n,
                 disabled: i,
                 size: E,
-                isWishlisted: y,
-                isBusy: v,
-                isFirstTimeWishlister: N,
-                onClick: C,
-                shouldShowTooltip: !R,
+                isWishlisted: v,
+                isBusy: N,
+                isFirstTimeWishlister: C,
+                onClick: R,
+                shouldShowTooltip: !O,
                 tooltipConfig: { add: h.intl.string(h.t.cjmnm6) },
             }),
         });

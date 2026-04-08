@@ -18,8 +18,8 @@ var i = n(627968),
     T = n(954571),
     f = n(927578),
     S = n(40185),
-    E = n(526292),
-    b = n(234419),
+    b = n(526292),
+    E = n(234419),
     C = n(690737),
     N = n(320908),
     v = n(412260),
@@ -33,10 +33,10 @@ var i = n(627968),
     D = n(227273),
     G = n(244778),
     M = n(788868),
-    k = n(652215),
-    U = n(985018),
-    w = n(211003),
-    V = n(419878),
+    U = n(652215),
+    k = n(985018),
+    w = n(348486),
+    V = n(385631),
     B = n(288894);
 let F = (e) => {
         let { inOfferExperience: t } = e;
@@ -57,9 +57,9 @@ let F = (e) => {
             J = null != Q ? (0, f.EL)(Q) : null,
             $ = null != J ? f.Ay.getSkuIdForPlan(J.planId) : null,
             ee = null !== $ && $ !== M.pe.TIER_2 ? M.pe.TIER_2 : null,
-            et = (0, b.V)(),
+            et = (0, E.V)(),
             en = et?.subscription_trial?.sku_id,
-            ei = (0, E.ar)(),
+            ei = (0, b.ar)(),
             es = (0, S.cg)(),
             el = (0, h.Gh)("premium-marketing-settings-page"),
             ea = es ?? !1,
@@ -126,6 +126,7 @@ let F = (e) => {
                                 className: V.ij,
                                 size: "md",
                                 location: g.A.PREMIUM_WISHLIST_SETTINGS_HERO,
+                                forceDarkTheme: !0,
                             }),
                     ],
                 }),
@@ -163,12 +164,12 @@ let F = (e) => {
                     onChange: (e) => {
                         e &&
                             !K &&
-                            (T.default.track(k.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eo }),
+                            (T.default.track(U.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eo }),
                             W(!0));
                     },
                     children: (0, i.jsx)("div", { ref: n, className: V._Z }),
                 }),
-                (0, i.jsx)("img", { src: B, className: V.Kw, width: 112, height: 85, alt: U.intl.string(U.t.X4IxWL) }),
+                (0, i.jsx)("img", { src: B, className: V.Kw, width: 112, height: 85, alt: k.intl.string(k.t.X4IxWL) }),
             ],
         });
     };
