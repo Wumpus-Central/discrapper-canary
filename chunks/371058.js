@@ -1,9 +1,10 @@
 "use strict";
-n.d(t, { A: () => o });
+n.d(t, { A: () => l });
 var r = n(439372),
-    i = n(510398),
+    i = n(317861),
+    s = n(510398),
     a = n(587952);
-class s extends r.A {
+class o extends r.A {
     actions = {
         VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect,
         CALL_CREATE: this.handleCallCreate,
@@ -11,13 +12,13 @@ class s extends r.A {
     };
     handleVoiceChannelSelect(e) {
         let { guildId: t, channelId: n } = e;
-        null != n && a.$.trigger({ guildId: t ?? void 0 });
+        null != n && (null != t && i.c.trigger({ guildId: t }), a.$.trigger({ guildId: t ?? void 0 }));
     }
     handleCallCreate() {
         a.$.trigger();
     }
     handleUserSettingsModalOpen() {
-        i.$.trigger();
+        s.$.trigger();
     }
 }
-let o = new s();
+let l = new o();

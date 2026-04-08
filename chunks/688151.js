@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $G: () => s, Ps: () => o, RE: () => r, Vh: () => i, vf: () => a });
+n.d(t, { $G: () => a, Ps: () => o, RE: () => r, Vh: () => i, vf: () => s });
 var r = (function (e) {
         return (
             (e[(e.NOT_ELIGIBLE = -1)] = "NOT_ELIGIBLE"),
@@ -35,10 +35,10 @@ var r = (function (e) {
     i = (function (e) {
         return (e.NONE_LEGACY = "none"), (e.GUILD = "guild"), (e.USER = "user"), e;
     })({}),
-    a = (function (e) {
+    s = (function (e) {
         return (e.MANUAL = "manual"), (e.AUTO = "auto"), (e.AUTO_FALLBACK = "auto_fallback"), e;
     })({}),
-    s = (function (e) {
+    a = (function (e) {
         return (
             (e[(e.NONE = 0)] = "NONE"),
             (e[(e.CONNECTION_OPEN = 1)] = "CONNECTION_OPEN"),
@@ -51,6 +51,7 @@ var r = (function (e) {
             (e[(e.CONNECTION_OPEN_MOBILE = 8)] = "CONNECTION_OPEN_MOBILE"),
             (e[(e.QUEST_HOME_OPEN = 9)] = "QUEST_HOME_OPEN"),
             (e[(e.QUEST_BAR_RENDERED = 10)] = "QUEST_BAR_RENDERED"),
+            (e[(e.GUILD_VOICE = 11)] = "GUILD_VOICE"),
             e
         );
     })({}),
