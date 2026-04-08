@@ -8,8 +8,8 @@ var i = n(627968),
     d = n(890687),
     c = n(590202),
     u = n(792620),
-    m = n(545986),
-    _ = n(654487),
+    _ = n(545986),
+    m = n(654487),
     h = n(985018);
 function p(e) {
     switch (e) {
@@ -42,12 +42,12 @@ let g = function (e) {
         },
         v = n.id,
         { isEnrolling: b } = (0, s.cf)([o.A], () => ({ isEnrolling: o.A.isEnrolling(v) }), [v]),
-        T = (0, m.Oz)(n),
-        N = (function (e, t) {
+        T = (0, _.Oz)(n),
+        y = (function (e, t) {
             let { launchInGameActivity: n } = (0, d.zW)(t);
             if ((0, u.K$)(t))
                 return () => {
-                    (0, m.Fy)(t);
+                    (0, _.Fy)(t);
                 };
             switch (e) {
                 case l.n.ACHIEVEMENT_IN_ACTIVITY:
@@ -59,25 +59,25 @@ let g = function (e) {
                     return null;
             }
         })(c, n),
-        S = (function (e, t) {
+        N = (function (e, t) {
             let { features: n } = t.config;
             switch (e) {
                 case l.n.WATCH_VIDEO:
                     return h.intl.formatToPlainString(h.t.GNsKiW, { remainTime: (0, u.xm)((0, u.Yh)(t)) });
                 case l.n.ACHIEVEMENT_IN_ACTIVITY:
-                    return h.intl.string(h.t["hRIVy+"]);
+                    return h.intl.string(h.t.CkUzLd);
                 case l.n.PLAY_ACTIVITY:
-                    if (n.includes(_.Li.CLOUD_GAMING_ACTIVITY)) return h.intl.string(h.t["+qoymD"]);
-                    return h.intl.string(h.t["Ie9++s"]);
+                    if (n.includes(m.Li.CLOUD_GAMING_ACTIVITY)) return h.intl.string(h.t["+qoymD"]);
+                    return h.intl.string(h.t.E4kW5O);
                 default:
                     return h.intl.string(h.t.kUQLMJ);
             }
         })(c, n),
-        y =
-            ((t = N ?? void 0),
+        S =
+            ((t = y ?? void 0),
             c === l.n.WATCH_VIDEO
                 ? async () => {
-                      await (0, m.e0)(n, {
+                      await (0, _.e0)(n, {
                           questContent: I.questContent,
                           questContentCTA: I.questContentCTA,
                           sourceQuestContent: I.sourceQuestContent,
@@ -101,9 +101,9 @@ let g = function (e) {
         loading: b,
         variant: "primary",
         onClick: () => {
-            A?.(), y();
+            A?.(), S();
         },
-        text: S,
+        text: N,
         icon: T,
         fullWidth: !0,
     });

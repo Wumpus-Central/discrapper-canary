@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { H1: () => x, Lk: () => H, TQ: () => F, Xf: () => P, _c: () => U, c9: () => V, dN: () => G, ix: () => M });
+n.d(t, { H1: () => P, Lk: () => H, TQ: () => F, Xf: () => x, _c: () => U, c9: () => V, dN: () => G, ix: () => M });
 var r = n(627968),
     i = n(64700),
-    s = n(382222),
+    s = n(687498),
     a = n(311907),
     o = n(397927),
     l = n(59520);
@@ -62,7 +62,7 @@ function M(e) {
                   : (0, b.E)());
     }, [t, f, n, r, s, d, _, o]);
 }
-let P = (e) => {
+let x = (e) => {
         let { useReducedMotion: t, className: n } = e,
             [a, l] = (0, o.zhh)(() => ({})),
             u = i.useRef(!1),
@@ -85,7 +85,7 @@ let P = (e) => {
             },
         };
     },
-    x = (e, t, n) => {
+    P = (e, t, n) => {
         let { message: i, xboxURL: s } = (0, m.UX)(),
             a = (0, g.Ut)(),
             o = (r) => {
@@ -107,9 +107,9 @@ function k(e) {
     return (0, C.vl)(e)
         ? e.config.features.includes(L.Li.CLOUD_GAMING_ACTIVITY)
             ? { text: w.intl.string(w.t["+qoymD"]), questContentCTA: A.Cy.START_QUEST }
-            : { text: w.intl.string(w.t["Ie9++s"]), questContentCTA: A.Cy.START_QUEST }
+            : { text: w.intl.string(w.t.E4kW5O), questContentCTA: A.Cy.START_QUEST }
         : (0, C.Ov)(e)
-          ? { text: w.intl.string(w.t["hRIVy+"]), questContentCTA: A.Cy.START_QUEST }
+          ? { text: w.intl.string(w.t.CkUzLd), questContentCTA: A.Cy.START_QUEST }
           : { text: w.intl.string(w.t.l7E81v), questContentCTA: A.Cy.ACCEPT_QUEST };
 }
 function U(e) {
