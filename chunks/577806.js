@@ -39,7 +39,7 @@ function u(e) {
         direction: "horizontal",
         align: "center",
         gap: 16,
-        padding: { left: 12, right: 12, bottom: 24 },
+        padding: { left: "sm", right: "sm", bottom: "lg" },
         children: [
             (0, i.jsxs)(s.BJc, {
                 direction: "vertical",
