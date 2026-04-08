@@ -12,7 +12,9 @@ function A(e) {
     let { onOpenClipsGallery: t, clipIconRef: n, lastClipsSession: A } = e,
         h = (0, a.bG)([s.A], () => {
             let e = s.A.getLastClipsSession()?.newClipIds;
-            return null == e ? null : s.A.getClips().filter((t) => e.includes(t.id))[0];
+            if (null == e) return null;
+            let t = s.A.getClipIds().find((t) => e.includes(t));
+            return null == t ? null : s.A.getClipById(t);
         }),
         _ = (0, c.j)(h),
         m = r.useCallback(() => {

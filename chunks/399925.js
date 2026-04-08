@@ -259,7 +259,7 @@ async function H(e) {
                     .slice(0, n);
                 for (let t of (D.nx.info(`Deleting ${r.length} temporary clips to stay within limit of ${e}`), r))
                     try {
-                        await Z(t.filepath);
+                        await Z(t.filepath, t.id);
                     } catch (e) {
                         D.nx.error("Failed to delete temporary clip", e);
                     }
@@ -335,7 +335,7 @@ function Y(e, t) {
     s.h.dispatch({ type: "CLIPS_SAVE_ANIMATION_END", streamKey: e, timestamp: t });
 }
 async function W(e, t) {
-    let n = S.A.getClips().find((t) => t.id === e);
+    let n = S.A.getClipById(e);
     if (null == n) return;
     let r = { ...n, ...t };
     null != (await (0, R.q)(r)) &&
@@ -362,10 +362,10 @@ async function q(e) {
     }
     s.h.dispatch({ type: "CLIPS_LOAD_DIRECTORY_SUCCESS", clips: n });
 }
-async function Z(e) {
+async function Z(e, t) {
     (0, I.isDesktop)() &&
         a.A.clips?.deleteClip != null &&
-        (await a.A.clips.deleteClip(e), s.h.dispatch({ type: "CLIPS_DELETE_CLIP", filepath: e }));
+        (await a.A.clips.deleteClip(e), s.h.dispatch({ type: "CLIPS_DELETE_CLIP", id: t, filepath: e }));
 }
 async function X(e) {
     let t = h.Ay.getMediaEngine(),
