@@ -1,18 +1,26 @@
 "use strict";
-n.d(t, { n: () => l });
-var r = n(627968);
-n(64700);
-var i = n(158954),
-    s = n(637141),
-    a = n(87730),
-    o = n(630512);
-function l(e) {
-    let { label: t, giftCardsEnabled: n, giftCardCheckboxProps: l, paymentSourceDropdownProps: u, disabled: c } = e;
-    return (0, r.jsxs)(i.D0$, {
+n.d(t, { n: () => d });
+var r = n(627968),
+    i = n(64700),
+    s = n(158954),
+    a = n(417597),
+    o = n(637141),
+    l = n(176095),
+    u = n(87730),
+    c = n(344991);
+function d(e) {
+    let { label: t, giftCardsEnabled: n, giftCardCheckboxProps: d, paymentSourceDropdownProps: _, disabled: f } = e,
+        p = (0, a.bG)([l.A], () => {
+            if (!n || null == d) return !1;
+            let e = l.A.getBalance(d.giftCardWallet.id);
+            return null != e && null != d.itemAmount && e.amount >= d.itemAmount;
+        }, [n, d]),
+        h = i.useMemo(
+            () => n && null != d && (0, r.jsx)(u.o, { ...d, className: p ? c.r : c.K, disabled: f }),
+            [n, d, p, f],
+        );
+    return (0, r.jsxs)(s.D0$, {
         label: t,
-        children: [
-            n && null != l && (0, r.jsx)(a.o, { ...l, className: o.k, disabled: c }),
-            (0, r.jsx)(s.A, { ...u, disabled: c || (n && l?.checked === !0) }),
-        ],
+        children: [p && h, (0, r.jsx)(o.A, { ..._, disabled: f || (n && d?.checked === !0) }), !p && h],
     });
 }
