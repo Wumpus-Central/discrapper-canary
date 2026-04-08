@@ -8,12 +8,8 @@ e.exports = {
     Lh: "mobileToolsContainer_cba592",
     RR: "mobileToolsCloseIcon_cba592",
     wV: "noResults_cba592",
-    Rg: "noSectionResults_cba592",
     Jv: "selectExistingFormHeader_cba592",
     us: "confirmChannelItemContainer_cba592",
     J2: "confirmChannelName_cba592",
     Pd: "lastActiveTimestamp_cba592",
-    bV: "sectionHeader_cba592",
-    vP: "sectionToggleIcon_cba592",
-    A1: "improvedDMEmptyState_cba592",
 };
