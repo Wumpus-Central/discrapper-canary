@@ -1,4 +1,4 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => v });
 var i = n(627968),
     r = n(64700),
     a = n(503698),
@@ -20,9 +20,9 @@ var i = n(627968),
     C = n(192380),
     T = n(652215),
     N = n(985018),
-    S = n(742223),
-    v = n(513544);
-let x = (0, u.A)(function (e) {
+    S = n(43288),
+    x = n(358943);
+let v = (0, u.A)(function (e) {
     let { width: t } = e,
         n = (0, g.c)("ICYMIPage", !1);
     r.useEffect(() => {
@@ -36,18 +36,18 @@ let x = (0, u.A)(function (e) {
         });
     let a = (0, o.bG)([p.A], () => p.A.theme),
         u = (0, o.bG)([E.A], () => E.A.isRefreshing()),
-        x = r.useRef(null);
+        v = r.useRef(null);
     (0, h.HU)({ location: N.intl.string(N.t["jnXV/V"]) });
-    let [y, b] = r.useState(!1);
+    let [b, y] = r.useState(!1);
     r.useEffect(() => {
         let e = (e) => {
-                e.metaKey && b(!0);
+                e.metaKey && y(!0);
             },
             t = (e) => {
-                "Meta" === e.key && b(!1);
+                "Meta" === e.key && y(!1);
             },
             n = () => {
-                b(!1);
+                y(!1);
             };
         return (
             window.addEventListener("keydown", e),
@@ -70,10 +70,10 @@ let x = (0, u.A)(function (e) {
             },
             [O, L],
         ),
-        P = y && L ? N.intl.string(N.t.YplSn2) : N.intl.string(N.t.wzzjk9);
+        P = b && L ? N.intl.string(N.t.YplSn2) : N.intl.string(N.t.wzzjk9);
     return n
         ? (0, i.jsxs)("div", {
-              className: l()(v.TE, S.kL),
+              className: l()(x.TE, S.kL),
               children: [
                   (0, i.jsx)(d.NPJ, {
                       theme: a,
@@ -100,9 +100,9 @@ let x = (0, u.A)(function (e) {
                           }),
                   }),
                   (0, i.jsx)("div", {
-                      ref: x,
-                      className: l()(v.Qs, S.Qs),
-                      children: (0, i.jsx)(C.A, { scrollContainerRef: x }),
+                      ref: v,
+                      className: l()(x.Qs, S.Qs),
+                      children: (0, i.jsx)(C.A, { scrollContainerRef: v }),
                   }),
               ],
           })

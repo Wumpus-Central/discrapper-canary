@@ -11,15 +11,15 @@ var i = n(627968),
     h = n(957565),
     m = n(975571),
     A = n(917592),
-    g = n(652215),
-    p = n(731854),
+    p = n(652215),
+    g = n(731854),
     f = n(985018),
-    _ = n(643915),
-    E = n(683981);
+    _ = n(452088),
+    E = n(97262);
 let x = function (e) {
     let [t, n] = (0, l.useState)(!1);
     (0, l.useEffect)(() => {
-        u.default.track(g.HAw.OPEN_POPOUT, { type: "RTC Connection" });
+        u.default.track(p.HAw.OPEN_POPOUT, { type: "RTC Connection" });
     }, []);
     let x = (0, l.useCallback)(() => {
             let { closePopout: t } = e;
@@ -32,7 +32,7 @@ let x = function (e) {
             }),
                 d.Ay.getMediaEngine().once(s.bg.ConnectionStats, (t) => {
                     let n = JSON.stringify(
-                        Object.values(p.x)
+                        Object.values(g.x)
                             .map((e) => {
                                 let n = t
                                     .filter((t) => {
@@ -112,22 +112,22 @@ let x = function (e) {
                 ],
             });
         }, [e, S]),
-        { connectionState: I, connectionTypeText: N } = e,
+        { connectionState: N, connectionTypeText: I } = e,
         v = c.Q_.getSetting(),
         y = {
-            [g.S7L.AWAITING_ENDPOINT]: f.intl.format(f.t.Eu2vUR, { url: g.qF7.STATUS }),
-            [g.S7L.CONNECTING]: f.intl.string(f.t["y+E8aD"]),
-            [g.S7L.AUTHENTICATING]: f.intl.string(f.t["5lGIZH"]),
-            [g.S7L.DISCONNECTED]: f.intl.string(f.t.fOX25I),
-            [g.S7L.RTC_CONNECTING]: f.intl.string(f.t.b5Ubd5),
-            [g.S7L.ICE_CHECKING]: f.intl.format(f.t.SyoYUb, { url: m.A.getArticleURL(g.MVz.VOICE_CONNECTION_ERRORS) }),
-            [g.S7L.DTLS_CONNECTING]: f.intl.format(f.t.SyoYUb, {
-                url: m.A.getArticleURL(g.MVz.VOICE_CONNECTION_ERRORS),
+            [p.S7L.AWAITING_ENDPOINT]: f.intl.format(f.t.Eu2vUR, { url: p.qF7.STATUS }),
+            [p.S7L.CONNECTING]: f.intl.string(f.t["y+E8aD"]),
+            [p.S7L.AUTHENTICATING]: f.intl.string(f.t["5lGIZH"]),
+            [p.S7L.DISCONNECTED]: f.intl.string(f.t.fOX25I),
+            [p.S7L.RTC_CONNECTING]: f.intl.string(f.t.b5Ubd5),
+            [p.S7L.ICE_CHECKING]: f.intl.format(f.t.SyoYUb, { url: m.A.getArticleURL(p.MVz.VOICE_CONNECTION_ERRORS) }),
+            [p.S7L.DTLS_CONNECTING]: f.intl.format(f.t.SyoYUb, {
+                url: m.A.getArticleURL(p.MVz.VOICE_CONNECTION_ERRORS),
             }),
-            [g.S7L.RTC_CONNECTED]: T,
-            [g.S7L.NO_ROUTE]: f.intl.format(f.t["2tgQnk"], { url: m.A.getArticleURL(g.MVz.VOICE_CONNECTION_ERRORS) }),
-            [g.S7L.RTC_DISCONNECTED]: f.intl.string(f.t.fOX25I),
-        }[I];
+            [p.S7L.RTC_CONNECTED]: T,
+            [p.S7L.NO_ROUTE]: f.intl.format(f.t["2tgQnk"], { url: m.A.getArticleURL(p.MVz.VOICE_CONNECTION_ERRORS) }),
+            [p.S7L.RTC_DISCONNECTED]: f.intl.string(f.t.fOX25I),
+        }[N];
     return (0, i.jsxs)("div", {
         className: _.kL,
         children: [
@@ -135,7 +135,7 @@ let x = function (e) {
                 ? y()
                 : (0, i.jsx)(a.Text, { tag: "p", variant: "text-sm/normal", color: "text-muted", children: y }),
             v &&
-                d.Ay.supports(p.O5.DIAGNOSTICS) &&
+                d.Ay.supports(g.O5.DIAGNOSTICS) &&
                 !__OVERLAY__ &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
@@ -186,7 +186,7 @@ let x = function (e) {
                 className: E.g4,
                 children: [
                     (0, i.jsx)(a.XAi, { size: "xxs", color: a.LU0.colors.TEXT_FEEDBACK_POSITIVE.css }),
-                    (0, i.jsx)(a.Text, { variant: "text-xs/medium", color: "text-feedback-positive", children: N }),
+                    (0, i.jsx)(a.Text, { variant: "text-xs/medium", color: "text-feedback-positive", children: I }),
                 ],
             }),
             !v &&
@@ -196,7 +196,7 @@ let x = function (e) {
                         (0, i.jsx)("hr", { className: E.me }),
                         (0, i.jsx)(a.MzZ, {
                             className: _.CU,
-                            href: m.A.getArticleURL(g.MVz.VOICE_VIDEO_TROUBLESHOOTING),
+                            href: m.A.getArticleURL(p.MVz.VOICE_VIDEO_TROUBLESHOOTING),
                             children: f.intl.string(f.t.hvVgAZ),
                         }),
                     ],

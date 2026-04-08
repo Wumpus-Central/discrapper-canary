@@ -8,7 +8,7 @@ var a = n(503698),
     o = n(183555),
     d = n(735321),
     c = n(985018),
-    u = n(57884);
+    u = n(440375);
 function g(e) {
     let { game: t, widgetType: n, iconSize: a = "refresh_sm", className: g, buttonRef: m, onRemove: x } = e,
         { trackUserProfileEditAction: f } = (0, o.NJ)();

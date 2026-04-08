@@ -28,7 +28,7 @@ var i = n(627968),
     j = n(183802),
     L = n(652215),
     R = n(985018),
-    P = n(336135);
+    P = n(23542);
 function D(e) {
     let { sku: t, normalPrice: n, discountedPrice: s, discountPercent: o } = e,
         d = l.useMemo(
@@ -99,8 +99,8 @@ function M(e) {
         { primaryIconAsset: V, primaryIconLabel: q } = l.useMemo(() => (0, E.Cv)(M, w), [M, w]),
         {
             normalPrice: W,
-            discountedPrice: Y,
-            discountPercent: z,
+            discountedPrice: z,
+            discountPercent: Y,
         } = (0, g.o)({ sku: M, priceSetAssignmentPurchaseType: L.lid.DEFAULT });
     l.useEffect(() => {
         null == t || null == n || C.A.isFetchingForSKU(n) || (0, I.qf)(t, n);
@@ -134,7 +134,7 @@ function M(e) {
     if ((r || k || X) && (null == M || null == U))
         return (0, i.jsx)("div", { className: P.kL, children: (0, i.jsx)(c.y$y, { className: P.u1 }) });
     if (null == M || null == U || !(0, h.A)(U) || U.guildId !== t) return null;
-    let Z = Y ?? W;
+    let Z = z ?? W;
     return (0, i.jsxs)("div", {
         className: P.kL,
         children: [
@@ -153,7 +153,7 @@ function M(e) {
                                     (0, i.jsx)(c.Text, { variant: "text-md/medium", lineClamp: 1, children: M.name }),
                                 ],
                             }),
-                            (0, i.jsx)(D, { sku: M, normalPrice: W, discountedPrice: Y, discountPercent: z }),
+                            (0, i.jsx)(D, { sku: M, normalPrice: W, discountedPrice: z, discountPercent: Y }),
                         ],
                     }),
                     (0, i.jsxs)(a.e2v, {

@@ -10,7 +10,7 @@ var i = n(627968),
     u = n(380610),
     A = n(828184),
     h = n(985018),
-    _ = n(534788);
+    _ = n(85497);
 let m = "isHideDevBanner",
     p = () => {
         let [e, t] = (0, r.useState)(o.w.get(m, "false")?.toString() === "true"),
@@ -36,7 +36,7 @@ let m = "isHideDevBanner",
                     className: l()(_.Wz, _.mr),
                     children: [
                         (0, i.jsx)(A.A, { className: _.Kk }),
-                        h.intl.format(h.t.uyrfYF, { buildNumber: "525046" }),
+                        h.intl.format(h.t.uyrfYF, { buildNumber: "525466" }),
                         (0, i.jsx)(p, {}),
                     ],
                 })

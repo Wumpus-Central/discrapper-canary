@@ -8,7 +8,7 @@ var n = a(627968),
     s = a(342296),
     _ = a(589022),
     d = a(287809),
-    u = a(653455);
+    u = a(2398);
 let p = function (e) {
     let { user: t, guildId: a } = e,
         p = (0, o.bG)([d.default], () => d.default.getCurrentUser()),

@@ -17,7 +17,7 @@ var i = n(627968),
     p = n(780679),
     A = n(411335),
     f = n(985018),
-    j = n(15919);
+    j = n(534036);
 function N(e) {
     let { rule: t, triggerType: n } = e,
         l = s.useMemo(
@@ -52,7 +52,7 @@ let E = (e) => {
         let { className: t, children: n, ...s } = e;
         return (0, i.jsx)(a.DUT, { className: t, onClick: E, onMouseDown: E, onMouseUp: E, ...s, children: n });
     };
-function b(e) {
+function T(e) {
     let { rule: t, onChangeRule: n, onContextMenu: s } = e,
         l = () => n({ ...t, enabled: !t.enabled });
     return (0, i.jsxs)(i.Fragment, {
@@ -79,20 +79,20 @@ function b(e) {
         ],
     });
 }
-function T(e) {
+function I(e) {
     return (0, g.ub)(e, g.H2.ALPHA)
         ? (0, i.jsx)(d.A, { className: j.n0 })
         : (0, g.ub)(e, g.H2.BETA)
           ? (0, i.jsx)(c.A, { className: j.n0 })
           : null;
 }
-function I(e) {
+function b(e) {
     let { rule: t, isDefaultRule: n, onContextMenu: o } = e,
         d = (0, h.l)(t.triggerType, t),
         { isLoading: c, saveRule: g } = (0, x.S)(),
         { updateRule: _ } = (0, m.wP)(t.guildId),
         [p, A] = s.useState(t.enabled),
-        b = (0, l.throttle)(async () => {
+        T = (0, l.throttle)(async () => {
             if (!c) {
                 let e = { ...t, enabled: !p };
                 A(!p);
@@ -101,7 +101,7 @@ function I(e) {
             }
         }, 300);
     if (null == d) return null;
-    let { headerText: I, headerSubtext: v, descriptionText: S, icon: y } = d,
+    let { headerText: b, headerSubtext: v, descriptionText: S, icon: y } = d,
         R = !(0, u.wC)(t);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -117,7 +117,7 @@ function I(e) {
                         color: "text-strong",
                         className: j.aY,
                         children: [
-                            (0, i.jsxs)("div", { className: j.bR, children: [I, T(t.triggerType)] }),
+                            (0, i.jsxs)("div", { className: j.bR, children: [b, I(t.triggerType)] }),
                             (0, i.jsx)(a.Text, { className: j.bL, variant: "text-sm/normal", children: v }),
                         ],
                     }),
@@ -128,7 +128,7 @@ function I(e) {
             (0, i.jsxs)(C, {
                 className: j.Ik,
                 children: [
-                    (0, i.jsx)(a.dOG, { onChange: b, checked: p ?? !1 }),
+                    (0, i.jsx)(a.dOG, { onChange: T, checked: p ?? !1 }),
                     !n &&
                         (0, i.jsx)(r.m, {
                             text: f.intl.string(f.t["UKOtz+"]),
@@ -165,7 +165,7 @@ function v(e) {
                         className: j.bR,
                         variant: "text-md/semibold",
                         color: "text-strong",
-                        children: (0, i.jsxs)("div", { className: j.bR, children: [r, T(t)] }),
+                        children: (0, i.jsxs)("div", { className: j.bR, children: [r, I(t)] }),
                     }),
                     (0, i.jsx)(a.Text, { className: j.mT, variant: "text-sm/normal", children: o }),
                     (0, i.jsx)(N, { triggerType: t }),
@@ -207,8 +207,8 @@ function S(e) {
         null == t ||
             d ||
             (g = l
-                ? (0, i.jsx)(b, { rule: t, onChangeRule: u, onContextMenu: m })
-                : (0, i.jsx)(I, { rule: t, isDefaultRule: r, onContextMenu: m })),
+                ? (0, i.jsx)(T, { rule: t, onChangeRule: u, onContextMenu: m })
+                : (0, i.jsx)(b, { rule: t, isDefaultRule: r, onContextMenu: m })),
         (0, i.jsx)(a.DUT, { className: j.rs, onContextMenu: m, children: g })
     );
 }

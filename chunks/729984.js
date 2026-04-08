@@ -21,13 +21,13 @@ var i = n(627968),
     N = n(107795),
     E = n(655943),
     C = n(82566),
-    b = n(259866),
-    T = n(950358),
-    I = n(561108),
+    T = n(259866),
+    I = n(950358),
+    b = n(561108),
     v = n(191117),
     S = n(985018),
-    y = n(7716),
-    R = n(830684);
+    y = n(523941),
+    R = n(782691);
 function O(e) {
     let { guild: t } = e,
         r = (0, l.bG)([c.A], () => c.A.getEnabled(t.id)),
@@ -214,13 +214,13 @@ function G(e) {
                                 color: "text-default",
                                 children: S.intl.string(S.t.Kq7FAS),
                             }),
-                            (0, i.jsx)(b.mU, { className: y.kr, guildId: n.id }),
+                            (0, i.jsx)(T.mU, { className: y.kr, guildId: n.id }),
                             g
                                 ? null
                                 : (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(O, { guild: n }),
-                                          (0, i.jsx)(T.A, {
+                                          (0, i.jsx)(I.A, {
                                               className: y.bE,
                                               guild: n,
                                               categories: d,
@@ -258,7 +258,7 @@ function G(e) {
                                 }),
                         ],
                     }),
-                    (0, i.jsx)(I.A, {
+                    (0, i.jsx)(b.A, {
                         guild: n,
                         scrollToQuestions: () => {
                             null != m.current && m.current.scrollIntoView({ behavior: "smooth" });

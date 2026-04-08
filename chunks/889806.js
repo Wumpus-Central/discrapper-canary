@@ -36,7 +36,7 @@ var i = n(627968),
 n(281405);
 var P = n(652215),
     k = n(349828),
-    w = n(99566);
+    w = n(928409);
 class B extends M.Ay {
     state = { shouldShowThreadsPopout: !1, shouldShowActivities: !1 };
     channelItemRef = l.createRef();
@@ -111,7 +111,7 @@ class B extends M.Ay {
                         n.e("97262"),
                         n.e("42128"),
                         n.e("39778"),
-                        n.e("22283"),
+                        n.e("34408"),
                     ]).then(n.bind(n, 385913));
                     return (n) => (0, i.jsx)(e, { ...n, user: l, channel: t, showModalItems: !1 });
                 });

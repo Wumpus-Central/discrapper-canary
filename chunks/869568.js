@@ -21,13 +21,13 @@ var i = n(627968),
     N = n(396816),
     E = n(856644),
     C = n(785312),
-    b = n(316506),
-    T = n(981634),
-    I = n(927573),
+    T = n(316506),
+    I = n(981634),
+    b = n(927573),
     v = n(652215),
     S = n(985018),
-    y = n(2308),
-    R = n(177424);
+    y = n(841707),
+    R = n(407759);
 async function O(e, t, n) {
     let s = e.roles.filter((e) => e !== n);
     try {
@@ -86,7 +86,7 @@ function G(e) {
         let s = p.default.getUser(t.id);
         null != s &&
             (0, u.L3)(e, async () => {
-                let { default: e } = await Promise.all([n.e("97262"), n.e("91042"), n.e("64268")]).then(
+                let { default: e } = await Promise.all([n.e("97262"), n.e("91042"), n.e("2646")]).then(
                     n.bind(n, 365689),
                 );
                 return (t) => (0, i.jsx)(e, { ...t, user: s, guildId: l, showChatItems: !1 });
@@ -109,7 +109,7 @@ function G(e) {
                         className: y.TL,
                         onContextMenu: f,
                         children: [
-                            (0, i.jsx)(T.A, {
+                            (0, i.jsx)(I.A, {
                                 className: y.bu,
                                 avatarURL: t.avatarURL,
                                 name: t.name,
@@ -218,11 +218,11 @@ function k(e) {
     let { guild: t, role: l, locked: a, setSelectedSection: d } = e,
         [u, m] = s.useState(""),
         { headerHeight: g, headerRef: x } = (0, C.A)(0),
-        { scrolledToTop: h, handleScroll: _ } = (0, b.u)(),
+        { scrolledToTop: h, handleScroll: _ } = (0, T.u)(),
         p = l.managed || a,
         j = (0, E.K5)(t.id, l.id),
         N = (0, o.bG)([f.A], () => f.A.getRoleMemberCount(t.id)?.[l.id] ?? 0) > j.length,
-        T = () => {
+        I = () => {
             A.default.track(v.HAw.OPEN_MODAL, {
                 type: "Add Role Members",
                 location_page: "Role Settings",
@@ -244,13 +244,13 @@ function k(e) {
                     children: (0, i.jsxs)("div", {
                         className: r()(R.wx, { [R.l6]: !h }),
                         children: [
-                            (0, i.jsx)(b.A, {
+                            (0, i.jsx)(T.A, {
                                 guild: t,
                                 role: l,
-                                selectedSection: I.T$.MEMBERS,
+                                selectedSection: b.T$.MEMBERS,
                                 setSelectedSection: d,
                             }),
-                            (0, i.jsx)(M, { query: u, setQuery: m, locked: p, handleAddClick: T }),
+                            (0, i.jsx)(M, { query: u, setQuery: m, locked: p, handleAddClick: I }),
                             N
                                 ? (0, i.jsx)(c.po8, {
                                       className: y.v6,
@@ -270,7 +270,7 @@ function k(e) {
                 locked: p,
                 onScroll: _,
                 roleMembers: j,
-                handleAddClick: T,
+                handleAddClick: I,
             }),
         ],
     });

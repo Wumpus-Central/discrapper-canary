@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => q, Bt: () => Y, zI: () => X });
+n.d(t, { Ay: () => Z, Bt: () => Y, zI: () => X });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -16,14 +16,14 @@ var i = n(627968),
     _ = n(157559),
     p = n(554375),
     A = n(971251),
-    f = n(615751),
+    f = n(838132),
     j = n(475743),
     N = n(793574),
     E = n(262295),
     C = n(936555),
-    b = n(725437),
-    T = n(952385),
-    I = n(810877),
+    T = n(725437),
+    I = n(952385),
+    b = n(810877),
     v = n(945086),
     S = n(824832),
     y = n(931991),
@@ -40,8 +40,8 @@ var i = n(627968),
     B = n(652215);
 n(307731);
 var F = n(985018),
-    H = n(262303),
-    V = n(903281);
+    H = n(997728),
+    V = n(8350);
 let z = c().throttle(p.dZ, 1e3),
     W = (e) => {
         let { guildId: t, emoji: n, onEdit: l, editingDisabled: a = !1, isNewlyAdded: o = !1 } = e,
@@ -282,7 +282,7 @@ let z = c().throttle(p.dZ, 1e3),
                   },
               }));
     },
-    q = () => {
+    Z = () => {
         let e = s.useRef(null),
             t = s.useRef(0),
             l = (0, g.bG)([P.A], () => P.A.getGuild()),
@@ -304,7 +304,7 @@ let z = c().throttle(p.dZ, 1e3),
                 totalStaticEmoji: M,
                 animatedEmoji: V,
                 totalAnimatedEmoji: W,
-            } = (0, T.v)({ guild: l }),
+            } = (0, I.v)({ guild: l }),
             [Y, X] = s.useState(null);
         s.useEffect(() => {
             p && ee();
@@ -318,7 +318,7 @@ let z = c().throttle(p.dZ, 1e3),
             s.useEffect(() => {
                 if (null != x && null == Y) return void X(x);
             }, [x, Y]);
-        let q = s.useMemo(
+        let Z = s.useMemo(
                 () =>
                     null == Y
                         ? new Set()
@@ -329,12 +329,12 @@ let z = c().throttle(p.dZ, 1e3),
                           ),
                 [x, Y],
             ),
-            Z = s.useCallback(
+            q = s.useCallback(
                 function () {
                     let { emoji: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                     null != e
-                        ? (0, b.f)({ guildId: l.id, emoji: e, analyticsLocation: N.A.GUILD_SETTINGS_EMOJI_EDIT_BUTTON })
-                        : (0, b.f)({
+                        ? (0, T.f)({ guildId: l.id, emoji: e, analyticsLocation: N.A.GUILD_SETTINGS_EMOJI_EDIT_BUTTON })
+                        : (0, T.f)({
                               guildId: l.id,
                               analyticsLocation: {
                                   page: B.liQ.GUILD_SETTINGS,
@@ -345,7 +345,7 @@ let z = c().throttle(p.dZ, 1e3),
                 [l],
             ),
             Q = async (e, t, n) => {
-                let i = await (0, I.W)({
+                let i = await (0, b.W)({
                     data: e,
                     file: t,
                     image: n,
@@ -374,7 +374,7 @@ let z = c().throttle(p.dZ, 1e3),
             },
             en = s.useCallback(
                 async (e, n, i) => {
-                    await (0, b.f)({
+                    await (0, T.f)({
                         userImage: { data: e, file: n, image: i },
                         guildId: l.id,
                         analyticsLocation: { page: B.liQ.GUILD_SETTINGS },
@@ -446,8 +446,8 @@ let z = c().throttle(p.dZ, 1e3),
                             animatedEmoji: V,
                             guild: l,
                             theme: d,
-                            onEdit: (e) => Z({ emoji: e }),
-                            newlyAddedEmojiIds: q,
+                            onEdit: (e) => q({ emoji: e }),
+                            newlyAddedEmojiIds: Z,
                         }),
                     ],
                 }),

@@ -1,8 +1,8 @@
 n.d(t, { A: () => A }), n(321073);
 var a = n(627968),
     i = n(64700),
-    l = n(503698),
-    s = n.n(l),
+    s = n(503698),
+    l = n.n(s),
     r = n(311907),
     o = n(397927),
     d = n(73153),
@@ -11,17 +11,17 @@ var a = n(627968),
     m = n(260880),
     h = n(303054),
     x = n(231643),
-    p = n(793877),
-    g = n(59830);
-function _(e, t) {
+    p = n(310086),
+    g = n(338919);
+function f(e, t) {
     return e.store.getName().localeCompare(t.store.getName());
 }
-function f(e) {
+function v(e) {
     let { store: t, dataGetter: n } = e,
-        [l, s] = i.useState(n(t));
+        [s, l] = i.useState(n(t));
     return (
         i.useEffect(() => {
-            let e = () => s(n(t));
+            let e = () => l(n(t));
             return (
                 e(),
                 t.addChangeListener(e),
@@ -30,15 +30,15 @@ function f(e) {
                 }
             );
         }, [t, n]),
-        (0, a.jsx)(o.IpV, { className: g.Dx, children: (0, a.jsx)(u.A, { data: l }) })
+        (0, a.jsx)(o.IpV, { className: g.Dx, children: (0, a.jsx)(u.A, { data: s }) })
     );
 }
-function v(e) {
+function _(e) {
     let { store: t } = e,
-        [n, l] = i.useState(() => JSON.stringify(t.__getLocalVars(), null, 2)),
+        [n, s] = i.useState(() => JSON.stringify(t.__getLocalVars(), null, 2)),
         [r, c] = i.useState(null),
         u = i.useCallback(() => {
-            l(JSON.stringify(t.__getLocalVars(), null, 2)), c(null);
+            s(JSON.stringify(t.__getLocalVars(), null, 2)), c(null);
         }, [t]);
     i.useEffect(() => (t.addChangeListener(u), () => t.removeChangeListener(u)), [t, u]);
     let m = i.useCallback(() => {
@@ -72,12 +72,12 @@ function v(e) {
             }
         }, [t, u]);
     return (0, a.jsxs)("div", {
-        className: s()(g.Dx, g.Ef),
+        className: l()(g.Dx, g.Ef),
         children: [
             (0, a.jsx)("textarea", {
                 className: g.Vz,
                 value: n,
-                onChange: (e) => l(e.target.value),
+                onChange: (e) => s(e.target.value),
                 spellCheck: !1,
                 "aria-label": "Edit local variables as JSON",
             }),
@@ -106,7 +106,7 @@ let b = [
 ];
 function j(e) {
     let { store: t, initialHeight: n } = e,
-        l = i.useMemo(() => {
+        s = i.useMemo(() => {
             let e;
             return (
                 (e = [
@@ -125,7 +125,7 @@ function j(e) {
                                           " method.",
                                       ],
                                   })
-                                : (0, a.jsx)(f, { store: t, dataGetter: (e) => e.__getLocalVars() });
+                                : (0, a.jsx)(v, { store: t, dataGetter: (e) => e.__getLocalVars() });
                         },
                     },
                     {
@@ -134,7 +134,7 @@ function j(e) {
                         group: x.fu.NONE,
                         render(e) {
                             let { store: t } = e;
-                            return (0, a.jsx)(f, { store: t, dataGetter: (e) => e });
+                            return (0, a.jsx)(v, { store: t, dataGetter: (e) => e });
                         },
                     },
                 ]),
@@ -154,13 +154,13 @@ function j(e) {
                                           " method.",
                                       ],
                                   })
-                                : (0, a.jsx)(v, { store: t });
+                                : (0, a.jsx)(_, { store: t });
                         },
                     }),
                 e
             );
         }, [t]),
-        { TabBar: r, renderSelectedTab: d } = (0, x.Ay)({ tabs: l }, []);
+        { TabBar: r, renderSelectedTab: d } = (0, x.Ay)({ tabs: s }, []);
     return (0, a.jsxs)(m.A, {
         className: g.rf,
         minHeight: 100,
@@ -168,7 +168,7 @@ function j(e) {
         children: [
             (0, a.jsx)(r, {}),
             (0, a.jsxs)(c.Ay, {
-                className: s()(p.jr, g.nZ),
+                className: l()(p.jr, g.nZ),
                 children: [
                     (0, a.jsx)(c.Ay.Icon, { icon: o.gqV, tooltip: t.getName() }),
                     (0, a.jsx)(c.Ay.Title, { children: t.getName() }),
@@ -181,9 +181,9 @@ function j(e) {
 function A() {
     let e = i.useRef(null),
         [t, n] = i.useState(""),
-        l = r.il.getAll(),
+        s = r.il.getAll(),
         d = i
-            .useMemo(() => l.map((e) => ({ key: e._dispatchToken, store: e })).sort(_), [l])
+            .useMemo(() => s.map((e) => ({ key: e._dispatchToken, store: e })).sort(f), [s])
             .filter((e) =>
                 (function (e, t) {
                     let { store: n } = e;
@@ -191,10 +191,10 @@ function A() {
                 })(e, t),
             ),
         [c, u] = i.useState(),
-        m = l.find((e) => e._dispatchToken === c);
+        m = s.find((e) => e._dispatchToken === c);
     return (0, a.jsxs)("div", {
         ref: e,
-        className: s()(p.nd, g.nd),
+        className: l()(p.nd, g.nd),
         children: [
             (0, a.jsx)("div", {
                 className: g.KE,

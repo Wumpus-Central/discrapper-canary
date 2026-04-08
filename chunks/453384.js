@@ -2,12 +2,12 @@ n.d(t, { A: () => m });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
-    a = n.n(s),
-    r = n(687498),
+    r = n.n(s),
+    a = n(687498),
     o = n(397927),
     d = n(398025),
     c = n(419367),
-    u = n(44556);
+    u = n(293225);
 let _ = "var(--background-mod-strong)",
     m = l.forwardRef((e, t) => {
         let {
@@ -34,11 +34,11 @@ let _ = "var(--background-mod-strong)",
                     className: u.vW,
                     children: [
                         g,
-                        (0, i.jsxs)(r.animated.div, {
+                        (0, i.jsxs)(a.animated.div, {
                             style: { opacity: (0, d.a)(v), inset: A },
-                            className: a()(u.rD, u.qk),
+                            className: r()(u.rD, u.qk),
                             children: [
-                                (0, i.jsx)("div", { className: a()(u.rD, u.LU) }),
+                                (0, i.jsx)("div", { className: r()(u.rD, u.LU) }),
                                 (0, i.jsx)(o.Text, { variant: p, color: "text-strong", className: u.l_, children: h }),
                             ],
                         }),

@@ -21,9 +21,9 @@ var i = n(627968),
     C = n(588224),
     N = n(37411),
     T = n(985018),
-    S = n(99566),
-    b = n(11464),
-    v = n(251843);
+    S = n(928409),
+    b = n(567431),
+    v = n(570302);
 function y(e) {
     let { style: t, withGuildIcon: n, inverted: l } = e,
         s = { className: a()(v.GI, { [v.a7]: n }, { [v.BJ]: l }), style: t },

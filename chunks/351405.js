@@ -2,8 +2,8 @@ n.d(t, { P: () => y }), n(321073);
 var i = n(627968),
     l = n(64700),
     s = n(311907),
-    a = n(397927),
-    r = n(138175),
+    r = n(397927),
+    a = n(138175),
     o = n(99072),
     d = n(443795),
     c = n(961350),
@@ -20,11 +20,11 @@ var i = n(627968),
     E = n(536189),
     I = n(652215),
     v = n(272984),
-    b = n(71747);
+    b = n(772234);
 function T(e) {
-    let { partyMembers: t, partySize: n, maxPartySize: l, guildId: s, activityActionType: r } = e,
+    let { partyMembers: t, partySize: n, maxPartySize: l, guildId: s, activityActionType: a } = e,
         o = Math.max(n, t.length),
-        d = (0, g.SJ)({ maxPartySize: l, partySize: o, activityActionType: r }),
+        d = (0, g.SJ)({ maxPartySize: l, partySize: o, activityActionType: a }),
         c = [...t];
     for (; c.length < n && c.length < 8; ) c.push(f.mt);
     for (; c.length < l && c.length < 8; ) c.push(null);
@@ -39,24 +39,24 @@ function T(e) {
                     size: f.DN.SIZE_16,
                     dimEmptyUsers: !0,
                 }),
-            (0, i.jsx)(a.Text, { variant: "text-xs/medium", color: "none", children: d }),
+            (0, i.jsx)(r.Text, { variant: "text-xs/medium", color: "none", children: d }),
         ],
     });
 }
 function y(e) {
-    let { analyticsLocations: t, app: n, channel: a, message: g, hideParty: b, onView: y } = e,
-        N = (0, r.b)(n),
+    let { analyticsLocations: t, app: n, channel: r, message: g, hideParty: b, onView: y } = e,
+        N = (0, a.b)(n),
         S = (0, s.bG)([c.default], () => c.default.getId()),
         j = (0, s.bG)([m.A], () => {
             if (null == g.application) return m.A.findActivity(g.author.id, (e) => e.type === I.$pd.LISTENING);
             {
                 let e = g.author.id;
                 return (
-                    (0, A.v)(g) && (e = e === S && a.isPrivate() ? a.getRecipientId() : S),
+                    (0, A.v)(g) && (e = e === S && r.isPrivate() ? r.getRecipientId() : S),
                     m.A.getApplicationActivity(e, g.application.id)
                 );
             }
-        }, [g, a, S]),
+        }, [g, r, S]),
         L = (0, s.bG)([_.A, h.A], () => _.A.getApplicationActivity(N.id) ?? h.A.getApplicationActivity(N.id, !0), [
             N.id,
         ]),
@@ -78,10 +78,10 @@ function y(e) {
                     partyMembers: M,
                     partySize: P,
                     maxPartySize: D,
-                    guildId: a.guild_id,
+                    guildId: r.guild_id,
                     activityActionType: g.activity?.type,
                 }),
-            [M, P, D, a.guild_id, g.activity?.type],
+            [M, P, D, r.guild_id, g.activity?.type],
         );
     return (0, v.pH)(j?.party?.id) || N.id === d.HT.id
         ? (0, i.jsx)(E.A, {
@@ -92,14 +92,14 @@ function y(e) {
               onView: y,
               partyStatusElement: w,
               presenceActivity: j,
-              guildId: a.guild_id,
+              guildId: r.guild_id,
           })
         : g.activity?.type === I.xL.STREAM_REQUEST
-          ? (0, i.jsx)(o.A, { analyticsLocations: t, application: N, channel: a, currentUserId: S, message: g })
+          ? (0, i.jsx)(o.A, { analyticsLocations: t, application: N, channel: r, currentUserId: S, message: g })
           : (0, i.jsx)(C.A, {
                 analyticsLocations: t,
                 application: N,
-                channel: a,
+                channel: r,
                 currentUserId: S,
                 currentUserPresenceActivity: L,
                 hideParty: b,

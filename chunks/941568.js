@@ -18,12 +18,12 @@ var a = n(627968),
     v = n(954506),
     A = n(652215),
     j = n(985018),
-    E = n(576404),
-    b = n(830684);
-function C(e, t) {
+    E = n(95225),
+    b = n(782691);
+function I(e, t) {
     return m.A.parse(e, !0, { allowHeading: !0, allowList: !0, allowLinks: !0, channelId: t });
 }
-function I(e) {
+function C(e) {
     let { variant: t, message: n, channelId: l, onCardClick: d } = e,
         [u, m] = i.useState(!1),
         h = "main" === t,
@@ -42,13 +42,13 @@ function I(e) {
         ),
         _ = n.media?.width != null && n.media?.height != null ? n.media.width / n.media.height : 16 / 9,
         v = n.media?.proxyUrl ?? n.media?.url,
-        I = (null != v ? (0, g.V)(v) : null) ?? v;
+        C = (null != v ? (0, g.V)(v) : null) ?? v;
     return (0, a.jsxs)(c.DUT, {
         className: h ? E.cG : E.IU,
         onClick: p,
         children: [
             null != n.media &&
-                null != I &&
+                null != C &&
                 (0, a.jsx)("div", {
                     className: h ? E._v : E.eZ,
                     children: (0, a.jsx)(o.y, {
@@ -58,7 +58,7 @@ function I(e) {
                         placeholderVersion: n.media.placeholderVersion,
                         placeholderStyle: { width: "100%", height: "100%", objectFit: "cover" },
                         children: (0, a.jsx)("img", {
-                            src: I,
+                            src: C,
                             className: h ? E.fk : E.v,
                             alt: "",
                             draggable: !1,
@@ -74,10 +74,10 @@ function I(e) {
                             variant: "heading-md/bold",
                             color: "text-strong",
                             className: h ? E.KX : E._N,
-                            children: C(n.title, l),
+                            children: I(n.title, l),
                         }),
                     n.body.length > 0 &&
-                        (0, a.jsx)("div", { className: r()(E.h_, h ? E.My : E.Gd, b.PT), children: C(n.body, l) }),
+                        (0, a.jsx)("div", { className: r()(E.h_, h ? E.My : E.Gd, b.PT), children: I(n.body, l) }),
                     (0, a.jsxs)("div", {
                         className: E.ov,
                         children: [
@@ -132,19 +132,19 @@ function N(e) {
     if (null == m || 0 === o.length) return null;
     let A = 2 !== o.length,
         b = A ? o[0] : null,
-        C = A ? o.slice(1) : o;
+        I = A ? o.slice(1) : o;
     return (0, a.jsx)(v.A, {
         title: j.intl.string(j.t.B0BV3Y),
         onClickViewAll: x,
         children: (0, a.jsxs)("div", {
             className: E.f3,
             children: [
-                null != b && (0, a.jsx)(I, { variant: "main", message: b, channelId: m, onCardClick: g }),
-                C.length > 0 &&
+                null != b && (0, a.jsx)(C, { variant: "main", message: b, channelId: m, onCardClick: g }),
+                I.length > 0 &&
                     (0, a.jsx)(u.A, {
                         gap: 16,
-                        children: C.map((e) =>
-                            (0, a.jsx)(I, { variant: "small", message: e, channelId: m, onCardClick: g }, e.id),
+                        children: I.map((e) =>
+                            (0, a.jsx)(C, { variant: "small", message: e, channelId: m, onCardClick: g }, e.id),
                         ),
                     }),
             ],

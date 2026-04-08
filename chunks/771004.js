@@ -12,19 +12,19 @@ var a = n(627968),
     x = n(305080),
     g = n(936636),
     h = n(985018),
-    f = n(325952),
-    p = n(679080);
+    f = n(282063),
+    p = n(48757);
 function _(e) {
     let { game: t, trackAction: n } = e,
         [l, x] = i.useState(t?.summaryLocalized != null),
         [_, v] = i.useState(!0),
         [A, j] = i.useState(!1),
         E = i.useRef(null),
-        { width: b, height: C } = (0, u.A)();
+        { width: b, height: I } = (0, u.A)();
     return (i.useEffect(() => {
         let e = E.current;
         null != e && j(e.scrollHeight - e.clientHeight > 1 || !_);
-    }, [E, b, C, _]),
+    }, [E, b, I, _]),
     null == t.description)
         ? null
         : (0, a.jsxs)("div", {

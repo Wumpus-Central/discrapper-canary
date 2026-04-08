@@ -20,8 +20,8 @@ var i = n(627968),
     j = n(660496),
     N = n(652215),
     E = n(985018),
-    C = n(552592);
-class b extends s.PureComponent {
+    C = n(8271);
+class T extends s.PureComponent {
     render() {
         let { user: e, guild: t } = this.props;
         return (0, i.jsxs)(o.DUT, {
@@ -67,7 +67,7 @@ class b extends s.PureComponent {
         });
     };
 }
-let T = s.forwardRef(function (e, t) {
+let I = s.forwardRef(function (e, t) {
     let { guild: n, sortedBans: l, bans: r } = e,
         a = s.useCallback(
             (e) => {
@@ -84,7 +84,7 @@ let T = s.forwardRef(function (e, t) {
                     return (0, i.jsx)(o.y$y, { className: C.u1, type: o.y$y.Type.SPINNING_CIRCLE }, "spinner");
                 let t = l[e],
                     s = r?.get(t?.id ?? "");
-                if (null != t && null != s) return (0, i.jsx)(b, { user: t, ban: s, guild: n }, t.id);
+                if (null != t && null != s) return (0, i.jsx)(T, { user: t, ban: s, guild: n }, t.id);
             },
             [r, n, l],
         );
@@ -97,7 +97,7 @@ let T = s.forwardRef(function (e, t) {
         ref: t,
     });
 });
-function I(e) {
+function b(e) {
     let { guildId: t, storedSearchQuery: n } = e,
         [l, r] = s.useState(n ?? ""),
         [a, d] = s.useState(!1),
@@ -176,7 +176,7 @@ function v() {
         p = d !== g,
         [f] = (0, a.bG)([A.A], () => A.A.getBans(), [], _.D),
         j = f?.size ?? 0,
-        b = (0, m.Ay)(),
+        T = (0, m.Ay)(),
         v = e?.id ?? N.dJq,
         S = s.useRef(null),
         y = s.useCallback(
@@ -245,15 +245,15 @@ function v() {
         : (0, i.jsxs)("div", {
               className: C.kL,
               children: [
-                  (0, i.jsx)(I, { guildId: v, storedSearchQuery: t }),
+                  (0, i.jsx)(b, { guildId: v, storedSearchQuery: t }),
                   (0, i.jsxs)("div", {
                       className: C.gs,
                       children: [
-                          !D && (0, i.jsx)(T, { guild: e, bans: f, sortedBans: F, ref: S }),
+                          !D && (0, i.jsx)(I, { guild: e, bans: f, sortedBans: F, ref: S }),
                           !L &&
                               D &&
                               (0, i.jsxs)(o.ppr, {
-                                  theme: b,
+                                  theme: T,
                                   className: C.p$,
                                   children: [
                                       (0, i.jsx)(o.G8R, {

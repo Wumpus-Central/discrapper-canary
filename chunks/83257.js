@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => b, OZ: () => x, n3: () => g, pe: () => v }), n(321073);
+n.d(t, { Ay: () => b, OZ: () => f, n3: () => x, pe: () => v }), n(321073);
 var i = n(627968),
     s = n(64700),
     r = n(110259),
@@ -13,11 +13,11 @@ var i = n(627968),
     p = n(820284),
     E = n(361739),
     S = n(652215),
-    f = n(985018),
-    A = n(776471);
-let _ = Object.freeze({ shouldPreventNavigation: !1, onPreventNavigation: null, sidebarOpen: !0 }),
-    g = 1.4,
-    x = 15,
+    _ = n(985018),
+    g = n(52130);
+let A = Object.freeze({ shouldPreventNavigation: !1, onPreventNavigation: null, sidebarOpen: !0 }),
+    x = 1.4,
+    f = 15,
     v = 2;
 function N(e) {
     let { section: t, setPreventNavigation: n, scrollerRef: s } = e;
@@ -31,11 +31,11 @@ function N(e) {
 }
 class C extends s.PureComponent {
     _unmounted = !1;
-    _intensity = g;
+    _intensity = x;
     _subscribedStores = [];
     scrollerRef = s.createRef();
     state = {
-        ..._,
+        ...A,
         sidebarOpen: this.props.section !== S.nc_.SUBSCRIPTIONS && this.props.section !== S.nc_.PROFILE_CUSTOMIZATION,
     };
     componentDidMount() {
@@ -51,7 +51,7 @@ class C extends s.PureComponent {
     }
     componentDidUpdate(e) {
         let { section: t } = e;
-        t !== this.props.section && (this._intensity = g);
+        t !== this.props.section && (this._intensity = x);
     }
     componentWillUnmount() {
         (this._unmounted = !0),
@@ -69,10 +69,10 @@ class C extends s.PureComponent {
             { notice: t } = this.getPredicateSections().find((t) => e === t.section) ?? {};
         return null != t && t.stores.some((e) => e.showNotice() && !(null != e.canCloseEarly && e.canCloseEarly()))
             ? (h._.dispatch(S.jej.SHAKE_APP, { duration: 300, intensity: this._intensity }),
-              (this._intensity = Math.min(this._intensity + v, x)),
+              (this._intensity = Math.min(this._intensity + v, f)),
               h._.dispatch(S.jej.EMPHASIZE_NOTICE),
               !1)
-            : ((this._intensity = g), !0);
+            : ((this._intensity = x), !0);
     }
     handleSetSection = (e) => {
         let { onSetSection: t, sections: n } = this.props,
@@ -86,7 +86,7 @@ class C extends s.PureComponent {
                         this._subscribedStores.includes(e) ||
                             (e.addChangeListener(this.handleNoticeStoreUpdate), this._subscribedStores.push(e));
                     }),
-                    this.setState({ ..._, sidebarOpen: !1 });
+                    this.setState({ ...A, sidebarOpen: !1 });
             };
         this.validNavigation() &&
             !i &&
@@ -100,7 +100,7 @@ class C extends s.PureComponent {
         }
     };
     handleNoticeStoreUpdate = () => {
-        this._unmounted || ((this._intensity = g), this.forceUpdate());
+        this._unmounted || ((this._intensity = x), this.forceUpdate());
     };
     renderSettingsSectionTabBarItem = (e, t, n) => {
         let {
@@ -115,23 +115,23 @@ class C extends s.PureComponent {
                 newIndicatorDismissibleContentTypes: p,
                 badgeCount: E,
             } = e,
-            _ = null;
+            A = null;
         null != e.decoration
-            ? (_ = (0, i.jsx)(l.Text, { variant: "text-md/normal", color: "text-muted", children: e.decoration }))
+            ? (A = (0, i.jsx)(l.Text, { variant: "text-md/normal", color: "text-muted", children: e.decoration }))
             : null != n && p?.includes(n) && !t
-              ? (_ = m ?? (0, i.jsx)(l.LpS, { text: f.intl.string(f.t.y2b7CA) }))
+              ? (A = m ?? (0, i.jsx)(l.LpS, { text: _.intl.string(_.t.y2b7CA) }))
               : null != d
-                ? (_ = d)
-                : null != E && E > 0 && (_ = (0, i.jsx)(l.hVq, { count: E }));
-        let g =
+                ? (A = d)
+                : null != E && E > 0 && (A = (0, i.jsx)(l.hVq, { count: E }));
+        let x =
             s === S.nc_.PREMIUM
-                ? (0, i.jsx)(u.A, { label: r, isSelected: t, decoration: _ })
-                : null == _
+                ? (0, i.jsx)(u.A, { label: r, isSelected: t, decoration: A })
+                : null == A
                   ? r
-                  : (0, i.jsxs)("div", { className: A.l, children: [r, _] });
+                  : (0, i.jsxs)("div", { className: g.l, children: [r, A] });
         return (0, i.jsx)(
             l.VQ0.Item,
-            { variant: c, id: s, onClick: a, className: h, "aria-label": o ?? "", children: g },
+            { variant: c, id: s, onClick: a, className: h, "aria-label": o ?? "", children: x },
             s,
         );
     };
@@ -149,7 +149,7 @@ class C extends s.PureComponent {
                     orientation: "vertical",
                     "aria-label": n,
                     children: [
-                        s ? (0, i.jsx)("div", { className: A.O, children: (0, i.jsx)(d.A, {}) }) : null,
+                        s ? (0, i.jsx)("div", { className: g.O, children: (0, i.jsx)(d.A, {}) }) : null,
                         e.map((e, t) => {
                             if (null != e.tabPredicate && !e.tabPredicate()) return null;
                             switch (e.section) {

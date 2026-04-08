@@ -22,7 +22,7 @@ var i = n(627968),
     N = n(562153),
     T = n(652215),
     S = n(985018),
-    b = n(930935);
+    b = n(4568);
 function v(e) {
     let { event: t, guildId: n, channelId: l } = e,
         a = (0, s.bG)([I.default], () => I.default.getUser(t.userId)),

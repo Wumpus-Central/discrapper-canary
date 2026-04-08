@@ -2,8 +2,8 @@ n.d(t, { j: () => j }), n(321073);
 var a = n(627968);
 n(64700);
 var i = n(311907),
-    l = n(827734),
-    s = n(582754),
+    s = n(827734),
+    l = n(582754),
     r = n(397927),
     o = n(544028),
     d = n(427157),
@@ -14,24 +14,24 @@ var i = n(311907),
     x = n(429707),
     p = n(274303),
     g = n(994125),
-    _ = n(347853),
-    f = n(652215),
-    v = n(985018),
-    b = n(848193);
+    f = n(347853),
+    v = n(652215),
+    _ = n(985018),
+    b = n(51292);
 function j(e) {
     let t = (0, i.bG)([u.default], () => u.default.getCurrentUser()),
         n = (0, i.bG)([c.A], () => c.A.hidePersonalInformation),
-        j = (0, i.bG)([o.A], () => (0, s.Mw)(o.A.theme)),
+        j = (0, i.bG)([o.A], () => (0, l.Mw)(o.A.theme)),
         { multiAccountUsers: A } = (0, g.K)(),
         C = A.map((i) => {
-            let s = new d.A(i),
-                o = s.id === t?.id,
+            let l = new d.A(i),
+                o = l.id === t?.id,
                 c = i.tokenStatus === p.U.INVALID,
-                u = n ? null : `#${s.discriminator}`;
+                u = n ? null : `#${l.discriminator}`;
             return (0, a.jsx)(
                 r.Drp,
                 {
-                    id: s.id,
+                    id: l.id,
                     focusedClassName: b.in,
                     void_label: (e) => {
                         let { isFocused: t } = e;
@@ -39,7 +39,7 @@ function j(e) {
                             className: b.ci,
                             children: [
                                 (0, a.jsx)(r.euF, {
-                                    src: s.getAvatarURL(void 0, 40),
+                                    src: l.getAvatarURL(void 0, 40),
                                     size: r._3J.SIZE_24,
                                     "aria-label": i.username,
                                 }),
@@ -49,12 +49,12 @@ function j(e) {
                                         (0, a.jsx)(r.Text, {
                                             className: b.gE,
                                             variant: "text-sm/normal",
-                                            children: h.Ay.getUserTag(s, {
+                                            children: h.Ay.getUserTag(l, {
                                                 mode: "username",
                                                 identifiable: n ? "never" : "always",
                                             }),
                                         }),
-                                        !s.hasUniqueUsername() &&
+                                        !l.hasUniqueUsername() &&
                                             (0, a.jsx)(r.Text, {
                                                 className: b.df,
                                                 variant: "text-sm/normal",
@@ -65,20 +65,20 @@ function j(e) {
                                 o &&
                                     (0, a.jsx)(r.yr3, {
                                         size: "sm",
-                                        color: t ? l.A.unsafe_rawColors.WHITE.css : l.A.unsafe_rawColors.BRAND_500.css,
+                                        color: t ? s.A.unsafe_rawColors.WHITE.css : s.A.unsafe_rawColors.BRAND_500.css,
                                         secondaryColor:
                                             (t && j) || (t && !j)
-                                                ? l.A.unsafe_rawColors.BRAND_500.css
-                                                : l.A.unsafe_rawColors.WHITE.css,
+                                                ? s.A.unsafe_rawColors.BRAND_500.css
+                                                : s.A.unsafe_rawColors.WHITE.css,
                                         className: b.s0,
                                     }),
                                 c &&
                                     (0, a.jsx)(r.EpV, {
-                                        color: l.A.unsafe_rawColors.RED_400.css,
+                                        color: s.A.unsafe_rawColors.RED_400.css,
                                         secondaryColor:
                                             (t && j) || (t && !j)
-                                                ? l.A.unsafe_rawColors.BRAND_500.css
-                                                : l.A.unsafe_rawColors.WHITE.css,
+                                                ? s.A.unsafe_rawColors.BRAND_500.css
+                                                : s.A.unsafe_rawColors.WHITE.css,
                                         size: "xs",
                                         className: b.s0,
                                     }),
@@ -86,18 +86,18 @@ function j(e) {
                         });
                     },
                     action: () => {
-                        if ((e?.(), c)) (0, _.A)();
+                        if ((e?.(), c)) (0, f.A)();
                         else {
                             var n;
-                            (n = s.id) !== t?.id &&
-                                (m.default.track(f.HAw.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
-                                    location: { section: f.JJy.USER_PROFILE },
+                            (n = l.id) !== t?.id &&
+                                (m.default.track(v.HAw.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
+                                    location: { section: v.JJy.USER_PROFILE },
                                 }),
                                 x.Mx(n));
                         }
                     },
                 },
-                s.id,
+                l.id,
             );
         });
     return (
@@ -107,9 +107,9 @@ function j(e) {
                     (0, a.jsx)(r.bXX, {}),
                     (0, a.jsx)(r.Drp, {
                         id: "manage-accounts",
-                        label: v.intl.string(v.t.WbFpq4),
+                        label: _.intl.string(_.t.WbFpq4),
                         action: () => {
-                            e?.(), (0, _.A)();
+                            e?.(), (0, f.A)();
                         },
                     }),
                 ],

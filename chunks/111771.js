@@ -11,7 +11,7 @@ var i = n(627968),
     u = n(694433),
     m = n(441442),
     g = n(985018),
-    x = n(608245);
+    x = n(17844);
 function h(e) {
     let { changeTitle: t, value: n, options: l, className: h, onChange: _ } = e,
         [p, A] = s.useState(n),
@@ -27,11 +27,11 @@ function h(e) {
             },
             [],
         );
-    let b = l.find((e) => e.value === p);
+    let T = l.find((e) => e.value === p);
     return (0, i.jsx)(u.A, {
-        title: f ? t : (b?.title ?? t),
-        description: f ? `(${b?.title ?? g.intl.string(g.t.PoWNfe)})` : (b?.description ?? ""),
-        highlightColor: f ? c.t.NONE : b?.highlightColor,
+        title: f ? t : (T?.title ?? t),
+        description: f ? `(${T?.title ?? g.intl.string(g.t.PoWNfe)})` : (T?.description ?? ""),
+        highlightColor: f ? c.t.NONE : T?.highlightColor,
         action: (0, i.jsx)(a.QWc, { text: g.intl.string(g.t.GEgsA4), textVariant: "text-sm/medium" }),
         loading: N,
         className: h,

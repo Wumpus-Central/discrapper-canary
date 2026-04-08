@@ -10,7 +10,7 @@ var r = n(627968),
     u = n(699352),
     m = n(715628),
     h = n(752636),
-    p = n(10029);
+    p = n(480972);
 let x = a.memo(function (e) {
     let {
             message: t,

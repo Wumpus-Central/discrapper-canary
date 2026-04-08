@@ -9,7 +9,7 @@ var i = n(627968),
     c = n(739508),
     u = n(240248),
     m = n(985018),
-    g = n(50753);
+    g = n(606350);
 class _ extends s.PureComponent {
     static defaultProps = {
         isForSubscription: !1,

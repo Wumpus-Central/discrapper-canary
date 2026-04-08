@@ -21,10 +21,10 @@ var i = n(627968),
     T = n(379848),
     N = n(742589),
     S = n(831062),
-    v = n(378570),
-    x = n(138298),
-    y = n(940382),
-    b = n(210714),
+    x = n(378570),
+    v = n(138298),
+    b = n(940382),
+    y = n(210714),
     O = n(544028),
     L = n(780964),
     R = n(858897),
@@ -49,8 +49,8 @@ var i = n(627968),
     Q = n(652215),
     X = n(49999),
     Z = n(985018),
-    J = n(464726),
-    ee = n(513544);
+    J = n(2219),
+    ee = n(358943);
 function et() {
     let e = r.useRef(null),
         t = (0, F.W)(),
@@ -156,7 +156,7 @@ function en(e) {
     let { pageWidth: t, onSidebarResize: n } = e,
         r = (0, d.bG)([P.Ay], () => P.Ay.getSidebarState(P.fe)),
         a = (0, d.bG)([D.A], () => D.A.getChannel(r?.channelId));
-    if (null == r || r.type !== y.PE.VIEW_MESSAGE_REQUEST || null == a || !a.isPrivate()) return null;
+    if (null == r || r.type !== b.PE.VIEW_MESSAGE_REQUEST || null == a || !a.isPrivate()) return null;
     let l = t - Q.ItT;
     return (0, i.jsx)(g.A, {
         sidebarType: g.X.MessageRequestSidebar,
@@ -234,7 +234,7 @@ let ea = (0, _.A)(function (e) {
         n = (0, F.W)();
     (0, m.Ay)(() => {
         h.I(Q.BVt.MESSAGE_REQUESTS),
-            (0, b.d)("message-requests"),
+            (0, y.d)("message-requests"),
             j.default.track(Q.HAw.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }),
             S.A.increment({ name: o.K.MESSAGE_REQUEST_VIEW });
     });
@@ -243,7 +243,7 @@ let ea = (0, _.A)(function (e) {
         [c, u] = r.useState(!1),
         _ = (0, d.bG)([P.Ay], () => {
             let e = P.Ay.getSidebarState(P.fe);
-            return null != e && e.type === y.PE.VIEW_MESSAGE_REQUEST ? e : null;
+            return null != e && e.type === b.PE.VIEW_MESSAGE_REQUEST ? e : null;
         }),
         p = _?.channelId,
         g = null != _,
@@ -251,7 +251,7 @@ let ea = (0, _.A)(function (e) {
         I = (0, w.A)(p),
         C = r.useRef(null);
     r.useEffect(() => {
-        null != p && !E && I && g && ((0, v.iN)(p), x.A.closeChannelSidebar(P.fe));
+        null != p && !E && I && g && ((0, x.iN)(p), v.A.closeChannelSidebar(P.fe));
     }, [p, I, g, E]);
     let [T, L] = r.useState($.zz.REQUESTS),
         R = (e) => {

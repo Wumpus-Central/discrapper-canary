@@ -21,9 +21,9 @@ var i = n(627968),
     N = n(20851),
     E = n(176201),
     C = n(676608),
-    b = n(828162),
-    T = n(208039),
-    I = n(34457),
+    T = n(828162),
+    I = n(208039),
+    b = n(34457),
     v = n(576705),
     S = n(636042),
     y = n(396816),
@@ -38,9 +38,9 @@ var i = n(627968),
     P = n(652215),
     w = n(178758),
     B = n(985018),
-    F = n(136708),
-    H = n(75601),
-    V = n(177424),
+    F = n(333354),
+    H = n(173670),
+    V = n(407759),
     z = n(598227),
     W = n(406853);
 let K = (0, A.Fe)({ createPromise: () => n.e("66147").then(n.bind(n, 48736)), webpackId: 48736 }),
@@ -72,7 +72,7 @@ function J(e) {
         _ = (0, j.qE)(n, t),
         A = { dark: { src: z, name: t.name }, light: { src: W, name: t.name } };
     function C() {
-        (0, b.A)(n, p.A.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT), (0, x.jH)();
+        (0, T.A)(n, p.A.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT), (0, x.jH)();
     }
     return (0, i.jsx)(f.Ay, {
         contentTypes: [u.M.GUILD_SETTINGS_ROLE_STYLES_NEW_BADGE],
@@ -135,7 +135,7 @@ function J(e) {
                                         (0, i.jsx)(g.Text, {
                                             variant: "text-sm/semibold",
                                             color: "button-outline-primary-text",
-                                            children: B.intl.format(F.default.VpEDJc, { magical: (0, i.jsx)(q, {}) }),
+                                            children: B.intl.format(F.default.VpEDJc, { magical: (0, i.jsx)(Z, {}) }),
                                         }),
                                         (0, i.jsx)(g.Text, {
                                             variant: "text-xs/medium",
@@ -157,7 +157,7 @@ function J(e) {
         },
     });
 }
-function q() {
+function Z() {
     let e = (0, c.bG)([_.A], () => _.A.useReducedMotion),
         { gradientStyle: t, gradientClassname: n } = (0, g.WqX)({
             colorStrings: (0, E.K3)(w.jl),
@@ -173,7 +173,7 @@ function q() {
         children: B.intl.string(F.default["+/IHLl"]),
     });
 }
-function Z(e) {
+function q(e) {
     let { role: t, disabled: n, currentStyle: s, hasEnhancedRoleColors: l } = e;
     return (0, i.jsx)("div", {
         className: H.Ei,
@@ -291,7 +291,7 @@ function ee(e) {
         o = (0, c.bG)([y.A], () => y.A.getRoleStyleData(n.id)),
         d = !a,
         u = null != o && a ? o.currentStyle : y.y.SOLID,
-        m = (0, I.Oy)(n),
+        m = (0, b.Oy)(n),
         x = s || m,
         h = (0, c.bG)([v.A], () => v.A.canImpersonateRole(t, n)),
         { headerHeight: _, headerRef: p } = (0, O.A)(0),
@@ -321,9 +321,9 @@ function ee(e) {
                     (0, i.jsx)(J, { role: n, guildId: t.id, selectedStyle: u, disabled: x, shouldShowUpsell: d }),
                 u !== y.y.HOLOGRAPHIC &&
                     null != u &&
-                    (0, i.jsx)(Z, { role: n, disabled: x, currentStyle: u, hasEnhancedRoleColors: a }),
+                    (0, i.jsx)(q, { role: n, disabled: x, currentStyle: u, hasEnhancedRoleColors: a }),
                 u === y.y.HOLOGRAPHIC &&
-                    (0, i.jsx)(T.A, {
+                    (0, i.jsx)(I.A, {
                         className: H.u,
                         children: (0, i.jsx)(g.Text, {
                             variant: "text-xs/medium",

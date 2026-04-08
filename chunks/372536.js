@@ -5,12 +5,12 @@ var i = n(627968),
     a = n(825244),
     r = n(652215),
     o = n(985018),
-    d = n(3580);
+    d = n(604927);
 let c = (e) => {
     let { guild: t, onAddGuild: c } = e,
         u = l.useCallback(() => {
             (0, s.mMO)(async () => {
-                let { default: e } = await Promise.all([n.e("43600"), n.e("71281")]).then(n.bind(n, 234355));
+                let { default: e } = await Promise.all([n.e("43600"), n.e("67505")]).then(n.bind(n, 234355));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,

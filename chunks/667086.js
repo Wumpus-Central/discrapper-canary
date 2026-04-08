@@ -1,4 +1,4 @@
-n.d(t, { A: () => y });
+n.d(t, { A: () => b });
 var i = n(627968),
     r = n(64700),
     a = n(503698),
@@ -18,25 +18,25 @@ var i = n(627968),
     I = n(596540),
     f = n(652215),
     C = n(985018),
-    T = n(21310);
+    T = n(173733);
 let N = { cozy: 0, default: 0, compact: 0 },
     S = { cozy: 36, default: 24, compact: 14 },
-    v = { cozy: 95, default: 84, compact: 72 };
-function x(e) {
+    x = { cozy: 95, default: 84, compact: 72 };
+function v(e) {
     let { onClick: t, selectedOverride: n = !1, popoutProps: a, ref: s, focusSectionProps: o } = e,
         [_, p] = r.useState(!1),
         I = (0, g.lI)(),
         f = n || I,
-        x = n || f,
-        y = (0, i.jsx)(u.XFE, {
+        v = n || f,
+        b = (0, i.jsx)(u.XFE, {
             className: T.Kk,
-            color: _ || x ? u.LU0.colors.ICON_STRONG : u.LU0.colors.ICON_MUTED,
+            color: _ || v ? u.LU0.colors.ICON_STRONG : u.LU0.colors.ICON_MUTED,
             size: "sm",
         }),
-        { badge: b, badgeType: O } = (0, E.ux)({ isSelected: f }),
+        { badge: y, badgeType: O } = (0, E.ux)({ isSelected: f }),
         L = (0, m.isDesktop)(),
         R = (0, h.C)(),
-        P = (0, m.isMac)() ? N[R] : L ? S[R] : v[R];
+        P = (0, m.isMac)() ? N[R] : L ? S[R] : x[R];
     return (0, i.jsxs)(u.BJc, {
         gap: 0,
         direction: "horizontal",
@@ -44,7 +44,7 @@ function x(e) {
             (0, i.jsx)(u.hKd, { size: P, horizontal: !0 }),
             (0, i.jsx)(c.m, {
                 asContainer: !0,
-                shouldShow: !x,
+                shouldShow: !v,
                 text: C.intl.string(C.t.HcoRu0),
                 children: (0, i.jsxs)(u.DUT, {
                     innerRef: s,
@@ -71,21 +71,21 @@ function x(e) {
                                                   width: d.E.sm,
                                                   height: d.E.sm,
                                                   mask: A.Ay.Masks.HEADER_BAR_BADGE_BOTTOM,
-                                                  children: y,
+                                                  children: b,
                                               }),
                                               (0, i.jsx)("div", { className: T.Zm }),
                                           ],
                                       })
-                                    : y,
+                                    : b,
                         }),
-                        b,
+                        y,
                     ],
                 }),
             }),
         ],
     });
 }
-function y() {
+function b() {
     let { focusSectionProps: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = r.useRef(null),
         { notificationCenterVariant: n } = (0, p.X8)({ location: "NotificationsInboxButton" }),
@@ -93,7 +93,7 @@ function y() {
         l = r.useMemo(() => f.BVt.CHANNEL(f.gNP, a ?? void 0), [a]),
         d = (0, E.HN)();
     return n === p.U5.SIDEBAR
-        ? (0, i.jsx)(x, {
+        ? (0, i.jsx)(v, {
               onClick: () => {
                   d(), (0, s.pX)(l);
               },
@@ -106,7 +106,7 @@ function y() {
                 popoutAlign: "left",
                 spacing: 2,
                 children: (n, r, a) =>
-                    (0, i.jsx)(x, {
+                    (0, i.jsx)(v, {
                         ref: t,
                         selectedOverride: r,
                         onClick: () => {

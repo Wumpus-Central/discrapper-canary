@@ -1,4 +1,4 @@
-n.d(t, { A: () => y });
+n.d(t, { A: () => b });
 var i = n(627968),
     r = n(64700),
     a = n(503698),
@@ -21,18 +21,18 @@ var i = n(627968),
     T = n(977524),
     N = n(687599),
     S = n(652215),
-    v = n(985018),
-    x = n(146430);
-function y() {
+    x = n(985018),
+    v = n(69081);
+function b() {
     let e = r.useRef(null),
         t = (0, I.A)(),
         n = (0, f.I)(),
         a = (0, p.r)(),
-        y = (0, m.w)(),
-        b = (0, u.A)("message-requests-spam-list"),
+        b = (0, m.w)(),
+        y = (0, u.A)("message-requests-spam-list"),
         { channelId: O } = (0, E.N)(),
         L = r.useCallback(() => {
-            (0, d.showToast)((0, d.createToast)(v.intl.string(v.t["EDYbS+"]), d.ToastType.FAILURE));
+            (0, d.showToast)((0, d.createToast)(x.intl.string(x.t["EDYbS+"]), d.ToastType.FAILURE));
         }, []),
         { rejectAll: R } = (0, g.t)({ onError: L }),
         P = r.useCallback(() => {
@@ -52,7 +52,7 @@ function y() {
                     T.A,
                     {
                         index: n,
-                        className: l()({ [x.wH]: null != O && O === o, [x.wZ]: null != O && O === s }),
+                        className: l()({ [v.wH]: null != O && O === o, [v.wZ]: null != O && O === s }),
                         channel: r.channel,
                         user: r.user,
                         hasSingleMessageRequest: a,
@@ -67,14 +67,14 @@ function y() {
                 (0, i.jsxs)(
                     A.A,
                     {
-                        className: x.Gf,
+                        className: v.Gf,
                         children: [
-                            v.intl.format(v.t.C79Edh, { count: n }),
-                            y && n > 0
+                            x.intl.format(x.t.C79Edh, { count: n }),
+                            b && n > 0
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(d.Text, {
-                                              className: x.sg,
+                                              className: v.sg,
                                               variant: "eyebrow",
                                               color: "text-default",
                                               tag: "span",
@@ -82,9 +82,9 @@ function y() {
                                           }),
                                           (0, i.jsx)(d.QWc, {
                                               textVariant: "text-sm/normal",
-                                              text: v.intl.string(v.t.p6t7RC),
+                                              text: x.intl.string(x.t.p6t7RC),
                                               onClick: P,
-                                              "aria-label": v.intl.string(v.t.p6t7RC),
+                                              "aria-label": x.intl.string(x.t.p6t7RC),
                                           }),
                                       ],
                                   })
@@ -93,21 +93,21 @@ function y() {
                     },
                     "message-requests-spam-title",
                 ),
-            [n, P, y],
+            [n, P, b],
         );
     return 0 === t.length
         ? (0, i.jsx)(C.A, { section: N.zz.SPAM })
         : (0, i.jsx)(s.hD, {
-              navigator: b,
+              navigator: y,
               children: (0, i.jsx)(s.PR, {
                   children: (n) => {
                       let { ref: r, role: a, ...l } = n;
                       return (0, i.jsx)(
                           d.B8B,
                           {
-                              className: x.p_,
+                              className: v.p_,
                               innerRole: a,
-                              innerAriaLabel: v.intl.string(v.t.e7GWjQ),
+                              innerAriaLabel: x.intl.string(x.t.e7GWjQ),
                               ref: (t) => {
                                   (e.current = t), (r.current = t?.getScrollerNode() ?? null);
                               },

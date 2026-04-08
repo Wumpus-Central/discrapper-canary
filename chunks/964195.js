@@ -17,7 +17,7 @@ var r = n(627968),
     E = n(622543),
     g = n(576622),
     A = n(985018),
-    I = n(24813);
+    I = n(754434);
 function T(e, t) {
     let n = (0, u.bG)([E.A], () => E.A.getUserProfile(e));
     return (

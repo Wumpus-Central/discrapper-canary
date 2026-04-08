@@ -20,7 +20,7 @@ var a = n(311907),
     I = n(518477),
     j = n(652215),
     v = n(985018),
-    E = n(203983);
+    E = n(50108);
 function T(e) {
     let { user: t, currentUser: n, displayProfile: T, guildId: b, channelId: C, onClose: S } = e,
         { live: N, recent: y, stream: R } = (0, u.A)(t.id),

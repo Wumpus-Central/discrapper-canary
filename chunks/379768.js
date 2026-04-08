@@ -11,8 +11,8 @@ var i = n(627968),
     h = n(397927),
     m = n(435183),
     A = n(155718),
-    g = n(47167),
-    p = n(685374),
+    p = n(47167),
+    g = n(685374),
     f = n(569989),
     _ = n(997509),
     E = n(46054),
@@ -20,45 +20,45 @@ var i = n(627968),
     C = n(317525),
     S = n(71393),
     T = n(576705),
-    I = n(287809),
-    N = n(488926),
+    N = n(287809),
+    I = n(488926),
     v = n(427262),
     y = n(314307),
     b = n(234567),
     j = n(652215),
     R = n(985018),
-    M = n(22748),
-    D = n(830684);
+    M = n(650373),
+    D = n(782691);
 function O(e) {
     let { channel: t } = e,
         [n, s] = l.useState(!1),
-        r = (0, g.Ay)(t, !0),
+        r = (0, p.Ay)(t, !0),
         O = t.guild_id,
         L = (0, d.bG)([C.A], () => (null != O ? C.A.getSortedRoles(O) : void 0)),
-        P = (0, d.bG)([I.default, S.A], () => I.default.getUser(S.A.getGuild(O)?.ownerId)),
+        P = (0, d.bG)([N.default, S.A], () => N.default.getUser(S.A.getGuild(O)?.ownerId)),
         k = l.useMemo(() => (null != L ? L.filter((e) => !(0, x.Oy)(e)) : []), [L]),
         w = l.useMemo(
             () =>
                 o()(k)
                     .filter((e) => {
                         if (null == O) return !1;
-                        let n = N.aH({ forceRoles: { [e.id]: e }, context: t });
+                        let n = I.aH({ forceRoles: { [e.id]: e }, context: t });
                         return c.X8(n, c.kg(j.xBc.ADMINISTRATOR, j.xBc.VIEW_CHANNEL));
                     })
                     .value(),
             [t, O, k],
         ),
-        U = (0, d.yK)([I.default], () => {
+        U = (0, d.yK)([N.default], () => {
             let e = {};
             for (let n of (null != P && (e[P.id] = P), Object.values(t.permissionOverwrites))) {
                 if (n.type !== A.r2.MEMBER || null != e[n.id]) continue;
-                let t = I.default.getUser(n.id);
+                let t = N.default.getUser(n.id);
                 null != t && (e[t.id] = t);
             }
             return o()(e)
                 .filter((e) => {
-                    let n = N.$3({ permission: j.xBc.ADMINISTRATOR, user: e, context: t }),
-                        i = t.permissionOverwrites[e.id] ?? N.x3,
+                    let n = I.$3({ permission: j.xBc.ADMINISTRATOR, user: e, context: t }),
+                        i = t.permissionOverwrites[e.id] ?? I.x3,
                         l = c.zy(i.allow, j.xBc.VIEW_CHANNEL);
                     return n || l;
                 })
@@ -167,7 +167,7 @@ function O(e) {
             n
                 ? (0, i.jsx)(h.aFV, {
                       renderModal: (e) =>
-                          (0, i.jsx)(p.default, { ...e, onClose: () => (F(), e.onClose()), channelId: t.id }),
+                          (0, i.jsx)(g.default, { ...e, onClose: () => (F(), e.onClose()), channelId: t.id }),
                       onCloseRequest: () => s(!1),
                   })
                 : null,

@@ -21,10 +21,10 @@ var i = n(627968),
     N = n(427262),
     E = n(820883),
     C = n(276373),
-    b = n(438407),
-    T = n(652215),
-    I = n(985018),
-    v = n(165636);
+    T = n(438407),
+    I = n(652215),
+    b = n(985018),
+    v = n(91404);
 class S extends s.PureComponent {
     render() {
         let { user: e, onContextMenu: t } = this.props;
@@ -68,7 +68,7 @@ let y = s.forwardRef((e, t) => {
         w === B
             ? (0, i.jsx)(c.Text, { className: v.timestamp, variant: "text-sm/normal", children: w })
             : (0, i.jsxs)(c.Text, { className: v.timestamp, variant: "text-sm/normal", children: [w, "—", B] });
-    let F = U ? G : T.tEg;
+    let F = U ? G : I.tEg;
     return (0, i.jsx)(a.tG, {
         id: l.id,
         children: (e) =>
@@ -82,7 +82,7 @@ let y = s.forwardRef((e, t) => {
                         onClick: F,
                         ...e,
                         children: [
-                            (0, i.jsx)(b.H, { action: l.action, actionType: l.actionType, targetType: l.targetType }),
+                            (0, i.jsx)(T.H, { action: l.action, actionType: l.actionType, targetType: l.targetType }),
                             (function () {
                                 let {
                                     user: e,
@@ -104,10 +104,10 @@ let y = s.forwardRef((e, t) => {
                                                 },
                                                 className: v.avatar,
                                                 src:
-                                                    l.action === T.F_X.AUTO_MODERATION_BLOCK_MESSAGE ||
-                                                    l.action === T.F_X.AUTO_MODERATION_FLAG_TO_CHANNEL ||
-                                                    l.action === T.F_X.AUTO_MODERATION_USER_COMMUNICATION_DISABLED ||
-                                                    l.action === T.F_X.AUTO_MODERATION_QUARANTINE_USER
+                                                    l.action === I.F_X.AUTO_MODERATION_BLOCK_MESSAGE ||
+                                                    l.action === I.F_X.AUTO_MODERATION_FLAG_TO_CHANNEL ||
+                                                    l.action === I.F_X.AUTO_MODERATION_USER_COMMUNICATION_DISABLED ||
+                                                    l.action === I.F_X.AUTO_MODERATION_QUARANTINE_USER
                                                         ? (0, E.q)()
                                                         : l.user?.getAvatarURL(N, 40),
                                                 "aria-hidden": !0,
@@ -141,7 +141,7 @@ let y = s.forwardRef((e, t) => {
                                             return null != r
                                                 ? (0, i.jsx)("div", {
                                                       className: v.overflowEllipsis,
-                                                      children: I.intl.format(r, {
+                                                      children: b.intl.format(r, {
                                                           user: t,
                                                           target: e,
                                                           userHook: (e, t) => {
@@ -153,12 +153,12 @@ let y = s.forwardRef((e, t) => {
                                                                   );
                                                               if (null != l.options.integration_type) {
                                                                   let e = u.A.get(l.options.integration_type);
-                                                                  return e?.name ?? I.intl.string(I.t["n+olu7"]);
+                                                                  return e?.name ?? b.intl.string(b.t["n+olu7"]);
                                                               }
-                                                              return I.intl.string(I.t["30mdIx"]);
+                                                              return b.intl.string(b.t["30mdIx"]);
                                                           },
                                                           targetHook: (e, t) =>
-                                                              l.targetType === T.GaG.USER && l.target instanceof _.A
+                                                              l.targetType === I.GaG.USER && l.target instanceof _.A
                                                                   ? (0, i.jsx)(
                                                                         S,
                                                                         { user: l.target, onContextMenu: L },
@@ -196,7 +196,7 @@ let y = s.forwardRef((e, t) => {
                         ],
                     }),
                     h ? (0, i.jsx)("div", { className: v.divider }) : null,
-                    h && null != y ? (0, i.jsx)(b.r, { log: l, guild: y, onContentClick: O }) : null,
+                    h && null != y ? (0, i.jsx)(T.r, { log: l, guild: y, onContentClick: O }) : null,
                 ],
             }),
     });

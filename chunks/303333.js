@@ -14,9 +14,9 @@ var i = n(627968),
     m = n(522435),
     g = n(493819),
     p = n(722884),
-    f = n(924804),
+    f = n(148690),
     x = n(985018),
-    E = n(73131);
+    E = n(591454);
 function I(e) {
     let { channel: t, imageUrl: n, isConnected: s } = e,
         r = (0, h.S)(n),

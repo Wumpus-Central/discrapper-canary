@@ -1,8 +1,8 @@
 n.d(t, { A: () => V }), n(801541);
 var a = n(627968),
     i = n(64700),
-    l = n(284009),
-    s = n.n(l),
+    s = n(284009),
+    l = n.n(s),
     r = n(889137),
     o = n(412703),
     d = n(440703),
@@ -13,23 +13,23 @@ var a = n(627968),
     x = n(92246),
     p = n(792620),
     g = n(241124),
-    _ = n(947926),
-    f = n(717695),
-    v = n(164203),
+    f = n(947926),
+    v = n(717695),
+    _ = n(164203),
     b = n(127219),
     j = n(438038),
     A = n(439075),
     C = n(223344),
     y = n(589939),
     S = n(443960),
-    T = n(899860),
-    E = n(633581),
+    E = n(899860),
+    T = n(633581),
     N = n(508575),
     I = n(847807),
     k = n(364329),
     O = n(545986),
     R = n(927813),
-    w = n(549592);
+    w = n(163459);
 let D = ["png", "gif", "webp"],
     M = [...D, "jpg", "jpeg"],
     P = Array.from(new Set([...M, "gif", "mp4", "webm"]));
@@ -107,9 +107,9 @@ let U = "1193992107035983872",
     };
 function G() {
     var e;
-    let [t, l] = i.useState(B),
+    let [t, s] = i.useState(B),
         c = i.useCallback((e) => {
-            l({ ...e, preview: !0 });
+            s({ ...e, preview: !0 });
         }, []),
         [u, U] = i.useState(k.b.UNENROLLED),
         [G, F] = i.useState(!1),
@@ -145,16 +145,16 @@ function G() {
         let a = t.config.taskConfigV2.tasks,
             i = a[o.n.WATCH_VIDEO];
         if (null == i) return;
-        let l = { ...i.assets };
+        let s = { ...i.assets };
         switch (e) {
             case "videoPlayerVideo":
-                l.video = { url: n };
+                s.video = { url: n };
                 break;
             case "videoPlayerVideoLowRes":
-                l.videoLowRes = { url: n };
+                s.videoLowRes = { url: n };
                 break;
             case "videoPlayerThumbnail":
-                l.video = { ...l.video, thumbnail: n };
+                s.video = { ...s.video, thumbnail: n };
                 break;
             default:
                 return;
@@ -163,11 +163,11 @@ function G() {
             ...t,
             config: {
                 ...t.config,
-                taskConfigV2: { ...t.config.taskConfigV2, tasks: { ...a, [o.n.WATCH_VIDEO]: { ...i, assets: l } } },
+                taskConfigV2: { ...t.config.taskConfigV2, tasks: { ...a, [o.n.WATCH_VIDEO]: { ...i, assets: s } } },
             },
         });
     }
-    function Q(e, n) {
+    function Y(e, n) {
         if ("questName" === e || "gameTitle" === e || "gamePublisher" === e) {
             var a, i;
             c({
@@ -181,21 +181,21 @@ function G() {
             });
         }
     }
-    function Y(e, n, a) {
+    function Q(e, n, a) {
         if ("name" === e || "nameWithArticle" === e) {
-            var i, l;
+            var i, s;
             c({
                 ...t,
                 config:
                     ((i = t.config),
-                    (l = { [e]: n }),
+                    (s = { [e]: n }),
                     (0, r.YW)(i)
                         .with({ configVersion: 2 }, (e) => ({
                             ...e,
                             rewardsConfig: {
                                 ...e.rewardsConfig,
                                 rewards: e.rewardsConfig.rewards.map((e, t) =>
-                                    t === a ? { ...e, messages: { ...e.messages, ...l } } : e,
+                                    t === a ? { ...e, messages: { ...e.messages, ...s } } : e,
                                 ),
                             },
                         }))
@@ -214,7 +214,7 @@ function G() {
             return 10 * R.A.Seconds.MINUTE;
         }, [t.config.taskConfigV2.tasks]),
         ee = i.useMemo(() => o.n.WATCH_VIDEO in t.config.taskConfigV2.tasks, [t.config.taskConfigV2.tasks]);
-    s()(!1 !== t.preview && null != t.preview, "Preview config must have property preview: true");
+    l()(!1 !== t.preview && null != t.preview, "Preview config must have property preview: true");
     let et = t.config.taskConfigV2.tasks[o.n.WATCH_VIDEO];
     return (0, a.jsxs)(m.IpV, {
         className: w.kL,
@@ -222,7 +222,7 @@ function G() {
             (0, a.jsx)(m.Heading, { variant: "heading-lg/bold", className: w.R_, children: "Quest Preview Tool" }),
             (0, a.jsx)("div", {
                 className: w.OA,
-                children: (0, a.jsx)(E.A, {
+                children: (0, a.jsx)(T.A, {
                     onSelect: function (e) {
                         K(e),
                             null == e ||
@@ -265,40 +265,40 @@ function G() {
             (0, a.jsxs)("div", {
                 className: w.OA,
                 children: [
-                    (0, a.jsx)(T.A, {
+                    (0, a.jsx)(E.A, {
                         title: "Quest Name",
                         assetKey: "questName",
-                        onMessageChange: Q,
+                        onMessageChange: Y,
                         initialValue: t.config.messages.questName,
                     }),
-                    (0, a.jsx)(T.A, {
+                    (0, a.jsx)(E.A, {
                         title: "Game Title",
                         assetKey: "gameTitle",
-                        onMessageChange: Q,
+                        onMessageChange: Y,
                         initialValue: t.config.messages.gameTitle,
                     }),
-                    (0, a.jsx)(T.A, {
+                    (0, a.jsx)(E.A, {
                         title: "Game Publisher",
                         assetKey: "gamePublisher",
-                        onMessageChange: Q,
+                        onMessageChange: Y,
                         initialValue: t.config.messages.gamePublisher,
                     }),
                     ee &&
-                        (0, a.jsx)(T.A, {
+                        (0, a.jsx)(E.A, {
                             title: "Video Title",
                             assetKey: "videoTitle",
                             onMessageChange: function (e, n) {
                                 let a = t.config.taskConfigV2.tasks,
                                     i = a[o.n.WATCH_VIDEO];
                                 if (null == i) return;
-                                let l = { ...i.messages, [e]: n };
+                                let s = { ...i.messages, [e]: n };
                                 c({
                                     ...t,
                                     config: {
                                         ...t.config,
                                         taskConfigV2: {
                                             ...t.config.taskConfigV2,
-                                            tasks: { ...a, [o.n.WATCH_VIDEO]: { ...i, messages: l } },
+                                            tasks: { ...a, [o.n.WATCH_VIDEO]: { ...i, messages: s } },
                                         },
                                     },
                                 });
@@ -394,16 +394,16 @@ function G() {
                             (0, a.jsxs)("div", {
                                 className: w.OA,
                                 children: [
-                                    (0, a.jsx)(T.A, {
+                                    (0, a.jsx)(E.A, {
                                         title: "Name",
                                         assetKey: "name",
-                                        onMessageChange: (e, t) => Y(e, t, n),
+                                        onMessageChange: (e, t) => Q(e, t, n),
                                         initialValue: e.messages.name,
                                     }),
-                                    (0, a.jsx)(T.A, {
+                                    (0, a.jsx)(E.A, {
                                         title: "Name With Article",
                                         assetKey: "nameWithArticle",
-                                        onMessageChange: (e, t) => Y(e, t, n),
+                                        onMessageChange: (e, t) => Q(e, t, n),
                                         initialValue: e.messages.nameWithArticle,
                                     }),
                                     e.type !== d.l.VIRTUAL_CURRENCY &&
@@ -572,7 +572,7 @@ function G() {
                                             isPreview: !0,
                                             source: "preview",
                                             questId: "0",
-                                            children: (0, a.jsx)(f.A, { children: (0, a.jsx)(_.Y, { quest: t }) }),
+                                            children: (0, a.jsx)(v.A, { children: (0, a.jsx)(f.Y, { quest: t }) }),
                                         }),
                                     }),
                                 ],
@@ -617,7 +617,7 @@ function G() {
                                     questId: "0",
                                     children: (0, a.jsx)("div", {
                                         className: w.Jr,
-                                        children: (0, a.jsx)(v.A, {
+                                        children: (0, a.jsx)(_.A, {
                                             channelId: "123",
                                             previewQuest: t,
                                             isParticipatingOverride: G,
@@ -673,7 +673,7 @@ function G() {
                                                 n.e("92868"),
                                                 n.e("29636"),
                                                 n.e("7634"),
-                                                n.e("36855"),
+                                                n.e("5501"),
                                             ]).then(n.bind(n, 201257));
                                             return (n) =>
                                                 (0, a.jsx)(e, {

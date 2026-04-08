@@ -10,11 +10,11 @@ var r = n(627968),
     c = n(775602),
     d = n(587895),
     _ = n(429913),
-    f = n(136086),
-    p = n(885151),
-    h = n(409626),
-    m = n(611656),
-    E = n(459746),
+    f = n(409626),
+    p = n(611656),
+    h = n(459746),
+    m = n(311043),
+    E = n(454908),
     g = n(544028),
     A = n(760751),
     I = n(954571),
@@ -28,7 +28,7 @@ var r = n(627968),
     O = n(654487),
     b = n(652215),
     D = n(985018),
-    L = n(73509);
+    L = n(650746);
 let w = 10,
     M = 20,
     x = 15,
@@ -92,14 +92,14 @@ let V = (e) => {
         });
     },
     B = (e) => {
-        let { quest: t, game: a, sourceQuestContent: l, onGameProfileModalOpen: _, onGameProfileModalClose: f } = e,
-            p = (0, v.Ut)(),
-            m = (0, s.bG)([d.A], () => d.A.getApplication(a.applicationId)),
+        let { quest: t, game: a, sourceQuestContent: l, onGameProfileModalOpen: _, onGameProfileModalClose: p } = e,
+            m = (0, v.Ut)(),
+            E = (0, s.bG)([d.A], () => d.A.getApplication(a.applicationId)),
             g = (0, s.bG)([c.A], () => c.A.useReducedMotion),
             A = i.useRef(null),
             I = null != a.gameRecord,
             T = () => {
-                p({
+                m({
                     questId: t.id,
                     questContent: S.uF.SPONSORED_QUEST_SHEET,
                     questContentCTA: N.Cy.GAME_STORE_OPEN_GAME_LINK,
@@ -108,7 +108,7 @@ let V = (e) => {
             },
             y = async () => {
                 I &&
-                    (p({
+                    (m({
                         questId: t.id,
                         questContent: S.uF.SPONSORED_QUEST_SHEET,
                         questContentCTA: N.Cy.GAME_PROFILE_OPEN,
@@ -120,17 +120,17 @@ let V = (e) => {
                                 n.e("18976"),
                                 n.e("21957"),
                                 n.e("18037"),
-                                n.e("88323"),
+                                n.e("16222"),
                             ]).then(n.bind(n, 225732));
                             return (t) =>
                                 (0, r.jsx)(e, {
                                     applicationId: a.applicationId,
-                                    source: h.Ob.GameSheet,
+                                    source: f.Ob.GameSheet,
                                     trackExternalAction: T,
                                     ...t,
                                 });
                         },
-                        { onCloseCallback: f },
+                        { onCloseCallback: p },
                     ),
                     _());
             },
@@ -153,7 +153,7 @@ let V = (e) => {
             }, [g]),
             O = () =>
                 null != a.gameRecord
-                    ? (0, r.jsx)(E.A, { game: a.gameRecord, application: m, className: L.xe, size: E.w.SMALL })
+                    ? (0, r.jsx)(h.A, { game: a.gameRecord, application: E, className: L.xe, size: h.w.SMALL })
                     : null != a.fallbackCoverImageUrl
                       ? (0, r.jsx)("img", { src: a.fallbackCoverImageUrl, alt: a.name, className: L.xe })
                       : null;
@@ -208,23 +208,23 @@ function j(e) {
         sourceQuestContent: l,
         impressionRef: c,
         onGameProfileModalOpen: d,
-        onGameProfileModalClose: h,
+        onGameProfileModalClose: f,
     } = e;
-    (0, _.A)(a), (0, p.W)(a);
-    let E = (0, s.bG)([f.A], () => a.some((e) => f.A.isFetching(e))),
-        g = (0, s.bG)([f.A], () => a.some((e) => f.A.didFetchingFail(e))),
-        S = (0, s.yK)([f.A], () =>
+    (0, _.A)(a), (0, E.x)(a);
+    let h = (0, s.bG)([m.A], () => a.some((e) => m.A.isFetching(e))),
+        g = (0, s.bG)([m.A], () => a.some((e) => m.A.didFetchingFail(e))),
+        S = (0, s.yK)([m.A], () =>
             a
-                .map((e) => f.A.getGame(e))
+                .map((e) => m.A.getGame(e))
                 .filter((e) => null != e)
-                .filter((e) => (0, m.oS)(e.applicationId))
+                .filter((e) => (0, p.oS)(e.applicationId))
                 .slice(0, w),
         ),
-        y = (0, s.bG)([A.A, f.A], () => {
+        y = (0, s.bG)([A.A, m.A], () => {
             let e = new Set(S.map((e) => e.applicationId));
             return a
                 .filter((t) => !e.has(t))
-                .filter((e) => null == f.A.getGame(e))
+                .filter((e) => null == m.A.getGame(e))
                 .map((e) => {
                     let t = A.A.getDetectableGame(e);
                     if (t?.cover_image_hash == null) return null;
@@ -261,7 +261,7 @@ function j(e) {
             let e = v.length;
             return e <= P ? P - e : e === k ? 0 : e <= U ? U - e : G - e;
         }, [v.length]),
-        C = !E && 0 === v.length,
+        C = !h && 0 === v.length,
         O = g || C;
     if (
         (i.useEffect(() => {
@@ -275,7 +275,7 @@ function j(e) {
                     });
             }
         }, [O, g, t.id, o]),
-        E && !O)
+        h && !O)
     ) {
         let e = Math.min(a.length, w);
         return (0, r.jsxs)("div", {
@@ -309,7 +309,7 @@ function j(e) {
                                       game: e,
                                       sourceQuestContent: l,
                                       onGameProfileModalOpen: d,
-                                      onGameProfileModalClose: h,
+                                      onGameProfileModalClose: f,
                                   },
                                   e.applicationId,
                               ),

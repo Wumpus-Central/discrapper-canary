@@ -9,7 +9,7 @@ var i = n(627968),
 n(646363);
 var c = n(652215),
     u = n(788868),
-    A = n(998838);
+    A = n(63461);
 let h = function (e) {
     let { rows: t, renderRow: n, renderSection: h, footer: _, sectionFilter: m, renderSectionFooter: p } = e,
         g = (e) => {
@@ -46,7 +46,7 @@ let h = function (e) {
                 }),
             [],
         ),
-        v = r.useCallback(
+        x = r.useCallback(
             () =>
                 new Promise((e) => {
                     let t = N.current;
@@ -55,15 +55,15 @@ let h = function (e) {
                 }),
             [],
         ),
-        x = r.useCallback((e) => {
+        v = r.useCallback((e) => {
             let t = document.querySelector(e),
                 n = N.current;
             null != t && null != n && n.scrollIntoViewNode({ node: t, padding: 8, callback: () => t?.focus() });
         }, []),
-        y = (0, a.Ay)({ id: "people-list", isEnabled: T, scrollToStart: S, scrollToEnd: v, setFocus: x }),
-        b = r.useMemo(() => t.map((e) => e.length), [t]);
+        b = (0, a.Ay)({ id: "people-list", isEnabled: T, scrollToStart: S, scrollToEnd: x, setFocus: v }),
+        y = r.useMemo(() => t.map((e) => e.length), [t]);
     return (0, i.jsx)(l.hD, {
-        navigator: y,
+        navigator: b,
         children: (0, i.jsx)(l.PR, {
             children: (e) => {
                 let { ref: t, ...n } = e;
@@ -79,7 +79,7 @@ let h = function (e) {
                             sectionHeight: 50,
                             renderFooter: f,
                             footerHeight: C,
-                            sections: b,
+                            sections: y,
                             className: A.e3,
                             ...n,
                         }),

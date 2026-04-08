@@ -13,7 +13,7 @@ var a = n(627968),
     g = n(936636),
     h = n(424994),
     f = n(985018),
-    p = n(12388);
+    p = n(706445);
 function _() {
     return (0, a.jsx)(l.Text, { variant: "text-sm/normal", color: "text-subtle", children: f.intl.string(f.t.GruYxV) });
 }
@@ -23,14 +23,14 @@ let v = function (e) {
         j = n.getCompanyByRole(r.wk.PUBLISHER),
         E = n.getCompanyByRole(r.wk.DEVELOPER),
         b = j.map((e) => e.name).join(", "),
-        C = E.map((e) => e.name).join(", "),
-        I = n.firstReleaseDate,
+        I = E.map((e) => e.name).join(", "),
+        C = n.firstReleaseDate,
         N = (0, u.A)(n),
         S = (0, d.Y)(n),
         T = !(0, c.uJ)(A),
         y = !(0, c.uJ)(b),
-        L = !(0, c.uJ)(C),
-        k = !(0, c.uJ)(I),
+        L = !(0, c.uJ)(I),
+        k = !(0, c.uJ)(C),
         R = N.length > 0,
         O = S.length > 0 && !S.every((e) => (0, c.uJ)(e.url));
     return (0, a.jsxs)("div", {
@@ -96,7 +96,7 @@ let v = function (e) {
                                       variant: "text-sm/normal",
                                       color: "text-subtle",
                                       className: p.Gu,
-                                      children: C,
+                                      children: I,
                                   })
                                 : (0, a.jsx)(_, {}),
                         ],
@@ -114,7 +114,7 @@ let v = function (e) {
                                       variant: "text-sm/normal",
                                       color: "text-subtle",
                                       className: p.Gu,
-                                      children: s.i$(new Date(I), "LL"),
+                                      children: s.i$(new Date(C), "LL"),
                                   })
                                 : (0, a.jsx)(_, {}),
                         ],

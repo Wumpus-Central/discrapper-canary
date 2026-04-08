@@ -8,11 +8,11 @@ var i = n(627968),
     c = n(403362),
     d = n(175203),
     u = n(806931),
-    h = n(162284);
+    h = n(29243);
 let m = 112,
     A = (16 / 9) * 112 + 8,
-    g = 10 * o.A.Millis.SECOND;
-function p(e) {
+    p = 10 * o.A.Millis.SECOND;
+function g(e) {
     let t = r.default.getId();
     return e.type === u.lp.USER && e.user.id === t && e.voiceState?.selfVideo;
 }
@@ -26,7 +26,7 @@ function f(e, t) {
     l.useEffect(() => {
         let e = setTimeout(() => {
             _(Date.now());
-        }, g);
+        }, p);
         return () => {
             clearTimeout(e);
         };
@@ -50,7 +50,7 @@ function f(e, t) {
                                 return (
                                     e.speaking
                                         ? (l = "\x03")
-                                        : t - e.lastSpoke < g
+                                        : t - e.lastSpoke < p
                                           ? (l = "\x04")
                                           : e.voiceState?.selfVideo && (l = "\x05"),
                                     `${l}${((n = e.lastSpoke), (i = String(864e13).length), String(864e13 - n).padStart(i, "0"))}${(0, a.A)(e.userNick, e.user)}`
@@ -59,19 +59,19 @@ function f(e, t) {
                     })(e, n),
                 ),
                 [m, A] = (0, s.partition)(l, u.Xw),
-                f = m.findIndex(p),
+                f = m.findIndex(g),
                 _ = null;
             -1 !== f && ((_ = m[f]), m.splice(f, 1));
             let x = null == _ || h ? e : e - i - o,
                 C = Math.max(0, Math.min(Math.floor((x - o) / (r + o)), d, t.length)),
                 S = Math.min((x - o) / C - o, i),
                 T = Math.max(0, C - A.length),
-                I = A.slice(0, C),
-                N = m.slice(0, T),
+                N = A.slice(0, C),
+                I = m.slice(0, T),
                 v = Array(T);
             if (T > 0) {
                 let e = [];
-                for (let t of N) {
+                for (let t of I) {
                     let n = E.current[t.id];
                     null != n && n < T ? (v[n] = t) : e.push(t);
                 }
@@ -84,7 +84,7 @@ function f(e, t) {
             }
             let y = v.filter(c.Vq);
             E.current = (0, s.keyBy)((0, s.range)(y.length), (e) => y[e].id);
-            let b = [...I, ...y];
+            let b = [...N, ...y];
             return (
                 null != _ && (h && b.length >= C ? (b[Math.max(0, b.length - 1)] = _) : b.push(_)),
                 { visibleParticipants: b, participantTileWidth: S }
@@ -109,7 +109,7 @@ function _(e) {
         className: h.zr,
         children: t.map((e) => {
             if (null == e) return null;
-            let t = p(e);
+            let t = g(e);
             return (0, i.jsx)(
                 "div",
                 {

@@ -9,16 +9,16 @@ var i = n(503698),
     c = n(990078),
     d = n(397927),
     u = n(587895),
-    m = n(136086),
-    x = n(885151),
+    m = n(311043),
+    x = n(454908),
     g = n(409626),
     h = n(422069),
     f = n(611656),
     p = n(459746),
     _ = n(225732),
     v = n(985018),
-    A = n(325952),
-    j = n(92750);
+    A = n(282063),
+    j = n(379093);
 let E = (e) => {
     let { game: t, onClose: n, trackClick: i } = e,
         l = (0, o.bG)([u.A], () => u.A.getApplication(t.applicationId));
@@ -55,7 +55,7 @@ function b(e) {
                 .filter((e) => (0, f.oS)(e.applicationId))
                 .slice(0, 5),
         );
-    return ((0, x.k)(t), (0, x.W)(r), u && null == c)
+    return ((0, x.I)(t), (0, x.x)(r), u && null == c)
         ? (0, a.jsxs)("div", {
               children: [
                   (0, a.jsx)("div", { className: l()(j.vM, A.bV) }),

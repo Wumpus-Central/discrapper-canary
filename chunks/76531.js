@@ -4,8 +4,8 @@ n(64700);
 var r = n(397927),
     a = n(892742),
     l = n(985018),
-    s = n(349661),
-    o = n(818477);
+    s = n(446e3),
+    o = n(289474);
 let d = function (e) {
     let { questId: t } = e;
     return (0, i.jsx)("div", {

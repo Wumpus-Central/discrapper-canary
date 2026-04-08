@@ -13,7 +13,7 @@ var i = n(627968),
     g = n(386784),
     x = n(963175),
     h = n(985018),
-    _ = n(93932);
+    _ = n(223587);
 function p(e) {
     let { onDeleteEditState: t } = e,
         { editStateId: l, guildId: p, groupListingId: A } = (0, m.O)(),
@@ -22,9 +22,9 @@ function p(e) {
         N = (0, g.A)(p),
         E = s.useMemo(() => null != N && null != f && (N[f.role_id] ?? 0), [N, f]),
         C = 0 === E,
-        b = null == j,
-        T = f?.archived ?? !1,
-        { error: I, deleteSubscriptionListing: v, submitting: S } = (0, c.et)(),
+        T = null == j,
+        I = f?.archived ?? !1,
+        { error: b, deleteSubscriptionListing: v, submitting: S } = (0, c.et)(),
         { error: y, archiveSubscriptionListing: R, submitting: O } = (0, c.hc)(),
         { allowSelfRemoveMonetization: G } = (0, d.nq)(p);
     return null == f
@@ -34,11 +34,11 @@ function p(e) {
               children: (0, i.jsxs)(o.BJc, {
                   gap: 16,
                   children: [
-                      null !== I &&
+                      null !== b &&
                           (0, i.jsx)(o.po8, { messageType: o.YCn.ERROR, children: h.intl.string(h.t["9k8H/9"]) }),
                       null !== y &&
                           (0, i.jsx)(o.po8, { messageType: o.YCn.ERROR, children: h.intl.string(h.t.up8gUr) }),
-                      T
+                      I
                           ? (0, i.jsx)(o.D0$, {
                                 disabled: !G,
                                 label: h.intl.string(h.t["2D14T0"]),
@@ -58,7 +58,7 @@ function p(e) {
                                             variant: "critical-primary",
                                             onClick: () => {
                                                 let e = async () => {
-                                                    (b ||
+                                                    (T ||
                                                         (r()(null != A, "group listing doesnt exist"),
                                                         r()(null != j, "subscription listing doesnt exist"),
                                                         await v(p, A, j))) &&

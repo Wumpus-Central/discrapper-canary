@@ -21,16 +21,16 @@ var i = n(627968),
     T = n(98165),
     N = n(174279),
     S = n(278066),
-    v = n(594968),
-    x = n(979282),
-    y = n(575474),
-    b = n(535266),
+    x = n(594968),
+    v = n(979282),
+    b = n(575474),
+    y = n(535266),
     O = n(787331);
 n(646363);
 var L = n(652215),
     R = n(788868),
     P = n(985018),
-    D = n(998838);
+    D = n(63461);
 let M = [];
 function j() {
     d.A.transitionToSection(L.m3P.ADD_FRIEND, { explicit: !0 });
@@ -74,7 +74,7 @@ let G = function (e) {
                 let { key: n, ...r } = e;
                 switch (d) {
                     case L.m3P.PENDING:
-                        return (0, i.jsx)(v.A, { ...r, isFocused: j, onAcceptFriendRequest: () => F(e) }, n);
+                        return (0, i.jsx)(x.A, { ...r, isFocused: j, onAcceptFriendRequest: () => F(e) }, n);
                     case L.m3P.SUGGESTIONS:
                         return (0, i.jsx)(O.A, { ...r, isFocused: j }, n);
                     case L.m3P.ALL:
@@ -211,7 +211,7 @@ let G = function (e) {
                           {
                               className: D.Gf,
                               children: [
-                                  (0, i.jsx)(b.A, { id: t, title: r }),
+                                  (0, i.jsx)(y.A, { id: t, title: r }),
                                   ea &&
                                       (0, i.jsx)("div", {
                                           className: D.mt,
@@ -226,7 +226,7 @@ let G = function (e) {
                           },
                           r,
                       )
-                    : (0, i.jsx)("div", { className: D.Gf, children: (0, i.jsx)(b.A, { id: t, title: r }) }, r);
+                    : (0, i.jsx)("div", { className: D.Gf, children: (0, i.jsx)(y.A, { id: t, title: r }) }, r);
             },
             [ei, d, t, ea, el],
         ),
@@ -264,12 +264,12 @@ let G = function (e) {
         children: (0, i.jsxs)(u.A, {
             section: L.JJy.FRIENDS_LIST,
             children: [
-                k && (0, i.jsx)(y.g, {}),
+                k && (0, i.jsx)(b.g, {}),
                 (0, i.jsx)("div", {
                     className: D.ON,
                     children: (0, i.jsx)(o.IWV, { query: Y[d], onChange: Q, onClear: X }),
                 }),
-                (0, i.jsx)(x.A, {
+                (0, i.jsx)(v.A, {
                     rows: ei,
                     renderRow: $,
                     renderSection: eo,

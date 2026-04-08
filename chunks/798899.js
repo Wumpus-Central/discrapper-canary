@@ -2,11 +2,11 @@ n.d(t, { A: () => u });
 var i = n(627968),
     l = n(64700),
     s = n(397927),
-    a = n(572211),
-    r = n(443795),
+    r = n(572211),
+    a = n(443795),
     o = n(768349),
     d = n(985018),
-    c = n(71747);
+    c = n(772234);
 function u(e) {
     let { application: t, message: n, header: u, onClickContent: _, onView: m, guildId: h } = e,
         p = l.useMemo(
@@ -20,10 +20,10 @@ function u(e) {
                 }),
             [],
         );
-    return (0, i.jsx)(a.h, {
+    return (0, i.jsx)(r.h, {
         header: u,
         title: t.name,
-        iconSrc: r.HT.getWhiteIconURL(),
+        iconSrc: a.HT.getWhiteIconURL(),
         info: p,
         onClickContent: _,
         trackingConfig: {

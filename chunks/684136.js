@@ -7,7 +7,7 @@ var r = n(503698),
     s = n(607399),
     o = n(397927),
     d = n(985018),
-    c = n(31004),
+    c = n(494697),
     u = (((i = u || {}).DEFAULT = ""), (i.BOLD = "Bold"), (i.SOLID = "Solid"), i);
 function _(e) {
     let { closeAction: t, variant: n = "", keybind: i, className: r } = e;

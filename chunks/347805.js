@@ -1,18 +1,18 @@
-n.d(l, { A: () => p });
-var t = n(627968),
-    i = n(64700),
-    s = n(311907),
-    a = n(397927),
-    r = n(629403),
-    o = n(612630),
-    d = n(351906),
-    c = n(652215),
-    u = n(985018),
-    m = n(36755);
-function p(e) {
-    let { autoFocus: l = !1, className: n, userId: p, onUpdate: x } = e,
+t.d(l, { A: () => x });
+var n = t(627968),
+    i = t(64700),
+    s = t(311907),
+    a = t(397927),
+    r = t(629403),
+    o = t(612630),
+    d = t(351906),
+    c = t(652215),
+    u = t(985018),
+    m = t(828950);
+function x(e) {
+    let { autoFocus: l = !1, className: t, userId: x, onUpdate: p } = e,
         A = (0, s.bG)([d.A], () => d.A.hidePersonalInformation),
-        { loading: g, note: f } = (0, o.A)(p),
+        { loading: g, note: f } = (0, o.A)(x),
         h = i.useRef(null);
     return (i.useEffect(() => {
         if (!l || A) return;
@@ -21,9 +21,9 @@ function p(e) {
     }, [l, A]),
     A)
         ? null
-        : (0, t.jsx)("div", {
-              className: n,
-              children: (0, t.jsx)(a.d4u, {
+        : (0, n.jsx)("div", {
+              className: t,
+              children: (0, n.jsx)(a.d4u, {
                   ref: h,
                   className: m.P,
                   disabled: g,
@@ -31,7 +31,7 @@ function p(e) {
                   "aria-label": u.intl.string(u.t.PbMNh2),
                   onBlur: (e) => {
                       let l = e.currentTarget.value;
-                      (f ?? "") !== l && (x?.(), r.A.updateNote(p, l));
+                      (f ?? "") !== l && (p?.(), r.A.updateNote(x, l));
                   },
                   onKeyPress: (e) => {
                       13 === e.which

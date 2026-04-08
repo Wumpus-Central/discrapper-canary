@@ -8,11 +8,11 @@ var i = n(627968),
     c = n(775602),
     d = n(927813),
     u = n(614518),
-    h = n(964701);
+    h = n(29110);
 let m = 6 * d.A.Millis.SECOND,
     A = 2 * d.A.Millis.SECOND,
-    g = 2 * d.A.Millis.SECOND,
-    p = (e) => `scale(${1 - -(e / 120)}) rotate(${e}deg)`;
+    p = 2 * d.A.Millis.SECOND,
+    g = (e) => `scale(${1 - -(e / 120)}) rotate(${e}deg)`;
 function f(e) {
     let { userId: t, voiceChannelEffect: n, onComplete: d } = e,
         { emoji: f, sentAt: _ } = n,
@@ -32,7 +32,7 @@ function f(e) {
     return (l.useEffect(() => {
         let e;
         return (
-            Date.now() - _ >= g
+            Date.now() - _ >= p
                 ? (0, u.a)(t)
                 : (e = setTimeout(
                       () => {
@@ -53,7 +53,7 @@ function f(e) {
                   t &&
                   (0, i.jsx)(s.animated.div, {
                       className: h._,
-                      style: { transform: n.to(p) },
+                      style: { transform: n.to(g) },
                       children: (0, i.jsx)(o.A, {
                           className: h.F,
                           emojiId: f.id,

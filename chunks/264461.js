@@ -1,8 +1,8 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => v });
 var a = n(627968),
     i = n(64700),
-    l = n(503698),
-    s = n.n(l),
+    s = n(503698),
+    l = n.n(s),
     r = n(158954),
     o = n(311907),
     d = n(902592),
@@ -12,8 +12,8 @@ var a = n(627968),
     h = n(903796),
     x = n(439895),
     p = n(652215),
-    g = n(7875);
-let _ = (e) => {
+    g = n(751156);
+let f = (e) => {
         let { setTab: t } = e,
             n = (0, o.bG)([c.A], () => c.A.getWindowOpen(p.MLl.DEVTOOLS_POPOUT));
         return (0, a.jsxs)("div", {
@@ -24,7 +24,7 @@ let _ = (e) => {
                         t(1);
                     },
                     children: (0, a.jsx)("div", {
-                        className: s()(g.vK, g.Dg),
+                        className: l()(g.vK, g.Dg),
                         children: (0, a.jsx)(r.EYj, {
                             variant: "text-md/bold",
                             color: "always-white",
@@ -37,7 +37,7 @@ let _ = (e) => {
                         t(2);
                     },
                     children: (0, a.jsx)("div", {
-                        className: s()(g.vK, g.st),
+                        className: l()(g.vK, g.st),
                         children: (0, a.jsx)(r.EYj, {
                             variant: "text-md/bold",
                             color: "always-white",
@@ -50,7 +50,7 @@ let _ = (e) => {
                         t(3);
                     },
                     children: (0, a.jsx)("div", {
-                        className: s()(g.vK, g.Dg),
+                        className: l()(g.vK, g.Dg),
                         children: (0, a.jsx)(r.EYj, {
                             variant: "text-md/bold",
                             color: "always-white",
@@ -63,7 +63,7 @@ let _ = (e) => {
                         t(4);
                     },
                     children: (0, a.jsx)("div", {
-                        className: s()(g.vK, g.IP),
+                        className: l()(g.vK, g.IP),
                         children: (0, a.jsx)(r.EYj, {
                             variant: "text-md/bold",
                             color: "always-white",
@@ -98,7 +98,7 @@ let _ = (e) => {
             ],
         });
     },
-    f = () => {
+    v = () => {
         let [e, t] = i.useState(0);
         return (0, a.jsxs)(r.IpV, {
             className: g.iE,
@@ -121,7 +121,7 @@ let _ = (e) => {
                         case 4:
                             return (0, a.jsx)(x.A, {});
                         default:
-                            return (0, a.jsx)(_, { setTab: t });
+                            return (0, a.jsx)(f, { setTab: t });
                     }
                 })(),
             ],

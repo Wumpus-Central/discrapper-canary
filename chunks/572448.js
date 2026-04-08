@@ -26,7 +26,7 @@ var l = n(503698),
     b = n(147925),
     v = n(652215),
     y = n(985018),
-    j = n(81236);
+    j = n(612005);
 let R = { top: 8, bottom: 8, left: -4, right: -4 };
 function O(e) {
     let { channelState: t, toggle: n, getNumUnreadChannels: l } = e;
