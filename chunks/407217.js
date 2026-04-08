@@ -1,4 +1,4 @@
-n.d(t, { K: () => A, default: () => x });
+n.d(t, { K: () => x, default: () => A });
 var i = n(627968);
 n(64700);
 var s = n(397927),
@@ -9,57 +9,60 @@ var s = n(397927),
     d = n(244975),
     c = n(788868),
     u = n(652215),
-    _ = n(985018),
-    m = n(698290),
-    g = n(880223);
-function A(e) {
-    let { analyticsSource: t, onSubscribeFinish: l } = e,
-        r = a.default.getCurrentUser();
-    null != r &&
-        (0, s.mMO)(async () => {
-            let { default: e } = await Promise.resolve().then(n.bind(n, 407217));
-            return (n) =>
-                (0, i.jsx)(e, {
-                    user: r,
-                    analyticsSource: t,
-                    analyticsLocation: { section: u.JJy.USER_PROFILE, object: u.ZSU.BUTTON_CTA },
-                    onSubscribeFinish: l,
-                    ...n,
-                });
-        });
-}
+    m = n(985018),
+    g = n(375160),
+    _ = n(880223);
 function x(e) {
+    let { analyticsSource: t, onSubscribeFinish: l, stackingBehavior: r } = e,
+        o = a.default.getCurrentUser();
+    null != o &&
+        (0, s.mMO)(
+            async () => {
+                let { default: e } = await Promise.resolve().then(n.bind(n, 407217));
+                return (n) =>
+                    (0, i.jsx)(e, {
+                        user: o,
+                        analyticsSource: t,
+                        analyticsLocation: { section: u.JJy.USER_PROFILE, object: u.ZSU.BUTTON_CTA },
+                        onSubscribeFinish: l,
+                        ...n,
+                    });
+            },
+            { stackingBehavior: r },
+        );
+}
+function A(e) {
     let { user: t, onClose: n, ...s } = e;
     return (0, o.g1)({ onPremiumTryItOutProfile: !0, location: "PremiumTryItOutProfileUpsell" })
         ? (0, i.jsx)(d.F, {
-              title: _.intl.string(_.t.reVc0M),
-              subtitle: _.intl.string(_.t.KckEj7),
-              graphic: { src: g.A, type: "image" },
+              title: m.intl.string(m.t.reVc0M),
+              subtitle: m.intl.string(m.t.KckEj7),
+              graphic: { src: _.A, type: "image" },
               onSecondaryClick: () => {
                   (0, r.x)(n);
               },
-              secondaryCTA: _.intl.string(_.t.PcTCB7),
+              secondaryCTA: m.intl.string(m.t.PcTCB7),
               onClose: n,
               ...s,
           })
         : (0, i.jsx)(d.A, {
-              modalClassName: m.yl,
-              modalContentClassName: m.jE,
+              modalClassName: g.yl,
+              modalContentClassName: g.jE,
               type: c.e.TRY_IT_OUT_MODAL_UPSELL,
-              title: _.intl.string(_.t.reVc0M),
-              body: _.intl.string(_.t.KckEj7),
-              glowUp: _.intl.string(_.t.reVc0M),
+              title: m.intl.string(m.t.reVc0M),
+              body: m.intl.string(m.t.KckEj7),
+              glowUp: m.intl.string(m.t.reVc0M),
               onSecondaryClick: () => {
                   (0, r.x)(n);
               },
-              secondaryCTA: _.intl.string(_.t.PcTCB7),
+              secondaryCTA: m.intl.string(m.t.PcTCB7),
               onClose: n,
               enableArtBoxShadow: !1,
               hideBackButton: !0,
               showEnhancedUpsell: !0,
               LeadingComponent: (0, i.jsx)("div", {
-                  className: m.wC,
-                  children: (0, i.jsx)(l.A, { containerClassName: m.i1, user: t, disabledInputs: !0 }),
+                  className: g.wC,
+                  children: (0, i.jsx)(l.A, { containerClassName: g.i1, user: t, disabledInputs: !0 }),
               }),
               ...s,
           });
