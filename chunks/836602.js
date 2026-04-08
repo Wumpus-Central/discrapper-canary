@@ -166,6 +166,9 @@ class j extends i.Ay.Store {
     getTryItOutChanges() {
         return h;
     }
+    hasUnsavedChanges() {
+        return Object.values(p).some((e) => Object.values(e).some((e) => void 0 !== e));
+    }
     showNotice() {
         return !!(
             Object.values(this.getPendingChanges(a.ME)).some((e) => void 0 !== e) ||

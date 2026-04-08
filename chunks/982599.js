@@ -6,23 +6,23 @@ var a = n(503698),
     s = n(311907),
     r = n(397927),
     o = n(961350),
-    c = n(61881),
-    d = n(633098),
+    d = n(953963),
+    c = n(485745),
     u = n(44550);
 function g(e) {
     let t = (0, s.bG)([o.default], () => o.default.getId() === e),
         n = (0, r.VUy)(),
-        i = (0, s.bG)([c.A], () => c.A.hasUnsavedChanges());
+        i = (0, c.A)();
     return t && (n || i);
 }
 function m(e) {
-    let { userId: t, className: n } = e,
-        a = (0, s.bG)([o.default], () => o.default.getId() === t),
-        c = (0, r.VUy)();
-    return a
+    let { userId: t, guildId: n, className: a } = e,
+        c = (0, s.bG)([o.default], () => o.default.getId() === t),
+        g = (0, r.VUy)();
+    return c
         ? (0, i.jsx)("div", {
-              className: l()(u.kL, n),
-              children: c ? (0, i.jsx)(r.Smm, { className: u.Wg }) : (0, i.jsx)(d.A, { className: u.ZS }),
+              className: l()(u.kL, a),
+              children: g ? (0, i.jsx)(r.Smm, { className: u.Wg }) : (0, i.jsx)(d.A, { className: u.ZS, guildId: n }),
           })
         : null;
 }

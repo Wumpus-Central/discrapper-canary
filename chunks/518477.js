@@ -205,7 +205,7 @@ var _ = (function (e) {
         return (
             (e.WIDGET_ADDED = "WIDGET_ADDED"),
             (e.WIDGET_REMOVED = "WIDGET_REMOVED"),
-            (e.WIDGET_SAVE_FAILURE = "WIDGET_SAVE_FAILURE"),
+            (e.PROFILE_SAVE_GENERIC_FAILURE = "PROFILE_SAVE_GENERIC_FAILURE"),
             (e.SOMETHING_WENT_WRONG = "SOMETHING_WENT_WRONG"),
             e
         );

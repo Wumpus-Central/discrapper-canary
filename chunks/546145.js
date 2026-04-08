@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { A: () => a });
-var r = n(287809),
-    i = n(622543);
-function a(e) {
-    let t = r.default.getCurrentUser();
-    return null == t ? null : null != e ? i.A.getGuildMemberProfile(t.id, e) : i.A.getUserProfile(t.id);
+n.d(t, { A: () => i });
+var l = n(287809),
+    a = n(622543);
+function i(e) {
+    let t = l.default.getCurrentUser();
+    return null == t ? null : null != e ? a.A.getGuildMemberProfile(t.id, e) : a.A.getUserProfile(t.id);
 }
