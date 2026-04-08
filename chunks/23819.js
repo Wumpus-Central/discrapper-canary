@@ -1,4 +1,4 @@
-n.d(t, { J: () => I });
+n.d(t, { J: () => j });
 var i = n(934551),
     s = n(98207),
     l = n(631670),
@@ -15,24 +15,25 @@ var i = n(934551),
     A = n(665526),
     h = n(933257),
     p = n(228201),
-    T = n(935185),
-    f = n(652215),
-    S = n(985018);
-let b = (0, r.dT)(u.X.ACCOUNT_STANDING_TAB, {
-        getTitle: () => S.intl.string(S.t["Vov/9o"]),
+    T = n(875532),
+    f = n(935185),
+    S = n(652215),
+    b = n(985018);
+let E = (0, r.dT)(u.X.ACCOUNT_STANDING_TAB, {
+        getTitle: () => b.intl.string(b.t["Vov/9o"]),
         onItemSelect: () => {
-            c.default.track(f.HAw.MY_ACCOUNT_PAGE_TAB_NAVIGATE, { target_tab_name: T.D.STANDING });
+            c.default.track(S.HAw.MY_ACCOUNT_PAGE_TAB_NAVIGATE, { target_tab_name: f.D.STANDING });
         },
-        buildLayout: () => [p.Q],
+        buildLayout: () => [T.t],
     }),
-    E = (0, r.dT)(u.X.ACCOUNT_SECURITY_TAB, {
-        getTitle: () => S.intl.string(S.t.Am9YHi),
+    C = (0, r.dT)(u.X.ACCOUNT_SECURITY_TAB, {
+        getTitle: () => b.intl.string(b.t.Am9YHi),
         onItemSelect: () => {
-            c.default.track(f.HAw.MY_ACCOUNT_PAGE_TAB_NAVIGATE, { target_tab_name: T.D.SECURITY });
+            c.default.track(S.HAw.MY_ACCOUNT_PAGE_TAB_NAVIGATE, { target_tab_name: f.D.SECURITY });
         },
         buildLayout: () => [A.P, g.o, h.s],
     });
-function C() {
+function N() {
     let e = d.default.getCurrentUser();
     return (
         null == e || (0, m.pC)("Account") || (0, o.A)(e.id, e.getAvatarURL(void 0, 80)),
@@ -41,20 +42,20 @@ function C() {
         }
     );
 }
-let N = (0, r.t_)(u.X.ACCOUNT_PANEL, {
-        useTitle: () => S.intl.string(S.t["JAIM/m"]),
-        initialize: C,
+let v = (0, r.t_)(u.X.ACCOUNT_PANEL, {
+        useTitle: () => b.intl.string(b.t["JAIM/m"]),
+        initialize: N,
         useObscuredNotice: a.L,
-        buildLayout: () => [E, b],
+        buildLayout: () => [C, E],
     }),
-    v = (0, r.t_)(u.X.ACCOUNT_PANEL, {
-        useTitle: () => S.intl.string(S.t["ldCE/p"]),
-        initialize: C,
+    I = (0, r.t_)(u.X.ACCOUNT_PANEL, {
+        useTitle: () => b.intl.string(b.t["ldCE/p"]),
+        initialize: N,
         useObscuredNotice: a.L,
-        buildLayout: () => [_.u, x.v, h._],
+        buildLayout: () => [_.u, x.v, p.Q, h._],
     }),
-    I = (0, r.i4)(u.X.ACCOUNT_SIDEBAR_ITEM, {
-        useTitle: () => ((0, m.pC)("Account") ? S.intl.string(S.t["ldCE/p"]) : S.intl.string(S.t["JAIM/m"])),
+    j = (0, r.i4)(u.X.ACCOUNT_SIDEBAR_ITEM, {
+        useTitle: () => ((0, m.pC)("Account") ? b.intl.string(b.t["ldCE/p"]) : b.intl.string(b.t["JAIM/m"])),
         icon: i.UserIcon,
-        buildLayout: () => ((0, m.pC)("Account") ? [v] : [N]),
+        buildLayout: () => ((0, m.pC)("Account") ? [I] : [v]),
     });

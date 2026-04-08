@@ -1,36 +1,36 @@
-n.d(t, { A: () => u });
+n.d(t, { A: () => m });
 var i = n(627968),
     s = n(158954),
     l = n(272053),
-    a = n(688897),
-    r = n(791498),
-    o = n(590089),
-    d = n(876813),
-    c = n(940880);
-function u(e) {
+    a = n(176524),
+    r = n(688897),
+    o = n(791498),
+    d = n(590089),
+    c = n(876813),
+    u = n(555449);
+function m(e) {
     let { node: t } = e,
-        { destinationKey: n, useTrailingDecoration: u, useTitle: m, useSubtitle: g } = t,
-        _ = u?.(),
-        x = g?.(),
-        { parentPanelNode: A, parentSidebarItemNode: h } = (0, a.x)(n),
-        p = m?.(),
-        T = A?.useTitle?.(),
-        f = p ?? T,
-        S = (0, r.q)(t);
-    if (null == A || null == f) return null;
-    let b = null != h ? h.icon : void 0;
-    return (0, i.jsx)(o.U, {
+        { destinationKey: n, useTrailingDecoration: m, useTitle: g, useSubtitle: _ } = t,
+        x = m?.(),
+        A = _?.(),
+        { parentPanelNode: h, parentSidebarItemNode: p } = (0, r.x)(n),
+        T = g?.(),
+        f = h?.useTitle?.(),
+        S = T ?? f,
+        b = (0, o.q)(t);
+    if (null == h || null == S) return null;
+    let E = null != p ? p.icon : void 0;
+    return (0, i.jsx)(d.U, {
         role: "link",
-        title: f,
-        description: x,
-        leadingElement:
-            null != b && (0, i.jsx)("div", { className: c.z, children: (0, i.jsx)(b, { color: "currentColor" }) }),
+        title: S,
+        description: A,
+        leadingElement: null != E && (0, i.jsx)(a.A, { Icon: E }),
         trailingElement: (0, i.jsxs)("div", {
-            className: c.M,
-            children: [null != _ && (0, i.jsx)(d.Q, { decoration: _ }), (0, i.jsx)(s.uhT, {})],
+            className: u.M,
+            children: [null != x && (0, i.jsx)(c.Q, { decoration: x }), (0, i.jsx)(s.uhT, {})],
         }),
         onClick: () => {
-            l.A.navigate(n, { animateSidebarScroll: !1 }), S();
+            l.A.navigate(n, { animateSidebarScroll: !1 }), b();
         },
     });
 }
