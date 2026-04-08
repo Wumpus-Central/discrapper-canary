@@ -1,9 +1,10 @@
 "use strict";
-n.d(t, { GE: () => o, RK: () => i, U5: () => r, X8: () => a, yF: () => s });
-var r = (function (e) {
+n.d(t, { GE: () => u, RK: () => s, U5: () => i, X8: () => l, yF: () => a });
+var r = n(945810),
+    i = (function (e) {
         return (e.POPOUT = "popout"), (e.SIDEBAR = "sidebar"), (e.LEGACY = "legacy"), e;
     })({}),
-    i = (function (e) {
+    s = (function (e) {
         return (
             (e.SERVER_RAIL_TOP = "server-rail-top"),
             (e.SERVER_RAIL_BOTTOM = "server-rail-bottom"),
@@ -11,8 +12,22 @@ var r = (function (e) {
             e
         );
     })({}),
-    s = (function (e) {
+    a = (function (e) {
         return (e.TABS = "tabs"), (e.DROPDOWN = "dropdown"), e;
     })({});
-let a = (e) => ({ notificationCenterVariant: null, entrypoint: null, filterStyle: null }),
-    o = (e) => ({ notificationCenterVariant: null, entrypoint: null, filterStyle: null });
+let o = (0, r.mj)({
+    name: "2026-04-desktop-notification-center",
+    kind: "user",
+    defaultConfig: { notificationCenterVariant: null, entrypoint: null, filterStyle: null },
+    variations: {
+        1: { notificationCenterVariant: "popout", entrypoint: "title-bar-left", filterStyle: "dropdown" },
+        2: { notificationCenterVariant: "popout", entrypoint: "server-rail-top", filterStyle: "dropdown" },
+        3: { notificationCenterVariant: "sidebar", entrypoint: "server-rail-top", filterStyle: "dropdown" },
+    },
+});
+function l(e) {
+    return o.useConfig(e);
+}
+function u(e) {
+    return o.getConfig(e);
+}

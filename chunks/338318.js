@@ -1,4 +1,4 @@
-n.d(t, { A: () => M });
+n.d(t, { A: () => k });
 var i = n(627968),
     s = n(64700),
     l = n(284009),
@@ -15,98 +15,104 @@ var i = n(627968),
     A = n(429619),
     h = n(451909),
     p = n(202639),
-    T = n(407217),
-    f = n(919395),
-    S = n(884546),
-    b = n(287070),
-    E = n(196291),
-    C = n(101058),
-    N = n(836602),
-    v = n(814390),
-    I = n(351906),
-    j = n(287809),
-    y = n(954571),
-    O = n(927578),
-    R = n(890668),
-    P = n(780207),
-    L = n(652215),
-    D = n(985018),
-    G = n(752366);
-function M() {
-    let e = (0, r.bG)([j.default], () => {
-            let e = j.default.getCurrentUser();
+    T = n(400669),
+    f = n(407217),
+    S = n(919395),
+    b = n(884546),
+    E = n(287070),
+    C = n(196291),
+    N = n(101058),
+    v = n(836602),
+    I = n(814390),
+    j = n(909536),
+    y = n(351906),
+    O = n(287809),
+    R = n(954571),
+    P = n(927578),
+    L = n(890668),
+    D = n(780207),
+    G = n(652215),
+    M = n(985018),
+    U = n(752366);
+function k() {
+    let e = (0, r.bG)([O.default], () => {
+            let e = O.default.getCurrentUser();
             return a()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e;
         }),
-        t = (0, r.bG)([I.A], () => I.A.hidePersonalInformation),
+        t = (0, r.bG)([y.A], () => y.A.hidePersonalInformation),
         {
             pendingBio: n,
             pendingAvatar: l,
-            pendingNameplate: M,
-            showNotice: U,
-            ...k
-        } = (0, r.cf)([N.A], () => ({ ...N.A.getPendingChanges(), showNotice: N.A.showNotice() })),
-        w = (0, C.V7)({ userId: e.id, image: l }),
-        V = (0, f.lw)({ pendingValue: M, userValue: e?.collectibles?.nameplate }),
-        B = (0, v.A)() && null != n ? h.Ay.parse(void 0, n).content : n,
-        F = O.Ay.canUsePremiumProfileCustomization(e),
-        { analyticsLocations: H, newestAnalyticsLocation: z } = (0, _.Ay)(g.A.USER_SETTINGS_USER_PROFILE);
+            pendingNameplate: k,
+            showNotice: w,
+            ...V
+        } = (0, r.cf)([v.A], () => ({ ...v.A.getPendingChanges(), showNotice: v.A.showNotice() })),
+        B = (0, N.V7)({ userId: e.id, image: l }),
+        F = (0, S.lw)({ pendingValue: k, userValue: e?.collectibles?.nameplate }),
+        H = (0, I.A)() && null != n ? h.Ay.parse(void 0, n).content : n,
+        z = P.Ay.canUsePremiumProfileCustomization(e),
+        Y = (0, j.St)("edit-profile-upsell"),
+        { analyticsLocations: X, newestAnalyticsLocation: K } = (0, _.Ay)(g.A.USER_SETTINGS_USER_PROFILE);
     s.useEffect(() => () => c.h.wait(u.IM), []);
-    let [Y, X] = s.useState(!1),
-        K = !F,
-        W = s.useRef(null);
+    let [W, Z] = s.useState(!1),
+        q = !z,
+        Q = s.useRef(null);
     return t
         ? (0, i.jsx)(m.A, {})
         : (0, i.jsxs)(_.f5, {
-              value: H,
+              value: X,
               children: [
                   (0, i.jsx)(A.A, {}),
-                  (0, i.jsx)(S.A, {
-                      profilePreview: (0, i.jsx)(b.A, {
+                  (0, i.jsx)(b.A, {
+                      profilePreview: (0, i.jsx)(E.A, {
                           user: e,
-                          canUsePremiumCustomization: F,
-                          onUpsellClick: P.A,
-                          pendingBio: B,
-                          ...k,
-                          pendingAvatar: w,
+                          canUsePremiumCustomization: z,
+                          onUpsellClick: D.A,
+                          pendingBio: H,
+                          ...V,
+                          pendingAvatar: B,
                       }),
                       nameplatePreview: (0, i.jsx)(x.A, {
                           user: e,
-                          nameplate: V,
-                          ...k,
-                          className: null == V ? G.tJ : void 0,
+                          nameplate: F,
+                          ...V,
+                          className: null == F ? U.tJ : void 0,
                           isHighlighted: !0,
                       }),
-                      children: (0, i.jsx)(R.A, {}),
+                      children: (0, i.jsx)(L.A, {}),
                   }),
                   (0, i.jsx)(o.L, {
-                      innerRef: W,
-                      onChange: (e) => X(e),
+                      innerRef: Q,
+                      onChange: (e) => Z(e),
                       threshold: 0.25,
-                      active: K,
+                      active: q,
                       children: (0, i.jsx)("div", {
-                          ref: W,
-                          children: (0, i.jsx)(E.A, { user: e, shouldShow: K, isVisible: Y }),
+                          ref: Q,
+                          children: (0, i.jsx)(C.A, { user: e, shouldShow: q, isVisible: W }),
                       }),
                   }),
-                  K &&
-                      !U &&
+                  q &&
+                      !w &&
                       (0, i.jsx)(p.d, {
-                          className: G.EL,
-                          showUpsell: !Y,
-                          text: D.intl.format(D.t.TmfgI2, { onClick: () => (0, T.K)({ analyticsSource: z }) }),
+                          className: U.EL,
+                          showUpsell: !W,
+                          text: M.intl.format(M.t.TmfgI2, { onClick: () => (0, f.K)({ analyticsSource: K }) }),
                           textVariant: "heading-md/medium",
                           useUpdatedStyling: !0,
+                          leadingAction: Y
+                              ? (0, i.jsx)(T.l, { size: "sm", location: g.A.PREMIUM_WISHLIST_EDIT_PROFILE_UPSELL })
+                              : void 0,
                           button: (0, i.jsx)("div", {
-                              className: G.Xl,
+                              className: U.Xl,
                               children: (0, i.jsx)(d.Button, {
                                   variant: "overlay-primary",
                                   onClick: () => {
-                                      y.default.track(L.HAw.TRY_IT_OUT_PRESET_CLICKED, {
+                                      R.default.track(G.HAw.TRY_IT_OUT_PRESET_CLICKED, {
                                           cta_variant: "floating_action_button",
                                       }),
-                                          W?.current?.scrollIntoView({ behavior: "smooth" });
+                                          Q?.current?.scrollIntoView({ behavior: "smooth" });
                                   },
-                                  text: D.intl.string(D.t.uw9zI7),
+                                  text: M.intl.string(M.t.uw9zI7),
                                   icon: d.tvc,
                               }),
                           }),
