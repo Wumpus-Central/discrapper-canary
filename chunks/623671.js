@@ -53,7 +53,6 @@ function E(e) {
                         null != n
                             ? (0, r.jsx)(a.m_, {
                                   text: t.text,
-                                  asContainer: !0,
                                   children: (0, r.jsx)(l.Ay, {
                                       className: _.ZS,
                                       mask: I,
