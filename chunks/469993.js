@@ -1,39 +1,31 @@
 "use strict";
-n.d(t, { KD: () => h, ME: () => p, Z1: () => d, oS: () => c });
+n.d(t, { ME: () => f, Z1: () => c, oS: () => u });
 var r = n(311907),
     i = n(287809),
     s = n(615405),
-    a = n(967245),
-    o = n(652215);
-let l = new Set(["US"]);
-function u() {
+    a = n(652215);
+let o = new Set(["US"]);
+function l() {
     return i.default.getCurrentUser()?.storeCountry?.country ?? s.A.ipCountryCode;
 }
-function c() {
+function u() {
     return (0, r.bG)([i.default, s.A], () => {
-        let e = u();
-        return null != e && l.has(e);
+        let e = l();
+        return null != e && o.has(e);
     });
 }
-function d() {
-    let e = u();
-    return null != e && l.has(e);
+function c() {
+    let e = l();
+    return null != e && o.has(e);
 }
-function _(e) {
+function d(e) {
     return null != e;
 }
+function _(e) {
+    return null != e && e.features.has(a.GuildFeatures.CREATOR_MONETIZABLE_WHITEGLOVE);
+}
 function f(e) {
-    return null != e && e.features.has(o.GuildFeatures.CREATOR_MONETIZABLE_WHITEGLOVE);
-}
-function p(e) {
-    let t = _(e?.id),
-        n = f(e);
+    let t = d(e?.id),
+        n = _(e);
     return t || n;
-}
-function h() {
-    let { enableCreatorMonetizationNagActivateForUser: e } = a.w.getCurrentConfig(
-        { location: "e3bb71_11" },
-        { autoTrackExposure: !0 },
-    );
-    return e;
 }

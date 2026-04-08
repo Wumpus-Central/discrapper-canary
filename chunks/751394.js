@@ -1,30 +1,25 @@
-i.d(t, { q: () => G });
+i.d(t, { q: () => c });
 var n = i(64700),
     l = i(311907),
     a = i(217238),
-    s = i(641411),
-    r = i(594792),
-    d = i(576705),
-    o = i(985018);
-let u = {
-        "server-subscriptions-onboarding": r.A,
-        "server-subscriptions-finish-setting-up": s.A,
-        "server-subscriptions-create-tier-from-template": a.A,
-    },
-    c = {
-        title: () => o.intl.string(o.t.V42OaH),
-        description: () => o.intl.string(o.t["7dJ16X"]),
-        selectGuildCta: () => o.intl.string(o.t.LhlgY9),
-        createGuildDescription: () => o.intl.string(o.t.anOisx),
-        createGuildCta: () => o.intl.string(o.t.B44MTm),
+    s = i(594792),
+    r = i(576705),
+    d = i(985018);
+let o = { "server-subscriptions-onboarding": s.A, "server-subscriptions-create-tier-from-template": a.A },
+    u = {
+        title: () => d.intl.string(d.t.V42OaH),
+        description: () => d.intl.string(d.t["7dJ16X"]),
+        selectGuildCta: () => d.intl.string(d.t.LhlgY9),
+        createGuildDescription: () => d.intl.string(d.t.anOisx),
+        createGuildCta: () => d.intl.string(d.t.B44MTm),
         canCreateGuild: !0,
-        useIsGuildSupported: () => (0, l.bG)([d.A], () => (e) => d.A.canAccessGuildSettings(e), [], l.My),
+        useIsGuildSupported: () => (0, l.bG)([r.A], () => (e) => r.A.canAccessGuildSettings(e), [], l.My),
     };
-function G(e) {
-    let [t] = n.useState(null == e ? void 0 : u[e]),
-        i = c.useIsGuildSupported(),
+function c(e) {
+    let [t] = n.useState(null == e ? void 0 : o[e]),
+        i = u.useIsGuildSupported(),
         l = t?.useIsGuildSupported?.(),
-        a = { ...c, ...(t ?? {}) };
+        a = { ...u, ...(t ?? {}) };
     return {
         title: a.title(),
         description: a.description(),
