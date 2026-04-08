@@ -5,5 +5,6 @@ e.exports = {
     hi: "stopLabel__9ff51",
     $8: "previewList__9ff51",
     RP: "yamlBlock__9ff51",
+    dz: "imageUploadSlot__9ff51",
     oP: "colorSwatch__9ff51",
 };
