@@ -44,6 +44,5 @@ let n = {
             id: "premium-guild-member-profile-upsell",
             controls: {},
         },
-        { name: "File Upload Upsell", component: a.mi, id: "file-upload-upsell", controls: {} },
     ],
 };

@@ -6,11 +6,10 @@ l.d(t, {
     NA: () => x,
     Z1: () => h,
     lz: () => j,
-    mi: () => A,
     t$: () => p,
     yJ: () => C,
     yi: () => S,
-    z_: () => E,
+    z_: () => _,
 });
 var a = l(627968),
     n = l(64700),
@@ -18,9 +17,9 @@ var a = l(627968),
     i = l(397927),
     o = l(252561),
     s = l(287809),
-    u = l(652215),
+    d = l(652215),
     c = l(339984),
-    d = l(788868);
+    u = l(788868);
 function p() {
     let e = n.useCallback(() => {
         (0, i.mMO)(async () => {
@@ -103,29 +102,29 @@ function b() {
     });
 }
 let y = [
-        { id: "avatar_decoration", label: "Avatar Decoration", value: d.e.AVATAR_DECORATION_MODAL_UPSELL },
-        { id: "profile_effect", label: "Profile Effect", value: d.e.PROFILE_EFFECT_MODAL_UPSELL },
-        { id: "nameplate", label: "Nameplate", value: d.e.NAMEPLATE_MODAL_UPSELL },
+        { id: "avatar_decoration", label: "Avatar Decoration", value: u.e.AVATAR_DECORATION_MODAL_UPSELL },
+        { id: "profile_effect", label: "Profile Effect", value: u.e.PROFILE_EFFECT_MODAL_UPSELL },
+        { id: "nameplate", label: "Nameplate", value: u.e.NAMEPLATE_MODAL_UPSELL },
     ],
     f = {
-        [d.e.AVATAR_DECORATION_MODAL_UPSELL]: {
+        [u.e.AVATAR_DECORATION_MODAL_UPSELL]: {
             title: "Express Yourself with Avatar Decorations",
             body: "Stand out with unique avatar decorations exclusive to Nitro subscribers.",
             glowUp: "Stand out with unique avatar decorations exclusive to Nitro subscribers.",
         },
-        [d.e.PROFILE_EFFECT_MODAL_UPSELL]: {
+        [u.e.PROFILE_EFFECT_MODAL_UPSELL]: {
             title: "Animate Your Profile with Profile Effects",
             body: "Add dynamic effects to your profile with Nitro.",
             glowUp: "Add dynamic effects to your profile with Nitro.",
         },
-        [d.e.NAMEPLATE_MODAL_UPSELL]: {
+        [u.e.NAMEPLATE_MODAL_UPSELL]: {
             title: "Personalize with a Nameplate",
             body: "Show off your style with a custom nameplate, available with Nitro.",
             glowUp: "Show off your style with a custom nameplate, available with Nitro.",
         },
     };
 function g() {
-    let [e, t] = n.useState(d.e.AVATAR_DECORATION_MODAL_UPSELL),
+    let [e, t] = n.useState(u.e.AVATAR_DECORATION_MODAL_UPSELL),
         r = n.useCallback(() => {
             let { title: t, body: n, glowUp: r } = f[e];
             (0, i.mMO)(async () => {
@@ -166,9 +165,9 @@ function g() {
 }
 let v = [
     { id: "near_limit", label: "Near Limit (99 guilds)", value: 99 },
-    { id: "at_limit", label: "At Limit (100 guilds)", value: u.qlD },
+    { id: "at_limit", label: "At Limit (100 guilds)", value: d.qlD },
 ];
-function E() {
+function _() {
     let [e, t] = n.useState(100),
         r = n.useCallback(() => {
             (0, i.mMO)(async () => {
@@ -200,21 +199,21 @@ function E() {
         ],
     });
 }
-let _ = [
+let E = [
     { id: "avatar", label: "Avatar", value: c.HL.AVATAR },
     { id: "banner", label: "Banner", value: c.HL.BANNER },
 ];
 function C() {
     let [e, t] = n.useState(c.HL.AVATAR),
-        u = (0, r.bG)([s.default], () => s.default.getCurrentUser()),
-        d = n.useCallback(() => {
-            null != u &&
+        d = (0, r.bG)([s.default], () => s.default.getCurrentUser()),
+        u = n.useCallback(() => {
+            null != d &&
                 (0, i.mMO)(async () => {
                     let { default: t } = await Promise.all([l.e("59701"), l.e("79149")]).then(l.bind(l, 688796));
                     return (l) =>
-                        (0, a.jsx)(t, { user: u, uploadType: e, analyticsSource: {}, analyticsLocation: {}, ...l });
+                        (0, a.jsx)(t, { user: d, uploadType: e, analyticsSource: {}, analyticsLocation: {}, ...l });
                 });
-        }, [u, e]);
+        }, [d, e]);
     return (0, a.jsxs)(o.LB, {
         children: [
             (0, a.jsx)(o.MG, {
@@ -223,12 +222,12 @@ function C() {
                     placeholder: "Select type",
                     onSelectionChange: (e) => t(e),
                     value: e,
-                    options: _,
+                    options: E,
                     selectionMode: "single",
                     fullWidth: !0,
                 }),
             }),
-            (0, a.jsx)(i.Button, { onClick: d, variant: "primary", size: "md", text: "Open Animated Profile Upsell" }),
+            (0, a.jsx)(i.Button, { onClick: u, variant: "primary", size: "md", text: "Open Animated Profile Upsell" }),
         ],
     });
 }
@@ -280,16 +279,5 @@ function T() {
             size: "md",
             text: "Open Guild Member Profile Upsell",
         }),
-    });
-}
-function A() {
-    let e = n.useCallback(() => {
-        (0, i.mMO)(async () => {
-            let { default: e } = await l.e("31852").then(l.bind(l, 997351));
-            return (t) => (0, a.jsx)(e, { handleLearnMore: t.onClose, ...t });
-        });
-    }, []);
-    return (0, a.jsx)(o.LB, {
-        children: (0, a.jsx)(i.Button, { onClick: e, variant: "primary", size: "md", text: "Open File Upload Upsell" }),
     });
 }
