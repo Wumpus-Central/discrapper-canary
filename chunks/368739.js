@@ -1,11 +1,11 @@
-n.d(t, { D4: () => o, LD: () => u, pS: () => c });
-var i = n(417597),
-    l = n(600975),
+n.d(t, { D4: () => o, LD: () => c, pS: () => g });
+var l = n(417597),
+    i = n(600975),
     s = n(71393),
     a = n(735547),
     r = n(652215);
 let o = a.Ay.INVITE_OPTIONS_7_DAYS.value,
-    d = (0, l.C)({
+    d = (0, i.C)({
         kind: "guild",
         id: "2025-08_default_invite_expiration_guild",
         label: "Default Invite Expiration Guild",
@@ -15,23 +15,39 @@ let o = a.Ay.INVITE_OPTIONS_7_DAYS.value,
             { id: 2, label: "30 days", config: { defaultMaxAge: 2592e3 } },
             { id: 3, label: "60 days", config: { defaultMaxAge: 5184e3 } },
         ],
+    }),
+    u = (0, i.C)({
+        kind: "guild",
+        id: "2026-04_default_invite_expiration_guild_web",
+        label: "Default Invite Expiration Guild Web",
+        defaultConfig: { defaultMaxAge: 604800 },
+        treatments: [{ id: 1, label: "30 days", config: { defaultMaxAge: 2592e3 } }],
     });
-function u(e) {
+function c(e) {
     let { guildId: t, location: n } = e,
-        l = d.useExperiment({ guildId: t ?? r.dJq, location: n }),
-        u = (0, i.bG)([s.A], () => s.A.getGuild(t));
+        i = t ?? r.dJq,
+        c = d.useExperiment({ guildId: i, location: n }),
+        g = u.useExperiment({ guildId: i, location: n }),
+        h = c?.defaultMaxAge !== o ? c : g,
+        A = (0, l.bG)([s.A], () => s.A.getGuild(t));
     return null == t
         ? null
         : (function (e) {
               let { guild: t, experimentConfig: n } = e;
               if (t?.features.has(r.GuildFeatures.HUB)) return a.Ay.INVITE_OPTIONS_FOREVER.value;
-              let { defaultMaxAge: i } =
-                  n ?? d.getCurrentConfig({ guildId: t?.id ?? r.dJq, location: "getDefaultInviteExpiration" });
-              return i ?? o;
-          })({ guild: u, experimentConfig: l });
+              if (null != n) return n.defaultMaxAge ?? o;
+              let l = t?.id ?? r.dJq,
+                  i = d.getCurrentConfig({ guildId: l, location: "getDefaultInviteExpiration" });
+              return i.defaultMaxAge !== o
+                  ? i.defaultMaxAge
+                  : (u.getCurrentConfig({ guildId: l, location: "getDefaultInviteExpiration" }).defaultMaxAge ?? o);
+          })({ guild: A, experimentConfig: h });
 }
-function c(e) {
+function g(e) {
     let { guildId: t, location: n } = e,
-        i = d.useExperiment({ guildId: t ?? r.dJq, location: n });
-    return a.Ay.getMaxAgeOptions({ includeExperimentalValues: [i?.defaultMaxAge] });
+        l = t ?? r.dJq,
+        i = d.useExperiment({ guildId: l, location: n }),
+        s = u.useExperiment({ guildId: l, location: n }),
+        c = i?.defaultMaxAge !== o ? i : s;
+    return a.Ay.getMaxAgeOptions({ includeExperimentalValues: [c?.defaultMaxAge] });
 }
