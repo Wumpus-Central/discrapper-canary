@@ -50146,8 +50146,8 @@ svg.radioIcon_c1e9c4 {
 }
 
 .image__0f084 {
-    height: 100%;
-    padding: 0 var(--space-4)
+    height: calc(100% - var(--space-4)*2);
+    padding: var(--space-4)
 }
 
 .iconButton__0f084 {
