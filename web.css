@@ -70065,6 +70065,7 @@ body {
     background: transparent;
     font-family: var(--font-primary);
     line-height: 1;
+    margin: 0;
     overflow: hidden;
     padding: 0;
     -webkit-user-select: none;
@@ -70072,13 +70073,8 @@ body {
     user-select: none
 }
 
-body,
 p {
-    margin: 0
-}
-
-p+p {
-    margin-top: 14px
+    margin: 14px 0
 }
 
 ol,
