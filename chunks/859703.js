@@ -74,14 +74,6 @@ function er(e, t) {
             let n = D.get(e);
             null != n && (D = new Map(D)).set(e, { ...n, ...t });
         }
-        for (let [n, r] of C) {
-            let i = r.quests.get(e);
-            if (i?.questWithUserStatus != null) {
-                let s = new Map(r.quests);
-                s.set(e, { ...i, questWithUserStatus: { ...i.questWithUserStatus, ...t } }),
-                    (C = new Map(C)).set(n, { ...r, quests: s });
-            }
-        }
     }
 }
 function ei(e, t) {
@@ -341,11 +333,15 @@ function ez(e) {
     let { serverQuests: t, metadataRaw: n, content: r, fetchedAt: i, responseTtlSeconds: s } = e;
     (o = !1), (l = new Map(l)).set(r, !1);
     let a = eW(s),
-        u = C.get(r),
-        c = new Map(u?.quests);
+        c = C.get(r),
+        d = new Map(c?.earnedDecisionByQuestId);
     for (let [e, n] of t)
-        c.set(e, { fetchedAt: i, ttlMillis: a, questWithUserStatus: null != n ? (0, j.rO)(n) : null });
-    C.set(r, { quests: c, metadataRaw: n });
+        if ((d.set(e, { fetchedAt: i, ttlMillis: a, shouldDeliver: null != n }), null != n)) {
+            let t = u.get(e),
+                r = (0, j.rO)(n);
+            null != t ? er(e, r) : ((u = new Map(u)).set(e, r), (R = new Map(R)).set(e, (0, H.Ic)(r)));
+        }
+    C.set(r, { earnedDecisionByQuestId: d, metadataRaw: n });
 }
 function eq(e) {
     let { content: t } = e;

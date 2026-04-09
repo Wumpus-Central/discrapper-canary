@@ -436,7 +436,7 @@ function ei(e, t) {
 }
 async function es(e, t, n) {
     if (v.A.isFetchingEarnedQuestToDeliverByPlacement(t)) return;
-    let r = v.A.earnedQuestForPlacement.get(t)?.quests,
+    let r = v.A.earnedQuestForPlacement.get(t)?.earnedDecisionByQuestId,
         i = e.filter((e) => {
             let t = r?.get(e);
             return !(0, L.Oh)(t);

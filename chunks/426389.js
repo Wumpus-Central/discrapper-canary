@@ -30,8 +30,8 @@ var i = n(627968),
     R = n(282447),
     P = n(652215),
     D = n(654487),
-    M = n(985018),
-    j = n(724410);
+    j = n(985018),
+    M = n(244187);
 let w = 15 * x.A.Millis.MINUTE,
     U = (0, R.A)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: r } = e,
@@ -72,7 +72,7 @@ let w = 15 * x.A.Millis.MINUTE,
                           ref: s,
                           onMouseEnter: C,
                           "aria-haspopup": "menu",
-                          className: j.MP,
+                          className: M.MP,
                           active: n,
                           children: (0, i.jsxs)("div", { children: [d, u] }),
                       });
@@ -134,16 +134,17 @@ function k() {
     a.useEffect(() => {
         f && 0 !== O.length && (0, A.yO)(O, _.uF.ACTIVITY_PANEL, "NowPlaying");
     }, [O, f, b]);
-    let L = a.useMemo(() => {
-            if (!f) return S;
-            if (null == b) return new Map();
+    let { finalQuestsByPartyId: L } = (0, d.cf)([h.A], () => {
+            if (!f) return { finalQuestsByPartyId: S };
+            if (null == b) return { finalQuestsByPartyId: new Map() };
             let e = new Map();
             for (let [t, n] of x.entries()) {
-                let i = b.quests.get(n);
-                (0, p.Oh)(i) && null != i.questWithUserStatus && e.set(t, i.questWithUserStatus);
+                let i = b.earnedDecisionByQuestId.get(n),
+                    a = h.A.getQuest(n);
+                (0, p.Oh)(i) && i.shouldDeliver && null != a && e.set(t, a);
             }
-            return e;
-        }, [f, b, S, x]),
+            return { finalQuestsByPartyId: e };
+        }, [b, x, S, f]),
         R = null;
     return t
         ? (R =
@@ -153,20 +154,20 @@ function k() {
                         return (0, i.jsx)(U, { party: t, quest: L.get(t.id) }, t.id);
                     })
                   : (0, i.jsxs)("div", {
-                        className: j.aM,
+                        className: M.aM,
                         children: [
                             (0, i.jsx)(c.Heading, {
                                 variant: "heading-md/semibold",
-                                className: j.jU,
-                                children: M.intl.string(M.t["ngJ/5u"]),
+                                className: M.jU,
+                                children: j.intl.string(j.t["ngJ/5u"]),
                             }),
                             (0, i.jsx)(c.Text, {
                                 color: "none",
-                                className: j.BI,
+                                className: M.BI,
                                 variant: "text-sm/normal",
-                                children: M.intl.string(M.t["99ZWxQ"]),
+                                children: j.intl.string(j.t["99ZWxQ"]),
                             }),
                         ],
                     }))
-        : (0, i.jsx)("div", { className: j.aM, children: (0, i.jsx)(c.y$y, {}) });
+        : (0, i.jsx)("div", { className: M.aM, children: (0, i.jsx)(c.y$y, {}) });
 }
