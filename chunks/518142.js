@@ -1,24 +1,24 @@
-n.d(t, { A: () => d });
+n.d(t, { default: () => c });
 var i = n(627968),
     s = n(64700),
-    r = n(189213),
+    l = n(189213),
     a = n(397927),
-    l = n(98207),
+    r = n(98207),
     o = n(985018),
-    c = n(876692);
-class d extends s.PureComponent {
+    d = n(788126);
+class c extends s.PureComponent {
     _input;
     state = { code: "", errorMessage: "", retrySuccess: !1, isLoading: !1 };
     setRef = (e) => {
         this._input = e;
     };
     handleRetry = async () => {
-        await l.A.sendMFABackupCodesVerificationKeyEmail(this.props.password), this.setState({ retrySuccess: !0 });
+        await r.A.sendMFABackupCodesVerificationKeyEmail(this.props.password), this.setState({ retrySuccess: !0 });
     };
     handleSubmit = async (e) => {
         e.preventDefault(), this.setState({ isLoading: !0 });
         try {
-            await l.A.confirmViewBackupCodes(this.state.code, !1), this.props.onClose();
+            await r.A.confirmViewBackupCodes(this.state.code, !1), this.props.onClose();
         } catch (e) {
             if (null == e.body) return;
             e.body.message && this.setState({ errorMessage: e.body.message });
@@ -32,14 +32,14 @@ class d extends s.PureComponent {
     render() {
         let { transitionState: e } = this.props,
             { code: t, errorMessage: n, retrySuccess: s } = this.state,
-            l = s
+            r = s
                 ? (0, i.jsx)(a.ZpM, {
                       type: a.ZpM.Types.SUCCESS,
-                      className: c.Nr,
+                      className: d.Nr,
                       children: (0, i.jsx)(a.Text, { variant: "text-md/normal", children: o.intl.string(o.t.j4qu8n) }),
                   })
                 : null;
-        return (0, i.jsx)(r.Modal, {
+        return (0, i.jsx)(l.Modal, {
             title: o.intl.string(o.t["mGppp/"]),
             actions: [
                 {
@@ -64,10 +64,10 @@ class d extends s.PureComponent {
                     (0, i.jsx)(a.Text, {
                         color: "text-default",
                         variant: "text-md/normal",
-                        className: c.YK,
+                        className: d.YK,
                         children: o.intl.string(o.t["37S9yU"]),
                     }),
-                    l,
+                    r,
                     (0, i.jsx)(a.ksK, {
                         inputRef: this.setRef,
                         label: o.intl.string(o.t.TjGb4Q),
