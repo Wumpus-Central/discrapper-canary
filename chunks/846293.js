@@ -244,9 +244,9 @@ let eI = {
     resolveInvite: eh,
     getInviteContext: (e, t) => ({
         location: e,
-        location_guild_id: null != t.guild ? t.guild.id : void 0,
-        location_channel_id: null != t.channel ? t.channel.id : void 0,
-        location_channel_type: null != t.channel ? t.channel.type : void 0,
+        location_guild_id: t?.guild != null ? t.guild.id : void 0,
+        location_channel_id: t?.channel != null ? t.channel.id : void 0,
+        location_channel_type: t?.channel != null ? t.channel.type : void 0,
     }),
     async createInvite(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
