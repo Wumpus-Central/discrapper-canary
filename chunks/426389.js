@@ -31,7 +31,7 @@ var i = n(627968),
     P = n(652215),
     D = n(654487),
     j = n(985018),
-    M = n(244187);
+    M = n(724410);
 let w = 15 * x.A.Millis.MINUTE,
     U = (0, R.A)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: r, quest: l } = e,
@@ -134,17 +134,17 @@ function k() {
     a.useEffect(() => {
         f && 0 !== O.length && (0, A.yO)(O, h.uF.ACTIVITY_PANEL, "NowPlaying");
     }, [O, f, b]);
-    let { finalQuestsByPartyId: L } = (0, d.cf)([_.A], () => {
-            if (!f) return { finalQuestsByPartyId: S };
-            if (null == b) return { finalQuestsByPartyId: new Map() };
+    let L = a.useMemo(() => {
+            if (!f) return S;
+            if (null == b) return new Map();
             let e = new Map();
             for (let [t, n] of x.entries()) {
                 let i = b.earnedDecisionByQuestId.get(n),
-                    a = _.A.getQuest(n);
+                    a = s.get(n);
                 (0, p.Oh)(i) && i.shouldDeliver && null != a && e.set(t, a);
             }
-            return { finalQuestsByPartyId: e };
-        }, [b, x, S, f]),
+            return e;
+        }, [b, x, S, f, s]),
         R = null;
     return t
         ? (R =
