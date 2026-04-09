@@ -86,7 +86,7 @@ function x() {
                               icon: l.j96,
                               text: g.intl.string(g.t["lBG2s/"]),
                               size: "md",
-                              variant: "secondary",
+                              color: "secondary",
                               onClick: A,
                           }),
                       ],
