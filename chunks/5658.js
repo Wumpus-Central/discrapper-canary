@@ -23,13 +23,16 @@ let C = l.memo(function (e) {
             a = l.useRef(null),
             [[r, o], c] = l.useState([0, 0]),
             u = t.deleted && r > 0;
-        if (t.deleted && 0 === r && null != a.current) {
-            let e = a.current.offsetHeight,
-                t = a.current.offsetTop,
-                n = a.current.parentElement.scrollTop,
-                i = n > t ? e - (n - t) : e;
-            c([e, e - i]);
-        }
+        l.useLayoutEffect(() => {
+            if (!t.deleted || 0 !== r || null == a.current) return;
+            let e = a.current,
+                i = e.offsetHeight;
+            if (i <= 0) return void n(t.channelId);
+            let l = e.offsetTop,
+                s = e.parentElement.scrollTop,
+                o = s > l ? i - (s - l) : i;
+            c([i, i - o]);
+        }, [t.deleted, t.channelId, n, r]);
         let { opacity: h, size: A } = (0, d.zhh)(
                 {
                     config: { clamp: !0, friction: 18, tension: 200 },
