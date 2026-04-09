@@ -175,6 +175,7 @@ let N = (e) => {
                                                 className: s,
                                                 children: (0, n.jsx)(A.A, {
                                                     skuId: e.skuId,
+                                                    hideStaticBundleBackgroundAsset: !0,
                                                     prioritizedCurrency:
                                                         B === O.G2.ORBS ? S.Hi.ORBS : w ? S.Hi.FIAT : void 0,
                                                 }),

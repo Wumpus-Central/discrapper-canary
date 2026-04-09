@@ -1,6 +1,7 @@
 e.exports = {
     ty: "productCardContainer_fcbddd",
     qt: "productCardContentContainer_fcbddd",
+    vD: "staticBundleBackgroundAsset_fcbddd",
     Dq: "productPreviewContainer_fcbddd",
     $r: "hasBottomContent_fcbddd",
     N1: "headerContainer_fcbddd",
