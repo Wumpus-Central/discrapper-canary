@@ -799,6 +799,7 @@ Y(
                 isStrangerRequest: e.is_stranger_request || !1,
                 userIgnored: e.user_ignored || !1,
                 originApplicationId: e.origin_application_id,
+                note: e.note,
             },
             shouldNotify: !0 === e.should_notify,
         });
@@ -819,6 +820,7 @@ Y(
                 isStrangerRequest: e.is_stranger_request || !1,
                 userIgnored: e.user_ignored || !1,
                 originApplicationId: e.origin_application_id,
+                note: e.note,
             },
         });
     }),
@@ -989,10 +991,10 @@ Y(
         $({ type: t, entitlement: e });
     }),
     j(["USER_PAYMENT_SOURCES_UPDATE"], () => {
-        (N.A.hasLayers() || null != C.A.getSection()) && (n(384904).$o(), o.jv(b.A.getFetchedSKUIDs()));
+        (N.A.hasLayers() || null != C.A.getSection()) && (n(323082).$o(), o.jv(b.A.getFetchedSKUIDs()));
     }),
     j(["USER_SUBSCRIPTIONS_UPDATE"], () => {
-        l.rQ(), (N.A.hasLayers() || null != C.A.getSection()) && n(384904).hP();
+        l.rQ(), (N.A.hasLayers() || null != C.A.getSection()) && n(323082).hP();
     }),
     j(["WISHLIST_ITEM_PURCHASED"], (e) => {
         $({ type: "WISHLIST_ITEM_PURCHASED", recipientId: e.recipient_id, skuId: e.sku_id });

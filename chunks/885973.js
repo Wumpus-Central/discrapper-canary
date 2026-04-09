@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { C: () => a });
-var r = n(287809),
-    i = n(827152);
-let a = (e) => {
-    let t = r.default.getCurrentUser();
-    return !(null != t && t.isStaff()) && !i.A.getCurrentConfig(e).enabled;
+n.d(t, { C: () => s });
+var r = n(245853),
+    i = n(287809);
+let s = (e) => {
+    let t = i.default.getCurrentUser();
+    return !(null != t && t.isStaff()) && !r.r4.getConfig({ location: e.location }).enabled;
 };

@@ -3,7 +3,7 @@ n.d(t, {
     Ck: () => F,
     G8: () => G,
     Ge: () => P,
-    H9: () => y,
+    H9: () => N,
     I: () => j,
     Jo: () => R,
     T0: () => S,
@@ -11,7 +11,7 @@ n.d(t, {
     U_: () => H,
     VL: () => M,
     Yq: () => D,
-    m: () => N,
+    m: () => y,
     r4: () => w,
     ri: () => U,
     yp: () => B,
@@ -56,11 +56,11 @@ function T(e, t, n) {
         [e, t, n],
     );
 }
-function N(e, t, n, i) {
+function y(e, t, n, i) {
     let l = b("usernameProfile", n, i);
     return T(e.author.id, t.id, l);
 }
-function y(e, t, n, i) {
+function N(e, t, n, i) {
     let l = b("referencedUsernameProfile", n, i);
     return T(e?.author.id, t.id, l);
 }
@@ -120,13 +120,14 @@ function M(e, t, s, o) {
                     async () => {
                         let { default: e } = await Promise.all([
                             n.e("11478"),
+                            n.e("21393"),
                             n.e("91139"),
-                            n.e("76122"),
-                            n.e("33424"),
+                            n.e("61733"),
+                            n.e("79463"),
                             n.e("54816"),
                             n.e("5873"),
                             n.e("1636"),
-                            n.e("55174"),
+                            n.e("43207"),
                         ]).then(n.bind(n, 547983));
                         return (n) =>
                             (0, i.jsx)(e, { ...n, message: r, channel: l, mediaItem: t, shouldHideMediaOptions: o });

@@ -1,102 +1,101 @@
-"use strict";
-s.d(t, { h: () => m });
-var r = s(627968),
-    i = s(64700),
+s.d(t, { h: () => j });
+var i = s(627968),
+    a = s(64700),
     n = s(503698),
-    a = s.n(n),
-    l = s(158954),
+    l = s.n(n),
+    r = s(158954),
     c = s(311907),
-    u = s(582754),
-    o = s(397927),
-    E = s(308528),
-    d = s(854627),
-    _ = s(779733),
-    R = s(954571),
-    p = s(975571),
-    I = s(427262),
-    S = s(326084),
-    h = s(851746),
-    f = s(652215),
-    A = s(985018),
-    M = s(344684),
-    g = s(299148);
+    o = s(582754),
+    d = s(397927),
+    u = s(308528),
+    A = s(854627),
+    m = s(779733),
+    h = s(954571),
+    R = s(975571),
+    f = s(427262),
+    g = s(326084),
+    x = s(851746),
+    E = s(652215),
+    p = s(985018),
+    _ = s(471449),
+    S = s(299148);
 let T = (e) => {
-        let { recipient: t, status: s, onClose: i } = e,
-            { avatarSrc: n, eventHandlers: l } = (0, d.A)({ userId: t?.id, size: o._3J.SIZE_56 }),
-            c = I.Ay.getName(t),
-            u = s === S.o.FAIL;
-        return (0, r.jsxs)("div", {
-            className: M.w4,
+        let { recipient: t, status: s, onClose: a } = e,
+            { avatarSrc: n, eventHandlers: r } = (0, A.A)({ userId: t?.id, size: d._3J.SIZE_56 }),
+            c = f.Ay.getName(t),
+            o = s === g.o.FAIL;
+        return (0, i.jsxs)("div", {
+            className: _.w4,
             children: [
-                (0, r.jsx)(o.euF, {
-                    imageClassName: a()({ [M.jN]: u }),
+                (0, i.jsx)(d.euF, {
+                    imageClassName: l()({ [_.jN]: o }),
                     src: n,
                     "aria-label": c,
-                    size: o._3J.SIZE_32,
-                    ...l,
+                    size: d._3J.SIZE_32,
+                    ...r,
                 }),
-                u
-                    ? (0, r.jsxs)(r.Fragment, {
+                o
+                    ? (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, r.jsx)(o.Text, {
-                                  className: M.E0,
+                              (0, i.jsx)(d.Text, {
+                                  className: _.E0,
                                   variant: "text-md/medium",
                                   color: "text-strong",
                                   children: c,
                               }),
-                              (0, r.jsx)(o.Text, {
+                              (0, i.jsx)(d.Text, {
                                   variant: "text-md/medium",
-                                  className: M.nT,
+                                  className: _.nT,
                                   color: "text-strong",
-                                  children: A.intl.format(A.t.RO3T4B, { userName: c }),
+                                  children: p.intl.format(p.t.RO3T4B, { userName: c }),
                               }),
                           ],
                       })
-                    : (0, r.jsx)(o.Text, {
+                    : (0, i.jsx)(d.Text, {
                           variant: "text-md/medium",
-                          className: M.Pm,
+                          className: _.Pm,
                           color: "text-strong",
                           children: c,
                       }),
-                (0, r.jsx)(o.Button, {
+                (0, i.jsx)(d.Button, {
                     variant: "secondary",
                     size: "sm",
-                    text: A.intl.string(A.t["g33r/P"]),
-                    icon: o.oyn,
+                    text: p.intl.string(p.t["g33r/P"]),
+                    icon: d.oyn,
                     onClick: () => {
                         var e;
-                        return (e = t.id), void ((0, _.default)(), E.A.openPrivateChannel({ recipientIds: e }), i());
+                        return (e = t.id), void ((0, m.default)(), u.A.openPrivateChannel({ recipientIds: e }), a());
                     },
                 }),
             ],
         });
     },
-    m = (e) => {
-        let { transitionState: t, results: s, onClose: n, isReminderConfirmation: a } = e,
-            E = (0, c.bG)([h.A], () => h.A.getReferralsRemaining());
-        R.default.track(f.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED);
-        let { reducedMotion: d } = i.useContext(u.CZ);
-        return null === E
-            ? (0, r.jsx)(o.y$y, {})
-            : (0, r.jsx)(l.ExpressiveModal, {
-                  graphic: d.enabled ? { src: g.A, type: "image" } : { rive: o.lBW, type: "rive" },
+    j = (e) => {
+        let { transitionState: t, results: s, onClose: n, isReminderConfirmation: l } = e,
+            u = (0, c.bG)([x.A], () => x.A.getReferralsRemaining());
+        h.default.track(E.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED);
+        let { reducedMotion: A } = a.useContext(o.CZ);
+        return null === u
+            ? (0, i.jsx)(d.y$y, {})
+            : (0, i.jsx)(r.ExpressiveModal, {
+                  graphic: A.enabled ? { src: S.A, type: "image" } : { rive: d.lBW, type: "rive" },
                   gradientColor: "nitro-pink",
                   title:
-                      0 === s.filter((e) => e.status === S.o.SUCCESS).length
-                          ? A.intl.string(A.t["7VBEue"])
-                          : !0 === a
-                            ? A.intl.string(A.t.GP5lbq)
-                            : A.intl.string(A.t.tKCltd),
+                      0 === s.filter((e) => e.status === g.o.SUCCESS).length
+                          ? p.intl.string(p.t["7VBEue"])
+                          : !0 === l
+                            ? p.intl.string(p.t.GP5lbq)
+                            : p.intl.string(p.t.tKCltd),
                   subtitle:
-                      !0 === a
-                          ? A.intl.format(A.t["4gJJfD"], { helpdeskArticle: p.A.getArticleURL(f.MVz.REFERRAL_PROGRAM) })
-                          : A.intl.format(A.t.AwGSWl, { helpdeskArticle: p.A.getArticleURL(f.MVz.REFERRAL_PROGRAM) }),
+                      !0 === l
+                          ? p.intl.format(p.t["4gJJfD"], { helpdeskArticle: R.A.getArticleURL(E.MVz.REFERRAL_PROGRAM) })
+                          : p.intl.format(p.t.AwGSWl, { helpdeskArticle: R.A.getArticleURL(E.MVz.REFERRAL_PROGRAM) }),
                   onClose: n,
                   transitionState: t,
-                  children: (0, r.jsx)("div", {
-                      className: M.Hz,
+                  children: (0, i.jsx)("div", {
+                      className: _.Hz,
                       children: s.map((e) =>
-                          (0, r.jsx)(T, { recipient: e.recipient, status: e.status, onClose: n }, e.recipient.id),
+                          (0, i.jsx)(T, { recipient: e.recipient, status: e.status, onClose: n }, e.recipient.id),
                       ),
                   }),
               });

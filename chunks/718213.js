@@ -1,12 +1,11 @@
-"use strict";
-s.d(t, { A: () => i });
-var r = s(64700);
-let i = function (e, t) {
-    let [s, i] = r.useState(e);
+s.d(t, { A: () => r });
+var a = s(64700);
+let r = function (e, t) {
+    let [s, r] = a.useState(e);
     return (
-        r.useEffect(() => {
+        a.useEffect(() => {
             let s = setTimeout(() => {
-                i(e);
+                r(e);
             }, t);
             return () => {
                 clearTimeout(s);

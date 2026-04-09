@@ -1,20 +1,21 @@
-r.d(t, { A: () => o });
-var a = r(649032),
-    n = r(26508),
-    i = r(881373),
-    s = r(612669),
-    l = r(23003);
-function o() {
-    let e = (0, i.YS)({ location: "bento_box" }).functionalityEnabled,
-        t = (0, s.O9)(),
-        r = (0, n.DK)(a.W.NITRO, "useBentoBoxes"),
-        o = [
-            ...(e ? [l.NI.THREE_P_PROMOTIONS] : []),
-            ...(t ? [l.NI.PREMIUM_GROUP] : []),
-            ...(r ? [l.NI.ORB_REWARDS] : []),
+a.d(t, { A: () => o });
+var s = a(649032),
+    r = a(26508),
+    n = a(881373),
+    i = a(612669),
+    l = a(23003);
+function o(e) {
+    let t = (0, n.YS)({ location: "bento_box" }).functionalityEnabled,
+        a = (0, i.O9)(),
+        o = (0, r.DK)(s.W.NITRO, "useBentoBoxes"),
+        d = [
+            ...(t ? [l.NI.THREE_P_PROMOTIONS] : []),
+            ...(e ? [l.NI.ORB_MULTIPLIER] : []),
+            ...(a ? [l.NI.PREMIUM_GROUP] : []),
+            ...(o ? [l.NI.ORB_REWARDS] : []),
         ];
-    if (o.length > 0) {
-        let [e, t = l.NI.SERVER_PROFILES] = o;
+    if (d.length > 0) {
+        let [e, t = l.NI.SERVER_PROFILES] = d;
         return [e, t, l.NI.REFERRAL_PROGRAM];
     }
     return [l.NI.DISPLAY_NAME_STYLES, l.NI.CUSTOM_THEMES, l.NI.REFERRAL_PROGRAM];

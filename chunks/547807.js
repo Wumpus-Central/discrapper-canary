@@ -14,6 +14,7 @@ e.exports = {
     d_: "subscriptionRequired__5b393",
     OU: "captionWrapper__5b393",
     qh: "primaryAssetWrapper__5b393",
+    Nf: "orbMultiplierPrimaryAsset__5b393",
     gW: "primaryAssetBlur__5b393",
     eq: "primaryAssetImage__5b393",
     hQ: "contentContainer__5b393",

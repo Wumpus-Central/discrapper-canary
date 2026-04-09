@@ -249,7 +249,9 @@ function et(e) {
 }
 function en(e, t) {
     (0, o.mMO)(async () => {
-        let { default: i } = await n.e("62101").then(n.bind(n, 50292));
+        let { default: i } = await Promise.all([n.e("21393"), n.e("27296"), n.e("76147"), n.e("65547")]).then(
+            n.bind(n, 50292),
+        );
         return (n) => (0, r.jsx)(i, { ...n, multiplier: e, eligibleToReceivePremiumRewards: t });
     });
 }

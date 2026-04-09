@@ -1,27 +1,32 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => p });
 var r = n(64700),
     i = n(485584),
     s = n(311907),
-    a = n(201718),
-    o = n(339580),
-    l = n(773669),
-    u = n(188951);
-let c = [],
-    d = [];
-function _(e, t) {
-    (0, a.P)(e);
-    let n = (0, s.bG)([o.A], () => o.A.getUserIdentityByApplication(e, t)),
-        _ = (0, s.bG)([l.default], () => l.default.locale),
-        f = r.useMemo(() => [t], [t]),
-        [p] = (0, u.A)(f),
-        h = r.useMemo(() => (0, i.VG)(n?.profile ?? void 0), [n?.profile]),
-        m = (0, s.bG)([o.A], () => o.A.getFetchState(e) !== o.e.FETCHED);
+    a = n(549699),
+    o = n(29496),
+    l = n(201718),
+    u = n(339580),
+    c = n(773669),
+    d = n(403362),
+    _ = n(188951);
+let f = [];
+function p(e, t) {
+    (0, l.P)(e);
+    let n = (0, s.bG)([u.A], () => u.A.getUserIdentityByApplication(e, t)),
+        p = (0, s.bG)([c.default], () => c.default.locale),
+        h = r.useMemo(() => [t], [t]),
+        [m] = (0, _.A)(h),
+        E = r.useMemo(() => (0, i.VG)(n?.profile ?? void 0), [n?.profile]),
+        g = (0, s.bG)([u.A], () => u.A.getFetchState(e) !== u.e.FETCHED),
+        A = (0, s.bG)([o.A], () => o.A.getAssets(t)),
+        I = r.useMemo(() => Object.values(A ?? {}).filter(d.Vq), [A]),
+        T = r.useCallback((e) => (0, a.Q)(t, e, e.metadata.width), [t]);
     return {
-        locale: _,
-        surfaceConfigs: p?.surfaces ?? {},
-        isLoading: m,
+        locale: p,
+        surfaceConfigs: m?.surfaces ?? {},
+        isLoading: g,
         hasIdentity: null != n,
-        resolutionContext: { data: h, applicationAssets: c, getApplicationAssetUrl: () => "", localizedStrings: d },
+        resolutionContext: { data: E, applicationAssets: I, getApplicationAssetUrl: T, localizedStrings: f },
     };
 }
