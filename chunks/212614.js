@@ -2,80 +2,84 @@ n.d(t, { A: () => _ });
 var i = n(627968),
     l = n(732955),
     s = n(424151),
-    a = n(79545),
-    r = n(941775),
+    r = n(79545),
+    a = n(941775),
     o = n(561393),
-    d = n(220514),
-    c = n(884392),
-    u = n(985018);
+    d = n(593587),
+    c = n(220514),
+    u = n(884392),
+    m = n(985018);
 let _ = function (e) {
     let {
             quest: t,
             surface: n,
             preClickCallback: _,
-            analyticsCtxQuestContent: m,
-            analyticsCtxSourceQuestContent: h,
-            analyticsCtxQuestContentPosition: p,
-            analyticsCtxQuestContentRowIndex: g,
-            size: A = "md",
+            analyticsCtxQuestContent: h,
+            analyticsCtxSourceQuestContent: p,
+            analyticsCtxQuestContentPosition: g,
+            analyticsCtxQuestContentRowIndex: A,
+            size: x = "md",
         } = e,
-        x = (0, a.Pd)(t);
+        f = (0, r.Pd)(t);
     if (0 === Object.keys(t.config.taskConfigV2.tasks).length)
-        return (0, i.jsx)(l.$nd, { variant: "primary", fullWidth: !0, size: "sm", text: u.intl.string(u.t.P84bAD) });
-    let f = Object.values(t.config.taskConfigV2.tasks)[0];
-    switch (x) {
-        case a.UA.UNENROLLED:
-            return (0, i.jsx)(c.A, {
+        return (0, i.jsx)(l.$nd, { variant: "primary", fullWidth: !0, size: "sm", text: m.intl.string(m.t.P84bAD) });
+    let C = Object.values(t.config.taskConfigV2.tasks)[0];
+    switch (f) {
+        case r.UA.UNENROLLED:
+            return (0, i.jsx)(u.A, {
                 quest: t,
-                taskType: f.type,
-                size: A,
+                taskType: C.type,
+                size: x,
                 preClickCallback: _,
-                analyticsCtxQuestContent: m,
-                analyticsCtxSourceQuestContent: h,
-                analyticsCtxQuestContentPosition: p,
-                analyticsCtxQuestContentRowIndex: g,
+                analyticsCtxQuestContent: h,
+                analyticsCtxSourceQuestContent: p,
+                analyticsCtxQuestContentPosition: g,
+                analyticsCtxQuestContentRowIndex: A,
             });
-        case a.UA.ENROLLED:
+        case r.UA.ENROLLED:
             return (0, i.jsx)(o.A, {
                 quest: t,
-                taskType: f.type,
-                size: A,
-                analyticsCtxQuestContent: m,
-                analyticsCtxSourceQuestContent: h,
-                analyticsCtxQuestContentPosition: p,
-                analyticsCtxQuestContentRowIndex: g,
+                taskType: C.type,
+                size: x,
+                analyticsCtxQuestContent: h,
+                analyticsCtxSourceQuestContent: p,
+                analyticsCtxQuestContentPosition: g,
+                analyticsCtxQuestContentRowIndex: A,
                 surface: n,
             });
-        case a.UA.INCOMPLETE:
-            return (0, i.jsx)(d.A, {
+        case r.UA.INCOMPLETE:
+            return (0, i.jsx)(c.A, {
                 quest: t,
-                taskType: f.type,
-                size: A,
-                analyticsCtxQuestContent: m,
-                analyticsCtxSourceQuestContent: h,
-                analyticsCtxQuestContentPosition: p,
-                analyticsCtxQuestContentRowIndex: g,
+                taskType: C.type,
+                size: x,
+                analyticsCtxQuestContent: h,
+                analyticsCtxSourceQuestContent: p,
+                analyticsCtxQuestContentPosition: g,
+                analyticsCtxQuestContentRowIndex: A,
                 surface: n,
             });
-        case a.UA.COMPLETED:
-            return (0, i.jsx)(r.A, {
+        case r.UA.EXPIRED_CLAIMABLE:
+        case r.UA.COMPLETED:
+            return (0, i.jsx)(a.A, {
                 quest: t,
-                size: A,
-                analyticsCtxQuestContent: m,
-                analyticsCtxSourceQuestContent: h,
-                analyticsCtxQuestContentPosition: p,
-                analyticsCtxQuestContentRowIndex: g,
+                size: x,
+                analyticsCtxQuestContent: h,
+                analyticsCtxSourceQuestContent: p,
+                analyticsCtxQuestContentPosition: g,
+                analyticsCtxQuestContentRowIndex: A,
             });
-        case a.UA.CLAIMED:
+        case r.UA.CLAIMED:
             return (0, i.jsx)(s.A, {
                 quest: t,
-                size: A,
-                analyticsCtxQuestContent: m,
-                analyticsCtxSourceQuestContent: h,
-                analyticsCtxQuestContentPosition: p,
-                analyticsCtxQuestContentRowIndex: g,
+                size: x,
+                analyticsCtxQuestContent: h,
+                analyticsCtxSourceQuestContent: p,
+                analyticsCtxQuestContentPosition: g,
+                analyticsCtxQuestContentRowIndex: A,
             });
+        case r.UA.EXPIRED:
+            return (0, i.jsx)(d.A, { quest: t, size: x });
         default:
-            return (0, i.jsx)(l.$nd, { variant: "primary", fullWidth: !0, size: A, text: u.intl.string(u.t.P84bAD) });
+            return (0, i.jsx)(l.$nd, { variant: "primary", fullWidth: !0, size: x, text: m.intl.string(m.t.P84bAD) });
     }
 };
