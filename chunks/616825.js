@@ -22,4 +22,5 @@ e.exports = {
     sQ: "progressBarSlim_e99fef",
     E7: "sectionSpacer_e99fef",
     qx: "footerClaimButton_e99fef",
+    nP: "copyIconButton_e99fef",
 };
