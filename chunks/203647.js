@@ -107,7 +107,7 @@ function b(e) {
                 let i = c.A.getWishlist(g);
                 if (null == i) return;
                 let a = t[e],
-                    { newWishlistData: l, previousSkuId: s, nextSkuId: r } = (0, u.A)(i, t, e, n);
+                    { newWishlistData: l, previousSkuId: s, nextSkuId: r } = (0, u.Ap)(i, t, e, n);
                 d.A.reorderWishlistItem(g, a.skuId, { previousSkuId: s, nextSkuId: r, newWishlistData: l });
             },
             [g, t],
