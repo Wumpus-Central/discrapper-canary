@@ -29,28 +29,28 @@ function f(e) {
         T = null != v,
         A = null === v,
         P = (0, o.z5)(v, C),
-        k = () =>
+        k = f && j,
+        I = () =>
             (0, s.XD)({ uploadType: b.HL.AVATAR, analyticsSource: u, guildId: l ?? void 0, stackingBehavior: "stack" });
     if (!(A ? f && j : T || S || j))
         return (0, a.jsx)(x.kL, {
             variant: "square",
-            onClick: k,
+            onClick: I,
             accessibleLabel: y.intl.string(y.t["4OynCD"]),
             children: (0, a.jsx)(r.euF, { src: E, size: r._3J.SIZE_56, "aria-hidden": !0 }),
         });
-    let I = f && j,
-        R = P
-            ? {
-                  onClick: () => {
-                      (0, p.p)({ guildId: l ?? void 0, avatar: null }), (0, o.WU)(null);
-                  },
-                  type: I ? "reset" : "remove",
-                  accessibleLabel: y.intl.string(I ? y.t.Y0mxy1 : y.t.twB3fz),
-              }
-            : void 0;
+    let R = P
+        ? {
+              onClick: () => {
+                  (0, p.p)({ guildId: l ?? void 0, avatar: null }), (0, o.WU)(k ? "reset" : "remove");
+              },
+              type: k ? "reset" : "remove",
+              accessibleLabel: y.intl.string(k ? y.t.Y0mxy1 : y.t.twB3fz),
+          }
+        : void 0;
     return (0, a.jsx)(x.NW, {
         variant: "square",
-        onClick: k,
+        onClick: I,
         accessibleLabel: y.intl.string(y.t["4OynCD"]),
         deleteButtonConfig: R,
         children: (0, a.jsx)(r.euF, { src: E, size: r._3J.SIZE_56, "aria-hidden": !0 }),

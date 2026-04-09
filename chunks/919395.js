@@ -101,5 +101,9 @@ function A(e, t) {
     return void 0 === e ? null != t : null != e;
 }
 function I(e) {
-    null == e ? s.OR.announce(u.intl.string(u.t["f1+oNk"])) : s.OR.announce(u.intl.string(u.t.NstziV));
+    "set" === e
+        ? s.OR.announce(u.intl.string(u.t.NstziV))
+        : "remove" === e
+          ? s.OR.announce(u.intl.string(u.t["f1+oNk"]))
+          : s.OR.announce(u.intl.string(u.t["/b5nqj"]));
 }

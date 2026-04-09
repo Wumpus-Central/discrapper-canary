@@ -32,7 +32,7 @@ function c(e) {
         }),
         h = (0, r.useCallback)(
             (e) => {
-                (0, l.p)({ guildId: c, avatar: e }), (0, a.WU)(e);
+                (0, l.p)({ guildId: c, avatar: e }), (0, a.WU)(null == e ? "remove" : "set");
             },
             [c],
         ),

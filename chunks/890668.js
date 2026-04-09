@@ -1,4 +1,4 @@
-n.d(t, { A: () => P });
+n.d(t, { A: () => L });
 var i = n(627968);
 n(64700);
 var s = n(284009),
@@ -29,7 +29,7 @@ var s = n(284009),
     y = n(927578),
     O = n(985018),
     R = n(35048);
-function P() {
+function L() {
     let e = (0, a.bG)([j.default], () => {
             let e = j.default.getCurrentUser();
             return l()(null != e, "DefaultCustomizationSections: user cannot be undefined"), e;
@@ -38,8 +38,8 @@ function P() {
         {
             pendingAvatar: n,
             pendingGlobalName: s,
-            pendingBanner: P,
-            pendingBio: L,
+            pendingBanner: L,
+            pendingBio: P,
             pendingPronouns: D,
             pendingAccentColor: G,
             pendingThemeColors: M,
@@ -55,7 +55,7 @@ function P() {
         B = (0, r.EC)(),
         F = y.Ay.canUsePremiumProfileCustomization(e),
         H = (0, c.z5)(n, e.avatar),
-        z = (0, c.Ac)(P, t?.banner),
+        z = (0, c.Ac)(L, t?.banner),
         Y = (0, I.Ay)(e.id),
         X = Y?.getLegacyUsername(),
         K = (w.global_name?.length ?? 0) > 0 ? w.global_name : (B?.nick ?? []),
@@ -88,7 +88,7 @@ function P() {
                 g.A,
                 {
                     onAvatarChange: (e) => {
-                        (0, C.p)({ avatar: e }), (0, c.WU)(e);
+                        (0, C.p)({ avatar: e }), (0, c.WU)(null == e ? "remove" : "set");
                     },
                     showRemoveAvatarButton: H,
                     errors: w.avatar,
@@ -138,7 +138,7 @@ function P() {
                     sectionTitle: O.intl.string(O.t.ZzAR2Y),
                     errors: W,
                     onBioChange: (e) => (0, C.p)({ bio: e }),
-                    pendingBio: L,
+                    pendingBio: P,
                     currentBio: t?.bio ?? "",
                 },
                 "bio",
