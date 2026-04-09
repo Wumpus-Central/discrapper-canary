@@ -43,7 +43,7 @@ let a = [0, 4, 8, 16, 24],
     f = 64,
     p = "---new-messages-bar",
     h = "SPOILER_",
-    m = 0x99aab5,
+    m = 3447003,
     E = 0.16,
     g = 0.2;
 function A(e) {
