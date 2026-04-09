@@ -27,14 +27,14 @@ let D = (t) => {
             ? null
             : (0, n.jsx)("div", { className: _.i1, children: (0, n.jsx)(C._, { userDiscountOffer: e }) });
     },
-    S = ["primary", "critical-primary", "expressive"],
-    N = (t) => {
+    N = ["primary", "critical-primary", "expressive"],
+    S = (t) => {
         let { actions: e } = t,
-            i = e.findLastIndex((t) => null != t.variant && S.includes(t.variant));
+            i = e.findLastIndex((t) => null != t.variant && N.includes(t.variant));
         return (0, n.jsxs)("div", {
             className: _.NC,
             children: [
-                (0, n.jsx)(h.l, { size: "sm", location: c.A.PREMIUM_WISHLIST_CHURN_MODAL }),
+                (0, n.jsx)(h.l, { size: "sm", className: _.ij, location: c.A.PREMIUM_WISHLIST_CHURN_MODAL }),
                 (0, n.jsx)(s.e2v, {
                     fullWidth: !0,
                     className: _.uL,
@@ -60,7 +60,7 @@ let D = (t) => {
         r.useEffect(() => {
             (0, d.A)(_.id, _.getAvatarURL(null, 80));
         }, [_]);
-        let S = (0, m.St)("churn-modal"),
+        let N = (0, m.St)("churn-modal"),
             A = (0, g.A)(),
             M = "US" === A.ipCountryCode && "CA" === A.ipSubdivisionCode;
         if (h)
@@ -85,7 +85,7 @@ let D = (t) => {
                       icon: o.tvc,
                   })
                 : L.push({
-                      text: E.intl.string(S ? E.t["2+luBl"] : E.t.rzVN6j),
+                      text: E.intl.string(N ? E.t["2+luBl"] : E.t.rzVN6j),
                       onClick: () => e(),
                       variant: "secondary",
                   }),
@@ -98,8 +98,8 @@ let D = (t) => {
                 transitionState: t,
                 title: b,
                 subtitle: I,
-                actions: S ? [] : L,
-                actionBarInput: S ? (0, n.jsx)(N, { actions: L }) : void 0,
+                actions: N ? [] : L,
+                actionBarInput: N ? (0, n.jsx)(S, { actions: L }) : void 0,
                 preview: null !== c && (0, n.jsx)(D, { churnUserDiscountOffer: c }),
                 onClose: async () => e(),
                 children: (0, n.jsx)(x.l, {
