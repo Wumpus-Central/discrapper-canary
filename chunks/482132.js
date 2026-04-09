@@ -13,7 +13,7 @@ var r = n(627968),
     f = n(156312),
     p = n(166532),
     h = n(615310),
-    m = n(965057);
+    m = n(639792);
 function E(e) {
     let { header: t, ...n } = e;
     return { header: t, stepProps: n };
@@ -27,27 +27,28 @@ function g(e) {
             setModalOverlayNode: A,
             setReadySlideId: I,
             isDisplayingWowMomentConfirmation: T,
+            unifiedCheckoutFlow: S,
         } = (0, f.P5)(),
-        S = o.find((e) => e.key === s);
+        y = o.find((e) => e.key === s);
     i.useEffect(() => {
         A(null);
     }, [s, A]),
-        l()(null != S, "Unknown step for current payment flow.");
-    let y = S?.options?.hideSlider ?? !1,
-        v = S?.options?.hideDefaultModalBody ?? !1,
-        N = S?.options?.sliderBodyClassName,
-        C = "100%",
-        R = (0, _.D7)({ location: "PaymentModalStep" }),
-        O = i.useMemo(() => R && s === p.pn.REVIEW, [R, s]);
+        l()(null != y, "Unknown step for current payment flow (PaymentModalStep): step=%s, flow=%s", s, S);
+    let v = y?.options?.hideSlider ?? !1,
+        N = y?.options?.hideDefaultModalBody ?? !1,
+        C = y?.options?.sliderBodyClassName,
+        R = "100%",
+        O = (0, _.D7)({ location: "PaymentModalStep" }),
+        b = i.useMemo(() => O && s === p.pn.REVIEW, [O, s]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (S?.options?.renderHeader ?? !0) ? t : null,
-            S.renderStep(n),
-            null == s || y
+            (y?.options?.renderHeader ?? !0) ? t : null,
+            y.renderStep(n),
+            null == s || v
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          v
+                          N
                               ? null
                               : (0, r.jsx)(c.cwr, {
                                     children: (0, r.jsx)(d.tN_, {
@@ -55,8 +56,8 @@ function g(e) {
                                         activeSlide: s,
                                         centered: !1,
                                         onSlideReady: (e) => I(e),
-                                        width: C,
-                                        disableDefaultTransformStyling: O,
+                                        width: R,
+                                        disableDefaultTransformStyling: b,
                                         overflow: T ? "visible" : void 0,
                                         children: o
                                             .filter((e) => null != e.key)
@@ -66,7 +67,7 @@ function g(e) {
                                                     {
                                                         id: e.key,
                                                         children: (0, r.jsx)("form", {
-                                                            className: a()(m.OO, { [m.Wq]: O }, N),
+                                                            className: a()(m.OO, { [m.Wq]: b }, C),
                                                             ref: (e) => {
                                                                 u(e);
                                                             },
