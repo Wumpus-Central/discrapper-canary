@@ -8,7 +8,7 @@ var n = r(397927),
     s = r(380083),
     l = r(788868),
     c = r(985018),
-    d = r(27283);
+    d = r(339782);
 function p(e) {
     let { onClose: t } = e,
         r = (0, o.jsx)(n.Text, { className: d.h, variant: "text-md/normal", children: c.intl.string(c.t.FCsTCk) });

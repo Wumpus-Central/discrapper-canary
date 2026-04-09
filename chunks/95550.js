@@ -11,17 +11,17 @@ var i = n(627968),
     h = n(73153),
     m = n(387755),
     A = n(308528),
-    p = n(711950),
-    g = n(846293),
-    f = n(888906),
-    _ = n(49229),
+    g = n(711950),
+    p = n(846293),
+    _ = n(888906),
+    f = n(49229),
     E = n(684136),
     x = n(964486),
     C = n(793574),
     S = n(58149),
-    T = n(688810),
-    N = n(571694),
-    I = n(47167),
+    I = n(688810),
+    T = n(571694),
+    N = n(47167),
     v = n(915089),
     y = n(66442),
     b = n(279208),
@@ -50,11 +50,11 @@ var i = n(627968),
     Z = n(652215),
     X = n(650583),
     Q = n(985018),
-    ee = n(923710);
+    ee = n(94521);
 let et = (0, v.Ld)(),
     en = (e) => {
         let { channel: t, onClose: n } = e,
-            l = (0, I.Ay)(t) ?? "",
+            l = (0, N.Ay)(t) ?? "",
             s = (0, c.bG)([U.Ay], () => U.Ay.lastMessageId(t.id) ?? t.id);
         return (0, i.jsx)(u.DUT, {
             onClick: () => {
@@ -63,7 +63,7 @@ let et = (0, v.Ld)(),
             children: (0, i.jsxs)("div", {
                 className: ee.us,
                 children: [
-                    (0, i.jsx)(u.euF, { src: (0, N.Y)(t), size: u._3J.SIZE_24, "aria-label": l }),
+                    (0, i.jsx)(u.euF, { src: (0, T.Y)(t), size: u._3J.SIZE_24, "aria-label": l }),
                     (0, i.jsx)("span", { className: ee.J2, children: l }),
                     (0, i.jsx)("span", { className: ee.Pd, children: r()(z.default.extractTimestamp(s)).fromNow() }),
                 ],
@@ -126,7 +126,7 @@ class el extends l.PureComponent {
     }
     componentDidMount() {
         let { channel: e } = this.props;
-        h.h.wait(() => f.A.open(e?.id));
+        h.h.wait(() => _.A.open(e?.id));
         let t = (0, S.dI)(e);
         H.default.track(Z.HAw.OPEN_POPOUT, {
             ...t,
@@ -144,7 +144,7 @@ class el extends l.PureComponent {
         K._.unsubscribe(Z.jej.SCROLL_PAGE_UP, this.scrollPageUp),
             K._.unsubscribe(Z.jej.SCROLL_PAGE_DOWN, this.scrollPageDown),
             null != this.copyTimeout && clearTimeout(this.copyTimeout),
-            h.h.wait(() => f.A.close());
+            h.h.wait(() => _.A.close());
     }
     scrollPageUp = () => {
         this.scrollerRef.current?.scrollPageUp({ animate: !0 });
@@ -163,7 +163,7 @@ class el extends l.PureComponent {
         let { channel: e } = this.props;
         if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return;
         let t = (0, Y.i)({ location: "5326c5_1" });
-        g.Ay.createInvite(e.id, { max_age: t }, Z.PE1.GROUP_DM);
+        p.Ay.createInvite(e.id, { max_age: t }, Z.PE1.GROUP_DM);
     }
     isPartyFull() {
         let { channel: e } = this.props;
@@ -457,7 +457,7 @@ class el extends l.PureComponent {
     }
     handleAddFriend(e) {
         this.props.onClose(),
-            _.A.sendRequest({
+            f.A.sendRequest({
                 discordTag: q.Ay.getUserTag(e, { identifiable: "always" }),
                 context: { location: "Group DM" },
             });
@@ -467,25 +467,25 @@ class el extends l.PureComponent {
         e?.focus();
     };
     focusResult = (e) => {
-        f.A.select(e);
+        _.A.select(e);
     };
     handleSelect = (e) => {
         let { results: t, channel: n } = this.props;
-        if (null == e) f.A.clear(n?.id);
+        if (null == e) _.A.clear(n?.id);
         else if (null != t) {
             let n = t[e];
             this.handleClick(n.user.id);
         }
     };
     handleSelectionChange = (e) => {
-        f.A.select(e);
+        _.A.select(e);
         let t = this.scrollerRef.current;
         null != t && t.scrollToIndex({ section: 0, row: e, padding: 8 });
     };
     handleQueryChange = (e) => {
         let { channel: t } = this.props,
             n = (0, S.dI)(t);
-        f.A.search(e, t?.id),
+        _.A.search(e, t?.id),
             null != this._existingTimeout && clearTimeout(this._existingTimeout),
             (this._existingTimeout = setTimeout(() => {
                 H.default.track(Z.HAw.SEARCH_USER_LIST_STARTED, {
@@ -499,21 +499,21 @@ class el extends l.PureComponent {
     };
     handleRemoveTag = (e) => {
         let t = Array.from(this.props.selectedUsers);
-        f.A.removeUser(t[e]);
+        _.A.removeUser(t[e]);
     };
     handleRemoveUser = (e) => {
         e.forEach((e) => {
-            f.A.removeUser(e);
+            _.A.removeUser(e);
         }),
             this.forceFocus();
     };
     handleClick = (e) => {
         let { selectedUsers: t, query: n, channel: i } = this.props;
-        t.has(e) ? f.A.removeUser(e) : this.getRemaining() > 0 && (f.A.addUser(e), n.length > 0 && f.A.clear(i?.id)),
+        t.has(e) ? _.A.removeUser(e) : this.getRemaining() > 0 && (_.A.addUser(e), n.length > 0 && _.A.clear(i?.id)),
             this.forceFocus();
     };
     handleAddFriendNavigation = () => {
-        p.A.transitionToSection(Z.m3P.ADD_FRIEND, { explicit: !0 }), this.props.onClose();
+        g.A.transitionToSection(Z.m3P.ADD_FRIEND, { explicit: !0 }), this.props.onClose();
     };
     handleScroll = () => {
         let e = this.scrollerRef.current;
@@ -636,8 +636,8 @@ class el extends l.PureComponent {
 }
 function es(e) {
     let { selectedUsers: t, channelName: n, previewIcon: l, onIconChange: s, onIconRemove: a, onChange: r } = e,
-        { analyticsLocations: o } = (0, T.Ay)(C.A.NEW_GROUP_DM_INVITE_MODAL),
-        c = (0, I.Jo)(Array.from(t), B.default, G.A);
+        { analyticsLocations: o } = (0, I.Ay)(C.A.NEW_GROUP_DM_INVITE_MODAL),
+        c = (0, N.Jo)(Array.from(t), B.default, G.A);
     return (0, i.jsxs)("div", {
         className: ee.zj,
         children: [
@@ -735,8 +735,8 @@ function ec(e) {
         h = l.useRef(null),
         m = a ?? (null == t ? u.ggM : u.DpX),
         { showModal: A } = er({ channel: t, subscribeToGlobalHotkey: d }),
-        p = (0, c.bG)([B.default], () => B.default.getUser(t?.getRecipientId()));
-    return p?.bot || p?.isProvisional
+        g = (0, c.bG)([B.default], () => B.default.getUser(t?.getRecipientId()));
+    return g?.bot || g?.isProvisional
         ? null
         : (0, i.jsx)(J.Ay.Icon, {
               ref: h,

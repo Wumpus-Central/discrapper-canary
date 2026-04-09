@@ -12,8 +12,8 @@ var i = n(627968),
     A = n(811024),
     _ = n(685399),
     m = n(323073),
-    p = n(963027),
-    g = n(47167),
+    g = n(963027),
+    p = n(47167),
     f = n(5932),
     x = n(414808),
     E = n(302005),
@@ -38,7 +38,7 @@ var i = n(627968),
 n(281405);
 var w = n(652215),
     B = n(349828),
-    V = n(99566);
+    V = n(928409);
 class H extends U.Ay {
     state = { shouldShowThreadsPopout: !1, shouldShowActivities: !1 };
     channelItemRef = l.createRef();
@@ -113,7 +113,7 @@ class H extends U.Ay {
                         n.e("97262"),
                         n.e("42128"),
                         n.e("39778"),
-                        n.e("22283"),
+                        n.e("34408"),
                     ]).then(n.bind(n, 385913));
                     return (n) => (0, i.jsx)(e, { ...n, user: l, channel: t, showModalItems: !1 });
                 });
@@ -169,7 +169,7 @@ class H extends U.Ay {
             G = (0, f.M)(I),
             k = (0, i.jsxs)("li", {
                 className: a()(this.getClassName(), { [V.r9]: this.isDisabled(), [V.wH]: n }),
-                "data-dnd-name": (0, g.m1)(e, M.default, O.A),
+                "data-dnd-name": (0, p.m1)(e, M.default, O.A),
                 onMouseEnter: D || U ? this.handleMouseEnter : void 0,
                 onMouseLeave: D || U ? this.handleMouseLeave : void 0,
                 children: [
@@ -200,7 +200,7 @@ class H extends U.Ay {
                                 channelTypeOverride: C ? w.rbe.GUILD_TEXT : void 0,
                                 resolvedUnreadSetting: S,
                                 transitionExtras: R ? { source: N.A.CHANNEL_LIST_SUGGESTED_SECTION } : void 0,
-                                "aria-label": (0, p.Ay)({
+                                "aria-label": (0, g.Ay)({
                                     channel: e,
                                     unread: s,
                                     mentionCount: c,
@@ -235,12 +235,12 @@ let F = (0, h.a)(H);
 function W(e) {
     let { channel: t, guild: n, disableSorting: s, isFavoriteCategory: a, muted: d, selected: c } = e,
         { hasActiveThreads: u, hasMoreActiveThreads: h } = (0, T.NR)(t),
-        p = (0, o.cf)([R.Ay], () => ({
+        g = (0, o.cf)([R.Ay], () => ({
             unread: R.Ay.hasUnread(t.id),
             ackMessageId: R.Ay.ackMessageId(t.id),
             isLowImportanceMention: R.Ay.getIsMentionLowImportance(t.id),
         })),
-        g = (0, o.bG)([L.Ay], () => L.Ay.resolveUnreadSetting(t)),
+        p = (0, o.bG)([L.Ay], () => L.Ay.resolveUnreadSetting(t)),
         f = (0, o.cf)([S.A, v.A], () => {
             let e = S.A.getChannel(t.parent_id);
             return {
@@ -265,7 +265,7 @@ function W(e) {
             isNewChannel: x,
             muted: d,
             enableActivities: D,
-            resolvedUnreadSetting: g,
+            resolvedUnreadSetting: p,
         }),
         P = (0, _.Ay)(t),
         [k, V] = l.useState(!1),
@@ -284,7 +284,7 @@ function W(e) {
     return (0, o.bG)([j.A, b.Ay], () => j.A.getChannelId() !== t.id && b.Ay.isCurrentUserGuest(t.getGuildId()))
         ? null
         : (0, i.jsx)(F, {
-              ...p,
+              ...g,
               ...f,
               ...e,
               hasActiveThreads: u,
@@ -296,7 +296,7 @@ function W(e) {
               channelIsContentGated: M,
               channelInfo: U,
               embeddedApps: P,
-              resolvedUnreadSetting: g,
+              resolvedUnreadSetting: p,
               hasChannelInfo: null != U,
               enableActivities: D,
               showMenuItemPopover: W,

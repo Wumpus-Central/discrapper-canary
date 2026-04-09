@@ -19,8 +19,8 @@ var i = n(627968),
     _ = n(297413),
     N = n(361739),
     j = n(966327),
-    T = n(736653),
-    v = n(429913),
+    v = n(736653),
+    T = n(429913),
     C = n(47167),
     I = n(576470),
     E = n(235986),
@@ -39,9 +39,9 @@ var i = n(627968),
     B = n(537855),
     W = n(652215),
     H = n(985018),
-    V = n(804882),
-    z = n(903281),
-    F = n(153335);
+    V = n(95779),
+    z = n(8350),
+    F = n(885106);
 function K(e) {
     let {
         isDisabled: t,
@@ -160,7 +160,7 @@ function Y(e) {
 }
 function q(e) {
     let { applicationId: t, channel: l, showChannel: s = !1, inviteDisabled: a = !1 } = e,
-        r = (0, v.h)(t),
+        r = (0, T.h)(t),
         o = (0, g.bG)([D.default], () => D.default.getUser(l.linkedLobby?.linked_by)),
         d = (0, k.e)(l);
     return (0, i.jsx)(K, {
@@ -201,7 +201,7 @@ function J(e) {
         loading: h = !1,
     } = e;
     o()(null != s, "guild is required");
-    let A = (0, T.Ay)(),
+    let A = (0, v.Ay)(),
         b = (0, P.Fi)(s),
         f = (0, P.Wr)(s),
         _ = l.useMemo(
@@ -214,7 +214,7 @@ function J(e) {
             [t, h],
         ),
         j = (0, g.yK)([M.A], () => M.A.getSortedLinkedChannelsForGuild(s.id).filter((e) => null == u || e.id === u.id)),
-        v = l.useMemo(
+        T = l.useMemo(
             () =>
                 h
                     ? []
@@ -232,11 +232,11 @@ function J(e) {
             (0, p.mMO)(async () => (t) => (0, i.jsx)(O.default, { ...t, guildId: s.id, analyticsData: e }));
         };
     return (0, i.jsx)(N.ic, {
-        sections: [1, +!d, +!!d, Math.max(1, v.length)],
+        sections: [1, +!d, +!!d, Math.max(1, T.length)],
         renderSection: (e) => {
             let { section: t } = e;
             if (3 === t)
-                if (0 === v.length && !h)
+                if (0 === T.length && !h)
                     return (0, i.jsx)(
                         "div",
                         {
@@ -379,9 +379,9 @@ function J(e) {
                     "actions-v2",
                 );
             if (3 === t) {
-                if (0 === v.length && 0 === n && h)
+                if (0 === T.length && 0 === n && h)
                     return (0, i.jsx)(p.y$y, { className: F.QX, type: p.y$y.Type.SPINNING_CIRCLE }, "spinner");
-                let e = v[n];
+                let e = T[n];
                 switch (e?.type) {
                     case "invite":
                         return (0, i.jsx)(
@@ -413,10 +413,10 @@ function J(e) {
                   : 2 === e
                     ? I
                     : 3 === e
-                      ? 0 === v.length && 0 === t && h
+                      ? 0 === T.length && 0 === t && h
                           ? 62
-                          : 62 * (null != v[t])
+                          : 62 * (null != T[t])
                       : 0,
-        sectionHeight: (e) => (3 === e ? (0 !== v.length || h ? 28 : 240) : 0),
+        sectionHeight: (e) => (3 === e ? (0 !== T.length || h ? 28 : 240) : 0),
     });
 }

@@ -13,11 +13,11 @@ var s = n(503698),
     A = n(557722),
     _ = n(834942),
     m = n(287809),
-    p = n(652215),
-    g = n(53516),
+    g = n(652215),
+    p = n(53516),
     f = n(985018),
-    x = n(14688),
-    E = n(467935),
+    x = n(609657),
+    E = n(442078),
     I = (((i = {})[(i.VOICE = 0)] = "VOICE"), i);
 let C = (e) => {
     let { type: t, guildId: i, closePopout: s } = e,
@@ -29,23 +29,23 @@ let C = (e) => {
             newAccount: S,
             newMember: b,
         } = (0, r.bG)([_.A], () => _.A.getCheck(i), [i]),
-        v = 0 === t ? f.intl.string(f.t["6zY8BI"]) : null,
-        y = null,
+        y = 0 === t ? f.intl.string(f.t["6zY8BI"]) : null,
+        v = null,
         j = null;
     return (0 === t &&
         (C
-            ? ((y = f.intl.string(f.t.IRxUlG)), (j = f.intl.string(f.t.fiNVin)))
+            ? ((v = f.intl.string(f.t.IRxUlG)), (j = f.intl.string(f.t.fiNVin)))
             : T
-              ? ((y = f.intl.string(f.t.vW8iUF)), (j = f.intl.string(f.t["50gfOv"])))
+              ? ((v = f.intl.string(f.t.vW8iUF)), (j = f.intl.string(f.t["50gfOv"])))
               : N
-                ? ((y = f.intl.string(f.t.vdSOpz)), (j = f.intl.string(f.t.lm1UKt)))
+                ? ((v = f.intl.string(f.t.vdSOpz)), (j = f.intl.string(f.t.lm1UKt)))
                 : b
-                  ? ((y = f.intl.formatToPlainString(f.t.v1ktYb, { min: p.$8o.MEMBER_AGE })),
+                  ? ((v = f.intl.formatToPlainString(f.t.v1ktYb, { min: g.$8o.MEMBER_AGE })),
                     (j = f.intl.string(f.t.BddRzS)))
                   : S &&
-                    ((y = f.intl.formatToPlainString(f.t.sncw41, { min: p.$8o.ACCOUNT_AGE })),
+                    ((v = f.intl.formatToPlainString(f.t.sncw41, { min: g.$8o.ACCOUNT_AGE })),
                     (j = f.intl.string(f.t.BddRzS)))),
-    null == v || null == y)
+    null == y || null == v)
         ? null
         : (0, l.jsxs)(d.lGe, {
               className: a()(E.popover, x.kL),
@@ -55,8 +55,8 @@ let C = (e) => {
                   (0, l.jsxs)("div", {
                       className: x.Qs,
                       children: [
-                          (0, l.jsx)(d.Heading, { variant: "heading-md/semibold", id: I, children: v }),
-                          (0, l.jsx)(d.Text, { color: "text-default", variant: "text-sm/normal", children: y }),
+                          (0, l.jsx)(d.Heading, { variant: "heading-md/semibold", id: I, children: y }),
+                          (0, l.jsx)(d.Text, { color: "text-default", variant: "text-sm/normal", children: v }),
                           (0, l.jsxs)("div", {
                               className: x.UD,
                               children: [
@@ -75,7 +75,7 @@ let C = (e) => {
                                                                 async () => {
                                                                     let { default: e } = await Promise.all([
                                                                         n.e("84704"),
-                                                                        n.e("75904"),
+                                                                        n.e("5966"),
                                                                     ]).then(n.bind(n, 615715));
                                                                     return (t) =>
                                                                         (0, l.jsx)(e, {
@@ -83,7 +83,7 @@ let C = (e) => {
                                                                             ...t,
                                                                         });
                                                                 },
-                                                                { modalKey: g.V },
+                                                                { modalKey: p.V },
                                                             )
                                                           : N &&
                                                             (c.A.verifyResend(),

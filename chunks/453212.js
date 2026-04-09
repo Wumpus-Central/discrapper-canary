@@ -6,7 +6,7 @@ var r = n(627968),
     a = n.n(s),
     o = n(615300),
     l = n(827734),
-    u = n(16152);
+    u = n(869165);
 let c = 12,
     d = [l.A.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, l.A.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, "#929AFA"];
 class _ extends i.PureComponent {

@@ -24,7 +24,7 @@ var i = n(627968),
     I = n(652215),
     k = n(818348),
     j = n(985018),
-    S = n(710552);
+    S = n(23703);
 function y(e) {
     let { guildId: t, transitionState: n, onSubmit: y, onClose: D } = e,
         [G, L] = r.useState(I._Ee),

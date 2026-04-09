@@ -14,7 +14,7 @@ var i = n(311907),
     x = n(287809),
     p = n(850730),
     g = n(385803),
-    f = n(749929);
+    f = n(37760);
 function v() {
     (0, u.Bf)();
     let e = (0, i.bG)([x.default], () => x.default.getCurrentUser()),

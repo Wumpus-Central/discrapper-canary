@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => _ });
 var i = n(627968),
     l = n(64700),
     s = n(687498),
@@ -8,18 +8,18 @@ var i = n(627968),
     c = n(775602),
     d = n(927813),
     u = n(614518),
-    h = n(964701);
+    h = n(29110);
 let m = 6 * d.A.Millis.SECOND,
     A = 2 * d.A.Millis.SECOND,
-    p = 2 * d.A.Millis.SECOND,
-    g = (e) => `scale(${1 - -(e / 120)}) rotate(${e}deg)`;
-function f(e) {
+    g = 2 * d.A.Millis.SECOND,
+    p = (e) => `scale(${1 - -(e / 120)}) rotate(${e}deg)`;
+function _(e) {
     let { userId: t, voiceChannelEffect: n, onComplete: d } = e,
-        { emoji: f, sentAt: _ } = n,
+        { emoji: _, sentAt: f } = n,
         E = (0, a.bG)([c.A], () => c.A.useReducedMotion),
         [x, C] = l.useState(!0),
         S = !E,
-        T = (0, r.pnh)(x, {
+        I = (0, r.pnh)(x, {
             from: { rotate: -120 },
             enter: { rotate: 0 },
             leave: { rotate: -120 },
@@ -32,7 +32,7 @@ function f(e) {
     return (l.useEffect(() => {
         let e;
         return (
-            Date.now() - _ >= p
+            Date.now() - f >= g
                 ? (0, u.a)(t)
                 : (e = setTimeout(
                       () => {
@@ -44,21 +44,21 @@ function f(e) {
                 null != e && clearTimeout(e);
             }
         );
-    }, [_, t, S]),
+    }, [f, t, S]),
     S)
         ? null
-        : T((e, t) => {
+        : I((e, t) => {
               let { rotate: n } = e;
               return (
                   t &&
                   (0, i.jsx)(s.animated.div, {
                       className: h._,
-                      style: { transform: n.to(g) },
+                      style: { transform: n.to(p) },
                       children: (0, i.jsx)(o.A, {
                           className: h.F,
-                          emojiId: f.id,
-                          emojiName: f.name,
-                          animated: f.animated ?? !1,
+                          emojiId: _.id,
+                          emojiName: _.name,
+                          animated: _.animated ?? !1,
                       }),
                   })
               );

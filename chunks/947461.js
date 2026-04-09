@@ -11,10 +11,10 @@ var i = n(627968),
     h = n(652215),
     A = n(746080),
     _ = n(49999),
-    m = n(738072),
-    p = n(985018),
-    g = n(208811),
-    f = n(99566);
+    m = n(294726),
+    g = n(985018),
+    p = n(81152),
+    f = n(928409);
 let x = l.memo(function (e) {
     let { guildId: t, selected: x } = e,
         [E, I] = (0, d.ww)([s.M.GAME_SERVER_HOSTING_NEW_BADGE], t),
@@ -33,16 +33,16 @@ let x = l.memo(function (e) {
             [t],
         ),
         S = (0, i.jsxs)("div", {
-            className: g.c,
+            className: p.c,
             children: [
                 (0, i.jsx)("div", {
                     className: f.Xs,
                     children: (0, i.jsx)(r.m, {
-                        text: p.intl.string(p.t.fgq1gs),
+                        text: g.intl.string(g.t.fgq1gs),
                         position: "top",
                         children: (0, i.jsx)(o.DUT, {
                             onClick: T,
-                            "aria-label": p.intl.string(p.t.fgq1gs),
+                            "aria-label": g.intl.string(g.t.fgq1gs),
                             children: (0, i.jsx)(o.PGe, { size: "xs", color: "currentColor", className: f.gE }),
                         }),
                     }),
@@ -52,8 +52,8 @@ let x = l.memo(function (e) {
                         className: f.yW,
                         children: (0, i.jsx)(o.LpS, {
                             disableColor: !0,
-                            text: p.intl.string(p.t.y2b7CA),
-                            className: g.q,
+                            text: g.intl.string(g.t.y2b7CA),
+                            className: p.q,
                         }),
                     }),
             ],
@@ -62,7 +62,7 @@ let x = l.memo(function (e) {
         className: f.Ki,
         id: `game-server-empty-${t}`,
         renderIcon: (e) => (0, i.jsx)(o._xR, { size: "md", className: e, color: "currentColor" }),
-        text: p.intl.string(m.default.vCzwM7),
+        text: g.intl.string(m.default.vCzwM7),
         selected: x,
         onClick: N,
         trailing: S,

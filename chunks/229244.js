@@ -29,7 +29,7 @@ var a = n(627968),
     k = n(364329),
     O = n(545986),
     R = n(927813),
-    w = n(549592);
+    w = n(163459);
 let D = ["png", "gif", "webp"],
     M = [...D, "jpg", "jpeg"],
     P = Array.from(new Set([...M, "gif", "mp4", "webm"]));
@@ -167,7 +167,7 @@ function G() {
             },
         });
     }
-    function Y(e, n) {
+    function Q(e, n) {
         if ("questName" === e || "gameTitle" === e || "gamePublisher" === e) {
             var a, i;
             c({
@@ -181,7 +181,7 @@ function G() {
             });
         }
     }
-    function Q(e, n, a) {
+    function Y(e, n, a) {
         if ("name" === e || "nameWithArticle" === e) {
             var i, s;
             c({
@@ -268,19 +268,19 @@ function G() {
                     (0, a.jsx)(E.A, {
                         title: "Quest Name",
                         assetKey: "questName",
-                        onMessageChange: Y,
+                        onMessageChange: Q,
                         initialValue: t.config.messages.questName,
                     }),
                     (0, a.jsx)(E.A, {
                         title: "Game Title",
                         assetKey: "gameTitle",
-                        onMessageChange: Y,
+                        onMessageChange: Q,
                         initialValue: t.config.messages.gameTitle,
                     }),
                     (0, a.jsx)(E.A, {
                         title: "Game Publisher",
                         assetKey: "gamePublisher",
-                        onMessageChange: Y,
+                        onMessageChange: Q,
                         initialValue: t.config.messages.gamePublisher,
                     }),
                     ee &&
@@ -397,13 +397,13 @@ function G() {
                                     (0, a.jsx)(E.A, {
                                         title: "Name",
                                         assetKey: "name",
-                                        onMessageChange: (e, t) => Q(e, t, n),
+                                        onMessageChange: (e, t) => Y(e, t, n),
                                         initialValue: e.messages.name,
                                     }),
                                     (0, a.jsx)(E.A, {
                                         title: "Name With Article",
                                         assetKey: "nameWithArticle",
-                                        onMessageChange: (e, t) => Q(e, t, n),
+                                        onMessageChange: (e, t) => Y(e, t, n),
                                         initialValue: e.messages.nameWithArticle,
                                     }),
                                     e.type !== d.l.VIRTUAL_CURRENCY &&
@@ -673,7 +673,7 @@ function G() {
                                                 n.e("92868"),
                                                 n.e("29636"),
                                                 n.e("7634"),
-                                                n.e("36855"),
+                                                n.e("5501"),
                                             ]).then(n.bind(n, 201257));
                                             return (n) =>
                                                 (0, a.jsx)(e, {

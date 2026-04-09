@@ -12,8 +12,8 @@ var i = n(627968),
     A = n(9842),
     _ = n(253932),
     m = n(734057),
-    p = n(994500),
-    g = n(661191),
+    g = n(994500),
+    p = n(661191),
     f = n(988012),
     x = n(141468),
     E = n(694318),
@@ -23,8 +23,8 @@ var i = n(627968),
     T = n(491182),
     S = n(860227),
     b = n(756369),
-    v = n(538355),
-    y = n(522871),
+    y = n(538355),
+    v = n(522871),
     j = n(715628),
     R = n(752636),
     O = n(675722),
@@ -33,8 +33,8 @@ var i = n(627968),
     D = n(888675),
     U = n(652215),
     G = n(985018),
-    P = n(790610),
-    k = n(10029);
+    P = n(213607),
+    k = n(480972);
 let w = l.memo(function e(t) {
     let n,
         {
@@ -66,7 +66,7 @@ let w = l.memo(function e(t) {
             content: ee,
             hasSpoilerEmbeds: et,
             hasBailedAst: en,
-        } = (0, v.A)(s, {
+        } = (0, y.A)(s, {
             hideSimpleEmbedContent: q && X,
             allowList: J,
             allowHeading: J,
@@ -76,20 +76,20 @@ let w = l.memo(function e(t) {
         ei = (0, C.Ay)(s),
         el = (0, r.bG)(
             [m.A],
-            () => s.hasFlag(U.pr7.HAS_THREAD) && m.A.getChannel(g.default.castMessageIdAsChannelId(s.id)),
+            () => s.hasFlag(U.pr7.HAS_THREAD) && m.A.getChannel(p.default.castMessageIdAsChannelId(s.id)),
         ),
         es = s.type === U.lAJ.THREAD_STARTER_MESSAGE && K.state === A.a.LOADED && null != Y,
         ea = !es && void 0 === n,
-        er = (0, y.A)({ message: s, channel: l, enabled: ea }),
+        er = (0, v.A)({ message: s, channel: l, enabled: ea }),
         eo = (0, d.P)(s),
         ed = (0, f._f)(s.id, s.channel_id),
         ec = (0, h.A)(s),
         eu = (0, S.fF)(s);
     return es
         ? (0, i.jsx)(e, { ...t, message: K.message, channel: Y, hasThread: !1 })
-        : (p.A.isBlockedForMessage(s)
+        : (g.A.isBlockedForMessage(s)
                 ? (n = G.t["+FcYM/"])
-                : p.A.isIgnoredForMessage(s)
+                : g.A.isIgnoredForMessage(s)
                   ? (n = G.t["VFWjc+"])
                   : (0, E.kf)(s) && F && (n = G.t.xfkfTK),
             void 0 !== n)

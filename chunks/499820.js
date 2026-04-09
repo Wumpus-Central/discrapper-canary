@@ -2,13 +2,13 @@
 n.d(t, { A: () => _ });
 var i = n(627968),
     s = n(64700),
-    a = n(503698),
-    l = n.n(a),
+    l = n(503698),
+    a = n.n(l),
     r = n(397927),
     o = n(652215),
     d = n(985018),
-    c = n(92056),
-    u = n(153335);
+    c = n(672073),
+    u = n(885106);
 let h = 0,
     p = (e) => {
         switch (e) {
@@ -27,7 +27,7 @@ let h = 0,
     f = [o.G6Q.DISABLED, o.G6Q.TOP_LEFT, o.G6Q.TOP_RIGHT, o.G6Q.BOTTOM_LEFT, o.G6Q.BOTTOM_RIGHT];
 function A(e) {
     let { position: t, onChange: n } = e,
-        [a] = s.useState(() => `notification-position-selector-${h++}`),
+        [l] = s.useState(() => `notification-position-selector-${h++}`),
         A =
             t === o.G6Q.DISABLED
                 ? d.intl.string(d.t.R6LxVf)
@@ -38,12 +38,12 @@ function A(e) {
                 within: !0,
                 offset: -2,
                 children: (0, i.jsx)("div", {
-                    className: l()(c.iE, { [c.wX]: t === o.G6Q.DISABLED }),
+                    className: a()(c.iE, { [c.wX]: t === o.G6Q.DISABLED }),
                     children: f.map((e) =>
                         (0, i.jsxs)(
                             "label",
                             {
-                                className: l()({
+                                className: a()({
                                     [c.wH]: e === t,
                                     [c.r9]: e === o.G6Q.DISABLED,
                                     [c.O3]: e === o.G6Q.TOP_RIGHT,
@@ -58,7 +58,7 @@ function A(e) {
                                         : null,
                                     (0, i.jsx)("input", {
                                         type: "radio",
-                                        name: a,
+                                        name: l,
                                         value: e,
                                         onChange: (t) => n(t, e),
                                         className: c.hH,

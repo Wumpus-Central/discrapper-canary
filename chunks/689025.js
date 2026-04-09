@@ -12,8 +12,8 @@ var i = n(627968),
     A = n(676002),
     _ = n(296216),
     m = n(963027),
-    p = n(47167),
-    g = n(202384),
+    g = n(47167),
+    p = n(202384),
     f = n(51758),
     x = n(721592),
     E = n(214660),
@@ -44,8 +44,8 @@ n(281405);
 var W = n(652215),
     K = n(349828),
     Y = n(985018),
-    z = n(99566),
-    q = n(799535);
+    z = n(928409),
+    q = n(822294);
 class X extends B.Ay {
     channelItemRef = l.createRef();
     state = { shouldShowGuildVerificationPopout: !1 };
@@ -71,7 +71,7 @@ class X extends B.Ay {
     handleClick = () => {
         let { channel: e, locked: t, connected: n, unverifiedAccount: i, isSuggestedSection: l } = this.props,
             s = e.getGuildId();
-        null != s && (0, f.V)(s) && (0, g.Ze)(s),
+        null != s && (0, f.V)(s) && (0, p.Ze)(s),
             i && this.setState({ shouldShowGuildVerificationPopout: !0 }),
             t || n || e.isRoleSubscriptionTemplatePreviewChannel() || (0, N.av)(e),
             __OVERLAY__ || (0, C.iN)(e.id, l ? { source: I.A.CHANNEL_LIST_SUGGESTED_SECTION } : void 0);
@@ -146,7 +146,7 @@ class X extends B.Ay {
                 canReorderChannel: h,
                 canMoveMembers: A,
                 stageInstance: _,
-                isSubscriptionGated: g,
+                isSubscriptionGated: p,
                 needSubscriptionToAccess: f,
                 unread: x,
                 resolvedUnreadSetting: E,
@@ -156,7 +156,7 @@ class X extends B.Ay {
             { shouldShowGuildVerificationPopout: N } = this.state,
             T = (0, i.jsxs)("li", {
                 className: a()(this.getModeClass(), { [z.r9]: this.isDisabled() }),
-                "data-dnd-name": (0, p.m1)(e, P.default, U.A),
+                "data-dnd-name": (0, g.m1)(e, P.default, U.A),
                 children: [
                     (0, i.jsx)(c.YNO, {
                         targetElementRef: this.channelItemRef,
@@ -192,7 +192,7 @@ class X extends B.Ay {
                                         channel: e,
                                         unread: x,
                                         mentionCount: I,
-                                        isSubscriptionGated: g,
+                                        isSubscriptionGated: p,
                                         needSubscriptionToAccess: f,
                                     }),
                                     children: [
@@ -236,7 +236,7 @@ function J(e) {
         A = (0, v.Ay)(n.id),
         _ = (0, r.bG)([b.A], () => b.A.getStageInstanceByChannel(n.id), [n.id]),
         m = (0, T.zy)(n.id, S.ip.AUDIENCE),
-        { isSubscriptionGated: p, needSubscriptionToAccess: g } = (0, x.A)(n.id),
+        { isSubscriptionGated: g, needSubscriptionToAccess: p } = (0, x.A)(n.id),
         f = (0, r.bG)([G.Ay], () => G.Ay.isFavorite(t.id, n.id)),
         E = (0, y.xn)(n.id),
         I = (0, V.A)({
@@ -244,8 +244,8 @@ function J(e) {
             isChannelSelected: !1,
             isChannelCollapsed: a,
             voiceStates: o,
-            isSubscriptionGated: p,
-            needSubscriptionToAccess: g,
+            isSubscriptionGated: g,
+            needSubscriptionToAccess: p,
             enableConnectedUserLimit: E || (n.userLimit > 0 && n.userLimit < W.RCc),
         }),
         C = e.connected && null == I;
@@ -254,8 +254,8 @@ function J(e) {
         connectAction: A,
         numAudience: m,
         stageInstance: _,
-        isSubscriptionGated: p,
-        needSubscriptionToAccess: g,
+        isSubscriptionGated: g,
+        needSubscriptionToAccess: p,
         ...d,
         ...u,
         ...e,

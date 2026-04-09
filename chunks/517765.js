@@ -16,7 +16,7 @@ var i = n(627968),
     A = n(320426),
     b = n(652215),
     f = n(985018),
-    _ = n(480283);
+    _ = n(30220);
 function N(e) {
     let {
             name: t,
@@ -24,8 +24,8 @@ function N(e) {
             imageSrc: s,
             iconBackgroundColor: N,
             iconClassName: j,
-            iconWrapperClassName: T,
-            details: v,
+            iconWrapperClassName: v,
+            details: T,
             integration: C,
             buttonText: I,
             buttonDisabled: E,
@@ -98,8 +98,8 @@ function N(e) {
                     imageSrc: s,
                     iconBackgroundColor: N,
                     iconClassName: j,
-                    iconWrapperClassName: T,
-                    details: v,
+                    iconWrapperClassName: v,
+                    details: T,
                     isPremium: W.length > 0,
                     children: (function (e, t) {
                         if (null == e) return null;

@@ -12,8 +12,8 @@ var i = n(627968),
     A = n(676002),
     _ = n(296216),
     m = n(685399),
-    p = n(271683),
-    g = n(186369),
+    g = n(271683),
+    p = n(186369),
     f = n(725613),
     x = n(963027),
     E = n(844262),
@@ -54,7 +54,7 @@ n(281405);
 var ee = n(652215),
     et = n(349828),
     en = n(985018),
-    ei = n(99566);
+    ei = n(928409);
 class el extends z.Ay {
     state = { popoutToShow: null, shouldShowGuildVerificationPopout: !1, hovered: !1 };
     ref = l.createRef();
@@ -136,7 +136,7 @@ class el extends z.Ay {
     };
     handleVoiceStatusClick = (e) => {
         let { connected: t, channel: n } = this.props;
-        t && (e.stopPropagation(), (0, p.A)({ channel: n }));
+        t && (e.stopPropagation(), (0, g.A)({ channel: n }));
     };
     renderSubtitle() {
         let { channel: e, connected: t, showEmptyChannelTopic: n } = this.props,
@@ -221,8 +221,8 @@ class el extends z.Ay {
                 connectChannelDropTarget: A,
                 connectChannelDragSource: _,
                 connectUserDropTarget: m,
-                connectDragPreview: p,
-                canReorderChannel: g,
+                connectDragPreview: g,
+                canReorderChannel: p,
                 canMoveMembers: f,
                 showTutorial: C,
                 hasActiveEvent: N,
@@ -283,7 +283,7 @@ class el extends z.Ay {
                                         onContextMenu: (e) => {
                                             this.handleContextMenu(e);
                                         },
-                                        connectDragPreview: p,
+                                        connectDragPreview: g,
                                         isFavoriteSuggestion: b,
                                         "aria-label": (0, x.Ay)({
                                             channel: e,
@@ -323,7 +323,7 @@ class el extends z.Ay {
             });
         return (
             f && (P = m(P)),
-            g && (P = A(_(P))),
+            p && (P = A(_(P))),
             C &&
                 (P = (0, i.jsx)(U.A, {
                     childRef: this.ref,
@@ -366,7 +366,7 @@ function ea(e) {
         }),
         A = (0, r.bG)([K.A], () => K.A.hasVideo(n.id)),
         _ = (0, m.Ay)(n),
-        p = (0, I.Ay)(n),
+        g = (0, I.Ay)(n),
         x = (0, v.Qs)(n.id),
         E = (0, r.bG)([f.A], () => null != f.A.getStartTime(n), [n]),
         { isSubscriptionGated: C, needSubscriptionToAccess: N } = (0, y.A)(n.id),
@@ -381,7 +381,7 @@ function ea(e) {
             { guildId: n.guild_id, location: "VoiceChannel" },
             { autoTrackExposure: !1 },
         ),
-        { enableHighlight: U, enableWaveformIcon: G } = (0, g.b)(t.id, "VoiceChannel"),
+        { enableHighlight: U, enableWaveformIcon: G } = (0, p.b)(t.id, "VoiceChannel"),
         k = null != d && d.length > 0,
         H = U && k,
         W = G && k,
@@ -397,7 +397,7 @@ function ea(e) {
         }),
         z = j && null == Y;
     return (0, i.jsx)(es, {
-        channelName: p,
+        channelName: g,
         embeddedApps: _,
         embeddedActivityType: ee.$pd.PLAYING,
         video: A,

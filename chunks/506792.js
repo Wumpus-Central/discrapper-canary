@@ -12,9 +12,9 @@ var i = n(627968),
     A = n(576705),
     _ = n(557534),
     m = n(166444),
-    p = n(652215),
-    g = n(790782),
-    f = n(99566);
+    g = n(652215),
+    p = n(790782),
+    f = n(928409);
 let x = (0, d.a)(function (e) {
     let {
             guild: t,
@@ -36,7 +36,7 @@ let x = (0, d.a)(function (e) {
         v = s === b?.id,
         j = (0, c.Ay)(b),
         R = (0, r.bG)([A.A], () =>
-            null != y ? A.A.can(p.xBc.MANAGE_CHANNELS, y) : null != t && A.A.can(p.xBc.MANAGE_CHANNELS, t),
+            null != y ? A.A.can(g.xBc.MANAGE_CHANNELS, y) : null != t && A.A.can(g.xBc.MANAGE_CHANNELS, t),
         ),
         O = l.useCallback(
             (e) => {
@@ -61,7 +61,7 @@ let x = (0, d.a)(function (e) {
                 selected: v,
                 onContextMenu: O,
                 forceInteractable: !0,
-                resolvedUnreadSetting: g.e.ONLY_MENTIONS,
+                resolvedUnreadSetting: p.e.ONLY_MENTIONS,
                 children: [
                     (0, i.jsx)(_.gQ, { channel: b, tabIndex: S }),
                     (0, i.jsx)(_.Jd, { channel: b, disableManageChannels: x, tabIndex: S }),

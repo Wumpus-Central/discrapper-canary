@@ -14,13 +14,13 @@ var i = n(627968),
     x = n(859126),
     h = n(287809),
     _ = n(996439),
-    p = n(997509),
-    A = n(555337),
+    A = n(997509),
+    p = n(555337),
     f = n(203498),
     j = n(660496),
     N = n(652215),
     E = n(985018),
-    C = n(552592);
+    C = n(8271);
 class T extends s.PureComponent {
     render() {
         let { user: e, guild: t } = this.props;
@@ -102,17 +102,17 @@ function b(e) {
         [l, r] = s.useState(n ?? ""),
         [a, d] = s.useState(!1),
         u = s.useCallback(() => {
-            p.A.setSection(N.BEX.SAFETY), (0, f.K)(j.C.DM_AND_SPAM_PROTECTION);
+            A.A.setSection(N.BEX.SAFETY), (0, f.K)(j.C.DM_AND_SPAM_PROTECTION);
         }, []),
         m = s.useCallback((e) => {
-            r(e), 0 === e.trim().length && p.A.setSearchQuery(e);
+            r(e), 0 === e.trim().length && A.A.setSearchQuery(e);
         }, []),
         g = s.useCallback(() => {
-            r(""), p.A.setSearchQuery("");
+            r(""), A.A.setSearchQuery("");
         }, []),
         h = s.useCallback(async () => {
             if (0 === l.trim().length) {
-                p.A.setSearchQuery(l), d(!1);
+                A.A.setSearchQuery(l), d(!1);
                 return;
             }
             if (!a)
@@ -120,7 +120,7 @@ function b(e) {
                     d(!0);
                     let [e, n] = (0, x.H)(l),
                         i = e[0];
-                    p.A.setSearchQuery(l), await c.A.searchGuildBans(t, i, n), d(!1);
+                    A.A.setSearchQuery(l), await c.A.searchGuildBans(t, i, n), d(!1);
                 } catch (e) {
                     d(!1);
                 }
@@ -170,11 +170,11 @@ function b(e) {
     });
 }
 function v() {
-    let { guild: e, searchQuery: t } = (0, a.bG)([A.A], () => A.A.getProps(), [], l.isEqual),
+    let { guild: e, searchQuery: t } = (0, a.bG)([p.A], () => p.A.getProps(), [], l.isEqual),
         d = null != t && t.trim().length > 0,
         g = (0, u.A)(d),
-        p = d !== g,
-        [f] = (0, a.bG)([A.A], () => A.A.getBans(), [], _.D),
+        A = d !== g,
+        [f] = (0, a.bG)([p.A], () => p.A.getBans(), [], _.D),
         j = f?.size ?? 0,
         T = (0, m.Ay)(),
         v = e?.id ?? N.dJq,
@@ -215,8 +215,8 @@ function v() {
         D = 0 === O.length,
         [M, k] = s.useState({ currentPage: 1, pageSize: 100 });
     s.useEffect(() => {
-        p && 1 !== M.currentPage && k((e) => ({ ...e, currentPage: 1 }));
-    }, [p, M.currentPage]);
+        A && 1 !== M.currentPage && k((e) => ({ ...e, currentPage: 1 }));
+    }, [A, M.currentPage]);
     let U = s.useCallback(
             (e) => {
                 c.A.fetchGuildBansBatch(v, 1e3, e);

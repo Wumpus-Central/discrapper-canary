@@ -16,7 +16,7 @@ function r(e) {
     (0, i.pp)(t.channel_id, t.id, r),
         (0, l.mMO)(
             async () => {
-                let { ForwardModal: e } = await Promise.all([n.e("43808"), n.e("43622"), n.e("81587")]).then(
+                let { ForwardModal: e } = await Promise.all([n.e("43808"), n.e("43622"), n.e("3482")]).then(
                     n.bind(n, 911269),
                 );
                 return (n) =>

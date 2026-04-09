@@ -1,4 +1,4 @@
-n.d(t, { A: () => b });
+n.d(t, { A: () => I });
 var a = n(627968);
 n(64700);
 var i = n(503698),
@@ -14,11 +14,11 @@ var i = n(503698),
     g = n(409626),
     h = n(422069),
     f = n(611656),
-    p = n(459746),
-    _ = n(225732),
+    _ = n(459746),
+    p = n(225732),
     v = n(985018),
-    A = n(325952),
-    j = n(92750);
+    A = n(282063),
+    j = n(379093);
 let E = (e) => {
     let { game: t, onClose: n, trackClick: i } = e,
         l = (0, o.bG)([u.A], () => u.A.getApplication(t.applicationId));
@@ -31,17 +31,17 @@ let E = (e) => {
                 i(g.Ws.ClickSimilarGame, t.applicationId),
                     (0, d.mMO)(() =>
                         Promise.resolve((e) =>
-                            (0, a.jsx)(_.default, { applicationId: t.applicationId, source: g.Ob.SimilarGames, ...e }),
+                            (0, a.jsx)(p.default, { applicationId: t.applicationId, source: g.Ob.SimilarGames, ...e }),
                         ),
                     ),
                     await new Promise((e) => setTimeout(e, 10)),
                     n();
             },
-            children: (0, a.jsx)(p.A, { game: t, application: l, className: j.n1, size: p.w.SMALL }),
+            children: (0, a.jsx)(_.A, { game: t, application: l, className: j.n1, size: _.w.SMALL }),
         }),
     });
 };
-function b(e) {
+function I(e) {
     let { applicationId: t, onClose: n, trackAction: i, similarGames: r, similarGamesError: c } = e,
         u = (0, o.bG)([h.A, m.A], () => {
             let e = void 0 === h.A.getSimilarGames(t) && null == h.A.getSimilarGamesError(t),

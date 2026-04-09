@@ -11,15 +11,15 @@ var i = n(627968),
     u = n(694433),
     m = n(441442),
     g = n(985018),
-    x = n(608245);
+    x = n(17844);
 function h(e) {
     let { changeTitle: t, value: n, options: l, className: h, onChange: _ } = e,
-        [p, A] = s.useState(n),
+        [A, p] = s.useState(n),
         [f, j] = s.useState(!1),
         [N, E] = s.useState(!1),
         C = s.useRef(null);
     s.useEffect(() => {
-        A(n);
+        p(n);
     }, [n]),
         s.useEffect(
             () => () => {
@@ -27,7 +27,7 @@ function h(e) {
             },
             [],
         );
-    let T = l.find((e) => e.value === p);
+    let T = l.find((e) => e.value === A);
     return (0, i.jsx)(u.A, {
         title: f ? t : (T?.title ?? t),
         description: f ? `(${T?.title ?? g.intl.string(g.t.PoWNfe)})` : (T?.description ?? ""),
@@ -42,15 +42,15 @@ function h(e) {
                     title: e.title,
                     description: e.description,
                     highlightColor: e.highlightColor,
-                    className: r()(x.bi, p === e.value && x.wH),
-                    selected: p === e.value,
-                    action: p === e.value ? (0, i.jsx)(d.A, { className: x.VB }) : (0, i.jsx)(o.A, { className: x.VB }),
+                    className: r()(x.bi, A === e.value && x.wH),
+                    selected: A === e.value,
+                    action: A === e.value ? (0, i.jsx)(d.A, { className: x.VB }) : (0, i.jsx)(o.A, { className: x.VB }),
                     onClick: () => {
                         e.disabled ||
-                            e.value === p ||
+                            e.value === A ||
                             (E(!0),
                             _?.(e),
-                            A(e.value),
+                            p(e.value),
                             (C.current = setTimeout(() => {
                                 E(!1), j(!1);
                             }, 1e3)));

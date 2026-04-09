@@ -14,8 +14,8 @@ var i = n(627968),
     x = n(964486),
     h = n(775602),
     _ = n(63104),
-    p = n(861197),
-    A = n(967144),
+    A = n(861197),
+    p = n(967144),
     f = n(34457),
     j = n(576705),
     N = n(792831),
@@ -26,7 +26,7 @@ var i = n(627968),
     b = n(927573),
     v = n(652215),
     S = n(985018),
-    y = n(914535);
+    y = n(87024);
 let R = "DRAGGABLE_ROLE";
 function O(e) {
     let t,
@@ -38,7 +38,7 @@ function O(e) {
             onClick: g,
             currentPosition: x,
             onDragStart: h,
-            onDragReset: p,
+            onDragReset: A,
             onDragComplete: j,
             roleStyle: N,
         } = e,
@@ -46,14 +46,14 @@ function O(e) {
         T = (0, f.Oy)(l),
         I = null == E && !T,
         b = l.tags?.guild_connections !== void 0,
-        S = (0, A.X_)(s.id, l, l.colorStrings),
+        S = (0, p.X_)(s.id, l, l.colorStrings),
         [, O] = (0, a.i)({
             type: R,
             item: () => (h(l.id), { id: l.id, position: x }),
             canDrag: () => I,
             end: (e, t) => {
                 let n = t.getDropResult();
-                null == n ? p() : j(n.roleId);
+                null == n ? A() : j(n.roleId);
             },
         }),
         [{ dragSourcePosition: G }, L] = (0, o.H)({
@@ -108,7 +108,7 @@ function G(e) {
         o = (0, d.bG)([E.A], () => E.A.roles),
         m = (0, d.bG)([j.A], () => j.A.getHighestRole(t)),
         _ = (0, d.bG)([h.A], () => h.A.roleStyle),
-        [A, f] = s.useState(o.length),
+        [p, f] = s.useState(o.length),
         { scrolledToTop: C, handleScroll: v } = (0, I.u)(),
         { handleDragStart: R, handleDragReset: G, handleDragComplete: L } = (0, T.A)(o),
         D = s.useRef(null),
@@ -124,9 +124,9 @@ function G(e) {
             M(n);
         }),
         s.useEffect(() => {
-            o.length > A && M(n), o.length !== A && f(o.length);
-        }, [o.length, A, f, M, n]),
-        (0, i.jsx)(p.Ay.Sidebar, {
+            o.length > p && M(n), o.length !== p && f(o.length);
+        }, [o.length, p, f, M, n]),
+        (0, i.jsx)(A.Ay.Sidebar, {
             className: y.pz,
             children: (0, i.jsxs)("div", {
                 className: y.kL,

@@ -1,49 +1,49 @@
-e.d(i, { default: () => E });
-var n = e(627968),
-    l = e(64700),
-    s = e(158954),
-    r = e(311907),
-    a = e(397927),
-    c = e(287809),
-    d = e(975571),
-    o = e(735321),
-    u = e(463259),
-    x = e(606758),
-    h = e(518477),
-    p = e(985018),
-    b = e(34589);
-function g(t) {
-    let { widget: i, user: e } = t;
-    return (0, n.jsx)(u.u, { widget: i, user: e, disableInteraction: !0 });
+n.d(t, { default: () => h });
+var i = n(627968),
+    a = n(64700),
+    l = n(158954),
+    r = n(311907),
+    d = n(397927),
+    o = n(287809),
+    _ = n(975571),
+    s = n(735321),
+    E = n(463259),
+    p = n(606758),
+    c = n(518477),
+    u = n(985018),
+    S = n(910136);
+function T(e) {
+    let { widget: t, user: n } = e;
+    return (0, i.jsx)(E.u, { widget: t, user: n, disableInteraction: !0 });
 }
-function E(t) {
-    let { transitionState: i, widget: e, userId: u, onClose: E, trackUserProfileEditAction: j } = t,
-        m = l.useCallback(() => {
-            (0, o.qA)(e),
-                j({ action: "WIDGET_REMOVED", ...e.getProfileEditAnalyticsOptions() }),
-                E(),
-                (0, x.XA)(h.jM.WIDGET_REMOVED);
-        }, [e, E, j]),
-        w = (0, r.bG)([c.default], () => c.default.getUser(u));
-    return null == w
+function h(e) {
+    let { transitionState: t, widget: n, userId: E, onClose: h, trackUserProfileEditAction: I } = e,
+        R = a.useCallback(() => {
+            (0, s.qA)(n),
+                I({ action: "WIDGET_REMOVED", ...n.getProfileEditAnalyticsOptions() }),
+                h(),
+                (0, p.XA)(c.jM.WIDGET_REMOVED);
+        }, [n, h, I]),
+        v = (0, r.bG)([o.default], () => o.default.getUser(E));
+    return null == v
         ? null
-        : (0, n.jsxs)(s.Modal, {
-              transitionState: i,
-              onClose: E,
-              title: p.intl.string(p.t.Mm07Yc),
-              subtitle: p.intl.format(p.t["x+djI4"], { helpUrl: d.C }),
+        : (0, i.jsxs)(l.Modal, {
+              transitionState: t,
+              onClose: h,
+              title: u.intl.string(u.t.Mm07Yc),
+              subtitle: u.intl.format(u.t["x+djI4"], { helpUrl: _.C }),
               actions: [
-                  { variant: "secondary", text: p.intl.string(p.t["ETE/oC"]), onClick: E },
-                  { variant: "critical-primary", text: p.intl.string(p.t.Mm07Yc), onClick: m },
+                  { variant: "secondary", text: u.intl.string(u.t["ETE/oC"]), onClick: h },
+                  { variant: "critical-primary", text: u.intl.string(u.t.Mm07Yc), onClick: R },
               ],
               children: [
-                  (0, n.jsx)("div", { className: b.w, children: (0, n.jsx)(g, { widget: e, user: w }) }),
-                  (0, n.jsx)("div", {
-                      className: b.d,
-                      children: (0, n.jsx)(a.Text, {
+                  (0, i.jsx)("div", { className: S.w, children: (0, i.jsx)(T, { widget: n, user: v }) }),
+                  (0, i.jsx)("div", {
+                      className: S.d,
+                      children: (0, i.jsx)(d.Text, {
                           color: "text-subtle",
                           variant: "text-sm/normal",
-                          children: p.intl.string(p.t.bQNGeT),
+                          children: u.intl.string(u.t.bQNGeT),
                       }),
                   }),
               ],

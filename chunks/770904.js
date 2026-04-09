@@ -12,11 +12,11 @@ var i = n(627968),
     A = n(186111),
     _ = n(249584),
     m = n(652215),
-    p = n(746080),
-    g = n(49999),
-    f = n(738072),
+    g = n(746080),
+    p = n(49999),
+    f = n(294726),
     x = n(985018),
-    E = n(64668);
+    E = n(866153);
 let I = l.memo(function (e) {
     let { guildId: t, selected: n } = e,
         I = (0, r.useHasAnyModalOpen)(),
@@ -24,18 +24,18 @@ let I = l.memo(function (e) {
         N = (0, u.xr)((e) => e.fullScreenLayers.length > 0),
         [T, S] = (0, d.ww)([a.M.GAME_SERVER_HOSTING_NEW_BADGE], t),
         b = T === a.M.GAME_SERVER_HOSTING_NEW_BADGE,
-        [v, y] = (0, d.ww)(I || C || N || !b ? [] : [a.M.GAME_SERVER_HOSTING_NEW_COACHMARK], t),
+        [y, v] = (0, d.ww)(I || C || N || !b ? [] : [a.M.GAME_SERVER_HOSTING_NEW_COACHMARK], t),
         j = l.useCallback(
             (e) => {
-                S(e), y(e);
+                S(e), v(e);
             },
-            [S, y],
+            [S, v],
         ),
         R = l.useCallback(() => {
-            j(g.i.USER_DISMISS), (0, h.pX)(m.BVt.CHANNEL(t, p.VV.GAME_SERVERS));
+            j(p.i.USER_DISMISS), (0, h.pX)(m.BVt.CHANNEL(t, g.VV.GAME_SERVERS));
         }, [t, j]),
         O = l.useRef(null),
-        L = v === a.M.GAME_SERVER_HOSTING_NEW_COACHMARK,
+        L = y === a.M.GAME_SERVER_HOSTING_NEW_COACHMARK,
         M = l.useCallback(() => (0, i.jsx)(_.mn, { channelRowRef: O, guildId: t, markAsDismissed: j }), [t, j]);
     return (0, i.jsxs)(i.Fragment, {
         children: [

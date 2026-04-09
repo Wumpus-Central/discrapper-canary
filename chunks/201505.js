@@ -9,7 +9,7 @@ var i = n(627968),
     c = n(843282),
     d = n(397927),
     u = n(985018),
-    h = n(191);
+    h = n(254112);
 let _ = o()().localeData().months(),
     p = Array.from(Array(31).keys()).map((e) => ({ value: e + 1, label: `${e + 1}` })),
     g = Array.from(Array(12).keys()).map((e) => ({ value: e + 1, label: _[e] })),
@@ -98,11 +98,11 @@ let E = s.forwardRef(function (e, t) {
             }, [n]),
             r.current),
         [D, B] = s.useState(I ? 0 : -1),
-        U = s.useMemo(f, []),
-        P = { onPopulated: E, sortedInputs: U },
-        G = s.useRef(P);
+        P = s.useMemo(f, []),
+        U = { onPopulated: E, sortedInputs: P },
+        G = s.useRef(U);
     s.useEffect(() => {
-        G.current = P;
+        G.current = U;
     }),
         s.useEffect(() => {
             let { onPopulated: e, sortedInputs: t } = G.current;
@@ -110,7 +110,7 @@ let E = s.forwardRef(function (e, t) {
         }, [D]);
     let F = [];
     for (let e = 0; e < 3; e++) {
-        let { type: t } = U[e];
+        let { type: t } = P[e];
         switch (t) {
             case "day":
                 F.push({

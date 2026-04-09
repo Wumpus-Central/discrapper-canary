@@ -2,13 +2,13 @@ n.d(t, { A: () => o });
 var l = n(627968);
 n(64700);
 var a = n(397927),
-    i = n(263063),
-    r = n(71393),
+    r = n(263063),
+    i = n(71393),
     s = n(985018),
-    d = n(26465);
+    d = n(944666);
 let o = (e) => {
     let { stageInstance: t } = e,
-        n = r.A.getGuild(t.guild_id);
+        n = i.A.getGuild(t.guild_id);
     return null == n
         ? null
         : (0, l.jsxs)("div", {
@@ -25,7 +25,7 @@ let o = (e) => {
                           (0, l.jsxs)("div", {
                               className: d.OA,
                               children: [
-                                  (0, l.jsx)(i.Ay, { guild: n, size: i.Ay.Sizes.MINI, className: d.$f }),
+                                  (0, l.jsx)(r.Ay, { guild: n, size: r.Ay.Sizes.MINI, className: d.$f }),
                                   (0, l.jsx)(a.Text, {
                                       color: "text-default",
                                       variant: "text-sm/normal",

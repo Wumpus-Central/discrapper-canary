@@ -26,9 +26,9 @@ var a = n(627968),
     T = n(42473),
     N = n(731854),
     I = n(985018),
-    k = n(83214),
-    O = n(85247),
-    R = n(458756),
+    k = n(807880),
+    O = n(479360),
+    R = n(545229),
     w = n(973324);
 function D(e) {
     let t,
@@ -51,8 +51,8 @@ function D(e) {
         } = e,
         { showPTTIconIndicator: $ } = C.A.useConfig({ location: "MicrophoneButton" }),
         q = (0, o.bG)([y.Ay], () => y.Ay.getMode() === N.TB.PUSH_TO_TALK),
-        Y = (0, o.bG)([y.Ay], () => y.Ay.getSettings().modeOptions.shortcut),
-        Q = (0, o.bG)([g.A], () => g.A.getIsTutorialActive(f.v.MUTE_TUTORIAL)),
+        Q = (0, o.bG)([y.Ay], () => y.Ay.getSettings().modeOptions.shortcut),
+        Y = (0, o.bG)([g.A], () => g.A.getIsTutorialActive(f.v.MUTE_TUTORIAL)),
         J = (0, o.bG)([S.A], () => null != S.A.getChannelId()),
         { name: X } = (0, j.x5)(N.oh.AUDIO_INPUT),
         { enabledInputProfiles: Z } = (0, A.d)({ location: "MicrophoneButton" }),
@@ -69,15 +69,15 @@ function D(e) {
         : H || V
           ? {
                 tooltipType: "green_void_do_not_use",
-                tooltipText: I.intl.format(I.t.c1qUOQ, { keybind: E.dI(Y).toLocaleUpperCase() }),
+                tooltipText: I.intl.format(I.t.c1qUOQ, { keybind: E.dI(Q).toLocaleUpperCase() }),
                 tooltipForceOpen: !0,
             }
           : { tooltipText: eo };
     let ed = $ && q && J,
         ec = et ? d.A.colors.ICON_VOICE_MUTED : "currentColor",
         eu = i.useCallback(() => {
-            B(), Q && p.N(f.v.MUTE_TUTORIAL);
-        }, [B, Q]);
+            B(), Y && p.N(f.v.MUTE_TUTORIAL);
+        }, [B, Y]);
     return (0, a.jsxs)(x.f5, {
         value: ea,
         children: [
@@ -175,7 +175,7 @@ function D(e) {
             }),
             (0, a.jsx)(u.AM, {
                 targetElementRef: ee,
-                shouldShow: Q,
+                shouldShow: Y,
                 graphic: { type: "image", src: w.A },
                 onRequestClose: () => {
                     p.N(f.v.MUTE_TUTORIAL);

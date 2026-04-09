@@ -11,7 +11,7 @@ var i = n(627968),
     u = n(512031),
     m = n(652215),
     g = n(985018),
-    x = n(512672);
+    x = n(19427);
 function h(e) {
     let {
             guild: t,
@@ -55,7 +55,7 @@ function _(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(c.A, { role: n, onClick: u }),
-            (0, i.jsx)(p, { guild: t, query: l, setQuery: o }),
+            (0, i.jsx)(A, { guild: t, query: l, setQuery: o }),
             (0, i.jsx)(a.Text, {
                 className: x.BK,
                 color: "text-default",
@@ -85,7 +85,7 @@ function _(e) {
         ],
     });
 }
-function p(e) {
+function A(e) {
     let { guild: t, query: n, setQuery: l } = e,
         [r, d] = s.useState(!1),
         c = s.useCallback(

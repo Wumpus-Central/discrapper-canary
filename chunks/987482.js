@@ -1,23 +1,23 @@
 n.r(t), n.d(t, { default: () => v });
 var i = n(627968),
-    r = n(64700),
-    a = n(503698),
-    l = n.n(a),
+    a = n(64700),
+    r = n(503698),
+    l = n.n(r),
     s = n(481613),
     o = n.n(s),
     d = n(607399),
     c = n(247775),
     u = n(311907),
     A = n(732955),
-    h = n(397927),
-    _ = n(315982),
+    _ = n(397927),
+    h = n(315982),
     m = n(961350),
-    p = n(287809),
-    g = n(954571),
+    g = n(287809),
+    p = n(954571),
     E = n(53505),
     I = n(652215),
     f = n(985018),
-    C = n(28690);
+    C = n(342453);
 let T = [
         { getOs: () => f.intl.string(f.t.NK5ySJ), icon: C.Bt, url: () => (0, E.oW)("osx", !1), platformKey: 0 },
         { getOs: () => f.intl.string(f.t.OvKGE6), icon: C.KF, url: () => (0, E.oW)("win", !1), platformKey: 1 },
@@ -36,33 +36,33 @@ let T = [
         { getOs: () => f.intl.string(f.t.wuQpJD), icon: C.yA, url: () => I.AMi.ANDROID, platformKey: 4 },
     ],
     S = (e) => {
-        let { os: t, url: n, onClick: a } = e,
-            l = r.useRef(null),
-            [s, o] = r.useState(!1),
-            d = r.useCallback(
+        let { os: t, url: n, onClick: r } = e,
+            l = a.useRef(null),
+            [s, o] = a.useState(!1),
+            d = a.useCallback(
                 (e) => {
-                    let { closePopout: r } = e;
+                    let { closePopout: a } = e;
                     return Array.isArray(n)
-                        ? (0, i.jsx)(h.W1t, {
+                        ? (0, i.jsx)(_.W1t, {
                               "data-menu-migrated": !0,
                               navId: "download-app-menu",
                               "aria-label": f.intl.string(f.t["+1H47t"]),
-                              onClose: r,
+                              onClose: a,
                               onSelect: void 0,
                               children: n.map((e) =>
                                   (0, i.jsx)(
-                                      h.Drp,
-                                      { id: e.url(), label: e.getText(), action: () => a(t, e.url()) },
+                                      _.Drp,
+                                      { id: e.url(), label: e.getText(), action: () => r(t, e.url()) },
                                       e.url(),
                                   ),
                               ),
                           })
                         : null;
                 },
-                [t, n, a],
+                [t, n, r],
             );
         return Array.isArray(n)
-            ? (0, i.jsx)(h.YNO, {
+            ? (0, i.jsx)(_.YNO, {
                   renderPopout: d,
                   targetElementRef: l,
                   align: "left",
@@ -83,7 +83,7 @@ let T = [
               })
             : (0, i.jsx)(A.$nd, {
                   text: f.intl.string(f.t["1WjMbC"]),
-                  onClick: () => a(t, n()),
+                  onClick: () => r(t, n()),
                   variant: "primary",
                   size: "sm",
                   fullWidth: !0,
@@ -91,13 +91,13 @@ let T = [
               });
     },
     x = (e) => {
-        let { platform: t, onClick: n, onMouseEnter: r, isActive: a } = e,
+        let { platform: t, onClick: n, onMouseEnter: a, isActive: r } = e,
             { getOs: s, icon: o, url: d, platformKey: c } = t,
             u = s(),
             A = l()(C.Kk, o);
         return (0, i.jsx)("li", {
-            className: l()(C.iD, { [C.vu]: a }),
-            onMouseEnter: () => r(c),
+            className: l()(C.iD, { [C.vu]: r }),
+            onMouseEnter: () => a(c),
             children: (0, i.jsxs)("div", {
                 className: C.FG,
                 children: [
@@ -107,7 +107,7 @@ let T = [
                     }),
                     (0, i.jsxs)("div", {
                         children: [
-                            (0, i.jsx)(h.Heading, { className: C.$r, variant: "heading-lg/semibold", children: u }),
+                            (0, i.jsx)(_.Heading, { className: C.$r, variant: "heading-lg/semibold", children: u }),
                             (0, i.jsx)("div", {
                                 className: C.l6,
                                 children: (0, i.jsx)(S, { os: u, url: d, onClick: n }),
@@ -119,11 +119,11 @@ let T = [
         });
     };
 function v(e) {
-    let { source: t, onClose: n, transitionState: a } = e,
-        s = (0, u.bG)([p.default], () => p.default.getCurrentUser()),
+    let { source: t, onClose: n, transitionState: r } = e,
+        s = (0, u.bG)([g.default], () => g.default.getCurrentUser()),
         E = (0, u.bG)([m.default], () => m.default.getFingerprint()),
         S = null == s || s.isClaimed(),
-        [v, b] = r.useState(
+        [v, b] = a.useState(
             (function () {
                 switch (o().os?.family) {
                     case "OS X":
@@ -148,7 +148,7 @@ function v(e) {
         );
     function y(e, i) {
         (null != c.getToken() || null != E) &&
-            g.default.track(I.HAw.DOWNLOAD_APP, {
+            p.default.track(I.HAw.DOWNLOAD_APP, {
                 platform: e,
                 ptb: !1,
                 released: !0,
@@ -156,21 +156,21 @@ function v(e) {
                 referring_location: t,
                 qr_code: !1,
             }),
-            S ? window.open(i, "_blank") : (n(), _.R());
+            S ? window.open(i, "_blank") : (n(), h.R());
     }
     function O(e) {
         b(e);
     }
     return (
-        r.useEffect(() => {
-            g.default.track(I.HAw.OPEN_MODAL, { type: "Download App", source: { location: t } });
+        a.useEffect(() => {
+            p.default.track(I.HAw.OPEN_MODAL, { type: "Download App", source: { location: t } });
         }, [t]),
         (0, i.jsx)(A.aFV, {
             title: f.intl.string(f.t["BK8LK+"]),
             actions: void 0,
             onClose: n,
-            transitionState: a,
-            preview: (0, i.jsx)(h.Text, { variant: "text-sm/normal", children: f.intl.format(f.t["RJS+1P"], {}) }),
+            transitionState: r,
+            preview: (0, i.jsx)(_.Text, { variant: "text-sm/normal", children: f.intl.format(f.t["RJS+1P"], {}) }),
             children: (0, i.jsxs)("div", {
                 className: C.kL,
                 children: [
@@ -178,7 +178,7 @@ function v(e) {
                         (0, i.jsxs)("div", {
                             className: C.Fp,
                             children: [
-                                (0, i.jsx)(h.Heading, {
+                                (0, i.jsx)(_.Heading, {
                                     variant: "heading-md/normal",
                                     color: "text-subtle",
                                     className: C.wx,
@@ -200,7 +200,7 @@ function v(e) {
                         className: C.Fp,
                         children: [
                             !d.Fr &&
-                                (0, i.jsx)(h.Heading, {
+                                (0, i.jsx)(_.Heading, {
                                     variant: "heading-md/normal",
                                     color: "text-subtle",
                                     className: C.wx,

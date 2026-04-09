@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => _ });
 var i = n(627968);
 n(64700);
 var l = n(311907),
@@ -8,19 +8,19 @@ var l = n(311907),
     o = n(122906),
     d = n(401755),
     c = n(985018),
-    u = n(37925),
-    _ = n(147673);
-function m(e) {
+    u = n(157484),
+    m = n(366228);
+function _(e) {
     let { code: t } = e,
-        m = (0, l.bG)([o.A], () => o.A.getGuildTemplate(t));
-    if (null == m || m.state === d.QB.RESOLVING)
+        _ = (0, l.bG)([o.A], () => o.A.getGuildTemplate(t));
+    if (null == _ || _.state === d.QB.RESOLVING)
         return (0, i.jsxs)(r.A, {
             children: [
                 (0, i.jsx)(r.A.Header, { text: c.intl.string(c.t.Xj87Yf) }),
                 (0, i.jsx)(r.A.Body, { resolving: !0 }),
             ],
         });
-    if (m.state === d.QB.EXPIRED)
+    if (_.state === d.QB.EXPIRED)
         return (0, i.jsxs)(r.A, {
             children: [
                 (0, i.jsx)(r.A.Header, { text: c.intl.string(c.t.C7ZRNw) }),
@@ -37,11 +37,11 @@ function m(e) {
         : (0, i.jsx)(s.Button, {
               onClick: () => {
                   (0, s.mMO)(async () => {
-                      let { default: e } = await Promise.all([n.e("7726"), n.e("30106")]).then(n.bind(n, 72715));
-                      return (t) => (0, i.jsx)(e, { ...t, guildTemplate: m });
+                      let { default: e } = await Promise.all([n.e("7726"), n.e("49040")]).then(n.bind(n, 72715));
+                      return (t) => (0, i.jsx)(e, { ...t, guildTemplate: _ });
                   });
               },
-              loading: m.state === d.QB.ACCEPTING,
+              loading: _.state === d.QB.ACCEPTING,
               variant: "active",
               text: c.intl.string(c.t["a3Gl+e"]),
           });
@@ -51,12 +51,12 @@ function m(e) {
             (0, i.jsxs)(r.A.Body, {
                 children: [
                     (0, i.jsxs)("div", {
-                        className: _.iH,
+                        className: m.iH,
                         children: [
                             (0, i.jsx)(a.A, { className: u.K }),
                             (0, i.jsx)(r.A.Info, {
-                                title: m.name,
-                                children: c.intl.format(c.t.cGXXHL, { usageCount: String(m.usageCount ?? 0) }),
+                                title: _.name,
+                                children: c.intl.format(c.t.cGXXHL, { usageCount: String(_.usageCount ?? 0) }),
                             }),
                         ],
                     }),

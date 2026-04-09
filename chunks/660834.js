@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => A, N8: () => _, Q$: () => p });
+n.d(t, { Ay: () => p, N8: () => _, Q$: () => A });
 var i = n(627968);
 n(64700);
 var s = n(735438),
@@ -12,7 +12,7 @@ var s = n(735438),
     u = n(555337),
     m = n(652215),
     g = n(985018),
-    x = n(92938);
+    x = n(366277);
 function h(e) {
     if (null == e) return !1;
     let t = e.features.has(m.GuildFeatures.COMMUNITY),
@@ -23,7 +23,7 @@ function _() {
     let e = u.A.getProps().guild;
     null != e && (h(e) ? (c.A.close(), (0, o.aZ)(e.id)) : c.A.open(e.id, m.BEX.MEMBERS));
 }
-function p() {
+function A() {
     let e = h((0, l.bG)([u.A], () => u.A.getProps().guild, []));
     return (0, i.jsxs)("div", {
         className: x.q,
@@ -33,7 +33,7 @@ function p() {
         ],
     });
 }
-function A() {
+function p() {
     let { guild: e } = (0, l.bG)([u.A], () => u.A.getProps(), [], s.isEqual),
         t = e?.id ?? m.dJq;
     return (0, a.fw)(t) ? (0, i.jsx)(d.A, { guildId: t }) : null;

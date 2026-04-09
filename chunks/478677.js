@@ -1,35 +1,35 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => p });
 var i = n(627968),
-    r = n(64700),
-    a = n(503698),
-    l = n.n(a),
+    a = n(64700),
+    r = n(503698),
+    l = n.n(r),
     s = n(311907),
     o = n(397927),
     d = n(87664),
     c = n(287809),
     u = n(427262),
     A = n(198525),
-    h = n(652215),
-    _ = n(985018),
-    m = n(349661),
-    p = n(651099);
-let g = function (e) {
+    _ = n(652215),
+    h = n(985018),
+    m = n(446e3),
+    g = n(891408);
+let p = function (e) {
     let { quest: t } = e,
-        [n, a] = r.useState(!1),
-        g = r.useRef(null),
+        [n, r] = a.useState(!1),
+        p = a.useRef(null),
         E = (0, s.bG)([c.default], () => c.default.getCurrentUser()),
         I = u.Ay.useName(E),
         f = (0, d.A)(E?.id),
-        C = r.useCallback(
+        C = a.useCallback(
             (e) =>
                 (0, i.jsx)(A.A, {
                     name: I,
                     quest: t,
-                    memberListItemRef: g,
+                    memberListItemRef: p,
                     applicationStream: f,
                     ...e,
                     closePopout: () => {
-                        a(!1);
+                        r(!1);
                     },
                 }),
             [t, f, I],
@@ -40,19 +40,19 @@ let g = function (e) {
             className: m.B0,
             children: [
                 (0, i.jsx)(o.Heading, {
-                    className: p.R_,
+                    className: g.R_,
                     variant: "heading-md/semibold",
-                    children: _.intl.string(_.t.jY7Zxg),
+                    children: h.intl.string(h.t.jY7Zxg),
                 }),
-                (0, i.jsx)("div", { className: p.$Q, children: _.intl.string(_.t.q3hbne) }),
+                (0, i.jsx)("div", { className: g.$Q, children: h.intl.string(h.t.q3hbne) }),
                 (0, i.jsx)("div", {
-                    className: p.k0,
+                    className: g.k0,
                     children: (0, i.jsx)(o.YNO, {
-                        targetElementRef: g,
+                        targetElementRef: p,
                         renderPopout: C,
                         position: "bottom",
                         shouldShow: n,
-                        onRequestClose: () => a(!1),
+                        onRequestClose: () => r(!1),
                         nudgeAlignIntoViewport: !1,
                         useRawTargetDimensions: !0,
                         animation: o.YNO.Animation.NONE,
@@ -61,22 +61,22 @@ let g = function (e) {
                         scrollBehavior: "close",
                         children: () =>
                             (0, i.jsx)("div", {
-                                ref: g,
-                                className: l()(p.Tn, { [p.wH]: n }),
+                                ref: p,
+                                className: l()(g.Tn, { [g.wH]: n }),
                                 children: (0, i.jsx)(o.DUT, {
-                                    onClick: () => a(!n),
+                                    onClick: () => r(!n),
                                     tabIndex: 0,
                                     children: (0, i.jsxs)("div", {
-                                        className: p.lm,
+                                        className: g.lm,
                                         children: [
                                             (0, i.jsx)(o.euF, {
                                                 size: o._3J.SIZE_32,
                                                 src: E?.getAvatarURL(void 0, 32),
-                                                status: h.clD.ONLINE,
+                                                status: _.clD.ONLINE,
                                                 "aria-label": E?.username,
                                             }),
                                             (0, i.jsxs)("div", {
-                                                className: p.Fj,
+                                                className: g.Fj,
                                                 children: [
                                                     (0, i.jsx)(o.Text, {
                                                         variant: "text-md/semibold",
@@ -86,7 +86,7 @@ let g = function (e) {
                                                     (0, i.jsx)(o.Text, {
                                                         variant: "text-sm/normal",
                                                         color: "text-muted",
-                                                        children: _.intl.string(_.t.b9w3bO),
+                                                        children: h.intl.string(h.t.b9w3bO),
                                                     }),
                                                 ],
                                             }),

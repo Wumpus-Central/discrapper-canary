@@ -4,9 +4,9 @@ var r = s(627968),
     n = s(158954),
     o = s(975571),
     l = s(652215),
-    i = s(136708),
+    i = s(333354),
     d = s(985018),
-    c = s(609161);
+    c = s(1752);
 function _(e) {
     let { powerup: a } = e;
     return a.skuId === t.FB

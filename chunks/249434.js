@@ -8,7 +8,7 @@ var i = n(627968),
     o = n(555337),
     d = n(339984),
     c = n(985018),
-    u = n(102114);
+    u = n(419403);
 function m(e) {
     let { profile: t, handleIconChange: l, canManageGuild: o } = e,
         m = s.useCallback(() => {
@@ -18,10 +18,10 @@ function m(e) {
             (e, t) => {
                 (0, r.mMO)(async () => {
                     let { default: s } = await Promise.all([
-                        n.e("59701"),
+                        n.e("79149"),
                         n.e("35929"),
                         n.e("74571"),
-                        n.e("15167"),
+                        n.e("9992"),
                     ]).then(n.bind(n, 142630));
                     return (n) =>
                         (0, i.jsx)(s, {

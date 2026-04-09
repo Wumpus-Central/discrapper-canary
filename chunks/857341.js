@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => p });
 var i = n(627968),
     l = n(64700),
     s = n(311907),
@@ -11,22 +11,22 @@ var i = n(627968),
     h = n(75811);
 n(603266);
 var m = n(985018),
-    A = n(683981),
-    p = n(135027);
-function g(e) {
+    A = n(97262),
+    g = n(804674);
+function p(e) {
     let { channelId: t } = e,
         n = (0, s.bG)([r.A], () => r.A.getSecureFramesState()?.epochAuthenticator),
-        g = (0, u.z)({ fingerprintBase64: n, chunkSize: 5, desiredLength: 30 }),
-        [f, _] = l.useState(!1),
-        E = l.useMemo(() => g?.join(" "), [g]),
+        p = (0, u.z)({ fingerprintBase64: n, chunkSize: 5, desiredLength: 30 }),
+        [_, f] = l.useState(!1),
+        E = l.useMemo(() => p?.join(" "), [p]),
         x = l.useCallback(() => {
             null != E &&
                 (0, o.C)(E, () => {
-                    _(!0), (0, c.k0)({ channelId: t }), setTimeout(() => _(!1), 2e3);
+                    f(!0), (0, c.k0)({ channelId: t }), setTimeout(() => f(!1), 2e3);
                 });
         }, [t, E]);
     return (0, i.jsxs)("div", {
-        className: p.kL,
+        className: g.kL,
         children: [
             (0, i.jsx)(a.Heading, {
                 variant: "text-sm/bold",
@@ -39,16 +39,16 @@ function g(e) {
                 children: m.intl.format(m.t.wKxADe, { helpArticle: (0, d.aW)() }),
             }),
             (0, i.jsx)("div", {
-                className: p.on,
-                children: (0, i.jsx)(h.j, { chunks: g, columns: 3, className: p.lu }),
+                className: g.on,
+                children: (0, i.jsx)(h.j, { chunks: p, columns: 3, className: g.lu }),
             }),
-            null != g &&
+            null != p &&
                 (0, i.jsxs)(a.DUT, {
                     className: A.n2,
                     onClick: x,
                     children: [
                         (0, i.jsx)("div", {
-                            className: f ? A.Dx : A.t6,
+                            className: _ ? A.Dx : A.t6,
                             children: (0, i.jsx)(a.Button, {
                                 icon: a.TdU,
                                 text: m.intl.string(m.t.OpuAlK),
@@ -58,7 +58,7 @@ function g(e) {
                             }),
                         }),
                         (0, i.jsx)("div", {
-                            className: f ? A.t6 : A.Dx,
+                            className: _ ? A.t6 : A.Dx,
                             children: (0, i.jsx)(a.Button, {
                                 icon: a.yr3,
                                 text: m.intl.string(m.t.t5VZ88),

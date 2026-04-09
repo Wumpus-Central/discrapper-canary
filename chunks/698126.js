@@ -12,14 +12,14 @@ var i = n(627968),
     A = n(976860),
     _ = n(734057),
     m = n(71393),
-    p = n(576705),
-    g = n(994500),
+    g = n(576705),
+    p = n(994500),
     f = n(287809),
     x = n(557534),
     E = n(166444),
     I = n(652215),
     C = n(790782),
-    N = n(99566);
+    N = n(928409);
 function T(e, t) {
     let n = t.getGuildId();
     if (null == n) throw Error("TextChannel, preloadChannel: Channel does not have a guildId");
@@ -55,7 +55,7 @@ class S extends x.Ay {
             } = this.props,
             o = (0, i.jsx)("li", {
                 className: a()(this.getClassName(), { [N.r9]: this.isDisabled() }),
-                "data-dnd-name": (0, h.m1)(e, f.default, g.A),
+                "data-dnd-name": (0, h.m1)(e, f.default, p.A),
                 children: (0, i.jsxs)(E.Ay, {
                     className: N.Ki,
                     channel: e,
@@ -75,12 +75,12 @@ class S extends x.Ay {
 let b = (0, c.a)(S),
     y = l.memo(function (e) {
         let { channel: t, guild: n, disableSorting: l } = e,
-            s = (0, r.cf)([_.A, p.A], () => {
+            s = (0, r.cf)([_.A, g.A], () => {
                 let e = _.A.getChannel(t.parent_id);
                 return {
-                    canManageChannel: p.A.can(I.xBc.MANAGE_CHANNELS, t),
+                    canManageChannel: g.A.can(I.xBc.MANAGE_CHANNELS, t),
                     canReorderChannel:
-                        !0 !== l && null != e ? p.A.can(I.xBc.MANAGE_CHANNELS, e) : p.A.can(I.xBc.MANAGE_CHANNELS, n),
+                        !0 !== l && null != e ? g.A.can(I.xBc.MANAGE_CHANNELS, e) : g.A.can(I.xBc.MANAGE_CHANNELS, n),
                 };
             });
         return (0, i.jsx)(b, { ...s, ...e });

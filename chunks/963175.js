@@ -9,12 +9,12 @@ var i = n(627968),
     d = n(147925),
     c = n(710144),
     u = n(985018),
-    m = n(824377);
+    m = n(48940);
 function g(e) {
     let { intiallyExpanded: t = !1, title: n, description: l, children: g } = e,
         [x, h] = s.useState(t),
         _ = () => h((e) => !e),
-        p = (0, o.GV)();
+        A = (0, o.GV)();
     return (0, i.jsxs)("div", {
         className: m.kL,
         children: [
@@ -29,7 +29,7 @@ function g(e) {
                             (0, i.jsx)(a.DUT, {
                                 onClick: s(_),
                                 "aria-label": u.intl.string(u.t.e5eQOy),
-                                "aria-controls": p,
+                                "aria-controls": A,
                                 "aria-expanded": x,
                                 focusProps: { ringTarget: t },
                                 children: (0, i.jsx)(d.A, {
@@ -43,7 +43,7 @@ function g(e) {
             }),
             x &&
                 (0, i.jsxs)("div", {
-                    id: p,
+                    id: A,
                     children: [
                         null != l && (0, i.jsx)(a.Text, { variant: "text-sm/normal", className: m.h_, children: l }),
                         (0, i.jsx)("div", { className: m.yF }),

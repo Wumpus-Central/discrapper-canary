@@ -1,54 +1,54 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => _ });
 var i = n(627968),
-    r = n(64700),
-    a = n(884362),
+    a = n(64700),
+    r = n(884362),
     l = n(837381),
     s = n(311907),
     o = n(73939),
     d = n(397927),
     c = n(775602),
     u = n(652215),
-    A = n(998838);
-let h = function (e) {
+    A = n(63461);
+let _ = function (e) {
     let {
             rows: t,
             renderRow: n,
-            renderSection: h,
-            hasSearchQuery: _,
+            renderSection: _,
+            hasSearchQuery: h,
             sectionFilter: m,
-            footer: p,
-            renderSectionFooter: g,
+            footer: g,
+            renderSectionFooter: p,
         } = e,
         E = (0, s.bG)([c.A], () => c.A.keyboardModeEnabled),
         I = (0, s.bG)([c.A], () => c.A.useReducedMotion),
-        f = (0, a.Ay)({ id: "people", isEnabled: E, async scrollToStart() {}, async scrollToEnd() {} }),
+        f = (0, r.Ay)({ id: "people", isEnabled: E, async scrollToStart() {}, async scrollToEnd() {} }),
         C = m !== u.m3P.ONLINE && m !== u.m3P.ALL,
-        T = I || _ || C,
-        N = r.useMemo(
+        T = I || h || C,
+        N = a.useMemo(
             () =>
                 t.map((e, t) =>
                     0 === e.length
                         ? null
                         : T
-                          ? (0, i.jsxs)("div", { children: [h(t), e.map((e) => n(e, t)), g?.(t)] }, t)
+                          ? (0, i.jsxs)("div", { children: [_(t), e.map((e) => n(e, t)), p?.(t)] }, t)
                           : (0, i.jsxs)(
                                 o.F,
                                 {
                                     transitionAppear: !1,
                                     component: "div",
-                                    children: [h(t), e.map((e) => n(e, t)), g?.(t)],
+                                    children: [_(t), e.map((e) => n(e, t)), p?.(t)],
                                 },
                                 t,
                             ),
                 ),
-            [n, h, g, t, T],
+            [n, _, p, t, T],
         );
     return (0, i.jsx)(l.hD, {
         navigator: f,
         children: (0, i.jsx)(l.PR, {
             children: (e) => {
                 let { ref: t, ...n } = e;
-                return (0, i.jsxs)(d.ArX, { ref: t, className: A.e3, ...n, children: [N, p] });
+                return (0, i.jsxs)(d.ArX, { ref: t, className: A.e3, ...n, children: [N, g] });
             },
         }),
     });

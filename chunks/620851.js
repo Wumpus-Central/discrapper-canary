@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => p });
 var i = n(627968),
     a = n(64700),
     r = n(503698),
@@ -9,34 +9,34 @@ var i = n(627968),
     c = n(397927),
     u = n(259788),
     _ = n(302614),
-    h = n(72589);
+    h = n(594446);
 let m = { mass: 1, tension: 600, friction: 60, clamp: !0 };
-function f(e) {
+function p(e) {
     let { locked: t, pinned: n } = e,
         [r, s] = a.useState(0),
-        [f, p] = a.useState(0),
-        [g, A] = a.useState(0),
+        [p, g] = a.useState(0),
+        [f, A] = a.useState(0),
         x = a.useRef(0),
         [I, E] = a.useState(0),
         { timeToLiveMs: b, reappearTimeMs: v } = u.Ay.useState(
             (e) => ({ timeToLiveMs: e.timeToLiveMs, reappearTimeMs: e.reappearTimeMs }),
             o(),
         ),
-        S = { timeToLiveMs: b, reappearTimeMs: v },
-        C = a.useRef(S);
+        C = { timeToLiveMs: b, reappearTimeMs: v },
+        S = a.useRef(C);
     a.useEffect(() => {
-        C.current = S;
+        S.current = C;
     }),
         a.useEffect(
             () => (
                 (x.current = setInterval(() => {
                     let e = Date.now();
-                    p(e),
+                    g(e),
                         A((t) => {
                             if (0 === t) return e;
                             let n = e - t,
-                                i = C.current.timeToLiveMs,
-                                a = i + C.current.reappearTimeMs;
+                                i = S.current.timeToLiveMs,
+                                a = i + S.current.reappearTimeMs;
                             return n > i ? t + a : t;
                         });
                 }, 100)),
@@ -49,8 +49,8 @@ function f(e) {
     let y = () => {
             s(Date.now()), E((e) => e + 1);
         },
-        T = r > 0 && f - r < 1e3,
-        N = (0, c.pnh)(g > 0 && g < f && f - g < b, {
+        T = r > 0 && p - r < 1e3,
+        N = (0, c.pnh)(f > 0 && f < p && p - f < b, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },

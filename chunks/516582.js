@@ -11,7 +11,7 @@ var i = n(627968),
     u = n(378427),
     m = n(411335),
     g = n(985018),
-    x = n(10753);
+    x = n(725702);
 function h(e) {
     let { rule: t, onChangeRule: n } = e,
         h = s.useCallback(

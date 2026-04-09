@@ -2,7 +2,7 @@ n.d(t, { B: () => r });
 var i = n(627968);
 n(64700);
 var l = n(397927),
-    a = n(84956);
+    a = n(486529);
 function r(e) {
     let {
             choiceId: t,
@@ -11,9 +11,9 @@ function r(e) {
             onSelectionChange: s,
             inputType: o,
             textInputValue: c,
-            onTextInputChange: d,
+            onTextInputChange: u,
         } = e,
-        u = "true" === n.TextEntry,
+        d = "true" === n.TextEntry,
         _ = `choice-label-${t}`;
     return (0, i.jsxs)("div", {
         className: a.NV,
@@ -42,13 +42,13 @@ function r(e) {
                     }),
                 ],
             }),
-            u &&
+            d &&
                 (0, i.jsx)("div", {
                     className: a.Vi,
                     children: (0, i.jsx)(l.ksK, {
                         value: c ?? "",
                         onChange: (e) => {
-                            r || s(t), d?.(t, e);
+                            r || s(t), u?.(t, e);
                         },
                         disabled: !r,
                     }),

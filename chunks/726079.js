@@ -1,35 +1,35 @@
 n.d(t, { l: () => d });
 var i = n(627968),
-    r = n(64700),
-    a = n(397927),
+    a = n(64700),
+    r = n(397927),
     l = n(646881),
     s = n(92534),
-    o = n(828801);
+    o = n(66510);
 function d(e) {
     let { onOpen: t, onClose: n, children: d, popoutPosition: c, popoutAlign: u } = e,
-        [A, h] = r.useState(!1),
-        _ = r.useRef(null),
-        m = r.useCallback(() => {
-            h(!1), n?.();
+        [A, _] = a.useState(!1),
+        h = a.useRef(null),
+        m = a.useCallback(() => {
+            _(!1), n?.();
         }, [n]),
-        { handlePrimaryAction: p, handleContextMenu: g } = (0, s.B)(m),
-        E = r.useCallback(() => {
-            h((e) => {
+        { handlePrimaryAction: g, handleContextMenu: p } = (0, s.B)(m),
+        E = a.useCallback(() => {
+            _((e) => {
                 let i = !e;
                 return i ? t?.() : n?.(), i;
             });
         }, [n, t]),
-        I = r.useCallback(
+        I = a.useCallback(
             () =>
                 (0, i.jsx)("div", {
                     className: o.k,
-                    children: (0, i.jsx)(l.$, { onPrimaryAction: p, onContextMenu: g }),
+                    children: (0, i.jsx)(l.$, { onPrimaryAction: g, onContextMenu: p }),
                 }),
-            [g, p],
+            [p, g],
         );
-    return (0, i.jsx)(a.YNO, {
-        targetElementRef: _,
-        animation: a.YNO.Animation.NONE,
+    return (0, i.jsx)(r.YNO, {
+        targetElementRef: h,
+        animation: r.YNO.Animation.NONE,
         position: c,
         align: u,
         autoInvert: !1,
@@ -40,7 +40,7 @@ function d(e) {
         clickTrap: !0,
         children: (e, t) => {
             let { isShown: n } = t;
-            return d(E, n, e, _);
+            return d(E, n, e, h);
         },
     });
 }

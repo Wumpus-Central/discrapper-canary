@@ -11,22 +11,22 @@ var i = n(627968),
     h = n(661191),
     m = n(796774),
     A = n(209932),
-    p = n(536432),
-    g = n(933204),
-    f = n(805143),
-    _ = n(375366),
+    g = n(536432),
+    p = n(933204),
+    _ = n(805143),
+    f = n(375366),
     E = n(69217);
 n(980504);
-var x = n(74611);
+var x = n(653906);
 function C(e) {
     let {
             guildId: t,
             channel: n,
             width: C,
             height: S,
-            keepOpen: T,
-            interactive: N = !0,
-            analyticsSource: I,
+            keepOpen: I,
+            interactive: T = !0,
+            analyticsSource: N,
             onClose: v,
         } = e,
         y = (function (e) {
@@ -42,15 +42,15 @@ function C(e) {
                     };
                 return l.forEach((e) => s(e, !0)), l.forEach((e) => s(e, !1)), i;
             }, [t, n, e]);
-        })((0, f.Y)(n, !0)),
-        b = (0, g.T)(),
+        })((0, _.Y)(n, !0)),
+        b = (0, p.T)(),
         j = l.useRef(null),
         [R, M] = l.useState(void 0),
         D = (0, a.bG)([u.A], () => u.A.getMediaSessionId()),
         { analyticsLocations: O } = (0, o.Ay)(r.A.SOUNDBOARD_WHEEL),
         L = l.useCallback(
             (e) => {
-                (0, p.Ak)(e, n.id, O), v();
+                (0, g.Ak)(e, n.id, O), v();
             },
             [O, n.id, v],
         );
@@ -63,17 +63,17 @@ function C(e) {
         l.useEffect(
             () => () => {
                 let e = j.current;
-                T || null == e || L(e);
+                I || null == e || L(e);
             },
-            [T, L],
+            [I, L],
         ),
         (0, c.A)(
             {
                 type: s.ImpressionTypes.POPOUT,
                 name: s.ImpressionNames.SOUNDBOARD_POPOUT,
-                properties: { source: I, guild_id: t, media_session_id: D },
+                properties: { source: N, guild_id: t, media_session_id: D },
             },
-            { disableTrack: !N },
+            { disableTrack: !T },
         );
     let P = l.useCallback((e) => {
             (j.current = e), M(e?.soundId);
@@ -99,27 +99,27 @@ function C(e) {
                 y.map((e) =>
                     (0, i.jsx)(
                         E.Ay,
-                        { interactive: N, className: x.a, sound: e, focused: R === e.soundId, channel: n },
+                        { interactive: T, className: x.a, sound: e, focused: R === e.soundId, channel: n },
                         e.soundId,
                     ),
                 ),
-            [R, n, N, y],
+            [R, n, T, y],
         );
     return 0 === y.length
         ? null
         : (0, i.jsx)(o.f5, {
               value: O,
-              children: (0, i.jsx)(_.A, {
+              children: (0, i.jsx)(f.A, {
                   wheelWidth: C,
                   wheelHeight: S,
                   itemWidth: 96,
                   itemHeight: 52,
-                  showDeadZoneIndicator: !T,
+                  showDeadZoneIndicator: !I,
                   activeItem: R,
                   onItemSelect: k,
                   onItemAction: w,
                   onClose: v,
-                  interactive: N,
+                  interactive: T,
                   children: U,
               }),
           });

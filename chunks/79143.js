@@ -14,8 +14,8 @@ var i = n(627968),
     x = n(327325),
     h = n(935206),
     _ = n(985018),
-    p = n(19737);
-function A(e) {
+    A = n(986424);
+function p(e) {
     let {
             guildId: t,
             emojiId: n,
@@ -26,34 +26,34 @@ function A(e) {
             index: u,
             dndName: g,
             onEdit: x,
-            onMove: A,
+            onMove: p,
             disabled: f = !1,
         } = e,
         j = s.useRef(null),
         N = s.useRef(null),
-        { drag: E, dragPreview: C, drop: T, isDragging: I } = (0, h.A)(j, c, u, A);
+        { drag: E, dragPreview: C, drop: T, isDragging: I } = (0, h.A)(j, c, u, p);
     return (
         E(N),
         C(T(j)),
         (0, i.jsxs)("div", {
             ref: j,
-            className: r()(p.Nr, { [p.wy]: I, [p.r9]: f }),
+            className: r()(A.Nr, { [A.wy]: I, [A.r9]: f }),
             children: [
                 (0, i.jsxs)("div", {
-                    className: p.kV,
+                    className: A.kV,
                     children: [
-                        (0, i.jsx)(m.A, { guildId: t, emojiId: n, emojiName: l, className: p.Zg }),
+                        (0, i.jsx)(m.A, { guildId: t, emojiId: n, emojiName: l, className: A.Zg }),
                         !f &&
                             (0, i.jsx)("div", {
                                 ref: N,
-                                className: p.$p,
+                                className: A.$p,
                                 "data-dnd-name": g,
-                                children: (0, i.jsx)(o.WP0, { size: "xs", color: "currentColor", className: p.co }),
+                                children: (0, i.jsx)(o.WP0, { size: "xs", color: "currentColor", className: A.co }),
                             }),
                     ],
                 }),
                 (0, i.jsxs)("div", {
-                    className: p.O,
+                    className: A.O,
                     children: [
                         (0, i.jsx)(o.Text, { color: "text-strong", variant: "text-md/semibold", children: a }),
                         (0, i.jsx)(o.Text, {
@@ -64,15 +64,15 @@ function A(e) {
                     ],
                 }),
                 (0, i.jsx)("div", {
-                    className: p.eB,
+                    className: A.eB,
                     children:
                         !f &&
                         (0, i.jsx)(o.DUT, {
-                            className: p.xQ,
+                            className: A.xQ,
                             onClick: x,
                             "aria-label": _.intl.string(_.t.Eoo8h6),
                             "aria-disabled": f,
-                            children: (0, i.jsx)(o.R2l, { size: "xs", color: "currentColor", className: p.a2 }),
+                            children: (0, i.jsx)(o.R2l, { size: "xs", color: "currentColor", className: A.a2 }),
                         }),
                 }),
             ],
@@ -87,14 +87,14 @@ function f(e) {
     return 0 === t.length
         ? null
         : (0, i.jsx)("div", {
-              className: r()(p.kL, { [p.Id]: h }),
+              className: r()(A.kL, { [A.Id]: h }),
               children: t.map((e, t) =>
                   (0, i.jsxs)(
                       s.Fragment,
                       {
                           children: [
-                              t > 0 ? (0, i.jsx)("div", { className: p.yF }) : null,
-                              (0, i.jsx)(A, {
+                              t > 0 ? (0, i.jsx)("div", { className: A.yF }) : null,
+                              (0, i.jsx)(p, {
                                   guildId: o,
                                   emojiId: e.emoji_id,
                                   emojiName: e.emoji_name,
@@ -117,18 +117,18 @@ function f(e) {
 function j(e) {
     let { onClick: t, children: n, disabled: s = !1 } = e;
     return (0, i.jsx)(o.DUT, {
-        className: p.kL,
+        className: A.kL,
         onClick: s ? void 0 : t,
         "aria-disabled": s,
         children: (0, i.jsxs)("div", {
-            className: r()(p.Nr, p.xB, { [p.r9]: s }),
+            className: r()(A.Nr, A.xB, { [A.r9]: s }),
             children: [
                 (0, i.jsx)("div", {
-                    className: p.kV,
-                    children: (0, i.jsx)(o.U1e, { size: "xs", color: "currentColor", className: p.Ak }),
+                    className: A.kV,
+                    children: (0, i.jsx)(o.U1e, { size: "xs", color: "currentColor", className: A.Ak }),
                 }),
                 (0, i.jsx)("div", {
-                    className: p.O,
+                    className: A.O,
                     children: (0, i.jsx)(o.Text, { color: "text-strong", variant: "text-md/normal", children: n }),
                 }),
             ],

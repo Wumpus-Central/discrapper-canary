@@ -7,7 +7,7 @@ var i = n(311907),
     a = n(71393),
     o = n(967198),
     l = n(985018),
-    u = n(466530);
+    u = n(21965);
 let c = () =>
         (0, r.jsx)(r.Fragment, {
             children: l.intl.format(l.t.ymkBti, {

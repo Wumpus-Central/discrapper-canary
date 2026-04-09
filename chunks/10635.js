@@ -12,8 +12,8 @@ var i = n(627968),
     A = n(183555),
     _ = n(950191),
     m = n(657331),
-    p = n(718019),
-    g = n(31432),
+    g = n(718019),
+    p = n(31432),
     f = n(915614),
     x = n(389996),
     E = n(743987),
@@ -23,10 +23,10 @@ var i = n(627968),
     T = n(35241),
     S = n(587168),
     b = n(747524),
-    v = n(996988),
-    y = n(985018),
-    j = n(49615),
-    R = n(869891);
+    y = n(996988),
+    v = n(985018),
+    j = n(374146),
+    R = n(733866);
 function O(e) {
     let { user: t, channel: n } = e,
         O = __OVERLAY__ || !(0, d.A)(t.id),
@@ -48,7 +48,7 @@ function O(e) {
                 ref: G,
                 user: t,
                 displayProfile: L,
-                themeType: v.d.SIDEBAR,
+                themeType: y.d.SIDEBAR,
                 themeOverride: M,
                 children: [
                     (0, i.jsxs)(s.d_W, {
@@ -60,14 +60,14 @@ function O(e) {
                                     (0, i.jsx)(f.A, {
                                         user: t,
                                         displayProfile: L,
-                                        themeType: v.d.SIDEBAR,
+                                        themeType: y.d.SIDEBAR,
                                         animateOnHoverOrFocusOnly: !P,
                                     }),
-                                    (0, i.jsx)(p.A, {
+                                    (0, i.jsx)(g.A, {
                                         user: t,
                                         displayProfile: L,
                                         channelId: n.id,
-                                        themeType: v.d.SIDEBAR,
+                                        themeType: y.d.SIDEBAR,
                                         onOpenProfile: O ? void 0 : w,
                                     }),
                                 ],
@@ -81,13 +81,13 @@ function O(e) {
                                         nickname: h.Ay.getName(null, n.id, t),
                                         pronouns: L?.pronouns,
                                         onOpenProfile: O ? void 0 : w,
-                                        tags: (0, i.jsx)(g.A, { displayProfile: L, themeType: v.d.SIDEBAR }),
+                                        tags: (0, i.jsx)(p.A, { displayProfile: L, themeType: y.d.SIDEBAR }),
                                     }),
                                     (0, i.jsxs)(C.A.Overlay, {
                                         className: R.Lw,
                                         children: [
                                             (0, i.jsx)(I.A, {
-                                                heading: y.intl.string(y.t.ZzAR2Y),
+                                                heading: v.intl.string(v.t.ZzAR2Y),
                                                 headingColor: "text-strong",
                                                 children: (0, i.jsx)(x.A, {
                                                     userBio: L?.bio,
@@ -97,7 +97,7 @@ function O(e) {
                                                 }),
                                             }),
                                             (0, i.jsx)(I.A, {
-                                                heading: y.intl.string(y.t["A//N4k"]),
+                                                heading: v.intl.string(v.t["A//N4k"]),
                                                 headingColor: "text-strong",
                                                 children: (0, i.jsx)(E.A, { userId: t.id }),
                                             }),

@@ -8,9 +8,9 @@ var i = n(627968),
     d = n(353411),
     c = n(882171),
     u = n(206589),
-    _ = n(768349),
-    m = n(985018),
-    h = n(71747);
+    m = n(768349),
+    _ = n(985018),
+    h = n(772234);
 function p(e) {
     let {
             application: t,
@@ -31,7 +31,7 @@ function p(e) {
             return (
                 v ||
                     e.push({
-                        label: b.label ?? m.intl.string(m.t.VJlc0S),
+                        label: b.label ?? _.intl.string(_.t.VJlc0S),
                         trackingArea: a.kY.SYNC,
                         onClick: () => {
                             b.onClick();
@@ -44,7 +44,7 @@ function p(e) {
         }, [v, b]),
         y =
             null != g && null != g.details && null != g.state
-                ? m.intl.formatToPlainString(m.t.JCvHtx, { track: g.details, artist: g.state })
+                ? _.intl.formatToPlainString(_.t.JCvHtx, { track: g.details, artist: g.state })
                 : t.name,
         N = g?.timestamps?.start ?? g?.created_at,
         S = l.useMemo(
@@ -91,7 +91,7 @@ function p(e) {
         onClickContent: C,
         trackingConfig: {
             id: t.id,
-            linkType: _.J.RICH_PRESENCE_INVITE,
+            linkType: m.J.RICH_PRESENCE_INVITE,
             onView: E,
             referrerId: n.author.id,
             guildId: I,

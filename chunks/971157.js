@@ -19,18 +19,18 @@ var i = n(627968),
     _ = n(657681),
     N = n(267001),
     j = n(652215),
-    T = n(985018),
-    v = n(944395);
+    v = n(985018),
+    T = n(64250);
 function C(e) {
     let { application: t, guild: n, integration: l, ...s } = e;
     return (0, i.jsx)(a.ConfirmModal, {
         ...s,
-        title: T.intl.formatToPlainString(T.t["rL9d/1"], { applicationName: t.name }),
-        subtitle: T.intl.format(T.t.FGE8ya, { applicationName: t.name }),
-        confirmText: T.intl.string(T.t.ebGf4m),
+        title: v.intl.formatToPlainString(v.t["rL9d/1"], { applicationName: t.name }),
+        subtitle: v.intl.format(v.t.FGE8ya, { applicationName: t.name }),
+        confirmText: v.intl.string(v.t.ebGf4m),
         onConfirm: () => {
             u.A.disableIntegration(n.id, l.id).catch(() => {
-                d.A.show({ title: T.intl.string(T.t.wYqMmI), body: T.intl.string(T.t.A4Mnst) });
+                d.A.show({ title: v.intl.string(v.t.wYqMmI), body: v.intl.string(v.t.A4Mnst) });
             });
         },
     });
@@ -58,14 +58,14 @@ function I(e) {
             let e = [
                 {
                     icon: o.O4,
-                    text: T.intl.formatToPlainString(T.t.gcdJ8J, { timestamp: p.default.extractTimestamp(S.id) }),
+                    text: v.intl.formatToPlainString(v.t.gcdJ8J, { timestamp: p.default.extractTimestamp(S.id) }),
                 },
             ];
             return (
                 null != S.user &&
                     e.push({
                         icon: o.nys,
-                        text: T.intl.formatToPlainString(T.t.qE7oqs, { user: A.Ay.getUserTag(S.user) }),
+                        text: v.intl.formatToPlainString(v.t.qE7oqs, { user: A.Ay.getUserTag(S.user) }),
                     }),
                 e
             );
@@ -75,12 +75,12 @@ function I(e) {
                 null != E.bot && S.scopes?.includes(s.F.BOT)
                     ? (0, i.jsx)(_.A, { guild: t, applicationIntegration: n })
                     : (0, i.jsx)(o.ZpM, {
-                          className: v.aM,
+                          className: T.aM,
                           editable: !0,
                           children: (0, i.jsx)(o.Text, {
                               color: "text-muted",
                               variant: "text-sm/normal",
-                              children: T.intl.string(T.t.pfLnza),
+                              children: v.intl.string(v.t.pfLnza),
                           }),
                       }),
             [E.bot, n, t, S.scopes],
@@ -93,27 +93,27 @@ function I(e) {
                 details: L,
                 isHeader: !0,
             }),
-            E?.description != null ? (0, i.jsx)(g.A, { userBio: E.description, className: v.ux }) : null,
+            E?.description != null ? (0, i.jsx)(g.A, { userBio: E.description, className: T.ux }) : null,
             O ? (0, i.jsx)(m.A, { application: E, canNavigate: I, guildId: t.id }) : null,
-            (0, i.jsx)(o.cGx, { className: v.zN }),
+            (0, i.jsx)(o.cGx, { className: T.zN }),
             null != E.bot
                 ? (0, i.jsxs)("div", {
-                      className: v.uW,
+                      className: T.uW,
                       children: [
                           (0, i.jsx)(f.A, {
                               icon: (0, i.jsx)(o.CnV, { size: "xs", color: "currentColor" }),
-                              title: T.intl.string(T.t.AOdOYr),
+                              title: v.intl.string(v.t.AOdOYr),
                           }),
                           M,
                       ],
                   })
                 : null,
             (0, i.jsxs)("div", {
-                className: v.uW,
+                className: T.uW,
                 children: [
                     (0, i.jsx)(f.A, {
                         icon: (0, i.jsx)(o.XC7, { size: "md", color: "currentColor" }),
-                        title: T.intl.string(T.t["t9ZX/I"]),
+                        title: v.intl.string(v.t["t9ZX/I"]),
                     }),
                     y.length > 0
                         ? (0, i.jsx)(N.A, {
@@ -124,26 +124,26 @@ function I(e) {
                               canNavigate: I,
                           })
                         : (0, i.jsx)(o.ZpM, {
-                              className: v.aM,
+                              className: T.aM,
                               editable: !0,
                               children: (0, i.jsx)(o.Text, {
                                   color: "text-muted",
                                   variant: "text-sm/normal",
-                                  children: R ? T.intl.string(T.t.ahPd2Y) : T.intl.string(T.t.axqYMl),
+                                  children: R ? v.intl.string(v.t.ahPd2Y) : v.intl.string(v.t.axqYMl),
                               }),
                           }),
                 ],
             }),
-            (0, i.jsx)(o.cGx, { className: v.zN }),
+            (0, i.jsx)(o.cGx, { className: T.zN }),
             (0, i.jsxs)(c.A, {
-                className: v.uW,
+                className: T.uW,
                 justify: c.A.Justify.BETWEEN,
                 align: c.A.Align.CENTER,
                 children: [
                     (0, i.jsx)(o.Text, {
                         color: "text-default",
                         variant: "text-sm/normal",
-                        children: w ? T.intl.string(T.t.hdneL4) : T.intl.string(T.t.xRCMqx),
+                        children: w ? v.intl.string(v.t.hdneL4) : v.intl.string(v.t.xRCMqx),
                     }),
                     (0, i.jsx)(c.A.Child, {
                         grow: 0,
@@ -151,7 +151,7 @@ function I(e) {
                         children: (0, i.jsx)(o.Button, {
                             variant: "critical-primary",
                             size: "sm",
-                            text: T.intl.string(T.t.ebGf4m),
+                            text: v.intl.string(v.t.ebGf4m),
                             disabled: !w,
                             onClick: k,
                         }),

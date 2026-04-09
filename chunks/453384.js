@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => _ });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -7,18 +7,18 @@ var i = n(627968),
     o = n(397927),
     d = n(398025),
     c = n(419367),
-    u = n(44556);
-let _ = "var(--background-mod-strong)",
-    m = l.forwardRef((e, t) => {
+    u = n(293225);
+let m = "var(--background-mod-strong)",
+    _ = l.forwardRef((e, t) => {
         let {
                 percentComplete: n,
                 size: s = 42,
-                style: m = "default",
+                style: _ = "default",
                 percentCompleteText: h,
                 percentCompleteTextVariant: p = "text-lg/medium",
                 children: g,
             } = e,
-            { strokeWidth: A } = "small" === m ? { strokeWidth: 3 } : { strokeWidth: 4 },
+            { strokeWidth: A } = "small" === _ ? { strokeWidth: 3 } : { strokeWidth: 4 },
             x = s / 2,
             f = s / 2 - A / 2,
             C = 2 * Math.PI * f,
@@ -56,7 +56,7 @@ let _ = "var(--background-mod-strong)",
                             r: f,
                             cx: x,
                             cy: x,
-                            stroke: _,
+                            stroke: m,
                         }),
                         (0, i.jsx)("circle", {
                             className: u.qB,
@@ -65,7 +65,7 @@ let _ = "var(--background-mod-strong)",
                             r: f,
                             cx: x,
                             cy: x,
-                            stroke: _,
+                            stroke: m,
                         }),
                         (0, i.jsx)("circle", {
                             className: u.qB,

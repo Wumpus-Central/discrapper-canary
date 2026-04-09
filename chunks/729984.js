@@ -27,8 +27,8 @@ var i = n(627968),
     v = n(561108),
     S = n(191117),
     y = n(985018),
-    R = n(7716),
-    O = n(830684);
+    R = n(523941),
+    O = n(782691);
 function G(e) {
     let { channel: t, guild: n, isLast: s, onClickLockedChannel: l } = e,
         r = (0, d.Ay)(t);

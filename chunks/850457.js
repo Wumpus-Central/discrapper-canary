@@ -12,8 +12,8 @@ var i = n(627968),
     A = n(769015),
     _ = n(409626),
     m = n(692969),
-    p = n(290987),
-    g = n(657331),
+    g = n(290987),
+    p = n(657331),
     f = n(820512),
     x = n(769022),
     E = n(898926),
@@ -22,8 +22,8 @@ var i = n(627968),
     N = n(562153),
     T = n(652215),
     S = n(985018),
-    b = n(930935);
-function v(e) {
+    b = n(4568);
+function y(e) {
     let { event: t, guildId: n, channelId: l } = e,
         a = (0, s.bG)([I.default], () => I.default.getUser(t.userId)),
         d = (0, o.O)(t.applicationId ?? null),
@@ -53,7 +53,7 @@ function v(e) {
                                   user: (0, i.jsx)(u.A, {
                                       tag: "span",
                                       onClick: () =>
-                                          (0, g.openUserProfileModal)({ userId: t.userId, guildId: n, channelId: l }),
+                                          (0, p.openUserProfileModal)({ userId: t.userId, guildId: n, channelId: l }),
                                       children: (0, i.jsx)(r.Text, {
                                           variant: "text-sm/semibold",
                                           tag: "span",
@@ -82,9 +82,9 @@ function v(e) {
                               variant: "text-xs/normal",
                               color: "text-muted",
                               className: b.gE,
-                              children: (0, i.jsx)(p.Ay, {
+                              children: (0, i.jsx)(g.Ay, {
                                   end: t.timestamp,
-                                  location: p.Ay.Locations.VOICE_CHANNEL_HISTORY,
+                                  location: g.Ay.Locations.VOICE_CHANNEL_HISTORY,
                               }),
                           }),
                       ],
@@ -92,7 +92,7 @@ function v(e) {
               ],
           });
 }
-function y(e) {
+function v(e) {
     let { event: t, guildId: n, channelId: l } = e,
         a = (0, s.bG)([I.default], () => I.default.getUser(t.userId)),
         o = N.Ay.useName(n, l, a);
@@ -125,7 +125,7 @@ function y(e) {
                                               tag: "span",
                                               className: b.C3,
                                               onClick: () =>
-                                                  (0, g.openUserProfileModal)({
+                                                  (0, p.openUserProfileModal)({
                                                       userId: t.userId,
                                                       guildId: n,
                                                       channelId: l,
@@ -150,9 +150,9 @@ function y(e) {
                               variant: "text-xs/normal",
                               color: "text-muted",
                               className: b.gE,
-                              children: (0, i.jsx)(p.Ay, {
+                              children: (0, i.jsx)(g.Ay, {
                                   end: t.timestamp,
-                                  location: p.Ay.Locations.VOICE_CHANNEL_HISTORY,
+                                  location: g.Ay.Locations.VOICE_CHANNEL_HISTORY,
                               }),
                           }),
                       ],
@@ -163,9 +163,9 @@ function y(e) {
 function j(e) {
     let { event: t, guildId: n, channelId: l } = e;
     return t.eventType === E.i.ACTIVITY_ENDED
-        ? (0, i.jsx)(v, { event: t, guildId: n, channelId: l })
+        ? (0, i.jsx)(y, { event: t, guildId: n, channelId: l })
         : t.eventType === E.i.USER_LEFT
-          ? (0, i.jsx)(y, { event: t, guildId: n, channelId: l })
+          ? (0, i.jsx)(v, { event: t, guildId: n, channelId: l })
           : null;
 }
 function R(e) {

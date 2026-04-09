@@ -14,8 +14,8 @@ var i = n(627968),
     x = n(342296),
     h = n(544028),
     _ = n(427157),
-    p = n(994500),
-    A = n(287809),
+    A = n(994500),
+    p = n(287809),
     f = n(147925),
     j = n(860689),
     N = n(427262),
@@ -24,7 +24,7 @@ var i = n(627968),
     T = n(438407),
     I = n(652215),
     b = n(985018),
-    v = n(165636);
+    v = n(91404);
 class S extends s.PureComponent {
     render() {
         let { user: e, onContextMenu: t } = this.props;
@@ -173,7 +173,7 @@ let y = s.forwardRef((e, t) => {
                                                           channel:
                                                               null == s.channel || "string" == typeof s.channel
                                                                   ? s.channel
-                                                                  : (0, g.m1)(s.channel, A.default, p.A, !0),
+                                                                  : (0, g.m1)(s.channel, p.default, A.A, !0),
                                                           channelHook: (e, t) =>
                                                               (0, i.jsx)("span", { onContextMenu: R, children: e }, t),
                                                           subtarget: s.subtarget,

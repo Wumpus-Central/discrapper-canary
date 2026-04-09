@@ -11,7 +11,7 @@ var r = n(627968),
     d = n(183555),
     _ = n(946356),
     f = n(985018),
-    p = n(43914);
+    p = n(687109);
 function h(e) {
     let { applicationName: t, applicationIcon: n } = e;
     return (0, r.jsxs)(u.BJc, {

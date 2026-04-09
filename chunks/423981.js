@@ -14,14 +14,14 @@ var i = n(627968),
     x = n(71393),
     h = n(351906),
     _ = n(954571),
-    p = n(555337),
-    A = n(855537),
+    A = n(555337),
+    p = n(855537),
     f = n(907445),
     j = n(11725),
     N = n(652215),
     E = n(897513),
     C = n(985018),
-    T = n(915475);
+    T = n(25424);
 let I = function (e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             s = null;
@@ -50,7 +50,7 @@ let I = function (e, t, n) {
     },
     v = () => {
         let [e, t] = s.useState(!1),
-            n = (0, a.bG)([p.A], () => p.A.getGuildId());
+            n = (0, a.bG)([A.A], () => A.A.getGuildId());
         return (0, i.jsx)("div", {
             "data-button-hoisted-classname-wrapper": !0,
             className: T.XU,
@@ -85,7 +85,7 @@ let I = function (e, t, n) {
         });
     },
     S = () => {
-        let e = (0, a.bG)([p.A], () => p.A.getGuildId()),
+        let e = (0, a.bG)([A.A], () => A.A.getGuildId()),
             t = (0, a.bG)([g.A], () => g.A.getMemberCount(e)),
             n = (0, a.bG)([x.A], () => x.A.getGuild(e)),
             l = (0, a.bG)([m.default], () => m.default.locale),
@@ -103,7 +103,7 @@ let I = function (e, t, n) {
                     !n.features.has(N.GuildFeatures.PARTNERED) &&
                     !n.features.has(N.GuildFeatures.VERIFIED));
         s.useEffect(() => {
-            null == e || S || ((0, A.p9)(e), (0, A.fe)(e), (0, A._z)(e));
+            null == e || S || ((0, p.p9)(e), (0, p.fe)(e), (0, p._z)(e));
         }, [e, S]),
             s.useEffect(() => {
                 (0, u.sF)(E._.GUILD_ANALYTICS_GUILD_SETTINGS_MENU);

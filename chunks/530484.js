@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => g });
 var i = n(627968);
 n(64700);
 var l = n(311907),
@@ -12,10 +12,10 @@ var l = n(311907),
     h = n(652793),
     A = n(790782),
     _ = n(985018),
-    m = n(11464);
-function p(e) {
-    let { guild: t, selected: p } = e,
-        { hasUnread: g, mentionCount: f } = (0, l.cf)(
+    m = n(567431);
+function g(e) {
+    let { guild: t, selected: g } = e,
+        { hasUnread: p, mentionCount: f } = (0, l.cf)(
             [c.Ay],
             () => ({
                 hasUnread: c.Ay.hasUnread(t.id, A.P.GUILD_EVENT),
@@ -26,7 +26,7 @@ function p(e) {
         x = (0, l.bG)([u.Ay], () => u.Ay.isMuteScheduledEventsEnabled(t.id));
     async function E() {
         await (0, a.mMO)(async () => {
-            let { default: e } = await Promise.all([n.e("51354"), n.e("7453"), n.e("11049")]).then(n.bind(n, 926956));
+            let { default: e } = await Promise.all([n.e("51354"), n.e("7453"), n.e("9561")]).then(n.bind(n, 926956));
             return (n) => (0, i.jsx)(e, { ...n, guildId: t.id });
         }),
             (0, o.Dr)(s.M.GUILD_HEADER_EVENT_UPSELL);
@@ -37,7 +37,7 @@ function p(e) {
         id: `upcoming-events-${t.id}`,
         renderIcon: (e) => (0, i.jsx)(a.CTc, { size: "md", color: "currentColor", className: e }),
         text: C,
-        selected: p,
+        selected: g,
         onClick: E,
         onContextMenu: (e) => {
             (0, r.L3)(e, async () => {
@@ -45,7 +45,7 @@ function p(e) {
                 return (n) => (0, i.jsx)(e, { ...n, guildId: t.id });
             });
         },
-        showUnread: g && !x,
+        showUnread: p && !x,
         trailing: !x && f > 0 ? (0, i.jsx)(a.hVq, { className: m.Do, disableColor: !0, count: f }) : null,
     });
 }

@@ -36,8 +36,8 @@ var i = n(627968),
     M = n(31717),
     P = n(517019),
     G = n(71393),
-    U = n(320501),
-    V = n(994500),
+    V = n(320501),
+    U = n(994500),
     z = n(309010),
     H = n(967198),
     W = n(287809),
@@ -54,7 +54,7 @@ var i = n(627968),
     ee = n(652215),
     et = n(381941),
     en = n(985018),
-    ei = n(34501);
+    ei = n(438488);
 let es = $.Li.TOP;
 class el extends s.Component {
     textAreaRef = s.createRef();
@@ -95,7 +95,7 @@ class el extends s.Component {
         ) {
             e.preventDefault();
             let { channel: t } = this.props,
-                n = U.A.getLastEditableMessage(t.id);
+                n = V.A.getLastEditableMessage(t.id);
             null != n && p.A.startEditMessageRecord(t.id, n);
         }
     };
@@ -234,7 +234,7 @@ class ea extends s.PureComponent {
             } = this.props;
         if (null == t) return null;
         let A = o || h,
-            m = (0, g.m1)(t, W.default, V.A),
+            m = (0, g.m1)(t, W.default, U.A),
             x = !l && null != t && t.isNSFW(),
             y = !A || d;
         return (
@@ -320,7 +320,7 @@ class ea extends s.PureComponent {
         null != t &&
             null != s &&
             (0, u.L3)(e, async () => {
-                let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("39778"), n.e("22283")]).then(
+                let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("39778"), n.e("34408")]).then(
                     n.bind(n, 385913),
                 );
                 return (n) => (0, i.jsx)(e, { ...n, user: s, channelSelected: !0, channel: t });

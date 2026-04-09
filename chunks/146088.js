@@ -12,8 +12,8 @@ var n = s(627968),
     u = s(961350),
     p = s(652215),
     x = s(985018),
-    j = s(639500),
-    g = s(153335);
+    j = s(735589),
+    g = s(885106);
 a.Ay.initialize();
 let A = "done",
     B = "failed";
@@ -57,7 +57,7 @@ class N extends i.PureComponent {
     renderDone() {
         return (0, n.jsxs)(o.Ay, {
             children: [
-                (0, n.jsx)(o._V, { src: s(242584), className: g.SX }),
+                (0, n.jsx)(o._V, { src: s(20203), className: g.SX }),
                 (0, n.jsx)(o.hE, { className: g.QB, children: x.intl.string(x.t.YsLqvs) }),
                 (0, n.jsx)(o.tK, { className: g.C2, children: x.intl.string(x.t.CSBYDo) }),
                 (0, n.jsx)(d.Button, { text: x.intl.string(x.t.fIv16B), fullWidth: !0, onClick: this.handleOpenApp }),
@@ -67,7 +67,7 @@ class N extends i.PureComponent {
     renderFailed() {
         return (0, n.jsxs)(o.Ay, {
             children: [
-                (0, n.jsx)(o._V, { src: s(242584), className: g.SX }),
+                (0, n.jsx)(o._V, { src: s(20203), className: g.SX }),
                 (0, n.jsx)(o.hE, { className: g.QB, children: x.intl.string(x.t.hsLIsW) }),
                 (0, n.jsx)(o.tK, { className: g.C2, children: x.intl.string(x.t.CSBYDo) }),
                 (0, n.jsx)(d.Button, { text: x.intl.string(x.t.fIv16B), fullWidth: !0, onClick: this.handleOpenApp }),

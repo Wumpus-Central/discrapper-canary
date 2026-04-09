@@ -1,4 +1,4 @@
-r.d(t, { A: () => g, L: () => h });
+r.d(t, { A: () => g, L: () => b });
 var n = r(627968),
     a = r(64700),
     i = r(503698),
@@ -10,10 +10,10 @@ var n = r(627968),
     u = r(954571),
     m = r(128620),
     _ = r(652215),
-    p = r(723468),
+    p = r(49370),
     f = r(985018),
-    b = r(577057);
-let h = "orbs",
+    h = r(18738);
+let b = "orbs",
     g = (e) => {
         let { className: t, location: r } = e,
             { analyticsLocations: i } = (0, o.Ay)(r),
@@ -38,18 +38,18 @@ let h = "orbs",
                       threshold: 0.5,
                       children: (0, n.jsxs)("div", {
                           ref: g,
-                          id: h,
-                          className: s()(b.uW, b.Uv, b.qr, t),
+                          id: b,
+                          className: s()(h.uW, h.Uv, h.qr, t),
                           children: [
                               (0, n.jsx)(d.DZT, {
                                   variant: "display-sm",
-                                  className: b.R_,
+                                  className: h.R_,
                                   style: { textAlign: "start" },
                                   children: f.intl.string(p.default.EdGvBM),
                               }),
                               (0, n.jsx)(d.EYj, {
                                   variant: "text-md/medium",
-                                  className: s()(b.VA, b.dO),
+                                  className: s()(h.VA, h.dO),
                                   children: f.intl.string(p.default["2KoHRF"]),
                               }),
                               (0, n.jsx)(m.A, {}),

@@ -22,7 +22,7 @@ var n = s(627968),
     A = s(998694),
     S = s(438166),
     v = s(652215),
-    I = s(16464);
+    I = s(471312);
 let L = { flattenProductVariants: !0 };
 function j(e) {
     let { isFetchingCategories: t, scrollerRef: s, tab: l } = e,

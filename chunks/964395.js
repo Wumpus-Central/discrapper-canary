@@ -20,7 +20,7 @@ var n = t(627968),
     E = t(652215),
     j = t(518477),
     S = t(985018),
-    k = t(863413);
+    k = t(4196);
 function b(e) {
     let { content: l, onClick: t, ariaLabel: s, className: a } = e;
     return (0, n.jsx)(r.DUT, { className: i()(k.gb, a), onClick: t, "aria-label": s, children: l });

@@ -1,56 +1,56 @@
-n.d(t, { A: () => R });
-var a = n(627968),
-    l = n(64700),
-    i = n(503698),
-    s = n.n(i),
-    r = n(311907),
-    c = n(990078),
-    o = n(397927),
-    u = n(287809),
-    A = n(101058),
-    d = n(989299),
-    g = n(348),
-    h = n(783173),
-    f = n(656925),
-    C = n(652215),
-    m = n(339984);
-n(363385);
-var x = n(985018),
-    E = n(941668);
-function p(e) {
-    let { avatar: t, index: n, onSelectRecentAvatar: i, onDeleteRecentAvatar: s, avatarButtonRef: r } = e,
-        { id: u, storageHash: A, description: d = x.intl.string(x.t.lqaIxI) } = t,
-        { avatarSrc: g, eventHandlers: h } = (0, f.A)({ avatarId: u, storageHash: A }),
-        { onMouseEnter: C, onMouseLeave: m } = h,
-        p = l.useRef(null),
-        T = d ?? A.substring(0, 6).toUpperCase(),
-        R = x.intl.formatToPlainString(x.t.tmJ75y, { orderNumber: n + 1, description: T }),
-        N = x.intl.formatToPlainString(x.t.pBzwhc, { orderNumber: n + 1, description: T });
-    return (0, a.jsxs)("div", {
-        className: E.ge,
+a.d(t, { A: () => N });
+var n = a(627968),
+    s = a(64700),
+    r = a(503698),
+    l = a.n(r),
+    i = a(311907),
+    c = a(990078),
+    u = a(397927),
+    o = a(287809),
+    d = a(101058),
+    A = a(989299),
+    h = a(348),
+    f = a(783173),
+    g = a(656925),
+    m = a(652215),
+    x = a(339984);
+a(363385);
+var C = a(985018),
+    p = a(593335);
+function E(e) {
+    let { avatar: t, index: a, onSelectRecentAvatar: r, onDeleteRecentAvatar: l, avatarButtonRef: i } = e,
+        { id: o, storageHash: d, description: A = C.intl.string(C.t.lqaIxI) } = t,
+        { avatarSrc: h, eventHandlers: f } = (0, g.A)({ avatarId: o, storageHash: d }),
+        { onMouseEnter: m, onMouseLeave: x } = f,
+        E = s.useRef(null),
+        T = A ?? d.substring(0, 6).toUpperCase(),
+        N = C.intl.formatToPlainString(C.t.tmJ75y, { orderNumber: a + 1, description: T }),
+        R = C.intl.formatToPlainString(C.t.pBzwhc, { orderNumber: a + 1, description: T });
+    return (0, n.jsxs)("div", {
+        className: p.ge,
         children: [
-            (0, a.jsx)(o.DUT, {
-                onClick: () => i(t),
-                onMouseEnter: C,
-                onMouseLeave: m,
-                className: E.Hk,
-                "aria-label": R,
-                innerRef: r,
-                children: (0, a.jsx)("img", { src: g, alt: d, className: E.Hc }),
+            (0, n.jsx)(u.DUT, {
+                onClick: () => r(t),
+                onMouseEnter: m,
+                onMouseLeave: x,
+                className: p.Hk,
+                "aria-label": N,
+                innerRef: i,
+                children: (0, n.jsx)("img", { src: h, alt: A, className: p.Hc }),
             }),
-            (0, a.jsx)(c.m, {
-                text: x.intl.string(x.t.N86XcP),
-                anchorRef: p,
+            (0, n.jsx)(c.m, {
+                text: C.intl.string(C.t.N86XcP),
+                anchorRef: E,
                 asContainer: !0,
                 ariaHidden: !0,
-                children: (0, a.jsx)(o.vN3, {
-                    children: (0, a.jsx)("button", {
+                children: (0, n.jsx)(u.vN3, {
+                    children: (0, n.jsx)("button", {
                         type: "button",
-                        ref: p,
-                        "aria-label": N,
-                        onClick: (e) => s(e, n, u, A, N),
-                        className: E.G5,
-                        children: (0, a.jsx)(o.ucK, { size: "xs", color: "currentColor", className: E.fy }),
+                        ref: E,
+                        "aria-label": R,
+                        onClick: (e) => l(e, a, o, d, R),
+                        className: p.G5,
+                        children: (0, n.jsx)(u.ucK, { size: "xs", color: "currentColor", className: p.fy }),
                     }),
                 }),
             }),
@@ -58,83 +58,83 @@ function p(e) {
     });
 }
 function T(e) {
-    let { avatars: t, onComplete: i, setFetchError: c, className: g } = e,
-        f = (0, r.bG)([u.default], () => u.default.getCurrentUser()),
-        T = l.useRef([]),
-        R = l.useRef(null),
-        N = l.useRef(t.length),
-        L = l.useRef(null),
-        [y, _] = l.useState(!1),
-        [j, v] = l.useState(!1),
-        S = t.length,
-        b = Math.max(6 - S, 0),
-        F = (0, o.k34)(),
-        H = l.useCallback(
+    let { avatars: t, onComplete: r, setFetchError: c, className: h } = e,
+        g = (0, i.bG)([o.default], () => o.default.getCurrentUser()),
+        T = s.useRef([]),
+        N = s.useRef(null),
+        R = s.useRef(t.length),
+        j = s.useRef(null),
+        [v, b] = s.useState(!1),
+        [y, _] = s.useState(!1),
+        F = t.length,
+        S = Math.max(6 - F, 0),
+        L = (0, u.k34)(),
+        H = s.useCallback(
             async (e) => {
-                if (null == f || y) return;
-                _(!0), c(null);
-                let { id: t, storageHash: l, description: s } = e,
-                    r = (0, A.Xp)({
-                        userId: f.id,
+                if (null == g || v) return;
+                b(!0), c(null);
+                let { id: t, storageHash: s, description: l } = e,
+                    i = (0, d.Xp)({
+                        userId: g.id,
                         avatarId: t,
-                        storageHash: l,
-                        size: C.XAf,
+                        storageHash: s,
+                        size: m.XAf,
                         canAnimate: !0,
                         allowWebp: !1,
                     });
                 try {
-                    let t = await fetch(r),
+                    let t = await fetch(i),
                         c = await t.blob(),
-                        { filename: u, type: d } = (0, A.yM)(l, s);
-                    (0, o.mMO)(
+                        { filename: o, type: A } = (0, d.yM)(s, l);
+                    (0, u.mMO)(
                         async () => {
-                            let { default: t } = await Promise.all([n.e("35929"), n.e("74571"), n.e("3142")]).then(
-                                n.bind(n, 142630),
+                            let { default: t } = await Promise.all([a.e("35929"), a.e("74571"), a.e("29077")]).then(
+                                a.bind(a, 142630),
                             );
-                            return (n) =>
-                                (0, a.jsx)(t, {
-                                    imageUri: r,
-                                    file: new File([c], u, { type: d }),
+                            return (a) =>
+                                (0, n.jsx)(t, {
+                                    imageUri: i,
+                                    file: new File([c], o, { type: A }),
                                     originalAsset: e,
-                                    onCrop: i,
-                                    uploadType: m.HL.AVATAR,
+                                    onCrop: r,
+                                    uploadType: x.HL.AVATAR,
                                     showUpsellHeader: !0,
-                                    ...n,
+                                    ...a,
                                 });
                         },
-                        { contextKey: F },
+                        { contextKey: L },
                     );
                 } catch (e) {
-                    c(x.intl.string(x.t.fZRH9P));
+                    c(C.intl.string(C.t.fZRH9P));
                 } finally {
-                    _(!1);
+                    b(!1);
                 }
             },
-            [F, y, i, c, f],
+            [L, v, r, c, g],
         ),
-        U = l.useCallback(
-            (e, l, i, s, r) => {
-                let c = l + 1 < t.length ? l + 1 : l - 1;
-                (L.current = c >= 0 ? T.current[c] : R.current),
+        w = s.useCallback(
+            (e, s, r, l, i) => {
+                let c = s + 1 < t.length ? s + 1 : s - 1;
+                (j.current = c >= 0 ? T.current[c] : N.current),
                     e.shiftKey
-                        ? (0, d.O)(i)
-                        : (v(!0),
-                          (0, o.mMO)(async () => {
-                              let { default: e } = await n.e("48944").then(n.bind(n, 555251));
+                        ? (0, A.O)(r)
+                        : (_(!0),
+                          (0, u.mMO)(async () => {
+                              let { default: e } = await a.e("48944").then(a.bind(a, 555251));
                               return (t) => {
-                                  let { onClose: n, ...l } = t;
-                                  return (0, a.jsx)(e, {
-                                      avatarId: i,
-                                      storageHash: s,
-                                      avatarDescription: r,
-                                      onConfirmDelete: () => (0, d.O)(i),
+                                  let { onClose: a, ...s } = t;
+                                  return (0, n.jsx)(e, {
+                                      avatarId: r,
+                                      storageHash: l,
+                                      avatarDescription: i,
+                                      onConfirmDelete: () => (0, A.O)(r),
                                       onClose: async () => {
-                                          await n(),
+                                          await a(),
                                               requestAnimationFrame(() => {
-                                                  v(!1);
+                                                  _(!1);
                                               });
                                       },
-                                      ...l,
+                                      ...s,
                                   });
                               };
                           }));
@@ -142,33 +142,33 @@ function T(e) {
             [t],
         );
     return (
-        l.useEffect(() => {
-            j ||
-                (t.length < N.current &&
-                    null != L.current &&
+        s.useEffect(() => {
+            y ||
+                (t.length < R.current &&
+                    null != j.current &&
                     requestAnimationFrame(() => {
-                        L.current?.focus();
+                        j.current?.focus();
                     }),
-                (N.current = t.length));
-        }, [t.length, j]),
-        (0, a.jsx)("div", {
-            className: s()(E.AU, g),
-            children: (0, a.jsxs)("div", {
-                className: E.mE,
+                (R.current = t.length));
+        }, [t.length, y]),
+        (0, n.jsx)("div", {
+            className: l()(p.AU, h),
+            children: (0, n.jsxs)("div", {
+                className: p.mE,
                 children: [
-                    S > 0 &&
-                        (0, a.jsx)("ul", {
-                            "aria-label": x.intl.string(x.t.lsU63N),
-                            className: E.xL,
+                    F > 0 &&
+                        (0, n.jsx)("ul", {
+                            "aria-label": C.intl.string(C.t.lsU63N),
+                            className: p.xL,
                             children: t.map((e, t) =>
-                                (0, a.jsx)(
+                                (0, n.jsx)(
                                     "li",
                                     {
-                                        children: (0, a.jsx)(p, {
+                                        children: (0, n.jsx)(E, {
                                             avatar: e,
                                             index: t,
                                             onSelectRecentAvatar: H,
-                                            onDeleteRecentAvatar: U,
+                                            onDeleteRecentAvatar: w,
                                             avatarButtonRef: (e) => {
                                                 T.current[t] = e;
                                             },
@@ -178,20 +178,20 @@ function T(e) {
                                 ),
                             ),
                         }),
-                    b > 0 &&
-                        (0, a.jsxs)("div", {
-                            className: E.wh,
+                    S > 0 &&
+                        (0, n.jsxs)("div", {
+                            className: p.wh,
                             tabIndex: -1,
-                            ref: R,
+                            ref: N,
                             children: [
-                                (0, a.jsxs)(o.AC4, {
+                                (0, n.jsxs)(u.AC4, {
                                     children: [
-                                        0 === S &&
-                                            (0, a.jsxs)(a.Fragment, { children: [x.intl.string(x.t.x0DsRS), " "] }),
-                                        x.intl.format(x.t["8W2HO3"], { numberOfEmptyAvatarSlots: b }),
+                                        0 === F &&
+                                            (0, n.jsxs)(n.Fragment, { children: [C.intl.string(C.t.x0DsRS), " "] }),
+                                        C.intl.format(C.t["8W2HO3"], { numberOfEmptyAvatarSlots: S }),
                                     ],
                                 }),
-                                [...Array(b)].map((e, t) => (0, a.jsx)(h.A, { className: E.rZ }, t)),
+                                [...Array(S)].map((e, t) => (0, n.jsx)(f.A, { className: p.rZ }, t)),
                             ],
                         }),
                 ],
@@ -199,28 +199,28 @@ function T(e) {
         })
     );
 }
-function R(e) {
-    let { className: t, onComplete: n } = e,
-        { avatars: i, loading: r, error: c } = (0, g.b)(),
-        [u, A] = l.useState(null),
-        h = u ?? c?.message;
+function N(e) {
+    let { className: t, onComplete: a } = e,
+        { avatars: r, loading: i, error: c } = (0, h.b)(),
+        [o, d] = s.useState(null),
+        f = o ?? c?.message;
     return (
-        l.useEffect(() => {
-            (0, d.I)();
+        s.useEffect(() => {
+            (0, A.I)();
         }, []),
-        (0, a.jsx)("div", {
-            className: s()(E.kL, t),
-            children: (0, a.jsx)(o.D0$, {
-                label: x.intl.string(x.t.Bnq9zK),
-                description: x.intl.format(x.t["+CyJu3"], { recentAvatarsLimit: 6 }),
-                errorMessage: h,
-                children: r
-                    ? (0, a.jsx)(o.y$y, { className: E.u1 })
-                    : (0, a.jsx)(T, {
-                          avatars: i,
-                          onComplete: n,
-                          setFetchError: A,
-                          className: null != h ? E.JD : void 0,
+        (0, n.jsx)("div", {
+            className: l()(p.kL, t),
+            children: (0, n.jsx)(u.D0$, {
+                label: C.intl.string(C.t.Bnq9zK),
+                description: C.intl.format(C.t["+CyJu3"], { recentAvatarsLimit: 6 }),
+                errorMessage: f,
+                children: i
+                    ? (0, n.jsx)(u.y$y, { className: p.u1 })
+                    : (0, n.jsx)(T, {
+                          avatars: r,
+                          onComplete: a,
+                          setFetchError: d,
+                          className: null != f ? p.JD : void 0,
                       }),
             }),
         })

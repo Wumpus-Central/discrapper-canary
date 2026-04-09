@@ -12,28 +12,28 @@ var i = n(627968),
     A = n(183555),
     _ = n(672385),
     m = n(950191),
-    p = n(249790),
-    g = n(946356),
+    g = n(249790),
+    p = n(946356),
     f = n(254828),
     x = n(783123),
     E = n(996988),
     I = n(985018),
-    C = n(914538),
+    C = n(38351),
     N = n(724693);
 function T(e) {
     let { user: t, channel: n, onHide: T } = e,
         S = (0, m.Ay)(t.id),
         b = (0, o.Ay)(),
-        v = (0, a.bG)([u.A], () => u.A.isBlocked(t.id)),
-        { analyticsLocations: y } = (0, c.Ay)(v ? d.A.BLOCKED_PROFILE_PANEL : d.A.IGNORED_PROFILE_PANEL),
+        y = (0, a.bG)([u.A], () => u.A.isBlocked(t.id)),
+        { analyticsLocations: v } = (0, c.Ay)(y ? d.A.BLOCKED_PROFILE_PANEL : d.A.IGNORED_PROFILE_PANEL),
         j = (0, A.pb)({ layout: "SIDEBAR", userId: t.id, channelId: n.id }),
         R = l.useRef(null);
     return (0, i.jsx)(c.f5, {
-        value: y,
+        value: v,
         children: (0, i.jsx)(A.of, {
             value: j,
             isLoaded: S?.isLoaded,
-            children: (0, i.jsx)(g.A, {
+            children: (0, i.jsx)(p.A, {
                 ref: R,
                 user: t,
                 displayProfile: S,
@@ -50,14 +50,14 @@ function T(e) {
                                     (0, i.jsxs)("div", {
                                         className: C.N1,
                                         children: [
-                                            (0, i.jsx)(p.A, { user: t }),
+                                            (0, i.jsx)(g.A, { user: t }),
                                             (0, i.jsx)(r.Heading, {
                                                 variant: "heading-lg/bold",
                                                 children: I.intl.string(I.t.b33pLD),
                                             }),
                                             (0, i.jsx)(r.Text, {
                                                 variant: "text-sm/medium",
-                                                children: I.intl.format(v ? I.t["8F+WNz"] : I.t["/cZp5s"], {
+                                                children: I.intl.format(y ? I.t["8F+WNz"] : I.t["/cZp5s"], {
                                                     username: h.Ay.getName(n.guild_id, n.id, t),
                                                 }),
                                             }),
@@ -67,12 +67,12 @@ function T(e) {
                                         align: "center",
                                         children: [
                                             (0, i.jsx)(x.A, {
-                                                isBlocked: v,
+                                                isBlocked: y,
                                                 onClick: () => {
                                                     T(),
                                                         (0, _.Wn)({
-                                                            action: v ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
-                                                            analyticsLocations: y,
+                                                            action: y ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
+                                                            analyticsLocations: v,
                                                             ...j,
                                                         });
                                                 },
@@ -83,7 +83,7 @@ function T(e) {
                                                     T(),
                                                         (0, _.Wn)({
                                                             action: "DONT_SHOW_AGAIN_IGNORED_PROFILE",
-                                                            analyticsLocations: y,
+                                                            analyticsLocations: v,
                                                             ...j,
                                                         });
                                                 },

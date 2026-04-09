@@ -1,4 +1,4 @@
-n.d(t, { A: () => I }), n(938796);
+n.d(t, { A: () => N }), n(938796);
 var i = n(627968),
     l = n(64700),
     s = n(665260),
@@ -11,27 +11,27 @@ var i = n(627968),
     h = n(580745),
     m = n(71393),
     A = n(576705),
-    p = n(203982),
-    g = n(460350),
-    f = n(145530),
-    _ = n(291812),
+    g = n(203982),
+    p = n(460350),
+    _ = n(145530),
+    f = n(291812),
     E = n(205120),
     x = n(652215);
 n(294920);
-var C = n(10029);
+var C = n(480972);
 function S(e) {
     let { value: t, channel: n } = e;
-    return (0, g.i)({ type: c.oU.EDIT, content: t, channel: n, restrictMentions: !1, respectCooldown: !1 });
+    return (0, p.i)({ type: c.oU.EDIT, content: t, channel: n, restrictMentions: !1, respectCooldown: !1 });
 }
-function T(e) {
+function I(e) {
     let { channel: t, message: n } = e,
         { id: c } = t,
         { id: d } = n,
-        p = t.getGuildId(),
-        g = (0, a.bG)([m.A], () => m.A.getGuild(p), [p]),
-        _ = t.type === x.rbe.GUILD_ANNOUNCEMENT,
-        T = null != g && g.features.has(x.GuildFeatures.NEWS),
-        I = _ && T,
+        g = t.getGuildId(),
+        p = (0, a.bG)([m.A], () => m.A.getGuild(g), [g]),
+        f = t.type === x.rbe.GUILD_ANNOUNCEMENT,
+        I = null != p && p.features.has(x.GuildFeatures.NEWS),
+        N = f && I,
         {
             editingMessage: v,
             editingTextValue: y,
@@ -51,7 +51,7 @@ function T(e) {
                 let { content: a } = l,
                     c = A.A.can(x.xBc.MANAGE_MESSAGES, t),
                     d = null != v && null != v.author ? v.author.id : null,
-                    u = I && (d === j || c),
+                    u = N && (d === j || c),
                     h = { content: a, components: void 0 };
                 if (n.hasFlag(x.pr7.IS_COMPONENTS_V2)) {
                     let e = n.components[0]?.type === o.I5.MEDIA_GALLERY,
@@ -62,14 +62,14 @@ function T(e) {
                 }
                 return (
                     u && null != v && (0, s.Lt)(v.flags, x.pr7.CROSSPOSTED)
-                        ? f.A.confirmEdit(e, i, h)
+                        ? _.A.confirmEdit(e, i, h)
                         : r.A.editMessage(e, i, h),
                     Promise.resolve()
                 );
             },
-            [v, I, j, t, n],
+            [v, N, j, t, n],
         ),
-        M = l.useCallback((e) => (0, l.createElement)(N, { ...e, className: C.gM, key: d }), [d]);
+        M = l.useCallback((e) => (0, l.createElement)(T, { ...e, className: C.gM, key: d }), [d]);
     return null != y && null != b
         ? (0, i.jsx)(E.A, {
               ref: void 0,
@@ -79,14 +79,14 @@ function T(e) {
               richValue: b,
               onCancel: r.A.endEditMessage,
               onChange: r.A.updateEditMessage,
-              onConfirmDelete: f.A.confirmDelete,
+              onConfirmDelete: _.A.confirmDelete,
               saveMessage: R,
               validateEdit: S,
               children: M,
           })
         : null;
 }
-function N(e) {
+function T(e) {
     let {
             textValue: t,
             richValue: n,
@@ -98,18 +98,18 @@ function N(e) {
             renderLeftAccessories: h,
         } = e,
         [m, A] = l.useState(!0),
-        g = l.useCallback(() => A(!0), []),
-        f = l.useCallback(() => A(!1), []);
+        p = l.useCallback(() => A(!0), []),
+        _ = l.useCallback(() => A(!1), []);
     return (
         l.useEffect(
             () => (
-                p._.subscribe(x.jej.TEXTAREA_FOCUS, g),
-                p._.subscribe(x.jej.TEXTAREA_BLUR, f),
+                g._.subscribe(x.jej.TEXTAREA_FOCUS, p),
+                g._.subscribe(x.jej.TEXTAREA_BLUR, _),
                 () => {
-                    p._.unsubscribe(x.jej.TEXTAREA_FOCUS, g), p._.unsubscribe(x.jej.TEXTAREA_BLUR, f);
+                    g._.unsubscribe(x.jej.TEXTAREA_FOCUS, p), g._.unsubscribe(x.jej.TEXTAREA_BLUR, _);
                 }
             ),
-            [g, f],
+            [p, _],
         ),
         (0, i.jsx)(
             d.Ay,
@@ -126,17 +126,17 @@ function N(e) {
                 },
                 onKeyDown: u,
                 focused: m,
-                onFocus: g,
-                onBlur: f,
+                onFocus: p,
+                onBlur: _,
                 renderLeftAccessories: h,
             },
             s.id,
         )
     );
 }
-function I(e, t, n) {
+function N(e, t, n) {
     let { message: l, channel: s, compact: a } = e;
     return n
-        ? (0, i.jsx)(T, { channel: s, message: l })
-        : (0, i.jsx)(_.Ay, { message: l, content: t, compact: a ?? !1 });
+        ? (0, i.jsx)(I, { channel: s, message: l })
+        : (0, i.jsx)(f.Ay, { message: l, content: t, compact: a ?? !1 });
 }

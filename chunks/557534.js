@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => L, Jd: () => y, O6: () => v, gQ: () => j, h$: () => b });
+n.d(t, { Ay: () => L, Jd: () => v, O6: () => y, gQ: () => j, h$: () => b });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -12,8 +12,8 @@ var i = n(627968),
     A = n(855687),
     _ = n(816662),
     m = n(446600),
-    p = n(728321),
-    g = n(95701),
+    g = n(728321),
+    p = n(95701),
     f = n(616356),
     x = n(71393),
     E = n(576705),
@@ -21,14 +21,14 @@ var i = n(627968),
     C = n(343360),
     N = n(652215),
     T = n(985018),
-    S = n(99566);
+    S = n(928409);
 function b(e, t, n) {
     return null != t && !!t && !(0, C.ws)(n, e.type);
 }
-function v(e, t) {
+function y(e, t) {
     return null == t ? S.fx : e > t ? S.mU : S.TR;
 }
-function y(e) {
+function v(e) {
     let { channel: t, disableManageChannels: n, tabIndex: l, forceShowButtons: s, hasChannelInfo: h = !1 } = e;
     return (0, r.bG)(
         [E.A, I.A],
@@ -38,9 +38,9 @@ function y(e) {
             (!E.A.can(N.xBc.MANAGE_CHANNELS, t) &&
                 !E.A.can(N.xBc.MANAGE_ROLES, t) &&
                 !E.A.can(N.xBc.MANAGE_WEBHOOKS, t)) ||
-            ((0, g.tr)(t.type) && !E.A.can(N.xBc.VIEW_CHANNEL, t)) ||
+            ((0, p.tr)(t.type) && !E.A.can(N.xBc.VIEW_CHANNEL, t)) ||
             (t.isGuildVocal() && !E.A.can(N.xBc.CONNECT, t)) ||
-            !g.bk.has(t.type) ||
+            !p.bk.has(t.type) ||
             t.isModeratorReportChannel(),
     )
         ? null
@@ -65,21 +65,21 @@ function j(e) {
             locked: c,
             tabIndex: u,
             forceShowButtons: _,
-            hasChannelInfo: g = !1,
+            hasChannelInfo: p = !1,
         } = e,
         I = (0, r.bG)([x.A], () => x.A.getGuild(t.getGuildId())),
         C = (0, r.bG)([m.A], () => m.A.getStageInstanceByChannel(t.id), [t.id]),
         b = (0, r.bG)([h.Ay], () => h.Ay.getActiveEventByChannel(t.id), [t.id]),
-        v = (0, r.bG)([E.A], () => (0, A.K)(E.A, I, t, C)),
-        y = (0, r.bG)([], () =>
+        y = (0, r.bG)([E.A], () => (0, A.K)(E.A, I, t, C)),
+        v = (0, r.bG)([], () =>
             t?.type === N.rbe.GUILD_VOICE ? T.intl.string(T.t["EE+P0H"]) : T.intl.string(T.t["0jeAXt"]),
         ),
         j = l.useRef(null);
-    if (c || !v || t.isModeratorReportChannel() || t.isThread()) return null;
+    if (c || !y || t.isModeratorReportChannel() || t.isThread()) return null;
     let R = (0, i.jsx)(d.Rvf, { size: "xs", className: S.gE, "aria-hidden": !0, color: "currentColor" });
     return (
         s &&
-            (R = (0, i.jsx)(p.A, {
+            (R = (0, i.jsx)(g.A, {
                 childRef: j,
                 tutorialId: "instant-invite",
                 position: "left",
@@ -87,16 +87,16 @@ function j(e) {
             })),
         (0, i.jsx)(o.m, {
             asContainer: !0,
-            text: y,
+            text: v,
             children: (0, i.jsx)(d.DUT, {
-                className: a()(S.Xs, _ ? S.Tf : void 0, g ? S.bw : S.UI),
+                className: a()(S.Xs, _ ? S.Tf : void 0, p ? S.bw : S.UI),
                 onClick: function () {
                     if (null != I) {
                         let e = f.A.getAllActiveStreams().filter(
                             (e) => e.state !== N.XYD.ENDED && e.channelId === t.id,
                         );
                         (0, d.mMO)(async () => {
-                            let { default: l } = await Promise.all([n.e("43600"), n.e("71281")]).then(
+                            let { default: l } = await Promise.all([n.e("43600"), n.e("67505")]).then(
                                 n.bind(n, 234355),
                             );
                             return (n) =>
@@ -112,7 +112,7 @@ function j(e) {
                     }
                 },
                 tabIndex: u,
-                "aria-label": y,
+                "aria-label": v,
                 children: R,
             }),
         })
@@ -151,7 +151,7 @@ function O(e) {
 class L extends l.PureComponent {
     static defaultProps = { isDefaultChannel: !1 };
     renderEditButton() {
-        return (0, i.jsx)(y, { ...this.props });
+        return (0, i.jsx)(v, { ...this.props });
     }
     renderInviteButton() {
         return (0, i.jsx)(j, { ...this.props });
@@ -164,7 +164,7 @@ class L extends l.PureComponent {
     }
     getClassName() {
         let { position: e, sortingPosition: t } = this.props;
-        return v(e, t);
+        return y(e, t);
     }
     isDisabled() {
         let { channel: e, sorting: t, sortingType: n } = this.props;

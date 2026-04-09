@@ -45,8 +45,8 @@ var a = n(627968),
     z = n(201805),
     $ = n(655116),
     q = n(890164),
-    Y = n(454719),
-    Q = n(342296),
+    Q = n(454719),
+    Y = n(342296),
     J = n(780964),
     X = n(858897),
     Z = n(533488),
@@ -81,7 +81,7 @@ var a = n(627968),
     eN = n(652215),
     eI = n(731854),
     ek = n(985018),
-    eO = n(683393);
+    eO = n(64734);
 let eR = ej.Ay.getEnableHardwareAcceleration() ? h.JsQ : h.euF,
     ew = 2.5 * ef.A.Millis.SECOND,
     eD = 2 * ef.A.Millis.MINUTE,
@@ -141,12 +141,12 @@ function eL(e) {
         ? null
         : (0, a.jsx)(p.A, {
               object: eN.ZSU.AVATAR,
-              children: (0, a.jsx)(Q.A, {
+              children: (0, a.jsx)(Y.A, {
                   user: o,
                   targetElementRef: b,
                   clickTrap: !0,
                   preload: () =>
-                      (0, Y.A)(o.id, o.getAvatarURL(void 0, Q.S), {
+                      (0, Q.A)(o.id, o.getAvatarURL(void 0, Y.S), {
                           type: "account_popout",
                           withMutualGuilds: !1,
                           withMutualFriends: !1,
@@ -689,22 +689,22 @@ function eF() {
         H = { avatar: [], settings: [] },
         K = (0, q.lX)("AccountCoachmark");
     !O && (H.avatar.push(u.M.DISPLAY_NAME_STYLES_COACHMARK), K && H.settings.push(u.M.PRIVATE_PROFILE_COACHMARK));
-    let { shouldShowTooltip: Y, dismissTooltip: Q } = eG(eI.oh.AUDIO_INPUT),
+    let { shouldShowTooltip: Q, dismissTooltip: Y } = eG(eI.oh.AUDIO_INPUT),
         { shouldShowTooltip: J, dismissTooltip: X } = eG(eI.oh.AUDIO_OUTPUT),
         { shouldShowTooltip: Z, dismissTooltip: ep } = (0, en.A)(),
         eg = (0, ea.A)(),
-        ef = i.useMemo(() => (Y ? "input" : J ? "output" : void 0), [Y, J]),
+        ef = i.useMemo(() => (Q ? "input" : J ? "output" : void 0), [Q, J]),
         ej = i.useCallback(
             (e) => {
                 switch (e) {
                     case "input":
-                        Q();
+                        Y();
                         break;
                     case "output":
                         X();
                 }
             },
-            [Q, X],
+            [Y, X],
         );
     return (0, a.jsx)(y.f5, {
         value: B,

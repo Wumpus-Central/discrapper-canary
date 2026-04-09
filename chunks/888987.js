@@ -11,41 +11,41 @@ var i = n(627968),
     _ = n(142120),
     h = n(87001),
     m = n(302614),
-    f = n(321090),
-    p = n(392164),
-    g = n(69125);
+    p = n(321090),
+    g = n(392164),
+    f = n(165366);
 function A(e) {
     let { locked: t, pinned: n, anchorLeft: r } = e,
         A = (0, s.bG)([_.A], () => _.A.getSocket()),
-        x = (0, s.bG)([f.A], () => f.A.isGPUBoosted());
+        x = (0, s.bG)([p.A], () => p.A.isGPUBoosted());
     (0, u.ZX)();
-    let I = (0, s.bG)([h.A], () => h.A.getWindow(p.f)),
+    let I = (0, s.bG)([h.A], () => h.A.getWindow(g.f)),
         [E, b] = (0, u.DQ)(A),
         {
             currentFPS: v,
-            averageFrameTime: S,
-            timeSinceLastDrop: C,
+            averageFrameTime: C,
+            timeSinceLastDrop: S,
             onResetFrameData: y,
             droppedFramesRef: T,
             renderedFrameCount: N,
             bufferFramecountRef: w,
             frameCheckerEffect: L,
         } = (0, u.Dj)(!0, E, !0),
-        [j, O, P] = (0, u.F5)(A),
-        [R, D] = (0, u.km)(j, L, I),
+        [O, j, P] = (0, u.F5)(A),
+        [D, R] = (0, u.km)(O, L, I),
         k = performance.now() - b.current < u.Jc,
-        M = O(S, w.current);
+        M = j(C, w.current);
     (0, c.Ay)(
         () => (
-            R(),
+            D(),
             () => {
-                D();
+                R();
             }
         ),
     );
     let G = a.useCallback(() => {
-            y(), P(), R();
-        }, [y, P, R]),
+            y(), P(), D();
+        }, [y, P, D]),
         [z, U] = a.useState(!0),
         [V, F] = a.useState(!0),
         [W, H] = a.useState(!0),
@@ -54,21 +54,21 @@ function A(e) {
     return t && !n
         ? null
         : (0, i.jsxs)("div", {
-              className: l()(g.st, !r && g.Hk),
+              className: l()(f.st, !r && f.Hk),
               children: [
                   (z || !t) &&
                       (0, i.jsxs)("div", {
-                          className: g.PG,
+                          className: f.PG,
                           children: [
                               !t &&
                                   (0, i.jsx)("div", {
-                                      className: g.On,
+                                      className: f.On,
                                       children: (0, i.jsx)(d.dOG, { checked: z, onChange: (e) => U(e) }),
                                   }),
                               (0, i.jsxs)(d.Text, {
                                   variant: "text-md/normal",
                                   color: "text-subtle",
-                                  className: g.e0,
+                                  className: f.e0,
                                   children: [
                                       "FPS:",
                                       " ",
@@ -89,25 +89,25 @@ function A(e) {
                       }),
                   (V || !t) &&
                       (0, i.jsxs)("div", {
-                          className: g.PG,
+                          className: f.PG,
                           children: [
                               !t &&
                                   (0, i.jsx)("div", {
-                                      className: g.On,
+                                      className: f.On,
                                       children: (0, i.jsx)(d.dOG, { checked: V, onChange: (e) => F(e) }),
                                   }),
                               (0, i.jsxs)(d.Text, {
                                   variant: "text-md/normal",
                                   color: "text-subtle",
-                                  className: g.e0,
+                                  className: f.e0,
                                   children: [
                                       "Frame Times:",
                                       " ",
                                       (0, i.jsxs)(d.Text, {
                                           tag: "span",
                                           variant: "code",
-                                          color: S > 1.1 * u.L6 ? "text-feedback-warning" : "text-strong",
-                                          children: [S.toFixed(2), "ms"],
+                                          color: C > 1.1 * u.L6 ? "text-feedback-warning" : "text-strong",
+                                          children: [C.toFixed(2), "ms"],
                                       }),
                                   ],
                               }),
@@ -115,17 +115,17 @@ function A(e) {
                       }),
                   (W || !t) &&
                       (0, i.jsxs)("div", {
-                          className: g.PG,
+                          className: f.PG,
                           children: [
                               !t &&
                                   (0, i.jsx)("div", {
-                                      className: g.On,
+                                      className: f.On,
                                       children: (0, i.jsx)(d.dOG, { checked: W, onChange: (e) => H(e) }),
                                   }),
                               (0, i.jsxs)(d.Text, {
                                   variant: "text-md/normal",
                                   color: "text-subtle",
-                                  className: g.e0,
+                                  className: f.e0,
                                   children: [
                                       "Dropped Frames:",
                                       " ",
@@ -133,9 +133,9 @@ function A(e) {
                                           tag: "span",
                                           variant: "code",
                                           color:
-                                              C < 2
+                                              S < 2
                                                   ? "text-feedback-critical"
-                                                  : C < 5
+                                                  : S < 5
                                                     ? "text-feedback-warning"
                                                     : "text-strong",
                                           children: T.current,
@@ -144,7 +144,7 @@ function A(e) {
                                           tag: "span",
                                           variant: "code",
                                           color: "text-subtle",
-                                          className: g.af,
+                                          className: f.af,
                                           children: ["(", ((T.current / N.current) * 100).toFixed(3), "%)"],
                                       }),
                                   ],
@@ -153,17 +153,17 @@ function A(e) {
                       }),
                   (B || !t) &&
                       (0, i.jsxs)("div", {
-                          className: g.PG,
+                          className: f.PG,
                           children: [
                               !t &&
                                   (0, i.jsx)("div", {
-                                      className: g.On,
+                                      className: f.On,
                                       children: (0, i.jsx)(d.dOG, { checked: B, onChange: (e) => Y(e) }),
                                   }),
                               (0, i.jsxs)(d.Text, {
                                   variant: "text-md/normal",
                                   color: "text-subtle",
-                                  className: g.e0,
+                                  className: f.e0,
                                   children: [
                                       "Rendered Frames:",
                                       " ",
@@ -179,11 +179,11 @@ function A(e) {
                       }),
                   (X || !t) &&
                       (0, i.jsxs)("div", {
-                          className: g.PG,
+                          className: f.PG,
                           children: [
                               !t &&
                                   (0, i.jsx)("div", {
-                                      className: g.On,
+                                      className: f.On,
                                       children: (0, i.jsx)(d.dOG, { checked: X, onChange: (e) => Z(e) }),
                                   }),
                               (0, i.jsx)(o.m, {
@@ -193,7 +193,7 @@ function A(e) {
                                       children: (0, i.jsxs)(d.Text, {
                                           variant: "text-md/normal",
                                           color: "text-subtle",
-                                          className: g.e0,
+                                          className: f.e0,
                                           children: [
                                               "Idle Frame Delta:",
                                               " ",
@@ -231,7 +231,7 @@ function A(e) {
                       }),
                   !t &&
                       (0, i.jsx)("div", {
-                          className: g.m8,
+                          className: f.m8,
                           children: (0, i.jsx)(m.A, {
                               children: (0, i.jsx)(d.Button, {
                                   variant: "primary",

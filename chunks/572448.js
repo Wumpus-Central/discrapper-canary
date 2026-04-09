@@ -13,8 +13,8 @@ var l = n(503698),
     A = n(729551),
     _ = n(58149),
     m = n(571694),
-    p = n(47167),
-    g = n(713654),
+    g = n(47167),
+    p = n(713654),
     f = n(915089),
     x = n(263063),
     E = n(616356),
@@ -26,7 +26,7 @@ var l = n(503698),
     b = n(147925),
     y = n(652215),
     v = n(985018),
-    j = n(81236);
+    j = n(612005);
 let R = { top: 8, bottom: 8, left: -4, right: -4 };
 function O(e) {
     let { channelState: t, toggle: n, getNumUnreadChannels: l } = e;
@@ -120,9 +120,9 @@ function G(e) {
         a = (0, r.bG)([C.A], () => C.A.getGuild(t.guild_id)),
         d = (0, r.bG)([I.A], () => I.A.getChannel(t.parent_id)),
         u = (0, r.bG)([T.Ay], () => T.Ay.getIsMentionLowImportance(t.id)),
-        h = (0, g.gU)(t, a),
-        A = (0, p.Ay)(t, !1),
-        _ = (0, p.Ay)(d),
+        h = (0, p.gU)(t, a),
+        A = (0, g.Ay)(t, !1),
+        _ = (0, g.Ay)(d),
         m = null == d ? a?.name : `${a?.name} › ${_}`,
         f = t.isMultiUserDM()
             ? v.intl.formatToPlainString(v.t.CxSA5N, { members: t.recipients.length + 1 })

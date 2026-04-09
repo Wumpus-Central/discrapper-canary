@@ -31,7 +31,7 @@ var a = n(627968),
     R = n(20732),
     w = n(654487);
 n(272111);
-var D = n(407974);
+var D = n(57291);
 function M(e) {
     let { isExpanded: t, questId: n } = e;
     return (
@@ -68,8 +68,8 @@ function L(e) {
         { hasError: z, isLoading: $ } = (0, v.Gk)(),
         q = i.useContext(N.Z) || (s && L && !$ && !c),
         {
-            isExpanded: Y,
-            setIsExpanded: Q,
+            isExpanded: Q,
+            setIsExpanded: Y,
             expandQuestBar: J,
             isExpansionAnimationComplete: X,
             isVisibilityAnimationAtRest: Z,
@@ -89,8 +89,8 @@ function L(e) {
             handleMouseLeave: eu,
         } = (0, O.m)({
             quest: t,
-            isExpanded: Y,
-            setIsExpanded: Q,
+            isExpanded: Q,
+            setIsExpanded: Y,
             expandQuestBar: J,
             isQuestCompleted: K,
             isQuestAccepted: W,
@@ -135,7 +135,7 @@ function L(e) {
                 children: [
                     q &&
                         (0, a.jsxs)(a.Fragment, {
-                            children: [(0, a.jsx)(M, { questId: V, isExpanded: Y }), (0, a.jsx)(P, {})],
+                            children: [(0, a.jsx)(M, { questId: V, isExpanded: Q }), (0, a.jsx)(P, {})],
                         }),
                     (0, a.jsx)(r.animated.div, {
                         "aria-hidden": !q,
@@ -146,10 +146,10 @@ function L(e) {
                         className: l()(D.iE, { [D.Xc]: !q, [D.uv]: q && Z }),
                         style: { height: et.to({ range: [0, 1], output: [0, ef] }) },
                         children: (0, a.jsx)(r.animated.div, {
-                            className: l()(D.FG, { [D.E$]: Y, [D.KA]: W }),
+                            className: l()(D.FG, { [D.E$]: Q, [D.KA]: W }),
                             children: (0, a.jsx)(E.R, {
                                 springConfig: en,
-                                isExpanded: Y,
+                                isExpanded: Q,
                                 children: (0, a.jsx)(C.oK, {
                                     expandedContentRef: em,
                                     collapsedContentRef: eh,
@@ -157,7 +157,7 @@ function L(e) {
                                     children: (0, a.jsxs)(T.C, {
                                         quest: t,
                                         taskDetails: ep,
-                                        isExpanded: Y,
+                                        isExpanded: Q,
                                         isExpansionAnimationComplete: X,
                                         onCtxMenuClose: ei,
                                         onCtxMenuOpen: ea,

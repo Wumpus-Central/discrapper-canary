@@ -12,13 +12,13 @@ var i = n(627968),
     A = n(394412),
     _ = n(859894),
     m = n(931991),
-    p = n(426660),
-    g = n(576705),
+    g = n(426660),
+    p = n(576705),
     f = n(233993),
     x = n(19844),
     E = n(505543),
     I = n(985018),
-    C = n(32625);
+    C = n(261084);
 function N(e) {
     let { onClick: t, className: n } = e,
         l = d.cNw;
@@ -60,7 +60,7 @@ function T(e) {
 }
 function S(e) {
     let { channel: t, onContinueClick: n } = e,
-        s = (0, r.bG)([g.A], () => g.A.can(f.QY, t), [t]),
+        s = (0, r.bG)([p.A], () => p.A.can(f.QY, t), [t]),
         o = t.guild_id,
         { canCreateGuildEvent: c } = (0, m.nr)(t),
         u = (0, E.A)(t.id),
@@ -69,7 +69,7 @@ function S(e) {
         className: C.kL,
         ref: x,
         children: [
-            (0, i.jsx)(p.A, { eventTargetRef: x }),
+            (0, i.jsx)(g.A, { eventTargetRef: x }),
             (0, i.jsxs)("div", {
                 className: C.Qs,
                 children: [

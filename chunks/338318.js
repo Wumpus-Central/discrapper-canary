@@ -33,7 +33,7 @@ var i = n(627968),
     D = n(780207),
     G = n(652215),
     M = n(985018),
-    U = n(752366);
+    U = n(21861);
 function k() {
     let e = (0, r.bG)([O.default], () => {
             let e = O.default.getCurrentUser();
@@ -100,7 +100,7 @@ function k() {
                           textVariant: "heading-md/medium",
                           useUpdatedStyling: !0,
                           leadingAction: Y
-                              ? (0, i.jsx)(T.l, { size: "sm", location: g.A.PREMIUM_WISHLIST_EDIT_PROFILE_UPSELL })
+                              ? (0, i.jsx)(T.l, { size: "md", location: g.A.PREMIUM_WISHLIST_EDIT_PROFILE_UPSELL })
                               : void 0,
                           button: (0, i.jsx)("div", {
                               className: U.Xl,

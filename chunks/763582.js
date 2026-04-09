@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => A });
+n.d(t, { A: () => p });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -11,7 +11,7 @@ var i = n(627968),
     u = n(50249),
     m = n(652215),
     g = n(985018),
-    x = n(864590);
+    x = n(2571);
 function h(e) {
     let { color: t, children: n } = e;
     return (0, i.jsxs)("div", {
@@ -63,7 +63,7 @@ function _(e) {
         ],
     });
 }
-function p() {
+function A() {
     let e = s.useMemo(
             () => [
                 {
@@ -138,7 +138,7 @@ function p() {
         })
     );
 }
-function A(e) {
+function p(e) {
     let { guild: t, everyoneRole: n, setEditRoleId: l } = e,
         [r, c] = s.useState(!1),
         m = async () => {
@@ -155,7 +155,7 @@ function A(e) {
                 (0, i.jsxs)("div", {
                     className: x.kL,
                     children: [
-                        (0, i.jsx)(p, {}),
+                        (0, i.jsx)(A, {}),
                         (0, i.jsx)(a.Heading, { variant: "heading-xl/semibold", children: g.intl.string(g.t.ALlnbi) }),
                         (0, i.jsx)(a.Text, {
                             color: "text-default",

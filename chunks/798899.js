@@ -6,9 +6,9 @@ var i = n(627968),
     a = n(443795),
     o = n(768349),
     d = n(985018),
-    c = n(71747);
+    c = n(772234);
 function u(e) {
-    let { application: t, message: n, header: u, onClickContent: _, onView: m, guildId: h } = e,
+    let { application: t, message: n, header: u, onClickContent: m, onView: _, guildId: h } = e,
         p = l.useMemo(
             () =>
                 (0, i.jsx)(s.Text, {
@@ -25,11 +25,11 @@ function u(e) {
         title: t.name,
         iconSrc: a.HT.getWhiteIconURL(),
         info: p,
-        onClickContent: _,
+        onClickContent: m,
         trackingConfig: {
             id: t.id,
             linkType: o.J.RICH_PRESENCE_INVITE,
-            onView: m,
+            onView: _,
             referrerId: n.author.id,
             guildId: h,
             channelId: n.channel_id,

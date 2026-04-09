@@ -13,8 +13,8 @@ var i = n(627968),
     _ = n(562153),
     m = n(850457);
 n(281405);
-var p = n(985018),
-    g = n(803899);
+var g = n(985018),
+    p = n(77676);
 function f(e) {
     let { channel: t } = e,
         [s, f] = l.useState(!1),
@@ -41,7 +41,7 @@ function f(e) {
                             n.e("97262"),
                             n.e("42128"),
                             n.e("84841"),
-                            n.e("36382"),
+                            n.e("50970"),
                         ]).then(n.bind(n, 107632));
                         return (n) => (0, i.jsx)(e, { ...n, user: I, guildId: t.guild_id, channel: t });
                     });
@@ -49,7 +49,7 @@ function f(e) {
         b = () => {
             clearTimeout(E.current), (E.current = setTimeout(() => f(!0), 100));
         },
-        v = () => {
+        y = () => {
             clearTimeout(E.current), (E.current = setTimeout(() => f(!1), 100));
         };
     return null == I
@@ -59,24 +59,24 @@ function f(e) {
               position: "right",
               shouldShow: s,
               onRequestOpen: b,
-              onRequestClose: v,
+              onRequestClose: y,
               useMouseEnter: !0,
               spacing: 17,
               renderPopout: () =>
-                  (0, i.jsx)(m.A, { channel: t, source: "ghost_user", onMouseEnter: b, onMouseLeave: v }),
+                  (0, i.jsx)(m.A, { channel: t, source: "ghost_user", onMouseEnter: b, onMouseLeave: y }),
               children: (e) => {
                   let { onClick: n, ...l } = e;
                   return (0, i.jsxs)(o.DUT, {
                       innerRef: x,
-                      className: g.nM,
+                      className: p.nM,
                       "aria-haspopup": "dialog",
                       onClick: b,
                       onContextMenu: S,
                       ...l,
-                      onMouseLeave: v,
+                      onMouseLeave: y,
                       children: [
                           (0, i.jsxs)("div", {
-                              className: g.R3,
+                              className: p.R3,
                               children: [
                                   (0, i.jsx)(o.euF, {
                                       src: I.getAvatarURL(t.guild_id, 24),
@@ -85,20 +85,20 @@ function f(e) {
                                       status: o.clD.INVISIBLE,
                                       statusColor: "currentColor",
                                   }),
-                                  (0, i.jsx)(o.O4, { className: g.SM }),
+                                  (0, i.jsx)(o.O4, { className: p.SM }),
                               ],
                           }),
                           (0, i.jsx)(o.Text, {
                               variant: "text-sm/normal",
-                              className: g.Pf,
-                              children: p.intl.format(p.t.TlVwqn, {
+                              className: p.Pf,
+                              children: g.intl.format(g.t.TlVwqn, {
                                   user: C,
                                   userHook: (e, t) =>
                                       (0, i.jsx)(
                                           o.Text,
                                           {
                                               variant: "text-sm/semibold",
-                                              className: a()(g.Xh, T),
+                                              className: a()(p.Xh, T),
                                               color: "text-muted",
                                               children: e,
                                           },
@@ -109,7 +109,7 @@ function f(e) {
                                           o.Text,
                                           {
                                               variant: "text-sm/normal",
-                                              className: g.cp,
+                                              className: p.cp,
                                               color: "text-muted",
                                               children: e,
                                           },
