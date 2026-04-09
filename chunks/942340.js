@@ -1,14 +1,15 @@
 "use strict";
-n.d(t, { E: () => d, p: () => _ });
+n.d(t, { E: () => _, p: () => f });
 var r = n(64700),
     i = n(397927),
     s = n(964486),
     a = n(626584),
     o = n(739508),
-    l = n(219538),
-    u = n(648335);
-let c = new a.A("useStripePaymentElementOptions"),
-    d = function () {
+    l = n(71532),
+    u = n(219538),
+    c = n(648335);
+let d = new a.A("useStripePaymentElementOptions"),
+    _ = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
             t = (0, i.rdh)(i.LU0.colors.MODAL_BACKGROUND),
             n = (0, i.rdh)(i.LU0.colors.TEXT_STRONG),
@@ -36,44 +37,51 @@ let c = new a.A("useStripePaymentElementOptions"),
             },
         };
     },
-    _ = (e) => {
+    f = (e) => {
         let { onSetupError: t, elementsAppearanceOptions: n = {} } = e,
             [i, a] = r.useState(void 0),
-            [_, f] = r.useState(null),
-            [p, h] = r.useState(!0),
-            [m, E] = r.useState([]),
-            [g, A] = r.useState({}),
-            I = r.useCallback(async () => {
+            [f, p] = r.useState(null),
+            [h, m] = r.useState(!0),
+            [E, g] = r.useState([]),
+            [A, I] = r.useState({}),
+            T = r.useCallback(async () => {
                 try {
-                    let { client_secret: e, custom_payment_methods: t } = await (0, l.w)(),
-                        n = (0, u.Dd)(t),
+                    let { client_secret: e, custom_payment_methods: t } = await (0, u.w)(),
+                        n = (0, c.Dd)(t),
                         r = t.reduce((e, t) => ((e[t.custom_payment_method_id] = t.payment_source_type), e), {});
-                    E(n), A(r), a(e);
+                    g(n), I(r), a(e);
                 } catch (e) {
-                    f(e),
+                    p(e),
                         null != t && t(e),
-                        c.error("there was an error on setup for Payment Elements: ", e),
+                        d.error("there was an error on setup for Payment Elements: ", e),
                         (0, o.pM)(e, { tags: { source: "payment_elements" } });
                 }
-                h(!1);
+                m(!1);
             }, [t]);
         (0, s.Ay)(() => {
-            I();
+            T();
         });
-        let { elementsAppearance: T, elementsAppearanceOptions: S } = d(n);
+        let { elementsAppearance: S, elementsAppearanceOptions: y } = _(n),
+            v = (0, l.PU)();
         return {
-            setupError: _,
+            setupError: f,
             elementsOptions: r.useMemo(
                 () =>
-                    p
+                    h
                         ? null
-                        : { clientSecret: i, appearance: T, customPaymentMethods: m, paymentMethodCreation: "manual" },
-                [T, i, m, p],
+                        : {
+                              clientSecret: i,
+                              appearance: S,
+                              locale: v,
+                              customPaymentMethods: E,
+                              paymentMethodCreation: "manual",
+                          },
+                [S, v, i, E, h],
             ),
             setupIntentSecret: i,
-            customPaymentMethods: m,
-            customPaymentMethodIdsToSourceTypes: g,
-            isLoading: p,
-            elementsAppearanceOptions: S,
+            customPaymentMethods: E,
+            customPaymentMethodIdsToSourceTypes: A,
+            isLoading: h,
+            elementsAppearanceOptions: y,
         };
     };

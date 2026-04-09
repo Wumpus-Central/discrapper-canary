@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { KS: () => R, Lw: () => w, Wf: () => N, e4: () => D, eR: () => b });
+n.d(t, { KS: () => R, Wf: () => N, e4: () => D, eR: () => b, wD: () => w });
 var r = n(627968),
     i = n(64700),
     s = n(342393),
@@ -20,7 +20,7 @@ var r = n(627968),
     I = n(648335),
     T = n(652215),
     S = n(818348),
-    y = n(311701);
+    y = n(116780);
 let v = [_.pn.PAYMENT_ELEMENT],
     N = i.memo(function (e) {
         let {
@@ -79,10 +79,11 @@ let v = [_.pn.PAYMENT_ELEMENT],
     C = (e) => {
         let { children: t } = e,
             { stripe: n } = (0, d.P5)(),
-            { elementsAppearance: i } = (0, g.E)();
+            { elementsAppearance: i } = (0, g.E)(),
+            a = (0, m.PU)();
         return (0, r.jsx)(s.Elements, {
             stripe: n,
-            options: { appearance: i, mode: "setup", currency: "usd" },
+            options: { appearance: i, locale: a, mode: "setup", currency: "usd" },
             children: t,
         });
     },
