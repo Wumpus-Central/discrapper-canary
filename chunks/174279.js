@@ -1,70 +1,75 @@
-n.d(t, { A: () => P });
+n.d(t, { A: () => j });
 var i = n(627968),
     a = n(64700),
-    l = n(735438),
-    r = n.n(l),
+    r = n(735438),
+    l = n.n(r),
     s = n(311907),
     o = n(397927),
     d = n(157559),
     c = n(308528),
     u = n(442433),
     A = n(793574),
-    h = n(70730),
-    _ = n(777426),
+    _ = n(70730),
+    h = n(777426),
     m = n(976860),
     g = n(734057),
     p = n(430452),
     E = n(994500),
-    I = n(427262),
-    f = n(607272),
-    C = n(513297),
-    T = n(414711),
-    N = n(187696),
-    S = n(723690),
-    x = n(652215),
-    v = n(788868),
-    b = n(731854),
-    y = n(985018),
-    O = n(955017);
-function L(e) {
-    let { user: t, applicationId: n, isGameRelationship: l, onSelect: r } = e,
+    I = n(595623),
+    f = n(427262),
+    C = n(607272),
+    T = n(352127),
+    N = n(513297),
+    S = n(414711),
+    x = n(187696),
+    v = n(723690),
+    b = n(652215),
+    y = n(788868),
+    O = n(731854),
+    L = n(985018),
+    R = n(955017);
+function P(e) {
+    let { user: t, applicationId: n, isGameRelationship: r, onSelect: l } = e,
         A = a.useCallback(() => {
-            c.A.openPrivateChannel({ recipientIds: t.id, joinCall: !0 });
-        }, [t.id]),
-        h = a.useCallback(() => {
-            c.A.openPrivateChannel({ recipientIds: t.id, joinCall: !0, joinCallVideo: !0 });
+            (0, T.X9)({ targetUserId: t.id, tab: I.Ay.getState().section }),
+                c.A.openPrivateChannel({ recipientIds: t.id, joinCall: !0 });
         }, [t.id]),
         _ = a.useCallback(() => {
-            f.A.removeFriend({ userId: t.id, applicationId: l ? n : null, location: "Friends" });
-        }, [n, l, t.id]),
+            (0, T.Cf)({ targetUserId: t.id, tab: I.Ay.getState().section }),
+                c.A.openPrivateChannel({ recipientIds: t.id, joinCall: !0, joinCallVideo: !0 });
+        }, [t.id]),
+        h = a.useCallback(() => {
+            C.A.removeFriend({ userId: t.id, applicationId: r ? n : null, location: "Friends" });
+        }, [n, r, t.id]),
         m = a.useCallback(() => {
-            let e = l ? y.intl.string(y.t.RLcE6x) : y.intl.string(y.t.cvSt1J);
-            d.A.show({
-                title: y.intl.formatToPlainString(y.t.fPLvZd, { name: I.Ay.getName(t) }),
-                body: y.intl.formatToPlainString(y.t.l5FFq6, { name: I.Ay.getName(t) }),
-                confirmText: e,
-                confirmVariant: "critical-primary",
-                cancelText: y.intl.string(y.t["ETE/oC"]),
-                onConfirm: _,
-            });
-        }, [_, l, t]),
-        g = (0, s.bG)([p.Ay], () => p.Ay.supports(b.O5.VIDEO)),
+            let e = r ? L.intl.string(L.t.RLcE6x) : L.intl.string(L.t.cvSt1J);
+            (0, T.lP)({ targetUserId: t.id, tab: I.Ay.getState().section }),
+                d.A.show({
+                    title: L.intl.formatToPlainString(L.t.fPLvZd, { name: f.Ay.getName(t) }),
+                    body: L.intl.formatToPlainString(L.t.l5FFq6, { name: f.Ay.getName(t) }),
+                    confirmText: e,
+                    confirmVariant: "critical-primary",
+                    cancelText: L.intl.string(L.t["ETE/oC"]),
+                    onConfirm: h,
+                });
+        }, [h, r, t]),
+        g = (0, s.bG)([p.Ay], () => p.Ay.supports(O.O5.VIDEO)),
         E = t.isProvisional,
-        C = l ? y.intl.string(y.t.RLcE6x) : y.intl.string(y.t.cvSt1J);
+        N = r ? L.intl.string(L.t.RLcE6x) : L.intl.string(L.t.cvSt1J);
     return (0, i.jsxs)(o.W1t, {
         "data-menu-migrated-auto": !0,
         navId: "friend-row",
-        "aria-label": y.intl.string(y.t.liqwPJ),
+        "aria-label": L.intl.string(L.t.liqwPJ),
         onClose: u.Z_,
-        onSelect: r,
+        onSelect: l,
         children: [
-            !E && g ? (0, i.jsx)(o.Drp, { id: "start-video-call", label: y.intl.string(y.t.oCqlGG), action: h }) : null,
-            !E && (0, i.jsx)(o.Drp, { id: "start-voice-call", label: y.intl.string(y.t.focH1t), action: A }),
-            (0, i.jsx)(o.Drp, { id: "remove-friend", label: C, action: m, color: "danger" }),
+            !E && g ? (0, i.jsx)(o.Drp, { id: "start-video-call", label: L.intl.string(L.t.oCqlGG), action: _ }) : null,
+            !E && (0, i.jsx)(o.Drp, { id: "start-voice-call", label: L.intl.string(L.t.focH1t), action: A }),
+            (0, i.jsx)(o.Drp, { id: "remove-friend", label: N, action: m, color: "danger" }),
         ],
     });
 }
-class R extends a.PureComponent {
+class D extends a.PureComponent {
     peopleListItemRef = a.createRef();
     state = { isActiveRow: !1 };
     componentWillLeave(e) {
@@ -73,15 +78,24 @@ class R extends a.PureComponent {
     componentWillEnter(e) {
         null != this.peopleListItemRef.current && this.peopleListItemRef.current.componentWillEnter(e);
     }
-    handleOpenPrivateChannel = (e) => {
-        let { user: t } = this.props;
-        e.stopPropagation();
-        let n = r().find(g.A.getMutablePrivateChannels(), (e) => e.type === x.rbe.DM && e.getRecipientId() === t.id);
-        null != n ? (0, m.pX)(x.BVt.CHANNEL(x.ME, n.id)) : c.A.openPrivateChannel({ recipientIds: t.id });
+    openPrivateChannel = () => {
+        let { user: e } = this.props,
+            t = l().find(g.A.getMutablePrivateChannels(), (t) => t.type === b.rbe.DM && t.getRecipientId() === e.id);
+        null != t ? (0, m.pX)(b.BVt.CHANNEL(b.ME, t.id)) : c.A.openPrivateChannel({ recipientIds: e.id });
+    };
+    handleRowClick = (e) => {
+        e.stopPropagation(),
+            (0, T.xF)({ targetUserId: this.props.user.id, tab: I.Ay.getState().section }),
+            this.openPrivateChannel();
+    };
+    handleMessageClick = (e) => {
+        e.stopPropagation(),
+            (0, T.WD)({ targetUserId: this.props.user.id, tab: I.Ay.getState().section }),
+            this.openPrivateChannel();
     };
     handleOpenActionsMenu = (e) => {
         let { user: t, isGameRelationship: n, applicationId: a } = this.props;
-        (0, u.jA)(e, (e) => (0, i.jsx)(L, { ...e, user: t, applicationId: a, isGameRelationship: n }), {
+        (0, u.jA)(e, (e) => (0, i.jsx)(P, { ...e, user: t, applicationId: a, isGameRelationship: n }), {
             onClose: () => {
                 this.setState({ isActiveRow: !1 });
             },
@@ -94,8 +108,8 @@ class R extends a.PureComponent {
                 isFocused: t,
                 analyticsLocations: n,
                 activities: a,
-                applicationStream: l,
-                status: r,
+                applicationStream: r,
+                status: l,
                 isMobile: s,
                 isVR: d,
                 isGameRelationship: c,
@@ -104,45 +118,45 @@ class R extends a.PureComponent {
                 sectionIndex: p,
             } = this.props,
             { isActiveRow: I } = this.state;
-        return (0, h.p)(A.A.FRIENDS_LIST) && m === v.np.FRIEND_ANNIVERSARY && g && 0 === p
-            ? (0, i.jsx)(_.A, {
+        return (0, _.p)(A.A.FRIENDS_LIST) && m === y.np.FRIEND_ANNIVERSARY && g && 0 === p
+            ? (0, i.jsx)(h.A, {
                   ref: this.peopleListItemRef,
                   isFocused: t,
                   isActive: I,
                   recipientUser: e,
                   analyticsLocations: n,
                   onOtherHover: () => (I ? null : (0, u.Z_)()),
-                  onClick: this.handleOpenPrivateChannel,
+                  onClick: this.handleRowClick,
                   giftIntentType: m,
-                  status: r,
+                  status: l,
                   activities: a,
-                  applicationStream: l,
+                  applicationStream: r,
                   isMobile: s,
                   isVR: d,
                   isGameRelationship: c,
               })
-            : (0, i.jsx)(T.A, {
+            : (0, i.jsx)(S.A, {
                   ref: this.peopleListItemRef,
                   isFocused: t,
                   isActive: I,
                   user: e,
                   analyticsLocations: n,
                   onOtherHover: () => (I ? null : (0, u.Z_)()),
-                  onClick: this.handleOpenPrivateChannel,
+                  onClick: this.handleRowClick,
                   children: (t) =>
                       (0, i.jsxs)("div", {
-                          className: O.a4,
+                          className: R.a4,
                           children: [
-                              (0, i.jsx)(S.A, {
+                              (0, i.jsx)(v.A, {
                                   user: e,
-                                  status: r,
+                                  status: l,
                                   isMobile: s,
                                   isVR: d,
-                                  subText: (0, i.jsx)(N.A, {
+                                  subText: (0, i.jsx)(x.A, {
                                       hovered: t,
                                       activities: a,
-                                      applicationStream: l,
-                                      status: r,
+                                      applicationStream: r,
+                                      status: l,
                                       user: e,
                                       userIgnored: E.A.isIgnored(e.id),
                                   }),
@@ -150,17 +164,17 @@ class R extends a.PureComponent {
                                   showAccountIdentifier: !c && !e.isProvisional,
                               }),
                               (0, i.jsxs)("div", {
-                                  className: O.o1,
+                                  className: R.o1,
                                   children: [
-                                      (0, i.jsx)(C.A, {
+                                      (0, i.jsx)(N.A, {
                                           icon: o.oyn,
-                                          tooltip: y.intl.string(y.t["g33r/P"]),
-                                          onClick: this.handleOpenPrivateChannel,
+                                          tooltip: L.intl.string(L.t["g33r/P"]),
+                                          onClick: this.handleMessageClick,
                                           shouldHighlight: t,
                                       }),
-                                      (0, i.jsx)(C.A, {
+                                      (0, i.jsx)(N.A, {
                                           icon: o.FHP,
-                                          tooltip: y.intl.string(y.t["UKOtz+"]),
+                                          tooltip: L.intl.string(L.t["UKOtz+"]),
                                           onClick: this.handleOpenActionsMenu,
                                           shouldHighlight: t,
                                       }),
@@ -171,4 +185,4 @@ class R extends a.PureComponent {
               });
     }
 }
-let P = R;
+let j = D;
