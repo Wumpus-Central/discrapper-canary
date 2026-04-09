@@ -1,0 +1,16 @@
+e.exports = {
+    Nr: "card__02d09",
+    Vl: "cardImageContainer__02d09",
+    BN: "cardDark__02d09 card__02d09",
+    YF: "cardHighlighted__02d09",
+    Zl: "cardAnimation__02d09",
+    GC: "cardBackgroundImage__02d09",
+    wP: "cardImage__02d09",
+    zH: "details__02d09",
+    gn: "titleContainer__02d09",
+    iQ: "descriptionContainer__02d09",
+    li: "buttonHover__02d09",
+    ov: "titleContainerNoPrice__02d09",
+    ye: "iconAsset__02d09",
+    pt: "orbsEarnedContainer__02d09",
+};
