@@ -22,9 +22,9 @@ var a = n(627968),
     v = n(594832),
     E = n(961350),
     I = n(328968),
-    S = n(954571),
-    j = n(371794),
-    N = n(871123),
+    j = n(954571),
+    N = n(371794),
+    S = n(871123),
     k = n(733391),
     y = n(832163),
     R = n(207654),
@@ -107,13 +107,13 @@ function J(e) {
                     },
                 ));
         }, [t, u, n, _]),
-        S = l.useCallback(() => {
+        j = l.useCallback(() => {
             null != n && (0, P.X)({ guildId: n });
         }, [n]),
-        j = l.useCallback(() => {
+        N = l.useCallback(() => {
             null != n && (u(W.Jq.VISIT_SHOP), (0, P.default)({ guildId: n }), o());
         }, [n, o, u]),
-        N = l.useCallback(() => {
+        S = l.useCallback(() => {
             null != t &&
                 (u(W.Jq.GIFT_BUTTON),
                 (0, M.a)(
@@ -202,8 +202,8 @@ function J(e) {
                                       ? (0, a.jsx)(c.Button, {
                                             icon: c.U1X,
                                             variant: "secondary",
-                                            onMouseDown: S,
-                                            onClick: j,
+                                            onMouseDown: j,
+                                            onClick: N,
                                             text: V.intl.string(V.t["2QW9nR"]),
                                             fullWidth: !0,
                                         })
@@ -211,7 +211,7 @@ function J(e) {
                                   (0, a.jsx)(c.Button, {
                                       icon: c.okO,
                                       variant: "secondary",
-                                      onClick: N,
+                                      onClick: S,
                                       text: V.intl.string(V.t.QAZA5f),
                                       fullWidth: !0,
                                   }),
@@ -245,20 +245,20 @@ function z(e) {
                     e.mime_type.startsWith("video/")
                         ? l.push({
                               type: "video",
-                              src: (0, j.YE)(t, e, H.B, "mp4"),
-                              videoThumbnailSrc: (0, j.YE)(t, e, H.B, "webp"),
+                              src: (0, N.YE)(t, e, H.B, "mp4"),
+                              videoThumbnailSrc: (0, N.YE)(t, e, H.B, "webp"),
                               thumbnailSrc:
-                                  null != i.thumbnailAssetId ? (0, j.YE)(t, i.thumbnailAssetId, 112, "webp") : void 0,
+                                  null != i.thumbnailAssetId ? (0, N.YE)(t, i.thumbnailAssetId, 112, "webp") : void 0,
                               backgroundSrc:
-                                  null != i.backgroundAssetId ? (0, j.YE)(t, i.backgroundAssetId, H.B, N.pV) : void 0,
+                                  null != i.backgroundAssetId ? (0, N.YE)(t, i.backgroundAssetId, H.B, S.pV) : void 0,
                           })
                         : l.push({
                               type: "image",
-                              src: (0, j.YE)(t, e, H.B, "webp"),
+                              src: (0, N.YE)(t, e, H.B, "webp"),
                               thumbnailSrc:
-                                  null != i.thumbnailAssetId ? (0, j.YE)(t, i.thumbnailAssetId, 112, "webp") : void 0,
+                                  null != i.thumbnailAssetId ? (0, N.YE)(t, i.thumbnailAssetId, 112, "webp") : void 0,
                               backgroundSrc:
-                                  null != i.backgroundAssetId ? (0, j.YE)(t, i.backgroundAssetId, H.B, N.pV) : void 0,
+                                  null != i.backgroundAssetId ? (0, N.YE)(t, i.backgroundAssetId, H.B, S.pV) : void 0,
                           }));
             }
             return [a, l];
@@ -272,7 +272,7 @@ function z(e) {
 function K(e) {
     let { selectedCarouselItem: t, applicationId: n } = e;
     if (null == t) return null;
-    let l = null != t.labelIconAssetId ? (0, j.YE)(n, t.labelIconAssetId) : null;
+    let l = null != t.labelIconAssetId ? (0, N.YE)(n, t.labelIconAssetId) : null;
     return (0, a.jsxs)("div", {
         className: X.HI,
         children: [
@@ -299,10 +299,10 @@ function Z(e) {
             onClose: T,
         } = e,
         { analyticsLocations: R } = (0, p.Ay)(C ?? []),
-        { guildId: O } = (0, N.nG)(r),
+        { guildId: O } = (0, S.nG)(r),
         L = (0, d.bG)([E.default], () => E.default.getId());
     l.useEffect(() => {
-        null != O && null != i && (0, k.iR)(O, i, "SocialLayerStorefrontProductDetailsModal");
+        null != O && null != i && (0, k.iR)(O, i);
     }, [O, i]);
     let P = (0, U.A)({ guildId: O }),
         B = (0, d.bG)([y.A], () => y.A.getSkuAssets()),
@@ -312,7 +312,7 @@ function Z(e) {
         $ = (0, x.A)({ skuId: i, location: "SocialLayerStorefrontProductDetailsModal" }),
         [Z, ee] = l.useState(null),
         et = (function (e, t) {
-            let n = t?.labelIconAssetId != null ? (0, j.YE)(e, t?.labelIconAssetId) : null,
+            let n = t?.labelIconAssetId != null ? (0, N.YE)(e, t?.labelIconAssetId) : null,
                 [a, i] = (0, f.rh)(n, "#000000"),
                 r = l.useMemo(() => {
                     let e = s()(a).darken(1);
@@ -322,12 +322,12 @@ function Z(e) {
         })(r, Z);
     (0, v.pE)(),
         (0, _.Ay)(() => {
-            S.default.track(q.HAw.OPEN_MODAL, { location_stack: R, type: Y.Nh, sku_id: i, application_id: r }),
+            j.default.track(q.HAw.OPEN_MODAL, { location_stack: R, type: Y.Nh, sku_id: i, application_id: r }),
                 (0, k.Xw)();
         });
     let en = l.useCallback(
         (e) => {
-            S.default.track(q.HAw.SLAYER_STOREFRONT_PDP_ELEMENT_CLICKED, {
+            j.default.track(q.HAw.SLAYER_STOREFRONT_PDP_ELEMENT_CLICKED, {
                 slayer_storefront_session_id: A?.sessionId,
                 sku_id: i,
                 guild_id: A?.guildId,
@@ -360,8 +360,8 @@ function Z(e) {
         }, [F, en]);
     if (null == $?.tenantMetadata?.socialLayer) return D ? (0, a.jsx)(c.y$y, {}) : null;
     let es = P?.storefront,
-        er = es?.logoAssetId != null ? (0, j.YE)(es.applicationId, es.logoAssetId, 75) : null,
-        eo = es?.lightThemeLogoAssetId != null ? (0, j.YE)(es.applicationId, es.lightThemeLogoAssetId, 75) : null,
+        er = es?.logoAssetId != null ? (0, N.YE)(es.applicationId, es.logoAssetId, 75) : null,
+        eo = es?.lightThemeLogoAssetId != null ? (0, N.YE)(es.applicationId, es.lightThemeLogoAssetId, 75) : null,
         ed = null;
     return (
         (ed = M ? (er ?? eo) : (eo ?? er)),

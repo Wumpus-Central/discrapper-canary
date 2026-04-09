@@ -16,8 +16,8 @@ var r,
     f = n(442433),
     R = n(775602),
     E = n(793574),
-    C = n(688810),
-    H = n(713517),
+    H = n(688810),
+    C = n(713517),
     I = n(427209),
     O = n(993046),
     S = n(544028),
@@ -26,14 +26,14 @@ var r,
     x = n(954571),
     M = n(871123),
     p = n(733391),
-    L = n(439303),
-    b = n(832163),
+    b = n(439303),
+    L = n(832163),
     D = n(35826),
     v = n(207654),
     k = n(310962),
     B = n(44724),
-    y = n(345938),
-    j = n(533406),
+    j = n(345938),
+    y = n(533406),
     U = n(971146),
     w = n(366523),
     G = n(300182),
@@ -69,7 +69,7 @@ function Z(t) {
                     null != n &&
                         null != e &&
                         (a(W.bB.FORWARD_BUTTON),
-                        (0, y.d)({
+                        (0, j.d)({
                             sku: n,
                             guildId: e,
                             analyticsContext: o,
@@ -105,19 +105,19 @@ function Z(t) {
 function tt(t) {
     let { positionInSection: e, skuId: r, variant: a = 0, onClick: l, className: u, analyticsLocations: o } = t,
         I = i.useRef(null),
-        y = i.useRef(null),
+        j = i.useRef(null),
         F = (0, _.bG)([h.A], () => h.A.get(r)),
         { guildId: $ } = (0, M.nG)(F?.applicationId),
         tt = (0, v.b)({ location: "storefront_card" }),
         te = (0, _.bG)([S.A], () => (0, A.Mwr)(S.A.theme)),
         tn = (0, _.bG)([R.A], () => R.A.useReducedMotion),
         tr = N.Q_.useSetting(),
-        { isHoveringOrFocusing: ts } = (0, H.A)(I),
-        ti = (0, L.jM)(),
-        { analyticsLocations: ta } = (0, C.Ay)(o ?? []),
+        { isHoveringOrFocusing: ts } = (0, C.A)(I),
+        ti = (0, b.jM)(),
+        { analyticsLocations: ta } = (0, H.Ay)(o ?? []),
         tl = i.useRef({ positionInSection: e, analyticsLocations: ta }),
         [tu, tc] = i.useState(!1),
-        to = (0, _.bG)([b.A], () => (null != r ? b.A.getNormalizedSKUEligibility(r) : void 0), [r]),
+        to = (0, _.bG)([L.A], () => (null != r ? L.A.getNormalizedSKUEligibility(r) : void 0), [r]),
         td = (0, k.A)(r, tu),
         tA = i.useCallback((t) => {
             tc(t);
@@ -159,8 +159,8 @@ function tt(t) {
             [r, ti],
         ),
         { primaryIconAsset: tR, primaryIconLabel: tE } = i.useMemo(() => (0, M.Cv)(F, F?.applicationId), [F]),
-        tC = (0, _.bG)([b.A], () => (null != $ ? (b.A.getStorefrontState($)?.activePage ?? 0) : 0)),
-        tH = i.useMemo(() => {
+        tH = (0, _.bG)([L.A], () => (null != $ ? (L.A.getStorefrontState($)?.activePage ?? 0) : 0)),
+        tC = i.useMemo(() => {
             let t = F?.tenantMetadata?.socialLayer?.expiresAt;
             if (null == t) return null;
             let e = d()(),
@@ -177,27 +177,27 @@ function tt(t) {
             (0, B.X)({ guildId: $ });
         }, [$]),
         tN = i.useCallback(() => {
-            null != $ && (0, p.iR)($, r, "SocialLayerStorefrontCard");
+            null != $ && (0, p.iR)($, r);
         }, [$, r]),
         th = i.useCallback(() => {
             tg(),
                 null != $ &&
-                    (y.current = setTimeout(() => {
-                        (0, p.iR)($, r, "SocialLayerStorefrontCard");
+                    (j.current = setTimeout(() => {
+                        (0, p.iR)($, r);
                     }, 1e3));
         }, [$, r, tg]),
         tx = i.useCallback(() => {
-            tm(), null != y.current && (clearTimeout(y.current), (y.current = null));
+            tm(), null != j.current && (clearTimeout(j.current), (j.current = null));
         }, [tm]);
     i.useEffect(
         () => () => {
-            null != y.current && clearTimeout(y.current);
+            null != j.current && clearTimeout(j.current);
         },
         [],
     );
     let tM = i.useCallback(() => {
-            null != $ && (0, D.A)({ guildId: $, pageIndex: tC, skuId: r, slug: F?.slug });
-        }, [$, r, tC, F?.slug]),
+            null != $ && (0, D.A)({ guildId: $, pageIndex: tH, skuId: r, slug: F?.slug });
+        }, [$, r, tH, F?.slug]),
         tp = i.useCallback(
             (t) => {
                 (tf(W.bB.CARD), null != l && F?.applicationId != null)
@@ -206,7 +206,7 @@ function tt(t) {
             },
             [tf, l, tM, r, F?.applicationId],
         ),
-        tL = i.useCallback(
+        tb = i.useCallback(
             (t) => {
                 tr &&
                     (0, f.L3)(t, async () => {
@@ -217,7 +217,7 @@ function tt(t) {
             [tr, r],
         ),
         {
-            priceComponent: tb,
+            priceComponent: tL,
             extendedHeight: tD,
             displayPrice: tv,
         } = (function (t) {
@@ -309,7 +309,7 @@ function tt(t) {
         children: (0, s.jsx)(A.vN3, {
             children: (0, s.jsxs)(T.sqX, {
                 onClick: tp,
-                onContextMenu: tL,
+                onContextMenu: tb,
                 onMouseDown: tS,
                 onMouseEnter: th,
                 onMouseLeave: tx,
@@ -317,7 +317,7 @@ function tt(t) {
                 ref: I,
                 "aria-label": F.name,
                 children: [
-                    null != tH && (0, s.jsx)(T.LpS, { text: tH, disableColor: !0, className: z.qS }),
+                    null != tC && (0, s.jsx)(T.LpS, { text: tC, disableColor: !0, className: z.qS }),
                     (0, s.jsx)(Z, {
                         guildId: $,
                         sku: F,
@@ -386,7 +386,7 @@ function tt(t) {
                                           }),
                                           (0, s.jsx)("div", {
                                               className: z.iQ,
-                                              children: td ? tb : (0, s.jsx)(P.r, {}),
+                                              children: td ? tL : (0, s.jsx)(P.r, {}),
                                           }),
                                       ],
                                   }),
@@ -403,7 +403,7 @@ function tt(t) {
                                                         onClick: (t) => {
                                                             t.stopPropagation(),
                                                                 tf(W.bB.BUY_BUTTON),
-                                                                (0, j.a)(
+                                                                (0, y.a)(
                                                                     F,
                                                                     { isGift: !1 },
                                                                     {
@@ -436,7 +436,7 @@ function tt(t) {
                                                   onGift: (t) => {
                                                       t.stopPropagation(),
                                                           tf(W.bB.GIFT_BUTTON),
-                                                          (0, j.a)(
+                                                          (0, y.a)(
                                                               F,
                                                               { isGift: !0 },
                                                               {
