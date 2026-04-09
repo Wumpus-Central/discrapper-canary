@@ -1,8 +1,8 @@
 n.d(t, { A: () => v });
 var i = n(627968),
-    r = n(64700),
-    a = n(503698),
-    l = n.n(a),
+    a = n(64700),
+    l = n(503698),
+    r = n.n(l),
     s = n(110259),
     o = n(311907),
     d = n(3203),
@@ -12,81 +12,83 @@ var i = n(627968),
     h = n(139286),
     _ = n(414711),
     m = n(187696),
-    p = n(723690),
-    g = n(21119),
+    g = n(723690),
+    p = n(21119),
     E = n(994500),
     I = n(954571),
     f = n(45787),
     C = n(275759),
-    N = n(979474),
-    T = n(652215);
+    T = n(233971),
+    N = n(652215);
 n(646363);
 var S = n(985018),
-    x = n(847295);
+    x = n(955017);
 function v(e) {
     let {
             ref: t,
-            isFocused: a,
+            isFocused: l,
             isActive: v,
             status: b,
             activities: y,
-            applicationStream: L,
-            isGameRelationship: O,
+            applicationStream: O,
+            isGameRelationship: L,
             isMobile: R,
             isVR: P,
-            onOtherHover: j,
-            onClick: D,
-            recipientUser: w,
-            giftIntentType: M,
+            onOtherHover: D,
+            onClick: j,
+            recipientUser: M,
+            analyticsLocations: w,
+            giftIntentType: U,
         } = e,
-        { analyticsLocations: U } = (0, A.Ay)(u.A.PREMIUM_GIFT_INTENT_FRIEND_ROW),
-        { Component: G } = (0, d.V)(),
-        k = (0, o.bG)([C.Ay], () => C.Ay.getFriendAnniversaryYears(w.id)),
-        { openGiftModal: V } = (0, N.$)({
-            giftRecipient: w,
-            analyticsLocations: U,
-            analyticsLocation: T.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
+        { analyticsLocations: G } = (0, A.Ay)(u.A.PREMIUM_GIFT_INTENT_FRIEND_ROW),
+        { Component: k } = (0, d.V)(),
+        V = (0, o.bG)([C.Ay], () => C.Ay.getFriendAnniversaryYears(M.id)),
+        { openGiftModal: B } = (0, T.$)({
+            giftRecipient: M,
+            analyticsLocations: G,
+            analyticsLocation: N.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
             analyticsObject: {
-                page: T.liQ.FRIENDS_LIST,
-                section: T.JJy.FRIENDS_LIST_FRIEND_ROW,
-                object: T.ZSU.BUTTON_CTA,
-                objectType: T.AnalyticsObjectTypes.GIFT,
+                page: N.liQ.FRIENDS_LIST,
+                section: N.JJy.FRIENDS_LIST_FRIEND_ROW,
+                object: N.ZSU.BUTTON_CTA,
+                objectType: N.AnalyticsObjectTypes.GIFT,
             },
             location: "gift-intent-friend-row",
         });
-    r.useEffect(() => {
-        let e = g.A.getUserAffinity(w.id);
+    a.useEffect(() => {
+        let e = p.A.getUserAffinity(M.id);
         (0, h.x)({
             name: s.ImpressionNames.GIFT_INTENT_ACTION_BUTTON,
             type: s.ImpressionTypes.VIEW,
-            properties: { gift_intent_type: M, affinity: e?.communicationProbability },
+            properties: { gift_intent_type: U, affinity: e?.communicationProbability },
         });
-    }, [w, M]);
-    let B = (e) => {
+    }, [M, U]);
+    let H = (e) => {
         e.stopPropagation();
-        let t = g.A.getUserAffinity(w.id);
-        I.default.track(T.HAw.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
-            gift_intent_type: M,
+        let t = p.A.getUserAffinity(M.id);
+        I.default.track(N.HAw.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
+            gift_intent_type: U,
             affinity: t?.dmProbability,
-            location_stack: U,
+            location_stack: G,
         }),
-            V();
+            B();
     };
     return (0, i.jsx)(_.A, {
         ref: t,
-        isFocused: a,
+        isFocused: l,
         isActive: v,
-        user: w,
-        onOtherHover: j,
-        onClick: D,
+        user: M,
+        analyticsLocations: w,
+        onOtherHover: D,
+        onClick: j,
         height: 72,
         children: (e) =>
             (0, i.jsxs)("div", {
-                className: l()(x.a4, x.Z$),
+                className: r()(x.a4, x.Z$),
                 children: [
-                    (0, i.jsx)(p.A, {
+                    (0, i.jsx)(g.A, {
                         className: x.Cv,
-                        user: w,
+                        user: M,
                         status: b,
                         isMobile: R,
                         isVR: P,
@@ -95,10 +97,10 @@ function v(e) {
                                 (0, i.jsx)(m.A, {
                                     hovered: e,
                                     activities: y,
-                                    applicationStream: L,
+                                    applicationStream: O,
                                     status: b,
-                                    user: w,
-                                    userIgnored: E.A.isIgnored(w.id),
+                                    user: M,
+                                    userIgnored: E.A.isIgnored(M.id),
                                 }),
                                 (0, i.jsxs)("div", {
                                     className: x.K3,
@@ -107,14 +109,14 @@ function v(e) {
                                         (0, i.jsx)(c.Text, {
                                             variant: "text-xs/normal",
                                             color: "text-subtle",
-                                            children: S.intl.formatToPlainString(S.t.S3fdq7, { numberOfYears: k }),
+                                            children: S.intl.formatToPlainString(S.t.S3fdq7, { numberOfYears: V }),
                                         }),
                                     ],
                                 }),
                             ],
                         }),
                         hovered: e,
-                        showAccountIdentifier: !O && !w.isProvisional,
+                        showAccountIdentifier: !L && !M.isProvisional,
                     }),
                     (0, i.jsxs)("div", {
                         className: x.o1,
@@ -122,22 +124,22 @@ function v(e) {
                             (0, i.jsx)(c.K0, {
                                 size: "sm",
                                 variant: "secondary",
-                                icon: G,
+                                icon: k,
                                 "aria-label": S.intl.string(S.t.I61IsE),
                                 onClick: () => {
-                                    I.default.track(T.HAw.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
-                                        gift_intent_type: M,
+                                    I.default.track(N.HAw.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
+                                        gift_intent_type: U,
                                         cta_type: "send_message",
-                                        location_stack: U,
+                                        location_stack: G,
                                     }),
-                                        (0, f.xs)(w.id),
+                                        (0, f.xs)(M.id),
                                         (0, c.mMO)(async () => {
                                             let { default: e } = await n.e("95501").then(n.bind(n, 367516));
                                             return (t) =>
                                                 (0, i.jsx)(e, {
                                                     ...t,
-                                                    giftIntentType: M ?? void 0,
-                                                    analyticsLocationHistory: U,
+                                                    giftIntentType: U ?? void 0,
+                                                    analyticsLocationHistory: G,
                                                 });
                                         });
                                 },
@@ -147,7 +149,7 @@ function v(e) {
                                 text: S.intl.string(S.t.PEjaCx),
                                 icon: c.okO,
                                 "aria-label": S.intl.string(S.t.PEjaCx),
-                                onClick: B,
+                                onClick: H,
                             }),
                         ],
                     }),

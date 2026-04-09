@@ -1,8 +1,8 @@
 n.d(t, { A: () => O });
 var i = n(627968),
-    r = n(64700),
-    a = n(311907),
-    l = n(827734),
+    a = n(64700),
+    l = n(311907),
+    r = n(827734),
     s = n(397927),
     o = n(308528),
     d = n(688810),
@@ -12,35 +12,35 @@ var i = n(627968),
     h = n(657331),
     _ = n(994500),
     m = n(287809),
-    p = n(954571),
-    g = n(427262),
+    g = n(954571),
+    p = n(427262),
     E = n(390848),
     I = n(513297),
     f = n(414711),
     C = n(723690),
     T = n(652215),
     N = n(985018),
-    S = n(211587);
+    S = n(488108);
 function x(e) {
-    let { user: t, applicationId: n, isGameRelationship: a, active: o, onAcceptFriendRequest: d } = e,
-        [c, u] = r.useState(!1),
+    let { user: t, applicationId: n, isGameRelationship: l, active: o, onAcceptFriendRequest: d } = e,
+        [c, u] = a.useState(!1),
         A = m.default.getCurrentUser()?.isStaff() && t?.isStaff(),
         { acceptFriendRequest: h, cancelFriendRequest: _ } = (0, E.I)({
             userId: t.id,
             applicationId: n,
-            isGameRelationship: a,
+            isGameRelationship: l,
             location: "Friends",
             onFinally: () => {
                 u(!1);
             },
         }),
-        p = r.useCallback(
+        g = a.useCallback(
             (e) => {
                 u(!0), e.stopPropagation(), d(), h();
             },
             [h, d],
         ),
-        g = r.useCallback(
+        p = a.useCallback(
             (e) => {
                 e.stopPropagation(), _();
             },
@@ -52,7 +52,7 @@ function x(e) {
                 (0, i.jsx)("div", {
                     className: S.ou,
                     children: (0, i.jsx)(s.LpS, {
-                        color: l.A.unsafe_rawColors.BRAND_500.css,
+                        color: r.A.unsafe_rawColors.BRAND_500.css,
                         text: N.intl.string(N.t.oMx98L),
                     }),
                 }),
@@ -60,7 +60,7 @@ function x(e) {
                 icon: s.A9s,
                 actionType: I.A.ActionTypes.ACCEPT,
                 tooltip: N.intl.string(N.t.Zcibdf),
-                onClick: p,
+                onClick: g,
                 shouldHighlight: o,
                 loading: c,
             }),
@@ -68,21 +68,21 @@ function x(e) {
                 icon: s.PGe,
                 actionType: I.A.ActionTypes.DENY,
                 tooltip: N.intl.string(N.t.xuio0C),
-                onClick: g,
+                onClick: p,
                 shouldHighlight: o,
             }),
         ],
     });
 }
 function v(e) {
-    let { userId: t, applicationId: n, isGameRelationship: a, active: l } = e,
+    let { userId: t, applicationId: n, isGameRelationship: l, active: r } = e,
         { cancelFriendRequest: o } = (0, E.I)({
             userId: t,
             applicationId: n,
-            isGameRelationship: a,
+            isGameRelationship: l,
             location: "Friends",
         }),
-        d = r.useCallback(
+        d = a.useCallback(
             (e) => {
                 e.stopPropagation(), o();
             },
@@ -93,13 +93,13 @@ function v(e) {
         actionType: I.A.ActionTypes.DENY,
         tooltip: N.intl.string(N.t.eaq81S),
         onClick: d,
-        shouldHighlight: l,
+        shouldHighlight: r,
     });
 }
 function b(e) {
-    let { isGameRelationship: t, applicationId: n, userTag: l, isProvisional: o } = e,
-        d = r.useMemo(() => (t ? N.intl.string(N.t["Uv/eTx"]) : l), [t, l]),
-        h = (0, a.bG)([c.A], () => (null != n ? c.A.getApplication(n) : null));
+    let { isGameRelationship: t, applicationId: n, userTag: r, isProvisional: o } = e,
+        d = a.useMemo(() => (t ? N.intl.string(N.t["Uv/eTx"]) : r), [t, r]),
+        h = (0, l.bG)([c.A], () => (null != n ? c.A.getApplication(n) : null));
     return (0, i.jsxs)("div", {
         className: S.P9,
         children: [
@@ -116,18 +116,18 @@ function b(e) {
     });
 }
 function y(e) {
-    let { user: t, hovered: n, status: r, isGameRelationship: a, applicationId: o, isFriend: d } = e,
-        c = g.Ay.useUserTag(t);
+    let { user: t, hovered: n, status: a, isGameRelationship: l, applicationId: o, isFriend: d } = e,
+        c = p.Ay.useUserTag(t);
     return (0, i.jsx)(C.A, {
         user: t,
         hovered: n,
-        status: r,
+        status: a,
         showAccountIdentifier: !1,
         subText: d
             ? (0, i.jsxs)("div", {
                   className: S.Tl,
                   children: [
-                      (0, i.jsx)(s.Uzd, { size: "sm", color: l.A.colors.ICON_FEEDBACK_POSITIVE }),
+                      (0, i.jsx)(s.Uzd, { size: "sm", color: r.A.colors.ICON_FEEDBACK_POSITIVE }),
                       (0, i.jsx)(s.Text, {
                           variant: "text-sm/medium",
                           color: "text-muted",
@@ -135,32 +135,33 @@ function y(e) {
                       }),
                   ],
               })
-            : (0, i.jsx)(b, { isGameRelationship: a, isProvisional: t.isProvisional, applicationId: o, userTag: c }),
+            : (0, i.jsx)(b, { isGameRelationship: l, isProvisional: t.isProvisional, applicationId: o, userTag: c }),
     });
 }
 function O(e) {
     let {
             user: t,
             type: n,
-            status: l,
+            status: r,
             isFocused: c,
             applicationId: u,
             isGameRelationship: A,
             onAcceptFriendRequest: m,
         } = e,
-        { analyticsLocations: g } = (0, d.Ay)(),
-        E = l === T.clD.OFFLINE ? T.clD.UNKNOWN : l,
-        I = (0, a.bG)([_.A], () => _.A.getRelationshipType(t.id)),
-        C = r.useCallback(() => (0, h.openUserProfileModal)({ userId: t.id, sourceAnalyticsLocations: g }), [g, t.id]),
+        { analyticsLocations: p } = (0, d.Ay)(),
+        E = r === T.clD.OFFLINE ? T.clD.UNKNOWN : r,
+        I = (0, l.bG)([_.A], () => _.A.getRelationshipType(t.id)),
+        C = a.useCallback(() => (0, h.openUserProfileModal)({ userId: t.id, sourceAnalyticsLocations: p }), [p, t.id]),
         N = (e) => {
             e.stopPropagation(),
-                p.default.track(T.HAw.FRIEND_REQUEST_ACCEPT_MESSAGE_CLICKED),
+                g.default.track(T.HAw.FRIEND_REQUEST_ACCEPT_MESSAGE_CLICKED),
                 o.A.openPrivateChannel({ recipientIds: [t.id] });
         };
     return [T.eA$.PENDING_INCOMING, T.eA$.PENDING_OUTGOING, T.eA$.FRIEND].includes(I)
         ? (0, i.jsx)(f.A, {
               isFocused: c,
               user: t,
+              analyticsLocations: p,
               onClick: C,
               children: (e) =>
                   (0, i.jsxs)("div", {
