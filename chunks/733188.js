@@ -50,7 +50,7 @@ function S() {
                           ]
                         : [],
                 ),
-                f(A.intl.formatToPlainString(A.t["4rDfgM"], {})),
+                f(A.intl.formatToPlainString(A.t["4rDfgM"], { link: "https://discord.com/accessibility" })),
             ],
             [t],
         ),
