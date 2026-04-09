@@ -1,3 +1,3 @@
-n.exports = JSON.parse(
-    '{"XiLvuG":["Lautst\xe4rke \xe4ndern"],"dRVF+Z":["Spule 10\xa0Sekunden zur\xfcck"],"yV2FLL":["Spring 10\xa0Sekunden vorw\xe4rts"],"YWbiPw":["Ungesehene Abschnitte k\xf6nnen noch nicht \xfcbersprungen werden"],"0DbPcL":["Untertitel ein-/ausschalten"],"z9Cnzv":["Vollbild ein-/ausschalten"],"6EjGUv":["Transkript ein-/ausschalten"],"VZkd/n":["Transkript"]}',
+e.exports = JSON.parse(
+    '{"6/dkHh":["Transkript schlie\xdfen"],"XiLvuG":["Lautst\xe4rke \xe4ndern"],"dRVF+Z":["Spult 10\xa0Sekunden zur\xfcck"],"yV2FLL":["Spring 10\xa0Sekunden vorw\xe4rts"],"YWbiPw":["Ungesehene Abschnitte k\xf6nnen noch nicht \xfcbersprungen werden"],"0DbPcL":["Untertitel ein-/ausschalten"],"z9Cnzv":["Vollbild ein-/ausschalten"],"6EjGUv":["Transkript ein-/ausschalten"],"kX3+aM":["Video wird geladen\xa0…"],"c7IRfm":["Das Video wurde angehalten, weil das Fenster den Fokus verloren hat"],"9St/zK":["Das Video wurde angehalten, weil das Fenster nicht sichtbar ist"],"VZkd/n":["Transkript"],"E527vj":["Video-Thumbnail"]}',
 );

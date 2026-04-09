@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"XiLvuG":["Alterar volume"],"dRVF+Z":["Voltar 10\xa0segundos"],"yV2FLL":["Pular 10 segundos \xe0 frente"],"YWbiPw":["N\xe3o \xe9 poss\xedvel pular se\xe7\xf5es ainda n\xe3o assistidas"],"0DbPcL":["Ativar/desativar legendas"],"z9Cnzv":["Alternar tela cheia"],"6EjGUv":["Ativar/desativar transcri\xe7\xe3o"],"VZkd/n":["Transcri\xe7\xe3o"]}',
+a.exports = JSON.parse(
+    '{"6/dkHh":["Fechar transcri\xe7\xe3o"],"XiLvuG":["Alterar volume"],"dRVF+Z":["Voltar 10\xa0segundos"],"yV2FLL":["Pular 10 segundos \xe0 frente"],"YWbiPw":["N\xe3o \xe9 poss\xedvel pular se\xe7\xf5es ainda n\xe3o assistidas"],"0DbPcL":["Ativar/desativar legendas"],"z9Cnzv":["Alternar tela cheia"],"6EjGUv":["Ativar/desativar transcri\xe7\xe3o"],"kX3+aM":["Carregando v\xeddeo..."],"c7IRfm":["V\xeddeo pausado porque a janela desfocou"],"9St/zK":["V\xeddeo pausado porque a janela n\xe3o est\xe1 vis\xedvel"],"VZkd/n":["Transcri\xe7\xe3o"],"E527vj":["Thumbnail de v\xeddeo"]}',
 );
