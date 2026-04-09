@@ -41,6 +41,7 @@ function u(e) {
         onKeyDown: (e) => e.stopPropagation(),
         style: { aspectRatio: `${p} / ${m}`, maxHeight: _.Rk },
         children: (0, n.jsx)(c.A, {
+            crossOrigin: null,
             src: t.url,
             downloadUrl: t.url,
             downloadContentType: t.content_type,

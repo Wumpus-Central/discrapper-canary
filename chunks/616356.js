@@ -33,10 +33,10 @@ function M(e, t) {
     let n = t ?? C.eGj;
     return i[e]?.[n] != null && (delete i[e][n], !0);
 }
-function P(e) {
+function x(e) {
     r.delete(e);
 }
-function x() {
+function P() {
     let e = [];
     for (let t in i) {
         let n = i[t];
@@ -54,32 +54,22 @@ function k(e) {
 function U(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
-        let { userId: n, guildId: i, channelId: s, sessionId: o, selfStream: l, discoverable: u } = t;
-        if (l && null != s)
+        let { userId: n, guildId: r, channelId: i, sessionId: s, selfStream: a, discoverable: o } = t;
+        if (a && null != i)
             return (
                 w({
-                    streamType: null != i ? R.U4.GUILD : R.U4.CALL,
+                    streamType: null != r ? R.U4.GUILD : R.U4.CALL,
                     ownerId: n,
-                    guildId: i,
-                    channelId: s,
-                    discoverable: u,
+                    guildId: r,
+                    channelId: i,
+                    discoverable: o,
                 }),
                 !0
             );
         {
             let t = g.default.getId(),
-                l = g.default.getSessionId();
-            if (n === t && o !== l && null != y.A.getChannelId()) return e;
-            if (n === t && o === l && null != s) {
-                let e = (0, f._z)({
-                    streamType: null != i ? R.U4.GUILD : R.U4.CALL,
-                    guildId: i,
-                    channelId: s,
-                    ownerId: n,
-                });
-                if (r.has(e) && null == a[e]) return P(e), !0;
-            }
-            return M(n, i) || e;
+                i = g.default.getSessionId();
+            return n === t && s !== i && null != y.A.getChannelId() ? e : M(n, r) || e;
         }
     }, !1);
 }
@@ -155,13 +145,13 @@ function Y(e) {
 }
 function W(e) {
     let { streamKey: t } = e;
-    P(t);
+    x(t);
 }
 function K(e) {
     let { id: t, channelId: n } = e;
     (O = t),
         Array.from(r.values()).forEach((e) => {
-            (0, f._z)(e) !== O && e.state === C.XYD.ENDED && P((0, f._z)(e));
+            (0, f._z)(e) !== O && e.state === C.XYD.ENDED && x((0, f._z)(e));
         }),
         null == t || ((0, f.wL)(t) && t.includes(g.default.getId()) && (b[n] = !1));
 }
@@ -184,7 +174,7 @@ function $(e) {
             }),
             (l = C.XYD.ENDED);
     } else o.state === C.XYD.FAILED && a === C.H2B.USER_REQUESTED && (l = C.XYD.FAILED);
-    r.set(t, { ...o, state: l }), l === C.XYD.ENDED && O !== t && P(t);
+    r.set(t, { ...o, state: l }), l === C.XYD.ENDED && O !== t && x(t);
 }
 function z(e) {
     let { streamKey: t } = e,
@@ -302,10 +292,10 @@ class ee extends u.Ay.PersistedStore {
         return (0, h.A)(T.Ay) ? (s[e] ?? null) : null;
     }
     getAllApplicationStreams() {
-        return (0, h.A)(T.Ay) ? x().filter((e) => null != e && Q(e.streamType, e.channelId)) : [];
+        return (0, h.A)(T.Ay) ? P().filter((e) => null != e && Q(e.streamType, e.channelId)) : [];
     }
     getAllApplicationStreamsForChannel(e) {
-        return (0, h.A)(T.Ay) ? x().filter((t) => null != t && t.channelId === e && Q(t.streamType, t.channelId)) : [];
+        return (0, h.A)(T.Ay) ? P().filter((t) => null != t && t.channelId === e && Q(t.streamType, t.channelId)) : [];
     }
     getViewerIds(e) {
         if (!(0, h.A)(T.Ay)) return [];

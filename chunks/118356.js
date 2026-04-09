@@ -1,4 +1,98 @@
-t.d(r,{$o:()=>i,Vy:()=>u,gZ:()=>s});var n=t(631159);let a=`
+t.d(r, { $o: () => i, Vy: () => u, gZ: () => s });
+var n = t(631159);
+let a = `
 font-weight: bold;
 color: purple;
-`,o=()=>{};function i(e){o=e}let l=()=>{};function s(e,r,t){for(var n=arguments.length,o=Array(n>3?n-3:0),i=3;i<n;i++)o[i-3]=arguments[i];"file-only"!==r&&console[r](`%c[${e}]`,a,t,...o)}class u{name;nativeLoggerEnabled;constructor(e="default"){this.name=e,this.nativeLoggerEnabled=!1}enableNativeLogger(e){this.nativeLoggerEnabled=e}logDangerously=(()=>{var e=this;return function(r){for(var t=arguments.length,n=Array(t>1?t-1:0),a=1;a<t;a++)n[a-1]=arguments[a];o(e.name,"log",r,...n),e.nativeLoggerEnabled&&l?.(e.name,"log",r,...n)}})();log=(()=>{var e=this;return function(r){for(var t=arguments.length,a=Array(t>1?t-1:0),i=1;i<t;i++)a[i-1]=arguments[i];(0,n.G)(r,...a),o(e.name,"log",r,...a),e.nativeLoggerEnabled&&l?.(e.name,"log",r,...a)}})();verboseDangerously=(()=>{var e=this;return function(r){for(var t=arguments.length,n=Array(t>1?t-1:0),a=1;a<t;a++)n[a-1]=arguments[a];o(e.name,"debug",r,...n),e.nativeLoggerEnabled&&l?.(e.name,"debug",r,...n)}})();verbose=(()=>{var e=this;return function(r){for(var t=arguments.length,a=Array(t>1?t-1:0),i=1;i<t;i++)a[i-1]=arguments[i];(0,n.G)(r,...a),o(e.name,"debug",r,...a),e.nativeLoggerEnabled&&l?.(e.name,"debug",r,...a)}})();info=(()=>{var e=this;return function(r){for(var t=arguments.length,a=Array(t>1?t-1:0),i=1;i<t;i++)a[i-1]=arguments[i];(0,n.G)(r,...a),o(e.name,"info",r,...a),e.nativeLoggerEnabled&&l?.(e.name,"info",r,...a)}})();warn=(()=>{var e=this;return function(r){for(var t=arguments.length,a=Array(t>1?t-1:0),i=1;i<t;i++)a[i-1]=arguments[i];(0,n.G)(r,...a),o(e.name,"warn",r,...a),e.nativeLoggerEnabled&&l?.(e.name,"warn",r,...a)}})();error=(()=>{var e=this;return function(r){for(var t=arguments.length,a=Array(t>1?t-1:0),i=1;i<t;i++)a[i-1]=arguments[i];(0,n.G)(r,...a),o(e.name,"error",r,...a),e.nativeLoggerEnabled&&l?.(e.name,"error",r,...a)}})();trace=(()=>{var e=this;return function(r){for(var t=arguments.length,n=Array(t>1?t-1:0),a=1;a<t;a++)n[a-1]=arguments[a];o(e.name,"trace",r,...n),e.nativeLoggerEnabled&&l?.(e.name,"trace",r,...n)}})();time=(e,r)=>{let t=Date.now(),n=r();return this.log(e,Date.now()-t),n};timeAsync=async(e,r)=>{let t=Date.now(),n=await r();return this.log(e,`${Date.now()-t}ms`),n};fileOnly=(()=>{var e=this;return function(r){for(var t=arguments.length,n=Array(t>1?t-1:0),a=1;a<t;a++)n[a-1]=arguments[a];o(e.name,"file-only",r,...n),e.nativeLoggerEnabled&&l?.(e.name,"file-only",r,...n)}})()}ed&&o?.(e.name,"file-only",t,...r)}})()}
+`,
+    o = () => {};
+function i(e) {
+    o = e;
+}
+let l = () => {};
+function s(e, r, t) {
+    for (var n = arguments.length, o = Array(n > 3 ? n - 3 : 0), i = 3; i < n; i++) o[i - 3] = arguments[i];
+    "file-only" !== r && console[r](`%c[${e}]`, a, t, ...o);
+}
+class u {
+    name;
+    nativeLoggerEnabled;
+    constructor(e = "default") {
+        (this.name = e), (this.nativeLoggerEnabled = !1);
+    }
+    enableNativeLogger(e) {
+        this.nativeLoggerEnabled = e;
+    }
+    logDangerously = (() => {
+        var e = this;
+        return function (r) {
+            for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), a = 1; a < t; a++) n[a - 1] = arguments[a];
+            o(e.name, "log", r, ...n), e.nativeLoggerEnabled && l?.(e.name, "log", r, ...n);
+        };
+    })();
+    log = (() => {
+        var e = this;
+        return function (r) {
+            for (var t = arguments.length, a = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) a[i - 1] = arguments[i];
+            (0, n.G)(r, ...a), o(e.name, "log", r, ...a), e.nativeLoggerEnabled && l?.(e.name, "log", r, ...a);
+        };
+    })();
+    verboseDangerously = (() => {
+        var e = this;
+        return function (r) {
+            for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), a = 1; a < t; a++) n[a - 1] = arguments[a];
+            o(e.name, "debug", r, ...n), e.nativeLoggerEnabled && l?.(e.name, "debug", r, ...n);
+        };
+    })();
+    verbose = (() => {
+        var e = this;
+        return function (r) {
+            for (var t = arguments.length, a = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) a[i - 1] = arguments[i];
+            (0, n.G)(r, ...a), o(e.name, "debug", r, ...a), e.nativeLoggerEnabled && l?.(e.name, "debug", r, ...a);
+        };
+    })();
+    info = (() => {
+        var e = this;
+        return function (r) {
+            for (var t = arguments.length, a = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) a[i - 1] = arguments[i];
+            (0, n.G)(r, ...a), o(e.name, "info", r, ...a), e.nativeLoggerEnabled && l?.(e.name, "info", r, ...a);
+        };
+    })();
+    warn = (() => {
+        var e = this;
+        return function (r) {
+            for (var t = arguments.length, a = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) a[i - 1] = arguments[i];
+            (0, n.G)(r, ...a), o(e.name, "warn", r, ...a), e.nativeLoggerEnabled && l?.(e.name, "warn", r, ...a);
+        };
+    })();
+    error = (() => {
+        var e = this;
+        return function (r) {
+            for (var t = arguments.length, a = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) a[i - 1] = arguments[i];
+            (0, n.G)(r, ...a), o(e.name, "error", r, ...a), e.nativeLoggerEnabled && l?.(e.name, "error", r, ...a);
+        };
+    })();
+    trace = (() => {
+        var e = this;
+        return function (r) {
+            for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), a = 1; a < t; a++) n[a - 1] = arguments[a];
+            o(e.name, "trace", r, ...n), e.nativeLoggerEnabled && l?.(e.name, "trace", r, ...n);
+        };
+    })();
+    time = (e, r) => {
+        let t = Date.now(),
+            n = r();
+        return this.log(e, Date.now() - t), n;
+    };
+    timeAsync = async (e, r) => {
+        let t = Date.now(),
+            n = await r();
+        return this.log(e, `${Date.now() - t}ms`), n;
+    };
+    fileOnly = (() => {
+        var e = this;
+        return function (r) {
+            for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), a = 1; a < t; a++) n[a - 1] = arguments[a];
+            o(e.name, "file-only", r, ...n), e.nativeLoggerEnabled && l?.(e.name, "file-only", r, ...n);
+        };
+    })();
+}
