@@ -1,8 +1,8 @@
 var i = n(61090);
 n(237751);
 var r = n(311907),
-    l = n(506774),
-    a = n(73153),
+    a = n(506774),
+    l = n(73153),
     s = n(154049),
     o = n(273867),
     d = n(773686),
@@ -12,8 +12,8 @@ var r = n(311907),
     h = n(925948),
     _ = n(980001),
     m = n(476196),
-    g = n(531743),
-    p = n(989950),
+    p = n(531743),
+    g = n(989950),
     E = n(264392),
     I = n(626584),
     f = n(142120),
@@ -23,15 +23,15 @@ var r = n(311907),
     S = n(961350),
     x = n(309010),
     v = n(967198),
-    y = n(612181),
-    b = n(723702),
+    b = n(612181),
+    y = n(723702),
     O = n(837367),
     L = n(736400),
     R = n(424234),
     P = n(652215);
 let D = new I.A("CacheStore"),
-    j = !1,
-    M = "initializing",
+    M = !1,
+    j = "initializing",
     w = 0;
 async function U(e, t, n) {
     let i = performance.now();
@@ -43,23 +43,23 @@ async function U(e, t, n) {
     {
         let r = await u.Ay.startupLoad(e, t, n, P.EMb);
         D.verbose(`loaded ${r.messages.length} messages (guild: ${t}, channel: ${n}).`);
-        let l = { guildId: t, channelId: n, users: r.users, members: r.members, messages: r.messages };
-        return T.A.recordChannelFetchedLocal(n, T.a, null, null, P.EMb, r.messages), [performance.now() - i, l];
+        let a = { guildId: t, channelId: n, users: r.users, members: r.members, messages: r.messages };
+        return T.A.recordChannelFetchedLocal(n, T.a, null, null, P.EMb, r.messages), [performance.now() - i, a];
     }
 }
 async function G(e, t, n) {
     D.verbose("loading early cache");
-    let l = f.A.getSocket();
-    l.connect();
+    let a = f.A.getSocket();
+    a.connect();
     let s = v.A.getGuildId() ?? null,
         o = x.A.getChannelId() ?? null,
         d = performance.now(),
         c = N.A.loadCachedMessages.measureAsyncWithoutNesting(() => U(e, s, o)),
         u = N.A.fetchGuildCache.measureAsync(() => V(e, n)),
         A = N.A.fetchGuildCache.measureAsync(() => B(e, n)),
-        p =
+        g =
             null != e
-                ? i.A.timeAsync("\uD83D\uDCBE", "cache: private_channels", () => g.A.getAsync(e, null))
+                ? i.A.timeAsync("\uD83D\uDCBE", "cache: private_channels", () => p.A.getAsync(e, null))
                 : Promise.resolve([]),
         E =
             null == e
@@ -70,38 +70,38 @@ async function G(e, t, n) {
             null == e
                 ? Promise.resolve([])
                 : i.A.timeAsync("\uD83D\uDCBE", "cache: user_guild_settings", () => _.A.getAll(e)),
-        [[T, S], y, b, O, L, P, j] = await Promise.all([c, u, A, p, E, I, C]),
-        M = performance.now() - d;
-    if ((D.verbose(`cache loaded in ${M}ms (channel_history ${T}ms)`), null == S))
+        [[T, S], b, y, O, L, P, M] = await Promise.all([c, u, A, g, E, I, C]),
+        j = performance.now() - d;
+    if ((D.verbose(`cache loaded in ${j}ms (channel_history ${T}ms)`), null == S))
         return (
             (0, R.A)("database:history_cache_null"),
             D.verbose("finished without dispatching CACHE_LOADED"),
             [!1, null, 0]
         );
     let w = Object.fromEntries(S.members.map((e) => [e.userId, e])),
-        G = null != b.guildId && null != b.channels,
-        k = b.guildId;
+        G = null != y.guildId && null != y.channels,
+        k = y.guildId;
     return (
         await new Promise((e, t) =>
             r.Ay.Emitter.batched(() => {
                 i.A.time("\uD83D\uDCBE", "Dispatch Mini Cache", () =>
-                    a.h
+                    l.h
                         .dispatch({
                             type: "CACHE_LOADED",
-                            guilds: y,
+                            guilds: b,
                             privateChannels: O,
-                            initialGuildChannels: b.channels ?? [],
+                            initialGuildChannels: y.channels ?? [],
                             users: [...S.users],
                             messages: null == S.channelId ? {} : { [S.channelId]: S.messages },
                             guildMembers: null == S.guildId ? {} : { [S.guildId]: w },
                             userSettings: L,
-                            userGuildSettings: j,
+                            userGuildSettings: M,
                             readStates: P,
                         })
                         .then(e, t),
                 ),
                     i.A.time("\uD83D\uDCBE", "socket.processFirstQueuedDispatch()", () =>
-                        l.dispatcher.processFirstQueuedDispatch(new Set(["INITIAL_GUILD"])),
+                        a.dispatcher.processFirstQueuedDispatch(new Set(["INITIAL_GUILD"])),
                     );
             }),
         ),
@@ -125,12 +125,12 @@ async function G(e, t, n) {
                 users: ${S.users.length}
             initial_guild:
               id: ${k}
-              channels: ${b.channels?.length}
+              channels: ${y.channels?.length}
             user_settings: ${Object.keys(L).length}
             read_states: ${P.length}
-            user_guild_settings: ${j.length}
+            user_guild_settings: ${M.length}
       )`),
-        N.A.setEarlyCacheInfo({ guilds: y.length }),
+        N.A.setEarlyCacheInfo({ guilds: b.length }),
         D.verbose("finished dispatching CACHE_LOADED"),
         [!0, G ? (k ?? null) : null, O.length]
     );
@@ -161,11 +161,11 @@ async function B(e, t) {
             Promise.resolve({ channels: null, guildId: null })
         );
     let i = n;
-    return { channels: await (0, s.kk)(() => g.A.getAsync(e, i)), guildId: n };
+    return { channels: await (0, s.kk)(() => p.A.getAsync(e, i)), guildId: n };
 }
 async function H(e, t, n, r) {
     D.verbose("loading late lazy cache");
-    let [l, u, A] = await N.A.fetchLazyCache.measureAsync(() =>
+    let [a, u, A] = await N.A.fetchLazyCache.measureAsync(() =>
             Promise.all([
                 (0, s.kk)(() =>
                     null != e
@@ -191,22 +191,22 @@ async function H(e, t, n, r) {
                       return (
                           (t = A.stale),
                           D.verbose(`loading stale guild channels (count: ${t.length}, ids: ${t.join(", ")})`),
-                          Promise.all(t.map((t) => g.A.getAsync(e, t).then((e) => [t, e])))
+                          Promise.all(t.map((t) => p.A.getAsync(e, t).then((e) => [t, e])))
                       );
                   })
                 : Promise.resolve([]),
         );
     C.iQ.getCachedEnabled()
         ? D.verbose("loadLateLazyCache: not yielding to react")
-        : (D.verbose("loadLateLazyCache: yielding to react"), await (0, E.i)((0, b.isIOS)() ? 0 : void 0)),
+        : (D.verbose("loadLateLazyCache: yielding to react"), await (0, E.i)((0, y.isIOS)() ? 0 : void 0)),
         N.A.loadLazyCache.recordStart();
     let _ = f.A.getSocket();
     F(() => {
         let i = performance.now();
-        if (!1 === l) {
+        if (!1 === a) {
             (0, R.A)("database:not_ok"),
-                a.h.dispatch({ type: "CLEAR_CACHES", reason: "database:not_ok" }),
-                a.h.dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
+                l.h.dispatch({ type: "CLEAR_CACHES", reason: "database:not_ok" }),
+                l.h.dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
             return;
         }
         if (null == u || null == A || null == h) {
@@ -217,15 +217,15 @@ async function H(e, t, n, r) {
           guild_channels: ${null != h}
           guilds: ${null != u}
         )`),
-                a.h.dispatch({ type: "CLEAR_CACHES", reason: "database:load_failed" }),
-                a.h.dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
+                l.h.dispatch({ type: "CLEAR_CACHES", reason: "database:load_failed" }),
+                l.h.dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
             return;
         }
-        if (null == l && (u.length > 0 || A.all.length > 0)) {
+        if (null == a && (u.length > 0 || A.all.length > 0)) {
             (0, R.A)("database:versionless"),
                 D.log("kv_cache was not ok (null version with values)"),
-                a.h.dispatch({ type: "CLEAR_CACHES", reason: "database:versionless" }),
-                a.h.dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
+                l.h.dispatch({ type: "CLEAR_CACHES", reason: "database:versionless" }),
+                l.h.dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
             return;
         }
         0;
@@ -242,7 +242,7 @@ async function H(e, t, n, r) {
                 null != s.privateChannels && (0, L.Ay)(s.privateChannels),
                 null != s.guildChannels && (0, L.X3)(s.guildChannels);
         }),
-            N.A.dispatchLazyCache.measure(() => a.h.dispatch(s)),
+            N.A.dispatchLazyCache.measure(() => l.h.dispatch(s)),
             D.verbose(`late lazy cache loaded (ok: true, took: ${performance.now() - i}ms)`),
             _.addAnalytics({ usedCacheAtStartup: !0 });
         let o = h.reduce((e, t) => {
@@ -258,22 +258,22 @@ async function H(e, t, n, r) {
                 let [n, i] = t;
                 return e + i.length;
             }, 0),
-            g = c - m,
-            p = 0 === A.stale.length ? "" : ` \xb7 ${A.stale.join(", ")}`;
+            p = c - m,
+            g = 0 === A.stale.length ? "" : ` \xb7 ${A.stale.join(", ")}`;
         D.verbose(`lazy_cache_summary: (
         ok: true
         meta:
           auth_user_id: ${t}
           initial_guild: ${n}
           database: ${null != e}
-            ok: ${l}
+            ok: ${a}
             name: ${e?.name}
         data:
           database:
             guilds: ${u.length}
             basic_channels:
               total: ${c} (${A.channels.length} guilds)
-              stale: ${g} (${A.stale.length} guilds${p})
+              stale: ${p} (${A.stale.length} guilds${g})
               unstale: ${m}
             full_channels (guilds_with_stale_basic_channels):
               total: ${o} (${h.length} guilds)
@@ -282,7 +282,7 @@ async function H(e, t, n, r) {
                 guilds: u.length,
                 privateChannels: r,
                 basicChannels: c,
-                basicChannelsStale: g,
+                basicChannelsStale: p,
                 fullChannels: o,
                 fullChannelGuilds: d,
             });
@@ -306,7 +306,7 @@ function F(e) {
                 }, 100);
         } catch (e) {
             D.warn("Lazy cache has encountered error", e),
-                a.h.dispatch({ type: "RESET_SOCKET", args: { error: e, action: "LazyCache" } });
+                l.h.dispatch({ type: "RESET_SOCKET", args: { error: e, action: "LazyCache" } });
         }
     }),
         n || N.A.loadLazyCache.recordEnd();
@@ -326,15 +326,17 @@ class Y extends r.Ay.Store {
         return w;
     }
     canWriteCaches(e) {
-        return (0, y.wR)()
-            ? j
+        return (0, b.wR)()
+            ? M
                 ? (D.log("Not writing cache because caches cleared"), !1)
                 : !!e || (D.log("Not writing cache because never connected"), !1)
             : (D.log("Not writing cache because not authenticated"), !1);
     }
     async loadCacheAsync(e, t) {
         let n = (0, O.q)(t);
-        if ((N.A.setInitialPage(e.page), "initializing" !== M)) {
+        N.A.setInitialPage(e.page);
+        let i = e.guildId;
+        if ((N.A.setInitialGuildId(null != i && "@me" !== i ? i : null), "initializing" !== j)) {
             (0, R.A)("cache:lazy_cache_not_initializing"),
                 n(),
                 setTimeout(() => f.A.getSocket()?.dispatcher?.unpauseDispatchQueue(), 0);
@@ -342,17 +344,17 @@ class Y extends r.Ay.Store {
         }
         try {
             let t = S.default.getId(),
-                i = p.A.carefullyOpenDatabase(t),
-                [r, l, s] = await N.A.loadMiniCache.measureAsync(() => G(i, t, e));
+                i = g.A.carefullyOpenDatabase(t),
+                [r, a, s] = await N.A.loadMiniCache.measureAsync(() => G(i, t, e));
             r
-                ? (n(), await H(i, t, l, s))
-                : (n(), await (F(() => a.h.dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" })), Promise.resolve()));
+                ? (n(), await H(i, t, a, s))
+                : (n(), await (F(() => l.h.dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" })), Promise.resolve()));
         } catch (e) {
             D.error("clearing cache. exception encountered while loading cache.", e, e.stack),
                 (0, R.A)("cache:exception", e),
                 n(),
-                a.h.dispatch({ type: "RESET_SOCKET", args: { error: e, action: "loadCacheAsync" } });
+                l.h.dispatch({ type: "RESET_SOCKET", args: { error: e, action: "loadCacheAsync" } });
         }
     }
 }
-new Y(a.h, {});
+new Y(l.h, {});

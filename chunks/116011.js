@@ -15,9 +15,9 @@ var n = r(627968),
     b = r(852218),
     h = r(699443),
     g = r(652215),
-    x = r(653624),
+    x = r(284498),
     C = r(985018),
-    A = r(276478),
+    A = r(616825),
     R = r(870378),
     v = r(208556),
     E = r(8496);
@@ -83,7 +83,6 @@ let j = {
                 size: "sm",
                 variant: "secondary",
                 "aria-label": "",
-                color: "icon-feedback-positive",
                 onClick: () => {
                     navigator.clipboard.writeText(t.code), o(r);
                 },

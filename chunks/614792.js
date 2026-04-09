@@ -195,6 +195,7 @@ class _ extends d {
     messageRenderHasMoreAfter = null;
     firstAppActiveTime = null;
     initialPage = null;
+    initialGuildId = null;
     earlyCacheInfo = null;
     lazyCacheInfo = null;
     extraProperties = {};
@@ -205,6 +206,9 @@ class _ extends d {
     }
     setInitialPage(e) {
         this.initialPage = e;
+    }
+    setInitialGuildId(e) {
+        this.initialGuildId = e;
     }
     setEarlyCacheInfo(e) {
         this.earlyCacheInfo = e;
@@ -359,6 +363,7 @@ class _ extends d {
             ...this.extraProperties,
             ...s,
             initial_page: this.initialPage,
+            guild_id: this.initialGuildId,
             time_load_index_start: this.loadIndex.serializeStart(t),
             time_load_index_end: this.loadIndex.serializeEnd(t),
             time_begin_fast_connect_start: this.beginFastConnect.serializeStart(t),
