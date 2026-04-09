@@ -328,7 +328,12 @@ let r = {
                 resolve(e) {
                     let { enabledExperiments: t } = e;
                     if (0 === t.length) return 4;
-                    for (let e of t) if ("mobile-visual-refresh" === e) return 6;
+                    for (let e of t)
+                        switch (e) {
+                            case "mobile-visual-refresh":
+                            case "guild-item-spacing":
+                                return 6;
+                        }
                     return 4;
                 },
             },
