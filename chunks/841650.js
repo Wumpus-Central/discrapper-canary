@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => C }), n(321073);
+n.d(t, { A: () => I }), n(321073);
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -16,7 +16,7 @@ var i = n(627968),
     _ = n(739455),
     A = n(652215),
     p = n(985018),
-    f = n(987772);
+    f = n(196826);
 function j(e) {
     return String(e);
 }
@@ -50,7 +50,7 @@ function E() {
         className: f.fp,
     });
 }
-function b(e) {
+function C(e) {
     let { channelId: t } = e,
         n = (0, _.fE)(t),
         s = (0, _.fE)(n?.parent_id ?? A.dJq);
@@ -62,9 +62,9 @@ function b(e) {
 }
 function T(e) {
     let { value: t } = e;
-    return null != t ? (0, i.jsx)(b, { channelId: t }) : (0, i.jsx)(E, {});
+    return null != t ? (0, i.jsx)(C, { channelId: t }) : (0, i.jsx)(E, {});
 }
-function C(e) {
+function I(e) {
     let {
             label: t,
             guildId: l,
@@ -74,19 +74,19 @@ function C(e) {
             "aria-labelledby": N,
             onChange: E,
         } = e,
-        b = p.intl.string(p.t.d7YJMK),
-        C = (0, a.bG)([g.A], () => g.A.getCategories(l), [l]),
-        I = (0, _.fE)(r ?? A.dJq),
+        C = p.intl.string(p.t.d7YJMK),
+        I = (0, a.bG)([g.A], () => g.A.getCategories(l), [l]),
+        b = (0, _.fE)(r ?? A.dJq),
         v = s.useMemo(() => {
-            let e = [{ value: null, label: b }],
+            let e = [{ value: null, label: C }],
                 t = !1;
-            for (let n of C._categories)
-                for (let { channel: i } of C[n.channel.id])
+            for (let n of I._categories)
+                for (let { channel: i } of I[n.channel.id])
                     ((0, m.tr)(i.type) || (0, m.ay)(i.type)) &&
                         ((i.id !== r && f?.has(i.id) && (i.id !== u || r === u)) ||
                             (r === i.id && (t = !0), e.push({ value: i.id, label: (0, c.m1)(i, h.default, x.A) })));
-            return null == r || t || null == I || e.push({ value: r, label: I.name }), e;
-        }, [b, r, I, C, f, u]);
+            return null == r || t || null == b || e.push({ value: r, label: (0, c.m1)(b, h.default, x.A) }), e;
+        }, [C, r, b, I, f, u]);
     return (0, i.jsx)(o.Pw, {
         label: t,
         placeholder: p.intl.string(p.t.r2ptsz),
@@ -94,7 +94,7 @@ function C(e) {
         select: function (e) {
             null == e
                 ? (0, d.mMO)(async () => {
-                      let { default: e } = await Promise.all([n.e("93142"), n.e("64233"), n.e("40294")]).then(
+                      let { default: e } = await Promise.all([n.e("93142"), n.e("64233"), n.e("62466")]).then(
                           n.bind(n, 963765),
                       );
                       return (t) => (0, i.jsx)(e, { ...t, guildId: l, onSubmit: E });

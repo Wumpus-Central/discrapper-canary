@@ -112,7 +112,7 @@ function eh(e) {
         null != d &&
         q.A.showNotification(
             (0, w.Iv)(u, 128),
-            c.name,
+            (0, p.m1)(c, j.default, F.A),
             ee.intl.formatToPlainString(ee.t.sqnsSP, {
                 channelName: (0, p.m1)(c, j.default, F.A),
                 channelTopic: d?.topic,
@@ -259,8 +259,14 @@ function eS(e) {
     if (null == s) return !1;
     let a = x.A.getGuild(r.guild_id);
     if (null == a) return !1;
-    let o = ee.intl.formatToPlainString(ee.t["2IGVl5"], { channelName: r.name, guildName: a.name }),
-        l = ee.intl.formatToPlainString(ee.t.jPhTvT, { channelName: t.name, userUsername: i?.nick ?? s?.username }),
+    let o = ee.intl.formatToPlainString(ee.t["2IGVl5"], {
+            channelName: (0, p.m1)(r, j.default, F.A),
+            guildName: a.name,
+        }),
+        l = ee.intl.formatToPlainString(ee.t.jPhTvT, {
+            channelName: (0, p.m1)(t, j.default, F.A),
+            userUsername: i?.nick ?? s?.username,
+        }),
         u = s.getAvatarURL(void 0, 128);
     q.A.showNotification(
         u,

@@ -76,10 +76,10 @@ function w() {
     };
 }
 let M = "([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})",
-    P = "\\d{4}",
-    x = "([0-9]{4})-([0-9]{1,2})",
+    x = "\\d{4}",
+    P = "([0-9]{4})-([0-9]{1,2})",
     k = "([^\\d\\s]+)",
-    U = RegExp(`(?:\\s*(${M}|${x}|${P}|${k}))`, "i"),
+    U = RegExp(`(?:\\s*(${M}|${P}|${x}|${k}))`, "i"),
     G = RegExp("\\s*(true|false)", "i");
 function F(e) {
     return `${e}:`;
@@ -136,7 +136,7 @@ function j(e, t, n) {
                 return t;
             })
             .concat(null != n ? d.A.getAllThreadsForGuild(n) : [])
-            .filter((e) => t === (i[e.id]?.name ?? e.name))
+            .filter((e) => t === (i[e.id]?.name ?? (0, c.m1)(e, m.default, f.A)))
             .value();
     return (
         s?.length > 0 &&
@@ -366,7 +366,7 @@ function ee(e, t, n) {
     let i = _.Ay.getTextChannelNameDisambiguations(t);
     return a()(r)
         .take(n)
-        .map((e) => ({ text: `${i[e.id]?.name ?? e.name}`, channel: e, key: e.id }))
+        .map((e) => ({ text: `${i[e.id]?.name ?? ((0, c.m1))(e, m.default, f.A)}`, channel: e, key: e.id }))
         .value();
 }
 function et(e) {

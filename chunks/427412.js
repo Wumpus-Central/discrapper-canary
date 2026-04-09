@@ -1,29 +1,31 @@
-i.d(e, { default: () => u });
+i.d(e, { default: () => g });
 var n = i(627968);
 i(64700);
 var r = i(158954),
     s = i(397927),
     a = i(935649),
     o = i(847599),
-    c = i(849736),
-    l = i(418208),
-    h = i(985018),
-    d = i(472230),
-    p = i(973324);
-function u(t) {
-    let { transitionState: e, onClose: i, channel: u } = t,
-        g = (t) => {
-            if (!t && (0, l.Cf)(u.id)) {
+    c = i(47167),
+    l = i(849736),
+    h = i(418208),
+    d = i(985018),
+    p = i(622864),
+    u = i(973324);
+function g(t) {
+    let { transitionState: e, onClose: i, channel: g } = t,
+        C = (0, c.Ay)(g),
+        f = (t) => {
+            if (!t && (0, h.Cf)(g.id)) {
                 a.A.showAgeVerificationGetStartedModal({ entryPoint: o.q1.STAGE_CHANNEL_RAISE_HAND }), i();
                 return;
             }
-            (0, c.e7)(u, t), i();
+            (0, l.e7)(g, t), i();
         };
     return (0, n.jsx)(r.ExpressiveModal, {
         transitionState: e,
-        graphic: { type: "image", src: p.A },
-        title: h.intl.string(h.t.Ul1RJQ),
-        subtitle: h.intl.format(h.t["Z+3bWy"], {
+        graphic: { type: "image", src: u.A },
+        title: d.intl.string(d.t.Ul1RJQ),
+        subtitle: d.intl.format(d.t["Z+3bWy"], {
             stageChannelHook: () =>
                 (0, n.jsxs)(n.Fragment, {
                     children: [
@@ -32,16 +34,16 @@ function u(t) {
                             color: "currentColor",
                             height: 14,
                             width: 14,
-                            className: d.p,
+                            className: p.p,
                         }),
-                        u.name,
+                        C,
                     ],
                 }),
         }),
-        onClose: () => (g(!0), Promise.resolve()),
+        onClose: () => (f(!0), Promise.resolve()),
         actions: [
-            { text: h.intl.string(h.t.L5eIZ2), onClick: () => i(), variant: "secondary" },
-            { text: h.intl.string(h.t.MMlhsr), onClick: () => g(!1), variant: "active" },
+            { text: d.intl.string(d.t.L5eIZ2), onClick: () => i(), variant: "secondary" },
+            { text: d.intl.string(d.t.MMlhsr), onClick: () => f(!1), variant: "active" },
         ],
     });
 }

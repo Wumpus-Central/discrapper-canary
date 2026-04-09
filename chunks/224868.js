@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { f: () => E, p: () => m });
+n.d(t, { f: () => g, p: () => E });
 var r = n(47167),
     i = n(508675),
     s = n(7584),
@@ -9,27 +9,28 @@ var r = n(47167),
     u = n(696451),
     c = n(317525),
     d = n(71393),
-    _ = n(287809),
-    f = n(248465),
-    p = n(661191),
-    h = n(408018);
-function m(e, t, n, r) {
+    _ = n(994500),
+    f = n(287809),
+    p = n(248465),
+    h = n(661191),
+    m = n(408018);
+function E(e, t, n, r) {
     let { allowUsers: i = !0, allowRoles: s = !0 } = r ?? {};
     switch (e[0]) {
         case "@":
-            return g(e, t, n, i, s);
+            return A(e, t, n, i, s);
         case ":":
-            return T(e, t);
+            return S(e, t);
         case "#":
-            return I(e, t);
+            return T(e, t);
     }
     return null;
 }
-function E(e, t, n, r) {
-    let i = m(e, t, n, r);
-    return null == i ? null : (0, h.QR)(i);
+function g(e, t, n, r) {
+    let i = E(e, t, n, r);
+    return null == i ? null : (0, m.QR)(i);
 }
-function g(e, t, n, r, i) {
+function A(e, t, n, r, i) {
     let [s, a] = e.slice(1).split("#", 2),
         l = null != t ? d.A.getGuild(t) : null;
     if (i && null == a && null != l) {
@@ -47,41 +48,43 @@ function g(e, t, n, r, i) {
                       return t;
                   })
         )
-            .map((e) => _.default.getUser(e))
-            .filter((e) => void 0 !== e && A(s, a, e));
+            .map((e) => f.default.getUser(e))
+            .filter((e) => void 0 !== e && I(s, a, e));
         if (1 === r.length) {
             let e = r[0];
-            if (A(s, a, e, { requireExact: !0 }))
+            if (I(s, a, e, { requireExact: !0 }))
                 return { type: "userMention", userId: e.id, children: [{ text: "" }] };
         }
     }
     return null;
 }
-function A(e, t, n) {
+function I(e, t, n) {
     let { requireExact: r = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     return null != n && (r ? n.username === e : n.username.startsWith(e)) && n.discriminator === (t ?? "0");
 }
-function I(e, t) {
+function T(e, t) {
     let n;
     if (null == t) return null;
     n = e.length > 3 && '"' === e[1] && '"' === e[e.length - 1] ? (0, r.LG)(e.slice(2, e.length - 1)) : e.slice(1);
     let i = l.Ay.getTextChannelNameDisambiguations(t);
-    for (let e of p.default.keys(i))
+    for (let e of h.default.keys(i))
         if (i[e].name === n) return { type: "channelMention", channelId: e, children: [{ text: "" }] };
-    for (let e of f.L3)
+    for (let e of p.L3)
         if (e !== l.I6) {
-            for (let { channel: r } of l.Ay.getChannels(t)[e])
-                if (r.name === n) return { type: "channelMention", channelId: r.id, children: [{ text: "" }] };
+            for (let { channel: i } of l.Ay.getChannels(t)[e])
+                if ((0, r.m1)(i, f.default, _.A) === n)
+                    return { type: "channelMention", channelId: i.id, children: [{ text: "" }] };
         }
     let s = a.A.getActiveJoinedThreadsForGuild(t);
-    for (let e of p.default.keys(s))
-        for (let t of p.default.keys(s[e])) {
-            let { channel: r } = s[e][t];
-            if (r.name === n) return { type: "channelMention", channelId: r.id, children: [{ text: "" }] };
+    for (let e of h.default.keys(s))
+        for (let t of h.default.keys(s[e])) {
+            let { channel: i } = s[e][t];
+            if ((0, r.m1)(i, f.default, _.A) === n)
+                return { type: "channelMention", channelId: i.id, children: [{ text: "" }] };
         }
     return null;
 }
-function T(e, t) {
+function S(e, t) {
     let n = s.Ay.EMOJI_NAME_RE.exec(e);
     if (null == n) return null;
     let r = n[1],

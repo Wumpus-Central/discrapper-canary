@@ -1,18 +1,20 @@
 "use strict";
-n.d(t, { A: () => m }), n(667532);
+n.d(t, { A: () => g }), n(667532);
 var r = n(478437),
     i = n(629357),
-    a = n(580424),
-    s = n(47167),
+    s = n(580424),
+    a = n(47167),
     o = n(734057),
     l = n(808728),
-    u = n(248465),
-    c = n(634788),
-    d = n(374803);
+    u = n(994500),
+    c = n(287809),
+    d = n(248465),
+    _ = n(634788),
+    f = n(374803);
 n(827669);
-var _ = n(746080),
-    f = n(985018);
-function p(e) {
+var p = n(746080),
+    h = n(985018);
+function m(e) {
     switch (e.type) {
         case r.r.PUBLIC_THREAD:
         case r.r.PRIVATE_THREAD:
@@ -20,33 +22,33 @@ function p(e) {
         case r.r.GUILD_VOICE:
         case r.r.GUILD_STAGE_VOICE:
         case r.r.GUILD_CATEGORY:
-            return `#"${(0, s.Eq)(e.name)}"`;
+            return `#"${(0, a.Eq)((0, a.m1)(e, c.default, u.A))}"`;
         default:
             let t = l.Ay.getTextChannelNameDisambiguations(e.guild_id)[e.id];
-            return `#${null != t ? t.name : e.name}`;
+            return `#${null != t ? t.name : ((0, a.m1))(e, c.default, u.A)}`;
     }
 }
-function h(e) {
-    return _.aQ.has(e.id) ? `<id:${e.id}>` : `<#${e.id}>`;
+function E(e) {
+    return p.aQ.has(e.id) ? `<id:${e.id}>` : `<#${e.id}>`;
 }
-let m = {
+let g = {
     sentinel: "#",
-    matches: (e, t, n, r, i) => i.mentions.channel !== d.xS.DENY && !e.isPrivate(),
-    queryResults(e, t, n, r, a) {
-        let s,
+    matches: (e, t, n, r, i) => i.mentions.channel !== f.xS.DENY && !e.isPrivate(),
+    queryResults(e, t, n, r, s) {
+        let a,
             o,
-            c = l.I6;
+            u = l.I6;
         return (
-            n.charAt(0) === i.AT.VOICE_CHANNEL && ((c = l.vM), (n = n.substring(1))),
+            n.charAt(0) === i.AT.VOICE_CHANNEL && ((u = l.vM), (n = n.substring(1))),
             r.forNonStringCommandOption
-                ? (s = u.Ay.queryApplicationCommandChannelResults({
+                ? (a = d.Ay.queryApplicationCommandChannelResults({
                       query: n,
                       channel: e,
                       channelTypes: r.allowedChannelTypes,
                   }))
-                : ((s = u.Ay.queryChannelResults({ query: n, channel: e, type: c })),
-                  null != t && ((o = u.Ay.queryStaticRouteChannels({ query: n, guild: t })), s.channels.unshift(...o))),
-            { results: s, staticRouteChannels: o }
+                : ((a = d.Ay.queryChannelResults({ query: n, channel: e, type: u })),
+                  null != t && ((o = d.Ay.queryStaticRouteChannels({ query: n, guild: t })), a.channels.unshift(...o))),
+            { results: a, staticRouteChannels: o }
         );
     },
     renderResults(e) {
@@ -54,30 +56,30 @@ let m = {
             n,
             {
                 results: { channels: r },
-                selectedIndex: s,
+                selectedIndex: a,
                 query: l,
                 options: u,
-                onHover: d,
-                onClick: _,
+                onHover: c,
+                onClick: d,
             } = e,
-            p = l.charAt(0) === i.AT.VOICE_CHANNEL;
+            f = l.charAt(0) === i.AT.VOICE_CHANNEL;
         return (
-            p
-                ? ((t = f.t["rMUL3+"]), (n = f.intl.string(f.t.CYnO4s)), (l = l.substring(1)))
+            f
+                ? ((t = h.t["rMUL3+"]), (n = h.intl.string(h.t.CYnO4s)), (l = l.substring(1)))
                 : u.forNonStringCommandOption
-                  ? ((t = f.t.upNFT5), (n = f.intl.string(f.t.OGiMXJ)))
-                  : ((t = f.t.UhnmJD), (n = f.intl.string(f.t.nIfr0Y))),
-            (0, c.GM)({
+                  ? ((t = h.t.upNFT5), (n = h.intl.string(h.t.OGiMXJ)))
+                  : ((t = h.t.UhnmJD), (n = h.intl.string(h.t.nIfr0Y))),
+            (0, _.GM)({
                 query: l,
-                selectedIndex: s,
+                selectedIndex: a,
                 autocompletes: r,
-                onHover: d,
-                onClick: _,
+                onHover: c,
+                onClick: d,
                 titleWithQuery: t,
                 titleWithoutQuery: n,
-                Component: a.Ay.Channel,
+                Component: s.Ay.Channel,
                 getProps: (e) => ({ channel: e, key: e.id, category: o.A.getChannel(e.parent_id) }),
-                getQuery: (e) => (p ? `#${i.AT.VOICE_CHANNEL}${e}` : `#${e}`),
+                getQuery: (e) => (f ? `#${i.AT.VOICE_CHANNEL}${e}` : `#${e}`),
                 key: "channels",
             })
         );
@@ -89,6 +91,6 @@ let m = {
                 options: r,
             } = e,
             i = t[n];
-        return r.insertText(p(i), h(i)), { type: d.kc.CHANNEL };
+        return r.insertText(m(i), E(i)), { type: f.kc.CHANNEL };
     },
 };

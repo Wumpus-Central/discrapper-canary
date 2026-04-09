@@ -1,4 +1,4 @@
-s.d(t, { A: () => f });
+s.d(t, { A: () => j });
 var l = s(627968),
     n = s(64700),
     a = s(311907),
@@ -6,62 +6,65 @@ var l = s(627968),
     i = s(442433),
     o = s(964486),
     d = s(104171),
-    c = s(734057),
-    u = s(256587),
-    h = s(287809),
-    g = s(802958),
-    m = s(190772),
-    x = s(37411),
-    A = s(106259);
-let f = n.memo(function (e) {
+    c = s(47167),
+    u = s(734057),
+    h = s(256587),
+    g = s(287809),
+    m = s(802958),
+    x = s(190772),
+    A = s(37411),
+    f = s(934369);
+let j = n.memo(function (e) {
     let { threadId: t, goToThread: n, showChannelName: o } = e,
-        d = (0, a.bG)([c.A], () => c.A.getChannel(t)),
-        u = (0, a.bG)([c.A], () => c.A.getChannel(d.parent_id));
+        d = (0, a.bG)([u.A], () => u.A.getChannel(t)),
+        h = (0, a.bG)([u.A], () => u.A.getChannel(d.parent_id)),
+        g = (0, c.Ay)(d),
+        m = (0, c.Ay)(h, !0);
     return (0, l.jsxs)(r.DUT, {
-        className: A.kL,
+        className: f.kL,
         onClick: (e) => n(d, e.shiftKey),
         onContextMenu: (e) =>
             (0, i.L3)(e, async () => {
-                let { default: e } = await Promise.all([s.e("74192"), s.e("13223")]).then(s.bind(s, 44536));
+                let { default: e } = await Promise.all([s.e("94989"), s.e("71294")]).then(s.bind(s, 44536));
                 return (t) => (0, l.jsx)(e, { ...t, channel: d });
             }),
         children: [
             (0, l.jsxs)("div", {
-                className: A.kb,
+                className: f.kb,
                 children: [
                     (0, l.jsxs)(r.Heading, {
-                        className: A.OG,
+                        className: f.OG,
                         variant: "heading-md/semibold",
                         children: [
-                            (0, l.jsx)("span", { className: A.CB, children: d.name }),
-                            o && null != u ? (0, l.jsx)("span", { className: A.Ot, children: `#${u.name}` }) : null,
+                            (0, l.jsx)("span", { className: f.CB, children: g }),
+                            o && null != h ? (0, l.jsx)("span", { className: f.Ot, children: m }) : null,
                         ],
                     }),
-                    (0, m.A)(d),
+                    (0, x.A)(d),
                 ],
             }),
-            (0, l.jsx)(j, { channel: d }),
+            (0, l.jsx)(v, { channel: d }),
         ],
     });
 });
-function j(e) {
+function v(e) {
     let { channel: t } = e,
-        s = (0, a.bG)([g.A], () => g.A.getMemberIdsPreview(t.id) ?? []),
-        n = (0, a.bG)([g.A], () => g.A.getMemberCount(t.id) ?? 0),
-        r = (0, a.yK)([h.default], () => s.map((e) => h.default.getUser(e)));
+        s = (0, a.bG)([m.A], () => m.A.getMemberIdsPreview(t.id) ?? []),
+        n = (0, a.bG)([m.A], () => m.A.getMemberCount(t.id) ?? 0),
+        r = (0, a.yK)([g.default], () => s.map((e) => g.default.getUser(e)));
     return ((0, o.Ay)(() => {
         s.filter((e, t) => null == r[t]).forEach((e) => {
-            u.A.requestMember(t.guild_id, e);
+            h.A.requestMember(t.guild_id, e);
         });
     }),
     0 === s.length)
         ? null
         : (0, l.jsx)(d.Ay, {
-              className: A.WM,
+              className: f.WM,
               showDefaultAvatarsForNullUsers: !0,
               guildId: t.guild_id,
               users: r,
               count: n,
-              max: x.Td,
+              max: A.Td,
           });
 }

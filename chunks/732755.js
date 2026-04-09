@@ -1,77 +1,80 @@
 "use strict";
-n.d(t, { A: () => C });
+n.d(t, { A: () => O });
 var r = n(812729),
     i = n.n(r),
-    a = n(311907),
-    s = n(73153),
-    o = n(734057),
-    l = n(71393),
-    u = n(383501),
-    c = n(309010),
-    d = n(488926),
-    _ = n(63995),
-    f = n(69407),
-    p = n(82149),
-    h = n(446600),
-    m = n(96566),
-    g = n(516607),
-    E = n(652215);
-let A = null;
-function I() {
-    let e = c.A.getVoiceChannelId();
+    s = n(311907),
+    a = n(73153),
+    o = n(47167),
+    l = n(734057),
+    u = n(71393),
+    c = n(383501),
+    d = n(994500),
+    _ = n(309010),
+    f = n(287809),
+    p = n(488926),
+    h = n(63995),
+    m = n(69407),
+    E = n(82149),
+    g = n(446600),
+    A = n(96566),
+    I = n(516607),
+    T = n(652215);
+let S = null;
+function y() {
+    let e = _.A.getVoiceChannelId();
     if (null == e) return null;
-    let t = h.A.getStageInstanceByChannel(e);
+    let t = g.A.getStageInstanceByChannel(e);
     if (null == t) return null;
-    let n = o.A.getChannel(e);
-    if (null == n || !d.Ib(E.xBc.VIEW_CHANNEL, n)) return null;
-    let r = l.A.getGuild(n.getGuildId());
-    if (null == r || !r.features.has(E.GuildFeatures.DISCOVERABLE)) return null;
-    let i = (0, p.eL)(n, t),
-        a = A?.party?.id === i ? A : null,
-        s = _.A.getMutableParticipants(n.id, f.ip.SPEAKER),
-        u = s.filter((e) => e.type === f.wY.STREAM).length,
-        I = s.length - u,
-        T = _.A.getParticipantCount(e) - u,
-        y = a?.party?.size != null ? a.party.size[1] : 0;
+    let n = l.A.getChannel(e);
+    if (null == n || !p.Ib(T.xBc.VIEW_CHANNEL, n)) return null;
+    let r = u.A.getGuild(n.getGuildId());
+    if (null == r || !r.features.has(T.GuildFeatures.DISCOVERABLE)) return null;
+    let i = (0, E.eL)(n, t),
+        s = S?.party?.id === i ? S : null,
+        a = h.A.getMutableParticipants(n.id, m.ip.SPEAKER),
+        c = a.filter((e) => e.type === m.wY.STREAM).length,
+        y = a.length - c,
+        v = h.A.getParticipantCount(e) - c,
+        N = s?.party?.size != null ? s.party.size[1] : 0;
     return {
-        application_id: g.SS,
-        name: t.topic ?? n.topic ?? n.name,
-        type: (0, m.xn)(n.id) ? E.$pd.WATCHING : E.$pd.LISTENING,
-        timestamps: { start: a?.timestamps?.start ?? new Date().getTime() },
+        application_id: I.SS,
+        name: t.topic ?? n.topic ?? (0, o.m1)(n, f.default, d.A),
+        type: (0, A.xn)(n.id) ? T.$pd.WATCHING : T.$pd.LISTENING,
+        timestamps: { start: s?.timestamps?.start ?? new Date().getTime() },
         assets: { small_image: r.icon ?? void 0, small_text: r.name },
-        party: { id: i, size: [I, Math.max(T, y)] },
+        party: { id: i, size: [y, Math.max(v, N)] },
     };
 }
-function T() {
-    let e = I();
-    return !i()(e, A) && ((A = e), !0);
+function v() {
+    let e = y();
+    return !i()(e, S) && ((S = e), !0);
 }
-function y(e) {
+function N(e) {
     let { voiceStates: t } = e;
-    if (null == A) return;
-    let n = (0, p.UW)(A);
-    null != n && null != t.find((e) => e.channelId === n.channelId) && T();
+    if (null == S) return;
+    let n = (0, E.UW)(S);
+    null != n && null != t.find((e) => e.channelId === n.channelId) && v();
 }
-function S(e) {
+function C(e) {
     let { state: t } = e,
-        n = A?.party?.size?.[1] ?? 0;
-    return t === E.S7L.RTC_CONNECTED && !(n > 0) && T();
+        n = S?.party?.size?.[1] ?? 0;
+    return t === T.S7L.RTC_CONNECTED && !(n > 0) && v();
 }
-class v extends a.Ay.Store {
+class R extends s.Ay.Store {
     static displayName = "StageChannelSelfRichPresenceStore";
     initialize() {
-        this.waitFor(o.A, l.A, u.A, c.A, _.A, h.A);
+        this.waitFor(l.A, u.A, c.A, _.A, h.A, g.A);
     }
     getActivity() {
-        return A;
+        return S;
     }
 }
-let C = new v(s.h, {
-    CONNECTION_OPEN: T,
-    STAGE_INSTANCE_CREATE: T,
-    STAGE_INSTANCE_UPDATE: T,
-    STAGE_INSTANCE_DELETE: T,
-    VOICE_CHANNEL_SELECT: T,
-    RTC_CONNECTION_STATE: S,
-    VOICE_STATE_UPDATES: y,
+let O = new R(a.h, {
+    CONNECTION_OPEN: v,
+    STAGE_INSTANCE_CREATE: v,
+    STAGE_INSTANCE_UPDATE: v,
+    STAGE_INSTANCE_DELETE: v,
+    VOICE_CHANNEL_SELECT: v,
+    RTC_CONNECTION_STATE: C,
+    VOICE_STATE_UPDATES: N,
 });

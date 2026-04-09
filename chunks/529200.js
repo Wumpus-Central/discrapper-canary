@@ -15,7 +15,7 @@ var n = l(627968),
     N = l(486020),
     g = l(821589),
     p = l(985018),
-    j = l(485366);
+    j = l(457636);
 let A = (e) => {
         let { text: t, extra: l } = e;
         return (0, n.jsxs)(r.Heading, { variant: "heading-md/semibold", className: j.header, children: [t, l] });
@@ -135,28 +135,29 @@ let A = (e) => {
     },
     T = (e) => {
         let { channel: t, guild: l } = e,
-            s = (0, d.gU)(t, l);
-        return null == t || null == s
+            s = (0, u.Ay)(t),
+            i = (0, d.gU)(t, l);
+        return null == t || null == i
             ? null
             : (0, n.jsxs)("div", {
                   className: j.channel,
                   children: [
-                      (0, n.jsx)(s, {
+                      (0, n.jsx)(i, {
                           className: j.channelIcon,
                           color: "currentColor",
                           size: "custom",
                           width: 20,
                           height: 20,
                       }),
-                      (0, n.jsx)("span", { className: j.channelName, children: t.name }),
+                      (0, n.jsx)("span", { className: j.channelName, children: s }),
                   ],
               });
     },
-    S = (e) => {
+    y = (e) => {
         let { children: t, className: l, containerRef: s } = e;
         return (0, n.jsx)("div", { ref: s, className: a()(j.wrapper, l), children: t });
     },
-    y = (e) => {
+    S = (e) => {
         let { guild: t } = e,
             [l, i] = s.useState(!1),
             r = N.Ay.getGuildSplashURL({ id: t.id, splash: t.splash, size: 400 * (0, v.mZ)() });
@@ -187,22 +188,22 @@ let A = (e) => {
             children: (0, n.jsx)("span", { className: j.guildName, children: t.serializedSourceGuild.name }),
         });
     };
-(S.Header = A),
-    (S.Body = E),
-    (S.Icon = I),
-    (S.Info = C),
-    (S.Data = f),
-    (S.Channel = T),
-    (S.GuildSplash = y),
-    (S.GuildName = _),
-    (S.GuildTemplateName = k),
+(y.Header = A),
+    (y.Body = E),
+    (y.Icon = I),
+    (y.Info = C),
+    (y.Data = f),
+    (y.Channel = T),
+    (y.GuildSplash = S),
+    (y.GuildName = _),
+    (y.GuildTemplateName = k),
     (A.displayName = "InviteButton.Header"),
     (E.displayName = "InviteButton.Body"),
     (I.displayName = "InviteButton.Icon"),
     (C.displayName = "InviteButton.Info"),
     (f.displayName = "InviteButton.Data"),
     (T.displayName = "InviteButton.Channel"),
-    (y.displayName = "InviteButton.GuildSplash"),
+    (S.displayName = "InviteButton.GuildSplash"),
     (_.displayName = "InviteButton.GuildName"),
     (k.displayName = "InviteButton.GuildTemplateName");
-let R = S;
+let R = y;

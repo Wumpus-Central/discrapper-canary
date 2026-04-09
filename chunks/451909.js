@@ -52,7 +52,7 @@ function M(e, t, n, r) {
         })
         .first();
 }
-function P(e, t, n) {
+function x(e, t, n) {
     if (t[0] !== e) return;
     if ('"' !== t[1]) return M(e, t, n, "channel");
     let r = 2;
@@ -80,7 +80,7 @@ function P(e, t, n) {
         })
         .first();
 }
-function x(e) {
+function P(e) {
     return { order: e.order, match: e.match, parse: (t) => ({ type: e.type, content: t[0] }) };
 }
 function k(e) {
@@ -95,11 +95,11 @@ let U = d.A.RULES,
     j = /(@everyone|@here|@Clyde)\b/,
     Y = /^[^\s]+@[^\s]+\.[^\s.]+/,
     W = {
-        link: x(a().defaultRules.link),
-        autolink: x(a().defaultRules.autolink),
-        url: x(a().defaultRules.url),
-        inlineCode: x(U.inlineCode),
-        codeBlock: x(U.codeBlock),
+        link: P(a().defaultRules.link),
+        autolink: P(a().defaultRules.autolink),
+        url: P(a().defaultRules.url),
+        inlineCode: P(U.inlineCode),
+        codeBlock: P(U.codeBlock),
         rawUserMention: k(F),
         rawRoleMention: k(V),
         rawChannelMention: k(B),
@@ -135,7 +135,7 @@ let U = d.A.RULES,
             },
         },
         channel: {
-            match: (e, t) => P("#", e, t.channels) ?? null,
+            match: (e, t) => x("#", e, t.channels) ?? null,
             parse: (e) => ({ type: "text", content: `<#${e[1]}>` }),
         },
         emoticon: {
@@ -190,8 +190,8 @@ let U = d.A.RULES,
         },
     },
     K = {
-        inlineCode: x(U.inlineCode),
-        codeBlock: x(U.codeBlock),
+        inlineCode: P(U.inlineCode),
+        codeBlock: P(U.codeBlock),
         mention: {
             match: a().anyScopeRegex(F),
             parse(e, t, n) {
@@ -351,32 +351,37 @@ function Q(e) {
                 let { id: t, name: n } = e;
                 return { id: t, text: n };
             }),
-        l = i()(g.Ay.getTextChannelNameDisambiguations(n)).map((e) => {
+        c = i()(g.Ay.getTextChannelNameDisambiguations(n)).map((e) => {
             let { id: t, name: n } = e;
             return { id: t, text: n };
         }),
-        c =
+        d =
             null != n
                 ? i()(C.L3)
                       .filter((e) => e !== g.I6)
-                      .flatMap((e) => g.Ay.getChannels(n)[e].map((e) => ({ id: e.channel.id, text: e.channel.name })))
+                      .flatMap((e) =>
+                          g.Ay.getChannels(n)[e].map((e) => ({
+                              id: e.channel.id,
+                              text: (0, l.m1)(e.channel, N.default, y.A),
+                          })),
+                      )
                       .value()
                 : [],
-        d = h.A.computeAllActiveJoinedThreads(n).map((e) => ({ id: e.id, text: e.name })),
-        _ = u.Ay.getDisambiguatedEmojiContext(n),
-        f = _.getEscapedCustomEmoticonNames(),
-        p = _.getCustomEmoji(),
-        m = _.getCustomEmoticonRegex();
+        _ = h.A.computeAllActiveJoinedThreads(n).map((e) => ({ id: e.id, text: (0, l.m1)(e, N.default, y.A) })),
+        f = u.Ay.getDisambiguatedEmojiContext(n),
+        p = f.getEscapedCustomEmoticonNames(),
+        m = f.getCustomEmoji(),
+        E = f.getCustomEmoticonRegex();
     return {
         inline: !0,
         mentionableRoles: o,
         guild: r,
         users: a,
-        channels: l.concat(c).concat(d),
-        emojiContext: _,
-        customEmoticonsRegex: m,
-        customEmoji: p,
-        textExclusions: f,
+        channels: c.concat(d).concat(_),
+        emojiContext: f,
+        customEmoticonsRegex: E,
+        customEmoji: m,
+        textExclusions: p,
         isNotification: !1,
     };
 }

@@ -1,6 +1,6 @@
 "use strict";
 let r;
-n.d(t, { Ay: () => e1, L3: () => eF, X3: () => eG, zy: () => ex }), n(321073), n(667532);
+n.d(t, { Ay: () => e1, L3: () => eF, X3: () => eG, zy: () => eP }), n(321073), n(667532);
 var i = n(91871),
     s = n.n(i),
     a = n(735438),
@@ -31,8 +31,8 @@ var i = n(91871),
     L = n(95701),
     w = n(34457),
     M = n(427157),
-    P = n(734057),
-    x = n(760751),
+    x = n(734057),
+    P = n(760751),
     k = n(205761),
     U = n(808728),
     G = n(696451),
@@ -85,8 +85,8 @@ let ec = new p.A("AutocompleteUtils"),
     eL = (r = n(966382).A).MENTION_EVERYONE,
     ew = r.MENTION_HERE,
     eM = r.MENTION_TIMESTAMP,
-    eP = r.LAUNCHABLE_APPLICATIONS;
-function ex() {
+    ex = r.LAUNCHABLE_APPLICATIONS;
+function eP() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
         t = arguments.length > 1 ? arguments[1] : void 0;
     return ev * e * (t ?? 1);
@@ -106,7 +106,7 @@ class ek {
     isStale() {
         let e = k.A.getVersion(),
             t = Y.A.getVersion(),
-            n = P.A.getPrivateChannelsVersion();
+            n = x.A.getPrivateChannelsVersion();
         return (
             (this.lastFrecencyVersion !== e ||
                 this.lastRelationshipVersion !== t ||
@@ -154,7 +154,7 @@ class ek {
             } else i[r] = 1 + s / n;
         }
         for (let e of Y.A.getFriendIDs()) i[e] = (i[e] ?? 1) + eN;
-        for (let e of P.A.getDMUserIds()) i[e] = (i[e] ?? 1) + eC;
+        for (let e of x.A.getDMUserIds()) i[e] = (i[e] ?? 1) + eC;
         return i;
     }
 }
@@ -226,7 +226,7 @@ function eY(e) {
                 ? f.push({
                       type: ea.rD.USER,
                       record: r,
-                      score: ex(ed, o?.[r.id]),
+                      score: eP(ed, o?.[r.id]),
                       comparator: h ?? e ?? n,
                       sortable: m ?? u ?? i,
                   })
@@ -234,7 +234,7 @@ function eY(e) {
                   ? f.push({
                         type: ea.rD.USER,
                         record: r,
-                        score: ex(eh, o?.[r.id]),
+                        score: eP(eh, o?.[r.id]),
                         comparator: h ?? e ?? n,
                         sortable: m ?? u ?? i,
                     })
@@ -248,7 +248,7 @@ function eY(e) {
                     (p.push({
                         type: ea.rD.USER,
                         record: r,
-                        score: ex(eh, o?.[r.id]),
+                        score: eP(eh, o?.[r.id]),
                         comparator: h ?? e ?? n,
                         sortable: m ?? u ?? i,
                     }),
@@ -331,10 +331,10 @@ function eX(e, t) {
 function eQ(e, t) {
     if (null == e.parent_id) return;
     let n = t[e.parent_id];
-    return null == n && (n = t[e.parent_id] = P.A.getChannel(e.parent_id)?.name.toLocaleLowerCase()), n;
+    return null == n && (n = t[e.parent_id] = x.A.getChannel(e.parent_id)?.name.toLocaleLowerCase()), n;
 }
 function eJ(e, t) {
-    let n = P.A.getChannel(e);
+    let n = x.A.getChannel(e);
     return null == e || null == n
         ? []
         : o()(B.A.getMessages(e).toArray())
@@ -359,7 +359,7 @@ let e0 = (0, Z.L_)((e, t, n) => {
             i = new Map(),
             s = [];
         return (
-            o()(P.A.getMutablePrivateChannels())
+            o()(x.A.getMutablePrivateChannels())
                 .values()
                 .value()
                 .forEach((e) => {
@@ -391,7 +391,7 @@ let e0 = (0, Z.L_)((e, t, n) => {
             let { query: t, limit: n = 10, filter: r } = e;
             return eY({
                 query: t,
-                members: P.A.getDMUserIds()
+                members: x.A.getDMUserIds()
                     .map((e) => $.default.getUser(e))
                     .filter(X.Vq),
                 limit: n,
@@ -408,9 +408,9 @@ let e0 = (0, Z.L_)((e, t, n) => {
                     checkRecentlyTalkedOnEmptyQuery: a = !0,
                     allowSnowflake: o = !1,
                 } = e,
-                l = P.A.getChannel(n);
+                l = x.A.getChannel(n);
             if (null == l) return [];
-            let u = (l.isThread() ? P.A.getChannel(l.parent_id) : null) ?? l;
+            let u = (l.isThread() ? x.A.getChannel(l.parent_id) : null) ?? l;
             if (null == u) return [];
             if (u.isPrivate()) {
                 t = u.recipients.map((e) => ({ userId: e, nick: Y.A.getNickname(e) ?? null }));
@@ -491,9 +491,9 @@ let e0 = (0, Z.L_)((e, t, n) => {
                 null != r
                     ? o()(U.Ay.getChannels(r)[l])
                           .map((e) => e.channel)
-                          .concat(E ? (h ? P.A.getAllThreadsForGuild(r) : R.A.computeAllActiveJoinedThreads(r)) : [])
+                          .concat(E ? (h ? x.A.getAllThreadsForGuild(r) : R.A.computeAllActiveJoinedThreads(r)) : [])
                           .value()
-                    : o()(P.A.loadAllGuildAndPrivateChannelsFromDisk())
+                    : o()(x.A.loadAllGuildAndPrivateChannelsFromDisk())
                           .values()
                           .concat(E ? R.A.computeAllActiveJoinedThreads() : [])
                           .value();
@@ -508,7 +508,7 @@ let e0 = (0, Z.L_)((e, t, n) => {
                 )
                     continue;
                 let t = [...m],
-                    i = e.name.toLocaleLowerCase(),
+                    i = (0, _.m1)(e, $.default, Y.A).toLocaleLowerCase(),
                     o = p && n === e.id,
                     u = o ? ed : eZ(i, t, s);
                 if (0 !== u) {
@@ -532,7 +532,7 @@ let e0 = (0, Z.L_)((e, t, n) => {
                         A.push({
                             type: (0, L.ay)(e.type) ? ea.rD.VOICE_CHANNEL : ea.rD.TEXT_CHANNEL,
                             record: e,
-                            score: ex(u, f[e.id]),
+                            score: eP(u, f[e.id]),
                             comparator: (0, _.m1)(e, $.default, Y.A),
                             sortable: i,
                         }));
@@ -554,7 +554,7 @@ let e0 = (0, Z.L_)((e, t, n) => {
                 let n = e.name.toLocaleLowerCase(),
                     o = i && t === e.id ? ed : eB(n, l, r);
                 o > 0 &&
-                    u.push({ type: ea.rD.GUILD, record: e, score: ex(o, a[e.id]), comparator: e.name, sortable: n });
+                    u.push({ type: ea.rD.GUILD, record: e, score: eP(o, a[e.id]), comparator: e.name, sortable: n });
             }
             return u.sort(d.A), u.length > n && (u.length = n), u;
         },
@@ -564,7 +564,7 @@ let e0 = (0, Z.L_)((e, t, n) => {
                     channelsByRecipientId: i,
                     recipientsById: s,
                     recipients: a,
-                } = e0(P.A.getPrivateChannelsVersion(), Y.A.getVersion(), $.default.getUserStoreVersion()),
+                } = e0(x.A.getPrivateChannelsVersion(), Y.A.getVersion(), $.default.getUserStoreVersion()),
                 o = eY({ query: t, members: a, limit: a.length, boosters: r }),
                 l = [];
             return (
@@ -592,7 +592,7 @@ let e0 = (0, Z.L_)((e, t, n) => {
                     containQuery: RegExp(et.A.escape(a), "i"),
                     queryLower: a,
                 },
-                u = o()(P.A.getMutablePrivateChannels()).values().value(),
+                u = o()(x.A.getMutablePrivateChannels()).values().value(),
                 c = [];
             for (let e of u) {
                 if (!e.isMultiUserDM() || !i(e)) continue;
@@ -616,7 +616,7 @@ let e0 = (0, Z.L_)((e, t, n) => {
                     c.push({
                         type: ea.rD.GROUP_DM,
                         record: e,
-                        score: ex(a, s[e.id]),
+                        score: eP(a, s[e.id]),
                         comparator: (0, _.m1)(e, $.default, Y.A),
                         sortable: n,
                     });
@@ -631,7 +631,7 @@ let e0 = (0, Z.L_)((e, t, n) => {
                     containQuery: RegExp(et.A.escape(s), "i"),
                     queryLower: s,
                 },
-                o = eP(),
+                o = ex(),
                 l = [];
             for (let { application: e } of o) {
                 if (!i(e)) continue;
@@ -678,7 +678,7 @@ let e0 = (0, Z.L_)((e, t, n) => {
                             o.push({
                                 type: ea.rD.IN_APP_NAVIGATION,
                                 record: c.SV.fromType(t),
-                                score: ex(i),
+                                score: eP(i),
                                 comparator: n,
                                 sortable: n,
                             });
@@ -1020,7 +1020,7 @@ let e0 = (0, Z.L_)((e, t, n) => {
                     i
                 );
             }
-            let i = x.A.games;
+            let i = P.A.games;
             return o()(i)
                 .filter((e) => !(0, b.nS)(e))
                 .map((e) => ({ game: e, score: r(e) }))

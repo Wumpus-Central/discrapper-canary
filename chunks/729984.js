@@ -1,202 +1,200 @@
 "use strict";
-n.d(t, { A: () => G, G: () => L });
+n.d(t, { A: () => D, G: () => M });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
     r = n(36525),
     a = n(3026),
     o = n(397927),
-    d = n(112389),
-    c = n(591552),
-    u = n(166444),
-    m = n(46054),
-    g = n(12773),
-    x = n(777705),
-    h = n(769765),
-    _ = n(808728),
+    d = n(47167),
+    c = n(112389),
+    u = n(591552),
+    m = n(166444),
+    g = n(46054),
+    x = n(12773),
+    h = n(777705),
+    _ = n(769765),
+    A = n(808728),
     p = n(147925),
-    A = n(555337),
-    f = n(418448),
-    j = n(863694),
-    N = n(107795),
-    E = n(655943),
-    C = n(82566),
-    T = n(259866),
-    I = n(950358),
-    b = n(561108),
-    v = n(191117),
-    S = n(985018),
-    y = n(7716),
-    R = n(830684);
-function O(e) {
+    f = n(555337),
+    j = n(418448),
+    N = n(863694),
+    E = n(107795),
+    C = n(655943),
+    T = n(82566),
+    I = n(259866),
+    b = n(950358),
+    v = n(561108),
+    S = n(191117),
+    y = n(985018),
+    R = n(7716),
+    O = n(830684);
+function G(e) {
+    let { channel: t, guild: n, isLast: s, onClickLockedChannel: l } = e,
+        r = (0, d.Ay)(t);
+    return (0, i.jsxs)(i.Fragment, {
+        children: [
+            (0, i.jsxs)("div", {
+                className: R.WG,
+                children: [
+                    (0, i.jsxs)("div", {
+                        className: R.yW,
+                        children: [
+                            (0, i.jsxs)("div", {
+                                className: R.HA,
+                                children: [
+                                    (0, i.jsx)(m.gm, { channel: t, guild: n }),
+                                    (0, i.jsx)(a.A, {
+                                        className: R.__invalid_name,
+                                        children: (0, i.jsx)(o.Text, {
+                                            className: R.__invalid_channelText,
+                                            variant: "text-md/medium",
+                                            lineClamp: 1,
+                                            color: "text-default",
+                                            children: r,
+                                        }),
+                                    }),
+                                ],
+                            }),
+                            null != t.topic && t.topic.length > 0
+                                ? (0, i.jsx)(
+                                      a.A,
+                                      {
+                                          className: O.PT,
+                                          children: (0, i.jsx)(o.Text, {
+                                              className: R.At,
+                                              variant: "text-xs/normal",
+                                              children: g.A.parseTopic(t.topic, !0, { channelId: t.id }),
+                                          }),
+                                      },
+                                      "topic",
+                                  )
+                                : null,
+                        ],
+                    }),
+                    (0, c.S)(n.id, t.id)
+                        ? (0, i.jsx)(o.Button, {
+                              size: "sm",
+                              variant: "primary",
+                              text: y.intl.string(y.t.OYkgVk),
+                              onClick: () => (0, j.bN)(t.id),
+                          })
+                        : (0, i.jsx)(o.Button, {
+                              size: "sm",
+                              variant: "secondary",
+                              text: y.intl.string(y.t.zA9d1J),
+                              icon: o.XAi,
+                              iconPosition: "start",
+                              onClick: () => l(t.id),
+                          }),
+                ],
+            }),
+            s ? null : (0, i.jsx)("div", { className: R.me }),
+        ],
+    });
+}
+function L(e) {
     let { guild: t } = e,
-        r = (0, l.bG)([c.A], () => c.A.getEnabled(t.id)),
-        h = (0, l.bG)([x.A], () => x.A.hasFetched(t.id)),
-        _ = (0, C.A)(t),
-        p = (0, l.bG)([j.A], () => j.A.editedDefaultChannelIds),
-        A = _.filter((e) => !p.has(e.id)),
-        [N, E] = s.useState(!1);
-    return (s.useEffect(() => {
-        h || r || (0, g.A)(t.id);
-    }, [t.id, h, r]),
-    N || 0 === A.length)
+        r = (0, l.bG)([u.A], () => u.A.getEnabled(t.id)),
+        a = (0, l.bG)([h.A], () => h.A.hasFetched(t.id)),
+        d = (0, T.A)(t),
+        c = (0, l.bG)([N.A], () => N.A.editedDefaultChannelIds),
+        m = d.filter((e) => !c.has(e.id)),
+        [g, _] = s.useState(!1);
+    s.useEffect(() => {
+        a || r || (0, x.A)(t.id);
+    }, [t.id, a, r]);
+    let A = (e) => {
+        (0, o.mMO)(async () => {
+            let { default: s } = await n.e("54857").then(n.bind(n, 147696));
+            return (n) => (0, i.jsx)(s, { ...n, guildId: t.id, startingChannelId: e });
+        });
+    };
+    return g || 0 === m.length
         ? null
         : (0, i.jsxs)("div", {
-              className: y.Jl,
+              className: R.Jl,
               children: [
                   (0, i.jsx)(o.Text, {
                       variant: "text-md/medium",
                       color: "text-strong",
-                      children: S.intl.string(S.t.NN7rD3),
+                      children: y.intl.string(y.t.NN7rD3),
                   }),
                   (0, i.jsxs)("div", {
-                      className: y.j7,
+                      className: R.j7,
                       children: [
                           (0, i.jsx)(o.Text, {
                               variant: "text-xs/normal",
                               color: "text-muted",
-                              children: S.intl.string(S.t["3Uuql+"]),
+                              children: y.intl.string(y.t["3Uuql+"]),
                           }),
                           (0, i.jsxs)(o.DUT, {
-                              className: y.AC,
-                              onClick: () => E(!0),
+                              className: R.AC,
+                              onClick: () => _(!0),
                               children: [
-                                  (0, i.jsx)(o.A9s, { size: "xxs", color: "currentColor", className: y.AI }),
+                                  (0, i.jsx)(o.A9s, { size: "xxs", color: "currentColor", className: R.AI }),
                                   (0, i.jsx)(o.Text, {
-                                      className: y.fx,
+                                      className: R.fx,
                                       variant: "text-xs/medium",
                                       color: "text-brand",
-                                      children: S.intl.string(S.t.ZC3PJ2),
+                                      children: y.intl.string(y.t.ZC3PJ2),
                                   }),
                               ],
                           }),
                       ],
                   }),
                   (0, i.jsx)("div", {
-                      className: y.IF,
-                      children: A.map((e, s) =>
-                          (0, i.jsxs)(i.Fragment, {
-                              children: [
-                                  (0, i.jsxs)("div", {
-                                      className: y.WG,
-                                      children: [
-                                          (0, i.jsxs)("div", {
-                                              className: y.yW,
-                                              children: [
-                                                  (0, i.jsxs)("div", {
-                                                      className: y.HA,
-                                                      children: [
-                                                          (0, i.jsx)(u.gm, { channel: e, guild: t }),
-                                                          (0, i.jsx)(a.A, {
-                                                              className: y.__invalid_name,
-                                                              children: (0, i.jsx)(o.Text, {
-                                                                  className: y.__invalid_channelText,
-                                                                  variant: "text-md/medium",
-                                                                  lineClamp: 1,
-                                                                  color: "text-default",
-                                                                  children: e.name,
-                                                              }),
-                                                          }),
-                                                      ],
-                                                  }),
-                                                  null != e.topic && e.topic.length > 0
-                                                      ? (0, i.jsx)(
-                                                            a.A,
-                                                            {
-                                                                className: R.PT,
-                                                                children: (0, i.jsx)(o.Text, {
-                                                                    className: y.At,
-                                                                    variant: "text-xs/normal",
-                                                                    children: m.A.parseTopic(e.topic, !0, {
-                                                                        channelId: e.id,
-                                                                    }),
-                                                                }),
-                                                            },
-                                                            "topic",
-                                                        )
-                                                      : null,
-                                              ],
-                                          }),
-                                          (0, d.S)(t.id, e.id)
-                                              ? (0, i.jsx)(o.Button, {
-                                                    size: "sm",
-                                                    variant: "primary",
-                                                    text: S.intl.string(S.t.OYkgVk),
-                                                    onClick: () => (0, f.bN)(e.id),
-                                                })
-                                              : (0, i.jsx)(o.Button, {
-                                                    size: "sm",
-                                                    variant: "secondary",
-                                                    text: S.intl.string(S.t.zA9d1J),
-                                                    icon: o.XAi,
-                                                    iconPosition: "start",
-                                                    onClick: () => {
-                                                        var s;
-                                                        return (
-                                                            (s = e.id),
-                                                            void (0, o.mMO)(async () => {
-                                                                let { default: e } = await n
-                                                                    .e("54857")
-                                                                    .then(n.bind(n, 147696));
-                                                                return (n) =>
-                                                                    (0, i.jsx)(e, {
-                                                                        ...n,
-                                                                        guildId: t.id,
-                                                                        startingChannelId: s,
-                                                                    });
-                                                            })
-                                                        );
-                                                    },
-                                                }),
-                                      ],
-                                  }),
-                                  s < A.length - 1 ? (0, i.jsx)("div", { className: y.me }) : null,
-                              ],
-                          }),
+                      className: R.IF,
+                      children: m.map((e, n) =>
+                          (0, i.jsx)(
+                              G,
+                              { channel: e, guild: t, isLast: n === m.length - 1, onClickLockedChannel: A },
+                              e.id,
+                          ),
                       ),
                   }),
-                  (0, i.jsx)("div", { className: y.FZ }),
+                  (0, i.jsx)("div", { className: R.FZ }),
               ],
           });
 }
-function G(e) {
+function D(e) {
     let { saveOnClose: t = !1 } = e,
-        n = (0, l.bG)([A.A], () => A.A.getGuild()),
-        r = (0, l.bG)([c.A], () => c.A.isLoading()),
-        a = (0, l.bG)([_.Ay], () => _.Ay.getChannels(n?.id)),
-        d = (0, l.bG)([h.A], () => h.A.getCategories(n?.id)),
-        u = (0, l.bG)([E.A], () => E.A.advancedMode),
+        n = (0, l.bG)([f.A], () => f.A.getGuild()),
+        r = (0, l.bG)([u.A], () => u.A.isLoading()),
+        a = (0, l.bG)([A.Ay], () => A.Ay.getChannels(n?.id)),
+        d = (0, l.bG)([_.A], () => _.A.getCategories(n?.id)),
+        c = (0, l.bG)([C.A], () => C.A.advancedMode),
         m = s.useRef(null),
         [g, x] = s.useState(!1),
-        j = s.useRef(n);
+        h = s.useRef(n);
     return (s.useEffect(() => {
-        j.current = n;
+        h.current = n;
     }),
     s.useEffect(() => {
         if (t) {
-            let { current: e } = j;
+            let { current: e } = h;
             return () => {
                 null != e &&
-                    (0, f.jr)(e)
+                    (0, j.jr)(e)
                         .then(() => {
-                            u && (0, N.dm)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
+                            c && (0, E.dm)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
                         })
                         .catch(() => {});
             };
         }
-    }, [t, u]),
+    }, [t, c]),
     null == n)
         ? null
         : r
           ? (0, i.jsx)(o.y$y, {})
           : (0, i.jsxs)("div", {
-                className: y.YB,
+                className: R.YB,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: y.U5,
+                        className: R.U5,
                         children: [
                             (0, i.jsx)(o.DUT, {
-                                className: y.cS,
+                                className: R.cS,
                                 onClick: () => x((e) => !e),
                                 children: (0, i.jsx)(p.A, {
                                     direction: g ? p.A.Directions.DOWN : p.A.Directions.UP,
@@ -205,23 +203,23 @@ function G(e) {
                                 }),
                             }),
                             (0, i.jsx)(o.Heading, {
-                                className: y.wx,
+                                className: R.wx,
                                 variant: "heading-lg/extrabold",
-                                children: S.intl.string(S.t["4GSygh"]),
+                                children: y.intl.string(y.t["4GSygh"]),
                             }),
                             (0, i.jsx)(o.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: S.intl.string(S.t.Kq7FAS),
+                                children: y.intl.string(y.t.Kq7FAS),
                             }),
-                            (0, i.jsx)(T.mU, { className: y.kr, guildId: n.id }),
+                            (0, i.jsx)(I.mU, { className: R.kr, guildId: n.id }),
                             g
                                 ? null
                                 : (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, i.jsx)(O, { guild: n }),
-                                          (0, i.jsx)(I.A, {
-                                              className: y.bE,
+                                          (0, i.jsx)(L, { guild: n }),
+                                          (0, i.jsx)(b.A, {
+                                              className: R.bE,
                                               guild: n,
                                               categories: d,
                                               channels: a,
@@ -229,25 +227,25 @@ function G(e) {
                                           }),
                                       ],
                                   }),
-                            u &&
+                            c &&
                                 (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        (0, i.jsx)("div", { className: y.FZ }),
+                                        (0, i.jsx)("div", { className: R.FZ }),
                                         (0, i.jsx)(o.Heading, {
-                                            className: y.RH,
+                                            className: R.RH,
                                             variant: "heading-lg/extrabold",
-                                            children: S.intl.string(S.t.g2RnpV),
+                                            children: y.intl.string(y.t.g2RnpV),
                                         }),
                                         (0, i.jsx)(o.Text, {
-                                            className: y.nd,
+                                            className: R.nd,
                                             variant: "text-sm/normal",
                                             color: "text-default",
-                                            children: S.intl.string(S.t.bLDQ1Q),
+                                            children: y.intl.string(y.t.bLDQ1Q),
                                         }),
                                         (0, i.jsx)("div", {
                                             ref: m,
-                                            className: y.di,
-                                            children: (0, i.jsx)(v.A, {
+                                            className: R.di,
+                                            children: (0, i.jsx)(S.A, {
                                                 guildId: n.id,
                                                 prejoinOnly: !0,
                                                 includeCount: !0,
@@ -258,7 +256,7 @@ function G(e) {
                                 }),
                         ],
                     }),
-                    (0, i.jsx)(b.A, {
+                    (0, i.jsx)(v.A, {
                         guild: n,
                         scrollToQuestions: () => {
                             null != m.current && m.current.scrollIntoView({ behavior: "smooth" });
@@ -267,22 +265,22 @@ function G(e) {
                 ],
             });
 }
-function L() {
-    let e = (0, l.bG)([A.A], () => A.A.getProps().guild),
-        t = (0, l.bG)([j.A], () => j.A.submitting),
-        n = (0, l.bG)([E.A], () => E.A.advancedMode);
+function M() {
+    let e = (0, l.bG)([f.A], () => f.A.getProps().guild),
+        t = (0, l.bG)([N.A], () => N.A.submitting),
+        n = (0, l.bG)([C.A], () => C.A.advancedMode);
     return null == e
         ? null
         : (0, i.jsx)(r.A, {
               onSave: () => {
-                  (0, f.jr)(e)
+                  (0, j.jr)(e)
                       .then(() => {
-                          n && (0, N.dm)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
+                          n && (0, E.dm)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
                       })
                       .catch(() => {});
               },
-              onReset: f.nx,
+              onReset: j.nx,
               submitting: t,
-              onSaveText: S.intl.string(S.t["R3BPH+"]),
+              onSaveText: y.intl.string(y.t["R3BPH+"]),
           });
 }

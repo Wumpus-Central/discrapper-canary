@@ -1,4 +1,4 @@
-n.d(t, { A: () => y, Q: () => f });
+n.d(t, { A: () => x, Q: () => f });
 var l,
     i = n(627968),
     r = n(64700),
@@ -6,17 +6,18 @@ var l,
     a = n.n(s),
     u = n(863610),
     o = n(935154),
-    d = n(573435),
-    c = n(260509),
-    h = n(652215),
-    g = n(778712),
-    I = n(624510),
+    d = n(47167),
+    c = n(573435),
+    h = n(260509),
+    g = n(652215),
+    I = n(778712),
+    A = n(612776),
     f = (((l = {}).TINY_24 = "TINY_24"), (l.SMALL_32 = "SMALL_32"), (l.MEDIUM_40 = "MEDIUM_40"), l);
-let A = { TINY_24: 24, SMALL_32: 32, MEDIUM_40: 40 },
-    E = { TINY_24: 24, SMALL_32: 26, MEDIUM_40: 34 },
-    m = { TINY_24: [13, 11, 10], SMALL_32: [13, 11, 10], MEDIUM_40: [24, 20, 16] },
-    S = { TINY_24: [9, 8, 7], SMALL_32: [12, 11, 9.5], MEDIUM_40: [14, 13, 11] },
-    p = { TINY_24: I.d7, SMALL_32: I.OI, MEDIUM_40: I.H5 },
+let E = { TINY_24: 24, SMALL_32: 32, MEDIUM_40: 40 },
+    m = { TINY_24: 24, SMALL_32: 26, MEDIUM_40: 34 },
+    S = { TINY_24: [13, 11, 10], SMALL_32: [13, 11, 10], MEDIUM_40: [24, 20, 16] },
+    _ = { TINY_24: [9, 8, 7], SMALL_32: [12, 11, 9.5], MEDIUM_40: [14, 13, 11] },
+    p = { TINY_24: A.d7, SMALL_32: A.OI, MEDIUM_40: A.H5 },
     N = { TINY_24: 12, SMALL_32: 16, MEDIUM_40: 20 };
 function T(e, t) {
     return 0 === e.length
@@ -27,9 +28,9 @@ function T(e, t) {
             ? e[e.length - 1]
             : (e[t.length - 1] ?? e[e.length - 1]);
 }
-function _(e) {
+function y(e) {
     let { size: t } = e,
-        n = (0, g.Kj)(t),
+        n = (0, I.Kj)(t),
         l = 2.5 * n.status,
         i = (l - n.status) / 2,
         r = n.status,
@@ -56,47 +57,48 @@ function _(e) {
 }
 let C = r.memo(function (e) {
         let { avatarSize: t, typingFillColor: n } = e,
-            l = (0, o.S3)(h.clD.ONLINE, null),
-            { statusWidth: r, statusHeight: s, dotRadius: a } = _({ size: t });
-        return (0, i.jsx)(d.Ay, {
-            mask: d.hW.STATUS_TYPING,
+            l = (0, o.S3)(g.clD.ONLINE, null),
+            { statusWidth: r, statusHeight: s, dotRadius: a } = y({ size: t });
+        return (0, i.jsx)(c.Ay, {
+            mask: c.hW.STATUS_TYPING,
             width: r,
             height: s,
             "aria-hidden": !0,
             children: (0, i.jsx)("div", {
-                className: I.WQ,
+                className: A.WQ,
                 style: { backgroundColor: n ?? l },
                 children: (0, i.jsx)(u.n, { dotRadius: a }),
             }),
         });
     }),
-    y = function (e) {
+    x = function (e) {
         var t;
         let n,
-            { className: l, iconClassName: s, size: u, channel: o, guild: h, isTyping: f = !1, typingFillColor: y } = e,
-            x = r.useId();
-        if (null == h) return null;
-        let v = m[u],
-            M = E[u],
-            D = A[u],
-            R = (0, c.Iv)(h, 48),
-            U = N[u],
-            O = (() => {
+            { className: l, iconClassName: s, size: u, channel: o, guild: g, isTyping: f = !1, typingFillColor: x } = e,
+            v = r.useId(),
+            M = (0, d.Ay)(o);
+        if (null == g) return null;
+        let D = S[u],
+            R = m[u],
+            O = E[u],
+            U = (0, h.Iv)(g, 48),
+            G = N[u],
+            w = (() => {
                 switch (u) {
                     case "TINY_24":
-                        return g._3.SIZE_24;
+                        return I._3.SIZE_24;
                     case "SMALL_32":
-                        return g._3.SIZE_32;
+                        return I._3.SIZE_32;
                     case "MEDIUM_40":
-                        return g._3.SIZE_40;
+                        return I._3.SIZE_40;
                     default:
                         return u;
                 }
             })(),
-            G =
+            L =
                 0 ===
                 (n =
-                    null != (t = o?.name ?? "")
+                    null != (t = M ?? "")
                         ? t
                               .replace(/[-_]+/g, " ")
                               .replace(/'s /g, " ")
@@ -105,91 +107,91 @@ let C = r.memo(function (e) {
                         : "").length
                     ? "?"
                     : n.slice(0, 3),
-            b = (0, c.Rb)(h),
-            w = (0, i.jsxs)("div", {
-                className: a()(I.zr, l),
+            F = (0, h.Rb)(g),
+            b = (0, i.jsxs)("div", {
+                className: a()(A.zr, l),
                 role: "img",
-                style: { width: D, height: D },
+                style: { width: O, height: O },
                 children: [
-                    (0, i.jsx)(d.Ay, {
-                        mask: d.hW.CHANNEL_ICON_WITH_GUILD_ICON,
-                        width: M,
-                        height: M,
+                    (0, i.jsx)(c.Ay, {
+                        mask: c.hW.CHANNEL_ICON_WITH_GUILD_ICON,
+                        width: R,
+                        height: R,
                         children:
-                            null != R
+                            null != U
                                 ? (0, i.jsx)("img", {
-                                      alt: h.name,
-                                      src: R,
-                                      className: I.es,
-                                      style: { width: M, height: M },
+                                      alt: g.name,
+                                      src: U,
+                                      className: A.es,
+                                      style: { width: R, height: R },
                                   })
                                 : (0, i.jsx)("div", {
-                                      className: a()(I.TT, I.q9),
-                                      style: { fontSize: T(v, b), width: M, height: M },
-                                      children: b,
+                                      className: a()(A.TT, A.q9),
+                                      style: { fontSize: T(D, F), width: R, height: R },
+                                      children: F,
                                   }),
                     }),
                     (0, i.jsx)("div", {
-                        className: a()(I._C, p[u], s),
+                        className: a()(A._C, p[u], s),
                         "aria-hidden": !0,
-                        children: (0, i.jsx)(d.Ay, {
-                            mask: d.hW.SQUIRCLE,
-                            width: U,
-                            height: U,
+                        children: (0, i.jsx)(c.Ay, {
+                            mask: c.hW.SQUIRCLE,
+                            width: G,
+                            height: G,
                             children: (0, i.jsx)("div", {
-                                className: a()(p[u], I.q9),
-                                style: { fontSize: T(S[u], G) },
-                                children: G,
+                                className: a()(p[u], A.q9),
+                                style: { fontSize: T(_[u], L) },
+                                children: L,
                             }),
                         }),
                     }),
                 ],
             }),
             {
-                iconSize: L,
-                avatarCutoutX: F,
-                avatarCutoutY: k,
-                avatarCutoutWidth: P,
-                avatarCutoutHeight: j,
-                avatarCutoutRadius: V,
-                indicatorX: H,
-                indicatorY: Y,
-            } = _({ size: O });
+                iconSize: k,
+                avatarCutoutX: P,
+                avatarCutoutY: j,
+                avatarCutoutWidth: V,
+                avatarCutoutHeight: H,
+                avatarCutoutRadius: Y,
+                indicatorX: W,
+                indicatorY: z,
+            } = y({ size: w });
         return f
             ? (0, i.jsxs)("div", {
-                  className: I.J4,
+                  className: A.J4,
                   "aria-hidden": !0,
-                  style: { width: D, height: D },
+                  style: { width: O, height: O },
                   children: [
                       (0, i.jsxs)("svg", {
-                          width: L,
-                          height: L,
-                          viewBox: `0 0 ${L} ${L}`,
-                          className: I._S,
+                          width: k,
+                          height: k,
+                          viewBox: `0 0 ${k} ${k}`,
+                          className: A._S,
                           "aria-hidden": !0,
                           children: [
                               (0, i.jsx)("defs", {
                                   children: (0, i.jsxs)("mask", {
-                                      id: x,
-                                      width: L,
-                                      height: L,
+                                      id: v,
+                                      width: k,
+                                      height: k,
                                       children: [
                                           (0, i.jsx)("rect", {
                                               x: 0,
                                               y: 0,
-                                              width: L,
-                                              height: L,
-                                              rx: Math.round(0.3 * L),
-                                              ry: Math.round(0.3 * L),
+                                              width: k,
+                                              height: k,
+                                              rx: Math.round(0.3 * k),
+                                              ry: Math.round(0.3 * k),
                                               fill: "white",
                                           }),
                                           (0, i.jsx)("rect", {
-                                              x: F,
-                                              y: k,
-                                              width: P,
-                                              height: j,
-                                              rx: V,
-                                              ry: V,
+                                              x: P,
+                                              y: j,
+                                              width: V,
+                                              height: H,
+                                              rx: Y,
+                                              ry: Y,
                                               fill: "black",
                                           }),
                                       ],
@@ -198,20 +200,20 @@ let C = r.memo(function (e) {
                               (0, i.jsx)("foreignObject", {
                                   x: 0,
                                   y: 0,
-                                  width: L,
-                                  height: L,
+                                  width: k,
+                                  height: k,
                                   overflow: "visible",
-                                  mask: `url(#${x})`,
-                                  children: w,
+                                  mask: `url(#${v})`,
+                                  children: b,
                               }),
                           ],
                       }),
                       (0, i.jsx)("div", {
-                          className: I.RL,
-                          style: { left: H, top: Y },
-                          children: (0, i.jsx)(C, { avatarSize: O, typingFillColor: y }),
+                          className: A.RL,
+                          style: { left: W, top: z },
+                          children: (0, i.jsx)(C, { avatarSize: w, typingFillColor: x }),
                       }),
                   ],
               })
-            : w;
+            : b;
     };

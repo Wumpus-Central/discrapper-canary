@@ -24,21 +24,21 @@ var l = n(503698),
     T = n(222823),
     S = n(287809),
     b = n(147925),
-    v = n(652215),
-    y = n(985018),
+    y = n(652215),
+    v = n(985018),
     j = n(81236);
 let R = { top: 8, bottom: 8, left: -4, right: -4 };
 function O(e) {
     let { channelState: t, toggle: n, getNumUnreadChannels: l } = e;
     return (0, i.jsx)(d.m_, {
-        text: y.intl.string(y.t.iTcuma),
+        text: v.intl.string(v.t.iTcuma),
         children: (0, i.jsx)(c.DUT, {
             className: s()(j.cS, { [j.yZ]: t?.collapsed }),
             onClick: function () {
                 null != t &&
                     null != n &&
                     (n(t),
-                    (0, _.zV)(v.HAw.INBOX_CHANNEL_COLLAPSED, {
+                    (0, _.zV)(y.HAw.INBOX_CHANNEL_COLLAPSED, {
                         channel_id: t.channelId,
                         guild_id: t.guildId,
                         num_unread_channels_remaining: l?.() ?? 0,
@@ -122,12 +122,13 @@ function G(e) {
         u = (0, r.bG)([T.Ay], () => T.Ay.getIsMentionLowImportance(t.id)),
         h = (0, g.gU)(t, a),
         A = (0, p.Ay)(t, !1),
-        _ = null == d ? a?.name : `${a?.name} › ${d.name}`,
-        m = t.isMultiUserDM()
-            ? y.intl.formatToPlainString(y.t.CxSA5N, { members: t.recipients.length + 1 })
+        _ = (0, p.Ay)(d),
+        m = null == d ? a?.name : `${a?.name} › ${_}`,
+        f = t.isMultiUserDM()
+            ? v.intl.formatToPlainString(v.t.CxSA5N, { members: t.recipients.length + 1 })
             : t.isPrivate()
               ? (0, i.jsx)(P, { channel: t })
-              : (0, i.jsx)(c.DUT, { className: s()(j.W$, j.J5), onClick: n, children: _ });
+              : (0, i.jsx)(c.DUT, { className: s()(j.W$, j.J5), onClick: n, children: m });
     return (0, i.jsxs)("div", {
         className: j.yP,
         children: [
@@ -162,7 +163,7 @@ function G(e) {
                     ],
                 }),
             }),
-            (0, i.jsx)(c.Text, { color: "text-default", variant: "text-xs/normal", className: j.PL, children: m }),
+            (0, i.jsx)(c.Text, { color: "text-default", variant: "text-xs/normal", className: j.PL, children: f }),
         ],
     });
 }

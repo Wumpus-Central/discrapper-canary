@@ -1,18 +1,22 @@
 "use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => u });
 var r = n(157559),
-    i = n(240248),
-    a = n(985018);
-function s(e, t, n, s) {
+    i = n(47167),
+    s = n(994500),
+    a = n(287809),
+    o = n(240248),
+    l = n(985018);
+function u(e, t, n, u) {
+    let c = null != t ? (0, i.m1)(t, a.default, s.A) : "";
     r.A.show({
-        title: a.intl.string(a.t.XkIWkk),
-        cancelText: a.intl.string(a.t["ETE/oC"]),
-        confirmText: a.intl.string(a.t["cY+Oob"]),
+        title: l.intl.string(l.t.XkIWkk),
+        cancelText: l.intl.string(l.t["ETE/oC"]),
+        confirmText: l.intl.string(l.t["cY+Oob"]),
         onConfirm: n,
-        onCancel: s,
-        body: a.intl.format(a.t["5/Xort"], {
-            currentApplicationName: e?.name ?? a.intl.string(a.t.G99XFs),
-            currentApplicationChannelName: (0, i.uJ)(t?.name) ? a.intl.string(a.t.OGUjmt) : t?.name,
+        onCancel: u,
+        body: l.intl.format(l.t["5/Xort"], {
+            currentApplicationName: e?.name ?? l.intl.string(l.t.G99XFs),
+            currentApplicationChannelName: (0, o.uJ)(c) ? l.intl.string(l.t.OGUjmt) : c,
         }),
     });
 }

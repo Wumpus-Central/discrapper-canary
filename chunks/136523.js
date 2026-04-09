@@ -1,116 +1,118 @@
 "use strict";
-n.d(t, { default: () => v, m: () => y });
+n.d(t, { default: () => N, m: () => y });
 var r = n(627968),
     i = n(64700),
-    a = n(158954),
-    s = n(417597),
+    s = n(158954),
+    a = n(417597),
     o = n(319400),
     l = n(435183),
     u = n(843472),
     c = n(309698),
-    d = n(355622),
-    _ = n(408018),
-    f = n(133343),
-    p = n(451909),
-    h = n(383501),
-    m = n(287809),
+    d = n(47167),
+    _ = n(355622),
+    f = n(408018),
+    p = n(133343),
+    h = n(451909),
+    m = n(383501),
+    E = n(287809),
     g = n(954571),
-    E = n(652215),
-    A = n(985018),
-    I = n(171927),
-    T = n(379649);
+    A = n(652215),
+    I = n(985018),
+    T = n(169829),
+    S = n(379649);
 let y = "VoiceChannelStatusModal",
-    S = 500;
-function v(e) {
-    let { channel: t, transitionState: n, sourceAnalyticsLocations: v, onClose: C } = e,
-        b = (0, s.bG)([c.A], () => c.A.getChannelStatus(t)),
-        N = (0, s.bG)([h.A], () => h.A.getMediaSessionId()),
-        [R, O] = i.useState(b ?? ""),
-        [D, L] = i.useState(!1),
-        [w, x] = i.useState(null),
-        P = (0, s.bG)([m.default], () => m.default.getCurrentUser()),
-        M = R.length > S;
+    v = 500;
+function N(e) {
+    let { channel: t, transitionState: n, sourceAnalyticsLocations: N, onClose: C } = e,
+        R = (0, a.bG)([c.A], () => c.A.getChannelStatus(t)),
+        O = (0, a.bG)([m.A], () => m.A.getMediaSessionId()),
+        [b, D] = i.useState(R ?? ""),
+        [L, w] = i.useState(!1),
+        [M, x] = i.useState(null),
+        P = (0, a.bG)([E.default], () => E.default.getCurrentUser()),
+        k = (0, d.Ay)(t),
+        U = b.length > v;
     i.useEffect(() => {
-        g.default.track(E.HAw.OPEN_MODAL, {
+        g.default.track(A.HAw.OPEN_MODAL, {
             type: "Voice Channel Topic Modal",
             guild_id: t.guild_id,
-            location_stack: v,
+            location_stack: N,
         });
-    }, [t.guild_id, v]);
-    let k = (e) => {
+    }, [t.guild_id, N]);
+    let G = (e) => {
             x(new o.LG(e, e.status).getAnyErrorMessage());
         },
-        U = (e) => {
+        F = (e) => {
             let { invalidEmojis: n } = e;
             if (null != n && n.length > 0) {
                 let { errorMessage: e } = u.A.validateMessage(n, P, t.id);
-                return x(e), L(!1), { hasErrors: !0 };
+                return x(e), w(!1), { hasErrors: !0 };
             }
             return { hasErrors: !1 };
         },
-        G = async (e) => {
-            R === b && C(), e?.preventDefault(), x(null), L(!0);
-            let n = R.length,
-                r = R.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length,
-                i = p.Ay.parse(t, R),
-                { hasErrors: a } = U(i);
-            if (!a) {
+        V = async (e) => {
+            b === R && C(), e?.preventDefault(), x(null), w(!0);
+            let n = b.length,
+                r = b.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length,
+                i = h.Ay.parse(t, b),
+                { hasErrors: s } = F(i);
+            if (!s) {
                 try {
                     let e = await l.Ay.updateVoiceChannelStatus(t.id, i.content);
                     204 === e.status
-                        ? (g.default.track(E.HAw.VOICE_CHANNEL_TOPIC_SET, {
+                        ? (g.default.track(A.HAw.VOICE_CHANNEL_TOPIC_SET, {
                               guild_id: t.guild_id,
                               channel_id: t.id,
-                              media_session_id: N,
+                              media_session_id: O,
                               raw_length: n,
                               text_length: r,
-                              location_stack: v,
+                              location_stack: N,
                           }),
                           C())
-                        : k(e);
+                        : G(e);
                 } catch (e) {
-                    k(e);
+                    G(e);
                 }
-                L(!1);
+                w(!1);
             }
         },
-        [V, F] = i.useState((0, _.x7)(R)),
-        B = (e, t, n) => {
-            O(t), F(n);
+        [B, H] = i.useState((0, f.x7)(b)),
+        j = (e, t, n) => {
+            D(t), H(n);
         },
-        j = async () => (M || D || (await G()), Promise.resolve({ shouldClear: !1, shouldRefocus: !0 })),
-        H = (0, r.jsx)(a.D0$, {
-            label: A.intl.string(A.t.Fq5lwN),
-            errorMessage: w,
-            children: (0, r.jsx)(f.Ay, {
-                innerClassName: I.Tg,
-                textValue: R,
-                richValue: V,
-                placeholder: A.intl.formatToPlainString(A.t.DUXxBh, { channelName: t.name }),
+        Y = async () => (U || L || (await V()), Promise.resolve({ shouldClear: !1, shouldRefocus: !0 })),
+        W = (0, r.jsx)(s.D0$, {
+            label: I.intl.string(I.t.Fq5lwN),
+            errorMessage: M,
+            children: (0, r.jsx)(p.Ay, {
+                innerClassName: T.Tg,
+                textValue: b,
+                richValue: B,
+                placeholder: I.intl.formatToPlainString(I.t.DUXxBh, { channelName: k }),
                 focused: !0,
                 channel: t,
-                onChange: B,
-                onSubmit: j,
-                type: d.oU.VOICE_CHANNEL_STATUS,
+                onChange: j,
+                onSubmit: Y,
+                type: _.oU.VOICE_CHANNEL_STATUS,
                 canMentionRoles: !1,
                 canMentionChannels: !1,
                 allowNewLines: !1,
                 parentModalKey: y,
-                maxCharacterCount: S,
-                showRemainingCharsAfterCount: S / 2,
+                maxCharacterCount: v,
+                showRemainingCharsAfterCount: v / 2,
                 emojiPickerCloseOnModalOuterClick: !0,
             }),
         });
-    return (0, r.jsx)(a.ExpressiveModal, {
+    return (0, r.jsx)(s.ExpressiveModal, {
         transitionState: n,
         onClose: C,
-        graphic: { type: "image", src: T },
-        title: A.intl.string(A.t["5CyJBd"]),
-        subtitle: A.intl.string(A.t.NRBYju),
+        graphic: { type: "image", src: S },
+        title: I.intl.string(I.t["5CyJBd"]),
+        subtitle: I.intl.string(I.t.NRBYju),
         actions: [
-            { variant: "secondary", text: A.intl.string(A.t["ETE/oC"]), onClick: C },
-            { variant: "primary", loading: D, disabled: M, text: A.intl.string(A.t.XqK2I2), onClick: G },
+            { variant: "secondary", text: I.intl.string(I.t["ETE/oC"]), onClick: C },
+            { variant: "primary", loading: L, disabled: U, text: I.intl.string(I.t.XqK2I2), onClick: V },
         ],
-        children: H,
+        children: W,
     });
 }

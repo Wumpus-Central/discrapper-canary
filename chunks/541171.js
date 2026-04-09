@@ -2,37 +2,39 @@ n.d(t, { A: () => d });
 var i = n(627968);
 n(64700);
 var l = n(397927),
-    a = n(402216),
-    r = n(763754),
-    s = n(888675),
-    o = n(985018);
+    a = n(47167),
+    r = n(402216),
+    s = n(763754),
+    o = n(888675),
+    c = n(985018);
 function d(e) {
-    let { message: t, channel: n, playingActivity: d, onJoinStream: c, usernameHook: u, compact: m } = e,
-        _ = (0, r.Ay)(t),
-        h = t.call?.duration,
-        p = u(_),
-        g = o.intl.format(o.t.FKXvaI, {
-            username: _.nick,
+    let { message: t, channel: n, playingActivity: d, onJoinStream: u, usernameHook: _, compact: A } = e,
+        m = (0, s.Ay)(t),
+        E = (0, a.Ay)(n),
+        T = t.call?.duration,
+        I = _(m),
+        N = c.intl.format(c.t.FKXvaI, {
+            username: m.nick,
             activityName: null != d ? d.name : "unknown",
-            onJoinStream: c,
-            usernameHook: p,
+            onJoinStream: u,
+            usernameHook: I,
         });
     return (
-        null != h &&
-            (g = o.intl.format(o.t.NEFxtd, {
-                username: _.nick,
-                duration: h.humanize(),
-                channelName: n.name,
-                usernameHook: p,
+        null != T &&
+            (N = c.intl.format(c.t.NEFxtd, {
+                username: m.nick,
+                duration: T.humanize(),
+                channelName: E ?? "",
+                usernameHook: I,
             })),
-        (0, i.jsx)(s.A, {
+        (0, i.jsx)(o.A, {
             iconNode:
-                null != h
+                null != T
                     ? (0, i.jsx)(l.GT3, { size: "custom", color: "currentColor", width: 20, height: 20 })
-                    : (0, i.jsx)(a.Ay, { size: a.Ay.Sizes.SMALL }),
+                    : (0, i.jsx)(r.Ay, { size: r.Ay.Sizes.SMALL }),
             timestamp: t.timestamp,
-            compact: m,
-            children: g,
+            compact: A,
+            children: N,
         })
     );
 }

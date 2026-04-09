@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => N });
+n.d(t, { A: () => E });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -7,87 +7,89 @@ var i = n(627968),
     a = n(417597),
     o = n(990078),
     d = n(397927),
-    c = n(713654),
-    u = n(599119),
-    m = n(202027),
-    g = n(374084),
-    x = n(111487),
-    h = n(734057),
-    _ = n(71393),
+    c = n(47167),
+    u = n(713654),
+    m = n(599119),
+    g = n(202027),
+    x = n(374084),
+    h = n(111487),
+    _ = n(734057),
+    A = n(71393),
     p = n(486020),
-    A = n(132514),
-    f = n(985018),
-    j = n(659233);
-let N = function (e) {
+    f = n(132514),
+    j = n(985018),
+    N = n(574283);
+let E = function (e) {
     let {
             guildId: t,
             action: l,
-            actionIndex: N,
-            onChange: E,
-            onDelete: b,
-            onDragStart: T,
-            onDragComplete: C,
-            onDragReset: I,
+            actionIndex: E,
+            onChange: C,
+            onDelete: T,
+            onDragStart: I,
+            onDragComplete: b,
+            onDragReset: v,
         } = e,
-        v = (0, a.bG)([h.A], () => h.A.getChannel(l.channelId)),
-        S = (0, a.bG)([_.A], () => _.A.getGuild(t)),
-        y = (0, a.bG)([A.A], () => A.A.getPendingData()[l.channelId]),
-        { customEmoji: R, unicodeEmoji: O } = (0, m.A)(l.emoji?.id, l.emoji?.name),
-        G = null == l.emoji || null != R || null != O,
-        L = p.Ay.getNewMemberActionIconURL({ channelId: l.channelId, icon: l.icon }),
-        D = null != y ? y.iconData : L,
-        M = null;
-    null != v && (0, g.Rc)(v) ? G || (M = f.intl.string(f.t.wAkIZW)) : (M = f.intl.string(f.t.CbTEKP));
+        S = (0, a.bG)([_.A], () => _.A.getChannel(l.channelId)),
+        y = (0, a.bG)([A.A], () => A.A.getGuild(t)),
+        R = (0, a.bG)([f.A], () => f.A.getPendingData()[l.channelId]),
+        O = (0, c.Ay)(S),
+        { customEmoji: G, unicodeEmoji: L } = (0, g.A)(l.emoji?.id, l.emoji?.name),
+        D = null == l.emoji || null != G || null != L,
+        M = p.Ay.getNewMemberActionIconURL({ channelId: l.channelId, icon: l.icon }),
+        k = null != R ? R.iconData : M,
+        U = null;
+    null != S && (0, x.Rc)(S) ? D || (U = j.intl.string(j.t.wAkIZW)) : (U = j.intl.string(j.t.CbTEKP));
     let {
-            drag: k,
-            dragSourcePosition: U,
-            drop: P,
-            setIsDraggable: w,
-        } = (0, u.A)({
+            drag: P,
+            dragSourcePosition: w,
+            drop: B,
+            setIsDraggable: F,
+        } = (0, m.A)({
             type: "NEW_MEMBER_ACTION",
-            index: N,
+            index: E,
             optionId: l.channelId,
-            onDragStart: T,
-            onDragComplete: C,
-            onDragReset: I,
+            onDragStart: I,
+            onDragComplete: b,
+            onDragReset: v,
         }),
-        B = s.useCallback(() => {
+        H = s.useCallback(() => {
             if (null != t)
                 return (0, d.mMO)(async () => {
-                    let { default: e } = await Promise.all([n.e("54569"), n.e("76945")]).then(n.bind(n, 251632));
+                    let { default: e } = await Promise.all([n.e("54569"), n.e("39665")]).then(n.bind(n, 251632));
                     return (n) =>
                         (0, i.jsx)(e, {
                             ...n,
                             guildId: t,
                             action: l,
-                            onSave: (e, t, n) => E(N, e, t, n),
-                            onDelete: () => b(N),
+                            onSave: (e, t, n) => C(E, e, t, n),
+                            onDelete: () => T(E),
                         });
                 });
-        }, [t, l, N, E, b]);
-    if (null == v || null == S) return null;
-    let F = (0, c.gU)(v) ?? d.N$i;
+        }, [t, l, E, C, T]);
+    if (null == S || null == y) return null;
+    let V = (0, u.gU)(S) ?? d.N$i;
     return (0, i.jsxs)("div", {
-        className: j.L8,
+        className: N.L8,
         children: [
             (0, i.jsxs)("div", {
-                className: r()(j.kv, { [j.A]: null != U && N < U, [j.Ze]: null != U && N > U, [j.e5]: null != M }),
+                className: r()(N.kv, { [N.A]: null != w && E < w, [N.Ze]: null != w && E > w, [N.e5]: null != U }),
                 ref: (e) => {
-                    k(P(e));
+                    P(B(e));
                 },
                 children: [
                     (0, i.jsx)("div", {
-                        className: j.cK,
-                        onMouseEnter: () => w(!0),
-                        onMouseLeave: () => w(!1),
-                        children: (0, i.jsx)(d.WP0, { size: "xs", color: "currentColor", className: j.co }),
+                        className: N.cK,
+                        onMouseEnter: () => F(!0),
+                        onMouseLeave: () => F(!1),
+                        children: (0, i.jsx)(d.WP0, { size: "xs", color: "currentColor", className: N.co }),
                     }),
-                    null != D
+                    null != k
                         ? (0, i.jsx)("div", {
-                              className: j.P0,
+                              className: N.P0,
                               children: (0, i.jsx)("img", {
-                                  src: D,
-                                  className: j.Kk,
+                                  src: k,
+                                  className: N.Kk,
                                   width: 48,
                                   height: 48,
                                   alt: "",
@@ -95,16 +97,16 @@ let N = function (e) {
                               }),
                           })
                         : (0, i.jsx)("div", {
-                              className: j.zV,
-                              children: (0, i.jsx)(x.A, {
+                              className: N.zV,
+                              children: (0, i.jsx)(h.A, {
                                   emojiId: l.emoji?.id,
                                   emojiName: l.emoji?.name,
-                                  size: x.g.MEDIUM,
-                                  defaultComponent: (0, i.jsx)(F, {}),
+                                  size: h.g.MEDIUM,
+                                  defaultComponent: (0, i.jsx)(V, {}),
                               }),
                           }),
                     (0, i.jsxs)("div", {
-                        className: j.tV,
+                        className: N.tV,
                         children: [
                             (0, i.jsx)(d.Text, {
                                 variant: "text-md/semibold",
@@ -114,24 +116,24 @@ let N = function (e) {
                             (0, i.jsx)(d.Text, {
                                 variant: "text-xs/medium",
                                 color: "text-default",
-                                children: f.intl.format(f.t.Ngk8Nr, { channelName: v.name }),
+                                children: j.intl.format(j.t.Ngk8Nr, { channelName: O }),
                             }),
                         ],
                     }),
                     (0, i.jsx)(o.m, {
-                        text: f.intl.string(f.t.bt75uw),
+                        text: j.intl.string(j.t.bt75uw),
                         children: (0, i.jsx)(d.K0, {
                             icon: d.R2l,
                             size: "sm",
                             variant: "primary",
-                            onClick: B,
-                            "aria-label": f.intl.string(f.t.bt75uw),
+                            onClick: H,
+                            "aria-label": j.intl.string(j.t.bt75uw),
                         }),
                     }),
                 ],
             }),
-            null != M &&
-                (0, i.jsx)(d.Text, { variant: "text-xs/medium", color: "text-feedback-critical", children: M }),
+            null != U &&
+                (0, i.jsx)(d.Text, { variant: "text-xs/medium", color: "text-feedback-critical", children: U }),
         ],
     });
 };

@@ -1,45 +1,47 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => p });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
     a = n.n(s),
     r = n(311907),
     o = n(397927),
+    d = n(47167),
     c = n(734057),
-    d = n(607567),
-    u = n(403362),
-    h = n(108197),
-    A = n(985018),
-    _ = n(570302);
-let m = l.memo(function (e) {
-    let { channel: t, selectedChannel: n, selectedVoiceChannelId: l, sortedThreadIds: s, withGuildIcon: m } = e,
-        { density: g } = (0, o.wRf)(),
-        p = (0, r.yK)([c.A], () => s.map((e) => c.A.getChannel(e)).filter(u.Vq), [s]),
-        f = (0, r.bG)([d.Ay], () => {
-            let e = p[p.length - 1];
+    u = n(607567),
+    h = n(403362),
+    A = n(108197),
+    _ = n(985018),
+    m = n(251843);
+let p = l.memo(function (e) {
+    let { channel: t, selectedChannel: n, selectedVoiceChannelId: l, sortedThreadIds: s, withGuildIcon: p } = e,
+        g = (0, d.Ay)(t),
+        { density: f } = (0, o.wRf)(),
+        x = (0, r.yK)([c.A], () => s.map((e) => c.A.getChannel(e)).filter(h.Vq), [s]),
+        E = (0, r.bG)([u.Ay], () => {
+            let e = x[x.length - 1];
             if (null == e) return 0;
-            let t = d.Ay.getVoiceStates(e.guild_id)[e.id];
+            let t = u.Ay.getVoiceStates(e.guild_id)[e.id];
             return null == t || 0 === t.length ? 0 : l !== e.id ? 40 : 32 * t.length + 8;
         });
     return (0, i.jsx)("li", {
-        className: _.kL,
+        className: m.kL,
         children: (0, i.jsxs)("ul", {
             role: "group",
-            "aria-label": A.intl.formatToPlainString(A.t.EiyIi6, { channelName: t.name }),
+            "aria-label": _.intl.formatToPlainString(_.t.EiyIi6, { channelName: g }),
             children: [
                 (0, i.jsx)("div", {
-                    className: a()(_.eh, { [_.ET]: m }),
-                    style: { bottom: ("cozy" === g ? 28 : 24) + f },
+                    className: a()(m.eh, { [m.ET]: p }),
+                    style: { bottom: ("cozy" === f ? 28 : 24) + E },
                 }),
-                p.map((e, t) =>
+                x.map((e, t) =>
                     (0, i.jsx)(
-                        h.A,
+                        A.A,
                         {
                             thread: e,
                             isSelectedChannel: n?.id === e.id,
                             isSelectedVoice: l === e.id,
-                            isLast: t === p.length - 1,
-                            withGuildIcon: m,
+                            isLast: t === x.length - 1,
+                            withGuildIcon: p,
                         },
                         e.id,
                     ),

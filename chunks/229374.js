@@ -29,27 +29,28 @@ var l = n(627968),
     M = n(712838),
     p = n(652215),
     U = n(985018),
-    k = n(405587);
+    k = n(125486);
 function b(e) {
-    let { parentChannel: t, onSelectChannel: n } = e;
-    if (t?.name == null) return null;
-    let r = null != t ? (0, A.gU)(t) : null;
+    let { parentChannel: t, onSelectChannel: n } = e,
+        r = (0, d.Ay)(t);
     if (null == r) return null;
-    let a = (0, l.jsxs)(l.Fragment, {
+    let a = null != t ? (0, A.gU)(t) : null;
+    if (null == a) return null;
+    let s = (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(r, { className: k.gQ, size: "xxs", color: "currentColor" }),
-            (0, l.jsx)(E.Text, { className: k.yK, variant: "text-xs/medium", color: "text-default", children: t.name }),
+            (0, l.jsx)(a, { className: k.gQ, size: "xxs", color: "currentColor" }),
+            (0, l.jsx)(E.Text, { className: k.yK, variant: "text-xs/medium", color: "text-default", children: r }),
         ],
     });
-    return (0, G.Z_)(t.type)
+    return null != t && (0, G.Z_)(t.type)
         ? (0, l.jsx)(E.DUT, {
               className: i()(k.rg, k.fj),
               onClick: (e) => {
                   e.stopPropagation(), n(t.id);
               },
-              children: a,
+              children: s,
           })
-        : (0, l.jsx)("div", { className: k.rg, children: a });
+        : (0, l.jsx)("div", { className: k.rg, children: s });
 }
 function F(e) {
     let {
@@ -73,7 +74,7 @@ function F(e) {
         }, []),
         U = null != t ? (0, d.m1)(t, D.default, C.A, !1) : "???",
         F = t?.parent_id != null ? O.A.getChannel(t.parent_id) : null,
-        j = F?.name ?? null,
+        j = null != F ? (0, d.m1)(F, D.default, C.A) : null,
         v = (0, A.gU)(t) ?? E.N$i,
         P = R.A.can(p.xBc.MANAGE_MESSAGES, t),
         { content: y } = (0, T.Ay)({ content: U, embeds: [] }, { postProcessor: a }),

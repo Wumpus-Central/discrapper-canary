@@ -1,57 +1,59 @@
 "use strict";
-n.d(t, { a: () => T });
+n.d(t, { a: () => S });
 var r = n(627968),
     i = n(64700),
     s = n(110259),
     a = n(311907),
     o = n(397927),
     l = n(139286),
-    u = n(713654),
-    c = n(252263),
-    d = n(8455),
-    _ = n(67259),
-    f = n(734057),
-    p = n(954571),
-    h = n(355622),
-    m = n(652215),
-    E = n(985018),
-    g = n(299428);
-function A(e) {
+    u = n(47167),
+    c = n(713654),
+    d = n(252263),
+    _ = n(8455),
+    f = n(67259),
+    p = n(734057),
+    h = n(954571),
+    m = n(355622),
+    E = n(652215),
+    g = n(985018),
+    A = n(299428);
+function I(e) {
     let { channel: t, type: n } = e,
-        r = (0, a.bG)([f.A], () => {
-            let e = f.A.getChannel(t.parent_id);
+        r = (0, a.bG)([p.A], () => {
+            let e = p.A.getChannel(t.parent_id);
             return e?.isForumLikeChannel() ?? !1;
         }),
-        i = [h.oU.NORMAL, h.oU.SIDEBAR].includes(n);
+        i = [m.oU.NORMAL, m.oU.SIDEBAR].includes(n);
     return { shouldShow: t.isThread() && !r && i };
 }
-function I(e) {
+function T(e) {
     let { thread: t, pendingScheduledMessage: n } = e,
-        h = (0, d.Vp)({ location: "ThreadsAlsoSendToChannelArea" }),
-        [A, I] = (0, a.yK)([f.A, _.A], () => [
-            t.isThread() ? f.A.getChannel(t.parent_id) : null,
-            _.A.getAlsoSendToChannel(t.id),
+        m = (0, _.Vp)({ location: "ThreadsAlsoSendToChannelArea" }),
+        [I, T] = (0, a.yK)([p.A, f.A], () => [
+            t.isThread() ? p.A.getChannel(t.parent_id) : null,
+            f.A.getAlsoSendToChannel(t.id),
         ]),
-        T = i.useCallback(
+        S = (0, u.Ay)(I),
+        y = i.useCallback(
             (e) => {
-                p.default.track(m.HAw.MESSAGE_ALSO_SEND_TO_CHANNEL_TOGGLED, {
+                h.default.track(E.HAw.MESSAGE_ALSO_SEND_TO_CHANNEL_TOGGLED, {
                     value: e,
                     guild_id: t.guild_id,
                     channel_id: t.id,
                 }),
-                    (0, c.B)({ channelId: t.id, enabled: e });
+                    (0, d.B)({ channelId: t.id, enabled: e });
             },
             [t],
         );
     (0, l.A)(
         { name: s.ImpressionNames.MESSAGE_ALSO_SEND_TO_CHANNEL, type: s.ImpressionTypes.VIEW },
-        { disableTrack: null == A || !h.enabled },
-        [A, h.enabled],
+        { disableTrack: null == I || !m.enabled },
+        [I, m.enabled],
     );
-    let S = null != n;
-    if (!h.enabled || null == A) return null;
-    let y = (0, u.gU)(A),
-        v = E.intl.format(E.t.UqL10G, {
+    let v = null != n;
+    if (!m.enabled || null == I) return null;
+    let N = (0, c.gU)(I),
+        C = g.intl.format(g.t.UqL10G, {
             callToActionHook: (e, t) =>
                 (0, r.jsx)(
                     o.Text,
@@ -59,12 +61,12 @@ function I(e) {
                         variant: "text-sm/normal",
                         color: "text-subtle",
                         lineClamp: 1,
-                        className: g.Pf,
-                        children: E.intl.string(E.t.Pi3JW7),
+                        className: A.Pf,
+                        children: g.intl.string(g.t.Pi3JW7),
                     },
                     t,
                 ),
-            channelName: A.name,
+            channelName: S,
             channelNameHook: (e, t) =>
                 (0, r.jsxs)(
                     o.Text,
@@ -72,19 +74,19 @@ function I(e) {
                         variant: "text-sm/normal",
                         color: "text-subtle",
                         lineClamp: 1,
-                        className: g.Pf,
-                        children: [null == y ? null : (0, r.jsx)(y, { color: "currentColor", className: g.Kk }, t), e],
+                        className: A.Pf,
+                        children: [null == N ? null : (0, r.jsx)(N, { color: "currentColor", className: A.Kk }, t), e],
                     },
                     t,
                 ),
         });
     return (0, r.jsx)("div", {
-        className: g.kL,
-        children: (0, r.jsx)(o.Checkbox, { checked: I, disabled: S, onChange: T, label: v, labelType: "secondary" }),
+        className: A.kL,
+        children: (0, r.jsx)(o.Checkbox, { checked: T, disabled: v, onChange: y, label: C, labelType: "secondary" }),
     });
 }
-function T(e) {
+function S(e) {
     let { channel: t, type: n, pendingScheduledMessage: i } = e,
-        { shouldShow: s } = A({ channel: t, type: n });
-    return s ? (0, r.jsx)(I, { thread: t, pendingScheduledMessage: i }) : null;
+        { shouldShow: s } = I({ channel: t, type: n });
+    return s ? (0, r.jsx)(T, { thread: t, pendingScheduledMessage: i }) : null;
 }

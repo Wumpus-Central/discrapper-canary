@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => x });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -6,65 +6,67 @@ var i = n(627968),
     r = n(311907),
     o = n(442433),
     d = n(676002),
-    c = n(734057),
-    u = n(808728),
-    h = n(576705),
-    A = n(557534),
-    _ = n(166444),
-    m = n(652215),
-    p = n(790782),
-    g = n(99566);
-let f = (0, d.a)(function (e) {
+    c = n(47167),
+    u = n(734057),
+    h = n(808728),
+    A = n(576705),
+    _ = n(557534),
+    m = n(166444),
+    p = n(652215),
+    g = n(790782),
+    f = n(99566);
+let x = (0, d.a)(function (e) {
     let {
             guild: t,
             selectedChannelId: s,
             position: d,
-            disableManageChannels: f,
-            sorting: x,
-            sortingType: E,
-            sortingPosition: I,
-            connectChannelDragSource: C,
-            connectChannelDropTarget: N,
-            tabIndex: T,
+            disableManageChannels: x,
+            sorting: E,
+            sortingType: I,
+            sortingPosition: C,
+            connectChannelDragSource: N,
+            connectChannelDropTarget: T,
+            tabIndex: S,
         } = e,
-        S = (0, r.bG)([c.A, u.Ay], () => {
-            let e = u.Ay.getDirectoryChannelIds(t.id);
-            return 0 === e.length ? null : c.A.getChannel(e[0]);
+        b = (0, r.bG)([u.A, h.Ay], () => {
+            let e = h.Ay.getDirectoryChannelIds(t.id);
+            return 0 === e.length ? null : u.A.getChannel(e[0]);
         }),
-        b = (0, r.bG)([c.A], () => c.A.getChannel(S?.parent_id)),
-        v = s === S?.id,
-        y = (0, r.bG)([h.A], () =>
-            null != b ? h.A.can(m.xBc.MANAGE_CHANNELS, b) : null != t && h.A.can(m.xBc.MANAGE_CHANNELS, t),
+        y = (0, r.bG)([u.A], () => u.A.getChannel(b?.parent_id)),
+        v = s === b?.id,
+        j = (0, c.Ay)(b),
+        R = (0, r.bG)([A.A], () =>
+            null != y ? A.A.can(p.xBc.MANAGE_CHANNELS, y) : null != t && A.A.can(p.xBc.MANAGE_CHANNELS, t),
         ),
-        j = l.useCallback(
+        O = l.useCallback(
             (e) => {
-                null != S &&
+                null != b &&
                     (0, o.L3)(e, async () => {
                         let { default: e } = await n.e("29559").then(n.bind(n, 994058));
-                        return (t) => (0, i.jsx)(e, { ...t, channel: S });
+                        return (t) => (0, i.jsx)(e, { ...t, channel: b });
                     });
             },
-            [S],
+            [b],
         );
-    if (null == S) return null;
-    let R = (0, A.O6)(d, I),
-        O = (0, A.h$)(S, x, E),
-        L = (0, i.jsx)("div", {
-            className: a()(R, { [g.r9]: O, [g.wH]: v }),
-            "data-dnd-name": S.name,
-            children: (0, i.jsxs)(_.Ay, {
-                className: g.Ki,
-                channel: S,
+    if (null == b) return null;
+    let L = (0, _.O6)(d, C),
+        M = (0, _.h$)(b, E, I),
+        D = (0, i.jsx)("div", {
+            className: a()(L, { [f.r9]: M, [f.wH]: v }),
+            "data-dnd-name": j,
+            children: (0, i.jsxs)(m.Ay, {
+                className: f.Ki,
+                channel: b,
                 guild: t,
                 selected: v,
-                onContextMenu: j,
+                onContextMenu: O,
                 forceInteractable: !0,
-                resolvedUnreadSetting: p.e.ONLY_MENTIONS,
+                resolvedUnreadSetting: g.e.ONLY_MENTIONS,
                 children: [
-                    (0, i.jsx)(A.gQ, { channel: S, tabIndex: T }),
-                    (0, i.jsx)(A.Jd, { channel: S, disableManageChannels: f, tabIndex: T }),
+                    (0, i.jsx)(_.gQ, { channel: b, tabIndex: S }),
+                    (0, i.jsx)(_.Jd, { channel: b, disableManageChannels: x, tabIndex: S }),
                 ],
             }),
         });
-    return y && (L = N(C(L))), L;
+    return R && (D = T(N(D))), D;
 });

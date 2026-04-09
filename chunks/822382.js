@@ -269,16 +269,15 @@ function Y() {
     i()(e).forOwn((e, t) => F.addRule({ type: t, ...e })), h.A.markSearchTokensRefreshed();
 }
 function W(e) {
-    let t = e.name,
+    let t = (0, a.m1)(e, _.default, c.A),
         n = !1;
-    if (e.isGroupDM()) t = (0, a.m1)(e, _.default, c.A);
-    else if (e.isDM()) {
+    if (e.isDM()) {
         let n = e.getRecipientId(),
             r = _.default.getUser(n),
             i = p.Ay.getUserTag(r);
         if (null == i) return null;
         t = i;
-    } else {
+    } else if (!e.isGroupDM()) {
         n = !e.isThread();
         let r = l.Ay.getTextChannelNameDisambiguations(e.getGuildId())[e.id];
         r?.name != null && (t = r.name);
@@ -293,7 +292,7 @@ function K(e) {
         return p.Ay.getUserTag(n);
     }
     let t = l.Ay.getTextChannelNameDisambiguations(e.getGuildId())[e.id];
-    return t?.name ?? e.name;
+    return t?.name ?? (0, a.m1)(e, _.default, c.A);
 }
 function $(e) {
     let t = F.tokenize(e),

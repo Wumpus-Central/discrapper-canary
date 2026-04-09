@@ -237,7 +237,7 @@ function P(e) {
                       N(t),
                   ],
               }),
-              ariaLabel: t.name,
+              ariaLabel: (0, S.E3)(t),
           }
         : null != r
           ? {
@@ -278,7 +278,7 @@ function Q(e) {
         let e = (0, S.E3)(t);
         return {
             label: (0, n.jsx)(u.Text, { variant: "text-sm/semibold", color: "text-strong", children: e }),
-            ariaLabel: t.name,
+            ariaLabel: (0, S.E3)(t),
         };
     }
     return null != r
