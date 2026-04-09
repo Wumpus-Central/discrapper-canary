@@ -1,21 +1,16 @@
-t.d(l, { A: () => c });
-var i = t(627968),
-    n = t(64700),
-    s = t(311907),
-    a = t(397927),
-    r = t(958805),
-    o = t(61881),
-    d = t(985018);
-function c(e) {
+t.d(l, { A: () => r });
+var n = t(627968);
+t(64700);
+var i = t(397927),
+    s = t(23722),
+    a = t(985018);
+function r(e) {
     let { isCurrentUser: l, onClose: t } = e,
-        c = (0, s.bG)([o.A], () => o.A.hasUnsavedChanges()),
-        u = n.useCallback(() => {
-            l && c ? r.A.notifyUnsavedWidgets() : t();
-        }, [l, c, t]);
-    return (0, i.jsx)(a.K0, {
-        "aria-label": d.intl.string(d.t.cpT0Cq),
-        icon: a.PGe,
-        onClick: u,
+        r = (0, s.A)(t, l);
+    return (0, n.jsx)(i.K0, {
+        "aria-label": a.intl.string(a.t.cpT0Cq),
+        icon: i.PGe,
+        onClick: r,
         variant: "secondary",
         size: "sm",
     });

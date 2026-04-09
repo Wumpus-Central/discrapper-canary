@@ -1,96 +1,96 @@
-n.d(t, { A: () => I, K: () => _ });
+n.d(t, { A: () => f, K: () => E });
 var i = n(627968),
-    l = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    r = n(397927),
-    o = n(183555),
-    d = n(958805),
+    a = n(64700),
+    r = n(503698),
+    l = n.n(r),
+    s = n(397927),
+    o = n(207803),
+    d = n(183555),
     c = n(61881),
     u = n(790417),
-    g = n(113763),
-    m = n(583246),
-    x = n(463259),
-    p = n(133583),
-    f = n(518477),
-    h = n(527573);
-function _(e) {
-    let { children: t, className: n, scrollerRef: l, ...a } = e;
-    return (0, i.jsx)(r.HOs, { ref: l, className: s()(h.gN, n), fade: !0, ...a, children: t });
-}
-function A(e) {
-    let { user: t, currentUser: n, section: l, displayProfile: a, guildId: s, channelId: r, onClose: o } = e;
-    return l === f.RP.ACTIVITY
-        ? (0, i.jsx)(u.A, { user: t, currentUser: n, displayProfile: a, guildId: s, channelId: r, onClose: o })
-        : l === f.RP.MUTUAL_FRIENDS
-          ? (0, i.jsx)(g.A, { user: t, guildId: s, channelId: r, onClose: o })
-          : l === f.RP.MUTUAL_GUILDS
-            ? (0, i.jsx)(m.A, { user: t, onClose: o })
-            : l === f.RP.WIDGETS
-              ? (0, i.jsx)(x.A, { user: t, guildId: s, channelId: r })
-              : l === f.RP.WISHLIST
-                ? (0, i.jsx)(p.A, { profileOwner: t })
-                : null;
+    A = n(113763),
+    _ = n(583246),
+    h = n(463259),
+    m = n(133583),
+    g = n(518477),
+    p = n(527573);
+function E(e) {
+    let { children: t, className: n, scrollerRef: a, ...r } = e;
+    return (0, i.jsx)(s.HOs, { ref: a, className: l()(p.gN, n), fade: !0, ...r, children: t });
 }
 function I(e) {
+    let { user: t, currentUser: n, section: a, displayProfile: r, guildId: l, channelId: s, onClose: o } = e;
+    return a === g.RP.ACTIVITY
+        ? (0, i.jsx)(u.A, { user: t, currentUser: n, displayProfile: r, guildId: l, channelId: s, onClose: o })
+        : a === g.RP.MUTUAL_FRIENDS
+          ? (0, i.jsx)(A.A, { user: t, guildId: l, channelId: s, onClose: o })
+          : a === g.RP.MUTUAL_GUILDS
+            ? (0, i.jsx)(_.A, { user: t, onClose: o })
+            : a === g.RP.WIDGETS
+              ? (0, i.jsx)(h.A, { user: t, guildId: l, channelId: s })
+              : a === g.RP.WISHLIST
+                ? (0, i.jsx)(m.A, { profileOwner: t })
+                : null;
+}
+function f(e) {
     let {
             user: t,
             currentUser: n,
-            displayProfile: a,
-            guildId: s,
+            displayProfile: r,
+            guildId: l,
             channelId: u,
-            items: g,
-            initialSection: m,
-            onClose: x,
+            items: A,
+            initialSection: _,
+            onClose: h,
         } = e,
-        { trackUserProfileAction: p } = (0, o.NJ)(),
-        [{ section: _, text: I }, j] = l.useState(
-            g.find((e) => {
+        { trackUserProfileAction: m } = (0, d.NJ)(),
+        [{ section: E, text: f }, C] = a.useState(
+            A.find((e) => {
                 let { section: t } = e;
-                return t === m;
-            }) ?? g[0],
+                return t === _;
+            }) ?? A[0],
         );
     return (0, i.jsxs)("div", {
-        className: h.kL,
+        className: p.kL,
         children: [
-            (0, i.jsx)(r.HOs, {
+            (0, i.jsx)(s.HOs, {
                 orientation: "horizontal",
-                className: h.gU,
+                className: p.gU,
                 fade: !0,
                 paddingFix: !1,
-                children: (0, i.jsx)(r.VQ0, {
+                children: (0, i.jsx)(s.VQ0, {
                     type: "top",
                     look: "custom",
-                    selectedItem: _,
+                    selectedItem: E,
                     onItemSelect: (e) => {
-                        c.A.hasUnsavedChanges() && _ === f.RP.WIDGETS
-                            ? d.A.notifyUnsavedWidgets()
-                            : (p({ action: "PRESS_SECTION", section: e }),
-                              j((t) => g.find((t) => t.section === e) ?? t));
+                        c.A.hasUnsavedChanges() && E === g.RP.WIDGETS
+                            ? (0, o.VQ)()
+                            : (m({ action: "PRESS_SECTION", section: e }),
+                              C((t) => A.find((t) => t.section === e) ?? t));
                     },
-                    children: g.map((e) =>
+                    children: A.map((e) =>
                         (0, i.jsx)(
-                            r.VQ0.Item,
-                            { className: h.YU, id: e.section, "aria-label": e.text, children: e.text },
+                            s.VQ0.Item,
+                            { className: p.YU, id: e.section, "aria-label": e.text, children: e.text },
                             e.section,
                         ),
                     ),
                 }),
             }),
-            (0, i.jsx)(r.VQ0.Panel, {
-                id: _,
-                "aria-label": I,
-                className: h.NM,
-                children: (0, i.jsx)(r.Fmo, {
-                    component: (0, i.jsx)(r.AC4, { children: (0, i.jsx)(r.H, { children: I }) }),
-                    children: (0, i.jsx)(A, {
+            (0, i.jsx)(s.VQ0.Panel, {
+                id: E,
+                "aria-label": f,
+                className: p.NM,
+                children: (0, i.jsx)(s.Fmo, {
+                    component: (0, i.jsx)(s.AC4, { children: (0, i.jsx)(s.H, { children: f }) }),
+                    children: (0, i.jsx)(I, {
                         user: t,
                         currentUser: n,
-                        displayProfile: a,
-                        guildId: s,
+                        displayProfile: r,
+                        guildId: l,
                         channelId: u,
-                        section: _,
-                        onClose: x,
+                        section: E,
+                        onClose: h,
                     }),
                 }),
             }),

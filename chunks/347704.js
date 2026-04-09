@@ -98,7 +98,7 @@ function p(e) {
                             (0, r.jsx)(
                                 "div",
                                 {
-                                    style: { display: e.stepKey === f ? void 0 : "none" },
+                                    style: { display: e.stepKey === f ? "contents" : "none" },
                                     children: (0, r.jsx)(u.c, {
                                         controls: t?.input,
                                         listProps: t?.listProps,
