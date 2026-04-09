@@ -68,6 +68,7 @@ var r = n(835245),
             (e.QuestEmbed = "quest_embed"),
             (e.QuestLiveStream = "quest_live_stream"),
             (e.ClipEmbed = "clip_embed"),
+            (e.AnnouncementChannelReturn = "announcement_channel_return"),
             e
         );
     })({}),
