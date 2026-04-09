@@ -18,7 +18,7 @@ function o(e) {
     (0, i.useViewModelInstance)(p);
     let { theme: h, saturation: m } = (0, a.G9)(),
         { highContrastModeEnabled: E } = r.useContext(s.C),
-        g = r.useRef(null),
+        g = r.useRef({}),
         A = l(),
         I = r.useCallback((e, t) => {
             let n = e?.[t];
@@ -64,7 +64,7 @@ function o(e) {
                             case "trigger":
                                 let d = null != l && ("boolean" == typeof l ? l : 0 !== l),
                                     _ = I(g.current, i);
-                                d && _ !== l && t.viewModelInstance?.trigger(i)?.trigger();
+                                d && _ !== l && t.viewModelInstance?.trigger(i)?.trigger(), (g.current[i] = l);
                                 break;
                             case "string":
                                 let f = t.viewModelInstance?.string(i);
@@ -91,7 +91,7 @@ function o(e) {
                     if ("AbortError" !== e.name) throw e;
                 }),
                 () => {
-                    e.abort("New data binding applied - aborting previous image fetches."), (g.current = f);
+                    e.abort("New data binding applied - aborting previous image fetches.");
                 }
             );
         }, [I, f, t, n, o, h, t?.viewModelInstance, m, E, A]);
