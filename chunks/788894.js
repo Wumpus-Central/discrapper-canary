@@ -604,6 +604,7 @@ let r = {
                     return 8;
                 },
             },
+            PROMO_SHEET_GRAPHIC_MAX_WIDTH: { resolve: () => 288 },
             SEGMENTED_CONTROL_BORDER_RADIUS: {
                 resolve(e) {
                     let { enabledExperiments: t } = e;
@@ -617,6 +618,39 @@ let r = {
                     let { enabledExperiments: t } = e;
                     if (0 === t.length) return 16;
                     for (let e of t) if ("mobile-visual-refresh" === e) return 24;
+                    return 16;
+                },
+            },
+            SHEET_HANDLE_HEIGHT: { resolve: () => 4 },
+            SHEET_HANDLE_MARGIN_BOTTOM: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 12;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 24;
+                    return 12;
+                },
+            },
+            SHEET_HANDLE_MARGIN_TOP: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 4;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 8;
+                    return 4;
+                },
+            },
+            SHEET_HANDLE_WIDTH: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 32;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 36;
+                    return 32;
+                },
+            },
+            SHEET_HEADER_PADDING_HORIZONTAL: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 16;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 0;
                     return 16;
                 },
             },

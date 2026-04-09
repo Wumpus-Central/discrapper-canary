@@ -79,7 +79,6 @@ function m() {
                     size: "sm",
                     variant: "secondary",
                     "aria-label": A.intl.string(A.t.pEasFX),
-                    color: r.o5d.TERTIARY,
                     icon: r.RgP,
                     onClick: n,
                 }),

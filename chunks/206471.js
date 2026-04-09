@@ -31,6 +31,7 @@ let t = [
     "heading-deprecated-12/semibold",
     "heading-deprecated-12/bold",
     "heading-deprecated-12/extrabold",
+    "redesign/heading-18/medium",
     "redesign/heading-18/semibold",
     "redesign/heading-18/bold",
     "text-xxs/normal",

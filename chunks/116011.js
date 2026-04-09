@@ -83,7 +83,6 @@ let j = {
                 size: "sm",
                 variant: "secondary",
                 "aria-label": "",
-                color: "icon-feedback-positive",
                 onClick: () => {
                     navigator.clipboard.writeText(t.code), o(r);
                 },
