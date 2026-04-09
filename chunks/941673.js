@@ -99,7 +99,7 @@ let G = (e) => {
         G = (0, o.bG)([T.default], () => T.default.getCurrentUser()),
         F = k(G?.id, a, C),
         V = (0, o.bG)([S.A], () => (null != L ? S.A.get(L) : null), [L]),
-        { normalPrice: B, discountedPrice: H } = (0, A.o)({ sku: V, priceSetAssignmentPurchaseType: D.lid.GIFT }),
+        { normalPrice: B, discountedPrice: H } = (0, A.ou)({ sku: V, priceSetAssignmentPurchaseType: D.lid.GIFT }),
         j = (0, v.fq)(V),
         Y = (0, v.xf)(V),
         W = (0, O.j)(V, { shouldFetchIfMissing: !0 }),

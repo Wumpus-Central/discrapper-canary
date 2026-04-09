@@ -64,7 +64,7 @@ async function g(e, t) {
                     rejectWithError: !0,
                 })
             ).body;
-        i.h.dispatch({ type: "SKUS_PRICING_FETCH_SUCCESS", priceId: u, data: (0, l.O)(t) });
+        i.h.dispatch({ type: "SKUS_PRICING_FETCH_SUCCESS", priceId: u, data: (0, l.Oj)(t) });
     } catch {
         i.h.dispatch({ type: "SKUS_PRICING_FETCH_FAIL", priceId: u });
     }

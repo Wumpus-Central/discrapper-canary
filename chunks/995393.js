@@ -1,9 +1,9 @@
-n.d(t, { Jq: () => o, Ng: () => d, ST: () => c, bB: () => i });
+n.d(t, { Jq: () => o, Ng: () => d, ST: () => c, bB: () => r });
 var a,
     l,
+    i,
     s,
-    r,
-    i =
+    r =
         (((a = {}).CARD = "card"),
         (a.BUY_BUTTON = "buy_button"),
         (a.GIFT_BUTTON = "gift_button"),
@@ -22,6 +22,7 @@ var a,
         (l.CAROUSEL_PREV = "carousel_prev"),
         (l.MUTE_BUTTON = "mute_button"),
         (l.FORWARD_BUTTON = "forward_button"),
+        (l.BUY_WITH_ORBS_BUTTON = "buy_with_orbs_button"),
         l),
-    d = (((s = {}).COPY_LINK_BUTTON = "copy_link_button"), s),
-    c = 21552 == n.j ? (((r = {}).LEARN_MORE = "learn_more"), r) : null;
+    d = (((i = {}).COPY_LINK_BUTTON = "copy_link_button"), i),
+    c = 21552 == n.j ? (((s = {}).LEARN_MORE = "learn_more"), s) : null;

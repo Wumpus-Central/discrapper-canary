@@ -26,7 +26,7 @@ function T(e) {
         T = (0, h.AZ)(A ?? "User Profile Wishlist Overlay Button"),
         S = (0, u.Xi)(t),
         y = null == n || n.id === I?.id || r,
-        { normalPrice: v, discountedPrice: N } = (0, c.o)({
+        { normalPrice: v, discountedPrice: N } = (0, c.ou)({
             sku: t,
             priceSetAssignmentPurchaseType: y ? m.lid.DEFAULT : m.lid.GIFT,
         }),

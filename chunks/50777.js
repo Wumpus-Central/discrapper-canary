@@ -8,8 +8,8 @@ var i = n(627968),
     d = n(990078),
     c = n(397927),
     u = n(793574),
-    _ = n(688810),
-    m = n(587895),
+    m = n(688810),
+    _ = n(587895),
     h = n(875444),
     p = n(429913),
     g = n(993046),
@@ -22,8 +22,8 @@ var i = n(627968),
     v = n(832163),
     b = n(207654),
     T = n(317560),
-    y = n(533406),
-    N = n(971146),
+    N = n(533406),
+    y = n(971146),
     S = n(300182),
     j = n(183802),
     L = n(652215),
@@ -86,11 +86,11 @@ function M(e) {
         r = (0, o.bG)([C.A], () => C.A.isFetchingForSKU(n)),
         M = (0, A.A)({ skuId: n, location: "SocialLayerStorefrontProductDetailsEmbed" }),
         w = M?.applicationId,
-        k = (0, o.bG)([m.A], () => null != w && m.A.isFetchingApplication(w)),
-        O = (0, o.bG)([m.A], () => null != w && m.A.didFetchingApplicationFail(w)),
+        O = (0, o.bG)([_.A], () => null != w && _.A.isFetchingApplication(w)),
+        k = (0, o.bG)([_.A], () => null != w && _.A.didFetchingApplicationFail(w)),
         U = (0, p.h)(w),
         B = (0, b.b)({ location: "product_details_embed" }),
-        { analyticsLocations: G } = (0, _.Ay)(u.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED);
+        { analyticsLocations: G } = (0, m.Ay)(u.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED);
     (0, x.pE)();
     let F = (0, o.bG)([f.default], () =>
             s.isDM() && null != s.recipients && 0 !== s.recipients.length ? f.default.getUser(s.recipients[0]) : null,
@@ -99,9 +99,9 @@ function M(e) {
         { primaryIconAsset: V, primaryIconLabel: q } = l.useMemo(() => (0, E.Cv)(M, w), [M, w]),
         {
             normalPrice: W,
-            discountedPrice: z,
-            discountPercent: Y,
-        } = (0, g.o)({ sku: M, priceSetAssignmentPurchaseType: L.lid.DEFAULT });
+            discountedPrice: Y,
+            discountPercent: z,
+        } = (0, g.ou)({ sku: M, priceSetAssignmentPurchaseType: L.lid.DEFAULT });
     l.useEffect(() => {
         null == t || null == n || C.A.isFetchingForSKU(n) || (0, I.qf)(t, n);
     }, [t, n]);
@@ -116,7 +116,7 @@ function M(e) {
         K = l.useCallback(() => {
             null != M &&
                 H &&
-                (0, y.a)(
+                (0, N.a)(
                     M,
                     { isGift: !1 },
                     { analyticsLocations: [u.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_PURCHASE_BUTTON], guildId: t },
@@ -124,17 +124,17 @@ function M(e) {
         }, [M, t, H]),
         J = l.useCallback(() => {
             null != M &&
-                (0, y.a)(
+                (0, N.a)(
                     M,
                     { isGift: !0, giftRecipient: F ?? void 0 },
                     { analyticsLocations: [u.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_GIFT_BUTTON] },
                 );
         }, [M, F]),
-        X = null != w && null == U && !O;
-    if ((r || k || X) && (null == M || null == U))
+        X = null != w && null == U && !k;
+    if ((r || O || X) && (null == M || null == U))
         return (0, i.jsx)("div", { className: P.kL, children: (0, i.jsx)(c.y$y, { className: P.u1 }) });
     if (null == M || null == U || !(0, h.A)(U) || U.guildId !== t) return null;
-    let Z = z ?? W;
+    let Z = Y ?? W;
     return (0, i.jsxs)("div", {
         className: P.kL,
         children: [
@@ -145,7 +145,7 @@ function M(e) {
                     (0, i.jsxs)("div", {
                         className: P.lI,
                         children: [
-                            B && (0, i.jsx)(N.V, {}),
+                            B && (0, i.jsx)(y.V, {}),
                             (0, i.jsxs)("div", {
                                 className: P.PB,
                                 children: [
@@ -153,7 +153,7 @@ function M(e) {
                                     (0, i.jsx)(c.Text, { variant: "text-md/medium", lineClamp: 1, children: M.name }),
                                 ],
                             }),
-                            (0, i.jsx)(D, { sku: M, normalPrice: W, discountedPrice: z, discountPercent: Y }),
+                            (0, i.jsx)(D, { sku: M, normalPrice: W, discountedPrice: Y, discountPercent: z }),
                         ],
                     }),
                     (0, i.jsxs)(a.e2v, {

@@ -5,46 +5,45 @@ var r = n(64700),
     s = n(311907),
     a = n(674658),
     o = n(623373),
-    l = n(287809),
-    u = n(67480),
-    c = n(739508),
-    d = n(927578),
-    _ = n(715054),
-    f = n(955945),
+    l = n(993046),
+    u = n(287809),
+    c = n(67480),
+    d = n(739508),
+    _ = n(927578),
+    f = n(715054),
     p = n(788868);
 (0, i.A)();
 let h = (e) => {
     let { skuId: t, loadId: n, analyticsLocations: i, onCheckoutSuccess: h } = e,
-        m = (0, s.bG)([l.default], () => d.Ay.isPremium(l.default.getCurrentUser(), p.PremiumTypes.TIER_2)),
-        E = (0, s.bG)([u.A], () => u.A.get(t), [t]),
-        { product: g } = (0, a.q)(t),
-        A = (0, r.useMemo)(() => {
-            let e = null != E ? (0, f.d)(E.prices, m) : null;
-            if (null != e) return { orbPrice: e, orbPriceAmount: e.amount };
-            if (null != g) {
-                let e = (0, o.CW)({ product: g, isPremiumUser: m }),
-                    t = null !== e ? e.amount : null;
-                return { orbPrice: e, orbPriceAmount: t };
+        m = (0, s.bG)([u.default], () => _.Ay.isPremium(u.default.getCurrentUser(), p.PremiumTypes.TIER_2)),
+        E = (0, s.bG)([c.A], () => c.A.get(t), [t]),
+        g = (0, l.JL)({ sku: E }),
+        { product: A } = (0, a.q)(t),
+        I = (0, r.useMemo)(() => {
+            if (null != g) return { orbPriceAmount: g.amount };
+            if (null != A) {
+                let e = (0, o.CW)({ product: A, isPremiumUser: m });
+                return { orbPriceAmount: null !== e ? e.amount : null };
             }
             return null;
-        }, [E, g, m]);
-    A?.orbPriceAmount == null && (0, c.hD)("Orb price not found for product", { tags: { sku_id: t } });
-    let { redeemVirtualCurrency: I, isSubmitting: T, error: S } = (0, _.Q)({ skuId: t, loadId: n }),
-        y = (0, r.useCallback)(
+        }, [g, A, m]);
+    I?.orbPriceAmount == null && (0, d.hD)("Orb price not found for product", { tags: { sku_id: t } });
+    let { redeemVirtualCurrency: T, isSubmitting: S, error: y } = (0, f.Q)({ skuId: t, loadId: n }),
+        v = (0, r.useCallback)(
             (e) => {
-                I(t, n, (n) => {
+                T(t, n, (n) => {
                     h({ entitlements: n, skuId: t }), e();
                 });
             },
-            [t, n, I, h],
+            [t, n, T, h],
         );
     return {
         skuId: t,
         loadId: n,
         analyticsLocations: i ?? [],
-        orbProductContext: A,
-        onRedeemVirtualCurrency: y,
-        isRedeeming: T,
-        orbRedemptionError: S,
+        orbProductContext: I,
+        onRedeemVirtualCurrency: v,
+        isRedeeming: S,
+        orbRedemptionError: y,
     };
 };
