@@ -10,7 +10,6 @@ var i,
         (((i = d || {}).ACTIVITY_FEED = "ACTIVITY_FEED"),
         (i.ACTIVITY_FEED_NEW = "ACTIVITY_FEED_NEW"),
         (i.USER_ACTIVITY = "USER_ACTIVITY"),
-        (i.USER_ACTIVITY_VOICE_USER = "USER_ACTIVITY_VOICE_USER"),
         (i.GAME_LIBRARY_TIME_PLAYED = "GAME_LIBRARY_TIME_PLAYED"),
         (i.GAME_LIBRARY_LAST_PLAYED = "GAME_LIBRARY_LAST_PLAYED"),
         (i.VOICE_CHANNEL_HISTORY = "VOICE_CHANNEL_HISTORY"),
@@ -73,29 +72,6 @@ let h = (t) => (e, n) => (null == n ? "" : u.intl.format(t(), { time: e, ...n })
                     return n
                         ? u.intl.formatToPlainString(u.t["2rUo/p"], { time: t })
                         : u.intl.formatToPlainString(u.t["jN3/fR"], { time: t });
-                },
-            },
-        },
-        USER_ACTIVITY_VOICE_USER: {
-            START: {
-                [a.pJ.SECONDS]: () => u.intl.string(u.t["ahzZr+"]),
-                [a.pJ.MINUTES]: function (t, e) {
-                    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                    return n
-                        ? u.intl.formatToPlainString(u.t["03mIHW"], { time: t })
-                        : u.intl.formatToPlainString(u.t.w5w79N, { time: t });
-                },
-                [a.pJ.HOURS]: function (t, e) {
-                    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                    return n
-                        ? u.intl.formatToPlainString(u.t.eNoooU, { time: t })
-                        : u.intl.formatToPlainString(u.t.EPkGyE, { time: t });
-                },
-                [a.pJ.DAYS]: function (t, e) {
-                    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                    return n
-                        ? u.intl.formatToPlainString(u.t["2rUo/p"], { time: t })
-                        : u.intl.formatToPlainString(u.t.V3g3dS, { time: t });
                 },
             },
         },

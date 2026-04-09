@@ -64,6 +64,7 @@ var R = (function (e) {
         (e[(e.OVERLAY = 7)] = "OVERLAY"),
         (e[(e.FRIENDS_POPOUT = 8)] = "FRIENDS_POPOUT"),
         (e[(e.APP_LAUNCHER = 9)] = "APP_LAUNCHER"),
+        (e[(e.VOICE_USER_POPOUT = 10)] = "VOICE_USER_POPOUT"),
         e
     );
 })({});
