@@ -1,130 +1,149 @@
 "use strict";
-n.d(t, { Kz: () => x, rP: () => f });
+n.d(t, { IK: () => v, Kz: () => C });
 var i,
     s = n(627968),
     r = n(64700),
-    l = n(311907),
-    a = n(397927),
-    o = n(830215),
+    l = n(189213),
+    a = n(311907),
+    o = n(397927),
+    c = n(830215),
     d = n(803306),
-    c = n(49463),
-    u = n(17372),
-    h = n(369053),
-    _ = n(961350),
-    p = n(19992),
-    g = n(501334),
-    m = n(759788),
-    A = n(366616);
-l.Ay.initialize();
-var f = (((i = {}).SELECTION = "selection"), (i.DSA = "dsa"), (i.TIDA = "tida"), i);
-let E = (e) => {
+    u = n(49463),
+    h = n(17372),
+    _ = n(369053),
+    p = n(961350),
+    g = n(975571),
+    m = n(204173),
+    A = n(19992),
+    f = n(501334),
+    E = n(759788),
+    x = n(652215),
+    I = n(985018),
+    N = n(366616);
+a.Ay.initialize();
+var v = (((i = {}).SELECTION = "selection"), (i.DSA = "dsa"), (i.TIDA = "tida"), i);
+let T = (e) => {
         let { transitionState: t, onClose: n } = e,
-            [i, f] = r.useState(!0),
-            [x, I] = r.useState([]),
-            [N, v] = r.useState("selection"),
-            j = (0, l.bG)([_.default], () => _.default.isAuthenticated()),
-            S = (0, l.bG)([c.A], () => c.A.hasLoadedExperiments),
-            T = r.useCallback(() => {
-                (0, h.OY)()
+            [i, v] = r.useState(!0),
+            [C, j] = r.useState([]),
+            [S, y] = r.useState(null),
+            b = (0, a.bG)([p.default], () => p.default.isAuthenticated()),
+            R = (0, a.bG)([u.A], () => u.A.hasLoadedExperiments),
+            O = r.useCallback(() => {
+                (0, _.OY)()
                     .then((e) => {
                         let {
                             body: { capabilities: t },
                         } = e;
-                        f(!1), I(t);
+                        v(!1), j(t);
                     })
                     .catch(() => {
-                        f(!1), I([]);
+                        v(!1), j([]);
                     });
             }, []);
         r.useEffect(() => {
-            j
-                ? (f(!0),
+            b
+                ? (v(!0),
                   d
                       .rQ({ withAnalyticsToken: !0 })
-                      .then(() => T())
-                      .catch(() => f(!1)))
-                : T();
-        }, [j, T]),
+                      .then(() => O())
+                      .catch(() => v(!1)))
+                : O();
+        }, [b, O]),
             r.useEffect(() => {
                 (async () => {
-                    S || (await o.A.getLocationMetadata(), o.A.getExperiments());
+                    R || (await c.A.getLocationMetadata(), c.A.getExperiments());
                 })();
-            }, [S]);
-        let C = x.filter((e) => e !== u.tY.MEDIA_TAKEDOWN),
-            y = x.includes(u.tY.MEDIA_TAKEDOWN),
-            b = C.length > 0,
-            R = b && y;
+            }, [R]);
+        let L = C.filter((e) => e !== h.tY.MEDIA_TAKEDOWN),
+            w = C.includes(h.tY.MEDIA_TAKEDOWN),
+            k = L.length > 0,
+            D = k && w,
+            B = i || !R;
         r.useEffect(() => {
-            !i && S && !R && (b ? v("dsa") : y && v("tida"));
-        }, [i, S, R, b, y]),
-            r.useEffect(() => {
-                i || !S || b || y || n();
-            }, [i, S, b, y, n]);
-        let O = r.useCallback((e) => {
-                v(e);
+            B || k || w || n();
+        }, [B, k, w, n]);
+        let P = r.useCallback(() => {
+                (0, o.mMO)(() => Promise.resolve((e) => (0, s.jsx)(T, { ...e })), { dismissable: !1 });
             }, []),
-            L = r.useCallback(() => {
-                v("selection");
+            U = r.useCallback((e, t) => {
+                "selection" !== t && "selection" !== e ? y("selection") : y(e);
             }, []),
-            w = r.useCallback(() => {
-                (0, a.mMO)(() => Promise.resolve((e) => (0, s.jsx)(E, { ...e })), { dismissable: !1 });
-            }, []),
-            k = r.useCallback(
-                (e) =>
-                    null != e ? (0, s.jsx)(a.jlY, { className: A.q, "data-migration-pending": !0, children: e }) : null,
-                [],
-            );
-        return (0, s.jsx)(a.EOs, {
-            transitionState: t,
-            parentComponent: "UnauthenticatedReportForm",
-            "data-migration-pending": !0,
-            children: (0, s.jsx)(a.$mQ, {
-                className: A.k,
-                "data-migration-pending": !0,
-                children:
-                    !i && S && (b || y)
-                        ? (0, s.jsxs)(a.tN_, {
-                              width: "100%",
-                              activeSlide: N,
-                              centered: !1,
-                              children: [
-                                  (0, s.jsx)(a.q7S, { id: "selection", children: (0, s.jsx)(g.u, { onNavigate: O }) }),
-                                  (0, s.jsx)(a.q7S, {
-                                      id: "dsa",
-                                      children: (0, s.jsx)(p.c, {
-                                          showBackButton: R,
-                                          onBack: R ? L : void 0,
-                                          dsaCapabilities: C,
-                                          renderFooter: k,
-                                          onClose: n,
-                                          onReopen: w,
-                                      }),
-                                  }),
-                                  (0, s.jsx)(a.q7S, {
-                                      id: "tida",
-                                      children: (0, s.jsx)(m.K, {
-                                          showBackButton: R,
-                                          onBack: R ? L : void 0,
-                                          renderFooter: k,
-                                          onClose: n,
-                                          onReopen: w,
-                                      }),
-                                  }),
-                              ],
-                          })
-                        : (0, s.jsx)(a.BJc, {
-                              gap: 16,
-                              align: "center",
-                              justify: "center",
-                              style: { minHeight: "200px" },
-                              children: (0, s.jsx)(a.y$y, {}),
-                          }),
+            G = r.useMemo(() => (0, m.i)(h.tY.MEDIA_TAKEDOWN, P), [P]),
+            F = S ?? (D ? "selection" : k ? "dsa" : "tida");
+        if (B || (!k && !w))
+            return (0, s.jsx)(l.Modal, {
+                title: "",
+                actions: [],
+                transitionState: t,
+                onClose: n,
+                dismissable: !1,
+                children: (0, s.jsx)(o.BJc, {
+                    gap: 16,
+                    align: "center",
+                    justify: "center",
+                    style: { minHeight: "200px" },
+                    children: (0, s.jsx)(o.y$y, {}),
+                }),
+            });
+        if (!D) {
+            if (k)
+                return (0, s.jsx)(l.Modal, {
+                    title: I.intl.string(I.t.Z11w18),
+                    subtitle: I.intl.format(I.t["532l+q"], {
+                        supportURL: g.A.getArticleURL(x.MVz.COPYRIGHT_AND_IP_POLICY),
+                    }),
+                    actions: [],
+                    transitionState: t,
+                    onClose: n,
+                    dismissable: !1,
+                    children: (0, s.jsx)(A.c, { dsaCapabilities: L, onReopen: P }),
+                });
+            if (w)
+                return (0, s.jsx)(l.Modal, {
+                    title: I.intl.string(I.t.YignUm),
+                    actions: [{ text: I.intl.string(I.t.D5Czbu), variant: "primary", onClick: G }],
+                    transitionState: t,
+                    onClose: n,
+                    dismissable: !1,
+                    children: (0, s.jsx)(E.K, {}),
+                });
+        }
+        let M = [
+            { stepKey: "selection", modalProps: { title: I.intl.string(I.t.Z11w18) }, body: (0, s.jsx)(f.u, {}) },
+            {
+                stepKey: "dsa",
+                modalProps: {
+                    title: I.intl.string(I.t.Z11w18),
+                    subtitle: I.intl.format(I.t["532l+q"], {
+                        supportURL: g.A.getArticleURL(x.MVz.COPYRIGHT_AND_IP_POLICY),
+                    }),
+                },
+                body: (0, s.jsx)(A.c, { dsaCapabilities: L, onReopen: P }),
+            },
+            {
+                stepKey: "tida",
+                modalProps: { title: I.intl.string(I.t.YignUm) },
+                body: (0, s.jsx)(E.K, {}),
+                nextButtonProps: { text: I.intl.string(I.t.D5Czbu) },
+                onNext: () => (G(), !1),
+            },
+        ];
+        return (0, s.jsx)("div", {
+            className: { selection: N.a, dsa: N.q, tida: void 0 }[F],
+            children: (0, s.jsx)(o.t04, {
+                steps: M,
+                currentStepKey: F,
+                onStepChange: U,
+                onClose: n,
+                transitionState: t,
+                dismissable: !1,
             }),
         });
     },
-    x = () => (
+    C = () => (
         r.useEffect(() => {
-            (0, a.mMO)(() => Promise.resolve((e) => (0, s.jsx)(E, { ...e })), { dismissable: !1 });
+            (0, o.mMO)(() => Promise.resolve((e) => (0, s.jsx)(T, { ...e })), { dismissable: !1 });
         }, []),
         null
     );

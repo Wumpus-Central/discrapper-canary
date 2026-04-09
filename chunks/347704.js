@@ -1,88 +1,93 @@
 "use strict";
-n.d(t, { t: () => f });
+n.d(t, { n: () => f, t: () => p });
 var r = n(627968),
     i = n(64700),
-    a = n(123292),
-    s = n(460890),
+    s = n(123292),
+    a = n(460890),
     o = n(224640),
     l = n(696208),
     u = n(430993),
     c = n(20742),
     d = n(655053);
 let _ = i.createContext(null);
-function f(e) {
+function f() {
+    let e = i.useContext(_);
+    if (null == e) throw Error("useMultiStepModalContext must be used within a MultiStepModal");
+    return e;
+}
+function p(e) {
     let t,
-        { steps: n, currentStepKey: f, numberedSteps: p, onStepChange: h, onComplete: m, ...g } = e,
-        { i18n: E } = (0, s.G9)(),
-        A = g.onClose,
+        { steps: n, currentStepKey: f, numberedSteps: p, onStepChange: h, onComplete: m, ...E } = e,
+        { i18n: g } = (0, a.G9)(),
+        A = E.onClose,
         [I, T] = i.useState(!1),
-        [y, S] = i.useState(null),
+        [S, y] = i.useState(null),
         v = n.find((e) => e.stepKey === f);
     if (null == v) throw Error(`Step with key ${f} not found`);
-    let C = n.findIndex((e) => e.stepKey === f),
-        b = C === n.length - 1,
-        N = 0 === C,
-        [R, O] = i.useState(!1),
+    let N = n.findIndex((e) => e.stepKey === f),
+        C = N === n.length - 1,
+        R = 0 === N,
+        [O, b] = i.useState(!1),
         D = v.nextEnabled ?? !0,
         L = i.useCallback(
             (e) => {
-                S(null), h?.(e, f);
+                y(null), h?.(e, f);
             },
             [h, f],
         ),
         w = i.useCallback(async () => {
-            await m?.(), O(!0), A();
+            await m?.(), b(!0), A();
         }, [m, A]),
-        x = i.useCallback(async () => {
-            T(!0), S(null);
+        M = i.useCallback(async () => {
+            T(!0), y(null);
             try {
                 if (null != v.onNext && !(await v.onNext())) return void T(!1);
-                b ? await w() : L(n[C + 1].stepKey);
+                C ? await w() : L(n[N + 1].stepKey);
             } catch {
-                S(E.INLINE_NOTICE_GENERIC_ERROR);
+                y(g.INLINE_NOTICE_GENERIC_ERROR);
             } finally {
                 T(!1);
             }
-        }, [L, C, n, b, w, v, E]),
-        P = i.useCallback(() => {
-            N || L(n[C - 1].stepKey);
-        }, [L, C, n, N]),
-        M = i.useMemo(
-            () => ({ currentStepKey: f, goToStep: L, goToNextStep: x, goToPreviousStep: P, complete: w }),
-            [f, L, x, P, w],
+        }, [L, N, n, C, w, v, g]),
+        x = i.useCallback(() => {
+            R || L(n[N - 1].stepKey);
+        }, [L, N, n, R]),
+        P = i.useMemo(
+            () => ({ currentStepKey: f, goToStep: L, goToNextStep: M, goToPreviousStep: x, complete: w }),
+            [f, L, M, x, w],
         ),
-        k = { variant: "secondary", text: E.BACK },
+        k = { variant: "secondary", text: g.BACK },
         U = {
             variant: "primary",
-            text: b ? E.SUBMIT : E.NEXT,
+            text: C ? g.SUBMIT : g.NEXT,
             disabled: !D,
             loading: I,
             onClick: () => {
-                D && !I && x();
+                D && !I && M();
             },
         },
-        G = { text: E.CANCEL, variant: "secondary", onClick: A },
-        V = v.hideBackButton || N ? void 0 : (0, r.jsx)(a.Q, { ...k, ...v.backButtonProps, onClick: P }),
-        F = v.modalProps,
-        B = "graphic" in F ? F : null,
-        j = null != p && p.length > 0 && p.includes(f),
-        H = j && !R ? p.indexOf(f) + 1 : void 0;
+        G = { text: g.CANCEL, variant: "secondary", onClick: A },
+        F = v.hideBackButton || R ? void 0 : (0, r.jsx)(s.Q, { ...k, ...v.backButtonProps, onClick: x }),
+        V = v.modalProps,
+        B = "graphic" in V ? V : null,
+        H = null != p && p.length > 0 && p.includes(f),
+        j = H && !O ? p.indexOf(f) + 1 : void 0;
     return (
-        j && (t = R ? { percent: 100 } : { stepCount: p.length, stepNumber: H }),
+        H && (t = O ? { percent: 100 } : { stepCount: p.length, stepNumber: j }),
         (0, r.jsx)(_.Provider, {
-            value: M,
+            value: P,
             children: (0, r.jsxs)(o.d, {
-                ...g,
+                ...E,
                 paddingSize: null != B ? "lg" : "sm",
                 children: [
                     null != B
                         ? (0, r.jsx)(c.V6, { ...B })
-                        : (0, r.jsx)(c.rQ, { title: F.title, subtitle: F.subtitle, progressBarProps: t }),
+                        : (0, r.jsx)(c.rQ, { title: V.title, subtitle: V.subtitle, progressBarProps: t }),
                     (0, r.jsx)(
                         d.i,
                         {
-                            message: y ?? ("notice" in F ? F.notice?.message : void 0),
-                            type: null != y ? "critical" : "notice" in F ? F.notice?.type : void 0,
+                            message: S ?? ("notice" in V ? V.notice?.message : void 0),
+                            type: null != S ? "critical" : "notice" in V ? V.notice?.type : void 0,
                         },
                         f,
                     ),
@@ -105,9 +110,9 @@ function f(e) {
                         );
                     }),
                     (0, r.jsx)(l.H, {
-                        leading: V,
-                        actionsFullWidth: N,
-                        actions: [...(N ? [G] : []), { ...U, ...v.nextButtonProps }],
+                        leading: F,
+                        actionsFullWidth: R,
+                        actions: [...(R ? [G] : []), { ...U, ...v.nextButtonProps }],
                     }),
                 ],
             }),
