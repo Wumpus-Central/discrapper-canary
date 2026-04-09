@@ -7,12 +7,12 @@ var s = i(627968),
     a = i(421380),
     o = i(397927),
     d = i(73153),
-    _ = i(384904),
-    m = i(73825),
+    _ = i(73825),
+    m = i(323082),
     u = i(160946),
     p = i(422936),
     x = i(234419),
-    f = i(465794),
+    f = i(725807),
     j = i(811611),
     g = i(901017),
     h = i(773669),
@@ -23,7 +23,7 @@ var s = i(627968),
     E = i(652215),
     v = i(788868),
     I = i(985018),
-    P = i(158057);
+    P = i(403231);
 let T = (e) => {
         let { locale: n } = e;
         return (0, s.jsxs)(s.Fragment, {
@@ -101,7 +101,7 @@ function A(e) {
         j = (0, p.O)();
     r.useEffect(() => {
         d.h.wait(() => {
-            (0, _.$o)(), (0, m.zS)(null, null, E.tF5.DISCOVERY);
+            (0, m.$o)(), (0, _.zS)(null, null, E.tF5.DISCOVERY);
         });
     }, []);
     let g = a ? y.Ay.getDefaultPrice(v.gD.PREMIUM_MONTH_TIER_2) : null;

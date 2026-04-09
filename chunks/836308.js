@@ -2,9 +2,9 @@
 n.d(t, { GJ: () => O, ZL: () => R, uv: () => v, zg: () => C });
 var r = n(627968),
     i = n(64700),
-    s = n(384904),
-    a = n(391048),
-    o = n(73079),
+    s = n(391048),
+    a = n(73079),
+    o = n(323082),
     l = n(459357),
     u = n(550238),
     c = n(93159),
@@ -19,9 +19,9 @@ var r = n(627968),
     A = n(632721),
     I = n(818348),
     T = n(985018),
-    S = n(963145);
+    S = n(120420);
 function y(e) {
-    return () => (null != h.A.error && (0, a.ET)(), e());
+    return () => (null != h.A.error && (0, s.ET)(), e());
 }
 function v(e) {
     let { onPrimary: t, onBack: n, ...i } = e,
@@ -37,7 +37,7 @@ function N(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(g.je, { paymentRestrictionBannerType: n }),
-            (0, r.jsx)(o.A, { ...e }),
+            (0, r.jsx)(a.A, { ...e }),
             i && (0, r.jsx)(c.Z4, { className: S.SO }),
         ],
     });
@@ -60,7 +60,7 @@ let C = () => {
                 prependSteps: t,
                 appendSteps: n,
                 analyticsLocation: i,
-                isEligibleForTrial: o,
+                isEligibleForTrial: a,
                 allowDesktopRedirectPurchase: l,
                 onPaymentRequestSourceFailed: c,
                 paymentModalArgs: f,
@@ -124,13 +124,13 @@ let C = () => {
                     case I.he.BANCONTACT:
                         S({ steps: [...t, ...A.GC, ...n], methodType: e }), g(_.pn.ADDRESS);
                 }
-                null != h.A.error && (0, a.ET)();
+                null != h.A.error && (0, s.ET)();
             },
             j = (e, t) => {
                 B((e) => ({ ...e, info: t })), S(w), R(e);
             },
             Y = async (e, t) => {
-                if (((0, a.mf)(e), null == e)) return void c();
+                if (((0, s.mf)(e), null == e)) return void c();
                 y(e);
                 let { billingAddressInfo: n } = (0, E.uK)(e),
                     r = u.V.every((e) => {
@@ -140,7 +140,7 @@ let C = () => {
                 if (((null == n.name || "" === n.name) && null != t && (n.name = t), B({ isValid: r, info: n }), !r))
                     return void g(_.pn.ADDRESS);
                 try {
-                    let t = await (0, s.Tv)(e, n, i);
+                    let t = await (0, o.Tv)(e, n, i);
                     j(t, n);
                 } catch (e) {
                     c();
@@ -164,7 +164,7 @@ let C = () => {
             onChooseType: H,
             onStripePaymentMethodReceived: Y,
             paymentRequestWallets: W,
-            isEligibleForTrial: o,
+            isEligibleForTrial: a,
             paymentRequestPaymentContext: { contextMetadata: F, activitySessionId: V },
             paymentSourceTypeRestrictions: O,
         });

@@ -3,9 +3,9 @@ n.d(t, { g: () => h }), n(321073);
 var r = n(627968);
 n(64700);
 var i = n(397927),
-    s = n(384904),
-    a = n(923408),
-    o = n(73825),
+    s = n(923408),
+    a = n(73825),
+    o = n(323082),
     l = n(287809),
     u = n(178368),
     c = n(97352),
@@ -46,15 +46,15 @@ async function h(e) {
             { contextKey: b },
         );
     let L = [];
-    c.A.isLoadedForPremiumSKUs() || L.push((0, o.zS)()),
-        u.A.hasFetched || (L.push(s.hP()), L.push((0, a.CD)())),
+    c.A.isLoadedForPremiumSKUs() || L.push((0, a.zS)()),
+        u.A.hasFetched || (L.push(o.hP()), L.push((0, s.CD)())),
         L.length > 0 && (A?.(!0), await Promise.allSettled(L), A?.(!1));
     let w = (0, d.D$)(u.A.boostSlots),
         M = w.length,
-        P = (e) => {
+        x = (e) => {
             g?.(), v?.(e);
         },
-        x = () => {
+        P = () => {
             g?.(), I?.();
         };
     if (M > 0 && (null == E || M >= E)) {
@@ -66,14 +66,14 @@ async function h(e) {
                         n.e("62175"),
                         n.e("62733"),
                         n.e("34749"),
-                        n.e("41164"),
+                        n.e("13676"),
                     ]).then(n.bind(n, 657516));
                     return (n) => {
                         let { onClose: i, ...s } = n;
                         return (0, r.jsx)(t, {
                             ...s,
                             onClose: (e) => {
-                                i(), P(e);
+                                i(), x(e);
                             },
                             selectedGuild: y,
                             locationSection: f.liQ.PREMIUM_GUILD_USER_MODAL,
@@ -85,7 +85,7 @@ async function h(e) {
                 {
                     modalKey: p,
                     onCloseRequest: () => {
-                        (0, i.OoC)(p), P(!1);
+                        (0, i.OoC)(p), x(!1);
                     },
                     contextKey: b,
                 },
@@ -96,9 +96,9 @@ async function h(e) {
             analyticsLocation: h,
             analyticsSourceLocation: m,
             guildId: y.id,
-            closeLayer: x,
+            closeLayer: P,
             totalNumberOfSlotsToAssign: E ?? 1,
-            onCloseModal: P,
+            onCloseModal: x,
             disablePremiumUpsell: N,
             onSubscriptionConfirmation: T,
             onSubscribeComplete: S,
