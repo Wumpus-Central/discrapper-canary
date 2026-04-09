@@ -1,4 +1,4 @@
-n.d(t, { A: () => y });
+n.d(t, { A: () => v });
 var i = n(627968);
 n(64700);
 var l = n(110259),
@@ -16,110 +16,109 @@ var l = n(110259),
     p = n(430452),
     f = n(383501),
     _ = n(532624),
-    E = n(723702),
-    x = n(17143),
-    C = n(819027),
-    S = n(652215),
-    T = n(509381),
-    I = n(731854),
+    E = n(17143),
+    x = n(819027),
+    C = n(652215),
+    S = n(509381),
+    T = n(731854),
     N = n(985018),
-    v = n(933421);
-function y(e) {
+    I = n(686534);
+function v(e) {
     let {
             appContext: t,
             onInteraction: n,
-            onSelect: y,
-            onClose: b,
-            maybeRenderPTTCheckbox: j = !1,
-            renderDeafenCheckbox: R = !1,
-            renderInputProfiles: M = !1,
-            renderOutputDevices: D = !1,
-            renderOutputVolume: O = !1,
-            renderInputDevices: L = !1,
-            renderInputVolume: P = !1,
-            maybeRenderInputMeter: k = !1,
-            renderSettingsButton: w = !1,
+            onSelect: v,
+            onClose: y,
+            maybeRenderPTTCheckbox: b = !1,
+            renderDeafenCheckbox: j = !1,
+            renderInputProfiles: R = !1,
+            renderOutputDevices: M = !1,
+            renderOutputVolume: D = !1,
+            renderInputDevices: O = !1,
+            renderInputVolume: L = !1,
+            maybeRenderInputMeter: P = !1,
+            renderSettingsButton: k = !1,
         } = e,
-        { analyticsLocations: U } = (0, d.Ay)();
+        { analyticsLocations: w } = (0, d.Ay)();
     (0, u.A)({
         type: l.ImpressionTypes.MENU,
         name: l.ImpressionNames.AUDIO_DEVICE_MENU,
-        properties: { location_stack: U },
+        properties: { location_stack: w },
     });
-    let G = (0, C.A)(t),
-        F = (0, h.H)({ deviceType: I.oh.AUDIO_INPUT, analyticsLocations: U, asSubmenu: !0 }),
-        B = (0, h.H)({ deviceType: I.oh.AUDIO_OUTPUT, analyticsLocations: U, asSubmenu: !0 }),
-        H = (0, s.bG)([p.Ay], () => p.Ay.getActiveInputProfile()),
-        V = (0, A.A)(U),
-        K = (0, m.A)(U),
-        W = (0, g.A)(U),
-        z = a.x.DEFAULT,
-        q = p.Ay.isSelfDeaf(z),
-        Y = (0, s.bG)([p.Ay], () => p.Ay.getMode()),
-        J = Y === S.TBI.VOICE_ACTIVITY ? S.TBI.PUSH_TO_TALK : S.TBI.VOICE_ACTIVITY,
-        $ = (0, s.bG)([p.Ay, _.Ay], () => {
+    let U = (0, x.A)(t),
+        G = (0, h.H)({ deviceType: T.oh.AUDIO_INPUT, analyticsLocations: w, asSubmenu: !0 }),
+        F = (0, h.H)({ deviceType: T.oh.AUDIO_OUTPUT, analyticsLocations: w, asSubmenu: !0 }),
+        B = (0, s.bG)([p.Ay], () => p.Ay.getActiveInputProfile()),
+        H = (0, A.A)(w),
+        V = (0, m.A)(w),
+        K = (0, g.A)(w),
+        W = a.x.DEFAULT,
+        z = p.Ay.isSelfDeaf(W),
+        q = (0, s.bG)([p.Ay], () => p.Ay.getMode()),
+        Y = q === C.TBI.VOICE_ACTIVITY ? C.TBI.PUSH_TO_TALK : C.TBI.VOICE_ACTIVITY,
+        J = (0, s.bG)([p.Ay, _.Ay], () => {
             let e = p.Ay.getModeOptions().shortcut?.length > 0,
-                t = null != _.Ay.getKeybindForAction(S.hCu.PUSH_TO_TALK, !1, !0),
-                n = null != _.Ay.getKeybindForAction(S.hCu.PUSH_TO_TALK_PRIORITY, !1, !0);
+                t = null != _.Ay.getKeybindForAction(C.hCu.PUSH_TO_TALK, !1, !0),
+                n = null != _.Ay.getKeybindForAction(C.hCu.PUSH_TO_TALK_PRIORITY, !1, !0);
             return e || t || n;
         }),
-        Z = (0, s.bG)([f.A], () => null != f.A.getChannelId());
+        $ = (0, s.bG)([f.A], () => null != f.A.getChannelId());
     return (0, i.jsx)(c.A, {
-        object: S.ZSU.CONTEXT_MENU,
+        object: C.ZSU.CONTEXT_MENU,
         children: (0, i.jsxs)(r.W1t, {
             "data-menu-migrated": !0,
-            onSelect: y,
+            onSelect: v,
             onInteraction: n,
-            onClose: b,
+            onClose: y,
             navId: "audio-device-context",
             variant: "fixed",
             "aria-label": N.intl.string(N.t.ZR1Ss6),
-            className: v.MK,
+            className: I.MK,
             children: [
-                (0, i.jsxs)(r.rXV, { children: [L && F, M && V, D && B] }),
+                (0, i.jsxs)(r.rXV, { children: [O && G, R && H, M && F] }),
                 (0, i.jsxs)(r.rXV, {
                     children: [
-                        P && K,
-                        k &&
-                            Z &&
+                        L && V,
+                        P &&
+                            $ &&
                             (0, i.jsx)(r.aK1, {
                                 id: "input-device-meter",
                                 interactive: !1,
                                 control: () =>
-                                    (0, i.jsx)(x.A, {
-                                        notchBackground: x.V.BLACK,
-                                        location: { section: S.JJy.CONTEXT_MENU },
+                                    (0, i.jsx)(E.A, {
+                                        notchBackground: E.V.BLACK,
+                                        location: { section: C.JJy.CONTEXT_MENU },
                                         meterOnly: !0,
-                                        containerClassName: v.Eq,
-                                        notchClassName: v.CO,
+                                        containerClassName: I.Eq,
+                                        notchClassName: I.CO,
                                     }),
                             }),
-                        O && W,
+                        D && K,
                     ],
                 }),
                 (0, i.jsxs)(r.rXV, {
                     children: [
-                        j && E.isPlatformEmbedded && $
+                        b && J
                             ? (0, i.jsx)(r.sLh, {
-                                  checked: Y === S.TBI.PUSH_TO_TALK,
+                                  checked: q === C.TBI.PUSH_TO_TALK,
                                   id: "input-mode",
                                   label: N.intl.string(N.t.Q8gkVL),
-                                  action: () => o.A.setMode(J, void 0, void 0, { analyticsLocations: U }),
-                                  disabled: H === T.m.STUDIO,
+                                  action: () => o.A.setMode(Y, void 0, void 0, { analyticsLocations: w }),
+                                  disabled: B === S.m.STUDIO,
                               })
                             : null,
-                        R &&
+                        j &&
                             (0, i.jsx)(
                                 r.sLh,
                                 {
                                     id: "deafen",
                                     label: N.intl.string(N.t.wjcRFX),
-                                    action: () => o.A.toggleSelfDeaf({ context: z, location: "AudioDeviceMenu" }),
-                                    checked: q,
+                                    action: () => o.A.toggleSelfDeaf({ context: W, location: "AudioDeviceMenu" }),
+                                    checked: z,
                                 },
                                 "self-deafen",
                             ),
-                        w && G,
+                        k && U,
                     ],
                 }),
             ],
