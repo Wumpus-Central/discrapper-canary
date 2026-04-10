@@ -73,7 +73,7 @@ function A(e, t) {
     }, [e, t]);
 }
 function I(e) {
-    let { questHomeHeroConfig: t, shouldShowQuestHomeHeroContent: n } = e,
+    let { questHomeHero: t, shouldShowQuestHomeHeroContent: n } = e,
         i = n ? d.uF.QUEST_HOME_ENTRYPOINT_THEMED : d.uF.QUEST_HOME_ENTRYPOINT,
         a = r.useMemo(() => {
             let e = (0, p.fF)(i);
@@ -83,7 +83,7 @@ function I(e) {
             (e) => {
                 null != t && n
                     ? (0, f.Qg)({
-                          adContentId: t.campaignId,
+                          adContentId: t.id,
                           adCreativeType: s.p.QUEST_HOME_HERO,
                           event: e,
                           properties: a,

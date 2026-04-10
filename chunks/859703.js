@@ -57,6 +57,8 @@ function et() {
         (D = new Map()),
         (Q = new Map()),
         (b = new Map()),
+        (z = null),
+        (Z = null),
         (X = null);
 }
 function en(e, t) {
@@ -503,11 +505,8 @@ class e7 extends x.Ay.Store {
     isFetchingQuestHomeHero() {
         return q;
     }
-    getQuestHomeHeroConfig() {
-        return Z;
-    }
     getQuestHomeHero() {
-        return X;
+        return X ?? Z;
     }
     getLastFetchedQuestHomeHero() {
         return z;

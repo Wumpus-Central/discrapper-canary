@@ -34,13 +34,13 @@ n.d(t, {
     do: () => ew,
     fc: () => eG,
     j$: () => ej,
+    lg: () => ti,
     mL: () => er,
     nv: () => tn,
     oH: () => eB,
     p5: () => e5,
     pT: () => e8,
     sb: () => e7,
-    vG: () => ti,
     zW: () => e6,
 }),
     n(321073),
@@ -269,7 +269,7 @@ function eg(e, t, n) {
     return e.localeCompare(t) * r;
 }
 function eA() {
-    let e = (0, f.bG)([x.A], () => x.A.getQuestHomeHeroConfig());
+    let e = (0, f.bG)([x.A], () => x.A.getQuestHomeHero());
     return r.useMemo(() => ({ questHomeHero: e }), [e]);
 }
 function eI(e, t) {
@@ -788,22 +788,16 @@ let tn = (e) => {
     };
 function ti() {
     let { enabled: e } = k.sn.useConfig({ location: X.rE.QUEST_HOME_DESKTOP }),
-        { enabled: t } = k.rI.useConfig({ location: "useFetchQuestHomeHeroConfig" }),
+        { enabled: t } = k.rI.useConfig({ location: "useFetchQuestHomeHero" }),
         [n, i] = r.useState(e),
         [s, a] = r.useState(e),
         [o, l] = r.useState(!1),
         [u, c] = r.useState(!1),
-        { isFetching: d, questHomeHeroConfig: _ } = (0, f.cf)([x.A], () => ({
+        { isFetching: d, questHomeHero: _ } = (0, f.cf)([x.A], () => ({
             isFetching: x.A.isFetchingQuestHomeHero(),
-            questHomeHeroConfig: x.A.getQuestHomeHeroConfig(),
+            questHomeHero: x.A.getQuestHomeHero(),
         })),
-        p = r.useMemo(() => {
-            if (!e || null == _) return null;
-            let t = new Date(),
-                n = new Date(_.startsAt),
-                r = new Date(_.expiresAt);
-            return t < n || t > r ? null : _;
-        }, [e, _]);
+        p = e ? _ : null;
     return (
         r.useEffect(() => {
             e && n();
@@ -821,7 +815,8 @@ function ti() {
             !(async function () {
                 try {
                     if (null == _) return;
-                    await Promise.all([(0, O.NN)(_.assetHeroImage.url), (0, O.NN)(_.assetSponsorImage.url)]);
+                    let e = [_.heroImage, _.sponsorImage].filter((e) => null != e);
+                    await Promise.all(e.map(O.NN));
                 } catch (e) {
                     c(!0);
                 } finally {

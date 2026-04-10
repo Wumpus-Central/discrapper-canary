@@ -57,7 +57,7 @@ function T(e) {
     return (0, _.vv)({ config: e }) ? i.Z.VIDEO : i.Z.GAMEPLAY;
 }
 function S(e, t) {
-    return e.ctaQuests.some((e) => e.questId === t);
+    return e.questIds?.includes(t) ?? !1;
 }
 function y(e) {
     let { questId: t, fromContent: n, utmSource: r, utmMedium: i } = e;

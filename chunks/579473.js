@@ -1,5 +1,7 @@
 "use strict";
-n.d(t, { UX: () => N, WV: () => C, Yt: () => v, fY: () => h, tW: () => A, vm: () => S }), n(134528), n(947204);
+n.d(t, { UX: () => C, WV: () => R, Yt: () => N, dv: () => S, fY: () => h, tW: () => A, vm: () => y }),
+    n(134528),
+    n(947204);
 var r = n(412703),
     i = n(440703),
     s = n(998218),
@@ -36,7 +38,7 @@ var h = (function (e) {
 })({});
 function m(e, t, n) {
     let r = T(e, t, n),
-        i = S(t),
+        i = y(t),
         s = null != i && p.includes(i);
     return { url: r, mimetype: i, isAnimated: s };
 }
@@ -143,6 +145,9 @@ function T(e, t, n) {
     return t.includes("/") ? ((r = l.GD), `${r}${t}`) : `${r}${e}${n?.theme != null ? `/${n.theme}` : ""}/${t}`;
 }
 function S(e) {
+    return e.startsWith("http://") || e.startsWith("https://") || e.startsWith("blob:") ? e : `${l.GD}${e}`;
+}
+function y(e) {
     if (e.startsWith("blob:")) {
         let t = s.A.toURLSafe(e)?.searchParams.get("mimetype") ?? void 0;
         return null != t ? decodeURIComponent(t) : null;
@@ -176,30 +181,30 @@ function S(e) {
             return null;
     }
 }
-function y(e) {
+function v(e) {
     return Math.min(Math.ceil(e), u.uJv);
 }
-function v(e, t) {
+function N(e, t) {
     let n = (0, a.A)();
     return n < _ ? { width: e, height: t } : { width: e * n, height: t * n };
 }
-function N(e) {
+function C(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     if (e.startsWith("blob:")) return e;
     let n = s.A.toURLSafe(e);
     return null == n
         ? e
         : (null != t.format && n.searchParams.set("format", t.format),
-          null != t.width && n.searchParams.set("width", `${y(t.width)}`),
-          null != t.height && n.searchParams.set("height", `${y(t.height)}`),
+          null != t.width && n.searchParams.set("width", `${v(t.width)}`),
+          null != t.height && n.searchParams.set("height", `${v(t.height)}`),
           n.toString());
 }
-function C(e, t) {
+function R(e, t) {
     if (e.startsWith("blob:")) return e;
     let n = s.A.toURLSafe(e);
     return null == n
         ? null
         : (n.searchParams.set("format", "webp"),
-          null != t && (n.searchParams.set("width", `${y(t.width)}`), n.searchParams.set("height", `${y(t.height)}`)),
+          null != t && (n.searchParams.set("width", `${v(t.width)}`), n.searchParams.set("height", `${v(t.height)}`)),
           n.toString());
 }

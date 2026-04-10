@@ -3,9 +3,9 @@ n.d(t, {
     Dv: () => T,
     Rd: () => E,
     S: () => m,
-    Wv: () => R,
     Yn: () => l,
     _g: () => f,
+    oc: () => v,
     rO: () => _,
     s2: () => o,
     tp: () => d,
@@ -154,47 +154,36 @@ function T(e) {
     return { claimedAt: e.claimed_at, items: e.entitlements.map(I), errors: e.errors };
 }
 function S(e) {
-    return { altText: e.alt_text, assetType: e.asset_type, url: e.url };
-}
-function y(e) {
-    return { ctaType: e.cta_type, title: e.title, url: e.url };
-}
-function v(e) {
-    return { ctaType: e.cta_type, title: e.title, questId: e.quest_id };
-}
-function N(e) {
     return {
-        linearGradientStart: e.linear_gradient_start,
-        linearGradientEnd: e.linear_gradient_end,
-        radialGradientStart: e.radial_gradient_start,
-        radialGradientEnd: e.radial_gradient_end,
-        entrypointAssetImageUrl: e.entrypoint_asset_image_url,
-        tooltipAssetImageUrl: e.tooltip_asset_image_url,
+        linearGradient:
+            null != e.linear_gradient_start && null != e.linear_gradient_end
+                ? { start: e.linear_gradient_start, end: e.linear_gradient_end }
+                : void 0,
+        radialGradient:
+            null != e.radial_gradient_start && null != e.radial_gradient_end
+                ? { start: e.radial_gradient_start, end: e.radial_gradient_end }
+                : void 0,
+        image: e.entrypoint_asset_image_url,
+        tooltipImage: e.tooltip_asset_image_url,
         tooltipTitle: e.tooltip_title,
         tooltipSubtitle: e.tooltip_subtitle,
     };
 }
-function C(e) {
-    let t = {
-        placementType: s.gh.QUEST_HOME_BANNER,
-        campaignId: e.campaign_id,
+function y(e) {
+    return {
+        id: e.campaign_id,
         labelTitle: e.label_title,
         labelSubtitle: e.label_subtitle,
-        assetHeroImage: S(e.asset_hero_image),
-        assetSponsorImage: S(e.asset_sponsor_image),
-        ctaSponsorUrl: y(e.cta_sponsor_url),
-        ctaQuests: e.cta_quests.map(v),
-        startsAt: e.starts_at,
-        expiresAt: e.expires_at,
+        heroImage: e.asset_hero_image.url,
+        heroVideo: e.asset_hero_video?.url,
+        sponsorImage: e.asset_sponsor_image.url,
+        cta: { url: e.cta_sponsor_url.url, buttonLabel: e.cta_sponsor_url.title },
+        questIds: e.cta_quests.map((e) => e.quest_id),
+        questHomeEntrypoint: null != e.quest_home_entrypoint ? S(e.quest_home_entrypoint) : void 0,
     };
-    return (
-        null != e.asset_hero_video && (t.assetHeroVideo = S(e.asset_hero_video)),
-        null != e.quest_home_entrypoint && (t.questHomeEntrypoint = N(e.quest_home_entrypoint)),
-        t
-    );
 }
-function R(e) {
+function v(e) {
     if (1 !== e.version || !(s.gh.QUEST_HOME_BANNER in e.placements)) return null;
     let t = e.placements[s.gh.QUEST_HOME_BANNER];
-    return null == t ? null : C(t);
+    return null == t ? null : y(t);
 }
