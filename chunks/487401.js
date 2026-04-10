@@ -298,7 +298,7 @@ class em extends l.PureComponent {
                 (c.id === this.props.rtcConnectedChannelId && (r += 32 * this.props.rtcDesyncedVoiceStatesCount),
                 !c.isCollapsed && !u.isCollapsed)
             ) {
-                let { enableHistoryHover: e } = (0, L.NH)({ guildId: c.record.guild_id, location: "ChannelList" });
+                let { showGhostUser: e } = (0, L.NH)({ guildId: c.record.guild_id, location: "ChannelList" });
                 e && null != M.A.getLastLeftUserId(c.id) && (r += 32);
             }
         }
