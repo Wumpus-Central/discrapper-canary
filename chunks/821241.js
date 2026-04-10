@@ -1,65 +1,66 @@
-n.d(t, { A: () => A });
+"use strict";
+n.d(t, { A: () => T });
 var i = n(627968);
 n(64700);
-var l = n(503698),
-    a = n.n(l),
-    r = n(311907),
-    s = n(397927),
-    o = n(709066),
-    d = n(71393),
-    c = n(763754),
-    u = n(643204),
-    m = n(809115),
-    _ = n(888675),
-    h = n(705751),
-    p = n(985018),
-    g = n(234054);
-function A(e) {
-    let { message: t, compact: n, usernameHook: l, channel: A } = e,
-        f = (0, r.bG)([d.A], () => d.A.getGuild(A.guild_id)),
-        x = (0, c.Ay)(t),
-        E = l(x),
+var r = n(503698),
+    s = n.n(r),
+    l = n(311907),
+    a = n(397927),
+    c = n(709066),
+    o = n(71393),
+    u = n(763754),
+    d = n(643204),
+    _ = n(809115),
+    E = n(888675),
+    A = n(705751),
+    m = n(985018),
+    I = n(240775);
+function T(e) {
+    let { message: t, compact: n, usernameHook: r, channel: T } = e,
+        g = (0, l.bG)([o.A], () => o.A.getGuild(T.guild_id)),
+        N = (0, u.Ay)(t),
+        f = r(N),
         {
-            avatarSrc: C,
-            eventHandlers: { onMouseEnter: I, onMouseLeave: T },
-        } = (0, m.a)(!0);
+            avatarSrc: p,
+            eventHandlers: { onMouseEnter: C, onMouseLeave: h },
+        } = (0, _.a)(!0);
     return (0, i.jsx)("div", {
-        onMouseEnter: I,
-        onMouseLeave: T,
-        children: (0, i.jsx)(_.A, {
-            className: a()(g.rs, { [g.oE]: n }),
-            iconNode: n ? null : (0, i.jsx)(m.l, { src: C }),
-            iconContainerClassName: g.zc,
+        onMouseEnter: C,
+        onMouseLeave: h,
+        children: (0, i.jsx)(E.A, {
+            className: s()(I.rs, { [I.oE]: n }),
+            iconNode: n ? null : (0, i.jsx)(_.l, { src: p }),
+            iconContainerClassName: I.zc,
             compact: n,
             children: (0, i.jsxs)("div", {
-                className: a()(g.Qs, { [g.oE]: n }),
+                className: s()(I.Qs, { [I.oE]: n }),
                 children: [
-                    (0, i.jsx)(u.ix, {
+                    (0, i.jsx)(d.ix, {
                         message: t,
-                        messageClassname: g.he,
-                        className: a()(g.QV, g.he, { [g.oE]: n }),
+                        messageClassname: I.he,
+                        className: s()(I.QV, I.he, { [I.oE]: n }),
                         username: (0, i.jsxs)("div", {
-                            className: g.he,
+                            className: I.he,
                             children: [
-                                (0, i.jsx)(s.Text, {
+                                (0, i.jsx)(a.Text, {
                                     variant: "text-md/normal",
                                     color: "text-brand",
                                     tag: "span",
-                                    className: g.Xh,
-                                    children: p.intl.string(p.t.hG1StD),
+                                    className: I.Xh,
+                                    children: m.intl.string(m.t.hG1StD),
                                 }),
-                                (0, i.jsx)(o.A, { type: h.nu.SYSTEM_DM, className: g.Al }),
+                                (0, i.jsx)(c.A, { type: A.nu.SYSTEM_DM, className: I.Al }),
                             ],
                         }),
                         compact: n,
                         showTimestamp: !0,
                     }),
                     (0, i.jsx)("div", {
-                        className: a()(g.__invalid_messageContent, { [g.oE]: n }),
-                        children: p.intl.format(p.t.W0UBI3, {
-                            username: x.nick,
-                            usernameHook: E,
-                            guildName: f?.name ?? "",
+                        className: s()(I.__invalid_messageContent, { [I.oE]: n }),
+                        children: m.intl.format(m.t.W0UBI3, {
+                            username: N.nick,
+                            usernameHook: f,
+                            guildName: g?.name ?? "",
                         }),
                     }),
                 ],

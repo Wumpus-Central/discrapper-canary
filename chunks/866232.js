@@ -1,6 +1,7 @@
-n.d(t, { u: () => l });
+"use strict";
+n.d(t, { u: () => r });
 var i,
-    l =
+    r =
         (((i = {})[(i.KEYWORD = 1)] = "KEYWORD"),
         (i[(i.SPAM_LINK = 2)] = "SPAM_LINK"),
         (i[(i.ML_SPAM = 3)] = "ML_SPAM"),

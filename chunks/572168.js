@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container_c530da",
     YL: "tooltip_c530da",

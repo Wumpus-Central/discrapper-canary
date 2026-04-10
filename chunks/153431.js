@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     gD: "embedCard__44c9a",
     oE: "compact__44c9a",

@@ -1,22 +1,23 @@
-n.d(t, { A: () => c });
+"use strict";
+n.d(t, { A: () => u });
 var i = n(311907),
-    l = n(73153),
-    a = n(613057);
-let r = null,
-    s = [a.Hi.REDISTRIBUTABLE_INSTALL_FAILED, a.Hi.POST_INSTALL_FAILED, a.Hi.POST_INSTALL_CANCELLED],
-    o = [a.Hi.APPLICATION_NOT_FOUND, a.Hi.APPLICATION_LOAD_FAILED, a.Hi.INTERRUPTED, a.Hi.DESERIALIZATION_FAILED];
-class d extends i.Ay.Store {
+    r = n(73153),
+    s = n(613057);
+let l = null,
+    a = [s.Hi.REDISTRIBUTABLE_INSTALL_FAILED, s.Hi.POST_INSTALL_FAILED, s.Hi.POST_INSTALL_CANCELLED],
+    c = [s.Hi.APPLICATION_NOT_FOUND, s.Hi.APPLICATION_LOAD_FAILED, s.Hi.INTERRUPTED, s.Hi.DESERIALIZATION_FAILED];
+class o extends i.Ay.Store {
     static displayName = "DispatchApplicationErrorStore";
     getLastError() {
-        return r;
+        return l;
     }
 }
-let c = new d(l.h, {
+let u = new o(r.h, {
     DISPATCH_APPLICATION_LAUNCH_SETUP_START: function () {
-        null != r && null != r.code && s.includes(r.code) && (r = null);
+        null != l && null != l.code && a.includes(l.code) && (l = null);
     },
     DISPATCH_APPLICATION_ERROR: function (e) {
         let { error: t } = e;
-        r = null != t.code && o.includes(t.code) ? null : t;
+        l = null != t.code && c.includes(t.code) ? null : t;
     },
 });

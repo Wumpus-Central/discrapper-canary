@@ -399,6 +399,7 @@ var r = (function (e) {
         (e.STREAMER_MODE_DISABLE_NOTIFICATIONS = "streamer_mode_disable_notifications"),
         (e.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE =
             "streamer_mode_hide_discord_window_from_screen_capture"),
+        (e.STREAMER_MODE_HIDE_OVERLAY_WIDGETS = "streamer_mode_hide_overlay_widgets"),
         (e.ADVANCED_SIDEBAR_ITEM = "advanced_sidebar_item"),
         (e.ADVANCED_PANEL = "advanced_panel"),
         (e.ADVANCED_CATEGORY = "advanced_category"),

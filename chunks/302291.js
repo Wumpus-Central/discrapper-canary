@@ -1,73 +1,74 @@
-n.d(t, { R: () => h, d: () => p });
+"use strict";
+n.d(t, { R: () => A, d: () => m });
 var i = n(627968),
-    l = n(64700),
-    a = n(397927),
-    r = n(763754),
-    s = n(447215),
-    o = n(888675),
-    d = n(342296),
-    c = n(486020),
-    u = n(552691),
-    m = n(652215);
-function _(e, t) {
-    let n = l.useRef(null);
-    return l.useCallback(
-        (l) => (r, s) => {
-            let o = c.Ay.getApplicationIconURL({ id: l.id, icon: l.icon, bot: l.bot, botIconFirst: !0 }),
-                { bot: u } = l;
-            return null == u
-                ? r
+    r = n(64700),
+    s = n(397927),
+    l = n(763754),
+    a = n(447215),
+    c = n(888675),
+    o = n(342296),
+    u = n(486020),
+    d = n(552691),
+    _ = n(652215);
+function E(e, t) {
+    let n = r.useRef(null);
+    return r.useCallback(
+        (r) => (l, a) => {
+            let c = u.Ay.getApplicationIconURL({ id: r.id, icon: r.icon, bot: r.bot, botIconFirst: !0 }),
+                { bot: d } = r;
+            return null == d
+                ? l
                 : (0, i.jsx)(
-                      d.A,
+                      o.A,
                       {
                           targetElementRef: n,
-                          userId: u.id,
-                          avatarUrl: o,
+                          userId: d.id,
+                          avatarUrl: c,
                           guildId: e.guild_id,
                           channelId: e.id,
                           messageId: t.id,
                           clickTrap: !0,
-                          children: (e) => (0, i.jsx)(a.MzZ, { ...e, ref: n, children: r }),
+                          children: (e) => (0, i.jsx)(s.MzZ, { ...e, ref: n, children: l }),
                       },
-                      s,
+                      a,
                   );
         },
         [e, t.id],
     );
 }
-function h(e) {
-    let { message: t, channel: l, compact: a } = e,
-        d = (0, r.Ay)(t),
-        c = t.application,
-        h = (0, s.P)({ user: t.author, channelId: l.id, guildId: l.guild_id, messageId: t.id }),
-        p = _(l, t);
-    return (0, i.jsx)(o.A, {
-        icon: n(394803),
+function A(e) {
+    let { message: t, channel: r, compact: s } = e,
+        o = (0, l.Ay)(t),
+        u = t.application,
+        A = (0, a.P)({ user: t.author, channelId: r.id, guildId: r.guild_id, messageId: t.id }),
+        m = E(r, t);
+    return (0, i.jsx)(c.A, {
+        icon: n(617184),
         timestamp: t.timestamp,
-        compact: a,
-        children: (0, u.eu)({
-            application: c,
-            username: d.nick,
-            usernameHook: h(d),
-            applicationNameHook: null != c ? p(c) : m.tEg,
+        compact: s,
+        children: (0, d.eu)({
+            application: u,
+            username: o.nick,
+            usernameHook: A(o),
+            applicationNameHook: null != u ? m(u) : _.tEg,
         }),
     });
 }
-function p(e) {
-    let { message: t, channel: l, compact: a } = e,
-        d = (0, r.Ay)(t),
-        c = t.application,
-        h = (0, s.P)({ user: t.author, channelId: l.id, guildId: l.guild_id, messageId: t.id }),
-        p = _(l, t);
-    return (0, i.jsx)(o.A, {
+function m(e) {
+    let { message: t, channel: r, compact: s } = e,
+        o = (0, l.Ay)(t),
+        u = t.application,
+        A = (0, a.P)({ user: t.author, channelId: r.id, guildId: r.guild_id, messageId: t.id }),
+        m = E(r, t);
+    return (0, i.jsx)(c.A, {
         icon: n(884797),
         timestamp: t.timestamp,
-        compact: a,
-        children: (0, u.A0)({
-            application: c,
-            username: d.nick,
-            usernameHook: h(d),
-            applicationNameHook: null != c ? p(c) : m.tEg,
+        compact: s,
+        children: (0, d.A0)({
+            application: u,
+            username: o.nick,
+            usernameHook: A(o),
+            applicationNameHook: null != u ? m(u) : _.tEg,
         }),
     });
 }

@@ -1,32 +1,33 @@
-n.d(t, { ic: () => d, nc: () => o, w: () => c });
+"use strict";
+n.d(t, { ic: () => o, nc: () => c, w: () => u });
 var i = n(311907);
 n(928108);
-var l = n(576705),
-    a = n(903093),
-    r = n(610136),
-    s = n(652215);
-function o(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.A;
+var r = n(576705),
+    s = n(903093),
+    l = n(610136),
+    a = n(652215);
+function c(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.A;
     return (
-        t.can(s.xBc.BAN_MEMBERS, e) ||
-        t.can(s.xBc.KICK_MEMBERS, e) ||
-        t.can(s.xBc.MODERATE_MEMBERS, e) ||
-        t.can(s.xBc.MANAGE_GUILD, e)
+        t.can(a.xBc.BAN_MEMBERS, e) ||
+        t.can(a.xBc.KICK_MEMBERS, e) ||
+        t.can(a.xBc.MODERATE_MEMBERS, e) ||
+        t.can(a.xBc.MANAGE_GUILD, e)
     );
 }
-function d(e) {
-    let t = (0, i.bG)([l.A], () => o(e, l.A), [e]),
-        n = (0, i.bG)([r.A], () => (null != e ? r.A.getGuildIncident(e.id) : null), [e]);
-    return !(null != n && (0, a.k$)(n)) && t;
+function o(e) {
+    let t = (0, i.bG)([r.A], () => c(e, r.A), [e]),
+        n = (0, i.bG)([l.A], () => (null != e ? l.A.getGuildIncident(e.id) : null), [e]);
+    return !(null != n && (0, s.k$)(n)) && t;
 }
-function c(e) {
+function u(e) {
     return (0, i.bG)(
-        [l.A],
+        [r.A],
         () =>
             (function (e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.A;
-                return t.can(s.xBc.MANAGE_GUILD, e);
-            })(e, l.A),
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.A;
+                return t.can(a.xBc.MANAGE_GUILD, e);
+            })(e, r.A),
         [e],
     );
 }

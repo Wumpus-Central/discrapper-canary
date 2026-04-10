@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     rs: "mainContainer__44492",
     oE: "compact__44492",

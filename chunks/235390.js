@@ -1,4 +1,5 @@
-n.d(t, { MA: () => l });
+"use strict";
+n.d(t, { MA: () => r });
 let i = (0, n(600975).C)({
     kind: "user",
     id: "2025-04_ignore_user_feedback",
@@ -17,6 +18,6 @@ let i = (0, n(600975).C)({
         },
     ],
 });
-function l(e) {
+function r(e) {
     return i.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
 }

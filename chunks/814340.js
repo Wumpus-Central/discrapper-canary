@@ -12,8 +12,8 @@ var i = n(627968),
     A = n(775121),
     _ = n(629357),
     m = n(599677),
-    g = n(12351),
-    p = n(915089),
+    p = n(12351),
+    g = n(915089),
     f = n(734057),
     x = n(458294),
     E = n(71393),
@@ -102,7 +102,7 @@ function H(e, t, n) {
 class F extends l.PureComponent {
     scrollerRef = l.createRef();
     inputRef = l.createRef();
-    _listId = (0, p.Ld)();
+    _listId = (0, g.Ld)();
     state = { query: this.props.query, mouseFocusDisabled: !0 };
     componentDidMount() {
         A.A.disable(), A.A.enableTemp(h.w);
@@ -197,7 +197,7 @@ class F extends l.PureComponent {
                     case L.rbe.PUBLIC_THREAD:
                     case L.rbe.PRIVATE_THREAD:
                         return (0, u.L3)(e, async () => {
-                            let { default: e } = await n.e("33").then(n.bind(n, 44536));
+                            let { default: e } = await n.e("22414").then(n.bind(n, 44536));
                             return (t) => (0, i.jsx)(e, { ...t, channel: l, onSelect: v.jD });
                         });
                     case L.rbe.GUILD_STORE:
@@ -225,7 +225,7 @@ class F extends l.PureComponent {
                 });
             case _.rD.USER:
                 return (0, u.L3)(e, async () => {
-                    let { default: e } = await Promise.all([n.e("97262"), n.e("32418"), n.e("54631")]).then(
+                    let { default: e } = await Promise.all([n.e("97262"), n.e("32418"), n.e("77012")]).then(
                         n.bind(n, 668569),
                     );
                     return (n) => (0, i.jsx)(e, { ...n, user: t.record, onSelect: v.jD });
@@ -475,9 +475,9 @@ class F extends l.PureComponent {
         }
     };
     renderProtip() {
-        return (0, i.jsx)(g.A, {
+        return (0, i.jsx)(p.A, {
             className: a()(D.PP, { [D.ov]: this.state.query.length > 0 }),
-            type: g.A.Types.INLINE,
+            type: p.A.Types.INLINE,
             children: M.intl.format(M.t.wukqXQ, {
                 userSymbolHook: (e, t) => H(t, _.AT.USER, M.intl.string(M.t.GQRCGn)),
                 textChannelSymbolHook: (e, t) => H(t, _.AT.TEXT_CHANNEL, M.intl.string(M.t.wrwhuZ)),

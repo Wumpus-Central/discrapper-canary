@@ -1,17 +1,18 @@
-n.d(t, { A: () => a });
+"use strict";
+n.d(t, { A: () => s });
 var i = n(627968);
 n(64700);
-var l = n(953727);
-function a(e) {
-    let { width: t = 440, height: n = 200, avatar: a, ...r } = e;
+var r = n(953727);
+function s(e) {
+    let { width: t = 440, height: n = 200, avatar: s, ...l } = e;
     return (0, i.jsxs)("svg", {
-        ...(0, l.A)(r),
+        ...(0, r.A)(l),
         width: t,
         height: n,
         viewBox: `0 0 ${t} ${n}`,
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
-        ...r,
+        ...l,
         children: [
             (0, i.jsx)("rect", { y: "12", width: "440", height: "176", rx: "4", fill: "url(#paint0_linear_0_1)" }),
             (0, i.jsx)("path", {
@@ -70,7 +71,7 @@ function a(e) {
                     ],
                 }),
             }),
-            (0, i.jsx)("foreignObject", { x: "30", y: "100", width: "56", height: "56", children: a }),
+            (0, i.jsx)("foreignObject", { x: "30", y: "100", width: "56", height: "56", children: s }),
         ],
     });
 }

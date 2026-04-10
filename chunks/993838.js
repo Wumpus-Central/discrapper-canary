@@ -13,7 +13,7 @@ var i = n(192308),
 function _(e, t) {
     (0, i.openModalLazy)(
         async () => {
-            let { default: t } = await Promise.all([n.e("11478"), n.e("86317")]).then(n.bind(n, 467164));
+            let { default: t } = await Promise.all([n.e("3795"), n.e("86317")]).then(n.bind(n, 467164));
             return (n) => (0, r.jsx)(t, { ...n, channel: e });
         },
         { contextKey: t === c.BRT.POPOUT ? d.KX : d.SY },
@@ -22,7 +22,7 @@ function _(e, t) {
 function f(e, t) {
     (0, i.openModalLazy)(
         async () => {
-            let { default: t } = await Promise.all([n.e("11478"), n.e("35934")]).then(n.bind(n, 25997));
+            let { default: t } = await Promise.all([n.e("3795"), n.e("35934")]).then(n.bind(n, 25997));
             return (n) => (0, r.jsx)(t, { ...n, channel: e });
         },
         { contextKey: t === c.BRT.POPOUT ? d.KX : d.SY },
@@ -41,7 +41,7 @@ function m(e, t) {
 function E(e, t) {
     (0, i.openModalLazy)(
         async () => {
-            let { default: t } = await Promise.all([n.e("11478"), n.e("70102")]).then(n.bind(n, 118101));
+            let { default: t } = await Promise.all([n.e("3795"), n.e("70102")]).then(n.bind(n, 118101));
             return (n) => (0, r.jsx)(t, { ...n, channel: e });
         },
         { contextKey: t === c.BRT.POPOUT ? d.KX : d.SY },

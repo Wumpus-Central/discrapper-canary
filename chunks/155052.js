@@ -1,44 +1,47 @@
-n.d(t, { A: () => _ }), n(321073);
-var i = n(627968),
-    l = n(64700),
-    a = n(311907),
-    s = n(397927),
-    r = n(555528),
-    o = n(531685),
-    d = n(365971),
-    u = n(243612),
-    c = n(582240),
+n.d(t, { A: () => v }), n(321073);
+var r = n(627968),
+    i = n(64700),
+    l = n(311907),
+    a = n(397927),
+    o = n(555528),
+    d = n(351906),
+    s = n(531685),
+    u = n(365971),
+    c = n(243612),
+    A = n(582240),
     h = n(295102),
-    A = n(545807),
-    m = n(644434);
-function g(e) {
+    f = n(545807),
+    g = n(644434);
+function m(e) {
     return e.widget.id;
 }
-function p(e, t, n, l) {
-    return n === s.wLy.YEETED ? null : (0, i.jsx)(c.A, { ...t, transitionState: n, cleanUp: l }, e);
+function y(e, t, n, i) {
+    return n === a.wLy.YEETED ? null : (0, r.jsx)(A.A, { ...t, transitionState: n, cleanUp: i }, e);
 }
-let f = [],
-    _ = l.memo(function (e) {
+let p = [],
+    v = i.memo(function (e) {
         let { className: t } = e,
-            n = (0, A.A)(),
-            c = (0, a.bG)([o.A], () => o.A.windowSize((0, d.Q2)(n))),
-            _ = (0, a.bG)(
-                [r.A],
+            n = (0, f.A)(),
+            A = (0, l.bG)([s.A], () => s.A.windowSize((0, u.Q2)(n))),
+            v = (0, l.bG)(
+                [o.A, d.A],
                 () => {
-                    let e = r.A.getLayout(m.G);
-                    if (null == e) return f;
+                    let e = o.A.getLayout(g.G);
+                    if (null == e) return p;
                     let t = [];
                     for (let n of e.widgets) {
-                        let e = r.A.getWidget(n);
+                        let e = o.A.getWidget(n);
                         if (null == e) continue;
-                        let i = h.A[e.type];
-                        null != i && (null == i.predicate || i.predicate()) && t.push({ widget: e, ...i });
+                        let r = h.A[e.type];
+                        null != r &&
+                            (null == r.predicate || r.predicate()) &&
+                            (d.A.isOverlayWidgetDisabled(e.type) || t.push({ widget: e, ...r }));
                     }
                     return t;
                 },
                 [],
-                u.VC,
+                c.VC,
             ),
-            E = l.useCallback((e) => (0, i.jsx)("div", { className: t, style: c, children: e }), [t, c]);
-        return (0, i.jsx)(s.Fai, { items: _, renderItem: p, getItemKey: g, wrapChildren: E });
+            _ = i.useCallback((e) => (0, r.jsx)("div", { className: t, style: A, children: e }), [t, A]);
+        return (0, r.jsx)(a.Fai, { items: v, renderItem: y, getItemKey: m, wrapChildren: _ });
     });

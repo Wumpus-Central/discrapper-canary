@@ -1,30 +1,31 @@
-n.d(t, { A: () => s });
+"use strict";
+n.d(t, { A: () => a });
 var i = n(627968);
 n(64700);
-var l = n(311907),
-    a = n(775602),
-    r = n(463469);
-function s(e) {
-    let { guildId: t, user: n, className: s } = e,
-        o = (0, l.bG)([a.A], () => !a.A.useReducedMotion),
-        d = n.getAvatarURL(t, 56, o),
-        c = (0, i.jsx)("foreignObject", {
+var r = n(311907),
+    s = n(775602),
+    l = n(719018);
+function a(e) {
+    let { guildId: t, user: n, className: a } = e,
+        c = (0, r.bG)([s.A], () => !s.A.useReducedMotion),
+        o = n.getAvatarURL(t, 56, c),
+        u = (0, i.jsx)("foreignObject", {
             x: "30",
             y: "68",
             width: "56",
             height: "56",
             transform: "skewX(12)",
-            children: (0, i.jsx)("img", { src: d, className: r.dj, alt: "" }),
+            children: (0, i.jsx)("img", { src: o, className: l.dj, alt: "" }),
         });
     return (0, i.jsx)("div", {
-        className: s,
+        className: a,
         children: (0, i.jsxs)("svg", {
             width: "128",
             height: "200",
             viewBox: "0 0 128 200",
             fill: "none",
             xmlns: "http://www.w3.org/2000/svg",
-            className: r.JW,
+            className: l.JW,
             children: [
                 (0, i.jsx)("path", {
                     fillRule: "evenodd",
@@ -76,7 +77,7 @@ function s(e) {
                     d: "M61.1485 21.3944C62.4818 21.3286 63.5224 20.5015 63.4728 19.547C63.4231 18.5925 62.302 17.872 60.9686 17.9378C59.6353 18.0035 58.5947 18.8306 58.6444 19.7851C58.694 20.7396 59.8152 21.4601 61.1485 21.3944Z",
                     fill: "black",
                 }),
-                c,
+                u,
             ],
         }),
     });

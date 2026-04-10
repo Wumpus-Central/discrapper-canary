@@ -47,7 +47,7 @@ var r = n(627968),
     $ = n(47167),
     z = n(652215),
     q = n(985018),
-    Z = n(305733);
+    Z = n(922936);
 let X = K.Ay.getEnableHardwareAcceleration(),
     Q = 18,
     J = 42,
@@ -83,11 +83,11 @@ let X = K.Ay.getEnableHardwareAcceleration(),
                         let { default: e } = await Promise.all([
                                 n.e("41927"),
                                 n.e("97262"),
-                                n.e("11478"),
+                                n.e("3795"),
                                 n.e("42128"),
-                                n.e("97283"),
+                                n.e("61474"),
                                 n.e("84841"),
-                                n.e("43729"),
+                                n.e("64764"),
                             ]).then(n.bind(n, 107632)),
                             t = H.A.isInChannel(F.A.getVoiceChannelId(), c.id);
                         return (n) => (0, r.jsx)(e, { ...n, user: c, guildId: I, channel: A, showMediaItems: t });

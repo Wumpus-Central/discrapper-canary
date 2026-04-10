@@ -1,49 +1,50 @@
-n.d(t, { A: () => d });
+"use strict";
+n.d(t, { A: () => u });
 var i = n(64700),
-    a = n(172218),
-    l = n(478437),
-    r = n(311907),
-    s = n(71393),
-    o = n(732071),
-    c = n(652215);
-function d(e) {
-    let { message: t, channel: n, enabled: d = !0 } = e,
-        u = (0, r.bG)([s.A], () => {
-            let e = s.A.getGuild(n.guild_id);
-            return e?.features.has(c.GuildFeatures.COMMUNITY) ?? !1;
+    r = n(172218),
+    s = n(478437),
+    l = n(311907),
+    a = n(71393),
+    c = n(732071),
+    o = n(652215);
+function u(e) {
+    let { message: t, channel: n, enabled: u = !0 } = e,
+        d = (0, l.bG)([a.A], () => {
+            let e = a.A.getGuild(n.guild_id);
+            return e?.features.has(o.GuildFeatures.COMMUNITY) ?? !1;
         }, [n.guild_id]),
         _ =
             t.messageReference?.guild_id != null &&
             null != t.webhookId &&
-            t.hasFlag(c.pr7.IS_CROSSPOST) &&
+            t.hasFlag(o.pr7.IS_CROSSPOST) &&
             null != n.guild_id,
-        m = n.type === l.r.GUILD_ANNOUNCEMENT && u,
-        A = !t.hasFlag(c.pr7.EPHEMERAL) && (_ || m),
-        E = _ && null != t.messageReference ? t.messageReference.message_id : t.id,
+        E = n.type === s.r.GUILD_ANNOUNCEMENT && d,
+        A = !t.hasFlag(o.pr7.EPHEMERAL) && (_ || E),
+        m = _ && null != t.messageReference ? t.messageReference.message_id : t.id,
         I = _ && null != t.messageReference ? t.messageReference.channel_id : n.id,
         T = _ && t.messageReference?.guild_id != null ? t.messageReference.guild_id : n.guild_id,
-        f = i.useCallback(
+        g = i.useCallback(
             (e) => {
                 e
-                    ? o.A.handleMessageBecameVisible({
-                          type: o.K.ANNOUNCEMENT,
-                          messageId: E,
+                    ? c.A.handleMessageBecameVisible({
+                          type: c.K.ANNOUNCEMENT,
+                          messageId: m,
                           channelId: n.id,
                           guildId: n.guild_id,
                           sourceChannelId: I,
                           sourceGuildId: T,
                       })
-                    : o.A.handleMessageLostVisibility(E, o.K.ANNOUNCEMENT);
+                    : c.A.handleMessageLostVisibility(m, c.K.ANNOUNCEMENT);
             },
-            [E, n.id, n.guild_id, I, T],
+            [m, n.id, n.guild_id, I, T],
         ),
-        N = (0, a.K)(f, 0, A && d);
+        N = (0, r.K)(g, 0, A && u);
     return (
         i.useEffect(
             () => () => {
-                o.A.handleMessageLostVisibility(E, o.K.ANNOUNCEMENT);
+                c.A.handleMessageLostVisibility(m, c.K.ANNOUNCEMENT);
             },
-            [E],
+            [m],
         ),
         N
     );

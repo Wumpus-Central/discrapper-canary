@@ -1,19 +1,20 @@
-n.d(t, { A: () => s });
+"use strict";
+n.d(t, { A: () => a });
 var i = n(627968);
 n(64700);
-var l = n(763754),
-    a = n(888675),
-    r = n(985018);
-function s(e) {
+var r = n(763754),
+    s = n(888675),
+    l = n(985018);
+function a(e) {
     let t,
-        { message: s, usernameHook: o, otherUser: d, otherUsernameHook: c, compact: u, channel: m } = e,
-        _ = (0, l.Ay)(s),
-        h = _.nick,
-        p = o(_),
-        g = (0, l.d8)(d, m);
-    if (null != g && null != c) {
-        let e = c(g);
-        t = r.intl.format(r.t.L2FyVq, { username: h, usernameHook: p, otherUsername: g.nick, otherUsernameHook: e });
-    } else t = r.intl.format(r.t["5v2xa8"], { username: h, usernameHook: p });
-    return (0, i.jsx)(a.A, { icon: n(884797), timestamp: s.timestamp, compact: u, children: t });
+        { message: a, usernameHook: c, otherUser: o, otherUsernameHook: u, compact: d, channel: _ } = e,
+        E = (0, r.Ay)(a),
+        A = E.nick,
+        m = c(E),
+        I = (0, r.d8)(o, _);
+    if (null != I && null != u) {
+        let e = u(I);
+        t = l.intl.format(l.t.L2FyVq, { username: A, usernameHook: m, otherUsername: I.nick, otherUsernameHook: e });
+    } else t = l.intl.format(l.t["5v2xa8"], { username: A, usernameHook: m });
+    return (0, i.jsx)(s.A, { icon: n(884797), timestamp: a.timestamp, compact: d, children: t });
 }

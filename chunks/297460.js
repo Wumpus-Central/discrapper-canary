@@ -1,49 +1,49 @@
-t.d(n, { A: () => E });
-var r = t(627968);
-t(64700);
-var i = t(311907),
-    l = t(397927),
-    a = t(442433),
-    d = t(734057),
-    s = t(576705),
-    u = t(1193),
-    o = t(589051),
-    c = t(145567),
-    A = t(256688),
-    g = t(652215),
-    f = t(895867),
-    h = t(985018);
-function E(e, n) {
-    let { hasChat: t } = (0, o.M8)("useOverlayTextChatToggleMenuItem"),
-        E = "DM_USER" === e.kind ? e.userId : null,
-        I = (0, i.bG)([d.A], () => (null != E ? (d.A.getDMFromUserId(E) ?? null) : null), [E]),
-        p = "CHANNEL" === e.kind ? e.channel.id : I,
-        v = (0, i.bG)([u.A], () => {
-            if (null == p) return !1;
-            let [e] = u.A.getSessionEntries();
-            for (let n of e) if (n.channelId === p) return !0;
-            return u.A.getSelectedChannelId() === p;
-        }, [p]),
-        _ = "CHANNEL" === e.kind ? e.channel : null,
-        x = (0, i.bG)(
+n.d(t, { A: () => b });
+var l = n(627968);
+n(64700);
+var i = n(311907),
+    r = n(397927),
+    a = n(442433),
+    d = n(734057),
+    s = n(576705),
+    o = n(1193),
+    u = n(589051),
+    c = n(145567),
+    A = n(34307),
+    g = n(652215),
+    f = n(895867),
+    E = n(985018);
+function b(e, t) {
+    let { hasChat: n } = (0, u.M8)("useOverlayTextChatToggleMenuItem"),
+        b = "DM_USER" === e.kind ? e.userId : null,
+        h = (0, i.bG)([d.A], () => (null != b ? (d.A.getDMFromUserId(b) ?? null) : null), [b]),
+        v = "CHANNEL" === e.kind ? e.channel.id : h,
+        I = (0, i.bG)([o.A], () => {
+            if (null == v) return !1;
+            let [e] = o.A.getSessionEntries();
+            for (let t of e) if (t.channelId === v) return !0;
+            return o.A.getSelectedChannelId() === v;
+        }, [v]),
+        x = "CHANNEL" === e.kind ? e.channel : null,
+        p = (0, i.bG)(
             [s.A],
             () =>
-                !!(null == _ || _.isDM() || _.isMultiUserDM() || _.isPrivate()) ||
-                s.A.can(g.xBc.READ_MESSAGE_HISTORY, _),
-            [_],
+                !!(null == x || x.isDM() || x.isMultiUserDM() || x.isPrivate()) ||
+                s.A.can(g.xBc.READ_MESSAGE_HISTORY, x),
+            [x],
         );
-    return v && null != p
-        ? (0, r.jsx)(l.Drp, {
+    return I && null != v
+        ? (0, l.jsx)(r.Drp, {
               id: "close-chat",
-              label: h.intl.string(f.default.ERApc4),
+              label: E.intl.string(f.default.ERApc4),
               action: () => {
-                  (0, c.lu)({ channelId: p, widgetType: n, secondaryValue: "context_menu_close_chat" }), (0, a.Z_)();
+                  (0, c.lu)({ channelId: v, widgetType: t, secondaryValue: "context_menu_close_chat" }), (0, a.Z_)();
               },
           })
-        : t && x
-          ? (0, r.jsx)(l.Drp, {
+        : n && p
+          ? (0, l.jsx)(r.Drp, {
                 id: "open-chat",
-                label: h.intl.string(f.default.KWrMk5),
+                label: E.intl.string(f.default.KWrMk5),
                 action: () => {
                     switch (e.kind) {
                         case "CHANNEL":
@@ -55,7 +55,7 @@ function E(e, n) {
                                     messageId: null,
                                 },
                                 source: A.B.MANUAL,
-                                widgetType: n,
+                                widgetType: t,
                             });
                             break;
                         case "DM_USER":
@@ -74,10 +74,10 @@ function E(e, n) {
                                             kind: c.bB.DM_USER,
                                             userId: e.userId,
                                             messageId: null,
-                                            existingChannelId: I,
+                                            existingChannelId: h,
                                         },
                                         source: A.B.MANUAL,
-                                        widgetType: n,
+                                        widgetType: t,
                                     });
                                 } catch {
                                 } finally {

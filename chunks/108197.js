@@ -12,8 +12,8 @@ var i = n(627968),
     A = n(152007),
     _ = n(747926),
     m = n(734057),
-    g = n(222823),
-    p = n(977997),
+    p = n(222823),
+    g = n(977997),
     f = n(607567),
     x = n(892896),
     E = n(884415),
@@ -91,15 +91,15 @@ function v(e) {
 let j = l.memo(function (e) {
     let { thread: t, isSelectedChannel: s, isSelectedVoice: y, isLast: j, withGuildIcon: R } = e,
         O = (0, o.bG)([f.Ay], () => f.Ay.getVoiceStatesForChannel(t), [t]),
-        L = (0, o.bG)([p.A], () => p.A.hasVideo(t.id)),
+        L = (0, o.bG)([g.A], () => g.A.hasVideo(t.id)),
         {
             unread: M,
             mentionCount: D,
             isMentionLowImportance: U,
-        } = (0, o.cf)([g.Ay], () => ({
-            unread: g.Ay.hasUnread(t.id),
-            mentionCount: g.Ay.getMentionCount(t.id),
-            isMentionLowImportance: g.Ay.getIsMentionLowImportance(t.id),
+        } = (0, o.cf)([p.Ay], () => ({
+            unread: p.Ay.hasUnread(t.id),
+            mentionCount: p.Ay.getMentionCount(t.id),
+            isMentionLowImportance: p.Ay.getIsMentionLowImportance(t.id),
         })),
         G = (0, o.bG)([A.A], () => A.A.isMuted(t.id)),
         P = l.useCallback(
@@ -116,7 +116,7 @@ let j = l.memo(function (e) {
                 let l = m.A.getChannel(t.id);
                 null != l &&
                     (0, h.L3)(e, async () => {
-                        let { default: e } = await n.e("33").then(n.bind(n, 44536));
+                        let { default: e } = await n.e("22414").then(n.bind(n, 44536));
                         return (t) => (0, i.jsx)(e, { ...t, channel: l });
                     });
             },

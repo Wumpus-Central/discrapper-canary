@@ -31,8 +31,8 @@ var r = n(627968),
     L = n(427262),
     w = n(985018),
     M = n(782691),
-    P = n(732497);
-function x(e) {
+    x = n(732497);
+function P(e) {
     let { member: t, guildId: s, channelId: a, role: o } = e,
         u = i.useRef(null),
         c = (0, l.bG)([b.A], () => b.A.getGuild(s)?.ownerId, [s]),
@@ -70,11 +70,11 @@ function x(e) {
                                       let { default: e } = await Promise.all([
                                           n.e("41927"),
                                           n.e("97262"),
-                                          n.e("11478"),
+                                          n.e("3795"),
                                           n.e("42128"),
-                                          n.e("97283"),
+                                          n.e("61474"),
                                           n.e("84841"),
-                                          n.e("19901"),
+                                          n.e("64764"),
                                       ]).then(n.bind(n, 107632));
                                       return (t) =>
                                           (0, r.jsx)(e, { ...t, user: f, guildId: s, channel: p, showMediaItems: !0 });
@@ -119,7 +119,7 @@ function k(e) {
         T = i.useMemo(
             () =>
                 null != m
-                    ? h.map((e) => (0, r.jsx)(x, { member: e, guildId: s, channelId: o, role: m }, e.userId))
+                    ? h.map((e) => (0, r.jsx)(P, { member: e, guildId: s, channelId: o, role: m }, e.userId))
                     : [],
             [o, s, m, h],
         );
@@ -171,7 +171,7 @@ function U(e) {
                         (0, r.jsx)(c.WYI, {
                             color: (0, o.Hl)(E.color),
                             colors: C,
-                            className: P.m,
+                            className: x.m,
                             background: !1,
                             tooltip: !1,
                         }),

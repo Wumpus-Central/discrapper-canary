@@ -1,3 +1,4 @@
+"use strict";
 n.d(t, { I: () => i });
 let i = [
     { id: "749054660769218631", format_type: 3, description: "Wumpus waves hello", name: "Wave" },

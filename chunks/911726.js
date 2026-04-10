@@ -1,28 +1,29 @@
-n.d(t, { Ay: () => H });
+"use strict";
+n.d(t, { Ay: () => w });
 var i,
-    l = n(627968),
-    a = n(64700),
-    r = n(503698),
-    s = n.n(r),
-    o = n(106778),
-    c = n(835245),
-    d = n(23339),
-    u = n(319060),
+    r = n(627968),
+    s = n(64700),
+    l = n(503698),
+    a = n.n(l),
+    c = n(106778),
+    o = n(835245),
+    u = n(23339),
+    d = n(319060),
     _ = n(397927),
-    m = n(21161),
+    E = n(21161),
     A = n(943961),
-    E = n(513609),
+    m = n(513609),
     I = n(928830),
     T = n(567771),
-    f = n(780964),
-    N = n(840065),
-    C = n(473145),
-    g = n(763754),
-    h = n(888675),
-    p = n(921066),
-    x = n(652215),
+    g = n(780964),
+    N = n(858897),
+    f = n(473145),
+    p = n(763754),
+    C = n(888675),
+    h = n(921066),
+    S = n(652215),
     R = n(985018),
-    S = n(699987);
+    x = n(699987);
 let O = {
     enter: { BEG: 0, END: 22 },
     confetti: { BEG: 23, END: 119 },
@@ -37,9 +38,9 @@ var M =
     (i.BOTTOM_RIGHT = "BOTTOM_RIGHT"),
     i);
 let D = ["TOP_LEFT", "TOP_RIGHT"],
-    P = (0, d.xI)(u.A.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
-    U = { leafPosition: { x: 85, y: 125 }, leafRotationDirection: 1 },
-    v = Object.freeze({
+    U = (0, u.xI)(d.A.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
+    P = { leafPosition: { x: 85, y: 125 }, leafRotationDirection: 1 },
+    L = Object.freeze({
         TOP_LEFT: {
             getConfettiPosition: (e) => ({ x: e - 11, y: e - 125 }),
             confettiVelocityDirection: { x: 1, y: 1 },
@@ -53,21 +54,21 @@ let D = ["TOP_LEFT", "TOP_RIGHT"],
             leafRotationDirection: -1,
         },
         BOTTOM_LEFT: {
-            ...U,
+            ...P,
             getConfettiPosition: (e) => ({ x: e - 11, y: 125 }),
             confettiVelocityDirection: { x: 1, y: -1 },
         },
         BOTTOM_RIGHT: {
-            ...U,
+            ...P,
             getConfettiPosition: (e) => ({ x: 11, y: 125 }),
             confettiVelocityDirection: { x: -1, y: -1 },
         },
     }),
-    L = "falling-leaf",
-    j = ["#61D5B2"],
-    y = n(80705),
-    b = n(232460),
-    k = [y, b];
+    v = "falling-leaf",
+    y = ["#61D5B2"],
+    j = n(80705),
+    k = n(232460),
+    b = [j, k];
 function G() {
     return n
         .e("98150")
@@ -77,11 +78,11 @@ function G() {
             return t;
         });
 }
-function F(e) {
-    let { onAnimationComplete: t, onClick: n, position: i, size: r } = e,
-        d = a.useRef(null),
-        [u, A] = a.useState(null),
-        [E] = a.useState(
+function H(e) {
+    let { onAnimationComplete: t, onClick: n, position: i, size: l } = e,
+        u = s.useRef(null),
+        [d, A] = s.useState(null),
+        [m] = s.useState(
             i ??
                 (function () {
                     switch (Math.floor(Math.random() * Object.keys(M).length)) {
@@ -96,10 +97,10 @@ function F(e) {
                     }
                 })(),
         ),
-        { createMultipleConfettiAt: I, confettiCanvas: T } = a.useContext(m.x),
-        [f, N] = a.useState(null),
-        C = (0, o.f9)(T, f),
-        g = (function (e, t) {
+        { createMultipleConfettiAt: I, confettiCanvas: T } = s.useContext(E.x),
+        [g, N] = s.useState(null),
+        f = (0, c.f9)(T, g),
+        p = (function (e, t) {
             if (null == e) return "enter";
             switch (e) {
                 case "enter":
@@ -114,29 +115,29 @@ function F(e) {
                 case "exit":
                     return "enter";
             }
-        })(u, E),
-        h = D.includes(E),
-        p = h && "exit" === u,
-        x = a.useCallback((e) => {
+        })(d, m),
+        C = D.includes(m),
+        h = C && "exit" === d,
+        S = s.useCallback((e) => {
             A(e);
         }, []),
-        R = a.useCallback(() => {
-            "exit" === u && t?.();
-        }, [t, u]),
-        U = a.useCallback((e) => {
-            d.current = e;
+        R = s.useCallback(() => {
+            "exit" === d && t?.();
+        }, [t, d]),
+        P = s.useCallback((e) => {
+            u.current = e;
         }, []);
     return (
-        a.useEffect(() => {
-            if ("confetti" === u) {
-                let { confettiVelocityDirection: e } = v[E],
+        s.useEffect(() => {
+            if ("confetti" === d) {
+                let { confettiVelocityDirection: e } = L[m],
                     t = (function (e, t) {
-                        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : P,
+                        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : U,
                             i = e?.getBoundingClientRect();
                         if (null == i) return { x: 0, y: 0 };
-                        let l = v[t].getConfettiPosition(n);
-                        return { x: i.left + l.x, y: i.top + l.y };
-                    })(d.current, E, r);
+                        let r = L[t].getConfettiPosition(n);
+                        return { x: i.left + r.x, y: i.top + r.y };
+                    })(u.current, m, l);
                 I(t.x, t.y, {
                     velocity: {
                         type: "static-random",
@@ -145,21 +146,21 @@ function F(e) {
                     },
                 });
             }
-        }, [I, E, u, r]),
-        a.useEffect(() => {
-            if (h && "leaf_fall" === u) {
-                let e = v[E].leafRotationDirection;
-                C.createConfetti(
+        }, [I, m, d, l]),
+        s.useEffect(() => {
+            if (C && "leaf_fall" === d) {
+                let e = L[m].leafRotationDirection;
+                f.createConfetti(
                     {
-                        id: `${L}-${(0, c.A)()}`,
+                        id: `${v}-${(0, o.A)()}`,
                         position: {
                             type: "static",
                             value: (function (e, t) {
                                 let n = e?.getBoundingClientRect();
                                 if (null == n) return { x: 0, y: 0 };
-                                let i = v[t];
+                                let i = L[t];
                                 return { x: n.left + i.leafPosition.x, y: n.top + i.leafPosition.y };
-                            })(d.current, E),
+                            })(u.current, m),
                         },
                         size: { type: "static", value: 45 },
                         rotation: {
@@ -170,27 +171,27 @@ function F(e) {
                             maxAddValue: { x: 0, y: 0, z: 12 * e },
                         },
                     },
-                    { sprite: "TOP_LEFT" === E ? y : b },
+                    { sprite: "TOP_LEFT" === m ? j : k },
                 );
             }
-        }, [h, C, E, u]),
-        (0, l.jsxs)(l.Fragment, {
+        }, [C, f, m, d]),
+        (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, l.jsx)(o.K_, { ref: N, sprites: k, colors: j, spriteWidth: 45, spriteHeight: 45 }),
-                (0, l.jsx)(_.DUT, {
+                (0, r.jsx)(c.K_, { ref: N, sprites: b, colors: y, spriteWidth: 45, spriteHeight: 45 }),
+                (0, r.jsx)(_.DUT, {
                     onClick: n,
-                    className: s()(S.FT, {
-                        [S.FZ]: "TOP_LEFT" === E,
-                        [S.S]: "TOP_RIGHT" === E,
-                        [S.Re]: "BOTTOM_LEFT" === E,
-                        [S._t]: "BOTTOM_RIGHT" === E,
+                    className: a()(x.FT, {
+                        [x.FZ]: "TOP_LEFT" === m,
+                        [x.S]: "TOP_RIGHT" === m,
+                        [x.Re]: "BOTTOM_LEFT" === m,
+                        [x._t]: "BOTTOM_RIGHT" === m,
                     }),
-                    children: (0, l.jsx)(_.tvC, {
-                        animationRef: U,
-                        className: s()(S.oQ, { [S.EG]: p }),
-                        nextScene: g,
+                    children: (0, r.jsx)(_.tvC, {
+                        animationRef: P,
+                        className: a()(x.oQ, { [x.EG]: h }),
+                        nextScene: p,
                         sceneSegments: O,
-                        onScenePlay: x,
+                        onScenePlay: S,
                         onSceneComplete: R,
                         importData: G,
                         pauseWhileUnfocused: !1,
@@ -200,105 +201,105 @@ function F(e) {
         })
     );
 }
-function B(e) {
+function F(e) {
     let t,
-        { message: n, compact: i, guild: r, usernameHook: s, onClickMessage: o } = e,
-        c = (function (e) {
+        { message: n, compact: i, guild: l, usernameHook: a, onClickMessage: c } = e,
+        o = (function (e) {
             switch (e.type) {
-                case x.lAJ.GUILD_BOOST_TIER_1:
-                    return x.TVA.TIER_1;
-                case x.lAJ.GUILD_BOOST_TIER_2:
-                    return x.TVA.TIER_2;
-                case x.lAJ.GUILD_BOOST_TIER_3:
-                    return x.TVA.TIER_3;
+                case S.lAJ.GUILD_BOOST_TIER_1:
+                    return S.TVA.TIER_1;
+                case S.lAJ.GUILD_BOOST_TIER_2:
+                    return S.TVA.TIER_2;
+                case S.lAJ.GUILD_BOOST_TIER_3:
+                    return S.TVA.TIER_3;
             }
             return null;
         })(n),
-        d = (0, T.A)(n),
-        { createMultipleConfettiAt: u, addClickListener: A } = a.useContext(m.x),
-        [p, O] = a.useState(!1),
-        M = a.useRef(null),
-        { reducedMotion: D } = a.useContext(_.CZY),
-        P = (0, g.Ay)(n),
-        U = P.nick,
-        v = s(P);
+        u = (0, T.A)(n),
+        { createMultipleConfettiAt: d, addClickListener: A } = s.useContext(E.x),
+        [h, O] = s.useState(!1),
+        M = s.useRef(null),
+        { reducedMotion: D } = s.useContext(_.CZY),
+        U = (0, p.Ay)(n),
+        P = U.nick,
+        L = a(U);
     t =
-        null == c || null == r
-            ? d > 1
-                ? R.intl.format(R.t.yfC9ds, { username: U, usernameHook: v, numSubscriptions: d })
-                : R.intl.format(R.t["57St/7"], { username: U, usernameHook: v })
-            : d > 1
+        null == o || null == l
+            ? u > 1
+                ? R.intl.format(R.t.yfC9ds, { username: P, usernameHook: L, numSubscriptions: u })
+                : R.intl.format(R.t["57St/7"], { username: P, usernameHook: L })
+            : u > 1
               ? R.intl.format(R.t.PO9uJD, {
-                    username: U,
-                    usernameHook: v,
-                    numSubscriptions: d,
-                    guildName: r.name,
-                    newTierName: (0, C.gb)(c),
+                    username: P,
+                    usernameHook: L,
+                    numSubscriptions: u,
+                    guildName: l.name,
+                    newTierName: (0, f.gb)(o),
                 })
               : R.intl.format(R.t.cUfTTE, {
-                    username: U,
-                    usernameHook: v,
-                    guildName: r.name,
-                    newTierName: (0, C.gb)(c),
+                    username: P,
+                    usernameHook: L,
+                    guildName: l.name,
+                    newTierName: (0, f.gb)(o),
                 });
-    let j = a.useCallback(() => {
+    let y = s.useCallback(() => {
             if (!D.enabled)
-                if (p || 0 !== Math.floor(50 * Math.random())) {
+                if (h || 0 !== Math.floor(50 * Math.random())) {
                     let e = M.current?.getBoundingClientRect();
                     if (null == e) return;
-                    u(e.left + e.width / 2, e.top + e.height / 2);
+                    d(e.left + e.width / 2, e.top + e.height / 2);
                 } else O(!0);
-        }, [u, D, p]),
-        y = a.useCallback(() => {
+        }, [d, D, h]),
+        j = s.useCallback(() => {
             O(!1);
         }, []),
-        b = a.useCallback(() => {
-            (0, I.O9)({ settingsVisible: !0 }), (0, N.openUserSettings)(f.X.POGGERMODE_PANEL), O(!1);
+        k = s.useCallback(() => {
+            (0, I.O9)({ settingsVisible: !0 }), (0, N.openUserSettings)(g.X.POGGERMODE_PANEL), O(!1);
         }, []),
-        k = a.useCallback(
+        b = s.useCallback(
             (e, t) => {
-                t?.id.startsWith(L) && b();
+                t?.id.startsWith(v) && k();
             },
-            [b],
+            [k],
         );
-    a.useEffect(() => A(k));
-    let G = a.useCallback(
+    s.useEffect(() => A(b));
+    let G = s.useCallback(
             (e) => {
-                e.target === e.currentTarget && o(e);
+                e.target === e.currentTarget && c(e);
             },
-            [o],
+            [c],
         ),
-        B = (0, l.jsx)(_.DUT, {
-            className: S.P0,
+        F = (0, r.jsx)(_.DUT, {
+            className: x.P0,
             innerRef: M,
-            onClick: o,
-            children: (0, l.jsx)(_._Jp, {
+            onClick: c,
+            children: (0, r.jsx)(_._Jp, {
                 color: _.LU0.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                className: S.Kk,
-                onMouseEnter: j,
+                className: x.Kk,
+                onMouseEnter: y,
             }),
         });
-    return (0, l.jsxs)(h.A, {
-        iconNode: B,
+    return (0, r.jsxs)(C.A, {
+        iconNode: F,
         timestamp: n.timestamp,
         compact: i,
         children: [
-            (0, l.jsx)("div", { onClick: G, className: S.iU, children: t }),
-            p
-                ? (0, l.jsx)(E.Ay, {
-                      children: (0, l.jsx)("div", {
-                          className: S.LK,
-                          children: (0, l.jsx)(F, { onAnimationComplete: y, onClick: b }),
+            (0, r.jsx)("div", { onClick: G, className: x.iU, children: t }),
+            h
+                ? (0, r.jsx)(m.Ay, {
+                      children: (0, r.jsx)("div", {
+                          className: x.LK,
+                          children: (0, r.jsx)(H, { onAnimationComplete: j, onClick: k }),
                       }),
                   })
                 : null,
         ],
     });
 }
-function H(e) {
-    let { message: t, compact: n, guild: i, usernameHook: a } = e,
-        { enabled: r, compact: s } = A.X.useConfig({ location: "UserPremiumGuildSubscription" });
-    return t.type === x.lAJ.GUILD_BOOST && r && !n
-        ? (0, l.jsx)(p.A, { message: t, guild: i, usernameHook: a, compact: s })
-        : (0, l.jsx)(B, { ...e });
+function w(e) {
+    let { message: t, compact: n, guild: i, usernameHook: s } = e,
+        { enabled: l, showCta: a } = A.X.useConfig({ location: "UserPremiumGuildSubscription" });
+    return t.type === S.lAJ.GUILD_BOOST && l && !n
+        ? (0, r.jsx)(h.A, { message: t, guild: i, usernameHook: s, showCta: a })
+        : (0, r.jsx)(F, { ...e });
 }

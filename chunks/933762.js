@@ -1,36 +1,37 @@
+"use strict";
 n.d(t, { A: () => _ });
 var i = n(627968);
 n(64700);
-var l = n(311907),
-    a = n(397927),
-    r = n(47167),
-    s = n(734057),
-    o = n(763754),
-    c = n(888675),
-    d = n(985018),
-    u = n(942602);
+var r = n(311907),
+    s = n(397927),
+    l = n(47167),
+    a = n(734057),
+    c = n(763754),
+    o = n(888675),
+    u = n(985018),
+    d = n(449105);
 function _(e) {
     let {
             message: t,
             compact: n,
             usernameHook: _,
-            onClickThread: A,
-            onClickViewThreads: m,
-            onContextMenuThread: E,
+            onClickThread: E,
+            onClickViewThreads: A,
+            onContextMenuThread: m,
         } = e,
-        T = (0, o.Ay)(t),
-        I = _(T),
-        N = (0, l.bG)([s.A], () => s.A.getChannel(t.messageReference?.channel_id)),
-        g = (0, r.Ay)(N),
-        f = d.intl.format(d.t.cZ9Uf2, {
-            actorName: T.nick,
-            actorHook: I,
-            threadName: g ?? t.content,
-            threadOnClick: { onClick: A, onContextMenu: E },
-            viewThreadsOnClick: m,
+        I = (0, c.Ay)(t),
+        T = _(I),
+        g = (0, r.bG)([a.A], () => a.A.getChannel(t.messageReference?.channel_id)),
+        N = (0, l.Ay)(g),
+        f = u.intl.format(u.t.cZ9Uf2, {
+            actorName: I.nick,
+            actorHook: T,
+            threadName: N ?? t.content,
+            threadOnClick: { onClick: E, onContextMenu: m },
+            viewThreadsOnClick: A,
         });
-    return (0, i.jsx)(c.A, {
-        iconNode: (0, i.jsx)(a.ysw, { size: "md", color: "currentColor", className: u.K }),
+    return (0, i.jsx)(o.A, {
+        iconNode: (0, i.jsx)(s.ysw, { size: "md", color: "currentColor", className: d.K }),
         timestamp: t.timestamp,
         compact: n,
         children: f,

@@ -1,100 +1,101 @@
-n.d(t, { H6: () => d, p3: () => S, qv: () => _, wP: () => h }), n(321073);
-var r = n(64700),
-    i = n(942381),
-    l = n(265690),
-    a = n(121894),
-    u = n(198982),
-    s = n(137207),
-    E = n(904813),
-    o = n(411335),
-    A = n(652215);
-let c = {},
-    g = (0, l.h)((e, t) => ({
+"use strict";
+n.d(t, { H6: () => m, p3: () => A, qv: () => I, wP: () => T }), n(321073);
+var i = n(64700),
+    r = n(942381),
+    s = n(265690),
+    l = n(121894),
+    a = n(198982),
+    c = n(137207),
+    o = n(904813),
+    u = n(411335),
+    d = n(652215);
+let _ = {},
+    E = (0, s.h)((e, t) => ({
         rules: {},
         fetching: !1,
         error: null,
         updateRule: (n) => {
-            let { guildId: r, id: i, triggerType: l } = n,
-                { rules: u } = t(),
-                s = u[r] ?? {},
-                o = s[l] ?? [],
-                A = o.some((e) => e.id === i),
-                c = o.filter((e) => !(0, E.R)(e.id) || e.triggerType !== l),
-                g = A ? c.map((e) => (e.id === i ? n : e)) : [...c, n];
-            (0, a.r)(() => {
-                e({ rules: { ...u, [r]: { ...s, [l]: g } }, error: null });
+            let { guildId: i, id: r, triggerType: s } = n,
+                { rules: a } = t(),
+                c = a[i] ?? {},
+                u = c[s] ?? [],
+                d = u.some((e) => e.id === r),
+                _ = u.filter((e) => !(0, o.R)(e.id) || e.triggerType !== s),
+                E = d ? _.map((e) => (e.id === r ? n : e)) : [..._, n];
+            (0, l.r)(() => {
+                e({ rules: { ...a, [i]: { ...c, [s]: E } }, error: null });
             });
         },
-        removeRule: (n, r) => {
-            let { rules: i } = t(),
-                l = i[r],
-                u = Object.keys(l).reduce((e, t) => {
-                    let r = Number(t),
-                        i = l[r] ?? [];
-                    return (e[r] = i.filter((e) => e.id !== n)), e;
+        removeRule: (n, i) => {
+            let { rules: r } = t(),
+                s = r[i],
+                a = Object.keys(s).reduce((e, t) => {
+                    let i = Number(t),
+                        r = s[i] ?? [];
+                    return (e[i] = r.filter((e) => e.id !== n)), e;
                 }, {});
-            (0, a.r)(() => {
-                e({ rules: { ...i, [r]: u }, error: null });
+            (0, l.r)(() => {
+                e({ rules: { ...r, [i]: a }, error: null });
             });
         },
         syncRules: async (n) => {
-            var r;
-            let i;
-            if (((i = Date.now()), i - (c[n] ?? 0) > 2e4)) {
-                c[n] = Date.now();
+            var i;
+            let r;
+            if (((r = Date.now()), r - (_[n] ?? 0) > 2e4)) {
+                _[n] = Date.now();
                 try {
-                    let i,
-                        l =
-                            ((r = await (0, s.H0)(n)),
-                            (i = {
-                                [o.uh.KEYWORD]: [],
-                                [o.uh.ML_SPAM]: [],
-                                [o.uh.DEFAULT_KEYWORD_LIST]: [],
-                                [o.uh.MENTION_SPAM]: [],
-                                [o.uh.USER_PROFILE]: [],
-                                [o.uh.SERVER_POLICY]: [],
+                    let r,
+                        s =
+                            ((i = await (0, c.H0)(n)),
+                            (r = {
+                                [u.uh.KEYWORD]: [],
+                                [u.uh.ML_SPAM]: [],
+                                [u.uh.DEFAULT_KEYWORD_LIST]: [],
+                                [u.uh.MENTION_SPAM]: [],
+                                [u.uh.USER_PROFILE]: [],
+                                [u.uh.SERVER_POLICY]: [],
                             }),
-                            r.forEach((e) => {
+                            i.forEach((e) => {
                                 let { triggerType: t } = e;
-                                i[t]?.push(e);
+                                r[t]?.push(e);
                             }),
-                            i),
-                        u = t().rules;
-                    (0, a.r)(() => {
-                        e({ rules: { ...u, [n]: l }, error: null });
+                            r),
+                        a = t().rules;
+                    (0, l.r)(() => {
+                        e({ rules: { ...a, [n]: s }, error: null });
                     });
                 } catch (n) {
-                    let t = new u.LG(n);
-                    (0, a.r)(() => {
+                    let t = new a.LG(n);
+                    (0, l.r)(() => {
                         e({ error: t });
                     });
                 }
             }
         },
     })),
-    S = (e, t) => {
-        let n = g.getState().rules;
+    A = (e, t) => {
+        let n = E.getState().rules;
         return (n[e]?.[t] ?? []).length;
     };
-function d(e) {
-    let [t, n] = r.useState(!1),
-        [l, a] = g((e) => [e.syncRules, e.fetching], i.x);
+function m(e) {
+    let [t, n] = i.useState(!1),
+        [s, l] = E((e) => [e.syncRules, e.fetching], r.x);
     return [
         t,
-        r.useCallback(async () => {
-            if (!a && null != e)
+        i.useCallback(async () => {
+            if (!l && null != e)
                 try {
-                    n(!0), await l(e);
+                    n(!0), await s(e);
                 } finally {
                     n(!1);
                 }
-        }, [e, a, l]),
+        }, [e, l, s]),
     ];
 }
-function _(e) {
-    let [t, n] = d(e);
+function I(e) {
+    let [t, n] = m(e);
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             (async () => {
                 await n();
             })();
@@ -102,9 +103,9 @@ function _(e) {
         [t, n]
     );
 }
-function h(e) {
-    return g(
-        (t) => ({ rulesByTriggerType: t.rules[e ?? A.dJq] ?? {}, updateRule: t.updateRule, removeRule: t.removeRule }),
-        i.x,
+function T(e) {
+    return E(
+        (t) => ({ rulesByTriggerType: t.rules[e ?? d.dJq] ?? {}, updateRule: t.updateRule, removeRule: t.removeRule }),
+        r.x,
     );
 }

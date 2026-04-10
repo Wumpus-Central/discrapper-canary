@@ -1,40 +1,41 @@
-n.d(t, { A: () => d });
+"use strict";
+n.d(t, { A: () => u });
 var i = n(627968);
 n(64700);
-var l = n(397927),
-    a = n(47167),
-    r = n(402216),
-    s = n(763754),
-    o = n(888675),
-    c = n(985018);
-function d(e) {
-    let { message: t, channel: n, playingActivity: d, onJoinStream: u, usernameHook: _, compact: A } = e,
-        m = (0, s.Ay)(t),
-        E = (0, a.Ay)(n),
-        T = t.call?.duration,
-        I = _(m),
-        N = c.intl.format(c.t.FKXvaI, {
-            username: m.nick,
-            activityName: null != d ? d.name : "unknown",
-            onJoinStream: u,
-            usernameHook: I,
+var r = n(397927),
+    s = n(47167),
+    l = n(402216),
+    a = n(763754),
+    c = n(888675),
+    o = n(985018);
+function u(e) {
+    let { message: t, channel: n, playingActivity: u, onJoinStream: d, usernameHook: _, compact: E } = e,
+        A = (0, a.Ay)(t),
+        m = (0, s.Ay)(n),
+        I = t.call?.duration,
+        T = _(A),
+        g = o.intl.format(o.t.FKXvaI, {
+            username: A.nick,
+            activityName: null != u ? u.name : "unknown",
+            onJoinStream: d,
+            usernameHook: T,
         });
     return (
-        null != T &&
-            (N = c.intl.format(c.t.NEFxtd, {
-                username: m.nick,
-                duration: T.humanize(),
-                channelName: E ?? "",
-                usernameHook: I,
+        null != I &&
+            (g = o.intl.format(o.t.NEFxtd, {
+                username: A.nick,
+                duration: I.humanize(),
+                channelName: m ?? "",
+                usernameHook: T,
             })),
-        (0, i.jsx)(o.A, {
+        (0, i.jsx)(c.A, {
             iconNode:
-                null != T
-                    ? (0, i.jsx)(l.GT3, { size: "custom", color: "currentColor", width: 20, height: 20 })
-                    : (0, i.jsx)(r.Ay, { size: r.Ay.Sizes.SMALL }),
+                null != I
+                    ? (0, i.jsx)(r.GT3, { size: "custom", color: "currentColor", width: 20, height: 20 })
+                    : (0, i.jsx)(l.Ay, { size: l.Ay.Sizes.SMALL }),
             timestamp: t.timestamp,
-            compact: A,
-            children: N,
+            compact: E,
+            children: g,
         })
     );
 }

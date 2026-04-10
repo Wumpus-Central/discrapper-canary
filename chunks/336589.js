@@ -1,51 +1,52 @@
-n.d(t, { I: () => E });
+"use strict";
+n.d(t, { I: () => f });
 var i = n(627968),
-    l = n(64700),
-    a = n(311907),
-    r = n(732955),
-    s = n(355622),
-    o = n(148355),
-    d = n(406704),
-    c = n(696451),
-    u = n(71393),
-    m = n(576705),
-    _ = n(287809),
-    h = n(460350),
-    p = n(167681),
-    g = n(652215),
-    A = n(985018),
-    f = n(182777);
-let x = (e) => {
+    r = n(64700),
+    s = n(311907),
+    l = n(732955),
+    a = n(355622),
+    c = n(148355),
+    o = n(406704),
+    u = n(696451),
+    d = n(71393),
+    _ = n(576705),
+    E = n(287809),
+    A = n(460350),
+    m = n(167681),
+    I = n(652215),
+    T = n(985018),
+    g = n(453302);
+let N = (e) => {
         let { channel: t, message: n } = e,
-            a = (0, p.dv)(n.id),
-            d = l.useCallback(() => {
-                (0, h.i)({ type: s.oU.FORM, content: "", channel: t }).then((e) => {
+            s = (0, m.dv)(n.id),
+            o = r.useCallback(() => {
+                (0, A.i)({ type: a.oU.FORM, content: "", channel: t }).then((e) => {
                     let { valid: i } = e;
-                    i && (0, p.S9)(t, n, a.id);
+                    i && (0, m.S9)(t, n, s.id);
                 });
-            }, [t, n, a]);
+            }, [t, n, s]);
         return (0, i.jsx)("div", {
-            className: f.T,
-            children: (0, i.jsx)(r.$nd, {
-                icon: { type: "sticker", asset: a, component: o.A },
-                text: A.intl.string(A.t["7Tj6HT"]),
-                onClick: d,
+            className: g.T,
+            children: (0, i.jsx)(l.$nd, {
+                icon: { type: "sticker", asset: s, component: c.A },
+                text: T.intl.string(T.t["7Tj6HT"]),
+                onClick: o,
                 variant: "secondary",
             }),
         });
     },
-    E = (e) => {
+    f = (e) => {
         let { message: t, channel: n } = e,
-            l = n.getGuildId(),
-            r = (0, a.bG)([_.default, m.A, u.A, c.Ay], () => {
-                let e = _.default.getCurrentUser(),
-                    i = (0, d.UJ)(n),
-                    a = m.A.can(g.xBc.SEND_MESSAGES, n),
-                    r = null != l && null != e && c.Ay.getMember(l, e.id)?.isPending,
-                    s = t.author.bot,
-                    o = u.A.getGuild(l),
-                    h = null != o && (o.systemChannelFlags & g.ogj.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
-                return a && !i && !r && !s && h;
+            r = n.getGuildId(),
+            l = (0, s.bG)([E.default, _.A, d.A, u.Ay], () => {
+                let e = E.default.getCurrentUser(),
+                    i = (0, o.UJ)(n),
+                    s = _.A.can(I.xBc.SEND_MESSAGES, n),
+                    l = null != r && null != e && u.Ay.getMember(r, e.id)?.isPending,
+                    a = t.author.bot,
+                    c = d.A.getGuild(r),
+                    A = null != c && (c.systemChannelFlags & I.ogj.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
+                return s && !i && !l && !a && A;
             });
-        return null != l && r ? (0, i.jsx)(x, { message: t, channel: n }) : null;
+        return null != r && l ? (0, i.jsx)(N, { message: t, channel: n }) : null;
     };

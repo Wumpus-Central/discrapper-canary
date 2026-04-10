@@ -1,38 +1,39 @@
-n.d(t, { A: () => g });
+"use strict";
+n.d(t, { A: () => I });
 var i = n(627968);
 n(64700);
-var l = n(417597),
-    a = n(397927),
-    r = n(775602),
-    s = n(763754),
-    o = n(447215),
-    d = n(888675),
-    c = n(976860),
-    u = n(141593),
-    m = n(652215),
-    _ = n(985018),
-    h = n(221110);
-function p(e) {
-    let { guildId: t, user: n, username: s } = e,
-        o = (0, l.bG)([r.A], () => !r.A.useReducedMotion),
-        d = n.getAvatarURL(t, 56, o),
-        c = (0, i.jsx)("img", { src: d, className: h.dj, alt: "" });
+var r = n(417597),
+    s = n(397927),
+    l = n(775602),
+    a = n(763754),
+    c = n(447215),
+    o = n(888675),
+    u = n(976860),
+    d = n(141593),
+    _ = n(652215),
+    E = n(985018),
+    A = n(367537);
+function m(e) {
+    let { guildId: t, user: n, username: a } = e,
+        c = (0, r.bG)([l.A], () => !l.A.useReducedMotion),
+        o = n.getAvatarURL(t, 56, c),
+        u = (0, i.jsx)("img", { src: o, className: A.dj, alt: "" });
     return (0, i.jsxs)("div", {
-        className: h.uE,
+        className: A.uE,
         role: "img",
-        "aria-label": _.intl.formatToPlainString(_.t["utf8+W"], { username: s }),
+        "aria-label": E.intl.formatToPlainString(E.t["utf8+W"], { username: a }),
         children: [
-            (0, i.jsx)(u.A, { avatar: c }),
-            (0, i.jsx)(a.Text, {
-                className: h.Bi,
+            (0, i.jsx)(d.A, { avatar: u }),
+            (0, i.jsx)(s.Text, {
+                className: A.Bi,
                 tag: "p",
                 color: "status-positive-text",
                 variant: "heading-xl/medium",
-                children: _.intl.format(_.t["52BAtC"], {
-                    username: s,
+                children: E.intl.format(E.t["52BAtC"], {
+                    username: a,
                     usernameHook: (e, t) =>
                         (0, i.jsx)(
-                            a.Text,
+                            s.Text,
                             {
                                 tag: "span",
                                 color: "status-positive-text",
@@ -47,24 +48,24 @@ function p(e) {
         ],
     });
 }
-function g(e) {
-    let { channel: t, message: l, compact: a } = e,
-        r = (0, s.Ay)(l),
-        u = (0, o.P)({ user: l.author, channelId: t.id, guildId: t.guild_id, messageId: l.id })(r),
-        h = _.intl.format(_.t.TQs67g, {
-            username: r.nick,
-            usernameHook: u,
-            productName: l.purchaseNotification?.guild_product_purchase?.product_name ?? "",
+function I(e) {
+    let { channel: t, message: r, compact: s } = e,
+        l = (0, a.Ay)(r),
+        d = (0, c.P)({ user: r.author, channelId: t.id, guildId: t.guild_id, messageId: r.id })(l),
+        A = E.intl.format(E.t.TQs67g, {
+            username: l.nick,
+            usernameHook: d,
+            productName: r.purchaseNotification?.guild_product_purchase?.product_name ?? "",
             handleProductListingClick: () => {
-                (0, c.pX)(
-                    m.BVt.GUILD_PRODUCT(t.guild_id, l.purchaseNotification?.guild_product_purchase?.listing_id ?? ""),
+                (0, u.pX)(
+                    _.BVt.GUILD_PRODUCT(t.guild_id, r.purchaseNotification?.guild_product_purchase?.listing_id ?? ""),
                 );
             },
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(d.A, { icon: n(394803), timestamp: l.timestamp, compact: a, children: h }),
-            (0, i.jsx)(p, { username: r.nick, guildId: t.guild_id, user: l.author }),
+            (0, i.jsx)(o.A, { icon: n(617184), timestamp: r.timestamp, compact: s, children: A }),
+            (0, i.jsx)(m, { username: l.nick, guildId: t.guild_id, user: r.author }),
         ],
     });
 }

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { E: () => u, M8: () => l, NI: () => o, sq: () => s });
+n.d(t, { E: () => _, M8: () => l, Mn: () => d, NI: () => o, sq: () => s, zQ: () => c });
 var r = n(945810);
 let i = (0, r.mj)({
     name: "2026-03-overlay-default-keybind",
@@ -30,6 +30,18 @@ function o(e) {
 function l(e) {
     return a.useConfig({ location: e });
 }
-function u() {
-    o("OVERLAY_INITIALIZED");
+let u = (0, r.mj)({
+    name: "2026-04-overlay-streamer-mode",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});
+function c(e) {
+    return u.getConfig({ location: e });
+}
+function d(e) {
+    return u.useConfig({ location: e }).enabled;
+}
+function _() {
+    o("OVERLAY_INITIALIZED"), c("OVERLAY_INITIALIZED");
 }

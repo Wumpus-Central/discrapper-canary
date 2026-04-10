@@ -7,7 +7,7 @@ var l = n(627968),
     o = n(636922),
     E = n(734057),
     u = n(985018),
-    c = n(417174);
+    c = n(167415);
 class _ extends r.PureComponent {
     containerRef = r.createRef();
     hitRef = r.createRef();
@@ -16,7 +16,7 @@ class _ extends r.PureComponent {
         null != r &&
             (e.stopPropagation(),
             (0, s.L3)(e, async () => {
-                let { default: e } = await Promise.all([n.e("5873"), n.e("36802")]).then(n.bind(n, 847342));
+                let { default: e } = await Promise.all([n.e("64879"), n.e("42183")]).then(n.bind(n, 847342));
                 return (n) => (0, l.jsx)(e, { ...n, message: t, channel: r });
             }));
     };

@@ -1,12 +1,13 @@
-s.d(t, { A: () => i });
-var a = s(315069),
-    r = s(427157);
-class i extends a.A {
+"use strict";
+n.d(t, { A: () => s });
+var i = n(315069),
+    r = n(427157);
+class s extends i.A {
     user;
     member_type;
     accepted_at;
     static createFromServer(e) {
-        return new i(e);
+        return new s(e);
     }
     constructor(e) {
         super(), (this.user = new r.A(e.user)), (this.member_type = e.member_type), (this.accepted_at = e.accepted_at);

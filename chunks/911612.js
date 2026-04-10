@@ -31,10 +31,9 @@ function o(e) {
                           action: () =>
                               (0, s.mMO)(async () => {
                                   let { default: t } = await Promise.all([
-                                      i.e("8018"),
                                       i.e("93142"),
                                       i.e("64233"),
-                                      i.e("76738"),
+                                      i.e("42785"),
                                   ]).then(i.bind(i, 409200));
                                   return (i) => (0, n.jsx)(t, { ...i, channelType: d.rbe.GUILD_TEXT, guildId: e.id });
                               }),
@@ -49,10 +48,9 @@ function o(e) {
                           action: () =>
                               (0, s.mMO)(async () => {
                                   let { default: t } = await Promise.all([
-                                      i.e("8018"),
                                       i.e("93142"),
                                       i.e("64233"),
-                                      i.e("76738"),
+                                      i.e("42785"),
                                   ]).then(i.bind(i, 409200));
                                   return (i) =>
                                       (0, n.jsx)(t, { ...i, channelType: d.rbe.GUILD_CATEGORY, guildId: e.id });

@@ -14,11 +14,11 @@ let l = {
                 let { default: t } = await Promise.all([
                     n.e("41927"),
                     n.e("97262"),
-                    n.e("11478"),
+                    n.e("3795"),
                     n.e("42128"),
-                    n.e("97283"),
+                    n.e("61474"),
                     n.e("84841"),
-                    n.e("19901"),
+                    n.e("64764"),
                 ]).then(n.bind(n, 107632));
                 return (n) => (0, r.jsx)(t, { ...n, user: e, channel: l, guildId: s });
             });

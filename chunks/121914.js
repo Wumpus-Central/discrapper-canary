@@ -1,42 +1,42 @@
-n.d(t, { _: () => b, g: () => R });
+n.d(t, { _: () => b, g: () => O });
 var i,
-    s = n(627968),
-    l = n(64700),
-    r = n(503698),
-    a = n.n(r),
+    l = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
     o = n(311907),
-    d = n(459192),
-    u = n(397927),
+    u = n(459192),
+    d = n(397927),
     c = n(47167),
     h = n(713654),
     g = n(941971),
     m = n(734057),
-    p = n(71393),
+    f = n(71393),
     A = n(222823),
-    x = n(994500),
-    f = n(485296),
-    E = n(741961),
-    S = n(287809),
-    I = n(1193),
-    T = n(145567),
-    v = n(922611),
-    C = n(651813),
-    j = n(919843),
-    y = n(534765),
-    w = n(256688),
-    _ = n(652215),
-    O = n(985018),
-    N = n(129839),
+    I = n(994500),
+    E = n(485296),
+    p = n(741961),
+    _ = n(287809),
+    S = n(1193),
+    x = n(145567),
+    T = n(922611),
+    N = n(651813),
+    C = n(919843),
+    v = n(534765),
+    y = n(34307),
+    M = n(652215),
+    R = n(985018),
+    D = n(129839),
     b = (((i = {}).DEFAULT = "DEFAULT"), (i.CHANNEL_TYPE = "CHANNEL_TYPE"), i);
-let R = l.memo(function (e) {
+let O = r.memo(function (e) {
     let { channelId: t, selectedVoiceChannelId: n, iconVariant: i = "DEFAULT" } = e,
-        r = null != n && t === n,
-        b = (0, o.bG)([I.A], () => I.A.getSelectedChannelId() === t, [t]),
-        R = (0, o.bG)([I.A], () => I.A.getVoiceChatMinimized()),
-        M = (0, u.rdh)(u.LU0.colors.ICON_STATUS_ONLINE),
-        L = (0, o.bG)([f.A], () => !!r && !!(f.A.isAnyoneElseSpeaking() || f.A.isCurrentUserSpeaking()), [r]),
-        [z, D] = l.useState(!1),
-        { mentionCount: k, isMentionLowImportance: P } = (0, o.cf)(
+        s = null != n && t === n,
+        b = (0, o.bG)([S.A], () => S.A.getSelectedChannelId() === t, [t]),
+        O = (0, o.bG)([S.A], () => S.A.getVoiceChatMinimized()),
+        w = (0, d.rdh)(d.LU0.colors.ICON_STATUS_ONLINE),
+        j = (0, o.bG)([E.A], () => !!s && !!(E.A.isAnyoneElseSpeaking() || E.A.isCurrentUserSpeaking()), [s]),
+        [U, L] = r.useState(!1),
+        { mentionCount: k, isMentionLowImportance: G } = (0, o.cf)(
             [A.Ay],
             () =>
                 null != t
@@ -48,102 +48,102 @@ let R = l.memo(function (e) {
             [t],
         ),
         {
-            label: G,
-            user: V,
-            guild: U,
-            channel: H,
-        } = (0, o.cf)([m.A, p.A, S.default, x.A], () => {
+            label: P,
+            user: F,
+            guild: V,
+            channel: z,
+        } = (0, o.cf)([m.A, f.A, _.default, I.A], () => {
             let e = m.A.getChannel(t) ?? null;
-            if (null == e) return { label: O.intl.string(O.t.zLZPmk), user: null, guild: null, channel: null };
-            let n = (0, c.m1)(e, S.default, x.A);
-            return { label: n, user: (0, C.j)(e, S.default), guild: (0, C.P)(e, p.A), channel: e };
+            if (null == e) return { label: R.intl.string(R.t.zLZPmk), user: null, guild: null, channel: null };
+            let n = (0, c.m1)(e, _.default, I.A);
+            return { label: n, user: (0, N.j)(e, _.default), guild: (0, N.P)(e, f.A), channel: e };
         }, [t]);
-    l.useEffect(() => {
-        null == H && (0, j.b)(t);
-    }, [H, t]);
-    let Y = (0, o.bG)([E.A, S.default], () => {
-            if (null == H) return !1;
-            let e = S.default.getCurrentUser()?.id ?? null,
-                t = E.A.getTypingUsers(H.id);
+    r.useEffect(() => {
+        null == z && (0, C.b)(t);
+    }, [z, t]);
+    let H = (0, o.bG)([p.A, _.default], () => {
+            if (null == z) return !1;
+            let e = _.default.getCurrentUser()?.id ?? null,
+                t = p.A.getTypingUsers(z.id);
             for (let n in t) if (n !== e) return !0;
             return !1;
-        }, [H]),
-        Z = (0, o.bG)([A.Ay], () => {
-            let e = H?.id;
+        }, [z]),
+        Y = (0, o.bG)([A.Ay], () => {
+            let e = z?.id;
             return null != e && A.Ay.hasUnread(e);
-        }, [H]),
-        W = (0, s.jsx)("div", {
-            className: N.St,
+        }, [z]),
+        W = (0, l.jsx)("div", {
+            className: D.St,
             children: (() => {
-                let e = H?.isPrivate() ?? !1;
+                let e = z?.isPrivate() ?? !1;
                 if ("CHANNEL_TYPE" === i && !e) {
-                    let e = (0, h.gU)(H, U);
-                    e ??= u.oyn;
-                    let t = r && !R && L,
+                    let e = (0, h.gU)(z, V);
+                    e ??= d.oyn;
+                    let t = s && !O && j,
                         n = { boxShadow: "none" },
-                        i = M.rgba({ opacity: 0.85 }),
-                        l = M.rgba({ opacity: 0.45 });
+                        i = w.rgba({ opacity: 0.85 }),
+                        r = w.rgba({ opacity: 0.45 });
                     return (
-                        t && (n.boxShadow = `0 0 0 2px rgba(${i}), 0 0 12px 2px rgba(${l})`),
-                        (0, s.jsx)("div", {
-                            className: a()(N.s, b && N.lJ),
+                        t && (n.boxShadow = `0 0 0 2px rgba(${i}), 0 0 12px 2px rgba(${r})`),
+                        (0, l.jsx)("div", {
+                            className: a()(D.s, b && D.lJ),
                             style: n,
-                            children: (0, s.jsx)(e, {
-                                className: N.Yc,
+                            children: (0, l.jsx)(e, {
+                                className: D.Yc,
                                 size: "sm",
-                                color: b ? u.LU0.colors.WHITE : u.LU0.colors.ICON_STATUS_ONLINE,
+                                color: b ? d.LU0.colors.WHITE : d.LU0.colors.ICON_STATUS_ONLINE,
                             }),
                         })
                     );
                 }
-                return (0, s.jsx)(v.g, {
-                    channel: H,
-                    user: V,
-                    guild: U,
+                return (0, l.jsx)(T.g, {
+                    channel: z,
+                    user: F,
+                    guild: V,
                     isSelected: b,
-                    size: v.c.SIZE_40,
-                    isTyping: Y,
+                    size: T.c.SIZE_40,
+                    isTyping: H,
                     mentionCount: k,
-                    isMentionLowImportance: P,
+                    isMentionLowImportance: G,
                 });
             })(),
         }),
-        X = (0, y.r)({ channel: H, guild: U, user: V }),
-        F = H?.isPrivate() ?? !1,
-        K = U?.name ?? "",
-        B = F ? void 0 : G,
-        Q = F ? G : "" !== K ? K : G,
+        B = (0, v.r)({ channel: z, guild: V, user: F }),
+        X = z?.isPrivate() ?? !1,
+        Z = V?.name ?? "",
+        K = X ? void 0 : P,
+        $ = X ? P : "" !== Z ? Z : P,
         q = (() => {
-            if (null == H || F) return null;
-            let e = (0, h.gU)(H, U);
-            return (e ??= u.oyn), (0, s.jsx)(e, { size: "sm", color: u.LU0.colors.INTERACTIVE_ICON_DEFAULT });
+            if (null == z || X) return null;
+            let e = (0, h.gU)(z, V);
+            return (e ??= d.oyn), (0, l.jsx)(e, { size: "sm", color: d.LU0.colors.INTERACTIVE_ICON_DEFAULT });
         })();
-    return null == H
-        ? (0, s.jsx)("div", { className: N.R })
-        : (0, s.jsx)(d.u, {
-              title: B,
-              body: Q,
+    return null == z
+        ? (0, l.jsx)("div", { className: D.R })
+        : (0, l.jsx)(u.u, {
+              title: K,
+              body: $,
               asset: q,
               assetSize: 20,
-              "aria-label": G,
-              children: (0, s.jsxs)(u.DUT, {
-                  className: N.pc,
+              "aria-label": P,
+              children: (0, l.jsxs)(d.DUT, {
+                  className: D.pc,
                   onClick: () => {
-                      r && (0, T.S$)({ minimized: !1 }),
-                          (0, T.D$)({
-                              target: { kind: T.bB.CHANNEL, channelId: t, guildId: U?.id ?? null, messageId: null },
-                              source: w.B.MANUAL,
-                              widgetType: _.uss.TEXT_CHAT_V3,
+                      s && (0, x.S$)({ minimized: !1 }),
+                          (0, x.D$)({
+                              target: { kind: x.bB.CHANNEL, channelId: t, guildId: V?.id ?? null, messageId: null },
+                              source: y.B.MANUAL,
+                              widgetType: M.uss.TEXT_CHAT_V3,
                           });
                   },
-                  onContextMenu: X,
-                  onMouseEnter: () => D(!0),
-                  onMouseLeave: () => D(!1),
+                  onContextMenu: B,
+                  onMouseEnter: () => L(!0),
+                  onMouseLeave: () => L(!1),
                   children: [
                       W,
-                      (0, s.jsx)("div", {
-                          className: N.vT,
-                          children: (0, s.jsx)(g.A, { selected: b, hovered: z, unread: Z }),
+                      (0, l.jsx)("div", {
+                          className: D.vT,
+                          children: (0, l.jsx)(g.A, { selected: b, hovered: U, unread: Y }),
                       }),
                   ],
               }),

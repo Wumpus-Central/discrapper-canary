@@ -1,49 +1,50 @@
-n.d(t, { A: () => u });
+"use strict";
+n.d(t, { A: () => d });
 var i = n(627968);
 n(64700);
-var l = n(503698),
-    a = n.n(l),
-    r = n(763754),
-    s = n(491182),
-    o = n(291812),
-    d = n(643204),
-    c = n(759522);
-function u(e) {
+var r = n(503698),
+    s = n.n(r),
+    l = n(763754),
+    a = n(491182),
+    c = n(291812),
+    o = n(643204),
+    u = n(153431);
+function d(e) {
     let {
             message: t,
             channel: n,
-            content: l,
-            className: u,
-            compact: m,
-            popoutProps: _,
-            hideTimestamp: h = !1,
-            withFooter: p = !1,
-            ...g
+            content: r,
+            className: d,
+            compact: _,
+            popoutProps: E,
+            hideTimestamp: A = !1,
+            withFooter: m = !1,
+            ...I
         } = e,
-        A = (0, r.Ay)(t);
+        T = (0, l.Ay)(t);
     return (0, i.jsx)("div", {
-        className: a()({ [c.Ym]: p }, c.gD, { [c.oE]: m }, u),
-        children: (0, i.jsx)(s.A, {
-            ...g,
-            className: a()(c.zC, { [c.oE]: m }),
-            childrenMessageContent: (0, i.jsx)(o.Ay, {
-                className: a()(c.__invalid_messageContent, { [c.oE]: m }),
+        className: s()({ [u.Ym]: m }, u.gD, { [u.oE]: _ }, d),
+        children: (0, i.jsx)(a.A, {
+            ...I,
+            className: s()(u.zC, { [u.oE]: _ }),
+            childrenMessageContent: (0, i.jsx)(c.Ay, {
+                className: s()(u.__invalid_messageContent, { [u.oE]: _ }),
                 message: t,
-                content: l,
-                compact: m ?? !1,
+                content: r,
+                compact: _ ?? !1,
             }),
-            childrenHeader: (0, i.jsx)(d.Ay, {
+            childrenHeader: (0, i.jsx)(o.Ay, {
                 message: t,
                 channel: n,
-                author: A,
+                author: T,
                 guildId: n?.guild_id,
-                compact: m,
-                hideTimestamp: h,
-                className: a()(c.wx, { [c.oE]: m }),
-                ...(_ ?? {}),
+                compact: _,
+                hideTimestamp: A,
+                className: s()(u.wx, { [u.oE]: _ }),
+                ...(E ?? {}),
             }),
-            compact: m,
-            author: A,
+            compact: _,
+            author: T,
         }),
     });
 }

@@ -1,116 +1,144 @@
-n.d(t, { u: () => R });
+n.d(t, { u: () => U });
 var i = n(627968),
     s = n(935399),
     l = n(934551),
-    a = n(158954),
-    r = n(554146),
-    o = n(932001),
-    d = n(843402),
-    c = n(592598),
-    u = n(46373),
-    m = n(419954),
-    g = n(933297),
-    _ = n(532624),
-    x = n(242286),
-    A = n(256415),
-    h = n(723702),
-    p = n(780964),
-    T = n(17460),
-    f = n(202949),
-    S = n(762678),
-    b = n(900155),
-    E = n(237887),
-    C = n(444381),
-    N = n(49999),
-    v = n(985018),
-    I = n(55479),
-    j = n(130324),
-    y = n(966040);
-let O = (0, m.t_)(p.X.OVERLAY_PANEL, {
-        initialize: function () {
-            return (
-                (0, f.Q)(),
-                _.Ay.addChangeListener(f.Q),
-                c.A.addChangeListener(f.Q),
-                A.default.addChangeListener(f.Q),
-                x.default.addChangeListener(f.Q),
-                h.isPlatformEmbedded && (0, d.a2)(),
-                () => {
-                    _.Ay.removeChangeListener(f.Q),
-                        c.A.removeChangeListener(f.Q),
-                        A.default.removeChangeListener(f.Q),
-                        x.default.removeChangeListener(f.Q),
-                        h.isPlatformEmbedded && (0, d.e0)();
-                }
-            );
-        },
-        useTitle: () => v.intl.string(v.t["9cb1Uz"]),
-        decoration: {
-            type: g.t9.STRONGLY_DISCOURAGED_CUSTOM,
-            component: function () {
-                let [e, t] = (0, o.kn)([r.M.OVERLAY_OOP_SETTINGS_NUX], void 0, !0);
-                return ((0, s.Ay)(() => () => {
-                    t(N.i.AUTO_DISMISS);
-                }),
-                e !== r.M.OVERLAY_OOP_SETTINGS_NUX)
-                    ? null
-                    : (0, i.jsxs)(i.Fragment, {
-                          children: [
-                              (0, i.jsxs)("div", {
-                                  className: I.xC,
+    r = n(158954),
+    a = n(311907),
+    o = n(554146),
+    d = n(932001),
+    c = n(843402),
+    u = n(589051),
+    m = n(592598),
+    g = n(46373),
+    _ = n(419954),
+    x = n(933297),
+    A = n(351906),
+    h = n(532624),
+    p = n(242286),
+    T = n(256415),
+    f = n(723702),
+    S = n(780964),
+    E = n(358776),
+    b = n(858897),
+    C = n(17460),
+    v = n(202949),
+    N = n(762678),
+    I = n(900155),
+    j = n(237887),
+    y = n(444381),
+    O = n(49999),
+    R = n(985018),
+    L = n(55479),
+    P = n(130324),
+    D = n(966040);
+function G() {
+    let [e, t] = (0, d.kn)([o.M.OVERLAY_OOP_SETTINGS_NUX], void 0, !0);
+    return ((0, s.Ay)(() => () => {
+        t(O.i.AUTO_DISMISS);
+    }),
+    e !== o.M.OVERLAY_OOP_SETTINGS_NUX)
+        ? null
+        : (0, i.jsxs)(i.Fragment, {
+              children: [
+                  (0, i.jsxs)("div", {
+                      className: L.xC,
+                      children: [
+                          (0, i.jsx)("div", {
+                              children: (0, i.jsx)("img", {
+                                  src: P.A,
+                                  alt: R.intl.string(R.t.mdXZh1),
+                                  className: L.tl,
+                              }),
+                          }),
+                          (0, i.jsx)("div", {
+                              children: (0, i.jsxs)("div", {
+                                  className: L.vJ,
                                   children: [
-                                      (0, i.jsx)("div", {
-                                          children: (0, i.jsx)("img", {
-                                              src: j.A,
-                                              alt: v.intl.string(v.t.mdXZh1),
-                                              className: I.tl,
-                                          }),
+                                      (0, i.jsx)(r.DZT, {
+                                          variant: "heading-xl/medium",
+                                          color: "text-strong",
+                                          children: R.intl.string(R.t.jzjJQg),
                                       }),
-                                      (0, i.jsx)("div", {
-                                          children: (0, i.jsxs)("div", {
-                                              className: I.vJ,
-                                              children: [
-                                                  (0, i.jsx)(a.DZT, {
-                                                      variant: "heading-xl/medium",
-                                                      color: "text-strong",
-                                                      children: v.intl.string(v.t.jzjJQg),
-                                                  }),
-                                                  (0, i.jsx)(a.EYj, {
-                                                      variant: "text-md/normal",
-                                                      color: "text-muted",
-                                                      children: v.intl.string(v.t["5dOfxb"]),
-                                                  }),
-                                              ],
-                                          }),
-                                      }),
-                                      (0, i.jsx)("div", {
-                                          children: (0, i.jsx)("img", {
-                                              src: y.A,
-                                              alt: v.intl.string(v.t.mdXZh1),
-                                              className: I.lh,
-                                          }),
-                                      }),
-                                      (0, i.jsx)("div", {
-                                          "data-button-hoisted-classname-wrapper": !0,
-                                          className: I.VV,
-                                          children: (0, i.jsx)(a.$nd, {
-                                              variant: "primary",
-                                              text: v.intl.string(v.t.Q26diF),
-                                              onClick: () => void t(N.i.DISMISS),
-                                          }),
+                                      (0, i.jsx)(r.EYj, {
+                                          variant: "text-md/normal",
+                                          color: "text-muted",
+                                          children: R.intl.string(R.t["5dOfxb"]),
                                       }),
                                   ],
                               }),
-                              (0, i.jsx)(u.A, { className: I.yF }),
-                          ],
-                      });
+                          }),
+                          (0, i.jsx)("div", {
+                              children: (0, i.jsx)("img", {
+                                  src: D.A,
+                                  alt: R.intl.string(R.t.mdXZh1),
+                                  className: L.lh,
+                              }),
+                          }),
+                          (0, i.jsx)("div", {
+                              "data-button-hoisted-classname-wrapper": !0,
+                              className: L.VV,
+                              children: (0, i.jsx)(r.$nd, {
+                                  variant: "primary",
+                                  text: R.intl.string(R.t.Q26diF),
+                                  onClick: () => void t(O.i.DISMISS),
+                              }),
+                          }),
+                      ],
+                  }),
+                  (0, i.jsx)(g.A, { className: L.yF }),
+              ],
+          });
+}
+function M() {
+    let e = (0, a.bG)([A.A], () => A.A.enabled),
+        t = (0, u.Mn)("OverlayStreamerModeNotice");
+    return e && t
+        ? (0, i.jsxs)(i.Fragment, {
+              children: [
+                  (0, i.jsx)(r.wx6, {
+                      type: "warning",
+                      children: R.intl.format(R.t.fuEX5B, {
+                          onClick: () => {
+                              let e = (0, E.Ci)("OverlayStreamerModeNotice_handleClick");
+                              (0, b.openUserSettings)(e ? S.X.STREAMER_MODE_CATEGORY : S.X.STREAMER_MODE_PANEL);
+                          },
+                      }),
+                  }),
+                  (0, i.jsx)(g.A, { className: L.yF }),
+              ],
+          })
+        : null;
+}
+let k = (0, _.t_)(S.X.OVERLAY_PANEL, {
+        initialize: function () {
+            return (
+                (0, v.Q)(),
+                h.Ay.addChangeListener(v.Q),
+                m.A.addChangeListener(v.Q),
+                T.default.addChangeListener(v.Q),
+                p.default.addChangeListener(v.Q),
+                f.isPlatformEmbedded && (0, c.a2)(),
+                () => {
+                    h.Ay.removeChangeListener(v.Q),
+                        m.A.removeChangeListener(v.Q),
+                        T.default.removeChangeListener(v.Q),
+                        p.default.removeChangeListener(v.Q),
+                        f.isPlatformEmbedded && (0, c.e0)();
+                }
+            );
+        },
+        useTitle: () => R.intl.string(R.t["9cb1Uz"]),
+        decoration: {
+            type: x.t9.STRONGLY_DISCOURAGED_CUSTOM,
+            component: function () {
+                return (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)(G, {}), (0, i.jsx)(M, {})] });
             },
         },
-        buildLayout: () => [S.u, b.X, C.D, E.h],
+        buildLayout: () => [N.u, I.X, y.D, j.h],
     }),
-    R = (0, m.i4)(p.X.OVERLAY_SIDEBAR_ITEM, {
-        useTitle: () => v.intl.string(v.t["9cb1Uz"]),
+    U = (0, _.i4)(S.X.OVERLAY_SIDEBAR_ITEM, {
+        useTitle: () => R.intl.string(R.t["9cb1Uz"]),
         icon: l.WindowTopOutlineIcon,
-        usePredicate: T.b_,
-        buildLayout: () => [O],
+        usePredicate: C.b_,
+        buildLayout: () => [k],
     });

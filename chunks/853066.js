@@ -1,3 +1,4 @@
+"use strict";
 n.d(t, { R: () => i });
 let i = (0, n(600975).C)({
     kind: "guild",

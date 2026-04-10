@@ -5,15 +5,15 @@ var i = n(627968),
     a = n.n(s),
     r = n(311907),
     o = n(73153),
-    c = n(442433),
-    d = n(738876),
+    d = n(442433),
+    c = n(738876),
     u = n(58149),
     h = n(332456),
     A = n(973854),
     _ = n(47167),
     m = n(698718),
-    g = n(355622),
-    p = n(58736),
+    p = n(355622),
+    g = n(58736),
     f = n(353428),
     x = n(378570),
     E = n(734057),
@@ -55,8 +55,8 @@ function j(e) {
     let G = (0, i.jsx)(T.A, { channel: L, baseChannelId: R });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(d.A, { channel: L, draftType: I.C.ChannelMessage }),
-            (0, i.jsx)(p.Ay, {
+            (0, i.jsx)(c.A, { channel: L, draftType: I.C.ChannelMessage }),
+            (0, i.jsx)(g.Ay, {
                 toolbar: G,
                 "aria-label": y.intl.string(y.t.Pwe8tN),
                 children: (0, f.zF)({
@@ -65,8 +65,8 @@ function j(e) {
                     guild: M,
                     inSidebar: !0,
                     handleContextMenu: function (e) {
-                        (0, c.L3)(e, async () => {
-                            let { default: e } = await n.e("33").then(n.bind(n, 44536));
+                        (0, d.L3)(e, async () => {
+                            let { default: e } = await n.e("22414").then(n.bind(n, 44536));
                             return (t) => (0, i.jsx)(e, { ...t, channel: L });
                         });
                     },
@@ -77,7 +77,7 @@ function j(e) {
             }),
             (0, i.jsx)("div", {
                 className: v.T,
-                children: (0, i.jsx)(m.A, { channel: L, guild: M, chatInputType: g.oU.SIDEBAR }, j),
+                children: (0, i.jsx)(m.A, { channel: L, guild: M, chatInputType: p.oU.SIDEBAR }, j),
             }),
         ],
     });

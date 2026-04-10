@@ -1,62 +1,63 @@
-n.d(t, { p: () => A });
+n.d(t, { p: () => h });
 var i = n(311907),
     s = n(55619),
     l = n(77729),
-    a = n(419954),
-    r = n(351906),
+    r = n(419954),
+    a = n(351906),
     o = n(780964),
     d = n(358776),
-    c = n(985018);
-let u = (0, a.zD)(o.X.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
-        useTitle: () => ((0, d.bp)("StreamerModeOptions") ? c.intl.string(c.t.LSBUGR) : c.intl.string(c.t["yR/d2T"])),
-        useSubtitle: () => ((0, d.bp)("StreamerModeOptions") ? "" : c.intl.string(c.t.RiIiPw)),
+    c = n(533570),
+    u = n(985018);
+let m = (0, r.zD)(o.X.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
+        useTitle: () => ((0, d.bp)("StreamerModeOptions") ? u.intl.string(u.t.LSBUGR) : u.intl.string(u.t["yR/d2T"])),
+        useSubtitle: () => ((0, d.bp)("StreamerModeOptions") ? "" : u.intl.string(u.t.RiIiPw)),
         useValue: () =>
-            (0, i.bG)([r.A], () => {
-                let { hidePersonalInformation: e } = r.A.getSettings();
+            (0, i.bG)([a.A], () => {
+                let { hidePersonalInformation: e } = a.A.getSettings();
                 return e;
             }),
         setValue: (e) => s.A.update({ hidePersonalInformation: e }),
     }),
-    m = (0, a.zD)(o.X.STREAMER_MODE_HIDE_INVITE_LINKS, {
-        useTitle: () => c.intl.string(c.t.uWBOri),
+    g = (0, r.zD)(o.X.STREAMER_MODE_HIDE_INVITE_LINKS, {
+        useTitle: () => u.intl.string(u.t.uWBOri),
         useValue: () =>
-            (0, i.bG)([r.A], () => {
-                let { hideInstantInvites: e } = r.A.getSettings();
+            (0, i.bG)([a.A], () => {
+                let { hideInstantInvites: e } = a.A.getSettings();
                 return e;
             }),
         setValue: (e) => s.A.update({ hideInstantInvites: e }),
     }),
-    g = (0, a.zD)(o.X.STREAMER_MODE_DISABLE_SOUNDS, {
-        useTitle: () => c.intl.string(c.t.OrqYDP),
+    _ = (0, r.zD)(o.X.STREAMER_MODE_DISABLE_SOUNDS, {
+        useTitle: () => u.intl.string(u.t.OrqYDP),
         useValue: () =>
-            (0, i.bG)([r.A], () => {
-                let { disableSounds: e } = r.A.getSettings();
+            (0, i.bG)([a.A], () => {
+                let { disableSounds: e } = a.A.getSettings();
                 return e;
             }),
         setValue: (e) => s.A.update({ disableSounds: e }),
     }),
-    _ = (0, a.zD)(o.X.STREAMER_MODE_DISABLE_NOTIFICATIONS, {
-        useTitle: () => c.intl.string(c.t.sUAbLd),
+    x = (0, r.zD)(o.X.STREAMER_MODE_DISABLE_NOTIFICATIONS, {
+        useTitle: () => u.intl.string(u.t.sUAbLd),
         useValue: () =>
-            (0, i.bG)([r.A], () => {
-                let { disableNotifications: e } = r.A.getSettings();
+            (0, i.bG)([a.A], () => {
+                let { disableNotifications: e } = a.A.getSettings();
                 return e;
             }),
         setValue: (e) => s.A.update({ disableNotifications: e }),
     }),
-    x = (0, a.zD)(o.X.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE, {
-        useTitle: () => c.intl.string(c.t["iA81+a"]),
-        useSubtitle: () => c.intl.string(c.t.P4vj0h),
+    A = (0, r.zD)(o.X.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE, {
+        useTitle: () => u.intl.string(u.t["iA81+a"]),
+        useSubtitle: () => u.intl.string(u.t.P4vj0h),
         useValue: () =>
-            (0, i.bG)([r.A], () => {
-                let { enableContentProtection: e } = r.A.getSettings();
+            (0, i.bG)([a.A], () => {
+                let { enableContentProtection: e } = a.A.getSettings();
                 return e;
             }),
         setValue: (e) => s.A.update({ enableContentProtection: e }),
         usePredicate: () => l.A?.window?.supportsContentProtection?.() ?? !1,
     }),
-    A = (0, a.FW)(o.X.STREAMER_MODE_OPTIONS_LIST, {
+    h = (0, r.FW)(o.X.STREAMER_MODE_OPTIONS_LIST, {
         variant: "compact",
-        useTitle: () => ((0, d.bp)("StreamerModeOptions") ? c.intl.string(c.t.xYhOEh) : c.intl.string(c.t.UtW8R6)),
-        buildLayout: () => [u, m, g, _, x],
+        useTitle: () => ((0, d.bp)("StreamerModeOptions") ? u.intl.string(u.t.xYhOEh) : u.intl.string(u.t.UtW8R6)),
+        buildLayout: () => [m, g, _, x, A, c.h],
     });

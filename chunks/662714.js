@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     bF: "thumbnailStackGallery_c085c7",
     tK: "gallery-height-1_c085c7",

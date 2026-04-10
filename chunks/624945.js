@@ -1,31 +1,32 @@
-n.d(t, { A: () => m });
+"use strict";
+n.d(t, { A: () => E });
 var i = n(627968),
-    l = n(311907),
-    a = n(827734),
-    r = n(397927),
-    s = n(287809),
-    o = n(763754),
-    c = n(447215),
-    d = n(888675),
-    u = n(985018),
+    r = n(311907),
+    s = n(827734),
+    l = n(397927),
+    a = n(287809),
+    c = n(763754),
+    o = n(447215),
+    u = n(888675),
+    d = n(985018),
     _ = n(351810);
-function m(e) {
-    let { message: t, channel: n, compact: m } = e,
+function E(e) {
+    let { message: t, channel: n, compact: E } = e,
         A = t.getChannelId(),
-        E = n.isDM() ? n.getRecipientId() : void 0,
-        I = (0, l.bG)([s.default], () => (null != E ? s.default.getUser(E) : void 0), [E]),
-        T = (0, l.bG)([s.default], () => s.default.getCurrentUser(), []),
-        f = null != T && t.author.id === T.id,
-        N = (0, o.d8)(I, n),
-        C = (0, c.P)({ user: I, channelId: A, guildId: void 0, messageId: t.id })(N);
+        m = n.isDM() ? n.getRecipientId() : void 0,
+        I = (0, r.bG)([a.default], () => (null != m ? a.default.getUser(m) : void 0), [m]),
+        T = (0, r.bG)([a.default], () => a.default.getCurrentUser(), []),
+        g = null != T && t.author.id === T.id,
+        N = (0, c.d8)(I, n),
+        f = (0, o.P)({ user: I, channelId: A, guildId: void 0, messageId: t.id })(N);
     if (!n.isDM() || null == I || null == T) return null;
-    let g = f ? u.t.S6PRsh : u.t["H/9Tlj"],
-        h = u.intl.format(g, { username: N.nick, usernameHook: C });
-    return (0, i.jsx)(d.A, {
-        iconNode: (0, i.jsx)(r.V1C, { size: "sm", color: a.A.colors.STATUS_POSITIVE }),
+    let p = g ? d.t.S6PRsh : d.t["H/9Tlj"],
+        C = d.intl.format(p, { username: N.nick, usernameHook: f });
+    return (0, i.jsx)(u.A, {
+        iconNode: (0, i.jsx)(l.V1C, { size: "sm", color: s.A.colors.STATUS_POSITIVE }),
         iconContainerClassName: _.z,
         timestamp: t.timestamp,
-        compact: m,
-        children: h,
+        compact: E,
+        children: C,
     });
 }

@@ -15,19 +15,19 @@ var s = n(827734),
     A = n(752318);
 let f = (0, r.FT9)(r._3J.SIZE_16);
 function g(e) {
-    let { user: t, guild: g, nick: _, onSelect: m } = e,
+    let { user: t, guild: g, nick: m, onSelect: _ } = e,
         { theme: x, themeType: E } = (0, u.E)(),
         y = t.hasAvatarForGuild(g.id);
     return (0, i.jsxs)(r.DUT, {
         focusProps: E === p.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
         className: A.nM,
-        onClick: m,
+        onClick: _,
         onContextMenu: (e) => {
             (0, o.L3)(e, async () => {
                 let { default: e } = await Promise.all([
                     n.e("57174"),
                     n.e("49681"),
-                    n.e("11478"),
+                    n.e("3795"),
                     n.e("81028"),
                     n.e("8555"),
                     n.e("91652"),
@@ -53,28 +53,27 @@ function g(e) {
                     n.e("25961"),
                     n.e("21393"),
                     n.e("91139"),
-                    n.e("8018"),
-                    n.e("61733"),
+                    n.e("51432"),
                     n.e("41595"),
-                    n.e("79463"),
+                    n.e("18496"),
                     n.e("91872"),
                     n.e("35894"),
+                    n.e("13011"),
                     n.e("50796"),
                     n.e("41606"),
                     n.e("94253"),
                     n.e("8458"),
                     n.e("11810"),
                     n.e("85200"),
-                    n.e("68890"),
+                    n.e("95207"),
                     n.e("38865"),
-                    n.e("17537"),
+                    n.e("45266"),
                     n.e("49862"),
-                    n.e("37207"),
-                    n.e("54816"),
+                    n.e("34366"),
                     n.e("3788"),
-                    n.e("59541"),
+                    n.e("28810"),
                     n.e("54469"),
-                    n.e("83655"),
+                    n.e("20353"),
                 ]).then(n.bind(n, 544676));
                 return (t) => (0, i.jsx)(e, { ...t, guild: g });
             });
@@ -109,16 +108,16 @@ function g(e) {
                                     variant: "text-xs/medium",
                                     children: (0, i.jsx)(l.A, {
                                         delay: h.In,
-                                        children: _ ?? c.Ay.getName(g.id, void 0, t),
+                                        children: m ?? c.Ay.getName(g.id, void 0, t),
                                     }),
                                 }),
                             ],
                         }),
                     !y &&
-                        null != _ &&
+                        null != m &&
                         (0, i.jsx)(r.Text, {
                             variant: "text-xs/medium",
-                            children: (0, i.jsx)(l.A, { delay: h.In, children: _ }),
+                            children: (0, i.jsx)(l.A, { delay: h.In, children: m }),
                         }),
                 ],
             }),

@@ -1,49 +1,50 @@
-n.d(t, { A: () => m });
+"use strict";
+n.d(t, { A: () => _ });
 var i = n(627968);
 n(64700);
-var l = n(421380),
-    a = n(397927),
-    r = n(465794),
-    s = n(888675),
-    o = n(652215),
-    d = n(788868),
-    c = n(985018),
-    u = n(801741);
-function m(e) {
+var r = n(421380),
+    s = n(397927),
+    l = n(725807),
+    a = n(888675),
+    c = n(652215),
+    o = n(788868),
+    u = n(985018),
+    d = n(988020);
+function _(e) {
     let { message: t, channel: n } = e,
-        m = null != n.guild_id ? o.JJy.TEXT_IN_VOICE : o.JJy.CHANNEL_TEXT_AREA;
-    return (0, i.jsx)(s.A, {
-        contentClassName: u.o9,
-        iconContainerClassName: u.zc,
-        iconNode: (0, i.jsx)(a.XFE, { colorClass: u.Kk }),
+        _ = null != n.guild_id ? c.JJy.TEXT_IN_VOICE : c.JJy.CHANNEL_TEXT_AREA;
+    return (0, i.jsx)(a.A, {
+        contentClassName: d.o9,
+        iconContainerClassName: d.zc,
+        iconNode: (0, i.jsx)(s.XFE, { colorClass: d.Kk }),
         children: (0, i.jsxs)("div", {
-            className: u.kL,
+            className: d.kL,
             children: [
                 (0, i.jsxs)("div", {
                     children: [
-                        (0, i.jsx)(a.Text, { variant: "text-sm/medium", children: t.content }),
+                        (0, i.jsx)(s.Text, { variant: "text-sm/medium", children: t.content }),
                         (0, i.jsxs)("div", {
-                            className: u.C5,
+                            className: d.C5,
                             children: [
-                                (0, i.jsx)(a.tvc, { size: "xs", colorClass: u.bu }),
-                                (0, i.jsx)(a.Text, {
+                                (0, i.jsx)(s.tvc, { size: "xs", colorClass: d.bu }),
+                                (0, i.jsx)(s.Text, {
                                     variant: "text-xs/medium",
-                                    className: u.vp,
-                                    children: c.intl.string(c.t["BMw+7I"]),
+                                    className: d.vp,
+                                    children: u.intl.string(u.t["BMw+7I"]),
                                 }),
                             ],
                         }),
                     ],
                 }),
                 (0, i.jsx)("div", {
-                    className: u.UD,
-                    children: (0, i.jsx)(r.A, {
+                    className: d.UD,
+                    children: (0, i.jsx)(l.A, {
                         showGradient: !0,
-                        iconClassName: u.PC,
-                        subscriptionTier: d.pe.TIER_2,
-                        textOptions: { textOverride: c.intl.string(c.t.Y2WKTl) },
-                        size: l.$n.Sizes.SMALL,
-                        premiumModalAnalyticsLocation: { section: m, object: o.ZSU.MESSAGE },
+                        iconClassName: d.PC,
+                        subscriptionTier: o.pe.TIER_2,
+                        textOptions: { textOverride: u.intl.string(u.t.Y2WKTl) },
+                        size: r.$n.Sizes.SMALL,
+                        premiumModalAnalyticsLocation: { section: _, object: c.ZSU.MESSAGE },
                     }),
                 }),
             ],

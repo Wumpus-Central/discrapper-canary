@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     xd: "settingsWrapper_c9e42f",
     Xz: "osx_c9e42f",

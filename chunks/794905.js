@@ -1,23 +1,24 @@
-n.d(t, { A: () => o });
+"use strict";
+n.d(t, { A: () => c });
 var i = n(64700),
-    l = n(688810),
-    a = n(399925),
-    r = n(74847),
-    s = n(602902);
-let o = (e) => {
-    let { analyticsLocations: t } = (0, l.Ay)();
+    r = n(688810),
+    s = n(399925),
+    l = n(74847),
+    a = n(602902);
+let c = (e) => {
+    let { analyticsLocations: t } = (0, r.Ay)();
     return {
         onShareClick: i.useCallback(
             async (n) => {
-                let { clips: i, onShareComplete: l, messageReference: o } = n;
+                let { clips: i, onShareComplete: r, messageReference: c } = n;
                 if (0 === i.length) return;
-                let d = (0, r.t)(e);
-                (0, a.H1)(i.map((e) => e.id));
+                let o = (0, l.t)(e);
+                (0, s.H1)(i.map((e) => e.id));
                 try {
-                    await (0, s.K)(i, { channelId: d ? e : void 0, analyticsLocations: t, messageReference: o });
+                    await (0, a.K)(i, { channelId: o ? e : void 0, analyticsLocations: t, messageReference: c });
                 } catch (e) {
                 } finally {
-                    (0, a.H1)(null), l?.();
+                    (0, s.H1)(null), r?.();
                 }
             },
             [e, t],

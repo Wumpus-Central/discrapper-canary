@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container_c9b8e3",
     QV: "usernameContainer_c9b8e3",

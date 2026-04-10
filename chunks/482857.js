@@ -74,7 +74,7 @@ function S(e) {
             e.stopPropagation(),
                 null != n &&
                     (0, s.L3)(e, async () => {
-                        let { default: e } = await Promise.all([t.e("77371"), t.e("11478"), t.e("97580")]).then(
+                        let { default: e } = await Promise.all([t.e("77371"), t.e("3795"), t.e("97580")]).then(
                             t.bind(t, 406406),
                         );
                         return (t) => (0, i.jsx)(e, { guildEventId: w, recurrenceId: D, channel: S, guild: n, ...t });
@@ -98,7 +98,7 @@ function S(e) {
                 ? function (e) {
                       e.stopPropagation(),
                           (0, r.mMO)(async () => {
-                              let { default: e } = await Promise.all([t.e("11478"), t.e("77223"), t.e("35957")]).then(
+                              let { default: e } = await Promise.all([t.e("3795"), t.e("77223"), t.e("35957")]).then(
                                   t.bind(t, 199226),
                               );
                               return (n) => (0, i.jsx)(e, { ...n, event: T, onSuccess: R });

@@ -1,29 +1,30 @@
-n.d(t, { A: () => c });
+"use strict";
+n.d(t, { A: () => u });
 var i = n(627968);
 n(64700);
-var l = n(397927),
-    a = n(793574),
-    r = n(73028),
-    s = n(763754),
-    o = n(888675),
-    d = n(985018);
-function c(e) {
-    let { message: t, usernameHook: n, compact: c } = e,
-        u = (0, s.Ay)(t),
-        m = n(u);
-    return (0, i.jsx)(o.A, {
-        iconNode: (0, i.jsx)(l.R2l, { size: "xs", color: "currentColor" }),
+var r = n(397927),
+    s = n(793574),
+    l = n(73028),
+    a = n(763754),
+    c = n(888675),
+    o = n(985018);
+function u(e) {
+    let { message: t, usernameHook: n, compact: u } = e,
+        d = (0, a.Ay)(t),
+        _ = n(d);
+    return (0, i.jsx)(c.A, {
+        iconNode: (0, i.jsx)(r.R2l, { size: "xs", color: "currentColor" }),
         timestamp: t.timestamp,
-        compact: c,
-        children: d.intl.format(d.t["4wLp25"], {
-            username: u.nick,
-            usernameHook: m,
+        compact: u,
+        children: o.intl.format(o.t["4wLp25"], {
+            username: d.nick,
+            usernameHook: _,
             editGroupButton: (0, i.jsx)(
-                l.Text,
-                { tag: "span", variant: "text-md/medium", color: "text-link", children: d.intl.string(d.t["5Q9+/L"]) },
+                r.Text,
+                { tag: "span", variant: "text-md/medium", color: "text-link", children: o.intl.string(o.t["5Q9+/L"]) },
                 `edit-group-button-${t.id}`,
             ),
-            onEditGroup: () => (0, r.U)(t.channel_id, a.A.GROUP_DM_SYSTEM_MESSAGE_ICON),
+            onEditGroup: () => (0, l.U)(t.channel_id, s.A.GROUP_DM_SYSTEM_MESSAGE_ICON),
         }),
     });
 }

@@ -1,83 +1,84 @@
-n.d(t, { A: () => C });
+"use strict";
+n.d(t, { A: () => p });
 var i = n(627968),
-    a = n(64700),
-    l = n(311907),
-    r = n(732955),
-    s = n(843472),
-    o = n(355622),
-    c = n(148355),
-    d = n(406704),
-    u = n(696451),
+    r = n(64700),
+    s = n(311907),
+    l = n(732955),
+    a = n(843472),
+    c = n(355622),
+    o = n(148355),
+    u = n(406704),
+    d = n(696451),
     _ = n(576705),
-    m = n(287809),
+    E = n(287809),
     A = n(954571),
-    E = n(661191),
+    m = n(661191),
     I = n(460350),
     T = n(652215),
-    f = n(705886);
+    g = n(705886);
 function N(e) {
     let { assets: t, currentUser: n, message: i } = e,
-        a = (E.default.extractTimestamp(n.id) + E.default.extractTimestamp(i.id)) % t.length;
-    return t[a];
+        r = (m.default.extractTimestamp(n.id) + m.default.extractTimestamp(i.id)) % t.length;
+    return t[r];
 }
-function g(e) {
-    let { currentUser: t, channel: n, message: l, buttonLabels: d, stickers: u, event: _, eventProperties: m } = e,
-        E = a.useMemo(() => N({ assets: u, currentUser: t, message: l }), [u, t, l]),
-        T = a.useMemo(() => N({ assets: d, currentUser: t, message: l }), [d, t, l]),
-        f = a.useCallback(async () => {
-            let { valid: e } = await (0, I.i)({ type: o.oU.FORM, content: "", channel: n });
+function f(e) {
+    let { currentUser: t, channel: n, message: s, buttonLabels: u, stickers: d, event: _, eventProperties: E } = e,
+        m = r.useMemo(() => N({ assets: d, currentUser: t, message: s }), [d, t, s]),
+        T = r.useMemo(() => N({ assets: u, currentUser: t, message: s }), [u, t, s]),
+        g = r.useCallback(async () => {
+            let { valid: e } = await (0, I.i)({ type: c.oU.FORM, content: "", channel: n });
             e &&
                 (!(function (e) {
                     let { channel: t, message: n, sticker: i } = e;
-                    s.A.sendGreetMessage(
+                    a.A.sendGreetMessage(
                         t.id,
                         i.id,
-                        s.A.getSendMessageOptionsForReply({
+                        a.A.getSendMessageOptionsForReply({
                             channel: t,
                             message: n,
                             shouldMention: !0,
                             showMentionToggle: !0,
                         }),
                     );
-                })({ channel: n, message: l, sticker: E }),
+                })({ channel: n, message: s, sticker: m }),
                 (function (e) {
                     let { sticker: t, event: n, eventProperties: i } = e;
                     null != n && A.default.track(n, { ...i, sticker_id: t.id });
-                })({ sticker: E, event: _, eventProperties: m }));
-        }, [n, l, E, _, m]);
-    return (0, i.jsx)(r.$nd, {
-        icon: { type: "sticker", asset: E, component: c.A },
+                })({ sticker: m, event: _, eventProperties: E }));
+        }, [n, s, m, _, E]);
+    return (0, i.jsx)(l.$nd, {
+        icon: { type: "sticker", asset: m, component: o.A },
         text: T,
-        onClick: f,
+        onClick: g,
         variant: "secondary",
     });
 }
-function C(e) {
-    let { channel: t, message: n, buttonLabels: a, stickers: r, event: s, eventProperties: o } = e,
-        c = m.default.getCurrentUser(),
+function p(e) {
+    let { channel: t, message: n, buttonLabels: r, stickers: l, event: a, eventProperties: c } = e,
+        o = E.default.getCurrentUser(),
         A = (function (e) {
             let { channel: t, message: n, currentUser: i } = e;
-            return (0, l.bG)([_.A, u.Ay], () => {
+            return (0, s.bG)([_.A, d.Ay], () => {
                 let e = t.guild_id;
                 if (null == i || null == e) return !1;
-                let a = (0, d.UJ)(t),
-                    l = _.A.can(T.xBc.SEND_MESSAGES, t),
-                    r = u.Ay.getMember(e, i.id)?.isPending,
-                    s = n.author.bot;
-                return l && !a && !r && !s;
+                let r = (0, u.UJ)(t),
+                    s = _.A.can(T.xBc.SEND_MESSAGES, t),
+                    l = d.Ay.getMember(e, i.id)?.isPending,
+                    a = n.author.bot;
+                return s && !r && !l && !a;
             });
-        })({ channel: t, message: n, currentUser: c });
-    return null != c && A
+        })({ channel: t, message: n, currentUser: o });
+    return null != o && A
         ? (0, i.jsx)("div", {
-              className: f.S,
-              children: (0, i.jsx)(g, {
-                  currentUser: c,
+              className: g.S,
+              children: (0, i.jsx)(f, {
+                  currentUser: o,
                   channel: t,
                   message: n,
-                  buttonLabels: a,
-                  stickers: r,
-                  event: s,
-                  eventProperties: o,
+                  buttonLabels: r,
+                  stickers: l,
+                  event: a,
+                  eventProperties: c,
               }),
           })
         : null;

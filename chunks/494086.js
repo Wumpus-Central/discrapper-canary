@@ -1,14 +1,15 @@
-n.d(t, { A: () => s });
+"use strict";
+n.d(t, { A: () => a });
 var i = n(627968);
 n(64700);
-var l = n(763754),
-    a = n(888675),
-    r = n(985018);
-function s(e) {
-    let { message: t, otherUsername: s, usernameHook: o, otherUsernameHook: d, compact: c } = e,
-        { nick: u } = (0, l.Ay)(t),
-        m = o(),
-        _ = d(),
-        h = r.intl.format(r.t.MMN2Jq, { username: u, usernameHook: m, otherUsername: s, otherUsernameHook: _ });
-    return (0, i.jsx)(a.A, { icon: n(394803), timestamp: t.timestamp, compact: c, children: h });
+var r = n(763754),
+    s = n(888675),
+    l = n(985018);
+function a(e) {
+    let { message: t, otherUsername: a, usernameHook: c, otherUsernameHook: o, compact: u } = e,
+        { nick: d } = (0, r.Ay)(t),
+        _ = c(),
+        E = o(),
+        A = l.intl.format(l.t.MMN2Jq, { username: d, usernameHook: _, otherUsername: a, otherUsernameHook: E });
+    return (0, i.jsx)(s.A, { icon: n(617184), timestamp: t.timestamp, compact: u, children: A });
 }

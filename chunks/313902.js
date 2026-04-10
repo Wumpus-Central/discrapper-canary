@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     og: "systemMessageContainer_c0ec5e",
     x: "embedContainer_c0ec5e",
