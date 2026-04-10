@@ -23,8 +23,8 @@ var i = n(627968),
     T = n(857253),
     S = n(202384),
     b = n(51758),
-    y = n(721592),
-    v = n(508654),
+    v = n(721592),
+    y = n(508654),
     j = n(214660),
     R = n(140547),
     O = n(303333),
@@ -47,8 +47,8 @@ var i = n(627968),
     q = n(68437),
     X = n(166444),
     $ = n(850457),
-    J = n(469178),
-    Q = n(562991),
+    Q = n(469178),
+    J = n(562991),
     Z = n(588224);
 n(281405);
 var ee = n(652215),
@@ -142,7 +142,7 @@ class el extends z.Ay {
         let { channel: e, connected: t, showEmptyChannelTopic: n } = this.props,
             l = (0, N.M)(this.props.subtitle)?.subtitle,
             { hovered: s } = this.state;
-        return (0, i.jsx)(Q.A, {
+        return (0, i.jsx)(J.A, {
             onClick: this.handleVoiceStatusClick,
             channel: e,
             connected: t,
@@ -163,8 +163,8 @@ class el extends z.Ay {
         });
     }
     renderHangoutWindow() {
-        let { channel: e, connected: t, voiceStates: n } = this.props;
-        return null != n && n.length > 0 ? (0, i.jsx)(O.A, { channel: e, isConnected: t }) : null;
+        let { channel: e, connected: t, voiceStates: n, collapsed: l } = this.props;
+        return !(null != n && n.length > 0) || l ? null : (0, i.jsx)(O.A, { channel: e, isConnected: t });
     }
     renderPopout = () => {
         let { channel: e, sorting: t, isUserOver: n } = this.props,
@@ -229,8 +229,8 @@ class el extends z.Ay {
                 embeddedApps: T,
                 isSubscriptionGated: S,
                 isFavoriteSuggestion: b,
-                withGuildIcon: y,
-                hasStartTime: v,
+                withGuildIcon: v,
+                hasStartTime: y,
                 shouldHighlightChannel: j,
                 shouldUseAnimatedWaveform: R,
                 voiceStates: O,
@@ -243,7 +243,7 @@ class el extends z.Ay {
                 className: a()(this.getModeClass(), { [ei.r9]: this.isDisabled(), [ei.fy]: j }),
                 "data-dnd-name": (0, I.m1)(e, W.default, H.A),
                 children: [
-                    M && this.getVoiceStatesCount() > 0 && (0, i.jsx)(J.A, { channel: e }),
+                    M && this.getVoiceStatesCount() > 0 && (0, i.jsx)(Q.A, { channel: e }),
                     j &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
@@ -267,7 +267,7 @@ class el extends z.Ay {
                                     children: (0, i.jsxs)(X.Ay, {
                                         ref: this.channelItemRef,
                                         className: ei.Ki,
-                                        iconClassName: a()({ [ei.Gj]: N || v || D }),
+                                        iconClassName: a()({ [ei.Gj]: N || y || D }),
                                         hasActiveEvent: N,
                                         channel: e,
                                         selected: !b && t,
@@ -294,7 +294,7 @@ class el extends z.Ay {
                                             isSubscriptionGated: S,
                                         }),
                                         "aria-describedby": (0, E.A)({ channel: e, embeddedApps: T }),
-                                        withGuildIcon: y,
+                                        withGuildIcon: v,
                                         children: [
                                             b &&
                                                 (0, i.jsxs)(i.Fragment, {
@@ -367,9 +367,9 @@ function ea(e) {
         A = (0, r.bG)([K.A], () => K.A.hasVideo(n.id)),
         _ = (0, m.Ay)(n),
         g = (0, I.Ay)(n),
-        x = (0, v.Qs)(n.id),
+        x = (0, y.Qs)(n.id),
         E = (0, r.bG)([f.A], () => null != f.A.getStartTime(n), [n]),
-        { isSubscriptionGated: C, needSubscriptionToAccess: N } = (0, y.A)(n.id),
+        { isSubscriptionGated: C, needSubscriptionToAccess: N } = (0, v.A)(n.id),
         S = (0, T.A)(),
         b = (0, r.bG)([F.Ay], () => F.Ay.isFavorite(t.id, n.id)),
         j = e.connected || S?.channelId === n.id,

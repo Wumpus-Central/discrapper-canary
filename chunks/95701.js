@@ -350,6 +350,7 @@ class ed {
     linkedLobby;
     hdStreamingUntil;
     hdStreamingBuyerId;
+    voiceHangout;
     constructor(e) {
         (this.id = e.id),
             (this.type = e.type ?? m.rbe.GUILD_TEXT),
@@ -601,7 +602,8 @@ class eh extends ep {
             (this.videoQualityMode = e.videoQualityMode),
             (this.linkedLobby = e.linkedLobby),
             (this.hdStreamingUntil = e.hdStreamingUntil),
-            (this.hdStreamingBuyerId = e.hdStreamingBuyerId);
+            (this.hdStreamingBuyerId = e.hdStreamingBuyerId),
+            (this.voiceHangout = e.voiceHangout);
     }
     static fromServer(e, t) {
         let n = {
@@ -682,6 +684,7 @@ class eh extends ep {
             linkedLobby: e.linked_lobby,
             hdStreamingUntil: e.hd_streaming_until,
             hdStreamingBuyerId: e.hd_streaming_buyer_id,
+            voiceHangout: e.voice_hangout,
         };
         return (0, _.pp)(n, eh);
     }
@@ -709,7 +712,8 @@ class em extends ep {
             (this.version = e.version),
             (this.videoQualityMode = e.videoQualityMode),
             (this.hdStreamingUntil = e.hdStreamingUntil),
-            (this.hdStreamingBuyerId = e.hdStreamingBuyerId);
+            (this.hdStreamingBuyerId = e.hdStreamingBuyerId),
+            (this.voiceHangout = e.voiceHangout);
     }
     static fromServer(e, t) {
         return eU({
@@ -738,6 +742,7 @@ class em extends ep {
             videoQualityMode: e.video_quality_mode,
             hdStreamingUntil: e.hd_streaming_until,
             hdStreamingBuyerId: e.hd_streaming_buyer_id,
+            voiceHangout: e.voice_hangout,
         });
     }
 }

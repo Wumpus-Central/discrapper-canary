@@ -1,7 +1,6 @@
 e.exports = {
     rs: "mainContainer__700c9",
     ZS: "imageContainer__700c9",
-    jI: "clickableImageContainer__700c9",
     Sl: "image__700c9",
     n_: "hoverOverlay__700c9",
     HF: "hoverButton__700c9",

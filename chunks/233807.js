@@ -3,6 +3,7 @@ e.exports = {
     f9: "optionsList__50b3c",
     uK: "option__50b3c",
     Mn: "optionIconAndLabel__50b3c",
+    MF: "gifOptionIconAndLabel__50b3c optionIconAndLabel__50b3c",
     p8: "gifGrid__50b3c",
     Nw: "gifCell__50b3c",
     u2: "sectionSubtitle__50b3c",
@@ -14,6 +15,8 @@ e.exports = {
     qE: "recentUploadsLoading__50b3c",
     Se: "recentUploadsThumbnail__50b3c",
     rx: "recentUploadsThumbnailImage__50b3c",
+    g4: "loadingContainer__50b3c",
+    n3: "subViewContent__50b3c",
     SD: "gifPickerContainer__50b3c",
     XC: "gifPicker__50b3c",
 };

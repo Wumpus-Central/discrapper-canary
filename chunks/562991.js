@@ -5,8 +5,8 @@ var i = n(627968),
     a = n.n(s),
     r = n(311907),
     o = n(3026),
-    c = n(397927),
-    d = n(532622),
+    d = n(397927),
+    c = n(532622),
     u = n(309698),
     h = n(581007),
     A = n(522435),
@@ -20,10 +20,10 @@ function E(e) {
     let { channel: t, connected: n, hovered: s, subtitle: E, onClick: I, showEmptyChannelTopic: C } = e,
         N = (0, r.bG)([u.A], () => u.A.getChannelStatus(t)),
         { enableHangoutWindow: T } = (0, h.Dm)({ guildId: t.guild_id, location: "VoiceChannelStatus" }),
-        S = T && (0, A.TP)(N),
-        b = null != N && N.length > 0 && !S,
-        y = (0, d.Ay)(t, !0),
-        v = null != E && E.length > 0;
+        S = T && (0, A.lr)(t),
+        b = null != N && N.length > 0,
+        v = (0, c.Ay)(t, !0),
+        y = null != E && E.length > 0;
     if (
         (l.useEffect(() => {
             b && m.default.track(g.HAw.VOICE_CHANNEL_TOPIC_VIEWED, { channel_id: t.id, guild_id: t.guild_id });
@@ -31,31 +31,31 @@ function E(e) {
         null == t.guild_id)
     )
         return null;
-    let j = a()(f.Ui, n && y ? f.BI : null);
+    let j = a()(f.Ui, n && v ? f.BI : null);
     return b
-        ? (0, i.jsx)(c.DUT, {
+        ? (0, i.jsx)(d.DUT, {
               className: j,
-              onClick: y ? I : void 0,
-              children: (0, i.jsx)(c.Text, {
+              onClick: v ? I : void 0,
+              children: (0, i.jsx)(d.Text, {
                   variant: "text-xs/medium",
                   className: a()(f.qS, x.PT),
                   children: (0, i.jsx)(o.A, { children: _.A.parseVoiceChannelStatus(N, !0, { channelId: t.id }) }),
               }),
           })
-        : n && y && !S && (!v || s) && C
-          ? (0, i.jsxs)(c.DUT, {
+        : n && v && !S && (!y || s) && C
+          ? (0, i.jsxs)(d.DUT, {
                 className: j,
                 onClick: I,
                 children: [
-                    (0, i.jsx)(c.Text, {
+                    (0, i.jsx)(d.Text, {
                         variant: "text-xs/medium",
                         className: f.qS,
                         children: p.intl.string(p.t.Mgpxiw),
                     }),
-                    (0, i.jsx)(c.R2l, { color: "currentColor", className: f.rD, size: "xxs" }),
+                    (0, i.jsx)(d.R2l, { color: "currentColor", className: f.rD, size: "xxs" }),
                 ],
             })
-          : v
+          : y
             ? (0, i.jsx)(o.A, { children: E })
             : null;
 }
