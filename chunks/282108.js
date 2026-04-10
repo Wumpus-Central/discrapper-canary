@@ -83,7 +83,6 @@ function v(e) {
                     return e.file;
                 case s.I5.SECTION:
                 case s.I5.ACTION_ROW:
-                case s.I5.CONTAINER:
                     return e.components.flatMap(v);
                 default:
                     return [];
