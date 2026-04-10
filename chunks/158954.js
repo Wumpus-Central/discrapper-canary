@@ -130,6 +130,7 @@ n.d(t, {
     LyU: () => z.InstagramNeutralIcon,
     MBj: () => z.ChatCheckIcon,
     MFz: () => z.ArrowSmallDownIcon,
+    MRp: () => z.GroupArrowRightIcon,
     MVj: () => ev.M,
     M_l: () => eT.M,
     Md2: () => z.AnnouncementsWarningIcon,

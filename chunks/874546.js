@@ -12,7 +12,7 @@ function o(e) {
 function l(e) {
     if (!o(e)) return !1;
     let t = a();
-    if (e?.platform === t) return !0;
+    if ((e?.platform != null ? e.platform : s.yTV.DESKTOP) === t) return !0;
     let n = e?.supported_platforms;
     return null != n && 0 !== n.length && n.includes(t);
 }

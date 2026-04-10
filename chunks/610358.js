@@ -1,224 +1,236 @@
-n.d(t, { W: () => N });
+n.d(t, { W: () => C });
 var i = n(627968),
     l = n(64700),
     r = n(308368),
     s = n(308528),
     a = n(442433),
-    o = n(684013),
-    u = n(49229),
-    d = n(956793),
-    c = n(428249),
-    h = n(657331),
-    g = n(961350),
-    m = n(734057),
-    f = n(810412),
-    A = n(914853),
-    I = n(145567),
-    E = n(67103),
-    p = n(34307),
-    _ = n(652215),
-    S = n(381941),
-    x = n(731854),
-    T = n(985018);
-function N() {
+    o = n(544420),
+    u = n(684013),
+    d = n(49229),
+    c = n(956793),
+    h = n(428249),
+    g = n(657331),
+    m = n(961350),
+    f = n(734057),
+    A = n(810412),
+    I = n(914853),
+    E = n(145567),
+    p = n(67103),
+    _ = n(34307),
+    S = n(652215),
+    x = n(381941),
+    T = n(731854),
+    N = n(985018);
+function C() {
     return {
         handlePrimaryAction: l.useCallback((e) => {
             switch (e.type) {
-                case E.c.OPEN_DIRECT_MESSAGE:
+                case p.c.OPEN_DIRECT_MESSAGE:
                     if (null == e.userId) return;
                     (async () => {
                         try {
-                            await (0, I.D$)({
-                                target: { kind: I.bB.DM_USER, userId: e.userId, messageId: null },
-                                source: p.B.FRIENDS_WIDGET_CLICK,
-                                widgetType: _.uss.FRIENDS,
+                            await (0, E.D$)({
+                                target: { kind: E.bB.DM_USER, userId: e.userId, messageId: null },
+                                source: _.B.FRIENDS_WIDGET_CLICK,
+                                widgetType: S.uss.FRIENDS,
                             });
                         } catch {}
                     })(),
-                        (0, f.YX)(_.uss.FRIENDS, {
-                            type: f.Z5.FRIEND_LIST,
-                            value: f.IP.CHAT,
+                        (0, A.YX)(S.uss.FRIENDS, {
+                            type: A.Z5.FRIEND_LIST,
+                            value: A.IP.CHAT,
                             userId: e.userId,
                             secondaryValue: "dm",
                         });
                     break;
-                case E.c.OPEN_TEXT_CHAT_CHANNEL:
+                case p.c.OPEN_TEXT_CHAT_CHANNEL:
                     if (null == e.channelId) return;
-                    (0, I.D$)({
+                    (0, E.D$)({
                         target: {
-                            kind: I.bB.CHANNEL,
+                            kind: E.bB.CHANNEL,
                             channelId: e.channelId,
                             guildId: e.guildId ?? null,
                             messageId: null,
                         },
-                        source: p.B.FRIENDS_WIDGET_CLICK,
-                        widgetType: _.uss.FRIENDS,
+                        source: _.B.FRIENDS_WIDGET_CLICK,
+                        widgetType: S.uss.FRIENDS,
                     }),
-                        (0, f.YX)(_.uss.FRIENDS, {
-                            type: f.Z5.FRIEND_LIST,
-                            value: f.IP.CHAT,
+                        (0, A.YX)(S.uss.FRIENDS, {
+                            type: A.Z5.FRIEND_LIST,
+                            value: A.IP.CHAT,
                             userId: e.userId,
                             secondaryValue: "channel",
                         });
                     break;
-                case E.c.CONNECT_VOICE_CHANNEL:
+                case p.c.CONNECT_VOICE_CHANNEL:
                     if (null == e.channelId) return;
-                    (0, f.YX)(_.uss.FRIENDS, {
-                        type: f.Z5.VOICE,
-                        value: f.IP.CHANNEL_SELECTED,
+                    (0, A.YX)(S.uss.FRIENDS, {
+                        type: A.Z5.VOICE,
+                        value: A.IP.CHANNEL_SELECTED,
                         secondaryValue: "voice",
                     }),
-                        d.default.selectVoiceChannel(e.channelId);
+                        c.default.selectVoiceChannel(e.channelId);
                     break;
-                case E.c.DISCONNECT_VOICE_CHANNEL:
-                    (0, f.YX)(_.uss.FRIENDS, {
-                        type: f.Z5.CALL_BUTTON,
-                        value: f.IP.DISABLED,
+                case p.c.DISCONNECT_VOICE_CHANNEL:
+                    (0, A.YX)(S.uss.FRIENDS, {
+                        type: A.Z5.CALL_BUTTON,
+                        value: A.IP.DISABLED,
                         secondaryValue: "voice",
-                        userId: g.default.getId(),
+                        userId: m.default.getId(),
                     }),
-                        d.default.disconnect();
+                        c.default.disconnect();
                     break;
-                case E.c.ACCEPT_FRIEND_REQUEST:
+                case p.c.ACCEPT_FRIEND_REQUEST:
                     if (null == e.userId) return;
-                    u.A.addRelationship({ userId: e.userId, context: { location: "overlay-friends-widget" } }),
-                        (0, f.YX)(_.uss.FRIENDS, {
-                            type: f.Z5.FRIEND_REQUEST,
-                            value: f.IP.ACCEPT_REQUEST,
+                    d.A.addRelationship({ userId: e.userId, context: { location: "overlay-friends-widget" } }),
+                        (0, A.YX)(S.uss.FRIENDS, {
+                            type: A.Z5.FRIEND_REQUEST,
+                            value: A.IP.ACCEPT_REQUEST,
                             userId: e.userId,
                         });
                     break;
-                case E.c.DECLINE_FRIEND_REQUEST:
+                case p.c.DECLINE_FRIEND_REQUEST:
                     if (null == e.userId) return;
-                    u.A.removeRelationship(e.userId, { location: "overlay-friends-widget" }),
-                        (0, f.YX)(_.uss.FRIENDS, {
-                            type: f.Z5.FRIEND_REQUEST,
-                            value: f.IP.DECLINE_REQUEST,
+                    d.A.removeRelationship(e.userId, { location: "overlay-friends-widget" }),
+                        (0, A.YX)(S.uss.FRIENDS, {
+                            type: A.Z5.FRIEND_REQUEST,
+                            value: A.IP.DECLINE_REQUEST,
                             userId: e.userId,
                         });
                     break;
-                case E.c.CANCEL_FRIEND_REQUEST:
+                case p.c.CANCEL_FRIEND_REQUEST:
                     if (null == e.userId) return;
-                    u.A.cancelFriendRequest(e.userId, { location: "overlay-friends-widget" }),
-                        (0, f.YX)(_.uss.FRIENDS, {
-                            type: f.Z5.FRIEND_REQUEST,
-                            value: f.IP.CANCEL_REQUEST,
+                    d.A.cancelFriendRequest(e.userId, { location: "overlay-friends-widget" }),
+                        (0, A.YX)(S.uss.FRIENDS, {
+                            type: A.Z5.FRIEND_REQUEST,
+                            value: A.IP.CANCEL_REQUEST,
                             userId: e.userId,
                         });
                     break;
-                case E.c.SEND_FRIEND_REQUEST:
+                case p.c.SEND_FRIEND_REQUEST:
                     if (null == e.userId) return;
-                    u.A.addRelationship({ userId: e.userId, context: { location: "overlay-friends-widget" } }),
-                        (0, f.YX)(_.uss.FRIENDS, {
-                            type: f.Z5.FRIEND_REQUEST,
-                            value: f.IP.SEND_REQUEST,
+                    d.A.addRelationship({ userId: e.userId, context: { location: "overlay-friends-widget" } }),
+                        (0, A.YX)(S.uss.FRIENDS, {
+                            type: A.Z5.FRIEND_REQUEST,
+                            value: A.IP.SEND_REQUEST,
                             userId: e.userId,
                         });
                     break;
-                case E.c.OPEN_FRIEND_MODAL:
+                case p.c.OPEN_FRIEND_MODAL:
                     if (null == e.userId) return;
-                    (0, h.openUserProfileModal)({
+                    (0, g.openUserProfileModal)({
                         userId: e.userId,
                         guildId: e.guildId ?? void 0,
                         channelId: e.channelId,
-                        appContext: _.BRT.OVERLAY,
+                        appContext: S.BRT.OVERLAY,
                     }),
-                        (0, f.YX)(_.uss.FRIENDS, {
-                            type: f.Z5.FRIEND_LIST,
-                            value: f.IP.PROFILE_OPENED,
+                        (0, A.YX)(S.uss.FRIENDS, {
+                            type: A.Z5.FRIEND_LIST,
+                            value: A.IP.PROFILE_OPENED,
                             userId: e.userId,
                         });
                     break;
-                case E.c.SEARCH_FRIENDS:
-                    (0, f.YX)(_.uss.FRIENDS, { type: f.Z5.FRIEND_LIST, value: f.IP.SEARCH });
+                case p.c.SEARCH_FRIENDS:
+                    (0, A.YX)(S.uss.FRIENDS, { type: A.Z5.FRIEND_LIST, value: A.IP.SEARCH });
                     break;
-                case E.c.SEND_ACTIVITY_INVITE:
+                case p.c.SEND_ACTIVITY_INVITE:
                     if (null == e.userId || null == e.activity) return;
                     r.A.sendActivityInviteUser({
-                        type: _.xL.JOIN,
+                        type: S.xL.JOIN,
                         userId: e.userId,
                         activity: e.activity,
-                        location: _.ThZ.UNLOCKED_OVERLAY,
+                        location: S.ThZ.UNLOCKED_OVERLAY,
                     }),
-                        o.A.track(_.HAw.OVERLAY_GAME_INVITE_SENT, { target_user_id: e.userId }),
-                        (0, f.YX)(_.uss.FRIENDS, { type: f.Z5.INVITE, value: f.IP.INVITE_SENT, userId: e.userId });
+                        u.A.track(S.HAw.OVERLAY_GAME_INVITE_SENT, { target_user_id: e.userId }),
+                        (0, A.YX)(S.uss.FRIENDS, { type: A.Z5.INVITE, value: A.IP.INVITE_SENT, userId: e.userId });
                     break;
-                case E.c.ASK_TO_JOIN:
+                case p.c.JOIN:
+                    if (null == e.userId || null == e.activity) return;
+                    o.Ay.join({
+                        userId: e.userId,
+                        sessionId: e.activity.session_id,
+                        applicationId: e.activity.application_id,
+                        channelId: null,
+                        messageId: null,
+                        source: S.ThZ.UNLOCKED_OVERLAY,
+                    });
+                    break;
+                case p.c.ASK_TO_JOIN:
                     if (null == e.userId || null == e.activity) return;
                     r.A.sendActivityInviteUser({
-                        type: _.xL.JOIN_REQUEST,
+                        type: S.xL.JOIN_REQUEST,
                         userId: e.userId,
                         activity: e.activity,
-                        location: _.ThZ.UNLOCKED_OVERLAY,
+                        location: S.ThZ.UNLOCKED_OVERLAY,
                     }),
-                        o.A.track(_.HAw.OVERLAY_GAME_INVITE_SENT, { target_user_id: e.userId }),
-                        (0, f.YX)(_.uss.FRIENDS, {
-                            type: f.Z5.INVITE,
-                            value: f.IP.JOIN_REQUEST_SENT,
+                        u.A.track(S.HAw.OVERLAY_GAME_INVITE_SENT, { target_user_id: e.userId }),
+                        (0, A.YX)(S.uss.FRIENDS, {
+                            type: A.Z5.INVITE,
+                            value: A.IP.JOIN_REQUEST_SENT,
                             userId: e.userId,
                         });
                     break;
-                case E.c.SEND_GAME_INVITE_MESSAGE: {
+                case p.c.SEND_GAME_INVITE_MESSAGE: {
                     if (null == e.userId) return;
                     let t = e.gameEntry,
                         n = e.userId;
                     (async () => {
                         try {
                             if (
-                                (await (0, I.D$)({
-                                    target: { kind: I.bB.DM_USER, userId: n, messageId: null },
-                                    source: p.B.FRIENDS_WIDGET_CLICK,
-                                    widgetType: _.uss.FRIENDS,
+                                (await (0, E.D$)({
+                                    target: { kind: E.bB.DM_USER, userId: n, messageId: null },
+                                    source: _.B.FRIENDS_WIDGET_CLICK,
+                                    widgetType: S.uss.FRIENDS,
                                 }),
                                 null == t)
                             )
                                 return;
                             let e = await s.A.getOrEnsurePrivateChannel(n),
-                                i = m.A.getChannel(e);
+                                i = f.A.getChannel(e);
                             if (null == i) return;
                             !0 === t.extra.fake_inventory_item
-                                ? await (0, c.J)({
+                                ? await (0, h.J)({
                                       channel: i,
-                                      content: T.intl.formatToPlainString(T.t.UVBA9g, { gameName: t.extra.game_name }),
+                                      content: N.intl.formatToPlainString(N.t.UVBA9g, { gameName: t.extra.game_name }),
                                       whenReady: !0,
                                       doNotNotifyOnError: !1,
-                                      location: S.Hx.OVERLAY,
+                                      location: x.Hx.OVERLAY,
                                   })
-                                : await (0, c.d)({
+                                : await (0, h.d)({
                                       channel: i,
-                                      content: T.intl.string(T.t.DwAcMz),
+                                      content: N.intl.string(N.t.DwAcMz),
                                       entry: t,
                                       whenReady: !0,
                                       doNotNotifyOnError: !1,
-                                      location: S.Hx.OVERLAY,
+                                      location: x.Hx.OVERLAY,
                                   });
                         } catch {}
                     })(),
-                        o.A.track(_.HAw.OVERLAY_GAME_INVITE_SENT, {
+                        u.A.track(S.HAw.OVERLAY_GAME_INVITE_SENT, {
                             target_user_id: n,
                             target_content_entry_id: t?.id,
                         }),
-                        (0, f.YX)(_.uss.FRIENDS, { type: f.Z5.INVITE, value: f.IP.INVITE_SENT, userId: e.userId });
+                        (0, A.YX)(S.uss.FRIENDS, { type: A.Z5.INVITE, value: A.IP.INVITE_SENT, userId: e.userId });
                     break;
                 }
-                case E.c.USER_CONTEXT_MENU:
-                case E.c.OPEN_SETTINGS_MODAL:
-                    (0, f.YX)(_.uss.FRIENDS, { type: f.Z5.FRIEND_LIST, value: f.IP.SETTINGS_OPENED, userId: e.userId });
+                case p.c.USER_CONTEXT_MENU:
+                case p.c.OPEN_SETTINGS_MODAL:
+                    (0, A.YX)(S.uss.FRIENDS, { type: A.Z5.FRIEND_LIST, value: A.IP.SETTINGS_OPENED, userId: e.userId });
                     break;
-                case E.c.TAB_CHANGE: {
+                case p.c.TAB_CHANGE: {
                     let t = e.tab;
-                    (0, f.YX)(_.uss.FRIENDS, {
-                        type: f.Z5.FRIEND_LIST,
+                    (0, A.YX)(S.uss.FRIENDS, {
+                        type: A.Z5.FRIEND_LIST,
                         value: ((e) => {
                             switch (e) {
-                                case A.x.FRIENDS:
-                                    return f.IP.FRIEND_TAB_SELECTED;
-                                case A.x.MESSAGES:
-                                    return f.IP.MESSAGES_TAB_SELECTED;
-                                case A.x.VOICE:
-                                    return f.IP.VOICE_TAB_SELECTED;
+                                case I.x.FRIENDS:
+                                    return A.IP.FRIEND_TAB_SELECTED;
+                                case I.x.MESSAGES:
+                                    return A.IP.MESSAGES_TAB_SELECTED;
+                                case I.x.VOICE:
+                                    return A.IP.VOICE_TAB_SELECTED;
                                 default:
-                                    return f.IP.UNKNOWN;
+                                    return A.IP.UNKNOWN;
                             }
                         })(t),
                     });
@@ -230,7 +242,7 @@ function N() {
         }, []),
         handleContextMenu: l.useCallback((e) => {
             switch (e.type) {
-                case E.K.FRIEND_ROW: {
+                case p.K.FRIEND_ROW: {
                     let { user: t, friendGroupId: l } = e;
                     if (null == t) return;
                     (0, a.L3)(
@@ -243,41 +255,41 @@ function N() {
                                 (0, i.jsx)(e, {
                                     ...n,
                                     user: t,
-                                    appContext: _.BRT.OVERLAY,
-                                    widgetType: _.uss.FRIENDS,
+                                    appContext: S.BRT.OVERLAY,
+                                    widgetType: S.uss.FRIENDS,
                                     friendGroupId: l,
                                     showManageFriendGroupsItems: !0,
                                 });
                         },
-                        { context: _.BRT.OVERLAY },
+                        { context: S.BRT.OVERLAY },
                     ),
-                        (0, f.YX)(_.uss.FRIENDS, {
-                            type: f.Z5.FRIEND_LIST,
-                            value: f.IP.SETTINGS_OPENED,
+                        (0, A.YX)(S.uss.FRIENDS, {
+                            type: A.Z5.FRIEND_LIST,
+                            value: A.IP.SETTINGS_OPENED,
                             secondaryValue: "friend-row",
                         });
                     break;
                 }
-                case E.K.FRIEND_GROUP: {
+                case p.K.FRIEND_GROUP: {
                     let { groupId: t, groupName: l } = e;
                     if (null == t || null == l) return;
                     (0, a.L3)(e.event, async () => {
                         let { default: e } = await n.e("43562").then(n.bind(n, 602321));
                         return (n) => (0, i.jsx)(e, { ...n, groupId: t, groupName: l });
                     }),
-                        (0, f.YX)(_.uss.FRIENDS, {
-                            type: f.Z5.FRIEND_LIST,
-                            value: f.IP.SETTINGS_OPENED,
+                        (0, A.YX)(S.uss.FRIENDS, {
+                            type: A.Z5.FRIEND_LIST,
+                            value: A.IP.SETTINGS_OPENED,
                             secondaryValue: "friend-group",
                         });
                     break;
                 }
-                case E.K.DM_CHANNEL: {
+                case p.K.DM_CHANNEL: {
                     let { channel: t, user: l } = e;
                     if (null == t || null == l) return;
-                    (0, f.YX)(_.uss.FRIENDS, {
-                        type: f.Z5.TEXT_CHAT,
-                        value: f.IP.SETTINGS_OPENED,
+                    (0, A.YX)(S.uss.FRIENDS, {
+                        type: A.Z5.TEXT_CHAT,
+                        value: A.IP.SETTINGS_OPENED,
                         secondaryValue: "dm",
                     }),
                         (0, a.L3)(e.event, async () => {
@@ -290,67 +302,67 @@ function N() {
                                     user: l,
                                     channel: t,
                                     showModalItems: !1,
-                                    widgetType: _.uss.FRIENDS,
+                                    widgetType: S.uss.FRIENDS,
                                 });
                         });
                     break;
                 }
-                case E.K.GROUP_DM_CHANNEL:
+                case p.K.GROUP_DM_CHANNEL:
                     if (null == e.channel) return;
-                    (0, f.YX)(_.uss.FRIENDS, {
-                        type: f.Z5.TEXT_CHAT,
-                        value: f.IP.SETTINGS_OPENED,
+                    (0, A.YX)(S.uss.FRIENDS, {
+                        type: A.Z5.TEXT_CHAT,
+                        value: A.IP.SETTINGS_OPENED,
                         secondaryValue: "group-dm",
                     }),
                         (0, a.L3)(e.event, async () => {
                             let { default: t } = await n.e("77927").then(n.bind(n, 320442));
                             return (n) =>
-                                (0, i.jsx)(t, { ...n, channel: e.channel, selected: !1, widgetType: _.uss.FRIENDS });
+                                (0, i.jsx)(t, { ...n, channel: e.channel, selected: !1, widgetType: S.uss.FRIENDS });
                         });
                     break;
-                case E.K.GUILD_TEXT_CHANNEL: {
+                case p.K.GUILD_TEXT_CHANNEL: {
                     let { channel: t, guild: l } = e;
                     if (null == t || null == l) return;
-                    (0, f.YX)(_.uss.FRIENDS, {
-                        type: f.Z5.TEXT_CHAT,
-                        value: f.IP.SETTINGS_OPENED,
+                    (0, A.YX)(S.uss.FRIENDS, {
+                        type: A.Z5.TEXT_CHAT,
+                        value: A.IP.SETTINGS_OPENED,
                         secondaryValue: "guild-text-channel",
                     }),
                         t.isModeratorReportChannel?.()
                             ? (0, a.L3)(e.event, async () => {
                                   let { default: e } = await n.e("56985").then(n.bind(n, 95616));
-                                  return (n) => (0, i.jsx)(e, { ...n, channel: t, widgetType: _.uss.FRIENDS });
+                                  return (n) => (0, i.jsx)(e, { ...n, channel: t, widgetType: S.uss.FRIENDS });
                               })
                             : (0, a.L3)(e.event, async () => {
                                   let { default: e } = await Promise.all([n.e("97262"), n.e("54036")]).then(
                                       n.bind(n, 813407),
                                   );
                                   return (n) =>
-                                      (0, i.jsx)(e, { ...n, channel: t, guild: l, widgetType: _.uss.FRIENDS });
+                                      (0, i.jsx)(e, { ...n, channel: t, guild: l, widgetType: S.uss.FRIENDS });
                               });
                     break;
                 }
-                case E.K.VOICE_CHANNEL: {
+                case p.K.VOICE_CHANNEL: {
                     let { channel: t, guild: l } = e;
                     if (null == t || null == l) return;
-                    (0, f.YX)(_.uss.FRIENDS, {
-                        type: f.Z5.TEXT_CHAT,
-                        value: f.IP.SETTINGS_OPENED,
+                    (0, A.YX)(S.uss.FRIENDS, {
+                        type: A.Z5.TEXT_CHAT,
+                        value: A.IP.SETTINGS_OPENED,
                         secondaryValue: "guild-voice-channel",
                     }),
                         (0, a.L3)(e.event, async () => {
                             let { default: e } = await n.e("21905").then(n.bind(n, 769192));
-                            return (n) => (0, i.jsx)(e, { ...n, channel: t, guild: l, widgetType: _.uss.FRIENDS });
+                            return (n) => (0, i.jsx)(e, { ...n, channel: t, guild: l, widgetType: S.uss.FRIENDS });
                         });
                     break;
                 }
-                case E.K.VOICE_USER: {
+                case p.K.VOICE_USER: {
                     let { user: t, channelId: l, guild: r } = e;
                     if (null == t || null == l) return;
                     let s = r?.id ?? null;
-                    (0, f.YX)(_.uss.FRIENDS, {
-                        type: f.Z5.TEXT_CHAT,
-                        value: f.IP.SETTINGS_OPENED,
+                    (0, A.YX)(S.uss.FRIENDS, {
+                        type: A.Z5.TEXT_CHAT,
+                        value: A.IP.SETTINGS_OPENED,
                         secondaryValue: "guild-voice-user",
                     }),
                         (0, a.L3)(e.event, async () => {
@@ -363,8 +375,8 @@ function N() {
                                     user: t,
                                     guildId: s ?? void 0,
                                     channelId: e.channelId,
-                                    mediaEngineContext: x.x.DEFAULT,
-                                    appContext: _.BRT.OVERLAY,
+                                    mediaEngineContext: T.x.DEFAULT,
+                                    appContext: S.BRT.OVERLAY,
                                 });
                         });
                     break;
