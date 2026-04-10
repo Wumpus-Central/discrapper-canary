@@ -48,14 +48,15 @@ function k(e) {
     if (c) {
         let e = d.A.getApplication(t);
         if (e?.deepLinkUri != null) {
-            let r = `${e.deepLinkUri}${D.O3O.GAME_INVITE_FRAGMENT}${n}`;
+            let r = e.deepLinkUri.replace(/\/+$/, ""),
+                i = `${r}${D.O3O.GAME_INVITE_FRAGMENT}${n}`;
             try {
-                if (r.startsWith("http")) {
-                    let e = window.open(r, "_blank");
+                if (i.startsWith("http")) {
+                    let e = window.open(i, "_blank");
                     (null == e || e.closed || void 0 === e.closed) &&
                         (P.warn("Deep link popup was blocked by browser, trying location.href", { applicationId: t }),
-                        (window.location.href = r));
-                } else window.location.href = r;
+                        (window.location.href = i));
+                } else window.location.href = i;
                 return Promise.resolve();
             } catch (e) {
                 P.warn("Failed to open deep link, falling back to desktop launch", {
