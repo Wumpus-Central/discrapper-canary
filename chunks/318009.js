@@ -34,9 +34,9 @@ let A = (e) => {
         } = e,
         y = i.useRef(null),
         v = i.useMemo(() => ({ current: c }), [c]),
-        C = i.useRef(n);
+        N = i.useRef(n);
     i.useEffect(() => {
-        C.current = n;
+        N.current = n;
     }),
         i.useEffect(() => {
             let e = y.current?.elementRef.current;
@@ -44,7 +44,7 @@ let A = (e) => {
             let t = (e) => {
                 let t = e.target,
                     n = y.current?.elementRef.current;
-                (null != n && (0, u.HG$)(n, t)) || (g(), C.current());
+                (null != n && (0, u.HG$)(n, t)) || (g(), N.current());
             };
             return (
                 e.ownerDocument?.addEventListener("click", t, !0),
@@ -55,11 +55,11 @@ let A = (e) => {
                 }
             );
         }, []);
-    let N = i.useRef(o);
+    let C = i.useRef(o);
     i.useEffect(() => {
-        N.current = o;
+        C.current = o;
     }),
-        i.useEffect(() => () => N.current?.(), []),
+        i.useEffect(() => () => C.current?.(), []),
         i.useLayoutEffect(() => {
             y.current?.updatePosition();
         }),
@@ -79,7 +79,7 @@ let A = (e) => {
               open: !0,
               ownerDocument: L,
               onOpenChange: (e) => {
-                  e ? O() : (b(), g(), C.current());
+                  e ? O() : (b(), setTimeout(g, 0), N.current());
               },
               overrideTargetRect: p,
               placement: (0, a.Pv)(h ?? "right", m ?? "top"),
