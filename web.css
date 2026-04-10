@@ -37234,13 +37234,22 @@ html:not(.chat-input) .inputInner_b1f01d {
     width: 96%
 }
 
-.staticPreview__6d099 {
+.staticPreviewContainer__6d099 {
+    overflow: hidden
+}
+
+.staticPreview__6d099,
+.staticPreviewContainer__6d099 {
     height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.staticPreview__6d099 {
     -o-object-fit: cover;
     object-fit: cover;
     -o-object-position: bottom;
-    object-position: bottom;
-    width: 100%
+    object-position: bottom
 }
 
 .full-motion .staticPreview__6d099 {
