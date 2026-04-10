@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => H, fd: () => B });
 var i = n(627968),
     l = n(64700),
     s = n(835245),
@@ -6,75 +6,78 @@ var i = n(627968),
     r = n(158954),
     o = n(311907),
     c = n(793574),
-    d = n(688810);
-n(201718), n(633075), n(622543), n(605694);
-var u = n(246356),
-    h = n(332772),
-    m = n(594832),
-    A = n(631784),
-    g = n(310209),
-    p = n(961350),
-    _ = n(287809),
-    f = n(954571),
-    E = n(427262),
-    x = n(871123),
-    C = n(832163),
-    S = n(453774),
-    I = n(44724),
-    T = n(84511),
-    N = n(817176),
-    v = n(129114),
-    y = n(652215),
-    b = n(360469),
-    j = n(985018),
-    R = n(993204);
-let M = `vc-gifting-${(0, s.A)()}`,
-    D = Object.freeze([]);
-function O(e) {
+    d = n(688810),
+    u = n(201718),
+    h = n(633075),
+    m = n(622543),
+    A = n(605694),
+    g = n(246356),
+    p = n(332772),
+    f = n(594832),
+    _ = n(631784),
+    E = n(310209),
+    x = n(961350),
+    C = n(287809),
+    S = n(954571),
+    I = n(427262),
+    T = n(871123),
+    N = n(832163),
+    v = n(453774),
+    y = n(44724),
+    b = n(84511),
+    j = n(817176),
+    R = n(129114),
+    M = n(652215),
+    O = n(360469),
+    D = n(985018),
+    L = n(274647);
+let P = `vc-gifting-${(0, s.A)()}`,
+    k = Object.freeze([]);
+function w(e) {
     let { application: t } = e;
     if (null == t) return null;
-    let n = t.getIconURL(b.iu.SMALL);
+    let n = t.getIconURL(O.iu.SMALL);
     return (0, i.jsxs)(r.BJc, {
         direction: "horizontal",
         gap: 4,
         align: "center",
         children: [
-            null != n && (0, i.jsx)("img", { className: R.In, src: n, alt: t.name }),
-            (0, i.jsx)(r.EYj, { className: R.DD, variant: "text-sm/normal", children: t.name }),
+            null != n && (0, i.jsx)("img", { className: L.In, src: n, alt: t.name }),
+            (0, i.jsx)(r.EYj, { className: L.DD, variant: "text-sm/normal", children: t.name }),
         ],
     });
 }
-function L(e) {
+function U(e) {
     let { user: t, isGift: n } = e,
-        l = j.intl.string(j.t.kv4lSp),
-        s = j.intl.string(j.t.vzZoSF);
+        l = D.intl.string(D.t.kv4lSp),
+        s = D.intl.string(D.t.vzZoSF);
     return (
         n &&
-            ((l = null != t ? j.intl.format(j.t.YwV901, { username: E.Ay.getName(t) }) : j.intl.string(j.t.qCmNFr)),
-            (s = j.intl.string(j.t.SSgrne))),
+            ((l = null != t ? D.intl.format(D.t.YwV901, { username: I.Ay.getName(t) }) : D.intl.string(D.t.qCmNFr)),
+            (s = D.intl.string(D.t.SSgrne))),
         (0, i.jsxs)(r.BJc, {
             direction: "vertical",
             gap: 4,
             children: [
-                (0, i.jsx)(r.DZT, { id: M, className: R.DD, variant: "text-md/normal", children: l }),
+                (0, i.jsx)(r.DZT, { id: P, className: L.DD, variant: "text-md/normal", children: l }),
                 (0, i.jsx)(r.EYj, { variant: "text-sm/medium", color: "text-subtle", children: s }),
             ],
         })
     );
 }
-function P(e) {
+function G(e) {
     let { application: t, onClose: n } = e,
         s = t?.id,
         a = l.useCallback(() => {
             if (null != s) {
-                let e = C.A.getGuildIdFromApplicationId(s);
-                null != e && (0, I.X)({ guildId: e });
+                let e = N.A.getGuildIdFromApplicationId(s);
+                null != e && (0, y.X)({ guildId: e });
             }
         }, [s]),
         o = l.useCallback(() => {
             if (null != s) {
-                let e = C.A.getGuildIdFromApplicationId(s);
-                null != e && (n(), (0, I.default)({ guildId: e }));
+                let e = N.A.getGuildIdFromApplicationId(s);
+                null != e && (n(), (0, y.default)({ guildId: e }));
             }
         }, [s, n]);
     return null == t
@@ -83,27 +86,55 @@ function P(e) {
               variant: "secondary",
               icon: r.I9m,
               iconPosition: "end",
-              text: j.intl.format(j.t["HDT/rg"], { applicationName: t.name }),
+              text: D.intl.format(D.t["HDT/rg"], { applicationName: t.name }),
               onClick: o,
               onMouseDown: a,
               fullWidth: !0,
           });
 }
-function k(e, t) {
+function F(e, t) {
     return e.id === t.id;
 }
-function w(e) {
-    let { userId: t, applicationId: n, channel: s, onClose: E } = e;
-    (0, h.T)({ location: "social_layer_gifting_voice_panel" });
-    let { analyticsLocations: C } = (0, d.Ay)(c.A.SLAYER_STOREFRONT_VC_GIFTING_PANEL),
-        I = (0, o.bG)([_.default], () => _.default.getUser(t)),
-        b = t === (0, o.bG)([p.default], () => p.default.getId()),
-        j = (0, S.A)(n),
+function B(e) {
+    let { userId: t, applicationId: n, channel: l } = e;
+    (0, u.P)(t);
+    let s = (0, o.bG)([C.default], () => C.default.getUser(t)),
+        a = (0, o.bG)([m.A], () => m.A.getWidgets(t)?.find((e) => e instanceof h.R && e.applicationId === n)),
+        c = null == s || null == a;
+    return (0, i.jsx)(g.A, {
+        children: (0, i.jsx)(r.lGe, {
+            modal: !1,
+            children: (0, i.jsx)("div", {
+                className: L.kL,
+                children: c
+                    ? (0, i.jsx)(r.y$y, { className: L.ps })
+                    : (0, i.jsx)("div", {
+                          className: L.$4,
+                          children: (0, i.jsx)(A.A, {
+                              user: s,
+                              widget: a,
+                              guildId: l.guild_id,
+                              channelId: l.id,
+                              disableInteraction: !0,
+                              embedded: !0,
+                          }),
+                      }),
+            }),
+        }),
+    });
+}
+function H(e) {
+    let { userId: t, applicationId: n, channel: s, onClose: u } = e;
+    (0, p.T)({ location: "social_layer_gifting_voice_panel" });
+    let { analyticsLocations: h } = (0, d.Ay)(c.A.SLAYER_STOREFRONT_VC_GIFTING_PANEL),
+        m = (0, o.bG)([C.default], () => C.default.getUser(t)),
+        A = t === (0, o.bG)([x.default], () => x.default.getId()),
+        I = (0, v.A)(n),
         {
-            status: w,
-            recommendations: U,
-            skusToUserAndReason: G,
-            hasBothSources: F,
+            status: N,
+            recommendations: y,
+            skusToUserAndReason: O,
+            hasBothSources: D,
         } = (function (e) {
             let { userId: t, applicationId: n, channel: i, numItems: s } = e,
                 r = l.useMemo(() => [t], [t]),
@@ -112,85 +143,85 @@ function w(e) {
                     status: c,
                     recommendations: d,
                     skusToUserAndReason: u,
-                } = (0, A.XQ)({ userIds: r, applicationIds: o, numItems: s }),
+                } = (0, _.XQ)({ userIds: r, applicationIds: o, numItems: s }),
                 h = "loading" === c || 0 === d.length,
-                m = (0, a.A)(h ? D : d, k),
-                g = l.useMemo(() => {
-                    let { hasWishlist: e, hasPopular: t } = (0, x.wH)(d, u, new Set(r));
+                m = (0, a.A)(h ? k : d, F),
+                A = l.useMemo(() => {
+                    let { hasWishlist: e, hasPopular: t } = (0, T.wH)(d, u, new Set(r));
                     return e && t;
                 }, [d, u, r]);
             return (
                 l.useEffect(() => {
                     0 !== d.length &&
-                        f.default.track(y.HAw.COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED, {
+                        S.default.track(M.HAw.COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED, {
                             guild_id: i.guild_id,
                             channel_id: i.id,
                             sku_ids: d.map((e) => e.id),
                         });
                 }, [i.id, i.guild_id, d]),
-                { status: c, recommendations: m, skusToUserAndReason: u, hasBothSources: g }
+                { status: c, recommendations: m, skusToUserAndReason: u, hasBothSources: A }
             );
         })({ userId: t, applicationId: n, channel: s, numItems: 7 }),
-        B = "loading" === w || 0 === U.length || null == I,
+        B = "loading" === N || 0 === y.length || null == m,
         [H, V] = l.useMemo(() => {
-            if (null == I || 0 === U.length) return [null, []];
-            let e = (G[U[0].id] ?? {})[t] === g.j.WISHLIST;
+            if (null == m || 0 === y.length) return [null, []];
+            let e = (O[y[0].id] ?? {})[t] === E.j.WISHLIST;
             return [
-                (0, i.jsx)(N.A, {
-                    sku: U[0],
-                    targetUser: I,
-                    isTargetingCurrentUser: b,
-                    source: e ? m.uS.WISHLIST : m.uS.POPULAR,
+                (0, i.jsx)(j.A, {
+                    sku: y[0],
+                    targetUser: m,
+                    isTargetingCurrentUser: A,
+                    source: e ? f.uS.WISHLIST : f.uS.POPULAR,
                     guildId: s.guild_id,
                     channelId: s.id,
-                    showIcons: F,
-                    analyticsLocations: C,
-                    onCardClick: E,
-                    onButtonClick: E,
+                    showIcons: D,
+                    analyticsLocations: h,
+                    onCardClick: u,
+                    onButtonClick: u,
                 }),
-                U.slice(1).map((e) => {
-                    let n = (G[e.id] ?? {})[t] === g.j.WISHLIST;
+                y.slice(1).map((e) => {
+                    let n = (O[e.id] ?? {})[t] === E.j.WISHLIST;
                     return (0, i.jsx)(
-                        v.A,
+                        R.A,
                         {
                             sku: e,
-                            targetUser: I,
-                            isTargetingCurrentUser: b,
-                            source: n ? m.uS.WISHLIST : m.uS.POPULAR,
+                            targetUser: m,
+                            isTargetingCurrentUser: A,
+                            source: n ? f.uS.WISHLIST : f.uS.POPULAR,
                             guildId: s.guild_id,
                             channelId: s.id,
-                            showIcons: F,
-                            analyticsLocations: C,
-                            onCardClick: E,
-                            onButtonClick: E,
+                            showIcons: D,
+                            analyticsLocations: h,
+                            onCardClick: u,
+                            onButtonClick: u,
                         },
                         e.id,
                     );
                 }),
             ];
-        }, [I, U, G, t, b, s.guild_id, s.id, F, C, E]);
-    return (0, i.jsx)(u.A, {
+        }, [m, y, O, t, A, s.guild_id, s.id, D, h, u]);
+    return (0, i.jsx)(g.A, {
         children: (0, i.jsx)(r.lGe, {
-            "aria-labelledby": M,
+            "aria-labelledby": P,
             modal: !1,
             children: (0, i.jsxs)("div", {
-                className: R.kL,
+                className: L.kL,
                 children: [
                     (0, i.jsxs)(r.BJc, {
-                        className: R.wx,
+                        className: L.wx,
                         direction: "vertical",
                         gap: 12,
-                        children: [(0, i.jsx)(O, { application: j }), (0, i.jsx)(L, { user: I, isGift: !b })],
+                        children: [(0, i.jsx)(w, { application: I }), (0, i.jsx)(U, { user: m, isGift: !A })],
                     }),
                     B
-                        ? (0, i.jsx)(r.y$y, { className: R.kc })
+                        ? (0, i.jsx)(r.y$y, { className: L.kc })
                         : (0, i.jsxs)(r.BJc, {
                               direction: "vertical",
                               gap: 12,
-                              children: [H, (0, i.jsx)("div", { className: R.aS, children: V })],
+                              children: [H, (0, i.jsx)("div", { className: L.aS, children: V })],
                           }),
-                    (0, i.jsx)(P, { application: j, onClose: E }),
-                    (0, i.jsx)(T.A, { location: "social_layer_vc_gifting_panel", className: R.Ij }),
+                    (0, i.jsx)(G, { application: I, onClose: u }),
+                    (0, i.jsx)(b.A, { location: "social_layer_vc_gifting_panel", className: L.Ij }),
                 ],
             }),
         }),
