@@ -14,7 +14,7 @@ var a = n(342494),
     h = n(438705);
 let m = (e) => {
     let { targetElementRef: t, dismissPopover: m, children: g } = e,
-        p = (0, o.Q)({ location: "nitro_tab_popover" }),
+        p = (0, o.QG)({ location: "nitro_tab_popover" }) === o.xb.POPOVER,
         { analyticsLocations: E } = (0, l.Ay)(),
         I = p
             ? _.intl.string(A.default.oOSj1l)
