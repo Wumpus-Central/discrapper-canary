@@ -145,9 +145,10 @@ function q(e) {
                           : e;
                   })
                 : [];
+    null != B && B.userId === t.user.id && (Date.now() > B.expiresAtMs ? (B = null) : Z(d, B));
+    let f = Date.now();
     if (
-        (null != B && B.userId === t.user.id && (Date.now() > B.expiresAtMs ? (B = null) : Z(d, B)),
-        O.set(t.user.id, {
+        (O.set(t.user.id, {
             userId: t.user.id,
             banner: t.user_profile?.banner,
             accentColor: t.user_profile?.accent_color,
@@ -163,7 +164,7 @@ function q(e) {
             premiumType: t.premium_type,
             premiumGuildSince: s,
             fetchStartedAt: n,
-            fetchEndedAt: Date.now(),
+            fetchEndedAt: f,
             legacyUsername: t.legacy_username,
             application:
                 null != l
@@ -194,8 +195,8 @@ function q(e) {
         D.set(t.user.id, e), H(t.user.id);
     }
     if (null != t.guild_member_profile) {
-        let { profileEffect: e, profileFrame: n } = (0, I.A)(t.guild_member_profile),
-            r = {
+        let { profileEffect: e, profileFrame: r } = (0, I.A)(t.guild_member_profile),
+            i = {
                 userId: t.user.id,
                 guildId: t.guild_member_profile.guild_id,
                 banner: t.guild_member_profile.banner,
@@ -203,16 +204,18 @@ function q(e) {
                 themeColors: t.guild_member_profile?.theme_colors,
                 popoutAnimationParticleType: t.guild_member_profile?.popout_animation_particle_type,
                 profileEffect: e,
-                profileFrame: n,
+                profileFrame: r,
                 bio: t.guild_member_profile.bio,
                 pronouns: t.guild_member_profile.pronouns,
                 badges: t.guild_badges,
+                fetchStartedAt: n,
+                fetchEndedAt: f,
             },
-            i = b.get(t.user.id);
-        if (null != i) i.set(t.guild_member_profile.guild_id, r);
+            s = b.get(t.user.id);
+        if (null != s) s.set(t.guild_member_profile.guild_id, i);
         else {
             let e = new Map();
-            e.set(t.guild_member_profile.guild_id, r), b.set(t.user.id, e);
+            e.set(t.guild_member_profile.guild_id, i), b.set(t.user.id, e);
         }
         if (e?.expiresAt != null) {
             let e = new a.Ep(),
@@ -247,27 +250,28 @@ function Q(e) {
     let { userId: t, guildId: n, apiError: r, fetchStartedAt: i } = e;
     v.get(t)?.delete(n ?? y), N.delete(t);
     let s = O.get(t) ?? {
-        connectedAccounts: [],
-        applicationRoleConnections: [],
-        premiumSince: null,
-        premiumGuildSince: null,
-        application: null,
-        legacyUsername: null,
-        userId: t,
-        banner: null,
-        accentColor: null,
-        bio: "",
-        pronouns: "",
-        premiumType: null,
-        fetchStartedAt: 0,
-        fetchEndedAt: 0,
-        fetchError: void 0,
-    };
-    (s.fetchStartedAt = i),
-        (s.fetchEndedAt = Date.now()),
-        (s.fetchError = r),
-        O.set(t, s),
-        r?.status === 404 && (M.set(t, 0), w.set(t, P), x.set(t, k));
+            connectedAccounts: [],
+            applicationRoleConnections: [],
+            premiumSince: null,
+            premiumGuildSince: null,
+            application: null,
+            legacyUsername: null,
+            userId: t,
+            banner: null,
+            accentColor: null,
+            bio: "",
+            pronouns: "",
+            premiumType: null,
+            fetchStartedAt: 0,
+            fetchEndedAt: 0,
+            fetchError: void 0,
+        },
+        a = Date.now();
+    if (((s.fetchStartedAt = i), (s.fetchEndedAt = a), (s.fetchError = r), O.set(t, s), null != n)) {
+        let e = b.get(t)?.get(n);
+        null != e && ((e.fetchStartedAt = i), (e.fetchEndedAt = a), (e.fetchError = r));
+    }
+    r?.status === 404 && (M.set(t, 0), w.set(t, P), x.set(t, k));
 }
 function J(e) {
     let {
@@ -387,6 +391,8 @@ function ed(e) {
     let t = O.get(e);
     if (null == t) return !1;
     (t.fetchStartedAt = 0), (t.fetchEndedAt = 0), (t.fetchError = void 0);
+    let n = b.get(e);
+    if (null != n) for (let e of n.values()) (e.fetchStartedAt = 0), (e.fetchEndedAt = 0), (e.fetchError = void 0);
 }
 function e_(e) {
     for (let t of ((U = e.applicationConfigs.map((e) => new l.V(e))), G.clear(), U)) G.set(t.applicationId, t);

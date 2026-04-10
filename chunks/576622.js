@@ -25,23 +25,24 @@ function f(e, t) {
     } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     if ("" === e || c.A.isFetchingProfile(e, g)) return Promise.resolve();
     let S = c.A.getUserProfile(e),
-        y = Date.now() - (S?.fetchEndedAt ?? 0) >= _;
-    if ((S?.fetchError?.status === 404 || S?.fetchError?.status === 429) && !y) return Promise.resolve();
-    let v = c.A.getGuildMemberProfile(e, g),
-        N = c.A.getMutualGuilds(e),
-        C = c.A.getMutualFriends(e),
-        R = c.A.getMutualFriendsCount(e),
-        O = null == C && h,
-        b = null == R && p,
-        D = (null == N && f) || O || b,
-        L = null == g ? null == S : null == v,
-        w = !L && (y || D);
-    if (!L && !w) return Promise.resolve();
-    let M = null != g ? v?.profileEffect : S?.profileEffect;
-    null != M && (0, a.RE)(M.skuId);
-    let x = null != g ? v?.profileFrame : S?.profileFrame;
-    null != x && (0, a.RE)(x.skuId), null != t && (0, s.l0)(t);
-    let P = {
+        y = c.A.getGuildMemberProfile(e, g),
+        v = null != g ? y : S,
+        N = Date.now() - (v?.fetchEndedAt ?? 0) >= _;
+    if ((v?.fetchError?.status === 404 || v?.fetchError?.status === 429) && !N) return Promise.resolve();
+    let C = c.A.getMutualGuilds(e),
+        R = c.A.getMutualFriends(e),
+        O = c.A.getMutualFriendsCount(e),
+        b = null == R && h,
+        D = null == O && p,
+        L = (null == C && f) || b || D,
+        w = null == g ? null == S : null == y,
+        M = !w && (N || L);
+    if (!w && !M) return Promise.resolve();
+    let x = null != g ? y?.profileEffect : S?.profileEffect;
+    null != x && (0, a.RE)(x.skuId);
+    let P = null != g ? y?.profileFrame : S?.profileFrame;
+    null != P && (0, a.RE)(P.skuId), null != t && (0, s.l0)(t);
+    let k = {
         type: n,
         withMutualGuilds: f,
         withMutualFriends: h,
@@ -52,7 +53,7 @@ function f(e, t) {
         connectionsRoleId:
             null == g ? void 0 : (0, o._g)({ guildMember: u.Ay.getMember(g, e), channel: l.A.getChannel(A) })?.id,
     };
-    if (m) return r.h.wait(() => (0, i.eO)(e, P, d.A)), Promise.resolve();
-    let k = (0, i.eO)(e, P, d.A);
-    return w && !E ? Promise.resolve() : k;
+    if (m) return r.h.wait(() => (0, i.eO)(e, k, d.A)), Promise.resolve();
+    let U = (0, i.eO)(e, k, d.A);
+    return M && !E ? Promise.resolve() : U;
 }
