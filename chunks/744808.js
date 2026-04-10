@@ -33,13 +33,11 @@ function p(e) {
         s = (0, l.bG)([u.A], () => u.A.theme),
         c = i.useMemo(
             () =>
-                "ACCOUNT_POPOUT" === n
-                    ? t.layers.filter((e) => "staple" !== e.type || "bottom" !== e.anchor)
-                    : "MODAL_V2" === n
-                      ? t.layers.filter((e) => "bottom" !== e.anchor)
-                      : "SIDEBAR" === n
-                        ? t.layers.filter((e) => "staple" === e.type && "bottom" !== e.anchor)
-                        : t.layers,
+                "MODAL_V2" === n
+                    ? t.layers.filter((e) => "bottom" !== e.anchor)
+                    : "SIDEBAR" === n
+                      ? t.layers.filter((e) => "staple" === e.type && "bottom" !== e.anchor)
+                      : t.layers,
             [n, t.layers],
         ),
         { layerData: p } = (0, d.A)({ skuId: t.skuId, layers: c });

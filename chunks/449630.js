@@ -107,7 +107,13 @@ function ea(e) {
             children: (0, a.jsxs)(c.lGe, {
                 ref: ec,
                 "aria-labelledby": eP,
-                className: l()(et.jC, el?.profileFrame != null ? et.lO : void 0, ei),
+                className: l()(et.jC, ei, {
+                    [et.lO]: el?.profileFrame != null,
+                    [et.q$]: er?.layers.some((e) => {
+                        let { type: t, anchor: n } = e;
+                        return "staple" === t && "bottom" === n;
+                    }),
+                }),
                 "data-layer": "base",
                 children: [
                     (0, a.jsx)(o.AC4, {
