@@ -60,7 +60,7 @@ function E(e) {
             : "cannot_join";
     if (
         (E && null == o && !(0, u.A)(n, f.jUm.CONTEXTLESS)) ||
-        (!E && (!(0, d.A)(n) || !(0, r.platformSupportsActivityJoin)()))
+        (!E && (!(0, d.Ay)(n) || !(0, r.platformSupportsActivityJoin)()))
     )
         return "cannot_join";
     let O = (0, l._)(n);

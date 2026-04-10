@@ -59,7 +59,7 @@ function G(e) {
                 return (0, r.jsx)(N.A, { user: t, activity: n, onAction: G });
             if (!W && Y && null != V && !Q)
                 return (0, r.jsx)(M.A, { application: V, onAction: G, onClose: F, analyticsLocations: K });
-            if ((0, l.A)(n) || ((0, o.A)(n) && W))
+            if ((0, l.A)(n) || ((0, o.Ay)(n) && W))
                 return (0, r.jsx)(R.A, { user: t, activity: n, onAction: G, onClose: F });
             if (z && q && !Z) return (0, r.jsx)(O.A, { startAuthorization: X, onAction: G });
             if ($.length > 0)
@@ -82,7 +82,7 @@ function G(e) {
             }
             return (0, d.A)(n)
                 ? (0, r.jsx)(w.A, { activity: n, onAction: G })
-                : (0, o._)(n)
+                : (0, o._C)(n)
                   ? (0, r.jsx)(R.A, { user: t, activity: n, onAction: G, onClose: F })
                   : n?.type === x.$pd.HANG_STATUS
                     ? (0, r.jsx)(C.A, { user: t, activity: n, onAction: G, onClose: F })

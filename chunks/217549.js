@@ -55,7 +55,7 @@ function H(e) {
                 o = s.length > 0,
                 d = s.some((e) => {
                     let { activity: t } = e;
-                    return (0, _.A)(t);
+                    return (0, _.Ay)(t);
                 });
             return n || l || !o || d
                 ? null
@@ -163,7 +163,7 @@ function H(e) {
                                 });
                             },
                         });
-                    if ((0, _._)(n)) {
+                    if ((0, _._C)(n)) {
                         async function h() {
                             if (null == n) return;
                             let e = await s.A.sendActivityInviteUser({
