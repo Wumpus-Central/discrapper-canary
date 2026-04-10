@@ -23,7 +23,7 @@ let o = (0, i.mj)({
     });
 function u(e) {
     let { enabled: t } = o.getConfig({ location: e }),
-        n = (0, s.HF)(e, !1);
+        n = (0, s.HF)(e);
     return t || n;
 }
 function c(e) {
