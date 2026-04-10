@@ -145,6 +145,12 @@ function y() {
     variations: { 1: { enabled: !0 } },
 }),
     (0, i.mj)({
+        name: "2026-04-mobile-quest-orb-reward-modal-cta-priority",
+        kind: "user",
+        defaultConfig: { enabled: !1, variant: 0 },
+        variations: { 0: { enabled: !1, variant: 0 }, 1: { enabled: !0, variant: 1 }, 2: { enabled: !0, variant: 2 } },
+    }),
+    (0, i.mj)({
         name: "2026-03-mobile-quest-home-red-dot-notification",
         kind: "user",
         defaultConfig: { enabled: !1 },
