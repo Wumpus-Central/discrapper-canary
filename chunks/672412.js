@@ -68,7 +68,9 @@ class f {
         try {
             await s.Ay.ensureModule("discord_ml");
             let e = s.Ay.requireModule("discord_ml");
-            await e.setupResources(),
+            await e.setupResources(), await s.Ay.ensureModule("discord_voice");
+            let t = s.Ay.requireModule("discord_voice");
+            t.setupMLPath?.(),
                 await e.setMLResultCallback((e) => {
                     let t;
                     try {
@@ -84,20 +86,20 @@ class f {
                 }),
                 this.onMLModuleLoaded?.(),
                 (this.state.nativeMLModuleState = r.Q.LOADED);
-            let t = l.Ay.getMediaEngine();
-            t.setClipsMLPipelineEnabled(!0);
-            let a = n.A.getSettings()?.mlPipelinesEnabled ?? {
+            let a = l.Ay.getMediaEngine();
+            a.setClipsMLPipelineEnabled(!0);
+            let i = n.A.getSettings()?.mlPipelinesEnabled ?? {
                 emotionClassifier: !0,
                 wakeWordDetector: !0,
                 yellDetector: !0,
                 whisperTranscription: !0,
                 laughterDetector: !0,
             };
-            t.setClipsMLPipelineTypeEnabled("emotion_classifier", a.emotionClassifier),
-                t.setClipsMLPipelineTypeEnabled("wake_word_detector", a.wakeWordDetector),
-                t.setClipsMLPipelineTypeEnabled("yell_detector", a.yellDetector),
-                t.setClipsMLPipelineTypeEnabled("whisper_transcription", a.whisperTranscription),
-                t.setClipsMLPipelineTypeEnabled("laughter_shouting", a.laughterDetector),
+            a.setClipsMLPipelineTypeEnabled("emotion_classifier", i.emotionClassifier),
+                a.setClipsMLPipelineTypeEnabled("wake_word_detector", i.wakeWordDetector),
+                a.setClipsMLPipelineTypeEnabled("yell_detector", i.yellDetector),
+                a.setClipsMLPipelineTypeEnabled("whisper_transcription", i.whisperTranscription),
+                a.setClipsMLPipelineTypeEnabled("laughter_shouting", i.laughterDetector),
                 h.info("ML native module loaded successfully");
         } catch (e) {
             h.warn(`Failed to load Clips ML module: ${e.message}`), (this.state.nativeMLModuleState = r.Q.FAILED);
