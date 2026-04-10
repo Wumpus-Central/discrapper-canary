@@ -405,7 +405,7 @@ function F(e) {
                             : eh.enabled &&
                                 (ex === k.UA.ENROLLED || ex === k.UA.INCOMPLETE) &&
                                 eh.enabledQuestStates.has(ex)
-                              ? (0, E.t)({ quest: t }) && !(0, E.g5)(t)
+                              ? eT && (0, E.t)({ quest: t }) && !(0, E.g5)(t)
                                   ? (0, a.jsx)("div", { className: D.x6, children: ek })
                                   : (0, a.jsx)("div", {
                                         className: D.x6,
