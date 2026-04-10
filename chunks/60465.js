@@ -24,8 +24,8 @@ let u = {
                     let { default: e } = await Promise.all([
                         n.e("18976"),
                         n.e("21957"),
-                        n.e("18037"),
-                        n.e("88323"),
+                        n.e("58801"),
+                        n.e("55007"),
                     ]).then(n.bind(n, 225732));
                     return (n) =>
                         (0, r.jsx)(e, {
@@ -41,18 +41,18 @@ let u = {
             );
     },
     returnToGameProfile: function (e) {
-        let { gameId: t, source: i } = e;
+        let { gameId: t, source: i, initialScrollOffset: s } = e;
         l(t),
             (0, a.mMO)(async () => {
-                let { default: e } = await Promise.all([n.e("18976"), n.e("21957"), n.e("18037"), n.e("88323")]).then(
+                let { default: e } = await Promise.all([n.e("18976"), n.e("21957"), n.e("58801"), n.e("55007")]).then(
                     n.bind(n, 225732),
                 );
-                return (n) => (0, r.jsx)(e, { applicationId: t, source: i, ...n });
+                return (n) => (0, r.jsx)(e, { applicationId: t, source: i, initialScrollOffset: s, ...n });
             });
     },
     setGameProfilePendingReturn: function (e) {
-        let { gameId: t, channelId: n } = e;
-        o.h.dispatch({ type: "GAME_PROFILE_SET_PENDING_RETURN", gameId: t, channelId: n });
+        let { gameId: t, channelId: n, initialScrollOffset: r } = e;
+        o.h.dispatch({ type: "GAME_PROFILE_SET_PENDING_RETURN", gameId: t, channelId: n, initialScrollOffset: r });
     },
     clearGameProfilePendingReturn: l,
 };

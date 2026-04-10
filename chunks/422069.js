@@ -74,9 +74,9 @@ let g = new A(l.h, {
         (u[t] = !0), (h[t] = !1);
     },
     GAME_PROFILE_SET_PENDING_RETURN: function (e) {
-        let { gameId: t, channelId: n } = e;
-        if (m?.gameId === t && m?.channelId === n) return !1;
-        m = { gameId: t, channelId: n };
+        let { gameId: t, channelId: n, initialScrollOffset: i } = e;
+        if (m?.gameId === t && m?.channelId === n && m?.initialScrollOffset === i) return !1;
+        m = { gameId: t, channelId: n, initialScrollOffset: i };
     },
     GAME_PROFILE_CLEAR_PENDING_RETURN: function (e) {
         let { gameId: t } = e;

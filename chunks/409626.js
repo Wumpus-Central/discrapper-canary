@@ -70,6 +70,7 @@ var r = n(835245),
             (e.ClipEmbed = "clip_embed"),
             (e.AnnouncementChannelReturn = "announcement_channel_return"),
             (e.CallTile = "call_tile"),
+            (e.InAppBrowserReturn = "in_app_browser_return"),
             e
         );
     })({}),

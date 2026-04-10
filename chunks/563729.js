@@ -14,7 +14,12 @@ function u(e) {
             return null == e || e.channelId !== t ? null : e;
         }),
         u = i.useCallback(() => {
-            null != n && r.A.returnToGameProfile({ gameId: n.gameId, source: o.Ob.AnnouncementChannelReturn });
+            null != n &&
+                r.A.returnToGameProfile({
+                    gameId: n.gameId,
+                    source: o.Ob.AnnouncementChannelReturn,
+                    initialScrollOffset: n.initialScrollOffset,
+                });
         }, [n]),
         h = (0, l.bG)([s.A], () => (n?.gameId != null ? s.A.getGame(n.gameId) : null));
     i.useEffect(() => {
