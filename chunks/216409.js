@@ -1,69 +1,79 @@
-s.d(t, { A: () => v });
+s.d(t, { A: () => f });
 var n = s(627968),
     l = s(64700),
     i = s(311907),
     a = s(990078),
     o = s(397927),
     r = s(775602),
-    u = s(341915),
-    d = s(890687),
-    c = s(92246),
-    m = s(453384),
-    x = s(646764),
-    h = s(793683),
-    C = s(201257),
-    A = s(985018),
-    p = s(369865);
-let g = async () => await s.e("40119").then(s.t.bind(s, 718698, 19));
-function v() {
-    let { quest: e, sourceQuestContent: t, onClose: s } = l.useContext(C.VideoQuestModalContext),
-        [v, j] = l.useState(!1),
-        f = (0, i.bG)([r.A], () => r.A.useReducedMotion),
-        S = l.useRef(e.userStatus?.completedAt),
-        [N, O] = l.useState(!1),
-        E = (0, c.mq)(e.config),
-        { completedRatio: _, completedRatioDisplay: M } = (0, d.O9)(e),
-        T = e.userStatus?.completedAt != null,
-        V = e.userStatus?.claimedAt != null,
-        y = A.intl.formatToPlainString(T && !V ? A.t.NRp4K4 : A.t["12IWP2"], { rewardName: E });
+    u = s(773669),
+    d = s(252424),
+    c = s(341915),
+    m = s(92246),
+    x = s(453384),
+    h = s(646764),
+    C = s(793683),
+    g = s(201257),
+    p = s(985018),
+    A = s(704558);
+let S = async () => await s.e("40119").then(s.t.bind(s, 718698, 19));
+function f() {
+    let {
+            quest: e,
+            sourceQuestContent: t,
+            onClose: s,
+            progressSec: f,
+            targetSec: v,
+        } = l.useContext(g.VideoQuestModalContext),
+        [j, N] = l.useState(!1),
+        O = (0, i.bG)([r.A], () => r.A.useReducedMotion),
+        E = (0, i.bG)([u.default], () => u.default.locale),
+        _ = l.useRef(e.userStatus?.completedAt),
+        [M, T] = l.useState(!1),
+        y = (0, m.mq)(e.config),
+        V = e.userStatus?.completedAt != null,
+        D = v > 0 ? Math.min(f / v, 0.99) : 0,
+        P = V ? 1 : D,
+        k = (0, d.l9)(E, P, { roundingMode: "floor" }),
+        L = e.userStatus?.claimedAt != null,
+        b = p.intl.formatToPlainString(V && !L ? p.t.NRp4K4 : p.t["12IWP2"], { rewardName: y });
     l.useEffect(() => {
-        null == S.current && e.userStatus?.completedAt != null && O(!0), (S.current = e.userStatus?.completedAt);
+        null == _.current && e.userStatus?.completedAt != null && T(!0), (_.current = e.userStatus?.completedAt);
     }, [e.userStatus?.completedAt]);
-    let D = (0, h.v)({
+    let I = (0, C.v)({
         quest: e,
-        questContent: u.uF.QUEST_HOME_DESKTOP,
+        questContent: c.uF.QUEST_HOME_DESKTOP,
         sourceQuestContent: t,
         onCloseModal: s,
         shouldShowShopIfAlreadyClaimed: !1,
     });
     return (0, n.jsxs)("div", {
-        className: p.Tr,
+        className: A.Tr,
         children: [
-            T && (0, n.jsx)(o.akl, { importData: g, className: p.t_, loop: !1, autoplay: !1, shouldAnimate: N && !f }),
+            V && (0, n.jsx)(o.akl, { importData: S, className: A.t_, loop: !1, autoplay: !1, shouldAnimate: M && !O }),
             (0, n.jsx)(a.m, {
                 position: "top",
-                text: y,
+                text: b,
                 onTooltipShow: () => {
-                    j(!0);
+                    N(!0);
                 },
                 onTooltipHide: () => {
-                    j(!1);
+                    N(!1);
                 },
                 children: (0, n.jsx)(o.DUT, {
-                    className: p.md,
-                    style: T ? { cursor: "pointer" } : void 0,
+                    className: A.md,
+                    style: V ? { cursor: "pointer" } : void 0,
                     onClick: (e) => {
-                        T && D(e);
+                        V && I(e);
                     },
-                    children: (0, n.jsx)(m.A, {
+                    children: (0, n.jsx)(x.A, {
                         size: 48,
-                        percentComplete: _,
-                        percentCompleteText: v ? M : void 0,
+                        percentComplete: P,
+                        percentCompleteText: j ? k : void 0,
                         percentCompleteTextVariant: "text-sm/medium",
-                        children: (0, n.jsx)(x.A, {
+                        children: (0, n.jsx)(h.A, {
                             fullWidth: !0,
                             quest: e,
-                            questContent: u.uF.VIDEO_MODAL,
+                            questContent: c.uF.VIDEO_MODAL,
                             autoplay: !1,
                             sourceQuestContent: t,
                         }),

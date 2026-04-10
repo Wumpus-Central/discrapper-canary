@@ -1,6 +1,6 @@
-n.d(t, { a: () => l, l: () => a });
+n.d(t, { a: () => s, l: () => i });
 var r = n(64700);
-let l = r.createContext({
+let s = r.createContext({
         quest: null,
         sourceQuestContent: null,
         videoSessionId: "",
@@ -9,5 +9,7 @@ let l = r.createContext({
         useNewProgressBarStyling: !1,
         onClose: () => {},
         setIsFullscreenEnabled: () => {},
+        progressSec: 0,
+        targetSec: 0,
     }),
-    a = r.createContext({ questConfig: null });
+    i = r.createContext({ questConfig: null });

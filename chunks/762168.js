@@ -113,6 +113,8 @@ function x(e) {
                 isFullscreenEnabled: i,
                 setIsFullscreenEnabled: s,
                 useNewProgressBarStyling: l,
+                progressSec: 0,
+                targetSec: 0,
             }),
             [t, n, i, s, l],
         ),
