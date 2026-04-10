@@ -111,6 +111,7 @@ function G(e) {
             return n !== t.id;
         })),
         (E = E.filter((e) => e !== t.id)),
+        (g[t.id] = t),
         (E = [t.id, ...E]),
         (D.hasClips = !0);
 }
