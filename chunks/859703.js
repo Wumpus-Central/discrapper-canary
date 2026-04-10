@@ -284,25 +284,23 @@ function eY(e) {
         adDecisionData: r,
         adContext: a,
         responseTtlSeconds: o,
-        metadataRaw: l,
-        metadataSealed: u,
-        trafficMetadataRaw: c,
-        trafficMetadataSealed: d,
-        fetchedAt: _,
+        metadataSealed: l,
+        trafficMetadataRaw: u,
+        trafficMetadataSealed: c,
+        fetchedAt: d,
     } = e;
     (f = Date.now()), (i = !1), (s = new Map(s)).set(n, !1);
-    let { enableNewRequestBehavior: p } = V.A.getConfig({ location: "handleFetchQuestToDeliverSuccess" });
-    if (p) {
+    let { enableNewRequestBehavior: _ } = V.A.getConfig({ location: "handleFetchQuestToDeliverSuccess" });
+    if (_) {
         let e = {
             questId: t?.id ?? null,
-            fetchedAt: _,
+            fetchedAt: d,
             ttlMillis: eW(o),
             adDecisionData: r,
             adContext: a,
-            metadataRaw: l,
-            metadataSealed: u,
-            trafficMetadataRaw: c,
-            trafficMetadataSealed: d,
+            metadataSealed: l,
+            trafficMetadataRaw: u,
+            trafficMetadataSealed: c,
         };
         (b = new Map(b)).set(n, e);
     } else
@@ -312,10 +310,9 @@ function eY(e) {
                   quest: t,
                   adDecisionData: r,
                   adContext: a,
-                  metadataRaw: l,
-                  metadataSealed: u,
-                  trafficMetadataRaw: c,
-                  trafficMetadataSealed: d,
+                  metadataSealed: l,
+                  trafficMetadataRaw: u,
+                  trafficMetadataSealed: c,
               });
 }
 function eW(e) {
@@ -332,18 +329,18 @@ function e$(e) {
     (o = !0), (l = new Map(l)).set(t, !0);
 }
 function ez(e) {
-    let { serverQuests: t, metadataRaw: n, content: r, fetchedAt: i, responseTtlSeconds: s } = e;
-    (o = !1), (l = new Map(l)).set(r, !1);
-    let a = eW(s),
-        c = C.get(r),
-        d = new Map(c?.earnedDecisionByQuestId);
+    let { serverQuests: t, content: n, fetchedAt: r, responseTtlSeconds: i } = e;
+    (o = !1), (l = new Map(l)).set(n, !1);
+    let s = eW(i),
+        a = C.get(n),
+        c = new Map(a?.earnedDecisionByQuestId);
     for (let [e, n] of t)
-        if ((d.set(e, { fetchedAt: i, ttlMillis: a, shouldDeliver: null != n }), null != n)) {
+        if ((c.set(e, { fetchedAt: r, ttlMillis: s, shouldDeliver: null != n }), null != n)) {
             let t = u.get(e),
                 r = (0, j.rO)(n);
             null != t ? er(e, r) : ((u = new Map(u)).set(e, r), (R = new Map(R)).set(e, (0, H.Ic)(r)));
         }
-    C.set(r, { earnedDecisionByQuestId: d, metadataRaw: n });
+    C.set(n, { earnedDecisionByQuestId: c });
 }
 function eq(e) {
     let { content: t } = e;
@@ -394,7 +391,6 @@ function e6(e) {
         ttlMillis: eW(e.responseTtlSeconds),
         adDecisionData: e.adDecisionData,
         adContext: e.adContext,
-        metadataRaw: e.metadataRaw,
         metadataSealed: e.metadataSealed,
         trafficMetadataRaw: e.trafficMetadataRaw,
         trafficMetadataSealed: e.trafficMetadataSealed,

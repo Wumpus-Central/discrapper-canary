@@ -81,8 +81,7 @@ function R(e) {
     N(r, { ...v(t, n, o, a), ...i }, s, !1);
 }
 async function O(e) {
-    let t = await (0, s.N)((0, g.jO)(e));
-    return { adUser: t, adMetadataRaw: (0, h.Li)(e), adMetadataSealed: (0, h.L4)(e) };
+    return { adUser: await (0, s.N)((0, g.jO)(e)), adMetadataSealed: (0, h.L4)(e) };
 }
 async function b(e) {
     let {
@@ -93,7 +92,7 @@ async function b(e) {
             impressionId: a,
             clickId: o,
         } = e,
-        { adUser: l, adMetadataRaw: c, adMetadataSealed: d } = await O(t);
+        { adUser: l, adMetadataSealed: c } = await O(t);
     return {
         ...(0, g.fF)(t, n, i),
         ...(0, u.A)(),
@@ -102,8 +101,7 @@ async function b(e) {
         apple_advertising_id: null != l && (0, f.isIOS)() ? l.advertisingId : null,
         android_advertising_id: null != l && (0, f.isAndroid)() ? l.advertisingId : null,
         click_id: o ?? (0, r.A)(),
-        metadata_raw: c ?? null,
-        metadata_sealed: d ?? null,
+        metadata_sealed: c ?? null,
     };
 }
 async function D(e) {

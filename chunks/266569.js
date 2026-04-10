@@ -85,26 +85,24 @@ class N {
         return null != t && !y.has(v(e, t)) && (0, m.xn)(this.questContent);
     };
     onMinViewTimeReached = async () => {
-        let e = (0, m.Li)(this.questContent),
-            t = (0, m.L4)(this.questContent),
-            n = await (0, c.N)((0, A.jO)(this.questContent)),
-            r = {
+        let e = (0, m.L4)(this.questContent),
+            t = await (0, c.N)((0, A.jO)(this.questContent)),
+            n = {
                 trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata,
                 sourceQuestContent: this.sourceQuestContent,
             },
-            i = {
+            r = {
                 min_view_time_seconds: this.minViewTimeSeconds,
                 min_viewport_percentage: this.minViewportPercentage,
                 triggered_by_status_change: this.triggeredByStatusChange,
-                apple_advertising_id: null != n && (0, f.isIOS)() ? n.advertisingId : null,
-                android_advertising_id: null != n && (0, f.isAndroid)() ? n.advertisingId : null,
-                metadata_raw: e ?? null,
-                metadata_sealed: t ?? null,
+                apple_advertising_id: null != t && (0, f.isIOS)() ? t.advertisingId : null,
+                android_advertising_id: null != t && (0, f.isAndroid)() ? t.advertisingId : null,
+                metadata_sealed: e ?? null,
                 ...(0, d.A)(),
                 ...(0, I.X)(this.questContent),
             };
         this.entity.adContentIds.forEach((e, t) => {
-            let n = this.shouldExtendSession(e);
+            let i = this.shouldExtendSession(e);
             if ((this.trackViewedPlacement(e), this.entity.adCreativeType === a.p.QUEST)) {
                 let e = this.entity.adContentIds[t],
                     s = h.A.getQuest(e);
@@ -114,12 +112,12 @@ class N {
                         { impressionId: this.id },
                     ),
                     (0, g.av)({
-                        ...r,
-                        shouldExtendSession: n,
+                        ...n,
+                        shouldExtendSession: i,
                         questId: e,
                         event: S.HAw.QUEST_CONTENT_VIEWED,
                         properties: {
-                            ...i,
+                            ...r,
                             ...this.commonProperties(s),
                             traffic_metadata_raw: (0, m.yI)(this.questContent, s?.id) ?? null,
                             traffic_metadata_sealed: (0, m.Gp)(this.questContent, s?.id) ?? null,
@@ -132,12 +130,12 @@ class N {
                     { impressionId: this.id },
                 ),
                     (0, g.Qg)({
-                        ...r,
-                        shouldExtendSession: n,
+                        ...n,
+                        shouldExtendSession: i,
                         adContentId: e,
                         adCreativeType: this.entity.adCreativeType,
                         event: S.HAw.QUEST_CONTENT_VIEWED,
-                        properties: { ...i, ...this.commonProperties() },
+                        properties: { ...r, ...this.commonProperties() },
                     });
             }
         }),
@@ -222,47 +220,42 @@ class N {
                 this.onMinViewTimeReached,
                 1e3 * this.minViewTimeSeconds,
             ));
-        let e = (0, m.Li)(this.questContent),
-            t = (0, m.L4)(this.questContent),
-            n = {
+        let e = (0, m.L4)(this.questContent),
+            t = {
                 trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata,
                 sourceQuestContent: this.sourceQuestContent,
             },
-            r = {
-                triggered_by_status_change: this.triggeredByStatusChange,
-                metadata_raw: e ?? null,
-                metadata_sealed: t ?? null,
-            };
-        this.entity.adContentIds.forEach((e, t) => {
+            n = { triggered_by_status_change: this.triggeredByStatusChange, metadata_sealed: e ?? null };
+        this.entity.adContentIds.forEach((e, r) => {
             if (this.entity.adCreativeType === a.p.QUEST) {
-                let e = this.entity.adContentIds[t],
+                let e = this.entity.adContentIds[r],
                     i = h.A.getQuest(e);
                 (0, E.L)().info(
                     `${i?.config.messages.questName ?? e} Quest became visible at ${(0, A.jO)(this.questContent)}`,
                     { impressionId: this.id },
                 ),
                     (0, g.av)({
-                        ...n,
+                        ...t,
                         questId: e,
                         event: S.HAw.QUEST_CONTENT_LOADED,
                         properties: {
-                            ...r,
+                            ...n,
                             ...this.commonProperties(i),
                             traffic_metadata_raw: (0, m.yI)(this.questContent, i?.id) ?? null,
                             traffic_metadata_sealed: (0, m.Gp)(this.questContent, i?.id) ?? null,
                         },
                     });
             } else {
-                let e = this.entity.adContentIds[t];
+                let e = this.entity.adContentIds[r];
                 (0, E.L)().info(`${e} ad content became visible at ${(0, A.jO)(this.questContent)}`, {
                     impressionId: this.id,
                 }),
                     (0, g.Qg)({
-                        ...n,
+                        ...t,
                         adContentId: e,
                         adCreativeType: this.entity.adCreativeType,
                         event: S.HAw.QUEST_CONTENT_LOADED,
-                        properties: { ...r, ...this.commonProperties() },
+                        properties: { ...n, ...this.commonProperties() },
                     });
             }
         }),

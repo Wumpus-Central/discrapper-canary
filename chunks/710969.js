@@ -1,24 +1,23 @@
 "use strict";
 n.d(t, {
-    Gp: () => O,
+    Gp: () => R,
     HN: () => T,
     Ic: () => m,
     Kc: () => v,
-    L4: () => C,
-    Li: () => N,
+    L4: () => N,
     Oh: () => _,
-    RF: () => D,
+    RF: () => b,
     ZG: () => A,
     gO: () => h,
     if: () => E,
-    r$: () => L,
+    r$: () => D,
     t6: () => I,
     v1: () => g,
-    vZ: () => b,
+    vZ: () => O,
     vc: () => f,
     vy: () => p,
     xn: () => S,
-    yI: () => R,
+    yI: () => C,
 });
 var r = n(665260),
     i = n(773669),
@@ -98,7 +97,6 @@ function y(e) {
                   questId: t.questId,
                   adDecisionData: t.adDecisionData,
                   adContext: t.adContext,
-                  metadataRaw: t.metadataRaw,
                   metadataSealed: t.metadataSealed,
                   trafficMetadataRaw: t.trafficMetadataRaw,
                   trafficMetadataSealed: t.trafficMetadataSealed,
@@ -112,7 +110,6 @@ function y(e) {
                   questId: t.quest.id,
                   adDecisionData: t.adDecisionData,
                   adContext: t.adContext,
-                  metadataRaw: t.metadataRaw,
                   metadataSealed: t.metadataSealed,
                   trafficMetadataRaw: t.trafficMetadataRaw,
                   trafficMetadataSealed: t.trafficMetadataSealed,
@@ -127,13 +124,9 @@ function v(e, t) {
 }
 function N(e) {
     let t = T(e);
-    if (null != t) return y(t)?.metadataRaw;
-}
-function C(e) {
-    let t = T(e);
     if (null != t) return y(t)?.metadataSealed;
 }
-function R(e, t) {
+function C(e, t) {
     let n = T(e);
     if (null != n) {
         let { trafficMetadataRaw: e, questId: r } = y(n) ?? {};
@@ -144,7 +137,7 @@ function R(e, t) {
         return e?.trafficMetadataRaw;
     }
 }
-function O(e, t) {
+function R(e, t) {
     let n = T(e);
     if (null != n) {
         let { trafficMetadataSealed: e, questId: r } = y(n) ?? {};
@@ -155,13 +148,13 @@ function O(e, t) {
         return e?.trafficMetadataSealed;
     }
 }
-function b(e) {
+function O(e) {
     let t = T(e);
     if (null != t) return y(t)?.adContext;
 }
-function D(e, t) {
+function b(e, t) {
     s.A.captureException(e, { ...t, tags: { ...t?.tags, app_context: "quests" } });
 }
-function L() {
+function D() {
     return window.location.pathname.startsWith(c.BVt.QUEST_HOME_DEPRECATED);
 }

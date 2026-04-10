@@ -141,12 +141,11 @@ function eP(e) {
         else if (t === S.I.SERVER_SHOP);
         else if (t === S.I.SOCIAL_LAYER_STOREFRONT);
         else if (t === S.I.QUESTS_EMBED) {
-            let e = (0, ee.Li)(i.u.QUESTS_EMBED),
-                t = (0, ee.L4)(i.u.QUESTS_EMBED);
+            let e = (0, ee.L4)(i.u.QUESTS_EMBED);
             (0, J.av)({
                 questId: u,
                 event: eN.HAw.QUEST_LINK_SHARED,
-                properties: { metadata_raw: null != e ? e : null, metadata_sealed: null != t ? t : null },
+                properties: { metadata_sealed: null != e ? e : null },
                 trackGuildAndChannelMetadata: !0,
                 sourceQuestContent: i.u.QUESTS_EMBED,
             });

@@ -37,10 +37,9 @@ function g() {
                     sourceQuestContent: h,
                 } = t,
                 E = c.A.getQuest(n),
-                g = (0, _.Li)(r),
-                A = (0, _.L4)(r),
-                I = (0, _.yI)(r, n),
-                T = (0, _.Gp)(r, n);
+                g = (0, _.L4)(r),
+                A = (0, _.yI)(r, n),
+                I = (0, _.Gp)(r, n);
             (0, a.N)((0, p.jO)(r)).then((t) => {
                 e({
                     questId: n,
@@ -53,10 +52,9 @@ function g() {
                         click_id: (0, i.A)(),
                         apple_advertising_id: null != t && (0, u.isIOS)() ? t.advertisingId : null,
                         android_advertising_id: null != t && (0, u.isAndroid)() ? t.advertisingId : null,
-                        metadata_raw: null != g ? g : null,
-                        metadata_sealed: null != A ? A : null,
-                        traffic_metadata_raw: null != I ? I : null,
-                        traffic_metadata_sealed: null != T ? T : null,
+                        metadata_sealed: null != g ? g : null,
+                        traffic_metadata_raw: null != A ? A : null,
+                        traffic_metadata_sealed: null != I ? I : null,
                     },
                     trackGuildAndChannelMetadata: f,
                     shouldExtendSession: (0, _.xn)(r),

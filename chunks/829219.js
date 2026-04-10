@@ -196,24 +196,22 @@ async function Y(e, t) {
         return { type: "previous_in_flight_request" };
     a.h.dispatch({ type: "QUESTS_ENROLL_BEGIN", questId: e });
     try {
-        let n = (0, L.Li)(t.questContent),
-            r = (0, L.L4)(t.questContent),
-            i = (0, L.yI)(t.questContent, e),
-            o = (0, L.Gp)(t.questContent, e),
-            l = await s.Bo.post({
+        let n = (0, L.L4)(t.questContent),
+            r = (0, L.yI)(t.questContent, e),
+            i = (0, L.Gp)(t.questContent, e),
+            o = await s.Bo.post({
                 url: x.Rsh.QUESTS_ENROLL(e),
                 body: {
                     location: t.questContent,
                     ...(0, L.Kc)(e, t.questContent),
-                    metadata_raw: null != n ? n : null,
-                    metadata_sealed: null != r ? r : null,
-                    traffic_metadata_raw: null != i ? i : null,
-                    traffic_metadata_sealed: null != o ? o : null,
+                    metadata_sealed: null != n ? n : null,
+                    traffic_metadata_raw: null != r ? r : null,
+                    traffic_metadata_sealed: null != i ? i : null,
                 },
                 rejectWithError: !0,
             });
         return (
-            a.h.dispatch({ type: "QUESTS_ENROLL_SUCCESS", enrolledQuestUserStatus: (0, w.tp)(l.body) }),
+            a.h.dispatch({ type: "QUESTS_ENROLL_SUCCESS", enrolledQuestUserStatus: (0, w.tp)(o.body) }),
             { type: "success" }
         );
     } catch (t) {
@@ -227,29 +225,27 @@ async function W(e, t, n) {
     if (!v.A.isClaimingReward(e)) {
         a.h.dispatch({ type: "QUESTS_CLAIM_REWARD_BEGIN", questId: e });
         try {
-            let r = (0, L.Li)(n),
-                i = (0, L.L4)(n),
-                o = (0, L.yI)(n, e),
-                l = (0, L.Gp)(n, e),
-                u = await s.Bo.post({
+            let r = (0, L.L4)(n),
+                i = (0, L.yI)(n, e),
+                o = (0, L.Gp)(n, e),
+                l = await s.Bo.post({
                     url: x.Rsh.QUESTS_CLAIM_REWARD(e),
                     body: {
                         platform: t,
                         location: n,
                         ...(0, L.Kc)(e, n),
-                        metadata_raw: null != r ? r : null,
-                        metadata_sealed: null != i ? i : null,
-                        traffic_metadata_raw: null != o ? o : null,
-                        traffic_metadata_sealed: null != l ? l : null,
+                        metadata_sealed: null != r ? r : null,
+                        traffic_metadata_raw: null != i ? i : null,
+                        traffic_metadata_sealed: null != o ? o : null,
                     },
                     rejectWithError: !1,
                 }),
-                c = (0, w.Dv)(u.body);
+                u = (0, w.Dv)(l.body);
             return (
-                0 === c.errors.length
-                    ? a.h.dispatch({ type: "QUESTS_CLAIM_REWARD_SUCCESS", questId: e, entitlements: c })
-                    : a.h.dispatch({ type: "QUESTS_CLAIM_REWARD_FAILURE", error: c.errors, questId: e }),
-                c
+                0 === u.errors.length
+                    ? a.h.dispatch({ type: "QUESTS_CLAIM_REWARD_SUCCESS", questId: e, entitlements: u })
+                    : a.h.dispatch({ type: "QUESTS_CLAIM_REWARD_FAILURE", error: u.errors, questId: e }),
+                u
             );
         } catch (t) {
             throw (a.h.dispatch({ type: "QUESTS_CLAIM_REWARD_FAILURE", error: new o.A(t), questId: e }), t);
@@ -389,7 +385,6 @@ async function er(e, t) {
                     decision_id: b.request_id,
                     is_targeted: null != b.ad_identifiers,
                 },
-                metadataRaw: b.metadata_raw,
                 metadataSealed: b.metadata_sealed,
                 trafficMetadataRaw: b.traffic_metadata_raw,
                 trafficMetadataSealed: b.traffic_metadata_sealed,
@@ -451,8 +446,7 @@ async function es(e, t, n) {
             r = await s.Bo.get({ url: x.Rsh.QUEST_EARNED_DECISION(n, t, e?.uuid), rejectWithError: !1 }),
             o = r.body.quests,
             u = r.body.response_ttl_seconds,
-            d = r.body.metadata_raw,
-            _ = new Map(
+            d = new Map(
                 i.map((e) => {
                     let t = o?.[e];
                     return [e, null != t && (0, w.s2)(t) ? t : null];
@@ -460,8 +454,7 @@ async function es(e, t, n) {
             );
         a.h.dispatch({
             type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_SUCCESS",
-            serverQuests: _,
-            metadataRaw: d,
+            serverQuests: d,
             content: t,
             fetchedAt: l,
             responseTtlSeconds: u,
@@ -527,7 +520,7 @@ async function ed() {
                     query: { placements: e, platform: N.vg.WEB },
                     rejectWithError: !1,
                 });
-            a.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS", questHomeHero: (0, w.Wv)(t.body) });
+            a.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS", questHomeHero: (0, w.oc)(t.body) });
         } catch (e) {
             throw (a.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_FAILURE", error: new o.A(e) }), e);
         }
@@ -564,7 +557,6 @@ async function e_() {
                     decision_id: d.request_id,
                     is_targeted: null != d.ad_identifiers,
                 },
-                metadataRaw: d.metadata_raw,
                 metadataSealed: d.metadata_sealed,
                 trafficMetadataRaw: d.traffic_metadata_raw,
                 trafficMetadataSealed: d.traffic_metadata_sealed,
