@@ -1,29 +1,40 @@
-n.r(t), n.d(t, { default: () => u });
+n.r(t), n.d(t, { default: () => p });
 var a = n(627968),
     i = n(64700),
-    l = n(311907),
-    r = n(397927),
-    s = n(769015),
-    o = n(287809),
-    c = n(486020),
-    d = n(998518);
-let u = i.memo(function (e) {
-    let { application: t } = e,
-        n = (0, l.bG)([o.default], () => o.default.getCurrentUser()),
-        i = c.Ay.getUserAvatarURL(n);
-    return (0, a.jsxs)("div", {
-        className: d.Y,
-        children: [
-            (0, a.jsx)(s.A, { className: d.my, game: t, size: s.M.MEDIUM, "aria-label": t.name }),
-            (0, a.jsxs)("div", {
-                className: d.I5,
-                children: [
-                    (0, a.jsx)("div", { className: d.pw }),
-                    (0, a.jsx)("div", { className: d.pw }),
-                    (0, a.jsx)("div", { className: d.pw }),
-                ],
-            }),
-            (0, a.jsx)(r.euF, { className: d.my, src: i, size: r._3J.SIZE_48, "aria-label": n.username }),
-        ],
+    l = n(503698),
+    r = n.n(l),
+    s = n(311907),
+    o = n(397927),
+    c = n(303136),
+    d = n(769015),
+    u = n(287809),
+    m = n(486020),
+    f = n(998518),
+    x = n(268920),
+    h = n(633217);
+let g = () =>
+        (0, a.jsx)("div", {
+            className: f.Vi,
+            children: (0, a.jsx)(c.A, { src: h.A, fallbackImage: x.A, className: f.LG }),
+        }),
+    p = i.memo(function (e) {
+        let { application: t, isIncentivizedAccountLinking: n } = e,
+            i = (0, s.bG)([u.default], () => u.default.getCurrentUser()),
+            l = m.Ay.getUserAvatarURL(i),
+            c = r()(f.pw, { [f.yi]: n });
+        return (0, a.jsxs)("div", {
+            className: r()(f.Y, { [f.VT]: n }),
+            children: [
+                (0, a.jsx)(d.A, { className: f.my, game: t, size: d.M.MEDIUM, "aria-label": t.name }),
+                (0, a.jsxs)("div", {
+                    className: r()(f.I5, { [f.BE]: n }),
+                    children: [
+                        (0, a.jsx)("div", { className: c }),
+                        n ? (0, a.jsx)(g, {}) : (0, a.jsx)("div", { className: c }),
+                        (0, a.jsx)("div", { className: c }),
+                    ],
+                }),
+                (0, a.jsx)(o.euF, { className: f.my, src: l, size: o._3J.SIZE_48, "aria-label": i.username }),
+            ],
+        });
     });
-});

@@ -79,6 +79,7 @@ var r = (function (e) {
             (e.FORTNITE_GET_GAME_MODAL = "impression_fortnite_get_game_modal"),
             (e.FRIEND_REQUESTS_SPAM_INBOX = "impression_friend_requests_spam_inbox"),
             (e.FRIENDS = "impression_friends"),
+            (e.GAME_ACCOUNT_LINK_RECURRING_UPSELL = "impression_game_account_link_recurring_upsell"),
             (e.GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD = "impression_game_community_multi_guild_upsell_card"),
             (e.GAME_CONSOLE_DEVICE_LIST = "impression_game_console_device_list"),
             (e.GAME_DETECTION_REPORT_MODAL = "impression_game_detection_report_modal"),

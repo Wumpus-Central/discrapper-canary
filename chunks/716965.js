@@ -1,5 +1,15 @@
 "use strict";
-n.d(t, { $Q: () => h, Gq: () => f, IN: () => g, Kf: () => _, Vh: () => m, cG: () => E, qY: () => p, zf: () => A });
+n.d(t, {
+    $Q: () => h,
+    Gq: () => f,
+    IN: () => g,
+    Kf: () => _,
+    RI: () => I,
+    Vh: () => m,
+    cG: () => E,
+    qY: () => p,
+    zf: () => A,
+});
 var r = n(323125),
     i = n(562465),
     s = n(830215),
@@ -122,4 +132,17 @@ async function A(e, t, n) {
         body: { user_code: e, result: "two_way_link_error", error_code: t, error_source: n },
         rejectWithError: !1,
     });
+}
+async function I(e) {
+    let { applicationId: t, onSuccess: n, onError: r } = e;
+    try {
+        await i.Bo.post({
+            url: l.Rsh.OAUTH2_ACCOUNT_LINKING_ACHIEVEMENT,
+            body: { application_id: t },
+            rejectWithError: !0,
+        }),
+            n?.();
+    } catch (e) {
+        r?.(e);
+    }
 }

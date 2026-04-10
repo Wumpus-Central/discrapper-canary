@@ -2,6 +2,8 @@
 n.d(t, { j: () => r });
 let r = new Set([
     ...new Set([
+        "https://account.riotgames.com/#connected-accounts",
+        "https://aes.sgp.pvp.net/providers/discord/link/v1",
         "https://marvelrivals.com/discord",
         "https://wutheringwaves-dc.kurogames-global.com/",
         "https://id.embark.games/id/connected-platforms",
