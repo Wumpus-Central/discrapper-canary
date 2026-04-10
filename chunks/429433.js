@@ -10,7 +10,7 @@ function a(e) {
         closePopout: n,
         channel: t,
         onSelectEmoji: o,
-        pickerIntention: s.b_.REACTION,
+        pickerIntention: s.EmojiIntention.REACTION,
         showAddEmojiButton: null == t || null != t.guild_id,
         analyticsOverride: a,
         messageId: l,

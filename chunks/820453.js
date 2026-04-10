@@ -16,7 +16,7 @@ var l = n(627968),
     h = n(307731),
     A = n(698279),
     C = n(985018),
-    R = n(270465);
+    R = n(851124);
 function j(e) {
     let {
         hasUpload: t,
@@ -78,23 +78,23 @@ function x(e) {
         E = (0, o.bG)([d.A], () => d.A.getChannel(t)),
         {
             emoji: P,
-            isLoadingMedia: N,
-            hasUpload: I,
+            isLoadingMedia: I,
+            hasUpload: N,
             mediaUrl: S,
             mediaFilename: v,
         } = (0, b.A)({ channelId: t, localCreationAnswerId: n, image: i }),
-        D = I || null != P,
+        D = N || null != P,
         O = a.useCallback(() => {
             m(f);
         }, [m, f]),
         y = a.useMemo(
             () =>
-                I
+                N
                     ? C.intl.formatToPlainString(C.t.vcC7Qn, { imageName: (0, g.Kj)(v), answerNumber: f + 1 })
                     : null != P
                       ? C.intl.formatToPlainString(C.t.ncOAha, { emojiName: P.name, answerNumber: f + 1 })
                       : C.intl.formatToPlainString(C.t.emdpNo, { answerNumber: f + 1 }),
-            [I, P, f, v],
+            [N, P, f, v],
         ),
         T = a.useCallback(
             (e) => {
@@ -103,7 +103,7 @@ function x(e) {
                     className: R.Fb,
                     children: (0, l.jsx)(u.A, {
                         channel: E,
-                        pickerIntention: h.b_.POLLS,
+                        pickerIntention: h.EmojiIntention.POLLS,
                         closePopout: t,
                         onNavigateAway: t,
                         onSelectEmoji: (e) => {
@@ -122,10 +122,10 @@ function x(e) {
             },
             [O, x],
         ),
-        L = N
+        L = I
             ? (0, l.jsx)(s.y$y, { className: R.EC })
             : (0, l.jsx)(j, {
-                  hasUpload: I,
+                  hasUpload: N,
                   mediaUrl: S,
                   mediaFilename: v,
                   imageClassName: r()(R.$_, R.qX),
@@ -200,10 +200,10 @@ function _(e) {
         focusInput: () => w.current?.focus(),
     }));
     let [E, P] = a.useState(!1),
-        N = a.useCallback(() => {
+        I = a.useCallback(() => {
             P((e) => !e);
         }, []),
-        I = a.useCallback(
+        N = a.useCallback(
             (e) => {
                 let t = e.ctrlKey && !(e.altKey || e.metaKey || e.shiftKey),
                     l = e.metaKey && !(e.altKey || e.ctrlKey || e.shiftKey);
@@ -215,10 +215,10 @@ function _(e) {
                             j.current[i + 1]?.focusInput();
                         break;
                     case "e":
-                        ("macos" === (0, f.getOS)() ? l : t) && (e.preventDefault(), e.stopPropagation(), N());
+                        ("macos" === (0, f.getOS)() ? l : t) && (e.preventDefault(), e.stopPropagation(), I());
                 }
             },
-            [b, n, j, i, r, h, N],
+            [b, n, j, i, r, h, I],
         ),
         S = (0, l.jsx)(x, {
             containerRef: k,
@@ -229,7 +229,7 @@ function _(e) {
             localCreationAnswerId: n.localCreationAnswerId,
             answerIndex: i,
             shouldShowEmojiPicker: E,
-            toggleEmojiPicker: N,
+            toggleEmojiPicker: I,
         });
     return (0, l.jsx)("div", {
         ref: k,
@@ -248,7 +248,7 @@ function _(e) {
             placeholder: C.intl.string(C.t.NNHVlv),
             value: n.text,
             onChange: (e) => o({ text: e, index: i, localCreationAnswerId: n.localCreationAnswerId }),
-            onKeyDown: I,
+            onKeyDown: N,
             maxLength: p.dv,
             inputRef: w,
         }),

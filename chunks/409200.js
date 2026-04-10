@@ -47,7 +47,7 @@ var i = n(627968),
     K = n(307731),
     Z = n(818348),
     z = n(985018),
-    J = n(812618);
+    J = n(786415);
 function $(e) {
     let { isNew: t, isBeta: n } = e,
         s = null;
@@ -163,7 +163,7 @@ function ee(e) {
                 return (0, i.jsx)(_.A, {
                     channel: null,
                     guildId: n,
-                    pickerIntention: K.b_.NO_CUSTOM_EMOJI,
+                    pickerIntention: K.EmojiIntention.NO_CUSTOM_EMOJI,
                     closePopout: s,
                     onNavigateAway: s,
                     onSelectEmoji: (e) => {

@@ -34,7 +34,7 @@ function u(e) {
                                 : m({ id: n.id, name: n.originalName ?? n.name, animated: n.animated }),
                             l && t());
                     },
-                    pickerIntention: d.b_.COMMUNITY_CONTENT,
+                    pickerIntention: d.EmojiIntention.COMMUNITY_CONTENT,
                     channel: x,
                 });
             },

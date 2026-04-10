@@ -8,7 +8,7 @@ var r = n(627968),
     l = n(151271),
     u = n(135261),
     c = n(307731),
-    d = n(574377);
+    d = n(445846);
 function _(e) {
     let { editorRef: t, type: n, channel: _ } = e,
         f = t.current?.getSlateEditor(),
@@ -31,7 +31,7 @@ function _(e) {
                     let { emoji: n, willClose: r } = e;
                     h({ emoji: n, willClose: r }), r && t();
                 },
-                pickerIntention: n.expressionPicker?.emojiIntention ?? c.b_.COMMUNITY_CONTENT,
+                pickerIntention: n.expressionPicker?.emojiIntention ?? c.EmojiIntention.COMMUNITY_CONTENT,
             });
         };
     return null == f

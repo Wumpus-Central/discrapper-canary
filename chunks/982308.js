@@ -14,11 +14,11 @@ var l = n(503698),
     p = n(576705),
     m = n(486020),
     f = n(690521),
-    y = n(652215),
-    h = n(307731),
+    h = n(652215),
+    y = n(307731),
     E = n(985018),
-    S = n(852620);
-let _ = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
+    _ = n(551623);
+let S = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
 function b(e) {
     let { emoji: t, isFocused: n } = e,
         { animated: l, src: r, surrogates: o } = t;
@@ -33,11 +33,11 @@ function b(e) {
             forceOpen: n,
             children: (0, i.jsx)("div", {
                 "aria-label": E.intl.formatToPlainString(E.t["/iYSo6"], { emojiName: t.name }),
-                className: a()(S.x6, { [S.in]: n }),
+                className: a()(_.x6, { [_.in]: n }),
                 children:
                     null == r || "" === r.trim()
-                        ? (0, i.jsx)("span", { className: a()("emoji", "emoji-text", S.Kk), children: o })
-                        : (0, i.jsx)("img", { className: S.Kk, src: r, alt: "" }),
+                        ? (0, i.jsx)("span", { className: a()("emoji", "emoji-text", _.Kk), children: o })
+                        : (0, i.jsx)("img", { className: _.Kk, src: r, alt: "" }),
             }),
         })
     );
@@ -45,16 +45,16 @@ function b(e) {
 function v(e, t) {
     let n = (0, d.D6)(t.guild_id).filter(
         (e) =>
-            !(e.useSpriteSheet && _.indexOf(e.uniqueName ?? "") >= 0) &&
-            !f.Ay.isEmojiPremiumLocked({ emoji: e, channel: t, intention: h.b_.REACTION }),
+            !(e.useSpriteSheet && S.indexOf(e.uniqueName ?? "") >= 0) &&
+            !f.Ay.isEmojiPremiumLocked({ emoji: e, channel: t, intention: y.EmojiIntention.REACTION }),
     );
     n.length > 4 && (n.length = 4);
     let l = A.jW.useSetting(),
         a = (0, g.Id)(t);
-    return (0, r.bG)([p.A], () => l && a && (t.isPrivate() || p.A.can(y.xBc.ADD_REACTIONS, t)), [t, a, l]) &&
+    return (0, r.bG)([p.A], () => l && a && (t.isPrivate() || p.A.can(h.xBc.ADD_REACTIONS, t)), [t, a, l]) &&
         n.length > 0
         ? (0, i.jsx)(o.rXV, {
-              className: S.iE,
+              className: _.iE,
               children: n.map((n, l) =>
                   (0, i.jsx)(
                       o.Drp,

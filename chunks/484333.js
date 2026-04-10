@@ -33,7 +33,7 @@ var r = n(64700),
             e
         );
     })({});
-let b = [C.Am.DISALLOW_EXTERNAL, C.Am.DISALLOW_CUSTOM],
+let b = [C.EmojiDisabledReasons.DISALLOW_EXTERNAL, C.EmojiDisabledReasons.DISALLOW_CUSTOM],
     D = (e) => {
         let {
                 channel: t,
@@ -189,7 +189,7 @@ let b = [C.Am.DISALLOW_EXTERNAL, C.Am.DISALLOW_CUSTOM],
                                     isNitroLocked: o,
                                 });
                             };
-                            if ((null != x && n(x.id), (0, C.Re)(l)))
+                            if ((null != x && n(x.id), (0, C.isExternalEmojiAllowedForIntention)(l)))
                                 for (let e of H) (null == x || x.id !== e) && n(e);
                         } else if (e === N.R2.TOP_GUILD_EMOJI) {
                             if (null != x) {
@@ -205,7 +205,7 @@ let b = [C.Am.DISALLOW_EXTERNAL, C.Am.DISALLOW_CUSTOM],
                                     });
                             }
                         } else if (e === N.R2.RECENT) {
-                            let n = (l === C.b_.REACTION ? F : G).filter(
+                            let n = (l === C.EmojiIntention.REACTION ? F : G).filter(
                                 (e) => !I.Ay.isEmojiFiltered({ emoji: e, channel: t, intention: l }),
                             );
                             A(n, {
@@ -265,11 +265,11 @@ let w = (e) => {
                         return void (f.isFavoriteEmojiWithoutFetchingLatest(i) || null != o
                             ? (0, l.Sw)(i)
                             : (_?.(e), (0, l.V4)(i)));
-                    if (o !== C.Am.GUILD_SUBSCRIPTION_UNAVAILABLE) {
-                        if (o === C.Am.PREMIUM_LOCKED) return void a({ type: 0, emojiDescriptor: e });
-                        if (o === C.Am.ROLE_SUBSCRIPTION_LOCKED && i.type === c.i.GUILD)
+                    if (o !== C.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE) {
+                        if (o === C.EmojiDisabledReasons.PREMIUM_LOCKED) return void a({ type: 0, emojiDescriptor: e });
+                        if (o === C.EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED && i.type === c.i.GUILD)
                             return void a({ type: 1, guildId: i.guildId, emojiId: i.id });
-                        o !== C.Am.ROLE_SUBSCRIPTION_UNAVAILABLE &&
+                        o !== C.EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE &&
                             (d?.(e), s({ emoji: i, willClose: r.isFinalSelection, isBurst: r.isBurst }));
                     }
                 }

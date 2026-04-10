@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => R });
+n.d(t, { A: () => L });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -12,70 +12,76 @@ var r = n(627968),
     _ = n(954571),
     f = n(676279),
     p = n(927578),
-    h = n(234419),
-    m = n(792656),
-    E = n(818415),
-    g = n(788868),
-    A = n(652215),
-    I = n(985018),
-    T = n(664627),
-    S = n(110992),
-    y = n(417294),
-    v = n(947639),
-    N = n(644242),
-    C = n(309427);
-function R(e) {
+    h = n(802705),
+    m = n(234419),
+    E = n(612669),
+    g = n(632150),
+    A = n(792656),
+    I = n(818415),
+    T = n(788868),
+    S = n(652215),
+    y = n(519412),
+    v = n(985018),
+    N = n(664627),
+    C = n(110992),
+    R = n(417294),
+    O = n(947639),
+    b = n(644242),
+    D = n(309427);
+function L(e) {
     let t,
         {
             title: n,
             description: s,
-            analyticsLocationSection: R,
-            upsellViewedTrackingData: O,
-            onClose: b,
-            onDisplay: D,
-            onLearnMore: L,
-            isEmojiPickerOverlay: w = !1,
+            analyticsLocationSection: L,
+            upsellViewedTrackingData: w,
+            onClose: M,
+            onDisplay: x,
+            onLearnMore: P,
+            isEmojiPickerOverlay: k = !1,
         } = e;
     i.useEffect(() => {
-        _.default.track(A.HAw.PREMIUM_UPSELL_VIEWED, O), D?.();
-    }, [D, O]);
-    let M = () => {
-            _.default.track(A.HAw.PREMIUM_PROMOTION_OPENED, {
-                location_section: R,
-                location_object: A.ZSU.NAVIGATION_LINK,
+        _.default.track(S.HAw.PREMIUM_UPSELL_VIEWED, w), x?.();
+    }, [x, w]);
+    let U = () => {
+            _.default.track(S.HAw.PREMIUM_PROMOTION_OPENED, {
+                location_section: L,
+                location_object: S.ZSU.NAVIGATION_LINK,
             }),
-                L?.(),
+                P?.(),
                 (0, c.A)(),
-                b(),
+                M(),
                 (0, u.jH)(),
-                (0, d.pX)(A.BVt.APPLICATION_STORE);
+                (0, d.pX)(S.BVt.APPLICATION_STORE);
         },
-        x = (0, h.V)(),
-        P = i.useCallback(() => (0, p.LE)(x, g.pe.TIER_2) ?? I.intl.string(I.t.pj0XBN), [x]),
-        k = (0, E.A)(g.pe.TIER_2);
-    t = w ? ((0, f.TM)() ? y.A : v.A) : (0, f.TM)() ? N.A : C.A;
-    let U = w ? "nitro-pink" : "green";
+        G = (0, m.V)(),
+        F = i.useCallback(() => (0, p.LE)(G, T.pe.TIER_2) ?? v.intl.string(v.t.pj0XBN), [G]),
+        V = (0, I.A)(T.pe.TIER_2),
+        B = (0, h.M)({ location: "premium_upsell_picker_overlay" }),
+        H = (0, E.O9)();
+    t = k ? ((0, f.TM)() ? R.A : O.A) : (0, f.TM)() ? b.A : D.A;
+    let j = k ? "nitro-pink" : "green";
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(l.pkL, { onClick: b, isVisible: !0 }),
+            (0, r.jsx)(l.pkL, { onClick: M, isVisible: !0 }),
             (0, r.jsxs)(l.hLv, {
-                color: U,
-                className: T.kL,
+                color: j,
+                className: N.kL,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: T.Qs,
+                        className: N.Qs,
                         children: [
-                            (0, r.jsx)(l.s_y, { "data-migration-pending": !0, onClick: b, className: T.b }),
+                            (0, r.jsx)(l.s_y, { "data-migration-pending": !0, onClick: M, className: N.b }),
                             (0, r.jsxs)("div", {
-                                className: T.hQ,
+                                className: N.hQ,
                                 children: [
                                     (0, r.jsx)("div", {
-                                        className: S.headerGraphic,
+                                        className: C.headerGraphic,
                                         children: (0, r.jsx)(l.vYh, { type: "video", src: t, loop: !0, loopAt: 5 }),
                                     }),
-                                    null != k && (0, r.jsx)(o.E, { type: { text: k }, variant: "brand" }),
+                                    null != V && (0, r.jsx)(o.E, { type: { text: V }, variant: "brand" }),
                                     (0, r.jsx)(l.Heading, {
-                                        className: a()(T.DD, { [T.GU]: null != k }),
+                                        className: a()(N.DD, { [N.GU]: null != V }),
                                         variant: "heading-xl/bold",
                                         color: "text-strong",
                                         children: n,
@@ -83,31 +89,38 @@ function R(e) {
                                     (0, r.jsx)(l.Text, {
                                         variant: "text-md/medium",
                                         color: "text-subtle",
-                                        className: T.rf,
+                                        className: N.rf,
                                         children: s,
                                     }),
                                 ],
                             }),
+                            k &&
+                                B &&
+                                H &&
+                                (0, r.jsx)("div", {
+                                    className: N.Zr,
+                                    children: (0, r.jsx)(g.A, { subtitle: v.intl.string(y.default.BkJYQ5) }),
+                                }),
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        className: T.qr,
+                        className: N.qr,
                         children: (0, r.jsxs)("div", {
-                            className: T.UD,
+                            className: N.UD,
                             children: [
                                 (0, r.jsx)(l.Button, {
                                     variant: "secondary",
-                                    onClick: M,
-                                    text: I.intl.string(I.t.ZnqyZ2),
+                                    onClick: U,
+                                    text: v.intl.string(v.t.ZnqyZ2),
                                     fullWidth: !0,
                                 }),
-                                (0, r.jsx)(m.A, {
-                                    premiumModalAnalyticsLocation: { section: R, object: A.ZSU.BUTTON_CTA },
-                                    subscriptionTier: g.pe.TIER_2,
+                                (0, r.jsx)(A.A, {
+                                    premiumModalAnalyticsLocation: { section: L, object: S.ZSU.BUTTON_CTA },
+                                    subscriptionTier: T.pe.TIER_2,
                                     onClick: () => {
-                                        b();
+                                        M();
                                     },
-                                    defaultTextOverride: P(),
+                                    defaultTextOverride: F(),
                                     fullWidth: !0,
                                 }),
                             ],

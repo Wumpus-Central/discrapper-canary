@@ -1,9 +1,11 @@
 l.d(t, {
     D5: () => g,
     Ec: () => b,
+    IQ: () => P,
     KF: () => T,
     LF: () => m,
     NA: () => x,
+    WC: () => A,
     Z1: () => h,
     lz: () => j,
     t$: () => p,
@@ -272,6 +274,49 @@ function T() {
             variant: "primary",
             size: "md",
             text: "Open Guild Member Profile Upsell",
+        }),
+    });
+}
+function A() {
+    let e = n.useCallback(() => {
+        (0, i.mMO)(async () => {
+            let { default: e } = await l.e("31746").then(l.bind(l, 182681));
+            return (t) => (0, a.jsx)(e, { handleLearnMore: () => {}, ...t });
+        });
+    }, []);
+    return (0, a.jsx)(o.LB, {
+        children: (0, a.jsx)(i.Button, {
+            onClick: e,
+            variant: "primary",
+            size: "md",
+            text: "Open HD Streaming Roadblock",
+        }),
+    });
+}
+function P() {
+    let e = n.useCallback(() => {
+        (0, i.mMO)(async () => {
+            let [{ default: e }, { EmojiIntention: t }] = await Promise.all([
+                Promise.resolve().then(l.bind(l, 148361)),
+                Promise.resolve().then(l.bind(l, 307731)),
+            ]);
+            return (l) =>
+                (0, a.jsx)(e, {
+                    onLearnMore: () => {},
+                    onClose: l.onClose,
+                    channel: null,
+                    emojiDescriptor: void 0,
+                    pickerIntention: t.CHAT,
+                    analyticsLocation: {},
+                });
+        });
+    }, []);
+    return (0, a.jsx)(o.LB, {
+        children: (0, a.jsx)(i.Button, {
+            onClick: e,
+            variant: "primary",
+            size: "md",
+            text: "Open Emoji Picker Premium Upsell",
         }),
     });
 }

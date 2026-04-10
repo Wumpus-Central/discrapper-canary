@@ -25,7 +25,7 @@ function b(e, t) {
         m = (0, d.D6)(t.getGuildId());
     if (!A.jW.getSetting() || !r) return null;
     let S = m
-        .filter((e) => !h.Ay.isEmojiFilteredOrLocked({ emoji: e, channel: t, intention: E.b_.REACTION }))
+        .filter((e) => !h.Ay.isEmojiFilteredOrLocked({ emoji: e, channel: t, intention: E.EmojiIntention.REACTION }))
         .slice(0, 12)
         .map((l, a) =>
             (0, i.jsx)(

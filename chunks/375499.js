@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(382222),
+    o = n(687498),
     l = n(311907),
     u = n(554146),
     c = n(435371),
@@ -52,12 +52,12 @@ function C(e) {
         M = i.useCallback(() => {
             if (D) return;
             let e = Math.floor(Math.random() * y);
-            R(!0), b(e), (0, p.K)(g.Vl.EmojiButtonMouseEntered);
+            R(!0), b(e), (0, p.K)(g.EmojiInteractionPoint.EmojiButtonMouseEntered);
         }, [D, R, b]),
-        P = i.useCallback(() => {
+        x = i.useCallback(() => {
             R(!1);
         }, [R]),
-        x = i.useCallback(() => (0, p.K)(g.Vl.EmojiButtonFocused), []),
+        P = i.useCallback(() => (0, p.K)(g.EmojiInteractionPoint.EmojiButtonFocused), []),
         k = (0, l.bG)([_.A], () => _.A.useReducedMotion);
     return (0, r.jsx)(d.DUT, {
         innerRef: T,
@@ -68,10 +68,10 @@ function C(e) {
         },
         onMouseOver: M,
         onMouseLeave: () => {
-            P(), c?.();
+            x(), c?.();
         },
         onFocus: () => {
-            x(), h?.();
+            P(), h?.();
         },
         onContextMenu: f,
         ...S,

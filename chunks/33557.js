@@ -2,8 +2,8 @@
 n.d(t, { A: () => p });
 var r = n(580424),
     i = n(71393),
-    a = n(576705),
-    s = n(248465),
+    s = n(576705),
+    a = n(248465),
     o = n(634788),
     l = n(374803);
 n(827669);
@@ -19,24 +19,29 @@ let p = {
     matches: (e, t, n, r, i) =>
         r &&
         (i.chatInputType.autocomplete?.addReactionShortcut ?? !1) &&
-        (a.A.can(u.xBc.ADD_REACTIONS, e) || e.isPrivate()),
+        (s.A.can(u.xBc.ADD_REACTIONS, e) || e.isPrivate()),
     queryResults(e, t, n, r, i) {
-        let { emojis: a } = s.Ay.queryEmojiResults({ query: n, channel: e, intention: c.b_.REACTION, maxCount: _ });
-        return { results: { emojis: a.unlocked } };
+        let { emojis: s } = a.Ay.queryEmojiResults({
+            query: n,
+            channel: e,
+            intention: c.EmojiIntention.REACTION,
+            maxCount: _,
+        });
+        return { results: { emojis: s.unlocked } };
     },
     renderResults(e) {
         let {
             results: { emojis: t },
             selectedIndex: n,
-            query: a,
-            onHover: s,
+            query: s,
+            onHover: a,
             onClick: l,
         } = e;
         return (0, o.GM)({
-            query: a,
+            query: s,
             selectedIndex: n,
             autocompletes: t,
-            onHover: s,
+            onHover: a,
             onClick: l,
             titleWithQuery: d.t.o1Nmpc,
             titleWithoutQuery: d.intl.string(d.t.sMOuuS),

@@ -625,7 +625,7 @@ class eG extends c.Ay.PersistedStore {
                             (m(u) || m(a) ? 2 : 0) +
                             (E(a) ? 1 : l && g(a) ? 0.75 : 0) +
                             (t && i.isFavoriteEmojiWithoutFetchingLatest(e) ? 0.5 : 0),
-                        _ = r === B.b_.REACTION ? ep.getScore(o) : ef.getScore(o);
+                        _ = r === B.EmojiIntention.REACTION ? ep.getScore(o) : ef.getScore(o);
                     return null != _ && (d *= _ / 100), d;
                 };
             e = a().orderBy(e, [(e) => A(e), (e) => (null != e.names ? e.names[0] : e.name)], ["desc", "asc"]);
@@ -661,7 +661,7 @@ class eG extends c.Ay.PersistedStore {
                         forceIncludeExternalGuilds: a,
                     });
                     return (
-                        r !== B.Am.PREMIUM_LOCKED || l
+                        r !== B.EmojiDisabledReasons.PREMIUM_LOCKED || l
                             ? null != r || (l && t.type !== k.i.UNICODE) || e.unlocked.push(t)
                             : e.locked.push(t),
                         e

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h });
+n.r(t), n.d(t, { default: () => h });
 var r = n(627968);
 n(64700);
 var i = n(793574),
@@ -19,7 +19,7 @@ let h = (e) => {
         A = (0, a.RQ)((e) => e.searchQuery),
         { analyticsLocations: I } = (0, s.Ay)(i.A.EMOJI_PICKER);
     t =
-        E === _.b_.REACTION
+        E === _.EmojiIntention.REACTION
             ? f.e.EMOJI_PICKER_REACTION_EMOJI_CLICKED
             : null == m
               ? f.e.EMOJI_PICKER_FLOATING_UPSELL

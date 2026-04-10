@@ -10,7 +10,7 @@ var i = n(627968),
     c = n(997509),
     u = n(307731),
     m = n(985018),
-    g = n(200967);
+    g = n(663684);
 let x = { label: "" };
 function h(e) {
     let { emoji: t, disabled: n, handleSelectEmoji: c } = e,
@@ -32,7 +32,11 @@ function h(e) {
               position: "bottom",
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, i.jsx)(o.A, { closePopout: t, onSelectEmoji: c(t), pickerIntention: u.b_.GUILD_PROFILE });
+                  return (0, i.jsx)(o.A, {
+                      closePopout: t,
+                      onSelectEmoji: c(t),
+                      pickerIntention: u.EmojiIntention.GUILD_PROFILE,
+                  });
               },
               children: (e, t) => {
                   let { isShown: n } = t;

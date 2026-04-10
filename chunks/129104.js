@@ -5,8 +5,8 @@ var i = n(627968),
     a = n(397927),
     r = n(565645),
     o = n(375499),
-    c = n(937773),
-    d = n(961350),
+    d = n(937773),
+    c = n(961350),
     u = n(734057),
     h = n(309010),
     A = n(559405),
@@ -30,7 +30,7 @@ function p(e) {
                     : null != p
                       ? (0, i.jsx)(A.A, {
                             className: g.Kk,
-                            userId: d.default.getId(),
+                            userId: c.default.getId(),
                             size: 20,
                             hangStatusActivity: { type: _.$pd.HANG_STATUS, state: p },
                             fallbackVariant: x,
@@ -44,7 +44,7 @@ function p(e) {
         onRequestClose: () => f(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(c.A, {
+            return (0, i.jsx)(d.A, {
                 channel: I,
                 guildId: I?.guild_id ?? void 0,
                 closePopout: t,
@@ -59,7 +59,7 @@ function p(e) {
                           ),
                         l && t();
                 },
-                pickerIntention: m.b_.STATUS,
+                pickerIntention: m.EmojiIntention.STATUS,
             });
         },
         position: "left",

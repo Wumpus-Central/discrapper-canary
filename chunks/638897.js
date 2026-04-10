@@ -60,7 +60,12 @@ function A(e, t, n) {
             canMentionEveryone: N,
             hidePersonalInformation: C,
             hideMentionDescription: I === l.oU.RULES_INPUT,
-            emojiIntention: I === l.oU.RULES_INPUT ? E.b_.COMMUNITY_CONTENT : b ? E.b_.NO_CUSTOM_EMOJI : E.b_.CHAT,
+            emojiIntention:
+                I === l.oU.RULES_INPUT
+                    ? E.EmojiIntention.COMMUNITY_CONTENT
+                    : b
+                      ? E.EmojiIntention.NO_CUSTOM_EMOJI
+                      : E.EmojiIntention.CHAT,
             currentWord: L?.word ?? "",
             currentWordIsAtStart: L?.isAtStart === !0,
             optionText:

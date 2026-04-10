@@ -26,7 +26,7 @@ let x = (e) => {
             f = s.useRef(null),
             [j, N] = s.useState(!1),
             E = (0, l.bG)([u.A], () => u.A.isGuildMetadataLoaded()),
-            b = (0, i.jsx)(r.YNO, {
+            C = (0, i.jsx)(r.YNO, {
                 targetElementRef: f,
                 onRequestClose: () => {
                     N(!1);
@@ -38,7 +38,7 @@ let x = (e) => {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, i.jsx)(d.A, {
-                        pickerIntention: m.b_.COMMUNITY_CONTENT,
+                        pickerIntention: m.EmojiIntention.COMMUNITY_CONTENT,
                         closePopout: t,
                         onSelectEmoji: (e) => {
                             let { emoji: n, willClose: i } = e;
@@ -65,7 +65,7 @@ let x = (e) => {
                 minLength: h,
                 maxLength: _,
                 defaultDirty: t?.length > 0,
-                leading: { type: "emoji", button: b },
+                leading: { type: "emoji", button: C },
                 onChange: (e) => {
                     c(e);
                 },

@@ -49,7 +49,7 @@ var r = n(627968),
     q = n(652215),
     Z = n(49999),
     X = n(307731),
-    Q = n(117155);
+    Q = n(463586);
 let J = (0, P.xI)(_.A.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_HORIZONTAL),
     ee = (0, P.xI)(_.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
     et = 8,
@@ -319,7 +319,7 @@ let J = (0, P.xI)(_.A.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_HORIZONTAL)
         let ta = em ?? (p ? "div" : f.lGe),
             to = null != e2;
         eD?.type === j.a2.PREMIUM
-            ? (n = (0, r.jsx)($.A, {
+            ? (n = (0, r.jsx)($.default, {
                   onLearnMore: te,
                   emojiDescriptor: eD.emojiDescriptor,
                   pickerIntention: s,
@@ -355,7 +355,7 @@ let J = (0, P.xI)(_.A.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_HORIZONTAL)
                 showAddEmojiButton: ev,
             }),
             td = [];
-        s === X.b_.REACTION && td.push(d.M.SUPER_REACTIONS_NITRO_MARKETING),
+        s === X.EmojiIntention.REACTION && td.push(d.M.SUPER_REACTIONS_NITRO_MARKETING),
             T.Ay.hasFavoriteEmojis(eU) || td.push(d.M.EMOJI_PICKER_FAVORITE_EMOJIS_TIP);
         let t_ = (0, r.jsx)(h.A, {
             ...ez,

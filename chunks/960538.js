@@ -1,10 +1,10 @@
-n.d(t, { t: () => T }), n(938796);
+n.d(t, { t: () => v }), n(938796);
 var i = n(627968),
     l = n(64700),
-    a = n(503698),
-    r = n.n(a),
-    s = n(111956),
-    o = n.n(s),
+    s = n(503698),
+    r = n.n(s),
+    a = n(111956),
+    o = n.n(a),
     d = n(665260),
     c = n(305866),
     u = n(435371),
@@ -14,12 +14,12 @@ var i = n(627968),
     p = n(649963),
     g = n(815807),
     A = n(429433),
-    f = n(652215),
-    x = n(307731),
-    E = n(985018),
-    C = n(233080),
-    I = n(710504);
-class T extends l.Component {
+    x = n(652215),
+    f = n(307731),
+    C = n(985018),
+    E = n(486025),
+    I = n(108277);
+class v extends l.Component {
     state = { isReactionPickerActive: !1 };
     ref = l.createRef();
     onAddReaction = (e, t) => {
@@ -36,7 +36,7 @@ class T extends l.Component {
     renderReactionPopout = (e) => {
         let { closePopout: t } = e,
             { channel: n, message: l } = this.props,
-            a = (0, i.jsx)(A.C, {
+            s = (0, i.jsx)(A.C, {
                 closePopout: t,
                 channel: n,
                 onSelectEmoji: (e) => {
@@ -49,39 +49,39 @@ class T extends l.Component {
         return (0, i.jsx)(c.M.Consumer, {
             children: (e) => {
                 let { inDialog: t } = e;
-                return t ? (0, i.jsx)(m.lGe, { "aria-label": E.intl.string(E.t["7Xqzdj"]), children: a }) : a;
+                return t ? (0, i.jsx)(m.lGe, { "aria-label": C.intl.string(C.t["7Xqzdj"]), children: s }) : s;
             },
         });
     };
     render() {
-        let { message: e, className: t, children: n, useChatFontScaling: l, tabIndex: a = 0 } = this.props,
-            { isReactionPickerActive: s } = this.state;
-        if (e.state === f.cmJ.SENDING || (0, d.Lt)(e.flags, f.pr7.EPHEMERAL)) return null;
-        let o = l ? I : C,
+        let { message: e, className: t, children: n, useChatFontScaling: l, tabIndex: s = 0 } = this.props,
+            { isReactionPickerActive: a } = this.state;
+        if (e.state === x.cmJ.SENDING || (0, d.Lt)(e.flags, x.pr7.EPHEMERAL)) return null;
+        let o = l ? I : E,
             c = { size: "sm", color: "currentColor", className: o.icon };
-        return e.type === f.lAJ.EMOJI_ADDED && 0 === e.reactions.length
+        return e.type === x.lAJ.EMOJI_ADDED && 0 === e.reactions.length
             ? (0, i.jsx)(h._x, { message: e, className: r()(o.reactionBtn, t) })
             : (0, i.jsx)(m.YNO, {
                   targetElementRef: this.ref,
-                  shouldShow: s,
+                  shouldShow: a,
                   onRequestClose: this.handleReactionPickerToggle,
                   renderPopout: this.renderReactionPopout,
                   position: "right",
                   children: (e, l) => {
-                      let { isShown: s } = l;
+                      let { isShown: a } = l;
                       return (0, i.jsx)(u.m_, {
                           asContainer: !0,
-                          text: E.intl.string(E.t.lfIHs4),
+                          text: C.intl.string(C.t.lfIHs4),
                           children: (0, i.jsxs)(m.DUT, {
                               ...e,
                               innerRef: this.ref,
-                              tabIndex: a,
+                              tabIndex: s,
                               onClick: (e) => {
                                   this.handleAddReactionClick(e);
                               },
-                              onMouseEnter: () => (0, _.K)(x.Vl.AddReactionPopoutMouseEntered),
-                              onFocus: () => (0, _.K)(x.Vl.AddReactionPopoutFocused),
-                              className: r()(o.reactionBtn, { [o.active]: s }, t),
+                              onMouseEnter: () => (0, _.K)(f.EmojiInteractionPoint.AddReactionPopoutMouseEntered),
+                              onFocus: () => (0, _.K)(f.EmojiInteractionPoint.AddReactionPopoutFocused),
+                              className: r()(o.reactionBtn, { [o.active]: a }, t),
                               children: [(0, i.jsx)(m.nm2, { ...c }), n],
                           }),
                       });

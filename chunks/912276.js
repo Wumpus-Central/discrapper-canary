@@ -5,7 +5,7 @@ var r = n(627968),
     s = n(503698),
     a = n.n(s);
 n(735438);
-var o = n(382222);
+var o = n(687498);
 n(435371);
 var l = n(397927),
     u = n(565645);
@@ -50,7 +50,7 @@ function m(e) {
         }),
     });
 }
-p.b_.CHAT,
+p.EmojiIntention.CHAT,
     [
         _.Ay.getByName("thumbsup"),
         _.Ay.getByName("eyes"),

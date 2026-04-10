@@ -14,7 +14,7 @@ var r = n(64700),
 function p(e) {
     let t = r.useRef(e);
     r.useEffect(() => {
-        t.current.intention === _.b_.REACTION && h(t.current);
+        t.current.intention === _.EmojiIntention.REACTION && h(t.current);
     }, []);
 }
 function h(e) {
@@ -22,12 +22,12 @@ function h(e) {
         m = a.A.getChannel(o.A.getChannelId()),
         E = m?.getGuildId(),
         g =
-            t === _.b_.REACTION
+            t === _.EmojiIntention.REACTION
                 ? s.Ay.emojiReactionFrecencyWithoutFetchingLatest.frequently.slice()
                 : s.Ay.emojiFrecencyWithoutFetchingLatest.frequently.slice(),
         A = null != m ? s.Ay.getDisambiguatedEmojiContext(m.getGuildId()).favoriteEmojisWithoutFetchingLatest : [],
         I =
-            t === _.b_.REACTION
+            t === _.EmojiIntention.REACTION
                 ? s.Ay.emojiReactionFrecencyWithoutFetchingLatest.numFrequentlyItems
                 : s.Ay.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems,
         T = g.slice(0, I),
@@ -39,25 +39,28 @@ function h(e) {
             newlyAddedEmojis: N,
             rowSize: r,
         });
-    i.Ay.trackWithMetadata(t === _.b_.REACTION ? d.HAw.REACTION_PICKER_OPENED : d.HAw.EXPRESSION_PICKER_OPENED, {
-        width: n,
-        tab: f.kx.EMOJI,
-        badged: !1,
-        num_expressions_favorites: A.length,
-        num_animated_expressions_favorites: A.filter((e) => e?.animated).length,
-        num_custom_expressions_favorites: A.filter(l.Ay.isCustomEmoji).length,
-        num_standard_expressions_favorites: A.filter((e) => null == e.id).length,
-        num_expressions_frecent: T.length,
-        num_animated_expressions_frecent: T.filter((e) => e?.animated).length,
-        num_custom_expressions_frecent: T.filter(l.Ay.isCustomEmoji).length,
-        num_standard_expressions_frecent: T.filter((e) => null == e.id).length,
-        num_current_guild_expressions: S.length,
-        num_custom_expressions_total: y.size,
-        num_expressions_top_server: C.length,
-        num_animated_expressions_top_server: C.filter((e) => e.animated).length,
-        num_expressions_newly_added: R.length,
-        num_animated_expressions_newly_added: R.filter((e) => e.animated).length,
-        ...(t === _.b_.REACTION && { is_burst: p }),
-        ...(null != h && { location_object: h }),
-    });
+    i.Ay.trackWithMetadata(
+        t === _.EmojiIntention.REACTION ? d.HAw.REACTION_PICKER_OPENED : d.HAw.EXPRESSION_PICKER_OPENED,
+        {
+            width: n,
+            tab: f.kx.EMOJI,
+            badged: !1,
+            num_expressions_favorites: A.length,
+            num_animated_expressions_favorites: A.filter((e) => e?.animated).length,
+            num_custom_expressions_favorites: A.filter(l.Ay.isCustomEmoji).length,
+            num_standard_expressions_favorites: A.filter((e) => null == e.id).length,
+            num_expressions_frecent: T.length,
+            num_animated_expressions_frecent: T.filter((e) => e?.animated).length,
+            num_custom_expressions_frecent: T.filter(l.Ay.isCustomEmoji).length,
+            num_standard_expressions_frecent: T.filter((e) => null == e.id).length,
+            num_current_guild_expressions: S.length,
+            num_custom_expressions_total: y.size,
+            num_expressions_top_server: C.length,
+            num_animated_expressions_top_server: C.filter((e) => e.animated).length,
+            num_expressions_newly_added: R.length,
+            num_animated_expressions_newly_added: R.filter((e) => e.animated).length,
+            ...(t === _.EmojiIntention.REACTION && { is_burst: p }),
+            ...(null != h && { location_object: h }),
+        },
+    );
 }

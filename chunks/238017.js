@@ -10,9 +10,9 @@ var r = n(627968),
     c = n(652215),
     d = n(307731),
     _ = n(985018),
-    f = n(421631);
+    f = n(355262);
 let p = { section: c.JJy.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER, openPopoutType: "gift_effect_emoji_picker" },
-    h = d.b_.GIFT;
+    h = d.EmojiIntention.GIFT;
 function m(e) {
     let { setEmojiConfetti: t, emojiConfetti: n } = e,
         [s, c] = i.useState(!1),

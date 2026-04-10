@@ -7,6 +7,7 @@ e.exports = {
     DD: "title__3782a",
     GU: "withBadge__3782a",
     rf: "body__3782a",
+    Zr: "premiumGroupUpsellWrapper__3782a",
     qr: "footer__3782a",
     UD: "buttonContainer__3782a",
 };

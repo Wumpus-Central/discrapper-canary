@@ -24,8 +24,8 @@ var l = n(627968),
     _ = n(133343),
     y = n(235986),
     T = n(915089),
-    S = n(375499),
-    E = n(937773),
+    E = n(375499),
+    S = n(937773),
     I = n(770335),
     M = n(7584),
     R = n(200463),
@@ -146,10 +146,10 @@ function ex(e) {
         r = i.useCallback(
             (e) => {
                 let { closePopout: i } = e;
-                return (0, l.jsx)(E.A, {
+                return (0, l.jsx)(S.A, {
                     channel: n,
                     guildId: s,
-                    pickerIntention: el.b_.NO_CUSTOM_EMOJI,
+                    pickerIntention: el.EmojiIntention.NO_CUSTOM_EMOJI,
                     closePopout: i,
                     onNavigateAway: i,
                     onSelectEmoji: (e) => {
@@ -170,7 +170,7 @@ function ex(e) {
         align: "right",
         children: (e, t) => {
             let { isShown: n } = t;
-            return (0, l.jsx)(S.A, {
+            return (0, l.jsx)(E.A, {
                 ...e,
                 ref: a,
                 active: n,
@@ -283,7 +283,7 @@ class ep extends i.PureComponent {
                       }),
                   })
                 : null,
-            S =
+            E =
                 j && y
                     ? (0, l.jsx)(m.fs1, {
                           label: es.intl.string(es.t.qk2jdY),
@@ -297,7 +297,7 @@ class ep extends i.PureComponent {
                           showCharacterCount: !0,
                       })
                     : null,
-            E = e.isForumLikeChannel()
+            S = e.isForumLikeChannel()
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(m.cGx, {}),
@@ -625,8 +625,8 @@ class ep extends i.PureComponent {
                         : void 0,
                 }),
                 T,
-                S,
                 E,
+                S,
                 I,
                 H,
                 F,
@@ -776,14 +776,14 @@ class ep extends i.PureComponent {
     renderEmojiPicker = (e) => {
         let { closePopout: t } = e,
             { channel: n } = this.props;
-        return (0, l.jsx)(E.A, {
+        return (0, l.jsx)(S.A, {
             guildId: n?.guild_id,
             closePopout: t,
             onSelectEmoji: (e) => {
                 let { emoji: n, willClose: l } = e;
                 this.handleChangeDefaultReactionEmoji(n), l && t();
             },
-            pickerIntention: el.b_.COMMUNITY_CONTENT,
+            pickerIntention: el.EmojiIntention.COMMUNITY_CONTENT,
             channel: n,
             analyticsOverride: eu,
         });

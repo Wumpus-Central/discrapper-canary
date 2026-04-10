@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { aP: () => T, oJ: () => b }), n(321073);
+n.d(t, { aP: () => T, oJ: () => C }), n(321073);
 var i = n(627968),
     s = n(64700),
     l = n(284009),
@@ -17,7 +17,7 @@ var i = n(627968),
     A = n(841650),
     p = n(307731),
     f = n(985018),
-    j = n(790943);
+    j = n(339884);
 function N(e) {
     let { guildId: t, emojiData: n, onSelectEmoji: l } = e,
         r = s.useRef(null),
@@ -27,7 +27,7 @@ function N(e) {
             (e) => {
                 let { closePopout: t } = e;
                 return (0, i.jsx)(g.A, {
-                    pickerIntention: p.b_.GUILD_ROLE_BENEFIT_EMOJI,
+                    pickerIntention: p.EmojiIntention.GUILD_ROLE_BENEFIT_EMOJI,
                     channel: u,
                     closePopout: t,
                     onNavigateAway: t,
@@ -98,7 +98,7 @@ function E(e) {
         [_, A] = s.useState(n?.description ?? ""),
         [p, j] = s.useState(() => ({ id: n?.emoji_id, name: n?.emoji_name })),
         E = o && "" !== _ && (null != p.id || null != p.name);
-    function b(e) {
+    function C(e) {
         e.preventDefault(), E && (c({ description: _, emojiId: p.id, emojiName: p.name }), x());
     }
     let T = [{ text: f.intl.string(f.t["ETE/oC"]), variant: "secondary", onClick: x }];
@@ -115,11 +115,11 @@ function E(e) {
         T.push({
             text: null == n ? f.intl.string(f.t.OYkgVk) : f.intl.string(f.t["R3BPH+"]),
             variant: "primary",
-            onClick: b,
+            onClick: C,
             disabled: !E,
         }),
         (0, i.jsx)("form", {
-            onSubmit: b,
+            onSubmit: C,
             children: (0, i.jsx)(a.Modal, {
                 transitionState: g,
                 onClose: x,
@@ -148,7 +148,7 @@ function E(e) {
         })
     );
 }
-function b(e) {
+function C(e) {
     let { guildId: t, omitChannelIds: n, initialData: l, onSave: a, onDelete: o, transitionState: c, onClose: m } = e,
         [g, x] = s.useState(l?.ref_id),
         h = (0, u.GV)(),

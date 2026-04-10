@@ -14,23 +14,23 @@ var i = t(627968),
     h = t(307731),
     p = t(650583),
     C = t(985018),
-    x = t(465161);
+    x = t(293752);
 function N(e) {
-    let { transitionState: n, onClose: t, channelId: N, guildId: b, tag: k } = e,
-        v = l.useRef(null),
-        f = null != k,
-        [y, A] = l.useState(k?.name ?? ""),
-        [_, I] = l.useState(null != k ? { id: k.emojiId, name: k.emojiName } : null),
-        [E, S] = l.useState(k?.moderated),
-        T = (0, o.bG)([c.Ay], () => (_?.id != null ? c.Ay.getUsableCustomEmojiById(_.id) : null)),
-        B = k?.name !== y || k?.emojiId !== _?.id || k?.emojiName !== _?.name || E !== k?.moderated,
+    let { transitionState: n, onClose: t, channelId: N, guildId: k, tag: v } = e,
+        b = l.useRef(null),
+        f = null != v,
+        [y, A] = l.useState(v?.name ?? ""),
+        [I, _] = l.useState(null != v ? { id: v.emojiId, name: v.emojiName } : null),
+        [E, S] = l.useState(v?.moderated),
+        T = (0, o.bG)([c.Ay], () => (I?.id != null ? c.Ay.getUsableCustomEmojiById(I.id) : null)),
+        B = v?.name !== y || v?.emojiId !== I?.id || v?.emojiName !== I?.name || E !== v?.moderated,
         R = () => {
             if (null != y && B) {
                 if (f) {
-                    j.A.updateForumTag({ id: k.id, name: y, emojiId: _?.id, emojiName: _?.name, moderated: E }, N), t();
+                    j.A.updateForumTag({ id: v.id, name: y, emojiId: I?.id, emojiName: I?.name, moderated: E }, N), t();
                     return;
                 }
-                j.A.createForumTag({ name: y, emojiId: _?.id, emojiName: _?.name, moderated: E }, N), t();
+                j.A.createForumTag({ name: y, emojiId: I?.id, emojiName: I?.name, moderated: E }, N), t();
             }
         },
         D = l.useCallback((e) => A(e), []),
@@ -65,7 +65,7 @@ function N(e) {
                       variant: "critical-secondary",
                       text: C.intl.string(C.t.huYSMr),
                       onClick: () => {
-                          f && (j.A.deleteForumTag(N, k.id), t());
+                          f && (j.A.deleteForumTag(N, v.id), t());
                       },
                   })
                 : void 0,
@@ -84,24 +84,24 @@ function N(e) {
                             button: (0, i.jsx)("div", {
                                 className: x.S0,
                                 children: (0, i.jsx)(r.YNO, {
-                                    targetElementRef: v,
+                                    targetElementRef: b,
                                     renderPopout: (e) => {
                                         let { closePopout: n } = e,
-                                            l = g.Ay.getDefaultChannel(b);
+                                            l = g.Ay.getDefaultChannel(k);
                                         return (0, i.jsx)(m.A, {
-                                            guildId: b,
+                                            guildId: k,
                                             closePopout: n,
                                             onSelectEmoji: (e) => {
                                                 let { emoji: t, willClose: i } = e;
                                                 null != t &&
-                                                    I(
+                                                    _(
                                                         null != t.id
                                                             ? { id: t.id, name: t.name }
                                                             : { id: void 0, name: t.optionallyDiverseSequence },
                                                     ),
                                                     i && n();
                                             },
-                                            pickerIntention: h.b_.COMMUNITY_CONTENT,
+                                            pickerIntention: h.EmojiIntention.COMMUNITY_CONTENT,
                                             onNavigateAway: t,
                                             channel: l,
                                         });
@@ -113,7 +113,7 @@ function N(e) {
                                         let { isShown: t } = n;
                                         return (0, i.jsx)(s.A, {
                                             ...e,
-                                            ref: v,
+                                            ref: b,
                                             onClick: (n) => {
                                                 e.onClick?.(n);
                                             },
@@ -121,12 +121,12 @@ function N(e) {
                                             className: x.Z8,
                                             tabIndex: 0,
                                             renderButtonContents:
-                                                null != _ && (null != _.id || null != _.name)
+                                                null != I && (null != I.id || null != I.name)
                                                     ? () =>
                                                           (0, i.jsx)(d.A, {
                                                               className: x.Zg,
-                                                              emojiId: _.id,
-                                                              emojiName: _.name,
+                                                              emojiId: I.id,
+                                                              emojiName: I.name,
                                                               animated: !!T?.animated,
                                                           })
                                                     : null,
@@ -139,11 +139,11 @@ function N(e) {
                             e.key === p.dh.ENTER && y.length > 0 && (y.length > 0 && R(), e.preventDefault());
                         },
                         trailing:
-                            y.length > 0 || null != _
+                            y.length > 0 || null != I
                                 ? {
                                       icon: r.aXh,
                                       onClick: () => {
-                                          A(""), I(null);
+                                          A(""), _(null);
                                       },
                                       "aria-label": C.intl.string(C.t.o8lsHe),
                                   }
@@ -153,7 +153,7 @@ function N(e) {
                 (0, i.jsx)(r.hKd, { size: 16 }),
                 (0, i.jsx)(r.Checkbox, {
                     checked: E ?? !1,
-                    onChange: (e) => S(e || (k?.moderated == null && void 0)),
+                    onChange: (e) => S(e || (v?.moderated == null && void 0)),
                     label: C.intl.string(C.t["rMH+rt"]),
                     labelType: "secondary",
                 }),

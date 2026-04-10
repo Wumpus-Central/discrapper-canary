@@ -265,7 +265,7 @@ let l = {
             showCharacterCount: !0,
             toolbarType: 1,
             markdown: { disableCodeBlocks: !0, disableBlockQuotes: !0, disableInlineCode: !0 },
-            expressionPicker: { onlyEmojis: !0, emojiIntention: s.b_.NO_CUSTOM_EMOJI },
+            expressionPicker: { onlyEmojis: !0, emojiIntention: s.EmojiIntention.NO_CUSTOM_EMOJI },
         },
         ATOMIC_REACTOR_REPLY_INPUT: {
             analyticsName: "atomic_reator_reply_input",

@@ -405,7 +405,7 @@ let et = {
             i = { content: t, tts: !1, invalidEmojis: [], validNonShortcutEmojis: [] };
         return (
             (i.content = X(i.content, r, (t, n) => {
-                R.Ay.isEmojiPremiumLocked({ emoji: t, channel: e, intention: L.b_.CHAT })
+                R.Ay.isEmojiPremiumLocked({ emoji: t, channel: e, intention: L.EmojiIntention.CHAT })
                     ? i.invalidEmojis.push(t)
                     : n || i.validNonShortcutEmojis.push(t);
             })),

@@ -136,7 +136,7 @@ function p(e) {
                 }
             } else if (e === c.DB.EMOJIS_AND_STICKERS) {
                 if (
-                    (null != s && s.length > 0 && (0, l.K)(d.Vl.AutocompleteTyped),
+                    (null != s && s.length > 0 && (0, l.K)(d.EmojiInteractionPoint.AutocompleteTyped),
                     null != s && f({ type: e, channel: t, guild: n, query: s, isAtStart: a, options: r }))
                 ) {
                     m = { type: e, typeInfo: E, query: s.substring(E.sentinel?.length ?? 0) };

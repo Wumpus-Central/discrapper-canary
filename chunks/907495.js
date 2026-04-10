@@ -80,7 +80,12 @@ let es = l.memo(function (e) {
     let { channel: t, message: n } = e,
         l = (0, p.QZ)(t.guild_id).filter(
             (e) =>
-                !F.Ay.isEmojiFilteredOrLocked({ emoji: e, channel: t, intention: Q.b_.REACTION, guildId: t.guild_id }),
+                !F.Ay.isEmojiFilteredOrLocked({
+                    emoji: e,
+                    channel: t,
+                    intention: Q.EmojiIntention.REACTION,
+                    guildId: t.guild_id,
+                }),
         ),
         s = (l.length >= 3 ? l : [...(0, f.A)(l.concat(en)).values()]).slice(0, 3),
         a = n.reactions.filter((e) => e.me);

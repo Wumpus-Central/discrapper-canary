@@ -110,7 +110,7 @@ let T = (e) => {
                         C(!0),
                             d &&
                                 (y({ emojiNode: t, isCustomEmoji: !0, nonce: L }),
-                                (0, _.K)(E.Vl.CustomEmojiTooltipShown));
+                                (0, _.K)(E.EmojiInteractionPoint.CustomEmojiTooltipShown));
                     },
                     children: (0, r.jsx)(u.DUT, {
                         ...e,

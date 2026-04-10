@@ -1,7 +1,27 @@
 "use strict";
-n.d(t, { Am: () => s, Re: () => u, Vl: () => l, ZT: () => r, b_: () => a, he: () => i });
-let r = /[^a-zA-Z0-9_]/g;
-var i = (function (e) {
+n.r(t),
+    n.d(t, {
+        DEFAULT_EMOJI_SLOTS: () => r,
+        EMOJI_MAX_FILESIZE: () => l,
+        EMOJI_MAX_FILESIZE_KB: () => o,
+        EMOJI_MAX_LENGTH: () => s,
+        EMOJI_MAX_SLOTS_MORE: () => i,
+        EMOJI_RE: () => a,
+        EMOJI_URL_BASE_SIZE: () => u,
+        EmojiDisabledReasons: () => d,
+        EmojiIntention: () => _,
+        EmojiInteractionPoint: () => p,
+        EmojiSprites: () => c,
+        isExternalEmojiAllowedForIntention: () => h,
+    });
+let r = 50,
+    i = 200,
+    s = 32,
+    a = /[^a-zA-Z0-9_]/g,
+    o = 256,
+    l = 262144,
+    u = 48;
+var c = (function (e) {
         return (
             (e[(e.NonDiversityPerRow = 42)] = "NonDiversityPerRow"),
             (e[(e.DiversityPerRow = 10)] = "DiversityPerRow"),
@@ -10,7 +30,7 @@ var i = (function (e) {
             e
         );
     })({}),
-    s = (function (e) {
+    d = (function (e) {
         return (
             (e[(e.DISALLOW_EXTERNAL = 0)] = "DISALLOW_EXTERNAL"),
             (e[(e.GUILD_SUBSCRIPTION_UNAVAILABLE = 1)] = "GUILD_SUBSCRIPTION_UNAVAILABLE"),
@@ -22,7 +42,7 @@ var i = (function (e) {
             e
         );
     })({}),
-    a = (function (e) {
+    _ = (function (e) {
         return (
             (e[(e.REACTION = 0)] = "REACTION"),
             (e[(e.STATUS = 1)] = "STATUS"),
@@ -42,8 +62,8 @@ var i = (function (e) {
             e
         );
     })({});
-let o = new Set([2, 4, 5, 6, 8]);
-var l = (function (e) {
+let f = new Set([2, 4, 5, 6, 8]);
+var p = (function (e) {
     return (
         (e.EmojiButtonMouseEntered = "EMOJI_BUTTON_MOUSE_ENTERED"),
         (e.EmojiButtonFocused = "EMOJI_BUTTON_FOCUSED"),
@@ -62,6 +82,6 @@ var l = (function (e) {
         e
     );
 })({});
-function u(e) {
-    return !o.has(e);
+function h(e) {
+    return !f.has(e);
 }

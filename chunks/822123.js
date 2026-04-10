@@ -53,7 +53,7 @@ let O = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : t?.getGuildId(),
             i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
         (0, c.V)(n);
-        let s = (0, v.Re)(e),
+        let s = (0, v.isExternalEmojiAllowedForIntention)(e),
             o = B(n),
             u = H(n),
             _ = j(n),
@@ -113,7 +113,7 @@ let O = function (e, t) {
                             });
                         } else if (r === S.R2.RECENT) {
                             let { emojisDisabled: n, emojisUnfiltered: i } = h(
-                                [v.b_.REACTION, v.b_.DEFAULT_REACT_EMOJI].includes(e) ? u : o,
+                                [v.EmojiIntention.REACTION, v.EmojiIntention.DEFAULT_REACT_EMOJI].includes(e) ? u : o,
                             );
                             if (null == i || 0 === i.length) return t;
                             t.push({
@@ -156,13 +156,13 @@ let O = function (e, t) {
     },
     L = (e, t) => {
         o.Ay.trackWithMetadata(y.HAw.SEARCH_STARTED, {
-            search_type: null != t && t === v.b_.REACTION ? y.I4_.EMOJI_REACTION : y.I4_.EMOJI,
+            search_type: null != t && t === v.EmojiIntention.REACTION ? y.I4_.EMOJI_REACTION : y.I4_.EMOJI,
             location: e,
         });
     },
     w = (e, t, n, r, i) => {
         o.Ay.trackWithMetadata(y.HAw.SEARCH_RESULT_VIEWED, {
-            search_type: null != i && i === v.b_.REACTION ? y.I4_.EMOJI_REACTION : y.I4_.EMOJI,
+            search_type: null != i && i === v.EmojiIntention.REACTION ? y.I4_.EMOJI_REACTION : y.I4_.EMOJI,
             total_results: e,
             num_results_locked: t,
             query: r,
@@ -182,8 +182,8 @@ let O = function (e, t) {
             } = e,
             d = t.uniqueName ?? t.name,
             _ = (0, s.YW)(l)
-                .with(v.b_.REACTION, () => y.I4_.EMOJI_REACTION)
-                .with(v.b_.AUTO_SUGGESTION, () => y.I4_.EMOJI_AUTO_SUGGESTION)
+                .with(v.EmojiIntention.REACTION, () => y.I4_.EMOJI_REACTION)
+                .with(v.EmojiIntention.AUTO_SUGGESTION, () => y.I4_.EMOJI_AUTO_SUGGESTION)
                 .otherwise(() => y.I4_.EMOJI);
         o.Ay.trackWithMetadata(y.HAw.SEARCH_RESULT_SELECTED, {
             search_type: _,
@@ -235,10 +235,10 @@ let O = function (e, t) {
                 messageId: d,
             } = e;
         switch (i) {
-            case v.b_.REACTION:
+            case v.EmojiIntention.REACTION:
                 t = c ? C.e.EMOJI_PICKER_SUPER_REACTION_EMOJI_CLICKED : C.e.EMOJI_PICKER_REACTION_EMOJI_CLICKED;
                 break;
-            case v.b_.STATUS:
+            case v.EmojiIntention.STATUS:
                 t = C.e.EMOJI_PICKER_STATUS_EMOJI_CLICKED;
                 break;
             default:
@@ -328,7 +328,7 @@ function V(e, t, n, i) {
     r.useEffect(() => {
         _.bW.loadIfNecessary();
     }, []);
-    let s = (0, v.Re)(n);
+    let s = (0, v.isExternalEmojiAllowedForIntention)(n);
     return (0, a.bG)(
         [l.Ay],
         () => {
@@ -400,7 +400,7 @@ function K(e, t, n) {
     return r.includes(n) ? S.tm.TOP_GUILD_EMOJI : i.includes(n) ? S.tm.NEWLY_ADDED_EMOJI : S.tm.NONE;
 }
 function $(e, t) {
-    return e === v.b_.REACTION
+    return e === v.EmojiIntention.REACTION
         ? t
             ? R.intl.string(R.t["h7ES+n"])
             : R.intl.string(R.t["6any2A"])
