@@ -21,12 +21,12 @@ var l = n(311907),
     j = n(994500),
     N = n(287809),
     E = n(997509),
-    b = n(555337),
+    C = n(555337),
     T = n(224394),
-    C = n(814758),
-    I = n(652215),
+    I = n(814758),
+    b = n(652215),
     v = n(985018),
-    S = n(944620),
+    S = n(434461),
     y = n(597306);
 let R = "dismissedCommunityFeaturesUpsell",
     O = () => {
@@ -35,10 +35,10 @@ let R = "dismissedCommunityFeaturesUpsell",
                 guild: t,
                 submitting: n,
                 errors: s,
-            } = (0, l.cf)([b.A], () => ({
-                submitting: b.A.isSubmitting(),
-                guild: b.A.getGuild(),
-                errors: b.A.getErrors(),
+            } = (0, l.cf)([C.A], () => ({
+                submitting: C.A.isSubmitting(),
+                guild: C.A.getGuild(),
+                errors: C.A.getErrors(),
             })),
             r = Object.keys(s),
             a = r.length > 0 ? r[0] : null;
@@ -70,18 +70,18 @@ let R = "dismissedCommunityFeaturesUpsell",
             x = (0, l.bG)([A.A], () => A.A.getMemberCount(o.id) ?? 0),
             [_, f] = s.useState(!1);
         (0, g.Ay)(() => {
-            r.Bo.get({ url: I.Rsh.GUILD_ADMIN_SERVER_ELIGIBILITY(o.id), rejectWithError: !0 })
+            r.Bo.get({ url: b.Rsh.GUILD_ADMIN_SERVER_ELIGIBILITY(o.id), rejectWithError: !0 })
                 .then((e) => {
                     f(e.body.eligible_for_admin_server);
                 })
                 .catch(() => f(!1));
         });
         let j = (0, l.bG)([p.A], () => p.A.getGuild("942897714956472401")),
-            N = o.features.has(I.GuildFeatures.COMMUNITY) && x >= 1e3 && _ && null == j;
+            N = o.features.has(b.GuildFeatures.COMMUNITY) && x >= 1e3 && _ && null == j;
         if (t && n && !N) return null;
-        let b = async () => {
+        let C = async () => {
             try {
-                let e = await r.Bo.post({ url: I.Rsh.JOIN_ADMIN_SERVER(o.id), oldFormErrors: !0, rejectWithError: !0 });
+                let e = await r.Bo.post({ url: b.Rsh.JOIN_ADMIN_SERVER(o.id), oldFormErrors: !0, rejectWithError: !0 });
                 E.A.close(), (0, h.u)(e.body.id);
             } catch {}
         };
@@ -130,7 +130,7 @@ let R = "dismissedCommunityFeaturesUpsell",
                                           variant: "primary",
                                           size: "sm",
                                           text: v.intl.string(v.t.iF1Asi),
-                                          onClick: b,
+                                          onClick: C,
                                       }),
                                   }),
                               n
@@ -143,7 +143,7 @@ let R = "dismissedCommunityFeaturesUpsell",
                                             size: "sm",
                                             text: v.intl.string(v.t["S/Dfid"]),
                                             onClick: () => {
-                                                E.A.setSection(I.BEX.ONBOARDING);
+                                                E.A.setSection(b.BEX.ONBOARDING);
                                             },
                                         }),
                                     }),
@@ -157,7 +157,7 @@ let R = "dismissedCommunityFeaturesUpsell",
                                             size: "sm",
                                             text: v.intl.string(v.t["0kmJdw"]),
                                             onClick: () => {
-                                                E.A.setSection(I.BEX.ACCESS, I.nd0.ACCESS_DISCOVERABLE);
+                                                E.A.setSection(b.BEX.ACCESS, b.nd0.ACCESS_DISCOVERABLE);
                                             },
                                         }),
                                     }),
@@ -169,7 +169,7 @@ let R = "dismissedCommunityFeaturesUpsell",
                                       size: "sm",
                                       text: v.intl.string(v.t.BQIYTb),
                                       onClick: () => {
-                                          E.A.setSection(I.BEX.ANALYTICS);
+                                          E.A.setSection(b.BEX.ANALYTICS);
                                       },
                                   }),
                               }),
@@ -179,51 +179,48 @@ let R = "dismissedCommunityFeaturesUpsell",
               });
     },
     L = () => {
-        let e = (0, l.bG)([b.A], () => b.A.getGuild()),
+        let e = (0, l.bG)([C.A], () => C.A.getGuild()),
             { canManageGuild: t, isGuildAdmin: n } = (0, l.cf)([f.A], () => ({
-                canManageGuild: f.A.can(I.xBc.MANAGE_GUILD, e),
-                isGuildAdmin: f.A.can(I.xBc.ADMINISTRATOR, e),
+                canManageGuild: f.A.can(b.xBc.MANAGE_GUILD, e),
+                isGuildAdmin: f.A.can(b.xBc.ADMINISTRATOR, e),
             })),
             r = (0, l.bG)([_.Ay], () => (null != e ? _.Ay.getChannels(e.id) : null)),
-            o = s.useMemo(C.fr, []),
-            u = !0 !== a.w.get(R);
+            a = s.useMemo(I.fr, []);
         if (null == e) return null;
-        let g = [];
+        let o = [];
         null != r &&
             r[_.I6].forEach((e) => {
                 let { channel: t } = e;
-                t.type === I.rbe.GUILD_TEXT &&
-                    g.push({ id: t.id, value: t.id, label: (0, x.m1)(t, N.default, j.A, !0) });
+                t.type === b.rbe.GUILD_TEXT &&
+                    o.push({ id: t.id, value: t.id, label: (0, x.m1)(t, N.default, j.A, !0) });
             });
-        let h = () => {
+        let u = () => {
                 if (null == e) return;
                 let t = new Set(e.features);
-                t.delete(I.GuildFeatures.COMMUNITY),
-                    t.delete(I.GuildFeatures.DISCOVERABLE),
-                    t.delete(I.GuildFeatures.PREVIEW_ENABLED),
+                t.delete(b.GuildFeatures.COMMUNITY),
+                    t.delete(b.GuildFeatures.DISCOVERABLE),
+                    t.delete(b.GuildFeatures.PREVIEW_ENABLED),
                     E.A.updateGuild({ features: t, rulesChannelId: null, publicUpdatesChannelId: null });
             },
-            A = (e) => {
+            g = (e) => {
                 E.A.updateGuild({ description: e });
             };
         return (0, i.jsxs)(m.BJc, {
             gap: 24,
             children: [
                 (0, i.jsx)(m.Heading, { variant: "heading-lg/semibold", children: v.intl.string(v.t.nRtNqn) }),
-                u
-                    ? (0, i.jsx)(G, {
-                          discoveryEnabled: e.features.has(I.GuildFeatures.DISCOVERABLE),
-                          onboardingEnabled: e.features.has(I.GuildFeatures.GUILD_ONBOARDING),
-                          guild: e,
-                      })
-                    : null,
+                (0, i.jsx)(G, {
+                    discoveryEnabled: e.features.has(b.GuildFeatures.DISCOVERABLE),
+                    onboardingEnabled: e.features.has(b.GuildFeatures.GUILD_ONBOARDING),
+                    guild: e,
+                }),
                 (0, i.jsx)(m.ZiE, {
                     selectionMode: "single",
                     layout: "horizontal-responsive",
                     label: v.intl.string(v.t["otcXP/"]),
                     description: v.intl.string(v.t.BtwmYB),
                     value: e.rulesChannelId ?? void 0,
-                    options: g,
+                    options: o,
                     onSelectionChange: (e) => {
                         E.A.updateGuild({ rulesChannelId: e });
                     },
@@ -236,7 +233,7 @@ let R = "dismissedCommunityFeaturesUpsell",
                     label: v.intl.string(v.t.vAyDGU),
                     description: v.intl.string(v.t.ZFeonu),
                     value: e.publicUpdatesChannelId ?? void 0,
-                    options: g,
+                    options: o,
                     onSelectionChange: (e) => {
                         E.A.updateGuild({ publicUpdatesChannelId: e });
                     },
@@ -249,7 +246,7 @@ let R = "dismissedCommunityFeaturesUpsell",
                     label: v.intl.string(v.t.sMkYE8),
                     description: v.intl.string(v.t.htioQo),
                     value: e.safetyAlertsChannelId ?? void 0,
-                    options: g,
+                    options: o,
                     onSelectionChange: (e) => {
                         E.A.updateGuild({ safetyAlertsChannelId: e });
                     },
@@ -262,7 +259,7 @@ let R = "dismissedCommunityFeaturesUpsell",
                     label: v.intl.string(v.t.pO60fy),
                     description: v.intl.string(v.t.aIR73T),
                     value: e.preferredLocale,
-                    options: o,
+                    options: a,
                     onSelectionChange: (e) => {
                         E.A.updateGuild({ preferredLocale: e });
                     },
@@ -276,7 +273,7 @@ let R = "dismissedCommunityFeaturesUpsell",
                             description: v.intl.string(v.t["/B6PRw"]),
                             value: e.description ?? "",
                             placeholder: v.intl.string(v.t.Nvfowl),
-                            onChange: A,
+                            onChange: g,
                             maxLength: 300,
                             disabled: !t,
                         });
@@ -294,32 +291,32 @@ let R = "dismissedCommunityFeaturesUpsell",
                             size: "sm",
                             text: v.intl.string(v.t.c1BmbC),
                             onClick: () => {
-                                e.features.has(I.GuildFeatures.DISCOVERABLE) &&
-                                e.features.has(I.GuildFeatures.PARTNERED)
+                                e.features.has(b.GuildFeatures.DISCOVERABLE) &&
+                                e.features.has(b.GuildFeatures.PARTNERED)
                                     ? (0, d.A)({
                                           title: v.intl.string(v.t.iBnVHc),
                                           subtitle: v.intl.string(v.t["P+Sh8V"]),
                                           confirmText: v.intl.string(v.t["cY+Oob"]),
                                           cancelText: v.intl.string(v.t.oEAioF),
-                                          onConfirm: h,
+                                          onConfirm: u,
                                       })
-                                    : e.features.has(I.GuildFeatures.DISCOVERABLE)
+                                    : e.features.has(b.GuildFeatures.DISCOVERABLE)
                                       ? (0, d.A)({
                                             title: v.intl.string(v.t.iBnVHc),
                                             subtitle: v.intl.string(v.t["eMx/uZ"]),
                                             confirmText: v.intl.string(v.t["cY+Oob"]),
                                             cancelText: v.intl.string(v.t.oEAioF),
-                                            onConfirm: h,
+                                            onConfirm: u,
                                         })
-                                      : e.features.has(I.GuildFeatures.PARTNERED)
+                                      : e.features.has(b.GuildFeatures.PARTNERED)
                                         ? (0, d.A)({
                                               title: v.intl.string(v.t.iBnVHc),
                                               subtitle: v.intl.string(v.t.l1wLeX),
                                               confirmText: v.intl.string(v.t["cY+Oob"]),
                                               cancelText: v.intl.string(v.t.oEAioF),
-                                              onConfirm: h,
+                                              onConfirm: u,
                                           })
-                                        : h();
+                                        : u();
                             },
                             disabled: !n,
                         }),
@@ -329,10 +326,10 @@ let R = "dismissedCommunityFeaturesUpsell",
         });
     },
     D = () => {
-        let e = (0, l.bG)([b.A], () => b.A.getGuild());
+        let e = (0, l.bG)([C.A], () => C.A.getGuild());
         return null == e
             ? null
-            : e.features.has(I.GuildFeatures.COMMUNITY)
+            : e.features.has(b.GuildFeatures.COMMUNITY)
               ? (0, i.jsx)(L, {})
               : (0, i.jsx)(T.A, { guild: e });
     };
