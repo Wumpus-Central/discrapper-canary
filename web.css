@@ -35704,14 +35704,6 @@ html:not(.chat-input) .inputInner_b1f01d {
     top: 0
 }
 
-.profileFrameLayer__7d80f.rail__7d80f.top__7d80f {
-    top: -60px
-}
-
-.profileFrameLayer__7d80f.rail__7d80f.bottom__7d80f {
-    bottom: -60px
-}
-
 @keyframes fadeIn__7d80f {
     0% {
         opacity: 0
