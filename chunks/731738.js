@@ -41,6 +41,10 @@ var r = (function (e) {
         (e.CAPTCHA_SERVE_VOLUME_DISTRIBUTION = "captcha_serve_volume_distribution"),
         (e.IN_APP_REPORT_NAVIGATE_TO_NONEXISTENT_NODE = "in_app_report_navigate_to_nonexistent_node"),
         (e.BILLING_MANAGER_OPERATION = "billing_manager.operation"),
+        (e.GOOGLE_WALLET_AVAILABILITY_CHECK = "google_wallet_availability_check"),
+        (e.GOOGLE_WALLET_METHOD_IMPRESSION = "google_wallet_method_impression"),
+        (e.GOOGLE_WALLET_METHOD_SELECTED = "google_wallet_method_selected"),
+        (e.GOOGLE_WALLET_VERIFICATION_FAILED = "google_wallet_verification_failed"),
         e
     );
 })({});

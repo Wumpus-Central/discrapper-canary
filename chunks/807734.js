@@ -1,71 +1,77 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => p });
 var a = n(64700),
-    i = n(311907),
-    s = n(847599),
-    l = n(787301),
-    r = n(295972),
-    o = n(36149),
-    d = n(677501),
-    c = n(634101),
-    u = n(40449),
-    m = n(985018);
-let h = function (e) {
-    let { onClose: t, onMethodClick: n, classificationId: h, onGoogleWalletSelect: x } = e,
-        { methods: p, loading: g } = (0, i.cf)([l.A], () => ({ methods: l.A.methods, loading: l.A.loading })),
-        { initiateAgeVerification: f } = (0, o.nn)({
+    i = n(731738),
+    s = n(311907),
+    l = n(831062),
+    r = n(847599),
+    o = n(787301),
+    d = n(295972),
+    c = n(36149),
+    u = n(677501),
+    m = n(634101),
+    h = n(40449),
+    x = n(985018);
+let p = function (e) {
+    let { onClose: t, onMethodClick: n, classificationId: p, onGoogleWalletSelect: g } = e,
+        { methods: f, loading: v } = (0, s.cf)([o.A], () => ({ methods: o.A.methods, loading: o.A.loading })),
+        { initiateAgeVerification: _ } = (0, c.nn)({
             onComplete: t,
-            entryPoint: s.q1.EXPRESSIVE_GET_STARTED,
+            entryPoint: r.q1.EXPRESSIVE_GET_STARTED,
             shouldShowExpressiveModal: !0,
-            classificationId: h,
+            classificationId: p,
         }),
-        _ = (0, c.D)("age_verification_methods"),
-        [v, b] = a.useState(!1);
+        b = (0, m.D)("age_verification_methods"),
+        [j, A] = a.useState(!1);
     return (
         a.useEffect(() => {
-            _ && (0, d.sf)().then(b);
-        }, [_]),
+            b &&
+                (0, u.sf)().then((e) => {
+                    l.A.increment({ name: i.K.GOOGLE_WALLET_AVAILABILITY_CHECK, tags: [`available:${e}`] }), A(e);
+                });
+        }, [b]),
         a.useEffect(() => {
-            null == p && (0, r.DJ)();
-        }, [p]),
+            null == f && (0, d.DJ)();
+        }, [f]),
         {
             ageVerificationMethods: a.useMemo(() => {
                 let e =
-                    p
-                        ?.filter((e) => e !== u.VF.GOOGLE_WALLET)
+                    f
+                        ?.filter((e) => e !== h.VF.GOOGLE_WALLET)
                         .map((e) => {
-                            let t = u.uv[e];
+                            let t = h.uv[e];
                             if (null == t) return null;
                             let { title: a, description: i } = t;
                             return {
                                 id: e,
-                                title: m.intl.string(a),
-                                description: m.intl.string(i),
+                                title: x.intl.string(a),
+                                description: x.intl.string(i),
                                 onClick: async (t) => {
-                                    (0, s.St)(t, s.WU.EXPRESSIVE_PRIMARY, s._7.METHOD_SELECT, e), n?.(), await f(e);
+                                    (0, r.St)(t, r.WU.EXPRESSIVE_PRIMARY, r._7.METHOD_SELECT, e), n?.(), await _(e);
                                 },
                             };
                         })
                         .filter((e) => null != e) ?? [];
-                if (_ && v && null != x) {
-                    let t = u.uv[u.VF.GOOGLE_WALLET];
+                if (b && j && null != g) {
+                    let t = h.uv[h.VF.GOOGLE_WALLET];
                     if (null != t)
                         return [
                             {
-                                id: u.VF.GOOGLE_WALLET,
-                                title: m.intl.string(t.title),
-                                description: m.intl.string(t.description),
+                                id: h.VF.GOOGLE_WALLET,
+                                title: x.intl.string(t.title),
+                                description: x.intl.string(t.description),
                                 onClick: (e) => {
-                                    (0, s.St)(e, s.WU.EXPRESSIVE_PRIMARY, s._7.METHOD_SELECT, u.VF.GOOGLE_WALLET),
+                                    l.A.increment({ name: i.K.GOOGLE_WALLET_METHOD_SELECTED }),
+                                        (0, r.St)(e, r.WU.EXPRESSIVE_PRIMARY, r._7.METHOD_SELECT, h.VF.GOOGLE_WALLET),
                                         n?.(),
-                                        x();
+                                        g();
                                 },
                             },
                             ...e,
                         ];
                 }
                 return e;
-            }, [p, _, v, x, n, f]),
-            loading: g,
+            }, [f, b, j, g, n, _]),
+            loading: v,
         }
     );
 };

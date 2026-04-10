@@ -14,7 +14,7 @@ let _ = (e) => {
             case r.R.AVATAR_DECORATION:
                 return i.A.fromServer(e);
             case r.R.PROFILE_EFFECT:
-                return o.A.fromServer(e);
+                return o.Ay.fromServer(e);
             case r.R.NAMEPLATE:
                 return a.A.fromServer(e);
             case r.R.PROFILE_FRAME:

@@ -141,7 +141,7 @@ let E = (e) => e?.premiumType != null,
             return (0, r.uniqBy)(t, "skuId");
         }
         if (t === i.R.PROFILE_EFFECT) {
-            let t = (0, r.flatMap)([...e.values()], "items").filter(c.C);
+            let t = (0, r.flatMap)([...e.values()], "items").filter(c.C3);
             return (0, r.uniqBy)(t, "skuId");
         }
         if (t === i.R.PROFILE_FRAME) {
@@ -161,7 +161,7 @@ let E = (e) => e?.premiumType != null,
             return (0, r.uniqBy)(e, "skuId");
         }
         if (t === i.R.PROFILE_EFFECT) {
-            let e = (0, r.flatMap)(n, "items").filter(c.C);
+            let e = (0, r.flatMap)(n, "items").filter(c.C3);
             return (0, r.uniqBy)(e, "skuId");
         }
         if (t === i.R.PROFILE_FRAME) {

@@ -106,7 +106,7 @@ let c = (0, s.v)((e) => ({
             a = (0, o.ZK)(s);
         return r.useMemo(() => {
             if (null == a || null == e) return null;
-            let { effects: t, stillFrames: n } = a.config,
+            let { effects: t, stillFrames: n } = a,
                 r = null != n && Object.keys(n).length > 0;
             if (0 === t.length && !r) return null;
             let s = (0, i.cloneDeep)(e);

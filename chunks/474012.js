@@ -13,7 +13,7 @@ let u = (e) =>
               (e, t) => (
                   t.type === r.R.AVATAR_DECORATION && e.push(i.A.fromServer(t)),
                   t.type === r.R.NAMEPLATE && e.push(s.A.fromServer(t)),
-                  t.type === r.R.PROFILE_EFFECT && e.push(a.A.fromServer(t)),
+                  t.type === r.R.PROFILE_EFFECT && e.push(a.Ay.fromServer(t)),
                   t.type === r.R.PROFILE_FRAME && e.push(o.A.fromServer(t)),
                   e
               ),
@@ -52,7 +52,7 @@ function c(e) {
         if (n.type === r.R.PROFILE_EFFECT)
             return {
                 type: "single",
-                item: new a.A({
+                item: new a.Ay({
                     skuId: e.id,
                     type: n.type,
                     title: n.titleLocalized ?? n.title,

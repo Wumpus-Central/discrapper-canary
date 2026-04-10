@@ -24,14 +24,14 @@ let c = "__DEBUG_PROFILE_EFFECTS_STORE",
     },
     f = (0, s.h)((e) => ({
         ...d,
-        upsertConfig: (t) =>
+        upsertProfileEffect: (t) =>
             (0, a.r)(() => {
                 e((e) => {
                     let n = { ...e };
                     return (n.profileEffects[t.skuId] = t), _(n), n;
                 });
             }),
-        deleteConfig: (t) =>
+        deleteProfileEffect: (t) =>
             (0, a.r)(() => {
                 e((e) => {
                     let n = { ...e };
@@ -67,13 +67,13 @@ let c = "__DEBUG_PROFILE_EFFECTS_STORE",
                         let t = (0, u.fB)(e);
                         return n.current.push(t), t;
                     },
-                    r = t.config.stillFrames,
+                    r = t.stillFrames,
                     i = null != r ? { ...r } : {};
                 for (let t in i) {
                     let n = i[t];
                     null != n && (i[t] = { ...n, src: e(n.base64) });
                 }
-                return { ...t, config: { ...t.config, stillFrames: i } };
+                return { ...t, stillFrames: i };
             }, [t])
         );
     };

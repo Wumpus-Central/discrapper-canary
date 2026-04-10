@@ -1,9 +1,12 @@
 "use strict";
-n.d(t, { A: () => s, C: () => a });
+n.d(t, { Ay: () => o, C3: () => a, HL: () => s });
 var r = n(575593),
-    i = n(149807);
-let a = (e) => e instanceof s;
-class s extends i.A {
+    i = n(149807),
+    s = (function (e) {
+        return (e.FromLoop = "fromLoop"), (e.FromStart = "fromStart"), e;
+    })({});
+let a = (e) => e instanceof o;
+class o extends i.A {
     title;
     description;
     accessibilityLabel;
@@ -25,6 +28,6 @@ class s extends i.A {
             (this.staticFrameSrc = e.staticFrameSrc);
     }
     static fromServer(e) {
-        return new s({ ...super.fromServer(e), ...e });
+        return new o({ ...super.fromServer(e), ...e });
     }
 }

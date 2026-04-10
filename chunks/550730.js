@@ -13,23 +13,18 @@ var a = n(627968),
     x = n(816866),
     p = n(87558),
     g = n(918550),
-    _ = n(525221);
-let f = "Make sure you're only uploading text files!",
-    v = (e) => {
-        let { effect: t, onClick: n } = e,
-            { deleteConfig: i } = (0, x.wu)();
+    f = n(525221);
+let v = "Make sure you're only uploading text files!",
+    _ = (e) => {
+        let { profileEffect: t, onClick: n } = e,
+            { deleteProfileEffect: i } = (0, x.wu)();
         return (0, a.jsxs)(o.DUT, {
-            className: _.B0,
-            onClick: () => {
-                n(t);
-            },
+            className: f.B0,
+            onClick: n,
             children: [
-                (0, a.jsx)("div", {
-                    className: _.yV,
-                    style: { backgroundImage: `url(${t.config?.effects?.[0]?.base64})` },
-                }),
+                (0, a.jsx)("div", { className: f.yV, style: { backgroundImage: `url(${t.effects?.[0]?.base64})` } }),
                 (0, a.jsxs)("div", {
-                    className: _.eL,
+                    className: f.eL,
                     children: [
                         (0, a.jsx)(o.Text, { variant: "text-md/bold", children: t.name }),
                         (0, a.jsx)(o.Button, {
@@ -45,13 +40,13 @@ let f = "Make sure you're only uploading text files!",
         });
     };
 function b() {
-    let { profileEffects: e, upsertConfig: t, clearAll: n } = (0, x.wu)(),
+    let { profileEffects: e, upsertProfileEffect: t, clearAll: n } = (0, x.wu)(),
         [s, b] = i.useState(),
         j = i.useRef(null),
         { categories: A } = (0, m.A)(),
         C = i.useMemo(() => (0, u.Wj)(A), [A]),
-        [y, E] = i.useState(""),
-        S = i.useMemo(
+        [y, S] = i.useState(""),
+        E = i.useMemo(
             () =>
                 "" === y
                     ? C
@@ -65,9 +60,9 @@ function b() {
         ),
         T = i.useCallback(
             (e, n) => {
-                if (null == n || !e.type.startsWith("text/")) return (0, h.Ni)(f);
+                if (null == n || !e.type.startsWith("text/")) return (0, h.Ni)(v);
                 let [a, i] = n.split(",");
-                if (!a.includes("text/plain")) return (0, h.Ni)(f);
+                if (!a.includes("text/plain")) return (0, h.Ni)(v);
                 let s = JSON.parse(atob(i));
                 (s.skuId = (0, r.A)()), t(s), (0, h.GF)("Profile Effect (maybe??) imported!");
             },
@@ -82,16 +77,16 @@ function b() {
             [T],
         );
     return (0, a.jsxs)("div", {
-        className: _.zr,
+        className: f.zr,
         children: [
             null == s &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsxs)("div", {
-                            className: _.nz,
+                            className: f.nz,
                             children: [
                                 (0, a.jsxs)("div", {
-                                    className: l()(_.uW, _.nM),
+                                    className: l()(f.uW, f.nM),
                                     children: [
                                         (0, a.jsx)(o.Heading, {
                                             variant: "heading-xl/bold",
@@ -112,27 +107,18 @@ function b() {
                                     ],
                                 }),
                                 (0, a.jsx)("div", {
-                                    className: _.Iv,
+                                    className: f.Iv,
                                     children: Object.values(e).map((e) =>
-                                        (0, a.jsx)(
-                                            v,
-                                            {
-                                                effect: e,
-                                                onClick: (e) => {
-                                                    b(e);
-                                                },
-                                            },
-                                            e.skuId,
-                                        ),
+                                        (0, a.jsx)(_, { profileEffect: e, onClick: () => b(e) }, e.skuId),
                                     ),
                                 }),
                             ],
                         }),
                         (0, a.jsxs)("div", {
-                            className: l()(_.nM, _._N, _.uW),
+                            className: l()(f.nM, f._N, f.uW),
                             children: [
                                 (0, a.jsxs)("div", {
-                                    className: _.au,
+                                    className: f.au,
                                     children: [
                                         (0, a.jsx)(o.Text, {
                                             variant: "text-md/normal",
@@ -146,29 +132,29 @@ function b() {
                                     variant: "primary",
                                     text: "Create New Effect",
                                     onClick: () => {
-                                        t({ skuId: (0, r.A)(), name: "New Profile Effect", config: { effects: [] } });
+                                        t({ skuId: (0, r.A)(), name: "New Profile Effect", effects: [] });
                                     },
                                 }),
                             ],
                         }),
                         (0, a.jsx)("hr", {}),
                         (0, a.jsxs)("div", {
-                            className: _.uW,
+                            className: f.uW,
                             children: [
                                 (0, a.jsx)(o.Heading, { variant: "heading-xl/bold", children: "All Effects" }),
                                 (0, a.jsx)(o.ksK, {
                                     value: y,
                                     onChange: (e) => {
-                                        E(e);
+                                        S(e);
                                     },
                                 }),
                                 (0, a.jsx)("div", {
-                                    className: _.xm,
-                                    children: S.map((e) =>
+                                    className: f.xm,
+                                    children: E.map((e) =>
                                         (0, a.jsx)(
                                             o.DUT,
                                             {
-                                                className: _.S5,
+                                                className: f.S5,
                                                 style: { backgroundImage: `url(${e.thumbnailPreviewSrc})` },
                                                 onClick: () => {
                                                     let t = {
@@ -201,12 +187,13 @@ function b() {
                                                     b({
                                                         skuId: e.skuId,
                                                         name: e.title,
+                                                        effects: e.effects,
+                                                        stillFrames: t,
                                                         readonly: !0,
-                                                        config: { effects: e.effects, stillFrames: t },
                                                     });
                                                 },
                                                 children: (0, a.jsx)("div", {
-                                                    className: _.Hd,
+                                                    className: f.Hd,
                                                     children: (0, a.jsx)(o.Text, {
                                                         variant: "text-md/normal",
                                                         color: "always-white",
@@ -222,7 +209,7 @@ function b() {
                         }),
                     ],
                 }),
-            null != s && (0, a.jsx)(g.A, { effect: s }),
+            null != s && (0, a.jsx)(g.A, { profileEffect: s }),
         ],
     });
 }

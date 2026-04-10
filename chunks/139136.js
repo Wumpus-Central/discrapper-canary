@@ -3,10 +3,10 @@ n.d(t, { A: () => d });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
-    a = n.n(s);
+    a = n.n(s),
+    o = n(203632);
 n(881106);
-var o = n(649802),
-    l = n(351966),
+var l = n(351966),
     u = n(995811),
     c = n(778765);
 let d = (e) => {
@@ -41,7 +41,7 @@ let d = (e) => {
                           skuId: t,
                           useThumbnail: !0,
                           autoPlay: d,
-                          restartMethod: o.H.FromStart,
+                          restartMethod: o.HL.FromStart,
                           resetOnHover: !0,
                           isHovering: n,
                           useOpacityOnHover: !1,

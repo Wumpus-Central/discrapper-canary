@@ -13,7 +13,7 @@ var r = n(627968),
     f = n(88686),
     p = n(780898),
     h = n(214881),
-    m = n(496867),
+    m = n(942426),
     E = n(181774),
     g = n(132198),
     A = n(929283),
@@ -28,9 +28,9 @@ let v = (e) => {
         return (0, r.jsx)(A.i, { item: t, avatarSize: n, isHighlighted: !1, avatarPlaceholderSrc: s, className: I.M });
     },
     N = (e) => {
-        let { profileEffect: t, fallbackLabel: n } = e,
-            s = (0, m.V)(t?.skuId),
-            { accessibilityLabel: a, thumbnailPreviewSrc: o, title: l } = s?.config ?? {},
+        let { item: t, fallbackLabel: n } = e,
+            s = (0, m.A)(t.skuId),
+            { accessibilityLabel: a, thumbnailPreviewSrc: o, title: l } = s ?? {},
             u = i.useMemo(() => (0, E.Rc)(o), [o]);
         return null == s
             ? n
@@ -71,7 +71,7 @@ let v = (e) => {
                         null != s &&
                             (0, r.jsx)("div", {
                                 className: I.zh,
-                                children: (0, r.jsx)(N, { profileEffect: s, fallbackLabel: null }),
+                                children: (0, r.jsx)(N, { item: s, fallbackLabel: null }),
                             }),
                         null != a &&
                             (0, r.jsx)("div", {
@@ -98,7 +98,7 @@ let v = (e) => {
             : _?.type === s.R.AVATAR_DECORATION
               ? (0, r.jsx)(v, { avatarDecoration: _, avatarSize: l._3J.SIZE_40 })
               : _?.type === s.R.PROFILE_EFFECT
-                ? (0, r.jsx)(N, { profileEffect: _, fallbackLabel: i })
+                ? (0, r.jsx)(N, { item: _, fallbackLabel: i })
                 : _?.type === s.R.NAMEPLATE
                   ? (0, r.jsx)(C, { nameplate: _, fallbackLabel: i })
                   : i;

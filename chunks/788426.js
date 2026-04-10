@@ -8,37 +8,37 @@ var r = n(627968),
     o = n(203632),
     d = n(181774),
     u = n(483968),
-    m = n(496867),
+    m = n(942426),
     p = n(369742),
     f = n(985018),
-    g = n(832765),
-    x = n(423393);
+    x = n(832765),
+    g = n(423393);
 let A = () => 80,
     h = (e) => {
         let { children: t, className: n, isSelected: i, ...s } = e;
         return (0, r.jsx)(a.DUT, {
             "aria-pressed": i,
-            className: l()(g.BP, n, { [g.wH]: i }),
+            className: l()(x.BP, n, { [x.wH]: i }),
             ...s,
             onClick: s.onSelect,
             children: t,
         });
     },
     _ = (e) => {
-        let { profileEffect: t, innerRef: n, section: s, isSelected: l, canUsePremiumCollectibles: a, ...c } = e,
-            o = (0, m.V)(t.skuId),
+        let { skuId: t, innerRef: n, section: s, isSelected: l, canUsePremiumCollectibles: a, ...c } = e,
+            o = (0, m.A)(t),
             f = i.useRef(null),
-            { accessibilityLabel: A, thumbnailPreviewSrc: _, title: E } = o?.config ?? {},
-            y = i.useMemo(() => (0, d.Rc)(_), [_]);
+            { accessibilityLabel: A, thumbnailPreviewSrc: _, title: E } = o ?? {},
+            C = i.useMemo(() => (0, d.Rc)(_), [_]);
         return (0, r.jsxs)(h, {
             innerRef: n ?? f,
             isSelected: l,
             ...c,
             children: [
-                (0, r.jsx)("img", { src: x.A, alt: A, className: g.rQ }),
-                (0, r.jsx)("img", { className: g.Wv, src: y, alt: E }),
+                (0, r.jsx)("img", { src: g.A, alt: A, className: x.rQ }),
+                (0, r.jsx)("img", { className: x.Wv, src: C, alt: E }),
                 (0, r.jsx)(u.A, {
-                    skuId: t.skuId,
+                    skuId: t,
                     canUsePremiumCollectibles: a,
                     isPurchaseSection: s === p.wn.PURCHASE,
                     isPremiumSection: s === p.wn.PREMIUM_PURCHASE,
@@ -50,25 +50,25 @@ let A = () => 80,
         let { user: t, guild: n, pendingProfileEffect: i, selectedProfileEffectRef: s, onSelect: l, onOpenShop: d } = e,
             u = (0, p.Ay)(),
             m = null != i,
-            x = c.Ay.canUseCollectibles(t);
+            g = c.Ay.canUseCollectibles(t);
         return (0, r.jsx)("section", {
-            className: g.uW,
+            className: x.uW,
             children: (0, r.jsx)(a.a0_, {
                 fade: !0,
                 itemGutter: 12,
                 sectionGutter: 16,
                 paddingVertical: 0,
                 paddingHorizontal: 12,
-                className: g.p_,
+                className: x.p_,
                 columns: 3,
                 sections: u.map((e) => {
                     let { items: t } = e;
                     return t.length;
                 }),
                 renderItem: (e, t, c, A) => {
-                    let { section: E, items: y } = u[e],
-                        C = y[t];
-                    if (C === p.dP)
+                    let { section: E, items: C } = u[e],
+                        j = C[t];
+                    if (j === p.dP)
                         return (0, r.jsxs)(
                             h,
                             {
@@ -76,7 +76,7 @@ let A = () => 80,
                                 isSelected: !m,
                                 onSelect: () => l(null),
                                 children: [
-                                    (0, r.jsx)(a.KTN, { size: "md", color: "currentColor", className: g.vo }),
+                                    (0, r.jsx)(a.KTN, { size: "md", color: "currentColor", className: x.vo }),
                                     (0, r.jsx)(a.Text, {
                                         variant: "text-xs/normal",
                                         color: "text-strong",
@@ -86,7 +86,7 @@ let A = () => 80,
                             },
                             A,
                         );
-                    if (C === p.ZK)
+                    if (j === p.ZK)
                         return (0, r.jsxs)(
                             h,
                             {
@@ -98,7 +98,7 @@ let A = () => 80,
                                         width: 23,
                                         height: 23,
                                         color: "currentColor",
-                                        className: g.sV,
+                                        className: x.sV,
                                     }),
                                     (0, r.jsx)(a.Text, {
                                         variant: "text-xs/normal",
@@ -109,18 +109,18 @@ let A = () => 80,
                             },
                             A,
                         );
-                    if ((0, o.C)(C)) {
-                        let e = i?.skuId === C.skuId;
+                    if ((0, o.C3)(j)) {
+                        let e = i?.skuId === j.skuId;
                         return (0, r.jsx)(
                             _,
                             {
                                 style: { ...c },
                                 section: E,
-                                profileEffect: C,
+                                skuId: j.skuId,
                                 innerRef: e ? s : void 0,
                                 isSelected: e,
-                                onSelect: () => l(C),
-                                canUsePremiumCollectibles: x,
+                                onSelect: () => l(j),
+                                canUsePremiumCollectibles: g,
                             },
                             A,
                         );
