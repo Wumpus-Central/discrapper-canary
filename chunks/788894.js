@@ -201,6 +201,14 @@ let r = {
                     return 24;
                 },
             },
+            CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 8;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 16;
+                    return 8;
+                },
+            },
             CHAT_INPUT_EXPRESSION_OFFSET_LEFT: {
                 resolve(e) {
                     let { enabledExperiments: t } = e;
@@ -217,6 +225,46 @@ let r = {
                     return 6;
                 },
             },
+            CHAT_INPUT_FLOATING_CONTENT_PADDING_HORIZONTAL: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 0;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 8;
+                    return 0;
+                },
+            },
+            CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 0;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 12;
+                    return 0;
+                },
+            },
+            CHAT_INPUT_FLOATING_SCRIM_GRADIENT_HEIGHT: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 0;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 52;
+                    return 0;
+                },
+            },
+            CHAT_INPUT_FLOATING_SCRIM_OFFSET_TOP: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 0;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 24;
+                    return 0;
+                },
+            },
+            CHAT_INPUT_FLOATING_TYPING_PADDING_TOP: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 0;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 20;
+                    return 0;
+                },
+            },
             CHAT_INPUT_ICON_SIZE: {
                 resolve(e) {
                     let { enabledExperiments: t } = e;
@@ -226,6 +274,14 @@ let r = {
                 },
             },
             CHAT_INPUT_PILL_PADDING: { resolve: () => 2 },
+            CHAT_INPUT_SPACE_BOTTOM: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 0;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 34;
+                    return 0;
+                },
+            },
             COACHMARK_BODY_BORDER_RADIUS: {
                 resolve(e) {
                     let { enabledExperiments: t } = e;
