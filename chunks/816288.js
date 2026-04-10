@@ -3,7 +3,7 @@ var i = n(627968),
     l = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(773690),
+    r = n(687498),
     o = n(158954),
     d = n(311907),
     c = n(397927),
@@ -12,8 +12,8 @@ var i = n(627968),
     A = n(230135),
     _ = n(552836),
     m = n(147925),
-    g = n(363487),
-    p = n(267771),
+    p = n(363487),
+    g = n(267771),
     f = n(828162),
     x = n(333354),
     E = n(985018),
@@ -22,21 +22,22 @@ let C = l.forwardRef((e, t) => {
     let { appliedBoostCount: n, maxBoostCount: s, premiumSubscriberCount: d, className: u } = e,
         h = n >= s,
         A = Math.min((n / s) * 100, 100),
-        [_, g] = (0, c.zhh)(
-            () => ({ width: n === d ? `calc(${A}% - 4px)` : "0%", config: { tension: 250, damping: 5, mass: 1 } }),
+        _ = `calc(${A}% - 4px)`,
+        [p, g] = (0, c.zhh)(
+            () => ({ width: n === d ? _ : "calc(0% - 0px)", config: { tension: 250, damping: 5, mass: 1 } }),
             "respect-motion-settings",
             [n, d],
         );
     return (
         l.useEffect(() => {
-            g({ width: `calc(${A}% - 4px)` });
-        }, [A, g]),
+            g({ width: _ });
+        }, [_, g]),
         (0, i.jsxs)("div", {
             ref: t,
             className: I.hQ,
             children: [
                 (0, i.jsx)("div", { className: a()(I.L$, u) }),
-                (0, i.jsx)(r.animated.div, { className: a()(I.qB, { [I.mu]: A <= 5 }), style: _ }),
+                (0, i.jsx)(r.animated.div, { className: a()(I.qB, { [I.mu]: A <= 5 }), style: p }),
                 (0, i.jsxs)("div", {
                     className: I.FS,
                     children: [
@@ -85,8 +86,8 @@ let C = l.forwardRef((e, t) => {
 });
 function N(e) {
     let { guild: t, withMargin: s } = e,
-        r = (0, p.A)(t),
-        o = (0, g.A)(t.id),
+        r = (0, g.A)(t),
+        o = (0, p.A)(t.id),
         m = l.useCallback(() => {
             (0, f.A)(t.id, h.A.GUILD_BOOSTING_SIDEBAR_DISPLAY);
         }, [t.id]),
