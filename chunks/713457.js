@@ -414,7 +414,7 @@ function F(e) {
                                             fullWidth: !0,
                                             wrap: !1,
                                             children: [
-                                                ea && !(0, E.g5)(t) && eT ? eI : null,
+                                                eT && (ea || (0, T.vA)(t)) ? eI : null,
                                                 (0, a.jsx)(I.A, {
                                                     quest: t,
                                                     surface: k.V3.QUEST_HOME_TILE_FOOTER,
