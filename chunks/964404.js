@@ -2,25 +2,25 @@
 n.d(t, { Ay: () => v });
 var r = n(735438),
     i = n.n(r),
-    a = n(311907),
-    s = n(506774),
+    s = n(311907),
+    a = n(506774),
     o = n(73153);
 n(677313);
 var l = n(185928),
-    u = n(652215),
-    c = n(698279),
-    d = n(815968);
-let _ = (window.innerWidth - u.MdR) / 2,
+    u = n(355097),
+    c = n(652215),
+    d = n(698279);
+let _ = (window.innerWidth - c.MdR) / 2,
     f = "standard",
     p = null;
 function h() {
-    return null == p && (p = Math.max((window.innerWidth - u.MdR) * 0.4, u.da6)), p;
+    return null == p && (p = Math.max((window.innerWidth - c.MdR) * 0.4, c.da6)), p;
 }
 let m = {};
-function g(e) {
+function E(e) {
     m = { ...m, ...e.settings };
 }
-function E() {
+function g() {
     m = { useSystemTheme: m.useSystemTheme, darkSidebar: m.darkSidebar };
 }
 function A() {
@@ -31,17 +31,17 @@ function T() {
     return (m.darkSidebar = !m.darkSidebar), !0;
 }
 function S() {
-    let e = a.Ay.PersistedStore.migrateAndReadStoreState("AccessibilityStore", []).state;
+    let e = s.Ay.PersistedStore.migrateAndReadStoreState("AccessibilityStore", []).state;
     return e?.darkSidebar ?? !1;
 }
-class y extends a.Ay.DeviceSettingsStore {
+class y extends s.Ay.DeviceSettingsStore {
     static displayName = "UnsyncedUserSettingsStore";
     static persistKey = "UnsyncedUserSettingsStore";
     static migrations = [
         () => {
-            let e = s.w.get("UserSettingsStore");
+            let e = a.w.get("UserSettingsStore");
             return (
-                s.w.remove("UserSettingsStore"),
+                a.w.remove("UserSettingsStore"),
                 i().pick(
                     e,
                     "dataSavingMode",
@@ -86,19 +86,19 @@ class y extends a.Ay.DeviceSettingsStore {
         return m.dataSavingMode ?? m.lowQualityImageMode ?? !1;
     }
     get expressionPickerWidth() {
-        return m.expressionPickerWidth ?? c.wp.MIN;
+        return m.expressionPickerWidth ?? d.wp.MIN;
     }
     get messageRequestSidebarWidth() {
-        return m.messageRequestSidebarWidth ?? u.ItT;
+        return m.messageRequestSidebarWidth ?? c.ItT;
     }
     get threadSidebarWidth() {
-        return m.threadSidebarWidth ?? u.da6;
+        return m.threadSidebarWidth ?? c.da6;
     }
     get postSidebarWidth() {
         return m.postSidebarWidth ?? _;
     }
     get callChatSidebarWidth() {
-        return m.callChatSidebarWidth ?? u.da6;
+        return m.callChatSidebarWidth ?? c.da6;
     }
     get homeSidebarWidth() {
         return m.homeSidebarWidth ?? h();
@@ -152,15 +152,21 @@ class y extends a.Ay.DeviceSettingsStore {
         return m.disableVisualRefresh ?? e;
     }
     get listDensity() {
-        return m.listDensity ?? d.YP.COZY;
+        return m.listDensity ?? u.YP.COZY;
     }
     get hdrDynamicRange() {
         return m.hdrDynamicRange ?? "no-limit";
     }
+    get searchProvider() {
+        return m.searchProvider ?? u.YL.GOOGLE;
+    }
+    get customSearchUrl() {
+        return m.customSearchUrl ?? "";
+    }
 }
 let v = new y(o.h, {
-    UNSYNCED_USER_SETTINGS_UPDATE: g,
-    LOGOUT: E,
+    UNSYNCED_USER_SETTINGS_UPDATE: E,
+    LOGOUT: g,
     LOGIN_SUCCESS: A,
     REGISTER_SUCCESS: I,
     ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: T,
