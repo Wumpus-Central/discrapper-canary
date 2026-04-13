@@ -15,10 +15,10 @@ var r = n(627968),
     h = n(954571),
     m = n(652215),
     E = n(985018),
-    g = n(272446);
+    g = n(696731);
 function A() {
     (0, u.mMO)(async () => {
-        let { default: e } = await Promise.all([n.e("81028"), n.e("50866")]).then(n.bind(n, 220763));
+        let { default: e } = await n.e("66920").then(n.bind(n, 220763));
         return (t) => (0, r.jsx)(e, { ...t });
     });
 }

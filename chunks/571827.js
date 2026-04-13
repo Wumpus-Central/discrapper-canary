@@ -6,7 +6,7 @@ var s = l(575593),
     r = l(404374),
     a = l(788868),
     c = l(985018),
-    o = l(238333);
+    o = l(984586);
 function d(e) {
     let { itemType: t, onClose: d } = e,
         u =
@@ -31,11 +31,7 @@ function d(e) {
                               ? c.intl.format(c.t["aFR/EI"], {
                                     onClick: () => {
                                         (0, i.mMO)(async () => {
-                                            let { default: e } = await Promise.all([
-                                                l.e("81028"),
-                                                l.e("64864"),
-                                                l.e("49004"),
-                                            ]).then(l.bind(l, 948265));
+                                            let { default: e } = await l.e("64864").then(l.bind(l, 948265));
                                             return (t) =>
                                                 (0, n.jsx)(e, {
                                                     premiumUpsellType: u,
@@ -51,11 +47,7 @@ function d(e) {
                                 ? c.intl.format(c.t.eWNONM, {
                                       onClick: () => {
                                           (0, i.mMO)(async () => {
-                                              let { default: e } = await Promise.all([
-                                                  l.e("81028"),
-                                                  l.e("64864"),
-                                                  l.e("49004"),
-                                              ]).then(l.bind(l, 948265));
+                                              let { default: e } = await l.e("64864").then(l.bind(l, 948265));
                                               return (t) =>
                                                   (0, n.jsx)(e, {
                                                       premiumUpsellType: u,
@@ -71,11 +63,7 @@ function d(e) {
                                   ? c.intl.format(c.t.G6b8TF, {
                                         onClick: () => {
                                             (0, i.mMO)(async () => {
-                                                let { default: e } = await Promise.all([
-                                                    l.e("81028"),
-                                                    l.e("64864"),
-                                                    l.e("49004"),
-                                                ]).then(l.bind(l, 948265));
+                                                let { default: e } = await l.e("64864").then(l.bind(l, 948265));
                                                 return (t) =>
                                                     (0, n.jsx)(e, {
                                                         premiumUpsellType: u,

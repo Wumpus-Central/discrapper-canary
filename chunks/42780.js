@@ -13,7 +13,7 @@ var i = n(503698),
     _ = n(86376),
     f = n(649640),
     p = n(339984),
-    h = n(912648);
+    h = n(424941);
 function m(e) {
     let { profile: t, className: n } = e,
         i = (0, f._3)(t);
@@ -46,13 +46,9 @@ function g(e) {
     function c(e, t) {
         null != i &&
             (0, a.mMO)(async () => {
-                let { default: s } = await Promise.all([
-                    n.e("81028"),
-                    n.e("79149"),
-                    n.e("35929"),
-                    n.e("74571"),
-                    n.e("82563"),
-                ]).then(n.bind(n, 142630));
+                let { default: s } = await Promise.all([n.e("79149"), n.e("35929"), n.e("74571"), n.e("62788")]).then(
+                    n.bind(n, 142630),
+                );
                 return (n) =>
                     (0, r.jsx)(s, {
                         uploadType: p.HL.GUILD_ICON,
