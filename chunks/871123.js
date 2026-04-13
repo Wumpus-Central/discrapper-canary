@@ -1,20 +1,21 @@
 "use strict";
 n.d(t, {
-    Cv: () => N,
-    OY: () => O,
-    Q6: () => b,
+    Cv: () => C,
+    NE: () => v,
+    OY: () => b,
+    Q6: () => D,
     Ri: () => A,
-    Ye: () => D,
+    Ye: () => L,
     bF: () => T,
-    fq: () => C,
+    fq: () => R,
     jd: () => I,
     jz: () => y,
     mC: () => E,
-    nG: () => w,
+    nG: () => M,
     pV: () => m,
-    sq: () => v,
-    wH: () => L,
-    xf: () => R,
+    sq: () => N,
+    wH: () => w,
+    xf: () => O,
     y8: () => g,
     zf: () => S,
 }),
@@ -70,6 +71,9 @@ function y(e) {
     return !!_.A.getStorefrontGuildIds().has(e.id) || (e.features?.has(p.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ?? !1);
 }
 function v(e) {
+    return { logoAssetId: e.logo_asset_id ?? null, lightThemeLogoAssetId: e.light_theme_logo_asset_id ?? null };
+}
+function N(e) {
     return {
         applicationId: e.application_id,
         title: e.title,
@@ -92,7 +96,7 @@ function v(e) {
         application: null != e.application ? l.Ay.createFromServer(e.application) : void 0,
     };
 }
-function N(e, t) {
+function C(e, t) {
     if (
         null == t ||
         e?.tenantMetadata?.socialLayer?.carouselItems == null ||
@@ -107,30 +111,30 @@ function N(e, t) {
               primaryIconLabel: n.label,
           };
 }
-function C(e) {
+function R(e) {
     let t = e?.applicationId,
         n = e?.tenantMetadata?.socialLayer?.cardImageAssetId ?? e?.thumbnailAssetId;
     if (null != n && null != t) return d.A.toURLSafe((0, c.YE)(t, n, 512, "webp"));
 }
-function R(e) {
+function O(e) {
     if (e?.tenantMetadata?.socialLayer?.cardBackgroundImageAssetId != null && e?.applicationId != null)
         return d.A.toURLSafe(
             (0, c.YE)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, 1024, m),
         );
 }
-function O(e, t) {
+function b(e, t) {
     return `${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}${p.BVt.GAME_SHOP(e, t.id, t.slug)}`;
 }
-function b(e, t) {
-    return `${O(e, t)}
+function D(e, t) {
+    return `${b(e, t)}
 
 `;
 }
-function D(e) {
+function L(e) {
     let t = u.A.getGuild(e);
     return null != t && y(t);
 }
-function L(e, t, n) {
+function w(e, t, n) {
     return 0 === e.length
         ? { hasWishlist: !1, hasPopular: !1 }
         : {
@@ -152,7 +156,7 @@ function L(e, t, n) {
               }),
           };
 }
-function w(e) {
+function M(e) {
     let t = (0, s.bG)([_.A], () => _.A.getGuildIdFromApplicationId(e)),
         n = (0, a.h)(e);
     return { guildId: t ?? n?.guildId, application: n };

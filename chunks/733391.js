@@ -38,11 +38,19 @@ async function h(e, t) {
         i.h.dispatch({ type: "STORE_LISTINGS_FETCH_START", skuId: t });
         let n = await r.Bo.get({ url: l.Rsh.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU(e, t), rejectWithError: !0 });
         if (null == n.body || !n.ok) throw Error("Failed to fetch social layer storefront SKU");
+        let s = n.body.store_listing,
+            o = n.body.storefront_metadata;
         i.h.dispatch({
             type: "SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS",
             assets: Object.fromEntries(n.body.assets.map((e) => [e.id, e])),
         }),
-            i.h.dispatch({ type: "STORE_LISTING_FETCH_SUCCESS", storeListing: n.body.store_listing });
+            null != o &&
+                i.h.dispatch({
+                    type: "SOCIAL_LAYER_STOREFRONT_METADATA_LOAD_SUCCESS",
+                    applicationId: s.sku.application_id,
+                    storefrontMetadata: (0, a.NE)(o),
+                }),
+            i.h.dispatch({ type: "STORE_LISTING_FETCH_SUCCESS", storeListing: s });
     } catch (e) {
         i.h.dispatch({ type: "STORE_LISTINGS_FETCH_FAIL", skuId: t });
     }
