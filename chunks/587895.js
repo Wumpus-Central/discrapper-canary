@@ -181,11 +181,12 @@ function B(e) {
     p(s.Ay.createFromServer(t));
 }
 function H(e) {
-    e.tokens.forEach((e) => {
-        p(s.Ay.createFromServer(e.application));
-        let t = e.application.bot;
-        null != t && v({ userId: t.id, applicationId: e.application.id });
-    });
+    for (let t of e.tokens.values()) {
+        if (null == t) continue;
+        p(s.Ay.createFromServer(t.application));
+        let e = t.application.bot;
+        null != e && v({ userId: e.id, applicationId: t.application.id });
+    }
 }
 function j(e) {
     e.items.forEach((e) => {

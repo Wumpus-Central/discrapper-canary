@@ -2,27 +2,27 @@
 n.d(t, { U: () => u, j: () => l });
 var r = n(64700),
     i = n(311907),
-    a = n(824552),
-    s = n(546183),
+    s = n(824552),
+    a = n(546183),
     o = n(403362);
 function l(e, t) {
     let { disableFetch: n = !1 } = t ?? {},
-        l = (0, i.yK)([s.default], () => e?.map((e) => s.default.getNewestTokenForApplication(e)).filter(o.Vq) ?? [], [
+        l = (0, i.yK)([a.default], () => e?.map((e) => a.default.getNewestTokenForApplication(e)).filter(o.Vq) ?? [], [
             e,
         ]),
         u = (0, i.bG)(
-            [s.default],
-            () => e?.every((e) => s.default.getFetchStateForApplication(e) === s.FetchState.FETCHED) ?? !1,
+            [a.default],
+            () => e?.every((e) => a.default.getFetchStateForApplication(e) === a.FetchState.FETCHED) ?? !1,
             [e],
         ),
         c = (0, i.yK)(
-            [s.default],
-            () => e?.filter((e) => s.default.getFetchStateForApplication(e) === s.FetchState.NOT_FETCHED) ?? [],
+            [a.default],
+            () => e?.filter((e) => a.default.getFetchStateForApplication(e) === a.FetchState.NOT_FETCHED) ?? [],
             [e],
         );
     return (
         r.useEffect(() => {
-            if (!n && 0 !== c.length) for (let e of c) a.A.fetchByApplicationId(e);
+            n || 0 === c.length || s.A.fetch(c);
         }, [n, c]),
         { tokens: l, fetched: u }
     );

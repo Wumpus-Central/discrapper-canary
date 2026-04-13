@@ -1,25 +1,41 @@
 "use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => d });
 var r = n(562465),
-    i = n(73153),
-    a = n(652215);
-let s = {
-    fetch() {
-        i.h.dispatch({ type: "USER_AUTHORIZED_APPS_REQUEST" }),
-            r.Bo.get({ url: a.Rsh.OAUTH2_TOKENS, oldFormErrors: !0, rejectWithError: !0 }).then(
-                (e) => i.h.dispatch({ type: "USER_AUTHORIZED_APPS_UPDATE", tokens: e.body }),
-                () => i.h.dispatch({ type: "USER_AUTHORIZED_APPS_UPDATE", tokens: [] }),
-            );
-    },
-    fetchByApplicationId(e) {
-        i.h.dispatch({ type: "USER_AUTHORIZED_APPS_REQUEST_BY_ID", applicationId: e }),
-            r.Bo.get({ url: a.Rsh.GET_APPLICATION_TOKENS(e), oldFormErrors: !0, rejectWithError: !0 }).then(
-                (t) => i.h.dispatch({ type: "USER_AUTHORIZED_APPS_UPDATE_BY_ID", tokens: t.body, applicationId: e }),
-                () => i.h.dispatch({ type: "USER_AUTHORIZED_APPS_UPDATE_BY_ID", tokens: [], applicationId: e }),
-            );
+    i = n(451988),
+    s = n(73153),
+    a = n(546183),
+    o = n(652215);
+let l = new i.OC(c, (e) => a.default.getFetchStateForApplication(e) !== a.FetchState.FETCHING);
+function u(e, t) {
+    let n = new Map(t?.map((e) => [e, null]));
+    for (let t of e) n.set(t.application.id, t);
+    return n;
+}
+async function c(e) {
+    s.h.dispatch({
+        type: "USER_AUTHORIZED_APPS_REQUEST",
+        request: null == e ? { type: "full" } : { type: "partial", applicationIds: e },
+    }),
+        await r.Bo.get({
+            url: o.Rsh.OAUTH2_TOKENS,
+            oldFormErrors: !0,
+            rejectWithError: !0,
+            query: { application_ids: e },
+        }).then(
+            (t) => s.h.dispatch({ type: "USER_AUTHORIZED_APPS_UPDATE", isFullFetch: null == e, tokens: u(t.body, e) }),
+            () =>
+                s.h.dispatch({
+                    type: "USER_AUTHORIZED_APPS_REQUEST_FAILED",
+                    request: null == e ? { type: "full" } : { type: "partial", applicationIds: e },
+                }),
+        );
+}
+let d = {
+    fetch(e) {
+        a.default.getFetchState() !== a.FetchState.FETCHING && (null != e ? l.queue(e) : (l.reset(), c()));
     },
     delete(e) {
-        r.Bo.del({ url: a.Rsh.OAUTH2_TOKEN(e), oldFormErrors: !0, rejectWithError: !0 }).then(() => {
+        r.Bo.del({ url: o.Rsh.OAUTH2_TOKEN(e), oldFormErrors: !0, rejectWithError: !0 }).then(() => {
             this.fetch();
         });
     },

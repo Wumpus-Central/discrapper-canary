@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { E: () => p });
+n.d(t, { E: () => f });
 var r = n(735438),
     i = n.n(r),
     s = n(562465),
@@ -22,30 +22,12 @@ async function d(e) {
         o.h.dispatch({ type: "GAME_FETCH_FAILURE", gameIds: e });
     }
 }
-class _ {
-    _promises = new Set();
-    _pending = new Set();
-    _flushHandler = new a.J_(32, () => this._flush());
-    request(e) {
-        for (let t of e) l.A.hasNoData(t) || this._pending.add(t);
-        return new Promise((e) => {
-            this._promises.add({ resolve: e }), this._flushHandler.delay(!1);
-        });
-    }
-    async _flush() {
-        let e = [...this._pending];
-        this._pending.clear();
-        let t = [...this._promises];
-        this._promises.clear(),
-            0 === e.length ||
-                (o.h.dispatch({ type: "GAME_FETCH", gameIds: e }), await Promise.all(i().chunk(e, c).map(d))),
-            this.resolvePromises(t);
-    }
-    resolvePromises(e) {
-        e.forEach((e) => e.resolve());
-    }
-}
-let f = new _();
-async function p(e) {
-    0 !== e.length && (await f.request(e));
+let _ = new a.OC(
+    async (e) => {
+        o.h.dispatch({ type: "GAME_FETCH", gameIds: e }), await Promise.all(i().chunk(e, c).map(d));
+    },
+    (e) => !l.A.hasNoData(e),
+);
+async function f(e) {
+    0 !== e.length && (await _.queue(e));
 }

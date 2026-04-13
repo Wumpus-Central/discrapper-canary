@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { BK: () => s, Ep: () => r, IX: () => a, J_: () => i });
+n.d(t, { BK: () => a, Ep: () => r, IX: () => s, J_: () => i, OC: () => o });
 class r {
     _ref;
     start(e, t) {
@@ -38,7 +38,7 @@ class i {
         return this._timeout.isStarted();
     }
 }
-class a {
+class s {
     _ref;
     start(e, t) {
         this.stop(), (this._ref = window.setInterval(t, e));
@@ -50,8 +50,48 @@ class a {
         return null != this._ref;
     }
 }
-function s(e) {
+function a(e) {
     return new Promise((t) => {
         setTimeout(() => t(), e);
     });
+}
+class o {
+    invoke;
+    predicate;
+    delay;
+    _promises = new Set();
+    _pending = new Set();
+    _flushHandler;
+    constructor(e, t = () => !0, n = 32) {
+        (this.invoke = e),
+            (this.predicate = t),
+            (this.delay = n),
+            (this._flushHandler = new i(this.delay, () => this._flush()));
+    }
+    queue(e) {
+        for (let t of Array.isArray(e) ? e : [e]) this.predicate(t) && this._pending.add(t);
+        return 0 === this._pending.size
+            ? Promise.resolve()
+            : new Promise((e, t) => {
+                  this._promises.add({ resolve: e, reject: t }), this._flushHandler.delay(!1);
+              });
+    }
+    reset() {
+        let e = Error("BatchInvocationManager was reset");
+        this._promises.forEach((t) => t.reject(e)),
+            this._pending.clear(),
+            this._promises.clear(),
+            this._flushHandler.cancel();
+    }
+    async _flush() {
+        let e = [...this._pending];
+        this._pending.clear();
+        let t = [...this._promises];
+        if ((this._promises.clear(), 0 === e.length)) return void t.forEach((e) => e.resolve());
+        try {
+            await this.invoke(e), t.forEach((e) => e.resolve());
+        } catch (e) {
+            t.forEach((t) => t.reject(e));
+        }
+    }
 }

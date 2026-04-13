@@ -1,102 +1,84 @@
 "use strict";
-n.r(t), n.d(t, { FetchState: () => l, default: () => S }), n(321073);
+n.r(t), n.d(t, { FetchState: () => u, default: () => v });
 var r = n(311907),
     i = n(73153),
-    s = n(734057),
-    a = n(134861),
-    o = n(320501),
-    l = (function (e) {
+    s = n(403362),
+    a = n(734057),
+    o = n(134861),
+    l = n(320501),
+    u = (function (e) {
         return (e.NOT_FETCHED = "NOT_FETCHED"), (e.FETCHING = "FETCHING"), (e.FETCHED = "FETCHED"), e;
     })({});
-let u = new Map(),
-    c = [],
+let c = new Map(),
     d = [],
-    _ = "NOT_FETCHED",
-    f = new Map(),
-    p = 0;
-function h() {
-    (_ = "FETCHING"), f.clear();
+    _ = [],
+    f = "NOT_FETCHED",
+    p = new Map(),
+    h = 0;
+function m() {
+    _ = (d = [...c.values()]).filter((e) => {
+        let { application: t } = e;
+        return null == t.parent_id;
+    });
 }
-function m(e) {
-    f.set(e.applicationId, "FETCHING"), (p += 1);
-}
-function E(e) {
-    f.set(e.applicationId, "FETCHED"),
-        (p += 1),
-        e.tokens.forEach((e) => {
-            (c = c.filter((t) => t.id !== e.id)),
-                u.set(e.application.id, e),
-                c.push(e),
-                null == e.application.parent_id && d.push(e);
-        });
+function E(e, t) {
+    if (null == t) (f = e), p.clear(), (h += 1);
+    else {
+        for (let n of t) p.set(n, e);
+        h += 1;
+    }
 }
 function g(e) {
-    (_ = "FETCHED"),
-        f.clear(),
-        (u = new Map(e.tokens.map((e) => [e.application.id, e]))),
-        (d = (c = e.tokens).filter((e) => {
-            let { application: t } = e;
-            return null == t.parent_id;
-        }));
+    "full" === e.request.type ? E("FETCHING") : E("FETCHING", e.request.applicationIds);
 }
 function A(e) {
-    let { id: t, application: n, scopes: r } = e,
-        i = u.get(n.id);
-    null != i &&
-        ((c = c.filter((e) => {
-            let { application: t } = e;
-            return t.id !== i.application.id;
-        })),
-        (d = d.filter((e) => {
-            let { application: t } = e;
-            return t.id !== i.application.id;
-        })));
-    let s = { id: t, application: n, scopes: r };
-    u.set(s.application.id, s), (c = [...c, s]), null == s.application.parent_id && (d = [...d, s]);
+    "full" === e.request.type ? E("FETCHED") : E("FETCHED", e.request.applicationIds);
 }
 function I(e) {
-    let { id: t, applicationId: n } = e,
-        r = u.get(n);
-    if (null == r || r.id !== t) return !1;
-    u.delete(r.application.id),
-        (c = c.filter((e) => {
-            let { id: t } = e;
-            return t !== r.id;
-        })),
-        (d = d.filter((e) => {
-            let { id: t } = e;
-            return t !== r.id;
-        }));
+    if (e.isFullFetch) E("FETCHED"), (c = new Map([...e.tokens.entries()].filter(s.QE))), m();
+    else {
+        for (let [t, n] of (E("FETCHED", e.tokens.keys()), e.tokens)) null == n ? c.delete(t) : c.set(t, n);
+        m();
+    }
 }
-class T extends r.Ay.Store {
+function T(e) {
+    let { id: t, application: n, scopes: r } = e;
+    c.set(n.id, { id: t, application: n, scopes: r }), m();
+}
+function S(e) {
+    let { id: t, applicationId: n } = e,
+        r = c.get(n);
+    if (null == r || r.id !== t) return !1;
+    c.delete(r.application.id), m();
+}
+class y extends r.Ay.Store {
     static displayName = "AuthorizedAppsStore";
     initialize() {
-        this.waitFor(s.A, a.A, o.A);
+        this.waitFor(a.A, o.A, l.A);
     }
     getNewestTokenForApplication(e) {
-        return null == e ? null : (u.get(e) ?? null);
+        return null == e ? null : (c.get(e) ?? null);
     }
     getNewestTokens() {
-        return c;
-    }
-    getNewestTokensForNonChildrenApplications() {
         return d;
     }
-    getFetchState() {
+    getNewestTokensForNonChildrenApplications() {
         return _;
     }
+    getFetchState() {
+        return f;
+    }
     getFetchStateForApplication(e) {
-        return "FETCHED" === _ ? _ : (f.get(e) ?? _);
+        return "FETCHING" === f || "FETCHED" === f ? f : (p.get(e) ?? f);
     }
     getApplicationFetchStateVersion() {
-        return p;
+        return h;
     }
 }
-let S = new T(i.h, {
-    USER_AUTHORIZED_APPS_REQUEST: h,
-    USER_AUTHORIZED_APPS_REQUEST_BY_ID: m,
-    USER_AUTHORIZED_APPS_UPDATE: g,
-    USER_AUTHORIZED_APPS_UPDATE_BY_ID: E,
-    OAUTH2_TOKEN_CREATE: A,
-    OAUTH2_TOKEN_DELETE: I,
+let v = new y(i.h, {
+    USER_AUTHORIZED_APPS_REQUEST: g,
+    USER_AUTHORIZED_APPS_REQUEST_FAILED: A,
+    USER_AUTHORIZED_APPS_UPDATE: I,
+    OAUTH2_TOKEN_CREATE: T,
+    OAUTH2_TOKEN_DELETE: S,
 });
