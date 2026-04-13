@@ -7,7 +7,11 @@ var r = n(439372),
 let o = !1,
     l = null;
 async function u() {
-    if ((0, s.isWindows)() && window.DiscordNative?.settings?.set != null) {
+    if (
+        (0, s.isWindows)() &&
+        window.DiscordNative?.settings?.set != null &&
+        (window.DiscordNative.nativeModules.getUpdaterVersion?.() ?? 0) >= 4
+    ) {
         let { enabled: e } = (0, a.V)({ location: "updateSwitch" });
         await window.DiscordNative.settings.set("USE_RUST_BSPATCH", e), (l = e);
     }
