@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { OW: () => u, dm: () => c, eM: () => o, ly: () => d });
+n.d(t, { OW: () => c, YK: () => l, dm: () => d, eM: () => o, ly: () => _ });
 var r = n(565150),
     i = n(762555),
-    a = n(381941);
-let s = [
+    s = n(381941);
+let a = [
         { reName: /\.jpe?g$/i, name: (e) => `image${e}.jpg`, type: "image/jpeg" },
         { reName: /\.jfif$/i, name: (e) => `image${e}.jpg`, type: "image/jpeg" },
         { reName: /\.png$/i, name: (e) => `image${e}.png`, type: "image/png" },
@@ -19,40 +19,41 @@ let s = [
         { reName: /\.mp4$/i, name: (e) => `video${e}.mp4`, type: "video/mp4" },
         { reName: /\.webm$/i, name: (e) => `video${e}.webm`, type: "image/webm" },
     ],
-    o = 524288e3;
-function l(e) {
-    let { spoiler: t } = e;
-    return t ? a._W : "";
-}
+    o = 524288e3,
+    l = 500;
 function u(e) {
+    let { spoiler: t } = e;
+    return t ? s._W : "";
+}
+function c(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0,
-        a = { id: t?.toString() ?? e.id };
-    null != e.description && (a.description = e.description);
-    let s = l({ spoiler: e.spoiler });
+        s = { id: t?.toString() ?? e.id };
+    null != e.description && (s.description = e.description);
+    let a = u({ spoiler: e.spoiler });
     return (
-        (a.filename = `${s}${n ?? e.filename}`),
-        (a.uploaded_filename = e.uploadedFilename),
-        "durationSecs" in e && null != e.durationSecs && (a.duration_secs = e.durationSecs),
-        "waveform" in e && null != e.waveform && (a.waveform = e.waveform),
-        "isThumbnail" in e && !0 === e.isThumbnail && (a.is_thumbnail = e.isThumbnail),
+        (s.filename = `${a}${n ?? e.filename}`),
+        (s.uploaded_filename = e.uploadedFilename),
+        "durationSecs" in e && null != e.durationSecs && (s.duration_secs = e.durationSecs),
+        "waveform" in e && null != e.waveform && (s.waveform = e.waveform),
+        "isThumbnail" in e && !0 === e.isThumbnail && (s.is_thumbnail = e.isThumbnail),
         "clip" in e &&
             null != e.clip &&
-            ((a.is_clip = !0),
-            (a.title = e.clip.name),
-            (a.application_id = e.clip.applicationId),
-            (a.clip_created_at = (0, i.U)(e.clip.id)),
-            (a.clip_participant_ids = (0, i.g)(e.clip.users))),
+            ((s.is_clip = !0),
+            (s.title = e.clip.name),
+            (s.application_id = e.clip.applicationId),
+            (s.clip_created_at = (0, i.U)(e.clip.id)),
+            (s.clip_participant_ids = (0, i.g)(e.clip.users))),
         "item" in e &&
             null != e.item &&
             e.item.platform === r.xz.WEB &&
             "mimeType" in e &&
             null != e.mimeType &&
-            (a.original_content_type = e.mimeType),
-        a
+            (s.original_content_type = e.mimeType),
+        s
     );
 }
-function c(e) {
+function d(e) {
     let t = new XMLHttpRequest();
     return new Promise((n, r) => {
         t.open("GET", e, !0),
@@ -64,14 +65,14 @@ function c(e) {
             t.send();
     });
 }
-function d(e) {
+function _(e) {
     let t,
-        { uri: n, i: r, overrideFilename: i, overrideType: a } = e,
+        { uri: n, i: r, overrideFilename: i, overrideType: s } = e,
         o = n.split("/"),
         l = o[o.length - 1];
     l = l.split("?")?.[0]?.toLowerCase() ?? "";
-    let u = s.find((e) => e.reName.test(l));
-    if ((null == u && null != i && (u = s.find((e) => e.reName.test(i))), null != u && null != i)) {
+    let u = a.find((e) => e.reName.test(l));
+    if ((null == u && null != i && (u = a.find((e) => e.reName.test(i))), null != u && null != i)) {
         let e = u.name(r).split(".").pop(),
             n = i.lastIndexOf(".");
         t = -1 !== n ? `${i.substr(0, n)}.${e}` : `${i}.${e}`;
@@ -79,8 +80,8 @@ function d(e) {
     return {
         uri: n,
         filename: t,
-        type: a ?? u?.type ?? "unknown",
-        isVideo: -1 !== (a ?? u?.name(r) ?? "").indexOf("video"),
-        isImage: -1 !== (a ?? u?.name(r) ?? "").indexOf("image"),
+        type: s ?? u?.type ?? "unknown",
+        isVideo: -1 !== (s ?? u?.name(r) ?? "").indexOf("video"),
+        isImage: -1 !== (s ?? u?.name(r) ?? "").indexOf("image"),
     };
 }

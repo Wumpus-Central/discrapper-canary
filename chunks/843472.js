@@ -349,6 +349,18 @@ let eH = {
             messageName: "BOT_DM_SEND_MESSAGE_INVALID_OFFLINE_PROVISIONAL_ACCOUNT",
             messageGetter: () => eb.intl.string(eb.t.Oc1Zjw),
         },
+        [eN.t02.TOTAL_ATTACHMENT_SIZE_TOO_LARGE]: {
+            messageName: "TOTAL_ATTACHMENT_SIZE_TOO_LARGE",
+            messageGetter: () => eb.intl.formatToPlainString(eb.t.DYFPg2, { maxSizeMb: ey.YK }),
+        },
+        [eN.t02.CLOUD_UPLOAD_NOT_FOUND]: {
+            messageName: "CLOUD_UPLOAD_NOT_FOUND",
+            messageGetter: () => eb.intl.string(eb.t.bQldfH),
+        },
+        [eN.t02.INVALID_PERMISSIONS]: {
+            messageName: "INVALID_PERMISSIONS",
+            messageGetter: () => eb.intl.string(eb.t.zl4Weq),
+        },
     },
     ej = {
         receiveMessage(e, t) {
