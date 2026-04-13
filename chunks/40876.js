@@ -21,6 +21,11 @@ let i = {
         inlineRequire: () => n(697266).A,
         hasStoreChangeListeners: !0,
     },
+    RSPatchExperimentManager: {
+        actions: ["POST_CONNECTION_OPEN", "LOGOUT"],
+        inlineRequire: () => n(969424).A,
+        hasStoreChangeListeners: !0,
+    },
     AgeVerificationManager: {
         actions: ["POST_CONNECTION_OPEN", "CURRENT_USER_UPDATE", "MESSAGE_CREATE"],
         inlineRequire: () => n(722855).A,
