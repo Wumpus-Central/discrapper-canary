@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => q, i: () => z }), n(321073);
+n.d(t, { Ay: () => q, d1: () => W, iU: () => z }), n(321073);
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -32,13 +32,13 @@ var r = n(627968),
     w = n(544028),
     M = n(780964),
     x = n(904504),
-    P = n(801264),
-    k = n(840065),
+    P = n(858897),
+    k = n(208039),
     U = n(340062),
     G = n(985018),
-    F = n(898969),
-    V = n(206314),
-    B = n(473169);
+    F = n(651214),
+    V = n(782691),
+    B = n(885106);
 let H = _.Ay.connectStores([w.A], () => ({ theme: w.A.theme }))(p.ppr);
 function j(e) {
     let { className: t, text: n } = e;
@@ -71,12 +71,12 @@ let Y = (e) => {
             (0, A.A)(e) &&
                 ((n = G.intl.formatToPlainString(G.t["paC+US"], { applicationName: e.name })),
                 (i = G.intl.formatToPlainString(G.t.inM1Yt, { applicationName: e.name })),
-                (s = (0, r.jsx)(P.A, { look: P.k.WARNING, children: G.intl.string(G.t.LY35Zy) }))),
+                (s = (0, r.jsx)(k.A, { look: k.k.WARNING, children: G.intl.string(G.t.LY35Zy) }))),
             (0, x.A)(e.id) &&
                 (s = (0, r.jsxs)(r.Fragment, {
                     children: [
                         s,
-                        (0, r.jsx)(P.A, { children: G.intl.format(G.t.KRnERi, { applicationName: e.name }) }),
+                        (0, r.jsx)(k.A, { children: G.intl.format(G.t.KRnERi, { applicationName: e.name }) }),
                     ],
                 })),
             (0, p.qfG)((e) =>
@@ -333,7 +333,7 @@ let Y = (e) => {
             },
             L = (0, x.I)(n.id),
             w = (0, I.A)(n),
-            P = () =>
+            k = () =>
                 (0, r.jsxs)("div", {
                     className: F.qr,
                     children: [
@@ -347,7 +347,7 @@ let Y = (e) => {
                                     className: F.UW,
                                     text: G.intl.format(G.t.jUhnwb, {
                                         applicationName: n.name,
-                                        onConnectionPress: () => (0, k.openUserSettings)(M.X.CONNECTIONS_PANEL),
+                                        onConnectionPress: () => (0, P.openUserSettings)(M.X.CONNECTIONS_PANEL),
                                     }),
                                 })
                               : null,
@@ -366,7 +366,7 @@ let Y = (e) => {
             className: F.Zy,
             children: (0, r.jsx)(p.Fmo, {
                 component: b(),
-                children: (0, r.jsxs)("div", { className: F.TD, children: [R(), N(), P()] }),
+                children: (0, r.jsxs)("div", { className: F.TD, children: [R(), N(), k()] }),
             }),
         });
     },

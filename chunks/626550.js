@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"YnnXb6":["YnnXb6"],"vycLU2":["vycLU2"],"ZeOhh9":["ZeOhh9"],"/Xhh40":["/Xhh40"],"spsZYI":["spsZYI"],"MVB/Ab":["MVB/Ab"],"sbMMtk":["sbMMtk"],"1S6oAo":["1S6oAo"]}',
+p.exports = JSON.parse(
+    '{"YnnXb6":[[8,"$b",[[1,"connectionName"]]],"关联正在迁移至",[8,"$b",[[1,"applicationName"]]],"。请重新关联您的账号以保留所有个人资料关联。"],"vycLU2":["关联变更"],"ZeOhh9":["更新关联"],"/Xhh40":[[8,"$b",["《英雄联盟》"]],"及** Riot **的关联身份组功能将于 2026 年 6 月 12 日起停用。请前往设置更新您的关联身份组。"],"spsZYI":["更新关联身份组"],"MVB/Ab":["稍后提醒我"],"sbMMtk":[[8,"$b",["《英雄联盟》"]],"及** Riot ",[8,"$b",["的关联身份组功能将于 2026 年 6 月 12 日起停用。请前往设置中迁移您已关联的身份组。"]],"此功能今后将不再维护。**"],"1S6oAo":["Riot ID"]}',
 );

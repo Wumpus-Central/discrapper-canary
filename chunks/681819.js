@@ -1,29 +1,35 @@
 "use strict";
-n.d(t, { ML: () => A, dq: () => E, gn: () => g });
+n.d(t, { ML: () => I, dq: () => g, gn: () => A });
 var r = n(64700),
     i = n(735438),
     s = n.n(i),
     a = n(311907),
     o = n(573648),
-    l = n(165120),
-    u = n(962173),
-    c = n(287809),
-    d = n(927813),
-    _ = n(652215),
-    f = n(650583);
-let p = { [_.fg2.INSTAGRAM]: ["1036753656588017764"] },
-    h = new Map([[_.fg2.INSTAGRAM, new Date(2023, 1, 18).getTime()]]),
-    m = 30 * d.A.Millis.DAY;
-function E(e) {
+    l = n(342169),
+    u = n(165120),
+    c = n(962173),
+    d = n(287809),
+    _ = n(927813),
+    f = n(652215),
+    p = n(650583);
+let h = { [f.fg2.INSTAGRAM]: ["1036753656588017764"] },
+    m = new Map([[f.fg2.INSTAGRAM, new Date(2023, 1, 18).getTime()]]),
+    E = 30 * _.A.Millis.DAY;
+function g(e) {
     let { forUserProfile: t } = e,
-        n = (0, a.bG)([c.default], () => c.default.getCurrentUser()),
-        r = l.S.useConfig({ location: "f2f7ef_1" }).allowPlayStationStaging;
+        n = (0, a.bG)([d.default], () => d.default.getCurrentUser()),
+        r = u.S.useConfig({ location: "f2f7ef_1" }).allowPlayStationStaging,
+        i = l.A.useConfig({ location: "usePlatformAllowed" });
     return (e) =>
-        e.type === _.fg2.PLAYSTATION_STAGING ? r : !!(void 0 !== n && p[e.type]?.includes(n.id)) || !!t || e.enabled;
+        e.type === f.fg2.PLAYSTATION_STAGING
+            ? r
+            : !!(void 0 !== n && h[e.type]?.includes(n.id)) ||
+              !!t ||
+              ((null == e.replacedBy || !i.enabled) && e.enabled);
 }
-function g() {
-    let e = (0, a.bG)([u.A], () => u.A.getAccounts()),
-        t = E({ forUserProfile: !1 }),
+function A() {
+    let e = (0, a.bG)([c.A], () => c.A.getAccounts()),
+        t = g({ forUserProfile: !1 }),
         n = r.useMemo(() => {
             let t = new Set();
             return e.forEach((e) => t.add(e.type)), t;
@@ -31,24 +37,24 @@ function g() {
     return r.useMemo(
         () =>
             s().sortBy(o.A.filter(t), [
-                (e) => !(h.has(e.type) && Date.now() < (h.get(e.type) ?? 0) + m),
+                (e) => !(m.has(e.type) && Date.now() < (m.get(e.type) ?? 0) + E),
                 (e) => n.has(e.type),
                 (e) => e.hasMetadata,
-                (e) => !_.ewM.has(e.type),
+                (e) => !f.ewM.has(e.type),
                 (e) => e.name,
             ]),
         [n, t],
     );
 }
-function A(e) {
+function I(e) {
     let [t, n] = r.useState(!1);
     function i(e) {
         let { key: t } = e;
-        t === f.dh.SHIFT && n(!0);
+        t === p.dh.SHIFT && n(!0);
     }
     function s(e) {
         let { key: t } = e;
-        t === f.dh.SHIFT && n(!1);
+        t === p.dh.SHIFT && n(!1);
     }
     return (r.useEffect(
         () => (
@@ -60,8 +66,8 @@ function A(e) {
         ),
         [],
     ),
-    t && e === _.fg2.TWITTER)
-        ? _.fg2.TWITTER_LEGACY
+    t && e === f.fg2.TWITTER)
+        ? f.fg2.TWITTER_LEGACY
         : e;
 }
-_.fg2.PLAYSTATION, _.fg2.XBOX, _.fg2.SPOTIFY, _.fg2.STEAM, _.fg2.TWITCH;
+f.fg2.PLAYSTATION, f.fg2.XBOX, f.fg2.SPOTIFY, f.fg2.STEAM, f.fg2.TWITCH;

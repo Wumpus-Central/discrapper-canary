@@ -20,10 +20,10 @@ var i = n(627968),
     j = n(927573),
     N = n(652215),
     E = n(783419),
-    b = n(985018),
-    T = n(750730),
-    C = n(261223);
-function I(e, t) {
+    T = n(985018),
+    C = n(524487),
+    I = n(407759);
+function b(e, t) {
     return t !== m.jO.AND
         ? Object.values(o().groupBy(e, (e) => `${e.connectionType}:${e.applicationId}`))
         : 0 === e.length
@@ -33,21 +33,21 @@ function I(e, t) {
 function v(e) {
     let { handleAddVerificationClicked: t, locked: n } = e;
     return (0, i.jsxs)("div", {
-        className: T.Gq,
+        className: C.Gq,
         children: [
-            (0, i.jsx)(c.Heading, { className: T.gg, variant: "eyebrow", children: b.intl.string(b.t.nMir27) }),
+            (0, i.jsx)(c.Heading, { className: C.gg, variant: "eyebrow", children: T.intl.string(T.t.nMir27) }),
             (0, i.jsx)(c.Text, {
                 variant: "text-sm/normal",
                 color: "text-default",
-                className: T.$L,
-                children: b.intl.format(b.t.q5f7tK, {
+                className: C.$L,
+                children: T.intl.format(T.t.q5f7tK, {
                     helpdeskArticleUrl: g.A.getArticleURL(N.MVz.CONNECTION_DETAILS_ADMIN),
                 }),
             }),
             (0, i.jsx)(c.Button, {
                 disabled: n,
                 onClick: t,
-                text: b.intl.string(b.t["OSvW5+"]),
+                text: T.intl.string(T.t["OSvW5+"]),
                 fullWidth: !0,
                 variant: "primary",
             }),
@@ -73,7 +73,7 @@ function S(e) {
             operator: void 0,
             value: void 0,
         }),
-            (0, h.pn)(n.id, I(i, D));
+            (0, h.pn)(n.id, b(i, D));
     }
     function P() {
         u.h.dispatch({
@@ -82,6 +82,7 @@ function S(e) {
             excludedPlatformTypes: k,
             integrations: o,
             onCompleteApplication: (e) => U(E.zR, e),
+            includeApplicationConnections: !1,
         });
     }
     let w = null;
@@ -94,7 +95,7 @@ function S(e) {
             (t = (0, i.jsx)(c.Button, {
                 disabled: l,
                 onClick: P,
-                text: b.intl.string(b.t["OSvW5+"]),
+                text: T.intl.string(T.t["OSvW5+"]),
                 icon: c.U1e,
                 fullWidth: !0,
                 variant: "secondary",
@@ -105,40 +106,40 @@ function S(e) {
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsxs)("div", {
-                                className: T.$$,
+                                className: C.$$,
                                 children: [
                                     (0, i.jsx)("div", {
-                                        className: T.Ir,
+                                        className: C.Ir,
                                         children: (0, i.jsx)(c.Heading, {
                                             variant: "eyebrow",
-                                            children: b.intl.string(b.t.nMir27),
+                                            children: T.intl.string(T.t.nMir27),
                                         }),
                                     }),
                                     (0, i.jsx)(c.QWc, {
                                         variant: "critical",
                                         onClick: B,
                                         disabled: l,
-                                        text: b.intl.string(b.t.ntW1cc),
+                                        text: T.intl.string(T.t.ntW1cc),
                                         textVariant: "text-sm/semibold",
                                     }),
                                 ],
                             }),
                             (0, i.jsx)(c.Text, {
                                 variant: "text-sm/normal",
-                                children: b.intl.format(b.t.q5f7tK, {
+                                children: T.intl.format(T.t.q5f7tK, {
                                     helpdeskArticleUrl: g.A.getArticleURL(N.MVz.CONNECTION_DETAILS_ADMIN),
                                 }),
                             }),
                         ],
                     })),
                     (n.id,
-                    (F = (e, t) => (0, h.pn)(n.id, I(e, t))),
-                    (e = I(M, m.jO.OR)),
+                    (F = (e, t) => (0, h.pn)(n.id, b(e, t))),
+                    (e = b(M, m.jO.OR)),
                     (0, i.jsx)(c.z6M, {
-                        label: b.intl.string(b.t.Xs7PHX),
+                        label: T.intl.string(T.t.Xs7PHX),
                         options: [
-                            { name: b.intl.string(b.t.W3iY58), value: m.jO.OR },
-                            { name: b.intl.string(b.t.gHXS9A), value: m.jO.AND },
+                            { name: T.intl.string(T.t.W3iY58), value: m.jO.OR },
+                            { name: T.intl.string(T.t.gHXS9A), value: m.jO.AND },
                         ],
                         onChange: (e) => F(M, e),
                         value: D,
@@ -154,7 +155,7 @@ function S(e) {
                                     ? (s = s.filter((e) =>
                                           null == t.applicationId
                                               ? e.connectionType !== t.connectionType
-                                              : e.connectionType !== t.connectionType &&
+                                              : e.connectionType !== t.connectionType ||
                                                 e.applicationId !== t.applicationId,
                                       ))
                                     : s.splice(i, 1);
@@ -187,7 +188,7 @@ function S(e) {
                             t.push({ index: i - 1, configuration: n });
                         }
                         return (0, i.jsx)("div", {
-                            className: T.rr,
+                            className: C.rr,
                             children: Array.from(a.values()).map((e) =>
                                 (0, i.jsx)(
                                     p.A,
@@ -196,20 +197,20 @@ function S(e) {
                                 ),
                             ),
                         });
-                    })(M, (e) => (0, h.pn)(n.id, I(e, D)), l, n.id, o),
+                    })(M, (e) => (0, h.pn)(n.id, b(e, D)), l, n.id, o),
                     t,
                 ],
             }));
     }
     return (0, i.jsx)(c.GtU, {
-        className: T.XG,
+        className: C.XG,
         style: { scrollPaddingTop: S },
         onScroll: O,
         children: (0, i.jsxs)("div", {
-            className: C.Q,
+            className: I.Q,
             children: [
                 (0, i.jsx)("div", {
-                    className: r()(C.wx, C.ln, { [C.l6]: !R }),
+                    className: r()(I.wx, I.ln, { [I.l6]: !R }),
                     ref: y,
                     children: (0, i.jsx)(f.A, {
                         guild: t,
@@ -220,19 +221,19 @@ function S(e) {
                 }),
                 (G ?? 0) > 0
                     ? (0, i.jsxs)("div", {
-                          className: T.UW,
+                          className: C.UW,
                           children: [
                               (0, i.jsx)(c.EpV, {
                                   size: "custom",
                                   width: 20,
                                   height: 20,
                                   color: "currentColor",
-                                  className: T.QW,
+                                  className: C.QW,
                               }),
                               (0, i.jsx)(c.Text, {
                                   variant: "text-sm/normal",
                                   color: "text-default",
-                                  children: b.intl.string(b.t["2aFeef"]),
+                                  children: T.intl.string(T.t["2aFeef"]),
                               }),
                           ],
                       })

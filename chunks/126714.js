@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"YnnXb6":["YnnXb6"],"vycLU2":["vycLU2"],"ZeOhh9":["ZeOhh9"],"/Xhh40":["/Xhh40"],"spsZYI":["spsZYI"],"MVB/Ab":["MVB/Ab"],"sbMMtk":["sbMMtk"],"1S6oAo":["1S6oAo"]}',
+n.exports = JSON.parse(
+    '{"YnnXb6":["Anslutningen ",[8,"$b",[[1,"connectionName"]]]," migrerar till ",[8,"$b",[[1,"applicationName"]]],". \xc5teranslut ditt konto f\xf6r att beh\xe5lla alla dina profilanslutningar."],"vycLU2":["Anslutnings\xe4ndringar"],"ZeOhh9":["Uppdatera anslutning"],"/Xhh40":["L\xe4nkade roller f\xf6r ",[8,"$b",["League of Legends"]]," och ",[8,"$b",["Riot"]]," fasas ut fr\xe5n och med den 12 juni 2026. Uppdatera dina l\xe4nkade roller i inst\xe4llningarna."],"spsZYI":["Uppdatera l\xe4nkade roller"],"MVB/Ab":["P\xe5minn mig senare"],"sbMMtk":["L\xe4nkade roller f\xf6r ",[8,"$b",["League of Legends"]]," och ",[8,"$b",["Riot"]]," fasas ut fr\xe5n och med den 12 juni 2026. Migrera dina l\xe4nkade roller i inst\xe4llningarna. ",[8,"$b",["Detta kommer inte l\xe4ngre att underh\xe5llas fram\xf6ver."]]],"1S6oAo":["Riot-ID"]}',
 );

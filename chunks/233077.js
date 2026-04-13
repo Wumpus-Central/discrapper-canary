@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"YnnXb6":["YnnXb6"],"vycLU2":["vycLU2"],"ZeOhh9":["ZeOhh9"],"/Xhh40":["/Xhh40"],"spsZYI":["spsZYI"],"MVB/Ab":["MVB/Ab"],"sbMMtk":["sbMMtk"],"1S6oAo":["1S6oAo"]}',
+a.exports = JSON.parse(
+    '{"YnnXb6":["A ",[8,"$b",[[1,"connectionName"]]]," Conex\xe3o est\xe1 migrando para ",[8,"$b",[[1,"applicationName"]]],". Reconecte sua conta para manter todas as conex\xf5es do seu perfil."],"vycLU2":["Mudan\xe7as nas conex\xf5es"],"ZeOhh9":["Atualizar conex\xe3o"],"/Xhh40":["Cargos vinculados de ",[8,"$b",["League of Legends"]]," e ",[8,"$b",["Riot"]]," ser\xe3o descontinuados a partir de 12 de junho de 2026. Atualize seus cargos vinculados nas configura\xe7\xf5es."],"spsZYI":["Atualizar cargos vinculados"],"MVB/Ab":["Lembre-me mais tarde"],"sbMMtk":["Cargos vinculados para ",[8,"$b",["League of Legends"]]," e ",[8,"$b",["Riot"]]," ser\xe3o descontinuados a partir de 12 de junho de 2026. Por favor, migre seus cargos vinculados em configura\xe7\xf5es. ",[8,"$b",["N\xe3o haver\xe1 mais manuten\xe7\xe3o ap\xf3s essa data."]]],"1S6oAo":["ID Riot"]}',
 );

@@ -22,7 +22,7 @@ function m(e) {
         s = A(i, t),
         a = s?.preferredFlow,
         o = null != a,
-        { token: l, fetched: d } = (0, c.U)(i?.parentId ?? i?.id),
+        { token: l, fetched: d } = (0, c.U)(i?.parentId ?? i?.id, { disableFetch: t.disableFetch || !o }),
         _ = d && null != l;
     return {
         fetched: d,

@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"YnnXb6":["YnnXb6"],"vycLU2":["vycLU2"],"ZeOhh9":["ZeOhh9"],"/Xhh40":["/Xhh40"],"spsZYI":["spsZYI"],"MVB/Ab":["MVB/Ab"],"sbMMtk":["sbMMtk"],"1S6oAo":["1S6oAo"]}',
+e.exports = JSON.parse(
+    '{"YnnXb6":["Die ",[8,"$b",[[1,"connectionName"]]],"-Verkn\xfcpfung wird zu ",[8,"$b",[[1,"applicationName"]]]," migriert. Verkn\xfcpfe deinen Account erneut, um alle deine Profilverkn\xfcpfungen zu behalten."],"vycLU2":["Verkn\xfcpfungs\xe4nderungen"],"ZeOhh9":["Verkn\xfcpfung aktualisieren"],"/Xhh40":["Verkn\xfcpfte Rollen f\xfcr ",[8,"$b",["League of Legends"]]," und ",[8,"$b",["Riot"]]," werden am 12.\xa0Juni\xa02026 eingestellt. Bitte aktualisiere deine verkn\xfcpften Rollen in den Einstellungen."],"spsZYI":["Verkn\xfcpfte Rollen aktualisieren"],"MVB/Ab":["Sp\xe4ter erinnern"],"sbMMtk":["Verkn\xfcpfte Rollen f\xfcr ",[8,"$b",["League of Legends"]]," und ",[8,"$b",["Riot"]]," werden am 12.\xa0Juni\xa02026 eingestellt. Bitte aktualisiere deine verkn\xfcpften Rollen in den Einstellungen. ",[8,"$b",["Diese verkn\xfcpften Rollen werden in Zukunft nicht mehr unterst\xfctzt."]]],"1S6oAo":["Riot-ID"]}',
 );

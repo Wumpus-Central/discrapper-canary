@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"YnnXb6":["YnnXb6"],"vycLU2":["vycLU2"],"ZeOhh9":["ZeOhh9"],"/Xhh40":["/Xhh40"],"spsZYI":["spsZYI"],"MVB/Ab":["MVB/Ab"],"sbMMtk":["sbMMtk"],"1S6oAo":["1S6oAo"]}',
+a.exports = JSON.parse(
+    '{"YnnXb6":[[8,"$b",[[1,"connectionName"]]]," Bağlantısı, ",[8,"$b",[[1,"applicationName"]]]," uygulamasına ge\xe7iyor. T\xfcm profil bağlantılarını korumak i\xe7in hesabını yeniden bağla."],"vycLU2":["Bağlantı değişiklikleri"],"ZeOhh9":["Bağlantıyı G\xfcncelle"],"/Xhh40":[[8,"$b",["League of Legends"]]," ve ",[8,"$b",["Riot"]]," i\xe7in Bağlı Roller 12 Haziran 2026\'dan itibaren kullanımdan kaldırılacak. L\xfctfen bağlı rollerini ayarlardan g\xfcncelle."],"spsZYI":["Bağlı Rolleri G\xfcncelle"],"MVB/Ab":["Daha sonra hatırlat"],"sbMMtk":[[8,"$b",["League of Legends"]]," ve ",[8,"$b",["Riot"]]," i\xe7in bağlı Roller 12 Haziran 2026 tarihinden itibaren kullanımdan kaldırılacak. L\xfctfen bağlı rollerini ayarlardan taşı. ",[8,"$b",["Bu artık s\xfcrd\xfcr\xfclmeyecek."]]],"1S6oAo":["Riot ID"]}',
 );

@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"YnnXb6":["YnnXb6"],"vycLU2":["vycLU2"],"ZeOhh9":["ZeOhh9"],"/Xhh40":["/Xhh40"],"spsZYI":["spsZYI"],"MVB/Ab":["MVB/Ab"],"sbMMtk":["sbMMtk"],"1S6oAo":["1S6oAo"]}',
+e.exports = JSON.parse(
+    '{"YnnXb6":[[8,"$b",[[1,"connectionName"]]],"-forbindelsen migrerer til ",[8,"$b",[[1,"applicationName"]]],". Forbind din konto igen for at beholde alle dine profilforbindelser."],"vycLU2":["Forbindelses\xe6ndringer"],"ZeOhh9":["Opdat\xe9r forbindelse"],"/Xhh40":["Tilknyttede roller for ",[8,"$b",["League of Legends"]]," og ",[8,"$b",["Riot"]]," udfases fra den 12. juni 2026. Opdater dine tilknyttede roller i indstillingerne."],"spsZYI":["Opdater tilknyttede roller"],"MVB/Ab":["Mind mig om dette senere"],"sbMMtk":["Tilknyttede roller for ",[8,"$b",["League of Legends"]]," og ",[8,"$b",["Riot"]]," udfases fra den 12. juni 2026. Ryk dine tilknyttede roller i indstillinger. ",[8,"$b",["Denne funktion vil ikke l\xe6ngere blive vedligeholdt."]]],"1S6oAo":["Riot-ID"]}',
 );

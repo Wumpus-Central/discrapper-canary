@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"YnnXb6":["YnnXb6"],"vycLU2":["vycLU2"],"ZeOhh9":["ZeOhh9"],"/Xhh40":["/Xhh40"],"spsZYI":["spsZYI"],"MVB/Ab":["MVB/Ab"],"sbMMtk":["sbMMtk"],"1S6oAo":["1S6oAo"]}',
+i.exports = JSON.parse(
+    '{"YnnXb6":["Il collegamento ",[8,"$b",[[1,"connectionName"]]]," sta migrando a ",[8,"$b",[[1,"applicationName"]]],". Ricollega il tuo account per mantenere tutti i tuoi collegamenti del profilo."],"vycLU2":["Modifiche ai collegamenti"],"ZeOhh9":["Aggiorna collegamento"],"/Xhh40":["I ruoli collegati per ",[8,"$b",["League of Legends"]]," e ",[8,"$b",["Riot"]]," saranno disattivati a partire dal 12 giugno 2026. Aggiorna i tuoi ruoli collegati nelle impostazioni."],"spsZYI":["Aggiorna i ruoli collegati"],"MVB/Ab":["Ricordamelo pi\xf9 tardi"],"sbMMtk":["I ruoli collegati per ",[8,"$b",["League of Legends"]]," e ",[8,"$b",["Riot"]]," saranno disattivati a partire dal 12 giugno 2026. Effettua la migrazione dei ruoli collegati nelle impostazioni. ",[8,"$b",["Questa funzionalit\xe0 non sar\xe0 pi\xf9 supportata in futuro."]]],"1S6oAo":["ID Riot"]}',
 );

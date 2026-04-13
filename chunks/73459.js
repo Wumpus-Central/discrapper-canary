@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"YnnXb6":["YnnXb6"],"vycLU2":["vycLU2"],"ZeOhh9":["ZeOhh9"],"/Xhh40":["/Xhh40"],"spsZYI":["spsZYI"],"MVB/Ab":["MVB/Ab"],"sbMMtk":["sbMMtk"],"1S6oAo":["1S6oAo"]}',
+e.exports = JSON.parse(
+    '{"YnnXb6":["La conexi\xf3n ",[8,"$b",[[1,"connectionName"]]]," est\xe1 migrando a ",[8,"$b",[[1,"applicationName"]]],". Vuelve a conectar tu cuenta para mantener todas tus conexiones de perfil."],"vycLU2":["Cambios de conexi\xf3n"],"ZeOhh9":["Actualizar conexi\xf3n"],"/Xhh40":["Los roles vinculados de ",[8,"$b",["League of Legends"]]," y ",[8,"$b",["Riot"]]," dejar\xe1n de estar disponibles a partir del 12 de junio de 2026. Actualiza tus roles vinculados en los ajustes."],"spsZYI":["Actualizar los roles vinculados"],"MVB/Ab":["Recu\xe9rdamelo m\xe1s tarde"],"sbMMtk":["Los roles vinculados a ",[8,"$b",["League of Legends"]]," y ",[8,"$b",["Riot"]]," se desactivar\xe1n a partir del 12/06/2026. Migra tus roles vinculados en los ajustes. ",[8,"$b",["Esto ya no se mantendr\xe1 en el futuro."]]],"1S6oAo":["ID de Riot"]}',
 );

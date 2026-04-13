@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"YnnXb6":["YnnXb6"],"vycLU2":["vycLU2"],"ZeOhh9":["ZeOhh9"],"/Xhh40":["/Xhh40"],"spsZYI":["spsZYI"],"MVB/Ab":["MVB/Ab"],"sbMMtk":["sbMMtk"],"1S6oAo":["1S6oAo"]}',
+e.exports = JSON.parse(
+    '{"YnnXb6":["De ",[8,"$b",[[1,"connectionName"]]],"-verbinding migreert naar ",[8,"$b",[[1,"applicationName"]]],". Koppel je account opnieuw om al je profielverbindingen te behouden."],"vycLU2":["Verbindingswijzigingen"],"ZeOhh9":["Verbinding updaten"],"/Xhh40":["Vanaf 12 juni 2026 worden gekoppelde rollen voor ",[8,"$b",["League of Legends"]]," en ",[8,"$b",["Riot"]]," geleidelijk stopgezet. Update je gekoppelde rollen in de instellingen."],"spsZYI":["Gekoppelde rollen updaten"],"MVB/Ab":["Herinner me er later aan"],"sbMMtk":["Vanaf 12 juni 2026 worden gekoppelde rollen voor ",[8,"$b",["League of Legends"]]," en ",[8,"$b",["Riot"]]," geleidelijk stopgezet. Update je gekoppelde rollen in de instellingen. ",[8,"$b",["Deze functie wordt vanaf nu niet meer ondersteund."]]],"1S6oAo":["Riot-ID"]}',
 );

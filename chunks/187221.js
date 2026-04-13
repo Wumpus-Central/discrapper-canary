@@ -1,3 +1,3 @@
-h.exports = JSON.parse(
-    '{"YnnXb6":["YnnXb6"],"vycLU2":["vycLU2"],"ZeOhh9":["ZeOhh9"],"/Xhh40":["/Xhh40"],"MVB/Ab":["MVB/Ab"],"1S6oAo":["1S6oAo"]}',
+t.exports = JSON.parse(
+    '{"YnnXb6":["Yhteys ",[8,"$b",[[1,"connectionName"]]]," siirret\xe4\xe4n sovellukseen ",[8,"$b",[[1,"applicationName"]]],". Yhdist\xe4 tilisi uudelleen, jotta kaikki profiiliyhteytesi s\xe4ilyv\xe4t."],"vycLU2":["Yhteysmuutokset"],"ZeOhh9":["P\xe4ivit\xe4 yhteys"],"/Xhh40":["Yhdistetyt ",[8,"$b",["League of Legends"]],"- ja ",[8,"$b",["Riot"]],"-roolit poistuvat k\xe4yt\xf6st\xe4, mutta olemassa olevat m\xe4\xe4rityksesi pysyv\xe4t toiminnassa. P\xe4ivit\xe4 roolit ",[8,"settingsLink",["asetuksista"]],"."],"MVB/Ab":["Muistuta my\xf6hemmin"],"1S6oAo":["Riot-tunnus"]}',
 );

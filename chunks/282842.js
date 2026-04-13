@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"YnnXb6":["YnnXb6"],"vycLU2":["vycLU2"],"ZeOhh9":["ZeOhh9"],"/Xhh40":["/Xhh40"],"spsZYI":["spsZYI"],"MVB/Ab":["MVB/Ab"],"sbMMtk":["sbMMtk"],"1S6oAo":["1S6oAo"]}',
+b.exports = JSON.parse(
+    '{"YnnXb6":[[8,"$b",[[1,"connectionName"]]]," 連接正在移轉至 ",[8,"$b",[[1,"applicationName"]]],"。請重新連結您的帳號，以保留您所有的個人資料連接。"],"vycLU2":["連接變更"],"ZeOhh9":["更新連結"],"/Xhh40":[[8,"$b",["《英雄聯盟》"]],"和",[8,"$b",["《Riot》"]],"的已連接身分組將自 2026 年 6 月 12 日起停用。請前往設定更新已連接身分組。"],"spsZYI":["更新已連結身分組"],"MVB/Ab":["稍後再提醒我"],"sbMMtk":[[8,"$b",["《英雄聯盟》"]],"和",[8,"$b",["《Riot》"]],"的已連接身分組將自 2026 年 6 月 12 日起停用。請前往設定轉移已連接身分組。",[8,"$b",["這個身分組未來將停止維護。"]]],"1S6oAo":["《Riot》ID"]}',
 );

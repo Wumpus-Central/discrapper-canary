@@ -1,3 +1,3 @@
-h.exports = JSON.parse(
-    '{"YnnXb6":["YnnXb6"],"vycLU2":["vycLU2"],"ZeOhh9":["ZeOhh9"],"/Xhh40":["/Xhh40"],"MVB/Ab":["MVB/Ab"],"1S6oAo":["1S6oAo"]}',
+s.exports = JSON.parse(
+    '{"YnnXb6":["A(z) ",[8,"$b",[[1,"connectionName"]]],"-kapcsolat \xe1tker\xfcl ide: ",[8,"$b",[[1,"applicationName"]]],". Kapcsold \xf6ssze ism\xe9t a fi\xf3kodat, hogy minden kapcsolatot megőrizz a profiljaid k\xf6z\xf6tt."],"vycLU2":["Kapcsolatot \xe9rintő v\xe1ltoz\xe1sok"],"ZeOhh9":["Kapcsolat friss\xedt\xe9se"],"/Xhh40":["A ",[8,"$b",["League of Legends"]]," \xe9s a ",[8,"$b",["Riot"]]," eset\xe9ben megszűnnek az \xf6sszekapcsolt rangok, de a megl\xe9vő be\xe1ll\xedt\xe1said tov\xe1bbra is műk\xf6dni fognak. A rangok a ",[8,"settingsLink",["Be\xe1ll\xedt\xe1sok"]]," pontban m\xf3dos\xedthat\xf3k."],"MVB/Ab":["Eml\xe9keztessen k\xe9sőbb"],"1S6oAo":["Riot-azonos\xedt\xf3"]}',
 );

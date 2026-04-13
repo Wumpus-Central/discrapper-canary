@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"YnnXb6":["YnnXb6"],"vycLU2":["vycLU2"],"ZeOhh9":["ZeOhh9"],"/Xhh40":["/Xhh40"],"spsZYI":["spsZYI"],"MVB/Ab":["MVB/Ab"],"sbMMtk":["sbMMtk"],"1S6oAo":["1S6oAo"]}',
+e.exports = JSON.parse(
+    '{"YnnXb6":["La connexion ",[8,"$b",[[1,"connectionName"]]]," migre vers ",[8,"$b",[[1,"applicationName"]]],". Reconnecte ton compte pour conserver toutes les connexions de ton profil."],"vycLU2":["Changements de connexion"],"ZeOhh9":["Mise \xe0 jour de la connexion"],"/Xhh40":["Les r\xf4les li\xe9s pour ",[8,"$b",["League of Legends"]]," et ",[8,"$b",["Riot"]]," deviendront obsol\xe8tes \xe0 partir du 12\xa0juin\xa02026. Merci de mettre \xe0 jour tes r\xf4les li\xe9s dans les param\xe8tres."],"spsZYI":["Mise \xe0 jour des r\xf4les li\xe9s"],"MVB/Ab":["Me le rappeler plus tard"],"sbMMtk":["Les r\xf4les li\xe9s pour ",[8,"$b",["League of Legends"]]," et ",[8,"$b",["Riot"]]," deviendront obsol\xe8tes \xe0 partir du 12\xa0juin\xa02026. Merci de migrer tes r\xf4les li\xe9s dans les param\xe8tres. ",[8,"$b",["Cette fonctionnalit\xe9 ne sera plus prise en charge \xe0 l\'avenir."]]],"1S6oAo":["Identifiant Riot"]}',
 );

@@ -5,4 +5,5 @@ e.exports = {
     MK: "menu__81b3e",
     $H: "tabBar__81b3e",
     YU: "tabBarItem__81b3e",
+    QR: "helpMessageContainer__81b3e",
 };

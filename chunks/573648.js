@@ -1,15 +1,16 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => _ });
 var r = n(735438),
     i = n.n(r),
-    a = n(374994),
-    s = n(998218),
-    o = n(652215);
-let l = [
+    s = n(374994),
+    a = n(998218),
+    o = n(652215),
+    l = n(534952);
+let u = [
         {
             type: o.fg2.TWITCH,
             name: "Twitch",
-            color: (0, a.dE)("TWITCH"),
+            color: (0, s.dE)("TWITCH"),
             icon: {
                 lightPNG: n(491679),
                 darkPNG: n(491679),
@@ -28,7 +29,7 @@ let l = [
         {
             type: o.fg2.YOUTUBE,
             name: "YouTube",
-            color: (0, a.dE)("YOUTUBE"),
+            color: (0, s.dE)("YOUTUBE"),
             icon: {
                 lightPNG: n(913027),
                 darkPNG: n(913027),
@@ -47,7 +48,7 @@ let l = [
         {
             type: o.fg2.BATTLENET,
             name: "Battle.net",
-            color: (0, a.dE)("BATTLENET"),
+            color: (0, s.dE)("BATTLENET"),
             icon: {
                 lightPNG: n(560623),
                 darkPNG: n(560623),
@@ -80,7 +81,7 @@ let l = [
         {
             type: o.fg2.BUNGIE,
             name: "Bungie.net",
-            color: (0, a.dE)("BUNGIE"),
+            color: (0, s.dE)("BUNGIE"),
             icon: {
                 lightPNG: n(788439),
                 darkPNG: n(664471),
@@ -94,7 +95,7 @@ let l = [
         {
             type: o.fg2.SKYPE,
             name: "Skype",
-            color: (0, a.dE)("SKYPE"),
+            color: (0, s.dE)("SKYPE"),
             icon: {
                 lightPNG: n(2016),
                 darkPNG: n(2016),
@@ -112,7 +113,7 @@ let l = [
         {
             type: o.fg2.LEAGUE_OF_LEGENDS,
             name: "League of Legends",
-            color: (0, a.dE)("LOL"),
+            color: (0, s.dE)("LOL"),
             icon: {
                 lightPNG: n(17096),
                 darkPNG: n(17096),
@@ -122,11 +123,12 @@ let l = [
                 whiteSVG: n(415369),
             },
             enabled: !0,
+            replacedBy: l.OW.RIOT_GAMES,
         },
         {
             type: o.fg2.STEAM,
             name: "Steam",
-            color: (0, a.dE)("STEAM"),
+            color: (0, s.dE)("STEAM"),
             icon: {
                 lightPNG: n(123775),
                 darkPNG: n(601156),
@@ -145,7 +147,7 @@ let l = [
         {
             type: o.fg2.REDDIT,
             name: "Reddit",
-            color: (0, a.dE)("REDDIT"),
+            color: (0, s.dE)("REDDIT"),
             icon: {
                 lightPNG: n(393027),
                 darkPNG: n(393027),
@@ -165,7 +167,7 @@ let l = [
         {
             type: o.fg2.FACEBOOK,
             name: "Facebook",
-            color: (0, a.dE)("FACEBOOK"),
+            color: (0, s.dE)("FACEBOOK"),
             icon: {
                 lightPNG: n(427788),
                 darkPNG: n(427788),
@@ -180,7 +182,7 @@ let l = [
         {
             type: o.fg2.TWITTER_LEGACY,
             name: "Twitter",
-            color: (0, a.dE)("TWITTER"),
+            color: (0, s.dE)("TWITTER"),
             icon: {
                 lightPNG: n(482585),
                 darkPNG: n(482585),
@@ -200,7 +202,7 @@ let l = [
         {
             type: o.fg2.TWITTER,
             name: "X",
-            color: (0, a.dE)("TWITTER"),
+            color: (0, s.dE)("TWITTER"),
             icon: {
                 lightPNG: n(311891),
                 darkPNG: n(49515),
@@ -220,7 +222,7 @@ let l = [
         {
             type: o.fg2.SPOTIFY,
             name: "Spotify",
-            color: (0, a.dE)("SPOTIFY"),
+            color: (0, s.dE)("SPOTIFY"),
             icon: {
                 lightPNG: n(223184),
                 darkPNG: n(223184),
@@ -238,7 +240,7 @@ let l = [
         {
             type: o.fg2.XBOX,
             name: "Xbox",
-            color: (0, a.dE)("XBOX"),
+            color: (0, s.dE)("XBOX"),
             icon: {
                 lightPNG: n(443770),
                 darkPNG: n(254485),
@@ -253,7 +255,7 @@ let l = [
         {
             type: o.fg2.SAMSUNG,
             name: "Samsung Galaxy",
-            color: (0, a.dE)("SAMSUNG"),
+            color: (0, s.dE)("SAMSUNG"),
             icon: {
                 lightPNG: n(609106),
                 darkPNG: n(609106),
@@ -267,7 +269,7 @@ let l = [
         {
             type: o.fg2.GITHUB,
             name: "GitHub",
-            color: (0, a.dE)("GITHUB"),
+            color: (0, s.dE)("GITHUB"),
             icon: {
                 lightPNG: n(442932),
                 darkPNG: n(325031),
@@ -286,7 +288,7 @@ let l = [
         {
             type: o.fg2.PLAYSTATION,
             name: "PlayStation Network",
-            color: (0, a.dE)("PLAYSTATION"),
+            color: (0, s.dE)("PLAYSTATION"),
             icon: {
                 lightPNG: n(695973),
                 darkPNG: n(346058),
@@ -300,7 +302,7 @@ let l = [
         {
             type: o.fg2.PLAYSTATION_STAGING,
             name: "PlayStation Network (Staging)",
-            color: (0, a.dE)("PLAYSTATION"),
+            color: (0, s.dE)("PLAYSTATION"),
             icon: {
                 lightPNG: n(346058),
                 darkPNG: n(695973),
@@ -336,6 +338,7 @@ let l = [
                 whiteSVG: n(198991),
             },
             enabled: !0,
+            replacedBy: l.OW.RIOT_GAMES,
         },
         {
             type: o.fg2.ROBLOX,
@@ -445,7 +448,7 @@ let l = [
         {
             type: o.fg2.CRUNCHYROLL,
             name: "Crunchyroll",
-            color: (0, a.dE)("CRUNCHYROLL"),
+            color: (0, s.dE)("CRUNCHYROLL"),
             icon: {
                 lightPNG: n(405921),
                 darkPNG: n(405921),
@@ -500,25 +503,25 @@ let l = [
             enabled: !1,
         },
     ],
-    u = i().keyBy(l, "type"),
-    c = {};
-l.forEach((e) => {
+    c = i().keyBy(u, "type"),
+    d = {};
+u.forEach((e) => {
     e.domains?.forEach((t) => {
-        c[t] = e;
+        d[t] = e;
     });
 });
-let d = {
-    get: (e) => u[e] ?? null,
+let _ = {
+    get: (e) => c[e] ?? null,
     getByUrl(e) {
-        let t = s.A.toURLSafe(e);
+        let t = a.A.toURLSafe(e);
         if (null == t) return;
         let n = t.hostname;
-        return c[n.startsWith("www.") ? n.slice(4) : n];
+        return d[n.startsWith("www.") ? n.slice(4) : n];
     },
-    isSupported: (e) => Object.prototype.hasOwnProperty.call(u, e),
-    map: (e) => l.map(e),
+    isSupported: (e) => Object.prototype.hasOwnProperty.call(c, e),
+    map: (e) => u.map(e),
     filter(e) {
-        let t = l.filter(e);
+        let t = u.filter(e);
         return (
             t.sort((e, t) => {
                 let { name: n } = e,
@@ -528,5 +531,5 @@ let d = {
             t
         );
     },
-    find: (e) => l.find(e),
+    find: (e) => u.find(e),
 };

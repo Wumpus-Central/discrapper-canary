@@ -1,3 +1,3 @@
-h.exports = JSON.parse(
-    '{"YnnXb6":["YnnXb6"],"vycLU2":["vycLU2"],"ZeOhh9":["ZeOhh9"],"/Xhh40":["/Xhh40"],"MVB/Ab":["MVB/Ab"],"1S6oAo":["1S6oAo"]}',
+e.exports = JSON.parse(
+    '{"YnnXb6":["Conexiunea ",[8,"$b",[[1,"connectionName"]]]," este \xeen curs de migrare la ",[8,"$b",[[1,"applicationName"]]],". Reconectează-ți contul pentru a păstra toate conexiunile de profil."],"vycLU2":["Modificări ale conexiunii"],"ZeOhh9":["Actualizează conexiunea"],"/Xhh40":["Rolurile asociate pentru ",[8,"$b",["League of Legends"]]," și ",[8,"$b",["Riot"]]," vor fi eliminate, \xeensă configurările existente vor răm\xe2ne funcționale. Actualizează rolurile din ",[8,"settingsLink",["Setări"]],"."],"MVB/Ab":["Amintește-mi mai t\xe2rziu"],"1S6oAo":["ID Riot"]}',
 );

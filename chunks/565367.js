@@ -1,4 +1,4 @@
-e.r(h), e.d(h, { default: () => p });
-let p = JSON.parse(
-    '{"YnnXb6":["YnnXb6"],"vycLU2":["vycLU2"],"ZeOhh9":["ZeOhh9"],"/Xhh40":["/Xhh40"],"spsZYI":["spsZYI"],"MVB/Ab":["MVB/Ab"],"DeOsIl":["DeOsIl"],"sbMMtk":["sbMMtk"],"1S6oAo":["1S6oAo"]}',
+o.r(e), o.d(e, { default: () => i });
+let i = JSON.parse(
+    '{"YnnXb6":["The ",[8,"$b",[[1,"connectionName"]]]," Connection is migrating to ",[8,"$b",[[1,"applicationName"]]],". Reconnect your account to keep all of your profile connections."],"vycLU2":["Connection changes"],"ZeOhh9":["Update Connection"],"/Xhh40":["Linked Roles for ",[8,"$b",["League of Legends"]]," and ",[8,"$b",["Riot"]]," will be deprecated starting on June 12th, 2026. Please update your linked roles in settings."],"spsZYI":["Update Linked Roles"],"MVB/Ab":["Remind me later"],"DeOsIl":["The ",[8,"$b",[[1,"connectionName"]]]," connection is migrating to ",[8,"$b",[[1,"applicationName"]]]," in the coming months. ",[8,"$link",["Link your Riot Games account"],[[1,"connectionEntrypointUrl"]]]," if you want to continue your connection and unlock additional ",[8,"$link",["in-game social features."],["https://www.riotgames.com/en/riot-games-discord-account-linking"]]],"sbMMtk":["Linked Roles for ",[8,"$b",["League of Legends"]]," and ",[8,"$b",["Riot"]]," will be deprecated starting on June 12th, 2026. Please migrate your linked roles in settings. ",[8,"$b",["This will no longer be maintained moving forward."]]],"1S6oAo":["Riot ID"]}',
 );

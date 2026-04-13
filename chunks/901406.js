@@ -152,5 +152,6 @@ function D(e, t) {
         type: "CONNECTIONS_GRID_MODAL_SHOW",
         onComplete: (e) => (0, o.A)({ platformType: e }),
         includedPlatformTypes: new Set(r),
+        includeApplicationConnections: !1,
     });
 }

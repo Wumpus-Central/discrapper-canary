@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"YnnXb6":["YnnXb6"],"vycLU2":["vycLU2"],"ZeOhh9":["ZeOhh9"],"/Xhh40":["/Xhh40"],"spsZYI":["spsZYI"],"MVB/Ab":["MVB/Ab"],"sbMMtk":["sbMMtk"],"1S6oAo":["1S6oAo"]}',
+e.exports = JSON.parse(
+    '{"YnnXb6":[[8,"$b",[[1,"connectionName"]]],"接続は",[8,"$b",[[1,"applicationName"]]],"へ移行されます。すべてのプロフィール接続を維持するには、アカウントを再接続します。"],"vycLU2":["接続の変更"],"ZeOhh9":["連携を更新"],"/Xhh40":[[8,"$b",["League of Legends"]],"と",[8,"$b",["Riot"]],"の連携ロールは、2026年6月12日より廃止されます。設定で連携ロールを更新してください。"],"spsZYI":["連携ロールを更新"],"MVB/Ab":["後で通知"],"sbMMtk":[[8,"$b",["League of Legends"]],"と",[8,"$b",["Riot"]],"の連携ロールは、2026年6月12日より廃止されます。設定で連携ロールを移行してください。",[8,"$b",["今後、このサービスは保守されなくなります。"]]],"1S6oAo":["Riot ID"]}',
 );

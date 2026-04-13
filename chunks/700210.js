@@ -9,7 +9,7 @@ var r = n(627968),
     u = n(997509),
     c = n(780964),
     d = n(630457),
-    _ = n(840065),
+    _ = n(858897),
     f = n(546183),
     p = n(71393),
     h = n(576705),
@@ -44,7 +44,7 @@ function g(e) {
             (0, _.openUserSettings)(c.X.AUTHORIZED_APPS_PANEL);
             let e = "";
             null != g ? (e = g.name) : null != t && (e = t.username),
-                "" !== e && d.i.setState({ searchQuery: e }),
+                "" !== e && d.iU.setState({ searchQuery: e }),
                 T?.();
         }, [g, T, t]);
     if (I === m.BRT.POPOUT) return null;
