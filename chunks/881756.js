@@ -1,13 +1,9 @@
 "use strict";
-n.d(t, { A: () => a });
-var r = n(311907),
-    i = n(760751),
-    s = n(800007);
-function a() {
-    return (0, r.cf)([i.A], () => {
-        let [e, t] = s.Ge,
-            n = i.A.getDetectableGame(e),
-            r = i.A.getDetectableGame(t);
-        return { gameName: n?.name ?? "Minecraft", gameName2: r?.name ?? "Hytale" };
-    });
+n.d(t, { A: () => s });
+var r = n(454908),
+    i = n(800007);
+function s() {
+    let { data: e } = (0, r.I)(i.FG),
+        { data: t } = (0, r.I)(i.LC);
+    return { gameName: e?.name ?? "Minecraft", gameName2: t?.name ?? "Hytale" };
 }
