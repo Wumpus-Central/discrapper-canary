@@ -1,6 +1,6 @@
 "use strict";
 let r;
-n.d(t, { bK: () => b, jP: () => R });
+n.d(t, { bK: () => D, jP: () => O });
 var i = n(735438),
     s = n.n(i),
     a = n(158390),
@@ -20,17 +20,18 @@ var i = n(735438),
     I = n(565150),
     T = n(900482),
     S = n(972711),
-    y = n(777088),
+    y = n(554707),
     v = n(652215);
-let N = new l.A("CloudUpload.tsx");
-class C extends Error {
+let N = new l.A("CloudUpload.tsx"),
+    C = new Set([429]);
+class R extends Error {
     kind;
     phase;
     messageShort;
     constructor(e, t = {}) {
         const { cause: n, response: r } = t,
-            i = C.getErrorKind(n ?? Error(`${r?.text ?? "Unknown error"}`), r),
-            s = "server_error" === i ? `${e}:${i}:status_${r?.status ?? 0}` : `${e}:${i}`;
+            i = R.getErrorKind(n ?? Error(`${r?.text ?? "Unknown error"}`), r),
+            s = "server_error" === i || "client_error" === i ? `${e}:${i}:status_${r?.status ?? 0}` : `${e}:${i}`;
         super(s, { cause: n }),
             (this.name = "ResumableUploadError"),
             (this.phase = e),
@@ -40,25 +41,26 @@ class C extends Error {
     static getErrorKind(e, t) {
         let n = t?.status ?? 0,
             r = n >= 500 && n < 600,
-            i =
+            i = C.has(n),
+            s =
                 e.message.toLowerCase().includes("network") ||
                 e.message.toLowerCase().includes("terminated") ||
                 e.message.toLowerCase().includes("offline") ||
                 e.message.toLowerCase().includes("changed");
-        return r ? "server_error" : i ? "network_error" : "unknown";
+        return r ? "server_error" : i ? "client_error" : s ? "network_error" : "unknown";
     }
     static rejectionHandler(e) {
         return (t) => {
-            if (t instanceof o.oh) throw new C(e, { response: t });
-            if (t instanceof Error) throw new C(e, { cause: t });
-            throw new C(e, { cause: Error(String(t)) });
+            if (t instanceof o.oh) throw new R(e, { response: t });
+            if (t instanceof Error) throw new R(e, { cause: t });
+            throw new R(e, { cause: Error(String(t)) });
         };
     }
     canRetry() {
-        return "server_error" === this.kind || "network_error" === this.kind;
+        return "server_error" === this.kind || "network_error" === this.kind || "client_error" === this.kind;
     }
 }
-var R = (function (e) {
+var O = (function (e) {
     return (
         (e.NOT_STARTED = "NOT_STARTED"),
         (e.STARTED = "STARTED"),
@@ -70,7 +72,7 @@ var R = (function (e) {
         e
     );
 })({});
-class O {
+class b {
     numUploadAttempts;
     timing = {};
     compressAndExtractDisabled;
@@ -108,10 +110,11 @@ class O {
     conversionFailureReason;
 }
 r = n(122924).A;
-class b extends I.Ay {
+class D extends I.Ay {
     status = "NOT_STARTED";
     channelId;
     responseUrl;
+    responseUrlSetAt;
     currentSize;
     preCompressionSize;
     postCompressionSize;
@@ -120,7 +123,7 @@ class b extends I.Ay {
     error;
     reactNativeFilePrepped = !1;
     startTime;
-    uploadAnalytics = new O();
+    uploadAnalytics = new b();
     uploadAttempts = 0;
     _abortController;
     _xhr;
@@ -129,7 +132,7 @@ class b extends I.Ay {
     _libdiscoreEnabled;
     static fromJson(e) {
         let { item: t, channelId: n, reactNativeFileIndex: r } = e,
-            i = new b(t, n, r);
+            i = new D(t, n, r);
         return (
             Object.entries(e).forEach((e) => {
                 let [t, n] = e;
@@ -222,30 +225,35 @@ class b extends I.Ay {
         return await this._uploadHttpClient
             .doUpload(t)
             .then((e) =>
-                200 === e.status || 201 === e.status ? this.currentSize : C.rejectionHandler("status_check")(e),
+                200 === e.status || 201 === e.status ? this.currentSize : R.rejectionHandler("status_check")(e),
             )
             .catch((e) => {
                 if (e instanceof o.oh && 308 === e.status) {
                     let t = this.parseRangeHeader(e.headers.range ?? "");
                     return null != t ? t[1] + 1 : 0;
                 }
-                return C.rejectionHandler("status_check")(e);
+                return R.rejectionHandler("status_check")(e);
             });
     }
     async startOrResumeUpload(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        N.log(`Attempting to upload attachment with resumeFrom: ${t} and attempts: ${this.uploadAttempts}`),
-            t > 0 &&
-                (this.uploadAnalytics.uploadResumptionCount++,
+        if (
+            (N.log(`Attempting to upload attachment with resumeFrom: ${t} and attempts: ${this.uploadAttempts}`), t > 0)
+        )
+            this.uploadAnalytics.uploadResumptionCount++,
                 (e.headers = {
                     ...(e.headers ?? {}),
                     "Content-Range": `bytes ${t}-${this.currentSize - 1}/${this.currentSize}`,
-                })),
-            (e.onRequestProgress = s().throttle(this.createResumeAwareProgressFn(t), 50));
+                });
+        else if (null != e.headers) {
+            let { "Content-Range": t, ...n } = e.headers;
+            e.headers = n;
+        }
+        e.onRequestProgress = s().throttle(this.createResumeAwareProgressFn(t), 50);
         let n = await this._uploadHttpClient
             .doUpload(e, { fileByteRange: { start: t } })
-            .catch(C.rejectionHandler("upload"));
-        if (200 !== n.status && 201 !== n.status) throw new C("upload", { response: n });
+            .catch(R.rejectionHandler("upload"));
+        if (200 !== n.status && 201 !== n.status) throw new R("upload", { response: n });
         return n;
     }
     async uploadFileWithResumption(e, t, n) {
@@ -264,15 +272,21 @@ class b extends I.Ay {
         for (; this.uploadAttempts <= a && !this._aborted; ) {
             this.uploadAttempts++, (this.uploadAnalytics.numUploadAttempts = this.uploadAttempts);
             try {
-                if (this.uploadAttempts > 1) {
-                    let t = await this.trackTime("resumptionCheckTimeMs", async () => await this.getResumePosition(e));
-                    (this.uploadAnalytics.uploadResumptionPosition = t),
-                        (l = this.supportsResume() ? t : 0),
+                let e = this.responseUrl;
+                if ((await this.ensureFreshResponseUrl(), (o.url = this.responseUrl), e !== this.responseUrl))
+                    (l = 0), (this.loaded = 0);
+                else if (this.uploadAttempts > 1) {
+                    let e = await this.trackTime(
+                        "resumptionCheckTimeMs",
+                        async () => await this.getResumePosition(this.responseUrl),
+                    );
+                    (this.uploadAnalytics.uploadResumptionPosition = e),
+                        (l = this.supportsResume() ? e : 0),
                         (this.loaded = l);
                 }
                 return await this.startOrResumeUpload(o, l);
             } catch (e) {
-                if (e instanceof C && e.canRetry()) {
+                if (e instanceof R && e.canRetry()) {
                     N.warn(`Error uploading ${this.id}: ${e.message}, attempting resumption`),
                         (this.uploadAnalytics.uploadResumptionReason = e.messageShort),
                         await E.A.awaitOnline();
@@ -305,7 +319,7 @@ class b extends I.Ay {
         )
             return void this.handleComplete(this.id);
         if (this.allowOptimization && this.item.platform === I.xz.WEB) {
-            let e = await b.tryConvertToWebP(this.item.file, () => this._aborted, this.id);
+            let e = await D.tryConvertToWebP(this.item.file, () => this._aborted, this.id);
             null != e &&
                 (null != e.convertedFile &&
                     ((this.item.file = e.convertedFile), (this.currentSize = e.convertedFile.size)),
@@ -511,9 +525,10 @@ class b extends I.Ay {
             (this.status = "NOT_STARTED"),
             (this.uploadedFilename = void 0),
             (this.responseUrl = void 0),
+            (this.responseUrlSetAt = void 0),
             (this.error = void 0),
             (this.startTime = void 0),
-            (this.uploadAnalytics = new O()),
+            (this.uploadAnalytics = new b()),
             (this.uploadAttempts = 0),
             (this._aborted = !1),
             (this._abortController = new AbortController()),
@@ -528,7 +543,26 @@ class b extends I.Ay {
         } catch {}
     }
     setResponseUrl(e) {
-        this.responseUrl = e;
+        (this.responseUrl = e), (this.responseUrlSetAt = Date.now());
+    }
+    static isResponseUrlStale(e) {
+        if (null == e) return !0;
+        let t = 12 * m.A.Millis.HOUR;
+        return Date.now() - e > t;
+    }
+    async ensureFreshResponseUrl() {
+        if (!D.isResponseUrlStale(this.responseUrlSetAt)) return;
+        let e = await r.getUploadPayload(this),
+            t = (0, T.B)(this.item.target).getCreateAttachmentURL(this.channelId),
+            n = await o.Bo.post({
+                url: t,
+                body: { files: [e] },
+                ...this.createAttachmentUrlRetryOpts(),
+                rejectWithError: !1,
+            });
+        if (!n.ok || n.body?.attachments?.[0] == null) throw new R("upload", { response: n });
+        this.setResponseUrl(n.body.attachments[0].upload_url),
+            this.setUploadedFilename(n.body.attachments[0].upload_filename);
     }
     setStatus(e) {
         this.status = e;
