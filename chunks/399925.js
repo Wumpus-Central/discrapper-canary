@@ -1,5 +1,6 @@
 "use strict";
 n.d(t, {
+    $N: () => ei,
     Fb: () => q,
     GS: () => U,
     H1: () => Q,
@@ -18,10 +19,10 @@ n.d(t, {
     fd: () => x,
     h$: () => G,
     jA: () => $,
-    l0: () => ei,
+    l0: () => es,
     oH: () => Z,
     pM: () => en,
-    w7: () => es,
+    w7: () => ea,
     yO: () => M,
     yT: () => j,
     yd: () => H,
@@ -412,9 +413,12 @@ function en(e) {
 function er(e, t) {
     s.h.dispatch({ type: "CLIPS_SIGNAL_CREATED", signal: e, timestamp: t });
 }
-function ei() {
+function ei(e) {
+    s.h.dispatch({ type: "CLIPS_ML_DETECTION", detections: e });
+}
+function es() {
     er({ type: y.Gy.MANUAL });
 }
-async function es(e) {
+async function ea(e) {
     await W(e, { isTemporary: !1 });
 }

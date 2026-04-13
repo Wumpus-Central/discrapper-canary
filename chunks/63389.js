@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => A });
 var r = n(205693),
     i = n(439372),
     s = n(608960),
@@ -12,8 +12,10 @@ var r = n(205693),
     _ = n(399925);
 let f = 1e4,
     p = 1e4,
-    h = 15e3;
-class m extends i.A {
+    h = 15e3,
+    m = 0.5,
+    E = 0.8;
+class g extends i.A {
     timeline;
     scheduledClipTimeout = null;
     scheduledClipSignal = null;
@@ -23,6 +25,7 @@ class m extends i.A {
     }
     actions = {
         CLIPS_SIGNAL_CREATED: (e) => this.handleClipsSignalCreated(e.signal, e.timestamp),
+        CLIPS_ML_DETECTION: (e) => this.handleMlDetection(e.detections),
         SPEAKING: (e) => this.handleSpeaking(e),
         GUILD_SOUNDBOARD_SOUND_PLAY_START: (e) => this.handleSoundboardPlayStart(e),
         GUILD_SOUNDBOARD_SOUND_PLAY_END: (e) => this.handleSoundboardPlayEnd(e),
@@ -31,6 +34,16 @@ class m extends i.A {
     };
     handleClipsSignalCreated(e, t) {
         this.isSignalEnabled(e.type) && this.process(e, t);
+    }
+    handleMlDetection(e) {
+        for (let t of e)
+            for (let e of t.data_points)
+                "laughter" === e.label
+                    ? e.confidence > m &&
+                      this.process({ type: c.Gy.LAUGHTER, label: e.label, confidence: e.confidence }, e.timestamp_ms)
+                    : "shouting" === e.label &&
+                      e.confidence > E &&
+                      this.process({ type: c.Gy.LAUGHTER, label: e.label, confidence: e.confidence }, e.timestamp_ms);
     }
     handleSpeaking(e) {
         if (!(0, d.TD)() || e.context !== r.x.DEFAULT) return;
@@ -143,4 +156,4 @@ class m extends i.A {
         this.timeline.updateLength(l.A.getSettings().clipsLength);
     }
 }
-let E = new m();
+let A = new g();

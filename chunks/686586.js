@@ -1,12 +1,13 @@
-a.r(t), a.d(t, { default: () => h }), a(321073);
+a.r(t), a.d(t, { default: () => u }), a(321073);
 var i = a(205693),
     l = a(626584),
     o = a(430452),
     s = a(274372),
     n = a(372684),
-    d = a(672412);
-let r = new l.A("MLSignalHandler");
-class c {
+    d = a(399925),
+    r = a(672412);
+let c = new l.A("MLSignalHandler");
+class h {
     emitSignal;
     emotionHistory = [];
     yellHistory = [];
@@ -15,28 +16,25 @@ class c {
         this.emitSignal = e;
     }
     start() {
-        r.info("ML signal handler started"),
-            d.A.start(this.handleMLResult.bind(this), () => {}),
+        c.info("ML signal handler started"),
+            r.A.start(this.handleMLResult.bind(this), () => {}),
             (this.boundHandleV3MlDetection = this.handleV3MlDetection.bind(this)),
             o.Ay.getMediaEngine().on(i.bg.ClipsMlDetection, this.boundHandleV3MlDetection);
     }
     stop() {
-        d.A.stop(),
+        r.A.stop(),
             null != this.boundHandleV3MlDetection &&
                 (o.Ay.getMediaEngine().off(i.bg.ClipsMlDetection, this.boundHandleV3MlDetection),
                 (this.boundHandleV3MlDetection = null)),
             (this.emotionHistory = []),
             (this.yellHistory = []),
-            r.info("ML signal handler stopped");
+            c.info("ML signal handler stopped");
     }
     getState() {
         return { emotionHistory: [...this.emotionHistory], yellHistory: [...this.yellHistory] };
     }
     handleV3MlDetection(e) {
-        for (let t of e)
-            ("laughter" === t.label || "shouting" === t.label) &&
-                (r.info(`V3 ML detection: ${t.label} (confidence=${t.confidence.toFixed(2)}, ts=${t.timestamp_ms})`),
-                this.emitSignal({ type: n.Gy.LAUGHTER, label: t.label, confidence: t.confidence }, t.timestamp_ms));
+        (0, d.$N)(e);
     }
     handleMLResult(e) {
         switch (e.type) {
@@ -53,7 +51,7 @@ class c {
                 this.handleWhisperTranscription(e.payload);
                 break;
             default:
-                r.warn(`Unknown ML result type: ${e.type}`);
+                c.warn(`Unknown ML result type: ${e.type}`);
         }
     }
     handleYellClassification(e) {
@@ -75,7 +73,7 @@ class c {
                     return `${t}: |${o}${s}| (${i.toFixed(3)})`;
                 })
                 .join("  ");
-        window.__CLIPS_DEBUG__?.wakeWord && r.info(`Wake word: ${t}: ${l}`);
+        window.__CLIPS_DEBUG__?.wakeWord && c.info(`Wake word: ${t}: ${l}`);
         let o = s.A.getSettings().autoClipPhrases;
         for (let [e, t] of Object.entries(a))
             if (("number" == typeof t ? t : 0) >= 0.5 && o.includes(e)) {
@@ -87,11 +85,11 @@ class c {
         let { userId: t, emotions: a, timestamp: i } = e;
         this.emotionHistory.push({ timestamp: i, userId: t, emotions: a }),
             this.emotionHistory.length > 10 && this.emotionHistory.shift(),
-            window.__CLIPS_DEBUG__?.emotion && r.info(`Emotion classification: ${t}: ${JSON.stringify(a)}`);
+            window.__CLIPS_DEBUG__?.emotion && c.info(`Emotion classification: ${t}: ${JSON.stringify(a)}`);
     }
     handleWhisperTranscription(e) {
         let { userId: t, transcription: a, timestamp: i } = e;
-        window.__CLIPS_DEBUG__?.whisper && r.info(`Whisper transcription: ${t}: ${JSON.stringify(a)}`);
+        window.__CLIPS_DEBUG__?.whisper && c.info(`Whisper transcription: ${t}: ${JSON.stringify(a)}`);
         let l = s.A.getSettings().autoClipPhrases;
         if (0 === l.length) return;
         let o = (e) =>
@@ -101,9 +99,9 @@ class c {
                     .trim()
                     .toLowerCase(),
             d = l.map((e) => o(e).replace(/[.*+?^${}()|[\]\\]/g, "\\$&")),
-            c = RegExp(`(${d.join("|")})`, "g");
+            r = RegExp(`(${d.join("|")})`, "g");
         for (let e of a)
-            for (let t of o(e.text).matchAll(c)) {
+            for (let t of o(e.text).matchAll(r)) {
                 let a = t[0],
                     s = l.find((e) => o(e) === a);
                 if (null != s) {
@@ -124,4 +122,4 @@ class c {
             }
     }
 }
-let h = (e) => new c(e);
+let u = (e) => new h(e);
