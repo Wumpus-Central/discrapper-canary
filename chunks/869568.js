@@ -14,14 +14,14 @@ var i = n(627968),
     x = n(793574),
     h = n(688810),
     _ = n(342296),
-    A = n(287809),
-    p = n(954571),
+    p = n(287809),
+    A = n(954571),
     f = n(642133),
     j = n(997509),
     N = n(396816),
     E = n(856644),
-    C = n(785312),
-    T = n(316506),
+    T = n(785312),
+    C = n(316506),
     I = n(981634),
     b = n(927573),
     v = n(652215),
@@ -52,7 +52,7 @@ function G(e) {
     let { member: t, guildId: l, roleId: o, locked: m } = e,
         x = s.useRef(null),
         h = s.useMemo(() => ({ [l]: [t.id] }), [l, t.id]);
-    function p(e) {
+    function A(e) {
         if ((e.stopPropagation(), !m)) {
             let n;
             if (e.shiftKey) return void O(t, l, o);
@@ -83,7 +83,7 @@ function G(e) {
         }
     }
     function f(e) {
-        let s = A.default.getUser(t.id);
+        let s = p.default.getUser(t.id);
         null != s &&
             (0, u.L3)(e, async () => {
                 let { default: e } = await Promise.all([n.e("97262"), n.e("91042"), n.e("2646")]).then(
@@ -96,7 +96,7 @@ function G(e) {
         (0, g.Eq)(h, "GuildSettingsRolesEditMembers"),
         (0, i.jsx)("div", {
             className: R.Q,
-            children: (0, i.jsx)(_.A, {
+            children: (0, i.jsx)(_.default, {
                 targetElementRef: x,
                 userId: t.id,
                 guildId: l,
@@ -124,7 +124,7 @@ function G(e) {
                                     position: "top",
                                     children: (0, i.jsx)(c.DUT, {
                                         className: r()(y.DT, { [y.li]: m }),
-                                        onClick: p,
+                                        onClick: A,
                                         children: (0, i.jsx)(c.aXh, { size: "xs", color: "currentColor" }),
                                     }),
                                 }),
@@ -172,7 +172,7 @@ function D(e) {
         g = s.useMemo(() => l.trim().toLowerCase(), [l]);
     (0, E.cG)(t, g);
     let _ = s.useMemo(() => d.filter((e) => (0, E.EF)(g, e)), [d, g]),
-        A = s.useMemo(() => _.sort((e, t) => e.name.localeCompare(t.name)), [_]);
+        p = s.useMemo(() => _.sort((e, t) => e.name.localeCompare(t.name)), [_]);
     return (0, i.jsx)(h.f5, {
         value: m,
         children: (0, i.jsx)(c.Eie, {
@@ -184,8 +184,8 @@ function D(e) {
             rowHeight: 40,
             renderRow: function (e) {
                 let { row: s } = e;
-                if (0 === A.length) return (0, i.jsx)(L, { handleAddClick: u, locked: a }, "empty");
-                let l = A[s];
+                if (0 === p.length) return (0, i.jsx)(L, { handleAddClick: u, locked: a }, "empty");
+                let l = p[s];
                 return (0, i.jsx)(G, { member: l, guildId: t, roleId: n, locked: a }, l.id);
             },
             onScroll: o,
@@ -217,13 +217,13 @@ function M(e) {
 function k(e) {
     let { guild: t, role: l, locked: a, setSelectedSection: d } = e,
         [u, m] = s.useState(""),
-        { headerHeight: g, headerRef: x } = (0, C.A)(0),
-        { scrolledToTop: h, handleScroll: _ } = (0, T.u)(),
-        A = l.managed || a,
+        { headerHeight: g, headerRef: x } = (0, T.A)(0),
+        { scrolledToTop: h, handleScroll: _ } = (0, C.u)(),
+        p = l.managed || a,
         j = (0, E.K5)(t.id, l.id),
         N = (0, o.bG)([f.A], () => f.A.getRoleMemberCount(t.id)?.[l.id] ?? 0) > j.length,
         I = () => {
-            p.default.track(v.HAw.OPEN_MODAL, {
+            A.default.track(v.HAw.OPEN_MODAL, {
                 type: "Add Role Members",
                 location_page: "Role Settings",
                 location_section: "Members",
@@ -244,13 +244,13 @@ function k(e) {
                     children: (0, i.jsxs)("div", {
                         className: r()(R.wx, { [R.l6]: !h }),
                         children: [
-                            (0, i.jsx)(T.A, {
+                            (0, i.jsx)(C.A, {
                                 guild: t,
                                 role: l,
                                 selectedSection: b.T$.MEMBERS,
                                 setSelectedSection: d,
                             }),
-                            (0, i.jsx)(M, { query: u, setQuery: m, locked: A, handleAddClick: I }),
+                            (0, i.jsx)(M, { query: u, setQuery: m, locked: p, handleAddClick: I }),
                             N
                                 ? (0, i.jsx)(c.po8, {
                                       className: y.v6,
@@ -267,7 +267,7 @@ function k(e) {
                 query: u,
                 guildId: t.id,
                 roleId: l.id,
-                locked: A,
+                locked: p,
                 onScroll: _,
                 roleMembers: j,
                 handleAddClick: I,

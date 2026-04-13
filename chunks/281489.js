@@ -20,7 +20,7 @@ let p = (e) => {
               ? (0, i.jsx)("div", { className: h.j7, children: (0, i.jsx)(u.A, { className: h.s$ }) })
               : (0, i.jsx)("div", {
                     className: h.sR,
-                    children: (0, i.jsx)(c.A, {
+                    children: (0, i.jsx)(c.default, {
                         targetElementRef: r,
                         userId: t.id,
                         guildId: s,

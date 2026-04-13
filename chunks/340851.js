@@ -15,8 +15,8 @@ var i = n(627968),
     p = n(47167),
     g = n(643501),
     f = n(916641),
-    x = n(652896),
-    E = n(279250),
+    E = n(652896),
+    x = n(279250),
     I = n(346846),
     C = n(342296),
     N = n(481947),
@@ -30,7 +30,7 @@ n(281405);
 var R = n(544105),
     O = n(502075),
     L = n(985018),
-    M = n(988445);
+    M = n(437942);
 function D(e) {
     let { numUsers: t } = e;
     return (0, i.jsx)("div", {
@@ -71,11 +71,11 @@ let G = (0, A.J)(function (e) {
             disconnected: K,
             connectUserDragSource: Y,
             canDrag: z,
-            isStreaming: q,
-            isWatching: X,
+            isStreaming: X,
+            isWatching: q,
             isGuest: $,
-            priority: J,
-            showPreview: Q,
+            priority: Q,
+            showPreview: J,
             hidePreview: Z,
             shouldShowHoverPopout: ee,
             otherClientSessionType: et,
@@ -93,8 +93,8 @@ let G = (0, A.J)(function (e) {
         eA = l.useRef(null),
         [e_, em] = l.useState(!1),
         [ep, eg] = l.useState(!1),
-        [ef, ex] = l.useState(!1),
-        eE = e_ || ef || ep,
+        [ef, eE] = l.useState(!1),
+        ex = e_ || ef || ep,
         eI = () => {
             eh(!eu);
         },
@@ -112,15 +112,15 @@ let G = (0, A.J)(function (e) {
         [],
     );
     let eT = () => {
-            if (!q || !(0, E.eo)(A, v.A, S.A, b.A, g.default)[0]) return;
+            if (!X || !(0, x.eo)(A, v.A, S.A, b.A, g.default)[0]) return;
             let e = { streamType: O.U4.GUILD, ownerId: s.id, channelId: A.id, guildId: A.guild_id };
             T.default.getId() !== s.id && u.default.selectVoiceChannel(A.id),
-                X ? ((0, I.A)(e), d.A.selectParticipant(e.channelId, (0, x._z)(e))) : (0, h.Nl)(e),
+                q ? ((0, I.A)(e), d.A.selectParticipant(e.channelId, (0, E._z)(e))) : (0, h.Nl)(e),
                 Z?.(s.id);
         },
         eS = (e) => {
             (0, c.L3)(e, async () => {
-                let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("84841"), n.e("36382")]).then(
+                let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("84841"), n.e("50970")]).then(
                     n.bind(n, 107632),
                 );
                 return (t) =>
@@ -141,10 +141,10 @@ let G = (0, A.J)(function (e) {
             onMouseEnter: ei
                 ? void 0
                 : () => {
-                      eu || (eA.current = setTimeout(() => Q?.(s.id), 100));
+                      eu || (eA.current = setTimeout(() => J?.(s.id), 100));
                   },
             onMouseLeave: ei ? void 0 : eN,
-            children: (0, i.jsx)(C.A, {
+            children: (0, i.jsx)(C.default, {
                 clickTrap: s?.id === y.default.getCurrentUser()?.id && eu,
                 targetElementRef: ec,
                 user: s,
@@ -164,10 +164,10 @@ let G = (0, A.J)(function (e) {
                             mute: D,
                             localMute: U,
                             localVideoDisabled: G,
-                            isStreaming: q,
+                            isStreaming: X,
                             isGuest: $,
                             video: k,
-                            priority: J,
+                            priority: Q,
                             ringing: F,
                             deaf: P,
                             nick: H,
@@ -205,12 +205,12 @@ let G = (0, A.J)(function (e) {
                                           channel: A,
                                           user: s,
                                           onAction: eN,
-                                          onWatchStream: q ? eT : void 0,
+                                          onWatchStream: X ? eT : void 0,
                                           hangStatusActivity: er,
                                           setIsHangStatusInputFocused: em,
-                                          setIsHangStatusEmojiPickerOpen: ex,
+                                          setIsHangStatusEmojiPickerOpen: eE,
                                       }),
-                                  shouldShow: (ee || (eo && eE && es)) && !eu,
+                                  shouldShow: (ee || (eo && ex && es)) && !eu,
                                   onRequestClose: eC,
                                   spacing: 17,
                                   children: () =>

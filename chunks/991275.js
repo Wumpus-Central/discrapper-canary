@@ -113,7 +113,7 @@ let X = K.Ay.getEnableHardwareAcceleration(),
                 },
                 [I],
             );
-        return (0, r.jsx)(x.A, {
+        return (0, r.jsx)(x.default, {
             targetElementRef: R,
             user: c,
             guildId: I,

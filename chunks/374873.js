@@ -5,18 +5,18 @@ var i = n(627968),
     a = n.n(s),
     r = n(284009),
     o = n.n(r),
-    c = n(311907),
-    d = n(990078),
+    d = n(311907),
+    c = n(990078),
     u = n(397927),
     h = n(442433),
     A = n(730134),
     _ = n(964486),
     m = n(80682),
-    g = n(58736),
-    p = n(967144),
+    p = n(58736),
+    g = n(967144),
     f = n(342296),
-    x = n(696451),
-    E = n(576705),
+    E = n(696451),
+    x = n(576705),
     I = n(290863),
     C = n(849736),
     N = n(113783),
@@ -29,33 +29,33 @@ var i = n(627968),
     R = n(142126);
 let O = l.memo(function (e) {
         let { toggleRequestToSpeakSidebar: t, chatOpen: n } = e,
-            l = (0, i.jsx)(g.Ay.Icon, { icon: u.PGe, tooltip: j.intl.string(j.t.cpT0Cq), onClick: t });
-        return (0, i.jsxs)(g.Ay, {
+            l = (0, i.jsx)(p.Ay.Icon, { icon: u.PGe, tooltip: j.intl.string(j.t.cpT0Cq), onClick: t });
+        return (0, i.jsxs)(p.Ay, {
             toolbar: l,
             className: a()(R.N1, { [R.X_]: n }),
             children: [
-                (0, i.jsx)(g.Ay.Icon, { icon: u.E7M, disabled: !0, "aria-label": j.intl.string(j.t.TYZgzW) }),
-                (0, i.jsx)(g.Ay.Title, { children: j.intl.string(j.t.TYZgzW) }),
+                (0, i.jsx)(p.Ay.Icon, { icon: u.E7M, disabled: !0, "aria-label": j.intl.string(j.t.TYZgzW) }),
+                (0, i.jsx)(p.Ay.Title, { children: j.intl.string(j.t.TYZgzW) }),
             ],
         });
     }),
     L = l.memo(function (e) {
         let { channel: t, participant: s, tempDisableOnInit: a = !1 } = e,
             r = l.useRef(null),
-            [g, E] = l.useState(a);
+            [p, x] = l.useState(a);
         (0, _.Ay)(() => {
-            if (!g) return;
-            let e = setTimeout(() => E(!1), 1e3);
+            if (!p) return;
+            let e = setTimeout(() => x(!1), 1e3);
             return () => clearTimeout(e);
         });
         let N = t.getGuildId();
         o()(null != N, "Channel cannot be guildless");
-        let { isMobile: b, status: y } = (0, c.cf)([I.A], () => ({
+        let { isMobile: b, status: y } = (0, d.cf)([I.A], () => ({
                 isMobile: I.A.isMobileOnline(s.user.id),
                 status: I.A.getStatus(s.user.id, N),
             })),
-            v = (0, c.bG)([x.Ay], () => x.Ay.getMember(N, s.user.id)),
-            O = (0, p.gn)(t.guild_id, v?.userId, v?.colorStrings ?? null),
+            v = (0, d.bG)([E.Ay], () => E.Ay.getMember(N, s.user.id)),
+            O = (0, g.gn)(t.guild_id, v?.userId, v?.colorStrings ?? null),
             L = l.useMemo(() => ({ [N]: [s.user.id] }), [N, s.user.id]);
         (0, m.Eq)(L, "RequestToSpeakSidebar");
         let M = s.rtsState === S.zF.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
@@ -73,7 +73,7 @@ let O = l.memo(function (e) {
         return (0, i.jsxs)("div", {
             className: R.fn,
             children: [
-                (0, i.jsx)(f.A, {
+                (0, i.jsx)(f.default, {
                     targetElementRef: r,
                     user: s.user,
                     guildId: t.guild_id,
@@ -117,20 +117,20 @@ let O = l.memo(function (e) {
                 (0, i.jsxs)("div", {
                     className: R.UD,
                     children: [
-                        (0, i.jsx)(d.m, {
+                        (0, i.jsx)(c.m, {
                             text: M ? j.intl.string(j.t.h9rsTd) : j.intl.string(j.t.f0T7hI),
                             asContainer: !0,
                             children: (0, i.jsx)(u.K0, {
                                 onClick: function () {
                                     (0, C.lL)(t, s.user.id, !1);
                                 },
-                                disabled: M || g,
+                                disabled: M || p,
                                 icon: u.LvC,
                                 variant: "secondary",
                                 "aria-label": M ? j.intl.string(j.t.h9rsTd) : j.intl.string(j.t.f0T7hI),
                             }),
                         }),
-                        (0, i.jsx)(d.m, {
+                        (0, i.jsx)(c.m, {
                             text: j.intl.string(j.t.moABMy),
                             asContainer: !0,
                             children: (0, i.jsx)(u.K0, {
@@ -176,7 +176,7 @@ function U(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, chatOpen: l } = e,
         s = (0, N.J2)(t.id),
         r = [
-            +!!(0, c.bG)([E.A], () => E.A.can(v.xB.MANAGE_CHANNELS, t) || E.A.can(v.xB.MANAGE_ROLES, t)),
+            +!!(0, d.bG)([x.A], () => x.A.can(v.xB.MANAGE_CHANNELS, t) || x.A.can(v.xB.MANAGE_ROLES, t)),
             Math.max(1, s.length),
         ];
     return (0, i.jsxs)("div", {

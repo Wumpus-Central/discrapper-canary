@@ -75,7 +75,7 @@ function I(e) {
                                     n.e("42128"),
                                     n.e("61474"),
                                     n.e("39778"),
-                                    n.e("67744"),
+                                    n.e("69491"),
                                 ]).then(n.bind(n, 385913));
                                 return (t) => (0, r.jsx)(e, { ...t, user: R, channel: O, targetIsUser: !0 });
                             });
@@ -88,7 +88,7 @@ function I(e) {
         ? (0, r.jsx)(u.f5, { value: C, children: M() })
         : (0, r.jsx)(u.f5, {
               value: C,
-              children: (0, r.jsx)(_.A, {
+              children: (0, r.jsx)(_.default, {
                   targetElementRef: N,
                   user: R,
                   guildId: b ?? void 0,

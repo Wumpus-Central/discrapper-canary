@@ -6,21 +6,21 @@ var i = r(627968),
     u = r(158954),
     l = r(311907),
     c = r(397927),
-    o = r(442433),
-    a = r(110574),
+    a = r(442433),
+    o = r(110574),
     m = r(342296),
     g = r(696451),
     I = r(994500),
     f = r(287809),
     p = r(542986),
     h = r(985018),
-    b = r(275167);
+    b = r(761396);
 function w(e) {
     let { guildId: t, guildOwnerId: s, member: d } = e,
         u = f.default.getUser(d.userId),
         l = n.useRef(null);
     return (0, i.jsx)(
-        m.A,
+        m.default,
         {
             targetElementRef: l,
             userId: d.userId,
@@ -30,7 +30,7 @@ function w(e) {
             children: (e, n) => {
                 let { isShown: c } = n;
                 return (0, i.jsx)(
-                    a.A,
+                    o.A,
                     {
                         ref: l,
                         className: b.Dc,
@@ -43,8 +43,8 @@ function w(e) {
                         premiumSince: null == d.premiumSince ? null : new Date(d.premiumSince),
                         guildId: t,
                         onContextMenu: (e) => {
-                            (0, o.L3)(e, async () => {
-                                let { default: e } = await Promise.all([r.e("97262"), r.e("91042"), r.e("55109")]).then(
+                            (0, a.L3)(e, async () => {
+                                let { default: e } = await Promise.all([r.e("97262"), r.e("91042"), r.e("54631")]).then(
                                     r.bind(r, 365689),
                                 );
                                 return (r) => (0, i.jsx)(e, { ...r, user: u, guildId: t, showMediaItems: !0 });
@@ -61,22 +61,22 @@ function w(e) {
 }
 function k(e) {
     let { guild: t, transitionState: r, onClose: s } = e,
-        o = n.useMemo(() => I.A.getFriendIDs(), []);
+        a = n.useMemo(() => I.A.getFriendIDs(), []);
     n.useEffect(() => {
-        p.A.fetchFriendMembersIfNotFetched(t.id, o);
-    }, [t.id, o]);
-    let a = (0, l.bG)([g.Ay], () => g.Ay.getMembers(t.id)),
+        p.A.fetchFriendMembersIfNotFetched(t.id, a);
+    }, [t.id, a]);
+    let o = (0, l.bG)([g.Ay], () => g.Ay.getMembers(t.id)),
         m = n.useMemo(
             () =>
-                d()(a)
-                    .filter((e) => !!o.includes(e.userId) && null != f.default.getUser(e.userId))
+                d()(o)
+                    .filter((e) => !!a.includes(e.userId) && null != f.default.getUser(e.userId))
                     .sortBy((e) => {
                         let t = f.default.getUser(e.userId);
                         return (null != t ? (e.nick ?? t.username) : "").toLocaleLowerCase();
                     })
                     .map((e) => (0, i.jsx)(w, { guildId: t.id, guildOwnerId: t.ownerId, member: e }, e.userId))
                     .value(),
-            [o, t.id, t.ownerId, a],
+            [a, t.id, t.ownerId, o],
         ),
         b = p.A.isFetchingFriendsForGuild(t.id);
     return (0, i.jsxs)(u.Modal, {

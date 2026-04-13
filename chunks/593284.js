@@ -41,7 +41,7 @@ function P(e) {
     return null == f || null == p
         ? null
         : (0, r.jsx)(
-              v.A,
+              v.default,
               {
                   targetElementRef: u,
                   userId: t.userId,

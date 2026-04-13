@@ -45,7 +45,7 @@ function f(e) {
     return null != f
         ? (0, r.jsx)(s.wXn, {
               theme: d,
-              children: (0, r.jsx)(l.A, {
+              children: (0, r.jsx)(l.default, {
                   targetElementRef: c,
                   user: f,
                   guildId: a?.guild_id,

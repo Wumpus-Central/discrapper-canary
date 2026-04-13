@@ -5,18 +5,18 @@ var i = n(627968),
     a = n(311907),
     r = n(397927),
     o = n(442433),
-    c = n(414798),
-    d = n(110574),
+    d = n(414798),
+    c = n(110574),
     u = n(793574),
     h = n(688810),
     A = n(709066),
     _ = n(87664),
     m = n(449582),
-    g = n(485947),
-    p = n(342296),
+    p = n(485947),
+    g = n(342296),
     f = n(290863),
-    x = n(994500),
-    E = n(741961),
+    E = n(994500),
+    x = n(741961),
     I = n(287809),
     C = n(954571),
     N = n(203982),
@@ -30,10 +30,10 @@ let R = [],
     O = b.Ay.getEnableHardwareAcceleration();
 function L(e) {
     let { user: t, channel: r, status: u, activities: h } = e,
-        A = (0, a.bG)([E.A], () => null != E.A.getTypingUsers(r.id)[t.id]),
-        g = (0, a.bG)([I.default], () => I.default.getCurrentUser()),
+        A = (0, a.bG)([x.A], () => null != x.A.getTypingUsers(r.id)[t.id]),
+        p = (0, a.bG)([I.default], () => I.default.getCurrentUser()),
         C = (0, a.bG)([f.A], () => f.A.isMobileOnline(t.id)),
-        T = (0, a.bG)([x.A], () => x.A.getNickname(t.id)),
+        T = (0, a.bG)([E.A], () => E.A.getNickname(t.id)),
         b = (0, _.A)(t.id),
         j = l.useRef(null),
         R = (e) => {
@@ -49,11 +49,11 @@ function L(e) {
                 n = `<@${t.id}>`;
             N._.dispatch(y.jej.TEXTAREA_FOCUS, { channelId: r.id }),
                 N._.dispatchToLastSubscribed(y.jej.INSERT_TEXT, { plainText: e, rawText: n }),
-                c.A.startTyping(r.id);
+                d.A.startTyping(r.id);
         },
         M = (0, m.r)({ user: t }),
         [D, U] = l.useState(!1);
-    return (0, i.jsx)(p.A, {
+    return (0, i.jsx)(g.default, {
         targetElementRef: j,
         user: t,
         channelId: r.id,
@@ -65,11 +65,11 @@ function L(e) {
         children: (e) => {
             let { onClick: n, onMouseDown: l, ...s } = e;
             return (0, i.jsx)(
-                d.A,
+                c.A,
                 {
                     ref: j,
                     user: t,
-                    currentUser: g,
+                    currentUser: p,
                     isOwner: t.id === r.ownerId,
                     ownerTooltipText: v.intl.string(v.t["MRXZ+x"]),
                     shouldAnimateStatus: O,
@@ -110,13 +110,13 @@ function D(e) {
         n = I.default.getCurrentUser(),
         s = n?.isStaff(),
         { analyticsLocations: o } = (0, h.Ay)(u.A.MEMBER_LIST),
-        { listItems: c } = (0, a.bG)(
-            [x.A, I.default, f.A],
+        { listItems: d } = (0, a.bG)(
+            [E.A, I.default, f.A],
             () => {
                 let e = (0, T.F)(t.recipients, I.default),
                     n = {};
                 for (let t of e)
-                    x.A.isFriend(t.id) || t.id === I.default.getCurrentUser()?.id
+                    E.A.isFriend(t.id) || t.id === I.default.getCurrentUser()?.id
                         ? (n[t.id] = {
                               status: f.A.getStatus(t.id) ?? y.clD.OFFLINE,
                               activities: f.A.getActivities(t.id) ?? R,
@@ -135,7 +135,7 @@ function D(e) {
     l.useEffect(() => {
         C.default.track(y.HAw.MEMBER_LIST_VIEWED, { channel_id: t.id, channel_type: t.type, guild_id: t.guild_id });
     }, [t.guild_id, t.id, t.type]);
-    let d = s && c.every((e) => e.user.isStaff());
+    let c = s && d.every((e) => e.user.isStaff());
     return (0, i.jsx)(h.f5, {
         value: o,
         children: (0, i.jsx)("div", {
@@ -146,14 +146,14 @@ function D(e) {
                     className: j.ol,
                     fade: !0,
                     children: [
-                        (0, i.jsxs)(g.A, {
+                        (0, i.jsxs)(p.A, {
                             className: j.lL,
                             children: [
-                                `${v.intl.string(v.t["9Oq93m"])}—${c.length} `,
-                                d && (0, i.jsx)(A.A, { type: A.A.Types.STAFF_ONLY_DM }),
+                                `${v.intl.string(v.t["9Oq93m"])}—${d.length} `,
+                                c && (0, i.jsx)(A.A, { type: A.A.Types.STAFF_ONLY_DM }),
                             ],
                         }),
-                        c.map((e) =>
+                        d.map((e) =>
                             (0, i.jsx)(
                                 L,
                                 { user: e.user, status: e.status, activities: e.activities, channel: t },

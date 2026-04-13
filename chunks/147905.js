@@ -3,7 +3,7 @@ var i = n(627968),
     l = n(64700),
     r = n(503698),
     s = n.n(r),
-    a = n(687498),
+    a = n(294426),
     o = n(311907),
     u = n(397927),
     d = n(442433),
@@ -173,33 +173,33 @@ let z = l.memo(function (e) {
                 connectedOn: W,
                 ref: B,
             } = e,
-            X = (0, o.bG)([C.default], () => C.default.getId() === a.id, [a.id]),
-            { ref: Z, width: K } = (0, m.Ay)(),
+            Z = (0, o.bG)([C.default], () => C.default.getId() === a.id, [a.id]),
+            { ref: X, width: K } = (0, m.Ay)(),
             { showConnectedAnimation: $ } = V(W, b),
             q = j?.sessionId,
-            Q = t.id,
-            J = a.id,
+            J = t.id,
+            Q = a.id,
             [ee] = (0, o.bG)(
                 [R.A],
                 () => [
-                    R.A.getVoiceStateForChannel(Q, J) ?? R.A.getVoiceStateForSession(J, q),
+                    R.A.getVoiceStateForChannel(J, Q) ?? R.A.getVoiceStateForSession(Q, q),
                     R.A.getVoiceStateVersion(),
                 ],
-                [Q, J, q],
+                [J, Q, q],
                 D.D,
             ),
             et = b ? j : (ee ?? j),
             [en, ei, el] = (0, o.yK)(
                 [y.Ay],
                 () =>
-                    X
+                    Z
                         ? [
                               !y.Ay.isSupported() || y.Ay.isSelfMute() || y.Ay.isSelfMutedTemporarily(),
                               y.Ay.isSelfDeaf(),
                               !1,
                           ]
                         : [!y.Ay.isSupported() || y.Ay.isLocalMute(a.id), !1, y.Ay.isLocalVideoDisabled(a.id)],
-                [X, a.id],
+                [Z, a.id],
             ),
             er = (0, o.bG)([N.A], () => {
                 let e = N.A.getCurrentUserActiveStream();
@@ -240,7 +240,7 @@ let z = l.memo(function (e) {
             ef = l.useMemo(() => L(A), [A]),
             eA = l.useMemo(() => k(ef), [ef]),
             eI = l.useMemo(() => a.getAvatarURL(v, eA), [a, v, eA]),
-            eE = (0, o.bG)([M.A], () => M.A.getVoiceVolume(J));
+            eE = (0, o.bG)([M.A], () => M.A.getVoiceVolume(Q));
         return (h === w.f5z.ONLY_WHILE_SPEAKING && em && !ea) || null == et
             ? null
             : n
@@ -255,7 +255,7 @@ let z = l.memo(function (e) {
                         em && (c === w.pwA.NEVER || (!ea && c === w.pwA.ONLY_WHILE_SPEAKING))
                             ? null
                             : (0, i.jsx)(u.YNO, {
-                                  targetElementRef: Z,
+                                  targetElementRef: X,
                                   position: "left",
                                   renderPopout: ec,
                                   shouldShow: G,
@@ -264,7 +264,7 @@ let z = l.memo(function (e) {
                                   children: () =>
                                       (0, i.jsxs)("div", {
                                           className: U.Xh,
-                                          ref: Z,
+                                          ref: X,
                                           children: [
                                               (0, i.jsx)(T.Kc, {
                                                   guildId: v,
@@ -274,10 +274,10 @@ let z = l.memo(function (e) {
                                                   className: U.ZA,
                                                   iconClassName: U.Ow,
                                                   isWatching: er,
-                                                  localMute: en && !X,
+                                                  localMute: en && !Z,
                                                   localVideoDisabled: el,
                                                   mute: et.isVoiceMuted(),
-                                                  deaf: et.isVoiceDeafened() || (ei && !X),
+                                                  deaf: et.isVoiceDeafened() || (ei && !Z),
                                                   serverMute: et.mute || et.suppress,
                                                   serverDeaf: et.deaf,
                                                   disabled: !1,
@@ -305,7 +305,7 @@ let z = l.memo(function (e) {
                                           ],
                                       }),
                               }),
-                        !X &&
+                        !Z &&
                             (0, i.jsx)(z, {
                                 nick: d,
                                 connectedOn: W,
@@ -350,11 +350,11 @@ let z = l.memo(function (e) {
                             },
                             "aria-hidden": !0,
                         }),
-                        !X && (0, i.jsx)(z, { nick: d, connectedOn: W, isSettingsPreview: b, voiceBackgroundWidth: K }),
+                        !Z && (0, i.jsx)(z, { nick: d, connectedOn: W, isSettingsPreview: b, voiceBackgroundWidth: K }),
                         em && (c === w.pwA.NEVER || (!ea && c === w.pwA.ONLY_WHILE_SPEAKING))
                             ? null
                             : (0, i.jsx)(u.YNO, {
-                                  targetElementRef: Z,
+                                  targetElementRef: X,
                                   position: "right",
                                   renderPopout: ec,
                                   shouldShow: G,
@@ -363,7 +363,7 @@ let z = l.memo(function (e) {
                                   children: () =>
                                       (0, i.jsxs)("div", {
                                           className: s()(U.Xh, { [U.$A]: eu }),
-                                          ref: Z,
+                                          ref: X,
                                           children: [
                                               (0, i.jsx)(u.Text, {
                                                   variant: "text-xs/medium",
@@ -393,10 +393,10 @@ let z = l.memo(function (e) {
                                                   className: U.ZA,
                                                   iconClassName: U.Ow,
                                                   isWatching: er,
-                                                  localMute: en && !X,
+                                                  localMute: en && !Z,
                                                   localVideoDisabled: el,
                                                   mute: et.isVoiceMuted(),
-                                                  deaf: et.isVoiceDeafened() || (ei && !X),
+                                                  deaf: et.isVoiceDeafened() || (ei && !Z),
                                                   serverMute: et.mute || et.suppress,
                                                   serverDeaf: et.deaf,
                                                   disabled: !1,
@@ -483,7 +483,7 @@ let z = l.memo(function (e) {
         if (null == p || null == r || null == S) return null;
         let U = u || f;
         return (0, i.jsx)(
-            x.A,
+            x.default,
             {
                 targetElementRef: E,
                 user: p,
