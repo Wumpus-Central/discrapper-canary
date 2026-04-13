@@ -9,7 +9,7 @@ var i = n(627968),
     c = n(240710),
     u = n(654487),
     m = n(985018),
-    h = n(476946);
+    h = n(131111);
 function x(t) {
     let { onClose: e, transitionState: n } = t;
     return (0, i.jsx)(a.Modal, {
@@ -34,19 +34,19 @@ function f(t) {
             rewardContent: f,
             isRewardContentLoading: g,
             rewardContentHasError: C,
-            location: N,
+            location: b,
         } = t,
-        b = l.uF.REWARD_MODAL,
-        [A, p] = s.useState(!0),
-        I = e.config.features.includes(u.Li.NITRO_CONTROL_CTA),
-        j = s.useCallback(async () => {
-            I ? m() : (await (0, o.f7)(e.config.ctaConfig?.link)) && (m(), (0, r.s7G)());
-        }, [e.config.ctaConfig?.link, m, I]);
+        N = l.uF.REWARD_MODAL,
+        [p, A] = s.useState(!0),
+        j = e.config.features.some((t) => u.Tz.has(t)),
+        I = s.useCallback(async () => {
+            j ? m() : (await (0, o.f7)(e.config.ctaConfig?.link)) && (m(), (0, r.s7G)());
+        }, [e.config.ctaConfig?.link, m, j]);
     if (C) return (0, i.jsx)(x, { onClose: m, transitionState: a });
-    let v = g || A;
+    let v = g || p;
     return (0, i.jsx)(d.R, {
         questOrQuests: e,
-        questContent: b,
+        questContent: N,
         sourceQuestContent: n,
         children: (t) =>
             (0, i.jsxs)(i.Fragment, {
@@ -77,9 +77,9 @@ function f(t) {
                                             children: (0, i.jsx)(c.A, {
                                                 quest: e,
                                                 sourceQuestContent: n,
-                                                onLoadComplete: () => p(!1),
-                                                preCtaClick: j,
-                                                location: N,
+                                                onLoadComplete: () => A(!1),
+                                                preCtaClick: I,
+                                                location: b,
                                             }),
                                         }),
                                     ],
