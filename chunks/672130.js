@@ -12,22 +12,22 @@ var s = n(503698),
     m = n(993396);
 let g = (e) => {
     let { disabled: t = !1, application: n, className: s, innerClassName: g } = e,
-        { canStartAuthorization: _, startAuthorization: x, fetched: A } = (0, c.RD)(n);
-    t = t || !A || !_;
-    let { analyticsLocations: h } = (0, d.Ay)(o.A.USER_SETTINGS_CONNECTIONS),
+        { canStartAuthorization: _, startAuthorization: x, fetched: h } = (0, c.RD)(n);
+    t = t || !h || !_;
+    let { analyticsLocations: A } = (0, d.Ay)(o.A.USER_SETTINGS_CONNECTIONS),
         p = u.Ay.getApplicationIconURL({ id: n.id, icon: n.icon });
     return (0, i.jsx)(r.m_, {
         text: n.name,
         children: (0, i.jsx)("div", {
-            className: l()(m.i, s),
+            className: l()(m.iE, s),
             children: (0, i.jsx)(a.vN3, {
                 children: (0, i.jsx)("button", {
-                    className: l()(m.v, g),
+                    className: l()(m.vW, g),
                     type: "button",
-                    style: { backgroundImage: `url('${p}')` },
-                    onClick: () => x({ analyticsLocations: h }),
+                    onClick: () => x({ analyticsLocations: A }),
                     "aria-label": n.name,
                     disabled: t,
+                    children: (0, i.jsx)("img", { className: m.Kk, src: p, height: 28, width: 28, alt: n.name }),
                 }),
             }),
         }),

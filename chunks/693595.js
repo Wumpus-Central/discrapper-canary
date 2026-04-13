@@ -11,6 +11,7 @@ e.exports = {
     cG: "connectionAccountLabelVerified__4109d",
     Au: "connectionAccountLabel__4109d",
     gj: "connectionIcon__4109d",
+    sN: "applicationConnectionIcon__4109d",
     HZ: "connectionOptions__4109d",
     iA: "integrationWrapper__4109d",
     XX: "integration__4109d",

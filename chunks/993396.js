@@ -1,1 +1,1 @@
-e.exports = { i: "wrapper__3fa5b", v: "inner__3fa5b" };
+e.exports = { iE: "wrapper__3fa5b", vW: "inner__3fa5b", Kk: "icon__3fa5b" };

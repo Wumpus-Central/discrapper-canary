@@ -4,6 +4,7 @@ e.exports = {
     Hd: "connectionInfo__9bfb9",
     k_: "platformIconContainer__9bfb9",
     tV: "platformIcon__9bfb9",
+    sN: "applicationConnectionIcon__9bfb9",
     vi: "accountName__9bfb9",
     GW: "accountNameText__9bfb9",
     Y2: "platformUrlAnchor__9bfb9",
