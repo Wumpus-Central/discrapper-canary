@@ -69,17 +69,14 @@ function v(e) {
         { theme: _, saturation: f } = (0, l.wRf)(),
         { highContrastModeEnabled: p } = i.useContext(l.CZY),
         [h, m, E, g] = c.A.colors.TEXT_DEFAULT.resolve({ theme: _, saturation: f, highContrastModeEnabled: p }).rgba();
-    return (0, r.jsxs)("div", {
+    return (0, r.jsx)("div", {
         className: T.yv,
-        children: [
-            (0, r.jsx)("div", { className: T.GY }),
-            (0, r.jsx)(l.u84, {
-                className: a()(T.MO, n),
-                dataBinding: { reducedMotion: s || o, logoColor: { r: h, g: m, b: E, a: g } },
-                eventTargetRef: t,
-                fit: "contain",
-            }),
-        ],
+        children: (0, r.jsx)(l.u84, {
+            className: a()(T.MO, n),
+            dataBinding: { reducedMotion: s || o, logoColor: { r: h, g: m, b: E, a: g } },
+            eventTargetRef: t,
+            fit: "contain",
+        }),
     });
 }
 function N(e) {
