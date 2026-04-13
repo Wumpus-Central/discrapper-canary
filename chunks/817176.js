@@ -47,8 +47,8 @@ function O(e) {
             guildId: O,
             channelId: D,
             analyticsLocations: P,
-            onCardClick: U,
-            onButtonClick: k,
+            onCardClick: k,
+            onButtonClick: U,
         } = e,
         w = l.useRef(null),
         G = (0, d.bG)([p.A], () => (0, c.Mwr)(p.A.theme)),
@@ -57,16 +57,93 @@ function O(e) {
         { guildId: B } = (0, x.nG)(a.applicationId),
         V = (0, d.bG)([m.A], () => m.A.getApplication(a.applicationId)),
         { primaryIconAsset: W, primaryIconLabel: K } = l.useMemo(() => (0, x.Cv)(a, a.applicationId), [a]),
-        { normalPrice: z, discountedPrice: Y } = (0, g.ou)({
-            sku: a,
-            priceSetAssignmentPurchaseType: r ? v.lid.DEFAULT : v.lid.GIFT,
-        }),
-        J = Y ?? z,
-        q = null != J,
-        $ = l.useCallback(
+        {
+            priceComponent: z,
+            extendedHeight: Y,
+            displayPrice: J,
+        } = (function (e) {
+            let { sku: t, priceSetAssignmentPurchaseType: n } = e,
+                {
+                    normalPrice: a,
+                    discountedPrice: s,
+                    discountPercent: r,
+                } = (0, g.ou)({ sku: t, priceSetAssignmentPurchaseType: n }),
+                o = s ?? a,
+                d = l.useMemo(
+                    () =>
+                        null != t && null != t.orbsReward && t.orbsReward > 0
+                            ? (0, i.jsx)("div", {
+                                  className: b.pt,
+                                  children: (0, i.jsx)(u.Text, {
+                                      variant: "text-sm/semibold",
+                                      color: "currentColor",
+                                      children: y.intl.format(y.t.GiVd2Q, {
+                                          orbCount: t.orbsReward,
+                                          orbIconHook: () =>
+                                              (0, i.jsx)(c.Cp8, { size: "xs", color: "currentColor" }, "orbs-icon"),
+                                      }),
+                                  }),
+                              })
+                            : null,
+                    [t],
+                );
+            return null == t || null == o
+                ? { priceComponent: null, extendedHeight: !1, displayPrice: o }
+                : null != r && null != s
+                  ? {
+                        priceComponent: (0, i.jsxs)("div", {
+                            children: [
+                                (0, i.jsxs)("div", {
+                                    className: b.p6,
+                                    children: [
+                                        null != a &&
+                                            (0, i.jsx)(u.Text, {
+                                                className: b.of,
+                                                variant: "text-md/medium",
+                                                color: "text-muted",
+                                                lineClamp: 1,
+                                                children: a,
+                                            }),
+                                        (0, i.jsx)(u.Text, {
+                                            variant: "text-md/bold",
+                                            color: "always-white",
+                                            lineClamp: 1,
+                                            children: s,
+                                        }),
+                                        (0, i.jsxs)(u.Text, {
+                                            variant: "text-md/bold",
+                                            color: "text-feedback-positive",
+                                            lineClamp: 1,
+                                            children: ["(", r, ")"],
+                                        }),
+                                    ],
+                                }),
+                                d,
+                            ],
+                        }),
+                        extendedHeight: null != d,
+                        displayPrice: o,
+                    }
+                  : {
+                        priceComponent: (0, i.jsxs)(i.Fragment, {
+                            children: [
+                                (0, i.jsx)(u.Text, {
+                                    variant: "text-md/bold",
+                                    color: "always-white",
+                                    lineClamp: 1,
+                                    children: a,
+                                }),
+                                d,
+                            ],
+                        }),
+                        extendedHeight: !1,
+                        displayPrice: o,
+                    };
+        })({ sku: a, priceSetAssignmentPurchaseType: r ? v.lid.DEFAULT : v.lid.GIFT }),
+        q = l.useCallback(
             (e) => {
                 e.stopPropagation(),
-                    U?.(),
+                    k?.(),
                     (0, S.R)({
                         skuId: a.id,
                         applicationId: a.applicationId,
@@ -76,23 +153,23 @@ function O(e) {
                         analyticsLocations: P,
                     });
             },
-            [a.id, a.applicationId, s, P, U],
+            [a.id, a.applicationId, s, P, k],
         ),
-        Z = l.useCallback(
+        $ = l.useCallback(
             (e) => {
                 e.stopPropagation(),
-                    k?.(),
+                    U?.(),
                     (0, I.a)(
                         a,
                         { isGift: !r, giftRecipient: s, giftingOrigin: N.vQ.GUILD_CHANNEL },
                         { analyticsLocations: P, guildId: B },
                     );
             },
-            [a, s, r, P, B, k],
+            [a, s, r, P, B, U],
         );
     return (0, i.jsx)(c.vN3, {
         children: (0, i.jsxs)(u.sqX, {
-            onClick: $,
+            onClick: q,
             className: o()(b.Nr, { [b.Zl]: !F, [b.BN]: G, [b.YF]: H }),
             ref: w,
             "aria-label": a.name,
@@ -120,7 +197,7 @@ function O(e) {
                     className: b.zH,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: o()(b.gn, { [b.ov]: !q }),
+                            className: o()(b.gn, { [b.ov]: null == z, [b.w4]: Y }),
                             children: [
                                 null != W && (0, i.jsx)("img", { src: W.toString(), alt: K, className: b.ye }),
                                 (0, i.jsx)(u.Text, {
@@ -131,43 +208,14 @@ function O(e) {
                                 }),
                             ],
                         }),
-                        (0, i.jsxs)("div", {
-                            className: b.iQ,
-                            children: [
-                                q &&
-                                    (0, i.jsx)(u.Text, {
-                                        variant: "text-md/bold",
-                                        color: "always-white",
-                                        lineClamp: 1,
-                                        children: J,
-                                    }),
-                                null != a.orbsReward &&
-                                    a.orbsReward > 0 &&
-                                    (0, i.jsx)("div", {
-                                        className: b.pt,
-                                        children: (0, i.jsx)(u.Text, {
-                                            variant: "text-sm/semibold",
-                                            color: "currentColor",
-                                            children: y.intl.format(y.t.GiVd2Q, {
-                                                orbCount: a.orbsReward,
-                                                orbIconHook: () =>
-                                                    (0, i.jsx)(
-                                                        c.Cp8,
-                                                        { size: "xs", color: "currentColor" },
-                                                        "orbs-icon",
-                                                    ),
-                                            }),
-                                        }),
-                                    }),
-                            ],
-                        }),
+                        (0, i.jsx)("div", { className: b.iQ, children: z }),
                     ],
                 }),
                 (0, i.jsx)("div", {
                     className: b.li,
                     children: (0, i.jsx)(c.$nd, {
                         variant: "primary",
-                        onClick: Z,
+                        onClick: $,
                         text:
                             ((t = J),
                             (n = r),
