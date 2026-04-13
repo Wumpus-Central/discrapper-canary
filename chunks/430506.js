@@ -13,8 +13,8 @@ var l = n(627968),
     A = n(71393),
     h = n(486020),
     C = n(985018),
-    E = n(931059),
-    x = n(241522),
+    E = n(75594),
+    x = n(790665),
     N = n(756362),
     I = n(626715),
     _ = n(427401);
@@ -46,8 +46,8 @@ function f(e) {
         D = d.f[n],
         U = (0, o.rdh)(D.primaryColor).hex(),
         k = (0, o.rdh)(D.secondaryColor).hex({ opacity: 0.2 }),
-        w = (0, s.bG)([A.A], () => A.A.getGuild(S?.guildId)),
-        M = new Intl.NumberFormat(C.intl.currentLocale, { notation: "compact", compactDisplay: "short" }),
+        M = (0, s.bG)([A.A], () => A.A.getGuild(S?.guildId)),
+        w = new Intl.NumberFormat(C.intl.currentLocale, { notation: "compact", compactDisplay: "short" }),
         H = (0, u._V)(R ?? 0),
         K = (0, a.useMemo)(() => {
             let e = [];
@@ -167,9 +167,9 @@ function f(e) {
                                           })
                                         : (0, l.jsxs)(l.Fragment, {
                                               children: [
-                                                  null != w
+                                                  null != M
                                                       ? (0, l.jsx)(p.Ay, {
-                                                            guild: w,
+                                                            guild: M,
                                                             size: p.Ay.Sizes.SMOL,
                                                             className: x.iY,
                                                         })
@@ -213,7 +213,7 @@ function f(e) {
                         className: x.JA,
                         children: [
                             (0, l.jsx)(r.EYj, { variant: "text-xs/normal", className: x.KA, children: "LVL" }),
-                            (0, l.jsx)(r.EYj, { variant: "text-xs/bold", className: x.KA, children: M.format(O ?? 0) }),
+                            (0, l.jsx)(r.EYj, { variant: "text-xs/bold", className: x.KA, children: w.format(O ?? 0) }),
                         ],
                     }),
                 ],

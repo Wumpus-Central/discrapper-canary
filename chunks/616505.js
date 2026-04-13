@@ -16,7 +16,7 @@ var r = n(627968),
     m = n(275106),
     E = n(178090),
     g = n(346640),
-    A = n(429311),
+    A = n(75772),
     I = n(985018),
     T = n(199314),
     S = n(748009);
@@ -56,14 +56,14 @@ function v(e) {
         children: Array.from({ length: t }).map((e, t) => (0, r.jsx)(_.A, { level: t + 1, color: "black" }, t)),
     });
 }
-function C(e, t, n) {
+function N(e, t, n) {
     return t
         ? "basic" === e.type
             ? I.intl.string(e.unlockDescription)
             : I.intl.format(e.unlockDescription, { target: n ?? 0 })
         : "???";
 }
-function N(e) {
+function C(e) {
     let { achievement: t } = e,
         n = g.l8[t],
         i = (0, o.bG)([u.A], () => u.A.getAchievement(t));
@@ -86,7 +86,7 @@ function N(e) {
                 children: [
                     (0, r.jsx)("img", { src: S.A, alt: "", className: T.qE }),
                     (0, r.jsx)(E.A, { className: T.io, variant: "heading-xxl/normal", children: s }),
-                    (0, r.jsx)(E.A, { className: T.nY, variant: "text-md/normal", children: C(n, y, _) }),
+                    (0, r.jsx)(E.A, { className: T.nY, variant: "text-md/normal", children: N(n, y, _) }),
                     (0, r.jsx)("div", { className: T.Lo }),
                     (0, r.jsx)(E.A, {
                         className: T.pR,
@@ -141,7 +141,7 @@ function R(e) {
                 (0, r.jsx)(l.T7Y, {
                     className: T.vd,
                     onScroll: o,
-                    children: y.map((e) => (0, r.jsx)(N, { achievement: e }, e)),
+                    children: y.map((e) => (0, r.jsx)(C, { achievement: e }, e)),
                 }),
             ],
         })

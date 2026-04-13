@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(64700),
     s = n(989349),
     a = n.n(s),
-    o = n(773690),
+    o = n(687498),
     l = n(158954),
     u = n(311907),
     c = n(927813),
@@ -15,7 +15,7 @@ var r = n(627968),
     h = n(178090),
     m = n(602425),
     E = n(346640),
-    g = n(429311),
+    g = n(75772),
     A = n(985018),
     I = n(855293);
 let T = 5 * c.A.Millis.SECOND;
@@ -112,7 +112,7 @@ function v(e) {
               ),
           });
 }
-function C(e) {
+function N(e) {
     let { remainingTime: t } = e,
         n = t > 0 ? a().utc(t).format("mm:ss") : null;
     return null == n
@@ -125,7 +125,7 @@ function C(e) {
               ],
           });
 }
-function N() {
+function C() {
     let e = (0, u.bG)([_.A], () => _.A.getCombatClass()),
         t = E.P6[e ?? E.$6.HEALER];
     return (0, p.W)(t.hoverSound);
@@ -139,7 +139,7 @@ function O(e) {
     let { activity: t, disabled: n, ...s } = e,
         [a, o] = (0, i.useState)(!1),
         l = (0, u.bG)([_.A], () => _.A.getLastRewards(t)),
-        f = N(),
+        f = C(),
         p = R(),
         h = (0, i.useRef)(null),
         [g, A] = (0, i.useState)(new Date().getTime()),
@@ -183,7 +183,7 @@ function O(e) {
             (0, r.jsx)(m.A, { ...s, disabled: n || D, textClassName: I.B7, assetClassName: I.Kw }),
             (0, r.jsx)(y, { rewards: l }),
             (0, r.jsx)(v, { activity: t, hovered: a }),
-            (0, r.jsx)(C, { remainingTime: b }),
+            (0, r.jsx)(N, { remainingTime: b }),
         ],
     });
 }

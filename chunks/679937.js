@@ -1,3 +1,14 @@
-e.exports = JSON.parse(
-    '{"WlENZt":["Hai gi\xe0 adottato il tag di questo server"],"kHxfDw":["Tieni alta la bandiera del tuo server preferito in ogni angolo di Discord."],"OvKPi0":["Adotta il tag di questo server"],"G3qiHu":["Fatti notare con badge esclusivi"],"4ZKDXq":["Aggiornare il tag del tuo server richieder\xe0 a tutti i membri di riapplicare il tag manualmente al proprio profilo. Lo facciamo per evitare gli abusi. ",[8,"$link",["Scopri di pi\xf9"],[[1,"articleUrl"]]]],"X4LEbC":["Cambiare solo il badge non rimuover\xe0 il tag del server dai membri."],"pb7lpK":["Scegli badge"],"zSbMdX":["Scegli colore"],"tN+8pD":["Scegli nome"],"UbC8yx":["Puoi usare al massimo 4 caratteri, lettere (A-Z) e numeri."],"CrHXHt":["Puoi usare al massimo 4 caratteri, lettere e numeri."],"4lP3/H":["Ripristina i colori predefiniti"],"655Uny":["Crea un tag che i membri del tuo server possono mostrare accanto al loro nome! Chiunque al di fuori del tuo server pu\xf2 visualizzare il ",[8,"$link",["profilo del tuo server"],[[1,"onClickServerProfile"]]]," tramite il tag del server e, se le candidature sono consentite, possono ",[8,"$link",["fare domanda per unirsi"],[[1,"onClickApplyToJoin"]]],"."],"1zams8":["Attiva il tag del server"],"idxnf7":["Nascondi i badge bloccati"],"6xBCpG":["Al momento stai usando questo tag del server. Ecco come ti vedranno gli altri."],"eSRKez":["Non hai ancora questo tag del server nel tuo profilo. Ti piacerebbe adottarlo?"],"bpghV6":["qualcuno ha voglia di fare un aram?"],"rnpv79":["ci sto"],"u7tjsh":["guarda il mio tag!"],"GlWVJH":["ehi, come hai fatto a ottenerlo?"],"AIp9hh":["tutti qui possono averlo!"],"CRbkIz":["Il tuo profilo del server \xe8 privato. Gli utenti non potranno visualizzarlo tramite un tag del server. ",[8,"$link",["Modifica impostazioni"],[[1,"onClickEditSetting"]]]],"bFRS/s":["Troppi aggiornamenti dei tag del server. Riprova pi\xf9 tardi."],"2tkPDy":["Mostra tutti i badge"],"mf2OwH":["Tag del server"],"ECl8SQ":["Sblocca con \\"",[1,"packName"],"\\""],"fw2p/x":["Tag del server: ",[1,"tag"]],"4cGHIl":["[",[1,"tag"],"]"]}',
-);
+"use strict";
+e.exports = {
+    kL: "container__1ad33",
+    cy: "author__1ad33",
+    ut: "closeIcon__1ad33",
+    mG: "inline__1ad33",
+    Mg: "discordIcon__1ad33",
+    me: "separator__1ad33",
+    p_: "list__1ad33",
+    ap: "topLevelList__1ad33",
+    t3: "innerList__1ad33",
+    o8: "orderedList__1ad33",
+    zS: "unorderedList__1ad33",
+};

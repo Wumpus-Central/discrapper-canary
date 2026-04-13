@@ -1,17 +1,17 @@
 n.d(t, { A: () => C });
 var i = n(627968),
-    a = n(64700),
+    l = n(64700),
     r = n(503698),
-    l = n.n(r),
+    a = n.n(r),
     s = n(687498),
     o = n(158954),
     d = n(750506),
     c = n(954571),
     u = n(829203),
     A = n(178090),
-    _ = n(652215),
-    h = n(49999),
-    m = n(429311),
+    h = n(652215),
+    _ = n(49999),
+    m = n(75772),
     g = n(985018),
     p = n(44153),
     E = n(980447),
@@ -19,12 +19,12 @@ var i = n(627968),
     f = n(620442);
 function C(e) {
     let { markAsDismissed: t } = e,
-        [n, r] = (0, a.useState)(!1),
+        [n, r] = (0, l.useState)(!1),
         C = (0, o.zhh)({ opacity: +!!n, y: n ? 0 : -40, pointerEvents: n ? "all" : "none" }),
         T = (0, o.zhh)({ y: n ? 0 : -206 });
     return (0, i.jsx)(d.Ay, {
         children: (0, i.jsxs)("div", {
-            className: l()(p.kL, { [p.DM]: n }),
+            className: a()(p.kL, { [p.DM]: n }),
             onMouseLeave: () => r(!1),
             children: [
                 (0, i.jsxs)("div", {
@@ -35,7 +35,7 @@ function C(e) {
                         (0, i.jsx)("img", { src: f.A, alt: g.intl.string(m.default.UnXoXM), className: p.wm }),
                         (0, i.jsx)(o.DUT, {
                             onClick: () => {
-                                (0, u.A)({ source: "coachmark" }), t(h.i.PRIMARY);
+                                (0, u.A)({ source: "coachmark" }), t(_.i.PRIMARY);
                             },
                             "aria-label": g.intl.string(g.t.E4kW5O),
                             className: p.Xk,
@@ -52,7 +52,7 @@ function C(e) {
                             className: p.VH,
                             onClick: () => {
                                 window.open("https://youtu.be/1ViwrDhoG2c", "_blank"),
-                                    c.default.track(_.HAw.APRIL_FOOLS_2026_VIDEO_CLICKED, { source: "coachmark" });
+                                    c.default.track(h.HAw.APRIL_FOOLS_2026_VIDEO_CLICKED, { source: "coachmark" });
                             },
                             children: [
                                 (0, i.jsx)("div", { className: p.NQ, children: (0, i.jsx)(o.udU, { color: "white" }) }),
@@ -76,7 +76,7 @@ function C(e) {
                     style: T,
                     children: (0, i.jsxs)(o.DUT, {
                         onClick: () => {
-                            t(h.i.DISMISS);
+                            t(_.i.DISMISS);
                         },
                         "aria-label": g.intl.string(m.default["6yuu2/"]),
                         className: p.r,

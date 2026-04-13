@@ -12,7 +12,7 @@ var r = n(627968),
     _ = n(311600),
     f = n(549719),
     p = n(346640),
-    h = n(429311),
+    h = n(75772),
     m = n(985018),
     E = n(929916),
     g = n(524794);
@@ -25,19 +25,19 @@ function v() {
     let [e, t] = (0, i.useState)(0),
         [n, s] = (0, i.useState)(!1),
         v = (0, i.useRef)(!1),
-        C = (0, o.bG)([u.A], () => u.A.hasStartedActivity(p.$p.GATHERING)),
-        N = (0, i.useRef)(!1);
+        N = (0, o.bG)([u.A], () => u.A.hasStartedActivity(p.$p.GATHERING)),
+        C = (0, i.useRef)(!1);
     (0, i.useEffect)(() => {
         let e = setInterval(() => {
             t((e) => {
                 let t = Math.max(e - T, 0);
-                return e > 0 && 0 === t && (N.current = !0), t;
+                return e > 0 && 0 === t && (C.current = !0), t;
             });
         }, S);
         return () => clearInterval(e);
     }, []);
     let R = () => {
-        C ||
+        N ||
             v.current ||
             ((v.current = !0),
             (0, l.Ox)({ activity: p.$p.GATHERING }).finally(() => {
@@ -53,8 +53,8 @@ function v() {
         (0, i.useEffect)(() => {
             let r = async () => {
                 s(!0);
-                let e = !N.current;
-                N.current = !1;
+                let e = !C.current;
+                C.current = !1;
                 try {
                     await (0, l.du)({ activity: p.$p.GATHERING });
                 } catch (e) {}

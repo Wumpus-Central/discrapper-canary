@@ -17,13 +17,13 @@ var r = n(627968),
     E = n(178090),
     g = n(547678),
     A = n(346640),
-    I = n(429311),
+    I = n(75772),
     T = n(985018),
     S = n(302235),
     y = n(648863);
 let v = [A.EC.METAL, A.EC.LEATHER, A.EC.WOOD, A.EC.ARMOR, A.EC.MAGIC, A.EC.WEAPON],
-    C = [A.$p.GATHERING, A.$p.CRAFTING, A.$p.COMBAT],
-    N = {
+    N = [A.$p.GATHERING, A.$p.CRAFTING, A.$p.COMBAT],
+    C = {
         [A.$p.GATHERING]: { name: I.default.LOYew8 },
         [A.$p.CRAFTING]: { name: I.default["T9N9+O"] },
         [A.$p.COMBAT]: { name: I.default.RHA67y },
@@ -100,8 +100,8 @@ function L(e) {
                     (0, r.jsx)(D, {
                         label: I.default.i6Y0Ax,
                         statSource: n.activityCompletion,
-                        statKeys: C,
-                        statData: N,
+                        statKeys: N,
+                        statData: C,
                     }),
                     (0, r.jsx)(D, {
                         label: I.default.Jg7n6Y,

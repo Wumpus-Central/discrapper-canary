@@ -13,12 +13,12 @@ n.r(t),
     });
 var r = n(627968),
     i = n(64700),
-    a = n(932433),
-    s = n(791332),
-    o = n.n(s),
+    s = n(919523),
+    a = n(791332),
+    o = n.n(a),
     l = n(356422),
     u = n(226536),
-    c = n(526617);
+    c = n(50134);
 function d(e) {
     return [
         Array.isArray(navigator.languages) ? navigator.languages[0] : null,
@@ -30,34 +30,34 @@ function d(e) {
 }
 let _ = d("en-US"),
     f = (0, u.kt)(_, "en-US"),
-    p = new a.IntlManager({ initialLocale: f, defaultLocale: "en-US" }).withFormatters({
-        format: (0, a.makeReactFormatter)({
+    p = new s.IntlManager({ initialLocale: f, defaultLocale: "en-US" }).withFormatters({
+        format: (0, s.makeReactFormatter)({
             $i: (e, t) => (0, r.jsx)("em", { children: e }, t),
             $b: (e, t) => (0, r.jsx)("strong", { children: e }, t),
             $del: (e, t) => (0, r.jsx)("del", { children: e }, t),
             $p: (e, t) => (0, r.jsx)("p", { children: e }, t),
             $code: (e, t) => (0, r.jsx)("code", { children: e }, t),
             $link: (e, t, r) => {
-                let [a] = r,
-                    { Anchor: s } = n(349288),
+                let [s] = r,
+                    { Anchor: a } = n(349288),
                     l = {};
-                switch (typeof a) {
+                switch (typeof s) {
                     case "string":
-                        l.href = o().sanitizeUrl(a);
+                        l.href = o().sanitizeUrl(s);
                         break;
                     case "function":
                     default:
-                        l.onClick = a;
+                        l.onClick = s;
                         break;
                     case "object":
-                        if (null == a) break;
-                        (l.onClick = a.onClick ?? a), (l.onContextMenu = a.onContextMenu);
+                        if (null == s) break;
+                        (l.onClick = s.onClick ?? s), (l.onContextMenu = s.onContextMenu);
                 }
-                return (0, i.createElement)(s, { ...l, key: t }, e);
+                return (0, i.createElement)(a, { ...l, key: t }, e);
             },
         }),
-        formatToPlainString: a.stringFormatter,
-        formatToMarkdownString: a.markdownFormatter,
-        formatToParts: a.astFormatter,
+        formatToPlainString: s.stringFormatter,
+        formatToMarkdownString: s.markdownFormatter,
+        formatToParts: s.astFormatter,
     }),
     h = (e) => (0, u.tp)(e, p);

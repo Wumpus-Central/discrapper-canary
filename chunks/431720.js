@@ -2,7 +2,7 @@
 n.d(t, { A: () => v });
 var r = n(627968),
     i = n(64700),
-    s = n(773690),
+    s = n(687498),
     a = n(532114),
     o = n(158954),
     l = n(311907),
@@ -11,7 +11,7 @@ var r = n(627968),
     d = n(275106),
     _ = n(178090),
     f = n(346640),
-    p = n(429311),
+    p = n(75772),
     h = n(985018),
     m = n(365321),
     E = n(983266),
@@ -39,10 +39,10 @@ function v(e) {
         })),
         T = null != n && null != o,
         [S, v] = (0, i.useState)(!1),
-        C = (0, i.useCallback)(() => {
+        N = (0, i.useCallback)(() => {
             t(T ? f.Q0.MAIN : f.Q0.INTRO);
         }, [t, T]),
-        N = () => v(!0),
+        C = () => v(!0),
         R = () => v(!1),
         O = y(S),
         b = y(S, !0);
@@ -52,8 +52,8 @@ function v(e) {
             (0, r.jsx)("img", { src: E.A, alt: "", className: m.m9 }),
             (0, r.jsx)("img", { src: g.A, alt: h.intl.string(p.default.UnXoXM), className: m.wm }),
             (0, r.jsxs)(c.A, {
-                onClick: C,
-                onMouseEnter: N,
+                onClick: N,
+                onMouseEnter: C,
                 onMouseLeave: R,
                 clickSound: a.A,
                 className: m.Xk,

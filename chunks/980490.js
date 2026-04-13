@@ -16,14 +16,14 @@ var l = n(627968),
     C = n(253932),
     p = n(53228),
     A = n(985018),
-    b = n(622865),
-    v = n(312396);
+    v = n(75594),
+    b = n(385425);
 function w(e) {
     let { message: t, forwardOptions: n, channel: s } = e,
         w = C.hH.useSetting(),
         {
-            attachments: T,
-            embeds: j,
+            attachments: j,
+            embeds: T,
             hasContent: k,
             contentMessage: y,
         } = (0, p.A)({ message: t, channel: s, forwardOptions: n }),
@@ -47,45 +47,45 @@ function w(e) {
                     : null,
             [y, k, t],
         ),
-        _ = T.length,
-        P = null,
+        P = j.length,
+        _ = null,
         D = null,
         I = null;
-    if (_ > 0 || j.length > 0) {
-        let e = (0, r.countBy)(T, (e) => (0, g.NI)(e, !0)),
+    if (P > 0 || T.length > 0) {
+        let e = (0, r.countBy)(j, (e) => (0, g.NI)(e, !0)),
             t = e.IMAGE ?? 0,
             n = e.VIDEO ?? 0;
         t > 0 && n > 0
-            ? ((P = A.intl.formatToPlainString(A.t.Lr0Top, { image_count: t, video_count: n })), (D = o.sYc))
+            ? ((_ = A.intl.formatToPlainString(A.t.Lr0Top, { image_count: t, video_count: n })), (D = o.sYc))
             : n > 0
-              ? ((P = A.intl.formatToPlainString(A.t.SJ6pPX, { count: n })), (D = o.SfG))
+              ? ((_ = A.intl.formatToPlainString(A.t.SJ6pPX, { count: n })), (D = o.SfG))
               : t > 0
-                ? ((P = A.intl.formatToPlainString(A.t.h4pFfU, { count: t })), (D = 1 === t ? o.xfq : o.sYc))
-                : ((P = A.intl.formatToPlainString(A.t["89ihS8"], { count: _ })), (D = o.PtA)),
-            n > 0 && _ === n
+                ? ((_ = A.intl.formatToPlainString(A.t.h4pFfU, { count: t })), (D = 1 === t ? o.xfq : o.sYc))
+                : ((_ = A.intl.formatToPlainString(A.t["89ihS8"], { count: P })), (D = o.PtA)),
+            n > 0 && P === n
                 ? (I = (0, l.jsxs)("div", {
-                      className: i()(v.cR, v.JZ),
+                      className: i()(b.cR, b.JZ),
                       children: [
-                          (0, l.jsx)(m.Ay, { className: v.xn, src: T[0].proxy_url, width: 56, height: 56 }),
-                          (0, l.jsx)(o.SfG, { className: v.uZ, size: "md", color: "white" }),
+                          (0, l.jsx)(m.Ay, { className: b.xn, src: j[0].proxy_url, width: 56, height: 56 }),
+                          (0, l.jsx)(o.SfG, { className: b.uZ, size: "md", color: "white" }),
                       ],
                   }))
-                : _ > 0
+                : P > 0
                   ? (I = (0, l.jsx)("div", {
-                        className: v.cR,
-                        children: (0, l.jsx)(m.Ay, { src: T[0].proxy_url, width: 56, height: 56 }),
+                        className: b.cR,
+                        children: (0, l.jsx)(m.Ay, { src: j[0].proxy_url, width: 56, height: 56 }),
                     }))
-                  : j[0]?.thumbnail?.proxyURL != null &&
+                  : T[0]?.thumbnail?.proxyURL != null &&
                     (I = (0, l.jsx)("div", {
-                        className: v.cR,
-                        children: (0, l.jsx)(m.Ay, { src: j[0].thumbnail.proxyURL, width: 56, height: 56 }),
+                        className: b.cR,
+                        children: (0, l.jsx)(m.Ay, { src: T[0].thumbnail.proxyURL, width: 56, height: 56 }),
                     }));
     }
     return (
-        _ > 1 &&
+        P > 1 &&
             null != I &&
             (I = (0, l.jsxs)("div", {
-                className: v.EW,
+                className: b.EW,
                 children: [
                     (0, l.jsx)(h.Ay, {
                         mask: h.Ay.Masks.FORWARD_ATTACHMENT_PILE_OVERFLOW,
@@ -94,34 +94,34 @@ function w(e) {
                         children: I,
                     }),
                     (0, l.jsxs)(o.Text, {
-                        className: v.mB,
+                        className: b.mB,
                         variant: "text-xs/semibold",
                         color: "text-default",
-                        children: ["+", _ - 1],
+                        children: ["+", P - 1],
                     }),
                 ],
             })),
         (0, l.jsxs)("div", {
-            className: v.sq,
+            className: b.sq,
             children: [
                 (0, l.jsxs)("div", {
-                    className: v.FG,
+                    className: b.FG,
                     children: [
                         null != R &&
                             (0, l.jsx)(o.Text, {
                                 variant: "text-md/medium",
-                                children: A.intl.string(b.default.goiR2u),
+                                children: A.intl.string(v.default.goiR2u),
                             }),
                         k &&
                             (0, l.jsx)(x.Ay, {
-                                className: i()(v.vp, _ > 0 && v.NL),
+                                className: i()(b.vp, P > 0 && b.NL),
                                 message: t,
                                 content: N,
                                 compact: w,
                             }),
-                        _ > 0 &&
+                        P > 0 &&
                             (0, l.jsxs)("div", {
-                                className: v.kp,
+                                className: b.kp,
                                 children: [
                                     null != D &&
                                         (0, l.jsx)(D, {
@@ -129,11 +129,11 @@ function w(e) {
                                             width: k ? 18 : 20,
                                             color: o.LU0.colors.TEXT_MUTED,
                                         }),
-                                    null != P &&
+                                    null != _ &&
                                         (0, l.jsx)(o.Text, {
                                             variant: k ? "text-sm/medium" : "text-md/medium",
                                             color: "text-muted",
-                                            children: P,
+                                            children: _,
                                         }),
                                 ],
                             }),
@@ -142,7 +142,7 @@ function w(e) {
                 I,
                 null != R &&
                     (0, l.jsx)("div", {
-                        className: v.cR,
+                        className: b.cR,
                         children: (0, l.jsx)("img", {
                             alt: "",
                             style: { backgroundColor: M },

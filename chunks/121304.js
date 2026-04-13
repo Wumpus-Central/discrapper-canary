@@ -2,12 +2,12 @@ n.d(t, { g: () => u }), n(627968), n(64700), n(192308);
 var i = n(31502),
     s = n(773669),
     l = n(927578),
-    a = n(580630),
-    r = n(788868),
+    r = n(580630),
+    a = n(788868),
     o = n(652215),
     d = n(985018);
-n(418483);
-var c = n(927961);
+n(53176);
+var c = n(486844);
 let u = () => {
     (0, i.l)("premium_marketing_comparison");
     let e = [
@@ -81,8 +81,8 @@ let u = () => {
                 {
                     id: 4,
                     label: d.intl.string(d.t["ufhQC+"]),
-                    tier0ColumnData: { text: (0, l.EJ)(r.PremiumTypes.TIER_0) },
-                    tier2ColumnData: { text: (0, l.EJ)(r.PremiumTypes.TIER_2) },
+                    tier0ColumnData: { text: (0, l.EJ)(a.PremiumTypes.TIER_0) },
+                    tier2ColumnData: { text: (0, l.EJ)(a.PremiumTypes.TIER_2) },
                 },
                 {
                     id: 11,
@@ -111,8 +111,8 @@ let u = () => {
                 {
                     id: 6,
                     label: d.intl.formatToPlainString(d.t.nyhDpw, {
-                        numBoosts: r.M4,
-                        percentageOff: (0, a.l9)(s.default.locale, r.oX / 100),
+                        numBoosts: a.M4,
+                        percentageOff: (0, r.l9)(s.default.locale, a.oX / 100),
                     }),
                     tier0ColumnData: { includes: !1 },
                     tier2ColumnData: { includes: !0 },

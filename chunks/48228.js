@@ -9,7 +9,7 @@ var r = n(627968),
     u = n(21086),
     c = n(535445),
     d = n(346640),
-    _ = n(429311),
+    _ = n(75772),
     f = n(985018),
     p = n(470213),
     h = n(983266),
@@ -44,10 +44,10 @@ function v(e) {
             shouldTransition: S,
         } = (0, c.A)(n),
         v = `${E}/${g}`,
-        C = o.some((e) => null != e.hitAt);
+        N = o.some((e) => null != e.hitAt);
     return (0, r.jsx)(a.bfh, {
         className: p.Xn,
-        isShaking: C,
+        isShaking: N,
         children: (0, r.jsx)(l.A, {
             score: v,
             activityDescription: f.intl.string(_.default.eMkJIO),

@@ -1,61 +1,40 @@
-e.d(n, { default: () => d });
-var s = e(627968),
-    i = e(64700),
-    o = e(158954),
-    a = e(311907),
-    u = e(116833),
-    r = e(829219),
-    E = e(859703),
-    T = e(341915),
-    c = e(714510),
-    C = e(890687),
-    l = e(590202),
-    _ = e(73473),
-    L = e(654487),
-    N = e(985018);
-function A(t) {
-    let { transitionState: n, onClose: e, quest: _, showSkipButton: A } = t,
-        d = (0, C.fc)(_),
-        U = (0, c.mU)({
-            quest: _,
-            taskDetails: d,
-            location: L.rE.QUEST_ACTIVITY_UNENROLLED_MODAL,
-            questContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
-            sourceQuestContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
-        }),
-        p = (0, a.bG)([E.A], () => E.A.isEnrolling(_.id)),
-        I = i.useCallback(async () => {
-            await (0, r.Oy)(_.id, {
-                questContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
-                questContentCTA: l.Cy.START_QUEST,
-                sourceQuestContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
-            }),
-                e();
-        }, [_.id, e]),
-        O = i.useCallback(() => ((0, r.Zb)(_.id), e()), [_.id, e]);
-    return (0, s.jsx)(o.ExpressiveModal, {
-        transitionState: n,
-        onClose: O,
-        graphic: {
-            type: "dynamic",
-            component: u.DynamicGraphicComponent.QUEST_ACTIVITY_UNENROLLED,
-            props: { quest: _ },
+n.r(t), n.d(t, { default: () => a, messagesLoader: () => l });
+let { createLoader: r } = n(919523),
+    l = r(
+        {
+            bg: () => n.e("29440").then(n.t.bind(n, 663299, 19)),
+            cs: () => n.e("19255").then(n.t.bind(n, 594762, 19)),
+            da: () => n.e("68448").then(n.t.bind(n, 344291, 19)),
+            de: () => n.e("63988").then(n.t.bind(n, 32671, 19)),
+            el: () => n.e("19594").then(n.t.bind(n, 309873, 19)),
+            "en-GB": () => n.e("51834").then(n.t.bind(n, 751969, 19)),
+            "es-419": () => n.e("42676").then(n.t.bind(n, 870943, 19)),
+            "es-ES": () => n.e("65914").then(n.t.bind(n, 651489, 19)),
+            fi: () => n.e("39482").then(n.t.bind(n, 847713, 19)),
+            fr: () => n.e("90673").then(n.t.bind(n, 901064, 19)),
+            hi: () => n.e("40268").then(n.t.bind(n, 989031, 19)),
+            hr: () => n.e("7671").then(n.t.bind(n, 808234, 19)),
+            hu: () => n.e("30496").then(n.t.bind(n, 985283, 19)),
+            it: () => n.e("25198").then(n.t.bind(n, 979837, 19)),
+            ja: () => n.e("95078").then(n.t.bind(n, 249733, 19)),
+            ko: () => n.e("4883").then(n.t.bind(n, 528862, 19)),
+            lt: () => n.e("91973").then(n.t.bind(n, 106436, 19)),
+            nl: () => n.e("50015").then(n.t.bind(n, 841410, 19)),
+            no: () => n.e("3836").then(n.t.bind(n, 156471, 19)),
+            pl: () => n.e("36185").then(n.t.bind(n, 769888, 19)),
+            "pt-BR": () => n.e("94570").then(n.t.bind(n, 585233, 19)),
+            ro: () => n.e("4760").then(n.t.bind(n, 57067, 19)),
+            ru: () => n.e("38698").then(n.t.bind(n, 395505, 19)),
+            "sv-SE": () => n.e("86451").then(n.t.bind(n, 276350, 19)),
+            th: () => n.e("51361").then(n.t.bind(n, 963928, 19)),
+            tr: () => n.e("80483").then(n.t.bind(n, 589486, 19)),
+            uk: () => n.e("3645").then(n.t.bind(n, 856332, 19)),
+            vi: () => n.e("93514").then(n.t.bind(n, 586225, 19)),
+            "zh-CN": () => n.e("9647").then(n.t.bind(n, 133996, 19)),
+            "zh-TW": () => n.e("21507").then(n.t.bind(n, 374254, 19)),
+            "en-US": () => n.e("79911").then(n.bind(n, 716634)),
         },
-        gradientColor: "blue",
-        title: N.intl.string(N.t.IrNgN4),
-        subtitle: `${N.intl.format(N.t.V3NSJx, { questName: _.config.messages.questName })} ${U}`,
-        actions: [
-            ...(A ? [{ text: N.intl.string(N.t["5Wxrcd"]), variant: "secondary", onClick: O }] : []),
-            { text: N.intl.string(N.t.l7E81v), variant: "primary", onClick: I, loading: p },
-        ],
-    });
-}
-function d(t) {
-    let { quest: n, showSkipButton: e, transitionState: i, onClose: o } = t;
-    return (0, s.jsx)(_.R, {
-        questOrQuests: n,
-        questContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
-        sourceQuestContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
-        children: () => (0, s.jsx)(A, { quest: n, transitionState: i, onClose: o, showSkipButton: e }),
-    });
-}
+        "en-US",
+    ),
+    { makeMessagesProxy: s } = n(919523),
+    a = s(l);
