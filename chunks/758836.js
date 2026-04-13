@@ -448,6 +448,11 @@ var P = (function (e) {
         (e.BUNDLE_VIEW_PROFILE_EFFECT = "bundle_view_profile_effect"),
         (e.BUNDLE_VIEW_NAMEPLATE = "bundle_view_nameplate"),
         (e.FULL_PROFILE_PREVIEW = "full_profile_preview"),
+        (e.VIEW_DETAILS = "view_details"),
+        (e.PAYMENT_OPTIONS = "payment_options"),
+        (e.OPEN_DETAILS = "open_details"),
+        (e.VARIANT_CLICK = "variant_click"),
+        (e.VARIANT_CLICK_MORE = "variant_click_more"),
         e
     );
 })({});

@@ -1,105 +1,109 @@
-r.d(t, { A: () => U });
+r.d(t, { A: () => M });
 var n = r(627968);
 r(64700);
 var l = r(417597),
     i = r(397927),
     s = r(793574),
     a = r(688810),
-    u = r(44120),
-    o = r(725807),
+    o = r(44120),
+    u = r(725807),
     c = r(106799),
     d = r(652165),
-    m = r(287809),
-    h = r(927578),
-    p = r(979286),
-    f = r(4227),
+    p = r(287809),
+    C = r(927578),
+    k = r(979286),
+    m = r(4227),
     x = r(298072),
     g = r(993408),
-    C = r(640634),
-    v = r(450481),
+    h = r(640634),
+    I = r(450481),
     A = r(740076),
-    k = r(466459),
-    b = r(623373),
-    I = r(561769),
-    E = r(766172),
-    y = r(525723),
-    j = r(57020),
-    R = r(61750),
-    _ = r(758836),
-    T = r(788868),
-    L = r(985018),
+    v = r(466459),
+    f = r(623373),
+    _ = r(561769),
+    T = r(766172),
+    E = r(525723),
+    y = r(57020),
+    j = r(61750),
+    b = r(758836),
+    R = r(788868),
+    P = r(985018),
     S = r(270001);
-let P = (e) => {
+let O = (e) => {
         let {
                 product: t,
                 cardRef: r,
                 isPremiumUser: l,
                 analyticsLocations: s,
                 selectedVariantIndex: a,
-                hasDiscountOffer: o,
+                hasDiscountOffer: u,
                 discountOfferAmount: c,
                 text: d,
+                onTrackClick: p,
             } = e,
-            m = (0, g.R8)(t, l, !1),
-            h = o
-                ? L.intl.formatToPlainString(L.t["5U5RB5"], { discountOfferAmount: c })
-                : L.intl.formatToPlainString(L.t["cNSL/j"], { price: m });
+            C = (0, g.R8)(t, l, !1),
+            k = u
+                ? P.intl.formatToPlainString(P.t["5U5RB5"], { discountOfferAmount: c })
+                : P.intl.formatToPlainString(P.t["cNSL/j"], { price: C });
         return (0, n.jsx)(i.Button, {
             variant: "primary",
             onClick: (e) => {
                 e.stopPropagation(),
-                    (0, u.A)({
-                        skuId: (0, E.Y)({ product: t, selectedVariantIndex: a }),
+                    p?.(b.sH.BUY_WITH_FIAT),
+                    (0, o.A)({
+                        skuId: (0, T.Y)({ product: t, selectedVariantIndex: a }),
                         returnRef: r,
                         analyticsLocations: s,
                     });
             },
-            text: d ?? h,
+            text: d ?? k,
             fullWidth: !0,
         });
     },
     N = (e) => {
-        let { isClaimPremiumProductDisabled: t, text: r } = e;
-        return (0, n.jsx)(o.A, {
+        let { isClaimPremiumProductDisabled: t, text: r, onTrackClick: l } = e;
+        return (0, n.jsx)(u.A, {
             fullWidth: !0,
             disabled: t,
-            onClick: (e) => e.stopPropagation(),
-            textOptions: { textOverride: r ?? L.intl.string(L.t.sEAnVH) },
-            subscriptionTier: T.pe.TIER_2,
+            onClick: (e) => {
+                e.stopPropagation(), l?.(b.sH.UNLOCK_WITH_NITRO);
+            },
+            textOptions: { textOverride: r ?? P.intl.string(P.t.sEAnVH) },
+            subscriptionTier: R.pe.TIER_2,
             showGradient: !0,
         });
     },
-    O = (e) => {
-        let { handlePreviewButtonClick: t, text: r } = e;
+    L = (e) => {
+        let { handlePreviewButtonClick: t, text: r, onTrackClick: l } = e;
         return (0, n.jsx)(i.Button, {
             variant: "primary",
             onClick: (e) => {
-                e.stopPropagation(), t(e);
+                e.stopPropagation(), l?.(b.sH.VIEW_DETAILS), t(e);
             },
-            text: r ?? L.intl.string(L.t.FdGl5A),
+            text: r ?? P.intl.string(P.t.FdGl5A),
             fullWidth: !0,
         });
     },
     V = (e) => {
-        let { handleUseNow: t, isApplying: r, text: l } = e;
+        let { handleUseNow: t, isApplying: r, text: l, onTrackClick: s } = e;
         return (0, n.jsx)(i.Button, {
             variant: "primary",
             onClick: (e) => {
-                e.stopPropagation(), t();
+                e.stopPropagation(), s?.(b.sH.USE_NOW), t();
             },
             loading: r,
-            text: l ?? L.intl.string(L.t.MAS7uK),
+            text: l ?? P.intl.string(P.t.MAS7uK),
             fullWidth: !0,
         });
     },
-    w = (e) => {
+    H = (e) => {
         let { skuId: t, onClick: r, text: l } = e;
         return (0, n.jsx)(i.Button, {
             variant: "primary",
             onClick: (e) => {
                 e.stopPropagation(), r(t);
             },
-            text: l ?? L.intl.string(L.t.FdGl5A),
+            text: l ?? P.intl.string(P.t.FdGl5A),
             fullWidth: !0,
         });
     },
@@ -110,157 +114,174 @@ let P = (e) => {
                 isClaiming: l,
                 analyticsLocations: s,
                 text: a,
-                onClickAnalytics: u,
+                onClickAnalytics: o,
+                onTrackClick: u,
             } = e,
-            o = async () => {
-                u?.("claim premium product button"),
-                    await (0, p.iJ)(t.skuId),
-                    (0, R.A)({ product: t, analyticsLocations: s, purchaseType: _.gs.PREMIUM_PURCHASE });
+            c = async () => {
+                o?.("claim premium product button"),
+                    u?.(b.sH.ADD_TO_COLLECTION),
+                    await (0, k.iJ)(t.skuId),
+                    (0, j.A)({ product: t, analyticsLocations: s, purchaseType: b.gs.PREMIUM_PURCHASE });
             };
         return (0, n.jsx)(i.Button, {
             variant: "primary",
             onClick: (e) => {
-                e.stopPropagation(), o();
+                e.stopPropagation(), c();
             },
             disabled: r,
             loading: l,
-            loadingStartedLabel: L.intl.string(L.t["TYw+9s"]),
-            loadingFinishedLabel: L.intl.string(L.t.Pg1UP5),
-            text: a ?? L.intl.string(L.t.zp6caO),
+            loadingStartedLabel: P.intl.string(P.t["TYw+9s"]),
+            loadingFinishedLabel: P.intl.string(P.t.Pg1UP5),
+            text: a ?? P.intl.string(P.t.zp6caO),
             fullWidth: !0,
         });
     },
-    M = (e) => {
+    w = (e) => {
         let {
                 product: t,
                 checkoutEligiblePrices: r,
                 analyticsLocations: l,
                 selectedVariantIndex: s,
                 text: a,
-                onClickAnalytics: u,
+                onClickAnalytics: o,
+                onTrackClick: u,
             } = e,
-            o = (0, C.l)("collectibles_shop_product_card");
+            p = (0, h.l)("collectibles_shop_product_card");
         return (0, n.jsx)(i.Button, {
             variant: "primary",
             text:
                 a ??
-                L.intl.format(o ? L.t.JC15qj : L.t.lOtBOI, {
+                P.intl.format(p ? P.t.JC15qj : P.t.lOtBOI, {
                     orbPrice: r[0].amount,
                     orbIconHook: () => (0, n.jsx)(c.A, { className: S.f }),
                 }),
             onClick: (e) => {
                 e.stopPropagation(),
-                    u?.("claim with orbs button"),
+                    o?.("claim with orbs button"),
+                    u?.(b.sH.BUY_WITH_ORBS),
                     (0, d.B4)({
-                        skuId: (0, E.Y)({ product: t, selectedVariantIndex: s }),
+                        skuId: (0, T.Y)({ product: t, selectedVariantIndex: s }),
                         onCheckoutSuccess: (e) => {
                             let { entitlements: r } = e;
-                            (0, p.gB)(),
-                                (0, R.A)({
+                            (0, k.gB)(),
+                                (0, j.A)({
                                     product: t,
                                     analyticsLocations: l,
                                     itemConsumed: r[0]?.consumed,
-                                    purchaseType: _.gs.ORB,
+                                    purchaseType: b.gs.ORB,
                                 });
                         },
                         analyticsLocations: l,
                     });
             },
-            "aria-label": L.intl.formatToPlainString(L.t.yi41qQ, { orbPrice: r[0].amount }),
+            "aria-label": P.intl.formatToPlainString(P.t.yi41qQ, { orbPrice: r[0].amount }),
+            fullWidth: !0,
+        });
+    },
+    U = (e) => {
+        let { handlePreviewButtonClick: t, text: r, onTrackClick: l } = e;
+        return (0, n.jsx)(i.Button, {
+            variant: "primary",
+            onClick: (e) => {
+                e.stopPropagation(), l?.(b.sH.PAYMENT_OPTIONS), t(e);
+            },
+            text: r ?? P.intl.string(P.t.GpnHfH),
             fullWidth: !0,
         });
     },
     D = (e) => {
-        let { handlePreviewButtonClick: t, text: r } = e;
-        return (0, n.jsx)(i.Button, {
-            variant: "primary",
-            onClick: (e) => {
-                e.stopPropagation(), t(e);
-            },
-            text: r ?? L.intl.string(L.t.GpnHfH),
-            fullWidth: !0,
-        });
-    },
-    H = (e) => {
         let {
                 product: t,
                 cardRef: r,
                 selectedVariantIndex: i,
-                onClick: u,
-                text: o,
+                onClick: o,
+                text: u,
                 prioritizedCurrency: c,
                 onClickAnalytics: d,
+                onTrackClick: k,
             } = e,
-            p = (0, l.bG)([m.default], () => m.default.getCurrentUser()),
-            x = h.Ay.canUseCollectibles(p),
-            { isPurchased: C, isPartiallyOwnedBundle: b } = (0, k.h)(t),
-            E = (0, g.G0)(t),
-            R = (0, g.tt)(t),
-            { isDisabled: _ } = (0, A.I)(t.skuId),
-            T = (0, g.Zu)({ product: t, isPartiallyOwnedBundle: b, isPurchased: C }),
-            L = (0, y.V_)(t),
-            S = null != L,
+            x = (0, l.bG)([p.default], () => p.default.getCurrentUser()),
+            h = C.Ay.canUseCollectibles(x),
+            { isPurchased: f, isPartiallyOwnedBundle: T } = (0, v.h)(t),
+            j = (0, g.G0)(t),
+            b = (0, g.tt)(t),
+            { isDisabled: R } = (0, A.I)(t.skuId),
+            P = (0, g.Zu)({ product: t, isPartiallyOwnedBundle: T, isPurchased: f }),
+            S = (0, E.V_)(t),
+            D = null != S,
             {
-                shouldCheckoutWithOrbs: H,
-                hasSufficientOrbs: U,
-                checkoutEligiblePrices: W,
-            } = (0, j.F)({ product: t, isPremiumUser: x, prioritizedCurrency: c, hasDiscountOffer: S }),
-            { analyticsLocations: G } = (0, a.Ay)(s.A.COLLECTIBLES_SHOP_CARD),
-            F = (0, I.ql)(t, s.A.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON, d),
-            [z, K] = (0, l.yK)([f.A], () => [
-                f.A.isClaiming === t.skuId,
-                null != f.A.isClaiming && f.A.isClaiming !== t.skuId,
+                shouldCheckoutWithOrbs: M,
+                hasSufficientOrbs: W,
+                checkoutEligiblePrices: G,
+            } = (0, y.F)({ product: t, isPremiumUser: h, prioritizedCurrency: c, hasDiscountOffer: D }),
+            { analyticsLocations: F } = (0, a.Ay)(s.A.COLLECTIBLES_SHOP_CARD),
+            z = (0, _.ql)(t, s.A.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON, d),
+            [K, Y] = (0, l.yK)([m.A], () => [
+                m.A.isClaiming === t.skuId,
+                null != m.A.isClaiming && m.A.isClaiming !== t.skuId,
             ]),
-            { handleUseNow: Q, isApplying: Y } = (0, v.p)({ product: t });
-        if (null != u) return (0, n.jsx)(w, { onClick: u, skuId: t.skuId, text: o });
-        if (E && !x && !R) return (0, n.jsx)(N, { isClaimPremiumProductDisabled: K, text: o });
-        if (!T || _) return (0, n.jsx)(O, { handlePreviewButtonClick: F, text: o });
-        if (C) return (0, n.jsx)(V, { handleUseNow: Q, isApplying: Y, text: o });
-        if (E)
+            { handleUseNow: Q, isApplying: q } = (0, I.p)({ product: t });
+        if (null != o) return (0, n.jsx)(H, { onClick: o, skuId: t.skuId, text: u });
+        if (j && !h && !b) return (0, n.jsx)(N, { isClaimPremiumProductDisabled: Y, text: u, onTrackClick: k });
+        if (!P || R) return (0, n.jsx)(L, { handlePreviewButtonClick: z, text: u, onTrackClick: k });
+        if (f) return (0, n.jsx)(V, { handleUseNow: Q, isApplying: q, text: u, onTrackClick: k });
+        if (j)
             return (0, n.jsx)(B, {
                 product: t,
-                isClaimPremiumProductDisabled: K,
-                isClaiming: z,
-                analyticsLocations: G,
-                text: o,
+                isClaimPremiumProductDisabled: Y,
+                isClaiming: K,
+                analyticsLocations: F,
+                text: u,
                 onClickAnalytics: d,
+                onTrackClick: k,
             });
-        if (H && U)
-            return (0, n.jsx)(M, {
+        if (M && W)
+            return (0, n.jsx)(w, {
                 product: t,
-                checkoutEligiblePrices: W,
-                analyticsLocations: G,
+                checkoutEligiblePrices: G,
+                analyticsLocations: F,
                 selectedVariantIndex: i,
-                text: o,
+                text: u,
                 onClickAnalytics: d,
+                onTrackClick: k,
             });
-        if (H && !U)
-            if (W.length > 1) return (0, n.jsx)(D, { handlePreviewButtonClick: F, text: o });
-            else return (0, n.jsx)(O, { handlePreviewButtonClick: F, text: o });
-        return (0, n.jsx)(P, {
+        if (M && !W)
+            if (G.length > 1) return (0, n.jsx)(U, { handlePreviewButtonClick: z, text: u, onTrackClick: k });
+            else return (0, n.jsx)(L, { handlePreviewButtonClick: z, text: u, onTrackClick: k });
+        return (0, n.jsx)(O, {
             product: t,
             cardRef: r,
-            isPremiumUser: x,
-            analyticsLocations: G,
+            isPremiumUser: h,
+            analyticsLocations: F,
             selectedVariantIndex: i,
-            hasDiscountOffer: S,
-            discountOfferAmount: L,
-            text: o,
+            hasDiscountOffer: D,
+            discountOfferAmount: S,
+            text: u,
+            onTrackClick: k,
         });
     },
-    U = (e) => {
-        let { skuId: t, cardRef: r, onClick: l, text: i, prioritizedCurrency: s, onClickAnalytics: a } = e,
-            u = (0, I.Vm)(t),
-            o = (0, x.Q)(u);
+    M = (e) => {
+        let {
+                skuId: t,
+                cardRef: r,
+                onClick: l,
+                text: i,
+                prioritizedCurrency: s,
+                onClickAnalytics: a,
+                onTrackClick: o,
+            } = e,
+            u = (0, _.Vm)(t),
+            c = (0, x.Q)(u);
         if (null == u) return null;
-        let c = (0, b.rb)(u, o);
-        return (0, n.jsx)(H, {
-            product: c,
+        let d = (0, f.rb)(u, c);
+        return (0, n.jsx)(D, {
+            product: d,
             cardRef: r,
-            selectedVariantIndex: o,
+            selectedVariantIndex: c,
             onClick: l,
             text: i,
             prioritizedCurrency: s,
             onClickAnalytics: a,
+            onTrackClick: o,
         });
     };

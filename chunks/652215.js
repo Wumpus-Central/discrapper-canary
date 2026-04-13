@@ -5029,6 +5029,7 @@ var nl = (function (e) {
             (e.COLLECTIBLES_SHOP_FEED_SORT_CHANGED = "collectibles_shop_feed_sort_changed"),
             (e.SHOP_CARD_HOVERED = "shop_card_hovered"),
             (e.SHOP_PRODUCT_DETAIL_PAGE_CLICKED = "shop_product_detail_page_clicked"),
+            (e.SHOP_CARD_CLICKED = "shop_card_clicked"),
             (e.SLIDE_CAROUSEL_ITEM_VIEWED = "slide_carousel_item_viewed"),
             (e.SLIDE_CAROUSEL_PAGINATION_CLICKED = "slide_carousel_pagination_clicked"),
             (e.SHOP_HEADER_CAROUSEL_CTA_CLICKED = "shop_header_carousel_cta_clicked"),
