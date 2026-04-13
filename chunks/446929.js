@@ -49,7 +49,7 @@ var r = n(627968),
 n(26279);
 var F = n(818348),
     V = n(985018),
-    B = n(515823);
+    B = n(239746);
 function H(e, t) {
     let { isEligibleForBOGOPromotion: n } = t;
     return null != e && !n;
@@ -518,15 +518,16 @@ function ee(e) {
             switchPlanSelectComponent: er(),
             warningComponent: Q({ shouldShowHRKEuroWarning: K, selectedPlanPrice: Y }),
         });
-    let ea = !(T && ei),
+    let ea = !(T && ei && !et),
         eo = H(E, { isEligibleForBOGOPromotion: g });
     return (0, r.jsxs)("div", {
         children: [
             ei &&
+                !et &&
                 (0, r.jsx)(w.vi, {
                     fractionalPremiumInfo: es,
-                    enablePremiumBrandRefresh: !et,
-                    variant: et ? w.uA.REVERSE_TRIAL : T ? w.uA.TRIAL : void 0,
+                    enablePremiumBrandRefresh: !0,
+                    variant: T ? w.uA.TRIAL : void 0,
                     trialPeriod: T ? ee : void 0,
                     trialEnd: T ? o : void 0,
                 }),

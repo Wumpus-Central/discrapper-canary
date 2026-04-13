@@ -13,7 +13,7 @@ var r = n(627968),
     f = n(927578),
     p = n(652215),
     h = n(985018),
-    m = n(252101);
+    m = n(650634);
 class E extends i.Component {
     state = {
         hasAcceptedEULA: !this.props.forceShow && this.props.hasPreviouslyAcceptedEULA,
@@ -42,13 +42,12 @@ class E extends i.Component {
                 showPricingLink: f,
                 showWithdrawalWaiver: E,
                 isTrial: A,
-                inReverseTrial: I,
-                isDiscount: T,
-                subscriptionPlan: S,
-                finePrintClassname: y,
+                isDiscount: I,
+                subscriptionPlan: T,
+                finePrintClassname: S,
             } = this.props,
-            { hasAcceptedEULA: v, hasAcceptedWithdrawalWaiver: N } = this.state;
-        return (l()(!A || null != S, "subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true"),
+            { hasAcceptedEULA: y, hasAcceptedWithdrawalWaiver: v } = this.state;
+        return (l()(!A || null != T, "subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true"),
         s || (null != e && !i) || E)
             ? (0, r.jsxs)("div", {
                   className: u,
@@ -61,7 +60,7 @@ class E extends i.Component {
                           }),
                       null != e && (s || !i)
                           ? (0, r.jsx)(c.Checkbox, {
-                                checked: v,
+                                checked: y,
                                 onChange: (e) => this.setState({ hasAcceptedEULA: e }),
                                 disabled: o,
                                 label: h.intl.format(h.t.IodJKT, {
@@ -76,13 +75,13 @@ class E extends i.Component {
                                 }),
                             })
                           : null,
-                      null == d ? null : (0, r.jsx)("div", { className: a()(m.aO, y), children: d }),
+                      null == d ? null : (0, r.jsx)("div", { className: a()(m.aO, S), children: d }),
                       E
                           ? (0, r.jsxs)("div", {
                                 className: u,
                                 children: [
                                     (0, r.jsx)(c.Checkbox, {
-                                        checked: N,
+                                        checked: v,
                                         onChange: (e) => this.setState({ hasAcceptedWithdrawalWaiver: e }),
                                         disabled: o,
                                         label: h.intl.string(h.t["DFCVN+"]),
@@ -101,14 +100,14 @@ class E extends i.Component {
                                   }),
                               ],
                           }),
-                      (0, r.jsx)(g, { isTrial: A, subscriptionPlan: S, inReverseTrial: I, isDiscount: T }),
+                      (0, r.jsx)(g, { isTrial: A, subscriptionPlan: T, isDiscount: I }),
                   ],
               })
             : null;
     }
 }
 function g(e) {
-    let { isTrial: t, subscriptionPlan: n, inReverseTrial: i, isDiscount: s } = e;
+    let { isTrial: t, subscriptionPlan: n, isDiscount: i } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             t &&
@@ -124,18 +123,6 @@ function g(e) {
                     }),
                 }),
             i &&
-                null != n &&
-                (0, r.jsx)(c.Text, {
-                    variant: "text-xs/medium",
-                    color: "interactive-text-default",
-                    children: h.intl.format(h.t.Oo2FeS, {
-                        buttonText: (0, f.ff)(null, n),
-                        interval: f.Ay.formatInterval(n?.interval),
-                        cancelSubscriptionArticle: _.A.getArticleURL(p.MVz.PREMIUM_DETAILS_CANCEL_SUB),
-                        paidServiceTermsArticle: _.A.getArticleURL(p.MVz.PAID_TERMS),
-                    }),
-                }),
-            s &&
                 null != n &&
                 (0, r.jsx)(c.Text, {
                     variant: "text-xs/medium",

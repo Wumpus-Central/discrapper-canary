@@ -103,12 +103,7 @@ let _ = new Set(["PREMIUM_DEFAULT", "PREMIUM_SWITCH_PLAN"]),
                 p && S.subscriptionPeriodEnd !== i.subscriptionPeriodEnd && (e = S.subscriptionPeriodEnd),
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        g &&
-                            (0, r.jsx)(o.vi, {
-                                fractionalPremiumInfo: m,
-                                enablePremiumBrandRefresh: T,
-                                variant: h ? o.uA.REVERSE_TRIAL : void 0,
-                            }),
+                        g && !h && (0, r.jsx)(o.vi, { fractionalPremiumInfo: m, enablePremiumBrandRefresh: T }),
                         (0, r.jsxs)(a.Yx, {
                             className: c.SU,
                             children: [

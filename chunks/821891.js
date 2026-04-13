@@ -2,7 +2,7 @@
 n.d(t, { A: () => g });
 var r = n(627968);
 n(64700);
-var i = n(637073),
+var i = n(881489),
     s = n(367921),
     a = n(739508),
     o = n(975571),
@@ -17,7 +17,7 @@ var i = n(637073),
 let m = (e, t, n, r) => {
     if (null == e || null == t || null == n) {
         let e = Error("Missing base rate for legal fine print"),
-            t = r || "none";
+            t = r ?? "none";
         return (0, a.pM)(e, { tags: { planId: t } }), null;
     }
     return (0, u.CE)((0, u.$g)(e.amount, e.currency), t, n);
@@ -56,7 +56,7 @@ function E(e) {
             (h = (0, u.CE)((0, u.$g)(S.subtotal, S.currency), t, n));
     } else null != E && ((t = E.interval), (n = E.intervalCount));
     let P = (0, s.Ro)({
-            purchaseType: N || d.VVm.SUBSCRIPTION,
+            purchaseType: N ?? d.VVm.SUBSCRIPTION,
             plan: E,
             premiumSubscription: null == b ? null : b,
             productLine: C,
@@ -167,30 +167,37 @@ function E(e) {
                           contactUsArticle: d.X7G.CONTACT,
                           subscriptionFAQArticle: o.A.getArticleURL(d.MVz.BILLING),
                       })
-                    : A
-                      ? p.intl.format(p.t["Hvo/Z5"], {
+                    : M
+                      ? p.intl.format(p.t.Oo2FeS, {
                             buttonText: r,
                             interval: l.Ay.formatInterval(E?.interval),
                             cancelSubscriptionArticle: o.A.getArticleURL(d.MVz.PREMIUM_DETAILS_CANCEL_SUB),
                             paidServiceTermsArticle: o.A.getArticleURL(d.MVz.PAID_TERMS),
                         })
-                      : null != R && null != O
-                        ? p.intl.format(p.t.Kcieh4, {
-                              primaryText: r,
-                              proratedAmount: (0, u.$g)(R, O.currency),
-                              renewalAmount: (0, u.$g)(O.amount, O.currency),
-                              rateInterval: l.Ay.formatInterval(E?.interval),
-                              paidURL: d.X7G.PAID_TERMS,
-                              contactLink: d.X7G.CONTACT,
-                              helpdeskArticle: o.A.getArticleURL(d.MVz.BILLING),
+                      : A
+                        ? p.intl.format(p.t["Hvo/Z5"], {
+                              buttonText: r,
+                              interval: l.Ay.formatInterval(E?.interval),
+                              cancelSubscriptionArticle: o.A.getArticleURL(d.MVz.PREMIUM_DETAILS_CANCEL_SUB),
+                              paidServiceTermsArticle: o.A.getArticleURL(d.MVz.PAID_TERMS),
                           })
-                        : p.intl.format(p.t.anJ7OX, {
-                              primaryText: r,
-                              rate: e,
-                              paidURL: d.X7G.PAID_TERMS,
-                              contactLink: d.X7G.CONTACT,
-                              helpdeskArticle: o.A.getArticleURL(d.MVz.BILLING),
-                          }));
+                        : null != R && null != O
+                          ? p.intl.format(p.t.Kcieh4, {
+                                primaryText: r,
+                                proratedAmount: (0, u.$g)(R, O.currency),
+                                renewalAmount: (0, u.$g)(O.amount, O.currency),
+                                rateInterval: l.Ay.formatInterval(E?.interval),
+                                paidURL: d.X7G.PAID_TERMS,
+                                contactLink: d.X7G.CONTACT,
+                                helpdeskArticle: o.A.getArticleURL(d.MVz.BILLING),
+                            })
+                          : p.intl.format(p.t.anJ7OX, {
+                                primaryText: r,
+                                rate: e,
+                                paidURL: d.X7G.PAID_TERMS,
+                                contactLink: d.X7G.CONTACT,
+                                helpdeskArticle: o.A.getArticleURL(d.MVz.BILLING),
+                            }));
     }
     return (0, r.jsxs)(r.Fragment, {
         children: [
