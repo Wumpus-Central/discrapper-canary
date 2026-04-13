@@ -11,10 +11,7 @@ e.exports = {
     iQ: "descriptionContainer__02d09",
     li: "buttonHover__02d09",
     ov: "titleContainerNoPrice__02d09",
-    w4: "titleContainerExtendedHeight__02d09",
     iZ: "bottomGradient__02d09",
-    p6: "priceContainer__02d09",
-    of: "strikethrough__02d09",
     ye: "iconAsset__02d09",
     pt: "orbsEarnedContainer__02d09",
 };
