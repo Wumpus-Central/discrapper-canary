@@ -1,4 +1,4 @@
-n.d(t, { C2: () => u, H9: () => m, _D: () => r, b5: () => d, l1: () => o, xb: () => c });
+n.d(t, { C2: () => u, EJ: () => h, H9: () => m, _D: () => r, b5: () => d, l1: () => o, xb: () => c });
 var a = n(306327),
     i = n(827734),
     s = n(151196),
@@ -45,4 +45,8 @@ function u(e) {
 function m(e, t) {
     let [n, a, s, l] = i.A.unsafe_rawColors[e].resolve().rgba({ opacity: t });
     return { r: n, g: a, b: s, a: l };
+}
+function h(e, t) {
+    let n = i.A.unsafe_rawColors[e].resolve();
+    return null != t ? n.hex({ opacity: t }) : n.hex();
 }
