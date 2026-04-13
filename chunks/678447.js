@@ -1,4 +1,4 @@
-n.d(t, { n: () => h });
+n.d(t, { n: () => p });
 var i = n(627968);
 n(64700);
 var s = n(311907),
@@ -6,58 +6,73 @@ var s = n(311907),
     r = n(557722),
     a = n(419954),
     o = n(933297),
-    d = n(287809),
-    c = n(780964),
-    u = n(980429),
-    m = n(982363),
-    g = n(53516),
-    _ = n(985018);
-function x() {
-    let e = (0, s.bG)([d.default], () => d.default.getCurrentUser()),
+    d = n(662758),
+    c = n(287809),
+    u = n(780964),
+    m = n(980429),
+    g = n(982363),
+    _ = n(652215),
+    x = n(53516),
+    h = n(985018);
+function A() {
+    let e = (0, s.bG)([c.default], () => c.default.getCurrentUser()),
         t = e?.phone ?? null;
     return null == e || null == t
-        ? (0, i.jsx)(l.Text, { variant: "text-md/medium", children: _.intl.string(_.t.I5kDqj) })
-        : (0, i.jsx)(l.BJc, {
+        ? (0, i.jsx)(l.Text, { variant: "text-md/medium", children: h.intl.string(h.t.I5kDqj) })
+        : (0, i.jsxs)(l.BJc, {
               direction: "horizontal",
               align: "center",
               justify: "end",
               gap: "md",
-              children: (0, i.jsx)(m.q, {
-                  text: t,
-                  censor: u.D,
-                  revealLabel: _.intl.string(_.t.eY3xlT),
-                  hideLabel: _.intl.string(_.t["jllbv+"]),
-                  redesign: !0,
-              }),
+              children: [
+                  (0, i.jsx)(g.q, {
+                      text: t,
+                      censor: m.D,
+                      revealLabel: h.intl.string(h.t.eY3xlT),
+                      hideLabel: h.intl.string(h.t["jllbv+"]),
+                      redesign: !0,
+                  }),
+                  (0, i.jsx)(l.Button, {
+                      text: h.intl.string(h.t.N86XcP),
+                      variant: "critical-secondary",
+                      onClick: () => {
+                          (0, l.qfG)((t) =>
+                              (0, i.jsx)(d.default, {
+                                  ...t,
+                                  title: h.intl.string(h.t["3CTiKi"]),
+                                  children: e.hasFlag(_.nhx.MFA_SMS) ? h.intl.string(h.t.jrhJyo) : void 0,
+                                  actionText: h.intl.string(h.t.N86XcP),
+                                  handleSubmit: (e) => r.A.removePhone(e, r.d.USER_SETTINGS_UPDATE),
+                              }),
+                          );
+                      },
+                      "aria-label": h.intl.string(h.t.Rpn4A3),
+                  }),
+              ],
           });
 }
-let h = (0, a.Tf)(c.X.ACCOUNT_INFO_PHONE_SETTING, {
-    usePredicate: () => (0, s.bG)([d.default], () => d.default.getCurrentUser()?.isClaimed()) ?? !1,
-    useTitle: () => _.intl.string(_.t.kerONq),
+let p = (0, a.Tf)(u.X.ACCOUNT_INFO_PHONE_SETTING, {
+    usePredicate: () => (0, s.bG)([c.default], () => c.default.getCurrentUser()?.isClaimed()) ?? !1,
+    useTitle: () => h.intl.string(h.t.kerONq),
     useAriaLabel: function () {
-        return null == (0, s.bG)([d.default], () => d.default.getCurrentUser()?.phone)
-            ? _.intl.string(_.t["SfUuE+"])
-            : _.intl.string(_.t.YDabSe);
+        return null == (0, s.bG)([c.default], () => c.default.getCurrentUser()?.phone)
+            ? h.intl.string(h.t["SfUuE+"])
+            : h.intl.string(h.t.YDabSe);
     },
     useVariant: () => "secondary",
-    useTrailingContent: () => ({ type: o._1.STRONGLY_DISCOURAGED_CUSTOM, StronglyDiscouragedCustomComponent: x }),
+    useTrailingContent: () => ({ type: o._1.STRONGLY_DISCOURAGED_CUSTOM, StronglyDiscouragedCustomComponent: A }),
     useLabel: function () {
-        return null == (0, s.bG)([d.default], () => d.default.getCurrentUser()?.phone)
-            ? _.intl.string(_.t.OYkgVk)
-            : _.intl.string(_.t.bt75uw);
+        return null == (0, s.bG)([c.default], () => c.default.getCurrentUser()?.phone)
+            ? h.intl.string(h.t.OYkgVk)
+            : h.intl.string(h.t.bt75uw);
     },
     onClick: function () {
-        null == d.default.getCurrentUser()?.phone
-            ? (0, l.mMO)(
-                  async () => {
-                      let { default: e } = await Promise.resolve().then(n.bind(n, 615715));
-                      return (t) => (0, i.jsx)(e, { reason: r.d.USER_SETTINGS_UPDATE, ...t });
-                  },
-                  { modalKey: g.V },
-              )
-            : (0, l.mMO)(async () => {
-                  let { default: e } = await n.e("89061").then(n.bind(n, 359012));
-                  return (t) => (0, i.jsx)(e, { ...t });
-              });
+        (0, l.mMO)(
+            async () => {
+                let { default: e } = await Promise.resolve().then(n.bind(n, 615715));
+                return (t) => (0, i.jsx)(e, { reason: r.d.USER_SETTINGS_UPDATE, ...t });
+            },
+            { modalKey: x.V },
+        );
     },
 });

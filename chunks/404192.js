@@ -25,7 +25,7 @@ let u = (e) => {
                       children: [
                           (0, a.jsx)(r.Text, {
                               className: c.__invalid_linkText,
-                              variant: "text-md/normal",
+                              variant: "text-md/semibold",
                               children: n,
                           }),
                           null != l &&

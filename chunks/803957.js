@@ -22,7 +22,7 @@ let _ = (e) => {
                 (0, a.jsxs)("div", {
                     className: u.OH,
                     children: [
-                        (0, a.jsx)(s.Text, { className: u.ix, variant: "text-md/normal", children: _ }),
+                        (0, a.jsx)(s.Text, { className: u.ix, variant: "text-md/semibold", children: _ }),
                         p &&
                             null != x &&
                             (0, a.jsx)(s.Text, {
