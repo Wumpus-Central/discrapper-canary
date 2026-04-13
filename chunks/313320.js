@@ -1,8 +1,8 @@
 i.d(t, { d: () => u }), i(321073);
 var r = i(73153),
     s = i(626584),
-    n = i(723702),
-    a = i(290805),
+    a = i(723702),
+    n = i(290805),
     o = i(381505),
     l = i(622397);
 let m = new s.A("MeticulousActionTracker"),
@@ -71,7 +71,7 @@ class u {
     getTags() {
         if (null == this.mode) throw Error("Cannot get tags without mode");
         let e = this.mode.performanceNow() - this.sessionStartTime;
-        return { platform: (0, n.getNativePlatform)(), release_channel: a.y ?? "unknown", uptime_bucket: (0, l.X)(e) };
+        return { platform: (0, a.getNativePlatform)(), release_channel: n.y ?? "unknown", uptime_bucket: (0, l.X)(e) };
     }
     buildReport(e) {
         if (null == this.mode) throw Error("Cannot build report without mode");
@@ -81,12 +81,13 @@ class u {
             type: "heap_snapshot_action",
             session_id: this.mode.sessionId,
             commit_sha: this.mode.commitSha,
+            base_commit_sha: this.mode.baseCommitSha,
             branch_name: this.mode.branchName,
             commit_date: this.mode.commitDate,
             timestamp: new Date().toISOString(),
-            build_number: "493560",
-            built_at: "1770252554499",
-            release_channel: a.y ?? "unknown",
+            build_number: "527998",
+            built_at: "1776122690720",
+            release_channel: n.y ?? "unknown",
             tags: this.getTags(),
             metrics: {
                 report_time_memory: null != t ? (0, o.c)(t) : void 0,
@@ -161,18 +162,18 @@ class u {
                 m.warn(`Missing start mark for action: ${r}`), performance.clearMarks(e.name);
                 return;
             }
-            let n = s[0],
-                a = n.detail?.memory,
+            let a = s[0],
+                n = a.detail?.memory,
                 l = e.detail?.memory,
                 h = this.mode?.baselineUsedMemory,
                 c = l?.usedJSHeapSize != null && null != h ? l.usedJSHeapSize - h : void 0,
                 u = null != this.mode ? this.mode.performanceNow() : 0;
             this.collectedEntries.push({
                 name: t,
-                start_time: n.startTime,
+                start_time: a.startTime,
                 end_time: e.startTime,
                 collected_at: u,
-                start_memory: null != a ? (0, o.c)(a) : void 0,
+                start_memory: null != n ? (0, o.c)(n) : void 0,
                 end_memory: null != l ? (0, o.c)(l) : void 0,
                 memory_delta_from_baseline: c,
             }),
