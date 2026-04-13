@@ -14,5 +14,6 @@ e.exports = {
     yo: "hovered_fcbddd",
     T9: "noHoverLift_fcbddd",
     wY: "footerGradient_fcbddd",
+    KY: "staticBundleFooterGradient_fcbddd",
     tZ: "productName_fcbddd",
 };
