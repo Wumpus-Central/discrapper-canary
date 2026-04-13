@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { Ay: () => _, Ut: () => d, rx: () => s });
+n.d(t, { Ay: () => _, Ut: () => d, rx: () => a });
 var r = n(64700),
     i = function () {
         (this.locks = []), (this.listeners = []);
     };
-function a(e, t, n) {
+function s(e, t, n) {
     void 0 === n && (n = !1);
     var r = (function (e) {
             return document.createTreeWalker(e, NodeFilter.SHOW_ELEMENT, {
@@ -14,11 +14,11 @@ function a(e, t, n) {
             });
         })(e),
         i = t.compareDocumentPosition(e),
-        a = null;
+        s = null;
     i & Node.DOCUMENT_POSITION_PRECEDING || n
-        ? (a = r.firstChild())
-        : i & Node.DOCUMENT_POSITION_FOLLOWING && (a = r.lastChild()),
-        (null != a ? a : e).focus();
+        ? (s = r.firstChild())
+        : i & Node.DOCUMENT_POSITION_FOLLOWING && (s = r.lastChild()),
+        (null != s ? s : e).focus();
 }
 (i.prototype.add = function (e, t) {
     var n = { uid: e, setEnabled: t, enabled: !1 };
@@ -66,12 +66,12 @@ function a(e, t, n) {
             return n(t, e.locks);
         });
     });
-var s = new i(),
+var a = new i(),
     o = 0;
 function l(e) {
     (0, r.useEffect)(
         function () {
-            return s.subscribe(e);
+            return a.subscribe(e);
         },
         [e],
     );
@@ -98,11 +98,11 @@ function c(e) {
         (0, r.useLayoutEffect)(
             function () {
                 return (
-                    s.add(t, function (e) {
+                    a.add(t, function (e) {
                         return (n.current = e);
                     }),
                     function () {
-                        return s.remove(t);
+                        return a.remove(t);
                     }
                 );
             },
@@ -126,10 +126,10 @@ function _(e, t) {
     void 0 === t && (t = {});
     var n = t.returnRef,
         i = t.disableReturnRef,
-        s = t.attachTo;
-    void 0 === s && (s = document);
+        a = t.attachTo;
+    void 0 === a && (a = document);
     var o = t.disable,
-        l = s instanceof HTMLElement ? s.ownerDocument : s,
+        l = a instanceof HTMLElement ? a.ownerDocument : a,
         d = c();
     (0, r.useEffect)(
         function () {
@@ -141,13 +141,15 @@ function _(e, t) {
             function () {
                 var t = e.current;
                 function n(t) {
-                    if (d.current) {
-                        var n = e.current;
-                        if (null != n) {
-                            var r = t.target || l.body;
-                            n.contains(r) || (t.preventDefault(), t.stopImmediatePropagation(), a(n, r));
+                    requestAnimationFrame(function () {
+                        if (d.current) {
+                            var n = e.current;
+                            if (null != n) {
+                                var r = t.target || l.body;
+                                n.contains(r) || (t.preventDefault(), t.stopImmediatePropagation(), s(n, r));
+                            }
                         }
-                    }
+                    });
                 }
                 function r(t) {
                     if (d.current) {
@@ -155,7 +157,7 @@ function _(e, t) {
                         if (null != n) {
                             (null != t.relatedTarget && t.relatedTarget !== l.body) || (t.preventDefault(), n.focus());
                             var r = t.target || l.body;
-                            n.contains(r) || a(n, r);
+                            n.contains(r) || s(n, r);
                         }
                     }
                 }
@@ -164,16 +166,16 @@ function _(e, t) {
                         null == l.activeElement ||
                         t.contains(l.activeElement) ||
                         null != t.querySelector("[autofocus]") ||
-                        a(t, l.activeElement, !0),
-                    s.addEventListener("focusin", n, { capture: !0 }),
-                    s.addEventListener("focusout", r, { capture: !0 }),
+                        s(t, l.activeElement, !0),
+                    a.addEventListener("focusin", n, { capture: !0 }),
+                    a.addEventListener("focusout", r, { capture: !0 }),
                     function () {
-                        s.removeEventListener("focusin", n, { capture: !0 }),
-                            s.removeEventListener("focusout", r, { capture: !0 });
+                        a.removeEventListener("focusin", n, { capture: !0 }),
+                            a.removeEventListener("focusout", r, { capture: !0 });
                     }
                 );
             },
-            [s, l, e, d],
+            [a, l, e, d],
         ),
         u(n, i);
 }
