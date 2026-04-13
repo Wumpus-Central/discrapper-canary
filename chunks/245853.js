@@ -1,19 +1,18 @@
 "use strict";
 n.d(t, {
-    Dl: () => S,
-    Ig: () => h,
+    Dl: () => T,
+    Ig: () => p,
     Iq: () => l,
-    TY: () => _,
     YX: () => d,
     Ym: () => c,
-    fV: () => y,
+    fV: () => S,
     jS: () => u,
-    m8: () => f,
-    r4: () => A,
-    rE: () => E,
-    rI: () => m,
+    m8: () => _,
+    r4: () => g,
+    rE: () => m,
+    rI: () => h,
     sn: () => a,
-    sy: () => p,
+    sy: () => f,
     uK: () => o,
 });
 var r = n(311907),
@@ -57,18 +56,12 @@ let a = (0, i.mj)({
         variations: { 1: { enabled: !0 } },
     }),
     _ = (0, i.mj)({
-        name: "2026-03-get-decision-generic-creative-rollout",
-        kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 1: { enabled: !0 } },
-    }),
-    f = (0, i.mj)({
         name: "2026-03-quest-reload-video-on-obscured",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     });
-var p = (function (e) {
+var f = (function (e) {
     return (
         (e[(e.DEFAULT = 0)] = "DEFAULT"),
         (e[(e.AUTO_ENABLE_CAPTIONS = 1)] = "AUTO_ENABLE_CAPTIONS"),
@@ -76,19 +69,19 @@ var p = (function (e) {
         e
     );
 })({});
-let h = (0, i.mj)({
+let p = (0, i.mj)({
         name: "2026-03-muted-video-quest-new-defaults",
         kind: "user",
         defaultConfig: { enabled: !1, variant: 0 },
         variations: { 0: { enabled: !1, variant: 0 }, 1: { enabled: !0, variant: 1 }, 2: { enabled: !0, variant: 2 } },
     }),
-    m = (0, i.mj)({
+    h = (0, i.mj)({
         name: "2026-03-get-decision-hero-ads",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     });
-var E = (function (e) {
+var m = (function (e) {
     return (
         (e[(e.RANK_DOWN_ALL_QUESTS_AFTER_30_MINUTES = 0)] = "RANK_DOWN_ALL_QUESTS_AFTER_30_MINUTES"),
         (e[(e.REMOVE_NON_VIDEO_QUESTS = 1)] = "REMOVE_NON_VIDEO_QUESTS"),
@@ -96,7 +89,7 @@ var E = (function (e) {
         e
     );
 })({});
-let g = (0, i.mj)({
+let E = (0, i.mj)({
         name: "2026-03-mobile-quest-home-ranking-availability",
         kind: "user",
         defaultConfig: { enabled: !1, variant: null },
@@ -107,36 +100,36 @@ let g = (0, i.mj)({
             3: { enabled: !0, variant: 2 },
         },
     }),
-    A = (0, i.mj)({
+    g = (0, i.mj)({
         name: "2025-03-quests-premium-rewards-holdout",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     });
-function I(e) {
+function A(e) {
     let { location: t } = e,
         n = (0, r.bG)([s.default], () => s.default.getCurrentUser()),
         i = null != n && n.isStaff(),
-        a = A.useConfig({ location: t });
+        a = g.useConfig({ location: t });
     return !i && !1 === a.enabled;
 }
-let T = (0, i.mj)({
+let I = (0, i.mj)({
     name: "2026-04-quests-premium-orb-multiplier-marketing",
     kind: "user",
     defaultConfig: { enabled: !1, multiplier: 1 },
     variations: { 0: { enabled: !1, multiplier: 1 }, 1: { enabled: !0, multiplier: 1.2 } },
 });
-function S(e) {
+function T(e) {
     let t = (0, r.bG)([s.default], () => s.default.getCurrentUser()),
-        n = T.useConfig({ location: e }),
-        i = I({ location: e });
+        n = I.useConfig({ location: e }),
+        i = A({ location: e });
     return {
         shouldShowBonusOrbsUX: n.enabled && !i && !t?.isPremiumWithFractionalPremiumOnly(),
         multiplier: n.multiplier,
     };
 }
-function y() {
-    return g.definition.defaultConfig.variant;
+function S() {
+    return E.definition.defaultConfig.variant;
 }
 (0, i.mj)({
     name: "2026-03-video-quest-player-refactor",
