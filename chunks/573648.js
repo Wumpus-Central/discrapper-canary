@@ -336,6 +336,7 @@ let u = [
                 lightSVG: n(891581),
                 darkSVG: n(891581),
                 whiteSVG: n(198991),
+                blackSVG: n(135577),
             },
             enabled: !0,
             replacedBy: l.OW.RIOT_GAMES,
