@@ -6,7 +6,6 @@ n.r(
         sidebarRegionScroller: "sidebarRegionScroller__23e6b",
         sidebar: "sidebar__23e6b",
         mobileSidebar: "mobileSidebar__23e6b",
-        contentTransitionWrap: "contentTransitionWrap__23e6b",
         contentRegionScroller: "contentRegionScroller__23e6b",
         toolsContainer: "toolsContainer__23e6b",
         tools: "tools__23e6b",
