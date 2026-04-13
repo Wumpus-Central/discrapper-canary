@@ -102,7 +102,7 @@ var r = n(284009),
     M = n(88001),
     x = n(818348),
     P = n(985018),
-    k = n(519412);
+    k = n(782965);
 let U = {
         PAYMENT_SOURCE_MANAGEMENT: "https://support.apple.com/HT201266",
         BILLING_HISTORY: "https://support.apple.com/HT201266",
@@ -1381,13 +1381,19 @@ let tB = (e) => {
         return n && (a = tj(s, r, i)), a;
     };
 function tj(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    if (e.interval !== w.WT.YEAR) return;
-    let r = tB({ subscriptionPlan: e, isGift: t, priceOptions: n });
-    if (null == r) return;
-    let i = W(e.id, !1, t, n);
-    if (0 !== r.amount) return Math.floor(100 * (1 - i.amount / (12 * r.amount)));
+    let t,
+        n,
+        r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    if (e.interval === w.WT.YEAR) {
+        try {
+            if (((t = tB({ subscriptionPlan: e, isGift: r, priceOptions: i })), null == t)) return;
+            n = W(e.id, !1, r, i);
+        } catch {
+            return;
+        }
+        if (0 !== t.amount) return Math.floor(100 * (1 - n.amount / (12 * t.amount)));
+    }
 }
 function tY(e) {
     return null == e ? 0 : Math.max((0, y.m_)(new Date(), new Date(e)), 0);
