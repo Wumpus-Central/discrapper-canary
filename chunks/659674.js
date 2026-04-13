@@ -1,14 +1,15 @@
 "use strict";
 n.d(t, {
-    G8: () => L,
-    NV: () => O,
-    V: () => D,
-    ax: () => x,
-    ds: () => w,
+    G8: () => w,
+    NV: () => b,
+    QY: () => O,
+    V: () => L,
+    ax: () => P,
+    ds: () => M,
     fK: () => N,
-    fS: () => M,
+    fS: () => x,
     nh: () => R,
-    p6: () => b,
+    p6: () => D,
 }),
     n(938796),
     n(323874),
@@ -155,30 +156,40 @@ function R(e) {
         n
     );
 }
-function O(e) {
+function O(e, t) {
+    if ("YouTube" === e || "TikTok" === e) return e;
+    if (null != t)
+        try {
+            let e = new URL(t).hostname;
+            if ("www.youtube.com" === e) return "YouTube";
+            if ("www.tiktok.com" === e) return "TikTok";
+        } catch {}
+    return e;
+}
+function b(e) {
     let { image: t, video: n, type: r, author: i, rawTitle: s } = e;
     return (null != t || null != n) && (r === d.Auw.GIFV || (r !== d.Auw.RICH && null == i && null == s));
 }
-function b(e) {
+function D(e) {
     return e.type === d.Auw.ARTICLE && null != e.url && (g.test(e.url) || E.test(e.url));
 }
-function D(e) {
+function L(e) {
     return e.type === d.Auw.ARTICLE && null != e.url && A.test(e.url);
 }
-function L(e) {
+function w(e) {
     return e.type === d.Auw.ARTICLE && null != e.url && (T.test(e.url) || I.test(e.url));
 }
-function w(e, t, n) {
+function M(e, t, n) {
     return null != t && null != n
         ? { maxMediaWidth: t, maxMediaHeight: n }
         : e.provider?.name === "TikTok"
           ? { maxMediaWidth: 400, maxMediaHeight: 450 }
           : { maxMediaWidth: 400, maxMediaHeight: 300 };
 }
-function M(e, t) {
+function x(e, t) {
     return e.isPrivate() ? !e.isManaged() : t.can(d.xBc.EMBED_LINKS, e);
 }
-function x(e) {
+function P(e) {
     return (
         "" !== e.content || e.messageSnapshots.some((e) => "" !== e.message.content || e.message.attachments.length > 0)
     );

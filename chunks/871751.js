@@ -35,8 +35,8 @@ var r = t(627968),
     k = t(652215),
     V = t(838541),
     H = t(985018),
-    D = t(802571),
-    O = t(206314);
+    D = t(560856),
+    O = t(782691);
 function U(e) {
     let l = R.A.toURLSafe(e);
     return null == l ? e : (l.searchParams.set("format", "png"), l.toString());
@@ -633,7 +633,7 @@ class B extends s.PureComponent {
             allowFullScreen: h,
             thumbnail: n,
             video: i,
-            provider: a?.name,
+            provider: (0, P.QY)(a?.name, i?.url),
             maxWidth: p,
             maxHeight: g,
             responsive: !0,
