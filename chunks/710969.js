@@ -88,26 +88,37 @@ function S(e) {
     return null != t && u.J6.has(t);
 }
 function y(e) {
-    let { enableNewRequestBehavior: t } = l.A.getConfig({ location: "getQuestDeliveryDataForPlacement" });
-    if (t) {
-        let t = a.A.questAdDecisionByPlacement.get(e);
-        return null == t
+    let { enableNewRequestBehavior: t } = l.A.getConfig({ location: "getQuestDeliveryDataForPlacement" }),
+        n = a.A.questAdDecisionByPlacement.get(e);
+    if (e === o.yW.QUEST_HOME_BANNER_DESKTOP && null != n)
+        return {
+            questId: n.questId,
+            adCreativeId: n.adCreativeId,
+            adDecisionData: n.adDecisionData,
+            adContext: n.adContext,
+            metadataSealed: n.metadataSealed,
+            trafficMetadataRaw: n.trafficMetadataRaw,
+            trafficMetadataSealed: n.trafficMetadataSealed,
+        };
+    if (t)
+        return null == n
             ? null
             : {
-                  questId: t.questId,
-                  adDecisionData: t.adDecisionData,
-                  adContext: t.adContext,
-                  metadataSealed: t.metadataSealed,
-                  trafficMetadataRaw: t.trafficMetadataRaw,
-                  trafficMetadataSealed: t.trafficMetadataSealed,
+                  questId: n.questId,
+                  adCreativeId: n.adCreativeId,
+                  adDecisionData: n.adDecisionData,
+                  adContext: n.adContext,
+                  metadataSealed: n.metadataSealed,
+                  trafficMetadataRaw: n.trafficMetadataRaw,
+                  trafficMetadataSealed: n.trafficMetadataSealed,
               };
-    }
     {
         let t = a.A.questToDeliverForPlacement.get(e);
         return null == t
             ? null
             : {
                   questId: t.quest.id,
+                  adCreativeId: t.quest.id,
                   adDecisionData: t.adDecisionData,
                   adContext: t.adContext,
                   metadataSealed: t.metadataSealed,
@@ -119,8 +130,8 @@ function y(e) {
 function v(e, t) {
     let n = T(t);
     if (null == n) return u.K3;
-    let { adDecisionData: r, questId: i } = y(n) ?? {};
-    return null != r && i === e ? r : u.K3;
+    let { adDecisionData: r, questId: i, adCreativeId: s } = y(n) ?? {};
+    return null != r && (i === e || s === e) ? r : u.K3;
 }
 function N(e) {
     let t = T(e);

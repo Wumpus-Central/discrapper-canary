@@ -294,6 +294,7 @@ function eY(e) {
     if (_) {
         let e = {
             questId: t?.id ?? null,
+            adCreativeId: t?.id ?? null,
             fetchedAt: d,
             ttlMillis: eW(o),
             adDecisionData: r,
@@ -387,6 +388,7 @@ function e6(e) {
     (q = !1), (z = Date.now()), (s = new Map(s)).set(e.placement, !1), (X = e.questHomeHero);
     let t = {
         questId: null,
+        adCreativeId: e.questHomeHero?.id ?? null,
         fetchedAt: e.fetchedAt,
         ttlMillis: eW(e.responseTtlSeconds),
         adDecisionData: e.adDecisionData,

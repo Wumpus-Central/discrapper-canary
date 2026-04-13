@@ -2,8 +2,8 @@
 n.d(t, { A: () => h });
 var r = n(789999),
     i = n(69114),
-    a = n(322683),
-    s = n(544180),
+    s = n(322683),
+    a = n(544180),
     o = n(954571),
     l = n(859703),
     u = n(302654),
@@ -22,13 +22,13 @@ function _(e, t) {
 function f(e, t, n) {
     if (Math.random() > d) return;
     let l = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
-        u = (0, a.O)();
+        u = (0, s.O)();
     o.default.track(c.HAw.QUEST_DECISION_ROUNDTRIP, {
         ...(0, i.A)(),
         endpoint: e.endpoint,
         was_successful: e.wasSuccessful,
         api_latency_ms: l,
-        mobile_network_type: s.A.getType(),
+        mobile_network_type: a.A.getType(),
         ...(null != u && { mobile_signal_strength_level: u }),
         caller_source: e.callerSource,
         ad_request_id: e.adRequestId,
@@ -45,7 +45,7 @@ class p {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
             { enableNewRequestBehavior: r } = u.A.getConfig({ location: "recordQuestRequestAttempt" }),
             i = r && null != n ? (l.A.questAdDecisionByPlacement.get(n) ?? null) : null,
-            a = {
+            s = {
                 initialSendTimestamp: Date.now(),
                 endpoint: e,
                 apiResponseTimestamp: null,
@@ -55,32 +55,33 @@ class p {
                 previousAdDecision: i,
                 placement: n,
             };
-        this.pendingRequests.set(e, a),
+        this.pendingRequests.set(e, s),
             setTimeout(() => {
                 let t = this.pendingRequests.get(e);
                 null != t && (f(t, "timeout", null), this.pendingRequests.delete(e));
             }, 3e4);
     }
     recordQuestRequestApiResponse(e, t) {
-        let { wasSuccessful: n, adRequestId: r = null, currentQuestId: i = null, currentFetchedAt: a = null } = t,
-            s = this.pendingRequests.get(e);
-        if (null != s) {
+        let { wasSuccessful: n, adRequestId: r = null, currentQuestId: i = null, currentFetchedAt: s = null } = t,
+            a = this.pendingRequests.get(e);
+        if (null != a) {
             let t,
                 o,
                 { enableNewRequestBehavior: l } = u.A.getConfig({ location: "recordQuestRequestApiResponse" });
             if (l) {
                 let e =
-                    null !== a
+                    null !== s
                         ? {
                               questId: i,
-                              fetchedAt: a,
+                              adCreativeId: i,
+                              fetchedAt: s,
                               ttlMillis: 0,
                               adDecisionData: null != r ? { decision_id: r } : void 0,
                           }
                         : null;
-                (t = _(s.previousAdDecision, e)), (o = a);
+                (t = _(a.previousAdDecision, e)), (o = s);
             } else (t = "legacy"), (o = null);
-            f({ ...s, apiResponseTimestamp: Date.now(), wasSuccessful: n, adRequestId: r }, t, o),
+            f({ ...a, apiResponseTimestamp: Date.now(), wasSuccessful: n, adRequestId: r }, t, o),
                 this.pendingRequests.delete(e);
         }
     }
