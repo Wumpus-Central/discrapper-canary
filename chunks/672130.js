@@ -12,9 +12,10 @@ var s = n(503698),
     m = n(993396);
 let g = (e) => {
     let { disabled: t = !1, application: n, className: s, innerClassName: g } = e,
-        { canStartAuthorization: _, startAuthorization: x } = (0, c.RD)(n),
-        { analyticsLocations: h } = (0, d.Ay)(o.A.USER_SETTINGS_CONNECTIONS),
-        A = u.Ay.getApplicationIconURL({ id: n.id, icon: n.icon });
+        { canStartAuthorization: _, startAuthorization: x, fetched: A } = (0, c.RD)(n);
+    t = t || !A || !_;
+    let { analyticsLocations: h } = (0, d.Ay)(o.A.USER_SETTINGS_CONNECTIONS),
+        p = u.Ay.getApplicationIconURL({ id: n.id, icon: n.icon });
     return (0, i.jsx)(r.m_, {
         text: n.name,
         children: (0, i.jsx)("div", {
@@ -23,10 +24,10 @@ let g = (e) => {
                 children: (0, i.jsx)("button", {
                     className: l()(m.v, g),
                     type: "button",
-                    disabled: !_ || t,
-                    style: { backgroundImage: `url('${A}')` },
+                    style: { backgroundImage: `url('${p}')` },
                     onClick: () => x({ analyticsLocations: h }),
                     "aria-label": n.name,
+                    disabled: t,
                 }),
             }),
         }),

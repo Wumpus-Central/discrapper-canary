@@ -15,23 +15,23 @@ function x() {
     let e = (0, s.bG)([c.A], () => c.A.getAccounts().find((e) => _.includes(e.type))?.type),
         t = null != e ? l.A.get(e) : null,
         n = (0, o.h)(t?.replacedBy),
-        { canStartAuthorization: u } = (0, a.RD)(n),
-        x = m.intl.string(g.default["1S6oAo"]),
-        h = r.A.useConfig({ location: "RiotDeprecationInlineNotice" }).enabled;
+        { canStartAuthorization: u, hasAlreadyLinked: x, fetched: A } = (0, a.RD)(n),
+        h = m.intl.string(g.default["1S6oAo"]),
+        p = r.A.useConfig({ location: "RiotDeprecationInlineNotice" }).enabled;
     return i.useMemo(
         () =>
-            h && null != t && u && n?.connectionEntrypointUrl != null
+            p && null != t && u && n?.connectionEntrypointUrl != null && !x && A
                 ? {
                       type: d.lT.INLINE_NOTICE,
                       noticeType: "info",
                       useText: () =>
                           m.intl.format(g.default.DeOsIl, {
                               connectionName: t.name,
-                              applicationName: x,
+                              applicationName: h,
                               connectionEntrypointUrl: n.connectionEntrypointUrl,
                           }),
                   }
                 : null,
-        [t, x, n, u, h],
+        [t, h, n, u, p, x, A],
     );
 }
