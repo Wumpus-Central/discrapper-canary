@@ -20,8 +20,16 @@ async function h(e, t) {
                 location: "openInviteFromRPC",
             }),
         l.default.isAuthenticated()
-            ? a.h.dispatch({ type: "INVITE_MODAL_OPEN", invite: u, code: e, context: m.BRT.APP })
-            : (0, s.bG)(m.BVt.INVITE(e)),
+            ? a.h.dispatch({
+                  type: "INVITE_MODAL_OPEN",
+                  invite: u,
+                  code: e,
+                  context: m.BRT.APP,
+                  received_installation_id: null != n.installationId ? String(n.installationId) : void 0,
+              })
+            : (n?.installationId != null &&
+                  i.Ay.setReceivedInstallationIdForInviteCode(u.code, String(n.installationId)),
+              (0, s.bG)(m.BVt.INVITE(e))),
         o.isPlatformEmbedded && d.Ay.focus(),
         { invite: u, code: e }
     );
@@ -30,10 +38,9 @@ let x = {
     [m.e$_.OPEN_INVITE]: {
         scope: u.hj,
         async handler(e) {
-            let {
-                args: { code: t },
-            } = e;
-            await h(t, "RPC OPEN_INVITE Handler");
+            let { args: t } = e,
+                { code: n, ...a } = t;
+            await h(n, "RPC OPEN_INVITE Handler", a);
         },
     },
 };

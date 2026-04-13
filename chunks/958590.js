@@ -1,10 +1,10 @@
 "use strict";
 let r;
-n.d(t, { A: () => M });
+n.d(t, { A: () => B });
 var i = n(177029),
-    a = n.n(i),
-    s = n(818125),
-    o = n.n(s),
+    s = n.n(i),
+    a = n(818125),
+    o = n.n(a),
     l = n(725918),
     u = n.n(l),
     c = n(311907),
@@ -14,18 +14,22 @@ var i = n(177029),
 let p = {},
     h = {},
     m = {},
-    g = {},
-    E = !1,
+    E = {},
+    g = !1,
     A = !1,
-    I = !1;
-function T() {
-    (p = {}), (h = {}), (m = {}), (g = {}), (r = null), (A = !1), (I = !1), (E = !1);
+    I = !1,
+    T = new Map();
+function S(e) {
+    return e.toLowerCase();
 }
-function y(e) {
+function y() {
+    (p = {}), (h = {}), (m = {}), (E = {}), (r = null), (A = !1), (I = !1), (g = !1);
+}
+function v(e) {
     let { channel: t } = e;
     delete p[t.id], delete h[t.id], delete m[t.id];
 }
-function S(e) {
+function N(e) {
     let { channelId: t, invite: n } = e,
         r = _.A.createFromServer(n);
     r.targetType === f.yV.STREAM && null != r.targetUser
@@ -34,51 +38,68 @@ function S(e) {
           ? (null == m[t] && (m[t] = {}), (m[t][r.targetApplication.id] = r))
           : (p[t] = r);
 }
-function v(e) {
-    let { channelId: t } = e;
-    p[t] = null;
-}
 function C(e) {
     let { channelId: t } = e;
     p[t] = null;
 }
-function b(e) {
-    (g[e.invite.code] = _.A.createFromServer(e.invite)),
-        (r = a()(o()(u()(Object.values(g), "createdAt"))) ?? null),
+function R(e) {
+    let { channelId: t } = e;
+    p[t] = null;
+}
+function O(e) {
+    (E[e.invite.code] = _.A.createFromServer(e.invite)),
+        (r = s()(o()(u()(Object.values(E), "createdAt"))) ?? null),
         (I = !1);
 }
-function N() {
+function b() {
     I = !1;
 }
-function R(e) {
+function D(e) {
     null != e.invites &&
         e.invites.forEach((e) => {
-            null != g[e.code] && delete g[e.code];
+            null != E[e.code] && delete E[e.code];
         }),
-        (r = a()(o()(u()(Object.values(g), "createdAt"))) ?? null),
+        (r = s()(o()(u()(Object.values(E), "createdAt"))) ?? null),
         (A = !1);
 }
-function O() {
+function L() {
     A = !0;
 }
-function D() {
+function w() {
     I = !0;
 }
-function L() {
-    E = !0;
-}
-function w(e) {
-    (g = {}),
-        e.invites.forEach((e) => {
-            g[e.code] = _.A.createFromServer(e);
-        }),
-        (r = a()(o()(u()(Object.values(g), "createdAt"))) ?? null),
-        (E = !1);
+function M() {
+    g = !0;
 }
 function x(e) {
+    (E = {}),
+        e.invites.forEach((e) => {
+            E[e.code] = _.A.createFromServer(e);
+        }),
+        (r = s()(o()(u()(Object.values(E), "createdAt"))) ?? null),
+        (g = !1);
+}
+function P(e) {
     delete p[e.channelId];
 }
-class P extends c.Ay.Store {
+function k(e) {
+    (T = new Map(T)).set(S(e.inviteCode), e.receivedInstallationId);
+}
+function U(e) {
+    let { inviteCode: t } = e,
+        n = S(t);
+    if (!T.has(n)) return !1;
+    (T = new Map(T)).delete(n);
+}
+function G(e) {
+    let { inviteCode: t } = e;
+    return null != t && U({ inviteCode: t });
+}
+function F() {
+    if (0 === T.size) return !1;
+    T = new Map();
+}
+class V extends c.Ay.Store {
     static displayName = "InstantInviteStore";
     getInvite(e) {
         let {
@@ -96,24 +117,31 @@ class P extends c.Ay.Store {
         return r;
     }
     getFriendInvitesFetching() {
-        return E;
+        return g;
     }
     canRevokeFriendInvite() {
         return null != r && !A && !I;
     }
+    getReceivedInstallationIdForInviteCode(e) {
+        return T.get(S(e));
+    }
 }
-let M = new P(d.h, {
-    CONNECTION_OPEN: T,
-    CHANNEL_DELETE: y,
-    FRIEND_INVITE_CREATE_SUCCESS: b,
-    FRIEND_INVITE_CREATE_FAILURE: N,
-    FRIEND_INVITE_REVOKE_SUCCESS: R,
-    INSTANT_INVITE_CREATE_SUCCESS: S,
-    INSTANT_INVITE_CREATE_FAILURE: v,
-    INSTANT_INVITE_REVOKE_SUCCESS: C,
-    FRIEND_INVITE_REVOKE_REQUEST: O,
-    FRIEND_INVITE_CREATE_REQUEST: D,
-    FRIEND_INVITES_FETCH_REQUEST: L,
-    FRIEND_INVITES_FETCH_RESPONSE: w,
-    INSTANT_INVITE_CLEAR: x,
+let B = new V(d.h, {
+    CONNECTION_OPEN: y,
+    CHANNEL_DELETE: v,
+    FRIEND_INVITE_CREATE_SUCCESS: O,
+    FRIEND_INVITE_CREATE_FAILURE: b,
+    FRIEND_INVITE_REVOKE_SUCCESS: D,
+    INSTANT_INVITE_CREATE_SUCCESS: N,
+    INSTANT_INVITE_CREATE_FAILURE: C,
+    INSTANT_INVITE_REVOKE_SUCCESS: R,
+    FRIEND_INVITE_REVOKE_REQUEST: L,
+    FRIEND_INVITE_CREATE_REQUEST: w,
+    FRIEND_INVITES_FETCH_REQUEST: M,
+    FRIEND_INVITES_FETCH_RESPONSE: x,
+    INSTANT_INVITE_CLEAR: P,
+    INSTANT_INVITE_RECEIVED_INSTALLATION_ID_SET: k,
+    INSTANT_INVITE_RECEIVED_INSTALLATION_ID_CLEAR: U,
+    INVITE_MODAL_CLOSE: G,
+    LOGOUT: F,
 });

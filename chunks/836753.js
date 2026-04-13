@@ -26,7 +26,7 @@ class A extends a.A {
             !(0, l.kBI)(h) &&
             (0, l.mMO)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e("64161"), n.e("83155"), n.e("49071")]).then(
+                    let { default: e } = await Promise.all([n.e("64161"), n.e("83155"), n.e("64252")]).then(
                         n.bind(n, 563038),
                     );
                     return (t) => (0, i.jsx)(e, { ...t });
@@ -37,12 +37,13 @@ class A extends a.A {
                     onCloseRequest: () => {
                         let e = (0, r.p9)(),
                             t = (0, r.xD)();
-                        o.default.track(u.HAw.INVITE_ACCEPT_DISMISSED, { invite_code: e, guild_id: t }), d.A.close();
+                        o.default.track(u.HAw.INVITE_ACCEPT_DISMISSED, { invite_code: e, guild_id: t }),
+                            d.A.close(c.A.getProps().invite?.code ?? e);
                     },
                 },
             );
     }
-    handleCloseModal() {
+    handleCloseModal(e) {
         (0, l.OoC)(h);
     }
 }

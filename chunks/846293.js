@@ -345,28 +345,30 @@ let eI = {
             a = (0, L.y$)(t),
             o = a.baseCode,
             l = F.default.getSessionId(),
-            u = ec(r, a),
-            c = $.default.getCurrentUser();
-        return c?.hasFlag(et.nhx.QUARANTINED)
+            u = Y.A.getReceivedInstallationIdForInviteCode(o),
+            c = ec(r, a),
+            _ = $.default.getCurrentUser();
+        return _?.hasFlag(et.nhx.QUARANTINED)
             ? ((0, M.default)(), new Promise((e, t) => t(Error())))
             : (p.h.dispatch({ type: "INVITE_ACCEPT", code: t }),
               d.Bo.post({
                   url: et.Rsh.INVITE(o),
-                  context: u,
+                  context: c,
                   oldFormErrors: !0,
-                  body: { session_id: l, invite_instance_id: r.invite_instance_id },
+                  body: { session_id: l, invite_instance_id: r.invite_instance_id, received_installation_id: u },
                   rejectWithError: !1,
               }).then(
                   async (e) => {
-                      p.h.dispatch({ type: "INVITE_ACCEPT_SUCCESS", invite: e.body, code: t });
+                      null != u && this.clearReceivedInstallationIdForInviteCode(o),
+                          p.h.dispatch({ type: "INVITE_ACCEPT_SUCCESS", invite: e.body, code: t });
                       let r = O.Ay.getGuildScheduledEvent(a.guildScheduledEventId),
-                          o = { ...e.body, guild_scheduled_event: r },
-                          l = o?.guild_id ?? o?.guild?.id;
-                      if (!s && null != l && o.new_member && !o.show_verification_form) {
+                          l = { ...e.body, guild_scheduled_event: r },
+                          c = l?.guild_id ?? l?.guild?.id;
+                      if (!s && null != c && l.new_member && !l.show_verification_form) {
                           let { default: e } = await Promise.resolve().then(n.bind(n, 967305));
-                          await e({ guildId: l });
+                          await e({ guildId: c });
                       }
-                      return i?.(o), e.body;
+                      return i?.(l), e.body;
                   },
                   (e) => {
                       throw (
@@ -449,6 +451,12 @@ let eI = {
         X.A.launch(a, (t) => {
             p.h.dispatch(t ? { type: "INVITE_APP_OPENED", code: e } : { type: "INVITE_APP_NOT_OPENED", code: e });
         });
+    },
+    setReceivedInstallationIdForInviteCode(e, t) {
+        p.h.dispatch({ type: "INSTANT_INVITE_RECEIVED_INSTALLATION_ID_SET", inviteCode: e, receivedInstallationId: t });
+    },
+    clearReceivedInstallationIdForInviteCode(e) {
+        p.h.dispatch({ type: "INSTANT_INVITE_RECEIVED_INSTALLATION_ID_CLEAR", inviteCode: e });
     },
     transitionToInviteChannelSync: em,
     trackInviteServerClicked: eA,
