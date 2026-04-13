@@ -19,7 +19,7 @@ var r = n(627968),
     A = n(427262),
     I = n(652215),
     T = n(788868),
-    S = n(756366),
+    S = n(366023),
     y = n(985018),
     v = n(630356);
 function N(e) {
@@ -213,7 +213,7 @@ function U(e) {
         : n === T.PremiumTypes.TIER_2
           ? (0, r.jsx)(O, {})
           : i?.type === o.R.BUNDLE
-            ? (0, r.jsx)(_.a, { product: i, fallbackLabel: null })
+            ? (0, r.jsx)(_.a, { product: i, fallbackLabel: null, staticPreviewClassName: v.C0 })
             : null == t
               ? null
               : x(t.productLine)

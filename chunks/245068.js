@@ -9,68 +9,68 @@ var r = n(627968),
     u = n(397927),
     c = n(736653),
     d = n(775602),
-    _ = n(550111),
-    f = n(331402),
-    p = n(320447),
-    h = n(442759),
+    _ = n(320447),
+    f = n(442759),
+    p = n(512213),
+    h = n(139136),
     m = n(929283),
-    E = n(650906),
+    E = n(939587),
     g = n(180171),
     A = n(989099);
 let I = i.memo(function (e) {
-    let { product: t, isHighlighted: n, user: i, forCollectedModal: s } = e,
-        { firstProfileEffect: I, firstAvatarDecoration: T, firstNameplate: S } = (0, h.f5)(t),
-        { enabled: y } = (0, p.P)("BundlePreview"),
-        v = (0, o.bG)([d.A], () => d.A.useReducedMotion),
-        N = (0, c.Ay)(),
-        C = (0, l.qB)(N),
-        R = null != S && null != T && null != I,
-        O = R ? u._3J.SIZE_72 : u._3J.SIZE_80,
-        b = C ? A : g,
-        D = t.previewAssets?.fgStatic;
-    if (y && null != D) {
-        let e = n && !v,
+    let { product: t, isHighlighted: n, user: i, forCollectedModal: s, staticPreviewClassName: I } = e,
+        { firstProfileEffect: T, firstAvatarDecoration: S, firstNameplate: y } = (0, f.f5)(t),
+        { enabled: v } = (0, _.P)("BundlePreview"),
+        N = (0, o.bG)([d.A], () => d.A.useReducedMotion),
+        C = (0, c.Ay)(),
+        R = (0, l.qB)(C),
+        O = null != y && null != S && null != T,
+        b = O ? u._3J.SIZE_72 : u._3J.SIZE_80,
+        D = R ? A : g,
+        L = t.previewAssets?.fgStatic;
+    if (v && null != L) {
+        let e = n && !N,
             i = t.previewAssets?.fgAnimated,
-            s = e && null != i ? i : D;
+            s = e && null != i ? i : L;
         return (0, r.jsx)("div", {
-            className: E.kL,
-            children: (0, r.jsx)("img", { className: a()(E.d2, { [E.M2]: n }), src: s, alt: t.name }),
+            className: E.EJ,
+            children: (0, r.jsx)("img", { className: a()(E.d2, I, { [E.M2]: n }), src: s, alt: t.name }),
         });
     }
     return (0, r.jsxs)("div", {
-        className: a()(E.kL, { [E.ib]: !R, [E.c$]: R }),
+        className: a()(E.kL, { [E.ib]: !O, [E.c$]: O }),
         children: [
-            null != I &&
+            null != T &&
                 (0, r.jsx)("div", {
                     className: E.NM,
-                    children: (0, r.jsx)(f.A, {
+                    children: (0, r.jsx)(h.A, {
                         isHighlighted: n,
-                        skuId: I.skuId,
+                        skuId: T.skuId,
                         removeSetHeight: !0,
                         delayProfileEffectIntro: s,
                         withScaleAnimation: s,
                     }),
                 }),
-            R &&
+            O &&
                 (0, r.jsx)("div", {
                     className: E.M4,
-                    children: (0, r.jsx)(_.A, {
+                    children: (0, r.jsx)(p.A, {
                         user: i,
-                        nameplate: S,
+                        nameplate: y,
                         isHighlighted: n,
                         showPlaceholderUser: !n,
-                        pendingAvatarDecoration: T,
+                        pendingAvatarDecoration: S,
                     }),
                 }),
-            null != T &&
+            null != S &&
                 (0, r.jsx)("div", {
                     className: E._P,
                     children: (0, r.jsx)(m.i, {
-                        item: T,
+                        item: S,
                         user: i,
-                        avatarSize: O,
+                        avatarSize: b,
                         isHighlighted: n,
-                        avatarPlaceholderSrc: b,
+                        avatarPlaceholderSrc: D,
                         className: E.my,
                     }),
                 }),

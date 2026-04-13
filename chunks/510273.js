@@ -1,12 +1,12 @@
-r.r(t), r.d(t, { default: () => N });
+r.r(t), r.d(t, { default: () => E });
 var s = r(627968),
     i = r(64700),
-    a = r(382222),
+    a = r(687498),
     l = r(575593),
     n = r(334279),
     d = r(417597),
-    u = r(397927),
-    c = r(287809),
+    c = r(397927),
+    u = r(287809),
     o = r(512213),
     h = r(139136),
     m = r(846957),
@@ -15,11 +15,11 @@ var s = r(627968),
     p = r(158216),
     j = r(985018),
     x = r(980456),
-    y = r(743102),
-    v = r(241988);
+    v = r(743102),
+    y = r(241988);
 let _ = (e) => {
         let { product: t, itemConsumed: r, forCollectedModal: i } = e,
-            a = (0, d.bG)([c.default], () => c.default.getCurrentUser());
+            a = (0, d.bG)([u.default], () => u.default.getCurrentUser());
         if (null == a) return null;
         let [p] = t.items;
         if (t.type === l.R.PROFILE_EFFECT)
@@ -33,7 +33,7 @@ let _ = (e) => {
                 }),
             });
         if (t.type === l.R.AVATAR_DECORATION)
-            return (0, s.jsx)(f.i, { item: p, user: a, avatarSize: u._3J.SIZE_120, isHighlighted: !0 });
+            return (0, s.jsx)(f.i, { item: p, user: a, avatarSize: c._3J.SIZE_120, isHighlighted: !0 });
         if (t.type === l.R.NAMEPLATE)
             return (0, s.jsx)("div", {
                 className: x.qF,
@@ -42,32 +42,38 @@ let _ = (e) => {
         if (t.type === l.R.BUNDLE)
             return (0, s.jsx)("div", {
                 className: x.hT,
-                children: (0, s.jsx)(g.X, { product: t, user: a, isHighlighted: !0, forCollectedModal: i }),
+                children: (0, s.jsx)(g.X, {
+                    product: t,
+                    user: a,
+                    isHighlighted: !0,
+                    forCollectedModal: i,
+                    staticPreviewClassName: x.Nq,
+                }),
             });
         if (t.type === l.R.EXTERNAL_SKU) {
             if (Object.values(n.j).includes(t.skuId))
-                if (r) return (0, s.jsx)("img", { src: v, alt: j.intl.string(j.t.t0xkSB), style: { width: "100%" } });
-                else return (0, s.jsx)("img", { src: y, alt: j.intl.string(j.t.g5W1g8) });
+                if (r) return (0, s.jsx)("img", { src: y, alt: j.intl.string(j.t.t0xkSB), style: { width: "100%" } });
+                else return (0, s.jsx)("img", { src: v, alt: j.intl.string(j.t.g5W1g8) });
             return (0, s.jsx)(m.B, { product: t });
         }
         return null;
     },
-    E = (e) => {
+    N = (e) => {
         let { reducedMotion: t, displayOptions: r } = e,
             [l, n] = i.useState(!1),
-            d = (0, u.zhh)({
+            d = (0, c.zhh)({
                 from: { transform: "translateX(100%)", right: "-100%" },
                 to: { transform: "translateX(50%)", right: "50%" },
                 config: { duration: 1550 },
                 onRest: () => setTimeout(() => n(!0), 100),
             }),
-            c = (0, u.zhh)({
+            u = (0, c.zhh)({
                 from: { transform: "translateX(100%)", right: "-100%" },
                 to: { transform: "translateX(50%)", right: "50%" },
                 config: { duration: 1550 },
                 reverse: l,
             }),
-            o = (0, u.zhh)(
+            o = (0, c.zhh)(
                 {
                     from: { transform: "translateX(50%)", right: "50%", opacity: 1 },
                     to: { transform: "translateX(50%)", right: "50%", opacity: 0 },
@@ -81,13 +87,13 @@ let _ = (e) => {
                 (0, s.jsx)(a.animated.div, { className: x.VH, style: d, children: (0, s.jsx)(_, { ...e }) }),
                 (0, s.jsx)(a.animated.div, {
                     className: x.VH,
-                    style: t ? o : c,
+                    style: t ? o : u,
                     children: (0, s.jsx)("img", { src: r.getSrc(), style: r.style, alt: "", "aria-hidden": "true" }),
                 }),
             ],
         });
     };
-function N(e) {
+function E(e) {
     let t = (0, p.K9)(e.product.categorySkuId);
-    return null != t ? (0, s.jsx)(E, { ...e, displayOptions: t }) : (0, s.jsx)(_, { ...e });
+    return null != t ? (0, s.jsx)(N, { ...e, displayOptions: t }) : (0, s.jsx)(_, { ...e });
 }

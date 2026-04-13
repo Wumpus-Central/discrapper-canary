@@ -43623,6 +43623,11 @@ screen and (max-width:485px) {
     filter: drop-shadow(0 4px 10px var(--shadow-low-hover))
 }
 
+.bundleMiniStaticPreview_da8ac7 {
+    height: 100%;
+    width: 100%
+}
+
 .purchaseItemImage_da8ac7 {
     height: 64px;
     -o-object-fit: cover;
