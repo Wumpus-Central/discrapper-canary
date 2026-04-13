@@ -3980,6 +3980,7 @@ var nl = (function (e) {
             (e.WAVE_CTA_CLICKED = "wave_cta_clicked"),
             (e.FRIENDS_LIST_CLICKED = "friends_list_clicked"),
             (e.FRIENDS_LIST_ITEM_CLICKED = "friends_list_item_clicked"),
+            (e.FRIENDS_LIST_ITEM_CONTEXT_MENU_INTERACTED = "friends_list_item_context_menu_interacted"),
             (e.FRIENDS_LIST_ITEM_MESSAGE_CLICKED = "friends_list_item_message_clicked"),
             (e.FRIENDS_LIST_ITEM_REMOVE_FRIEND_CLICKED = "friends_list_item_remove_friend_clicked"),
             (e.FRIENDS_LIST_ITEM_VIDEO_CALL_CLICKED = "friends_list_item_video_call_clicked"),
