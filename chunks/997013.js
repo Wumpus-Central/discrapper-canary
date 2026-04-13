@@ -50,6 +50,7 @@ class l extends r.A {
     steamReleaseStatus;
     reviews;
     opencriticUrl;
+    gameFlags;
     get applicationId() {
         return this.id;
     }
@@ -85,7 +86,8 @@ class l extends r.A {
             (this.shopCollectionIds = e.shop_collection_ids),
             (this.steamReleaseStatus = e.steam_release_status),
             (this.reviews = o(e.reviews)),
-            (this.opencriticUrl = e.opencritic_url);
+            (this.opencriticUrl = e.opencritic_url),
+            (this.gameFlags = e.game_flags ?? 0);
     }
     getCoverURL(e) {
         return null == this.media
