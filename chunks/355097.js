@@ -1,22 +1,21 @@
 "use strict";
 n.d(t, {
-    Eq: () => u,
-    O9: () => p,
-    PZ: () => l,
-    Sb: () => f,
-    W: () => A,
+    Eq: () => l,
+    O9: () => f,
+    PZ: () => o,
+    Sb: () => _,
+    W: () => g,
     Xx: () => r,
-    YL: () => a,
     YP: () => s,
     _A: () => i,
-    _F: () => c,
-    bf: () => _,
-    ko: () => m,
-    n3: () => g,
-    nR: () => o,
-    oD: () => d,
-    od: () => h,
-    vv: () => E,
+    _F: () => u,
+    bf: () => d,
+    ko: () => h,
+    n3: () => E,
+    nR: () => a,
+    oD: () => c,
+    od: () => p,
+    vv: () => m,
 });
 var r = (function (e) {
         return (
@@ -34,19 +33,16 @@ var r = (function (e) {
     })({}),
     s = (function (e) {
         return (e.AUTO = "auto"), (e.COMPACT = "compact"), (e.COZY = "cozy"), e;
-    })({}),
-    a = (function (e) {
-        return (e.GOOGLE = "google"), (e.BING = "bing"), (e.DUCKDUCKGO = "duckduckgo"), (e.CUSTOM = "custom"), e;
     })({});
-let o = "ROLE_SUBSCRIPTIONS",
-    l = "APPLICATION_SUBSCRIPTION_SUBSECTION";
-var u = (function (e) {
+let a = "ROLE_SUBSCRIPTIONS",
+    o = "APPLICATION_SUBSCRIPTION_SUBSECTION";
+var l = (function (e) {
         return (e.USER_PROFILE = "user_profile"), (e.GUILD = "guild"), e;
     })({}),
-    c = (function (e) {
+    u = (function (e) {
         return (e.TRY_IT_OUT = "try_it_out"), (e.GUILD_TAG = "guild_tag"), e;
     })({}),
-    d = (function (e) {
+    c = (function (e) {
         return (
             (e[(e.PRELOADED_USER_SETTINGS = 1)] = "PRELOADED_USER_SETTINGS"),
             (e[(e.FRECENCY_AND_FAVORITES_SETTINGS = 2)] = "FRECENCY_AND_FAVORITES_SETTINGS"),
@@ -54,7 +50,7 @@ var u = (function (e) {
             e
         );
     })({}),
-    _ = (function (e) {
+    d = (function (e) {
         return (
             (e.USER_SETTINGS_PRIVACY_SAFETY = "user_settings_privacy_safety"),
             (e.USER_SETTINGS_ACTIVITY_PRIVACY = "user_settings_activity_privacy"),
@@ -62,7 +58,7 @@ var u = (function (e) {
             e
         );
     })({}),
-    f = (function (e) {
+    _ = (function (e) {
         return (
             (e[(e.INFREQUENT_USER_ACTION = 0)] = "INFREQUENT_USER_ACTION"),
             (e[(e.FREQUENT_USER_ACTION = 10)] = "FREQUENT_USER_ACTION"),
@@ -72,7 +68,7 @@ var u = (function (e) {
             e
         );
     })({});
-function p() {
+function f() {
     return {
         protoToSave: void 0,
         timeout: void 0,
@@ -86,7 +82,7 @@ function p() {
         offlineEditDataVersion: void 0,
     };
 }
-var h = (function (e) {
+var p = (function (e) {
         return (
             (e.ACCOUNT = "account"),
             (e.ACCOUNT_STANDING = "account-standing"),
@@ -130,7 +126,7 @@ var h = (function (e) {
             e
         );
     })({}),
-    m = (function (e) {
+    h = (function (e) {
         return (
             (e[(e.CONFIRM_START = 0)] = "CONFIRM_START"),
             (e[(e.CONFIRM_CODE = 1)] = "CONFIRM_CODE"),
@@ -141,7 +137,7 @@ var h = (function (e) {
             e
         );
     })({});
-let E = {
+let m = {
         NEW_FORUM_THREADS_ON: 16384,
         NEW_FORUM_THREADS_OFF: 8192,
         OPT_IN_ENABLED: 4096,
@@ -149,12 +145,12 @@ let E = {
         UNREADS_ALL_MESSAGES: 1024,
         UNREADS_ONLY_MENTIONS: 512,
     },
-    g = {
+    E = {
         OPT_IN_CHANNELS_ON: 16384,
         OPT_IN_CHANNELS_OFF: 8192,
         UNREADS_ONLY_MENTIONS: 4096,
         UNREADS_ALL_MESSAGES: 2048,
     };
-var A = (function (e) {
+var g = (function (e) {
     return (e.USER = "user"), (e.STREAM = "stream"), e;
 })({});

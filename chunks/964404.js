@@ -157,12 +157,6 @@ class y extends s.Ay.DeviceSettingsStore {
     get hdrDynamicRange() {
         return m.hdrDynamicRange ?? "no-limit";
     }
-    get searchProvider() {
-        return m.searchProvider ?? u.YL.GOOGLE;
-    }
-    get customSearchUrl() {
-        return m.customSearchUrl ?? "";
-    }
 }
 let v = new y(o.h, {
     UNSYNCED_USER_SETTINGS_UPDATE: E,
