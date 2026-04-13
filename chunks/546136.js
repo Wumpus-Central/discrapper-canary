@@ -1,57 +1,57 @@
-t.d(l, { Ay: () => N, _T: () => v, oA: () => j });
-var n = t(627968);
-t(64700);
-var i = t(503698),
-    s = t.n(i),
-    a = t(397927),
-    r = t(927578),
-    o = t(487233),
-    d = t(230635),
-    c = t(473219),
-    u = t(542454),
-    m = t(338003),
-    x = t(642737),
-    p = t(23722),
-    A = t(985018),
-    g = t(266603);
+l.d(t, { Ay: () => N, _T: () => v, oA: () => j });
+var n = l(627968);
+l(64700);
+var i = l(503698),
+    s = l.n(i),
+    a = l(397927),
+    r = l(927578),
+    o = l(487233),
+    d = l(230635),
+    c = l(473219),
+    u = l(542454),
+    m = l(338003),
+    p = l(642737),
+    x = l(23722),
+    A = l(985018),
+    g = l(266603);
 let f = "profile-modal-editing-panel",
     h = "profile-modal-editing-panel-heading";
 function j(e) {
-    let { onClick: l, className: t, innerRef: i } = e;
+    let { onClick: t, className: l, innerRef: i } = e;
     return (0, n.jsx)(a.DUT, {
         innerRef: i,
         "aria-label": A.intl.string(A.t.N8XQDE),
         "aria-expanded": !1,
         "aria-controls": f,
-        className: s()(g.eg, t),
-        onClick: l,
+        className: s()(g.eg, l),
+        onClick: t,
         focusProps: { offset: { right: 6 } },
         children: (0, n.jsx)(a.NDp, { size: "sm", color: a.LU0.colors.ICON_STRONG }),
     });
 }
 function v(e) {
-    let { onClick: l, className: t, buttonRef: i } = e;
+    let { onClick: t, className: l, buttonRef: i } = e;
     return (0, n.jsx)("div", {
-        className: t,
+        className: l,
         children: (0, n.jsx)(a.K0, {
             buttonRef: i,
             "aria-label": A.intl.string(A.t.N8XQDE),
             "aria-expanded": !1,
             "aria-controls": f,
             icon: a.NDp,
-            onClick: l,
+            onClick: t,
             variant: "secondary",
             size: "sm",
         }),
     });
 }
 function I(e) {
-    let { onClick: l, innerRef: t } = e;
+    let { onClick: t, innerRef: l } = e;
     return (0, n.jsxs)(a.DUT, {
-        innerRef: t,
+        innerRef: l,
         className: g.cS,
         "aria-label": A.intl.string(A.t.X6NklS),
-        onClick: l,
+        onClick: t,
         "aria-controls": f,
         "aria-expanded": !0,
         children: [
@@ -61,20 +61,29 @@ function I(e) {
     });
 }
 function N(e) {
-    let { user: l, selectedGuildId: t, onSelectGuildId: i, onClose: j, className: v, collapseButtonRef: N } = e,
-        y = (0, p.A)(i),
-        C = r.Ay.canUsePremiumProfileCustomization(l);
+    let {
+            user: t,
+            selectedGuildId: l,
+            onSelectGuildId: i,
+            isLoading: j = !1,
+            onClose: v,
+            className: N,
+            collapseButtonRef: y,
+        } = e,
+        C = (0, x.A)(i),
+        E = r.Ay.canUsePremiumProfileCustomization(t);
     return (0, n.jsxs)("aside", {
         id: f,
         "aria-labelledby": h,
-        className: s()(g.nd, v),
+        className: s()(g.nd, N),
+        "aria-busy": j,
         children: [
             (0, n.jsx)(a.AC4, { children: (0, n.jsx)(a.H, { id: h, children: A.intl.string(A.t["L+ch00"]) }) }),
             (0, n.jsxs)("div", {
                 className: g.wx,
                 children: [
-                    (0, n.jsx)(I, { innerRef: N, onClick: j }),
-                    (0, n.jsx)(x.A, { selectedGuildId: t ?? null, onChange: y }),
+                    (0, n.jsx)(I, { innerRef: y, onClick: v }),
+                    (0, n.jsx)(p.A, { selectedGuildId: l ?? null, onChange: C, loading: j }),
                 ],
             }),
             (0, n.jsx)(a.Fmo, {
@@ -90,7 +99,7 @@ function N(e) {
                                     className: g.AM,
                                     children: A.intl.string(A.t.x5CoXR),
                                 }),
-                                (0, n.jsx)(c.W, { guildId: t }),
+                                (0, n.jsx)(c.A, { user: t, guildId: l, disabled: j }),
                             ],
                         }),
                         (0, n.jsxs)("div", {
@@ -101,11 +110,11 @@ function N(e) {
                                     className: g.AM,
                                     children: A.intl.string(A.t["50Nwpc"]),
                                 }),
-                                (0, n.jsx)(o.m, { guildId: t }),
-                                (0, n.jsx)(d.W, { guildId: t }),
+                                (0, n.jsx)(o.A, { user: t, guildId: l, disabled: j }),
+                                (0, n.jsx)(d.A, { user: t, guildId: l, disabled: j }),
                             ],
                         }),
-                        C &&
+                        E &&
                             (0, n.jsxs)("div", {
                                 className: g.Os,
                                 children: [
@@ -114,13 +123,13 @@ function N(e) {
                                         className: g.AM,
                                         children: A.intl.string(A.t.Zenogr),
                                     }),
-                                    (0, n.jsx)(u.A, { user: l, guildId: t }),
+                                    (0, n.jsx)(u.A, { user: t, guildId: l, disabled: j }),
                                 ],
                             }),
                     ],
                 }),
             }),
-            !C && (0, n.jsx)(m.O, {}),
+            !E && (0, n.jsx)(m.O, {}),
         ],
     });
 }

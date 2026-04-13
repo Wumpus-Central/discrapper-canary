@@ -1,70 +1,65 @@
-l.d(t, { W: () => y });
+l.d(t, { A: () => h });
 var a = l(627968),
     n = l(64700),
-    r = l(311907),
-    i = l(688810),
-    o = l(512213),
-    s = l(637193),
-    d = l(713517),
-    c = l(919395),
-    u = l(287809),
-    p = l(84540),
-    m = l(930349),
-    h = l(985018),
-    x = l(432856);
-function b(e) {
-    let { user: t, guildId: l } = e,
-        { analyticsLocations: r } = (0, i.Ay)(),
-        u = null != l,
-        b = n.useRef(null),
-        { isHoveringOrFocusing: y } = (0, d.A)(b),
-        { guildNameplate: f, pendingNameplate: g } = (0, c.rv)(t, l ?? void 0),
-        v = (0, c.lw)({ pendingValue: g, userValue: t.collectibles?.nameplate, guildValue: f, guildId: l ?? void 0 }),
-        _ = void 0 !== g,
-        E = u ? f : t.collectibles?.nameplate,
-        C = n.useCallback(() => {
-            (0, s.p)({ analyticsLocations: r, guildId: l ?? void 0, stackingBehavior: "stack" });
-        }, [r, l]),
-        j = u && t.collectibles?.nameplate != null,
-        S =
-            null != v && (_ ? null != g : null != E)
+    r = l(688810),
+    i = l(512213),
+    o = l(637193),
+    s = l(713517),
+    d = l(919395),
+    c = l(84540),
+    u = l(930349),
+    p = l(985018),
+    m = l(432856);
+function h(e) {
+    let { user: t, guildId: l, disabled: h } = e,
+        { analyticsLocations: x } = (0, r.Ay)(),
+        b = null != l,
+        y = n.useRef(null),
+        { isHoveringOrFocusing: f } = (0, s.A)(y),
+        { guildNameplate: g, pendingNameplate: v } = (0, d.rv)(t, l ?? void 0),
+        _ = (0, d.lw)({ pendingValue: v, userValue: t.collectibles?.nameplate, guildValue: g, guildId: l ?? void 0 }),
+        E = void 0 !== v,
+        C = b ? g : t.collectibles?.nameplate,
+        j = n.useCallback(() => {
+            (0, o.p)({ analyticsLocations: x, guildId: l ?? void 0, stackingBehavior: "stack" });
+        }, [x, l]),
+        S = b && t.collectibles?.nameplate != null,
+        T =
+            null != _ && (E ? null != v : null != C)
                 ? {
-                      onClick: () => (0, p.p)({ guildId: l ?? void 0, nameplate: null }),
-                      type: j ? "reset" : "remove",
-                      accessibleLabel: h.intl.string(j ? h.t.neYqhR : h.t["9zwziY"]),
+                      onClick: () => (0, c.p)({ guildId: l ?? void 0, nameplate: null }),
+                      type: S ? "reset" : "remove",
+                      accessibleLabel: p.intl.string(S ? p.t.neYqhR : p.t["9zwziY"]),
                   }
                 : void 0,
-        T = (0, a.jsx)("div", {
-            className: x.M,
+        A = (0, a.jsx)("div", {
+            className: m.M,
             "aria-hidden": !0,
-            children: (0, a.jsx)(o.A, {
+            children: (0, a.jsx)(i.A, {
                 user: t,
                 guildId: l ?? void 0,
-                nameplate: v,
-                showPlaceholderUser: null == v || !y,
+                nameplate: _,
+                showPlaceholderUser: null == _ || !f || h,
             }),
         });
     return (0, a.jsx)("div", {
-        ref: b,
+        ref: y,
         children:
-            null == v
-                ? (0, a.jsx)(m.kL, {
+            null == _
+                ? (0, a.jsx)(u.kL, {
                       variant: "bar",
-                      onClick: C,
-                      accessibleLabel: h.intl.string(h.t.BwdeM1),
-                      children: T,
+                      onClick: j,
+                      accessibleLabel: p.intl.string(p.t.BwdeM1),
+                      disabled: h,
+                      children: A,
                   })
-                : (0, a.jsx)(m.NW, {
+                : (0, a.jsx)(u.NW, {
                       variant: "bar",
-                      onClick: C,
-                      accessibleLabel: h.intl.string(h.t.BwdeM1),
-                      deleteButtonConfig: S,
-                      children: T,
+                      onClick: j,
+                      accessibleLabel: p.intl.string(p.t.BwdeM1),
+                      deleteButtonConfig: T,
+                      disabled: h,
+                      children: A,
                   }),
     });
-}
-function y(e) {
-    let { guildId: t } = e,
-        l = (0, r.bG)([u.default], () => u.default.getCurrentUser());
-    return null == l ? null : (0, a.jsx)(b, { user: l, guildId: t });
 }

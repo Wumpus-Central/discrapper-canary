@@ -6,7 +6,7 @@ var n = l(503698),
     i = l(158954),
     o = l(990078),
     s = l(985018),
-    d = l(730499);
+    d = l(967024);
 function c() {
     return (0, a.jsx)("div", { className: d.overlay });
 }
@@ -33,8 +33,8 @@ function p(e) {
     });
 }
 function m(e) {
-    let { variant: t, children: l } = e;
-    return (0, a.jsx)("div", { className: r()(d.tile, d[t]), children: l });
+    let { variant: t, disabled: l = !1, children: n } = e;
+    return (0, a.jsx)("div", { className: r()(d.tile, d[t], { [d.disabled]: l }), children: n });
 }
 function h(e) {
     let {
@@ -45,21 +45,25 @@ function h(e) {
         showOverlay: o = !1,
         overlayIcon: s,
         overlayControls: p,
+        disabled: h = !1,
     } = e;
     return (0, a.jsxs)(m, {
         variant: t,
+        disabled: h,
         children: [
             (0, a.jsxs)(i.DUT, {
                 className: d.tileButton,
                 "aria-label": n,
-                onClick: l,
+                onClick: h ? void 0 : l,
+                "aria-disabled": h,
+                tabIndex: h ? -1 : 0,
                 children: [
                     (0, a.jsx)("div", { className: d.content, children: r }),
-                    o && (0, a.jsx)(c, {}),
+                    o && !h && (0, a.jsx)(c, {}),
                     null != s && (0, a.jsx)(u, { icon: s, iconAlignment: "bar" === t ? "right" : "center" }),
                 ],
             }),
-            p,
+            !h && p,
         ],
     });
 }

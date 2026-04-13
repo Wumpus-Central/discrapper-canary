@@ -17,7 +17,6 @@ n.r(
         modalHeaderButtons: "modalHeaderButtons__9c3be",
         toast: "toast__9c3be",
         interactionToast: "interactionToast__9c3be",
-        backdrop: "backdrop__9c3be",
         backgroundImage: "backgroundImage__9c3be",
         profile: "profile__9c3be",
         "compact-xs": "compact-xs__9c3be",
