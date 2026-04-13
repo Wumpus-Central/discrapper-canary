@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { D7: () => f, W2: () => l, nG: () => u, q1: () => p, rS: () => a });
+n.d(t, { D7: () => h, W2: () => l, nG: () => u, q1: () => m, rS: () => a });
 var r = n(945810),
     i = n(156312),
     s = n(120700),
@@ -25,28 +25,35 @@ let o = new Set([
         defaultConfig: { enabled: !1, variation: 0, enabledCheckoutFlows: new Set([]) },
         variations: { 1: { enabled: !0, variation: 1, enabledCheckoutFlows: o } },
     }),
-    c = new Set([s.C.ORB_CHECKOUT, s.C.COLLECTIBLES_CHECKOUT, s.C.SLAYER_STOREFRONT_CHECKOUT]),
-    d = [l, u],
-    _ = (e, t) =>
-        !!(null != e && c.has(e)) ||
+    c = new Set([s.C.PREMIUM_CHECKOUT, s.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT]),
+    d = (0, r.mj)({
+        name: "2026-04-unified-checkout-ui-premium-flows",
+        kind: "user",
+        defaultConfig: { enabled: !1, variation: 0, enabledCheckoutFlows: new Set([]) },
+        variations: { 1: { enabled: !0, variation: 1, enabledCheckoutFlows: c } },
+    }),
+    _ = new Set([s.C.ORB_CHECKOUT, s.C.COLLECTIBLES_CHECKOUT, s.C.SLAYER_STOREFRONT_CHECKOUT]),
+    f = [l, u, d],
+    p = (e, t) =>
+        !!(null != e && _.has(e)) ||
         t.some(
             (t) =>
                 (!!t.enabled &&
                     (null == t.enabledCheckoutFlows || (null != e && t.enabledCheckoutFlows?.has(e) === !0))) ||
                 !1,
         ),
-    f = (e) => {
+    h = (e) => {
         let { location: t } = e,
             { unifiedCheckoutFlow: n } = (0, i.P5)();
-        return _(
+        return p(
             n,
-            d.map((e) => e.useConfig({ location: t })),
+            f.map((e) => e.useConfig({ location: t })),
         );
     },
-    p = (e) => {
+    m = (e) => {
         let { location: t, unifiedCheckoutFlow: n } = e;
-        return _(
+        return p(
             n,
-            d.map((e) => e.getConfig({ location: t })),
+            f.map((e) => e.getConfig({ location: t })),
         );
     };
