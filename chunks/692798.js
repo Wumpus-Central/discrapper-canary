@@ -35,7 +35,7 @@ var r = n(627968),
     P = n(355097),
     k = n(818348),
     U = n(985018),
-    G = n(907198),
+    G = n(173189),
     F = (function (e) {
         return (e.EDITOR = "EDITOR"), (e.SETTINGS = "SETTINGS"), e;
     })({});
@@ -75,10 +75,10 @@ let V = Object.freeze({ EDITOR: P.Sb.SLOW_USER_ACTION, SETTINGS: P.Sb.INFREQUENT
         let { type: t, isPreview: n, isCoachmark: i } = e;
         if ((0, A.V)()?.subscription_trial?.sku_id === M.pe.TIER_2 && n) return null;
         let s = (0, o.YW)({ type: t, isPreview: n, isCoachmark: i })
-            .with({ type: "EDITOR", isPreview: !0 }, () => U.intl.format(U.t.G8yQXi, { onPremiumClick: () => g.e }))
+            .with({ type: "EDITOR", isPreview: !0 }, () => U.intl.format(U.t.G8yQXi, { onPremiumClick: g.e }))
             .with({ type: "EDITOR", isCoachmark: !0 }, () => U.intl.string(U.t.jmZiNu))
             .with({ type: "EDITOR", isPreview: !1 }, () => U.intl.string(U.t.dqDFwe))
-            .with({ isPreview: !0 }, () => U.intl.format(U.t["DWIjJ/"], { onPremiumClick: () => g.e }))
+            .with({ isPreview: !0 }, () => U.intl.format(U.t["DWIjJ/"], { onPremiumClick: g.e }))
             .otherwise(() => U.intl.string(U.t["np0X/u"]));
         return (0, r.jsx)(d.Heading, { variant: "text-sm/normal", className: G.W$, children: s });
     },
@@ -98,7 +98,7 @@ let V = Object.freeze({ EDITOR: P.Sb.SLOW_USER_ACTION, SETTINGS: P.Sb.INFREQUENT
             ? (0, r.jsx)(I.Ay, {
                   type: M.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                   subscriptionTier: M.pe.TIER_2,
-                  children: U.intl.format(U.t.G8yQXi, { onPremiumClick: () => g.e }),
+                  children: U.intl.format(U.t.G8yQXi, { onPremiumClick: g.e }),
               })
             : (0, r.jsxs)("div", {
                   className: G.wx,
