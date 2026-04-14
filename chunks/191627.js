@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, {
-    EC: () => h,
+    EC: () => p,
     Ef: () => g,
     Gg: () => d,
     MH: () => S,
@@ -8,23 +8,23 @@ n.d(t, {
     PH: () => f,
     QM: () => E,
     Y7: () => l,
-    dI: () => b,
+    dI: () => R,
     fD: () => o,
     h4: () => c,
     he: () => m,
     iN: () => y,
     jZ: () => _,
     kp: () => u,
-    lu: () => C,
-    ly: () => N,
-    nz: () => p,
+    lu: () => N,
+    ly: () => C,
+    nz: () => h,
     qb: () => v,
     u9: () => I,
     zu: () => T,
 });
 var r = n(323125),
     i = n(927813),
-    s = n(842130),
+    s = n(221425),
     a = n(985018);
 let o = 30 * i.A.Millis.SECOND,
     l = 8,
@@ -33,8 +33,8 @@ let o = 30 * i.A.Millis.SECOND,
     d = 64,
     _ = (e, t) => `https://discord.com/feature/family-center/my-family/${e}/${t}`,
     f = 4,
-    p = 5 * i.A.Millis.MINUTE,
-    h = "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    h = 5 * i.A.Millis.MINUTE,
+    p = "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     m = (0, r.dN)(
         Object.freeze({
             FAMILY_CENTER_SETTINGS: "/family-center/settings",
@@ -74,6 +74,7 @@ var E = (function (e) {
             (e.SETTINGS = "SETTINGS"),
             (e.CONTENT_AND_SOCIAL = "CONTENT_AND_SOCIAL"),
             (e.DATA_AND_PRIVACY = "DATA_AND_PRIVACY"),
+            (e.SCREEN_TIME_CONTROLS = "SCREEN_TIME_CONTROLS"),
             e
         );
     })({}),
@@ -84,6 +85,7 @@ var E = (function (e) {
             (e[(e.SETTINGS = 2)] = "SETTINGS"),
             (e[(e.CONTENT_AND_SOCIAL = 3)] = "CONTENT_AND_SOCIAL"),
             (e[(e.DATA_AND_PRIVACY = 4)] = "DATA_AND_PRIVACY"),
+            (e[(e.SCREEN_TIME_CONTROLS = 5)] = "SCREEN_TIME_CONTROLS"),
             e
         );
     })({}),
@@ -106,7 +108,7 @@ var E = (function (e) {
             e
         );
     })({});
-let N = new Map([
+let C = new Map([
         [
             3,
             {
@@ -193,7 +195,7 @@ let N = new Map([
             },
         ],
     ]),
-    C = () => ({
+    N = () => ({
         seconds: a.intl.string(s.default.CJdoee),
         minutes: s.default.InzMn3,
         hours: s.default.ErkYCI,
@@ -201,7 +203,7 @@ let N = new Map([
         days: s.default.pWig18,
         date: s.default.MP3khg,
     }),
-    b = () => ({
+    R = () => ({
         seconds: a.intl.string(s.default.Bqsamd),
         minutes: s.default.kX3wJg,
         hours: s.default.J18GbG,
