@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => l }), n(321073);
 var r = n(775602),
     i = n(963935),
     s = n(894858),
@@ -23,6 +23,26 @@ class o {
                 s.A.getField("requestAccordionOpenKey") !== e ? t() : this.accordionExpandResolvers.set(e, t);
             }));
     }
+    getValidatedCategoryKey(e, t) {
+        let n = e.layout;
+        if (!(0, i.Iu)(n)) return;
+        let r = [],
+            s = new Set();
+        if (
+            (n.forEach((e) => {
+                (0, i.bJ)(e) && (r.push(e), s.add(e.key));
+            }),
+            null == t)
+        )
+            return r[0]?.key;
+        if (s.has(t)) return t;
+        let a = r[0]?.key;
+        for (let e of n) {
+            if (e.key === t) break;
+            s.has(e.key) && (a = e.key);
+        }
+        return a;
+    }
     notifyAccordionExpanded(e) {
         if (e !== s.A.getField("requestAccordionOpenKey")) return;
         s.A.setState({ requestAccordionOpenKey: void 0 });
@@ -39,23 +59,25 @@ class o {
         let l = s.A.getField("currentTabKeys"),
             u = s.A.getField("currentPanelKey"),
             c = l.get(o),
-            d = n.parentPanelKey === u,
-            _ = null == n.parentTabKey || n.parentTabKey === c,
-            f = d && _,
-            p = async () => {
+            d = this.accessibleDirectory.getPanelOrThrow(o),
+            _ = this.getValidatedCategoryKey(d, n.parentCategoryKey),
+            f = n.parentPanelKey === u,
+            h = null == n.parentTabKey || n.parentTabKey === c,
+            p = f && h,
+            m = async () => {
                 t.onTransitionStart?.(),
                     n.node.type === i.Z6.PANEL && a.A.enableSidebarCategoryAutoSelect(),
                     s.A.setState({
                         currentPanelKey: o,
                         currentTabKeys: null != n.parentTabKey ? new Map(l).set(o, n.parentTabKey) : l,
-                        currentCategoryKey: n.parentCategoryKey,
+                        currentCategoryKey: _,
                         requestAccordionOpenKey: n.parentAccordionKey,
                         showNavigationMobile:
                             null != t.showNavigationMobile
                                 ? t.showNavigationMobile
                                 : s.A.getField("showNavigationMobile"),
                     });
-                let u = null != t.animatePanelScroll ? t.animatePanelScroll : f,
+                let u = null != t.animatePanelScroll ? t.animatePanelScroll : p,
                     c = null != t.animateSidebarScroll && t.animateSidebarScroll;
                 if (
                     (await this.scrollToTarget({
@@ -66,7 +88,7 @@ class o {
                         animatePanelScroll: u,
                         animateSidebarScroll: c,
                     }),
-                    !f)
+                    !p)
                 ) {
                     let e = this.accessibleDirectory?.get(o),
                         t = e?.type === i.Z6.PANEL && (0, i.zY)(e.layout) ? e.layout[0].key : void 0,
@@ -75,7 +97,7 @@ class o {
                 }
                 (!u || r.A.useReducedMotion) && n.node.type !== i.Z6.CATEGORY && s.A.setState({ requestFlashKey: e });
             };
-        d ? p() : this.navigateWithValidation?.(e, p);
+        f ? m() : this.navigateWithValidation?.(e, m);
     }
     async scrollToTarget(e) {
         let {

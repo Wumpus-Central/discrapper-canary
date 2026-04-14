@@ -1,32 +1,32 @@
 "use strict";
-n.d(t, { V: () => y, X: () => x });
+n.d(t, { V: () => y, X: () => S });
 var r = n(627968),
     i = n(64700),
-    l = n(503698),
-    a = n.n(l),
-    s = n(837381),
+    a = n(503698),
+    s = n.n(a),
+    l = n(837381),
     o = n(397927),
     u = n(199966),
     c = n(963935),
     d = n(894858),
     h = n(272053),
-    f = n(189857),
-    m = n(674085),
-    p = n(215566),
-    _ = n(362205),
-    v = n(710515);
+    p = n(189857),
+    _ = n(674085),
+    m = n(215566),
+    f = n(362205),
+    g = n(710515);
 let y = "refresh_sm";
-function g(e) {
-    let { tag: t, onClick: n, active: l, node: s, dismissibleBadge: u, panelKey: c, listItemProps: d, children: h } = e,
+function v(e) {
+    let { tag: t, onClick: n, active: a, node: l, dismissibleBadge: u, panelKey: c, listItemProps: d, children: h } = e,
         {
-            icon: f,
-            StronglyDiscouragedCustomComponent: _,
-            usePersistentBadge: g,
-            useTitle: x,
+            icon: p,
+            StronglyDiscouragedCustomComponent: f,
+            usePersistentBadge: v,
+            useTitle: S,
             variant: E = "default",
-        } = s,
-        A = x?.(),
-        S = (function (e) {
+        } = l,
+        x = S?.(),
+        A = (function (e) {
             switch (e) {
                 case "default":
                     return "currentColor";
@@ -34,7 +34,7 @@ function g(e) {
                     return "text-feedback-critical";
             }
         })(E),
-        b = (function (e) {
+        N = (function (e) {
             switch (e) {
                 case "default":
                     return "currentColor";
@@ -42,34 +42,34 @@ function g(e) {
                     return o.LU0.colors.ICON_FEEDBACK_CRITICAL;
             }
         })(E),
-        N = g?.(l),
+        b = v?.(a),
         C = i.useMemo(
             () =>
                 null != u
-                    ? l
+                    ? a
                         ? null
-                        : (0, r.jsx)(m.A, { badge: u })
-                    : null != N
-                      ? (0, r.jsx)(p.A, { badge: N })
+                        : (0, r.jsx)(_.A, { badge: u })
+                    : null != b
+                      ? (0, r.jsx)(m.A, { badge: b })
                       : void 0,
-            [l, u, N],
+            [a, u, b],
         );
     return (0, r.jsxs)(t, {
         "data-settings-sidebar-item": c,
-        className: v.DB,
+        className: g.DB,
         children: [
             (0, r.jsxs)(o.DUT, {
                 ...d,
-                className: a()(v.AS, { [v.vu]: l, [v.RD]: "destructive" === E }),
+                className: s()(g.AS, { [g.vu]: a, [g.RD]: "destructive" === E }),
                 onClick: n,
                 children: [
-                    null != _
-                        ? (0, r.jsx)(_, {})
+                    null != f
+                        ? (0, r.jsx)(f, {})
                         : (0, r.jsxs)("div", {
-                              className: v.Ly,
+                              className: g.Ly,
                               children: [
-                                  (0, r.jsx)(f, { color: b, size: y, className: v.Kk }),
-                                  (0, r.jsx)(o.Text, { variant: "text-md/medium", color: S, children: A }),
+                                  (0, r.jsx)(p, { color: N, size: y, className: g.Kk }),
+                                  (0, r.jsx)(o.Text, { variant: "text-md/medium", color: A, children: x }),
                               ],
                           }),
                     C,
@@ -79,52 +79,52 @@ function g(e) {
         ],
     });
 }
-function x(e) {
-    let { node: t, visibleContent: n, dismissibleBadges: l, hoisted: a = !1 } = e,
+function S(e) {
+    let { node: t, visibleContent: n, dismissibleBadges: a, hoisted: s = !1 } = e,
         o = i.useMemo(() => t.layout[0], [t]),
-        m = d.A.useField("currentPanelKey"),
-        { accessibleDirectory: p } = (0, u._)(),
-        v = i.useMemo(() => {
-            if (null == m) return !1;
-            let e = p.entry(m);
+        _ = d.A.useField("currentPanelKey"),
+        { accessibleDirectory: m } = (0, u._)(),
+        g = i.useMemo(() => {
+            if (null == _) return !1;
+            let e = m.entry(_);
             return e?.parentSidebarItemKey === t.key;
-        }, [m, t.key, p]),
+        }, [_, t.key, m]),
         y = i.useMemo(() => {
             if (null == o || !(0, c.Iu)(o.layout)) return null;
             let e = o.layout.filter(c.bJ);
             return e.length > 1 ? e : null;
         }, [o]),
-        x =
+        S =
             null != o
                 ? () => {
-                      let e = m === o.key && null != y ? y[0].key : o.key;
+                      let e = _ === o.key && null != y ? y[0].key : o.key;
                       h.A.navigate(e, { animateSidebarScroll: !0, showNavigationMobile: !1 });
                   }
                 : t.onClick,
-        E = null != m,
-        A = i.useMemo(
+        E = null != _,
+        x = i.useMemo(
             () =>
                 null != y && E
-                    ? (0, r.jsx)(_.A, { active: v, categories: y, visibleContent: n, dismissibleBadges: l })
+                    ? (0, r.jsx)(f.A, { active: g, visibleCategories: y, visibleContent: n, dismissibleBadges: a })
                     : null,
-            [v, y, n, l, E],
+            [g, y, n, a, E],
         ),
-        S = a ? "li" : "div",
-        b = i.useMemo(() => (0, f.H)(t.key, n, l), [t.key, n, l]);
-    return a
-        ? (0, r.jsx)(g, { tag: S, panelKey: o?.key, onClick: x, active: v, node: t, dismissibleBadge: b, children: A })
-        : (0, r.jsx)(s.tG, {
+        A = s ? "li" : "div",
+        N = i.useMemo(() => (0, p.H)(t.key, n, a), [t.key, n, a]);
+    return s
+        ? (0, r.jsx)(v, { tag: A, panelKey: o?.key, onClick: S, active: g, node: t, dismissibleBadge: N, children: x })
+        : (0, r.jsx)(l.tG, {
               id: t.key,
               children: (e) =>
-                  (0, r.jsx)(g, {
-                      tag: S,
+                  (0, r.jsx)(v, {
+                      tag: A,
                       panelKey: o?.key,
-                      onClick: x,
-                      active: v,
+                      onClick: S,
+                      active: g,
                       node: t,
-                      dismissibleBadge: b,
+                      dismissibleBadge: N,
                       listItemProps: e,
-                      children: A,
+                      children: x,
                   }),
           });
 }
