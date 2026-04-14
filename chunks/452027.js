@@ -2,39 +2,39 @@
 n.d(t, { D: () => h, n: () => p }), n(321073);
 var r = n(627968),
     i = n(64700),
-    a = n(827734),
-    s = n(508770),
+    s = n(827734),
+    a = n(508770),
     o = n(140735),
     l = n(628284),
     u = n(695366),
     c = n(834730),
     d = n(15626),
-    _ = n(104983);
+    _ = n(170640);
 function f(e) {
-    let { id: t, errorMessage: n, helperText: r, successMessage: a, description: s } = e,
+    let { id: t, errorMessage: n, helperText: r, successMessage: s, description: a } = e,
         [o, l] = i.useState(!1),
         u = i.useId(),
         c = i.useId(),
         d = i.useId(),
         _ = i.useId(),
         f = i.useId(),
-        p = null != s && "" !== s,
-        h = (null != r && "" !== r) || (null != a && "" !== a),
+        p = null != a && "" !== a,
+        h = (null != r && "" !== r) || (null != s && "" !== s),
         m = [];
     p && m.push(_), h && m.push(d);
-    let g = m.length > 0 ? m.join(" ") : void 0;
+    let E = m.length > 0 ? m.join(" ") : void 0;
     return i.useMemo(
         () => ({
             labelId: u,
             controlId: t ?? c,
-            describedById: g,
+            describedById: E,
             errorMessageId: null != n && "" !== n ? f : void 0,
             helperTextId: h ? d : void 0,
             descriptionId: p ? _ : void 0,
             isLabelHovered: o,
             setIsLabelHovered: l,
         }),
-        [u, t, c, g, n, f, h, d, p, _, o, l],
+        [u, t, c, E, n, f, h, d, p, _, o, l],
     );
 }
 function p(e) {
@@ -43,8 +43,8 @@ function p(e) {
         hideLabel: n,
         badge: r,
         icon: i,
-        required: a,
-        disabled: s,
+        required: s,
+        disabled: a,
         description: o,
         helperText: l,
         id: u,
@@ -60,8 +60,8 @@ function p(e) {
             hideLabel: n,
             badge: r,
             icon: i,
-            required: a,
-            disabled: s,
+            required: s,
+            disabled: a,
             description: o,
             helperText: l,
             id: u,
@@ -78,43 +78,43 @@ function h(e) {
             label: t,
             hideLabel: n = !1,
             required: i,
-            disabled: a,
+            disabled: s,
             description: l,
             helperText: u,
             children: p,
             errorMessage: h,
-            successMessage: g,
-            role: E,
+            successMessage: E,
+            role: g,
             layout: A = "vertical",
             layoutConfig: I,
             badge: T,
-            icon: y = null,
-            interactiveLabel: S = !1,
+            icon: S = null,
+            interactiveLabel: y = !1,
             auxiliaryContentPosition: v = "under-control",
-            trailingAuxiliaryContent: C,
-            ref: b,
+            trailingAuxiliaryContent: N,
+            ref: C,
         } = e,
-        N = f(e),
-        { labelId: R, controlId: O, errorMessageId: D, describedById: L, helperTextId: w, descriptionId: x } = N,
-        P = I?.horizontalControlColumnWidth,
-        M = "group" === E || "radiogroup" === E,
-        k = M ? "span" : "label",
-        U = M ? "fieldset" : "div",
-        G = M ? (0, r.jsx)("legend", { id: R, children: (0, r.jsx)(o.A, { children: t }) }) : null,
-        V = null != t && "" !== t,
-        F = null != l && "" !== l,
-        B = V
+        R = f(e),
+        { labelId: O, controlId: b, errorMessageId: D, describedById: L, helperTextId: w, descriptionId: M } = R,
+        x = I?.horizontalControlColumnWidth,
+        P = "group" === g || "radiogroup" === g,
+        k = P ? "span" : "label",
+        U = P ? "fieldset" : "div",
+        G = P ? (0, r.jsx)("legend", { id: O, children: (0, r.jsx)(o.A, { children: t }) }) : null,
+        F = null != t && "" !== t,
+        V = null != l && "" !== l,
+        B = F
             ? (0, r.jsxs)(c.E, {
-                  "aria-hidden": M,
-                  "data-interactive": S,
-                  id: R,
+                  "aria-hidden": P,
+                  "data-interactive": y,
+                  id: O,
                   tag: k,
                   variant: "text-md/medium",
                   color: "text-strong",
-                  htmlFor: O,
+                  htmlFor: b,
                   className: _.Pf,
                   children: [
-                      null != y ? (0, r.jsx)(y, { "aria-hidden": !0, size: "xs", className: _.Kk }) : null,
+                      null != S ? (0, r.jsx)(S, { "aria-hidden": !0, size: "xs", className: _.Kk }) : null,
                       t,
                       i &&
                           (0, r.jsx)(c.E, {
@@ -127,69 +127,70 @@ function h(e) {
                       null != T
                           ? (0, r.jsx)("span", {
                                 className: _.fC,
-                                children: (0, r.jsx)(s.E, { type: T, variant: "brand" }),
+                                children: (0, r.jsx)(a.E, { type: T, variant: "brand" }),
                             })
                           : null,
                   ],
               })
             : null,
-        j = (0, r.jsx)(m, {
-            successMessage: g,
+        H = (0, r.jsx)(m, {
+            successMessage: E,
             errorMessage: h,
             helperText: u,
-            trailing: C,
+            trailing: N,
             helperTextId: w,
             errorMessageId: D,
         });
     return (0, r.jsx)(d._.Provider, {
-        value: N,
+        value: R,
         children: (0, r.jsxs)(U, {
-            role: E,
-            ref: b,
+            role: g,
+            ref: C,
             className: _.kL,
             "data-layout": A,
-            style: null != P ? { "--custom-field-horizontal-control-width": P } : void 0,
-            "data-disabled": a,
-            "aria-describedby": M ? L : void 0,
-            disabled: M ? a : void 0,
+            "data-has-description": V || void 0,
+            style: null != x ? { "--custom-field-horizontal-control-width": x } : void 0,
+            "data-disabled": s,
+            "aria-describedby": P ? L : void 0,
+            disabled: P ? s : void 0,
             children: [
                 G,
-                V && n ? (0, r.jsx)(o.A, { children: B }) : null,
-                (V && !n) || F
+                F && n ? (0, r.jsx)(o.A, { children: B }) : null,
+                (F && !n) || V
                     ? (0, r.jsxs)("div", {
                           className: _._A,
                           children: [
                               n ? null : B,
-                              F &&
+                              V &&
                                   (0, r.jsx)(c.E, {
                                       variant: "text-sm/normal",
                                       color: "text-subtle",
                                       className: _.h_,
-                                      id: x,
+                                      id: M,
                                       children: l,
                                   }),
-                              "under-label" === v ? j : null,
+                              "under-label" === v ? H : null,
                           ],
                       })
                     : null,
                 (0, r.jsxs)("div", {
                     className: _.A4,
-                    children: ["function" == typeof p ? p(N) : p, "under-control" === v ? j : null],
+                    children: ["function" == typeof p ? p(R) : p, "under-control" === v ? H : null],
                 }),
             ],
         }),
     });
 }
 function m(e) {
-    let { successMessage: t, errorMessage: n, helperText: i, trailing: s, helperTextId: o, errorMessageId: d } = e,
+    let { successMessage: t, errorMessage: n, helperText: i, trailing: a, helperTextId: o, errorMessageId: d } = e,
         f = (0, r.jsx)("div", {}),
-        p = null != s;
+        p = null != a;
     return (null != n && "" !== n
         ? ((p = !0),
           (f = (0, r.jsxs)("div", {
               className: _.lI,
               children: [
-                  (0, r.jsx)(u.E, { size: "xs", color: a.A.colors.TEXT_FEEDBACK_CRITICAL }),
+                  (0, r.jsx)(u.E, { size: "xs", color: s.A.colors.TEXT_FEEDBACK_CRITICAL }),
                   (0, r.jsx)(c.E, { variant: "text-xs/normal", color: "text-feedback-critical", id: d, children: n }),
               ],
           })))
@@ -198,13 +199,13 @@ function m(e) {
             (f = (0, r.jsxs)("div", {
                 className: _.lI,
                 children: [
-                    (0, r.jsx)(l.y, { size: "xs", color: a.A.colors.TEXT_FEEDBACK_POSITIVE }),
+                    (0, r.jsx)(l.y, { size: "xs", color: s.A.colors.TEXT_FEEDBACK_POSITIVE }),
                     (0, r.jsx)(c.E, { variant: "text-xs/normal", color: "text-feedback-positive", id: o, children: t }),
                 ],
             })))
           : null != i &&
             ((p = !0), (f = (0, r.jsx)(c.E, { variant: "text-xs/normal", color: "text-subtle", id: o, children: i }))),
     p)
-        ? (0, r.jsxs)("div", { className: _.JA, children: [f, s] })
+        ? (0, r.jsxs)("div", { className: _.JA, children: [f, a] })
         : null;
 }
