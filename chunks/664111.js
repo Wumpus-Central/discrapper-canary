@@ -715,7 +715,7 @@ let G = i.forwardRef(function (e, t) {
     return n || E
         ? (0, r.jsx)(k, { ...o, onClick: s, autoplay: l || E, ref: t })
         : (0, r.jsx)(d.DUT, {
-              className: N.W6,
+              className: a()(N.W6, N.nZ),
               "data-testid": "discord-web-video-player-container",
               tabIndex: 0,
               onClick: A,

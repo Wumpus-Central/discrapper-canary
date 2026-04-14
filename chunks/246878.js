@@ -7,6 +7,7 @@ e.exports = {
     NE: "modalBg_b824c5",
     jE: "modalContent_b824c5",
     W6: "videoCont_b824c5",
+    nZ: "videoContInactive_b824c5",
     NS: "videoContInnerRelative_b824c5",
     DO: "videoContInnerRelativePortrait_b824c5",
     r7: "videoContInnerRelativeLandscape_b824c5",
