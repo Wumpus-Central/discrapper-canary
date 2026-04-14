@@ -1,8 +1,8 @@
 n.d(t, { A: () => O }), n(321073);
 var i = n(627968),
-    a = n(64700),
-    l = n(503698),
-    r = n.n(l),
+    l = n(64700),
+    r = n(503698),
+    a = n.n(r),
     s = n(735438),
     o = n.n(s),
     d = n(311907),
@@ -19,12 +19,12 @@ var i = n(627968),
     f = n(437959),
     C = n(828184),
     T = n(723702),
-    N = n(837921),
-    S = n(902811),
+    S = n(837921),
+    N = n(902811),
     x = n(652215),
     v = n(985018),
-    y = n(281733);
-class b extends a.PureComponent {
+    b = n(540528);
+class y extends l.PureComponent {
     videoRef = null;
     _noProblemsTimeout = null;
     _problemsTimeout = null;
@@ -36,13 +36,12 @@ class b extends a.PureComponent {
             v.intl.string(v.t["RLx6+Y"]),
             v.intl.string(v.t.Q1PZkN),
             v.intl.string(v.t.x7sfVg),
-            v.intl.format(v.t.PHuQsQ, { tabHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "tab", className: y.P }, t) }),
-            v.intl.string(v.t.UorX4T),
+            v.intl.format(v.t.PHuQsQ, { tabHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "tab", className: b.P }, t) }),
             v.intl.string(v.t["il/GZt"]),
-            v.intl.string(v.t.HKBJvw),
+            v.intl.string(v.t["5qAKlq"]),
             v.intl.format(v.t.FVVp79, {
-                F6Hook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "f6", className: y.P }, t),
-                tabHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "tab", className: y.P }, t),
+                F6Hook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "f6", className: b.P }, t),
+                tabHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "tab", className: b.P }, t),
             }),
             v.intl.string(v.t["7Y1hFH"]),
             v.intl.string(v.t.UcCW71),
@@ -85,28 +84,28 @@ class b extends a.PureComponent {
             v.intl.string(v.t.f8ao58),
             v.intl.format(v.t["1v1h8o"], { asterisks: "**" }),
             v.intl.format(v.t.MUlAVW, {
-                quickSwitcherHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "mod+k", className: y.P }, t),
+                quickSwitcherHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "mod+k", className: b.P }, t),
             }),
             v.intl.format(v.t.aes5VI, {
-                markUnreadHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "alt+click", className: y.P }, t),
+                markUnreadHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "alt+click", className: b.P }, t),
             }),
             v.intl.format(v.t.md9Svv, {
-                markServerUnreadHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "shift+esc", className: y.P }, t),
+                markServerUnreadHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "shift+esc", className: b.P }, t),
             }),
             v.intl.format(v.t["X0Tu+u"], {
-                navigateUnreadHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "shift+alt+up", className: y.P }, t),
-                downHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "down", className: y.P }, t),
+                navigateUnreadHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "shift+alt+up", className: b.P }, t),
+                downHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "down", className: b.P }, t),
             }),
             v.intl.format(v.t.AkoeIY, {
-                keyboardShortcutsHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "mod+/", className: y.P }, t),
+                keyboardShortcutsHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "mod+/", className: b.P }, t),
             }),
             v.intl.format(v.t.P9sfAH, {
-                messageNewlineHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "shift+return", className: y.P }, t),
+                messageNewlineHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "shift+return", className: b.P }, t),
             }),
             v.intl.format(v.t["3Ox33f"], {
-                shiftHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "shift", className: y.P }, t),
+                shiftHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "shift", className: b.P }, t),
             }),
-            v.intl.format(v.t.enCV6b, { upHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "up", className: y.P }, t) }),
+            v.intl.format(v.t.enCV6b, { upHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "up", className: b.P }, t) }),
         ];
         return I.default.locale.startsWith("en-") && e.push(v.intl.string(v.t.dQ9Wqk)), e[o().random(e.length - 1)];
     })();
@@ -128,19 +127,19 @@ class b extends a.PureComponent {
         this.setProblemsTimeout(), this.props.connected && (0, E.D)();
     }
     componentDidUpdate(e, t) {
-        let { ready: n, hide: i, problems: a } = this.state,
-            { connected: l, soundpack: r } = this.props,
-            s = l && n && !i && !a;
-        e.soundpack !== r && (this._connectedSound = this.createSound()),
-            e.connected !== l || s
-                ? (l && (0, E.D)(),
-                  l && null != this.videoRef && c.w.get(x.wqg) && this._connectedSound.play(),
-                  this.setState({ problems: !1, hide: l }))
+        let { ready: n, hide: i, problems: l } = this.state,
+            { connected: r, soundpack: a } = this.props,
+            s = r && n && !i && !l;
+        e.soundpack !== a && (this._connectedSound = this.createSound()),
+            e.connected !== r || s
+                ? (r && (0, E.D)(),
+                  r && null != this.videoRef && c.w.get(x.wqg) && this._connectedSound.play(),
+                  this.setState({ problems: !1, hide: r }))
                 : t.hide !== i
                   ? (i ? this.clearProblemsTimeout() : this.setProblemsTimeout(),
                     this.setState({ shouldRender: !0 }),
                     setTimeout(() => this.setState({ shouldRender: !i }), 200))
-                  : t.problems !== a && a && A.A.checkIncidents();
+                  : t.problems !== l && l && A.A.checkIncidents();
     }
     componentWillUnmount() {
         this.clearProblemsTimeout();
@@ -148,7 +147,7 @@ class b extends a.PureComponent {
     handleReady = () => {
         this.setState({ ready: !0 }),
             (0, T.isDesktop)() &&
-                (N.Ay.send("UPDATED_QUOTES", ["Hold Tight — Loading Discord"]), N.Ay.send("UPDATE_OPEN_ON_STARTUP"));
+                (S.Ay.send("UPDATED_QUOTES", ["Hold Tight — Loading Discord"]), S.Ay.send("UPDATE_OPEN_ON_STARTUP"));
     };
     setVideoRef = (e) => {
         this.videoRef = e;
@@ -165,13 +164,13 @@ class b extends a.PureComponent {
             { hide: n } = this.state;
         if (!this.state.shouldRender) return null;
         {
-            let a = this._loadingText,
-                l = null;
+            let l = this._loadingText,
+                r = null;
             return (
-                null != this._eventLoadingText && (a = this._eventLoadingText),
-                null != t && ((a = t.name), (l = t.incident_updates[0].body)),
+                null != this._eventLoadingText && (l = this._eventLoadingText),
+                null != t && ((l = t.name), (r = t.incident_updates[0].body)),
                 (0, i.jsxs)("div", {
-                    className: y.kL,
+                    className: b.kL,
                     "data-fade": n,
                     style: {
                         "--connecting-container-fade-duration": "200ms",
@@ -179,54 +178,54 @@ class b extends a.PureComponent {
                     },
                     children: [
                         (0, i.jsxs)("div", {
-                            className: y.Qs,
+                            className: b.Qs,
                             children: [
-                                (0, i.jsx)(S.A, {
+                                (0, i.jsx)(N.A, {
                                     autoPlay: !0,
                                     loop: !e,
                                     setRef: this.setVideoRef,
                                     onReady: this.handleReady,
-                                    className: r()(y.bE, this.state.ready ? y.Gc : ""),
+                                    className: a()(b.bE, this.state.ready ? b.Gc : ""),
                                 }),
                                 (0, i.jsxs)("div", {
-                                    className: y.Qq,
+                                    className: b.Qq,
                                     children: [
                                         null != t
                                             ? null
                                             : (0, i.jsx)("div", {
-                                                  className: y.mu,
+                                                  className: b.mu,
                                                   children: v.intl.string(v.t.v0R1Lh),
                                               }),
-                                        (0, i.jsx)("div", { className: null != t ? y.DD : y.uN, children: a }),
-                                        (0, i.jsx)("div", { className: y.rf, children: l }),
+                                        (0, i.jsx)("div", { className: null != t ? b.DD : b.uN, children: l }),
+                                        (0, i.jsx)("div", { className: b.rf, children: r }),
                                     ],
                                 }),
                             ],
                         }),
                         (0, i.jsxs)("div", {
-                            className: r()(y.Bk, { [y.ly]: this.state.problems }),
+                            className: a()(b.Bk, { [b.ly]: this.state.problems }),
                             children: [
-                                (0, i.jsx)("div", { className: y.u1, children: v.intl.string(v.t.AG2zPM) }),
+                                (0, i.jsx)("div", { className: b.u1, children: v.intl.string(v.t.AG2zPM) }),
                                 (0, i.jsxs)("div", {
                                     children: [
                                         (0, i.jsxs)(u.MzZ, {
-                                            className: y.AR,
+                                            className: b.AR,
                                             href: x.qF7.TWITTER_SUPPORT,
                                             target: "_blank",
                                             children: [
                                                 (0, i.jsx)(u.p3p, {
                                                     size: "xs",
                                                     color: "currentColor",
-                                                    className: y.Kk,
+                                                    className: b.Kk,
                                                 }),
                                                 v.intl.string(v.t.KlyTbj),
                                             ],
                                         }),
                                         (0, i.jsxs)(u.MzZ, {
-                                            className: y.gy,
+                                            className: b.gy,
                                             href: x.qF7.STATUS,
                                             target: "_blank",
-                                            children: [(0, i.jsx)(C.A, { className: y.Kk }), v.intl.string(v.t.AgXXyy)],
+                                            children: [(0, i.jsx)(C.A, { className: b.Kk }), v.intl.string(v.t.AgXXyy)],
                                         }),
                                     ],
                                 }),
@@ -245,6 +244,6 @@ let O = d.Ay.connectStores([_.A, f.A, p.A, h.A], () => ({
     soundpack: p.A.getSoundpack(),
     reducedMotion: h.A.useReducedMotion,
 }))((e) => {
-    let { isTryingToConnect: t, connected: n, incident: a, soundpack: l, reducedMotion: r } = e;
-    return t ? (0, i.jsx)(b, { reducedMotion: r, soundpack: l, connected: n, incident: a }) : null;
+    let { isTryingToConnect: t, connected: n, incident: l, soundpack: r, reducedMotion: a } = e;
+    return t ? (0, i.jsx)(y, { reducedMotion: a, soundpack: r, connected: n, incident: l }) : null;
 });
