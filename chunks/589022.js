@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, { default: () => c });
+n.d(t, { A: () => c });
 var r = n(627968),
     i = n(64700),
     s = n(215530),

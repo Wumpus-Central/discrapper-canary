@@ -6,18 +6,18 @@ var r = n(627968),
     a = n(397927),
     o = n(267102),
     l = n(619517),
-    u = n(369254),
-    c = n(256905),
+    u = n(256905),
+    c = n(536763),
     d = n(218394);
 class _ extends i.PureComponent {
     static defaultProps = { shouldLink: !0, autoPlay: !1, animated: !1 };
     onMouseEnter = (e) => {
         let { src: t, width: n, height: r, onMouseEnter: i, handlePreloadImage: s } = this.props;
-        (i?.(e), null != s) ? s() : (0, u.t1)({ src: t, width: n, height: r, options: this.props });
+        (i?.(e), null != s) ? s() : (0, c.A)({ src: t, width: n, height: r, options: this.props });
     };
     modalContext = (0, a.TId)(this.props.appContext);
     onCloseImage = () => {
-        (0, a.OoC)(c.K, this.modalContext);
+        (0, a.OoC)(u.K, this.modalContext);
     };
     onZoom = (e, t) => {
         let { zoomThumbnailPlaceholder: n, trigger: r } = t;
@@ -27,12 +27,12 @@ class _ extends i.PureComponent {
                 src: a,
                 original: o,
                 width: l,
-                height: u,
+                height: c,
                 animated: d,
                 srcIsAnimated: _,
                 children: f,
-                shouldHideMediaOptions: h = !1,
-                sourceMetadata: p,
+                shouldHideMediaOptions: p = !1,
+                sourceMetadata: h,
                 analyticsSource: m,
                 contentType: E,
                 originalContentType: g,
@@ -40,7 +40,7 @@ class _ extends i.PureComponent {
             A = {
                 url: a,
                 width: l,
-                height: u,
+                height: c,
                 type: "IMAGE",
                 alt: i,
                 contentType: E,
@@ -50,14 +50,14 @@ class _ extends i.PureComponent {
                 srcIsAnimated: _,
                 children: f,
                 trigger: r,
-                sourceMetadata: p,
+                sourceMetadata: h,
                 original: o ?? a,
             };
         (0, s.vq)(e.currentTarget) && e.currentTarget.blur(),
-            (0, c.R)({
+            (0, u.R)({
                 onClose: this.onCloseImage,
                 items: [A],
-                shouldHideMediaOptions: h,
+                shouldHideMediaOptions: p,
                 location: m ?? "LazyImageZoomable",
                 contextKey: this.modalContext,
             });

@@ -144,7 +144,7 @@ let G = (0, A.J)(function (e) {
                       eu || (eA.current = setTimeout(() => J?.(s.id), 100));
                   },
             onMouseLeave: ei ? void 0 : eN,
-            children: (0, i.jsx)(C.default, {
+            children: (0, i.jsx)(C.A, {
                 clickTrap: s?.id === y.default.getCurrentUser()?.id && eu,
                 targetElementRef: ec,
                 user: s,

@@ -372,7 +372,7 @@ let q = i.memo(function (e) {
                 return null != s && null != C
                     ? (0, l.jsx)(g.f5, {
                           value: b,
-                          children: (0, l.jsx)(T.default, {
+                          children: (0, l.jsx)(T.A, {
                               targetElementRef: N,
                               user: c.author,
                               guildId: n,

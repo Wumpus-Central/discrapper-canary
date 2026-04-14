@@ -19,7 +19,7 @@ function E(e, t) {
             return null == d
                 ? a
                 : (0, i.jsx)(
-                      c.default,
+                      c.A,
                       {
                           targetElementRef: n,
                           userId: d.id,

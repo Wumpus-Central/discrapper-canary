@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => N, DN: () => h, mt: () => A }), n(321073);
+n.d(t, { Ay: () => C, DN: () => p, mt: () => A }), n(321073);
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -11,8 +11,8 @@ var r = n(627968),
     d = n(287809),
     _ = n(820883),
     f = n(83104);
-let h = { SIZE_16: 16, SIZE_24: 24, SIZE_32: 32, SIZE_56: 56 },
-    p = 10,
+let p = { SIZE_16: 16, SIZE_24: 24, SIZE_32: 32, SIZE_56: 56 },
+    h = 10,
     m = 15,
     E = 20,
     g = 35,
@@ -29,42 +29,42 @@ function S(e) {
     return (0, r.jsx)("div", { className: a()(f.In, f.iq), children: e });
 }
 function y() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.SIZE_24;
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : p.SIZE_24;
     switch (e) {
-        case h.SIZE_16:
+        case p.SIZE_16:
             return f.nc;
-        case h.SIZE_24:
+        case p.SIZE_24:
             return f.q1;
-        case h.SIZE_32:
+        case p.SIZE_32:
             return f.Hb;
-        case h.SIZE_56:
+        case p.SIZE_56:
             return f.dl;
         default:
             return f.q1;
     }
 }
 function v() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.SIZE_24;
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : p.SIZE_24;
     switch (e) {
-        case h.SIZE_16:
-            return p;
-        case h.SIZE_24:
+        case p.SIZE_16:
+            return h;
+        case p.SIZE_24:
             return m;
-        case h.SIZE_32:
+        case p.SIZE_32:
             return E;
-        case h.SIZE_56:
+        case p.SIZE_56:
             return g;
         default:
-            return p;
+            return h;
     }
 }
-class C extends i.PureComponent {
+class N extends i.PureComponent {
     static defaultProps = {
         max: 10,
         renderMoreUsers: T,
         renderIcon: !1,
         showDefaultAvatarsForNullUsers: !1,
-        size: h.SIZE_24,
+        size: p.SIZE_24,
     };
     state = { popoutUserId: null };
     _ref = i.createRef();
@@ -173,11 +173,11 @@ class C extends i.PureComponent {
                 children: [this.renderIcon(), this.renderUsers()],
             });
         let _ = n.find((e) => e instanceof c.A && e.id === l),
-            h = o && null == d.default.getUser(l);
-        return (0, r.jsx)(u.default, {
+            p = o && null == d.default.getUser(l);
+        return (0, r.jsx)(u.A, {
             targetElementRef: this._ref,
             userId: l,
-            user: h && null != _ ? _ : void 0,
+            user: p && null != _ ? _ : void 0,
             guildId: i,
             fixed: !0,
             shouldShow: !0 === s && null != l,
@@ -193,4 +193,4 @@ class C extends i.PureComponent {
         });
     }
 }
-let N = C;
+let C = N;

@@ -1,59 +1,42 @@
-"use strict";
-n.d(t, { A: () => A, z: () => E });
-var r = n(627968),
-    i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(452282),
-    l = n(515718),
-    u = n(369254),
-    c = n(358731),
-    d = n(710096);
-let _ = 24,
-    f = 36,
-    h = 76,
-    p = 88,
-    m = 272;
-function E(e, t) {
-    let n = window.innerWidth - (e ? h : _) * 2,
-        r = window.innerHeight - 2 * p;
-    if (!(0, l.eJ)(t)) return { width: n, height: r };
-    let { width: i, height: s } = t,
-        a = window.innerWidth - 2 * m,
-        o = window.innerHeight - (e ? p : f) * 2,
-        u = (0, l.Uj)({ width: i, height: s, maxWidth: n, maxHeight: r }),
-        c = (0, l.Uj)({ width: i, height: s, maxWidth: a, maxHeight: o });
-    return u.width >= c.width ? u : c;
-}
-function g(e) {
-    let { items: t, currentIndex: n, children: s } = e,
-        l = t[n],
-        _ = E(t.length > 1, { width: l.width, height: l.height }),
-        [f, h] = i.useState(0);
+n.d(t, { A: () => h });
+var i = n(627968),
+    l = n(64700),
+    r = n(503698),
+    a = n.n(r),
+    s = n(452282),
+    o = n(967758),
+    d = n(369254),
+    u = n(358731),
+    c = n(710096);
+let h = l.memo(function (e) {
+    let { items: t, currentIndex: n, children: r } = e,
+        h = t[n],
+        m = t.length > 1,
+        p = (0, o.A)(m, { width: h.width, height: h.height }),
+        [g, x] = l.useState(0);
     return (
-        i.useEffect(() => {
-            let e = () => h((e) => e + 1);
+        l.useEffect(() => {
+            let e = () => x((e) => e + 1);
             return window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
         }),
-        i.useEffect(() => {
+        l.useEffect(() => {
             if (t.length > 1) {
-                let e = t[(0, o.U3)(n - 1, t.length)],
-                    r = t[(0, o.U3)(n + 1, t.length)];
-                (0, u.Z5)(e, !0), t.length > 2 && (0, u.Z5)(r, !0);
+                let e = t[(0, s.U3)(n - 1, t.length)],
+                    i = t[(0, s.U3)(n + 1, t.length)];
+                (0, d.Z)(e, !0), t.length > 2 && (0, d.Z)(i, !0);
             }
         }, [n, t]),
-        (0, r.jsx)(c.Ay, {
-            mode: c.nY.PINNED,
+        (0, i.jsx)(u.Ay, {
+            mode: u.nY.PINNED,
             children: (e) =>
-                (0, r.jsx)("div", {
-                    className: a()(d.k4, e),
-                    children: (0, r.jsx)(
+                (0, i.jsx)("div", {
+                    className: a()(c.k4, e),
+                    children: (0, i.jsx)(
                         "div",
-                        { children: _.width > 0 && _.height > 0 && s(_.width, _.height) },
-                        l.url,
+                        { children: p.width > 0 && p.height > 0 && r(p.width, p.height) },
+                        h.url,
                     ),
                 }),
         })
     );
-}
-let A = i.memo(g);
+});

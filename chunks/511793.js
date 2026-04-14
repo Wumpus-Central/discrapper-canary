@@ -11,8 +11,8 @@ var r = n(627968),
     d = n(311907),
     _ = n(506774),
     f = n(417876),
-    h = n(549711),
-    p = n(268218),
+    p = n(549711),
+    h = n(268218),
     m = n(701663),
     E = n(7143),
     g = n(404787),
@@ -22,62 +22,63 @@ var r = n(627968),
     S = n(614792),
     y = n(961350),
     v = n(954571),
-    C = n(53505),
-    N = n(374400),
+    N = n(53505),
+    C = n(374400),
     R = n(723702),
-    b = n(837921),
-    O = n(652215);
+    O = n(837921),
+    b = n(652215);
 n(436317);
 var D = n(396574);
 n(869146), n(507263), n(851581);
-let L = (0, p.Fe)({
+let L = (0, h.Fe)({
         createPromise: () => n.e("99681").then(n.bind(n, 224116)),
         webpackId: 224116,
         name: "UnsupportedBrowser",
     }),
-    w = (0, p.Fe)({
+    w = (0, h.Fe)({
         createPromise: () => Promise.all([n.e("56423"), n.e("25280")]).then(n.bind(n, 987482)),
         webpackId: 987482,
         name: "DownloadApps",
     }),
-    M = (0, p.Fe)({
+    M = (0, h.Fe)({
         createPromise: () => n.e("84809").then(n.bind(n, 312625)),
         webpackId: 312625,
         name: "InviteProxy",
     }),
-    x = (0, p.Fe)({
+    x = (0, h.Fe)({
         createPromise: () => Promise.all([n.e("34917"), n.e("46391")]).then(n.bind(n, 556074)),
         webpackId: 556074,
         name: "VerifyConnectedAccount",
     }),
-    P = (0, p.Fe)({
+    P = (0, h.Fe)({
         createPromise: () => Promise.all([n.e("34917"), n.e("63832")]).then(n.bind(n, 744185)),
         webpackId: 744185,
         name: "VerifyConnectedAccountSuccess",
     }),
-    k = (0, p.Fe)({
+    k = (0, h.Fe)({
         createPromise: () => Promise.all([n.e("34917"), n.e("50033")]).then(n.bind(n, 885338)),
         webpackId: 885338,
         name: "VerifyConnectedAccountError",
     }),
-    U = (0, p.Fe)({
+    U = (0, h.Fe)({
         createPromise: () => Promise.all([n.e("34917"), n.e("52986")]).then(n.bind(n, 97649)),
         webpackId: 97649,
         name: "LinkConnectedAccount",
     }),
-    G = (0, p.Fe)({
+    G = (0, h.Fe)({
         createPromise: () => n.e("65893").then(n.bind(n, 599128)),
         webpackId: 599128,
         name: "LinkAuthorize",
     }),
-    F = (0, p.Fe)({
+    F = (0, h.Fe)({
         createPromise: () => Promise.all([n.e("85939"), n.e("49721")]).then(n.bind(n, 60883)),
         webpackId: 60883,
         name: "ActivateDevice",
     }),
-    B = (0, p.Fe)({
+    V = (0, h.Fe)({
         createPromise: () =>
             Promise.all([
+                n.e("57174"),
                 n.e("41927"),
                 n.e("10614"),
                 n.e("49681"),
@@ -88,9 +89,11 @@ let L = (0, p.Fe)({
                 n.e("72125"),
                 n.e("58959"),
                 n.e("87440"),
+                n.e("91652"),
                 n.e("3795"),
+                n.e("37457"),
                 n.e("8555"),
-                n.e("40396"),
+                n.e("7828"),
                 n.e("90365"),
                 n.e("28936"),
                 n.e("68859"),
@@ -102,7 +105,7 @@ let L = (0, p.Fe)({
                 n.e("18976"),
                 n.e("37372"),
                 n.e("41353"),
-                n.e("44629"),
+                n.e("67477"),
                 n.e("28136"),
                 n.e("61474"),
                 n.e("21393"),
@@ -120,7 +123,7 @@ let L = (0, p.Fe)({
                 n.e("21957"),
                 n.e("1636"),
                 n.e("38865"),
-                n.e("45266"),
+                n.e("77120"),
                 n.e("49862"),
                 n.e("10117"),
                 n.e("79149"),
@@ -171,7 +174,7 @@ let L = (0, p.Fe)({
         memo: !0,
         id: 885041,
     }),
-    V = (0, p.Fe)({
+    B = (0, h.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("85939"),
@@ -187,33 +190,36 @@ let L = (0, p.Fe)({
         webpackId: 998643,
         name: "ViewsWithAuth",
     }),
-    H = (0, p.Fe)({
+    H = (0, h.Fe)({
         createPromise: () => n.e("13419").then(n.bind(n, 39960)),
         webpackId: 39960,
         name: "ViewsWithOAuth2",
     }),
-    j = (0, p.Fe)({
+    j = (0, h.Fe)({
         createPromise: () => n.e("30514").then(n.bind(n, 146088)),
         webpackId: 146088,
         name: "BrowserHandoff",
     }),
-    Y = (0, p.Fe)({
+    Y = (0, h.Fe)({
         createPromise: () => n.e("74272").then(n.bind(n, 569710)),
         webpackId: 569710,
         name: "MobileWebHandoffFallback",
     }),
-    W = (0, p.Fe)({
+    W = (0, h.Fe)({
         createPromise: () =>
             Promise.all([
+                n.e("57174"),
                 n.e("41927"),
                 n.e("10614"),
                 n.e("49681"),
                 n.e("38939"),
                 n.e("37347"),
                 n.e("58959"),
+                n.e("91652"),
                 n.e("3795"),
+                n.e("37457"),
                 n.e("8555"),
-                n.e("40396"),
+                n.e("7828"),
                 n.e("90365"),
                 n.e("28936"),
                 n.e("68859"),
@@ -224,7 +230,7 @@ let L = (0, p.Fe)({
                 n.e("49559"),
                 n.e("18976"),
                 n.e("37372"),
-                n.e("44629"),
+                n.e("67477"),
                 n.e("28136"),
                 n.e("61474"),
                 n.e("21393"),
@@ -238,7 +244,7 @@ let L = (0, p.Fe)({
                 n.e("41606"),
                 n.e("64879"),
                 n.e("1636"),
-                n.e("45266"),
+                n.e("77120"),
                 n.e("49862"),
                 n.e("10730"),
                 n.e("62723"),
@@ -259,43 +265,43 @@ let L = (0, p.Fe)({
         webpackId: 611861,
         name: "Overlay",
     }),
-    K = (0, p.Fe)({
+    K = (0, h.Fe)({
         createPromise: () => Promise.all([n.e("83518"), n.e("7803"), n.e("66708")]).then(n.bind(n, 303174)),
         webpackId: 303174,
         name: "SuspendedUserSafetyHubPage",
     }),
-    $ = (0, p.Fe)({
+    $ = (0, h.Fe)({
         createPromise: () => Promise.all([n.e("91227"), n.e("71791")]).then(n.bind(n, 125820)),
         webpackId: 125820,
         name: "QuestsLandingPage",
     }),
-    z = (0, p.Fe)({
+    z = (0, h.Fe)({
         createPromise: () => Promise.all([n.e("91227"), n.e("22519")]).then(n.bind(n, 589877)),
         webpackId: 589877,
         name: "QuestPreviewLandingPage",
     }),
-    q = (0, p.Fe)({
+    q = (0, h.Fe)({
         createPromise: () => Promise.all([n.e("34917"), n.e("81881")]).then(n.bind(n, 519716)),
         webpackId: 519716,
         name: "ConnectionsAuthorizeContinue",
     }),
-    Z = (0, p.Fe)({
+    Z = (0, h.Fe)({
         createPromise: () => n.e("15243").then(n.bind(n, 998345)),
         webpackId: 998345,
         name: "ApplicationDirectoryRoutes",
     }),
-    X = (0, p.Fe)({
+    X = (0, h.Fe)({
         createPromise: () => n.e("38217").then(n.bind(n, 149755)),
         webpackId: 149755,
         name: "ApplicationDirectoryGlobalDiscoveryRoutes",
     }),
-    Q = () => (0, r.jsx)(B, {}),
+    Q = () => (0, r.jsx)(V, {}),
     J = new Set([
-        O.BVt.LOGIN,
-        O.BVt.LOGIN_HANDOFF,
-        O.BVt.INVITE_LOGIN(":inviteCode"),
-        O.BVt.GIFT_CODE_LOGIN(":giftCode"),
-        O.BVt.GUILD_TEMPLATE_LOGIN(":guildTemplateCode"),
+        b.BVt.LOGIN,
+        b.BVt.LOGIN_HANDOFF,
+        b.BVt.INVITE_LOGIN(":inviteCode"),
+        b.BVt.GIFT_CODE_LOGIN(":giftCode"),
+        b.BVt.GUILD_TEMPLATE_LOGIN(":guildTemplateCode"),
     ]);
 function ee(e, t) {
     return t ? e.filter((e) => !J.has(e)) : e;
@@ -303,7 +309,7 @@ function ee(e, t) {
 class et extends i.Component {
     componentDidMount() {
         let { isAuthenticated: e } = this.props;
-        b.Ay.cleanupDisplaySleep(), A.A.initialize(), (S.A.wasAuthenticated = e);
+        O.Ay.cleanupDisplaySleep(), A.A.initialize(), (S.A.wasAuthenticated = e);
     }
     componentWillUnmount() {
         A.A.terminate();
@@ -319,88 +325,88 @@ class et extends i.Component {
                       ? R.isPlatformEmbedded
                           ? (0, r.jsxs)(a.dO, {
                                 children: [
-                                    t ? null : (0, r.jsx)(a.qh, { path: O.BVt.ACCOUNT_STANDING, component: K }),
+                                    t ? null : (0, r.jsx)(a.qh, { path: b.BVt.ACCOUNT_STANDING, component: K }),
                                     (0, r.jsx)(a.qh, {
                                         exact: !0,
-                                        path: O.BVt.INDEX,
+                                        path: b.BVt.INDEX,
                                         render: () => (0, r.jsx)(f.A, {}),
                                     }),
-                                    (0, r.jsx)(h.A, { exact: !0, path: O.BVt.APPS, component: w }),
+                                    (0, r.jsx)(p.A, { exact: !0, path: b.BVt.APPS, component: w }),
                                     (0, r.jsx)(a.qh, {
                                         path: ee(
                                             [
-                                                O.BVt.LOGIN,
-                                                O.BVt.REGISTER,
-                                                O.BVt.INVITE(":inviteCode"),
-                                                O.BVt.INVITE_LOGIN(":inviteCode"),
-                                                O.BVt.GIFT_CODE(":giftCode"),
-                                                O.BVt.GIFT_CODE_LOGIN(":giftCode"),
-                                                O.BVt.RESET,
+                                                b.BVt.LOGIN,
+                                                b.BVt.REGISTER,
+                                                b.BVt.INVITE(":inviteCode"),
+                                                b.BVt.INVITE_LOGIN(":inviteCode"),
+                                                b.BVt.GIFT_CODE(":giftCode"),
+                                                b.BVt.GIFT_CODE_LOGIN(":giftCode"),
+                                                b.BVt.RESET,
                                             ],
                                             !1,
                                         ),
-                                        component: V,
+                                        component: B,
                                     }),
-                                    (0, r.jsx)(h.A, { path: O.BVt.INVITE_PROXY(I.pv.channelId()), component: M }),
-                                    (0, r.jsx)(a.rd, { from: O.BVt.INVITE(""), to: O.BVt.LOGIN }),
-                                    (0, r.jsx)(a.rd, { from: O.BVt.GIFT_CODE(""), to: O.BVt.LOGIN }),
+                                    (0, r.jsx)(p.A, { path: b.BVt.INVITE_PROXY(I.pv.channelId()), component: M }),
+                                    (0, r.jsx)(a.rd, { from: b.BVt.INVITE(""), to: b.BVt.LOGIN }),
+                                    (0, r.jsx)(a.rd, { from: b.BVt.GIFT_CODE(""), to: b.BVt.LOGIN }),
                                     (0, r.jsx)(a.qh, { render: Q }),
                                 ],
                             })
                           : (0, r.jsxs)(a.dO, {
                                 children: [
-                                    (0, r.jsx)(h.A, {
+                                    (0, r.jsx)(p.A, {
                                         exact: !0,
-                                        path: O.BVt.INDEX,
+                                        path: b.BVt.INDEX,
                                         render: () => (0, r.jsx)(f.A, {}),
                                     }),
                                     (0, r.jsx)(a.qh, {
                                         path: ee(
                                             [
-                                                O.BVt.LOGIN_ONE_TIME,
-                                                O.BVt.LOGIN,
-                                                O.BVt.LOGIN_HANDOFF,
-                                                O.BVt.REGISTER,
-                                                O.BVt.BILLING_PREFIX,
-                                                O.BVt.BILLING_PROMOTION_REDEMPTION(":code"),
-                                                O.BVt.INVITE(":inviteCode"),
-                                                O.BVt.INVITE_LOGIN(":inviteCode"),
-                                                O.BVt.GIFT_CODE(":giftCode"),
-                                                O.BVt.GIFT_CODE_LOGIN(":giftCode"),
-                                                O.BVt.GUILD_TEMPLATE(":guildTemplateCode"),
-                                                O.BVt.GUILD_TEMPLATE_LOGIN(":guildTemplateCode"),
-                                                O.BVt.DISABLE_EMAIL_NOTIFICATIONS,
-                                                O.BVt.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
-                                                O.BVt.RESET,
-                                                O.BVt.REPORT,
-                                                O.BVt.REPORT_SECOND_LOOK,
-                                                O.BVt.ACCOUNT_REVERT(":token"),
+                                                b.BVt.LOGIN_ONE_TIME,
+                                                b.BVt.LOGIN,
+                                                b.BVt.LOGIN_HANDOFF,
+                                                b.BVt.REGISTER,
+                                                b.BVt.BILLING_PREFIX,
+                                                b.BVt.BILLING_PROMOTION_REDEMPTION(":code"),
+                                                b.BVt.INVITE(":inviteCode"),
+                                                b.BVt.INVITE_LOGIN(":inviteCode"),
+                                                b.BVt.GIFT_CODE(":giftCode"),
+                                                b.BVt.GIFT_CODE_LOGIN(":giftCode"),
+                                                b.BVt.GUILD_TEMPLATE(":guildTemplateCode"),
+                                                b.BVt.GUILD_TEMPLATE_LOGIN(":guildTemplateCode"),
+                                                b.BVt.DISABLE_EMAIL_NOTIFICATIONS,
+                                                b.BVt.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
+                                                b.BVt.RESET,
+                                                b.BVt.REPORT,
+                                                b.BVt.REPORT_SECOND_LOOK,
+                                                b.BVt.ACCOUNT_REVERT(":token"),
                                             ],
                                             !1,
                                         ),
-                                        component: V,
+                                        component: B,
                                     }),
                                     t
                                         ? null
                                         : (0, r.jsx)(a.qh, {
-                                              path: O.BVt.PICK_GUILD_SETTINGS(":section?", ":subsection?"),
-                                              component: V,
+                                              path: b.BVt.PICK_GUILD_SETTINGS(":section?", ":subsection?"),
+                                              component: B,
                                           }),
                                     t
                                         ? null
                                         : (0, r.jsx)(a.qh, {
-                                              path: O.BVt.CHANNEL(
+                                              path: b.BVt.CHANNEL(
                                                   I.pv.guildId(),
                                                   I.pv.channelId({ optional: !0 }),
                                                   ":messageId?",
                                               ),
-                                              component: V,
+                                              component: B,
                                           }),
-                                    (0, r.jsx)(a.rd, { from: O.BVt.INVITE(""), to: O.BVt.LOGIN }),
-                                    (0, r.jsx)(h.A, { path: O.BVt.INVITE_PROXY(I.pv.channelId()), component: M }),
-                                    (0, r.jsx)(a.rd, { from: O.BVt.GIFT_CODE(""), to: O.BVt.LOGIN }),
-                                    (0, r.jsx)(h.A, {
-                                        path: O.BVt.QUESTS(":questId"),
+                                    (0, r.jsx)(a.rd, { from: b.BVt.INVITE(""), to: b.BVt.LOGIN }),
+                                    (0, r.jsx)(p.A, { path: b.BVt.INVITE_PROXY(I.pv.channelId()), component: M }),
+                                    (0, r.jsx)(a.rd, { from: b.BVt.GIFT_CODE(""), to: b.BVt.LOGIN }),
+                                    (0, r.jsx)(p.A, {
+                                        path: b.BVt.QUESTS(":questId"),
                                         component: $,
                                         impressionName: o.ImpressionNames.QUESTS_LANDING_PAGE,
                                         impressionProperties: (e) => {
@@ -410,29 +416,29 @@ class et extends i.Component {
                                             };
                                         },
                                     }),
-                                    (0, r.jsx)(h.A, { path: O.BVt.QUEST_PREVIEW(":questId"), component: z }),
-                                    (0, r.jsx)(h.A, { path: O.BVt.HANDOFF, component: j }),
-                                    (0, r.jsx)(h.A, { path: O.BVt.MOBILE_WEB_HANDOFF, component: Y }),
-                                    (0, r.jsx)(h.A, { path: O.BVt.CONNECTION_LINK(":type"), component: U }),
-                                    (0, r.jsx)(h.A, { path: O.BVt.CONNECTION_LINK_AUTHORIZE(":type"), component: G }),
-                                    (0, r.jsx)(h.A, { path: O.BVt.ACTIVATE, component: F }),
-                                    (0, r.jsx)(h.A, { path: O.BVt.ACTIVATE_HANDOFF, component: F }),
-                                    (0, r.jsx)(h.A, {
-                                        path: O.BVt.CONNECTIONS_AUTHORIZE_CONTINUE(":type"),
+                                    (0, r.jsx)(p.A, { path: b.BVt.QUEST_PREVIEW(":questId"), component: z }),
+                                    (0, r.jsx)(p.A, { path: b.BVt.HANDOFF, component: j }),
+                                    (0, r.jsx)(p.A, { path: b.BVt.MOBILE_WEB_HANDOFF, component: Y }),
+                                    (0, r.jsx)(p.A, { path: b.BVt.CONNECTION_LINK(":type"), component: U }),
+                                    (0, r.jsx)(p.A, { path: b.BVt.CONNECTION_LINK_AUTHORIZE(":type"), component: G }),
+                                    (0, r.jsx)(p.A, { path: b.BVt.ACTIVATE, component: F }),
+                                    (0, r.jsx)(p.A, { path: b.BVt.ACTIVATE_HANDOFF, component: F }),
+                                    (0, r.jsx)(p.A, {
+                                        path: b.BVt.CONNECTIONS_AUTHORIZE_CONTINUE(":type"),
                                         component: q,
                                     }),
-                                    (0, r.jsx)(h.A, { path: O.BVt.CONNECTIONS_SUCCESS(":type"), component: P }),
-                                    (0, r.jsx)(h.A, { path: O.BVt.CONNECTIONS_ERROR(":type"), component: k }),
-                                    (0, r.jsx)(h.A, { path: O.BVt.CONNECTIONS(":type"), component: x }),
-                                    (0, r.jsx)(h.A, {
-                                        path: O.BVt.DOWNLOAD_QR_CODE_REDIRECT,
+                                    (0, r.jsx)(p.A, { path: b.BVt.CONNECTIONS_SUCCESS(":type"), component: P }),
+                                    (0, r.jsx)(p.A, { path: b.BVt.CONNECTIONS_ERROR(":type"), component: k }),
+                                    (0, r.jsx)(p.A, { path: b.BVt.CONNECTIONS(":type"), component: x }),
+                                    (0, r.jsx)(p.A, {
+                                        path: b.BVt.DOWNLOAD_QR_CODE_REDIRECT,
                                         render: () => {
                                             let e = v.default.getSuperProperties()?.os,
                                                 t = (0, s.parse)((window.location.search ?? "").substr(1)),
                                                 n = t.referring_location?.toString();
                                             return (
                                                 ("iOS" === e || "Android" === e) &&
-                                                    v.default.track(O.HAw.DOWNLOAD_APP, {
+                                                    v.default.track(b.HAw.DOWNLOAD_APP, {
                                                         platform: e,
                                                         ptb: !1,
                                                         released: !0,
@@ -440,7 +446,7 @@ class et extends i.Component {
                                                         referring_location: n,
                                                         qr_code: !0,
                                                     }),
-                                                (window.location.href = (0, C.b$)(
+                                                (window.location.href = (0, N.b$)(
                                                     null != n && "" !== n ? n : "qr_code",
                                                     e,
                                                 )),
@@ -448,23 +454,23 @@ class et extends i.Component {
                                             );
                                         },
                                     }),
-                                    (0, r.jsx)(h.A, {
-                                        path: O.BVt.OPEN_APP_FROM_EMAIL,
+                                    (0, r.jsx)(p.A, {
+                                        path: b.BVt.OPEN_APP_FROM_EMAIL,
                                         render: () => {
                                             let e = v.default.getSuperProperties()?.os,
-                                                t = (0, N.Z)(window.location.search ?? "");
+                                                t = (0, C.Z)(window.location.search ?? "");
                                             if ("iOS" !== e && "Android" !== e)
                                                 return (0, r.jsx)(a.rd, {
                                                     to:
                                                         null != t.desktop
                                                             ? `${t.desktop.pathname}${t.desktop.search}`
-                                                            : O.BVt.APP,
+                                                            : b.BVt.APP,
                                                 });
                                             {
-                                                let n = (0, C.b$)("app_open_from_email", e, t.mobile),
+                                                let n = (0, N.b$)("app_open_from_email", e, t.mobile),
                                                     r = (0, u.X7)(n);
                                                 null != r &&
-                                                    v.default.track(O.HAw.DEEP_LINK_CLICKED, {
+                                                    v.default.track(b.HAw.DEEP_LINK_CLICKED, {
                                                         fingerprint: (0, c.v)(r.fingerprint),
                                                         attempt_id: r.attemptId,
                                                         source: r.utmSource,
@@ -475,26 +481,26 @@ class et extends i.Component {
                                         },
                                     }),
                                     (0, r.jsx)(a.rd, {
-                                        from: O.BVt.CONNECT_AUTHORIZE,
-                                        to: { ...location, pathname: O.BVt.OAUTH2_AUTHORIZE },
+                                        from: b.BVt.CONNECT_AUTHORIZE,
+                                        to: { ...location, pathname: b.BVt.OAUTH2_AUTHORIZE },
                                     }),
                                     (0, r.jsx)(a.qh, {
                                         path: [
-                                            O.BVt.OAUTH2_AUTHORIZED,
-                                            O.BVt.OAUTH2_AUTHORIZE,
-                                            O.BVt.OAUTH2_ERROR,
-                                            O.BVt.OAUTH2_WHITELIST_ACCEPT,
+                                            b.BVt.OAUTH2_AUTHORIZED,
+                                            b.BVt.OAUTH2_AUTHORIZE,
+                                            b.BVt.OAUTH2_ERROR,
+                                            b.BVt.OAUTH2_WHITELIST_ACCEPT,
                                         ],
                                         component: H,
                                     }),
-                                    t ? null : (0, r.jsx)(a.qh, { path: [O.BVt.ACCOUNT_STANDING], component: K }),
-                                    t ? null : (0, r.jsx)(a.qh, { path: [O.BVt.APPLICATION_DIRECTORY], component: Z }),
-                                    t ? null : (0, r.jsx)(a.qh, { path: [O.BVt.GLOBAL_DISCOVERY_APPS], component: X }),
+                                    t ? null : (0, r.jsx)(a.qh, { path: [b.BVt.ACCOUNT_STANDING], component: K }),
+                                    t ? null : (0, r.jsx)(a.qh, { path: [b.BVt.APPLICATION_DIRECTORY], component: Z }),
+                                    t ? null : (0, r.jsx)(a.qh, { path: [b.BVt.GLOBAL_DISCOVERY_APPS], component: X }),
                                     (0, r.jsx)(a.qh, { render: Q }),
-                                    (0, r.jsx)(a.rd, { from: O.BVt.ACCOUNT_REVERT(""), to: O.BVt.LOGIN }),
+                                    (0, r.jsx)(a.rd, { from: b.BVt.ACCOUNT_REVERT(""), to: b.BVt.LOGIN }),
                                 ],
                             })
-                      : (0, r.jsx)(a.dO, { children: (0, r.jsx)(h.A, { component: L }) })),
+                      : (0, r.jsx)(a.dO, { children: (0, r.jsx)(p.A, { component: L }) })),
             (0, r.jsxs)(m.A, {
                 skipsSettingDefaultPageTitle: i,
                 children: [
@@ -509,7 +515,7 @@ class et extends i.Component {
 }
 function en() {
     let { pathname: e } = (0, a.zy)();
-    return null != (0, T.B)(e, { path: O.BVt.APPLICATION_DIRECTORY });
+    return null != (0, T.B)(e, { path: b.BVt.APPLICATION_DIRECTORY });
 }
 function er(e) {
     let t = en();

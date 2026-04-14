@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     G9: "progressBarContainer__68788",
     TN: "fillBar__68788",

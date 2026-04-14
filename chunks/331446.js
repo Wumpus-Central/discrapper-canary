@@ -1,41 +1,40 @@
-"use strict";
-n.d(t, { w: () => c });
-var r = n(627968),
-    i = n(64700),
-    s = n(939249),
-    a = n(834730),
-    o = n(397927),
-    l = n(720485);
-let u = i.lazy(() =>
-        n
+a.d(t, { w: () => _ });
+var n = a(627968),
+    i = a(64700),
+    r = a(939249),
+    o = a(834730),
+    c = a(397927),
+    l = a(720485);
+let s = i.lazy(() =>
+        a
             .e("46054")
-            .then(n.bind(n, 680901))
+            .then(a.bind(a, 680901))
             .then((e) => ({ default: e.ClipParticipantsList })),
     ),
-    c = (e) => {
-        let { participants: t, maxVisibleParticipants: n, guildId: c } = e,
+    _ = (e) => {
+        let { participants: t, maxVisibleParticipants: a, guildId: _ } = e,
             d = i.useRef(null),
-            _ = (0, i.useCallback)(
-                () => (0, r.jsx)(i.Suspense, { fallback: null, children: (0, r.jsx)(u, { users: t, guildId: c }) }),
-                [t, c],
+            u = (0, i.useCallback)(
+                () => (0, n.jsx)(i.Suspense, { fallback: null, children: (0, n.jsx)(s, { users: t, guildId: _ }) }),
+                [t, _],
             );
-        return (0, r.jsx)(o.YNO, {
-            renderPopout: _,
+        return (0, n.jsx)(c.YNO, {
+            renderPopout: u,
             targetElementRef: d,
             position: "right",
             children: (e) =>
-                (0, r.jsx)(s.D, {
+                (0, n.jsx)(r.D, {
                     ...e,
                     innerRef: d,
                     className: l.x,
                     onClick: (t) => {
                         t.stopPropagation(), e.onClick?.(t);
                     },
-                    children: (0, r.jsxs)(a.E, {
+                    children: (0, n.jsxs)(o.E, {
                         className: l.s,
                         variant: "text-xs/medium",
                         color: "interactive-text-default",
-                        children: ["+", t.length - n],
+                        children: ["+", t.length - a],
                     }),
                 }),
         });

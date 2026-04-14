@@ -97,7 +97,7 @@ let K = w.Ay.getEnableHardwareAcceleration(),
             [X, q] = l.useState(!1);
         if (null == g) return null;
         let $ = A?.premiumSince;
-        return (0, i.jsx)(b.default, {
+        return (0, i.jsx)(b.A, {
             targetElementRef: o,
             user: g,
             guildId: t.guild_id,

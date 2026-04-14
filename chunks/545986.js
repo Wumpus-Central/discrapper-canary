@@ -8,14 +8,14 @@ n.d(t, {
     cf: () => H,
     d5: () => X,
     e0: () => ei,
-    f7: () => B,
+    f7: () => V,
     gC: () => en,
     hJ: () => Y,
     l9: () => Z,
     m6: () => W,
     navigateToQuestHome: () => $,
     q$: () => et,
-    rx: () => V,
+    rx: () => B,
     z6: () => q,
 });
 var r = n(627968);
@@ -31,8 +31,8 @@ var o = n(397927),
     d = n(833291),
     _ = n(726845),
     f = n(976860),
-    h = n(779733),
-    p = n(961350),
+    p = n(779733),
+    h = n(961350),
     m = n(299091),
     E = n(711014),
     g = n(954571),
@@ -42,11 +42,11 @@ var o = n(397927),
     S = n(859703),
     y = n(405670),
     v = n(245853),
-    C = n(579473),
-    N = n(561844),
+    N = n(579473),
+    C = n(561844),
     R = n(590202),
-    b = n(851936),
-    O = n(437343),
+    O = n(851936),
+    b = n(437343),
     D = n(710969),
     L = n(792620),
     w = n(814793),
@@ -73,7 +73,7 @@ async function F(e) {
         return !1;
     }
 }
-async function B(e) {
+async function V(e) {
     try {
         if (A.A.isDiscordUrl(e)) return !0;
         return await F(e);
@@ -81,7 +81,7 @@ async function B(e) {
         return !1;
     }
 }
-function V(e) {
+function B(e) {
     let { quest: t, sourceQuestContent: i } = e;
     (0, o.mMO)(async () => {
         let { default: e } = await Promise.all([n.e("72302"), n.e("58686")]).then(n.bind(n, 975726));
@@ -113,7 +113,7 @@ function W(e, t, i) {
     });
 }
 function K(e, t) {
-    (0, N.Y5)({
+    (0, C.Y5)({
         questId: e.id,
         questContent: t.content,
         questContentPosition: t.position,
@@ -131,18 +131,20 @@ function $(e) {
     (0, w.jQ)({ questId: n, fromContent: t });
     let i = null != n ? `#${n}` : "";
     r && _.A.setState({ selectedTab: U.GlobalDiscoveryTab.QUESTS }),
-        (0, h.default)(),
+        (0, p.default)(),
         (0, f.pX)((r ? k.BVt.QUEST_HOME_DEPRECATED : k.BVt.QUEST_HOME) + i);
 }
 let z = 0.01;
 function q(e) {
-    let t = (0, b.L)({ quest: e });
+    let t = (0, O.L)({ quest: e });
     if (Math.random() > z) return;
-    let n = (0, O.A)(e);
+    let n = (0, b.A)(e);
     t.log(`Showing survey ${n.id}`), (0, x.m)({ questId: e.id, survey: n });
 }
 function Z() {
-    return Promise.all([n.e("92868"), n.e("29636"), n.e("7634"), n.e("70294")]).then(n.bind(n, 201257));
+    return Promise.all([n.e("57174"), n.e("92868"), n.e("91652"), n.e("29636"), n.e("7634"), n.e("68317")]).then(
+        n.bind(n, 201257),
+    );
 }
 function X(e) {
     let {
@@ -169,12 +171,12 @@ function X(e) {
                 video_session_id: c,
             }));
     }
-    let { setCaptionEnabled: d, muted: _, volume: f, captionEnabled: h } = y.Ay.getState(),
-        { enabled: p, variant: m } = v.Ig.getConfig({ location: P.rE.VIDEO_MODAL }),
-        E = null != (0, C.tW)(t, C.fY.VIDEO_PLAYER_CAPTION, void 0, !1);
+    let { setCaptionEnabled: d, muted: _, volume: f, captionEnabled: p } = y.Ay.getState(),
+        { enabled: h, variant: m } = v.Ig.getConfig({ location: P.rE.VIDEO_MODAL }),
+        E = null != (0, N.tW)(t, N.fY.VIDEO_PLAYER_CAPTION, void 0, !1);
     _ &&
-        p &&
-        (m === v.sy.AUTO_ENABLE_CAPTIONS && E && !h
+        h &&
+        (m === v.sy.AUTO_ENABLE_CAPTIONS && E && !p
             ? d(!0)
             : m === v.sy.AUTO_UNMUTE && (y.Ay.getState().setMuted(!1), 0 === f && y.Ay.getState().setVolume(0.3))),
         (0, o.mMO)(
@@ -201,7 +203,7 @@ function Q(e) {
     let t = platform.os?.family,
         n = "quest";
     if ("Android" === t || "iOS" === t) {
-        let t = p.default.getFingerprint(),
+        let t = h.default.getFingerprint(),
             r = (0, s.I_)(),
             i = `${location.protocol}//${window.GLOBAL_ENV.WEBAPP_ENDPOINT}/quests/${e}`;
         return (0, s.Ay)(i, { utmSource: n, fingerprint: t, attemptId: r });
@@ -225,7 +227,7 @@ function ee(e) {
     let t = platform.os?.family,
         n = "quest-preview";
     if ("Android" === t || "iOS" === t) {
-        let t = p.default.getFingerprint(),
+        let t = h.default.getFingerprint(),
             r = (0, s.I_)(),
             i = `${location.protocol}//${window.GLOBAL_ENV.WEBAPP_ENDPOINT}/quest-preview/${e}`;
         return (0, s.Ay)(i, { utmSource: n, fingerprint: t, attemptId: r });

@@ -80,7 +80,7 @@ function E(e) {
                         value: R,
                         children:
                             null != t
-                                ? (0, n.jsx)(g.default, {
+                                ? (0, n.jsx)(g.A, {
                                       targetElementRef: j,
                                       user: t,
                                       guildId: E,

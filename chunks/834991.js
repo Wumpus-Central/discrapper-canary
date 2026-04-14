@@ -92,7 +92,7 @@ function C(e) {
         );
     return null == u
         ? null
-        : (0, i.jsx)(_.default, {
+        : (0, i.jsx)(_.A, {
               targetElementRef: c,
               userId: n.user_id,
               guildId: t,

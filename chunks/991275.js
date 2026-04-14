@@ -11,8 +11,8 @@ var r = n(627968),
     d = n(607399),
     _ = n(311907),
     f = n(397927),
-    h = n(442433),
-    p = n(361610),
+    p = n(442433),
+    h = n(361610),
     m = n(414798),
     E = n(110574),
     g = n(775602),
@@ -22,11 +22,11 @@ var r = n(627968),
     S = n(941726),
     y = n(449582),
     v = n(276055),
-    C = n(83974),
-    N = n(420706),
+    N = n(83974),
+    C = n(420706),
     R = n(750770),
-    b = n(485947),
-    O = n(915089),
+    O = n(485947),
+    b = n(915089),
     D = n(509536),
     L = n(201275),
     w = n(657048),
@@ -37,8 +37,8 @@ var r = n(627968),
     U = n(317525),
     G = n(994500),
     F = n(309010),
-    B = n(741961),
-    V = n(287809),
+    V = n(741961),
+    B = n(287809),
     H = n(977997),
     j = n(203982),
     Y = n(403362),
@@ -63,7 +63,7 @@ let X = K.Ay.getEnableHardwareAcceleration(),
                 user: c,
                 currentUser: _,
                 activities: f,
-                applicationStream: p,
+                applicationStream: h,
                 status: g,
                 channel: A,
                 guildId: I,
@@ -71,15 +71,15 @@ let X = K.Ay.getEnableHardwareAcceleration(),
                 isMobileOnline: S,
                 isVROnline: y,
                 premiumSince: v,
-                nameplate: C,
-                ...N
+                nameplate: N,
+                ...C
             } = e,
             R = i.useRef(null),
-            [b, O] = i.useState(!1),
+            [O, b] = i.useState(!1),
             L = null != v ? new Date(v) : null,
             w = i.useCallback(
                 (e) => {
-                    (0, h.L3)(e, async () => {
+                    (0, p.L3)(e, async () => {
                         let { default: e } = await Promise.all([
                                 n.e("41927"),
                                 n.e("97262"),
@@ -113,7 +113,7 @@ let X = K.Ay.getEnableHardwareAcceleration(),
                 },
                 [I],
             );
-        return (0, r.jsx)(x.default, {
+        return (0, r.jsx)(x.A, {
             targetElementRef: R,
             user: c,
             guildId: I,
@@ -122,9 +122,9 @@ let X = K.Ay.getEnableHardwareAcceleration(),
             position: d.Fr ? "window_center" : "left",
             spacing: 16,
             onShiftClick: M,
-            shouldShow: b,
+            shouldShow: O,
             onRequestClose: () => {
-                O(!1);
+                b(!1);
             },
             children: (e) => {
                 let { onClick: n, onMouseDown: i, ...o } = e;
@@ -138,7 +138,7 @@ let X = K.Ay.getEnableHardwareAcceleration(),
                     nick: u,
                     status: g,
                     activities: f,
-                    applicationStream: p,
+                    applicationStream: h,
                     isOwner: l,
                     premiumSince: L,
                     colorString: t,
@@ -150,14 +150,14 @@ let X = K.Ay.getEnableHardwareAcceleration(),
                     isMobile: S,
                     isVR: y,
                     onClickPremiumGuildIcon: P,
-                    selected: b,
-                    itemProps: N,
-                    nameplate: C,
+                    selected: O,
+                    itemProps: C,
+                    nameplate: N,
                     onClick: (e) => {
-                        e.shiftKey ? M?.() : O((e) => !e);
+                        e.shiftKey ? M?.() : b((e) => !e);
                     },
                     onMouseDown: (e) => {
-                        b ? e.stopPropagation() : i?.(e);
+                        O ? e.stopPropagation() : i?.(e);
                     },
                     ...o,
                 });
@@ -168,8 +168,8 @@ let X = K.Ay.getEnableHardwareAcceleration(),
         let { colorRoleId: t, ...n } = e,
             { channel: i, user: s, index: a } = e,
             o = (0, u.rm)(`${a}`),
-            l = (0, _.bG)([B.A], () => B.A.isTyping(i.id, s.id)),
-            c = (0, _.bG)([V.default], () => V.default.getCurrentUser()),
+            l = (0, _.bG)([V.A], () => V.A.isTyping(i.id, s.id)),
+            c = (0, _.bG)([B.default], () => B.default.getCurrentUser()),
             d = (0, _.bG)([U.A], () => (null != t ? U.A.getRole(i.guild_id, t)?.name : void 0), [i, t]),
             f = (0, y.r)({ user: s, guildId: i.guild_id });
         return (0, r.jsx)(et, { ...n, ...o, isTyping: l, currentUser: c, colorRoleName: d, nameplate: f });
@@ -183,7 +183,7 @@ let X = K.Ay.getEnableHardwareAcceleration(),
             d = i.useCallback(
                 (e) => {
                     u?.src != null &&
-                        (0, h.L3)(e, async () => {
+                        (0, p.L3)(e, async () => {
                             let { default: e } = await n.e("33743").then(n.bind(n, 455538));
                             return (t) => (0, r.jsx)(e, { ...t, imageUrl: u.src });
                         });
@@ -192,7 +192,7 @@ let X = K.Ay.getEnableHardwareAcceleration(),
             );
         return t === z.clD.UNKNOWN
             ? (0, r.jsx)("div", { className: l, children: (0, r.jsx)("div", { className: Z.k1 }) })
-            : (0, r.jsxs)(b.A, {
+            : (0, r.jsxs)(O.A, {
                   className: l,
                   children: [
                       (0, r.jsx)(f.AC4, {
@@ -308,8 +308,8 @@ class es extends i.Component {
                     isVROnline: d,
                     nick: _,
                     activities: f,
-                    applicationStream: h,
-                    premiumSince: p,
+                    applicationStream: p,
+                    premiumSince: h,
                 } = a;
                 return (0, r.jsx)(
                     en,
@@ -322,10 +322,10 @@ class es extends i.Component {
                         isOwner: u,
                         nick: _,
                         activities: f,
-                        applicationStream: h,
+                        applicationStream: p,
                         channel: s,
                         guildId: s.guild_id,
-                        premiumSince: p,
+                        premiumSince: h,
                         isMobileOnline: c,
                         isVROnline: d,
                         index: i,
@@ -338,12 +338,12 @@ class es extends i.Component {
                 null != a.entry.original_id && (e += `-${a.entry.original_id}`);
                 let t = this.getFirstApplicationIdOccurrences().has(a.entry.id);
                 return (0, r.jsx)(
-                    N.Ay,
+                    C.Ay,
                     { ...a, channel: this.props.channel, index: i, isFirstApplicationOccurrence: t },
                     e,
                 );
             }
-            if (a.type === k.S9.HIDDEN_CONTENT_INVENTORY) return (0, r.jsx)(C.A, {}, "content-inventory-hidden-entry");
+            if (a.type === k.S9.HIDDEN_CONTENT_INVENTORY) return (0, r.jsx)(N.A, {}, "content-inventory-hidden-entry");
         }
         return (0, r.jsx)(ei, { index: i }, `placeholder-${t}:${n}`);
     };
@@ -371,7 +371,7 @@ class es extends i.Component {
             return function (e, i) {
                 if (e === R.f) {
                     let e = n[r + 1 + i];
-                    return (0, N.h9)(e);
+                    return (0, C.h9)(e);
                 }
                 return t;
             };
@@ -401,7 +401,7 @@ class es extends i.Component {
         if (null == this._list) return;
         let { channel: e } = this.props,
             { rowHeight: t, y: n, height: r } = this.getDimensions();
-        (0, p.NJ)({ guildId: e.guild_id, channelId: e.id, y: n, height: r, rowHeight: t });
+        (0, h.NJ)({ guildId: e.guild_id, channelId: e.id, y: n, height: r, rowHeight: t });
     }, 50);
     trackMemberListViewed = () => {
         if (this.lastReportedAnalyticsChannel === this.props.channel.id) return;
@@ -443,7 +443,7 @@ class es extends i.Component {
         let { groups: e, listId: t, channel: n, sectionHeight: i } = this.props;
         return (0, r.jsx)(f.skg, {
             children: (s) =>
-                (0, r.jsx)(O.V0, {
+                (0, r.jsx)(b.V0, {
                     children: (o) =>
                         (0, r.jsx)("aside", {
                             className: a()(Z.yg, Z.ML),
@@ -452,7 +452,7 @@ class es extends i.Component {
                                 component: (0, r.jsx)(f.AC4, {
                                     children: (0, r.jsx)(f.H, {
                                         id: o,
-                                        children: q.intl.format(q.t.JBQxV6, { channel: (0, $.m1)(n, V.default, G.A) }),
+                                        children: q.intl.format(q.t.JBQxV6, { channel: (0, $.m1)(n, B.default, G.A) }),
                                     }),
                                 }),
                                 children: (0, r.jsx)(u.PR, {
@@ -497,8 +497,8 @@ function ea(e) {
         l = (0, _.cf)([k.Ay], () => k.Ay.getProps(t.guild_id, t.id)),
         {
             rows: d,
-            groups: h,
-            version: p,
+            groups: p,
+            version: h,
             updateMaxRowSeen: m,
         } = (0, R.s)({ memberStoreProps: l, channelId: t.id, guildId: t.guild_id }),
         E = i.useRef(null),
@@ -531,7 +531,7 @@ function ea(e) {
                 }),
             [],
         ),
-        C = i.useCallback(
+        N = i.useCallback(
             () =>
                 new Promise((e) => {
                     let t = E.current;
@@ -544,18 +544,18 @@ function ea(e) {
                 }),
             [],
         ),
-        N = (0, c.Ay)({ id: `members-${t.id}`, setFocus: y, isEnabled: o, scrollToStart: v, scrollToEnd: C });
+        C = (0, c.Ay)({ id: `members-${t.id}`, setFocus: y, isEnabled: o, scrollToStart: v, scrollToEnd: N });
     return (0, r.jsx)(T.f5, {
         value: s,
         children: (0, r.jsx)("div", {
             className: a()(Z.kL, n),
             children: (0, r.jsx)(u.hD, {
-                navigator: N,
+                navigator: C,
                 children: (0, r.jsx)(es, {
                     ...e,
                     ...l,
-                    version: p,
-                    groups: h,
+                    version: h,
+                    groups: p,
                     rows: d,
                     listRef: E,
                     updateMaxContentFeedRowSeen: m,
