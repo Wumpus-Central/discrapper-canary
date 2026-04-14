@@ -1,43 +1,40 @@
-n.d(t, { A: () => y, f: () => j });
+n.d(t, { A: () => N, f: () => v });
 var i = n(627968),
     s = n(934551),
     l = n(311907),
-    a = n(554146),
     r = n(397927),
-    o = n(73153),
-    d = n(631670),
-    c = n(252452),
-    u = n(103738),
-    m = n(419954),
-    g = n(933297),
-    _ = n(836602),
-    x = n(591179),
-    A = n(854627),
-    h = n(657331),
-    p = n(961350),
-    T = n(287809),
-    f = n(780964),
-    S = n(932625),
-    E = n(652215),
-    b = n(985018),
-    C = n(630044);
-let N = [{ badgeType: g.Xi.NEW, dismissibleContent: a.M.DISPLAY_NAME_STYLES_NEW_BADGE }],
-    v = () => {
-        let e = (0, l.bG)([T.default], () => T.default.getCurrentUser()),
-            { avatarSrc: t, avatarDecorationSrc: n } = (0, A.A)({ userId: e?.id, size: r._3J.SIZE_48 });
+    a = n(73153),
+    o = n(631670),
+    d = n(252452),
+    c = n(103738),
+    u = n(419954),
+    m = n(836602),
+    g = n(591179),
+    _ = n(854627),
+    x = n(657331),
+    h = n(961350),
+    A = n(287809),
+    p = n(780964),
+    T = n(932625),
+    f = n(652215),
+    S = n(985018),
+    E = n(630044);
+let b = () => {
+        let e = (0, l.bG)([A.default], () => A.default.getCurrentUser()),
+            { avatarSrc: t, avatarDecorationSrc: n } = (0, _.A)({ userId: e?.id, size: r._3J.SIZE_48 });
         return null == e
             ? null
             : (0, i.jsxs)("div", {
-                  className: C.a5,
+                  className: E.a5,
                   children: [
                       (0, i.jsx)(r.euF, {
                           src: t,
                           avatarDecoration: n,
                           size: r._3J.SIZE_48,
-                          "aria-label": b.intl.string(b.t.lqaIxI),
+                          "aria-label": S.intl.string(S.t.lqaIxI),
                       }),
                       (0, i.jsxs)("div", {
-                          className: C.FS,
+                          className: E.FS,
                           children: [
                               (0, i.jsx)(r.Text, {
                                   color: "text-strong",
@@ -46,13 +43,13 @@ let N = [{ badgeType: g.Xi.NEW, dismissibleContent: a.M.DISPLAY_NAME_STYLES_NEW_
                                   children: e.globalName ?? e.username,
                               }),
                               (0, i.jsxs)("div", {
-                                  className: C.Fk,
+                                  className: E.Fk,
                                   children: [
                                       (0, i.jsx)(r.Text, {
                                           variant: "text-sm/normal",
                                           color: "currentColor",
                                           lineClamp: 1,
-                                          children: b.intl.string(b.t.Ip9nBS),
+                                          children: S.intl.string(S.t.Ip9nBS),
                                       }),
                                       (0, i.jsx)(s.PencilIcon, { size: "xxs", color: "currentColor" }),
                                   ],
@@ -62,37 +59,35 @@ let N = [{ badgeType: g.Xi.NEW, dismissibleContent: a.M.DISPLAY_NAME_STYLES_NEW_
                   ],
               });
     },
-    I = (0, m.t_)(f.X.PROFILE_PANEL, {
-        useTitle: () => b.intl.string(b.t["vi7f+q"]),
-        notice: { stores: [_.A], element: u.A },
+    C = (0, u.t_)(p.X.PROFILE_PANEL, {
+        useTitle: () => S.intl.string(S.t["vi7f+q"]),
+        notice: { stores: [m.A], element: c.A },
         initialize: () => () =>
-            o.h.wait(() => {
-                (0, d.F7)(), c.A.clearSubsection(E.nc_.PROFILE_CUSTOMIZATION);
+            a.h.wait(() => {
+                (0, o.F7)(), d.A.clearSubsection(f.nc_.PROFILE_CUSTOMIZATION);
             }),
-        buildLayout: () => [S.I],
+        buildLayout: () => [T.I],
     }),
-    j = (0, m.i4)(f.X.PROFILE_SIDEBAR_ITEM, {
-        useTitle: () => b.intl.string(b.t["vi7f+q"]),
-        icon: O,
-        StronglyDiscouragedCustomComponent: v,
-        getDismissibleBadges: () => N,
-        usePredicate: () => !(0, x.X)("user_settings_sidebar"),
-        buildLayout: () => [I],
+    v = (0, u.i4)(p.X.PROFILE_SIDEBAR_ITEM, {
+        useTitle: () => S.intl.string(S.t["vi7f+q"]),
+        icon: I,
+        StronglyDiscouragedCustomComponent: b,
+        usePredicate: () => !(0, g.X)("user_settings_sidebar"),
+        buildLayout: () => [C],
     }),
-    y = (0, m.i4)(f.X.PROFILE_SIDEBAR_ITEM_WYSIWYG, {
-        useTitle: () => b.intl.string(b.t["vi7f+q"]),
-        icon: O,
-        StronglyDiscouragedCustomComponent: v,
-        getDismissibleBadges: () => N,
-        usePredicate: () => (0, x.X)("user_settings_sidebar"),
+    N = (0, u.i4)(p.X.PROFILE_SIDEBAR_ITEM_WYSIWYG, {
+        useTitle: () => S.intl.string(S.t["vi7f+q"]),
+        icon: I,
+        StronglyDiscouragedCustomComponent: b,
+        usePredicate: () => (0, g.X)("user_settings_sidebar"),
         onClick: () => {
-            let e = p.default.getId();
-            (0, h.openUserProfileModal)({ userId: e });
+            let e = h.default.getId();
+            (0, x.openUserProfileModal)({ userId: e });
         },
         buildLayout: () => [],
     });
-function O() {
-    let e = (0, l.bG)([T.default], () => T.default.getCurrentUser()),
-        { avatarSrc: t, avatarDecorationSrc: n } = (0, A.A)({ userId: e?.id, size: r._3J.SIZE_48 });
+function I() {
+    let e = (0, l.bG)([A.default], () => A.default.getCurrentUser()),
+        { avatarSrc: t, avatarDecorationSrc: n } = (0, _.A)({ userId: e?.id, size: r._3J.SIZE_48 });
     return (0, i.jsx)(r.euF, { src: t, avatarDecoration: n, size: r._3J.SIZE_20, "aria-hidden": !0 });
 }
