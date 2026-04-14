@@ -16,8 +16,8 @@ var a = s(627968),
     x = s(837921),
     h = s(711371),
     T = s(938746),
-    m = s(652215),
-    y = s(985018);
+    y = s(652215),
+    m = s(985018);
 function S(t) {
     let { text: e, editor: s, target: S, onHeightUpdate: C, onSelect: A } = t,
         E = n.useCallback(
@@ -56,9 +56,9 @@ function S(t) {
                           l.Drp,
                           {
                               id: "cut",
-                              label: y.intl.string(y.t.pNPVhe),
+                              label: m.intl.string(m.t.pNPVhe),
                               shortcut: (0, f.isMac)() ? "⌘X" : "Ctrl+X",
-                              action: () => setTimeout(() => x.Ay.cut(), 0),
+                              action: () => x.Ay.cut(),
                           },
                           "cut",
                       ),
@@ -66,9 +66,9 @@ function S(t) {
                           l.Drp,
                           {
                               id: "copy",
-                              label: y.intl.string(y.t.OpuAlK),
+                              label: m.intl.string(m.t.OpuAlK),
                               shortcut: (0, f.isMac)() ? "⌘C" : "Ctrl+C",
-                              action: () => setTimeout(() => x.Ay.copy(), 0),
+                              action: () => x.Ay.copy(),
                           },
                           "copy",
                       ),
@@ -76,14 +76,14 @@ function S(t) {
                 : null,
         R = (0, a.jsx)(l.sLh, {
             id: "command-suggestions",
-            label: y.intl.string(y.t["9rJKF7"]),
+            label: m.intl.string(m.t["9rJKF7"]),
             checked: G,
             action: () => {
                 let t = !G;
                 d._3.updateSetting(t),
-                    b.default.track(m.HAw.SLASH_COMMAND_SUGGESTIONS_TOGGLED, {
+                    b.default.track(y.HAw.SLASH_COMMAND_SUGGESTIONS_TOGGLED, {
                         enabled: t,
-                        location: { object: m.ZSU.CONTEXT_MENU },
+                        location: { object: y.ZSU.CONTEXT_MENU },
                     });
             },
         });
@@ -91,14 +91,14 @@ function S(t) {
         "data-menu-migrated": !0,
         navId: "textarea-context",
         onClose: j,
-        "aria-label": y.intl.string(y.t.NWlDSI),
+        "aria-label": m.intl.string(m.t.NWlDSI),
         onSelect: A,
         children: [
-            I && (0, a.jsx)(l.Drp, { id: "suggestions", label: y.intl.string(y.t.zgxg7v), children: N && R }),
+            I && (0, a.jsx)(l.Drp, { id: "suggestions", label: m.intl.string(m.t.zgxg7v), children: N && R }),
             O &&
                 (0, a.jsx)(l.sLh, {
                     id: "submit-button",
-                    label: y.intl.string(y.t.G8XDyj),
+                    label: m.intl.string(m.t.G8XDyj),
                     checked: _,
                     action: () => {
                         (0, p.Xt)();
@@ -111,14 +111,14 @@ function S(t) {
                     V,
                     (0, a.jsx)(l.Drp, {
                         id: "paste",
-                        label: y.intl.string(y.t.lMUxVi),
+                        label: m.intl.string(m.t.lMUxVi),
                         shortcut: (0, f.isMac)() ? "⌘V" : "Ctrl+V",
-                        action: () => setTimeout(() => x.Ay.paste(), 0),
+                        action: () => x.Ay.paste(),
                     }),
                     U &&
                         (0, a.jsx)(l.Drp, {
                             id: "paste-as-plain-text",
-                            label: y.intl.string(y.t.X92Qnr),
+                            label: m.intl.string(m.t.X92Qnr),
                             shortcut: (0, f.isMac)() ? "⌘⇧V" : "Ctrl+Shift+V",
                             action: L,
                         }),
