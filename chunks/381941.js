@@ -1,30 +1,30 @@
 "use strict";
 n.d(t, {
-    ES: () => o,
-    Fd: () => u,
-    Gt: () => f,
-    Hx: () => y,
-    L: () => A,
-    N0: () => d,
-    VP: () => T,
-    ZG: () => S,
-    _W: () => h,
-    aj: () => m,
-    k8: () => _,
-    mZ: () => c,
-    q4: () => p,
-    qh: () => a,
-    ty: () => I,
-    y5: () => l,
+    ES: () => a,
+    Fd: () => l,
+    Gt: () => _,
+    Hx: () => T,
+    N0: () => c,
+    VP: () => A,
+    ZG: () => I,
+    _W: () => p,
+    aj: () => h,
+    cZ: () => m,
+    k8: () => d,
+    mZ: () => u,
+    oe: () => E,
+    q4: () => f,
+    qh: () => s,
+    ty: () => g,
+    y5: () => o,
 });
 var r = n(158390),
-    i = n(317097),
-    s = n(927813);
+    i = n(927813);
 n(652215);
-let a = [0, 4, 8, 16, 24],
-    o = 16,
-    l = 0,
-    u = Object.freeze({
+let s = [0, 4, 8, 16, 24],
+    a = 16,
+    o = 0,
+    l = Object.freeze({
         referencedAvatarProfile: !1,
         referencedUsernameProfile: !1,
         interactionAvatarProfile: !1,
@@ -37,24 +37,16 @@ let a = [0, 4, 8, 16, 24],
         moreUtilities: !1,
         contextMenu: !1,
     }),
+    u = 16,
     c = 16,
-    d = 16,
-    _ = 32,
-    f = 64,
-    p = "---new-messages-bar",
-    h = "SPOILER_",
-    m = 3447003,
-    E = 0.16,
-    g = 0.2;
-function A(e) {
-    return {
-        "--custom-guild-official-message": (0, i.$k)(e, !0),
-        "--custom-guild-official-message-hsl": (0, i.BK)(e, !0),
-        "--custom-guild-official-message-alpha": E,
-        "--custom-guild-official-message-selected-alpha": g,
-    };
-}
-var I = (function (e) {
+    d = 32,
+    _ = 64,
+    f = "---new-messages-bar",
+    p = "SPOILER_",
+    h = 3447003,
+    m = 0.16,
+    E = 0.2;
+var g = (function (e) {
     return (
         (e.ERROR_SOURCE_UNKNOWN = "ERROR_SOURCE_UNKNOWN"),
         (e.PRECOMPRESSION_SUM_TOO_LARGE = "PRECOMPRESSION_SUM_TOO_LARGE"),
@@ -66,9 +58,9 @@ var I = (function (e) {
         e
     );
 })({});
-let T = 0xc800000,
-    S = { timeout: 60 * s.A.Millis.SECOND, retries: 3, backoff: new r.A() };
-var y = (function (e) {
+let A = 0xc800000,
+    I = { timeout: 60 * i.A.Millis.SECOND, retries: 3, backoff: new r.A() };
+var T = (function (e) {
     return (
         (e.PUSH_NOTIFICATION = "push_notification"),
         (e.CHAT_INPUT = "chat_input"),
