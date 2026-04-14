@@ -416,6 +416,7 @@ var r = (function (e) {
         (e.ACTIVITY_PRIVACY_PER_GUILD_CATEGORY = "activity_sharing_per_guild_category"),
         (e.ACTIVITY_PRIVACY_PER_GUILD_DEFAULT_SETTING = "activity_sharing_per_guild_default_setting"),
         (e.ACTIVITY_PRIVACY_PER_GUILD_SETTING = "activity_sharing_per_guild_setting"),
+        (e.ACTIVITY_PRIVACY_MY_SERVERS_CATEGORY = "activity_sharing_my_servers_category"),
         (e.ACTIVITY_PRIVACY_RELATED_SETTINGS = "activity_privacy_related_settings"),
         (e.ACTIVITY_PRIVACY_TO_PROFILE_PRIVACY_NAVIGATOR = "activity_privacy_to_profile_privacy_navigator"),
         (e.ACTIVITY_PRIVACY_GAME_JOINING_CATEGORY = "activity_sharing_game_joining_category"),
