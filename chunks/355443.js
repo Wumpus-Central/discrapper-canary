@@ -1,13 +1,13 @@
-n.d(t, { H: () => l });
+n.d(t, { H: () => r });
 var i = n(179771),
-    r = n(672162);
-let l = {
-        [r.vd.INITIATE_IMAGE_UPLOAD]: { request: void 0, response: (e) => ({ image_url: e.string().required() }) },
-        [r.vd.OPEN_SHARE_MOMENT_DIALOG]: {
+    l = n(672162);
+let r = {
+        [l.vd.INITIATE_IMAGE_UPLOAD]: { request: void 0, response: (e) => ({ image_url: e.string().required() }) },
+        [l.vd.OPEN_SHARE_MOMENT_DIALOG]: {
             response: void 0,
             request: (e) => ({ mediaUrl: e.string().required().max(1024) }),
         },
-        [r.vd.AUTHENTICATE]: {
+        [l.vd.AUTHENTICATE]: {
             request: (e) => ({ access_token: e.string().allow(null).optional() }),
             response: (e) => ({
                 access_token: e.string().required(),
@@ -23,7 +23,7 @@ let l = {
                     .required(),
                 scopes: e
                     .array()
-                    .items(e.string().valid(...(0, r.iW)(i.F)))
+                    .items(e.string().valid(...(0, l.iW)(i.F)))
                     .required(),
                 expires: e.string().required(),
                 application: e
@@ -37,7 +37,7 @@ let l = {
                     .required(),
             }),
         },
-        [r.vd.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: {
+        [l.vd.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: {
             request: void 0,
             response: (e) => ({
                 participants: e
@@ -50,7 +50,7 @@ let l = {
                     .required(),
             }),
         },
-        [r.vd.SHARE_INTERACTION]: {
+        [l.vd.SHARE_INTERACTION]: {
             request: (e) => ({
                 command: e.string().required(),
                 options: e.array().items(e.object({ name: e.string().required(), value: e.string().required() })),
@@ -66,7 +66,7 @@ let l = {
             }),
             response: (e) => ({ success: e.boolean().required() }),
         },
-        [r.vd.SHARE_LINK]: {
+        [l.vd.SHARE_LINK]: {
             request: (e) => ({
                 custom_id: e.string().max(64),
                 message: e.string().max(1e3).required(),
@@ -78,7 +78,7 @@ let l = {
                 didSendMessage: e.boolean().required(),
             }),
         },
-        [r.vd.GET_RELATIONSHIPS]: {
+        [l.vd.GET_RELATIONSHIPS]: {
             request: void 0,
             response: (e) => ({
                 relationships: e
@@ -93,12 +93,12 @@ let l = {
                     ),
             }),
         },
-        [r.vd.INVITE_USER_EMBEDDED]: {
+        [l.vd.INVITE_USER_EMBEDDED]: {
             request: (e) => ({ user_id: e.string().required(), content: e.string().min(0).max(1024) }),
             response: void 0,
         },
-        [r.vd.GET_USER]: { request: (e) => ({ id: e.string().max(64).required() }), response: (e) => s(e).allow(null) },
-        [r.vd.GET_QUEST_ENROLLMENT_STATUS]: {
+        [l.vd.GET_USER]: { request: (e) => ({ id: e.string().max(64).required() }), response: (e) => s(e).allow(null) },
+        [l.vd.GET_QUEST_ENROLLMENT_STATUS]: {
             request: (e) => ({ quest_id: e.string().required() }),
             response: (e) => ({
                 quest_id: e.string().required(),
@@ -106,11 +106,26 @@ let l = {
                 enrolled_at: e.string().allow(null).optional(),
             }),
         },
-        [r.vd.QUEST_START_TIMER]: {
+        [l.vd.QUEST_START_TIMER]: {
             request: (e) => ({ quest_id: e.string().required() }),
             response: (e) => ({ success: e.boolean().required() }),
         },
-        [r.vd.REQUEST_PROXY_TICKET_REFRESH]: { request: void 0, response: (e) => ({ ticket: e.string().required() }) },
+        [l.vd.GET_QUESTS]: {
+            request: void 0,
+            response: (e) => ({
+                quests: e
+                    .array()
+                    .items(
+                        e.object({
+                            quest_id: e.string().required(),
+                            enrolled_at: e.string().allow(null).optional(),
+                            external_cta_url: e.string().required(),
+                        }),
+                    )
+                    .required(),
+            }),
+        },
+        [l.vd.REQUEST_PROXY_TICKET_REFRESH]: { request: void 0, response: (e) => ({ ticket: e.string().required() }) },
     },
     a = (e) =>
         e.object({

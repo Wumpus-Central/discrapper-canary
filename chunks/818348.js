@@ -1,9 +1,9 @@
 "use strict";
 n.d(t, {
-    AD: () => C,
-    Cm: () => O,
+    AD: () => N,
+    Cm: () => b,
     DY: () => R,
-    FX: () => V,
+    FX: () => B,
     Gg: () => I,
     Jo: () => en,
     Kc: () => y,
@@ -11,8 +11,8 @@ n.d(t, {
     Lt: () => j,
     Lw: () => Z,
     NJ: () => r.NJ,
-    Nc: () => b,
-    OL: () => N,
+    Nc: () => O,
+    OL: () => C,
     Pq: () => ei,
     Q7: () => M,
     Sb: () => eo,
@@ -20,7 +20,7 @@ n.d(t, {
     Tk: () => el,
     U2: () => u,
     VV: () => P,
-    Wz: () => ep,
+    Wz: () => eh,
     Xl: () => c,
     YI: () => X,
     Yr: () => ef,
@@ -28,7 +28,7 @@ n.d(t, {
     _A: () => m,
     __: () => L,
     bZ: () => ed,
-    cl: () => p,
+    cl: () => h,
     dH: () => a.d,
     dL: () => Y,
     do: () => T,
@@ -39,7 +39,7 @@ n.d(t, {
     hV: () => U,
     he: () => S,
     il: () => J,
-    js: () => B,
+    js: () => V,
     kM: () => E,
     kv: () => v,
     mX: () => e_,
@@ -57,11 +57,11 @@ n.d(t, {
     tE: () => F,
     tF: () => x,
     w7: () => eu,
-    x0: () => eh,
+    x0: () => ep,
     xB: () => G,
     xE: () => W,
     xe: () => eE,
-    xf: () => h,
+    xf: () => p,
     zy: () => ee,
 });
 var r = n(812743),
@@ -99,7 +99,7 @@ Object.freeze({
     GREY7: "#1c242b",
     GREY9: "#202226",
 });
-var p = (function (e) {
+var h = (function (e) {
         return (
             (e.ONLINE = "online"),
             (e.OFFLINE = "offline"),
@@ -111,7 +111,7 @@ var p = (function (e) {
             e
         );
     })({}),
-    h = (function (e) {
+    p = (function (e) {
         return (
             (e.DESKTOP = "desktop"), (e.WEB = "web"), (e.MOBILE = "mobile"), (e.VR = "vr"), (e.UNKNOWN = "unknown"), e
         );
@@ -193,11 +193,11 @@ let y = new Map([
         [3, "giropay"],
         [16, "ideal"],
     ]),
-    N = new Set([7, 8, 9, 12, 10, 13, 14, 15, 16, 4, 3, 5, 17]),
-    C = new Set([7, 9, 3, 5, 4, 14, 15, 16]),
+    C = new Set([7, 8, 9, 12, 10, 13, 14, 15, 16, 4, 3, 5, 17]),
+    N = new Set([7, 9, 3, 5, 4, 14, 15, 16]),
     R = new Set([1, 2, 6, 8, 10, 11, 13, 12, 17, 19]),
-    O = new Set([3, 4, 5, 14, 15, 16, 7, 9, 12]),
-    b = new Set([6]);
+    b = new Set([3, 4, 5, 14, 15, 16, 7, 9, 12]),
+    O = new Set([6]);
 var D = (function (e) {
         return (e[(e.NEW = 1)] = "NEW"), e;
     })({}),
@@ -300,8 +300,8 @@ let G = Object.freeze({
     F = function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     },
-    V = () => null,
-    B = () => Promise.resolve(),
+    B = () => null,
+    V = () => Promise.resolve(),
     H = [
         G.KICK_MEMBERS,
         G.BAN_MEMBERS,
@@ -404,6 +404,7 @@ var z = (function (e) {
             (e.REQUEST_PROXY_TICKET_REFRESH = "REQUEST_PROXY_TICKET_REFRESH"),
             (e.GET_QUEST_ENROLLMENT_STATUS = "GET_QUEST_ENROLLMENT_STATUS"),
             (e.QUEST_START_TIMER = "QUEST_START_TIMER"),
+            (e.GET_QUESTS = "GET_QUESTS"),
             e
         );
     })({}),
@@ -897,8 +898,8 @@ var ec = (function (e) {
             e
         );
     })({});
-let ep = "US";
-var eh = (function (e) {
+let eh = "US";
+var ep = (function (e) {
         return (
             (e[(e.SINGLE_PLAYER = 1)] = "SINGLE_PLAYER"),
             (e[(e.ONLINE_MULTIPLAYER = 2)] = "ONLINE_MULTIPLAYER"),
