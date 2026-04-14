@@ -1,22 +1,28 @@
 "use strict";
-n.d(t, { LG: () => u, MS: () => a });
+n.d(t, { LG: () => u, MS: () => s });
 let r = 50035,
     i = "__root_errors";
-var a = (function (e) {
-    return (e.HCAPTCHA = "hcaptcha"), (e.RECAPTCHA = "recaptcha"), (e.RECAPTCHA_ENTERPRISE = "recaptcha_enterprise"), e;
+var s = (function (e) {
+    return (
+        (e.HCAPTCHA = "hcaptcha"),
+        (e.RECAPTCHA = "recaptcha"),
+        (e.RECAPTCHA_ENTERPRISE = "recaptcha_enterprise"),
+        (e.TURNSTILE = "turnstile"),
+        e
+    );
 })({});
-function s(e) {
+function a(e) {
     return e.map((e) => ({ code: "UNKNOWN", message: e }));
 }
 function o(e) {
     let t = {};
     for (let [n, r] of Object.entries(e)) {
         if ("_misc" === n) {
-            t._errors = s(r);
+            t._errors = a(r);
             continue;
         }
         let e = {};
-        (e._errors = s(r)), (t[n] = e);
+        (e._errors = a(r)), (t[n] = e);
     }
     return t;
 }
@@ -44,11 +50,11 @@ class u extends Error {
     status;
     captchaFields;
     constructor(e, t, n = "An unexpected error occurred.") {
-        const { message: r, code: i, retryAfter: a, errors: s, status: o, captchaFields: u } = l(e, t);
+        const { message: r, code: i, retryAfter: s, errors: a, status: o, captchaFields: u } = l(e, t);
         super(r ?? n),
             (this.code = i ?? -1),
-            (this.retryAfter = a),
-            (this.errors = s),
+            (this.retryAfter = s),
+            (this.errors = a),
             (this.status = o),
             (this.captchaFields = u ?? {}),
             (this.cause = e);
@@ -75,8 +81,8 @@ class u extends Error {
                     let [n, r] = e;
                     "_errors" === n ||
                         Object.entries(this.getAllFieldErrorsUnder(r)).forEach((e) => {
-                            let [r, a] = e;
-                            r === i ? (t[n] = a) : (t[`${n}.${r}`] = a);
+                            let [r, s] = e;
+                            r === i ? (t[n] = s) : (t[`${n}.${r}`] = s);
                         });
                 }),
             t
