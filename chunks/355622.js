@@ -99,6 +99,7 @@ let l = {
         expressionPicker: { onlyEmojis: !0 },
         permissions: { requireSendMessages: !0 },
         submit: { useDisabledStylesOnSubmit: !0 },
+        autocomplete: { alwaysUseLayer: !0, small: !0 },
         showCharacterCount: !0,
     },
     _ = {
@@ -125,7 +126,7 @@ let l = {
         showCharacterCount: !0,
         layout: 1,
     },
-    p = {
+    h = {
         analyticsName: "thread_creation",
         attachments: !0,
         drafts: { type: i.C.FirstThreadMessage },
@@ -141,7 +142,7 @@ let l = {
         hideAttachmentArea: !0,
         upsellLongMessages: { iconOnly: !0 },
     },
-    h = {
+    p = {
         ...l,
         analyticsName: "create_announcement_post",
         stickers: { allowSending: !1 },
@@ -205,7 +206,7 @@ let l = {
         EDIT: d,
         FORM: _,
         VOICE_CHANNEL_STATUS: f,
-        THREAD_CREATION: p,
+        THREAD_CREATION: h,
         USER_PROFILE: g,
         USER_PROFILE_REPLY: {
             analyticsName: "user_profile_reply",
@@ -245,7 +246,7 @@ let l = {
             hideAccessoryBar: !0,
         },
         CREATE_FORUM_POST: m,
-        CREATE_ANNOUNCEMENT_POST: h,
+        CREATE_ANNOUNCEMENT_POST: p,
         CREATE_POLL: E,
         FORUM_CHANNEL_GUIDELINES: {
             analyticsName: "forum_channel_guidelines",
