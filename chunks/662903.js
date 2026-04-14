@@ -1,97 +1,99 @@
-n.d(t, { Ay: () => u, Bu: () => o, OJ: () => s, XY: () => i });
+"use strict";
+n.d(t, { Ay: () => _, Bu: () => l, OJ: () => o, XY: () => a });
 var r = n(64700),
-    l = n(771253),
-    a = n(876230);
-let i = 8e5,
-    s = 20,
-    o = 30;
-function u(e, t) {
-    let { src: n, initialTimeSec: u = 0, onError: c, onHlsInstance: d } = t,
-        m = r.useRef(null),
-        p = r.useRef(u);
-    p.current = u;
-    let E = r.useRef(c),
-        f = r.useRef(d);
+    i = n(771253),
+    s = n(876230);
+let a = 8e5,
+    o = 20,
+    l = 30,
+    u = 3;
+function c(e) {
+    return null != e && e.split("?")[0].endsWith(".m3u8");
+}
+function d(e) {
+    switch (e) {
+        case i.Ay.ErrorTypes.NETWORK_ERROR:
+            return s.SB.HLS_NETWORK_ERROR;
+        case i.Ay.ErrorTypes.MEDIA_ERROR:
+            return s.SB.HLS_MEDIA_ERROR;
+        case i.Ay.ErrorTypes.MUX_ERROR:
+            return s.SB.HLS_MUX_ERROR;
+        case i.Ay.ErrorTypes.KEY_SYSTEM_ERROR:
+            return s.SB.HLS_KEY_SYSTEM_ERROR;
+        default:
+            return s.SB.HLS_OTHER_ERROR;
+    }
+}
+function _(e, t) {
+    let { src: n, initialTimeSec: s = 0, onError: _, onHlsInstance: f } = t,
+        h = r.useRef(null),
+        p = r.useRef(s);
+    p.current = s;
+    let m = r.useRef(_),
+        E = r.useRef(f);
     r.useEffect(() => {
-        E.current = c;
-    }, [c]),
+        m.current = _;
+    }, [_]),
         r.useEffect(() => {
-            f.current = d;
-        }, [d]);
-    let h = null != n && n.split("?")[0].endsWith(".m3u8") && l.Ay.isSupported();
+            E.current = f;
+        }, [f]);
+    let g = c(n) && i.Ay.isSupported();
     return (
         r.useEffect(() => {
-            if (!h || null == n || null == e.current) return;
+            if (!g || null == n || null == e.current) return;
             let t = e.current,
-                r = new l.Ay({
-                    backBufferLength: s,
-                    maxBufferLength: o,
+                r = new i.Ay({
+                    backBufferLength: o,
+                    maxBufferLength: l,
                     startPosition: p.current,
                     startFragPrefetch: !0,
                     startLevel: -1,
                 });
-            (m.current = r), f.current?.(r);
-            let u = 0,
-                c = () => {
+            (h.current = r), E.current?.(r);
+            let s = () => {
+                    r.config.minAutoBitrate !== a && (r.config.minAutoBitrate = a);
+                },
+                c = 0,
+                _ = (e, t) => {
+                    if ((m.current?.(d(t.type), { errorDetails: t.details, fatal: t.fatal }), t.fatal)) {
+                        if (c >= u) {
+                            r.destroy(), (h.current = null), E.current?.(null);
+                            return;
+                        }
+                        switch ((c++, t.type)) {
+                            case i.Ay.ErrorTypes.NETWORK_ERROR:
+                                r.startLoad();
+                                break;
+                            case i.Ay.ErrorTypes.MEDIA_ERROR:
+                                r.recoverMediaError();
+                                break;
+                            default:
+                                r.destroy(), (h.current = null), E.current?.(null);
+                        }
+                    }
+                },
+                f = () => {
                     r.mainForwardBufferInfo?.len === 0 &&
-                        r.trigger(l.Ay.Events.BUFFER_FLUSHING, {
+                        r.trigger(i.Ay.Events.BUFFER_FLUSHING, {
                             startOffset: t.currentTime,
                             endOffset: 1 / 0,
                             type: "video",
                         });
                 };
             return (
-                r.on(l.Ay.Events.FRAG_LOADING, () => {
-                    r.config.minAutoBitrate !== i && (r.config.minAutoBitrate = i);
-                }),
-                r.on(l.Ay.Events.ERROR, (e, t) => {
-                    if (
-                        (E.current?.(
-                            (function (e) {
-                                switch (e) {
-                                    case l.Ay.ErrorTypes.NETWORK_ERROR:
-                                        return a.SB.HLS_NETWORK_ERROR;
-                                    case l.Ay.ErrorTypes.MEDIA_ERROR:
-                                        return a.SB.HLS_MEDIA_ERROR;
-                                    case l.Ay.ErrorTypes.MUX_ERROR:
-                                        return a.SB.HLS_MUX_ERROR;
-                                    case l.Ay.ErrorTypes.KEY_SYSTEM_ERROR:
-                                        return a.SB.HLS_KEY_SYSTEM_ERROR;
-                                    default:
-                                        return a.SB.HLS_OTHER_ERROR;
-                                }
-                            })(t.type),
-                            { errorDetails: t.details, fatal: t.fatal },
-                        ),
-                        t.fatal)
-                    ) {
-                        if (u >= 3) {
-                            r.destroy(), (m.current = null), f.current?.(null);
-                            return;
-                        }
-                        switch ((u++, t.type)) {
-                            case l.Ay.ErrorTypes.NETWORK_ERROR:
-                                r.startLoad();
-                                break;
-                            case l.Ay.ErrorTypes.MEDIA_ERROR:
-                                r.recoverMediaError();
-                                break;
-                            default:
-                                r.destroy(), (m.current = null), f.current?.(null);
-                        }
-                    }
-                }),
-                t.addEventListener("seeking", c),
+                r.on(i.Ay.Events.FRAG_LOADING, s),
+                r.on(i.Ay.Events.ERROR, _),
+                t.addEventListener("seeking", f),
                 r.loadSource(n),
                 r.attachMedia(t),
                 () => {
-                    t.removeEventListener("seeking", c),
-                        m.current === r && (r.destroy(), (m.current = null), f.current?.(null)),
+                    t.removeEventListener("seeking", f),
+                        h.current === r && (r.destroy(), (h.current = null), E.current?.(null)),
                         t.removeAttribute("src"),
                         t.load();
                 }
             );
-        }, [h, n, e]),
-        { isHlsActive: h, hlsRef: m }
+        }, [g, n, e]),
+        { isHlsActive: g, hlsRef: h }
     );
 }

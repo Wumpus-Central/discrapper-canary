@@ -8,14 +8,14 @@ n.d(t, {
     cf: () => H,
     d5: () => X,
     e0: () => ei,
-    f7: () => V,
+    f7: () => B,
     gC: () => en,
     hJ: () => Y,
     l9: () => Z,
     m6: () => W,
     navigateToQuestHome: () => $,
     q$: () => et,
-    rx: () => B,
+    rx: () => V,
     z6: () => q,
 });
 var r = n(627968);
@@ -31,8 +31,8 @@ var o = n(397927),
     d = n(833291),
     _ = n(726845),
     f = n(976860),
-    p = n(779733),
-    h = n(961350),
+    h = n(779733),
+    p = n(961350),
     m = n(299091),
     E = n(711014),
     g = n(954571),
@@ -42,11 +42,11 @@ var o = n(397927),
     S = n(859703),
     y = n(405670),
     v = n(245853),
-    N = n(579473),
-    C = n(561844),
+    C = n(579473),
+    N = n(561844),
     R = n(590202),
-    O = n(851936),
-    b = n(437343),
+    b = n(851936),
+    O = n(437343),
     D = n(710969),
     L = n(792620),
     w = n(814793),
@@ -73,7 +73,7 @@ async function F(e) {
         return !1;
     }
 }
-async function V(e) {
+async function B(e) {
     try {
         if (A.A.isDiscordUrl(e)) return !0;
         return await F(e);
@@ -81,7 +81,7 @@ async function V(e) {
         return !1;
     }
 }
-function B(e) {
+function V(e) {
     let { quest: t, sourceQuestContent: i } = e;
     (0, o.mMO)(async () => {
         let { default: e } = await Promise.all([n.e("72302"), n.e("58686")]).then(n.bind(n, 975726));
@@ -113,7 +113,7 @@ function W(e, t, i) {
     });
 }
 function K(e, t) {
-    (0, C.Y5)({
+    (0, N.Y5)({
         questId: e.id,
         questContent: t.content,
         questContentPosition: t.position,
@@ -131,20 +131,18 @@ function $(e) {
     (0, w.jQ)({ questId: n, fromContent: t });
     let i = null != n ? `#${n}` : "";
     r && _.A.setState({ selectedTab: U.GlobalDiscoveryTab.QUESTS }),
-        (0, p.default)(),
+        (0, h.default)(),
         (0, f.pX)((r ? k.BVt.QUEST_HOME_DEPRECATED : k.BVt.QUEST_HOME) + i);
 }
 let z = 0.01;
 function q(e) {
-    let t = (0, O.L)({ quest: e });
+    let t = (0, b.L)({ quest: e });
     if (Math.random() > z) return;
-    let n = (0, b.A)(e);
+    let n = (0, O.A)(e);
     t.log(`Showing survey ${n.id}`), (0, x.m)({ questId: e.id, survey: n });
 }
 function Z() {
-    return Promise.all([n.e("57174"), n.e("92868"), n.e("91652"), n.e("29636"), n.e("7634"), n.e("68317")]).then(
-        n.bind(n, 201257),
-    );
+    return Promise.all([n.e("92868"), n.e("29636"), n.e("7634"), n.e("70294")]).then(n.bind(n, 201257));
 }
 function X(e) {
     let {
@@ -171,12 +169,12 @@ function X(e) {
                 video_session_id: c,
             }));
     }
-    let { setCaptionEnabled: d, muted: _, volume: f, captionEnabled: p } = y.Ay.getState(),
-        { enabled: h, variant: m } = v.Ig.getConfig({ location: P.rE.VIDEO_MODAL }),
-        E = null != (0, N.tW)(t, N.fY.VIDEO_PLAYER_CAPTION, void 0, !1);
+    let { setCaptionEnabled: d, muted: _, volume: f, captionEnabled: h } = y.Ay.getState(),
+        { enabled: p, variant: m } = v.Ig.getConfig({ location: P.rE.VIDEO_MODAL }),
+        E = null != (0, C.tW)(t, C.fY.VIDEO_PLAYER_CAPTION, void 0, !1);
     _ &&
-        h &&
-        (m === v.sy.AUTO_ENABLE_CAPTIONS && E && !p
+        p &&
+        (m === v.sy.AUTO_ENABLE_CAPTIONS && E && !h
             ? d(!0)
             : m === v.sy.AUTO_UNMUTE && (y.Ay.getState().setMuted(!1), 0 === f && y.Ay.getState().setVolume(0.3))),
         (0, o.mMO)(
@@ -203,7 +201,7 @@ function Q(e) {
     let t = platform.os?.family,
         n = "quest";
     if ("Android" === t || "iOS" === t) {
-        let t = h.default.getFingerprint(),
+        let t = p.default.getFingerprint(),
             r = (0, s.I_)(),
             i = `${location.protocol}//${window.GLOBAL_ENV.WEBAPP_ENDPOINT}/quests/${e}`;
         return (0, s.Ay)(i, { utmSource: n, fingerprint: t, attemptId: r });
@@ -227,7 +225,7 @@ function ee(e) {
     let t = platform.os?.family,
         n = "quest-preview";
     if ("Android" === t || "iOS" === t) {
-        let t = h.default.getFingerprint(),
+        let t = p.default.getFingerprint(),
             r = (0, s.I_)(),
             i = `${location.protocol}//${window.GLOBAL_ENV.WEBAPP_ENDPOINT}/quest-preview/${e}`;
         return (0, s.Ay)(i, { utmSource: n, fingerprint: t, attemptId: r });
@@ -249,7 +247,7 @@ function et(e) {
 }
 function en(e, t) {
     (0, o.mMO)(async () => {
-        let { default: i } = await Promise.all([n.e("21393"), n.e("27296"), n.e("76147"), n.e("65547")]).then(
+        let { default: i } = await Promise.all([n.e("21393"), n.e("27296"), n.e("35755"), n.e("61827")]).then(
             n.bind(n, 50292),
         );
         return (n) => (0, r.jsx)(i, { ...n, multiplier: e, eligibleToReceivePremiumRewards: t });
@@ -257,7 +255,7 @@ function en(e, t) {
 }
 function er(e) {
     (0, o.mMO)(async () => {
-        let { default: t } = await Promise.all([n.e("77406"), n.e("27818")]).then(n.bind(n, 518420));
+        let { default: t } = await Promise.all([n.e("12424"), n.e("27818")]).then(n.bind(n, 518420));
         return (n) => (0, r.jsx)(t, { ...n, questId: e.id });
     });
 }

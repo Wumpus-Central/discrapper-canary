@@ -1,47 +1,50 @@
-n.d(t, { A: () => p });
-var a = n(627968),
-    o = n(64700),
-    r = n(503698),
-    i = n.n(r),
-    l = n(311907),
-    c = n(776231),
-    s = n(664111),
-    _ = n(734057),
+"use strict";
+n.d(t, { A: () => f });
+var r = n(627968),
+    i = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(311907),
+    l = n(776231),
+    u = n(664111),
+    c = n(734057),
     d = n(67281),
-    u = n(256034);
-function p(e) {
+    _ = n(256034);
+function f(e) {
     let {
             attachment: t,
             posterUrl: n,
-            className: r,
-            active: p = !1,
-            autoPlay: m,
-            src: b,
-            embed: h = !1,
-            maxWidth: f,
-            maxHeight: C,
-            channelId: g,
-            showParticipants: v = !0,
-            volume: x,
-            autoMute: I,
+            className: s,
+            active: f = !1,
+            autoPlay: h,
+            src: p,
+            embed: m = !1,
+            maxWidth: E,
+            maxHeight: g,
+            channelId: A,
+            showParticipants: I = !0,
+            volume: T,
+            autoMute: S,
             onVolumeChange: y,
-            onMutedChange: S,
-            onContextMenu: A,
+            onMutedChange: v,
+            onClick: C,
+            onContextMenu: N,
         } = e,
-        w = t.width ?? 0,
-        B = t.height ?? 0,
-        P = (0, l.bG)([_.A], () => _.A.getBasicChannel(g)?.guild_id, [g]),
-        M = w > 0 && B > 0 ? Math.min((f ?? 1 / 0) / w, (C ?? 1 / 0) / B, 1) : 1,
-        j = Math.round(w * M),
-        T = Math.round(B * M),
-        k = (0, c.AE)({ src: n, width: j, height: T }),
-        [E, N] = o.useState(!1),
-        G = o.useCallback(
+        R = t.width ?? 0,
+        b = t.height ?? 0,
+        O = R >= b ? "landscape" : "portrait",
+        D = (0, o.bG)([c.A], () => c.A.getBasicChannel(A)?.guild_id, [A]),
+        L = R > 0 && b > 0 ? Math.min((E ?? 1 / 0) / R, (g ?? 1 / 0) / b, 1) : 1,
+        w = Math.round(R * L),
+        M = Math.round(b * L),
+        x = (0, l.AE)({ src: n, width: w, height: M }),
+        [P, k] = i.useState(!1),
+        U = i.useCallback(
             (e) => {
-                let { playerState: n, isControlBarExpanded: o } = e;
-                return (0, a.jsx)(d.A, {
+                let { playerState: n, isControlBarExpanded: i } = e;
+                return (0, r.jsx)(d.A, {
                     createdAt: null != t.clip_created_at ? Date.parse(t.clip_created_at) : void 0,
-                    participantIds: v
+                    participantIds: I
                         ? (t.clip_participants?.map((e) => {
                               let { id: t } = e;
                               return t;
@@ -49,41 +52,42 @@ function p(e) {
                         : [],
                     applicationId: t.application?.id,
                     title: t.title,
-                    guildId: P,
+                    guildId: D,
                     playerState: n,
-                    isControlBarExpanded: o,
-                    isFullScreen: E,
+                    isControlBarExpanded: i,
+                    isFullScreen: P,
                 });
             },
-            [t, P, E, v],
+            [t, D, P, I],
         );
-    return (0, a.jsx)("div", {
-        className: i()(u.k, r),
+    return (0, r.jsx)("div", {
+        className: a()(_.k, s),
         onClick: (e) => e.stopPropagation(),
-        onKeyUp: h ? (e) => e.stopPropagation() : void 0,
-        onKeyDown: h ? (e) => e.stopPropagation() : void 0,
-        onContextMenu: A,
-        style: { aspectRatio: `${w} / ${B}`, maxHeight: C, width: h ? void 0 : j, height: h ? void 0 : T },
-        children: (0, a.jsx)(s.A, {
+        onKeyUp: m ? (e) => e.stopPropagation() : void 0,
+        onKeyDown: m ? (e) => e.stopPropagation() : void 0,
+        onContextMenu: N,
+        style: { aspectRatio: `${R} / ${b}`, maxHeight: g, width: m ? void 0 : w, height: m ? void 0 : M },
+        children: (0, r.jsx)(u.A, {
             crossOrigin: null,
-            src: b,
+            src: p,
             downloadUrl: t.url,
             downloadContentType: t.content_type,
-            poster: k,
+            poster: x,
             posterPlaceholder: t.placeholder,
             posterPlaceholderVersion: t.placeholder_version,
-            active: p,
-            autoplay: m,
-            initialVolume: x,
-            initialMuted: I,
+            active: f,
+            autoplay: h,
+            initialVolume: T,
+            initialMuted: S,
             onVolumeChange: y,
-            onMutedChange: S,
-            orientation: w >= B ? "landscape" : "portrait",
+            onMutedChange: v,
+            orientation: O,
             loadingSpinnerPosition: "center",
-            renderPersistentOverlay: G,
+            renderPersistentOverlay: U,
             targetTimeSec: 1 / 0,
             parentTransitionState: null,
-            onFullscreenChange: N,
+            onFullscreenChange: k,
+            onClick: C,
         }),
     });
 }

@@ -1,37 +1,38 @@
-n.d(t, { w: () => _ });
-var a = n(627968),
-    o = n(64700),
-    r = n(939249),
-    i = n(834730),
-    l = n(397927),
-    c = n(720485);
-let s = o.lazy(() =>
+"use strict";
+n.d(t, { w: () => c });
+var r = n(627968),
+    i = n(64700),
+    s = n(939249),
+    a = n(834730),
+    o = n(397927),
+    l = n(720485);
+let u = i.lazy(() =>
         n
             .e("46054")
             .then(n.bind(n, 680901))
             .then((e) => ({ default: e.ClipParticipantsList })),
     ),
-    _ = (e) => {
-        let { participants: t, maxVisibleParticipants: n, guildId: _ } = e,
-            d = o.useRef(null),
-            u = (0, o.useCallback)(
-                () => (0, a.jsx)(o.Suspense, { fallback: null, children: (0, a.jsx)(s, { users: t, guildId: _ }) }),
-                [t, _],
+    c = (e) => {
+        let { participants: t, maxVisibleParticipants: n, guildId: c } = e,
+            d = i.useRef(null),
+            _ = (0, i.useCallback)(
+                () => (0, r.jsx)(i.Suspense, { fallback: null, children: (0, r.jsx)(u, { users: t, guildId: c }) }),
+                [t, c],
             );
-        return (0, a.jsx)(l.YNO, {
-            renderPopout: u,
+        return (0, r.jsx)(o.YNO, {
+            renderPopout: _,
             targetElementRef: d,
             position: "right",
             children: (e) =>
-                (0, a.jsx)(r.D, {
+                (0, r.jsx)(s.D, {
                     ...e,
                     innerRef: d,
-                    className: c.x,
+                    className: l.x,
                     onClick: (t) => {
                         t.stopPropagation(), e.onClick?.(t);
                     },
-                    children: (0, a.jsxs)(i.E, {
-                        className: c.s,
+                    children: (0, r.jsxs)(a.E, {
+                        className: l.s,
                         variant: "text-xs/medium",
                         color: "interactive-text-default",
                         children: ["+", t.length - n],

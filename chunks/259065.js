@@ -10,9 +10,7 @@ let i = "display-name-styles-modal",
         (0, l.mMO)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("57174"),
                     n.e("8555"),
-                    n.e("91652"),
                     n.e("40396"),
                     n.e("90365"),
                     n.e("28936"),
@@ -23,9 +21,8 @@ let i = "display-name-styles-modal",
                     n.e("48840"),
                     n.e("49559"),
                     n.e("18976"),
-                    n.e("35139"),
                     n.e("37372"),
-                    n.e("21978"),
+                    n.e("44629"),
                     n.e("41595"),
                     n.e("75867"),
                 ]).then(n.bind(n, 619481));

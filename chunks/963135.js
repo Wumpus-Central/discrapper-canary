@@ -1,76 +1,78 @@
-n.d(t, { A: () => m });
-var a = n(627968),
-    o = n(64700),
-    r = n(311907),
-    i = n(397927),
-    l = n(421773),
-    c = n(657331),
-    s = n(287809),
-    _ = n(2398);
-let d = o.lazy(() => Promise.resolve().then(n.bind(n, 342296))),
-    u = o.lazy(() => Promise.resolve().then(n.bind(n, 589022)));
-function p(e) {
+"use strict";
+n.d(t, { A: () => p });
+var r = n(627968),
+    i = n(64700),
+    s = n(311907),
+    a = n(397927),
+    o = n(421773),
+    l = n(657331),
+    u = n(287809),
+    c = n(2398);
+let d = i.lazy(() => Promise.resolve().then(n.bind(n, 342296))),
+    _ = i.lazy(() => Promise.resolve().then(n.bind(n, 589022))),
+    f = 150;
+function h(e) {
     let { user: t, guildId: n } = e;
-    return (0, a.jsx)("div", {
-        className: _.RB,
-        children: (0, a.jsx)(i.euF, { src: t.getAvatarURL(n, 24), size: i._3J.SIZE_24, "aria-hidden": !0 }),
+    return (0, r.jsx)("div", {
+        className: c.RB,
+        children: (0, r.jsx)(a.euF, { src: t.getAvatarURL(n, 24), size: a._3J.SIZE_24, "aria-hidden": !0 }),
     });
 }
-let m = function (e) {
+let p = function (e) {
     let { user: t, guildId: n } = e,
-        m = (0, r.bG)([s.default], () => s.default.getCurrentUser()),
-        b = o.useRef(null),
-        { isHovered: h, onMouseEnter: f, onMouseLeave: C, setIsHovered: g } = (0, l.A)(0, 150),
-        v = o.useCallback(
+        p = (0, s.bG)([u.default], () => u.default.getCurrentUser()),
+        m = i.useRef(null),
+        { isHovered: E, onMouseEnter: g, onMouseLeave: A, setIsHovered: I } = (0, o.A)(0, f),
+        T = i.useCallback(
             (e) => {
-                e.stopPropagation(), g(!1), (0, c.openUserProfileModal)({ userId: t.id, guildId: n });
+                e.stopPropagation(), I(!1), (0, l.openUserProfileModal)({ userId: t.id, guildId: n });
             },
-            [t.id, n, g],
+            [t.id, n, I],
         ),
-        x = o.useCallback(
+        S = i.useCallback(
             (e) =>
-                null == m
+                null == p
                     ? null
-                    : (0, a.jsx)("div", {
-                          onMouseEnter: f,
-                          onMouseLeave: C,
-                          children: (0, a.jsx)(o.Suspense, {
+                    : (0, r.jsx)("div", {
+                          onMouseEnter: g,
+                          onMouseLeave: A,
+                          children: (0, r.jsx)(i.Suspense, {
                               fallback: null,
-                              children: (0, a.jsx)(u, {
+                              children: (0, r.jsx)(_, {
                                   ...e,
                                   user: t,
-                                  currentUser: m,
+                                  currentUser: p,
                                   guildId: n,
                                   closePopout: () => {
-                                      e.closePopout(), g(!1);
+                                      e.closePopout(), I(!1);
                                   },
                               }),
                           }),
                       }),
-            [t, m, n, f, C, g],
+            [t, p, n, g, A, I],
         );
-    return (0, a.jsx)(o.Suspense, {
-        fallback: (0, a.jsx)(p, { user: t, guildId: n }),
-        children: (0, a.jsx)(d, {
-            targetElementRef: b,
+    return (0, r.jsx)(i.Suspense, {
+        fallback: (0, r.jsx)(h, { user: t, guildId: n }),
+        children: (0, r.jsx)(d, {
+            targetElementRef: m,
             shouldPreload: !0,
             user: t,
             guildId: n,
             position: "bottom",
-            shouldShow: h,
-            renderPopout: x,
-            onRequestClose: () => g(!1),
+            shouldShow: E,
+            renderPopout: S,
+            onRequestClose: () => I(!1),
             children: (e) => {
-                let { onClick: o, ...r } = e;
-                return (0, a.jsx)(i.DUT, {
-                    ...r,
-                    innerRef: b,
-                    className: _.RB,
-                    onMouseEnter: f,
-                    onMouseLeave: C,
-                    onClick: v,
+                let { onClick: i, ...s } = e;
+                return (0, r.jsx)(a.DUT, {
+                    ...s,
+                    innerRef: m,
+                    className: c.RB,
+                    onMouseEnter: g,
+                    onMouseLeave: A,
+                    onClick: T,
                     "aria-label": t.username,
-                    children: (0, a.jsx)(i.euF, { src: t.getAvatarURL(n, 24), size: i._3J.SIZE_24, "aria-hidden": !0 }),
+                    children: (0, r.jsx)(a.euF, { src: t.getAvatarURL(n, 24), size: a._3J.SIZE_24, "aria-hidden": !0 }),
                 });
             },
         }),
