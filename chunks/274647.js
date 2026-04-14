@@ -1,6 +1,5 @@
 e.exports = {
     kL: "container_f7398d",
-    DD: "title_f7398d",
     In: "applicationIcon_f7398d",
     p: "applicationWidget_f7398d",
     $4: "applicationWidgetOnly_f7398d",

@@ -57,7 +57,7 @@ function K(e) {
         align: "center",
         children: [
             null != n && (0, i.jsx)("img", { className: H.In, src: n, alt: t.name }),
-            (0, i.jsx)(r.EYj, { className: H.DD, variant: "text-sm/normal", children: t.name }),
+            (0, i.jsx)(r.EYj, { variant: "text-sm/normal", children: t.name }),
         ],
     });
 }
@@ -73,7 +73,7 @@ function z(e) {
             direction: "vertical",
             gap: 4,
             children: [
-                (0, i.jsx)(r.DZT, { id: B, className: H.DD, variant: "text-md/normal", children: l }),
+                (0, i.jsx)(r.DZT, { id: B, variant: "text-md/normal", children: l }),
                 (0, i.jsx)(r.EYj, { variant: "text-sm/medium", color: "text-subtle", children: a }),
             ],
         })
