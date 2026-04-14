@@ -11,4 +11,6 @@ e.exports = {
     ps: "loadingApplicationWidgetOnlyPanel_f7398d",
     kc: "loadingFeaturePanelRecomendations_f7398d",
     Ij: "rewardOfferNotice_f7398d",
+    OQ: "ctaContainer_f7398d",
+    Ku: "ctaIcon_f7398d",
 };

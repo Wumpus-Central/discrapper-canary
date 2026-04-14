@@ -1,4 +1,4 @@
-n.d(t, { F: () => C });
+n.d(t, { F: () => N });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -6,108 +6,112 @@ var i = n(627968),
     r = n(311907),
     o = n(554146),
     d = n(397927),
-    c = n(294323),
-    u = n(429913),
-    h = n(357186),
-    A = n(932001),
-    _ = n(834757),
-    m = n(263063),
-    p = n(832163),
-    g = n(535296),
-    f = n(961350),
-    E = n(49999),
-    x = n(985018),
-    I = n(8719);
-function C(e) {
+    c = n(362490),
+    u = n(294323),
+    h = n(429913),
+    A = n(357186),
+    _ = n(932001),
+    m = n(834757),
+    p = n(263063),
+    g = n(832163),
+    f = n(535296),
+    E = n(961350),
+    x = n(49999),
+    I = n(985018),
+    C = n(8719);
+function N(e) {
     let { user: t, stream: n, channel: s } = e,
-        [C, N] = l.useState(!1),
-        T = (0, _.AO)(n),
-        S = (0, r.bG)([p.A], () => p.A.getDetectableIdsToApplicationIds()),
-        b = T?.id,
-        y = null != b ? S[b] : null,
-        v = (0, u.h)(y),
-        { isLoading: j, hasApplicationWidgetOnUserProfile: R } = (0, c.A)(
-            t.id,
-            y,
-            "social_layer_commerce_stream_header",
-        ),
-        O = (0, r.bG)([f.default], () => f.default.getId()),
-        L = l.useRef(null),
-        [M, D] = (0, A.RF)(
+        [N, T] = l.useState(!1),
+        S = (0, m.AO)(n),
+        b = (0, r.bG)([g.A], () => g.A.getDetectableIdsToApplicationIds()),
+        y = S?.id,
+        v = null != y ? b[y] : null,
+        R = (0, h.h)(v),
+        {
+            isLoading: j,
+            applicationWidgetConfig: O,
+            hasApplicationWidgetOnUserProfile: L,
+        } = (0, u.A)(t.id, v, "social_layer_commerce_stream_header"),
+        M = (0, r.bG)([E.default], () => E.default.getId()),
+        D = l.useRef(null),
+        [U, G] = (0, _.RF)(
             o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE,
-            (0, h.c)(o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE),
+            (0, A.c)(o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE),
             void 0,
             !0,
         ),
-        U = M === o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE,
-        G = l.useCallback(() => {
-            N(!1);
+        P = U === o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE,
+        { hasAlreadyLinked: k, canStartAuthorization: w, fetched: B } = (0, c.RD)(M === t.id ? R : null),
+        V = M === t.id && w && !B,
+        H = l.useCallback(() => {
+            T(!1);
         }, []),
+        F = null != O && (k || w),
         {
-            isAppIcon: P,
-            icon: k,
-            text: w,
-            renderPopout: B,
+            isAppIcon: W,
+            icon: K,
+            text: Y,
+            renderPopout: z,
         } = l.useMemo(() => {
-            if (null == v || null == y) return { isAppIcon: !1 };
-            if (R) {
-                let e = v.getIconURL(m.iu.SMALL),
+            if (null == R || null == v) return { isAppIcon: !1 };
+            if (L || F) {
+                let e = R.getIconURL(p.iu.SMALL),
                     n = null != e,
                     l = n
-                        ? (0, i.jsx)("img", { className: I.Kk, src: e, alt: "", "aria-hidden": !0 })
-                        : (0, i.jsx)(d._xR, { className: I.Kk });
+                        ? (0, i.jsx)("img", { className: C.Kk, src: e, alt: "", "aria-hidden": !0 })
+                        : (0, i.jsx)(d._xR, { className: C.Kk });
                 return {
                     isAppIcon: n,
                     icon: l,
-                    text: x.intl.string(x.t["9njbm2"]),
-                    renderPopout: () => (0, i.jsx)(g.Vp, { userId: t.id, channel: s, applicationId: y, onClose: G }),
+                    text: I.intl.string(I.t["9njbm2"]),
+                    renderPopout: () => (0, i.jsx)(f.Vp, { userId: t.id, channel: s, applicationId: v, onClose: H }),
                 };
             }
             let { icon: e, text: n } =
-                O === t.id
-                    ? { icon: (0, i.jsx)(d.U1X, { className: I.Kk }), text: x.intl.string(x.t.e6S76Q) }
-                    : { icon: (0, i.jsx)(d.okO, { className: I.Kk }), text: x.intl.string(x.t["8ZzYIv"]) };
+                M === t.id
+                    ? { icon: (0, i.jsx)(d.U1X, { className: C.Kk }), text: I.intl.string(I.t.e6S76Q) }
+                    : { icon: (0, i.jsx)(d.okO, { className: C.Kk }), text: I.intl.string(I.t["8ZzYIv"]) };
             return {
                 isAppIcon: !1,
                 icon: e,
                 text: n,
-                renderPopout: () => (0, i.jsx)(g.Z, { userId: t.id, channel: s, applicationId: y, onClose: G }),
+                renderPopout: () => (0, i.jsx)(f.Z, { userId: t.id, channel: s, applicationId: v, onClose: H }),
             };
-        }, [v, y, s, O, G, R, t.id]);
-    return j || null == B
+        }, [R, v, L, F, M, t.id, s, H]);
+    return j || V || null == z
         ? null
         : (0, i.jsx)(d.YNO, {
-              targetElementRef: L,
-              shouldShow: C,
+              targetElementRef: D,
+              shouldShow: N,
               animation: d.YNO.Animation.FADE,
               position: "bottom",
               align: "center",
               spacing: 8,
-              onRequestClose: G,
-              renderPopout: B,
+              onRequestClose: H,
+              renderPopout: z,
               children: () =>
                   (0, i.jsxs)("div", {
-                      className: I.kL,
-                      ref: L,
+                      className: C.kL,
+                      ref: D,
                       children: [
                           (0, i.jsxs)(d.DUT, {
-                              className: I.BQ,
+                              className: C.BQ,
                               onClick: () => {
-                                  D(E.i.TAKE_ACTION), N((e) => !e);
+                                  G(x.i.TAKE_ACTION), T((e) => !e);
                               },
-                              "aria-expanded": C,
+                              "aria-expanded": N,
                               "aria-haspopup": "dialog",
                               children: [
-                                  null != k && (0, i.jsx)("div", { className: a()(I.zc, { [I.RT]: P }), children: k }),
+                                  null != K && (0, i.jsx)("div", { className: a()(C.zc, { [C.RT]: W }), children: K }),
                                   (0, i.jsx)(d.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-strong",
                                       lineClamp: 1,
-                                      children: w,
+                                      children: Y,
                                   }),
                               ],
                           }),
-                          U && (0, i.jsx)(d.Exy, { type: "new", variant: "brand" }),
+                          P && (0, i.jsx)(d.Exy, { type: "new", variant: "brand" }),
                       ],
                   }),
           });

@@ -1,4 +1,4 @@
-n.d(t, { Vp: () => W, Z: () => z, fd: () => K });
+n.d(t, { Vp: () => Z, Z: () => Q, fd: () => X });
 var i = n(627968),
     l = n(64700),
     a = n(835245),
@@ -7,84 +7,91 @@ var i = n(627968),
     o = n(311907),
     c = n(793574),
     d = n(688810),
-    u = n(201718),
-    h = n(633075),
-    m = n(622543),
-    A = n(605694),
-    g = n(246356),
-    p = n(332772),
-    _ = n(594832),
-    f = n(631784),
-    E = n(310209),
-    C = n(961350),
-    x = n(287809),
-    S = n(954571),
-    I = n(427262),
-    T = n(871123),
-    v = n(832163),
-    N = n(453774),
-    y = n(44724),
-    b = n(84511),
-    j = n(817176),
-    R = n(129114),
-    M = n(652215),
-    L = n(360469),
-    O = n(985018),
-    D = n(274647);
-let P = `vc-gifting-${(0, a.A)()}`,
-    U = Object.freeze([]);
-function k(e) {
+    u = n(362490),
+    h = n(294323),
+    m = n(201718),
+    A = n(672385),
+    g = n(633075),
+    p = n(622543),
+    _ = n(735321),
+    f = n(657331),
+    E = n(606758),
+    C = n(605694),
+    x = n(246356),
+    S = n(332772),
+    I = n(594832),
+    T = n(631784),
+    v = n(310209),
+    N = n(961350),
+    y = n(287809),
+    b = n(954571),
+    j = n(427262),
+    R = n(871123),
+    M = n(832163),
+    L = n(453774),
+    O = n(44724),
+    D = n(84511),
+    P = n(817176),
+    k = n(129114),
+    w = n(652215),
+    U = n(360469),
+    G = n(518477),
+    F = n(985018),
+    H = n(274647);
+let B = `vc-gifting-${(0, a.A)()}`,
+    V = Object.freeze([]);
+function W(e) {
     let { "aria-labelledby": t, children: n } = e;
     return (0, i.jsx)("div", {
         onClick: (e) => e.stopPropagation(),
-        children: (0, i.jsx)(g.A, { children: (0, i.jsx)(r.lGe, { "aria-labelledby": t, modal: !1, children: n }) }),
+        children: (0, i.jsx)(x.A, { children: (0, i.jsx)(r.lGe, { "aria-labelledby": t, modal: !1, children: n }) }),
     });
 }
-function w(e) {
+function K(e) {
     let { application: t } = e;
     if (null == t) return null;
-    let n = t.getIconURL(L.iu.SMALL);
+    let n = t.getIconURL(U.iu.SMALL);
     return (0, i.jsxs)(r.BJc, {
         direction: "horizontal",
         gap: 4,
         align: "center",
         children: [
-            null != n && (0, i.jsx)("img", { className: D.In, src: n, alt: t.name }),
-            (0, i.jsx)(r.EYj, { className: D.DD, variant: "text-sm/normal", children: t.name }),
+            null != n && (0, i.jsx)("img", { className: H.In, src: n, alt: t.name }),
+            (0, i.jsx)(r.EYj, { className: H.DD, variant: "text-sm/normal", children: t.name }),
         ],
     });
 }
-function G(e) {
+function z(e) {
     let { user: t, isGift: n } = e,
-        l = O.intl.string(O.t.kv4lSp),
-        a = O.intl.string(O.t.vzZoSF);
+        l = F.intl.string(F.t.kv4lSp),
+        a = F.intl.string(F.t.vzZoSF);
     return (
         n &&
-            ((l = null != t ? O.intl.format(O.t.YwV901, { username: I.Ay.getName(t) }) : O.intl.string(O.t.qCmNFr)),
-            (a = O.intl.string(O.t.SSgrne))),
+            ((l = null != t ? F.intl.format(F.t.YwV901, { username: j.Ay.getName(t) }) : F.intl.string(F.t.qCmNFr)),
+            (a = F.intl.string(F.t.SSgrne))),
         (0, i.jsxs)(r.BJc, {
             direction: "vertical",
             gap: 4,
             children: [
-                (0, i.jsx)(r.DZT, { id: P, className: D.DD, variant: "text-md/normal", children: l }),
+                (0, i.jsx)(r.DZT, { id: B, className: H.DD, variant: "text-md/normal", children: l }),
                 (0, i.jsx)(r.EYj, { variant: "text-sm/medium", color: "text-subtle", children: a }),
             ],
         })
     );
 }
-function F(e) {
+function Y(e) {
     let { application: t, onClose: n } = e,
         a = t?.id,
         s = l.useCallback(() => {
             if (null != a) {
-                let e = v.A.getGuildIdFromApplicationId(a);
-                null != e && (0, y.X)({ guildId: e });
+                let e = M.A.getGuildIdFromApplicationId(a);
+                null != e && (0, O.X)({ guildId: e });
             }
         }, [a]),
         o = l.useCallback(() => {
             if (null != a) {
-                let e = v.A.getGuildIdFromApplicationId(a);
-                null != e && (n(), (0, y.default)({ guildId: e }));
+                let e = M.A.getGuildIdFromApplicationId(a);
+                null != e && (n(), (0, O.default)({ guildId: e }));
             }
         }, [a, n]);
     return null == t
@@ -93,13 +100,13 @@ function F(e) {
               variant: "secondary",
               icon: r.I9m,
               iconPosition: "end",
-              text: O.intl.format(O.t["HDT/rg"], { applicationName: t.name }),
+              text: F.intl.format(F.t["HDT/rg"], { applicationName: t.name }),
               onClick: o,
               onMouseDown: s,
               fullWidth: !0,
           });
 }
-function H(e) {
+function J(e) {
     let { userId: t, applicationId: n, channel: i, numItems: a } = e,
         r = l.useMemo(() => [t], [t]),
         o = l.useMemo(() => (null != n ? [n] : []), [n]),
@@ -107,17 +114,17 @@ function H(e) {
             status: c,
             recommendations: d,
             skusToUserAndReason: u,
-        } = (0, f.XQ)({ userIds: r, applicationIds: o, numItems: a }),
+        } = (0, T.XQ)({ userIds: r, applicationIds: o, numItems: a }),
         h = "loading" === c || 0 === d.length,
-        m = (0, s.A)(h ? U : d, B),
+        m = (0, s.A)(h ? V : d, q),
         A = l.useMemo(() => {
-            let { hasWishlist: e, hasPopular: t } = (0, T.wH)(d, u, new Set(r));
+            let { hasWishlist: e, hasPopular: t } = (0, R.wH)(d, u, new Set(r));
             return e && t;
         }, [d, u, r]);
     return (
         l.useEffect(() => {
             0 !== d.length &&
-                S.default.track(M.HAw.COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED, {
+                b.default.track(w.HAw.COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED, {
                     guild_id: i.guild_id,
                     channel_id: i.id,
                     sku_ids: d.map((e) => e.id),
@@ -126,99 +133,158 @@ function H(e) {
         { status: c, recommendations: m, skusToUserAndReason: u, hasBothSources: A }
     );
 }
-function B(e, t) {
+function q(e, t) {
     return e.id === t.id;
 }
-function V(e, t) {
-    return e instanceof h.R && e.applicationId === t;
+function $(e, t) {
+    return e instanceof g.R && e.applicationId === t;
 }
-function W(e) {
+function Z(e) {
     let { userId: t, applicationId: n, channel: a, onClose: s } = e;
-    (0, p.T)({ location: "social_layer_gifting_voice_panel" }), (0, u.P)(t);
-    let { analyticsLocations: h } = (0, d.Ay)(c.A.SLAYER_STOREFRONT_VC_GIFTING_PANEL),
-        g = (0, o.bG)([x.default], () => x.default.getUser(t)),
-        f = (0, o.bG)([m.A], () => m.A.getWidgets(t)?.find((e) => V(e, n))),
-        S = t === (0, o.bG)([C.default], () => C.default.getId()),
-        I = (0, N.A)(n),
+    (0, S.T)({ location: "social_layer_gifting_voice_panel" }), (0, m.P)(t);
+    let { analyticsLocations: x } = (0, d.Ay)(c.A.SLAYER_STOREFRONT_VC_GIFTING_PANEL),
+        T = (0, o.bG)([y.default], () => y.default.getUser(t)),
+        b = l.useMemo(() => new g.R({ applicationId: n }), [n]),
+        j = (0, o.bG)([p.A], () => p.A.getWidgets(t)?.find((e) => $(e, n))),
+        R = (0, o.bG)([N.default], () => N.default.getId()),
+        M = t === R,
+        O = (function (e) {
+            let { currentUserId: t, applicationId: n, location: a, onClose: s, isTargetingCurrentUser: o } = e,
+                {
+                    isLoading: m,
+                    application: p,
+                    applicationWidgetConfig: C,
+                    hasApplicationWidgetOnUserProfile: x,
+                } = (0, h.A)(t, n, a),
+                { fetched: S, hasAlreadyLinked: I, canStartAuthorization: T, startAuthorization: v } = (0, u.RD)(p),
+                { analyticsLocations: N } = (0, d.Ay)(c.A.SLAYER_STOREFRONT_VC_GIFTING_PANEL),
+                y = l.useCallback(() => {
+                    T && v({ analyticsLocations: N });
+                }, [N, T, v]),
+                b = l.useCallback(() => {
+                    s(), (0, f.openUserProfileModal)({ userId: t, sourceAnalyticsLocations: N });
+                    let e = new g.R({ applicationId: n });
+                    (0, _.Y5)(e),
+                        (0, A.un)({ action: "WIDGET_ADDED", ...e.getProfileEditAnalyticsOptions() }),
+                        setTimeout(() => (0, E.XA)(G.jM.WIDGET_ADDED), 700);
+                }, [N, n, t, s]);
+            return m || !S || null == C
+                ? null
+                : !I && T
+                  ? (0, i.jsx)("div", {
+                        className: H.OQ,
+                        children: (0, i.jsx)(r.EYj, {
+                            variant: "text-xs/normal",
+                            children: F.intl.format(o ? F.t.YWa8L2 : F.t.xxPgmT, {
+                                icon: () => (0, i.jsx)(r.A5T, { className: H.Ku, size: "xs" }),
+                                onClick: y,
+                            }),
+                        }),
+                    })
+                  : I && !x && null != p
+                    ? (0, i.jsx)("div", {
+                          className: H.OQ,
+                          children: (0, i.jsx)(r.EYj, {
+                              variant: "text-xs/normal",
+                              children: F.intl.format(F.t.QuIwht, {
+                                  icon: () => (0, i.jsx)(r.A5T, { className: H.Ku, size: "xs" }),
+                                  applicationName: p.name,
+                                  onClick: b,
+                              }),
+                          }),
+                      })
+                    : null;
+        })({
+            currentUserId: R,
+            applicationId: n,
+            location: "social_layer_gifting_voice_panel",
+            onClose: s,
+            isTargetingCurrentUser: M,
+        }),
+        P = (0, L.A)(n),
         {
-            status: T,
-            recommendations: v,
-            skusToUserAndReason: y,
-            hasBothSources: j,
-        } = H({ userId: t, applicationId: n, channel: a, numItems: 8 }),
-        M = "loading" === T || 0 === v.length || null == g,
-        L = l.useMemo(
+            status: w,
+            recommendations: U,
+            skusToUserAndReason: V,
+            hasBothSources: q,
+        } = J({ userId: t, applicationId: n, channel: a, numItems: 8 }),
+        Z = "loading" === w || 0 === U.length || null == T,
+        X = l.useMemo(
             () =>
-                null == g || 0 === v.length
+                null == T || 0 === U.length
                     ? []
-                    : (v.length > 8 ? v.slice(0, 8) : v).map((e) => {
-                          let n = (y[e.id] ?? {})[t] === E.j.WISHLIST;
+                    : (U.length > 8 ? U.slice(0, 8) : U).map((e) => {
+                          let n = (V[e.id] ?? {})[t] === v.j.WISHLIST;
                           return (0, i.jsx)(
-                              R.A,
+                              k.A,
                               {
                                   sku: e,
-                                  targetUser: g,
-                                  isTargetingCurrentUser: S,
-                                  source: n ? _.uS.WISHLIST : _.uS.POPULAR,
+                                  targetUser: T,
+                                  isTargetingCurrentUser: M,
+                                  source: n ? I.uS.WISHLIST : I.uS.POPULAR,
                                   guildId: a.guild_id,
                                   channelId: a.id,
-                                  showIcons: j,
-                                  analyticsLocations: h,
+                                  showIcons: q,
+                                  analyticsLocations: x,
                                   onCardClick: s,
                                   onButtonClick: s,
                               },
                               e.id,
                           );
                       }),
-            [g, v, a.guild_id, a.id, y, t, S, j, h, s],
+            [T, U, a.guild_id, a.id, V, t, M, q, x, s],
         );
-    return (0, i.jsx)(k, {
-        "aria-labelledby": P,
+    return (0, i.jsx)(W, {
+        "aria-labelledby": B,
         children: (0, i.jsxs)("div", {
-            className: D.kL,
+            className: H.kL,
             children: [
                 (0, i.jsxs)(r.BJc, {
-                    className: D.wx,
+                    className: H.wx,
                     direction: "vertical",
                     gap: 12,
                     children: [
-                        null != g && null != f
-                            ? (0, i.jsx)("div", {
-                                  className: D.p,
-                                  children: (0, i.jsx)(A.A, {
-                                      user: g,
-                                      widget: f,
-                                      guildId: a.guild_id,
-                                      channelId: a.id,
-                                      disableInteraction: !0,
-                                      embedded: !0,
-                                  }),
+                        null != T
+                            ? (0, i.jsxs)("div", {
+                                  className: H.p,
+                                  children: [
+                                      (0, i.jsx)(C.A, {
+                                          user: T,
+                                          widget: j ?? b,
+                                          guildId: a.guild_id,
+                                          channelId: a.id,
+                                          disableInteraction: !0,
+                                          disableCTA: !0,
+                                          embedded: !0,
+                                      }),
+                                      O,
+                                  ],
                               })
-                            : (0, i.jsx)(w, { application: I }),
-                        (0, i.jsx)(G, { user: g, isGift: !S }),
+                            : (0, i.jsx)(K, { application: P }),
+                        (0, i.jsx)(z, { user: T, isGift: !M }),
                     ],
                 }),
-                M ? (0, i.jsx)(r.y$y, { className: D.Zp }) : (0, i.jsx)("div", { className: D.HV, children: L }),
-                (0, i.jsx)(F, { application: I, onClose: s }),
-                (0, i.jsx)(b.A, { location: "social_layer_vc_gifting_panel", className: D.Ij }),
+                Z ? (0, i.jsx)(r.y$y, { className: H.Zp }) : (0, i.jsx)("div", { className: H.HV, children: X }),
+                (0, i.jsx)(Y, { application: P, onClose: s }),
+                (0, i.jsx)(D.A, { location: "social_layer_vc_gifting_panel", className: H.Ij }),
             ],
         }),
     });
 }
-function K(e) {
+function X(e) {
     let { userId: t, applicationId: n, channel: l } = e;
-    (0, u.P)(t);
-    let a = (0, o.bG)([x.default], () => x.default.getUser(t)),
-        s = (0, o.bG)([m.A], () => m.A.getWidgets(t)?.find((e) => V(e, n))),
+    (0, m.P)(t);
+    let a = (0, o.bG)([y.default], () => y.default.getUser(t)),
+        s = (0, o.bG)([p.A], () => p.A.getWidgets(t)?.find((e) => $(e, n))),
         c = null == a || null == s;
-    return (0, i.jsx)(k, {
+    return (0, i.jsx)(W, {
         children: (0, i.jsx)("div", {
-            className: D.kL,
+            className: H.kL,
             children: c
-                ? (0, i.jsx)(r.y$y, { className: D.ps })
+                ? (0, i.jsx)(r.y$y, { className: H.ps })
                 : (0, i.jsx)("div", {
-                      className: D.$4,
-                      children: (0, i.jsx)(A.A, {
+                      className: H.$4,
+                      children: (0, i.jsx)(C.A, {
                           user: a,
                           widget: s,
                           guildId: l.guild_id,
@@ -230,49 +296,49 @@ function K(e) {
         }),
     });
 }
-function z(e) {
+function Q(e) {
     let { userId: t, applicationId: n, channel: a, onClose: s } = e;
-    (0, p.T)({ location: "social_layer_gifting_voice_panel" });
+    (0, S.T)({ location: "social_layer_gifting_voice_panel" });
     let { analyticsLocations: u } = (0, d.Ay)(c.A.SLAYER_STOREFRONT_VC_GIFTING_PANEL),
-        h = (0, o.bG)([x.default], () => x.default.getUser(t)),
-        m = t === (0, o.bG)([C.default], () => C.default.getId()),
-        A = (0, N.A)(n),
+        h = (0, o.bG)([y.default], () => y.default.getUser(t)),
+        m = t === (0, o.bG)([N.default], () => N.default.getId()),
+        A = (0, L.A)(n),
         {
             status: g,
-            recommendations: f,
-            skusToUserAndReason: S,
-            hasBothSources: I,
-        } = H({ userId: t, applicationId: n, channel: a, numItems: 8 }),
-        T = "loading" === g || 0 === f.length || null == h,
-        [v, y] = l.useMemo(() => {
-            if (null == h || 0 === f.length) return [null, []];
-            let e = f.length > 7 ? f.slice(0, 7) : f,
-                n = (S[e[0].id] ?? {})[t] === E.j.WISHLIST;
+            recommendations: p,
+            skusToUserAndReason: _,
+            hasBothSources: f,
+        } = J({ userId: t, applicationId: n, channel: a, numItems: 8 }),
+        E = "loading" === g || 0 === p.length || null == h,
+        [C, x] = l.useMemo(() => {
+            if (null == h || 0 === p.length) return [null, []];
+            let e = p.length > 7 ? p.slice(0, 7) : p,
+                n = (_[e[0].id] ?? {})[t] === v.j.WISHLIST;
             return [
-                (0, i.jsx)(j.A, {
+                (0, i.jsx)(P.A, {
                     sku: e[0],
                     targetUser: h,
                     isTargetingCurrentUser: m,
-                    source: n ? _.uS.WISHLIST : _.uS.POPULAR,
+                    source: n ? I.uS.WISHLIST : I.uS.POPULAR,
                     guildId: a.guild_id,
                     channelId: a.id,
-                    showIcons: I,
+                    showIcons: f,
                     analyticsLocations: u,
                     onCardClick: s,
                     onButtonClick: s,
                 }),
                 e.slice(1).map((e) => {
-                    let n = (S[e.id] ?? {})[t] === E.j.WISHLIST;
+                    let n = (_[e.id] ?? {})[t] === v.j.WISHLIST;
                     return (0, i.jsx)(
-                        R.A,
+                        k.A,
                         {
                             sku: e,
                             targetUser: h,
                             isTargetingCurrentUser: m,
-                            source: n ? _.uS.WISHLIST : _.uS.POPULAR,
+                            source: n ? I.uS.WISHLIST : I.uS.POPULAR,
                             guildId: a.guild_id,
                             channelId: a.id,
-                            showIcons: I,
+                            showIcons: f,
                             analyticsLocations: u,
                             onCardClick: s,
                             onButtonClick: s,
@@ -281,27 +347,27 @@ function z(e) {
                     );
                 }),
             ];
-        }, [h, f, S, t, m, a.guild_id, a.id, I, u, s]);
-    return (0, i.jsx)(k, {
-        "aria-labelledby": P,
+        }, [h, p, _, t, m, a.guild_id, a.id, f, u, s]);
+    return (0, i.jsx)(W, {
+        "aria-labelledby": B,
         children: (0, i.jsxs)("div", {
-            className: D.kL,
+            className: H.kL,
             children: [
                 (0, i.jsxs)(r.BJc, {
-                    className: D.wx,
+                    className: H.wx,
                     direction: "vertical",
                     gap: 12,
-                    children: [(0, i.jsx)(w, { application: A }), (0, i.jsx)(G, { user: h, isGift: !m })],
+                    children: [(0, i.jsx)(K, { application: A }), (0, i.jsx)(z, { user: h, isGift: !m })],
                 }),
-                T
-                    ? (0, i.jsx)(r.y$y, { className: D.kc })
+                E
+                    ? (0, i.jsx)(r.y$y, { className: H.kc })
                     : (0, i.jsxs)(r.BJc, {
                           direction: "vertical",
                           gap: 12,
-                          children: [v, (0, i.jsx)("div", { className: D.aS, children: y })],
+                          children: [C, (0, i.jsx)("div", { className: H.aS, children: x })],
                       }),
-                (0, i.jsx)(F, { application: A, onClose: s }),
-                (0, i.jsx)(b.A, { location: "social_layer_vc_gifting_panel", className: D.Ij }),
+                (0, i.jsx)(Y, { application: A, onClose: s }),
+                (0, i.jsx)(D.A, { location: "social_layer_vc_gifting_panel", className: H.Ij }),
             ],
         }),
     });
