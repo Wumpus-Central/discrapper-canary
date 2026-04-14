@@ -11,6 +11,14 @@ let r = {
                     return 0x7fffffff;
                 },
             },
+            BORDER_RADIUS_LG: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 0x7fffffff;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 12;
+                    return 0x7fffffff;
+                },
+            },
         },
         channels: {
             NAME_LINE_HEIGHT: {
@@ -370,6 +378,39 @@ let r = {
                     if (0 === t.length) return 48;
                     for (let e of t) if ("mobile-visual-refresh" === e) return 56;
                     return 48;
+                },
+            },
+            EMOJI_ROW_EMOJI_CONTAINER_SIZE: { resolve: () => 48 },
+            EMOJI_ROW_EMOJI_FONT_SIZE: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 28;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 30;
+                    return 28;
+                },
+            },
+            EMOJI_ROW_EMOJI_LINE_HEIGHT: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 33;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 36;
+                    return 33;
+                },
+            },
+            EMOJI_ROW_EMOJI_MIN_SPACING: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 12;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 8;
+                    return 12;
+                },
+            },
+            EMOJI_ROW_EMOJI_SIZE: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 28;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 32;
+                    return 28;
                 },
             },
             GROUP_AVATAR_SIZE: {
@@ -756,6 +797,14 @@ let r = {
                 },
             },
             TABLE_ROW_DIVIDER_PADDING: { resolve: () => 56 },
+            TABLE_ROW_GROUP_HELPER_TEXT_STYLE: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return "text-sm/medium";
+                    for (let e of t) if ("mobile-visual-refresh" === e) return "text-sm/normal";
+                    return "text-sm/medium";
+                },
+            },
             TABLE_ROW_HEIGHT: {
                 resolve(e) {
                     let { enabledExperiments: t } = e;

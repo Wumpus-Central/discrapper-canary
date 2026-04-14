@@ -65831,6 +65831,7 @@ html.disable-forced-colors * {
     --message-mentioned-background-hover: hsl(var(--opacity-yellow-24-hsl)/0.23921568627450981);
     --messages-item-channel-text-default: var(--neutral-12);
     --mobile-channel-item-background-selected: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --mobile-emoji-button-background: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --mobile-guildbar-icon-default: var(--neutral-2);
     --mobile-header-icon-default: var(--neutral-2);
     --mobile-segmented-control-background: hsl(var(--opacity-black-28-hsl)/0.2784313725490196);
@@ -65963,6 +65964,7 @@ html.disable-forced-colors * {
         --message-mentioned-background-hover: color-mix(in oklab, hsl(var(--opacity-yellow-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --messages-item-channel-text-default: color-mix(in oklab, var(--neutral-12) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --mobile-channel-item-background-selected: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
+        --mobile-emoji-button-background: color-mix(in oklab, hsl(var(--opacity-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --mobile-guildbar-icon-default: color-mix(in oklab, var(--neutral-2) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --mobile-header-icon-default: color-mix(in oklab, var(--neutral-2) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --mobile-segmented-control-background: color-mix(in oklab, hsl(var(--opacity-black-28-hsl)/0.2784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2784313725490196) var(--custom-theme-base-color-amount, 0%));
@@ -66136,6 +66138,7 @@ html.disable-forced-colors * {
     --message-mentioned-background-hover: hsl(var(--opacity-yellow-16-hsl)/0.1607843137254902);
     --messages-item-channel-text-default: var(--neutral-50);
     --mobile-channel-item-background-selected: hsl(var(--opacity-12-hsl)/0.12156862745098039);
+    --mobile-emoji-button-background: hsl(var(--opacity-28-hsl)/0.2784313725490196);
     --mobile-guildbar-icon-default: var(--neutral-64);
     --mobile-header-icon-default: var(--neutral-64);
     --mobile-segmented-control-background: hsl(var(--opacity-black-12-hsl)/0.12156862745098039);
@@ -66268,6 +66271,7 @@ html.disable-forced-colors * {
         --message-mentioned-background-hover: color-mix(in oklab, hsl(var(--opacity-yellow-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
         --messages-item-channel-text-default: color-mix(in oklab, var(--neutral-50) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --mobile-channel-item-background-selected: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
+        --mobile-emoji-button-background: color-mix(in oklab, hsl(var(--opacity-28-hsl)/0.2784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2784313725490196) var(--custom-theme-base-color-amount, 0%));
         --mobile-guildbar-icon-default: color-mix(in oklab, var(--neutral-64) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --mobile-header-icon-default: color-mix(in oklab, var(--neutral-64) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --mobile-segmented-control-background: color-mix(in oklab, hsl(var(--opacity-black-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
@@ -66441,6 +66445,7 @@ html.disable-forced-colors * {
     --message-mentioned-background-hover: hsl(var(--opacity-yellow-28-hsl)/0.2784313725490196);
     --messages-item-channel-text-default: var(--neutral-24);
     --mobile-channel-item-background-selected: hsl(var(--opacity-12-hsl)/0.12156862745098039);
+    --mobile-emoji-button-background: hsl(var(--opacity-28-hsl)/0.2784313725490196);
     --mobile-guildbar-icon-default: var(--neutral-15);
     --mobile-header-icon-default: var(--neutral-15);
     --mobile-segmented-control-background: hsl(var(--opacity-black-12-hsl)/0.12156862745098039);
@@ -66573,6 +66578,7 @@ html.disable-forced-colors * {
         --message-mentioned-background-hover: color-mix(in oklab, hsl(var(--opacity-yellow-28-hsl)/0.2784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2784313725490196) var(--custom-theme-base-color-amount, 0%));
         --messages-item-channel-text-default: color-mix(in oklab, var(--neutral-24) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --mobile-channel-item-background-selected: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
+        --mobile-emoji-button-background: color-mix(in oklab, hsl(var(--opacity-28-hsl)/0.2784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2784313725490196) var(--custom-theme-base-color-amount, 0%));
         --mobile-guildbar-icon-default: color-mix(in oklab, var(--neutral-15) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --mobile-header-icon-default: color-mix(in oklab, var(--neutral-15) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --mobile-segmented-control-background: color-mix(in oklab, hsl(var(--opacity-black-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
@@ -66746,6 +66752,7 @@ html.disable-forced-colors * {
     --message-mentioned-background-hover: hsl(var(--opacity-yellow-24-hsl)/0.23921568627450981);
     --messages-item-channel-text-default: var(--neutral-19);
     --mobile-channel-item-background-selected: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --mobile-emoji-button-background: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --mobile-guildbar-icon-default: var(--neutral-10);
     --mobile-header-icon-default: var(--neutral-10);
     --mobile-segmented-control-background: hsl(var(--opacity-black-16-hsl)/0.1607843137254902);
@@ -66878,6 +66885,7 @@ html.disable-forced-colors * {
         --message-mentioned-background-hover: color-mix(in oklab, hsl(var(--opacity-yellow-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --messages-item-channel-text-default: color-mix(in oklab, var(--neutral-19) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --mobile-channel-item-background-selected: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
+        --mobile-emoji-button-background: color-mix(in oklab, hsl(var(--opacity-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --mobile-guildbar-icon-default: color-mix(in oklab, var(--neutral-10) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --mobile-header-icon-default: color-mix(in oklab, var(--neutral-10) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --mobile-segmented-control-background: color-mix(in oklab, hsl(var(--opacity-black-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
@@ -70893,6 +70901,7 @@ html.disable-forced-colors * {
     --font-weight-bold: 700;
     --font-weight-extra-bold: 800;
     --button-border-radius: 2147483647px;
+    --button-border-radius-lg: 2147483647px;
     --channels-name-line-height: 24px;
     --channels-spine-inverted-offset-top: 6px;
     --channels-spine-offset-left: 24px;
@@ -70947,6 +70956,11 @@ html.disable-forced-colors * {
     --mobile-control-switch-knob-checked-offset: 16px;
     --mobile-control-switch-knob-size: 24px;
     --mobile-control-switch-width: 48px;
+    --mobile-emoji-row-emoji-container-size: 48px;
+    --mobile-emoji-row-emoji-font-size: 28px;
+    --mobile-emoji-row-emoji-line-height: 33px;
+    --mobile-emoji-row-emoji-min-spacing: 12px;
+    --mobile-emoji-row-emoji-size: 28px;
     --mobile-group-avatar-size: 72px;
     --mobile-guild-bar-item-margin: 4px;
     --mobile-guild-bar-item-padding: 8px;
@@ -71007,6 +71021,7 @@ html.disable-forced-colors * {
     --mobile-table-row-border-radius: 16px;
     --mobile-table-row-content-height: 36px;
     --mobile-table-row-divider-padding: 56px;
+    --mobile-table-row-group-helper-text-style: text-sm/medium;
     --mobile-table-row-height: 60px;
     --mobile-table-row-icon-size: 32px;
     --mobile-table-row-padding: 12px;
@@ -71031,6 +71046,7 @@ html.disable-forced-colors * {
 
 .mobile-visual-refresh {
     --button-border-radius: 8px;
+    --button-border-radius-lg: 12px;
     --mobile-card-default-radius: 8px;
     --mobile-channel-details-nav-buttons-gap: 0px;
     --mobile-channel-details-nav-icon-button-size: lg;
@@ -71063,6 +71079,10 @@ html.disable-forced-colors * {
     --mobile-control-switch-knob-checked-offset: 28px;
     --mobile-control-switch-knob-size: 20px;
     --mobile-control-switch-width: 56px;
+    --mobile-emoji-row-emoji-font-size: 30px;
+    --mobile-emoji-row-emoji-line-height: 36px;
+    --mobile-emoji-row-emoji-min-spacing: 8px;
+    --mobile-emoji-row-emoji-size: 32px;
     --mobile-group-avatar-size: 64px;
     --mobile-guild-bar-item-margin: 6px;
     --mobile-guild-folder-background-left: 8px;
@@ -71112,6 +71132,7 @@ html.disable-forced-colors * {
     --mobile-table-row-arrow-width: 12px;
     --mobile-table-row-border-radius: 12px;
     --mobile-table-row-content-height: 32px;
+    --mobile-table-row-group-helper-text-style: text-sm/normal;
     --mobile-table-row-height: 56px;
     --mobile-user-profile-about-me-heading-text-style: text-sm/medium;
     --mobile-user-row-label-line-height-ios: 20px;

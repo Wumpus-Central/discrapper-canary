@@ -811,6 +811,14 @@ let { Themes: r } = n(680049).zv,
                     [r.DARKER]: { raw: "OPACITY_12", opacity: 0.12156862745098039 },
                 },
             },
+            MOBILE_EMOJI_BUTTON_BACKGROUND: {
+                "mobile-visual-refresh": {
+                    [r.DARK]: { raw: "TRANSPARENT", opacity: 0 },
+                    [r.LIGHT]: { raw: "TRANSPARENT", opacity: 0 },
+                    [r.MIDNIGHT]: { raw: "TRANSPARENT", opacity: 0 },
+                    [r.DARKER]: { raw: "TRANSPARENT", opacity: 0 },
+                },
+            },
             MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT: {
                 "mobile-visual-refresh": {
                     [r.DARK]: { raw: "NEUTRAL_66", opacity: 1 },
