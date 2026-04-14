@@ -15,14 +15,17 @@ let _ = i.forwardRef(function (e, t) {
                 emojiListRef: n,
                 gridNavigatorId: _,
                 onKeyDown: f,
-                onFocus: p,
-                autoFocus: h,
+                onFocus: h,
+                autoFocus: p,
                 defaultSearchPlaceholder: m,
             } = e,
             E = i.useRef(null),
             g = (0, u.RQ)((e) => e.searchQuery),
-            [A, I] = l.Om.useStore((e) => [e.inspectedExpressionPosition, e.searchPlaceholder], s.x),
-            T = i.useCallback(
+            [A, I, T] = l.Om.useStore(
+                (e) => [e.inspectedExpressionPosition, e.searchPlaceholder, e.hasInteracted],
+                s.x,
+            ),
+            S = i.useCallback(
                 (e) => {
                     l.Om.setActiveCategoryIndex("" === e ? 0 : -1),
                         l.Om.setInspectedExpressionPosition(0, 0),
@@ -32,10 +35,10 @@ let _ = i.forwardRef(function (e, t) {
                 },
                 [n],
             ),
-            S = i.useCallback(() => {
-                T("");
-            }, [T]),
-            y = (e) => {
+            y = i.useCallback(() => {
+                S("");
+            }, [S]),
+            v = (e) => {
                 switch (e.key) {
                     case c.dh.ARROW_LEFT:
                     case c.dh.ARROW_RIGHT:
@@ -48,20 +51,20 @@ let _ = i.forwardRef(function (e, t) {
         return (
             i.useImperativeHandle(t, () => ({ focus: () => E.current?.focus() })),
             (0, r.jsx)(o.IWV, {
-                autoFocus: h,
+                autoFocus: p,
                 query: g,
                 ref: E,
                 placeholder: I ?? m,
-                onClear: S,
-                onKeyDown: y,
-                onFocus: p,
-                onChange: T,
+                onClear: y,
+                onKeyDown: v,
+                onFocus: h,
+                onChange: S,
                 inputProps: {
                     "aria-label": d.intl.string(d.t.tCauZX),
                     "aria-haspopup": "grid",
                     "aria-controls": _,
                     "aria-expanded": !0,
-                    "aria-activedescendant": (0, a.Aq)(_, A.columnIndex, A.rowIndex),
+                    ...(T ? { "aria-activedescendant": (0, a.Aq)(_, A.columnIndex, A.rowIndex) } : void 0),
                 },
             })
         );
