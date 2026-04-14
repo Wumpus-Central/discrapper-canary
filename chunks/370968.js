@@ -47,6 +47,7 @@ function I(e) {
                             autoPlay: !n,
                             muted: !0,
                             controls: !0,
+                            disablePictureInPicture: !0,
                         }),
                     }),
                     S
