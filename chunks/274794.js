@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => E }), n(667532), n(321073);
+n.d(t, { A: () => g }), n(667532), n(321073);
 var r = n(284009),
     i = n.n(r),
-    a = n(735438),
-    s = n.n(a),
+    s = n(735438),
+    a = n.n(s),
     o = n(954571),
     l = n(927813),
     u = n(636401),
@@ -14,12 +14,12 @@ var r = n(284009),
 let p = "RPC_STORE_WAIT",
     h = [];
 function m(e, t) {
-    return s().isEqual(e, s().pick(t, Object.keys(e)));
+    return a().isEqual(e, a().pick(t, Object.keys(e)));
 }
-function g(e) {
+function E(e) {
     return !!h.includes(e) || (h.unshift(e), h.splice(50), !1);
 }
-class E {
+class g {
     getCurrentUser = () => null;
     onConnect = () => {};
     onDisconnect = () => {};
@@ -80,9 +80,9 @@ class E {
                 (e) =>
                     new Promise(async (n, r) => {
                         if (null != e.validation) {
-                            let a = await this.getJoi();
+                            let s = await this.getJoi();
                             i()(null != e.validation, "command.validation must not be null"),
-                                a.validate(t.args, e.validation(a), { convert: !1 }, (t) => {
+                                s.validate(t.args, e.validation(s), { convert: !1 }, (t) => {
                                     null != t ? r(new u.A({ errorCode: f.Lw6.INVALID_PAYLOAD }, t.message)) : n(e);
                                 });
                         } else n(e);
@@ -142,8 +142,13 @@ class E {
     isSubscribed(e, t) {
         return void 0 !== this.subscriptions.find((n) => n.socket.application.id === e && n.evt === t);
     }
+    isChildSubscribed(e, t) {
+        return (
+            null != e && void 0 !== this.subscriptions.find((n) => n.socket.application.parentId === e && n.evt === t)
+        );
+    }
     getSubscription(e, t, n) {
-        return this.subscriptions.find((r) => r.socket === e && r.evt === t && s().isEqual(r.args, n));
+        return this.subscriptions.find((r) => r.socket === e && r.evt === t && a().isEqual(r.args, n));
     }
     addSubscription(e, t, n) {
         let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
@@ -160,14 +165,14 @@ class E {
             this.dispatchIsSubscribedUpdate());
     }
     removeSubscription(e, t, n) {
-        s().remove(this.subscriptions, (r) => r.socket === e && r.evt === t && s().isEqual(r.args, n)),
+        a().remove(this.subscriptions, (r) => r.socket === e && r.evt === t && a().isEqual(r.args, n)),
             this.dispatchIsSubscribedUpdate();
     }
     removeSubscriptions(e) {
-        s().remove(this.subscriptions, (t) => t.socket === e), this.dispatchIsSubscribedUpdate();
+        a().remove(this.subscriptions, (t) => t.socket === e), this.dispatchIsSubscribedUpdate();
     }
     dispatchToSubscriptions(e, t, n, r) {
-        (null != r && "" !== r && g(r)) ||
+        (null != r && "" !== r && E(r)) ||
             this.subscriptions.forEach((r) => {
                 r.evt !== e ||
                     (("function" != typeof t || t(r)) &&
@@ -184,16 +189,16 @@ class E {
     storeWait(e, t, n) {
         let r = t();
         if (r || 0 === n) return Promise.resolve(r);
-        let i = s().uniqueId(),
-            a = () => this.removeSubscription(e, p, { uniqueId: i });
-        return new Promise((r, s) => {
+        let i = a().uniqueId(),
+            s = () => this.removeSubscription(e, p, { uniqueId: i });
+        return new Promise((r, a) => {
             let o = setTimeout(() => {
-                a(), s(Error("timeout"));
+                s(), a(Error("timeout"));
             }, n * l.A.Millis.SECOND);
             this.addSubscription(e, p, { uniqueId: i }, () => {
                 let e = t();
                 e && (clearTimeout(o), r(e));
             });
-        }).then((e) => (a(), e));
+        }).then((e) => (s(), e));
     }
 }
