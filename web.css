@@ -4895,9 +4895,12 @@
     opacity: .5
 }
 
-.listBox__2e223:not(:focus-within) .listBoxItem__2e223[data-focus-visible=true],
+.listBox__2e223:not(:focus-within) .listBoxItem__2e223[data-focus-visible=true] {
+    background-color: var(--background-mod-normal)
+}
+
+.keyboard-mode .listBox__2e223:not(:focus-within) .listBoxItem__2e223[data-focus-visible=true],
 .keyboard-mode .listBoxItem__2e223:focus {
-    background-color: var(--background-mod-normal);
     outline: 2px solid var(--border-focus);
     outline-offset: -2px
 }
