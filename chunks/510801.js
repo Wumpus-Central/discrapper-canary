@@ -2,8 +2,8 @@
 n.d(t, { A: () => u }), n(321073);
 var r = n(575593),
     i = n(993408),
-    a = n(623373),
-    s = n(986630),
+    s = n(623373),
+    a = n(986630),
     o = n(931772);
 let l = (e) => e === r.R.VARIANTS_GROUP || e === r.R.EXTERNAL_SKU;
 class u extends o.A {
@@ -29,7 +29,7 @@ class u extends o.A {
             (this.products = e.products),
             (this.heroRanking = e.heroRanking),
             (this.isOrbsExclusive =
-                Array.isArray(e.products) && e.products.length > 0 && void 0 === e.products.find((e) => !(0, a.Ab)(e))),
+                Array.isArray(e.products) && e.products.length > 0 && void 0 === e.products.find((e) => !(0, s.Ab)(e))),
             (this.heroBannerUrl = e.heroBannerUrl),
             (this.heroBannerAnimatedUrl = e.heroBannerAnimatedUrl),
             (this.heroRiveUrl = e.heroRiveUrl),
@@ -50,17 +50,17 @@ class u extends o.A {
             products: t,
             hero_ranking: n,
             hero_logo_display_config: r,
-            hero_banner_display_config: a,
+            hero_banner_display_config: s,
             hero_banner_url: o,
             hero_banner_animated_url: c,
             hero_rive_url: d,
             hero_logo_url: _,
             catalog_banner_url: f,
-            catalog_banner_animated_url: p,
-            catalog_banner_rive_url: h,
+            catalog_banner_animated_url: h,
+            catalog_banner_rive_url: p,
             featured_block_url: m,
-            logo_url: g,
-            pdp_bg_url: E,
+            logo_url: E,
+            pdp_bg_url: g,
             mobile_banner_url: A,
             mobile_bg_url: I,
             ...T
@@ -68,7 +68,7 @@ class u extends o.A {
         return new u({
             ...super.fromServer(T),
             products: t.reduce((e, t) => {
-                let n = s.A.fromServer(t);
+                let n = a.A.fromServer(t);
                 return (l(n.type) || 0 !== n.items.length) && e.push(n), e;
             }, []),
             heroRanking: n,
@@ -77,15 +77,44 @@ class u extends o.A {
             heroRiveUrl: d,
             heroLogoUrl: _,
             catalogBannerUrl: f,
-            catalogBannerAnimatedUrl: p,
-            catalogBannerRiveUrl: h,
+            catalogBannerAnimatedUrl: h,
+            catalogBannerRiveUrl: p,
             featuredBlockUrl: m,
-            logoUrl: g,
-            pdpBgUrl: E,
+            logoUrl: E,
+            pdpBgUrl: g,
             mobileBannerUrl: A,
             mobileBgUrl: I,
             heroLogoDisplayConfig: (0, i.f6)(r),
-            heroBannerDisplayConfig: (0, i.f6)(a),
+            heroBannerDisplayConfig: (0, i.f6)(s),
+        });
+    }
+    static fromStorefrontCollectionRecord(e) {
+        return new u({
+            storeListingId: e.id,
+            skuId: e.id,
+            name: e.name,
+            summary: e.description,
+            unpublishedAt: e.unpublishedAt,
+            styles: e.styles,
+            products: e.products.reduce((e, t) => {
+                let n = a.A.fromStorefrontProductRecord(t);
+                return null != n && (l(n.type) || 0 !== n.items.length) && e.push(n), e;
+            }, []),
+            heroRanking: e.heroRanking,
+            heroBannerUrl: e.heroBannerUrl,
+            heroBannerAnimatedUrl: e.heroBannerAnimatedUrl,
+            heroRiveUrl: e.heroRiveUrl,
+            heroLogoUrl: e.heroLogoUrl,
+            catalogBannerUrl: e.catalogBannerUrl,
+            catalogBannerAnimatedUrl: e.catalogBannerAnimatedUrl,
+            catalogBannerRiveUrl: e.catalogBannerRiveUrl,
+            featuredBlockUrl: e.featuredBlockUrl,
+            logoUrl: e.logoUrl,
+            pdpBgUrl: e.pdpBgUrl,
+            mobileBannerUrl: e.mobileBannerUrl,
+            mobileBgUrl: e.mobileBgUrl,
+            heroLogoDisplayConfig: e.heroLogoDisplayConfig,
+            heroBannerDisplayConfig: e.heroDisplayConfig,
         });
     }
 }
