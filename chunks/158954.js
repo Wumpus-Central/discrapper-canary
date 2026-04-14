@@ -7,7 +7,6 @@ n.d(t, {
     $nd: () => b.$,
     $oz: () => z.BoldIcon,
     $p$: () => z.MagnifyingGlassIcon,
-    $pZ: () => z.StampXIcon,
     $tc: () => z.ChannelListIcon,
     $y7: () => z.SpeedometerIcon,
     $yI: () => z.FriendsIcon,
