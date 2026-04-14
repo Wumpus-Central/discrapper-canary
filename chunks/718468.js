@@ -1,102 +1,108 @@
 "use strict";
-n.d(t, { A: () => m, e: () => h });
+n.d(t, { A: () => g, e: () => E });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
     o = n(796873),
     l = n.n(o),
-    u = n(397927),
-    c = n(682718),
-    d = n(453771),
-    _ = n(985018),
-    f = n(202494);
-let p = (e) => {
+    u = n(311907),
+    c = n(397927),
+    d = n(682718),
+    _ = n(399263),
+    f = n(453771),
+    h = n(985018),
+    p = n(423603);
+let m = (e) => {
     let { filename: t } = e,
-        i = (0, d.GD)(t),
+        i = (0, f.GD)(t),
         s = n(714694)(`./icon-file-${i}.svg`);
     return (0, r.jsx)("img", {
-        className: f.Kk,
+        className: p.Kk,
         src: s,
-        alt: _.intl.formatToPlainString(_.t.g6KdFv, { fileType: i }),
+        alt: h.intl.formatToPlainString(h.t.g6KdFv, { fileType: i }),
         title: i,
     });
 };
-function h(e) {
+function E(e) {
     let { channelId: t, file: n } = e,
-        s = i.useMemo(() => {
+        s = (0, u.bG)([_.A], () => _.A.getMessageForFile(n.id)?.content),
+        a = i.useMemo(() => {
             let e = n.items;
             return null == e
-                ? _.intl.string(_.t.jfKTes)
+                ? h.intl.string(h.t.jfKTes)
                 : 1 === e.length && null != e[0].filename
                   ? e[0].filename
-                  : _.intl.formatToPlainString(_.t.D0noUt, { count: e.length });
+                  : h.intl.formatToPlainString(h.t.D0noUt, { count: e.length });
         }, [n.items]),
-        a = i.useCallback(() => {
-            c.A.cancel(t, n);
+        o = i.useCallback(() => {
+            d.A.cancel(t, n);
         }, [t, n]),
-        o = 100 === n.progress,
-        d = !o && n.currentSize > 0;
-    return (0, r.jsx)("div", {
-        className: f.Ig,
-        children: (0, r.jsxs)("div", {
-            className: f.NJ,
-            children: [
-                (0, r.jsx)(p, { filename: s }),
-                (0, r.jsxs)("div", {
-                    className: f.Jg,
-                    children: [
-                        (0, r.jsxs)("div", {
-                            className: f.tP,
-                            children: [
-                                (0, r.jsx)("div", { className: f.iW, children: s }),
-                                d
-                                    ? (0, r.jsx)("div", {
-                                          className: f.Ej,
-                                          children: `— ${l().filesize(n.currentSize)}`,
-                                      })
-                                    : null,
-                            ],
-                        }),
-                        (0, r.jsx)("div", {
-                            className: f.L$,
-                            children: o ? _.intl.string(_.t.jfKTes) : (0, r.jsx)(u.z21, { percent: n.progress }),
-                        }),
-                    ],
-                }),
-                o
-                    ? null
-                    : (0, r.jsx)(u.DUT, {
-                          onClick: a,
-                          children: (0, r.jsx)(u.PGe, { size: "md", color: "currentColor", className: f.x7 }),
-                      }),
-            ],
-        }),
+        f = 100 === n.progress,
+        E = !f && n.currentSize > 0;
+    return (0, r.jsxs)("div", {
+        className: p.Ig,
+        children: [
+            null != s && "" !== s.trim() && (0, r.jsx)("div", { className: p.Qs, children: s }),
+            (0, r.jsxs)("div", {
+                className: p.NJ,
+                children: [
+                    (0, r.jsx)(m, { filename: a }),
+                    (0, r.jsxs)("div", {
+                        className: p.Jg,
+                        children: [
+                            (0, r.jsxs)("div", {
+                                className: p.tP,
+                                children: [
+                                    (0, r.jsx)("div", { className: p.iW, children: a }),
+                                    E
+                                        ? (0, r.jsx)("div", {
+                                              className: p.Ej,
+                                              children: `— ${l().filesize(n.currentSize)}`,
+                                          })
+                                        : null,
+                                ],
+                            }),
+                            (0, r.jsx)("div", {
+                                className: p.L$,
+                                children: f ? h.intl.string(h.t.jfKTes) : (0, r.jsx)(c.z21, { percent: n.progress }),
+                            }),
+                        ],
+                    }),
+                    f
+                        ? null
+                        : (0, r.jsx)(c.DUT, {
+                              onClick: o,
+                              children: (0, r.jsx)(c.PGe, { size: "md", color: "currentColor", className: p.x7 }),
+                          }),
+                ],
+            }),
+        ],
     });
 }
-let m = (e) => {
-    let { className: t, url: n, fileName: i, fileSize: s, onClick: o, onContextMenu: c, renderAdjacentContent: d } = e;
+let g = (e) => {
+    let { className: t, url: n, fileName: i, fileSize: s, onClick: o, onContextMenu: u, renderAdjacentContent: d } = e;
     return (0, r.jsxs)("div", {
-        className: a()(f.Ig, t),
+        className: a()(p.Ig, t),
         children: [
             (0, r.jsxs)("div", {
-                className: f.NJ,
+                className: p.NJ,
                 children: [
-                    (0, r.jsx)(p, { filename: i }),
+                    (0, r.jsx)(m, { filename: i }),
                     (0, r.jsxs)("div", {
-                        className: f.Jg,
+                        className: p.Jg,
                         children: [
                             (0, r.jsx)("div", {
-                                className: f.RT,
-                                children: (0, r.jsx)(u.MzZ, {
-                                    className: f.AD,
+                                className: p.RT,
+                                children: (0, r.jsx)(c.MzZ, {
+                                    className: p.AD,
                                     href: n,
                                     onClick: o,
-                                    onContextMenu: c,
+                                    onContextMenu: u,
                                     children: i,
                                 }),
                             }),
-                            (0, r.jsx)(u.Text, {
+                            (0, r.jsx)(c.Text, {
                                 variant: "text-xs/normal",
                                 color: "text-muted",
                                 children: l().filesize(s),

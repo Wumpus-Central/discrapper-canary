@@ -12,4 +12,5 @@ e.exports = {
     Ej: "size__0ccae",
     RT: "filenameLinkWrapper__0ccae",
     AD: "fileNameLink__0ccae",
+    Qs: "content__0ccae",
 };
