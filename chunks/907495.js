@@ -414,7 +414,7 @@ function es(e) {
                       J.qv,
                       {
                           label: D ? ee.intl.string(ee.t["2km5Gf"]) : ee.intl.string(ee.t["lE/PG3"]),
-                          icon: u.LV2,
+                          icon: D ? u.$pZ : u.LV2,
                           onClick: () => h.A.patchMessageGuildOfficial(t.id, n.id, !D),
                       },
                       "guild-official",

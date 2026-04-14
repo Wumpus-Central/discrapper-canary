@@ -148,6 +148,7 @@ function h(e) {
             ref: C,
             className: _.kL,
             "data-layout": A,
+            "data-has-description": V || void 0,
             style: null != x ? { "--custom-field-horizontal-control-width": x } : void 0,
             "data-disabled": s,
             "aria-describedby": P ? L : void 0,
