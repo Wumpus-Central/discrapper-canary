@@ -1,5 +1,5 @@
 "use strict";
-s.d(t, { A: () => M });
+s.d(t, { A: () => P });
 var n = s(627968),
     r = s(64700),
     l = s(503698),
@@ -25,18 +25,18 @@ var n = s(627968),
     I = s(761218),
     L = s(633026),
     j = s(251191),
-    k = s(613258),
-    T = s(152568),
-    O = s(758836),
-    N = s(652215),
-    y = s(985018),
+    O = s(613258),
+    k = s(152568),
+    T = s(758836),
+    y = s(652215),
+    N = s(985018),
     R = s(297046);
 let B = (e) => {
         let { handleTransition: t, numVisibleItems: s, isFetchingCategories: l, tab: c } = e,
             { noCache: d, includeUnpublished: _ } = (0, E.A)(),
-            [x, k] = r.useState(!1),
-            N = (0, g.uM)(),
-            B = N?.sessionId ?? "";
+            [x, O] = r.useState(!1),
+            y = (0, g.uM)(),
+            B = y?.sessionId ?? "";
         r.useEffect(() => {
             (0, p.z)({
                 sessionId: B,
@@ -47,18 +47,18 @@ let B = (e) => {
             });
         }, [c]);
         let {
-                isFetchingShopHome: M,
-                fetchShopHomeError: P,
-                shopBlocks: D,
-                refreshShopHome: H,
+                isFetchingShopHome: P,
+                fetchShopHomeError: M,
+                shopBlocks: H,
+                refreshShopHome: D,
             } = (0, h.y)(c, { noCache: d, includeUnpublished: _, logPerf: !0 }, { sessionId: B, tab: c }),
             w = r.useCallback(() => {
-                H();
-            }, [H]);
+                D();
+            }, [D]);
         return (r.useEffect(() => {
-            null != P ||
-                M ||
-                0 === D.length ||
+            null != M ||
+                P ||
+                0 === H.length ||
                 (0, p.z)({
                     sessionId: B,
                     checkpoint: p.t.SHOP_RENDERED,
@@ -66,37 +66,37 @@ let B = (e) => {
                     unpublishedCategoriesShown: _,
                     cacheDisabled: d,
                 });
-        }, [P, M, D.length, _, d, B, c]),
-        null != P)
-            ? (0, n.jsx)(f.h, { onRetry: w, errorOrigin: f.A.SHOP_PAGE, errorMessage: P.message })
-            : M || 0 === D.length
+        }, [M, P, H.length, _, d, B, c]),
+        null != M)
+            ? (0, n.jsx)(f.h, { onRetry: w, errorOrigin: f.A.SHOP_PAGE, errorMessage: M.message })
+            : P || 0 === H.length
               ? (0, n.jsxs)("div", {
                     className: a()(R.g4, R.Of),
                     children: [
-                        (0, n.jsx)(S.A, { isLoading: M, handleTransition: t, tab: c }),
-                        (0, n.jsx)(C.A, { isLoading: M, handleTransition: t, categories: [] }),
+                        (0, n.jsx)(S.A, { isLoading: P, handleTransition: t, tab: c }),
+                        (0, n.jsx)(C.A, { isLoading: P, handleTransition: t, categories: [] }),
                         (0, n.jsx)(A.A, {
-                            isLoading: M,
-                            title: c === O.G2.ORBS ? y.intl.string(y.t.dFgeuZ) : y.intl.string(y.t.NSv5KV),
+                            isLoading: P,
+                            title: c === T.G2.ORBS ? N.intl.string(N.t.dFgeuZ) : N.intl.string(N.t.NSv5KV),
                             numVisibleItems: s,
                             tab: c,
                         }),
                     ],
                 })
               : (0, n.jsx)(n.Fragment, {
-                    children: D.map((e, r) =>
+                    children: H.map((e, r) =>
                         ((e, r, d) => {
                             if (null == e) return null;
                             let _ = null,
                                 g = !1;
                             switch (e.type) {
                                 case i.g.HERO:
-                                    _ = (0, n.jsx)(S.A, { isLoading: M, handleTransition: t, heroBlock: e, tab: c }, d);
+                                    _ = (0, n.jsx)(S.A, { isLoading: P, handleTransition: t, heroBlock: e, tab: c }, d);
                                     break;
                                 case i.g.FEATURED:
                                     _ = (0, n.jsx)(
                                         C.A,
-                                        { isLoading: M, handleTransition: t, featuredBlockRecord: e },
+                                        { isLoading: P, handleTransition: t, featuredBlockRecord: e },
                                         d,
                                     );
                                     break;
@@ -106,14 +106,14 @@ let B = (e) => {
                                         A.A,
                                         {
                                             title:
-                                                c === O.G2.ORBS ? y.intl.string(y.t.dFgeuZ) : y.intl.string(y.t.NSv5KV),
+                                                c === T.G2.ORBS ? N.intl.string(N.t.dFgeuZ) : N.intl.string(N.t.NSv5KV),
                                             isLoading: l,
                                             numVisibleItems: s,
                                             sortedSkuIds: h,
                                             buttonContainerClassName: r?.type === i.g.IMMERSIVE_BANNER ? R.w : void 0,
-                                            prioritizeUserDiscounts: c === O.G2.HOME,
+                                            prioritizeUserDiscounts: c === T.G2.HOME,
                                             tab: c,
-                                            orbsSupportedOnly: c === O.G2.ORBS,
+                                            orbsSupportedOnly: c === T.G2.ORBS,
                                         },
                                         d,
                                     );
@@ -124,7 +124,7 @@ let B = (e) => {
                                             { isDismissed: s } = (0, u.En)(o.M.COLLECTIBLES_SHOP_WIDE_BANNER, t);
                                         if (s) return null;
                                     }
-                                    _ = (0, n.jsx)(T.A, { wideBannerBlock: e, tab: c }, d);
+                                    _ = (0, n.jsx)(k.A, { wideBannerBlock: e, tab: c }, d);
                                     break;
                                 case i.g.SHELF:
                                     _ = (0, n.jsx)(j.A, { handleTransition: t, shelf: e, tab: c }, d);
@@ -135,12 +135,12 @@ let B = (e) => {
                                 case i.g.IMMERSIVE_BANNER:
                                     _ = (0, n.jsx)(
                                         v.A,
-                                        { immersiveBannerBlock: e, onVisibilityChange: (e) => k(!e) },
+                                        { immersiveBannerBlock: e, onVisibilityChange: (e) => O(!e) },
                                         d,
                                     );
                                     break;
                                 case i.g.REWARD_HERO:
-                                    _ = (0, n.jsx)(L.A, { isLoading: M, handleTransition: t, heroBlock: e, tab: c }, d);
+                                    _ = (0, n.jsx)(L.A, { isLoading: P, handleTransition: t, heroBlock: e, tab: c }, d);
                                     break;
                                 case i.g.MARVEL_RIVALS_PROMOTIONAL_BANNER: {
                                     let { isDismissed: t } = (0, u.En)(o.M.COLLECTIBLES_SHOP_MARVEL_RIVALS_ORBS_REWARD);
@@ -154,7 +154,6 @@ let B = (e) => {
                                                     (0, u.d6)(o.M.COLLECTIBLES_SHOP_MARVEL_RIVALS_ORBS_REWARD, {});
                                                 },
                                                 skuIds: e.skuIds,
-                                                endTime: e.endTime,
                                                 tab: c,
                                             }),
                                         },
@@ -175,17 +174,17 @@ let B = (e) => {
                                 },
                                 d,
                             );
-                        })(e, r > 0 ? D[r - 1] : null, r),
+                        })(e, r > 0 ? H[r - 1] : null, r),
                     ),
                 });
     },
-    M = (e) => {
+    P = (e) => {
         let { handleTransition: t, tab: s, transitionState: l } = e,
             a = r.useRef(null),
             { handleScroll: i } = (0, d.X)(a, s),
             o = (0, x.U)(),
             u = (0, g.uM)(),
-            [m, h] = r.useState(O.md),
+            [m, h] = r.useState(T.md),
             [p, f] = r.useState(!1);
         return (
             r.useEffect(() => {
@@ -193,7 +192,7 @@ let B = (e) => {
                     let e = () => {
                             if (null == a.current) return;
                             let e = a.current.getDistanceFromBottom();
-                            m >= 36 ? f(e < 20) : e <= 200 && h((e) => e + O.md);
+                            m >= 36 ? f(e < 20) : e <= 200 && h((e) => e + T.md);
                         },
                         t = a.current.getScrollerNode();
                     return (
@@ -220,24 +219,24 @@ let B = (e) => {
                                     isFetchingCategories: o,
                                     tab: s,
                                 }),
-                                s !== O.G2.CATALOG &&
+                                s !== T.G2.CATALOG &&
                                     m >= 36 &&
                                     (0, n.jsxs)("div", {
                                         className: R.R$,
                                         children: [
                                             (0, n.jsx)(c.Heading, {
                                                 variant: "heading-md/semibold",
-                                                children: y.intl.string(y.t.Yr70c4),
+                                                children: N.intl.string(N.t.Yr70c4),
                                             }),
                                             (0, n.jsx)(c.Button, {
                                                 variant: "primary",
-                                                text: y.intl.string(y.t.AfrvRD),
+                                                text: N.intl.string(N.t.AfrvRD),
                                                 onClick: () => {
                                                     t({ sourceButton: "shop all button", shouldAnimate: !0 }),
-                                                        _.default.track(N.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                        _.default.track(y.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                             collectibles_shop_session_id: u?.sessionId,
                                                             page_type: s,
-                                                            page_category: s === O.G2.HOME ? void 0 : u?.pageCategory,
+                                                            page_category: s === T.G2.HOME ? void 0 : u?.pageCategory,
                                                             cta_name: "browse the shop button",
                                                         });
                                                 },
@@ -247,7 +246,7 @@ let B = (e) => {
                                     }),
                             ],
                         }),
-                        (0, n.jsx)(k.A, { peaking: p, transitioning: l === O.Pf.OUT }),
+                        (0, n.jsx)(O.A, { peaking: p, transitioning: l === T.Pf.OUT }),
                     ],
                 }),
             })
