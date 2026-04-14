@@ -167,6 +167,7 @@ function ea(e) {
                                                 }),
                                                 nicknameIcons: (0, a.jsx)(M.A, { user: t, isVisible: em }),
                                             }),
+                                            (0, a.jsx)(I.A, { isPremiumUser: eC, onInteraction: n }),
                                             (0, a.jsx)(L.A, {
                                                 user: t,
                                                 bio: el?.bio,
@@ -179,7 +180,6 @@ function ea(e) {
                                                     widgets: el?.widgets,
                                                     onOpenUserProfileModal: ek,
                                                 }),
-                                            (0, a.jsx)(I.A, { isPremiumUser: eC, onInteraction: n }),
                                             (0, a.jsx)(O.A, {
                                                 user: t,
                                                 currentUser: t,
