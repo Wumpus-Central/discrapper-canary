@@ -12153,7 +12153,7 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 }
 
 .controlIcon_cf09d8 {
-    color: var(--interactive-text-default);
+    color: var(--interactive-text-active);
     cursor: pointer;
     display: block;
     flex: 0 0 auto;
@@ -12163,7 +12163,7 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 }
 
 .controlIcon_cf09d8:hover {
-    color: var(--interactive-text-active)
+    color: var(--white)
 }
 
 .controlIcon_cf09d8:active {
