@@ -6,6 +6,7 @@ e.exports = {
     IX: "labelIcon__38ccf",
     NC: "buttonsContainer__38ccf",
     wt: "detailsContainer__38ccf",
+    K3: "exclusiveBadge__38ccf",
     AX: "titleDescriptionContainer__38ccf",
     Cf: "carouselContainer__38ccf",
     Dk: "carousel__38ccf",

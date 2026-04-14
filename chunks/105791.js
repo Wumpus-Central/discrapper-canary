@@ -25,6 +25,7 @@ e.exports = {
     of: "strikethrough_abfd90",
     ye: "iconAsset_abfd90",
     qS: "badge_abfd90",
+    fC: "badgeContainer_abfd90",
     zu: "cardButtonsContainer_abfd90",
     ij: "wishlistButton_abfd90",
     gy: "forwardButton_abfd90",
