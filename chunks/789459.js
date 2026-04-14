@@ -210,6 +210,7 @@ class O extends s.Ay.PersistedStore {
                             exposure_location: n,
                             unit_type: r,
                             tracked_variation_id: s,
+                            revision: i,
                         },
                         { flush: !0 },
                     ),
