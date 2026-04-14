@@ -1,42 +1,44 @@
 "use strict";
-n.d(t, { k: () => h });
+n.d(t, { k: () => m });
 var r = n(627968);
 n(64700);
 var i = n(284009),
     s = n.n(i),
     a = n(732955),
     o = n(397927),
-    l = n(937008),
-    u = n(156312),
-    c = n(987616),
-    d = n(921925),
-    _ = n(482132),
-    f = n(985018),
-    p = n(660846);
-function h(e) {
+    l = n(413748),
+    u = n(937008),
+    c = n(156312),
+    d = n(987616),
+    _ = n(921925),
+    f = n(482132),
+    p = n(985018),
+    h = n(660846);
+function m(e) {
     let { handleClose: t } = e,
-        { selectedSkuId: n, application: i } = (0, u.P5)(),
-        h = (0, c.gU)(),
-        { isGift: m, giftRecipient: E } = (0, l.Pv)();
+        n = (0, l.t)((e) => e.selectedSkuId),
+        { application: i } = (0, c.P5)(),
+        m = (0, d.gU)(),
+        { isGift: E, giftRecipient: g } = (0, u.Pv)();
     s()(null != n, "Expected selectedSkuId"), s()(null != i, "Expected application");
-    let g = h[n];
-    s()(null != g, "Expected sku");
-    let A = m
-        ? f.intl.formatToPlainString(f.t["2VjPTw"], {
-              itemName: g.name,
-              giftRecipient: E?.username ?? "your recipient",
+    let A = m[n];
+    s()(null != A, "Expected sku");
+    let I = E
+        ? p.intl.formatToPlainString(p.t["2VjPTw"], {
+              itemName: A.name,
+              giftRecipient: g?.username ?? "your recipient",
           })
-        : f.intl.formatToPlainString(f.t.wK0IbP, { applicationName: i.name, itemName: g.name });
-    return (0, r.jsxs)(_.dZ, {
+        : p.intl.formatToPlainString(p.t.wK0IbP, { applicationName: i.name, itemName: A.name });
+    return (0, r.jsxs)(f.dZ, {
         children: [
-            (0, r.jsx)(d.A, {}),
+            (0, r.jsx)(_.A, {}),
             (0, r.jsxs)("div", {
-                className: p.EL,
+                className: h.EL,
                 children: [
-                    (0, r.jsx)(o.Heading, { variant: "heading-xxl/bold", className: p.RS, children: "Success!" }),
-                    (0, r.jsx)(o.Text, { variant: "text-md/normal", children: A }),
-                    (0, r.jsx)("div", { className: p.yF }),
-                    (0, r.jsx)(a.$nd, { onClick: t, text: f.intl.string(f.t.cpT0Cq), fullWidth: !0 }),
+                    (0, r.jsx)(o.Heading, { variant: "heading-xxl/bold", className: h.RS, children: "Success!" }),
+                    (0, r.jsx)(o.Text, { variant: "text-md/normal", children: I }),
+                    (0, r.jsx)("div", { className: h.yF }),
+                    (0, r.jsx)(a.$nd, { onClick: t, text: p.intl.string(p.t.cpT0Cq), fullWidth: !0 }),
                 ],
             }),
         ],

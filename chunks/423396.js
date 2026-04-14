@@ -6,8 +6,8 @@ var a = l(627968),
     o = l(623020),
     s = l(927578),
     d = l(412463),
-    u = l(492518),
-    c = l(689614),
+    c = l(492518),
+    u = l(689614),
     p = l(652215),
     m = l(788868),
     h = l(985018),
@@ -47,7 +47,7 @@ let b = [
         isGift: { label: "Is Gift", type: "boolean", defaultValue: !1 },
         hideErrors: { label: "Hide Errors", type: "boolean", defaultValue: !0 },
     },
-    g = (0, c.R)(),
+    g = (0, u.R)(),
     v = {
         title: "Checkout Review Step",
         stories: [
@@ -60,13 +60,13 @@ let b = [
                             analyticsLocations: r,
                             loadId: i,
                             handleClose: o,
-                            handleComplete: c,
+                            handleComplete: u,
                             isFetching: m,
                             sku: h,
                         } = (0, d.ud)({ skuId: t, isGift: l, applicationId: p.FYj }),
                         f = s.Ay.isPremiumSku(t);
                     return m || null == h || f
-                        ? (0, a.jsx)(u.k, {})
+                        ? (0, a.jsx)(c.k, {})
                         : (0, a.jsxs)("div", {
                               className: x.Cd,
                               children: [
@@ -83,7 +83,7 @@ let b = [
                                       disablePurchases: !0,
                                       excludeSubscriptionPlansBySKU: !0,
                                       onClose: o,
-                                      onComplete: c,
+                                      onComplete: u,
                                   }),
                                   (0, a.jsx)(y, {}),
                               ],
@@ -102,7 +102,7 @@ let b = [
                         {
                             analyticsLocations: i,
                             loadId: o,
-                            handleClose: c,
+                            handleClose: u,
                             handleComplete: h,
                             isFetching: f,
                             sku: g,
@@ -130,14 +130,14 @@ let b = [
                                       loadId: o,
                                       purchaseType: p.VVm.SUBSCRIPTION,
                                       disablePurchases: !0,
-                                      onClose: c,
+                                      onClose: u,
                                       onComplete: h,
-                                      paymentContextOverrides: { selectedPlanId: E, setSelectedPlanId: C },
+                                      paymentContextOverrides: {},
                                   }),
                                   (0, a.jsx)(y, {}),
                               ],
                           })
-                        : (0, a.jsx)(u.k, {});
+                        : (0, a.jsx)(c.k, {});
                 },
                 controls: {
                     skuId: {

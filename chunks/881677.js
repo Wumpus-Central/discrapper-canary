@@ -1,52 +1,48 @@
 "use strict";
-n.d(t, { B: () => h });
+n.d(t, { B: () => m });
 var r = n(627968),
     i = n(64700),
     s = n(417597),
     a = n(459793),
     o = n(590180),
-    l = n(937008),
-    u = n(156312),
-    c = n(166532),
-    d = n(49420),
-    _ = n(987616),
-    f = n(534479),
-    p = n(652215);
-function h(e) {
+    l = n(413748),
+    u = n(937008),
+    c = n(156312),
+    d = n(166532),
+    _ = n(49420),
+    f = n(987616),
+    p = n(534479),
+    h = n(652215);
+function m(e) {
     let { handleStepChange: t } = e,
-        {
-            blockedPayments: n,
-            paymentSources: h,
-            hasFetchedPaymentSources: m,
-            application: E,
-            selectedSkuId: g,
-        } = (0, u.P5)(),
-        A = (0, _.gU)(),
-        I = (0, _.Hu)(),
-        { isGift: T } = (0, l.Pv)(),
-        [S, y] = i.useState(!0),
-        [v, N] = (0, s.yK)([o.A], () => [o.A.isFetchingCategories, o.A.error]);
+        n = (0, l.t)((e) => e.selectedSkuId),
+        { blockedPayments: m, paymentSources: E, hasFetchedPaymentSources: g, application: A } = (0, c.P5)(),
+        I = (0, f.gU)(),
+        T = (0, f.Hu)(),
+        { isGift: S } = (0, u.Pv)(),
+        [y, v] = i.useState(!0),
+        [N, C] = (0, s.yK)([o.A], () => [o.A.isFetchingCategories, o.A.error]);
     return (i.useEffect(() => {
-        let e = null != E;
-        I && m && e && y(v);
-    }, [I, m, E, v]),
+        let e = null != A;
+        T && g && e && v(N);
+    }, [T, g, A, N]),
     i.useEffect(() => {
-        if (S || n || null == g) return;
-        let e = A[g];
-        T &&
-        (e?.productLine === p.EZt.COLLECTIBLES ||
-            e?.productLine === p.EZt.APPLICATION ||
-            e?.productLine === p.EZt.SOCIAL_LAYER_GAME_ITEM)
-            ? t(c.pn.GIFT_CUSTOMIZATION)
-            : 0 === Object.keys(h).length
-              ? t(c.pn.ADD_PAYMENT_STEPS)
-              : t(c.pn.REVIEW);
-    }, [S, n, t, h, T, A, g]),
-    S)
-        ? (0, r.jsx)(f.A, {})
-        : n
+        if (y || m || null == n) return;
+        let e = I[n];
+        S &&
+        (e?.productLine === h.EZt.COLLECTIBLES ||
+            e?.productLine === h.EZt.APPLICATION ||
+            e?.productLine === h.EZt.SOCIAL_LAYER_GAME_ITEM)
+            ? t(d.pn.GIFT_CUSTOMIZATION)
+            : 0 === Object.keys(E).length
+              ? t(d.pn.ADD_PAYMENT_STEPS)
+              : t(d.pn.REVIEW);
+    }, [y, m, t, E, S, I, n]),
+    y)
+        ? (0, r.jsx)(p.A, {})
+        : m
           ? (0, r.jsx)(a.oO, {})
-          : null != N
-            ? (0, r.jsx)(d.A, {})
+          : null != C
+            ? (0, r.jsx)(_.A, {})
             : null;
 }

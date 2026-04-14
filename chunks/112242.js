@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => K, PN: () => W, X: () => Y });
+n.d(t, { Ay: () => $, PN: () => K, X: () => W });
 var r = n(627968),
     i = n(64700),
     s = n(284009),
@@ -28,114 +28,115 @@ var r = n(627968),
     O = n(603349),
     b = n(45938),
     D = n(580630),
-    L = n(937008),
-    w = n(156312),
-    M = n(566980),
-    x = n(379626),
-    P = n(907927),
-    k = n(987616),
-    U = n(938136),
-    G = n(319820),
-    F = n(652215),
-    V = n(985018),
-    B = n(523376),
-    H = n(763434);
-function j(e) {
+    L = n(413748),
+    w = n(937008),
+    M = n(156312),
+    x = n(566980),
+    P = n(379626),
+    k = n(907927),
+    U = n(987616),
+    G = n(938136),
+    F = n(319820),
+    V = n(652215),
+    B = n(985018),
+    H = n(366023),
+    j = n(157795);
+function Y(e) {
     let { application: t, sku: n, isEmbeddedIAP: i } = e;
     return !0 !== i
         ? null
         : (0, r.jsxs)("div", {
-              className: H.qY,
+              className: j.qY,
               children: [
                   (0, r.jsx)(I.A, { game: t }),
-                  (0, r.jsx)(u.Heading, { variant: "heading-lg/bold", className: H.nI, children: n.name }),
+                  (0, r.jsx)(u.Heading, { variant: "heading-lg/bold", className: j.nI, children: n.name }),
               ],
           });
 }
-let Y = (e) => {
+let W = (e) => {
         let {
                 hasLegalTermsFlash: t,
                 legalTermsNodeRef: n,
                 handlePaymentSourceAdd: s,
                 shouldUseUnifiedCheckoutUI: d,
             } = e,
+            f = (0, L.t)((e) => e.selectedSkuId),
             {
-                application: f,
-                purchaseState: E,
-                paymentSourceId: A,
-                setPaymentSourceId: I,
-                selectedSkuId: y,
+                application: E,
+                purchaseState: A,
+                paymentSourceId: I,
+                setPaymentSourceId: y,
                 setHasAcceptedTerms: O,
                 isEmbeddedIAP: D,
-                purchaseType: x,
-                purchasePreviewError: U,
-                devShelfFetchState: G,
-                hasPaymentSources: B,
-                checkoutPaymentSources: j,
-                hasCheckoutContextLoaded: Y,
-            } = (0, w.P5)(),
-            W = (0, k.gU)(),
-            K = (0, k.RR)(),
-            { isGift: $, giftRecipient: z } = (0, L.Pv)(),
-            q = $ && (0, b.Ik)(z),
-            { fetched: Z, hasAlreadyLinked: X } = (0, h.RD)(f);
-        a()(null != y, "Expected selectedSkuId");
-        let Q = W[y],
-            J = Q?.eligiblePaymentGateways,
-            ee = K[y],
-            et = A ?? C.B,
-            en = j.length > 0,
-            er = null != ee ? (ee[et] ?? (en ? ee[C.B] : null)) : null,
+                purchaseType: P,
+                purchasePreviewError: G,
+                devShelfFetchState: F,
+                hasPaymentSources: H,
+                checkoutPaymentSources: Y,
+                hasCheckoutContextLoaded: W,
+            } = (0, M.P5)(),
+            K = (0, U.gU)(),
+            $ = (0, U.RR)(),
+            { isGift: z, giftRecipient: q } = (0, w.Pv)(),
+            Z = z && (0, b.Ik)(q),
+            { fetched: X, hasAlreadyLinked: Q } = (0, h.RD)(E);
+        a()(null != f, "Expected selectedSkuId");
+        let J = K[f],
+            ee = J?.eligiblePaymentGateways,
+            et = $[f],
+            en = I ?? C.B,
+            er = Y.length > 0,
+            ei = null != et ? (et[en] ?? (er ? et[C.B] : null)) : null,
             {
-                dropdownPaymentSources: ei,
-                giftCardWallet: es,
-                giftCardsEnabled: ea,
-                dropdownPaymentSourceId: eo,
-                handleDropdownPaymentSourceChange: el,
-                giftCardCheckboxProps: eu,
+                dropdownPaymentSources: es,
+                giftCardWallet: ea,
+                giftCardsEnabled: eo,
+                dropdownPaymentSourceId: el,
+                handleDropdownPaymentSourceChange: eu,
+                giftCardCheckboxProps: ec,
             } = (0, g.Y)({
-                checkoutPaymentSources: j,
-                setPaymentSourceId: I,
+                checkoutPaymentSources: Y,
+                setPaymentSourceId: y,
                 location: "OneTimePurchaseReview",
-                isReady: Y,
-                itemAmount: er?.amount,
+                isReady: W,
+                itemAmount: ei?.amount,
             });
-        a()(null != Q, "SKU must exist and be fetched."), a()(null != f, "Application must exist.");
-        let ec = (0, l.bG)([p.A, R.A], () => R.A.inTestModeForApplication(f.id) || p.A.inDevModeForApplication(f.id), [
-                f.id,
+        a()(null != J, "SKU must exist and be fetched."), a()(null != E, "Application must exist.");
+        let ed = (0, l.bG)([p.A, R.A], () => R.A.inTestModeForApplication(E.id) || p.A.inDevModeForApplication(E.id), [
+                E.id,
             ]),
-            ed = (0, l.bG)([v.A], () => v.A.enabled),
-            e_ = o.M.EEA_COUNTRIES.has(N.A.ipCountryCodeWithFallback),
-            ef = E === M.h.PURCHASING || E === M.h.COMPLETED,
-            ep = j.find((e) => e.id === A) ?? null,
-            eh = null != ep ? ep.type : null,
-            em = null != J && J.length > 0 && (A === C.B || null === eh) && B ? S.fU.SELECT_PAYMENT_METHOD : void 0,
-            eE = Q.productLine === F.EZt.SOCIAL_LAYER_GAME_ITEM,
-            eg = q && !eE,
-            eA = i.useMemo(
-                () => ({
-                    testModeWarning: ec ? V.intl.string(V.t.OvMyMd) : null,
-                    devShelfError: (0, m.n)(f, F.gfo.EMBEDDED) && G === p.$.ERROR ? V.intl.string(V.t.tAmECt) : null,
-                    socialLayerGameItemDisclaimer: eE && Z && !X && !$ ? V.intl.string(V.t["3pLGHL"]) : null,
-                }),
-                [ec, f, G, eE, Z, X, $],
-            ),
+            e_ = (0, l.bG)([v.A], () => v.A.enabled),
+            ef = o.M.EEA_COUNTRIES.has(N.A.ipCountryCodeWithFallback),
+            ep = A === x.h.PURCHASING || A === x.h.COMPLETED,
+            eh = Y.find((e) => e.id === I) ?? null,
+            em = null != eh ? eh.type : null,
+            eE = null != ee && ee.length > 0 && (I === C.B || null === em) && H ? S.fU.SELECT_PAYMENT_METHOD : void 0,
+            eg = J.productLine === V.EZt.SOCIAL_LAYER_GAME_ITEM,
+            eA = Z && !eg,
             eI = i.useMemo(
                 () => ({
-                    paymentSources: ei,
-                    selectedPaymentSourceId: eo,
-                    onChange: el,
-                    onPaymentSourceAdd: s,
-                    hidePersonalInformation: ed,
-                    paymentGatewayRestrictions: J,
-                    defaultPaymentSourceId: ei.find((e) => e.isDefault)?.id,
+                    testModeWarning: ed ? B.intl.string(B.t.OvMyMd) : null,
+                    devShelfError: (0, m.n)(E, V.gfo.EMBEDDED) && F === p.$.ERROR ? B.intl.string(B.t.tAmECt) : null,
+                    socialLayerGameItemDisclaimer: eg && X && !Q && !z ? B.intl.string(B.t["3pLGHL"]) : null,
                 }),
-                [ei, eo, el, s, ed, J],
+                [ed, E, F, eg, X, Q, z],
             ),
             eT = i.useMemo(
+                () => ({
+                    paymentSources: es,
+                    selectedPaymentSourceId: el,
+                    onChange: eu,
+                    onPaymentSourceAdd: s,
+                    hidePersonalInformation: e_,
+                    paymentGatewayRestrictions: ee,
+                    defaultPaymentSourceId: es.find((e) => e.isDefault)?.id,
+                }),
+                [es, el, eu, s, e_, ee],
+            ),
+            eS = i.useMemo(
                 () =>
-                    d && Q.productLine === F.EZt.COLLECTIBLES
-                        ? (0, r.jsx)(P.f, { paymentSourceType: eh })
+                    d && J.productLine === V.EZt.COLLECTIBLES
+                        ? (0, r.jsx)(k.f, { paymentSourceType: em })
                         : (0, r.jsxs)(T.A, {
                               isActive: t,
                               ref: n,
@@ -143,67 +144,67 @@ let Y = (e) => {
                                   (0, r.jsx)(_.A, {
                                       onChange: O,
                                       forceShow: !0,
-                                      showWithdrawalWaiver: e_,
-                                      disabled: ef,
+                                      showWithdrawalWaiver: ef,
+                                      disabled: ep,
                                       subscriptionPlan: null,
-                                      finePrintClassname: H.im,
-                                      purchaseType: x,
-                                      isGift: $,
+                                      finePrintClassname: j.im,
+                                      purchaseType: P,
+                                      isGift: z,
                                       finePrint: (0, r.jsx)(c.A, {
-                                          paymentSourceType: eh,
+                                          paymentSourceType: em,
                                           isEmbeddedIAP: D,
-                                          purchaseType: x,
-                                          productLine: Q.productLine,
-                                          isGift: $,
-                                          applicationName: f.name,
-                                          hasAlreadyLinked: !Z || X,
+                                          purchaseType: P,
+                                          productLine: J.productLine,
+                                          isGift: z,
+                                          applicationName: E.name,
+                                          hasAlreadyLinked: !X || Q,
                                       }),
                                   }),
-                                  d || null == eA.socialLayerGameItemDisclaimer
+                                  d || null == eI.socialLayerGameItemDisclaimer
                                       ? null
                                       : (0, r.jsx)("div", {
-                                            className: H.lm,
+                                            className: j.lm,
                                             children: (0, r.jsx)(u.wx6, {
                                                 type: "warning",
-                                                children: eA.socialLayerGameItemDisclaimer,
+                                                children: eI.socialLayerGameItemDisclaimer,
                                             }),
                                         }),
                               ],
                           }),
-                [d, t, n, O, e_, ef, x, $, eh, D, Q.productLine, f.name, Z, X, eA.socialLayerGameItemDisclaimer],
+                [d, t, n, O, ef, ep, P, z, em, D, J.productLine, E.name, X, Q, eI.socialLayerGameItemDisclaimer],
             );
         return {
-            sku: Q,
-            application: f,
-            giftRecipient: z,
-            isGift: $,
-            skuPricePreview: er,
+            sku: J,
+            application: E,
+            giftRecipient: q,
+            isGift: z,
+            skuPricePreview: ei,
             isEmbeddedIAP: D,
-            shouldShowPurchaseReviewImage: eg,
-            paymentRestrictionBannerType: em,
-            hasCheckoutContextLoaded: Y,
-            devShelfFetchState: G,
-            isStepLoading: !Y && null == U,
-            purchasePreviewError: U,
-            warningAndErrorMessages: eA,
-            paymentSourceDropdownProps: eI,
-            purchaseTermsAndLegalContent: eT,
-            giftCardWallet: es,
-            giftCardsEnabled: ea,
-            giftCardCheckboxProps: eu,
-            disabled: ef,
+            shouldShowPurchaseReviewImage: eA,
+            paymentRestrictionBannerType: eE,
+            hasCheckoutContextLoaded: W,
+            devShelfFetchState: F,
+            isStepLoading: !W && null == G,
+            purchasePreviewError: G,
+            warningAndErrorMessages: eI,
+            paymentSourceDropdownProps: eT,
+            purchaseTermsAndLegalContent: eS,
+            giftCardWallet: ea,
+            giftCardsEnabled: eo,
+            giftCardCheckboxProps: ec,
+            disabled: ep,
         };
     },
-    W = (e, t) => {
+    K = (e, t) => {
         let { isGift: n } = t;
         if (null == e) return null;
         let r = e.orbs_reward;
         if (null != r && r > 0) {
-            let e = n ? V.t["ZV+aS9"] : V.t["0StwHe"];
-            return { Icon: u.Cp8, text: V.intl.format(e, { orbCount: r }) };
+            let e = n ? B.t["ZV+aS9"] : B.t["0StwHe"];
+            return { Icon: u.Cp8, text: B.intl.format(e, { orbCount: r }) };
         }
     };
-function K(e) {
+function $(e) {
     let { hasLegalTermsFlash: t, legalTermsNodeRef: n, handlePaymentSourceAdd: s } = e,
         {
             sku: a,
@@ -222,14 +223,14 @@ function K(e) {
             giftCardsEnabled: N,
             giftCardCheckboxProps: C,
             disabled: R,
-        } = Y({ hasLegalTermsFlash: t, legalTermsNodeRef: n, handlePaymentSourceAdd: s }),
+        } = W({ hasLegalTermsFlash: t, legalTermsNodeRef: n, handlePaymentSourceAdd: s }),
         b = i.useCallback(
             (e) => {
                 null != v && (0, E.YP)(v.id);
                 let t = (0, D.$g)(e.amount, e.currency);
                 (0, u.showToast)(
                     (0, u.createToast)(
-                        V.intl.formatToPlainString(B.default["66Wi6B"], { price: t }),
+                        B.intl.formatToPlainString(H.default["66Wi6B"], { price: t }),
                         u.ToastType.SUCCESS,
                         { position: u.ToastPosition.TOP },
                     ),
@@ -237,9 +238,9 @@ function K(e) {
             },
             [v],
         ),
-        L = W(_, { isGift: c });
+        L = K(_, { isGift: c });
     return (0, r.jsxs)("div", {
-        className: H.Du,
+        className: j.Du,
         children: [
             (0, r.jsx)(S.je, { paymentRestrictionBannerType: h }),
             null != g.testModeWarning
@@ -249,7 +250,7 @@ function K(e) {
                           icon: (0, u.kHD)(O.A),
                           iconSize: d.A.Sizes.SMALL,
                           color: d.A.Colors.WARNING,
-                          className: H.QK,
+                          className: j.QK,
                           children: g.testModeWarning,
                       },
                       "TEST_MODE",
@@ -262,48 +263,48 @@ function K(e) {
                           icon: (0, u.kHD)(O.A),
                           iconSize: d.A.Sizes.SMALL,
                           color: d.A.Colors.ERROR,
-                          className: H.QK,
+                          className: j.QK,
                           children: g.devShelfError,
                       },
                       "DEV_SHELF_ERROR",
                   )
                 : null,
-            (0, r.jsx)(j, { application: o, sku: a, isEmbeddedIAP: f }),
-            p && (0, r.jsx)(U.A, { sku: a }),
+            (0, r.jsx)(Y, { application: o, sku: a, isEmbeddedIAP: f }),
+            p && (0, r.jsx)(G.A, { sku: a }),
             null != l ? (0, r.jsx)(y.Z, { giftRecipient: l }) : null,
-            (0, r.jsx)(x.I, {}),
+            (0, r.jsx)(P.I, {}),
             m
-                ? (0, r.jsx)(u.y$y, { type: u.y$y.Type.WANDERING_CUBES, className: H.fx })
+                ? (0, r.jsx)(u.y$y, { type: u.y$y.Type.WANDERING_CUBES, className: j.fx })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(u.D0$, {
-                              label: c ? V.intl.string(V.t.PEjaCx) : V.intl.string(V.t.sail9P),
+                              label: c ? B.intl.string(B.t.PEjaCx) : B.intl.string(B.t.sail9P),
                               children:
                                   null != _
-                                      ? (0, r.jsx)(G.hl, { sku: a, skuPricePreview: _, application: o })
-                                      : (0, r.jsx)(G.Uw, { sku: a, value: "" }),
+                                      ? (0, r.jsx)(F.hl, { sku: a, skuPricePreview: _, application: o })
+                                      : (0, r.jsx)(F.Uw, { sku: a, value: "" }),
                           }),
                           (0, r.jsx)("div", {
-                              className: H.Jv,
+                              className: j.Jv,
                               children: (0, r.jsx)(A.nL, {
-                                  label: V.intl.string(V.t["mmDvV+"]),
+                                  label: B.intl.string(B.t["mmDvV+"]),
                                   giftCardsEnabled: N,
                                   giftCardCheckboxProps: C,
                                   paymentSourceDropdownProps: I,
                                   disabled: R,
                               }),
                           }),
-                          N ? (0, r.jsx)(A.Z4, { onComplete: b, className: H.SO }) : null,
-                          null != L && (0, r.jsx)($, { ...L }),
+                          N ? (0, r.jsx)(A.Z4, { onComplete: b, className: j.SO }) : null,
+                          null != L && (0, r.jsx)(z, { ...L }),
                       ],
                   }),
             T,
         ],
     });
 }
-let $ = (e) => {
+let z = (e) => {
     let { text: t, Icon: n } = e;
     return (0, r.jsx)(u.D0$, {
-        children: (0, r.jsx)("div", { className: H.sA, children: (0, r.jsx)(f.J, { Icon: n, text: t }) }),
+        children: (0, r.jsx)("div", { className: j.sA, children: (0, r.jsx)(f.J, { Icon: n, text: t }) }),
     });
 };

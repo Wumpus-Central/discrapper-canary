@@ -3,14 +3,14 @@ n.d(t, { A: () => u, P: () => l });
 var r = n(627968);
 n(64700);
 var i = n(525723),
-    a = n(156312),
-    s = n(516248),
+    s = n(413748),
+    a = n(516248),
     o = n(985018);
 let l = () => {
-    let { selectedSkuId: e } = (0, a.P5)();
+    let e = (0, s.t)((e) => e.selectedSkuId);
     return (0, i.vw)({ skuId: e }) ? o.intl.format(o.t.fsOXXO, {}) : null;
 };
 function u() {
     let e = l();
-    return null == e ? null : (0, r.jsx)(s.A, { message: e });
+    return null == e ? null : (0, r.jsx)(a.A, { message: e });
 }
