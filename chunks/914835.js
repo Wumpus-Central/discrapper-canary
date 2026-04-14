@@ -39,7 +39,7 @@ function I(e) {
         ? (0, i.jsx)("span", { className: s()(S.eM, S.sL), children: T })
         : (0, i.jsx)(u.f5, {
               value: m,
-              children: (0, i.jsx)(g.A, {
+              children: (0, i.jsx)(g.default, {
                   targetElementRef: h,
                   user: E,
                   guildId: a.guild_id,

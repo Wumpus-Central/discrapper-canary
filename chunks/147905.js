@@ -483,7 +483,7 @@ let z = l.memo(function (e) {
         if (null == p || null == r || null == S) return null;
         let U = u || f;
         return (0, i.jsx)(
-            x.A,
+            x.default,
             {
                 targetElementRef: E,
                 user: p,

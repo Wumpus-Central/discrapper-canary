@@ -171,7 +171,7 @@ function w(e) {
     try {
         let { CollectiblesItemAssetFormat: e, getCollectiblesItemAssetUrl: r } = n(746002),
             s = i ? e.ANIMATED : e.STATIC,
-            a = r({ skuId: t.skuId, assetFormat: s });
+            a = r(t.skuId, s);
         if (null != a) return a;
     } catch {
         return null;

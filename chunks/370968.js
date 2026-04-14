@@ -12,8 +12,8 @@ var i = n(503698),
     d = n(234419),
     _ = n(725807),
     f = n(811611),
-    p = n(652215),
-    h = n(788868),
+    h = n(652215),
+    p = n(788868),
     m = n(985018),
     E = n(380875);
 let g = "https://cdn.discordapp.com/assets/22_211_SuperReactions_GTM_Hero_v09.mp4",
@@ -25,7 +25,7 @@ function I(e) {
         I = (0, d.V)(),
         T = (0, c.O)(),
         S = I?.subscription_trial != null || null != T,
-        y = { object: p.ZSU.BUTTON_CTA, section: p.JJy.SUPER_REACTION_PICKER };
+        y = { object: h.ZSU.BUTTON_CTA, section: h.JJy.SUPER_REACTION_PICKER };
     return (0, r.jsxs)("div", {
         className: E.iE,
         children: [
@@ -47,13 +47,12 @@ function I(e) {
                             autoPlay: !n,
                             muted: !0,
                             controls: !0,
-                            disablePictureInPicture: !0,
                         }),
                     }),
                     S
                         ? (0, r.jsx)(f.Ay, {
-                              type: h.e.BURST_REACTION_QUICK_ACTION_UPSELL,
-                              subscriptionTier: I?.subscription_trial?.sku_id ?? h.pe.TIER_2,
+                              type: p.e.BURST_REACTION_QUICK_ACTION_UPSELL,
+                              subscriptionTier: I?.subscription_trial?.sku_id ?? p.pe.TIER_2,
                               headingText: m.intl.string(m.t.Wfl5zp),
                               analyticsLocationObject: y,
                               discountOffer: T,
@@ -83,7 +82,7 @@ function I(e) {
                                   (0, r.jsx)("div", {
                                       className: E.sk,
                                       children: (0, r.jsx)(_.A, {
-                                          subscriptionTier: h.pe.TIER_2,
+                                          subscriptionTier: p.pe.TIER_2,
                                           textOptions: { textOverride: m.intl.string(m.t.sEAnVH) },
                                       }),
                                   }),

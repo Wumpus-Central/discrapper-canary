@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => E, S: () => _ });
+n.r(t), n.d(t, { USER_PROFILE_POPOUT_AVATAR_SIZE: () => _, default: () => E });
 var r = n(627968),
     i = n(64700),
     s = n(311907),
@@ -11,8 +11,8 @@ var r = n(627968),
     d = n(818348);
 let _ = (0, a.FT9)(a._3J.SIZE_80),
     f = { onMouseDown: d.tE, onClick: d.tE, onKeyDown: d.tE, "aria-controls": void 0, "aria-expanded": !1 },
-    p = { isShown: !1, position: void 0 };
-function h(e) {
+    h = { isShown: !1, position: void 0 };
+function p(e) {
     let {
             children: t,
             user: n,
@@ -20,8 +20,8 @@ function h(e) {
             guildId: o,
             channelId: d,
             messageId: f,
-            roleId: p,
-            disableUserProfileLink: h,
+            roleId: h,
+            disableUserProfileLink: p,
             newAnalyticsLocations: m,
             appContext: E,
             avatarUrl: g,
@@ -31,8 +31,8 @@ function h(e) {
             onRequestClose: S,
             onClosePopout: y,
             shouldShow: v,
-            shouldPreload: N = !0,
-            ...C
+            shouldPreload: C = !0,
+            ...N
         } = e,
         R = i.useCallback(
             () =>
@@ -47,35 +47,35 @@ function h(e) {
                       }),
             [A, s, n, g, o, d],
         ),
-        O = i.useCallback(
+        b = i.useCallback(
             (e) =>
                 null != I
                     ? I(e)
-                    : (0, r.jsx)(u.A, {
+                    : (0, r.jsx)(u.default, {
                           ...e,
                           user: n,
                           currentUser: s,
                           guildId: o,
                           channelId: d,
-                          roleId: p,
+                          roleId: h,
                           messageId: f,
-                          disableUserProfileLink: h,
+                          disableUserProfileLink: p,
                           newAnalyticsLocations: m,
                           appContext: E,
                           closePopout: () => {
                               e.closePopout(), y?.();
                           },
                       }),
-            [n, s, I, o, d, p, f, h, m, E, y],
+            [n, s, I, o, d, h, f, p, m, E, y],
         );
     return (0, r.jsx)(a.YNO, {
         popoutKey: c.KM,
         shouldShow: v,
-        preload: N ? R : void 0,
-        renderPopout: O,
+        preload: C ? R : void 0,
+        renderPopout: b,
         onRequestOpen: T,
         onRequestClose: S,
-        ...C,
+        ...N,
         children: t,
     });
 }
@@ -83,6 +83,6 @@ function m(e) {
     let { children: t, userId: n, user: i, ...a } = e,
         l = (0, s.bG)([o.default], () => o.default.getCurrentUser()),
         u = (0, s.bG)([o.default], () => i ?? o.default.getUser(n));
-    return null == u || null == l ? t(f, p) : (0, r.jsx)(h, { ...a, user: u, currentUser: l, children: t });
+    return null == u || null == l ? t(f, h) : (0, r.jsx)(p, { ...a, user: u, currentUser: l, children: t });
 }
 let E = i.memo(m);

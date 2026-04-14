@@ -1,10 +1,12 @@
 n.d(t, { R: () => l });
-let i = (0, n(945810).mj)({
-    name: "2026-04-save-voice-message-menu-item",
+let i = (0, n(600975).C)({
     kind: "user",
+    id: "2024-12_save_voice_message_menu_item",
+    label: "Save voice message menu item on web",
     defaultConfig: { enabled: !1 },
-    variations: { 1: { enabled: !0 } },
+    treatments: [{ id: 1, label: "Save voice message menu item active", config: { enabled: !0 } }],
 });
 function l(e) {
-    return i.useConfig({ location: e }).enabled;
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    return i.useExperiment({ location: e }, { autoTrackExposure: t }).enabled;
 }

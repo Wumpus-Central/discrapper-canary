@@ -16,30 +16,30 @@ function d(e) {
             nick: d,
             className: _,
             textClassName: f,
-            disablePopout: p,
-            ignoreModalClicks: h,
+            disablePopout: h,
+            ignoreModalClicks: p,
             onClick: m,
             onContextMenu: E,
             onPopoutRequestOpen: g,
             onPopoutRequestClose: A,
         } = e,
         I = i.useRef(null);
-    return (0, r.jsx)(u.A, {
+    return (0, r.jsx)(u.default, {
         targetElementRef: I,
         user: t,
         guildId: n,
         channelId: s,
         position: "left",
-        shouldShow: !p && void 0,
+        shouldShow: !h && void 0,
         onRequestOpen: g,
         onRequestClose: A,
-        ignoreModalClicks: h,
+        ignoreModalClicks: p,
         children: (e) => {
             let { onClick: i, ...s } = e;
             return (0, r.jsxs)(o.DUT, {
                 ...s,
                 innerRef: I,
-                className: a()(c.DV, _, { [c.YR]: p }),
+                className: a()(c.DV, _, { [c.YR]: h }),
                 onContextMenu: E,
                 onClick: (e) => {
                     i(e), m?.(e);

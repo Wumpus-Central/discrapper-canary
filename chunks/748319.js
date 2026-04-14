@@ -141,12 +141,12 @@ function eL(e) {
         ? null
         : (0, a.jsx)(p.A, {
               object: eN.ZSU.AVATAR,
-              children: (0, a.jsx)(Y.A, {
+              children: (0, a.jsx)(Y.default, {
                   user: o,
                   targetElementRef: b,
                   clickTrap: !0,
                   preload: () =>
-                      (0, Q.A)(o.id, o.getAvatarURL(void 0, Y.S), {
+                      (0, Q.A)(o.id, o.getAvatarURL(void 0, Y.USER_PROFILE_POPOUT_AVATAR_SIZE), {
                           type: "account_popout",
                           withMutualGuilds: !1,
                           withMutualFriends: !1,

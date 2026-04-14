@@ -1,9 +1,9 @@
-n.d(t, { A: () => M });
+n.d(t, { A: () => D });
 var i = n(627968),
     a = n(64700),
     l = n(503698),
-    s = n.n(l),
-    r = n(835245),
+    r = n.n(l),
+    s = n(835245),
     o = n(417597),
     d = n(827734),
     c = n(397927),
@@ -29,11 +29,11 @@ var i = n(627968),
     L = n(652215),
     R = n(381941),
     P = n(985018),
-    w = n(960240),
-    D = n(278664);
-function M(e) {
+    M = n(960240),
+    w = n(278664);
+function D(e) {
     let { embedUrl: t, message: n, channel: l } = e,
-        M = a.useRef(null),
+        D = a.useRef(null),
         k = a.useRef(null),
         O = (0, j.D)(t, n),
         { setPopout: U } = (0, f.A)(n.id, R.Fd),
@@ -71,26 +71,26 @@ function M(e) {
         }, [O, l, z]);
     if (null == O) return null;
     let el = (0, T.F_)({ avatarDecoration: Q, size: (0, h.Te)(c._3J.SIZE_40), canAnimate: ee }),
-        es = O.user?.getAvatarURL(O.guildId, 40, ee),
-        er = () => {
+        er = O.user?.getAvatarURL(O.guildId, 40, ee),
+        es = () => {
             $.enabled || et((e) => !e);
         },
         eo = O.coverImage,
         ed = null != eo && (0, A.ge)(eo);
     return (0, i.jsxs)("div", {
-        className: w.wb,
+        className: M.wb,
         children: [
             (0, i.jsxs)("div", {
-                className: w.iT,
+                className: M.iT,
                 onMouseEnter: en,
                 onMouseLeave: ei,
                 children: [
                     !q &&
                         (!0 === O.shouldShowBlurredThumbnailImage
                             ? (0, i.jsx)("img", {
-                                  src: D,
+                                  src: w,
                                   alt: P.intl.string(P.t.rIbh8H),
-                                  className: s()(w.xn, { [w.p6]: O.shouldSpoiler }),
+                                  className: r()(M.xn, { [M.p6]: O.shouldSpoiler }),
                                   onContextMenu: B,
                                   onError: () => W(!0),
                               })
@@ -99,8 +99,8 @@ function M(e) {
                                   backgroundSrc: `${eo}?format=png`,
                                   alt: P.intl.string(P.t.rIbh8H),
                                   aspectRatio: 16 / 9,
-                                  className: s()(w.xn, { [w.p6]: O.shouldSpoiler }),
-                                  imageChildClassName: w.q_,
+                                  className: r()(M.xn, { [M.p6]: O.shouldSpoiler }),
+                                  imageChildClassName: M.q_,
                                   onContextMenu: B,
                                   onError: () => W(!0),
                               })),
@@ -108,9 +108,9 @@ function M(e) {
                         (0, i.jsx)(c.DUT, {
                             onClick: ea,
                             children: (0, i.jsx)("div", {
-                                className: w.nx,
+                                className: M.nx,
                                 children: (0, i.jsxs)("div", {
-                                    className: w.BS,
+                                    className: M.BS,
                                     children: [
                                         (0, i.jsx)(N.A, { color: d.A.colors.WHITE.css }),
                                         (0, i.jsx)(c.Text, {
@@ -125,31 +125,31 @@ function M(e) {
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: w.iQ,
+                className: M.iQ,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: w.OA,
+                        className: M.OA,
                         children: [
                             (0, i.jsx)(c.Text, {
                                 variant: "text-md/semibold",
                                 color: "text-default",
-                                className: w.hF,
+                                className: M.hF,
                                 children: O.title,
                             }),
                             (0, i.jsx)(c.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
-                                className: s()(w.hF, w.Fq),
+                                className: r()(M.hF, M.Fq),
                                 children: O.subtitle,
                             }),
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: w._5,
+                        className: M._5,
                         children: [
                             null != O.authorId &&
-                                null != es &&
-                                (0, i.jsx)(E.A, {
+                                null != er &&
+                                (0, i.jsx)(E.default, {
                                     targetElementRef: k,
                                     userId: O.authorId,
                                     guildId: O.guildId,
@@ -161,33 +161,33 @@ function M(e) {
                                     spacing: 12,
                                     children: (e) =>
                                         (0, i.jsx)("div", {
-                                            onMouseEnter: er,
-                                            onMouseLeave: er,
+                                            onMouseEnter: es,
+                                            onMouseLeave: es,
                                             children: (0, i.jsx)(c.euF, {
                                                 ...e,
                                                 ref: k,
                                                 size: c._3J.SIZE_40,
-                                                src: es,
+                                                src: er,
                                                 "aria-label": P.intl.string(P.t.KXz3XB),
                                                 avatarDecoration: el,
                                             }),
                                         }),
                                 }),
                             (0, i.jsxs)("div", {
-                                className: w.Ny,
+                                className: M.Ny,
                                 children: [
                                     (0, i.jsxs)("div", {
-                                        className: w.O9,
+                                        className: M.O9,
                                         children: [
                                             null != O.channelName &&
                                                 (0, i.jsx)(c.d2$, {
                                                     size: "md",
                                                     color: "currentColor",
-                                                    className: w.Xg,
+                                                    className: M.Xg,
                                                 }),
                                             (0, i.jsx)(c.DUT, {
                                                 onClick: ea,
-                                                className: w.HA,
+                                                className: M.HA,
                                                 children: (0, i.jsx)(c.Heading, {
                                                     variant: "heading-md/semibold",
                                                     color: "text-strong",
@@ -200,7 +200,7 @@ function M(e) {
                                         (0, i.jsx)(c.Text, {
                                             variant: "text-sm/medium",
                                             color: "text-muted",
-                                            className: w.wn,
+                                            className: M.wn,
                                             children: P.intl.format(P.t.voIDKa, {
                                                 authorName: O.authorName,
                                                 authorNameHook: () =>
@@ -209,12 +209,12 @@ function M(e) {
                                                               name: O.authorName,
                                                               colorString: K,
                                                               colorStrings: Z,
-                                                              className: w.fh,
+                                                              className: M.fh,
                                                           })
                                                         : (0, i.jsx)(
-                                                              E.A,
+                                                              E.default,
                                                               {
-                                                                  targetElementRef: M,
+                                                                  targetElementRef: D,
                                                                   userId: O.authorId,
                                                                   guildId: O.guildId,
                                                                   channelId: l.id,
@@ -225,14 +225,14 @@ function M(e) {
                                                                   children: (e) =>
                                                                       (0, i.jsx)(c.V30, {
                                                                           ...e,
-                                                                          ref: M,
+                                                                          ref: D,
                                                                           name: O.authorName,
                                                                           colorString: K,
                                                                           colorStrings: Z,
-                                                                          className: w.fh,
+                                                                          className: M.fh,
                                                                       }),
                                                               },
-                                                              (0, r.A)(),
+                                                              (0, s.A)(),
                                                           ),
                                             }),
                                         }),

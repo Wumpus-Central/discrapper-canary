@@ -115,7 +115,7 @@ function O(e) {
         em = a ?? n.author,
         ep =
             null != w && null != L
-                ? (0, l.jsx)(N.A, {
+                ? (0, l.jsx)(N.default, {
                       targetElementRef: F,
                       user: em,
                       guildId: K,

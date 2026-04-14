@@ -47,7 +47,7 @@ function f(e) {
                 { context: x },
             );
         };
-    return (0, i.jsx)(_.A, {
+    return (0, i.jsx)(_.default, {
         targetElementRef: f,
         user: s.user,
         guildId: t.guild_id,

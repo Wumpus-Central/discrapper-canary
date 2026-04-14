@@ -48,7 +48,7 @@ let G = 16 / 9,
             A = l.useRef(null),
             { reducedMotion: _ } = l.useContext(d.CZY),
             { blocked: m, ignored: p, id: g } = t;
-        return (0, i.jsx)(T.A, {
+        return (0, i.jsx)(T.default, {
             targetElementRef: A,
             user: r,
             guildId: a,

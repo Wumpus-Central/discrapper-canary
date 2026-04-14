@@ -16,13 +16,7 @@ let s = "social-layer-storefront-product-details-modal",
         } = e;
         (0, i.mMO)(
             async () => {
-                let { default: e } = await Promise.all([
-                    n.e("57174"),
-                    n.e("91652"),
-                    n.e("37457"),
-                    n.e("7828"),
-                    n.e("26241"),
-                ]).then(n.bind(n, 108105));
+                let { default: e } = await Promise.all([n.e("40396"), n.e("72252")]).then(n.bind(n, 108105));
                 return (n) =>
                     (0, r.jsx)(e, {
                         ...n,

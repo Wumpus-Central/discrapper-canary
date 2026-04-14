@@ -48,7 +48,7 @@ let v = l.memo(function (e) {
             [t, M, O, w],
         );
     return (0, p.Vq)(O) && null != w
-        ? (0, i.jsx)(g.A, {
+        ? (0, i.jsx)(g.default, {
               targetElementRef: R,
               user: O,
               guildId: n ?? void 0,

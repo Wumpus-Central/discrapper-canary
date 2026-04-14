@@ -53,7 +53,7 @@ function L(e) {
         },
         M = (0, m.r)({ user: t }),
         [D, U] = l.useState(!1);
-    return (0, i.jsx)(g.A, {
+    return (0, i.jsx)(g.default, {
         targetElementRef: j,
         user: t,
         channelId: r.id,

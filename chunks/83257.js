@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => C, OZ: () => f, n3: () => x, pe: () => N }), n(321073);
+n.d(t, { Ay: () => b, OZ: () => f, n3: () => x, pe: () => v }), n(321073);
 var i = n(627968),
     s = n(64700),
     r = n(110259),
@@ -6,36 +6,37 @@ var i = n(627968),
     o = n(139286),
     a = n(726249),
     c = n(379848),
-    d = n(949302),
-    u = n(203982),
-    h = n(728458),
-    m = n(820284),
-    p = n(361739),
-    E = n(652215),
-    S = n(985018),
-    _ = n(52130);
-let g = Object.freeze({ shouldPreventNavigation: !1, onPreventNavigation: null, sidebarOpen: !0 }),
+    d = n(631254),
+    u = n(949302),
+    h = n(203982),
+    m = n(728458),
+    p = n(820284),
+    E = n(361739),
+    S = n(652215),
+    _ = n(985018),
+    g = n(52130);
+let A = Object.freeze({ shouldPreventNavigation: !1, onPreventNavigation: null, sidebarOpen: !0 }),
     x = 1.4,
     f = 15,
-    N = 2;
-function v(e) {
+    v = 2;
+function N(e) {
     let { section: t, setPreventNavigation: n, scrollerRef: s } = e;
     (0, o.A)({ type: r.ImpressionTypes.PANE, name: t?.impressionName, properties: t?.impressionProperties });
-    let l = t?.element ?? E.FXj,
+    let l = t?.element ?? S.FXj,
         a = t?.elementProps ?? {};
-    return (0, i.jsx)(m.A, {
+    return (0, i.jsx)(p.A, {
         section: t.section,
         children: (0, i.jsx)(l, { ...a, setPreventNavigation: n, refToScroller: s }),
     });
 }
-class A extends s.PureComponent {
+class C extends s.PureComponent {
     _unmounted = !1;
     _intensity = x;
     _subscribedStores = [];
     scrollerRef = s.createRef();
     state = {
-        ...g,
-        sidebarOpen: this.props.section !== E.nc_.SUBSCRIPTIONS && this.props.section !== E.nc_.PROFILE_CUSTOMIZATION,
+        ...A,
+        sidebarOpen: this.props.section !== S.nc_.SUBSCRIPTIONS && this.props.section !== S.nc_.PROFILE_CUSTOMIZATION,
     };
     componentDidMount() {
         this.getPredicateSections().forEach((e) => {
@@ -67,9 +68,9 @@ class A extends s.PureComponent {
         let { section: e } = this.props,
             { notice: t } = this.getPredicateSections().find((t) => e === t.section) ?? {};
         return null != t && t.stores.some((e) => e.showNotice() && !(null != e.canCloseEarly && e.canCloseEarly()))
-            ? (u._.dispatch(E.jej.SHAKE_APP, { duration: 300, intensity: this._intensity }),
-              (this._intensity = Math.min(this._intensity + N, f)),
-              u._.dispatch(E.jej.EMPHASIZE_NOTICE),
+            ? (h._.dispatch(S.jej.SHAKE_APP, { duration: 300, intensity: this._intensity }),
+              (this._intensity = Math.min(this._intensity + v, f)),
+              h._.dispatch(S.jej.EMPHASIZE_NOTICE),
               !1)
             : ((this._intensity = x), !0);
     }
@@ -85,11 +86,11 @@ class A extends s.PureComponent {
                         this._subscribedStores.includes(e) ||
                             (e.addChangeListener(this.handleNoticeStoreUpdate), this._subscribedStores.push(e));
                     }),
-                    this.setState({ ...g, sidebarOpen: !1 });
+                    this.setState({ ...A, sidebarOpen: !1 });
             };
         this.validNavigation() &&
             !i &&
-            (r(), h.A.addBreadcrumb({ category: "settings", message: `Set section: ${e}` })),
+            (r(), m.A.addBreadcrumb({ category: "settings", message: `Set section: ${e}` })),
             i && null != s && s(r);
     };
     handleClose = () => {
@@ -108,59 +109,62 @@ class A extends s.PureComponent {
                 ariaLabel: o,
                 onClick: a,
                 variant: c,
-                icon: u,
+                icon: d,
                 className: h,
                 newIndicator: m,
                 newIndicatorDismissibleContentTypes: p,
-                badgeCount: g,
+                badgeCount: E,
             } = e,
-            x = null;
+            A = null;
         null != e.decoration
-            ? (x = (0, i.jsx)(l.Text, { variant: "text-md/normal", color: "text-muted", children: e.decoration }))
+            ? (A = (0, i.jsx)(l.Text, { variant: "text-md/normal", color: "text-muted", children: e.decoration }))
             : null != n && p?.includes(n) && !t
-              ? (x = m ?? (0, i.jsx)(l.LpS, { text: S.intl.string(S.t.y2b7CA) }))
-              : null != u
-                ? (x = u)
-                : null != g && g > 0 && (x = (0, i.jsx)(l.hVq, { count: g }));
-        let f =
-            s === E.nc_.PREMIUM
-                ? (0, i.jsx)(d.A, { label: r, isSelected: t, decoration: x })
-                : null == x
+              ? (A = m ?? (0, i.jsx)(l.LpS, { text: _.intl.string(_.t.y2b7CA) }))
+              : null != d
+                ? (A = d)
+                : null != E && E > 0 && (A = (0, i.jsx)(l.hVq, { count: E }));
+        let x =
+            s === S.nc_.PREMIUM
+                ? (0, i.jsx)(u.A, { label: r, isSelected: t, decoration: A })
+                : null == A
                   ? r
-                  : (0, i.jsxs)("div", { className: _.l, children: [r, x] });
+                  : (0, i.jsxs)("div", { className: g.l, children: [r, A] });
         return (0, i.jsx)(
             l.VQ0.Item,
-            { variant: c, id: s, onClick: a, className: h, "aria-label": o ?? "", children: f },
+            { variant: c, id: s, onClick: a, className: h, "aria-label": o ?? "", children: x },
             s,
         );
     };
     renderSidebar(e) {
-        let { section: t, title: n } = this.props,
-            s = e.flatMap((e) => e.newIndicatorDismissibleContentTypes).filter((e) => null != e),
-            r = t ?? e[0].section;
+        let { section: t, title: n, showUserSettingsSearch: s } = this.props,
+            r = e.flatMap((e) => e.newIndicatorDismissibleContentTypes).filter((e) => null != e),
+            o = t ?? e[0].section;
         return (0, i.jsx)(c.Ay, {
-            contentTypes: s,
+            contentTypes: r,
             children: (t) => {
-                let { visibleContent: s } = t;
-                return (0, i.jsx)(l.VQ0, {
-                    selectedItem: r,
+                let { visibleContent: r } = t;
+                return (0, i.jsxs)(l.VQ0, {
+                    selectedItem: o,
                     onItemSelect: this.handleSetSection,
                     orientation: "vertical",
                     "aria-label": n,
-                    children: e.map((e, t) => {
-                        if (null != e.tabPredicate && !e.tabPredicate()) return null;
-                        switch (e.section) {
-                            case p.Fq.HEADER:
-                                return (0, i.jsx)(l.VQ0.Header, { children: e.label }, t);
-                            case p.Fq.DIVIDER:
-                                return (0, i.jsx)(l.VQ0.Separator, {}, t);
-                            case p.Fq.CUSTOM:
-                                let n = e.element ?? E.FXj;
-                                return (0, i.jsx)(n, {}, t);
-                            default:
-                                return this.renderSettingsSectionTabBarItem(e, r === e.section, s);
-                        }
-                    }),
+                    children: [
+                        s ? (0, i.jsx)("div", { className: g.O, children: (0, i.jsx)(d.A, {}) }) : null,
+                        e.map((e, t) => {
+                            if (null != e.tabPredicate && !e.tabPredicate()) return null;
+                            switch (e.section) {
+                                case E.Fq.HEADER:
+                                    return (0, i.jsx)(l.VQ0.Header, { children: e.label }, t);
+                                case E.Fq.DIVIDER:
+                                    return (0, i.jsx)(l.VQ0.Separator, {}, t);
+                                case E.Fq.CUSTOM:
+                                    let n = e.element ?? S.FXj;
+                                    return (0, i.jsx)(n, {}, t);
+                                default:
+                                    return this.renderSettingsSectionTabBarItem(e, o === e.section, r);
+                            }
+                        }),
+                    ],
                 });
             },
         });
@@ -180,12 +184,12 @@ class A extends s.PureComponent {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(a.HI, { location: n, subsection: c }),
-                (0, i.jsx)(p.Ay, {
+                (0, i.jsx)(E.Ay, {
                     sidebarTheme: e,
                     scrollerRef: this.scrollerRef,
                     section: t,
                     sidebar: this.renderSidebar(l),
-                    content: (0, i.jsx)(v, {
+                    content: (0, i.jsx)(N, {
                         section: o,
                         setPreventNavigation: this.setPreventNavigation,
                         scrollerRef: this.scrollerRef,
@@ -201,4 +205,4 @@ class A extends s.PureComponent {
         });
     }
 }
-let C = A;
+let b = C;

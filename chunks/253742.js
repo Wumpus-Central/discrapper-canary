@@ -85,7 +85,7 @@ function L(e) {
     }
     let Y = (0, s.bG)([S.A], () => S.A.getVoiceVolume(h.id)),
         W = (0, E.v)({ isSpeaking: M, voiceDb: Y, spreadDirection: E.O.INSET_ONLY, maxInnerSpreadRadius: 3 });
-    return (0, i.jsx)(f.A, {
+    return (0, i.jsx)(f.default, {
         targetElementRef: t,
         user: h,
         guildId: w,
