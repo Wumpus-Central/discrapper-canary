@@ -1,54 +1,54 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => A });
 var i = n(627968);
 n(64700);
 var l = n(877624),
-    a = n(342494),
-    r = n(732955),
-    s = n(975571),
-    o = n(549996),
-    d = n(498470),
-    c = n(807098),
-    u = n(49999),
-    A = n(985018);
-function h(e) {
-    let { children: t, targetElementRef: n, dismissPopover: h } = e,
-        _ = (0, o.c)(l.C.PREMIUM_TAB_POPOVER),
-        m =
-            null != _ && "premiumTabPopover" === _.properties.properties.oneofKind
-                ? _.properties.properties.premiumTabPopover
+    r = n(342494),
+    a = n(732955),
+    s = n(549996),
+    o = n(498470),
+    d = n(807098),
+    c = n(637706),
+    u = n(49999);
+function A(e) {
+    let { children: t, targetElementRef: n, dismissPopover: A } = e,
+        h = (0, s.c)(l.C.PREMIUM_TAB_POPOVER),
+        _ =
+            null != h && "premiumTabPopover" === h.properties.properties.oneofKind
+                ? h.properties.properties.premiumTabPopover
                 : null,
-        p = (0, c.T)(m?.asset);
-    if (null == m) return t;
+        m = (0, d.T)(_?.asset);
+    if (null == _) return t;
     let g =
-        m.button?.copy != null
-            ? [
-                  {
-                      text: m.button.copy,
-                      variant: "expressive",
-                      onClick: (0, d.h)({ buttonAction: m.button.buttonAction, onClose: () => h(u.i.USER_DISMISS) }),
-                      icon: r.tvc,
-                  },
-              ]
-            : void 0;
+            _.button?.copy != null
+                ? [
+                      {
+                          text: _.button.copy,
+                          variant: "expressive",
+                          onClick: (0, o.h)({
+                              buttonAction: _.button.buttonAction,
+                              onClose: () => A(u.i.USER_DISMISS),
+                          }),
+                          icon: a.tvc,
+                      },
+                  ]
+                : void 0,
+        p = (0, c.C)(_.helpArticle, _.helpArticleId);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", { children: t }),
-            (0, i.jsx)(a.AM, {
+            (0, i.jsx)(r.AM, {
                 targetElementRef: n,
-                title: m.header,
-                body: m.body,
-                textLink:
-                    "" !== m.helpArticleId
-                        ? { text: A.intl.string(A.t["sBp+u0"]), link: s.A.getArticleURL(m.helpArticleId) }
-                        : void 0,
-                graphic: null != p ? { type: "image", src: p } : void 0,
+                title: _.header,
+                body: _.body,
+                textLink: null != p ? { text: p.linkText, link: p.url } : void 0,
+                graphic: null != m ? { type: "image", src: m } : void 0,
                 size: "md",
                 align: "top",
                 alignmentStrategy: "edge",
                 position: "right",
                 caretConfig: { align: "start" },
                 actions: g,
-                onRequestClose: () => h(u.i.USER_DISMISS),
+                onRequestClose: () => A(u.i.USER_DISMISS),
                 gradientColor: "nitro-pink",
             }),
         ],

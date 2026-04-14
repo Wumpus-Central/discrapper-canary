@@ -1,12 +1,13 @@
 "use strict";
-n.d(t, { W: () => _ });
+n.d(t, { W: () => f });
 var r = n(852015),
     i = n(144367),
     s = n(428420),
     a = n(324281),
-    o = n(453360),
-    l = n(232582);
-class u extends a.G {
+    o = n(330287),
+    l = n(453360),
+    u = n(232582);
+class c extends a.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.PremiumTabPopoverCTAButton", [
             { no: 1, name: "copy", kind: "scalar", T: 9 },
@@ -14,7 +15,7 @@ class u extends a.G {
                 no: 2,
                 name: "button_action",
                 kind: "enum",
-                T: () => ["discord_protos.premium_marketing.v1.ButtonAction", l.dz, "BUTTON_ACTION_"],
+                T: () => ["discord_protos.premium_marketing.v1.ButtonAction", u.dz, "BUTTON_ACTION_"],
             },
         ]);
     }
@@ -55,15 +56,16 @@ class u extends a.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let c = new u();
-class d extends a.G {
+let d = new c();
+class _ extends a.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.PremiumTabPopover", [
             { no: 1, name: "header", kind: "scalar", T: 9 },
             { no: 2, name: "body", kind: "scalar", T: 9 },
-            { no: 3, name: "asset", kind: "message", T: () => o.i },
-            { no: 4, name: "button", kind: "message", T: () => c },
+            { no: 3, name: "asset", kind: "message", T: () => l.i },
+            { no: 4, name: "button", kind: "message", T: () => d },
             { no: 5, name: "help_article_id", kind: "scalar", T: 9 },
+            { no: 6, name: "help_article", kind: "message", T: () => o.O },
         ]);
     }
     create(e) {
@@ -87,20 +89,23 @@ class d extends a.G {
                     s.body = e.string();
                     break;
                 case 3:
-                    s.asset = o.i.internalBinaryRead(e, e.uint32(), n, s.asset);
+                    s.asset = l.i.internalBinaryRead(e, e.uint32(), n, s.asset);
                     break;
                 case 4:
-                    s.button = c.internalBinaryRead(e, e.uint32(), n, s.button);
+                    s.button = d.internalBinaryRead(e, e.uint32(), n, s.button);
                     break;
                 case 5:
                     s.helpArticleId = e.string();
+                    break;
+                case 6:
+                    s.helpArticle = o.O.internalBinaryRead(e, e.uint32(), n, s.helpArticle);
                     break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
-                    let l = e.skip(i);
-                    !1 !== a && (!0 === a ? r.f$.onRead : a)(this.typeName, s, t, i, l);
+                    let u = e.skip(i);
+                    !1 !== a && (!0 === a ? r.f$.onRead : a)(this.typeName, s, t, i, u);
             }
         }
         return s;
@@ -108,11 +113,12 @@ class d extends a.G {
     internalBinaryWrite(e, t, n) {
         "" !== e.header && t.tag(1, r.O0.LengthDelimited).string(e.header),
             "" !== e.body && t.tag(2, r.O0.LengthDelimited).string(e.body),
-            e.asset && o.i.internalBinaryWrite(e.asset, t.tag(3, r.O0.LengthDelimited).fork(), n).join(),
-            e.button && c.internalBinaryWrite(e.button, t.tag(4, r.O0.LengthDelimited).fork(), n).join(),
-            "" !== e.helpArticleId && t.tag(5, r.O0.LengthDelimited).string(e.helpArticleId);
+            e.asset && l.i.internalBinaryWrite(e.asset, t.tag(3, r.O0.LengthDelimited).fork(), n).join(),
+            e.button && d.internalBinaryWrite(e.button, t.tag(4, r.O0.LengthDelimited).fork(), n).join(),
+            "" !== e.helpArticleId && t.tag(5, r.O0.LengthDelimited).string(e.helpArticleId),
+            e.helpArticle && o.O.internalBinaryWrite(e.helpArticle, t.tag(6, r.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let _ = new d();
+let f = new _();

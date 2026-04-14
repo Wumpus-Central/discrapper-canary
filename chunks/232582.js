@@ -280,8 +280,8 @@ class f extends a.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let p = new f();
-class h extends a.G {
+let h = new f();
+class p extends a.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.Subtitle", [
             { no: 1, name: "link", kind: "scalar", T: 9 },
@@ -330,7 +330,7 @@ class h extends a.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let m = new h();
+let m = new p();
 class E extends a.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.Disclaimer", [
@@ -393,8 +393,9 @@ class A extends a.G {
             { no: 11, name: "modal_top_pill", kind: "scalar", T: 9 },
             { no: 12, name: "body", kind: "scalar", T: 9 },
             { no: 13, name: "hero_art_video_subtitles", kind: "message", repeat: 1, T: () => m },
-            { no: 14, name: "storage", kind: "message", T: () => p },
+            { no: 14, name: "storage", kind: "message", T: () => h },
             { no: 15, name: "disclaimer", kind: "message", T: () => g },
+            { no: 18, name: "help_article", kind: "message", T: () => o.O },
         ]);
     }
     create(e) {
@@ -464,17 +465,20 @@ class A extends a.G {
                     s.heroArtVideoSubtitles.push(m.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 14:
-                    s.storage = p.internalBinaryRead(e, e.uint32(), n, s.storage);
+                    s.storage = h.internalBinaryRead(e, e.uint32(), n, s.storage);
                     break;
                 case 15:
                     s.disclaimer = g.internalBinaryRead(e, e.uint32(), n, s.disclaimer);
+                    break;
+                case 18:
+                    s.helpArticle = o.O.internalBinaryRead(e, e.uint32(), n, s.helpArticle);
                     break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
-                    let o = e.skip(i);
-                    !1 !== a && (!0 === a ? r.f$.onRead : a)(this.typeName, s, t, i, o);
+                    let l = e.skip(i);
+                    !1 !== a && (!0 === a ? r.f$.onRead : a)(this.typeName, s, t, i, l);
             }
         }
         return s;
@@ -495,8 +499,9 @@ class A extends a.G {
             "" !== e.body && t.tag(12, r.O0.LengthDelimited).string(e.body);
         for (let i = 0; i < e.heroArtVideoSubtitles.length; i++)
             m.internalBinaryWrite(e.heroArtVideoSubtitles[i], t.tag(13, r.O0.LengthDelimited).fork(), n).join();
-        e.storage && p.internalBinaryWrite(e.storage, t.tag(14, r.O0.LengthDelimited).fork(), n).join(),
-            e.disclaimer && g.internalBinaryWrite(e.disclaimer, t.tag(15, r.O0.LengthDelimited).fork(), n).join();
+        e.storage && h.internalBinaryWrite(e.storage, t.tag(14, r.O0.LengthDelimited).fork(), n).join(),
+            e.disclaimer && g.internalBinaryWrite(e.disclaimer, t.tag(15, r.O0.LengthDelimited).fork(), n).join(),
+            e.helpArticle && o.O.internalBinaryWrite(e.helpArticle, t.tag(18, r.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
