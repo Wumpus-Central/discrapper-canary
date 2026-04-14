@@ -7,6 +7,7 @@ n.d(t, {
     $nd: () => b.$,
     $oz: () => z.BoldIcon,
     $p$: () => z.MagnifyingGlassIcon,
+    $pZ: () => z.StampXIcon,
     $tc: () => z.ChannelListIcon,
     $y7: () => z.SpeedometerIcon,
     $yI: () => z.FriendsIcon,
@@ -612,4 +613,4 @@ var eG = n(54336),
 n(845966);
 var eY = n(44482);
 n(991957), n(601973), n(483084), n(641668), n(715022), n(603392);
-var eW = n(668447);
+var eW = n(825437);
