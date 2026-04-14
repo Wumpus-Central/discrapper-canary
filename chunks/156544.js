@@ -34,5 +34,6 @@ var r = {
     action: "action__41ea0",
     clipsBadge: "clipsBadge__41ea0",
     clipsFooter: "clipsFooter__41ea0",
+    clipOverlayHeader: "clipOverlayHeader__41ea0",
 };
 n.r((e.exports = r));

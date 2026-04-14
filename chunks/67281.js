@@ -1,97 +1,100 @@
-a.d(t, { A: () => v });
-var n = a(627968);
-a(64700);
-var i = a(503698),
-    r = a.n(i),
-    o = a(311907),
-    c = a(876230),
-    l = a(990078),
-    s = a(397927),
-    _ = a(429913),
-    d = a(409626),
-    u = a(692969),
-    m = a(454908),
-    p = a(287809),
-    b = a(405269),
-    C = a(403362),
-    h = a(963135),
-    g = a(331446),
-    f = a(985018),
-    I = a(2398);
-function A(e) {
-    let { applicationId: t, separator: a } = e,
-        i = (0, _.h)(t),
-        { data: r } = (0, m.I)(t),
-        o = (0, u.A)({ applicationId: t, location: "ClipEmbed", source: d.Ob.ClipEmbed }),
-        c = r?.name ?? i?.name;
-    return null == c
+"use strict";
+n.d(t, { A: () => y });
+var r = n(627968);
+n(64700);
+var i = n(503698),
+    s = n.n(i),
+    a = n(311907),
+    o = n(876230),
+    l = n(990078),
+    u = n(397927),
+    c = n(429913),
+    d = n(409626),
+    _ = n(692969),
+    f = n(454908),
+    p = n(287809),
+    h = n(405269),
+    m = n(403362),
+    E = n(963135),
+    g = n(331446),
+    A = n(985018),
+    I = n(2398);
+let T = 4;
+function S(e) {
+    let { applicationId: t, separator: n } = e,
+        i = (0, c.h)(t),
+        { data: s } = (0, f.I)(t),
+        a = (0, _.A)({ applicationId: t, location: "ClipEmbed", source: d.Ob.ClipEmbed }),
+        o = s?.name ?? i?.name;
+    return null == o
         ? null
-        : null != o
-          ? (0, n.jsxs)(n.Fragment, {
-                children: [(0, n.jsx)(s.DUT, { tag: "span", className: I.On, onClick: o, children: c }), a],
+        : null != a
+          ? (0, r.jsxs)(r.Fragment, {
+                children: [(0, r.jsx)(u.DUT, { tag: "span", className: I.On, onClick: a, children: o }), n],
             })
-          : (0, n.jsxs)(n.Fragment, { children: [c, a] });
+          : (0, r.jsxs)(r.Fragment, { children: [o, n] });
 }
-let v = function (e) {
+let y = function (e) {
     let {
             createdAt: t,
-            participantIds: a,
+            participantIds: n,
             applicationId: i,
-            title: _,
+            title: c,
             guildId: d,
-            playerState: u = c.Q6.PAUSED,
-            isControlBarExpanded: m = !0,
-            isFullScreen: v = !1,
+            playerState: _ = o.Q6.PAUSED,
+            isControlBarExpanded: f = !0,
+            isFullScreen: y = !1,
         } = e,
-        x = (0, o.yK)([p.default], () => a.map((e) => p.default.getUser(e)).filter(C.Vq) ?? []),
-        T = null != t ? (0, b.Fe)(new Date(t)) : null;
-    return (0, n.jsxs)("div", {
-        className: r()(I.oK, { [I.pd]: u === c.Q6.PLAYING && !m, [I.aS]: v }),
+        v = (0, a.yK)([p.default], () => n.map((e) => p.default.getUser(e)).filter(m.Vq) ?? []),
+        N = null != t ? (0, h.Fe)(new Date(t)) : null,
+        C = null != i || null != N;
+    return (0, r.jsxs)("div", {
+        className: s()(I.oK, { [I.pd]: _ === o.Q6.PLAYING && !f, [I.aS]: y }),
         children: [
-            (0, n.jsx)("div", { className: I.Lu }),
-            (0, n.jsxs)("div", {
+            (0, r.jsx)("div", { className: I.Lu }),
+            (0, r.jsxs)("div", {
                 className: I.s$,
                 children: [
-                    (0, n.jsxs)("div", {
+                    (0, r.jsxs)("div", {
                         className: I.yR,
                         children: [
-                            (0, n.jsxs)("div", {
+                            (0, r.jsxs)("div", {
                                 className: I.$,
                                 children: [
-                                    (0, n.jsx)(l.m, {
+                                    (0, r.jsx)(l.m, {
                                         asContainer: !0,
-                                        text: f.intl.string(f.t["/fgfWh"]),
-                                        children: (0, n.jsx)(s.xgA, { className: I.gr, size: "xs", color: "white" }),
+                                        text: A.intl.string(A.t["/fgfWh"]),
+                                        children: (0, r.jsx)(u.xgA, { className: I.gr, size: "xs", color: "white" }),
                                     }),
-                                    (0, n.jsx)(s.Text, {
+                                    (0, r.jsx)(u.Text, {
                                         className: I.DD,
                                         variant: "text-md/semibold",
                                         color: "always-white",
-                                        children: null != _ && _.length > 0 ? _ : f.intl.string(f.t.Cyxddp),
+                                        children: null != c && c.length > 0 ? c : A.intl.string(A.t.Cyxddp),
                                     }),
                                 ],
                             }),
-                            (null != i || null != T) &&
-                                (0, n.jsxs)(s.Text, {
+                            C &&
+                                (0, r.jsxs)(u.Text, {
                                     className: I.yu,
                                     variant: "text-sm/normal",
                                     color: "always-white",
                                     children: [
-                                        (0, n.jsx)(A, { applicationId: i, separator: null != T ? " \xb7 " : void 0 }),
-                                        T,
+                                        (0, r.jsx)(S, { applicationId: i, separator: null != N ? " \xb7 " : void 0 }),
+                                        N,
                                     ],
                                 }),
                         ],
                     }),
-                    x.length > 0 &&
-                        (0, n.jsxs)("div", {
+                    v.length > 0 &&
+                        (0, r.jsxs)("div", {
                             className: I.HD,
                             role: "group",
-                            "aria-label": f.intl.string(f.t.WTozwe),
+                            "aria-label": A.intl.string(A.t.WTozwe),
                             children: [
-                                x.slice(0, 4).map((e) => (0, n.jsx)(h.A, { user: e, guildId: d }, e.id)),
-                                x.length > 4 &&
-                                    (0, n.jsx)(g.w, { participants: x, maxVisibleParticipants: 4, guildId: d }),
+                                v.slice(0, T).map((e) => (0, r.jsx)(E.A, { user: e, guildId: d }, e.id)),
+                                v.length > T &&
+                                    (0, r.jsx)(g.w, { participants: v, maxVisibleParticipants: T, guildId: d }),
                             ],
                         }),
                 ],
