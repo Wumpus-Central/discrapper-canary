@@ -1286,6 +1286,14 @@ Y(
             soundVolume: e.sound_volume,
         });
     }),
+    j(["CLIPS_REMOTE_TRIGGER"], (e) => {
+        $({
+            type: "CLIPS_REMOTE_TRIGGER",
+            userId: e.user_id,
+            applicationId: e.application_id,
+            partyId: e.party_id ?? null,
+        });
+    }),
     j(["GUILD_SOUNDBOARD_SOUND_CREATE"], (e) => {
         $({
             type: "GUILD_SOUNDBOARD_SOUND_CREATE",

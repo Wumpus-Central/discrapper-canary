@@ -1,11 +1,13 @@
-t.d(l, { A: () => g });
-var i = t(439372),
-    a = t(15285),
-    r = t(961350),
-    s = t(461213),
-    n = t(734066),
-    c = t(652215);
-class d extends i.A {
+"use strict";
+n.d(t, { A: () => d });
+var r = n(439372),
+    i = n(15285),
+    s = n(961350),
+    a = n(461213),
+    o = n(734066),
+    l = n(696016),
+    u = n(652215);
+class c extends r.A {
     callback = null;
     actions = { CLIPS_REMOTE_TRIGGER: (e) => this.handleRemoteClipTrigger(e) };
     registerCallback(e) {
@@ -14,16 +16,17 @@ class d extends i.A {
     unregisterCallback() {
         this.callback = null;
     }
-    handleRemoteClipTrigger(e, l) {
-        let { userId: t, applicationId: i, partyId: d } = e;
-        if (!(0, n.J)() || t === r.default.getId()) return;
-        let g = s.A.getActivities().find(
-                (e) => e.type === c.$pd.PLAYING && null != e.application_id && e.application_id === i,
+    handleRemoteClipTrigger(e, t) {
+        let { userId: n, applicationId: r, partyId: c } = e;
+        if (!(0, o.J)() || n === s.default.getId()) return;
+        l.nx.info("Received remote clip trigger", { userId: n, applicationId: r, partyId: c, triggerClipId: t });
+        let d = a.A.getActivities().find(
+                (e) => e.type === u.$pd.PLAYING && null != e.application_id && e.application_id === r,
             ),
-            p = a.Ay.getVisibleGame(),
-            u = null != g,
-            h = p?.id === i;
-        (u || h) && (null == d || g?.party?.id === d) && null != this.callback && null != l && this.callback(t, l);
+            _ = i.Ay.getVisibleGame(),
+            f = null != d,
+            p = _?.id === r;
+        (f || p) && (null == c || d?.party?.id === c) && null != this.callback && null != t && this.callback(n, t);
     }
 }
-let g = new d();
+let d = new c();
