@@ -1,11 +1,10 @@
 e.exports = {
     G9: "progressBarContainer__68788",
     TN: "fillBar__68788",
-    UA: "fillBarWhite__68788",
     jD: "cont__68788",
     KF: "hitboxArea__68788",
     uc: "interactionEnabled__68788",
-    pN: "progressGlow__68788",
+    $9: "defaultProgress__68788",
     r: "buffer__68788",
     YK: "seekableBar__68788",
     Ey: "timeDisplay__68788",
