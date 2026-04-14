@@ -1,91 +1,75 @@
-n.d(t, { A: () => N, M: () => C });
-var i = n(627968),
-    l = n(64700),
-    s = n(311907),
-    a = n(833349),
-    r = n(153331),
-    o = n(592182),
-    d = n(587895),
-    c = n(806246),
-    u = n(890330),
-    h = n(172710),
-    A = n(616356),
-    _ = n(734057),
-    m = n(71393),
-    g = n(977997),
-    p = n(954571),
-    f = n(821589),
-    x = n(652215),
-    E = n(78016);
-function I(e) {
-    let { type: t, source: n, activity: l, applicationStream: s, user: a, guildId: r, channelId: d, onAction: c } = e;
-    return (0, i.jsx)(o.A, {
-        className: (0, f.t)(E, "actions", t),
+n.d(t, { A: () => E, M: () => f });
+var i = n(627968);
+n(64700);
+var l = n(311907),
+    s = n(833349),
+    a = n(153331),
+    r = n(592182),
+    o = n(587895),
+    d = n(172710),
+    c = n(616356),
+    u = n(734057),
+    h = n(71393),
+    A = n(977997),
+    _ = n(821589),
+    m = n(652215),
+    p = n(78016);
+function g(e) {
+    let { type: t, source: n, activity: l, applicationStream: s, user: a, guildId: o, channelId: d, onAction: c } = e;
+    return (0, i.jsx)(r.A, {
+        className: (0, _.t)(p, "actions", t),
         type: t,
         source: n,
         activity: l,
         applicationStream: s,
         user: a,
-        guildId: r,
+        guildId: o,
         buttonVariant: "primary",
         channelId: d,
         onAction: c,
     });
 }
-let C = r.A.Types,
-    N = function (e) {
+let f = a.A.Types,
+    E = function (e) {
         let {
                 activity: t,
                 user: n,
-                useStoreStream: o = !0,
-                showActions: f = !0,
-                hideHeader: E = !1,
-                showChannelDetails: C = !1,
-                ...N
+                useStoreStream: r = !0,
+                showActions: _ = !0,
+                hideHeader: p = !1,
+                showChannelDetails: f = !1,
+                ...E
             } = e,
-            T = (0, s.bG)([g.A, _.A], () => _.A.getChannel(g.A.getVoiceStateForUser(n.id)?.channelId)),
-            S = (0, u.v)("UserActivityContainer", T),
-            b = (0, s.bG)([A.A], () => (o ? A.A.getAnyStreamForUser(n.id) : null)),
-            y = t?.type === x.$pd.HANG_STATUS && S ? T : null,
-            v = (0, s.bG)([m.A, g.A, _.A], () =>
-                (0, a.A)(t, x.jUm.EMBEDDED)
-                    ? m.A.getGuild(
-                          _.A.getChannel(g.A.getVoiceStateForSession(n.id, t?.session_id)?.channelId)?.getGuildId(),
+            x = (0, l.bG)([A.A, u.A], () => u.A.getChannel(A.A.getVoiceStateForUser(n.id)?.channelId)),
+            I = (0, l.bG)([c.A], () => (r ? c.A.getAnyStreamForUser(n.id) : null)),
+            C = (0, l.bG)([h.A, A.A, u.A], () =>
+                (0, s.A)(t, m.jUm.EMBEDDED)
+                    ? h.A.getGuild(
+                          u.A.getChannel(A.A.getVoiceStateForSession(n.id, t?.session_id)?.channelId)?.getGuildId(),
                       )
-                    : null != y
-                      ? m.A.getGuild(y.getGuildId())
-                      : null,
+                    : null,
             ),
-            j = (0, s.bG)([m.A], () => (null != b ? m.A.getGuild(b.guildId) : null)),
-            R = (0, s.bG)([d.A], () => {
+            N = (0, l.bG)([h.A], () => (null != I ? h.A.getGuild(I.guildId) : null)),
+            T = (0, l.bG)([o.A], () => {
                 if (null != t)
-                    if (null != t.application_id) return d.A.getApplication(t.application_id);
-                    else return d.A.getApplicationByName(t.name);
+                    if (null != t.application_id) return o.A.getApplication(t.application_id);
+                    else return o.A.getApplicationByName(t.name);
                 return null;
             });
-        return (l.useEffect(() => {
-            t?.type === x.$pd.HANG_STATUS &&
-                S &&
-                p.default.track(x.HAw.VIEW_HANG_STATUS, {
-                    source: "UserActivity",
-                    other_user_id: n.id,
-                    ...(0, c.A)(y?.id),
-                });
-        }, [t?.type, S, y, n.id]),
-        t?.type !== x.$pd.HANG_STATUS || S)
-            ? (0, i.jsx)(r.A, {
-                  ...N,
+        return t?.type === m.$pd.HANG_STATUS
+            ? null
+            : (0, i.jsx)(a.A, {
+                  ...E,
                   activity: t,
                   user: n,
-                  application: R,
-                  hideHeader: E,
-                  activityGuild: v ?? j,
-                  showChannelDetails: C,
-                  channel: C ? T : void 0,
-                  renderActions: f ? () => (0, i.jsx)(I, { ...N, applicationStream: b, activity: t, user: n }) : null,
-                  onOpenSpotifyTrack: h.Mp,
-                  onOpenSpotifyArtist: h.mN,
-                  onOpenSpotifyAlbum: h.QX,
-              })
-            : null;
+                  application: T,
+                  hideHeader: p,
+                  activityGuild: C ?? N,
+                  showChannelDetails: f,
+                  channel: f ? x : void 0,
+                  renderActions: _ ? () => (0, i.jsx)(g, { ...E, applicationStream: I, activity: t, user: n }) : null,
+                  onOpenSpotifyTrack: d.Mp,
+                  onOpenSpotifyArtist: d.mN,
+                  onOpenSpotifyAlbum: d.QX,
+              });
     };

@@ -79,7 +79,5 @@ function l(e) {
                                     }
                                   : e.type === a.$pd.COMPETING
                                     ? { text: o.intl.string(o.t.OzCsIA), platformIcon: n, platformLabel: l }
-                                    : e.type === a.$pd.HANG_STATUS
-                                      ? { text: o.intl.string(o.t.Hi4tob), platformIcon: n, platformLabel: l }
-                                      : { text: void 0, platformIcon: n, platformLabel: l };
+                                    : { text: void 0, platformIcon: n, platformLabel: l };
 }

@@ -85,11 +85,6 @@ let i = {
         inlineRequire: () => n(16648).A,
         loadRightBeforeConnectionOpen: !0,
     },
-    HangStatusManager: {
-        actions: ["POST_CONNECTION_OPEN", "VOICE_CHANNEL_SELECT", "LOGOUT", "GUILD_MEMBER_UPDATE"],
-        inlineRequire: () => n(314497).A,
-        hasStoreChangeListeners: !0,
-    },
     TopEmojisDataManager: { actions: ["EMOJI_INTERACTION_INITIATED"], inlineRequire: () => n(347209).A },
     EntityVersionsManager: {
         actions: ["GUILD_CREATE", "DELETED_ENTITY_IDS"],
@@ -603,11 +598,6 @@ let i = {
         inlineRequire: () => n(894992).A,
         hasStoreChangeListeners: !0,
         loadAfterConnectionOpen: !0,
-    },
-    VoiceChannelGameActivityManager: {
-        actions: ["RUNNING_GAMES_CHANGE", "VOICE_CHANNEL_SELECT"],
-        inlineRequire: () => n(251408).A,
-        neverLoadBeforeConnectionOpen: !0,
     },
     InappropriateConversationsManager: {
         actions: ["VIBING_WUMPUS_PLAY_MUSIC", "VIBING_WUMPUS_STOP_MUSIC", "VIBING_WUMPUS_PAUSE_MUSIC"],

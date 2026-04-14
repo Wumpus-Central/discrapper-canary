@@ -1,63 +1,49 @@
 "use strict";
-n.d(t, { A: () => A });
-var r = n(627968),
-    i = n(64700),
-    a = n(311907),
+n.d(t, { A: () => h });
+var r = n(627968);
+n(64700);
+var i = n(311907),
     s = n(765379),
-    o = n(90644),
-    l = n(587895),
-    u = n(429913),
-    c = n(806246),
-    d = n(890330),
-    _ = n(734057),
-    f = n(71393),
-    p = n(977997),
-    h = n(954571),
-    m = n(712785),
-    g = n(384481),
-    E = n(652215);
-function A(e) {
-    let { user: t, currentUser: n, activity: A, className: I, onClose: T } = e,
-        { voiceGuild: y, voiceChannel: S } = (0, a.cf)([f.A, p.A, _.A], () => {
-            let e = (0, s.A)(A);
-            if (!e && A?.type !== E.$pd.HANG_STATUS) return {};
+    a = n(90644),
+    o = n(587895),
+    l = n(429913),
+    u = n(734057),
+    c = n(71393),
+    d = n(977997),
+    _ = n(712785),
+    f = n(384481),
+    p = n(652215);
+function h(e) {
+    let { user: t, currentUser: n, activity: h, className: m, onClose: E } = e,
+        { voiceGuild: g, voiceChannel: A } = (0, i.cf)([c.A, d.A, u.A], () => {
+            let e = (0, s.A)(h);
+            if (!e && h.type !== p.$pd.HANG_STATUS) return {};
             let n = e
-                    ? p.A.getVoiceStateForSession(t.id, A?.session_id)?.channelId
-                    : p.A.getVoiceStateForUser(t.id)?.channelId,
-                r = _.A.getChannel(n);
-            return { voiceGuild: f.A.getGuild(r?.getGuildId()), voiceChannel: r };
-        }),
-        v = (0, d.v)("UserProfileActivityCardWrapper", S),
-        C = A?.type === E.$pd.HANG_STATUS && v ? S : null;
-    (0, u.h)(A?.application_id);
-    let b = (0, a.bG)([l.A], () =>
-        A?.application_id != null
-            ? l.A.getApplication(A.application_id)
-            : A?.name != null
-              ? l.A.getApplicationByName(A.name)
+                    ? d.A.getVoiceStateForSession(t.id, h?.session_id)?.channelId
+                    : d.A.getVoiceStateForUser(t.id)?.channelId,
+                r = u.A.getChannel(n);
+            return { voiceGuild: c.A.getGuild(r?.getGuildId()), voiceChannel: r };
+        });
+    (0, l.h)(h?.application_id);
+    let I = (0, i.bG)([o.A], () =>
+        h?.application_id != null
+            ? o.A.getApplication(h.application_id)
+            : h?.name != null
+              ? o.A.getApplicationByName(h.name)
               : null,
     );
-    return (i.useEffect(() => {
-        A?.type === E.$pd.HANG_STATUS &&
-            v &&
-            h.default.track(E.HAw.VIEW_HANG_STATUS, {
-                source: "UserProfilePopout",
-                other_user_id: t.id,
-                ...(0, c.A)(C?.id),
+    return h?.type === p.$pd.CUSTOM_STATUS || h?.type === p.$pd.HANG_STATUS
+        ? null
+        : (0, a.A)(h)
+          ? (0, r.jsx)(f.A, { user: t, currentUser: n, activity: h, className: m, onClose: E })
+          : (0, r.jsx)(_.A, {
+                user: t,
+                currentUser: n,
+                activity: h,
+                application: I,
+                voiceGuild: g,
+                voiceChannel: A,
+                className: m,
+                onClose: E,
             });
-    }, [A?.type, v, C?.id, t.id]),
-    A?.type !== E.$pd.CUSTOM_STATUS && (A?.type !== E.$pd.HANG_STATUS || v))
-        ? (0, o.A)(A)
-            ? (0, r.jsx)(g.A, { user: t, currentUser: n, activity: A, className: I, onClose: T })
-            : (0, r.jsx)(m.A, {
-                  user: t,
-                  currentUser: n,
-                  activity: A,
-                  application: b,
-                  voiceGuild: y,
-                  voiceChannel: S,
-                  className: I,
-                  onClose: T,
-              })
-        : null;
 }

@@ -13,5 +13,4 @@ e.exports = {
     Zg: "emoji_c9d15c",
     Om: "dot_c9d15c",
     tt: "questsIcon_c9d15c",
-    W9: "hangStatusIcon_c9d15c",
 };

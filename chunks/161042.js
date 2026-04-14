@@ -10,7 +10,6 @@ n.r(
         bodyNormal: "bodyNormal__2ef49 body__2ef49",
         openGameProfile: "openGameProfile__2ef49",
         assets: "assets__2ef49",
-        assetsHangStatus: "assetsHangStatus__2ef49",
         assetsUserActivityHover: "assetsUserActivityHover__2ef49",
         assetsLargeMaskStreamPreview: "assetsLargeMaskStreamPreview__2ef49",
         assetsLargeMaskVoiceChannel: "assetsLargeMaskVoiceChannel__2ef49",
