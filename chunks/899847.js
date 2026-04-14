@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => g, HB: () => m, Xz: () => E, e$: () => h, nt: () => p });
+n.d(t, { Ay: () => g, HB: () => m, Xz: () => E, e$: () => p, nt: () => h });
 var r = n(562465),
     i = n(873298),
     s = n(73153),
@@ -20,7 +20,7 @@ async function f(e) {
     }),
         await Promise.all(Array.from(t).map((e) => (0, a.RE)(e)));
 }
-async function p(e, t) {
+async function h(e, t) {
     await r.Bo.patch({
         url: _.Rsh.FAMILY_CENTER_LINKED_USERS,
         body: { linked_user_id: e, link_status: t },
@@ -30,7 +30,7 @@ async function p(e, t) {
         return s.h.dispatch({ type: "FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS", linkedUsers: t }), t;
     });
 }
-async function h(e) {
+async function p(e) {
     await r.Bo.del({ url: _.Rsh.FAMILY_CENTER_LINKED_USERS, body: { linked_user_id: e }, rejectWithError: !1 }).then(
         (t) => {
             let { body: n } = t;
@@ -77,6 +77,13 @@ let g = {
                 users: i,
                 ageGroup: a,
             }),
+            null != e.restricted_schedule &&
+                null != o.teenId &&
+                s.h.dispatch({
+                    type: "USER_RESTRICTED_SCHEDULE_UPDATE",
+                    userId: o.teenId,
+                    restrictedSchedule: e.restricted_schedule,
+                }),
             o
         );
     },
@@ -115,6 +122,12 @@ let g = {
         return (
             a.invoices && a.invoices.length > 0 && (await f(a.invoices)),
             s.h.dispatch({ type: "FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS", familyCenterTeenActivity: a }),
+            null != n.restricted_schedule &&
+                s.h.dispatch({
+                    type: "USER_RESTRICTED_SCHEDULE_UPDATE",
+                    userId: e,
+                    restrictedSchedule: n.restricted_schedule,
+                }),
             a
         );
     },
@@ -170,8 +183,8 @@ let g = {
                 body: { settings: (0, l.ob)(i.nT, d) },
                 rejectWithError: !1,
             }),
-            { settings: p } = f;
-        s.h.dispatch({ type: "FAMILY_CENTER_TEEN_UPDATE_SETTINGS_SUCCESS", userId: e, settings: p });
+            { settings: h } = f;
+        s.h.dispatch({ type: "FAMILY_CENTER_TEEN_UPDATE_SETTINGS_SUCCESS", userId: e, settings: h });
     },
     updateTeenConsents: (e, t, n) =>
         r.Bo.patch({

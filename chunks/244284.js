@@ -2,7 +2,7 @@
 n.d(t, { QU: () => c, kX: () => u });
 var r = n(988506),
     i = n(315069);
-let a = Object.freeze({
+let s = Object.freeze({
     0: r.ob.SUNDAY,
     1: r.ob.MONDAY,
     2: r.ob.TUESDAY,
@@ -11,7 +11,7 @@ let a = Object.freeze({
     5: r.ob.FRIDAY,
     6: r.ob.SATURDAY,
 });
-function s(e) {
+function a(e) {
     return 60 * e.hours + e.minutes;
 }
 function o(e) {
@@ -23,6 +23,7 @@ class l extends i.A {
     startTime;
     endTime;
     days;
+    enabled;
     static fromServer(e) {
         return new l({
             ruleId: e.rule_id,
@@ -30,6 +31,7 @@ class l extends i.A {
             startTime: e.start_time ?? void 0,
             endTime: e.end_time ?? void 0,
             days: e.days,
+            enabled: e.enabled,
         });
     }
     static fromCache(e) {
@@ -41,12 +43,13 @@ class l extends i.A {
             (this.label = e.label),
             (this.startTime = e.startTime),
             (this.endTime = e.endTime),
-            (this.days = e.days);
+            (this.days = e.days),
+            (this.enabled = e.enabled);
     }
     isActiveAt(e, t) {
         if (null == this.startTime || null == this.endTime || 0 === this.days.length) return !1;
-        let n = s(this.startTime),
-            r = s(this.endTime),
+        let n = a(this.startTime),
+            r = a(this.endTime),
             i = n > r;
         if (this.days.includes(e)) {
             if (i) {
@@ -74,7 +77,7 @@ class u extends i.A {
     isInRestrictedHours() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new Date();
         if (0 === this.rules.length) return !1;
-        let t = a[e.getDay()],
+        let t = s[e.getDay()],
             n = 60 * e.getHours() + e.getMinutes();
         return this.rules.some((e) => e.isActiveAt(t, n));
     }
