@@ -1,25 +1,25 @@
-n.d(t, { v: () => E });
-var l = n(627968),
-    i = n(64700),
-    r = n(158954),
-    a = n(311907),
-    s = n(508675),
-    u = n(263063),
-    o = n(492494),
-    c = n(71393),
-    d = n(576705),
-    m = n(711014),
-    h = n(403362),
-    g = n(473145),
-    x = n(80569),
-    j = n(652215),
-    f = n(985018);
+l.d(t, { v: () => E });
+var n = l(627968),
+    i = l(64700),
+    r = l(158954),
+    a = l(311907),
+    s = l(508675),
+    u = l(263063),
+    o = l(492494),
+    c = l(71393),
+    d = l(576705),
+    m = l(711014),
+    h = l(403362),
+    g = l(473145),
+    x = l(80569),
+    j = l(652215),
+    f = l(985018);
 let _ = (e) => ({ label: e.name, value: e.id }),
     b = (e) => d.A.can(j.xBc.CREATE_GUILD_EXPRESSIONS, e),
     E = (e) => {
         let {
                 onChange: t,
-                selected: n,
+                selected: l,
                 onError: d,
                 labelledBy: E,
                 isEmojiAnimated: v,
@@ -40,14 +40,16 @@ let _ = (e) => ({ label: e.name, value: e.id }),
                 () =>
                     Object.fromEntries(
                         Object.entries(N).map((e) => {
-                            let [t, n] = e;
+                            let [t, l] = e;
                             return [
                                 t,
                                 (function (e) {
-                                    let { guild: t, emojis: n, isEmojiAnimated: l } = e,
-                                        i = n.filter((e) => e.animated === l && !(0, o.Eg)(e, t.id)).length ?? 0;
+                                    let { guild: t, emojis: l, isEmojiAnimated: n } = e,
+                                        i =
+                                            l.filter((e) => e.animated === n && !e.managed && !(0, o.Eg)(e, t.id))
+                                                .length ?? 0;
                                     return (0, g.sN)(t) - i;
-                                })({ guild: n, emojis: s.Ay.getGuildEmoji(t), isEmojiAnimated: v }),
+                                })({ guild: l, emojis: s.Ay.getGuildEmoji(t), isEmojiAnimated: v }),
                             ];
                         }),
                     ),
@@ -56,18 +58,18 @@ let _ = (e) => ({ label: e.name, value: e.id }),
             O = i.useMemo(() => Object.values(N).filter(b).map(_), [N]),
             C = i.useCallback(
                 (e) => {
-                    let { value: t, label: n, disabled: i } = e;
+                    let { value: t, label: l, disabled: i } = e;
                     return {
                         id: String(t),
                         value: t,
-                        label: n,
+                        label: l,
                         disabled: i,
                         leading: ((e) => {
                             if (null == e.value) return null;
                             let t = N[e.value];
                             return null == t
                                 ? null
-                                : (0, l.jsx)(u.Ay, { guild: t, size: u.Ay.Sizes.SMALLER, active: !0 });
+                                : (0, n.jsx)(u.Ay, { guild: t, size: u.Ay.Sizes.SMALLER, active: !0 });
                         })(e),
                         trailing:
                             null == e.value ? null : f.intl.formatToPlainString(f.t.WkK72v, { count: p[e.value] }),
@@ -79,11 +81,11 @@ let _ = (e) => ({ label: e.name, value: e.id }),
             i.useEffect(() => {
                 O.length < 1
                     ? d(x.j.NO_PERMISSIONS)
-                    : null != n && (p?.[n] ?? 0) < 1
+                    : null != l && (p?.[l] ?? 0) < 1
                       ? d(j.t02.TOO_MANY_EMOJI)
                       : d(null);
-            }, [O, t, d, n, p]),
-            (0, l.jsx)(r.l6P, {
+            }, [O, t, d, l, p]),
+            (0, n.jsx)(r.l6P, {
                 label: I,
                 required: A,
                 selectionMode: "single",
@@ -91,7 +93,7 @@ let _ = (e) => ({ label: e.name, value: e.id }),
                 onSelectionChange: t,
                 options: O,
                 formatOption: C,
-                value: n,
+                value: l,
                 "aria-labelledby": E,
                 placeholder: O.length < 1 ? f.intl.string(f.t.jHpxwo) : f.intl.string(f.t["4mqeQO"]),
                 disabled: O.length < 1,
