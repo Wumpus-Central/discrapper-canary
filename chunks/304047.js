@@ -108,8 +108,8 @@ function I(e) {
             },
             [h],
         ),
-        { name: p, icon: f } = E(n) ?? {};
-    return null == f
+        { name: p, icon: S } = E(n) ?? {};
+    return null == S
         ? null
         : s
           ? (0, i.jsx)(o.Y, {
@@ -124,9 +124,10 @@ function I(e) {
                 children: () =>
                     (0, i.jsx)("div", {
                         ref: u,
+                        className: f.s5,
                         children: (0, i.jsx)(x, {
                             applicationName: r ? void 0 : p,
-                            applicationIcon: f,
+                            applicationIcon: S,
                             tooltipText: _.intl.string(_.t["03qWLj"]),
                             shouldShowTooltip: !c && void 0,
                             onClick: g,
@@ -135,7 +136,7 @@ function I(e) {
                         }),
                     }),
             })
-          : (0, i.jsx)(C, { applicationName: r ? void 0 : p, applicationIcon: f });
+          : (0, i.jsx)(C, { applicationName: r ? void 0 : p, applicationIcon: S });
 }
 function T(e) {
     let { userId: t, applicationId: n, channel: a, hideWhenInactive: r, idle: u } = e,
