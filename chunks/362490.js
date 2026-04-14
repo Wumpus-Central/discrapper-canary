@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { RD: () => m, U9: () => g, _M: () => p }), n(321073);
+n.d(t, { RD: () => m, U9: () => g, _M: () => h }), n(321073);
 var r = n(64700),
     i = n(868714),
     s = n(975807),
@@ -11,10 +11,10 @@ var r = n(64700),
     d = n(308151),
     _ = n(652215);
 let f = "AUTHORIZE_REQUEST";
-var p = (function (e) {
+var h = (function (e) {
     return (e.RPC = "rpc"), (e.WEB = "web"), e;
 })({});
-let h = ["rpc", "web"];
+let p = ["rpc", "web"];
 function m(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { debug: n = !1 } = t,
@@ -22,7 +22,7 @@ function m(e) {
         s = A(i, t),
         a = s?.preferredFlow,
         o = null != a,
-        { token: l, fetched: d } = (0, c.U)(i?.parentId ?? i?.id, { disableFetch: t.disableFetch || !o }),
+        { token: l, fetched: d } = (0, c.U)(i?.parentId ?? i?.id, { disableFetch: t.disableFetch }),
         _ = d && null != l;
     return {
         fetched: d,
@@ -46,7 +46,7 @@ function E(e) {
     return a.A.listenIsSubscribed(e);
 }
 function g(e, t) {
-    let n = (0, i.A)(t?.allowedFlows ?? h),
+    let n = (0, i.A)(t?.allowedFlows ?? p),
         u = (0, d.A)(
             E,
             r.useCallback(
