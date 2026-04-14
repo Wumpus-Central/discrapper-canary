@@ -332,6 +332,9 @@ let F = {
     spoilerAgree(e) {
         a.h.dispatch({ type: "CHANNEL_SPOILER_AGREE", channelId: e });
     },
+    clearSpoilerAgree(e) {
+        a.h.dispatch({ type: "CHANNEL_SPOILER_AGREE_CLEAR", channelId: e });
+    },
     escapeToDefaultChannel(e) {
         let t = T.Ay.getDefaultChannel(e);
         null != t ? (0, E.pX)(L.BVt.CHANNEL(e, t.id)) : (0, E.pX)(L.BVt.FRIENDS);

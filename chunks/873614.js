@@ -1,4 +1,4 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => x });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -12,14 +12,14 @@ var i = n(627968),
     A = n(46054),
     _ = n(506164),
     m = n(734057),
-    g = n(985018),
-    p = n(859822),
-    f = n(643272);
-function x(e) {
+    p = n(985018),
+    g = n(879317),
+    f = n(324025);
+function E(e) {
     let { guild: t, channelId: s } = e,
         a = (0, r.bG)([m.A], () => m.A.getChannel(s)),
-        [f, x] = l.useState(!1),
-        E = l.useCallback(() => {
+        [f, E] = l.useState(!1),
+        x = l.useCallback(() => {
             d.A.nsfwReturnToSafety(t?.id);
         }, [t]),
         I = l.useCallback(() => {
@@ -33,11 +33,19 @@ function x(e) {
                       direction: "horizontal",
                       align: "center",
                       gap: 4,
-                      children: [null != N && (0, i.jsx)(N, { size: "md", color: o.LU0.colors.TEXT_DEFAULT }), C],
+                      className: g.$,
+                      children: [
+                          null != N &&
+                              (0, i.jsx)("span", {
+                                  className: g.P0,
+                                  children: (0, i.jsx)(N, { size: "md", color: o.LU0.colors.TEXT_DEFAULT }),
+                              }),
+                          (0, i.jsx)("span", { className: g.HA, children: C }),
+                      ],
                   })
-                : g.intl.string(g.t["q38/ae"]),
+                : p.intl.string(p.t["q38/ae"]),
         S = l.useCallback((e) => {
-            null != e && x(e.scrollHeight - e.clientHeight > 1);
+            null != e && E(e.scrollHeight - e.clientHeight > 1);
         }, []),
         b = l.useCallback(() => {
             null != a &&
@@ -47,7 +55,7 @@ function x(e) {
                     return (n) => (0, i.jsx)(e, { ...n, channel: a, guild: t });
                 });
         }, [a, t]),
-        v =
+        y =
             a?.topic != null && "" !== a.topic.trim()
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
@@ -55,39 +63,39 @@ function x(e) {
                               ref: S,
                               variant: "text-md/medium",
                               color: "text-muted",
-                              className: p.VA,
+                              className: g.VA,
                               lineClamp: 3,
                               children: A.A.parseTopic(a.topic, !0, { channelId: s }),
                           }),
                           f &&
                               (0, i.jsx)(o.DUT, {
-                                  className: p.zT,
+                                  className: g.zT,
                                   onClick: b,
                                   children: (0, i.jsx)(o.Text, {
                                       variant: "text-md/medium",
                                       color: "text-brand",
-                                      className: p.ql,
-                                      children: g.intl.string(g.t["/QvRak"]),
+                                      className: g.ql,
+                                      children: p.intl.string(p.t["/QvRak"]),
                                   }),
                               }),
-                          (0, i.jsx)("div", { className: p.yF }),
+                          (0, i.jsx)("div", { className: g.yF }),
                       ],
                   })
                 : null;
     return (0, i.jsx)(_.A, {
         onAgree: I,
-        onDisagree: E,
+        onDisagree: x,
         modalType: c.A5.SPOILER_CHANNEL,
         title: T,
-        subtitle: v,
-        description: g.intl.string(g.t["34D1HC"]),
-        agreement: g.intl.string(g.t.KmRwcW),
-        disagreement: g.intl.string(g.t["/g10LC"]),
+        subtitle: y,
+        description: p.intl.string(p.t["34D1HC"]),
+        agreement: p.intl.string(p.t.KmRwcW),
+        disagreement: p.intl.string(p.t["/g10LC"]),
         guildId: t?.id,
         channelId: s,
     });
 }
-let E = function (e) {
+let x = function (e) {
     let { guild: t, channelId: n, className: s } = e,
         r = l.useRef(null);
     return (
@@ -100,7 +108,7 @@ let E = function (e) {
             className: f.X,
             children: (0, i.jsx)("div", {
                 className: a()(s, f.i),
-                children: (0, i.jsx)(x, { guild: t, channelId: n }, n),
+                children: (0, i.jsx)(E, { guild: t, channelId: n }, n),
             }),
         })
     );
