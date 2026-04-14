@@ -174,7 +174,7 @@ class N extends i.PureComponent {
             });
         let _ = n.find((e) => e instanceof c.A && e.id === l),
             p = o && null == d.default.getUser(l);
-        return (0, r.jsx)(u.default, {
+        return (0, r.jsx)(u.A, {
             targetElementRef: this._ref,
             userId: l,
             user: p && null != _ ? _ : void 0,

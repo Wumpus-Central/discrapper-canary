@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     oK: "overlayHeader__4774c",
     aS: "isFullscreen__4774c",

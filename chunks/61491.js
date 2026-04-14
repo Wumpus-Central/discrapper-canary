@@ -1,22 +1,19 @@
-"use strict";
-n.d(t, { DX: () => a, TO: () => o, hc: () => s, rB: () => l });
-let r = 3600,
-    i = 60;
-function s(e, t, n) {
+function r(e, t, n) {
     return n * (Math.max(e, 0) / t.width);
 }
-function a(e, t, n) {
-    return o((e / t) * 100, n);
+function l(e, t, n) {
+    return a((e / t) * 100, n);
 }
-function o(e, t) {
+function a(e, t) {
     return (e / 100) * t.width;
 }
-function l(e) {
+function i(e) {
     let t = 0 | e,
-        n = Math.floor(t / r),
-        s = Math.floor((t % r) / i),
-        a = t % i;
+        n = Math.floor(t / 3600),
+        r = Math.floor((t % 3600) / 60),
+        l = t % 60;
     return n > 0
-        ? `${n}:${String(s).padStart(2, "0")}:${String(a).padStart(2, "0")}`
-        : `${s}:${String(a).padStart(2, "0")}`;
+        ? `${n}:${String(r).padStart(2, "0")}:${String(l).padStart(2, "0")}`
+        : `${r}:${String(l).padStart(2, "0")}`;
 }
+n.d(t, { DX: () => l, TO: () => a, hc: () => r, rB: () => i });

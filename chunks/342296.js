@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, { USER_PROFILE_POPOUT_AVATAR_SIZE: () => _, default: () => E });
+n.d(t, { A: () => E, S: () => _ });
 var r = n(627968),
     i = n(64700),
     s = n(311907),
@@ -51,7 +51,7 @@ function h(e) {
             (e) =>
                 null != I
                     ? I(e)
-                    : (0, r.jsx)(u.default, {
+                    : (0, r.jsx)(u.A, {
                           ...e,
                           user: n,
                           currentUser: s,

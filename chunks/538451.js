@@ -24,7 +24,7 @@ function d(e) {
             onPopoutRequestClose: A,
         } = e,
         I = i.useRef(null);
-    return (0, r.jsx)(u.default, {
+    return (0, r.jsx)(u.A, {
         targetElementRef: I,
         user: t,
         guildId: n,

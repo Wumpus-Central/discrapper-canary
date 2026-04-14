@@ -1,40 +1,40 @@
-a.d(t, { default: () => f });
-var n = a(627968),
-    i = a(64700),
-    l = a(503698),
-    s = a.n(l),
-    r = a(935462),
-    o = a(397927),
-    c = a(707685),
-    d = a(775121),
-    u = a(775602),
-    m = a(203982),
-    _ = a(700331),
-    p = a(454290),
-    A = a(369254),
-    h = a(847816),
-    g = a(652215),
-    E = a(985018),
-    T = a(20818);
-function S(e, t) {
-    let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    !0 === a || u.A.useReducedMotion ? e.set(t) : e.start(t);
+n.d(t, { default: () => f });
+var a = n(627968),
+    i = n(64700),
+    r = n(503698),
+    o = n.n(r),
+    l = n(935462),
+    c = n(397927),
+    s = n(707685),
+    d = n(775121),
+    _ = n(775602),
+    u = n(203982),
+    m = n(700331),
+    p = n(454290),
+    A = n(369254),
+    b = n(847816),
+    S = n(652215),
+    h = n(985018),
+    g = n(20818);
+function C(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+    !0 === n || _.A.useReducedMotion ? e.set(t) : e.start(t);
 }
 function f(e) {
     let {
             onClose: t,
-            onIndexChange: a,
-            items: l,
+            onIndexChange: n,
+            items: r,
             startingIndex: f,
-            enabledContentHarmTypeFlags: C,
-            shouldHideMediaOptions: y = !1,
-            transitionState: I,
-            ...x
+            enabledContentHarmTypeFlags: T,
+            shouldHideMediaOptions: E = !1,
+            transitionState: y,
+            ...I
         } = e,
-        [M, O] = i.useState(f ?? 0),
-        [N, R] = i.useState(!1),
-        [b, v] = (0, o.zhh)(() => ({
-            scale: u.A.useReducedMotion ? 1 : 0.9,
+        [v, x] = i.useState(f ?? 0),
+        [M, R] = i.useState(!1),
+        [O, N] = (0, c.zhh)(() => ({
+            scale: _.A.useReducedMotion ? 1 : 0.9,
             x: 0,
             y: 0,
             config: { friction: 30, tension: 300 },
@@ -43,92 +43,92 @@ function f(e) {
     i.useEffect(() => {
         if (null != t)
             return (
-                m._.subscribe(g.jej.MEDIA_MODAL_CLOSE, t),
+                u._.subscribe(S.jej.MEDIA_MODAL_CLOSE, t),
                 () => {
-                    m._.unsubscribe(g.jej.MEDIA_MODAL_CLOSE, t);
+                    u._.unsubscribe(S.jej.MEDIA_MODAL_CLOSE, t);
                 }
             );
     }, [t]);
     let j = i.useRef(null);
     i.useEffect(() => {
-        if (I !== j.current)
-            switch (((j.current = I), I)) {
-                case o.ip4.ENTERING:
-                    S(b.scale, 1);
+        if (y !== j.current)
+            switch (((j.current = y), y)) {
+                case c.ip4.ENTERING:
+                    C(O.scale, 1);
                     break;
-                case o.ip4.EXITING:
-                    u.A.useReducedMotion || (S(b.x, 0), S(b.y, 0), S(b.scale, 0.9));
+                case c.ip4.EXITING:
+                    _.A.useReducedMotion || (C(O.x, 0), C(O.y, 0), C(O.scale, 0.9));
             }
-    }, [I, b]),
-        I === o.ip4.HIDDEN && N && (R(!1), b.x.set(0), b.y.set(0), b.scale.set(1)),
+    }, [y, O]),
+        y === c.ip4.HIDDEN && M && (R(!1), O.x.set(0), O.y.set(0), O.scale.set(1)),
         i.useEffect(() => {
-            I === o.ip4.ENTERED && (d.A.disable(), d.A.enableTemp(c.w)),
-                I === o.ip4.HIDDEN && (d.A.disable(), d.A.enableTemp(c.b));
+            y === c.ip4.ENTERED && (d.A.disable(), d.A.enableTemp(s.w)),
+                y === c.ip4.HIDDEN && (d.A.disable(), d.A.enableTemp(s.b));
             let e = () => {
-                    d.A.disable(), I === o.ip4.ENTERED ? d.A.enableTemp(c.w) : d.A.enableTemp(c.b);
+                    d.A.disable(), y === c.ip4.ENTERED ? d.A.enableTemp(s.w) : d.A.enableTemp(s.b);
                 },
                 t = () => {
                     d.A.disableTemp();
                 },
-                a = D.current?.ownerDocument?.defaultView;
+                n = D.current?.ownerDocument?.defaultView;
             return (
-                a?.addEventListener("focus", e),
-                a?.addEventListener("blur", t),
+                n?.addEventListener("focus", e),
+                n?.addEventListener("blur", t),
                 () => {
-                    a?.removeEventListener("focus", e), a?.removeEventListener("blur", t), d.A.disableTemp();
+                    n?.removeEventListener("focus", e), n?.removeEventListener("blur", t), d.A.disableTemp();
                 }
             );
-        }, [I]);
-    let L = i.useCallback(
+        }, [y]);
+    let P = i.useCallback(
             (e) => {
-                O(e), a?.(e), _.l.markActionPerformed(_.N.SELECTED_ITEM_CHANGE);
+                x(e), n?.(e), m.l.markActionPerformed(m.N.SELECTED_ITEM_CHANGE);
             },
-            [a],
+            [n],
         ),
         w = i.useMemo(
             () => ({
-                scale: b.scale,
-                x: b.x,
-                y: b.y,
+                scale: O.scale,
+                x: O.x,
+                y: O.y,
                 setScale(e, t) {
-                    S(b.scale, e, t?.immediate);
+                    C(O.scale, e, t?.immediate);
                 },
-                setOffset(e, t, a) {
-                    S(b.x, e, a?.immediate), S(b.y, t, a?.immediate);
+                setOffset(e, t, n) {
+                    C(O.x, e, n?.immediate), C(O.y, t, n?.immediate);
                 },
-                zoomed: N,
+                zoomed: M,
                 setZoomed(e) {
-                    R(e), S(b.scale, e ? 2.5 : 1), e || (S(b.x, 0), S(b.y, 0));
+                    R(e), C(O.scale, e ? 2.5 : 1), e || (C(O.x, 0), C(O.y, 0));
                 },
             }),
-            [N, b],
+            [M, O],
         );
-    return (0, n.jsx)(o.NPJ, {
-        theme: g.NJ8.MIDNIGHT,
+    return (0, a.jsx)(c.NPJ, {
+        theme: S.NJ8.MIDNIGHT,
         children: (e) =>
-            (0, n.jsx)(o.EOs, {
+            (0, a.jsx)(c.EOs, {
                 "data-migration-pending": !0,
                 hideShadow: !0,
-                className: s()(T.O, e),
-                transitionState: I,
-                ...x,
-                size: o.rIJ.DYNAMIC,
-                animation: r.WM.SUBTLE,
+                className: o()(g.O, e),
+                transitionState: y,
+                ...I,
+                size: c.rIJ.DYNAMIC,
+                animation: l.WM.SUBTLE,
                 fullscreenOnMobile: !1,
                 onClick: t,
-                "aria-label": E.intl.string(E.t.AMTX3j),
+                "aria-label": h.intl.string(h.t.AMTX3j),
                 parentComponent: "MediaViewerModal",
-                children: (0, n.jsxs)(p.f.Provider, {
+                children: (0, a.jsxs)(p.f.Provider, {
                     value: w,
                     children: [
-                        (0, n.jsx)(h.A, { item: l[M], hideMediaOptions: y, onClose: t }),
-                        (0, n.jsx)("div", { style: { display: "none" }, ref: D }),
-                        (0, n.jsx)(A.Ay, {
-                            items: l,
-                            startIndex: M,
-                            onIndexChange: L,
-                            enabledContentHarmTypeFlags: C,
-                            shouldHideMediaOptions: y,
+                        (0, a.jsx)(b.A, { item: r[v], hideMediaOptions: E, onClose: t }),
+                        (0, a.jsx)("div", { style: { display: "none" }, ref: D }),
+                        (0, a.jsx)(A.A, {
+                            items: r,
+                            startIndex: v,
+                            onIndexChange: P,
+                            enabledContentHarmTypeFlags: T,
+                            shouldHideMediaOptions: E,
                         }),
                     ],
                 }),

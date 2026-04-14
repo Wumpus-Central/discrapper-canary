@@ -128,7 +128,7 @@ function F(e) {
                                     color: "text-default",
                                     children: v.intl.string(v.t.qlFrXW),
                                 }),
-                                (0, i.jsx)(h.default, {
+                                (0, i.jsx)(h.A, {
                                     targetElementRef: A,
                                     user: s,
                                     guildId: a,

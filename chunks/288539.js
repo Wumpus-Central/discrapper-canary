@@ -88,7 +88,7 @@ function I(e) {
         ? (0, r.jsx)(u.f5, { value: C, children: M() })
         : (0, r.jsx)(u.f5, {
               value: C,
-              children: (0, r.jsx)(_.default, {
+              children: (0, r.jsx)(_.A, {
                   targetElementRef: N,
                   user: R,
                   guildId: b ?? void 0,

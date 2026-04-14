@@ -143,7 +143,7 @@ function F(e) {
                 o()(null != t, "ExecutedCommand: user cannot be undefined"),
                 o()(null != R, "ExecutedCommand: currentUser cannot be undefined"),
                 o()(null != s, "ExecutedCommand: channel cannot be undefined"),
-                (0, i.jsx)(f.default, {
+                (0, i.jsx)(f.A, {
                     ...e,
                     user: t,
                     currentUser: R,

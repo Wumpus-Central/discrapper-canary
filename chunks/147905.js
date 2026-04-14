@@ -3,7 +3,7 @@ var i = n(627968),
     l = n(64700),
     r = n(503698),
     s = n.n(r),
-    a = n(294426),
+    a = n(445887),
     o = n(311907),
     u = n(397927),
     d = n(442433),
@@ -483,7 +483,7 @@ let z = l.memo(function (e) {
         if (null == p || null == r || null == S) return null;
         let U = u || f;
         return (0, i.jsx)(
-            x.default,
+            x.A,
             {
                 targetElementRef: E,
                 user: p,

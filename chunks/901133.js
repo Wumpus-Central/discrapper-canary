@@ -48,7 +48,7 @@ class f extends l.PureComponent {
         return (
             (n = r?.id === e.id ? E.intl.string(E.t["N9bqD+"]) : E.intl.string(E.t.Z2Y4c9)),
             (0, i.jsx)(
-                u.default,
+                u.A,
                 {
                     targetElementRef: this.partyMemberAvatarRef,
                     user: e,
