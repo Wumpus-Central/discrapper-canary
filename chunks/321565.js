@@ -32,8 +32,8 @@ function f(e) {
             ...x
         } = e,
         [M, O] = i.useState(f ?? 0),
-        [N, b] = i.useState(!1),
-        [R, v] = (0, o.zhh)(() => ({
+        [N, R] = i.useState(!1),
+        [b, v] = (0, o.zhh)(() => ({
             scale: u.A.useReducedMotion ? 1 : 0.9,
             x: 0,
             y: 0,
@@ -48,12 +48,22 @@ function f(e) {
                     m._.unsubscribe(g.jej.MEDIA_MODAL_CLOSE, t);
                 }
             );
-    }, [t]),
+    }, [t]);
+    let j = i.useRef(null);
+    i.useEffect(() => {
+        if (I !== j.current)
+            switch (((j.current = I), I)) {
+                case o.ip4.ENTERING:
+                    S(b.scale, 1);
+                    break;
+                case o.ip4.EXITING:
+                    u.A.useReducedMotion || (S(b.x, 0), S(b.y, 0), S(b.scale, 0.9));
+            }
+    }, [I, b]),
+        I === o.ip4.HIDDEN && N && (R(!1), b.x.set(0), b.y.set(0), b.scale.set(1)),
         i.useEffect(() => {
-            I === o.ip4.ENTERING && S(R.scale, 1),
-                I === o.ip4.ENTERED && (d.A.disable(), d.A.enableTemp(c.w)),
-                I === o.ip4.HIDDEN && (S(R.scale, 0.9), d.A.disable(), d.A.enableTemp(c.b)),
-                I === o.ip4.EXITING && S(R.scale, 0.9);
+            I === o.ip4.ENTERED && (d.A.disable(), d.A.enableTemp(c.w)),
+                I === o.ip4.HIDDEN && (d.A.disable(), d.A.enableTemp(c.b));
             let e = () => {
                     d.A.disable(), I === o.ip4.ENTERED ? d.A.enableTemp(c.w) : d.A.enableTemp(c.b);
                 },
@@ -68,30 +78,30 @@ function f(e) {
                     a?.removeEventListener("focus", e), a?.removeEventListener("blur", t), d.A.disableTemp();
                 }
             );
-        }, [I, R]);
-    let j = i.useCallback(
+        }, [I]);
+    let L = i.useCallback(
             (e) => {
                 O(e), a?.(e), _.l.markActionPerformed(_.N.SELECTED_ITEM_CHANGE);
             },
             [a],
         ),
-        L = i.useMemo(
+        w = i.useMemo(
             () => ({
-                scale: R.scale,
-                x: R.x,
-                y: R.y,
+                scale: b.scale,
+                x: b.x,
+                y: b.y,
                 setScale(e, t) {
-                    S(R.scale, e, t?.immediate);
+                    S(b.scale, e, t?.immediate);
                 },
                 setOffset(e, t, a) {
-                    S(R.x, e, a?.immediate), S(R.y, t, a?.immediate);
+                    S(b.x, e, a?.immediate), S(b.y, t, a?.immediate);
                 },
                 zoomed: N,
                 setZoomed(e) {
-                    b(e), S(R.scale, e ? 2.5 : 1), e || (S(R.x, 0), S(R.y, 0));
+                    R(e), S(b.scale, e ? 2.5 : 1), e || (S(b.x, 0), S(b.y, 0));
                 },
             }),
-            [N, R],
+            [N, b],
         );
     return (0, n.jsx)(o.NPJ, {
         theme: g.NJ8.MIDNIGHT,
@@ -109,14 +119,14 @@ function f(e) {
                 "aria-label": E.intl.string(E.t.AMTX3j),
                 parentComponent: "MediaViewerModal",
                 children: (0, n.jsxs)(p.f.Provider, {
-                    value: L,
+                    value: w,
                     children: [
                         (0, n.jsx)(h.A, { item: l[M], hideMediaOptions: y, onClose: t }),
                         (0, n.jsx)("div", { style: { display: "none" }, ref: D }),
                         (0, n.jsx)(A.Ay, {
                             items: l,
                             startIndex: M,
-                            onIndexChange: j,
+                            onIndexChange: L,
                             enabledContentHarmTypeFlags: C,
                             shouldHideMediaOptions: y,
                         }),
