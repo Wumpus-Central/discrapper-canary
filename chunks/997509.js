@@ -172,9 +172,10 @@ let y = new l.A("GuildSettingsActionCreators"),
                     profile: b,
                     moderatorReportingEnabled: D,
                     officialMessageColor: L,
+                    verificationRoleId: w,
                 } = t,
-                w = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                M = {
+                M = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                x = {
                     name: n,
                     description: r,
                     icon: i,
@@ -199,13 +200,14 @@ let y = new l.A("GuildSettingsActionCreators"),
                     profile: null != b ? (0, u.N)(b) : b,
                     moderator_reporting_enabled: D,
                     official_message_color: L,
+                    verification_role_id: w,
                 };
             return (
                 a.h.dispatch({ type: "GUILD_SETTINGS_SUBMIT" }),
                 s.Bo.patch({
                     url: T.Rsh.GUILD(e),
-                    query: { for_discovery: w.isForDiscovery },
-                    body: M,
+                    query: { for_discovery: M.isForDiscovery },
+                    body: x,
                     oldFormErrors: !0,
                     rejectWithError: !1,
                 }).then(
@@ -217,7 +219,7 @@ let y = new l.A("GuildSettingsActionCreators"),
                         if (
                             (a.h.dispatch({ type: "GUILD_SETTINGS_SUBMIT_FAILURE", errors: e.body }),
                             y.error("Failed to save guild settings", { errors: e.body }),
-                            w.throwErr)
+                            M.throwErr)
                         )
                             throw e.body;
                     },

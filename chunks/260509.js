@@ -59,6 +59,7 @@ let u = "Guild",
         profile: null,
         premiumFeatures: null,
         moderatorReporting: null,
+        verificationRoleId: null,
         gameApplicationIds: null,
         officialMessageColor: null,
     });

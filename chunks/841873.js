@@ -35,7 +35,7 @@ n.d(t, {
     Oy: () => q,
     PJ: () => tr,
     PR: () => tM,
-    Ph: () => N,
+    Ph: () => v,
     Py: () => tF,
     QH: () => ep,
     QR: () => tx,
@@ -48,6 +48,7 @@ n.d(t, {
     Rj: () => tD,
     Ry: () => eL,
     SJ: () => eC,
+    Sc: () => tO,
     Tb: () => Q,
     Tp: () => tg,
     U8: () => tG,
@@ -58,7 +59,6 @@ n.d(t, {
     Y6: () => th,
     YN: () => ew,
     ZA: () => K,
-    ZB: () => tO,
     ZJ: () => H,
     _U: () => ee,
     _h: () => ts,
@@ -78,7 +78,6 @@ n.d(t, {
     eW: () => eb,
     fb: () => t_,
     gG: () => ey,
-    gK: () => tR,
     gM: () => X,
     gR: () => eh,
     hI: () => eH,
@@ -94,22 +93,23 @@ n.d(t, {
     l0: () => to,
     lI: () => i,
     n8: () => Z,
+    ni: () => tC,
+    nv: () => tR,
     nx: () => k,
     o: () => ec,
     p8: () => e5,
     pD: () => ez,
     qN: () => tH,
     qv: () => tP,
-    rf: () => y,
+    rf: () => R,
     rk: () => ti,
     rl: () => tb,
     s5: () => eE,
     sQ: () => ed,
     sW: () => tV,
     ss: () => tl,
-    t7: () => R,
+    t7: () => C,
     tZ: () => eX,
-    ul: () => tC,
     uo: () => eO,
     uw: () => tn,
     v: () => eP,
@@ -117,7 +117,7 @@ n.d(t, {
     vF: () => eR,
     vU: () => tU,
     vV: () => eG,
-    vb: () => C,
+    vb: () => N,
     w2: () => te,
     w6: () => td,
     w9: () => eo,
@@ -127,7 +127,7 @@ n.d(t, {
     x0: () => tf,
     x6: () => er,
     xV: () => tE,
-    xy: () => v,
+    xy: () => y,
     yc: () => tj,
     yq: () => eK,
     zE: () => tL,
@@ -276,10 +276,7 @@ function S(e) {
     let t = r.__wbindgen_export_4.get(e);
     return r.__externref_table_dealloc(e), t;
 }
-function y(e, t, n, i, s) {
-    r.installLogCallback(e, t, n, i, s);
-}
-function v(e) {
+function y(e) {
     let t, n;
     try {
         let i = r.generateLaunchSignature(e);
@@ -288,14 +285,17 @@ function v(e) {
         r.__wbindgen_free(t, n, 1);
     }
 }
-function N() {
+function v() {
     return r.initLibdiscore();
 }
-function C() {
+function N() {
     r.crash();
 }
-function R(e, t) {
+function C(e, t) {
     return r.rustMultiply(e, t);
+}
+function R(e, t, n, i, s) {
+    r.installLogCallback(e, t, n, i, s);
 }
 function O(e, t) {
     r._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h075cb6f1f85a8e52(

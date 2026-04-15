@@ -69,6 +69,7 @@ function c(e, t, n) {
         profile: e.profile ?? null,
         premiumFeatures: null != e.premium_features ? N(e.premium_features) : null,
         moderatorReporting: null != e.moderator_reporting ? R(e.moderator_reporting) : null,
+        verificationRoleId: e.verification_role_id ?? null,
         gameApplicationIds: e.game_application_ids ?? null,
         officialMessageColor: e.official_message_color ?? null,
     });
@@ -217,6 +218,7 @@ function I(e) {
         moderatorReporting: e.moderatorReporting ?? null,
         gameApplicationIds: e.gameApplicationIds ?? null,
         officialMessageColor: e.officialMessageColor ?? null,
+        verificationRoleId: e.verificationRoleId ?? null,
     });
 }
 function T(e) {
@@ -262,6 +264,7 @@ function T(e) {
         official_message_color: e.officialMessageColor,
         incidents_data: null,
         game_application_ids: e.gameApplicationIds,
+        verification_role_id: e.verificationRoleId,
     };
 }
 function S(e) {

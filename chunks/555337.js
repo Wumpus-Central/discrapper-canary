@@ -49,6 +49,7 @@ let U = !0,
         "publicUpdatesChannelId",
         "premiumProgressBarEnabled",
         "officialMessageColor",
+        "verificationRoleId",
     ],
     F = [
         "brandColorPrimary",
