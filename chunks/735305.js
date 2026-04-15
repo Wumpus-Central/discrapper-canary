@@ -26,7 +26,7 @@ function g(e) {
             onReturn: m,
             continueSessionToInitialStep: g,
         } = e,
-        A = (0, u.t)((e) => e.selectedSkuId),
+        A = (0, u.t4)((e) => e.selectedSkuId),
         {
             contextMetadata: I,
             paymentSources: T,
@@ -42,8 +42,8 @@ function g(e) {
             isPremiumGroupPurchase: L,
             isEligibleForTrial: w,
         } = (0, d.P5)(),
-        { step: M, previousStep: x } = (0, p.Ay)(),
-        { isGift: P } = (0, c.Pv)(),
+        { step: M, previousStep: P } = (0, p.Ay)(),
+        { isGift: x } = (0, c.Pv)(),
         k = {
             ...(0, a._V)(),
             paymentSources: T,
@@ -54,7 +54,7 @@ function g(e) {
             purchaseErrorBlockRef: C,
             paymentAuthenticationState: R,
             selectedSkuId: A,
-            isGift: P,
+            isGift: x,
         },
         U = () => {
             l(Object.values(T).length < 1 && null == n ? _.pn.PLAN_SELECT : _.pn.REVIEW, {
@@ -66,8 +66,8 @@ function g(e) {
     let F = (0, s.A)(() => Date.now(), [M]),
         V = (0, s.A)(
             () =>
-                null != g && null == x ? (D ? _.pn.PAYMENT_ELEMENT : g) : D ? _.pn.PAYMENT_ELEMENT : _.pn.PAYMENT_TYPE,
-            [g, x, D],
+                null != g && null == P ? (D ? _.pn.PAYMENT_ELEMENT : g) : D ? _.pn.PAYMENT_ELEMENT : _.pn.PAYMENT_TYPE,
+            [g, P, D],
         );
     return (0, a.Y)({
         paymentModalArgs: k,
@@ -96,7 +96,7 @@ function g(e) {
             });
         },
         isEligibleForTrial: w,
-        allowDesktopRedirectPurchase: E(A, P, O),
+        allowDesktopRedirectPurchase: E(A, x, O),
         continueSessionToInitialStep: g,
         shouldUseManaModal: !0,
     });

@@ -16,7 +16,7 @@ var l = n(627968),
     I = n(338042);
 function P(e) {
     let { handleStepChange: t, referralTrialOfferId: n } = e,
-        { setSelectedSkuId: i, setSelectedPlanId: s } = (0, u.t)((e) => ({
+        { setSelectedSkuId: i, setSelectedPlanId: s } = (0, u.t4)((e) => ({
             setSelectedSkuId: e.setSelectedSkuId,
             setSelectedPlanId: e.setSelectedPlanId,
         })),

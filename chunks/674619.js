@@ -69,7 +69,7 @@ function B(e) {
     i.useEffect(() => {
         S.A.isLoadedForPremiumSKUs() || s.h.wait(() => (0, a.zS)());
     }, []);
-    let W = (0, I.t)((e) => e.selectedSkuId),
+    let W = (0, I.t4)((e) => e.selectedSkuId),
         { purchaseState: K } = (0, x.P5)(),
         z = (0, N.bB)(),
         { isGift: V, giftMessage: q } = (0, P.Pv)(),
@@ -115,7 +115,7 @@ function B(e) {
 }
 function W(e) {
     let { initialPlanId: t, handleStepChange: n, referralTrialOfferId: i } = e,
-        r = (0, I.t)((e) => e.selectedSkuId),
+        r = (0, I.t4)((e) => e.selectedSkuId),
         { paymentSources: s } = (0, x.P5)(),
         a = (0, C.A)(),
         { isGift: o, claimableRewards: u } = (0, P.Pv)(),

@@ -6,7 +6,7 @@ var r = n(927578),
     a = n(156312),
     o = n(788868);
 function l(e) {
-    let t = (0, i.t)((e) => e.selectedSkuId),
+    let t = (0, i.t4)((e) => e.selectedSkuId),
         { startedPaymentFlowWithPaymentSourcesRef: n } = (0, a.P5)(),
         { isGift: r } = (0, s.Pv)();
     return u({ isTrial: e ?? !1, isGift: r, selectedSkuId: t, startedPaymentFlowWithPaymentSources: n.current });

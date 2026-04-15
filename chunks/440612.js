@@ -27,7 +27,7 @@ let p = (e) => {
                 analyticsLocations: m,
                 analyticsSourceLocation: E,
             } = e,
-            g = (0, o.t)((e) => e.selectedSkuId),
+            g = (0, o.t4)((e) => e.selectedSkuId),
             { setPurchaseState: A } = (0, l.P5)(),
             I = (0, c.gN)(),
             T = (0, r.useRef)(I),

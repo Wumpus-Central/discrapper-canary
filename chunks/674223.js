@@ -39,7 +39,7 @@ function b(e) {
 function v(e) {
     let { handleStepChange: n, handleClose: t } = e,
         { customGiftMessage: i = "", setCustomGiftMessage: o, giftRecipient: f } = (0, g.Pv)(),
-        j = (0, x.t)((e) => e.selectedSkuId),
+        j = (0, x.t4)((e) => e.selectedSkuId),
         I = (0, l.bG)([u.default], () => u.default.getCurrentUser()),
         T = (0, l.bG)([p.A], () => (null != j ? p.A.get(j) : null), [j]),
         v = (0, r.A)(),

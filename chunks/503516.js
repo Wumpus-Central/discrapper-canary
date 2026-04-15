@@ -38,9 +38,9 @@ let O = (e) => {
             giftingOrigin: L,
             setValidatingGiftRecipient: w,
         } = (0, T.Pv)(),
-        M = (0, I.t)((e) => e.selectedSkuId),
-        { paymentSourceId: x } = (0, S.P5)(),
-        P = (0, y.Hf)(),
+        M = (0, I.t4)((e) => e.selectedSkuId),
+        { paymentSourceId: P } = (0, S.P5)(),
+        x = (0, y.Hf)(),
         k = (0, y.RR)(),
         U = (0, y.gU)(),
         G = (0, i.bG)([g.default], () => g.default.getCurrentUser()),
@@ -68,8 +68,8 @@ let O = (e) => {
         renderLeftColumn: () => (0, r.jsx)("div", { className: R.qL, children: (0, r.jsx)(h.t, { isShopGift: !0 }) }),
         renderRightColumn: () => {
             let e = (0, c.pA)({
-                selectedSkuPricePreview: P,
-                paymentSourceId: x,
+                selectedSkuPricePreview: x,
+                paymentSourceId: P,
                 selectedSkuId: M,
                 skuPricePreviewsById: k,
                 skusById: U,

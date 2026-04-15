@@ -7,7 +7,7 @@ var i = n(525723),
     a = n(516248),
     o = n(985018);
 let l = () => {
-    let e = (0, s.t)((e) => e.selectedSkuId);
+    let e = (0, s.t4)((e) => e.selectedSkuId);
     return (0, i.vw)({ skuId: e }) ? o.intl.format(o.t.fsOXXO, {}) : null;
 };
 function u() {

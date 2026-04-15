@@ -41,7 +41,7 @@ var l = n(627968),
     B = n(994560);
 function W(e) {
     let { handleStepChange: t, initialPlanId: n, planGroup: r, subscriptionTier: a, trialId: W, handleClose: K } = e,
-        z = (0, j.t)((e) => e.selectedSkuId),
+        z = (0, j.t4)((e) => e.selectedSkuId),
         {
             activeSubscription: V,
             defaultPlanId: q,

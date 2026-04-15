@@ -41,8 +41,8 @@ var r = n(627968),
     L = n(735164),
     w = n(363476),
     M = n(156962),
-    x = n(871181),
-    P = n(318007),
+    P = n(871181),
+    x = n(318007),
     k = n(958720),
     U = n(285719),
     G = n(788868),
@@ -119,7 +119,7 @@ let W = () => {
     },
     K = (e) => {
         let { selectedPlanId: t, priceOptions: n, planOptions: r, subscriptionPeriodEnd: s, showTotal: u } = e,
-            { selectedSkuId: c, setSelectedPlanId: d } = (0, _.t)((e) => ({
+            { selectedSkuId: c, setSelectedPlanId: d } = (0, _.t4)((e) => ({
                 selectedSkuId: e.selectedSkuId,
                 setSelectedPlanId: e.setSelectedPlanId,
             })),
@@ -136,11 +136,11 @@ let W = () => {
                 selectedGiftStyle: L,
                 customGiftMessage: w,
                 setCustomGiftMessage: M,
-                claimableRewards: x,
-                setSelectedGiftingPromotionReward: P,
+                claimableRewards: P,
+                setSelectedGiftingPromotionReward: x,
             } = (0, f.Pv)(),
             k = (0, h.A)(),
-            U = (0, O.kz)(k, R && (0, T.Ik)(D), x),
+            U = (0, O.kz)(k, R && (0, T.Ik)(D), P),
             F = (0, A.tA)({ giftRecipient: D, isGift: R }),
             B = E;
         a()(void 0 !== B, "should not be undefined");
@@ -170,8 +170,8 @@ let W = () => {
             }
         }, [J, R, r, H, z]),
             i.useEffect(() => {
-                U && null != x && x.length > 0 && P(x[0]);
-            }, [x, P, U]);
+                U && null != P && P.length > 0 && x(P[0]);
+            }, [P, x, U]);
         let { ref: ee, ...et } = (0, l._u)(),
             en = $?.id != null ? (0, y.y8)($.id, !1, R, q) : void 0,
             { ipCountryCode: er } = (0, b.A)(),
@@ -251,7 +251,7 @@ let W = () => {
             } = e,
             g = () => {
                 if ((0, T.lo)(t) === T.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null != i)
-                    return (0, r.jsx)(x.A, {
+                    return (0, r.jsx)(P.A, {
                         className: H.iX,
                         innerClassName: H.pt,
                         onTextChange: (e) => i(e),
@@ -264,7 +264,7 @@ let W = () => {
             return (0, r.jsxs)("div", {
                 className: H.mh,
                 children: [
-                    (0, r.jsx)("div", { className: H.MU, children: null != s && (0, r.jsx)(P.t, {}) }),
+                    (0, r.jsx)("div", { className: H.MU, children: null != s && (0, r.jsx)(x.t, {}) }),
                     (0, r.jsxs)("div", {
                         className: H.Tc,
                         children: [
@@ -434,8 +434,8 @@ function et(e) {
             discountedPlanRegularPrice: D,
             hasSeenCollectiblesInSkuSelect: L,
             userTrialOffer: w,
-            shouldShowUpdatedPaymentModal: x,
-            discountAmountOff: P,
+            shouldShowUpdatedPaymentModal: P,
+            discountAmountOff: x,
             isPrepaid: k,
             radioGroupRef: U,
             radioGroupProps: F,
@@ -447,7 +447,7 @@ function et(e) {
         } = K({ selectedPlanId: n, priceOptions: s, planOptions: a, subscriptionPeriodEnd: o, showTotal: l }),
         et = (0, C.ds)(),
         en = (e, t, i) =>
-            x
+            P
                 ? t
                     ? (0, r.jsxs)("div", {
                           children: [
@@ -459,7 +459,7 @@ function et(e) {
                               (0, r.jsx)("hr", { className: H.RA }),
                           ],
                       })
-                    : i && null != P && null != D && n === G.gD.PREMIUM_MONTH_TIER_2
+                    : i && null != x && null != D && n === G.gD.PREMIUM_MONTH_TIER_2
                       ? (0, r.jsxs)("div", {
                             children: [
                                 (0, r.jsx)(u.Text, {
@@ -467,7 +467,7 @@ function et(e) {
                                     className: H.Tz,
                                     children: B.intl.format(B.t["nG7g/E"], {
                                         numMonths: O?.discount.user_usage_limit ?? "",
-                                        discountedPrice: (0, v.$g)(D.amount - P, D.currency),
+                                        discountedPrice: (0, v.$g)(D.amount - x, D.currency),
                                         regularPrice: (0, v.$g)(D.amount, D.currency),
                                     }),
                                 }),
@@ -488,10 +488,10 @@ function et(e) {
                 setPlanId: f,
                 selectedPlan: p,
                 thePriceOptions: I,
-                shouldShowUpdatedPaymentModal: x,
+                shouldShowUpdatedPaymentModal: P,
                 isEligibleForTrial: T,
                 isPlansEligibleForDiscount: b,
-                discountAmountOff: P,
+                discountAmountOff: x,
             }),
         { showFractionalPremiumBanner: ei, fractionalPremiumInfo: es } = (0, E._V)({
             premiumSubscription: h,
@@ -542,7 +542,7 @@ function et(e) {
                 selectedPlanPrice: V,
                 isPrepaid: k,
                 shouldShowHRKEuroWarning: W,
-                shouldShowUpdatedPaymentModal: x,
+                shouldShowUpdatedPaymentModal: P,
                 showTotal: l,
                 shouldShowTotalInSubscriptionFlow: $,
             }),

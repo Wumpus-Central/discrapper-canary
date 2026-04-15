@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { P: () => d, t: () => u });
+n.d(t, { F0: () => f, PM: () => d, sw: () => _, t4: () => u });
 var r = n(627968),
     i = n(64700),
     s = n(942381),
@@ -16,6 +16,12 @@ function c() {
             selectedPlanId: void 0,
             setSelectedSkuId: (t) => e({ selectedSkuId: t ?? void 0 }),
             setSelectedPlanId: (t) => e({ selectedPlanId: t ?? void 0 }),
+            checkoutInvoicePreview: null,
+            setCheckoutInvoicePreview: (t) => e({ checkoutInvoicePreview: t ?? null }),
+            discountInvoicePreview: null,
+            setDiscountInvoicePreview: (t) => {
+                e({ discountInvoicePreview: t ?? null });
+            },
         }),
         s.x,
     );
@@ -25,3 +31,17 @@ function d(e) {
         [n] = i.useState(c);
     return (0, r.jsx)(o, { value: n, children: t });
 }
+let _ = () =>
+        u((e) => {
+            let { checkoutInvoicePreview: t } = e;
+            return t;
+        }),
+    f = (e) => {
+        let t = u((e) => {
+            let { setCheckoutInvoicePreview: t } = e;
+            return t;
+        });
+        i.useEffect(() => {
+            t(e);
+        }, [e, t]);
+    };

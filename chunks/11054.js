@@ -22,7 +22,7 @@ var r = n(627968),
 function S(e) {
     let { handleClose: t } = e,
         { analyticsLocations: n } = (0, c.Ay)(),
-        s = (0, d.t)((e) => e.selectedSkuId),
+        s = (0, d.t4)((e) => e.selectedSkuId),
         { application: S, entitlementsGranted: y } = (0, f.P5)(),
         v = (0, h.gU)(),
         { isGift: N, giftRecipient: C } = (0, _.Pv)();

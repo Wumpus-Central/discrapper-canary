@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => x });
+n.d(t, { A: () => P });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -59,15 +59,15 @@ let M = (e) => {
         );
     return (0, r.jsx)(f.lo, { onBackClick: t ? n : void 0, primaryButtonProps: A });
 };
-function x(e) {
+function P(e) {
     let {
             premiumSubscription: t,
             setPurchaseState: n,
             onBack: s,
             onNext: o,
             legalTermsNodeRef: f,
-            flashLegalTerms: x,
-            invoiceError: P,
+            flashLegalTerms: P,
+            invoiceError: x,
             planError: k,
             baseAnalyticsData: U,
             flowStartTime: G,
@@ -81,17 +81,19 @@ function x(e) {
             isTrial: K = !1,
             onPaymentSourceAdd: $,
         } = e,
-        z = (0, y.t)((e) => e.selectedSkuId),
+        { selectedSkuId: z, invoicePreview: q } = (0, y.t4)((e) => {
+            let { selectedSkuId: t, checkoutInvoicePreview: n } = e;
+            return { selectedSkuId: t, invoicePreview: n };
+        }),
         {
-            priceOptions: q,
-            setHasAcceptedTerms: Z,
-            setPurchaseError: X,
-            purchaseType: Q,
-            paymentSourceId: J,
-            paymentSources: ee,
-            referralCode: et,
-            contextMetadata: en,
-            invoicePreview: er,
+            priceOptions: Z,
+            setHasAcceptedTerms: X,
+            setPurchaseError: Q,
+            purchaseType: J,
+            paymentSourceId: ee,
+            paymentSources: et,
+            referralCode: en,
+            contextMetadata: er,
         } = (0, N.P5)(),
         ei = (0, R.A)(),
         es = (0, O.gU)(),
@@ -119,29 +121,29 @@ function x(e) {
             (em.sound_id = ed?.soundId));
     let eE = ei?.id,
         { analyticsLocations: eg } = (0, d.Ay)(),
-        eA = (0, b.W)(ee, J),
+        eA = (0, b.W)(et, ee),
         [eI, eT] = i.useState(!1),
         [eS, ey] = i.useState(!1),
         { hasEntitlements: ev } = (0, E.X)(eE, eo),
-        eN = (0, T.J$)(q.paymentSourceId),
+        eN = (0, T.J$)(Z.paymentSourceId),
         eC = (0, h.l)(),
         eR = (0, u.bG)([S.A], () => S.A.currentOrderId),
         eO = null,
         eb = null;
-    if (Q === L.VVm.ONE_TIME) {
+    if (J === L.VVm.ONE_TIME) {
         l()(null != z, "SKU must be selected for one-time purchases"),
             (eO = es[z] ?? null),
             l()(null != eO, "SKU must exist and be fetched.");
         let e = ea[z],
-            t = J ?? A.B;
+            t = ee ?? A.B;
         eb = null != e ? (e[t] ?? e[A.B]) : null;
     }
     let eD = async () => {
             await (0, C.l)({
                 setPurchaseState: n,
-                setHasAcceptedTerms: Z,
+                setHasAcceptedTerms: X,
                 setIsSubmitting: eT,
-                setPurchaseError: X,
+                setPurchaseError: Q,
                 hasRedirectURL: eS,
                 setHasRedirectURL: ey,
                 isGift: eo,
@@ -152,7 +154,7 @@ function x(e) {
                 subscriptionPlan: ei,
                 planGroup: V,
                 trialId: F,
-                priceOptions: q,
+                priceOptions: Z,
                 paymentSource: eA,
                 isPrepaidPaymentPastDue: eC,
                 openInvoiceId: H,
@@ -161,23 +163,23 @@ function x(e) {
                 metadata: j,
                 sku: eO,
                 skuPricePreview: eb,
-                purchaseType: Q,
-                referralCode: et,
-                loadId: en.loadId,
+                purchaseType: J,
+                referralCode: en,
+                loadId: er.loadId,
                 giftInfoOptions: em,
-                invoicePreview: er,
+                invoicePreview: q,
                 orderId: eR,
             });
         },
         eL = (0, _.D7)({ location: "PaymentModalReviewStepFooter" }),
-        ew = null != H || (Q === L.VVm.ONE_TIME && !eo),
+        ew = null != H || (J === L.VVm.ONE_TIME && !eo),
         eM = Y && !ew,
-        ex = {
+        eP = {
             legalTermsNodeRef: f,
-            invoiceError: P,
+            invoiceError: x,
             planError: k,
             disablePurchase: W,
-            flashLegalTerms: x,
+            flashLegalTerms: P,
             isSubmitting: eI,
             premiumSubscription: t,
             isGift: eo,
@@ -190,14 +192,14 @@ function x(e) {
             onPaymentSourceAdd: $,
         };
     return eL
-        ? (0, r.jsx)(M, { ...ex, selectedSkuId: z, showBackButton: eM, onBackClick: s })
+        ? (0, r.jsx)(M, { ...eP, selectedSkuId: z, showBackButton: eM, onBackClick: s })
         : (0, r.jsx)(c.jlY, {
               children: (0, r.jsxs)("div", {
                   className: a()(w.eT, { [w.U3]: eM }),
                   children: [
                       eM ? (0, r.jsx)("div", { className: w.aX, children: (0, r.jsx)(m.A, { onClick: s }) }) : null,
                       (0, r.jsx)(D.A, {}),
-                      (0, r.jsx)(g.Ay, { ...ex }),
+                      (0, r.jsx)(g.Ay, { ...eP }),
                   ],
               }),
           });

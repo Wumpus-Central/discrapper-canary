@@ -21,7 +21,7 @@ var l = n(627968),
     h = n(706360);
 function g(e) {
     let { handleStepChange: t } = e,
-        n = (0, S.t)((e) => e.selectedSkuId),
+        n = (0, S.t4)((e) => e.selectedSkuId),
         r = (0, x.A)(),
         g = (0, T.bB)(),
         { setSelectedGiftingPromotionReward: f, selectedGiftingPromotionReward: j, claimableRewards: R } = (0, _.Pv)(),

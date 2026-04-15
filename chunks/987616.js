@@ -15,7 +15,7 @@ function u() {
     }, [e]);
 }
 function c() {
-    let e = (0, o.t)((e) => e.selectedSkuId),
+    let e = (0, o.t4)((e) => e.selectedSkuId),
         t = u();
     return null != e ? t[e] : void 0;
 }
@@ -28,7 +28,7 @@ function d() {
     }, [e]);
 }
 function _() {
-    let e = (0, o.t)((e) => e.selectedSkuId),
+    let e = (0, o.t4)((e) => e.selectedSkuId),
         { paymentSourceId: t } = (0, l.P5)(),
         n = d();
     return r.useMemo(() => {

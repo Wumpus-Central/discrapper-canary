@@ -24,7 +24,7 @@ var r = n(627968),
     v = n(985018);
 function N(e) {
     let { handleClose: t, analyticsLocations: n } = e,
-        s = (0, h.t)((e) => e.selectedSkuId),
+        s = (0, h.t4)((e) => e.selectedSkuId),
         {
             application: l,
             paymentError: u,
@@ -73,7 +73,7 @@ function C(e) {
         } = (0, m.Pv)(),
         T = (0, o.bG)([u.A], () => u.A.useReducedMotion),
         S = i.useRef(null),
-        v = (0, h.t)((e) => e.selectedSkuId),
+        v = (0, h.t4)((e) => e.selectedSkuId),
         C = (0, o.bG)([c.A], () => c.A.getProduct(v)),
         { confettiColors: R } = (0, d.A)(C?.styles);
     return (

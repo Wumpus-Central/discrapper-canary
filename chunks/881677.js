@@ -15,7 +15,7 @@ var r = n(627968),
     h = n(652215);
 function m(e) {
     let { handleStepChange: t } = e,
-        n = (0, l.t)((e) => e.selectedSkuId),
+        n = (0, l.t4)((e) => e.selectedSkuId),
         { blockedPayments: m, paymentSources: E, hasFetchedPaymentSources: g, application: A } = (0, c.P5)(),
         I = (0, f.gU)(),
         T = (0, f.Hu)(),

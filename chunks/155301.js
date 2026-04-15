@@ -15,7 +15,7 @@ function p(e) {
             selectedSkuId: x,
             setSelectedSkuId: g,
             setSelectedPlanId: h,
-        } = (0, o.t)((e) => ({
+        } = (0, o.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             setSelectedSkuId: e.setSelectedSkuId,
             setSelectedPlanId: e.setSelectedPlanId,

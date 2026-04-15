@@ -32,13 +32,13 @@ function D(e, t) {
 }
 function L(e) {
     let { renderHeader: t, handleClose: n } = e,
-        s = (0, g.t)((e) => e.selectedSkuId),
+        s = (0, g.t4)((e) => e.selectedSkuId),
         {
             purchaseState: L,
             purchaseType: w,
             enablePremiumBrandRefresh: M,
-            isDisplayingWowMomentConfirmation: x,
-            isPremiumGroupPurchase: P,
+            isDisplayingWowMomentConfirmation: P,
+            isPremiumGroupPurchase: x,
             isEligibleForTrial: k,
             isEligibleForDiscount: U,
         } = (0, I.P5)(),
@@ -95,10 +95,10 @@ function L(e) {
                           giftRecipient: Y,
                           isEligibleForTrial: k,
                           enablePremiumBrandRefresh: M,
-                          isDisplayingWowMomentConfirmation: x,
-                          isPremiumGroupPurchase: P,
+                          isDisplayingWowMomentConfirmation: P,
+                          isPremiumGroupPurchase: x,
                       }))),
             e
         );
-    }, [Q, W, B, j, n, L, t, G, F, s, V, k, U, z, X, q, w, H, Y, M, x, P]);
+    }, [Q, W, B, j, n, L, t, G, F, s, V, k, U, z, X, q, w, H, Y, M, P, x]);
 }

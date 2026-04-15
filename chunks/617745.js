@@ -22,7 +22,7 @@ let T = 1e3,
     S = (e) => {
         let t,
             { step: n, onPurchaseComplete: s, onHandoffFailure: u } = e,
-            { setSelectedSkuId: S, setSelectedPlanId: y } = (0, d.t)((e) => ({
+            { setSelectedSkuId: S, setSelectedPlanId: y } = (0, d.t4)((e) => ({
                 setSelectedSkuId: e.setSelectedSkuId,
                 setSelectedPlanId: e.setSelectedPlanId,
             })),

@@ -41,7 +41,7 @@ function v(e) {
             followupSKUInfo: D,
             continueSessionToInitialStep: L,
         } = e,
-        F = (0, h.t)((e) => e.selectedSkuId),
+        F = (0, h.t4)((e) => e.selectedSkuId),
         {
             activeSubscription: H,
             paymentSources: B,

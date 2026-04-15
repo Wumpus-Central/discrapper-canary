@@ -14,7 +14,7 @@ var i = n(284009),
     E = n(985018);
 function S(e) {
     let { handleStepChange: t, handleClose: n } = e,
-        { selectedSkuId: i, setSelectedPlanId: S } = (0, u.t)((e) => ({
+        { selectedSkuId: i, setSelectedPlanId: S } = (0, u.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             setSelectedPlanId: e.setSelectedPlanId,
         })),

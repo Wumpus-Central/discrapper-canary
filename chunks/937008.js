@@ -25,7 +25,7 @@ function I(e) {
             children: A,
             additionalUserIds: I,
         } = e,
-        T = (0, d.t)((e) => e.selectedSkuId),
+        T = (0, d.t4)((e) => e.selectedSkuId),
         [S, y] = i.useState(n),
         [v, N] = i.useState(),
         [C, R] = i.useState(!1),
@@ -35,7 +35,7 @@ function I(e) {
     let [D, L] = i.useState(b),
         w = (0, a.JW)(),
         M = null != w && w.length > 0,
-        [x, P] = i.useState(),
+        [P, x] = i.useState(),
         [k, U] = i.useState(
             t && (0, c.lo)(S) === c.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == u ? p.intl.string(p.t.ZkOo1U) : u,
         ),
@@ -65,9 +65,9 @@ function I(e) {
         i.useEffect(() => {
             if (M) {
                 let e = o.default.getCurrentUser();
-                l.default.track(_.HAw.GIFT_PROMOTION_REWARD_SELECTED, { user_id: e?.id, reward_sku_id: x });
+                l.default.track(_.HAw.GIFT_PROMOTION_REWARD_SELECTED, { user_id: e?.id, reward_sku_id: P });
             }
-        }, [x, M]),
+        }, [P, M]),
         (0, r.jsx)(E.Provider, {
             value: {
                 isGift: t,
@@ -93,8 +93,8 @@ function I(e) {
                 giftMessageError: $,
                 giftingOrigin: g,
                 claimableRewards: w,
-                selectedGiftingPromotionReward: x,
-                setSelectedGiftingPromotionReward: P,
+                selectedGiftingPromotionReward: P,
+                setSelectedGiftingPromotionReward: x,
                 additionalUserIds: I,
             },
             children: A,

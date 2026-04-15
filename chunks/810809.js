@@ -16,7 +16,7 @@ var i = n(284009),
     h = n(660846);
 function m(e) {
     let { handleClose: t } = e,
-        n = (0, l.t)((e) => e.selectedSkuId),
+        n = (0, l.t4)((e) => e.selectedSkuId),
         { application: i } = (0, c.P5)(),
         m = (0, d.gU)(),
         { isGift: E, giftRecipient: g } = (0, u.Pv)();
