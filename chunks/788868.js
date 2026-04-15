@@ -448,7 +448,6 @@ var eN = (function (e) {
             (e.EMPTY_STICKER_PICKER_UPSELL = "empty_sticker_picker_upsell"),
             (e.STREAM_QUALITY_INDICATOR = "stream_quality_indicator"),
             (e.GIFT_STREAM_QUALITY_INDICATOR = "gift_stream_quality_indicator"),
-            (e.STREAM_QUALITY_UPSELL = "stream_quality_upsell"),
             (e.MESSAGE_LENGTH_UPSELL = "message_length_upsell"),
             (e.MESSAGE_LENGTH_IN_EDITOR_UPSELL = "message_length_in_editor_upsell"),
             (e.CUSTOM_PROFILE_UPSELL = "custom profiles upsell modal"),
