@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => R });
+n.d(t, { A: () => O, V: () => R });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -28,72 +28,75 @@ function R(e) {
     let {
             user: t,
             displayProfile: n,
-            guildId: s,
-            channelId: h,
-            themeType: R,
-            animateOnHover: O,
-            onOpenProfile: b,
-            className: D,
-            previewStatus: L,
-            specOverrides: w,
-            avatarDecorationOverride: M,
-            avatarOverride: x,
+            guildId: r,
+            channelId: s,
+            themeType: a,
+            animateOnHover: c,
+            previewStatus: d,
+            specOverrides: h,
+            avatarDecorationOverride: m,
+            avatarOverride: v,
         } = e,
-        { theme: P } = (0, A.E)(),
-        { analyticsLocations: k } = (0, d.Ay)(c.A.AVATAR),
-        { trackUserProfileAction: U } = (0, m.NJ)(),
-        G = p.Ay.isPremiumAtLeast(n?.premiumType, S.PremiumTypes.TIER_2),
-        F = i.useMemo(() => t.isNonUserBot() || (0, _.c)(t, h), [t, h]),
-        { live: V } = (0, E.A)(t.id),
-        [B] = V,
+        { theme: N } = (0, A.E)(),
+        C = p.Ay.isPremiumAtLeast(n?.premiumType, S.PremiumTypes.TIER_2),
+        R = i.useMemo(() => t.isNonUserBot() || (0, _.c)(t, s), [t, s]),
+        { live: O } = (0, E.A)(t.id),
+        [b] = O,
         {
-            status: H,
-            isMobileOnline: j,
-            isVROnline: Y,
+            status: D,
+            isMobileOnline: L,
+            isVROnline: w,
         } = (0, o.cf)([f.A], () => ({
-            status: (0, u.A)(B) ? T.clD.STREAMING : f.A.getStatus(t.id),
+            status: (0, u.A)(b) ? T.clD.STREAMING : f.A.getStatus(t.id),
             isMobileOnline: f.A.isMobileOnline(t.id),
             isVROnline: f.A.isVROnline(t.id),
         })),
-        W = void 0 !== L ? L : H,
-        K = y.T[R],
-        $ = w?.avatarSize ?? K.avatarSize,
-        z = a()(N.my, D),
+        M = void 0 !== d ? d : D,
+        x = h?.avatarSize ?? y.T[a].avatarSize,
         {
-            avatarDecorationSrc: q,
-            avatarSrc: Z,
-            eventHandlers: X,
+            avatarDecorationSrc: P,
+            avatarSrc: k,
+            eventHandlers: U,
         } = (0, g.A)({
             userId: t.id,
-            guildId: null != n ? n.guildId : s,
-            size: $,
-            animateOnHover: O,
-            avatarDecorationOverride: M,
-            avatarOverride: x,
-        }),
-        Q = (0, r.jsx)(C, {
-            src: Z,
-            avatarDecoration: q,
-            size: $,
+            guildId: null != n ? n.guildId : r,
+            size: x,
+            animateOnHover: c,
+            avatarDecorationOverride: m,
+            avatarOverride: v,
+        });
+    return {
+        avatarProps: {
+            src: k,
+            avatarDecoration: P,
+            size: x,
             "aria-label": t.username,
-            imageClassName: null != b ? N.Lw : void 0,
-            status: F ? T.clD.UNKNOWN : W,
-            statusBackdropColor: G && !F ? (0, l.C$5)(P) : void 0,
-            isMobile: j,
-            isVR: Y,
+            status: R ? T.clD.UNKNOWN : M,
+            statusBackdropColor: C && !R ? (0, l.C$5)(N) : void 0,
+            isMobile: L,
+            isVR: w,
             statusTooltip: !0,
             statusTooltipDelay: I.In,
-        });
-    return null == b
-        ? (0, r.jsx)("div", { ...X, className: z, children: Q })
+        },
+        eventHandlers: U,
+    };
+}
+function O(e) {
+    let { onOpenProfile: t, className: n, ...i } = e,
+        { analyticsLocations: s } = (0, d.Ay)(c.A.AVATAR),
+        { trackUserProfileAction: o } = (0, m.NJ)(),
+        { avatarProps: u, eventHandlers: _ } = R(i),
+        f = a()(N.my, n);
+    return null == t
+        ? (0, r.jsx)("div", { ..._, className: f, children: (0, r.jsx)(C, { ...u }) })
         : (0, r.jsx)(l.sqX, {
               "aria-label": v.intl.string(v.t["+Xp3hq"]),
-              ...X,
-              className: a()(z, N.vk),
+              ..._,
+              className: a()(f, N.vk),
               focusProps: { ringClassName: N.Rg },
               onClick: () => {
-                  U({ action: "PRESS_VIEW_PROFILE", analyticsLocations: k }), b?.();
+                  o({ action: "PRESS_VIEW_PROFILE", analyticsLocations: s }), t?.();
               },
-              children: Q,
+              children: (0, r.jsx)(C, { ...u, imageClassName: N.Lw }),
           });
 }
