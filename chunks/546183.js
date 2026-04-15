@@ -35,9 +35,10 @@ function A(e) {
     "full" === e.request.type ? E("FETCHED") : E("FETCHED", e.request.applicationIds);
 }
 function I(e) {
-    if (e.isFullFetch) E("FETCHED"), (c = new Map([...e.tokens.entries()].filter(s.QE))), m();
+    if (e.isFullFetch) E("FETCHED"), (c = new Map(Object.entries(e.tokens).filter(s.QE))), m();
     else {
-        for (let [t, n] of (E("FETCHED", e.tokens.keys()), e.tokens)) null == n ? c.delete(t) : c.set(t, n);
+        for (let [t, n] of (E("FETCHED", Object.keys(e.tokens)), Object.entries(e.tokens)))
+            null == n ? c.delete(t) : c.set(t, n);
         m();
     }
 }

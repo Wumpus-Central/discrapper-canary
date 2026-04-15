@@ -7,8 +7,8 @@ var r = n(562465),
     o = n(652215);
 let l = new i.OC(c, (e) => a.default.getFetchStateForApplication(e) !== a.FetchState.FETCHING);
 function u(e, t) {
-    let n = new Map(t?.map((e) => [e, null]));
-    for (let t of e) n.set(t.application.id, t);
+    let n = Object.fromEntries(t?.map((e) => [e, null]) ?? []);
+    for (let t of e) n[t.application.id] = t;
     return n;
 }
 async function c(e) {

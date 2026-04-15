@@ -138,7 +138,7 @@ function M(e) {
     for (let e of n) r.push(e.id), p(s.Ay.createFromServer(e));
     l.set(t, r);
 }
-function x(e) {
+function P(e) {
     let { payments: t } = e,
         n = new Set();
     for (let e of t) {
@@ -147,7 +147,7 @@ function x(e) {
     }
     return n.size > 0;
 }
-function P(e) {
+function x(e) {
     let { payment: t } = e;
     if (t.sku?.application == null) return !1;
     p(s.Ay.createFromServer(t.sku.application));
@@ -181,7 +181,7 @@ function B(e) {
     p(s.Ay.createFromServer(t));
 }
 function H(e) {
-    for (let t of e.tokens.values()) {
+    for (let t of Object.values(e.tokens)) {
         if (null == t) continue;
         p(s.Ay.createFromServer(t.application));
         let e = t.application.bot;
@@ -261,8 +261,8 @@ let W = new Y(i.h, {
     ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: w,
     ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: w,
     GUILD_APPLICATIONS_FETCH_SUCCESS: M,
-    BILLING_PAYMENTS_FETCH_SUCCESS: x,
-    PAYMENT_UPDATE: P,
+    BILLING_PAYMENTS_FETCH_SUCCESS: P,
+    PAYMENT_UPDATE: x,
     INVITE_RESOLVE_SUCCESS: U,
     GIFT_CODE_RESOLVE_SUCCESS: k,
     LIBRARY_FETCH_SUCCESS: R,
