@@ -1,4 +1,4 @@
-l.d(t, { A: () => y });
+l.d(t, { A: () => f });
 var a = l(627968);
 l(64700);
 var n = l(311907),
@@ -14,46 +14,47 @@ var n = l(311907),
     h = l(930349),
     x = l(339984),
     b = l(985018);
-function y(e) {
-    let { user: t, guildId: l, disabled: y } = e,
-        { newestAnalyticsLocation: f } = (0, i.Ay)(),
-        g = null != l,
-        v = (0, n.bG)([c.Ay], () => (null != l ? c.Ay.getMember(l, t.id) : null)),
-        _ = (0, n.bG)([p.A], () => p.A.getPendingChanges(l ?? void 0).pendingAvatar),
-        E = (0, d.V7)({ userId: t.id, image: _ }),
-        { avatarSrc: C } = (0, m.A)({ userId: t.id, guildId: l, avatarOverride: E, size: r._3J.SIZE_56 }),
-        j = g ? v?.avatar : t.avatar,
-        S = null != t.avatar,
-        T = g && v?.avatar != null,
-        A = null != _,
-        P = null === _,
-        k = (0, o.z5)(_, j),
-        I = g && S,
-        R = () =>
-            (0, s.XD)({ uploadType: x.HL.AVATAR, analyticsSource: f, guildId: l ?? void 0, stackingBehavior: "stack" });
-    if (!(P ? g && S : A || T || S))
+let y = r._3J.SIZE_72;
+function f(e) {
+    let { user: t, guildId: l, disabled: f } = e,
+        { newestAnalyticsLocation: g } = (0, i.Ay)(),
+        v = null != l,
+        _ = (0, n.bG)([c.Ay], () => (null != l ? c.Ay.getMember(l, t.id) : null)),
+        E = (0, n.bG)([p.A], () => p.A.getPendingChanges(l ?? void 0).pendingAvatar),
+        C = (0, d.V7)({ userId: t.id, image: E }),
+        { avatarSrc: j } = (0, m.A)({ userId: t.id, guildId: l, avatarOverride: C, size: y }),
+        S = v ? _?.avatar : t.avatar,
+        T = null != t.avatar,
+        A = v && _?.avatar != null,
+        P = null != E,
+        k = null === E,
+        I = (0, o.z5)(E, S),
+        R = v && T,
+        N = () =>
+            (0, s.XD)({ uploadType: x.HL.AVATAR, analyticsSource: g, guildId: l ?? void 0, stackingBehavior: "stack" });
+    if (!(k ? v && T : P || A || T))
         return (0, a.jsx)(h.kL, {
             variant: "square",
-            onClick: R,
+            onClick: N,
             accessibleLabel: b.intl.string(b.t["4OynCD"]),
-            disabled: y,
-            children: (0, a.jsx)(r.euF, { src: C, size: r._3J.SIZE_56, "aria-hidden": !0 }),
+            disabled: f,
+            children: (0, a.jsx)(r.euF, { src: j, size: y, "aria-hidden": !0 }),
         });
-    let N = k
+    let M = I
         ? {
               onClick: () => {
-                  (0, u.p)({ guildId: l ?? void 0, avatar: null }), (0, o.WU)(I ? "reset" : "remove");
+                  (0, u.p)({ guildId: l ?? void 0, avatar: null }), (0, o.WU)(R ? "reset" : "remove");
               },
-              type: I ? "reset" : "remove",
-              accessibleLabel: b.intl.string(I ? b.t.Y0mxy1 : b.t.twB3fz),
+              type: R ? "reset" : "remove",
+              accessibleLabel: b.intl.string(R ? b.t.Y0mxy1 : b.t.twB3fz),
           }
         : void 0;
     return (0, a.jsx)(h.NW, {
         variant: "square",
-        onClick: R,
+        onClick: N,
         accessibleLabel: b.intl.string(b.t["4OynCD"]),
-        deleteButtonConfig: N,
-        disabled: y,
-        children: (0, a.jsx)(r.euF, { src: C, size: r._3J.SIZE_56, "aria-hidden": !0 }),
+        deleteButtonConfig: M,
+        disabled: f,
+        children: (0, a.jsx)(r.euF, { src: j, size: y, "aria-hidden": !0 }),
     });
 }
