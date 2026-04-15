@@ -42040,6 +42040,7 @@ screen and (max-width:485px) {
 
 .paymentModalError__9b260 {
     background-color: var(--modal-background);
+    margin-bottom: var(--space-16);
     padding-top: 12px
 }
 
