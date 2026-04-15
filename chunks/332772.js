@@ -1,25 +1,22 @@
 "use strict";
-n.d(t, { T: () => d });
+n.d(t, { T: () => c });
 var r = n(64700),
     i = n(311907),
     s = n(622543),
     a = n(576622),
     o = n(961350),
-    l = n(178213),
-    u = n(33190),
-    c = n(594832);
-function d(e) {
+    l = n(33190),
+    u = n(594832);
+function c(e) {
     let { location: t, source: n } = e,
-        d = (0, l.GG)(t),
-        _ = (0, u.H)(t),
-        f = d && _,
-        { currentUserId: p, wishlistId: h } = (0, i.cf)([o.default, s.A], () => {
+        c = (0, l.H)(t),
+        { currentUserId: d, wishlistId: _ } = (0, i.cf)([o.default, s.A], () => {
             let e = o.default.getId(),
                 t = s.A.getFirstWishlistId(e);
             return { currentUserId: e, wishlistId: t };
         });
     r.useEffect(() => {
-        f && null == h && (0, a.A)(p);
-    }, [p, f, h]),
-        (0, c.fw)({ wishlistId: f ? h : null, userId: p, source: n });
+        c && null == _ && (0, a.A)(d);
+    }, [d, c, _]),
+        (0, u.fw)({ wishlistId: c ? _ : null, userId: d, source: n });
 }

@@ -16,14 +16,14 @@ var r = n(627968),
     m = n(652215),
     E = n(788868),
     g = n(985018),
-    A = n(507075);
+    A = n(498700);
 function I(e) {
     return { margin: e.buttonInset };
 }
 function T(e) {
     let { sku: t, wishlistOwner: n, isOwned: r, hideIcon: s, shortText: a, location: A } = e,
         I = (0, o.bG)([d.default], () => d.default.getCurrentUser()),
-        T = (0, h.AZ)(A ?? "User Profile Wishlist Overlay Button"),
+        T = (0, h.A)(A ?? "User Profile Wishlist Overlay Button"),
         S = (0, u.Xi)(t),
         y = null == n || n.id === I?.id || r,
         { normalPrice: v, discountedPrice: N } = (0, c.ou)({

@@ -13,8 +13,8 @@ function h() {
     (0, c.default)({ guildId: (0, d.zf)() });
 }
 function x(e) {
-    let { profileUserId: t, handleOpenUserProfileModal: n, markAsDismissed: d, applicationIds: c } = e,
-        { analyticsLocations: x } = (0, l.Ay)([s.A.WISHLIST_ACCOUNT_POPOUT_UPSSELL]);
+    let { profileUserId: t, handleOpenUserProfileModal: n, markAsDismissed: d } = e,
+        { analyticsLocations: c } = (0, l.Ay)([s.A.WISHLIST_ACCOUNT_POPOUT_UPSSELL]);
     return null == t
         ? null
         : (0, a.jsxs)(r.A, {
@@ -27,11 +27,10 @@ function x(e) {
               children: [
                   (0, a.jsx)(o.A, {
                       userId: t,
-                      analyticsLocations: x,
+                      analyticsLocations: c,
                       handleOpenUserProfileModal: n,
                       numWishlistItemsToRecommend: 9,
                       className: m.KN,
-                      applicationIds: c,
                   }),
                   (0, a.jsx)("div", {
                       className: m.UD,

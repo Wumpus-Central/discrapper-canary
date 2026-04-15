@@ -1,63 +1,37 @@
-i.d(t, { l7: () => d });
-var n = i(64700),
-    r = i(178213),
-    s = i(594832),
-    a = i(721932),
-    l = i(985018);
-let o = {
-    FULL_WISHLIST: {
-        title: l.intl.string(l.t["7lZ31J"]),
-        getSubtitle: (e) => l.intl.formatToPlainString(l.t.BjEX38, { username: e }),
-        showIcons: !1,
-    },
-    MIXED: {
-        title: l.intl.string(l.t.SK5rmi),
-        getSubtitle: (e) => l.intl.formatToPlainString(l.t.dIDKgi, { username: e }),
-        showIcons: !0,
-    },
-    SHOP_ONLY: {
-        title: l.intl.string(l.t.SK5rmi),
-        getSubtitle: (e) => l.intl.formatToPlainString(l.t.wyMp1j, { username: e }),
-        showIcons: !1,
-    },
-    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY: {
-        title: l.intl.string(l.t.BCi1gT),
-        getSubtitle: (e) => l.intl.formatToPlainString(l.t.BjEX38, { username: e }),
-        showIcons: !1,
-    },
-};
-function d(e) {
-    let { totalUnownedWishlistItemCount: t, wishlistInDmLength: i, displayItems: d, recipientName: c } = e,
-        u = (0, n.useMemo)(
+t.d(i, { l7: () => l });
+var r = t(64700),
+    n = t(594832),
+    a = t(721932),
+    s = t(985018);
+function l(e) {
+    let { totalUnownedWishlistItemCount: i, wishlistInDmLength: t, displayItems: l, recipientName: o } = e,
+        c = (0, r.useMemo)(
             () =>
                 (function (e) {
-                    let { totalUnownedWishlistItemCount: t, wishlistInDmLength: i, displayItems: n } = e;
-                    return t >= i
+                    let { totalUnownedWishlistItemCount: i, wishlistInDmLength: t, displayItems: r } = e;
+                    return i >= t
                         ? "FULL_WISHLIST"
-                        : t > 0
+                        : i > 0
                           ? "MIXED"
-                          : n.length > 0 &&
-                              n.every((e) => {
-                                  let { item: t, source: i } = e;
-                                  return i === s.uS.POPULAR && (0, a.$)(t);
+                          : r.length > 0 &&
+                              r.every((e) => {
+                                  let { item: i, source: t } = e;
+                                  return t === n.uS.POPULAR && (0, a.$)(i);
                               })
                             ? "SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY"
                             : "SHOP_ONLY";
-                })({ totalUnownedWishlistItemCount: t, wishlistInDmLength: i, displayItems: d }),
-            [t, i, d],
-        ),
-        _ = (0, r.GG)("wishlist_banner_config");
-    return (0, n.useMemo)(() => {
-        if (_)
-            switch (u) {
-                case "FULL_WISHLIST":
-                    return { title: l.intl.formatToPlainString(l.t["YcL/Vr"], { username: c }), showIcons: !1 };
-                case "MIXED":
-                    return { title: l.intl.formatToPlainString(l.t.dIDKgi, { username: c }), showIcons: !0 };
-                default:
-                    return { title: l.intl.string(l.t.BCi1gT), showIcons: !1 };
-            }
-        return { title: o[u].title, subtitle: o[u].getSubtitle(c), showIcons: o[u].showIcons };
-    }, [u, c, _]);
+                })({ totalUnownedWishlistItemCount: i, wishlistInDmLength: t, displayItems: l }),
+            [i, t, l],
+        );
+    return (0, r.useMemo)(() => {
+        switch (c) {
+            case "FULL_WISHLIST":
+                return { title: s.intl.formatToPlainString(s.t["YcL/Vr"], { username: o }), showIcons: !1 };
+            case "MIXED":
+                return { title: s.intl.formatToPlainString(s.t.dIDKgi, { username: o }), showIcons: !0 };
+            default:
+                return { title: s.intl.string(s.t.BCi1gT), showIcons: !1 };
+        }
+    }, [c, o]);
 }
-l.intl.string(l.t["7lZ31J"]), l.intl.string(l.t.pWG4ze), l.intl.string(l.t.SK5rmi), l.intl.string(l.t.BCi1gT);
+s.intl.string(s.t["7lZ31J"]), s.intl.string(s.t.pWG4ze), s.intl.string(s.t.SK5rmi), s.intl.string(s.t.BCi1gT);

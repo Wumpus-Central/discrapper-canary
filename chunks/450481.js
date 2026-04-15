@@ -1,50 +1,57 @@
-n.d(e, { p: () => u });
+n.d(t, { p: () => s });
 var i = n(64700),
     a = n(575593),
     l = n(631670),
     r = n(587600),
-    d = n(207803),
-    s = n(993408),
-    o = n(442759),
-    p = n(985018);
-let u = (t) => {
-    let { product: e, onSuccess: u, onError: c } = t,
-        [g, A] = i.useState(!1),
-        { firstAvatarDecoration: h, firstProfileEffect: f, firstNameplate: m } = (0, o.f5)(e),
-        y = (0, s.aw)(e)
-            ? p.intl.string(p.t.tf1ZZ4)
-            : e.type === a.R.AVATAR_DECORATION
-              ? p.intl.string(p.t.zOA4ax)
-              : e.type === a.R.NAMEPLATE
-                ? p.intl.string(p.t.gOzMvx)
-                : p.intl.string(p.t.SWm2ai);
+    o = n(207803),
+    d = n(442759),
+    _ = n(985018);
+let s = (e) => {
+    let { product: t, onSuccess: s, onError: E } = e,
+        [p, u] = i.useState(!1),
+        { firstAvatarDecoration: c, firstProfileEffect: S, firstNameplate: R, firstProfileFrame: T } = (0, d.f5)(t),
+        h = ((e) => {
+            switch (e.type) {
+                case a.R.AVATAR_DECORATION:
+                    return _.intl.string(_.t.zOA4ax);
+                case a.R.NAMEPLATE:
+                    return _.intl.string(_.t.gOzMvx);
+                case a.R.PROFILE_FRAME:
+                    return _.intl.string(_.t.lOF4zR);
+                case a.R.PROFILE_EFFECT:
+                    return _.intl.string(_.t.SWm2ai);
+                case a.R.BUNDLE:
+                default:
+                    return _.intl.string(_.t.tf1ZZ4);
+            }
+        })(t);
     return {
         handleUseNow: i.useCallback(async () => {
-            A(!0);
-            let t = {};
+            u(!0);
+            let e = {};
             try {
-                if ((null != h && (t.avatarDecoration = h), null != f)) {
-                    let t = (0, r.yX)({ pendingProfileEffect: f });
-                    await (0, d.gi)(t);
+                if ((null != c && (e.avatarDecoration = c), null != S || null != T)) {
+                    let e = (0, r.yX)({ pendingProfileEffect: S ?? void 0, pendingProfileFrame: T ?? void 0 });
+                    await (0, o.gi)(e);
                 }
-                null != m && (t.nameplate = m), Object.keys(t).length > 0 && (await (0, l._L)(t));
+                null != R && (e.nameplate = R), Object.keys(e).length > 0 && (await (0, l._L)(e));
                 {
                     let {
-                        ToastPosition: t,
-                        ToastType: e,
+                        ToastPosition: e,
+                        ToastType: t,
                         createToast: i,
                         popToast: a,
                         showToast: l,
                     } = await Promise.resolve().then(n.bind(n, 397927));
-                    a(), l(i(y, e.MESSAGE, { duration: 6e3, position: t.TOP }));
+                    a(), l(i(h, t.MESSAGE, { duration: 6e3, position: e.TOP }));
                 }
-                u?.();
-            } catch (t) {
-                c?.(t);
+                s?.();
+            } catch (e) {
+                E?.(e);
             } finally {
-                A(!1);
+                u(!1);
             }
-        }, [h, f, m, u, y, c]),
-        isApplying: g,
+        }, [c, S, R, T, s, h, E]),
+        isApplying: p,
     };
 };

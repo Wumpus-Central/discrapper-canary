@@ -1,136 +1,103 @@
 "use strict";
-n.d(t, { A: () => R });
+n.d(t, { A: () => T });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
     o = n(158954),
     l = n(429913),
-    u = n(798048),
-    c = n(178213),
-    d = n(332772),
-    _ = n(594832),
-    f = n(631784),
-    p = n(721932),
-    h = n(310209),
-    m = n(954571),
-    E = n(403362),
-    g = n(871123),
-    A = n(453774),
-    I = n(568751),
-    T = n(620406),
-    S = n(84511),
-    y = n(652215),
-    v = n(360469),
-    N = n(985018),
-    C = n(795474);
-function R(e) {
+    u = n(332772),
+    c = n(594832),
+    d = n(631784),
+    _ = n(310209),
+    f = n(954571),
+    p = n(871123),
+    h = n(453774),
+    m = n(568751),
+    E = n(84511),
+    g = n(652215),
+    A = n(985018),
+    I = n(795474);
+function T(e) {
     let {
             className: t,
             rewardOfferNoticeClassName: n,
             applicationId: s,
-            userIds: R,
-            cardSize: O = u.Y.SMALL,
-            location: b,
-            guildId: D,
-            channelId: L,
-            numWishlistItems: w = 2,
-            cardSpec: M,
+            userIds: T,
+            location: S,
+            guildId: y,
+            channelId: v,
+            numWishlistItems: N = 2,
+            cardSpec: C,
         } = e,
-        x = (0, l.h)(s),
-        P = (0, A.A)(x?.id),
-        k = (0, c.GG)("social_layer_storefront_gifting_breadcrumb");
-    (0, d.T)({ location: "social_layer_storefront_gifting_breadcrumb" });
-    let U = i.useMemo(() => {
-            if (k) return null;
-            let e = null != P ? P.getIconURL(v.iu.SMALL) : void 0;
-            return null != e ? (0, r.jsx)("img", { className: C.In, src: e, alt: "" }) : void 0;
-        }, [P, k]),
-        G = i.useMemo(() => (P?.id != null ? [P.id] : []), [P]),
+        R = (0, l.h)(s),
+        O = (0, h.A)(R?.id);
+    (0, u.T)({ location: "social_layer_storefront_gifting_breadcrumb" });
+    let b = i.useMemo(() => (O?.id != null ? [O.id] : []), [O]),
         {
-            status: F,
-            recommendations: V,
-            skusToUserAndReason: B,
-        } = (0, f.XQ)({ applicationIds: G, numItems: w, userIds: R }),
-        H = i.useMemo(() => new Set(R), [R]),
-        j = i.useMemo(() => V.map((e) => p.A.fromSKU(e)).filter(E.Vq), [V]),
-        { hasWishlist: Y, hasPopular: W } = i.useMemo(() => (0, g.wH)(V, B, H), [V, B, H]),
-        K = i.useMemo(() => {
-            let e = Y && !W && 1 === R.length,
-                t = Y && W;
-            return j.map((n) => {
-                let i = Object.entries(B[n.skuId] ?? {})
+            status: D,
+            recommendations: L,
+            skusToUserAndReason: w,
+        } = (0, d.XQ)({ applicationIds: b, numItems: N, userIds: T }),
+        M = i.useMemo(() => new Set(T), [T]),
+        { hasWishlist: P, hasPopular: x } = i.useMemo(() => (0, p.wH)(L, w, M), [L, w, M]),
+        k = i.useMemo(() => {
+            let e = P && x;
+            return L.map((t) => {
+                let n = Object.entries(w[t.id] ?? {})
                     .filter((e) => {
                         let [t, n] = e;
-                        return n === h.j.WISHLIST && H.has(t);
+                        return n === _.j.WISHLIST && M.has(t);
                     })
                     .map((e) => {
                         let [t] = e;
                         return t;
                     });
-                return k
-                    ? (0, r.jsx)(
-                          I.A,
-                          {
-                              sku: n.sku,
-                              source: i.length > 0 ? _.uS.WISHLIST : _.uS.POPULAR,
-                              application: P,
-                              showIcons: t,
-                              guildId: D,
-                              channelId: L,
-                              userIdsForGifting: R,
-                              userIdsForRecommendation: i,
-                              spec: M,
-                          },
-                          n.skuId,
-                      )
-                    : (0, r.jsx)(
-                          T.A,
-                          {
-                              variant: e ? T.$.NO_ICON : i.length > 0 ? T.$.WISHLIST : T.$.POPULAR,
-                              userIdsForRecommendation: i,
-                              userIdsForGifting: R,
-                              wishlistItem: n,
-                              guildId: D,
-                              channelId: L,
-                              cardSize: O,
-                              contextContainerClassName: C.RL,
-                          },
-                          n.skuId,
-                      );
+                return (0, r.jsx)(
+                    m.A,
+                    {
+                        sku: t,
+                        source: n.length > 0 ? c.uS.WISHLIST : c.uS.POPULAR,
+                        application: O,
+                        showIcons: e,
+                        guildId: y,
+                        channelId: v,
+                        userIdsForGifting: T,
+                        userIdsForRecommendation: n,
+                        spec: C,
+                    },
+                    t.id,
+                );
             });
-        }, [O, L, D, k, j, B, Y, W, R, P, H, M]);
+        }, [P, x, L, w, O, y, v, T, C, M]);
     i.useEffect(() => {
-        0 !== V.length &&
-            m.default.track(y.HAw.COMMERCE_SHOP_GIFTING_BREADCRUMB_VIEWED, {
-                guild_id: D,
-                channel_id: L,
-                sku_ids: V.map((e) => e.id),
-                location: b,
+        0 !== L.length &&
+            f.default.track(g.HAw.COMMERCE_SHOP_GIFTING_BREADCRUMB_VIEWED, {
+                guild_id: y,
+                channel_id: v,
+                sku_ids: L.map((e) => e.id),
+                location: S,
             });
-    }, [D, L, V, b]);
-    let $ = "loading" === F || 0 === V.length;
-    return "error" === F && 0 === V.length
+    }, [y, v, L, S]);
+    let U = "loading" === D || 0 === L.length;
+    return "error" === D && 0 === L.length
         ? null
         : (0, r.jsxs)("div", {
-              className: a()(C.kL, t),
+              className: a()(I.kL, t),
               children: [
-                  (0, r.jsxs)("div", {
-                      className: C.wx,
-                      children: [
-                          (0, r.jsx)(o.EYj, {
-                              variant: "text-xs/medium",
-                              color: "text-muted",
-                              children: Y && !W ? N.intl.string(N.t["7lZ31J"]) : N.intl.string(N.t.BCi1gT),
-                          }),
-                          null != U ? U : null,
-                      ],
+                  (0, r.jsx)("div", {
+                      className: I.wx,
+                      children: (0, r.jsx)(o.EYj, {
+                          variant: "text-xs/medium",
+                          color: "text-muted",
+                          children: P && !x ? A.intl.string(A.t["7lZ31J"]) : A.intl.string(A.t.BCi1gT),
+                      }),
                   }),
                   (0, r.jsx)("div", {
-                      className: C.ld,
-                      children: $ ? (0, r.jsx)(o.y$y, { type: o.y$y.Type.SPINNING_CIRCLE, className: C.u1 }) : K,
+                      className: I.ld,
+                      children: U ? (0, r.jsx)(o.y$y, { type: o.y$y.Type.SPINNING_CIRCLE, className: I.u1 }) : k,
                   }),
-                  !$ && V.length > 0 && (0, r.jsx)(S.A, { location: b, className: n }),
+                  !U && L.length > 0 && (0, r.jsx)(E.A, { location: S, className: n }),
               ],
           });
 }

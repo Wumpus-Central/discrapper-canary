@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => p, L: () => f }), n(321073);
+n.d(t, { A: () => f }), n(321073);
 var r = n(575593),
     i = n(898461),
     s = n(474012),
@@ -10,21 +10,20 @@ var r = n(575593),
     c = n(520606),
     d = n(652215);
 let _ = (e) => {
-        switch (e.type) {
-            case r.R.AVATAR_DECORATION:
-                return i.A.fromServer(e);
-            case r.R.PROFILE_EFFECT:
-                return o.Ay.fromServer(e);
-            case r.R.NAMEPLATE:
-                return a.A.fromServer(e);
-            case r.R.PROFILE_FRAME:
-                return l.A.fromServer(e);
-            default:
-                return null;
-        }
-    },
-    f = (e) => e instanceof p;
-class p extends c.A {
+    switch (e.type) {
+        case r.R.AVATAR_DECORATION:
+            return i.A.fromServer(e);
+        case r.R.PROFILE_EFFECT:
+            return o.Ay.fromServer(e);
+        case r.R.NAMEPLATE:
+            return a.A.fromServer(e);
+        case r.R.PROFILE_FRAME:
+            return l.A.fromServer(e);
+        default:
+            return null;
+    }
+};
+class f extends c.A {
     collectiblesItem;
     bundleItems;
     constructor(e) {
@@ -44,12 +43,12 @@ class p extends c.A {
             throw Error("Collectibles wishlist item missing both collectibles_item and bundle_items");
     }
     static fromServer(e) {
-        return new p({ ...e, sku: null != e.sku ? u.A.createFromServer(e.sku) : void 0 });
+        return new f({ ...e, sku: null != e.sku ? u.A.createFromServer(e.sku) : void 0 });
     }
     static fromSKU(e) {
         let t = (0, s.T)(e);
         if (null == t) return null;
-        let n = new p({
+        let n = new f({
             sku_id: e.id,
             sku_product_line: d.EZt.COLLECTIBLES,
             sku_name: e.name,

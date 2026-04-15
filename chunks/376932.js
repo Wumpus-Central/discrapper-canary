@@ -1,73 +1,63 @@
-n.d(t, { A: () => I });
-var i = n(627968),
-    l = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    r = n(158954),
-    o = n(311907),
-    d = n(554146),
-    c = n(932001),
-    u = n(178213),
-    g = n(770983),
-    m = n(927813),
-    x = n(622543),
-    p = n(49999),
-    f = n(985018),
-    h = n(881562);
-let _ = 90 * m.A.Millis.DAY,
-    A = 90 * m.A.Millis.DAY;
+i.d(t, { A: () => I });
+var n = i(627968),
+    l = i(64700),
+    s = i(503698),
+    a = i.n(s),
+    r = i(158954),
+    d = i(311907),
+    o = i(554146),
+    c = i(932001),
+    u = i(770983),
+    g = i(927813),
+    m = i(622543),
+    h = i(49999),
+    x = i(985018),
+    A = i(970901);
+let p = 90 * g.A.Millis.DAY,
+    f = 90 * g.A.Millis.DAY;
 function I(e) {
-    let {
-            user: t,
-            wishlist: n,
-            hasFetchedWishlist: a = !1,
-            analyticsLocations: m,
-            className: I,
-            applicationIds: j,
-        } = e,
-        v = (0, u.GG)("social_layer_wishlist_recommendations_on_profile"),
-        E = (n?.items.length ?? 0) > 0,
-        [T, b] = l.useState(!1);
-    !a || E || T || b(!0);
-    let N = (0, o.bG)([x.A], () =>
-            null != n ? new Date(x.A.getWishlistSettings(t.id, n.id)?.updated_at ?? 0).valueOf() : 0,
+    let { user: t, wishlist: i, hasFetchedWishlist: s = !1, analyticsLocations: g, className: I } = e,
+        j = (i?.items.length ?? 0) > 0,
+        [v, S] = l.useState(!1);
+    !s || j || v || S(!0);
+    let E = (0, d.bG)([m.A], () =>
+            null != i ? new Date(m.A.getWishlistSettings(t.id, i.id)?.updated_at ?? 0).valueOf() : 0,
         ),
-        [y, S] = (0, c.Wl)(
-            d.M.USER_PROFILE_WISHLIST_RECOMMENDATIONS,
-            { showAfterTimestamp: N + A, cooldownDurationMs: _ },
+        [b, T] = (0, c.Wl)(
+            o.M.USER_PROFILE_WISHLIST_RECOMMENDATIONS,
+            { showAfterTimestamp: E + f, cooldownDurationMs: p },
             void 0,
             !0,
         ),
-        C = y === d.M.USER_PROFILE_WISHLIST_RECOMMENDATIONS;
-    return a && (!E || C || T)
-        ? (0, i.jsxs)("div", {
-              className: s()(h.kL, I),
+        y = b === o.M.USER_PROFILE_WISHLIST_RECOMMENDATIONS;
+    return s && (!j || y || v)
+        ? (0, n.jsxs)("div", {
+              className: a()(A.kL, I),
               children: [
-                  (0, i.jsxs)("div", {
-                      className: h.wx,
+                  (0, n.jsxs)("div", {
+                      className: A.wx,
                       children: [
-                          (0, i.jsx)(r.EYj, {
+                          (0, n.jsx)(r.EYj, {
                               variant: "text-xs/normal",
                               color: "text-subtle",
-                              children: f.intl.string(f.t["+GB8Kt"]),
+                              children: x.intl.string(x.t["+GB8Kt"]),
                           }),
-                          E &&
-                              (0, i.jsx)(r.JnF, {
+                          j &&
+                              (0, n.jsx)(r.JnF, {
                                   size: "xs",
                                   onClick: () => {
-                                      b(!1), S(p.i.USER_DISMISS);
+                                      S(!1), T(h.i.USER_DISMISS);
                                   },
                               }),
                       ],
                   }),
-                  (0, i.jsx)(g.A, {
+                  (0, n.jsx)(u.A, {
                       userId: t.id,
-                      applicationIds: j,
-                      wishlist: n,
-                      className: s()(h.Vg, { [h.e6]: v }),
-                      analyticsLocations: m,
+                      wishlist: i,
+                      className: a()(A.Vg, A.e6),
+                      analyticsLocations: g,
                       numWishlistItemsToRecommend: 15,
-                      maxWishlistItemsToShow: v ? 8 : 6,
+                      maxWishlistItemsToShow: 8,
                   }),
               ],
           })

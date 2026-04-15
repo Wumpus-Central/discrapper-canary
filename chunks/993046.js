@@ -74,7 +74,7 @@ function C(e) {
 }
 function R(e) {
     let { sku: t, priceSetAssignmentPurchaseType: n = E.lid.DEFAULT } = e,
-        i = (0, c.AZ)("useSKUPrice"),
+        i = (0, c.A)("useSKUPrice"),
         {
             userPrice: s,
             pricesForPurchaseType: u,
