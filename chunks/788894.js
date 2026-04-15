@@ -290,14 +290,6 @@ let r = {
                     return 0;
                 },
             },
-            COACHMARK_BODY_BORDER_RADIUS: {
-                resolve(e) {
-                    let { enabledExperiments: t } = e;
-                    if (0 === t.length) return 16;
-                    for (let e of t) if ("mobile-visual-refresh" === e) return 12;
-                    return 16;
-                },
-            },
             COACHMARK_BODY_WIDTH: {
                 resolve(e) {
                     let { enabledExperiments: t } = e;
@@ -843,7 +835,7 @@ let r = {
                 resolve(e) {
                     let { enabledExperiments: t } = e;
                     if (0 === t.length) return "text-sm/semibold";
-                    for (let e of t) if ("mobile-visual-refresh" === e) return "text-sm/medium";
+                    for (let e of t) if ("mobile-visual-refresh" === e) return "text-md/medium";
                     return "text-sm/semibold";
                 },
             },

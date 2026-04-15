@@ -875,6 +875,14 @@ let { Themes: r } = n(680049).zv,
                     [r.DARKER]: { raw: "NEUTRAL_2", opacity: 1 },
                 },
             },
+            MOBILE_THREAD_EMBED_BACKGROUND: {
+                "mobile-visual-refresh": {
+                    [r.DARK]: { raw: "NEUTRAL_64", opacity: 1 },
+                    [r.LIGHT]: { raw: "NEUTRAL_1", opacity: 1 },
+                    [r.MIDNIGHT]: { raw: "NEUTRAL_91", opacity: 1 },
+                    [r.DARKER]: { raw: "NEUTRAL_79", opacity: 1 },
+                },
+            },
             MOBILE_TYPING_INDICATOR_BACKGROUND_DEFAULT: {
                 "mobile-visual-refresh": {
                     [r.DARK]: { raw: "NEUTRAL_69", opacity: 1 },
