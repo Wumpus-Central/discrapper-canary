@@ -88,7 +88,13 @@ function I(e) {
                 color: "text-default",
                 children: j.intl.string(j.t["2uQ6wZ"]),
             }),
-            (0, i.jsx)(m.default, { defaultColor: f.aj, colors: A._tK, value: t, onChange: n }),
+            (0, i.jsx)(m.default, {
+                defaultColor: f.aj,
+                colors: A._tK,
+                value: t,
+                onChange: n,
+                allowBlackCustomColor: !0,
+            }),
         ],
     });
 }
