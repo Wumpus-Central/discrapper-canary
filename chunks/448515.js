@@ -32,20 +32,20 @@ var s = n(311907),
     L = n(107351),
     w = n(121254),
     M = n(877166),
-    x = n(531013),
-    P = n(652215);
+    P = n(531013),
+    x = n(652215);
 let k = new d.A("ConnectionStore");
 function U(e) {
     return e.map((e) => {
         let t = e.timestamps?.end,
             n = e.created_at;
         return null != t && null != n
-            ? { ...e, timestamps: { ...e.timestamps, isCountDown: t > n && e.type !== P.$pd.LISTENING } }
+            ? { ...e, timestamps: { ...e.timestamps, isCountDown: t > n && e.type !== x.$pd.LISTENING } }
             : e;
     });
 }
 let G = new M.A(
-        x.sZ,
+        P.sZ,
         (e, t) => {
             e = e ?? { type: "CHANNEL_UPDATES", channels: [] };
             let n = (0, I.UE)(t),
@@ -56,7 +56,7 @@ let G = new M.A(
         (e) => "CHANNEL_UPDATE" !== e,
     ),
     F = new M.A(
-        x.sZ,
+        P.sZ,
         (e, t) => (
             (e = null == e ? { type: "SOUNDBOARD_SOUNDS_RECEIVED", updates: [] } : e).updates.push({
                 guildId: t.guild_id,
@@ -76,12 +76,12 @@ let G = new M.A(
         (e) => "SOUNDBOARD_SOUNDS" !== e,
     ),
     V = new M.A(
-        x.sZ,
+        P.sZ,
         (e, t) => ((e = e ?? { type: "GUILD_MEMBERS_CHUNK_BATCH", chunks: [] }).chunks.push(t), e),
         (e) => "GUILD_MEMBERS_CHUNK" !== e,
     ),
     B = new M.A(
-        x.sZ,
+        P.sZ,
         (e, t) => ((e = null == e ? { type: "PRESENCE_UPDATES", updates: [] } : e).updates.push(t), e),
         (e) => "PRESENCE_UPDATE" !== e && "GUILD_MEMBERS_CHUNK" !== e,
     ),
@@ -120,7 +120,7 @@ function K(e) {
 function $(e) {
     a.h.dispatch(e).catch((t) => {
         k.error(`dispatchOrResetSocket error during ${e.type}:`, t),
-            x.sZ.resetSocketOnDispatchError({ error: t, action: e.type });
+            P.sZ.resetSocketOnDispatchError({ error: t, action: e.type });
     });
 }
 function z(e, t, n) {
@@ -220,7 +220,7 @@ Y(
     (e) => {
         g.A.initialGuild.measure(() => {
             s.Ay.Emitter.batched(() => {
-                let t = w.fq(e, x.sZ.identifyStartTime);
+                let t = w.fq(e, P.sZ.identifyStartTime);
                 null != R.default.getCurrentUser() &&
                     ($({ type: "GUILD_CREATE", guild: t }),
                     $({
@@ -249,7 +249,7 @@ Y(
     j(["READY_SUPPLEMENTAL"], (e) => {
         g.A.readySupplemental.measure(() => {
             s.Ay.Emitter.batched(() => {
-                e = g.A.hydrateReadySupplemental.measure(() => w.H3(e, x.sZ.identifyStartTime));
+                e = g.A.hydrateReadySupplemental.measure(() => w.H3(e, P.sZ.identifyStartTime));
                 let t = (e) =>
                         e.map((e) => ({
                             user: e.user,
@@ -289,7 +289,7 @@ Y(
                     });
                 }),
                     $({ type: "VOICE_STATE_UPDATES", voiceStates: s, initial: !0 }),
-                    x.Xo.update();
+                    P.Xo.update();
             });
         }),
             setTimeout(() => $({ type: "POST_CONNECTION_OPEN" }), 2e3);
@@ -319,7 +319,7 @@ Y(
                 : g.A.ready.measure(() => {
                       s.Ay.Emitter.batched(() => {
                           let t = (e = g.A.hydrateReady.measure(() =>
-                                  w.un(e, x.sZ.identifyStartTime, n),
+                                  w.un(e, P.sZ.identifyStartTime, n),
                               )).private_channels.map((e) => (0, I.UE)(e)),
                               r = e.guilds
                                   .filter((e) => !0 === e.unavailable && !0 !== e.geo_restricted)
@@ -377,8 +377,8 @@ Y(
                                       type: "AD_PERSONALIZATION_TOGGLES_RESTRICTED",
                                       disabled: e.ad_personalization_toggles_disabled,
                                   }),
-                              x.OV.update(),
-                              x.Xo.update();
+                              P.OV.update(),
+                              P.Xo.update();
                       });
                   });
         },
@@ -397,7 +397,7 @@ Y(
         a.h.dispatch({ type: "APEX_EXPERIMENT_SESSION_OVERRIDE_DELETE", experimentName: e.experiment_name });
     }),
     j(["RESUMED"], () => {
-        x.OV.forceUpdate(), x.Xo.forceUpdate(), $({ type: "CONNECTION_RESUMED" });
+        P.OV.forceUpdate(), P.Xo.forceUpdate(), $({ type: "CONNECTION_RESUMED" });
     }),
     j(["TYPING_START"], (e) => {
         null != e.member && z(e.guild_id, e.member.user, e.member),
@@ -633,6 +633,7 @@ Y(
             guildId: e.guild_id,
             prune: {
                 isPreview: e.prune.is_preview,
+                isFinished: e.prune.is_finished,
                 days: e.prune.days,
                 pruneCount: e.prune.prune_count,
                 includeRoles: e.prune.include_roles,
