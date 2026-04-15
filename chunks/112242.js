@@ -18,13 +18,13 @@ var r = n(627968),
     g = n(918022),
     A = n(93159),
     I = n(769015),
-    T = n(977445),
-    S = n(778307),
-    y = n(218075),
-    v = n(285719),
-    N = n(351906),
-    C = n(615405),
-    R = n(79387),
+    T = n(778307),
+    S = n(218075),
+    y = n(285719),
+    v = n(351906),
+    N = n(615405),
+    C = n(79387),
+    R = n(147964),
     O = n(603349),
     b = n(45938),
     D = n(580630),
@@ -65,7 +65,7 @@ let W = (e) => {
                 application: E,
                 purchaseState: A,
                 paymentSourceId: I,
-                setPaymentSourceId: v,
+                setPaymentSourceId: y,
                 setHasAcceptedTerms: O,
                 isEmbeddedIAP: D,
                 purchaseType: x,
@@ -84,9 +84,9 @@ let W = (e) => {
         let J = K[f],
             ee = J?.eligiblePaymentGateways,
             et = $[f],
-            en = I ?? R.B,
+            en = I ?? C.B,
             er = Y.length > 0,
-            ei = null != et ? (et[en] ?? (er ? et[R.B] : null)) : null,
+            ei = null != et ? (et[en] ?? (er ? et[C.B] : null)) : null,
             {
                 dropdownPaymentSources: es,
                 giftCardWallet: ea,
@@ -96,19 +96,21 @@ let W = (e) => {
                 giftCardCheckboxProps: ec,
             } = (0, g.Y)({
                 checkoutPaymentSources: Y,
-                setPaymentSourceId: v,
+                setPaymentSourceId: y,
                 location: "OneTimePurchaseReview",
                 isReady: W,
                 itemAmount: ei?.amount,
             });
         a()(null != J, "SKU must exist and be fetched."), a()(null != E, "Application must exist.");
-        let ed = (0, T.u)(E.id),
-            e_ = (0, l.bG)([N.A], () => N.A.enabled),
-            ef = o.M.EEA_COUNTRIES.has(C.A.ipCountryCodeWithFallback),
+        let ed = (0, l.bG)([p.A, R.A], () => R.A.inTestModeForApplication(E.id) || p.A.inDevModeForApplication(E.id), [
+                E.id,
+            ]),
+            e_ = (0, l.bG)([v.A], () => v.A.enabled),
+            ef = o.M.EEA_COUNTRIES.has(N.A.ipCountryCodeWithFallback),
             ep = A === P.h.PURCHASING || A === P.h.COMPLETED,
             eh = Y.find((e) => e.id === I) ?? null,
             em = null != eh ? eh.type : null,
-            eE = null != ee && ee.length > 0 && (I === R.B || null === em) && H ? y.fU.SELECT_PAYMENT_METHOD : void 0,
+            eE = null != ee && ee.length > 0 && (I === C.B || null === em) && H ? S.fU.SELECT_PAYMENT_METHOD : void 0,
             eg = J.productLine === V.EZt.SOCIAL_LAYER_GAME_ITEM,
             eA = Z && !eg,
             eI = i.useMemo(
@@ -135,7 +137,7 @@ let W = (e) => {
                 () =>
                     d && J.productLine === V.EZt.COLLECTIBLES
                         ? (0, r.jsx)(k.f, { paymentSourceType: em })
-                        : (0, r.jsxs)(S.A, {
+                        : (0, r.jsxs)(T.A, {
                               isActive: t,
                               ref: n,
                               children: [
@@ -217,14 +219,14 @@ function $(e) {
             warningAndErrorMessages: g,
             paymentSourceDropdownProps: I,
             purchaseTermsAndLegalContent: T,
-            giftCardWallet: S,
+            giftCardWallet: v,
             giftCardsEnabled: N,
             giftCardCheckboxProps: C,
             disabled: R,
         } = W({ hasLegalTermsFlash: t, legalTermsNodeRef: n, handlePaymentSourceAdd: s }),
         b = i.useCallback(
             (e) => {
-                null != S && (0, E.YP)(S.id);
+                null != v && (0, E.YP)(v.id);
                 let t = (0, D.$g)(e.amount, e.currency);
                 (0, u.showToast)(
                     (0, u.createToast)(
@@ -234,13 +236,13 @@ function $(e) {
                     ),
                 );
             },
-            [S],
+            [v],
         ),
         L = K(_, { isGift: c });
     return (0, r.jsxs)("div", {
         className: j.Du,
         children: [
-            (0, r.jsx)(y.je, { paymentRestrictionBannerType: h }),
+            (0, r.jsx)(S.je, { paymentRestrictionBannerType: h }),
             null != g.testModeWarning
                 ? (0, r.jsx)(
                       d.A,
@@ -269,7 +271,7 @@ function $(e) {
                 : null,
             (0, r.jsx)(Y, { application: o, sku: a, isEmbeddedIAP: f }),
             p && (0, r.jsx)(G.A, { sku: a }),
-            null != l ? (0, r.jsx)(v.Z, { giftRecipient: l }) : null,
+            null != l ? (0, r.jsx)(y.Z, { giftRecipient: l }) : null,
             (0, r.jsx)(x.I, {}),
             m
                 ? (0, r.jsx)(u.y$y, { type: u.y$y.Type.WANDERING_CUBES, className: j.fx })
