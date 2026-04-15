@@ -19,7 +19,7 @@ var r = n(627968),
     A = n(632721),
     I = n(818348),
     T = n(985018),
-    S = n(120420);
+    S = n(963145);
 function y(e) {
     return () => (null != h.A.error && (0, s.ET)(), e());
 }
@@ -76,8 +76,8 @@ let C = () => {
                 VENMO_STEPS: L,
                 PAYMENT_REQUEST_STEPS: w,
                 PRZELEWY24_STEPS: M,
-                EPS_STEPS: x,
-                IDEAL_STEPS: P,
+                EPS_STEPS: P,
+                IDEAL_STEPS: x,
                 CASH_APP_STEPS: k,
                 setConnectorPaymentRequestReady: U,
                 connectorPaymentRequestRef: G,
@@ -106,10 +106,10 @@ let C = () => {
                         S(M), g(_.pn.PRZELEWY24_INFORMATION);
                         break;
                     case I.he.EPS:
-                        S(x), g(_.pn.EPS_INFORMATION);
+                        S(P), g(_.pn.EPS_INFORMATION);
                         break;
                     case I.he.IDEAL:
-                        S(P), g(_.pn.IDEAL_INFORMATION);
+                        S(x), g(_.pn.IDEAL_INFORMATION);
                         break;
                     case I.he.CASH_APP:
                         S(k), g(_.pn.CASH_APP_INFORMATION);
@@ -133,10 +133,7 @@ let C = () => {
                 if (((0, s.mf)(e), null == e)) return void c();
                 y(e);
                 let { billingAddressInfo: n } = (0, E.uK)(e),
-                    r = u.V.every((e) => {
-                        let t = n[e];
-                        return null != t && "" !== t;
-                    });
+                    r = (0, u.Q)(n);
                 if (((null == n.name || "" === n.name) && null != t && (n.name = t), B({ isValid: r, info: n }), !r))
                     return void g(_.pn.ADDRESS);
                 try {
