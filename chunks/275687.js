@@ -23,32 +23,33 @@ function m(e) {
             maxWidth: h = 1 / 0,
             maxHeight: I = 1 / 0,
             channelId: A,
-            showParticipants: T = !0,
-            volume: v,
-            autoMute: y,
-            onVolumeChange: S,
-            onMutedChange: E,
-            onClick: x,
-            onContextMenu: M,
+            showTextContent: T = h >= 250,
+            showParticipants: v = !0,
+            volume: y,
+            autoMute: S,
+            onVolumeChange: E,
+            onMutedChange: x,
+            onClick: M,
+            onContextMenu: O,
         } = e,
-        O = t.width ?? 0,
+        P = t.width ?? 0,
         N = t.height ?? 0,
-        P = (0, c.bG)([_.A], () => _.A.getBasicChannel(A)?.guild_id, [A]),
-        w = O > 0 && N > 0 ? O / N : 16 / 9,
-        B = Math.min(O > 0 ? O : g, h),
-        R = B / w;
-    R > I && (B = (R = I) * w), B < g && (R = (B = g) / w);
-    let G = Math.round(Math.min(B, h)),
-        D = Math.round(Math.min(R, I)),
-        L = O > 0 && N > 0 ? Math.min(G / O, D / N, 1) : 1,
-        k = (0, l.AE)({ src: a, width: Math.round(O * L), height: Math.round(N * L) }),
-        [U, j] = o.useState(!1),
-        F = o.useCallback(
+        w = (0, c.bG)([_.A], () => _.A.getBasicChannel(A)?.guild_id, [A]),
+        B = P > 0 && N > 0 ? P / N : 16 / 9,
+        R = Math.min(P > 0 ? P : g, h),
+        G = R / B;
+    G > I && (R = (G = I) * B), R < g && (G = (R = g) / B);
+    let D = Math.round(Math.min(R, h)),
+        L = Math.round(Math.min(G, I)),
+        k = P > 0 && N > 0 ? Math.min(D / P, L / N, 1) : 1,
+        j = (0, l.AE)({ src: a, width: Math.round(P * k), height: Math.round(N * k) }),
+        [F, U] = o.useState(!1),
+        H = o.useCallback(
             (e) => {
                 let { playerState: a, isControlBarExpanded: o } = e;
                 return (0, n.jsx)(d.A, {
                     createdAt: null != t.clip_created_at ? Date.parse(t.clip_created_at) : void 0,
-                    participantIds: T
+                    participantIds: v
                         ? (t.clip_participants?.map((e) => {
                               let { id: t } = e;
                               return t;
@@ -56,42 +57,44 @@ function m(e) {
                         : [],
                     applicationId: t.application?.id,
                     title: t.title,
-                    guildId: P,
+                    guildId: w,
                     playerState: a,
                     isControlBarExpanded: o,
-                    isFullScreen: U,
+                    isFullScreen: F,
+                    showTextContent: T,
                 });
             },
-            [t, P, U, T],
+            [t, w, F, v, T],
         );
     return (0, n.jsx)("div", {
         className: r()(u.k, { [u.H]: f }, i),
         onClick: (e) => e.stopPropagation(),
         onKeyUp: C ? (e) => e.stopPropagation() : void 0,
         onKeyDown: C ? (e) => e.stopPropagation() : void 0,
-        onContextMenu: M,
-        style: f ? void 0 : { width: G, height: D },
+        onContextMenu: O,
+        style: f ? void 0 : { width: D, height: L },
         children: (0, n.jsx)(s.A, {
             crossOrigin: null,
             src: b,
             downloadUrl: t.url,
             downloadContentType: t.content_type,
-            poster: k,
+            poster: j,
             posterPlaceholder: t.placeholder,
             posterPlaceholderVersion: t.placeholder_version,
             active: m,
             autoplay: p,
-            initialVolume: v,
-            initialMuted: y,
-            onVolumeChange: S,
-            onMutedChange: E,
+            initialVolume: y,
+            initialMuted: S,
+            onVolumeChange: E,
+            onMutedChange: x,
             orientation: "landscape",
             loadingSpinnerPosition: "center",
-            renderPersistentOverlay: F,
+            renderPersistentOverlay: H,
             targetTimeSec: 1 / 0,
             parentTransitionState: null,
-            onFullscreenChange: j,
-            onClick: x,
+            onFullscreenChange: U,
+            onClick: M,
+            objectFit: f ? "cover" : void 0,
         }),
     });
 }

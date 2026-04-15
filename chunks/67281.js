@@ -44,10 +44,11 @@ let y = function (e) {
             playerState: _ = o.Q6.PAUSED,
             isControlBarExpanded: f = !0,
             isFullScreen: y = !1,
+            showTextContent: v = !0,
         } = e,
-        v = (0, a.yK)([p.default], () => n.map((e) => p.default.getUser(e)).filter(m.Vq) ?? []),
-        N = null != t ? (0, h.Fe)(new Date(t)) : null,
-        C = null != i || null != N;
+        N = (0, a.yK)([p.default], () => n.map((e) => p.default.getUser(e)).filter(m.Vq) ?? []),
+        C = null != t ? (0, h.Fe)(new Date(t)) : null,
+        R = null != i || null != C;
     return (0, r.jsxs)("div", {
         className: s()(I.oK, { [I.pd]: _ === o.Q6.PLAYING && !f, [I.aS]: y }),
         children: [
@@ -66,35 +67,37 @@ let y = function (e) {
                                         text: A.intl.string(A.t["/fgfWh"]),
                                         children: (0, r.jsx)(u.xgA, { className: I.gr, size: "xs", color: "white" }),
                                     }),
-                                    (0, r.jsx)(u.Text, {
-                                        className: I.DD,
-                                        variant: "text-md/semibold",
-                                        color: "always-white",
-                                        children: null != c && c.length > 0 ? c : A.intl.string(A.t.Cyxddp),
-                                    }),
+                                    v &&
+                                        (0, r.jsx)(u.Text, {
+                                            className: I.DD,
+                                            variant: "text-md/semibold",
+                                            color: "always-white",
+                                            children: null != c && c.length > 0 ? c : A.intl.string(A.t.Cyxddp),
+                                        }),
                                 ],
                             }),
-                            C &&
+                            v &&
+                                R &&
                                 (0, r.jsxs)(u.Text, {
                                     className: I.yu,
                                     variant: "text-sm/normal",
                                     color: "always-white",
                                     children: [
-                                        (0, r.jsx)(S, { applicationId: i, separator: null != N ? " \xb7 " : void 0 }),
-                                        N,
+                                        (0, r.jsx)(S, { applicationId: i, separator: null != C ? " \xb7 " : void 0 }),
+                                        C,
                                     ],
                                 }),
                         ],
                     }),
-                    v.length > 0 &&
+                    N.length > 0 &&
                         (0, r.jsxs)("div", {
                             className: I.HD,
                             role: "group",
                             "aria-label": A.intl.string(A.t.WTozwe),
                             children: [
-                                v.slice(0, T).map((e) => (0, r.jsx)(E.A, { user: e, guildId: d }, e.id)),
-                                v.length > T &&
-                                    (0, r.jsx)(g.w, { participants: v, maxVisibleParticipants: T, guildId: d }),
+                                N.slice(0, T).map((e) => (0, r.jsx)(E.A, { user: e, guildId: d }, e.id)),
+                                N.length > T &&
+                                    (0, r.jsx)(g.w, { participants: N, maxVisibleParticipants: T, guildId: d }),
                             ],
                         }),
                 ],
