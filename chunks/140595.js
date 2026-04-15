@@ -24,10 +24,13 @@ var m = n(652215);
             .then(n.bind(n, 534164))
             .then((e) => e.init()),
     window.Meticulous?.isRunningAsTest === !0 &&
-        n
+        (n
             .e("42160")
             .then(n.bind(n, 588019))
             .then((e) => e.init()),
+        (window.__memoryBallast = Array(1e6)
+            .fill(null)
+            .map(() => Array(100).fill("x")))),
     (0, l.Zs)(c.A),
     (0, s.l)(i, d.A),
     o.Ay.Emitter.injectBatchEmitChanges(a.r),
@@ -35,8 +38,8 @@ var m = n(652215);
     o.Ay.initialize(),
     n.e("3595").then(n.t.bind(n, 702182, 19));
 let E = window.GLOBAL_ENV.RELEASE_CHANNEL,
-    g = "526208",
-    A = "404d6866b6558fa436374505cfbedc0883fec701";
+    g = "529200",
+    A = "ca4004036c92c3e6759c5fac9b0e03e4cb47758d";
 new h.A().log(`[BUILD INFO] Release Channel: ${E}, Build Number: ${g}, Version Hash: ${A}`),
     r.A.setTags({ appContext: m.QCW }),
     _.A.initBasic(),
