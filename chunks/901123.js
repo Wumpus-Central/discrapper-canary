@@ -182,7 +182,6 @@ let s = "@me",
         CONFERENCE_MODE_VOICE: (e, t) => `/conference-mode/voice/${e}/${t}`,
         QUEST_PREVIEW: (e) => `/quest-preview/${e}`,
         QUEST_PREVIEW_TOOL_2: (e) => `/quest-home?tab=preview_tool&quest_id=${e}`,
-        GORILLA: "/last-meadow-online",
         ICYMI: "/icymi",
     }),
     d = (0, r.dN)(c, [":", "?", "@"]);

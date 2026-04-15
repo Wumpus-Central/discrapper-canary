@@ -10,7 +10,7 @@ var r = n(627968),
     c = n(793574),
     d = n(688810),
     _ = n(979286),
-    f = n(379337),
+    f = n(841917),
     p = n(508591),
     h = n(603538),
     m = n(30084),
@@ -30,14 +30,14 @@ var r = n(627968),
     D = n(518477),
     L = n(652215),
     w = n(758836),
-    M = n(346640),
-    x = n(788868),
-    P = n(854232),
+    M = n(985418),
+    P = n(788868),
+    x = n(854232),
     k = n(985018),
     U = n(232972);
 let G = (e) => {
     let { badge: t, tieredTenureBadge: n } = e;
-    return void 0 !== n && t.id !== P.K ? (0, r.jsx)(h.A, { profileBadge: t, tenureBadge: n }) : t.description;
+    return void 0 !== n && t.id !== x.K ? (0, r.jsx)(h.A, { profileBadge: t, tenureBadge: n }) : t.description;
 };
 function F(e) {
     let {
@@ -55,7 +55,7 @@ function F(e) {
         { analyticsLocations: W } = (0, d.Ay)(c.A.BADGE),
         { context: K, trackUserProfileAction: $ } = (0, C.NJ)(),
         z = S.default.getCurrentUser(),
-        q = (0, v.CC)(z?.premiumType, x.PremiumTypes.TIER_2),
+        q = (0, v.CC)(z?.premiumType, P.PremiumTypes.TIER_2),
         Z = (0, b.AP)(z?.id ?? null),
         X = (0, O.A)(Z).some((e) => e.id === I.A.ORB_PROFILE_BADGE);
     return (0, r.jsx)("div", {
@@ -65,9 +65,9 @@ function F(e) {
         children: t.map((e, t) => {
             let n = e.id === I.A.ORB_PROFILE_BADGE,
                 i = (0, N.e0)(e.id),
-                d = null != i || e.id === P.K,
+                d = null != i || e.id === x.K,
                 S = h?.userId === z?.id,
-                v = e.id === M.tH,
+                v = e.id === M.G,
                 C = (t) => {
                     if (($({ action: "PRESS_BADGE" }), (0, R.R9)({ badge: e.id, analyticsLocations: W, ...K }), n)) {
                         (0, _.Cz)({
@@ -111,7 +111,7 @@ function F(e) {
                         $({ action: "HOVER_BADGE" }),
                         (0, R.sQ)({ badge: e.id, analyticsLocations: W, ...K });
                 },
-                x = void 0 !== i && e.id !== P.K,
+                P = void 0 !== i && e.id !== x.K,
                 k = (0, r.jsx)("img", {
                     alt: " ",
                     "aria-hidden": !0,
@@ -126,7 +126,7 @@ function F(e) {
                     "aria-label": e.description,
                     style: { filter: B && null != i ? `drop-shadow(0 0 5px ${i.glowColor})` : void 0 },
                 };
-            if (x) {
+            if (P) {
                 let n = (0, r.jsx)(l.MzZ, { ...Q, ref: H, children: k });
                 return (0, r.jsx)(
                     "div",
@@ -172,7 +172,7 @@ function F(e) {
                 );
             }
             let J = (0, r.jsx)(l.MzZ, { ...Q, children: k }),
-                ee = G({ badge: e, tieredTenureBadge: d && e.id !== P.K ? i : void 0 });
+                ee = G({ badge: e, tieredTenureBadge: d && e.id !== x.K ? i : void 0 });
             return (0, r.jsx)(
                 o.m,
                 { __unsupportedReactNodeAsText: ee, forceOpen: Z, delay: D.In, ariaHidden: !0, children: J },

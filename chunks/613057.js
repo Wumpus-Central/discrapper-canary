@@ -38,7 +38,6 @@ var u = (function (e) {
         (e.QUEST_PREVIEW_TOOL = "QUEST_PREVIEW_TOOL"),
         (e.ONE_TIME_LOGIN = "ONE_TIME_LOGIN"),
         (e.PLAYGROUND = "PLAYGROUND"),
-        (e.GORILLA = "GORILLA"),
         e
     );
 })({});
@@ -69,8 +68,6 @@ function c(e) {
             return "activities";
         case "PLAYGROUND":
             return "playground";
-        case "GORILLA":
-            return "gorilla";
         default:
             return e;
     }

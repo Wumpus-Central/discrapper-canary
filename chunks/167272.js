@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => U });
+n.d(t, { A: () => x });
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -32,62 +32,57 @@ var i = n(311907),
     L = n(312784),
     w = n(985629),
     M = n(652215),
-    x = n(346640),
-    P = n(996988),
-    k = n(985018);
-function U(e) {
-    let { user: t, activity: n, onAction: U, onClose: G, application: F, containerClassName: V } = e,
-        { themeType: B } = (0, v.E)(),
-        H = (0, i.bG)([T.default], () => T.default.getId() === t.id),
-        j = (0, f.J)(F),
-        Y = (0, A.o)(n?.application_id ?? F?.id),
-        { analyticsLocations: W } = (0, E.Ay)(m.A.USER_PROFILE_ACTIVITY_BUTTONS),
-        K = (0, _.A)("user_profile_activity_buttons", n?.application_id),
-        { fetched: $, canStartAuthorization: z, hasAlreadyLinked: q, startAuthorization: Z } = (0, g.RD)(F),
-        X = B === P.d.MODAL || B === P.d.MODAL_V2,
-        Q = B === P.d.POPOUT,
-        J = (() => {
-            if (H)
-                return Q && n?.type === M.$pd.PLAYING && F?.id != null
-                    ? (0, r.jsx)(p.A, { applicationId: F.id, onAction: U, onClose: G })
+    P = n(996988);
+function x(e) {
+    let { user: t, activity: n, onAction: x, onClose: k, application: U, containerClassName: G } = e,
+        { themeType: F } = (0, v.E)(),
+        V = (0, i.bG)([T.default], () => T.default.getId() === t.id),
+        B = (0, f.J)(U),
+        H = (0, A.o)(n?.application_id ?? U?.id),
+        { analyticsLocations: j } = (0, E.Ay)(m.A.USER_PROFILE_ACTIVITY_BUTTONS),
+        Y = (0, _.A)("user_profile_activity_buttons", n?.application_id),
+        { fetched: W, canStartAuthorization: K, hasAlreadyLinked: $, startAuthorization: z } = (0, g.RD)(U),
+        q = F === P.d.MODAL || F === P.d.MODAL_V2,
+        Z = F === P.d.POPOUT,
+        X = (() => {
+            if (V)
+                return Z && n?.type === M.$pd.PLAYING && U?.id != null
+                    ? (0, r.jsx)(p.A, { applicationId: U.id, onAction: x, onClose: k })
                     : null;
-            if (
-                (n?.application_id === x.L8 && null != n && (n = { ...n, buttons: [k.intl.string(k.t.E4kW5O)] }),
-                n?.buttons != null && n?.buttons.length >= 1)
-            )
-                return (0, r.jsx)(N.A, { user: t, activity: n, onAction: U });
-            if (!Y && j && null != F && !X)
-                return (0, r.jsx)(w.A, { application: F, onAction: U, onClose: G, analyticsLocations: W });
-            if ((0, l.A)(n) || ((0, o.Ay)(n) && Y))
-                return (0, r.jsx)(C.A, { user: t, activity: n, onAction: U, onClose: G });
-            if ($ && z && !q) return (0, r.jsx)(R.A, { startAuthorization: Z, onAction: U });
-            if (K.length > 0)
+            if (n?.buttons != null && n?.buttons.length >= 1)
+                return (0, r.jsx)(N.A, { user: t, activity: n, onAction: x });
+            if (!H && B && null != U && !q)
+                return (0, r.jsx)(w.A, { application: U, onAction: x, onClose: k, analyticsLocations: j });
+            if ((0, l.A)(n) || ((0, o.Ay)(n) && H))
+                return (0, r.jsx)(C.A, { user: t, activity: n, onAction: x, onClose: k });
+            if (W && K && !$) return (0, r.jsx)(R.A, { startAuthorization: z, onAction: x });
+            if (Y.length > 0)
                 return (0, r.jsx)(h.A, {
-                    distributorCTAConfigs: K,
-                    fullWidth: B !== P.d.MODAL_V2,
+                    distributorCTAConfigs: Y,
+                    fullWidth: F !== P.d.MODAL_V2,
                     stopPropagation: !0,
-                    onAction: U,
-                    onClose: G,
+                    onAction: x,
+                    onClose: k,
                 });
             if (!(0, a.A)(n)) {
                 if ((0, c.A)(n))
-                    return (0, r.jsx)(b.A, { platformType: M.fg2.XBOX, icon: () => (0, r.jsx)(y.A, {}), onAction: U });
+                    return (0, r.jsx)(b.A, { platformType: M.fg2.XBOX, icon: () => (0, r.jsx)(y.A, {}), onAction: x });
                 if ((0, u.A)(n))
                     return (0, r.jsx)(b.A, {
                         platformType: M.fg2.PLAYSTATION,
                         icon: () => (0, r.jsx)(S.A, {}),
-                        onAction: U,
+                        onAction: x,
                     });
             }
             return (0, d.A)(n)
-                ? (0, r.jsx)(L.A, { activity: n, onAction: U })
+                ? (0, r.jsx)(L.A, { activity: n, onAction: x })
                 : (0, o._C)(n)
-                  ? (0, r.jsx)(C.A, { user: t, activity: n, onAction: U, onClose: G })
+                  ? (0, r.jsx)(C.A, { user: t, activity: n, onAction: x, onClose: k })
                   : (0, s.A)(n, M.jUm.INSTANCE)
-                    ? (0, r.jsx)(O.A, { user: t, activity: n, onAction: U })
+                    ? (0, r.jsx)(O.A, { user: t, activity: n, onAction: x })
                     : (0, I.Cy)(n)
-                      ? (0, r.jsx)(D.A, { activity: n, onAction: U, onClose: G })
+                      ? (0, r.jsx)(D.A, { activity: n, onAction: x, onClose: k })
                       : null;
         })();
-    return null == J ? null : (0, r.jsx)("div", { className: V, children: J });
+    return null == X ? null : (0, r.jsx)("div", { className: G, children: X });
 }

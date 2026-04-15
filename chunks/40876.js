@@ -780,15 +780,6 @@ let i = {
         loadRightBeforeConnectionOpen: !0,
     },
     SocialLayerStorefrontConfigManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(49431).A },
-    GorillaManager: {
-        actions: [
-            "GORILLA_COMPLETE_ACTIVITY_SUCCESS",
-            "GORILLA_SET_VOLUME",
-            "GORILLA_UPDATE_USER_DATA_SUCCESS",
-            "GORILLA_UPDATE_ACHIEVEMENT",
-        ],
-        inlineRequire: () => n(21947).A,
-    },
     CacheRequireModuleExperimentManager: {
         actions: [],
         inlineRequire: () => n(178881).A,

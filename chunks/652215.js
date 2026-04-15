@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, {
-    $4X: () => ex,
+    $4X: () => eP,
     $8o: () => ea,
     $OG: () => tw,
     $aF: () => to,
@@ -99,7 +99,7 @@ n.d(t, {
     Pq7: () => h.Pq,
     Puh: () => n9,
     PvD: () => es,
-    Q4z: () => tx,
+    Q4z: () => tP,
     Q7O: () => h.Q7,
     QCW: () => nJ,
     RCc: () => tt,
@@ -157,7 +157,7 @@ n.d(t, {
     YYv: () => f.YY,
     Yri: () => h.Yr,
     YvQ: () => R,
-    Z86: () => nP,
+    Z86: () => nx,
     ZE4: () => h.ZE,
     ZGg: () => eK,
     ZSU: () => tD,
@@ -199,11 +199,11 @@ n.d(t, {
     eAD: () => e0,
     eGj: () => ep,
     eQT: () => e1,
-    elq: () => x,
+    elq: () => P,
     ewM: () => tq,
     f5z: () => Z,
-    fAW: () => P,
-    fHV: () => eP,
+    fAW: () => x,
+    fHV: () => ex,
     fg2: () => tY,
     fic: () => rw,
     frM: () => h.fr,
@@ -259,9 +259,9 @@ n.d(t, {
     lid: () => nt,
     m3P: () => O,
     m_i: () => rl,
-    mdB: () => tP,
+    mdB: () => tx,
     meB: () => h.me,
-    mnr: () => rx,
+    mnr: () => rP,
     mu: () => eW,
     n5X: () => nf,
     n83: () => nX,
@@ -281,7 +281,7 @@ n.d(t, {
     orn: () => eT,
     p2C: () => tn,
     p_A: () => N,
-    p_j: () => nx,
+    p_j: () => nP,
     pr7: () => W,
     pwA: () => q,
     qF7: () => h.qF,
@@ -705,7 +705,7 @@ var r = n(989441),
             e
         );
     })({}),
-    x = (function (e) {
+    P = (function (e) {
         return (
             (e.RESOLVING = "RESOLVING"),
             (e.RESOLVED = "RESOLVED"),
@@ -720,7 +720,7 @@ var r = n(989441),
             e
         );
     })({}),
-    P = (function (e) {
+    x = (function (e) {
         return (e.OPENING = "OPENING"), (e.OPEN = "OPEN"), (e.OPEN_FAIL = "OPEN_FAIL"), e;
     })({}),
     k = (function (e) {
@@ -1930,10 +1930,6 @@ let ef = "",
         CONFERENCE_MODE_VOICE_CHANNEL_USERS: (e) => `/conference-mode/channels/${e}/users`,
         CONFERENCE_MODE_EVENTS: "/conference-mode/events",
         CONFERENCE_MODE_CONFERENCES: "/conference-mode/conference",
-        GORILLA_COUNTERS: "/gorilla/counters",
-        GORILLA_USER_DATA: "/gorilla/user-data/@me",
-        GORILLA_START_ACTIVITY: (e) => `/gorilla/activity/${e}/start`,
-        GORILLA_COMPLETE_ACTIVITY: (e) => `/gorilla/activity/${e}/complete`,
         GUILD_MIGRATE_PIN_PERMISSION: (e) => `/guilds/${e}/migrate-pin-permission`,
         GUILD_MIGRATE_SLOWMODE_PERMISSION: (e) => `/guilds/${e}/migrate-bypass-slowmode-permission`,
         QUEST_PLACEMENT: "/quests/placement-alpha",
@@ -1980,8 +1976,8 @@ let eS = 100,
     eL = 4e3,
     ew = 250,
     eM = 100,
-    ex = 1e3,
-    eP = 100,
+    eP = 1e3,
+    ex = 100,
     ek = 256,
     eU = 32,
     eG = 190,
@@ -3237,7 +3233,7 @@ let tw = { page: "Direct", object: "Web URL" },
         SECURE_FRAMES_VERIFIED_DEVICES: "Secure Frames Verified Devices",
         REACTION_NOTIFICATIONS: "Reaction Notifications",
     });
-var tx = (function (e) {
+var tP = (function (e) {
         return (
             (e.APPLICATION_STORE = "Application Store Verified Guild Invite - Lurker"),
             (e.CHAT_INPUT_BLOCKER = "Chat Input Blocker - Lurker Mode"),
@@ -3254,7 +3250,7 @@ var tx = (function (e) {
             e
         );
     })({}),
-    tP = (function (e) {
+    tx = (function (e) {
         return (
             (e.QR_CODE = "QR Code Login"),
             (e.MOBILE_WEB_HANDOFF = "Mobile Web Handoff"),
@@ -5791,10 +5787,10 @@ var nD = (function (e) {
     nM = (function (e) {
         return (e.VIDEO = "VIDEO"), (e.ACTIVITY = "ACTIVITY"), (e.FRAME = "FRAME"), (e.HAVEN = "HAVEN"), e;
     })({}),
-    nx = (function (e) {
+    nP = (function (e) {
         return (e.GIF = "GIF"), (e.STICKER = "STICKER"), e;
     })({});
-let nP = Object.freeze({
+let nx = Object.freeze({
     GIF: { type: "GIF", command: "gif", title: "Gif", commandId: "-16" },
     TENOR: { type: "GIF", command: "tenor", title: "Tenor", commandId: "-9" },
 });
@@ -6346,4 +6342,4 @@ let rw = Object.freeze({
         __DO_NOT_USE__STOREFRONT_MESSAGE_EMBED_PARENT_SKU: (e) => (null != e ? `useParentSkuData/${e}` : null),
     }),
     rM = 4096,
-    rx = 0x7fffffff;
+    rP = 0x7fffffff;

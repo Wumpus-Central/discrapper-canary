@@ -1,10 +1,9 @@
-"use strict";
 n.d(t, { v: () => i });
-let r = null;
+let a = null;
 function i() {
-    if (null == r)
+    if (null == a)
         try {
-            r = new AudioContext();
+            a = new AudioContext();
         } catch (e) {}
-    return r;
+    return a;
 }

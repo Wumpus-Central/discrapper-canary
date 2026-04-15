@@ -31,17 +31,17 @@ var r = n(889137),
     L = n(51271),
     w = n(844944),
     M = n(122906),
-    x = n(21599),
-    P = n(346542),
+    P = n(21599),
+    x = n(346542),
     k = n(279208),
     U = n(917878),
     G = n(586872),
     F = n(99341),
     V = n(925518),
-    B = n(141468),
-    H = n(407580),
-    j = n(130201),
-    Y = n(475481),
+    B = n(521427),
+    H = n(141468),
+    j = n(407580),
+    Y = n(130201),
     W = n(963852),
     K = n(195880),
     $ = n(488004),
@@ -87,13 +87,13 @@ let eD = null,
     eL = new v.A("MessageActionCreators"),
     ew = new v.A("MessageQueue"),
     eM = !1;
-class ex {
+class eP {
     completed = !1;
     markComplete() {
         this.completed = !0;
     }
 }
-function eP(e) {
+function ex(e) {
     let {
             content: t,
             channelId: n,
@@ -153,7 +153,6 @@ function eP(e) {
             _.Ay.trackWithMetadata(eN.HAw.APP_OAUTH2_LINK_EMBED_URL_SENT, { application_id: u }),
                 (0, g.KL)(u, eC.J.OAUTH, l);
         else if (t === S.I.COLLECTIBLES_SHOP);
-        else if (t === S.I.GORILLA_DEEP_LINK);
         else throw Error(`Unknown coded link type: ${t}`);
     });
 }
@@ -168,8 +167,8 @@ function ek(e) {
         } = e,
         o = eo.default.getId(),
         l = ec.A.getInvite(t),
-        u = (0, x.y$)(t),
-        c = null != l && (0, P.oK)(l),
+        u = (0, P.y$)(t),
+        c = null != l && (0, x.oK)(l),
         d = l?.target_application?.id;
     null != d && c && (0, g.KL)(d, eC.J.ACTIVITY_INVITE, o);
     let f = el.A.getChannel(n);
@@ -209,7 +208,7 @@ function ek(e) {
                 message_id: r,
                 send_type: eN.gfq.DIRECT_MESSAGE,
                 invite_guild_scheduled_event_id: u.guildScheduledEventId,
-                invite_instance_id: (0, x._U)(u.baseCode, r) ?? null,
+                invite_instance_id: (0, P._U)(u.baseCode, r) ?? null,
                 ...a,
             }),
             _.Ay.trackWithMetadata(eN.HAw.INVITE_SENT, t);
@@ -228,7 +227,7 @@ function ek(e) {
                 message_id: r,
                 send_type: eN.gfq.DIRECT_MESSAGE,
                 invite_guild_scheduled_event_id: u.guildScheduledEventId,
-                invite_instance_id: (0, x._U)(u.baseCode, r) ?? null,
+                invite_instance_id: (0, P._U)(u.baseCode, r) ?? null,
                 ...a,
             }),
             _.Ay.trackWithMetadata(eN.HAw.INVITE_SENT, e));
@@ -529,7 +528,7 @@ let eH = {
                     oldFormErrors: !0,
                     rejectWithError: !1,
                 });
-            if (r.body.length > 0) return (0, B.rh)(r.body[0]);
+            if (r.body.length > 0) return (0, H.rh)(r.body[0]);
         },
         fetchMessages(e) {
             let {
@@ -571,7 +570,7 @@ let eH = {
             let S = c.A.getOrCreate(t).loadStart(T);
             c.A.commit(S), l.h.dispatch({ type: "LOAD_MESSAGES" });
             let y = T?.messageId,
-                v = new ex();
+                v = new eP();
             return (
                 d || this.fetchLocalMessages(t, m ?? I, n, r, i, v),
                 a.Bo.get({
@@ -766,7 +765,7 @@ let eH = {
             r = { ...r, nonce: s };
             let a = () => ej._sendMessage(e, t, r),
                 o = F.Ay.backgroundify(a, void 0);
-            return (H.A.recordMessageSendAttempt(e, s, r), ed.A.isReady(e))
+            return (j.A.recordMessageSendAttempt(e, s, r), ed.A.isReady(e))
                 ? o()
                 : n && e !== A.E
                   ? (ew.info(`Waiting for channel ${e} to be ready before sending.`),
@@ -844,7 +843,7 @@ ${s}`),
                 context: { location: eO.Hx.GREET },
             }).then(
                 (n) => (
-                    j.A.donateSentMessage(n.body.content, e),
+                    Y.A.donateSentMessage(n.body.content, e),
                     ej.receiveMessage(e, n.body),
                     l.h.dispatch({ type: "STICKER_TRACK_USAGE", stickerIds: [t] }),
                     n
@@ -907,11 +906,11 @@ ${s}`),
                     withCheckpoint: b,
                 } = n,
                 M = n.flags ?? 0,
-                [x, P] = (0, er.A)(a);
-            x && ((a = P), (M = (0, s.UI)(M, eN.pr7.SUPPRESS_NOTIFICATIONS)));
+                [P, x] = (0, er.A)(a);
+            P && ((a = x), (M = (0, s.UI)(M, eN.pr7.SUPPRESS_NOTIFICATIONS)));
             let k = el.A.getChannel(e),
                 U = eu.A.getGuild(k?.guild_id);
-            (0, Y.Qz)(U, k, "_sendMessage") && (M = (0, s.UI)(M, eN.pr7.IS_GUILD_OFFICIAL));
+            (0, B.Qz)(U, k, "_sendMessage") && (M = (0, s.UI)(M, eN.pr7.IS_GUILD_OFFICIAL));
             let F = !1,
                 V = n.messageReference?.type === eN.SH7.FORWARD;
             if (
@@ -1041,13 +1040,13 @@ ${s}`),
                         (_) => {
                             let m = Date.now() - s;
                             if (_.ok) {
-                                j.A.donateSentMessage(a, e),
+                                Y.A.donateSentMessage(a, e),
                                     ej.receiveMessage(e, _.body, !0, {
                                         sendAnalytics: { duration: m, queueSize: o },
                                         poll: g,
                                     }),
                                     null != n.alsoForwardToChannelId &&
-                                        C.A.sendForward((0, B.rh)(_.body), n.alsoForwardToChannelId)
+                                        C.A.sendForward((0, H.rh)(_.body), n.alsoForwardToChannelId)
                                             .then(() => {
                                                 eF({
                                                     referencedMessageId: _.body?.id,
@@ -1079,7 +1078,7 @@ ${s}`),
                                         joinRequestUserId: n,
                                     });
                                 }
-                                H.A.recordMessageSendApiResponse(J),
+                                j.A.recordMessageSendApiResponse(J),
                                     l.h.dispatch({
                                         type: "SLOWMODE_RESET_COOLDOWN",
                                         slowmodeType: eh.R.SendMessage,
@@ -1091,7 +1090,7 @@ ${s}`),
                                         type: "LOCAL_MESSAGE_CREATE",
                                         message: { channel_id: e, author: em.default.getCurrentUser() },
                                     }),
-                                    eP({
+                                    ex({
                                         content: a,
                                         channelId: e,
                                         messageId: _.body.id,

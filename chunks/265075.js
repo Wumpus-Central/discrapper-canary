@@ -36,7 +36,6 @@ function c(e) {
             else if (t === o.I.APP_OAUTH2_LINK);
             else if (t === o.I.COLLECTIBLES_SHOP);
             else if (t === o.I.EXPERIMENT);
-            else if (t === o.I.GORILLA_DEEP_LINK);
             else throw Error(`Unknown coded link type: ${t}`);
         });
 }
