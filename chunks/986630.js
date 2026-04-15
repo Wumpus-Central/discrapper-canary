@@ -43,20 +43,20 @@ class c extends o.A {
             prices: o,
             bundled_products: _,
             preview_assets: f,
-            variants: h,
-            ...p
+            variants: p,
+            ...h
         } = e;
         return new c({
-            ...super.fromServer(p),
+            ...super.fromServer(h),
             type: t,
             premiumType: n === u.oA2 ? null : n,
             categorySkuId: r,
             isCategoryReward: l.MS.some((e) => {
                 let { rewardSkuId: t } = e;
-                return t === p.sku_id;
+                return t === h.sku_id;
             }),
             prices: (0, i.A)(o),
-            items: (0, a.K)(p.items),
+            items: (0, a.K)(h.items),
             bundledProducts: _?.map(s.A.fromServer),
             previewAssets:
                 null != f
@@ -67,9 +67,9 @@ class c extends o.A {
                           bgAnimated: f.bg_animated,
                       }
                     : void 0,
-            variants: h?.map(d.fromServer),
-            googleSkuIds: p.google_sku_ids,
-            eligibleOffers: p.eligible_offers,
+            variants: p?.map(d.fromServer),
+            googleSkuIds: h.google_sku_ids,
+            eligibleOffers: h.eligible_offers,
         });
     }
     static fromStorefrontProductRecord(e) {
@@ -117,7 +117,7 @@ class c extends o.A {
                                   type: r.type,
                                   premiumType: r.premiumType === u.oA2 ? null : r.premiumType,
                                   items: i ?? [s].filter((e) => null != e),
-                                  categorySkuId: r.categorySkuId ?? "",
+                                  categorySkuId: e.primaryCollectionId ?? r.categorySkuId ?? "",
                                   isCategoryReward: l.MS.some((e) => {
                                       let { rewardSkuId: t } = e;
                                       return t === n.id;
