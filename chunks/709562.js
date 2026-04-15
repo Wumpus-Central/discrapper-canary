@@ -118,49 +118,50 @@ function S(e) {
             ref: t,
             color: n,
             caretColor: s,
-            isActive: o = !1,
-            className: l,
-            iconClassName: u,
-            onPopoutClick: c,
-            popoutOpen: S = !1,
-            popoutDisabled: y = !1,
-            isTrayButton: v,
-            applyStyles: N = !1,
-            ...C
+            caretAriaLabel: o,
+            isActive: l = !1,
+            className: u,
+            iconClassName: c,
+            onPopoutClick: S,
+            popoutOpen: y = !1,
+            popoutDisabled: v = !1,
+            isTrayButton: N,
+            applyStyles: C = !1,
+            ...R
         } = e,
-        R = (0, m.A)(n, o),
-        O = s ?? R,
-        b = (0, _.A)("(max-width: 456px)"),
-        D = i.useRef(null),
-        L = i.useContext(p.vG);
+        O = (0, m.A)(n, l),
+        b = s ?? O,
+        D = (0, _.A)("(max-width: 456px)"),
+        L = i.useRef(null),
+        w = i.useContext(p.vG);
     i.useEffect(() => {
-        null != D.current && (L ? D.current.pause() : D.current.play());
-    }, [L]);
-    let w = C.onContextMenu ?? c,
-        M = null == c && !v,
-        x = null != c && !v,
-        P = v && null != c && !b,
-        k = (0, r.jsx)(A, {
-            ...C,
+        null != L.current && (w ? L.current.pause() : L.current.play());
+    }, [w]);
+    let M = R.onContextMenu ?? S,
+        x = null == S && !N,
+        P = null != S && !N,
+        k = N && null != S && !D,
+        U = (0, r.jsx)(A, {
+            ...R,
             grow: !1,
-            onContextMenu: w,
-            iconClassName: a()(u, g.LF, M && g.Ns),
-            className: a()(b || N ? l : null, o && g.vu, g.wh, T[R], M && g.Sy, P && g.hA),
+            onContextMenu: M,
+            iconClassName: a()(c, g.LF, x && g.Ns),
+            className: a()(D || C ? u : null, l && g.vu, g.wh, T[O], x && g.Sy, k && g.hA),
         });
-    return b
-        ? k
+    return D
+        ? U
         : (0, r.jsxs)("div", {
               ref: t,
-              className: a()(g.re, S && g.q6, l, x && [g.TD, I[R]]),
+              className: a()(g.re, y && g.q6, u, P && [g.TD, I[O]]),
               children: [
-                  k,
-                  null != c
+                  U,
+                  null != S
                       ? (0, r.jsx)(h.A, {
                             children: (0, r.jsx)(d.DUT, {
-                                "aria-label": E.intl.string(E.t.PdRCRg),
-                                onClick: y ? void 0 : c,
-                                className: a()(g.cd, v && g.Ml, T[O], S && [g.q6, g.vu], y && g.r9),
-                                children: (0, r.jsx)(f.A, { className: a()(g.gG, S && g.ho, y && g.r9) }),
+                                "aria-label": o ?? E.intl.string(E.t.PdRCRg),
+                                onClick: v ? void 0 : S,
+                                className: a()(g.cd, N && g.Ml, T[b], y && [g.q6, g.vu], v && g.r9),
+                                children: (0, r.jsx)(f.A, { className: a()(g.gG, y && g.ho, v && g.r9) }),
                             }),
                         })
                       : null,

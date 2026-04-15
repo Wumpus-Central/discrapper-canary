@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h, r: () => p });
+n.d(t, { A: () => m, r: () => h });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -10,8 +10,9 @@ var r = n(627968),
     c = n(675991),
     d = n(709562),
     _ = n(652215),
-    f = n(724718);
-function p(e) {
+    f = n(985018),
+    p = n(384691);
+function h(e) {
     let t = (0, c.Q)(e),
         {
             enabled: n,
@@ -42,7 +43,7 @@ function p(e) {
         }),
     });
 }
-function h(e) {
+function m(e) {
     let {
             enabled: t,
             join: n,
@@ -53,15 +54,15 @@ function h(e) {
             hasPermission: u,
             className: c,
             channelLimitReached: _,
-            channelLimit: h,
-            centerButton: m = !1,
-            onPopoutClick: E,
-            ...g
+            channelLimit: m,
+            centerButton: E = !1,
+            onPopoutClick: g,
+            ...A
         } = e,
-        A = m ? d.l : d.A,
-        I = () => (n ? "join" : t ? "green" : "primaryDark"),
-        T = (e) => (n ? "join" : e ? "green" : g.color);
-    return (0, r.jsx)(p, {
+        I = E ? d.l : d.A,
+        T = () => (n ? "join" : t ? "green" : "primaryDark"),
+        S = (e) => (n ? "join" : e ? "green" : A.color);
+    return (0, r.jsx)(h, {
         enabled: t,
         join: n,
         channel: i,
@@ -70,23 +71,24 @@ function h(e) {
         cameraUnavailable: l,
         hasPermission: u,
         channelLimitReached: _,
-        channelLimit: h,
+        channelLimit: m,
         children: (e) => {
             let { unavailable: t, onMouseEnter: i, onMouseLeave: s, isActive: o, ...l } = e;
-            return (0, r.jsx)(A, {
+            return (0, r.jsx)(I, {
                 ...l,
-                ...g,
-                color: T(o),
-                caretColor: I(),
+                ...A,
+                color: S(o),
+                caretColor: T(),
+                caretAriaLabel: f.intl.string(f.t.jO7lgy),
                 isActive: o,
                 onMouseEnter: (e) => {
-                    g.onMouseEnter?.(e), i?.();
+                    A.onMouseEnter?.(e), i?.();
                 },
                 onMouseLeave: (e) => {
-                    g.onMouseLeave?.(e), s?.();
+                    A.onMouseLeave?.(e), s?.();
                 },
-                className: a()(c, { [f.t]: t }),
-                onPopoutClick: E,
+                className: a()(c, { [p.t]: t }),
+                onPopoutClick: g,
                 isTrayButton: !n,
             });
         },
