@@ -17,8 +17,8 @@ var u = n(735438),
 let S = T.XlH.CLOSED,
     y = {},
     v = {},
-    C = !1,
     N = !1,
+    C = !1,
     R = null,
     O = [
         "name",
@@ -55,7 +55,8 @@ function b(e) {
         if (null == t) return !1;
         (s = t),
             null != a &&
-                ((a = a.set("permissionOverwrites", s.permissionOverwrites)), (o = I.A.getChannel(a.parent_id)));
+                ((a = a.set("permissionOverwrites", s.permissionOverwrites).set("availableTags", s.availableTags)),
+                (o = I.A.getChannel(a.parent_id)));
     }
     return !0;
 }
@@ -77,24 +78,24 @@ function L(e) {
         (i = e.subsection),
         null != a &&
             r === T.p_A.INSTANT_INVITES &&
-            ((C = !0),
+            ((N = !0),
             p.Bo.get({ url: T.Rsh.INSTANT_INVITES(a.id), oldFormErrors: !0, rejectWithError: !0 }).then(
                 (e) => {
-                    (C = !1), h.h.dispatch({ type: "CHANNEL_SETTINGS_LOADED_INVITES", invites: e.body });
+                    (N = !1), h.h.dispatch({ type: "CHANNEL_SETTINGS_LOADED_INVITES", invites: e.body });
                 },
-                () => (C = !1),
+                () => (N = !1),
             ));
 }
 function w() {
-    (N = !1), (S = T.XlH.CLOSED), (r = null), (a = s = null), (o = null), (v = {});
+    (C = !1), (S = T.XlH.CLOSED), (r = null), (a = s = null), (o = null), (v = {});
 }
 function M() {
     (S = T.XlH.SUBMITTING), (y = {});
 }
-function x() {
+function P() {
     (s = a), (S = T.XlH.OPEN);
 }
-function P(e) {
+function x(e) {
     (S = T.XlH.OPEN),
         (y = Object.keys(e.errors ?? {}).reduce((t, n) => {
             let r = e.errors[n];
@@ -225,13 +226,13 @@ class z extends f.Ay.Store {
         return a !== s;
     }
     isOpen() {
-        return N;
+        return C;
     }
     getSection() {
         return r;
     }
     getInvites() {
-        return { invites: v, loading: C };
+        return { invites: v, loading: N };
     }
     showNotice() {
         return this.hasChanges();
@@ -262,8 +263,8 @@ class z extends f.Ay.Store {
 let q = new z(h.h, {
         CHANNEL_SETTINGS_INIT: D,
         CHANNEL_SETTINGS_SUBMIT: M,
-        CHANNEL_SETTINGS_SUBMIT_SUCCESS: x,
-        CHANNEL_SETTINGS_SUBMIT_FAILURE: P,
+        CHANNEL_SETTINGS_SUBMIT_SUCCESS: P,
+        CHANNEL_SETTINGS_SUBMIT_FAILURE: x,
         CHANNEL_SETTINGS_CLOSE: w,
         CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: W,
         CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS: W,
