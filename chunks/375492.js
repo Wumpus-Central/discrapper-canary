@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => G }), n(321073), n(938796);
+n.d(t, { A: () => F }), n(321073), n(938796);
 var r = n(812729),
     i = n.n(r),
     s = n(735438),
@@ -26,8 +26,9 @@ var r = n(812729),
     C = n(528767),
     R = n(652215);
 let O = [],
-    b = {};
-function D() {
+    b = {},
+    D = null;
+function L() {
     let e = [],
         t = A.G2.getSetting();
     null != t &&
@@ -42,41 +43,49 @@ function D() {
         let [, n] = t;
         null != n.application_id && (s.add(n.name), e.push(n));
     });
-    let o = p.Ay.getVisibleGame(),
-        l = null != o && null != o.name && (s.has(o.name) || (0, m.v)(o, [...e, ...C.A.getRemoteActivities()])),
-        u = null != o && o.isLauncher,
-        c = null != T.A.getCurrentUserActiveStream(),
-        d = l || (u && !c);
-    if (null != o && null != o.name && !d) {
-        let t = y.A.findGame(o);
+    let o = null != T.A.getCurrentUserActiveStream(),
+        l = p.Ay.getVisibleGame();
+    if (o) {
+        let e = T.A.getStreamerActiveStreamMetadata(),
+            t = p.Ay.getVisibleRunningGames(),
+            n = null;
+        e?.pid != null && (n = t.find((t) => t.pid === e.pid) ?? null),
+            null == n && e?.id != null && (n = t.find((t) => t.id === e.id) ?? null),
+            null != n ? (null == D && (D = n.start ?? Date.now()), (l = n)) : (D = null);
+    } else D = null;
+    let u = null != l && null != l.name && (s.has(l.name) || (0, m.v)(l, [...e, ...C.A.getRemoteActivities()])),
+        c = null != l && l.isLauncher,
+        d = u || (c && !o);
+    if (null != l && null != l.name && !d) {
+        let t = y.A.findGame(l);
         e.push({
             type: R.$pd.PLAYING,
-            name: o.name,
-            application_id: o.id ?? t?.id,
-            timestamps: { start: o.start },
-            ...(0, E.CO)(o),
+            name: l.name,
+            application_id: l.id ?? t?.id,
+            timestamps: { start: D ?? l.start },
+            ...(0, E.CO)(l),
         });
     }
     let _ = g.A.getActivity();
     null != _ && e.push({ type: R.$pd.LISTENING, ..._ }), i()(O, e) || (O = e);
 }
-function L() {
-    (b = {}), D();
-}
-function w(e) {
-    let { socketId: t, pid: n, activity: r, partyPrivacy: s } = e;
-    if (i()(b[t], [n, r, s])) return !1;
-    null != r ? (b[t] = [n, r, s]) : delete b[t], D();
+function w() {
+    (b = {}), L();
 }
 function M(e) {
-    let { socketId: t } = e;
-    delete b[t], D();
+    let { socketId: t, pid: n, activity: r, partyPrivacy: s } = e;
+    if (i()(b[t], [n, r, s])) return !1;
+    null != r ? (b[t] = [n, r, s]) : delete b[t], L();
 }
 function x(e) {
-    let { localActivities: t } = e;
-    (b = { ...t }), D();
+    let { socketId: t } = e;
+    delete b[t], L();
 }
-function P() {
+function P(e) {
+    let { localActivities: t } = e;
+    (b = { ...t }), L();
+}
+function k() {
     let e = {},
         t = !1;
     for (let [n, [r, i, s]] of Object.entries(b)) {
@@ -86,13 +95,13 @@ function P() {
     }
     return t ? ((b = e), "APPLICATION_ACTIVITIES_CHANGED") : "NO_CHANGES";
 }
-function k() {
-    P(), D();
+function U() {
+    k(), L();
 }
-class U extends l.Ay.Store {
+class G extends l.Ay.Store {
     static displayName = "LocalActivityStore";
     initialize() {
-        this.waitFor(_.A, T.A, S.A, c.Ay, v.A, h.A, y.A, p.Ay, N.A, C.A, g.A, I.A), this.syncWith([h.A], () => D());
+        this.waitFor(_.A, T.A, S.A, c.Ay, v.A, h.A, y.A, p.Ay, N.A, C.A, g.A, I.A), this.syncWith([h.A], () => L());
     }
     getActivities() {
         return O;
@@ -117,22 +126,22 @@ class U extends l.Ay.Store {
         return null;
     }
 }
-let G = new U(u.h, {
-    ROBLOX_SUBGAME_UPDATE: D,
-    ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: D,
-    OVERLAY_INITIALIZE: x,
-    START_SESSION: L,
-    LOCAL_ACTIVITY_UPDATE: w,
-    RPC_APP_DISCONNECTED: M,
-    RUNNING_GAMES_CHANGE: D,
-    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: D,
-    SPOTIFY_PLAYER_STATE: D,
-    SPOTIFY_PLAYER_PLAY: D,
-    STREAMING_UPDATE: D,
-    USER_CONNECTIONS_UPDATE: D,
-    STREAM_START: D,
-    STREAM_STOP: D,
-    USER_SETTINGS_PROTO_UPDATE: k,
-    EMBEDDED_ACTIVITY_CLOSE: D,
-    RUNNING_GAME_TOGGLE_DETECTION: D,
+let F = new G(u.h, {
+    ROBLOX_SUBGAME_UPDATE: L,
+    ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: L,
+    OVERLAY_INITIALIZE: P,
+    START_SESSION: w,
+    LOCAL_ACTIVITY_UPDATE: M,
+    RPC_APP_DISCONNECTED: x,
+    RUNNING_GAMES_CHANGE: L,
+    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: L,
+    SPOTIFY_PLAYER_STATE: L,
+    SPOTIFY_PLAYER_PLAY: L,
+    STREAMING_UPDATE: L,
+    USER_CONNECTIONS_UPDATE: L,
+    STREAM_START: L,
+    STREAM_STOP: L,
+    USER_SETTINGS_PROTO_UPDATE: U,
+    EMBEDDED_ACTIVITY_CLOSE: L,
+    RUNNING_GAME_TOGGLE_DETECTION: L,
 });
