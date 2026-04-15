@@ -34,20 +34,11 @@ function c(e) {
         n = t?.item;
     if (null != n) {
         if (n.type === r.R.AVATAR_DECORATION)
-            return {
-                type: "single",
-                item: new i.A({ skuId: e.id, type: n.type, asset: n.asset, label: n.labelLocalized ?? n.label }),
-            };
+            return { type: "single", item: new i.A({ skuId: e.id, type: n.type, asset: n.asset, label: n.label }) };
         if (n.type === r.R.NAMEPLATE)
             return {
                 type: "single",
-                item: new s.A({
-                    skuId: e.id,
-                    type: n.type,
-                    asset: n.asset,
-                    label: n.labelLocalized ?? n.label,
-                    palette: n.palette,
-                }),
+                item: new s.A({ skuId: e.id, type: n.type, asset: n.asset, label: n.label, palette: n.palette }),
             };
         if (n.type === r.R.PROFILE_EFFECT)
             return {
@@ -55,12 +46,12 @@ function c(e) {
                 item: new a.Ay({
                     skuId: e.id,
                     type: n.type,
-                    title: n.titleLocalized ?? n.title,
-                    description: n.descriptionLocalized ?? n.description,
+                    title: n.title,
+                    description: n.description,
                     thumbnailPreviewSrc: n.thumbnailPreviewSrc,
                     reducedMotionSrc: n.reducedMotionSrc,
                     effects: n.effects ?? [],
-                    accessibilityLabel: n.accessibilityLabelLocalized ?? n.accessibilityLabel,
+                    accessibilityLabel: n.accessibilityLabel,
                     animationType: n.animationType,
                     staticFrameSrc: n.staticFrameSrc,
                 }),

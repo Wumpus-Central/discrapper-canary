@@ -17,47 +17,32 @@ function s(e) {
         width: e.width,
         duration: e.duration ?? 0,
         start: e.start ?? 0,
-        loopDelay: e.loop_delay,
+        loopDelay: e.loopDelay,
         position: e.position,
-        zIndex: e.z_index,
-        randomizedSources: e.randomized_sources?.map((e) => ({ src: e.src })),
+        zIndex: e.zIndex,
+        randomizedSources: e.randomizedSources?.map((e) => {
+            let { src: t } = e;
+            return { src: t };
+        }),
     };
 }
 function a(e) {
     if (null != e) {
         if (e.type === r.R.AVATAR_DECORATION)
-            return {
-                id: e.id,
-                type: e.type,
-                asset: e.asset,
-                assets: i(e.assets),
-                label: e.label,
-                labelLocalized: e.label_localized,
-            };
+            return { id: e.id, type: e.type, asset: e.asset, assets: i(e.assets), label: e.label };
         if (e.type === r.R.NAMEPLATE)
-            return {
-                id: e.id,
-                type: e.type,
-                asset: e.asset,
-                assets: i(e.assets),
-                label: e.label,
-                labelLocalized: e.label_localized,
-                palette: e.palette,
-            };
+            return { id: e.id, type: e.type, asset: e.asset, assets: i(e.assets), label: e.label, palette: e.palette };
         if (e.type === r.R.PROFILE_EFFECT)
             return {
                 id: e.id,
                 type: e.type,
                 title: e.title,
-                titleLocalized: e.title_localized,
                 description: e.description,
-                descriptionLocalized: e.description_localized,
-                accessibilityLabel: e.accessibility_label,
-                accessibilityLabelLocalized: e.accessibility_label_localized,
-                animationType: e.animation_type,
-                staticFrameSrc: e.static_frame_src,
-                thumbnailPreviewSrc: e.thumbnail_preview_src,
-                reducedMotionSrc: e.reduced_motion_src,
+                accessibilityLabel: e.accessibilityLabel,
+                animationType: e.animationType,
+                staticFrameSrc: e.staticFrameSrc,
+                thumbnailPreviewSrc: e.thumbnailPreviewSrc,
+                reducedMotionSrc: e.reducedMotionSrc,
                 effects: e.effects?.map(s),
             };
         if (e.type === r.R.PROFILE_FRAME) return { id: e.id, type: e.type, label: e.label, layers: e.layers };
