@@ -20,7 +20,7 @@ function h(e, t) {
         u = i()(a),
         d = i().mix(l, a, r, "rgb"),
         _ = i().contrast(u, d) < i().contrast(u, l) ? d : l;
-    return (0, c.lZ)({ foreground: u, background: _, ratio: o.Tr.Text, saturationFactor: n }).hex();
+    return (0, c.lZ)({ foreground: u, background: _, ratio: o.Tr.Text, saturationFactor: n });
 }
 function m(e, t) {
     return (

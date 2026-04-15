@@ -11,7 +11,7 @@ function d(e) {
         n = (0, a.bG)([s.A], () => (s.A.desaturateUserColors ? s.A.saturation : 1));
     return i.useMemo(() => {
         if (null == e) return;
-        let i = (0, o.Fy)(e, t, n, u.oe);
+        let i = (0, o.Fy)(e, t, n, u.oe).hex();
         return {
             "--custom-guild-official-message": (0, l.$k)(e, !0),
             "--custom-guild-official-message-hsl": (0, l.BK)(e, !0),
