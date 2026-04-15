@@ -16,8 +16,8 @@ var l = n(503698),
     p = n(508654),
     g = n(974930),
     f = n(961314),
-    x = n(58736),
-    E = n(742589),
+    E = n(58736),
+    x = n(742589),
     I = n(376352),
     C = n(353428),
     N = n(46054),
@@ -26,8 +26,8 @@ var l = n(503698),
     b = n(724759),
     y = n(123973),
     v = n(241756),
-    j = n(313961),
-    R = n(532622),
+    R = n(313961),
+    j = n(532622),
     O = n(546871),
     L = n(416528),
     M = n(136523),
@@ -64,7 +64,7 @@ function w(e) {
         null != n &&
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(x.Ay.Divider, { className: G.yF }),
+                    (0, i.jsx)(E.Ay.Divider, { className: G.yF }),
                     (0, i.jsx)(m.A, { game: n, className: G.RI }),
                     (0, i.jsx)(o.Text, {
                         className: G.W$,
@@ -80,7 +80,7 @@ function w(e) {
             n = l.stream;
         t = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(x.Ay.Divider, { className: G.yF }),
+                (0, i.jsx)(E.Ay.Divider, { className: G.yF }),
                 (0, i.jsx)(k, { user: e, channel: s, stream: n, color: d ? "text-strong" : "none" }),
                 a && d && (0, i.jsx)(O.A, { channel: s, focusedParticipant: l }),
                 r && (0, i.jsx)(I.F, { user: e, stream: n, channel: s }),
@@ -91,12 +91,12 @@ function w(e) {
 }
 function B(e) {
     let { channel: t, guild: l, appContext: d, inCall: c, isChatOpen: m, exitFullScreen: p } = e,
-        g = (0, b.BF)({ location: "channel_call_header_toolbar" }),
+        g = (0, b.B)({ location: "channel_call_header_toolbar" }),
         { focusedParticipant: f } = (0, a.cf)(
-            [j.A],
+            [R.A],
             () => ({
-                focusedParticipant: j.A.getSelectedParticipant(t.id),
-                participantsOpen: j.A.getParticipantsOpen(t.id),
+                focusedParticipant: R.A.getSelectedParticipant(t.id),
+                participantsOpen: R.A.getParticipantsOpen(t.id),
             }),
             [t.id],
         ),
@@ -107,7 +107,7 @@ function B(e) {
     t.isDM() ? (O = U.intl.string(U.t.jN2DfZ)) : t.isGroupDM() && (O = U.intl.string(U.t["e5y+gm"]));
     let k = (0, a.bG)([h.A], () => h.A.getChannelStatus(t)),
         B = t.isGuildVoice() && c && null != k && k.length > 0,
-        V = (0, R.Ay)(t),
+        V = (0, j.Ay)(t),
         H = B
             ? (0, i.jsx)(r.m, {
                   asContainer: !0,
@@ -150,8 +150,8 @@ function B(e) {
     return (0, i.jsxs)("div", {
         className: G.SC,
         children: [
-            (0, i.jsxs)(x.Ay, {
-                onDoubleClick: E.I,
+            (0, i.jsxs)(E.Ay, {
+                onDoubleClick: x.I,
                 transparent: !0,
                 className: G.jr,
                 innerClassName: G.gi,
@@ -167,11 +167,11 @@ function B(e) {
                     shouldShowHeaderParticipants: g,
                 }),
                 children: [
-                    (0, i.jsx)(x.Ay.Title, {
+                    (0, i.jsx)(E.Ay.Title, {
                         wrapperClassName: G.DD,
                         children: (0, i.jsxs)(i.Fragment, {
                             children: [
-                                null != y ? (0, i.jsx)(x.Ay.ChannelIcon, { icon: y, "aria-label": O }) : null,
+                                null != y ? (0, i.jsx)(E.Ay.ChannelIcon, { icon: y, "aria-label": O }) : null,
                                 I,
                                 F &&
                                     (0, i.jsx)(r.m, {

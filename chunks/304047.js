@@ -1,4 +1,4 @@
-n.d(t, { MI: () => T, X0: () => S, sU: () => I });
+n.d(t, { M: () => x, X: () => C });
 var i = n(627968),
     l = n(64700),
     a = n(503698),
@@ -12,42 +12,10 @@ var i = n(627968),
     m = n(692969),
     A = n(535296),
     g = n(240248),
-    p = n(360469),
-    _ = n(985018),
+    _ = n(360469),
+    p = n(985018),
     f = n(633916);
 function E(e) {
-    let t = (0, r.bG)([u.A], () => u.A.getApplication(e));
-    return l.useMemo(() => {
-        if (null == t) return null;
-        let e = t.getIconURL(p.iu.SMALL);
-        return (0, g.uJ)(e)
-            ? null
-            : {
-                  name: t.name,
-                  icon: () =>
-                      (0, i.jsx)("div", {
-                          className: f.jy,
-                          children: (0, i.jsx)("img", { className: f.Se, src: e, alt: "", "aria-hidden": !0 }),
-                      }),
-              };
-    }, [t]);
-}
-function C(e) {
-    let { applicationName: t, applicationIcon: n } = e;
-    return (0, i.jsxs)("div", {
-        className: s()(f.qs, f.ac),
-        children: [
-            n(),
-            null != t &&
-                (0, i.jsx)(d.Text, {
-                    variant: "text-sm/normal",
-                    className: f.Wk,
-                    children: _.intl.format(_.t.Sq9xJ7, { game: t }),
-                }),
-        ],
-    });
-}
-function x(e) {
     let {
         applicationName: t,
         applicationIcon: n,
@@ -72,79 +40,53 @@ function x(e) {
                     (0, i.jsx)(d.Text, {
                         variant: "text-sm/normal",
                         className: f.Wk,
-                        children: _.intl.format(_.t.Sq9xJ7, { game: t }),
+                        children: p.intl.format(p.t.Sq9xJ7, { game: t }),
                     }),
             ],
         }),
     });
 }
-function S(e) {
-    let { applicationId: t, hideApplicationName: n } = e,
-        l = (0, m.A)({
+function C(e) {
+    let t,
+        { applicationId: n, hideApplicationName: a } = e,
+        s = (0, m.A)({
             location: "SocialLayerCommerceGameDetailsButton",
-            applicationId: t,
+            applicationId: n,
             source: h.Ob.CallTile,
             trackEntryPointImpression: !0,
         }),
-        { name: a, icon: s } = E(t) ?? {};
-    return null == l || null == s
+        { name: o, icon: c } =
+            ((t = (0, r.bG)([u.A], () => u.A.getApplication(n))),
+            l.useMemo(() => {
+                if (null == t) return null;
+                let e = t.getIconURL(_.iu.SMALL);
+                return (0, g.uJ)(e)
+                    ? null
+                    : {
+                          name: t.name,
+                          icon: () =>
+                              (0, i.jsx)("div", {
+                                  className: f.jy,
+                                  children: (0, i.jsx)("img", { className: f.Se, src: e, alt: "", "aria-hidden": !0 }),
+                              }),
+                      };
+            }, [t]) ?? {});
+    return null == s || null == c
         ? null
-        : (0, i.jsx)(x, {
-              applicationName: n ? void 0 : a,
-              applicationIcon: s,
-              tooltipText: _.intl.string(_.t.ajHoOr),
-              onClick: l,
+        : (0, i.jsx)(E, {
+              applicationName: a ? void 0 : o,
+              applicationIcon: c,
+              tooltipText: p.intl.string(p.t.ajHoOr),
+              onClick: s,
           });
 }
-function I(e) {
-    let { userId: t, applicationId: n, channel: a, hasApplicationWidget: s, hideApplicationName: r } = e,
-        [c, d] = l.useState(!1),
-        u = l.useRef(null),
-        h = l.useCallback(() => d(!0), []),
-        m = l.useCallback(() => d(!1), []),
-        g = l.useCallback(
-            (e) => {
-                e?.stopPropagation(), h();
-            },
-            [h],
-        ),
-        { name: p, icon: S } = E(n) ?? {};
-    return null == S
-        ? null
-        : s
-          ? (0, i.jsx)(o.Y, {
-                targetElementRef: u,
-                shouldShow: c,
-                animation: o.Y.Animation.FADE,
-                position: "right",
-                align: "bottom",
-                spacing: 8,
-                onRequestClose: m,
-                renderPopout: () => (0, i.jsx)(A.fd, { userId: t, channel: a, applicationId: n }),
-                children: () =>
-                    (0, i.jsx)("div", {
-                        ref: u,
-                        className: f.s5,
-                        children: (0, i.jsx)(x, {
-                            applicationName: r ? void 0 : p,
-                            applicationIcon: S,
-                            tooltipText: _.intl.string(_.t["03qWLj"]),
-                            shouldShowTooltip: !c && void 0,
-                            onClick: g,
-                            "aria-expanded": c,
-                            "aria-haspopup": "dialog",
-                        }),
-                    }),
-            })
-          : (0, i.jsx)(C, { applicationName: r ? void 0 : p, applicationIcon: S });
-}
-function T(e) {
+function x(e) {
     let { userId: t, applicationId: n, channel: a, hideWhenInactive: r, idle: u } = e,
         [h, m] = l.useState(!1),
         g = l.useRef(null),
-        p = l.useCallback(() => m(!0), []),
+        _ = l.useCallback(() => m(!0), []),
         E = l.useCallback(() => m(!1), []),
-        C = _.intl.string(_.t["wg/30i"]);
+        C = p.intl.string(p.t["wg/30i"]);
     return (0, i.jsx)(o.Y, {
         targetElementRef: g,
         shouldShow: h,
@@ -166,7 +108,7 @@ function T(e) {
                             size: "sm",
                             variant: "overlay-secondary",
                             onClick: (e) => {
-                                e.stopPropagation(), p();
+                                e.stopPropagation(), _();
                             },
                             "aria-label": C,
                             icon: d.okO,

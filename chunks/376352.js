@@ -64,7 +64,7 @@ function N(e) {
                     isAppIcon: n,
                     icon: l,
                     text: I.intl.string(I.t["9njbm2"]),
-                    renderPopout: () => (0, i.jsx)(f.Vp, { userId: t.id, channel: s, applicationId: v, onClose: H }),
+                    renderPopout: () => (0, i.jsx)(f.V, { userId: t.id, channel: s, applicationId: v, onClose: H }),
                 };
             }
             let { icon: e, text: n } =
