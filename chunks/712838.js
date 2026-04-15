@@ -59,6 +59,7 @@ class _ extends r.PureComponent {
                     (0, l.jsx)(i.DUT, {
                         tabIndex: -1,
                         onClick: this.handleMessageClick,
+                        ignoreKeyPress: !0,
                         innerRef: this.containerRef,
                         className: c.mk,
                         focusProps: { enabled: !1 },
