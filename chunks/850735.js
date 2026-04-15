@@ -1,9 +1,9 @@
 "use strict";
 s.d(t, { A: () => I });
 var n = s(627968),
-    r = s(64700),
-    l = s(503698),
-    a = s.n(l),
+    l = s(64700),
+    r = s(503698),
+    a = s.n(r),
     i = s(572944),
     o = s(311907),
     c = s(397927),
@@ -17,39 +17,44 @@ var n = s(627968),
     f = s(166489),
     x = s(613258),
     E = s(758836),
-    C = s(652215),
-    b = s(985018),
-    A = s(419447);
+    b = s(652215),
+    C = s(985018),
+    A = s(297046);
 let S = (e) => {
         let { tab: t } = e,
-            [s, l, c] = (0, o.yK)([p.A], () => [p.A.getLayout(t), p.A.isFetchingLayout(t), p.A.getLayoutFetchError(t)]),
-            d = null == s && !l && c?.status !== 404 && c?.status !== 429;
-        return (r.useEffect(() => {
+            [s, r, c] = (0, o.yK)([p.A], () => [p.A.getLayout(t), p.A.isFetchingLayout(t), p.A.getLayoutFetchError(t)]),
+            d = null == s && !r && c?.status !== 404 && c?.status !== 429;
+        return (l.useEffect(() => {
             d && (0, g.T2)({ tab: t });
         }, [d, t]),
         null == s)
-            ? null
+            ? t !== i.g.HOME || d || r
+                ? null
+                : (0, n.jsx)("div", {
+                      className: a()(A.YB, A.GS),
+                      children: (0, n.jsx)(u.Z_, { tenantId: b.FYj, templateId: "shop-home" }),
+                  })
             : (0, n.jsxs)(n.Fragment, {
                   children: [
                       t === i.g.ORBS && (0, n.jsx)(f.A, {}),
                       (0, n.jsx)("div", {
                           className: a()(A.YB, A.GS),
-                          children: (0, n.jsx)(u.Qs, { tenantId: C.FYj, layoutId: s }),
+                          children: (0, n.jsx)(u.Qs, { tenantId: b.FYj, layoutId: s }),
                       }),
                   ],
               });
     },
     v = (e) => {
         let { url: t } = e,
-            [s, l] = r.useState(null);
-        return (r.useEffect(() => {
+            [s, r] = l.useState(null);
+        return (l.useEffect(() => {
             (async () => {
                 try {
                     let e = await fetch(t),
                         s = await e.json();
-                    l(s);
+                    r(s);
                 } catch (e) {
-                    l(null);
+                    r(null);
                 }
             })();
         }, [t]),
@@ -58,15 +63,15 @@ let S = (e) => {
             : (0, n.jsx)("div", { className: a()(A.YB, A.GS), children: (0, n.jsx)(u.Ay, { layout: s }) });
     },
     I = (e) => {
-        let { handleTransition: t, tab: s, transitionState: l } = e,
+        let { handleTransition: t, tab: s, transitionState: r } = e,
             a = (0, m.uM)(),
             u = (0, o.bG)([h.A], () => h.A.getShopLayoutUrlOverride()),
-            g = r.useRef(null),
+            g = l.useRef(null),
             { handleScroll: p } = (0, d.X)(g, s),
-            [f, I] = r.useState(E.md),
-            [L, j] = r.useState(!1);
+            [f, I] = l.useState(E.md),
+            [L, j] = l.useState(!1);
         return (
-            r.useEffect(() => {
+            l.useEffect(() => {
                 if (null != g.current) {
                     let e = () => {
                             if (null == g.current) return;
@@ -100,14 +105,14 @@ let S = (e) => {
                                         children: [
                                             (0, n.jsx)(c.Heading, {
                                                 variant: "heading-md/semibold",
-                                                children: b.intl.string(b.t.Yr70c4),
+                                                children: C.intl.string(C.t.Yr70c4),
                                             }),
                                             (0, n.jsx)(c.Button, {
                                                 variant: "primary",
-                                                text: b.intl.string(b.t.AfrvRD),
+                                                text: C.intl.string(C.t.AfrvRD),
                                                 onClick: () => {
                                                     t({ sourceButton: "shop all button", shouldAnimate: !0 }),
-                                                        _.default.track(C.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                        _.default.track(b.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                             collectibles_shop_session_id: a?.sessionId,
                                                             page_type: s,
                                                             page_category: s === i.g.HOME ? void 0 : a?.pageCategory,
@@ -120,7 +125,7 @@ let S = (e) => {
                                     }),
                             ],
                         }),
-                        (0, n.jsx)(x.A, { peaking: L, transitioning: l === E.Pf.OUT }),
+                        (0, n.jsx)(x.A, { peaking: L, transitioning: r === E.Pf.OUT }),
                     ],
                 }),
             })
