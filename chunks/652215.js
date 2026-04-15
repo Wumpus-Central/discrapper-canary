@@ -3977,6 +3977,7 @@ var nl = (function (e) {
             (e.GUILD_VIEWED_CLICKSTREAM = "guild_viewed_clickstream"),
             (e.WAVE_CTA_CLICKED = "wave_cta_clicked"),
             (e.FRIENDS_LIST_CLICKED = "friends_list_clicked"),
+            (e.FRIENDS_LIST_ITEM_ACTION = "friends_list_item_action"),
             (e.FRIENDS_LIST_ITEM_CLICKED = "friends_list_item_clicked"),
             (e.FRIENDS_LIST_ITEM_CONTEXT_MENU_INTERACTED = "friends_list_item_context_menu_interacted"),
             (e.FRIENDS_LIST_ITEM_MESSAGE_CLICKED = "friends_list_item_message_clicked"),
