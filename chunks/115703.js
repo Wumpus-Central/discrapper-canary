@@ -2,7 +2,7 @@
 n.d(t, { A: () => c });
 var r = n(64700),
     i = n(429913),
-    s = n(885151),
+    s = n(454908),
     a = n(403362);
 let o = 5;
 function l(e) {
@@ -14,8 +14,15 @@ function l(e) {
 }
 function u(e) {
     let t = (0, i.A)(e.gameApplicationIds),
-        n = r.useMemo(() => t.filter(a.Vq).map((e) => e.getCanonicalGameId()), [t]);
-    (0, s.W)(n);
+        n = r.useMemo(
+            () =>
+                t
+                    .filter(a.Vq)
+                    .map((e) => e.getCanonicalGameId())
+                    .filter(a.Vq),
+            [t],
+        );
+    (0, s.x)(n);
     let o = (0, i.A)(n);
     return r.useMemo(() => o.filter(a.Vq), [o]);
 }

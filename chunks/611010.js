@@ -1,21 +1,22 @@
 "use strict";
-n.d(t, { Ay: () => p, kJ: () => f, lg: () => _ }), n(938796);
+n.d(t, { Ay: () => h, kJ: () => p, lg: () => f }), n(938796);
 var r = n(101359),
     i = n(136722),
     s = n(315069),
     a = n(486020),
-    o = n(431209),
-    l = n(427157),
-    u = n(360469),
-    c = n(705751);
-let d = { [u.I4]: 7, [u.qA]: 12 };
-function _(e) {
+    o = n(661191),
+    l = n(431209),
+    u = n(427157),
+    c = n(360469),
+    d = n(705751);
+let _ = { [c.I4]: 7, [c.qA]: 12 };
+function f(e) {
     let t = { os: e.os, name: e.name };
     return (
         null != e.arguments && (t.arguments = e.arguments), null != e.is_launcher && (t.isLauncher = e.is_launcher), t
     );
 }
-class f extends s.A {
+class p extends s.A {
     id;
     name;
     icon;
@@ -32,11 +33,11 @@ class f extends s.A {
     parentId;
     connectionEntrypointUrl;
     static createFromServer(e) {
-        return new f({
+        return new p({
             ...e,
             coverImage: e.cover_image,
             primarySkuId: e.primary_sku_id,
-            bot: null != e.bot ? new l.A(e.bot) : null,
+            bot: null != e.bot ? new u.A(e.bot) : null,
             thirdPartySkus: e.third_party_skus,
             roleConnectionsVerificationUrl: e.role_connections_verification_url,
             parentId: e.parent_id,
@@ -79,7 +80,7 @@ class f extends s.A {
             : null;
     }
 }
-class p extends f {
+class h extends p {
     overlay;
     overlayWarn;
     overlayCompatibilityHook;
@@ -113,11 +114,11 @@ class p extends f {
     deepLinkUri;
     applicationAccountLinkBenefitConfig;
     static createFromServer(e) {
-        return new p({
+        return new h({
             ...e,
             coverImage: e.cover_image,
             primarySkuId: e.primary_sku_id,
-            bot: null != e.bot ? new l.A(e.bot) : null,
+            bot: null != e.bot ? new u.A(e.bot) : null,
             thirdPartySkus: e.third_party_skus,
             roleConnectionsVerificationUrl: e.role_connections_verification_url,
             overlayWarn: e.overlay_warn,
@@ -127,8 +128,8 @@ class p extends f {
             storeListingSkuId: e.store_listing_sku_id,
             guildId: e.guild_id,
             guild: e.guild,
-            publishers: null != e.publishers ? e.publishers.map(o.A.createFromServer) : [],
-            developers: null != e.developers ? e.developers.map(o.A.createFromServer) : [],
+            publishers: null != e.publishers ? e.publishers.map(l.A.createFromServer) : [],
+            developers: null != e.developers ? e.developers.map(l.A.createFromServer) : [],
             eulaId: e.eula_id,
             slug: e.slug,
             flags: i.iu(e.flags_new ?? e.flags ?? 0),
@@ -151,7 +152,7 @@ class p extends f {
             categories: e.categories,
             linkedGames: e.linked_games?.map((e) => ({
                 ...e,
-                application: null != e.application ? p.createFromServer(e.application) : void 0,
+                application: null != e.application ? h.createFromServer(e.application) : void 0,
             })),
             deepLinkUri: e.deeplink_uri,
             applicationAccountLinkBenefitConfig: e.application_account_link_benefit_config,
@@ -170,7 +171,7 @@ class p extends f {
             (this.storeListingSkuId = e.storeListingSkuId),
             (this.guildId = e.guildId),
             (this.guild = e.guild),
-            (this.executables = (e.executables ?? []).map(_)),
+            (this.executables = (e.executables ?? []).map(f)),
             (this.hashes = e.hashes ?? []),
             (this.eulaId = e.eulaId),
             (this.slug = e.slug),
@@ -191,19 +192,19 @@ class p extends f {
             (this.linkedGames =
                 e.linked_games?.map((e) => ({
                     ...e,
-                    application: null != e.application ? p.createFromServer(e.application) : void 0,
+                    application: null != e.application ? h.createFromServer(e.application) : void 0,
                 })) ?? e.linkedGames),
             (this.deepLinkUri = e.deepLinkUri ?? e.deeplink_uri),
             (this.applicationAccountLinkBenefitConfig =
                 e.applicationAccountLinkBenefitConfig ?? e.application_account_link_benefit_config);
     }
     getCanonicalGameId() {
-        return this.type === c.S7.GAME
-            ? this.id
-            : (this.linkedGames?.find((e) => e.application?.type === c.S7.GAME)?.id ?? this.id);
+        return this.type === d.S7.GAME
+            ? o.default.cast(this.id)
+            : (this.linkedGames?.find((e) => e.application?.type === d.S7.GAME)?.id ?? null);
     }
     mergeFromApplicationUpdate(e) {
-        return new p({
+        return new h({
             id: e.id ?? this.id,
             name: e.name ?? this.name,
             icon: e.icon ?? this.icon,
@@ -256,7 +257,7 @@ class p extends f {
         });
     }
     getMaxParticipants() {
-        return this.maxParticipants ?? d[this.id] ?? 0;
+        return this.maxParticipants ?? _[this.id] ?? 0;
     }
     supportsIntegrationTypes() {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
@@ -267,7 +268,7 @@ class p extends f {
         return null != this.storeListingSkuId ? this.storeListingSkuId : this.primarySkuId;
     }
     get supportsOutOfProcessOverlay() {
-        return p.supportsOutOfProcessOverlay(this.overlayMethods);
+        return h.supportsOutOfProcessOverlay(this.overlayMethods);
     }
     static supportsOutOfProcessOverlay(e) {
         let t = r.b.OUT_OF_PROCESS;

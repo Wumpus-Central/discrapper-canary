@@ -1,10 +1,11 @@
 "use strict";
-n.d(t, { A: () => l });
-var r = n(315069),
-    i = n(611010),
-    s = n(486020),
-    a = n(898736);
-function o(e) {
+n.d(t, { A: () => u });
+var r = n(155718),
+    i = n(315069),
+    s = n(611010),
+    a = n(486020),
+    o = n(898736);
+function l(e) {
     if (e?.steam != null || e?.opencritic != null)
         return {
             steam:
@@ -26,7 +27,7 @@ function o(e) {
                     : void 0,
         };
 }
-class l extends r.A {
+class u extends i.A {
     id;
     name;
     description;
@@ -62,18 +63,21 @@ class l extends r.A {
     get applicationId() {
         return this.id;
     }
+    getOfficialApplicationId() {
+        return this.linkedApplications?.find((e) => e.type === r.Mh.OFFICIAL)?.id;
+    }
     constructor(e) {
         super(),
             (this.id = e.id),
             (this.name = e.name),
             (this.description = e.description),
             (this.aliases = e.aliases ?? []),
-            (this.executables = (e.executables ?? []).map(i.lg)),
+            (this.executables = (e.executables ?? []).map(s.lg)),
             (this.overlay = e.overlay ?? !1),
             (this.overlayWarn = e.overlay_warn ?? !1),
             (this.overlayCompatibilityHook = e.overlay_compatibility_hook ?? !1),
             (this.hook = e.hook ?? !0),
-            (this.supportsOutOfProcessOverlay = i.Ay.supportsOutOfProcessOverlay(e.overlay_methods)),
+            (this.supportsOutOfProcessOverlay = s.Ay.supportsOutOfProcessOverlay(e.overlay_methods)),
             (this.thirdPartySkus = e.third_party_skus ?? []),
             (this.themes = e.themes ?? []),
             (this.linkedApplications = e.linked_applications),
@@ -93,25 +97,30 @@ class l extends r.A {
             (this.firstReleaseDate = e.first_release_date),
             (this.shopCollectionIds = e.shop_collection_ids),
             (this.steamReleaseStatus = e.steam_release_status),
-            (this.reviews = o(e.reviews)),
+            (this.reviews = l(e.reviews)),
             (this.opencriticUrl = e.opencritic_url),
             (this.gameFlags = e.game_flags ?? 0);
+    }
+    getIconURL(e, t) {
+        return null == this.iconHash || "" === this.iconHash
+            ? null
+            : (a.Ay.getGameAssetURL({ id: this.id, hash: this.iconHash, size: e, format: t }) ?? null);
     }
     getCoverURL(e) {
         return null == this.media
             ? null
             : null != this.media.cover_hash
-              ? (s.Ay.getGameAssetURL({
+              ? (a.Ay.getGameAssetURL({
                     id: this.id,
                     hash: this.media.cover_hash,
                     keepAspectRatio: !0,
-                    format: s.QB ? "webp" : "png",
+                    format: a.QB ? "webp" : "png",
                     size: e,
                 }) ?? null)
               : (this.media.cover_url ?? null);
     }
     getArtworkURLs() {
-        return null == this.media ? [] : (0, a.L)(this.id, this.media.artwork_hashes, this.media.artwork_urls);
+        return null == this.media ? [] : (0, o.L)(this.id, this.media.artwork_hashes, this.media.artwork_urls);
     }
     getCompanyByRole(e) {
         return this.companies?.filter((t) => t.roles.includes(e)) ?? [];
