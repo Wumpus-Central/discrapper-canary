@@ -37,7 +37,7 @@ function h(e) {
     let { wishlistId: t, skuId: n } = e,
         r = u(t);
     null != r.data &&
-        (r.data = new a.A({
+        (r.data = new a.Ay({
             id: r.data.id,
             userId: r.data.userId,
             items: r.data.items.filter((e) => e.skuId !== n),
@@ -78,7 +78,7 @@ function S(e) {
 function y(e) {
     let { recipientId: t, skuId: r } = e,
         i = n(622543).A.getFirstWishlistId(t);
-    null != i && null != o[i] && o[i].data?.hasSkuId(r) && (o[i].updatedAt = void 0);
+    null != i && null != o[i] && null != o[i].data && (0, a.C3)(o[i].data, r) && (o[i].updatedAt = void 0);
 }
 class v extends r.Ay.Store {
     get(e) {
@@ -88,10 +88,12 @@ class v extends r.Ay.Store {
         return this.get(e).data;
     }
     getWishlistItems(e) {
-        return this.get(e).data?.getSkuIds() ?? [];
+        let t = this.get(e).data;
+        return null != t ? (0, a.Lh)(t) : [];
     }
     hasSkuId(e, t) {
-        return this.get(e).data?.hasSkuId(t) ?? !1;
+        let n = this.get(e).data;
+        return null != n && (0, a.C3)(n, t);
     }
     getStatus(e) {
         return this.get(e).status;

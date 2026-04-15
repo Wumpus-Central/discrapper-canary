@@ -46,7 +46,7 @@ let S = {
             r.body?.wishlist_items == null && p.A.captureMessage("Wishlist items not found in response"), I(r);
             let a = r.body;
             T(a);
-            let o = E.A.fromServer(a);
+            let o = E.Ay.fromServer(a);
             s.h.dispatch({ type: "WISHLIST_FETCH_SUCCESS", wishlistId: e, wishlistData: o, updatedAt: t });
         } catch (t) {
             s.h.dispatch({ type: "WISHLIST_FETCH_FAILURE", wishlistId: e, error: new o.LG(t) }),
@@ -60,13 +60,13 @@ let S = {
                 I(n);
             let r = n.body;
             T(r);
-            let a = E.A.fromServer(r);
+            let a = E.Ay.fromServer(r);
             if (
                 (s.h.dispatch({ type: "WISHLIST_ADD_SKU_SUCCESS", wishlistId: a.id, skuId: e, wishlistData: a }),
                 null != t)
             )
                 try {
-                    let n = a.getSkuIds();
+                    let n = (0, E.Lh)(a);
                     _.default.track(g.HAw.WISHLIST_UPDATED, {
                         wishlist_id: a.id,
                         action_type: "ADD",
@@ -92,13 +92,13 @@ let S = {
             I(r);
             let a = r.body;
             T(a);
-            let o = E.A.fromServer(a);
+            let o = E.Ay.fromServer(a);
             if (
                 (s.h.dispatch({ type: "WISHLIST_REMOVE_SKU_SUCCESS", wishlistId: e, skuId: t, wishlistData: o }),
                 null != n)
             )
                 try {
-                    let e = o.getSkuIds();
+                    let e = (0, E.Lh)(o);
                     _.default.track(g.HAw.WISHLIST_UPDATED, {
                         wishlist_id: o.id,
                         action_type: "REMOVE",
@@ -151,10 +151,10 @@ let S = {
             I(n);
             let o = n.body;
             T(o);
-            let l = E.A.fromServer(o);
+            let l = E.Ay.fromServer(o);
             if ((s.h.dispatch({ type: "WISHLIST_REORDER_SUCCESS", wishlistId: e, wishlistData: l }), null != u))
                 try {
-                    let n = l.getSkuIds();
+                    let n = (0, E.Lh)(l);
                     _.default.track(g.HAw.WISHLIST_UPDATED, {
                         wishlist_id: e,
                         action_type: "REORDER",
