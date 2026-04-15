@@ -77,8 +77,13 @@ function S(e) {
     return (r.useEffect(() => {
         if (0 === t.length || 0 === i.length) return;
         let e = f.A.getRecommendations(t, i);
-        (null != e && ("loading" === e.state || e.fetchedAt >= Date.now() - g)) ||
-            _.A.fetchWishlistRecommendations(i, t, n);
+        if (null != e) {
+            if ("loading" === e.state) return;
+            let t = e.fetchedAt < Date.now() - g,
+                r = "success" === e.state && e.data.skus.length >= n;
+            if (!t && r) return;
+        }
+        _.A.fetchWishlistRecommendations(i, t, n);
     }, [t, i, n]),
     0 === t.length || 0 === i.length)
         ? I
