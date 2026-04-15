@@ -7,7 +7,15 @@ var r = n(315069),
 function o(e) {
     if (e?.steam != null || e?.opencritic != null)
         return {
-            steam: null != e.steam ? { rating: e.steam.rating, ratingCount: e.steam.rating_count } : void 0,
+            steam:
+                null != e.steam
+                    ? {
+                          rating: e.steam.rating,
+                          ratingCount: e.steam.rating_count,
+                          recentRating: e.steam.recent_rating,
+                          recentRatingCount: e.steam.recent_rating_count,
+                      }
+                    : void 0,
             opencritic:
                 null != e.opencritic
                     ? {
