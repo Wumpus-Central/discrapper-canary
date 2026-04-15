@@ -15,33 +15,34 @@ var r = n(627968),
     h = n(985018);
 let m = { type: "image", src: n(201682).A },
     E = i.forwardRef(function (e, t) {
-        let { className: n, disabled: i, size: E, location: g, forceDarkTheme: A } = e,
-            I = p.pe.TIER_2,
-            T = h.intl.string(h.t.lG6a5x),
-            S = (0, d.Gh)("premium-wishlist-button-nux"),
-            y = (0, s.bG)([f.default], () => f.default.getId());
+        let { className: n, disabled: i, size: E, variant: g, location: A, forceDarkTheme: I } = e,
+            T = p.pe.TIER_2,
+            S = h.intl.string(h.t.lG6a5x),
+            y = (0, d.Gh)("premium-wishlist-button-nux"),
+            v = (0, s.bG)([f.default], () => f.default.getId());
         (0, _.pE)();
         let {
-                isWishlisted: v,
-                isBusy: N,
-                isFirstTimeWishlister: C,
-                handleToggle: R,
-            } = (0, u.c)({ userId: y, location: g, skuId: I, nuxGraphic: S ? m : void 0, onNuxShow: S ? l.D : void 0 }),
-            O = (0, c.mB)(a.M.PREMIUM_WISHLIST_COACHMARK);
+                isWishlisted: N,
+                isBusy: C,
+                isFirstTimeWishlister: R,
+                handleToggle: O,
+            } = (0, u.c)({ userId: v, location: A, skuId: T, nuxGraphic: y ? m : void 0, onNuxShow: y ? l.D : void 0 }),
+            b = (0, c.mB)(a.M.PREMIUM_WISHLIST_COACHMARK);
         return (0, r.jsx)("div", {
             ref: t,
-            className: A ? "theme-dark" : void 0,
+            className: I ? "theme-dark" : void 0,
             children: (0, r.jsx)(o._, {
-                skuId: I,
-                productName: T,
+                skuId: T,
+                productName: S,
                 className: n,
                 disabled: i,
                 size: E,
-                isWishlisted: v,
-                isBusy: N,
-                isFirstTimeWishlister: C,
-                onClick: R,
-                shouldShowTooltip: !O,
+                variant: g,
+                isWishlisted: N,
+                isBusy: C,
+                isFirstTimeWishlister: R,
+                onClick: O,
+                shouldShowTooltip: !b,
                 tooltipConfig: { add: h.intl.string(h.t.cjmnm6) },
             }),
         });

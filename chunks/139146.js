@@ -113,6 +113,7 @@ function g(e) {
                     h[d],
                     {
                         [h.variantDefault]: "default" === c,
+                        [h.variantSecondary]: "secondary" === c,
                         [h.variantSecondaryOverlay]: "overlay-secondary" === c,
                         [h.disabled]: o,
                     },
@@ -132,10 +133,10 @@ function g(e) {
             t = I.firstTimeBody ?? p.intl.string(p.t.PXjA0b);
         return (0, r.jsx)(l.un, { title: e, body: t, shouldShow: A, children: M() });
     }
-    let x = o
+    let P = o
         ? (I.disabled ?? p.intl.string(p.t["50TX9k"]))
         : _
           ? (I.remove ?? p.intl.string(p.t.yr9TTf))
           : (I.add ?? p.intl.string(p.t["8DkMEQ"]));
-    return (0, r.jsx)(l.m_, { text: x, ariaHidden: !o, shouldShow: A, children: M() });
+    return (0, r.jsx)(l.m_, { text: P, ariaHidden: !o, shouldShow: A, children: M() });
 }

@@ -6,6 +6,7 @@ var r = {
     sm: "sm__979b1",
     md: "md__979b1",
     variantDefault: "variantDefault__979b1",
+    variantSecondary: "variantSecondary__979b1",
     normalIconColor: "normalIconColor__979b1",
     variantSecondaryOverlay: "variantSecondaryOverlay__979b1",
     wishlistedOrAnimating: "wishlistedOrAnimating__979b1",
