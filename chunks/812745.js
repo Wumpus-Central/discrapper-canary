@@ -1,11 +1,12 @@
 "use strict";
-n.d(t, { Ay: () => _, Be: () => l, Nj: () => u, y3: () => c });
+n.d(t, { Ay: () => f, Be: () => u, Nj: () => c, y3: () => d });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(34382),
-    l = (function (e) {
+    o = n(158954),
+    l = n(34382),
+    u = (function (e) {
         return (
             (e.UNKNOWN = "unknown"),
             (e.VISA = "visa"),
@@ -34,10 +35,11 @@ var r = n(627968),
             (e.CASH_APP = "cash_app"),
             (e.APPLE = "apple"),
             (e.APPLE_LIGHT = "apple_light"),
+            (e.BANK = "bank"),
             e
         );
     })({});
-function u(e) {
+function c(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "dark";
     if ("light" === t) {
         if ("apple" === e) return n(685430);
@@ -94,17 +96,19 @@ function u(e) {
             return n(511403);
     }
 }
-let c = { SMALL: o.cardIconSmall, MEDIUM: o.cardIconMedium, LARGE: o.cardIconLarge, XLARGE: o.cardIconXLarge };
-class d extends i.PureComponent {
-    static Types = l;
-    static Sizes = c;
+let d = { SMALL: l.cardIconSmall, MEDIUM: l.cardIconMedium, LARGE: l.cardIconLarge, XLARGE: l.cardIconXLarge };
+class _ extends i.PureComponent {
+    static Types = u;
+    static Sizes = d;
     static getType(e) {
-        return null == e ? "unknown" : l[e.replace(/[^a-z0-9_]/gi, "").toUpperCase()] || "unknown";
+        return null == e ? "unknown" : u[e.replace(/[^a-z0-9_]/gi, "").toUpperCase()] || "unknown";
     }
-    static defaultProps = { size: c.SMALL, flipped: !1 };
+    static defaultProps = { size: d.SMALL, flipped: !1 };
     render() {
         let { flipped: e, type: t, className: n, size: i } = this.props;
-        return (0, r.jsx)("div", { className: a()(i, o[t], n, { [o.flipped]: e }), children: t });
+        return "bank" === t
+            ? (0, r.jsx)(o.MIV, { className: n })
+            : (0, r.jsx)("div", { className: a()(i, l[t], n, { [l.flipped]: e }), children: t });
     }
 }
-let _ = d;
+let f = _;

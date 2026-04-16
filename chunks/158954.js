@@ -130,6 +130,7 @@ n.d(t, {
     LyU: () => $.InstagramNeutralIcon,
     MBj: () => $.ChatCheckIcon,
     MFz: () => $.ArrowSmallDownIcon,
+    MIV: () => $.BankIcon,
     MRp: () => $.GroupArrowRightIcon,
     MVj: () => ey.M,
     M_l: () => eI.M,
