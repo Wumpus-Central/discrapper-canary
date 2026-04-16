@@ -32,6 +32,8 @@ let a = (e) => {
                 return s.intl.formatToPlainString(s.t.eR7moP, { product: t });
             case r.R.NAMEPLATE:
                 return s.intl.formatToPlainString(s.t.YFOwHj, { product: t });
+            case r.R.PROFILE_FRAME:
+                return s.intl.formatToPlainString(s.t.vov8LX, { product: t });
             default:
                 return t;
         }
