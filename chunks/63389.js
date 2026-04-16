@@ -145,7 +145,7 @@ class g extends i.A {
             (this.lastClipTimestamp = performance.now() + t),
             (this.scheduledClipTimeout = setTimeout(() => {
                 (this.scheduledClipSignal = null),
-                    (0, _.yd)(void 0, e.type === c.Gy.MANUAL ? "manual" : "auto", [...this.timeline.read()], {
+                    (0, _.yd)(e.type === c.Gy.MANUAL ? "manual" : "auto", [...this.timeline.read()], {
                         signal: e,
                         timestamp: Date.now(),
                         emotionHistory: [],
