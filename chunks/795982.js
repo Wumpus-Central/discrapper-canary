@@ -93,6 +93,7 @@ function w(e) {
             hasBailedAst: E,
         } = (0, h.A)(r, {
             hideSimpleEmbedContent: o && d,
+            isInteracting: !1,
             formatInline: !1,
             allowList: u,
             allowHeading: u,

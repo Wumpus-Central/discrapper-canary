@@ -164,6 +164,7 @@ function H(e) {
             hasBailedAst: f,
         } = (0, I.A)(d, {
             hideSimpleEmbedContent: u && m,
+            isInteracting: !1,
             formatInline: !1,
             allowList: g,
             allowHeading: g,

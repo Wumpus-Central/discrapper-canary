@@ -17,21 +17,22 @@ function A(e, t) {
             hideSimpleEmbedContent: A,
             formatInline: f = !1,
             noStyleAndInteraction: p = !1,
-            allowHeading: x = !1,
-            allowList: v = !1,
-            allowLinks: C = !1,
-            allowDevLinks: N = !1,
-            previewLinkTarget: E = !1,
-            viewingChannelId: I,
+            isInteracting: x = !1,
+            allowHeading: v = !1,
+            allowList: C = !1,
+            allowLinks: N = !1,
+            allowDevLinks: E = !1,
+            previewLinkTarget: I = !1,
+            viewingChannelId: _,
         } = t,
-        _ = (0, c.I)({ location: "useMessageRenderedContent" }),
-        [b, S] = i.useState(!1),
-        j = i.useCallback((e) => {
-            e && S(!0);
+        b = (0, c.I)({ location: "useMessageRenderedContent" }),
+        [S, j] = i.useState(!1),
+        T = i.useCallback((e) => {
+            e && j(!0);
         }, []);
     return (
         i.useEffect(() => {
-            S(!1);
+            j(!1);
         }, [e.content]),
         i.useMemo(() => {
             if (null != e.customRenderedContent) return e.customRenderedContent;
@@ -45,33 +46,34 @@ function A(e, t) {
                     },
                 });
             }
-            return _.enabled
+            return b.enabled
                 ? {
                       content: (0, l.jsx)(i.Suspense, {
                           children: (0, l.jsx)(u.O.Provider, {
                               value: {
                                   messageId: e.id,
                                   channelId: e.channel_id,
-                                  viewingChannelId: I,
+                                  viewingChannelId: _,
                                   guildId: (0, a.U)(e),
-                                  setHasSpoilerEmbeds: j,
+                                  setHasSpoilerEmbeds: T,
                               },
                               children: (0, l.jsx)(h, { content: e.content }),
                           }),
                       }),
-                      hasSpoilerEmbeds: b,
+                      hasSpoilerEmbeds: S,
                       hasBailedAst: !1,
                   }
                 : (0, r.Ay)(e, {
                       hideSimpleEmbedContent: A,
                       formatInline: f,
                       noStyleAndInteraction: p,
-                      allowHeading: x,
-                      allowList: v,
-                      allowLinks: C,
-                      allowDevLinks: N,
-                      previewLinkTarget: E,
-                      viewingChannelId: I,
+                      isInteracting: x,
+                      allowHeading: v,
+                      allowList: C,
+                      allowLinks: N,
+                      allowDevLinks: E,
+                      previewLinkTarget: I,
+                      viewingChannelId: _,
                   });
         }, [
             e.content,
@@ -86,11 +88,12 @@ function A(e, t) {
             x,
             v,
             C,
-            E,
             N,
             I,
-            _.enabled,
-            b,
+            E,
+            _,
+            b.enabled,
+            S,
         ])
     );
 }

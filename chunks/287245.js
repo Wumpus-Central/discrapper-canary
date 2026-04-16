@@ -28,6 +28,7 @@ let b = (e) => {
                 hideSimpleEmbedContent: !0,
                 formatInline: !1,
                 noStyleAndInteraction: !1,
+                isInteracting: !1,
                 allowDevLinks: !1,
                 allowLinks: !1,
                 previewLinkTarget: !1,
