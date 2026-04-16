@@ -7,13 +7,13 @@ var l = n(627968),
     d = n(843282),
     o = n(435371),
     c = n(397927),
-    u = n(801264),
+    u = n(208039),
     m = n(975571),
     x = n(307600),
     _ = n(665171),
     g = n(397400),
-    f = n(588591),
-    h = n(695667),
+    h = n(588591),
+    f = n(695667),
     j = n(27023),
     p = n(548392),
     N = n(298009),
@@ -23,9 +23,9 @@ var l = n(627968),
     E = n(285286),
     C = n(800007),
     A = n(652215),
-    T = n(738072),
-    I = n(985018),
-    G = n(964264);
+    I = n(799435),
+    T = n(985018),
+    G = n(182505);
 function R(e) {
     let { plan: t, selected: n, className: r } = e;
     return null == t
@@ -42,7 +42,7 @@ function R(e) {
                                   (0, l.jsx)(c._Jp, { size: "xs", color: c.LU0.unsafe_rawColors.GUILD_BOOSTING_PINK }),
                                   (0, l.jsx)(c.Text, {
                                       variant: "text-xs/medium",
-                                      children: I.intl.format(T.default.kOMlHs, { boostCount: t.cost }),
+                                      children: T.intl.format(I.default.kOMlHs, { boostCount: t.cost }),
                                   }),
                               ],
                           }),
@@ -66,7 +66,7 @@ function k(e) {
                           (0, l.jsx)("div", {
                               className: G._A,
                               children: r
-                                  ? (0, l.jsx)("span", { children: I.intl.string(T.default.aCyHe2) })
+                                  ? (0, l.jsx)("span", { children: T.intl.string(I.default.aCyHe2) })
                                   : "" !== t.pingUrl
                                     ? (0, l.jsxs)(l.Fragment, {
                                           children: [
@@ -102,8 +102,8 @@ function w() {
         r.useEffect(() => {
             (0, _.Jr)(e);
         }, [e]);
-    let K = (0, s.bG)([f.A], () => f.A.getRegions()),
-        H = (0, s.bG)([f.A], () => f.A.getRegionState()),
+    let K = (0, s.bG)([h.A], () => h.A.getRegions()),
+        H = (0, s.bG)([h.A], () => h.A.getRegionState()),
         P = r.useMemo(
             () =>
                 K.sort((e, t) => (0, S.A)(e, t, H)).map((e) => ({
@@ -142,19 +142,23 @@ function w() {
                                                       className: G.TK,
                                                       variant: "heading-sm/semibold",
                                                       color: "text-subtle",
-                                                      children: I.intl.string(T.default.rOMEZd),
+                                                      children: T.intl.string(I.default.rOMEZd),
                                                   }),
                                                   (0, l.jsx)(o.m_, {
                                                       position: "top",
-                                                      text: I.intl.string(T.default.THJY1n),
-                                                      children: (0, l.jsx)(c.cBN, { className: G.GI, size: "xs" }),
+                                                      text: T.intl.string(I.default.THJY1n),
+                                                      children: (0, l.jsx)("span", {
+                                                          className: G.GI,
+                                                          tabIndex: 0,
+                                                          children: (0, l.jsx)(c.cBN, { size: "xs" }),
+                                                      }),
                                                   }),
                                               ],
                                           }),
                                           (0, l.jsx)(c.ksK, {
                                               value: v,
                                               onChange: w,
-                                              placeholder: I.intl.string(T.default.ElVYr3),
+                                              placeholder: T.intl.string(I.default.ElVYr3),
                                               maxLength: C.XF,
                                               disabled: L || !Y,
                                               error: D.name,
@@ -171,14 +175,18 @@ function w() {
                                                       className: G.TK,
                                                       variant: "heading-sm/semibold",
                                                       color: "text-subtle",
-                                                      children: I.intl.string(T.default.nB5OZ4),
+                                                      children: T.intl.string(I.default.nB5OZ4),
                                                   }),
                                                   (0, l.jsx)(o.m_, {
                                                       position: "top",
-                                                      text: I.intl.string(
-                                                          null != a ? T.default["7mX0gE"] : T.default["61N+P6"],
+                                                      text: T.intl.string(
+                                                          null != a ? I.default["7mX0gE"] : I.default["61N+P6"],
                                                       ),
-                                                      children: (0, l.jsx)(c.cBN, { className: G.GI, size: "xs" }),
+                                                      children: (0, l.jsx)("span", {
+                                                          className: G.GI,
+                                                          tabIndex: 0,
+                                                          children: (0, l.jsx)(c.cBN, { size: "xs" }),
+                                                      }),
                                                   }),
                                                   !Q &&
                                                       F &&
@@ -187,7 +195,7 @@ function w() {
                                                           children: (0, l.jsx)(o.m_, {
                                                               asContainer: !0,
                                                               position: "top",
-                                                              text: I.intl.string(T.default.kGkE7a),
+                                                              text: T.intl.string(I.default.kGkE7a),
                                                               children: (0, l.jsx)(c.DUT, {
                                                                   className: G.GI,
                                                                   onClick: () => (0, _.KH)(),
@@ -201,7 +209,7 @@ function w() {
                                               ? (0, l.jsx)(c.ksK, {
                                                     value: a?.regionName,
                                                     disabled: !0,
-                                                    placeholder: I.intl.string(T.default["k+RTIm"]),
+                                                    placeholder: T.intl.string(I.default["k+RTIm"]),
                                                 })
                                               : (0, l.jsx)(d.Pw, {
                                                     serialize: (e) => e.id,
@@ -210,7 +218,7 @@ function w() {
                                                     options: P,
                                                     optionClassName: G.uK,
                                                     select: (e) => i(e.id),
-                                                    placeholder: I.intl.string(T.default["k+RTIm"]),
+                                                    placeholder: T.intl.string(I.default["k+RTIm"]),
                                                     renderOptionLabel: (e) =>
                                                         (0, l.jsx)(k, {
                                                             region: e.value,
@@ -240,12 +248,16 @@ function w() {
                                                       className: G.TK,
                                                       variant: "heading-sm/semibold",
                                                       color: "text-subtle",
-                                                      children: I.intl.string(T.default["K+zMYp"]),
+                                                      children: T.intl.string(I.default["K+zMYp"]),
                                                   }),
                                                   (0, l.jsx)(o.m_, {
                                                       position: "top",
-                                                      text: I.intl.string(T.default["/wD5IM"]),
-                                                      children: (0, l.jsx)(c.cBN, { className: G.GI, size: "xs" }),
+                                                      text: T.intl.string(I.default["/wD5IM"]),
+                                                      children: (0, l.jsx)("span", {
+                                                          className: G.GI,
+                                                          tabIndex: 0,
+                                                          children: (0, l.jsx)(c.cBN, { size: "xs" }),
+                                                      }),
                                                   }),
                                               ],
                                           }),
@@ -256,7 +268,7 @@ function w() {
                                               options: W,
                                               optionClassName: G.uK,
                                               select: (e) => U(e.id),
-                                              placeholder: I.intl.string(T.default.JdMW0i),
+                                              placeholder: T.intl.string(I.default.JdMW0i),
                                               renderOptionValue: (e) =>
                                                   (0, l.jsx)(R, {
                                                       plan: e[0]?.value,
@@ -271,7 +283,7 @@ function w() {
                                   }),
                               ],
                           }),
-                          (0, l.jsx)("div", { className: G.sA, children: (0, l.jsx)(h.A, {}) }),
+                          (0, l.jsx)("div", { className: G.sA, children: (0, l.jsx)(f.A, {}) }),
                       ],
                   }),
                   null != a &&
@@ -283,8 +295,8 @@ function w() {
                               variant: "text-xs/medium",
                               children:
                                   O < 0
-                                      ? I.intl.format(T.default.SorKas, { boostCount: Math.abs(O) })
-                                      : I.intl.format(T.default.n2wpym, { boostCount: O }),
+                                      ? T.intl.format(I.default.SorKas, { boostCount: Math.abs(O) })
+                                      : T.intl.format(I.default.n2wpym, { boostCount: O }),
                           }),
                       }),
                   !Y &&
@@ -293,7 +305,7 @@ function w() {
                           look: u.k.WARNING,
                           children: (0, l.jsx)(c.Text, {
                               variant: "text-xs/medium",
-                              children: I.intl.string(T.default["/JNPWb"]),
+                              children: T.intl.string(I.default["/JNPWb"]),
                           }),
                       }),
                   t?.early_access === !0 &&
@@ -303,7 +315,7 @@ function w() {
                           look: u.k.INFO,
                           children: (0, l.jsx)(c.Text, {
                               variant: "text-xs/medium",
-                              children: I.intl.format(T.default.TnoBGX, { gameName: t.name }),
+                              children: T.intl.format(I.default.TnoBGX, { gameName: t.name }),
                           }),
                       }),
                   (0, l.jsx)(c.Text, {
@@ -311,7 +323,7 @@ function w() {
                       color: "text-muted",
                       children:
                           null != y &&
-                          I.intl.format(Q ? T.default.num0a6 : T.default.p5KZDr, {
+                          T.intl.format(Q ? I.default.num0a6 : I.default.p5KZDr, {
                               provider: q,
                               termsOfServiceUrl: () => (0, x.h)({ href: J }),
                               helpCenterUrl: m.A.getArticleURL(A.MVz.GAME_SERVER_HOSTING),
