@@ -1,25 +1,29 @@
 n.d(t, { A: () => d });
-var r = n(627968);
+var a = n(627968);
 n(64700);
-var a = n(503698),
-    i = n.n(a),
+var r = n(503698),
+    i = n.n(r),
     s = n(575593),
     l = n(397927),
-    o = n(985018),
-    c = n(907763);
+    c = n(985018),
+    o = n(674019);
 function d(e) {
-    var t;
-    let { product: n, isDarkText: a = !1, isOrbExclusive: d = !1 } = e,
-        u =
-            ((t = n.type),
-            d
-                ? o.intl.string(o.t["0TmQRG"])
-                : t === s.R.AVATAR_DECORATION
-                  ? o.intl.string(o.t["7v0T9P"])
-                  : t === s.R.PROFILE_EFFECT
-                    ? o.intl.string(o.t.wR5wOo)
-                    : null);
-    return null === u
+    let { product: t, isDarkText: n = !1, isOrbExclusive: r = !1 } = e,
+        d = (function (e, t) {
+            if (t) return c.intl.string(c.t["0TmQRG"]);
+            switch (e) {
+                case s.R.AVATAR_DECORATION:
+                    return c.intl.string(c.t["7v0T9P"]);
+                case s.R.PROFILE_EFFECT:
+                    return c.intl.string(c.t.wR5wOo);
+                case s.R.PROFILE_FRAME:
+                    return c.intl.string(c.t.GWrZOd);
+                case s.R.NAMEPLATE:
+                    return c.intl.string(c.t.x5CoXR);
+            }
+            return null;
+        })(t.type, r);
+    return null === d
         ? null
-        : (0, r.jsx)(l.Text, { variant: "text-xxs/normal", className: i()([c.kL, a ? c.ap : c.aK]), children: u });
+        : (0, a.jsx)(l.Text, { variant: "text-xxs/normal", className: i()([o.kL, n ? o.ap : o.aK]), children: d });
 }
