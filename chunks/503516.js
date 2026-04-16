@@ -7,56 +7,56 @@ var i = n(311907),
     a = n(964486),
     o = n(793574),
     l = n(688810),
-    u = n(979286),
-    c = n(993408),
-    d = n(482246),
-    _ = n(734925),
-    f = n(687033),
-    p = n(871181),
-    h = n(318007),
-    m = n(285719),
-    E = n(976860),
-    g = n(287809),
-    A = n(954571),
-    I = n(413748),
-    T = n(937008),
-    S = n(156312),
-    y = n(987616),
+    u = n(427675),
+    c = n(94420),
+    d = n(979286),
+    _ = n(993408),
+    f = n(482246),
+    p = n(734925),
+    h = n(687033),
+    m = n(871181),
+    E = n(318007),
+    g = n(285719),
+    A = n(976860),
+    I = n(287809),
+    T = n(954571),
+    S = n(937008),
+    y = n(156312),
     v = n(652215),
     N = n(788868),
     C = n(985018),
-    R = n(204111);
+    R = n(353791);
 let O = (e) => {
     let { handleStepChange: t, handleClose: n } = e,
         {
             customGiftMessage: s = "",
             setCustomGiftMessage: o,
             giftRecipientError: l,
-            setGiftRecipientError: E,
+            setGiftRecipientError: A,
             validatingGiftRecipient: O,
             giftRecipient: D,
             giftingOrigin: L,
             setValidatingGiftRecipient: w,
-        } = (0, T.Pv)(),
-        M = (0, I.t4)((e) => e.selectedSkuId),
-        { paymentSourceId: P } = (0, S.P5)(),
-        x = (0, y.Hf)(),
-        k = (0, y.RR)(),
-        U = (0, y.gU)(),
-        G = (0, i.bG)([g.default], () => g.default.getCurrentUser()),
-        F = (0, f.A)(),
+        } = (0, S.Pv)(),
+        M = (0, c.t4)((e) => e.selectedSkuId),
+        { paymentSourceId: P } = (0, y.P5)(),
+        x = (0, u.Hf)(),
+        k = (0, u.RR)(),
+        U = (0, u.gU)(),
+        G = (0, i.bG)([I.default], () => I.default.getCurrentUser()),
+        F = (0, h.A)(),
         V = async (e, t) => {
-            w(!0), null != l && E(), (await (0, u.JJ)(e.id, t)) || E(C.intl.string(C.t["4kgVqQ"])), w(!1);
+            w(!0), null != l && A(), (await (0, d.JJ)(e.id, t)) || A(C.intl.string(C.t["4kgVqQ"])), w(!1);
         };
     (0, a.Ay)(() => {
         null != M &&
             null != D &&
             (L !== N.vQ.DM_CHANNEL_WISHLIST &&
-                A.default.track(v.HAw.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: M }),
+                T.default.track(v.HAw.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: M }),
             V(D, M));
     });
     let B = () =>
-        (0, r.jsx)(p.A, {
+        (0, r.jsx)(m.A, {
             onTextChange: (e) => o?.(e),
             pendingText: s,
             currentText: s,
@@ -65,9 +65,9 @@ let O = (e) => {
             innerClassName: R.pt,
         });
     return {
-        renderLeftColumn: () => (0, r.jsx)("div", { className: R.qL, children: (0, r.jsx)(h.t, { isShopGift: !0 }) }),
+        renderLeftColumn: () => (0, r.jsx)("div", { className: R.qL, children: (0, r.jsx)(E.t, { isShopGift: !0 }) }),
         renderRightColumn: () => {
-            let e = (0, c.pA)({
+            let e = (0, _.pA)({
                 selectedSkuPricePreview: x,
                 paymentSourceId: P,
                 selectedSkuId: M,
@@ -77,11 +77,11 @@ let O = (e) => {
             return L === N.vQ.USER_PROFILE_WISHLIST || L === N.vQ.DM_CHANNEL_WISHLIST
                 ? (0, r.jsxs)("div", {
                       children: [
-                          (0, r.jsx)(m.Z, { giftRecipient: D }),
+                          (0, r.jsx)(g.Z, { giftRecipient: D }),
                           B(),
                           null != e &&
                               null != M &&
-                              (0, r.jsx)(d.A, {
+                              (0, r.jsx)(f.A, {
                                   skuId: M,
                                   priceAmount: e.amount,
                                   priceCurrency: e.currency,
@@ -99,7 +99,7 @@ let O = (e) => {
                   })
                 : (0, r.jsxs)("div", {
                       children: [
-                          (0, r.jsx)(_.A, {
+                          (0, r.jsx)(p.A, {
                               selectedSkuId: M,
                               recipients: F,
                               className: R.uh,
@@ -108,7 +108,7 @@ let O = (e) => {
                           B(),
                           null != e &&
                               null != M &&
-                              (0, r.jsx)(d.A, {
+                              (0, r.jsx)(f.A, {
                                   skuId: M,
                                   priceAmount: e.amount,
                                   priceCurrency: e.currency,
@@ -132,8 +132,8 @@ function b(e) {
         t(),
             (0, s.s7G)(),
             null == n
-                ? (0, u.Cz)({ analyticsLocations: i, analyticsSource: o.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL })
-                : (0, E.pX)(`${v.BVt.COLLECTIBLES_SHOP}#itemSkuId=${n}`);
+                ? (0, d.Cz)({ analyticsLocations: i, analyticsSource: o.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL })
+                : (0, A.pX)(`${v.BVt.COLLECTIBLES_SHOP}#itemSkuId=${n}`);
     }
     return (0, r.jsx)(s.QWc, { text: C.intl.string(C.t.J82mpK), onClick: a, textVariant: "text-sm/medium" });
 }

@@ -3,10 +3,10 @@ n.d(t, { x: () => g });
 var r = n(284009),
     i = n.n(r),
     s = n(330140),
-    a = n(480800),
-    o = n(954571),
-    l = n(723702),
-    u = n(413748),
+    a = n(94420),
+    o = n(480800),
+    l = n(954571),
+    u = n(723702),
     c = n(937008),
     d = n(156312),
     _ = n(166532),
@@ -15,18 +15,18 @@ var r = n(284009),
     h = n(652215),
     m = n(788868);
 function E(e, t, n) {
-    return (0, l.isDesktop)() && null != e && [m.pe.TIER_0, m.pe.TIER_2].includes(e) && !t && null == n;
+    return (0, u.isDesktop)() && null != e && [m.pe.TIER_0, m.pe.TIER_2].includes(e) && !t && null == n;
 }
 function g(e) {
     let {
             analyticsData: t,
             initialPlanId: n,
             breadcrumbSteps: r,
-            handleStepChange: l,
+            handleStepChange: u,
             onReturn: m,
             continueSessionToInitialStep: g,
         } = e,
-        A = (0, u.t4)((e) => e.selectedSkuId),
+        A = (0, a.t4)((e) => e.selectedSkuId),
         {
             contextMetadata: I,
             paymentSources: T,
@@ -45,7 +45,7 @@ function g(e) {
         { step: M, previousStep: P } = (0, p.Ay)(),
         { isGift: x } = (0, c.Pv)(),
         k = {
-            ...(0, a._V)(),
+            ...(0, o._V)(),
             paymentSources: T,
             paymentSourceId: S,
             setPaymentSourceId: y,
@@ -57,7 +57,7 @@ function g(e) {
             isGift: x,
         },
         U = () => {
-            l(Object.values(T).length < 1 && null == n ? _.pn.PLAN_SELECT : _.pn.REVIEW, {
+            u(Object.values(T).length < 1 && null == n ? _.pn.PLAN_SELECT : _.pn.REVIEW, {
                 trackedFromStep: D ? _.pn.PAYMENT_ELEMENT : _.pn.PAYMENT_TYPE,
             });
         },
@@ -69,7 +69,7 @@ function g(e) {
                 null != g && null == P ? (D ? _.pn.PAYMENT_ELEMENT : g) : D ? _.pn.PAYMENT_ELEMENT : _.pn.PAYMENT_TYPE,
             [g, P, D],
         );
-    return (0, a.Y)({
+    return (0, o.Y)({
         paymentModalArgs: k,
         initialStep: V,
         prependSteps: [_.pn.PROMOTION_INFO],
@@ -81,13 +81,13 @@ function g(e) {
         onReturn: L ? void 0 : G,
         onComplete: (e) => {
             _.l_.has(e)
-                ? (b(f.h.COMPLETED), l(_.pn.CONFIRM, { trackedFromStep: e }))
-                : l(_.pn.REVIEW, { trackedFromStep: e });
+                ? (b(f.h.COMPLETED), u(_.pn.CONFIRM, { trackedFromStep: e }))
+                : u(_.pn.REVIEW, { trackedFromStep: e });
         },
         onStepChange: (e) => {
             let { currentStep: n, toStep: r } = e,
                 i = Date.now();
-            o.default.track(h.HAw.PAYMENT_FLOW_STEP, {
+            l.default.track(h.HAw.PAYMENT_FLOW_STEP, {
                 ...t,
                 from_step: n,
                 to_step: r,

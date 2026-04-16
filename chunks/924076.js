@@ -1,60 +1,60 @@
-n.d(t, { A: () => b }), n(938796);
+n.d(t, { A: () => S }), n(938796);
 var i = n(627968),
     l = n(64700),
     r = n(311907),
     a = n(241524),
-    s = n(163437),
-    o = n(490744),
-    d = n(594508),
-    c = n(71393),
-    u = n(156312),
-    m = n(166532),
-    p = n(19311),
-    f = n(482132),
-    x = n(987616),
+    s = n(427675),
+    o = n(163437),
+    d = n(490744),
+    c = n(594508),
+    u = n(71393),
+    m = n(156312),
+    p = n(166532),
+    f = n(19311),
+    x = n(482132),
     g = n(376747),
     h = n(985018);
-function b(e) {
+function S(e) {
     let { handleStepChange: t, handleClose: n } = e,
-        { subscriptionMetadataRequest: b, selectedStoreListing: A, application: j } = (0, u.P5)(),
-        S = (0, x.S3)(),
+        { subscriptionMetadataRequest: S, selectedStoreListing: b, application: A } = (0, m.P5)(),
+        j = (0, s.S3)(),
         v = (0, a.A)(g.Y),
-        C = (0, r.bG)([c.A], () => c.A.getGuild(b?.guild_id)),
-        _ = l.useCallback(() => t(m.pn.REVIEW), [t]);
-    if (null == S) return null;
-    let y = (0, s.bg)(S.flags);
+        _ = (0, r.bG)([u.A], () => u.A.getGuild(S?.guild_id)),
+        C = l.useCallback(() => t(p.pn.REVIEW), [t]);
+    if (null == j) return null;
+    let N = (0, o.bg)(j.flags);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(f.dZ, {
+            (0, i.jsx)(x.dZ, {
                 children: v
-                    ? (0, i.jsx)(d.E, {
+                    ? (0, i.jsx)(c.E, {
                           confirmCta: h.intl.string(h.t.PBHFSq),
-                          onConfirm: _,
+                          onConfirm: C,
                           onCancel: n,
-                          title: h.intl.format(h.t["6n6oXA"], { tier: S.name }),
-                          subtitle: y
+                          title: h.intl.format(h.t["6n6oXA"], { tier: j.name }),
+                          subtitle: N
                               ? h.intl.string(h.t.lzAoKB)
-                              : h.intl.formatToPlainString(h.t["GqaY/j"], { guildName: C?.name }),
+                              : h.intl.formatToPlainString(h.t["GqaY/j"], { guildName: _?.name }),
                           showOpenDiscord: !1,
                       })
-                    : (0, i.jsx)(o.Uf, {
-                          icon: A?.thumbnail,
-                          storeListingBenefits: A?.benefits,
-                          application: j ?? void 0,
-                          title: h.intl.format(h.t.haiCxc, { tier: S.name }),
-                          subtitle: y ? h.intl.string(h.t.RvtbP5) : h.intl.string(h.t.zY39Zu),
-                          description: y
-                              ? h.intl.formatToPlainString(h.t.QCe4rY, { applicationName: j?.name })
+                    : (0, i.jsx)(d.Uf, {
+                          icon: b?.thumbnail,
+                          storeListingBenefits: b?.benefits,
+                          application: A ?? void 0,
+                          title: h.intl.format(h.t.haiCxc, { tier: j.name }),
+                          subtitle: N ? h.intl.string(h.t.RvtbP5) : h.intl.string(h.t.zY39Zu),
+                          description: N
+                              ? h.intl.formatToPlainString(h.t.QCe4rY, { applicationName: A?.name })
                               : h.intl.string(h.t.n1Pu8C),
                       }),
             }),
             !v &&
-                (0, i.jsx)(f.UX, {
-                    children: (0, i.jsx)(p.Ay, {
+                (0, i.jsx)(x.UX, {
+                    children: (0, i.jsx)(f.Ay, {
                         onBack: n,
                         backText: h.intl.string(h.t.TQBY1J),
-                        onPrimary: _,
-                        primaryCTA: p.ti.CONTINUE,
+                        onPrimary: C,
+                        primaryCTA: f.ti.CONTINUE,
                         primaryText: h.intl.string(h.t["gZhF+3"]),
                     }),
                 }),

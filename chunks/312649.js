@@ -10,26 +10,26 @@ var r = n(627968),
     c = n(732955),
     d = n(688810),
     _ = n(742810),
-    f = n(169797),
-    p = n(810498),
-    h = n(155984),
-    m = n(683433),
-    E = n(344159),
-    g = n(367921),
-    A = n(79387),
-    I = n(45938),
-    T = n(927578),
-    S = n(123633),
-    y = n(413748),
-    v = n(937008),
-    N = n(156312),
-    C = n(495263),
-    R = n(970077),
-    O = n(987616),
+    f = n(558620),
+    p = n(427675),
+    h = n(169797),
+    m = n(94420),
+    E = n(810498),
+    g = n(155984),
+    A = n(683433),
+    I = n(344159),
+    T = n(367921),
+    S = n(79387),
+    y = n(45938),
+    v = n(927578),
+    N = n(123633),
+    C = n(937008),
+    R = n(156312),
+    O = n(495263),
     b = n(216641),
     D = n(999784),
     L = n(652215),
-    w = n(511202);
+    w = n(650098);
 let M = (e) => {
     let { showBackButton: t, onBackClick: n } = e,
         { premiumSubscription: s, isGift: a, planGroup: o, isPrepaid: l } = e,
@@ -38,26 +38,26 @@ let M = (e) => {
             analyticsLocations: c,
             application: d,
             hasAcceptedTerms: _,
-            paymentSourceId: p,
-            activeSubscription: h,
+            paymentSourceId: f,
+            activeSubscription: p,
             devShelfFetchState: m,
             hasPaymentSources: E,
-        } = (0, g.Ke)({ premiumSubscription: s, isGift: a, planGroup: o, isPrepaid: l }),
-        A = i.useMemo(
+        } = (0, T.Ke)({ premiumSubscription: s, isGift: a, planGroup: o, isPrepaid: l }),
+        g = i.useMemo(
             () =>
-                (0, g.X1)(e, {
+                (0, T.X1)(e, {
                     buttonLabel: u,
                     analyticsLocations: c,
                     application: d,
                     hasAcceptedTerms: _,
-                    paymentSourceId: p,
-                    activeSubscription: h,
+                    paymentSourceId: f,
+                    activeSubscription: p,
                     devShelfFetchState: m,
                     hasPaymentSources: E,
                 }),
-            [e, u, c, d, _, p, h, m, E],
+            [e, u, c, d, _, f, p, m, E],
         );
-    return (0, r.jsx)(f.lo, { onBackClick: t ? n : void 0, primaryButtonProps: A });
+    return (0, r.jsx)(h.lo, { onBackClick: t ? n : void 0, primaryButtonProps: g });
 };
 function P(e) {
     let {
@@ -65,7 +65,7 @@ function P(e) {
             setPurchaseState: n,
             onBack: s,
             onNext: o,
-            legalTermsNodeRef: f,
+            legalTermsNodeRef: h,
             flashLegalTerms: P,
             invoiceError: x,
             planError: k,
@@ -81,7 +81,7 @@ function P(e) {
             isTrial: K = !1,
             onPaymentSourceAdd: $,
         } = e,
-        { selectedSkuId: z, invoicePreview: q } = (0, y.t4)((e) => {
+        { selectedSkuId: z, invoicePreview: q } = (0, m.t4)((e) => {
             let { selectedSkuId: t, checkoutInvoicePreview: n } = e;
             return { selectedSkuId: t, invoicePreview: n };
         }),
@@ -94,10 +94,10 @@ function P(e) {
             paymentSources: et,
             referralCode: en,
             contextMetadata: er,
-        } = (0, N.P5)(),
-        ei = (0, R.A)(),
-        es = (0, O.gU)(),
-        ea = (0, O.RR)(),
+        } = (0, R.P5)(),
+        ei = (0, f.A)(),
+        es = (0, p.gU)(),
+        ea = (0, p.RR)(),
         {
             isGift: eo,
             selectedGiftStyle: el,
@@ -106,13 +106,13 @@ function P(e) {
             soundEffect: ed,
             giftRecipient: e_,
             selectedGiftingPromotionReward: ef,
-        } = (0, v.Pv)(),
-        ep = (0, p.Mq)(ei),
-        eh = (0, I.lo)(e_),
+        } = (0, C.Pv)(),
+        ep = (0, E.Mq)(ei),
+        eh = (0, y.lo)(e_),
         em = {};
     (em.gift_style = el),
         (em.reward_sku_ids = ep && null != ef ? [ef] : []),
-        eh === I.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD &&
+        eh === y.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD &&
             (l()(null != e_, "Gift recipient must be set at purchase review step for these gift options."),
             (em.recipient_id = e_.id),
             (em.custom_message = eu),
@@ -124,10 +124,10 @@ function P(e) {
         eA = (0, b.W)(et, ee),
         [eI, eT] = i.useState(!1),
         [eS, ey] = i.useState(!1),
-        { hasEntitlements: ev } = (0, E.X)(eE, eo),
-        eN = (0, T.J$)(Z.paymentSourceId),
-        eC = (0, h.l)(),
-        eR = (0, u.bG)([S.A], () => S.A.currentOrderId),
+        { hasEntitlements: ev } = (0, I.X)(eE, eo),
+        eN = (0, v.J$)(Z.paymentSourceId),
+        eC = (0, g.l)(),
+        eR = (0, u.bG)([N.A], () => N.A.currentOrderId),
         eO = null,
         eb = null;
     if (J === L.VVm.ONE_TIME) {
@@ -135,11 +135,11 @@ function P(e) {
             (eO = es[z] ?? null),
             l()(null != eO, "SKU must exist and be fetched.");
         let e = ea[z],
-            t = ee ?? A.B;
-        eb = null != e ? (e[t] ?? e[A.B]) : null;
+            t = ee ?? S.B;
+        eb = null != e ? (e[t] ?? e[S.B]) : null;
     }
     let eD = async () => {
-            await (0, C.l)({
+            await (0, O.l)({
                 setPurchaseState: n,
                 setHasAcceptedTerms: X,
                 setIsSubmitting: eT,
@@ -175,7 +175,7 @@ function P(e) {
         ew = null != H || (J === L.VVm.ONE_TIME && !eo),
         eM = Y && !ew,
         eP = {
-            legalTermsNodeRef: f,
+            legalTermsNodeRef: h,
             invoiceError: x,
             planError: k,
             disablePurchase: W,
@@ -197,9 +197,9 @@ function P(e) {
               children: (0, r.jsxs)("div", {
                   className: a()(w.eT, { [w.U3]: eM }),
                   children: [
-                      eM ? (0, r.jsx)("div", { className: w.aX, children: (0, r.jsx)(m.A, { onClick: s }) }) : null,
+                      eM ? (0, r.jsx)("div", { className: w.aX, children: (0, r.jsx)(A.A, { onClick: s }) }) : null,
                       (0, r.jsx)(D.A, {}),
-                      (0, r.jsx)(g.Ay, { ...eP }),
+                      (0, r.jsx)(T.Ay, { ...eP }),
                   ],
               }),
           });

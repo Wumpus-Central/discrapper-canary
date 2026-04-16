@@ -3,8 +3,8 @@ n.d(t, { HG: () => h, My: () => m, e1: () => p });
 var r = n(64700),
     i = n(136857),
     s = n(964486),
-    a = n(525723),
-    o = n(413748),
+    a = n(94420),
+    o = n(525723),
     l = n(156312),
     u = n(566980),
     c = n(855104),
@@ -27,7 +27,7 @@ let p = (e) => {
                 analyticsLocations: m,
                 analyticsSourceLocation: E,
             } = e,
-            g = (0, o.t4)((e) => e.selectedSkuId),
+            g = (0, a.t4)((e) => e.selectedSkuId),
             { setPurchaseState: A } = (0, l.P5)(),
             I = (0, c.gN)(),
             T = (0, r.useRef)(I),
@@ -54,7 +54,7 @@ let p = (e) => {
             N = null != h ? h.orbPriceAmount : null;
         return {
             isStepLoading: null == h,
-            showCollectiblesDiscountWarning: (0, a.vw)({ skuId: t, isOrbsPurchase: !0 }),
+            showCollectiblesDiscountWarning: (0, o.vw)({ skuId: t, isOrbsPurchase: !0 }),
             errorMessage: (0, r.useMemo)(
                 () =>
                     null == p

@@ -13,8 +13,8 @@ var i = t(627968),
     _ = t(793574),
     x = t(688810),
     f = t(531260),
-    h = t(404374),
-    S = t(413748),
+    h = t(94420),
+    S = t(404374),
     g = t(543767),
     b = t(881489),
     I = t(477421),
@@ -117,7 +117,7 @@ function H(e) {
                     width: 20,
                     height: 20,
                     className: B.ue,
-                    color: h.k0.PREMIUM_TIER_2,
+                    color: S.k0.PREMIUM_TIER_2,
                 }),
             }),
             (0, i.jsx)("div", { className: B.yP, children: n }),
@@ -328,7 +328,7 @@ function J(e) {
                     analyticsLocations: ei,
                     analyticsLocation: _.A.GUILD_BOOSTING_PLAN_SELECT,
                 });
-            (0, S.F0)(el);
+            (0, h.F0)(el);
             let es = !et && null == el && null == er;
             l.useLayoutEffect(() => {
                 a(es);
@@ -459,7 +459,7 @@ function J(e) {
                     discountCallout:
                         "reverse_trial" === e_.upsellVariant
                             ? (0, i.jsx)(v.G, {})
-                            : (0, i.jsx)(v.A, { text: n, color: h.k0.PREMIUM_TIER_2 }),
+                            : (0, i.jsx)(v.A, { text: n, color: S.k0.PREMIUM_TIER_2 }),
                     refreshDiscountCallout:
                         "reverse_trial" === e_.upsellVariant ? (0, i.jsx)(v.G, {}) : (0, i.jsx)(H, { text: n }),
                 }

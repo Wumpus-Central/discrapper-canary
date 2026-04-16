@@ -6,14 +6,14 @@ var r = n(627968),
     a = n(397927),
     o = n(73825),
     l = n(323082),
-    u = n(683433),
-    c = n(36167),
-    d = n(413748),
-    _ = n(937008),
-    f = n(156312),
-    p = n(166532),
-    h = n(413869),
-    m = n(970077),
+    u = n(558620),
+    c = n(94420),
+    d = n(683433),
+    _ = n(36167),
+    f = n(937008),
+    p = n(156312),
+    h = n(166532),
+    m = n(413869),
     E = n(814626),
     g = n(652215),
     A = n(788868),
@@ -22,8 +22,8 @@ var r = n(627968),
 let S = 1e3,
     y = (e) => {
         let t,
-            { step: n, onPurchaseComplete: s, onHandoffFailure: u } = e,
-            { setSelectedSkuId: y, setSelectedPlanId: v } = (0, d.t4)((e) => ({
+            { step: n, onPurchaseComplete: s, onHandoffFailure: d } = e,
+            { setSelectedSkuId: y, setSelectedPlanId: v } = (0, c.t4)((e) => ({
                 setSelectedSkuId: e.setSelectedSkuId,
                 setSelectedPlanId: e.setSelectedPlanId,
             })),
@@ -32,16 +32,16 @@ let S = 1e3,
                 browserCheckoutStateLoadId: C,
                 browserCheckoutStateSkuId: R,
                 browserCheckoutStatePlanId: O,
-            } = (0, h.c)(),
-            { contextMetadata: b } = (0, f.P5)(),
-            D = (0, m.A)(),
-            { isGift: L } = (0, _.Pv)(),
+            } = (0, m.c)(),
+            { contextMetadata: b } = (0, p.P5)(),
+            D = (0, u.A)(),
+            { isGift: L } = (0, f.Pv)(),
             [w, M] = i.useState(!1);
         switch (n) {
-            case p.pn.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY:
+            case h.pn.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY:
                 t = g.do8.GOOGLE_PAY;
                 break;
-            case p.pn.AWAITING_BROWSER_CHECKOUT_APPLE_PAY:
+            case h.pn.AWAITING_BROWSER_CHECKOUT_APPLE_PAY:
                 t = g.do8.APPLE_PAY;
         }
         return (
@@ -50,18 +50,18 @@ let S = 1e3,
                     w ||
                         (M(!0),
                         (0, l.Ze)(b.loadId),
-                        (0, c.my)(
+                        (0, _.my)(
                             {
                                 planId: D?.id ?? A.gD.PREMIUM_MONTH_TIER_2,
                                 isGift: L,
                                 loadId: b.loadId,
                                 paymentMethodType: t,
                             },
-                            u,
+                            d,
                         ));
                 }, S);
                 return () => clearTimeout(e);
-            }, [D, L, b, u, M, w, t]),
+            }, [D, L, b, d, M, w, t]),
             i.useEffect(() => {
                 null !== R && (A.oz.includes(R) && ((0, o.ur)(R), (0, l.hP)()), y(R)),
                     null !== O && v(O),
@@ -86,8 +86,8 @@ let S = 1e3,
             children: (0, r.jsxs)("div", {
                 className: T.kL,
                 children: [
-                    (0, r.jsx)(u.A, { onClick: n }),
-                    (0, r.jsx)(u.F, { onClick: t, children: I.intl.string(I.t["4Qvmmj"]) }),
+                    (0, r.jsx)(d.A, { onClick: n }),
+                    (0, r.jsx)(d.F, { onClick: t, children: I.intl.string(I.t["4Qvmmj"]) }),
                 ],
             }),
         });

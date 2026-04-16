@@ -18,9 +18,9 @@ var i = t(627968),
     g = t(596034),
     b = t(270537),
     I = t(241989),
-    P = t(958340),
-    y = t(826469),
-    A = t(413748),
+    P = t(94420),
+    y = t(958340),
+    A = t(826469),
     E = t(534479),
     v = t(908419),
     C = t(888751),
@@ -261,9 +261,9 @@ function Z(e) {
                     premiumSubscriptionPlan: r,
                     newAdditionalPlans: a,
                 } = e,
-                c = (0, o.bG)([U.A, P.A], () => {
+                c = (0, o.bG)([U.A, y.A], () => {
                     let e = U.A.getGuild(t);
-                    return null != e ? e : P.A.isGuildFetching(t) ? null : P.A.getGuild(t);
+                    return null != e ? e : y.A.isGuildFetching(t) ? null : y.A.getGuild(t);
                 }, [t]),
                 u = r.interval,
                 d = r.intervalCount,
@@ -294,7 +294,7 @@ function Z(e) {
                     analyticsLocation: m.A.GUILD_BOOSTING_REVIEW_RENEWAL,
                 });
             return (
-                (0, A.F0)(g),
+                (0, P.F0)(g),
                 {
                     guild: c ?? null,
                     guildBoostingSubscriptionPlan: p,
@@ -324,7 +324,7 @@ function Z(e) {
         } = Z,
         ea = l.useMemo(() => {
             let e = er?.checkoutContext;
-            return null == e || null == e.payment_sources ? [] : e.payment_sources.map(y.A.createFromCheckoutContext);
+            return null == e || null == e.payment_sources ? [] : e.payment_sources.map(A.A.createFromCheckoutContext);
         }, [er?.checkoutContext]),
         {
             dropdownPaymentSources: eo,

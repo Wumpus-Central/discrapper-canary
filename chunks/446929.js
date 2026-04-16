@@ -18,12 +18,12 @@ var r = n(627968),
     l = n(421380),
     u = n(397927),
     c = n(726656),
-    d = n(448811),
-    _ = n(413748),
-    f = n(937008),
-    p = n(156312),
-    h = n(970077),
-    m = n(961098),
+    d = n(558620),
+    _ = n(699595),
+    f = n(94420),
+    p = n(448811),
+    h = n(937008),
+    m = n(156312),
     E = n(222707),
     g = n(773669),
     A = n(594832),
@@ -50,7 +50,7 @@ var r = n(627968),
 n(26279);
 var V = n(818348),
     B = n(985018),
-    H = n(239746);
+    H = n(345138);
 function j(e, t) {
     let { isEligibleForBOGOPromotion: n } = t;
     return null != e && !n;
@@ -104,7 +104,7 @@ function Y(e, t) {
     }
 }
 let W = () => {
-        let { userTrialOffer: e } = (0, p.P5)(),
+        let { userTrialOffer: e } = (0, m.P5)(),
             t = e?.subscription_trial,
             { daysCount: n, copy: r } = i.useMemo(
                 () =>
@@ -119,7 +119,7 @@ let W = () => {
     },
     K = (e) => {
         let { selectedPlanId: t, priceOptions: n, planOptions: r, subscriptionPeriodEnd: s, showTotal: u } = e,
-            { selectedSkuId: c, setSelectedPlanId: d } = (0, _.t4)((e) => ({
+            { selectedSkuId: c, setSelectedPlanId: p } = (0, f.t4)((e) => ({
                 selectedSkuId: e.selectedSkuId,
                 setSelectedPlanId: e.setSelectedPlanId,
             })),
@@ -129,7 +129,7 @@ let W = () => {
                 userTrialOffer: S,
                 isEligibleForTrial: v,
                 discountOffer: C,
-            } = (0, p.P5)(),
+            } = (0, m.P5)(),
             {
                 isGift: R,
                 giftRecipient: D,
@@ -138,8 +138,8 @@ let W = () => {
                 setCustomGiftMessage: M,
                 claimableRewards: P,
                 setSelectedGiftingPromotionReward: x,
-            } = (0, f.Pv)(),
-            k = (0, h.A)(),
+            } = (0, h.Pv)(),
+            k = (0, d.A)(),
             U = (0, O.kz)(k, R && (0, T.Ik)(D), P),
             F = (0, A.tA)({ giftRecipient: D, isGift: R }),
             B = E;
@@ -150,9 +150,9 @@ let W = () => {
             $ = j ?? k,
             z = i.useCallback(
                 (e) => {
-                    d(e);
+                    p(e);
                 },
-                [d],
+                [p],
             ),
             q = n ?? g;
         a()(null != q, "Price option has to be set");
@@ -178,7 +178,7 @@ let W = () => {
             ei = "HR" === er && null != en && en.currency === V.Yr.EUR,
             es = (0, y.J$)(q.paymentSourceId),
             ea = !R && (X || (null != Y && v && null != s)),
-            { discountAmountOff: eo } = (0, m.J)(G.gD.PREMIUM_MONTH_TIER_2),
+            { discountAmountOff: eo } = (0, _.J)(G.gD.PREMIUM_MONTH_TIER_2),
             el = c,
             { copy: eu } = W();
         return {
@@ -242,9 +242,9 @@ let W = () => {
                 isPrepaid: o,
                 canContinue: l,
                 selectedPlan: c,
-                selectedPlanPrice: _,
-                useCompactGiftComponents: f,
-                handleClose: p,
+                selectedPlanPrice: d,
+                useCompactGiftComponents: _,
+                handleClose: f,
                 showTotal: h,
                 switchPlanSelectComponent: m,
                 warningComponent: E,
@@ -268,11 +268,11 @@ let W = () => {
                     (0, r.jsxs)("div", {
                         className: H.Tc,
                         children: [
-                            (0, r.jsx)(U.Z, { className: f ? H.KW : void 0, giftRecipient: t }),
+                            (0, r.jsx)(U.Z, { className: _ ? H.KW : void 0, giftRecipient: t }),
                             g(),
                             A(m),
                             E,
-                            !a && (0, r.jsx)(d.A, { onClose: p }),
+                            !a && (0, r.jsx)(p.A, { onClose: f }),
                         ],
                     }),
                 ],
@@ -281,14 +281,14 @@ let W = () => {
         return (0, r.jsxs)("div", {
             className: H.Du,
             children: [
-                (0, r.jsx)(U.Z, { className: f ? H.KW : void 0, giftRecipient: t }),
+                (0, r.jsx)(U.Z, { className: _ ? H.KW : void 0, giftRecipient: t }),
                 A(m),
                 I &&
                     null != c &&
-                    null != _ &&
-                    (0, r.jsx)($, { selectedPlan: c, selectedPlanPrice: _, intervalType: null, isPrepaid: o }),
+                    null != d &&
+                    (0, r.jsx)($, { selectedPlan: c, selectedPlanPrice: d, intervalType: null, isPrepaid: o }),
                 E,
-                !a && (0, r.jsx)(d.A, { onClose: p }),
+                !a && (0, r.jsx)(p.A, { onClose: f }),
             ],
         });
     },
@@ -304,9 +304,9 @@ let W = () => {
                 discountAmountOff: u,
             } = e,
             c = (0, o.bG)([g.default], () => g.default.locale),
-            { isGift: d, giftRecipient: _ } = (0, f.Pv)(),
-            p = d && (0, T.Ik)(_),
-            { enabled: h } = R.A.getConfig({ location: "PremiumSwitchPlanSelectOption" });
+            { isGift: d, giftRecipient: _ } = (0, h.Pv)(),
+            f = d && (0, T.Ik)(_),
+            { enabled: p } = R.A.getConfig({ location: "PremiumSwitchPlanSelectOption" });
         return {
             isPrepaid: t,
             selectPlan: r,
@@ -318,8 +318,8 @@ let W = () => {
             isEligibleForTrial: a,
             userLocale: c,
             isGift: d,
-            isCustomGift: p,
-            shouldUseCalculatedDiscount: h,
+            isCustomGift: f,
+            shouldUseCalculatedDiscount: p,
             discountOffer: (0, D.O)(),
             isEligibleForBOGOPromotion: (0, N.cg)(),
         };

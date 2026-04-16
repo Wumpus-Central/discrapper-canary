@@ -1,37 +1,37 @@
 n.d(t, { A: () => T }), n(938796);
 var i = n(627968),
-    r = n(64700),
-    l = n(284009),
-    a = n.n(l),
+    l = n(64700),
+    r = n(284009),
+    a = n.n(r),
     s = n(311907),
     o = n(397927),
     d = n(304072),
     c = n(742810),
-    u = n(271849),
-    m = n(369280),
-    p = n(163437),
-    f = n(71393),
-    x = n(156312),
-    g = n(166532),
-    h = n(566980),
-    b = n(69494),
-    A = n(312649),
-    j = n(534479),
-    S = n(482132),
-    v = n(970077),
-    _ = n(987616),
+    u = n(558620),
+    m = n(427675),
+    p = n(271849),
+    f = n(369280),
+    x = n(163437),
+    g = n(71393),
+    h = n(156312),
+    S = n(166532),
+    b = n(566980),
+    A = n(69494),
+    j = n(312649),
+    v = n(534479),
+    _ = n(482132),
     C = n(921925),
     N = n(367160),
     y = n(985018),
-    E = n(950637);
+    E = n(975197);
 function T(e) {
     let {
             backButtonEligible: t,
             prevStep: n,
-            handleStepChange: l,
+            handleStepChange: r,
             trialFooterMessageOverride: T,
-            reviewWarningMessage: P,
-            planGroup: I,
+            reviewWarningMessage: I,
+            planGroup: P,
             openInvoiceId: k,
             analyticsData: w,
             analyticsLocation: R,
@@ -51,34 +51,34 @@ function T(e) {
             purchaseState: q,
             subscriptionMetadataRequest: Q,
             setHasAcceptedTerms: V,
-        } = (0, x.P5)(),
-        Z = (0, v.A)(),
-        X = (0, _.S3)();
+        } = (0, h.P5)(),
+        Z = (0, u.A)(),
+        X = (0, m.S3)();
     a()(null != Z, "Expected plan to be selected");
-    let $ = r.useRef(null),
+    let $ = l.useRef(null),
         [z, K] = (0, d.A)(!1, 500),
         J = Q?.guild_id,
-        ee = (0, s.bG)([f.A], () => f.A.getGuild(J), [J]),
-        [et, en] = r.useState(null),
-        ei = (0, p.bg)(X?.flags ?? 0);
-    r.useEffect(() => {
+        ee = (0, s.bG)([g.A], () => g.A.getGuild(J), [J]),
+        [et, en] = l.useState(null),
+        ei = (0, x.bg)(X?.flags ?? 0);
+    l.useEffect(() => {
         null != M && null != $.current && $.current.scrollIntoView({ behavior: "smooth" });
     }, [M]);
-    let er = r.useCallback(
+    let el = l.useCallback(
             (e) => {
-                U(e), l(g.pn.CONFIRM);
+                U(e), r(S.pn.CONFIRM);
             },
-            [l, U],
+            [r, U],
         ),
-        el = (0, c.D7)({ location: "payment_modal_review_step" }),
-        ea = r.useRef(null);
-    if (q === h.h.PURCHASING) return (0, i.jsx)(j.A, {});
+        er = (0, c.D7)({ location: "payment_modal_review_step" }),
+        ea = l.useRef(null);
+    if (q === b.h.PURCHASING) return (0, i.jsx)(v.A, {});
     let es = () => {
-            l(g.pn.ADD_PAYMENT_STEPS);
+            r(S.pn.ADD_PAYMENT_STEPS);
         },
-        eo = el ? N._ : u.A,
+        eo = er ? N._ : p.A,
         ed = null;
-    el ||
+    er ||
         (ed = (0, i.jsxs)(i.Fragment, {
             children: [
                 ei &&
@@ -120,35 +120,35 @@ function T(e) {
                     }),
             ],
         }));
-    let ec = el ? null : (0, i.jsx)(b.A, { className: E.jD }),
-        eu = el ? null : (0, i.jsx)(C.A, {});
+    let ec = er ? null : (0, i.jsx)(A.A, { className: E.jD }),
+        eu = er ? null : (0, i.jsx)(C.A, {});
     return (0, i.jsxs)(i.Fragment, {
         children: [
             ec,
-            (0, i.jsxs)(S.dZ, {
+            (0, i.jsxs)(_.dZ, {
                 children: [
                     eu,
                     ed,
                     null == B
                         ? (0, i.jsx)(eo, {
                               selectedPlanId: Z.id,
-                              planGroup: I,
+                              planGroup: P,
                               paymentSources: O,
                               priceOptions: G,
                               currencies: L,
                               onCurrencyChange: (e) => Y(e),
-                              handlePaymentSourceAdd: () => l(g.pn.ADD_PAYMENT_STEPS),
+                              handlePaymentSourceAdd: () => r(S.pn.ADD_PAYMENT_STEPS),
                               setHasAcceptedTerms: V,
                               legalTermsNodeRef: ea,
                               hasLegalTermsFlash: z,
                               trialFooterMessageOverride: T,
-                              reviewWarningMessage: P,
+                              reviewWarningMessage: I,
                               metadata: ei ? void 0 : Q,
                               purchaseState: q,
                               hideSubscriptionDetails: !0,
                               handleClose: D,
                           })
-                        : (0, i.jsx)(m.A, {
+                        : (0, i.jsx)(f.A, {
                               premiumSubscription: B,
                               paymentSources: O,
                               priceOptions: G,
@@ -161,28 +161,28 @@ function T(e) {
                               onInvoiceError: (e) => {
                                   en(e);
                               },
-                              planGroup: I,
+                              planGroup: P,
                               currencies: L,
                               onCurrencyChange: (e) => Y(e),
                               hasOpenInvoice: null != k,
                               purchaseState: q,
                               handleClose: D,
-                              shouldUseUnifiedCheckoutUI: el,
+                              shouldUseUnifiedCheckoutUI: er,
                           }),
                 ],
             }),
-            (0, i.jsx)(S.UX, {
-                children: (0, i.jsx)(A.A, {
+            (0, i.jsx)(_.UX, {
+                children: (0, i.jsx)(j.A, {
                     premiumSubscription: B ?? null,
                     setPurchaseState: W,
-                    onBack: () => null != n && l(n),
-                    onNext: er,
+                    onBack: () => null != n && r(n),
+                    onNext: el,
                     legalTermsNodeRef: ea,
                     flashLegalTerms: () => K(!0),
                     analyticsLocation: R,
                     baseAnalyticsData: w,
                     flowStartTime: H.startTime,
-                    planGroup: I,
+                    planGroup: P,
                     openInvoiceId: k,
                     metadata: ei ? void 0 : Q,
                     backButtonEligible: t,

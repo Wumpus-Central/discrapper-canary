@@ -8,9 +8,9 @@ var r = n(627968),
     l = n(397927),
     u = n(262427),
     c = n(313961),
-    d = n(734925),
-    _ = n(765441),
-    f = n(413748),
+    d = n(94420),
+    _ = n(734925),
+    f = n(765441),
     p = n(937008),
     h = n(156312),
     m = n(871181),
@@ -32,7 +32,7 @@ var r = n(627968),
     w = n(806931),
     M = n(788868),
     P = n(985018),
-    x = n(170602);
+    x = n(107610);
 function k(e) {
     let t = (0, o.bG)([T.A], () => (T.A.isConnected() ? T.A.getChannelId() : null)),
         [n, r] = i.useState([]);
@@ -53,7 +53,7 @@ function k(e) {
     );
 }
 function U(e, t, n) {
-    let r = (0, _.A)(),
+    let r = (0, f.A)(),
         s = k(e),
         l = (0, o.yK)([S.default], () => n?.map(S.default.getUser).filter(v.Vq) ?? [], [n]);
     return i.useMemo(
@@ -90,13 +90,13 @@ let F = (e) => {
             setCustomGiftMessage: s,
             giftRecipient: a,
             emojiConfetti: c,
-            soundEffect: _,
+            soundEffect: f,
             setEmojiConfetti: T,
             setSoundEffect: v,
             giftingOrigin: C,
             additionalUserIds: R,
         } = (0, p.Pv)(),
-        w = (0, f.t4)((e) => e.selectedSkuId),
+        w = (0, d.t4)((e) => e.selectedSkuId),
         { application: k } = (0, h.P5)(),
         F = (0, o.bG)([S.default], () => S.default.getCurrentUser()),
         V = U(F?.id, a, R),
@@ -118,7 +118,7 @@ let F = (e) => {
         q = () =>
             null != a && (C === M.vQ.USER_PROFILE_WISHLIST || C === M.vQ.DM_CHANNEL_WISHLIST)
                 ? (0, r.jsx)(g.Z, { giftRecipient: a })
-                : (0, r.jsx)(d.A, { selectedSkuId: w, validateSelectedGift: $, recipients: V }),
+                : (0, r.jsx)(_.A, { selectedSkuId: w, validateSelectedGift: $, recipients: V }),
         Z = (e) => {
             null != v && v(null == e ? void 0 : e);
         },
@@ -137,7 +137,7 @@ let F = (e) => {
                     (0, r.jsxs)("div", {
                         className: x._T,
                         children: [
-                            (0, r.jsx)(A.A, { sound: _, onSelect: Z }),
+                            (0, r.jsx)(A.A, { sound: f, onSelect: Z }),
                             (0, r.jsx)(E.A, { setEmojiConfetti: T, emojiConfetti: null == c ? void 0 : c }),
                         ],
                     }),

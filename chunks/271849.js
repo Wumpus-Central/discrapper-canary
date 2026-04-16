@@ -15,13 +15,13 @@ var r = n(627968),
     h = n(953689),
     m = n(531260),
     E = n(918022),
-    g = n(93159),
-    A = n(826469),
-    I = n(413748),
-    T = n(937008),
-    S = n(156312),
-    y = n(566980),
-    v = n(961098),
+    g = n(699595),
+    A = n(93159),
+    I = n(94420),
+    T = n(826469),
+    S = n(937008),
+    y = n(156312),
+    v = n(566980),
     N = n(800471),
     C = n(104745),
     R = n(222707),
@@ -46,7 +46,7 @@ var r = n(627968),
     K = n(788868),
     $ = n(818348),
     z = n(985018),
-    q = n(110448);
+    q = n(814304);
 let Z = (e) => {
     let {
             selectedPlanId: t,
@@ -63,7 +63,7 @@ let Z = (e) => {
         {
             isEmbeddedIAP: p,
             activeSubscription: h,
-            defaultPlanId: g,
+            defaultPlanId: A,
             isPremium: C,
             startedPaymentFlowWithPaymentSourcesRef: R,
             contextMetadata: D,
@@ -76,12 +76,12 @@ let Z = (e) => {
             isEligibleForDiscount: H,
             setPaymentSourceId: Y,
             displayCurrency: W,
-        } = (0, S.P5)(),
-        { isGift: $, giftRecipient: q, selectedGiftStyle: Z } = (0, T.Pv)(),
+        } = (0, y.P5)(),
+        { isGift: $, giftRecipient: q, selectedGiftStyle: Z } = (0, S.Pv)(),
         X = (0, c.bG)([L.A], () => L.A.get(t));
     l()(null != X, "Missing plan");
     let Q = [{ planId: X.id, quantity: 1 }],
-        J = o === y.h.PURCHASING || o === y.h.COMPLETED,
+        J = o === v.h.PURCHASING || o === v.h.COMPLETED,
         ee = f ?? "",
         et = (0, c.bG)([M.A], () => M.A.get(ee), [ee]),
         en = et?.eligiblePaymentGateways,
@@ -114,7 +114,7 @@ let Z = (e) => {
             currency: r.currency,
             metadata: a,
         });
-    (0, v.c)(eo, H);
+    (0, g.c)(eo, H);
     let [eu, ec] = (0, U.FP)({
             paymentSourceId: r.paymentSourceId,
             skuId: f,
@@ -125,7 +125,7 @@ let Z = (e) => {
         }),
         ed = i.useMemo(() => {
             let e = $ ? eu?.checkoutContext : er?.checkoutContext;
-            return null != e && null != e.payment_sources ? e.payment_sources.map(A.A.createFromCheckoutContext) : [];
+            return null != e && null != e.payment_sources ? e.payment_sources.map(T.A.createFromCheckoutContext) : [];
         }, [$, er?.checkoutContext, eu?.checkoutContext]),
         e_ = $ ? eu?.total : er?.total,
         {
@@ -157,7 +157,7 @@ let Z = (e) => {
     }, [er?.subscriptionPeriodEnd, eR]);
     let eb = (0, m.A)({ forceFetch: !1, excludeReverseTrial: !1, excludeReverseTrialFromCountdown: !0 }),
         eD = !eC && (eb.isFractionalPremiumActive || w) && K.JM.has(t),
-        eL = i.useMemo(() => (0, x.Tm)({ skuId: f, isPremium: C, defaultPlanId: g }), [f, g, C]),
+        eL = i.useMemo(() => (0, x.Tm)({ skuId: f, isPremium: C, defaultPlanId: A }), [f, A, C]),
         ew = (0, N.UB)(eC, er, X),
         eM = i.useMemo(() => {
             if (_ && null != er) return er;
@@ -232,7 +232,7 @@ function X(e) {
             onCurrencyChange: c,
             handlePaymentSourceAdd: m,
             setHasAcceptedTerms: E,
-            legalTermsNodeRef: A,
+            legalTermsNodeRef: g,
             hasLegalTermsFlash: I,
             trialId: T,
             trialFooterMessageOverride: S,
@@ -390,7 +390,7 @@ function X(e) {
             (0, r.jsxs)("div", {
                 className: q.LC,
                 children: [
-                    (0, r.jsx)(g.nL, {
+                    (0, r.jsx)(A.nL, {
                         label: z.intl.string(L ? z.t["YH7B+D"] : z.t["mmDvV+"]),
                         giftCardsEnabled: eO,
                         giftCardCheckboxProps: eR,
@@ -420,7 +420,7 @@ function X(e) {
             }),
             (0, r.jsx)(F.A, {
                 isActive: I,
-                ref: A,
+                ref: g,
                 children: (0, r.jsx)(h.A, {
                     onChange: E,
                     forceShow: !0,
