@@ -1,69 +1,68 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => g });
 var i = n(627968),
     a = n(64700),
-    r = n(503698),
-    l = n.n(r),
-    s = n(382222),
+    l = n(503698),
+    s = n.n(l),
+    r = n(407045),
     o = n(435371),
     d = n(397927),
-    c = n(713517),
-    u = n(696451),
-    _ = n(486020),
-    m = n(562153),
-    h = n(836629),
-    p = n(754521);
-let g = { mass: 1, tension: 170, friction: 26 };
-function A(e) {
-    let { className: t, guildId: n, channelId: r, members: c, ref: h, motion: A } = e,
-        f = c.length > 4,
-        C = f ? c.slice(0, 3) : c,
-        I = f ? c.length - 4 + 1 : 0,
-        E = Math.min(f ? C.length + 1 : C.length, 4),
-        b = (A?.percentX ?? 0) * 6,
-        v = (A?.percentY ?? 0) * 6,
-        T = 1 + ((A?.proximity ?? 0) / 2) * 0.08,
-        [y, S] = (0, d.zhh)(() => ({ x: 0, y: 0, scale: 1, config: g }));
+    c = n(696451),
+    u = n(486020),
+    _ = n(562153),
+    m = n(836629),
+    h = n(531657);
+let p = { mass: 1, tension: 170, friction: 26 };
+function g(e) {
+    let { className: t, guildId: n, channelId: l, members: m, ref: g, motion: x } = e,
+        f = m.length > 4,
+        C = f ? m.slice(0, 3) : m,
+        E = f ? m.length - 4 + 1 : 0,
+        I = Math.min(f ? C.length + 1 : C.length, 4),
+        v = (x?.percentX ?? 0) * 6,
+        b = (x?.percentY ?? 0) * 6,
+        T = 1 + ((x?.proximity ?? 0) / 2) * 0.08,
+        [y, S] = (0, d.zhh)(() => ({ x: 0, y: 0, scale: 1, config: p }));
     return (
         a.useEffect(() => {
-            S({ x: b, y: v, scale: T });
-        }, [b, v, T, S]),
-        (0, i.jsxs)(s.animated.div, {
-            ref: h,
-            className: l()(p.gg, t),
-            "data-count": E,
+            S({ x: v, y: b, scale: T });
+        }, [v, b, T, S]),
+        (0, i.jsxs)(r.animated.div, {
+            ref: g,
+            className: s()(h.gg, t),
+            "data-count": I,
             "aria-hidden": !0,
             style: {
-                transform: (0, s.to)([y.x, y.y, y.scale], (e, t, n) => `translate3d(${e}px, ${t}px, 0) scale(${n})`),
+                transform: (0, r.to)([y.x, y.y, y.scale], (e, t, n) => `translate3d(${e}px, ${t}px, 0) scale(${n})`),
             },
             children: [
                 C.map((e, t) =>
                     (0, i.jsx)(
                         "div",
                         {
-                            className: p.my,
+                            className: h.my,
                             children: (0, i.jsx)(o.m_, {
-                                text: m.Ay.getName(n, r, e),
+                                text: _.Ay.getName(n, l, e),
                                 children: (0, i.jsx)(d.euF, {
                                     src: (function (e, t, n) {
-                                        let i = u.Ay.getMember(t, e.id);
+                                        let i = c.Ay.getMember(t, e.id);
                                         if (null != i) {
-                                            let e = (0, _.xT)(i);
+                                            let e = (0, u.xT)(i);
                                             if (null != e) return e;
                                         }
                                         return e.getAvatarURL(t, n);
                                     })(e, n, 0 === t ? 80 : 60),
                                     size:
-                                        1 === E
+                                        1 === I
                                             ? d._3J.SIZE_80
-                                            : 2 === E && 0 === t
+                                            : 2 === I && 0 === t
                                               ? d._3J.DEPRECATED_SIZE_60
-                                              : 2 === E && 1 === t
+                                              : 2 === I && 1 === t
                                                 ? d._3J.SIZE_40
-                                                : E > 2 && 0 === t
+                                                : I > 2 && 0 === t
                                                   ? d._3J.DEPRECATED_SIZE_60
-                                                  : E > 2 && 1 === t
+                                                  : I > 2 && 1 === t
                                                     ? d._3J.SIZE_48
-                                                    : E > 2
+                                                    : I > 2
                                                       ? d._3J.SIZE_40
                                                       : d._3J.SIZE_48,
                                     "aria-hidden": !0,
@@ -73,30 +72,30 @@ function A(e) {
                         e.id,
                     ),
                 ),
-                f && (0, i.jsx)(x, { guildId: n, channelId: r, members: c, count: I }, "overflow"),
+                f && (0, i.jsx)(A, { guildId: n, channelId: l, members: m, count: E }, "overflow"),
             ],
         })
     );
 }
-function x(e) {
-    let { guildId: t, channelId: n, members: r, count: s } = e,
-        o = a.useRef(null),
-        { isHoveringOrFocusing: u } = (0, c.A)(o);
-    return (0, i.jsx)(h.$, {
-        targetElementRef: o,
+function A(e) {
+    let { guildId: t, channelId: n, members: a, count: l } = e,
+        { triggerRef: r, shouldShow: o, onPopoutHoverOrFocus: c } = (0, m.o)();
+    return (0, i.jsx)(m.$, {
+        targetElementRef: r,
         guildId: t,
         channelId: n,
-        users: r,
-        shouldShow: u,
+        users: a,
+        shouldShow: o,
+        onHoverOrFocus: c,
         children: (e) =>
             (0, i.jsx)("div", {
-                className: l()(p.my, p.k2),
-                ref: o,
+                className: s()(h.my, h.k2),
+                ref: r,
                 ...e,
                 children: (0, i.jsx)(d.Text, {
                     variant: "text-sm/semibold",
                     color: "text-default",
-                    children: s > 99 ? ">99" : `+${s}`,
+                    children: l > 99 ? ">99" : `+${l}`,
                 }),
             }),
     });

@@ -1,27 +1,53 @@
-n.d(t, { $: () => _ });
+n.d(t, { $: () => h, o: () => m });
 var i = n(627968),
     a = n(64700),
-    r = n(503698),
-    l = n.n(r),
-    s = n(397927),
-    o = n(538451),
-    d = n(562153),
-    c = n(460696),
-    u = n(442078);
-function _(e) {
-    let { guildId: t, channelId: n, users: r, ...l } = e,
-        o = a.useCallback((e) => (0, i.jsx)(m, { users: e, guildId: t, channelId: n }), [t, n]);
-    return (0, i.jsx)(s.YNO, { renderPopout: () => o(r), ...l });
+    l = n(503698),
+    s = n.n(l),
+    r = n(397927),
+    o = n(713517),
+    d = n(538451),
+    c = n(562153),
+    u = n(581448),
+    _ = n(824078);
+function m() {
+    let e = a.useRef(null),
+        { isHoveringOrFocusing: t } = (0, o.A)(e),
+        [n, i] = a.useState(!1),
+        l = t || n,
+        [s, r] = a.useState(!1),
+        d = a.useRef(null);
+    return (
+        a.useEffect(() => (l || (d.current = setTimeout(() => r(!1), 150)), () => clearTimeout(d.current)), [l]),
+        l && !s && r(!0),
+        { triggerRef: e, shouldShow: l || s, onPopoutHoverOrFocus: i }
+    );
 }
-function m(e) {
-    let { users: t, guildId: n, channelId: a } = e;
-    return (0, i.jsx)(s.HOs, {
-        className: l()(u.popover, c.o),
-        style: { "--custom-popover-width": "200px" },
-        children: (0, i.jsx)("div", {
-            children: t.map((e) =>
-                (0, i.jsx)(o.A, { user: e, guildId: n ?? void 0, channelId: a, nick: d.Ay.getNickname(n, a, e) }, e.id),
-            ),
-        }),
-    });
+function h(e) {
+    let { guildId: t, channelId: n, users: l, onHoverOrFocus: s, ...o } = e,
+        d = a.useCallback((e) => (0, i.jsx)(p, { users: e, guildId: t, channelId: n, onHoverOrFocus: s }), [t, n, s]);
+    return (0, i.jsx)(r.YNO, { renderPopout: () => d(l), ...o });
+}
+function p(e) {
+    let { users: t, guildId: n, channelId: l, onHoverOrFocus: m } = e,
+        h = a.useRef(null),
+        { isHoveringOrFocusing: p } = (0, o.A)(h);
+    return (
+        a.useEffect(() => {
+            m?.(p);
+        }, [m, p]),
+        (0, i.jsx)(r.HOs, {
+            ref: h,
+            className: s()(_.popover, u.o),
+            style: { "--custom-popover-width": "200px" },
+            children: (0, i.jsx)("div", {
+                children: t.map((e) =>
+                    (0, i.jsx)(
+                        d.A,
+                        { user: e, guildId: n ?? void 0, channelId: l, nick: c.Ay.getNickname(n, l, e) },
+                        e.id,
+                    ),
+                ),
+            }),
+        })
+    );
 }
