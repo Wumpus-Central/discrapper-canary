@@ -1,49 +1,45 @@
-n.d(t, { h: () => o });
-var i = n(627968),
-    l = n(64700),
-    s = n(416696),
-    a = n(709562),
-    r = n(985018);
-function o(e) {
+n.d(t, { h: () => r });
+var i = n(627968);
+n(64700);
+var l = n(397927),
+    s = n(709562),
+    a = n(985018);
+function r(e) {
     let t,
         n,
         {
-            hasPermission: o,
-            streamActive: c,
+            hasPermission: r,
+            streamActive: o,
             isSelfStream: d,
-            centerButton: u,
-            onMouseEnter: h,
-            onMouseLeave: A,
-            renderNUXHighlight: _,
-            buttonRef: m,
-            ...g
+            centerButton: c,
+            renderNUXHighlight: u,
+            buttonRef: h,
+            ...A
         } = e,
-        p = u ? a.l : a.A;
-    n = c
-        ? d
-            ? r.intl.string(r.t.S5anIc)
-            : r.intl.string(r.t.q3O3J8)
-        : o
-          ? r.intl.string(r.t.fjBNo1)
-          : r.intl.string(r.t.uQn9B8);
-    let { Component: f, events: x, play: E } = (0, s.c)(c ? "disable" : "enable");
+        _ = c ? s.l : s.A;
     return (
-        l.useEffect(() => () => E(), [c, E]),
-        (0, i.jsx)(p, {
-            buttonRef: m,
+        (n = o
+            ? d
+                ? a.intl.string(a.t.S5anIc)
+                : a.intl.string(a.t.q3O3J8)
+            : r
+              ? a.intl.string(a.t.fjBNo1)
+              : a.intl.string(a.t.uQn9B8)),
+        (0, i.jsx)(_, {
+            buttonRef: h,
             isTrayButton: !0,
             label: n,
-            disabled: !o,
-            iconComponent: f,
-            isActive: c,
-            color: (_ ? (t = "premiumGradient") : c && (t = "green"), t),
-            onMouseEnter: (e) => {
-                h?.(e), x.onMouseEnter();
-            },
-            onMouseLeave: (e) => {
-                A?.(e), x.onMouseLeave();
-            },
-            ...g,
+            disabled: !r,
+            iconComponent: (0, i.jsx)(l.gxO, {
+                allowAnimationWhileUnfocused: !0,
+                eventTargetRef: h,
+                className: l.d5l.refresh_sm,
+                dataBinding: { fill: "currentColor", on: !o },
+                defaultViewModelInstance: o ? "Off" : "On",
+            }),
+            isActive: o,
+            color: (u ? (t = "premiumGradient") : o && (t = "green"), t),
+            ...A,
         })
     );
 }

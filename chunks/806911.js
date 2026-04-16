@@ -145,7 +145,7 @@ class eo extends i.PureComponent {
         });
     };
     renderDisconnectButton = () =>
-        (0, r.jsx)(x.A, { className: es.iq, onClick: () => (0, T.X)(m.A.VIDEO_PIP, T.O.DISCONNECT) });
+        (0, r.jsx)(x.A, { className: es.iq, iconSize: "md", onClick: () => (0, T.X)(m.A.VIDEO_PIP, T.O.DISCONNECT) });
     renderStopStreamButton = () => {
         let { isSelf: e } = this.viewProperties;
         return (0, r.jsx)(U.A, { isSelfStream: e, className: es.iq, onClick: this.handleStopStream });

@@ -1,58 +1,59 @@
 "use strict";
-n.d(t, { A: () => I });
+n.d(t, { A: () => A });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
     o = n(158954),
     l = n(311907),
-    u = n(697744),
-    c = n(795816),
-    d = n(211401),
-    _ = n(989837),
-    f = n(500049),
-    p = n(598071),
-    h = n(60809),
-    m = n(985018),
-    E = n(816695);
-let g = i.forwardRef(function (e, t) {
+    u = n(795816),
+    c = n(211401),
+    d = n(989837),
+    _ = n(500049),
+    f = n(598071),
+    p = n(60809),
+    h = n(985018),
+    m = n(224840);
+let E = i.forwardRef(function (e, t) {
     let { type: n, channelId: s } = e,
-        g = (0, l.bG)([_.A], () => _.A.shouldShowPopup() && _.A.activeViewType() === n && _.A.activeChannelId() === s),
-        { Component: A, events: I, play: T } = (0, u.c)(),
-        S = i.useContext(p.Ay);
+        E = (0, l.bG)([d.A], () => d.A.shouldShowPopup() && d.A.activeViewType() === n && d.A.activeChannelId() === s),
+        [g, A] = i.useState(0),
+        I = i.useContext(f.Ay);
     i.useEffect(() => {
         let e = () => {
-            I.onMouseEnter();
+            A((e) => e + 1);
         };
         return (
-            S.on("command-sentinel-typed", e),
+            I.on("command-sentinel-typed", e),
             () => {
-                S.off("command-sentinel-typed", e);
+                I.off("command-sentinel-typed", e);
             }
         );
-    }, [S, I]);
-    let y = i.useCallback(() => {
-            g ? d.k(f.Se.DISMISSED) : (d.R(f.s4.TEXT, n, void 0, s), c.LK()), T();
-        }, [g, n, s, T]),
-        v = (0, r.jsx)(A, { size: "refresh_sm", color: "currentColor" });
+    }, [I]);
+    let T = i.useCallback(() => {
+        E ? c.k(_.Se.DISMISSED) : (c.R(_.s4.TEXT, n, void 0, s), u.LK());
+    }, [E, n, s]);
     return (0, r.jsx)("div", {
-        className: a()(E.UD, h.KG),
+        className: a()(m.UD, p.KG),
         ref: t,
         children: (0, r.jsx)(o.DUT, {
             tabIndex: 0,
-            className: a()(E.x6, { [E.rK]: g }),
-            onClick: y,
-            "aria-label": m.intl.string(m.t.erHFxI),
-            "aria-expanded": g,
+            className: a()(m.x6, { [m.rK]: E }),
+            onClick: T,
+            "aria-label": h.intl.string(h.t.erHFxI),
+            "aria-expanded": E,
             "aria-haspopup": "dialog",
             focusProps: { offset: { top: 4, bottom: 4, left: -4, right: -4 } },
-            ...I,
-            children: v,
+            children: (0, r.jsx)(o.lmr, {
+                eventTargetRef: t,
+                dataBinding: { fill: "currentColor", triggerHover: g },
+                className: o.d5l.refresh_sm,
+            }),
         }),
     });
 });
-function A(e) {
+function g(e) {
     let { type: t, channelId: n } = e;
-    return (0, r.jsx)(g, { type: t, channelId: n });
+    return (0, r.jsx)(E, { type: t, channelId: n });
 }
-let I = i.memo(A);
+let A = i.memo(g);

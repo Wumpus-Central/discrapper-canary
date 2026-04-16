@@ -1,27 +1,26 @@
 "use strict";
-n.d(t, { A: () => l });
-var r = n(627968);
-n(64700);
-var i = n(416696),
-    s = n(709562),
-    a = n(985018);
-function o(e) {
-    return e ? a.intl.string(a.t.S5anIc) : a.intl.string(a.t.q3O3J8);
-}
+n.d(t, { A: () => u });
+var r = n(627968),
+    i = n(64700),
+    s = n(397927),
+    a = n(709562),
+    o = n(985018);
 function l(e) {
-    let { isSelfStream: t, centerButton: n = !1, onMouseEnter: a, onMouseLeave: l, ...u } = e,
-        c = n ? s.l : s.A,
-        { Component: d, events: _ } = (0, i.c)("disable");
-    return (0, r.jsx)(c, {
-        label: o(t),
+    return e ? o.intl.string(o.t.S5anIc) : o.intl.string(o.t.q3O3J8);
+}
+function u(e) {
+    let { isSelfStream: t, centerButton: n = !1, ...o } = e,
+        u = n ? a.l : a.A,
+        c = i.useRef(null);
+    return (0, r.jsx)(u, {
+        label: l(t),
         isTrayButton: !1,
-        iconComponent: d,
-        onMouseEnter: (e) => {
-            a?.(e), _.onMouseEnter();
-        },
-        onMouseLeave: (e) => {
-            l?.(e), _.onMouseLeave();
-        },
-        ...u,
+        iconComponent: (0, r.jsx)(s.gxO, {
+            eventTargetRef: c,
+            dataBinding: { fill: "currentColor", on: !1 },
+            defaultViewModelInstance: "Off",
+        }),
+        ref: c,
+        ...o,
     });
 }

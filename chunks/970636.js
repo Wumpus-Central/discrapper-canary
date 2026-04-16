@@ -1,94 +1,90 @@
 "use strict";
-n.d(t, { A: () => m, r: () => h });
+n.d(t, { A: () => p, r: () => f });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(446080),
-    l = n(397927),
-    u = n(267102),
-    c = n(675991),
-    d = n(709562),
-    _ = n(652215),
-    f = n(985018),
-    p = n(384691);
-function h(e) {
-    let t = (0, c.Q)(e),
+    o = n(397927),
+    l = n(267102),
+    u = n(675991),
+    c = n(709562),
+    d = n(985018),
+    _ = n(181859);
+function f(e) {
+    let t = (0, u.Q)(e),
         {
             enabled: n,
-            cameraUnavailable: s,
-            onChange: a,
-            onCameraUnavailable: d,
-            hasPermission: f,
-            children: p,
-            channelLimitReached: h = !1,
-            join: m,
+            cameraUnavailable: i,
+            onChange: s,
+            onCameraUnavailable: a,
+            hasPermission: o,
+            children: c,
+            channelLimitReached: d = !1,
         } = e,
-        E = (0, u.Us)(),
-        g = s ? () => d() : () => a(!e.enabled, E),
-        { Component: A, play: I, events: T } = (0, o.K)(m || n ? "disable" : "enable");
-    i.useEffect(() => () => I(), [n, I]);
-    let S = m ? l.npA : E === _.BRT.POPOUT ? (n ? l.npA : l.OCo) : A;
+        _ = (0, l.Us)(),
+        f = i ? () => a() : () => s(!e.enabled, _);
     return (0, r.jsx)(r.Fragment, {
-        children: p({
-            onClick: g,
-            isActive: n,
-            disabled: !n && (!f || h),
-            iconComponent: S,
-            iconColor: "currentColor",
-            label: t,
-            unavailable: s,
-            onMouseEnter: m ? void 0 : T.onMouseEnter,
-            onMouseLeave: m ? void 0 : T.onMouseLeave,
-        }),
+        children: c({ onClick: f, isActive: n, disabled: !n && (!o || d), label: t, unavailable: i }),
     });
 }
-function m(e) {
+function p(e) {
     let {
             enabled: t,
             join: n,
-            channel: i,
-            onChange: s,
-            onCameraUnavailable: o,
-            cameraUnavailable: l,
-            hasPermission: u,
-            className: c,
-            channelLimitReached: _,
-            channelLimit: m,
-            centerButton: E = !1,
-            onPopoutClick: g,
-            ...A
+            channel: s,
+            onChange: l,
+            onCameraUnavailable: u,
+            cameraUnavailable: p,
+            hasPermission: h,
+            className: m,
+            channelLimitReached: E,
+            channelLimit: g,
+            centerButton: A = !1,
+            onPopoutClick: I,
+            ...T
         } = e,
-        I = E ? d.l : d.A,
-        T = () => (n ? "join" : t ? "green" : "primaryDark"),
-        S = (e) => (n ? "join" : e ? "green" : A.color);
-    return (0, r.jsx)(h, {
+        S = A ? c.l : c.A,
+        y = () => (n ? "join" : t ? "green" : "primaryDark"),
+        v = (e) => (n ? "join" : e ? "green" : T.color),
+        N = i.useRef(null),
+        C = n
+            ? o.npA
+            : (0, r.jsx)(o.gau, {
+                  allowAnimationWhileUnfocused: !0,
+                  defaultViewModelInstance: t ? "CamOn" : "CamOff",
+                  className: o.d5l.refresh_sm,
+                  dataBinding: { fill: "currentColor", on: t },
+                  eventTargetRef: N,
+              });
+    return (0, r.jsx)(f, {
         enabled: t,
         join: n,
-        channel: i,
-        onChange: s,
-        onCameraUnavailable: o,
-        cameraUnavailable: l,
-        hasPermission: u,
-        channelLimitReached: _,
-        channelLimit: m,
+        channel: s,
+        onChange: l,
+        onCameraUnavailable: u,
+        cameraUnavailable: p,
+        hasPermission: h,
+        channelLimitReached: E,
+        channelLimit: g,
         children: (e) => {
-            let { unavailable: t, onMouseEnter: i, onMouseLeave: s, isActive: o, ...l } = e;
-            return (0, r.jsx)(I, {
-                ...l,
-                ...A,
-                color: S(o),
-                caretColor: T(),
-                caretAriaLabel: f.intl.string(f.t.jO7lgy),
-                isActive: o,
+            let { unavailable: t, isActive: i, ...s } = e;
+            return (0, r.jsx)(S, {
+                ...s,
+                ...T,
+                buttonRef: N,
+                iconComponent: C,
+                color: v(i),
+                caretColor: y(),
+                caretAriaLabel: d.intl.string(d.t.jO7lgy),
+                isActive: i,
                 onMouseEnter: (e) => {
-                    A.onMouseEnter?.(e), i?.();
+                    T.onMouseEnter?.(e);
                 },
                 onMouseLeave: (e) => {
-                    A.onMouseLeave?.(e), s?.();
+                    T.onMouseLeave?.(e);
                 },
-                className: a()(c, { [p.t]: t }),
-                onPopoutClick: g,
+                className: a()(m, { [_.t]: t }),
+                onPopoutClick: I,
                 isTrayButton: !n,
             });
         },

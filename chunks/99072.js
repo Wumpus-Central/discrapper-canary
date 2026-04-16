@@ -1,16 +1,16 @@
 n.d(t, { A: () => b });
 var i = n(627968);
 n(64700);
-var l = n(311907),
-    s = n(397927),
-    r = n(456060),
-    a = n(793574),
+var a = n(311907),
+    l = n(397927),
+    s = n(456060),
+    r = n(793574),
     o = n(688810),
     d = n(572211),
     c = n(354287),
     u = n(112150),
-    m = n(15285),
-    _ = n(72432),
+    _ = n(15285),
+    m = n(72432),
     h = n(616356),
     p = n(760751),
     g = n(383501),
@@ -19,35 +19,35 @@ var l = n(311907),
     f = n(661191),
     C = n(820672),
     E = n(768349),
-    I = n(426127),
+    I = n(783198),
     v = n(985018);
 function b(e) {
-    let { currentUserId: t, message: b, application: T, channel: y, analyticsLocations: N, onView: S } = e,
+    let { currentUserId: t, message: b, application: T, channel: y, analyticsLocations: S, onView: N } = e,
         { staticBannerSrc: j, videoBannerSrc: L, bannerAspectRatio: R } = (0, u.f)(T),
         P = A.Ay.getApplicationIconURL({ id: T.id, icon: T.icon }),
-        D = (0, l.bG)([m.Ay, p.A], () =>
-            m.Ay.getVisibleRunningGames().find((e) => {
+        w = (0, a.bG)([_.Ay, p.A], () =>
+            _.Ay.getVisibleRunningGames().find((e) => {
                 let { id: t } = e;
                 if (t === T.id) return !0;
                 let n = p.A.getGameByApplication(T);
                 return null != n && t === n.id;
             }),
         ),
-        M = (0, l.bG)([h.A], () => h.A.getCurrentUserActiveStream()),
-        w = (0, l.bG)([g.A], () => g.A.getChannelId()),
-        O = f.default.extractTimestamp(b.id) + C.M < Date.now(),
-        k = (0, i.jsx)(i.Fragment, { children: (0, r.Wf)(b, y, t) }),
-        { analyticsLocations: U } = (0, o.Ay)(N, a.A.REQUEST_TO_STREAM_INVITE_EMBED),
+        M = (0, a.bG)([h.A], () => h.A.getCurrentUserActiveStream()),
+        D = (0, a.bG)([g.A], () => g.A.getChannelId()),
+        k = f.default.extractTimestamp(b.id) + C.M < Date.now(),
+        O = (0, i.jsx)(i.Fragment, { children: (0, s.Wf)(b, y, t) }),
+        { analyticsLocations: U } = (0, o.Ay)(S, r.A.REQUEST_TO_STREAM_INVITE_EMBED),
         B = v.intl.string(I.default["5+172e"]),
         G = !1;
     return (
-        O
+        k
             ? ((B = v.intl.string(I.default.u4QmWl)), (G = !0))
             : null != M
               ? ((B = v.intl.string(I.default.P0wwmM)), (G = !0))
-              : w !== y.id
+              : D !== y.id
                 ? ((B = v.intl.string(I.default.qRXats)), (G = !0))
-                : null == D && ((B = v.intl.string(I.default["43zohO"])), (G = !0)),
+                : null == w && ((B = v.intl.string(I.default["43zohO"])), (G = !0)),
         (0, i.jsx)(d.h, {
             header: v.intl.string(I.default.nAyuPp),
             title: T.name,
@@ -55,7 +55,7 @@ function b(e) {
             videoBannerSrc: L,
             bannerAspectRatio: R,
             iconSrc: P ?? void 0,
-            info: k,
+            info: O,
             actions:
                 b.author.id === t
                     ? []
@@ -65,13 +65,13 @@ function b(e) {
                               trackingArea: c.kY.STREAM,
                               disabled: G,
                               onClick: () => {
-                                  null != D &&
+                                  null != w &&
                                       ((0, x.isWindows)()
-                                          ? (0, _.A)(D.pid)
-                                          : (0, s.mMO)(async () => {
+                                          ? (0, m.A)(w.pid)
+                                          : (0, l.mMO)(async () => {
                                                 let { default: e } = await Promise.all([
                                                     n.e("96811"),
-                                                    n.e("48697"),
+                                                    n.e("6802"),
                                                 ]).then(n.bind(n, 648230));
                                                 return (t) => (0, i.jsx)(e, { ...t, analyticsLocations: U });
                                             }));
@@ -84,8 +84,8 @@ function b(e) {
                 guildId: y.guild_id,
                 channelId: y.id,
                 messageId: b.id,
-                onView: S,
-                isDeadEnd: O,
+                onView: N,
+                isDeadEnd: k,
             },
         })
     );

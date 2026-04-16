@@ -1,122 +1,113 @@
-n.d(t, { A: () => O });
+n.d(t, { A: () => y });
 var i = n(627968),
-    r = n(64700),
-    l = n(503698),
-    a = n.n(l),
+    l = n(64700),
+    a = n(503698),
+    r = n.n(a),
     s = n(417597),
     o = n(554146),
-    d = n(621956),
-    c = n(990078),
-    u = n(421380),
-    A = n(397927),
-    h = n(442433),
-    _ = n(793574),
-    m = n(688810),
-    p = n(384059),
+    d = n(990078),
+    c = n(421380),
+    u = n(397927),
+    A = n(442433),
+    h = n(793574),
+    _ = n(688810),
+    m = n(384059),
     g = n(480890),
-    E = n(160761),
-    I = n(173660),
-    f = n(430452),
-    C = n(234320),
-    T = n(536432),
-    N = n(674168),
-    S = n(989799),
-    x = n(652215),
-    v = n(49999),
-    y = n(985018),
-    b = n(255259);
-function O(e) {
-    let { channel: t, ...l } = e,
-        O = r.useRef(null),
-        { mute: L, suppress: R } = (0, I.A)(t),
-        P = (0, s.bG)([f.Ay], () => f.Ay.isDeaf()),
-        j = L || R || P,
-        [D, M] = r.useState(!1),
-        w = t.getGuildId(),
-        U = (0, T.VE)({ isSoundboardButtonDisabled: j }),
-        [G, k] = (0, E.DP)(U),
-        { analyticsLocations: V, parentAnalyticsLocation: B } = (0, m.Ay)(_.A.SOUNDBOARD_BUTTON);
-    function H(e) {
-        null != w &&
-            (0, h.L3)(e, async () => {
+    p = n(160761),
+    E = n(173660),
+    I = n(430452),
+    f = n(234320),
+    C = n(536432),
+    T = n(674168),
+    N = n(989799),
+    S = n(652215),
+    x = n(49999),
+    v = n(985018),
+    b = n(395766);
+function y(e) {
+    let { channel: t, ...a } = e,
+        y = l.useRef(null),
+        { mute: O, suppress: L } = (0, E.A)(t),
+        R = (0, s.bG)([I.Ay], () => I.Ay.isDeaf()),
+        P = O || L || R,
+        [D, j] = l.useState(!1),
+        M = t.getGuildId(),
+        w = (0, C.VE)({ isSoundboardButtonDisabled: P }),
+        [U, G] = (0, p.DP)(w),
+        { analyticsLocations: k, parentAnalyticsLocation: V } = (0, _.Ay)(h.A.SOUNDBOARD_BUTTON);
+    function B(e) {
+        null != M &&
+            (0, A.L3)(e, async () => {
                 let { default: e } = await n.e("51111").then(n.bind(n, 323002));
                 return (t) =>
                     (0, i.jsx)(e, {
-                        guildId: w,
-                        sourceAnalyticsLocations: V,
+                        guildId: M,
+                        sourceAnalyticsLocations: k,
                         ...t,
-                        onInteraction: (0, g.s)("SoundboardContextMenu", _.A.RTC_PANEL),
+                        onInteraction: (0, g.s)("SoundboardContextMenu", h.A.RTC_PANEL),
                     });
             });
     }
-    let {
-            Component: F,
-            play: Y,
-            events: { onMouseEnter: W, onMouseLeave: q },
-        } = (0, d.E)(),
-        K = r.useCallback(() => {
-            j || M(!D);
-        }, [j, D]);
+    let H = l.useCallback(() => {
+        P || j(!D);
+    }, [P, D]);
     return (
-        (0, C.Vo)({ event: x.jej.TOGGLE_SOUNDBOARD, handler: K }),
-        (0, i.jsx)(m.f5, {
-            value: V,
-            children: (0, i.jsx)(c.m, {
-                targetElementRef: O,
-                text: L
-                    ? y.intl.string(y.t["Ox4/zU"])
-                    : R
-                      ? y.intl.string(y.t["+YBKYI"])
-                      : P
-                        ? y.intl.string(y.t.X1lQli)
-                        : y.intl.string(y.t["6EJvHt"]),
+        (0, f.Vo)({ event: S.jej.TOGGLE_SOUNDBOARD, handler: H }),
+        (0, i.jsx)(_.f5, {
+            value: k,
+            children: (0, i.jsx)(d.m, {
+                targetElementRef: y,
+                text: O
+                    ? v.intl.string(v.t["Ox4/zU"])
+                    : L
+                      ? v.intl.string(v.t["+YBKYI"])
+                      : R
+                        ? v.intl.string(v.t.X1lQli)
+                        : v.intl.string(v.t["6EJvHt"]),
                 asContainer: !0,
                 shouldShow: !D,
-                children: (0, i.jsx)(A.YNO, {
-                    targetElementRef: O,
-                    animation: A.YNO.Animation.FADE,
+                children: (0, i.jsx)(u.YNO, {
+                    targetElementRef: y,
+                    animation: u.YNO.Animation.FADE,
                     shouldShow: D,
                     position: "top",
-                    onRequestClose: () => M(!1),
+                    onRequestClose: () => j(!1),
                     renderPopout: (e) => {
                         let { closePopout: n } = e;
-                        return (0, i.jsx)(S.A, {
-                            guildId: w,
+                        return (0, i.jsx)(N.A, {
+                            guildId: M,
                             channel: t,
                             onClose: n,
                             gridNotice:
-                                G === o.M.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
-                                (0, i.jsx)(N.m, { onClose: n, markAsDismissed: k }),
+                                U === o.M.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
+                                (0, i.jsx)(T.m, { onClose: n, markAsDismissed: G }),
                             analyticsSource: "rtc panel",
                         });
                     },
                     children: (e) =>
                         (0, i.jsx)("div", {
-                            ref: O,
-                            children: (0, i.jsx)(u.$n, {
+                            ref: y,
+                            children: (0, i.jsx)(c.$n, {
                                 "data-migration-pending": !0,
                                 ...e,
-                                className: a()(b.x6, b.Sq, { [b.W4]: D, [b.r9]: j }),
+                                className: r()(b.x6, b.Sq, { [b.W4]: D, [b.r9]: P }),
                                 wrapperClassName: b.x6,
                                 innerClassName: b.bk,
-                                disabled: j,
+                                disabled: P,
                                 onClick: () => {
-                                    null != G && G !== o.M.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && k(v.i.UNKNOWN),
-                                        M(!D),
-                                        Y(),
-                                        (0, p.X)(B, p.O.SOUNDBOARD);
+                                    null != U && U !== o.M.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && G(x.i.UNKNOWN),
+                                        j(!D),
+                                        (0, m.X)(V, m.O.SOUNDBOARD);
                                 },
-                                onMouseEnter: (e) => {
-                                    l.onMouseEnter?.(e), W();
-                                },
-                                onMouseLeave: (e) => {
-                                    l.onMouseLeave?.(e), q();
-                                },
-                                onContextMenu: H,
+                                onContextMenu: B,
                                 fullWidth: !0,
-                                size: u.$n.Sizes.MEDIUM,
-                                ...l,
-                                children: (0, i.jsx)(F, { className: b.iA, size: "sm", color: "currentColor" }),
+                                size: c.$n.Sizes.MEDIUM,
+                                ...a,
+                                children: (0, i.jsx)(u.gZH, {
+                                    eventTargetRef: y,
+                                    className: u.d5l.refresh_sm,
+                                    dataBinding: { fill: "currentColor" },
+                                }),
                             }),
                         }),
                 }),
