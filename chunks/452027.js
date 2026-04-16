@@ -12,29 +12,32 @@ var r = n(627968),
     _ = n(170640);
 function f(e) {
     let { id: t, errorMessage: n, helperText: r, successMessage: s, description: a } = e,
-        [o, l] = i.useState(!1),
-        u = i.useId(),
+        { hasTrailingAuxiliaryContent: o } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        [l, u] = i.useState(!1),
         c = i.useId(),
         d = i.useId(),
         _ = i.useId(),
         f = i.useId(),
-        p = null != a && "" !== a,
-        h = (null != r && "" !== r) || (null != s && "" !== s),
-        m = [];
-    p && m.push(_), h && m.push(d);
-    let E = m.length > 0 ? m.join(" ") : void 0;
+        p = i.useId(),
+        h = i.useId(),
+        m = null != a && "" !== a,
+        E = (null != r && "" !== r) || (null != s && "" !== s),
+        g = [];
+    m && g.push(f), E && g.push(_), o && g.push(h);
+    let A = g.length > 0 ? g.join(" ") : void 0;
     return i.useMemo(
         () => ({
-            labelId: u,
-            controlId: t ?? c,
-            describedById: E,
-            errorMessageId: null != n && "" !== n ? f : void 0,
-            helperTextId: h ? d : void 0,
-            descriptionId: p ? _ : void 0,
-            isLabelHovered: o,
-            setIsLabelHovered: l,
+            labelId: c,
+            controlId: t ?? d,
+            describedById: A,
+            errorMessageId: null != n && "" !== n ? p : void 0,
+            helperTextId: E ? _ : void 0,
+            descriptionId: m ? f : void 0,
+            trailingAuxiliaryContentId: o ? h : void 0,
+            isLabelHovered: l,
+            setIsLabelHovered: u,
         }),
-        [u, t, c, E, n, f, h, d, p, _, o, l],
+        [c, t, d, A, n, p, E, _, m, f, o, h, l, u],
     );
 }
 function p(e) {
@@ -94,18 +97,18 @@ function h(e) {
             trailingAuxiliaryContent: N,
             ref: C,
         } = e,
-        R = f(e),
+        R = f(e, { hasTrailingAuxiliaryContent: null != N }),
         { labelId: O, controlId: b, errorMessageId: D, describedById: L, helperTextId: w, descriptionId: M } = R,
-        x = I?.horizontalControlColumnWidth,
-        P = "group" === g || "radiogroup" === g,
-        k = P ? "span" : "label",
-        U = P ? "fieldset" : "div",
-        G = P ? (0, r.jsx)("legend", { id: O, children: (0, r.jsx)(o.A, { children: t }) }) : null,
+        P = I?.horizontalControlColumnWidth,
+        x = "group" === g || "radiogroup" === g,
+        k = x ? "span" : "label",
+        U = x ? "fieldset" : "div",
+        G = x ? (0, r.jsx)("legend", { id: O, children: (0, r.jsx)(o.A, { children: t }) }) : null,
         F = null != t && "" !== t,
         V = null != l && "" !== l,
         B = F
             ? (0, r.jsxs)(c.E, {
-                  "aria-hidden": P,
+                  "aria-hidden": x,
                   "data-interactive": y,
                   id: O,
                   tag: k,
@@ -149,10 +152,10 @@ function h(e) {
             className: _.kL,
             "data-layout": A,
             "data-has-description": V || void 0,
-            style: null != x ? { "--custom-field-horizontal-control-width": x } : void 0,
+            style: null != P ? { "--custom-field-horizontal-control-width": P } : void 0,
             "data-disabled": s,
-            "aria-describedby": P ? L : void 0,
-            disabled: P ? s : void 0,
+            "aria-describedby": x ? L : void 0,
+            disabled: x ? s : void 0,
             children: [
                 G,
                 F && n ? (0, r.jsx)(o.A, { children: B }) : null,
