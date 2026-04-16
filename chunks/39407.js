@@ -2,7 +2,7 @@
 n.d(t, { A: () => W });
 var r = n(627968),
     i = n(64700),
-    s = n(687498),
+    s = n(407045),
     a = n(311907),
     o = n(73939),
     l = n(397927),
@@ -31,8 +31,8 @@ var r = n(627968),
     L = n(312381),
     w = n(946356),
     M = n(587168),
-    x = n(193738),
-    P = n(613457),
+    P = n(193738),
+    x = n(613457),
     k = n(853397),
     U = n(159218),
     G = n(850092),
@@ -50,115 +50,119 @@ function W(e) {
             channelId: K,
             messageId: $,
             roleId: z,
-            closePopout: q,
-            setPopoutRef: Z,
-            disableUserProfileLink: X = __OVERLAY__,
-            newAnalyticsLocations: Q = [],
-            appContext: J,
-            disableAutoFocus: ee = !1,
-            onClickContainer: et,
+            openedAt: q,
+            closePopout: Z,
+            setPopoutRef: X,
+            disableUserProfileLink: Q = __OVERLAY__,
+            newAnalyticsLocations: J = [],
+            appContext: ee,
+            disableAutoFocus: et = !1,
+            onClickContainer: en,
         } = e,
-        { analyticsLocations: en } = (0, d.Ay)([...Q, c.A.USER_PROFILE_POPOUT]),
-        er = (0, g.aL)(),
-        ei = (0, T.pb)({ layout: "POPOUT", userId: t.id, guildId: W, channelId: K, messageId: $, roleId: z }),
-        es = (0, a.bG)([A.A], () => (null != W ? A.A.getGuild(W) : null)),
-        ea = i.useMemo(() => (null != W ? { [W]: [t.id] } : {}), [W, t.id]);
-    (0, u.Eq)(ea, "UserProfilePopout");
-    let eo = i.useRef(null),
-        el = (0, v.Ay)(t.id, W),
-        eu = (0, f.A)(el?.profileFrame?.skuId, "UserProfilePopout"),
-        [ec, ed] = i.useState(!1),
-        e_ = (0, y.A)(t.id, W),
-        { enabled: ef } = N.A.useConfig({ location: "UserProfilePopout" }),
-        { isHoveringOrFocusing: ep, isHovering: eh } = (0, m.A)(eo),
-        em = (0, C.fC)(),
-        eE = (0, l.zhh)({ opacity: +(null != em.interactionType), config: { duration: 150 } });
+        { analyticsLocations: er } = (0, d.Ay)([...J, c.A.USER_PROFILE_POPOUT]),
+        ei = (0, g.aL)(),
+        es = (0, T.pb)({ layout: "POPOUT", userId: t.id, guildId: W, channelId: K, messageId: $, roleId: z }),
+        ea = (0, a.bG)([A.A], () => (null != W ? A.A.getGuild(W) : null)),
+        eo = i.useMemo(() => (null != W ? { [W]: [t.id] } : {}), [W, t.id]);
+    (0, u.Eq)(eo, "UserProfilePopout");
+    let el = i.useRef(null),
+        eu = (0, v.Ay)(t.id, W),
+        ec = (0, f.A)(eu?.profileFrame?.skuId, "UserProfilePopout"),
+        [ed, e_] = i.useState(!1),
+        ef = (0, y.A)(t.id, W),
+        { enabled: ep } = N.A.useConfig({ location: "UserProfilePopout" }),
+        { isHoveringOrFocusing: eh, isHovering: em } = (0, m.A)(el),
+        eE = (0, C.fC)(),
+        eg = (0, l.zhh)({ opacity: +(null != eE.interactionType), config: { duration: 150 } });
     i.useEffect(() => {
-        Z?.(eo?.current);
-    }, [eo, Z]);
-    let eg = i.useRef(null),
-        eA = t.id === n.id,
-        eI = i.useMemo(() => (0, E.A)(), []),
-        eT = (e) => {
-            q?.(),
-                er.dispatch(B.jej.POPOUT_CLOSE),
+        X?.(el?.current);
+    }, [el, X]);
+    let eA = i.useRef(null),
+        eI = t.id === n.id,
+        eT = i.useMemo(() => (0, E.A)(), []),
+        eS = (e) => {
+            Z?.(),
+                ei.dispatch(B.jej.POPOUT_CLOSE),
                 (0, R.openUserProfileModal)({
-                    sourceAnalyticsLocations: en,
+                    sourceAnalyticsLocations: er,
                     hideRestrictedProfile: !0,
-                    customStatusPrompt: eI,
-                    ...ei,
+                    customStatusPrompt: eT,
+                    ...es,
                     ...e,
-                    appContext: J,
+                    appContext: ee,
                 });
         },
-        eS = () =>
-            X
+        ey = () =>
+            Q
                 ? null
                 : (0, r.jsx)(l.Drp, {
                       id: "view-profile",
                       label: j.intl.string(j.t["+Xp3hq"]),
                       action: () => {
-                          eT(), (0, S.Wn)({ action: "PRESS_VIEW_PROFILE", analyticsLocations: en, ...ei });
+                          eS(), (0, S.Wn)({ action: "PRESS_VIEW_PROFILE", analyticsLocations: er, ...es });
                       },
                   }),
-        ey = ee ? "div" : l.lGe,
-        ev = (0, h.GV)(),
-        eN = I.Ay.useName(es?.id, K, t);
+        ev = et ? "div" : l.lGe,
+        eN = (0, h.GV)(),
+        eC = I.Ay.useName(ea?.id, K, t);
     return (0, r.jsx)(d.f5, {
-        value: en,
+        value: er,
         children: (0, r.jsx)(T.of, {
-            value: ei,
-            isLoaded: el?.isLoaded,
+            value: es,
+            openedAt: q,
+            fetchStartedAt: eu?.fetchStartedAt,
+            fetchEndedAt: eu?.fetchEndedAt,
+            isLoaded: eu?.isLoaded,
             children: (0, r.jsx)(C.Hl, {
-                value: em,
-                children: (0, r.jsxs)(ey, {
-                    ref: eo,
-                    "aria-labelledby": ev,
-                    onClick: et,
+                value: eE,
+                children: (0, r.jsxs)(ev, {
+                    ref: el,
+                    "aria-labelledby": eN,
+                    onClick: en,
                     children: [
-                        e_ &&
-                            ec &&
+                        ef &&
+                            ed &&
                             (0, r.jsx)(o.F, {
                                 component: "div",
                                 className: Y.g$,
                                 children: (0, r.jsx)(l.FQk, {
-                                    children: (0, r.jsx)(G.A, { userId: t.id, onSendWave: q }),
+                                    children: (0, r.jsx)(G.A, { userId: t.id, onSendWave: Z }),
                                 }),
                             }),
                         (0, r.jsx)(l.AC4, {
-                            children: (0, r.jsx)(l.H, { id: ev, children: j.intl.format(j.t.KRe1Fk, { name: eN }) }),
+                            children: (0, r.jsx)(l.H, { id: eN, children: j.intl.format(j.t.KRe1Fk, { name: eC }) }),
                         }),
                         (0, r.jsx)(l.Fmo, {
                             children: (0, r.jsxs)(w.A, {
                                 user: t,
-                                displayProfile: el,
+                                displayProfile: eu,
                                 themeType: H.d.POPOUT,
-                                privateBanner: el?.private === !0 ? (0, r.jsx)(L.A, {}) : void 0,
+                                privateBanner: eu?.private === !0 ? (0, r.jsx)(L.A, {}) : void 0,
                                 children: [
-                                    null != em.interactionType &&
-                                        (0, r.jsx)(s.animated.div, { style: eE, className: Y.tB }),
+                                    null != eE.interactionType &&
+                                        (0, r.jsx)(s.animated.div, { style: eg, className: Y.tB }),
                                     (0, r.jsxs)(M.A, {
                                         children: [
-                                            (0, r.jsx)(P.A, {
-                                                shouldShowTooltip: null === em.interactionType,
+                                            (0, r.jsx)(x.A, {
+                                                shouldShowTooltip: null === eE.interactionType,
                                                 user: t,
                                                 guildId: W,
                                                 channelId: K,
-                                                onClose: q,
-                                                appContext: J,
+                                                onClose: Z,
+                                                appContext: ee,
                                             }),
-                                            (0, r.jsx)(x.A, {
+                                            (0, r.jsx)(P.A, {
                                                 themeType: H.d.POPOUT,
                                                 user: t,
-                                                setFriendRequestSent: ed,
-                                                toastShowing: e_ && ec && ef,
+                                                setFriendRequestSent: e_,
+                                                toastShowing: ef && ed && ep,
                                             }),
-                                            !eA &&
+                                            !eI &&
                                                 (0, r.jsx)(k.yo, {
                                                     user: t,
                                                     guildId: W,
-                                                    viewProfileItem: eS(),
-                                                    appContext: J,
+                                                    viewProfileItem: ey(),
+                                                    appContext: ee,
                                                 }),
                                         ],
                                     }),
@@ -167,51 +171,51 @@ function W(e) {
                                         children: [
                                             (0, r.jsx)(b.A, {
                                                 user: t,
-                                                displayProfile: el,
+                                                displayProfile: eu,
                                                 guildId: W,
                                                 themeType: H.d.POPOUT,
                                             }),
-                                            (0, r.jsx)(D.A, { userId: t.id, className: Y.oR, onClose: q }),
+                                            (0, r.jsx)(D.A, { userId: t.id, className: Y.oR, onClose: Z }),
                                             (0, r.jsx)(O.A, {
                                                 user: t,
-                                                displayProfile: el,
+                                                displayProfile: eu,
                                                 guildId: W,
                                                 channelId: K,
                                                 themeType: H.d.POPOUT,
-                                                onOpenProfile: X ? void 0 : eT,
+                                                onOpenProfile: Q ? void 0 : eS,
                                             }),
                                             (0, r.jsx)(U.A, {
-                                                ref: eg,
+                                                ref: eA,
                                                 user: t,
                                                 guildId: W,
                                                 channelId: K,
                                                 themeType: H.d.POPOUT,
-                                                onCloseProfile: q,
-                                                prompt: eI,
+                                                onCloseProfile: Z,
+                                                prompt: eT,
                                             }),
                                         ],
                                     }),
                                     (0, r.jsx)(F.A, {
                                         user: t,
                                         currentUser: n,
-                                        displayProfile: el,
-                                        guild: es,
-                                        isHoveringOrFocusing: null == em.interactionType && ep,
-                                        onOpenProfile: X ? void 0 : eT,
+                                        displayProfile: eu,
+                                        guild: ea,
+                                        isHoveringOrFocusing: null == eE.interactionType && eh,
+                                        onOpenProfile: Q ? void 0 : eS,
                                         channelId: K,
-                                        onClose: q,
+                                        onClose: Z,
                                     }),
                                     (0, r.jsx)(V.A, {
                                         user: t,
                                         guildId: W,
                                         channelId: K,
-                                        onClose: q,
-                                        appContext: J,
-                                        disableAutoFocus: ee,
+                                        onClose: Z,
+                                        appContext: ee,
+                                        disableAutoFocus: et,
                                     }),
-                                    el?.profileEffect != null &&
-                                        (0, r.jsx)(_.A, { skuId: el?.profileEffect?.skuId, isHovering: eh }),
-                                    null != eu && (0, r.jsx)(p.A, { frame: eu, layout: "POPOUT" }),
+                                    eu?.profileEffect != null &&
+                                        (0, r.jsx)(_.A, { skuId: eu?.profileEffect?.skuId, isHovering: em }),
+                                    null != ec && (0, r.jsx)(p.A, { frame: ec, layout: "POPOUT" }),
                                 ],
                             }),
                         }),

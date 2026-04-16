@@ -17,7 +17,7 @@ var r = n(627968),
     E = n(783123),
     g = n(996988),
     A = n(985018),
-    I = n(612704),
+    I = n(203531),
     T = n(911850);
 function S(e) {
     let {
@@ -27,30 +27,34 @@ function S(e) {
             channelId: y,
             messageId: v,
             roleId: N,
-            onHide: C,
-            newAnalyticsLocations: R = [],
-            disableAutoFocus: O = !1,
-            onClickContainer: b,
+            openedAt: C,
+            onHide: R,
+            newAnalyticsLocations: O = [],
+            disableAutoFocus: b = !1,
+            onClickContainer: D,
         } = e,
-        D = (0, s.bG)([u.A], () => u.A.isBlocked(t.id)),
-        { analyticsLocations: L } = (0, l.Ay)([...R, D ? o.A.BLOCKED_PROFILE_POPOUT : o.A.IGNORED_PROFILE_POPOUT]),
-        w = (0, d.pb)({ layout: "POPOUT", userId: t.id, guildId: n, channelId: y, messageId: v, roleId: N }),
-        M = i.useRef(null),
+        L = (0, s.bG)([u.A], () => u.A.isBlocked(t.id)),
+        { analyticsLocations: w } = (0, l.Ay)([...O, L ? o.A.BLOCKED_PROFILE_POPOUT : o.A.IGNORED_PROFILE_POPOUT]),
+        M = (0, d.pb)({ layout: "POPOUT", userId: t.id, guildId: n, channelId: y, messageId: v, roleId: N }),
+        P = i.useRef(null),
         x = (0, f.Ay)(t.id, n);
     i.useEffect(() => {
-        S?.(M?.current);
-    }, [M, S]);
-    let P = D ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
-        k = O ? "div" : a.lGe;
+        S?.(P?.current);
+    }, [P, S]);
+    let k = L ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
+        U = b ? "div" : a.lGe;
     return (0, r.jsx)(l.f5, {
-        value: L,
+        value: w,
         children: (0, r.jsx)(d.of, {
-            value: w,
+            value: M,
+            openedAt: C,
+            fetchStartedAt: x?.fetchStartedAt,
+            fetchEndedAt: x?.fetchEndedAt,
             isLoaded: x?.isLoaded,
-            children: (0, r.jsx)(k, {
-                ref: M,
+            children: (0, r.jsx)(U, {
+                ref: P,
                 "aria-label": t.username,
-                onClick: b,
+                onClick: D,
                 children: (0, r.jsx)(h.A, {
                     user: t,
                     displayProfile: x,
@@ -72,7 +76,7 @@ function S(e) {
                                             }),
                                             (0, r.jsx)(a.Text, {
                                                 variant: "text-sm/medium",
-                                                children: A.intl.format(D ? A.t["8F+WNz"] : A.t["/cZp5s"], {
+                                                children: A.intl.format(L ? A.t["8F+WNz"] : A.t["/cZp5s"], {
                                                     username: c.Ay.getName(n, y, t),
                                                 }),
                                             }),
@@ -82,19 +86,19 @@ function S(e) {
                                         align: "center",
                                         children: [
                                             (0, r.jsx)(E.A, {
-                                                isBlocked: D,
+                                                isBlocked: L,
                                                 onClick: () => {
-                                                    C(), (0, _.Wn)({ action: P, analyticsLocations: L, ...w });
+                                                    R(), (0, _.Wn)({ action: k, analyticsLocations: w, ...M });
                                                 },
                                             }),
                                             (0, r.jsx)(m.A, {
                                                 userId: t.id,
                                                 onClick: () => {
-                                                    C(),
+                                                    R(),
                                                         (0, _.Wn)({
                                                             action: "DONT_SHOW_AGAIN_IGNORED_PROFILE",
-                                                            analyticsLocations: L,
-                                                            ...w,
+                                                            analyticsLocations: w,
+                                                            ...M,
                                                         });
                                                 },
                                             }),

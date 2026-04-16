@@ -50,17 +50,13 @@ function F(e) {
     let { emojiTooltipPosition: t = "top", enableEmojiClick: n = !0 } = e;
     return {
         react(e, i, s) {
-            let { key: a, guildId: o, channelId: l, messageId: u, isInteracting: c } = s,
-                d = _.Ay.getDisambiguatedEmojiContext(o).getById(e.emojiId);
-            if (null != d) {
-                let t = d.require_colons;
-                e = { ...e, name: t ? `:${d.name}:` : d.name };
+            let { key: a, guildId: o, channelId: l, messageId: u } = s,
+                c = _.Ay.getDisambiguatedEmojiContext(o).getById(e.emojiId);
+            if (null != c) {
+                let t = c.require_colons;
+                e = { ...e, name: t ? `:${c.name}:` : c.name };
             }
-            return (0, r.jsx)(
-                A.X,
-                { isInteracting: c, node: e, tooltipPosition: t, enableClick: n, channelId: l, messageId: u },
-                a,
-            );
+            return (0, r.jsx)(A.X, { node: e, tooltipPosition: t, enableClick: n, channelId: l, messageId: u }, a);
         },
     };
 }

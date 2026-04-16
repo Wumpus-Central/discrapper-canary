@@ -34,7 +34,8 @@ function h(e) {
             shouldPreload: N = !0,
             ...C
         } = e,
-        R = i.useCallback(
+        R = i.useRef(void 0),
+        O = i.useCallback(
             () =>
                 null != A
                     ? A()
@@ -47,10 +48,10 @@ function h(e) {
                       }),
             [A, s, n, g, o, d],
         ),
-        O = i.useCallback(
+        b = i.useCallback(
             (e) =>
-                null != I
-                    ? I(e)
+                ((R.current = Date.now()), null != I)
+                    ? I(e, R.current)
                     : (0, r.jsx)(u.A, {
                           ...e,
                           user: n,
@@ -62,6 +63,7 @@ function h(e) {
                           disableUserProfileLink: h,
                           newAnalyticsLocations: m,
                           appContext: E,
+                          openedAt: R.current,
                           closePopout: () => {
                               e.closePopout(), y?.();
                           },
@@ -71,8 +73,8 @@ function h(e) {
     return (0, r.jsx)(a.YNO, {
         popoutKey: c.KM,
         shouldShow: v,
-        preload: N ? R : void 0,
-        renderPopout: O,
+        preload: N ? O : void 0,
+        renderPopout: b,
         onRequestOpen: T,
         onRequestClose: S,
         ...C,

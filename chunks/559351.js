@@ -493,7 +493,6 @@ let eu = i.memo(function (e) {
             i = new D.Ay({ channel_id: t.id, content: n }),
             { content: s } = (0, E.A)(i, {
                 hideSimpleEmbedContent: !0,
-                isInteracting: !1,
                 formatInline: !1,
                 allowList: !0,
                 allowHeading: !0,

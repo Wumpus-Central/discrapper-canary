@@ -35,73 +35,77 @@ function D(e) {
             channelId: L,
             messageId: w,
             roleId: M,
+            openedAt: P,
             closePopout: x,
-            setPopoutRef: P,
-            disableUserProfileLink: k = __OVERLAY__,
-            newAnalyticsLocations: U = [],
-            disableAutoFocus: G = !1,
-            onClickContainer: F,
+            setPopoutRef: k,
+            disableUserProfileLink: U = __OVERLAY__,
+            newAnalyticsLocations: G = [],
+            disableAutoFocus: F = !1,
+            onClickContainer: V,
         } = e,
-        { analyticsLocations: V } = (0, l.Ay)([...U, o.A.USER_PROFILE_POPOUT]),
-        B = (0, d.aL)(),
-        H = (0, p.pb)({ layout: "POPOUT", userId: t.id, guildId: D, channelId: L, messageId: w, roleId: M }),
-        j = (0, m.Ay)(t.id, D),
-        Y = (0, s.bG)([_.A], () => (null != D ? _.A.getGuild(D) : null)),
-        W = i.useRef(null),
-        { isHoveringOrFocusing: K } = (0, c.A)(W);
+        { analyticsLocations: B } = (0, l.Ay)([...G, o.A.USER_PROFILE_POPOUT]),
+        H = (0, d.aL)(),
+        j = (0, p.pb)({ layout: "POPOUT", userId: t.id, guildId: D, channelId: L, messageId: w, roleId: M }),
+        Y = (0, m.Ay)(t.id, D),
+        W = (0, s.bG)([_.A], () => (null != D ? _.A.getGuild(D) : null)),
+        K = i.useRef(null),
+        { isHoveringOrFocusing: $ } = (0, c.A)(K);
     i.useEffect(() => {
-        P?.(W?.current);
-    }, [W, P]);
-    let $ = (e) => {
+        k?.(K?.current);
+    }, [K, k]);
+    let z = (e) => {
             x?.(),
-                B.dispatch(C.jej.POPOUT_CLOSE),
-                (0, E.openUserProfileModal)({ sourceAnalyticsLocations: V, hideRestrictedProfile: !0, ...H, ...e });
+                H.dispatch(C.jej.POPOUT_CLOSE),
+                (0, E.openUserProfileModal)({ sourceAnalyticsLocations: B, hideRestrictedProfile: !0, ...j, ...e });
         },
-        z = () =>
-            k
+        q = () =>
+            U
                 ? null
                 : (0, r.jsx)(a.Drp, {
                       id: "view-profile",
                       label: O.intl.string(O.t["+Xp3hq"]),
                       action: () => {
-                          $(), (0, h.Wn)({ action: "PRESS_VIEW_PROFILE", analyticsLocations: V, ...H });
+                          z(), (0, h.Wn)({ action: "PRESS_VIEW_PROFILE", analyticsLocations: B, ...j });
                       },
                   }),
-        q = G ? "div" : a.lGe,
-        Z = (0, u.GV)(),
-        X = f.Ay.useName(D, L, t);
+        Z = F ? "div" : a.lGe,
+        X = (0, u.GV)(),
+        Q = f.Ay.useName(D, L, t);
     return (0, r.jsx)(l.f5, {
-        value: V,
+        value: B,
         children: (0, r.jsx)(p.of, {
-            value: H,
-            isLoaded: j?.isLoaded,
-            children: (0, r.jsxs)(q, {
-                ref: W,
-                "aria-labelledby": Z,
-                onClick: F,
+            value: j,
+            openedAt: P,
+            fetchStartedAt: Y?.fetchStartedAt,
+            fetchEndedAt: Y?.fetchEndedAt,
+            isLoaded: Y?.isLoaded,
+            children: (0, r.jsxs)(Z, {
+                ref: K,
+                "aria-labelledby": X,
+                onClick: V,
                 children: [
                     (0, r.jsx)(a.AC4, {
-                        children: (0, r.jsx)(a.H, { id: Z, children: O.intl.format(O.t.KRe1Fk, { name: X }) }),
+                        children: (0, r.jsx)(a.H, { id: X, children: O.intl.format(O.t.KRe1Fk, { name: Q }) }),
                     }),
                     (0, r.jsxs)(I.A, {
                         user: t,
-                        displayProfile: j,
+                        displayProfile: Y,
                         themeType: R.d.POPOUT,
                         children: [
                             (0, r.jsx)(S.A, {
-                                children: (0, r.jsx)(T.A, { user: t, guildId: D, viewProfileItem: z() }),
+                                children: (0, r.jsx)(T.A, { user: t, guildId: D, viewProfileItem: q() }),
                             }),
                             (0, r.jsxs)("div", {
                                 className: b.wx,
                                 children: [
-                                    (0, r.jsx)(A.A, { user: t, displayProfile: j, guildId: D, themeType: R.d.POPOUT }),
+                                    (0, r.jsx)(A.A, { user: t, displayProfile: Y, guildId: D, themeType: R.d.POPOUT }),
                                     (0, r.jsx)(g.A, {
                                         user: t,
-                                        displayProfile: j,
+                                        displayProfile: Y,
                                         guildId: D,
                                         channelId: L,
                                         themeType: R.d.POPOUT,
-                                        onOpenProfile: k ? void 0 : $,
+                                        onOpenProfile: U ? void 0 : z,
                                     }),
                                     (0, r.jsx)(y.A, {
                                         user: t,
@@ -114,14 +118,14 @@ function D(e) {
                             (0, r.jsx)(v.A, {
                                 user: t,
                                 currentUser: n,
-                                displayProfile: j,
-                                guild: Y,
-                                isHoveringOrFocusing: K,
-                                onOpenProfile: k ? void 0 : $,
+                                displayProfile: Y,
+                                guild: W,
+                                isHoveringOrFocusing: $,
+                                onOpenProfile: U ? void 0 : z,
                                 channelId: L,
                                 onClose: x,
                             }),
-                            (0, r.jsx)(N.A, { user: t, guildId: D, channelId: L, onClose: x, disableAutoFocus: G }),
+                            (0, r.jsx)(N.A, { user: t, guildId: D, channelId: L, onClose: x, disableAutoFocus: F }),
                         ],
                     }),
                 ],

@@ -33,9 +33,10 @@ async function f(e) {
             appContext: A,
             customStatusPrompt: I = null,
         } = e,
-        T = l.default.getUser(t);
+        T = Date.now(),
+        S = l.default.getUser(t);
     _(t),
-        null == T
+        null == S
             ? await (0, s.eO)(t, {
                   type: "modal",
                   guildId: n ?? void 0,
@@ -44,10 +45,10 @@ async function f(e) {
                   withMutualGuilds: !0,
                   joinRequestId: p,
               })
-            : (0, u.A)(T.id, T.getAvatarURL(void 0, c), {
+            : (0, u.A)(S.id, S.getAvatarURL(void 0, c), {
                   type: "modal",
                   guildId: n ?? void 0,
-                  withMutualFriendsCount: !T.bot,
+                  withMutualFriendsCount: !S.bot,
                   withMutualFriends: !1,
                   withMutualGuilds: !0,
                   joinRequestId: p,
@@ -61,6 +62,7 @@ async function f(e) {
             messageId: o ?? void 0,
             roleId: d ?? void 0,
             sessionId: f ?? void 0,
+            openedAt: T,
             customStatusPrompt: I,
             tabSection: h,
             scrollTarget: m,

@@ -152,15 +152,16 @@ function eL(e) {
                           withMutualFriends: !1,
                           guildId: void 0,
                       }),
-                  renderPopout: (e) => {
-                      let { closePopout: t, setPopoutRef: n } = e;
+                  renderPopout: (e, t) => {
+                      let { closePopout: n, setPopoutRef: i } = e;
                       return (0, a.jsx)(K.A, {
                           currentUser: o,
                           highlightBadge: y,
+                          openedAt: t,
                           onClose: () => {
-                              t?.();
+                              n?.();
                           },
-                          setPopoutRef: n,
+                          setPopoutRef: i,
                           className: eO.dI,
                       });
                   },

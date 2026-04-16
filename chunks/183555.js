@@ -8,19 +8,31 @@ var r,
     l = n(672385);
 let u = s.createContext(null),
     c = (e) => {
-        let { value: t, children: n, isLoaded: r = !1 } = e,
-            { analyticsLocations: a } = (0, o.Ay)(),
-            c = { analyticsLocations: a, value: t },
-            d = s.useRef(c);
+        let { value: t, children: n, openedAt: r, fetchStartedAt: a, fetchEndedAt: c, isLoaded: d = !1 } = e,
+            { analyticsLocations: _ } = (0, o.Ay)(),
+            f = s.useRef(void 0),
+            p = { analyticsLocations: _, value: t },
+            h = s.useRef(p);
         return (
             s.useEffect(() => {
-                d.current = c;
+                h.current = p;
             }),
             s.useEffect(() => {
-                if (!r) return;
-                let { analyticsLocations: e, value: t } = d.current;
-                (0, l.Wn)({ action: "VIEW", analyticsLocations: e, ...t });
-            }, [r]),
+                let e = Date.now();
+                if ((null == f.current && null != r && (f.current = e - r), !d)) return;
+                let { analyticsLocations: t, value: n } = h.current;
+                (0, l.Wn)({ action: "VIEW", analyticsLocations: t, ...n }),
+                    (0, l.wd)({
+                        profileUi: "USER_PROFILE",
+                        timeToInteractiveMs: f.current,
+                        timeToLoadMs: null != r ? e - r : void 0,
+                        timeToFetchMs: null != a && null != c ? c - a : void 0,
+                        viewStartedAt: r,
+                        fetchStartedAt: a,
+                        analyticsLocations: t,
+                        ...n,
+                    });
+            }, [d]),
             (0, i.jsx)(u.Provider, { value: t, children: n })
         );
     },

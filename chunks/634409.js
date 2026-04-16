@@ -34,71 +34,75 @@ function D(e) {
             channelId: D,
             messageId: L,
             roleId: w,
-            setPopoutRef: M,
+            openedAt: M,
+            setPopoutRef: P,
             closePopout: x,
-            disableUserProfileLink: P = __OVERLAY__,
-            newAnalyticsLocations: k = [],
-            disableAutoFocus: U = !1,
-            onClickContainer: G,
+            disableUserProfileLink: k = __OVERLAY__,
+            newAnalyticsLocations: U = [],
+            disableAutoFocus: G = !1,
+            onClickContainer: F,
         } = e,
-        F = (0, m.Ay)(t.id, n),
-        V = (0, _.aL)(),
-        { analyticsLocations: B } = (0, o.Ay)([...k, a.A.USER_PROFILE_POPOUT]),
-        H = (0, p.pb)({ layout: "POPOUT", userId: t.id, guildId: n, channelId: D, messageId: L, roleId: w }),
-        j = i.useRef(null),
-        Y = (0, d.M)(j);
+        V = (0, m.Ay)(t.id, n),
+        B = (0, _.aL)(),
+        { analyticsLocations: H } = (0, o.Ay)([...U, a.A.USER_PROFILE_POPOUT]),
+        j = (0, p.pb)({ layout: "POPOUT", userId: t.id, guildId: n, channelId: D, messageId: L, roleId: w }),
+        Y = i.useRef(null),
+        W = (0, d.M)(Y);
     i.useEffect(() => {
-        M?.(j?.current);
-    }, [j, M]);
-    let W = () => {
+        P?.(Y?.current);
+    }, [Y, P]);
+    let K = () => {
             x?.(),
-                V.dispatch(C.jej.POPOUT_CLOSE),
-                (0, E.openUserProfileModal)({ sourceAnalyticsLocations: B, hideRestrictedProfile: !0, ...H });
+                B.dispatch(C.jej.POPOUT_CLOSE),
+                (0, E.openUserProfileModal)({ sourceAnalyticsLocations: H, hideRestrictedProfile: !0, ...j });
         },
-        K = !P && (0, l.A)(t.id),
-        $ = () =>
-            K
+        $ = !k && (0, l.A)(t.id),
+        z = () =>
+            $
                 ? (0, r.jsx)(s.Drp, {
                       id: "view-profile",
                       label: O.intl.string(O.t["+Xp3hq"]),
                       action: () => {
-                          W(), (0, h.Wn)({ action: "PRESS_VIEW_PROFILE", analyticsLocations: B, ...H });
+                          K(), (0, h.Wn)({ action: "PRESS_VIEW_PROFILE", analyticsLocations: H, ...j });
                       },
                   })
                 : null,
-        z = U ? "div" : s.lGe,
-        q = (0, c.GV)(),
-        Z = f.Ay.useName(n, D, t);
+        q = G ? "div" : s.lGe,
+        Z = (0, c.GV)(),
+        X = f.Ay.useName(n, D, t);
     return (0, r.jsx)(o.f5, {
-        value: B,
+        value: H,
         children: (0, r.jsx)(p.of, {
-            value: H,
-            isLoaded: F?.isLoaded,
-            children: (0, r.jsxs)(z, {
-                ref: j,
-                "aria-labelledby": q,
-                onClick: G,
+            value: j,
+            openedAt: M,
+            fetchStartedAt: V?.fetchStartedAt,
+            fetchEndedAt: V?.fetchEndedAt,
+            isLoaded: V?.isLoaded,
+            children: (0, r.jsxs)(q, {
+                ref: Y,
+                "aria-labelledby": Z,
+                onClick: F,
                 children: [
                     (0, r.jsx)(s.AC4, {
-                        children: (0, r.jsx)(s.H, { id: q, children: O.intl.format(O.t.KRe1Fk, { name: Z }) }),
+                        children: (0, r.jsx)(s.H, { id: Z, children: O.intl.format(O.t.KRe1Fk, { name: X }) }),
                     }),
                     (0, r.jsxs)(S.A, {
                         user: t,
-                        displayProfile: F,
+                        displayProfile: V,
                         themeType: R.d.POPOUT,
                         children: [
-                            (0, r.jsx)(N.A, { children: (0, r.jsx)(v.A, { user: t, viewProfileItem: $() }) }),
+                            (0, r.jsx)(N.A, { children: (0, r.jsx)(v.A, { user: t, viewProfileItem: z() }) }),
                             (0, r.jsxs)("div", {
                                 className: b.wx,
                                 children: [
-                                    (0, r.jsx)(I.A, { user: t, displayProfile: F, guildId: n, themeType: R.d.POPOUT }),
+                                    (0, r.jsx)(I.A, { user: t, displayProfile: V, guildId: n, themeType: R.d.POPOUT }),
                                     (0, r.jsx)(g.A, {
                                         user: t,
-                                        displayProfile: F,
+                                        displayProfile: V,
                                         guildId: n,
                                         channelId: D,
                                         themeType: R.d.POPOUT,
-                                        onOpenProfile: K ? W : void 0,
+                                        onOpenProfile: $ ? K : void 0,
                                     }),
                                 ],
                             }),
@@ -110,12 +114,12 @@ function D(e) {
                                         user: t,
                                         guildId: n,
                                         nickname: f.Ay.getName(n, D, t),
-                                        onOpenProfile: K ? W : void 0,
-                                        tags: (0, r.jsx)(A.A, { displayProfile: F, themeType: R.d.POPOUT, onClose: x }),
+                                        onOpenProfile: $ ? K : void 0,
+                                        tags: (0, r.jsx)(A.A, { displayProfile: V, themeType: R.d.POPOUT, onClose: x }),
                                     }),
                                     (0, r.jsx)(T.E, {
                                         userId: t.id,
-                                        userBio: F?.bio,
+                                        userBio: V?.bio,
                                         setLineClamp: !1,
                                         textColor: "text-strong",
                                     }),
@@ -124,7 +128,7 @@ function D(e) {
                             (0, r.jsx)("div", { className: b.qr }),
                         ],
                     }),
-                    F?.profileEffect != null && (0, r.jsx)(u.A, { skuId: F?.profileEffect?.skuId, isHovering: Y }),
+                    V?.profileEffect != null && (0, r.jsx)(u.A, { skuId: V?.profileEffect?.skuId, isHovering: W }),
                 ],
             }),
         }),
