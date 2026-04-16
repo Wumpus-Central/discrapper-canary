@@ -190,7 +190,13 @@ let et = new Set([o.M.PREMIUM_WISHLIST_COACHMARK]),
             })));
         let to = e6 === o.M.PREMIUM_GROUP_POPOVER || e6 === o.M.PREMIUM_GROUP_POPOVER_UPSELL_V2,
             td = eI && to;
-        if (td) (t = (0, i.jsx)(c.Exy, { type: "new", variant: "expressive" })), (n = 10);
+        if (eS)
+            (t = (0, i.jsx)(c.Exy, { type: { text: ee.intl.string(ee.t.RDE0Sc) }, variant: "expressive" })),
+                (ts = () => {
+                    N.default.track(Z.HAw.NITRO_TAB_VISITED, { badge_decorator: n, has_premium: ec }), (0, Y.ne)(ex);
+                }),
+                (n = 6);
+        else if (td) (t = (0, i.jsx)(c.Exy, { type: "new", variant: "expressive" })), (n = 10);
         else if (null != e5 && "premiumTab" === e5.properties.properties.oneofKind)
             (t = (0, i.jsx)(H.A, {
                 componentId: e5.id,
@@ -198,7 +204,8 @@ let et = new Set([o.M.PREMIUM_WISHLIST_COACHMARK]),
                 acknowledgedBadgeCopy: e5.properties.properties.premiumTab.acknowledgedBadgeLabel,
                 isDismissed: (0, m.u$)(o.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, e5?.promotionId ?? "").isDismissed,
             })),
-                (n = 9);
+                (n = 9),
+                (er = e5.properties.properties.premiumTab.showHoverGradient);
         else if (ep) (t = (0, i.jsx)(B.A, {})), (n = 0);
         else if (eE) {
             let e = (0, Y.ZR)();
@@ -238,12 +245,6 @@ let et = new Set([o.M.PREMIUM_WISHLIST_COACHMARK]),
                                     ? ((t = (0, i.jsx)(c.Exy, { type: "new", variant: "expressive" })), (n = 13))
                                     : eC && ((t = (0, i.jsx)(c.Exy, { type: "new", variant: "expressive" })), (n = 14))
                         : ((t = (0, i.jsx)(q.Ag, { trialOffer: eh, isTabSelected: x })), (n = 4));
-        eS &&
-            ((t = (0, i.jsx)(c.Exy, { type: { text: ee.intl.string(ee.t.RDE0Sc) }, variant: "expressive" })),
-            (ts = () => {
-                N.default.track(Z.HAw.NITRO_TAB_VISITED, { badge_decorator: n, has_premium: ec }), (0, Y.ne)(ex);
-            }),
-            (n = 6));
         let tc = $.L.NONE;
         te === o.M.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL
             ? (tc = $.L.MARKETING_MOMENT_POPOVER)
