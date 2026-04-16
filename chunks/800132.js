@@ -19,7 +19,7 @@ var r = n(627968),
     A = n(319820),
     I = n(652215),
     T = n(985018),
-    S = n(756366);
+    S = n(327105);
 let y = (e) => e.name,
     v = (e) => {
         let t = p.default.getCurrentUser(),
@@ -37,6 +37,7 @@ let y = (e) => e.name,
         [s.R.AVATAR_DECORATION]: () => T.intl.string(S.default.r29Oel),
         [s.R.PROFILE_EFFECT]: () => T.intl.string(S.default.eTYAvF),
         [s.R.NAMEPLATE]: () => T.intl.string(S.default.of9bom),
+        [s.R.PROFILE_FRAME]: () => T.intl.string(S.default.HzDn6w),
     },
     C = (e) => {
         let t = T.intl.string(S.default.iZe9Wy);
@@ -122,11 +123,11 @@ let y = (e) => e.name,
                 let e = (0, g.PN)(s, { isGift: f });
                 return null != e ? (0, r.jsx)(o.J, { ...e }) : null;
             }, [s, f]),
-            { setCheckoutHeaderConfigs: M, checkoutHeaderConfigs: x } = (0, l.ck)();
+            { setCheckoutHeaderConfigs: M, checkoutHeaderConfigs: P } = (0, l.ck)();
         return (
             i.useEffect(() => {
-                null != w && null == x.headerBadgeText && M({ ...x, headerBadgeText: T.intl.string(S.default.Fjpyfj) });
-            }, [w, M, x]),
+                null != w && null == P.headerBadgeText && M({ ...P, headerBadgeText: T.intl.string(S.default.Fjpyfj) });
+            }, [w, M, P]),
             (0, r.jsx)(u.rg, {
                 shouldShowGlobalNotices: !0,
                 purchaseItemContent: (0, r.jsx)(_.f7, { ...b, price: N }),
