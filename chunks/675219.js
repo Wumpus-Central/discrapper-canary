@@ -130,16 +130,17 @@ class T {
                 onClose: u,
                 skuId: c,
                 loadId: d,
-                applicationId: _,
-                analyticsSourceLocation: f,
-                analyticsLocations: p,
+                discoverySessionId: _,
+                applicationId: f,
+                analyticsSourceLocation: p,
+                analyticsLocations: h,
             } = e,
-            h = d ?? (0, i.A)(),
-            { modalKey: m } = t,
-            E = this.generateRenderHeader(),
-            g = _ ?? this.getApplicationIdFor1PShopSKU(c),
-            A = !1,
-            I = a ?? void 0;
+            m = d ?? (0, i.A)(),
+            { modalKey: E } = t,
+            g = this.generateRenderHeader(),
+            A = f ?? this.getApplicationIdFor1PShopSKU(c),
+            I = !1,
+            T = a ?? void 0;
         return (0, s.mMO)(
             async () => {
                 let { WrappedUnifiedPaymentModal: e } = await n.e("87298").then(n.bind(n, 246681)),
@@ -151,26 +152,27 @@ class T {
                         tenantCheckoutFlowConfig: this.tenantCheckoutFlowConfig,
                         stepConfigs: t,
                         onComplete: (e) => {
-                            null != l && l(e), (A = !0);
+                            null != l && l(e), (I = !0);
                         },
                         onClose: u,
-                        renderHeader: E,
+                        renderHeader: g,
                         skuId: c,
-                        loadId: h,
-                        applicationId: g,
-                        analyticsLocations: p,
-                        analyticsSourceLocation: f,
+                        loadId: m,
+                        discoverySessionId: _,
+                        applicationId: A,
+                        analyticsLocations: h,
+                        analyticsSourceLocation: p,
                         renderModalProps: n,
                         giftContextProps: o,
-                        flowSpecificOptions: I,
+                        flowSpecificOptions: T,
                     });
             },
             {
                 ...t,
                 onCloseRequest() {
-                    null != t.onCloseRequest && t.onCloseRequest(A, h), (0, s.OoC)(m);
+                    null != t.onCloseRequest && t.onCloseRequest(I, m), (0, s.OoC)(E);
                 },
-                modalKey: m,
+                modalKey: E,
             },
         );
     }

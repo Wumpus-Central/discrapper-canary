@@ -165,6 +165,7 @@ function ei(e) {
         e3 = null != j && !eK && (0, O.U9)(e2, j),
         [e6, e4] = i.useState({
             load_id: eD.loadId,
+            discovery_session_id: eD.discoverySessionId,
             payment_type: q.frM[eU],
             location: a ?? u,
             source: _,

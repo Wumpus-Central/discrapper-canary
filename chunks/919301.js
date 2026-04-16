@@ -27,17 +27,27 @@ let p = (0, a.Mz)(),
     },
     E = {
         CustomPaymentContextProvider: (e) => {
-            let { children: t, loadId: n, applicationId: i, isGift: a, skuId: l, analyticsLocations: c = [], ...d } = e,
-                { analyticsLocations: _ } = (0, u.P)({ applicationId: i, skuId: l, analyticsLocations: c, ...d });
+            let {
+                    children: t,
+                    discoverySessionId: n,
+                    loadId: i,
+                    applicationId: a,
+                    isGift: l,
+                    skuId: c,
+                    analyticsLocations: d = [],
+                    ..._
+                } = e,
+                { analyticsLocations: p } = (0, u.P)({ applicationId: a, skuId: c, analyticsLocations: d, ..._ });
             return (0, r.jsx)(s.f5, {
-                value: _,
+                value: p,
                 children: (0, r.jsx)(o.PaymentContextProvider, {
-                    loadId: n,
-                    applicationId: i,
-                    skuIDs: null != l ? [l] : [],
+                    loadId: i,
+                    discoverySessionId: n,
+                    applicationId: a,
+                    skuIDs: null != c ? [c] : [],
                     purchaseType: f.VV.ONE_TIME,
-                    isGift: a,
-                    ...d,
+                    isGift: l,
+                    ..._,
                     activeSubscription: null,
                     children: t,
                 }),
