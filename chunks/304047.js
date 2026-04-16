@@ -1,4 +1,4 @@
-n.d(t, { M: () => C, X: () => E });
+n.d(t, { M: () => x, X: () => C });
 var i = n(627968),
     l = n(64700),
     a = n(503698),
@@ -13,9 +13,10 @@ var i = n(627968),
     A = n(535296),
     g = n(240248),
     _ = n(360469),
-    p = n(985018),
-    f = n(633916);
-function E(e) {
+    p = n(818348),
+    f = n(985018),
+    E = n(391308);
+function C(e) {
     let t,
         { applicationId: n, hideApplicationName: a } = e,
         o = (0, m.A)({
@@ -24,7 +25,7 @@ function E(e) {
             source: h.Ob.CallTile,
             trackEntryPointImpression: !0,
         }),
-        { name: A, icon: E } =
+        { name: A, icon: p } =
             ((t = (0, r.bG)([u.A], () => u.A.getApplication(n))),
             l.useMemo(() => {
                 if (null == t) return null;
@@ -35,38 +36,38 @@ function E(e) {
                           name: t.name,
                           icon: () =>
                               (0, i.jsx)("div", {
-                                  className: f.jy,
-                                  children: (0, i.jsx)("img", { className: f.Se, src: e, alt: "", "aria-hidden": !0 }),
+                                  className: E.jy,
+                                  children: (0, i.jsx)("img", { className: E.Se, src: e, alt: "", "aria-hidden": !0 }),
                               }),
                       };
             }, [t]) ?? {});
-    if (null == o || null == E) return null;
-    let C = p.intl.string(p.t.ajHoOr);
+    if (null == o || null == p) return null;
+    let C = f.intl.string(f.t.ajHoOr);
     return (0, i.jsx)(c.m, {
         text: C,
         children: (0, i.jsxs)(d.DUT, {
-            className: s()(f.dY, f.ac, { [f.M7]: a }),
+            className: s()(E.dY, E.ac, { [E.M7]: a }),
             onClick: o,
             "aria-label": C,
             children: [
-                E(),
+                p(),
                 !a &&
                     (0, i.jsx)(d.Text, {
                         variant: "text-sm/normal",
-                        className: f.Wk,
-                        children: p.intl.format(p.t.Sq9xJ7, { game: A }),
+                        className: E.Wk,
+                        children: f.intl.format(f.t.Sq9xJ7, { game: A }),
                     }),
             ],
         }),
     });
 }
-function C(e) {
+function x(e) {
     let { userId: t, applicationId: n, channel: a, hideWhenInactive: r, idle: u } = e,
         [h, m] = l.useState(!1),
         g = l.useRef(null),
         _ = l.useCallback(() => m(!0), []),
-        E = l.useCallback(() => m(!1), []),
-        C = p.intl.string(p.t["wg/30i"]);
+        C = l.useCallback(() => m(!1), []),
+        x = f.intl.string(f.t["wg/30i"]);
     return (0, i.jsx)(o.Y, {
         targetElementRef: g,
         shouldShow: h,
@@ -74,23 +75,27 @@ function C(e) {
         position: "left",
         align: "bottom",
         spacing: 8,
-        onRequestClose: E,
-        renderPopout: () => (0, i.jsx)(A.Z, { userId: t, channel: a, applicationId: n, onClose: E }),
+        onRequestClose: C,
+        renderPopout: () =>
+            (0, i.jsx)(d.NPJ, {
+                theme: p.NJ.DARKER,
+                children: (e) => (0, i.jsx)(A.Z, { className: e, userId: t, channel: a, applicationId: n, onClose: C }),
+            }),
         children: () =>
             (0, i.jsx)("div", {
                 ref: g,
                 children: (0, i.jsx)(c.m, {
-                    text: C,
+                    text: x,
                     shouldShow: !h && void 0,
                     children: (0, i.jsx)("div", {
-                        className: s()(f.V7, { [f.kl]: r, [f.N7]: u }),
+                        className: s()(E.V7, { [E.kl]: r, [E.N7]: u }),
                         children: (0, i.jsx)(d.K0, {
                             size: "sm",
                             variant: "overlay-secondary",
                             onClick: (e) => {
                                 e.stopPropagation(), _();
                             },
-                            "aria-label": C,
+                            "aria-label": x,
                             icon: d.okO,
                         }),
                     }),

@@ -1,4 +1,4 @@
-n.d(t, { F: () => N });
+n.d(t, { F: () => T });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -17,113 +17,121 @@ var i = n(627968),
     f = n(535296),
     E = n(961350),
     x = n(49999),
-    I = n(985018),
-    C = n(474143);
-function N(e) {
+    I = n(818348),
+    C = n(985018),
+    N = n(474143);
+function T(e) {
     let t,
-        { user: n, stream: s, channel: N } = e,
-        [T, S] = l.useState(!1),
-        b = (0, m.AO)(s),
-        y = (0, r.bG)([g.A], () => g.A.getDetectableIdsToApplicationIds()),
-        v = b?.id,
-        R = null != v ? y[v] : null,
-        j = (0, h.h)(R),
+        { user: n, stream: s, channel: T } = e,
+        [S, b] = l.useState(!1),
+        y = (0, m.AO)(s),
+        v = (0, r.bG)([g.A], () => g.A.getDetectableIdsToApplicationIds()),
+        R = y?.id,
+        j = null != R ? v[R] : null,
+        O = (0, h.h)(j),
         {
-            isLoading: O,
-            applicationWidgetConfig: L,
-            profileApplicationWidget: M,
-            userApplicationIdentity: D,
-        } = (0, u.A)(n.id, R, "social_layer_commerce_stream_header"),
-        U = (0, r.bG)([E.default], () => E.default.getId()),
-        G = l.useRef(null),
-        [P, k] = (0, _.RF)(
+            isLoading: L,
+            applicationWidgetConfig: M,
+            profileApplicationWidget: D,
+            userApplicationIdentity: U,
+        } = (0, u.A)(n.id, j, "social_layer_commerce_stream_header"),
+        G = (0, r.bG)([E.default], () => E.default.getId()),
+        P = l.useRef(null),
+        [k, w] = (0, _.RF)(
             o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE,
             (0, A.c)(o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE),
             void 0,
             !0,
         ),
-        w = P === o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE,
-        { hasAlreadyLinked: B, canStartAuthorization: V, fetched: H } = (0, c.RD)(U === n.id ? j : null),
-        F = U === n.id && V && !H,
-        W = l.useCallback(() => {
-            S(!1);
+        B = k === o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE,
+        { hasAlreadyLinked: V, canStartAuthorization: H, fetched: F } = (0, c.RD)(G === n.id ? O : null),
+        W = G === n.id && H && !F,
+        K = l.useCallback(() => {
+            b(!1);
         }, []),
-        K = null != M,
-        Y = null != L && (B || V),
-        { rankIconUrl: z, rankText: q } =
-            ((t = D?.profile),
+        Y = null != D,
+        z = null != M && (V || H),
+        { rankIconUrl: q, rankText: X } =
+            ((t = U?.profile),
             l.useMemo(() => {
-                if (null == t || "1346069614634864772" !== R) return {};
+                if (null == t || "1346069614634864772" !== j) return {};
                 let e = t.data?.primary?.rank_name;
                 return { rankIconUrl: t.data?.primary?.rank_image?.proxy_url, rankText: e };
-            }, [R, t])),
+            }, [j, t])),
         {
-            isAppIcon: X,
-            icon: $,
-            text: J,
-            renderPopout: Q,
+            isAppIcon: $,
+            icon: J,
+            text: Q,
+            renderPopout: Z,
         } = l.useMemo(() => {
-            if (null == j || null == R) return { isAppIcon: !1 };
-            if (K || Y) {
-                let e = z ?? j.getIconURL(p.iu.SMALL),
-                    t = null != e && null == z,
+            if (null == O || null == j) return { isAppIcon: !1 };
+            if (Y || z) {
+                let e = q ?? O.getIconURL(p.iu.SMALL),
+                    t = null != e && null == q,
                     l =
                         null != e
-                            ? (0, i.jsx)("img", { className: C.Kk, src: e, alt: "", "aria-hidden": !0 })
-                            : (0, i.jsx)(d._xR, { className: C.Kk });
+                            ? (0, i.jsx)("img", { className: N.Kk, src: e, alt: "", "aria-hidden": !0 })
+                            : (0, i.jsx)(d._xR, { className: N.Kk });
                 return {
                     isAppIcon: t,
                     icon: l,
-                    text: q ?? I.intl.string(I.t["9njbm2"]),
-                    renderPopout: () => (0, i.jsx)(f.V, { userId: n.id, channel: N, applicationId: R, onClose: W }),
+                    text: X ?? C.intl.string(C.t["9njbm2"]),
+                    renderPopout: (e) =>
+                        (0, i.jsx)(f.V, { className: e, userId: n.id, channel: T, applicationId: j, onClose: K }),
                 };
             }
             let { icon: e, text: t } =
-                U === n.id
-                    ? { icon: (0, i.jsx)(d.U1X, { className: C.Kk }), text: I.intl.string(I.t.e6S76Q) }
-                    : { icon: (0, i.jsx)(d.okO, { className: C.Kk }), text: I.intl.string(I.t["8ZzYIv"]) };
+                G === n.id
+                    ? { icon: (0, i.jsx)(d.U1X, { className: N.Kk }), text: C.intl.string(C.t.e6S76Q) }
+                    : { icon: (0, i.jsx)(d.okO, { className: N.Kk }), text: C.intl.string(C.t["8ZzYIv"]) };
             return {
                 isAppIcon: !1,
                 icon: e,
                 text: t,
-                renderPopout: () => (0, i.jsx)(f.Z, { userId: n.id, channel: N, applicationId: R, onClose: W }),
+                renderPopout: (e) =>
+                    (0, i.jsx)(f.Z, { className: e, userId: n.id, channel: T, applicationId: j, onClose: K }),
             };
-        }, [j, R, K, Y, U, n.id, N, W, z, q]);
-    return O || F || null == Q
+        }, [O, j, Y, z, G, n.id, T, K, q, X]);
+    return L || W || null == Z
         ? null
-        : (0, i.jsx)(d.YNO, {
-              targetElementRef: G,
-              shouldShow: T,
-              animation: d.YNO.Animation.FADE,
-              position: "bottom",
-              align: "center",
-              spacing: 8,
-              onRequestClose: W,
-              renderPopout: Q,
-              children: () =>
-                  (0, i.jsxs)("div", {
-                      className: C.kL,
-                      ref: G,
-                      children: [
-                          (0, i.jsxs)(d.DUT, {
-                              className: C.BQ,
-                              onClick: () => {
-                                  k(x.i.TAKE_ACTION), S((e) => !e);
-                              },
-                              "aria-expanded": T,
-                              "aria-haspopup": "dialog",
+        : (0, i.jsx)(d.NPJ, {
+              theme: I.NJ.DARKER,
+              children: (e) =>
+                  (0, i.jsx)(d.YNO, {
+                      targetElementRef: P,
+                      shouldShow: S,
+                      animation: d.YNO.Animation.FADE,
+                      position: "bottom",
+                      align: "center",
+                      spacing: 8,
+                      onRequestClose: K,
+                      renderPopout: () => Z(e),
+                      children: () =>
+                          (0, i.jsxs)("div", {
+                              className: a()(e, N.kL),
+                              ref: P,
                               children: [
-                                  null != $ && (0, i.jsx)("div", { className: a()(C.zc, { [C.RT]: X }), children: $ }),
-                                  (0, i.jsx)(d.Text, {
-                                      variant: "text-sm/normal",
-                                      color: "text-strong",
-                                      lineClamp: 1,
-                                      children: J,
+                                  (0, i.jsxs)(d.DUT, {
+                                      className: N.BQ,
+                                      onClick: () => {
+                                          w(x.i.TAKE_ACTION), b((e) => !e);
+                                      },
+                                      "aria-expanded": S,
+                                      "aria-haspopup": "dialog",
+                                      children: [
+                                          null != J &&
+                                              (0, i.jsx)("div", { className: a()(N.zc, { [N.RT]: $ }), children: J }),
+                                          (0, i.jsx)(d.Text, {
+                                              variant: "text-sm/normal",
+                                              color: "text-strong",
+                                              lineClamp: 1,
+                                              children: Q,
+                                          }),
+                                      ],
                                   }),
+                                  B && (0, i.jsx)(d.Exy, { type: "new", variant: "brand" }),
                               ],
                           }),
-                          w && (0, i.jsx)(d.Exy, { type: "new", variant: "brand" }),
-                      ],
                   }),
           });
 }
