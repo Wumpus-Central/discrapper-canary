@@ -30,7 +30,7 @@ function N(e) {
         {
             isLoading: j,
             applicationWidgetConfig: O,
-            hasApplicationWidgetOnUserProfile: L,
+            profileApplicationWidget: L,
         } = (0, u.A)(t.id, v, "social_layer_commerce_stream_header"),
         M = (0, r.bG)([E.default], () => E.default.getId()),
         D = l.useRef(null),
@@ -46,15 +46,16 @@ function N(e) {
         H = l.useCallback(() => {
             T(!1);
         }, []),
-        F = null != O && (k || w),
+        F = null != L,
+        W = null != O && (k || w),
         {
-            isAppIcon: W,
-            icon: K,
-            text: Y,
-            renderPopout: z,
+            isAppIcon: K,
+            icon: Y,
+            text: z,
+            renderPopout: q,
         } = l.useMemo(() => {
             if (null == R || null == v) return { isAppIcon: !1 };
-            if (L || F) {
+            if (F || W) {
                 let e = R.getIconURL(p.iu.SMALL),
                     n = null != e,
                     l = n
@@ -77,8 +78,8 @@ function N(e) {
                 text: n,
                 renderPopout: () => (0, i.jsx)(f.Z, { userId: t.id, channel: s, applicationId: v, onClose: H }),
             };
-        }, [R, v, L, F, M, t.id, s, H]);
-    return j || V || null == z
+        }, [R, v, F, W, M, t.id, s, H]);
+    return j || V || null == q
         ? null
         : (0, i.jsx)(d.YNO, {
               targetElementRef: D,
@@ -88,7 +89,7 @@ function N(e) {
               align: "center",
               spacing: 8,
               onRequestClose: H,
-              renderPopout: z,
+              renderPopout: q,
               children: () =>
                   (0, i.jsxs)("div", {
                       className: C.kL,
@@ -102,12 +103,12 @@ function N(e) {
                               "aria-expanded": N,
                               "aria-haspopup": "dialog",
                               children: [
-                                  null != K && (0, i.jsx)("div", { className: a()(C.zc, { [C.RT]: W }), children: K }),
+                                  null != Y && (0, i.jsx)("div", { className: a()(C.zc, { [C.RT]: K }), children: Y }),
                                   (0, i.jsx)(d.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-strong",
                                       lineClamp: 1,
-                                      children: Y,
+                                      children: z,
                                   }),
                               ],
                           }),

@@ -166,7 +166,7 @@ function X(e) {
                     isLoading: c,
                     application: d,
                     applicationWidgetConfig: g,
-                    hasApplicationWidgetOnUserProfile: f,
+                    profileApplicationWidget: f,
                 } = (0, A.A)(t, n, a),
                 { fetched: S, hasAlreadyLinked: I, canStartAuthorization: T, startAuthorization: v } = (0, m.RD)(d),
                 { analyticsLocations: N } = (0, h.Ay)(u.A.SLAYER_STOREFRONT_VC_GIFTING_PANEL),
@@ -193,7 +193,7 @@ function X(e) {
                             }),
                         }),
                     })
-                  : I && !f && null != d
+                  : I && null == f && null != d
                     ? (0, i.jsx)("div", {
                           className: V.OQ,
                           children: (0, i.jsx)(o.EYj, {
@@ -264,7 +264,7 @@ function X(e) {
                                       guildId: a.guild_id,
                                       channelId: a.id,
                                       disableInteraction: !0,
-                                      disableCTA: !0,
+                                      disableCTA: null != L,
                                       embedded: !0,
                                   }),
                                   L,
