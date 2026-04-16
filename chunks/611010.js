@@ -31,7 +31,7 @@ class p extends s.A {
     isVerified;
     roleConnectionsVerificationUrl;
     parentId;
-    connectionEntrypointUrl;
+    _connectionEntrypointUrl;
     static createFromServer(e) {
         return new p({
             ...e,
@@ -41,7 +41,7 @@ class p extends s.A {
             thirdPartySkus: e.third_party_skus,
             roleConnectionsVerificationUrl: e.role_connections_verification_url,
             parentId: e.parent_id,
-            connectionEntrypointUrl: e.connection_entrypoint_url,
+            _connectionEntrypointUrl: e.connection_entrypoint_url,
         });
     }
     constructor(e) {
@@ -61,7 +61,16 @@ class p extends s.A {
             (this.roleConnectionsVerificationUrl =
                 e.role_connections_verification_url ?? e.roleConnectionsVerificationUrl),
             (this.parentId = e.parent_id ?? e.parentId),
-            (this.connectionEntrypointUrl = e.connection_entrypoint_url ?? e.connectionEntrypointUrl);
+            (this._connectionEntrypointUrl = e.connection_entrypoint_url ?? e._connectionEntrypointUrl);
+    }
+    get connectionEntrypointUrl() {
+        let e = n(342169).A,
+            t = n(443302).A;
+        if (!["1443349464290168976", "1443350165678198935", "1443033465766281327"].includes(this.id))
+            return this._connectionEntrypointUrl;
+        let { enabled: r } = e.getConfig({ location: "ApplicationRecord" }),
+            { enabled: i } = t.getConfig({ location: "ApplicationRecord" });
+        return r || i ? "https://aes.sgp.pvp.net/providers/discord/link/v1" : this._connectionEntrypointUrl;
     }
     getIconURL(e, t) {
         return null != this.icon ? a.Ay.getGameAssetURL({ id: this.id, hash: this.icon, size: e, format: t }) : null;
@@ -238,7 +247,7 @@ class h extends p {
             type: e.type ?? this.type,
             team: e.team ?? this.team,
             roleConnectionsVerificationUrl: e.roleConnectionsVerificationUrl ?? this.roleConnectionsVerificationUrl,
-            connectionEntrypointUrl: e.connectionEntrypointUrl ?? this.connectionEntrypointUrl,
+            _connectionEntrypointUrl: e._connectionEntrypointUrl ?? this._connectionEntrypointUrl,
             integrationTypesConfig: e.integrationTypesConfig ?? this.integrationTypesConfig,
             isMonetized: e.isMonetized ?? this.isMonetized,
             storefront_available: e.storefront_available ?? this.storefront_available,
