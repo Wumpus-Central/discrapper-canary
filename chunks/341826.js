@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => g });
 var i = n(627968);
 n(64700);
 var s = n(503698),
@@ -7,55 +7,60 @@ var s = n(503698),
     l = n(990078),
     a = n(397927),
     o = n(890698),
-    c = n(854378),
-    d = n(652215);
+    c = n(954571),
+    d = n(854378),
+    u = n(652215);
 n(436317);
-var u = n(985018),
-    h = n(135622),
-    _ = n(885106);
-function p(e) {
-    let { authBoxClassName: t, name: n, onNameChange: s, onNameFocus: p, onNameBlur: g } = e;
-    return (0, i.jsxs)(c.Ay, {
+var h = n(985018),
+    _ = n(731286),
+    p = n(818050);
+function g(e) {
+    let { authBoxClassName: t, name: n, onNameChange: s } = e;
+    return (0, i.jsxs)(d.Ay, {
         className: t,
         children: [
             (0, i.jsx)(o.M, {}),
-            (0, i.jsxs)(c.eB, {
-                className: h.y0,
+            (0, i.jsxs)(d.eB, {
+                className: _.y0,
                 children: [
                     (0, i.jsx)(l.m, {
-                        text: u.intl.string(u.t["hBB85/"]),
+                        text: h.intl.string(h.t["hBB85/"]),
                         position: "right",
-                        children: (0, i.jsx)(c.pd, {
-                            label: u.intl.string(u.t["9AjdkD"]),
+                        children: (0, i.jsx)(d.pd, {
+                            label: h.intl.string(h.t["9AjdkD"]),
                             autoFocus: !0,
-                            className: _.QB,
+                            className: p.QB,
                             name: "username",
                             value: n,
-                            placeholder: u.intl.string(u.t["09Q8yp"]),
+                            placeholder: h.intl.string(h.t["09Q8yp"]),
                             onChange: s,
-                            onFocus: p,
-                            onBlur: g,
+                            onFocus: () => {
+                                c.default.track(u.HAw.REGISTER_INPUT_FOCUS, { field: "username" });
+                            },
+                            onBlur: () => {
+                                c.default.track(u.HAw.REGISTER_INPUT_BLUR, { field: "username" });
+                            },
                         }),
                     }),
                     (0, i.jsx)(a.Text, {
                         variant: "text-sm/normal",
                         color: "text-subtle",
-                        className: r()(_.QX, h.E2),
-                        children: u.intl.format(u.t["KI+BSb"], { termsURL: d.X7G.TERMS, privacyURL: d.X7G.PRIVACY }),
+                        className: r()(p.QX, _.E2),
+                        children: h.intl.format(h.t["KI+BSb"], { termsURL: u.X7G.TERMS, privacyURL: u.X7G.PRIVACY }),
                     }),
                     (0, i.jsx)("div", {
-                        className: _.Ot,
+                        className: p.Ot,
                         children: (0, i.jsx)(a.Button, {
-                            text: u.intl.string(u.t["825cFy"]),
+                            text: h.intl.string(h.t["825cFy"]),
                             variant: "primary",
                             fullWidth: !0,
                             disabled: !0,
                         }),
                     }),
                     (0, i.jsx)("div", {
-                        className: _.QX,
+                        className: p.QX,
                         children: (0, i.jsx)(a.QWc, {
-                            text: u.intl.string(u.t["1lWxux"]),
+                            text: h.intl.string(h.t["1lWxux"]),
                             textVariant: "text-sm/normal",
                             disabled: !0,
                         }),
