@@ -9,6 +9,6 @@ function a(e) {
     return (0, l.jsxs)("span", { children: [r, t < n.length - 1 ? (0, l.jsx)("br", {}) : null] });
 }
 function s() {
-    return (0, l.jsx)("p", {});
+    return "\n";
 }
 t(64700);
