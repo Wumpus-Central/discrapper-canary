@@ -31,16 +31,16 @@ function I(e, t, i) {
     let { isDismissed: s } = (0, u.u$)(t, i);
     if (s) return;
     let o = (e) => {
-        (0, c.qr)(t, i, { dismissAction: e });
+        (0, c.qr)(t, i, { dismissAction: e, forceTrack: !0 });
     };
     (0, a.mMO)(
         async () => {
             if ("followup" === e) {
                 let { default: e } = await n.e("24580").then(n.bind(n, 34255));
-                return (t) => (0, r.jsx)(e, { renderModalProps: t, markAsDismissed: o });
+                return (n) => (0, r.jsx)(e, { renderModalProps: n, dismissibleContent: t, markAsDismissed: o });
             }
-            let { default: t } = await n.e("47948").then(n.bind(n, 166247));
-            return (e) => (0, r.jsx)(t, { renderModalProps: e, markAsDismissed: o });
+            let { default: i } = await n.e("47948").then(n.bind(n, 166247));
+            return (e) => (0, r.jsx)(i, { renderModalProps: e, dismissibleContent: t, markAsDismissed: o });
         },
         { modalKey: A },
     );
