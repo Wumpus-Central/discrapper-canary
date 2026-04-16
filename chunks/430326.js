@@ -13,7 +13,7 @@ var i = n(627968),
     b = n(954571),
     A = n(652215),
     U = n(985018),
-    f = n(822534),
+    f = n(324111),
     L = n(773055),
     O = n(519636);
 function y(t) {
@@ -93,7 +93,8 @@ function y(t) {
         );
     async function v() {
         null != g &&
-            (m(!0),
+            (h.current?.pause(),
+            m(!0),
             await (0, d.g)({
                 analyticsLocations: j,
                 analyticsLocation: {
