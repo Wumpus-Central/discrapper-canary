@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => A });
+n.d(t, { A: () => g });
 var i = n(627968);
 n(64700);
 var s = n(397927),
@@ -8,21 +8,14 @@ var s = n(397927),
     a = n(854378),
     o = n(359438),
     c = n(383302),
-    d = n(782021),
-    u = n(991101);
+    d = n(362707),
+    u = n(782021),
+    h = n(991101);
 n(436317);
-var h = n(985018),
-    _ = n(135622),
-    p = n(885106);
-let g = /\.$/,
-    m = (e) =>
-        Array.isArray(e)
-            ? e
-                  .map((e) => e.replace(g, ""))
-                  .join(". ")
-                  .trim()
-            : e;
-function A(e) {
+var _ = n(985018),
+    p = n(135622),
+    m = n(885106);
+function g(e) {
     let t,
         {
             invite: n,
@@ -44,14 +37,14 @@ function A(e) {
             onBirthdayChange: O,
             onGotoLogin: L,
         } = e,
-        { username: w, global_name: k, date_of_birth: D } = f,
-        B = n?.guild_scheduled_event != null;
+        { username: w, global_name: k, date_of_birth: B } = f,
+        D = n?.guild_scheduled_event != null;
     return (
         (t =
             n?.guild_scheduled_event != null
                 ? (0, i.jsx)(o.X, { channel: n.channel, guildScheduledEvent: n.guild_scheduled_event })
                 : (0, i.jsx)("div", {
-                      className: p.S3,
+                      className: m.S3,
                       children: (0, i.jsx)(r.A, { invite: n, inUnclaimedFlow: !0 }),
                   })),
         (0, i.jsxs)("div", {
@@ -62,37 +55,37 @@ function A(e) {
                     className: g,
                     children: [
                         t,
-                        B ? (0, i.jsx)("div", { className: _.yF }) : null,
+                        D ? (0, i.jsx)("div", { className: p.yF }) : null,
                         (0, i.jsxs)(a.eB, {
-                            className: B ? void 0 : _.y0,
+                            className: D ? void 0 : p.y0,
                             children: [
                                 (0, i.jsx)(s.ksK, {
-                                    helperText: h.intl.string(h.t["330TCc"]),
-                                    label: h.intl.string(h.t["9AjdkD"]),
-                                    error: x ?? m(k ?? w),
+                                    helperText: _.intl.string(_.t["330TCc"]),
+                                    label: _.intl.string(_.t["9AjdkD"]),
+                                    error: x ?? (0, d.y)(k ?? w),
                                     autoFocus: !0,
                                     name: "global_name",
                                     value: E,
-                                    placeholder: h.intl.string(h.t["09Q8yp"]),
+                                    placeholder: _.intl.string(_.t["09Q8yp"]),
                                     onChange: y,
                                     onFocus: b,
                                     onBlur: R,
                                 }),
                                 (0, i.jsx)(l.A, {
-                                    label: h.intl.string(h.t.rhBeKe),
-                                    wrapperClassName: _.DC,
+                                    label: _.intl.string(_.t.rhBeKe),
+                                    wrapperClassName: p.DC,
                                     name: "date_of_birth",
                                     onChange: O,
                                     ref: T,
-                                    error: I ?? m(D),
+                                    error: I ?? (0, d.y)(B),
                                     value: N,
                                 }),
-                                (0, i.jsx)(d.A, { consent: v, consentRequired: A, onConsentChange: j }),
-                                (0, i.jsx)(u.A, { consentRequired: A, consent: v, registering: C }),
+                                (0, i.jsx)(u.A, { consent: v, consentRequired: A, onConsentChange: j }),
+                                (0, i.jsx)(h.A, { consentRequired: A, consent: v, registering: C }),
                                 (0, i.jsx)("div", {
-                                    className: p.QX,
+                                    className: m.QX,
                                     children: (0, i.jsx)(s.QWc, {
-                                        text: h.intl.string(h.t["1lWxux"]),
+                                        text: _.intl.string(_.t["1lWxux"]),
                                         textVariant: "text-sm/normal",
                                         onClick: L,
                                     }),
@@ -101,9 +94,9 @@ function A(e) {
                         }),
                     ],
                 }),
-                null != n && B
+                null != n && D
                     ? (0, i.jsx)(a.Ay, {
-                          className: p.QX,
+                          className: m.QX,
                           children: (0, i.jsx)(c.N, { guild: n.guild, onlineCount: n.approximate_presence_count }),
                       })
                     : null,
