@@ -1,18 +1,22 @@
-n.d(t, { P: () => u });
-var i = n(271995),
-    s = n(419954),
-    l = n(933297),
+n.d(t, { P: () => m });
+var i = n(308645),
+    s = n(271995),
+    l = n(419954),
+    r = n(933297),
     a = n(780964),
-    r = n(524916),
-    o = n(985018);
-let d = (0, s.zZ)(a.X.ACCOUNT_STANDING_NESTED_CATEGORY, { buildLayout: () => [r.y] }),
-    c = (0, s.t_)(a.X.ACCOUNT_STANDING_PANEL, { useTitle: () => o.intl.string(o.t["16r9jm"]), buildLayout: () => [d] }),
-    u = (0, s.eA)(a.X.ACCOUNT_STANDING_NESTED_PANEL, {
-        useTitle: i.$b,
-        useSubtitle: i.bh,
+    o = n(524916),
+    d = n(985018);
+let c = (0, l.zZ)(a.X.ACCOUNT_STANDING_NESTED_CATEGORY, { buildLayout: () => [o.y] }),
+    u = (0, l.t_)(a.X.ACCOUNT_STANDING_PANEL, { useTitle: () => d.intl.string(d.t["16r9jm"]), buildLayout: () => [c] }),
+    m = (0, l.eA)(a.X.ACCOUNT_STANDING_NESTED_PANEL, {
+        useTitle: s.$b,
+        useSubtitle: s.bh,
         useLeadingDecoration: function () {
-            let { color: e, backgroundColor: t, Icon: n } = (0, i._k)();
-            return { type: l.IJ.ICON, icon: n, color: e, backgroundColor: t };
+            let { color: e, backgroundColor: t, Icon: n } = (0, s._k)();
+            return { type: r.IJ.ICON, icon: n, color: e, backgroundColor: t };
         },
-        buildLayout: () => [c],
+        initialize: () => {
+            i.Yn();
+        },
+        buildLayout: () => [u],
     });
