@@ -45,8 +45,8 @@ let O = new Set([
     L = "lastImageSaveDirectory",
     w = /[<>:"/\\|?*@]/g,
     M = /(\.[a-zA-Z0-9]+):[^.]*$/,
-    x = /(\.[a-zA-Z0-9]+)%3A.+$/,
-    P = /[^a-zA-Z0-9]/g,
+    P = /(\.[a-zA-Z0-9]+)%3A.+$/,
+    x = /[^a-zA-Z0-9]/g,
     k = /\.[^.]*$/;
 var U = (function (e) {
     return (e.SAVED = "saved"), (e.CANCELED = "canceled"), (e.ERRORED = "errored"), e;
@@ -57,7 +57,7 @@ function G(e) {
         return (t = (t = t.replace(M, "$1")).replace(/(.+)@([a-zA-Z0-9]+)$/, "$1.$2")).replace(w, "_");
     } catch {
         return e
-            .replace(x, "$1")
+            .replace(P, "$1")
             .replace(/(.+)%40([a-zA-Z0-9]+)$/, "$1.$2")
             .replace(w, "_");
     }
@@ -356,7 +356,7 @@ let W = {
             o = G(o);
             let l = a.searchParams.get("format");
             if (null != l) {
-                let e = l.replace(P, "").toLowerCase();
+                let e = l.replace(x, "").toLowerCase();
                 if (e.length > 0) {
                     let t = o.replace(k, "");
                     o = `${t}.${e}`;
@@ -870,8 +870,9 @@ let W = {
             if (null != t) return t(e);
         },
         isModuleVersionAtLeast(e, t) {
+            if (this.moduleVersions?.[e] == null) return !1;
             let n = [...(S ?? [0, 0, 0])];
-            n.push(this.moduleVersions?.[e] ?? 0);
+            n.push(this.moduleVersions[e] ?? 0);
             let r = t[this.releaseChannel] ?? t.stable;
             for (let [e, t] of n.entries())
                 if (t > r[e]) break;
