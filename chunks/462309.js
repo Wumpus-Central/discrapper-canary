@@ -6,7 +6,7 @@ var r = n(627968),
     a = n.n(s),
     o = n(311907),
     l = n(397927),
-    u = n(813077),
+    u = n(546605),
     c = n(742810),
     d = n(584160),
     _ = n(169797),
@@ -47,7 +47,7 @@ function L(e) {
         V = (0, v.bB)(),
         B = (0, o.bG)([N.A], () => N.A.getStoreCountry()),
         { isGift: H, selectedGiftStyle: j, giftRecipient: Y } = (0, A.Pv)(),
-        W = (0, u.wI)("PaymentModalHeader"),
+        W = (0, u.vg)("PaymentModalHeader"),
         K = F?.productLine === C.EZt.COLLECTIBLES,
         $ = F?.productLine === C.EZt.SOCIAL_LAYER_GAME_ITEM,
         z = H && (0, E.Ik)(Y) && V === T.pn.CONFIRM && null != j && !K && !$,
@@ -64,7 +64,7 @@ function L(e) {
                 showTrialBadge: k,
                 showPromoBadge: U,
                 storeCountryFromCheckoutContext: B,
-                isStoreCountryDisplayEnabled: W,
+                isStoreCountryEnabled: W,
             });
             return (0, r.jsx)(_.s3, { ...e });
         }
