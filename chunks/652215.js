@@ -435,6 +435,7 @@ var r = n(989441),
             (e.BROWSER_DEVTOOLS = "BROWSER_DEVTOOLS"),
             (e.VIBE_WITH_WUMPUS = "VIBE_WITH_WUMPUS"),
             (e.OPEN_CONTEXT_MENU = "OPEN_CONTEXT_MENU"),
+            (e.COPY_CHANNEL_LINK = "COPY_CHANNEL_LINK"),
             e
         );
     })({}),
