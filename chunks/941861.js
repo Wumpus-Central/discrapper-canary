@@ -1,7 +1,28 @@
 "use strict";
-n.d(t, { R: () => i });
+n.d(t, { R: () => a, X: () => s });
 var r = n(64700);
-function i() {
+let i = ["mousemove", "mousedown", "keydown", "scroll", "touchstart", "pointerdown"];
+function s(e) {
+    let [t, n] = r.useState(!1),
+        s = r.useRef(null),
+        a = r.useCallback(() => {
+            n(!1), null != s.current && clearTimeout(s.current), (s.current = setTimeout(() => n(!0), e));
+        }, [e]);
+    return (
+        r.useEffect(() => {
+            for (let e of i) window.addEventListener(e, a, { passive: !0, capture: !0 });
+            return (
+                (s.current = setTimeout(() => n(!0), e)),
+                () => {
+                    for (let e of i) window.removeEventListener(e, a, { capture: !0 });
+                    null != s.current && clearTimeout(s.current);
+                }
+            );
+        }, [e, a]),
+        [t, a]
+    );
+}
+function a() {
     let e = window,
         [t, n] = r.useState(e.document.hasFocus());
     return (
