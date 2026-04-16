@@ -15,21 +15,21 @@ var i = n(627968),
     h = n(652215),
     _ = n(897513),
     A = n(985018),
-    p = n(660504),
+    p = n(323679),
     f = n(628287),
     j = n(734673),
     N = n(920852),
     E = n(266332),
-    b = n(386528);
+    C = n(386528);
 let T = [
         { iconSrc: n(374229), name: "Pokemon GO Paris", position: [-230, -100] },
         { iconSrc: n(640666), name: "Python", position: [-180, -100], faded: !0, rightAlign: !0 },
         { iconSrc: E, name: "Learn Latin", position: [-280, -30], faded: !0 },
-        { iconSrc: b, name: "r/leagueoflegends", position: [-320, -30], rightAlign: !0 },
+        { iconSrc: C, name: "r/leagueoflegends", position: [-320, -30], rightAlign: !0 },
         { iconSrc: n(822984), name: "Sneaker Fans", position: [-250, 40] },
         { iconSrc: N, name: "Hogwarts School", position: [-270, 40], faded: !0, rightAlign: !0 },
     ],
-    C = (e) => {
+    I = (e) => {
         let { icon: t, color: n, size: s = 24, header: l, body: r } = e;
         return (0, i.jsxs)("div", {
             className: p.Vr,
@@ -43,7 +43,7 @@ let T = [
             ],
         });
     },
-    I = (e) => {
+    b = (e) => {
         let { iconSrc: t, name: n, position: s, faded: l, rightAlign: a, imageCoordinates: o } = e,
             d = { [a ? "right" : "left"]: o[0] + s[0], top: o[1] + s[1] };
         return (0, i.jsxs)("div", {
@@ -62,7 +62,7 @@ let T = [
         let { guild: t } = e,
             [n, l] = s.useState(0),
             [r, N] = s.useState(0),
-            [E, b] = s.useState(),
+            [E, C] = s.useState(),
             v = (0, a.bG)([g.A], () => g.A.can(h.xBc.ADMINISTRATOR, t)),
             S = E?.offsetWidth,
             y = E?.offsetHeight;
@@ -78,9 +78,9 @@ let T = [
                 children: [
                     (0, i.jsxs)("div", {
                         className: p.vK,
-                        ref: (e) => b(e),
+                        ref: (e) => C(e),
                         children: [
-                            T.map((e) => (0, i.jsx)(I, { ...e, imageCoordinates: [n, r] }, e.name)),
+                            T.map((e) => (0, i.jsx)(b, { ...e, imageCoordinates: [n, r] }, e.name)),
                             (0, i.jsx)("img", { alt: "", src: f, className: p.Sl, width: 256 }),
                             (0, i.jsx)("img", { alt: "", src: j, className: p._7 }),
                         ],
@@ -137,7 +137,7 @@ let T = [
                             },
                             {
                                 icon: c.Uy2,
-                                color: o.A.unsafe_rawColors.PARTNER.css,
+                                color: o.A.unsafe_rawColors.PLATFORM_PARTNER.css,
                                 header: A.intl.string(A.t["0rJl9y"]),
                                 body: A.intl.format(A.t.XsCNky, {
                                     infoHook: () =>
@@ -159,7 +159,7 @@ let T = [
                                 header: A.intl.string(A.t.W2kLJC),
                                 body: A.intl.string(A.t.hyNkHz),
                             },
-                        ].map((e, t) => (0, i.jsx)(C, { ...e }, t)),
+                        ].map((e, t) => (0, i.jsx)(I, { ...e }, t)),
                     }),
                 ],
             })

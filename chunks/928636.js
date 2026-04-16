@@ -1,7 +1,7 @@
 n.d(t, { A: () => eN });
 var i,
-    a = n(627968),
-    l = n(64700),
+    l = n(627968),
+    a = n(64700),
     r = n(503698),
     s = n.n(r),
     o = n(110259),
@@ -12,8 +12,8 @@ var i,
     h = n(990078),
     _ = n(397927),
     m = n(956793),
-    p = n(492684),
-    g = n(212245),
+    g = n(492684),
+    p = n(212245),
     E = n(573648),
     I = n(447031),
     f = n(908289),
@@ -30,8 +30,8 @@ var i,
     R = n(627363),
     P = n(587895),
     D = n(47167),
-    M = n(402216),
-    j = n(939341),
+    j = n(402216),
+    M = n(939341),
     w = n(681827),
     U = n(755395),
     G = n(826673),
@@ -54,36 +54,36 @@ var i,
     et = n(266080),
     en = n(139675),
     ei = n(403362),
-    ea = n(427262),
-    el = n(281489),
+    el = n(427262),
+    ea = n(281489),
     er = n(652215),
     es = n(985018),
-    eo = n(103781);
+    eo = n(492213);
 let ed = [14, 14, 12, 12, 10, 8, 6],
     ec = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        return (0, a.jsx)(_.Text, { className: s()(eo.P_, t), variant: "text-sm/semibold", children: e });
+        return (0, l.jsx)(_.Text, { className: s()(eo.P_, t), variant: "text-sm/semibold", children: e });
     },
     eu = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        return (0, a.jsx)(_.Text, {
+        return (0, l.jsx)(_.Text, {
             className: s()(eo.P_, t),
             variant: "text-xs/normal",
             color: "text-muted",
             children: e,
         });
     },
-    eA = (0, p.A)((e) => {
+    eA = (0, g.A)((e) => {
         let { message: t } = e;
-        return (0, a.jsx)("div", { className: eo.__invalid_timestamp, children: t });
+        return (0, l.jsx)("div", { className: eo.__invalid_timestamp, children: t });
     }),
     eh = (e) => {
         let { children: t } = e;
-        return (0, a.jsx)("section", { className: eo.uW, children: t });
+        return (0, l.jsx)("section", { className: eo.uW, children: t });
     },
     e_ = (e) => {
         let { inset: t, className: n } = e;
-        return (0, a.jsx)("div", { className: s()(eo.me, { [eo.C5]: t }, n) });
+        return (0, l.jsx)("div", { className: s()(eo.me, { [eo.C5]: t }, n) });
     },
     em = (e) => {
         let { onCloudPlayClick: t, analyticsLocations: n } = e;
@@ -93,9 +93,9 @@ let ed = [14, 14, 12, 12, 10, 8, 6],
                 type: o.ImpressionTypes.VIEW,
                 properties: { location_stack: n },
             }),
-            (0, a.jsx)(h.m, {
+            (0, l.jsx)(h.m, {
                 text: es.intl.string(es.t.JVwWva),
-                children: (0, a.jsx)(_.Button, {
+                children: (0, l.jsx)(_.Button, {
                     size: "sm",
                     variant: "primary",
                     icon: _.hpF,
@@ -105,36 +105,36 @@ let ed = [14, 14, 12, 12, 10, 8, 6],
             })
         );
     },
-    ep = (e) => {
+    eg = (e) => {
         let { activity: t, user: n } = e,
             i = (0, K.l)({ activity: t, user: n, supportsAskToJoin: !1 }),
-            a = null != i,
-            { data: l } = (0, R.YY)(t.application_id),
-            { fetched: r, hasAlreadyLinked: s, canStartAuthorization: o, startAuthorization: d } = (0, L.RD)(l),
-            c = !a && r && o && !s;
+            l = null != i,
+            { data: a } = (0, R.YY)(t.application_id),
+            { fetched: r, hasAlreadyLinked: s, canStartAuthorization: o, startAuthorization: d } = (0, L.RD)(a),
+            c = !l && r && o && !s;
         return {
-            isJoinActivityButtonShown: a,
+            isJoinActivityButtonShown: l,
             joinActivityButtonAction: i,
             isLinkAccountButtonShown: c,
             startAuthorization: d,
-            hasButton: a || c,
+            hasButton: l || c,
         };
     },
-    eg = (e) => {
+    ep = (e) => {
         let { activity: t, user: n } = e,
             {
                 joinActivityButtonAction: i,
-                isJoinActivityButtonShown: l,
+                isJoinActivityButtonShown: a,
                 isLinkAccountButtonShown: r,
                 startAuthorization: s,
-            } = ep({ activity: t, user: n }),
+            } = eg({ activity: t, user: n }),
             { newestAnalyticsLocation: o } = (0, y.Ay)();
-        if (l && null != i) {
-            let { isJoining: e, handleJoinRequest: t, buttonCTA: n, tooltip: l, isEnabled: r } = i;
-            return (0, a.jsx)(h.m, {
-                text: l,
+        if (a && null != i) {
+            let { isJoining: e, handleJoinRequest: t, buttonCTA: n, tooltip: a, isEnabled: r } = i;
+            return (0, l.jsx)(h.m, {
+                text: a,
                 asContainer: !r,
-                children: (0, a.jsx)(_.Button, {
+                children: (0, l.jsx)(_.Button, {
                     size: "sm",
                     variant: "secondary",
                     icon: _._xR,
@@ -148,7 +148,7 @@ let ed = [14, 14, 12, 12, 10, 8, 6],
             });
         }
         return r
-            ? (0, a.jsx)(_.Button, {
+            ? (0, l.jsx)(_.Button, {
                   size: "sm",
                   variant: "secondary",
                   icon: d.A,
@@ -161,35 +161,35 @@ let ed = [14, 14, 12, 12, 10, 8, 6],
     },
     eE = (e) => {
         let { activity: t, analyticsLocations: n } = e,
-            { application_id: i, name: l } = t,
+            { application_id: i, name: a } = t,
             { data: r } = (0, R.YY)(i),
             s = (0, v.A)({ application: r, analyticsLocations: n }),
             o = (0, G.JZ)(u.M.CLOUD_PLAY_NEW_BADGE),
             d = (0, W.L)(i);
         return null == s || d
             ? null
-            : (0, a.jsxs)(a.Fragment, {
+            : (0, l.jsxs)(l.Fragment, {
                   children: [
-                      (0, a.jsx)(e_, { className: eo.gi }),
-                      (0, a.jsxs)("div", {
+                      (0, l.jsx)(e_, { className: eo.gi }),
+                      (0, l.jsxs)("div", {
                           className: eo.DK,
                           children: [
-                              (0, a.jsxs)("div", {
+                              (0, l.jsxs)("div", {
                                   className: eo.tJ,
                                   children: [
                                       o
                                           ? null
-                                          : (0, a.jsx)(_.LpS, {
+                                          : (0, l.jsx)(_.LpS, {
                                                 text: es.intl.string(es.t.y2b7CA),
                                                 color: A.A.colors.BACKGROUND_BRAND.css,
                                             }),
-                                      (0, a.jsx)(_.Text, {
+                                      (0, l.jsx)(_.Text, {
                                           variant: "text-xs/medium",
-                                          children: es.intl.formatToPlainString(es.t.RmiYF3, { gameName: l }),
+                                          children: es.intl.formatToPlainString(es.t.RmiYF3, { gameName: a }),
                                       }),
                                   ],
                               }),
-                              (0, a.jsx)(em, { onCloudPlayClick: s, analyticsLocations: n }),
+                              (0, l.jsx)(em, { onCloudPlayClick: s, analyticsLocations: n }),
                           ],
                       }),
                   ],
@@ -198,18 +198,18 @@ let ed = [14, 14, 12, 12, 10, 8, 6],
 var eI = (((i = eI || {}).XBOX = "XBOX"), (i.SPOTIFY = "SPOTIFY"), (i.MULTIPLE = "MULTIPLE"), i);
 let ef = (e) => {
     let t,
-        { src: n, onClick: i, onContextMenu: l } = e;
+        { src: n, onClick: i, onContextMenu: a } = e;
     switch (n) {
         case "XBOX":
-            t = (0, a.jsx)(et.A, { className: eo.nr, color: A.A.unsafe_rawColors.PRIMARY_300.css });
+            t = (0, l.jsx)(et.A, { className: eo.nr, color: A.A.unsafe_rawColors.PRIMARY_300.css });
             break;
         case "SPOTIFY":
-            t = (0, a.jsx)(ee.A, { className: eo.nr, color: A.A.unsafe_rawColors.SPOTIFY.css });
+            t = (0, l.jsx)(ee.A, { className: eo.nr, color: A.A.unsafe_rawColors.PLATFORM_SPOTIFY.css });
             break;
         case "MULTIPLE":
-            t = (0, a.jsx)("div", {
+            t = (0, l.jsx)("div", {
                 className: eo.XQ,
-                children: (0, a.jsx)(_._xR, {
+                children: (0, l.jsx)(_._xR, {
                     size: "md",
                     className: s()(eo.nr, eo.iY),
                     color: A.A.unsafe_rawColors.PRIMARY_300.css,
@@ -217,10 +217,10 @@ let ef = (e) => {
             });
             break;
         default:
-            t = (0, a.jsx)("img", { src: n ?? void 0, alt: "", className: eo.nr });
+            t = (0, l.jsx)("img", { src: n ?? void 0, alt: "", className: eo.nr });
     }
-    return null != i || null != l
-        ? (0, a.jsx)(_.DUT, { onClick: i, className: s()(null != i ? eo.vk : ""), onContextMenu: l, children: t })
+    return null != i || null != a
+        ? (0, l.jsx)(_.DUT, { onClick: i, className: s()(null != i ? eo.vk : ""), onContextMenu: a, children: t })
         : t;
 };
 ef.Src = eI;
@@ -229,18 +229,18 @@ let eC = (e) => {
             priorityUser: t,
             title: n,
             subtitle: i,
-            icon: l,
+            icon: a,
             onSubtitleClick: r,
             onIconClick: o,
             onContextMenu: d,
             guildId: c,
             displayNameFont: u,
         } = e,
-        A = (0, a.jsx)(_.Text, { className: eo.P_, variant: "text-sm/normal", color: "text-muted", children: i });
-    return (0, a.jsxs)("header", {
-        className: null != l ? eo.dI : eo.sk,
+        A = (0, l.jsx)(_.Text, { className: eo.P_, variant: "text-sm/normal", color: "text-muted", children: i });
+    return (0, l.jsxs)("header", {
+        className: null != a ? eo.dI : eo.sk,
         children: [
-            (0, a.jsx)(_.euF, {
+            (0, l.jsx)(_.euF, {
                 src: t.user.getAvatarURL(c, 32),
                 "aria-label": t.user.username,
                 size: _._3J.SIZE_32,
@@ -248,62 +248,62 @@ let eC = (e) => {
                 status: t.status,
                 onContextMenu: d,
             }),
-            (0, a.jsxs)("div", {
+            (0, l.jsxs)("div", {
                 className: eo.__invalid_headerDetails,
                 children: [
-                    (0, a.jsx)(_.Text, { className: s()(eo.P_, u), variant: "text-md/semibold", children: n }),
-                    null != r ? (0, a.jsx)(_.DUT, { className: eo.vk, onClick: r, children: A }) : A,
+                    (0, l.jsx)(_.Text, { className: s()(eo.P_, u), variant: "text-md/semibold", children: n }),
+                    null != r ? (0, l.jsx)(_.DUT, { className: eo.vk, onClick: r, children: A }) : A,
                 ],
             }),
-            null != l && null != o ? (0, a.jsx)(_.DUT, { className: eo.vk, onClick: o, children: l }) : l,
+            null != a && null != o ? (0, l.jsx)(_.DUT, { className: eo.vk, onClick: o, children: a }) : a,
         ],
     });
 };
 eC.Icon = ef;
 let eT = (e) => {
     let { children: t, className: n, ...i } = e;
-    return (0, a.jsx)(_.vN3, {
-        children: (0, a.jsx)(U.A, { noBackground: !0, className: s()(n, eo.iE), padded: !1, ...i, children: t }),
+    return (0, l.jsx)(_.vN3, {
+        children: (0, l.jsx)(U.A, { noBackground: !0, className: s()(n, eo.iE), padded: !1, ...i, children: t }),
     });
 };
 (eT.Header = eC),
     (eT.Body = (e) => {
         let { children: t } = e;
-        return (0, a.jsx)(U.A, { inset: !0, padded: !1, className: eo.rf, children: t });
+        return (0, l.jsx)(U.A, { inset: !0, padded: !1, className: eo.rf, children: t });
     }),
     (eT.Separator = e_),
     (eT.VoiceSection = (e) => {
         let { guild: t, channel: n, partySize: i, members: r, onChannelContextMenu: o } = e,
-            d = l.useRef(null),
+            d = a.useRef(null),
             c = (0, D.Ay)(n, !0),
             u = (0, Q.Iv)(t, 32),
             A = (0, Q.Rb)(t);
-        return (0, a.jsx)(eh, {
-            children: (0, a.jsxs)("div", {
+        return (0, l.jsx)(eh, {
+            children: (0, l.jsxs)("div", {
                 className: eo.iO,
                 ref: d,
                 onContextMenu: (e) => o(e, n),
                 children: [
-                    (0, a.jsx)(_.DUT, {
+                    (0, l.jsx)(_.DUT, {
                         onClick: () => (0, z.u)(t.id),
                         "aria-hidden": !0,
                         tabIndex: -1,
-                        children: (0, a.jsxs)("div", {
+                        children: (0, l.jsxs)("div", {
                             className: eo.J4,
                             children: [
                                 null != u
-                                    ? (0, a.jsx)("img", { alt: "", src: u, className: s()(eo.y8, eo.p8) })
-                                    : (0, a.jsx)("div", {
+                                    ? (0, l.jsx)("img", { alt: "", src: u, className: s()(eo.y8, eo.p8) })
+                                    : (0, l.jsx)("div", {
                                           className: eo.I,
-                                          children: (0, a.jsx)("div", {
+                                          children: (0, l.jsx)("div", {
                                               className: eo.lB,
                                               style: { fontSize: ed[A.length] ?? ed[ed.length - 1] },
                                               children: A,
                                           }),
                                       }),
-                                (0, a.jsx)("div", {
+                                (0, l.jsx)("div", {
                                     className: eo._s,
-                                    children: (0, a.jsx)(_.HKD, {
+                                    children: (0, l.jsx)(_.HKD, {
                                         size: "md",
                                         color: "currentColor",
                                         className: eo.ZS,
@@ -312,65 +312,65 @@ let eT = (e) => {
                             ],
                         }),
                     }),
-                    (0, a.jsx)(_.DUT, {
+                    (0, l.jsx)(_.DUT, {
                         onClick: () => {
                             m.default.selectVoiceChannel(n.id), (0, q.iN)(n.id);
                         },
                         focusProps: { ringTarget: d },
-                        children: (0, a.jsxs)("div", { className: eo.U6, children: [ec(t.name, eo.BJ), eu(c, eo.BJ)] }),
+                        children: (0, l.jsxs)("div", { className: eo.U6, children: [ec(t.name, eo.BJ), eu(c, eo.BJ)] }),
                     }),
-                    (0, a.jsx)(el.A, { partySize: i, members: r, guildId: t.id }),
+                    (0, l.jsx)(ea.A, { partySize: i, members: r, guildId: t.id }),
                 ],
             }),
         });
     }),
     (eT.GameSection = (e) => {
-        let { icon: t, name: n, partySize: i, members: l, activity: r } = e,
+        let { icon: t, name: n, partySize: i, members: a, activity: r } = e,
             { analyticsLocations: s } = (0, y.Ay)(b.A.NOW_PLAYING_ITEM_GAME_SECTION);
-        return (0, a.jsxs)(eh, {
+        return (0, l.jsxs)(eh, {
             children: [
-                (0, a.jsxs)("div", {
+                (0, l.jsxs)("div", {
                     className: eo.yn,
                     children: [
-                        null != t ? (0, a.jsx)("img", { alt: "", src: t, className: eo.RZ }) : null,
-                        (0, a.jsxs)("div", {
+                        null != t ? (0, l.jsx)("img", { alt: "", src: t, className: eo.RZ }) : null,
+                        (0, l.jsxs)("div", {
                             children: [
                                 ec(n),
                                 eu(es.intl.formatToPlainString(es.t.C4WXvc, { memberCount: i.totalSize })),
                             ],
                         }),
-                        (0, a.jsx)(el.A, { partySize: i, members: l }),
+                        (0, l.jsx)(ea.A, { partySize: i, members: a }),
                     ],
                 }),
-                (0, a.jsx)(eE, { activity: r, analyticsLocations: s }),
+                (0, l.jsx)(eE, { activity: r, analyticsLocations: s }),
             ],
         });
     }),
     (eT.RichPresenceSection = (e) => {
-        let { activity: t, getAssetImage: i, user: l } = e,
+        let { activity: t, getAssetImage: i, user: a } = e,
             { analyticsLocations: r } = (0, y.Ay)(b.A.NOW_PLAYING_ITEM_RICH_PRESENCE_SECTION),
             { data: o } = (0, R.YY)(t.application_id),
             { assets: d, details: c, state: u, application_id: A } = t,
-            { hasButton: h } = ep({ activity: t, user: l }),
-            _ = (0, j.C4)(o)?.src ?? n(960648),
+            { hasButton: h } = eg({ activity: t, user: a }),
+            _ = (0, M.C4)(o)?.src ?? n(960648),
             m = (0, v.A)({ application: o, analyticsLocations: r });
         return null != t.assets || (0, C.A)(t) || null != m
-            ? (0, a.jsxs)(eh, {
+            ? (0, l.jsxs)(eh, {
                   children: [
-                      (0, a.jsxs)("div", {
+                      (0, l.jsxs)("div", {
                           className: s()(eo.tL, { [eo._2]: h }),
                           children: [
                               null != d && 0 !== Object.keys(d).length
-                                  ? (0, a.jsxs)("div", {
+                                  ? (0, l.jsxs)("div", {
                                         className: eo.YY,
                                         children: [
-                                            (0, a.jsx)("img", {
+                                            (0, l.jsx)("img", {
                                                 alt: d.large_text ?? "",
                                                 src: i(A, d.large_image, [160, 160]) ?? _,
                                                 className: s()(eo.nX, { [eo.p8]: null != d.small_image }),
                                             }),
                                             null != d.small_image
-                                                ? (0, a.jsx)("img", {
+                                                ? (0, l.jsx)("img", {
                                                       alt: d.small_text ?? "",
                                                       src: i(A, d.small_image, [64, 64]),
                                                       className: eo.rp,
@@ -378,11 +378,11 @@ let eT = (e) => {
                                                 : null,
                                         ],
                                     })
-                                  : (0, a.jsx)("div", {
+                                  : (0, l.jsx)("div", {
                                         className: eo.YY,
-                                        children: (0, a.jsx)("img", { alt: "", src: _, className: eo.nX }),
+                                        children: (0, l.jsx)("img", { alt: "", src: _, className: eo.nX }),
                                     }),
-                              (0, a.jsxs)("div", {
+                              (0, l.jsxs)("div", {
                                   className: eo.JD,
                                   children: [
                                       ec(null != c && "" !== c ? c : t.name),
@@ -393,8 +393,8 @@ let eT = (e) => {
                                               ? null
                                               : eu(
                                                     (0, C.A)(t)
-                                                        ? (0, a.jsx)(eA, { timestamps: e })
-                                                        : (0, a.jsx)(Y.Ay, {
+                                                        ? (0, l.jsx)(eA, { timestamps: e })
+                                                        : (0, l.jsx)(Y.Ay, {
                                                               start: e.start,
                                                               end: e.end,
                                                               location: Y.Ay.Locations.USER_ACTIVITY,
@@ -404,22 +404,22 @@ let eT = (e) => {
                                       })(),
                                   ],
                               }),
-                              (0, a.jsx)(eg, { activity: t, user: l }),
+                              (0, l.jsx)(ep, { activity: t, user: a }),
                           ],
                       }),
-                      (0, a.jsx)(eE, { activity: t, analyticsLocations: r }),
+                      (0, l.jsx)(eE, { activity: t, analyticsLocations: r }),
                   ],
               })
             : null;
     }),
     (eT.XboxSection = (e) => {
         let { title: t } = e;
-        return (0, a.jsx)(eh, {
-            children: (0, a.jsxs)("div", {
+        return (0, l.jsx)(eh, {
+            children: (0, l.jsxs)("div", {
                 className: eo.oc,
                 children: [
-                    (0, a.jsx)(et.A, { className: eo.Ai }),
-                    (0, a.jsxs)("div", {
+                    (0, l.jsx)(et.A, { className: eo.Ai }),
+                    (0, l.jsxs)("div", {
                         className: eo.__invalid_xboxSectionDetails,
                         children: [ec(t), eu(es.intl.string(es.t["JG9r+9"]))],
                     }),
@@ -429,74 +429,77 @@ let eT = (e) => {
     }),
     (eT.SpotifySection = (e) => {
         let {
-            activity: { assets: t, details: n, state: i, application_id: l },
+            activity: { assets: t, details: n, state: i, application_id: a },
             partySize: r,
             members: o,
             isSolo: d,
             getAssetImage: c,
         } = e;
-        return (0, a.jsx)(eh, {
-            children: (0, a.jsxs)("div", {
+        return (0, l.jsx)(eh, {
+            children: (0, l.jsxs)("div", {
                 className: eo.uy,
                 children: [
                     null != t
-                        ? (0, a.jsxs)("div", {
+                        ? (0, l.jsxs)("div", {
                               className: eo.YY,
                               children: [
-                                  (0, a.jsx)("img", {
+                                  (0, l.jsx)("img", {
                                       alt: t.large_text ?? "",
-                                      src: c(l, t.large_image, [160, 160]),
+                                      src: c(a, t.large_image, [160, 160]),
                                       className: s()(eo.nX, eo.Dy, { [eo.p8]: null != t.small_image }),
                                   }),
                                   d
                                       ? null
-                                      : (0, a.jsx)(ee.A, { className: eo.rp, color: A.A.unsafe_rawColors.SPOTIFY.css }),
+                                      : (0, l.jsx)(ee.A, {
+                                            className: eo.rp,
+                                            color: A.A.unsafe_rawColors.PLATFORM_SPOTIFY.css,
+                                        }),
                               ],
                           })
-                        : (0, a.jsx)("div", {}),
-                    (0, a.jsxs)("div", {
+                        : (0, l.jsx)("div", {}),
+                    (0, l.jsxs)("div", {
                         children: [null != n ? ec(n) : null, null != i ? eu(i.replace(/; /g, ", ")) : null],
                     }),
-                    (0, a.jsx)(el.A, { minAvatarsShown: d ? 2 : 1, partySize: r, members: o }),
+                    (0, l.jsx)(ea.A, { minAvatarsShown: d ? 2 : 1, partySize: r, members: o }),
                 ],
             }),
         });
     }),
     (eT.TwitchSection = (e) => {
         let t,
-            { activity: i, user: l, getAssetImage: r, guildId: o } = e,
+            { activity: i, user: a, getAssetImage: r, guildId: o } = e,
             { name: d, details: c, assets: u, application_id: A } = i;
         return (
             null != u &&
                 (0, S.A)(i) &&
-                (t = (0, a.jsx)(w.A, {
+                (t = (0, l.jsx)(w.A, {
                     className: eo.E6,
                     aspectRatio: 16 / 9,
-                    children: (0, a.jsxs)(_.DUT, {
+                    children: (0, l.jsxs)(_.DUT, {
                         href: (0, f.A)(i),
                         tag: "a",
                         target: "_blank",
                         children: [
-                            (0, a.jsx)("img", {
+                            (0, l.jsx)("img", {
                                 alt: u.large_text ?? "",
                                 src: r(A, u.large_image, [900, 500]),
                                 className: eo.ZB,
                             }),
-                            (0, a.jsx)("img", { src: n(606621), className: eo.vc, alt: "" }),
+                            (0, l.jsx)("img", { src: n(606621), className: eo.vc, alt: "" }),
                         ],
                     }),
                 })),
-            (0, a.jsxs)(eh, {
+            (0, l.jsxs)(eh, {
                 children: [
-                    (0, a.jsxs)("div", {
-                        className: s()({ [eo.x5]: null == l, [eo.Qh]: null != l }),
+                    (0, l.jsxs)("div", {
+                        className: s()({ [eo.x5]: null == a, [eo.Qh]: null != a }),
                         children: [
-                            (0, a.jsx)("img", { alt: "", src: E.A.get(er.fg2.TWITCH).icon.lightSVG, className: eo.Gq }),
-                            (0, a.jsxs)("div", { children: [ec(d), null != c ? eu(c) : null] }),
-                            null != l
-                                ? (0, a.jsx)(_.euF, {
-                                      src: l.getAvatarURL(o, 24),
-                                      "aria-label": l.username,
+                            (0, l.jsx)("img", { alt: "", src: E.A.get(er.fg2.TWITCH).icon.lightSVG, className: eo.Gq }),
+                            (0, l.jsxs)("div", { children: [ec(d), null != c ? eu(c) : null] }),
+                            null != a
+                                ? (0, l.jsx)(_.euF, {
+                                      src: a.getAvatarURL(o, 24),
+                                      "aria-label": a.username,
                                       className: eo.AZ,
                                       size: _._3J.SIZE_24,
                                   })
@@ -509,15 +512,15 @@ let eT = (e) => {
         );
     }),
     (eT.ApplicationStreamingSection = (e) => {
-        let { activity: t, user: n, applicationStream: i, onPreviewClick: l, guildId: r } = e,
+        let { activity: t, user: n, applicationStream: i, onPreviewClick: a, guildId: r } = e,
             s = (0, c.bG)([Z.A], () => Z.A.getChannel(i.channelId)),
             [o, d] = (0, H.zP)(s),
-            u = (0, a.jsxs)(_.DUT, {
-                onClick: o ? l : void 0,
+            u = (0, l.jsxs)(_.DUT, {
+                onClick: o ? a : void 0,
                 className: eo.q_,
                 children: [
-                    (0, a.jsx)(F.A, { stream: i, className: eo.IN }),
-                    (0, a.jsx)(_.Text, {
+                    (0, l.jsx)(F.A, { stream: i, className: eo.IN }),
+                    (0, l.jsx)(_.Text, {
                         className: eo.Er,
                         variant: "text-sm/medium",
                         color: "always-white",
@@ -528,19 +531,19 @@ let eT = (e) => {
             A = (0, x.A)(t, i)?.activityText ?? es.intl.string(es.t.eXan7B),
             h = (0, k.A)({ userId: n.id, guildId: r }),
             m = (0, V.a)({ displayNameStyles: h });
-        return (0, a.jsxs)(eh, {
+        return (0, l.jsxs)(eh, {
             children: [
-                (0, a.jsxs)("div", {
+                (0, l.jsxs)("div", {
                     className: eo.ME,
                     children: [
-                        (0, a.jsx)(_.euF, {
+                        (0, l.jsx)(_.euF, {
                             size: _._3J.SIZE_32,
                             src: n.getAvatarURL(r, 32),
                             "aria-label": n.username,
                             className: eo.OL,
                         }),
-                        (0, a.jsxs)("div", { children: [ec(ea.Ay.getName(n), m), eu(A)] }),
-                        (0, a.jsx)(M.Ay, { size: M.Ay.Sizes.SMALL }),
+                        (0, l.jsxs)("div", { children: [ec(el.Ay.getName(n), m), eu(A)] }),
+                        (0, l.jsx)(j.Ay, { size: j.Ay.Sizes.SMALL }),
                     ],
                 }),
                 u,
@@ -549,9 +552,9 @@ let eT = (e) => {
     }),
     (eT.EmbeddedActivitySection = (e) => {
         let { activity: t, channel: n, guildId: i, participants: r } = e,
-            [s, o] = l.useState(null),
+            [s, o] = a.useState(null),
             d = t.application_id;
-        l.useEffect(() => {
+        a.useEffect(() => {
             null != d &&
                 (0, en.RG)(d, ["embedded_background"]).then((e) => {
                     let [t] = e;
@@ -563,46 +566,46 @@ let eT = (e) => {
                     .map((e) => (X.default.getId() === e ? null : J.default.getUser(e)))
                     .filter(ei.Vq),
             ),
-            A = (0, g.p)(),
+            A = (0, p.p)(),
             { analyticsLocations: h } = (0, y.Ay)();
         if (null == d) return null;
         let m = P.A.getApplication(d);
         if (null == m) return null;
-        let p = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0,
+        let g = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0,
             E = (0, en.uD)(m.id, s, 300);
-        return (0, a.jsxs)(eh, {
+        return (0, l.jsxs)(eh, {
             children: [
-                (0, a.jsxs)("div", {
+                (0, l.jsxs)("div", {
                     className: eo.h1,
                     children: [
-                        (0, a.jsx)(B.A, { game: m, size: B.M.XSMALL, className: eo.VZ }),
-                        (0, a.jsx)("div", {
+                        (0, l.jsx)(B.A, { game: m, size: B.M.XSMALL, className: eo.VZ }),
+                        (0, l.jsx)("div", {
                             className: eo.F0,
-                            children: (0, a.jsx)(_.Text, { variant: "text-sm/semibold", children: m.name }),
+                            children: (0, l.jsx)(_.Text, { variant: "text-sm/semibold", children: m.name }),
                         }),
-                        null != p
-                            ? (0, a.jsx)("div", {
+                        null != g
+                            ? (0, l.jsx)("div", {
                                   className: eo.T$,
-                                  children: (0, a.jsx)(_.Text, {
+                                  children: (0, l.jsx)(_.Text, {
                                       color: "text-muted",
                                       variant: "text-sm/normal",
-                                      children: (0, a.jsx)(eA, { timestamps: p }),
+                                      children: (0, l.jsx)(eA, { timestamps: g }),
                                   }),
                               })
                             : null,
                     ],
                 }),
-                (0, a.jsxs)("div", {
+                (0, l.jsxs)("div", {
                     className: eo.Kt,
                     children: [
-                        null != E ? (0, a.jsx)("img", { src: E, alt: m.name, className: eo.pV }) : null,
-                        (0, a.jsxs)("div", {
+                        null != E ? (0, l.jsx)("img", { src: E, alt: m.name, className: eo.pV }) : null,
+                        (0, l.jsxs)("div", {
                             className: eo.d4,
                             children: [
-                                (0, a.jsx)($.LN, { users: u, guildId: i, channelId: n.id }),
-                                (0, a.jsx)("div", {
+                                (0, l.jsx)($.LN, { users: u, guildId: i, channelId: n.id }),
+                                (0, l.jsx)("div", {
                                     className: eo.ZE,
-                                    children: (0, a.jsx)(_.Button, {
+                                    children: (0, l.jsx)(_.Button, {
                                         variant: "primary",
                                         size: "sm",
                                         text: es.intl.string(es.t.VJlc0S),

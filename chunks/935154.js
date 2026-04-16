@@ -14,7 +14,7 @@ var r = n(627968);
 n(64700);
 var i = n(503698),
     s = n.n(i),
-    a = n(382222),
+    a = n(407045),
     o = n(827734),
     l = n(582754);
 n(397927);
@@ -22,7 +22,7 @@ var u = n(749401),
     c = n(573435),
     d = n(652215),
     _ = n(778712),
-    f = n(424205);
+    f = n(107965);
 let p = 8;
 function h(e) {
     switch (e) {
@@ -33,7 +33,7 @@ function h(e) {
         case d.clD.DND:
             return o.A.unsafe_rawColors.RED_NEW_46;
         case d.clD.STREAMING:
-            return o.A.unsafe_rawColors.TWITCH;
+            return o.A.unsafe_rawColors.PLATFORM_TWITCH;
         case d.clD.INVISIBLE:
         case d.clD.UNKNOWN:
         case d.clD.OFFLINE:

@@ -158,7 +158,7 @@ function q(e) {
                     (r = (0, i.jsx)(c.m, {
                         text: K.intl.string(K.t.Jebrww),
                         children: (0, i.jsx)(I.A, {
-                            color: d.A.unsafe_rawColors.TWITTER.css,
+                            color: d.A.unsafe_rawColors.PLATFORM_TWITTER.css,
                             children: (0, i.jsx)(m.Uzd, { size: "xs", color: d.A.unsafe_rawColors.WHITE.css }),
                         }),
                     })),
