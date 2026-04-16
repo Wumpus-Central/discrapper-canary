@@ -38,6 +38,7 @@ async function r() {
         n.e("33249").then(n.bind(n, 365720)),
         n.e("44912").then(n.bind(n, 962995)),
         n.e("967").then(n.bind(n, 237146)),
+        n.e("8304").then(n.bind(n, 594387)),
         n.e("30920").then(n.bind(n, 445563)),
     ]);
 }

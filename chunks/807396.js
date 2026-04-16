@@ -33,8 +33,8 @@ var i = n(627968),
     D = n(351906),
     G = n(287809),
     M = n(954571),
-    k = n(486020),
-    U = n(975571),
+    U = n(486020),
+    k = n(975571),
     w = n(773669),
     V = n(630457),
     B = n(208039),
@@ -44,7 +44,7 @@ var i = n(627968),
     Y = n(783419),
     X = n(534952),
     K = n(985018),
-    W = n(693595);
+    W = n(838251);
 let Z = (e) => {
     let t,
         { integration: n } = e,
@@ -126,7 +126,7 @@ function q(e) {
         [R, L] = s.useState(A.metadataVisibility),
         [P, D] = s.useState(A.showActivity),
         [G, M] = s.useState(null),
-        [k, w] = s.useState(null),
+        [U, w] = s.useState(null),
         [V, X] = s.useState(!1),
         [q, Q] = s.useState([]),
         J = (0, S.ML)(A.type),
@@ -134,7 +134,7 @@ function q(e) {
     s.useEffect(() => {
         j(A.friendSync), O(A.visibility), L(A.metadataVisibility), D(A.showActivity);
     }, [A]);
-    let ee = { inProgressVisibility: G, inProgressMetadataVisibility: k },
+    let ee = { inProgressVisibility: G, inProgressMetadataVisibility: U },
         et = s.useRef(ee);
     return (
         s.useEffect(() => {
@@ -288,7 +288,7 @@ function q(e) {
                                         variant: "text-xs/normal",
                                         className: W.vt,
                                         children: K.intl.format(K.t.Up2ni7, {
-                                            helpdeskUrl: U.A.getArticleURL(z.MVz.CONNECTION_DETAILS),
+                                            helpdeskUrl: k.A.getArticleURL(z.MVz.CONNECTION_DETAILS),
                                         }),
                                     },
                                     "label",
@@ -397,6 +397,7 @@ function q(e) {
                             children: A.integrations.map((e) => (0, i.jsx)(Z, { integration: e }, e.id)),
                         })
                       : void 0,
+                null,
             ],
         })
     );
@@ -417,7 +418,7 @@ function J(e) {
               children: [
                   (function (e, t) {
                       let { application: n } = t,
-                          s = k.Ay.getApplicationIconURL({ id: n.id, icon: n.icon });
+                          s = U.Ay.getApplicationIconURL({ id: n.id, icon: n.icon });
                       return (0, i.jsxs)("div", {
                           className: W.Il,
                           children: [
