@@ -26,6 +26,7 @@ function _(e) {
         case i.M.SLAYER_STOREFRONT_ORBS_REWARDS_ANNOUNCEMENT:
         case i.M.SLAYER_STOREFRONT_ORBS_REWARD_WISHLIST_UPSELL:
         case i.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE:
+        case i.M.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA:
             return 1;
         default:
             return (0, s.dr)(e, { andFail: !1 }), 0;

@@ -1,4 +1,4 @@
-n.d(t, { F: () => T });
+n.d(t, { F: () => S });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -21,53 +21,56 @@ var i = n(627968),
     C = n(985018),
     N = n(474143);
 function T(e) {
+    let [t, n] = (0, _.RF)(e, (0, A.c)(e), void 0, !0);
+    return [t === e, n];
+}
+function S(e) {
     let t,
-        { user: n, stream: s, channel: T } = e,
-        [S, b] = l.useState(!1),
-        y = (0, m.AO)(s),
-        v = (0, r.bG)([g.A], () => g.A.getDetectableIdsToApplicationIds()),
-        R = y?.id,
-        j = null != R ? v[R] : null,
-        O = (0, h.h)(j),
+        { user: n, stream: s, channel: A } = e,
+        [_, S] = l.useState(!1),
+        b = (0, m.AO)(s),
+        y = (0, r.bG)([g.A], () => g.A.getDetectableIdsToApplicationIds()),
+        v = b?.id,
+        R = null != v ? y[v] : null,
+        j = (0, h.h)(R),
         {
-            isLoading: L,
-            applicationWidgetConfig: M,
-            profileApplicationWidget: D,
-            userApplicationIdentity: U,
-        } = (0, u.A)(n.id, j, "social_layer_commerce_stream_header"),
-        G = (0, r.bG)([E.default], () => E.default.getId()),
-        P = l.useRef(null),
-        [k, w] = (0, _.RF)(
-            o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE,
-            (0, A.c)(o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE),
-            void 0,
-            !0,
-        ),
-        B = k === o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE,
-        { hasAlreadyLinked: V, canStartAuthorization: H, fetched: F } = (0, c.RD)(G === n.id ? O : null),
-        W = G === n.id && H && !F,
+            isLoading: O,
+            applicationWidgetConfig: L,
+            profileApplicationWidget: M,
+            userApplicationIdentity: D,
+        } = (0, u.A)(n.id, R, "social_layer_commerce_stream_header"),
+        U = (0, r.bG)([E.default], () => E.default.getId()),
+        G = l.useRef(null),
+        [P, k] = T(o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE),
+        [w, B] = T(o.M.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA),
+        { hasAlreadyLinked: V, canStartAuthorization: H, fetched: F } = (0, c.RD)(U === n.id ? j : null),
+        W = U === n.id && H && !F,
         K = l.useCallback(() => {
-            b(!1);
+            S(!1);
         }, []),
-        Y = null != D,
-        z = null != M && (V || H),
-        { rankIconUrl: q, rankText: X } =
-            ((t = U?.profile),
+        Y = l.useCallback(() => {
+            B(x.i.USER_DISMISS);
+        }, [B]),
+        z = null != M,
+        q = w && null != L && (V || H),
+        { rankIconUrl: X, rankText: $ } =
+            ((t = D?.profile),
             l.useMemo(() => {
-                if (null == t || "1346069614634864772" !== j) return {};
+                if (null == t || "1346069614634864772" !== R) return {};
                 let e = t.data?.primary?.rank_name;
                 return { rankIconUrl: t.data?.primary?.rank_image?.proxy_url, rankText: e };
-            }, [j, t])),
+            }, [R, t])),
         {
-            isAppIcon: $,
-            icon: J,
-            text: Q,
-            renderPopout: Z,
+            isAppIcon: J,
+            icon: Q,
+            text: Z,
+            renderPopout: ee,
+            positionKey: et,
         } = l.useMemo(() => {
-            if (null == O || null == j) return { isAppIcon: !1 };
-            if (Y || z) {
-                let e = q ?? O.getIconURL(p.iu.SMALL),
-                    t = null != e && null == q,
+            if (null == j || null == R) return { isAppIcon: !1 };
+            if (z || q) {
+                let e = X ?? j.getIconURL(p.iu.SMALL),
+                    t = null != e && null == X,
                     l =
                         null != e
                             ? (0, i.jsx)("img", { className: N.Kk, src: e, alt: "", "aria-hidden": !0 })
@@ -75,13 +78,22 @@ function T(e) {
                 return {
                     isAppIcon: t,
                     icon: l,
-                    text: X ?? C.intl.string(C.t["9njbm2"]),
+                    text: $ ?? C.intl.string(C.t["9njbm2"]),
                     renderPopout: (e) =>
-                        (0, i.jsx)(f.V, { className: e, userId: n.id, channel: T, applicationId: j, onClose: K }),
+                        (0, i.jsx)(f.V, {
+                            className: e,
+                            userId: n.id,
+                            channel: A,
+                            applicationId: R,
+                            onClose: K,
+                            canShowCTA: w,
+                            onDismissCTA: Y,
+                        }),
+                    positionKey: "widget-version",
                 };
             }
             let { icon: e, text: t } =
-                G === n.id
+                U === n.id
                     ? { icon: (0, i.jsx)(d.U1X, { className: N.Kk }), text: C.intl.string(C.t.e6S76Q) }
                     : { icon: (0, i.jsx)(d.okO, { className: N.Kk }), text: C.intl.string(C.t["8ZzYIv"]) };
             return {
@@ -89,47 +101,49 @@ function T(e) {
                 icon: e,
                 text: t,
                 renderPopout: (e) =>
-                    (0, i.jsx)(f.Z, { className: e, userId: n.id, channel: T, applicationId: j, onClose: K }),
+                    (0, i.jsx)(f.Z, { className: e, userId: n.id, channel: A, applicationId: R, onClose: K }),
+                positionKey: "feature-card-version",
             };
-        }, [O, j, Y, z, G, n.id, T, K, q, X]);
-    return L || W || null == Z
+        }, [j, R, z, q, U, n.id, A, K, w, Y, X, $]);
+    return O || W || null == ee
         ? null
         : (0, i.jsx)(d.NPJ, {
               theme: I.NJ.DARKER,
               children: (e) =>
                   (0, i.jsx)(d.YNO, {
-                      targetElementRef: P,
-                      shouldShow: S,
+                      targetElementRef: G,
+                      shouldShow: _,
                       animation: d.YNO.Animation.FADE,
                       position: "bottom",
+                      positionKey: et,
                       align: "center",
                       spacing: 8,
                       onRequestClose: K,
-                      renderPopout: () => Z(e),
+                      renderPopout: () => ee(e),
                       children: () =>
                           (0, i.jsxs)("div", {
                               className: a()(e, N.kL),
-                              ref: P,
+                              ref: G,
                               children: [
                                   (0, i.jsxs)(d.DUT, {
                                       className: N.BQ,
                                       onClick: () => {
-                                          w(x.i.TAKE_ACTION), b((e) => !e);
+                                          k(x.i.TAKE_ACTION), S((e) => !e);
                                       },
-                                      "aria-expanded": S,
+                                      "aria-expanded": _,
                                       "aria-haspopup": "dialog",
                                       children: [
-                                          null != J &&
-                                              (0, i.jsx)("div", { className: a()(N.zc, { [N.RT]: $ }), children: J }),
+                                          null != Q &&
+                                              (0, i.jsx)("div", { className: a()(N.zc, { [N.RT]: J }), children: Q }),
                                           (0, i.jsx)(d.Text, {
                                               variant: "text-sm/normal",
                                               color: "text-strong",
                                               lineClamp: 1,
-                                              children: Q,
+                                              children: Z,
                                           }),
                                       ],
                                   }),
-                                  B && (0, i.jsx)(d.Exy, { type: "new", variant: "brand" }),
+                                  P && (0, i.jsx)(d.Exy, { type: "new", variant: "brand" }),
                               ],
                           }),
                   }),
