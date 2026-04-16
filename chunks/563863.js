@@ -14,7 +14,7 @@ var r = n(627968),
             (e[(e.TOO_MANY_EMOJI = 2)] = "TOO_MANY_EMOJI"),
             (e[(e.TOO_MANY_ANIMATED_EMOJI = 3)] = "TOO_MANY_ANIMATED_EMOJI"),
             (e[(e.WRONG_TYPE = 4)] = "WRONG_TYPE"),
-            (e[(e.RESIZE_GIF = 5)] = "RESIZE_GIF"),
+            (e[(e.RESIZE_ANIMATED = 5)] = "RESIZE_ANIMATED"),
             e
         );
     })({});
@@ -41,7 +41,7 @@ let d = (e) => {
             },
             5: {
                 icon: o.A,
-                description: l.intl.string(l.t.sp16MU),
+                description: l.intl.string(l.t["6WN/qk"]),
                 color: i.A.unsafe_rawColors.RED_400.css,
                 tooltip: l.intl.string(l.t.PanA4J),
             },

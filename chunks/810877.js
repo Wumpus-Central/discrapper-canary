@@ -80,8 +80,8 @@ let h = (e, t, n, i) => (
                               }),
                               (e = g.intl.formatToPlainString(g.t.kIO9jy, { maxSize: u.EMOJI_MAX_FILESIZE_KB })),
                               (n = a.o.TOO_BIG))
-                            : (null != i.image || i.code === m.t02.INVALID_FILE_ASSET_SIZE_RESIZE_GIF) &&
-                              (n = a.o.RESIZE_GIF)),
+                            : (null != i.image || i.code === m.t02.INVALID_FILE_ASSET_SIZE_RESIZE_ANIMATED) &&
+                              (n = a.o.RESIZE_ANIMATED)),
                 429 === s && ((e = g.intl.string(g.t.Whhv4w)), (n = a.o.RATE_LIMIT)),
                 null == e || j || l.A.show({ title: g.intl.string(g.t.iufib1), body: e }),
                 n

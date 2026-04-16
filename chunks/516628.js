@@ -18,8 +18,8 @@ let o = (e) => {
             case a.t02.INVALID_FILE_ASSET_SIZE:
             case a.t02.INVALID_FORM_BODY:
                 return u.intl.formatToPlainString(u.t.kIO9jy, { maxSize: s.EMOJI_MAX_FILESIZE_KB });
-            case a.t02.INVALID_FILE_ASSET_SIZE_RESIZE_GIF:
-                return u.intl.string(u.t.sp16MU);
+            case a.t02.INVALID_FILE_ASSET_SIZE_RESIZE_ANIMATED:
+                return u.intl.string(u.t["6WN/qk"]);
             case r.j.MISSING_IMAGE_DATA:
                 return u.intl.string(u.t["41/Kbh"]);
             case r.j.MISSING_GUILD:
