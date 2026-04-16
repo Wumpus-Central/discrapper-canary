@@ -14765,6 +14765,7 @@
   "hmb311": "View filters and more settings",
   "WTJjqJ": "Notifications, muted",
   "EgGpkx": "Notifications Muted",
+  "kedGua": "{count, plural, =0 {Notifications} other {Notifications,  new} }",
   "/6kulz": "Notifications Unmuted",
   "MYr3Ka": "Accepted your friend request.",
   "51OkwL": "Uploaded !!{filename}!!",
