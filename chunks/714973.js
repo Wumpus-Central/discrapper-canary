@@ -1,83 +1,48 @@
 l.d(t, { A: () => g });
-var n = l(627968);
-l(64700);
-var a = l(687264),
-    i = l(417597),
-    s = l(397927),
-    r = l(780964),
-    d = l(858897),
-    o = l(532624),
-    c = l(350535),
-    u = l(652215),
-    m = l(189676),
-    h = l(985018),
-    p = l(174346);
-function x(e) {
-    let { header: t, description: l } = e;
-    return (0, n.jsxs)("div", {
-        className: p.Nr,
-        children: [t, (0, n.jsx)(s.Text, { color: "text-default", variant: "text-sm/medium", children: l })],
-    });
-}
-function f() {
-    let e = (0, i.bG)([o.Ay], () => o.Ay.getKeybindForAction(u.hCu.SAVE_CLIP)),
-        t = null != e ? c.dI(e.shortcut, !0) : null;
-    return (0, n.jsxs)("div", {
-        className: p.kR,
-        children: [
-            (0, n.jsx)(x, {
-                header: (0, n.jsx)(s._xR, { size: "refresh_sm", color: s.LU0.colors.ICON_DEFAULT }),
-                description: h.intl.string(m.default["4K56sP"]),
-            }),
-            (0, n.jsx)(x, {
-                header: null != t ? (0, n.jsx)(s.e7I, { shortcut: t }) : null,
-                description:
-                    null != t
-                        ? (0, n.jsxs)(n.Fragment, {
-                              children: [
-                                  h.intl.format(m.default.BIwQis, { keybind: t }),
-                                  (0, n.jsx)("div", {
-                                      className: p.JH,
-                                      children: (0, n.jsx)(s.QWc, {
-                                          text: h.intl.string(m.default.GPfOas),
-                                          variant: "primary",
-                                          textVariant: "text-sm/medium",
-                                          onClick: function () {
-                                              (0, d.openUserSettings)(r.X.CLIPS_PANEL);
-                                          },
-                                      }),
-                                  }),
-                              ],
-                          })
-                        : h.intl.string(m.default.HOUDUm),
-            }),
-            (0, n.jsx)(x, {
-                header: (0, n.jsx)(s.tuI, { size: "refresh_sm", color: s.LU0.colors.ICON_DEFAULT }),
-                description: h.intl.string(m.default.DLzdl7),
-            }),
-        ],
-    });
-}
+var n = l(627968),
+    a = l(64700),
+    i = l(687264),
+    s = l(417597),
+    r = l(397927),
+    d = l(780964),
+    o = l(858897),
+    c = l(532624),
+    u = l(350535),
+    m = l(572164),
+    h = l(652215),
+    p = l(189676),
+    x = l(985018),
+    f = l(174346);
 function g(e) {
-    let { isEmptyBecauseQuery: t } = e;
+    let { isEmptyBecauseQuery: t } = e,
+        l = (0, s.bG)([c.Ay], () => c.Ay.getKeybindForAction(h.hCu.SAVE_CLIP)),
+        g = (0, m.Et)(),
+        v = a.useCallback(() => {
+            (0, o.openUserSettings)(d.X.CLIPS_PANEL);
+        }, []),
+        j = x.intl.string(p.default["+M2iLf"]),
+        b = (() => {
+            if (t) return x.intl.string(p.default.xkY5xS);
+            if (!g) return x.intl.format(x.t["3iveao"], { onClick: v });
+            if (null == l) return x.intl.format(x.t.jpKk7e, { onClick: v });
+            let e = u.dI(l.shortcut, !0);
+            return x.intl.format(x.t["xY/8K5"], {
+                keybind: e,
+                keybindHook: () =>
+                    (0, n.jsx)("span", {
+                        className: f.EY,
+                        children: (0, n.jsx)(r.e7I, { className: f.d4, shortcut: e }),
+                    }),
+            });
+        })();
     return (0, n.jsx)("div", {
-        className: p.kL,
+        className: f.kL,
         children: (0, n.jsxs)("div", {
-            className: p.Qs,
+            className: f.Qs,
             children: [
-                (0, n.jsx)(a.N, { width: 213, height: 135, alt: "" }),
-                (0, n.jsx)(s.Heading, {
-                    className: p.wx,
-                    variant: "heading-xl/semibold",
-                    children: t ? h.intl.string(m.default["+M2iLf"]) : h.intl.string(m.default.m2GEpP),
-                }),
-                t
-                    ? (0, n.jsx)(s.Text, {
-                          className: p.h_,
-                          variant: "text-md/medium",
-                          children: h.intl.string(m.default.xkY5xS),
-                      })
-                    : (0, n.jsx)(f, {}),
+                (0, n.jsx)(i.N, { width: 213, height: 135, alt: j }),
+                (0, n.jsx)(r.Heading, { className: f.wx, variant: "heading-xl/semibold", children: j }),
+                (0, n.jsx)(r.Text, { className: f.h_, variant: "text-md/medium", children: b }),
             ],
         }),
     });
