@@ -13,7 +13,7 @@ var s = l(627968),
     m = l(425897),
     f = l(415278),
     x = l(131955),
-    b = l(148690),
+    b = l(511563),
     _ = l(985018),
     j = l(233807);
 let p = [
@@ -112,7 +112,7 @@ function v(e) {
         ],
     });
 }
-function N(e) {
+function I(e) {
     let { guildId: t, hash: l, onSelect: i } = e,
         c = n.useMemo(() => (0, g.Sq)({ guildId: t, bannerHash: l }), [t, l]),
         d = (0, a.S)(c?.imageUrl ?? ""),
@@ -126,20 +126,14 @@ function N(e) {
               children: (0, s.jsx)(h.A, { imageUrl: c.imageUrl, animatedUrl: c.animatedUrl, className: j.vA }),
           });
 }
-function I(e) {
+function N(e) {
     let { guildId: t, hashes: l, onSelect: n } = e;
     return (0, s.jsxs)("div", {
         children: [
             (0, s.jsx)(r.Text, { variant: "text-sm/semibold", children: _.intl.string(b.default.dDID2M) }),
-            (0, s.jsx)(r.Text, {
-                variant: "text-xs/normal",
-                color: "text-muted",
-                className: j.u2,
-                children: _.intl.string(b.default["9Xxm0y"]),
-            }),
             (0, s.jsx)("div", {
                 className: j.si,
-                children: l.slice(0, 9).map((e) => (0, s.jsx)(N, { guildId: t, hash: e, onSelect: n }, e)),
+                children: l.slice(0, 9).map((e) => (0, s.jsx)(I, { guildId: t, hash: e, onSelect: n }, e)),
             }),
         ],
     });
@@ -149,7 +143,7 @@ function A(e) {
         [d, g] = n.useState("HOME"),
         [h, x] = n.useState(null),
         { recentImageHashes: p, isLoading: C } = (0, f.A)(a.guild_id),
-        N = n.useCallback(
+        I = n.useCallback(
             async (e) => {
                 x(null);
                 try {
@@ -174,9 +168,9 @@ function A(e) {
         k = n.useCallback(
             (e) => {
                 let t = e.gifSrc ?? e.src ?? e.url;
-                null != t && N(t);
+                null != t && I(t);
             },
-            [N],
+            [I],
         ),
         S = null != h ? (0, s.jsx)(r.wx6, { type: "critical", children: h }) : null;
     return "RECENT_UPLOADS" === d
@@ -191,7 +185,7 @@ function A(e) {
                   }),
                   (0, s.jsxs)("div", {
                       className: j.n3,
-                      children: [S, (0, s.jsx)(m.A, { guildId: a.guild_id, onSelect: N })],
+                      children: [S, (0, s.jsx)(m.A, { guildId: a.guild_id, onSelect: I })],
                   }),
               ],
           })
@@ -241,8 +235,8 @@ function A(e) {
                         C
                             ? (0, s.jsx)("div", { className: j.g4, children: (0, s.jsx)(r.y$y, {}) })
                             : p.length > 0
-                              ? (0, s.jsx)(I, { guildId: a.guild_id, hashes: p, onSelect: A })
-                              : (0, s.jsx)(v, { onSelect: N }),
+                              ? (0, s.jsx)(N, { guildId: a.guild_id, hashes: p, onSelect: A })
+                              : (0, s.jsx)(v, { onSelect: I }),
                     ],
                 }),
             });
