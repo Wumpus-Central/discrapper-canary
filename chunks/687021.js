@@ -1,4 +1,4 @@
-a.d(t, { A: () => A, v: () => h }), a(667532);
+a.d(t, { A: () => h, v: () => A }), a(667532);
 var s = a(627968),
     r = a(64700),
     n = a(503698),
@@ -12,48 +12,50 @@ var s = a(627968),
     m = a(711014),
     b = a(403362),
     f = a(985018),
-    g = a(263928);
-function A(e) {
+    g = a(379464);
+function h(e) {
     let { guildId: t, className: a, globalOption: r, hideDivider: n = !1, onChange: l, renderOptionSuffix: o } = e;
     return (0, s.jsx)(c.A, {
         className: i()(g.u, a),
         title: f.intl.string(f.t.ref7Ki),
         hideDivider: n,
         forcedDivider: !0,
-        children: (0, s.jsx)(h, { guildId: t, onChange: l, renderOptionSuffix: o, globalOption: r }),
+        children: (0, s.jsx)(A, { guildId: t, onChange: l, renderOptionSuffix: o, globalOption: r }),
     });
 }
-function h(e) {
+function A(e) {
     let { guildId: t, globalOption: a, onChange: n, renderOptionSuffix: i } = e,
         c = (0, l.bG)([u.A], () => u.A.showNotice()),
-        A = (0, l.bG)([m.Ay], () => m.Ay.getFlattenedGuildIds()),
-        h = (0, l.bG)([p.A], () => p.A.getGuilds()),
-        R = r.useMemo(() => {
-            let e = A.map((e) => {
-                let t = h[e];
-                return null == t ? null : { label: t.name, value: t.id };
-            }).filter(b.Vq);
+        h = (0, l.bG)([m.Ay], () => m.Ay.getFlattenedGuildIds()),
+        A = (0, l.bG)([p.A], () => p.A.getGuilds()),
+        x = r.useMemo(() => {
+            let e = h
+                .map((e) => {
+                    let t = A[e];
+                    return null == t ? null : { label: t.name, value: t.id };
+                })
+                .filter(b.Vq);
             return null != a && e.unshift(a), e;
-        }, [A, h, a]),
-        x = r.useCallback(
+        }, [h, A, a]),
+        R = r.useCallback(
             (e) => {
                 let t = e?.label === a?.label && e?.value === a?.value;
                 return null == e || "" === e.value || t
                     ? null
-                    : (0, s.jsx)(d.Ay, { className: g.c, guild: h[e.value], size: d.Ay.Sizes.SMOL, active: !0 });
+                    : (0, s.jsx)(d.Ay, { className: g.c, guild: A[e.value], size: d.Ay.Sizes.SMOL, active: !0 });
             },
-            [h, a],
+            [A, a],
         );
     return (0, s.jsx)(o.p, {
         isDisabled: c,
         onChange: (e) => {
             if ("" === e || e === a?.value) return void n(null);
-            let t = h[e];
+            let t = A[e];
             null != t && n(t);
         },
         value: t,
-        options: R,
-        renderOptionPrefix: x,
+        options: x,
+        renderOptionPrefix: R,
         renderOptionSuffix: i,
         placeholder: f.intl.string(f.t["kMgj+e"]),
         "data-migration-pending": !0,

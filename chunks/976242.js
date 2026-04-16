@@ -1,36 +1,24 @@
-n.d(t, { w: () => N });
+n.d(t, { w: () => h });
 var i = n(934551),
     s = n(419954),
     l = n(933297),
-    a = n(780964),
-    r = n(358776),
-    o = n(733188),
-    d = n(380450),
-    c = n(519282),
-    u = n(933675),
-    m = n(571989),
-    g = n(356155),
-    _ = n(780377),
-    x = n(894593),
-    A = n(313249),
-    h = n(382240),
-    p = n(360609),
-    T = n(487122),
-    f = n(60398),
-    S = n(925759),
-    E = n(985018);
-let b = (0, s.t_)(a.X.ACCESSIBILITY_PANEL, {
-        useTitle: () => E.intl.string(E.t.G0neg7),
-        buildLayout: () => [c.s, T._, A.b, p.T, _.V, h.G, u.v, m.T],
+    r = n(780964),
+    a = n(733188),
+    o = n(380450),
+    d = n(356155),
+    c = n(894593),
+    u = n(360609),
+    m = n(60398),
+    g = n(925759),
+    _ = n(985018);
+let x = (0, s.t_)(r.X.ACCESSIBILITY_PANEL, {
+        useTitle: () => _.intl.string(_.t.G0neg7),
+        buildLayout: () => [m.U, g.P, c.l, u.T, d.X],
+        decoration: { type: l.t9.STRONGLY_DISCOURAGED_CUSTOM, component: a.A, sticky: !0 },
     }),
-    C = (0, s.t_)(a.X.ACCESSIBILITY_PANEL, {
-        useTitle: () => E.intl.string(E.t.G0neg7),
-        buildLayout: () => [f.U, S.P, x.l, p.T, g.X],
-        decoration: { type: l.t9.STRONGLY_DISCOURAGED_CUSTOM, component: o.A, sticky: !0 },
-    }),
-    N = (0, s.i4)(a.X.ACCESSIBILITY_SIDEBAR_ITEM, {
-        useTitle: () => E.intl.string(E.t.G0neg7),
+    h = (0, s.i4)(r.X.ACCESSIBILITY_SIDEBAR_ITEM, {
+        useTitle: () => _.intl.string(_.t.G0neg7),
         icon: i.AccessibilityIcon,
-        useMenu: d.A,
-        buildLayout: () => ((0, r.Ci)("AccessibilityPanel") ? [C] : [b]),
+        useMenu: o.A,
+        buildLayout: () => [x],
     });

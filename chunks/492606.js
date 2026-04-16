@@ -1,18 +1,17 @@
-n.d(t, { y: () => c });
+n.d(t, { y: () => d });
 var i = n(574381),
     s = n(419954),
     l = n(837921),
-    a = n(780964),
-    r = n(358776),
-    o = n(22539),
-    d = n(985018);
-let c = (0, s.zD)(a.X.OS_MINIMIZE_TO_TRAY, {
-    useTitle: () => ((0, r.bp)("OsMinimizeToTray") ? d.intl.string(d.t.dJ5MUh) : d.intl.string(d.t.abLFes)),
-    useSubtitle: () => ((0, r.bp)("OsMinimizeToTray") ? d.intl.string(d.t.nQavHr) : d.intl.string(d.t["mVuX+j"])),
+    r = n(780964),
+    a = n(22539),
+    o = n(985018);
+let d = (0, s.zD)(r.X.OS_MINIMIZE_TO_TRAY, {
+    useTitle: () => o.intl.string(o.t.dJ5MUh),
+    useSubtitle: () => o.intl.string(o.t.nQavHr),
     usePredicate: () => i.Av && !(0, i.cX)(),
-    useValue: () => o.fk.useState((e) => e.minimizeToTray),
-    setValue: o.tA,
+    useValue: () => a.fk.useState((e) => e.minimizeToTray),
+    setValue: a.tA,
     initialize: () => {
-        l.Ay.getSetting("MINIMIZE_TO_TRAY", !0).then((e) => o.fk.setState({ minimizeToTray: e }));
+        l.Ay.getSetting("MINIMIZE_TO_TRAY", !0).then((e) => a.fk.setState({ minimizeToTray: e }));
     },
 });

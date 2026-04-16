@@ -5,12 +5,10 @@ var i = n(311907),
     r = n(419954),
     a = n(351906),
     o = n(780964),
-    d = n(358776),
-    c = n(533570),
-    u = n(985018);
-let m = (0, r.zD)(o.X.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
-        useTitle: () => ((0, d.bp)("StreamerModeOptions") ? u.intl.string(u.t.LSBUGR) : u.intl.string(u.t["yR/d2T"])),
-        useSubtitle: () => ((0, d.bp)("StreamerModeOptions") ? "" : u.intl.string(u.t.RiIiPw)),
+    d = n(533570),
+    c = n(985018);
+let u = (0, r.zD)(o.X.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
+        useTitle: () => c.intl.string(c.t.LSBUGR),
         useValue: () =>
             (0, i.bG)([a.A], () => {
                 let { hidePersonalInformation: e } = a.A.getSettings();
@@ -18,8 +16,8 @@ let m = (0, r.zD)(o.X.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
             }),
         setValue: (e) => s.A.update({ hidePersonalInformation: e }),
     }),
-    g = (0, r.zD)(o.X.STREAMER_MODE_HIDE_INVITE_LINKS, {
-        useTitle: () => u.intl.string(u.t.uWBOri),
+    m = (0, r.zD)(o.X.STREAMER_MODE_HIDE_INVITE_LINKS, {
+        useTitle: () => c.intl.string(c.t.uWBOri),
         useValue: () =>
             (0, i.bG)([a.A], () => {
                 let { hideInstantInvites: e } = a.A.getSettings();
@@ -27,8 +25,8 @@ let m = (0, r.zD)(o.X.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
             }),
         setValue: (e) => s.A.update({ hideInstantInvites: e }),
     }),
-    _ = (0, r.zD)(o.X.STREAMER_MODE_DISABLE_SOUNDS, {
-        useTitle: () => u.intl.string(u.t.OrqYDP),
+    g = (0, r.zD)(o.X.STREAMER_MODE_DISABLE_SOUNDS, {
+        useTitle: () => c.intl.string(c.t.OrqYDP),
         useValue: () =>
             (0, i.bG)([a.A], () => {
                 let { disableSounds: e } = a.A.getSettings();
@@ -36,8 +34,8 @@ let m = (0, r.zD)(o.X.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
             }),
         setValue: (e) => s.A.update({ disableSounds: e }),
     }),
-    x = (0, r.zD)(o.X.STREAMER_MODE_DISABLE_NOTIFICATIONS, {
-        useTitle: () => u.intl.string(u.t.sUAbLd),
+    _ = (0, r.zD)(o.X.STREAMER_MODE_DISABLE_NOTIFICATIONS, {
+        useTitle: () => c.intl.string(c.t.sUAbLd),
         useValue: () =>
             (0, i.bG)([a.A], () => {
                 let { disableNotifications: e } = a.A.getSettings();
@@ -45,9 +43,9 @@ let m = (0, r.zD)(o.X.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
             }),
         setValue: (e) => s.A.update({ disableNotifications: e }),
     }),
-    A = (0, r.zD)(o.X.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE, {
-        useTitle: () => u.intl.string(u.t["iA81+a"]),
-        useSubtitle: () => u.intl.string(u.t.P4vj0h),
+    x = (0, r.zD)(o.X.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE, {
+        useTitle: () => c.intl.string(c.t["iA81+a"]),
+        useSubtitle: () => c.intl.string(c.t.P4vj0h),
         useValue: () =>
             (0, i.bG)([a.A], () => {
                 let { enableContentProtection: e } = a.A.getSettings();
@@ -58,6 +56,6 @@ let m = (0, r.zD)(o.X.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
     }),
     h = (0, r.FW)(o.X.STREAMER_MODE_OPTIONS_LIST, {
         variant: "compact",
-        useTitle: () => ((0, d.bp)("StreamerModeOptions") ? u.intl.string(u.t.xYhOEh) : u.intl.string(u.t.UtW8R6)),
-        buildLayout: () => [m, g, _, x, A, c.h],
+        useTitle: () => c.intl.string(c.t.xYhOEh),
+        buildLayout: () => [u, m, g, _, x, d.h],
     });

@@ -1,19 +1,18 @@
-n.d(t, { N: () => c });
+n.d(t, { N: () => d });
 var i = n(574381),
     s = n(419954),
     l = n(837921),
-    a = n(780964),
-    r = n(358776),
-    o = n(22539),
-    d = n(985018);
-let c = (0, s.zD)(a.X.OS_START_MINIMIZED, {
-    useTitle: () => ((0, r.bp)("StartMinimized") ? d.intl.string(d.t.GfBL83) : d.intl.string(d.t.n7Yjes)),
-    useSubtitle: () => ((0, r.bp)("StartMinimized") ? d.intl.string(d.t.XGyhhc) : d.intl.string(d.t.o2FSjB)),
+    r = n(780964),
+    a = n(22539),
+    o = n(985018);
+let d = (0, s.zD)(r.X.OS_START_MINIMIZED, {
+    useTitle: () => o.intl.string(o.t.GfBL83),
+    useSubtitle: () => o.intl.string(o.t.XGyhhc),
     usePredicate: () => (0, i.uF)(),
-    useValue: () => o.fk.useState((e) => !!e.openOnStartup && e.startMinimized),
-    setValue: o.AZ,
-    useDisabled: () => !o.fk.useState((e) => e.openOnStartup),
+    useValue: () => a.fk.useState((e) => !!e.openOnStartup && e.startMinimized),
+    setValue: a.AZ,
+    useDisabled: () => !a.fk.useState((e) => e.openOnStartup),
     initialize: () => {
-        l.Ay.getSetting("START_MINIMIZED", !1).then((e) => o.fk.setState({ startMinimized: e }));
+        l.Ay.getSetting("START_MINIMIZED", !1).then((e) => a.fk.setState({ startMinimized: e }));
     },
 });
