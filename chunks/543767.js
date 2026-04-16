@@ -89,7 +89,8 @@ async function p(e) {
             }),
             n = u.A.createInvoiceFromServer(e.body);
         return (
-            n.checkoutContext?.payment_sources != null &&
+            null != r &&
+                n.checkoutContext?.payment_sources != null &&
                 o.h.dispatch({
                     type: "SUBSCRIPTION_PREVIEW_CHECKOUT_CONTEXT_UPDATE",
                     checkoutContext: n.checkoutContext,
@@ -127,11 +128,11 @@ function E(e, t) {
             let e = !1;
             async function r() {
                 try {
-                    o(null), s(null);
+                    o(null);
                     let n = await t();
                     e || s(n);
                 } catch (t) {
-                    e || o(t);
+                    e || (o(t), s(null));
                 }
             }
             return (
