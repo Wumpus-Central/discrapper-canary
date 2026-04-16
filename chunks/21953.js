@@ -31,10 +31,11 @@ class c extends a.G {
                 kind: "enum",
                 T: () => ["discord_protos.discord_experimentation.v1.Rule.Subtype", u],
             },
+            { no: 6, name: "hash", kind: "scalar", T: 9 },
         ]);
     }
     create(e) {
-        let t = { type: 0, filters: [], isSunsetRule: !1, subtype: 0 };
+        let t = { type: 0, filters: [], isSunsetRule: !1, subtype: 0, hash: "" };
         return (
             globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
@@ -62,6 +63,9 @@ class c extends a.G {
                 case 5:
                     s.subtype = e.int32();
                     break;
+                case 6:
+                    s.hash = e.string();
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -78,7 +82,8 @@ class c extends a.G {
             h.internalBinaryWrite(e.filters[i], t.tag(2, r.O0.LengthDelimited).fork(), n).join();
         e.override && f.internalBinaryWrite(e.override, t.tag(3, r.O0.LengthDelimited).fork(), n).join(),
             !1 !== e.isSunsetRule && t.tag(4, r.O0.Varint).bool(e.isSunsetRule),
-            0 !== e.subtype && t.tag(5, r.O0.Varint).int32(e.subtype);
+            0 !== e.subtype && t.tag(5, r.O0.Varint).int32(e.subtype),
+            "" !== e.hash && t.tag(6, r.O0.LengthDelimited).string(e.hash);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
@@ -145,7 +150,7 @@ class p extends a.G {
             { no: 20, name: "user_premium_type", kind: "message", oneof: "filter", T: () => eb },
             { no: 21, name: "unit_id_matches_filter_snapshot", kind: "message", oneof: "filter", T: () => eL },
             { no: 22, name: "guild_ids", kind: "message", oneof: "filter", T: () => eM },
-            { no: 25, name: "guild_member_count_range", kind: "message", oneof: "filter", T: () => eP },
+            { no: 25, name: "guild_member_count_range", kind: "message", oneof: "filter", T: () => ex },
             { no: 26, name: "guild_has_feature", kind: "message", oneof: "filter", T: () => eU },
             { no: 27, name: "user_location", kind: "message", oneof: "filter", T: () => U },
             { no: 28, name: "user_ip", kind: "message", oneof: "filter", T: () => B },
@@ -294,7 +299,7 @@ class p extends a.G {
                 case 25:
                     s.filter = {
                         oneofKind: "guildMemberCountRange",
-                        guildMemberCountRange: eP.internalBinaryRead(e, e.uint32(), n, s.filter.guildMemberCountRange),
+                        guildMemberCountRange: ex.internalBinaryRead(e, e.uint32(), n, s.filter.guildMemberCountRange),
                     };
                     break;
                 case 26:
@@ -378,7 +383,7 @@ class p extends a.G {
             "guildIds" === e.filter.oneofKind &&
                 eM.internalBinaryWrite(e.filter.guildIds, t.tag(22, r.O0.LengthDelimited).fork(), n).join(),
             "guildMemberCountRange" === e.filter.oneofKind &&
-                eP
+                ex
                     .internalBinaryWrite(e.filter.guildMemberCountRange, t.tag(25, r.O0.LengthDelimited).fork(), n)
                     .join(),
             "guildHasFeature" === e.filter.oneofKind &&
@@ -656,7 +661,7 @@ class O extends a.G {
     constructor() {
         super(
             "discord_protos.discord_experimentation.v1.ClientLocation",
-            [{ no: 1, name: "locations", kind: "message", repeat: 1, T: () => P }],
+            [{ no: 1, name: "locations", kind: "message", repeat: 1, T: () => x }],
             { "discord_protos.discord_experimentation.v1.filter_category": "FILTER_CATEGORY_CLIENT" },
         );
     }
@@ -673,7 +678,7 @@ class O extends a.G {
             a = e.pos + t;
         for (; e.pos < a; ) {
             let [t, i] = e.tag();
-            if (1 === t) s.locations.push(P.internalBinaryRead(e, e.uint32(), n));
+            if (1 === t) s.locations.push(x.internalBinaryRead(e, e.uint32(), n));
             else {
                 let a = n.readUnknownField;
                 if ("throw" === a)
@@ -686,7 +691,7 @@ class O extends a.G {
     }
     internalBinaryWrite(e, t, n) {
         for (let i = 0; i < e.locations.length; i++)
-            P.internalBinaryWrite(e.locations[i], t.tag(1, r.O0.LengthDelimited).fork(), n).join();
+            x.internalBinaryWrite(e.locations[i], t.tag(1, r.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
@@ -787,7 +792,7 @@ class w extends a.G {
     }
 }
 let M = new w();
-class x extends a.G {
+class P extends a.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.ClientLocation.Location", [
             { no: 1, name: "iso_region", kind: "message", oneof: "location", T: () => M },
@@ -844,13 +849,13 @@ class x extends a.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let P = new x();
+let x = new P();
 class k extends a.G {
     constructor() {
         super(
             "discord_protos.discord_experimentation.v1.UserLocation",
             [
-                { no: 1, name: "locations", kind: "message", repeat: 1, T: () => P },
+                { no: 1, name: "locations", kind: "message", repeat: 1, T: () => x },
                 { no: 2, name: "prefer_client_ip", kind: "scalar", T: 8 },
             ],
             { "discord_protos.discord_experimentation.v1.filter_category": "FILTER_CATEGORY_USER" },
@@ -871,7 +876,7 @@ class k extends a.G {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    s.locations.push(P.internalBinaryRead(e, e.uint32(), n));
+                    s.locations.push(x.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 2:
                     s.preferClientIp = e.bool();
@@ -888,7 +893,7 @@ class k extends a.G {
     }
     internalBinaryWrite(e, t, n) {
         for (let i = 0; i < e.locations.length; i++)
-            P.internalBinaryWrite(e.locations[i], t.tag(1, r.O0.LengthDelimited).fork(), n).join();
+            x.internalBinaryWrite(e.locations[i], t.tag(1, r.O0.LengthDelimited).fork(), n).join();
         !1 !== e.preferClientIp && t.tag(2, r.O0.Varint).bool(e.preferClientIp);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
@@ -2087,7 +2092,7 @@ class ew extends a.G {
     }
 }
 let eM = new ew();
-class ex extends a.G {
+class eP extends a.G {
     constructor() {
         super(
             "discord_protos.discord_experimentation.v1.GuildMemberCountRange",
@@ -2135,7 +2140,7 @@ class ex extends a.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let eP = new ex();
+let ex = new eP();
 class ek extends a.G {
     constructor() {
         super(
