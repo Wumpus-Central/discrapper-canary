@@ -1,6 +1,6 @@
-!(function (e, t) {
-    t(n(989349));
-})(0, function (e) {
+!(function (e) {
+    e(n(989349));
+})(function (e) {
     "use strict";
     var t = {
         1: "'inci",
@@ -71,8 +71,8 @@
                     if (0 === e) return e + "'ıncı";
                     var r = e % 10,
                         i = (e % 100) - r,
-                        a = e >= 100 ? 100 : null;
-                    return e + (t[r] || t[i] || t[a]);
+                        s = e >= 100 ? 100 : null;
+                    return e + (t[r] || t[i] || t[s]);
             }
         },
         week: { dow: 1, doy: 7 },

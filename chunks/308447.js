@@ -1,6 +1,6 @@
-!(function (e, t) {
-    t(n(989349));
-})(0, function (e) {
+!(function (e) {
+    e(n(989349));
+})(function (e) {
     return e.defineLocale("tl-ph", {
         months: "Enero_Pebrero_Marso_Abril_Mayo_Hunyo_Hulyo_Agosto_Setyembre_Oktubre_Nobyembre_Disyembre".split("_"),
         monthsShort: "Ene_Peb_Mar_Abr_May_Hun_Hul_Ago_Set_Okt_Nob_Dis".split("_"),

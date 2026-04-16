@@ -2,13 +2,13 @@
 n.d(t, { i: () => h });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(158954),
     l = n(305866),
     u = n(892547),
     c = n(882530),
-    d = n(343154);
+    d = n(99879);
 let _ = () => (0, r.jsx)(o.cGx, { className: d.yF }),
     f = (e) => {
         let { children: t } = e;
@@ -27,6 +27,6 @@ class h extends i.PureComponent {
     static Empty = f;
     render() {
         let { className: e, children: t } = this.props;
-        return (0, r.jsx)(l.l, { className: s()(d.qE, e), "aria-label": this.props["aria-label"], children: t });
+        return (0, r.jsx)(l.l, { className: a()(d.qE, e), "aria-label": this.props["aria-label"], children: t });
     }
 }

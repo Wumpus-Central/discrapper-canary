@@ -1,4 +1,4 @@
-n.d(t, { A: () => M });
+n.d(t, { A: () => D });
 var i = n(627968),
     a = n(64700),
     l = n(503698),
@@ -29,11 +29,11 @@ var i = n(627968),
     L = n(652215),
     R = n(381941),
     P = n(985018),
-    w = n(960240),
-    D = n(278664);
-function M(e) {
+    w = n(38208),
+    M = n(278664);
+function D(e) {
     let { embedUrl: t, message: n, channel: l } = e,
-        M = a.useRef(null),
+        D = a.useRef(null),
         k = a.useRef(null),
         O = (0, j.D)(t, n),
         { setPopout: U } = (0, f.A)(n.id, R.Fd),
@@ -88,7 +88,7 @@ function M(e) {
                     !q &&
                         (!0 === O.shouldShowBlurredThumbnailImage
                             ? (0, i.jsx)("img", {
-                                  src: D,
+                                  src: M,
                                   alt: P.intl.string(P.t.rIbh8H),
                                   className: s()(w.xn, { [w.p6]: O.shouldSpoiler }),
                                   onContextMenu: B,
@@ -214,7 +214,7 @@ function M(e) {
                                                         : (0, i.jsx)(
                                                               E.A,
                                                               {
-                                                                  targetElementRef: M,
+                                                                  targetElementRef: D,
                                                                   userId: O.authorId,
                                                                   guildId: O.guildId,
                                                                   channelId: l.id,
@@ -225,7 +225,7 @@ function M(e) {
                                                                   children: (e) =>
                                                                       (0, i.jsx)(c.V30, {
                                                                           ...e,
-                                                                          ref: M,
+                                                                          ref: D,
                                                                           name: O.authorName,
                                                                           colorString: K,
                                                                           colorStrings: Z,

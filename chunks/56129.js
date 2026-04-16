@@ -32,12 +32,12 @@ var i = n(503698),
     L = n(652215),
     w = n(818348),
     M = n(985018),
-    x = n(140559),
-    P = n(706069);
+    P = n(196436),
+    x = n(27600);
 function k(e) {
     let { onClick: t, isExpanded: n } = e;
     return (0, r.jsx)(T.A, {
-        iconClassName: s()(x.D6, { [x.S7]: n }),
+        iconClassName: s()(P.D6, { [P.S7]: n }),
         onClick: t,
         iconComponent: o.abt,
         label: n ? M.intl.string(M.t["2TiKgS"]) : M.intl.string(M.t.oN8bqe),
@@ -79,13 +79,13 @@ function U(e) {
                     });
         };
     return (0, r.jsxs)("div", {
-        className: P._v,
+        className: x._v,
         onMouseMove: s,
         onMouseDown: i,
         onMouseLeave: o,
         children: [
             (0, r.jsx)("div", {
-                className: P.K1,
+                className: x.K1,
                 children: (0, r.jsx)(I.X, {
                     idle: v,
                     title: V?.name ?? B ?? "",
@@ -94,7 +94,7 @@ function U(e) {
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: P.q6,
+                className: x.q6,
                 children: [
                     (0, r.jsxs)(p.A, {
                         grow: 0,
@@ -103,7 +103,7 @@ function U(e) {
                         align: p.A.Align.CENTER,
                         children: [
                             (0, r.jsx)(N.A, {
-                                className: x.Oc,
+                                className: P.Oc,
                                 enabled: U,
                                 cameraUnavailable: !F,
                                 hasPermission: H,
@@ -115,7 +115,7 @@ function U(e) {
                                     children: (0, r.jsx)(d.A, {
                                         channelId: t.id,
                                         guildId: t.getGuildId(),
-                                        className: P.__invalid_leftTrayIcon,
+                                        className: x.__invalid_leftTrayIcon,
                                         participant: b,
                                         compact: !0,
                                     }),
@@ -132,12 +132,12 @@ function U(e) {
                             k || (0, R.f)()
                                 ? null
                                 : (0, r.jsx)(y.A, {
-                                      className: x.BD,
+                                      className: P.BD,
                                       popoutOpen: !1,
                                       onOpenPopout: K,
                                       onClosePopout: w.FX,
                                   }),
-                            (0, r.jsx)(S.A, { applicationId: n, location: M.location, className: x.BD }),
+                            (0, r.jsx)(S.A, { applicationId: n, location: M.location, className: P.BD }),
                         ],
                     }),
                 ],
@@ -160,14 +160,14 @@ function G(e) {
         h = (0, c.A)([n])[0],
         m = (0, f.Ay)(t);
     return (0, r.jsxs)(o.DUT, {
-        className: s()(P._v, P.ob),
+        className: s()(x._v, x.ob),
         onMouseMove: a,
         onMouseDown: i,
         onMouseLeave: l,
         onDoubleClick: u,
         children: [
             (0, r.jsx)("div", {
-                className: P.K1,
+                className: x.K1,
                 children: (0, r.jsx)(I.X, {
                     idle: d,
                     title: h?.name ?? m ?? "",
@@ -176,16 +176,16 @@ function G(e) {
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: P.q6,
+                className: x.q6,
                 children: [
                     (0, r.jsx)(b.Ay, {
                         renderIcon: !1,
                         users: _,
                         size: 24,
                         max: 3,
-                        className: x.__invalid_userSummaryContainer,
+                        className: P.__invalid_userSummaryContainer,
                     }),
-                    (0, r.jsx)(S.A, { applicationId: n, location: p.location, iconClassName: x.Gu, isActive: !0 }),
+                    (0, r.jsx)(S.A, { applicationId: n, location: p.location, iconClassName: P.Gu, isActive: !0 }),
                 ],
             }),
         ],
@@ -193,7 +193,7 @@ function G(e) {
 }
 function F(e) {
     let { channelId: t, participantsOpen: n, showToggleParticipants: i } = e;
-    return i ? (0, r.jsx)(v.A, { channelId: t, isParticipantsOpen: n, className: x.N9 }) : null;
+    return i ? (0, r.jsx)(v.A, { channelId: t, isParticipantsOpen: n, className: P.N9 }) : null;
 }
 function V(e) {
     let {
@@ -212,14 +212,14 @@ function V(e) {
         E = (0, c.A)([l])[0],
         g = (0, f.Ay)(u);
     return (0, r.jsx)("div", {
-        className: x.LO,
+        className: P.LO,
         onMouseMove: n,
         onMouseDown: t,
         onMouseLeave: i,
         children: (0, r.jsxs)("div", {
-            className: s()(P.K1, x.eA, { [x.eo]: a }),
+            className: s()(x.K1, P.eA, { [P.eo]: a }),
             children: [
-                !a && (0, r.jsx)(o.jNK, { size: "xxs", color: "currentColor", className: x.ro }),
+                !a && (0, r.jsx)(o.jNK, { size: "xxs", color: "currentColor", className: P.ro }),
                 a &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
@@ -230,10 +230,10 @@ function V(e) {
                                 preventIdleComponent: A.A,
                             }),
                             (0, r.jsxs)("div", {
-                                className: x.QS,
+                                className: P.QS,
                                 children: [
                                     h ? null : (0, r.jsx)(k, { isExpanded: p, onClick: _ }),
-                                    (0, r.jsx)(S.A, { applicationId: l, location: m.location, iconClassName: x.Gu }),
+                                    (0, r.jsx)(S.A, { applicationId: l, location: m.location, iconClassName: P.Gu }),
                                 ],
                             }),
                         ],

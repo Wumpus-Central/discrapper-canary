@@ -7,7 +7,7 @@ var s = n(665260),
     r = n(957545),
     a = n(652215),
     o = n(985018),
-    d = n(450175);
+    d = n(369e3);
 let c = (e) => {
     let { role: t } = e;
     return (0, s.Lt)(t.flags, a.gxX.IN_PROMPT)

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var i = n(627968);
 n(64700);
 var s = n(503698),
@@ -10,8 +10,8 @@ var s = n(503698),
     c = n(524832),
     d = n(652215),
     u = n(985018),
-    h = n(497039),
-    _ = n(473169);
+    h = n(22079),
+    _ = n(818050);
 function p(e) {
     let { children: t } = e;
     return (0, i.jsx)("li", {
@@ -19,7 +19,7 @@ function p(e) {
         children: (0, i.jsx)(l.Text, { variant: "text-sm/medium", color: "text-default", children: t }),
     });
 }
-function g(e) {
+function m(e) {
     let { setSlide: t, transitionTo: s } = e;
     return (0, i.jsxs)("div", {
         children: [

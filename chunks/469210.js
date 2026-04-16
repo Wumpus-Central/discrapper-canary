@@ -1,6 +1,6 @@
-!(function (e, t) {
-    t(n(989349));
-})(0, function (e) {
+!(function (e) {
+    e(n(989349));
+})(function (e) {
     return e.defineLocale("ca", {
         months: {
             standalone: "gener_febrer_mar\xe7_abril_maig_juny_juliol_agost_setembre_octubre_novembre_desembre".split(

@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => g });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -9,8 +9,8 @@ var i = n(627968),
     c = n(46054),
     u = n(742589),
     h = n(985018),
-    A = n(170028),
-    _ = n(782691);
+    A = n(221308),
+    _ = n(992595);
 function m(e) {
     return (
         e.matches("a") ||
@@ -20,7 +20,7 @@ function m(e) {
         e.className.includes("emojiContainer")
     );
 }
-class g extends l.Component {
+class p extends l.Component {
     handleOpenTopic = (e) => {
         let t = e.target;
         if ((0, r.vq)(t)) {
@@ -36,7 +36,7 @@ class g extends l.Component {
     handleContextMenu = (e) => {
         let { channel: t, guild: l } = this.props;
         (0, d.L3)(e, async () => {
-            let { default: e } = await Promise.all([n.e("17425"), n.e("88191")]).then(n.bind(n, 340968));
+            let { default: e } = await Promise.all([n.e("17425"), n.e("2200")]).then(n.bind(n, 340968));
             return (n) => (0, i.jsx)(e, { ...n, channel: t, guild: l, includeTopic: !0 });
         });
     };
@@ -68,4 +68,4 @@ class g extends l.Component {
             : null;
     }
 }
-let p = g;
+let g = p;

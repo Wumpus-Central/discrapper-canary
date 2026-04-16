@@ -20,7 +20,7 @@ var s = a(627968),
     N = a(128088),
     C = a(652215),
     v = a(985018),
-    I = a(18737);
+    I = a(821729);
 function E(e) {
     let { name: t, imageUrl: a, selected: n, onTap: l } = e;
     return (0, s.jsxs)(m.DUT, {

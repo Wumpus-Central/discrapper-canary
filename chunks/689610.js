@@ -1,41 +1,4 @@
-"use strict";
-n.r(t), n.d(t, { default: () => a, messagesLoader: () => i });
-let { createLoader: r } = n(919523),
-    i = r(
-        {
-            bg: () => n.e("38688").then(n.t.bind(n, 791683, 19)),
-            cs: () => n.e("28503").then(n.t.bind(n, 206794, 19)),
-            da: () => n.e("94048").then(n.t.bind(n, 472675, 19)),
-            de: () => n.e("73236").then(n.t.bind(n, 161055, 19)),
-            el: () => n.e("28842").then(n.t.bind(n, 921905, 19)),
-            "en-GB": () => n.e("28858").then(n.t.bind(n, 120865, 19)),
-            "es-419": () => n.e("30548").then(n.t.bind(n, 131615, 19)),
-            "es-ES": () => n.e("42938").then(n.t.bind(n, 20385, 19)),
-            fi: () => n.e("48730").then(n.t.bind(n, 459745, 19)),
-            fr: () => n.e("99921").then(n.t.bind(n, 513096, 19)),
-            hi: () => n.e("49516").then(n.t.bind(n, 601063, 19)),
-            hr: () => n.e("33271").then(n.t.bind(n, 936618, 19)),
-            hu: () => n.e("39744").then(n.t.bind(n, 113667, 19)),
-            it: () => n.e("34446").then(n.t.bind(n, 591869, 19)),
-            ja: () => n.e("4326").then(n.t.bind(n, 378117, 19)),
-            ko: () => n.e("30483").then(n.t.bind(n, 140894, 19)),
-            lt: () => n.e("1221").then(n.t.bind(n, 234820, 19)),
-            nl: () => n.e("75615").then(n.t.bind(n, 453442, 19)),
-            no: () => n.e("29436").then(n.t.bind(n, 284855, 19)),
-            pl: () => n.e("45433").then(n.t.bind(n, 898272, 19)),
-            "pt-BR": () => n.e("55242").then(n.t.bind(n, 954129, 19)),
-            ro: () => n.e("14008").then(n.t.bind(n, 669099, 19)),
-            ru: () => n.e("64298").then(n.t.bind(n, 523889, 19)),
-            "sv-SE": () => n.e("47123").then(n.t.bind(n, 645246, 19)),
-            th: () => n.e("60609").then(n.t.bind(n, 575960, 19)),
-            tr: () => n.e("89731").then(n.t.bind(n, 201518, 19)),
-            uk: () => n.e("12893").then(n.t.bind(n, 984716, 19)),
-            vi: () => n.e("19114").then(n.t.bind(n, 714609, 19)),
-            "zh-CN": () => n.e("86671").then(n.t.bind(n, 58130, 19)),
-            "zh-TW": () => n.e("82179").then(n.t.bind(n, 259502, 19)),
-            "en-US": () => n.e("76576").then(n.bind(n, 261219)),
-        },
-        "en-US",
-    ),
-    { makeMessagesProxy: s } = n(919523),
-    a = s(i);
+t.r(o), t.d(o, { default: () => r });
+let r = JSON.parse(
+    '{"bGygJZ":["It looks like you might have been muted for the entire call. Would you like to learn how to unmute yourself so you can be heard again?"],"8VIRzR":["In order for others to hear you, press this button to unmute your microphone. Afterwards, you can press it again to re-mute your microphone."],"VG4zAf":["Unmute Your Microphone"],"5wYjyW":["Mute Tutorial"],"01Jl9Z":["No thanks"],"DxcYYG":["Show me!"]}',
+);

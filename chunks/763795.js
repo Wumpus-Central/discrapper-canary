@@ -17,8 +17,8 @@ var i = n(503698),
     m = n(788868),
     E = n(88001),
     g = n(985018),
-    A = n(98748),
-    I = n(110992),
+    A = n(955212),
+    I = n(967744),
     T = n(944496),
     S = n(51148),
     y = n(232266),
@@ -71,7 +71,7 @@ let b = (e, t) => (t ? (0, E.DP)() : e ? g.intl.string(g.t.lG6a5x) : g.intl.stri
             L = (0, p.O)(),
             w = L?.discount?.amount,
             M = v ? C : N,
-            { startedPaymentFlowWithPaymentSourcesRef: x, isDisplayingWowMomentConfirmation: P } = (0, u.P5)(),
+            { startedPaymentFlowWithPaymentSourcesRef: P, isDisplayingWowMomentConfirmation: x } = (0, u.P5)(),
             { step: k, breadcrumbsData: U } = (0, d.Ay)(),
             G = (0, o.D7)({ location: "PremiumPaymentHeader" });
         if (!y && (null == U || 0 === U.length)) return null;
@@ -84,7 +84,7 @@ let b = (e, t) => (t ? (0, E.DP)() : e ? g.intl.string(g.t.lG6a5x) : g.intl.stri
         let V = (F = F.filter((e) => {
                 if (S && e.id === c.pn.PLAN_SELECT) return !1;
                 let t = e.id !== c.pn.ADD_PAYMENT_STEPS,
-                    n = e.id === c.pn.ADD_PAYMENT_STEPS && !x.current;
+                    n = e.id === c.pn.ADD_PAYMENT_STEPS && !P.current;
                 return !E || t || n;
             })).find((e) => e.id === k),
             B = V?.sectionHeaderText?.() ?? V?.label,
@@ -94,7 +94,7 @@ let b = (e, t) => (t ? (0, E.DP)() : e ? g.intl.string(g.t.lG6a5x) : g.intl.stri
             W = b(v, S),
             K = A.kL,
             $ = s()(A.N1, I.headerGradient);
-        return P
+        return x
             ? (0, r.jsx)("div", { className: K, children: (0, r.jsx)(a.hLv, { color: Y, className: $ }) })
             : (0, r.jsxs)("div", {
                   className: K,

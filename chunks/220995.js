@@ -3,7 +3,7 @@ var i = n(627968),
     l = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(687498),
+    r = n(407045),
     o = n(110259),
     d = n(311907),
     c = n(435371),
@@ -15,20 +15,20 @@ var i = n(627968),
     p = n(713517),
     g = n(71393),
     f = n(576705),
-    x = n(954571),
-    E = n(778768),
+    E = n(954571),
+    x = n(778768),
     I = n(652215);
 n(281405);
 var C = n(985018),
-    N = n(426114),
-    T = n(805098);
+    N = n(89682),
+    T = n(80442);
 let S = (e) => 1 - Math.pow(1 - e, 4);
 function b(e) {
     let { channel: t, onClose: s } = e,
         b = l.useRef(null),
         y = l.useRef(null),
-        [v, j] = l.useState(!1),
-        R = l.useRef(null),
+        [v, R] = l.useState(!1),
+        j = l.useRef(null),
         O = l.useRef(null),
         [L, M] = l.useState(0),
         { analyticsLocations: D } = (0, _.Ay)(A.A.VOICE_INVITE_SUGGESTIONS);
@@ -48,13 +48,13 @@ function b(e) {
         K = l.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "unknown";
-                x.default.track(I.HAw.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT_CLOSED, {
+                E.default.track(I.HAw.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT_CLOSED, {
                     reason: e,
                     channel_id: t.id,
                     guild_id: t.guild_id,
                     location_stack: D,
                 }),
-                    j(!1),
+                    R(!1),
                     s?.();
             },
             [t, s, D],
@@ -62,7 +62,7 @@ function b(e) {
         Y = l.useCallback(() => {
             null != G &&
                 (0, u.mMO)(async () => {
-                    let { default: e } = await Promise.all([n.e("43600"), n.e("28136"), n.e("89886")]).then(
+                    let { default: e } = await Promise.all([n.e("43600"), n.e("28136"), n.e("42738")]).then(
                         n.bind(n, 234355),
                     );
                     return (n) => (0, i.jsx)(e, { ...n, guild: G, channel: t, source: I.PE1.VOICE_INVITE_SUGGESTIONS });
@@ -81,20 +81,20 @@ function b(e) {
         ),
         $ = l.useCallback(
             () => (
-                null != R.current && clearTimeout(R.current),
-                (R.current = setTimeout(() => X("timeout"), 1e4)),
+                null != j.current && clearTimeout(j.current),
+                (j.current = setTimeout(() => X("timeout"), 1e4)),
                 M((e) => e + 1),
                 () => {
-                    null != R.current && clearTimeout(R.current);
+                    null != j.current && clearTimeout(j.current);
                 }
             ),
             [X],
         ),
-        Q = l.useCallback(
+        J = l.useCallback(
             () => (
                 null != O.current && clearTimeout(O.current),
                 (O.current = setTimeout(() => {
-                    j(!1);
+                    R(!1);
                 }, 150)),
                 () => {
                     null != O.current && clearTimeout(O.current);
@@ -105,16 +105,16 @@ function b(e) {
     (0, h.Ay)($),
         l.useEffect(() => {
             if (!W) {
-                $(), Q();
+                $(), J();
                 return;
             }
-            null != R.current && clearTimeout(R.current), null != O.current && clearTimeout(O.current), j(!0);
-        }, [W, $, Q]);
-    let J = l.useCallback(() => {
-            j(!0);
+            null != j.current && clearTimeout(j.current), null != O.current && clearTimeout(O.current), R(!0);
+        }, [W, $, J]);
+    let Q = l.useCallback(() => {
+            R(!0);
         }, []),
         Z = l.useCallback(() => {
-            j(!1), H(!1);
+            R(!1), H(!1);
         }, []);
     return U
         ? (0, i.jsx)(u.YNO, {
@@ -124,8 +124,8 @@ function b(e) {
               align: "top",
               spacing: 17,
               popoutKey: "voice-invite-suggestions-button",
-              renderPopout: (e) => (0, i.jsx)(E.w, { channel: t, onHoverOrFocus: H, ...e }),
-              onRequestOpen: J,
+              renderPopout: (e) => (0, i.jsx)(x.w, { channel: t, onHoverOrFocus: H, ...e }),
+              onRequestOpen: Q,
               onRequestClose: Z,
               children: (e) => {
                   let { onClick: t, ...n } = e;

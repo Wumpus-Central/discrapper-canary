@@ -2,8 +2,8 @@ n.d(t, { A: () => k });
 var i = n(627968),
     s = n(64700),
     l = n(284009),
-    a = n.n(l),
-    r = n(311907),
+    r = n.n(l),
+    a = n(311907),
     o = n(230109),
     d = n(397927),
     c = n(73153),
@@ -12,17 +12,17 @@ var i = n(627968),
     g = n(793574),
     _ = n(688810),
     x = n(512213),
-    A = n(429619),
-    h = n(451909),
+    h = n(429619),
+    A = n(451909),
     p = n(202639),
     T = n(400669),
     f = n(407217),
     S = n(919395),
-    b = n(884546),
-    E = n(287070),
+    E = n(884546),
+    b = n(287070),
     C = n(196291),
-    N = n(101058),
-    v = n(836602),
+    v = n(101058),
+    N = n(836602),
     I = n(814390),
     j = n(909536),
     y = n(351906),
@@ -33,23 +33,23 @@ var i = n(627968),
     D = n(780207),
     G = n(652215),
     M = n(985018),
-    U = n(21861);
+    U = n(482549);
 function k() {
-    let e = (0, r.bG)([O.default], () => {
+    let e = (0, a.bG)([O.default], () => {
             let e = O.default.getCurrentUser();
-            return a()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e;
+            return r()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e;
         }),
-        t = (0, r.bG)([y.A], () => y.A.hidePersonalInformation),
+        t = (0, a.bG)([y.A], () => y.A.hidePersonalInformation),
         {
             pendingBio: n,
             pendingAvatar: l,
             pendingNameplate: k,
             showNotice: w,
             ...V
-        } = (0, r.cf)([v.A], () => ({ ...v.A.getPendingChanges(), showNotice: v.A.showNotice() })),
-        B = (0, N.V7)({ userId: e.id, image: l }),
+        } = (0, a.cf)([N.A], () => ({ ...N.A.getPendingChanges(), showNotice: N.A.showNotice() })),
+        B = (0, v.V7)({ userId: e.id, image: l }),
         F = (0, S.lw)({ pendingValue: k, userValue: e?.collectibles?.nameplate }),
-        H = (0, I.A)() && null != n ? h.Ay.parse(void 0, n).content : n,
+        H = (0, I.A)() && null != n ? A.Ay.parse(void 0, n).content : n,
         z = L.Ay.canUsePremiumProfileCustomization(e),
         Y = (0, j.St)("edit-profile-upsell"),
         { analyticsLocations: X } = (0, _.Ay)(g.A.USER_SETTINGS_USER_PROFILE);
@@ -62,9 +62,9 @@ function k() {
         : (0, i.jsxs)(_.f5, {
               value: X,
               children: [
-                  (0, i.jsx)(A.A, {}),
-                  (0, i.jsx)(b.A, {
-                      profilePreview: (0, i.jsx)(E.A, {
+                  (0, i.jsx)(h.A, {}),
+                  (0, i.jsx)(E.A, {
+                      profilePreview: (0, i.jsx)(b.A, {
                           user: e,
                           canUsePremiumCustomization: z,
                           onUpsellClick: D.A,

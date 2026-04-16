@@ -31,15 +31,15 @@ var r = n(627968),
     L = n(230835),
     w = n(74396),
     M = n(738419),
-    x = n(145272),
-    P = n(572047),
+    P = n(145272),
+    x = n(572047),
     k = n(278938),
     U = n(652215),
     G = n(49999),
     F = n(788868),
-    V = n(520650),
+    V = n(693227),
     B = n(985018),
-    H = n(431497);
+    H = n(45945);
 let j = 0,
     Y = 5e3;
 function W(e) {
@@ -362,7 +362,7 @@ function en(e) {
         children: s
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)(P.w, {}),
+                      (0, r.jsx)(x.w, {}),
                       (0, r.jsx)(d.$nd, { variant: "secondary", onClick: c, text: B.intl.string(B.t["13/7kX"]) }),
                       (0, r.jsx)(ee, {
                           disabled: !n,
@@ -379,7 +379,7 @@ function en(e) {
                                 className: H.rV,
                                 children: [
                                     (0, r.jsx)(T.l, {
-                                        size: "sm",
+                                        size: "md",
                                         className: H.Tf,
                                         location: h.A.PREMIUM_WISHLIST_CUSTOM_THEMES_EDITOR,
                                     }),
@@ -411,17 +411,17 @@ function er(e) {
             setGradientAngle: R,
         } = (0, b.ko)(),
         [O, D] = i.useState(I[0] ?? b.OT),
-        P = (0, o.bG)([y.A], () => y.A.theme),
+        x = (0, o.bG)([y.A], () => y.A.theme),
         U = (0, g.JZ)(l.M.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
         { analyticsLocations: F } = (0, m.Ay)(h.A.CUSTOM_THEMES_EDITOR),
         j = (0, o.bG)([w.A], () => w.A.getSavedCustomTheme()),
         Y = async () => {
             (A.current = !0),
                 await (0, f.u_)({
-                    theme: P,
+                    theme: x,
                     customUserThemeSettings: { colors: I, gradientColorStops: [], gradientAngle: v, baseMix: T },
                 }),
-                (0, M.Yl)(I, T, v, P, F),
+                (0, M.Yl)(I, T, v, x, F),
                 n?.(G.i.TAKE_ACTION),
                 U || (0, g.Dr)(l.M.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
                 (0, E.Jp)(),
@@ -478,7 +478,7 @@ function er(e) {
                                         color: "text-subtle",
                                         children: B.intl.string(V.default.uSL2Gy),
                                     }),
-                                    (0, r.jsx)(x.e, {
+                                    (0, r.jsx)(P.e, {
                                         onChange: (e) => {
                                             D(e), 0 === I.length && (0, L.$Y)(I, e, N);
                                         },

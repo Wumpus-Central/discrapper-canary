@@ -3,8 +3,8 @@ n.d(t, {
     DK: () => U,
     DP: () => W,
     Lw: () => Y,
-    U5: () => x,
-    _J: () => P,
+    U5: () => P,
+    _J: () => x,
     de: () => V,
     m0: () => j,
     mT: () => k,
@@ -24,7 +24,7 @@ var r = n(627968),
     _ = n(793574),
     f = n(688810),
     p = n(93159),
-    h = n(340034),
+    h = n(270537),
     m = n(888751),
     E = n(97352),
     g = n(147925),
@@ -40,7 +40,7 @@ var r = n(627968),
     O = n(788868),
     b = n(652215),
     D = n(985018),
-    L = n(222967);
+    L = n(47463);
 function w(e) {
     let {
             invoiceItem: t,
@@ -122,8 +122,8 @@ function M(e) {
         ],
     });
 }
-let x = (e) => (e.currency === b.Yri.USD ? (0, T.$g)(e.total, e.currency) : `${(0, T.$g)(e.total, e.currency)}*`);
-function P(e) {
+let P = (e) => (e.currency === b.Yri.USD ? (0, T.$g)(e.total, e.currency) : `${(0, T.$g)(e.total, e.currency)}*`);
+function x(e) {
     let { invoice: t, isPrepaidPaymentSource: n, shouldUseUnifiedCheckoutUI: i } = e,
         {
             guildSubscriptionPlan: s,
@@ -140,7 +140,7 @@ function P(e) {
             includeTaxLineItem: !0,
             isPrepaidPaymentSource: n,
         });
-        return (0, r.jsx)(h.ID, { label: D.intl.string(D.t["2eh+Co"]), lineItems: e, currency: t.currency });
+        return (0, r.jsx)(h.Vm, { label: D.intl.string(D.t["2eh+Co"]), lineItems: e, currency: t.currency });
     }
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -150,7 +150,7 @@ function P(e) {
             (0, r.jsx)(N.pK, {}),
             (0, r.jsx)(N.Sd, {
                 label: D.intl.format(t.taxInclusive ? (n ? D.t.BqdxQt : D.t.XH4raN) : D.t.RUI48E, {}),
-                value: x(t),
+                value: P(t),
             }),
         ],
     });
@@ -179,7 +179,7 @@ function k(e) {
             (0, r.jsx)(N.pK, {}),
             (0, r.jsx)(N.Sd, {
                 label: D.intl.format(t.taxInclusive ? (i ? D.t.BqdxQt : D.t.XH4raN) : D.t.RUI48E, {}),
-                value: x(t),
+                value: P(t),
             }),
         ],
     });

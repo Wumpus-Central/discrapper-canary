@@ -6,7 +6,7 @@ var i = n(627968),
     l = n(17372),
     a = n(204173),
     o = n(985018),
-    c = n(86661);
+    c = n(750997);
 let d = { [l.tY.MESSAGE]: o.t.fuqnBC, [l.tY.USER]: o.t.F4jrRW, [l.tY.GUILD]: o.t.gH3aMs },
     u = (e) => {
         let { title: t, menuType: n, onReopen: l } = e,

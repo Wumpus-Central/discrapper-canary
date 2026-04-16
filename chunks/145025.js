@@ -836,9 +836,9 @@ let a =
                 return "string" !== n && a && !e
                     ? F(t)
                     : function () {
-                          return (function (t, n, r, e, a) {
-                              var i,
-                                  u = {
+                          return (function (t, n, r, e) {
+                              var a,
+                                  i = {
                                       string: function (t) {
                                           var n = 0;
                                           if (null != t && 0 !== t) {
@@ -856,19 +856,19 @@ let a =
                                           return (n = t), (r = e), l.set(n, r), e;
                                       },
                                   },
-                                  o = F(t),
-                                  f = [],
-                                  c = 0;
+                                  u = F(t),
+                                  o = [],
+                                  f = 0;
                               if (e)
-                                  for (var s = 0; s < e.length; s++) {
-                                      var h = u[r[s]];
-                                      h ? (0 === c && (c = te()), (f[s] = h(e[s]))) : (f[s] = e[s]);
+                                  for (var c = 0; c < e.length; c++) {
+                                      var s = i[r[c]];
+                                      s ? (0 === f && (f = te()), (o[c] = s(e[c]))) : (o[c] = e[c]);
                                   }
-                              var g = o.apply(null, f);
+                              var h = u.apply(null, o);
                               return (
-                                  (i = g), (g = "string" === n ? O(i) : "boolean" === n ? !!i : i), 0 !== c && ta(c), g
+                                  (a = h), (h = "string" === n ? O(a) : "boolean" === n ? !!a : a), 0 !== f && ta(f), h
                               );
-                          })(t, n, r, arguments, 0);
+                          })(t, n, r, arguments);
                       };
             }),
             (W = function t() {

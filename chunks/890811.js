@@ -12,8 +12,8 @@ var n = i(627968),
     g = i(985481),
     p = i(239093),
     N = i(985018),
-    A = i(88589),
-    h = i(936745);
+    A = i(633757),
+    h = i(503193);
 function j(e) {
     let { className: t, isDsaEligible: i = !1, onClose: s, onNext: j, onBack: u } = e,
         _ = (0, g.y5)(),

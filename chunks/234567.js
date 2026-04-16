@@ -2,10 +2,10 @@ n.d(t, { A: () => c });
 var i = n(627968);
 n(64700);
 var l = n(503698),
-    s = n.n(l),
-    a = n(397927),
+    a = n.n(l),
+    s = n(397927),
     r = n(569989),
-    o = n(456620);
+    o = n(84476);
 function c(e) {
     let {
         className: t,
@@ -16,8 +16,8 @@ function c(e) {
         disabled: u = !1,
         verified: h = !1,
     } = e;
-    return (0, i.jsx)(a.DUT, {
-        className: s()(t, o.x6, { [o.r9]: u }),
+    return (0, i.jsx)(s.DUT, {
+        className: a()(t, o.x6, { [o.r9]: u }),
         onClick: u ? void 0 : d,
         "aria-disabled": u,
         role: "button",
@@ -28,7 +28,7 @@ function c(e) {
             verified: h,
             children:
                 c &&
-                (0, i.jsx)(a.PGe, {
+                (0, i.jsx)(s.PGe, {
                     size: "custom",
                     color: "currentColor",
                     height: 6,

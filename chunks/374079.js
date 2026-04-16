@@ -1,8 +1,8 @@
 n.d(t, { A: () => C });
 var i = n(627968),
     l = n(64700),
-    r = n(964892),
-    a = n(208756),
+    a = n(964892),
+    r = n(208756),
     s = n(135564),
     o = n(916845),
     d = n(627330),
@@ -14,24 +14,24 @@ var i = n(627968),
     m = n(788868),
     g = n(652215),
     p = n(49999),
-    E = n(188875),
+    E = n(490285),
     I = n(985018),
-    f = n(34696);
+    f = n(664184);
 function C(e) {
     let { targetElementRef: t, dismissPopover: n, children: C, numOrbs: T } = e,
-        { analyticsLocations: S } = (0, A.Ay)(u.A.PREMIUM_MARKETING_NITRO_HOME_ORBS_SECTION),
-        N = l.useCallback(() => {
+        { analyticsLocations: N } = (0, A.Ay)(u.A.PREMIUM_MARKETING_NITRO_HOME_ORBS_SECTION),
+        S = l.useCallback(() => {
             n(p.i.TAKE_ACTION),
                 (0, h.A)({
                     subscriptionTier: m.pe.TIER_2,
-                    analyticsLocations: S,
+                    analyticsLocations: N,
                     analyticsObject: { object: g.ZSU.BUTTON_CTA, objectType: g.AnalyticsObjectTypes.TIER_2 },
                 });
-        }, [n, S]);
+        }, [n, N]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", { children: C }),
-            (0, i.jsx)(r.x, {
+            (0, i.jsx)(a.x, {
                 targetElementRef: t,
                 onRequestClose: () => n(p.i.USER_DISMISS),
                 alignmentStrategy: "edge",
@@ -50,8 +50,8 @@ function C(e) {
                             badge: { type: "beta", variant: "expressive" },
                             className: f.Q,
                         }),
-                        (0, i.jsx)(a.Z, {
-                            actions: [{ text: I.intl.string(I.t.pj0XBN), variant: "primary", icon: c.tvc, onClick: N }],
+                        (0, i.jsx)(r.Z, {
+                            actions: [{ text: I.intl.string(I.t.pj0XBN), variant: "primary", icon: c.tvc, onClick: S }],
                         }),
                         (0, i.jsx)(s.F, {}),
                     ],

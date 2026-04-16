@@ -8,7 +8,7 @@ let r = {
     open() {
         (0, s.mMO)(async () => {
             if (l.J.getConfig({ location: "EnableCommunityModalActionCreators" }).enabled) {
-                let { default: e } = await Promise.all([n.e("20115"), n.e("85981")]).then(n.bind(n, 939006));
+                let { default: e } = await Promise.all([n.e("20115"), n.e("1378")]).then(n.bind(n, 939006));
                 return (t) => (0, i.jsx)(e, { ...t });
             }
             {

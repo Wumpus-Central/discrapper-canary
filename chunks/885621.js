@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { FD: () => a, H0: () => o, jV: () => i, vx: () => s });
-var r = n(658122);
+n.d(t, { FD: () => s, H0: () => o, jV: () => i, vx: () => a });
+var r = n(32271);
 let i = {
         default: r.colorDefault,
         brand: r.colorBrand,
@@ -9,6 +9,6 @@ let i = {
         "premium-gradient": r.colorPremiumGradient,
         success: r.colorSuccess,
     },
-    a = 48,
-    s = 16,
+    s = 48,
+    a = 16,
     o = 360;

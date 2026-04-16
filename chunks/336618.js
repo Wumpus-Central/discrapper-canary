@@ -27,8 +27,8 @@ var r = n(627968),
     R = n(652215),
     O = n(49999),
     b = n(985018),
-    D = n(23769),
-    L = n(351671);
+    D = n(849353),
+    L = n(266599);
 function w(e) {
     let t = i.useCallback(() => Promise.resolve({ default: e.boxAnimationUrl }), [e.boxAnimationUrl]);
     return (0, r.jsx)(C.A, {
@@ -72,8 +72,8 @@ function M(e) {
         }),
     });
 }
-let x = T.A.Millis.DAYS_30;
-function P(e) {
+let P = T.A.Millis.DAYS_30;
+function x(e) {
     let { disabled: t, channel: n } = e,
         { analyticsLocations: s } = (0, f.Ay)(_.A.GIFT_BUTTON),
         [c, d] = i.useState(!1),
@@ -86,7 +86,7 @@ function P(e) {
                 ? null
                 : e.properties.properties.giftIcon;
         }),
-        P = (0, l.bG)([g.A], () => {
+        x = (0, l.bG)([g.A], () => {
             let e = g.A.getMarketingComponentByType(o.C.GIFT_ICON_COACHMARK);
             return null == e || "giftIconCoachmark" !== e.properties.properties.oneofKind
                 ? null
@@ -103,7 +103,7 @@ function P(e) {
         F = !(0, y.uJ)(L?.boxAnimationUrl),
         V = (!(0, y.uJ)(L?.trinketAnimationUrl) || !(0, y.uJ)(L?.trinketGlowAnimationUrl)) && !F,
         B = (0, l.bG)([g.A], () => g.A.getGiftPromotion()?.id),
-        H = null != P && !t && T && b >= x && null != B,
+        H = null != x && !t && T && b >= P && null != B,
         [j, Y] = (0, p.Cc)(H ? u.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, B ?? ""),
         W = null != j,
         K = c || W,
@@ -154,10 +154,10 @@ function P(e) {
                   onComplete: () => d(!1),
                   onCheckItOutClick: z,
                   markAsDismissed: Y,
-                  coachmarkConfig: P,
+                  coachmarkConfig: x,
                   children: Z,
               })
             : Z,
     });
 }
-let k = i.memo(P);
+let k = i.memo(x);

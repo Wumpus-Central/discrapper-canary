@@ -13,7 +13,7 @@ var e = s(627968),
     u = s(49999),
     _ = s(488995),
     C = s(985018),
-    p = s(58483);
+    p = s(568163);
 function A(t) {
     let { guildId: i, transitionState: A, onClose: h, analyticsType: I = l.M.APP_DIRECTORY_UPSELL_MODAL } = t;
     return (

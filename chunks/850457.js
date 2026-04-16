@@ -12,17 +12,17 @@ var i = n(627968),
     A = n(769015),
     _ = n(409626),
     m = n(692969),
-    g = n(290987),
-    p = n(657331),
+    p = n(290987),
+    g = n(657331),
     f = n(820512),
-    x = n(769022),
-    E = n(898926),
+    E = n(769022),
+    x = n(898926),
     I = n(287809),
     C = n(954571),
     N = n(562153),
     T = n(652215),
     S = n(985018),
-    b = n(4568);
+    b = n(672680);
 function y(e) {
     let { event: t, guildId: n, channelId: l } = e,
         a = (0, s.bG)([I.default], () => I.default.getUser(t.userId)),
@@ -53,7 +53,7 @@ function y(e) {
                                   user: (0, i.jsx)(u.A, {
                                       tag: "span",
                                       onClick: () =>
-                                          (0, p.openUserProfileModal)({ userId: t.userId, guildId: n, channelId: l }),
+                                          (0, g.openUserProfileModal)({ userId: t.userId, guildId: n, channelId: l }),
                                       children: (0, i.jsx)(r.Text, {
                                           variant: "text-sm/semibold",
                                           tag: "span",
@@ -82,9 +82,9 @@ function y(e) {
                               variant: "text-xs/normal",
                               color: "text-muted",
                               className: b.gE,
-                              children: (0, i.jsx)(g.Ay, {
+                              children: (0, i.jsx)(p.Ay, {
                                   end: t.timestamp,
-                                  location: g.Ay.Locations.VOICE_CHANNEL_HISTORY,
+                                  location: p.Ay.Locations.VOICE_CHANNEL_HISTORY,
                               }),
                           }),
                       ],
@@ -125,7 +125,7 @@ function v(e) {
                                               tag: "span",
                                               className: b.C3,
                                               onClick: () =>
-                                                  (0, p.openUserProfileModal)({
+                                                  (0, g.openUserProfileModal)({
                                                       userId: t.userId,
                                                       guildId: n,
                                                       channelId: l,
@@ -150,9 +150,9 @@ function v(e) {
                               variant: "text-xs/normal",
                               color: "text-muted",
                               className: b.gE,
-                              children: (0, i.jsx)(g.Ay, {
+                              children: (0, i.jsx)(p.Ay, {
                                   end: t.timestamp,
-                                  location: g.Ay.Locations.VOICE_CHANNEL_HISTORY,
+                                  location: p.Ay.Locations.VOICE_CHANNEL_HISTORY,
                               }),
                           }),
                       ],
@@ -160,15 +160,15 @@ function v(e) {
               ],
           });
 }
-function j(e) {
+function R(e) {
     let { event: t, guildId: n, channelId: l } = e;
-    return t.eventType === E.i.ACTIVITY_ENDED
+    return t.eventType === x.i.ACTIVITY_ENDED
         ? (0, i.jsx)(y, { event: t, guildId: n, channelId: l })
-        : t.eventType === E.i.USER_LEFT
+        : t.eventType === x.i.USER_LEFT
           ? (0, i.jsx)(v, { event: t, guildId: n, channelId: l })
           : null;
 }
-function R(e) {
+function j(e) {
     let { channel: t } = e,
         n = (0, c.H)(t),
         l = (0, d.Ay)(t);
@@ -186,7 +186,7 @@ function O(e) {
     l.useEffect(() => {
         (0, f.q)(t.id);
     }, [t.id]);
-    let d = (0, s.bG)([x.A], () => x.A.getHistory(t.id), [t.id]),
+    let d = (0, s.bG)([E.A], () => E.A.getHistory(t.id), [t.id]),
         c = d.length > 0;
     return (l.useEffect(() => {
         c && C.default.track(T.HAw.OPEN_POPOUT, { type: "Voice Channel History", channel_id: t.id, source: n });
@@ -199,7 +199,7 @@ function O(e) {
               onMouseEnter: a,
               onMouseLeave: o,
               children: [
-                  "voice_channel" === n ? (0, i.jsx)(R, { channel: t }) : null,
+                  "voice_channel" === n ? (0, i.jsx)(j, { channel: t }) : null,
                   (0, i.jsx)(r.HOs, {
                       children: (0, i.jsxs)("div", {
                           className: b.PI,
@@ -215,7 +215,7 @@ function O(e) {
                               (0, i.jsx)("ol", {
                                   className: b.Gz,
                                   children: d.map((e) =>
-                                      (0, i.jsx)(j, { event: e, guildId: t.guild_id, channelId: t.id }, e.key),
+                                      (0, i.jsx)(R, { event: e, guildId: t.guild_id, channelId: t.id }, e.key),
                                   ),
                               }),
                           ],

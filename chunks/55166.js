@@ -15,13 +15,13 @@ function o(e, t) {
                 if (("u" > typeof Symbol && null != e[Symbol.iterator]) || null != e["@@iterator"])
                     return Array.from(e);
             })(r) ||
-            (function (e, t) {
+            (function (e) {
                 if (e) {
                     if ("string" == typeof e) return i(e, void 0);
-                    var r = Object.prototype.toString.call(e).slice(8, -1);
-                    if (("Object" === r && e.constructor && (r = e.constructor.name), "Map" === r || "Set" === r))
+                    var t = Object.prototype.toString.call(e).slice(8, -1);
+                    if (("Object" === t && e.constructor && (t = e.constructor.name), "Map" === t || "Set" === t))
                         return Array.from(e);
-                    if ("Arguments" === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)) return i(e, void 0);
+                    if ("Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t)) return i(e, void 0);
                 }
             })(r) ||
             (function () {

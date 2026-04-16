@@ -1,10 +1,10 @@
 "use strict";
 s.d(t, { A: () => N });
 var n = s(627968),
-    r = s(64700),
-    l = s(503698),
-    i = s.n(l),
-    a = s(311907),
+    l = s(64700),
+    r = s(503698),
+    a = s.n(r),
+    i = s(311907),
     o = s(990078),
     c = s(397927),
     d = s(975807),
@@ -23,24 +23,24 @@ var n = s(627968),
     S = s(561769),
     v = s(484469),
     I = s(917987),
-    L = s(781815),
+    L = s(4196),
     j = s(938191),
     O = s(758836),
-    T = s(652215),
-    k = s(985018),
-    y = s(297046);
+    k = s(652215),
+    T = s(985018),
+    y = s(941734);
 let N = (e) => {
     let {
             isLoading: t,
             title: s,
-            sortedSkuIds: l,
+            sortedSkuIds: r,
             numVisibleItems: N,
             prioritizeUserDiscounts: R,
             tab: B,
             buttonContainerClassName: P,
             orbsSupportedOnly: M,
         } = e,
-        H = (0, a.bG)([m.default], () => m.default.getCurrentUser()),
+        H = (0, i.bG)([m.default], () => m.default.getCurrentUser()),
         D = x.Ay.canUseCollectibles(H),
         w = (0, C.W)("FeedBlock"),
         F = (0, j.yB)("FeedBlock"),
@@ -49,21 +49,21 @@ let N = (e) => {
             setSortType: U,
             sortedItems: V,
             sortOptions: W,
-            shuffleProducts: K,
-            showRecommendationOption: z,
-        } = (0, L.A)({ sortedSkuIds: l, isPremiumUser: D, prioritizeUserDiscounts: R, orbsSupportedOnly: M }),
-        Y = (0, a.bG)([u.A], () => u.A.useReducedMotion),
-        $ = (0, a.bG)([h.A], () => h.A.isFocused()),
+            shuffleProducts: z,
+            showRecommendationOption: K,
+        } = (0, L.A)({ sortedSkuIds: r, isPremiumUser: D, prioritizeUserDiscounts: R, orbsSupportedOnly: M }),
+        Y = (0, i.bG)([u.A], () => u.A.useReducedMotion),
+        $ = (0, i.bG)([h.A], () => h.A.isFocused()),
         Z = !Y && $,
         { animationPhase: q, startAnimation: X } = (0, I.s)(),
         J = (0, E.uM)(),
         Q = J?.sessionId ?? "",
         { analyticsLocations: ee } = (0, g.Ay)(_.A.COLLECTIBLES_SHOP_POPULAR_PICKS),
-        et = r.useRef(null),
-        es = r.useCallback(
+        et = l.useRef(null),
+        es = l.useCallback(
             (e) => {
                 X({ isShuffling: !1, onOutroComplete: () => U(e) }),
-                    p.default.track(T.HAw.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, { page_session_id: Q, sort_type: e });
+                    p.default.track(k.HAw.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, { page_session_id: Q, sort_type: e });
             },
             [X, U, Q],
         );
@@ -72,7 +72,7 @@ let N = (e) => {
         : (0, n.jsx)(g.f5, {
               value: ee,
               children: (0, n.jsxs)("div", {
-                  className: i()(y.lD, y.YB),
+                  className: a()(y.lD, y.YB),
                   children: [
                       (0, n.jsxs)("div", {
                           className: y.$6,
@@ -81,14 +81,14 @@ let N = (e) => {
                                   className: y.LD,
                                   children: [
                                       (0, n.jsx)(c.Heading, { variant: "heading-lg/semibold", children: s }),
-                                      z &&
+                                      K &&
                                           (0, n.jsx)(o.m, {
-                                              text: k.intl.string(k.t["3taPdj"]),
+                                              text: T.intl.string(T.t["3taPdj"]),
                                               position: "top",
-                                              "aria-label": k.intl.string(k.t["3taPdj"]),
+                                              "aria-label": T.intl.string(T.t["3taPdj"]),
                                               children: (0, n.jsx)(c.DUT, {
                                                   onClick: () =>
-                                                      (0, d.A)(f.A.getArticleURL(T.MVz.DATA_USED_FOR_RECOMMENDED)),
+                                                      (0, d.A)(f.A.getArticleURL(k.MVz.DATA_USED_FOR_RECOMMENDED)),
                                                   className: y.sT,
                                                   children: (0, n.jsx)(c.mir, { size: "sm" }),
                                               }),
@@ -96,16 +96,16 @@ let N = (e) => {
                                   ],
                               }),
                               (0, n.jsxs)("div", {
-                                  className: i()(y.IE, { [j.jP]: F }),
+                                  className: a()(y.IE, { [j.jP]: F }),
                                   children: [
                                       (0, n.jsx)(c.Text, {
                                           variant: "text-md/medium",
-                                          children: k.intl.string(k.t.uaX705),
+                                          children: T.intl.string(T.t.uaX705),
                                       }),
                                       (0, n.jsx)("div", {
-                                          className: i()(P, y.pI),
+                                          className: a()(P, y.pI),
                                           children: (0, n.jsx)(c.l6P, {
-                                              label: k.intl.string(k.t.uaX705),
+                                              label: T.intl.string(T.t.uaX705),
                                               hideLabel: !0,
                                               options: W,
                                               onSelectionChange: es,
@@ -122,11 +122,11 @@ let N = (e) => {
                                           className: P,
                                           children: (0, n.jsx)(c.Button, {
                                               variant: "secondary",
-                                              text: k.intl.string(k.t.X3tnc4),
+                                              text: T.intl.string(T.t.X3tnc4),
                                               buttonRef: et,
                                               onClick: () => {
-                                                  X({ isShuffling: !0, onOutroComplete: K, returnRef: et }),
-                                                      p.default.track(T.HAw.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
+                                                  X({ isShuffling: !0, onOutroComplete: z, returnRef: et }),
+                                                      p.default.track(k.HAw.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
                                                           page_session_id: Q,
                                                       });
                                               },
@@ -145,8 +145,8 @@ let N = (e) => {
                                 })
                               : V.slice(0, N).map((e, t) => {
                                     let s,
-                                        r = b.A.getCategoryForProduct(e.skuId);
-                                    if (null == e || null == r) return null;
+                                        l = b.A.getCategoryForProduct(e.skuId);
+                                    if (null == e || null == l) return null;
                                     if (Z)
                                         if (q === I.J.SHUFFLE_OUT)
                                             return (0, n.jsx)(

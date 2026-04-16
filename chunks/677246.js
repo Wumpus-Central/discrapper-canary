@@ -1,6 +1,6 @@
-!(function (e, t) {
-    t(n(989349));
-})(0, function (e) {
+!(function (e) {
+    e(n(989349));
+})(function (e) {
     "use strict";
     function t(e, t, n) {
         return e + " " + i({ mm: "munutenn", MM: "miz", dd: "devezh" }[n], e);
@@ -21,9 +21,9 @@
         return e > 9 ? r(e % 10) : e;
     }
     function i(e, t) {
-        return 2 === t ? a(e) : e;
+        return 2 === t ? s(e) : e;
     }
-    function a(e) {
+    function s(e) {
         var t = { m: "v", b: "v", d: "z" };
         return void 0 === t[e.charAt(0)] ? e : t[e.charAt(0)] + e.substring(1);
     }

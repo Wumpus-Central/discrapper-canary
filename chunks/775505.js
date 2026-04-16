@@ -31,8 +31,8 @@ var r = n(627968),
     L = n(253932),
     w = n(909536),
     M = n(287809),
-    x = n(954571),
-    P = n(690521),
+    P = n(954571),
+    x = n(690521),
     k = n(474090),
     U = n(927578),
     G = n(240248),
@@ -46,7 +46,7 @@ var r = n(627968),
     K = n(698279),
     $ = n(788868),
     z = n(985018),
-    q = n(488506);
+    q = n(98090);
 let Z = 0,
     X = 0,
     Q = (0, G.xI)(_.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
@@ -111,21 +111,21 @@ let Z = 0,
                         i = t.has(e);
                     i ? r.delete(e) : r.add(e),
                         null != n &&
-                            x.default.track(W.HAw.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
+                            P.default.track(W.HAw.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
                                 location: $.location,
                                 tab: K.kx.EMOJI,
                                 collapsed: !i,
                                 guild_id: n.id,
                             }),
                         e === Y.R2.SOUNDMOJI &&
-                            x.default.track(W.HAw.SOUNDMOJI_EMOJI_PICKER_SECTION_TOGGLED, { collapsed: !i }),
+                            P.default.track(W.HAw.SOUNDMOJI_EMOJI_PICKER_SECTION_TOGGLED, { collapsed: !i }),
                         E(r);
                 },
                 [$, t, E],
             ),
             ed = i.useCallback((e) => {
                 let { columnIndex: t, visibleRowIndex: n } = e,
-                    r = e.type === H.bm.SOUNDMOJI ? null : e.type === H.bm.EMOJI ? (0, P.N)(e.emoji) : e.name;
+                    r = e.type === H.bm.SOUNDMOJI ? null : e.type === H.bm.EMOJI ? (0, x.N)(e.emoji) : e.name;
                 Z.current !== W.An1 && window.cancelAnimationFrame(Z.current),
                     (Z.current = window.requestAnimationFrame(() => {
                         A.Om.setInspectedExpressionPosition(t, n, T.t.MOUSE_EVENT),
@@ -200,7 +200,7 @@ let Z = 0,
                                           className: q.f3,
                                           onClick: () => {
                                               (0, I.U)(K.kx.SOUNDBOARD),
-                                                  x.default.track(W.HAw.SOUNDMOJI_EMOJI_PICKER_VIEW_ALL_CLICK);
+                                                  P.default.track(W.HAw.SOUNDMOJI_EMOJI_PICKER_VIEW_ALL_CLICK);
                                           },
                                           children: z.intl.string(z.t.rUEjBe),
                                       })
@@ -286,7 +286,7 @@ let Z = 0,
                 getEmojiRowProps: N,
                 rowCount: C,
                 isUsingKeyboardNavigation: b,
-                channelGuildId: P,
+                channelGuildId: x,
                 channelId: G,
                 messageId: F,
                 isBurstReaction: V,
@@ -327,7 +327,7 @@ let Z = 0,
                 isScrolling: j,
                 isUsingKeyboardNavigation: b,
                 allowAnimatedEmoji: X,
-                channelGuildId: P,
+                channelGuildId: x,
                 channelId: G,
                 messageId: F,
                 isBurstReaction: V,
@@ -372,7 +372,7 @@ let Z = 0,
         return (
             i.useEffect(() => {
                 es &&
-                    x.default.track(W.HAw.PREMIUM_UPSELL_VIEWED, {
+                    P.default.track(W.HAw.PREMIUM_UPSELL_VIEWED, {
                         type: $.e.EMOJI_PICKER_FLOATING_UPSELL,
                         location: et,
                         location_stack: en,

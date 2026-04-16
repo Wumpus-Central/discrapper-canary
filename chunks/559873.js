@@ -12,12 +12,12 @@ var i = n(627968),
     A = n(85109),
     _ = n(914703),
     m = n(932883),
-    g = n(394953),
-    p = n(654795),
+    p = n(394953),
+    g = n(654795),
     f = n(849077),
-    x = n(652215),
-    E = n(985018),
-    I = n(68450);
+    E = n(652215),
+    x = n(985018),
+    I = n(285618);
 let C = {
     [f.Th.MENTION]: [f.kR.SETTINGS],
     [f.Th.REPLY]: [f.kR.SETTINGS],
@@ -49,23 +49,23 @@ function T(e) {
     let { channel: t, message: n, label: s, Icon: o, Menu: d, interactionType: c, actionType: u } = e,
         h = (0, m.op)(),
         [A, _] = (0, l.useState)(!1),
-        [g, f] = (0, l.useState)(!1),
-        x = (0, l.useRef)(null),
-        { openMenu: E, closeMenu: C } = (0, p.s)();
+        [p, f] = (0, l.useState)(!1),
+        E = (0, l.useRef)(null),
+        { openMenu: x, closeMenu: C } = (0, g.s)();
     return (0, i.jsx)(r.YNO, {
-        shouldShow: g,
+        shouldShow: p,
         animation: r.YNO.Animation.NONE,
         position: "right",
         align: "top",
         autoInvert: !1,
-        targetElementRef: x,
+        targetElementRef: E,
         onRequestClose: () => {
             f(!1), C(n.id, u);
         },
         renderPopout: (e) =>
             (0, i.jsx)(r.lGe, {
                 onClick: (e) => e.stopPropagation(),
-                returnRef: x,
+                returnRef: E,
                 children: (0, i.jsx)(d, { "data-menu-migrated": !0, renderPopoutProps: e, channel: t, message: n }),
             }),
         children: (e) =>
@@ -77,14 +77,14 @@ function T(e) {
                 onTooltipShow: () => _(!0),
                 onTooltipHide: () => _(!1),
                 children: (0, i.jsx)(r.DUT, {
-                    innerRef: x,
+                    innerRef: E,
                     className: I.XI,
                     onClick: (e) => {
                         let t;
                         (0, m.Ml)({ message: n, interactionType: c, viewId: h }),
                             e.stopPropagation(),
-                            f((t = !g)),
-                            t ? E(n.id, u) : C(n.id, u);
+                            f((t = !p)),
+                            t ? x(n.id, u) : C(n.id, u);
                     },
                     children: (0, i.jsx)(o, {
                         ...e,
@@ -101,12 +101,12 @@ let S = {
     [f.kR.ACK]: {
         type: "standard",
         Icon: r.A9s,
-        label: E.intl.string(E.t.e6RscS),
+        label: x.intl.string(x.t.e6RscS),
         onClick: (e) => {
             o.h.dispatch({ type: "NOTIFICATIONS_INBOX_ITEM_ACK", messageId: e.id, channelId: e.channel_id }),
                 d.ack(
                     e.channel_id,
-                    { object: x.ZSU.MARK_MESSAGE_AS_READ_BUTTON, objectType: x.AnalyticsObjectTypes.ACK_MANUAL },
+                    { object: E.ZSU.MARK_MESSAGE_AS_READ_BUTTON, objectType: E.AnalyticsObjectTypes.ACK_MANUAL },
                     !0,
                     void 0,
                     e.id,
@@ -116,7 +116,7 @@ let S = {
     },
     [f.kR.BOOKMARK]: {
         type: "menu",
-        label: E.intl.string(E.t["9p3D9p"]),
+        label: x.intl.string(x.t["9p3D9p"]),
         Icon: (e) =>
             null != A.A.getSavedMessage(e.message.channel_id, e.message.id)
                 ? (0, i.jsx)(r.cFy, { ...e })
@@ -130,14 +130,14 @@ let S = {
                 "data-menu-migrated-auto": !0,
                 ...n,
                 navId: "message-reminder-create",
-                "aria-label": E.intl.string(E.t.mJ3P0N),
+                "aria-label": x.intl.string(x.t.mJ3P0N),
                 onClose: n.closePopout,
                 onSelect: () => null,
                 children: [
                     null != l
                         ? (0, i.jsx)(r.Drp, {
                               id: "remove-from-for-later",
-                              label: E.intl.string(E.t.SvXS1Z),
+                              label: x.intl.string(x.t.SvXS1Z),
                               icon: r.cFy,
                               leadingAccessory: { type: "icon", icon: r.cFy },
                               action: () =>
@@ -150,7 +150,7 @@ let S = {
                           })
                         : (0, i.jsx)(r.Drp, {
                               id: "create-bookmark",
-                              label: E.intl.string(E.t["9p3D9p"]),
+                              label: x.intl.string(x.t["9p3D9p"]),
                               icon: r.c$8,
                               leadingAccessory: { type: "icon", icon: r.c$8 },
                               action: () => (0, h.Y)({ channelId: t.channel_id, messageId: t.id, displayToast: !0 }),
@@ -164,13 +164,13 @@ let S = {
     [f.kR.SETTINGS]: {
         type: "menu",
         Icon: r.XFE,
-        label: E.intl.string(E.t.h850Ss),
+        label: x.intl.string(x.t.h850Ss),
         interactionType: m.X8.SETTINGS,
         Menu: (e) => {
             let { channel: t, renderPopoutProps: n } = e;
             return t.isThread()
-                ? (0, i.jsx)(_.A, { ...n, channel: t, navId: "thread-context", label: E.intl.string(E.t["1NBjqb"]) })
-                : (0, i.jsx)(c.A, { ...n, channel: t, navId: "channel-context", label: E.intl.string(E.t.Xm41aV) });
+                ? (0, i.jsx)(_.A, { ...n, channel: t, navId: "thread-context", label: x.intl.string(x.t["1NBjqb"]) })
+                : (0, i.jsx)(c.A, { ...n, channel: t, navId: "channel-context", label: x.intl.string(x.t.Xm41aV) });
         },
     },
 };
@@ -178,7 +178,7 @@ function b(e) {
     let t,
         { message: n, channel: s, isUnread: a } = e,
         o =
-            ((t = (0, g.i3)()),
+            ((t = (0, p.i3)()),
             (0, l.useMemo)(() => {
                 let e = f.Th.MENTION,
                     n = new Set();

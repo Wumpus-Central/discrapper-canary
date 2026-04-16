@@ -7,7 +7,7 @@ var i = n(627968),
     o = n(707539),
     d = n(617011),
     c = n(985018),
-    u = n(94287);
+    u = n(614879);
 function h(e) {
     let { channel: t } = e,
         [n, h] = l.useState(!1),
@@ -16,7 +16,7 @@ function h(e) {
         m = l.useCallback(() => {
             h(!1);
         }, []),
-        g = l.useCallback(() => {
+        p = l.useCallback(() => {
             n || (0, o.D3)("Popout"), h(!n);
         }, [n]);
     return (0, i.jsx)(s.YNO, {
@@ -39,7 +39,7 @@ function h(e) {
                 ...e,
                 ref: A,
                 className: u.Kk,
-                onClick: g,
+                onClick: p,
                 icon: s.ysw,
                 "aria-label": c.intl.string(c.t.B2panI),
                 tooltip: n ? null : c.intl.string(c.t.B2panI),

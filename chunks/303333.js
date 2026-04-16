@@ -9,13 +9,13 @@ var i = n(627968),
     c = n(522435),
     u = n(493819),
     h = n(722884),
-    A = n(148690),
+    A = n(844045),
     _ = n(985018),
-    m = n(591454);
-function g(e) {
+    m = n(31950);
+function p(e) {
     let { channel: t, imageUrl: n, animatedUrl: d, canModifyHangout: c } = e,
-        g = (0, r.S)(n),
-        p = l.useCallback(() => {
+        p = (0, r.S)(n),
+        g = l.useCallback(() => {
             (0, h.A)({ channel: t });
         }, [t]),
         f = l.useCallback(() => {
@@ -26,7 +26,7 @@ function g(e) {
         children: [
             (0, i.jsx)("div", {
                 className: m.ZS,
-                style: null != g ? { backgroundColor: g } : void 0,
+                style: null != p ? { backgroundColor: p } : void 0,
                 children: (0, i.jsx)(u.A, { imageUrl: n, animatedUrl: d, className: m.Sl }),
             }),
             c
@@ -37,7 +37,7 @@ function g(e) {
                               text: _.intl.string(A.default.XJ4UpB),
                               children: (0, i.jsx)(a.DUT, {
                                   className: m.HF,
-                                  onClick: p,
+                                  onClick: g,
                                   children: (0, i.jsx)(a.R2l, { size: "xs", color: "currentColor" }),
                               }),
                           }),
@@ -55,7 +55,7 @@ function g(e) {
         ],
     });
 }
-function p(e) {
+function g(e) {
     let { channel: t } = e,
         n = l.useCallback(() => {
             (0, h.A)({ channel: t });
@@ -89,9 +89,9 @@ function f(e) {
         );
     return s
         ? null != h
-            ? (0, i.jsx)(g, { channel: t, imageUrl: h.imageUrl, animatedUrl: h.animatedUrl, canModifyHangout: r })
+            ? (0, i.jsx)(p, { channel: t, imageUrl: h.imageUrl, animatedUrl: h.animatedUrl, canModifyHangout: r })
             : r
-              ? (0, i.jsx)(p, { channel: t })
+              ? (0, i.jsx)(g, { channel: t })
               : null
         : null;
 }

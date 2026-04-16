@@ -3,14 +3,14 @@ var i = n(627968);
 n(64700);
 var s = n(397927),
     l = n(854627),
-    a = n(778712),
-    r = n(985018),
-    o = n(173813);
+    r = n(778712),
+    a = n(985018),
+    o = n(45861);
 function d(e) {
     let { referrer: t, enablePremiumBrandRefresh: n } = e,
         { avatarSrc: d, eventHandlers: c } = (0, l.A)({
             userId: t?.id,
-            size: n ? a._3.SIZE_24 : a._3.SIZE_32,
+            size: n ? r._3.SIZE_24 : r._3.SIZE_32,
             animateOnHover: !0,
         });
     return (0, i.jsx)("div", {
@@ -24,7 +24,7 @@ function d(e) {
                         className: o.Kk,
                         src: d,
                         "aria-label": t.username,
-                        size: a._3.SIZE_32,
+                        size: r._3.SIZE_32,
                         ...c,
                     }),
                 }),
@@ -32,7 +32,7 @@ function d(e) {
                     variant: "heading-sm/normal",
                     className: o.Mn,
                     color: "text-strong",
-                    children: r.intl.format(r.t.IqxblS, { username: null != t.globalName ? t.globalName : t.username }),
+                    children: a.intl.format(a.t.IqxblS, { username: null != t.globalName ? t.globalName : t.username }),
                 }),
             ],
         }),

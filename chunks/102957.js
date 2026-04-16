@@ -1,13 +1,13 @@
-l.d(t, { r: () => y });
+l.d(t, { r: () => f });
 var a = l(627968),
     n = l(64700),
     r = l(342393),
     i = l(732955),
-    s = l(397927),
-    o = l(558179),
-    u = l(156312),
+    o = l(397927),
+    s = l(558179),
+    d = l(156312),
     c = l(252561),
-    d = l(825057);
+    u = l(76488);
 let p = {
         DEFAULT: "Express Checkout Element - Default (No Config)",
         GPAY_FILTERED: "Express Checkout Element - Filtered for Google Pay",
@@ -27,13 +27,13 @@ let p = {
         buttonHeight: 40,
     },
     b = (e) => (void 0 !== e ? JSON.stringify(e, null, 2) : "undefined");
-function g() {
+function y() {
     let [e, t] = n.useState(b(h)),
-        [l, u] = n.useState(h),
-        [m, g] = n.useState(b(x)),
-        [y, E] = n.useState(x),
-        [f, v] = n.useState(null),
-        [S, j] = n.useState(
+        [l, d] = n.useState(h),
+        [m, y] = n.useState(b(x)),
+        [f, g] = n.useState(x),
+        [v, _] = n.useState(null),
+        [E, C] = n.useState(
             (0, a.jsx)(c.a8, {
                 errorLabel: p.CONFIGURABLE,
                 elementOptions: h,
@@ -47,9 +47,9 @@ function g() {
         );
     return (0, a.jsxs)("div", {
         children: [
-            (0, a.jsxs)(s.Text, {
+            (0, a.jsxs)(o.Text, {
                 variant: "text-md/normal",
-                className: d.cW,
+                className: u.cW,
                 children: [
                     "Try configuring options for the Stripe Element container and Express Checkout Element here. Not all settings will change the appearance or functionality of the checkout button - use this to figure out the customizability of the Express Checkout Element.",
                     (0, a.jsx)("br", {}),
@@ -57,9 +57,9 @@ function g() {
                     "Start by changing the `borderRadius` or `buttonHeight` as a test!",
                 ],
             }),
-            (0, a.jsxs)(s.Text, {
+            (0, a.jsxs)(o.Text, {
                 variant: "text-md/normal",
-                className: d.cW,
+                className: u.cW,
                 children: [
                     (0, a.jsx)("b", { children: "elements.options:" }),
                     (0, a.jsx)("br", {}),
@@ -69,8 +69,8 @@ function g() {
                 ],
             }),
             (0, a.jsx)("div", {
-                className: d.PC,
-                children: (0, a.jsx)(s.fs1, {
+                className: u.PC,
+                children: (0, a.jsx)(o.fs1, {
                     placeholder: "Stripe Elements Container Options",
                     showCharacterCount: !0,
                     value: e,
@@ -78,9 +78,9 @@ function g() {
                     rows: 7,
                 }),
             }),
-            (0, a.jsxs)(s.Text, {
+            (0, a.jsxs)(o.Text, {
                 variant: "text-md/normal",
-                className: d.cW,
+                className: u.cW,
                 children: [
                     (0, a.jsx)("b", { children: "expressCheckoutElement.options:" }),
                     (0, a.jsx)("br", {}),
@@ -94,20 +94,20 @@ function g() {
                 ],
             }),
             (0, a.jsx)("div", {
-                className: d.PC,
-                children: (0, a.jsx)(s.fs1, {
+                className: u.PC,
+                children: (0, a.jsx)(o.fs1, {
                     placeholder: "Stripe Express Checkout Element Options",
                     showCharacterCount: !0,
                     value: m,
-                    onChange: g,
+                    onChange: y,
                     rows: 7,
                 }),
             }),
-            null != f &&
-                (0, a.jsx)(s.Text, { variant: "text-md/normal", color: "text-feedback-critical", children: f }),
+            null != v &&
+                (0, a.jsx)(o.Text, { variant: "text-md/normal", color: "text-feedback-critical", children: v }),
             (0, a.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
-                className: d.Ut,
+                className: u.Ut,
                 children: (0, a.jsx)(i.$nd, {
                     variant: "primary",
                     size: "sm",
@@ -116,13 +116,13 @@ function g() {
                         try {
                             let t = JSON.parse(e),
                                 l = JSON.parse(m);
-                            j(null),
-                                j(
+                            C(null),
+                                C(
                                     (0, a.jsxs)(a.Fragment, {
                                         children: [
-                                            (0, a.jsxs)(s.Text, {
+                                            (0, a.jsxs)(o.Text, {
                                                 variant: "text-md/normal",
-                                                className: d.cW,
+                                                className: u.cW,
                                                 children: ["Element updated at: ", new Date().toString()],
                                             }),
                                             (0, a.jsx)(c.a8, {
@@ -138,45 +138,45 @@ function g() {
                                         ],
                                     }),
                                 ),
-                                u(t),
-                                E(l),
-                                v(null);
+                                d(t),
+                                g(l),
+                                _(null);
                         } catch (e) {
                             console.error("ConfigurableStripeExpressCheckoutElement - error parsing JSON: ", e),
-                                v("Error parsing JSON. Check console for more information.");
+                                _("Error parsing JSON. Check console for more information.");
                         }
                     },
                 }),
             }),
-            (0, a.jsx)(s.Text, { variant: "text-md/normal", className: d.cW, children: "Current Element Options:" }),
-            (0, a.jsx)(s.Text, {
+            (0, a.jsx)(o.Text, { variant: "text-md/normal", className: u.cW, children: "Current Element Options:" }),
+            (0, a.jsx)(o.Text, {
                 variant: "text-md/normal",
-                children: (0, a.jsx)(o.A, { className: d.wD, children: `\`\` ${b(l)} \`\`` }),
+                children: (0, a.jsx)(s.A, { className: u.wD, children: `\`\` ${b(l)} \`\`` }),
             }),
-            (0, a.jsx)(s.Text, {
+            (0, a.jsx)(o.Text, {
                 variant: "text-md/normal",
-                className: d.cW,
+                className: u.cW,
                 children: "Current Express Checkout Element Options:",
             }),
-            (0, a.jsx)(s.Text, {
+            (0, a.jsx)(o.Text, {
                 variant: "text-md/normal",
-                children: (0, a.jsx)(o.A, { className: d.wD, children: `\`\` ${b(y)} \`\`` }),
+                children: (0, a.jsx)(s.A, { className: u.wD, children: `\`\` ${b(f)} \`\`` }),
             }),
-            S,
+            E,
         ],
     });
 }
-let y = {
+let f = {
     name: "Stripe Components",
     id: "stripe-components",
     component: function () {
-        return (0, a.jsx)(u.PaymentContextProvider, {
+        return (0, a.jsx)(d.PaymentContextProvider, {
             stepConfigs: [],
             skuIDs: [],
             activeSubscription: null,
             children: (0, a.jsxs)(c.wn, {
                 children: [
-                    (0, a.jsx)(s.Heading, {
+                    (0, a.jsx)(o.Heading, {
                         variant: "heading-xl/semibold",
                         children: "Stripe Express Checkout Buttons",
                     }),
@@ -202,15 +202,15 @@ let y = {
                                 label: t,
                                 children: (0, a.jsxs)("div", {
                                     children: [
-                                        (0, a.jsx)(s.Text, {
+                                        (0, a.jsx)(o.Text, {
                                             variant: "text-md/normal",
-                                            className: d.cW,
+                                            className: u.cW,
                                             children: "expressCheckoutElement.options:",
                                         }),
-                                        (0, a.jsx)(s.Text, {
+                                        (0, a.jsx)(o.Text, {
                                             variant: "text-md/normal",
-                                            children: (0, a.jsx)(o.A, {
-                                                className: d.wD,
+                                            children: (0, a.jsx)(s.A, {
+                                                className: u.wD,
                                                 children: `\`\`${b(m[e])} \`\``,
                                             }),
                                         }),
@@ -229,7 +229,7 @@ let y = {
                             e,
                         );
                     }),
-                    (0, a.jsx)(c.Hq, { label: p.CONFIGURABLE, children: (0, a.jsx)(g, {}) }),
+                    (0, a.jsx)(c.Hq, { label: p.CONFIGURABLE, children: (0, a.jsx)(y, {}) }),
                 ],
             }),
         });

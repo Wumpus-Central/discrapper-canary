@@ -51,10 +51,10 @@ async function h(e) {
         L.length > 0 && (A?.(!0), await Promise.allSettled(L), A?.(!1));
     let w = (0, d.D$)(u.A.boostSlots),
         M = w.length,
-        x = (e) => {
+        P = (e) => {
             g?.(), v?.(e);
         },
-        P = () => {
+        x = () => {
             g?.(), I?.();
         };
     if (M > 0 && (null == E || M >= E)) {
@@ -64,16 +64,16 @@ async function h(e) {
                 async () => {
                     let { default: t } = await Promise.all([
                         n.e("62175"),
-                        n.e("62733"),
+                        n.e("26456"),
                         n.e("34749"),
-                        n.e("13676"),
+                        n.e("9536"),
                     ]).then(n.bind(n, 657516));
                     return (n) => {
                         let { onClose: i, ...s } = n;
                         return (0, r.jsx)(t, {
                             ...s,
                             onClose: (e) => {
-                                i(), x(e);
+                                i(), P(e);
                             },
                             selectedGuild: y,
                             locationSection: f.liQ.PREMIUM_GUILD_USER_MODAL,
@@ -85,7 +85,7 @@ async function h(e) {
                 {
                     modalKey: p,
                     onCloseRequest: () => {
-                        (0, i.OoC)(p), x(!1);
+                        (0, i.OoC)(p), P(!1);
                     },
                     contextKey: b,
                 },
@@ -96,9 +96,9 @@ async function h(e) {
             analyticsLocation: h,
             analyticsSourceLocation: m,
             guildId: y.id,
-            closeLayer: P,
+            closeLayer: x,
             totalNumberOfSlotsToAssign: E ?? 1,
-            onCloseModal: x,
+            onCloseModal: P,
             disablePremiumUpsell: N,
             onSubscriptionConfirmation: T,
             onSubscribeComplete: S,

@@ -9,7 +9,7 @@ var o = l(t(736883)),
     u = l(t(431700)),
     d = l(t(448556)),
     c = l(t(68052)),
-    p = l(t(582617)),
+    p = l(t(804998)),
     m = l(t(936876)),
     b = l(t(729823)),
     f = l(t(747562)),
@@ -20,14 +20,14 @@ function q(e, r) {
     if (void 0 === i.default || null == (0, n.default)(e)) {
         if (
             (0, s.default)(e) ||
-            (l = (function (e, r) {
+            (l = (function (e) {
                 if (e) {
                     if ("string" == typeof e) return P(e, void 0);
-                    var t,
-                        a = (0, d.default)((t = Object.prototype.toString.call(e))).call(t, 8, -1);
-                    if (("Object" === a && e.constructor && (a = e.constructor.name), "Map" === a || "Set" === a))
+                    var r,
+                        t = (0, d.default)((r = Object.prototype.toString.call(e))).call(r, 8, -1);
+                    if (("Object" === t && e.constructor && (t = e.constructor.name), "Map" === t || "Set" === t))
                         return (0, u.default)(e);
-                    if ("Arguments" === a || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(a)) return P(e, void 0);
+                    if ("Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t)) return P(e, void 0);
                 }
             })(e)) ||
             (r && e && "number" == typeof e.length)

@@ -8,8 +8,8 @@ var n = r(627968),
     u = r(201672),
     d = r(833871),
     p = r.n(d);
-function f(e) {
-    return (f =
+function l(e) {
+    return (l =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
             ? function (e) {
                   return typeof e;
@@ -25,8 +25,8 @@ function h(e, t) {
     for (var r = 0, n = Array(t); r < t; r++) n[r] = e[r];
     return n;
 }
-function l(e, t) {
-    return (l =
+function f(e, t) {
+    return (f =
         Object.setPrototypeOf ||
         function (e, t) {
             return (e.__proto__ = t), e;
@@ -56,18 +56,18 @@ function b(e) {
         b = e.createConnector,
         m = e.registerHandler,
         D = e.containerDisplayName,
-        k = e.getType,
-        C = e.collect,
+        C = e.getType,
+        k = e.collect,
         w = e.options.arePropsEqual,
         j = void 0 === w ? i.b : w,
-        I = t.displayName || t.name || "Component",
-        O = (function (e) {
+        E = t.displayName || t.name || "Component",
+        I = (function (e) {
             if ("function" != typeof e && null !== e)
                 throw TypeError("Super expression must either be null or a function");
-            (O.prototype = Object.create(e && e.prototype, {
-                constructor: { value: O, writable: !0, configurable: !0 },
+            (I.prototype = Object.create(e && e.prototype, {
+                constructor: { value: I, writable: !0, configurable: !0 },
             })),
-                e && l(O, e);
+                e && f(I, e);
             var p,
                 D,
                 w =
@@ -82,20 +82,20 @@ function b(e) {
                     })()),
                     function () {
                         var e,
-                            t = y(O);
+                            t = y(I);
                         return (
                             (e = p ? Reflect.construct(t, arguments, y(this).constructor) : t.apply(this, arguments)),
                             (function (e, t) {
-                                if (t && ("object" === f(t) || "function" == typeof t)) return t;
+                                if (t && ("object" === l(t) || "function" == typeof t)) return t;
                                 if (void 0 !== t)
                                     throw TypeError("Derived constructors may only return object or undefined");
                                 return v(e);
                             })(this, e)
                         );
                     });
-            function O(e) {
+            function I(e) {
                 var t;
-                if (!(this instanceof O)) throw TypeError("Cannot call a class as a function");
+                if (!(this instanceof I)) throw TypeError("Cannot call a class as a function");
                 return (
                     g(v((t = w.call(this, e))), "decoratedRef", (0, o.createRef)()),
                     g(v(t), "handlerId", void 0),
@@ -167,7 +167,7 @@ function b(e) {
                     {
                         key: "receiveProps",
                         value: function (e) {
-                            this.handler && (this.handler.receiveProps(e), this.receiveType(k(e)));
+                            this.handler && (this.handler.receiveProps(e), this.receiveType(C(e)));
                         },
                     },
                     {
@@ -185,52 +185,52 @@ function b(e) {
                                         (function (e) {
                                             if (Array.isArray(e)) return e;
                                         })((t = m(e, this.handler, this.manager))) ||
-                                        (function (e, t) {
-                                            var r,
-                                                n,
-                                                o =
+                                        (function (e) {
+                                            var t,
+                                                r,
+                                                n =
                                                     null == e
                                                         ? null
                                                         : ("u" > typeof Symbol && e[Symbol.iterator]) ||
                                                           e["@@iterator"];
-                                            if (null != o) {
-                                                var i = [],
-                                                    a = !0,
-                                                    s = !1;
+                                            if (null != n) {
+                                                var o = [],
+                                                    i = !0,
+                                                    a = !1;
                                                 try {
                                                     for (
-                                                        o = o.call(e);
-                                                        !(a = (r = o.next()).done) && (i.push(r.value), 2 !== i.length);
-                                                        a = !0
+                                                        n = n.call(e);
+                                                        !(i = (t = n.next()).done) && (o.push(t.value), 2 !== o.length);
+                                                        i = !0
                                                     );
                                                 } catch (e) {
-                                                    (s = !0), (n = e);
+                                                    (a = !0), (r = e);
                                                 } finally {
                                                     try {
-                                                        a || null == o.return || o.return();
+                                                        i || null == n.return || n.return();
                                                     } finally {
-                                                        if (s) throw n;
+                                                        if (a) throw r;
                                                     }
                                                 }
-                                                return i;
+                                                return o;
                                             }
-                                        })(t, 2) ||
-                                        (function (e, t) {
+                                        })(t) ||
+                                        (function (e) {
                                             if (e) {
                                                 if ("string" == typeof e) return h(e, 2);
-                                                var r = Object.prototype.toString.call(e).slice(8, -1);
+                                                var t = Object.prototype.toString.call(e).slice(8, -1);
                                                 if (
-                                                    ("Object" === r && e.constructor && (r = e.constructor.name),
-                                                    "Map" === r || "Set" === r)
+                                                    ("Object" === t && e.constructor && (t = e.constructor.name),
+                                                    "Map" === t || "Set" === t)
                                                 )
                                                     return Array.from(e);
                                                 if (
-                                                    "Arguments" === r ||
-                                                    /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
+                                                    "Arguments" === t ||
+                                                    /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t)
                                                 )
                                                     return h(e, 2);
                                             }
-                                        })(t, 2) ||
+                                        })(t) ||
                                         (function () {
                                             throw TypeError(
                                                 "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
@@ -259,7 +259,7 @@ function b(e) {
                         key: "getCurrentState",
                         value: function () {
                             return this.handlerConnector
-                                ? C(this.handlerConnector.hooks, this.handlerMonitor, this.props)
+                                ? k(this.handlerConnector.hooks, this.handlerMonitor, this.props)
                                 : {};
                         },
                     },
@@ -304,8 +304,8 @@ function b(e) {
                                 ((0, a.V)(
                                     void 0 !== e,
                                     "Could not find the drag and drop manager in the context of %s. Make sure to render a DndProvider component in your top-level component. Read more: http://react-dnd.github.io/react-dnd/docs/troubleshooting#could-not-find-the-drag-and-drop-manager-in-the-context",
-                                    I,
-                                    I,
+                                    E,
+                                    E,
                                 ),
                                 void 0 !== e &&
                                     ((this.manager = e),
@@ -323,9 +323,9 @@ function b(e) {
                             "value" in n && (n.writable = !0),
                             Object.defineProperty(e, n.key, n);
                     }
-                })(O.prototype, D),
-                O
+                })(I.prototype, D),
+                I
             );
         })(o.Component);
-    return g(O, "DecoratedComponent", t), g(O, "displayName", "".concat(D, "(").concat(I, ")")), p()(O, t);
+    return g(I, "DecoratedComponent", t), g(I, "displayName", "".concat(D, "(").concat(E, ")")), p()(I, t);
 }

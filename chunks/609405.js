@@ -1,9 +1,9 @@
 n.d(t, { A: () => j, N: () => I }), n(321073);
 var i = n(627968),
     s = n(64700),
-    l = n(687498),
-    a = n(417597),
-    r = n(397927),
+    l = n(407045),
+    r = n(417597),
+    a = n(397927),
     o = n(775602),
     d = n(531260),
     c = n(39672),
@@ -12,18 +12,18 @@ var i = n(627968),
     g = n(473145),
     _ = n(927578),
     x = n(661191),
-    A = n(311092),
-    h = n(233413),
+    h = n(311092),
+    A = n(233413),
     p = n(400297),
     T = n(652215),
     f = n(788868),
     S = n(985018),
-    b = n(73468);
-function E(e) {
+    E = n(930988);
+function b(e) {
     let {
             guildTier: t,
             guildBoostSlot: n,
-            showAltText: a,
+            showAltText: r,
             isCanceled: o,
             premiumSubscription: d,
             fractionalPremiumInfo: c,
@@ -65,17 +65,17 @@ function E(e) {
                 })(t),
             [t],
         ),
-        g = (0, r.pnh)(a, { from: { opacity: 0 }, enter: { opacity: 1 }, leave: { opacity: 0 } }, "animate-always");
+        g = (0, a.pnh)(r, { from: { opacity: 0 }, enter: { opacity: 1 }, leave: { opacity: 0 } }, "animate-always");
     return o || t === T.TVA.NONE
         ? (0, i.jsx)("div", {
-              className: b.xm,
-              children: (0, i.jsx)(r.Text, { variant: "text-sm/medium", color: "text-muted", children: u }),
+              className: E.xm,
+              children: (0, i.jsx)(a.Text, { variant: "text-sm/medium", color: "text-muted", children: u }),
           })
         : g((e, t) =>
               (0, i.jsx)(l.animated.div, {
                   style: e,
-                  className: b.xm,
-                  children: (0, i.jsx)(r.Text, { variant: "text-sm/medium", color: "text-muted", children: t ? m : u }),
+                  className: E.xm,
+                  children: (0, i.jsx)(a.Text, { variant: "text-sm/medium", color: "text-muted", children: t ? m : u }),
               }),
           );
 }
@@ -88,25 +88,25 @@ function C(e) {
             showAltText: m,
             isLastGuildBoostSlot: _,
         } = e,
-        x = (0, a.bG)([o.A], () => o.A.useReducedMotion),
+        x = (0, r.bG)([o.A], () => o.A.useReducedMotion),
         p = s.useMemo(() => (null != n.cooldownEndsAt ? new Date(n.cooldownEndsAt) : null), [n]),
         T = s.useMemo(() => null != p && p > new Date(), [p]),
         f = (0, g.I5)(n),
         C = (0, d.A)(),
-        N = s.useRef(null);
+        v = s.useRef(null);
     return (0, i.jsxs)("div", {
-        className: b.PW,
+        className: E.PW,
         children: [
             (0, i.jsxs)("div", {
-                className: b.$U,
+                className: E.$U,
                 children: [
-                    (0, i.jsx)(h.A, { isCanceled: f, hasCooldown: T, useReducedMotion: x }),
+                    (0, i.jsx)(A.A, { isCanceled: f, hasCooldown: T, useReducedMotion: x }),
                     (0, i.jsx)("div", {
-                        className: b.vh,
+                        className: E.vh,
                         children:
                             null != p && T && !f
-                                ? (0, i.jsx)(A.A, { className: b.xm, cooldown: p.getTime() })
-                                : (0, i.jsx)(E, {
+                                ? (0, i.jsx)(h.A, { className: E.xm, cooldown: p.getTime() })
+                                : (0, i.jsx)(b, {
                                       guildTier: t,
                                       guildBoostSlot: n,
                                       showAltText: m,
@@ -115,8 +115,8 @@ function C(e) {
                                       fractionalPremiumInfo: C,
                                   }),
                     }),
-                    (0, i.jsx)(r.YNO, {
-                        targetElementRef: N,
+                    (0, i.jsx)(a.YNO, {
+                        targetElementRef: v,
                         renderPopout: function (e) {
                             let { closePopout: t } = e;
                             return (0, i.jsx)(c.A, {
@@ -130,31 +130,31 @@ function C(e) {
                         position: "right",
                         align: "center",
                         children: (e) =>
-                            (0, i.jsx)(r.DUT, {
+                            (0, i.jsx)(a.DUT, {
                                 ...e,
-                                innerRef: N,
+                                innerRef: v,
                                 "aria-label": S.intl.string(S.t.PdRCRg),
-                                className: b.oU,
-                                children: (0, i.jsx)(r.FHP, { size: "md", color: "currentColor" }),
+                                className: E.oU,
+                                children: (0, i.jsx)(a.FHP, { size: "md", color: "currentColor" }),
                             }),
                     }),
                 ],
             }),
-            !_ && (0, i.jsx)("div", { className: b.eX }),
+            !_ && (0, i.jsx)("div", { className: E.eX }),
         ],
     });
 }
-function N(e) {
+function v(e) {
     let {
             guildId: t,
             guildBoostSlotRecords: n,
             premiumSubscription: s,
             hasCancelableGuildBoostSlot: l,
-            showAltText: r,
+            showAltText: a,
         } = e,
-        o = (0, a.bG)([m.A], () => m.A.getGuild(t), [t]);
+        o = (0, r.bG)([m.A], () => m.A.getGuild(t), [t]);
     return (0, i.jsxs)("div", {
-        className: b.ag,
+        className: E.ag,
         children: [
             (0, i.jsx)(p.A, { guildId: t, boostingVariant: !1 }),
             n.map((e, t) =>
@@ -165,7 +165,7 @@ function N(e) {
                         guildBoostSlot: e,
                         premiumSubscription: s,
                         hasCancelableGuildBoostSlot: l,
-                        showAltText: r,
+                        showAltText: a,
                         isLastGuildBoostSlot: t === n.length - 1,
                     },
                     e.id,
@@ -174,15 +174,15 @@ function N(e) {
         ],
     });
 }
-function v(e) {
+function N(e) {
     let { guildId: t, appliedGuildBoosts: n, premiumSubscription: s } = e,
-        l = (0, a.bG)([m.A], () => m.A.getGuild(t), [t]),
-        r = x.default.fromTimestamp(Date.now());
+        l = (0, r.bG)([m.A], () => m.A.getGuild(t), [t]),
+        a = x.default.fromTimestamp(Date.now());
     if (
         (n.forEach((e) => {
-            (null == r || 0 > x.default.compare(e.id, r)) && (r = e.id);
+            (null == a || 0 > x.default.compare(e.id, a)) && (a = e.id);
         }),
-        null == r)
+        null == a)
     )
         return null;
     let o = u.A.createFromServer(
@@ -190,13 +190,13 @@ function v(e) {
             id: x.default.fromTimestamp(Date.now()),
             subscription_id: s.id,
             canceled: !1,
-            premium_guild_subscription: { id: r, guild_id: t },
+            premium_guild_subscription: { id: a, guild_id: t },
             cooldown_ends_at: null,
         },
         s,
     );
     return (0, i.jsxs)("div", {
-        className: b.ag,
+        className: E.ag,
         children: [
             (0, i.jsx)(p.A, { guildId: t, boostingVariant: !1 }),
             n.map((e, t) =>
@@ -231,36 +231,36 @@ function I(e) {
     return null == n || 0 === t.length
         ? null
         : (0, i.jsxs)("div", {
-              className: b.iE,
+              className: E.iE,
               children: [
                   (0, i.jsx)("div", {
-                      className: b.kL,
+                      className: E.kL,
                       children: x.default
                           .keys(l)
                           .map((e) =>
-                              (0, i.jsx)(v, { guildId: e, premiumSubscription: n, appliedGuildBoosts: l[e] }, e),
+                              (0, i.jsx)(N, { guildId: e, premiumSubscription: n, appliedGuildBoosts: l[e] }, e),
                           ),
                   }),
-                  (0, i.jsx)("div", { className: b.vK }),
+                  (0, i.jsx)("div", { className: E.vK }),
               ],
           });
 }
 function j(e) {
     let { guildBoostSlots: t, premiumSubscription: n } = e,
-        [l, a] = s.useState(!1);
+        [l, r] = s.useState(!1);
     s.useEffect(() => {
         let e = -1;
         return (
             null != n &&
                 (e = setInterval(() => {
-                    a((e) => !e);
+                    r((e) => !e);
                 }, 3e3)),
             () => {
                 clearInterval(e);
             }
         );
     }, [n]);
-    let { boostsByGuildId: r, numActiveGuildBoostSlots: o } = s.useMemo(() => {
+    let { boostsByGuildId: a, numActiveGuildBoostSlots: o } = s.useMemo(() => {
         let e = 0,
             n = {};
         return (
@@ -274,21 +274,21 @@ function j(e) {
             { boostsByGuildId: n, numActiveGuildBoostSlots: e }
         );
     }, [t]);
-    if (null == n || 0 === Object.keys(r).length) return null;
+    if (null == n || 0 === Object.keys(a).length) return null;
     let d = o > _.Ay.getNumIncludedPremiumGuildSubscriptionSlots(n.planId);
     return (0, i.jsxs)("div", {
-        className: b.iE,
+        className: E.iE,
         children: [
             (0, i.jsx)("div", {
-                className: b.kL,
+                className: E.kL,
                 children: x.default
-                    .keys(r)
+                    .keys(a)
                     .map((e) =>
                         (0, i.jsx)(
-                            N,
+                            v,
                             {
                                 guildId: e,
-                                guildBoostSlotRecords: r[e],
+                                guildBoostSlotRecords: a[e],
                                 premiumSubscription: n,
                                 hasCancelableGuildBoostSlot: d,
                                 showAltText: l,
@@ -297,7 +297,7 @@ function j(e) {
                         ),
                     ),
             }),
-            (0, i.jsx)("div", { className: b.vK }),
+            (0, i.jsx)("div", { className: E.vK }),
         ],
     });
 }

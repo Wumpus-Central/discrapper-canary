@@ -1,16 +1,16 @@
 n.d(t, { A: () => G }), n(321073);
 var i = n(627968),
-    a = n(64700),
-    r = n(735438),
-    l = n.n(r),
+    l = n(64700),
+    a = n(735438),
+    r = n.n(a),
     s = n(311907),
     o = n(397927),
     d = n(711950),
     c = n(49229),
     u = n(820284),
     A = n(793574),
-    _ = n(688810),
-    h = n(429913),
+    h = n(688810),
+    _ = n(429913),
     m = n(70730),
     g = n(45787),
     p = n(275759),
@@ -22,7 +22,7 @@ var i = n(627968),
     N = n(174279),
     S = n(278066),
     x = n(594968),
-    v = n(979282),
+    v = n(756901),
     b = n(575474),
     y = n(535266),
     O = n(787331);
@@ -30,7 +30,7 @@ n(646363);
 var L = n(652215),
     R = n(788868),
     P = n(985018),
-    D = n(63461);
+    D = n(795733);
 let j = [];
 function M() {
     d.A.transitionToSection(L.m3P.ADD_FRIEND, { explicit: !0 });
@@ -43,80 +43,80 @@ function w() {
 }
 function U(e) {
     let { section: t, showSpamCta: n } = e,
-        r = a.useMemo(() => (n ? w : t !== L.m3P.PENDING ? M : void 0), [n, t]);
-    return (0, i.jsx)("div", { className: D.y7, children: (0, i.jsx)(S.A, { type: t, onClick: r }, t) });
+        a = l.useMemo(() => (n ? w : t !== L.m3P.PENDING ? M : void 0), [n, t]);
+    return (0, i.jsx)("div", { className: D.y7, children: (0, i.jsx)(S.A, { type: t, onClick: a }, t) });
 }
 let G = function (e) {
     let { titleId: t } = e,
-        { analyticsLocations: n } = (0, _.Ay)(A.A.FRIENDS_LIST),
-        { rows: r, section: d } = (0, s.cf)([f.Ay], () => f.Ay.getState()),
+        { analyticsLocations: n } = (0, h.Ay)(A.A.FRIENDS_LIST),
+        { rows: a, section: d } = (0, s.cf)([f.Ay], () => f.Ay.getState()),
         M = (0, s.bG)([C.A], () => C.A.isFocused()),
         { relationshipCount: G, hasBlockedOrIgnored: k } = (0, s.cf)([I.A], () => ({
             relationshipCount: I.A.getRelationshipCount(),
             hasBlockedOrIgnored: I.A.getBlockedOrIgnoredIDs().length > 0,
         })),
         { enabled: V } = T.A.useConfig({ location: "PeopleList" }),
-        [B, H] = a.useState([]),
-        F = a.useCallback((e) => {
+        [B, H] = l.useState([]),
+        F = l.useCallback((e) => {
             let { enabled: t } = T.A.getConfig({ location: "Friend Request Accept" });
             t && H((t) => [...t, e]);
         }, []);
     d !== L.m3P.PENDING && B.length > 0 && H([]);
-    let [Y, W] = a.useState(() => {
+    let [Y, W] = l.useState(() => {
             let e = {};
             for (let t of Object.values(L.m3P)) e[t] = "";
             return e;
         }),
         K = (0, m.p)(A.A.FRIENDS_LIST),
-        [q, z] = a.useState(!1),
-        $ = a.useCallback(
+        [q, z] = l.useState(!1),
+        $ = l.useCallback(
             (e, t) => {
-                let { key: a, ...r } = e;
+                let { key: l, ...a } = e;
                 switch (d) {
                     case L.m3P.PENDING:
-                        return (0, i.jsx)(x.A, { ...r, isFocused: M, onAcceptFriendRequest: () => F(e) }, a);
+                        return (0, i.jsx)(x.A, { ...a, isFocused: M, onAcceptFriendRequest: () => F(e) }, l);
                     case L.m3P.SUGGESTIONS:
-                        return (0, i.jsx)(O.A, { ...r, isFocused: M }, a);
+                        return (0, i.jsx)(O.A, { ...a, isFocused: M }, l);
                     case L.m3P.ALL:
                         return (0, i.jsx)(
                             N.A,
                             {
-                                ...r,
+                                ...a,
                                 isFocused: M,
                                 analyticsLocations: n,
                                 sectionIndex: t,
                                 hasFriendAnniversarySection: K,
                             },
-                            `${t}-${a}`,
+                            `${t}-${l}`,
                         );
                     case L.m3P.ONLINE:
                     default:
-                        return (0, i.jsx)(N.A, { ...r, isFocused: M, analyticsLocations: n }, a);
+                        return (0, i.jsx)(N.A, { ...a, isFocused: M, analyticsLocations: n }, l);
                 }
             },
             [d, M, n, K, F],
         ),
-        Q = a.useCallback(
+        Q = l.useCallback(
             (e) => {
                 W({ ...Y, [d]: e });
             },
             [Y, d],
         ),
-        X = a.useCallback(() => {
+        X = l.useCallback(() => {
             W({ ...Y, [d]: "" });
         }, [Y, d]),
-        Z = a.useMemo(
+        Z = l.useMemo(
             () =>
-                d === L.m3P.PENDING && (r.filter(L.m3P.SPAM).length > 0 || r.filter(L.m3P.PENDING_IGNORED).length > 0),
-            [r, d],
+                d === L.m3P.PENDING && (a.filter(L.m3P.SPAM).length > 0 || a.filter(L.m3P.PENDING_IGNORED).length > 0),
+            [a, d],
         ),
-        J = a.useMemo(() => {
-            let e = r.filter(d, Y[d]);
+        J = l.useMemo(() => {
+            let e = a.filter(d, Y[d]);
             return (
                 V &&
                     d === L.m3P.PENDING &&
                     "" === Y[d] &&
-                    (e = l()([...e, ...B])
+                    (e = r()([...e, ...B])
                         .uniqBy("key")
                         .sortBy(
                             (e) => e.nickname?.toLowerCase() ?? e.user?.globalName?.toLowerCase() ?? e.usernameLower,
@@ -124,9 +124,9 @@ let G = function (e) {
                         .value()),
                 e
             );
-        }, [B, V, r, Y, d]),
+        }, [B, V, a, Y, d]),
         ee = d === L.m3P.PENDING,
-        et = a.useMemo(() => {
+        et = l.useMemo(() => {
             if (!ee) return j;
             let e = [];
             return (
@@ -137,15 +137,15 @@ let G = function (e) {
                 e
             );
         }, [ee, J]);
-    (0, h.A)(et, ee);
-    let en = a.useMemo(
+    (0, _.A)(et, ee);
+    let en = l.useMemo(
             () =>
                 d === L.m3P.ALL && K && J.some((e) => e.giftIntentType === R.np.FRIEND_ANNIVERSARY)
                     ? J.filter((e) => e.giftIntentType === R.np.FRIEND_ANNIVERSARY).length
                     : 0,
             [J, d, K],
         ),
-        ei = a.useMemo(() => {
+        ei = l.useMemo(() => {
             switch (d) {
                 case L.m3P.PENDING:
                     let e = [],
@@ -174,21 +174,21 @@ let G = function (e) {
                     return [J];
             }
         }, [J, d, q, K]),
-        ea = a.useMemo(() => J.filter((e) => e.type === L.eA$.PENDING_INCOMING).length, [J]),
-        er = d === L.m3P.PENDING && ea > 0 && ea >= 5,
-        el = a.useCallback(
+        el = l.useMemo(() => J.filter((e) => e.type === L.eA$.PENDING_INCOMING).length, [J]),
+        ea = d === L.m3P.PENDING && el > 0 && el >= 5,
+        er = l.useCallback(
             (e) => {
-                e.stopPropagation(), c.A.confirmClearPendingRelationships(ea);
+                e.stopPropagation(), c.A.confirmClearPendingRelationships(el);
             },
-            [ea],
+            [el],
         ),
-        es = a.useCallback(() => {
+        es = l.useCallback(() => {
             z((e) => !e);
         }, []),
-        eo = a.useCallback(
+        eo = l.useCallback(
             (e) => {
                 let n = ei[e],
-                    a = (function (e, t, n, i) {
+                    l = (function (e, t, n, i) {
                         switch (e) {
                             case L.m3P.ONLINE:
                                 return P.intl.formatToPlainString(P.t.BagU2U, { online: t.toString() });
@@ -217,26 +217,26 @@ let G = function (e) {
                           {
                               className: D.Gf,
                               children: [
-                                  (0, i.jsx)(y.A, { id: t, title: a }),
-                                  er &&
+                                  (0, i.jsx)(y.A, { id: t, title: l }),
+                                  ea &&
                                       (0, i.jsx)("div", {
                                           className: D.mt,
                                           children: (0, i.jsx)(o.QWc, {
                                               text: P.intl.string(P.t.O8k7O4),
-                                              onClick: el,
+                                              onClick: er,
                                               "aria-label": P.intl.string(P.t.O8k7O4),
                                               textVariant: "text-sm/medium",
                                           }),
                                       }),
                               ],
                           },
-                          a,
+                          l,
                       )
-                    : (0, i.jsx)("div", { className: D.Gf, children: (0, i.jsx)(y.A, { id: t, title: a }) }, a);
+                    : (0, i.jsx)("div", { className: D.Gf, children: (0, i.jsx)(y.A, { id: t, title: l }) }, l);
             },
-            [ei, d, t, er, el],
+            [ei, d, t, ea, er],
         ),
-        ed = a.useCallback(
+        ed = l.useCallback(
             (e) =>
                 d === L.m3P.ALL && 0 === e && K && en > p.ZD
                     ? (0, i.jsx)("div", {
@@ -254,10 +254,10 @@ let G = function (e) {
             [d, en, q, es, K],
         );
     if (
-        (a.useEffect(() => {
+        (l.useEffect(() => {
             d === L.m3P.ALL && (0, g.Ad)();
         }, [d]),
-        a.useEffect(() => {
+        l.useEffect(() => {
             z(!1);
         }, [d, en]),
         0 === J.length && "" === Y[d])
@@ -265,7 +265,7 @@ let G = function (e) {
         return (0, i.jsx)(U, { section: d, showSpamCta: Z });
     let ec = "" !== Y[d],
         eu = 0 === J.length && ec;
-    return (0, i.jsx)(_.f5, {
+    return (0, i.jsx)(h.f5, {
         value: n,
         children: (0, i.jsxs)(u.A, {
             section: L.JJy.FRIENDS_LIST,

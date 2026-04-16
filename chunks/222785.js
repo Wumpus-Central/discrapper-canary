@@ -35,7 +35,7 @@ var t = n(627968),
     w = n(652215),
     S = n(349828),
     k = n(985018),
-    H = n(583970);
+    H = n(661023);
 let X = l.memo(function (e) {
     let { guild: i, onClose: a, onSelect: X } = e,
         V = (0, d.bG)([T.default], () => T.default.getCurrentUser());
@@ -248,7 +248,7 @@ let X = l.memo(function (e) {
                                                       (0, s.mMO)(async () => {
                                                           let { default: e } = await Promise.all([
                                                               n.e("64233"),
-                                                              n.e("38405"),
+                                                              n.e("11585"),
                                                           ]).then(n.bind(n, 409200));
                                                           return (n) =>
                                                               (0, t.jsx)(e, {
@@ -267,7 +267,7 @@ let X = l.memo(function (e) {
                                                       (0, s.mMO)(async () => {
                                                           let { default: e } = await Promise.all([
                                                               n.e("64233"),
-                                                              n.e("38405"),
+                                                              n.e("11585"),
                                                           ]).then(n.bind(n, 409200));
                                                           return (n) =>
                                                               (0, t.jsx)(e, {
@@ -297,7 +297,7 @@ let X = l.memo(function (e) {
                                     leadingAccessory: { type: "icon", icon: s.XFE },
                                     action: () =>
                                         (0, s.mMO)(async () => {
-                                            let { default: e } = await Promise.all([n.e("64992"), n.e("96878")]).then(
+                                            let { default: e } = await Promise.all([n.e("64992"), n.e("8214")]).then(
                                                 n.bind(n, 401539),
                                             );
                                             return (n) => (0, t.jsx)(e, { ...n, guildId: i.id });

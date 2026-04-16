@@ -18,7 +18,7 @@ var r = n(627968),
     g = n(256698),
     A = n(652215),
     I = n(985018),
-    T = n(664445);
+    T = n(584176);
 let S = 250,
     y = i.memo(function (e) {
         let {
@@ -35,8 +35,8 @@ let S = 250,
                 rowIndex: L,
                 stickerClassName: w,
                 stickerDescriptors: M,
-                stickerPadding: x,
-                stickerSize: P,
+                stickerPadding: P,
+                stickerSize: x,
                 ownedStickerPacks: k,
                 enlargeOnInteraction: U = !1,
                 channel: G,
@@ -44,7 +44,7 @@ let S = 250,
                 checkSendability: V = !0,
             } = e,
             { location: B } = (0, c.p)(),
-            H = P + 2 * x,
+            H = x + 2 * P,
             j = i.useMemo(
                 () => ({
                     gridColumnGap: N,
@@ -54,7 +54,7 @@ let S = 250,
                 }),
                 [t, N, H],
             ),
-            Y = i.useMemo(() => ({ width: P, height: P, padding: x }), [x, P]),
+            Y = i.useMemo(() => ({ width: x, height: x, padding: P }), [P, x]),
             [W, K] = (0, d.A)(null, 300);
         return (0, r.jsx)("div", {
             className: T.nM,
@@ -75,13 +75,13 @@ let S = 250,
                         e.type === h.op.CREATE_STICKER &&
                             (f.default.track(A.HAw.OPEN_MODAL, { type: A.JJy.CREATE_STICKER_MODAL, location: B }),
                             (0, l.mMO)(async () => {
-                                let { default: t } = await Promise.all([n.e("29143"), n.e("64800")]).then(
+                                let { default: t } = await Promise.all([n.e("29143"), n.e("5391")]).then(
                                     n.bind(n, 445002),
                                 );
                                 return (n) => (0, r.jsx)(t, { guildId: e.guild_id, ...n });
                             }));
                     },
-                    { ref: x, tabIndex: H, onFocus: j, ...$ } = y?.(e.columnIndex, L) ?? {};
+                    { ref: P, tabIndex: H, onFocus: j, ...$ } = y?.(e.columnIndex, L) ?? {};
                 switch (e.type) {
                     case h.op.CREATE_STICKER:
                         return (0, r.jsx)(
@@ -91,7 +91,7 @@ let S = 250,
                                 children: (0, r.jsxs)(l.DUT, {
                                     "aria-label": e.name,
                                     className: a()(T.wP, w, { [T.Kj]: c }),
-                                    innerRef: x,
+                                    innerRef: P,
                                     tabIndex: H,
                                     onFocus: j ?? N,
                                     onMouseMove: N,
@@ -121,7 +121,7 @@ let S = 250,
                         let o = t && null != k && (0, m.FD)(e.sticker) && !k.has(e.sticker.pack_id),
                             f = (e) => {
                                 (0, u.L3)(e, async () => {
-                                    let { default: e } = await n.e("46132").then(n.bind(n, 233503));
+                                    let { default: e } = await n.e("23751").then(n.bind(n, 233503));
                                     return (t) => (0, r.jsx)(e, { ...t });
                                 });
                             };
@@ -130,7 +130,7 @@ let S = 250,
                             { ...$, key: e.sticker.id },
                             (0, r.jsxs)(l.DUT, {
                                 className: a()(T.yI, w, { [T.PV]: c, [T.TV]: W === e.sticker.id }),
-                                innerRef: x,
+                                innerRef: P,
                                 tabIndex: H,
                                 onFocus: j ?? N,
                                 onMouseMove: N,
@@ -163,7 +163,7 @@ let S = 250,
                                                 isInteracting: c,
                                                 maskAsset: c,
                                                 sticker: e.sticker,
-                                                size: P,
+                                                size: x,
                                             }),
                                             o ? (0, r.jsx)(g.A, { size: 20 }) : null,
                                         ],

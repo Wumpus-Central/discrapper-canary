@@ -5,14 +5,14 @@ var l = n(627968),
     s = n.n(r),
     i = n(284009),
     o = n.n(i),
-    d = n(843282),
-    c = n(565645),
+    c = n(843282),
+    d = n(565645),
     u = n(155718),
     m = n(594808),
     p = n(207963),
     A = n(489414),
     h = n(814890),
-    C = n(979811);
+    C = n(40816);
 function E(e) {
     let { emoji: t, label: n, description: a, isDisabled: r, isOffset: i } = e,
         o = s()(C._A, { [C.r9]: r, [C.cY]: null == t && i });
@@ -20,7 +20,7 @@ function E(e) {
         className: C.uK,
         children: [
             null != t
-                ? (0, l.jsx)(c.A, { className: C.Zg, emojiId: t.id, emojiName: t.name, animated: t.animated })
+                ? (0, l.jsx)(d.A, { className: C.Zg, emojiId: t.id, emojiName: t.name, animated: t.animated })
                 : null,
             (0, l.jsxs)("div", {
                 className: o,
@@ -40,7 +40,7 @@ function x(e) {
             className: s()(C.Uq, C.u9),
             children: [
                 null != t
-                    ? (0, l.jsx)(c.A, {
+                    ? (0, l.jsx)(d.A, {
                           className: C.Zg,
                           src: t.src,
                           emojiId: t.id,
@@ -66,7 +66,7 @@ function N(e) {
                         className: C.mK,
                         children: [
                             null != e.emoji
-                                ? (0, l.jsx)(c.A, {
+                                ? (0, l.jsx)(d.A, {
                                       className: C.eh,
                                       src: e.emoji.src,
                                       emojiId: e.emoji.id,
@@ -84,7 +84,7 @@ function N(e) {
     });
 }
 function I(e) {
-    let { type: t, options: n, id: r, maxValues: i, minValues: c, disabled: I } = e,
+    let { type: t, options: n, id: r, maxValues: i, minValues: d, disabled: I } = e,
         _ = (0, h.c7)(e),
         f = a.useMemo(() => n.filter((e) => e.default).map((e) => e.value), [n]),
         g = (0, p.jc)();
@@ -101,31 +101,31 @@ function I(e) {
         b = j === A.BB.LOADING,
         [P, L] = a.useState(!1),
         [D, U] = a.useState(() => new Set(n.filter((e) => e.default).map((e) => e.value))),
-        [k, w] = a.useState(D),
-        M = a.useMemo(() => n.some((e) => null != e.emoji), [n]);
+        [k, M] = a.useState(D),
+        w = a.useMemo(() => n.some((e) => null != e.emoji), [n]);
     a.useEffect(() => {
         if (T?.type === u.I5.STRING_SELECT) {
             let e = new Set(T.values);
-            U(e), w(e);
+            U(e), M(e);
         } else {
             let e = new Set(f);
-            U(e), w(e);
+            U(e), M(e);
         }
     }, [r, f, T]);
     let H = a.useCallback(() => {
-        k !== D && v({ type: u.I5.STRING_SELECT, values: Array.from(D) }) && w(D);
-    }, [D, k, w, v]);
+        k !== D && v({ type: u.I5.STRING_SELECT, values: Array.from(D) }) && M(D);
+    }, [D, k, M, v]);
     a.useEffect(() => {
         P || (D.size === k.size && Array.from(k).every((e) => D.has(e))) || H();
     }, [P, D, k, H]);
-    let K = d.lS;
-    y ? (K = d.M8) : 0 === c && (K = d.$l);
-    let F = (0, d.Ev)({ value: D, onChange: (e) => U(e), onSelectInteraction: K });
+    let K = c.lS;
+    y ? (K = c.M8) : 0 === d && (K = c.$l);
+    let F = (0, c.Ev)({ value: D, onChange: (e) => U(e), onSelectInteraction: K });
     return (0, l.jsxs)(a.Fragment, {
         children: [
             (0, l.jsx)("div", {
                 className: C.kL,
-                children: (0, l.jsx)(d.Pw, {
+                children: (0, l.jsx)(c.Pw, {
                     isProcessing: b,
                     isDisabled: I || j === A.BB.DISABLED || S,
                     className: s()(C.Lt, { [C.zE]: R }),
@@ -137,7 +137,7 @@ function I(e) {
                     closeOnSelect: !y,
                     optionClassName: C.MT,
                     renderOptionLabel: (e) =>
-                        (0, l.jsx)(E, { ...e, isDisabled: y && !D.has(e.value) && D.size === i, isOffset: M }),
+                        (0, l.jsx)(E, { ...e, isDisabled: y && !D.has(e.value) && D.size === i, isOffset: w }),
                     renderOptionValue: (e) => (y ? (0, l.jsx)(N, { options: e }) : (0, l.jsx)(x, { ...e[0] })),
                     ...F,
                     "data-migration-pending": !0,

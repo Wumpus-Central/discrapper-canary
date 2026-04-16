@@ -16,8 +16,8 @@ var l = n(627968),
     C = n(253932),
     p = n(53228),
     A = n(985018),
-    v = n(75594),
-    b = n(385425);
+    v = n(582068),
+    b = n(28289);
 function w(e) {
     let { message: t, forwardOptions: n, channel: s } = e,
         w = C.hH.useSetting(),

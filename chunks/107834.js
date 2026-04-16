@@ -20,7 +20,7 @@ var i = n(627968),
     S = n(652215),
     E = n(788868),
     b = n(985018),
-    C = n(670324);
+    C = n(50596);
 let v = a.Ay.connectStores([T.default], () => ({ user: T.default.getCurrentUser() }))(
     (0, u.A)((e) => {
         let { isAuthenticated: t, user: n } = e,

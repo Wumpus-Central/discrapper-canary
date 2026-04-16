@@ -2,9 +2,9 @@
 n.d(t, { A: () => u });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(907961);
+    s = n(503698),
+    a = n.n(s),
+    o = n(34904);
 class l extends i.PureComponent {
     static defaultProps = { paused: !0 };
     state = { aStreamId: null, aReady: !1, bStreamId: this.props.streamId, bReady: !0 };
@@ -25,18 +25,18 @@ class l extends i.PureComponent {
         return null;
     }
     renderVideo(e, t) {
-        let { children: n, mirror: a, paused: s, component: l } = this.props;
+        let { children: n, mirror: s, paused: a, component: l } = this.props;
         if (null == e) {
             if (null == n) return null;
             let e = i.Children.only(n);
-            return i.cloneElement(e, { style: { display: t && !a ? void 0 : "none" }, ...e.props });
+            return i.cloneElement(e, { style: { display: t && !s ? void 0 : "none" }, ...e.props });
         }
-        return (0, r.jsx)(l, { paused: s, className: o.$_, streamId: e, onReady: t ? null : this.handleReady });
+        return (0, r.jsx)(l, { paused: a, className: o.$_, streamId: e, onReady: t ? null : this.handleReady });
     }
     render() {
         let { mirror: e, className: t } = this.props;
         return (0, r.jsxs)("div", {
-            className: s()(o.Ki, t, { [o.e7]: e }),
+            className: a()(o.Ki, t, { [o.e7]: e }),
             onDoubleClick: this.handleDoubleClick,
             onContextMenu: this.handleContextMenu,
             children: [

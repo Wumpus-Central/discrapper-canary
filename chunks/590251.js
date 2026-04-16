@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(79946);
+    o = n(183834);
 let l = Object.freeze({ XSMALL: 0.8, SMALL: 1, MEDIUM: 2, LARGE: 4 }),
     u = 20;
 class c extends i.Component {

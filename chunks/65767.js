@@ -3,10 +3,10 @@ var i = n(627968);
 n(64700);
 var s = n(397927),
     l = n(976860),
-    a = n(779733),
-    r = n(652215),
+    r = n(779733),
+    a = n(652215),
     o = n(985018),
-    d = n(421417),
+    d = n(10478),
     c = n(148514);
 function u() {
     return (0, i.jsxs)("div", {
@@ -26,7 +26,7 @@ function u() {
                     variant: "primary",
                     text: o.intl.string(o.t.jQ3pqt),
                     onClick: () => {
-                        (0, l.pX)(r.BVt.GUILD_DISCOVERY), (0, a.default)();
+                        (0, l.pX)(a.BVt.GUILD_DISCOVERY), (0, r.default)();
                     },
                 }),
             }),

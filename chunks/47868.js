@@ -5,8 +5,8 @@ var i = n(627968),
     a = n.n(s),
     r = n(732955),
     o = n(397927),
-    c = n(985018),
-    d = n(537923);
+    d = n(985018),
+    c = n(11699);
 function u(e) {
     let {
             className: t,
@@ -17,27 +17,27 @@ function u(e) {
             userCount: A,
             onClick: _,
             highlight: m,
-            onDismiss: g,
+            onDismiss: p,
         } = e,
-        p = l.useCallback(
+        g = l.useCallback(
             (e) => {
-                e.stopPropagation(), g?.();
+                e.stopPropagation(), p?.();
             },
-            [g],
+            [p],
         );
     return (0, i.jsxs)(o.DUT, {
-        className: a()(d.kL, t, null != m && { [d.U6]: m }),
+        className: a()(c.kL, t, null != m && { [c.U6]: m }),
         onClick: _,
         children: [
-            (0, i.jsx)("div", { className: a()(d.Kk, n), children: s }),
+            (0, i.jsx)("div", { className: a()(c.Kk, n), children: s }),
             (0, i.jsxs)("div", {
-                className: d.FS,
+                className: c.FS,
                 children: [
                     (0, i.jsx)(o.Heading, { variant: "heading-md/semibold", color: "text-strong", children: u }),
                     (0, i.jsx)(o.Text, {
                         variant: "text-xs/normal",
                         color: "text-strong",
-                        className: d.mG,
+                        className: c.mG,
                         children: h,
                     }),
                     null != A && A > 0
@@ -46,23 +46,23 @@ function u(e) {
                                   (0, i.jsx)(o.Text, {
                                       variant: "text-xs/normal",
                                       color: "text-strong",
-                                      className: d.Om,
+                                      className: c.Om,
                                       children: "•",
                                   }),
                                   (0, i.jsx)(o.Text, {
                                       variant: "text-xs/normal",
                                       color: "text-strong",
-                                      className: d.mG,
-                                      children: c.intl.format(c.t.NywdIj, { count: A }),
+                                      className: c.mG,
+                                      children: d.intl.format(d.t.NywdIj, { count: A }),
                                   }),
                               ],
                           })
                         : null,
                 ],
             }),
-            null != g
-                ? (0, i.jsx)("div", { className: d.r, children: (0, i.jsx)(r.JnF, { size: "xs", onClick: p }) })
-                : (0, i.jsx)(o._BQ, { size: "xs", color: "currentColor", className: d.OW }),
+            null != p
+                ? (0, i.jsx)("div", { className: c.r, children: (0, i.jsx)(r.JnF, { size: "xs", onClick: g }) })
+                : (0, i.jsx)(o._BQ, { size: "xs", color: "currentColor", className: c.OW }),
         ],
     });
 }

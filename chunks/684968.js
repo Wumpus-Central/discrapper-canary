@@ -10,8 +10,8 @@ var l = n(627968),
     c = n(397927),
     _ = n(640708),
     d = n(950072),
-    g = n(997509),
-    A = n(376092),
+    A = n(997509),
+    g = n(376092),
     T = n(34457),
     I = n(696451),
     N = n(317525),
@@ -20,24 +20,24 @@ var l = n(627968),
     S = n(287809),
     G = n(558393),
     O = n(62697),
-    C = n(595849),
-    R = n(652215),
+    R = n(595849),
+    C = n(652215),
     L = n(985018),
-    D = n(438536),
-    f = n(890865);
+    D = n(645267),
+    f = n(66835);
 function x(e) {
     let { permission: t, roleIds: n, guild: a, specMap: s, categoryTitle: o, userId: I } = e,
         h = (0, E.yK)([N.A], () => N.A.getManyRoles(a.id, n)),
-        S = R.xBc[t],
-        G = s[S.toString()]?.title ?? (0, A.hx)(S),
+        S = C.xBc[t],
+        G = s[S.toString()]?.title ?? (0, g.hx)(S),
         O = s[S.toString()]?.description ?? "",
-        D = C.S2.has(S),
-        x = C.yO.includes(t),
+        D = R.S2.has(S),
+        x = R.yO.includes(t),
         M = n.length,
-        p = (0, E.bG)([m.A], () => m.A.can(R.xBc.MANAGE_ROLES, a), [a]),
+        p = (0, E.bG)([m.A], () => m.A.can(C.xBc.MANAGE_ROLES, a), [a]),
         U = r.useCallback(
             async (e) => {
-                p && (await g.A.open(a.id, R.BEX.ROLES), await g.A.selectRole(e));
+                p && (await A.A.open(a.id, C.BEX.ROLES), await A.A.selectRole(e));
             },
             [p, a.id],
         );
@@ -129,7 +129,7 @@ function x(e) {
             (0, l.jsx)("div", {
                 className: f.SY,
                 children: h.map((e) =>
-                    (0, C._G)(e.id, I)
+                    (0, R._G)(e.id, I)
                         ? (0, l.jsx)(
                               "div",
                               {
@@ -166,8 +166,8 @@ function p(e) {
     let { userId: t, guildId: n, location: a, className: s, onNavigate: u } = e,
         _ = (0, E.bG)([S.default], () => S.default.getUser(t), [t]),
         d = (0, E.bG)([h.A], () => h.A.getGuild(n), [n]),
-        g = (0, E.bG)([I.Ay], () => I.Ay.getMember(n, t), [n, t]),
-        T = (0, C.RP)(t, n, C.lp),
+        A = (0, E.bG)([I.Ay], () => I.Ay.getMember(n, t), [n, t]),
+        T = (0, R.RP)(t, n, R.lp),
         N = Object.keys(T).length,
         m = r.useMemo(() => (null != d ? G.A.getGuildPermissionSpecMap(d) : null), [d]),
         p = r.useMemo(() => (null != d ? G.A.generateGuildPermissionSpec(d) : null), [d]),
@@ -184,23 +184,23 @@ function p(e) {
             k(""), F("");
         }, []),
         y = r.useMemo(() => {
-            if (null == d || null == m || null == g) return null;
+            if (null == d || null == m || null == A) return null;
             if (0 === N) return (0, l.jsx)(c.Text, { variant: "text-sm/normal", children: L.intl.string(L.t.DEBGqA) });
             let e = [];
             return (
                 p?.forEach((n) => {
                     n.permissions.forEach((r) => {
                         let a = r.flag,
-                            i = C.lp.find((e) => R.xBc[e] === a);
+                            i = R.lp.find((e) => C.xBc[e] === a);
                         if (null == i) return;
                         let s = T[i];
                         if (null != s) {
                             if (b.length > 0) {
-                                let e = m[a.toString()]?.title ?? (0, A.hx)(a),
+                                let e = m[a.toString()]?.title ?? (0, g.hx)(a),
                                     t = m[a.toString()]?.description?.toString() ?? "",
                                     l = n.title,
-                                    r = C.S2.has(a),
-                                    s = C.yO.includes(i),
+                                    r = R.S2.has(a),
+                                    s = R.yO.includes(i),
                                     o = r ? L.intl.string(L.t.k7Kqj7) : s ? L.intl.string(L.t.IfqUEM) : null,
                                     E = M(b, e),
                                     u = M(b, t),
@@ -227,8 +227,8 @@ function p(e) {
                 }),
                 e
             );
-        }, [d, m, g, N, p, T, b, t]);
-    return null == _ || null == g
+        }, [d, m, A, N, p, T, b, t]);
+    return null == _ || null == A
         ? null
         : (0, l.jsxs)("div", {
               className: i()(D.kL, s),

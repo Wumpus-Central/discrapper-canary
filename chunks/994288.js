@@ -16,7 +16,7 @@ var e = n(627968),
     g = n(235627),
     f = n(652215),
     _ = n(985018),
-    A = n(41641);
+    A = n(261369);
 function j(t) {
     let { user: i, onBlock: n, onIgnore: s, location: r, disallowIgnore: o, guildId: d, channelId: j } = t,
         C = (0, l.bG)([x.A], () => x.A.isIgnored(i.id));

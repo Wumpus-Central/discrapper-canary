@@ -2,8 +2,8 @@ n.d(t, { A: () => F }), n(321073);
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    a = n.n(l),
-    r = n(311907),
+    r = n.n(l),
+    a = n(311907),
     o = n(582754),
     d = n(421380),
     c = n(397927),
@@ -12,23 +12,23 @@ var i = n(627968),
     g = n(688810),
     _ = n(531260),
     x = n(160946),
-    A = n(287809),
-    h = n(166403),
+    h = n(287809),
+    A = n(166403),
     p = n(927578),
     T = n(40185),
     f = n(89366),
     S = n(422936),
-    b = n(234419),
-    E = n(863156),
+    E = n(234419),
+    b = n(863156),
     C = n(194509),
-    N = n(396375),
-    v = n(511484),
+    v = n(396375),
+    N = n(511484),
     I = n(774774),
     j = n(231265),
     y = n(38720),
     O = n(788868),
     R = n(985018),
-    L = n(70667),
+    L = n(427227),
     P = n(196093),
     D = n(979653),
     G = n(255631),
@@ -64,17 +64,17 @@ let U = () => {
                     children: R.intl.string(R.t.Ipxkog),
                 });
         t = n === O.PremiumTypes.TIER_0 ? ((0, o.Mw)(l) ? P : D) : (0, o.Mw)(l) ? G : M;
-        let a = (0, p.Dd)(n);
-        return (0, i.jsx)("img", { src: t, className: L.wm, alt: a });
+        let r = (0, p.Dd)(n);
+        return (0, i.jsx)("img", { src: t, className: L.wm, alt: r });
     },
     V = (e) => {
         let { label: t, column1: n, column2: s } = e;
         return (0, i.jsxs)("tr", {
-            className: a()(L.U1, L.YI, L.Y9),
+            className: r()(L.U1, L.YI, L.Y9),
             children: [
                 (0, i.jsx)("th", { scope: "col", className: L.Cr, children: t }),
                 (0, i.jsx)("th", { scope: "col", className: L.e4, children: n }),
-                (0, i.jsx)("th", { scope: "col", className: a()(L.e4, L.Y9), children: s }),
+                (0, i.jsx)("th", { scope: "col", className: r()(L.e4, L.Y9), children: s }),
             ],
         });
     },
@@ -84,17 +84,17 @@ let U = () => {
             column1: n,
             column2: s,
             withBottomBorder: l = !0,
-            withTopBorderRadius: r = !1,
+            withTopBorderRadius: a = !1,
             withBottomBorderRadius: o = !1,
             buttonsRow: d = !1,
             shortRow: c = !1,
         } = e;
         return (0, i.jsxs)("tr", {
-            className: a()(L.nM, { [L.EE]: d, [L.Y9]: r, [L.kS]: o, [L.YI]: l, [L.vs]: c }),
+            className: r()(L.nM, { [L.EE]: d, [L.Y9]: a, [L.kS]: o, [L.YI]: l, [L.vs]: c }),
             children: [
                 (0, i.jsx)("th", { scope: "row", className: L.nx, children: t }),
-                (0, i.jsx)("td", { className: a()(L.Hn, { [L.SD]: d }), children: n }),
-                (0, i.jsx)("td", { className: a()(L.Hn, { [L.Y9]: r, [L.kS]: o, [L.SD]: d }), children: s }),
+                (0, i.jsx)("td", { className: r()(L.Hn, { [L.SD]: d }), children: n }),
+                (0, i.jsx)("td", { className: r()(L.Hn, { [L.Y9]: a, [L.kS]: o, [L.SD]: d }), children: s }),
             ],
         });
     },
@@ -109,27 +109,27 @@ let U = () => {
                 selectedPlanTier: G = O.PremiumTypes.TIER_2,
             } = e,
             { analyticsLocations: M } = (0, g.Ay)(m.A.PREMIUM_MARKETING_PLAN_COMPARISON),
-            F = (0, r.bG)([h.A], () => h.A.hasFetchedSubscriptions()),
+            F = (0, a.bG)([A.A], () => A.A.hasFetchedSubscriptions()),
             H = (0, x.Y)(O.T7),
             z = (0, u.Ay)(),
             Y = (0, o.qB)(z),
-            X = (0, r.bG)([A.default], () => A.default.getCurrentUser()),
+            X = (0, a.bG)([h.default], () => h.default.getCurrentUser()),
             K = null != X && X.isPremiumWithPremiumGroup(),
             W = (0, p.YE)(X, O.PremiumTypes.TIER_2),
-            Z = (0, b.V)(),
+            Z = (0, E.V)(),
             q = Z?.subscription_trial?.sku_id,
             Q = (0, f.Us)(),
             J = (0, S.O)(),
-            $ = null != J && (0, v.U9)(J, O.pe.TIER_2),
-            ee = (0, v.N1)(O.gD.PREMIUM_MONTH_TIER_2),
+            $ = null != J && (0, N.U9)(J, O.pe.TIER_2),
+            ee = (0, N.N1)(O.gD.PREMIUM_MONTH_TIER_2),
             et = `${ee}/${(0, p.FJ)(O.WT.MONTH)}`,
             en = (0, p.JM)(O.gD.PREMIUM_MONTH_TIER_0),
             ei = (0, p.JM)(O.gD.PREMIUM_MONTH_TIER_2),
             es = (0, _.A)(),
             el = (0, y.R)(en, ei, $, et, es.fractionalState),
-            ea = (0, T.cg)();
+            er = (0, T.cg)();
         if (!F || !H) return null;
-        let er = {
+        let ea = {
             label: (0, i.jsx)(c.Heading, {
                 className: L.__invalid_textColor,
                 variant: "heading-lg/extrabold",
@@ -152,15 +152,15 @@ let U = () => {
                   label: null,
                   column1: (0, i.jsxs)(i.Fragment, {
                       children: [
-                          q === O.pe.TIER_2 || ea
-                              ? (0, i.jsx)(N.A, {
+                          q === O.pe.TIER_2 || er
+                              ? (0, i.jsx)(v.A, {
                                     className: L.x6,
                                     subscriptionTier: O.pe.TIER_0,
                                     showIcon: !1,
                                     look: d.pR.OUTLINED,
                                     color: Y ? d.XD.BRAND : d.XD.WHITE,
                                 })
-                              : (0, i.jsx)(N.A, { className: L.x6, subscriptionTier: O.pe.TIER_0, showIcon: !1 }),
+                              : (0, i.jsx)(v.A, { className: L.x6, subscriptionTier: O.pe.TIER_0, showIcon: !1 }),
                           Q === O.PremiumTypes.TIER_2 || null != q
                               ? null
                               : (0, i.jsx)(C.A, { className: L.x6, subscriptionTier: O.pe.TIER_0 }),
@@ -169,18 +169,18 @@ let U = () => {
                   column2: (0, i.jsxs)(i.Fragment, {
                       children: [
                           q === O.pe.TIER_0
-                              ? (0, i.jsx)(N.A, {
+                              ? (0, i.jsx)(v.A, {
                                     className: L.x6,
                                     subscriptionTier: O.pe.TIER_2,
                                     showIcon: !1,
                                     look: d.pR.OUTLINED,
                                     color: Y ? d.XD.BRAND : d.XD.WHITE,
                                 })
-                              : (0, i.jsx)(N.A, {
+                              : (0, i.jsx)(v.A, {
                                     className: L.x6,
                                     subscriptionTier: O.pe.TIER_2,
                                     showIcon: !1,
-                                    hasActivePromotion: ea,
+                                    hasActivePromotion: er,
                                 }),
                           Q === O.PremiumTypes.TIER_0 || null != q
                               ? null
@@ -208,33 +208,33 @@ let U = () => {
                                       : I.at.PREMIUM_TIER_2_NEW_GRADIENT_FILL
                                   : I.at.PREMIUM_TIER_2_WHITE_FILL,
                     })
-                  : ea
+                  : er
                     ? (0, i.jsx)(U, {})
                     : (0, i.jsx)(k, {}));
         let eo = q === O.pe.TIER_0 || Q === O.PremiumTypes.TIER_0 || G === O.PremiumTypes.TIER_0;
         return (0, i.jsx)(g.f5, {
             value: M,
             children: (0, i.jsxs)("div", {
-                className: a()(L.zr, n),
+                className: r()(L.zr, n),
                 "data-testid": "v2-marketing-page-comparison-table",
                 children: [
                     (0, i.jsx)(c.Heading, {
-                        className: a()(L.Qw, L.__invalid_textColor),
+                        className: r()(L.Qw, L.__invalid_textColor),
                         variant: "heading-xxl/extrabold",
                         children: j ?? R.intl.string(R.t.FIbMh9),
                     }),
-                    K && (0, i.jsx)(E.A, { premiumGroupRole: X.premiumGroupRole, className: L.vg }),
+                    K && (0, i.jsx)(b.A, { premiumGroupRole: X.premiumGroupRole, className: L.vg }),
                     (0, i.jsxs)("div", {
                         className: L.wY,
                         children: [
                             (0, i.jsx)("div", {
-                                className: a()(D, { [L.A9]: eo, [L.ce]: !eo && !K }),
+                                className: r()(D, { [L.A9]: eo, [L.ce]: !eo && !K }),
                                 children: !eo && t,
                             }),
                             (0, i.jsxs)("table", {
                                 className: L.tp,
                                 children: [
-                                    (0, i.jsx)("thead", { children: (0, i.jsx)(V, { ...er }) }),
+                                    (0, i.jsx)("thead", { children: (0, i.jsx)(V, { ...ea }) }),
                                     (0, i.jsx)("tbody", {
                                         children: el.map((e, t) => (0, s.createElement)(B, { ...e, key: t })),
                                     }),

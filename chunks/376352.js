@@ -18,7 +18,7 @@ var i = n(627968),
     E = n(961350),
     x = n(49999),
     I = n(985018),
-    C = n(8719);
+    C = n(474143);
 function N(e) {
     let { user: t, stream: n, channel: s } = e,
         [N, T] = l.useState(!1),

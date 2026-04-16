@@ -11,9 +11,9 @@ var n = l(627968),
     u = l(71393),
     m = l(576705),
     x = l(70738),
-    h = l(134413),
-    g = l(266047),
-    H = l(225671),
+    h = l(587426),
+    g = l(134413),
+    H = l(266047),
     j = l(100172),
     _ = l(401695),
     f = l(925282),
@@ -21,8 +21,8 @@ var n = l(627968),
     b = l(386404),
     v = l(652215),
     A = l(985018),
-    V = l(874281),
-    L = l(957346);
+    V = l(301050),
+    L = l(62255);
 let N = i.forwardRef(function (e, t) {
     let { label: l, onFilter: i, isFiltered: s, isSorted: r, className: C, ...o } = e,
         d = s ? "text-strong" : "text-default";
@@ -60,9 +60,9 @@ function R(e) {
         R = i.useRef(null),
         D = i.useRef(null),
         M = i.useRef(null),
-        S = (0, o.bG)([g.A], () => g.A.getSearchStateByGuildId(t), [t], C()),
+        S = (0, o.bG)([H.A], () => H.A.getSearchStateByGuildId(t), [t], C()),
         I = (0, o.bG)([m.A, u.A], () => m.A.can(v.xBc.MANAGE_GUILD, u.A.getGuild(t)), [t]),
-        { selectedUserIds: E, addUsers: y, clearSelection: T } = (0, H.A)(t),
+        { selectedUserIds: E, addUsers: y, clearSelection: T } = (0, h.A)(t),
         Z =
             S.requireUnusualDmActivity ||
             S.requireCommunicationDisabled ||
@@ -76,8 +76,8 @@ function R(e) {
         B = null != S.selectedSourceInviteCode && "" !== S.selectedSourceInviteCode,
         P = null != S.selectedJoinSourceType,
         G = B || P,
-        q = (0, h.vA)(t),
-        Y = i.useMemo(() => l.filter((e) => (0, h.Ph)(t, q, e)), [q, l, t]),
+        q = (0, g.vA)(t),
+        Y = i.useMemo(() => l.filter((e) => (0, g.Ph)(t, q, e)), [q, l, t]),
         z = Y.length > 0,
         K = 0 === Y.filter((e) => !E.has(e)).length,
         Q = i.useCallback(() => {

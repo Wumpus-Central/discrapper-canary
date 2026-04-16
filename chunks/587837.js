@@ -2,17 +2,17 @@ n.d(t, { A: () => r });
 var i = n(627968),
     l = n(64700),
     s = n(761929),
-    a = n(572498);
+    a = n(5794);
 function r(e) {
-    let { resizableNode: t, onResize: n, onResizeEnd: r, minHeight: o, maxHeight: c } = e,
-        [d, u] = l.useState(null);
+    let { resizableNode: t, onResize: n, onResizeEnd: r, minHeight: o, maxHeight: d } = e,
+        [c, u] = l.useState(null);
     l.useEffect(() => {
         u(t.current?.offsetHeight ?? null);
     }, [t]);
     let h = (0, s.A)({
-        initialElementDimension: d,
+        initialElementDimension: c,
         minDimension: o,
-        maxDimension: c,
+        maxDimension: d,
         resizableDomNodeRef: t,
         onElementResize: n,
         onElementResizeEnd: r,

@@ -2,25 +2,25 @@ n.d(t, { A: () => S }), n(321073);
 var i = n(627968),
     s = n(64700),
     l = n(311907),
-    a = n(843282),
-    r = n(397927),
+    r = n(843282),
+    a = n(397927),
     o = n(915089),
     d = n(145497),
     c = n(685073),
     u = n(534400),
     m = n(128450),
-    _ = n(597551),
-    g = n(287809),
+    g = n(597551),
+    _ = n(287809),
     x = n(581781),
-    A = n(743981),
-    h = n(355097),
+    h = n(743981),
+    A = n(355097),
     p = n(985018),
-    f = n(591470);
-let T = (0, o.Ld)(),
+    T = n(51358);
+let f = (0, o.Ld)(),
     S = s.memo(function (e) {
         let { availablePrimaryGuilds: t, pendingPrimaryGuildId: n, onChange: o } = e,
             S = s.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
-            E = (0, l.bG)([g.default], () => (0, c.Zo)(g.default.getCurrentUser()?.primaryGuild).guildId),
+            E = (0, l.bG)([_.default], () => (0, c.Zo)(_.default.getCurrentUser()?.primaryGuild).guildId),
             b = void 0 !== n ? n : E,
             C = s.useMemo(
                 () => t.reduce((e, t) => (t.profile?.tag != null && e.push({ label: t.name, value: t.id }), e), []),
@@ -73,7 +73,7 @@ let T = (0, o.Ld)(),
                               guildId: t.id,
                               guildTag: n,
                               guildBadge: t.profile?.badge ?? void 0,
-                              badgeSize: A.Sl.SIZE_16,
+                              badgeSize: h.Sl.SIZE_16,
                               textColor: "interactive-text-default",
                               textVariant: "text-sm/semibold",
                           });
@@ -100,20 +100,20 @@ let T = (0, o.Ld)(),
             }, [o]),
             P = s.useRef(null);
         return (
-            (0, _.A)(P, h._F.GUILD_TAG),
+            (0, g.A)(P, A._F.GUILD_TAG),
             (0, i.jsxs)(m.A, {
                 title: p.intl.string(p.t.Pdd1nd),
-                titleId: T,
+                titleId: f,
                 ref: P,
                 children: [
-                    (0, i.jsx)(r.Text, {
-                        className: f.VA,
+                    (0, i.jsx)(a.Text, {
+                        className: T.VA,
                         variant: "text-sm/normal",
                         children: p.intl.string(p.t.mlZ6Jx),
                     }),
-                    (0, i.jsx)(a.Pw, {
-                        className: f.Lt,
-                        optionClassName: f.S0,
+                    (0, i.jsx)(r.Pw, {
+                        className: T.Lt,
+                        optionClassName: T.S0,
                         isSelected: O,
                         options: C,
                         select: y,

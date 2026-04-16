@@ -3,13 +3,13 @@ function o(r, e) {
     if (!t) {
         if (
             Array.isArray(r) ||
-            (t = (function (r, e) {
+            (t = (function (r) {
                 if (r) {
                     if ("string" == typeof r) return a(r, void 0);
-                    var t = Object.prototype.toString.call(r).slice(8, -1);
-                    if (("Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t))
+                    var e = Object.prototype.toString.call(r).slice(8, -1);
+                    if (("Object" === e && r.constructor && (e = r.constructor.name), "Map" === e || "Set" === e))
                         return Array.from(r);
-                    if ("Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t)) return a(r, void 0);
+                    if ("Arguments" === e || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(e)) return a(r, void 0);
                 }
             })(r)) ||
             (e && r && "number" == typeof r.length)

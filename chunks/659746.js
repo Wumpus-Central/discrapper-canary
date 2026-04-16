@@ -11,7 +11,7 @@ var e,
     m = h(404374),
     M = h(998304),
     o = h(788868),
-    E = h(891252);
+    E = h(47775);
 let C = Object.freeze({
     DURATION: { [o.PremiumTypes.TIER_0]: 1e3, [o.PremiumTypes.TIER_1]: 1e3, [o.PremiumTypes.TIER_2]: 1500 },
     DELAY: { [o.PremiumTypes.TIER_0]: 400, [o.PremiumTypes.TIER_1]: 400, [o.PremiumTypes.TIER_2]: 2200 },

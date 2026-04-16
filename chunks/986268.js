@@ -17,7 +17,7 @@ var i = n(503698),
     m = n(473145),
     E = n(652215),
     g = n(985018),
-    A = n(52915);
+    A = n(330243);
 function I(e) {
     let { guild: t, isBannerVisible: n, disableBoostClick: i } = e,
         s = (0, a.bG)([h.default, p.Ay], () => {

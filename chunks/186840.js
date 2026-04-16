@@ -31,8 +31,8 @@ var r = n(284009),
     L = n(538343),
     w = n(969091),
     M = n(33282),
-    x = n(318015),
-    P = n(751124),
+    P = n(318015),
+    x = n(751124),
     k = n(652215);
 let U = new E.A("GatewaySocket"),
     G = new b.A();
@@ -63,7 +63,7 @@ function F(e) {
                 (d = l.state.messages),
                 (_ = l.state.clientState);
         }
-    null == t && ((t = (0, P.A)(n)).binaryType = "arraybuffer"),
+    null == t && ((t = (0, x.A)(n)).binaryType = "arraybuffer"),
         r(t),
         u && i(c, _),
         null != d && d.forEach(s),
@@ -224,7 +224,7 @@ class X extends w.A {
                     (this.webSocket = e), this.compressionHandler.bindWebSocket(e);
                 },
                 onOpen: (e) => {
-                    a.A.mark("\uD83C\uDF10", `GatewaySocket.onOpen ${e}`);
+                    a.A.mark(`🌐`, `GatewaySocket.onOpen ${e}`);
                     let t = Date.now() - this.connectionStartTime;
                     U.info(`[CONNECTED] ${i.toString()} in ${t} ms`),
                         (this.isFastConnect = e),
@@ -234,7 +234,7 @@ class X extends w.A {
                     let n = Date.now(),
                         { op: r, s: i, t: s, d: o } = G.unpack(e);
                     if (
-                        (r !== w.p.DISPATCH && a.A.mark("\uD83C\uDF10", `GatewaySocket.onMessage ${r} ${w.p[r]}`),
+                        (r !== w.p.DISPATCH && a.A.mark(`🌐`, `GatewaySocket.onMessage ${r} ${w.p[r]}`),
                         I.default.isLoggingGatewayEvents)
                     ) {
                         let e = [r];
@@ -495,7 +495,7 @@ class X extends w.A {
         (this.token = o), U.verbose("[IDENTIFY]");
         let c = {
                 token: o,
-                capabilities: (0, R.O)({ useChannelObfuscation: (0, x.RK)("GatewaySocket") }),
+                capabilities: (0, R.O)({ useChannelObfuscation: (0, P.RK)("GatewaySocket") }),
                 properties: l,
                 presence: u,
                 compress: this.compressionHandler.usesLegacyCompression(),

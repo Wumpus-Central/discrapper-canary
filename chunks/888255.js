@@ -8,7 +8,7 @@ var r = n(627968),
     l = n.n(o),
     u = n(426333),
     c = n(842867),
-    d = n(219293);
+    d = n(45596);
 function _(e) {
     let t = i.useRef(e);
     return (
@@ -97,15 +97,15 @@ function m(e, t, n, s) {
                 sectionHeight: v,
                 rowHeight: N,
                 footerHeight: C = 0,
-                sidebarHeight: b,
-                listHeaderHeight: R = 0,
-                renderSection: O,
+                sidebarHeight: R,
+                listHeaderHeight: O = 0,
+                renderSection: b,
                 renderRow: D,
                 renderFooter: L,
                 renderSidebar: w,
-                renderListHeader: x,
-                stickyListHeader: M,
-                wrapSection: P,
+                renderListHeader: M,
+                stickyListHeader: P,
+                wrapSection: x,
                 getAnchorId: k,
                 paddingTop: U,
                 paddingBottom: G,
@@ -117,8 +117,8 @@ function m(e, t, n, s) {
                 innerRole: Y,
                 innerAriaLabel: W,
                 innerAriaMultiselectable: K,
-                innerAriaOrientation: z,
-                innerClassName: $,
+                innerAriaOrientation: $,
+                innerClassName: z,
                 innerTag: q = "div",
                 ...Z
             } = s,
@@ -140,8 +140,8 @@ function m(e, t, n, s) {
                 sectionHeight: v,
                 rowHeight: N,
                 footerHeight: C,
-                sidebarHeight: b,
-                listHeaderHeight: R,
+                sidebarHeight: R,
+                listHeaderHeight: O,
                 paddingTop: U,
                 paddingBottom: G,
                 chunkSize: B,
@@ -191,7 +191,7 @@ function m(e, t, n, s) {
         return (
             i.useLayoutEffect(() => {
                 2 !== en.current.dirty && (en.current.dirty = 2);
-            }, [O, D, L, P, es, ei, en]),
+            }, [b, D, L, x, es, ei, en]),
             (0, c.gh)({
                 scrollerRef: et,
                 anchor: ec,
@@ -214,35 +214,35 @@ function m(e, t, n, s) {
                                 role: Y,
                                 "aria-label": W,
                                 "aria-multiselectable": K,
-                                "aria-orientation": z,
+                                "aria-orientation": $,
                                 style: { height: es },
-                                className: a()(d.Qs, $),
+                                className: a()(d.Qs, z),
                                 ref: Q,
                                 children: (0, r.jsx)(u.xp, {
                                     containerRef: Q,
                                     children: p({
                                         items: ea,
-                                        renderListHeader: x,
-                                        stickyListHeader: M,
-                                        renderSection: O,
+                                        renderListHeader: M,
+                                        stickyListHeader: P,
+                                        renderSection: b,
                                         renderRow: D,
                                         renderFooter: L,
-                                        wrapSection: P,
+                                        wrapSection: x,
                                         spacerTop: ei,
                                     }),
                                 }),
                             }),
-                        [q, j, Y, W, K, z, es, $, ea, x, M, O, D, L, P, ei],
+                        [q, j, Y, W, K, $, es, z, ea, M, P, b, D, L, x, ei],
                     ),
                     i.useMemo(
                         () =>
                             h({
                                 isSidebarVisible: eo,
                                 renderSidebar: w,
-                                sidebarHeight: b,
+                                sidebarHeight: R,
                                 isListVisible: 0 !== ea.length,
                             }),
-                        [eo, w, b, ea.length],
+                        [eo, w, R, ea.length],
                     ),
                 ],
             })

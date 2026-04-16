@@ -11,7 +11,7 @@ var l = n(627968),
     m = n(22869),
     p = n(959),
     A = n(985018),
-    h = n(25117);
+    h = n(811597);
 function C(e) {
     let { entry: t, channel: n, className: r } = e,
         C = a.useRef(null),
@@ -20,8 +20,8 @@ function C(e) {
             displayParticipants: x,
             participant1: N,
             participant2: I,
-            numOtherParticipants: f,
-            orderedParticipants: _,
+            numOtherParticipants: _,
+            orderedParticipants: f,
         } = (0, d.A)(t),
         g = [N, I];
     return (0, l.jsxs)("div", {
@@ -32,7 +32,7 @@ function C(e) {
                       children: [
                           (0, l.jsx)(p.A, {
                               targetElementRef: C,
-                              participants: _,
+                              participants: f,
                               channel: n,
                               children: (e) =>
                                   (0, l.jsx)(o.DUT, {
@@ -60,7 +60,7 @@ function C(e) {
                 children: A.intl.format(A.t.rH95Gu, {
                     user0: c.Ay.getName(n.guild_id, n.id, g[0]),
                     user1: c.Ay.getName(n.guild_id, n.id, g[1]),
-                    countOthers: f,
+                    countOthers: _,
                     name0Hook: (e, t) => (0, l.jsx)(m.A, { text: e, user: g[0], channel: n }, t),
                     name1Hook: (e, t) => (0, l.jsx)(m.A, { text: e, user: g[1], channel: n }, t),
                     countOthersHook: (e, t) =>
@@ -68,7 +68,7 @@ function C(e) {
                             p.A,
                             {
                                 targetElementRef: E,
-                                participants: _,
+                                participants: f,
                                 channel: n,
                                 children: (t) =>
                                     (0, l.jsx)(u.A, {

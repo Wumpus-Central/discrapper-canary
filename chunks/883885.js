@@ -1,7 +1,7 @@
 "u" > typeof navigator &&
-    (function (e, t) {
-        module.exports = t();
-    })(0, function () {
+    (function (e) {
+        module.exports = e();
+    })(function () {
         "use strict";
         var svgNS = "http://www.w3.org/2000/svg",
             locationHref = "",
@@ -1679,13 +1679,13 @@
                 function C() {
                     !a && i && s && (window.requestAnimationFrame(g), (s = !1));
                 }
-                function b() {
+                function R() {
                     a = !0;
                 }
-                function R() {
+                function O() {
                     (a = !1), C();
                 }
-                function O(e, n) {
+                function b(e, n) {
                     var i;
                     for (i = 0; i < r; i += 1) t[i].animation.setVolume(e, n);
                 }
@@ -1710,9 +1710,9 @@
                     (e.resize = N),
                     (e.goToAndStop = I),
                     (e.destroy = y),
-                    (e.freeze = b),
-                    (e.unfreeze = R),
-                    (e.setVolume = O),
+                    (e.freeze = R),
+                    (e.unfreeze = O),
+                    (e.setVolume = b),
                     (e.mute = D),
                     (e.unmute = L),
                     (e.getRegisteredAnimations = u),
@@ -2037,16 +2037,16 @@
                         v = p * h * h,
                         N = d * h * h + p * _ * h + p * h * _,
                         C = d * _ * h + p * _ * _ + d * h * _,
-                        b = d * _ * _,
-                        R = h * h * h,
-                        O = _ * h * h + h * _ * h + h * h * _,
+                        R = d * _ * _,
+                        O = h * h * h,
+                        b = _ * h * h + h * _ * h + h * h * _,
                         D = _ * _ * h + h * _ * _ + _ * h * _,
                         L = _ * _ * _;
                     for (u = 0; u < f; u += 1)
                         (c[4 * u] = e.round((m * t[u] + E * r[u] + g * i[u] + A * n[u]) * 1e3) / 1e3),
                             (c[4 * u + 1] = e.round((I * t[u] + T * r[u] + S * i[u] + y * n[u]) * 1e3) / 1e3),
-                            (c[4 * u + 2] = e.round((v * t[u] + N * r[u] + C * i[u] + b * n[u]) * 1e3) / 1e3),
-                            (c[4 * u + 3] = e.round((R * t[u] + O * r[u] + D * i[u] + L * n[u]) * 1e3) / 1e3);
+                            (c[4 * u + 2] = e.round((v * t[u] + N * r[u] + C * i[u] + R * n[u]) * 1e3) / 1e3),
+                            (c[4 * u + 3] = e.round((O * t[u] + b * r[u] + D * i[u] + L * n[u]) * 1e3) / 1e3);
                     return c;
                 },
                 getPointInSegment: u,
@@ -2101,22 +2101,22 @@
                         v,
                         N,
                         C,
-                        b = v((e - f) / (_ - f)),
-                        R = p.segmentLength * b,
-                        O = t.lastFrame < e && t._lastKeyframeIndex === u ? t._lastAddedLength : 0;
+                        R = v((e - f) / (_ - f)),
+                        O = p.segmentLength * R,
+                        b = t.lastFrame < e && t._lastKeyframeIndex === u ? t._lastAddedLength : 0;
                     for (
                         y = t.lastFrame < e && t._lastKeyframeIndex === u ? t._lastPoint : 0,
                             d = !0,
                             S = p.points.length;
                         d;
                     ) {
-                        if (((O += p.points[y].partialLength), 0 === R || 0 === b || y === p.points.length - 1)) {
+                        if (((b += p.points[y].partialLength), 0 === O || 0 === R || y === p.points.length - 1)) {
                             for (I = 0, T = p.points[y].point.length; I < T; I += 1) m[I] = p.points[y].point[I];
                             break;
                         }
-                        if (R >= O && R < O + p.points[y + 1].partialLength) {
+                        if (O >= b && O < b + p.points[y + 1].partialLength) {
                             for (
-                                I = 0, C = (R - O) / p.points[y + 1].partialLength, T = p.points[y].point.length;
+                                I = 0, C = (O - b) / p.points[y + 1].partialLength, T = p.points[y].point.length;
                                 I < T;
                                 I += 1
                             )
@@ -2126,7 +2126,7 @@
                         y < S - 1 ? (y += 1) : (d = !1);
                     }
                     (t._lastPoint = y),
-                        (t._lastAddedLength = O - p.points[y].partialLength),
+                        (t._lastAddedLength = b - p.points[y].partialLength),
                         (t._lastKeyframeIndex = u);
                 }
             } else if (((c = E.s.length), (N = g.s || E.e), this.sh && 1 !== E.h))
@@ -2139,9 +2139,9 @@
                 for (u = 0; u < c; u += 1)
                     1 !== E.h &&
                         (e >= _
-                            ? (b = 1)
+                            ? (R = 1)
                             : e < f
-                              ? (b = 0)
+                              ? (R = 0)
                               : (E.o.x.constructor === Array
                                     ? (A.__fnct || (A.__fnct = []),
                                       A.__fnct[u]
@@ -2160,9 +2160,9 @@
                                         (s = E.i.y),
                                         (v = BezierFactory.getBezierEasing(n, r, i, s).get),
                                         (E.keyframeMetadata = v)),
-                                (b = v((e - f) / (_ - f))))),
+                                (R = v((e - f) / (_ - f))))),
                         (N = g.s || E.e),
-                        (a = 1 === E.h ? E.s[u] : E.s[u] + (N[u] - E.s[u]) * b),
+                        (a = 1 === E.h ? E.s[u] : E.s[u] + (N[u] - E.s[u]) * R),
                         "multidimensional" === this.propType ? (m[u] = a) : (m = a);
             return (t.lastIndex = l), m;
         }
@@ -3311,9 +3311,9 @@
                         v = m[7],
                         N = m[8],
                         C = m[9],
-                        b = m[10],
-                        R = m[11],
-                        O = m[12],
+                        R = m[10],
+                        O = m[11],
+                        b = m[12],
                         D = m[13],
                         L = m[14],
                         w = m[15];
@@ -3326,14 +3326,14 @@
                         (m[5] = T * t + S * s + y * u + v * f),
                         (m[6] = T * n + S * a + y * c + v * p),
                         (m[7] = T * r + S * o + y * d + v * h),
-                        (m[8] = N * e + C * i + b * l + R * _),
-                        (m[9] = N * t + C * s + b * u + R * f),
-                        (m[10] = N * n + C * a + b * c + R * p),
-                        (m[11] = N * r + C * o + b * d + R * h),
-                        (m[12] = O * e + D * i + L * l + w * _),
-                        (m[13] = O * t + D * s + L * u + w * f),
-                        (m[14] = O * n + D * a + L * c + w * p),
-                        (m[15] = O * r + D * o + L * d + w * h),
+                        (m[8] = N * e + C * i + R * l + O * _),
+                        (m[9] = N * t + C * s + R * u + O * f),
+                        (m[10] = N * n + C * a + R * c + O * p),
+                        (m[11] = N * r + C * o + R * d + O * h),
+                        (m[12] = b * e + D * i + L * l + w * _),
+                        (m[13] = b * t + D * s + L * u + w * f),
+                        (m[14] = b * n + D * a + L * c + w * p),
+                        (m[15] = b * r + D * o + L * d + w * h),
                         (this._identityCalculated = !1),
                         this
                     );
@@ -3437,14 +3437,14 @@
                 function C(e) {
                     return this.getInverseMatrix().applyToPointArray(e[0], e[1], e[2] || 0);
                 }
-                function b(e) {
+                function R(e) {
                     var t,
                         n = e.length,
                         r = [];
                     for (t = 0; t < n; t += 1) r[t] = C(e[t]);
                     return r;
                 }
-                function R(e, t, n) {
+                function O(e, t, n) {
                     var r = createTypedArray("float32", 6);
                     if (this.isIdentity())
                         (r[0] = e[0]), (r[1] = e[1]), (r[2] = t[0]), (r[3] = t[1]), (r[4] = n[0]), (r[5] = n[1]);
@@ -3464,7 +3464,7 @@
                     }
                     return r;
                 }
-                function O(e, t, n) {
+                function b(e, t, n) {
                     var r;
                     return this.isIdentity()
                         ? [e, t, n]
@@ -3492,7 +3492,7 @@
                     var t = 1e4;
                     return (e < 1e-6 && e > 0) || (e > -1e-6 && e < 0) ? r(e * t) / t : e;
                 }
-                function x() {
+                function M() {
                     var e = this.props;
                     return (
                         "matrix(" +
@@ -3528,15 +3528,15 @@
                         (this.applyToX = S),
                         (this.applyToY = y),
                         (this.applyToZ = v),
-                        (this.applyToPointArray = O),
-                        (this.applyToTriplePoints = R),
+                        (this.applyToPointArray = b),
+                        (this.applyToTriplePoints = O),
                         (this.applyToPointStringified = D),
                         (this.toCSS = L),
-                        (this.to2dCSS = x),
+                        (this.to2dCSS = M),
                         (this.clone = A),
                         (this.cloneFromProps = I),
                         (this.equals = g),
-                        (this.inversePoints = b),
+                        (this.inversePoints = R),
                         (this.inversePoint = C),
                         (this.getInverseMatrix = N),
                         (this._t = this.transform),
@@ -5258,7 +5258,7 @@
             function C(e) {
                 return -1 !== n.indexOf(e);
             }
-            function b(e, t) {
+            function R(e, t) {
                 var n = T(e.substr(t, 2));
                 if (n !== r) return !1;
                 var o = 0;
@@ -5268,10 +5268,10 @@
                 }
                 return T(e.substr(t, 2)) === i;
             }
-            function R() {
+            function O() {
                 this.isLoaded = !0;
             }
-            var O = function () {
+            var b = function () {
                 (this.fonts = []),
                     (this.chars = null),
                     (this.typekitLoaded = 0),
@@ -5282,27 +5282,27 @@
                     (this.checkLoadedFontsBinded = this.checkLoadedFonts.bind(this));
             };
             return (
-                (O.isModifier = function (e, t) {
+                (b.isModifier = function (e, t) {
                     var n = e.toString(16) + t.toString(16);
                     return -1 !== d.indexOf(n);
                 }),
-                (O.isZeroWidthJoiner = S),
-                (O.isFlagEmoji = N),
-                (O.isRegionalCode = v),
-                (O.isCombinedCharacter = C),
-                (O.isRegionalFlag = b),
-                (O.isVariationSelector = y),
-                (O.BLACK_FLAG_CODE_POINT = r),
-                (O.prototype = {
+                (b.isZeroWidthJoiner = S),
+                (b.isFlagEmoji = N),
+                (b.isRegionalCode = v),
+                (b.isCombinedCharacter = C),
+                (b.isRegionalFlag = R),
+                (b.isVariationSelector = y),
+                (b.BLACK_FLAG_CODE_POINT = r),
+                (b.prototype = {
                     addChars: E,
                     addFonts: m,
                     getCharData: g,
                     getFontByName: I,
                     measureText: A,
                     checkLoadedFonts: p,
-                    setIsLoaded: R,
+                    setIsLoaded: O,
                 }),
-                O
+                b
             );
         })();
         function SlotManager(e) {
@@ -7246,33 +7246,33 @@
                     (e.finalLineHeight = e.lh);
                 var h = (e.tr / 1e3) * e.finalSize;
                 if (e.sz)
-                    for (var m, E, g, A, I, T, S, y, v, N, C = !0, b = e.sz[0], R = e.sz[1]; C; ) {
+                    for (var m, E, g, A, I, T, S, y, v, N, C = !0, R = e.sz[0], O = e.sz[1]; C; ) {
                         (N = this.buildFinalText(e.t)),
                             (v = 0),
                             (c = 0),
                             (E = N.length),
                             (h = (e.tr / 1e3) * e.finalSize);
-                        var O = -1;
+                        var b = -1;
                         for (m = 0; m < E; m += 1)
                             (y = N[m].charCodeAt(0)),
                                 (g = !1),
                                 " " === N[m]
-                                    ? (O = m)
+                                    ? (b = m)
                                     : (13 === y || 3 === y) &&
                                       ((c = 0), (g = !0), (v += e.finalLineHeight || 1.2 * e.finalSize)),
                                 t.chars
                                     ? ((S = t.getCharData(N[m], _.fStyle, _.fFamily)),
                                       (f = g ? 0 : (S.w * e.finalSize) / 100))
                                     : (f = t.measureText(N[m], e.f, e.finalSize)),
-                                c + f > b && " " !== N[m]
-                                    ? (-1 === O ? (E += 1) : (m = O),
+                                c + f > R && " " !== N[m]
+                                    ? (-1 === b ? (E += 1) : (m = b),
                                       (v += e.finalLineHeight || 1.2 * e.finalSize),
-                                      N.splice(m, +(O === m), "\r"),
-                                      (O = -1),
+                                      N.splice(m, +(b === m), "\r"),
+                                      (b = -1),
                                       (c = 0))
                                     : ((c += f), (c += h));
                         (v += (_.ascent * e.finalSize) / 100),
-                            this.canResize && e.finalSize > this.minimumFontSize && R < v
+                            this.canResize && e.finalSize > this.minimumFontSize && O < v
                                 ? ((e.finalSize -= 1), (e.finalLineHeight = (e.finalSize * e.lh) / e.s))
                                 : ((e.finalText = N), (E = e.finalText.length), (C = !1));
                     }
@@ -7281,14 +7281,14 @@
                 for (m = 0; m < E; m += 1)
                     if (
                         ((g = !1),
-                        13 === (y = (x = e.finalText[m]).charCodeAt(0)) || 3 === y
+                        13 === (y = (M = e.finalText[m]).charCodeAt(0)) || 3 === y
                             ? ((D = 0), u.push(c), (d = c > d ? c : d), (c = -2 * h), (A = ""), (g = !0), (l += 1))
-                            : (A = x),
+                            : (A = M),
                         t.chars
-                            ? ((S = t.getCharData(x, _.fStyle, t.getFontByName(e.f).fFamily)),
+                            ? ((S = t.getCharData(M, _.fStyle, t.getFontByName(e.f).fFamily)),
                               (f = g ? 0 : (S.w * e.finalSize) / 100))
                             : (f = t.measureText(A, e.f, e.finalSize)),
-                        " " === x ? (D += f + h) : ((c += f + h + D), (D = 0)),
+                        " " === M ? (D += f + h) : ((c += f + h + D), (D = 0)),
                         r.push({ l: f, an: f, add: a, n: g, anIndexes: [], val: A, line: l, animatorJustifyOffset: 0 }),
                         2 == s)
                     ) {
@@ -7322,34 +7322,34 @@
                 var w = [];
                 for (I = 0; I < T; I += 1) {
                     for (
-                        (M = L[I]).a.sc && (e.strokeColorAnim = !0),
-                            M.a.sw && (e.strokeWidthAnim = !0),
-                            (M.a.fc || M.a.fh || M.a.fs || M.a.fb) && (e.fillColorAnim = !0),
+                        (P = L[I]).a.sc && (e.strokeColorAnim = !0),
+                            P.a.sw && (e.strokeWidthAnim = !0),
+                            (P.a.fc || P.a.fh || P.a.fs || P.a.fb) && (e.fillColorAnim = !0),
                             U = 0,
-                            k = M.s.b,
+                            k = P.s.b,
                             m = 0;
                         m < E;
                         m += 1
                     )
-                        ((P = r[m]).anIndexes[I] = U),
-                            ((1 == k && "" !== P.val) ||
-                                (2 == k && "" !== P.val && " " !== P.val) ||
-                                (3 == k && (P.n || " " == P.val || m == E - 1)) ||
-                                (4 == k && (P.n || m == E - 1))) &&
-                                (1 === M.s.rn && w.push(U), (U += 1));
+                        ((x = r[m]).anIndexes[I] = U),
+                            ((1 == k && "" !== x.val) ||
+                                (2 == k && "" !== x.val && " " !== x.val) ||
+                                (3 == k && (x.n || " " == x.val || m == E - 1)) ||
+                                (4 == k && (x.n || m == E - 1))) &&
+                                (1 === P.s.rn && w.push(U), (U += 1));
                     n.a[I].s.totalChars = U;
-                    var x,
-                        M,
+                    var M,
                         P,
+                        x,
                         k,
                         U,
                         G,
                         F = -1;
-                    if (1 === M.s.rn)
+                    if (1 === P.s.rn)
                         for (m = 0; m < E; m += 1)
-                            F != (P = r[m]).anIndexes[I] &&
-                                ((F = P.anIndexes[I]), (G = w.splice(Math.floor(Math.random() * w.length), 1)[0])),
-                                (P.anIndexes[I] = G);
+                            F != (x = r[m]).anIndexes[I] &&
+                                ((F = x.anIndexes[I]), (G = w.splice(Math.floor(Math.random() * w.length), 1)[0])),
+                                (x.anIndexes[I] = G);
                 }
                 (e.yOffset = e.finalLineHeight || 1.2 * e.finalSize),
                     (e.ls = e.ls || 0),
@@ -7572,15 +7572,15 @@
                         C = e.l;
                     if (this._hasMaskedPath) {
                         if (((W = this._pathData.m), !this._pathData.n || this._pathData._mdf)) {
-                            var b,
-                                R,
+                            var R,
                                 O,
+                                b,
                                 D,
                                 L,
                                 w,
-                                x,
                                 M,
                                 P,
+                                x,
                                 k,
                                 U,
                                 G,
@@ -7592,32 +7592,32 @@
                                 Y,
                                 W,
                                 K,
-                                z = W.v;
+                                $ = W.v;
                             for (
-                                this._pathData.r.v && (z = z.reverse()),
+                                this._pathData.r.v && ($ = $.reverse()),
                                     L = { tLength: 0, segments: [] },
-                                    D = z._length - 1,
+                                    D = $._length - 1,
                                     H = 0,
-                                    O = 0;
-                                O < D;
-                                O += 1
+                                    b = 0;
+                                b < D;
+                                b += 1
                             )
                                 (K = bez.buildBezierData(
-                                    z.v[O],
-                                    z.v[O + 1],
-                                    [z.o[O][0] - z.v[O][0], z.o[O][1] - z.v[O][1]],
-                                    [z.i[O + 1][0] - z.v[O + 1][0], z.i[O + 1][1] - z.v[O + 1][1]],
+                                    $.v[b],
+                                    $.v[b + 1],
+                                    [$.o[b][0] - $.v[b][0], $.o[b][1] - $.v[b][1]],
+                                    [$.i[b + 1][0] - $.v[b + 1][0], $.i[b + 1][1] - $.v[b + 1][1]],
                                 )),
                                     (L.tLength += K.segmentLength),
                                     L.segments.push(K),
                                     (H += K.segmentLength);
-                            (O = D),
+                            (b = D),
                                 W.v.c &&
                                     ((K = bez.buildBezierData(
-                                        z.v[O],
-                                        z.v[0],
-                                        [z.o[O][0] - z.v[O][0], z.o[O][1] - z.v[O][1]],
-                                        [z.i[0][0] - z.v[0][0], z.i[0][1] - z.v[0][1]],
+                                        $.v[b],
+                                        $.v[0],
+                                        [$.o[b][0] - $.v[b][0], $.o[b][1] - $.v[b][1]],
+                                        [$.i[0][0] - $.v[0][0], $.i[0][1] - $.v[0][1]],
                                     )),
                                     (L.tLength += K.segmentLength),
                                     L.segments.push(K),
@@ -7629,8 +7629,8 @@
                             (w = this._pathData.f.v),
                             (U = 0),
                             (k = 1),
-                            (M = 0),
-                            (P = !0),
+                            (P = 0),
+                            (x = !0),
                             (V = L.segments),
                             w < 0 && W.v.c)
                         )
@@ -7642,10 +7642,10 @@
                             )
                                 (w += F[k].partialLength),
                                     (k -= 1) < 0 && ((U -= 1), (k = (F = V[U].points).length - 1));
-                        (G = (F = V[U].points)[k - 1]), (B = (x = F[k]).partialLength);
+                        (G = (F = V[U].points)[k - 1]), (B = (M = F[k]).partialLength);
                     }
-                    (D = C.length), (b = 0), (R = 0);
-                    var $ = 1.2 * e.finalSize * 0.714,
+                    (D = C.length), (R = 0), (O = 0);
+                    var z = 1.2 * e.finalSize * 0.714,
                         q = !0;
                     s = T.length;
                     var Z = -1,
@@ -7661,34 +7661,34 @@
                             es = 2 === e.j ? -0.5 : -1,
                             ea = 0,
                             eo = !0;
-                        for (O = 0; O < D; O += 1)
-                            if (C[O].n) {
-                                for (er && (er += ei); ea < O; ) (C[ea].animatorJustifyOffset = er), (ea += 1);
+                        for (b = 0; b < D; b += 1)
+                            if (C[b].n) {
+                                for (er && (er += ei); ea < b; ) (C[ea].animatorJustifyOffset = er), (ea += 1);
                                 (er = 0), (eo = !0);
                             } else {
                                 for (i = 0; i < s; i += 1)
                                     (n = T[i].a).t.propType &&
                                         (eo && 2 === e.j && (ei += n.t.v * es),
-                                        (o = (r = T[i].s).getMult(C[O].anIndexes[i], S.a[i].s.totalChars)).length
+                                        (o = (r = T[i].s).getMult(C[b].anIndexes[i], S.a[i].s.totalChars)).length
                                             ? (er += n.t.v * o[0] * es)
                                             : (er += n.t.v * o * es));
                                 eo = !1;
                             }
-                        for (er && (er += ei); ea < O; ) (C[ea].animatorJustifyOffset = er), (ea += 1);
+                        for (er && (er += ei); ea < b; ) (C[ea].animatorJustifyOffset = er), (ea += 1);
                     }
-                    for (O = 0; O < D; O += 1) {
-                        if ((y.reset(), (d = 1), C[O].n))
-                            (b = 0),
-                                (R += e.yOffset),
-                                (R += +!!q),
+                    for (b = 0; b < D; b += 1) {
+                        if ((y.reset(), (d = 1), C[b].n))
+                            (R = 0),
+                                (O += e.yOffset),
+                                (O += +!!q),
                                 (w = X),
                                 (q = !1),
                                 this._hasMaskedPath &&
                                     ((U = Q),
                                     (k = J),
                                     (G = (F = V[U].points)[k - 1]),
-                                    (B = (x = F[k]).partialLength),
-                                    (M = 0)),
+                                    (B = (M = F[k]).partialLength),
+                                    (P = 0)),
                                 (et = ""),
                                 (g = ""),
                                 (m = ""),
@@ -7696,30 +7696,30 @@
                                 (en = this.defaultPropsArray);
                         else {
                             if (this._hasMaskedPath) {
-                                if (ee !== C[O].line) {
+                                if (ee !== C[b].line) {
                                     switch (e.j) {
                                         case 1:
-                                            w += H - e.lineWidths[C[O].line];
+                                            w += H - e.lineWidths[C[b].line];
                                             break;
                                         case 2:
-                                            w += (H - e.lineWidths[C[O].line]) / 2;
+                                            w += (H - e.lineWidths[C[b].line]) / 2;
                                     }
-                                    ee = C[O].line;
+                                    ee = C[b].line;
                                 }
-                                Z !== C[O].ind && (C[Z] && (w += C[Z].extra), (w += C[O].an / 2), (Z = C[O].ind)),
-                                    (w += I[0] * C[O].an * 0.005);
+                                Z !== C[b].ind && (C[Z] && (w += C[Z].extra), (w += C[b].an / 2), (Z = C[b].ind)),
+                                    (w += I[0] * C[b].an * 0.005);
                                 var el = 0;
                                 for (i = 0; i < s; i += 1)
                                     (n = T[i].a).p.propType &&
-                                        ((o = (r = T[i].s).getMult(C[O].anIndexes[i], S.a[i].s.totalChars)).length
+                                        ((o = (r = T[i].s).getMult(C[b].anIndexes[i], S.a[i].s.totalChars)).length
                                             ? (el += n.p.v[0] * o[0])
                                             : (el += n.p.v[0] * o)),
                                         n.a.propType &&
-                                            ((o = (r = T[i].s).getMult(C[O].anIndexes[i], S.a[i].s.totalChars)).length
+                                            ((o = (r = T[i].s).getMult(C[b].anIndexes[i], S.a[i].s.totalChars)).length
                                                 ? (el += n.a.v[0] * o[0])
                                                 : (el += n.a.v[0] * o));
                                 for (
-                                    P = !0,
+                                    x = !0,
                                         this._pathData.a.v &&
                                             (w =
                                                 0.5 * C[0].an +
@@ -7727,40 +7727,40 @@
                                                     Z) /
                                                     (D - 1) +
                                                 this._pathData.f.v);
-                                    P;
+                                    x;
                                 )
-                                    M + B >= w + el || !F
-                                        ? ((j = (w + el - M) / x.partialLength),
-                                          (u = G.point[0] + (x.point[0] - G.point[0]) * j),
-                                          (c = G.point[1] + (x.point[1] - G.point[1]) * j),
-                                          y.translate(-I[0] * C[O].an * 0.005, -(0.01 * (I[1] * $))),
-                                          (P = !1))
+                                    P + B >= w + el || !F
+                                        ? ((j = (w + el - P) / M.partialLength),
+                                          (u = G.point[0] + (M.point[0] - G.point[0]) * j),
+                                          (c = G.point[1] + (M.point[1] - G.point[1]) * j),
+                                          y.translate(-I[0] * C[b].an * 0.005, -(0.01 * (I[1] * z))),
+                                          (x = !1))
                                         : F &&
-                                          ((M += x.partialLength),
+                                          ((P += M.partialLength),
                                           (k += 1) >= F.length &&
                                               ((k = 0),
                                               V[(U += 1)]
                                                   ? (F = V[U].points)
                                                   : W.v.c
                                                     ? ((k = 0), (F = V[(U = 0)].points))
-                                                    : ((M -= x.partialLength), (F = null))),
-                                          F && ((G = x), (B = (x = F[k]).partialLength)));
-                                (l = C[O].an / 2 - C[O].add), y.translate(-l, 0, 0);
+                                                    : ((P -= M.partialLength), (F = null))),
+                                          F && ((G = M), (B = (M = F[k]).partialLength)));
+                                (l = C[b].an / 2 - C[b].add), y.translate(-l, 0, 0);
                             } else
-                                (l = C[O].an / 2 - C[O].add),
+                                (l = C[b].an / 2 - C[b].add),
                                     y.translate(-l, 0, 0),
-                                    y.translate(-I[0] * C[O].an * 0.005, -I[1] * $ * 0.01, 0);
+                                    y.translate(-I[0] * C[b].an * 0.005, -I[1] * z * 0.01, 0);
                             for (i = 0; i < s; i += 1)
                                 (n = T[i].a).t.propType &&
-                                    ((o = (r = T[i].s).getMult(C[O].anIndexes[i], S.a[i].s.totalChars)),
-                                    (0 !== b || 0 !== e.j) &&
+                                    ((o = (r = T[i].s).getMult(C[b].anIndexes[i], S.a[i].s.totalChars)),
+                                    (0 !== R || 0 !== e.j) &&
                                         (this._hasMaskedPath
                                             ? o.length
                                                 ? (w += n.t.v * o[0])
                                                 : (w += n.t.v * o)
                                             : o.length
-                                              ? (b += n.t.v * o[0])
-                                              : (b += n.t.v * o)));
+                                              ? (R += n.t.v * o[0])
+                                              : (R += n.t.v * o)));
                             for (
                                 e.strokeWidthAnim && (f = e.sw || 0),
                                     e.strokeColorAnim && (_ = e.sc ? [e.sc[0], e.sc[1], e.sc[2]] : [0, 0, 0]),
@@ -7770,18 +7770,18 @@
                                 i += 1
                             )
                                 (n = T[i].a).a.propType &&
-                                    ((o = (r = T[i].s).getMult(C[O].anIndexes[i], S.a[i].s.totalChars)).length
+                                    ((o = (r = T[i].s).getMult(C[b].anIndexes[i], S.a[i].s.totalChars)).length
                                         ? y.translate(-n.a.v[0] * o[0], -n.a.v[1] * o[1], n.a.v[2] * o[2])
                                         : y.translate(-n.a.v[0] * o, -n.a.v[1] * o, n.a.v[2] * o));
                             for (i = 0; i < s; i += 1)
                                 (n = T[i].a).s.propType &&
-                                    ((o = (r = T[i].s).getMult(C[O].anIndexes[i], S.a[i].s.totalChars)).length
+                                    ((o = (r = T[i].s).getMult(C[b].anIndexes[i], S.a[i].s.totalChars)).length
                                         ? y.scale(1 + (n.s.v[0] - 1) * o[0], 1 + (n.s.v[1] - 1) * o[1], 1)
                                         : y.scale(1 + (n.s.v[0] - 1) * o, 1 + (n.s.v[1] - 1) * o, 1));
                             for (i = 0; i < s; i += 1) {
                                 if (
                                     ((n = T[i].a),
-                                    (o = (r = T[i].s).getMult(C[O].anIndexes[i], S.a[i].s.totalChars)),
+                                    (o = (r = T[i].s).getMult(C[b].anIndexes[i], S.a[i].s.totalChars)),
                                     n.sk.propType &&
                                         (o.length
                                             ? y.skewFromAxis(-n.sk.v * o[0], n.sa.v * o[1])
@@ -7820,7 +7820,7 @@
                             }
                             for (i = 0; i < s; i += 1)
                                 (n = T[i].a).p.propType &&
-                                    ((o = (r = T[i].s).getMult(C[O].anIndexes[i], S.a[i].s.totalChars)),
+                                    ((o = (r = T[i].s).getMult(C[b].anIndexes[i], S.a[i].s.totalChars)),
                                     this._hasMaskedPath
                                         ? o.length
                                             ? y.translate(0, n.p.v[1] * o[0], -n.p.v[2] * o[1])
@@ -7852,44 +7852,44 @@
                                 this._hasMaskedPath)
                             ) {
                                 if (
-                                    (y.translate(0, -e.ls), y.translate(0, I[1] * $ * 0.01 + R, 0), this._pathData.p.v)
+                                    (y.translate(0, -e.ls), y.translate(0, I[1] * z * 0.01 + O, 0), this._pathData.p.v)
                                 ) {
                                     var eu =
-                                        (180 * Math.atan((Y = (x.point[1] - G.point[1]) / (x.point[0] - G.point[0])))) /
+                                        (180 * Math.atan((Y = (M.point[1] - G.point[1]) / (M.point[0] - G.point[0])))) /
                                         Math.PI;
-                                    x.point[0] < G.point[0] && (eu += 180), y.rotate((-eu * Math.PI) / 180);
+                                    M.point[0] < G.point[0] && (eu += 180), y.rotate((-eu * Math.PI) / 180);
                                 }
                                 y.translate(u, c, 0),
-                                    (w -= I[0] * C[O].an * 0.005),
-                                    C[O + 1] &&
-                                        Z !== C[O + 1].ind &&
-                                        ((w += C[O].an / 2), (w += 0.001 * e.tr * e.finalSize));
+                                    (w -= I[0] * C[b].an * 0.005),
+                                    C[b + 1] &&
+                                        Z !== C[b + 1].ind &&
+                                        ((w += C[b].an / 2), (w += 0.001 * e.tr * e.finalSize));
                             } else {
                                 switch (
-                                    (y.translate(b, R, 0), e.ps && y.translate(e.ps[0], e.ps[1] + e.ascent, 0), e.j)
+                                    (y.translate(R, O, 0), e.ps && y.translate(e.ps[0], e.ps[1] + e.ascent, 0), e.j)
                                 ) {
                                     case 1:
                                         y.translate(
-                                            C[O].animatorJustifyOffset +
+                                            C[b].animatorJustifyOffset +
                                                 e.justifyOffset +
-                                                (e.boxWidth - e.lineWidths[C[O].line]),
+                                                (e.boxWidth - e.lineWidths[C[b].line]),
                                             0,
                                             0,
                                         );
                                         break;
                                     case 2:
                                         y.translate(
-                                            C[O].animatorJustifyOffset +
+                                            C[b].animatorJustifyOffset +
                                                 e.justifyOffset +
-                                                (e.boxWidth - e.lineWidths[C[O].line]) / 2,
+                                                (e.boxWidth - e.lineWidths[C[b].line]) / 2,
                                             0,
                                             0,
                                         );
                                 }
                                 y.translate(0, -e.ls),
                                     y.translate(l, 0, 0),
-                                    y.translate(I[0] * C[O].an * 0.005, I[1] * $ * 0.01, 0),
-                                    (b += C[O].l + 0.001 * e.tr * e.finalSize);
+                                    y.translate(I[0] * C[b].an * 0.005, I[1] * z * 0.01, 0),
+                                    (R += C[b].l + 0.001 * e.tr * e.finalSize);
                             }
                             "html" === v
                                 ? (et = y.toCSS())
@@ -7915,12 +7915,12 @@
                                     ]),
                                 (A = d);
                         }
-                        N <= O
+                        N <= b
                             ? ((a = new LetterProps(A, m, E, g, et, en)),
                               this.renderedLetters.push(a),
                               (N += 1),
                               (this.lettersChangedFlag = !0))
-                            : ((a = this.renderedLetters[O]),
+                            : ((a = this.renderedLetters[b]),
                               (this.lettersChangedFlag = a.update(A, m, E, g, et, en) || this.lettersChangedFlag));
                     }
                 }

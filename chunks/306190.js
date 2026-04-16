@@ -1,8 +1,8 @@
-n.d(t, { A: () => g }), n(667532);
+n.d(t, { A: () => p }), n(667532);
 var i = n(627968),
-    r = n(64700),
+    l = n(64700),
     a = n(311907),
-    l = n(397927),
+    r = n(397927),
     s = n(416052),
     o = n(240248),
     d = n(829219),
@@ -12,16 +12,16 @@ var i = n(627968),
     h = n(767521),
     _ = n(818348),
     m = n(985018),
-    p = n(883088);
-let g = function (e) {
-    let { questId: t, setQuestId: n, quest: g, refreshQuest: E } = e,
-        [f, I] = r.useState(!1),
-        [C, N] = r.useState(!1),
-        T = r.useRef(null),
+    g = n(60857);
+let p = function (e) {
+    let { questId: t, setQuestId: n, quest: p, refreshQuest: E } = e,
+        [I, f] = l.useState(!1),
+        [C, T] = l.useState(!1),
+        N = l.useRef(null),
         S = (0, u.pT)(),
         x = (0, a.bG)([c.A], () => (null != t ? c.A.getFetchQuestPreviewError(t) : null), [t]),
         v = (0, a.bG)([c.A], () => null != t && c.A.isFetchingQuestPreview(t), [t]),
-        b = r.useMemo(() => {
+        b = l.useMemo(() => {
             let e = S.map((e) => ({
                 id: e.id,
                 label: `${e.config?.messages?.questName ?? e.id} (${e.id})`,
@@ -29,58 +29,58 @@ let g = function (e) {
             }));
             return null == t || e.some((e) => e.value === t) || e.unshift({ id: t, label: t, value: t }), e;
         }, [S, t]),
-        y = r.useCallback(async () => {
+        y = l.useCallback(async () => {
             if (null != t) {
-                I(!0);
+                f(!0);
                 try {
                     await (0, d.Yb)(t, 1);
                 } finally {
-                    I(!1);
+                    f(!1);
                 }
             }
-        }, [t, I]),
-        L = r.useCallback(async () => {
+        }, [t, f]),
+        O = l.useCallback(async () => {
             if (null != t) {
-                I(!0);
+                f(!0);
                 try {
                     await (0, d.UZ)(t);
                 } finally {
-                    I(!1);
+                    f(!1);
                 }
             }
-        }, [t, I]),
-        O = r.useCallback(async () => {
+        }, [t, f]),
+        L = l.useCallback(async () => {
             if (null != t) {
-                I(!0);
+                f(!0);
                 try {
                     let e = Math.random();
                     await (0, d.Yb)(t, e);
                 } finally {
-                    I(!1);
+                    f(!1);
                 }
             }
-        }, [t, I]),
-        R = r.useCallback(
+        }, [t, f]),
+        R = l.useCallback(
             (e) => {
                 (0, o.uJ)(e) || null == n || n(e);
             },
             [n],
         );
     return (0, i.jsxs)("div", {
-        className: p.Fr,
+        className: g.Fr,
         children: [
             (0, i.jsx)("div", {
                 children: (0, i.jsx)("div", {
-                    className: p.Br,
+                    className: g.Br,
                     children: (0, i.jsxs)("div", {
-                        className: p.bo,
+                        className: g.bo,
                         children: [
                             (0, i.jsx)(h.A, {}),
                             (0, i.jsxs)("div", {
-                                className: p.b8,
+                                className: g.b8,
                                 children: [
                                     (0, i.jsx)(
-                                        l.ZiE,
+                                        r.ZiE,
                                         {
                                             selectionMode: "single",
                                             label: "Quest ID",
@@ -102,12 +102,12 @@ let g = function (e) {
                                                     : n;
                                             },
                                         },
-                                        `${t}-${g?.config?.messages?.questName ?? ""}`,
+                                        `${t}-${p?.config?.messages?.questName ?? ""}`,
                                     ),
-                                    (0, i.jsx)(l.K0, {
+                                    (0, i.jsx)(r.K0, {
                                         onClick: E,
                                         "aria-label": m.intl.string(m.t.wzzjk9),
-                                        icon: l.fNY,
+                                        icon: r.fNY,
                                         loading: v,
                                     }),
                                 ],
@@ -117,44 +117,44 @@ let g = function (e) {
                 }),
             }),
             null != t &&
-                null != g &&
+                null != p &&
                 (0, i.jsx)("div", {
-                    className: p.in,
-                    children: (0, i.jsxs)(l.ButtonGroup, {
-                        className: p.xv,
+                    className: g.in,
+                    children: (0, i.jsxs)(r.ButtonGroup, {
+                        className: g.xv,
                         children: [
-                            (0, i.jsx)(l.Button, {
+                            (0, i.jsx)(r.Button, {
                                 onClick: y,
-                                disabled: f,
-                                loading: f,
+                                disabled: I,
+                                loading: I,
                                 variant: "secondary",
                                 text: m.intl.string(m.t.jQEfRT),
                             }),
-                            (0, i.jsx)(l.Button, {
-                                onClick: L,
-                                disabled: f,
-                                loading: f,
+                            (0, i.jsx)(r.Button, {
+                                onClick: O,
+                                disabled: I,
+                                loading: I,
                                 variant: "secondary",
                                 text: m.intl.string(m.t.taqkwK),
                             }),
-                            (0, i.jsx)(l.Button, {
-                                onClick: O,
-                                disabled: f,
-                                loading: f,
+                            (0, i.jsx)(r.Button, {
+                                onClick: L,
+                                disabled: I,
+                                loading: I,
                                 variant: "secondary",
                                 text: m.intl.string(m.t.cKSLr4),
                             }),
-                            (0, i.jsx)(l.YNO, {
-                                targetElementRef: T,
+                            (0, i.jsx)(r.YNO, {
+                                targetElementRef: N,
                                 shouldShow: C,
-                                onRequestClose: () => N(!1),
+                                onRequestClose: () => T(!1),
                                 position: "bottom",
                                 align: "center",
                                 renderPopout: () =>
                                     (0, i.jsx)("div", {
-                                        className: p.PP,
+                                        className: g.PP,
                                         children: (0, i.jsx)("div", {
-                                            className: p.sH,
+                                            className: g.sH,
                                             children: (0, i.jsx)(s.A, {
                                                 value: _.Sb.QUEST_PREVIEW_TOOL_2(t),
                                                 text: m.intl.string(m.t.WqhZss),
@@ -162,11 +162,11 @@ let g = function (e) {
                                         }),
                                     }),
                                 children: () =>
-                                    (0, i.jsx)(l.K0, {
-                                        buttonRef: T,
-                                        onClick: () => N(!C),
+                                    (0, i.jsx)(r.K0, {
+                                        buttonRef: N,
+                                        onClick: () => T(!C),
                                         "aria-label": m.intl.string(m.t.rNGQfD),
-                                        icon: l.TdU,
+                                        icon: r.TdU,
                                         variant: "secondary",
                                     }),
                             }),
@@ -174,7 +174,7 @@ let g = function (e) {
                     }),
                 }),
             null != x ? (0, i.jsx)(A.P, { error: x }) : null,
-            v ? (0, i.jsx)(l.y$y, {}) : null,
+            v ? (0, i.jsx)(r.y$y, {}) : null,
         ],
     });
 };

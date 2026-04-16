@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { B_: () => N, FC: () => E, Fk: () => C, IK: () => y, PX: () => v, TZ: () => R, ji: () => b, zN: () => S });
+n.d(t, { B_: () => N, FC: () => E, Fk: () => T, IK: () => y, PX: () => v, TZ: () => R, ji: () => b, zN: () => S });
 var i = n(627968),
     s = n(64700),
     r = n(503698),
@@ -12,26 +12,26 @@ var i = n(627968),
     h = n(486020),
     _ = n(427262),
     p = n(172799),
-    g = n(652215),
-    m = n(330936),
+    m = n(652215),
+    g = n(330936),
     A = n(985018),
-    f = n(742557);
+    f = n(82210);
 let E = 100,
     x = (e) => {
         let t = { onlineCount: e.approximate_presence_count ?? 0, memberCount: e.approximate_member_count ?? 0 };
         return 0 === t.memberCount && 0 === t.memberCount ? null : t;
     },
     I = (e) => e.target_type === p.yV.STREAM && null != e.target_user,
-    N = (e) => e.channel?.type === g.rbe.GROUP_DM,
+    N = (e) => e.channel?.type === m.rbe.GROUP_DM,
     v = (e) => null == e.channel && null == e.guild && null != e.inviter,
-    T = (e) => e.state === g.elq.ACCEPTED,
-    C = (e) => {
+    C = (e) => e.state === m.elq.ACCEPTED,
+    T = (e) => {
         let { guild_scheduled_event: t } = e;
         return null != t;
     },
     j = (e) => {
         let t;
-        return !C(e) && (!!v(e) || (null != e.inviter && !T(e) && ((t = x(e)), !((t?.memberCount ?? 0) > E))));
+        return !T(e) && (!!v(e) || (null != e.inviter && !C(e) && ((t = x(e)), !((t?.memberCount ?? 0) > E))));
     },
     S = (e) => {
         let { guild: t, user: n, application: s } = e;
@@ -46,7 +46,7 @@ let E = 100,
 function y(e) {
     let { invite: t, textClassName: n, className: s } = e,
         r = x(t);
-    return null == r || j(t) || t?.guild?.id === m.TA
+    return null == r || j(t) || t?.guild?.id === g.TA
         ? null
         : (0, i.jsx)(o.R1, {
               className: l()(f.He, s),
@@ -78,7 +78,7 @@ function b(e) {
                       : A.intl.string(A.t.OsdY8B))
             : I(t) && null != t.target_user
               ? (l = A.intl.formatToPlainString(A.t.x2L32Q, { username: t.target_user.username }))
-              : T(t)
+              : C(t)
                 ? (l = A.intl.string(A.t["FDsl+J"]))
                 : j(t) &&
                   null != t.inviter &&
@@ -98,7 +98,7 @@ function R(e) {
         n,
         s,
         { user: r, guild: l, channel: d, application: h, showBigUserIcon: p } = e,
-        g = (0, c.Ay)(d);
+        m = (0, c.Ay)(d);
     if (null != l)
         p && null == h && (t = (0, i.jsx)(o.$v, { guild: l, size: o.$v.Sizes.SMALL })),
             (n = l.name),
@@ -124,8 +124,8 @@ function R(e) {
     else if (null != d) {
         if (null == r) throw Error("no inviter in group DM invite");
         let e = _.Ay.getFormattedName(r);
-        null != g && "" !== g
-            ? ((n = g), null != d.icon && (t = (0, i.jsx)(o.F4, { channel: d, size: a._3J.SIZE_32 })))
+        null != m && "" !== m
+            ? ((n = m), null != d.icon && (t = (0, i.jsx)(o.F4, { channel: d, size: a._3J.SIZE_32 })))
             : (n = e);
     } else if (null != r) {
         let e = _.Ay.getFormattedName(r);

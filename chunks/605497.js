@@ -2,12 +2,12 @@
 n.d(t, { P: () => l });
 var r = n(627968),
     i = n(64700),
-    a = n(311907),
-    s = n(643501),
-    o = n(780885);
+    s = n(311907),
+    a = n(643501),
+    o = n(37256);
 function l(e) {
     let { body: t, dismissCallback: n, errorCodeMessage: l } = e,
-        u = (0, a.bG)([s.default], () => s.default.getRemoteSessionId());
+        u = (0, s.bG)([a.default], () => a.default.getRemoteSessionId());
     return (i.useEffect(() => {
         null != u && n();
     }, [u, n]),

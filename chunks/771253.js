@@ -3324,13 +3324,13 @@ class t0 {
                     break;
                 case tj: {
                     let e = new Uint8Array([154, 4, 240, 121, 152, 64, 66, 134, 171, 146, 230, 91, 224, 136, 95, 149]);
-                    (this.pssh = (function (e, t, i) {
-                        let r, s;
+                    (this.pssh = (function (e, t) {
+                        let i, r;
                         if (16 !== e.byteLength) throw RangeError("Invalid system id");
-                        (r = new Uint8Array()), (s = new Uint8Array());
-                        let a = new Uint8Array(4);
+                        (i = new Uint8Array()), (r = new Uint8Array());
+                        let s = new Uint8Array(4);
                         return (
-                            i.byteLength > 0 && new DataView(a.buffer).setUint32(0, i.byteLength, !1),
+                            t.byteLength > 0 && new DataView(s.buffer).setUint32(0, t.byteLength, !1),
                             (function (e, ...t) {
                                 let i = t.length,
                                     r = 8,
@@ -3350,9 +3350,9 @@ class t0 {
                                 )
                                     a.set(t[s], r), (r += t[s].byteLength);
                                 return a;
-                            })([112, 115, 115, 104], new Uint8Array([0, 0, 0, 0]), e, s, r, a, i)
+                            })([112, 115, 115, 104], new Uint8Array([0, 0, 0, 0]), e, r, i, s, t)
                         );
-                    })(e, 0, t)),
+                    })(e, t)),
                         (this.keyId = (function (e) {
                             let t = new Uint16Array(e.buffer, e.byteOffset, e.byteLength / 2),
                                 i = String.fromCharCode.apply(null, Array.from(t)),
@@ -13689,9 +13689,9 @@ function aA(e, t, i, r) {
     let s = ed(new Uint8Array(e), ["mdat"]);
     if (0 === s.length) return void r(Error("Could not parse IMSC1 mdat"));
     let a = s.map((e) => V(e)),
-        n = (function (e, t, i = 1, r = !1) {
-            return rk(e, 1, 1 / i, r);
-        })(t.baseTime, 0, t.timescale);
+        n = (function (e, t = 1, i = !1) {
+            return rk(e, 1, 1 / t, i);
+        })(t.baseTime, t.timescale);
     try {
         a.forEach((e) =>
             i(

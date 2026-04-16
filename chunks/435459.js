@@ -106,7 +106,7 @@ let c = {
     "discord_common/js/shared/animations/app/gifts/seasonal/marketing/gift_icon/seasonal-gifting-wumpus-loop.lottiejson":
         () => n.e("25676").then(n.t.bind(n, 322151, 19)),
     "discord_common/js/shared/animations/app/gifts/seasonal/marketing/seasonal_wumpus/seasonal-wumpus-action.lottiejson":
-        () => n.e("10803").then(n.t.bind(n, 27870, 19)),
+        () => n.e("10803").then(n.t.bind(n, 805489, 19)),
     "discord_common/js/shared/animations/app/gifts/seasonal/marketing/seasonal_wumpus/seasonal-wumpus-idle.lottiejson":
         () => n.e("10191").then(n.t.bind(n, 837074, 19)),
     "discord_common/js/shared/animations/app/gifts/seasonal/marketing/seasonal_wumpus/seasonal-wumpus-loop.lottiejson":

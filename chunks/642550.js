@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => p });
 var r = n(627968),
     i = n(64700),
     s = n(942381),
@@ -10,10 +10,10 @@ var r = n(627968),
     c = n(256449),
     d = n(823894),
     _ = n(985018),
-    f = n(63005);
-let h = i.forwardRef(function (e, t) {
-    let { onKeyDown: n, stickersListRef: h, channel: p } = e,
-        m = (0, c.ZO)(p),
+    f = n(337485);
+let p = i.forwardRef(function (e, t) {
+    let { onKeyDown: n, stickersListRef: p, channel: h } = e,
+        m = (0, c.ZO)(h),
         E = i.useRef(null),
         { searchQuery: g, isSearchSuggestion: A } = (0, u.RQ)(
             (e) => ({ searchQuery: e.searchQuery, isSearchSuggestion: e.isSearchSuggestion }),
@@ -27,9 +27,9 @@ let h = i.forwardRef(function (e, t) {
                     l.bM.setInspectedExpressionPosition(0, 0),
                     l.bM.setSearchPlaceholder(null),
                     (0, u.Ri)(e),
-                    h.current?.scrollTo(0);
+                    p.current?.scrollTo(0);
             },
-            [h],
+            [p],
         ),
         v = i.useCallback(() => {
             y("");

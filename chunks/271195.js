@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { A: () => g, X: () => m });
+n.d(t, { A: () => E, X: () => m });
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
-    s = n(311907),
+    s = n.n(i),
+    a = n(311907),
     o = n(73939),
     l = n(397927),
     u = n(235986),
@@ -13,12 +13,12 @@ var i = n(503698),
     _ = n(6155),
     f = n(919706),
     p = n(985018),
-    h = n(319567);
+    h = n(27600);
 function m(e) {
-    let { title: t, onJumpToChannel: n, idle: i, preventIdleComponent: a } = e,
-        o = (0, s.bG)([d.A], () => d.A.getChannelId()),
+    let { title: t, onJumpToChannel: n, idle: i, preventIdleComponent: s } = e,
+        o = (0, a.bG)([d.A], () => d.A.getChannelId()),
         u = null != o ? (0, r.jsx)(_.A, { voiceChannelId: o, idle: i }) : null;
-    return (0, r.jsxs)(a, {
+    return (0, r.jsxs)(s, {
         className: h.Nc,
         children: [
             (0, r.jsxs)(l.DUT, {
@@ -45,18 +45,18 @@ function m(e) {
         ],
     });
 }
-function g(e) {
+function E(e) {
     let {
         children: t,
         idle: n,
         onJumpToChannel: i,
-        backgroundKey: s,
+        backgroundKey: a,
         onActive: l,
         onForceIdle: d,
         renderBottomLeftControls: _,
         renderBottomRightControls: p,
-        screenMessage: g,
-        hideControls: E = !1,
+        screenMessage: E,
+        hideControls: g = !1,
         className: A,
         innerClassName: I,
         videoControlsClassName: T,
@@ -66,14 +66,14 @@ function g(e) {
         onMouseMove: l,
         onMouseDown: l,
         onMouseLeave: d,
-        className: a()(h.Hu, { [h.N7]: n }, A),
+        className: s()(h.Hu, { [h.N7]: n }, A),
         onDoubleClick: i,
         children: [
-            (0, r.jsx)(o.F, { children: (0, r.jsx)(c.o, { className: I, children: t }, s) }),
-            null != g ? (0, r.jsx)(f.A, { size: "small", ...g }) : null,
-            !E &&
+            (0, r.jsx)(o.F, { children: (0, r.jsx)(c.o, { className: I, children: t }, a) }),
+            null != E ? (0, r.jsx)(f.A, { size: "small", ...E }) : null,
+            !g &&
                 (0, r.jsxs)("div", {
-                    className: a()(h._v, T, "theme-dark"),
+                    className: s()(h._v, T, "theme-dark"),
                     children: [
                         (0, r.jsx)("div", {
                             className: h.K1,

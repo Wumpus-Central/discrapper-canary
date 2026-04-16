@@ -1,6 +1,6 @@
-!(function (e, t) {
-    t(n(989349));
-})(0, function (e) {
+!(function (e) {
+    e(n(989349));
+})(function (e) {
     "use strict";
     function t(e) {
         return e instanceof Function || "[object Function]" === Object.prototype.toString.call(e);

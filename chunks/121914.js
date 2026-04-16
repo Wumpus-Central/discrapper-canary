@@ -26,7 +26,7 @@ var i,
     y = n(34307),
     M = n(652215),
     R = n(985018),
-    D = n(129839),
+    D = n(95231),
     b = (((i = {}).DEFAULT = "DEFAULT"), (i.CHANNEL_TYPE = "CHANNEL_TYPE"), i);
 let O = r.memo(function (e) {
     let { channelId: t, selectedVoiceChannelId: n, iconVariant: i = "DEFAULT" } = e,
@@ -109,12 +109,12 @@ let O = r.memo(function (e) {
             })(),
         }),
         B = (0, v.r)({ channel: z, guild: V, user: F }),
-        X = z?.isPrivate() ?? !1,
-        Z = V?.name ?? "",
-        K = X ? void 0 : P,
-        $ = X ? P : "" !== Z ? Z : P,
+        Z = z?.isPrivate() ?? !1,
+        X = V?.name ?? "",
+        K = Z ? void 0 : P,
+        $ = Z ? P : "" !== X ? X : P,
         q = (() => {
-            if (null == z || X) return null;
+            if (null == z || Z) return null;
             let e = (0, h.gU)(z, V);
             return (e ??= d.oyn), (0, l.jsx)(e, { size: "sm", color: d.LU0.colors.INTERACTIVE_ICON_DEFAULT });
         })();

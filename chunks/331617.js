@@ -13,8 +13,8 @@ var r = t(627968),
     _ = t(721923),
     m = t(652215),
     j = t(985018),
-    h = t(81280),
-    g = t(885106);
+    h = t(637744),
+    g = t(818050);
 let C = "premium-guild-subscription-upsell-modal-header";
 function k(e) {
     let { title: s, subtitle: t, image: n } = e;

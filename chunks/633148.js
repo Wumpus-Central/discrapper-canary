@@ -10,7 +10,7 @@ var l = n(627968),
     c = n(853742),
     u = n(652215),
     m = n(985018),
-    h = n(93071);
+    h = n(952351);
 function x(e) {
     let { channelName: t, guildId: x, tagFilter: g, channel: f } = e,
         _ = (0, d.S4)(f),

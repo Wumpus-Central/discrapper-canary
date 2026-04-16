@@ -10,12 +10,12 @@ var n = l(627968),
     u = l(942975),
     x = l(645619),
     m = l(434564),
-    h = l(166403),
-    g = l(313375),
+    g = l(166403),
+    h = l(313375),
     C = l(61780),
     j = l(473145),
     v = l(985018),
-    p = l(253564);
+    p = l(17095);
 function f(t) {
     let { tier: e } = t;
     return (0, n.jsxs)("div", {
@@ -23,7 +23,7 @@ function f(t) {
         children: [
             (0, n.jsx)(c.A, {
                 className: p.U2,
-                children: (0, n.jsx)(g.A, { tier: e, color: "currentColor", className: p.Zw }),
+                children: (0, n.jsx)(h.A, { tier: e, color: "currentColor", className: p.Zw }),
             }),
             (0, j.gb)(e),
         ],
@@ -44,7 +44,7 @@ function S(t) {
 }
 function A(t) {
     let { canceledCount: e } = t,
-        l = (0, a.bG)([h.A], () => h.A.getPremiumTypeSubscription());
+        l = (0, a.bG)([g.A], () => g.A.getPremiumTypeSubscription());
     return null == l
         ? null
         : (0, n.jsxs)("div", {

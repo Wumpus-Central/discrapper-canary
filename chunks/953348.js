@@ -4,7 +4,7 @@ var i = n(627968),
     s = n(64700),
     l = n(397927),
     r = n(985018),
-    a = n(872430);
+    a = n(22057);
 function o(e) {
     let { showSecondaryColor: t, palette: n, onPrimaryColorChange: o, onSecondaryColorChange: d } = e,
         c = s.useRef(null);

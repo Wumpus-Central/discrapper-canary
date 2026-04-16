@@ -1,43 +1,43 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => h });
 var i = n(627968),
-    a = n(64700),
-    r = n(884362),
-    l = n(837381),
+    l = n(64700),
+    a = n(884362),
+    r = n(837381),
     s = n(311907),
     o = n(397927),
     d = n(775602);
 n(646363);
 var c = n(652215),
     u = n(788868),
-    A = n(63461);
-let _ = function (e) {
-    let { rows: t, renderRow: n, renderSection: _, footer: h, sectionFilter: m, renderSectionFooter: g } = e,
+    A = n(795733);
+let h = function (e) {
+    let { rows: t, renderRow: n, renderSection: h, footer: _, sectionFilter: m, renderSectionFooter: g } = e,
         p = (e) => {
-            let { section: i, row: a } = e,
-                r = t[i];
-            if (null == r || null == a) return null;
-            let l = r[a];
-            return null == l ? null : n(l, i);
+            let { section: i, row: l } = e,
+                a = t[i];
+            if (null == a || null == l) return null;
+            let r = a[l];
+            return null == r ? null : n(r, i);
         },
-        E = a.useCallback(
+        E = l.useCallback(
             (e, n) => {
                 let i = t[e]?.[n];
                 return m === c.m3P.ALL && i?.giftIntentType === u.np.FRIEND_ANNIVERSARY && 0 === e ? 72 : 61;
             },
             [t, m],
         ),
-        I = a.useCallback(
+        I = l.useCallback(
             (e) => {
                 let { section: t } = e;
-                return _(t);
+                return h(t);
             },
-            [_],
+            [h],
         ),
-        f = a.useCallback((e) => (null == g ? null : g(e.section)), [g]),
-        C = a.useCallback((e) => (null == g ? 0 : 48 * (null != g(e))), [g]),
+        f = l.useCallback((e) => (null == g ? null : g(e.section)), [g]),
+        C = l.useCallback((e) => (null == g ? 0 : 48 * (null != g(e))), [g]),
         T = (0, s.bG)([d.A], () => d.A.keyboardModeEnabled),
-        N = a.useRef(null),
-        S = a.useCallback(
+        N = l.useRef(null),
+        S = l.useCallback(
             () =>
                 new Promise((e) => {
                     let t = N.current;
@@ -46,7 +46,7 @@ let _ = function (e) {
                 }),
             [],
         ),
-        x = a.useCallback(
+        x = l.useCallback(
             () =>
                 new Promise((e) => {
                     let t = N.current;
@@ -55,16 +55,16 @@ let _ = function (e) {
                 }),
             [],
         ),
-        v = a.useCallback((e) => {
+        v = l.useCallback((e) => {
             let t = document.querySelector(e),
                 n = N.current;
             null != t && null != n && n.scrollIntoViewNode({ node: t, padding: 8, callback: () => t?.focus() });
         }, []),
-        b = (0, r.Ay)({ id: "people-list", isEnabled: T, scrollToStart: S, scrollToEnd: x, setFocus: v }),
-        y = a.useMemo(() => t.map((e) => e.length), [t]);
-    return (0, i.jsx)(l.hD, {
+        b = (0, a.Ay)({ id: "people-list", isEnabled: T, scrollToStart: S, scrollToEnd: x, setFocus: v }),
+        y = l.useMemo(() => t.map((e) => e.length), [t]);
+    return (0, i.jsx)(r.hD, {
         navigator: b,
-        children: (0, i.jsx)(l.PR, {
+        children: (0, i.jsx)(r.PR, {
             children: (e) => {
                 let { ref: t, ...n } = e;
                 return (0, i.jsxs)(i.Fragment, {
@@ -83,7 +83,7 @@ let _ = function (e) {
                             className: A.e3,
                             ...n,
                         }),
-                        h,
+                        _,
                     ],
                 });
             },

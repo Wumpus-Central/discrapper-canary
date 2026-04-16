@@ -1,24 +1,24 @@
-n.d(t, { A: () => u });
-var i = n(627968);
-n(64700);
-var s = n(347805),
-    l = n(183555),
-    a = n(716804),
-    r = n(83013),
-    d = n(518477),
-    o = n(985018),
-    c = n(473836);
+l.d(n, { A: () => u });
+var t = l(627968);
+l(64700);
+var i = l(347805),
+    s = l(183555),
+    a = l(716804),
+    r = l(83013),
+    o = l(518477),
+    d = l(985018),
+    c = l(77085);
 function u(e) {
-    let { userId: t } = e,
-        n = (0, a.g)(),
-        { trackUserProfileAction: u } = (0, l.NJ)();
-    return (0, i.jsx)(r.A, {
-        heading: o.intl.string(o.t["mQKv+v"]),
-        scrollTargetId: d.bk.NOTE,
-        children: (0, i.jsx)(s.A, {
-            userId: t,
+    let { userId: n } = e,
+        l = (0, a.g)(),
+        { trackUserProfileAction: u } = (0, s.NJ)();
+    return (0, t.jsx)(r.A, {
+        heading: d.intl.string(d.t["mQKv+v"]),
+        scrollTargetId: o.bk.NOTE,
+        children: (0, t.jsx)(i.A, {
+            userId: n,
             className: c.N,
-            autoFocus: n === d.bk.NOTE,
+            autoFocus: l === o.bk.NOTE,
             onUpdate: () => u({ action: "SET_NOTE" }),
         }),
     });

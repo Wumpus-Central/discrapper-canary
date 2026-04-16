@@ -1,14 +1,14 @@
-n.d(t, { A: () => g, a: () => h });
+n.d(t, { A: () => p, a: () => h });
 var i,
-    r = n(627968),
+    l = n(627968),
     a = n(64700),
-    l = n(615300),
+    r = n(615300),
     s = n(311907),
     o = n(397927),
     d = n(544028),
     c = n(652215),
     u = n(985018),
-    A = n(149460),
+    A = n(34275),
     h = (((i = {}).SECTION_NO_RESULTS = "SECTION_NO_RESULTS"), i);
 let _ = Object.freeze({
         SECTION_ALL: {
@@ -17,13 +17,13 @@ let _ = Object.freeze({
             width: 376,
             height: 162,
             renderContent: (e) =>
-                (0, r.jsxs)(a.Fragment, {
+                (0, l.jsxs)(a.Fragment, {
                     children: [
-                        (0, r.jsx)(o.SGT, { note: u.intl.string(u.t.Y4vMY8) }),
-                        (0, r.jsx)("div", {
+                        (0, l.jsx)(o.SGT, { note: u.intl.string(u.t.Y4vMY8) }),
+                        (0, l.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: A.x6,
-                            children: (0, r.jsx)(o.Button, {
+                            children: (0, l.jsx)(o.Button, {
                                 variant: "primary",
                                 text: u.intl.string(u.t.w5uwoI),
                                 onClick: e,
@@ -37,14 +37,14 @@ let _ = Object.freeze({
             darkSrc: n(492055),
             width: 421,
             height: 218,
-            renderContent: () => (0, r.jsx)(o.SGT, { note: u.intl.string(u.t.v7HbiQ) }),
+            renderContent: () => (0, l.jsx)(o.SGT, { note: u.intl.string(u.t.v7HbiQ) }),
         },
         SECTION_BLOCKED: {
             lightSrc: n(751906),
             darkSrc: n(689818),
             width: 433,
             height: 232,
-            renderContent: () => (0, r.jsx)(o.SGT, { note: u.intl.string(u.t["9xdyWB"]) }),
+            renderContent: () => (0, l.jsx)(o.SGT, { note: u.intl.string(u.t["9xdyWB"]) }),
         },
         SECTION_PENDING: {
             lightSrc: n(826223),
@@ -52,12 +52,12 @@ let _ = Object.freeze({
             width: 415,
             height: 200,
             renderContent: (e, t) =>
-                (0, r.jsxs)("div", {
+                (0, l.jsxs)("div", {
                     className: A.y7,
                     children: [
-                        (0, r.jsx)(o.SGT, { note: u.intl.string(u.t["aCYQ+P"]) }),
+                        (0, l.jsx)(o.SGT, { note: u.intl.string(u.t["aCYQ+P"]) }),
                         null != e &&
-                            (0, r.jsx)(o.Button, {
+                            (0, l.jsx)(o.Button, {
                                 variant: "secondary",
                                 text: t ? u.intl.string(u.t.R40bU2) : u.intl.string(u.t.rXl8fj),
                                 onClick: e,
@@ -71,28 +71,28 @@ let _ = Object.freeze({
             darkSrc: n(317017),
             width: 415,
             height: 200,
-            renderContent: () => (0, r.jsx)(o.SGT, { note: u.intl.string(u.t["vgI/EF"]) }),
+            renderContent: () => (0, l.jsx)(o.SGT, { note: u.intl.string(u.t["vgI/EF"]) }),
         },
         SECTION_NO_RESULTS: {
             lightSrc: n(939333),
             darkSrc: n(492055),
             width: 421,
             height: 218,
-            renderContent: () => (0, r.jsx)(o.SGT, { note: u.intl.string(u.t["7sW4h1"]) }),
+            renderContent: () => (0, l.jsx)(o.SGT, { note: u.intl.string(u.t["7sW4h1"]) }),
         },
     }),
     m = (e) => {
         let { theme: t } = e,
             n = u.intl.string(u.t["oi+B4p"]);
-        return (0, r.jsx)(o.ppr, { theme: t, children: (0, r.jsx)(o.SGT, { note: n }) });
+        return (0, l.jsx)(o.ppr, { theme: t, children: (0, l.jsx)(o.SGT, { note: n }) });
     };
-class p extends a.PureComponent {
-    state = { opacity: new l.A.Value(1) };
+class g extends a.PureComponent {
+    state = { opacity: new r.A.Value(1) };
     componentWillEnter = (e) => {
-        this.state.opacity.setValue(0), l.A.timing(this.state.opacity, { toValue: 1, duration: 250 }).start(e);
+        this.state.opacity.setValue(0), r.A.timing(this.state.opacity, { toValue: 1, duration: 250 }).start(e);
     };
     componentWillLeave = (e) => {
-        l.A.timing(this.state.opacity, { toValue: 0, duration: 250 }).start(e);
+        r.A.timing(this.state.opacity, { toValue: 0, duration: 250 }).start(e);
     };
     render() {
         let { type: e, onClick: t, theme: n } = this.props,
@@ -115,12 +115,12 @@ class p extends a.PureComponent {
                 }
             })(e);
         return e === c.m3P.ADD_FRIEND
-            ? (0, r.jsx)(l.A.div, { className: A.VD, style: i, children: (0, r.jsx)(m, { theme: n }) })
-            : (0, r.jsx)(l.A.div, {
+            ? (0, l.jsx)(r.A.div, { className: A.VD, style: i, children: (0, l.jsx)(m, { theme: n }) })
+            : (0, l.jsx)(r.A.div, {
                   className: A.VD,
                   style: i,
-                  children: (0, r.jsx)(o.ppr, { theme: n, children: a.renderContent(t) }),
+                  children: (0, l.jsx)(o.ppr, { theme: n, children: a.renderContent(t) }),
               });
     }
 }
-let g = s.Ay.connectStores([d.A], () => ({ theme: d.A.theme }), { forwardRef: !0 })(p);
+let p = s.Ay.connectStores([d.A], () => ({ theme: d.A.theme }), { forwardRef: !0 })(g);

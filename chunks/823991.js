@@ -5,7 +5,7 @@ var i = t(503698),
     r = t.n(i),
     o = t(397927),
     s = t(985018),
-    l = t(928103);
+    l = t(63892);
 function c(e) {
     let { guild: n, speakers: t, speakerCount: i, className: c } = e,
         _ = t.slice(0, 5),

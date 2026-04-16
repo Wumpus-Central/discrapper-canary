@@ -9,7 +9,7 @@ var i = n(397927),
     l = n(900663),
     d = n(554011),
     _ = n(690095),
-    p = n(58123);
+    p = n(974651);
 function b(e) {
     let { transitionState: t, onClose: n, analyticsLocation: b, platformType: C } = e,
         {

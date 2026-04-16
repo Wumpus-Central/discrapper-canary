@@ -13,9 +13,9 @@ var r = n(627968),
     f = n(627330),
     p = n(478542),
     h = n(818348),
-    m = n(6101),
+    m = n(571247),
     E = n(985018),
-    g = n(279859);
+    g = n(96867);
 function A(e) {
     let {
             title: t,
@@ -36,34 +36,34 @@ function A(e) {
         { reducedMotion: L } = i.useContext(a.CZY),
         w = (0, s.R)(),
         M = (0, a.G98)().isWindowFocused?.() ?? w,
-        x = i.useRef(null),
-        P = (0, a.RJq)(I),
+        P = i.useRef(null),
+        x = (0, a.RJq)(I),
         k = i.useCallback(
             () => ({ type: "VIDEO", url: A, proxyUrl: A, alt: t, width: 1280, height: 720, className: g.$_ }),
             [A, t],
         );
     i.useEffect(() => {
-        null != x.current && (!L.enabled && M ? x.current?.play().catch(h.tE) : x.current?.pause());
+        null != P.current && (!L.enabled && M ? P.current?.play().catch(h.tE) : P.current?.pause());
     }, [M, L.enabled]);
     let U = i.useCallback(() => {
-            null !== x.current && x.current.pause(), R?.();
+            null !== P.current && P.current.pause(), R?.();
         }, [R]),
         G = i.useCallback(() => {
-            null !== x.current && x.current.pause(), R?.();
+            null !== P.current && P.current.pause(), R?.();
         }, [R]),
         F = i.useCallback(() => {
-            null !== x.current && x.current.pause();
+            null !== P.current && P.current.pause();
             let e = k();
             (0, u.R)({ items: [e], startingIndex: 0, location: "VideoPopover", shouldHideMediaOptions: !0 }),
                 R?.(),
                 C?.();
         }, [k, C, R]),
-        V = P
+        V = x
             ? (0, r.jsx)(a.vYh, { type: "image", src: I })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)(l.A, {
-                          ref: x,
+                          ref: P,
                           src: I,
                           width: 232,
                           height: 131,

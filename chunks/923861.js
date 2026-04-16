@@ -21,22 +21,22 @@ var r = n(627968),
     T = n(732139),
     S = n(652215),
     y = n(985018),
-    v = n(351341);
+    v = n(6376);
 let N = (e) => {
     let {
             emojiDescriptors: t,
             emojiSize: s,
             onSelect: N,
             onSelectSoundmoji: C,
-            onInspect: b,
-            surrogateCodePoint: R,
-            getEmojiItemProps: O,
+            onInspect: R,
+            surrogateCodePoint: O,
+            getEmojiItemProps: b,
             getEmojiRowProps: D,
             isScrolling: L,
             isUsingKeyboardNavigation: w,
-            rowIndex: x,
-            allowAnimatedEmoji: M,
-            showEmojiFavoriteTooltip: P,
+            rowIndex: M,
+            allowAnimatedEmoji: P,
+            showEmojiFavoriteTooltip: x,
             channelGuildId: k,
             category: U,
             selectedItemClassName: G,
@@ -49,8 +49,8 @@ let N = (e) => {
         Y = n(619508),
         W = n(404828),
         K = n(600003),
-        z = n(318121),
-        $ = n(443336),
+        $ = n(318121),
+        z = n(443336),
         q = n(258901),
         Z = n(135974),
         X = n(8013),
@@ -84,10 +84,10 @@ let N = (e) => {
                             shouldShowRoundHighlight: d,
                         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                         { visibleRowIndex: _, columnIndex: f } = e,
-                        { ref: p, tabIndex: h, onFocus: m, ...E } = O(f, x) ?? {},
+                        { ref: p, tabIndex: h, onFocus: m, ...E } = b(f, M) ?? {},
                         g = ee.rowIndex === _ && ee.columnIndex === f,
                         A = () => {
-                            L.current || w.current || b(e);
+                            L.current || w.current || R(e);
                         };
                     return (0, i.createElement)(
                         "li",
@@ -140,11 +140,11 @@ let N = (e) => {
                                   : W
                             : s
                               ? (0, o.Mw)(Q)
-                                  ? $
+                                  ? z
                                   : Z
                               : (0, o.Mw)(Q)
                                 ? K
-                                : z,
+                                : $,
                         u = y.intl.string(e.sectionCollapsedToThreeRows ? y.t.NZI2Zk : y.t["/K2RDH"]);
                     return n({
                         handleSelect: a,
@@ -159,24 +159,24 @@ let N = (e) => {
                     return (0, r.jsx)(
                         I.A,
                         {
-                            rowIndex: x,
+                            rowIndex: M,
                             descriptor: e,
                             emojiItemKey: t,
                             isInspected: s,
                             isScrolling: L,
                             isUsingKeyboardNavigation: w,
-                            surrogateCodePoint: R,
-                            allowAnimatedEmoji: M,
+                            surrogateCodePoint: O,
+                            allowAnimatedEmoji: P,
                             selectedItemClassName: G,
                             onSelect: N,
-                            onInspect: b,
+                            onInspect: R,
                             channelGuildId: k,
-                            getEmojiItemProps: O,
+                            getEmojiItemProps: b,
                             isMediumSize: ea,
                             isLargeSize: es,
                             pulseItemKey: en,
                             setPulseItemKey: er,
-                            showEmojiFavoriteTooltip: P,
+                            showEmojiFavoriteTooltip: x,
                             messageId: V,
                             isBurstReaction: B,
                             rowPosition: ei?.current?.getBoundingClientRect(),
@@ -191,7 +191,7 @@ let N = (e) => {
         },
         el = (e) =>
             (0, r.jsx)("ul", {
-                ...D(x),
+                ...D(M),
                 className: a()(v.ND, { [v.HO]: es, [v.X$]: ea }),
                 ref: ei,
                 children: e.map(eo),

@@ -30,9 +30,9 @@ var r = n(627968),
     D = n(652215),
     L = n(838541),
     w = n(985018),
-    M = n(73398),
-    x = n(435115);
-let P = 3e3,
+    M = n(277446),
+    P = n(653307);
+let x = 3e3,
     k = 1e3,
     U = "-:--",
     G = { friction: 14, tension: 200 },
@@ -167,7 +167,7 @@ class Y extends i.Component {
                     ref: this.setDurationRef,
                 }),
                 (0, r.jsx)("div", {
-                    className: x.Uu,
+                    className: P.Uu,
                     children: (0, r.jsx)(b.A, {
                         ref: this.setVolumeButtonRef,
                         muted: s,
@@ -619,7 +619,7 @@ class q extends i.PureComponent {
     }
     updateControlsVisibility() {
         let { dragging: e, fullscreen: t } = this.state,
-            n = t ? k : P,
+            n = t ? k : x,
             r = Math.max(0, Date.now() - this._lastMove) > n;
         r !== this.state.hideControls && null == e && this.setState({ hideControls: r });
     }

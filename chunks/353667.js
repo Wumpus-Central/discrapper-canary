@@ -2,8 +2,8 @@ n.d(t, { j: () => C });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    a = n.n(l),
-    r = n(311907),
+    r = n.n(l),
+    a = n(311907),
     o = n(73939),
     d = n(397927),
     c = n(823092),
@@ -12,30 +12,30 @@ var i = n(627968),
     g = n(272053),
     _ = n(397274),
     x = n(641324),
-    A = n(46373),
-    h = n(32145);
+    h = n(46373),
+    A = n(707182);
 function p(e) {
     let { notice: t, children: n } = e,
-        { showNotice: l, handleStoreUpdate: a } = (0, c.L_)(),
+        { showNotice: l, handleStoreUpdate: r } = (0, c.L_)(),
         u = t?.stores;
     s.useEffect(() => {
         if (null != u) {
-            let e = new r.ru(u, () => {
-                a(u);
+            let e = new a.ru(u, () => {
+                r(u);
             });
             return (
                 e.attach("SettingPanelNotice"),
-                a(u),
+                r(u),
                 () => {
                     e.detach();
                 }
             );
         }
-    }, [u, a]);
+    }, [u, r]);
     let m = s.useMemo(() => {
         if (null == t || !l) return null;
         let { element: e } = t;
-        return (0, i.jsx)(d.FQk, { className: h.lm, children: (0, i.jsx)(e, {}) });
+        return (0, i.jsx)(d.FQk, { className: A.lm, children: (0, i.jsx)(e, {}) });
     }, [t, l]);
     return (0, i.jsxs)(i.Fragment, { children: [n, (0, i.jsx)(o.F, { component: "div", children: m })] });
 }
@@ -43,31 +43,31 @@ function T(e) {
     let { decoration: t } = e,
         n = t.component;
     return (0, i.jsx)("div", {
-        className: a()(h.oK, { [h.qf]: t.sticky }),
+        className: r()(A.oK, { [A.qf]: t.sticky }),
         "data-settings-panel-sticky-decoration": t.sticky || void 0,
         children: (0, i.jsx)(n, {}),
     });
 }
 function f(e) {
     let { notice: t, children: n, useObscuredNotice: l } = e,
-        a = s.useRef(null),
-        r = l?.();
-    return null != r
-        ? (0, i.jsx)(r, {})
+        r = s.useRef(null),
+        a = l?.();
+    return null != a
+        ? (0, i.jsx)(a, {})
         : (0, i.jsx)(p, {
               notice: t,
               children: (0, i.jsxs)(d.GtU, {
-                  className: h.XG,
+                  className: A.XG,
                   ref: (e) => {
                       _.A.setPanelScrollerRef(e);
                   },
                   children: [
                       (0, i.jsx)("div", {
-                          className: h.nd,
-                          ref: a,
-                          children: (0, i.jsx)(d.xpW, { containerRef: a, children: n }),
+                          className: A.nd,
+                          ref: r,
+                          children: (0, i.jsx)(d.xpW, { containerRef: r, children: n }),
                       }),
-                      (0, i.jsx)("div", { className: h.iS, "data-panel-bottom": !0 }),
+                      (0, i.jsx)("div", { className: A.iS, "data-panel-bottom": !0 }),
                   ],
               }),
           });
@@ -75,7 +75,7 @@ function f(e) {
 function S(e) {
     let { layout: t, decoration: n } = e;
     return (0, i.jsxs)("div", {
-        className: h.LZ,
+        className: A.LZ,
         children: [
             null != n && (0, i.jsx)(T, { decoration: n }),
             t.map((e, n) =>
@@ -84,7 +84,7 @@ function S(e) {
                     {
                         children: [
                             (0, i.jsx)(x.A, { node: e }),
-                            n !== t.length - 1 && (0, i.jsx)(A.A, { className: h.yF }),
+                            n !== t.length - 1 && (0, i.jsx)(h.A, { className: A.yF }),
                         ],
                     },
                     e.key,
@@ -93,8 +93,8 @@ function S(e) {
         ],
     });
 }
-function b(e) {
-    let { panelKey: t, layout: n, notice: l, decoration: a, useObscuredNotice: r } = e,
+function E(e) {
+    let { panelKey: t, layout: n, notice: l, decoration: r, useObscuredNotice: a } = e,
         o =
             m.A.useState((e) => {
                 let { currentTabKeys: n } = e;
@@ -111,10 +111,10 @@ function b(e) {
         f,
         {
             notice: l,
-            useObscuredNotice: r,
+            useObscuredNotice: a,
             children: [
                 (0, i.jsx)(d.VQ0, {
-                    className: h.$H,
+                    className: A.$H,
                     selectedItem: o,
                     onItemSelect: (e) => {
                         g.A.navigate(e, {
@@ -132,21 +132,21 @@ function b(e) {
                         return (0, i.jsx)(d.VQ0.Item, { id: t, children: n() }, t);
                     }),
                 }),
-                (0, i.jsx)(d.VQ0.Panel, { id: o, children: (0, i.jsx)(S, { layout: c.layout, decoration: a }) }),
+                (0, i.jsx)(d.VQ0.Panel, { id: o, children: (0, i.jsx)(S, { layout: c.layout, decoration: r }) }),
             ],
         },
         t,
     );
 }
-function E(e) {
-    let { panelKey: t, notice: n, decoration: s, layout: l, useObscuredNotice: a } = e;
-    return (0, i.jsx)(f, { notice: n, useObscuredNotice: a, children: (0, i.jsx)(S, { layout: l, decoration: s }) }, t);
+function b(e) {
+    let { panelKey: t, notice: n, decoration: s, layout: l, useObscuredNotice: r } = e;
+    return (0, i.jsx)(f, { notice: n, useObscuredNotice: r, children: (0, i.jsx)(S, { layout: l, decoration: s }) }, t);
 }
 function C(e) {
     let { node: t } = e,
         { layout: n } = t;
     if ((0, u.zY)(n))
-        return (0, i.jsx)(b, {
+        return (0, i.jsx)(E, {
             panelKey: t.key,
             notice: t.notice,
             decoration: t.decoration,
@@ -154,7 +154,7 @@ function C(e) {
             layout: n,
         });
     if ((0, u.Iu)(n))
-        return (0, i.jsx)(E, {
+        return (0, i.jsx)(b, {
             panelKey: t.key,
             notice: t.notice,
             decoration: t.decoration,

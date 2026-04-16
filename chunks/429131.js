@@ -20,7 +20,7 @@ var l = i(627968),
     S = i(235149),
     f = i(652215),
     A = i(985018),
-    w = i(77760);
+    w = i(228624);
 let C = (e) => {
     let { className: t, onChange: i, textVariant: n = "text-md/normal", label: a, value: r, isArchived: o = !1 } = e;
     return (0, l.jsx)(m.Kj, {

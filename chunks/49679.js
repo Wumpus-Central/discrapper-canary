@@ -1,11 +1,11 @@
-!(function (e, t) {
-    t(n(989349));
-})(0, function (e) {
+!(function (e) {
+    e(n(989349));
+})(function (e) {
     "use strict";
     var t = "nolla yksi kaksi kolme nelj\xe4 viisi kuusi seitsem\xe4n kahdeksan yhdeks\xe4n".split(" "),
         n = ["nolla", "yhden", "kahden", "kolmen", "nelj\xe4n", "viiden", "kuuden", t[7], t[8], t[9]];
     function r(e, t, n, r) {
-        var a = "";
+        var s = "";
         switch (n) {
             case "s":
                 return r ? "muutaman sekunnin" : "muutama sekunti";
@@ -14,29 +14,29 @@
             case "m":
                 return r ? "minuutin" : "minuutti";
             case "mm":
-                a = r ? "minuutin" : "minuuttia";
+                s = r ? "minuutin" : "minuuttia";
                 break;
             case "h":
                 return r ? "tunnin" : "tunti";
             case "hh":
-                a = r ? "tunnin" : "tuntia";
+                s = r ? "tunnin" : "tuntia";
                 break;
             case "d":
                 return r ? "p\xe4iv\xe4n" : "p\xe4iv\xe4";
             case "dd":
-                a = r ? "p\xe4iv\xe4n" : "p\xe4iv\xe4\xe4";
+                s = r ? "p\xe4iv\xe4n" : "p\xe4iv\xe4\xe4";
                 break;
             case "M":
                 return r ? "kuukauden" : "kuukausi";
             case "MM":
-                a = r ? "kuukauden" : "kuukautta";
+                s = r ? "kuukauden" : "kuukautta";
                 break;
             case "y":
                 return r ? "vuoden" : "vuosi";
             case "yy":
-                a = r ? "vuoden" : "vuotta";
+                s = r ? "vuoden" : "vuotta";
         }
-        return i(e, r) + " " + a;
+        return i(e, r) + " " + s;
     }
     function i(e, r) {
         return e < 10 ? (r ? n[e] : t[e]) : e;

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => p });
 var l = n(627968),
     i = n(64700),
     s = n(884362),
@@ -7,18 +7,18 @@ var l = n(627968),
     r = n(311907),
     o = n(397927),
     d = n(775602),
-    c = n(422844),
+    c = n(200463),
     u = n(435470),
     m = n(853742),
     h = n(376310),
     x = n(652215),
     g = n(985018),
-    f = n(553017);
-function p() {
+    f = n(6858);
+function _() {
     return Promise.resolve();
 }
-function _(e) {
-    let { channel: t, closePopout: n, setPopoutRef: _ } = e,
+function p(e) {
+    let { channel: t, closePopout: n, setPopoutRef: p } = e,
         j = (0, u.OT)(t),
         { tagFilter: b } = (0, c.R)(t.id),
         v = (0, c.p)(),
@@ -48,8 +48,8 @@ function _(e) {
             id: `${t.id}-all-tags-dropdown-navigator`,
             isEnabled: !0,
             wrap: !0,
-            scrollToStart: p,
-            scrollToEnd: p,
+            scrollToStart: _,
+            scrollToEnd: _,
         }),
         S = i.useRef(null);
     return (
@@ -63,7 +63,7 @@ function _(e) {
         }, []),
         (0, l.jsxs)(o.lGe, {
             ref: (e) => {
-                _?.(e);
+                p?.(e);
             },
             "aria-label": g.intl.string(g.t.TdqRTh),
             className: f.kL,

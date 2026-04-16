@@ -1,8 +1,8 @@
 "use strict";
 s.d(t, { A: () => A });
 var n = s(627968),
-    r = s(64700),
-    l = s(158954),
+    l = s(64700),
+    r = s(158954),
     a = s(311907),
     i = s(230109),
     o = s(688810),
@@ -18,7 +18,7 @@ var n = s(627968),
     x = s(954571),
     E = s(440938),
     b = s(652215),
-    C = s(669159);
+    C = s(74564);
 let A = (e) => {
     let t,
         s,
@@ -38,14 +38,14 @@ let A = (e) => {
         } = e,
         B = (0, a.bG)([_.A], () => _.A.getGuildIdFromApplicationId(L), [L]),
         P =
-            ((t = r.useRef([])),
-            r.useEffect(() => {
+            ((t = l.useRef([])),
+            l.useEffect(() => {
                 if (null != B) for (let e of v) (0, d.qf)(B, e);
             }, [v, B]),
             (s = (0, a.bG)([f.A], () => !v.some((e) => f.A.isFetching(e)) && v.some((e) => f.A.didFetchingSkuFail(e)), [
                 v,
             ])),
-            r.useEffect(() => {
+            l.useEffect(() => {
                 s && null != B && (0, d.Rw)(B);
             }, [s, B]),
             (A = (0, a.yK)([f.A, _.A], () => {
@@ -63,18 +63,18 @@ let A = (e) => {
                         : []),
                 ].slice(0, v.length);
             }, [v, B])),
-            r.useEffect(() => {
+            l.useEffect(() => {
                 A.length > 0 && (t.current = A);
             }, [A]),
             A);
     (0, p.j)({ skuIds: P, location: "GamePromotionBanner" });
     let M = (0, E.uM)(),
         { analyticsLocations: H } = (0, o.Ay)(),
-        D = r.useRef(null),
-        w = r.useRef(!1),
-        F = r.useRef(null),
-        G = r.useMemo(() => ({ pageSection: k }), [k]),
-        U = r.useCallback(
+        D = l.useRef(null),
+        w = l.useRef(!1),
+        F = l.useRef(null),
+        G = l.useMemo(() => ({ pageSection: k }), [k]),
+        U = l.useCallback(
             (e, t) => {
                 x.default.track(b.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: M?.sessionId,
@@ -88,23 +88,23 @@ let A = (e) => {
             },
             [M?.sessionId, M?.pageCategory, M?.pageSection, I, T],
         ),
-        V = r.useCallback(() => {
+        V = l.useCallback(() => {
             null != B && (0, g.X)({ guildId: B });
         }, [B]),
-        W = r.useCallback(() => {
+        W = l.useCallback(() => {
             null != B && (U("go_to_game_shop"), (0, g.default)({ guildId: B }));
         }, [U, B]),
-        z = r.useCallback(
+        z = l.useCallback(
             (e, t) => {
                 let { skuId: s, applicationId: n } = t;
                 U("card_click", s), (0, m.R)({ skuId: s, applicationId: n, isStorefront: !1, analyticsLocations: H });
             },
             [U, H],
         ),
-        K = r.useCallback(() => {
+        K = l.useCallback(() => {
             U("dismiss"), S();
         }, [U, S]),
-        Y = r.useCallback(
+        Y = l.useCallback(
             (e) => {
                 !w.current &&
                     (e && null === F.current
@@ -123,7 +123,7 @@ let A = (e) => {
             },
             [M?.sessionId, M?.pageCategory, M?.pageSection, I, y],
         );
-    return (r.useEffect(
+    return (l.useEffect(
         () => () => {
             null !== F.current && (clearTimeout(F.current), (F.current = null));
         },
@@ -144,7 +144,7 @@ let A = (e) => {
                           null != N && (0, n.jsx)("div", { className: C.D7, style: { background: N } }),
                           (0, n.jsx)("div", {
                               className: C.b,
-                              children: (0, n.jsx)(l.JnF, { size: "sm", variant: "icon-only", onClick: K }),
+                              children: (0, n.jsx)(r.JnF, { size: "sm", variant: "icon-only", onClick: K }),
                           }),
                           null != R && (0, n.jsx)("img", { className: C.wm, src: R, alt: "" }),
                           (0, n.jsx)("div", {
@@ -152,15 +152,15 @@ let A = (e) => {
                               children: (0, n.jsxs)("div", {
                                   className: C.B5,
                                   children: [
-                                      (0, n.jsx)(l.DZT, {
+                                      (0, n.jsx)(r.DZT, {
                                           variant: "heading-lg/semibold",
                                           color: "always-white",
                                           children: j,
                                       }),
-                                      (0, n.jsx)(l.$nd, {
+                                      (0, n.jsx)(r.$nd, {
                                           variant: "overlay-primary",
                                           size: "sm",
-                                          icon: l.I9m,
+                                          icon: r.I9m,
                                           iconPosition: "end",
                                           text: O,
                                           onMouseDown: V,

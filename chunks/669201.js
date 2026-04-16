@@ -31,12 +31,12 @@ var r = n(627968),
     L = n(234091),
     w = n(275589),
     M = n(526411),
-    x = n(642550),
-    P = n(616961),
+    P = n(642550),
+    x = n(616961),
     k = n(994048),
     U = n(823894),
     G = n(652215),
-    F = n(654329);
+    F = n(854138);
 let V = (0, S.xI)(u.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     B = (0, S.xI)(u.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
     H = (0, S.xI)(u.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
@@ -62,7 +62,7 @@ let V = (0, S.xI)(u.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             es = (0, y.P)((e) => e.showPremiumUpsell),
             [ea, eo] = (0, h.RQ)((e) => [e.searchQuery, e.isSearchSuggestion], o.x),
             el = i.useRef("");
-        i.useImperativeHandle(t, () => ({ onPickerOpen: eP }));
+        i.useImperativeHandle(t, () => ({ onPickerOpen: ex }));
         let eu = (0, C.pD)(a),
             ec = 0 === eu.filter((e) => e.type !== O.Z2.EMPTY_GUILD_UPSELL).length,
             ed = (0, m.oV)({
@@ -75,7 +75,7 @@ let V = (0, S.xI)(u.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             e_ = A.tP.useSetting(),
             ef = i.useMemo(() => new Set(e_), [e_]),
             ep = (0, l.bG)([I.default], () => I.default.getCurrentUser()),
-            eh = i.useMemo(() => (0, P.y)(ea, ep, a), [ea, ep, a]),
+            eh = i.useMemo(() => (0, x.y)(ea, ep, a), [ea, ep, a]),
             em = (0, C.Gc)(),
             eE = (0, C.UT)(),
             eg = (0, l.cf)([R.A], () => R.A.getAllGuildStickers()),
@@ -110,7 +110,7 @@ let V = (0, S.xI)(u.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                         case O.op.CREATE_STICKER:
                             T.default.track(G.HAw.OPEN_MODAL, { type: G.JJy.CREATE_STICKER_MODAL, location: J }),
                                 (0, c.mMO)(async () => {
-                                    let { default: t } = await Promise.all([n.e("29143"), n.e("64800")]).then(
+                                    let { default: t } = await Promise.all([n.e("29143"), n.e("5391")]).then(
                                         n.bind(n, 445002),
                                     );
                                     return (n) => (0, r.jsx)(t, { guildId: e.guild_id, ...n });
@@ -127,7 +127,7 @@ let V = (0, S.xI)(u.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 getRowProps: eL,
                 gridContainerProps: ew,
                 handleGridContainerKeyDown: eM,
-                isUsingKeyboardNavigation: ex,
+                isUsingKeyboardNavigation: eP,
             } = (0, b.J)({
                 columnCounts: eO,
                 stickersListRef: er,
@@ -138,7 +138,7 @@ let V = (0, S.xI)(u.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 gridNavigatorId: U.lq,
             });
         i.useEffect(() => p.bM.resetStoreState, []);
-        let eP = () => {
+        let ex = () => {
             let e = a.getGuildId(),
                 t = [];
             null !== e && (t = R.A.getStickersByGuildId(e) ?? []);
@@ -175,7 +175,7 @@ let V = (0, S.xI)(u.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 !(et && ec) &&
                     (0, r.jsx)("div", {
                         className: F.wx,
-                        children: (0, r.jsx)(x.A, { ref: ei, onKeyDown: eM, stickersListRef: er, channel: a }),
+                        children: (0, r.jsx)(P.A, { ref: ei, onKeyDown: eM, stickersListRef: er, channel: a }),
                     }),
                 ec
                     ? (0, r.jsx)(L.A, { className: F.p$, onClose: S })
@@ -197,7 +197,7 @@ let V = (0, S.xI)(u.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                                 gridWidth: ed,
                                                 gutterWidth: eR,
                                                 stickerPadding: z,
-                                                isUsingKeyboardNavigation: ex,
+                                                isUsingKeyboardNavigation: eP,
                                                 onSelectSticker: eS,
                                                 rowCount: ev,
                                                 rowCountBySection: eN,

@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(64700),
     s = n(397927),
     a = n(342296),
-    o = n(2398);
+    o = n(895054);
 function l(e) {
     let { user: t, guildId: n } = e,
         l = i.useRef(null);

@@ -12,7 +12,7 @@ var r = n(627968),
     _ = n(20805),
     f = n(420706),
     p = n(985018),
-    h = n(22239);
+    h = n(399247);
 let m = "content-inventory-context";
 function E(e) {
     let { user: t, guildId: n, channel: E, entry: g, onSelect: A, disableGameProfileLinks: I } = e,

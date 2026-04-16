@@ -1,20 +1,20 @@
 "use strict";
 var r = n(948055),
     i = n(724039),
-    a = n(389293);
-function s(e) {
+    s = n(389293);
+function a(e) {
     switch (e.arrayFormat) {
         case "index":
             return function (t, n, r) {
-                return null === n ? l(t, e) + "[" + r + "]" : l(t, e) + "[" + l(r, e) + "]=" + l(n, e);
+                return null === n ? [l(t, e), "[", r, "]"].join("") : [l(t, e), "[", l(r, e), "]=", l(n, e)].join("");
             };
         case "bracket":
             return function (t, n) {
-                return null === n ? l(t, e) : l(t, e) + "[]=" + l(n, e);
+                return null === n ? l(t, e) : [l(t, e), "[]=", l(n, e)].join("");
             };
         default:
             return function (t, n) {
-                return null === n ? l(t, e) : l(t, e) + "=" + l(n, e);
+                return null === n ? l(t, e) : [l(t, e), "=", l(n, e)].join("");
             };
     }
 }
@@ -78,8 +78,8 @@ function u(e) {
             ? (e.split("&").forEach(function (e) {
                   var t = e.replace(/\+/g, " ").split("="),
                       i = t.shift(),
-                      s = t.length > 0 ? t.join("=") : void 0;
-                  (s = void 0 === s ? null : a(s)), n(a(i), s, r);
+                      a = t.length > 0 ? t.join("=") : void 0;
+                  (a = void 0 === a ? null : s(a)), n(s(i), a, r);
               }),
               Object.keys(r)
                   .sort()
@@ -90,7 +90,7 @@ function u(e) {
             : r;
     }),
     (t.stringify = function (e, t) {
-        var n = s((t = i({ encode: !0, strict: !0, arrayFormat: "none" }, t)));
+        var n = a((t = i({ encode: !0, strict: !0, arrayFormat: "none" }, t)));
         return e
             ? Object.keys(e)
                   .sort()
@@ -99,12 +99,12 @@ function u(e) {
                       if (void 0 === i) return "";
                       if (null === i) return l(r, t);
                       if (Array.isArray(i)) {
-                          var a = [];
+                          var s = [];
                           return (
                               i.slice().forEach(function (e) {
-                                  void 0 !== e && a.push(n(r, e, a.length));
+                                  void 0 !== e && s.push(n(r, e, s.length));
                               }),
-                              a.join("&")
+                              s.join("&")
                           );
                       }
                       return l(r, t) + "=" + l(i, t);

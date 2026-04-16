@@ -1,41 +1,41 @@
-i.d(a, { A: () => g }), i(321073);
-var n,
-    t = i(627968),
+i.d(a, { A: () => o }), i(321073);
+var t,
+    n = i(627968),
     l = i(64700),
-    r = i(158954),
-    s = i(672709),
-    d =
-        (((n = d || {}).UPGRADE = "UPGRADE"),
-        (n.CANCEL = "CANCEL"),
-        (n.UNVERIFIED = "UNVERIFIED"),
-        (n.UNCLAIMED = "UNCLAIMED"),
-        (n.GRANDFATHERED = "GRANDFATHERED"),
-        n);
-let m = {
+    s = i(158954),
+    r = i(82002),
+    c =
+        (((t = c || {}).UPGRADE = "UPGRADE"),
+        (t.CANCEL = "CANCEL"),
+        (t.UNVERIFIED = "UNVERIFIED"),
+        (t.UNCLAIMED = "UNCLAIMED"),
+        (t.GRANDFATHERED = "GRANDFATHERED"),
+        t);
+let d = {
         UPGRADE: "imageUpgrade",
         CANCEL: "imageCancel",
         UNVERIFIED: "imageUnverified",
         UNCLAIMED: "imageUnclaimed",
         GRANDFATHERED: "imageCancel",
     },
-    c = (e) => {
-        let { children: a, premiumModalType: i, primary: n, secondary: d, ...c } = e,
-            g = l.useMemo(() => {
+    m = (e) => {
+        let { children: a, premiumModalType: i, primary: t, secondary: c, ...m } = e,
+            o = l.useMemo(() => {
                 let e = [];
                 return (
-                    null != d && e.push({ variant: "secondary", text: d.label, onClick: d.onClick }),
-                    null != n && e.push({ variant: "primary", text: n.label, onClick: n.onClick }),
+                    null != c && e.push({ variant: "secondary", text: c.label, onClick: c.onClick }),
+                    null != t && e.push({ variant: "primary", text: t.label, onClick: t.onClick }),
                     e
                 );
-            }, [n, d]);
-        return (0, t.jsxs)(r.Modal, {
-            ...c,
-            actions: g,
+            }, [t, c]);
+        return (0, n.jsxs)(s.Modal, {
+            ...m,
+            actions: o,
             children: [
-                (0, t.jsx)("div", { className: s[m[i]] }),
-                (0, t.jsx)("div", { className: s.message, children: a }),
+                (0, n.jsx)("div", { className: r[d[i]] }),
+                (0, n.jsx)("div", { className: r.message, children: a }),
             ],
         });
     };
-c.Types = d;
-let g = c;
+m.Types = c;
+let o = m;

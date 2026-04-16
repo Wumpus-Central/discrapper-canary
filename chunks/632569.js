@@ -1,6 +1,6 @@
-!(function (e, t) {
-    t(n(989349));
-})(0, function (e) {
+!(function (e) {
+    e(n(989349));
+})(function (e) {
     "use strict";
     var t = [
             "Am Faoilleach",
@@ -32,14 +32,14 @@
         ],
         r = ["Did\xf2mhnaich", "Diluain", "Dim\xe0irt", "Diciadain", "Diardaoin", "Dihaoine", "Disathairne"],
         i = ["Did", "Dil", "Dim", "Dic", "Dia", "Dih", "Dis"],
-        a = ["D\xf2", "Lu", "M\xe0", "Ci", "Ar", "Ha", "Sa"];
+        s = ["D\xf2", "Lu", "M\xe0", "Ci", "Ar", "Ha", "Sa"];
     return e.defineLocale("gd", {
         months: t,
         monthsShort: n,
         monthsParseExact: !0,
         weekdays: r,
         weekdaysShort: i,
-        weekdaysMin: a,
+        weekdaysMin: s,
         longDateFormat: {
             LT: "HH:mm",
             LTS: "HH:mm:ss",

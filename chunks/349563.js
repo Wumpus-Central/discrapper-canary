@@ -3,25 +3,25 @@ n.d(t, { Bp: () => d, G5: () => _, Wy: () => f, zF: () => p });
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
-    s = n(582754),
+    s = n.n(i),
+    a = n(582754),
     o = n(736653),
     l = n(953727),
     u = n(788868),
-    c = n(806678);
+    c = n(3193);
 let d = "premium_new_tier_2_gradient",
     _ = "premium_old_tier_2_gradient";
 function f(e) {
     let { tier: t = u.PremiumTypes.TIER_2 } = e,
         n = (0, o.Ay)(),
-        i = (0, s.qB)(n);
+        i = (0, a.qB)(n);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             !i &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)("div", {
-                            className: a()(c.WU, {
+                            className: s()(c.WU, {
                                 [c.W4]: t === u.PremiumTypes.TIER_0,
                                 [c.WJ]: t === u.PremiumTypes.TIER_2,
                             }),
@@ -37,14 +37,14 @@ function f(e) {
     });
 }
 function p(e) {
-    let { width: t = 14, height: n = 13, color: i = "white", foreground: a, ...s } = e;
+    let { width: t = 14, height: n = 13, color: i = "white", foreground: s, ...a } = e;
     return (0, r.jsxs)("svg", {
-        ...(0, l.A)({ ...s }),
+        ...(0, l.A)({ ...a }),
         preserveAspectRatio: "none",
         width: t,
         height: n,
         viewBox: "0 0 14 13",
-        className: a,
+        className: s,
         xmlns: "http://www.w3.org/2000/svg",
         children: [
             (0, r.jsxs)("defs", {

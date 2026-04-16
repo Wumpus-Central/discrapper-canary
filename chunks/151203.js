@@ -14,7 +14,7 @@ var i = r(627968),
     f = r(287809),
     p = r(542986),
     h = r(985018),
-    b = r(761396);
+    b = r(935076);
 function w(e) {
     let { guildId: t, guildOwnerId: s, member: d } = e,
         u = f.default.getUser(d.userId),
@@ -44,7 +44,7 @@ function w(e) {
                         guildId: t,
                         onContextMenu: (e) => {
                             (0, o.L3)(e, async () => {
-                                let { default: e } = await Promise.all([r.e("97262"), r.e("91042"), r.e("54631")]).then(
+                                let { default: e } = await Promise.all([r.e("97262"), r.e("91042"), r.e("499")]).then(
                                     r.bind(r, 365689),
                                 );
                                 return (r) => (0, i.jsx)(e, { ...r, user: u, guildId: t, showMediaItems: !0 });

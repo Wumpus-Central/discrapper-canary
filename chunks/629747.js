@@ -1,26 +1,26 @@
-t.d(l, { A: () => o });
-var n = t(627968);
-t(64700);
-var i = t(397927),
-    s = t(915614),
-    a = t(985018),
-    r = t(65958);
+l.d(n, { A: () => o });
+var t = l(627968);
+l(64700);
+var i = l(397927),
+    s = l(915614),
+    a = l(985018),
+    r = l(976726);
 function o(e) {
-    let l = () => {};
-    return (0, n.jsxs)("div", {
+    let n = () => {};
+    return (0, t.jsxs)("div", {
         className: r.kL,
-        onClick: l,
+        onClick: n,
         children: [
-            (0, n.jsx)(s.A, { ...e, className: r.Pr }),
-            (0, n.jsx)("div", {
+            (0, t.jsx)(s.A, { ...e, className: r.Pr }),
+            (0, t.jsx)("div", {
                 className: r.r9,
-                children: (0, n.jsx)(i.K0, {
+                children: (0, t.jsx)(i.K0, {
                     variant: "overlay-secondary",
                     size: "sm",
                     icon: i.R2l,
                     "aria-label": a.intl.string(a.t.FzU73A),
                     onClick: (e) => {
-                        e.stopPropagation(), l();
+                        e.stopPropagation(), n();
                     },
                 }),
             }),

@@ -24,21 +24,21 @@ var r = n(627968),
     v = n(546587),
     N = n(746388),
     C = n(664929),
-    b = n(73510),
-    R = n(652215),
-    O = n(985018),
-    D = n(993538),
+    R = n(73510),
+    O = n(652215),
+    b = n(985018),
+    D = n(13297),
     L = n(911385);
 let w = 512,
-    x = 7,
-    M = 56,
-    P = 16,
+    M = 7,
+    P = 56,
+    x = 16,
     k = 32,
     U = 20,
     G = 420,
     F = [8, 8, 0, 8],
     V = l().debounce(() => {
-        (0, d.zV)(R.HAw.APPLICATION_COMMAND_BROWSER_SCROLLED);
+        (0, d.zV)(O.HAw.APPLICATION_COMMAND_BROWSER_SCROLLED);
     }, 300),
     B = i.forwardRef(function (e, t) {
         let { channel: n, canOnlyUseTextCommands: s } = e,
@@ -47,12 +47,12 @@ let w = 512,
             [B, j] = i.useState(0),
             Y = i.useRef(null),
             [W, K] = i.useState(!1),
-            z = m.LS.useStore((e) => e.activeCategoryIndex);
+            $ = m.LS.useStore((e) => e.activeCategoryIndex);
         i.useEffect(() => {
-            (0, d.zV)(R.HAw.APPLICATION_COMMAND_BROWSER_OPENED);
+            (0, d.zV)(O.HAw.APPLICATION_COMMAND_BROWSER_OPENED);
         }, []);
         let {
-                sectionDescriptors: $,
+                sectionDescriptors: z,
                 activeSections: q,
                 commandsByActiveSection: Z,
                 hasMoreAfter: X,
@@ -67,17 +67,17 @@ let w = 512,
                     builtIns: s ? T.n.ONLY_TEXT : T.n.ALLOW,
                     applicationCommands: !s,
                 },
-                options: { placeholderCount: x, limit: b.Hi, includeFrecency: !0 },
+                options: { placeholderCount: M, limit: R.Hi, includeFrecency: !0 },
                 allowFetch: !0,
             }),
             en = (0, E.Fk)({
-                activeCategoryIndex: z,
+                activeCategoryIndex: $,
                 isScrolling: o,
                 listRef: Y,
                 onActiveCategoryIndexChange: (e) => {
                     let t = q[e];
                     if (null != t) {
-                        let e = $.findIndex((e) => e.id === t.id);
+                        let e = z.findIndex((e) => e.id === t.id);
                         m.LS.setActiveCategoryIndex(e);
                     }
                 },
@@ -85,7 +85,7 @@ let w = 512,
                 searchQuery: "",
             }),
             er = (e) => {
-                let t = q.length * (k + P) + (Z.reduce((e, t) => e + t.data.length, 0) - (X ? x : 0)) * M - w;
+                let t = q.length * (k + x) + (Z.reduce((e, t) => e + t.data.length, 0) - (X ? M : 0)) * P - w;
                 X && e + G > t && ee(), en(e), V(), (l.current = e);
             },
             ei = i.useRef(er);
@@ -95,7 +95,7 @@ let w = 512,
             i.useEffect(() => {
                 ei.current(l.current);
             }, [Q]);
-        let es = i.useCallback((e) => (e !== q.length - 1 || X ? P : 0), [q.length, X]),
+        let es = i.useCallback((e) => (e !== q.length - 1 || X ? x : 0), [q.length, X]),
             ea = Z.map((e) => e.data.length);
         i.useEffect(() => {
             null != Y.current && W && null != B && Y.current.scrollRowIntoView(B);
@@ -105,7 +105,7 @@ let w = 512,
             }, [Q, J]);
         let eo = i.useCallback(
                 (e) => {
-                    e.id === J || e.id === b.Ik.FRECENCY ? (et(null), Y.current?.scrollToSectionTop(0)) : et(e.id);
+                    e.id === J || e.id === R.Ik.FRECENCY ? (et(null), Y.current?.scrollToSectionTop(0)) : et(e.id);
                 },
                 [et, J],
             ),
@@ -126,7 +126,7 @@ let w = 512,
                     for (let e of Z)
                         if (((t = n), B < (n += e.data.length))) {
                             let n = e.data[B - t],
-                                r = $.find((e) => e.id === n.applicationId);
+                                r = z.find((e) => e.id === n.applicationId);
                             el(n, r, (0, y.$S)(e.section));
                             break;
                         }
@@ -134,13 +134,13 @@ let w = 512,
                 },
                 onMoveSelection: (e) => {
                     if (0 === Q.length) return !0;
-                    let t = X ? x : 0,
+                    let t = X ? M : 0,
                         n = Q.length + t,
                         r = null == B ? 0 : B + e;
                     return r >= n ? (r = n - 1) : r < 0 && (r = 0), j(r), K(!0), !0;
                 },
             }),
-            [Q.length, Z, X, $, el, B],
+            [Q.length, Z, X, z, el, B],
         );
         let eu = i.useCallback(
                 (e) => {
@@ -167,7 +167,7 @@ let w = 512,
                                 t,
                                 0 === s.length &&
                                     (0, r.jsx)(u.A, {
-                                        message: O.intl.format(O.t.WoQXT6, { applicationName: i.name }),
+                                        message: b.intl.format(b.t.WoQXT6, { applicationName: i.name }),
                                         noResultsImageURL: L,
                                         className: D.qK,
                                     }),
@@ -185,11 +185,11 @@ let w = 512,
                         a = `${i.section.id}:${s?.id ?? e}`;
                     if (
                         null == s ||
-                        (i.section.id !== s.applicationId && i.section.id !== b.Ik.FRECENCY) ||
+                        (i.section.id !== s.applicationId && i.section.id !== R.Ik.FRECENCY) ||
                         s.inputType === S.y$.PLACEHOLDER
                     )
                         return (0, r.jsx)(N.A, {}, a);
-                    let o = $.find((e) => e.id === s.applicationId);
+                    let o = z.find((e) => e.id === s.applicationId);
                     return (0, r.jsx)(
                         _.Ay.NewCommand,
                         {
@@ -208,7 +208,7 @@ let w = 512,
                         a,
                     );
                 },
-                [n, Z, el, $, B],
+                [n, Z, el, z, B],
             ),
             e_ = (0, h.GV)();
         return (
@@ -228,9 +228,9 @@ let w = 512,
                     (0, r.jsx)(v.A, {
                         className: D.H$,
                         channel: n,
-                        sections: $,
+                        sections: z,
                         filteredSectionId: J,
-                        activeCategoryIndex: z,
+                        activeCategoryIndex: $,
                         onSectionClick: eo,
                         applicationCommandListRef: Y,
                     }),
@@ -244,7 +244,7 @@ let w = 512,
                         renderSectionHeader: eu,
                         rowCount: q.length,
                         rowCountBySection: ea,
-                        rowHeight: M,
+                        rowHeight: P,
                         sectionHeaderHeight: k,
                         sectionMarginBottom: es,
                         ref: Y,

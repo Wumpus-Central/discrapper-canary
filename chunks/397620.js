@@ -2,9 +2,9 @@ n.d(t, { A: () => d });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    a = n.n(l),
-    r = n(397927),
-    o = n(65125);
+    r = n.n(l),
+    a = n(397927),
+    o = n(954485);
 let d = function (e) {
     let {
             tabs: t,
@@ -24,10 +24,10 @@ let d = function (e) {
         return (0, i.jsx)(e, {});
     }, [g]);
     return (0, i.jsxs)("div", {
-        className: a()(o.P5, { [o.Vd]: "vertical" === u }),
+        className: r()(o.P5, { [o.Vd]: "vertical" === u }),
         children: [
-            (0, i.jsx)(r.VQ0, {
-                className: a()(o.$H, { [o.Vd]: "vertical" === u }, l),
+            (0, i.jsx)(a.VQ0, {
+                className: r()(o.$H, { [o.Vd]: "vertical" === u }, l),
                 selectedItem: g.id,
                 onItemSelect: (e) => {
                     _(t.find((t) => t.id === e) ?? t[0]), c?.(e);
@@ -37,9 +37,9 @@ let d = function (e) {
                 look: "brand",
                 children: t.map((e) =>
                     (0, i.jsx)(
-                        r.VQ0.Item,
+                        a.VQ0.Item,
                         {
-                            className: a()(o.Mf, { [o.Vd]: "vertical" === u, [o.wH]: e.id === g.id }),
+                            className: r()(o.Mf, { [o.Vd]: "vertical" === u, [o.wH]: e.id === g.id }),
                             id: e.id,
                             "aria-label": e.title,
                             children: e.title,
@@ -48,10 +48,10 @@ let d = function (e) {
                     ),
                 ),
             }),
-            (0, i.jsx)(r.VQ0.Panel, {
+            (0, i.jsx)(a.VQ0.Panel, {
                 id: g.id,
                 "aria-labelledby": g.title,
-                className: a()(o.NM, n, { [o.Vd]: "vertical" === u }),
+                className: r()(o.NM, n, { [o.Vd]: "vertical" === u }),
                 children: x,
             }),
         ],

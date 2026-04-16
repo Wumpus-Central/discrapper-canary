@@ -1,27 +1,27 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => _ });
 var i = n(627968),
-    a = n(64700),
-    r = n(397927),
-    l = n(566605),
+    l = n(64700),
+    a = n(397927),
+    r = n(566605),
     s = n(379848),
     o = n(183555),
     d = n(357541),
     c = n(814221),
     u = n(266713),
     A = n(985018),
-    _ = n(54676);
-function h() {
+    h = n(113636);
+function _() {
     let { trackUserProfileAction: e, trackUserProfileEditAction: t } = (0, o.NJ)(),
-        h = a.useRef(!1),
+        _ = l.useRef(!1),
         {
             suggestions: m,
             currentUser: g,
             isLoading: p,
-        } = (0, l.A)({ location: "UserProfileModalV2ApplicationWidgetsEmptyState" }),
+        } = (0, r.A)({ location: "UserProfileModalV2ApplicationWidgetsEmptyState" }),
         E = m?.[0],
-        I = a.useCallback(() => {
+        I = l.useCallback(() => {
             t({ action: "PRESS_ADD_WIDGET" }),
-                (0, r.mMO)(
+                (0, a.mMO)(
                     async () => {
                         let { default: e } = await n.e("87591").then(n.bind(n, 333114));
                         return (n) => (0, i.jsx)(e, { ...n, trackUserProfileEditAction: t });
@@ -30,27 +30,27 @@ function h() {
                 );
         }, [t]);
     if (
-        (a.useEffect(() => {
+        (l.useEffect(() => {
             p ||
                 null == E ||
-                h.current ||
+                _.current ||
                 (e({ action: "VIEW_APPLICATION_WIDGETS_EMPTY_STATE", applicationId: E.application.id }),
-                (h.current = !0));
+                (_.current = !0));
         }, [p, e, E]),
         p)
     )
-        return (0, i.jsx)("div", { className: _.Lq, children: (0, i.jsx)(r.y$y, {}) });
+        return (0, i.jsx)("div", { className: h.Lq, children: (0, i.jsx)(a.y$y, {}) });
     if (null == E) return (0, i.jsx)(u.A, {});
-    let f = (0, i.jsxs)(r.BJc, {
+    let f = (0, i.jsxs)(a.BJc, {
         gap: 4,
-        className: _.wx,
+        className: h.wx,
         children: [
-            (0, i.jsx)(r.Heading, {
+            (0, i.jsx)(a.Heading, {
                 variant: "heading-md/medium",
                 color: "text-strong",
                 children: A.intl.string(A.t["oqalC+"]),
             }),
-            (0, i.jsx)(r.Text, {
+            (0, i.jsx)(a.Text, {
                 variant: "text-sm/normal",
                 color: "text-subtle",
                 children: A.intl.format(A.t.YnNFWa, { applicationName: E.application.name }),
@@ -63,27 +63,27 @@ function h() {
         children: (e) => {
             let { visibleContent: t, markAsDismissed: n } = e;
             return t === E.dismissibleContent
-                ? (0, i.jsxs)(r.BJc, {
+                ? (0, i.jsxs)(a.BJc, {
                       gap: 16,
                       align: "center",
                       children: [
-                          (0, i.jsx)(r.hKd, { size: 32 }),
+                          (0, i.jsx)(a.hKd, { size: 32 }),
                           f,
                           (0, i.jsx)("div", {
-                              className: _.Zj,
+                              className: h.Zj,
                               children: (0, i.jsx)(d.A, { user: g, application: E.application, onDismiss: n }),
                           }),
                           (0, i.jsx)(c.A, {}),
                       ],
                   })
-                : (0, i.jsxs)(r.BJc, {
+                : (0, i.jsxs)(a.BJc, {
                       gap: 32,
                       align: "center",
                       children: [
-                          (0, i.jsx)(r.hKd, { size: 128 }),
+                          (0, i.jsx)(a.hKd, { size: 128 }),
                           f,
-                          (0, i.jsx)(r.Button, {
-                              icon: r.j96,
+                          (0, i.jsx)(a.Button, {
+                              icon: a.j96,
                               text: A.intl.string(A.t["lBG2s/"]),
                               size: "md",
                               variant: "secondary",

@@ -1,8 +1,8 @@
 n.d(t, { Ae: () => x, Ay: () => b, Hk: () => y });
 var i = n(627968),
-    r = n(64700),
-    l = n(503698),
-    a = n.n(l),
+    l = n(64700),
+    a = n(503698),
+    r = n.n(a),
     s = n(323889),
     o = n(311907),
     d = n(397927),
@@ -19,16 +19,16 @@ var i = n(627968),
     f = n(7832),
     C = n(654487),
     T = n(985018),
-    N = n(684027),
-    S = n(311401);
+    N = n(95115),
+    S = n(14233);
 function x() {
     return (0, i.jsx)("div", { className: N.Np });
 }
 function v(e) {
     let { heroImage: t, heroVideo: n } = e,
-        l = r.useRef(null);
-    (0, E.A)(l, C.rE.QUEST_HOME_DESKTOP);
-    let s = r.useMemo(() => (null != n ? (0, h.WV)(n) : null) ?? t, [n, t]);
+        a = l.useRef(null);
+    (0, E.A)(a, C.rE.QUEST_HOME_DESKTOP);
+    let s = l.useMemo(() => (null != n ? (0, h.WV)(n) : null) ?? t, [n, t]);
     return null == n
         ? (0, i.jsxs)("div", {
               className: N.Tv,
@@ -39,11 +39,11 @@ function v(e) {
                       children: (0, i.jsx)("img", { className: N.LY, src: t, alt: "" }),
                   }),
                   (0, i.jsx)("div", {
-                      className: a()(N.LO, N.jx, N.hw),
+                      className: r()(N.LO, N.jx, N.hw),
                       children: (0, i.jsx)("img", { className: N.LY, src: t, alt: "" }),
                   }),
                   (0, i.jsx)("div", {
-                      className: a()(N.LO, N.jx, N.Co),
+                      className: r()(N.LO, N.jx, N.Co),
                       children: (0, i.jsx)("img", { className: N.LY, src: t, alt: "" }),
                   }),
               ],
@@ -57,7 +57,7 @@ function v(e) {
                       children: (0, i.jsx)(g.N, {
                           showImage: !1,
                           showVideo: !0,
-                          assetRef: l,
+                          assetRef: a,
                           imageAsset: {
                               alt: "",
                               className: N.LY,
@@ -77,12 +77,12 @@ function v(e) {
 }
 function b(e) {
     let { hero: t, onQuestCtaClick: n } = e,
-        l = (0, o.bG)([u.A], () => u.A.quests),
-        { dismissQuestHomeHeroContent: a } = (0, f.I)();
-    r.useEffect(() => {
-        a();
-    }, [a]);
-    let h = r.useMemo(() => t.questIds?.find((e) => l.has(e)), [l, t.questIds]);
+        a = (0, o.bG)([u.A], () => u.A.quests),
+        { dismissQuestHomeHeroContent: r } = (0, f.I)();
+    l.useEffect(() => {
+        r();
+    }, [r]);
+    let h = l.useMemo(() => t.questIds?.find((e) => a.has(e)), [a, t.questIds]);
     return (0, i.jsx)(p.R, {
         adContentId: t.id,
         adCreativeType: s.p.QUEST_HOME_HERO,
@@ -148,5 +148,5 @@ function b(e) {
     });
 }
 function y() {
-    return (0, i.jsx)("div", { className: a()(S.iE, S.FG, S.B3), children: (0, i.jsx)(d.y$y, {}) });
+    return (0, i.jsx)("div", { className: r()(S.iE, S.FG, S.B3), children: (0, i.jsx)(d.y$y, {}) });
 }

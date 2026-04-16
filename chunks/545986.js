@@ -51,8 +51,8 @@ var o = n(397927),
     L = n(792620),
     w = n(814793),
     M = n(753386),
-    x = n(964168),
-    P = n(654487),
+    P = n(964168),
+    x = n(654487),
     k = n(652215),
     U = n(488995),
     G = n(985018);
@@ -84,25 +84,25 @@ async function V(e) {
 function B(e) {
     let { quest: t, sourceQuestContent: i } = e;
     (0, o.mMO)(async () => {
-        let { default: e } = await Promise.all([n.e("72302"), n.e("58686")]).then(n.bind(n, 975726));
+        let { default: e } = await Promise.all([n.e("72302"), n.e("35130")]).then(n.bind(n, 975726));
         return (n) => (0, r.jsx)(e, { ...n, initialQuest: t, sourceQuestContent: i });
     });
 }
 function H(e, t, i) {
     (0, o.mMO)(async () => {
-        let { default: s } = await Promise.all([n.e("72302"), n.e("28758")]).then(n.bind(n, 529398));
+        let { default: s } = await Promise.all([n.e("72302"), n.e("61106")]).then(n.bind(n, 529398));
         return (n) => (0, r.jsx)(s, { ...n, initialQuest: e, location: t, sourceQuestContent: i });
     });
 }
 function j(e, t, i) {
     (0, o.mMO)(async () => {
-        let { default: s } = await Promise.all([n.e("72302"), n.e("84111")]).then(n.bind(n, 268473));
+        let { default: s } = await Promise.all([n.e("72302"), n.e("87731")]).then(n.bind(n, 268473));
         return (n) => (0, r.jsx)(s, { ...n, initialQuest: e, sourceQuestContent: i, location: t });
     });
 }
 function Y(e, t, i, s) {
     (0, o.mMO)(async () => {
-        let { default: a } = await Promise.all([n.e("72302"), n.e("16185")]).then(n.bind(n, 651663));
+        let { default: a } = await Promise.all([n.e("72302"), n.e("94553")]).then(n.bind(n, 651663));
         return (n) => (0, r.jsx)(a, { ...n, initialQuest: e, sourceQuestContent: i, location: t, preview: s });
     });
 }
@@ -139,10 +139,10 @@ function q(e) {
     let t = (0, O.L)({ quest: e });
     if (Math.random() > z) return;
     let n = (0, b.A)(e);
-    t.log(`Showing survey ${n.id}`), (0, x.m)({ questId: e.id, survey: n });
+    t.log(`Showing survey ${n.id}`), (0, P.m)({ questId: e.id, survey: n });
 }
 function Z() {
-    return Promise.all([n.e("57174"), n.e("92868"), n.e("91652"), n.e("29636"), n.e("7634"), n.e("68317")]).then(
+    return Promise.all([n.e("57174"), n.e("92868"), n.e("91652"), n.e("29636"), n.e("7634"), n.e("97905")]).then(
         n.bind(n, 201257),
     );
 }
@@ -172,7 +172,7 @@ function X(e) {
             }));
     }
     let { setCaptionEnabled: d, muted: _, volume: f, captionEnabled: p } = y.Ay.getState(),
-        { enabled: h, variant: m } = v.Ig.getConfig({ location: P.rE.VIDEO_MODAL }),
+        { enabled: h, variant: m } = v.Ig.getConfig({ location: x.rE.VIDEO_MODAL }),
         E = null != (0, N.tW)(t, N.fY.VIDEO_PLAYER_CAPTION, void 0, !1);
     _ &&
         h &&
@@ -249,7 +249,7 @@ function et(e) {
 }
 function en(e, t) {
     (0, o.mMO)(async () => {
-        let { default: i } = await Promise.all([n.e("21393"), n.e("27296"), n.e("35755"), n.e("61827")]).then(
+        let { default: i } = await Promise.all([n.e("21393"), n.e("27296"), n.e("6782"), n.e("32661")]).then(
             n.bind(n, 50292),
         );
         return (n) => (0, r.jsx)(i, { ...n, multiplier: e, eligibleToReceivePremiumRewards: t });
@@ -257,7 +257,7 @@ function en(e, t) {
 }
 function er(e) {
     (0, o.mMO)(async () => {
-        let { default: t } = await Promise.all([n.e("85939"), n.e("27818")]).then(n.bind(n, 518420));
+        let { default: t } = await Promise.all([n.e("14946"), n.e("27818")]).then(n.bind(n, 518420));
         return (n) => (0, r.jsx)(t, { ...n, questId: e.id });
     });
 }
@@ -287,5 +287,5 @@ async function ei(e, t) {
     }
 }
 function es(e) {
-    if ((0, w.vA)(e)) return e.config.features.includes(P.Li.CLOUD_GAMING_ACTIVITY) ? o.hpF : o._xR;
+    if ((0, w.vA)(e)) return e.config.features.includes(x.Li.CLOUD_GAMING_ACTIVITY) ? o.hpF : o._xR;
 }

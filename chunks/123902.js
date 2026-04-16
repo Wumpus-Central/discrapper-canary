@@ -1,52 +1,52 @@
-i.d(t, { A: () => g, V: () => h });
-var n,
-    s = i(627968),
-    l = i(64700),
-    a = i(503698),
-    r = i.n(a),
-    o = i(827734),
-    c = i(765671),
-    d = i(371664),
-    u = i(477412),
-    h = (((n = {}).BLACK = "BLACK"), (n.GRAY = "GRAY"), n);
+n.d(t, { A: () => _, V: () => h });
+var i,
+    l = n(627968),
+    a = n(64700),
+    s = n(503698),
+    r = n.n(s),
+    o = n(827734),
+    c = n(765671),
+    d = n(371664),
+    u = n(75753),
+    h = (((i = {}).BLACK = "BLACK"), (i.GRAY = "GRAY"), i);
 let m = { BLACK: u.Ql, GRAY: u.wm },
-    p = { sm: 20, md: 28 };
-function v(e) {
+    A = { sm: 20, md: 28 };
+function g(e) {
     return Math.round(e / d.K) * d.K;
 }
-function g(e) {
+function _(e) {
     let {
             notchBackground: t,
-            progress: i,
-            size: n = "md",
-            gradientStart: a = o.A.unsafe_rawColors.YELLOW_260.css,
+            progress: n,
+            size: i = "md",
+            gradientStart: s = o.A.unsafe_rawColors.YELLOW_260.css,
             gradientEnd: h = o.A.unsafe_rawColors.GREEN_360.css,
-            className: g,
-            notchClassName: x,
+            className: _,
+            notchClassName: p,
             children: f,
         } = e,
-        _ = p[n],
-        { ref: A, width: T } = (0, c.Ay)(),
-        y = l.useMemo(() => (null != T ? v(T) : 0), [T]),
-        j = l.useMemo(() => {
-            let e = Math.abs(v((y * (100 - Math.max(0, Math.min(100, i)))) / 100) - y);
+        E = A[i],
+        { ref: C, width: x } = (0, c.Ay)(),
+        S = a.useMemo(() => (null != x ? g(x) : 0), [x]),
+        I = a.useMemo(() => {
+            let e = Math.abs(g((S * (100 - Math.max(0, Math.min(100, n)))) / 100) - S);
             return { transform: `translateX(${e}px)` };
-        }, [i, y]),
-        C = l.useMemo(
-            () => ({ width: `${y}px`, background: i <= 0 ? "none" : `linear-gradient(to right, ${a}, ${h})` }),
-            [h, a, i, y],
+        }, [n, S]),
+        T = a.useMemo(
+            () => ({ width: `${S}px`, background: n <= 0 ? "none" : `linear-gradient(to right, ${s}, ${h})` }),
+            [h, s, n, S],
         );
-    return (0, s.jsxs)("div", {
+    return (0, l.jsxs)("div", {
         className: u.iE,
-        ref: A,
-        style: { height: _ },
+        ref: C,
+        style: { height: E },
         children: [
-            (0, s.jsxs)("div", {
-                className: r()(u.kL, g),
-                style: C,
+            (0, l.jsxs)("div", {
+                className: r()(u.kL, _),
+                style: T,
                 children: [
-                    (0, s.jsx)("div", { className: u.qB, style: j }),
-                    0 !== y && (0, s.jsx)(d.A, { width: y, height: _, className: r()(u.DR, m[t], x) }),
+                    (0, l.jsx)("div", { className: u.qB, style: I }),
+                    0 !== S && (0, l.jsx)(d.A, { width: S, height: E, className: r()(u.DR, m[t], p) }),
                 ],
             }),
             f,

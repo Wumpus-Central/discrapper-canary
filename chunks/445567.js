@@ -12,7 +12,7 @@ var i = n(627968),
     m = n(339984),
     g = n(478644),
     x = n(985018),
-    h = n(664991);
+    h = n(19420);
 function _(e) {
     let { guild: t, canManageGuild: n } = e,
         _ = t.features.has(c.GuildFeatures.BANNER),

@@ -1,9 +1,9 @@
-n.d(t, { C: () => A });
+n.d(t, { C: () => h });
 var i = n(627968),
     s = n(158954),
     l = n(311907),
-    a = n(827343),
-    r = n(117178),
+    r = n(827343),
+    a = n(117178),
     o = n(419954),
     d = n(430452),
     c = n(780964),
@@ -11,8 +11,8 @@ var i = n(627968),
     m = n(916607),
     g = n(652215),
     _ = n(985018),
-    x = n(78522);
-let A = (0, o.E2)(c.X.VOICE_PUSH_TO_TALK_KEYBIND_SETTING, {
+    x = n(285802);
+let h = (0, o.E2)(c.X.VOICE_PUSH_TO_TALK_KEYBIND_SETTING, {
     useSearchTerms: () => [_.intl.string(_.t["pS+K2L"]), _.intl.string(_.t.nuFtHH)],
     usePredicate: m.P,
     Component: function () {
@@ -27,9 +27,9 @@ let A = (0, o.E2)(c.X.VOICE_PUSH_TO_TALK_KEYBIND_SETTING, {
             layout: "horizontal-responsive",
             children: (0, i.jsx)("div", {
                 className: x.e,
-                children: (0, i.jsx)(r.A, {
+                children: (0, i.jsx)(a.A, {
                     defaultValue: e,
-                    onChange: (e) => a.A.setMode(g.TBI.PUSH_TO_TALK, { shortcut: e }),
+                    onChange: (e) => r.A.setMode(g.TBI.PUSH_TO_TALK, { shortcut: e }),
                 }),
             }),
         });

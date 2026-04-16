@@ -31,8 +31,8 @@ var r = n(627968),
     L = n(403362),
     w = n(989837),
     M = n(500049),
-    x = n(869186),
-    P = n(676765),
+    P = n(869186),
+    x = n(676765),
     k = n(933840),
     U = n(735991),
     G = n(485878),
@@ -47,7 +47,7 @@ n(60809);
 var K = n(652215),
     $ = n(73510),
     z = n(985018),
-    q = n(244777);
+    q = n(62784);
 let Z = [],
     X = 4,
     Q = 4,
@@ -206,7 +206,7 @@ function eo(e) {
 function el(e) {
     let { context: t, entrypoint: n, onEmptyState: s } = e,
         a = n === M.s4.VOICE,
-        { frecentApps: o, loading: l } = (0, x.k)({
+        { frecentApps: o, loading: l } = (0, P.k)({
             context: t,
             onlyActivityApps: a,
             allowCommandFetch: !0,
@@ -338,7 +338,7 @@ function eu(e) {
 function ec(e) {
     let { context: t, onEmptyState: n } = e,
         s = M.yK.APPS_IN_THIS_SERVER,
-        { appsInThisServer: a, isLoading: o } = (0, P.A)({ context: t }),
+        { appsInThisServer: a, isLoading: o } = (0, x.A)({ context: t }),
         { items: l, handleViewMore: u } = eE({
             title: z.intl.string(z.t.KfkuGc),
             look: F.r0.ROW,

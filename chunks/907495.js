@@ -12,8 +12,8 @@ var i = n(627968),
     m = n(565645),
     A = n(775602),
     g = n(812930),
-    p = n(822123),
-    _ = n(7584),
+    _ = n(822123),
+    p = n(7584),
     f = n(635222),
     E = n(969043),
     C = n(843626),
@@ -33,13 +33,13 @@ var i = n(627968),
     D = n(580745),
     P = n(71393),
     k = n(834942),
-    U = n(576705),
-    w = n(954571),
+    w = n(576705),
+    U = n(954571),
     G = n(957565),
     F = n(690521),
     H = n(403362),
     B = n(628691),
-    V = n(501255),
+    V = n(521427),
     W = n(697470),
     K = n(492841),
     z = n(143413),
@@ -51,8 +51,8 @@ var i = n(627968),
     X = n(652215),
     Q = n(307731),
     ee = n(985018),
-    et = n(410110);
-let en = [_.Ay.getByName("100"), _.Ay.getByName("laughing"), _.Ay.getByName("sparkling_heart")].filter(H.Vq);
+    et = n(15393);
+let en = [p.Ay.getByName("100"), p.Ay.getByName("laughing"), p.Ay.getByName("sparkling_heart")].filter(H.Vq);
 function ei(e) {
     e.stopPropagation();
 }
@@ -78,7 +78,7 @@ function el(e) {
 }
 let ea = l.memo(function (e) {
     let { channel: t, message: n } = e,
-        l = (0, p.QZ)(t.guild_id).filter(
+        l = (0, _.QZ)(t.guild_id).filter(
             (e) =>
                 !F.Ay.isEmojiFilteredOrLocked({
                     emoji: e,
@@ -150,8 +150,8 @@ function es(e) {
             canDelete: r,
             canReport: o,
             canEdit: m,
-            canPublish: p,
-            canReact: _,
+            canPublish: _,
+            canReact: p,
             canConfigureJoin: f,
             canReply: S,
             canStartThread: I,
@@ -181,38 +181,38 @@ function es(e) {
                 { author: u } = n,
                 h = (0, d.bG)([P.A], () => P.A.getGuild(t.guild_id), [t.guild_id]),
                 m = (0, d.bG)([O.default], () => O.default.getId()),
-                p = (0, M.Id)(t),
-                _ = (0, M.s5)(t),
+                _ = (0, M.Id)(t),
+                p = (0, M.s5)(t),
                 { firstMessage: f } = (0, d.bG)([E.A], () => E.A.getMessage(t.id), [t.id]),
                 x = L.jW.useSetting(),
                 S = L.Q_.useSetting(),
                 I = (0, d.bG)([k.A], () => null == t.guild_id || k.A.canChatInGuild(t.guild_id), [t]),
                 { canManageMessages: v, canAddNewReactions: N } = (0, d.cf)(
-                    [U.A],
+                    [w.A],
                     () => ({
-                        canAddNewReactions: I && U.A.can(X.xBc.ADD_REACTIONS, t),
-                        canManageMessages: U.A.can(X.xBc.MANAGE_MESSAGES, t),
+                        canAddNewReactions: I && w.A.can(X.xBc.ADD_REACTIONS, t),
+                        canManageMessages: w.A.can(X.xBc.MANAGE_MESSAGES, t),
                     }),
                     [t, I],
                 ),
                 y = (0, b.u)(t, n),
                 D = (0, M.n)(t, n),
-                w = (0, M.R)(n),
+                U = (0, M.R)(n),
                 F = (0, d.bG)([T.A], () => null != t.guild_id && T.A.isLurking(t.guild_id), [t]),
                 H = u.id === m,
-                J = (v || n.canDeleteOwnMessage(m)) && p && !X.MRS.UNDELETABLE.has(n.type);
+                J = (v || n.canDeleteOwnMessage(m)) && _ && !X.MRS.UNDELETABLE.has(n.type);
             n.type === X.lAJ.AUTO_MODERATION_ACTION && (J = J && v),
                 t.isModeratorReportChannel() && (J = J && n.id !== f?.id && !(0, z.A)(n));
             let q = (0, B.ul)(n),
                 $ = (0, K.A)(n, t),
-                Z = !t.isSystemDM() && (0, W.A)(n, m) && p && !_,
+                Z = !t.isSystemDM() && (0, W.A)(n, m) && _ && !p,
                 { disableReactionCreates: Q } = (0, Y.A)({
                     channel: t,
                     canChat: I,
                     renderReactions: x,
                     canAddNewReactions: N,
                     isLurking: F,
-                    isActiveChannelOrUnarchivableThread: p,
+                    isActiveChannelOrUnarchivableThread: _,
                 }),
                 ee =
                     t.type === X.rbe.GUILD_ANNOUNCEMENT &&
@@ -224,7 +224,7 @@ function es(e) {
                 en =
                     null != et &&
                     n.type === X.lAJ.USER_JOIN &&
-                    U.A.canWithPartialContext(X.xBc.MANAGE_GUILD, { guildId: et }),
+                    w.A.canWithPartialContext(X.xBc.MANAGE_GUILD, { guildId: et }),
                 ei = (0, C.m)(n),
                 el = (0, V.Vc)(t.guild_id, t, "MessageHoverBar"),
                 ea = n.hasFlag(X.pr7.IS_GUILD_OFFICIAL),
@@ -241,7 +241,7 @@ function es(e) {
                 canReport: q,
                 canReply: y,
                 canStartThread: D,
-                canViewThread: w,
+                canViewThread: U,
                 canForward: ei,
                 canManageOfficialMessages: el,
                 isGuildOfficial: ea,
@@ -263,7 +263,7 @@ function es(e) {
         er = l.useRef(null),
         eo = l.useCallback(() => {
             H ||
-                w.default.track(X.HAw.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
+                U.default.track(X.HAw.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
                     message_id: n.id,
                     channel: n.channel_id,
                     location: "expanding_buttons",
@@ -355,7 +355,7 @@ function es(e) {
                       ],
                   })
                 : null,
-            _
+            p
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           F
@@ -420,7 +420,7 @@ function es(e) {
                       "guild-official",
                   )
                 : null,
-            p
+            _
                 ? (0, i.jsx)(
                       J.qv,
                       {

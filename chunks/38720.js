@@ -1,15 +1,15 @@
-n.d(t, { R: () => A });
+n.d(t, { R: () => h });
 var i = n(627968);
 n(64700);
 var s = n(397927),
     l = n(773669),
-    a = n(927578),
-    r = n(580630),
+    r = n(927578),
+    a = n(580630),
     o = n(788868),
     d = n(652215),
     c = n(985018),
-    u = n(927961),
-    m = n(70667);
+    u = n(864386),
+    m = n(427227);
 let g = (e) => {
         let { text: t, badge: n, variant: l } = e;
         return (0, i.jsxs)(s.Text, {
@@ -38,12 +38,12 @@ let g = (e) => {
                   ],
               });
     },
-    A = (e, t, n, A, h) => {
+    h = (e, t, n, h, A) => {
         let p = {
                 0: {
                     label: (0, i.jsx)(g, { text: c.intl.string(c.t["09yRK3"]) }),
-                    column1: (0, i.jsx)(_, { text: a.Ay.formatPriceString(e, o.WT.MONTH) }),
-                    column2: (0, i.jsx)(_, { text: n ? A : a.Ay.formatPriceString(t, o.WT.MONTH) }),
+                    column1: (0, i.jsx)(_, { text: r.Ay.formatPriceString(e, o.WT.MONTH) }),
+                    column2: (0, i.jsx)(_, { text: n ? h : r.Ay.formatPriceString(t, o.WT.MONTH) }),
                     withBottomBorder: !0,
                 },
                 1: {
@@ -68,8 +68,8 @@ let g = (e) => {
                 },
                 5: {
                     label: (0, i.jsx)(g, { text: c.intl.string(c.t["ufhQC+"]) }),
-                    column1: (0, i.jsx)(_, { text: (0, a.EJ)(o.PremiumTypes.TIER_0) }),
-                    column2: (0, i.jsx)(_, { text: (0, a.EJ)(o.PremiumTypes.TIER_2) }),
+                    column1: (0, i.jsx)(_, { text: (0, r.EJ)(o.PremiumTypes.TIER_0) }),
+                    column2: (0, i.jsx)(_, { text: (0, r.EJ)(o.PremiumTypes.TIER_2) }),
                 },
                 6: {
                     label: (0, i.jsx)(g, { text: c.intl.string(c.t.VwxlMw) }),
@@ -80,7 +80,7 @@ let g = (e) => {
                     label: (0, i.jsx)(g, {
                         text: c.intl.formatToPlainString(c.t.nyhDpw, {
                             numBoosts: o.M4,
-                            percentageOff: (0, r.l9)(l.default.locale, o.oX / 100),
+                            percentageOff: (0, a.l9)(l.default.locale, o.oX / 100),
                         }),
                     }),
                     column1: (0, i.jsx)(x, { includes: !1 }),
@@ -191,7 +191,7 @@ let g = (e) => {
                     withBottomBorder: !1,
                 },
             },
-            T = h === o.xc.FP_ONLY;
+            T = A === o.xc.FP_ONLY;
         return [
             p[0],
             p[1],

@@ -14,19 +14,19 @@ var l = n(627968),
     x = n(209932),
     g = n(967198),
     f = n(954571),
-    p = n(964901),
-    _ = n(652215),
+    _ = n(964901),
+    p = n(652215),
     j = n(851110);
 n(980504);
-var b = n(641131),
+var b = n(221314),
     v = n(985018),
-    A = n(529349);
+    A = n(59618);
 function C(e) {
     let { className: t, sound: n, playSound: s, isPlaying: r, text: c } = e,
         u = n?.emojiId != null || n?.emojiName != null,
         m = v.intl.formatToPlainString(v.t.tuMUJ2, { emojiName: n?.emojiName, soundName: n?.name }),
         h = i.useCallback(() => {
-            f.default.track(_.HAw.MODERATOR_QUEUE_ACTION, { guild_id: g.A.getGuildId(), action: "airhorn" }),
+            f.default.track(p.HAw.MODERATOR_QUEUE_ACTION, { guild_id: g.A.getGuildId(), action: "airhorn" }),
                 null != s && s();
         }, [s]);
     return (0, l.jsxs)(o.DUT, {
@@ -46,11 +46,11 @@ function T(e) {
         a = (0, r.bG)([x.A], () => x.A.getSoundsForGuild("0")?.find((e) => "airhorn" === e.name)),
         { createMultipleConfettiAt: o } = i.useContext(m.x),
         d = (0, r.bG)([u.A], () => u.A.useReducedMotion),
-        { isPlaying: g, playSound: f } = (0, p.E)(a);
+        { isPlaying: g, playSound: f } = (0, _.E)(a);
     (0, c.Ay)(() => {
         (0, h.E7)();
     });
-    let _ = i.useCallback(async () => {
+    let p = i.useCallback(async () => {
         if ((await f()) && (s.current?.addAnimation(), !d && t?.current != null)) {
             let e = t.current.getBoundingClientRect(),
                 n = { x: e.left + e.width / 2, y: e.top + e.height / 3 },
@@ -64,7 +64,7 @@ function T(e) {
             );
         }
     }, [f, o, d, t]);
-    return void 0 === a ? null : (0, l.jsx)(C, { sound: a, playSound: _, isPlaying: g, text: n });
+    return void 0 === a ? null : (0, l.jsx)(C, { sound: a, playSound: p, isPlaying: g, text: n });
 }
 function N() {
     let e = i.useRef(null);

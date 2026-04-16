@@ -32,9 +32,9 @@ var n = l(627968),
     R = l(718812),
     D = l(543428),
     O = l(652215),
-    P = l(341385),
+    P = l(16590),
     U = l(985018),
-    G = l(999115);
+    G = l(798594);
 let V = function (e) {
     let { clip: t, actionsDisabled: i, isNew: r, onEdit: d, onClick: m } = e,
         g = (0, c.yK)([y.default], () => t.users.map((e) => y.default.getUser(e)).filter(k.Vq)),
@@ -47,20 +47,20 @@ let V = function (e) {
         K = (0, o.A)(t.editMetadata?.start ?? 0),
         B = M.has(t.id),
         F = t.type === w.nQ.SCREENSHOT,
-        Y = (0, v.Ay)(j),
-        X = "" === t.applicationName && null != Y && "" !== Y ? Y : t.applicationName,
+        X = (0, v.Ay)(j),
+        Y = "" === t.applicationName && null != X && "" !== X ? X : t.applicationName,
         Q = (0, E.Fe)(new Date(I.default.extractTimestamp(t.id))),
         q = a.useMemo(() => {
             let e = [];
             return (
                 t.type === w.nQ.VOICE_CLIP
-                    ? (N?.name != null && e.push(N.name), null != Y && e.push(Y))
-                    : ("" !== X && null != X && e.push(X),
+                    ? (N?.name != null && e.push(N.name), null != X && e.push(X))
+                    : ("" !== Y && null != Y && e.push(Y),
                       t.activity?.state != null && "" !== t.activity.state && e.push(t.activity.state),
                       t.activity?.details != null && "" !== t.activity.details && e.push(t.activity.details)),
                 e.join(" › ")
             );
-        }, [X, N?.name, Y, t.activity?.state, t.activity?.details, t.type]),
+        }, [Y, N?.name, X, t.activity?.state, t.activity?.details, t.type]),
         W = a.useCallback(() => {
             let e = $.current;
             null != e && (e.pause(), (e.src = ""));
@@ -147,7 +147,7 @@ let V = function (e) {
             onMouseOver: Z,
             onMouseLeave: J,
             children: [
-                (0, n.jsx)(H, { clip: t, isNew: r, videoRef: $, onOpenContextMenu: el, actionsDisabled: i }),
+                (0, n.jsx)(z, { clip: t, isNew: r, videoRef: $, onOpenContextMenu: el, actionsDisabled: i }),
                 (0, n.jsxs)("div", {
                     className: G.wI,
                     children: [
@@ -155,7 +155,7 @@ let V = function (e) {
                         (0, n.jsxs)("div", {
                             className: G.i0,
                             children: [
-                                (0, n.jsx)(z, { clip: t }),
+                                (0, n.jsx)(H, { clip: t }),
                                 (0, n.jsx)(h.Text, {
                                     className: G.xD,
                                     color: "text-subtle",
@@ -191,7 +191,7 @@ let V = function (e) {
         }),
     });
 };
-function H(e) {
+function z(e) {
     let { clip: t, isNew: l, videoRef: i, onOpenContextMenu: s, actionsDisabled: r } = e,
         o = 0 === t.length,
         c = !0 === t.pending,
@@ -335,7 +335,7 @@ function H(e) {
         ],
     });
 }
-function z(e) {
+function H(e) {
     let { clip: t } = e,
         l = (0, R.h)(t),
         a = "" !== l;

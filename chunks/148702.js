@@ -1,23 +1,23 @@
 a.d(t, { A: () => c });
 var l = a(627968),
-    n = a(64700),
-    r = a(503698),
-    s = a.n(r),
+    r = a(64700),
+    n = a(503698),
+    s = a.n(n),
     i = a(157941),
     o = a(752238),
-    d = a(77273);
+    d = a(585289);
 function c(e) {
     let { value: t, onChange: a } = e,
-        r = "json",
-        c = n.useRef(null),
-        [u, x] = n.useState("");
+        n = "json",
+        c = r.useRef(null),
+        [u, x] = r.useState("");
     return (
-        n.useEffect(() => {
-            if (null != t && o.default.hasLanguage(r)) {
-                let e = o.default.highlight(r, t, !0);
+        r.useEffect(() => {
+            if (null != t && o.default.hasLanguage(n)) {
+                let e = o.default.highlight(n, t, !0);
                 null != e ? x(e.value + "\n") : x(t + "\n");
             } else x(t + "\n");
-        }, [t, r]),
+        }, [t, n]),
         (0, l.jsxs)("div", {
             className: d.t,
             children: [
@@ -30,7 +30,7 @@ function c(e) {
                         lang: "json",
                         className: "hljs",
                         children: (0, l.jsx)("code", {
-                            className: s()("hljs", r),
+                            className: s()("hljs", n),
                             dangerouslySetInnerHTML: { __html: u ?? "" },
                         }),
                     }),
@@ -51,29 +51,29 @@ function c(e) {
                         if ("Tab" === e.key) {
                             e.preventDefault();
                             let l = e.target,
-                                n = l.selectionStart,
-                                r = l.selectionEnd;
+                                r = l.selectionStart,
+                                n = l.selectionEnd;
                             if (e.shiftKey) {
-                                let e = t.lastIndexOf("\n", n - 1) + 1,
-                                    l = t.indexOf("\n", n),
-                                    r = t.substring(e, -1 === l ? t.length : l),
+                                let e = t.lastIndexOf("\n", r - 1) + 1,
+                                    l = t.indexOf("\n", r),
+                                    n = t.substring(e, -1 === l ? t.length : l),
                                     s = 0;
-                                for (let e = 0; e < Math.min(2, r.length); e++)
-                                    if (" " === r[e]) s++;
+                                for (let e = 0; e < Math.min(2, n.length); e++)
+                                    if (" " === n[e]) s++;
                                     else break;
                                 s > 0 &&
                                     (a(t.substring(0, e) + t.substring(e + s)),
                                     setTimeout(() => {
                                         if (null != c.current) {
-                                            let t = Math.max(e, n - s);
+                                            let t = Math.max(e, r - s);
                                             c.current.selectionStart = c.current.selectionEnd = t;
                                         }
                                     }, 0));
                             } else
-                                a(t.substring(0, n) + "  " + t.substring(r)),
+                                a(t.substring(0, r) + "  " + t.substring(n)),
                                     setTimeout(() => {
                                         null != c.current &&
-                                            (c.current.selectionStart = c.current.selectionEnd = n + 2);
+                                            (c.current.selectionStart = c.current.selectionEnd = r + 2);
                                     }, 0);
                         }
                     },

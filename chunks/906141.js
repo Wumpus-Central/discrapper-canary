@@ -12,11 +12,11 @@ var i = n(627968),
     A = n(9842),
     _ = n(253932),
     m = n(734057),
-    g = n(994500),
-    p = n(661191),
+    p = n(994500),
+    g = n(661191),
     f = n(988012),
-    x = n(141468),
-    E = n(694318),
+    E = n(141468),
+    x = n(694318),
     I = n(143413),
     C = n(763754),
     N = n(467073),
@@ -25,16 +25,16 @@ var i = n(627968),
     b = n(756369),
     y = n(538355),
     v = n(522871),
-    j = n(715628),
-    R = n(752636),
+    R = n(715628),
+    j = n(752636),
     O = n(675722),
     L = n(268719),
     M = n(234957),
     D = n(888675),
     U = n(652215),
     G = n(985018),
-    P = n(213607),
-    k = n(480972);
+    P = n(21623),
+    k = n(701628);
 let w = l.memo(function e(t) {
     let n,
         {
@@ -76,7 +76,7 @@ let w = l.memo(function e(t) {
         ei = (0, C.Ay)(s),
         el = (0, r.bG)(
             [m.A],
-            () => s.hasFlag(U.pr7.HAS_THREAD) && m.A.getChannel(p.default.castMessageIdAsChannelId(s.id)),
+            () => s.hasFlag(U.pr7.HAS_THREAD) && m.A.getChannel(g.default.castMessageIdAsChannelId(s.id)),
         ),
         es = s.type === U.lAJ.THREAD_STARTER_MESSAGE && K.state === A.a.LOADED && null != Y,
         ea = !es && void 0 === n,
@@ -87,18 +87,18 @@ let w = l.memo(function e(t) {
         eu = (0, S.fF)(s);
     return es
         ? (0, i.jsx)(e, { ...t, message: K.message, channel: Y, hasThread: !1 })
-        : (g.A.isBlockedForMessage(s)
+        : (p.A.isBlockedForMessage(s)
                 ? (n = G.t["+FcYM/"])
-                : g.A.isIgnoredForMessage(s)
+                : p.A.isIgnoredForMessage(s)
                   ? (n = G.t["VFWjc+"])
-                  : (0, E.kf)(s) && F && (n = G.t.xfkfTK),
+                  : (0, x.kf)(s) && F && (n = G.t.xfkfTK),
             void 0 !== n)
           ? (0, i.jsx)(B, { className: D, compact: o, count: 1, collapsedReason: n })
           : (0, i.jsx)(T.A, {
                 compact: o,
-                className: a()(D, { [k.M1]: (0, x.ec)(s), [k.XN]: V, [k._A]: t.isGroupStart }),
+                className: a()(D, { [k.M1]: (0, E.ec)(s), [k.XN]: V, [k._A]: t.isGroupStart }),
                 childrenRepliedMessage: (0, M.A)(s, l, W, K, o),
-                childrenHeader: (0, R.A)({ ...t, author: ei, guildId: l.guild_id }),
+                childrenHeader: (0, j.A)({ ...t, author: ei, guildId: l.guild_id }),
                 childrenAccessories: (0, i.jsx)(b.iV, {
                     channel: l,
                     message: s,
@@ -124,7 +124,7 @@ let w = l.memo(function e(t) {
                     ctaButtonType: ed,
                 }),
                 childrenExecutedCommand: (0, L.A)(s, l, o),
-                childrenMessageContent: (0, j.A)(t, ee),
+                childrenMessageContent: (0, R.A)(t, ee),
                 childrenSystemMessage: (0, O.A)(t),
                 onContextMenu: P,
                 onClick: w,

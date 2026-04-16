@@ -15,7 +15,7 @@ var r = n(627968),
     h = n(900283),
     m = n(225012),
     E = n(885621),
-    g = n(488732);
+    g = n(32271);
 function A(e) {
     return null == e
         ? []
@@ -295,14 +295,14 @@ function y(e) {
             onInteraction: v,
         } = e,
         C = I(p),
-        b = T(C),
-        R = i.useRef([]);
-    l()(R.current, b) || (R.current = b);
-    let O = (0, f.Y)("Menu"),
+        R = T(C),
+        O = i.useRef([]);
+    l()(O.current, R) || (O.current = R);
+    let b = (0, f.Y)("Menu"),
         D = C.find((e) => null != e.key)?.key,
         L = (0, u.A)({
             navId: t,
-            items: R.current,
+            items: O.current,
             initialFocusPath: _.A.keyboardModeEnabled && null != D ? [D] : [],
             closeMenu: A,
             defaultIsUsingKeyboardNavigation: _.A.keyboardModeEnabled,
@@ -312,20 +312,20 @@ function y(e) {
     }, [L.isUsingKeyboardNavigation]);
     let w = i.useRef(null);
     (0, c.tjt)(w);
-    let x = s ? c.d_W : c.IpV,
-        M = i.useMemo(() => ({ onSelect: y, onInteraction: v }), [y, v]);
+    let M = s ? c.d_W : c.IpV,
+        P = i.useMemo(() => ({ onSelect: y, onInteraction: v }), [y, v]);
     return (0, r.jsx)(h.x.Provider, {
-        value: M,
+        value: P,
         children: (0, r.jsx)("div", {
             className: a()(g.menu, g[n], o),
             style: {
-                "--custom-menu-viewport-padding": O ? `${E.FD}px` : `${E.vx}px`,
-                "--custom-menu-flexible-min-width": O ? "144px" : "188px",
+                "--custom-menu-viewport-padding": b ? `${E.FD}px` : `${E.vx}px`,
+                "--custom-menu-flexible-min-width": b ? "144px" : "188px",
             },
             ...L.getContainerProps(),
             ref: w,
             "aria-label": e["aria-label"],
-            children: (0, r.jsxs)(x, {
+            children: (0, r.jsxs)(M, {
                 className: g.scroller,
                 children: [
                     0 === C.length &&

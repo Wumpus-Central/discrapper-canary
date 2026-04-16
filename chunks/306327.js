@@ -344,9 +344,9 @@ class B {
     getFormat(e) {
         let t;
         return "object" == typeof e
-            ? (e = D(e, this))
+            ? (e = P(e, this))
             : (t = "default" === e ? Object.values(this.formats)[0] : this.formats[e])
-              ? (t = D(t, this))
+              ? (t = P(t, this))
               : null;
     }
     equals(e) {
@@ -449,7 +449,7 @@ class B {
     }
     static DEFAULT_FORMAT = { type: "functions", name: "color" };
 }
-function D(e, { coords: t } = {}) {
+function P(e, { coords: t } = {}) {
     if (e.coords && !e.coordGrammar) {
         (e.type ||= "function"), (e.name ||= "color"), (e.coordGrammar = g(e.coords));
         let r = Object.entries(t).map(([t, r], a) => {
@@ -470,7 +470,7 @@ function D(e, { coords: t } = {}) {
     }
     return e;
 }
-var P = new B({
+var D = new B({
     id: "xyz-d65",
     name: "XYZ D65",
     coords: { x: { name: "X" }, y: { name: "Y" }, z: { name: "Z" } },
@@ -486,7 +486,7 @@ class I extends B {
                 g: { range: [0, 1], name: "Green" },
                 b: { range: [0, 1], name: "Blue" },
             }),
-            e.base || (e.base = P),
+            e.base || (e.base = D),
             e.toXYZ_M &&
                 e.fromXYZ_M &&
                 ((e.toBase ??= (t) => {
@@ -526,9 +526,9 @@ var q = new B({
     id: "xyz-d50",
     name: "XYZ D50",
     white: "D50",
-    base: P,
-    fromBase: (e) => R(P.white, "D50", e),
-    toBase: (e) => R("D50", P.white, e),
+    base: D,
+    fromBase: (e) => R(D.white, "D50", e),
+    toBase: (e) => R("D50", D.white, e),
 });
 let $ = 216 / 24389,
     U = 24 / 116,
@@ -637,8 +637,8 @@ function Q(e, t, { kL: r = 1, kC: a = 1, kH: n = 1 } = {}) {
         j = (i + f) / 2,
         S = (v + w) / 2,
         B = K(S),
-        D = (j - 50) ** 2,
-        P = 1 + (0.015 * D) / Math.sqrt(20 + D),
+        P = (j - 50) ** 2,
+        D = 1 + (0.015 * P) / Math.sqrt(20 + P),
         I = 1 + 0.045 * S,
         T =
             1 +
@@ -653,7 +653,7 @@ function Q(e, t, { kL: r = 1, kC: a = 1, kH: n = 1 } = {}) {
                     0.24 * Math.cos(2 * s * V) +
                     0.32 * Math.cos((3 * s + 6) * V) -
                     0.2 * Math.cos((4 * s - 63) * V)),
-        L = (O / (r * P)) ** 2;
+        L = (O / (r * D)) ** 2;
     return Math.sqrt(
         (L +=
             (k / (a * I)) ** 2 +
@@ -690,7 +690,7 @@ var en = new B({
     name: "Oklab",
     coords: { l: { refRange: [0, 1], name: "Lightness" }, a: { refRange: [-0.4, 0.4] }, b: { refRange: [-0.4, 0.4] } },
     white: "D65",
-    base: P,
+    base: D,
     fromBase(e) {
         let t = n(ee, e).map((e) => Math.cbrt(e));
         return n(er, t);
@@ -739,7 +739,7 @@ var eu = new B({
         y: { refRange: [0, 1e4], name: "Ya" },
         z: { refRange: [0, 10888.3], name: "Za" },
     },
-    base: P,
+    base: D,
     fromBase: (e) => e.map((e) => Math.max(203 * e, 0)),
     toBase: (e) => e.map((e) => Math.max(e / 203, 0)),
 });
@@ -880,12 +880,12 @@ let eS = E.D65,
         [-0.250268, 1.204414, 0.045854],
         [-0.002079, 0.048952, 0.953127],
     ],
-    eD = [
+    eP = [
         [1.8620678550872327, -1.0112546305316843, 0.14918677544445175],
         [0.38752654323613717, 0.6214474419314753, -0.008973985167612518],
         [-0.015841498849333856, -0.03412293802851557, 1.0499644368778496],
     ],
-    eP = [
+    eD = [
         [460, 451, 288],
         [460, -891, -261],
         [460, -220, -6300],
@@ -965,14 +965,14 @@ function eG(e, t) {
         h = b / t.nbb,
         p = 23 * (h + 0.305) * M(u, 23 * d + u * (11 * s + 108 * i)),
         m =
-            ((r = n(eP, [h, p * s, p * i]).map((e) => e / 1403)),
+            ((r = n(eD, [h, p * s, p * i]).map((e) => e / 1403)),
             (a = (100 / t.fl) * 2588.068098016295),
             r.map((e) => {
                 let t = Math.abs(e);
                 return v(a * w(t / (400 - t), 2.380952380952381), e);
             }));
     return n(
-        eD,
+        eP,
         m.map((e, r) => e * t.dRgbInv[r]),
     ).map((e) => e / 100);
 }
@@ -1018,7 +1018,7 @@ var eZ = new B({
         m: { refRange: [0, 105], name: "Colorfulness" },
         h: { refRange: [0, 360], type: "angle", name: "Hue" },
     },
-    base: P,
+    base: D,
     fromBase(e) {
         let t = eH(e, eW);
         return [t.J, t.M, t.h];
@@ -1040,14 +1040,14 @@ var eQ = new B({
         c: { refRange: [0, 145], name: "Colorfulness" },
         t: { refRange: [0, 100], name: "Tone" },
     },
-    base: P,
+    base: D,
     fromBase: (e) =>
-        (function (e, t) {
-            var r;
-            let a = 116 * ((r = e[1]) > eX ? Math.cbrt(r) : (eJ * r + 16) / 116) - 16;
-            if (0 === a) return [0, 0, 0];
-            let n = eH(e, eK);
-            return [Z(n.h), n.C, a];
+        (function (e) {
+            var t;
+            let r = 116 * ((t = e[1]) > eX ? Math.cbrt(t) : (eJ * t + 16) / 116) - 16;
+            if (0 === r) return [0, 0, 0];
+            let a = eH(e, eK);
+            return [Z(a.h), a.C, r];
         })(e),
     toBase: (e) =>
         (function (e, t) {
@@ -1575,10 +1575,10 @@ if (((C.display_space = ti), "u" > typeof CSS && CSS.supports))
         }
     }
 function tl(e) {
-    return L(e, [P, "y"]);
+    return L(e, [D, "y"]);
 }
 function tu(e, t) {
-    z(e, [P, "y"], t);
+    z(e, [D, "y"], t);
 }
 var tf = Object.freeze({
     __proto__: null,
@@ -1615,7 +1615,7 @@ var ty = new B({
             b: { refRange: [-125, 125] },
         },
         white: tg,
-        base: P,
+        base: D,
         fromBase(e) {
             let t = e.map((e, t) => e / tg[t]).map((e) => (e > th ? Math.cbrt(e) : (tm * e + 16) / 116));
             return [116 * t[1] - 16, 500 * (t[0] - t[1]), 200 * (t[1] - t[2])];
@@ -1704,12 +1704,12 @@ var ty = new B({
         },
     });
 function tw(e) {
-    let [t, r, a] = T(e, P),
+    let [t, r, a] = T(e, D),
         n = t + 15 * r + 3 * a;
     return [(4 * t) / n, (9 * r) / n];
 }
 function tM(e) {
-    let [t, r, a] = T(e, P),
+    let [t, r, a] = T(e, D),
         n = t + r + a;
     return [t / n, r / n];
 }
@@ -1956,7 +1956,7 @@ var t_ = Object.freeze({
             [0.013444280632031142, -0.11836239223101838, 1.0151749943912054],
         ],
     }),
-    tD = new I({
+    tP = new I({
         id: "a98rgb",
         cssId: "a98-rgb",
         name: "Adobe\xae 98 RGB compatible",
@@ -1964,7 +1964,7 @@ var t_ = Object.freeze({
         toBase: (e) => e.map((e) => Math.pow(Math.abs(e), 563 / 256) * Math.sign(e)),
         fromBase: (e) => e.map((e) => Math.pow(Math.abs(e), 256 / 563) * Math.sign(e)),
     }),
-    tP = new I({
+    tD = new I({
         id: "prophoto-linear",
         cssId: "--prophoto-rgb-linear",
         name: "Linear ProPhoto",
@@ -1987,7 +1987,7 @@ var tL = new I({
         id: "prophoto",
         cssId: "prophoto-rgb",
         name: "ProPhoto",
-        base: tP,
+        base: tD,
         toBase: (e) => e.map((e) => (e < tT ? e / 16 : e ** 1.8)),
         fromBase: (e) => e.map((e) => (e >= tI ? e ** (1 / 1.8) : 16 * e)),
     }),
@@ -2027,7 +2027,7 @@ var tL = new I({
 let tz = E.D65,
     tq = 216 / 24389,
     t$ = 24389 / 27,
-    [tU, tW] = tw({ space: P, coords: tz });
+    [tU, tW] = tw({ space: D, coords: tz });
 var tG = new B({
         id: "luv",
         name: "Luv",
@@ -2037,11 +2037,11 @@ var tG = new B({
             v: { refRange: [-215, 215] },
         },
         white: tz,
-        base: P,
+        base: D,
         fromBase(e) {
             let t = [l(e[0]), l(e[1]), l(e[2])],
                 r = t[1],
-                [a, n] = tw({ space: P, coords: t });
+                [a, n] = tw({ space: D, coords: t });
             if (!Number.isFinite(a) || !Number.isFinite(n)) return [0, 0, 0];
             let o = r <= tq ? t$ * r : 116 * Math.cbrt(r) - 16;
             return [o, 13 * o * (a - tU), 13 * o * (n - tW)];
@@ -2370,7 +2370,7 @@ var rl = new I({
 let ru = (Math.log2(65504) + 9.72) / 17.52;
 var rf = Object.freeze({
     __proto__: null,
-    A98RGB: tD,
+    A98RGB: tP,
     A98RGB_Linear: tB,
     ACEScc: new I({
         id: "acescc",
@@ -2423,14 +2423,14 @@ var rf = Object.freeze({
     P3: tc,
     P3_Linear: tt,
     ProPhoto: tL,
-    ProPhoto_Linear: tP,
+    ProPhoto_Linear: tD,
     REC_2020: te,
     REC_2020_Linear: e7,
     REC_2100_HLG: ro,
     REC_2100_PQ: rn,
     XYZ_ABS_D65: eu,
     XYZ_D50: q,
-    XYZ_D65: P,
+    XYZ_D65: D,
     sRGB: ti,
     sRGB_Linear: ta,
 });

@@ -2,25 +2,25 @@
 n.d(t, { f: () => _ });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(900283),
     l = n(563014),
     u = n(397927),
     c = n(885621),
-    d = n(658122);
+    d = n(32271);
 function _(e) {
     let {
             color: t = "default",
             label: n,
-            subtext: a,
+            subtext: s,
             subtextLineClamp: _,
             checked: f,
             disabled: p = !1,
             isFocused: h,
             menuItemProps: m,
-            action: g,
-            className: E,
+            action: E,
+            className: g,
         } = e,
         { onInteraction: A } = i.useContext(o.x),
         I = i.useRef(null),
@@ -28,15 +28,15 @@ function _(e) {
     i.useEffect(() => {
         h && (0, l.Y)(I);
     }, [h]);
-    let y = i.useCallback(
+    let S = i.useCallback(
         (e) => {
-            g(e), A?.({ type: o.Q.SWITCH });
+            E(e), A?.({ type: o.Q.SWITCH });
         },
-        [g, A],
+        [E, A],
     );
     return (0, r.jsxs)("div", {
         ref: I,
-        className: s()(d.item, d.switchItem, d.hideInteraction, c.jV[t], E, { [d.disabled]: p }),
+        className: a()(d.item, d.switchItem, d.hideInteraction, c.jV[t], g, { [d.disabled]: p }),
         "aria-checked": f,
         "aria-disabled": p,
         ...m,
@@ -48,12 +48,12 @@ function _(e) {
                           className: d.label,
                           children: [
                               (0, r.jsx)("label", { htmlFor: T, children: n }),
-                              null != a &&
+                              null != s &&
                                   (0, r.jsx)(u.Text, {
                                       variant: "text-xs/normal",
-                                      className: s()(d.subtext, { [d.subtextLineClamp]: null != _ }),
+                                      className: a()(d.subtext, { [d.subtextLineClamp]: null != _ }),
                                       lineClamp: _,
-                                      children: a,
+                                      children: s,
                                   }),
                           ],
                       }),
@@ -61,7 +61,7 @@ function _(e) {
                 : null,
             (0, r.jsx)("div", {
                 className: d.switchContainer,
-                children: (0, r.jsx)(u.dOG, { id: T, checked: f, onChange: y, disabled: p }),
+                children: (0, r.jsx)(u.dOG, { id: T, checked: f, onChange: S, disabled: p }),
             }),
         ],
     });

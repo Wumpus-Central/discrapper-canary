@@ -1,15 +1,15 @@
 n.r(t), n.d(t, { default: () => p });
 var a = n(627968),
-    i = n(64700),
-    l = n(503698),
-    r = n.n(l),
+    l = n(64700),
+    i = n(503698),
+    r = n.n(i),
     s = n(311907),
     o = n(397927),
     c = n(303136),
     d = n(769015),
     u = n(287809),
     m = n(486020),
-    f = n(998518),
+    f = n(60934),
     x = n(268920),
     h = n(633217);
 let g = () =>
@@ -17,10 +17,10 @@ let g = () =>
             className: f.Vi,
             children: (0, a.jsx)(c.A, { src: h.A, fallbackImage: x.A, className: f.LG }),
         }),
-    p = i.memo(function (e) {
+    p = l.memo(function (e) {
         let { application: t, isIncentivizedAccountLinking: n } = e,
-            i = (0, s.bG)([u.default], () => u.default.getCurrentUser()),
-            l = m.Ay.getUserAvatarURL(i),
+            l = (0, s.bG)([u.default], () => u.default.getCurrentUser()),
+            i = m.Ay.getUserAvatarURL(l),
             c = r()(f.pw, { [f.yi]: n });
         return (0, a.jsxs)("div", {
             className: r()(f.Y, { [f.VT]: n }),
@@ -34,7 +34,7 @@ let g = () =>
                         (0, a.jsx)("div", { className: c }),
                     ],
                 }),
-                (0, a.jsx)(o.euF, { className: f.my, src: l, size: o._3J.SIZE_48, "aria-label": i.username }),
+                (0, a.jsx)(o.euF, { className: f.my, src: i, size: o._3J.SIZE_48, "aria-label": l.username }),
             ],
         });
     });

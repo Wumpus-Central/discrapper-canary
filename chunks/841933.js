@@ -23,8 +23,8 @@ var n = l(627968),
     S = l(652215),
     N = l(743981),
     I = l(985018),
-    R = l(55578),
-    C = l(617706);
+    R = l(982186),
+    C = l(637498);
 function p(e) {
     let { icon: t, label: l, onClick: s, disabled: i } = e;
     return (0, n.jsxs)(o.DUT, {

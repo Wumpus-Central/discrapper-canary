@@ -24,7 +24,7 @@ var a = n(311907),
     C = n(602902),
     v = n(696016);
 n(980504);
-var S = n(341385),
+var S = n(16590),
     D = n(985018),
     R = n(264572).Buffer;
 function M(e) {
@@ -56,7 +56,7 @@ function M(e) {
             let t = await (0, x.VO)(U);
             (0, r.mMO)(
                 async () => {
-                    let { default: a } = await Promise.all([n.e("18175"), n.e("35613")]).then(n.bind(n, 6503)),
+                    let { default: a } = await Promise.all([n.e("40556"), n.e("34681")]).then(n.bind(n, 6503)),
                         r = e?.guild_id != null ? f.A.getGuild(e.guild_id) : null,
                         l = null != r && (0, c.ie)(r, p.A, h.default).canCreateExpressions,
                         o = null == U.name || "" === U.name ? (0, v.cM)(b.default.extractTimestamp(U.id)) : U.name,

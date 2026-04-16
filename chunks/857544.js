@@ -2,9 +2,9 @@ n.d(t, { A: () => y });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    a = n.n(l),
-    r = n(735438),
-    o = n.n(r),
+    r = n.n(l),
+    a = n(735438),
+    o = n.n(a),
     d = n(158954),
     c = n(435371),
     u = n(397927),
@@ -12,22 +12,22 @@ var i = n(627968),
     g = n(416052),
     _ = n(148810),
     x = n(380610),
-    A = n(235986),
-    h = n(544028),
+    h = n(235986),
+    A = n(544028),
     p = n(652215),
     T = n(986238),
-    f = n(909453),
-    S = n(8350),
-    b = n(885106);
-let E = ["discord_web", "discord_marketing", "discord_developers", "discord_ios", "discord_android"],
+    f = n(851645),
+    S = n(274446),
+    E = n(818050);
+let b = ["discord_web", "discord_marketing", "discord_developers", "discord_ios", "discord_android"],
     C = [
         { id: "branch", value: "branch", label: "Branch Name" },
         { id: "id", value: "id", label: "Commit SHA" },
     ];
-function N(e) {
+function v(e) {
     return "discord_ios" in e || "discord_android" in e;
 }
-class v extends s.Component {
+class N extends s.Component {
     handleRemoveBuildOverride = () => {
         this.props.onBuildOverrideRemoved(this.props.project);
     };
@@ -39,18 +39,18 @@ class v extends s.Component {
     };
     render() {
         let { project: e, overrideType: t, overrideId: n, disabled: s, error: l } = this.props;
-        return (0, i.jsxs)(A.A, {
-            direction: A.A.Direction.VERTICAL,
-            className: a()(f.oS, b.SX, S.N, f.nM),
+        return (0, i.jsxs)(h.A, {
+            direction: h.A.Direction.VERTICAL,
+            className: r()(f.oS, E.SX, S.N, f.nM),
             children: [
                 (0, i.jsx)(m.A, {
-                    className: a()(f.lL, { [f.zi]: s }),
+                    className: r()(f.lL, { [f.zi]: s }),
                     onClick: s ? void 0 : this.handleRemoveBuildOverride,
                 }),
-                (0, i.jsxs)(A.A, {
-                    className: b.QB,
+                (0, i.jsxs)(h.A, {
+                    className: E.QB,
                     children: [
-                        (0, i.jsx)(A.A.Child, {
+                        (0, i.jsx)(h.A.Child, {
                             basis: "50%",
                             children: (0, i.jsx)(u.l6P, {
                                 selectionMode: "single",
@@ -61,7 +61,7 @@ class v extends s.Component {
                                 disabled: s,
                             }),
                         }),
-                        (0, i.jsx)(A.A.Child, {
+                        (0, i.jsx)(h.A.Child, {
                             wrap: !0,
                             basis: "50%",
                             children: (0, i.jsx)(u.ksK, {
@@ -73,7 +73,7 @@ class v extends s.Component {
                         }),
                     ],
                 }),
-                (0, i.jsxs)(A.A.Child, {
+                (0, i.jsxs)(h.A.Child, {
                     children: [
                         null != l &&
                             "" !== l &&
@@ -116,7 +116,7 @@ class I extends s.Component {
         let { buildOverrides: e } = this.state;
         if (null == e) return [];
         let t = Object.keys(e);
-        return o().without(E, ...t);
+        return o().without(b, ...t);
     }
     handleAddBuildOverride = (e) => {
         if (null == e) return;
@@ -161,8 +161,8 @@ class I extends s.Component {
     };
     renderEmpty() {
         return (0, i.jsx)(u.ppr, {
-            theme: h.A.theme,
-            className: a()(b.eT, b.SX),
+            theme: A.A.theme,
+            className: r()(E.eT, E.SX),
             children: (0, i.jsx)(u.SGT, { children: "You have no build overrides configured." }),
         });
     }
@@ -172,7 +172,7 @@ class I extends s.Component {
             ? null
             : o().map(e, (e, s) =>
                   (0, i.jsx)(
-                      v,
+                      N,
                       {
                           project: s,
                           overrideType: e.type,
@@ -219,7 +219,7 @@ class I extends s.Component {
                 (0, i.jsx)(u.Button, {
                     variant: "primary",
                     text: "Save Build Overrides",
-                    disabled: N(t ?? {}),
+                    disabled: v(t ?? {}),
                     onClick: this.handleSaveChanges,
                     loading: e,
                 }),
@@ -230,13 +230,13 @@ class I extends s.Component {
         let e,
             { loading: t, saving: n, buildOverrides: s } = this.state;
         e = t
-            ? (0, i.jsx)(u.y$y, { className: b.QX })
+            ? (0, i.jsx)(u.y$y, { className: E.QX })
             : null != s && 0 === Object.keys(s).length
               ? this.renderEmpty()
               : this.renderItems();
         let l = !n && !t && this.getAvailableProjects().length > 0,
-            a =
-                N(s ?? {}) && "stable" !== window.GLOBAL_ENV.RELEASE_CHANNEL
+            r =
+                v(s ?? {}) && "stable" !== window.GLOBAL_ENV.RELEASE_CHANNEL
                     ? (0, i.jsx)(u.Text, {
                           color: "text-feedback-critical",
                           variant: "text-md/normal",
@@ -259,7 +259,7 @@ class I extends s.Component {
                         onSelectionChange: this.handleAddBuildOverride,
                         disabled: !l,
                     }),
-                    a,
+                    r,
                     e,
                     (0, i.jsxs)(u.ButtonGroup, {
                         justify: "end",
@@ -377,7 +377,7 @@ class j extends s.Component {
                   ));
     };
     isMobile() {
-        return N(this.props.buildOverrides ?? {});
+        return v(this.props.buildOverrides ?? {});
     }
     renderSettingsForm() {
         let {
@@ -386,8 +386,8 @@ class j extends s.Component {
                 userIdEntry: n,
                 userIdEntryError: s,
                 allowedVersions: l,
-                allowedVersionEntry: a,
-                allowedVersionEntryError: r,
+                allowedVersionEntry: r,
+                allowedVersionEntryError: a,
                 allowLoggedOut: o,
                 experiments: d,
                 experimentsError: c,
@@ -420,9 +420,9 @@ class j extends s.Component {
                               (0, i.jsx)(u.ksK, {
                                   label: "Add allowed app version (required)",
                                   autoFocus: !0,
-                                  value: a,
+                                  value: r,
                                   onKeyDown: this.handleAllowedVersionEnter,
-                                  error: r,
+                                  error: a,
                                   onChange: this.handleAllowedVersionEntry,
                                   placeholder: "Example: 34",
                                   trailing: { icon: u.j96, onClick: this.handleAddAllowedVersion, "aria-label": "Add" },

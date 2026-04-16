@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { b: () => s });
+n.d(t, { b: () => a });
 var r = n(627968);
 n(64700);
 var i = n(298063),
-    a = n(658122);
-function s() {
+    s = n(32271);
+function a() {
     let e = (0, i.Y)("MenuSeparator");
     return (0, r.jsx)("div", {
         role: "separator",
-        className: a.separator,
+        className: s.separator,
         style: { "--custom-menu-separator-margin": e ? "8px 0" : "8px" },
     });
 }

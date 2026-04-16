@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => p });
 var i = n(627968);
 n(64700);
 var l = n(311907),
@@ -12,10 +12,10 @@ var l = n(311907),
     h = n(652793),
     A = n(790782),
     _ = n(985018),
-    m = n(567431);
-function g(e) {
-    let { guild: t, selected: g } = e,
-        { hasUnread: p, mentionCount: f } = (0, l.cf)(
+    m = n(645591);
+function p(e) {
+    let { guild: t, selected: p } = e,
+        { hasUnread: g, mentionCount: f } = (0, l.cf)(
             [c.Ay],
             () => ({
                 hasUnread: c.Ay.hasUnread(t.id, A.P.GUILD_EVENT),
@@ -23,10 +23,10 @@ function g(e) {
             }),
             [t.id],
         ),
-        x = (0, l.bG)([u.Ay], () => u.Ay.isMuteScheduledEventsEnabled(t.id));
-    async function E() {
+        E = (0, l.bG)([u.Ay], () => u.Ay.isMuteScheduledEventsEnabled(t.id));
+    async function x() {
         await (0, a.mMO)(async () => {
-            let { default: e } = await Promise.all([n.e("51354"), n.e("7453"), n.e("9561")]).then(n.bind(n, 926956));
+            let { default: e } = await Promise.all([n.e("51354"), n.e("7453"), n.e("34053")]).then(n.bind(n, 926956));
             return (n) => (0, i.jsx)(e, { ...n, guildId: t.id });
         }),
             (0, o.Dr)(s.M.GUILD_HEADER_EVENT_UPSELL);
@@ -37,15 +37,15 @@ function g(e) {
         id: `upcoming-events-${t.id}`,
         renderIcon: (e) => (0, i.jsx)(a.CTc, { size: "md", color: "currentColor", className: e }),
         text: C,
-        selected: g,
-        onClick: E,
+        selected: p,
+        onClick: x,
         onContextMenu: (e) => {
             (0, r.L3)(e, async () => {
                 let { default: e } = await n.e("71742").then(n.bind(n, 502029));
                 return (n) => (0, i.jsx)(e, { ...n, guildId: t.id });
             });
         },
-        showUnread: p && !x,
-        trailing: !x && f > 0 ? (0, i.jsx)(a.hVq, { className: m.Do, disableColor: !0, count: f }) : null,
+        showUnread: g && !E,
+        trailing: !E && f > 0 ? (0, i.jsx)(a.hVq, { className: m.Do, disableColor: !0, count: f }) : null,
     });
 }

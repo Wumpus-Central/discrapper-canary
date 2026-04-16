@@ -11,8 +11,8 @@ var r = n(627968),
     d = n(890856),
     _ = n(452027),
     f = n(140735),
-    h = n(540637),
-    p = n(460890),
+    p = n(540637),
+    h = n(460890),
     m = n(866711),
     E = n(834730),
     g = n(991957),
@@ -21,11 +21,11 @@ var r = n(627968),
     T = n(483084),
     S = n(641668),
     y = n(715022),
-    v = n(27576);
-let C = 24,
-    N = 36;
+    v = n(930856);
+let N = 24,
+    C = 36;
 function R(e) {
-    let { i18n: t } = (0, p.G9)(),
+    let { i18n: t } = (0, h.G9)(),
         {
             selectionMode: n,
             readOnly: s,
@@ -37,17 +37,17 @@ function R(e) {
             placeholder: L = t.SELECT_PLACEHOLDER,
             name: w,
             form: M,
-            autoComplete: x,
-            maxOptionsVisible: P = 5,
+            autoComplete: P,
+            maxOptionsVisible: x = 5,
             options: k,
             formatOption: U,
             onSelectionChange: G,
             value: F,
-            wrapTags: B = !1,
-            ...V
+            wrapTags: V = !1,
+            ...B
         } = e,
         H = i.useRef(null),
-        { fieldProps: j } = (0, _.n)(V),
+        { fieldProps: j } = (0, _.n)(B),
         { id: Y, required: W, label: K, disabled: $ } = j,
         {
             isOpen: z,
@@ -69,7 +69,7 @@ function R(e) {
         ed = R ?? "multiple" !== n,
         e_ = Array.isArray(F) ? F.length > 0 : null != F,
         ef = $ || s,
-        { measuredWidth: eh, itemsForMeasurement: ep } = b(en, n),
+        { measuredWidth: ep, itemsForMeasurement: eh } = O(en, n),
         em = i.useCallback(() => {
             ef || q(!z);
         }, [ef, q, z]),
@@ -112,13 +112,13 @@ function R(e) {
             },
             [ef, n, G, ed, eE, z],
         ),
-        { activeIndex: ey, handleKeyDown: ev } = (0, h.l)(!0, en),
-        eC = i.useRef(null);
+        { activeIndex: ey, handleKeyDown: ev } = (0, p.l)(!0, en),
+        eN = i.useRef(null);
     i.useEffect(() => {
-        let e = ey !== eC.current;
-        (eC.current = ey), null != ey && e && (eo(ey), z || ((eu.current = !0), q(!0)));
+        let e = ey !== eN.current;
+        (eN.current = ey), null != ey && e && (eo(ey), z || ((eu.current = !0), q(!0)));
     }, [ey, z, q]);
-    let eN = i.useCallback(
+    let eC = i.useCallback(
             (e) => {
                 if (ef) return;
                 let t = en.length;
@@ -207,18 +207,18 @@ function R(e) {
             [ef, z, en, D, n, eT, ea, G, eS, eE, eg, ev, e_, m, q],
         ),
         eR = i.useMemo(() => {
-            if (!E) return `${Math.max(eh ?? 200, 200) * ("multiple" === n ? 1.5 : 1) + !!m * C + N + 12}px`;
-        }, [E, eh, n, m]),
-        eb = "multiple" === n && eT.length > 0,
-        eO = i.useRef(null);
+            if (!E) return `${Math.max(ep ?? 200, 200) * ("multiple" === n ? 1.5 : 1) + !!m * N + C + 12}px`;
+        }, [E, ep, n, m]),
+        eO = "multiple" === n && eT.length > 0,
+        eb = i.useRef(null);
     i.useEffect(() => {
-        clearTimeout(eO.current),
-            eb &&
-                !B &&
-                (eO.current = setTimeout(() => {
+        clearTimeout(eb.current),
+            eO &&
+                !V &&
+                (eb.current = setTimeout(() => {
                     H.current?.lastElementChild?.scrollIntoView({ behavior: "smooth", inline: "end", block: "end" });
                 }, 10));
-    }, [eT, eb, B]);
+    }, [eT, eO, V]);
     let eD = (0, l.A)(es, Z.setReference),
         eL = i.useCallback(
             (e) => {
@@ -239,8 +239,8 @@ function R(e) {
             ? z || ((eM.current = !1), eo(null), (eu.current = !1))
             : ((eM.current = !0), eu.current || eo(en.length > 0 ? ew : null), (eu.current = !1), ei.current?.focus());
     }, [er, z, ew, en.length]);
-    let ex = (0, c.r)(u.A.modules.select.MAX_WIDTH),
-        eP = i.useMemo(() => ({ horizontalControlColumnWidth: `min(${ex}px, auto)` }), [ex]);
+    let eP = (0, c.r)(u.A.modules.select.MAX_WIDTH),
+        ex = i.useMemo(() => ({ horizontalControlColumnWidth: `min(${eP}px, auto)` }), [eP]);
     function ek(e) {
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -274,14 +274,14 @@ function R(e) {
                             children: (0, r.jsx)(f.A, { children: eT.map((e) => e.label).join(", ") }),
                         },
                         focusProps: { ringTarget: es },
-                        className: a()(v.L5, { [v.kj]: B, [v.M8]: "multiple" === n }),
+                        className: a()(v.L5, { [v.kj]: V, [v.M8]: "multiple" === n }),
                         onClick: em,
-                        onKeyDown: eN,
+                        onKeyDown: eC,
                         onBlur: eI,
                         "aria-describedby": e?.describedById,
                         children: [
                             (0, r.jsxs)(f.A, { children: [K, ", "] }),
-                            (0, r.jsx)(O, {
+                            (0, r.jsx)(b, {
                                 tagGroupRef: H,
                                 placeholder: L,
                                 selectionMode: n,
@@ -295,13 +295,13 @@ function R(e) {
                     name: w,
                     form: M,
                     disabled: ef,
-                    autoComplete: x,
+                    autoComplete: P,
                     selectionMode: n,
                     selectedItems: eT,
                     onSelectionChange: eS,
                     listItems: en,
                 }),
-                !E && ep,
+                !E && eh,
                 !ef &&
                     z &&
                     (0, r.jsx)("div", {
@@ -309,7 +309,7 @@ function R(e) {
                         className: v.S_,
                         ...J(),
                         style: { ...X, ...ee },
-                        children: (0, r.jsx)(h.q, {
+                        children: (0, r.jsx)(p.q, {
                             id: et,
                             tabIndex: -1,
                             required: W,
@@ -320,7 +320,7 @@ function R(e) {
                             shouldFocusWrap: D,
                             activeDescendantIndex: ea,
                             renderListItem: (e) => (0, r.jsx)(A.c, { ...e }),
-                            maxVisibleItems: P,
+                            maxVisibleItems: x,
                             loading: er,
                         }),
                     }),
@@ -330,12 +330,12 @@ function R(e) {
     return (0, r.jsx)(_.D, {
         ...j,
         "data-mana-component": "select",
-        layoutConfig: eP,
+        layoutConfig: ex,
         children: (e) =>
             (0, r.jsx)("div", { ref: eA, style: { width: E ? "100%" : `minmax(${eR}px, 100%)` }, children: ek(e) }),
     });
 }
-function b(e, t) {
+function O(e, t) {
     let { ref: n, width: s } = (0, o.Ay)(),
         a = i.useId();
     return {
@@ -346,7 +346,7 @@ function b(e, t) {
                     ref: n,
                     style: { position: "absolute", visibility: "hidden", pointerEvents: "none", width: "max-content" },
                     "aria-hidden": "true",
-                    children: (0, r.jsx)(h.q, {
+                    children: (0, r.jsx)(p.q, {
                         id: `measurement-${a}`,
                         required: !1,
                         items: e,
@@ -361,9 +361,9 @@ function b(e, t) {
         ),
     };
 }
-function O(e) {
+function b(e) {
     let { placeholder: t, selectionMode: n, selectedItems: i, onRemove: s, tagGroupRef: a } = e,
-        { i18n: o } = (0, p.G9)();
+        { i18n: o } = (0, h.G9)();
     return null == i || 0 === i.length
         ? (0, r.jsx)("div", {
               className: v.qf,

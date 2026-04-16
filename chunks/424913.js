@@ -4,8 +4,8 @@ var n = r(627968),
     l = r(311907),
     a = r(397927),
     i = r(309010),
-    u = r(351906),
-    o = r(203982),
+    o = r(351906),
+    u = r(203982),
     c = r(822382),
     h = r(5990),
     d = r(771650),
@@ -14,22 +14,22 @@ var n = r(627968),
     E = r(806595),
     f = r(949759),
     p = r(842716),
-    A = r(65600),
-    g = r(145331),
+    g = r(65600),
+    A = r(145331),
     y = r(835121),
     R = r(443486),
     T = r(768570),
     I = r(652215),
     m = r(985018),
-    L = r(10691);
+    L = r(611027);
 let x = [];
 function C(e) {
     let { resultsState: t, searchContext: r, selectedChannel: C, setSearchQuery: N } = e,
         { autocompletes: b, mode: F } = t,
         v = (0, y.A)({ autocompletes: b, mode: F }),
         O = (0, R.A)({ setSearchQuery: N, searchContext: r, mode: F }),
-        W = (0, l.yK)([u.A, i.A, p.A], () => {
-            if (u.A.hidePersonalInformation) return x;
+        W = (0, l.yK)([o.A, i.A, p.A], () => {
+            if (o.A.hidePersonalInformation) return x;
             let e = (0, c.Jl)(r, i.A);
             if (null == e) return x;
             let t = p.A.getHistory(e);
@@ -52,26 +52,26 @@ function C(e) {
                     selectedAutocomplete: l,
                     selectedAutocompleteGroup: a,
                 } = e,
-                u = F.type,
-                o = F.filter,
+                o = F.type,
+                u = F.filter,
                 { token: h, group: S } = l,
                 E = null != S && (0, d.If)(S) ? S : null,
-                f = h ?? o ?? E,
+                f = h ?? u ?? E,
                 p = l.channel,
                 y = f === I.LWr.FILTER_IN && null != p && p.id === i.A.getChannelId(),
                 R = (0, c.bS)(r);
-            (0, g.kc)({
+            (0, A.kc)({
                 searchContext: r,
-                searchQuery: A.A.getSearchResultsQuery(R),
+                searchQuery: g.A.getSearchResultsQuery(R),
                 searchQueryString: _.A.getSearchInputText(r),
                 searchTokenType: f,
                 searchAutocompleteGroup: a,
                 searchAutocompleteMode: F,
                 searchAutocompleteResultIndex: n,
                 searchAutocompleteTotalResults: t,
-                isSearchFilterPrefix: u === I.o$q.EMPTY,
-                isSearchFilterAnswer: u === I.o$q.FILTER,
-                isSearchFilterComplete: u === I.o$q.FILTER_ALL,
+                isSearchFilterPrefix: o === I.o$q.EMPTY,
+                isSearchFilterAnswer: o === I.o$q.FILTER,
+                isSearchFilterComplete: o === I.o$q.FILTER_ALL,
                 isInFilterForSelectedChannel: y,
                 searchAutocompleteSelectAction: s,
             });
@@ -117,7 +117,7 @@ function C(e) {
                                 let { searchAutocompleteSelectAction: t } = e;
                                 return ((e) => {
                                     let { selectedChannel: t, searchAutocompleteSelectAction: n } = e;
-                                    (0, g.rE)({ searchContext: r, searchAutocompleteSelectAction: n });
+                                    (0, A.rE)({ searchContext: r, searchAutocompleteSelectAction: n });
                                     let s = I.LWr.FILTER_IN,
                                         l = d.Ay[s],
                                         a = (0, c.Rt)(t);
@@ -141,7 +141,7 @@ function C(e) {
                                 ariaLabel: m.intl.formatToPlainString(m.t.WoiGrV, { suggestion: l }),
                                 resultText: e,
                                 onSelect: () => {
-                                    (0, g.oR)({
+                                    (0, A.oR)({
                                         searchContext: r,
                                         searchHistoryIndex: t,
                                         searchHistoryTotalResults: W.length,
@@ -173,7 +173,7 @@ function C(e) {
                             onSelect: () =>
                                 ((e) => {
                                     let { searchEverywhere: t } = e;
-                                    o._.dispatch(I.jej.PERFORM_SEARCH, {
+                                    u._.dispatch(I.jej.PERFORM_SEARCH, {
                                         searchEverywhere: t,
                                         searchQuerySource: T.Q_.SEARCH_POPOUT,
                                     });
@@ -186,16 +186,16 @@ function C(e) {
                         let { result: t, modeType: s, group: l } = e,
                             a = (0, f.pu)({ modeType: s, result: t, group: l }),
                             i = (0, S.ge)({ result: t, group: l }),
-                            { label: u, ariaLabel: o } = (0, S.c$)(t),
+                            { label: o, ariaLabel: u } = (0, S.c$)(t),
                             c =
                                 l === I.LWr.FILTER_FROM || l === I.LWr.FILTER_MENTIONS
                                     ? (0, n.jsx)(S.bj, { searchTokenType: l, answer: t.user?.username })
                                     : void 0;
                         return (0, f.wE)(E.$.ROW, {
                             icon: i,
-                            label: u,
+                            label: o,
                             sublabel: c,
-                            ariaLabel: o,
+                            ariaLabel: u,
                             resultText: a,
                             onSelect: (e) => {
                                 let { selectedIndex: n, searchAutocompleteSelectAction: s } = e;
@@ -231,11 +231,11 @@ function C(e) {
                         let { result: r, modeType: n, group: s } = t,
                             l = (0, f.pu)({ modeType: n, result: r, group: s }),
                             a = (0, S._h)({ result: r, group: s }),
-                            { label: i, ariaLabel: u } = (0, S.JK)(r);
+                            { label: i, ariaLabel: o } = (0, S.JK)(r);
                         return (0, f.wE)(E.$.ROW, {
                             icon: a,
                             label: i,
-                            ariaLabel: u,
+                            ariaLabel: o,
                             resultText: l,
                             onSelect: (t) => {
                                 let { selectedIndex: n, searchAutocompleteSelectAction: a } = t;

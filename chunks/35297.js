@@ -1,6 +1,6 @@
-!(function (e, t) {
-    t(n(989349));
-})(0, function (e) {
+!(function (e) {
+    e(n(989349));
+})(function (e) {
     "use strict";
     var t = { 1: "1", 2: "2", 3: "3", 4: "4", 5: "5", 6: "6", 7: "7", 8: "8", 9: "9", 0: "0" },
         n = function (e) {
@@ -15,13 +15,13 @@
             y: ["أقل من عام", "عام واحد", ["عامان", "عامين"], "%d أعوام", "%d عامًا", "%d عام"],
         },
         i = function (e) {
-            return function (t, i, a, s) {
+            return function (t, i, s, a) {
                 var o = n(t),
                     l = r[e][n(t)];
                 return 2 === o && (l = l[+!i]), l.replace(/%d/i, t);
             };
         },
-        a = [
+        s = [
             "يناير",
             "فبراير",
             "مارس",
@@ -36,8 +36,8 @@
             "ديسمبر",
         ];
     return e.defineLocale("ar-ly", {
-        months: a,
-        monthsShort: a,
+        months: s,
+        monthsShort: s,
         weekdays: "الأحد_الإثنين_الثلاثاء_الأربعاء_الخميس_الجمعة_السبت".split("_"),
         weekdaysShort: "أحد_إثنين_ثلاثاء_أربعاء_خميس_جمعة_سبت".split("_"),
         weekdaysMin: "ح_ن_ث_ر_خ_ج_س".split("_"),

@@ -1,4 +1,4 @@
-n.d(t, { A: () => f, X: () => g });
+n.d(t, { A: () => f, X: () => p });
 var i,
     l = n(627968),
     s = n(64700),
@@ -11,15 +11,15 @@ var i,
     h = n(761929),
     A = n(964404),
     _ = n(743898),
-    m = n(53454),
-    g =
+    m = n(318974),
+    p =
         (((i = {})[(i.PostSidebar = 0)] = "PostSidebar"),
         (i[(i.ThreadSidebar = 1)] = "ThreadSidebar"),
         (i[(i.CallChatSidebar = 2)] = "CallChatSidebar"),
         (i[(i.MessageRequestSidebar = 3)] = "MessageRequestSidebar"),
         (i[(i.HomeSidebar = 4)] = "HomeSidebar"),
         i);
-function p(e) {
+function g(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: i, maxWidth: s, minWidth: a } = e,
         r = (0, h.A)({
             minDimension: a,
@@ -34,7 +34,7 @@ function p(e) {
 }
 function f(e) {
     let { sidebarType: t, maxWidth: n, onWidthChange: i, children: a, floatingLayer: h } = e,
-        g = s.useRef(null),
+        p = s.useRef(null),
         f = (function (e) {
             switch (e) {
                 case 0:
@@ -49,7 +49,7 @@ function f(e) {
                     return "homeSidebarWidth";
             }
         })(t),
-        [x, E] = s.useState(A.Ay[f]),
+        [E, x] = s.useState(A.Ay[f]),
         I = s.useCallback(
             (e) => {
                 u.Ay.updatedUnsyncedSettings({ [f]: e });
@@ -58,7 +58,7 @@ function f(e) {
         ),
         C = (0, _.P)({ maxWidth: n, minWidth: 450 }),
         N = (0, c.rdh)(d.A.modules.chat.RESIZE_HANDLE_WIDTH),
-        T = (0, o.clamp)(x, 450, n),
+        T = (0, o.clamp)(E, 450, n),
         S = C ? T : T + N;
     s.useEffect(() => {
         i?.(T, C);
@@ -73,15 +73,15 @@ function f(e) {
                     children: [
                         (0, l.jsx)("div", { className: r()(m.Uc, { [m.DU]: C, [m.iK]: !C }), style: { width: S } }),
                         !C &&
-                            (0, l.jsx)(p, {
+                            (0, l.jsx)(g, {
                                 minWidth: 450,
                                 maxWidth: n,
-                                resizableNode: g,
-                                onResize: E,
+                                resizableNode: p,
+                                onResize: x,
                                 onResizeEnd: I,
                             }),
                         (0, l.jsx)("div", {
-                            ref: g,
+                            ref: p,
                             className: r()(m.kL, { [m.DU]: C }),
                             style: { width: T },
                             children: a,

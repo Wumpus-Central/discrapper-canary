@@ -66,8 +66,8 @@ var E = Function.prototype,
                 .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") +
             "$",
     ),
-    D = Object.create,
-    P = Math.max,
+    P = Object.create,
+    D = Math.max,
     I = Math.min,
     T = ((n = $(Object, "defineProperty")), (o = $.name) && o.length > 2 ? n : void 0);
 function L(e) {
@@ -92,7 +92,7 @@ function L(e) {
             case 7:
                 return new e(r[0], r[1], r[2], r[3], r[4], r[5], r[6]);
         }
-        var a = G((t = e.prototype)) ? D(t) : {},
+        var a = G((t = e.prototype)) ? P(t) : {},
             n = e.apply(a, r);
         return G(n) ? n : a;
     };
@@ -121,7 +121,7 @@ function F(e, t, r, a, n, o, s, i, c, l) {
                             s = r.length,
                             i = -1,
                             c = t.length,
-                            l = P(o - s, 0),
+                            l = D(o - s, 0),
                             u = Array(c + l),
                             f = !a;
                         ++i < c;
@@ -140,7 +140,7 @@ function F(e, t, r, a, n, o, s, i, c, l) {
                             i = r.length,
                             c = -1,
                             l = t.length,
-                            u = P(o - i, 0),
+                            u = D(o - i, 0),
                             f = Array(u + l),
                             b = !a;
                         ++n < u;
@@ -262,14 +262,14 @@ var U = T
                               n & e[1] &&
                                   !(
                                       (a ? a.length : 0) &&
-                                      (function (e, t, r) {
+                                      (function (e, t) {
                                           if (t != t) {
-                                              for (var a = e.length, n = -1; ++n < a; ) if (k(e[n], n, e)) return n;
+                                              for (var r = e.length, a = -1; ++a < r; ) if (k(e[a], a, e)) return a;
                                               return -1;
                                           }
-                                          for (var o = -1, s = e.length; ++o < s; ) if (e[o] === t) return o;
+                                          for (var n = -1, o = e.length; ++n < o; ) if (e[n] === t) return n;
                                           return -1;
-                                      })(a, t, 0) > -1
+                                      })(a, t) > -1
                                   ) &&
                                   a.push(t);
                           }),
@@ -292,7 +292,7 @@ function W(e, t, r) {
         var l = a ? a.length : 0;
         if (
             (l || ((t &= -97), (a = n = void 0)),
-            (s = void 0 === s ? s : P(H(s), 0)),
+            (s = void 0 === s ? s : D(H(s), 0)),
             (i = void 0 === i ? i : H(i)),
             (l -= n ? n.length : 0),
             64 & t)
@@ -308,7 +308,7 @@ function W(e, t, r) {
             (r = b[2]),
             (a = b[3]),
             (n = b[4]),
-            (i = b[9] = null == b[9] ? (c ? 0 : e.length) : P(b[9] - l, 0)) || !(24 & t) || (t &= -25),
+            (i = b[9] = null == b[9] ? (c ? 0 : e.length) : D(b[9] - l, 0)) || !(24 & t) || (t &= -25),
             t && 1 != t)
         )
             8 == t || 16 == t

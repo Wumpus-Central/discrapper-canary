@@ -24,15 +24,15 @@ var r = n(627968),
     v = n(525505),
     N = n(652896),
     C = n(880144),
-    b = n(638480),
-    R = n(338771),
-    O = n(991701),
+    R = n(638480),
+    O = n(338771),
+    b = n(991701),
     D = n(574172),
     L = n(976860),
     w = n(461782),
-    x = n(447404),
-    M = n(271195),
-    P = n(905216),
+    M = n(447404),
+    P = n(271195),
+    x = n(905216),
     k = n(128286),
     U = n(528057),
     G = n(352018),
@@ -44,8 +44,8 @@ var r = n(627968),
     Y = n(788318),
     W = n(803301),
     K = n(531685),
-    z = n(954571),
-    $ = n(562153),
+    $ = n(954571),
+    z = n(562153),
     q = n(427262),
     Z = n(712577),
     X = n(566331),
@@ -56,8 +56,8 @@ var r = n(627968),
     en = n(222692),
     er = n(652215),
     ei = n(806931),
-    es = n(612071),
-    ea = n(976092);
+    es = n(82850),
+    ea = n(604949);
 class eo extends i.PureComponent {
     state = { screensharePopoutOpen: !1 };
     _ref = i.createRef();
@@ -87,15 +87,15 @@ class eo extends i.PureComponent {
         let { participantOnScreen: e, currentUserId: t } = this.props;
         if (!(0, ei.Ay)(e)) return null;
         let n = this.activeStreamForSelectedParticipant;
-        return null == n ? null : (0, b.A)(n, e.user, e.user.id === t, this.streamerPaused);
+        return null == n ? null : (0, R.A)(n, e.user, e.user.id === t, this.streamerPaused);
     }
     componentDidMount() {
         let { channel: e } = this.props;
-        z.default.track(er.HAw.VIDEO_LAYOUT_TOGGLED, { video_layout: "pip", ...(0, E.QS)(e.id) });
+        $.default.track(er.HAw.VIDEO_LAYOUT_TOGGLED, { video_layout: "pip", ...(0, E.QS)(e.id) });
     }
     componentWillUnmount() {
         let { channel: e } = this.props;
-        z.default.track(er.HAw.VIDEO_LAYOUT_TOGGLED, { video_layout: g.A.getLayout(e.id), ...(0, E.QS)(e.id) });
+        $.default.track(er.HAw.VIDEO_LAYOUT_TOGGLED, { video_layout: g.A.getLayout(e.id), ...(0, E.QS)(e.id) });
     }
     handleVideo = (e) => {
         _.A.setVideoEnabled(e);
@@ -116,7 +116,7 @@ class eo extends i.PureComponent {
         let { participantOnScreen: e } = this.props;
         a()((0, ei.Ay)(e), "cannot stop stream for non streamer"),
             (0, T.X)(m.A.VIDEO_PIP, T.O.STREAM, !1),
-            (0, R.A)(e.stream);
+            (0, O.A)(e.stream);
     };
     handleOpenPopout = () => {
         let { channel: e } = this.props;
@@ -145,7 +145,7 @@ class eo extends i.PureComponent {
         });
     };
     renderDisconnectButton = () =>
-        (0, r.jsx)(P.A, { className: es.iq, onClick: () => (0, T.X)(m.A.VIDEO_PIP, T.O.DISCONNECT) });
+        (0, r.jsx)(x.A, { className: es.iq, onClick: () => (0, T.X)(m.A.VIDEO_PIP, T.O.DISCONNECT) });
     renderStopStreamButton = () => {
         let { isSelf: e } = this.viewProperties;
         return (0, r.jsx)(U.A, { isSelfStream: e, className: es.iq, onClick: this.handleStopStream });
@@ -157,7 +157,7 @@ class eo extends i.PureComponent {
                 (0, ei.Ay)(e) || e?.type === ei.lp.ACTIVITY,
                 `Cannot render participants for participant type ${e?.type}`,
             ),
-            (0, r.jsx)(x.A, {
+            (0, r.jsx)(M.A, {
                 children: (0, r.jsx)(I.A, {
                     channelId: t.id,
                     guildId: t.getGuildId(),
@@ -211,7 +211,7 @@ class eo extends i.PureComponent {
     renderParticipantName() {
         let { channel: e, participantOnScreen: t } = this.props;
         if (t?.type === ei.lp.STREAM || t?.type === ei.lp.USER) {
-            let n = $.Ay.getNickname(e.getGuildId(), e.id, t.user) ?? q.Ay.getName(t.user);
+            let n = z.Ay.getNickname(e.getGuildId(), e.id, t.user) ?? q.Ay.getName(t.user);
             return (0, r.jsx)(d.Text, {
                 variant: "text-md/normal",
                 color: "always-white",
@@ -239,7 +239,7 @@ class eo extends i.PureComponent {
                           streamId: t,
                           component: B.Ay.getVideoComponent(),
                           mirror: o,
-                          children: (0, r.jsx)(O.A, {
+                          children: (0, r.jsx)(b.A, {
                               size: d._3J.SIZE_80,
                               src: n?.user.getAvatarURL(e.guild_id, 80),
                               "aria-label": n?.user.username,
@@ -250,14 +250,14 @@ class eo extends i.PureComponent {
             (0, r.jsx)(w.Ay, {
                 timeout: 1800,
                 children: (e) =>
-                    (0, r.jsx)(M.A, {
+                    (0, r.jsx)(P.A, {
                         title: a,
                         backgroundKey: n?.id ?? "",
                         screenMessage: null == l ? this.getScreenMessage() : null,
                         onJumpToChannel: this.handleJumpToChannel,
                         renderBottomLeftControls: this.renderBottomLeftControls,
                         renderBottomRightControls: this.renderBottomRightControls,
-                        preventIdleComponent: x.A,
+                        preventIdleComponent: M.A,
                         width: s,
                         className: ea.a8,
                         videoControlsClassName: u?.state === er.XYD.ENDED ? es._v : void 0,

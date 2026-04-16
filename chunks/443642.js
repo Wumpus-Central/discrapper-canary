@@ -1,41 +1,41 @@
-n.d(t, { A: () => C });
+n.d(t, { A: () => E });
 var i = n(627968),
-    l = n(64700),
-    a = n(990078),
-    r = n(319060),
-    s = n(397927),
+    a = n(64700),
+    l = n(990078),
+    s = n(319060),
+    r = n(397927),
     o = n(793574),
     d = n(58149),
     c = n(688810),
     u = n(652176),
-    m = n(240248),
-    _ = n(256449),
+    _ = n(240248),
+    m = n(256449),
     h = n(842086),
     p = n(148355),
     g = n(552117),
     A = n(652215),
-    f = n(788868),
-    x = n(444736);
-let E = (0, m.xI)(r.A.STICKERS_CONSTANTS_STICKER_DIMENSION),
-    C = (e) => {
-        let { renderableSticker: t, channel: n, isInteracting: r } = e,
-            m = l.useRef(null),
-            [C, I] = l.useState(!0),
-            [T, v] = l.useState(String(Date.now())),
-            [N] = (0, _.Zq)(t, r),
-            { analyticsLocations: S } = (0, c.Ay)(o.A.STICKER_MESSAGE),
-            b = (0, i.jsxs)("span", {
-                className: x.Zl,
-                children: [(0, i.jsx)(s.s2T, { size: "xs", color: "currentColor", className: x.lA }), (N ?? t).name],
+    x = n(788868),
+    f = n(76513);
+let C = (0, _.xI)(s.A.STICKERS_CONSTANTS_STICKER_DIMENSION),
+    E = (e) => {
+        let { renderableSticker: t, channel: n, isInteracting: s } = e,
+            _ = a.useRef(null),
+            [E, I] = a.useState(!0),
+            [v, b] = a.useState(String(Date.now())),
+            [T] = (0, m.Zq)(t, s),
+            { analyticsLocations: y } = (0, c.Ay)(o.A.STICKER_MESSAGE),
+            S = (0, i.jsxs)("span", {
+                className: f.Zl,
+                children: [(0, i.jsx)(r.s2T, { size: "xs", color: "currentColor", className: f.lA }), (T ?? t).name],
             });
         return (0, i.jsx)(c.f5, {
-            value: S,
+            value: y,
             children: (0, i.jsx)("div", {
-                className: x.be,
-                children: (0, i.jsx)(s.YNO, {
+                className: f.be,
+                children: (0, i.jsx)(r.YNO, {
                     align: "center",
-                    animation: s.YNO.Animation.TRANSLATE,
-                    positionKey: T,
+                    animation: r.YNO.Animation.TRANSLATE,
+                    positionKey: v,
                     onRequestClose: () => {
                         I(!0);
                     },
@@ -44,35 +44,35 @@ let E = (0, m.xI)(r.A.STICKERS_CONSTANTS_STICKER_DIMENSION),
                             ...e,
                             renderableSticker: t,
                             channel: n,
-                            refreshPositionKey: () => v(String(Date.now())),
+                            refreshPositionKey: () => b(String(Date.now())),
                         }),
-                    targetElementRef: m,
+                    targetElementRef: _,
                     children: (e) => {
                         let { onClick: n } = e;
-                        return (0, i.jsx)(a.m, {
+                        return (0, i.jsx)(l.m, {
                             ...u.Uk,
-                            shouldShow: C,
-                            __unsupportedReactNodeAsText: (0, u.yR)(b),
+                            shouldShow: E,
+                            __unsupportedReactNodeAsText: (0, u.yR)(S),
                             "aria-label": !1,
                             onTooltipShow: () => {
                                 var e;
-                                null != (e = N) &&
+                                null != (e = T) &&
                                     d.Ay.trackWithMetadata(A.HAw.EXPRESSION_TOOLTIP_VIEWED, {
-                                        type: f.e.STICKER_IN_MESSAGE_HOVER,
+                                        type: x.e.STICKER_IN_MESSAGE_HOVER,
                                         expression_id: e.id,
                                         expression_name: e.name,
                                         is_animated: (0, h.Tw)(e.format_type),
                                         is_custom: (0, h.zN)(e.type),
                                     });
                             },
-                            children: (0, i.jsx)(s.DUT, {
-                                innerRef: m,
-                                className: x.q7,
+                            children: (0, i.jsx)(r.DUT, {
+                                innerRef: _,
+                                className: f.q7,
                                 onClick: (e) => {
-                                    I(!C), n(e);
+                                    I(!E), n(e);
                                 },
                                 tag: "span",
-                                children: (0, i.jsx)(p.A, { isInteracting: r, size: E, sticker: N ?? t }),
+                                children: (0, i.jsx)(p.A, { isInteracting: s, size: C, sticker: T ?? t }),
                             }),
                         });
                     },

@@ -10,7 +10,7 @@ var i = n(627968),
     c = n(765671),
     u = n(775602),
     m = n(530552),
-    g = n(65072);
+    g = n(947168);
 let x = s.forwardRef(function (e, t) {
     let { value: n, isSelected: l, isEditing: a, forceShowErrorTooltip: d = !1, error: c } = e,
         [u, m, x] = s.useMemo(() => {
@@ -62,19 +62,19 @@ function h(e) {
             onFocus: o,
             onRemove: h,
             isSelected: _,
-            isSelecting: p,
-            error: A,
+            isSelecting: A,
+            error: p,
             forceShowErrorTooltip: f,
         } = e,
         j = s.useRef(null),
         N = s.useRef(null),
-        [E, b] = s.useState(!1),
-        { ref: C, width: T = 0 } = (0, c.Ay)(E),
-        { ref: I, width: v = 0 } = (0, c.Ay)(E),
+        [E, C] = s.useState(!1),
+        { ref: T, width: I = 0 } = (0, c.Ay)(E),
+        { ref: b, width: v = 0 } = (0, c.Ay)(E),
         S = (0, a.bG)([u.A], () => u.A.useReducedMotion),
         [y, R] = s.useState(f),
         O = s.useRef(null),
-        L = T > v ? T : v;
+        G = I > v ? I : v;
     s.useEffect(() => {
         f
             ? (R(!0),
@@ -89,7 +89,7 @@ function h(e) {
             },
             [],
         );
-    let G = s.useCallback(
+    let L = s.useCallback(
             (e) => {
                 n(e.target.value);
             },
@@ -100,17 +100,17 @@ function h(e) {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                 t.trim().length <= 0 && h(),
                     null != j.current &&
-                        null != C.current &&
+                        null != T.current &&
                         null != N.current &&
                         (j.current.scrollTo(0, 0),
                         j.current.setSelectionRange(0, 0),
                         (j.current.scrollLeft = 0),
-                        (C.current.scrollLeft = 0),
+                        (T.current.scrollLeft = 0),
                         N.current?.ref != null && (N.current.ref.scrollLeft = 0)),
-                    b(!1),
+                    C(!1),
                     l(e);
             },
-            [t, C, l, h],
+            [t, T, l, h],
         ),
         M = s.useCallback(
             (e) => {
@@ -124,7 +124,7 @@ function h(e) {
         k = s.useCallback(
             (e) => {
                 let t = e.metaKey || e.ctrlKey;
-                o(t), t ? e.preventDefault() : b(!0), e.stopPropagation();
+                o(t), t ? e.preventDefault() : C(!0), e.stopPropagation();
             },
             [o],
         ),
@@ -137,8 +137,8 @@ function h(e) {
     return (0, i.jsx)("div", {
         className: g.G1,
         children: (0, i.jsxs)("div", {
-            ref: I,
-            className: r()(g.Tm, { [g.JN]: E, [g.mV]: !E && !S, [g.sp]: _, [g.Pq]: p, [g.bJ]: null != A && !E }),
+            ref: b,
+            className: r()(g.Tm, { [g.JN]: E, [g.mV]: !E && !S, [g.sp]: _, [g.Pq]: A, [g.bJ]: null != p && !E }),
             children: [
                 (0, i.jsxs)(d.DUT, {
                     tag: "div",
@@ -147,23 +147,23 @@ function h(e) {
                     ignoreKeyPress: !0,
                     onMouseEnter: () => R(!0),
                     onMouseLeave: () => R(!1),
-                    className: r()(g.nz, { [g.Pq]: p, [g.JN]: E }),
+                    className: r()(g.nz, { [g.Pq]: A, [g.JN]: E }),
                     ref: N,
                     children: [
                         (0, i.jsx)("input", {
-                            className: r()(g.uS, { [g.JN]: E, [g.Pq]: p }),
+                            className: r()(g.uS, { [g.JN]: E, [g.Pq]: A }),
                             ref: j,
-                            onChange: G,
+                            onChange: L,
                             onKeyDownCapture: M,
                             value: t,
-                            style: { width: L > 0 ? L : `calc(${t.length}ch + 10px)` },
+                            style: { width: G > 0 ? G : `calc(${t.length}ch + 10px)` },
                         }),
                         (0, i.jsx)(x, {
-                            ref: C,
+                            ref: T,
                             value: t,
                             isEditing: E,
                             isSelected: _,
-                            error: A,
+                            error: p,
                             forceShowErrorTooltip: y || E,
                         }),
                     ],

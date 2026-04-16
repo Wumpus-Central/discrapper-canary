@@ -3,7 +3,7 @@ var i = n(627968);
 n(64700);
 var l = n(397927),
     a = n(985018),
-    s = n(135716);
+    s = n(30323);
 function r(e) {
     let { onClose: t, guildName: n } = e;
     return (0, i.jsxs)("div", {

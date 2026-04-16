@@ -13,7 +13,7 @@ var l = i(627968),
     x = i(488926),
     m = i(387255),
     y = i(985018),
-    g = i(266123);
+    g = i(905060);
 function f(e) {
     return (t) => null != t && !(0, u.N8)(e, t);
 }
@@ -25,11 +25,11 @@ let k = (e) => {
         let t,
             i,
             { guild: C, channel: w, permission: S, onClose: v, transitionState: b, currentSelectedRoles: j = [] } = e,
-            { shouldEveryonePost: N, setShouldEveryonePost: E } = ((e, t, i) => {
-                let l = x.MJ(i, t),
-                    [n, r] = a.useState(l);
-                return { shouldEveryonePost: n, setShouldEveryonePost: r };
-            })(0, w, S),
+            { shouldEveryonePost: N, setShouldEveryonePost: E } = ((e, t) => {
+                let i = x.MJ(t, e),
+                    [l, n] = a.useState(i);
+                return { shouldEveryonePost: l, setShouldEveryonePost: n };
+            })(w, S),
             M = ((t = (0, s.bG)([p.A], () => p.A.getSortedRoles(C.id))),
             a.useMemo(() => (0, m.i)(t).filter((e) => f(C.id)(e.id)), [C, t])).map((e) => ({
                 key: e.key,

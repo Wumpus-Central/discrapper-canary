@@ -1,4 +1,4 @@
-n.d(t, { A: () => c });
+n.d(t, { A: () => d });
 var i = n(627968);
 n(64700);
 var l = n(827734),
@@ -6,9 +6,9 @@ var l = n(827734),
     a = n(823508),
     r = n(47868),
     o = n(985018);
-function c(e) {
-    let { className: t, guildId: c } = e,
-        d = (0, a.A)();
+function d(e) {
+    let { className: t, guildId: d } = e,
+        c = (0, a.A)();
     return (0, i.jsx)(r.A, {
         className: t,
         icon: (0, i.jsx)(s.CTc, { size: "custom", color: "currentColor", height: 20, width: 20 }),
@@ -17,11 +17,11 @@ function c(e) {
         description: o.intl.string(o.t["EYn7/y"]),
         onClick: function () {
             (0, s.mMO)(async () => {
-                let { default: e } = await Promise.all([n.e("68587"), n.e("51354"), n.e("342"), n.e("87728")]).then(
+                let { default: e } = await Promise.all([n.e("68587"), n.e("51354"), n.e("342"), n.e("8316")]).then(
                     n.bind(n, 21653),
                 );
-                return (t) => (0, i.jsx)(e, { ...t, guildId: c });
-            }, d);
+                return (t) => (0, i.jsx)(e, { ...t, guildId: d });
+            }, c);
         },
     });
 }

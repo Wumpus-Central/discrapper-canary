@@ -22,7 +22,7 @@ var n = l(627968),
     E = l(652215),
     f = l(788868),
     I = l(985018),
-    T = l(88183);
+    T = l(762279);
 function N(e) {
     let {
             currentUser: t,
@@ -35,12 +35,12 @@ function N(e) {
         } = e,
         N = (0, i.bG)([p.Ay], () => (null != C && null != t ? p.Ay.getMember(C, t.id) : null)),
         b = null != N ? N.collectibles?.nameplate : t.collectibles?.nameplate,
-        { pendingNameplate: P } = (0, u.rv)(t, C),
-        [k, w] = (0, s.useState)(() =>
+        { pendingNameplate: k } = (0, u.rv)(t, C),
+        [w, P] = (0, s.useState)(() =>
             null != E
                 ? E
-                : void 0 !== P
-                  ? P
+                : void 0 !== k
+                  ? k
                   : null == b
                     ? null
                     : ((0, _.zd)(c, l).find((e) => {
@@ -49,15 +49,15 @@ function N(e) {
                       }) ?? null),
         ),
         U = (0, u.lw)({
-            pendingValue: k,
+            pendingValue: w,
             userValue: t?.collectibles?.nameplate,
             guildValue: N?.collectibles?.nameplate,
             guildId: C,
         }),
-        { product: L, purchase: O } = (0, j.A)(k?.skuId),
+        { product: L, purchase: O } = (0, j.A)(w?.skuId),
         M = null != O ? (0, _.gA)(O) : (0, _.G0)(L),
         S = h.Ay.canUseCollectibles(t),
-        R = void 0 === P ? k?.skuId === b?.skuId : k?.skuId === P?.skuId,
+        R = void 0 === k ? w?.skuId === b?.skuId : w?.skuId === k?.skuId,
         D = (0, s.useCallback)(
             (e) => {
                 A(),
@@ -85,7 +85,7 @@ function N(e) {
                 className: T.Qs,
                 scrollbarType: "none",
                 children: [
-                    (0, n.jsx)(v.A, { currentUser: t, selectedNameplate: k, guildId: C, onSelect: w, onOpenShop: D }),
+                    (0, n.jsx)(v.A, { currentUser: t, selectedNameplate: w, guildId: C, onSelect: P, onOpenShop: D }),
                     (0, n.jsx)(y.A, { user: t, guildId: C, nameplate: U }),
                 ],
             }),
@@ -93,12 +93,12 @@ function N(e) {
                 "data-migration-pending": !0,
                 className: T.Hx,
                 children: [
-                    (null != O && (!M || S)) || null === k
+                    (null != O && (!M || S)) || null === w
                         ? (0, n.jsx)(r.Button, {
                               variant: "primary",
                               text: I.intl.string(I.t.Jh8fJz),
                               onClick: () => {
-                                  (0, m.p)({ guildId: C, nameplate: k }), A();
+                                  (0, m.p)({ guildId: C, nameplate: w }), A();
                               },
                               disabled: R,
                           })

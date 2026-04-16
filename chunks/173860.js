@@ -1,22 +1,22 @@
-n.d(t, { A: () => g }), n(321073);
+n.d(t, { A: () => p }), n(321073);
 var i = n(627968),
     l = n(64700),
     s = n(503698),
     a = n.n(s),
     r = n(111956),
     o = n.n(r),
-    c = n(615300),
-    d = n(52133),
+    d = n(615300),
+    c = n(52133),
     u = n(397927),
-    h = n(92722);
+    h = n(21);
 let A = { friction: 10, tension: 300 };
 class _ extends l.Component {
     _timeout;
     constructor(e) {
-        super(e), (this.state = { translateY: new c.A.Value(), reduceMotion: !1 });
+        super(e), (this.state = { translateY: new d.A.Value(), reduceMotion: !1 });
     }
     shouldComponentUpdate(e, t) {
-        return !(0, d.A)(this.props, e, ["animate"]) || !(0, d.A)(this.state, t);
+        return !(0, c.A)(this.props, e, ["animate"]) || !(0, c.A)(this.state, t);
     }
     componentDidMount() {
         let { hide: e } = this.props;
@@ -34,19 +34,19 @@ class _ extends l.Component {
         let { translateY: e } = this.state;
         (null != this._timeout && clearTimeout(this._timeout), this.props.animate)
             ? (this._timeout = setTimeout(() => {
-                  c.A.spring(e, { toValue: 0, ...A }).start();
+                  d.A.spring(e, { toValue: 0, ...A }).start();
               }, 100))
             : e.setValue(0);
     }
     animateOut() {
         let { translateY: e } = this.state;
         (null != this._timeout && clearTimeout(this._timeout), this.props.animate)
-            ? c.A.spring(e, { toValue: 1, ...A }).start()
+            ? d.A.spring(e, { toValue: 1, ...A }).start()
             : e.setValue(1);
     }
     render() {
         let { className: e, text: t, hide: n, onClick: l } = this.props;
-        return (0, i.jsx)(c.A.div, {
+        return (0, i.jsx)(d.A.div, {
             className: a()(h.M0, e, { [h.R]: n }),
             onClick: l,
             style: this.getAnimatedStyle(),
@@ -89,37 +89,37 @@ class m extends l.PureComponent {
             } = this.props,
             r = null,
             o = null,
-            c = [];
+            d = [];
         e.forEach((e) => {
             "string" == typeof e
-                ? c.push(e)
+                ? d.push(e)
                 : "object" == typeof e && null != e.folderId
                   ? null != t && t.has(e.folderId)
-                      ? (c.push(`folder:${e.folderId}`), e.guildIds.forEach((e) => c.push(e)))
-                      : c.push(e.guildIds)
-                  : c.push(e.guildIds[0]);
+                      ? (d.push(`folder:${e.folderId}`), e.guildIds.forEach((e) => d.push(e)))
+                      : d.push(e.guildIds)
+                  : d.push(e.guildIds[0]);
         });
-        let d = (e) => {
-                null == r && l(e, s, c) && (r = e), null == o && i(e, s, c) && (o = e);
+        let c = (e) => {
+                null == r && l(e, s, d) && (r = e), null == o && i(e, s, d) && (o = e);
             },
-            u = s ? c.length - 1 : 0,
-            h = c[u];
+            u = s ? d.length - 1 : 0,
+            h = d[u];
         for (; null != h; ) {
             if ("string" == typeof h) {
-                if (n(h, s, c)) break;
-                d(h);
+                if (n(h, s, d)) break;
+                c(h);
             } else {
                 let e = !1;
                 for (let t of h) {
-                    if (n(t, s, c)) {
+                    if (n(t, s, d)) {
                         e = !0;
                         break;
                     }
-                    d(t);
+                    c(t);
                 }
                 if (e) break;
             }
-            (u += s ? -1 : 1), (h = c[u]);
+            (u += s ? -1 : 1), (h = d[u]);
         }
         null != a && a(r, o, s), this.setState({ mention: r, unread: o });
     }, 200);
@@ -138,21 +138,21 @@ class m extends l.PureComponent {
                 reverse: s,
                 className: r,
                 barClassName: o,
-                hide: c,
-                animate: d,
+                hide: d,
+                animate: c,
             } = this.props,
             { reducedMotion: u } = this.context;
         return (0, i.jsx)("div", {
             className: r ?? void 0,
             children: (0, i.jsx)(_, {
-                hide: !0 === c || (null == e && null == t),
+                hide: !0 === d || (null == e && null == t),
                 className: a()(o, null != t ? h.lE : h.gy),
                 text: null != t ? n : l,
                 reverse: s,
-                animate: d && !u.enabled,
+                animate: c && !u.enabled,
                 onClick: this.handleClick,
             }),
         });
     }
 }
-let g = m;
+let p = m;

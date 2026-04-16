@@ -3,25 +3,25 @@ n.d(t, { Aq: () => f, Ch: () => c, Mr: () => l, Nd: () => _, dB: () => d, oC: ()
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
-    s = n(397927),
-    o = n(395410);
+    s = n.n(i),
+    a = n(397927),
+    o = n(81093);
 let l = (e) => {
         let { children: t, className: n } = e;
-        return (0, r.jsx)("div", { className: a()(o.um, n), children: t });
+        return (0, r.jsx)("div", { className: s()(o.um, n), children: t });
     },
     u = (e) => {
         let { children: t, className: n } = e;
-        return (0, r.jsx)("div", { className: a()(o.Ov, n), children: t });
+        return (0, r.jsx)("div", { className: s()(o.Ov, n), children: t });
     },
     c = (e) => {
         let { children: t, className: n } = e;
-        return (0, r.jsx)("div", { className: a()(o.wq, n), children: t });
+        return (0, r.jsx)("div", { className: s()(o.wq, n), children: t });
     },
     d = (e) => {
         let { children: t, className: n } = e;
-        return (0, r.jsx)(s.Text, {
-            className: a()(n, o.hf),
+        return (0, r.jsx)(a.Text, {
+            className: s()(n, o.hf),
             color: "interactive-text-active",
             variant: "text-md/normal",
             children: t,
@@ -29,8 +29,8 @@ let l = (e) => {
     },
     _ = (e) => {
         let { children: t, className: n } = e;
-        return (0, r.jsx)(s.Text, {
-            className: a()(n, o.p3),
+        return (0, r.jsx)(a.Text, {
+            className: s()(n, o.p3),
             color: "interactive-text-default",
             variant: "text-xs/normal",
             children: t,
@@ -38,8 +38,8 @@ let l = (e) => {
     },
     f = (e) => {
         let { children: t, className: n } = e;
-        return (0, r.jsx)(s.Text, {
-            className: a()(n, o.I0),
+        return (0, r.jsx)(a.Text, {
+            className: s()(n, o.I0),
             color: "interactive-text-default",
             variant: "text-xs/normal",
             children: t,

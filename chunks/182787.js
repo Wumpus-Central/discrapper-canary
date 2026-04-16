@@ -1,2 +1,9 @@
 "use strict";
-e.exports = { yC: "profileEffects__0dd08", yo: "hovered__0dd08", vW: "inner__0dd08", QZ: "effect__0dd08" };
+e.exports = {
+    zr: "root__60f8b",
+    DD: "title__60f8b",
+    hQ: "contentContainer__60f8b",
+    Qs: "content__60f8b",
+    h2: "imageSkeleton__60f8b",
+    ZS: "imageContainer__60f8b",
+};

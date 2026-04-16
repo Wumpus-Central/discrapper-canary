@@ -1,13 +1,13 @@
 n.d(t, { A: () => h });
 var i = n(627968),
-    a = n(64700),
-    l = n(503698),
-    r = n.n(l),
+    l = n(64700),
+    a = n(503698),
+    r = n.n(a),
     s = n(397927),
     o = n(927018),
     d = n(64585),
     c = n(906688),
-    u = n(263244);
+    u = n(60828);
 let A = (e) => {
     let { color: t } = e;
     return (0, i.jsxs)("svg", {
@@ -66,9 +66,9 @@ let A = (e) => {
 };
 function h(e) {
     let { achievement: t, unlocked: n } = e,
-        { name: l, description: h, rarity: _, hideDescriptionUntilUnlock: m, onAction: g } = t,
+        { name: a, description: h, rarity: _, hideDescriptionUntilUnlock: m, onAction: g } = t,
         { color: p } = (0, o.ag)(_);
-    a.useEffect(() => {
+    l.useEffect(() => {
         let e = setTimeout(() => {
             d.A.playAchievementUnlockSound();
         }, 50);
@@ -91,7 +91,7 @@ function h(e) {
             (0, i.jsxs)("div", {
                 className: u.__invalid_nameContainer,
                 children: [
-                    (0, i.jsx)(s.Text, { variant: "text-md/semibold", color: "text-strong", children: l() }),
+                    (0, i.jsx)(s.Text, { variant: "text-md/semibold", color: "text-strong", children: a() }),
                     (0, i.jsx)(s.Text, {
                         variant: "text-xs/medium",
                         color: "text-default",

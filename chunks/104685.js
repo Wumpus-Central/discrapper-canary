@@ -8,7 +8,7 @@ var i = n(627968),
     o = n(576705),
     d = n(652215),
     c = n(985018),
-    u = n(79176);
+    u = n(180984);
 function m(e) {
     let { guild: t } = e,
         n = (0, l.bG)([o.A], () => null != t && o.A.can(d.xBc.MANAGE_GUILD, t), [t]),

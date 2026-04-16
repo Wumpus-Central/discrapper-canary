@@ -2,8 +2,8 @@ n.d(t, { A: () => p });
 var i = n(627968),
     s = n(64700),
     l = n(835245),
-    a = n(582754),
-    r = n(397927),
+    r = n(582754),
+    a = n(397927),
     o = n(736653),
     d = n(779733),
     c = n(954571),
@@ -12,10 +12,10 @@ var i = n(627968),
     g = n(545986),
     _ = n(652215),
     x = n(985018),
-    A = n(857391),
-    h = n(641701);
+    h = n(10374),
+    A = n(641701);
 function p() {
-    let e = (0, a.Mw)((0, o.Ay)()),
+    let e = (0, r.Mw)((0, o.Ay)()),
         t = s.useMemo(
             () => ({
                 backgroundImage:
@@ -34,34 +34,34 @@ function p() {
                 });
         }, []);
     return (0, i.jsx)("div", {
-        className: A.kL,
+        className: h.kL,
         style: t,
-        children: (0, i.jsxs)(r.BJc, {
-            className: A.FS,
+        children: (0, i.jsxs)(a.BJc, {
+            className: h.FS,
             justify: "space-between",
             children: [
-                (0, i.jsxs)(r.BJc, {
+                (0, i.jsxs)(a.BJc, {
                     gap: 4,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: A.N1,
+                            className: h.N1,
                             children: [
-                                (0, i.jsx)("img", { alt: "", src: h, className: A.Kk }),
-                                (0, i.jsx)(r.Heading, {
+                                (0, i.jsx)("img", { alt: "", src: A, className: h.Kk }),
+                                (0, i.jsx)(a.Heading, {
                                     variant: "heading-lg/bold",
                                     color: "always-white",
                                     children: x.intl.string(x.t.z8YP2A),
                                 }),
                             ],
                         }),
-                        (0, i.jsx)(r.Text, {
+                        (0, i.jsx)(a.Text, {
                             variant: "text-md/medium",
                             color: "text-subtle",
                             children: x.intl.string(x.t.HdKh65),
                         }),
                     ],
                 }),
-                (0, i.jsx)(r.Button, {
+                (0, i.jsx)(a.Button, {
                     variant: e ? "primary" : "overlay-primary",
                     text: x.intl.string(x.t.GURBQl),
                     onClick: n,

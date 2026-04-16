@@ -2,14 +2,14 @@
 n.d(t, { d: () => c });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(426333),
     l = n(842867),
-    u = n(219293);
+    u = n(45596);
 function c(e, t) {
     let n = new Map(),
-        a = new t((e) => {
+        s = new t((e) => {
             e.forEach((e) => {
                 let { target: t } = e;
                 n.get(t)?.(e);
@@ -23,27 +23,27 @@ function c(e, t) {
                 contentClassName: p,
                 onScroll: h,
                 dir: m = "ltr",
-                fade: g = !1,
-                customTheme: E = !1,
+                fade: E = !1,
+                customTheme: g = !1,
                 style: A,
                 ...I
             } = t,
             T = i.useRef(null),
-            y = i.useRef(null),
-            [S, v] = i.useState(!1),
-            { scrollerRef: C, getScrollerState: b } = (0, l.s$)(),
-            N = (0, l.kR)(C);
+            S = i.useRef(null),
+            [y, v] = i.useState(!1),
+            { scrollerRef: N, getScrollerState: C } = (0, l.s$)(),
+            R = (0, l.kR)(N);
         i.useImperativeHandle(
             c,
             () => ({
-                getScrollerNode: () => C.current,
+                getScrollerNode: () => N.current,
                 isScrolling: () => null != T.current,
-                getScrollerState: b,
-                ...(0, l.cJ)(C, b, N),
+                getScrollerState: C,
+                ...(0, l.cJ)(N, C, R),
             }),
-            [C, b, N],
+            [N, C, R],
         );
-        let R = i.useCallback(
+        let O = i.useCallback(
             (e) => {
                 null == T.current ? v(!0) : clearTimeout(T.current),
                     (T.current = setTimeout(() => {
@@ -55,21 +55,21 @@ function c(e, t) {
         );
         return (
             i.useEffect(() => () => clearTimeout(T.current), []),
-            (0, l.Bb)({ ref: C, key: "container", onUpdate: f, resizeObserver: a, listenerMap: n }),
-            (0, l.Bb)({ ref: y, key: "content", onUpdate: f, resizeObserver: a, listenerMap: n }),
+            (0, l.Bb)({ ref: N, key: "container", onUpdate: f, resizeObserver: s, listenerMap: n }),
+            (0, l.Bb)({ ref: S, key: "content", onUpdate: f, resizeObserver: s, listenerMap: n }),
             (0, r.jsx)("div", {
-                ref: C,
-                className: s()(_, { [u.Rv]: g, [u.D8]: E, [e]: !0, [u.fs]: !0, [u.qw]: S && g }),
+                ref: N,
+                className: a()(_, { [u.Rv]: E, [u.D8]: g, [e]: !0, [u.fs]: !0, [u.qw]: y && E }),
                 style: A,
                 dir: m,
-                onScroll: R,
+                onScroll: O,
                 ...I,
                 children: (0, r.jsx)(o.xp, {
-                    containerRef: y,
+                    containerRef: S,
                     children: (0, r.jsxs)("div", {
-                        ref: y,
-                        className: s()(p, u.Qs),
-                        children: [d, S && (0, r.jsx)("div", { className: u.X3 })],
+                        ref: S,
+                        className: a()(p, u.Qs),
+                        children: [d, y && (0, r.jsx)("div", { className: u.X3 })],
                     }),
                 }),
             })

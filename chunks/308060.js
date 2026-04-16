@@ -1,77 +1,77 @@
 var r = n(72290);
-!(function (e, t) {
+!(function (e) {
     "use strict";
     if (!e.setImmediate) {
-        var n,
-            i = 1,
-            a = {},
+        var t,
+            n = 1,
+            i = {},
             s = !1,
-            o = e.document,
-            l = Object.getPrototypeOf && Object.getPrototypeOf(e);
-        (l = l && l.setTimeout ? l : e),
+            a = e.document,
+            o = Object.getPrototypeOf && Object.getPrototypeOf(e);
+        (o = o && o.setTimeout ? o : e),
             "[object process]" === {}.toString.call(e.process)
-                ? f()
-                : p()
-                  ? h()
+                ? _()
+                : f()
+                  ? p()
                   : e.MessageChannel
-                    ? m()
-                    : o && "onreadystatechange" in o.createElement("script")
-                      ? g()
+                    ? h()
+                    : a && "onreadystatechange" in a.createElement("script")
+                      ? m()
                       : E(),
-            (l.setImmediate = u),
-            (l.clearImmediate = c);
+            (o.setImmediate = l),
+            (o.clearImmediate = u);
+    }
+    function l(e) {
+        "function" != typeof e && (e = Function("" + e));
+        for (var r = Array(arguments.length - 1), s = 0; s < r.length; s++) r[s] = arguments[s + 1];
+        var a = { callback: e, args: r };
+        return (i[n] = a), t(n), n++;
     }
     function u(e) {
-        "function" != typeof e && (e = Function("" + e));
-        for (var t = Array(arguments.length - 1), r = 0; r < t.length; r++) t[r] = arguments[r + 1];
-        var s = { callback: e, args: t };
-        return (a[i] = s), n(i), i++;
+        delete i[e];
     }
     function c(e) {
-        delete a[e];
-    }
-    function d(e) {
-        var n = e.callback,
-            r = e.args;
-        switch (r.length) {
+        var t = e.callback,
+            n = e.args;
+        switch (n.length) {
             case 0:
-                n();
+                t();
                 break;
             case 1:
-                n(r[0]);
+                t(n[0]);
                 break;
             case 2:
-                n(r[0], r[1]);
+                t(n[0], n[1]);
                 break;
             case 3:
-                n(r[0], r[1], r[2]);
+                t(n[0], n[1], n[2]);
                 break;
             default:
-                n.apply(t, r);
+                t.apply(void 0, n);
         }
     }
-    function _(e) {
-        if (s) setTimeout(_, 0, e);
+    function d(e) {
+        if (s) setTimeout(d, 0, e);
         else {
-            var t = a[e];
+            var t = i[e];
             if (t) {
                 s = !0;
                 try {
-                    d(t);
+                    c(t);
                 } finally {
-                    c(e), (s = !1);
+                    u(e), (s = !1);
                 }
             }
         }
     }
-    function f() {
-        n = function (e) {
+    function _() {
+        t = function (e) {
             r.nextTick(function () {
-                _(e);
+                d(e);
             });
         };
     }
-    function p() {
+    function f() {
         if (e.postMessage && !e.importScripts) {
             var t = !0,
                 n = e.onmessage;
@@ -85,38 +85,38 @@ var r = n(72290);
             );
         }
     }
-    function h() {
-        var t = "setImmediate$" + Math.random() + "$",
-            r = function (n) {
-                n.source === e && "string" == typeof n.data && 0 === n.data.indexOf(t) && _(+n.data.slice(t.length));
+    function p() {
+        var n = "setImmediate$" + Math.random() + "$",
+            r = function (t) {
+                t.source === e && "string" == typeof t.data && 0 === t.data.indexOf(n) && d(+t.data.slice(n.length));
             };
         e.addEventListener ? e.addEventListener("message", r, !1) : e.attachEvent("onmessage", r),
-            (n = function (n) {
-                e.postMessage(t + n, "*");
+            (t = function (t) {
+                e.postMessage(n + t, "*");
             });
     }
-    function m() {
+    function h() {
         var e = new MessageChannel();
         (e.port1.onmessage = function (e) {
-            _(e.data);
+            d(e.data);
         }),
-            (n = function (t) {
+            (t = function (t) {
                 e.port2.postMessage(t);
             });
     }
-    function g() {
-        var e = o.documentElement;
-        n = function (t) {
-            var n = o.createElement("script");
+    function m() {
+        var e = a.documentElement;
+        t = function (t) {
+            var n = a.createElement("script");
             (n.onreadystatechange = function () {
-                _(t), (n.onreadystatechange = null), e.removeChild(n), (n = null);
+                d(t), (n.onreadystatechange = null), e.removeChild(n), (n = null);
             }),
                 e.appendChild(n);
         };
     }
     function E() {
-        n = function (e) {
-            setTimeout(_, 0, e);
+        t = function (e) {
+            setTimeout(d, 0, e);
         };
     }
 })("u" < typeof self ? (void 0 === n.g ? this : n.g) : self);

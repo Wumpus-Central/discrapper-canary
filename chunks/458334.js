@@ -15,39 +15,39 @@ function x(e, t) {
     let n = (0, r.bG)([u.A], () => u.A.getProps().integrations);
     return s.useMemo(
         () =>
-            (function (e, t, n) {
-                let s;
-                if (!t.managed) return null;
-                let r = t.tags?.bot_id,
-                    u = t.tags?.integration_id,
-                    x = t.tags?.premium_subscriber !== void 0,
-                    h = t.tags?.guild_connections !== void 0;
+            (function (e, t) {
+                let n;
+                if (!e.managed) return null;
+                let s = e.tags?.bot_id,
+                    r = e.tags?.integration_id,
+                    u = e.tags?.premium_subscriber !== void 0,
+                    x = e.tags?.guild_connections !== void 0;
                 if (
-                    (null != r
-                        ? (s = n?.find((e) => {
+                    (null != s
+                        ? (n = t?.find((e) => {
                               let { application: t } = e;
-                              return t?.bot?.id === r;
+                              return t?.bot?.id === s;
                           }))
-                        : null != u &&
-                          (s = n?.find((e) => {
+                        : null != r &&
+                          (n = t?.find((e) => {
                               let { id: t } = e;
-                              return t === u;
+                              return t === r;
                           })),
-                    null != s && null != s.application && null != s.name)
+                    null != n && null != n.application && null != n.name)
                 ) {
-                    let e = s.application.id,
-                        t = s.name;
-                    [l.s.TWITCH, l.s.YOUTUBE].includes(s.type) && (t = `${o.A.get(s.type).name} - ${t}`);
-                    let n = () => {
+                    let e = n.application.id,
+                        t = n.name;
+                    [l.s.TWITCH, l.s.YOUTUBE].includes(n.type) && (t = `${o.A.get(n.type).name} - ${t}`);
+                    let s = () => {
                         c.A.setSection(m.BEX.INTEGRATIONS), a.A.setSection(m.wLn.APPLICATION, e);
                     };
                     return g.intl.format(g.t.FuXsWm, {
                         name: t,
-                        integrationNameHook: (e, t) => (0, i.jsx)(d.A, { onClick: n, children: e }, t),
+                        integrationNameHook: (e, t) => (0, i.jsx)(d.A, { onClick: s, children: e }, t),
                     });
                 }
-                return x ? g.intl.string(g.t.oF6FYT) : h ? g.intl.string(g.t.ZQ37tH) : g.intl.string(g.t.k5d7DJ);
-            })(0, t, n),
+                return u ? g.intl.string(g.t.oF6FYT) : x ? g.intl.string(g.t.ZQ37tH) : g.intl.string(g.t.k5d7DJ);
+            })(t, n),
         [e, t, n],
     );
 }

@@ -24,7 +24,7 @@ function u(e) {
     null != t &&
         (o === a.P0.BAD
             ? (0, i.mMO)(async () => {
-                  let { default: e } = await Promise.all([n.e("16833"), n.e("26484"), n.e("9608")]).then(
+                  let { default: e } = await Promise.all([n.e("16833"), n.e("26484"), n.e("55376")]).then(
                       n.bind(n, 225315),
                   );
                   return (n) => (0, r.jsx)(e, { ...n, onSubmit: (e) => l(t, s, e), startRating: o });

@@ -1,6 +1,6 @@
-!(function (e, t) {
-    t(n(989349));
-})(0, function (e) {
+!(function (e) {
+    e(n(989349));
+})(function (e) {
     "use strict";
     var t = { 1: "١", 2: "٢", 3: "٣", 4: "٤", 5: "٥", 6: "٦", 7: "٧", 8: "٨", 9: "٩", 0: "٠" },
         n = { "١": "1", "٢": "2", "٣": "3", "٤": "4", "٥": "5", "٦": "6", "٧": "7", "٨": "8", "٩": "9", "٠": "0" },
@@ -15,14 +15,14 @@
             M: ["أقل من شهر", "شهر واحد", ["شهران", "شهرين"], "%d أشهر", "%d شهرا", "%d شهر"],
             y: ["أقل من عام", "عام واحد", ["عامان", "عامين"], "%d أعوام", "%d عامًا", "%d عام"],
         },
-        a = function (e) {
-            return function (t, n, a, s) {
+        s = function (e) {
+            return function (t, n, s, a) {
                 var o = r(t),
                     l = i[e][r(t)];
                 return 2 === o && (l = l[+!n]), l.replace(/%d/i, t);
             };
         },
-        s = [
+        a = [
             "يناير",
             "فبراير",
             "مارس",
@@ -37,8 +37,8 @@
             "ديسمبر",
         ];
     return e.defineLocale("ar", {
-        months: s,
-        monthsShort: s,
+        months: a,
+        monthsShort: a,
         weekdays: "الأحد_الإثنين_الثلاثاء_الأربعاء_الخميس_الجمعة_السبت".split("_"),
         weekdaysShort: "أحد_إثنين_ثلاثاء_أربعاء_خميس_جمعة_سبت".split("_"),
         weekdaysMin: "ح_ن_ث_ر_خ_ج_س".split("_"),
@@ -69,18 +69,18 @@
         relativeTime: {
             future: "بعد %s",
             past: "منذ %s",
-            s: a("s"),
-            ss: a("s"),
-            m: a("m"),
-            mm: a("m"),
-            h: a("h"),
-            hh: a("h"),
-            d: a("d"),
-            dd: a("d"),
-            M: a("M"),
-            MM: a("M"),
-            y: a("y"),
-            yy: a("y"),
+            s: s("s"),
+            ss: s("s"),
+            m: s("m"),
+            mm: s("m"),
+            h: s("h"),
+            hh: s("h"),
+            d: s("d"),
+            dd: s("d"),
+            M: s("M"),
+            MM: s("M"),
+            y: s("y"),
+            yy: s("y"),
         },
         preparse: function (e) {
             return e

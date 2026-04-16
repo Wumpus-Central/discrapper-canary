@@ -1,6 +1,6 @@
-!(function (e, t) {
-    t(n(989349));
-})(0, function (e) {
+!(function (e) {
+    e(n(989349));
+})(function (e) {
     "use strict";
     var t = {
         ss: "sekundes_sekundēm_sekunde_sekundes".split("_"),
@@ -24,7 +24,7 @@
     function i(e, r, i) {
         return n(t[i], e, r);
     }
-    function a(e, t) {
+    function s(e, t) {
         return t ? "dažas sekundes" : "dažām sekundēm";
     }
     return e.defineLocale("lv", {
@@ -55,7 +55,7 @@
         relativeTime: {
             future: "pēc %s",
             past: "pirms %s",
-            s: a,
+            s: s,
             ss: r,
             m: i,
             mm: r,

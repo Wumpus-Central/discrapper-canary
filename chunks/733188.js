@@ -2,8 +2,8 @@ n.d(t, { A: () => S });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
-    a = n(397927),
-    r = n(775602),
+    r = n(397927),
+    a = n(775602),
     o = n(141468),
     d = n(963852),
     c = n(763754),
@@ -12,13 +12,13 @@ var i = n(627968),
     g = n(486020),
     _ = n(253932),
     x = n(652215),
-    A = n(985018),
-    h = n(80281);
+    h = n(985018),
+    A = n(585001);
 let p = new m.nA({ id: "1337", guild_id: "1337", type: x.rbe.GUILD_TEXT, name: "preview" }),
     T = [
-        { status: a.clD.IDLE, discriminator: "2" },
-        { status: a.clD.DND, discriminator: "3" },
-        { status: a.clD.ONLINE, mobile: !0, discriminator: "4" },
+        { status: r.clD.IDLE, discriminator: "2" },
+        { status: r.clD.DND, discriminator: "3" },
+        { status: r.clD.ONLINE, mobile: !0, discriminator: "4" },
     ];
 function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
@@ -30,7 +30,7 @@ function S() {
         n = s.useMemo(
             () => [
                 f(
-                    A.intl.formatToPlainString(A.t.BknJRT, {}),
+                    h.intl.formatToPlainString(h.t.BknJRT, {}),
                     t
                         ? [
                               {
@@ -50,27 +50,27 @@ function S() {
                           ]
                         : [],
                 ),
-                f(A.intl.formatToPlainString(A.t["4rDfgM"], { link: "https://discord.com/accessibility" })),
+                f(h.intl.formatToPlainString(h.t["4rDfgM"], { link: "https://discord.com/accessibility" })),
             ],
             [t],
         ),
-        o = (0, l.bG)([r.A], () => r.A.messageGroupSpacing);
-    return (0, i.jsx)(a.M1G, {
+        o = (0, l.bG)([a.A], () => a.A.messageGroupSpacing);
+    return (0, i.jsx)(r.M1G, {
         children: (0, i.jsxs)("section", {
             children: [
-                (0, i.jsx)(a.Heading, {
+                (0, i.jsx)(r.Heading, {
                     variant: "text-md/medium",
                     color: "text-muted",
-                    className: h.Vf,
-                    children: A.intl.string(A.t.RC22qg),
+                    className: A.Vf,
+                    children: h.intl.string(h.t.RC22qg),
                 }),
-                (0, i.jsxs)(a.IpV, {
-                    className: h.VH,
+                (0, i.jsxs)(r.IpV, {
+                    className: A.VH,
                     children: [
                         (0, i.jsx)("ol", {
-                            className: h.DZ,
+                            className: A.DZ,
                             style: { gap: o },
-                            "aria-label": A.intl.string(A.t.xfjsEV),
+                            "aria-label": h.intl.string(h.t.xfjsEV),
                             children: n.map((t) =>
                                 (0, i.jsx)(
                                     "li",
@@ -87,27 +87,27 @@ function S() {
                             ),
                         }),
                         (0, i.jsxs)("div", {
-                            className: h.Jb,
+                            className: A.Jb,
                             children: [
                                 (0, i.jsx)("div", {
-                                    className: h.HD,
+                                    className: A.HD,
                                     children: T.map((e) => {
                                         let { status: t, discriminator: n, mobile: s = !1 } = e;
                                         return (0, i.jsx)(
-                                            a.euF,
+                                            r.euF,
                                             {
                                                 status: t,
                                                 isMobile: s,
-                                                size: a._3J.SIZE_32,
+                                                size: r._3J.SIZE_32,
                                                 src: g.Ay.getDefaultAvatarURL(void 0, n),
-                                                "aria-label": A.intl.string(A.t.VKE5TK),
+                                                "aria-label": h.intl.string(h.t.VKE5TK),
                                             },
                                             t,
                                         );
                                     }),
                                 }),
-                                (0, i.jsx)(a.Button, {
-                                    text: A.intl.string(A.t["2RHHgz"]),
+                                (0, i.jsx)(r.Button, {
+                                    text: h.intl.string(h.t["2RHHgz"]),
                                     size: "sm",
                                     variant: "primary",
                                 }),

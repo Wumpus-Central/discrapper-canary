@@ -1,8 +1,8 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => f });
 var a = n(627968),
     i = n(64700),
-    l = n(503698),
-    s = n.n(l),
+    s = n(503698),
+    l = n.n(s),
     r = n(607399),
     o = n(397927),
     d = n(354949),
@@ -10,8 +10,8 @@ var a = n(627968),
     u = n(446868),
     m = n(652215),
     h = n(985018),
-    p = n(441609);
-let x = c.A.getArticleURL(m.MVz.VERIFICATION_FAQ);
+    x = n(72828);
+let p = c.A.getArticleURL(m.MVz.VERIFICATION_FAQ);
 class g extends i.PureComponent {
     static defaultProps = { types: [m.Fz7.CAPTCHA], onCaptchaVerify: m.tEg, onLogout: m.tEg };
     renderFields() {
@@ -27,7 +27,7 @@ class g extends i.PureComponent {
     render() {
         return (0, a.jsxs)(o.BJc, {
             gap: 16,
-            className: p.Ot,
+            className: x.Ot,
             align: "center",
             direction: "vertical",
             justify: "center",
@@ -35,7 +35,7 @@ class g extends i.PureComponent {
                 (0, a.jsxs)(o.BJc, {
                     gap: 16,
                     fullWidth: !1,
-                    className: s()(p.kL, { [p.Fr]: r.Fr }),
+                    className: l()(x.kL, { [x.Fr]: r.Fr }),
                     align: "center",
                     direction: "vertical",
                     justify: "center",
@@ -46,9 +46,9 @@ class g extends i.PureComponent {
                             justify: "center",
                             gap: 16,
                             children: [
-                                (0, a.jsx)("div", { className: p.Sl }),
+                                (0, a.jsx)("div", { className: x.Sl }),
                                 (0, a.jsxs)(o.BJc, {
-                                    className: p.FS,
+                                    className: x.FS,
                                     gap: 4,
                                     align: "center",
                                     direction: "vertical",
@@ -60,7 +60,7 @@ class g extends i.PureComponent {
                                         }),
                                         (0, a.jsx)(o.Text, {
                                             variant: "text-md/normal",
-                                            children: h.intl.format(h.t["0rqMV5"], { helpCenterURL: x }),
+                                            children: h.intl.format(h.t["0rqMV5"], { helpCenterURL: p }),
                                         }),
                                     ],
                                 }),
@@ -83,7 +83,7 @@ class g extends i.PureComponent {
                     children: [
                         (0, a.jsx)(o.Text, {
                             variant: "text-sm/normal",
-                            className: p.qr,
+                            className: x.qr,
                             children: h.intl.string(h.t.qqYun3),
                         }),
                         (0, a.jsxs)(o.BJc, {
@@ -94,13 +94,13 @@ class g extends i.PureComponent {
                             children: [
                                 (0, a.jsx)(o.Text, {
                                     variant: "text-sm/semibold",
-                                    className: p.qr,
+                                    className: x.qr,
                                     children: h.intl.format(h.t.WL51ZR, { supportURL: c.A.getSubmitRequestURL() }),
                                 }),
-                                (0, a.jsx)("div", { className: s()(p.qr, p.mf), children: "•" }),
+                                (0, a.jsx)("div", { className: l()(x.qr, x.mf), children: "•" }),
                                 (0, a.jsx)(o.Text, {
                                     variant: "text-sm/semibold",
-                                    className: p.qr,
+                                    className: x.qr,
                                     children: h.intl.format(h.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),
                                 }),
                             ],
@@ -115,4 +115,4 @@ class g extends i.PureComponent {
         t?.(e);
     };
 }
-let _ = g;
+let f = g;

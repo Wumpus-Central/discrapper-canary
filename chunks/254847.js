@@ -1,29 +1,29 @@
-n.d(t, { A: () => T, Y: () => h });
+n.d(t, { A: () => T, Y: () => A });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    a = n.n(l),
-    r = n(417597),
+    r = n.n(l),
+    a = n(417597),
     o = n(397927),
     d = n(714991),
     c = n(695515),
     u = n(397808),
     m = n(652215),
-    g = n(842130),
+    g = n(602339),
     _ = n(985018),
-    x = n(75262);
-let A = [18, 18, 16, 16, 14, 12, 10];
-function h(e) {
-    return A[e.length - 1] ?? A[A.length - 1];
+    x = n(751406);
+let h = [18, 18, 16, 16, 14, 12, 10];
+function A(e) {
+    return h[e.length - 1] ?? h[h.length - 1];
 }
 let p = s.memo((e) => {
     let { guildId: t, className: n, customSubtext: s } = e,
-        l = (0, r.bG)([c.A], () => c.A.getGuild(t));
+        l = (0, a.bG)([c.A], () => c.A.getGuild(t));
     if (void 0 === l) return null;
-    let A = l.features.has(m.GuildFeatures.VERIFIED) || l.features.has(m.GuildFeatures.PARTNERED),
-        { name: h } = l;
+    let h = l.features.has(m.GuildFeatures.VERIFIED) || l.features.has(m.GuildFeatures.PARTNERED),
+        { name: A } = l;
     return (0, i.jsxs)("div", {
-        className: a()(x.kL, n),
+        className: r()(x.kL, n),
         children: [
             (0, i.jsx)(u.A, { guildId: t }),
             (0, i.jsxs)("div", {
@@ -32,7 +32,7 @@ let p = s.memo((e) => {
                     (0, i.jsxs)("div", {
                         className: x.wx,
                         children: [
-                            A
+                            h
                                 ? (0, i.jsx)(d.A, {
                                       guild: l,
                                       tooltipPosition: "bottom",
@@ -40,7 +40,7 @@ let p = s.memo((e) => {
                                       className: x.n2,
                                   })
                                 : null,
-                            (0, i.jsx)(o.Text, { variant: "text-md/semibold", children: h }),
+                            (0, i.jsx)(o.Text, { variant: "text-md/semibold", children: A }),
                         ],
                     }),
                     (0, i.jsx)(o.Text, {

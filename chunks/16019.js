@@ -2,8 +2,8 @@ n.d(t, { A: () => y });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    a = n.n(l),
-    r = n(877624),
+    r = n.n(l),
+    a = n(877624),
     o = n(311907),
     d = n(397927),
     c = n(775602),
@@ -12,49 +12,49 @@ var i = n(627968),
     g = n(560138),
     _ = n(526292),
     x = n(236834),
-    A = n(549996),
-    h = n(371764),
+    h = n(549996),
+    A = n(371764),
     p = n(379040),
     T = n(65470),
     f = n(792656),
     S = n(224850),
-    b = n(552554),
-    E = n(288351),
+    E = n(552554),
+    b = n(288351),
     C = n(103733),
-    N = n(326180),
-    v = n(788868),
+    v = n(326180),
+    N = n(788868),
     I = n(985018),
-    j = n(58288);
+    j = n(469408);
 let y = s.memo(
     s.forwardRef((e, t) => {
         let { className: n, subscriptionTier: s, isEligibleForBogoPromotion: l } = e,
             { analyticsLocations: y } = (0, m.Ay)(u.A.PREMIUM_MARKETING_HERO_CTA),
-            O = (0, b.N)(),
+            O = (0, E.N)(),
             R = (0, x.A)(),
             L = null != R,
             P = (0, o.bG)([c.A], () => c.A.useReducedMotion),
             { visibilityPercentageRef: D, visibilityPercentage: G } = (0, C.U)(!P),
             M = (0, o.bG)([g.A], () => g.A.affinities),
             U = !L && M.length > 0,
-            k = (0, A.c)(r.C.MARKETING_PAGE_BANNER),
+            k = (0, h.c)(a.C.MARKETING_PAGE_BANNER),
             w = null != k && "marketingPageBanner" === k.properties.properties.oneofKind,
             V = (0, _.ar)() && !w;
         return (0, i.jsx)(m.f5, {
             value: y,
             children: (0, i.jsx)("div", {
                 ref: t,
-                className: a()(j.kL, n),
+                className: r()(j.kL, n),
                 "data-testid": "marketing-page-hero-header",
                 children: (0, i.jsx)("div", {
                     ref: D,
                     children: (0, i.jsxs)("div", {
                         className: j.hQ,
                         children: [
-                            (0, i.jsx)(N.A, { containerVisibilityPercentage: G }),
+                            (0, i.jsx)(v.A, { containerVisibilityPercentage: G }),
                             V &&
                                 (0, i.jsx)("div", {
                                     className: j.XN,
-                                    children: (0, i.jsx)(E.A, { enablePremiumBrandRefresh: !0 }),
+                                    children: (0, i.jsx)(b.A, { enablePremiumBrandRefresh: !0 }),
                                 }),
                             (0, i.jsx)("div", {
                                 className: j.s8,
@@ -90,7 +90,7 @@ let y = s.memo(
                                                 size: "md",
                                                 fullWidth: V,
                                                 hasActivePromotion: !!l,
-                                                subscriptionTier: w && null == s ? v.pe.NONE : s,
+                                                subscriptionTier: w && null == s ? N.pe.NONE : s,
                                                 buttonTextOverride: w ? I.intl.string(I.t["2pG5Ga"]) : void 0,
                                             }),
                                             !V && (0, i.jsx)(T.A, { variant: "secondary", size: "md" }),
@@ -106,7 +106,7 @@ let y = s.memo(
                                     }),
                                     null != k &&
                                         "marketingPageBanner" === k.properties.properties.oneofKind &&
-                                        (0, i.jsx)(h.x, {
+                                        (0, i.jsx)(A.x, {
                                             componentId: k.id,
                                             promotionBannerMarketingComponentFields:
                                                 k.properties.properties.marketingPageBanner,

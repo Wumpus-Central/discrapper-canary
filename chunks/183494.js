@@ -3,13 +3,13 @@ var r = n(627968),
     l = n(64700),
     a = n(503698),
     i = n.n(a),
-    s = n(445887),
+    s = n(407045),
     u = n(876230),
     o = n(61491),
     c = n(397927),
     d = n(972441),
     m = n(645871),
-    f = n(716277);
+    f = n(6821);
 f.$9;
 let h = { tension: 300, friction: 30, clamp: !0 };
 function p(e) {
@@ -46,8 +46,8 @@ function p(e) {
             hoveredAtX: $,
             maxSeekableX: O,
             isHovering: Q,
-            isDragging: _,
-            dragX: F,
+            isDragging: F,
+            dragX: _,
             isHoverBeyondMax: Y,
             handleClick: K,
             handleMouseDown: X,
@@ -83,11 +83,11 @@ function p(e) {
             (q.current.style.left = `${e}px`), Z({ playbackPxSpring: t, immediate: !0 });
         }
     }, [a, Z, W, E, v, H]);
-    let en = l.useRef(_);
+    let en = l.useRef(F);
     l.useLayoutEffect(() => {
         let e = en.current;
-        (en.current = _), e && !_ && Z({ playbackPxSpring: null == W || Number.isNaN(W) ? 0 : W, immediate: !0 });
-    }, [_, W, Z]),
+        (en.current = F), e && !F && Z({ playbackPxSpring: null == W || Number.isNaN(W) ? 0 : W, immediate: !0 });
+    }, [F, W, Z]),
         l.useEffect(() => {
             if (ee.current) {
                 ee.current = !1;
@@ -180,8 +180,8 @@ function p(e) {
                                     playbackPxSpring: J,
                                     animate: a,
                                     playerState: E,
-                                    isDragging: _,
-                                    dragX: F,
+                                    isDragging: F,
+                                    dragX: _,
                                     animatingIndex: P?.animatingIndex,
                                     expansionSpring: P?.expansionSpring,
                                     timelineWidth: H,
@@ -209,11 +209,11 @@ function p(e) {
                 (Q || R) &&
                     p &&
                     null != W &&
-                    !eu(_ && null != F ? F : W) &&
+                    !eu(F && null != _ ? _ : W) &&
                     (0, r.jsx)(s.animated.div, {
                         ref: q,
                         className: f.Ub,
-                        style: { left: _ && null != F ? `${F}px` : J.to((e) => `${e}px`) },
+                        style: { left: F && null != _ ? `${_}px` : J.to((e) => `${e}px`) },
                     }),
             ],
         }),

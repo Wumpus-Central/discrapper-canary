@@ -2,11 +2,11 @@
 n.d(t, { _: () => f, m: () => _ });
 var r = n(627968),
     i = n(503698),
-    a = n.n(i),
-    s = n(305003),
+    s = n.n(i),
+    a = n(305003),
     o = n(679970),
     l = n(758836),
-    u = n(587301),
+    u = n(68644),
     c = n(743102),
     d = n(455156);
 let _ = {
@@ -19,13 +19,13 @@ let _ = {
         [l.Dp.ORB_PROFILE_BADGE]: {
             render: (e) => {
                 let { animationState: t = "on", className: n } = e;
-                return (0, r.jsx)(o.A, { animationState: t, className: a()(u.o, n) });
+                return (0, r.jsx)(o.A, { animationState: t, className: s()(u.o, n) });
             },
         },
     },
     f = () => ({
-        id: s.A.ORB_PROFILE_BADGE,
-        icon: s.A.ORB_PROFILE_BADGE,
+        id: a.A.ORB_PROFILE_BADGE,
+        icon: a.A.ORB_PROFILE_BADGE,
         iconSrc: d.A,
         description: "",
         isPreviewMode: !0,

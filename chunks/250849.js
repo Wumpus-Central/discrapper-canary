@@ -1,13 +1,3 @@
-e.exports = {
-    kL: "container_c8f358",
-    ND: "headerSection_c8f358",
-    c8: "headerSectionLeft_c8f358",
-    fU: "headerSectionRight_c8f358",
-    Z2: "appIcon_c8f358",
-    my: "avatar_c8f358",
-    SC: "dotSpacer_c8f358",
-    fc: "actionButtonsContainer_c8f358",
-    SX: "applicationName_c8f358",
-    Rv: "fade_c8f358",
-    NS: "inviteButtonIcon_c8f358",
-};
+o.exports = JSON.parse(
+    '{"uG6teD":["\xdačet byl \xfaspěšně propojen"],"2cOIOr":["Připojit \xfačet"],"kxF9br":["SDK připojeno přes RPC"],"8a7IrV":["URL vstupn\xedho bodu připojen\xed byla zaregistrov\xe1na"],"9iLeL2":["URL nakonfigurov\xe1na jako ",[1,"url"]],"AGLx00":["Postup propojen\xed hry:"],"w0pN4R":["Propojit \xfačet"],"yKwZc2":["Spr\xe1va propojen\xed \xfačtu"],"aTULMB":["Autentizačn\xed zpětn\xe1 vazba nebyla detekov\xe1na. Pokud funkce byla zavol\xe1na a\xa0st\xe1le tohle vid\xedš, pod\xedvej se do protokolů, kde zjist\xedš detaily"],"eg0mNa":["Nelze propojit, protože nejsou k\xa0dispozici ž\xe1dn\xe9 platn\xe9 propojovac\xed postupy"],"cCvdJy":["Otevř\xedt hern\xed profil"],"OEkrCx":["Bude použit tento postup"],"no+FQS":["Bude použit prvn\xed dostupn\xfd propojovac\xed postup, poč\xednaje shora"],"PFxxJa":["Pokud je tv\xe1 hra spuštěn\xe1 a\xa0nemůže se připojit k\xa0Discordu, zkus zobrazit protokoly hry, kde najdeš informace potřebn\xe9 k\xa0laděn\xed"],"S94dzs":["Funkce RegisterAuthorizeRequestCallback byla zavol\xe1na a\xa0pracuje spr\xe1vně"],"vR0zs6":["Propojov\xe1n\xed \xfačtů"],"KoK4J9":["N\xe1stroje pro v\xfdvoj\xe1ře: ",[1,"appName"]],"tkIymA":["Odpojit"],"K3ObrU":["Webov\xfd postup:"]}',
+);

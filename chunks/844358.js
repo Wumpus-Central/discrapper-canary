@@ -1,25 +1,25 @@
 n.d(t, { A: () => m });
 var i = n(627968),
-    a = n(64700),
-    r = n(835245),
-    l = n(607399),
+    l = n(64700),
+    a = n(835245),
+    r = n(607399),
     s = n(732955),
     o = n(397927),
     d = n(642277),
     c = n(723702),
     u = n(652215),
     A = n(613057),
-    _ = n(985018),
-    h = n(34960);
+    h = n(985018),
+    _ = n(897152);
 function m(e) {
     let { applicationId: t } = e,
-        [m, g] = a.useState(null),
-        [p, E] = a.useState(!1),
-        I = a.useRef(!1),
-        f = !c.isPlatformEmbedded && !l.Fr,
-        C = a.useMemo(() => (0, r.A)(), []);
+        [m, g] = l.useState(null),
+        [p, E] = l.useState(!1),
+        I = l.useRef(!1),
+        f = !c.isPlatformEmbedded && !r.Fr,
+        C = l.useMemo(() => (0, a.A)(), []);
     if (
-        (a.useEffect(() => {
+        (l.useEffect(() => {
             f && !0 !== I.current
                 ? (Promise.resolve()
                       .then(n.bind(n, 129014))
@@ -47,18 +47,18 @@ function m(e) {
     if (f && !1 !== m)
         if (!0 === m)
             return (0, i.jsxs)("div", {
-                className: h.k,
+                className: _.k,
                 children: [
-                    (0, i.jsx)(o.Heading, { variant: "heading-xxl/bold", children: _.intl.string(_.t.csrAMJ) }),
-                    (0, i.jsx)(o.Text, { variant: "text-xs/semibold", children: _.intl.string(_.t["m1+IBn"]) }),
-                    (0, i.jsx)(s.$nd, { variant: "primary", text: _.intl.string(_.t.fIv16B), onClick: () => E(!0) }),
+                    (0, i.jsx)(o.Heading, { variant: "heading-xxl/bold", children: h.intl.string(h.t.csrAMJ) }),
+                    (0, i.jsx)(o.Text, { variant: "text-xs/semibold", children: h.intl.string(h.t["m1+IBn"]) }),
+                    (0, i.jsx)(s.$nd, { variant: "primary", text: h.intl.string(h.t.fIv16B), onClick: () => E(!0) }),
                 ],
             });
         else
             return (0, i.jsxs)("div", {
-                className: h.k,
+                className: _.k,
                 children: [
-                    (0, i.jsx)(o.Heading, { variant: "heading-xxl/bold", children: _.intl.string(_.t["Z+hCVU"]) }),
+                    (0, i.jsx)(o.Heading, { variant: "heading-xxl/bold", children: h.intl.string(h.t["Z+hCVU"]) }),
                     (0, i.jsx)(o.y$y, {}),
                 ],
             });

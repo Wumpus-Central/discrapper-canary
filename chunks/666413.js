@@ -1,27 +1,27 @@
 "use strict";
 s.d(t, { S: () => g });
 var n = s(627968),
-    r = s(64700),
-    l = s(503698),
-    i = s.n(l),
-    a = s(687498),
+    l = s(64700),
+    r = s(503698),
+    a = s.n(r),
+    i = s(407045),
     o = s(607399),
     c = s(946015),
     d = s(397927),
     u = s(854818),
-    _ = s(52264);
-let g = r.memo(function (e) {
+    _ = s(134264);
+let g = l.memo(function (e) {
     let { countdownTimerBlock: t, isVisible: s } = e,
-        r = (0, d.zhh)({
+        l = (0, d.zhh)({
             transform: `translateX(-50%) ${s ? "translateY(-75%)" : "translateY(0%)"}`,
             opacity: +!!s,
             config: { tension: 120, friction: 12 },
         });
-    return (0, n.jsxs)(a.animated.div, {
-        className: i()([_.lP, o.Fr && _.yJ]),
+    return (0, n.jsxs)(i.animated.div, {
+        className: a()([_.lP, o.Fr && _.yJ]),
         role: "status",
         style: {
-            ...r,
+            ...l,
             ...(null != t.bannerUrl &&
                 "" !== t.bannerUrl && {
                     backgroundImage: `url(${t.bannerUrl})`,

@@ -1,3 +1,18 @@
-n.exports = JSON.parse(
-    '{"+utqaz":["T\xf9y chọn ảnh nền Qu\xe0 tặng: ",[1,"giftStyle"]],"B9XqQk":["Hộp"],"AJ4iir":["B\xe1nh Ngọt"],"P5keo3":["Rương"],"w84vET":["C\xe0 Ph\xea"],"6dCq/u":["Cốc"],"+HMF8k":["Nitroween"],"vd1fu/":["Hộp Ng\xe0y Lễ"],"aubYGR":["B\xe1nh Ng\xe0y Lễ"],"vjxYqU":["Rương Ng\xe0y Lễ"],"bHuJLa":["C\xe0 Ph\xea Ng\xe0y Lễ"],"M6cPwB":["Cầu Tuyết"],"GzPel1":["Hộp"]}',
-);
+"use strict";
+e.exports = {
+    kL: "container__183c2",
+    Kk: "icon__183c2",
+    dl: "size56__183c2",
+    H: "avatarContainer__183c2",
+    aV: "avatarContainerMasked__183c2",
+    UC: "clickableAvatar__183c2",
+    F2: "emptyUser__183c2",
+    Hb: "size32__183c2",
+    q1: "size24__183c2",
+    nc: "size16__183c2",
+    F_: "emptyUserDimmed__183c2",
+    WK: "avatarWithBackground__183c2",
+    my: "avatar__183c2",
+    In: "moreUsers__183c2",
+    iq: "moreUsersDimmed__183c2",
+};

@@ -1,6 +1,6 @@
-!(function (e, t) {
-    t(n(989349));
-})(0, function (e) {
+!(function (e) {
+    e(n(989349));
+})(function (e) {
     "use strict";
     var t = "pagh_wa’_cha’_wej_loS_vagh_jav_Soch_chorgh_Hut".split("_");
     function n(e) {
@@ -24,7 +24,7 @@
                 : t + " ret";
     }
     function i(e, t, n, r) {
-        var i = a(e);
+        var i = s(e);
         switch (n) {
             case "ss":
                 return i + " lup";
@@ -40,16 +40,16 @@
                 return i + " DIS";
         }
     }
-    function a(e) {
+    function s(e) {
         var n = Math.floor((e % 1e3) / 100),
             r = Math.floor((e % 100) / 10),
             i = e % 10,
-            a = "";
+            s = "";
         return (
-            n > 0 && (a += t[n] + "vatlh"),
-            r > 0 && (a += ("" !== a ? " " : "") + t[r] + "maH"),
-            i > 0 && (a += ("" !== a ? " " : "") + t[i]),
-            "" === a ? "pagh" : a
+            n > 0 && (s += t[n] + "vatlh"),
+            r > 0 && (s += ("" !== s ? " " : "") + t[r] + "maH"),
+            i > 0 && (s += ("" !== s ? " " : "") + t[i]),
+            "" === s ? "pagh" : s
         );
     }
     return e.defineLocale("tlh", {

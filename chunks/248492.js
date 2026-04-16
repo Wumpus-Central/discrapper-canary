@@ -11,7 +11,7 @@ var l = n(627968),
     _ = n(546183),
     m = n(661191),
     p = n(985018),
-    g = n(936557),
+    g = n(80701),
     h = n(532406);
 let x = (e) => {
     let { entry: t } = e,
@@ -19,11 +19,11 @@ let x = (e) => {
         x = (0, r.bG)([_.default], () => _.default.getNewestTokenForApplication(t.id)),
         A = t.getIconURL(40) ?? h,
         v = (0, c.A)({ application: t }),
-        b = a.useRef(!1);
+        f = a.useRef(!1);
     a.useEffect(() => {
-        b.current || (d.A.fetch(), (b.current = !0));
+        f.current || (d.A.fetch(), (f.current = !0));
     }, []);
-    let f = null != x ? m.default.extractTimestamp(x.id) : void 0;
+    let b = null != x ? m.default.extractTimestamp(x.id) : void 0;
     return (0, l.jsxs)("div", {
         className: g.kL,
         children: [
@@ -66,12 +66,12 @@ let x = (e) => {
                                                   variant: "text-md/normal",
                                                   children: t.bot?.tag,
                                               }),
-                                              null != f &&
+                                              null != b &&
                                                   (0, l.jsx)(s.Text, {
                                                       color: "text-default",
                                                       variant: "text-md/normal",
                                                       children: p.intl.formatToPlainString(p.t.C9rUO8, {
-                                                          authorizedAt: f,
+                                                          authorizedAt: b,
                                                       }),
                                                   }),
                                           ],

@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(445887),
+    o = n(407045),
     l = n(311907),
     u = n(397927),
     c = n(387755),
@@ -31,8 +31,8 @@ var r = n(627968),
     L = n(954571),
     w = n(486020),
     M = n(203982),
-    x = n(427262),
-    P = n(313961),
+    P = n(427262),
+    x = n(313961),
     k = n(850226),
     U = n(717319),
     G = n(384059),
@@ -40,15 +40,15 @@ var r = n(627968),
     V = n(650583),
     B = n(731854),
     H = n(985018),
-    j = n(25051),
-    Y = n(778437);
+    j = n(384043),
+    Y = n(604949);
 let W = 80,
     K = 40,
     $ = 32;
 function z(e) {
     let { voiceState: t, user: n, channel: i } = e,
         s = (0, l.bG)([v.A], () => v.A.getStreamForUser(n.id, i.guild_id)),
-        a = (0, x.tx)(n);
+        a = (0, P.tx)(n);
     return (0, r.jsxs)("div", {
         className: j.q7,
         children: [
@@ -85,13 +85,13 @@ function q(e) {
         Q = null != X ? w.Ay.getGuildIconURL({ id: X.id, icon: X.icon, size: K }) : null,
         J = (0, g.Y)(S, K, !0) ?? Q,
         ee = (0, A.Ay)(S),
-        et = (0, l.yK)([O.Ay, P.A], () =>
-            O.Ay.getVoiceStatesForChannel(S).filter((e) => !P.A.getGuildRingingUsers(S.id).has(e.user.id)),
+        et = (0, l.yK)([O.Ay, x.A], () =>
+            O.Ay.getVoiceStatesForChannel(S).filter((e) => !x.A.getGuildRingingUsers(S.id).has(e.user.id)),
         ),
         [en, er] = (0, l.yK)([C.Ay], () => [C.Ay.supports(B.O5.VIDEO), Object.keys(C.Ay.getVideoDevices()).length]),
-        ei = (0, l.bG)([P.A], () => P.A.getVideoParticipants(S.id).length > 0),
+        ei = (0, l.bG)([x.A], () => x.A.getVideoParticipants(S.id).length > 0),
         es = (0, l.bG)([R.default], () => R.default.getUser(v)),
-        ea = (0, x.tx)(es),
+        ea = (0, P.tx)(es),
         eo = ei && en && er > 0,
         el = i.useCallback((e) => {
             null != e.top && null != e.left && d.A.move(e.left, e.top);

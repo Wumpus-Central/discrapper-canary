@@ -14,13 +14,13 @@ var i = n(627968),
     m = n(736339),
     p = n(701952),
     g = n(652215),
-    f = n(968353);
-function x(e, t) {
+    f = n(84593);
+function E(e, t) {
     if (e.length !== t.length) return !1;
     for (let n = 0; n < e.length; n++) if (e[n].conversation.id !== t[n].conversation.id) return !1;
     return !0;
 }
-function E(e, t) {
+function x(e, t) {
     if (e.size !== t.size) return !1;
     for (let n of e) if (!t.has(n)) return !1;
     return !0;
@@ -196,9 +196,9 @@ let I = ["high", "medium", "low"],
             null != r && null != m.current && m.current.scrollIntoView({ behavior: "smooth", block: "center" });
         }, [r]);
         let g = h.default.extractTimestamp(t.start_message_id),
-            x = h.default.extractTimestamp(t.end_message_id),
-            E = (0, d.e)({ timestamp: g }),
-            I = Math.max(1, Math.round((x - g) / 1e3)),
+            E = h.default.extractTimestamp(t.end_message_id),
+            x = (0, d.e)({ timestamp: g }),
+            I = Math.max(1, Math.round((E - g) / 1e3)),
             N = (0, o.WR)({ seconds: I, getFormatter: o.i }),
             T = t.summary_map?.entries.find((e) => "TOPIC_EXTRACTION_SUMMARY" === e.summary_type),
             S = null != T ? (0, p.i)(T.content_json) : null;
@@ -240,7 +240,7 @@ let I = ["high", "medium", "low"],
                     color: "text-muted",
                     className: f.FR,
                     children: [
-                        E,
+                        x,
                         " ago \xb7 ",
                         N,
                         " duration \xb7 ",
@@ -354,8 +354,8 @@ let I = ["high", "medium", "low"],
     });
 function T(e) {
     let { channel: t } = e,
-        n = (0, s.bG)([m.A], () => m.A.getChannelConversations(t.id), [t.id], x),
-        o = (0, s.bG)([m.A], () => m.A.getVisibleConversationIds(t.id), [t.id], E),
+        n = (0, s.bG)([m.A], () => m.A.getChannelConversations(t.id), [t.id], E),
+        o = (0, s.bG)([m.A], () => m.A.getVisibleConversationIds(t.id), [t.id], x),
         d = (0, s.bG)([m.A], () => m.A.hasMoreConversations(t.id, "before"), [t.id]),
         u = (0, s.bG)([m.A], () => m.A.hasMoreConversations(t.id, "after"), [t.id]),
         h = (0, s.bG)([m.A], () => m.A.isPendingFetch(t.id), [t.id]),

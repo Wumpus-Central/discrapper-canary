@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { H: () => E, Q: () => N });
+n.d(t, { H: () => g, Q: () => R });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(284009),
     l = n.n(o),
     u = n(621466),
@@ -12,20 +12,20 @@ var r = n(627968),
     _ = n(43990),
     f = n(508382),
     p = n(365912),
-    h = n(992910);
+    h = n(56553);
 let m = new WeakMap();
-function g(e) {
+function E(e) {
     let t = (0, u.p3)(e, h.qd);
     return null == t && (t = (0, u.wB)(e, f.IP)), t ?? null;
 }
-function E(e, t) {
+function g(e, t) {
     if (e.contains(t)) return !0;
-    let n = g(t);
+    let n = E(t);
     for (; null != n; ) {
         let t = m.get(n);
         if (null == t) break;
         if (e.contains(t)) return !0;
-        n = g(t);
+        n = E(t);
     }
     return !1;
 }
@@ -51,7 +51,7 @@ function T(e, t, n, r) {
             throw Error(`Unexpected position: ${e}`);
     }
 }
-function y(e, t, n) {
+function S(e, t, n) {
     return {
         top: e.top - n,
         left: e.left - t,
@@ -61,7 +61,7 @@ function y(e, t, n) {
         height: e.height,
     };
 }
-function S(e) {
+function y(e) {
     switch (e) {
         case "top":
             return "bottom";
@@ -94,16 +94,16 @@ function v(e, t, n) {
     }
     return n;
 }
-function C(e) {
+function N(e) {
     let { targetRef: t, overrideTargetRect: n } = e;
     return null != n ? n : (l()(null != t.current, "Invalid ref"), t.current.getBoundingClientRect());
 }
-function b(e, t) {
-    let n = C(e),
-        r = C(t);
+function C(e, t) {
+    let n = N(e),
+        r = N(t);
     return n.top === r.top && n.left === r.left;
 }
-class N extends i.Component {
+class R extends i.Component {
     static defaultProps = { nudgeAlignIntoViewport: !1, spacing: 0, autoInvert: !1, disablePointerEvents: !1 };
     elementRef = i.createRef();
     state = {
@@ -119,8 +119,8 @@ class N extends i.Component {
         let { nudgeAlignIntoViewport: r } = this.props;
         if (!r) return e;
         let i = n.offsetWidth,
-            a = e + t.offsetWidth - i + A;
-        return a > 0 ? Math.max(A, e - a) : Math.max(A, e);
+            s = e + t.offsetWidth - i + A;
+        return s > 0 ? Math.max(A, e - s) : Math.max(A, e);
     }
     nudgeRightAlignment(e, t, n) {
         let { nudgeAlignIntoViewport: r } = this.props;
@@ -129,23 +129,23 @@ class N extends i.Component {
         return Math.min(n.offsetWidth - e - i - A, 0);
     }
     getHorizontalAlignmentStyle(e, t, n, r) {
-        let { align: i, offset: a = 0 } = this.props;
+        let { align: i, offset: s = 0 } = this.props;
         switch (i) {
             case "left": {
-                let i = this.formatDimension(this.nudgeLeftAlignment(e.left + a, t, n)),
-                    s = this.formatDimension(e.left + a) - i;
-                return { style: { ...r, left: i }, nudge: s };
+                let i = this.formatDimension(this.nudgeLeftAlignment(e.left + s, t, n)),
+                    a = this.formatDimension(e.left + s) - i;
+                return { style: { ...r, left: i }, nudge: a };
             }
             case "right": {
-                let i = this.formatDimension(n.offsetWidth - e.right - a),
-                    s = this.nudgeRightAlignment(i, t, n);
-                return { style: { ...r, right: i + s }, nudge: 0 };
+                let i = this.formatDimension(n.offsetWidth - e.right - s),
+                    a = this.nudgeRightAlignment(i, t, n);
+                return { style: { ...r, right: i + a }, nudge: 0 };
             }
             case "center": {
-                let i = e.left + (e.width - t.offsetWidth) / 2 + a,
-                    s = this.formatDimension(this.nudgeLeftAlignment(i, t, n)),
-                    o = this.formatDimension(i) - s;
-                return { style: { ...r, left: s }, nudge: o };
+                let i = e.left + (e.width - t.offsetWidth) / 2 + s,
+                    a = this.formatDimension(this.nudgeLeftAlignment(i, t, n)),
+                    o = this.formatDimension(i) - a;
+                return { style: { ...r, left: a }, nudge: o };
             }
             default:
                 throw Error(`Unsupported align: ${i}`);
@@ -161,29 +161,29 @@ class N extends i.Component {
     nudgeBottomAlignment(e, t, n) {
         let { nudgeAlignIntoViewport: r } = this.props,
             i = n.offsetHeight,
-            a = i - e;
-        if (!r) return a;
-        let s = a + t.offsetHeight - i + A;
-        return s > 0 ? Math.max(A, a - s) : a;
+            s = i - e;
+        if (!r) return s;
+        let a = s + t.offsetHeight - i + A;
+        return a > 0 ? Math.max(A, s - a) : s;
     }
     getVerticalAlignmentStyle(e, t, n, r) {
-        let { align: i, offset: a = 0 } = this.props;
+        let { align: i, offset: s = 0 } = this.props;
         switch (i) {
             case "top": {
-                let i = this.formatDimension(this.nudgeTopAlignment(e.top + a, t, n)),
-                    s = this.formatDimension(e.top + a) - i;
-                return { style: { ...r, top: i }, nudge: s };
+                let i = this.formatDimension(this.nudgeTopAlignment(e.top + s, t, n)),
+                    a = this.formatDimension(e.top + s) - i;
+                return { style: { ...r, top: i }, nudge: a };
             }
             case "bottom": {
-                let i = this.formatDimension(this.nudgeBottomAlignment(e.bottom + a, t, n)),
-                    s = this.formatDimension(e.bottom + a) - i;
-                return { style: { ...r, bottom: i }, nudge: s };
+                let i = this.formatDimension(this.nudgeBottomAlignment(e.bottom + s, t, n)),
+                    a = this.formatDimension(e.bottom + s) - i;
+                return { style: { ...r, bottom: i }, nudge: a };
             }
             case "center": {
-                let i = e.top + (e.height - t.offsetHeight) / 2 + a,
-                    s = this.formatDimension(this.nudgeTopAlignment(i, t, n)),
-                    o = this.formatDimension(i) - s;
-                return { style: { ...r, top: s }, nudge: o };
+                let i = e.top + (e.height - t.offsetHeight) / 2 + s,
+                    a = this.formatDimension(this.nudgeTopAlignment(i, t, n)),
+                    o = this.formatDimension(i) - a;
+                return { style: { ...r, top: a }, nudge: o };
             }
             default:
                 throw Error(`Unsupported align: ${i}`);
@@ -191,9 +191,9 @@ class N extends i.Component {
     }
     calculatePositionStyle(e, t, n, r) {
         let { spacing: i = 0 } = this.props,
-            a = C(this.props),
-            s = n.getBoundingClientRect(),
-            o = y(a, s.left, s.top);
+            s = N(this.props),
+            a = n.getBoundingClientRect(),
+            o = S(s, a.left, a.top);
         switch (e) {
             case "top":
                 return this.getHorizontalAlignmentStyle(o, t, n, { bottom: n.offsetHeight - o.top + i });
@@ -222,36 +222,36 @@ class N extends i.Component {
             n = this.elementRef.current;
         l()(null != n, "Unexpected null element");
         let r = (0, p.J$)(n),
-            { style: i, nudge: a } = this.calculatePositionStyle(e, n, r),
-            s = { position: e, style: i, nudge: a },
+            { style: i, nudge: s } = this.calculatePositionStyle(e, n, r),
+            a = { position: e, style: i, nudge: s },
             o = T(e, i, n, r),
             u = o,
             c = null,
             d = 0;
         if (t && o < 0) {
-            let t = S(e),
+            let t = y(e),
                 i = this.calculatePositionStyle(t, n, r);
             (c = i.style), (d = i.nudge);
-            let a = T(t, c, n, r);
-            if ((a > o && ((s = { position: t, style: c, nudge: d }), (u = a)), o < 0 && a < 0)) {
+            let s = T(t, c, n, r);
+            if ((s > o && ((a = { position: t, style: c, nudge: d }), (u = s)), o < 0 && s < 0)) {
                 let i,
-                    a = s.position;
+                    s = a.position;
                 if (
                     (i =
-                        "top" === a || "bottom" === a
+                        "top" === s || "bottom" === s
                             ? "overlap_vertical"
-                            : "left" === a || "right" === a
+                            : "left" === s || "right" === s
                               ? "overlap_horizontal"
-                              : a) !== e &&
+                              : s) !== e &&
                     i !== t
                 ) {
-                    let e = this.calculatePositionStyle(i, n, r, a),
-                        t = T(S(a), e.style, n, r);
-                    t > u && ((s = { position: a, ...e }), (u = t));
+                    let e = this.calculatePositionStyle(i, n, r, s),
+                        t = T(y(s), e.style, n, r);
+                    t > u && ((a = { position: s, ...e }), (u = t));
                 }
             }
         }
-        return v(u, n, s);
+        return v(u, n, a);
     }
     componentDidMount() {
         let { targetRef: e, onMount: t } = this.props;
@@ -263,7 +263,7 @@ class N extends i.Component {
             t?.();
     }
     componentDidUpdate(e, t) {
-        (I(e) === I(this.props) && b(e, this.props)) || this.updatePosition(),
+        (I(e) === I(this.props) && C(e, this.props)) || this.updatePosition(),
             t.position !== this.state.position && this.props.onPositionChange?.(this.state.position);
     }
     componentWillUnmount() {
@@ -288,11 +288,11 @@ class N extends i.Component {
               : Math.max(0, t.offsetHeight - 2 * A);
     }
     render() {
-        let { id: e, className: t, children: n, fixed: i, disablePointerEvents: a, clickTrap: o = !1 } = this.props,
+        let { id: e, className: t, children: n, fixed: i, disablePointerEvents: s, clickTrap: o = !1 } = this.props,
             { position: l, isPositioned: u, nudge: f } = this.state,
             p = this.calculateMaxHeight();
         return (0, r.jsx)("div", {
-            className: s()({ [h.ld]: !0, [h.x7]: o }),
+            className: a()({ [h.ld]: !0, [h.x7]: o }),
             children: (0, r.jsx)(d.aS, {
                 children: (o) => {
                     let { disableAdaptiveTheme: d } = o;
@@ -301,7 +301,7 @@ class N extends i.Component {
                         children: (o) =>
                             (0, r.jsx)("div", {
                                 id: e,
-                                className: s()(t, o, h.qd, { [h.CA]: !1, [h.Hc]: a }),
+                                className: a()(t, o, h.qd, { [h.CA]: !1, [h.Hc]: s }),
                                 style: {
                                     position: i ? "fixed" : "absolute",
                                     ...this.state.style,

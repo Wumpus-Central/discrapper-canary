@@ -1,6 +1,6 @@
-!(function (e, t) {
-    t(n(989349));
-})(0, function (e) {
+!(function (e) {
+    e(n(989349));
+})(function (e) {
     "use strict";
     var t =
             "janu\xe1r_febru\xe1r_marec_apr\xedl_m\xe1j_j\xfan_j\xfal_august_september_okt\xf3ber_november_december".split(
@@ -11,38 +11,38 @@
         return e > 1 && e < 5;
     }
     function i(e, t, n, i) {
-        var a = e + " ";
+        var s = e + " ";
         switch (n) {
             case "s":
                 return t || i ? "p\xe1r sek\xfand" : "p\xe1r sekundami";
             case "ss":
-                if (t || i) return a + (r(e) ? "sekundy" : "sek\xfand");
-                return a + "sekundami";
+                if (t || i) return s + (r(e) ? "sekundy" : "sek\xfand");
+                return s + "sekundami";
             case "m":
                 return t ? "min\xfata" : i ? "min\xfatu" : "min\xfatou";
             case "mm":
-                if (t || i) return a + (r(e) ? "min\xfaty" : "min\xfat");
-                return a + "min\xfatami";
+                if (t || i) return s + (r(e) ? "min\xfaty" : "min\xfat");
+                return s + "min\xfatami";
             case "h":
                 return t ? "hodina" : i ? "hodinu" : "hodinou";
             case "hh":
-                if (t || i) return a + (r(e) ? "hodiny" : "hod\xedn");
-                return a + "hodinami";
+                if (t || i) return s + (r(e) ? "hodiny" : "hod\xedn");
+                return s + "hodinami";
             case "d":
                 return t || i ? "deň" : "dňom";
             case "dd":
-                if (t || i) return a + (r(e) ? "dni" : "dn\xed");
-                return a + "dňami";
+                if (t || i) return s + (r(e) ? "dni" : "dn\xed");
+                return s + "dňami";
             case "M":
                 return t || i ? "mesiac" : "mesiacom";
             case "MM":
-                if (t || i) return a + (r(e) ? "mesiace" : "mesiacov");
-                return a + "mesiacmi";
+                if (t || i) return s + (r(e) ? "mesiace" : "mesiacov");
+                return s + "mesiacmi";
             case "y":
                 return t || i ? "rok" : "rokom";
             case "yy":
-                if (t || i) return a + (r(e) ? "roky" : "rokov");
-                return a + "rokmi";
+                if (t || i) return s + (r(e) ? "roky" : "rokov");
+                return s + "rokmi";
         }
     }
     return e.defineLocale("sk", {

@@ -1,4 +1,4 @@
-n.d(t, { default: () => A });
+n.d(t, { default: () => I });
 var l = n(627968),
     i = n(64700),
     s = n(735438),
@@ -16,13 +16,13 @@ var l = n(627968),
     p = n(76596),
     v = n(539916),
     C = n(985018),
-    f = n(35983);
-function A(e) {
-    let { transitionState: t, onClose: n, onSave: s, onDelete: x, option: h, guild: A, prompt: b, index: k } = e,
-        E = (0, o.bG)([m.Ay], () => m.Ay.getDefaultChannel(A.id)),
+    f = n(588383);
+function I(e) {
+    let { transitionState: t, onClose: n, onSave: s, onDelete: x, option: h, guild: I, prompt: k, index: b } = e,
+        E = (0, o.bG)([m.Ay], () => m.Ay.getDefaultChannel(I.id)),
         [N, S] = i.useState(() => h?.emoji ?? null),
         [y, P] = i.useState(() => h?.title ?? ""),
-        [_, T] = i.useState(() => h?.description ?? ""),
+        [T, _] = i.useState(() => h?.description ?? ""),
         [R, M] = i.useState(() => new Set(h?.channelIds ?? [])),
         [B, w] = i.useState(() => new Set(h?.roleIds ?? [])),
         [D, L] = i.useState({}),
@@ -35,21 +35,21 @@ function A(e) {
                 c = {
                     id: h?.id ?? `${Date.now()}`,
                     title: y,
-                    description: _,
+                    description: T,
                     channelIds: Array.from(R).sort(),
                     roleIds: Array.from(B).sort(),
                     emoji: null == N ? void 0 : N,
                 },
                 d =
-                    ((e = A),
+                    ((e = I),
                     (t = g.A.editedOnboardingPrompts),
-                    (l = b),
+                    (l = k),
                     (r = {}),
                     (i = c).title.length <= 0 && (r.title = C.intl.string(C.t.p3PKzA)),
                     null != (o = (0, j.fO)(e, t, l, i)) && (r.roles = o),
                     r);
             L(d), a().isEmpty(d) && (s(c), n());
-        }, [R, _, N, A, n, s, h?.id, b, B, y]),
+        }, [R, T, N, I, n, s, h?.id, k, B, y]),
         G = i.useMemo(
             () => [
                 { text: C.intl.string(C.t["ETE/oC"]), onClick: n, variant: "secondary" },
@@ -58,8 +58,8 @@ function A(e) {
             [z, n],
         );
     return (0, l.jsx)(r.Modal, {
-        title: C.intl.formatToPlainString(C.t.yjS3zs, { index: k + 1 }),
-        subtitle: null != b.title && b.title.length > 0 ? b.title : C.intl.string(C.t.vY91C9),
+        title: C.intl.formatToPlainString(C.t.yjS3zs, { index: b + 1 }),
+        subtitle: null != k.title && k.title.length > 0 ? k.title : C.intl.string(C.t.vY91C9),
         transitionState: t,
         onClose: n,
         actions: G,
@@ -89,8 +89,8 @@ function A(e) {
                         }),
                         (0, l.jsx)(c.ksK, {
                             placeholder: C.intl.string(C.t.mIjgJK),
-                            value: _,
-                            onChange: (e) => T(e),
+                            value: T,
+                            onChange: (e) => _(e),
                             maxLength: v.QY,
                         }),
                     ],
@@ -103,14 +103,14 @@ function A(e) {
                             gap: 8,
                             children: [
                                 (0, l.jsx)(d.A, {
-                                    guildId: A.id,
+                                    guildId: I.id,
                                     selectedChannelIds: R,
                                     placeholder: C.intl.string(C.t.vephiL),
                                     onChange: M,
                                     helperText: C.intl.string(C.t.SoT6we),
                                 }),
                                 (0, l.jsx)(u.A, {
-                                    guildId: A.id,
+                                    guildId: I.id,
                                     selectedRoleIds: B,
                                     disableEveryoneRole: !0,
                                     placeholder: C.intl.string(C.t.aFO1I6),
@@ -121,7 +121,7 @@ function A(e) {
                             ],
                         }),
                         null == D.roles ? null : (0, l.jsx)(c.dzK, { error: D.roles }),
-                        (0, l.jsx)(I, { guild: A, roleIds: B }),
+                        (0, l.jsx)(A, { guild: I, roleIds: B }),
                     ],
                 }),
                 (0, l.jsx)(c.cGx, {}),
@@ -137,7 +137,7 @@ function A(e) {
         }),
     });
 }
-function I(e) {
+function A(e) {
     let { guild: t, roleIds: n } = e,
         i = (0, o.bG)([x.A], () => x.A.getManyRoles(t.id, n).find(h.J));
     return null == i

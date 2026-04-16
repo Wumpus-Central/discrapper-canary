@@ -5,7 +5,7 @@ n(64700);
 var s = n(397927),
     l = n(527678),
     r = n(985018),
-    a = n(547902);
+    a = n(47022);
 function o() {
     return (0, i.jsxs)("div", {
         className: a.kL,

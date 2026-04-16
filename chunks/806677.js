@@ -37,8 +37,8 @@ var r = t(627968),
     R = t(518477),
     W = t(699976),
     B = t(985018),
-    D = t(831096),
-    F = t(829032);
+    D = t(79304),
+    F = t(273944);
 function Q(e) {
     let { onSelectSku: i, priceOptions: t, showPromotionalGiftBanner: a } = e;
     return (0, r.jsxs)("div", {

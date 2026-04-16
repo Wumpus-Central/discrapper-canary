@@ -7,7 +7,7 @@ var i = n(627968),
     o = n(486020),
     d = n(900848),
     c = n(550591),
-    u = n(78043);
+    u = n(962795);
 function h(e) {
     let [t, h] = l.useState(!1),
         A = (0, s.Vd)(`guild-${e.id}`);

@@ -2,29 +2,29 @@ n.d(t, { A: () => g });
 var i = n(627968),
     s = n(64700),
     l = n(158954),
-    a = n(964486),
-    r = n(933297),
-    o = n(38456);
+    r = n(964486),
+    a = n(933297),
+    o = n(562248);
 function d(e) {
     let { button: t } = e,
-        [n, a] = s.useState(!1),
-        r = t.useText(),
+        [n, r] = s.useState(!1),
+        a = t.useText(),
         o = async () => {
-            a(!0);
+            r(!0);
             try {
                 await t.onClick();
             } finally {
-                a(!1);
+                r(!1);
             }
         };
-    return (0, i.jsx)(l.$nd, { variant: "secondary", text: r, onClick: o, loading: n, disabled: n });
+    return (0, i.jsx)(l.$nd, { variant: "secondary", text: a, onClick: o, loading: n, disabled: n });
 }
 function c(e) {
     let { notice: t } = e,
-        { noticeType: n, useTitle: s, useText: r, button: o } = t,
+        { noticeType: n, useTitle: s, useText: a, button: o } = t,
         c = s?.(),
-        u = r();
-    (0, a.Ay)(() => {
+        u = a();
+    (0, r.Ay)(() => {
         t.trackView?.();
     });
     let m = (0, i.jsxs)(l.BJc, {
@@ -54,9 +54,9 @@ function u(e) {
 function m(e) {
     let { notice: t } = e;
     switch (t.type) {
-        case r.lT.INLINE_NOTICE:
+        case a.lT.INLINE_NOTICE:
             return (0, i.jsx)(c, { notice: t });
-        case r.lT.STRONGLY_DISCOURAGED_CUSTOM:
+        case a.lT.STRONGLY_DISCOURAGED_CUSTOM:
             return (0, i.jsx)(u, { notice: t });
     }
 }

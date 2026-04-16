@@ -1,6 +1,6 @@
-!(function (t, n) {
-    e.exports = n();
-})(0, function () {
+!(function (t) {
+    e.exports = t();
+})(function () {
     "use strict";
     var e = /\r\n?/g,
         t = /\t/g,
@@ -178,14 +178,14 @@
         v = "(?:[*+-]|\\d+\\.)",
         N = "( *)(" + v + ") +",
         C = RegExp("^" + N),
-        b = RegExp(N + "[^\\n]*(?:\\n(?!\\1" + v + " )[^\\n]*)*(\n|$)", "gm"),
-        R = /\n{2,}$/,
-        O = /^ (?= *`)|(` *) $/g,
-        D = R,
+        R = RegExp(N + "[^\\n]*(?:\\n(?!\\1" + v + " )[^\\n]*)*(\n|$)", "gm"),
+        O = /\n{2,}$/,
+        b = /^ (?= *`)|(` *) $/g,
+        D = O,
         L = / *\n+$/,
         w = RegExp("^( *)(" + v + ") [\\s\\S]+?(?:\n{2,}(?! )(?!\\1" + v + " )\\n*|\\s*\n*$)"),
-        x = /(?:^|\n)( *)$/,
-        M = (function () {
+        M = /(?:^|\n)( *)$/,
+        P = (function () {
             var e = /^ *\| *| *\| *$/g,
                 t = / *$/,
                 n = /^ *-+: *$/,
@@ -239,7 +239,7 @@
                 NPTABLE_REGEX: /^ *(\S.*\|.*)\n *([-:]+ *\|[-| :]*)\n((?:.*\|.*(?:\n|$))*)\n*/,
             };
         })(),
-        P = "(?:\\[[^\\]]*\\]|[^\\[\\]]|\\](?=[^\\[]*\\]))*",
+        x = "(?:\\[[^\\]]*\\]|[^\\[\\]]|\\](?=[^\\[]*\\]))*",
         k = "\\s*<?((?:\\([^)]*\\)|[^\\s\\\\]|\\\\.)*?)>?(?:\\s+['\"]([\\s\\S]*?)['\"])?\\s*",
         U = /mailto:/i,
         G = function (e, t, n) {
@@ -300,7 +300,7 @@
                     return _("h" + e.level, t(e.content, n));
                 },
             },
-            nptable: { order: V++, match: l(M.NPTABLE_REGEX), parse: M.parseNpTable, react: null, html: null },
+            nptable: { order: V++, match: l(P.NPTABLE_REGEX), parse: P.parseNpTable, react: null, html: null },
             lheading: {
                 order: V++,
                 match: l(/^([^\n]+)\n *(=|-){3,} *(?:\n *)+\n/),
@@ -363,7 +363,7 @@
                 order: V++,
                 match: function (e, t) {
                     var n = null == t.prevCapture ? "" : t.prevCapture[0],
-                        r = x.exec(n),
+                        r = M.exec(n),
                         i = t._list || !t.inline;
                     return r && i ? ((e = r[1] + e), w.exec(e)) : null;
                 },
@@ -371,7 +371,7 @@
                     var r = e[2],
                         i = r.length > 1,
                         s = i ? +r : void 0,
-                        a = e[0].replace(D, "\n").match(b),
+                        a = e[0].replace(D, "\n").match(R),
                         o = !1;
                     return {
                         ordered: i,
@@ -439,8 +439,8 @@
             },
             table: {
                 order: V++,
-                match: l(M.TABLE_REGEX),
-                parse: M.parseTable,
+                match: l(P.TABLE_REGEX),
+                parse: P.parseTable,
                 react: function (e, t, n) {
                     var r = function (t) {
                             return null == e.align[t] ? {} : { textAlign: e.align[t] };
@@ -572,7 +572,7 @@
             link: {
                 order: V++,
                 requiredFirstCharacters: ["["],
-                match: o(RegExp("^\\[(" + P + ")\\]\\(" + k + "\\)")),
+                match: o(RegExp("^\\[(" + x + ")\\]\\(" + k + "\\)")),
                 parse: function (e, t, n) {
                     return { content: t(e[1], n), target: A(e[2]), title: e[3] };
                 },
@@ -586,7 +586,7 @@
             },
             image: {
                 order: V++,
-                match: o(RegExp("^!\\[(" + P + ")\\]\\(" + k + "\\)")),
+                match: o(RegExp("^!\\[(" + x + ")\\]\\(" + k + "\\)")),
                 parse: function (e, t, n) {
                     return { alt: e[1], target: A(e[2]), title: e[3] };
                 },
@@ -599,7 +599,7 @@
             },
             reflink: {
                 order: V++,
-                match: o(RegExp("^\\[(" + P + ")\\]\\s*\\[([^\\]]*)\\]")),
+                match: o(RegExp("^\\[(" + x + ")\\]\\s*\\[([^\\]]*)\\]")),
                 parse: function (e, t, n) {
                     return G(e, n, { type: "link", content: t(e[1], n) });
                 },
@@ -608,7 +608,7 @@
             },
             refimage: {
                 order: V++,
-                match: o(RegExp("^!\\[(" + P + ")\\]\\s*\\[([^\\]]*)\\]")),
+                match: o(RegExp("^!\\[(" + x + ")\\]\\s*\\[([^\\]]*)\\]")),
                 parse: function (e, t, n) {
                     return G(e, n, { type: "image", alt: e[1] });
                 },
@@ -685,7 +685,7 @@
                 requiredFirstCharacters: ["`"],
                 match: o(/^(`+)([\s\S]*?[^`])\1(?!`)/),
                 parse: function (e, t, n) {
-                    return { content: e[2].replace(O, "$1") };
+                    return { content: e[2].replace(b, "$1") };
                 },
                 react: function (e, t, n) {
                     return d("code", n.key, { children: e.content });
@@ -778,20 +778,20 @@
             };
         },
         K = a(B),
-        z = function (e, t) {
+        $ = function (e, t) {
             return ((t = t || {}).inline = !1), K(e, t);
         },
-        $ = function (e, t) {
+        z = function (e, t) {
             return ((t = t || {}).inline = !0), K(e, t);
         },
         q = function (e, t) {
-            var n = R.test(e);
+            var n = O.test(e);
             return ((t = t || {}).inline = !n), K(e, t);
         },
         Z = W(B, "react"),
         X = W(B, "html"),
         Q = function (e, t) {
-            return Z(z(e, t), t);
+            return Z($(e, t), t);
         },
         J = function (e) {
             var t = {};
@@ -809,11 +809,11 @@
         parseBlock: T,
         markdownToReact: Q,
         markdownToHtml: function (e, t) {
-            return X(z(e, t), t);
+            return X($(e, t), t);
         },
         ReactMarkdown: J,
-        defaultBlockParse: z,
-        defaultInlineParse: $,
+        defaultBlockParse: $,
+        defaultInlineParse: z,
         defaultImplicitParse: q,
         defaultReactOutput: Z,
         defaultHtmlOutput: X,

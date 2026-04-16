@@ -1,19 +1,19 @@
 n.d(t, { d: () => A, o: () => u });
 var i = n(627968),
-    a = n(409626),
-    r = n(692969),
-    l = n(562153),
+    l = n(409626),
+    a = n(692969),
+    r = n(562153),
     s = n(415043),
     o = n(617086),
     d = n(985018),
-    c = n(638398);
+    c = n(73934);
 function u(e) {
     let { applicationId: t, ...n } = e,
-        a = (0, o.A)(t);
-    return a.length > 0
+        l = (0, o.A)(t);
+    return l.length > 0
         ? (0, i.jsx)(s.A, {
-              label: d.intl.formatToPlainString(d.t.ujhJdG, { numFriends: a.length }),
-              users: a,
+              label: d.intl.formatToPlainString(d.t.ujhJdG, { numFriends: l.length }),
+              users: l,
               maxUsers: 4,
               ...n,
           })
@@ -22,14 +22,14 @@ function u(e) {
 function A(e) {
     var t, n, u;
     let A,
-        { userId: _, applicationId: h, guildId: m, channelId: g, className: p } = e,
-        E = (0, o.A)(h),
+        { userId: h, applicationId: _, guildId: m, channelId: g, className: p } = e,
+        E = (0, o.A)(_),
         I = E.length > 0,
         f =
             ((t = E),
             (n = m),
             (u = g),
-            (A = t.slice(0, 3).map((e) => l.Ay.getName(n, u, e))),
+            (A = t.slice(0, 3).map((e) => r.Ay.getName(n, u, e))),
             1 === t.length
                 ? d.intl.formatToPlainString(d.t.FURqTU, { name: A[0] })
                 : 2 === t.length
@@ -42,11 +42,11 @@ function A(e) {
                           name3: A[2],
                           numPeople: t.length - 3,
                       })),
-        C = (0, r.A)({
+        C = (0, a.A)({
             location: "SocialProofButton",
-            applicationId: h,
-            source: a.Ob.UserProfile,
-            sourceUserId: _,
+            applicationId: _,
+            source: l.Ob.UserProfile,
+            sourceUserId: h,
             trackEntryPointImpression: !0,
         });
     return I && null != C

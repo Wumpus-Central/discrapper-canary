@@ -2,8 +2,8 @@
 n.d(t, { A: () => T }), n(321073);
 var r = n(627968),
     i = n(64700),
-    a = n(311907),
-    s = n(827734),
+    s = n(311907),
+    a = n(827734),
     o = n(397927),
     l = n(367513),
     u = n(31728),
@@ -14,38 +14,38 @@ var r = n(627968),
     p = n(334463),
     h = n(287809),
     m = n(652215),
-    g = n(806931),
-    E = n(985018),
-    A = n(319567);
+    E = n(806931),
+    g = n(985018),
+    A = n(27600);
 function I(e) {
-    let { closePopout: t, idle: n, pipWindows: i, voiceChannelId: s, onSelect: h } = e;
+    let { closePopout: t, idle: n, pipWindows: i, voiceChannelId: a, onSelect: h } = e;
     n && t();
-    let A = (0, a.bG)([c.Ay], () => c.Ay.getCurrentEmbeddedActivity()),
-        I = (0, a.bG)([p.A], () => p.A.pipWindow),
-        T = (0, a.bG)([_.A], () => _.A.getSelectedParticipant(s)),
-        y = (0, a.bG)([_.A], () => _.A.getStreamParticipants(s));
-    function S(e) {
+    let A = (0, s.bG)([c.Ay], () => c.Ay.getCurrentEmbeddedActivity()),
+        I = (0, s.bG)([p.A], () => p.A.pipWindow),
+        T = (0, s.bG)([_.A], () => _.A.getSelectedParticipant(a)),
+        S = (0, s.bG)([_.A], () => _.A.getStreamParticipants(a));
+    function y(e) {
         I?.id !== e.pipWindow.id && (0, u.mf)(e.pipWindow.id);
         let t = e.participant;
-        null != t && t.type !== g.lp.ACTIVITY && l.A.selectParticipant(s, t.id);
+        null != t && t.type !== E.lp.ACTIVITY && l.A.selectParticipant(a, t.id);
     }
     function v(e) {
         if (e.pipWindow.component === m.o1q.ACTIVITY && null != A) {
             let e = d.A.getApplication(A.applicationId)?.name;
             return null == e
-                ? E.intl.string(E.t["8raC1P"])
-                : E.intl.formatToPlainString(E.t["a9+V+V"], { activityName: e });
+                ? g.intl.string(g.t["8raC1P"])
+                : g.intl.formatToPlainString(g.t["a9+V+V"], { activityName: e });
         }
-        return null == e.participant || e.participant.type !== g.lp.STREAM
-            ? E.intl.string(E.t["ng/Kwl"])
-            : E.intl.formatToPlainString(E.t.sqmFRg, { username: e.participant.userNick });
+        return null == e.participant || e.participant.type !== E.lp.STREAM
+            ? g.intl.string(g.t["ng/Kwl"])
+            : g.intl.formatToPlainString(g.t.sqmFRg, { username: e.participant.userNick });
     }
-    function C() {
+    function N() {
         let e = [],
             t = i.find((e) => e.component === m.o1q.VIDEO);
         return (
             null != t &&
-                y.forEach((n) => {
+                S.forEach((n) => {
                     let r = f.A.getActiveStreamForApplicationStream(n.stream),
                         i = n.id === T?.id && I?.id === t.id;
                     null == r || i || e.push({ pipWindow: t, participant: n, stream: r });
@@ -53,12 +53,12 @@ function I(e) {
             e
         );
     }
-    function b(e) {
+    function C(e) {
         let t = e.pipWindow.id,
             n = e.participant?.id,
             i = v(e),
-            a = `${t}${n ?? ""}`;
-        return (0, r.jsx)(o.Drp, { id: a, label: i, action: () => S(e) }, a);
+            s = `${t}${n ?? ""}`;
+        return (0, r.jsx)(o.Drp, { id: s, label: i, action: () => y(e) }, s);
     }
     return (0, r.jsx)(o.W1t, {
         "data-menu-migrated": !0,
@@ -66,14 +66,14 @@ function I(e) {
         "aria-label": "switch PIP",
         onClose: t,
         onSelect: h,
-        children: C().map(b),
+        children: N().map(C),
     });
 }
 let T = function (e) {
     let { voiceChannelId: t, idle: n } = e,
         l = i.useRef(null),
-        u = Array.from((0, a.bG)([p.A], () => p.A.pipWindows).values()).filter((e) => e.component !== m.o1q.ACTIVITY),
-        c = (0, a.yK)([f.A], () => f.A.getAllActiveStreamsForChannel(t)).filter(
+        u = Array.from((0, s.bG)([p.A], () => p.A.pipWindows).values()).filter((e) => e.component !== m.o1q.ACTIVITY),
+        c = (0, s.yK)([f.A], () => f.A.getAllActiveStreamsForChannel(t)).filter(
             (e) => e.ownerId !== h.default.getCurrentUser()?.id && e.channelId === t,
         ),
         d = (1 === u.length && u[0].component === m.o1q.ACTIVITY) || 0 === c.length,
@@ -89,7 +89,7 @@ let T = function (e) {
                       className: A.ro,
                       ...e,
                       innerRef: l,
-                      children: (0, r.jsx)(o.FHP, { size: "md", color: s.A.unsafe_rawColors.WHITE.css }),
+                      children: (0, r.jsx)(o.FHP, { size: "md", color: a.A.unsafe_rawColors.WHITE.css }),
                   }),
           });
 };

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => et, Sz: () => P, aI: () => x });
+n.d(t, { Ay: () => et, Sz: () => x, aI: () => P });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -30,11 +30,11 @@ var r = n(627968),
     D = n(652215),
     L = n(307731),
     w = n(985018),
-    M = n(966165);
-function x(e) {
+    M = n(81093);
+function P(e) {
     return null != e ? `autocomplete-${e}` : null;
 }
-function P(e) {
+function x(e) {
     return `autocomplete-${e}-title`;
 }
 let k = i.createContext(null);
@@ -59,7 +59,7 @@ class U extends i.PureComponent {
         return (0, r.jsx)(c.DUT, {
             ...e,
             className: a()(M.vk, n, t),
-            id: x(i) ?? void 0,
+            id: P(i) ?? void 0,
             onClick: o ? this.handleClick : void 0,
             onMouseMove: o
                 ? () => {
@@ -117,7 +117,7 @@ function V(e) {
     return (0, r.jsx)("div", {
         className: M.E3,
         children: (0, r.jsxs)(c.Heading, {
-            id: P(o.id),
+            id: x(o.id),
             className: a()(M.eu, n),
             variant: "heading-deprecated-12/semibold",
             children: [t, s],

@@ -8,7 +8,7 @@ var l = n(627968),
     E = n(734057),
     u = n(486020),
     c = n(985018),
-    _ = n(167415);
+    _ = n(208423);
 function d(e) {
     let { message: t } = e,
         n = u.Ay.getUserAvatarURL({ avatar: t.author.avatar, id: t.author.id, discriminator: t.author.discriminator }),
@@ -40,7 +40,7 @@ class A extends r.PureComponent {
         null != r &&
             (e.stopPropagation(),
             (0, s.L3)(e, async () => {
-                let { default: e } = await Promise.all([n.e("64879"), n.e("42183")]).then(n.bind(n, 847342));
+                let { default: e } = await Promise.all([n.e("64879"), n.e("1207")]).then(n.bind(n, 847342));
                 return (n) => (0, l.jsx)(e, { ...n, message: t, channel: r });
             }));
     };

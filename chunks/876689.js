@@ -2,7 +2,7 @@ n.d(t, { A: () => s });
 var l = n(627968),
     r = n(64700),
     a = n(397927),
-    i = n(876989);
+    i = n(42754);
 function s(e) {
     let { onPageChange: t, offset: n, totalCount: s, pageSize: o, renderPageWrapper: E } = e,
         u = Math.floor(n / o) + 1,

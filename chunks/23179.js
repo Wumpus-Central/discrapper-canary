@@ -5,18 +5,18 @@ var i = n(627968),
     a = n.n(s),
     r = n(311907),
     o = n(554146),
-    c = n(435371),
-    d = n(397927),
+    d = n(435371),
+    c = n(397927),
     u = n(964486),
     h = n(932001),
     A = n(651649),
     _ = n(253932),
     m = n(734057),
-    g = n(203982),
-    p = n(517381),
+    p = n(203982),
+    g = n(517381),
     f = n(822382),
-    x = n(868974),
-    E = n(771650),
+    E = n(868974),
+    x = n(771650),
     I = n(616252),
     C = n(753806),
     N = n(775427),
@@ -25,13 +25,13 @@ var i = n(627968),
     b = n(65600),
     y = n(145331),
     v = n(976966),
-    j = n(159083),
-    R = n(229374),
+    R = n(159083),
+    j = n(229374),
     O = n(310420),
     L = n(652215),
     M = n(670455),
     D = n(985018),
-    U = n(448006);
+    U = n(85942);
 class G extends l.Component {
     componentDidMount() {
         this.autoAnalytics();
@@ -103,16 +103,16 @@ function w(e) {
             search: s,
             searchContext: r,
             renderEmbeds: o,
-            onClick: c,
-            onScrollTo: d,
+            onClick: d,
+            onScrollTo: c,
             onPageChange: u,
             paginationTotalCount: h,
             renderPageWrapper: A,
             onBlockedResultsClick: _,
             searchRequestAnalyticsId: m,
-            searchResultsQuery: g,
+            searchResultsQuery: p,
         } = e,
-        { totalResults: p, isSearching: x, isIndexing: E, hasError: I } = s;
+        { totalResults: g, isSearching: E, isIndexing: x, hasError: I } = s;
     if (I)
         return (0, i.jsxs)(P, {
             children: [
@@ -120,28 +120,28 @@ function w(e) {
                 (0, i.jsx)("div", { className: a()(U.pZ, U.gJ), children: D.intl.string(D.t.uvDZBZ) }),
             ],
         });
-    if (E) {
+    if (x) {
         let e = (0, f.Y7)(r);
         return (0, i.jsxs)(P, {
-            children: [(0, i.jsx)(j.A, {}), (0, i.jsx)("div", { className: (U.pZ, U.Jy), children: e })],
+            children: [(0, i.jsx)(R.A, {}), (0, i.jsx)("div", { className: (U.pZ, U.Jy), children: e })],
         });
     }
-    if (x) return null;
-    if (p > 0)
-        return (0, i.jsx)(R.A, {
+    if (E) return null;
+    if (g > 0)
+        return (0, i.jsx)(j.A, {
             search: s,
             messages: t,
-            onClick: c,
+            onClick: d,
             blockCount: n,
             ignoreCount: l,
             renderEmbeds: o,
-            scrollTo: d,
+            scrollTo: c,
             onPageChange: u,
             paginationTotalCount: h,
             renderPageWrapper: A,
             onBlockedResultsClick: _,
             searchRequestAnalyticsId: m,
-            searchResultsQuery: g,
+            searchResultsQuery: p,
         });
     let { showNoResultsAlt: C } = s,
         N = C ? D.intl.string(D.t["VrK/2R"]) : D.intl.string(D.t.V6nAfF);
@@ -162,13 +162,13 @@ let B = [],
                 messages: u,
                 blockCount: A,
                 ignoreCount: _,
-                isFeedbackVisible: p,
-                dismissFeedbackEntrypoint: x,
+                isFeedbackVisible: g,
+                dismissFeedbackEntrypoint: E,
                 onSearchModeChange: I,
                 onPageChange: N,
                 searchMode: T,
-                onBlockedResultsClick: j,
-                searchResultsQuery: R,
+                onBlockedResultsClick: R,
+                searchResultsQuery: j,
                 selectedChannelId: O,
             } = e,
             M = l.useRef(null),
@@ -177,9 +177,9 @@ let B = [],
             }, [t]);
         l.useEffect(
             () => (
-                g._.subscribe(L.jej.SEARCH_RESULTS_CLOSE, G),
+                p._.subscribe(L.jej.SEARCH_RESULTS_CLOSE, G),
                 () => {
-                    g._.unsubscribe(L.jej.SEARCH_RESULTS_CLOSE, G);
+                    p._.unsubscribe(L.jej.SEARCH_RESULTS_CLOSE, G);
                 }
             ),
             [G],
@@ -201,18 +201,18 @@ let B = [],
             {
                 paginationTotalCount: H,
                 paginationMaxIndex: F,
-                isPaginationTotalCountLimited: K,
+                isPaginationTotalCountLimited: W,
             } = (0, S.o)({ totalResults: n.totalResults, isSearching: n.isSearching }),
-            W = l.useCallback(
+            K = l.useCallback(
                 (e, t) => {
                     let n = F + 1;
-                    if (!K || e.targetPage !== n) return t;
+                    if (!W || e.targetPage !== n) return t;
                     {
                         let e = D.intl.formatToPlainString(D.t["E+2azY"], { maxPages: n });
-                        return (0, i.jsx)(c.m_, { asContainer: !0, text: e, children: t });
+                        return (0, i.jsx)(d.m_, { asContainer: !0, text: e, children: t });
                     }
                 },
-                [K, F],
+                [W, F],
             ),
             Y = l.useCallback(
                 (e) => {
@@ -227,7 +227,7 @@ let B = [],
                     let l = m.A.getChannel(e.channel_id),
                         s = null != l ? l.getGuildId() : null,
                         r = (0, f.bS)(t),
-                        { offset: o, totalResults: c } = n;
+                        { offset: o, totalResults: d } = n;
                     (0, y.i4)({
                         searchContext: t,
                         searchRequestAnalyticsId: a,
@@ -235,7 +235,7 @@ let B = [],
                         channelId: e.channel_id,
                         messageId: e.id,
                         pageResults: null != u ? u.length : null,
-                        totalResults: c,
+                        totalResults: d,
                         limit: L.T_y,
                         page: Math.floor(o / L.T_y) + 1,
                         offset: o,
@@ -253,9 +253,9 @@ let B = [],
                 [N, t, a],
             ),
             X = Math.floor(n.offset / L.T_y),
-            J = K && X >= F,
-            Q = F + 1,
-            $ = (0, r.yK)([b.A], () => {
+            $ = W && X >= F,
+            J = F + 1,
+            Q = (0, r.yK)([b.A], () => {
                 if (0 !== n.offset) return B;
                 let e = u.length;
                 if (e < 10) return B;
@@ -273,11 +273,11 @@ let B = [],
                     ? B
                     : [o.M.SEARCH_AUTHOR_TYPE_SEARCH_RESULTS_HINT];
             }),
-            [Z, ee] = (0, h.kn)($),
+            [Z, ee] = (0, h.kn)(Q),
             et = Z === o.M.SEARCH_AUTHOR_TYPE_SEARCH_RESULTS_HINT,
             en = l.useCallback(() => {
                 if (n.isSearching) return;
-                let e = `${E.Ay[L.LWr.FILTER_AUTHOR_TYPE].key} ${D.intl.string(D.t.tPZo4p)} `;
+                let e = `${x.Ay[L.LWr.FILTER_AUTHOR_TYPE].key} ${D.intl.string(D.t.tPZo4p)} `;
                 C.A.appendToSearchInputText(t, e);
             }, [t, n.isSearching]);
         return (0, i.jsxs)("section", {
@@ -294,21 +294,21 @@ let B = [],
                     documentsIndexed: n.documentsIndexed,
                     selectedChannelId: O,
                 }),
-                (0, i.jsxs)(d.T7Y, {
+                (0, i.jsxs)(c.T7Y, {
                     ref: M,
                     className: U.XG,
                     children: [
-                        J &&
+                        $ &&
                             !n.isSearching &&
-                            (0, i.jsx)(d.po8, {
+                            (0, i.jsx)(c.po8, {
                                 className: U.VC,
-                                messageType: d.YCn.WARNING,
-                                children: D.intl.formatToPlainString(D.t["E+2azY"], { maxPages: Q }),
+                                messageType: c.YCn.WARNING,
+                                children: D.intl.formatToPlainString(D.t["E+2azY"], { maxPages: J }),
                             }),
                         et &&
-                            (0, i.jsx)(d.po8, {
+                            (0, i.jsx)(c.po8, {
                                 className: U.QR,
-                                messageType: d.YCn.INFO,
+                                messageType: c.YCn.INFO,
                                 children: D.intl.format(D.t["gQeg/R"], { handleClick: en }),
                             }),
                         (0, i.jsx)(w, {
@@ -321,15 +321,15 @@ let B = [],
                             onClick: z,
                             onScrollTo: V,
                             onPageChange: q,
-                            paginationTotalCount: K ? H : void 0,
-                            renderPageWrapper: W,
-                            onBlockedResultsClick: j,
+                            paginationTotalCount: W ? H : void 0,
+                            renderPageWrapper: K,
+                            onBlockedResultsClick: R,
                             searchRequestAnalyticsId: a,
-                            searchResultsQuery: R,
+                            searchResultsQuery: j,
                         }),
                     ],
                 }),
-                (0, i.jsx)(k, { searchContext: t, isFeedbackVisible: p, dismissFeedbackEntrypoint: x }),
+                (0, i.jsx)(k, { searchContext: t, isFeedbackVisible: g, dismissFeedbackEntrypoint: E }),
             ],
         });
     });
@@ -337,7 +337,7 @@ function H(e) {
     let { searchContext: t, selectedChannelId: n } = e,
         { isFeedbackVisible: s, dismissFeedbackEntrypoint: a } = (function () {
             let [e, t] = l.useState(!1),
-                n = (0, x.H)({ location: "SearchResults" });
+                n = (0, E.H)({ location: "SearchResults" });
             return (
                 (0, u.Ay)(() => {
                     n &&
@@ -356,60 +356,60 @@ function H(e) {
             );
         })(),
         o = (0, f.bS)(t),
-        c = (0, r.cf)([p.A, b.A], () => ({
-            isSearching: p.A.getIsFetching(o) ?? !1,
-            isIndexing: p.A.getIsIndexing(o) ?? !1,
-            isHistoricalIndexing: p.A.getIsHistoricalIndexing(o) ?? !1,
-            documentsIndexed: p.A.getDocumentsIndexed(o),
+        d = (0, r.cf)([g.A, b.A], () => ({
+            isSearching: g.A.getIsFetching(o) ?? !1,
+            isIndexing: g.A.getIsIndexing(o) ?? !1,
+            isHistoricalIndexing: g.A.getIsHistoricalIndexing(o) ?? !1,
+            documentsIndexed: g.A.getDocumentsIndexed(o),
             offset: b.A.getSearchResultsOffset(o) ?? 0,
-            totalResults: p.A.getTotalCount(o) ?? 0,
-            hasError: null != p.A.getError(o),
+            totalResults: g.A.getTotalCount(o) ?? 0,
+            hasError: null != g.A.getError(o),
             showBlockedResults: b.A.shouldShowBlockedResults(o),
             showNoResultsAlt: b.A.shouldShowNoResultsAlt(o),
         })),
-        d = (0, r.bG)([p.A], () => p.A.getAnalyticsId(o)),
-        { renderedMessages: h, ignoreCount: m, blockCount: g } = (0, T.A)({ searchContext: t }),
-        E = (0, r.bG)([b.A], () => b.A.getSearchMode(o) ?? L.BBH.NEWEST),
+        c = (0, r.bG)([g.A], () => g.A.getAnalyticsId(o)),
+        { renderedMessages: h, ignoreCount: m, blockCount: p } = (0, T.A)({ searchContext: t }),
+        x = (0, r.bG)([b.A], () => b.A.getSearchMode(o) ?? L.BBH.NEWEST),
         N = l.useCallback(
             (e) => {
-                if (c.isSearching) return;
+                if (d.isSearching) return;
                 I.A.updateSearchMode(t, e);
                 let n = C.A.getSearchInputText(t);
                 null != n && C.A.fetchMessages({ searchContext: t, searchQueryString: n, offset: 0 });
             },
-            [c.isSearching, t],
+            [d.isSearching, t],
         ),
         S = l.useCallback(
             (e) => {
-                if (c.isSearching) return;
+                if (d.isSearching) return;
                 let n = C.A.getSearchInputText(t);
                 null != n && C.A.fetchMessages({ searchContext: t, searchQueryString: n, offset: e * L.T_y });
             },
-            [c.isSearching, t],
+            [d.isSearching, t],
         ),
         y = (0, r.bG)([b.A], () => {
             let e = (0, f.bS)(t);
             return b.A.getSearchResultsQuery(e);
         }),
         v = l.useCallback((e) => I.A.setShowBlockedResults(t, e), [t]),
-        j = l.useDeferredValue(h),
-        R = l.useDeferredValue(c),
-        O = l.useDeferredValue(d);
+        R = l.useDeferredValue(h),
+        j = l.useDeferredValue(d),
+        O = l.useDeferredValue(c);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(V, {
                 searchContext: t,
-                search: R,
+                search: j,
                 searchRequestAnalyticsId: O,
-                messages: j,
+                messages: R,
                 ignoreCount: m,
-                blockCount: g,
+                blockCount: p,
                 renderEmbeds: _.rs.useSetting(),
                 isFeedbackVisible: s,
                 dismissFeedbackEntrypoint: a,
                 onPageChange: S,
                 onSearchModeChange: N,
-                searchMode: E,
+                searchMode: x,
                 onBlockedResultsClick: v,
                 searchResultsQuery: y,
                 selectedChannelId: n,
@@ -417,13 +417,13 @@ function H(e) {
             (0, i.jsx)(G, {
                 searchContext: t,
                 searchRequestAnalyticsId: O,
-                messages: j,
-                searchOffset: R.offset,
+                messages: R,
+                searchOffset: j.offset,
                 searchLimit: L.T_y,
-                searchHasError: R.hasError,
-                searchTotalResults: R.totalResults,
-                searchIsIndexing: R.isHistoricalIndexing,
-                isSearching: R.isSearching,
+                searchHasError: j.hasError,
+                searchTotalResults: j.totalResults,
+                searchIsIndexing: j.isHistoricalIndexing,
+                isSearching: j.isSearching,
             }),
         ],
     });

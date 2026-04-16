@@ -1,8 +1,8 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => _ });
 var i = n(627968),
     l = n(64700),
-    s = n(311907),
-    a = n(397927),
+    a = n(311907),
+    s = n(397927),
     r = n(383501),
     o = n(957565),
     c = n(798286),
@@ -11,15 +11,15 @@ var i = n(627968),
     h = n(75811);
 n(603266);
 var m = n(985018),
-    A = n(97262),
-    g = n(804674);
-function p(e) {
+    A = n(291614),
+    g = n(209426);
+function _(e) {
     let { channelId: t } = e,
-        n = (0, s.bG)([r.A], () => r.A.getSecureFramesState()?.epochAuthenticator),
-        p = (0, u.z)({ fingerprintBase64: n, chunkSize: 5, desiredLength: 30 }),
-        [_, f] = l.useState(!1),
-        E = l.useMemo(() => p?.join(" "), [p]),
-        x = l.useCallback(() => {
+        n = (0, a.bG)([r.A], () => r.A.getSecureFramesState()?.epochAuthenticator),
+        _ = (0, u.z)({ fingerprintBase64: n, chunkSize: 5, desiredLength: 30 }),
+        [p, f] = l.useState(!1),
+        E = l.useMemo(() => _?.join(" "), [_]),
+        C = l.useCallback(() => {
             null != E &&
                 (0, o.C)(E, () => {
                     f(!0), (0, c.k0)({ channelId: t }), setTimeout(() => f(!1), 2e3);
@@ -28,29 +28,29 @@ function p(e) {
     return (0, i.jsxs)("div", {
         className: g.kL,
         children: [
-            (0, i.jsx)(a.Heading, {
+            (0, i.jsx)(s.Heading, {
                 variant: "text-sm/bold",
                 color: "text-strong",
                 children: m.intl.string(m.t.cTQI5t),
             }),
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)(s.Text, {
                 variant: "text-xs/normal",
                 color: "text-muted",
                 children: m.intl.format(m.t.wKxADe, { helpArticle: (0, d.aW)() }),
             }),
             (0, i.jsx)("div", {
                 className: g.on,
-                children: (0, i.jsx)(h.j, { chunks: p, columns: 3, className: g.lu }),
+                children: (0, i.jsx)(h.j, { chunks: _, columns: 3, className: g.lu }),
             }),
-            null != p &&
-                (0, i.jsxs)(a.DUT, {
+            null != _ &&
+                (0, i.jsxs)(s.DUT, {
                     className: A.n2,
-                    onClick: x,
+                    onClick: C,
                     children: [
                         (0, i.jsx)("div", {
-                            className: _ ? A.Dx : A.t6,
-                            children: (0, i.jsx)(a.Button, {
-                                icon: a.TdU,
+                            className: p ? A.Dx : A.t6,
+                            children: (0, i.jsx)(s.Button, {
+                                icon: s.TdU,
                                 text: m.intl.string(m.t.OpuAlK),
                                 variant: "secondary",
                                 size: "sm",
@@ -58,9 +58,9 @@ function p(e) {
                             }),
                         }),
                         (0, i.jsx)("div", {
-                            className: _ ? A.t6 : A.Dx,
-                            children: (0, i.jsx)(a.Button, {
-                                icon: a.yr3,
+                            className: p ? A.t6 : A.Dx,
+                            children: (0, i.jsx)(s.Button, {
+                                icon: s.yr3,
                                 text: m.intl.string(m.t.t5VZ88),
                                 variant: "secondary",
                                 size: "sm",
@@ -70,17 +70,17 @@ function p(e) {
                     ],
                 }),
             (0, i.jsx)("hr", { className: A.me }),
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)(s.Text, {
                 variant: "text-xs/normal",
                 color: "text-subtle",
                 children: m.intl.string(m.t.B9JNsl),
             }),
-            (0, i.jsxs)(a.ZpM, {
-                type: a.ZpM.Types.SUCCESS,
+            (0, i.jsxs)(s.ZpM, {
+                type: s.ZpM.Types.SUCCESS,
                 className: A.g4,
                 children: [
-                    (0, i.jsx)(a.XAi, { size: "xxs", color: a.LU0.colors.TEXT_FEEDBACK_POSITIVE.css }),
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(s.XAi, { size: "xxs", color: s.LU0.colors.TEXT_FEEDBACK_POSITIVE.css }),
+                    (0, i.jsx)(s.Text, {
                         variant: "text-xs/medium",
                         color: "text-feedback-positive",
                         children: m.intl.string(m.t["3BogKe"]),

@@ -33,10 +33,10 @@ var m = n(652215);
     o.Ay.Emitter.injectBatchEmitChanges(a.r),
     (o.Ay.PersistedStore.disableWrites = __OVERLAY__),
     o.Ay.initialize(),
-    n.e("3595").then(n.t.bind(n, 702182, 19));
+    n.e("94459").then(n.t.bind(n, 868086, 19));
 let E = window.GLOBAL_ENV.RELEASE_CHANNEL,
-    g = "529679",
-    A = "46455912c98aecf86bf2ead6549a88693e8885ab";
+    g = "530043",
+    A = "f4a484dfb205f9db80db10e37b66b2eabd1a74c6";
 new h.A().log(`[BUILD INFO] Release Channel: ${E}, Build Number: ${g}, Version Hash: ${A}`),
     r.A.setTags({ appContext: m.QCW }),
     _.A.initBasic(),

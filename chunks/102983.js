@@ -1,41 +1,41 @@
 n.d(t, { h: () => c });
-var l = n(627968),
-    i = n(64700),
+var i = n(627968),
+    l = n(64700),
     r = n(397927),
     s = n(571694),
     a = n(954376),
-    u = n(576692),
-    o = n(652215),
-    d = n(813104);
-let c = i.memo(function (e) {
+    o = n(576692),
+    u = n(652215),
+    d = n(25792);
+let c = l.memo(function (e) {
     let {
             channel: t,
             user: n,
             mentionCount: c = 0,
             isMentionLowImportance: h,
             size: g = r._3J.SIZE_32,
-            status: I,
-            isMobile: A,
-            isTyping: f = !1,
-            "aria-hidden": E = !1,
+            status: m,
+            isMobile: f,
+            isTyping: A = !1,
+            "aria-hidden": I = !1,
         } = e,
-        m = (0, r.FT9)(g),
-        S = i.useMemo(
+        E = (0, r.FT9)(g),
+        p = l.useMemo(
             () =>
                 t?.isDM() && null != n
-                    ? (0, l.jsx)(r.euF, {
+                    ? (0, i.jsx)(r.euF, {
                           src: n.getAvatarURL(t?.getGuildId(), (0, r.FT9)(g), !1),
                           size: g,
-                          "aria-hidden": E,
-                          "aria-label": E ? void 0 : n.username,
-                          status: I,
-                          isMobile: !(c > 0) && A,
-                          isTyping: f,
+                          "aria-hidden": I,
+                          "aria-label": I ? void 0 : n.username,
+                          status: m,
+                          isMobile: !(c > 0) && f,
+                          isTyping: A,
                       })
                     : t?.isMultiUserDM()
                       ? t?.recipients.length >= 2 && null == t.icon
-                          ? (0, l.jsx)(a.A, {
-                                "aria-hidden": E,
+                          ? (0, i.jsx)(a.A, {
+                                "aria-hidden": I,
                                 recipients: t.recipients,
                                 size: (function (e) {
                                     switch (e) {
@@ -56,30 +56,30 @@ let c = i.memo(function (e) {
                                             return r._3J.SIZE_32;
                                     }
                                 })(g),
-                                isTyping: f,
-                                status: f ? o.clD.ONLINE : null,
+                                isTyping: A,
+                                status: A ? u.clD.ONLINE : null,
                             })
-                          : (0, l.jsx)(r.euF, {
+                          : (0, i.jsx)(r.euF, {
                                 src: (0, s.Y)(t) ?? void 0,
-                                "aria-hidden": E,
+                                "aria-hidden": I,
                                 size: g,
-                                status: f ? o.clD.ONLINE : null,
-                                isTyping: f,
+                                status: A ? u.clD.ONLINE : null,
+                                isTyping: A,
                             })
-                      : (0, l.jsx)(r.euF, { src: void 0, "aria-hidden": E, size: g }),
-            [E, t, A, f, c, g, I, n],
+                      : (0, i.jsx)(r.euF, { src: void 0, "aria-hidden": I, size: g }),
+            [I, t, f, A, c, g, m, n],
         );
     return c <= 0
-        ? S
-        : (0, l.jsx)(u.i, {
-              size: m,
+        ? p
+        : (0, i.jsx)(o.i, {
+              size: E,
               rounded: !t?.isMultiUserDM(),
-              lowerBadge: (0, l.jsx)(r.hVq, {
+              lowerBadge: (0, i.jsx)(r.hVq, {
                   count: c,
                   color: h ? r.LU0.colors.BACKGROUND_ACCENT.css : r.LU0.colors.STATUS_DANGER.css,
                   "aria-hidden": !0,
               }),
               lowerBadgeSize: { width: (0, r.o6S)(c) },
-              children: (0, l.jsx)("div", { className: d.R, children: S }),
+              children: (0, i.jsx)("div", { className: d.R, children: p }),
           });
 });
