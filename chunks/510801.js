@@ -9,6 +9,7 @@ let l = (e) => e === r.R.VARIANTS_GROUP || e === r.R.EXTERNAL_SKU;
 class u extends o.A {
     products;
     heroRanking;
+    unpublishedAt;
     isOrbsExclusive;
     heroBannerUrl;
     heroBannerAnimatedUrl;
@@ -28,6 +29,7 @@ class u extends o.A {
         super(e),
             (this.products = e.products),
             (this.heroRanking = e.heroRanking),
+            (this.unpublishedAt = e.unpublishedAt),
             (this.isOrbsExclusive =
                 Array.isArray(e.products) && e.products.length > 0 && void 0 === e.products.find((e) => !(0, s.Ab)(e))),
             (this.heroBannerUrl = e.heroBannerUrl),
@@ -48,44 +50,46 @@ class u extends o.A {
     static fromServer(e) {
         let {
             products: t,
-            hero_ranking: n,
-            hero_logo_display_config: r,
-            hero_banner_display_config: s,
-            hero_banner_url: o,
-            hero_banner_animated_url: c,
-            hero_rive_url: d,
-            hero_logo_url: _,
-            catalog_banner_url: f,
+            unpublished_at: n,
+            hero_ranking: r,
+            hero_logo_display_config: s,
+            hero_banner_display_config: o,
+            hero_banner_url: c,
+            hero_banner_animated_url: d,
+            hero_rive_url: _,
+            hero_logo_url: f,
+            catalog_banner_url: p,
             catalog_banner_animated_url: h,
-            catalog_banner_rive_url: p,
-            featured_block_url: m,
-            logo_url: E,
-            pdp_bg_url: g,
-            mobile_banner_url: A,
-            mobile_bg_url: I,
-            ...T
+            catalog_banner_rive_url: m,
+            featured_block_url: E,
+            logo_url: g,
+            pdp_bg_url: A,
+            mobile_banner_url: I,
+            mobile_bg_url: T,
+            ...S
         } = e;
         return new u({
-            ...super.fromServer(T),
+            ...super.fromServer(S),
             products: t.reduce((e, t) => {
                 let n = a.A.fromServer(t);
                 return (l(n.type) || 0 !== n.items.length) && e.push(n), e;
             }, []),
-            heroRanking: n,
-            heroBannerUrl: o,
-            heroBannerAnimatedUrl: c,
-            heroRiveUrl: d,
-            heroLogoUrl: _,
-            catalogBannerUrl: f,
+            unpublishedAt: null != n ? new Date(n) : null,
+            heroRanking: r,
+            heroBannerUrl: c,
+            heroBannerAnimatedUrl: d,
+            heroRiveUrl: _,
+            heroLogoUrl: f,
+            catalogBannerUrl: p,
             catalogBannerAnimatedUrl: h,
-            catalogBannerRiveUrl: p,
-            featuredBlockUrl: m,
-            logoUrl: E,
-            pdpBgUrl: g,
-            mobileBannerUrl: A,
-            mobileBgUrl: I,
-            heroLogoDisplayConfig: (0, i.f6)(r),
-            heroBannerDisplayConfig: (0, i.f6)(s),
+            catalogBannerRiveUrl: m,
+            featuredBlockUrl: E,
+            logoUrl: g,
+            pdpBgUrl: A,
+            mobileBannerUrl: I,
+            mobileBgUrl: T,
+            heroLogoDisplayConfig: (0, i.f6)(s),
+            heroBannerDisplayConfig: (0, i.f6)(o),
         });
     }
     static fromStorefrontCollectionRecord(e) {
