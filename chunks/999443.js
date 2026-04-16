@@ -31,10 +31,10 @@ var r = n(627968),
     L = n(990474),
     w = n(620700),
     M = n(49005),
-    x = n(652215),
-    P = n(746080),
-    k = n(206314),
-    U = n(829681);
+    P = n(652215),
+    x = n(746080),
+    k = n(782691),
+    U = n(360792);
 function G(e) {
     let { emojiTooltipPosition: t = "top", enableEmojiClick: n = !0 } = e;
     return {
@@ -50,17 +50,13 @@ function F(e) {
     let { emojiTooltipPosition: t = "top", enableEmojiClick: n = !0 } = e;
     return {
         react(e, i, s) {
-            let { key: a, guildId: o, channelId: l, messageId: u, isInteracting: c } = s,
-                d = _.Ay.getDisambiguatedEmojiContext(o).getById(e.emojiId);
-            if (null != d) {
-                let t = d.require_colons;
-                e = { ...e, name: t ? `:${d.name}:` : d.name };
+            let { key: a, guildId: o, channelId: l, messageId: u } = s,
+                c = _.Ay.getDisambiguatedEmojiContext(o).getById(e.emojiId);
+            if (null != c) {
+                let t = c.require_colons;
+                e = { ...e, name: t ? `:${c.name}:` : c.name };
             }
-            return (0, r.jsx)(
-                A.X,
-                { isInteracting: c, node: e, tooltipPosition: t, enableClick: n, channelId: l, messageId: u },
-                a,
-            );
+            return (0, r.jsx)(A.X, { node: e, tooltipPosition: t, enableClick: n, channelId: l, messageId: u }, a);
         },
     };
 }
@@ -68,18 +64,18 @@ function V(e, t, n) {
     let r = N.A.getGuild(e);
     if (null == e || null == r) return;
     let i = (t) => {
-        r.features.has(x.GuildFeatures.COMMUNITY) && (0, I.pX)(x.BVt.CHANNEL(e, t));
+        r.features.has(P.GuildFeatures.COMMUNITY) && (0, I.pX)(P.BVt.CHANNEL(e, t));
     };
     switch (t) {
         case "home":
         case "guide":
-            i(P.VV.GUILD_HOME);
+            i(x.VV.GUILD_HOME);
             break;
         case "browse":
-            i(P.VV.CHANNEL_BROWSER);
+            i(x.VV.CHANNEL_BROWSER);
             break;
         case "customize":
-            i(P.VV.CUSTOMIZE_COMMUNITY);
+            i(x.VV.CUSTOMIZE_COMMUNITY);
             break;
         case "linked-roles":
             if (null != n) {

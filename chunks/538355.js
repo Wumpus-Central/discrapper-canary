@@ -17,22 +17,21 @@ function A(e, t) {
             hideSimpleEmbedContent: A,
             formatInline: f = !1,
             noStyleAndInteraction: p = !1,
-            isInteracting: x = !1,
-            allowHeading: v = !1,
-            allowList: C = !1,
-            allowLinks: N = !1,
-            allowDevLinks: E = !1,
-            previewLinkTarget: _ = !1,
+            allowHeading: x = !1,
+            allowList: v = !1,
+            allowLinks: C = !1,
+            allowDevLinks: N = !1,
+            previewLinkTarget: E = !1,
             viewingChannelId: I,
         } = t,
-        b = (0, c.I)({ location: "useMessageRenderedContent" }),
-        [S, T] = i.useState(!1),
+        _ = (0, c.I)({ location: "useMessageRenderedContent" }),
+        [b, S] = i.useState(!1),
         j = i.useCallback((e) => {
-            e && T(!0);
+            e && S(!0);
         }, []);
     return (
         i.useEffect(() => {
-            T(!1);
+            S(!1);
         }, [e.content]),
         i.useMemo(() => {
             if (null != e.customRenderedContent) return e.customRenderedContent;
@@ -46,7 +45,7 @@ function A(e, t) {
                     },
                 });
             }
-            return b.enabled
+            return _.enabled
                 ? {
                       content: (0, l.jsx)(i.Suspense, {
                           children: (0, l.jsx)(u.O.Provider, {
@@ -60,19 +59,18 @@ function A(e, t) {
                               children: (0, l.jsx)(h, { content: e.content }),
                           }),
                       }),
-                      hasSpoilerEmbeds: S,
+                      hasSpoilerEmbeds: b,
                       hasBailedAst: !1,
                   }
                 : (0, r.Ay)(e, {
                       hideSimpleEmbedContent: A,
                       formatInline: f,
                       noStyleAndInteraction: p,
-                      isInteracting: x,
-                      allowHeading: v,
-                      allowList: C,
-                      allowLinks: N,
-                      allowDevLinks: E,
-                      previewLinkTarget: _,
+                      allowHeading: x,
+                      allowList: v,
+                      allowLinks: C,
+                      allowDevLinks: N,
+                      previewLinkTarget: E,
                       viewingChannelId: I,
                   });
         }, [
@@ -88,12 +86,11 @@ function A(e, t) {
             x,
             v,
             C,
-            N,
-            _,
             E,
+            N,
             I,
-            b.enabled,
-            S,
+            _.enabled,
+            b,
         ])
     );
 }

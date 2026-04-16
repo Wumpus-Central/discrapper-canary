@@ -1,9 +1,9 @@
-n.d(t, { A: () => w });
+n.d(t, { A: () => M });
 var i = n(627968),
-    l = n(64700),
-    r = n(158954),
-    a = n(311907),
-    s = n(52133),
+    a = n(64700),
+    l = n(158954),
+    s = n(311907),
+    r = n(52133),
     o = n(827734),
     d = n(397927),
     c = n(713654),
@@ -19,19 +19,19 @@ var i = n(627968),
     C = n(71393),
     E = n(576705),
     I = n(994500),
-    b = n(287809),
-    T = n(862804),
-    v = n(627950),
-    S = n(387408),
-    y = n(427209),
+    v = n(287809),
+    b = n(862804),
+    T = n(627950),
+    y = n(387408),
+    S = n(427209),
     N = n(985018),
-    j = n(772004);
+    j = n(460135);
 function L() {
     return (0, i.jsxs)("div", {
         className: j.N1,
         children: [
-            (0, i.jsx)(y.A, { size: "xs", className: j.nr, color: o.A.colors.TEXT_MUTED }),
-            (0, i.jsx)(r.EYj, {
+            (0, i.jsx)(S.A, { size: "xs", className: j.nr, color: o.A.colors.TEXT_MUTED }),
+            (0, i.jsx)(l.EYj, {
                 className: j.TK,
                 variant: "text-sm/semibold",
                 color: "text-muted",
@@ -42,16 +42,16 @@ function L() {
 }
 function R(e) {
     let { message: t, snapshot: n, index: c } = e,
-        _ = l.useMemo(() => new T.j(t, n, c), [t, n, c]),
-        m = (0, a.bG)(
-            [x.A, b.default, I.A, E.A, C.A, u.A],
-            () => _.getForwardInfo(x.A, b.default, I.A, E.A, C.A, u.A).footerInfo,
+        _ = a.useMemo(() => new b.j(t, n, c), [t, n, c]),
+        m = (0, s.bG)(
+            [x.A, v.default, I.A, E.A, C.A, u.A],
+            () => _.getForwardInfo(x.A, v.default, I.A, E.A, C.A, u.A).footerInfo,
             [_],
-            s.A,
+            r.A,
         ),
-        h = (0, a.bG)([x.A], () => x.A.getChannel(t.messageReference?.channel_id)),
-        p = l.useCallback(() => {
-            (0, v.A)(t);
+        h = (0, s.bG)([x.A], () => x.A.getChannel(t.messageReference?.channel_id)),
+        p = a.useCallback(() => {
+            (0, T.A)(t);
         }, [t]);
     return null == m
         ? null
@@ -64,7 +64,7 @@ function R(e) {
                       ? (0, i.jsx)("img", { className: j.yl, src: m.originIconUrl, alt: "" })
                       : null,
                   null == m.originIconUrl && h?.isThread() ? (0, i.jsx)(P, { channel: h }) : null,
-                  (0, i.jsx)(r.EYj, {
+                  (0, i.jsx)(l.EYj, {
                       className: j.PJ,
                       variant: "text-sm/medium",
                       color: "none",
@@ -77,23 +77,22 @@ function R(e) {
 function P(e) {
     let { channel: t } = e,
         n = (0, g.Vp)({ location: "ForwardFooter" }),
-        r = l.useMemo(() => (0, c.gU)(t), [t]);
-    return n.enabled && null != r ? (0, i.jsx)(r, { className: j.yl, size: "xs", color: "currentColor" }) : null;
+        l = a.useMemo(() => (0, c.gU)(t), [t]);
+    return n.enabled && null != l ? (0, i.jsx)(l, { className: j.yl, size: "xs", color: "currentColor" }) : null;
 }
-function M(e) {
-    let { message: t, snapshot: n, index: r } = e,
-        s = l.useMemo(() => (0, S.A)(t, n), [t, n]),
+function w(e) {
+    let { message: t, snapshot: n, index: l } = e,
+        r = a.useMemo(() => (0, y.A)(t, n), [t, n]),
         o = A.hD.useSetting(),
         d = A.rs.useSetting(),
-        c = (0, a.bG)([f.A], () => f.A.isDeveloper),
-        u = (0, _.S)((s.editedTimestamp ?? s.timestamp).valueOf()),
+        c = (0, s.bG)([f.A], () => f.A.isDeveloper),
+        u = (0, _.S)((r.editedTimestamp ?? r.timestamp).valueOf()),
         {
             content: g,
             hasSpoilerEmbeds: C,
             hasBailedAst: E,
-        } = (0, h.A)(s, {
+        } = (0, h.A)(r, {
             hideSimpleEmbedContent: o && d,
-            isInteracting: !1,
             formatInline: !1,
             allowList: u,
             allowHeading: u,
@@ -101,8 +100,8 @@ function M(e) {
             allowDevLinks: c,
             previewLinkTarget: !0,
         }),
-        I = (0, a.bG)([x.A], () => x.A.getChannel(t.channel_id)),
-        b = A.hH.useSetting();
+        I = (0, s.bG)([x.A], () => x.A.getChannel(t.channel_id)),
+        v = A.hH.useSetting();
     return null == I
         ? null
         : (0, i.jsxs)(
@@ -115,26 +114,26 @@ function M(e) {
                           className: j.Qs,
                           children: [
                               (0, i.jsx)(L, {}),
-                              (0, i.jsx)(m.Ay, { message: s, content: g, compact: b }),
+                              (0, i.jsx)(m.Ay, { message: r, content: g, compact: v }),
                               (0, p.A)({
-                                  channelMessageProps: { message: s, channel: I, compact: b },
+                                  channelMessageProps: { message: r, channel: I, compact: v },
                                   hasSpoilerEmbeds: C,
                                   hasBailedAst: E,
                                   isInteracting: !1,
                                   isMessageSnapshot: !0,
                                   renderThreadAccessory: !1,
                               }),
-                              (0, i.jsx)(R, { message: t, snapshot: n, index: r }),
+                              (0, i.jsx)(R, { message: t, snapshot: n, index: l }),
                           ],
                       }),
                   ],
               },
-              r,
+              l,
           );
 }
-function w(e) {
+function M(e) {
     let { message: t } = e;
     return (0, i.jsx)(i.Fragment, {
-        children: t.messageSnapshots.map((e, n) => (0, i.jsx)(M, { message: t, snapshot: e, index: n }, n)),
+        children: t.messageSnapshots.map((e, n) => (0, i.jsx)(w, { message: t, snapshot: e, index: n }, n)),
     });
 }

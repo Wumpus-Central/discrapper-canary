@@ -58,6 +58,7 @@ var r = (function (e) {
         (e[(e.USER_SETTINGS = 53)] = "USER_SETTINGS"),
         (e[(e.NITRO_HOME_PERK_CARD = 54)] = "NITRO_HOME_PERK_CARD"),
         (e[(e.QUEST_HOME_MOBILE_CAROUSEL = 55)] = "QUEST_HOME_MOBILE_CAROUSEL"),
+        (e[(e.QUEST_HOME_HERO_SHELF = 56)] = "QUEST_HOME_HERO_SHELF"),
         e
     );
 })({});

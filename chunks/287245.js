@@ -5,18 +5,18 @@ var i = n(627968),
     a = n.n(s),
     r = n(397927),
     o = n(73153),
-    c = n(843472),
-    d = n(355622),
+    d = n(843472),
+    c = n(355622),
     u = n(408018),
     h = n(133343),
     A = n(609425),
     _ = n(922301),
     m = n(750112),
-    g = n(451909),
-    p = n(538355),
+    p = n(451909),
+    g = n(538355),
     f = n(854627),
-    x = n(447404),
-    E = n(320501),
+    E = n(447404),
+    x = n(320501),
     I = n(203982),
     C = n(427262),
     N = n(652215),
@@ -24,32 +24,31 @@ var i = n(627968),
     S = n(124172);
 let b = (e) => {
         let { channel: t, message: n, out: l = !1, noAnimate: s = !1 } = e,
-            o = (0, p.A)(n, {
+            o = (0, g.A)(n, {
                 hideSimpleEmbedContent: !0,
                 formatInline: !1,
                 noStyleAndInteraction: !1,
-                isInteracting: !1,
                 allowDevLinks: !1,
                 allowLinks: !1,
                 previewLinkTarget: !1,
             }),
-            c = n.author,
-            d = C.Ay.getName(c),
-            u = (0, A.A)({ userId: c.id, guildId: t.guild_id }),
-            { avatarSrc: h, avatarDecorationSrc: g } = (0, f.A)({ userId: c.id, guildId: t.guild_id, size: 48 });
+            d = n.author,
+            c = C.Ay.getName(d),
+            u = (0, A.A)({ userId: d.id, guildId: t.guild_id }),
+            { avatarSrc: h, avatarDecorationSrc: p } = (0, f.A)({ userId: d.id, guildId: t.guild_id, size: 48 });
         return (0, i.jsxs)("div", {
             className: a()(S.iU, { [S.FD]: l, [S.Tf]: s }),
             children: [
                 (0, i.jsx)("div", {
                     children: (0, i.jsx)(r.euF, {
                         src: h,
-                        avatarDecoration: g,
+                        avatarDecoration: p,
                         size: r._3J.SIZE_24,
                         "aria-label": "User Avatar",
                         isTyping: !1,
                     }),
                 }),
-                (0, i.jsx)(m.A, { userName: d, displayNameStyles: u, effectDisplayType: _.G.STATIC, loop: !0 }),
+                (0, i.jsx)(m.A, { userName: c, displayNameStyles: u, effectDisplayType: _.G.STATIC, loop: !0 }),
                 (0, i.jsxs)("div", {
                     className: S.fi,
                     children: [
@@ -76,7 +75,7 @@ let b = (e) => {
         let { channel: t, idle: n, showChat: s } = e,
             A = l.useRef(new Set()),
             [_, m] = l.useState([]),
-            [p, f] = l.useState(0),
+            [g, f] = l.useState(0),
             C = l.useRef(null),
             T = l.useRef(!1),
             [y, v] = l.useState(!0),
@@ -106,7 +105,7 @@ let b = (e) => {
             l.useEffect(() => {
                 let e = Date.now();
                 m(
-                    E.A.getMessages(t.id)
+                    x.A.getMessages(t.id)
                         ._array.filter((t) => t.timestamp.getTime() > e - 12e5)
                         .slice(-50),
                 );
@@ -123,7 +122,7 @@ let b = (e) => {
             D = l.useMemo(() => {
                 let e = _[_.length - 1];
                 if (null == e) return !0;
-                if (p + 100 > Date.now()) return !1;
+                if (g + 100 > Date.now()) return !1;
                 let t = Date.now() > e.timestamp.getTime() + 5e3;
                 if (!t) {
                     let e = setTimeout(() => {
@@ -132,12 +131,12 @@ let b = (e) => {
                     A.current.add(e);
                 }
                 return t;
-            }, [_, p]);
+            }, [_, g]);
         return (
             l.useEffect(() => {
                 let e = (e) => {
                     let { channelId: n, message: i } = e,
-                        l = E.A.getMessage(i.channel_id, i.id);
+                        l = x.A.getMessage(i.channel_id, i.id);
                     if (n === t.id && l?.state === "SENT") {
                         M(l);
                         let e = setTimeout(() => {
@@ -161,7 +160,7 @@ let b = (e) => {
                     e.preventDefault(), e.stopPropagation();
                 },
                 children: [
-                    (0, i.jsx)(x.A, {
+                    (0, i.jsx)(E.A, {
                         children: (0, i.jsx)("div", {
                             className: a()(S.TE, { [S.N7]: n }),
                             children: (0, i.jsx)(r.HOs, {
@@ -174,7 +173,7 @@ let b = (e) => {
                     (0, i.jsx)(h.Ay, {
                         className: a()(S.CQ, { [S.N7]: n && 0 === j.length }),
                         innerClassName: S.hF,
-                        type: d.oU.HAVEN,
+                        type: c.oU.HAVEN,
                         channel: t,
                         textValue: j,
                         richValue: O,
@@ -191,10 +190,10 @@ let b = (e) => {
                             let { value: n } = e,
                                 i = n.trim();
                             if (0 === i.length) return { shouldClear: !1, shouldRefocus: !1 };
-                            let l = g.Ay.parse(t, i);
+                            let l = p.Ay.parse(t, i);
                             try {
                                 return (
-                                    await c.A.sendMessage(t.id, l, !0, { location: "Haven" }),
+                                    await d.A.sendMessage(t.id, l, !0, { location: "Haven" }),
                                     R(""),
                                     L((0, u.x7)("")),
                                     { shouldClear: !0, shouldRefocus: !1 }
