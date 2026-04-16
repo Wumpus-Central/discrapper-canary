@@ -3,6 +3,7 @@ _.exports = {
     Qs: "content_ea79f0",
     wx: "header_ea79f0",
     h_: "description_ea79f0",
-    EY: "keybindHintKeys_ea79f0",
-    d4: "keybindShortcut_ea79f0",
+    kR: "cards_ea79f0",
+    Nr: "card_ea79f0",
+    JH: "changeKeybindButton_ea79f0",
 };
