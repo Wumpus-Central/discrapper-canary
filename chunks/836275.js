@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => f });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -6,99 +6,100 @@ var i = n(627968),
     a = n(582754),
     o = n(397927),
     d = n(736653),
-    c = n(652215),
-    u = n(788868),
-    m = n(985018),
-    g = n(416676);
-let _ = [
+    c = n(116891),
+    u = n(652215),
+    m = n(788868),
+    g = n(985018),
+    _ = n(416676);
+let x = [
     {
-        getPerkHeading: () => m.intl.string(m.t.tIiwuj),
+        getPerkHeading: () => g.intl.string(g.t.tIiwuj),
         getPerkPreviewLightTheme: () => n(604203),
         getPerkPreviewDarkTheme: () => n(878515),
-        getTier0Value: () => u.TG[c.TVA.NONE].limits.emoji,
-        getTier1Value: () => u.TG[c.TVA.TIER_1].limits.emoji,
-        getTier2Value: () => u.TG[c.TVA.TIER_2].limits.emoji,
-        getTier3Value: () => u.TG[c.TVA.TIER_3].limits.emoji,
+        getTier0Value: () => m.TG[u.TVA.NONE].limits.emoji,
+        getTier1Value: () => m.TG[u.TVA.TIER_1].limits.emoji,
+        getTier2Value: () => m.TG[u.TVA.TIER_2].limits.emoji,
+        getTier3Value: () => m.TG[u.TVA.TIER_3].limits.emoji,
     },
     {
-        getPerkHeading: () => m.intl.string(m.t["3iccet"]),
+        getPerkHeading: () => g.intl.string(g.t["3iccet"]),
         getPerkPreviewLightTheme: () => n(105732),
         getPerkPreviewDarkTheme: () => n(857020),
-        getTier0Value: () => u.TG[c.TVA.NONE].limits.stickers,
-        getTier1Value: () => u.TG[c.TVA.TIER_1].limits.stickers,
-        getTier2Value: () => u.TG[c.TVA.TIER_2].limits.stickers,
-        getTier3Value: () => u.TG[c.TVA.TIER_3].limits.stickers,
+        getTier0Value: () => m.TG[u.TVA.NONE].limits.stickers,
+        getTier1Value: () => m.TG[u.TVA.TIER_1].limits.stickers,
+        getTier2Value: () => m.TG[u.TVA.TIER_2].limits.stickers,
+        getTier3Value: () => m.TG[u.TVA.TIER_3].limits.stickers,
     },
     {
-        getPerkHeading: () => m.intl.string(m.t["+smCv9"]),
+        getPerkHeading: () => g.intl.string(g.t["+smCv9"]),
         getPerkPreviewLightTheme: () => n(597890),
         getPerkPreviewDarkTheme: () => n(297642),
-        getTier0Value: () => u.TG[c.TVA.NONE].limits.soundboardSounds,
-        getTier1Value: () => u.TG[c.TVA.TIER_1].limits.soundboardSounds,
-        getTier2Value: () => u.TG[c.TVA.TIER_2].limits.soundboardSounds,
-        getTier3Value: () => u.TG[c.TVA.TIER_3].limits.soundboardSounds,
+        getTier0Value: () => m.TG[u.TVA.NONE].limits.soundboardSounds,
+        getTier1Value: () => m.TG[u.TVA.TIER_1].limits.soundboardSounds,
+        getTier2Value: () => m.TG[u.TVA.TIER_2].limits.soundboardSounds,
+        getTier3Value: () => m.TG[u.TVA.TIER_3].limits.soundboardSounds,
     },
     {
-        getPerkHeading: () => m.intl.string(m.t.SMYauD),
+        getPerkHeading: () => g.intl.string(g.t.SMYauD),
         getPerkPreviewLightTheme: () => n(323091),
         getPerkPreviewDarkTheme: () => n(261835),
         getTier0Value: () =>
-            m.intl.formatToPlainString(m.t.zZ6Rdi, {
-                resolution: u.TG[c.TVA.NONE].limits.screenShareQualityResolution,
-                framerate: u.TG[c.TVA.NONE].limits.screenShareQualityFramerate,
+            g.intl.formatToPlainString(g.t.zZ6Rdi, {
+                resolution: m.TG[u.TVA.NONE].limits.screenShareQualityResolution,
+                framerate: m.TG[u.TVA.NONE].limits.screenShareQualityFramerate,
             }),
         getTier1Value: () =>
-            m.intl.formatToPlainString(m.t.zZ6Rdi, {
-                resolution: u.TG[c.TVA.TIER_1].limits.screenShareQualityResolution,
-                framerate: u.TG[c.TVA.TIER_1].limits.screenShareQualityFramerate,
+            g.intl.formatToPlainString(g.t.zZ6Rdi, {
+                resolution: m.TG[u.TVA.TIER_1].limits.screenShareQualityResolution,
+                framerate: m.TG[u.TVA.TIER_1].limits.screenShareQualityFramerate,
             }),
         getTier2Value: () =>
-            m.intl.formatToPlainString(m.t.zZ6Rdi, {
-                resolution: u.TG[c.TVA.TIER_2].limits.screenShareQualityResolution,
-                framerate: u.TG[c.TVA.TIER_2].limits.screenShareQualityFramerate,
+            g.intl.formatToPlainString(g.t.zZ6Rdi, {
+                resolution: (0, c.eT)("GuildBoostingMarketingTierComparisonTable"),
+                framerate: m.TG[u.TVA.TIER_2].limits.screenShareQualityFramerate,
             }),
         getTier3Value: () =>
-            m.intl.formatToPlainString(m.t.zZ6Rdi, {
-                resolution: u.TG[c.TVA.TIER_3].limits.screenShareQualityResolution,
-                framerate: u.TG[c.TVA.TIER_3].limits.screenShareQualityFramerate,
+            g.intl.formatToPlainString(g.t.zZ6Rdi, {
+                resolution: (0, c.eT)("GuildBoostingMarketingTierComparisonTable"),
+                framerate: m.TG[u.TVA.TIER_3].limits.screenShareQualityFramerate,
             }),
     },
     {
-        getPerkHeading: () => m.intl.string(m.t["/79IDj"]),
+        getPerkHeading: () => g.intl.string(g.t["/79IDj"]),
         getPerkPreviewLightTheme: () => n(913997),
         getPerkPreviewDarkTheme: () => n(95781),
-        getTier0Value: () => m.intl.formatToPlainString(m.t.w1gmLt, { bitrate: u.TG[c.TVA.NONE].limits.bitrate / 1e3 }),
+        getTier0Value: () => g.intl.formatToPlainString(g.t.w1gmLt, { bitrate: m.TG[u.TVA.NONE].limits.bitrate / 1e3 }),
         getTier1Value: () =>
-            m.intl.formatToPlainString(m.t.w1gmLt, { bitrate: u.TG[c.TVA.TIER_1].limits.bitrate / 1e3 }),
+            g.intl.formatToPlainString(g.t.w1gmLt, { bitrate: m.TG[u.TVA.TIER_1].limits.bitrate / 1e3 }),
         getTier2Value: () =>
-            m.intl.formatToPlainString(m.t.w1gmLt, { bitrate: u.TG[c.TVA.TIER_2].limits.bitrate / 1e3 }),
+            g.intl.formatToPlainString(g.t.w1gmLt, { bitrate: m.TG[u.TVA.TIER_2].limits.bitrate / 1e3 }),
         getTier3Value: () =>
-            m.intl.formatToPlainString(m.t.w1gmLt, { bitrate: u.TG[c.TVA.TIER_3].limits.bitrate / 1e3 }),
+            g.intl.formatToPlainString(g.t.w1gmLt, { bitrate: m.TG[u.TVA.TIER_3].limits.bitrate / 1e3 }),
     },
     {
-        getPerkHeading: () => m.intl.string(m.t.R1U2xC),
+        getPerkHeading: () => g.intl.string(g.t.R1U2xC),
         getPerkPreviewLightTheme: () => n(389833),
         getPerkPreviewDarkTheme: () => n(754561),
         getTier0Value: () =>
-            m.intl.formatToPlainString(m.t.pIn7Af, { size: u.TG[c.TVA.NONE].limits.fileSize / 1048576 }),
+            g.intl.formatToPlainString(g.t.pIn7Af, { size: m.TG[u.TVA.NONE].limits.fileSize / 1048576 }),
         getTier1Value: () =>
-            m.intl.formatToPlainString(m.t.pIn7Af, { size: u.TG[c.TVA.TIER_1].limits.fileSize / 1048576 }),
+            g.intl.formatToPlainString(g.t.pIn7Af, { size: m.TG[u.TVA.TIER_1].limits.fileSize / 1048576 }),
         getTier2Value: () =>
-            m.intl.formatToPlainString(m.t.pIn7Af, { size: u.TG[c.TVA.TIER_2].limits.fileSize / 1048576 }),
+            g.intl.formatToPlainString(g.t.pIn7Af, { size: m.TG[u.TVA.TIER_2].limits.fileSize / 1048576 }),
         getTier3Value: () =>
-            m.intl.formatToPlainString(m.t.pIn7Af, { size: u.TG[c.TVA.TIER_3].limits.fileSize / 1048576 }),
+            g.intl.formatToPlainString(g.t.pIn7Af, { size: m.TG[u.TVA.TIER_3].limits.fileSize / 1048576 }),
     },
     {
-        getPerkHeading: () => m.intl.string(m.t.f6vfso),
+        getPerkHeading: () => g.intl.string(g.t.f6vfso),
         getPerkPreviewLightTheme: () => n(735669),
         getPerkPreviewDarkTheme: () => n(283517),
-        getTier0Value: () => u.TG[c.TVA.NONE].limits.stageVideoUsers,
-        getTier1Value: () => u.TG[c.TVA.TIER_1].limits.stageVideoUsers,
-        getTier2Value: () => u.TG[c.TVA.TIER_2].limits.stageVideoUsers,
-        getTier3Value: () => u.TG[c.TVA.TIER_3].limits.stageVideoUsers,
+        getTier0Value: () => m.TG[u.TVA.NONE].limits.stageVideoUsers,
+        getTier1Value: () => m.TG[u.TVA.TIER_1].limits.stageVideoUsers,
+        getTier2Value: () => m.TG[u.TVA.TIER_2].limits.stageVideoUsers,
+        getTier3Value: () => m.TG[u.TVA.TIER_3].limits.stageVideoUsers,
     },
     {
-        getPerkHeading: () => m.intl.string(m.t.qDqUME),
+        getPerkHeading: () => g.intl.string(g.t.qDqUME),
         getPerkPreviewLightTheme: () => n(970770),
         getPerkPreviewDarkTheme: () => n(416378),
         getTier0Value: () => !1,
@@ -107,7 +108,7 @@ let _ = [
         getTier3Value: () => !0,
     },
     {
-        getPerkHeading: () => m.intl.string(m.t.uwqgbu),
+        getPerkHeading: () => g.intl.string(g.t.uwqgbu),
         getPerkPreviewLightTheme: () => n(243580),
         getPerkPreviewDarkTheme: () => n(975940),
         getTier0Value: () => !1,
@@ -116,16 +117,16 @@ let _ = [
         getTier3Value: () => !0,
     },
     {
-        getPerkHeading: () => m.intl.string(m.t.zxsDxc),
+        getPerkHeading: () => g.intl.string(g.t.zxsDxc),
         getPerkPreviewLightTheme: () => n(435748),
         getPerkPreviewDarkTheme: () => n(978380),
         getTier0Value: () => !1,
         getTier1Value: () => !1,
-        getTier2Value: () => m.intl.string(m.t["2TNS3n"]),
-        getTier3Value: () => m.intl.string(m.t["l+S46U"]),
+        getTier2Value: () => g.intl.string(g.t["2TNS3n"]),
+        getTier3Value: () => g.intl.string(g.t["l+S46U"]),
     },
     {
-        getPerkHeading: () => m.intl.string(m.t["bHa+Ee"]),
+        getPerkHeading: () => g.intl.string(g.t["bHa+Ee"]),
         getPerkPreviewLightTheme: () => n(329312),
         getPerkPreviewDarkTheme: () => n(800120),
         getTier0Value: () => !1,
@@ -134,7 +135,7 @@ let _ = [
         getTier3Value: () => !0,
     },
     {
-        getPerkHeading: () => m.intl.string(m.t.QV6MZQ),
+        getPerkHeading: () => g.intl.string(g.t.QV6MZQ),
         getPerkPreviewLightTheme: () => n(463384),
         getPerkPreviewDarkTheme: () => n(258963),
         getTier0Value: () => !1,
@@ -143,12 +144,12 @@ let _ = [
         getTier3Value: () => !0,
     },
 ];
-function x(e) {
+function h(e) {
     let { children: t, className: n, tier: s } = e,
-        l = s === c.TVA.NONE ? "text-muted" : "text-strong",
-        a = s === c.TVA.NONE || null == s ? "heading-xl/normal" : "heading-xl/bold";
+        l = s === u.TVA.NONE ? "text-muted" : "text-strong",
+        a = s === u.TVA.NONE || null == s ? "heading-xl/normal" : "heading-xl/bold";
     return (0, i.jsxs)("th", {
-        className: r()(g.PG, n),
+        className: r()(_.PG, n),
         scope: "col",
         children: [
             (0, i.jsx)(o.Heading, { color: l, variant: a, children: t }),
@@ -156,32 +157,32 @@ function x(e) {
                 (0, i.jsx)(o.Text, {
                     color: l,
                     variant: "text-md/normal",
-                    children: m.intl.format(m.t["pob/cL"], { subscriptions: c.M2T[s] }),
+                    children: g.intl.format(g.t["pob/cL"], { subscriptions: u.M2T[s] }),
                 }),
         ],
     });
 }
-function h(e) {
+function A(e) {
     let t,
         { className: n, textVariant: s = "text-md/bold", value: l } = e;
     if ("boolean" == typeof l) {
-        let e = r()(g.Jk, { [g.I$]: l });
+        let e = r()(_.Jk, { [_.I$]: l });
         t = l
             ? (0, i.jsx)(o.A9s, { size: "md", color: "currentColor", className: e })
             : (0, i.jsx)(o.PGe, { size: "md", color: "currentColor", className: e });
     } else t = (0, i.jsx)(o.Text, { color: "interactive-text-active", variant: s, children: l });
-    return (0, i.jsx)("td", { className: r()(g.xR, n), children: t });
+    return (0, i.jsx)("td", { className: r()(_.xR, n), children: t });
 }
-function A(e) {
+function p(e) {
     let { currentTier: t } = e,
         n = (function (e) {
             switch (e) {
-                case c.TVA.NONE:
-                case c.TVA.TIER_1:
-                    return c.TVA.TIER_2;
-                case c.TVA.TIER_2:
-                case c.TVA.TIER_3:
-                    return c.TVA.TIER_3;
+                case u.TVA.NONE:
+                case u.TVA.TIER_1:
+                    return u.TVA.TIER_2;
+                case u.TVA.TIER_2:
+                case u.TVA.TIER_3:
+                    return u.TVA.TIER_3;
                 default:
                     return null;
             }
@@ -189,26 +190,26 @@ function A(e) {
     return null == n
         ? null
         : (0, i.jsx)("div", {
-              className: r()(g.ER, { [g.GH]: n === c.TVA.TIER_2, [g.z5]: n === c.TVA.TIER_3 }),
+              className: r()(_.ER, { [_.GH]: n === u.TVA.TIER_2, [_.z5]: n === u.TVA.TIER_3 }),
               children: (0, i.jsx)(o.Text, {
-                  className: g.uQ,
+                  className: _.uQ,
                   color: "always-white",
                   variant: "text-xs/bold",
-                  children: t === c.TVA.TIER_3 ? m.intl.string(m.t.d849Up) : m.intl.string(m.t.dZeX1z),
+                  children: t === u.TVA.TIER_3 ? g.intl.string(g.t.d849Up) : g.intl.string(g.t.dZeX1z),
               }),
           });
 }
-function p(e) {
+function T(e) {
     let { isFocused: t, handleFocus: n, handleRowBlur: l, theme: d, row: c, hideTier0: u } = e,
         m = s.useRef(null);
     return (0, i.jsxs)("tr", {
-        className: g.__invalid_tableRow,
+        className: _.__invalid_tableRow,
         children: [
             (0, i.jsx)("th", {
-                className: r()(g.xR, g.uB),
+                className: r()(_.xR, _.uB),
                 scope: "row",
                 children: (0, i.jsx)(o.DUT, {
-                    className: r()(g.VC, g.xR, g.Rk),
+                    className: r()(_.VC, _.xR, _.Rk),
                     onFocus: n,
                     onBlur: l,
                     onMouseEnter: n,
@@ -221,7 +222,7 @@ function p(e) {
                         position: "bottom",
                         renderPopout: () =>
                             (0, i.jsx)("img", {
-                                className: g.Mz,
+                                className: _.Mz,
                                 src: (0, a.Mw)(d) ? c.getPerkPreviewDarkTheme() : c.getPerkPreviewLightTheme(),
                                 alt: "",
                             }),
@@ -232,66 +233,66 @@ function p(e) {
                     }),
                 }),
             }),
-            !u && (0, i.jsx)(h, { textVariant: "text-md/normal", value: c.getTier0Value() }),
-            (0, i.jsx)(h, { value: c.getTier1Value() }),
-            (0, i.jsx)(h, { value: c.getTier2Value() }),
-            (0, i.jsx)(h, { value: c.getTier3Value() }),
+            !u && (0, i.jsx)(A, { textVariant: "text-md/normal", value: c.getTier0Value() }),
+            (0, i.jsx)(A, { value: c.getTier1Value() }),
+            (0, i.jsx)(A, { value: c.getTier2Value() }),
+            (0, i.jsx)(A, { value: c.getTier3Value() }),
         ],
     });
 }
-let T = function (e) {
+let f = function (e) {
     let t = (0, d.Ay)(),
         [n, l] = s.useState(null),
-        { className: r, guild: a, hideHeading: u, hideTier0: h } = e;
-    function T() {
+        { className: r, guild: a, hideHeading: c, hideTier0: m } = e;
+    function A() {
         l(null);
     }
     return (0, i.jsxs)("div", {
         className: r,
         children: [
-            !u &&
+            !c &&
                 (0, i.jsx)(o.Heading, {
-                    className: g.R_,
+                    className: _.R_,
                     variant: "heading-xxl/extrabold",
-                    children: m.intl.string(m.t["9GGb9k"]),
+                    children: g.intl.string(g.t["9GGb9k"]),
                 }),
             (0, i.jsxs)("div", {
-                className: g.wY,
+                className: _.wY,
                 children: [
-                    null != a && (0, i.jsx)(A, { currentTier: a.premiumTier }),
+                    null != a && (0, i.jsx)(p, { currentTier: a.premiumTier }),
                     (0, i.jsxs)("table", {
-                        className: g.tp,
+                        className: _.tp,
                         cellPadding: 0,
                         cellSpacing: 0,
                         children: [
                             (0, i.jsx)("thead", {
                                 children: (0, i.jsxs)("tr", {
-                                    className: g.__invalid_tableRow,
+                                    className: _.__invalid_tableRow,
                                     children: [
-                                        (0, i.jsx)(x, { className: g.VC, children: m.intl.string(m.t.F5MY0k) }),
-                                        !h && (0, i.jsx)(x, { tier: c.TVA.NONE, children: m.intl.string(m.t.mx8j2m) }),
-                                        (0, i.jsx)(x, { tier: c.TVA.TIER_1, children: m.intl.string(m.t.nzXtaS) }),
-                                        (0, i.jsx)(x, { tier: c.TVA.TIER_2, children: m.intl.string(m.t["h33/uW"]) }),
-                                        (0, i.jsx)(x, { tier: c.TVA.TIER_3, children: m.intl.string(m.t.BfF6ED) }),
+                                        (0, i.jsx)(h, { className: _.VC, children: g.intl.string(g.t.F5MY0k) }),
+                                        !m && (0, i.jsx)(h, { tier: u.TVA.NONE, children: g.intl.string(g.t.mx8j2m) }),
+                                        (0, i.jsx)(h, { tier: u.TVA.TIER_1, children: g.intl.string(g.t.nzXtaS) }),
+                                        (0, i.jsx)(h, { tier: u.TVA.TIER_2, children: g.intl.string(g.t["h33/uW"]) }),
+                                        (0, i.jsx)(h, { tier: u.TVA.TIER_3, children: g.intl.string(g.t.BfF6ED) }),
                                     ],
                                 }),
                             }),
                             (0, i.jsx)("tbody", {
-                                className: g.__invalid_tableBody,
-                                children: _.map((e, s) => {
+                                className: _.__invalid_tableBody,
+                                children: x.map((e, s) => {
                                     let r = n === s;
                                     return void 0 === e.predicate
                                         ? (0, i.jsx)(
-                                              p,
+                                              T,
                                               {
                                                   isFocused: r,
                                                   handleFocus: function () {
                                                       l(s);
                                                   },
-                                                  handleRowBlur: T,
+                                                  handleRowBlur: A,
                                                   theme: t,
                                                   row: e,
-                                                  hideTier0: h,
+                                                  hideTier0: m,
                                               },
                                               s,
                                           )
