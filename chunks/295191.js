@@ -1,7 +1,7 @@
 n.d(t, { A: () => h });
 var l = n(627968),
     r = n(64700),
-    a = n(382222),
+    a = n(407045),
     i = n(66455),
     s = n(311907),
     o = n(397927),
@@ -80,7 +80,13 @@ function h(e) {
                     children: (function (e) {
                         switch (e) {
                             case T.g.INFO:
-                                return (0, l.jsx)(d.A, { userId: t, guildId: n, onNavigate: f, className: S });
+                                return (0, l.jsx)(d.A, {
+                                    userId: t,
+                                    guildId: n,
+                                    onClose: h,
+                                    onNavigate: f,
+                                    className: S,
+                                });
                             case T.g.MESSAGE_HISTORY:
                                 return (0, l.jsx)(A.A, {
                                     userId: t,
