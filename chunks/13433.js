@@ -13,15 +13,15 @@ var r = n(735438),
     f = n(572164),
     p = n(680725),
     h = n(973522),
-    m = n(929921),
-    E = n(961350),
-    g = n(734057),
-    A = n(877717),
-    I = n(430452),
-    T = n(544180),
-    S = n(383501),
-    y = n(873985),
-    v = n(851581),
+    m = n(967347),
+    E = n(929921),
+    g = n(961350),
+    A = n(734057),
+    I = n(877717),
+    T = n(430452),
+    S = n(544180),
+    y = n(383501),
+    v = n(873985),
     N = n(954571),
     C = n(353835),
     R = n(927813),
@@ -117,7 +117,7 @@ class k extends u.A {
         const u = (0, b.Iy)(t),
             { guildId: c, channelId: d } = u;
         super({
-            userId: E.default.getId(),
+            userId: g.default.getId(),
             sessionId: e,
             guildId: c,
             channelId: d,
@@ -149,7 +149,7 @@ class k extends u.A {
     }
     get isOwner() {
         let { ownerId: e } = this.streamContext;
-        return E.default.getId() === e;
+        return g.default.getId() === e;
     }
     destroy(e) {
         this.videoStreamStats.stop(),
@@ -207,7 +207,7 @@ class k extends u.A {
                 e === w.S7L.RTC_CONNECTED &&
                     (this._connection?.on(
                         s.yq.ScreenshareFinish,
-                        (e, t, n, r, i, s, a, o, l, u, c, d, _, f, p, m, E, g, A, I, T, S, y) => {
+                        (e, t, n, r, i, s, a, o, l, u, c, d, _, f, p, E, g, A, I, T, S, y, v) => {
                             let R = this.analyticsContext.getStreamApplicationFromHistory(
                                 this.screenshareFinishedCount,
                             );
@@ -215,22 +215,27 @@ class k extends u.A {
                             let { gameName: O, gameId: b, exe: D, distributor: L } = (0, h.wH)(R),
                                 P = this.getMediaSessionId(),
                                 x = this.getRTCConnectionId();
-                            (0, v.w)().then((h) => {
-                                let v = null;
-                                if (null != h) {
-                                    let { cpu_brand: e, cpu_vendor: t, cpu_memory: n, gpu_brand: r, gpu_memory: i } = h;
-                                    v = { cpu_brand: e, cpu_vendor: t, cpu_memory: n, gpu_brand: r, gpu_memory: i };
-                                }
-                                let R =
+                            (0, m.w)().then((h) => {
+                                let m =
+                                        null != h
+                                            ? {
+                                                  cpu_brand: h.cpu_brand,
+                                                  cpu_vendor: h.cpu_vendor,
+                                                  cpu_memory: h.cpu_memory,
+                                                  gpu_brand: h.gpu_brand,
+                                                  gpu_memory: h.gpu_memory,
+                                              }
+                                            : null,
+                                    R =
                                         (e ?? 0) +
                                         (t ?? 0) +
                                         (n ?? 0) +
                                         (r ?? 0) +
                                         (i ?? 0) +
                                         (s ?? 0) +
-                                        (m ?? 0) +
-                                        (I ?? 0) +
-                                        (A ?? 0),
+                                        (E ?? 0) +
+                                        (T ?? 0) +
+                                        (I ?? 0),
                                     k = (u ?? 0) + (c ?? 0) + (d ?? 0) + (_ ?? 0) + (f ?? 0);
                                 N.default.track(w.HAw.SCREENSHARE_FINISHED, {
                                     screenshare_frames: e,
@@ -248,16 +253,16 @@ class k extends u.A {
                                     hybrid_gdi_bitblt_frames_unique: _,
                                     hybrid_gdi_printwindow_frames_unique: f,
                                     skip_history_json: p,
-                                    quartz_frames: m,
-                                    screencapturekit_frames: I,
-                                    go_live_camera_frames: A,
+                                    quartz_frames: E,
+                                    screencapturekit_frames: T,
+                                    go_live_camera_frames: I,
                                     total_frames: R,
                                     total_frames_unique: k,
-                                    desktop_capturer_type: E,
+                                    desktop_capturer_type: g,
                                     media_session_id: P,
                                     rtc_connection_id: x,
                                     context: M.x.STREAM,
-                                    activity: g,
+                                    activity: A,
                                     soundshare_session: this.soundshareStats.getStats().soundshare_last_session,
                                     picker_type_used:
                                         null != this.analyticsContext.nativePickerStyleUsed ? "native" : "internal",
@@ -266,17 +271,17 @@ class k extends u.A {
                                     share_game_id: b,
                                     share_game_exe: D,
                                     share_game_distributor: L,
-                                    hdr_frames_capable: T,
-                                    hdr_frames: S,
+                                    hdr_frames_capable: S,
+                                    hdr_frames: y,
                                     discord_is_elevated: C.A.getDiscordIsElevated(),
-                                    target_window_elevated: y,
-                                    ...v,
+                                    target_window_elevated: v,
+                                    ...m,
                                 });
                             });
                         },
                     ),
                     this._connection?.on(s.yq.SoundshareAttached, () => {
-                        let e = I.Ay.getGoLiveSource();
+                        let e = T.Ay.getGoLiveSource();
                         e?.desktopSource != null &&
                             N.default.track(w.HAw.SOUNDSHARE_ATTACHED, {
                                 ...(0, D.A)(e?.desktopSource),
@@ -285,21 +290,21 @@ class k extends u.A {
                     }),
                     this._connection?.on(s.yq.SoundshareFailed, (e) => {
                         let { failureCode: t, failureReason: n, willRetry: r } = e,
-                            i = I.Ay.getGoLiveSource();
+                            i = T.Ay.getGoLiveSource();
                         this.reportSoundshareFailure(i?.desktopSource, t, n, r);
                     }),
                     this._connection?.on(s.yq.SoundshareSpeaking, () => {
-                        let e = I.Ay.getGoLiveSource();
+                        let e = T.Ay.getGoLiveSource();
                         e?.desktopSource != null &&
                             (N.default.track(w.HAw.SOUNDSHARE_TRANSMITTING, {
                                 ...(0, D.A)(e?.desktopSource),
                                 ...this.getSoundshareAnalyticsProperties(),
                             }),
-                            null != A.A.getHookError(w.LU7.SOUND) &&
+                            null != I.A.getHookError(w.LU7.SOUND) &&
                                 l.h.dispatch({ type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING" }));
                     }),
                     this._connection?.on(s.yq.SoundshareTrace, (e) => {
-                        let t = I.Ay.getGoLiveSource();
+                        let t = T.Ay.getGoLiveSource();
                         switch ((this.soundshareStats.traceEvent(t?.desktopSource?.soundshareSession, e), e.type)) {
                             case "soundshare_attach_requested":
                                 this.errorTimer.start(P, () => {
@@ -456,7 +461,7 @@ class k extends u.A {
     getStreamAnalyticsProperties() {
         let { streamRegion: e, streamApplication: t, streamSourceType: n, actionContext: r } = this.analyticsContext,
             { ownerId: i, guildId: s } = this.streamContext,
-            a = y.A.getRegion(S.A.getHostname()),
+            a = v.A.getRegion(y.A.getHostname()),
             { gameName: o, gameId: l, exe: u, distributor: c, sku: d, gameMetadata: _ } = (0, h.wH)(t);
         return {
             channel_id: this.channelId,
@@ -485,7 +490,7 @@ class k extends u.A {
     getSoundshareAnalyticsProperties() {
         return {
             rtc_connection_id: this.getRTCConnectionId(),
-            soundshare_experimental: I.Ay.getExperimentalSoundshare(),
+            soundshare_experimental: T.Ay.getExperimentalSoundshare(),
         };
     }
     trackVideoStartStats() {
@@ -493,15 +498,15 @@ class k extends u.A {
         N.default.track(w.HAw.VIDEO_STREAM_STARTED, {
             ...this.getStreamAnalyticsProperties(),
             ...e,
-            connection_type: T.A.getType(),
-            effective_connection_speed: T.A.getEffectiveConnectionSpeed(),
-            service_provider: T.A.getServiceProvider(),
+            connection_type: S.A.getType(),
+            effective_connection_speed: S.A.getEffectiveConnectionSpeed(),
+            service_provider: S.A.getServiceProvider(),
             duration_go_live_modal: this.analyticsContext.goLiveModalDurationMs,
             source_location_stack: this.analyticsContext.analyticsLocations,
         });
     }
     trackVideoEndStats(e) {
-        let t = g.A.getChannel(this.channelId),
+        let t = A.A.getChannel(this.channelId),
             n = null != t ? t.type : null,
             { ownerId: r } = this.streamContext,
             i = null,
@@ -531,10 +536,10 @@ class k extends u.A {
                     reason: e,
                     max_viewers: this.analyticsContext.maxViewers,
                     hostname: this.hostname,
-                    hardware_enabled: I.Ay.getHardwareEncoding(),
+                    hardware_enabled: T.Ay.getHardwareEncoding(),
                     device_performance_class: this.isOwner ? (0, p.A)() : null,
-                    soundshare_experimental: I.Ay.getExperimentalSoundshare(),
-                    quality_preset: m.A.getState().preset,
+                    soundshare_experimental: T.Ay.getExperimentalSoundshare(),
+                    quality_preset: E.A.getState().preset,
                     discord_is_elevated: C.A.getDiscordIsElevated(),
                 });
         }),
@@ -556,7 +561,7 @@ class k extends u.A {
                         reason: e,
                         max_viewers: this.analyticsContext.maxViewers,
                         hostname: this.hostname,
-                        hardware_enabled: I.Ay.getHardwareEncoding(),
+                        hardware_enabled: T.Ay.getHardwareEncoding(),
                         device_performance_class: this.isOwner ? (0, p.A)() : null,
                     });
             });
