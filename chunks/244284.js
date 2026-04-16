@@ -47,7 +47,7 @@ class l extends i.A {
             (this.enabled = e.enabled);
     }
     isActiveAt(e, t) {
-        if (null == this.startTime || null == this.endTime || 0 === this.days.length) return !1;
+        if (null == this.startTime || null == this.endTime || 0 === this.days.length || !this.enabled) return !1;
         let n = a(this.startTime),
             r = a(this.endTime),
             i = n > r;
@@ -61,6 +61,12 @@ class l extends i.A {
             if (this.days.includes(n) && t < r) return !0;
         }
         return !1;
+    }
+    getEndMinutes() {
+        return null == this.endTime ? null : a(this.endTime);
+    }
+    getStartMinutes() {
+        return null == this.startTime ? null : a(this.startTime);
     }
 }
 class u extends i.A {
@@ -80,6 +86,23 @@ class u extends i.A {
         let t = s[e.getDay()],
             n = 60 * e.getHours() + e.getMinutes();
         return this.rules.some((e) => e.isActiveAt(t, n));
+    }
+    getNextEndTime() {
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new Date();
+        if (0 === this.rules.length) return null;
+        let t = s[e.getDay()],
+            n = 60 * e.getHours() + e.getMinutes();
+        for (let r of this.rules.filter((e) => e.isActiveAt(t, n))) {
+            let t = r.getEndMinutes(),
+                i = r.getStartMinutes();
+            if (null == t || null == i) continue;
+            let s = i > t,
+                a = new Date(e),
+                o = Math.floor(t / 60),
+                l = t % 60;
+            return s && n >= i && a.setDate(a.getDate() + 1), a.setHours(o, l, 0, 0), a;
+        }
+        return null;
     }
 }
 function c(e) {

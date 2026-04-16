@@ -2216,6 +2216,7 @@ var tS = (function (e) {
             (e[(e.TAG_REQUIRED = 40067)] = "TAG_REQUIRED"),
             (e[(e.USER_QUARANTINED = 40068)] = "USER_QUARANTINED"),
             (e[(e.INVITES_DISABLED = 40069)] = "INVITES_DISABLED"),
+            (e[(e.RESTRICTED_HOURS_ACTIVE = 40117)] = "RESTRICTED_HOURS_ACTIVE"),
             (e[(e.INVALID_ACCESS = 50001)] = "INVALID_ACCESS"),
             (e[(e.INVALID_ACCOUNT_TYPE = 50002)] = "INVALID_ACCOUNT_TYPE"),
             (e[(e.INVALID_ACTION_DM = 50003)] = "INVALID_ACTION_DM"),

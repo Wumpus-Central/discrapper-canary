@@ -772,7 +772,12 @@ let i = {
         inlineRequire: () => n(915968).A,
     },
     HavenManager: { actions: ["HAVEN_DISCONNECT"], inlineRequire: () => n(63446).A },
-    RestrictedHoursManager: { inlineRequire: () => n(425116).A, hasStoreChangeListeners: !0 },
+    RestrictedHoursManager: {
+        actions: ["POST_CONNECTION_OPEN", "CURRENT_USER_UPDATE", "LOGOUT"],
+        inlineRequire: () => n(425116).A,
+        hasStoreChangeListeners: !0,
+        neverLoadBeforeConnectionOpen: !0,
+    },
     SentryExperimentFeatureFlagManager: {
         actions: [],
         inlineRequire: () => n(952719).A,

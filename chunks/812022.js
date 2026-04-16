@@ -123,7 +123,7 @@ function T(e, t) {
                   .catch(r),
               !0)
             : 401 === e.statusCode && e.body?.code === p.t02.MFA_REQUIRED && e.body?.mfa
-              ? (Promise.all([n.e("88890"), n.e("66663")])
+              ? (Promise.all([n.e("88890"), n.e("98394")])
                     .then(n.bind(n, 522238))
                     .then((n) => {
                         let { openMFAModal: i } = n;
@@ -138,14 +138,22 @@ function T(e, t) {
                               let { default: t } = e;
                               t();
                           })
-                    : (0, a.O)(e.statusCode, e.body?.code) &&
-                      n
-                          .e("52729")
-                          .then(n.bind(n, 116960))
-                          .then((t) => {
-                              let { default: n } = t;
-                              n(e.body?.guild_id);
-                          }),
+                    : (0, a.O)(e.statusCode, e.body?.code)
+                      ? n
+                            .e("52729")
+                            .then(n.bind(n, 116960))
+                            .then((t) => {
+                                let { default: n } = t;
+                                n(e.body?.guild_id);
+                            })
+                      : 403 === e.statusCode &&
+                        e.body?.code === p.t02.RESTRICTED_HOURS_ACTIVE &&
+                        Promise.resolve()
+                            .then(n.bind(n, 390660))
+                            .then((e) => {
+                                let { openRestrictedHoursModal: t } = e;
+                                t();
+                            }),
                 !1),
 }),
     (0, r.Cu)(async (e) => {

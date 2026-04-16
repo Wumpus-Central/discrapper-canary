@@ -1,10 +1,1 @@
-"use strict";
-n.d(t, { f: () => a, r: () => s });
-var r = n(690094);
-let i = "_sentrySpan";
-function s(e, t) {
-    t ? (0, r.my)(e, i, t) : delete e[i];
-}
-function a(e) {
-    return e[i];
-}
+s.d(e,{f:()=>o,r:()=>n});var r=s(690094);let i="_sentrySpan";function n(t,e){e?(0,r.my)(t,i,e):delete t[i]}function o(t){return t[i]}{return e[i]}

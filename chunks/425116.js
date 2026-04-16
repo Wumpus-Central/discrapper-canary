@@ -1,32 +1,30 @@
 "use strict";
-n.d(t, { A: () => p });
+n.d(t, { $: () => c, A: () => p });
 var r = n(439372),
     i = n(287809),
-    a = n(936926),
-    s = n(390660);
+    s = n(695515),
+    a = n(390660);
 let o = 6e4,
     l = !1,
     u = null;
 function c() {
-    return (
-        !!(0, a.Eq)({ location: "RestrictedHoursManager" }) &&
-        (i.default.getCurrentUser()?.restrictedSchedule?.isInRestrictedHours() ?? !1)
-    );
+    return s.A.isCurrentUserInRestrictedHours();
 }
 function d() {
     let e = c();
-    e !== l && ((l = e) ? (0, s.u)() : (0, s.k)());
+    e !== l && ((l = e) ? (0, a.openRestrictedHoursModal)() : (0, a.k)());
 }
 function _() {
-    d();
+    (l = !1), (0, a.k)();
 }
 class f extends r.A {
-    stores = new Map().set(i.default, _);
+    stores = new Map().set(i.default, d).set(s.A, d);
+    actions = { POST_CONNECTION_OPEN: d, CURRENT_USER_UPDATE: d, LOGOUT: _ };
     _initialize() {
-        (l = c()) && (0, s.u)(), (u = setInterval(d, o));
+        (l = c()) && (0, a.openRestrictedHoursModal)(), (u = setInterval(d, o));
     }
     _terminate() {
-        null != u && (clearInterval(u), (u = null)), (0, s.k)(), (l = !1);
+        null != u && (clearInterval(u), (u = null)), (0, a.k)(), (l = !1);
     }
 }
 let p = new f();
