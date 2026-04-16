@@ -49,6 +49,7 @@ e.exports = {
     nl: "voiceChannelEffectsContainer__2f4f7",
     g$: "stopStreamForeground__2f4f7",
     dY: "slayerGiftingPlayingGameButton__2f4f7",
+    M7: "slayerGiftingPlayingGameButtonPadding6px__2f4f7",
     jy: "slayerGiftingPlayingGameIconContainer__2f4f7",
     Se: "slayerGiftingPlayingGameIcon__2f4f7",
 };
