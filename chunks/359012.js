@@ -10,7 +10,7 @@ var n = i(627968),
     u = i(652215),
     h = i(53516),
     m = i(985018),
-    x = i(565441);
+    x = i(606513);
 function p(t) {
     let { onClose: e, transitionState: p } = t,
         S = (0, r.bG)([d.default], () => d.default.getCurrentUser()),
@@ -45,7 +45,9 @@ function p(t) {
         onClose: e,
         title: m.intl.string(m.t.CbdZR3),
         actions: [
-            { text: m.intl.string(m.t.N86XcP), onClick: v, variant: "critical-secondary" },
+            ...(S?.email != null
+                ? [{ text: m.intl.string(m.t.N86XcP), onClick: v, variant: "critical-secondary" }]
+                : []),
             { text: m.intl.string(m.t.bt75uw), onClick: g, variant: "primary" },
         ],
         transitionState: p,
