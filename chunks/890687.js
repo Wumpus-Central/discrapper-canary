@@ -75,14 +75,16 @@ var g = n(493740),
     O = n(515718),
     b = n(252424),
     D = n(723702),
-    L = n(927578),
-    w = n(178540),
+    L = n(927578);
+n(845890), n(265704);
+var w = n(178540),
     M = n(829219),
-    x = n(859703),
-    P = n(341915),
+    P = n(859703),
+    x = n(341915),
     k = n(245853),
-    U = n(302654),
-    G = n(579473),
+    U = n(302654);
+n(901882);
+var G = n(579473),
     F = n(971276),
     V = n(561844),
     B = n(590202),
@@ -107,11 +109,11 @@ function er() {
                 ? arguments[0]
                 : { fetchPolicy: "cache-only", callerSource: "unknown" },
         [t, n] = r.useState(!1),
-        i = (0, f.yK)([x.A], () => [...x.A.quests.values()]),
-        s = (0, f.yK)([x.A], () => [...x.A.excludedQuests.values()]),
-        { isFetchingCurrentQuests: a, lastFetchedCurrentQuests: o } = (0, f.cf)([x.A], () => ({
-            isFetchingCurrentQuests: x.A.isFetchingCurrentQuests,
-            lastFetchedCurrentQuests: x.A.lastFetchedCurrentQuests,
+        i = (0, f.yK)([P.A], () => [...P.A.quests.values()]),
+        s = (0, f.yK)([P.A], () => [...P.A.excludedQuests.values()]),
+        { isFetchingCurrentQuests: a, lastFetchedCurrentQuests: o } = (0, f.cf)([P.A], () => ({
+            isFetchingCurrentQuests: P.A.isFetchingCurrentQuests,
+            lastFetchedCurrentQuests: P.A.lastFetchedCurrentQuests,
         })),
         l = (0, F.s)();
     return (
@@ -125,7 +127,7 @@ function er() {
             ) {
                 if ((n(!0), (0, M.N1)(), (0, D.isMac)() && "focused" !== m.A.getState())) return;
                 let { enableNewRequestBehavior: t } = U.A.getConfig({ location: "QuestHookUseQuests" });
-                if (!t) (0, M.r8)(P.yW.DESKTOP_ACCOUNT_PANEL_AREA, `use_quests_${e.callerSource}`);
+                if (!t) (0, M.r8)(x.yW.DESKTOP_ACCOUNT_PANEL_AREA, `use_quests_${e.callerSource}`);
             }
         }, [e.fetchPolicy, l, t, a, o, e.callerSource]),
         { quests: i, excludedQuests: s, isFetchingCurrentQuests: a, hasFetched: t }
@@ -269,7 +271,7 @@ function eg(e, t, n) {
     return e.localeCompare(t) * r;
 }
 function eA() {
-    let e = (0, f.bG)([x.A], () => x.A.getQuestHomeHero());
+    let e = (0, f.bG)([P.A], () => P.A.getQuestHomeHero());
     return r.useMemo(() => ({ questHomeHero: e }), [e]);
 }
 function eI(e, t) {
@@ -354,8 +356,8 @@ function ev(e) {
 }
 function eN() {
     let e = r.useRef(!1),
-        t = (0, f.yK)([x.A], () => Array.from(x.A.claimedQuests.values())),
-        n = (0, f.bG)([x.A], () => x.A.isFetchingClaimedQuests);
+        t = (0, f.yK)([P.A], () => Array.from(P.A.claimedQuests.values())),
+        n = (0, f.bG)([P.A], () => P.A.isFetchingClaimedQuests);
     return (
         r.useEffect(() => {
             n || e.current || ((e.current = !0), (0, M.HA)());
@@ -376,8 +378,8 @@ function eR(e) {
     }, [t, e.config]);
 }
 function eO(e) {
-    return (0, f.bG)([x.A], () => {
-        let t = x.A.getQuest(e);
+    return (0, f.bG)([P.A], () => {
+        let t = P.A.getQuest(e);
         if (null == t) return null;
         let n = t.config.rewardsConfig.rewards.find((e) => e.type === u.l.VIRTUAL_CURRENCY);
         if (n?.type !== u.l.VIRTUAL_CURRENCY) return null;
@@ -386,13 +388,13 @@ function eO(e) {
     }, [e]);
 }
 function eb(e) {
-    return (0, f.bG)([x.A], () => null != e && x.A.isQuestExpired(e.id), [e]);
+    return (0, f.bG)([P.A], () => null != e && P.A.isQuestExpired(e.id), [e]);
 }
 function eD(e, t, n) {
     let r = (0, f.bG)([S.A], () => S.A.getChannel(t?.channelId) ?? null),
-        i = (0, f.bG)([x.A], () => null != x.A.questEnrollmentBlockedUntil, []),
+        i = (0, f.bG)([P.A], () => null != P.A.questEnrollmentBlockedUntil, []),
         s = (0, f.bG)([v.default], () => v.default.getCurrentUser()?.id) === n,
-        a = (0, f.bG)([x.A], () => null != e && x.A.isQuestExpired(e.id), [e]);
+        a = (0, f.bG)([P.A], () => null != e && P.A.isQuestExpired(e.id), [e]);
     if (null == e || i || a || s) return !1;
     let o = e.userStatus?.claimedAt != null,
         l = (0, q.Ll)(t, r);
@@ -413,19 +415,19 @@ function ew(e) {
     }, [t, n, i, a, s]);
 }
 function eM(e) {
-    return (0, f.bG)([x.A], () => x.A.isProgressingOnDesktop(e.id));
-}
-function ex(e) {
-    return r.useMemo(() => (0, z.YL)(e), [e]);
+    return (0, f.bG)([P.A], () => P.A.isProgressingOnDesktop(e.id));
 }
 function eP(e) {
-    let t = (0, f.bG)([x.A], () => x.A.getOptimisticProgress(e.id, o.n.WATCH_VIDEO));
+    return r.useMemo(() => (0, z.YL)(e), [e]);
+}
+function ex(e) {
+    let t = (0, f.bG)([P.A], () => P.A.getOptimisticProgress(e.id, o.n.WATCH_VIDEO));
     return r.useMemo(() => (0, Z.J$)(e), [e, t]);
 }
 function ek(e) {
     let t = eM(e),
-        n = ex(e),
-        r = eP(e);
+        n = eP(e),
+        r = ex(e);
     return t || n || r;
 }
 let eU = 1,
@@ -494,7 +496,7 @@ function eB(e) {
     return (0, E.A)(t);
 }
 function eH(e) {
-    let t = (0, f.bG)([x.A], () => x.A.quests),
+    let t = (0, f.bG)([P.A], () => P.A.quests),
         n = eB(Array.from(t.values())),
         i = r.useMemo(() => {
             let n = (0, q.$e)(t, X.zO);
@@ -605,7 +607,7 @@ function eZ(e) {
     return { completedRatio: s, percentComplete: a, completedRatioDisplay: o };
 }
 function eX(e) {
-    return [(0, f.bG)([x.A], () => x.A.selectedTaskPlatform(e)), r.useCallback((t) => (0, M.lx)(e, t), [e])];
+    return [(0, f.bG)([P.A], () => P.A.selectedTaskPlatform(e)), r.useCallback((t) => (0, M.lx)(e, t), [e])];
 }
 function eQ(e, t) {
     let [n, i] = eX(e.id),
@@ -613,7 +615,7 @@ function eQ(e, t) {
         l = a.includes(X.fO.DESKTOP),
         u = a.includes(X.fO.CONSOLE),
         c = eM(e),
-        d = ex(e),
+        d = eP(e),
         _ = r.useMemo(
             () =>
                 (0, s.YW)(t)
@@ -635,17 +637,17 @@ function eQ(e, t) {
         r.useMemo(
             () =>
                 (0, s.YW)({ lastPlatformProgress: _, currentProgressingPlatform: f, selectedPlatform: n })
-                    .with({ currentProgressingPlatform: X.fO.CONSOLE }, () => P.X0.CONSOLE)
-                    .with({ currentProgressingPlatform: X.fO.DESKTOP }, () => P.X0.DESKTOP)
-                    .with({ currentProgressingPlatform: null, lastPlatformProgress: X.fO.CONSOLE }, () => P.X0.CONSOLE)
-                    .with({ currentProgressingPlatform: null, lastPlatformProgress: X.fO.DESKTOP }, () => P.X0.DESKTOP)
+                    .with({ currentProgressingPlatform: X.fO.CONSOLE }, () => x.X0.CONSOLE)
+                    .with({ currentProgressingPlatform: X.fO.DESKTOP }, () => x.X0.DESKTOP)
+                    .with({ currentProgressingPlatform: null, lastPlatformProgress: X.fO.CONSOLE }, () => x.X0.CONSOLE)
+                    .with({ currentProgressingPlatform: null, lastPlatformProgress: X.fO.DESKTOP }, () => x.X0.DESKTOP)
                     .with(
                         {
                             currentProgressingPlatform: null,
                             lastPlatformProgress: null,
                             selectedPlatform: X.fO.CONSOLE,
                         },
-                        () => P.X0.CONSOLE,
+                        () => x.X0.CONSOLE,
                     )
                     .with(
                         {
@@ -653,11 +655,11 @@ function eQ(e, t) {
                             lastPlatformProgress: null,
                             selectedPlatform: X.fO.DESKTOP,
                         },
-                        () => P.X0.DESKTOP,
+                        () => x.X0.DESKTOP,
                     )
                     .with(
                         { currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: null },
-                        () => (u && l ? P.X0.SELECT : u ? P.X0.CONSOLE : P.X0.DESKTOP),
+                        () => (u && l ? x.X0.SELECT : u ? x.X0.CONSOLE : x.X0.DESKTOP),
                     )
                     .exhaustive(),
             [u, l, _, f, n],
@@ -676,14 +678,14 @@ function eJ(e) {
         l = null == t,
         u = o.o.DESKTOP.has(n.taskType) && n.percentComplete > 0,
         c = 0 === n.percentComplete,
-        d = s && !a && !i && l && (u || (c && r === P.X0.DESKTOP)),
+        d = s && !a && !i && l && (u || (c && r === x.X0.DESKTOP)),
         _ = (0, D.isWeb)() && d && !(0, K.W1)(e),
         f = (0, D.isMac)() && n.taskType === o.n.STREAM_ON_DESKTOP && d,
         p = [];
     return f && p.push(ee.intl.string(ee.t.MFGxFM)), _ && p.push(ee.intl.string(ee.t.BV6xDm)), p;
 }
 function e0(e) {
-    return (0, f.bG)([x.A], () => x.A.quests).get(e) ?? null;
+    return (0, f.bG)([P.A], () => P.A.quests).get(e) ?? null;
 }
 function e1(e) {
     let { mode: t, questContent: n, sourceQuestContent: i, questId: s } = e,
@@ -702,7 +704,7 @@ function e1(e) {
         }, [s, n, i]);
 }
 function e2(e, t) {
-    let n = (0, f.bG)([x.A], () => x.A.getQuest(e), [e]),
+    let n = (0, f.bG)([P.A], () => P.A.getQuest(e), [e]),
         i = (0, p.Ay)();
     return r.useMemo(() => {
         if (null == n) return null;
@@ -732,17 +734,17 @@ function e6(e) {
     let t = (0, z.TP)(e);
     return { launchInGameActivity: (0, h.A)({ applicationId: t }) };
 }
-let e4 = () => (0, f.yK)([x.A], () => [...x.A.quests.values()]).some((e) => e.preview),
+let e4 = () => (0, f.yK)([P.A], () => [...P.A.quests.values()]).some((e) => e.preview),
     e5 = () => e4(),
     e7 = (e) => {
-        let t = e?.userStatus != null && (0, Y.gO)(e.userStatus, P.uF.ACTIVITY_PANEL),
+        let t = e?.userStatus != null && (0, Y.gO)(e.userStatus, x.uF.ACTIVITY_PANEL),
             n = eb(e ?? null),
             r = e?.userStatus?.claimedAt != null,
-            i = (0, f.bG)([x.A], () => null != x.A.questEnrollmentBlockedUntil, []);
+            i = (0, f.bG)([P.A], () => null != P.A.questEnrollmentBlockedUntil, []);
         return !t && !n && !r && !i;
     },
     e8 = () => {
-        let e = (0, f.yK)([x.A], () => [...x.A.quests.values()]);
+        let e = (0, f.yK)([P.A], () => [...P.A.quests.values()]);
         return r.useMemo(() => e.filter((e) => e.preview), [e]);
     };
 function e9() {
@@ -793,9 +795,9 @@ function ti() {
         [s, a] = r.useState(e),
         [o, l] = r.useState(!1),
         [u, c] = r.useState(!1),
-        { isFetching: d, questHomeHero: _ } = (0, f.cf)([x.A], () => ({
-            isFetching: x.A.isFetchingQuestHomeHero(),
-            questHomeHero: x.A.getQuestHomeHero(),
+        { isFetching: d, questHomeHero: _ } = (0, f.cf)([P.A], () => ({
+            isFetching: P.A.isFetchingQuestHomeHero(),
+            questHomeHero: P.A.getQuestHomeHero(),
         })),
         p = e ? _ : null;
     return (

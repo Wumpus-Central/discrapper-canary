@@ -145,7 +145,8 @@ function T(e, t, n) {
     return t.includes("/") ? ((r = l.GD), `${r}${t}`) : `${r}${e}${n?.theme != null ? `/${n.theme}` : ""}/${t}`;
 }
 function S(e) {
-    return e.startsWith("http://") || e.startsWith("https://") || e.startsWith("blob:") ? e : `${l.GD}${e}`;
+    if (null != e)
+        return e.startsWith("http://") || e.startsWith("https://") || e.startsWith("blob:") ? e : `${l.GD}${e}`;
 }
 function y(e) {
     if (e.startsWith("blob:")) {
