@@ -21,7 +21,7 @@ var i = n(627968),
     I = n(838541),
     v = n(652215),
     b = n(985018),
-    T = n(999169);
+    T = n(697841);
 function y(e) {
     let t = e.item.originalItem;
     return (0, E.LL)({
@@ -69,19 +69,24 @@ function S(e) {
     return null == h
         ? null
         : (h.searchParams.append("format", "webp"), l && n)
-          ? (0, i.jsx)(m.A, {
-                attachment: t,
-                src: t.url,
-                posterUrl: h.toString(),
-                channelId: e.message.channel_id,
-                className: s()(T.m0, e.className, { [T.g$]: n }),
-                embed: !0,
-                fillContainer: !e.isSingleMosaicItem,
-                onClick: e.onClick ?? void 0,
-                onContextMenu: e.onContextMenu ?? void 0,
-                maxWidth: e.maxWidth,
-                maxHeight: e.maxHeight ?? I.Rk,
-                showParticipants: e.isSingleMosaicItem,
+          ? (0, i.jsxs)(i.Fragment, {
+                children: [
+                    (0, i.jsx)(m.A, {
+                        attachment: t,
+                        src: t.url,
+                        posterUrl: h.toString(),
+                        channelId: e.message.channel_id,
+                        className: s()(T.m0, e.className, { [T.g$]: n }),
+                        embed: !0,
+                        fillContainer: !e.isSingleMosaicItem,
+                        onClick: e.onClick ?? void 0,
+                        onContextMenu: e.onContextMenu ?? void 0,
+                        maxWidth: e.maxWidth,
+                        maxHeight: e.maxHeight ?? I.Rk,
+                        showParticipants: e.isSingleMosaicItem,
+                    }),
+                    null != e.renderAdjacentContent && e.renderAdjacentContent(),
+                ],
             })
           : (0, E.$o)({
                 ...e,
