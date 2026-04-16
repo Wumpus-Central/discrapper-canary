@@ -15,12 +15,9 @@ var i = n(64700),
 let h = (0, a.zZ)(d.X.SESSIONS_CATEGORY, {
         useTitle: () => x.intl.string(x.t.mEndXM),
         useSubtitle: () => x.intl.string(x.t.b7ZpTM),
-        initialize: () => (
-            (0, r.GY)(),
-            () => {
-                (0, r.ZQ)();
-            }
-        ),
+        initialize: () => {
+            (0, r.GY)();
+        },
         buildLayout: () => [m.I, _.A, g.V],
         useSearchTerms: () => [
             x.intl.string(x.t["+1h0k/"]),

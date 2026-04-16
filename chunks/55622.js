@@ -1,113 +1,114 @@
 "use strict";
-n.d(t, { default: () => N });
+n.d(t, { default: () => C });
 var r = n(627968),
     i = n(64700),
-    l = n(110259),
-    a = n(397927),
-    s = n(252452),
+    a = n(110259),
+    s = n(397927),
+    l = n(252452),
     o = n(139286),
-    u = n(507553),
-    c = n(324593),
-    d = n(883662),
-    h = n(961350),
-    f = n(287809),
+    u = n(200921),
+    c = n(507553),
+    d = n(324593),
+    h = n(883662),
+    p = n(961350),
+    _ = n(287809),
     m = n(152056),
-    p = n(780964),
-    _ = n(921854),
-    v = n(7564),
-    y = n(175665),
-    g = n(178241),
-    x = n(779733),
-    E = n(985018),
-    A = n(188550);
-let S = new Set([p.X.PROFILE_PANEL, p.X.SUBSCRIPTIONS_PANEL, p.X.FAMILY_CENTER_PANEL, p.X.POGGERMODE_PANEL]),
+    f = n(780964),
+    g = n(921854),
+    y = n(7564),
+    v = n(175665),
+    S = n(178241),
+    E = n(779733),
+    x = n(985018),
+    A = n(298859);
+let N = new Set([f.X.PROFILE_PANEL, f.X.SUBSCRIPTIONS_PANEL, f.X.FAMILY_CENTER_PANEL, f.X.POGGERMODE_PANEL]),
     b = new Map([
-        [p.X.CONNECTIONS_PANEL, l.ImpressionNames.USER_SETTINGS_CONNECTIONS],
-        [p.X.SESSIONS_PANEL, l.ImpressionNames.USER_SETTINGS_SESSIONS],
+        [f.X.CONNECTIONS_PANEL, a.ImpressionNames.USER_SETTINGS_CONNECTIONS],
+        [f.X.SESSIONS_PANEL, a.ImpressionNames.USER_SETTINGS_SESSIONS],
     ]);
-function N(e) {
+function C(e) {
     let { target: t, ...n } = e,
-        a = m.A.useField("query"),
-        E = i.useCallback(() => {
-            m.A.setState({ query: "" }), c.A.terminate();
+        s = m.A.useField("query"),
+        x = i.useCallback(() => {
+            m.A.setState({ query: "" }), d.A.terminate();
         }, []),
-        [A, N] = i.useState(!1);
+        [A, C] = i.useState(!1);
     return (i.useLayoutEffect(() => {
         let e = () => {
-            null == f.default.getCurrentUser() && (N(!0), (0, x.default)());
+            null == _.default.getCurrentUser() && (C(!0), (0, E.default)());
         };
         return (
-            h.default.addChangeListener(e),
+            p.default.addChangeListener(e),
             () => {
-                h.default.removeChangeListener(e), y.A.resetState(), u.A.resetState(), s.A.close();
+                p.default.removeChangeListener(e), v.A.resetState(), c.A.resetState(), l.A.close(), (0, u.ZQ)();
             }
         );
     }, []),
     A)
         ? null
-        : (0, r.jsx)(d.A, {
-              partialRoot: _.D,
+        : (0, r.jsx)(h.A, {
+              partialRoot: g.D,
               searchBar: j,
-              emptyState: C,
-              sidebarFooter: v.A,
+              emptyState: T,
+              sidebarFooter: y.A,
               onViewChange: (e) => {
-                  S.has(e) || (0, g._)(e);
+                  N.has(e) || (0, S._)(e);
                   let t = b.get(e);
                   null != t &&
                       (0, o.x)({
-                          type: l.ImpressionTypes.PANE,
+                          type: a.ImpressionTypes.PANE,
                           name: t,
-                          properties: { source: y.A.getField("source") },
+                          properties: { source: v.A.getField("source") },
                       }),
-                      y.A.setState({ source: void 0 });
+                      v.A.setState({ source: void 0 });
               },
               target: t,
-              defaultTarget: p.X.ACCOUNT_PANEL,
-              searchQuery: a,
-              clearSearchQuery: E,
+              defaultTarget: f.X.ACCOUNT_PANEL,
+              searchQuery: s,
+              clearSearchQuery: x,
               ...n,
           });
 }
 function j() {
     let e = m.A.useField("query"),
         t = i.useCallback((e) => {
-            m.A.setState({ query: e }), c.A.maybeTrackQueryEntered();
+            m.A.setState({ query: e }), d.A.maybeTrackQueryEntered();
         }, []),
         n = i.useCallback(() => {
-            c.A.isSessionActive() || c.A.initialize();
+            d.A.isSessionActive() || d.A.initialize();
+        }, []),
+        a = i.useCallback(() => {
+            0 === m.A.getField("query").trim().length && d.A.terminate();
         }, []),
         l = i.useCallback(() => {
-            0 === m.A.getField("query").trim().length && c.A.terminate();
-        }, []),
-        s = i.useCallback(() => {
-            m.A.setState({ query: "" }), c.A.terminate();
+            m.A.setState({ query: "" }), d.A.terminate();
         }, []);
     return (
         i.useEffect(
             () => () => {
-                m.A.resetState(), c.A.terminate();
+                m.A.resetState(), d.A.terminate();
             },
             [],
         ),
         (0, r.jsx)("div", {
             className: A.P,
-            children: (0, r.jsx)(a.IWV, { size: "md", query: e, onFocus: n, onBlur: l, onChange: t, onClear: s }),
+            children: (0, r.jsx)(s.IWV, { size: "md", query: e, onFocus: n, onBlur: a, onChange: t, onClear: l }),
         })
     );
 }
-function C() {
+function T() {
     return (0, r.jsxs)("div", {
         className: A.t,
         children: [
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(s.Text, {
                 variant: "text-sm/semibold",
                 color: "text-strong",
-                children: E.intl.string(E.t.zihbmv),
+                children: x.intl.string(x.t.zihbmv),
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 color: "text-subtle",
-                children: E.intl.string(E.t.XclvsB),
+                children: x.intl.string(x.t.XclvsB),
             }),
         ],
     });

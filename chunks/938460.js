@@ -2,26 +2,23 @@ n.d(t, { w: () => u });
 var i = n(200921),
     s = n(754333),
     l = n(419954),
-    a = n(933297),
-    r = n(780964),
+    r = n(933297),
+    a = n(780964),
     o = n(358776),
     d = n(4887),
     c = n(985018);
-let u = (0, l.eA)(r.X.ACCOUNT_SESSIONS_NESTED_PANEL, {
+let u = (0, l.eA)(a.X.ACCOUNT_SESSIONS_NESTED_PANEL, {
     buildLayout: () => [d.C],
     usePredicate: () => (0, o._A)("AccountSessionsNestedPanel"),
-    initialize: () => (
-        (0, i.GY)(),
-        () => {
-            (0, i.ZQ)();
-        }
-    ),
+    initialize: () => {
+        (0, i.GY)();
+    },
     useTrailingDecoration: () => ({
-        type: a.sw.TEXT,
+        type: r.sw.TEXT,
         useText: () => {
             let { currentSession: e, otherSessions: t } = (0, s.r)(),
                 n = t.length + +(null != e);
-            return n > 0 ? c.intl.formatToPlainString(c.t.G7zwOk, { count: n }) : null;
+            return n > 0 ? c.intl.formatToPlainString(c.t.G7zwOk, { count: n }) : c.intl.string(c.t.MKDeyL);
         },
     }),
 });
