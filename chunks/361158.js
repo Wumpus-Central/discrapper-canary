@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { B8: () => v, dF: () => C, up: () => S, xr: () => A });
+n.d(t, { B8: () => v, dF: () => N, up: () => y, xr: () => A });
 var r = n(627968),
     i = n(64700),
-    a = n(296489),
-    s = n.n(a),
+    s = n(296489),
+    a = n.n(s),
     o = n(89229),
     l = n(307343),
     u = n(353640),
@@ -14,8 +14,8 @@ var r = n(627968),
     p = n(240248),
     h = n(750506),
     m = n(87404),
-    g = n(282664);
-let E = (0, p.xI)(d.A.FULL_SCREEN_LAYER_ANIMATION_DURATION),
+    E = n(603091);
+let g = (0, p.xI)(d.A.FULL_SCREEN_LAYER_ANIMATION_DURATION),
     A = (0, u.v)((e) => ({
         fullScreenLayers: [],
         addLayer: (t) =>
@@ -33,41 +33,41 @@ function I(e) {
         i.useEffect(
             () => (
                 f.A.disable(),
-                t.key !== m._s && f.A.enableTemp(b(t.key)),
+                t.key !== m._s && f.A.enableTemp(C(t.key, t.options.onEscape)),
                 () => {
                     f.A.disableTemp();
                 }
             ),
-            [t.key],
+            [t.key, t.options.onEscape],
         ),
         (0, r.jsx)(t.LayerComponent, {
             children: (0, r.jsxs)("div", {
-                className: g.zr,
+                className: E.zr,
                 ref: n,
                 children: [
-                    (0, r.jsx)("div", { className: g.$E }),
-                    t.render({ transitionState: null != t ? t.transitionState : 3, closeLayer: () => C(t.key) }),
+                    (0, r.jsx)("div", { className: E.$E }),
+                    t.render({ transitionState: null != t ? t.transitionState : 3, closeLayer: () => N(t.key) }),
                 ],
             }),
         })
     );
 }
-let T = { enter: g.Ve, enterActive: g.T8, enterDone: g.lG, exit: g.NS, exitActive: g.N5, exitDone: g.Dr },
-    y = { enter: g.Zf, enterActive: g.BA, enterDone: g.zo, exit: g.ph, exitActive: g.zX, exitDone: g.hf };
-function S() {
+let T = { enter: E.Ve, enterActive: E.T8, enterDone: E.lG, exit: E.NS, exitActive: E.N5, exitDone: E.Dr },
+    S = { enter: E.Zf, enterActive: E.BA, enterDone: E.zo, exit: E.ph, exitActive: E.zX, exitDone: E.hf };
+function y() {
     let { reducedMotion: e } = i.useContext(_.CZY),
-        t = e.enabled ? y : T,
+        t = e.enabled ? S : T,
         n = A((e) => e.fullScreenLayers),
-        a = n.map((e) => ({ item: e, nodeRef: i.createRef() }));
+        s = n.map((e) => ({ item: e, nodeRef: i.createRef() }));
     return (0, r.jsx)(o.A, {
-        children: a.map((e) => {
-            let { item: i, nodeRef: a } = e;
+        children: s.map((e) => {
+            let { item: i, nodeRef: s } = e;
             return (0, r.jsx)(
                 l.A,
                 {
-                    nodeRef: a,
+                    nodeRef: s,
                     classNames: i.options.disableAnimation ? void 0 : t,
-                    timeout: E,
+                    timeout: g,
                     onEntered: () => {
                         (0, c.r)(() => {
                             A.setState({
@@ -76,7 +76,7 @@ function S() {
                         });
                     },
                     unmountOnExit: !0,
-                    children: (0, r.jsx)(I, { containerRef: a, item: i }),
+                    children: (0, r.jsx)(I, { containerRef: s, item: i }),
                 },
                 i.key,
             );
@@ -85,38 +85,38 @@ function S() {
 }
 function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.freeze({}),
-        { layerKey: n, Layer: r, disableAnimation: i = !1, showAppUnderLayer: a = !1 } = t,
-        o = null != n ? n : s()();
+        { layerKey: n, Layer: r, disableAnimation: i = !1, onEscape: s, showAppUnderLayer: o = !1 } = t,
+        l = null != n ? n : a()();
     return (
         (0, c.r)(() => {
             A.setState((t) => ({
                 fullScreenLayers: [
                     ...t.fullScreenLayers,
                     {
-                        key: o,
+                        key: l,
                         transitionState: 1,
                         LayerComponent: r ?? h.Ay,
                         render: e,
-                        options: { disableAnimation: i, showAppUnderLayer: a },
+                        options: { disableAnimation: i, onEscape: s, showAppUnderLayer: o },
                     },
                 ],
             }));
         }),
-        o
+        l
     );
 }
-function C(e) {
+function N(e) {
     (0, c.r)(() => {
         A.setState((t) => ({ fullScreenLayers: t.fullScreenLayers.filter((t) => t.key !== e) }));
     });
 }
-function b(e) {
+function C(e, t) {
     return {
         POP_LAYER: {
             binds: ["esc"],
             comboKeysBindGlobal: !0,
             action() {
-                C(e);
+                t?.() !== !0 && N(e);
             },
         },
     };

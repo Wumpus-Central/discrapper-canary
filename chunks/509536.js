@@ -1,34 +1,73 @@
 "use strict";
-n.d(t, { K4: () => f, Zt: () => d });
-var r = n(627968);
-n(64700);
-var i = n(311907),
-    s = n(793574),
-    a = n(688810),
-    o = n(361158),
-    l = n(71393),
-    u = n(287809),
-    c = n(426760);
-let d = "BoostedGuildPerksModalConnected",
-    _ = (e) => {
-        let { guildId: t, close: n, location: o, scrollToPowerupCards: d } = e,
-            _ = (0, i.bG)([u.default], () => u.default.getCurrentUser()),
-            f = (0, i.bG)([l.A], () => l.A.getGuild(t), [t]),
-            { analyticsLocations: p } = (0, a.Ay)(s.A.BOOSTED_GUILD_PERKS_MODAL);
-        return null == _ || null == f
+n.d(t, { K4: () => g, Zt: () => m });
+var r = n(627968),
+    i = n(64700),
+    s = n(311907),
+    a = n(444927),
+    o = n(793574),
+    l = n(688810),
+    u = n(361158),
+    c = n(71393),
+    d = n(287809),
+    _ = n(954571),
+    f = n(203982),
+    p = n(426760),
+    h = n(652215);
+let m = "BoostedGuildPerksModalConnected",
+    E = (e) => {
+        let { guildId: t, close: n, location: u, registerDismissModalHandler: f, scrollToPowerupCards: m } = e,
+            E = (0, s.bG)([d.default], () => d.default.getCurrentUser()),
+            g = (0, s.bG)([c.A], () => c.A.getGuild(t), [t]),
+            A = (0, a.A)(() => Date.now()),
+            { analyticsLocations: I } = (0, l.Ay)(o.A.BOOSTED_GUILD_PERKS_MODAL),
+            T = g?.id,
+            S = i.useCallback(() => {
+                n(),
+                    null != T &&
+                        _.default.track(h.HAw.MODAL_DISMISSED, {
+                            type: h.liQ.PREMIUM_GUILD_USER_MODAL,
+                            location_stack: I,
+                            location_section: u.section,
+                            location_object: u.object,
+                            guild_id: T,
+                            duration_open_ms: Date.now() - A,
+                        });
+            }, [I, A, u.object, u.section, n, T]);
+        return (i.useLayoutEffect(() => {
+            f?.(S);
+        }, [S, f]),
+        null == E || null == g)
             ? null
-            : (0, r.jsx)(a.f5, {
-                  value: p,
-                  children: (0, r.jsx)(c.A, { analyticsLocation: o, onClose: n, guild: f, scrollToPowerupCards: d }),
+            : (0, r.jsx)(l.f5, {
+                  value: I,
+                  children: (0, r.jsx)(p.A, { analyticsLocation: u, onClose: S, guild: g, scrollToPowerupCards: m }),
               });
     };
-function f(e) {
-    let { guildId: t, location: n, scrollToPowerupCards: i } = e;
-    (0, o.B8)(
+function g(e) {
+    let { guildId: t, location: n, scrollToPowerupCards: i } = e,
+        s = { current: null };
+    (0, u.B8)(
         (e) => {
-            let { closeLayer: s } = e;
-            return (0, r.jsx)(_, { close: s, guildId: t, location: n, scrollToPowerupCards: i });
+            let { closeLayer: a } = e;
+            return (
+                null == s.current && (s.current = a),
+                (0, r.jsx)(E, {
+                    close: a,
+                    guildId: t,
+                    location: n,
+                    registerDismissModalHandler: (e) => {
+                        s.current = e;
+                    },
+                    scrollToPowerupCards: i,
+                })
+            );
         },
-        { layerKey: d },
+        {
+            layerKey: m,
+            onEscape: () =>
+                f._.hasSubscribers(h.jej.MODAL_CLOSE)
+                    ? (f._.dispatch(h.jej.MODAL_CLOSE), !0)
+                    : null != s.current && (s.current(), !0),
+        },
     );
 }
