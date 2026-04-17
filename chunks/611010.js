@@ -64,13 +64,11 @@ class p extends s.A {
             (this._connectionEntrypointUrl = e.connection_entrypoint_url ?? e._connectionEntrypointUrl);
     }
     get connectionEntrypointUrl() {
-        let e = n(342169).A,
-            t = n(443302).A;
+        let e = n(941314).A;
         if (!["1443349464290168976", "1443350165678198935", "1443033465766281327"].includes(this.id))
             return this._connectionEntrypointUrl;
-        let { enabled: r } = e.getConfig({ location: "ApplicationRecord" }),
-            { enabled: i } = t.getConfig({ location: "ApplicationRecord" });
-        return r || i ? "https://aes.sgp.pvp.net/providers/discord/link/v1" : this._connectionEntrypointUrl;
+        let { enabled: t } = e.getConfig({ location: "ApplicationRecord" });
+        return t ? "https://aes.sgp.pvp.net/providers/discord/link/v1" : this._connectionEntrypointUrl;
     }
     getIconURL(e, t) {
         return null != this.icon ? a.Ay.getGameAssetURL({ id: this.id, hash: this.icon, size: e, format: t }) : null;

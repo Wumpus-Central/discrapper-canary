@@ -1,33 +1,37 @@
-l.d(t, { A: () => d });
-var n = l(64700),
+l.d(n, { A: () => c });
+var t = l(64700),
     i = l(573648),
-    s = l(429913),
-    a = l(321078),
-    r = l(403362),
-    o = l(484509);
-function d(e) {
-    let { filteredAppIdentities: t } = (0, a.A)(e),
-        l = (0, o.A)(e),
-        d = n.useMemo(() => new Set(t?.map((e) => e.application_id) ?? []), [t]),
-        c = (0, s.A)([...d]).filter(r.Vq);
+    s = l(941314),
+    a = l(429913),
+    r = l(321078),
+    o = l(403362),
+    d = l(484509);
+function c(e) {
+    let { filteredAppIdentities: n } = (0, r.A)(e),
+        l = (0, d.A)(e),
+        c = s.A.useConfig({ location: "useVisibleUserProfileConnectionsAndAppIdentities" }),
+        u = t.useMemo(() => new Set(c.enabled ? (n?.map((e) => e.application_id) ?? []) : []), [n, c.enabled]),
+        m = (0, a.A)([...u]).filter(o.Vq);
     return {
-        appIdentities: n.useMemo(
+        appIdentities: t.useMemo(
             () =>
-                t
-                    .map((e) => ({ identity: e, application: c.find((t) => t.id === e.application_id) }))
+                n
+                    .map((e) => ({ identity: e, application: m.find((n) => n.id === e.application_id) }))
                     .filter((e) => {
-                        let { application: t } = e;
-                        return null != t;
+                        let { application: n } = e;
+                        return null != n;
                     }),
-            [t, c],
+            [n, m],
         ),
-        connections: n.useMemo(
+        connections: t.useMemo(
             () =>
-                l.filter((e) => {
-                    let t = i.A.get(e.type);
-                    return t?.replacedBy == null || !d.has(t.replacedBy);
-                }),
-            [l, d],
+                c.enabled
+                    ? l.filter((e) => {
+                          let n = i.A.get(e.type);
+                          return n?.replacedBy == null || !u.has(n.replacedBy);
+                      })
+                    : l,
+            [l, u, c.enabled],
         ),
     };
 }
