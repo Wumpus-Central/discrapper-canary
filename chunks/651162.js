@@ -11,6 +11,7 @@ var r = (function (e) {
         (e[(e.IMMERSIVE_BANNER = 6)] = "IMMERSIVE_BANNER"),
         (e[(e.REWARD_HERO = 7)] = "REWARD_HERO"),
         (e[(e.MARVEL_RIVALS_PROMOTIONAL_BANNER = 8)] = "MARVEL_RIVALS_PROMOTIONAL_BANNER"),
+        (e[(e.SOCIAL_LAYER_STOREFRONT_PROMOTIONAL_BANNER = 9)] = "SOCIAL_LAYER_STOREFRONT_PROMOTIONAL_BANNER"),
         e
     );
 })({});
