@@ -133,6 +133,7 @@ var r = (function (e) {
             (e.GUILD_SETTINGS_EMOJI = "impression_guild_settings_emoji"),
             (e.GUILD_SETTINGS_ENABLE_COMMUNITY = "impression_guild_settings_enable_community"),
             (e.GUILD_SETTINGS_ENGAGEMENT = "impression_guild_settings_engagement"),
+            (e.GUILD_SETTINGS_GUILD_THEME = "impression_guild_settings_guild_theme"),
             (e.GUILD_SETTINGS_INTEGRATION = "impression_guild_settings_integration"),
             (e.GUILD_SETTINGS_INVITES = "impression_guild_settings_invites"),
             (e.GUILD_SETTINGS_INVITES_V2 = "impression_guild_settings_invites_v2"),
