@@ -106,16 +106,16 @@ function U(e) {
     });
 }
 function B(e) {
-    let { quest: t, sourceQuestContent: n, formattedExpirationDate: i } = e,
-        { externalLinkCta: s, handleOpenExternalLink: l } = L({ quest: t, sourceQuestContent: n }),
-        o = R.intl.format(R.t["14o6QY"], { expiryDate: i });
+    let { quest: t, sourceQuestContent: n, formattedExpirationDate: i, primaryCtaButton: s } = e,
+        { externalLinkCta: l, handleOpenExternalLink: o } = L({ quest: t, sourceQuestContent: n }),
+        d = R.intl.format(R.t["14o6QY"], { expiryDate: i });
     return (0, a.jsxs)(r.e2v, {
         direction: "horizontal",
         fullWidth: !0,
         wrap: !1,
         children: [
-            (0, a.jsx)(r.$nd, { variant: "secondary", text: s, onClick: l }),
-            (0, a.jsx)(r.$nd, { variant: "secondary", disabled: !0, text: o, fullWidth: !0 }),
+            (0, a.jsx)(r.$nd, { variant: "secondary", text: l, onClick: o }),
+            s ?? (0, a.jsx)(r.$nd, { variant: "secondary", disabled: !0, text: d, fullWidth: !0 }),
         ],
     });
 }
@@ -530,9 +530,11 @@ function G(e) {
                               }))
                 : (eR =
                       eh.enabled && ex === I.UA.EXPIRED && eh.enabledQuestStates.has(ex)
-                          ? (0, a.jsx)("div", {
-                                className: w.x6,
-                                children: (0, a.jsx)(N.A, {
+                          ? (0, a.jsx)(B, {
+                                quest: t,
+                                sourceQuestContent: F,
+                                formattedExpirationDate: $,
+                                primaryCtaButton: (0, a.jsx)(N.A, {
                                     quest: t,
                                     surface: I.V3.QUEST_HOME_TILE_FOOTER,
                                     analyticsCtxQuestContent: n,
