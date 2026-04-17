@@ -15,6 +15,8 @@ function l(e) {
                           ratingCount: e.steam.rating_count,
                           recentRating: e.steam.recent_rating,
                           recentRatingCount: e.steam.recent_rating_count,
+                          localizedRating: e.steam.localized_rating,
+                          localizedRatingCount: e.steam.localized_rating_count,
                       }
                     : void 0,
             opencritic:
