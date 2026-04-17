@@ -15,7 +15,7 @@ var r = n(627968),
     h = n(580630),
     m = n(788868),
     E = n(985018),
-    g = n(799297);
+    g = n(672305);
 let A = (e, t) => {
         let n = e.interval === m.WT.YEAR ? E.t.ECT4A5 : E.t.v9QeON;
         return E.intl.format(n, { price: (0, h.$g)(t.amount, t.currency) });
@@ -88,19 +88,19 @@ function S(e) {
             disabled: w,
         } = e,
         { isGift: M } = (0, d.Pv)(),
-        x = (0, u.bG)([_.A], () => _.A.get(s));
-    l()(null != x, "Missing subscriptionPlan");
-    let P = (0, p.L_)({ planId: s, shouldUseCalculatedDiscount: v, isGift: M, priceOptions: A, subscriptionPlan: x }),
+        P = (0, u.bG)([_.A], () => _.A.get(s));
+    l()(null != P, "Missing subscriptionPlan");
+    let x = (0, p.L_)({ planId: s, shouldUseCalculatedDiscount: v, isGift: M, priceOptions: A, subscriptionPlan: P }),
         k = (0, p.y8)(s, !1, M, A),
-        U = null != P && !N,
+        U = null != x && !N,
         G = i.useCallback(() => {
-            let e = T(n, x, {
+            let e = T(n, P, {
                 userLocale: t,
                 isEligibleForBOGOPromotion: b,
                 shouldShowSavingsPercent: U,
                 isGift: M,
                 planId: s,
-                savingsPercent: P,
+                savingsPercent: x,
             });
             return "string" == typeof e
                 ? (0, r.jsxs)("span", { className: g.IS, children: ["(", e, ")"] })
@@ -113,11 +113,11 @@ function S(e) {
                         children: e.text,
                     })
                   : null;
-        }, [t, b, x, n, U, M, s, P]),
-        F = (0, p.m6)(x.id),
+        }, [t, b, P, n, U, M, s, x]),
+        F = (0, p.m6)(P.id),
         V = i.useMemo(
-            () => (0, p.D8)(x.interval, M, S, x.intervalCount, y, F),
-            [x.interval, x.intervalCount, M, S, y, F],
+            () => (0, p.D8)(P.interval, M, S, P.intervalCount, y, F),
+            [P.interval, P.intervalCount, M, S, y, F],
         ),
         B = () =>
             (0, r.jsxs)("div", {
@@ -134,7 +134,7 @@ function S(e) {
                 ],
             }),
         H = () =>
-            O && null != R && x.interval === m.WT.MONTH
+            O && null != R && P.interval === m.WT.MONTH
                 ? (0, h.$g)(k.amount - R, k.currency)
                 : D
                   ? (0, h.$g)(0, k.currency, { minimumFractionDigits: 0, maximumFractionDigits: 0 })
@@ -146,7 +146,7 @@ function S(e) {
     return (0, r.jsxs)(c.DUT, {
         role: y ? "menuitem" : "radio",
         "aria-checked": f,
-        tabIndex: f ? 0 : -1,
+        tabIndex: y || f ? 0 : -1,
         focusProps: { offset: { left: -4, right: -4, top: 0, bottom: 0 } },
         onClick: j,
         className: a()(g.G_, { [g.vW]: y && f, [g.Gb]: y }),
@@ -189,13 +189,13 @@ function S(e) {
                         variant: "text-md/normal",
                         color: f ? "text-default" : "interactive-text-default",
                         className: a()(g.Ub, { [g.sw]: O || D }),
-                        children: I(x, {
+                        children: I(P, {
                             price: k,
                             isEligibleForDiscount: O,
                             isEligibleForTrial: D,
                             discountAmountOff: R,
                             discountOffer: C,
-                            savingsPercent: P,
+                            savingsPercent: x,
                         }),
                     }),
                 }),
