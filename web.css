@@ -33763,6 +33763,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .profileFrameLayer__7d80f.rail__7d80f {
     height: 100%;
+    overflow: hidden;
 
     @container (max-height: 480px) {
         &.responsive__7d80f {
@@ -33772,11 +33773,28 @@ html:not(.chat-input) .inputInner_b1f01d {
 }
 
 .profileFrameLayer__7d80f.rail__7d80f>img {
+    position: absolute
+}
+
+.profileFrameLayer__7d80f.rail__7d80f.center__7d80f>img {
     bottom: 0;
-    height: 100%;
     margin: auto;
-    position: absolute;
     top: 0
+}
+
+.profileFrameLayer__7d80f.rail__7d80f.top__7d80f>img {
+    top: 0
+}
+
+.profileFrameLayer__7d80f.rail__7d80f.bottom__7d80f>img {
+    bottom: 0
+}
+
+.profileFrameLayer__7d80f.border__7d80f {
+    background-image: var(--custom-profile-frame-layer-src);
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    height: 100%
 }
 
 @keyframes fadeIn__7d80f {
