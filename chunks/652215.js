@@ -5677,6 +5677,7 @@ var nI = (function (e) {
             (e.DEFAULT_CHANNEL_IDS = "default_channel_ids"),
             (e.ENABLE_DEFAULT_CHANNELS = "enable_default_channels"),
             (e.ENABLE_ONBOARDING_PROMPTS = "enable_onboarding_prompts"),
+            (e.APPLIED_TAGS = "applied_tags"),
             (e.AVAILABLE_TAGS = "available_tags"),
             (e.AVAILABLE_TAG_ADD = "available_tag_add"),
             (e.AVAILABLE_TAG_EDIT = "available_tag_edit"),

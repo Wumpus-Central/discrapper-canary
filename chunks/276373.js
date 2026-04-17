@@ -12,7 +12,8 @@ n.r(t),
         getStringForPermission: () => $,
         getStringForRemovedChannelFlag: () => q,
         shouldNotRenderChangeDetail: () => B,
-        transformAvailableForumTagChange: () => el,
+        transformAppliedForumTagChange: () => el,
+        transformAvailableForumTagChange: () => er,
         transformLogs: () => ee,
     }),
     n(321073);
@@ -57,40 +58,40 @@ function y(e) {
         case p.GaG.GUILD:
             return {
                 [p.gGk.NAME]: () => F.t.CkDiNH,
-                [p.gGk.DESCRIPTION]: eo(F.t.RP3Ey3, F.t.QAVj1Y),
+                [p.gGk.DESCRIPTION]: eE(F.t.RP3Ey3, F.t.QAVj1Y),
                 [p.gGk.ICON_HASH]: () => F.t.iLZ8Q9,
                 [p.gGk.SPLASH_HASH]: () => F.t["4VV6dn"],
                 [p.gGk.DISCOVERY_SPLASH_HASH]: () => F.t["2pds6p"],
-                [p.gGk.BANNER_HASH]: eo(F.t.Cxq4zO, F.t["H7eE/9"]),
+                [p.gGk.BANNER_HASH]: eE(F.t.Cxq4zO, F.t["H7eE/9"]),
                 [p.gGk.OWNER_ID]: () => F.t["8ltsLT"],
                 [p.gGk.REGION]: () => F.t.X9r5Kf,
                 [p.gGk.PREFERRED_LOCALE]: () => F.t.UnXuDS,
-                [p.gGk.AFK_CHANNEL_ID]: eo(F.t.ClBuA4, F.t["ms+xtL"]),
+                [p.gGk.AFK_CHANNEL_ID]: eE(F.t.ClBuA4, F.t["ms+xtL"]),
                 [p.gGk.AFK_TIMEOUT]: () => F.t.q21fHa,
-                [p.gGk.SYSTEM_CHANNEL_ID]: eo(F.t.H1VXaa, F.t.XhtmxJ),
-                [p.gGk.RULES_CHANNEL_ID]: eo(F.t.OI6MG2, F.t.lik3tI),
-                [p.gGk.PUBLIC_UPDATES_CHANNEL_ID]: eo(F.t.YxBKrY, F.t.Ehsnij),
-                [p.gGk.MFA_LEVEL]: ec({ [p.EkJ.NONE]: F.t.voaCCQ, [p.EkJ.ELEVATED]: F.t.pRNVwz }),
-                [p.gGk.WIDGET_ENABLED]: eu(F.t.ADIty8, F.t.nf58VY),
-                [p.gGk.WIDGET_CHANNEL_ID]: eo(F.t["6SBsDc"], F.t.deQ5wO),
-                [p.gGk.VERIFICATION_LEVEL]: ec({
+                [p.gGk.SYSTEM_CHANNEL_ID]: eE(F.t.H1VXaa, F.t.XhtmxJ),
+                [p.gGk.RULES_CHANNEL_ID]: eE(F.t.OI6MG2, F.t.lik3tI),
+                [p.gGk.PUBLIC_UPDATES_CHANNEL_ID]: eE(F.t.YxBKrY, F.t.Ehsnij),
+                [p.gGk.MFA_LEVEL]: e_({ [p.EkJ.NONE]: F.t.voaCCQ, [p.EkJ.ELEVATED]: F.t.pRNVwz }),
+                [p.gGk.WIDGET_ENABLED]: ec(F.t.ADIty8, F.t.nf58VY),
+                [p.gGk.WIDGET_CHANNEL_ID]: eE(F.t["6SBsDc"], F.t.deQ5wO),
+                [p.gGk.VERIFICATION_LEVEL]: e_({
                     [p.PvD.NONE]: F.t.W27rsc,
                     [p.PvD.LOW]: F.t["V8P+Pw"],
                     [p.PvD.MEDIUM]: F.t.ERQFau,
                     [p.PvD.HIGH]: F.t["83fN0j"],
                     [p.PvD.VERY_HIGH]: F.t.PnkQJE,
                 }),
-                [p.gGk.DEFAULT_MESSAGE_NOTIFICATIONS]: ec({
+                [p.gGk.DEFAULT_MESSAGE_NOTIFICATIONS]: e_({
                     [p.orn.ALL_MESSAGES]: F.t.LDi76A,
                     [p.orn.ONLY_MENTIONS]: F.t["6K83ba"],
                 }),
-                [p.gGk.VANITY_URL_CODE]: eo(F.t.Zplsov, F.t.u6cArh),
-                [p.gGk.EXPLICIT_CONTENT_FILTER]: ec({
+                [p.gGk.VANITY_URL_CODE]: eE(F.t.Zplsov, F.t.u6cArh),
+                [p.gGk.EXPLICIT_CONTENT_FILTER]: e_({
                     [p.gh6.DISABLED]: F.t.fmOeL3,
                     [p.gh6.MEMBERS_WITHOUT_ROLES]: F.t["4FghYw"],
                     [p.gh6.ALL_MEMBERS]: F.t.olyrSm,
                 }),
-                [p.gGk.PREMIUM_PROGRESS_BAR_ENABLED]: eu(F.t.rBT0sn, F.t["gc+te5"]),
+                [p.gGk.PREMIUM_PROGRESS_BAR_ENABLED]: ec(F.t.rBT0sn, F.t["gc+te5"]),
                 [p.gGk.AUTO_MODERATION_TRIGGERED_RULE_NAME]: () => F.t.YbouFH,
                 [p.gGk.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS]: () => F.t.g3DMjB,
                 [p.gGk.SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS]: () => F.t["+fQAel"],
@@ -101,50 +102,50 @@ function y(e) {
         case p.GaG.CHANNEL:
         case p.GaG.CHANNEL_OVERWRITE:
             return {
-                [p.gGk.NAME]: es(F.t.f8Rh0U, F.t.ebD4Qp),
-                [p.gGk.POSITION]: es(F.t.isS8te, F.t.t5uBis),
-                [p.gGk.TOPIC]: eE(F.t.esQcxn, F.t["m+veAn"], F.t["ws/1FA"]),
-                [p.gGk.BITRATE]: es(F.t.fw81ak, F.t.MFNlgZ),
-                [p.gGk.RTC_REGION_OVERRIDE]: eE(F.t["6kajxx"], F.t.eGOlmU, F.t["0JMZdz"]),
-                [p.gGk.USER_LIMIT]: es(F.t.wk5t7p, F.t.XgjCEh),
-                [p.gGk.RATE_LIMIT_PER_USER]: es(F.t["7lirhF"], F.t.j4CCJR),
+                [p.gGk.NAME]: eo(F.t.f8Rh0U, F.t.ebD4Qp),
+                [p.gGk.POSITION]: eo(F.t.isS8te, F.t.t5uBis),
+                [p.gGk.TOPIC]: eu(F.t.esQcxn, F.t["m+veAn"], F.t["ws/1FA"]),
+                [p.gGk.BITRATE]: eo(F.t.fw81ak, F.t.MFNlgZ),
+                [p.gGk.RTC_REGION_OVERRIDE]: eu(F.t["6kajxx"], F.t.eGOlmU, F.t["0JMZdz"]),
+                [p.gGk.USER_LIMIT]: eo(F.t.wk5t7p, F.t.XgjCEh),
+                [p.gGk.RATE_LIMIT_PER_USER]: eo(F.t["7lirhF"], F.t.j4CCJR),
                 [p.gGk.PERMISSIONS_RESET]: () => F.t["+vSBFY"],
                 [p.gGk.PERMISSIONS_GRANTED]: () => F.t.EKLJv8,
                 [p.gGk.PERMISSIONS_DENIED]: () => F.t.U3rO5X,
                 [p.gGk.REASON]: () => F.t["2IW3C5"],
-                [p.gGk.NSFW]: eu(F.t.H8Ri2Y, F.t.WW6cJw),
-                [p.gGk.TYPE]: es(F.t.Vn5zn2, F.t.aq4uWI),
-                [p.gGk.VIDEO_QUALITY_MODE]: es(F.t.e68fAU, F.t.djbES0),
-                [p.gGk.DEFAULT_AUTO_ARCHIVE_DURATION]: es(F.t.nYz2mg, F.t.oczvRI),
+                [p.gGk.NSFW]: ec(F.t.H8Ri2Y, F.t.WW6cJw),
+                [p.gGk.TYPE]: eo(F.t.Vn5zn2, F.t.aq4uWI),
+                [p.gGk.VIDEO_QUALITY_MODE]: eo(F.t.e68fAU, F.t.djbES0),
+                [p.gGk.DEFAULT_AUTO_ARCHIVE_DURATION]: eo(F.t.nYz2mg, F.t.oczvRI),
                 [p.gGk.FLAGS]: () => F.t.ImCQko,
                 [p.gGk.AVAILABLE_TAG_ADD]: () => F.t.H86QQU,
                 [p.gGk.AVAILABLE_TAG_EDIT]: () => F.t.YtUzls,
                 [p.gGk.AVAILABLE_TAG_DELETE]: () => F.t["8QOseg"],
-                [p.gGk.LINKED_LOBBY]: eo(F.t["+/3TkD"], F.t["5kDYS3"]),
+                [p.gGk.LINKED_LOBBY]: eE(F.t["+/3TkD"], F.t["5kDYS3"]),
             };
         case p.GaG.USER:
             return {
-                [p.gGk.NICK]: eE(F.t.qXDsHv, F.t["m+qury"], F.t.DvLvjF),
-                [p.gGk.DEAF]: eu(F.t.mArLlW, F.t.ddvVYG),
-                [p.gGk.MUTE]: eu(F.t["bxs/lS"], F.t.FjecQM),
+                [p.gGk.NICK]: eu(F.t.qXDsHv, F.t["m+qury"], F.t.DvLvjF),
+                [p.gGk.DEAF]: ec(F.t.mArLlW, F.t.ddvVYG),
+                [p.gGk.MUTE]: ec(F.t["bxs/lS"], F.t.FjecQM),
                 [p.gGk.ROLES_REMOVE]: () => F.t["+2SDWV"],
                 [p.gGk.ROLES_ADD]: () => F.t["B3/3IJ"],
                 [p.gGk.PRUNE_DELETE_DAYS]: () => F.t["+Cvc+D"],
-                [p.gGk.COMMUNICATION_DISABLED_UNTIL]: eE(F.t.LXTQr5, F.t.LXTQr5, F.t.ULSdnE),
-                [p.gGk.BYPASSES_VERIFICATION]: eu(F.t.NBPBui, F.t.zATost),
+                [p.gGk.COMMUNICATION_DISABLED_UNTIL]: eu(F.t.LXTQr5, F.t.LXTQr5, F.t.ULSdnE),
+                [p.gGk.BYPASSES_VERIFICATION]: ec(F.t.NBPBui, F.t.zATost),
                 [p.gGk.AUTO_MODERATION_TRIGGERED_RULE_NAME]: () => F.t.YbouFH,
                 ...P(),
             };
         case p.GaG.ROLE:
             return {
-                [p.gGk.NAME]: es(F.t.QBmlaD, F.t["Lfs4r+"]),
-                [p.gGk.DESCRIPTION]: es(F.t.XeYKWJ, F.t.PSfeIj),
+                [p.gGk.NAME]: eo(F.t.QBmlaD, F.t["Lfs4r+"]),
+                [p.gGk.DESCRIPTION]: eo(F.t.XeYKWJ, F.t.PSfeIj),
                 [p.gGk.PERMISSIONS_GRANTED]: () => F.t["9i/DvE"],
                 [p.gGk.PERMISSIONS_DENIED]: () => F.t.pa1ZVh,
-                [p.gGk.COLOR]: e_({ "#000000": F.t.TK6E1H }, F.t["2FQFiw"]),
+                [p.gGk.COLOR]: ed({ "#000000": F.t.TK6E1H }, F.t["2FQFiw"]),
                 [p.gGk.COLORS]: (e) => (null == e.newValue.secondary_color ? F.t.U44ttm : F.t["WnSwL/"]),
-                [p.gGk.HOIST]: eu(F.t.gWfe24, F.t["+tb8kN"]),
-                [p.gGk.MENTIONABLE]: eu(F.t.LL8VFF, F.t.Z7xzmC),
+                [p.gGk.HOIST]: ec(F.t.gWfe24, F.t["+tb8kN"]),
+                [p.gGk.MENTIONABLE]: ec(F.t.LL8VFF, F.t.Z7xzmC),
                 [p.gGk.ICON_HASH]: () => F.t["iEE79/"],
                 [p.gGk.UNICODE_EMOJI]: () => F.t.KiLMM0,
                 ...P(),
@@ -152,19 +153,19 @@ function y(e) {
         case p.GaG.ONBOARDING_PROMPT:
             return {
                 ...P(),
-                [p.gGk.TITLE]: es(F.t["sNpuy/"], F.t["3Ukc/g"]),
-                [p.gGk.DESCRIPTION]: es(F.t.PP1q0x, F.t.z7pYLg),
+                [p.gGk.TITLE]: eo(F.t["sNpuy/"], F.t["3Ukc/g"]),
+                [p.gGk.DESCRIPTION]: eo(F.t.PP1q0x, F.t.z7pYLg),
                 [p.gGk.OPTIONS]: () => F.t["3G5C9+"],
-                [p.gGk.SINGLE_SELECT]: eu(F.t.v4WnR3, F.t["6Qg3uC"]),
-                [p.gGk.REQUIRED]: eu(F.t["0MPAM6"], F.t.pwsXir),
+                [p.gGk.SINGLE_SELECT]: ec(F.t.v4WnR3, F.t["6Qg3uC"]),
+                [p.gGk.REQUIRED]: ec(F.t["0MPAM6"], F.t.pwsXir),
             };
         case p.GaG.GUILD_ONBOARDING:
             return {
                 ...P(),
                 [p.gGk.DEFAULT_CHANNEL_IDS]: () => F.t["8M+D2s"],
-                [p.gGk.ENABLE_DEFAULT_CHANNELS]: eu(F.t["EYd/ls"], F.t["36OZeQ"]),
-                [p.gGk.ENABLE_ONBOARDING_PROMPTS]: eu(F.t.V3u8PV, F.t["r66lc/"]),
-                [p.gGk.ENABLED]: eu(F.t.SODVIs, F.t.u8HY5U),
+                [p.gGk.ENABLE_DEFAULT_CHANNELS]: ec(F.t["EYd/ls"], F.t["36OZeQ"]),
+                [p.gGk.ENABLE_ONBOARDING_PROMPTS]: ec(F.t.V3u8PV, F.t["r66lc/"]),
+                [p.gGk.ENABLED]: ec(F.t.SODVIs, F.t.u8HY5U),
             };
         case p.GaG.HOME_SETTINGS:
             return {
@@ -177,67 +178,67 @@ function y(e) {
             return {
                 [p.gGk.CODE]: () => F.t.rrRHgb,
                 [p.gGk.CHANNEL_ID]: () => F.t.Q1vd5q,
-                [p.gGk.MAX_USES]: e_({ 0: F.t.Yx8LNm }, F.t["3ygnwU"]),
-                [p.gGk.MAX_AGE]: e_({ [F.intl.string(F.t.PqEzn8)]: F.t.uWrLvw }, F.t["Q+5kcO"]),
-                [p.gGk.TEMPORARY]: eu(F.t.MWp6H7, F.t.omiqTH),
-                [p.gGk.FLAGS]: ec({ [o.Q.IS_GUEST_INVITE]: F.t.XYZMbL }),
+                [p.gGk.MAX_USES]: ed({ 0: F.t.Yx8LNm }, F.t["3ygnwU"]),
+                [p.gGk.MAX_AGE]: ed({ [F.intl.string(F.t.PqEzn8)]: F.t.uWrLvw }, F.t["Q+5kcO"]),
+                [p.gGk.TEMPORARY]: ec(F.t.MWp6H7, F.t.omiqTH),
+                [p.gGk.FLAGS]: e_({ [o.Q.IS_GUEST_INVITE]: F.t.XYZMbL }),
                 ...P(),
             };
         case p.GaG.WEBHOOK:
             return {
-                [p.gGk.CHANNEL_ID]: es(F.t.jhPprR, F.t.ar4qYO),
-                [p.gGk.NAME]: es(F.t.ZVGrzU, F.t.tywdZR),
+                [p.gGk.CHANNEL_ID]: eo(F.t.jhPprR, F.t.ar4qYO),
+                [p.gGk.NAME]: eo(F.t.ZVGrzU, F.t.tywdZR),
                 [p.gGk.AVATAR_HASH]: () => F.t.KB52Uj,
                 [p.gGk.REASON]: () => F.t["2IW3C5"],
             };
         case p.GaG.EMOJI:
-            return { [p.gGk.NAME]: es(F.t.ahU1o5, F.t["wxs+vZ"]), ...P() };
+            return { [p.gGk.NAME]: eo(F.t.ahU1o5, F.t["wxs+vZ"]), ...P() };
         case p.GaG.STICKER:
             return {
-                [p.gGk.NAME]: es(F.t.cdl0Yo, F.t.o3W2ly),
-                [p.gGk.TAGS]: es(F.t["zwL+S2"], F.t["VYfKA+"]),
-                [p.gGk.DESCRIPTION]: es(F.t.XeYKWJ, F.t.PSfeIj),
+                [p.gGk.NAME]: eo(F.t.cdl0Yo, F.t.o3W2ly),
+                [p.gGk.TAGS]: eo(F.t["zwL+S2"], F.t["VYfKA+"]),
+                [p.gGk.DESCRIPTION]: eo(F.t.XeYKWJ, F.t.PSfeIj),
                 ...P(),
             };
         case p.GaG.INTEGRATION:
             return {
-                [p.gGk.ENABLE_EMOTICONS]: eu(F.t.FI0m5x, F.t.olpKC6),
-                [p.gGk.EXPIRE_BEHAVIOR]: ec({ 0: F.t["1Bb1+u"], 1: F.t.vjlW6m }),
+                [p.gGk.ENABLE_EMOTICONS]: ec(F.t.FI0m5x, F.t.olpKC6),
+                [p.gGk.EXPIRE_BEHAVIOR]: e_({ 0: F.t["1Bb1+u"], 1: F.t.vjlW6m }),
                 [p.gGk.EXPIRE_GRACE_PERIOD]: () => F.t.iovXMa,
                 ...P(),
             };
         case p.GaG.STAGE_INSTANCE:
             return {
-                [p.gGk.TOPIC]: es(F.t["m+veAn"], F.t.esQcxn),
-                [p.gGk.PRIVACY_LEVEL]: ec({ [b.dD.GUILD_ONLY]: F.t["EC+CDt"], [b.dD.PUBLIC]: F.t["pK/WG0"] }),
+                [p.gGk.TOPIC]: eo(F.t["m+veAn"], F.t.esQcxn),
+                [p.gGk.PRIVACY_LEVEL]: e_({ [b.dD.GUILD_ONLY]: F.t["EC+CDt"], [b.dD.PUBLIC]: F.t["pK/WG0"] }),
                 ...P(),
             };
         case p.GaG.GUILD_SCHEDULED_EVENT:
             return {
                 [p.gGk.NAME]: () => F.t["21EXHW"],
                 [p.gGk.DESCRIPTION]: () => F.t.Vm1ofw,
-                [p.gGk.PRIVACY_LEVEL]: ec({ [b.dD.GUILD_ONLY]: F.t["EC+CDt"], [b.dD.PUBLIC]: F.t["pK/WG0"] }),
-                [p.gGk.STATUS]: ec({
+                [p.gGk.PRIVACY_LEVEL]: e_({ [b.dD.GUILD_ONLY]: F.t["EC+CDt"], [b.dD.PUBLIC]: F.t["pK/WG0"] }),
+                [p.gGk.STATUS]: e_({
                     [b.XG.SCHEDULED]: F.t.hXKDgq,
                     [b.XG.ACTIVE]: F.t.lRX1nz,
                     [b.XG.COMPLETED]: F.t["/eFIhq"],
                     [b.XG.CANCELED]: F.t.NWIYhj,
                 }),
-                [p.gGk.ENTITY_TYPE]: ec({
+                [p.gGk.ENTITY_TYPE]: e_({
                     [b.Ps.NONE]: F.t["6sO3Ss"],
                     [b.Ps.STAGE_INSTANCE]: F.t["Wo+s1y"],
                     [b.Ps.VOICE]: F.t.XCVaIL,
                     [b.Ps.EXTERNAL]: F.t.IvhAj2,
                 }),
-                [p.gGk.CHANNEL_ID]: eo(F.t.yJBIcX, F.t["+PqSsi"]),
-                [p.gGk.LOCATION]: eo(F.t.GaMBHy, F.t.PsICk0),
-                [p.gGk.IMAGE_HASH]: eo(F.t.S3vcRK, F.t.KQu47I),
+                [p.gGk.CHANNEL_ID]: eE(F.t.yJBIcX, F.t["+PqSsi"]),
+                [p.gGk.LOCATION]: eE(F.t.GaMBHy, F.t.PsICk0),
+                [p.gGk.IMAGE_HASH]: eE(F.t.S3vcRK, F.t.KQu47I),
                 ...P(),
             };
         case p.GaG.GUILD_SCHEDULED_EVENT_EXCEPTION:
             return {
-                [p.gGk.SCHEDULED_START_TIME]: eo(F.t.zMIYVg, F.t.fzF8Gd),
-                [p.gGk.SCHEDULED_END_TIME]: eo(F.t.vONSQA, F.t.IlIti3),
+                [p.gGk.SCHEDULED_START_TIME]: eE(F.t.zMIYVg, F.t.fzF8Gd),
+                [p.gGk.SCHEDULED_END_TIME]: eE(F.t.vONSQA, F.t.IlIti3),
                 [p.gGk.IS_CANCELED]: (e) => {
                     if (null != e.oldValue || !0 === e.newValue) {
                         if (!e.oldValue && e.newValue) return F.t["7RkicW"];
@@ -248,13 +249,15 @@ function y(e) {
             };
         case p.GaG.THREAD:
             return {
-                [p.gGk.NAME]: es(F.t.tUKRzX, F.t.kPCHON),
-                [p.gGk.ARCHIVED]: eu(F.t.jDi9FK, F.t.F6dvbT),
-                [p.gGk.LOCKED]: eu(F.t.JSy1QW, F.t.C7Jgo8),
-                [p.gGk.INVITABLE]: eu(F.t.dxNUs9, F.t.biJvYG),
-                [p.gGk.AUTO_ARCHIVE_DURATION]: es(F.t.LuaG3y, F.t["18d9qr"]),
-                [p.gGk.RATE_LIMIT_PER_USER]: es(F.t["7lirhF"], F.t.j4CCJR),
+                [p.gGk.NAME]: eo(F.t.tUKRzX, F.t.kPCHON),
+                [p.gGk.ARCHIVED]: ec(F.t.jDi9FK, F.t.F6dvbT),
+                [p.gGk.LOCKED]: ec(F.t.JSy1QW, F.t.C7Jgo8),
+                [p.gGk.INVITABLE]: ec(F.t.dxNUs9, F.t.biJvYG),
+                [p.gGk.AUTO_ARCHIVE_DURATION]: eo(F.t.LuaG3y, F.t["18d9qr"]),
+                [p.gGk.RATE_LIMIT_PER_USER]: eo(F.t["7lirhF"], F.t.j4CCJR),
                 [p.gGk.FLAGS]: () => F.t.sSAQtj,
+                [p.gGk.AVAILABLE_TAG_ADD]: () => F.t.H86QQU,
+                [p.gGk.AVAILABLE_TAG_DELETE]: () => F.t["8QOseg"],
                 ...P(),
             };
         case p.GaG.APPLICATION_COMMAND:
@@ -292,10 +295,10 @@ function y(e) {
             };
         case p.GaG.GUILD_SOUNDBOARD:
             return {
-                [p.gGk.NAME]: es(F.t.VOtRSO, F.t.OK7B8E),
-                [p.gGk.VOLUME]: es(F.t.igrDB9, F.t.L5lDFJ),
-                [p.gGk.EMOJI_NAME]: eE(F.t.IIanaY, F.t["z4w4U/"], F.t.V8TfyU),
-                [p.gGk.EMOJI_ID]: eE(F.t.ainxMB, F.t["2NPsYu"], F.t["8crtns"]),
+                [p.gGk.NAME]: eo(F.t.VOtRSO, F.t.OK7B8E),
+                [p.gGk.VOLUME]: eo(F.t.igrDB9, F.t.L5lDFJ),
+                [p.gGk.EMOJI_NAME]: eu(F.t.IIanaY, F.t["z4w4U/"], F.t.V8TfyU),
+                [p.gGk.EMOJI_ID]: eu(F.t.ainxMB, F.t["2NPsYu"], F.t["8crtns"]),
                 ...P(),
             };
         case p.GaG.VOICE_CHANNEL_STATUS:
@@ -314,7 +317,7 @@ function y(e) {
                 [p.gGk.TRAITS]: () => F.t.dEy9WO,
                 [p.gGk.GAME_APPLICATION_IDS]: () => F.t["8BOT3x"],
                 [p.gGk.VISIBILITY]: () => F.t.bCl1Ep,
-                [p.gGk.SERVER_TAG]: eo(F.t.ix1dnX, F.t["4LKpKb"]),
+                [p.gGk.SERVER_TAG]: eE(F.t.ix1dnX, F.t["4LKpKb"]),
             };
         default:
             return P();
@@ -828,28 +831,28 @@ function ee(e, t) {
                             return t;
                         case p.GaG.CHANNEL:
                         case p.GaG.CHANNEL_OVERWRITE:
-                            return ea(
+                            return ei(
                                 e,
                                 p.gGk.NAME,
                                 (e) => O.A.getChannel(e),
                                 (e) => (0, A.m1)(e, L.default, C.A, !0),
                             );
                         case p.GaG.USER:
-                            return ea(
+                            return ei(
                                 e,
                                 p.gGk.NICK,
                                 (e) => L.default.getUser(e),
                                 (e) => e,
                             );
                         case p.GaG.ROLE:
-                            return ea(
+                            return ei(
                                 e,
                                 p.gGk.NAME,
                                 (e) => R.A.getRole(t.id, e),
                                 (e) => e.name,
                             );
                         case p.GaG.ONBOARDING_PROMPT:
-                            let n = ea(
+                            let n = ei(
                                 e,
                                 p.gGk.ID,
                                 (e) => N.A.getOnboardingPrompt(e),
@@ -860,37 +863,37 @@ function ee(e, t) {
                         case p.GaG.GUILD_MEMBER_VERIFICATION:
                             return t;
                         case p.GaG.INVITE:
-                            return ea(e, p.gGk.CODE, p.FXj);
+                            return ei(e, p.gGk.CODE, p.FXj);
                         case p.GaG.INTEGRATION:
-                            return ea(
+                            return ei(
                                 e,
                                 p.gGk.TYPE,
                                 (e) => M.A.integrations.find((t) => t.id === e),
                                 (e) => e.name,
                             );
                         case p.GaG.WEBHOOK:
-                            return ea(
+                            return ei(
                                 e,
                                 p.gGk.NAME,
                                 (e) => M.A.webhooks.find((t) => t.id === e),
                                 (e) => e.name,
                             );
                         case p.GaG.EMOJI:
-                            return ea(
+                            return ei(
                                 e,
                                 p.gGk.NAME,
                                 (e) => T.Ay.getGuildEmoji(t.id).find((t) => t.id === e),
                                 (e) => e.name,
                             );
                         case p.GaG.STICKER:
-                            return ea(
+                            return ei(
                                 e,
                                 p.gGk.NAME,
                                 (e) => S.A.getStickerById(e),
                                 (e) => e.name,
                             );
                         case p.GaG.STAGE_INSTANCE:
-                            return ea(
+                            return ei(
                                 e,
                                 p.gGk.TOPIC,
                                 (e) => Object.values(m.A.getStageInstancesByGuild(t.id))?.find((t) => t.id === e),
@@ -898,14 +901,14 @@ function ee(e, t) {
                             );
                         case p.GaG.GUILD_SCHEDULED_EVENT:
                         case p.GaG.GUILD_SCHEDULED_EVENT_EXCEPTION:
-                            return ea(
+                            return ei(
                                 e,
                                 p.gGk.NAME,
                                 (e) => M.A.guildScheduledEvents.find((t) => t.id === e),
                                 (e) => e.name,
                             );
                         case p.GaG.THREAD:
-                            return ea(
+                            return ei(
                                 e,
                                 p.gGk.NAME,
                                 (e) => M.A.threads.find((t) => t.id === e),
@@ -917,7 +920,7 @@ function ee(e, t) {
                                 if (null != t) return t.name;
                                 return e.targetId;
                             }
-                            return ea(
+                            return ei(
                                 e,
                                 p.gGk.NAME,
                                 (e) => M.A.applicationCommands.find((t) => t.id === e),
@@ -928,16 +931,16 @@ function ee(e, t) {
                                 },
                             );
                         case p.GaG.AUTO_MODERATION_RULE:
-                            return ea(
+                            return ei(
                                 e,
                                 p.gGk.NAME,
                                 (e) => M.A.automodRules.find((t) => t.id === e),
                                 (e) => e.name,
                             );
                         case p.GaG.GUILD_SOUNDBOARD:
-                            return ea(e, p.gGk.NAME, p.FXj);
+                            return ei(e, p.gGk.NAME, p.FXj);
                         case p.GaG.HOME_SETTINGS:
-                            return ea(
+                            return ei(
                                 e,
                                 p.gGk.GUILD_ID,
                                 (e) => h.h.getSettings(e),
@@ -945,7 +948,7 @@ function ee(e, t) {
                                 t.id,
                             );
                         case p.GaG.VOICE_CHANNEL_STATUS:
-                            return ea(
+                            return ei(
                                 e,
                                 p.gGk.STATUS,
                                 (e) => O.A.getChannel(e),
@@ -975,18 +978,18 @@ function ee(e, t) {
                                 let t = { ...e.options };
                                 switch (e.options.type) {
                                     case p.AO_.USER:
-                                        t.subtarget = ei(
+                                        t.subtarget = es(
                                             e.options.id,
                                             (e) => L.default.getUser(e),
                                             (e) => e.tag,
                                         );
                                         break;
                                     case p.AO_.ROLE:
-                                        t.subtarget = ei(e.options.role_name, p.FXj);
+                                        t.subtarget = es(e.options.role_name, p.FXj);
                                 }
                                 if (
                                     (null != e.options.channel_id &&
-                                        (t.channel = ea(
+                                        (t.channel = ei(
                                             e,
                                             "",
                                             (e) => O.A.getChannel(e),
@@ -1020,14 +1023,14 @@ function ee(e, t) {
                                 let t = e.newValue || e.oldValue;
                                 switch (t.type) {
                                     case p.g0g.ROLE:
-                                        e.subtarget = ei(
+                                        e.subtarget = es(
                                             t.id,
                                             (e) => R.A.getRole(n.id, e),
                                             (e) => e.name,
                                         );
                                         break;
                                     case p.g0g.USER:
-                                        e.subtarget = ei(
+                                        e.subtarget = es(
                                             t.id,
                                             (e) => L.default.getUser(e),
                                             (e) => e.tag,
@@ -1036,7 +1039,7 @@ function ee(e, t) {
                                     case p.g0g.CHANNEL:
                                         t.id === r()(n.id).subtract(1).toString()
                                             ? (e.subtarget = F.intl.string(F.t.MSYhgh))
-                                            : (e.subtarget = ei(
+                                            : (e.subtarget = es(
                                                   t.id,
                                                   (e) => O.A.getChannel(e),
                                                   (e) => (0, A.m1)(e, L.default, C.A, !0),
@@ -1046,30 +1049,30 @@ function ee(e, t) {
                             }
                             switch (e.key) {
                                 case p.gGk.OWNER_ID:
-                                    return er(e, (e) => L.default.getUser(e));
+                                    return ea(e, (e) => L.default.getUser(e));
                                 case p.gGk.CHANNEL_ID:
                                 case p.gGk.AFK_CHANNEL_ID:
                                 case p.gGk.SYSTEM_CHANNEL_ID:
                                 case p.gGk.RULES_CHANNEL_ID:
                                 case p.gGk.PUBLIC_UPDATES_CHANNEL_ID:
-                                    return er(
+                                    return ea(
                                         e,
                                         (e) => O.A.getChannel(e),
                                         (e) => (0, A.m1)(e, L.default, C.A, !0),
                                     );
                                 case p.gGk.AFK_TIMEOUT:
-                                    return er(e, (e) => e / 60);
+                                    return ea(e, (e) => e / 60);
                                 case p.gGk.BITRATE:
-                                    return er(e, (e) => e / 1e3);
+                                    return ea(e, (e) => e / 1e3);
                                 case p.gGk.COLOR:
-                                    return er(e, (e) => (0, u.Hl)(e).toUpperCase());
+                                    return ea(e, (e) => (0, u.Hl)(e).toUpperCase());
                                 case p.gGk.THEME_COLORS:
-                                    return er(
+                                    return ea(
                                         e,
                                         (e) => `${(0, u.Hl)(e[0]).toUpperCase()}, ${(0, u.Hl)(e[1]).toUpperCase()}`,
                                     );
                                 case p.gGk.MAX_AGE:
-                                    return er(e, (e) => {
+                                    return ea(e, (e) => {
                                         let t = f.Ay.getMaxAgeOptionByValue(e);
                                         return null !== t ? t.label : e;
                                     });
@@ -1126,12 +1129,12 @@ function ee(e, t) {
                                     return t;
                                 }
                                 case p.gGk.PREFERRED_LOCALE:
-                                    return er(e, (e) => {
+                                    return ea(e, (e) => {
                                         let t = (0, F.getAvailableLocales)().find((t) => t.value === e);
                                         return null != t ? t.name : null;
                                     });
                                 case p.gGk.VIDEO_QUALITY_MODE:
-                                    return er(e, (e) =>
+                                    return ea(e, (e) =>
                                         e === p.K3c.FULL ? F.intl.string(F.t["7jOoJE"]) : F.intl.string(F.t.jjKYpu),
                                     );
                                 case p.gGk.SYSTEM_CHANNEL_FLAGS:
@@ -1159,21 +1162,21 @@ function ee(e, t) {
                                     );
                                 case p.gGk.AUTO_MODERATION_ACTIONS:
                                     if (t.targetType === p.GaG.AUTO_MODERATION_RULE)
-                                        return er(
+                                        return ea(
                                             e,
                                             (e) => e.map((e) => e.type),
                                             (e) => e.map(I.PZ).join(", "),
                                         );
                                     break;
                                 case p.gGk.AUTO_MODERATION_EVENT_TYPE:
-                                    if (t.targetType === p.GaG.AUTO_MODERATION_RULE) return er(e, I.X3);
+                                    if (t.targetType === p.GaG.AUTO_MODERATION_RULE) return ea(e, I.X3);
                                     break;
                                 case p.gGk.AUTO_MODERATION_TRIGGER_TYPE:
-                                    if (t.targetType === p.GaG.AUTO_MODERATION_RULE) return er(e, I.nl);
+                                    if (t.targetType === p.GaG.AUTO_MODERATION_RULE) return ea(e, I.nl);
                                     break;
                                 case p.gGk.AUTO_MODERATION_TRIGGER_METADATA:
                                     if (t.targetType === p.GaG.AUTO_MODERATION_RULE)
-                                        return er(e, (e) =>
+                                        return ea(e, (e) =>
                                             null != e && "object" == typeof e
                                                 ? null != e.keyword_filter && Array.isArray(e.keyword_filter)
                                                     ? F.intl.formatToMarkdownString(F.t.y91UXV, {
@@ -1190,7 +1193,7 @@ function ee(e, t) {
                                 case p.gGk.AUTO_MODERATION_ADD_ALLOW_LIST:
                                 case p.gGk.AUTO_MODERATION_REMOVE_ALLOW_LIST:
                                     if (t.targetType === p.GaG.AUTO_MODERATION_RULE)
-                                        return er(e, (e) =>
+                                        return ea(e, (e) =>
                                             null != e && Array.isArray(e)
                                                 ? e.map((e) => `'${e}'`).join(", ")
                                                 : JSON.stringify(e),
@@ -1198,7 +1201,7 @@ function ee(e, t) {
                                     break;
                                 case p.gGk.AUTO_MODERATION_EXEMPT_CHANNELS:
                                     if (t.targetType === p.GaG.AUTO_MODERATION_RULE)
-                                        return er(
+                                        return ea(
                                             e,
                                             (e) =>
                                                 e
@@ -1211,7 +1214,7 @@ function ee(e, t) {
                                     break;
                                 case p.gGk.AUTO_MODERATION_EXEMPT_ROLES:
                                     if (t.targetType === p.GaG.AUTO_MODERATION_RULE)
-                                        return er(
+                                        return ea(
                                             e,
                                             (e) =>
                                                 e
@@ -1223,10 +1226,12 @@ function ee(e, t) {
                                         );
                                     break;
                                 case p.gGk.AVAILABLE_TAGS:
-                                    return el(e);
+                                    return er(e);
+                                case p.gGk.APPLIED_TAGS:
+                                    return el(e, t);
                                 case p.gGk.SCHEDULED_START_TIME:
                                 case p.gGk.SCHEDULED_END_TIME:
-                                    return er(e, (e) => (0, D.i$)(i()(new Date(e)), "LLLL"));
+                                    return ea(e, (e) => (0, D.i$)(i()(new Date(e)), "LLLL"));
                             }
                             return e;
                         })(l, e, t);
@@ -1264,7 +1269,32 @@ function en(e) {
               moderated: e.moderated,
           };
 }
-function el(e) {
+function el(e, t) {
+    let n = Array.isArray(e.oldValue) ? e.oldValue : [],
+        l = Array.isArray(e.newValue) ? e.newValue : [],
+        r = O.A.getChannel(t.targetId),
+        a = r?.parent_id != null ? O.A.getChannel(r.parent_id) : null,
+        i = a?.availableTags ?? [],
+        s = {};
+    i.forEach((e) => {
+        s[e.id] = { name: e.name, emojiId: e.emojiId, emojiName: e.emojiName };
+    });
+    let o = new Set(n),
+        E = new Set(l),
+        u = l.filter((e) => !o.has(e)),
+        c = n.filter((e) => !E.has(e)),
+        _ = [];
+    for (let e of u) {
+        let t = s[e] ?? { id: e, name: e };
+        _.push(new G.QO(p.gGk.AVAILABLE_TAG_ADD, null, t));
+    }
+    for (let e of c) {
+        let t = s[e] ?? { id: e, name: e };
+        _.push(new G.QO(p.gGk.AVAILABLE_TAG_DELETE, null, t));
+    }
+    return _.length > 0 ? _ : e;
+}
+function er(e) {
     let { oldValue: t, newValue: n } = e,
         l = Array.isArray(t) ? t : [],
         r = Array.isArray(n) ? n : [];
@@ -1293,7 +1323,7 @@ function el(e) {
     }
     return e;
 }
-function er(e, t, n) {
+function ea(e, t, n) {
     let l = e.newValue,
         r = e.oldValue;
     return (
@@ -1302,7 +1332,7 @@ function er(e, t, n) {
         new G.QO(e.key, r || e.oldValue, l || e.newValue)
     );
 }
-function ea(e, t, n, l, r) {
+function ei(e, t, n, l, r) {
     let a = null,
         i = n((r = r ?? e.targetId));
     if ((null != i && null != l && (a = l(i)), null == a)) {
@@ -1315,26 +1345,26 @@ function ea(e, t, n, l, r) {
     }
     return a ?? r;
 }
-function ei(e, t, n) {
+function es(e, t, n) {
     let l = e,
         r = t(e);
     return null != r && null != n && (l = n(r)), l;
 }
-function es(e, t) {
+function eo(e, t) {
     return (n) => (null == n.oldValue ? e : t);
 }
-function eo(e, t) {
+function eE(e, t) {
     return (n) => (null == n.newValue ? e : t);
 }
-function eE(e, t, n, l) {
+function eu(e, t, n, l) {
     return (r) => (null != r.newValue && null != r.oldValue ? e : null != r.newValue ? t : null != r.oldValue ? n : l);
 }
-function eu(e, t) {
+function ec(e, t) {
     return (n) => (n.newValue ? e : t);
 }
-function ec(e) {
+function e_(e) {
     return (t) => e[t.newValue];
 }
-function e_(e, t) {
+function ed(e, t) {
     return (n) => e[n.newValue] ?? t;
 }
