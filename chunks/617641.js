@@ -1,19 +1,18 @@
 "use strict";
-n.d(t, { Lc: () => a, wv: () => i });
-let r = (0, n(600975).C)({
+n.d(t, { Lc: () => s, wv: () => i });
+let r = (0, n(250105).Ay)({
+    name: "2026-04-inappropriate-conversations-prescan",
     kind: "user",
-    id: "2024-01_inappropriate_conversation_warning",
-    label: "Inappropriate Conversation Warning",
     defaultConfig: { enabled: !1 },
-    treatments: [{ id: 1, label: "Enable Inappropriate Conversation Warning", config: { enabled: !0 } }],
+    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
 function i(e) {
-    let { location: t, autoTrackExposure: n = !1 } = e,
-        { enabled: i } = r.getCurrentConfig({ location: t }, { autoTrackExposure: n });
-    return i;
+    let { location: t } = e,
+        { enabled: n } = r.getConfig({ location: t });
+    return n;
 }
-function a(e) {
-    let { location: t, autoTrackExposure: n = !1 } = e,
-        { enabled: i } = r.useExperiment({ location: t }, { autoTrackExposure: n });
-    return i;
+function s(e) {
+    let { location: t } = e,
+        { enabled: n } = r.useConfig({ location: t });
+    return n;
 }
