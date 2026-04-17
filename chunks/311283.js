@@ -16,10 +16,10 @@ function o(e) {
                 e,
                 ((t = e),
                 (n = (e) => {
-                    e.isTrusted && c(e.shiftKey, t);
+                    c(e.shiftKey, t);
                 }),
                 (i = (e) => {
-                    e.isTrusted && c(e.shiftKey, t);
+                    c(e.shiftKey, t);
                 }),
                 (l = (e) => {
                     c(e.shiftKey, t);

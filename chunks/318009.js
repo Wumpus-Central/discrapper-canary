@@ -75,6 +75,8 @@ let A = (e) => {
         L = c.ownerDocument;
     return D
         ? (0, r.jsx)(a.Ow, {
+              focus: "modal",
+              returnFocusElement: c,
               spacing: 0,
               open: !0,
               ownerDocument: L,

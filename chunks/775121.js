@@ -36,9 +36,7 @@ let d = {},
     A = () => [],
     I = [];
 function T(e, t) {
-    let n = (e) => {
-        e.isTrusted && t(e, e.key);
-    };
+    let n = (e) => t(e, e.key);
     document.addEventListener(e, n), I.push(() => document.removeEventListener(e, n));
 }
 function S(e) {
@@ -47,10 +45,7 @@ function S(e) {
     return t.map((e) => e.replace("mod", h));
 }
 function y(e, t) {
-    return (n, r) => {
-        if (n.isTrusted)
-            return l.default.track(c.HAw.KEYBOARD_SHORTCUT_USED, { shortcut_name: e, shortcut_combo: r }), t(n, r);
-    };
+    return (n, r) => (l.default.track(c.HAw.KEYBOARD_SHORTCUT_USED, { shortcut_name: e, shortcut_combo: r }), t(n, r));
 }
 function v(e) {
     for (let [t, n] of Object.entries(e)) {

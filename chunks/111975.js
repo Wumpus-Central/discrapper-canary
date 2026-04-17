@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Kr: () => D });
+n.d(t, { AO: () => w, Kr: () => D, nq: () => L });
 var r =
         'input:not([inert]),select:not([inert]),textarea:not([inert]),a[href]:not([inert]),button:not([inert]),[tabindex]:not(slot):not([inert]),audio[controls]:not([inert]),video[controls]:not([inert]),[contenteditable]:not([contenteditable="false"]):not([inert]),details>summary:first-of-type:not([inert]),details:not([inert])',
     i = "u" < typeof Element,
@@ -226,4 +226,14 @@ var r =
                   })
                 : u(e, t.includeContainer, R.bind(null, t))),
         );
+    },
+    L = function (e, t) {
+        var n;
+        return (t = t || {}).getShadowRoot
+            ? c([e], t.includeContainer, { filter: C.bind(null, t), flatten: !0, getShadowRoot: t.getShadowRoot })
+            : u(e, t.includeContainer, C.bind(null, t));
+    },
+    w = function (e, t) {
+        if (((t = t || {}), !e)) throw Error("No node provided");
+        return !1 !== s.call(e, r) && R(t, e);
     };

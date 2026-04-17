@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { W: () => y, X: () => v }), n(321073);
+n.d(t, { W: () => v, X: () => N }), n(321073);
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -7,27 +7,28 @@ var r = n(627968),
     o = n(812729),
     l = n.n(o),
     u = n(970622),
-    c = n(158954),
-    d = n(955572),
-    _ = n(775602),
-    f = n(298063),
-    p = n(477782),
-    h = n(900283),
-    m = n(225012),
-    E = n(885621),
-    g = n(32271);
-function A(e) {
+    c = n(508382),
+    d = n(158954),
+    _ = n(955572),
+    f = n(775602),
+    p = n(298063),
+    h = n(477782),
+    m = n(900283),
+    E = n(225012),
+    g = n(885621),
+    A = n(32271);
+function I(e) {
     return null == e
         ? []
         : i.Children.toArray(e).flatMap((e) =>
-              null == e ? [] : Array.isArray(e) ? A(e) : e.type === i.Fragment ? (A(e.props.children) ?? []) : [e],
+              null == e ? [] : Array.isArray(e) ? I(e) : e.type === i.Fragment ? (I(e.props.children) ?? []) : [e],
           );
 }
-function I(e) {
-    return A(e).reduce((e, t) => {
-        if (t.type === p.bX) return e.push({ type: "separator", navigable: !1 }), e;
-        if (t.type === p.rX) {
-            let n = I(t.props.children);
+function T(e) {
+    return I(e).reduce((e, t) => {
+        if (t.type === h.bX) return e.push({ type: "separator", navigable: !1 }), e;
+        if (t.type === h.rX) {
+            let n = T(t.props.children);
             return (
                 n.length > 0 &&
                     (e.push({ type: "groupstart", length: n.length, navigable: !1, props: t.props }),
@@ -36,7 +37,7 @@ function I(e) {
                 e
             );
         }
-        if (t.type === p.Dr)
+        if (t.type === h.Dr)
             return (
                 e.push(
                     null != t.props.render
@@ -53,7 +54,7 @@ function I(e) {
                               navigable: !0,
                               label: t.props.label,
                               void_label: t.props.void_label,
-                              children: t.props.children ? I(t.props.children) : void 0,
+                              children: t.props.children ? T(t.props.children) : void 0,
                               onChildrenScroll: t.props.onChildrenScroll,
                               props: t.props,
                               childRowHeight: t.props.childRowHeight,
@@ -63,12 +64,12 @@ function I(e) {
                 ),
                 e
             );
-        if (t.type === p.sL) return e.push({ type: "checkbox", key: t.props.id, navigable: !0, props: t.props }), e;
-        if (t.type === p.iD) return e.push({ type: "radio", key: t.props.id, navigable: !0, props: t.props }), e;
-        else if (t.type === p.fP) return e.push({ type: "switch", key: t.props.id, navigable: !0, props: t.props }), e;
-        else if (t.type === p.Yn)
+        if (t.type === h.sL) return e.push({ type: "checkbox", key: t.props.id, navigable: !0, props: t.props }), e;
+        if (t.type === h.iD) return e.push({ type: "radio", key: t.props.id, navigable: !0, props: t.props }), e;
+        else if (t.type === h.fP) return e.push({ type: "switch", key: t.props.id, navigable: !0, props: t.props }), e;
+        else if (t.type === h.Yn)
             return e.push({ type: "textinput", key: t.props.id, navigable: !0, props: t.props }), e;
-        else if (t.type === p.aK)
+        else if (t.type === h.aK)
             return (
                 e.push(
                     null != t.props.control
@@ -88,30 +89,30 @@ function I(e) {
         );
     }, []);
 }
-function T(e) {
+function S(e) {
     return e.reduce(
         (e, t) => (
             t.navigable &&
-                e.push({ key: t.key, children: "item" === t.type && null != t.children ? T(t.children) : void 0 }),
+                e.push({ key: t.key, children: "item" === t.type && null != t.children ? S(t.children) : void 0 }),
             e
         ),
         [],
     );
 }
-function S(e, t, n, i) {
+function y(e, t, n, i) {
     let s = 0,
         a = [];
     return e.reduce((e, o, l) => {
         let u = a.length > 0 ? a[a.length - 1] : e;
         switch (o.type) {
             case "separator":
-                u.push((0, r.jsx)(m.wv, {}, `separator-${l}`)), (s = 0);
+                u.push((0, r.jsx)(E.wv, {}, `separator-${l}`)), (s = 0);
                 break;
             case "groupstart":
-                s > 0 && o.length > 0 && (u.push((0, r.jsx)(m.wv, {}, `separator-${l}`)), (s = 0)), a.push([]);
+                s > 0 && o.length > 0 && (u.push((0, r.jsx)(E.wv, {}, `separator-${l}`)), (s = 0)), a.push([]);
                 break;
             case "groupend":
-                a.length > 0 && e.push((0, r.jsx)(m.YJ, { contents: a.pop(), ...o.props }, `group-${l}`));
+                a.length > 0 && e.push((0, r.jsx)(E.YJ, { contents: a.pop(), ...o.props }, `group-${l}`));
                 break;
             case "item": {
                 let { children: e, childRowHeight: a, onChildrenScroll: l, listClassName: c, subMenuClassName: d } = o,
@@ -119,8 +120,8 @@ function S(e, t, n, i) {
                     f = [...n, o.key],
                     p = t.isFocused(f),
                     h = null != e ? { "aria-haspopup": !0 } : {},
-                    E = (0, r.jsx)(
-                        m.q7,
+                    m = (0, r.jsx)(
+                        E.q7,
                         {
                             ...o.props,
                             ...(null != o.label ? { label: o.label } : { void_label: o.void_label }),
@@ -135,13 +136,13 @@ function S(e, t, n, i) {
                     ? null != a
                         ? u.push(
                               (0, r.jsx)(
-                                  m.t6,
+                                  E.t6,
                                   {
                                       ...o.props,
-                                      parentItem: E,
+                                      parentItem: m,
                                       isFocused: p,
                                       menuSubmenuProps: t.getSubmenuProps({ path: f }),
-                                      rows: S(e, t, f, i),
+                                      rows: y(e, t, f, i),
                                       rowHeight: a,
                                       onScroll: l,
                                       listClassName: c,
@@ -151,19 +152,19 @@ function S(e, t, n, i) {
                           )
                         : u.push(
                               (0, r.jsx)(
-                                  m.hA,
+                                  E.hA,
                                   {
                                       ...o.props,
                                       subMenuClassName: d,
-                                      parentItem: E,
+                                      parentItem: m,
                                       isFocused: p,
                                       menuSubmenuProps: t.getSubmenuProps({ path: f }),
-                                      renderSubmenu: () => S(e, t, f, i),
+                                      renderSubmenu: () => y(e, t, f, i),
                                   },
                                   `${o.key}-submenu`,
                               ),
                           )
-                    : u.push(E),
+                    : u.push(m),
                     s++;
                 break;
             }
@@ -171,7 +172,7 @@ function S(e, t, n, i) {
                 let e = [...n, o.key];
                 u.push(
                     (0, r.jsx)(
-                        m.FC,
+                        E.FC,
                         {
                             ...o.props,
                             isFocused: t.isFocused(e),
@@ -189,7 +190,7 @@ function S(e, t, n, i) {
                 let e = [...n, o.key];
                 u.push(
                     (0, r.jsx)(
-                        m.H_,
+                        E.H_,
                         {
                             ...o.props,
                             isFocused: t.isFocused(e),
@@ -205,7 +206,7 @@ function S(e, t, n, i) {
                 let e = [...n, o.key];
                 u.push(
                     (0, r.jsx)(
-                        m.hN,
+                        E.hN,
                         {
                             ...o.props,
                             isFocused: t.isFocused(e),
@@ -221,7 +222,7 @@ function S(e, t, n, i) {
                 let e = [...n, o.key];
                 u.push(
                     (0, r.jsx)(
-                        m.av,
+                        E.av,
                         {
                             ...o.props,
                             isFocused: t.isFocused(e),
@@ -237,7 +238,7 @@ function S(e, t, n, i) {
                 let e = [...n, o.key];
                 u.push(
                     (0, r.jsx)(
-                        m.rh,
+                        E.rh,
                         { ...o.props, isFocused: t.isFocused(e), menuItemProps: t.getItemProps({ path: e }) },
                         o.key,
                     ),
@@ -249,7 +250,7 @@ function S(e, t, n, i) {
                 let e = [...n, o.key];
                 u.push(
                     (0, r.jsx)(
-                        m.TV,
+                        E.TV,
                         {
                             ...o.props,
                             isFocused: t.isFocused(e),
@@ -266,7 +267,7 @@ function S(e, t, n, i) {
                 let e = [...n, o.key];
                 u.push(
                     (0, r.jsx)(
-                        m.O1,
+                        E.O1,
                         {
                             ...o.props,
                             isFocused: t.isFocused(e),
@@ -283,76 +284,81 @@ function S(e, t, n, i) {
         return e;
     }, []);
 }
-function y(e) {
+function v(e) {
     let {
             navId: t,
             variant: n = "flexible",
             hideScroller: s = !1,
             className: o,
-            children: p,
-            onClose: A,
-            onSelect: y,
-            onInteraction: v,
+            children: h,
+            onClose: I,
+            onSelect: v,
+            onInteraction: N,
         } = e,
-        C = I(p),
-        R = T(C),
-        O = i.useRef([]);
-    l()(O.current, R) || (O.current = R);
-    let b = (0, f.Y)("Menu"),
-        D = C.find((e) => null != e.key)?.key,
-        L = (0, u.A)({
+        R = T(h),
+        O = S(R),
+        b = i.useRef([]);
+    l()(b.current, O) || (b.current = O);
+    let D = (0, p.Y)("Menu"),
+        L = R.find((e) => null != e.key)?.key,
+        w = (0, u.A)({
             navId: t,
-            items: O.current,
-            initialFocusPath: _.A.keyboardModeEnabled && null != D ? [D] : [],
-            closeMenu: A,
-            defaultIsUsingKeyboardNavigation: _.A.keyboardModeEnabled,
+            items: b.current,
+            initialFocusPath: f.A.keyboardModeEnabled && null != L ? [L] : [],
+            closeMenu: I,
+            defaultIsUsingKeyboardNavigation: f.A.keyboardModeEnabled,
         });
     i.useEffect(() => {
-        L.isUsingKeyboardNavigation ? _.A.keyboardModeEnabled || (0, d.uS)() : _.A.keyboardModeEnabled && (0, d.Bm)();
-    }, [L.isUsingKeyboardNavigation]);
-    let w = i.useRef(null);
-    (0, c.tjt)(w);
-    let M = s ? c.d_W : c.IpV,
-        P = i.useMemo(() => ({ onSelect: y, onInteraction: v }), [y, v]);
-    return (0, r.jsx)(h.x.Provider, {
-        value: P,
+        w.isUsingKeyboardNavigation ? f.A.keyboardModeEnabled || (0, _.uS)() : f.A.keyboardModeEnabled && (0, _.Bm)();
+    }, [w.isUsingKeyboardNavigation]);
+    let M = i.useRef(null),
+        P = i.useContext(c.jQ),
+        x = "none" !== (P?.focus ?? "none");
+    (0, d.tjt)(M, { disable: x }),
+        i.useEffect(() => {
+            x && M.current?.focus();
+        }, [x]);
+    let k = s ? d.d_W : d.IpV,
+        U = i.useMemo(() => ({ onSelect: v, onInteraction: N }), [v, N]);
+    return (0, r.jsx)(m.x.Provider, {
+        value: U,
         children: (0, r.jsx)("div", {
-            className: a()(g.menu, g[n], o),
+            className: a()(A.menu, A[n], o),
             style: {
-                "--custom-menu-viewport-padding": b ? `${E.FD}px` : `${E.vx}px`,
-                "--custom-menu-flexible-min-width": b ? "144px" : "188px",
+                "--custom-menu-viewport-padding": D ? `${g.FD}px` : `${g.vx}px`,
+                "--custom-menu-flexible-min-width": D ? "144px" : "188px",
             },
-            ...L.getContainerProps(),
-            ref: w,
+            ...w.getContainerProps(),
+            ref: M,
             "aria-label": e["aria-label"],
-            children: (0, r.jsxs)(M, {
-                className: g.scroller,
+            children: (0, r.jsxs)(k, {
+                className: A.scroller,
                 children: [
-                    0 === C.length &&
-                        (0, r.jsx)(m.q7, {
+                    0 === R.length &&
+                        (0, r.jsx)(E.q7, {
                             disabled: !0,
-                            void_label: () => (0, r.jsx)(N, {}),
-                            menuItemProps: L.getItemProps({ path: ["empty"] }),
+                            void_label: () => (0, r.jsx)(C, {}),
+                            menuItemProps: w.getItemProps({ path: ["empty"] }),
                             isFocused: !1,
                             onFocus: () => {},
-                            onClose: A,
+                            onClose: I,
                         }),
-                    C.length > 0 && S(C, L, [], A),
+                    R.length > 0 && y(R, w, [], I),
                 ],
             }),
         }),
     });
 }
-function v() {
-    return (0, r.jsx)("div", { className: a()(g.menu, g.loader, g.flexible), children: (0, r.jsx)(c.y$y, {}) });
-}
 function N() {
+    return (0, r.jsx)("div", { className: a()(A.menu, A.loader, A.flexible), children: (0, r.jsx)(d.y$y, {}) });
+}
+function C() {
     let e = "♫ (つ｡◕‿‿◕｡)つ ♪",
         t = "♫ ⊂(｡◕‿‿◕｡⊂) ♪",
         [n, s] = i.useState(e);
     return (
         i.useEffect(() => {
-            if (_.A.useReducedMotion) return;
+            if (f.A.useReducedMotion) return;
             let n = setInterval(() => {
                 s((n) => (n === e ? t : e));
             }, 700);

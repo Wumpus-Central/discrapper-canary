@@ -15,7 +15,7 @@ var i = n(627968),
     h = n(289498),
     A = n(736653),
     p = n(573648),
-    T = n(342169),
+    T = n(941314),
     f = n(429913),
     S = n(681819),
     E = n(370480),
@@ -594,7 +594,7 @@ function en() {
               children: [
                   null,
                   (0, i.jsx)(et, {
-                      fetching: t || a || l !== R.FetchState.FETCHED,
+                      fetching: t || a || (d.length > 0 && l !== R.FetchState.FETCHED),
                       accounts: n,
                       appIdentities: d,
                       authorizedApps: r,
