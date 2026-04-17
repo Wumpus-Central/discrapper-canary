@@ -11,6 +11,7 @@ let l = {
         mana_checkbox_large_variant: "Larger Checkbox",
         mana_switch_large_variant: "Larger Switch",
         mana_switch_show_icons: "Show icons on switches",
+        show_header_debug_info: "Show header component debug overlays",
     },
     r = {};
 class a extends i.Ay.DeviceSettingsStore {
