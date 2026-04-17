@@ -76,7 +76,7 @@ let y = new l.A("GuildSettingsActionCreators"),
                 n.e("34366"),
                 n.e("3788"),
                 n.e("28810"),
-                n.e("4414"),
+                n.e("18822"),
             ]).then(n.bind(n, 422559)),
                 g.A.getGuild(e)?.features.has(T.GuildFeatures.COMMUNITY) &&
                     (t === T.BEX.GUILD_AUTOMOD && ((t = T.BEX.SAFETY), (i = T.nd0.SAFETY_AUTOMOD)),
