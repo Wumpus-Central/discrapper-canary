@@ -1,4 +1,4 @@
-a.d(t, { A0: () => eb, Ay: () => eg, NI: () => ef, Tb: () => em });
+a.d(t, { A0: () => eb, Ay: () => eg, NI: () => ef, Tb: () => em }), a(321073);
 var s,
     r,
     n,
@@ -16,15 +16,15 @@ var s,
     h = a(902577),
     A = a(976860),
     x = a(591179),
-    R = a(462463),
-    v = a(780964),
+    v = a(462463),
+    R = a(780964),
     y = a(858897),
     E = a(676279),
     M = a(975571),
     I = a(852218),
     P = a(161319),
-    N = a(992315),
-    S = a(788868),
+    S = a(992315),
+    N = a(788868),
     U = a(88001),
     T = a(652215),
     O = a(654487),
@@ -35,8 +35,8 @@ var s,
     L = a(985018),
     k = a(693227),
     B = a(864386),
-    G = a(817577),
-    V = a(861223),
+    V = a(817577),
+    G = a(861223),
     Y = a(748222),
     D = a(743501),
     H = a(652700),
@@ -79,36 +79,37 @@ var s,
         (n.THREE_P_PROMOTIONS = "threePPromotions"),
         (n.ORB_MULTIPLIER = "orbMultiplier"),
         n);
-let eg = () => {
-    let { analyticsLocations: e } = (0, u.Ay)(c.A.PREMIUM_MARKETING_BENTO_BOX),
-        t = (0, x.X)("useBentoBoxes"),
-        s = (0, R.A)({ analyticsLocations: e }),
-        r = (0, f.A)({ scrollPosition: _._F.TRY_IT_OUT, analyticsLocations: e }),
-        n = (0, l.useCallback)(() => {
-            (0, y.openUserSettings)(v.X.PROFILE_PANEL, { analyticsLocations: e }, () =>
-                (0, m.L)({ analyticsLocations: e }),
-            );
-        }, [e]),
+let eg = function () {
+    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+        { analyticsLocations: t } = (0, u.Ay)(c.A.PREMIUM_MARKETING_BENTO_BOX),
+        s = (0, x.X)("useBentoBoxes"),
+        r = (0, v.A)({ analyticsLocations: t }),
+        n = (0, f.A)({ scrollPosition: _._F.TRY_IT_OUT, analyticsLocations: t }),
         em = (0, l.useCallback)(() => {
-            (0, b.A)({ subscriptionTier: S.pe.TIER_2, initialPlanId: S.gD.PREMIUM_GROUP_MONTH, analyticsLocations: e });
-        }, [e]),
-        eb = (0, E.TM)(),
-        ef = M.A.getArticleURL(T.MVz.REFERRAL_PROGRAM),
-        { shouldShowBonusOrbsUX: eg, multiplier: eh } = (0, g.Dl)(O.rE.NITRO_HOME_MARKETING),
-        eA = l.useRef(null),
-        ex = {
-            premiumGroup: { thumbnail: G, assetUrl: G },
-            serverProfiles: { thumbnail: Y, assetUrl: eb ? eu.Ay : ep.Ay },
-            customThemes: { thumbnail: ed.A, assetUrl: eb ? eo.A : ec.A },
-            displayNameStyles: { thumbnail: H.A, assetUrl: eb ? D.A : F.A },
-            referralProgram: { thumbnail: $.A, assetUrl: eb ? J.A : q.A },
-            showYourStyle: { thumbnail: et.A, assetUrl: eb ? ee.A : ea.A },
-            yourSpace: { thumbnail: er.A, assetUrl: eb ? es.A : en.A },
-            emojis: { thumbnail: X.A, assetUrl: eb ? W.A : z.A },
-            noLimits: { thumbnail: Q.A, assetUrl: eb ? K.A : Z.A },
+            (0, y.openUserSettings)(R.X.PROFILE_PANEL, { analyticsLocations: t }, () =>
+                (0, m.L)({ analyticsLocations: t }),
+            );
+        }, [t]),
+        eb = (0, l.useCallback)(() => {
+            (0, b.A)({ subscriptionTier: N.pe.TIER_2, initialPlanId: N.gD.PREMIUM_GROUP_MONTH, analyticsLocations: t });
+        }, [t]),
+        ef = (0, E.TM)(),
+        eg = M.A.getArticleURL(T.MVz.REFERRAL_PROGRAM),
+        { shouldShowBonusOrbsUX: eh, multiplier: eA } = (0, g.Dl)(O.rE.NITRO_HOME_MARKETING),
+        ex = l.useRef(null),
+        ev = {
+            premiumGroup: { thumbnail: V, assetUrl: V },
+            serverProfiles: { thumbnail: Y, assetUrl: ef ? eu.Ay : ep.Ay },
+            customThemes: { thumbnail: ed.A, assetUrl: ef ? eo.A : ec.A },
+            displayNameStyles: { thumbnail: H.A, assetUrl: ef ? D.A : F.A },
+            referralProgram: { thumbnail: $.A, assetUrl: ef ? J.A : q.A },
+            showYourStyle: { thumbnail: et.A, assetUrl: ef ? ee.A : ea.A },
+            yourSpace: { thumbnail: er.A, assetUrl: ef ? es.A : en.A },
+            emojis: { thumbnail: X.A, assetUrl: ef ? W.A : z.A },
+            noLimits: { thumbnail: Q.A, assetUrl: ef ? K.A : Z.A },
             orbRewards: { thumbnail: el.A, assetUrl: ei.A },
-            threePPromotions: { thumbnail: V, assetUrl: V },
-            orbMultiplier: { thumbnail: (0, i.jsx)(h.A, { ref: eA }) },
+            threePPromotions: { thumbnail: G, assetUrl: G },
+            orbMultiplier: { thumbnail: (0, i.jsx)(h.A, { ref: ex }) },
         },
         eR = {
             serverProfiles: {
@@ -116,37 +117,37 @@ let eg = () => {
                 title: L.intl.string(L.t.I9TYMg),
                 description: L.intl.string(L.t.HMSHeH),
                 descriptionCta: L.intl.string(L.t.jVcuVY),
-                onClick: t ? s : r,
-                previewImage: ex.serverProfiles.thumbnail,
-                videoUrl: ex.serverProfiles.assetUrl,
+                onClick: s ? r : n,
+                previewImage: ev.serverProfiles.thumbnail,
+                videoUrl: ev.serverProfiles.assetUrl,
             },
             referralProgram: {
                 name: "referralProgram",
                 title: L.intl.string(L.t.tPY4o9),
-                description: L.intl.format(L.t.jRPQUH, { learnMoreLink: ef }),
-                previewImage: ex.referralProgram.thumbnail,
-                videoUrl: ex.referralProgram.assetUrl,
+                description: L.intl.format(L.t.jRPQUH, { learnMoreLink: eg }),
+                previewImage: ev.referralProgram.thumbnail,
+                videoUrl: ev.referralProgram.assetUrl,
             },
             customThemes: {
                 name: "customThemes",
                 title: L.intl.string(k.default.XokIHM),
                 description: L.intl.string(k.default["7esQMC"]),
                 descriptionCta: L.intl.string(L.t.jVcuVY),
-                previewImage: ex.customThemes.thumbnail,
+                previewImage: ev.customThemes.thumbnail,
                 onClick: () => {
                     (0, p.nf)(p.HP.CUSTOM_THEME);
                 },
-                videoUrl: ex.customThemes.assetUrl,
+                videoUrl: ev.customThemes.assetUrl,
             },
             displayNameStyles: {
                 name: "displayNameStyles",
                 title: L.intl.string(B.default.ABtBDQ),
                 description: L.intl.string(B.default.MFNXZh),
                 descriptionCta: L.intl.string(L.t.jVcuVY),
-                previewImage: ex.displayNameStyles.thumbnail,
-                onClick: t ? s : n,
+                previewImage: ev.displayNameStyles.thumbnail,
+                onClick: s ? r : em,
                 badgeText: L.intl.string(L.t.y2b7CA).toLocaleUpperCase(),
-                videoUrl: ex.displayNameStyles.assetUrl,
+                videoUrl: ev.displayNameStyles.assetUrl,
             },
             premiumGroup: {
                 name: "premiumGroup",
@@ -155,13 +156,13 @@ let eg = () => {
                     totalSeats: U.aw,
                     premiumGroupProductName: (0, U.DP)(),
                 }),
-                previewImage: ex.premiumGroup.thumbnail,
-                videoUrl: ex.premiumGroup.assetUrl,
+                previewImage: ev.premiumGroup.thumbnail,
+                videoUrl: ev.premiumGroup.assetUrl,
                 actions: [
                     {
                         variant: "primary",
                         text: L.intl.formatToPlainString(w.default.LwdrNi, { premiumGroupProductName: (0, U.DP)() }),
-                        onClick: em,
+                        onClick: eb,
                         icon: d.tvc,
                         iconPosition: "start",
                     },
@@ -184,37 +185,37 @@ let eg = () => {
                 title: L.intl.string(L.t.Ij3Zmv),
                 description: L.intl.string(L.t.UsOUxY),
                 descriptionCta: L.intl.string(L.t.jVcuVY),
-                previewImage: ex.showYourStyle.thumbnail,
-                onClick: t ? s : r,
-                videoUrl: ex.showYourStyle.assetUrl,
+                previewImage: ev.showYourStyle.thumbnail,
+                onClick: s ? r : n,
+                videoUrl: ev.showYourStyle.assetUrl,
             },
             yourSpace: {
                 name: "yourSpace",
                 title: L.intl.string(L.t.Wme3nX),
                 description: L.intl.string(L.t["/aAIqV"]),
                 descriptionCta: L.intl.string(L.t.jVcuVY),
-                previewImage: ex.yourSpace.thumbnail,
+                previewImage: ev.yourSpace.thumbnail,
                 onClick: () => {
                     {
-                        let { openUserSettings: t } = a(858897);
-                        t(v.X.DISPLAY_THEME_CATEGORY, { analyticsLocations: e });
+                        let { openUserSettings: e } = a(858897);
+                        e(R.X.DISPLAY_THEME_CATEGORY, { analyticsLocations: t });
                     }
                 },
-                videoUrl: ex.yourSpace.assetUrl,
+                videoUrl: ev.yourSpace.assetUrl,
             },
             emojis: {
                 name: "emojis",
                 title: L.intl.string(L.t.zY5PPb),
                 description: L.intl.string(L.t.R5Xag2),
-                previewImage: ex.emojis.thumbnail,
-                videoUrl: ex.emojis.assetUrl,
+                previewImage: ev.emojis.thumbnail,
+                videoUrl: ev.emojis.assetUrl,
             },
             noLimits: {
                 name: "noLimits",
                 title: L.intl.string(L.t["6b3ydG"]),
                 description: L.intl.string(L.t["Y+IJyg"]),
-                previewImage: ex.noLimits.thumbnail,
-                videoUrl: ex.noLimits.assetUrl,
+                previewImage: ev.noLimits.thumbnail,
+                videoUrl: ev.noLimits.assetUrl,
             },
             orbRewards: {
                 name: "orbRewards",
@@ -224,9 +225,9 @@ let eg = () => {
                 onClick: () => {
                     window.open(M.A.getArticleURL(T.MVz.ORBS_REWARDS_FAQ), "_blank");
                 },
-                previewImage: ex.orbRewards.thumbnail,
+                previewImage: ev.orbRewards.thumbnail,
                 previewImageStyle: "overlay",
-                backgroundVideoUrl: ex.orbRewards.assetUrl,
+                backgroundVideoUrl: ev.orbRewards.assetUrl,
                 badgeText: L.intl.string(L.t.oW0eUd).toLocaleUpperCase(),
                 badgeVariant: "expressive",
             },
@@ -235,32 +236,39 @@ let eg = () => {
                 title: L.intl.string(j.default.OlObRa),
                 description: L.intl.string(j.default["8Gl8gP"]),
                 descriptionCta: L.intl.string(j.default.HINTfJ),
-                previewImage: ex.threePPromotions.thumbnail,
-                videoUrl: ex.threePPromotions.assetUrl,
-                onClick: () => (0, P.u)({ analyticsLocations: e, partnerIds: [I.KS, I.Cs, I.XY] }),
+                previewImage: ev.threePPromotions.thumbnail,
+                videoUrl: ev.threePPromotions.assetUrl,
+                onClick: () => (0, P.u)({ analyticsLocations: t, partnerIds: [I.KS, I.Cs, I.XY] }),
                 badgeText: L.intl.string(L.t.y2b7CA).toLocaleUpperCase(),
                 badgeVariant: "expressive",
             },
             orbMultiplier: {
                 name: "orbMultiplier",
                 title: L.intl.string(L.t.F2MShO),
-                description: L.intl.format(L.t["G5k+lZ"], { bonusOrbMultiplier: eh }),
+                description: L.intl.format(L.t["G5k+lZ"], { bonusOrbMultiplier: eA }),
                 descriptionCta: L.intl.string(L.t.jVcuVY),
                 onClick: () => (0, A.pX)(T.BVt.QUEST_HOME),
                 badgeText: L.intl.string(L.t.oW0eUd).toLocaleUpperCase(),
                 badgeVariant: "expressive",
-                previewImage: ex.orbMultiplier.thumbnail,
-                mediaRef: eA,
+                previewImage: ev.orbMultiplier.thumbnail,
+                mediaRef: ex,
             },
         },
-        ev = (e) => {
+        ey = (e) => {
             let t = eR[e];
             if (null == t) throw Error(`useBentoBoxes: missing bento config for ${e}`);
             return t;
         },
-        [ey, eE, eM] = (0, N.A)(eg);
-    return {
-        whatsNewBoxes: [[ev(ey)], [ev(eE), ev(eM)]],
-        bestOfBoxes: [[ev("showYourStyle")], [ev("yourSpace")], [ev("emojis"), ev("noLimits")]],
-    };
+        eE = (0, S.A)(eh),
+        eM = [],
+        eI = e ? null : eE[0],
+        eP = eE.slice(+!e, e ? 2 : 3);
+    return (
+        null != eI && eM.push([ey(eI)]),
+        1 === eP.length ? eM.push([ey(eP[0])]) : 2 === eP.length && eM.push([ey(eP[0]), ey(eP[1])]),
+        {
+            whatsNewBoxes: [...eM],
+            bestOfBoxes: [[ey("showYourStyle")], [ey("yourSpace")], [ey("emojis"), ey("noLimits")]],
+        }
+    );
 };
