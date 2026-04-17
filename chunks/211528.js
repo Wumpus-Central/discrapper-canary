@@ -21,7 +21,7 @@ var r = n(627968),
     T = n(648335),
     S = n(652215),
     y = n(818348),
-    v = n(311701);
+    v = n(235301);
 let N = [_.pn.PAYMENT_ELEMENT],
     C = [
         _.pn.PAYPAL_INFORMATION,
@@ -179,15 +179,16 @@ let N = [_.pn.PAYMENT_ELEMENT],
                 paymentMethodOrder: f,
                 addressElementKey: p,
                 analyticsContext: h,
+                paymentElementFooter: m,
             } = e,
-            m = (0, s.useElements)();
+            E = (0, s.useElements)();
         i.useEffect(() => {
-            c.current = m;
-        }, [m, c]);
+            c.current = E;
+        }, [E, c]);
         let {
-            shouldShowPaymentElement: E,
-            shouldShowAddressElement: g,
-            excludeBodySpacing: A,
+            shouldShowPaymentElement: g,
+            shouldShowAddressElement: A,
+            excludeBodySpacing: I,
         } = i.useMemo(
             () => ({
                 shouldShowPaymentElement: N.includes(t),
@@ -197,24 +198,27 @@ let N = [_.pn.PAYMENT_ELEMENT],
             [t],
         );
         return (0, r.jsxs)("div", {
-            className: o()(v.kL, { [v.rf]: !A }),
+            className: o()(v.kL, { [v.rf]: !I }),
             children: [
-                (0, r.jsx)("div", {
-                    className: o()(E ? v.RK : [v.R, v.$u], {
+                (0, r.jsxs)("div", {
+                    className: o()(g ? v.RK : [v.R, v.$u], {
                         [v.df]: null == d,
                         [v._m]: d === y.he.CARD,
                         [v.JD]: d === y.he.PAYPAL,
                     }),
-                    children: (0, r.jsx)(O, {
-                        ...l,
-                        paymentMethodOrder: f,
-                        customPaymentMethodIdsToSourceTypes: a,
-                        step: t,
-                        analyticsContext: h,
-                    }),
+                    children: [
+                        (0, r.jsx)(O, {
+                            ...l,
+                            paymentMethodOrder: f,
+                            customPaymentMethodIdsToSourceTypes: a,
+                            step: t,
+                            analyticsContext: h,
+                        }),
+                        g && m,
+                    ],
                 }),
                 (0, r.jsx)("div", {
-                    className: o()(v.K_, g ? v.RK : [v.R, v.vg]),
+                    className: o()(v.K_, A ? v.RK : [v.R, v.vg]),
                     children: (0, r.jsx)(P, {
                         ...u,
                         internalKey: p,

@@ -48,20 +48,24 @@ function c() {
             withRedemptionSuccessModal: o = !1,
             source: l,
             loadId: u,
+            stackingBehavior: c,
         } = e;
-    (0, s.mMO)(async () => {
-        let { default: e } = await n.e("13978").then(n.bind(n, 768161));
-        return (n) =>
-            (0, r.jsx)(e, {
-                ...n,
-                initialCode: t,
-                onComplete: a,
-                onClose: async () => {
-                    i?.(), await n.onClose();
-                },
-                withRedemptionSuccessModal: o,
-                source: l,
-                loadId: u,
-            });
-    });
+    (0, s.mMO)(
+        async () => {
+            let { default: e } = await n.e("13978").then(n.bind(n, 768161));
+            return (n) =>
+                (0, r.jsx)(e, {
+                    ...n,
+                    initialCode: t,
+                    onComplete: a,
+                    onClose: async () => {
+                        i?.(), await n.onClose();
+                    },
+                    withRedemptionSuccessModal: o,
+                    source: l,
+                    loadId: u,
+                });
+        },
+        { stackingBehavior: c },
+    );
 }
