@@ -1,133 +1,158 @@
-n.d(t, { A: () => m, N: () => x });
-var a = n(627968),
-    l = n(64700),
+n.d(t, { A: () => g, N: () => p });
+var l = n(627968),
+    a = n(64700),
     i = n(990078),
     r = n(397927),
     s = n(442433),
     o = n(50268),
-    c = n(67518),
-    d = n(651864),
-    u = n(985018);
-function m(e) {
-    let { applicationId: t, className: n, trackAction: d } = e,
-        m = l.useRef(null),
-        x = (0, o.A)({ id: t, label: u.intl.string(u.t["FfCL+6"]) }),
-        h = (0, c.n)(t, d);
-    return null == x && null == h
+    c = n(44724),
+    d = n(409626),
+    u = n(305080),
+    m = n(67518),
+    f = n(651864),
+    h = n(652215),
+    x = n(985018);
+function g(e) {
+    let { applicationId: t, className: n, trackAction: c } = e,
+        d = a.useRef(null),
+        u = (0, o.A)({ id: t, label: x.intl.string(x.t["FfCL+6"]) }),
+        f = (0, m.n)(t, c);
+    return null == u && null == f
         ? null
-        : (0, a.jsx)(r.YNO, {
-              targetElementRef: m,
+        : (0, l.jsx)(r.YNO, {
+              targetElementRef: d,
               align: "top",
               position: "right",
               disablePointerEvents: !1,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, a.jsx)(r.W1t, {
+                  return (0, l.jsx)(r.W1t, {
                       "data-menu-migrated-auto": !0,
                       navId: "game-profile-context",
                       onClose: () => {
                           (0, s.Z_)(), t();
                       },
-                      "aria-label": u.intl.string(u.t.PNeFgW),
+                      "aria-label": x.intl.string(x.t.PNeFgW),
                       onSelect: () => {},
-                      children: (0, a.jsxs)(a.Fragment, {
-                          children: [(0, a.jsx)(r.rXV, { children: x }), (0, a.jsx)(r.rXV, { children: h })],
+                      children: (0, l.jsxs)(l.Fragment, {
+                          children: [(0, l.jsx)(r.rXV, { children: u }), (0, l.jsx)(r.rXV, { children: f })],
                       }),
                   });
               },
               children: (e) =>
-                  (0, a.jsx)(i.m, {
-                      text: u.intl.string(u.t["UKOtz+"]),
-                      children: (0, a.jsx)(r.DUT, {
-                          innerRef: m,
+                  (0, l.jsx)(i.m, {
+                      text: x.intl.string(x.t["UKOtz+"]),
+                      children: (0, l.jsx)(r.DUT, {
+                          innerRef: d,
                           className: n,
                           ...e,
-                          children: (0, a.jsx)(r.jNK, { size: "xs", color: r.LU0.colors.WHITE }),
+                          children: (0, l.jsx)(r.jNK, { size: "xs", color: r.LU0.colors.WHITE }),
                       }),
                   }),
           });
 }
-function x(e) {
-    let { game: t, onClose: n, className: m, trackAction: x } = e,
-        h = l.useRef(null),
-        f = l.useRef(null),
-        p = (0, o.A)({ id: t.id, label: u.intl.string(u.t["FfCL+6"]) }),
-        g = (0, c.n)(t.id, x),
-        _ = (0, d.A)(t);
-    return (0, a.jsxs)("div", {
-        className: m,
+function p(e) {
+    let { game: t, onClose: n, className: g, trackAction: p } = e,
+        _ = a.useRef(null),
+        v = a.useRef(null),
+        A = (0, o.A)({ id: t.id, label: x.intl.string(x.t["FfCL+6"]) }),
+        b = (0, m.n)(t.id, p),
+        E = (0, f.A)(t),
+        { officialInvite: j } = (0, u.c)(),
+        C = new Set(j?.guild?.features).has(h.GuildFeatures.SOCIAL_LAYER_STOREFRONT),
+        I = a.useCallback(() => {
+            null != j && (0, c.X)({ invite: j });
+        }, [j]),
+        N = a.useCallback(() => {
+            null != j && (p(d.Ws.GameShop), (0, c.default)({ invite: j }), n());
+        }, [j, p, n]);
+    return (0, l.jsxs)("div", {
+        className: g,
         children: [
-            null != _ &&
-                (0, a.jsx)(r.YNO, {
-                    targetElementRef: f,
+            null != E &&
+                (0, l.jsx)(r.YNO, {
+                    targetElementRef: v,
                     align: "top",
                     position: "right",
                     disablePointerEvents: !1,
                     renderPopout: (e) => {
                         let { closePopout: t } = e;
-                        return (0, a.jsx)(r.W1t, {
+                        return (0, l.jsx)(r.W1t, {
                             navId: "game-profile-add-to-profile",
                             onClose: () => {
                                 (0, s.Z_)(), t();
                             },
-                            "aria-label": u.intl.string(u.t.sidPSo),
+                            "aria-label": x.intl.string(x.t.sidPSo),
                             onSelect: () => {},
-                            children: (0, a.jsx)(r.rXV, { children: _ }),
+                            children: (0, l.jsx)(r.rXV, { children: E }),
                         });
                     },
                     children: (e) =>
-                        (0, a.jsx)("div", {
+                        (0, l.jsx)("div", {
                             ...e,
-                            ref: f,
-                            children: (0, a.jsx)(r.Button, {
+                            ref: v,
+                            children: (0, l.jsx)(r.Button, {
                                 icon: r.pa$,
                                 variant: "overlay-secondary",
                                 size: "sm",
-                                text: u.intl.string(u.t.sidPSo),
+                                text: x.intl.string(x.t.sidPSo),
                             }),
                         }),
                 }),
-            (null != p || null != g) &&
-                (0, a.jsx)(r.YNO, {
-                    targetElementRef: h,
+            C &&
+                null != j &&
+                (0, l.jsx)(i.m, {
+                    text: x.intl.string(x.t.apFNLU),
+                    children: (0, l.jsx)(r.K0, {
+                        icon: r.U1X,
+                        variant: "overlay-secondary",
+                        size: "sm",
+                        "aria-label": x.intl.string(x.t.apFNLU),
+                        onMouseDown: I,
+                        onClick: N,
+                    }),
+                }),
+            (null != A || null != b) &&
+                (0, l.jsx)(r.YNO, {
+                    targetElementRef: _,
                     align: "top",
                     position: "right",
                     disablePointerEvents: !1,
                     renderPopout: (e) => {
                         let { closePopout: t } = e;
-                        return (0, a.jsx)(r.W1t, {
+                        return (0, l.jsx)(r.W1t, {
                             navId: "game-profile-context",
                             onClose: () => {
                                 (0, s.Z_)(), t();
                             },
-                            "aria-label": u.intl.string(u.t.PNeFgW),
+                            "aria-label": x.intl.string(x.t.PNeFgW),
                             onSelect: () => {},
-                            children: (0, a.jsxs)(a.Fragment, {
-                                children: [(0, a.jsx)(r.rXV, { children: g }), (0, a.jsx)(r.rXV, { children: p })],
+                            children: (0, l.jsxs)(l.Fragment, {
+                                children: [(0, l.jsx)(r.rXV, { children: b }), (0, l.jsx)(r.rXV, { children: A })],
                             }),
                         });
                     },
                     children: (e) =>
-                        (0, a.jsx)(i.m, {
-                            text: u.intl.string(u.t["UKOtz+"]),
-                            children: (0, a.jsx)("div", {
+                        (0, l.jsx)(i.m, {
+                            text: x.intl.string(x.t["UKOtz+"]),
+                            children: (0, l.jsx)("div", {
                                 ...e,
-                                ref: h,
-                                children: (0, a.jsx)(r.K0, {
+                                ref: _,
+                                children: (0, l.jsx)(r.K0, {
                                     icon: r.jNK,
                                     variant: "overlay-secondary",
                                     size: "sm",
-                                    "aria-label": u.intl.string(u.t["UKOtz+"]),
+                                    "aria-label": x.intl.string(x.t["UKOtz+"]),
                                 }),
                             }),
                         }),
                 }),
-            (0, a.jsx)(r.K0, {
+            (0, l.jsx)(r.K0, {
                 icon: r.PGe,
                 variant: "overlay-secondary",
                 size: "sm",
                 onClick: n,
-                "aria-label": u.intl.string(u.t.cpT0Cq),
+                "aria-label": x.intl.string(x.t.cpT0Cq),
             }),
         ],
     });
