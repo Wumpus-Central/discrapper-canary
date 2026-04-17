@@ -12,8 +12,8 @@ var i = n(627968),
     m = n(533406),
     A = n(788868),
     g = n(699976),
-    p = n(985018);
-let _ = g.Z.SIZE_90;
+    _ = n(985018);
+let p = g.Z.SIZE_90;
 function f(e) {
     let {
             sku: t,
@@ -21,8 +21,8 @@ function f(e) {
             isTargetingCurrentUser: g,
             source: f,
             showIcons: E,
-            guildId: x,
-            channelId: C,
+            guildId: C,
+            channelId: x,
             analyticsLocations: S,
             onCardClick: I,
             onButtonClick: T,
@@ -48,30 +48,24 @@ function f(e) {
                     { analyticsLocations: S, guildId: y },
                 );
         }, [t, n, g, S, y, T]),
-        { label: R, icon: M } = (0, c.h)({
-            sku: t,
-            wishlistOwner: n,
-            isOwned: !1,
-            shortText: !0,
-            location: "SocialLayerGiftingVoicePanelSkuItemCard",
-        });
+        { label: R, icon: M } = (0, c.h)({ wishlistOwner: n, isOwned: !1, shortText: !0 });
     return (0, i.jsxs)(r.A, {
         sku: t,
         user: n,
-        spec: _,
+        spec: p,
         onClick: b,
-        "aria-label": p.intl.formatToPlainString(p.t.ZBB4Ty, { productName: (0, s.TC)(t) }),
+        "aria-label": _.intl.formatToPlainString(_.t.ZBB4Ty, { productName: (0, s.TC)(t) }),
         onHoverOrFocusChange: v,
         children: [
-            (0, i.jsx)(c.A, { spec: _, onClick: j, isHoveringOrFocusing: N, label: R, icon: M }),
+            (0, i.jsx)(c.A, { spec: p, onClick: j, isHoveringOrFocusing: N, label: R, icon: M }),
             (0, i.jsx)(o.A, {
-                spec: _,
+                spec: p,
                 sku: t,
                 isCardHovered: N,
                 location: "SocialLayerGiftingVoicePanelSkuItemCard",
                 replacedElement:
                     E && !g && f === a.uS.WISHLIST
-                        ? (0, i.jsx)(d.n, { spec: _, user: n, guildId: x ?? void 0, channelId: C ?? void 0 })
+                        ? (0, i.jsx)(d.n, { spec: p, user: n, guildId: C ?? void 0, channelId: x ?? void 0 })
                         : null,
             }),
         ],

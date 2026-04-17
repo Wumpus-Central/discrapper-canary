@@ -94,11 +94,7 @@ function U(e) {
             (0, I.XA)(P.jM.SOMETHING_WENT_WRONG), o.ORC.announce(D.intl.string(D.t.F8FvUy));
         }, []),
         U = null != c ? (0, i.jsx)("div", { ref: N, className: j.BU, children: c }) : null,
-        {
-            label: G,
-            icon: k,
-            isPromptingPurchase: V,
-        } = (0, b.h)({ sku: t.sku, wishlistOwner: n, isOwned: f, location: "User Profile Wishlist Item Card" });
+        { label: G, icon: k, isPromptingPurchase: V } = (0, b.h)({ wishlistOwner: n, isOwned: f });
     return (0, i.jsxs)("div", {
         className: j.kL,
         children: [

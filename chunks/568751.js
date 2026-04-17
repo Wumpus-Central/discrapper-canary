@@ -36,13 +36,13 @@ function N(e) {
         } = e,
         [D, L] = i.useState(a().uniq(R)),
         [w, M] = i.useState(!1),
-        [x, P] = i.useState(a().uniq(O)),
+        [P, x] = i.useState(a().uniq(O)),
         { analyticsLocations: k } = (0, c.Ay)(
             u.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD,
             u.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON,
         );
     i.useEffect(() => {
-        P((e) => {
+        x((e) => {
             let t = a().uniq(O);
             return (0, l.v)(e, t) ? e : t;
         });
@@ -54,7 +54,7 @@ function N(e) {
             });
         }, [R]);
     let U = (0, o.bG)([E.default], () => (1 === D.length ? E.default.getUser(D[0]) : void 0), [D]),
-        G = (0, o.yK)([E.default], () => x.map((e) => E.default.getUser(e)).filter(g.Vq), [x]),
+        G = (0, o.yK)([E.default], () => P.map((e) => E.default.getUser(e)).filter(g.Vq), [P]),
         F = i.useCallback(() => {
             null != s &&
                 null != s.guildId &&
@@ -79,13 +79,7 @@ function N(e) {
                 { analyticsLocations: k },
             );
         }, [t, U, D, k]),
-        { label: B, icon: H } = (0, h.h)({
-            sku: t,
-            wishlistOwner: U,
-            isOwned: !1,
-            shortText: !0,
-            location: "Contextual Social Layer Sku Item Card",
-        });
+        { label: B, icon: H } = (0, h.h)({ wishlistOwner: U, isOwned: !1, shortText: !0 });
     return (0, r.jsxs)(f.A, {
         sku: t,
         user: U,
