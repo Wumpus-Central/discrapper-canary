@@ -7,7 +7,7 @@ n.d(t, {
     Fw: () => C,
     GD: () => I,
     J6: () => D,
-    K3: () => x,
+    K3: () => P,
     Ko: () => h,
     Li: () => s.L,
     Ls: () => w,
@@ -24,7 +24,7 @@ n.d(t, {
     fP: () => S,
     gB: () => O,
     hK: () => b,
-    kL: () => P,
+    kL: () => x,
     mg: () => v,
     pc: () => H,
     rE: () => d,
@@ -85,7 +85,6 @@ var r = n(735438),
             (e.QUEST_INSTRUCTIONS = "quest_instructions"),
             (e.QUEST_ACTIVITY_BOTTOM_SHEET = "quest_activity_bottom_sheet"),
             (e.QUEST_PRIMARY_CTA = "quest_primary_cta"),
-            (e.QUEST_LEARN_MORE_CTA = "quest_learn_more_cta"),
             (e.QUEST_ACTIVITY_HEADER = "quest_activity_header"),
             (e.QUEST_ACTIVITY_UNENROLLED_MODAL = "quest_activity_unenrolled_modal"),
             (e.NITRO_HOME_MARKETING = "nitro_home_marketing"),
@@ -154,8 +153,8 @@ let C = "1333839522189938740",
         i.n.PLAY_ON_PLAYSTATION,
         i.n.PLAY_ACTIVITY,
     ]),
-    x = { is_targeted: !1 };
-var P = (function (e) {
+    P = { is_targeted: !1 };
+var x = (function (e) {
         return (
             (e.SUGGESTED = "suggested"),
             (e.MOST_RECENT = "most_recent"),
