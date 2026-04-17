@@ -10,10 +10,11 @@ class o extends a.G {
             { no: 1, name: "badge_label", kind: "scalar", T: 9 },
             { no: 2, name: "acknowledged_badge_label", kind: "scalar", T: 9 },
             { no: 3, name: "show_hover_gradient", kind: "scalar", T: 8 },
+            { no: 4, name: "deeplink_section", kind: "scalar", T: 9 },
         ]);
     }
     create(e) {
-        let t = { badgeLabel: "", acknowledgedBadgeLabel: "", showHoverGradient: !1 };
+        let t = { badgeLabel: "", acknowledgedBadgeLabel: "", showHoverGradient: !1, deeplinkSection: "" };
         return (
             globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
@@ -35,6 +36,9 @@ class o extends a.G {
                 case 3:
                     s.showHoverGradient = e.bool();
                     break;
+                case 4:
+                    s.deeplinkSection = e.string();
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -48,7 +52,8 @@ class o extends a.G {
     internalBinaryWrite(e, t, n) {
         "" !== e.badgeLabel && t.tag(1, r.O0.LengthDelimited).string(e.badgeLabel),
             "" !== e.acknowledgedBadgeLabel && t.tag(2, r.O0.LengthDelimited).string(e.acknowledgedBadgeLabel),
-            !1 !== e.showHoverGradient && t.tag(3, r.O0.Varint).bool(e.showHoverGradient);
+            !1 !== e.showHoverGradient && t.tag(3, r.O0.Varint).bool(e.showHoverGradient),
+            "" !== e.deeplinkSection && t.tag(4, r.O0.LengthDelimited).string(e.deeplinkSection);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
