@@ -870,9 +870,8 @@ let W = {
             if (null != t) return t(e);
         },
         isModuleVersionAtLeast(e, t) {
-            if (this.moduleVersions?.[e] == null) return !1;
             let n = [...(S ?? [0, 0, 0])];
-            n.push(this.moduleVersions[e] ?? 0);
+            n.push(this.moduleVersions?.[e] ?? 0);
             let r = t[this.releaseChannel] ?? t.stable;
             for (let [e, t] of n.entries())
                 if (t > r[e]) break;
