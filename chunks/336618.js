@@ -60,6 +60,7 @@ function w(e) {
             className: b.zc,
             children: [
                 (0, r.jsx)(c.xBs, {
+                    autoPause: !0,
                     listenOnDocumentBody: !0,
                     className: a()(b.is, c.d5l.refresh_sm),
                     dataBinding: { fill: "currentColor" },

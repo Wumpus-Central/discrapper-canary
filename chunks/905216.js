@@ -20,6 +20,7 @@ function u(e) {
         onClick: _,
         ref: p,
         iconComponent: (0, r.jsx)(s.AYu, {
+            autoPause: !0,
             eventTargetRef: p,
             className: s.d5l[u],
             dataBinding: { fill: "currentColor" },

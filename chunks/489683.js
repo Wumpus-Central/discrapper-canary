@@ -220,6 +220,7 @@ function eY(e) {
         children: (e) => {
             let { unavailable: t, isActive: n, label: l, ...a } = e,
                 c = (0, i.jsx)(_.gau, {
+                    autoPause: !0,
                     allowAnimationWhileUnfocused: !0,
                     defaultViewModelInstance: d.enabled ? "CamOn" : "CamOff",
                     eventTargetRef: s,
@@ -313,6 +314,7 @@ function eW(e) {
                           children: [
                               n === u.M.ACTIVITIES_VOICE_LAUNCHER_BADGE && (0, i.jsx)(x.a, { top: -1, right: -1 }),
                               (0, i.jsx)(_.lmr, {
+                                  autoPause: !0,
                                   eventTargetRef: S,
                                   className: _.d5l.refresh_sm,
                                   dataBinding: { fill: "currentColor" },
@@ -346,6 +348,7 @@ function eK(e) {
         O = C || s || T,
         L = null != S,
         D = (0, i.jsx)(_.gxO, {
+            autoPause: !0,
             allowAnimationWhileUnfocused: !0,
             defaultViewModelInstance: L ? "Off" : "On",
             eventTargetRef: d,
@@ -630,6 +633,7 @@ function ez(e) {
         },
         tooltipText: n ? null : eG.intl.string(eG.t.vFiCSx),
         icon: (0, i.jsx)(_.syq, {
+            autoPause: !0,
             eventTargetRef: a,
             dataBinding: { on: l, fill: "currentColor" },
             className: _.d5l.refresh_sm,

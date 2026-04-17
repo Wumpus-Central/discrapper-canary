@@ -11,7 +11,8 @@ let o = function (e) {
         buttonRef: o,
         isTrayButton: !1,
         color: "disconnect",
-        iconComponent: t ?? (0, r.jsx)(s.AYu, { eventTargetRef: o, dataBinding: { fill: "currentColor" } }),
+        iconComponent:
+            t ?? (0, r.jsx)(s.AYu, { autoPause: !0, eventTargetRef: o, dataBinding: { fill: "currentColor" } }),
         ...n,
     });
 };

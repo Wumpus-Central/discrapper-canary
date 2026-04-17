@@ -45,6 +45,7 @@ let E = i.forwardRef(function (e, t) {
             "aria-haspopup": "dialog",
             focusProps: { offset: { top: 4, bottom: 4, left: -4, right: -4 } },
             children: (0, r.jsx)(o.lmr, {
+                autoPause: !0,
                 eventTargetRef: t,
                 dataBinding: { fill: "currentColor", triggerHover: g },
                 className: o.d5l.refresh_sm,

@@ -97,6 +97,7 @@ function T(e) {
                         ? N.intl.string(N.t.X1lQli)
                         : void 0,
                 iconComponent: (0, i.jsx)(o.gZH, {
+                    autoPause: !0,
                     eventTargetRef: W,
                     className: o.d5l.refresh_sm,
                     dataBinding: { fill: "currentColor" },

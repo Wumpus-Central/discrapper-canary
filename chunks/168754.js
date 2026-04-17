@@ -12,6 +12,7 @@ function r(e) {
         isActive: t,
         color: t ? "green" : void 0,
         iconComponent: (0, i.jsx)(s.lmr, {
+            autoPause: !0,
             eventTargetRef: r,
             dataBinding: { fill: "currentColor" },
             className: s.d5l.refresh_sm,

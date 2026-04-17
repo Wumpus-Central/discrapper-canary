@@ -16,6 +16,7 @@ function u(e) {
         label: l(t),
         isTrayButton: !1,
         iconComponent: (0, r.jsx)(s.gxO, {
+            autoPause: !0,
             eventTargetRef: c,
             dataBinding: { fill: "currentColor", on: !1 },
             defaultViewModelInstance: "Off",

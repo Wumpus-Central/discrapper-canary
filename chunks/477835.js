@@ -104,6 +104,7 @@ function y(e) {
                                 size: c.$n.Sizes.MEDIUM,
                                 ...a,
                                 children: (0, i.jsx)(u.gZH, {
+                                    autoPause: !0,
                                     eventTargetRef: y,
                                     className: u.d5l.refresh_sm,
                                     dataBinding: { fill: "currentColor" },

@@ -39,6 +39,7 @@ function h(e, t) {
                   "aria-controls": E,
                   sparkle: I,
                   children: (0, r.jsx)(u.K2N, {
+                      autoPause: !0,
                       eventTargetRef: T,
                       dataBinding: { fill: "currentColor" },
                       className: u.d5l.refresh_sm,

@@ -1,87 +1,88 @@
 "use strict";
-n.d(t, { u: () => u });
+n.d(t, { u: () => c });
 var r = n(64700),
-    i = n(306327);
-let s = new Map();
-function a(e) {
+    i = n(306327),
+    s = n(167789);
+let a = new Map();
+function o(e) {
     if (null == e || "" === e) return null;
-    if (s.has(e)) return s.get(e);
+    if (a.has(e)) return a.get(e);
     let t = new i.A(e).to("srgb"),
         n = { r: 255 * t.get("r"), g: 255 * t.get("g"), b: 255 * t.get("b"), a: t.alpha };
-    return s.set(e, n), n;
+    return a.set(e, n), n;
 }
-let o = 1e3 / 30,
-    l = 1e3;
-function u(e) {
+let l = 1e3 / 30,
+    u = 1e3;
+function c(e) {
     let {
             eventTargetRef: t,
             elementRef: n,
             needsCurrentColorTracking: i,
-            isFocused: s,
-            theme: u,
-            gradientThemeId: c,
-            dataBinding: d,
-            allowAnimationWhileUnfocused: _,
+            isFocused: a,
+            theme: c,
+            gradientThemeId: d,
+            dataBinding: _,
+            allowAnimationWhileUnfocused: f,
         } = e,
-        [f, p] = r.useState(null),
-        h = r.useRef(!1),
-        m = r.useRef(0),
-        E = r.useRef(null),
-        g = r.useRef(0),
-        A = r.useRef(null),
-        I = r.useCallback(() => {
+        [p, h] = r.useState(null),
+        m = r.useRef(!1),
+        E = r.useRef(0),
+        g = r.useRef(null),
+        A = r.useRef(0),
+        I = r.useRef(null),
+        T = r.useCallback(() => {
             let e = n.current;
             if (null == e) return;
-            let t = a((e.ownerDocument.defaultView ?? window).getComputedStyle(e).color);
-            t !== A.current && ((A.current = t), p(t));
+            let t = o((e.ownerDocument.defaultView ?? window).getComputedStyle(e).color);
+            t !== I.current && ((I.current = t), h(t));
         }, [n]),
-        T = r.useCallback(() => {
-            if (null != E.current) return;
-            let e = (t) => {
-                let n = h.current || performance.now() < m.current;
-                if ((t - g.current >= o && ((g.current = t), I()), !n)) {
-                    E.current = null;
+        S = r.useCallback(() => {
+            if (null != g.current) return;
+            let e = () => {
+                let t = m.current || performance.now() < E.current,
+                    n = performance.now();
+                if ((n - A.current >= l && ((A.current = n), T()), !t)) {
+                    g.current = null;
                     return;
                 }
-                E.current = requestAnimationFrame(e);
+                g.current = (0, s.O)(e, { timeout: 100 });
             };
-            E.current = requestAnimationFrame(e);
-        }, [I]),
-        S = r.useCallback(() => {
-            (m.current = performance.now() + l), T();
-        }, [T]);
-    r.useEffect(() => {
-        if (!i) return;
-        let e = t.current;
-        if (null == e) return;
-        let n = () => {
-                (h.current = !0), T();
-            },
-            r = () => {
-                (h.current = !1), S();
-            };
-        return (
-            e.addEventListener("mouseenter", n, !0),
-            e.addEventListener("mouseleave", r, !0),
-            e.addEventListener("focusin", n, !0),
-            e.addEventListener("focusout", r, !0),
-            I(),
-            () => {
-                e.removeEventListener("mouseenter", n, !0),
-                    e.removeEventListener("mouseleave", r, !0),
-                    e.removeEventListener("focusin", n, !0),
-                    e.removeEventListener("focusout", r, !0),
-                    (h.current = !1),
-                    (m.current = 0),
-                    null != E.current && (cancelAnimationFrame(E.current), (E.current = null));
-            }
-        );
-    }, [i, t, I, T, S]);
-    let y = r.useMemo(() => JSON.stringify(d), [JSON.stringify(d)]);
+            g.current = (0, s.O)(e, { timeout: 100 });
+        }, [T]),
+        y = r.useCallback(() => {
+            (E.current = performance.now() + u), S();
+        }, [S]);
     return (
         r.useEffect(() => {
-            i && (s || _ ? ((h.current = t.current?.matches(":hover") ?? !1), S()) : (h.current = !1));
-        }, [_, i, s, u, c, y, S, t]),
-        f
+            if (!i) return;
+            let e = t.current;
+            if (null == e) return;
+            let n = () => {
+                    (m.current = !0), S();
+                },
+                r = () => {
+                    (m.current = !1), y();
+                };
+            return (
+                e.addEventListener("mouseenter", n, !0),
+                e.addEventListener("mouseleave", r, !0),
+                e.addEventListener("focusin", n, !0),
+                e.addEventListener("focusout", r, !0),
+                T(),
+                () => {
+                    e.removeEventListener("mouseenter", n, !0),
+                        e.removeEventListener("mouseleave", r, !0),
+                        e.removeEventListener("focusin", n, !0),
+                        e.removeEventListener("focusout", r, !0),
+                        (m.current = !1),
+                        (E.current = 0),
+                        null != g.current && (g.current(), (g.current = null));
+                }
+            );
+        }, [i, t, T, S, y]),
+        r.useEffect(() => {
+            i && (a || f ? ((m.current = t.current?.matches(":hover") ?? !1), y()) : (m.current = !1));
+        }, [f, i, a, c, d, _, y, t]),
+        p
     );
 }

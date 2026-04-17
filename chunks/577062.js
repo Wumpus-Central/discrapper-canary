@@ -31,6 +31,7 @@ function u(e) {
             l.useMemo(
                 () =>
                     (0, i.jsx)(s.F0F, {
+                        autoPause: !0,
                         defaultViewModelInstance: t ? "Off" : "On",
                         allowAnimationWhileUnfocused: !0,
                         eventTargetRef: n,

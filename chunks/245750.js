@@ -74,6 +74,7 @@ function _(e) {
     return null != t
         ? (0, a.jsx)(d.Hnu, { size: "refresh_sm", color: "currentColor", className: n })
         : (0, a.jsx)(d.MX_, {
+              autoPause: !0,
               dataBinding: { fill: "currentColor" },
               className: l()(d.d5l.refresh_sm, n),
               eventTargetRef: i,

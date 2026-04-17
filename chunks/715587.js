@@ -20,7 +20,11 @@ function o(e) {
                 buttonRef: s,
                 size: "md",
                 variant: "secondary",
-                icon: { type: "rive", asset: n.MX_, riveProps: { dataBinding: { fill: "currentColor" } } },
+                icon: {
+                    type: "rive",
+                    asset: n.MX_,
+                    riveProps: { autoPause: !0, dataBinding: { fill: "currentColor" } },
+                },
                 "aria-label": a.intl.string(a.t["+1H47t"]),
                 ...e,
             }),

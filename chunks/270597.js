@@ -11,45 +11,42 @@ function l(e) {
             artboard: n,
             artboardProperties: o,
             dataBinding: l,
-            dynamicDataBinding: p,
-            elementRef: h,
-            supportsReducedMotionNatively: m,
-            allowAnimationWhileUnfocused: E,
+            dynamicDataBinding: f,
+            supportsReducedMotionNatively: p,
+            allowAnimationWhileUnfocused: h,
         } = e,
-        g = p ?? l,
-        A = r.useMemo(() => JSON.stringify(g), [JSON.stringify(g)]),
-        I = (0, i.useViewModel)(t),
-        [T, S] = r.useState(() =>
+        m = f ?? l,
+        E = (0, i.useViewModel)(t),
+        [g, A] = r.useState(() =>
             null != e.defaultViewModelInstance ? { name: e.defaultViewModelInstance } : { useDefault: !0 },
         );
-    (0, i.useViewModelInstance)(I, { rive: t, ...T });
-    let { theme: y, saturation: v, gradientThemeId: N } = (0, a.G9)(),
+    (0, i.useViewModelInstance)(E, { rive: t, ...g });
+    let { theme: I, saturation: T, gradientThemeId: S } = (0, a.G9)(),
         {
-            highContrastModeEnabled: C,
-            reducedMotion: { enabled: R },
+            highContrastModeEnabled: y,
+            reducedMotion: { enabled: v },
         } = r.useContext(s.C),
-        O = r.useRef({}),
-        b = u(),
-        D = r.useCallback((e, t) => {
+        N = r.useRef({}),
+        C = u(),
+        R = r.useCallback((e, t) => {
             let n = e?.[t];
             return null == n ? null : "object" == typeof n && "value" in n ? n.value : n;
         }, []),
-        { pressed: L, hovered: w } = d(h),
-        M = f({ ...e, theme: y, gradientThemeId: N, allowAnimationWhileUnfocused: E });
+        O = _({ ...e, theme: I, gradientThemeId: S, allowAnimationWhileUnfocused: h });
     return (
         c(e),
         r.useEffect(() => {
-            if (null == t || null == t.viewModelInstance || !m) return;
+            if (null == t || null == t.viewModelInstance || !p) return;
             let e = t.viewModelInstance.boolean("reducedMotion");
-            null != e && (e.value = R);
-        }, [t, m, R]),
+            null != e && (e.value = v);
+        }, [t, p, v]),
         r.useEffect(() => {
             let e = new AbortController();
             return (
                 (async function () {
-                    if (null == t || null == t.viewModelInstance || null == g) return;
+                    if (null == t || null == t.viewModelInstance || null == m) return;
                     let r = o[n ?? ""];
-                    for (let n of Object.entries(g)) {
+                    for (let n of Object.entries(m)) {
                         if (e.signal.aborted) return;
                         let i = n[0],
                             s = n[1],
@@ -62,13 +59,11 @@ function l(e) {
                                     let e = t.viewModelInstance?.color(i);
                                     null != e && (e.value = l);
                                 } else {
-                                    let e = _({
-                                            value: "currentColor" === l ? M : l,
-                                            pressed: L,
-                                            hovered: w,
-                                            theme: y,
-                                            saturation: v,
-                                            highContrastModeEnabled: C,
+                                    let e = d({
+                                            value: "currentColor" === l ? O : l,
+                                            theme: I,
+                                            saturation: T,
+                                            highContrastModeEnabled: y,
                                         }),
                                         n = t.viewModelInstance?.color(i);
                                     null != n && n.rgba(e.r, e.g, e.b, (e.a ?? 1) * 255);
@@ -83,9 +78,9 @@ function l(e) {
                                 null != c && (c.value = l);
                                 break;
                             case "trigger":
-                                let d = null != l && ("boolean" == typeof l ? l : 0 !== l),
-                                    f = D(O.current, i);
-                                d && f !== l && t.viewModelInstance?.trigger(i)?.trigger(), (O.current[i] = l);
+                                let _ = null != l && ("boolean" == typeof l ? l : 0 !== l),
+                                    f = R(N.current, i);
+                                _ && f !== l && t.viewModelInstance?.trigger(i)?.trigger(), (N.current[i] = l);
                                 break;
                             case "string":
                                 let p = t.viewModelInstance?.string(i);
@@ -93,7 +88,7 @@ function l(e) {
                                 break;
                             case "image":
                                 if (null != l) {
-                                    let n = await b(l, e.signal);
+                                    let n = await C(l, e.signal);
                                     if (e.signal.aborted) return;
                                     let r = t.viewModelInstance?.image(i);
                                     null != r && (r.value = n);
@@ -115,8 +110,8 @@ function l(e) {
                     e.abort("New data binding applied - aborting previous image fetches.");
                 }
             );
-        }, [D, A, t, n, o, y, t?.viewModelInstance, v, C, b, L, M, w]),
-        { currentColor: M }
+        }, [R, m, t, n, o, I, t?.viewModelInstance, T, y, C, O]),
+        { currentColor: O }
     );
 }
 function u() {
@@ -161,43 +156,15 @@ function c(e) {
     }, [t, a, l]);
 }
 function d(e) {
-    let [t, n] = r.useState(!1),
-        [i, s] = r.useState(!1);
-    return (
-        r.useEffect(() => {
-            let t = e.current;
-            if (null == t) return;
-            let r = () => n(!0),
-                i = () => n(!1),
-                a = () => s(!0),
-                o = () => s(!1);
-            return (
-                t.addEventListener("mousedown", r, !0),
-                t.addEventListener("mouseup", i, !0),
-                t.addEventListener("mouseenter", a, !0),
-                t.addEventListener("mouseleave", o, !0),
-                () => {
-                    t?.removeEventListener("mousedown", r, !0),
-                        t?.removeEventListener("mouseup", i, !0),
-                        t?.removeEventListener("mouseenter", a, !0),
-                        t?.removeEventListener("mouseleave", o, !0);
-                }
-            );
-        }, [e]),
-        r.useMemo(() => ({ pressed: t, hovered: i }), [t, i])
-    );
+    let { value: t, theme: n, saturation: r, highContrastModeEnabled: i } = e;
+    if (null == t) return { r: 0, g: 0, b: 0, a: 0 };
+    if ("resolve" in t) {
+        let [e, s, a, o] = t.resolve({ theme: n, saturation: r, highContrastModeEnabled: i }).rgba();
+        return { r: e, g: s, b: a, a: o };
+    }
+    return { r: t.r, g: t.g, b: t.b, a: t.a };
 }
 function _(e) {
-    let { value: t, pressed: n, hovered: r, theme: i, saturation: s, highContrastModeEnabled: a } = e;
-    if (null == t) return { r: 0, g: 0, b: 0, a: 0 };
-    let o = "function" == typeof t ? t({ pressed: n, hovered: r }) : t;
-    if ("resolve" in o) {
-        let [e, t, n, r] = o.resolve({ theme: i, saturation: s, highContrastModeEnabled: a }).rgba();
-        return { r: e, g: t, b: n, a: r };
-    }
-    return { r: o.r, g: o.g, b: o.b, a: o.a };
-}
-function f(e) {
     let {
             dataBinding: t,
             dynamicDataBinding: n,

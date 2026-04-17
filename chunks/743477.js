@@ -47,6 +47,7 @@ function h(e) {
                   },
                   ref: E,
                   children: (0, r.jsx)(a.xBs, {
+                      autoPause: !0,
                       eventTargetRef: E,
                       dataBinding: { fill: "currentColor" },
                       className: a.d5l.refresh_sm,

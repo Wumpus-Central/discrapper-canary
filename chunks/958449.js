@@ -31,6 +31,7 @@ function r(e) {
             label: n,
             disabled: !r,
             iconComponent: (0, i.jsx)(l.gxO, {
+                autoPause: !0,
                 allowAnimationWhileUnfocused: !0,
                 eventTargetRef: h,
                 className: l.d5l.refresh_sm,

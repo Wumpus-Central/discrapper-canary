@@ -50,6 +50,7 @@ function p(e) {
         C = n
             ? o.npA
             : (0, r.jsx)(o.gau, {
+                  autoPause: !0,
                   allowAnimationWhileUnfocused: !0,
                   defaultViewModelInstance: t ? "CamOn" : "CamOff",
                   className: o.d5l.refresh_sm,

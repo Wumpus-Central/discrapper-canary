@@ -120,6 +120,7 @@ function w(e) {
                                     s || w
                                         ? (0, a.jsx)(r.O1p, { size: "refresh_sm", color: es, className: M })
                                         : (0, a.jsx)(r.F0F, {
+                                              autoPause: !0,
                                               allowAnimationWhileUnfocused: !0,
                                               defaultViewModelInstance: et ? "Off" : "On",
                                               dataBinding: { on: !et, fill: es },
