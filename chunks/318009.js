@@ -78,8 +78,8 @@ let A = (e) => {
               spacing: 0,
               open: !0,
               ownerDocument: L,
-              onOpenChange: (e) => {
-                  e ? O() : (b(), setTimeout(g, 0), N.current());
+              onOpenChange: (e, t, n) => {
+                  e ? O() : (b(), "outside-press" === n && setTimeout(g, 0), N.current());
               },
               overrideTargetRect: p,
               placement: (0, a.Pv)(h ?? "right", m ?? "top"),
