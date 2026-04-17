@@ -13,7 +13,7 @@ var l = s(627968),
     m = s(802958),
     x = s(190772),
     A = s(37411),
-    f = s(314668);
+    f = s(992092);
 let j = n.memo(function (e) {
     let { threadId: t, goToThread: n, showChannelName: o } = e,
         d = (0, a.bG)([u.A], () => u.A.getChannel(t)),
@@ -25,7 +25,7 @@ let j = n.memo(function (e) {
         onClick: (e) => n(d, e.shiftKey),
         onContextMenu: (e) =>
             (0, i.L3)(e, async () => {
-                let { default: e } = await Promise.all([s.e("94989"), s.e("1798")]).then(s.bind(s, 44536));
+                let { default: e } = await Promise.all([s.e("95834"), s.e("94989"), s.e("9")]).then(s.bind(s, 44536));
                 return (t) => (0, l.jsx)(e, { ...t, channel: d });
             }),
         children: [

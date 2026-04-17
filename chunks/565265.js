@@ -36,7 +36,7 @@ class p extends l.Component {
     handleContextMenu = (e) => {
         let { channel: t, guild: l } = this.props;
         (0, d.L3)(e, async () => {
-            let { default: e } = await Promise.all([n.e("17425"), n.e("2200")]).then(n.bind(n, 340968));
+            let { default: e } = await Promise.all([n.e("95834"), n.e("17425"), n.e("43156")]).then(n.bind(n, 340968));
             return (n) => (0, i.jsx)(e, { ...n, channel: t, guild: l, includeTopic: !0 });
         });
     };

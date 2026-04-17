@@ -37,9 +37,12 @@ function N(e) {
               className: r()(j.Fv, { [j.d0]: "null" === s.id }),
               onContextMenu: (e) => {
                   (0, c.L3)(e, async () => {
-                      let { default: e } = await Promise.all([n.e("21420"), n.e("75149"), n.e("17478")]).then(
-                          n.bind(n, 725756),
-                      );
+                      let { default: e } = await Promise.all([
+                          n.e("95834"),
+                          n.e("21420"),
+                          n.e("75149"),
+                          n.e("40959"),
+                      ]).then(n.bind(n, 725756));
                       return (n) => (0, i.jsx)(e, { ...n, channel: s, guild: t });
                   });
               },
@@ -115,19 +118,21 @@ let E = s.memo(function () {
                                 ? (0, c.L3)(e, async () => {
                                       let { default: e } = await Promise.all([
                                           n.e("97262"),
+                                          n.e("95834"),
                                           n.e("21420"),
                                           n.e("2381"),
                                           n.e("40394"),
-                                          n.e("57055"),
+                                          n.e("63313"),
                                       ]).then(n.bind(n, 698193));
                                       return (n) => (0, i.jsx)(e, { ...n, channel: t, guild: l });
                                   })
                                 : (0, c.L3)(e, async () => {
                                       let { default: e } = await Promise.all([
                                           n.e("97262"),
+                                          n.e("95834"),
                                           n.e("21420"),
                                           n.e("2381"),
-                                          n.e("7974"),
+                                          n.e("75781"),
                                       ]).then(n.bind(n, 370372));
                                       return (n) => (0, i.jsx)(e, { ...n, channel: t, guild: l });
                                   });

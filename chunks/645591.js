@@ -10,7 +10,6 @@ e.exports = {
     J1: "modeSelected__2ea32",
     yg: "modeLocked__2ea32",
     zc: "iconContainer__2ea32",
-    QO: "favoritesIconWrapper__2ea32",
     ow: "favoritesSuggestion__2ea32",
     ae: "basicChannelRowLink__2ea32",
     Y5: "linkTop__2ea32",
