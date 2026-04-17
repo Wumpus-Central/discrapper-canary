@@ -1,80 +1,86 @@
-i.d(e, { default: () => p });
-var a = i(627968),
-    n = i(64700),
-    s = i(158954),
-    l = i(397927),
-    r = i(384904),
-    c = i(793574),
-    _ = i(688810),
-    o = i(964404),
-    C = i(954571),
-    A = i(163437),
-    u = i(910804),
-    I = i(574475),
-    N = i(652215),
-    d = i(985018),
-    S = i(508025);
-function p(t) {
-    let { transitionState: e, application: i, storeListing: p, subscription: E, guild: O, onClose: T } = t,
-        { analyticsLocations: P } = (0, _.Ay)(c.A.APPLICATION_SUBSCRIPTION_CANCELLATION_MODAL),
+a.d(e, { default: () => S });
+var i = a(627968),
+    n = a(64700),
+    s = a(158954),
+    l = a(397927),
+    r = a(793574),
+    c = a(688810),
+    o = a(323082),
+    _ = a(964404),
+    C = a(954571),
+    A = a(163437),
+    u = a(910804),
+    d = a(574475),
+    N = a(652215),
+    I = a(985018),
+    p = a(416072);
+function S(t) {
+    let { transitionState: e, application: a, storeListing: S, subscription: E, guild: O, onClose: m } = t,
+        { analyticsLocations: T } = (0, c.Ay)(r.A.APPLICATION_SUBSCRIPTION_CANCELLATION_MODAL),
         {
-            cancelSubscription: m,
+            cancelSubscription: P,
             error: L,
             submitting: g,
         } = ((t) => {
-            let [e, i] = n.useState(!1),
-                [a, s] = n.useState(null);
+            let [e, a] = n.useState(!1),
+                [i, s] = n.useState(null);
             return {
                 cancelSubscription: async (e) => {
                     try {
-                        return i(!0), await r.M2(e, t), !0;
+                        return a(!0), await o.M2(e, t), !0;
                     } catch (t) {
                         s(t);
                     } finally {
-                        i(!1);
+                        a(!1);
                     }
                 },
-                error: a,
+                error: i,
                 submitting: e,
             };
-        })(P),
+        })(T),
         R = async () => {
-            (await m(E.id)) &&
-                (o.Ay.disableApplicationSubscriptionCancellationSurvey
-                    ? T()
+            if (await P(E.id)) {
+                try {
+                    await o.hP();
+                } catch {}
+                _.Ay.disableApplicationSubscriptionCancellationSurvey
+                    ? m()
                     : (0, l.mMO)(
                           async () => (
-                              await T(), (t) => (0, a.jsx)(I.A, { application: i, subscriptionId: E.id, ...t })
+                              await m(), (t) => (0, i.jsx)(d.A, { application: a, subscriptionId: E.id, ...t })
                           ),
-                      ));
+                      );
+            }
         };
     n.useEffect(() => {
-        C.default.track(N.HAw.CANCELLATION_FLOW_STARTED, { location_stack: P });
-    }, [P]);
-    let U = (0, A.bg)(p.skuFlags);
-    return (0, a.jsx)(s.ExpressiveModal, {
-        actions: [{ loading: g, onClick: R, text: d.intl.string(d.t.KSqyfW), variant: "critical-primary" }],
+        C.default.track(N.HAw.CANCELLATION_FLOW_STARTED, { location_stack: T });
+    }, [T]);
+    let f = (0, A.bg)(S.skuFlags);
+    return (0, i.jsx)(s.ExpressiveModal, {
+        actions: [{ loading: g, onClick: R, text: I.intl.string(I.t.KSqyfW), variant: "critical-primary" }],
         graphic: {
             type: "dynamic",
             component: l.Z86.APPLICATION_IMAGE_HEADER,
             aspectRatio: "16/9",
-            props: { application: i, className: S.Sb },
+            props: { application: a, className: p.Sb },
         },
-        title: d.intl.string(d.t.CeCHk1),
-        subtitle: U
-            ? d.intl.format(d.t.fZP9QD, { applicationName: i.name, timestamp: E.currentPeriodEnd.getTime() })
-            : d.intl.format(d.t["3LeWBF"], {
-                  guild: O?.name,
-                  applicationName: i.name,
-                  timestamp: E.currentPeriodEnd.getTime(),
-              }),
+        title: I.intl.string(I.t.CeCHk1),
+        subtitle: f
+            ? I.intl.format(I.t.fZP9QD, { applicationName: a.name, timestamp: E.currentPeriodEnd.getTime() })
+            : O?.name !== void 0
+              ? I.intl.format(I.t["3LeWBF"], {
+                    guild: O.name,
+                    applicationName: a.name,
+                    timestamp: E.currentPeriodEnd.getTime(),
+                })
+              : I.intl.format(I.t["8vum6M"], { applicationName: a.name, timestamp: E.currentPeriodEnd.getTime() }),
         transitionState: e,
-        onClose: T,
-        children: (0, a.jsxs)("div", {
-            className: S.oV,
+        onClose: m,
+        children: (0, i.jsxs)("div", {
+            className: p.oV,
             children: [
-                null != L ? (0, a.jsx)(s.wx6, { type: "critical", children: L.message }) : null,
-                (0, a.jsx)(u.iH, { applicationId: i.id, storeListingBenefits: p.benefits, className: S.iq }),
+                null != L ? (0, i.jsx)(s.wx6, { type: "critical", children: L.message }) : null,
+                (0, i.jsx)(u.iH, { applicationId: a.id, storeListingBenefits: S.benefits, className: p.iq }),
             ],
         }),
     });
