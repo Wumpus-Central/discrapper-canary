@@ -86,7 +86,7 @@ function O(e) {
                     sku: t,
                     user: n,
                     spec: j,
-                    cardStyle: a()(v.Nr, v.Q1, d),
+                    cardStyle: a()(v.Nr, d),
                     skuPreviewStyle: a()(v.ho, c),
                     skuAssetClassName: O ? u : void 0,
                     onClick: C,

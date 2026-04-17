@@ -1,7 +1,6 @@
 e.exports = {
     kL: "container__73abe",
     Nr: "card__73abe",
-    Q1: "wishlistCard__73abe",
     ho: "cardPreview__73abe",
     ML: "scaledSkuPreview__73abe",
     _P: "avatarDecorationPreview__73abe",
