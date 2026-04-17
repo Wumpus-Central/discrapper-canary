@@ -10,4 +10,6 @@ e.exports = {
     sQ: "bottom__7d80f",
     H$: "rail__7d80f",
     no: "responsive__7d80f",
+    gX: "center__7d80f",
+    PQ: "border__7d80f",
 };

@@ -9,24 +9,32 @@ var r = n(627968),
     u = n(544028),
     c = n(746002),
     d = n(219220),
-    _ = n(352017);
+    _ = n(325409);
 function f(e) {
     let { skuId: t, layer: n, data: i } = e,
         s = i?.src ?? (0, c.getCollectiblesItemAssetUrl)({ skuId: t, assetFormat: "static", assetId: n.id });
-    return null == s
-        ? null
-        : (0, r.jsx)("div", {
-              className: a()(_.S_, {
-                  [_.im]: "staple" === n.type,
-                  [_.H$]: "rail" === n.type,
-                  [_.Wm]: "front" === n.order,
-                  [_.aX]: "back" === n.order,
-                  [_.Mn]: "top" === n.anchor,
-                  [_.sQ]: "bottom" === n.anchor,
-                  [_.no]: !0 === n.responsive,
-              }),
-              children: (0, r.jsx)("img", { src: s, alt: "", "aria-hidden": !0 }),
-          });
+    if (null == s) return null;
+    if ("border" === n.type) {
+        let e = { "--custom-profile-frame-layer-src": `url(${s})` };
+        return (0, r.jsx)("div", {
+            role: "img",
+            className: a()(_.S_, _.PQ, { [_.Wm]: "front" === n.order, [_.aX]: "back" === n.order }),
+            style: e,
+        });
+    }
+    return (0, r.jsx)("div", {
+        className: a()(_.S_, {
+            [_.im]: "staple" === n.type,
+            [_.H$]: "rail" === n.type,
+            [_.Wm]: "front" === n.order,
+            [_.aX]: "back" === n.order,
+            [_.Mn]: "top" === n.anchor,
+            [_.sQ]: "bottom" === n.anchor,
+            [_.gX]: "center" === n.anchor,
+            [_.no]: !0 === n.responsive,
+        }),
+        children: (0, r.jsx)("img", { src: s, alt: "", "aria-hidden": !0 }),
+    });
 }
 function p(e) {
     let { frame: t, layout: n } = e,
