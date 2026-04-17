@@ -13,8 +13,8 @@ var r = n(205693),
 let f = 1e4,
     p = 1e4,
     h = 15e3,
-    m = 0.5,
-    E = 0.8;
+    m = 0.035,
+    E = 0.151;
 class g extends i.A {
     timeline;
     scheduledClipTimeout = null;
