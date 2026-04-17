@@ -12,7 +12,7 @@ n.d(t, {
     Ky: () => w,
     LD: () => M,
     M2: () => k,
-    MM: () => x,
+    MM: () => P,
     N: () => W,
     Ps: () => y,
     QP: () => F,
@@ -41,7 +41,7 @@ n.d(t, {
     r6: () => B,
     re: () => K,
     tc: () => Y,
-    tn: () => P,
+    tn: () => x,
     u1: () => E.u1,
     u6: () => E.u6,
     uK: () => H,
@@ -187,6 +187,7 @@ async function b() {
     }
 }
 async function D() {
+    a.h.dispatch({ type: "BILLING_NITRO_AFFINITY_FETCH_START" });
     try {
         let e = await s.Bo.get({ url: A.Rsh.BILLING_NITRO_AFFINITY, rejectWithError: !0 });
         a.h.dispatch({ type: "BILLING_NITRO_AFFINITY_FETCH_SUCCEEDED", res: e.body.map((e) => new c.A(e)) });
@@ -278,7 +279,7 @@ async function w(e) {
         )
             throw e;
         if (!t.body.payment_id) throw (0, g.i0)("payment id cannot be null on redirected confirmations.");
-        return x(t.body, n);
+        return P(t.body, n);
     }
 }
 async function M(e, t, n, r, i) {
@@ -310,13 +311,13 @@ async function M(e, t, n, r, i) {
         if (e.code !== l.tG.CONFIRMATION_REQUIRED)
             throw (a.h.dispatch({ type: "BILLING_SUBSCRIPTION_UPDATE_FAIL", error: e }), e);
         if (!t.body.payment_id) throw (0, g.i0)("payment id cannot be null on redirected confirmations.");
-        return x(t.body, n);
+        return P(t.body, n);
     }
 }
-function x(e, t) {
+function P(e, t) {
     return null != t && T.Kc.has(t.type) ? (0, E.$c)(e.adyen_redirect_url, t) : (0, E.dr)(e.payment_id, t);
 }
-async function P(e) {
+async function x(e) {
     let t = await R(e);
     if (t?.body == null) throw (0, g.i0)("could not fetch payment");
     let n = u.Ay.createFromServer(t.body.payment_source);
@@ -391,7 +392,7 @@ async function G(e, t, n, r, i, u, c) {
         if (e.code !== l.tG.CONFIRMATION_REQUIRED)
             throw (a.h.dispatch({ type: "BILLING_SUBSCRIPTION_UPDATE_FAIL", error: e }), e);
         if (!n.body.payment_id) throw (0, g.i0)("payment id cannot be null on redirected confirmations.");
-        return x(n.body, t.paymentSource);
+        return P(n.body, t.paymentSource);
     }
 }
 function F(e, t, n, r, i) {

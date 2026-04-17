@@ -9,8 +9,8 @@ var i = n(627968),
     c = n(775602),
     u = n(793574),
     m = n(688810),
-    g = n(560138),
-    _ = n(526292),
+    g = n(526292),
+    _ = n(848245),
     x = n(236834),
     h = n(549996),
     A = n(371764),
@@ -34,11 +34,11 @@ let y = s.memo(
             L = null != R,
             P = (0, o.bG)([c.A], () => c.A.useReducedMotion),
             { visibilityPercentageRef: D, visibilityPercentage: G } = (0, C.U)(!P),
-            M = (0, o.bG)([g.A], () => g.A.affinities),
+            M = (0, _.b)(),
             U = !L && M.length > 0,
             k = (0, h.c)(a.C.MARKETING_PAGE_BANNER),
             w = null != k && "marketingPageBanner" === k.properties.properties.oneofKind,
-            V = (0, _.ar)() && !w;
+            V = (0, g.ar)() && !w;
         return (0, i.jsx)(m.f5, {
             value: y,
             children: (0, i.jsx)("div", {
