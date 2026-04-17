@@ -1,12 +1,13 @@
-r.r(t), r.d(t, { playgroundConfig: () => s, videoQuestCollection: () => i });
-var o = r(397927),
-    a = r(104473),
-    n = r(758889);
-let i = {
+a.r(t), a.d(t, { playgroundConfig: () => s, videoQuestCollection: () => l });
+var n = a(397927),
+    o = a(104473),
+    r = a(758889),
+    i = a(762168);
+let l = {
         id: "video-quest",
-        name: "Video Quest",
-        groups: [r(762168).cs, n.Vy, a.AZ],
-        tags: ["Video Quest", "Quests", "Video Player"],
-        IconComponent: o.udU,
+        name: "Video Player",
+        groups: [o.AZ, r.Vy, i.cs],
+        tags: ["Video Player", "Quests"],
+        IconComponent: n.udU,
     },
-    s = { playgroundBaseUrl: "video-quest", collections: [i] };
+    s = { playgroundBaseUrl: "video-quest", collections: [l] };

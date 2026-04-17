@@ -15,8 +15,8 @@ var r = n(627968),
     S = n(579473),
     p = n(851936),
     v = n(792620),
-    g = n(753386),
-    h = n(795068),
+    h = n(753386),
+    g = n(795068),
     A = n(179615),
     C = n(576199),
     x = n(758423),
@@ -45,7 +45,7 @@ function k(e) {
             videoSessionId: j,
             setIsFullscreenEnabled: B,
             onClose: F,
-        } = s.useContext(h.a),
+        } = s.useContext(g.a),
         Y = (0, s.useRef)(null),
         H = (0, v.Yh)(Q),
         K = Q.userStatus?.completedAt != null,
@@ -60,7 +60,7 @@ function k(e) {
         ee = (0, i.g)(K, q, H.progressSeconds),
         [et] = s.useState(() => d.A.getEffectiveConnectionSpeed()),
         en = Math.max(q.maxTimestampSec, H.progressSeconds),
-        er = K ? void 0 : (0, g.vd)(en, q.duration),
+        er = K ? void 0 : (0, h.vd)(en, q.duration),
         { videoAsset: es, videoAssetType: ea } = (0, x.A)(Y, et, ee, w, !1),
         el = s.useCallback(
             (e) => {
@@ -90,8 +90,8 @@ function k(e) {
             trackQuestVideoFocusChange: eS,
             trackQuestVideoBufferingStarted: ep,
             trackQuestVideoBufferingEnded: ev,
-            trackQuestVideoTimeToFirstFrame: eg,
-            trackQuestVideoFullscreenChanged: eh,
+            trackQuestVideoTimeToFirstFrame: eh,
+            trackQuestVideoFullscreenChanged: eg,
             trackQuestVideoError: eA,
             trackQuestVideoVolumeChanged: eC,
             trackQuestContentClick: ex,
@@ -157,15 +157,15 @@ function k(e) {
         ),
         ew = s.useCallback(
             (e) => {
-                eL(e), eg(e);
+                eL(e), eh(e);
             },
-            [eL, eg],
+            [eL, eh],
         ),
         eU = s.useCallback(
             (e) => {
-                B(e), eh(e);
+                B(e), eg(e);
             },
-            [B, eh],
+            [B, eg],
         ),
         eQ = s.useCallback(
             (e) => {
@@ -180,7 +180,7 @@ function k(e) {
                 (e >= ec.current || s) &&
                     (s && (ed.current = !0),
                     (ec.current = e + y.aA + Math.random() * y.A6),
-                    K || Q.userStatus?.enrolledAt == null || (0, g.zv)(Q, e),
+                    K || Q.userStatus?.enrolledAt == null || (0, h.zv)(Q, e),
                     eT());
             },
             [Q, H.taskType, t, K, $, eT, W, n],
@@ -194,7 +194,7 @@ function k(e) {
         eF = s.useCallback(() => {
             if (null != Y.current) {
                 let e = Y.current.duration;
-                K || Q.userStatus?.enrolledAt == null || (0, g.zv)(Q, e + 1), W(Q.id, e, e);
+                K || Q.userStatus?.enrolledAt == null || (0, h.zv)(Q, e + 1), W(Q.id, e, e);
             }
         }, [Q, K, W]),
         eY = s.useCallback(
@@ -227,13 +227,11 @@ function k(e) {
         );
     return (0, r.jsx)(o.Ft, {
         ref: Y,
-        targetTimeSec: t,
         parentTransitionState: M,
-        onOptimisticProgressUpdate: n,
         autoplay: k,
         progressClassName: G ? R.q : R.c,
         persistTimeline: !0,
-        persistGrabber: !1,
+        persistPlayhead: !1,
         pauseOnLostVisibility: !0,
         autoFocus: N,
         getPlaybackBlockedMessage: el,
@@ -265,6 +263,7 @@ function k(e) {
         onError: eY,
         onHlsInstance: eu,
         transcriptText: eI ?? void 0,
+        transcriptClassName: L.f,
         renderPersistentOverlay: eK,
         renderEndScreen: eG,
         timelineIndicatorConfig: eb,

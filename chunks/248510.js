@@ -10,7 +10,7 @@ var a = l(627968),
     u = l(287809),
     p = l(403362),
     m = l(784018),
-    h = l(38445);
+    h = l(94269);
 let x = {
     title: "Clips",
     stories: [
@@ -47,8 +47,6 @@ let x = {
                                 orientation: l,
                                 renderOverlay: _,
                                 parentTransitionState: o.ip4.ENTERED,
-                                targetTimeSec: 1 / 0,
-                                onOptimisticProgressUpdate: () => {},
                                 performanceClockStartTime: 0,
                             }),
                         }),
