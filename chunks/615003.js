@@ -280,7 +280,7 @@ let et = new Set([o.M.PREMIUM_WISHLIST_COACHMARK]),
             locationState: ea,
             onClick: () => {
                 if (ta) {
-                    let e = new URLSearchParams({ [j.W]: D.LOGITECH_3PP_CARD_ID }).toString();
+                    let e = new URLSearchParams({ [j.WU]: D.LOGITECH_3PP_CARD_ID }).toString();
                     (0, I.pX)(el.includes("?") ? `${el}&${e}` : `${el}?${e}`);
                 }
                 ts();

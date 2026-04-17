@@ -142,7 +142,7 @@ function q(e) {
     t.log(`Showing survey ${n.id}`), (0, P.m)({ questId: e.id, survey: n });
 }
 function Z() {
-    return Promise.all([n.e("57174"), n.e("92868"), n.e("91652"), n.e("29636"), n.e("7634"), n.e("97905")]).then(
+    return Promise.all([n.e("57174"), n.e("92868"), n.e("91652"), n.e("19482"), n.e("7634"), n.e("57686")]).then(
         n.bind(n, 201257),
     );
 }
@@ -249,9 +249,7 @@ function et(e) {
 }
 function en(e, t) {
     (0, o.mMO)(async () => {
-        let { default: i } = await Promise.all([n.e("21393"), n.e("27296"), n.e("6782"), n.e("32661")]).then(
-            n.bind(n, 50292),
-        );
+        let { default: i } = await Promise.all([n.e("56403"), n.e("84560"), n.e("3048")]).then(n.bind(n, 50292));
         return (n) => (0, r.jsx)(i, { ...n, multiplier: e, eligibleToReceivePremiumRewards: t });
     });
 }

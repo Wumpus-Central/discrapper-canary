@@ -1,5 +1,5 @@
 n.d(t, {
-    Am: () => O,
+    Am: () => k,
     Ck: () => F,
     G8: () => G,
     Ge: () => P,
@@ -7,7 +7,7 @@ n.d(t, {
     I: () => j,
     Jo: () => R,
     T0: () => N,
-    UY: () => k,
+    UY: () => O,
     U_: () => H,
     VL: () => M,
     Yq: () => w,
@@ -120,13 +120,14 @@ function M(e, t, l, o) {
                     async () => {
                         let { default: e } = await Promise.all([
                             n.e("3795"),
-                            n.e("21393"),
+                            n.e("56403"),
+                            n.e("84560"),
                             n.e("91139"),
-                            n.e("532"),
+                            n.e("74507"),
                             n.e("64879"),
-                            n.e("95207"),
+                            n.e("15135"),
                             n.e("1636"),
-                            n.e("75733"),
+                            n.e("65689"),
                         ]).then(n.bind(n, 547983));
                         return (n) =>
                             (0, i.jsx)(e, { ...n, message: s, channel: a, mediaItem: t, shouldHideMediaOptions: o });
@@ -147,7 +148,7 @@ function D(e, t) {
         [e, t],
     );
 }
-function k(e, t, n) {
+function O(e, t, n) {
     return a.useCallback(
         (i) => {
             let a = p.default.getUser(e),
@@ -159,7 +160,7 @@ function k(e, t, n) {
         [e, t, n],
     );
 }
-function O(e, t) {
+function k(e, t) {
     return a.useCallback(
         (n) => {
             let i = p.default.getUser(e),

@@ -88,10 +88,11 @@ class d extends a.G {
                 kind: "enum",
                 T: () => ["discord_protos.premium_marketing.v1.ButtonAction", l, "BUTTON_ACTION_"],
             },
+            { no: 3, name: "deeplink_section", kind: "scalar", T: 9 },
         ]);
     }
     create(e) {
-        let t = { copy: "", buttonAction: 0 };
+        let t = { copy: "", buttonAction: 0, deeplinkSection: "" };
         return (
             globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
@@ -110,6 +111,9 @@ class d extends a.G {
                 case 2:
                     s.buttonAction = e.int32();
                     break;
+                case 3:
+                    s.deeplinkSection = e.string();
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -122,7 +126,8 @@ class d extends a.G {
     }
     internalBinaryWrite(e, t, n) {
         "" !== e.copy && t.tag(1, r.O0.LengthDelimited).string(e.copy),
-            0 !== e.buttonAction && t.tag(2, r.O0.Varint).int32(e.buttonAction);
+            0 !== e.buttonAction && t.tag(2, r.O0.Varint).int32(e.buttonAction),
+            "" !== e.deeplinkSection && t.tag(3, r.O0.LengthDelimited).string(e.deeplinkSection);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
@@ -280,8 +285,8 @@ class f extends a.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let h = new f();
-class p extends a.G {
+let p = new f();
+class h extends a.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.Subtitle", [
             { no: 1, name: "link", kind: "scalar", T: 9 },
@@ -330,7 +335,7 @@ class p extends a.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let m = new p();
+let m = new h();
 class E extends a.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.Disclaimer", [
@@ -393,7 +398,7 @@ class A extends a.G {
             { no: 11, name: "modal_top_pill", kind: "scalar", T: 9 },
             { no: 12, name: "body", kind: "scalar", T: 9 },
             { no: 13, name: "hero_art_video_subtitles", kind: "message", repeat: 1, T: () => m },
-            { no: 14, name: "storage", kind: "message", T: () => h },
+            { no: 14, name: "storage", kind: "message", T: () => p },
             { no: 15, name: "disclaimer", kind: "message", T: () => g },
             { no: 18, name: "help_article", kind: "message", T: () => o.O },
         ]);
@@ -465,7 +470,7 @@ class A extends a.G {
                     s.heroArtVideoSubtitles.push(m.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 14:
-                    s.storage = h.internalBinaryRead(e, e.uint32(), n, s.storage);
+                    s.storage = p.internalBinaryRead(e, e.uint32(), n, s.storage);
                     break;
                 case 15:
                     s.disclaimer = g.internalBinaryRead(e, e.uint32(), n, s.disclaimer);
@@ -499,7 +504,7 @@ class A extends a.G {
             "" !== e.body && t.tag(12, r.O0.LengthDelimited).string(e.body);
         for (let i = 0; i < e.heroArtVideoSubtitles.length; i++)
             m.internalBinaryWrite(e.heroArtVideoSubtitles[i], t.tag(13, r.O0.LengthDelimited).fork(), n).join();
-        e.storage && h.internalBinaryWrite(e.storage, t.tag(14, r.O0.LengthDelimited).fork(), n).join(),
+        e.storage && p.internalBinaryWrite(e.storage, t.tag(14, r.O0.LengthDelimited).fork(), n).join(),
             e.disclaimer && g.internalBinaryWrite(e.disclaimer, t.tag(15, r.O0.LengthDelimited).fork(), n).join(),
             e.helpArticle && o.O.internalBinaryWrite(e.helpArticle, t.tag(18, r.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;

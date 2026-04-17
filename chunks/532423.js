@@ -21,7 +21,7 @@ function _() {
             o.default.track(h.HAw.APP_NOTICE_CLOSED, { notice_type: h.kqX.PREMIUM_MARKETING_NAGBAR }), _();
         }, [_]);
     if (null == t) return null;
-    let g = (0, c.h)({ buttonAction: t.ctaAction, onClose: _ });
+    let p = (0, c.h)({ buttonAction: t.ctaAction, deeplinkSection: t.deeplinkSection, onClose: _ });
     return (0, i.jsxs)(u.T0, {
         onClick: m,
         children: [
@@ -33,7 +33,7 @@ function _() {
                         o.default.track(h.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
                             notice_type: h.kqX.PREMIUM_MARKETING_NAGBAR,
                         }),
-                            g();
+                            p();
                     },
                 }),
         ],

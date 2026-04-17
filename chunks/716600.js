@@ -2,15 +2,15 @@ n.d(t, { t: () => _ });
 var i = n(627968);
 n(64700);
 var l = n(934551),
-    r = n(232582),
-    a = n(732955),
+    a = n(232582),
+    r = n(732955),
     s = n(397927),
     o = n(954571),
     d = n(637706),
     c = n(498470),
     u = n(652215),
     A = n(985018),
-    h = n(654513);
+    h = n(870433);
 function _(e) {
     let {
             componentId: t,
@@ -24,14 +24,20 @@ function _(e) {
         I = `AnnouncementModalVariant1_${t}`,
         { onClose: f } = m,
         C = _.button?.copy ?? A.intl.string(A.t.YScQSF),
-        T = _.button?.buttonAction === r.dz.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button",
-        S = (0, c.h)({ buttonAction: _.button?.buttonAction, analyticsLocations: g, analyticsLocation: p, onClose: f }),
-        N = (0, d.C)(_.helpArticle, _.helpArticleId),
+        T = _.button?.buttonAction === a.dz.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button",
+        N = (0, c.h)({
+            buttonAction: _.button?.buttonAction,
+            deeplinkSection: _.button?.deeplinkSection,
+            analyticsLocations: g,
+            analyticsLocation: p,
+            onClose: f,
+        }),
+        S = (0, d.C)(_.helpArticle, _.helpArticleId),
         x =
-            null != N
+            null != S
                 ? () =>
                       (0, i.jsxs)(i.Fragment, {
-                          children: ["\xa0", (0, i.jsx)(s.MzZ, { className: h.$T, href: N.url, children: N.linkText })],
+                          children: ["\xa0", (0, i.jsx)(s.MzZ, { className: h.$T, href: S.url, children: S.linkText })],
                       })
                 : void 0,
         v = (0, d.C)(_.disclaimer?.disclaimerHelpArticle, ""),
@@ -67,7 +73,7 @@ function _(e) {
             changeLogId: I,
             button: () => {
                 let e = Date.now();
-                return (0, i.jsx)(a.$nd, {
+                return (0, i.jsx)(r.$nd, {
                     variant: "expressive",
                     size: "md",
                     onClick: () => {
@@ -77,7 +83,7 @@ function _(e) {
                             seconds_open: Math.round((Date.now() - e) / 1e3),
                             target: I,
                         }),
-                            S();
+                            N();
                     },
                     text: C,
                     icon: l.NitroWheelIcon,

@@ -16,10 +16,11 @@ class l extends a.G {
                 kind: "enum",
                 T: () => ["discord_protos.premium_marketing.v1.ButtonAction", o.dz, "BUTTON_ACTION_"],
             },
+            { no: 4, name: "deeplink_section", kind: "scalar", T: 9 },
         ]);
     }
     create(e) {
-        let t = { body: "", ctaLabel: "", ctaAction: 0 };
+        let t = { body: "", ctaLabel: "", ctaAction: 0, deeplinkSection: "" };
         return (
             globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
@@ -41,6 +42,9 @@ class l extends a.G {
                 case 3:
                     s.ctaAction = e.int32();
                     break;
+                case 4:
+                    s.deeplinkSection = e.string();
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -54,7 +58,8 @@ class l extends a.G {
     internalBinaryWrite(e, t, n) {
         "" !== e.body && t.tag(1, r.O0.LengthDelimited).string(e.body),
             "" !== e.ctaLabel && t.tag(2, r.O0.LengthDelimited).string(e.ctaLabel),
-            0 !== e.ctaAction && t.tag(3, r.O0.Varint).int32(e.ctaAction);
+            0 !== e.ctaAction && t.tag(3, r.O0.Varint).int32(e.ctaAction),
+            "" !== e.deeplinkSection && t.tag(4, r.O0.LengthDelimited).string(e.deeplinkSection);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
