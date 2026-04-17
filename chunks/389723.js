@@ -22,7 +22,15 @@ var r = n(627968),
     S = n(930856);
 let y = { keys: ["label"] };
 function v(e) {
-    let { children: t, isCollapsible: n = !1, maxOptionsVisible: s = 5, isOpen: a, setIsOpen: l, options: u, ...c } = e,
+    let {
+            children: t,
+            isCollapsible: n = !1,
+            maxOptionsVisible: s = 5,
+            isOpen: a = !0,
+            setIsOpen: l,
+            options: u,
+            ...c
+        } = e,
         {
             selectionMode: d,
             disabled: _,
