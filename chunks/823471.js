@@ -1,133 +1,152 @@
-n.d(t, { A: () => R });
+n.d(t, { A: () => M });
 var i = n(627968),
     l = n(64700),
-    s = n(397927),
-    a = n(182061),
-    r = n(886393),
-    o = n(307623),
-    c = n(660273),
-    d = n(707792),
-    u = n(41402),
-    h = n(271456),
-    A = n(200273),
-    _ = n(565846),
-    m = n(57907),
-    g = n(375500),
-    p = n(707653),
-    f = n(50268),
-    x = n(584682),
-    E = n(58736),
-    I = n(378570),
-    C = n(203982),
-    N = n(170428),
-    T = n(933057),
-    S = n(747926),
-    b = n(652215),
-    y = n(985018);
-function v(e) {
+    s = n(111956),
+    a = n.n(s),
+    r = n(397927),
+    o = n(163126),
+    d = n(182061),
+    c = n(886393),
+    u = n(307623),
+    h = n(660273),
+    A = n(707792),
+    _ = n(41402),
+    m = n(271456),
+    p = n(200273),
+    g = n(565846),
+    f = n(57907),
+    E = n(375500),
+    x = n(707653),
+    I = n(50268),
+    C = n(584682),
+    N = n(58736),
+    T = n(378570),
+    S = n(203982),
+    b = n(170428),
+    y = n(933057),
+    v = n(747926),
+    R = n(652215),
+    j = n(985018);
+function O(e) {
     let { channel: t } = e,
-        [n, a] = l.useState(!1),
-        r = l.useRef(null);
+        [n, s] = l.useState(!1),
+        a = l.useRef(null);
     function o() {
-        a((e) => !e);
+        s((e) => !e);
     }
-    let c = y.intl.string(y.t["UKOtz+"]);
-    return (0, i.jsx)(s.YNO, {
-        targetElementRef: r,
+    let d = j.intl.string(j.t["UKOtz+"]);
+    return (0, i.jsx)(r.YNO, {
+        targetElementRef: a,
         shouldShow: n,
-        animation: s.YNO.Animation.NONE,
+        animation: r.YNO.Animation.NONE,
         position: "bottom",
         align: "right",
         autoInvert: !1,
-        onRequestClose: () => a(!1),
+        onRequestClose: () => s(!1),
         renderPopout: function (e) {
-            return (0, i.jsx)(j, { ...e, channel: t });
+            return (0, i.jsx)(L, { ...e, channel: t });
         },
         children: (e, t) => {
             let { isShown: n } = t;
-            return (0, i.jsx)(E.Ay.Icon, {
+            return (0, i.jsx)(N.Ay.Icon, {
                 ...e,
-                ref: r,
+                ref: a,
                 onClick: o,
-                tooltip: n ? null : c,
-                icon: s.jNK,
-                "aria-label": c,
+                tooltip: n ? null : d,
+                icon: r.jNK,
+                "aria-label": d,
                 selected: n,
             });
         },
     });
 }
-function j(e) {
+function L(e) {
     let { channel: t, closePopout: n, onSelect: l } = e,
-        x = (0, c.A)(t, "Sidebar Overflow"),
-        E = (0, u.A)(t),
-        N = (0, m.A)(t),
-        T = (0, g.A)(t),
-        S = (0, a.A)(t),
-        v = (0, d.A)(t),
-        j = (0, _.A)(t.id),
-        R = (0, A.A)(t),
-        O = (0, o.A)(t),
-        L = (0, r.A)(t),
-        M = (0, f.A)({ id: t.id, label: y.intl.string(y.t.DQ797g) }),
-        D = (0, p.A)(t),
-        U = (0, h.A)(t);
-    function G() {
-        (0, I.iN)(t.id);
+        s = (0, h.A)(t, "Sidebar Overflow"),
+        C = (0, _.A)(t),
+        N = (0, f.A)(t),
+        b = (0, E.A)(t),
+        y = (0, d.A)(t),
+        v = (0, A.A)(t),
+        O = (0, g.A)(t.id),
+        L = (0, p.A)(t),
+        M = (0, u.A)(t),
+        D = (0, c.A)(t),
+        U = (0, I.A)({ id: t.id, label: j.intl.string(j.t.DQ797g) }),
+        G = (0, x.A)(t),
+        P = (0, m.A)(t),
+        k = (0, o.$)(1e3);
+    function w() {
+        (0, T.iN)(t.id);
     }
-    return (0, i.jsxs)(s.W1t, {
+    function B(e) {
+        let n = a()(() => {
+                S._.unsubscribe(R.jej.CHANNEL_TEXT_AREA_FOCUSED, i), e();
+            }, 250),
+            i = (e) => {
+                e.channelId === t.id && n();
+            };
+        S._.subscribe(R.jej.CHANNEL_TEXT_AREA_FOCUSED, i),
+            k.addEventListener("abort", () => {
+                S._.unsubscribe(R.jej.CHANNEL_TEXT_AREA_FOCUSED, i);
+            });
+    }
+    return (0, i.jsxs)(r.W1t, {
         "data-menu-migrated": !0,
         navId: "thread-context",
         onClose: n,
-        "aria-label": y.intl.string(y.t["1NBjqb"]),
+        "aria-label": j.intl.string(j.t["1NBjqb"]),
         onSelect: l,
         children: [
-            (0, i.jsxs)(s.rXV, {
-                children: [x, (0, i.jsx)(s.Drp, { id: "open", label: y.intl.string(y.t.IxVmZi), action: G })],
+            (0, i.jsxs)(r.rXV, {
+                children: [s, (0, i.jsx)(r.Drp, { id: "open", label: j.intl.string(j.t.IxVmZi), action: w })],
             }),
-            (0, i.jsxs)(s.rXV, { children: [N, T] }),
-            (0, i.jsxs)(s.rXV, { children: [R, E, j, U] }),
-            (0, i.jsxs)(s.rXV, {
+            (0, i.jsxs)(r.rXV, { children: [N, b] }),
+            (0, i.jsxs)(r.rXV, { children: [L, C, O, P] }),
+            (0, i.jsxs)(r.rXV, {
                 children: [
-                    (0, i.jsx)(s.Drp, {
+                    (0, i.jsx)(r.Drp, {
                         id: "search",
-                        label: y.intl.string(y.t["5h0QOP"]),
-                        icon: s.tfB,
-                        trailingIndicator: { type: "icon", icon: s.tfB },
+                        label: j.intl.string(j.t["5h0QOP"]),
+                        icon: r.tfB,
+                        trailingIndicator: { type: "icon", icon: r.tfB },
                         action: function () {
-                            G(),
-                                setTimeout(() => {
-                                    C._.dispatch(b.jej.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
-                                }, 2e3);
+                            B(() => {
+                                S._.dispatch(R.jej.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
+                            }),
+                                w();
                         },
                     }),
-                    (0, i.jsx)(s.Drp, {
+                    (0, i.jsx)(r.Drp, {
                         id: "pins",
-                        label: y.intl.string(y.t["2BSH7n"]),
-                        icon: s.tfB,
-                        trailingIndicator: { type: "icon", icon: s.tfB },
+                        label: j.intl.string(j.t["2BSH7n"]),
+                        icon: r.tfB,
+                        trailingIndicator: { type: "icon", icon: r.tfB },
                         action: function () {
-                            G(), C._.dispatch(b.jej.TOGGLE_CHANNEL_PINS);
+                            B(() => {
+                                S._.dispatch(R.jej.TOGGLE_CHANNEL_PINS);
+                            }),
+                                w();
                         },
                     }),
                 ],
             }),
-            (0, i.jsxs)(s.rXV, { children: [D, S, v, O] }),
-            (0, i.jsxs)(s.rXV, { children: [L, M] }),
+            (0, i.jsxs)(r.rXV, { children: [G, y, v, M] }),
+            (0, i.jsxs)(r.rXV, { children: [D, U] }),
         ],
     });
 }
-function R(e) {
+function M(e) {
     let { channel: t, baseChannelId: n } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            t.isForumPost() ? null : (0, i.jsx)(T.A, { channel: t }),
-            t.isModeratorReportChannel() ? (0, i.jsx)(N.A, { channel: t }) : null,
-            (0, i.jsx)(v, { channel: t }),
-            (0, i.jsx)(E.Ay.Icon, {
-                icon: s.PGe,
-                tooltip: y.intl.string(y.t.cpT0Cq),
-                onClick: () => (0, S.xu)((0, x.j)(t), n ?? t.parent_id),
+            t.isForumPost() ? null : (0, i.jsx)(y.A, { channel: t }),
+            t.isModeratorReportChannel() ? (0, i.jsx)(b.A, { channel: t }) : null,
+            (0, i.jsx)(O, { channel: t }),
+            (0, i.jsx)(N.Ay.Icon, {
+                icon: r.PGe,
+                tooltip: j.intl.string(j.t.cpT0Cq),
+                onClick: () => (0, v.xu)((0, C.j)(t), n ?? t.parent_id),
             }),
         ],
     });
