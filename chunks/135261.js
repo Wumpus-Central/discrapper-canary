@@ -12,7 +12,7 @@ var r = n(627968),
     _ = n(186306),
     f = n(339871),
     p = n(711371),
-    h = n(574377);
+    h = n(128934);
 function m(e) {
     let { editorRef: t, options: n, iconClassName: i, dividerClassName: s } = e,
         o = t.current?.getSlateEditor();
@@ -138,11 +138,11 @@ let E = i.forwardRef(function (e, t) {
             return { x: h + (m - h) / 2, y: Math.max(E, Math.min(u.y, a.y)) };
         }, [s, _, n]),
         [v, N] = i.useState(0),
-        [C, b] = i.useState(0);
+        [C, R] = i.useState(0);
     return (i.useLayoutEffect(() => {
         if (null == S || null == y || null == u.current) return;
         let e = u.current.getBoundingClientRect();
-        b(e.width / 2), N(e.height + 12);
+        R(e.width / 2), N(e.height + 12);
     }, [S, y]),
     null == S || null == y || null == n.current?.getSlateEditor())
         ? null
@@ -172,7 +172,9 @@ function g(e) {
         let [e, r] = p.ZF.edges(t.selection);
         a = null != (0, f.Sx)(t, e, r).before[n];
     }
-    return (0, r.jsx)("button", { "aria-pressed": a, className: h.x6, onClick: s, children: i });
+    return (0, r.jsx)(u.vN3, {
+        children: (0, r.jsx)("button", { "aria-pressed": a, className: h.x6, onClick: s, children: i }),
+    });
 }
 function A(e) {
     let { blockType: t, slateEditor: n, children: i } = e,
@@ -181,5 +183,7 @@ function A(e) {
         },
         a = null != n ? p.VW.getCurrentBlock(n) : null,
         o = null != a && p.AS.isType(a[0], t);
-    return (0, r.jsx)("button", { "aria-pressed": o, className: h.x6, onClick: s, children: i });
+    return (0, r.jsx)(u.vN3, {
+        children: (0, r.jsx)("button", { "aria-pressed": o, className: h.x6, onClick: s, children: i }),
+    });
 }
