@@ -1,77 +1,78 @@
-n.d(t, { A: () => G });
+n.d(t, { A: () => U });
 var i = n(627968);
 n(64700);
 var s = n(284009),
     l = n.n(s),
-    a = n(311907),
-    r = n(990078),
+    r = n(311907),
+    a = n(990078),
     o = n(397927),
     d = n(81400),
     c = n(757036),
     u = n(919395),
-    _ = n(124064),
-    m = n(200790),
-    g = n(230084),
-    A = n(180020),
-    x = n(431982),
-    h = n(730588),
+    m = n(124064),
+    g = n(200790),
+    _ = n(230084),
+    x = n(180020),
+    h = n(431982),
+    A = n(730588),
     p = n(164599),
-    T = n(63675),
-    E = n(546849),
-    S = n(101058),
-    f = n(84540),
+    T = n(669195),
+    f = n(63675),
+    S = n(546849),
+    E = n(101058),
+    b = n(84540),
     C = n(836602),
-    b = n(622543),
+    v = n(622543),
     N = n(696451),
     I = n(71393),
-    v = n(287809),
-    j = n(927578),
-    y = n(427262),
+    j = n(287809),
+    y = n(927578),
+    O = n(427262),
     R = n(684732),
-    O = n(168917),
-    L = n(746706),
+    L = n(168917),
+    P = n(746706),
     D = n(788868),
-    P = n(985018),
-    M = n(745496);
-function G() {
-    let e = (0, a.bG)([v.default], () => {
-            let e = v.default.getCurrentUser();
+    G = n(985018),
+    M = n(887267);
+function U() {
+    let e = (0, r.bG)([j.default], () => {
+            let e = j.default.getCurrentUser();
             return l()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e;
         }),
         t = (0, c.L)(D.PremiumTypes.TIER_2),
-        n = (0, a.bG)([C.A, I.A], () => I.A.getGuild(C.A.selectedGuildId));
+        n = (0, r.bG)([C.A, I.A], () => I.A.getGuild(C.A.selectedGuildId));
     l()(null != n, "guild should not be null");
     let {
             pendingAvatar: s,
-            pendingNickname: G,
-            pendingBanner: U,
-            pendingBio: k,
+            pendingNickname: U,
+            pendingBanner: k,
+            pendingBio: w,
             pendingPronouns: V,
-            pendingThemeColors: w,
-            errors: B,
-        } = (0, a.cf)([C.A], () => ({ ...C.A.getPendingChanges(n.id), errors: C.A.getErrors(n.id) })),
-        H = (0, S.V7)({ userId: e.id, image: s }),
-        F = (0, d.EC)(n.id),
-        Y = (0, a.bG)([N.Ay], () => (null == n.id ? null : N.Ay.getMember(n.id, e.id))),
-        z = (0, a.bG)([b.A], () => b.A.getGuildMemberProfile(e.id, n.id)),
-        X = j.Ay.canUsePremiumProfileCustomization(e),
+            pendingThemeColors: B,
+            errors: F,
+        } = (0, r.cf)([C.A], () => ({ ...C.A.getPendingChanges(n.id), errors: C.A.getErrors(n.id) })),
+        H = (0, E.V7)({ userId: e.id, image: s }),
+        z = (0, d.EC)(n.id),
+        Y = (0, r.bG)([N.Ay], () => (null == n.id ? null : N.Ay.getMember(n.id, e.id))),
+        X = (0, r.bG)([v.A], () => v.A.getGuildMemberProfile(e.id, n.id)),
+        K = y.Ay.canUsePremiumProfileCustomization(e),
         W = (0, u.z5)(s, Y?.avatar),
-        K = (0, u.Ac)(U, z?.banner),
-        Z = (0, R.l)(w, z?.themeColors),
-        q = z?.bio ?? "",
-        J = z?.pronouns ?? "",
-        Q = (e, t, n) => {
+        Z = (0, u.Ac)(k, X?.banner),
+        q = (0, R.l)(B, X?.themeColors),
+        Q = X?.bio ?? "",
+        J = X?.pronouns ?? "",
+        $ = (e, t, n) => {
             n(e ?? (null != t ? null : void 0));
         };
     return (0, i.jsxs)("div", {
         className: M.Q,
         children: [
             (0, i.jsx)(
-                O.A,
+                L.A,
                 {
-                    errors: B?.nick ?? F?.nick,
-                    username: y.Ay.getName(e),
-                    pendingNick: G,
+                    errors: F?.nick ?? z?.nick,
+                    username: O.Ay.getName(e),
+                    pendingNick: U,
                     currentNick: Y?.nick,
                     user: e,
                     guild: n,
@@ -79,28 +80,28 @@ function G() {
                 "nick",
             ),
             (0, i.jsx)(
-                E.A,
+                S.A,
                 {
-                    sectionTitle: P.intl.string(P.t["+T3RI/"]),
-                    errors: B?.pronouns,
-                    onPronounsChange: (e) => (0, f.p)({ guildId: n.id, pronouns: e }),
+                    sectionTitle: G.intl.string(G.t["+T3RI/"]),
+                    errors: F?.pronouns,
+                    onPronounsChange: (e) => (0, b.p)({ guildId: n.id, pronouns: e }),
                     pendingPronouns: V,
                     currentPronouns: J,
                 },
                 "pronouns",
             ),
-            (0, i.jsxs)(L.A, {
+            (0, i.jsxs)(P.A, {
                 user: e,
-                showOverlay: !X,
+                showOverlay: !K,
                 children: [
                     (0, i.jsx)(
-                        g.A,
+                        _.A,
                         {
                             sectionTitle: (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    P.intl.string(P.t.lqaIxI),
-                                    (0, i.jsx)(r.m, {
-                                        text: P.intl.string(P.t["5AFxuK"]),
+                                    G.intl.string(G.t.lqaIxI),
+                                    (0, i.jsx)(a.m, {
+                                        text: G.intl.string(G.t["5AFxuK"]),
                                         children: (0, i.jsx)(o.tvc, {
                                             size: "md",
                                             color: "currentColor",
@@ -110,21 +111,21 @@ function G() {
                                 ],
                             }),
                             showRemoveAvatarButton: W,
-                            onAvatarChange: (e) => Q(e, Y?.avatar, (e) => (0, f.p)({ guildId: n.id, avatar: e })),
-                            errors: B?.avatar,
+                            onAvatarChange: (e) => $(e, Y?.avatar, (e) => (0, b.p)({ guildId: n.id, avatar: e })),
+                            errors: F?.avatar,
                             guildId: n.id,
-                            disabled: !X,
+                            disabled: !K,
                         },
                         "avatar",
                     ),
                     (0, i.jsx)(
-                        m.A,
+                        g.A,
                         {
                             sectionTitle: (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    P.intl.string(P.t["7v0T9P"]),
-                                    (0, i.jsx)(r.m, {
-                                        text: P.intl.string(P.t["5AFxuK"]),
+                                    G.intl.string(G.t["7v0T9P"]),
+                                    (0, i.jsx)(a.m, {
+                                        text: G.intl.string(G.t["5AFxuK"]),
                                         children: (0, i.jsx)(o.tvc, {
                                             size: "md",
                                             color: "currentColor",
@@ -138,14 +139,14 @@ function G() {
                         },
                         "decoration",
                     ),
-                    !t && (0, i.jsx)(A.A, { user: e, guildId: n.id }),
+                    !t && (0, i.jsx)(x.A, { user: e, guildId: n.id }),
                     (0, i.jsx)(
-                        x.A,
+                        h.A,
                         {
                             user: e,
                             guild: n,
-                            titleIcon: (0, i.jsx)(r.m, {
-                                text: P.intl.string(P.t["5AFxuK"]),
+                            titleIcon: (0, i.jsx)(a.m, {
+                                text: G.intl.string(G.t["5AFxuK"]),
                                 children: (0, i.jsx)(o.tvc, { size: "md", color: "currentColor", className: M.a }),
                             }),
                         },
@@ -156,9 +157,9 @@ function G() {
                         {
                             sectionTitle: (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    P.intl.string(P.t.wR5wOo),
-                                    (0, i.jsx)(r.m, {
-                                        text: P.intl.string(P.t["5AFxuK"]),
+                                    G.intl.string(G.t.wR5wOo),
+                                    (0, i.jsx)(a.m, {
+                                        text: G.intl.string(G.t["5AFxuK"]),
                                         children: (0, i.jsx)(o.tvc, {
                                             size: "md",
                                             color: "currentColor",
@@ -172,34 +173,35 @@ function G() {
                         },
                         "effect",
                     ),
+                    (0, i.jsx)(T.A, { user: e, guild: n, sectionTitle: G.intl.string(G.t.GWrZOd) }, "frame"),
                     (0, i.jsx)(
-                        h.A,
+                        A.A,
                         {
-                            showRemoveBannerButton: K,
-                            errors: B?.banner,
-                            onBannerChange: (e) => Q(e, z?.banner, (e) => (0, f.p)({ guildId: n.id, banner: e })),
+                            showRemoveBannerButton: Z,
+                            errors: F?.banner,
+                            onBannerChange: (e) => $(e, X?.banner, (e) => (0, b.p)({ guildId: n.id, banner: e })),
                             guildId: n.id,
-                            disabled: !X,
+                            disabled: !K,
                         },
                         "banner",
                     ),
-                    (0, i.jsx)(T.A, {
+                    (0, i.jsx)(f.A, {
                         user: e,
                         pendingAvatarSrc: H,
-                        pendingColors: w,
-                        onThemeColorsChange: (e) => (0, f.p)({ guildId: n.id, themeColors: e }),
+                        pendingColors: B,
+                        onThemeColorsChange: (e) => (0, b.p)({ guildId: n.id, themeColors: e }),
                         guildId: n.id,
-                        showResetThemeButton: Z,
+                        showResetThemeButton: q,
                     }),
                     (0, i.jsx)(
-                        _.A,
+                        m.A,
                         {
-                            placeholder: P.intl.string(P.t["/7NKgv"]),
+                            placeholder: G.intl.string(G.t["/7NKgv"]),
                             sectionTitle: (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    P.intl.string(P.t.ZzAR2Y),
-                                    (0, i.jsx)(r.m, {
-                                        text: P.intl.string(P.t["5AFxuK"]),
+                                    G.intl.string(G.t.ZzAR2Y),
+                                    (0, i.jsx)(a.m, {
+                                        text: G.intl.string(G.t["5AFxuK"]),
                                         children: (0, i.jsx)(o.tvc, {
                                             size: "md",
                                             color: "currentColor",
@@ -208,11 +210,11 @@ function G() {
                                     }),
                                 ],
                             }),
-                            onBioChange: (e) => (0, f.p)({ guildId: n.id, bio: e }),
-                            errors: B?.bio ?? F?.bio,
-                            pendingBio: k,
-                            currentBio: q,
-                            disabled: !X,
+                            onBioChange: (e) => (0, b.p)({ guildId: n.id, bio: e }),
+                            errors: F?.bio ?? z?.bio,
+                            pendingBio: w,
+                            currentBio: Q,
+                            disabled: !K,
                         },
                         "about",
                     ),

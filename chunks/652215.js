@@ -2892,6 +2892,7 @@ var tb = (function (e) {
             (e.COLLECTIBLES_SHOP_COLLECTED_MODAL = "Collectibles Shop Collected Modal"),
             (e.AVATAR_DECORATION_CUSTOMIZATION = "Edit Avatar Decoration Modal"),
             (e.PROFILE_EFFECT_CUSTOMIZATION = "Profile Effect Customization"),
+            (e.PROFILE_FRAME_CUSTOMIZATION = "Profile Frame Customization"),
             (e.NAMEPLATE_CUSTOMIZATION = "Nameplate Customization"),
             (e.COLLECTIBLES_SHOP = "Shop"),
             (e.REFERRAL_MESSAGE_EMBED = "Message Embed"),

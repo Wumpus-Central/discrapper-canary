@@ -1,16 +1,18 @@
 "use strict";
 n.d(t, {
-    Ac: () => A,
+    Ac: () => T,
     B0: () => _,
-    CP: () => h,
+    CP: () => m,
     EI: () => c,
     N2: () => p,
-    WU: () => I,
+    Tu: () => g,
+    WU: () => S,
+    Xf: () => h,
     a4: () => f,
-    lw: () => E,
-    nZ: () => m,
+    lw: () => A,
+    nZ: () => E,
     rv: () => d,
-    z5: () => g,
+    z5: () => I,
 }),
     n(321073);
 var r = n(64700),
@@ -76,31 +78,43 @@ function p(e) {
     );
 }
 function h(e) {
+    let { user: t, guildId: n } = e;
+    return (0, i.bG)([o.A], () =>
+        null == n ? o.A.getUserProfile(t.id)?.profileFrame : o.A.getGuildMemberProfile(t.id, n)?.profileFrame,
+    );
+}
+function m(e) {
     return (0, i.cf)([a.A], () => ({
         pendingAvatarDecoration: a.A.getPendingChanges(e).pendingAvatarDecoration,
         errors: a.A.getErrors(e).avatarDecoration,
     }));
 }
-function m(e) {
+function E(e) {
     return (0, i.cf)([a.A], () => ({
         pendingProfileEffect: a.A.getPendingChanges(e).pendingProfileEffect,
         errors: a.A.getErrors(e).profileEffect,
     }));
 }
-function E(e) {
+function g(e) {
+    return (0, i.cf)([a.A], () => ({
+        pendingProfileFrame: a.A.getPendingChanges(e).pendingProfileFrame,
+        errors: a.A.getErrors(e).profileFrame,
+    }));
+}
+function A(e) {
     let { userValue: t, guildValue: n, pendingValue: r, guildId: i } = e,
         s = "" === r || null === r,
         a = "" !== r && null != r,
         o = "" !== n && null != n;
     return s ? (null != i ? t : null) : a ? r : null != i && o ? n : t;
 }
-function g(e, t) {
+function I(e, t) {
     return void 0 === e ? null != t : null != e;
 }
-function A(e, t) {
+function T(e, t) {
     return void 0 === e ? null != t : null != e;
 }
-function I(e) {
+function S(e) {
     "set" === e
         ? s.OR.announce(u.intl.string(u.t.NstziV))
         : "remove" === e

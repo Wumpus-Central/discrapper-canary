@@ -288,6 +288,7 @@ var r = (function (e) {
         (e.EDIT_PROFILE_EFFECT_MODAL = "edit profile effect modal"),
         (e.EDIT_PROFILE_EFFECT_SHEET = "edit profile effect action sheet"),
         (e.EDIT_PROFILE_FRAME_SHEET = "edit profile frame action sheet"),
+        (e.EDIT_PROFILE_FRAME_MODAL = "edit profile frame modal"),
         (e.EDIT_NAMEPLATE_MODAL = "edit nameplate modal"),
         (e.EDIT_NAMEPLATE_SHEET = "edit nameplate sheet"),
         (e.EDIT_DISPLAY_NAME_STYLES_MODAL = "edit display name styles modal"),
