@@ -29808,7 +29808,7 @@ img.thumbnail__0f2e8 {
 }
 
 .overlayHeader__4774c {
-    border-radius: var(--radius-sm);
+    border-radius: 3px;
     flex: 1;
     overflow: hidden;
     position: relative;
