@@ -15,6 +15,7 @@ e.exports = {
     R: "hidden_b824c5",
     IR: "videoInner_b824c5",
     FP: "videoInnerCover_b824c5",
+    Xm: "haloBackground_b824c5",
     r8: "videoFooterCont_b824c5",
     Jp: "videoFooterContGradient_b824c5",
     uN: "videoControlsCont_b824c5",
