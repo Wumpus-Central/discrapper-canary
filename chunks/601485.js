@@ -49,7 +49,7 @@ function d(e) {
             [c.disabled]: d,
             [c.focused]: f && _,
             [c.hideInteraction]: !f,
-            [c.interactive]: p,
+            [c.nonInteractive]: !p,
         }),
         "aria-disabled": d,
         ...h,

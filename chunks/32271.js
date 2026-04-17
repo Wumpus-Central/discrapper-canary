@@ -5,7 +5,7 @@ var r = {
     fixed: "fixed_c1e9c4",
     flexible: "flexible_c1e9c4",
     item: "item_c1e9c4",
-    interactive: "interactive_c1e9c4",
+    nonInteractive: "nonInteractive_c1e9c4",
     customItem: "customItem_c1e9c4",
     labelContainer: "labelContainer_c1e9c4",
     label: "label_c1e9c4",
