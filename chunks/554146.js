@@ -593,6 +593,7 @@ var r = (function (e) {
             (e[(e.CROISSANT_REHEAT_MOMENT = 738)] = "CROISSANT_REHEAT_MOMENT"),
             (e[(e.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA = 739)] =
                 "SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA"),
+            (e[(e.PREMIUM_GROUP_PRIMARY_REMINDER_NAGBAR = 740)] = "PREMIUM_GROUP_PRIMARY_REMINDER_NAGBAR"),
             e
         );
     })({}),
