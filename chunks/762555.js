@@ -1,10 +1,9 @@
 "use strict";
-n.d(t, { U: () => a, g: () => s });
-var r = n(661191),
-    i = n(696016);
-function a(e) {
-    return new Date(r.default.extractTimestamp(e)).toISOString();
+n.d(t, { U: () => i, g: () => s });
+var r = n(696016);
+function i(e) {
+    return new Date(e).toISOString();
 }
 function s(e) {
-    return e.slice(0, i.GU);
+    return e.slice(0, r.GU);
 }

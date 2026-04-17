@@ -1,8 +1,10 @@
 "use strict";
-n.d(t, { q: () => l });
-var r = n(372684),
-    i = n(696016);
-let a = [
+n.d(t, { q: () => c });
+var r = n(835245),
+    i = n(661191),
+    s = n(372684),
+    a = n(696016);
+let o = [
         (e) => {
             let t = { ...e, version: 1, applicationName: e.gameName, applicationId: void 0 };
             return delete t.gameName, t;
@@ -11,17 +13,18 @@ let a = [
         (e) => ({ ...e, version: 3, name: "" === e.name ? void 0 : e.name }),
         (e) => {
             let t = e.filepath.endsWith(".jpeg") || e.filepath.endsWith(".jpg");
-            return { ...e, version: 4, timeline: [], type: t ? r.nQ.SCREENSHOT : r.nQ.CLIP };
+            return { ...e, version: 4, timeline: [], type: t ? s.nQ.SCREENSHOT : s.nQ.CLIP };
         },
+        (e) => ({ ...e, version: 5, id: (0, r.A)(), createdAt: i.default.extractTimestamp(e.id) }),
     ],
-    s = null;
-function o(e) {
-    return null != s
-        ? s
-        : (s = e
+    l = null;
+function u(e) {
+    return null != l
+        ? l
+        : (l = e
               .object({
                   id: e.string().required(),
-                  version: e.number().positive().integer().min(0).max(i.kd).optional(),
+                  version: e.number().positive().integer().min(0).max(a.kd).optional(),
                   name: e.string().when("version", { is: e.number().less(3), then: e.string().allow("") }),
                   gameName: e
                       .string()
@@ -59,9 +62,10 @@ function o(e) {
                           voiceAudio: e.boolean(),
                           soundboardAudio: e.boolean(),
                       }),
+                  createdAt: e.number().when("version", { is: e.number().greater(4).required(), then: e.required() }),
                   type: e
                       .string()
-                      .allow(r.nQ.CLIP, r.nQ.SCREENSHOT, r.nQ.VOICE_CLIP)
+                      .allow(s.nQ.CLIP, s.nQ.SCREENSHOT, s.nQ.VOICE_CLIP)
                       .when("version", {
                           is: e.number().greater(3).required(),
                           then: e.required(),
@@ -109,9 +113,9 @@ function o(e) {
               })
               .required());
 }
-async function l(e) {
+async function c(e) {
     let t = (await n.e("34188").then(n.t.bind(n, 88137, 23))).default,
-        r = o(t);
+        r = u(t);
     try {
         delete e.eventTimeline,
             delete e.eventTimelineReferenceTimestamp,
@@ -119,7 +123,7 @@ async function l(e) {
             delete e.emotionHistory,
             t.assert(e, r);
         let n = e;
-        return null == n.version && (n.version = 0), a.slice(n.version).reduce((e, t) => t(e), n);
+        return null == n.version && (n.version = 0), o.slice(n.version).reduce((e, t) => t(e), n);
     } catch (e) {
         return null;
     }

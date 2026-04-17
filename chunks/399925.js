@@ -235,13 +235,7 @@ async function j() {
                 t = y.A.getClips().filter((e) => !0 === e.isTemporary),
                 n = t.length - e + 1;
             if (n > 0) {
-                let r = t
-                    .sort((e, t) => {
-                        let n = parseInt(e.id, 10),
-                            r = parseInt(t.id, 10);
-                        return n - r;
-                    })
-                    .slice(0, n);
+                let r = t.sort((e, t) => e.createdAt - t.createdAt).slice(0, n);
                 for (let t of (L.nx.info(`Deleting ${r.length} temporary clips to stay within limit of ${e}`), r))
                     try {
                         await X(t.filepath, t.id);
@@ -362,17 +356,13 @@ async function X(e, t) {
 }
 async function Q(e) {
     let t = m.Ay.getMediaEngine(),
-        n = await t.exportClip(
-            e.filepath,
-            e.editMetadata ?? {
-                start: 0,
-                end: e.length / 1e3,
-                applicationAudio: !0,
-                voiceAudio: !0,
-                soundboardAudio: !0,
-            },
-        );
-    return e.type === v.nQ.SCREENSHOT ? n : (0, b.A)(n);
+        { filepath: n, ...r } = e;
+    await K(e.id, r);
+    let i = await t.exportClip(
+        e.filepath,
+        e.editMetadata ?? { start: 0, end: e.length / 1e3, applicationAudio: !0, voiceAudio: !0, soundboardAudio: !0 },
+    );
+    return e.type === v.nQ.SCREENSHOT ? i : (0, b.A)(i);
 }
 function J(e) {
     a.h.dispatch({ type: "CLIPS_SET_EXPORTING", clipIds: e });

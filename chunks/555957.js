@@ -1,4 +1,4 @@
-l.d(t, { A: () => V }), l(321073);
+l.d(t, { A: () => G }), l(321073);
 var n = l(627968),
     a = l(64700),
     i = l(503698),
@@ -12,85 +12,84 @@ var n = l(627968),
     h = l(397927),
     p = l(442433),
     x = l(793574),
-    f = l(688810),
-    g = l(587895),
+    g = l(688810),
+    f = l(587895),
     v = l(47167),
     j = l(607470),
     b = l(734057),
     C = l(71393),
     y = l(287809),
-    N = l(549685),
-    A = l(954571),
+    A = l(549685),
+    N = l(954571),
     E = l(405269),
     k = l(403362),
-    I = l(661191),
-    S = l(274372),
-    w = l(372684),
-    L = l(399925),
-    M = l(226421),
-    T = l(665039),
-    R = l(718812),
-    D = l(543428),
-    O = l(652215),
-    P = l(16590),
-    U = l(985018),
-    G = l(798594);
-let V = function (e) {
+    I = l(274372),
+    S = l(372684),
+    w = l(399925),
+    L = l(226421),
+    M = l(665039),
+    T = l(718812),
+    R = l(543428),
+    D = l(652215),
+    O = l(16590),
+    P = l(985018),
+    U = l(798594);
+let G = function (e) {
     let { clip: t, actionsDisabled: i, isNew: r, onEdit: d, onClick: m } = e,
-        g = (0, c.yK)([y.default], () => t.users.map((e) => y.default.getUser(e)).filter(k.Vq)),
+        f = (0, c.yK)([y.default], () => t.users.map((e) => y.default.getUser(e)).filter(k.Vq)),
         j = (0, c.bG)([b.A], () => (null != t.channelId ? b.A.getChannel(t.channelId) : null)),
-        N = (0, c.bG)([C.A], () => (null != t.guildId ? C.A.getGuild(t.guildId) : null)),
-        { analyticsLocations: L } = (0, f.Ay)(x.A.CLIPS_GALLERY_ITEM),
-        { selectedClipIds: M, toggleClipSelection: T, isMultiSelectMode: R } = a.useContext(D.$),
-        [P, V] = a.useState(!1),
-        $ = a.useRef(null),
-        K = (0, o.A)(t.editMetadata?.start ?? 0),
-        B = M.has(t.id),
-        F = t.type === w.nQ.SCREENSHOT,
-        X = (0, v.Ay)(j),
-        Y = "" === t.applicationName && null != X && "" !== X ? X : t.applicationName,
-        Q = (0, E.Fe)(new Date(I.default.extractTimestamp(t.id))),
-        q = a.useMemo(() => {
+        A = (0, c.bG)([C.A], () => (null != t.guildId ? C.A.getGuild(t.guildId) : null)),
+        { analyticsLocations: w } = (0, g.Ay)(x.A.CLIPS_GALLERY_ITEM),
+        { selectedClipIds: L, toggleClipSelection: M, isMultiSelectMode: T } = a.useContext(R.$),
+        [O, G] = a.useState(!1),
+        H = a.useRef(null),
+        _ = (0, o.A)(t.editMetadata?.start ?? 0),
+        K = L.has(t.id),
+        B = t.type === S.nQ.SCREENSHOT,
+        F = (0, v.Ay)(j),
+        X = "" === t.applicationName && null != F && "" !== F ? F : t.applicationName,
+        Y = (0, E.Fe)(new Date(t.createdAt)),
+        Q = a.useMemo(() => {
             let e = [];
             return (
-                t.type === w.nQ.VOICE_CLIP
-                    ? (N?.name != null && e.push(N.name), null != X && e.push(X))
-                    : ("" !== Y && null != Y && e.push(Y),
+                t.type === S.nQ.VOICE_CLIP
+                    ? (A?.name != null && e.push(A.name), null != F && e.push(F))
+                    : ("" !== X && null != X && e.push(X),
                       t.activity?.state != null && "" !== t.activity.state && e.push(t.activity.state),
                       t.activity?.details != null && "" !== t.activity.details && e.push(t.activity.details)),
                 e.join(" › ")
             );
-        }, [Y, N?.name, X, t.activity?.state, t.activity?.details, t.type]),
-        W = a.useCallback(() => {
-            let e = $.current;
+        }, [X, A?.name, F, t.activity?.state, t.activity?.details, t.type]),
+        q = a.useCallback(() => {
+            let e = H.current;
             null != e && (e.pause(), (e.src = ""));
         }, []),
+        W = a.useCallback(() => {
+            if (!0 === B) return;
+            let e = H.current;
+            null != e && e.paused && ((e.currentTime = _.current), H.current?.play());
+        }, [B, _]),
         Z = a.useCallback(() => {
-            if (!0 === F) return;
-            let e = $.current;
-            null != e && e.paused && ((e.currentTime = K.current), $.current?.play());
-        }, [F, K]),
-        J = a.useCallback(() => {
-            if (!0 === F) return;
-            let e = $.current;
+            if (!0 === B) return;
+            let e = H.current;
             null != e && (e.pause(), (e.currentTime = t.editMetadata?.start ?? 0));
-        }, [F, t.editMetadata?.start]),
-        ee = a.useCallback(
+        }, [B, t.editMetadata?.start]),
+        J = a.useCallback(
             (e) => {
-                e.relatedTarget?.parentElement?.parentElement !== e.currentTarget.parentElement && J();
+                e.relatedTarget?.parentElement?.parentElement !== e.currentTarget.parentElement && Z();
             },
-            [J],
+            [Z],
         ),
-        et = a.useCallback(() => {
-            V(!1);
+        ee = a.useCallback(() => {
+            G(!1);
         }, []),
-        el = a.useCallback(
+        et = a.useCallback(
             (e) => {
-                V(!0), $.current?.pause();
+                G(!0), H.current?.pause();
                 let a =
-                    R && M.size > 0
-                        ? Array.from(M)
-                              .map((e) => S.A.getClipById(e))
+                    T && L.size > 0
+                        ? Array.from(L)
+                              .map((e) => I.A.getClipById(e))
                               .filter(k.Vq)
                         : [t];
                 (0, p.L3)(
@@ -104,85 +103,85 @@ let V = function (e) {
                                 actionsDisabled: i,
                                 showShareAndEdit: !0,
                                 onShare: () => {
-                                    A.default.track(O.HAw.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "share" });
+                                    N.default.track(D.HAw.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "share" });
                                 },
                                 onEdit: () => {
-                                    d(t), A.default.track(O.HAw.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "edit" });
+                                    d(t), N.default.track(D.HAw.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "edit" });
                                 },
-                                onBeforeDelete: W,
+                                onBeforeDelete: q,
                                 onAfterDelete: () => {
-                                    A.default.track(O.HAw.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "delete" });
+                                    N.default.track(D.HAw.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "delete" });
                                 },
                             });
                     },
-                    { onClose: et },
+                    { onClose: ee },
                 );
             },
-            [t, R, M, i, W, et, d],
+            [t, T, L, i, q, ee, d],
+        ),
+        el = a.useCallback(
+            (e) => {
+                i || (e.preventDefault(), e.stopPropagation(), et(e));
+            },
+            [i, et],
         ),
         en = a.useCallback(
             (e) => {
-                i || (e.preventDefault(), e.stopPropagation(), el(e));
-            },
-            [i, el],
-        ),
-        ea = a.useCallback(
-            (e) => {
                 i ||
-                    (e.shiftKey ? (e.preventDefault(), T(t.id)) : R ? T(t.id) : null != m && m(t),
-                    A.default.track(O.HAw.CLIP_GALLERY_CARD_CLICKED));
+                    (e.shiftKey ? (e.preventDefault(), M(t.id)) : T ? M(t.id) : null != m && m(t),
+                    N.default.track(D.HAw.CLIP_GALLERY_CARD_CLICKED));
             },
-            [i, R, T, t, m],
+            [i, T, M, t, m],
         );
-    return (0, n.jsx)(f.f5, {
-        value: L,
+    return (0, n.jsx)(g.f5, {
+        value: w,
         children: (0, n.jsxs)(h.sqX, {
             "aria-disabled": i,
-            "aria-label": U.intl.string(!0 === F ? U.t["HO/oXl"] : U.t.bt75uw),
-            onClick: i ? void 0 : ea,
-            onContextMenu: en,
-            className: s()(G.QN, { [G.r9]: i, [G.in]: P, [G.wH]: B }),
-            onBlur: ee,
-            onFocus: Z,
-            onMouseOver: Z,
-            onMouseLeave: J,
+            "aria-label": P.intl.string(!0 === B ? P.t["HO/oXl"] : P.t.bt75uw),
+            onClick: i ? void 0 : en,
+            onContextMenu: el,
+            className: s()(U.QN, { [U.r9]: i, [U.in]: O, [U.wH]: K }),
+            onBlur: J,
+            onFocus: W,
+            onMouseOver: W,
+            onMouseLeave: Z,
             children: [
-                (0, n.jsx)(z, { clip: t, isNew: r, videoRef: $, onOpenContextMenu: el, actionsDisabled: i }),
+                (0, n.jsx)(V, { clip: t, isNew: r, videoRef: H, onOpenContextMenu: et, actionsDisabled: i }),
                 (0, n.jsxs)("div", {
-                    className: G.wI,
+                    className: U.wI,
                     children: [
-                        (0, n.jsx)(_, { clip: t }),
+                        (0, n.jsx)($, { clip: t }),
                         (0, n.jsxs)("div", {
-                            className: G.i0,
+                            className: U.i0,
                             children: [
-                                (0, n.jsx)(H, { clip: t }),
+                                (0, n.jsx)(z, { clip: t }),
                                 (0, n.jsx)(h.Text, {
-                                    className: G.xD,
-                                    color: "text-subtle",
-                                    variant: "text-sm/normal",
-                                    children: q,
-                                }),
-                                (0, n.jsx)(h.Text, {
-                                    className: G.xD,
+                                    className: U.xD,
                                     color: "text-subtle",
                                     variant: "text-sm/normal",
                                     children: Q,
                                 }),
+                                (0, n.jsx)(h.Text, {
+                                    className: U.xD,
+                                    color: "text-subtle",
+                                    variant: "text-sm/normal",
+                                    children: Y,
+                                }),
                             ],
                         }),
                         (0, n.jsx)("div", {
-                            className: G.jW,
+                            className: U.jW,
                             children: (0, n.jsx)(u.A, {
                                 maxUsers: 3,
-                                users: g,
+                                users: f,
                                 size: h._3J.SIZE_24,
                                 onFocusOverflow: (e) => {
                                     let t = e.relatedTarget,
                                         l = e.currentTarget.parentElement?.parentElement?.parentElement;
                                     t?.parentElement === l ||
-                                        (t?.parentElement?.parentElement?.parentElement !== l && Z());
+                                        (t?.parentElement?.parentElement?.parentElement !== l && W());
                                 },
-                                "aria-label": U.intl.string(U.t.WTozwe),
+                                "aria-label": P.intl.string(P.t.WTozwe),
                             }),
                         }),
                     ],
@@ -191,7 +190,7 @@ let V = function (e) {
         }),
     });
 };
-function z(e) {
+function V(e) {
     let { clip: t, isNew: l, videoRef: i, onOpenContextMenu: s, actionsDisabled: r } = e,
         o = 0 === t.length,
         c = !0 === t.pending,
@@ -229,7 +228,7 @@ function z(e) {
             }
         );
     }, [i, o, t.editMetadata]);
-    let { durationDisplay: x, isClipEdited: f } = a.useMemo(() => {
+    let { durationDisplay: x, isClipEdited: g } = a.useMemo(() => {
             let e = t.length,
                 l = null != t.editMetadata ? t.editMetadata.end - t.editMetadata.start : null,
                 n = !1;
@@ -248,9 +247,9 @@ function z(e) {
                 ? { durationDisplay: `${s}s`, isClipEdited: n }
                 : { durationDisplay: `${i}:${s.toString().padStart(2, "0")}`, isClipEdited: n };
         }, [t.length, t.editMetadata]),
-        g = a.useCallback(
+        f = a.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), L.XK(t);
+                e.preventDefault(), e.stopPropagation(), w.XK(t);
             },
             [t],
         ),
@@ -261,23 +260,23 @@ function z(e) {
             [r, s],
         );
     return (0, n.jsxs)("div", {
-        className: G.QB,
+        className: U.QB,
         children: [
-            (0, n.jsx)("div", { className: G.ne }),
-            !c && l && (0, n.jsx)(h.LpS, { className: G.Ad, text: U.intl.string(U.t.y2b7CA) }),
+            (0, n.jsx)("div", { className: U.ne }),
+            !c && l && (0, n.jsx)(h.LpS, { className: U.Ad, text: P.intl.string(P.t.y2b7CA) }),
             !r &&
                 (0, n.jsxs)("div", {
-                    className: G.g3,
+                    className: U.g3,
                     children: [
                         (0, n.jsx)(
                             m.m,
                             {
-                                text: U.intl.string(t.isFavorite ? P.default.IZsalP : P.default.ihBfyA),
+                                text: P.intl.string(t.isFavorite ? O.default.IZsalP : O.default.ihBfyA),
                                 position: "top",
                                 children: (0, n.jsx)(h.K0, {
-                                    onClick: g,
+                                    onClick: f,
                                     icon: t.isFavorite ? h.Gg5 : h.yA2,
-                                    "aria-label": U.intl.string(U.t.k8fFjp),
+                                    "aria-label": P.intl.string(P.t.k8fFjp),
                                     variant: "overlay-secondary",
                                     size: "sm",
                                 }),
@@ -287,39 +286,39 @@ function z(e) {
                         (0, n.jsx)(h.K0, {
                             onClick: v,
                             icon: h.FHP,
-                            "aria-label": U.intl.string(U.t["UKOtz+"]),
+                            "aria-label": P.intl.string(P.t["UKOtz+"]),
                             variant: "overlay-secondary",
                             size: "sm",
                         }),
                     ],
                 }),
-            (0, n.jsx)($, { clip: t, videoRef: i }),
+            (0, n.jsx)(H, { clip: t, videoRef: i }),
             (0, n.jsxs)("div", {
-                className: G.E9,
+                className: U.E9,
                 children: [
                     "auto" === t.clipMethod &&
                         (0, n.jsxs)("div", {
-                            className: G.OH,
+                            className: U.OH,
                             children: [
                                 t.isTemporary && (0, n.jsx)(h.O4, { size: "xs", color: "currentColor" }),
                                 (0, n.jsx)(h.Text, {
                                     variant: "text-sm/semibold",
                                     color: "always-white",
-                                    children: U.intl.string(U.t["3Y2DJ8"]),
+                                    children: P.intl.string(P.t["3Y2DJ8"]),
                                 }),
                             ],
                         }),
                     !o &&
                         (0, n.jsxs)("div", {
-                            className: G.OH,
+                            className: U.OH,
                             children: [
-                                f && (0, n.jsx)(N.A, { color: "white", width: 16, height: 16 }),
+                                g && (0, n.jsx)(A.A, { color: "white", width: 16, height: 16 }),
                                 (0, n.jsx)("span", {
                                     children: (0, n.jsx)(h.Text, {
                                         variant: "text-sm/semibold",
                                         color: "always-white",
                                         tabularNumbers: !0,
-                                        children: c ? U.intl.string(U.t["2Fp7OP"]) : x,
+                                        children: c ? P.intl.string(P.t["2Fp7OP"]) : x,
                                     }),
                                 }),
                             ],
@@ -329,31 +328,31 @@ function z(e) {
             !o &&
                 u > 0 &&
                 (0, n.jsx)("div", {
-                    className: G.X7,
-                    children: (0, n.jsx)("div", { className: G.Z2, style: { width: `${u}%` } }),
+                    className: U.X7,
+                    children: (0, n.jsx)("div", { className: U.Z2, style: { width: `${u}%` } }),
                 }),
         ],
     });
 }
-function H(e) {
+function z(e) {
     let { clip: t } = e,
-        l = (0, R.h)(t),
+        l = (0, T.h)(t),
         a = "" !== l;
     return (0, n.jsx)(h.Text, {
-        className: G.NV,
+        className: U.NV,
         variant: "text-md/normal",
         color: "text-default",
         children: a ? l : t.name,
     });
 }
-function $(e) {
+function H(e) {
     let { clip: t, videoRef: l } = e,
-        a = (0, T.j)(t),
-        i = t.type === w.nQ.SCREENSHOT;
-    return t.type === w.nQ.VOICE_CLIP
-        ? (0, n.jsx)(M.A, { className: G.fT })
+        a = (0, M.j)(t),
+        i = t.type === S.nQ.SCREENSHOT;
+    return t.type === S.nQ.VOICE_CLIP
+        ? (0, n.jsx)(L.A, { className: U.fT })
         : i
-          ? (0, n.jsx)("img", { alt: "", src: t.thumbnail, className: G.fT })
+          ? (0, n.jsx)("img", { alt: "", src: t.thumbnail, className: U.fT })
           : null != a
             ? (0, n.jsx)(j.A, {
                   preload: "metadata",
@@ -361,27 +360,27 @@ function $(e) {
                   muted: !0,
                   src: a,
                   loop: !0,
-                  className: G.fT,
+                  className: U.fT,
                   ref: l,
               })
             : "" !== t.thumbnail
-              ? (0, n.jsx)("img", { alt: "", src: t.thumbnail, className: G.fT })
+              ? (0, n.jsx)("img", { alt: "", src: t.thumbnail, className: U.fT })
               : (0, n.jsx)("div", {
-                    className: s()(G.fT, G.Is),
+                    className: s()(U.fT, U.Is),
                     children: (0, n.jsx)(h.xgA, { color: h.LU0.colors.ICON_MUTED }),
                 });
 }
-function _(e) {
+function $(e) {
     let { clip: t } = e,
-        l = (0, c.bG)([g.A], () => (null != t.applicationId ? g.A.getApplication(t.applicationId) : null)),
+        l = (0, c.bG)([f.A], () => (null != t.applicationId ? f.A.getApplication(t.applicationId) : null)),
         a = l?.getIconURL(32);
     return (0, n.jsx)("div", {
-        className: G.gS,
+        className: U.gS,
         "aria-hidden": "true",
         children:
             null != a
-                ? (0, n.jsx)("img", { src: a, alt: "", className: G.NH })
-                : t.type === w.nQ.VOICE_CLIP
+                ? (0, n.jsx)("img", { src: a, alt: "", className: U.NH })
+                : t.type === S.nQ.VOICE_CLIP
                   ? (0, n.jsx)(h.HKD, { size: "sm", color: "currentColor" })
                   : (0, n.jsx)(h.kN9, { size: "sm", color: "currentColor" }),
     });

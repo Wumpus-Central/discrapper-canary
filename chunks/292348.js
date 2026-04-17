@@ -42,7 +42,7 @@ function c(e) {
             ((s.is_clip = !0),
             (s.title = e.clip.name),
             (s.application_id = e.clip.applicationId),
-            (s.clip_created_at = (0, i.U)(e.clip.id)),
+            (s.clip_created_at = (0, i.U)(e.clip.createdAt)),
             (s.clip_participant_ids = (0, i.g)(e.clip.users))),
         "item" in e &&
             null != e.item &&
