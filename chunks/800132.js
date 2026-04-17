@@ -15,7 +15,7 @@ var r = n(627968),
     h = n(486020),
     m = n(927578),
     E = n(580630),
-    g = n(112242),
+    g = n(941667),
     A = n(319820),
     I = n(652215),
     T = n(985018),
@@ -120,7 +120,7 @@ let y = (e) => e.name,
                 [s],
             ),
             w = i.useMemo(() => {
-                let e = (0, g.PN)(s, { isGift: f });
+                let e = (0, g.P)(s, { isGift: f });
                 return null != e ? (0, r.jsx)(o.J, { ...e }) : null;
             }, [s, f]),
             { setCheckoutHeaderConfigs: M, checkoutHeaderConfigs: P } = (0, l.ck)();
@@ -157,12 +157,7 @@ function D(e) {
             giftCardsEnabled: E,
             giftCardCheckboxProps: A,
             disabled: I,
-        } = (0, g.X)({
-            hasLegalTermsFlash: t,
-            legalTermsNodeRef: n,
-            handlePaymentSourceAdd: s,
-            shouldUseUnifiedCheckoutUI: !0,
-        }),
+        } = (0, g.X)({ hasLegalTermsFlash: t, legalTermsNodeRef: n, handlePaymentSourceAdd: s }),
         S = (0, r.jsx)(c.nL, {
             label: T.intl.string(T.t["u+Cw58"]),
             giftCardsEnabled: E,

@@ -43190,99 +43190,9 @@ screen and (max-width:485px) {
     padding: 16px 16px 0
 }
 
-.profileEffectContainer_a84142 {
-    border-radius: var(--radius-md);
-    height: 296px;
-    margin: var(--space-16) auto 0;
-    overflow: hidden;
-    position: relative;
-    width: 200px
-}
-
-.nameplateContainer_a84142 {
-    margin: var(--space-40) auto var(--space-48);
-    position: relative;
-    width: 324px
-}
-
-.nameplate_a84142 {
-    width: 100%
-}
-
-.giftMainAnimationWrapper_a84142 {
-    align-items: center;
-    display: flex;
-    justify-content: center
-}
-
-.avatar_a84142 {
-    margin-top: 24px
-}
-
-.bundlePreviewWrapper_a84142 {
-    margin: 0 auto;
-    width: 224px
-}
-
-.slayerStorefrontReviewImageWrapper_a84142 {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 8px;
-    width: 100%
-}
-
-.slayerStorefrontReviewImage_a84142 {
-    max-width: 180px;
-    width: 100%
-}
-
-.stepBody_b44961 {
-    padding-top: var(--space-8)
-}
-
-.invoiceSpinner_b44961 {
-    height: 23px
-}
-
-.errorBlock_b44961 {
-    margin: 5px 15px 15px;
-    position: relative
-}
-
 .fineprint_b44961 {
     margin-bottom: 0;
     margin-top: 16px
-}
-
-.skuHeading_b44961 {
-    display: flex;
-    gap: 25px;
-    margin-bottom: 20px
-}
-
-.skuHeadingText_b44961 {
-    align-self: center
-}
-
-.socialLayerGameItemDisclaimer_b44961 {
-    margin-top: 16px
-}
-
-.paymentMethodContainer_b44961 {
-    display: flex;
-    flex-direction: column
-}
-
-.giftCardCreditsCheckbox_b44961 {
-    margin-bottom: var(--space-8)
-}
-
-.giftCardRedemptionLink_b44961 {
-    margin-top: var(--space-8)
-}
-
-.oneTimePurchaseRewardNotice_b44961 {
-    margin-top: var(--space-16)
 }
 
 .back_e125f1 {
