@@ -1,4 +1,4 @@
-l.d(t, { Y: () => P }), l(321073);
+l.d(t, { Y: () => k }), l(321073);
 var a = l(627968),
     n = l(64700),
     r = l(735438),
@@ -6,7 +6,7 @@ var a = l(627968),
     o = l(997101),
     s = l(417597),
     d = l(397927),
-    c = l(384904),
+    c = l(323082),
     u = l(918022),
     p = l(169797),
     m = l(93159),
@@ -17,7 +17,7 @@ var a = l(627968),
     f = l(295405),
     g = l(652215),
     v = l(788868),
-    _ = l(895375);
+    _ = l(439519);
 let E = {
         name: "Primitive: Nitro Plan Select",
         id: "unified-checkout-nitro-plan-select",
@@ -189,7 +189,7 @@ let E = {
             applicationName: "Marvel Rivals",
         },
     },
-    P = {
+    k = {
         title: "Unified Checkout",
         stories: [
             S,
@@ -496,8 +496,12 @@ let E = {
                 name: "Primitive: Store Relocation Notice",
                 id: "checkout-store-relocation-notice",
                 component: (e) => {
-                    let { relocationCountry: t, relocationCurrencyCode: l } = e;
-                    return (0, a.jsx)(m.ch, { relocationCountry: t, relocationCurrencyCode: l });
+                    let { relocationCountry: t, relocationCurrencyCode: l, willForfeitGiftCardBalance: n } = e;
+                    return (0, a.jsx)(m.ch, {
+                        relocationCountry: t,
+                        relocationCurrencyCode: l,
+                        willForfeitGiftCardBalance: n,
+                    });
                 },
                 controls: {
                     relocationCountry: {
@@ -507,6 +511,11 @@ let E = {
                         options: j,
                     },
                     relocationCurrencyCode: { label: "Relocation Currency Code", type: "text", defaultValue: "USD" },
+                    willForfeitGiftCardBalance: {
+                        label: "Will Forfeit Gift Card Balance",
+                        type: "boolean",
+                        defaultValue: !0,
+                    },
                 },
             },
         ],

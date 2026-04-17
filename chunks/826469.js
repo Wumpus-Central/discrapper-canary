@@ -7,12 +7,14 @@ class i {
     allowedCurrencies;
     relocationCountry;
     relocationCurrencyCode;
-    constructor(e, t, n, r = null, i = null) {
+    willForfeitGiftCardBalance;
+    constructor(e, t, n, r) {
         (this.source = e),
             (this.enabled = t),
             (this.allowedCurrencies = n),
-            (this.relocationCountry = r),
-            (this.relocationCurrencyCode = i);
+            (this.relocationCountry = r?.country ?? null),
+            (this.relocationCurrencyCode = r?.currencyCode ?? null),
+            (this.willForfeitGiftCardBalance = r?.willForfeitGiftCardBalance ?? !1);
     }
     get id() {
         return this.source.id;
@@ -44,12 +46,10 @@ class i {
             username: e.username,
             bank: e.bank,
         };
-        return new i(
-            r.Ay.createFromServer(t),
-            e.enabled,
-            e.allowed_currencies ?? [],
-            e.relocation_info?.country ?? null,
-            e.relocation_info?.currency ?? null,
-        );
+        return new i(r.Ay.createFromServer(t), e.enabled, e.allowed_currencies ?? [], {
+            country: e.relocation_info?.country ?? null,
+            currencyCode: e.relocation_info?.currency ?? null,
+            willForfeitGiftCardBalance: e.relocation_info?.will_forfeit_gift_card_balance ?? !1,
+        });
     }
 }
