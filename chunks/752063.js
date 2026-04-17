@@ -13,8 +13,8 @@ var r = n(627968),
     f = n(157941),
     p = n(255438),
     h = n(985018),
-    m = n(772543),
-    E = n(829681);
+    m = n(460224),
+    E = n(429128);
 function g(e) {
     let t = "utf-8",
         n = e?.split("charset=").slice(-1)[0] ?? t;
@@ -145,8 +145,14 @@ function y(e) {
         },
         children: (e) =>
             (0, r.jsx)(l.m, {
+                ariaHidden: !0,
                 text: h.intl.string(h.t.utm4qs),
-                children: (0, r.jsx)(u.GaO, { ...e, size: "sm", color: "currentColor", className: m.Qw, ref: a }),
+                children: (0, r.jsx)(u.DUT, {
+                    ...e,
+                    className: m.Qw,
+                    "aria-label": h.intl.string(h.t.utm4qs),
+                    children: (0, r.jsx)(u.GaO, { size: "sm", color: "currentColor", ref: a }),
+                }),
             }),
     });
 }
@@ -190,10 +196,12 @@ function v(e) {
                 },
                 children: (e) =>
                     (0, r.jsx)(l.m, {
+                        ariaHidden: !0,
                         text: h.intl.string(h.t["UKOtz+"]),
                         children: (0, r.jsx)(u.DUT, {
                             ...e,
                             className: m.IQ,
+                            "aria-label": h.intl.string(h.t["UKOtz+"]),
                             children: (0, r.jsx)(u.jNK, { ref: o, size: "sm", color: "currentColor" }),
                         }),
                     }),
@@ -211,9 +219,11 @@ function v(e) {
 function N(e) {
     return (0, r.jsx)(l.m, {
         asContainer: !0,
+        ariaHidden: !0,
         text: h.intl.string(h.t["0PQYk3"]),
         children: (0, r.jsx)(u.DUT, {
             className: m.R1,
+            "aria-label": h.intl.string(h.t["0PQYk3"]),
             onClick: () => {
                 (0, u.qfG)((t) => (0, r.jsx)(R, { ...e, ...t }));
             },
@@ -261,6 +271,8 @@ function C(e) {
             }),
             (0, r.jsxs)("div", {
                 className: m.qr,
+                role: "group",
+                "aria-label": h.intl.string(h.t.TlXA8e),
                 children: [
                     M ? (0, r.jsx)(T, { expanded: o, setExpanded: l, numLines: R, isWholeFile: b }) : null,
                     (0, r.jsx)(S, { fileName: n, fileSize: i }),
@@ -315,16 +327,20 @@ function R(e) {
                                 ? (0, r.jsx)(u.y$y, { className: m.u1 })
                                 : (0, r.jsx)(I, { text: T, language: f, wordWrap: g }),
                     }),
-                    (0, r.jsxs)(u.Text, {
-                        color: "text-default",
-                        className: m.Hx,
-                        variant: "text-sm/normal",
-                        children: [
-                            (0, r.jsx)(S, { fileName: n, fileSize: s }),
-                            (0, r.jsx)("div", { className: m.Kb }),
-                            (0, r.jsx)(y, { language: f, setLanguage: E, align: "bottom" }),
-                            (0, r.jsx)(v, { wordWrap: g, setWordWrap: A, url: t, fileName: n }),
-                        ],
+                    (0, r.jsx)("div", {
+                        role: "group",
+                        "aria-label": h.intl.string(h.t.TlXA8e),
+                        children: (0, r.jsxs)(u.Text, {
+                            color: "text-default",
+                            className: m.Hx,
+                            variant: "text-sm/normal",
+                            children: [
+                                (0, r.jsx)(S, { fileName: n, fileSize: s }),
+                                (0, r.jsx)("div", { className: m.Kb }),
+                                (0, r.jsx)(y, { language: f, setLanguage: E, align: "bottom" }),
+                                (0, r.jsx)(v, { wordWrap: g, setWordWrap: A, url: t, fileName: n }),
+                            ],
+                        }),
                     }),
                 ],
             }),
