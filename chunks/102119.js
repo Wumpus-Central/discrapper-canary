@@ -82,7 +82,7 @@ let M = () => {
                 n?.(b.i.DISMISS),
                     (0, h.Jp)(),
                     (0, v.U)(),
-                    t || (0, I.openUserSettings)(A.X.DISPLAY_IN_APP_ICON_CATEGORY);
+                    t || (0, I.openUserSettings)(A.X.APPEARANCE_IN_APP_ICON_CATEGORY);
             };
         return (0, r.jsxs)("div", {
             className: w.N3,

@@ -113,7 +113,7 @@ let V = () =>
                 null != t && t(k.i.DISMISS),
                     d(x.HAw.CLIENT_THEME_PREVIEW_CLOSED),
                     (0, D.D)(),
-                    n || (0, v.openUserSettings)(y.X.DISPLAY_THEME_CATEGORY);
+                    n || (0, v.openUserSettings)(y.X.APPEARANCE_THEME_CATEGORY);
             },
             p = (0, g.X)(
                 { no: G.t["3D5yo/"], "sv-SE": G.t["3D5yo/"], uk: G.t["3D5yo/"], de: G.t["3D5yo/"] },

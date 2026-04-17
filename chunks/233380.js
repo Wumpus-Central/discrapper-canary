@@ -344,7 +344,7 @@ function et(e) {
             (0, w.uk)(),
                 (0, g.Dr)(l.M.CUSTOM_THEME_COACHMARK),
                 i?.from === E.xv.SETTING
-                    ? ((0, N.openUserSettings)(v.X.DISPLAY_THEME_CATEGORY), (0, E.Jp)())
+                    ? ((0, N.openUserSettings)(v.X.APPEARANCE_THEME_CATEGORY), (0, E.Jp)())
                     : i?.from === E.xv.CLIENT_THEMES_EDITOR
                       ? (0, E.nf)(E.HP.CLIENT_THEMES)
                       : (0, E.Jp)();

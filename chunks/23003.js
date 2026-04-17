@@ -23,8 +23,8 @@ var s,
     M = a(975571),
     I = a(852218),
     P = a(161319),
-    S = a(992315),
-    N = a(788868),
+    N = a(992315),
+    S = a(788868),
     U = a(88001),
     T = a(652215),
     O = a(654487),
@@ -91,7 +91,7 @@ let eg = function () {
             );
         }, [t]),
         eb = (0, l.useCallback)(() => {
-            (0, b.A)({ subscriptionTier: N.pe.TIER_2, initialPlanId: N.gD.PREMIUM_GROUP_MONTH, analyticsLocations: t });
+            (0, b.A)({ subscriptionTier: S.pe.TIER_2, initialPlanId: S.gD.PREMIUM_GROUP_MONTH, analyticsLocations: t });
         }, [t]),
         ef = (0, E.TM)(),
         eg = M.A.getArticleURL(T.MVz.REFERRAL_PROGRAM),
@@ -198,7 +198,7 @@ let eg = function () {
                 onClick: () => {
                     {
                         let { openUserSettings: e } = a(858897);
-                        e(R.X.DISPLAY_THEME_CATEGORY, { analyticsLocations: t });
+                        e(R.X.APPEARANCE_THEME_CATEGORY, { analyticsLocations: t });
                     }
                 },
                 videoUrl: ev.yourSpace.assetUrl,
@@ -259,7 +259,7 @@ let eg = function () {
             if (null == t) throw Error(`useBentoBoxes: missing bento config for ${e}`);
             return t;
         },
-        eE = (0, S.A)(eh),
+        eE = (0, N.A)(eh),
         eM = [],
         eI = e ? null : eE[0],
         eP = eE.slice(+!e, e ? 2 : 3);
