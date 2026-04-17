@@ -153,6 +153,7 @@ function J(e) {
             isGift: J,
             excludeSKUPurchasePreviews: eo,
             loadId: eV.loadId,
+            currency: ev.loaded ? ev.currency : void 0,
         }),
         ti = null != eB ? tr[eB] : null,
         [ts, ta] = i.useState(ti),

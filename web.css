@@ -38199,6 +38199,10 @@ screen and (max-width:485px) {
     padding-inline-start: var(--space-16)
 }
 
+.currencyWrapper__054b0 {
+    margin-top: var(--space-16)
+}
+
 .container__949a0 {
     flex-direction: row;
     justify-content: space-between
@@ -43097,7 +43101,6 @@ screen and (max-width:485px) {
     margin: 12px 0
 }
 
-.currencyWrapper_b41cc5,
 .previewTotalSectionContainer_b41cc5 {
     margin-top: var(--space-16)
 }

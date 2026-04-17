@@ -1,6 +1,2 @@
 "use strict";
-e.exports = {
-    p2: "currencyWrapper_b41cc5",
-    $r: "previewTotalSectionContainer_b41cc5",
-    ST: "premiumSwitchPlanSelectText_b41cc5",
-};
+e.exports = { $: "previewTotalSectionContainer_b41cc5", S: "premiumSwitchPlanSelectText_b41cc5" };

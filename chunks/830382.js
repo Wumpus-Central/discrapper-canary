@@ -40,7 +40,7 @@ async function g(e) {
 }
 async function A(e, t, n, r) {
     let i,
-        l = { payment_source_id: n, gift: r?.isGift };
+        l = { payment_source_id: n, gift: r?.isGift, currency: r?.currency };
     (0, c.F)(e) && (l.test_mode = !0), s.h.dispatch({ type: "SKU_PURCHASE_PREVIEW_FETCH", skuId: t });
     try {
         (i = await (0, h.aP)({ url: m.Rsh.STORE_SKU_PURCHASE(t), query: l, oldFormErrors: !0, rejectWithError: !1 })),
