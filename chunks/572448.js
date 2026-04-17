@@ -13,11 +13,11 @@ var l = n(503698),
     A = n(729551),
     _ = n(58149),
     m = n(571694),
-    g = n(47167),
-    p = n(713654),
+    p = n(47167),
+    g = n(713654),
     f = n(915089),
-    x = n(263063),
-    E = n(616356),
+    E = n(263063),
+    x = n(616356),
     I = n(734057),
     C = n(71393),
     N = n(290863),
@@ -26,14 +26,14 @@ var l = n(503698),
     b = n(147925),
     y = n(652215),
     v = n(985018),
-    j = n(612005);
-let R = { top: 8, bottom: 8, left: -4, right: -4 };
+    R = n(110357);
+let j = { top: 8, bottom: 8, left: -4, right: -4 };
 function O(e) {
     let { channelState: t, toggle: n, getNumUnreadChannels: l } = e;
     return (0, i.jsx)(d.m_, {
         text: v.intl.string(v.t.iTcuma),
         children: (0, i.jsx)(c.DUT, {
-            className: s()(j.cS, { [j.yZ]: t?.collapsed }),
+            className: s()(R.cS, { [R.yZ]: t?.collapsed }),
             onClick: function () {
                 null != t &&
                     null != n &&
@@ -63,13 +63,17 @@ function L(e) {
         A = (0, a.rm)(`recents-header-${t.id}-${(0, f.GV)()}`),
         _ = u && !t.isNSFW() && null != o && "nsfw" !== o.type;
     return (0, i.jsx)(c.vN3, {
-        offset: R,
+        offset: j,
         children: (0, i.jsxs)("div", {
-            className: s()(j.ZO, { [j.b4]: _ }),
+            className: s()(R.ZO, { [R.b4]: _ }),
             ...A,
             tabIndex: 0,
             "data-recents-channel": t.id,
             onKeyDown: function (e) {
+                if (("Enter" === e.key || " " === e.key) && e.target === e.currentTarget) {
+                    e.preventDefault(), l(e);
+                    return;
+                }
                 null != d &&
                     null != o &&
                     (("ArrowRight" === e.key && o.collapsed) || ("ArrowLeft" === e.key && !o.collapsed)) &&
@@ -97,7 +101,7 @@ function D(e) {
     return (0, i.jsx)(c.DUT, {
         onClick: n,
         tabIndex: -1,
-        children: (0, i.jsx)("img", { className: j.ro, src: s, alt: "", "aria-hidden": !0 }),
+        children: (0, i.jsx)("img", { className: R.ro, src: s, alt: "", "aria-hidden": !0 }),
     });
 }
 function U(e) {
@@ -105,11 +109,11 @@ function U(e) {
         l = (0, r.bG)([C.A], () => C.A.getGuild(t.guild_id));
     return null == l
         ? null
-        : (0, i.jsx)(x.Ay, {
+        : (0, i.jsx)(E.Ay, {
               "aria-hidden": !0,
-              className: j.$f,
+              className: R.$f,
               guild: l,
-              size: x.Ay.Sizes.MEDIUM,
+              size: E.Ay.Sizes.MEDIUM,
               active: !0,
               onClick: n,
               tabIndex: -1,
@@ -120,38 +124,38 @@ function G(e) {
         a = (0, r.bG)([C.A], () => C.A.getGuild(t.guild_id)),
         d = (0, r.bG)([I.A], () => I.A.getChannel(t.parent_id)),
         u = (0, r.bG)([T.Ay], () => T.Ay.getIsMentionLowImportance(t.id)),
-        h = (0, p.gU)(t, a),
-        A = (0, g.Ay)(t, !1),
-        _ = (0, g.Ay)(d),
+        h = (0, g.gU)(t, a),
+        A = (0, p.Ay)(t, !1),
+        _ = (0, p.Ay)(d),
         m = null == d ? a?.name : `${a?.name} › ${_}`,
         f = t.isMultiUserDM()
             ? v.intl.formatToPlainString(v.t.CxSA5N, { members: t.recipients.length + 1 })
             : t.isPrivate()
               ? (0, i.jsx)(P, { channel: t })
-              : (0, i.jsx)(c.DUT, { className: s()(j.W$, j.J5), onClick: n, children: m });
+              : (0, i.jsx)(c.DUT, { className: s()(R.W$, R.J5), onClick: n, children: m });
     return (0, i.jsxs)("div", {
-        className: j.yP,
+        className: R.yP,
         children: [
             (0, i.jsx)(c.Heading, {
                 variant: "heading-md/semibold",
-                className: j.un,
+                className: R.un,
                 children: (0, i.jsxs)(c.DUT, {
-                    className: j.HA,
+                    className: R.HA,
                     onClick: n,
                     children: [
                         t.isThread() || t.isGroupDM() || null == h
                             ? null
                             : (0, i.jsx)(h, {
-                                  className: t.isForumLikeChannel() ? j.dj : void 0,
+                                  className: t.isForumLikeChannel() ? R.dj : void 0,
                                   width: 18,
                                   height: 18,
                                   size: "custom",
                                   color: "currentColor",
                               }),
-                        (0, i.jsx)("span", { className: j.je, children: A }),
+                        (0, i.jsx)("span", { className: R.je, children: A }),
                         null != l && l > 0
                             ? (0, i.jsx)("div", {
-                                  className: j.qS,
+                                  className: R.qS,
                                   children: (0, i.jsx)(c.hVq, {
                                       count: l,
                                       color: u
@@ -163,7 +167,7 @@ function G(e) {
                     ],
                 }),
             }),
-            (0, i.jsx)(c.Text, { color: "text-default", variant: "text-xs/normal", className: j.PL, children: f }),
+            (0, i.jsx)(c.Text, { color: "text-default", variant: "text-xs/normal", className: R.PL, children: f }),
         ],
     });
 }
@@ -174,13 +178,13 @@ function P(e) {
             status: l,
             activities: s,
             applicationStream: a,
-        } = (0, r.cf)([S.default, N.A, E.A], () => {
+        } = (0, r.cf)([S.default, N.A, x.A], () => {
             let e = S.default.getUser(t.getRecipientId());
             return {
                 user: e,
                 status: null != e ? N.A.getStatus(e.id) : null,
                 activities: null != e ? N.A.getActivities(e.id) : null,
-                applicationStream: null != e ? E.A.getAnyStreamForUser(e.id) : null,
+                applicationStream: null != e ? x.A.getAnyStreamForUser(e.id) : null,
             };
         }),
         { voiceChannel: o } = (0, h.A)({ userId: n?.id });
