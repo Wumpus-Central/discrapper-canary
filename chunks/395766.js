@@ -14,7 +14,6 @@ e.exports = {
     tU: "fauxDisabled_e131a9",
     rK: "buttonActive_e131a9",
     bk: "buttonContents_e131a9",
-    iA: "buttonIcon_e131a9",
     ij: "withText_e131a9",
     oN: "voicePanelIntroductionHeader_e131a9",
     uf: "voicePanelIntroductionText_e131a9",

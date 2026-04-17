@@ -1,6 +1,5 @@
 "use strict";
-n.d(t, { gT: () => h, hJ: () => g, mn: () => _, px: () => A, qx: () => m, rY: () => E, tR: () => f, w: () => p }),
-    n(321073);
+n.d(t, { mn: () => _, px: () => E, qx: () => h, rY: () => m, tR: () => f, w: () => p }), n(321073);
 var r = n(311907),
     i = n(517164),
     s = n(20805),
@@ -54,11 +53,7 @@ function p(e) {
         i = (0, d.W)();
     return null != i ? [...n, i] : n;
 }
-function h(e) {
-    let { userIds: t } = e;
-    return p({ userIds: t }).length > 0;
-}
-function m() {
+function h() {
     return (0, r.yK)([a.Ay, c.A], () => {
         let e = [];
         for (let t of a.Ay.getGamesSeen(!1, !1))
@@ -69,7 +64,7 @@ function m() {
         return e;
     });
 }
-function E() {
+function m() {
     return (0, r.yK)([a.Ay, c.A], () => {
         let e = [];
         for (let t of a.Ay.getRunningGames())
@@ -80,10 +75,7 @@ function E() {
         return e;
     }, []);
 }
-function g() {
-    return E().length > 0;
-}
-function A() {
+function E() {
     let e = (0, r.bG)([l.A], () => l.A.getGuildIds());
     return (0, r.yK)([c.A], () => {
         let t = [];
