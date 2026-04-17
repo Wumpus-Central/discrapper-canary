@@ -1,8 +1,8 @@
 n.d(t, { M: () => x, X: () => C });
 var i = n(627968),
     l = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     r = n(311907),
     o = n(265872),
     c = n(990078),
@@ -18,7 +18,7 @@ var i = n(627968),
     E = n(391308);
 function C(e) {
     let t,
-        { applicationId: n, hideApplicationName: a } = e,
+        { applicationId: n, hideApplicationName: s } = e,
         o = (0, m.A)({
             location: "SocialLayerCommerceGameDetailsButton",
             applicationId: n,
@@ -46,23 +46,15 @@ function C(e) {
     return (0, i.jsx)(c.m, {
         text: C,
         children: (0, i.jsxs)(d.DUT, {
-            className: s()(E.dY, E.ac, { [E.M7]: a }),
+            className: a()(E.dY, E.ac, { [E.M7]: s }),
             onClick: o,
             "aria-label": C,
-            children: [
-                p(),
-                !a &&
-                    (0, i.jsx)(d.Text, {
-                        variant: "text-sm/normal",
-                        className: E.Wk,
-                        children: f.intl.format(f.t.Sq9xJ7, { game: A }),
-                    }),
-            ],
+            children: [p(), !s && (0, i.jsx)(d.Text, { variant: "text-sm/normal", className: E.Wk, children: A })],
         }),
     });
 }
 function x(e) {
-    let { userId: t, applicationId: n, channel: a, hideWhenInactive: r, idle: u } = e,
+    let { userId: t, applicationId: n, channel: s, hideWhenInactive: r, idle: u } = e,
         [h, m] = l.useState(!1),
         g = l.useRef(null),
         _ = l.useCallback(() => m(!0), []),
@@ -79,7 +71,7 @@ function x(e) {
         renderPopout: () =>
             (0, i.jsx)(d.NPJ, {
                 theme: p.NJ.DARKER,
-                children: (e) => (0, i.jsx)(A.Z, { className: e, userId: t, channel: a, applicationId: n, onClose: C }),
+                children: (e) => (0, i.jsx)(A.Z, { className: e, userId: t, channel: s, applicationId: n, onClose: C }),
             }),
         children: () =>
             (0, i.jsx)("div", {
@@ -88,7 +80,7 @@ function x(e) {
                     text: x,
                     shouldShow: !h && void 0,
                     children: (0, i.jsx)("div", {
-                        className: s()(E.V7, { [E.kl]: r, [E.N7]: u }),
+                        className: a()(E.V7, { [E.kl]: r, [E.N7]: u }),
                         children: (0, i.jsx)(d.K0, {
                             size: "sm",
                             variant: "overlay-secondary",
