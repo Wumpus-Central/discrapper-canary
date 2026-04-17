@@ -883,6 +883,14 @@ let { Themes: r } = n(680049).zv,
                     [r.DARKER]: { raw: "NEUTRAL_82", opacity: 1 },
                 },
             },
+            MOBILE_FLOATINGBAR_BACKGROUND: {
+                "mobile-visual-refresh": {
+                    [r.DARK]: { raw: "NEUTRAL_66", opacity: 1 },
+                    [r.LIGHT]: { raw: "NEUTRAL_2", opacity: 1 },
+                    [r.MIDNIGHT]: { raw: "NEUTRAL_100", opacity: 1 },
+                    [r.DARKER]: { raw: "NEUTRAL_82", opacity: 1 },
+                },
+            },
             MOBILE_GUILDBAR_ICON_BACKGROUND_DEFAULT: {
                 "mobile-visual-refresh": {
                     [r.DARK]: { raw: "OPACITY_8", opacity: 0.0784313725490196 },

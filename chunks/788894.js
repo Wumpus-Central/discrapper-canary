@@ -959,6 +959,14 @@ let r = {
                     return 24;
                 },
             },
+            YOU_BAR_BORDER_RADIUS: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 28;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 16;
+                    return 28;
+                },
+            },
         },
         modal: {
             HORIZONTAL_PADDING: { resolve: () => 24 },

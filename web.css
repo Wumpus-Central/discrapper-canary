@@ -67501,6 +67501,7 @@ html.disable-forced-colors * {
     --mobile-voice-panel-gutter: 12px;
     --mobile-voice-panel-padding: 12px;
     --mobile-voice-tile-border-radius: 24px;
+    --mobile-you-bar-border-radius: 28px;
     --modal-horizontal-padding: 24px;
     --modal-vertical-padding: 16px;
     --modal-width-large: 800px;
@@ -67614,7 +67615,8 @@ html.disable-forced-colors * {
     --mobile-voice-panel-disconnect-button-min-width: 64px;
     --mobile-voice-panel-gutter: 16px;
     --mobile-voice-panel-padding: 16px;
-    --mobile-voice-tile-border-radius: 12px
+    --mobile-voice-tile-border-radius: 12px;
+    --mobile-you-bar-border-radius: 16px
 }
 
 .guild-item-spacing {
