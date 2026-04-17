@@ -257,7 +257,7 @@ function v() {
                                   className: C.p$,
                                   children: [
                                       (0, i.jsx)(o.G8R, {
-                                          darkSrc: n(29093),
+                                          darkSrc: n(251474),
                                           lightSrc: n(993507),
                                           width: 256,
                                           height: 212,
