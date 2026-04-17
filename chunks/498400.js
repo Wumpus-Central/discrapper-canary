@@ -71,29 +71,31 @@ let w = function (e) {
         }, [n, z, Y]);
     let Q = (0, a.zy)(),
         J = s.useRef(!1),
-        $ = V && B && X;
-    s.useEffect(() => {
-        if (J.current || !$) return;
-        let e = new URLSearchParams(Q.search).get("checkout");
-        if (null == e) return;
-        let t = { nitro_basic: M.pe.TIER_0, nitro: M.pe.TIER_2 }[e];
-        null != t &&
-            ((J.current = !0),
-            (0, b.bG)(U.BVt.APPLICATION_STORE),
-            (0, E.A)({ subscriptionTier: t, analyticsLocations: w }));
-    }, [$, Q.search, w]);
-    let ee = (0, o.bG)([C.A], () => C.A.enabled),
-        et = t === M.Mf.ApplicationStoreHome,
-        en = ee
+        $ = V && B && X,
+        [ee, et] = s.useState($);
+    $ && !ee && et(!0),
+        s.useEffect(() => {
+            if (J.current || !$) return;
+            let e = new URLSearchParams(Q.search).get("checkout");
+            if (null == e) return;
+            let t = { nitro_basic: M.pe.TIER_0, nitro: M.pe.TIER_2 }[e];
+            null != t &&
+                ((J.current = !0),
+                (0, b.bG)(U.BVt.APPLICATION_STORE),
+                (0, E.A)({ subscriptionTier: t, analyticsLocations: w }));
+        }, [$, Q.search, w]);
+    let en = (0, o.bG)([C.A], () => C.A.enabled),
+        ei = t === M.Mf.ApplicationStoreHome,
+        es = en
             ? (0, i.jsx)(m.A, {})
             : n
               ? (0, i.jsx)(T.uK, {})
-              : et && q
+              : ei && q
                 ? (0, i.jsx)(x.f5, { value: w, children: (0, i.jsx)(R.Ay, { userId: H }) })
-                : V && X && B
+                : ee
                   ? null
                   : (0, i.jsx)("div", { className: r()(k.kL, k.Lq), children: (0, i.jsx)(d.y$y, {}) });
-    return null != en
-        ? (0, i.jsxs)(i.Fragment, { children: [et && (0, i.jsx)(g.A, {}), en] })
+    return null != es
+        ? (0, i.jsxs)(i.Fragment, { children: [ei && (0, i.jsx)(g.A, {}), es] })
         : (0, i.jsx)(x.f5, { value: w, children: (0, i.jsx)(G.A, { entrypoint: t }) });
 };

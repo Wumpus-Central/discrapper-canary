@@ -62,7 +62,7 @@ let v = a.Ay.connectStores([T.default], () => ({ user: T.default.getCurrentUser(
                                     (0, i.jsx)(_.A.Title, { children: b.intl.string(b.t.Ipxkog) }),
                                 ],
                             }),
-                            u && (0, i.jsx)(x.O, { targetElementRef: T }),
+                            u && l && (0, i.jsx)(x.O, { targetElementRef: T }),
                         ],
                     }),
             }),
