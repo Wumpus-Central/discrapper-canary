@@ -125,7 +125,7 @@ function N(e, t, s, n) {
                     .value(),
             ),
             canLoadMore: g,
-            loading: (m || j) && h,
+            loading: (m || j) && h && c.A.can(v.xB.READ_MESSAGE_HISTORY, e),
             loadMore: T,
         }
     );
