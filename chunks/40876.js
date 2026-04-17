@@ -583,10 +583,6 @@ let i = {
         inlineRequire: () => n(378187).A,
         neverLoadBeforeConnectionOpen: !0,
     },
-    PremiumGroupManager: {
-        actions: ["POST_CONNECTION_OPEN", "BILLING_SUBSCRIPTION_FETCH_SUCCESS"],
-        inlineRequire: () => n(817063).A,
-    },
     QuestFetchManager: {
         actions: [
             "QUESTS_FETCH_CURRENT_QUESTS_BEGIN",

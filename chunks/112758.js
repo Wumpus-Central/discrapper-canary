@@ -127,7 +127,7 @@ function M(e, t, l, o) {
                             n.e("64879"),
                             n.e("15135"),
                             n.e("1636"),
-                            n.e("2177"),
+                            n.e("65689"),
                         ]).then(n.bind(n, 547983));
                         return (n) =>
                             (0, i.jsx)(e, { ...n, message: r, channel: a, mediaItem: t, shouldHideMediaOptions: o });
