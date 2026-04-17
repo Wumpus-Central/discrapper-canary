@@ -251,6 +251,62 @@ let { Themes: r } = n(680049).zv,
                     [r.DARKER]: { raw: "OPACITY_12", opacity: 0.12156862745098039 },
                 },
             },
+            CHAT_INPUT_ACTION_BUTTON_BACKGROUND: {
+                "mobile-visual-refresh": {
+                    [r.DARK]: { raw: "TRANSPARENT", opacity: 0 },
+                    [r.LIGHT]: { raw: "TRANSPARENT", opacity: 0 },
+                    [r.MIDNIGHT]: { raw: "TRANSPARENT", opacity: 0 },
+                    [r.DARKER]: { raw: "TRANSPARENT", opacity: 0 },
+                },
+            },
+            CHAT_INPUT_ACTION_BUTTON_ICON_DEFAULT_TINT: {
+                "mobile-visual-refresh": {
+                    [r.DARK]: { raw: "NEUTRAL_16", opacity: 1 },
+                    [r.LIGHT]: { raw: "NEUTRAL_47", opacity: 1 },
+                    [r.MIDNIGHT]: { raw: "NEUTRAL_27", opacity: 1 },
+                    [r.DARKER]: { raw: "NEUTRAL_23", opacity: 1 },
+                },
+            },
+            CHAT_INPUT_ACTION_ICON_ACTIVE_TINT: {
+                "mobile-visual-refresh": {
+                    [r.DARK]: { raw: "NEUTRAL_1", opacity: 1 },
+                    [r.LIGHT]: { raw: "NEUTRAL_76", opacity: 1 },
+                    [r.MIDNIGHT]: { raw: "NEUTRAL_8", opacity: 1 },
+                    [r.DARKER]: { raw: "NEUTRAL_2", opacity: 1 },
+                },
+            },
+            CHAT_INPUT_BACKGROUND: {
+                "mobile-visual-refresh": {
+                    [r.DARK]: { raw: "OPACITY_BLACK_8", opacity: 0.0784313725490196 },
+                    [r.LIGHT]: { raw: "OPACITY_BLACK_1", opacity: 0.0196078431372549 },
+                    [r.MIDNIGHT]: { raw: "OPACITY_BLACK_12", opacity: 0.12156862745098039 },
+                    [r.DARKER]: { raw: "OPACITY_BLACK_12", opacity: 0.12156862745098039 },
+                },
+            },
+            CHAT_INPUT_ICON_DEFAULT_TINT: {
+                "mobile-visual-refresh": {
+                    [r.DARK]: { raw: "NEUTRAL_16", opacity: 1 },
+                    [r.LIGHT]: { raw: "NEUTRAL_47", opacity: 1 },
+                    [r.MIDNIGHT]: { raw: "NEUTRAL_27", opacity: 1 },
+                    [r.DARKER]: { raw: "NEUTRAL_23", opacity: 1 },
+                },
+            },
+            CHAT_INPUT_SEND_BUTTON_ACTIVE_BACKGROUND: {
+                "mobile-visual-refresh": {
+                    [r.DARK]: { raw: "BLURPLE_50", opacity: 1 },
+                    [r.LIGHT]: { raw: "BLURPLE_50", opacity: 1 },
+                    [r.MIDNIGHT]: { raw: "BLURPLE_50", opacity: 1 },
+                    [r.DARKER]: { raw: "BLURPLE_50", opacity: 1 },
+                },
+            },
+            CHAT_INPUT_SEND_BUTTON_ICON_ACTIVE_TINT: {
+                "mobile-visual-refresh": {
+                    [r.DARK]: { raw: "NEUTRAL_1", opacity: 1 },
+                    [r.LIGHT]: { raw: "NEUTRAL_1", opacity: 1 },
+                    [r.MIDNIGHT]: { raw: "NEUTRAL_1", opacity: 1 },
+                    [r.DARKER]: { raw: "NEUTRAL_1", opacity: 1 },
+                },
+            },
             CHECKBOX_BACKGROUND_DEFAULT: {
                 "mobile-visual-refresh": {
                     [r.DARK]: { raw: "OPACITY_BLACK_8", opacity: 0.0784313725490196 },

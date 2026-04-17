@@ -185,6 +185,14 @@ let r = {
                     return 12;
                 },
             },
+            CHAT_INPUT_ACTION_BUTTON_GAP: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 0;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 8;
+                    return 0;
+                },
+            },
             CHAT_INPUT_ACTION_BUTTON_MARGIN: {
                 resolve(e) {
                     let { enabledExperiments: t } = e;
@@ -199,6 +207,22 @@ let r = {
                     if (0 === t.length) return 40;
                     for (let e of t) if ("mobile-visual-refresh" === e) return 32;
                     return 40;
+                },
+            },
+            CHAT_INPUT_ACTION_ICON_ACTIVE_TINT: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return "text-brand";
+                    for (let e of t) if ("mobile-visual-refresh" === e) return "icon-strong";
+                    return "text-brand";
+                },
+            },
+            CHAT_INPUT_ACTION_ICON_PIXEL_SIZE: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 24;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 20;
+                    return 24;
                 },
             },
             CHAT_INPUT_BORDER_RADIUS: {
@@ -273,6 +297,14 @@ let r = {
                     return 0;
                 },
             },
+            CHAT_INPUT_ICON_DEFAULT_TINT: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return "interactive-text-default";
+                    for (let e of t) if ("mobile-visual-refresh" === e) return "interactive-icon-default";
+                    return "interactive-text-default";
+                },
+            },
             CHAT_INPUT_ICON_SIZE: {
                 resolve(e) {
                     let { enabledExperiments: t } = e;
@@ -281,7 +313,30 @@ let r = {
                     return "medium";
                 },
             },
-            CHAT_INPUT_PILL_PADDING: { resolve: () => 2 },
+            CHAT_INPUT_PILL_BORDER_WIDTH: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 0;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 1;
+                    return 0;
+                },
+            },
+            CHAT_INPUT_PILL_MARGIN_HORIZONTAL: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 4;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 8;
+                    return 4;
+                },
+            },
+            CHAT_INPUT_PILL_PADDING: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 2;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 0;
+                    return 2;
+                },
+            },
             CHAT_INPUT_SPACE_BOTTOM: {
                 resolve(e) {
                     let { enabledExperiments: t } = e;
