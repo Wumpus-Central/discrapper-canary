@@ -61,17 +61,17 @@ n.d(t, {
     dm: () => eY,
     e: () => $,
     eK: () => T,
-    eh: () => ex,
+    eh: () => eP,
     gs: () => S,
     hD: () => eR,
     hH: () => es,
     he: () => eE,
-    iM: () => P,
+    iM: () => x,
     j0: () => e3,
     j7: () => ei,
     jP: () => eT,
     jW: () => eb,
-    kt: () => eP,
+    kt: () => ex,
     l_: () => ep,
     m$: () => eW,
     n6: () => ee,
@@ -175,6 +175,12 @@ let v = (0, d.c$)(
         "enableSummaryReminderNotifications",
         (e) => e?.value ?? !0,
         (e) => o._t.create({ value: !!e }),
+    ),
+    (0, d.c$)(
+        "notifications",
+        "enableVoiceActivityNotifications",
+        (e) => e?.value ?? !0,
+        (e) => o._t.create({ value: !!e }),
     );
 let C = (0, d.c$)(
         "notifications",
@@ -230,23 +236,23 @@ let L = (0, d.c$)(
         (e) => e ?? "0",
         (e) => e,
     ),
-    x = [],
-    P = (0, d.c$)(
+    P = [],
+    x = (0, d.c$)(
         "textAndImages",
         "emojiPickerCollapsedSections",
-        (e) => e ?? x,
+        (e) => e ?? P,
         (e) => e,
     ),
     k = (0, d.c$)(
         "textAndImages",
         "stickerPickerCollapsedSections",
-        (e) => e ?? x,
+        (e) => e ?? P,
         (e) => e,
     ),
     U = (0, d.c$)(
         "textAndImages",
         "soundboardPickerCollapsedSections",
-        (e) => e ?? x,
+        (e) => e ?? P,
         (e) => e,
     ),
     G = (0, d.c$)(
@@ -619,7 +625,7 @@ let eM = (0, d.Mt)(
         "appearance",
         "developerMode",
     ),
-    ex = (0, d.c$)(
+    eP = (0, d.c$)(
         "appearance",
         "clientThemeSettings",
         (e) => ({
@@ -649,7 +655,7 @@ let eM = (0, d.Mt)(
         }),
         { comparator: r.isEqual },
     ),
-    eP = (0, d.Tg)(
+    ex = (0, d.Tg)(
         (0, d.Mt)(
             (0, d.c$)(
                 "textAndImages",
