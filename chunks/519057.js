@@ -719,7 +719,7 @@ let e$ = {
         predicate: () => {
             if (!A.A.getConfig({ location: "NoticeStore" }).enabled) return !1;
             let e = null != et.A.getAccount(null, eP.fg2.RIOT_GAMES),
-                t = null !== et.A.getAccount(null, eP.fg2.LEAGUE_OF_LEGENDS);
+                t = null != et.A.getAccount(null, eP.fg2.LEAGUE_OF_LEGENDS);
             if (eQ(eP.kqX.RIOT_MIGRATION) || (0, T.k8)(o.M.RIOT_CONNECTION_DEPRECATION_DISABLE) || (!e && !t))
                 return !1;
             let n = _.A.get(eP.fg2.LEAGUE_OF_LEGENDS),
