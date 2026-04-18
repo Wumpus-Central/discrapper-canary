@@ -1,21 +1,17 @@
 "use strict";
-n.d(t, { $F: () => c, Ay: () => u, lI: () => l });
-var r = n(311907),
-    i = n(734057),
-    a = n(576705),
+n.d(t, { Ay: () => l, lI: () => o }), n(311907);
+var r = n(734057),
+    i = n(576705),
     s = n(309010),
-    o = n(652215);
-function l() {
+    a = n(652215);
+function o() {
     let e = s.A.getVoiceChannelId();
-    return u(i.A.getChannel(e));
+    return l(r.A.getChannel(e));
 }
-function u(e) {
+function l(e) {
     if (null == e) return !1;
-    if (o.kvI.CALLABLE.has(e.type)) return !0;
-    let t = a.A.can(o.xBc.USE_SOUNDBOARD, e),
-        n = a.A.can(o.xBc.SPEAK, e);
+    if (a.kvI.CALLABLE.has(e.type)) return !0;
+    let t = i.A.can(a.xBc.USE_SOUNDBOARD, e),
+        n = i.A.can(a.xBc.SPEAK, e);
     return e.isGuildVoiceOrThread() && t && n;
-}
-function c(e) {
-    return (0, r.bG)([a.A], () => u(e), [e]);
 }
