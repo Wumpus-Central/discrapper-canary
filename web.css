@@ -20343,10 +20343,11 @@ img.thumbnail__0f2e8 {
 }
 
 .badgeLabel_aeaaeb {
+    align-items: center;
     border-radius: 4px;
     display: flex;
     flex-direction: row;
-    gap: 4px;
+    gap: 6px;
     padding: 4px 8px;
     text-transform: uppercase
 }
@@ -20362,8 +20363,6 @@ img.thumbnail__0f2e8 {
 .newlyAddedBadgeIcon_aeaaeb {
     color: #fff;
     height: 14px;
-    margin-block: 2px 0;
-    margin-inline: 0 2px;
     width: 14px
 }
 
