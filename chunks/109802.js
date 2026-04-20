@@ -2,14 +2,14 @@
 n.d(t, { e: () => p, q: () => f });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(421380),
     l = n(397927),
     u = n(235986),
     c = n(821589),
     d = n(985018),
-    _ = n(705848);
+    _ = n(797525);
 let f = { DEFAULT: "default", SUCCESS: "success", ERROR: "error" };
 class p extends i.PureComponent {
     inputRef = i.createRef();
@@ -23,10 +23,10 @@ class p extends i.PureComponent {
         this.inputRef.current?.select();
     }
     renderInput(e) {
-        let { value: t, mode: n, autoFocus: i, spellCheck: a, inputClassName: o, placeholder: l } = this.props,
+        let { value: t, mode: n, autoFocus: i, spellCheck: s, inputClassName: o, placeholder: l } = this.props,
             u = this.context?.titleId;
         return (0, r.jsx)("input", {
-            className: s()((0, c.t)(_, "input", n), o, { [_.inputHidden]: e }),
+            className: a()((0, c.t)(_, "input", n), o, { [_.inputHidden]: e }),
             ref: this.inputRef,
             type: "text",
             value: t,
@@ -34,7 +34,7 @@ class p extends i.PureComponent {
             readOnly: !0,
             "aria-labelledby": u,
             autoFocus: i,
-            spellCheck: a,
+            spellCheck: s,
             placeholder: l,
         });
     }
@@ -44,12 +44,12 @@ class p extends i.PureComponent {
                 text: t = d.intl.string(d.t.OpuAlK),
                 mode: n,
                 hideMessage: i,
-                className: a,
+                className: s,
                 buttonLook: p,
                 supportsCopy: h,
                 disabled: m,
             } = this.props,
-            g = null != i;
+            E = null != i;
         switch (n) {
             case f.SUCCESS:
                 e = o.XD.GREEN;
@@ -64,16 +64,17 @@ class p extends i.PureComponent {
             focusTarget: this.inputRef,
             ringTarget: this.containerRef,
             children: (0, r.jsx)("div", {
-                className: s()((0, c.t)(_, "copyInput", n), a),
+                className: a()((0, c.t)(_, "copyInput", n), s),
                 ref: this.containerRef,
+                "data-disabled": m,
                 children: (0, r.jsxs)(u.A, {
                     className: _.layout,
                     children: [
                         (0, r.jsxs)(u.A, {
                             className: _.inputWrapper,
                             children: [
-                                this.renderInput(g),
-                                g ? (0, r.jsx)("div", { className: _.hiddenMessage, children: i }) : null,
+                                this.renderInput(E),
+                                E ? (0, r.jsx)("div", { className: _.hiddenMessage, children: i }) : null,
                             ],
                         }),
                         h

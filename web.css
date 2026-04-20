@@ -3523,7 +3523,9 @@
     max-width: var(--custom-description-max-width)
 }
 
-.container__5a838[data-disabled=true] {
+.container__5a838[data-disabled=true] .description__5a838,
+.container__5a838[data-disabled=true] .helperTextContainer__5a838,
+.container__5a838[data-disabled=true] .label__5a838 {
     opacity: .5
 }
 
@@ -4324,7 +4326,8 @@
 }
 
 .container__3f21e.disabled__3f21e {
-    cursor: not-allowed
+    cursor: not-allowed;
+    opacity: .5
 }
 
 .container__3f21e.checked__3f21e {
@@ -5059,7 +5062,8 @@
 }
 
 .selectField__0edde[data-disabled=true] {
-    cursor: not-allowed !important
+    cursor: not-allowed !important;
+    opacity: .5
 }
 
 .selectButton__0edde,
@@ -51549,6 +51553,18 @@ screen and (max-width:485px) {
     overflow: hidden;
     position: relative;
     transition: border-color .2s ease-in-out
+}
+
+.copyInput_fffc15[data-disabled=true] {
+    cursor: not-allowed
+}
+
+.copyInput_fffc15[data-disabled=true] .inputWrapper_fffc15 {
+    opacity: .5
+}
+
+.copyInput_fffc15[data-disabled=true] .input_fffc15 {
+    cursor: not-allowed
 }
 
 .copyInputDefault_fffc15,

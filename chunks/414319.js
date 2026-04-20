@@ -1,8 +1,130 @@
-a.d(l, { s: () => i });
-var t = a(627968),
-    o = a(397927),
+a.d(l, { s: () => u });
+var t = a(627968);
+a(64700);
+var o = a(397927),
     n = a(121830);
-let i = {
+let i = [
+        { label: "Aardvark", value: "aardvark", id: "aardvark" },
+        { label: "Cat", value: "cat", id: "cat" },
+        { label: "Dog", value: "dog", id: "dog" },
+    ],
+    s = [1752220, 3066993, 3447003, 0x9b59b6, 0xe91e63, 0xf1c40f, 0xe67e22, 0xe74c3c];
+function r(e) {
+    let { title: l, children: a, auxiliaryContentPosition: n } = e;
+    return (0, t.jsx)(o.D0$, {
+        disabled: !0,
+        label: l,
+        description: "This row is disabled at the Field level and at the control level.",
+        helperText:
+            "Every leaf (label, description, helper text, control) should render at a single 0.5 opacity layer.",
+        auxiliaryContentPosition: n,
+        children: a,
+    });
+}
+function d(e) {
+    let { auxiliaryContentPosition: l } = e;
+    return (0, t.jsxs)(o.BJc, {
+        direction: "vertical",
+        gap: 24,
+        children: [
+            (0, t.jsx)(r, {
+                title: "Button",
+                auxiliaryContentPosition: l,
+                children: (0, t.jsx)("div", {
+                    children: (0, t.jsx)(o.Button, { text: "Remove", variant: "critical-primary", disabled: !0 }),
+                }),
+            }),
+            (0, t.jsx)(r, {
+                title: "TextButton",
+                auxiliaryContentPosition: l,
+                children: (0, t.jsx)("div", {
+                    children: (0, t.jsx)(o.QWc, { text: "View details", variant: "primary", disabled: !0 }),
+                }),
+            }),
+            (0, t.jsx)(r, {
+                title: "Switch",
+                auxiliaryContentPosition: l,
+                children: (0, t.jsx)(o.dOG, {
+                    label: "Allow direct messages",
+                    disabled: !0,
+                    checked: !1,
+                    onChange: () => {},
+                }),
+            }),
+            (0, t.jsx)(r, {
+                title: "Checkbox",
+                auxiliaryContentPosition: l,
+                children: (0, t.jsx)(o.Checkbox, {
+                    label: "Accept terms",
+                    disabled: !0,
+                    checked: !1,
+                    onChange: () => {},
+                    value: "accept-terms",
+                }),
+            }),
+            (0, t.jsx)(r, {
+                title: "InputField",
+                auxiliaryContentPosition: l,
+                children: (0, t.jsx)(o.FON, {
+                    disabled: !0,
+                    children: (0, t.jsx)(o.Text, {
+                        variant: "text-md/normal",
+                        color: "text-subtle",
+                        children: "Inner InputField content",
+                    }),
+                }),
+            }),
+            (0, t.jsx)(r, {
+                title: "Select",
+                auxiliaryContentPosition: l,
+                children: (0, t.jsx)(o.l6P, {
+                    label: "Animal",
+                    hideLabel: !0,
+                    options: i,
+                    selectionMode: "single",
+                    onSelectionChange: () => {},
+                    disabled: !0,
+                }),
+            }),
+            (0, t.jsx)(r, {
+                title: "CopyInput",
+                auxiliaryContentPosition: l,
+                children: (0, t.jsx)(o.e2O, {
+                    value: "https://discord.gg/disabled-example",
+                    supportsCopy: !0,
+                    onCopy: () => {},
+                    disabled: !0,
+                }),
+            }),
+            (0, t.jsx)(r, {
+                title: "ColorPicker",
+                auxiliaryContentPosition: l,
+                children: (0, t.jsx)(o.skP, {
+                    defaultColor: s[0],
+                    customColor: null,
+                    colors: s,
+                    value: s[0],
+                    disabled: !0,
+                    onChange: () => {},
+                    renderDefaultButton: (e) => (0, t.jsx)(o.fyo, { ...e }),
+                    renderCustomButton: (e) => (0, t.jsx)(o.nJu, { ...e }),
+                }),
+            }),
+            (0, t.jsx)(r, {
+                title: "TextInput",
+                auxiliaryContentPosition: l,
+                children: (0, t.jsx)(o.ksK, {
+                    label: "Username",
+                    hideLabel: !0,
+                    value: "disabled-user",
+                    onChange: () => {},
+                    disabled: !0,
+                }),
+            }),
+        ],
+    });
+}
+let u = {
     title: "Forms",
     stories: [
         {
@@ -77,6 +199,29 @@ let i = {
                     ],
                 },
                 showIcon: { type: "boolean", label: "Show Icon", defaultValue: !1 },
+            },
+        },
+        {
+            name: "Field (Disabled, under-control)",
+            id: "field-disabled-under-control",
+            component: d,
+            controls: {
+                auxiliaryContentPosition: {
+                    type: "select",
+                    label: "Auxiliary Content Position",
+                    defaultValue: "under-control",
+                    options: [
+                        { label: "Under Control (default)", value: "under-control" },
+                        { label: "Under Label", value: "under-label" },
+                    ],
+                },
+            },
+        },
+        {
+            name: "Field (Disabled, under-label)",
+            id: "field-disabled-under-label",
+            component: function () {
+                return (0, t.jsx)(d, { auxiliaryContentPosition: "under-label" });
             },
         },
     ],
