@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Q: () => i });
+n.d(t, { QW: () => i });
 let r = (0, n(945810).mj)({
         name: "2026-04-profile-frame-gifting",
         kind: "user",
