@@ -1,16 +1,15 @@
 "use strict";
-n.d(t, { F0: () => f, PM: () => d, Tr: () => p, sw: () => _, t4: () => u });
-var r = n(627968),
-    i = n(64700),
-    s = n(942381),
-    a = n(265690);
-let [o, l] = (0, n(786300).A)();
-function u(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.x;
-    return l()(e, t);
+n.d(t, { F0: () => d, Ni: () => a, Tr: () => _, sw: () => c, t4: () => l, y$: () => u });
+var r = n(64700),
+    i = n(942381),
+    s = n(265690);
+let [a, o] = (0, n(786300).A)();
+function l(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
+    return o()(e, t);
 }
-function c() {
-    return (0, a.h)(
+function u() {
+    return (0, s.h)(
         (e) => ({
             selectedSkuId: void 0,
             selectedPlanId: void 0,
@@ -24,35 +23,33 @@ function c() {
             },
             renewalInvoicePreview: null,
             setRenewalInvoicePreview: (t) => e({ renewalInvoicePreview: t ?? null }),
+            invoiceOrderContext: null,
+            invoiceOrderCheckoutSessionId: null,
+            invoiceOrderPreviewPaymentSourceId: null,
         }),
-        s.x,
+        i.x,
     );
 }
-function d(e) {
-    let { children: t } = e,
-        [n] = i.useState(c);
-    return (0, r.jsx)(o, { value: n, children: t });
-}
-let _ = () =>
-        u((e) => {
+let c = () =>
+        l((e) => {
             let { checkoutInvoicePreview: t } = e;
             return t;
         }),
-    f = (e) => {
-        let t = u((e) => {
+    d = (e) => {
+        let t = l((e) => {
             let { setCheckoutInvoicePreview: t } = e;
             return t;
         });
-        i.useEffect(() => {
+        r.useEffect(() => {
             t(e);
         }, [e, t]);
     },
-    p = (e) => {
-        let t = u((e) => {
+    _ = (e) => {
+        let t = l((e) => {
             let { setRenewalInvoicePreview: t } = e;
             return t;
         });
-        i.useEffect(() => {
+        r.useEffect(() => {
             t(e);
         }, [e, t]);
     };
