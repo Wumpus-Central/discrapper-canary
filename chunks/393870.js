@@ -14,70 +14,76 @@ var r = n(106778),
     E = n(450481),
     h = n(442759),
     A = n(306710),
-    O = n(623373),
-    R = n(660653),
-    C = n(536572),
-    I = n(524246),
+    R = n(623373),
+    O = n(660653),
+    I = n(536572),
+    L = n(524246),
     _ = n(14368),
-    L = n(213530),
-    m = n(961883),
-    b = n(758836),
-    T = n(985018),
-    y = n(288237);
+    m = n(213530),
+    C = n(961883),
+    y = n(758836),
+    b = n(985018),
+    T = n(700797);
 let g = (t) => {
     let {
             transitionState: e,
             product: n,
             onClose: g,
-            analyticsLocations: k,
-            overrideTitle: S,
+            analyticsLocations: S,
+            overrideTitle: k,
             overrideDescription: v,
             shouldShowPromotionalExperience: M,
-            purchaseType: P = b.gs.FIAT,
+            purchaseType: P = y.gs.FIAT,
             overrideGraphic: N,
             overrideGradientColor: D,
         } = t,
         x = (0, c.Q)(n),
-        B = (0, O.rb)(n, x),
-        { analyticsLocations: F } = (0, u.Ay)([...k, d.A.COLLECTIBLES_COLLECTED_MODAL]),
+        B = (0, R.rb)(n, x),
+        { analyticsLocations: F } = (0, u.Ay)([...S, d.A.COLLECTIBLES_COLLECTED_MODAL]),
         { hasRequiredProductItems: U } = ((t) => {
-            let { firstProfileEffect: e, firstAvatarDecoration: n, firstNameplate: i } = (0, h.f5)(t),
-                r = (0, p.aw)(t);
+            let {
+                    firstProfileEffect: e,
+                    firstAvatarDecoration: n,
+                    firstNameplate: i,
+                    firstProfileFrame: r,
+                } = (0, h.f5)(t),
+                a = (0, p.aw)(t);
             return {
                 firstAvatarDecoration: n,
                 firstProfileEffect: e,
                 firstNameplate: i,
-                isBundle: r,
-                hasRequiredProductItems: r ? (0, R.uh)(t) : null != n || null != e || null != i,
+                isBundle: a,
+                firstProfileFrame: r,
+                hasRequiredProductItems: a ? (0, O.uh)(t) : null != n || null != e || null != i || null != r,
             };
         })(B),
         w = (0, o.A)({ analyticsLocations: F }),
-        V = T.intl.string(T.t.eZrmtq),
+        j = b.intl.string(b.t.eZrmtq),
         {
-            environment: j,
+            environment: V,
             modalRef: G,
             confettiCanvas: H,
             setConfettiCanvas: W,
             customConfettiDisplayOptions: z,
-        } = (0, m.mO)(B, P),
-        K = (0, C.VG)(B);
-    (0, m.$V)(B, F);
+        } = (0, C.mO)(B, P),
+        K = (0, I.VG)(B);
+    (0, C.$V)(B, F);
     let { handleUseNow: Q, isApplying: Y } = (0, E.p)({ product: B, onSuccess: g, onError: g }),
-        q = (0, m.$k)({
+        q = (0, C.$k)({
             product: B,
-            overrideTitle: S,
+            overrideTitle: k,
             isVariantsGroupEnabled: !0,
             shouldShowPromotionalExperience: M,
             productName: K,
         }),
-        J = (0, m.v8)({
+        J = (0, C.v8)({
             product: B,
             overrideDescription: v,
             productName: K,
             shouldShowPromotionalExperience: M,
-            promotionalRewardCollectedText: V,
+            promotionalRewardCollectedText: j,
         }),
-        Z = (0, m.aG)({
+        Z = (0, C.aG)({
             product: B,
             onClose: g,
             analyticsLocations: F,
@@ -112,7 +118,7 @@ let g = (t) => {
         children: (0, i.jsxs)("div", {
             ref: G,
             children: [
-                (0, i.jsx)(r.Fk, { ref: W, className: y.L, environment: j }),
+                (0, i.jsx)(r.Fk, { ref: W, className: T.L, environment: V }),
                 (0, i.jsx)(l.ExpressiveModal, {
                     graphic: te,
                     title: q,
@@ -123,8 +129,8 @@ let g = (t) => {
                     gradientColor: D ?? void 0,
                 }),
                 null != z
-                    ? (0, i.jsx)(L.K, { options: z })
-                    : (0, i.jsx)(I.A, {
+                    ? (0, i.jsx)(m.K, { options: z })
+                    : (0, i.jsx)(L.A, {
                           confettiTarget: G.current,
                           confettiCanvas: H,
                           sprites: (0, _.rA)(B.categorySkuId),
