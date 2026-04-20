@@ -11,8 +11,8 @@ var r = n(627968),
     d = n(506774),
     _ = n(752239),
     f = n(397927),
-    h = n(197808),
-    p = n(318009),
+    p = n(197808),
+    h = n(318009),
     m = n(638421),
     E = n(352423),
     g = n(775602),
@@ -22,23 +22,23 @@ var r = n(627968),
     S = n(596155),
     y = n(501280),
     v = n(196923),
-    C = n(288610),
-    N = n(681582),
+    N = n(288610),
+    C = n(681582),
     R = n(172272),
-    b = n(102854),
-    O = n(670735),
+    O = n(102854),
+    b = n(670735),
     D = n(318015),
     L = n(611544),
     w = n(750506),
     M = n(361158),
-    x = n(80556),
-    P = n(267102),
+    P = n(80556),
+    x = n(267102),
     k = n(867649),
     U = n(975616),
     G = n(385838),
     F = n(961350),
-    B = n(186111),
-    V = n(723702),
+    V = n(186111),
+    B = n(723702),
     H = n(268218),
     j = n(663413),
     Y = n(905790),
@@ -46,12 +46,12 @@ var r = n(627968),
     K = n(573435),
     $ = n(71855),
     z = n(652215),
-    q = n(883140);
+    q = n(906292);
 n(939857),
     Promise.resolve()
         .then(n.bind(n, 677134))
         .then((e) => {
-            V.isPlatformEmbedded
+            B.isPlatformEmbedded
                 ? window.addEventListener("contextmenu", e.contextMenuCallbackNative, !1)
                 : window.addEventListener("contextmenu", e.contextMenuCallbackWeb, !1);
         }),
@@ -66,18 +66,18 @@ n(939857),
     });
 let Z = (0, H.Fe)({ createPromise: () => n.e("99063").then(n.bind(n, 359094)), webpackId: 359094 }),
     X = i.memo(function () {
-        let e = (0, c.bG)([B.A], () => B.A.hasLayers()),
+        let e = (0, c.bG)([V.A], () => V.A.hasLayers()),
             t = (0, f.red)(f.ueM),
             n = (0, c.bG)([F.default], () => F.default.isAuthenticated());
-        return (0, r.jsx)($.v5, { fixed: !0, show: e || t || !n });
+        return (0, r.jsx)($.v5, { fixed: !0, show: e || t || !n, isLayerOpen: e });
     }),
     Q = function (e) {
         let { children: t, skipsSettingDefaultPageTitle: n } = e,
-            s = (0, V.getPlatform)(),
+            s = (0, B.getPlatform)(),
             _ = o.Fr || o.v1,
             E = (0, c.bG)([g.A], () => (g.A.useForcedColors ? "yes" : "no")),
             F = i.useRef(document.body),
-            B = `${E}`;
+            V = `${E}`;
         (0, L.i)("AppSkeleton");
         let H = (0, D.sK)("AppSkeleton");
         return (
@@ -91,14 +91,14 @@ let Z = (0, H.Fe)({ createPromise: () => n.e("99063").then(n.bind(n, 359094)), w
                         children: [
                             (0, r.jsx)(j.A, { skipsSettingDefaultPageTitle: n }),
                             (0, r.jsx)(m.N, {
-                                children: (0, r.jsx)(O.A, {
+                                children: (0, r.jsx)(b.A, {
                                     children: (0, r.jsxs)(f.xpW, {
                                         containerRef: F,
                                         children: [
                                             (0, r.jsx)(K.Al, {}),
                                             (0, r.jsx)(W.Ay, {}),
                                             (0, r.jsx)(u.Utq, {}),
-                                            (0, r.jsx)(P.Wr, {
+                                            (0, r.jsx)(x.Wr, {
                                                 appContext: z.BRT.APP,
                                                 renderWindow: window,
                                                 children: (0, r.jsxs)(w.Yf, {
@@ -111,11 +111,11 @@ let Z = (0, H.Fe)({ createPromise: () => n.e("99063").then(n.bind(n, 359094)), w
                                                                 (0, r.jsx)("div", {
                                                                     className: q.x$,
                                                                     "data-app-not-dev-tools": !0,
-                                                                    children: (0, r.jsx)(N.l, {
-                                                                        children: (0, r.jsx)(x.ks, {
+                                                                    children: (0, r.jsx)(C.l, {
+                                                                        children: (0, r.jsx)(P.ks, {
                                                                             children: (0, r.jsx)(I.A.Provider, {
                                                                                 value: T.A,
-                                                                                children: (0, r.jsxs)(C.p, {
+                                                                                children: (0, r.jsxs)(N.p, {
                                                                                     children: [
                                                                                         (0, r.jsx)("div", {
                                                                                             className: a()(
@@ -123,15 +123,15 @@ let Z = (0, H.Fe)({ createPromise: () => n.e("99063").then(n.bind(n, 359094)), w
                                                                                             ),
                                                                                             children: t,
                                                                                         }),
-                                                                                        (0, r.jsx)(h.A, {}),
-                                                                                        (0, r.jsx)(y.A, {}),
                                                                                         (0, r.jsx)(p.A, {}),
+                                                                                        (0, r.jsx)(y.A, {}),
+                                                                                        (0, r.jsx)(h.A, {}),
                                                                                         (0, r.jsx)(f.bM6, {}),
                                                                                         (0, r.jsx)(G.A, {}),
                                                                                         (0, r.jsx)(M.up, {}),
                                                                                         (0, r.jsx)(l.P, {}),
                                                                                         (0, r.jsx)(w.C8, {}),
-                                                                                        (0, r.jsx)(x.ok, {}),
+                                                                                        (0, r.jsx)(P.ok, {}),
                                                                                         (0, r.jsx)(f.N9M, {
                                                                                             appContext: z.BRT.APP,
                                                                                         }),
@@ -146,7 +146,7 @@ let Z = (0, H.Fe)({ createPromise: () => n.e("99063").then(n.bind(n, 359094)), w
                                                                 }),
                                                                 (0, r.jsx)(v.A, {}),
                                                                 (0, r.jsx)(Y.A, { mobile: _ }),
-                                                                (0, r.jsx)(b.A, { mobile: _ }),
+                                                                (0, r.jsx)(O.A, { mobile: _ }),
                                                             ],
                                                         }),
                                                         !1,
@@ -161,7 +161,7 @@ let Z = (0, H.Fe)({ createPromise: () => n.e("99063").then(n.bind(n, 359094)), w
                         ],
                     }),
                 },
-                B,
+                V,
             )
         );
     };

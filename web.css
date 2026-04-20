@@ -55377,18 +55377,22 @@ screen and (max-width:485px) {
     inset-inline: 0 var(--devtools-sidebar-width)
 }
 
+.disablePointerEvents_c38106 {
+    pointer-events: none
+}
+
+.disablePointerEvents_c38106 .winButtons_c38106 {
+    pointer-events: auto
+}
+
 .title_c38106 {
+    align-items: center;
+    display: flex;
     justify-content: center;
     position: absolute;
     top: 0;
     inset-inline: 0;
     bottom: 0
-}
-
-.leading_c38106,
-.title_c38106 {
-    align-items: center;
-    display: flex
 }
 
 .leading_c38106 {
@@ -55398,6 +55402,8 @@ screen and (max-width:485px) {
 
 .leading_c38106,
 .trailing_c38106 {
+    align-items: center;
+    display: flex;
     gap: var(--space-12);
     position: relative;
     z-index: 1;
@@ -55406,13 +55412,13 @@ screen and (max-width:485px) {
 
 .trailing_c38106,
 .winButtons_c38106 {
-    align-items: center;
-    display: flex;
     justify-content: flex-end
 }
 
 .winButtons_c38106 {
+    align-items: center;
     color: var(--interactive-text-default);
+    display: flex;
     gap: var(--space-4)
 }
 

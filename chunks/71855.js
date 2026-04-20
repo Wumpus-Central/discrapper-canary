@@ -13,7 +13,7 @@ var r = n(627968),
     f = n(723702),
     p = n(837921),
     h = n(985018),
-    m = n(450295);
+    m = n(666044);
 let E = 1e3;
 function g(e) {
     let { isPopoutWindow: t } = e;
@@ -74,23 +74,23 @@ function N(e) {
     });
 }
 function C(e) {
-    let { fixed: t = !1, show: n, windowKey: s } = e,
-        o = (0, f.getPlatform)(),
-        c = i.useCallback(() => {
+    let { fixed: t = !1, show: n, windowKey: s, isLayerOpen: o } = e,
+        c = (0, f.getPlatform)(),
+        d = i.useCallback(() => {
             u.A.isOpen() && (0, l.jD)();
         }, []),
-        d = i.useCallback(() => {
+        _ = i.useCallback(() => {
             let e = u.A.getLastShowTimestamp();
             (null != e && Date.now() - e < E) || S(s);
         }, [s]),
-        _ = o === f.PlatformTypes.WINDOWS;
-    if (o === f.PlatformTypes.WEB) return null;
-    let p = _ || o === f.PlatformTypes.LINUX;
+        p = c === f.PlatformTypes.WINDOWS;
+    if (c === f.PlatformTypes.WEB) return null;
+    let h = p || c === f.PlatformTypes.LINUX;
     return (0, r.jsx)("div", {
-        className: a()(m.M0, m.bN, { [m.Zu]: t, [m.WU]: n }),
-        onClick: c,
-        onDoubleClick: d,
+        className: a()(m.M0, m.bN, { [m.Zu]: t, [m.WU]: n, [m.dS]: o }),
+        onClick: d,
+        onDoubleClick: _,
         children:
-            p && (0, r.jsx)("div", { className: m.ZY, onDoubleClick: y, children: (0, r.jsx)(v, { windowKey: s }) }),
+            h && (0, r.jsx)("div", { className: m.ZY, onDoubleClick: y, children: (0, r.jsx)(v, { windowKey: s }) }),
     });
 }
