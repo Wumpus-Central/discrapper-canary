@@ -31,27 +31,27 @@ function v(e) {
                       return t;
                   })(t)
                 : [],
-        _ = a.at(-2);
+        _ = a.at(-2),
+        v = l.Fr && a.length <= 1,
+        S = a.length > 1 && null != _;
     return (0, r.jsx)(u.NPJ, {
         theme: i,
         children: (e) =>
             (0, r.jsxs)("div", {
-                className: s()(g.$Q, e),
+                className: s()(g.$Q, e, { [g.HW]: v || S }),
                 children: [
                     (0, r.jsxs)(u.BJc, {
                         direction: "horizontal",
                         align: "center",
                         className: g.y9,
                         children: [
-                            l.Fr &&
-                                a.length <= 1 &&
+                            v &&
                                 (0, r.jsx)(y, {
                                     icon: u.fEi,
                                     onClick: () => h.A.setState({ showNavigationMobile: !0 }),
                                     label: f.intl.string(f.t["13/7kX"]),
                                 }),
-                            a.length > 1 &&
-                                null != _ &&
+                            S &&
                                 (0, r.jsx)(y, {
                                     icon: o.rJJ,
                                     onClick: () => p.A.navigate(_.key),
