@@ -23,25 +23,47 @@ class o {
                 s.A.getField("requestAccordionOpenKey") !== e ? t() : this.accordionExpandResolvers.set(e, t);
             }));
     }
-    getValidatedCategoryKey(e, t) {
-        let n = e.layout;
-        if (!(0, i.Iu)(n)) return;
-        let r = [],
-            s = new Set();
-        if (
-            (n.forEach((e) => {
-                (0, i.bJ)(e) && (r.push(e), s.add(e.key));
-            }),
-            null == t)
-        )
-            return r[0]?.key;
-        if (s.has(t)) return t;
-        let a = r[0]?.key;
-        for (let e of n) {
-            if (e.key === t) break;
-            s.has(e.key) && (a = e.key);
+    maybeCreatePanelSnapshot(e) {
+        let { currentPanelKey: t, nextPanelKey: n } = e,
+            r = s.A.getField("scrollPositionSnapshots");
+        if (null == t || t === n) return;
+        let o = this.accessibleDirectory?.getPanelOrThrow(t);
+        if (null == o || (0, i.GH)(o)) return;
+        let l = a.A.getPanelScrollerNode();
+        if (null == l) return;
+        let u = s.A.getField("currentCategoryKey"),
+            c = new Map(r);
+        c.set(t, { categoryKey: u, scrollOffset: l.scrollTop }), s.A.setState({ scrollPositionSnapshots: c });
+    }
+    deletePanelSnapshot(e) {
+        let t = new Map(s.A.getField("scrollPositionSnapshots"));
+        t.delete(e), s.A.setState({ scrollPositionSnapshots: t });
+    }
+    deleteAllPanelSnapshots() {
+        s.A.setState({ scrollPositionSnapshots: new Map() });
+    }
+    getNextCategoryKey(e) {
+        let { targetEntry: t } = e,
+            n = t.parentPanelKey;
+        if (null == n) return;
+        let r = this.accessibleDirectory?.getPanelOrThrow(n);
+        if (null == r || (0, i.GH)(r)) return;
+        let s = r.layout;
+        if (!(0, i.Iu)(s)) return;
+        let a = [],
+            o = new Set();
+        s.forEach((e) => {
+            (0, i.bJ)(e) && (a.push(e), o.add(e.key));
+        });
+        let l = t.parentCategoryKey;
+        if (null == l) return a[0]?.key;
+        if (o.has(l)) return l;
+        let u = a[0]?.key;
+        for (let e of s) {
+            if (e.key === l) break;
+            o.has(e.key) && (u = e.key);
         }
-        return a;
+        return u;
     }
     notifyAccordionExpanded(e) {
         if (e !== s.A.getField("requestAccordionOpenKey")) return;
@@ -59,45 +81,57 @@ class o {
         let l = s.A.getField("currentTabKeys"),
             u = s.A.getField("currentPanelKey"),
             c = l.get(o),
-            d = this.accessibleDirectory.getPanelOrThrow(o),
-            _ = this.getValidatedCategoryKey(d, n.parentCategoryKey),
-            f = n.parentPanelKey === u,
-            h = null == n.parentTabKey || n.parentTabKey === c,
-            p = f && h,
-            m = async () => {
+            d = s.A.getField("scrollPositionSnapshots"),
+            _ = n.node.type === i.Z6.PANEL ? d.get(o) : void 0,
+            f = _?.categoryKey ?? this.getNextCategoryKey({ targetEntry: n }),
+            p = null != u ? this.accessibleDirectory.entry(u) : void 0,
+            h = p?.parentSidebarItemKey === n.parentSidebarItemKey,
+            m = n.parentPanelKey === u,
+            E = null == n.parentTabKey || n.parentTabKey === c,
+            g = m && E,
+            A = async () => {
                 t.onTransitionStart?.(),
+                    h
+                        ? this.maybeCreatePanelSnapshot({ currentPanelKey: u, nextPanelKey: o })
+                        : this.deleteAllPanelSnapshots(),
                     n.node.type === i.Z6.PANEL && a.A.enableSidebarCategoryAutoSelect(),
                     s.A.setState({
                         currentPanelKey: o,
                         currentTabKeys: null != n.parentTabKey ? new Map(l).set(o, n.parentTabKey) : l,
-                        currentCategoryKey: _,
+                        currentCategoryKey: f,
                         requestAccordionOpenKey: n.parentAccordionKey,
                         showNavigationMobile:
                             null != t.showNavigationMobile
                                 ? t.showNavigationMobile
                                 : s.A.getField("showNavigationMobile"),
                     });
-                let u = null != t.animatePanelScroll ? t.animatePanelScroll : p,
-                    c = null != t.animateSidebarScroll && t.animateSidebarScroll;
+                let c = null != t.animatePanelScroll ? t.animatePanelScroll : g,
+                    d = null != t.animateSidebarScroll && t.animateSidebarScroll;
                 if (
-                    (await this.scrollToTarget({
-                        targetKey: e,
-                        targetPanelKey: o,
-                        targetAccordionKey: n.parentAccordionKey,
-                        scrollBlock: t.panelScrollBlock ?? "start",
-                        animatePanelScroll: u,
-                        animateSidebarScroll: c,
-                    }),
-                    !p)
+                    (null != _
+                        ? (await this.scrollToOffset({ scrollOffset: _.scrollOffset }), this.deletePanelSnapshot(o))
+                        : await this.scrollToTarget({
+                              targetKey: e,
+                              targetPanelKey: o,
+                              targetAccordionKey: n.parentAccordionKey,
+                              scrollBlock: t.panelScrollBlock ?? "start",
+                              animatePanelScroll: c,
+                              animateSidebarScroll: d,
+                          }),
+                    !g)
                 ) {
                     let e = this.accessibleDirectory?.get(o),
                         t = e?.type === i.Z6.PANEL && (0, i.zY)(e.layout) ? e.layout[0].key : void 0,
                         r = n.parentTabKey ?? t ?? o;
                     this.onViewChange?.(r);
                 }
-                (!u || r.A.useReducedMotion) && n.node.type !== i.Z6.CATEGORY && s.A.setState({ requestFlashKey: e });
+                (!c || r.A.useReducedMotion) && n.node.type !== i.Z6.CATEGORY && s.A.setState({ requestFlashKey: e });
             };
-        f ? m() : this.navigateWithValidation?.(e, m);
+        m ? A() : this.navigateWithValidation?.(e, A);
+    }
+    async scrollToOffset(e) {
+        let { scrollOffset: t } = e;
+        await new Promise((e) => requestAnimationFrame(() => e())), await a.A.scrollPanelNodeTo(t);
     }
     async scrollToTarget(e) {
         let {

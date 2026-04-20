@@ -7,4 +7,5 @@ let r = (0, n(839214).D)(() => ({
     requestAccordionOpenKey: void 0,
     requestFlashKey: void 0,
     showNavigationMobile: !0,
+    scrollPositionSnapshots: new Map(),
 }));

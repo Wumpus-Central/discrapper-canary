@@ -49,6 +49,27 @@ class i {
             });
         });
     }
+    scrollTo(e) {
+        let { scrollerRef: t, to: n } = e;
+        return new Promise((e) => {
+            t.scrollTo({
+                to: n,
+                animate: !1,
+                callback: () => {
+                    requestAnimationFrame(() => e(!0));
+                },
+            });
+        });
+    }
+    async scrollPanelNodeTo(e) {
+        null != this.panelScrollerRef &&
+            (this.clearPanelInitialScrollListener(),
+            (this.isSidebarCategoryAutoSelectEnabled = !1),
+            await this.scrollTo({ scrollerRef: this.panelScrollerRef, to: e }),
+            this.setPanelInitialScrollListener(() => {
+                this.isSidebarCategoryAutoSelectEnabled = !0;
+            }));
+    }
     async scrollPanelNodeIntoView(e, t) {
         if (null == this.panelScrollerRef) return;
         let n = this.panelScrollerRef.getScrollerNode();

@@ -14,7 +14,7 @@ var r = n(627968),
     _ = n(674085),
     m = n(215566),
     f = n(362205),
-    g = n(710515);
+    g = n(585635);
 let y = "refresh_sm";
 function v(e) {
     let { tag: t, onClick: n, active: a, node: l, dismissibleBadge: u, panelKey: c, listItemProps: d, children: h } = e,
@@ -84,47 +84,54 @@ function S(e) {
         o = i.useMemo(() => t.layout[0], [t]),
         _ = d.A.useField("currentPanelKey"),
         { accessibleDirectory: m } = (0, u._)(),
-        g = i.useMemo(() => {
+        g = o?.key === _,
+        y = i.useMemo(() => {
             if (null == _) return !1;
             let e = m.entry(_);
             return e?.parentSidebarItemKey === t.key;
         }, [_, t.key, m]),
-        y = i.useMemo(() => {
+        S = i.useMemo(() => {
             if (null == o || !(0, c.Iu)(o.layout)) return null;
             let e = o.layout.filter(c.bJ);
             return e.length > 1 ? e : null;
         }, [o]),
-        S =
+        E =
             null != o
                 ? () => {
-                      let e = _ === o.key && null != y ? y[0].key : o.key;
+                      let e = _ === o.key && null != S ? S[0].key : o.key;
                       h.A.navigate(e, { animateSidebarScroll: !0, showNavigationMobile: !1 });
                   }
                 : t.onClick,
-        E = null != _,
-        x = i.useMemo(
+        x = null != _,
+        A = i.useMemo(
             () =>
-                null != y && E
-                    ? (0, r.jsx)(f.A, { active: g, visibleCategories: y, visibleContent: n, dismissibleBadges: a })
+                null != S && x
+                    ? (0, r.jsx)(f.A, {
+                          active: y,
+                          isTopLevelPanelVisible: g,
+                          visibleCategories: S,
+                          visibleContent: n,
+                          dismissibleBadges: a,
+                      })
                     : null,
-            [g, y, n, a, E],
+            [S, x, y, g, n, a],
         ),
-        A = s ? "li" : "div",
-        N = i.useMemo(() => (0, p.H)(t.key, n, a), [t.key, n, a]);
+        N = s ? "li" : "div",
+        b = i.useMemo(() => (0, p.H)(t.key, n, a), [t.key, n, a]);
     return s
-        ? (0, r.jsx)(v, { tag: A, panelKey: o?.key, onClick: S, active: g, node: t, dismissibleBadge: N, children: x })
+        ? (0, r.jsx)(v, { tag: N, panelKey: o?.key, onClick: E, active: y, node: t, dismissibleBadge: b, children: A })
         : (0, r.jsx)(l.tG, {
               id: t.key,
               children: (e) =>
                   (0, r.jsx)(v, {
-                      tag: A,
+                      tag: N,
                       panelKey: o?.key,
-                      onClick: S,
-                      active: g,
+                      onClick: E,
+                      active: y,
                       node: t,
-                      dismissibleBadge: N,
+                      dismissibleBadge: b,
                       listItemProps: e,
-                      children: x,
+                      children: A,
                   }),
           });
 }

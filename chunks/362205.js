@@ -6,7 +6,7 @@ var r = n(627968),
     s = n.n(a),
     l = n(284009),
     o = n.n(l),
-    u = n(294426),
+    u = n(825638),
     c = n(837381),
     d = n(935399),
     h = n(319354),
@@ -20,7 +20,7 @@ var r = n(627968),
     S = n(674085),
     E = n(188180),
     x = n(890690),
-    A = n(480270);
+    A = n(429566);
 function N(e) {
     let { category: t, onClick: n, active: i, dismissibleBadge: a } = e,
         { useTitle: l, useSubnavLabel: u, key: d } = t,
@@ -45,50 +45,43 @@ function N(e) {
     );
 }
 function b(e) {
-    let { active: t, visibleCategories: n, visibleContent: a, dismissibleBadges: s } = e,
-        l = f.A.useField("currentCategoryKey") ?? n[0]?.key,
-        [o, u] = i.useState(t);
+    let { active: t, isTopLevelPanelVisible: n, visibleCategories: a, visibleContent: s, dismissibleBadges: l } = e,
+        o = f.A.useField("currentCategoryKey"),
+        [u, c] = i.useState(t);
     i.useLayoutEffect(() => {
-        t && u(!0);
+        t && c(!0);
     }, [t]);
-    let c = i.useMemo(
-        () =>
-            Math.max(
-                n.findIndex((e) => e.key === l),
-                0,
-            ),
-        [n, l],
-    );
+    let d = i.useMemo(() => a.findIndex((e) => e.key === o), [a, o]);
     i.useEffect(() => {
         if (!t) {
-            let e = d.current;
+            let e = h.current;
             null != e &&
                 ((e.style.height = `${e.scrollHeight}px`),
                 window.getComputedStyle(e).height,
                 (e.style.height = "0"),
                 Promise.allSettled(e.getAnimations().map((e) => e.finished)).then(() => {
-                    u(!1);
+                    c(!1);
                 }));
         }
     }, [t]);
-    let d = i.useRef(null),
-        [h, p] = i.useState(t ? "auto" : "0");
+    let h = i.useRef(null),
+        [p, _] = i.useState(t ? "auto" : "0");
     return (
-        (0, x.u)(n, t),
+        (0, x.u)(a, n),
         (0, r.jsx)("div", {
             className: A.lK,
-            style: { height: h, opacity: +!!t },
-            ref: d,
+            style: { height: p, opacity: +!!t },
+            ref: h,
             children:
-                o &&
+                u &&
                 (0, r.jsx)(C, {
-                    index: c,
-                    activeKey: l,
-                    categories: n,
-                    visibleContent: a,
-                    dismissibleBadges: s,
+                    index: d,
+                    activeKey: o,
+                    categories: a,
+                    visibleContent: s,
+                    dismissibleBadges: l,
                     onMount: function () {
-                        let e = d.current;
+                        let e = h.current;
                         null != e &&
                             ((e.style.height = `${e.scrollHeight}px`),
                             Promise.all(e.getAnimations().map((e) => e.finished))
@@ -103,12 +96,12 @@ function b(e) {
     );
 }
 function C(e) {
-    let { index: t, activeKey: n, categories: a, visibleContent: s, dismissibleBadges: l, onMount: o } = e,
+    let { index: t, activeKey: n, categories: a, visibleContent: l, dismissibleBadges: o, onMount: c } = e,
         {
-            thumbRef: c,
-            trackRef: f,
-            thumbAnchorRef: y,
-            springs: S,
+            thumbRef: f,
+            trackRef: y,
+            thumbAnchorRef: S,
+            springs: x,
         } = (function (e) {
             let t = m.Xi.useSetting(),
                 n = i.useRef(null),
@@ -116,45 +109,47 @@ function C(e) {
                 a = i.useRef(null),
                 s = i.useRef(!0),
                 l = i.useRef(t),
-                [o, u] = (0, p.zhh)(() => ({ y: 0, height: 0, config: { mass: 0.1, friction: 20, tension: 300 } }));
+                o = i.useRef(e),
+                [u, c] = (0, p.zhh)(() => ({ y: 0, height: 0, config: { mass: 0.1, friction: 20, tension: 300 } }));
             return (
                 i.useLayoutEffect(() => {
-                    let e = l.current !== t,
-                        i = () => {
+                    let i = l.current !== t,
+                        d = () => {
                             if (null == n.current || null == r.current || null == a.current) return;
-                            let [i, c] = [n.current.getBoundingClientRect(), a.current.getBoundingClientRect()],
-                                d = i.width / 2,
-                                h = (c.y - i.y) / d,
-                                p = c.height / d;
-                            s.current || e || _.A.useReducedMotion
-                                ? (o.y.set(h), o.height.set(p))
-                                : u({ y: h, height: p }),
+                            let [d, h] = [n.current.getBoundingClientRect(), a.current.getBoundingClientRect()],
+                                p = d.width / 2,
+                                m = (h.y - d.y) / p,
+                                f = h.height / p;
+                            s.current || i || _.A.useReducedMotion || -1 === o.current
+                                ? (u.y.set(m), u.height.set(f))
+                                : c({ y: m, height: f }),
                                 (s.current = !1),
-                                (l.current = t);
+                                (l.current = t),
+                                (o.current = e);
                         },
-                        c = null;
+                        h = null;
                     return (
-                        e
-                            ? (c = requestAnimationFrame(() => {
-                                  (c = null), i();
+                        i
+                            ? (h = requestAnimationFrame(() => {
+                                  (h = null), d();
                               }))
-                            : i(),
+                            : d(),
                         () => {
-                            null != c && cancelAnimationFrame(c);
+                            null != h && cancelAnimationFrame(h);
                         }
                     );
-                }, [e, u, o.y, o.height, t]),
-                { thumbRef: r, trackRef: n, thumbAnchorRef: a, springs: o }
+                }, [e, c, u.y, u.height, t]),
+                { thumbRef: r, trackRef: n, thumbAnchorRef: a, springs: u }
             );
         })(t);
     return (
-        (0, d.Ay)(o),
+        (0, d.Ay)(c),
         (0, r.jsxs)("div", {
             className: A.o8,
             role: "list",
             style: {
                 "--custom-nav-count": a.length,
-                "--custom-nav-index": t,
+                "--custom-nav-index": Math.max(t, 0),
                 "--custom-nav-width": "2px",
                 "--custom-icon-size": `${h.E[E.V]}px`,
             },
@@ -162,12 +157,16 @@ function C(e) {
                 (0, r.jsx)("div", {
                     className: A.u4,
                     "aria-hidden": "true",
-                    ref: f,
-                    children: (0, r.jsx)(u.animated.div, { className: A.FF, style: S, ref: c }),
+                    ref: y,
+                    children: (0, r.jsx)(u.animated.div, {
+                        className: s()(A.FF, { [A.R]: null == n }),
+                        style: x,
+                        ref: f,
+                    }),
                 }),
-                (0, r.jsx)("div", { className: A.gu, "aria-hidden": "true", ref: y }),
+                (0, r.jsx)("div", { className: A.gu, "aria-hidden": "true", ref: S }),
                 a.map((e) => {
-                    let t = (0, v.H)(e.key, s, l);
+                    let t = (0, v.H)(e.key, l, o);
                     return (0, r.jsx)(
                         N,
                         {
