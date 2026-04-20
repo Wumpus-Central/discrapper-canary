@@ -142,7 +142,6 @@ let G = (e) => {
                 legalTermsNodeRef: E,
                 hasLegalTermsFlash: p,
                 handleClose: d,
-                purchaseState: U,
             },
             W = C.id;
         if (null == M || D) {
@@ -162,6 +161,7 @@ let G = (e) => {
         {
             let e = {
                 ...Y,
+                purchaseState: U,
                 premiumSubscription: M,
                 onPaymentSourceAdd: s,
                 planId: W,

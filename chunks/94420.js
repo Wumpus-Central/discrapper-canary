@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { F0: () => f, PM: () => d, sw: () => _, t4: () => u });
+n.d(t, { F0: () => f, PM: () => d, Tr: () => p, sw: () => _, t4: () => u });
 var r = n(627968),
     i = n(64700),
     s = n(942381),
@@ -22,6 +22,8 @@ function c() {
             setDiscountInvoicePreview: (t) => {
                 e({ discountInvoicePreview: t ?? null });
             },
+            renewalInvoicePreview: null,
+            setRenewalInvoicePreview: (t) => e({ renewalInvoicePreview: t ?? null }),
         }),
         s.x,
     );
@@ -39,6 +41,15 @@ let _ = () =>
     f = (e) => {
         let t = u((e) => {
             let { setCheckoutInvoicePreview: t } = e;
+            return t;
+        });
+        i.useEffect(() => {
+            t(e);
+        }, [e, t]);
+    },
+    p = (e) => {
+        let t = u((e) => {
+            let { setRenewalInvoicePreview: t } = e;
             return t;
         });
         i.useEffect(() => {
