@@ -279,7 +279,6 @@ let ex = l.memo(function (e) {
                         case "CALL":
                             return (0, i.jsx)(Y.A, {
                                 ...d,
-                                iconSize: "refresh_sm",
                                 color: "disconnect",
                                 onClick: () => {
                                     (0, S.X)(r, S.O.DISCONNECT), n?.();

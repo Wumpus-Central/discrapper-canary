@@ -3,8 +3,8 @@ var i = n(627968);
 n(64700);
 var a = n(311907),
     l = n(397927),
-    s = n(456060),
-    r = n(793574),
+    r = n(456060),
+    s = n(793574),
     o = n(688810),
     d = n(572211),
     c = n(354287),
@@ -36,8 +36,8 @@ function b(e) {
         M = (0, a.bG)([h.A], () => h.A.getCurrentUserActiveStream()),
         D = (0, a.bG)([g.A], () => g.A.getChannelId()),
         k = f.default.extractTimestamp(b.id) + C.M < Date.now(),
-        O = (0, i.jsx)(i.Fragment, { children: (0, s.Wf)(b, y, t) }),
-        { analyticsLocations: U } = (0, o.Ay)(S, r.A.REQUEST_TO_STREAM_INVITE_EMBED),
+        O = (0, i.jsx)(i.Fragment, { children: (0, r.Wf)(b, y, t) }),
+        { analyticsLocations: U } = (0, o.Ay)(S, s.A.REQUEST_TO_STREAM_INVITE_EMBED),
         B = v.intl.string(I.default["5+172e"]),
         G = !1;
     return (
@@ -71,7 +71,7 @@ function b(e) {
                                           : (0, l.mMO)(async () => {
                                                 let { default: e } = await Promise.all([
                                                     n.e("96811"),
-                                                    n.e("6802"),
+                                                    n.e("48697"),
                                                 ]).then(n.bind(n, 648230));
                                                 return (t) => (0, i.jsx)(e, { ...t, analyticsLocations: U });
                                             }));

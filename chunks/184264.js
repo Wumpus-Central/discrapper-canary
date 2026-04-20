@@ -1,71 +1,67 @@
 "use strict";
-n.d(t, { A: () => T });
+n.d(t, { A: () => I });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
     o = n(942381),
-    l = n(612324),
-    u = n(311907),
+    l = n(311907),
+    u = n(3203),
     c = n(990078),
-    d = n(397927),
-    _ = n(151271),
-    f = n(617617),
-    p = n(234320),
-    h = n(545428),
-    m = n(652215),
-    E = n(698279),
-    g = n(985018),
-    A = n(266599);
-function I(e, t) {
-    let { disabled: n, type: s, channel: I } = e,
-        [T, S] = i.useState(!1),
-        y = i.useRef(null),
-        v = (0, l.A)(t, y),
-        N = (0, u.bG)(
-            [f.A],
-            () => T && Object.values(f.A.frecencyWithoutFetchingLatest.favoriteGifs?.gifs ?? {}).length <= 2,
+    d = n(151271),
+    _ = n(617617),
+    f = n(234320),
+    p = n(545428),
+    h = n(652215),
+    m = n(698279),
+    E = n(985018),
+    g = n(266599);
+function A(e, t) {
+    let { disabled: n, type: s, channel: A } = e,
+        [I, T] = i.useState(!1),
+        S = (0, l.bG)(
+            [_.A],
+            () => I && Object.values(_.A.frecencyWithoutFetchingLatest.favoriteGifs?.gifs ?? {}).length <= 2,
         ),
-        [C, R, O, b] = (0, _.RQ)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], o.x),
-        D = i.useRef(0),
-        L = i.useCallback(() => {
-            S(!0),
-                clearTimeout(D.current),
-                (D.current = setTimeout(() => {
-                    S(!1), (D.current = 0);
+        [y, v, N, C] = (0, d.RQ)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], o.x),
+        R = i.useRef(0),
+        O = i.useCallback(() => {
+            T(!0),
+                clearTimeout(R.current),
+                (R.current = setTimeout(() => {
+                    T(!1), (R.current = 0);
                 }, 2e3));
         }, []);
-    (0, p.Vo)({ event: m.jej.FAVORITE_GIF, handler: L });
-    let w = i.useCallback(() => {
-        (0, _.r$)(E.kx.GIF, s, I.id);
-    }, [s, I.id]);
+    (0, f.Vo)({ event: h.jej.FAVORITE_GIF, handler: O });
+    let b = i.useCallback(() => {
+            (0, d.r$)(m.kx.GIF, s, A.id);
+        }, [s, A.id]),
+        { Component: D, events: L, play: w } = (0, u.V)();
     if (n) return null;
-    let M = C === E.kx.GIF && R === s && b === I.id;
+    let M = y === m.kx.GIF && v === s && C === A.id;
     return (0, r.jsx)(c.m, {
-        text: g.intl.string(N ? g.t.mE2e8A : g.t.nffuyb),
-        shouldShow: N,
-        forceOpen: N,
+        text: E.intl.string(S ? E.t.mE2e8A : E.t.nffuyb),
+        shouldShow: S,
+        forceOpen: S,
         children: (0, r.jsx)("div", {
-            ref: v,
-            className: a()(E.VQ, A.UD),
-            children: (0, r.jsx)(h.A, {
-                className: A.x6,
+            ref: t,
+            className: a()(m.VQ, g.UD),
+            children: (0, r.jsx)(p.A, {
+                className: g.x6,
+                onMouseEnter: L.onMouseEnter,
+                onMouseLeave: L.onMouseLeave,
                 onClick: () => {
-                    w();
+                    b(), w();
                 },
                 isActive: M,
-                pulse: T,
-                "aria-label": g.intl.string(g.t.PtVpk2),
+                pulse: I,
+                "aria-label": E.intl.string(E.t.PtVpk2),
                 "aria-expanded": M,
                 "aria-haspopup": "dialog",
-                "aria-controls": O,
-                children: (0, r.jsx)(d.VaI, {
-                    eventTargetRef: y,
-                    dataBinding: { fill: "currentColor" },
-                    className: d.d5l.refresh_sm,
-                }),
+                "aria-controls": N,
+                children: (0, r.jsx)(D, { size: "refresh_sm", color: "currentColor" }),
             }),
         }),
     });
 }
-let T = i.memo(i.forwardRef(I));
+let I = i.memo(i.forwardRef(A));

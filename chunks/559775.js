@@ -1,50 +1,44 @@
 "use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => h });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
     o = n(942381),
-    l = n(612324),
-    u = n(397927),
-    c = n(151271),
-    d = n(545428),
-    _ = n(698279),
-    f = n(985018),
-    p = n(266599);
-function h(e, t) {
-    let { disabled: n, type: s, channel: h } = e,
-        [m, E, g, A] = (0, c.RQ)((e) => [e.activeView, e.pickerId, e.activeChannelId, e.activeViewType], o.x),
-        I = !1,
-        T = i.useRef(null),
-        S = (0, l.A)(t, T),
-        y = m === _.kx.STICKER && A === s && g === h.id,
-        v = i.useCallback(() => {
-            (0, c.r$)(_.kx.STICKER, s, h.id);
-        }, [s, h.id]);
+    l = n(541952),
+    u = n(151271),
+    c = n(545428),
+    d = n(698279),
+    _ = n(985018),
+    f = n(266599);
+function p(e, t) {
+    let { disabled: n, type: s, channel: p } = e,
+        [h, m, E, g] = (0, u.RQ)((e) => [e.activeView, e.pickerId, e.activeChannelId, e.activeViewType], o.x),
+        A = !1,
+        I = h === d.kx.STICKER && g === s && E === p.id,
+        T = i.useCallback(() => {
+            (0, u.r$)(d.kx.STICKER, s, p.id);
+        }, [s, p.id]),
+        { Component: S, events: y, play: v } = (0, l.g)();
     return n
         ? null
         : (0, r.jsx)("div", {
-              className: a()(_.VQ, p.UD),
-              ref: S,
-              children: (0, r.jsx)(d.A, {
-                  className: a()(p.x6, p.KE),
+              className: a()(d.VQ, f.UD),
+              ref: t,
+              children: (0, r.jsx)(c.A, {
+                  className: a()(f.x6, f.KE),
+                  ...y,
                   onClick: () => {
-                      v();
+                      T(), v();
                   },
-                  isActive: y,
-                  "aria-label": f.intl.string(f.t.rZpidU),
-                  "aria-expanded": y,
+                  isActive: I,
+                  "aria-label": _.intl.string(_.t.rZpidU),
+                  "aria-expanded": I,
                   "aria-haspopup": "dialog",
-                  "aria-controls": E,
-                  sparkle: I,
-                  children: (0, r.jsx)(u.K2N, {
-                      autoPause: !0,
-                      eventTargetRef: T,
-                      dataBinding: { fill: "currentColor" },
-                      className: u.d5l.refresh_sm,
-                  }),
+                  "aria-controls": m,
+                  sparkle: A,
+                  children: (0, r.jsx)(S, { size: "refresh_sm", color: "currentColor" }),
               }),
           });
 }
-let m = i.memo(i.forwardRef(h));
+let h = i.memo(i.forwardRef(p));

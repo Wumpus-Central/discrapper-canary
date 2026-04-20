@@ -60,7 +60,6 @@ let a = {
         trackImpression: void 0,
         isWindowFocused: void 0,
         dynamicGraphicComponents: void 0,
-        gradientThemeId: void 0,
     },
     o = i.createContext(a);
 function l() {
