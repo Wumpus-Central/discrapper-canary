@@ -7,8 +7,8 @@ var r = n(627968),
     o = n(319400),
     l = n(435183),
     u = n(843472),
-    c = n(309698),
-    d = n(47167),
+    c = n(47167),
+    d = n(882840),
     _ = n(355622),
     f = n(408018),
     p = n(133343),
@@ -18,19 +18,19 @@ var r = n(627968),
     g = n(954571),
     A = n(652215),
     I = n(985018),
-    T = n(169829),
+    T = n(700494),
     S = n(379649);
 let y = "VoiceChannelStatusModal",
     v = 500;
 function N(e) {
     let { channel: t, transitionState: n, sourceAnalyticsLocations: N, onClose: C } = e,
-        R = (0, a.bG)([c.A], () => c.A.getChannelStatus(t)),
+        R = (0, d.l)(t),
         O = (0, a.bG)([m.A], () => m.A.getMediaSessionId()),
         [b, D] = i.useState(R ?? ""),
         [L, w] = i.useState(!1),
-        [M, x] = i.useState(null),
-        P = (0, a.bG)([E.default], () => E.default.getCurrentUser()),
-        k = (0, d.Ay)(t),
+        [M, P] = i.useState(null),
+        x = (0, a.bG)([E.default], () => E.default.getCurrentUser()),
+        k = (0, c.Ay)(t),
         U = b.length > v;
     i.useEffect(() => {
         g.default.track(A.HAw.OPEN_MODAL, {
@@ -40,18 +40,18 @@ function N(e) {
         });
     }, [t.guild_id, N]);
     let G = (e) => {
-            x(new o.LG(e, e.status).getAnyErrorMessage());
+            P(new o.LG(e, e.status).getAnyErrorMessage());
         },
         F = (e) => {
             let { invalidEmojis: n } = e;
             if (null != n && n.length > 0) {
-                let { errorMessage: e } = u.A.validateMessage(n, P, t.id);
-                return x(e), w(!1), { hasErrors: !0 };
+                let { errorMessage: e } = u.A.validateMessage(n, x, t.id);
+                return P(e), w(!1), { hasErrors: !0 };
             }
             return { hasErrors: !1 };
         },
         V = async (e) => {
-            b === R && C(), e?.preventDefault(), x(null), w(!0);
+            b === R && C(), e?.preventDefault(), P(null), w(!0);
             let n = b.length,
                 r = b.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length,
                 i = h.Ay.parse(t, b),

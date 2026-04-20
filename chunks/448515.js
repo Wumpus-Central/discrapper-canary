@@ -506,9 +506,6 @@ Y(
     j(["VOICE_CHANNEL_START_TIME_UPDATE"], (e, t) => {
         $({ type: t, id: e.id, guildId: e.guild_id, voiceStartTime: e.voice_start_time ?? void 0 });
     }),
-    j(["CHANNEL_STATUSES"], (e, t) => {
-        $({ type: t, guildId: e.guild_id, channels: e.channels });
-    }),
     j(["CHANNEL_INFO"], (e, t) => {
         $({
             type: t,

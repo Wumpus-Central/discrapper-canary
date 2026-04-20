@@ -1,69 +1,68 @@
 "use strict";
-n.d(t, { A: () => y });
+n.d(t, { A: () => T });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(311907),
-    l = n(397927),
-    u = n(688810),
-    c = n(532622),
-    d = n(271683),
-    _ = n(309698),
-    f = n(46054),
-    p = n(345640),
-    h = n(954571),
-    m = n(939496),
-    g = n(531648),
+    s = n(503698),
+    a = n.n(s),
+    o = n(397927),
+    l = n(688810),
+    u = n(532622),
+    c = n(271683),
+    d = n(882840),
+    _ = n(46054),
+    f = n(345640),
+    p = n(954571),
+    h = n(939496),
+    m = n(531648),
     E = n(652215),
-    A = n(996988),
-    I = n(985018),
-    T = n(413535);
-function y(e) {
-    let { voiceChannel: t, onAction: n, onClose: a } = e,
-        { themeType: y } = (0, m.E)(),
-        { analyticsLocations: S } = (0, u.Ay)(),
-        v = (0, p.b)(t),
-        C = (0, c.Ay)(t, !0),
-        b = (0, o.bG)([_.A], () => _.A.getChannelStatus(t)),
-        N = i.useMemo(
-            () => (null == b || "" === b ? null : f.A.parseVoiceChannelStatus(b, !0, { channelId: t.id })),
-            [b, t.id],
+    g = n(996988),
+    A = n(985018),
+    I = n(237770);
+function T(e) {
+    let { voiceChannel: t, onAction: n, onClose: s } = e,
+        { themeType: T } = (0, h.E)(),
+        { analyticsLocations: S } = (0, l.Ay)(),
+        y = (0, f.b)(t),
+        v = (0, u.Ay)(t, !0),
+        N = (0, d.l)(t),
+        C = i.useMemo(
+            () => (null == N || "" === N ? null : _.A.parseVoiceChannelStatus(N, !0, { channelId: t.id })),
+            [N, t.id],
         );
     i.useEffect(() => {
-        null != N &&
-            h.default.track(E.HAw.VOICE_CHANNEL_TOPIC_VIEWED, {
+        null != C &&
+            p.default.track(E.HAw.VOICE_CHANNEL_TOPIC_VIEWED, {
                 channel_id: t.id,
                 guild_id: t.guild_id,
                 location_stack: S,
             });
-    }, [N, t.id, t.guild_id, S]);
+    }, [C, t.id, t.guild_id, S]);
     let R = (e) => {
         e.stopPropagation(),
             n({ action: "PRESS_VOICE_CHANNEL_STATUS" }),
-            y === A.d.POPOUT && a?.(),
-            (0, d.A)({ channel: t, sourceAnalyticsLocations: S });
+            T === g.d.POPOUT && s?.(),
+            (0, c.A)({ channel: t, sourceAnalyticsLocations: S });
     };
-    return C && v
-        ? (0, r.jsxs)(l.DUT, {
-              className: T.vk,
+    return v && y
+        ? (0, r.jsxs)(o.DUT, {
+              className: I.vk,
               onClick: R,
               children: [
-                  (0, r.jsx)(g.A, {
-                      text: N ?? I.intl.string(I.t.Mgpxiw),
+                  (0, r.jsx)(m.A, {
+                      text: C ?? A.intl.string(A.t.Mgpxiw),
                       variant: "text-xs/normal",
                       color: "text-subtle",
-                      className: T.Qq,
+                      className: I.Qq,
                   }),
-                  (0, r.jsx)(l.R2l, {
+                  (0, r.jsx)(o.R2l, {
                       color: "currentColor",
                       size: "xxs",
-                      className: s()(T.rD, null != N ? T.R : void 0),
-                      "aria-label": I.intl.string(I.t.bt75uw),
+                      className: a()(I.rD, null != C ? I.R : void 0),
+                      "aria-label": A.intl.string(A.t.bt75uw),
                   }),
               ],
           })
-        : null != N
-          ? (0, r.jsx)(g.A, { text: N, variant: "text-xs/normal", color: "text-subtle", className: T.Qq })
+        : null != C
+          ? (0, r.jsx)(m.A, { text: C, variant: "text-xs/normal", color: "text-subtle", className: I.Qq })
           : null;
 }

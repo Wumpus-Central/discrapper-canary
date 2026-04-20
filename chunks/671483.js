@@ -5,20 +5,20 @@ var r = t(311907),
     l = t(397927),
     a = t(435183),
     s = t(532622),
-    u = t(136523),
-    o = t(345640),
+    o = t(136523),
+    u = t(345640),
     d = t(576705),
-    c = t(309698),
+    c = t(882840),
     A = t(652215),
     E = t(985018);
 function v(e, n) {
     let v = (0, r.bG)([d.A], () => d.A.can(A.xBc.MANAGE_CHANNELS, n)),
         g = (0, s.Ay)(e),
-        f = (0, o.b)(e),
-        h = (0, r.bG)([c.A], () => c.A.getChannelStatus(e)),
-        y = null != h && h.length > 0;
+        f = (0, u.b)(e),
+        I = (0, c.l)(e),
+        N = null != I && I.length > 0;
     return e.isGuildVoice() && (v || g)
-        ? !f && v && y
+        ? !f && v && N
             ? (0, i.jsx)(l.Drp, {
                   id: "clear-status",
                   label: E.intl.string(E.t["22CYiZ"]),
@@ -36,7 +36,7 @@ function v(e, n) {
                                 let { default: n } = await Promise.resolve().then(t.bind(t, 136523));
                                 return (t) => (0, i.jsx)(n, { channel: e, ...t });
                             },
-                            { modalKey: u.m },
+                            { modalKey: o.m },
                         );
                     },
                 })
