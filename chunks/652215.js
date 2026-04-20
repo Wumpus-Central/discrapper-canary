@@ -2940,6 +2940,7 @@ var tb = (function (e) {
             (e.ORBS_REWARD_MODAL = "Orbs Reward Modal"),
             (e.ORBS_SHOP_HERO_BLOCK = "Orbs Shop Hero Block"),
             (e.NOTIFICATIONS_INBOX = "Notifications Inbox"),
+            (e.IN_APP_NOTIFICATION = "In App Notification"),
             e
         );
     })({}),
@@ -3073,6 +3074,7 @@ var tb = (function (e) {
             (e.ACK_TEXT_CHAT_NOTIFICATION = "Ack - Text Chat Notification"),
             (e.ACK_MESSAGE_VIEWED = "Ack - Message Viewed"),
             (e.ACK_MEDIA_VIEWED = "Ack - Media Viewed"),
+            (e.ACK_IN_APP_NOTIFICATION_ACTION = "Ack - In App Notification Action"),
             (e.ACK_FORUM_ACTIVE_THREADS = "Ack - Forum Active Threads"),
             (e.ACK_GUILD_DIRECTORY_CHANNEL_VIEWED = "Ack - Guild Directory Channel Viewed"),
             (e.ACK_RECENT_CHANNEL_NEW_CHANNEL_VIEWED = "Ack - Recent Channel New Channel Viewed"),
