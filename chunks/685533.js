@@ -1,114 +1,111 @@
 "use strict";
-s.d(t, { A: () => j });
+s.d(t, { A: () => L });
 var n = s(627968),
     r = s(64700),
     l = s(503698),
-    i = s.n(l),
-    a = s(641150),
-    o = s(417597),
-    c = s(397927),
-    d = s(287809),
-    u = s(954571),
-    _ = s(440938),
-    g = s(590180),
-    m = s(940980),
-    h = s(511265),
-    p = s(365491),
-    f = s(856686),
-    x = s(100057),
-    E = s(751304),
-    b = s(561769),
-    C = s(484469),
-    A = s(998694),
-    S = s(438166),
-    v = s(652215),
-    I = s(471312);
-let L = { flattenProductVariants: !0 };
-function j(e) {
+    a = s.n(l),
+    i = s(417597),
+    o = s(397927),
+    c = s(287809),
+    d = s(954571),
+    u = s(440938),
+    _ = s(590180),
+    g = s(940980),
+    m = s(511265),
+    h = s(365491),
+    p = s(856686),
+    f = s(100057),
+    x = s(751304),
+    E = s(561769),
+    b = s(484469),
+    C = s(998694),
+    A = s(438166),
+    S = s(652215),
+    v = s(528096);
+let I = { flattenProductVariants: !0 };
+function L(e) {
     let { isFetchingCategories: t, scrollerRef: s, tab: l } = e,
-        j = (0, _.uM)(),
-        O = j?.sessionId ?? "",
-        { noCache: T, includeUnpublished: k } = (0, A.A)(),
-        y = (0, m.W)("CollectiblesFilterResults"),
-        N = (0, o.bG)([d.default], () => d.default.getCurrentUser()),
-        { skus: R, currentPage: B, totalCount: P, isFetchingResults: M } = (0, f.S)(),
-        { itemTypeFilters: H } = (0, p.v)(),
-        D = 1 === H.size && H.has(a.q.BUNDLE),
-        w = (0, o.yK)([g.A], () => g.A.getProductsBySkus(R)),
-        F = r.useCallback(() => {
+        L = (0, u.uM)(),
+        j = L?.sessionId ?? "",
+        { noCache: O, includeUnpublished: k } = (0, C.A)(),
+        T = (0, g.W)("CollectiblesFilterResults"),
+        y = (0, i.bG)([c.default], () => c.default.getCurrentUser()),
+        { skus: N, currentPage: R, totalCount: B, isFetchingResults: P } = (0, p.S)(),
+        M = (0, i.yK)([_.A], () => _.A.getProductsBySkus(N)),
+        H = r.useCallback(() => {
             s?.current?.scrollToTop({ animate: !0 });
         }, [s]),
-        G = R?.join("");
+        D = N?.join("");
     r.useEffect(() => {
-        F();
-    }, [G, F]);
-    let U = (0, h.p)(),
-        V = r.useMemo(() => U(w), [U, w]);
+        H();
+    }, [D, H]);
+    let w = (0, m.p)(),
+        F = r.useMemo(() => w(M), [w, M]);
     r.useEffect(() => {
         t ||
-            (0, x.z)({
-                sessionId: O,
-                checkpoint: x.t.SHOP_RENDERED,
+            (0, f.z)({
+                sessionId: j,
+                checkpoint: f.t.SHOP_RENDERED,
                 tab: l,
                 unpublishedCategoriesShown: k,
-                cacheDisabled: T,
+                cacheDisabled: O,
             });
-    }, [O, k, T, t, l]);
-    let W = r.useRef(null),
-        { setQueryPageSize: K, setQueryPageOffset: z, queryPageSize: Y } = (0, p.v)(),
-        [$, Z] = r.useState(!1),
-        q = t || M || null == N;
+    }, [j, k, O, t, l]);
+    let G = r.useRef(null),
+        { setQueryPageSize: U, setQueryPageOffset: V, queryPageSize: W } = (0, h.v)(),
+        [K, z] = r.useState(!1),
+        Y = t || P || null == y;
     r.useEffect(() => {
-        q ? Z(!1) : V.length > 0 && Z(!0);
-    }, [q, V.length]);
-    let X = Y > 0 && !q && 0 === V.length;
+        Y ? z(!1) : F.length > 0 && z(!0);
+    }, [Y, F.length]);
+    let $ = W > 0 && !Y && 0 === F.length;
     r.useEffect(() => {
         let e = new ResizeObserver(() => {
-            null == W.current || K(Math.floor(5 * getComputedStyle(W.current).gridTemplateColumns.split(/\s+/).length));
+            null == G.current || U(Math.floor(5 * getComputedStyle(G.current).gridTemplateColumns.split(/\s+/).length));
         });
-        if (null != W.current) return e.observe(W.current), () => e.disconnect();
-    }, [K]);
-    let J = r.useCallback(
+        if (null != G.current) return e.observe(G.current), () => e.disconnect();
+    }, [U]);
+    let Z = r.useCallback(
         (e) => {
-            u.default.track(v.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                collectibles_shop_session_id: j?.sessionId,
-                page_section: j?.pageSection,
-                page_category: j?.pageCategory,
+            d.default.track(S.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                collectibles_shop_session_id: L?.sessionId,
+                page_section: L?.pageSection,
+                page_category: L?.pageCategory,
                 page_index: e,
-                page_size: Y,
+                page_size: W,
                 cta_name: `filter results page ${e}`,
                 page_type: "catalog",
             }),
-                z((e - 1) * Y);
+                V((e - 1) * W);
         },
-        [j, Y, z],
+        [L, W, V],
     );
-    return (0, n.jsxs)(b.v3.Provider, {
-        value: L,
+    return (0, n.jsxs)(E.v3.Provider, {
+        value: I,
         children: [
             (0, n.jsxs)("div", {
-                className: i()({ [I.oE]: X }),
+                className: a()({ [v.oE]: $ }),
                 children: [
-                    X && (0, n.jsx)(S.A, {}),
+                    $ && (0, n.jsx)(A.A, {}),
                     (0, n.jsxs)("div", {
-                        className: i()(I.ZE, { [I.Kp]: $ }),
-                        ref: W,
+                        className: a()(v.ZE, { [v.Kp]: K }),
+                        ref: G,
                         children: [
-                            q && [...Array(Y)].map((e, t) => (0, n.jsx)(C.A, {}, t)),
-                            !q &&
-                                V.map((e, t) =>
-                                    null == g.A.getCategory(e.categorySkuId)
+                            Y && [...Array(W)].map((e, t) => (0, n.jsx)(b.A, {}, t)),
+                            !Y &&
+                                F.map((e, t) =>
+                                    null == _.A.getCategory(e.categorySkuId)
                                         ? null
                                         : (0, n.jsx)(
-                                              _.R9,
+                                              u.R9,
                                               {
                                                   newValue: { tilePosition: t },
                                                   children: (0, n.jsx)(
-                                                      E.A,
+                                                      x.A,
                                                       {
                                                           skuId: e.skuId,
-                                                          hideStaticBundleBackgroundAsset: !D,
-                                                          prioritizedCurrency: y ? b.Hi.FIAT : void 0,
+                                                          hideStaticBundleBackgroundAsset: !0,
+                                                          prioritizedCurrency: T ? E.Hi.FIAT : void 0,
                                                       },
                                                       e.skuId,
                                                   ),
@@ -120,15 +117,15 @@ function j(e) {
                     }),
                 ],
             }),
-            P > Y &&
+            B > W &&
                 (0, n.jsx)("div", {
-                    className: I.Ej,
+                    className: v.Ej,
                     children: (0, n.jsx)("div", {
-                        children: (0, n.jsx)(c.mgR, {
-                            currentPage: B,
-                            totalCount: P,
-                            pageSize: Y,
-                            onPageChange: J,
+                        children: (0, n.jsx)(o.mgR, {
+                            currentPage: R,
+                            totalCount: B,
+                            pageSize: W,
+                            onPageChange: Z,
                             disablePaginationGap: !0,
                         }),
                     }),
