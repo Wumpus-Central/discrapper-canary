@@ -866,7 +866,7 @@ let _ = {
         return (n) => (0, a.jsx)(i, { ...n, currentUser: e, otherUser: t });
     },
     FamilyCenterQRCodeModal: async () => {
-        let { default: e } = await Promise.all([n.e("14946"), n.e("72875")]).then(n.bind(n, 320742));
+        let { default: e } = await Promise.all([n.e("78598"), n.e("72875")]).then(n.bind(n, 320742));
         return (t) => (0, a.jsx)(e, { ...t });
     },
     PremiumGroupFriendsSelectorModal: async () => {
@@ -942,6 +942,10 @@ let _ = {
     },
     PremiumGroupSubscribeModal: async () => {
         let { default: e } = await n.e("91976").then(n.bind(n, 526710));
+        return (t) => (0, a.jsx)(e, { ...t });
+    },
+    NewUserOnboarding: async () => {
+        let { default: e } = await Promise.all([n.e("86746"), n.e("97050"), n.e("86996")]).then(n.bind(n, 955382));
         return (t) => (0, a.jsx)(e, { ...t });
     },
 };

@@ -1,5 +1,4 @@
-e.exports = {
-    TA: "offerDetailContainer__11ee8",
-    V6: "legalContainer__11ee8",
-    dc: "spinnerContainer__11ee8",
-};
+"use strict";
+n.d(t, { A: () => r });
+let r =
+    "https://cdn.discordapp.com/assets/content/6a4f00b69af328e30b8855282ec9810a11773b42862ed60e4b4e8ca3f44ac55e.svg";

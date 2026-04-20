@@ -49,12 +49,12 @@ function p(e) {
                 T(!1);
             }
         }, [L, N, n, C, w, v, g]),
-        x = i.useCallback(() => {
+        P = i.useCallback(() => {
             R || L(n[N - 1].stepKey);
         }, [L, N, n, R]),
-        P = i.useMemo(
-            () => ({ currentStepKey: f, goToStep: L, goToNextStep: M, goToPreviousStep: x, complete: w }),
-            [f, L, M, x, w],
+        x = i.useMemo(
+            () => ({ currentStepKey: f, goToStep: L, goToNextStep: M, goToPreviousStep: P, complete: w }),
+            [f, L, M, P, w],
         ),
         k = { variant: "secondary", text: g.BACK },
         U = {
@@ -67,27 +67,28 @@ function p(e) {
             },
         },
         G = { text: g.CANCEL, variant: "secondary", onClick: A },
-        F = v.hideBackButton || R ? void 0 : (0, r.jsx)(s.Q, { ...k, ...v.backButtonProps, onClick: x }),
-        V = v.modalProps,
-        B = "graphic" in V ? V : null,
-        H = null != p && p.length > 0 && p.includes(f),
-        j = H && !O ? p.indexOf(f) + 1 : void 0;
+        F = null != v.secondaryActionButtonProps ? { variant: "secondary", ...v.secondaryActionButtonProps } : null,
+        V = v.hideBackButton || R ? void 0 : (0, r.jsx)(s.Q, { ...k, ...v.backButtonProps, onClick: P }),
+        B = v.modalProps,
+        H = "graphic" in B ? B : null,
+        j = null != p && p.length > 0 && p.includes(f),
+        Y = j && !O ? p.indexOf(f) + 1 : void 0;
     return (
-        H && (t = O ? { percent: 100 } : { stepCount: p.length, stepNumber: j }),
+        j && (t = O ? { percent: 100 } : { stepCount: p.length, stepNumber: Y }),
         (0, r.jsx)(_.Provider, {
-            value: P,
+            value: x,
             children: (0, r.jsxs)(o.d, {
                 ...E,
-                paddingSize: null != B ? "lg" : "sm",
+                paddingSize: null != H ? "lg" : "sm",
                 children: [
-                    null != B
-                        ? (0, r.jsx)(c.V6, { ...B })
-                        : (0, r.jsx)(c.rQ, { title: V.title, subtitle: V.subtitle, progressBarProps: t }),
+                    null != H
+                        ? (0, r.jsx)(c.V6, { ...H })
+                        : (0, r.jsx)(c.rQ, { title: B.title, subtitle: B.subtitle, progressBarProps: t }),
                     (0, r.jsx)(
                         d.i,
                         {
-                            message: S ?? ("notice" in V ? V.notice?.message : void 0),
-                            type: null != S ? "critical" : "notice" in V ? V.notice?.type : void 0,
+                            message: S ?? ("notice" in B ? B.notice?.message : void 0),
+                            type: null != S ? "critical" : "notice" in B ? B.notice?.type : void 0,
                         },
                         f,
                     ),
@@ -110,9 +111,9 @@ function p(e) {
                         );
                     }),
                     (0, r.jsx)(l.H, {
-                        leading: F,
+                        leading: V,
                         actionsFullWidth: R,
-                        actions: [...(R ? [G] : []), { ...U, ...v.nextButtonProps }],
+                        actions: [...(R ? [G] : []), ...(null != F ? [F] : []), { ...U, ...v.nextButtonProps }],
                     }),
                 ],
             }),
