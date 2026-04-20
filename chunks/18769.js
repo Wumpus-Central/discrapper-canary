@@ -9,10 +9,14 @@ var l = r(627968),
     o = r(762380);
 let u = (e) => {
     let { backgroundImage: t, logoSrc: r, supplementalImage: u, href: m, ctaText: h } = e,
-        p = null == h && null != m;
+        p = null != m;
     return (0, l.jsxs)(n.DUT, {
         className: o.rJ,
-        onClick: p ? () => (0, a.pX)(m) : void 0,
+        onClick: p
+            ? (e) => {
+                  e.preventDefault(), (0, a.pX)(m);
+              }
+            : void 0,
         children: [
             (0, l.jsx)(c.A, {
                 overflowable: !0,

@@ -1,8 +1,8 @@
-s.d(t, { gB: () => b, jP: () => u, yB: () => S });
+s.d(t, { gB: () => b, jP: () => u, yB: () => p });
 var r = s(64700),
     l = s(311907),
-    a = s(775602),
-    n = s(652525),
+    n = s(775602),
+    a = s(652525),
     o = s(749022),
     i = s(787445);
 let c = "custom-cursors-styles",
@@ -39,6 +39,10 @@ let c = "custom-cursors-styles",
   .${u} [style*='cursor: pointer'],
   .${u} [class*='cursor-pointer'],
   .${u} [class*='shopCard'],
+  .${u} [class*='Card'],
+  .${u} [class*='FeaturedCollection'],
+  .${u} [class*='FeaturedChip'],
+  .${u} [class*='FeaturedProduct'],
   .${u} [class*='productCardContainer'],
   .${u} [class*='collectiblesShopHeaderBar'],
   .${u} [class*='wrapper'],
@@ -60,7 +64,7 @@ let c = "custom-cursors-styles",
   }
 `;
 function b() {
-    let e = S("useCustomCursorsCSS");
+    let e = p("useCustomCursorsCSS");
     r.useLayoutEffect(() => {
         if (!e) return;
         let t = document.getElementById(c);
@@ -73,8 +77,8 @@ function b() {
         );
     }, [e]);
 }
-function S(e) {
-    let t = (0, n.t)(e),
-        s = (0, l.bG)([a.A], () => a.A.enableCustomCursor ?? !0);
+function p(e) {
+    let t = (0, a.t)(e),
+        s = (0, l.bG)([n.A], () => n.A.enableCustomCursor ?? !0);
     return t && s;
 }
