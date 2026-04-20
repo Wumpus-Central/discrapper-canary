@@ -1,90 +1,90 @@
-l.d(t, { A: () => p, M: () => i });
-var r = l(627968),
-    a = l(64700),
-    d = l(503698),
-    c = l.n(d),
-    n = l(732955),
-    o = l(770178),
-    s = l(458306),
-    u = l(973207);
-let i = 6,
-    h = (e) => {
-        let { index: t, active: l, setPage: a } = e;
-        return (0, r.jsx)("div", {
-            className: c()(u.page, { [u.active]: l }),
-            children: (0, r.jsx)(n.QWc, {
+r.d(t, { A: () => p, M: () => u });
+var l = r(627968),
+    n = r(64700),
+    a = r(503698),
+    s = r.n(a),
+    c = r(732955),
+    i = r(770178),
+    d = r(219561),
+    o = r(882724);
+let u = 6,
+    m = (e) => {
+        let { index: t, active: r, setPage: n } = e;
+        return (0, l.jsx)("div", {
+            className: s()(o.page, { [o.active]: r }),
+            children: (0, l.jsx)(c.QWc, {
                 role: "button",
-                variant: l ? "always-white" : "secondary",
+                variant: r ? "always-white" : "secondary",
                 size: "sm",
                 text: (t + 1).toString(),
-                onClick: () => a(t),
+                onClick: () => n(t),
             }),
         });
     },
-    m = (e) => {
-        let { page: t, pages: l, setPage: d } = e,
-            [c, i] = a.useState(0),
-            m = (0, o.w)((e) => {
+    h = (e) => {
+        let { page: t, pages: r, setPage: a } = e,
+            [s, u] = n.useState(0),
+            h = (0, i.w)((e) => {
                 let { contentRect: t } = e;
-                i(t.width);
+                u(t.width);
             }),
-            p = a.useMemo(() => {
+            p = n.useMemo(() => {
                 let e;
-                if (null == l || l < 1) return null;
-                let a = Math.min(8, Math.max(3, Math.floor((c - 160) / 32)));
-                if (l <= a) e = Array.from({ length: l }, (e, t) => t);
+                if (null == r || r < 1) return null;
+                let n = Math.min(8, Math.max(3, Math.floor((s - 160) / 32)));
+                if (r <= n) e = Array.from({ length: r }, (e, t) => t);
                 else {
-                    let r = a - 2,
-                        d = Math.max(1, t - Math.floor(r / 2)),
-                        c = Math.min(l - 2, d + r - 1);
-                    d = Math.max(1, c - r + 1);
-                    let n = Array.from({ length: r }, (e, t) => d + t);
-                    d > 1 && (n[0] = "ellipsis"), c < l - 2 && (n[n.length - 1] = "ellipsis"), (e = [0, ...n, l - 1]);
+                    let l = n - 2,
+                        a = Math.max(1, t - Math.floor(l / 2)),
+                        s = Math.min(r - 2, a + l - 1);
+                    a = Math.max(1, s - l + 1);
+                    let c = Array.from({ length: l }, (e, t) => a + t);
+                    a > 1 && (c[0] = "ellipsis"), s < r - 2 && (c[c.length - 1] = "ellipsis"), (e = [0, ...c, r - 1]);
                 }
-                return e.map((e, l) =>
+                return e.map((e, r) =>
                     "number" == typeof e
-                        ? (0, r.jsx)(h, { index: e, active: t === e, setPage: d }, e)
-                        : (0, r.jsx)(
+                        ? (0, l.jsx)(m, { index: e, active: t === e, setPage: a }, e)
+                        : (0, l.jsx)(
                               "div",
                               {
-                                  className: u.page,
-                                  children: (0, r.jsx)(s.t, { variant: "text-md/bold", content: "..." }),
+                                  className: o.page,
+                                  children: (0, l.jsx)(d.t, { variant: "text-md/bold", content: "..." }),
                               },
-                              `ellipsis-${l}`,
+                              `ellipsis-${r}`,
                           ),
                 );
-            }, [t, l, d, c]);
-        return (0, r.jsx)("div", {
-            ref: m,
-            className: u.pagination,
-            children: (0, r.jsxs)(s.Kp, {
+            }, [t, r, a, s]);
+        return (0, l.jsx)("div", {
+            ref: h,
+            className: o.pagination,
+            children: (0, l.jsxs)(d.Kp, {
                 direction: "horizontal",
                 justify: "center",
                 align: "center",
                 children: [
-                    (0, r.jsx)(n.QWc, {
+                    (0, l.jsx)(c.QWc, {
                         variant: "secondary",
                         disabled: 0 === t,
                         text: "Back",
                         onClick: () => {
-                            d(t - 1);
+                            a(t - 1);
                         },
                     }),
-                    (0, r.jsx)("div", {
-                        className: u.pageNumbers,
-                        children: (0, r.jsx)(s.Kp, {
+                    (0, l.jsx)("div", {
+                        className: o.pageNumbers,
+                        children: (0, l.jsx)(d.Kp, {
                             direction: "horizontal",
                             justify: "center",
                             align: "center",
                             children: p,
                         }),
                     }),
-                    (0, r.jsx)(n.QWc, {
+                    (0, l.jsx)(c.QWc, {
                         variant: "secondary",
-                        disabled: t === l - 1,
+                        disabled: t === r - 1,
                         text: "Next",
                         onClick: () => {
-                            d(t + 1);
+                            a(t + 1);
                         },
                     }),
                 ],
@@ -92,22 +92,25 @@ let i = 6,
         });
     },
     p = (e) => {
-        let { columns: t = 3, perPage: l, paginationPosition: d = "bottom", children: n } = e,
-            o = Math.max(1, Math.min(i, Math.floor(t))),
-            [s, h] = a.useState(0),
-            [p, k] = a.useState(l),
-            [b, S] = a.useState(a.Children.count(n)),
-            A = a.Children.count(n),
-            f = null == l || l < 1 ? 0 : Math.ceil(A / l),
-            y = null != l && l > 0,
-            C = y && f > 1;
-        (p !== l || b !== A) && (k(l), S(A), h(0));
-        let v = a.useMemo(() => (y ? a.Children.toArray(n).slice(l * s, l * (s + 1)) : n), [s, l, n, y]);
-        return (0, r.jsxs)(r.Fragment, {
+        let { columns: t = 3, perPage: r, paginationPosition: a = "bottom", children: c } = e,
+            i = Math.max(1, Math.min(u, Math.floor(t))),
+            [d, m] = n.useState(0),
+            [p, A] = n.useState(r),
+            [g, f] = n.useState(n.Children.count(c)),
+            E = n.Children.count(c),
+            v = null == r || r < 1 ? 0 : Math.ceil(E / r),
+            S = null != r && r > 0,
+            y = S && v > 1;
+        (p !== r || g !== E) && (A(r), f(E), m(0));
+        let x = n.useMemo(() => (S ? n.Children.toArray(c).slice(r * d, r * (d + 1)) : c), [d, r, c, S]);
+        return (0, l.jsxs)(l.Fragment, {
             children: [
-                C && "top" === d && (0, r.jsx)(m, { page: s, pages: f, setPage: h }),
-                (0, r.jsx)("div", { className: c()(u.grid, u[`columns${o}`]), children: v }),
-                C && "bottom" === d && (0, r.jsx)(m, { page: s, pages: f, setPage: h }),
+                y && "top" === a && (0, l.jsx)(h, { page: d, pages: v, setPage: m }),
+                (0, l.jsx)("div", {
+                    className: o.gridContainer,
+                    children: (0, l.jsx)("div", { className: s()(o.grid, o[`columns${i}`]), children: x }),
+                }),
+                y && "bottom" === a && (0, l.jsx)(h, { page: d, pages: v, setPage: m }),
             ],
         });
     };
