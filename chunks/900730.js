@@ -11,13 +11,14 @@ var i = n(397927),
 function c(e) {
     let { relocationCountry: t, relocationCurrencyCode: n, willForfeitGiftCardBalance: c = !1 } = e,
         d = (0, s.j7)(t),
-        _ = l.intl.formatToMarkdownString(o.default["DE+C4G"], {
+        _ = c ? o.default["DE+C4G"] : o.default.vcs3zU,
+        f = l.intl.formatToMarkdownString(_, {
             country: d,
-            currency: n.toUpperCase(),
+            currency: n?.toUpperCase() ?? "",
             willForfeitGiftCardBalance: c ? "true" : "false",
         });
     return (0, r.jsx)(i.wx6, {
         type: "warning",
-        children: (0, r.jsx)("div", { className: u.Q, children: a.A.parse(_, !1, { allowList: !0 }) }),
+        children: (0, r.jsx)("div", { className: u.Q, children: a.A.parse(f, !1, { allowList: !0 }) }),
     });
 }

@@ -24,7 +24,7 @@ function u() {
         }, [n, t]);
     return i.useMemo(
         () =>
-            e && null != u && null != c
+            e && null != u
                 ? {
                       directContent: (0, r.jsx)(o.c, {
                           relocationCountry: u,
