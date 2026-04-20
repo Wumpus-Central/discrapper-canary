@@ -1,8 +1,8 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => I });
 var i = n(627968),
-    a = n(64700),
-    r = n(311907),
-    l = n(397927),
+    l = n(64700),
+    a = n(311907),
+    r = n(397927),
     s = n(189252),
     o = n(447404),
     d = n(186111),
@@ -11,55 +11,57 @@ var i = n(627968),
     A = n(274372),
     h = n(915618),
     _ = n(361157),
-    m = n(798817),
+    m = n(710315),
+    g = n(798817),
     p = n(696016),
-    g = n(985018);
-function E(e) {
+    E = n(985018);
+function I(e) {
     let { canShowReminder: t = !1 } = e,
-        E = (0, h.A)(c.Ay),
-        { showClipsHeaderEntrypoint: I } = u.L_.useConfig({ location: "ClipsButton" }),
+        I = (0, h.A)(c.Ay),
+        { showClipsHeaderEntrypoint: f } = u.L_.useConfig({ location: "ClipsButton" }),
+        { topBarButton: C } = m.$.useConfig({ location: "ClipsButton" }),
         {
-            hasNewClips: f,
-            lastClipsSession: C,
-            remindersEnabled: T,
-            hasAnyClipAnimations: N,
-        } = (0, r.cf)([A.A], () => ({
+            hasNewClips: T,
+            lastClipsSession: N,
+            remindersEnabled: S,
+            hasAnyClipAnimations: x,
+        } = (0, a.cf)([A.A], () => ({
             hasNewClips: A.A.getNewClipIds().length > 0,
             lastClipsSession: A.A.getLastClipsSession(),
             remindersEnabled: A.A.getSettings().remindersEnabled,
             hasAnyClipAnimations: A.A.hasAnyClipAnimations(),
         })),
-        S = null != C && C.newClipIds.length > 0,
-        x = (0, _.K)((e) => e.clipsButtonRef),
-        v = (0, _.K)((e) => e.setClipsButtonRef),
-        b = (0, r.bG)([d.A], () => d.A.hasLayers()),
-        { preventIdle: y, allowIdle: O } = (0, o.o)("animation");
-    function L() {
-        (0, l.mMO)(
+        b = null != N && N.newClipIds.length > 0,
+        v = (0, _.K)((e) => e.clipsButtonRef),
+        y = (0, _.K)((e) => e.setClipsButtonRef),
+        O = (0, a.bG)([d.A], () => d.A.hasLayers()),
+        { preventIdle: L, allowIdle: R } = (0, o.o)("animation");
+    function P() {
+        (0, r.mMO)(
             async () => {
-                let { default: e } = await Promise.all([n.e("42784"), n.e("75758")]).then(n.bind(n, 543428));
+                let { default: e } = await Promise.all([n.e("42784"), n.e("75674")]).then(n.bind(n, 543428));
                 return (t) => (0, i.jsx)(e, { ...t });
             },
             { modalKey: p.nm },
         );
     }
-    return (a.useEffect(() => (N ? y() : O(), () => O()), [N, y, O]), I && E)
+    return (l.useEffect(() => (x ? L() : R(), () => R()), [x, L, R]), (f || C) && I)
         ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  null != x &&
+                  null != v &&
                       t &&
-                      T &&
                       S &&
-                      !(0, l.ueM)() &&
-                      !b &&
-                      (0, i.jsx)(m.A, { clipIconRef: x, lastClipsSession: C, onOpenClipsGallery: L }),
+                      b &&
+                      !(0, r.ueM)() &&
+                      !O &&
+                      (0, i.jsx)(g.A, { clipIconRef: v, lastClipsSession: N, onOpenClipsGallery: P }),
                   (0, i.jsx)("div", {
-                      ref: v,
+                      ref: y,
                       children: (0, i.jsx)(s.A, {
-                          icon: l.xgA,
-                          showBadge: f,
-                          tooltip: g.intl.string(g.t.MXaLEM),
-                          onClick: L,
+                          icon: r.xgA,
+                          showBadge: T,
+                          tooltip: E.intl.string(E.t.MXaLEM),
+                          onClick: P,
                       }),
                   }),
               ],
