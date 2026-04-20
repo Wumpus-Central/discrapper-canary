@@ -39,13 +39,13 @@ let m = async (e) => {
     },
     g = function (e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-        if ((i.h.dispatch({ type: "SELECT_HOME_RESOURCE_CHANNEL", guildId: e, channelId: t }), null == t)) return;
+        if (null == t) return;
         let r = u.A.getChannel(t),
-            f = _.h.getResourceForChannel(e, t);
+            i = _.h.getResourceForChannel(e, t);
         null == e ||
             o.A.isFullServerPreview(e) ||
             null == r ||
-            null == f ||
+            null == i ||
             c.default.track(h.HAw.SERVER_GUIDE_CHANNEL_SELECTED, {
                 guild_id: e,
                 channel_id: r.id,
@@ -61,7 +61,6 @@ let m = async (e) => {
             });
     },
     A = (e, t) => {
-        i.h.dispatch({ type: "SELECT_NEW_MEMBER_ACTION_CHANNEL", guildId: e, channelId: t });
         let n = u.A.getChannel(t),
             r = _.h.getActionForChannel(e, t);
         null == e ||
