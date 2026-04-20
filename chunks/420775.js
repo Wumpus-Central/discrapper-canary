@@ -1,72 +1,74 @@
-n.d(t, { A: () => D });
+n.d(t, { A: () => f });
 var l = n(627968),
     r = n(64700),
     a = n(503698),
     i = n.n(a),
     s = n(735438),
-    o = n(417597),
+    o = n(311907),
     E = n(397927),
     u = n(964486),
     c = n(570209),
     _ = n(457699),
     d = n(141468),
-    g = n(465364),
-    A = n(229374),
+    A = n(465364),
+    g = n(229374),
     T = n(383233),
     I = n(761640),
     N = n(696451),
-    h = n(287809),
-    m = n(706752),
-    S = n(744432),
-    G = n(62697),
-    O = n(486974),
+    h = n(994500),
+    m = n(287809),
+    S = n(706752),
+    G = n(744432),
+    O = n(62697),
+    R = n(486974),
     C = n(652215),
-    R = n(438536),
-    L = n(618695);
-function D(e) {
-    let { userId: t, guildId: n, location: a, className: D, onNavigate: f } = e,
-        x = r.useRef(null),
-        M = (0, o.bG)([I.Ay], () => I.Ay.getGuildSidebarState(n), [n]),
-        p = r.useRef(0),
-        [U, k] = r.useState(M?.details.additionalSearchQuery ?? {}),
-        b = (0, S.KR)(t, n, { addtionalQuery: U, shouldDispatch: !0 }),
-        F = (0, o.bG)([h.default], () => h.default.getUser(t), [t]),
-        j = (0, o.bG)([N.Ay], () => N.Ay.getMember(n, t), [n, t]);
+    L = n(645267),
+    D = n(375256);
+function f(e) {
+    let { userId: t, guildId: n, location: a, className: f, onNavigate: x } = e,
+        M = r.useRef(null),
+        p = (0, o.bG)([I.Ay], () => I.Ay.getGuildSidebarState(n), [n]),
+        U = r.useRef(0),
+        [k, b] = r.useState(p?.details.additionalSearchQuery ?? {}),
+        F = (0, G.KR)(t, n, { addtionalQuery: k, shouldDispatch: !0 }),
+        j = (0, o.bG)([m.default], () => m.default.getUser(t), [t]),
+        v = (0, o.bG)([N.Ay], () => N.Ay.getMember(n, t), [n, t]);
     (0, u.u5)(() => {
-        let e = M?.details.scrollOffset;
-        null != e && x.current?.scrollTo({ to: e, animate: !1 });
+        let e = p?.details.scrollOffset;
+        null != e && M.current?.scrollTo({ to: e, animate: !1 });
     });
-    let v = r.useCallback(
+    let P = r.useCallback(
             (e) => {
-                null == M ||
-                    ((p.current = e.target.scrollTop),
-                    (0, m.z)(n, t, M.baseChannelId, {
-                        modViewPanel: O.g.MESSAGE_HISTORY,
-                        additionalSearchQuery: U,
-                        scrollOffset: p.current,
+                null == p ||
+                    ((U.current = e.target.scrollTop),
+                    (0, S.z)(n, t, p.baseChannelId, {
+                        modViewPanel: R.g.MESSAGE_HISTORY,
+                        additionalSearchQuery: k,
+                        scrollOffset: U.current,
                     }));
             },
-            [n, t, M, U],
+            [n, t, p, k],
         ),
-        P = (0, s.throttle)(v, 300),
-        y = r.useCallback(
+        y = (0, s.throttle)(P, 300),
+        X = r.useCallback(
             (e) => {
-                if (null == M) return;
-                let l = { ...U, offset: 25 * e };
-                k(l),
-                    (0, m.z)(n, t, M.baseChannelId, {
-                        modViewPanel: O.g.MESSAGE_HISTORY,
+                if (null == p) return;
+                let l = { ...k, offset: 25 * e };
+                b(l),
+                    (0, S.z)(n, t, p.baseChannelId, {
+                        modViewPanel: R.g.MESSAGE_HISTORY,
                         additionalSearchQuery: l,
-                        scrollOffset: p.current,
+                        scrollOffset: U.current,
                     });
             },
-            [n, t, M, U],
+            [n, t, p, k],
         ),
-        X = U?.offset ?? 0,
-        B = (0, o.bG)([_.A], () => {
-            if (null == b.result) return [];
+        B = k?.offset ?? 0,
+        [V, H] = r.useState(!1),
+        w = (0, o.bG)([_.A], () => {
+            if (null == F.result) return [];
             let e = (0, c.wG)("");
-            return b.result.messages
+            return F.result.messages
                 .map((e) => {
                     let [t] = e;
                     return (0, d.rh)(t);
@@ -78,57 +80,67 @@ function D(e) {
                         null != n && (l = l.merge({ attachments: n.attachments, embeds: n.embeds })),
                         (l = l.set(
                             "customRenderedContent",
-                            (0, g.Ay)(l, { postProcessor: e, allowHeading: !0, allowList: !0 }),
+                            (0, A.Ay)(l, { postProcessor: e, allowHeading: !0, allowList: !0 }),
                         ))
                     );
                 });
-        }, [b.result]),
-        V = r.useMemo(
+        }, [F.result]),
+        { blockCount: W, ignoreCount: Y } = (0, o.cf)([h.A], () => {
+            let e = 0,
+                t = 0;
+            return (
+                w.forEach((n) => {
+                    h.A.isBlockedForMessage(n) ? e++ : h.A.isIgnoredForMessage(n) && t++;
+                }),
+                { blockCount: e, ignoreCount: t }
+            );
+        }),
+        K = r.useMemo(
             () =>
-                null == b.result
+                null == F.result
                     ? {
                           documentsIndexed: 0,
                           isSearching: !0,
                           isIndexing: !1,
                           isHistoricalIndexing: !1,
-                          offset: X,
+                          offset: B,
                           totalResults: 0,
                           hasError: !1,
-                          showBlockedResults: !1,
+                          showBlockedResults: V,
                           showNoResultsAlt: !1,
                       }
                     : {
-                          documentsIndexed: b.result.documents_indexed ?? 0,
+                          documentsIndexed: F.result.documents_indexed ?? 0,
                           isSearching: !1,
-                          isIndexing: b.result.doing_deep_historical_index ?? !1,
-                          isHistoricalIndexing: b.result.doing_deep_historical_index ?? !1,
-                          offset: X,
-                          totalResults: b.result.total_results ?? 0,
+                          isIndexing: F.result.doing_deep_historical_index ?? !1,
+                          isHistoricalIndexing: F.result.doing_deep_historical_index ?? !1,
+                          offset: B,
+                          totalResults: F.result.total_results ?? 0,
                           hasError: !1,
-                          showBlockedResults: !1,
+                          showBlockedResults: V,
                           showNoResultsAlt: !1,
                       },
-            [b.result, X],
+            [F.result, B, V],
         );
-    return null == F || null == j || null == V
+    return null == j || null == v || null == K
         ? null
         : (0, l.jsxs)("div", {
-              className: i()(R.kL, D),
+              className: i()(L.kL, f),
               children: [
-                  (0, l.jsx)(G.A, { guildId: n, userId: t, onNavigate: f }),
+                  (0, l.jsx)(O.A, { guildId: n, userId: t, onNavigate: x }),
                   (0, l.jsx)(E.T7Y, {
-                      className: L.W,
-                      ref: x,
-                      onScroll: P,
-                      children: (0, l.jsx)(A.A, {
-                          messages: B,
-                          search: V,
+                      className: D.W,
+                      ref: M,
+                      onScroll: y,
+                      children: (0, l.jsx)(g.A, {
+                          messages: w,
+                          search: K,
                           renderEmbeds: !0,
-                          blockCount: 0,
-                          ignoreCount: 0,
+                          blockCount: W,
+                          ignoreCount: Y,
                           scrollTo: C.tEg,
-                          onPageChange: y,
-                          onBlockedResultsClick: C.tEg,
+                          onPageChange: X,
+                          onBlockedResultsClick: H,
                       }),
                   }),
               ],
