@@ -44,9 +44,8 @@ class I extends r.A {
         this.initialFetchTimerId = window.setTimeout(() => {
             Date.now() - l.A.lastFetchedCurrentQuests <= A || this._fetch("post_connect_initial");
         }, e);
-        let { enabled: t } = c.sn.getConfig({ location: f.rE.QUESTS_MANAGER }),
-            { enabled: n } = c.Iq.getConfig({ location: f.rE.QUESTS_MANAGER });
-        if (t && n && (0, _.s)()) {
+        let { enabled: t } = c.Iq.getConfig({ location: f.rE.QUESTS_MANAGER });
+        if (t && (0, _.s)()) {
             let t = e + Math.floor(Math.random() * m);
             this.initialQuestHomeHeroFetchTimerId = window.setTimeout(() => {
                 try {

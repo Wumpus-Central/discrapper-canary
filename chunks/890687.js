@@ -789,44 +789,41 @@ let tn = (e) => {
         return e.userStatus?.enrolledAt != null && !n && Date.now() - new Date(e.userStatus?.enrolledAt).getTime() > t;
     };
 function ti() {
-    let { enabled: e } = k.sn.useConfig({ location: X.rE.QUEST_HOME_DESKTOP }),
-        { enabled: t } = k.rI.useConfig({ location: "useFetchQuestHomeHero" }),
-        [n, i] = r.useState(e),
-        [s, a] = r.useState(e),
-        [o, l] = r.useState(!1),
-        [u, c] = r.useState(!1),
-        { isFetching: d, questHomeHero: _ } = (0, f.cf)([P.A], () => ({
+    let { enabled: e } = k.rI.useConfig({ location: "useFetchQuestHomeHero" }),
+        [t, n] = r.useState(!0),
+        [i, s] = r.useState(!0),
+        [a, o] = r.useState(!1),
+        [l, u] = r.useState(!1),
+        { isFetching: c, questHomeHero: d } = (0, f.cf)([P.A], () => ({
             isFetching: P.A.isFetchingQuestHomeHero(),
             questHomeHero: P.A.getQuestHomeHero(),
-        })),
-        p = e ? _ : null;
+        }));
     return (
-        r.useEffect(() => {
-            e && n();
-            async function n() {
-                try {
-                    t ? await (0, M.Am)() : await (0, M.Yf)();
-                } catch (e) {
-                    a(!1), l(!0);
-                } finally {
-                    i(!1);
-                }
-            }
-        }, [e, t]),
         r.useEffect(() => {
             !(async function () {
                 try {
-                    if (null == _) return;
-                    let e = [_.heroImage, _.sponsorImage].filter((e) => null != e);
-                    await Promise.all(e.map(O.NN));
+                    e ? await (0, M.Am)() : await (0, M.Yf)();
                 } catch (e) {
-                    c(!0);
+                    s(!1), o(!0);
                 } finally {
-                    a(!1);
+                    n(!1);
                 }
             })();
-        }, [_]),
-        { questHomeHero: o || u ? null : p, isLoading: n || d || s }
+        }, [e]),
+        r.useEffect(() => {
+            !(async function () {
+                try {
+                    if (null == d) return;
+                    let e = [d.heroImage, d.sponsorImage].filter((e) => null != e);
+                    await Promise.all(e.map(O.NN));
+                } catch (e) {
+                    u(!0);
+                } finally {
+                    s(!1);
+                }
+            })();
+        }, [d]),
+        { questHomeHero: a || l ? null : d, isLoading: t || c || i }
     );
 }
 function ts(e) {
