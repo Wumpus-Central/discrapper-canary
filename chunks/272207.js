@@ -152,7 +152,7 @@ class h extends s.A {
         return this.paymentGateway === d.kM_.APPLE_PARTNER || this.isACOM;
     }
     get isPurchasedViaApple() {
-        return this.paymentGateway === d.kM_.APPLE;
+        return this.paymentGateway === d.kM_.APPLE || this.isACOM;
     }
     get isPurchasedViaGoogle() {
         return this.paymentGateway === d.kM_.GOOGLE;
