@@ -7,7 +7,7 @@ var r = n(284009),
     o = n(894972),
     l = n(723702),
     u = n(474090),
-    c = n(654044),
+    c = n(570221),
     d = n(652215),
     _ = n(601107),
     f = n(788868);
@@ -152,7 +152,7 @@ class h extends s.A {
         return this.paymentGateway === d.kM_.APPLE_PARTNER || this.isACOM;
     }
     get isPurchasedViaApple() {
-        return this.paymentGateway === d.kM_.APPLE;
+        return this.paymentGateway === d.kM_.APPLE || this.isACOM;
     }
     get isPurchasedViaGoogle() {
         return this.paymentGateway === d.kM_.GOOGLE;
