@@ -1,36 +1,36 @@
-n.d(t, { l: () => f });
+n.d(t, { l: () => v });
 var a = n(627968),
     i = n(64700),
     s = n(311907),
-    l = n(265486),
+    l = n(43105),
     r = n(688810),
     o = n(626584),
     d = n(780964),
-    c = n(840065),
+    c = n(858897),
     u = n(531685),
     m = n(259065),
     h = n(49999),
-    p = n(927961),
-    x = n(985018),
+    x = n(864386),
+    p = n(985018),
     g = n(439315);
-let _ = new o.A("DisplayNameStylesCoachmark");
-function f(e) {
+let f = new o.A("DisplayNameStylesCoachmark");
+function v(e) {
     let { markAsDismissed: t, targetElementRef: n, children: o } = e,
-        { analyticsLocations: f } = (0, r.Ay)(),
-        v = (0, i.useRef)(null),
+        { analyticsLocations: v } = (0, r.Ay)(),
+        _ = (0, i.useRef)(null),
         b = (0, s.bG)([u.A], () => u.A.isFocused()),
         j = (0, i.useCallback)(() => {
             t(h.i.TAKE_ACTION),
-                (0, c.openUserSettings)(d.X.PROFILE_PANEL, { analyticsLocations: f }, () => {
-                    (0, m.L)({ analyticsLocations: f });
+                (0, c.openUserSettings)(d.X.PROFILE_PANEL, { analyticsLocations: v }, () => {
+                    (0, m.L)({ analyticsLocations: v });
                 });
-        }, [t, f]),
+        }, [t, v]),
         A = (0, i.useCallback)(() => {
             t(h.i.USER_DISMISS);
         }, [t]);
     return (
         (0, i.useEffect)(() => {
-            b && v.current?.paused ? v.current?.play().catch(_.error) : b || v.current?.pause();
+            b && _.current?.paused ? _.current?.play().catch(f.error) : b || _.current?.pause();
         }, [b]),
         (0, a.jsxs)(a.Fragment, {
             children: [
@@ -43,11 +43,11 @@ function f(e) {
                     position: "top",
                     caretConfig: { align: "center" },
                     gradientColor: "nitro-pink",
-                    graphic: { type: "video", ref: v, src: g.A, aspectRatio: "21/9", loop: !0 },
+                    graphic: { type: "video", ref: _, src: g.A, aspectRatio: "21/9", loop: !0 },
                     size: "lg",
-                    title: x.intl.string(p.default["1AE464"]),
-                    body: [x.intl.string(p.default.cNc1g9), x.intl.string(x.t["4JNXHG"])],
-                    actions: [{ text: x.intl.string(x.t.uw9zI7), variant: "primary", onClick: j }],
+                    title: p.intl.string(x.default["1AE464"]),
+                    body: [p.intl.string(x.default.cNc1g9), p.intl.string(p.t["4JNXHG"])],
+                    actions: [{ text: p.intl.string(p.t.uw9zI7), variant: "primary", onClick: j }],
                 }),
             ],
         })

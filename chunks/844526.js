@@ -1,22 +1,22 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => b });
 var a = n(627968),
     i = n(64700),
     s = n(311907),
     l = n(554146),
-    r = n(265486),
+    r = n(43105),
     o = n(775602),
     d = n(379848),
     c = n(832248),
-    u = n(995377),
+    u = n(904481),
     m = n(203982),
     h = n(764231),
     x = n(881141),
     p = n(149757),
     g = n(788868),
-    _ = n(652215),
-    f = n(49999),
-    b = n(985018);
-function v(e) {
+    f = n(652215),
+    v = n(49999),
+    _ = n(985018);
+function b(e) {
     let { groupName: t, targetElementRef: n } = e,
         i = (0, x.A)(),
         r = (0, s.bG)([o.A], () => o.A.useReducedMotion),
@@ -44,18 +44,18 @@ function j(e) {
         o = g.sp.indexOf(t),
         d = (0, p.I)(g.sp[o > 0 ? o - 1 : o]).ambient,
         u = (0, i.useCallback)(() => {
-            n(f.i.TAKE_ACTION),
+            n(v.i.TAKE_ACTION),
                 c.A.setState({ shouldRenderTenureLevelUp: !0 }),
-                m._.dispatch(_.jej.SHOW_ACCOUNT_PROFILE_POPOUT, {});
+                m._.dispatch(f.jej.SHOW_ACCOUNT_PROFILE_POPOUT, {});
         }, [n]),
         x = (0, i.useCallback)(() => {
-            n(f.i.USER_DISMISS);
+            n(v.i.USER_DISMISS);
         }, [n]),
-        v = g.VD[t],
-        j = b.intl.formatToPlainString(b.t.ewkaVR, {
-            timeMilestone: (0, h.T)(v.id, v.tenureReqNumMonths)?.toLocaleLowerCase(),
+        b = g.VD[t],
+        j = _.intl.formatToPlainString(_.t.ewkaVR, {
+            timeMilestone: (0, h.T)(b.id, b.tenureReqNumMonths)?.toLocaleLowerCase(),
         }),
-        C = [{ text: b.intl.string(b.t.RzWDqY), variant: "primary", onClick: u }];
+        A = [{ text: _.intl.string(_.t.RzWDqY), variant: "primary", onClick: u }];
     return (0, a.jsx)(r.A, {
         targetElementRef: s,
         onRequestClose: x,
@@ -63,8 +63,8 @@ function j(e) {
         caretConfig: { align: "center" },
         graphic: null != d ? { type: "image", src: d, aspectRatio: "6/4" } : void 0,
         size: "lg",
-        title: b.intl.string(b.t.VoDxsV),
+        title: _.intl.string(_.t.VoDxsV),
         body: j,
-        actions: C,
+        actions: A,
     });
 }

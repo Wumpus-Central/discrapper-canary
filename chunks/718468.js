@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => g, e: () => E });
+n.d(t, { A: () => A, e: () => g });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -9,24 +9,25 @@ var r = n(627968),
     u = n(311907),
     c = n(397927),
     d = n(682718),
-    _ = n(399263),
-    f = n(453771),
+    _ = n(46054),
+    f = n(399263),
+    p = n(453771),
     h = n(985018),
-    p = n(423603);
-let m = (e) => {
+    m = n(490563);
+let E = (e) => {
     let { filename: t } = e,
-        i = (0, f.GD)(t),
+        i = (0, p.GD)(t),
         s = n(714694)(`./icon-file-${i}.svg`);
     return (0, r.jsx)("img", {
-        className: p.Kk,
+        className: m.Kk,
         src: s,
         alt: h.intl.formatToPlainString(h.t.g6KdFv, { fileType: i }),
         title: i,
     });
 };
-function E(e) {
+function g(e) {
     let { channelId: t, file: n } = e,
-        s = (0, u.bG)([_.A], () => _.A.getMessageForFile(n.id)?.content),
+        s = (0, u.bG)([f.A], () => f.A.getMessageForFile(n.id)?.content),
         a = i.useMemo(() => {
             let e = n.items;
             return null == e
@@ -38,64 +39,65 @@ function E(e) {
         o = i.useCallback(() => {
             d.A.cancel(t, n);
         }, [t, n]),
-        f = 100 === n.progress,
-        E = !f && n.currentSize > 0;
+        p = 100 === n.progress,
+        g = !p && n.currentSize > 0,
+        A = i.useMemo(() => (null == s || "" === s.trim() ? null : _.A.parse(s)), [s]);
     return (0, r.jsxs)("div", {
-        className: p.Ig,
+        className: m.Ig,
         children: [
-            null != s && "" !== s.trim() && (0, r.jsx)("div", { className: p.Qs, children: s }),
+            null != A && (0, r.jsx)("div", { className: m.Qs, children: A }),
             (0, r.jsxs)("div", {
-                className: p.NJ,
+                className: m.NJ,
                 children: [
-                    (0, r.jsx)(m, { filename: a }),
+                    (0, r.jsx)(E, { filename: a }),
                     (0, r.jsxs)("div", {
-                        className: p.Jg,
+                        className: m.Jg,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: p.tP,
+                                className: m.tP,
                                 children: [
-                                    (0, r.jsx)("div", { className: p.iW, children: a }),
-                                    E
+                                    (0, r.jsx)("div", { className: m.iW, children: a }),
+                                    g
                                         ? (0, r.jsx)("div", {
-                                              className: p.Ej,
+                                              className: m.Ej,
                                               children: `— ${l().filesize(n.currentSize)}`,
                                           })
                                         : null,
                                 ],
                             }),
                             (0, r.jsx)("div", {
-                                className: p.L$,
-                                children: f ? h.intl.string(h.t.jfKTes) : (0, r.jsx)(c.z21, { percent: n.progress }),
+                                className: m.L$,
+                                children: p ? h.intl.string(h.t.jfKTes) : (0, r.jsx)(c.z21, { percent: n.progress }),
                             }),
                         ],
                     }),
-                    f
+                    p
                         ? null
                         : (0, r.jsx)(c.DUT, {
                               onClick: o,
-                              children: (0, r.jsx)(c.PGe, { size: "md", color: "currentColor", className: p.x7 }),
+                              children: (0, r.jsx)(c.PGe, { size: "md", color: "currentColor", className: m.x7 }),
                           }),
                 ],
             }),
         ],
     });
 }
-let g = (e) => {
+let A = (e) => {
     let { className: t, url: n, fileName: i, fileSize: s, onClick: o, onContextMenu: u, renderAdjacentContent: d } = e;
     return (0, r.jsxs)("div", {
-        className: a()(p.Ig, t),
+        className: a()(m.Ig, t),
         children: [
             (0, r.jsxs)("div", {
-                className: p.NJ,
+                className: m.NJ,
                 children: [
-                    (0, r.jsx)(m, { filename: i }),
+                    (0, r.jsx)(E, { filename: i }),
                     (0, r.jsxs)("div", {
-                        className: p.Jg,
+                        className: m.Jg,
                         children: [
                             (0, r.jsx)("div", {
-                                className: p.RT,
+                                className: m.RT,
                                 children: (0, r.jsx)(c.MzZ, {
-                                    className: p.AD,
+                                    className: m.AD,
                                     href: n,
                                     onClick: o,
                                     onContextMenu: u,
