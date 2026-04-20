@@ -140,8 +140,8 @@ function H(e) {
         {
             cropDimensions: V,
             dragBoundaries: U,
-            imageDimensions: $,
-            imageRotation: P,
+            imageDimensions: P,
+            imageRotation: $,
             zoomRatio: F,
             startingCoordinates: Q,
             isDragging: X,
@@ -193,20 +193,20 @@ function H(e) {
         ec = r.useCallback(
             (e) => {
                 let { x: t, y: i } = M.current;
-                X && (e.clientX !== t || e.clientY !== i) && es(e.clientX - Q.x, e.clientY - Q.y, U, P);
+                X && (e.clientX !== t || e.clientY !== i) && es(e.clientX - Q.x, e.clientY - Q.y, U, $);
             },
-            [U, P, X, Q.x, Q.y, es],
+            [U, $, X, Q.x, Q.y, es],
         ),
         eu = r.useCallback(() => {
             z({ type: "STOP_DRAGGING_IMAGE", imageTransformCoordinates: M.current });
         }, []),
         ed = r.useCallback(
             (e) => {
-                if (null == $) return;
-                let { width: t, height: i } = $,
+                if (null == P) return;
+                let { width: t, height: i } = P,
                     n = (0, T.l$)(t * e, i * e, V),
                     { x: r, y: a } = M.current;
-                ((0, o.inRange)(r, n.right, n.left) && (0, o.inRange)(a, n.top, n.bottom)) || es(r, a, n, P),
+                ((0, o.inRange)(r, n.right, n.left) && (0, o.inRange)(a, n.top, n.bottom)) || es(r, a, n, $),
                     z({
                         type: "SET_IMAGE_ZOOM_RATIO",
                         zoomRatio: e,
@@ -214,7 +214,7 @@ function H(e) {
                         imageTransformCoordinates: M.current,
                     });
             },
-            [V, $, P, es],
+            [V, P, $, es],
         ),
         em = r.useCallback(
             (e, t) => {
@@ -228,12 +228,12 @@ function H(e) {
         ),
         eg = r.useCallback(() => {
             var e;
-            if (null == k.current || null == $) return;
-            let t = (P + 90) % 360;
+            if (null == k.current || null == P) return;
+            let t = ($ + 90) % 360;
             d.OR.announce(w.intl.formatToPlainString(w.t.uYhsHT, { degrees: t }));
             let { x: i, y: n } = ((e = M.current.x), { x: -M.current.y, y: e });
-            if ($.width !== $.height) {
-                let { newImageDimensions: e, newCropDimensions: r, newDragBoundaries: a } = em($, F);
+            if (P.width !== P.height) {
+                let { newImageDimensions: e, newCropDimensions: r, newDragBoundaries: a } = em(P, F);
                 es(i, n, a, t),
                     z({
                         type: "ROTATE_IMAGE",
@@ -244,33 +244,33 @@ function H(e) {
                         dragBoundaries: a,
                     });
             } else es(i, n, U, t), z({ type: "ROTATE_IMAGE", imageTransformCoordinates: M.current, imageRotation: t });
-        }, [U, em, $, P, es, F]),
+        }, [U, em, P, $, es, F]),
         eh = r.useCallback(() => {
-            if (null != k.current && null != $) {
-                if ($.width !== $.height && (P - 0) % 180 != 0) {
-                    let { newImageDimensions: e, newCropDimensions: t, newDragBoundaries: i } = em($, 1);
+            if (null != k.current && null != P) {
+                if (P.width !== P.height && ($ - 0) % 180 != 0) {
+                    let { newImageDimensions: e, newCropDimensions: t, newDragBoundaries: i } = em(P, 1);
                     z({ type: "RESET", imageDimensions: e, cropDimensions: t, dragBoundaries: i }), es(0, 0, i, 0);
                 } else {
-                    let e = (0, T.l$)(+$.width, +$.height, V);
+                    let e = (0, T.l$)(+P.width, +P.height, V);
                     z({ type: "RESET", dragBoundaries: e }), es(0, 0, e, 0);
                 }
                 ee((e) => e + 1);
             }
-        }, [V, em, $, P, es]),
+        }, [V, em, P, $, es]),
         eE = r.useCallback(() => {
             let e = L(H);
             return e.width !== e.height;
         }, [H]),
         eA = r.useCallback(() => {
-            if (null == $) return {};
-            let e = $.width / $.height,
-                t = eE() && e > x.wL ? V.height / $.height : 1,
+            if (null == P) return {};
+            let e = P.width / P.height,
+                t = eE() && e > x.wL ? V.height / P.height : 1,
                 { width: i, height: n } = ((e, t) => {
                     let { width: i, height: n } = e;
                     return t % 180 != 0 ? { width: n, height: i } : { width: i, height: n };
-                })($, P);
+                })(P, $);
             return { width: i * F * t, minWidth: i * F * t, height: n * F * t, minHeight: n * F * t };
-        }, [V.height, $, P, eE, F]),
+        }, [V.height, P, $, eE, F]),
         eR = r.useCallback(async () => {
             let e;
             if (null == k.current) return;
@@ -285,7 +285,7 @@ function H(e) {
                         cropDimensions: V,
                         cropOriginCoordinates: M.current,
                         maxDimensions: n,
-                        imageRotation: P,
+                        imageRotation: $,
                     });
                     (v.current = a), (e = await r), (v.current = null);
                 } catch (e) {
@@ -301,7 +301,7 @@ function H(e) {
                     cropDimensions: V,
                     cropOriginCoordinates: M.current,
                     maxDimensions: n,
-                    imageRotation: P,
+                    imageRotation: $,
                 });
             await I({
                 assetOrigin: (function (e) {
@@ -314,7 +314,7 @@ function H(e) {
             }),
                 J(!1),
                 await O();
-        }, [V, t, K, P, er, O, I, a, H]),
+        }, [V, t, K, $, er, O, I, a, H]),
         eC = r.useCallback(async () => {
             if (null != v.current) {
                 v.current(), (v.current = null), J(!1);
@@ -390,8 +390,8 @@ function H(e) {
                                               onLoad: eo,
                                               onError: () => Y(!0),
                                               style: {
-                                                  opacity: +(null != $),
-                                                  transform: `translate3d(${M.current.x}px, ${M.current.y}px, 0) rotate(${P}deg)`,
+                                                  opacity: +(null != P),
+                                                  transform: `translate3d(${M.current.x}px, ${M.current.y}px, 0) rotate(${$}deg)`,
                                                   ...eA(),
                                               },
                                               className: s()(Z ? y.As : y.nu, y.hh),
@@ -418,7 +418,7 @@ function H(e) {
                                                           return y._h;
                                                   }
                                               })(H),
-                                              style: { opacity: +(null != $), width: V.width, height: V.height },
+                                              style: { opacity: +(null != P), width: V.width, height: V.height },
                                           }),
                                       ],
                                   }),
@@ -443,6 +443,10 @@ function H(e) {
                                                 equidistant: !0,
                                                 hideBubble: !0,
                                                 "aria-label": w.intl.string(w.t.dnvZSg),
+                                                getAriaValueText: (e) =>
+                                                    w.intl.formatToPlainString(w.t.GHwBy5, {
+                                                        percent: Math.round(100 * e),
+                                                    }),
                                             },
                                             q,
                                         ),
