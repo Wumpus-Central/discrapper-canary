@@ -9,9 +9,8 @@ e.exports = {
     YK: "seekableBar__68788",
     Ey: "timeDisplay__68788",
     lG: "playhead__68788",
-    we: "smoothPlayback__68788",
-    fk: "progressToPlayheadGlowBar__68788",
     Td: "segmentContainer__68788",
     MI: "segmentMask__68788",
     _I: "segmentPanningLayer__68788",
+    fk: "progressToPlayheadGlowBar__68788",
 };

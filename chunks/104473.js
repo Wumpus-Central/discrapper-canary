@@ -36,8 +36,8 @@ function p(e) {
             maxSeekableTimeSec: r,
             videoUrl: s,
             poster: p,
-            showEndScreen: m,
-            active: b,
+            showEndScreen: b,
+            active: m,
             autoHideVolumeSlider: _,
             sizing: g,
             persistPlayhead: h,
@@ -87,33 +87,32 @@ function p(e) {
                     {
                         src: y,
                         poster: p,
-                        active: b,
-                        autoFocus: !b,
+                        active: m,
+                        autoFocus: !m,
                         autoplay: a,
                         orientation: t,
                         maxSeekableTimeSec: r > 0 ? r : void 0,
                         autoHideVolumeSlider: _,
                         persistPlayhead: h,
                         parentTransitionState: i.ip4.ENTERED,
-                        performanceClockStartTime: 0,
                         onProgressUpdate: () => {},
                         onEnded: () => {},
                         onError: () => {},
                         transcriptText: s === d.Im ? d.LI : d.pQ,
-                        renderEndScreen: m
+                        renderEndScreen: b
                             ? (e) => {
                                   let { replay: a } = e;
                                   return (0, n.jsx)(u, { orientation: t, thumbnailUrl: c, onReplay: a });
                               }
                             : void 0,
                     },
-                    `${String(b)}-${v}`,
+                    `${String(m)}-${v}`,
                 ),
             }),
         ],
     });
 }
-let m = {
+let b = {
         orientation: {
             label: "Orientation",
             type: "select",
@@ -141,33 +140,33 @@ let m = {
             defaultValue: "modal",
         },
     },
-    b = {
+    m = {
         name: "Landscape",
         id: "landscape-video-generic",
         component: p,
-        controls: { ...m, orientation: { ...m.orientation, defaultValue: "landscape" } },
+        controls: { ...b, orientation: { ...b.orientation, defaultValue: "landscape" } },
     },
     _ = {
         name: "Portrait",
         id: "portrait-video-generic",
         component: p,
-        controls: { ...m, orientation: { ...m.orientation, defaultValue: "portrait" } },
+        controls: { ...b, orientation: { ...b.orientation, defaultValue: "portrait" } },
     },
     g = {
         name: "HLS",
         id: "hls-video-generic",
         component: p,
         controls: {
-            ...m,
-            orientation: { ...m.orientation, defaultValue: "landscape" },
-            videoUrl: { ...m.videoUrl, defaultValue: d.Im },
+            ...b,
+            orientation: { ...b.orientation, defaultValue: "landscape" },
+            videoUrl: { ...b.videoUrl, defaultValue: d.Im },
         },
     },
     h = { tension: 500, friction: 30, clamp: !0 },
     v = {
         title: "Discord Video Player (Generic)",
         stories: [
-            b,
+            m,
             _,
             g,
             {
@@ -194,8 +193,8 @@ let m = {
                                     },
                                     [u],
                                 ),
-                                m = o.useMemo(() => [{ index: 0, timeSec: e, widthPx: 32, gapPx: 4 }], [e]),
-                                b = o.useCallback(
+                                b = o.useMemo(() => [{ index: 0, timeSec: e, widthPx: 32, gapPx: 4 }], [e]),
+                                m = o.useCallback(
                                     (e, t) => {
                                         let a = l === e.index;
                                         return (0, n.jsx)(
@@ -233,11 +232,11 @@ let m = {
                                     [p, l, c],
                                 );
                             return {
-                                indicators: m,
+                                indicators: b,
                                 animatingIndex: l,
                                 expansionSpring: c,
                                 hoverExpansionPx: 4,
-                                renderIndicator: b,
+                                renderIndicator: m,
                             };
                         })(c);
                     return (0, n.jsx)("div", {
@@ -252,16 +251,15 @@ let m = {
                             orientation: t,
                             maxSeekableTimeSec: s > 0 ? s : void 0,
                             parentTransitionState: i.ip4.ENTERED,
-                            performanceClockStartTime: 0,
                             timelineIndicatorConfig: u,
                         }),
                     });
                 },
                 controls: {
-                    orientation: m.orientation,
-                    autoplay: m.autoplay,
-                    maxSeekableTimeSec: m.maxSeekableTimeSec,
-                    videoUrl: m.videoUrl,
+                    orientation: b.orientation,
+                    autoplay: b.autoplay,
+                    maxSeekableTimeSec: b.maxSeekableTimeSec,
+                    videoUrl: b.videoUrl,
                     indicatorTimeSec: { label: "Indicator Time (sec)", type: "number", defaultValue: 15 },
                 },
             },

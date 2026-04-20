@@ -178,26 +178,27 @@ function X(e) {
         h &&
         (m === v.sy.AUTO_ENABLE_CAPTIONS && E && !p
             ? d(!0)
-            : m === v.sy.AUTO_UNMUTE && (y.Ay.getState().setMuted(!1), 0 === f && y.Ay.getState().setVolume(0.3))),
-        (0, o.mMO)(
-            async () => {
-                let { default: e } = await Z();
-                return (n) =>
-                    (0, r.jsx)(e, {
-                        ...n,
-                        openStartClockTime: performance.now(),
-                        questId: t.id,
-                        autoplay: l,
-                        videoSessionId: c,
-                        sourceQuestContent: s,
-                    });
-            },
-            {
-                modalKey: (0, M.cZ)(t.id),
-                backdropStyle: o.F2Z.IMMERSIVE,
-                onCloseCallback: () => (0, M.vm)({ questId: t.id, sourceQuestContent: s, videoSessionId: c }),
-            },
-        );
+            : m === v.sy.AUTO_UNMUTE && (y.Ay.getState().setMuted(!1), 0 === f && y.Ay.getState().setVolume(0.3)));
+    let A = performance.now();
+    (0, o.mMO)(
+        async () => {
+            let { default: e } = await Z();
+            return (n) =>
+                (0, r.jsx)(e, {
+                    ...n,
+                    openStartClockTime: A,
+                    questId: t.id,
+                    autoplay: l,
+                    videoSessionId: c,
+                    sourceQuestContent: s,
+                });
+        },
+        {
+            modalKey: (0, M.cZ)(t.id),
+            backdropStyle: o.F2Z.IMMERSIVE,
+            onCloseCallback: () => (0, M.vm)({ questId: t.id, sourceQuestContent: s, videoSessionId: c }),
+        },
+    );
 }
 function Q(e) {
     let t = platform.os?.family,
@@ -255,7 +256,7 @@ function en(e, t) {
 }
 function er(e) {
     (0, o.mMO)(async () => {
-        let { default: t } = await Promise.all([n.e("14946"), n.e("27818")]).then(n.bind(n, 518420));
+        let { default: t } = await Promise.all([n.e("59220"), n.e("27818")]).then(n.bind(n, 518420));
         return (n) => (0, r.jsx)(t, { ...n, questId: e.id });
     });
 }

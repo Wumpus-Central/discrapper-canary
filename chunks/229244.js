@@ -668,17 +668,18 @@ function G() {
                                     variant: "primary",
                                     text: "Open Video Player Modal",
                                     onClick: () => {
+                                        let e = performance.now();
                                         (0, m.mMO)(async () => {
-                                            let { default: e } = await Promise.all([
+                                            let { default: i } = await Promise.all([
                                                 n.e("92868"),
-                                                n.e("29636"),
+                                                n.e("19482"),
                                                 n.e("7634"),
-                                                n.e("66493"),
+                                                n.e("44842"),
                                             ]).then(n.bind(n, 201257));
                                             return (n) =>
-                                                (0, a.jsx)(e, {
+                                                (0, a.jsx)(i, {
                                                     ...n,
-                                                    openStartClockTime: performance.now(),
+                                                    openStartClockTime: e,
                                                     videoSessionId: "fake-quest-session-id",
                                                     questId: t.id ?? "fake-quest-id",
                                                     overrideQuest: t,

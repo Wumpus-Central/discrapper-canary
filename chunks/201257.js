@@ -6,47 +6,47 @@ var n = s(627968),
     o = s(284009),
     r = s.n(o),
     u = s(412703),
-    c = s(311907),
-    d = s(397927),
+    d = s(311907),
+    c = s(397927),
     m = s(770178),
     x = s(765548),
     g = s(697397),
     h = s(859703),
     A = s(341915),
-    C = s(245853),
-    p = s(890687),
+    p = s(245853),
+    C = s(890687),
     S = s(971649),
-    f = s(792620),
-    v = s(753386),
+    v = s(792620),
+    f = s(753386),
     j = s(73473),
     N = s(931135),
     O = s(839727),
     E = s(795068),
-    _ = s(781121),
-    M = s(312356),
+    M = s(781121),
+    _ = s(312356),
     T = s(404865),
     y = s(328494),
     D = s(778533),
     V = s(216409),
     P = s(654487),
-    k = s(985018),
-    L = s(503820),
-    b = s(834926);
+    L = s(985018),
+    b = s(503820),
+    k = s(834926);
 function I(e) {
     let {
             transitionState: t,
             onClose: s,
             quest: i,
             autoplay: o,
-            videoSessionId: c,
+            videoSessionId: d,
             impressionRef: g,
             parentModalOpenStartClockTime: h,
             sourceQuestContent: A,
         } = e,
-        j = (0, f.Yh)(i),
-        I = (0, p.LS)(i),
+        j = (0, v.Yh)(i),
+        I = (0, C.LS)(i),
         Q = (0, S.go)(),
-        { progressSec: R, trackProgress: q } = (0, M.y)({
+        { progressSec: R, trackProgress: q } = (0, _.y)({
             initialProgressSec: j.progressSeconds,
             targetSec: j.targetSeconds,
             completedAt: i.userStatus?.completedAt,
@@ -55,22 +55,22 @@ function I(e) {
         [H, w] = l.useState(!1),
         F = i.config.taskConfigV2?.tasks?.[u.n.WATCH_VIDEO];
     r()(null != F, "VideoQuestModal: videoTask must not be null");
-    let W = (0, v.eG)(F),
+    let W = (0, f.eG)(F),
         K = "portrait" === W,
         Y = (0, x.A)((e) => {
             G(e.target.offsetHeight);
         }),
         z = (0, m.w)(Y),
         B = i.config.features.includes(P.Li.FULL_EPISODE_VIDEO_QUEST),
-        { enabled: J } = C.jS.useConfig({ location: P.rE.VIDEO_MODAL }),
-        { enabled: X } = C.n6.useConfig({ location: P.rE.VIDEO_MODAL }),
+        { enabled: J } = p.jS.useConfig({ location: P.rE.VIDEO_MODAL }),
+        { enabled: X } = p.n6.useConfig({ location: P.rE.VIDEO_MODAL }),
         Z = J || B,
-        $ = (0, _.H)({ quest: i, onClose: s, sourceQuestContent: A, impressionId: Q }),
+        $ = (0, M.H)({ quest: i, onClose: s, sourceQuestContent: A, impressionId: Q }),
         ee = l.useMemo(
             () => ({
                 quest: i,
                 sourceQuestContent: A,
-                videoSessionId: c,
+                videoSessionId: d,
                 isPortrait: K,
                 onClose: s,
                 isFullscreenEnabled: H,
@@ -79,31 +79,31 @@ function I(e) {
                 progressSec: R,
                 targetSec: j.targetSeconds,
             }),
-            [i, A, c, K, s, H, Z, w, R, j.targetSeconds],
+            [i, A, d, K, s, H, Z, w, R, j.targetSeconds],
         );
     return (0, n.jsx)(E.a.Provider, {
         value: ee,
         children: (0, n.jsx)("div", {
             style: K ? { "--custom-portrait-footer-height": `${U}px` } : void 0,
-            children: (0, n.jsxs)(d.EOs, {
+            children: (0, n.jsxs)(c.EOs, {
                 "data-migration-pending": !0,
                 transitionState: t,
-                size: d.rIJ.DYNAMIC,
-                className: a()(b.CR, { [b.VX]: "landscape" === W, [b.Zy]: "portrait" === W }),
+                size: c.rIJ.DYNAMIC,
+                className: a()(k.CR, { [k.VX]: "landscape" === W, [k.Zy]: "portrait" === W }),
                 fullscreenOnMobile: !1,
                 parentComponent: "Modal",
                 children: [
                     !Z &&
                         (0, n.jsx)("div", {
-                            className: b.z6,
-                            children: (0, n.jsx)(d.K0, {
+                            className: k.z6,
+                            children: (0, n.jsx)(c.K0, {
                                 variant: "icon-only",
                                 icon: (e) =>
-                                    (0, n.jsx)(d.PGe, {
+                                    (0, n.jsx)(c.PGe, {
                                         ...e,
-                                        color: d.LU0.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT,
+                                        color: c.LU0.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT,
                                     }),
-                                "aria-label": k.intl.string(k.t.cpT0Cq),
+                                "aria-label": L.intl.string(L.t.cpT0Cq),
                                 onClick: s,
                             }),
                         }),
@@ -111,12 +111,12 @@ function I(e) {
                         ref: (e) => {
                             g.current = e;
                         },
-                        className: b.NE,
+                        className: k.NE,
                         children: (0, n.jsx)("div", {
-                            className: b.S3,
+                            className: k.S3,
                             style: { "--custom-footer-horizontal-padding": `${Z ? 20 : 16}px` },
                             children: (0, n.jsxs)("div", {
-                                className: b.jE,
+                                className: k.jE,
                                 children: [
                                     X
                                         ? (0, n.jsx)(N.A, {
@@ -124,7 +124,7 @@ function I(e) {
                                               parentTransitionState: t,
                                               onOptimisticProgressUpdate: q,
                                               autoplay: o,
-                                              performanceClockStartTime: h,
+                                              openedAtMs: h,
                                               orientation: W,
                                           })
                                         : (0, n.jsx)(O.A, {
@@ -132,25 +132,25 @@ function I(e) {
                                               parentTransitionState: t,
                                               onOptimisticProgressUpdate: q,
                                               autoplay: o,
-                                              performanceClockStartTime: h,
+                                              openedAtMs: h,
                                               orientation: W,
                                           }),
                                     K
                                         ? (0, n.jsxs)("div", {
                                               ref: z,
-                                              className: L.uh,
+                                              className: b.uh,
                                               children: [
                                                   (0, n.jsxs)("div", {
-                                                      className: L.Df,
+                                                      className: b.Df,
                                                       children: [I ? null : (0, n.jsx)(V.A, {}), (0, n.jsx)(D.A, {})],
                                                   }),
                                                   (0, n.jsxs)("div", {
-                                                      className: L.eX,
+                                                      className: b.eX,
                                                       children: [
                                                           (0, n.jsx)("div", {
-                                                              className: L.uP,
+                                                              className: b.uP,
                                                               children: (0, n.jsx)("div", {
-                                                                  className: L.ne,
+                                                                  className: b.ne,
                                                                   children: (0, n.jsx)(y.A, {}),
                                                               }),
                                                           }),
@@ -160,14 +160,14 @@ function I(e) {
                                               ],
                                           })
                                         : (0, n.jsxs)("div", {
-                                              className: L.nR,
+                                              className: b.nR,
                                               children: [
                                                   (0, n.jsxs)("div", {
-                                                      className: L.uu,
+                                                      className: b.uu,
                                                       children: [I ? null : (0, n.jsx)(V.A, {}), (0, n.jsx)(D.A, {})],
                                                   }),
                                                   (0, n.jsxs)("div", {
-                                                      className: L.NY,
+                                                      className: b.NY,
                                                       children: [
                                                           (0, n.jsx)(y.A, {}),
                                                           (0, n.jsx)(T.A, { handlePrimaryCtaClick: $ }),
@@ -186,16 +186,16 @@ function I(e) {
 }
 function Q(e) {
     let { questId: t, overrideQuest: s, autoplay: i, openStartClockTime: a, ...o } = e,
-        r = (0, c.bG)([h.A], () => h.A.getQuest(t)),
-        u = (0, c.bG)([h.A], () => h.A.getQuestConfig(t)),
-        d = s ?? r,
+        r = (0, d.bG)([h.A], () => h.A.getQuest(t)),
+        u = (0, d.bG)([h.A], () => h.A.getQuestConfig(t)),
+        c = s ?? r,
         m = null != s ? s.config : u,
         x = l.useMemo(() => (null != m ? { questConfig: m } : null), [m]);
-    return null != d && null != m && null != x
+    return null != c && null != m && null != x
         ? (0, n.jsx)(E.l.Provider, {
               value: x,
               children: (0, n.jsx)(j.R, {
-                  questOrQuests: d,
+                  questOrQuests: c,
                   questContent: A.uF.VIDEO_MODAL,
                   minViewTimeSeconds: g.bq,
                   trackGuildAndChannelMetadata: !0,
@@ -205,7 +205,7 @@ function Q(e) {
                           ...o,
                           parentModalOpenStartClockTime: a,
                           impressionRef: e,
-                          quest: d,
+                          quest: c,
                           autoplay: i,
                       }),
               }),

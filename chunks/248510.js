@@ -47,7 +47,6 @@ let x = {
                                 orientation: l,
                                 renderOverlay: _,
                                 parentTransitionState: o.ip4.ENTERED,
-                                performanceClockStartTime: 0,
                             }),
                         }),
                         (0, a.jsxs)(o.ZpM, {

@@ -1,44 +1,44 @@
-n.d(t, { DX: () => f, _v: () => T, cs: () => E, ec: () => C, kK: () => v, sn: () => x });
-var r = n(627968),
-    a = n(64700),
-    o = n(412703),
-    i = n(440703),
-    l = n(267548),
-    s = n(668824),
-    c = n(397927),
-    d = n(341915),
-    u = n(405670),
-    p = n(73473),
-    m = n(839727),
-    b = n(795068),
-    _ = n(654487),
-    g = n(652215),
-    S = n(784018);
-function f(e) {
+a.d(t, { DX: () => v, _v: () => P, cs: () => T, ec: () => f, kK: () => x, sn: () => S });
+var n = a(627968),
+    o = a(64700),
+    r = a(412703),
+    i = a(440703),
+    l = a(267548),
+    s = a(668824),
+    d = a(397927),
+    c = a(341915),
+    u = a(405670),
+    p = a(73473),
+    b = a(839727),
+    m = a(795068),
+    _ = a(654487),
+    g = a(652215),
+    h = a(784018);
+function v(e) {
     let {
         url: t,
-        width: n = 640,
-        height: r = 360,
-        target: a = 60,
+        width: a = 640,
+        height: n = 360,
+        target: o = 60,
         videoTitle: i = "Test Video Quest",
         transcript: l,
     } = e;
     return {
-        type: o.n.WATCH_VIDEO,
-        target: a,
-        assets: { video: { url: t, width: n, height: r, transcript: l } },
+        type: r.n.WATCH_VIDEO,
+        target: o,
+        assets: { video: { url: t, width: a, height: n, transcript: l } },
         messages: { videoTitle: i },
     };
 }
-function v() {
+function x() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        { streamProgressSeconds: t = 0, completedAt: n = null, enrolledAt: r = null, claimedAt: a = null } = e;
+        { streamProgressSeconds: t = 0, completedAt: a = null, enrolledAt: n = null, claimedAt: o = null } = e;
     return {
         userId: "123",
-        questId: h,
-        enrolledAt: r,
-        completedAt: n,
-        claimedAt: a,
+        questId: y,
+        enrolledAt: n,
+        completedAt: a,
+        claimedAt: o,
         claimedTier: null,
         lastStreamHeartbeatAt: null,
         streamProgressSeconds: t,
@@ -46,13 +46,13 @@ function v() {
         progress: {},
     };
 }
-let h = `playground-video-quest-${Date.now()}`;
-function C(e) {
+let y = `playground-video-quest-${Date.now()}`;
+function f(e) {
     return {
-        id: h,
+        id: y,
         preview: !0,
         config: {
-            id: h,
+            id: y,
             configVersion: 2,
             startsAt: "2024-01-01T00:00:00+00:00",
             expiresAt: "2030-01-01T00:00:00+00:00",
@@ -74,41 +74,41 @@ function C(e) {
                     },
                 ],
                 rewardsExpireAt: "2030-01-01T00:00:00+00:00",
-                platforms: [d.pY.CROSS_PLATFORM],
+                platforms: [c.pY.CROSS_PLATFORM],
             },
             assets: {
                 hero: "",
-                heroVideo: S.kz,
+                heroVideo: h.kz,
                 questBarHero: "",
                 questBarHeroVideo: null,
                 questBarHeroBlurhash: null,
                 gameTile: "",
                 logotype: "",
             },
-            taskConfigV2: { joinOperator: s.K.AND, tasks: { [o.n.WATCH_VIDEO]: e } },
+            taskConfigV2: { joinOperator: s.K.AND, tasks: { [r.n.WATCH_VIDEO]: e } },
             features: [],
             sharePolicy: l.i.SHAREABLE_EVERYWHERE,
             ctaConfig: { link: "https://discord.com/", buttonLabel: "Learn More" },
         },
-        userStatus: v({ enrolledAt: new Date().toISOString() }),
-        targetedContent: [d.uF.QUEST_HOME_DESKTOP],
+        userStatus: x({ enrolledAt: new Date().toISOString() }),
+        targetedContent: [c.uF.QUEST_HOME_DESKTOP],
     };
 }
-function x(e) {
+function S(e) {
     let {
             quest: t,
-            isPortrait: n,
-            children: o,
+            isPortrait: a,
+            children: r,
             isFullscreenEnabled: i = !1,
             useNewStyling: l = !1,
             setIsFullscreenEnabled: s = g.tEg,
         } = e,
-        c = a.useMemo(
+        d = o.useMemo(
             () => ({
                 quest: t,
-                sourceQuestContent: d.uF.INTERNAL_PREVIEW_TOOL,
+                sourceQuestContent: c.uF.INTERNAL_PREVIEW_TOOL,
                 videoSessionId: "playground-session",
-                isPortrait: n,
+                isPortrait: a,
                 onClose: g.tEg,
                 isFullscreenEnabled: i,
                 setIsFullscreenEnabled: s,
@@ -116,52 +116,52 @@ function x(e) {
                 progressSec: 0,
                 targetSec: 0,
             }),
-            [t, n, i, s, l],
+            [t, a, i, s, l],
         ),
-        u = a.useMemo(() => ({ questConfig: t.config }), [t.config]);
-    return (0, r.jsx)(p.R, {
+        u = o.useMemo(() => ({ questConfig: t.config }), [t.config]);
+    return (0, n.jsx)(p.R, {
         questOrQuests: t,
-        questContent: d.uF.VIDEO_MODAL,
-        sourceQuestContent: d.uF.INTERNAL_PREVIEW_TOOL,
+        questContent: c.uF.VIDEO_MODAL,
+        sourceQuestContent: c.uF.INTERNAL_PREVIEW_TOOL,
         children: (e, t) =>
-            (0, r.jsx)(b.l.Provider, { value: u, children: (0, r.jsx)(b.a.Provider, { value: c, children: o }) }),
+            (0, n.jsx)(m.l.Provider, { value: u, children: (0, n.jsx)(m.a.Provider, { value: d, children: r }) }),
     });
 }
-function y(e) {
+function C(e) {
     let {
             orientation: t,
-            autoplay: n,
-            questCompleted: o,
+            autoplay: a,
+            questCompleted: r,
             fullEpisode: i,
             targetTimeSec: l,
             useNewStyling: s,
-            videoUrl: d,
+            videoUrl: c,
         } = e,
         p = "portrait" === t,
-        [b, S] = a.useState(!1),
-        h = f({
-            url: d,
+        [m, h] = o.useState(!1),
+        y = v({
+            url: c,
             width: p ? 360 : 640,
             height: p ? 640 : 360,
             target: l,
             videoTitle: p ? "Test Portrait Video" : "Test Landscape Video",
             transcript: "transcript.txt",
         }),
-        y = C(h),
-        T = a.useRef(!1);
-    T.current || ((T.current = !0), u.Kr.getState().clearState()),
-        i && (y.config.features = [_.Li.FULL_EPISODE_VIDEO_QUEST]);
-    let E = o
+        C = f(y),
+        P = o.useRef(!1);
+    P.current || ((P.current = !0), u.Kr.getState().clearState()),
+        i && (C.config.features = [_.Li.FULL_EPISODE_VIDEO_QUEST]);
+    let T = r
         ? {
-              ...y,
-              userStatus: v({
-                  enrolledAt: y.userStatus?.enrolledAt ?? null,
-                  completedAt: y.userStatus?.enrolledAt ?? null,
-                  streamProgressSeconds: h.target,
+              ...C,
+              userStatus: x({
+                  enrolledAt: C.userStatus?.enrolledAt ?? null,
+                  completedAt: C.userStatus?.enrolledAt ?? null,
+                  streamProgressSeconds: y.target,
               }),
           }
-        : y;
-    return (0, r.jsx)("div", {
+        : C;
+    return (0, n.jsx)("div", {
         style: {
             display: "flex",
             flexDirection: "column",
@@ -173,26 +173,26 @@ function y(e) {
             overflow: "hidden",
             "--custom-footer-horizontal-padding": "20px",
         },
-        children: (0, r.jsx)(x, {
-            quest: E,
+        children: (0, n.jsx)(S, {
+            quest: T,
             isPortrait: p,
-            isFullscreenEnabled: b,
-            setIsFullscreenEnabled: S,
+            isFullscreenEnabled: m,
+            setIsFullscreenEnabled: h,
             useNewStyling: s,
-            children: (0, r.jsx)(m.A, {
-                targetTimeSec: h.target,
-                parentTransitionState: c.ip4.ENTERED,
+            children: (0, n.jsx)(b.A, {
+                targetTimeSec: y.target,
+                parentTransitionState: d.ip4.ENTERED,
                 onOptimisticProgressUpdate: g.tEg,
-                autoplay: n,
+                autoplay: a,
                 autoFocus: !1,
-                performanceClockStartTime: 0,
+                openedAtMs: 0,
                 orientation: t,
-                videoUrlOverride: d,
+                videoUrlOverride: c,
             }),
         }),
     });
 }
-let T = {
+let P = {
         orientation: {
             label: "Orientation",
             type: "select",
@@ -205,23 +205,23 @@ let T = {
         questCompleted: { label: "Quest Completed", type: "boolean", defaultValue: !1 },
         fullEpisode: { label: "Full Episode (shows reward indicator)", type: "boolean", defaultValue: !1 },
         targetTimeSec: { label: "Target Time (sec)", type: "number", defaultValue: 15 },
-        useNewStyling: { label: "Use New Styling", type: "boolean", defaultValue: !1 },
-        videoUrl: { label: "Video URL", type: "text", defaultValue: S.kz },
+        useNewStyling: { label: "Use New Styling", type: "boolean", defaultValue: !0 },
+        videoUrl: { label: "Video URL", type: "text", defaultValue: h.kz },
     },
-    E = {
+    T = {
         title: "Legacy Quest Player",
         stories: [
             {
                 name: "Landscape",
                 id: "landscape-video",
-                component: y,
-                controls: { ...T, orientation: { ...T.orientation, defaultValue: "landscape" } },
+                component: C,
+                controls: { ...P, orientation: { ...P.orientation, defaultValue: "landscape" } },
             },
             {
                 name: "Portrait",
                 id: "portrait-video",
-                component: y,
-                controls: { ...T, orientation: { ...T.orientation, defaultValue: "portrait" } },
+                component: C,
+                controls: { ...P, orientation: { ...P.orientation, defaultValue: "portrait" } },
             },
         ],
     };
