@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { JL: () => C, Oj: () => S, ou: () => N });
+n.d(t, { CD: () => C, JL: () => R, Oj: () => S });
 var r = n(64700),
     i = n(735438),
     s = n.n(i),
@@ -75,40 +75,39 @@ function N(e) {
         {
             userPrice: i,
             pricesForPurchaseType: s,
-            purchaseType: u,
-            storeHasPrice: d,
+            purchaseType: l,
+            storeHasPrice: u,
         } = v({ sku: t, priceSetAssignmentPurchaseType: n, isOrbPrice: !1 }),
-        m = (0, a.yK)([f.A], () => f.A.getRewardsForSkuId(t?.id) ?? []),
-        E = (0, a.bG)([c.default], () => c.default.getCurrentUser()),
-        g = (0, a.bG)([l.default], () => l.default.locale),
-        {
-            normalPrice: A,
-            discountedPrice: I,
-            discountPercent: T,
-        } = r.useMemo(() => {
-            if (null == t) return { normalPrice: null, discountedPrice: null, discountPercent: null };
-            if (!d) {
-                let e = t.productLine === h.EZt.SOCIAL_LAYER_GAME_ITEM ? (0, o.y8)(t, n) : t.getPrice(E?.premiumType);
-                return {
-                    normalPrice: null != e && e.amount > 0 ? (0, _.$g)(e.amount, e.currency) : null,
-                    discountedPrice: null,
-                    discountPercent: null,
-                };
-            }
-            let e = m.find((e) => e[u]?.type === p.Ns.DISCOUNT),
-                r = null != e ? e[u] : null,
-                a = null != r ? i : null,
-                l = null != r && r.amount > 0 ? r.amount : null,
-                c = null != r ? s?.prices[h.FBC.BASE]?.[p.v8.NORMAL]?.find((e) => e.currency !== h.Yri.DISCORD_ORB) : i;
-            return {
-                normalPrice: null != c && c.amount > 0 ? (0, _.$g)(c.amount, c.currency) : null,
-                discountedPrice: null != a ? (0, _.$g)(a.amount, a.currency) : null,
-                discountPercent: null != l ? (0, _.l9)(g, -l / 100) : null,
-            };
-        }, [t, n, E?.premiumType, d, i, s, u, m, g]);
-    return { normalPrice: A, discountedPrice: I, discountPercent: T };
+        d = (0, a.yK)([f.A], () => f.A.getRewardsForSkuId(t?.id) ?? []),
+        _ = (0, a.bG)([c.default], () => c.default.getCurrentUser());
+    return r.useMemo(() => {
+        if (null == t) return { normalPrice: null, discountedPrice: null, discountPercent: null };
+        if (!u) {
+            let e = t.productLine === h.EZt.SOCIAL_LAYER_GAME_ITEM ? (0, o.y8)(t, n) : t.getPrice(_?.premiumType);
+            return { normalPrice: null != e && e.amount > 0 ? e : null, discountedPrice: null, discountPercent: null };
+        }
+        let e = d.find((e) => e[l]?.type === p.Ns.DISCOUNT),
+            r = null != e ? e[l] : null,
+            a = null != r && null != i ? i : null,
+            c = null != r && r.amount > 0 ? r.amount : null,
+            f = null != r ? s?.prices[h.FBC.BASE]?.[p.v8.NORMAL]?.find((e) => e.currency !== h.Yri.DISCORD_ORB) : i;
+        return { normalPrice: null != f && f.amount > 0 ? f : null, discountedPrice: a, discountPercent: c };
+    }, [t, n, _?.premiumType, u, i, s, l, d]);
 }
 function C(e) {
+    let { sku: t, priceSetAssignmentPurchaseType: n = h.lid.DEFAULT } = e,
+        { normalPrice: i, discountedPrice: s, discountPercent: o } = N({ sku: t, priceSetAssignmentPurchaseType: n }),
+        u = (0, a.bG)([l.default], () => l.default.locale);
+    return r.useMemo(
+        () => ({
+            normalPrice: null != i && i.amount > 0 ? (0, _.$g)(i.amount, i.currency) : null,
+            discountedPrice: null != s ? (0, _.$g)(s.amount, s.currency) : null,
+            discountPercent: null != o ? (0, _.l9)(u, -o / 100) : null,
+        }),
+        [i, s, o, u],
+    );
+}
+function R(e) {
     let { sku: t, priceSetAssignmentPurchaseType: n = h.lid.DEFAULT } = e,
         { userPrice: i, storeHasPrice: s } = v({ sku: t, priceSetAssignmentPurchaseType: n, isOrbPrice: !0 }),
         o = (0, a.bG)([c.default], () => c.default.getCurrentUser()),

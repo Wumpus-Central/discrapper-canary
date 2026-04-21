@@ -217,11 +217,7 @@ function Z(t) {
             displayPrice: tL,
         } = (function (t) {
             let { sku: e } = t,
-                {
-                    normalPrice: n,
-                    discountedPrice: r,
-                    discountPercent: a,
-                } = (0, O.ou)({ sku: e, priceSetAssignmentPurchaseType: W.lid.DEFAULT }),
+                { normalPrice: n, discountedPrice: r, discountPercent: a } = (0, O.CD)({ sku: e }),
                 l = r ?? n,
                 u = i.useMemo(
                     () =>
