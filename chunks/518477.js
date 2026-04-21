@@ -1,21 +1,23 @@
 "use strict";
 n.d(t, {
-    AQ: () => f,
+    AQ: () => p,
     In: () => i,
-    KM: () => s,
-    L7: () => d,
-    Mq: () => c,
-    RP: () => a,
-    bk: () => o,
-    d6: () => l,
-    dS: () => _,
-    jM: () => p,
-    pt: () => u,
+    KM: () => a,
+    Ky: () => s,
+    L7: () => _,
+    Mq: () => d,
+    RP: () => o,
+    bk: () => l,
+    d6: () => u,
+    dS: () => f,
+    jM: () => h,
+    pt: () => c,
 });
 var r = n(652215);
 let i = 300,
-    s = "user-profile-popout";
-var a = (function (e) {
+    s = "guild_booster_lvl",
+    a = "user-profile-popout";
+var o = (function (e) {
         return (
             (e.FEATURED = "FEATURED"),
             (e.USER_INFO = "USER_INFO"),
@@ -31,7 +33,7 @@ var a = (function (e) {
             e
         );
     })({}),
-    o = (function (e) {
+    l = (function (e) {
         return (
             (e.ROLES = "ROLES"),
             (e.CONNECTIONS = "CONNECTIONS"),
@@ -41,7 +43,7 @@ var a = (function (e) {
             e
         );
     })({}),
-    l = (function (e) {
+    u = (function (e) {
         return (
             (e[(e.NICKNAME = 0)] = "NICKNAME"),
             (e[(e.PRONOUNS = 1)] = "PRONOUNS"),
@@ -56,7 +58,7 @@ var a = (function (e) {
             e
         );
     })({}),
-    u = (function (e) {
+    c = (function (e) {
         return (
             (e.VIEW = "VIEW"),
             (e.SEND_MESSAGE = "SEND_MESSAGE"),
@@ -178,7 +180,7 @@ var a = (function (e) {
             e
         );
     })({}),
-    c = (function (e) {
+    d = (function (e) {
         return (
             (e.WISHLIST_ITEM_CLICKED = "WISHLIST_ITEM_CLICKED"),
             (e.WISHLIST_TOGGLE_PRIVATE = "WISHLIST_TOGGLE_PRIVATE"),
@@ -191,17 +193,17 @@ var a = (function (e) {
             e
         );
     })({});
-function d(e) {
+function _(e) {
     let { API_ENDPOINT: t, CDN_HOST: n } = window.GLOBAL_ENV;
     return null != n ? `https://${n}/badge-icons/${e}.png` : `${location.protocol}${t}${r.Rsh.BADGE_ICON(e)}`;
 }
-var _ = (function (e) {
+var f = (function (e) {
         return (e.ACTIVITY = "ACTIVITY"), (e.AVATAR = "AVATAR"), (e.STATUS = "STATUS"), e;
     })({}),
-    f = (function (e) {
+    p = (function (e) {
         return (e.REPLY = "REPLY"), (e.REACT = "REACT"), e;
     })({}),
-    p = (function (e) {
+    h = (function (e) {
         return (
             (e.WIDGET_ADDED = "WIDGET_ADDED"),
             (e.WIDGET_REMOVED = "WIDGET_REMOVED"),
