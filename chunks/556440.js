@@ -1,8 +1,8 @@
 n.d(t, { A: () => A });
 var i = n(179771),
     l = n(73153),
-    r = n(859703),
-    a = n(639214),
+    a = n(859703),
+    r = n(639214),
     s = n(792620),
     o = n(954571),
     d = n(636401),
@@ -18,9 +18,9 @@ let A = {
             } = e;
             (0, c.lG)(t.transport);
             let i = (0, c.D2)(t.application),
-                l = r.A.getQuest(n),
-                a = (0, s.TP)(l);
-            if (null == l || null == a || a !== i)
+                l = a.A.getQuest(n),
+                r = (0, s.TP)(l);
+            if (null == l || null == r || r !== i)
                 throw new d.A({ errorCode: u.Lw6.INVALID_COMMAND }, `Quest not found: ${n}`);
             return {
                 quest_id: n,
@@ -38,11 +38,11 @@ let A = {
             } = e;
             (0, c.lG)(t.transport);
             let i = (0, c.D2)(t.application),
-                a = r.A.getQuest(n),
-                A = (0, s.vS)(a);
-            if (null == a || null == A || A !== i)
+                r = a.A.getQuest(n),
+                A = (0, s.vS)(r);
+            if (null == r || null == A || A !== i)
                 throw new d.A({ errorCode: u.Lw6.INVALID_COMMAND }, `Quest not found: ${n}`);
-            if (a.userStatus?.enrolledAt == null)
+            if (r.userStatus?.enrolledAt == null)
                 throw new d.A({ errorCode: u.Lw6.INVALID_COMMAND }, "User is not enrolled in quest");
             return (
                 o.default.track(u.HAw.RPC_QUEST_START_TIMER_CALLED, { application_id: i, quest_id: n }),
@@ -58,7 +58,7 @@ let A = {
             (0, c.lG)(t.transport);
             let n = (0, c.D2)(t.application);
             return {
-                quests: (0, a.jm)(r.A.quests, n, !0)
+                quests: (0, r.jm)(a.A.quests, n, !0)
                     .map((e) => ({
                         quest_id: e.id,
                         enrolled_at: e.userStatus?.enrolledAt ?? null,
