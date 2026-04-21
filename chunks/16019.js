@@ -35,9 +35,9 @@ let y = s.memo(
             P = (0, o.bG)([c.A], () => c.A.useReducedMotion),
             { visibilityPercentageRef: D, visibilityPercentage: G } = (0, C.U)(!P),
             M = (0, _.b)(),
-            U = !L && M.length > 0,
-            k = (0, h.c)(a.C.MARKETING_PAGE_BANNER),
-            w = null != k && "marketingPageBanner" === k.properties.properties.oneofKind,
+            k = !L && M.length > 0,
+            U = (0, h.c)(a.C.MARKETING_PAGE_BANNER),
+            w = null != U && "marketingPageBanner" === U.properties.properties.oneofKind,
             V = (0, g.ar)() && !w;
         return (0, i.jsx)(m.f5, {
             value: y,
@@ -51,11 +51,7 @@ let y = s.memo(
                         className: j.hQ,
                         children: [
                             (0, i.jsx)(v.A, { containerVisibilityPercentage: G }),
-                            V &&
-                                (0, i.jsx)("div", {
-                                    className: j.XN,
-                                    children: (0, i.jsx)(b.A, { enablePremiumBrandRefresh: !0 }),
-                                }),
+                            V && (0, i.jsx)("div", { className: j.XN, children: (0, i.jsx)(b.A, {}) }),
                             (0, i.jsx)("div", {
                                 className: j.s8,
                                 children: (0, i.jsx)(d.Heading, {
@@ -71,9 +67,9 @@ let y = s.memo(
                                     L &&
                                         (0, i.jsx)("div", {
                                             className: j.eZ,
-                                            children: (0, i.jsx)(p.A, { referrer: R, enablePremiumBrandRefresh: !0 }),
+                                            children: (0, i.jsx)(p.A, { referrer: R }),
                                         }),
-                                    U &&
+                                    k &&
                                         (0, i.jsx)("div", {
                                             className: j.Qn,
                                             children: (0, i.jsx)(S.A, {
@@ -104,12 +100,12 @@ let y = s.memo(
                                             children: I.intl.format(I.t.kt9wxs, { cheapestMonthlyPrice: O }),
                                         }),
                                     }),
-                                    null != k &&
-                                        "marketingPageBanner" === k.properties.properties.oneofKind &&
+                                    null != U &&
+                                        "marketingPageBanner" === U.properties.properties.oneofKind &&
                                         (0, i.jsx)(A.x, {
-                                            componentId: k.id,
+                                            componentId: U.id,
                                             promotionBannerMarketingComponentFields:
-                                                k.properties.properties.marketingPageBanner,
+                                                U.properties.properties.marketingPageBanner,
                                         }),
                                 ],
                             }),

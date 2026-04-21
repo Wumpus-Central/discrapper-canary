@@ -7,30 +7,20 @@ var s = n(397927),
     a = n(985018),
     o = n(45861);
 function d(e) {
-    let { referrer: t, enablePremiumBrandRefresh: n } = e,
-        { avatarSrc: d, eventHandlers: c } = (0, l.A)({
-            userId: t?.id,
-            size: n ? r._3.SIZE_24 : r._3.SIZE_32,
-            animateOnHover: !0,
-        });
+    let { referrer: t } = e,
+        { avatarSrc: n, eventHandlers: d } = (0, l.A)({ userId: t?.id, size: r._3.SIZE_24, animateOnHover: !0 });
     return (0, i.jsx)("div", {
-        className: o.E2,
+        className: o.$6,
         children: (0, i.jsxs)("div", {
-            className: o.hA,
+            className: o.sc,
             children: [
                 (0, i.jsx)("div", {
                     className: o.kR,
-                    children: (0, i.jsx)(s.euF, {
-                        className: o.Kk,
-                        src: d,
-                        "aria-label": t.username,
-                        size: r._3.SIZE_32,
-                        ...c,
-                    }),
+                    children: (0, i.jsx)(s.euF, { src: n, "aria-label": t.username, size: r._3.SIZE_32, ...d }),
                 }),
                 (0, i.jsx)(s.Heading, {
                     variant: "heading-sm/normal",
-                    className: o.Mn,
+                    className: o.FS,
                     color: "text-strong",
                     children: a.intl.format(a.t.IqxblS, { username: null != t.globalName ? t.globalName : t.username }),
                 }),
