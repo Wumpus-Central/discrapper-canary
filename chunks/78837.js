@@ -1,56 +1,57 @@
-n.d(t, { f: () => A });
+n.d(t, { f: () => _ });
 var i = n(627968),
     s = n(64700),
-    a = n(503698),
-    l = n.n(a),
-    r = n(386181),
+    l = n(503698),
+    r = n.n(l),
+    a = n(386181),
     o = n(650682),
-    c = n(934551),
-    d = n(827734),
+    d = n(934551),
+    c = n(827734),
     u = n(397927),
-    _ = n(590089),
-    m = n(747625);
-function A(e) {
+    m = n(590089),
+    g = n(523880);
+function _(e) {
     let {
             ref: t,
             title: n,
-            collapsedSubtitle: a,
-            isExpanded: A,
-            onExpandedChange: g,
+            collapsedSubtitle: l,
+            isExpanded: _,
+            onExpandedChange: x,
             children: h,
-            animate: x = !0,
+            animate: A = !0,
         } = e,
         p = s.useRef(null),
-        [E, C] = s.useState(null),
-        T = A && null != E;
+        [T, f] = s.useState(null),
+        S = _ && null != T;
     return (
         s.useLayoutEffect(() => {
-            null != p.current && null == E && C(p.current.clientHeight);
-        }, [E]),
-        (0, i.jsxs)(r.EN, {
+            null != p.current && null == T && f(p.current.clientHeight);
+        }, [T]),
+        (0, i.jsxs)(a.EN, {
             ref: t,
-            isExpanded: A,
-            onExpandedChange: g,
+            isExpanded: _,
+            onExpandedChange: x,
             children: [
-                (0, i.jsx)(_.U, {
+                (0, i.jsx)(m.U, {
                     ref: p,
-                    style: null != E ? { minHeight: E } : void 0,
+                    style: null != T ? { minHeight: T } : void 0,
                     title: n,
-                    description: T ? void 0 : a,
+                    "aria-label": n,
+                    description: S ? void 0 : l,
                     trailingElement: (0, i.jsx)(u.vN3, {
                         children: (0, i.jsx)(o.$, {
                             slot: "trigger",
-                            className: m.bW,
-                            children: (0, i.jsx)(c.ChevronLargeUpIcon, {
-                                className: l()(m.Kk, { [m.kX]: !A }),
-                                color: d.A.colors.ICON_STRONG,
+                            className: g.bW,
+                            children: (0, i.jsx)(d.ChevronLargeUpIcon, {
+                                className: r()(g.Kk, { [g.kX]: !_ }),
+                                color: c.A.colors.ICON_STRONG,
                             }),
                         }),
                     }),
-                    onClick: () => g(!A),
+                    onClick: () => x(!_),
                 }),
-                (0, i.jsx)(r.kS, {
-                    className: l()(m.nd, { [m.t5]: !x }),
+                (0, i.jsx)(a.kS, {
+                    className: r()(g.nd, { [g.t5]: !A }),
                     children: (0, i.jsx)(u.BJc, { gap: 16, padding: { top: 16 }, children: h }),
                 }),
             ],
