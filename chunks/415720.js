@@ -105,6 +105,12 @@ let { Themes: r } = n(680049).zv,
                 [r.MIDNIGHT]: { raw: "NEUTRAL_24", opacity: 1 },
                 [r.DARKER]: { raw: "NEUTRAL_19", opacity: 1 },
             },
+            CARD_BORDER_DEFAULT: {
+                [r.DARK]: { raw: "NEUTRAL_12", opacity: 1 },
+                [r.LIGHT]: { raw: "NEUTRAL_50", opacity: 1 },
+                [r.MIDNIGHT]: { raw: "NEUTRAL_24", opacity: 1 },
+                [r.DARKER]: { raw: "NEUTRAL_19", opacity: 1 },
+            },
             CARD_SECONDARY_BG: {
                 [r.DARK]: { raw: "OPACITY_12", opacity: 0.12156862745098039 },
                 [r.LIGHT]: { raw: "OPACITY_16", opacity: 0.1607843137254902 },

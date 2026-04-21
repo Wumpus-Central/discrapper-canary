@@ -370,6 +370,13 @@ let { Themes: r } = n(680049).zv,
                 [r.DARKER]: { raw: "PLUM_18", opacity: 1 },
                 gradient: { light: { color: "WHITE_500", opacity: 0.75 }, dark: { color: "WHITE_500", opacity: 0.1 } },
             },
+            CARD_BORDER_DEFAULT: {
+                category: "generic",
+                [r.DARK]: { raw: "WHITE", opacity: 0.08 },
+                [r.LIGHT]: { raw: "BLACK", opacity: 0.08 },
+                [r.MIDNIGHT]: { raw: "PLUM_11", opacity: 0.14 },
+                [r.DARKER]: { raw: "PLUM_11", opacity: 0.12 },
+            },
             CARD_GRADIENT_BG: {
                 category: "background",
                 [r.DARK]: { raw: "BLACK", opacity: 0.4 },

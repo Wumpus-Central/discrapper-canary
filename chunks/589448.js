@@ -384,6 +384,13 @@ let { Themes: r } = n(680049).zv,
                 [r.DARKER]: { raw: "NEUTRAL_79", opacity: 1 },
                 gradient: { light: { color: "WHITE_500", opacity: 0.75 }, dark: { color: "WHITE_500", opacity: 0.1 } },
             },
+            CARD_BORDER_DEFAULT: {
+                category: "generic",
+                [r.DARK]: { raw: "OPACITY_12", opacity: 0.12156862745098039 },
+                [r.LIGHT]: { raw: "OPACITY_28", opacity: 0.2784313725490196 },
+                [r.MIDNIGHT]: { raw: "OPACITY_20", opacity: 0.2 },
+                [r.DARKER]: { raw: "OPACITY_12", opacity: 0.12156862745098039 },
+            },
             CARD_PRIMARY_PRESSED_BG: {
                 category: "background",
                 [r.DARK]: { raw: "PRIMARY_645", opacity: 1 },

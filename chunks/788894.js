@@ -185,6 +185,14 @@ let r = {
                     return 12;
                 },
             },
+            CHANNEL_SAFE_AREA_BOTTOM_BACKGROUND: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return "background-base-low";
+                    for (let e of t) if ("mobile-visual-refresh" === e) return "background-base-lower";
+                    return "background-base-low";
+                },
+            },
             CHAT_INPUT_ACTION_BUTTON_GAP: {
                 resolve(e) {
                     let { enabledExperiments: t } = e;
