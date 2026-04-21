@@ -8,7 +8,7 @@ var r = n(627968),
     l = n(866485),
     u = n(981036),
     c = n(985018),
-    d = n(495756);
+    d = n(367644);
 let _ = (e) => (0, r.jsx)(f, { ...e }),
     f = (e) => {
         let {
@@ -43,4 +43,4 @@ let _ = (e) => (0, r.jsx)(f, { ...e }),
             ],
         });
     },
-    p = (0, l.R)({ step: a.pn.GIFT_CUSTOMIZATION, renderStep: _, DirectStepComponent: f });
+    p = (0, l.R)({ step: a.pn.GIFT_CUSTOMIZATION, renderStep: _ });
