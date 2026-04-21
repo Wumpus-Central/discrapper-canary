@@ -1,10 +1,13 @@
-n.d(t, { l: () => s });
-var i = n(945810);
-function s(e) {
+n.d(t, { Q: () => r, l: () => a });
+var s = n(945810);
+function a(e) {
+    return !1;
+}
+function r(e) {
     return !1;
 }
 n(610546),
-    (0, i.mj)({
+    (0, s.mj)({
         name: "2026-03-croissant",
         kind: "user",
         defaultConfig: { enabled: !1 },

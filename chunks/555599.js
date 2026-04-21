@@ -1,6 +1,7 @@
 e.exports = {
     Ui: "cardContainer__5b393",
     Nr: "card__5b393",
+    d$: "backgroundElement__5b393",
     Io: "pill__5b393",
     Wi: "descriptionWrapper__5b393",
     h_: "description__5b393",
@@ -19,5 +20,6 @@ e.exports = {
     eq: "primaryAssetImage__5b393",
     hQ: "contentContainer__5b393",
     P_: "textContent__5b393",
+    Gv: "footerContentWrapper__5b393",
     oU: "progressBarWrapper__5b393",
 };
