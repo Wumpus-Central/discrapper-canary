@@ -263,13 +263,14 @@ function K(e) {
     }, [eo]);
     let e_ = ea < er.length ? ea : 0,
         em = ei[e_] ?? null,
-        eh = er.length > 1;
+        eh = er.length > 1,
+        ex = er.some((e) => "video" === e.type);
     (0, b.pE)(),
         (0, c.Ay)(() => {
             T.default.track(G.HAw.OPEN_MODAL, { location_stack: O, type: Y.Nh, sku_id: s, application_id: u }),
                 (0, N.Xw)();
         });
-    let ex = a.useCallback(
+    let ef = a.useCallback(
             (e) => {
                 T.default.track(G.HAw.SLAYER_STOREFRONT_PDP_ELEMENT_CLICKED, {
                     slayer_storefront_session_id: I?.sessionId,
@@ -281,19 +282,19 @@ function K(e) {
             },
             [I, s, O],
         ),
-        ef = a.useCallback(
+        ep = a.useCallback(
             (e) => {
-                es(e), ex(F.Jq.CAROUSEL_ITEM);
+                es(e), ef(F.Jq.CAROUSEL_ITEM);
             },
-            [ex],
+            [ef],
         );
     a.useEffect(() => {
         null == L || null == s || j.A.isFetchingForSKU(s) || (0, N.qf)(L, s);
     }, [L, s]);
-    let ep = a.useCallback(() => {
+    let eg = a.useCallback(() => {
             null != el &&
                 null != L &&
-                (ex(F.Jq.FORWARD_BUTTON),
+                (ef(F.Jq.FORWARD_BUTTON),
                 (0, R.d)({
                     sku: el,
                     guildId: L,
@@ -301,22 +302,22 @@ function K(e) {
                     analyticsLocations: O,
                     analyticsContext: I,
                 }));
-        }, [el, L, ex, O, I]),
-        eg = a.useCallback(() => {
-            ex(F.Jq.WISHLIST_BUTTON);
-        }, [ex]),
+        }, [el, L, ef, O, I]),
         eb = a.useCallback(() => {
-            en(!et), ex(F.Jq.MUTE_BUTTON);
-        }, [et, ex]),
-        eC = (0, E.B)(),
-        ej = el?.tenantMetadata?.socialLayer;
-    if (null == el || null == ej) return Z ? (0, l.jsx)(o.y$y, {}) : null;
-    let eT = w?.storefront,
-        eA = eT?.logoAssetId != null ? (0, A.YE)(eT.applicationId, eT.logoAssetId, 75) : null,
-        ev = eT?.lightThemeLogoAssetId != null ? (0, A.YE)(eT.applicationId, eT.lightThemeLogoAssetId, 75) : null,
-        eN = null;
-    eN = ee ? (eA ?? ev) : (ev ?? eA);
-    let eS = null != el.orbsReward && el.orbsReward > 0;
+            ef(F.Jq.WISHLIST_BUTTON);
+        }, [ef]),
+        eC = a.useCallback(() => {
+            en(!et), ef(F.Jq.MUTE_BUTTON);
+        }, [et, ef]),
+        ej = (0, E.B)(),
+        eT = el?.tenantMetadata?.socialLayer;
+    if (null == el || null == eT) return Z ? (0, l.jsx)(o.y$y, {}) : null;
+    let eA = w?.storefront,
+        ev = eA?.logoAssetId != null ? (0, A.YE)(eA.applicationId, eA.logoAssetId, 75) : null,
+        eN = eA?.lightThemeLogoAssetId != null ? (0, A.YE)(eA.applicationId, eA.lightThemeLogoAssetId, 75) : null,
+        eS = null;
+    eS = ee ? (ev ?? eN) : (eN ?? ev);
+    let eI = null != el.orbsReward && el.orbsReward > 0;
     return (0, l.jsx)(o.EOs, {
         transitionState: t,
         "hide-shadow": !0,
@@ -327,9 +328,9 @@ function K(e) {
         children: (0, l.jsxs)(o.$mQ, {
             className: q.jE,
             children: [
-                eS &&
+                eI &&
                     (0, l.jsx)(Q, {
-                        timeRemaining: eC ?? void 0,
+                        timeRemaining: ej ?? void 0,
                         text: W.intl.format(W.t.d3njXi, { orbCount: el.orbsReward }),
                     }),
                 (0, l.jsxs)("div", {
@@ -341,7 +342,7 @@ function K(e) {
                                 (0, l.jsx)("div", {
                                     className: q.r$,
                                     children:
-                                        null != eN ? (0, l.jsx)("img", { className: q.wm, src: eN, alt: "" }) : null,
+                                        null != eS ? (0, l.jsx)("img", { className: q.wm, src: eS, alt: "" }) : null,
                                 }),
                                 (0, l.jsxs)("div", {
                                     ref: ec,
@@ -359,7 +360,7 @@ function K(e) {
                                                               mediaItems: er,
                                                               labels: ei.map((e) => e.label),
                                                               selectedIndex: e_,
-                                                              onSelectIndex: ef,
+                                                              onSelectIndex: ep,
                                                           }),
                                                       }),
                                                       (0, l.jsx)("div", {
@@ -399,7 +400,7 @@ function K(e) {
                                             shouldShowShopLink: !m,
                                             giftRecipient: x?.id !== P ? x : void 0,
                                             giftingOrigin: x?.id !== P ? p : void 0,
-                                            trackPDPClick: ex,
+                                            trackPDPClick: ef,
                                             analyticsLocations: O,
                                         }),
                                     ],
@@ -418,22 +419,23 @@ function K(e) {
                                                 sku: el,
                                                 isCardHovered: !0,
                                                 className: i()(q.jU, q.ij),
-                                                trackButtonClick: eg,
+                                                trackButtonClick: eb,
                                                 variant: "overlay-secondary",
                                                 location: "social_layer_storefront_product_details_modal",
                                             }),
                                         (0, l.jsx)($, {
-                                            onClick: ep,
+                                            onClick: eg,
                                             ariaLabel: W.intl.string(W.t.Ej3B3Y),
                                             children: (0, l.jsx)(h.A, { size: "refresh_sm", color: "currentColor" }),
                                         }),
-                                        (0, l.jsx)($, {
-                                            onClick: eb,
-                                            ariaLabel: et ? W.intl.string(W.t.YqAjXy) : W.intl.string(W.t.w4m945),
-                                            children: et
-                                                ? (0, l.jsx)(o._RO, { size: "refresh_sm", color: "currentColor" })
-                                                : (0, l.jsx)(o.HKD, { size: "refresh_sm", color: "currentColor" }),
-                                        }),
+                                        ex &&
+                                            (0, l.jsx)($, {
+                                                onClick: eC,
+                                                ariaLabel: et ? W.intl.string(W.t.YqAjXy) : W.intl.string(W.t.w4m945),
+                                                children: et
+                                                    ? (0, l.jsx)(o._RO, { size: "refresh_sm", color: "currentColor" })
+                                                    : (0, l.jsx)(o.HKD, { size: "refresh_sm", color: "currentColor" }),
+                                            }),
                                         (0, l.jsx)($, {
                                             onClick: y,
                                             ariaLabel: W.intl.string(W.t.cpT0Cq),
