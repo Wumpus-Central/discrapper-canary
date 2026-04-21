@@ -6,7 +6,7 @@ var n = l(503698),
     i = l(158954),
     o = l(990078),
     s = l(985018),
-    d = l(967024);
+    d = l(889536);
 function c() {
     return (0, a.jsx)("div", { className: d.overlay });
 }
@@ -33,8 +33,8 @@ function p(e) {
     });
 }
 function m(e) {
-    let { variant: t, disabled: l = !1, children: n } = e;
-    return (0, a.jsx)("div", { className: r()(d.tile, d[t], { [d.disabled]: l }), children: n });
+    let { variant: t, disabled: l = !1, children: n, innerRef: i } = e;
+    return (0, a.jsx)("div", { ref: i, className: r()(d.tile, d[t], { [d.disabled]: l }), children: n });
 }
 function h(e) {
     let {
@@ -46,10 +46,13 @@ function h(e) {
         overlayIcon: s,
         overlayControls: p,
         disabled: h = !1,
+        buttonRef: x,
+        ...b
     } = e;
     return (0, a.jsxs)(m, {
         variant: t,
         disabled: h,
+        innerRef: x,
         children: [
             (0, a.jsxs)(i.DUT, {
                 className: d.tileButton,
@@ -57,6 +60,7 @@ function h(e) {
                 onClick: h ? void 0 : l,
                 "aria-disabled": h,
                 tabIndex: h ? -1 : 0,
+                ...b,
                 children: [
                     (0, a.jsx)("div", { className: d.content, children: r }),
                     o && !h && (0, a.jsx)(c, {}),
