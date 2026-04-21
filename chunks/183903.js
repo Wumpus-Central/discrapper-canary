@@ -21,9 +21,9 @@ var a = n(311907),
     _ = n(399925),
     x = n(74847),
     E = n(602902),
-    C = n(696016);
+    v = n(696016);
 n(980504);
-var v = n(16590),
+var C = n(16590),
     S = n(985018),
     D = n(264572).Buffer;
 function R(e) {
@@ -32,33 +32,33 @@ function R(e) {
             channelId: R,
             onShare: M,
             onEdit: F,
-            onBeforeDelete: O,
+            onBeforeDelete: j,
             onAfterDelete: P,
-            actionsDisabled: j = !1,
+            actionsDisabled: T = !1,
             showShareAndEdit: B = !1,
         } = e,
-        T = t[0],
-        U = t.length > 1,
-        { analyticsLocations: k } = (0, s.Ay)(),
-        N = (0, a.bG)([g.Ay, p.A, h.default, f.A], () =>
+        O = t[0],
+        H = t.length > 1,
+        { analyticsLocations: U } = (0, s.Ay)(),
+        k = (0, a.bG)([g.Ay, p.A, h.default, f.A], () =>
             g.Ay.getFlattenedGuildIds().some((e) => {
                 let t = f.A.getGuild(e);
                 return null != t && (0, c.ie)(t, p.A, h.default).canCreateExpressions;
             }),
         ),
-        H = (0, a.bG)([b.A], () => t.some((e) => b.A.isClipExporting(e.id)));
+        N = (0, a.bG)([b.A], () => t.some((e) => b.A.isClipExporting(e.id)));
     async function Z() {
         (0, l.Z_)();
         let e = d.A.getChannel(R);
-        (0, _.H1)([T.id]);
+        (0, _.H1)([O.id]);
         try {
-            let t = await (0, _.VO)(T);
+            let t = await (0, _.VO)(O);
             (0, r.mMO)(
                 async () => {
                     let { default: a } = await Promise.all([n.e("40556"), n.e("34681")]).then(n.bind(n, 6503)),
                         r = e?.guild_id != null ? f.A.getGuild(e.guild_id) : null,
                         l = null != r && (0, c.ie)(r, p.A, h.default).canCreateExpressions,
-                        o = null == T.name || "" === T.name ? (0, C.cM)(T.createdAt) : T.name,
+                        o = null == O.name || "" === O.name ? (0, v.cM)(O.createdAt) : O.name,
                         s = o.slice(0, 32);
                     return (n) =>
                         (0, i.jsx)(a, {
@@ -76,14 +76,14 @@ function R(e) {
         }
     }
     async function G() {
-        (0, l.Z_)(), (0, _.H1)([T.id]);
+        (0, l.Z_)(), (0, _.H1)([O.id]);
         try {
-            let e = await (0, _.VO)(T),
+            let e = await (0, _.VO)(O),
                 t = await e.arrayBuffer(),
-                n = (0, A.A)((0, m.uk)(T.filepath));
+                n = (0, A.A)((0, m.uk)(O.filepath));
             await o.A.fileManager.saveWithDialog(D.from(t), n);
         } catch (e) {
-            C.nx.error("Error exporting clip to file", e);
+            v.nx.error("Error exporting clip to file", e);
         } finally {
             (0, _.H1)(null);
         }
@@ -93,26 +93,26 @@ function R(e) {
         let e = (0, x.t)(R);
         (0, _.H1)(t.map((e) => e.id));
         try {
-            await (0, E.K)(t, { channelId: e ? R : void 0, analyticsLocations: k });
+            await (0, E.K)(t, { channelId: e ? R : void 0, analyticsLocations: U });
         } catch (e) {
         } finally {
             (0, _.H1)(null);
         }
         M?.();
     }
-    function I() {
+    function L() {
         (0, l.Z_)(), t.forEach((e) => (0, _.XK)(e));
     }
-    async function L() {
-        (0, l.Z_)(), (0, _.H1)([T.id]);
+    async function $() {
+        (0, l.Z_)(), (0, _.H1)([O.id]);
         try {
-            let e = await (0, _.VO)(T),
+            let e = await (0, _.VO)(O),
                 t = await (0, u.R_)(e),
                 n = await t.arrayBuffer(),
-                i = (0, A.A)((0, m.kh)(T.filepath)) + ".ogg";
+                i = (0, A.A)((0, m.kh)(O.filepath)) + ".ogg";
             await o.A.fileManager.saveWithDialog(D.from(n), i);
         } catch (e) {
-            C.nx.error("Error exporting clip to sound file", e);
+            v.nx.error("Error exporting clip to sound file", e);
         } finally {
             (0, _.H1)(null);
         }
@@ -129,7 +129,7 @@ function R(e) {
                     id: "add-to-library",
                     label: S.intl.string(S.t["BfLmm+"]),
                     leadingAccessory: { type: "icon", icon: r.pa$ },
-                    disabled: j,
+                    disabled: T,
                     action: function () {
                         (0, l.Z_)(), t.forEach((e) => (0, _.w7)(e.id));
                     },
@@ -141,89 +141,90 @@ function R(e) {
                             id: "share",
                             label: S.intl.string(S.t.RDE0Sc),
                             leadingAccessory: { type: "icon", icon: r.liv },
-                            disabled: j && !H,
+                            disabled: T && !N,
                             action: q,
                         }),
-                        !U &&
+                        !H &&
                             (0, i.jsx)(r.Drp, {
                                 id: "edit",
                                 label: S.intl.string(S.t.bt75uw),
                                 leadingAccessory: { type: "icon", icon: y.A },
-                                disabled: j || U,
+                                disabled: T || H,
                                 action: function () {
-                                    (0, l.Z_)(), U || F?.();
+                                    (0, l.Z_)(), H || F?.();
                                 },
                             }),
+                        (0, i.jsx)(r.bXX, {}),
                     ],
                 }),
-            !T.isFavorite &&
+            !O.isFavorite &&
                 (0, i.jsx)(r.Drp, {
                     id: "favorite",
                     label: S.intl.string(S.t.nPywqO),
                     leadingAccessory: { type: "icon", icon: r.yA2 },
-                    disabled: j,
-                    action: I,
+                    disabled: T,
+                    action: L,
                 }),
-            !U &&
+            !H && k && O.type !== w.nQ.SCREENSHOT
+                ? (0, i.jsx)(r.Drp, {
+                      leadingAccessory: { type: "icon", icon: r.JMI },
+                      id: "clips-export-soundboard",
+                      label: S.intl.string(C.default.HH4Tjj),
+                      action: Z,
+                  })
+                : null,
+            !H &&
+                null != o.A.clipboard.copyFile &&
+                (0, i.jsx)(r.Drp, {
+                    leadingAccessory: { type: "icon", icon: r.TdU },
+                    id: "clips-copy-video",
+                    label: S.intl.string(C.default.tv7emB),
+                    action: function () {
+                        (0, l.Z_)(),
+                            o.A.clipboard.copyFile(O.filepath),
+                            (0, r.showToast)((0, r.createToast)(S.intl.string(S.t.mGZ66D), r.ToastType.SUCCESS));
+                    },
+                }),
+            !H &&
                 (0, i.jsxs)(r.Drp, {
                     id: "clips-export-group",
                     leadingAccessory: { type: "icon", icon: r.s3U },
                     label: S.intl.string(S.t["WH/V85"]),
                     children: [
-                        null != o.A.clipboard.copyFile &&
-                            (0, i.jsx)(r.Drp, {
-                                leadingAccessory: { type: "icon", icon: r.TdU },
-                                id: "clips-copy-video",
-                                label: S.intl.string(S.t["7NOhjN"]),
-                                action: function () {
-                                    (0, l.Z_)(),
-                                        o.A.clipboard.copyFile(T.filepath),
-                                        (0, r.showToast)(
-                                            (0, r.createToast)(S.intl.string(S.t.mGZ66D), r.ToastType.SUCCESS),
-                                        );
-                                },
-                            }),
-                        N && T.type !== w.nQ.SCREENSHOT
-                            ? (0, i.jsx)(r.Drp, {
-                                  leadingAccessory: { type: "icon", icon: r.JMI },
-                                  id: "clips-export-soundboard",
-                                  label: S.intl.string(S.t.ABjMWI),
-                                  action: Z,
-                              })
-                            : null,
                         (0, i.jsx)(r.Drp, {
                             leadingAccessory: { type: "icon", icon: r.s3U },
                             id: "clips-export-file",
-                            label: T.type === w.nQ.SCREENSHOT ? S.intl.string(S.t.y5FgMk) : S.intl.string(S.t.sFgmNy),
+                            label: O.type === w.nQ.SCREENSHOT ? S.intl.string(S.t.y5FgMk) : S.intl.string(S.t.sFgmNy),
                             action: G,
                         }),
-                        T.type !== w.nQ.SCREENSHOT &&
+                        O.type !== w.nQ.SCREENSHOT &&
                             (0, i.jsx)(r.Drp, {
                                 leadingAccessory: { type: "icon", icon: r.s3U },
                                 id: "clips-export-sound-file",
                                 label: S.intl.string(S.t.db0NKG),
-                                action: L,
+                                action: $,
                             }),
                     ],
                 }),
-            !0 === T.isFavorite &&
+            (0, i.jsx)(r.bXX, {}),
+            !0 === O.isFavorite &&
                 (0, i.jsx)(r.Drp, {
                     leadingAccessory: { type: "icon", icon: r.UlM },
                     id: "unfavorite",
-                    label: S.intl.string(v.default.IZsalP),
+                    label: S.intl.string(C.default.IZsalP),
                     color: "danger",
-                    disabled: j,
-                    action: I,
+                    disabled: T,
+                    action: L,
                 }),
             (0, i.jsx)(r.Drp, {
                 leadingAccessory: { type: "icon", icon: r.ucK },
                 id: "clips-delete",
                 label: S.intl.string(S.t.oyYWHE),
                 color: "danger",
-                disabled: j,
+                disabled: T,
                 action: function (e) {
                     if (((0, l.Z_)(), e?.shiftKey)) {
-                        O?.(), t.forEach((e) => (0, _.oH)(e.filepath, e.id)), P?.();
+                        j?.(), t.forEach((e) => (0, _.oH)(e.filepath, e.id)), P?.();
                         return;
                     }
                     (0, r.mMO)(
@@ -233,7 +234,7 @@ function R(e) {
                                 (0, i.jsx)(e, {
                                     clips: t,
                                     ...n,
-                                    onBeforeDelete: O,
+                                    onBeforeDelete: j,
                                     onAfterDelete: async () => {
                                         await n.onClose(), P?.();
                                     },
