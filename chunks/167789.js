@@ -1,22 +1,23 @@
 "use strict";
 n.d(t, { O: () => a });
-let r = 1e3,
-    i = window;
+var r = n(613345);
+let i = 1e3,
+    s = (0, r.V)();
 function a(e, t) {
-    let n = i;
+    let n = s;
     if (void 0 !== n && null != n.requestIdleCallback && null != n.cancelIdleCallback) {
-        let i = !1,
-            a = null,
-            s = () => {
-                i || ((i = !0), null != a && (n.clearTimeout(a), (a = null)), e());
+        let r = !1,
+            s = null,
+            a = () => {
+                r || ((r = !0), null != s && (n.clearTimeout(s), (s = null)), e());
             },
-            o = n.requestIdleCallback(s, t);
+            o = n.requestIdleCallback(a, t);
         return (
-            (a = n.setTimeout(() => {
-                i || n.cancelIdleCallback(o), s();
-            }, t?.timeout ?? r)),
+            (s = n.setTimeout(() => {
+                r || n.cancelIdleCallback(o), a();
+            }, t?.timeout ?? i)),
             () => {
-                n.cancelIdleCallback(o), null != a && (n.clearTimeout(a), (a = null));
+                n.cancelIdleCallback(o), null != s && (n.clearTimeout(s), (s = null));
             }
         );
     }
