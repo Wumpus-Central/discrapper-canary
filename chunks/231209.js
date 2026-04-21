@@ -17,26 +17,26 @@ var n = s(627968),
     f = s(599062),
     x = s(159439),
     E = s(998694),
-    b = s(666413),
-    C = s(573455),
+    C = s(666413),
+    b = s(573455),
     A = s(565057),
     S = s(227205),
     v = s(457414),
-    I = s(761218),
-    L = s(633026),
-    j = s(251191),
+    I = s(633026),
+    L = s(251191),
+    j = s(700444),
     O = s(613258),
-    k = s(152568),
-    T = s(758836),
-    y = s(652215),
-    N = s(985018),
-    R = s(297046);
+    T = s(152568),
+    k = s(758836),
+    N = s(652215),
+    y = s(985018),
+    R = s(941734);
 let B = (e) => {
         let { handleTransition: t, numVisibleItems: s, isFetchingCategories: l, tab: c } = e,
             { noCache: d, includeUnpublished: _ } = (0, E.A)(),
             [x, O] = r.useState(!1),
-            y = (0, g.uM)(),
-            B = y?.sessionId ?? "";
+            N = (0, g.uM)(),
+            B = N?.sessionId ?? "";
         r.useEffect(() => {
             (0, p.z)({
                 sessionId: B,
@@ -74,10 +74,10 @@ let B = (e) => {
                     className: a()(R.g4, R.Of),
                     children: [
                         (0, n.jsx)(S.A, { isLoading: P, handleTransition: t, tab: c }),
-                        (0, n.jsx)(C.A, { isLoading: P, handleTransition: t, categories: [] }),
+                        (0, n.jsx)(b.A, { isLoading: P, handleTransition: t, categories: [] }),
                         (0, n.jsx)(A.A, {
                             isLoading: P,
-                            title: c === T.G2.ORBS ? N.intl.string(N.t.dFgeuZ) : N.intl.string(N.t.NSv5KV),
+                            title: c === k.G2.ORBS ? y.intl.string(y.t.dFgeuZ) : y.intl.string(y.t.NSv5KV),
                             numVisibleItems: s,
                             tab: c,
                         }),
@@ -95,7 +95,7 @@ let B = (e) => {
                                     break;
                                 case i.g.FEATURED:
                                     _ = (0, n.jsx)(
-                                        C.A,
+                                        b.A,
                                         { isLoading: P, handleTransition: t, featuredBlockRecord: e },
                                         d,
                                     );
@@ -106,14 +106,14 @@ let B = (e) => {
                                         A.A,
                                         {
                                             title:
-                                                c === T.G2.ORBS ? N.intl.string(N.t.dFgeuZ) : N.intl.string(N.t.NSv5KV),
+                                                c === k.G2.ORBS ? y.intl.string(y.t.dFgeuZ) : y.intl.string(y.t.NSv5KV),
                                             isLoading: l,
                                             numVisibleItems: s,
                                             sortedSkuIds: h,
                                             buttonContainerClassName: r?.type === i.g.IMMERSIVE_BANNER ? R.w : void 0,
-                                            prioritizeUserDiscounts: c === T.G2.HOME,
+                                            prioritizeUserDiscounts: c === k.G2.HOME,
                                             tab: c,
-                                            orbsSupportedOnly: c === T.G2.ORBS,
+                                            orbsSupportedOnly: c === k.G2.ORBS,
                                         },
                                         d,
                                     );
@@ -124,13 +124,13 @@ let B = (e) => {
                                             { isDismissed: s } = (0, u.En)(o.M.COLLECTIBLES_SHOP_WIDE_BANNER, t);
                                         if (s) return null;
                                     }
-                                    _ = (0, n.jsx)(k.A, { wideBannerBlock: e, tab: c }, d);
+                                    _ = (0, n.jsx)(T.A, { wideBannerBlock: e, tab: c }, d);
                                     break;
                                 case i.g.SHELF:
-                                    _ = (0, n.jsx)(j.A, { handleTransition: t, shelf: e, tab: c }, d);
+                                    _ = (0, n.jsx)(L.A, { handleTransition: t, shelf: e, tab: c }, d);
                                     break;
                                 case i.g.COUNTDOWN_TIMER:
-                                    (_ = (0, n.jsx)(b.S, { countdownTimerBlock: e, isVisible: x }, d)), (g = !0);
+                                    (_ = (0, n.jsx)(C.S, { countdownTimerBlock: e, isVisible: x }, d)), (g = !0);
                                     break;
                                 case i.g.IMMERSIVE_BANNER:
                                     _ = (0, n.jsx)(
@@ -140,19 +140,28 @@ let B = (e) => {
                                     );
                                     break;
                                 case i.g.REWARD_HERO:
-                                    _ = (0, n.jsx)(L.A, { isLoading: P, handleTransition: t, heroBlock: e, tab: c }, d);
+                                    _ = (0, n.jsx)(I.A, { isLoading: P, handleTransition: t, heroBlock: e, tab: c }, d);
                                     break;
-                                case i.g.MARVEL_RIVALS_PROMOTIONAL_BANNER: {
-                                    let { isDismissed: t } = (0, u.En)(o.M.COLLECTIBLES_SHOP_MARVEL_RIVALS_ORBS_REWARD);
+                                case i.g.SOCIAL_LAYER_STOREFRONT_PROMOTIONAL_BANNER: {
+                                    let { isDismissed: t } = (0, u.En)(
+                                        o.M.COLLECTIBLES_SHOP_SLAYER_STOREFRONT_PROMOTIONAL_BANNER,
+                                    );
                                     if (t) return null;
                                     return (0, n.jsx)(
                                         m.rW,
                                         {
                                             blockType: e.type,
-                                            children: (0, n.jsx)(I.A, {
+                                            children: (0, n.jsx)(j.A, {
                                                 onDismiss: () => {
-                                                    (0, u.d6)(o.M.COLLECTIBLES_SHOP_MARVEL_RIVALS_ORBS_REWARD, {});
+                                                    (0, u.d6)(
+                                                        o.M.COLLECTIBLES_SHOP_SLAYER_STOREFRONT_PROMOTIONAL_BANNER,
+                                                        {},
+                                                    );
                                                 },
+                                                applicationId: e.applicationId,
+                                                headerText: e.headerText,
+                                                gradientColors: e.gradientColors,
+                                                gradientAngle: e.gradientAngle,
                                                 skuIds: e.skuIds,
                                                 tab: c,
                                             }),
@@ -184,7 +193,7 @@ let B = (e) => {
             { handleScroll: i } = (0, d.X)(a, s),
             o = (0, x.U)(),
             u = (0, g.uM)(),
-            [m, h] = r.useState(T.md),
+            [m, h] = r.useState(k.md),
             [p, f] = r.useState(!1);
         return (
             r.useEffect(() => {
@@ -192,7 +201,7 @@ let B = (e) => {
                     let e = () => {
                             if (null == a.current) return;
                             let e = a.current.getDistanceFromBottom();
-                            m >= 36 ? f(e < 20) : e <= 200 && h((e) => e + T.md);
+                            m >= 36 ? f(e < 20) : e <= 200 && h((e) => e + k.md);
                         },
                         t = a.current.getScrollerNode();
                     return (
@@ -219,24 +228,24 @@ let B = (e) => {
                                     isFetchingCategories: o,
                                     tab: s,
                                 }),
-                                s !== T.G2.CATALOG &&
+                                s !== k.G2.CATALOG &&
                                     m >= 36 &&
                                     (0, n.jsxs)("div", {
                                         className: R.R$,
                                         children: [
                                             (0, n.jsx)(c.Heading, {
                                                 variant: "heading-md/semibold",
-                                                children: N.intl.string(N.t.Yr70c4),
+                                                children: y.intl.string(y.t.Yr70c4),
                                             }),
                                             (0, n.jsx)(c.Button, {
                                                 variant: "primary",
-                                                text: N.intl.string(N.t.AfrvRD),
+                                                text: y.intl.string(y.t.AfrvRD),
                                                 onClick: () => {
                                                     t({ sourceButton: "shop all button", shouldAnimate: !0 }),
-                                                        _.default.track(y.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                        _.default.track(N.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                             collectibles_shop_session_id: u?.sessionId,
                                                             page_type: s,
-                                                            page_category: s === T.G2.HOME ? void 0 : u?.pageCategory,
+                                                            page_category: s === k.G2.HOME ? void 0 : u?.pageCategory,
                                                             cta_name: "browse the shop button",
                                                         });
                                                 },
@@ -246,7 +255,7 @@ let B = (e) => {
                                     }),
                             ],
                         }),
-                        (0, n.jsx)(O.A, { peaking: p, transitioning: l === T.Pf.OUT }),
+                        (0, n.jsx)(O.A, { peaking: p, transitioning: l === k.Pf.OUT }),
                     ],
                 }),
             })

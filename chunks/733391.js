@@ -26,8 +26,14 @@ async function p(e) {
                     rejectWithError: !0,
                     retries: 3,
                 }),
-                n = t.body;
-            i.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS", guildId: e, storefront: (0, a.sq)(n) }),
+                n = t.body,
+                s = (0, a.sq)(n);
+            i.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS", guildId: e, storefront: s }),
+                i.h.dispatch({
+                    type: "SOCIAL_LAYER_STOREFRONT_METADATA_LOAD_SUCCESS",
+                    applicationId: s.applicationId,
+                    storefrontMetadata: (0, a.NE)(n),
+                }),
                 i.h.dispatch({ type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: t.body.store_listings ?? [] });
         } catch (t) {
             i.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_LOAD_FAILURE", guildId: e, eager: n });
