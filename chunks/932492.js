@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => h });
 var r = n(687658),
     i = n(626584),
     s = n(723702),
@@ -8,9 +8,10 @@ var r = n(687658),
     l = n(358203);
 let u = new i.A("RunningGameSystemMetricsMonitor"),
     c = 1e3,
-    d = [50, 95, 99];
-function _(e) {
-    let t = e.getReport(d);
+    d = 3e4,
+    _ = [50, 95, 99];
+function f(e) {
+    let t = e.getReport(_);
     return {
         p50: t.percentiles[50] ?? 0,
         p95: t.percentiles[95] ?? 0,
@@ -20,13 +21,14 @@ function _(e) {
         min: t.min,
     };
 }
-class f {
+class p {
     cpuHistogram = new r.d();
     memoryHistogram = new r.d();
     gpuMemoryHistogram = new r.d();
     discordMemoryHistogram = new r.d();
     lastCpuSnapshot = null;
     samplingInterval = null;
+    gpuSamplingInterval = null;
     discordMediaReady = !1;
     isExperimentEnabled() {
         return l.M.getConfig({ location: "RunningGameSystemMetricsMonitor" }).enabled;
@@ -38,10 +40,15 @@ class f {
             this.initDiscordMediaModule(),
             (this.samplingInterval = setInterval(() => {
                 this.takeSample();
-            }, c)));
+            }, c)),
+            (this.gpuSamplingInterval = setInterval(() => {
+                this.sampleGpuMemory();
+            }, d)));
     }
     disable() {
         null != this.samplingInterval && (clearInterval(this.samplingInterval), (this.samplingInterval = null)),
+            null != this.gpuSamplingInterval &&
+                (clearInterval(this.gpuSamplingInterval), (this.gpuSamplingInterval = null)),
             (this.lastCpuSnapshot = null),
             this.resetHistograms();
     }
@@ -52,10 +59,10 @@ class f {
             )
         )
             return null;
-        let e = _(this.cpuHistogram),
-            t = _(this.memoryHistogram),
-            n = _(this.gpuMemoryHistogram),
-            r = _(this.discordMemoryHistogram);
+        let e = f(this.cpuHistogram),
+            t = f(this.memoryHistogram),
+            n = f(this.gpuMemoryHistogram),
+            r = f(this.discordMemoryHistogram);
         return (
             this.resetHistograms(),
             {
@@ -101,7 +108,7 @@ class f {
             }
     }
     async takeSample() {
-        this.sampleDiscordMemory(), await Promise.all([this.sampleCpuAndMemory(), this.sampleGpuMemory()]);
+        this.sampleDiscordMemory(), await this.sampleCpuAndMemory();
     }
     async sampleCpuAndMemory() {
         try {
@@ -170,4 +177,4 @@ class f {
         }
     }
 }
-let p = new f();
+let h = new p();
