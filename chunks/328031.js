@@ -4,13 +4,13 @@ var i = n(627968),
     s = n(64700),
     l = n(503698),
     r = n.n(l),
-    a = n(382222),
+    a = n(208798),
     o = n(827734),
     d = n(397927),
     c = n(147925),
     u = n(2242),
     m = n(985018),
-    g = n(535238);
+    g = n(562742);
 function x(e) {
     let { checked: t, children: n } = e;
     return (0, i.jsxs)("div", {
@@ -40,13 +40,12 @@ function h(e) {
         o = r.filter((e) => e).length / r.length,
         h = 1 === o,
         _ = (0, d.zhh)({ width: `${100 * o}%` }),
-        p = [
-            m.intl.format(m.t.wtQtXs, { promoPageGuideUrl: u.P7.PROMO_PAGE_GUIDE }),
-            m.intl.format(m.t["0Fo0wf"], { caseStudiesUrl: u.P7.CASE_STUDIES }),
-            m.intl.format(m.t["7JdzjA"], { subscriptionOfferingGuideUrl: u.P7.SUBSCRIPTION_OFFERING_GUIDE }),
-            m.intl.format(m.t.zkXN6I, { tierStructureGuideUrl: u.P7.TIER_STRUCTURE_GUIDE }),
+        A = [
+            m.intl.format(m.t["CgyVP+"], { mustReadArticlesUrl: u.P7.MUST_READ_ARTICLES }),
+            m.intl.format(m.t.wfTzye, { creatorToAdmin101Url: u.P7.CREATOR_TO_ADMIN_101 }),
+            m.intl.format(m.t["IpGL+4"], { creatorToAdmin201Url: u.P7.CREATOR_TO_ADMIN_201 }),
         ],
-        A = n
+        p = n
             ? null
             : (0, i.jsxs)(d.nVY, {
                   children: [
@@ -81,7 +80,7 @@ function h(e) {
                           label: m.intl.string(m.t.FO0AIS),
                           children: (0, i.jsx)(d.BJc, {
                               gap: 8,
-                              children: p.map((e, t) =>
+                              children: A.map((e, t) =>
                                   (0, i.jsx)(
                                       "div",
                                       {
@@ -119,7 +118,7 @@ function h(e) {
                             className: g.ux,
                             children: (0, i.jsx)(a.animated.div, { className: g.zZ, style: _ }),
                         }),
-                    A,
+                    p,
                 ],
             }),
         }),

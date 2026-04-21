@@ -1,39 +1,38 @@
 n.d(t, {
-    M_: () => E,
-    P7: () => f,
-    TQ: () => c,
-    Xn: () => S,
+    M_: () => p,
+    P7: () => S,
+    TQ: () => u,
+    Xn: () => A,
     Yl: () => d,
-    bN: () => p,
-    c4: () => h,
-    f7: () => s,
+    bN: () => c,
+    c4: () => E,
+    f7: () => o,
     nd: () => _,
-    p$: () => u,
+    p$: () => h,
 });
 var r,
-    i,
     l,
+    i,
     a = n(788868),
-    o = n(818348);
-let s = 3,
+    s = n(818348);
+let o = 3,
     d = "(max-width: 485px)",
-    c = "(max-height: 450px)";
-var p = (((r = {})[(r.CHANNEL = 1)] = "CHANNEL"), (r[(r.INTANGIBLE = 2)] = "INTANGIBLE"), r),
-    h = (((i = {})[(i.SOME_CHANNELS = 0)] = "SOME_CHANNELS"), (i[(i.ALL_CHANNELS = 1)] = "ALL_CHANNELS"), i);
-let u = [
+    u = "(max-height: 450px)";
+var c = (((r = {})[(r.CHANNEL = 1)] = "CHANNEL"), (r[(r.INTANGIBLE = 2)] = "INTANGIBLE"), r),
+    E = (((l = {})[(l.SOME_CHANNELS = 0)] = "SOME_CHANNELS"), (l[(l.ALL_CHANNELS = 1)] = "ALL_CHANNELS"), l);
+let h = [
     { interval: a.WT.DAY, interval_count: 1 },
     { interval: a.WT.DAY, interval_count: 7 },
 ];
-var E =
-    (((l = {})[(l.NONE = 0)] = "NONE"),
-    (l[(l.IN_SUBSCRIPTION_SERVER = 1)] = "IN_SUBSCRIPTION_SERVER"),
-    (l[(l.SUBSCRIBED = 2)] = "SUBSCRIBED"),
-    l);
-let _ = `https://${o.U2}/creators`,
-    S = 90,
-    f = Object.freeze({
-        PROMO_PAGE_GUIDE: "https://discord.com/creators/say-hello-to-promo-pages-our-new-server-subscriptions-feature",
-        CASE_STUDIES: "https://discord.com/creator-portal/learn-from-creators?tab=creator-case-studies",
-        SUBSCRIPTION_OFFERING_GUIDE: "https://discord.com/creators/offering-inspiration-",
-        TIER_STRUCTURE_GUIDE: "https://discord.com/creators/server-subs-102-to-tier-or-not-to-tier",
+var p =
+    (((i = {})[(i.NONE = 0)] = "NONE"),
+    (i[(i.IN_SUBSCRIPTION_SERVER = 1)] = "IN_SUBSCRIPTION_SERVER"),
+    (i[(i.SUBSCRIBED = 2)] = "SUBSCRIBED"),
+    i);
+let _ = `https://${s.U2}/creators`,
+    A = 90,
+    S = Object.freeze({
+        MUST_READ_ARTICLES: "https://discord.com/creators/5-must-read-articles-for-beginners",
+        CREATOR_TO_ADMIN_101: "https://discord.com/creators/creator-to-server-admin-101",
+        CREATOR_TO_ADMIN_201: "https://discord.com/creators/creator-to-server-admin-201",
     });
