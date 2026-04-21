@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Z: () => h, y: () => p });
+n.d(t, { Z: () => m, y: () => h });
 var r = n(627968),
     i = n(503698),
     s = n.n(i),
@@ -8,13 +8,14 @@ var r = n(627968),
     l = n(459357),
     u = n(156312),
     c = n(99696),
-    d = n(327105),
-    _ = n(985018),
-    f = n(513857);
-let p = (e) => {
-        let { text: t = _.intl.string(d.default["/JKmHB"]), onClick: n, className: i } = e;
+    d = n(580630),
+    _ = n(327105),
+    f = n(985018),
+    p = n(513857);
+let h = (e) => {
+        let { text: t = f.intl.string(_.default["/JKmHB"]), onClick: n, className: i } = e;
         return (0, r.jsxs)(a.DUT, {
-            className: s()(f.U, i),
+            className: s()(p.U, i),
             onClick: n,
             children: [
                 (0, r.jsx)(a.j96, { color: o.LU0.colors.TEXT_BRAND }),
@@ -22,20 +23,30 @@ let p = (e) => {
             ],
         });
     },
-    h = (e) => {
-        let { onComplete: t, onClose: n, text: i, className: s, initialCode: a, stackingBehavior: o } = e,
-            { enabled: d } = (0, l.c)({ location: "StatefulCheckoutGiftCardRedemptionModalLink" }),
-            { contextMetadata: _ } = (0, u.P5)();
-        if (!d) return null;
-        let f = () => {
+    m = (e) => {
+        let { onComplete: t, onClose: n, text: i, className: s, initialCode: a, stackingBehavior: p } = e,
+            { enabled: m } = (0, l.c)({ location: "StatefulCheckoutGiftCardRedemptionModalLink" }),
+            { contextMetadata: E } = (0, u.P5)();
+        if (!m) return null;
+        let g = () => {
             (0, c.HF)({
                 initialCode: a ?? "",
-                onComplete: t,
+                onComplete: (e) => {
+                    let n = (0, d.$g)(e.amount, e.currency);
+                    (0, o.showToast)(
+                        (0, o.createToast)(
+                            f.intl.formatToPlainString(_.default["66Wi6B"], { price: n }),
+                            o.ToastType.SUCCESS,
+                            { position: o.ToastPosition.TOP },
+                        ),
+                    ),
+                        t?.(e);
+                },
                 onClose: n,
                 source: "payment_modal",
-                loadId: _.loadId,
-                stackingBehavior: o,
+                loadId: E.loadId,
+                stackingBehavior: p,
             });
         };
-        return (0, r.jsx)(p, { text: i, onClick: f, className: s });
+        return (0, r.jsx)(h, { text: i, onClick: g, className: s });
     };
