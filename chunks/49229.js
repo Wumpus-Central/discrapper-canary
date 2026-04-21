@@ -59,16 +59,16 @@ function T(e, t, n) {
 }
 let S = {
         sendRequest(e) {
-            let { discordTag: t, context: n, captchaPayload: i, note: s, errorUxConfig: a = 0 } = e,
-                [o, l] = t.split("#");
+            let { discordTag: t, context: n, captchaPayload: i, errorUxConfig: s = 0 } = e,
+                [a, o] = t.split("#");
             return r.Bo.post({
                 url: m.Rsh.USER_RELATIONSHIPS(),
-                body: { username: o, discriminator: parseInt(l), note: s, ...i },
+                body: { username: a, discriminator: parseInt(o), ...i },
                 context: n,
                 oldFormErrors: !0,
                 rejectWithError: !1,
             }).catch((e) => {
-                T(e, a, t);
+                T(e, s, t);
             });
         },
         addRelationship(e, t) {
