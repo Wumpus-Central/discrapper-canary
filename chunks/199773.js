@@ -65,11 +65,11 @@ function m(e) {
 }
 function E(e) {
     let { dismissibleContent: t, guildId: n } = e;
-    (d.lastDismissed = { content: t, guildId: n ?? null }), d.renderedAtTimestamps.delete(t);
+    (d.lastDismissed = { content: t, guildId: n }), d.renderedAtTimestamps.delete(t);
 }
 function g(e) {
     let { dismissibleContent: t, guildId: n } = e;
-    d.lastDismissed = null != t ? { content: t, guildId: n ?? null } : null;
+    d.lastDismissed = null != t ? { content: t, guildId: n } : null;
 }
 function A() {
     (d.dailyCapPeriodStart = null),

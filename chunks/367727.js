@@ -203,7 +203,7 @@ function V(e, t, n, r) {
         }));
 }
 function B(e, t) {
-    ((0, h.dD)(e) || t.forceTrack) && Z(e, t), (0, f.Xw)(e, t.guildId);
+    ((0, h.dD)(e) || t.forceTrack) && Z(e, t), (0, f.Xw)(e, t.guildId ?? void 0);
 }
 function H(e, t) {
     let n = !p.A.hasUserHitDCCap();
