@@ -207,6 +207,9 @@ class h extends s.A {
     get isActive() {
         return this.status === d.Dmq.ACTIVE;
     }
+    get statusAllowsPerks() {
+        return d.Uyk.ALLOW_PERKS.has(this.status);
+    }
     get hasActiveTrial() {
         return null != this.trialId && null != this.trialEndsAt && new Date() < this.trialEndsAt;
     }

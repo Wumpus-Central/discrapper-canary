@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => P }), n(321073);
+n.d(t, { A: () => x }), n(321073);
 var r = n(311907),
     i = n(73153),
     s = n(832946),
@@ -122,7 +122,7 @@ function M(e, t) {
     }
     return null;
 }
-class x extends r.Ay.Store {
+class P extends r.Ay.Store {
     initialize() {
         this.waitFor(o.default);
     }
@@ -182,10 +182,10 @@ class x extends r.Ay.Store {
         return I;
     }
     getPremiumGroupSubscription() {
-        return M(l.rzx.PREMIUM, (e) => e.hasAnyPremiumGroup, !0);
+        return M(l.rzx.PREMIUM, (e) => e.hasAnyPremiumGroup && e.statusAllowsPerks, !0);
     }
 }
-let P = new x(i.h, {
+let x = new P(i.h, {
     BILLING_SUBSCRIPTION_FETCH_SUCCESS: T,
     BILLING_SUBSCRIPTION_UPDATE_SUCCESS: y,
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_START: O,

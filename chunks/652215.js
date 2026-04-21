@@ -3646,7 +3646,12 @@ var nr = (function (e) {
         e
     );
 })({});
-let ni = { ALL_PAUSE: new Set([9, 8]), ALL_PAUSEABLE: new Set([1, 8]), INACTIVE: new Set([0, 4, 6, 7]) };
+let ni = {
+    ALLOW_PERKS: new Set([1, 2, 3, 9]),
+    ALL_PAUSE: new Set([9, 8]),
+    ALL_PAUSEABLE: new Set([1, 8]),
+    INACTIVE: new Set([0, 4, 6, 7]),
+};
 var ns = (function (e) {
         return (
             (e[(e.OPEN = 1)] = "OPEN"),
