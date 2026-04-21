@@ -1,25 +1,42 @@
 "use strict";
-let r, i;
-var s = n(311907),
-    a = n(73153);
-function o() {
-    (r = !1), (i = []);
-}
-function l() {
-    o();
-}
+let r, i, s, a;
+var o = n(311907),
+    l = n(73153);
 function u() {
-    r = !0;
+    (r = !1), (i = []), (s = new Set()), (a = new Set());
 }
-function c(e) {
-    let { bounties: t } = e;
-    (r = !1), (i = t);
+function c() {
+    u();
 }
 function d() {
-    (r = !1), (i = []);
+    r = !0;
 }
-o();
-class _ extends s.Ay.Store {
+function _(e) {
+    let { bounties: t } = e;
+    (r = !1), (i = t), (s = new Set());
+}
+function f() {
+    (r = !1), (i = []), (s = new Set());
+}
+function p(e) {
+    let { bountyId: t } = e,
+        n = new Set(a);
+    n.add(t), (a = n);
+}
+function h(e) {
+    let { bountyId: t } = e,
+        n = new Set(a);
+    n.delete(t), (a = n);
+    let r = new Set(s);
+    r.add(t), (s = r);
+}
+function m(e) {
+    let { bountyId: t } = e,
+        n = new Set(a);
+    n.delete(t), (a = n);
+}
+u();
+class E extends o.Ay.Store {
     static displayName = "BountyStore";
     get isFetchingQuestHomeBounties() {
         return r;
@@ -27,10 +44,19 @@ class _ extends s.Ay.Store {
     get questHomeBounties() {
         return i;
     }
+    isBountyCompleted(e) {
+        return s.has(e);
+    }
+    isClaimingBountyReward(e) {
+        return a.has(e);
+    }
 }
-new _(a.h, {
-    LOGOUT: l,
-    BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_BEGIN: u,
-    BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_SUCCESS: c,
-    BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_FAILURE: d,
+new E(l.h, {
+    LOGOUT: c,
+    BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_BEGIN: d,
+    BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_SUCCESS: _,
+    BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_FAILURE: f,
+    BOUNTIES_CLAIM_REWARD_BEGIN: p,
+    BOUNTIES_CLAIM_REWARD_SUCCESS: h,
+    BOUNTIES_CLAIM_REWARD_FAILURE: m,
 });
