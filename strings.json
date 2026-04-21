@@ -1242,6 +1242,7 @@
   "AcJ4ke": "Choose times your teen cannot use Discord",
   "R87Y2K": "This will be scheduled as $[!!{startTime}!! to !!{endTime}!! next day]({{timeHook}}).",
   "vX7xid": "This will be scheduled as $[!!{startTime}!! to !!{endTime}!!]({{timeHook}}).",
+  "26A0Df": "You can only have one Downtime per day. This will replace your current schedule(s) on:",
   "n2mCrR": "to",
   "w/ISB8": "Schedule Downtime",
   "wcrXLM": "{hours}.5 hrs",

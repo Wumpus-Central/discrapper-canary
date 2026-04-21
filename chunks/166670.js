@@ -5,4 +5,5 @@ e.exports = {
     ly: "dayButton__3a865",
     wH: "selected__3a865",
     us: "durationHint__3a865",
+    VE: "overlapWarningContent__3a865",
 };
