@@ -6013,6 +6013,7 @@ var nk = (function (e) {
             (e.NITRO_TRIAL_FOR_ALL = "37127619588375-Nitro-2-Week-Trial-Offer"),
             (e.WINDOWS_MEDIA_PACK = "37976093740695"),
             (e.FAVORITES_GUILD = "38810584460439"),
+            (e.NITRO_2_POINT_0 = "39188406147479"),
             e
         );
     })({}),
