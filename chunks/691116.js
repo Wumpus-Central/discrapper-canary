@@ -21,6 +21,7 @@ function c(e) {
         ? null
         : (0, i.jsx)(r.U, {
               role: "link",
+              "aria-label": T,
               title: f,
               leadingElement: null != x ? (0, i.jsx)(o.g, { decoration: x }) : null,
               description: _,

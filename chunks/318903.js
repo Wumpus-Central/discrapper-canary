@@ -22,6 +22,7 @@ function m(e) {
     let b = null != p ? p.icon : void 0;
     return (0, i.jsx)(d.U, {
         role: "link",
+        "aria-label": f,
         title: S,
         description: h,
         leadingElement: null != b && (0, i.jsx)(r.A, { Icon: b }),
