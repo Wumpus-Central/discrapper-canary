@@ -66,8 +66,8 @@ var r = n(110259),
     L = n(229006),
     w = n(654487),
     M = n(652215),
-    x = n(985018);
-let P = 5;
+    P = n(985018);
+let x = 5;
 async function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     try {
@@ -82,7 +82,7 @@ async function k(e) {
         if (null != n.quest_user_status)
             a.h.dispatch({ type: "QUESTS_USER_STATUS_UPDATE", user_status: n.quest_user_status });
         else if (null != n.error_hints_v2 && n.error_hints_v2.length > 0)
-            return { errorHints: n.error_hints_v2.slice(0, P) };
+            return { errorHints: n.error_hints_v2.slice(0, x) };
     } catch (n) {
         let e = new o.A(n);
         if (429 === e.status)
@@ -90,13 +90,13 @@ async function k(e) {
                 errorHints: [
                     {
                         type: N.xv.RATE_LIMITED,
-                        message: x.intl.string(x.t.Whhv4w),
+                        message: P.intl.string(P.t.Whhv4w),
                         connected_account_id: "",
                         connected_account_type: "",
                     },
                 ],
             };
-        let t = e.getAnyErrorMessage() ?? x.intl.string(x.t.xSCvBf);
+        let t = e.getAnyErrorMessage() ?? P.intl.string(P.t.xSCvBf);
         return {
             errorHints: [{ type: N.xv.GENERIC, message: t, connected_account_id: "", connected_account_type: "" }],
         };
@@ -130,11 +130,11 @@ async function F() {
     }
 }
 async function V(e) {
-    let { questId: t, streamKey: n, applicationId: i, terminal: s = !1 } = e;
+    let { questId: t, streamKey: n, applicationId: i, terminal: s = !1, executableFingerprint: l } = e;
     try {
         let e = await I.A.post({
             url: M.Rsh.QUESTS_HEARTBEAT(t),
-            body: { stream_key: n, application_id: i, terminal: s },
+            body: { stream_key: n, application_id: i, terminal: s, executable_fingerprint: l },
             trackedActionData: {
                 event: r.NetworkActionNames.QUEST_HEARTBEAT,
                 properties: {

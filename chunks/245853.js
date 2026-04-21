@@ -5,6 +5,7 @@ n.d(t, {
     Iq: () => o,
     YX: () => c,
     Ym: () => u,
+    ev: () => y,
     fV: () => T,
     jS: () => l,
     m8: () => d,
@@ -149,3 +150,9 @@ let S = (0, i.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     });
+let y = (0, i.mj)({
+    name: "2026-04-quest-heartbeat-executable-fingerprint",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+});

@@ -44,10 +44,10 @@ function M(e) {
                 sourceQuestContent: g.uF.RUNNING_ACTIVITY,
             });
 }
-function x(e, t) {
+function P(e, t) {
     return null != t && e.some((e) => e === u.a7) && (0, c.n1)(t);
 }
-function P(e) {
+function x(e) {
     return null != e && e.config.features.includes(i.L.MANUAL_HEARTBEAT_INITIALIZATION);
 }
 class k extends s.A {
@@ -70,7 +70,9 @@ class k extends s.A {
             let a = this.getActivelyProgressingQuests(t);
             if (a.has(e)) {
                 let o = a.get(e),
-                    u = o?.applicationId ?? n;
+                    u = o?.applicationId ?? n?.applicationId,
+                    { enabled: c } = I.ev.getConfig({ location: R.rE.QUESTS_MANAGER }),
+                    _ = c ? o?.executableFingerprint : void 0;
                 if (t === r.n.STREAM_ON_DESKTOP) {
                     let n = d.A.getCurrentUserActiveStream();
                     if (null == n) {
@@ -82,13 +84,13 @@ class k extends s.A {
                     }
                     let r = (0, l._z)(n);
                     L.log(`~ initiateHeartbeat -> Sending heartbeat for questId: ${e}`),
-                        (0, m.R2)({ questId: e, streamKey: r, applicationId: u });
+                        (0, m.R2)({ questId: e, streamKey: r, applicationId: u, executableFingerprint: _ });
                 } else
                     L.log(`~ initiateHeartbeat -> Sending heartbeat for questId: ${e}`),
-                        (0, m.R2)({ questId: e, applicationId: u });
-                let c = this.calculateHeartbeatDurationMs(e),
-                    _ = window.setTimeout(s, c);
-                i.set(e, _);
+                        (0, m.R2)({ questId: e, applicationId: u, executableFingerprint: _ });
+                let f = this.calculateHeartbeatDurationMs(e),
+                    p = window.setTimeout(s, f);
+                i.set(e, p);
             } else
                 L.log(`~ initiateHeartbeat -> Quest ${e} is no longer actively progressing, terminating heartbeat`),
                     this.terminateHeartbeat(e, t);
@@ -132,7 +134,7 @@ class k extends s.A {
                 t = this.getActivelyProgressingQuests(r);
             for (let n of new Set(e.keys())) t.has(n) || this.terminateHeartbeat(n, r);
             for (let [i, s] of t.entries())
-                !e.has(i) && (null == n || n(E.A.quests.get(i))) && this.initiateHeartbeat(i, r, s.applicationId);
+                !e.has(i) && (null == n || n(E.A.quests.get(i))) && this.initiateHeartbeat(i, r, s);
         }
     }
     getActivelyProgressingQuests(e) {
@@ -175,7 +177,9 @@ class k extends s.A {
                 let r = (0, N.pU)(i);
                 if (!w(i) || null == r) continue;
                 let s = r.find((e) => e === t);
-                null != s ? e.set(i.id, { applicationId: s }) : x(r, n) && e.set(i.id, { applicationId: u.a7 });
+                null != s
+                    ? e.set(i.id, { applicationId: s, executableFingerprint: n.executableFingerprint })
+                    : P(r, n) && e.set(i.id, { applicationId: u.a7, executableFingerprint: n.executableFingerprint });
             }
         }
         return (
@@ -231,7 +235,7 @@ class k extends s.A {
             this.syncHeartbeats(
                 [r.n.PLAY_ON_DESKTOP, r.n.STREAM_ON_DESKTOP, r.n.PLAY_ACTIVITY],
                 "QUESTS_ENROLL_SUCCESS",
-                (e) => !P(e),
+                (e) => !x(e),
             ),
         QUESTS_SEND_HEARTBEAT_SUCCESS: this.handleSendHeartbeatSuccess,
         QUESTS_SEND_HEARTBEAT_FAILURE: this.handleSendHeartbeatFailure,
@@ -256,13 +260,13 @@ class k extends s.A {
             M(t);
         },
         EMBEDDED_ACTIVITY_UPDATE_V2: () =>
-            this.syncHeartbeats([r.n.PLAY_ACTIVITY], "EMBEDDED_ACTIVITY_UPDATE_V2", (e) => !P(e)),
+            this.syncHeartbeats([r.n.PLAY_ACTIVITY], "EMBEDDED_ACTIVITY_UPDATE_V2", (e) => !x(e)),
         QUEST_APPLICATION_START_TIMER: (e) => {
             let { questId: t } = e;
             this.syncHeartbeats(
                 [r.n.PLAY_ACTIVITY],
                 "QUEST_APPLICATION_START_TIMER",
-                (e) => null != e && e.id === t && P(e),
+                (e) => null != e && e.id === t && x(e),
             );
         },
     };
