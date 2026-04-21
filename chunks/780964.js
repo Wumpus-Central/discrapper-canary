@@ -195,7 +195,6 @@ var r = (function (e) {
         (e.GIFT_PANEL = "gift_panel"),
         (e.GIFT_INVENTORY_CATEGORY = "gift_inventory_category"),
         (e.GIFT_CODE_REDEMPTION_SETTING = "gift_code_redemption_setting"),
-        (e.GIFT_QUEST_NOTICES_SETTING = "gift_quest_notices_setting"),
         (e.GIFT_INVENTORY_LIST_SETTING = "gift_inventory_list_setting"),
         (e.GIFT_BLOCKED_PAYMENTS_SETTING = "gift_blocked_payments_setting"),
         (e.BILLING_SIDEBAR_ITEM = "billing_sidebar_item"),
