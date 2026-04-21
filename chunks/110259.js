@@ -19,8 +19,8 @@ n.r(t),
     });
 var r = n(812729),
     i = n.n(r),
-    a = n(284009),
-    s = n.n(a),
+    s = n(284009),
+    a = n.n(s),
     o = n(753912),
     l = n(368849),
     u = n(502518),
@@ -33,27 +33,27 @@ function h(e) {
     return null != f[e] && f[e] > Date.now();
 }
 let m = (e) => {
-    let { analyticEventConfigs: t, dispatcher: r, TRACK_ACTION_NAME: a } = e,
-        l = (0, o.x)(r, a);
-    return function (e, r) {
-        let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    let { addBreadcrumb: t, analyticEventConfigs: r, dispatcher: s, TRACK_ACTION_NAME: l } = e,
+        u = (0, o.x)(s, l);
+    return function (e, s) {
+        let o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         if (null != n.g.isServerRendering && !0 === n.g.isServerRendering) return Promise.resolve();
-        let o = r ?? {},
-            u = t[e];
-        if (("function" == typeof u && (u = u(o) ?? null), null != u))
-            if ("throttlePeriod" in u) {
-                let t = [e, ...u.throttleKeys(o)].join("_");
-                if (h(t) || ("number" == typeof u.throttlePercent && Math.random() > u.throttlePercent))
+        let l = s ?? {},
+            c = r[e];
+        if (("function" == typeof c && (c = c(l) ?? null), null != c))
+            if ("throttlePeriod" in c) {
+                let t = [e, ...c.throttleKeys(l)].join("_");
+                if (h(t) || ("number" == typeof c.throttlePercent && Math.random() > c.throttlePercent))
                     return Promise.resolve();
-                if (u.deduplicate) {
+                if (c.deduplicate) {
                     let e = p[t];
-                    if (i()(e, o)) return Promise.resolve();
-                    p[t] = o;
+                    if (i()(e, l)) return Promise.resolve();
+                    p[t] = l;
                 }
-                f[t] = Date.now() + u.throttlePeriod;
-            } else if ("throttlePercent" in u) {
-                if (Math.random() > u.throttlePercent) return Promise.resolve();
-            } else s()(!1, `Unsupported analytics event config: ${u}`);
-        return l(e, r, a);
+                f[t] = Date.now() + c.throttlePeriod;
+            } else if ("throttlePercent" in c) {
+                if (Math.random() > c.throttlePercent) return Promise.resolve();
+            } else a()(!1, `Unsupported analytics event config: ${c}`);
+        return t?.(e), u(e, s, o);
     };
 };

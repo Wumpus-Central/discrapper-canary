@@ -4,20 +4,20 @@ n.r(t),
         AnalyticEventConfigs: () => k,
         AnalyticsContext: () => T,
         AnalyticsSchema: () => f,
-        addExtraAnalyticsDecorator: () => P,
-        clearAnalyticsEventsRecording: () => Z,
-        debugLogEvent: () => Y,
-        default: () => er,
-        expandEventProperties: () => j,
+        addExtraAnalyticsDecorator: () => x,
+        clearAnalyticsEventsRecording: () => X,
+        debugLogEvent: () => W,
+        default: () => ei,
+        expandEventProperties: () => Y,
         expandLocation: () => U,
-        getAnalyticsEventsRecording: () => q,
-        getNewAnalyticsLoadId: () => en,
-        isGameApplicationType: () => ee,
+        getAnalyticsEventsRecording: () => Z,
+        getNewAnalyticsLoadId: () => er,
+        isGameApplicationType: () => et,
         launchSignature: () => M,
-        setUTMContext: () => H,
-        startRecordingAnalyticsEvents: () => $,
-        stopRecordingAnalyticsEvents: () => z,
-        trackNetworkAction: () => et,
+        setUTMContext: () => j,
+        startRecordingAnalyticsEvents: () => z,
+        stopRecordingAnalyticsEvents: () => q,
+        trackNetworkAction: () => en,
     }),
     n(321073);
 var r = n(64700),
@@ -52,9 +52,9 @@ let I = { location: {} },
     w = performance.now(),
     M = (0, o.xd)() ? (0, o.xy)((0, a.V)()) : null;
 s.extendSuperProperties({ launch_signature: M });
-let x = [];
-function P(e) {
-    x.push(e);
+let P = [];
+function x(e) {
+    P.push(e);
 }
 let k = {
     [m.HAw.APP_OPENED]: { throttlePeriod: R, throttleKeys: () => [] },
@@ -181,11 +181,14 @@ let F = () => E.O.NONE;
 function V(e) {
     F = e;
 }
-let B = (0, s.trackMaker)({ analyticEventConfigs: k, dispatcher: l.h, TRACK_ACTION_NAME: "TRACK" });
-function H(e) {
+function B(e) {
+    d.o.includes(e) || h.A.addBreadcrumb({ category: "analytics", message: e });
+}
+let H = (0, s.trackMaker)({ addBreadcrumb: B, analyticEventConfigs: k, dispatcher: l.h, TRACK_ACTION_NAME: "TRACK" });
+function j(e) {
     return (S = e);
 }
-function j(e) {
+function Y(e) {
     let t = e ?? {};
     if (null != t.location) {
         let { location: e, ...n } = t;
@@ -210,61 +213,56 @@ function j(e) {
         (t.utm_campaign = t.utm_campaign ?? s),
         (t.utm_content = t.utm_content ?? a),
         (t.launch_signature = M),
-        x.forEach((e) => e(t)),
+        P.forEach((e) => e(t)),
         t
     );
 }
-function Y(e, t) {
+function W(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     _.default.isLoggingAnalyticsEvents && console.info("AnalyticsUtils.track(...):", e, t),
         n ? c.z8("Analytics", e, t) : c.z8("Analytics", e);
 }
-let W = !1,
-    K = {};
-function $() {
-    W = !0;
-}
+let K = !1,
+    $ = {};
 function z() {
-    W = !1;
+    K = !0;
 }
 function q() {
-    return K;
+    K = !1;
 }
 function Z() {
-    Object.keys(K).forEach((e) => {
-        delete K[e];
+    return $;
+}
+function X() {
+    Object.keys($).forEach((e) => {
+        delete $[e];
     });
 }
-function X(e, t) {
-    return !!W && (null != t && (Array.isArray(K[e]) ? K[e].push(t) : (K[e] = [t])), !0);
-}
 function Q(e, t) {
+    return !!K && (null != t && (Array.isArray($[e]) ? $[e].push(t) : ($[e] = [t])), !0);
+}
+function J(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         r = String(e);
-    if (
-        (d.o.includes(r) || h.A.addBreadcrumb({ category: "analytics", message: `${r}` }),
-        X(e, t),
-        null != n.throttlePercent && Math.random() > n.throttlePercent)
-    )
-        return Promise.resolve();
-    let i = j(t);
-    return Y(r, i, n.logEventProperties), B(e, i, { flush: n.flush, fingerprint: n.fingerprint });
+    if ((Q(e, t), null != n.throttlePercent && Math.random() > n.throttlePercent)) return Promise.resolve();
+    let i = Y(t);
+    return W(r, i, n.logEventProperties), H(e, i, { flush: n.flush, fingerprint: n.fingerprint });
 }
-let J = (0, s.trackMaker)({ analyticEventConfigs: k, dispatcher: l.h, TRACK_ACTION_NAME: "TRACK" });
-function ee(e) {
+let ee = (0, s.trackMaker)({ addBreadcrumb: B, analyticEventConfigs: k, dispatcher: l.h, TRACK_ACTION_NAME: "TRACK" });
+function et(e) {
     return e === g.S7.GAME || e === g.S7.DEPRECATED_GAME;
 }
-function et(e, t) {
-    let n = j({ location: (0, u.g$)(), ...t });
-    (0, u.eE)(e, { type: "action", ...t }), Y(e, n), J(e, n);
+function en(e, t) {
+    let n = Y({ location: (0, u.g$)(), ...t });
+    (0, u.eE)(e, { type: "action", ...t }), W(e, n), ee(e, n);
 }
-function en() {
+function er() {
     return (0, i.A)();
 }
-let er = {
+let ei = {
     ...s,
     getCampaignParams: s.getCampaignParams,
     setSystemAccessibilityFeatures: V,
-    expandEventProperties: j,
-    track: Q,
+    expandEventProperties: Y,
+    track: J,
 };
