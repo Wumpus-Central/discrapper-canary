@@ -36,7 +36,6 @@ function _(e) {
                     ref: p,
                     style: null != T ? { minHeight: T } : void 0,
                     title: n,
-                    "aria-label": n,
                     description: S ? void 0 : l,
                     trailingElement: (0, i.jsx)(u.vN3, {
                         children: (0, i.jsx)(o.$, {
