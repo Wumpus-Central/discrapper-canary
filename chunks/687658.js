@@ -6,11 +6,22 @@ class i {
     total = 0;
     samples = 0;
     totalWeight = 0;
+    getSamples() {
+        return this.samples;
+    }
     addSample(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
         (this.total += e * t),
             (this.totalWeight += t),
             this.samples++,
+            r.TDigest.prototype.push.call(this.digest, e, t),
+            this.digest.check_continuous();
+    }
+    addSamples(e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        (this.total += e.reduce((e, n) => e + n * t, 0)),
+            (this.totalWeight += t * e.length),
+            (this.samples += e.length),
             r.TDigest.prototype.push.call(this.digest, e, t),
             this.digest.check_continuous();
     }
@@ -26,5 +37,8 @@ class i {
             mean: this.totalWeight > 0 ? this.total / this.totalWeight : 0,
             samples: this.samples,
         };
+    }
+    getPercentile(e) {
+        return this.digest.percentile(e / 100) ?? 0;
     }
 }

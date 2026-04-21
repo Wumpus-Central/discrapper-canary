@@ -166,8 +166,11 @@ function F(e) {
 }
 let v = {
         audioJitterBuffer: !0,
+        audioJitterBufferSamples: !0,
         audioJitterDelay: !0,
+        audioJitterDelaySamples: !0,
         audioJitterTarget: !0,
+        audioJitterTargetSamples: !0,
         audioPlayoutUnderruns: !0,
         decryptAttempts: !0,
         decryptDuration: !0,
