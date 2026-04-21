@@ -28,7 +28,13 @@ async function p(e) {
                 }),
                 n = t.body,
                 s = (0, a.sq)(n);
-            i.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS", guildId: e, storefront: s }),
+            null != s.storefrontPricing &&
+                i.h.dispatch({
+                    type: "SKUS_PRICING_FETCH_SUCCESS",
+                    priceId: { type: "application", applicationId: s.applicationId },
+                    data: s.storefrontPricing,
+                }),
+                i.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS", guildId: e, storefront: s }),
                 i.h.dispatch({
                     type: "SOCIAL_LAYER_STOREFRONT_METADATA_LOAD_SUCCESS",
                     applicationId: s.applicationId,
