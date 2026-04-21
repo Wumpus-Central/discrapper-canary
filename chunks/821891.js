@@ -63,7 +63,6 @@ function E(e) {
             isGift: !!g,
             planGroup: P,
             isPrepaidPaymentSource: !1,
-            willRelocateStoreCountry: e.willRelocateStoreCountry,
         }),
         k = p.intl.format(p.t.Y2Rkqc, { primaryText: x, paidURL: d.X7G.PAID_TERMS }),
         U = p.intl.format(p.t.H2uH5b, { primaryText: x, paidURL: d.X7G.PAID_TERMS }),
@@ -134,8 +133,8 @@ function E(e) {
                 throw Error(`Unexpected interval: ${t}`);
         }
     else {
-        let r,
-            i = (0, s.Ro)({
+        let e,
+            r = (0, s.Ro)({
                 productLine: C,
                 purchaseType: d.VVm.SUBSCRIPTION,
                 plan: E,
@@ -143,21 +142,20 @@ function E(e) {
                 isGift: !1,
                 planGroup: P,
                 isPrepaidPaymentSource: !1,
-                willRelocateStoreCountry: e.willRelocateStoreCountry,
             });
-        A || (r = m(O, t, n, E.id)),
+        A || (e = m(O, t, n, E.id)),
             (G = b?.isPausedAllowsResumeButNotUpdates
                 ? p.intl.format(p.t.B6oNwB, {
-                      primaryText: i,
-                      rate: r,
+                      primaryText: r,
+                      rate: e,
                       paidURL: d.X7G.PAID_TERMS,
                       contactLink: d.X7G.CONTACT,
                       helpdeskArticle: o.A.getArticleURL(d.MVz.BILLING),
                   })
                 : null != b && (0, c.vT)(b, E.id, P)
                   ? p.intl.format(p.t.LyBQUW, {
-                        primaryText: i,
-                        rate: r,
+                        primaryText: r,
+                        rate: e,
                         paidURL: d.X7G.PAID_TERMS,
                         contactLink: d.X7G.CONTACT,
                         helpdeskArticle: o.A.getArticleURL(d.MVz.BILLING),
@@ -171,21 +169,21 @@ function E(e) {
                       })
                     : M
                       ? p.intl.format(p.t.Oo2FeS, {
-                            buttonText: i,
+                            buttonText: r,
                             interval: l.Ay.formatInterval(E?.interval),
                             cancelSubscriptionArticle: o.A.getArticleURL(d.MVz.PREMIUM_DETAILS_CANCEL_SUB),
                             paidServiceTermsArticle: o.A.getArticleURL(d.MVz.PAID_TERMS),
                         })
                       : A
                         ? p.intl.format(p.t["Hvo/Z5"], {
-                              buttonText: i,
+                              buttonText: r,
                               interval: l.Ay.formatInterval(E?.interval),
                               cancelSubscriptionArticle: o.A.getArticleURL(d.MVz.PREMIUM_DETAILS_CANCEL_SUB),
                               paidServiceTermsArticle: o.A.getArticleURL(d.MVz.PAID_TERMS),
                           })
                         : null != R && null != O
                           ? p.intl.format(p.t.Kcieh4, {
-                                primaryText: i,
+                                primaryText: r,
                                 proratedAmount: (0, u.$g)(R, O.currency),
                                 renewalAmount: (0, u.$g)(O.amount, O.currency),
                                 rateInterval: l.Ay.formatInterval(E?.interval),
@@ -194,8 +192,8 @@ function E(e) {
                                 helpdeskArticle: o.A.getArticleURL(d.MVz.BILLING),
                             })
                           : p.intl.format(p.t.anJ7OX, {
-                                primaryText: i,
-                                rate: r,
+                                primaryText: r,
+                                rate: e,
                                 paidURL: d.X7G.PAID_TERMS,
                                 contactLink: d.X7G.CONTACT,
                                 helpdeskArticle: o.A.getArticleURL(d.MVz.BILLING),
