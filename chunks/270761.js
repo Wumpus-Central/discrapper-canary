@@ -1,9 +1,10 @@
-n.d(e, { A: () => u });
+n.d(e, { A: () => o });
 var l = n(284009),
     i = n.n(l),
     r = n(155718),
-    a = n(985018);
-function u(t, e, n) {
+    a = n(814890),
+    u = n(985018);
+function o(t, e, n) {
     switch ((null != e && i()(e.type === t.type, "component type matches state"), t.type)) {
         case r.I5.BUTTON:
             return null;
@@ -13,16 +14,16 @@ function u(t, e, n) {
         case r.I5.MENTIONABLE_SELECT:
         case r.I5.CHANNEL_SELECT:
             return ((t, e, n) => {
-                let { minValues: l, maxValues: i, required: u } = t,
-                    o = null == e ? 0 : e.type === r.I5.STRING_SELECT ? e.values.length : e.selectedOptions.length;
-                return 0 === o
-                    ? ("modal" === n ? u : 0 !== l)
-                        ? a.intl.string(a.t.eJEUvD)
-                        : null
-                    : o < l
-                      ? a.intl.formatToPlainString(a.t.Jmwzdx, { count: l })
-                      : o > i
-                        ? a.intl.formatToPlainString(a.t.LDvfRP, { count: i })
+                let { minValues: l, maxValues: i, required: o } = t,
+                    s = null == e ? 0 : e.type === r.I5.STRING_SELECT ? e.values.length : e.selectedOptions.length;
+                return 0 === s
+                    ? (0, a.Lr)({ minValues: l, required: o }, n)
+                        ? null
+                        : u.intl.string(u.t.eJEUvD)
+                    : s < l
+                      ? u.intl.formatToPlainString(u.t.Jmwzdx, { count: l })
+                      : s > i
+                        ? u.intl.formatToPlainString(u.t.LDvfRP, { count: i })
                         : null;
             })(t, e, n);
         case r.I5.TEXT_INPUT:
@@ -30,10 +31,10 @@ function u(t, e, n) {
                 let { minLength: n, maxLength: l, required: i } = t;
                 return null == e || 0 === e.value.length
                     ? i
-                        ? a.intl.string(a.t.eJEUvD)
+                        ? u.intl.string(u.t.eJEUvD)
                         : null
                     : e.value.length < n || e.value.length > l
-                      ? a.intl.formatToPlainString(a.t.ONSqYd, { min: n, max: l })
+                      ? u.intl.formatToPlainString(u.t.ONSqYd, { min: n, max: l })
                       : null;
             })(t, e);
         case r.I5.FILE_UPLOAD:
@@ -42,18 +43,18 @@ function u(t, e, n) {
                     r = e?.uploadIds.length ?? 0;
                 return 0 === r
                     ? i
-                        ? a.intl.string(a.t.eJEUvD)
+                        ? u.intl.string(u.t.eJEUvD)
                         : null
                     : r < n
-                      ? a.intl.formatToPlainString(a.t.pmAt62, { minValues: n })
+                      ? u.intl.formatToPlainString(u.t.pmAt62, { minValues: n })
                       : r > l
-                        ? a.intl.formatToPlainString(a.t.dy6viJ, { maxValues: l })
+                        ? u.intl.formatToPlainString(u.t.dy6viJ, { maxValues: l })
                         : null;
             })(t, e);
         case r.I5.RADIO_GROUP:
             return ((t, e) => {
                 let { required: n } = t;
-                return null == e || null == e.value ? (n ? a.intl.string(a.t.eJEUvD) : null) : null;
+                return null == e || null == e.value ? (n ? u.intl.string(u.t.eJEUvD) : null) : null;
             })(t, e);
         case r.I5.CHECKBOX_GROUP:
             return ((t, e) => {
@@ -61,12 +62,12 @@ function u(t, e, n) {
                     r = e?.values.length ?? 0;
                 return 0 === r
                     ? i
-                        ? a.intl.string(a.t.eJEUvD)
+                        ? u.intl.string(u.t.eJEUvD)
                         : null
                     : r < n
-                      ? a.intl.formatToPlainString(a.t.Jmwzdx, { count: n })
+                      ? u.intl.formatToPlainString(u.t.Jmwzdx, { count: n })
                       : r > l
-                        ? a.intl.formatToPlainString(a.t.LDvfRP, { count: l })
+                        ? u.intl.formatToPlainString(u.t.LDvfRP, { count: l })
                         : null;
             })(t, e);
         case r.I5.CHECKBOX:

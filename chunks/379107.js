@@ -5,8 +5,8 @@ var l = n(627968),
     s = n.n(r),
     i = n(284009),
     o = n.n(i),
-    c = n(843282),
-    d = n(565645),
+    d = n(843282),
+    c = n(565645),
     u = n(155718),
     m = n(594808),
     p = n(207963),
@@ -20,7 +20,7 @@ function E(e) {
         className: C.uK,
         children: [
             null != t
-                ? (0, l.jsx)(d.A, { className: C.Zg, emojiId: t.id, emojiName: t.name, animated: t.animated })
+                ? (0, l.jsx)(c.A, { className: C.Zg, emojiId: t.id, emojiName: t.name, animated: t.animated })
                 : null,
             (0, l.jsxs)("div", {
                 className: o,
@@ -40,7 +40,7 @@ function x(e) {
             className: s()(C.Uq, C.u9),
             children: [
                 null != t
-                    ? (0, l.jsx)(d.A, {
+                    ? (0, l.jsx)(c.A, {
                           className: C.Zg,
                           src: t.src,
                           emojiId: t.id,
@@ -66,7 +66,7 @@ function N(e) {
                         className: C.mK,
                         children: [
                             null != e.emoji
-                                ? (0, l.jsx)(d.A, {
+                                ? (0, l.jsx)(c.A, {
                                       className: C.eh,
                                       src: e.emoji.src,
                                       emojiId: e.emoji.id,
@@ -84,66 +84,67 @@ function N(e) {
     });
 }
 function I(e) {
-    let { type: t, options: n, id: r, maxValues: i, minValues: d, disabled: I } = e,
-        _ = (0, h.c7)(e),
-        f = a.useMemo(() => n.filter((e) => e.default).map((e) => e.value), [n]),
-        g = (0, p.jc)();
-    o()(null != g, "StringSelectActionComponent must be rendered inside a ComponentStateContext");
+    let { type: t, options: n, id: r, maxValues: i, disabled: c } = e,
+        I = (0, h.c7)(e),
+        _ = a.useMemo(() => n.filter((e) => e.default).map((e) => e.value), [n]),
+        f = (0, p.jc)();
+    o()(null != f, "StringSelectActionComponent must be rendered inside a ComponentStateContext");
     let {
-            state: T,
-            executeStateUpdate: v,
-            visualState: j,
-            isDisabled: S,
-            error: O,
-        } = g.useComponentState(e, f.length > 0 ? { type: t, values: f } : void 0),
-        R = null != g.modal,
-        y = i > 1,
-        b = j === A.BB.LOADING,
-        [P, L] = a.useState(!1),
-        [D, U] = a.useState(() => new Set(n.filter((e) => e.default).map((e) => e.value))),
-        [k, M] = a.useState(D),
-        w = a.useMemo(() => n.some((e) => null != e.emoji), [n]);
+            state: g,
+            executeStateUpdate: T,
+            visualState: v,
+            isDisabled: j,
+            error: S,
+        } = f.useComponentState(e, _.length > 0 ? { type: t, values: _ } : void 0),
+        O = null != f.modal,
+        R = i > 1,
+        y = v === A.BB.LOADING,
+        [b, P] = a.useState(!1),
+        [L, D] = a.useState(() => new Set(n.filter((e) => e.default).map((e) => e.value))),
+        [U, k] = a.useState(L),
+        M = a.useMemo(() => n.some((e) => null != e.emoji), [n]);
     a.useEffect(() => {
-        if (T?.type === u.I5.STRING_SELECT) {
-            let e = new Set(T.values);
-            U(e), M(e);
+        if (g?.type === u.I5.STRING_SELECT) {
+            let e = new Set(g.values);
+            D(e), k(e);
         } else {
-            let e = new Set(f);
-            U(e), M(e);
+            let e = new Set(_);
+            D(e), k(e);
         }
-    }, [r, f, T]);
-    let H = a.useCallback(() => {
-        k !== D && v({ type: u.I5.STRING_SELECT, values: Array.from(D) }) && M(D);
-    }, [D, k, M, v]);
+    }, [r, _, g]);
+    let w = a.useCallback(() => {
+        U !== L && T({ type: u.I5.STRING_SELECT, values: Array.from(L) }) && k(L);
+    }, [L, U, k, T]);
     a.useEffect(() => {
-        P || (D.size === k.size && Array.from(k).every((e) => D.has(e))) || H();
-    }, [P, D, k, H]);
-    let K = c.lS;
-    y ? (K = c.M8) : 0 === d && (K = c.$l);
-    let F = (0, c.Ev)({ value: D, onChange: (e) => U(e), onSelectInteraction: K });
+        b || (L.size === U.size && Array.from(U).every((e) => L.has(e))) || w();
+    }, [b, L, U, w]);
+    let H = (0, h.Lr)(e, O ? "modal" : "message"),
+        K = d.lS;
+    R ? (K = d.M8) : H && (K = d.$l);
+    let F = (0, d.Ev)({ value: L, onChange: (e) => D(e), onSelectInteraction: K });
     return (0, l.jsxs)(a.Fragment, {
         children: [
             (0, l.jsx)("div", {
                 className: C.kL,
-                children: (0, l.jsx)(c.Pw, {
-                    isProcessing: b,
-                    isDisabled: I || j === A.BB.DISABLED || S,
-                    className: s()(C.Lt, { [C.zE]: R }),
-                    options: n.map((e) => ({ ...e, disabled: y && !D.has(e.value) && D.size === i })),
-                    placeholder: _,
-                    onClose: () => L(!1),
-                    onOpen: () => L(!0),
+                children: (0, l.jsx)(d.Pw, {
+                    isProcessing: y,
+                    isDisabled: c || v === A.BB.DISABLED || j,
+                    className: s()(C.Lt, { [C.zE]: O }),
+                    options: n.map((e) => ({ ...e, disabled: R && !L.has(e.value) && L.size === i })),
+                    placeholder: I,
+                    onClose: () => P(!1),
+                    onOpen: () => P(!0),
                     maxVisibleItems: 5,
-                    closeOnSelect: !y,
+                    closeOnSelect: !R,
                     optionClassName: C.MT,
                     renderOptionLabel: (e) =>
-                        (0, l.jsx)(E, { ...e, isDisabled: y && !D.has(e.value) && D.size === i, isOffset: w }),
-                    renderOptionValue: (e) => (y ? (0, l.jsx)(N, { options: e }) : (0, l.jsx)(x, { ...e[0] })),
+                        (0, l.jsx)(E, { ...e, isDisabled: R && !L.has(e.value) && L.size === i, isOffset: M }),
+                    renderOptionValue: (e) => (R ? (0, l.jsx)(N, { options: e }) : (0, l.jsx)(x, { ...e[0] })),
                     ...F,
                     "data-migration-pending": !0,
                 }),
             }),
-            null == O || R ? null : (0, l.jsx)(m.S0, { ...(0, m.PS)(O), className: C.z3 }),
+            null == S || O ? null : (0, l.jsx)(m.S0, { ...(0, m.PS)(S), className: C.z3 }),
         ],
     });
 }
