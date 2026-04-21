@@ -36,7 +36,7 @@ function d(t) {
         ],
         children: (0, e.jsx)("form", {
             onSubmit: (t) => {
-                t.preventDefault(), y();
+                t.preventDefault(), T && !x && y();
             },
             children: (0, e.jsx)(r.ksK, {
                 label: u.intl.string(u.t.tZ9QFR),
