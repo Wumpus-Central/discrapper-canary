@@ -50,26 +50,27 @@ function k(e, t) {
 }
 function U(e, t) {
     let n = null == t ? null : T.A.getMessage(e.id, t),
-        r = n?.embeds?.[0]?.rawTitle ?? "",
-        i = n?.poll?.question?.text ?? "";
-    if ("" !== r) return k(r, 40);
+        r = n?.getContentMessage(),
+        i = r?.embeds?.[0]?.rawTitle ?? "",
+        s = n?.poll?.question?.text ?? "";
+    if ("" !== i) return k(i, 40);
     {
-        if ("" !== i) return k(i, 80);
-        let t = m.Ay.unparse(n?.content ?? "", e.id, !0),
-            r = (0, O.A)(t.split("\n")[0], !0);
-        r = r.replace(/^[ #-]+/, "");
-        let s = [];
+        if ("" !== s) return k(s, 80);
+        let t = m.Ay.unparse(r?.content ?? "", e.id, !0),
+            n = (0, O.A)(t.split("\n")[0], !0);
+        n = n.replace(/^[ #-]+/, "");
+        let i = [];
         for (;;) {
-            let e = r.match(/(?:\s|[!@#$%^&*()_\-+={}[\]:";'<>?,./])+/);
+            let e = n.match(/(?:\s|[!@#$%^&*()_\-+={}[\]:";'<>?,./])+/);
             if (null == e || null == e.index) {
-                s.push(r);
+                i.push(n);
                 break;
             }
-            s.push(r.substring(0, e.index)), s.push(e[0]), (r = r.substring(e.index + e[0].length));
+            i.push(n.substring(0, e.index)), i.push(e[0]), (n = n.substring(e.index + e[0].length));
         }
-        let a = s[0];
-        for (let e = 1; e < s.length; e++) {
-            let t = a + s[e];
+        let a = i[0];
+        for (let e = 1; e < i.length; e++) {
+            let t = a + i[e];
             if (t.length > 40) break;
             a = t;
         }
