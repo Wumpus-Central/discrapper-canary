@@ -50,6 +50,9 @@ class E extends o.Ay.Store {
     isClaimingBountyReward(e) {
         return a.has(e);
     }
+    areAllBountiesCompleted() {
+        return i.every((e) => s.has(e.id));
+    }
 }
 new E(l.h, {
     LOGOUT: c,
