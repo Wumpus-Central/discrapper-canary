@@ -29287,6 +29287,13 @@ html:not(.chat-input) .inputInner_b1f01d {
     max-height: 55px
 }
 
+.row_e4172d {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    width: 100%
+}
+
 .roleIcon_ee71ee {
     display: inline-block;
     -o-object-fit: contain;
