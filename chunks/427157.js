@@ -134,7 +134,14 @@ class I extends a.A {
             r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : h.QB,
             i = null != e ? this.guildMemberAvatars[e] : void 0;
         return null != i && null != e
-            ? h.Ay.getGuildMemberAvatarURLSimple({ guildId: e, avatar: i, userId: this.id, canAnimate: n, canWebP: r })
+            ? h.Ay.getGuildMemberAvatarURLSimple({
+                  guildId: e,
+                  avatar: i,
+                  userId: this.id,
+                  canAnimate: n,
+                  size: t,
+                  canWebP: r,
+              })
             : h.Ay.getUserAvatarURL(this, n, t, null, r);
     }
     addGuildAvatarHash(e, t) {
