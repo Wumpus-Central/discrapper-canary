@@ -1,44 +1,46 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => A });
 var l = n(627968),
-    i = n(64700),
-    r = n(503698),
-    a = n.n(r),
+    r = n(64700),
+    i = n(503698),
+    a = n.n(i),
     s = n(43990),
     o = n(311907),
     c = n(544028),
     u = n(746002),
     d = n(219220),
-    m = n(325409);
-function f(e) {
-    let { skuId: t, layer: n, data: i } = e,
-        r = i?.src ?? (0, u.getCollectiblesItemAssetUrl)({ skuId: t, assetFormat: "static", assetId: n.id });
-    if (null == r) return null;
+    m = n(282389),
+    f = n(929697);
+function x(e) {
+    let { skuId: t, layer: n, data: r } = e,
+        i = r?.src ?? (0, u.getCollectiblesItemAssetUrl)({ skuId: t, assetFormat: "static", assetId: n.id });
+    if (null == i) return null;
     if ("border" === n.type) {
-        let e = { "--custom-profile-frame-layer-src": `url(${r})` };
+        let e = { "--custom-profile-frame-layer-src": `url(${i})` };
         return (0, l.jsx)("div", {
             role: "img",
-            className: a()(m.S_, m.PQ, { [m.Wm]: "front" === n.order, [m.aX]: "back" === n.order }),
+            className: a()(f.S_, f.PQ, { [f.Wm]: "front" === n.order, [f.aX]: "back" === n.order }),
             style: e,
         });
     }
     return (0, l.jsx)("div", {
-        className: a()(m.S_, {
-            [m.im]: "staple" === n.type,
-            [m.H$]: "rail" === n.type,
-            [m.Wm]: "front" === n.order,
-            [m.aX]: "back" === n.order,
-            [m.Mn]: "top" === n.anchor,
-            [m.sQ]: "bottom" === n.anchor,
-            [m.gX]: "center" === n.anchor,
-            [m.no]: !0 === n.responsive,
+        className: a()(f.S_, {
+            [f.im]: "staple" === n.type,
+            [f.H$]: "rail" === n.type,
+            [f.Wm]: "front" === n.order,
+            [f.aX]: "back" === n.order,
+            [f.Mn]: "top" === n.anchor,
+            [f.sQ]: "bottom" === n.anchor,
+            [f.gX]: "center" === n.anchor,
+            [f.no]: !0 === n.responsive,
         }),
-        children: (0, l.jsx)("img", { src: r, alt: "", "aria-hidden": !0 }),
+        children: (0, l.jsx)("img", { src: i, alt: "", "aria-hidden": !0 }),
     });
 }
-function x(e) {
+function A(e) {
     let { frame: t, layout: n } = e,
-        r = (0, o.bG)([c.A], () => c.A.theme),
-        u = i.useMemo(
+        i = (0, o.bG)([c.A], () => c.A.theme),
+        u = (0, m.A)(t.skuId),
+        A = r.useMemo(
             () =>
                 "MODAL_V2" === n
                     ? t.layers.filter((e) => "bottom" !== e.anchor)
@@ -47,17 +49,17 @@ function x(e) {
                       : t.layers,
             [n, t.layers],
         ),
-        { layerData: x } = (0, d.A)({ skuId: t.skuId, layers: u });
-    return 0 === u.length
+        { layerData: g } = (0, d.A)({ skuId: t.skuId, layers: A });
+    return 0 === A.length
         ? null
         : (0, l.jsx)(s.N, {
-              theme: r,
+              theme: i,
               children: (e) =>
                   (0, l.jsx)("div", {
-                      className: a()(m.hH, e),
+                      className: a()(f.hH, e, u),
                       "aria-label": t.label,
                       role: "img",
-                      children: u.map((e) => (0, l.jsx)(f, { skuId: t.skuId, layer: e, data: x[e.id] }, e.id)),
+                      children: A.map((e) => (0, l.jsx)(x, { skuId: t.skuId, layer: e, data: g[e.id] }, e.id)),
                   }),
           });
 }
