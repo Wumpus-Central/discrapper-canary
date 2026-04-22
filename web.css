@@ -30667,6 +30667,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: ABC Ginto Nord;
     font-style: normal;
     font-weight: 800;
@@ -30674,6 +30675,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: ABC Ginto Nord;
     font-style: italic;
     font-weight: 800;
@@ -30681,6 +30683,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: ABC Ginto Nord Discord;
     font-style: normal;
     font-weight: 700;
@@ -30688,6 +30691,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: ABC Ginto Nord Discord;
     font-style: italic;
     font-weight: 700;
@@ -30695,6 +30699,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: ABC Ginto Normal;
     font-style: normal;
     font-weight: 300;
@@ -30702,6 +30707,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: ABC Ginto Normal;
     font-style: italic;
     font-weight: 300;
@@ -30709,6 +30715,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: ABC Ginto Normal;
     font-style: normal;
     font-weight: 400;
@@ -30716,6 +30723,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: ABC Ginto Normal;
     font-style: italic;
     font-weight: 400;
@@ -30723,6 +30731,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: ABC Ginto Normal;
     font-style: normal;
     font-weight: 500;
@@ -30730,6 +30739,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: ABC Ginto Normal;
     font-style: italic;
     font-weight: 500;
@@ -30737,6 +30747,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: ABC Ginto Normal;
     font-style: normal;
     font-weight: 700;
@@ -30744,6 +30755,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: ABC Ginto Normal;
     font-style: italic;
     font-weight: 700;
@@ -30751,6 +30763,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: ABC Ginto Normal;
     font-style: normal;
     font-weight: 800;
@@ -30758,6 +30771,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: ABC Ginto Normal;
     font-style: italic;
     font-weight: 800;
@@ -30765,6 +30779,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: ABC Ginto Discord;
     font-style: normal;
     font-weight: 400;
@@ -30772,6 +30787,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: ABC Ginto Discord;
     font-style: normal;
     font-weight: 500;
@@ -30779,6 +30795,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: gg sans;
     font-style: normal;
     font-weight: 400;
@@ -30786,6 +30803,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: gg sans;
     font-style: italic;
     font-weight: 400;
@@ -30793,6 +30811,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: gg sans;
     font-style: normal;
     font-weight: 500;
@@ -30800,6 +30819,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: gg sans;
     font-style: italic;
     font-weight: 500;
@@ -30807,6 +30827,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: gg sans;
     font-style: normal;
     font-weight: 600;
@@ -30814,6 +30835,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: gg sans;
     font-style: italic;
     font-weight: 600;
@@ -30821,6 +30843,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: gg sans;
     font-style: normal;
     font-weight: 700;
@@ -30828,6 +30851,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: gg sans;
     font-style: italic;
     font-weight: 700;
@@ -30835,6 +30859,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: gg sans;
     font-style: normal;
     font-weight: 800;
@@ -30842,6 +30867,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: gg sans;
     font-style: italic;
     font-weight: 800;
@@ -30849,6 +30875,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: gg mono;
     font-style: normal;
     font-weight: 400;
@@ -30856,6 +30883,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: gg mono;
     font-style: normal;
     font-weight: 700;
@@ -30863,6 +30891,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: Noto Sans;
     font-style: normal;
     font-weight: 400;
@@ -30870,6 +30899,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: Noto Sans;
     font-style: italic;
     font-weight: 400;
@@ -30877,6 +30907,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: Noto Sans;
     font-style: normal;
     font-weight: 500;
@@ -30884,6 +30915,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: Noto Sans;
     font-style: italic;
     font-weight: 500;
@@ -30891,6 +30923,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: Noto Sans;
     font-style: normal;
     font-weight: 600;
@@ -30898,6 +30931,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: Noto Sans;
     font-style: italic;
     font-weight: 600;
@@ -30905,6 +30939,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: Noto Sans;
     font-style: normal;
     font-weight: 700;
@@ -30912,6 +30947,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: Noto Sans;
     font-style: italic;
     font-weight: 700;
@@ -30919,6 +30955,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: Noto Sans;
     font-style: normal;
     font-weight: 800;
@@ -30926,6 +30963,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: Noto Sans;
     font-style: italic;
     font-weight: 800;
@@ -30933,6 +30971,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: Source Code Pro;
     font-style: normal;
     font-weight: 400;
@@ -30940,6 +30979,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: Source Code Pro;
     font-style: normal;
     font-weight: 700;
@@ -30947,6 +30987,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: Corinthia;
     font-style: normal;
     font-weight: 400;
@@ -30954,6 +30995,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: Fraunces;
     font-style: normal;
     font-weight: 300 800;
@@ -30961,6 +31003,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: Munro;
     font-style: normal;
     font-weight: 400;
@@ -30968,6 +31011,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: Delicious Handrawn;
     font-style: normal;
     font-weight: 400;
@@ -30975,6 +31019,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: Cherry Bomb One;
     font-style: normal;
     font-weight: 400;
@@ -30982,6 +31027,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: Chicle;
     font-style: normal;
     font-weight: 400;
@@ -30989,6 +31035,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: Neo Castel;
     font-style: normal;
     font-weight: 400;
@@ -30996,6 +31043,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: Museo Moderno;
     font-style: normal;
     font-weight: 500;
@@ -31003,6 +31051,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: Pixelify Sans;
     font-style: normal;
     font-weight: 400;
@@ -31010,6 +31059,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: Sinistre;
     font-style: normal;
     font-weight: 400;
@@ -31017,6 +31067,7 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-display: swap;
     font-family: Zilla Slab;
     font-style: normal;
     font-weight: 600;
