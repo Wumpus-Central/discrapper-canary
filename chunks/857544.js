@@ -14,8 +14,8 @@ var i = n(627968),
     x = n(380610),
     h = n(235986),
     A = n(544028),
-    p = n(652215),
-    T = n(986238),
+    p = n(986238),
+    T = n(650583),
     f = n(851645),
     S = n(274446),
     E = n(818050);
@@ -307,7 +307,7 @@ class j extends s.Component {
         this.setState({ allowedVersionEntry: e });
     };
     handleAllowedVersionEnter = (e) => {
-        e.charCode === p.Ks6.ENTER && this.handleAddAllowedVersion();
+        e.key === T.dh.ENTER && this.handleAddAllowedVersion();
     };
     handleAddAllowedVersion = () => {
         let { allowedVersions: e, allowedVersionEntry: t } = this.state;
@@ -392,7 +392,7 @@ class j extends s.Component {
                 experiments: d,
                 experimentsError: c,
             } = this.state,
-            m = T.fL.find((t) => t.value === e),
+            m = p.fL.find((t) => t.value === e),
             g = l.map((e) => ({ id: e, label: e, value: e }));
         return (0, i.jsxs)(u.BJc, {
             gap: 20,
@@ -401,7 +401,7 @@ class j extends s.Component {
                     selectionMode: "single",
                     label: "Expire After",
                     value: null != m ? m.value : void 0,
-                    options: T.fL,
+                    options: p.fL,
                     onSelectionChange: this.handleExpirationChange,
                 }),
                 this.isMobile()
@@ -410,7 +410,7 @@ class j extends s.Component {
                           selectionMode: "single",
                           label: "Release Channel",
                           value: t,
-                          options: T.VP,
+                          options: p.VP,
                           onSelectionChange: this.handleReleaseChannelChange,
                       }),
                 this.isMobile()

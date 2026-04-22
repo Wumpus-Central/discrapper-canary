@@ -1,46 +1,47 @@
-n.d(l, { A: () => x });
-var t = n(627968),
-    i = n(64700),
-    s = n(311907),
-    a = n(397927),
-    r = n(629403),
-    o = n(612630),
-    d = n(351906),
-    c = n(652215),
-    u = n(985018),
-    m = n(828950);
-function x(e) {
-    let { autoFocus: l = !1, className: n, userId: x, onUpdate: p } = e,
-        A = (0, s.bG)([d.A], () => d.A.hidePersonalInformation),
-        { loading: g, note: f } = (0, o.A)(x),
-        h = i.useRef(null);
+l.d(n, { A: () => p });
+var t = l(627968),
+    i = l(64700),
+    s = l(311907),
+    a = l(397927),
+    r = l(629403),
+    o = l(612630),
+    d = l(351906),
+    c = l(652215),
+    u = l(650583),
+    m = l(985018),
+    A = l(999878);
+function p(e) {
+    let { autoFocus: n = !1, className: l, userId: p, onUpdate: x } = e,
+        g = (0, s.bG)([d.A], () => d.A.hidePersonalInformation),
+        { loading: f, note: h } = (0, o.A)(p),
+        v = i.useRef(null);
     return (i.useEffect(() => {
-        if (!l || A) return;
-        let e = h.current;
+        if (!n || g) return;
+        let e = v.current;
         e?.selectionStart != null && (e.focus(), e.setSelection(e.value.length, e.value.length));
-    }, [l, A]),
-    A)
+    }, [n, g]),
+    g)
         ? null
         : (0, t.jsx)("div", {
-              className: n,
+              className: l,
               children: (0, t.jsx)(a.d4u, {
-                  ref: h,
-                  className: m.P,
-                  disabled: g,
-                  placeholder: g ? u.intl.string(u.t["WLKx/9"]) : u.intl.string(u.t.VBhOe2),
-                  "aria-label": u.intl.string(u.t.PbMNh2),
+                  ref: v,
+                  className: A.P,
+                  disabled: f,
+                  placeholder: f ? m.intl.string(m.t["WLKx/9"]) : m.intl.string(m.t.VBhOe2),
+                  "aria-label": m.intl.string(m.t.PbMNh2),
                   onBlur: (e) => {
-                      let l = e.currentTarget.value;
-                      (f ?? "") !== l && (p?.(), r.A.updateNote(x, l));
+                      let n = e.currentTarget.value;
+                      (h ?? "") !== n && (x?.(), r.A.updateNote(p, n));
                   },
                   onKeyPress: (e) => {
-                      13 === e.which
+                      e.key === u.dh.ENTER
                           ? e.shiftKey
                               ? (e.currentTarget.value.match(/\n/g) ?? []).length >= 5 && e.preventDefault()
                               : (e.preventDefault(), e.currentTarget.blur())
-                          : e.which === c.Ks6.SPACE && e.stopPropagation();
+                          : e.key === u.dh.SPACE && e.stopPropagation();
                   },
-                  defaultValue: f ?? void 0,
+                  defaultValue: h ?? void 0,
                   maxLength: c.T7x,
               }),
           });

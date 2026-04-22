@@ -12,9 +12,9 @@ var r = n(627968),
     _ = n(31717),
     f = n(723702),
     p = n(837921),
-    h = n(652215),
+    h = n(650583),
     m = n(985018),
-    E = n(814178);
+    E = n(910162);
 function g(e) {
     let { file: t } = e,
         [n, s] = i.useState();
@@ -101,7 +101,7 @@ class I extends i.Component {
                                 value: this.state.filename,
                                 onChange: (e) => this.setState({ filename: e }),
                                 onKeyDown: (e) => {
-                                    if (e.which === h.Ks6.ENTER) return this.handleSubmit();
+                                    if (e.key === h.dh.ENTER) return this.handleSubmit();
                                 },
                             }),
                             e.isImage
@@ -111,7 +111,7 @@ class I extends i.Component {
                                       value: this.state.description,
                                       onChange: (e) => this.setState({ description: e }),
                                       onKeyDown: (e) => {
-                                          if (e.which === h.Ks6.ENTER) return this.handleSubmit();
+                                          if (e.key === h.dh.ENTER) return this.handleSubmit();
                                       },
                                   })
                                 : null,

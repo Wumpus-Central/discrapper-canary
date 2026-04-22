@@ -1,67 +1,68 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => b });
 var i = n(627968),
-    r = n(64700),
+    l = n(64700),
     a = n(503698),
-    l = n.n(a),
+    r = n.n(a),
     s = n(284009),
     o = n.n(s),
     d = n(421380),
     c = n(397927),
     u = n(49229),
     A = n(915089),
-    h = n(395422),
-    _ = n(652215),
-    m = n(650583),
+    h = n(953051),
+    _ = n(395422),
+    m = n(652215),
+    g = n(650583),
     p = n(985018),
-    g = n(680982),
-    E = n(473169);
+    E = n(235351),
+    I = n(818050);
 let f = n(892799),
-    I = { canSend: !1, hint: null, success: null, error: null },
-    C = (0, A.Ld)(),
-    N = `${C}-decription`,
-    T = `${C}-error`;
-function S(e, t) {
+    C = { canSend: !1, hint: null, success: null, error: null },
+    T = (0, A.Ld)(),
+    N = `${T}-decription`,
+    S = `${T}-error`;
+function x(e, t) {
     switch (t.type) {
         case "RESET":
-            return I;
+            return C;
         case "SUCCESS":
-            return { ...I, success: t.text };
+            return { ...C, success: t.text };
         case "HINT":
-            return { ...I, canSend: !0, hint: t.text };
+            return { ...C, canSend: !0, hint: t.text };
         case "ERROR":
             return { ...e, canSend: !0, error: t.text };
     }
 }
-function x(e) {
+function b(e) {
     let { placeholder: t = p.intl.string(p.t["Rn/sLl"]) } = e,
-        n = r.useRef(null),
-        a = r.useRef(null),
-        [s, A] = r.useReducer(S, I),
-        { canSend: x, hint: v, error: b, success: y } = s;
+        n = l.useRef(null),
+        a = l.useRef(null),
+        [s, A] = l.useReducer(x, C),
+        { canSend: b, hint: v, error: y, success: O } = s;
     return (
-        r.useEffect(() => {
-            null != y &&
+        l.useEffect(() => {
+            null != O &&
                 (o()(null != n.current, "Input is submitting when not mounted"),
                 (n.current.value = ""),
                 n.current.focus());
-        }, [y, n]),
+        }, [O, n]),
         (0, i.jsxs)("form", {
             onSubmit: (e) => {
                 e.preventDefault(), o()(null != n.current, "Input is submitted when not mounted");
                 let t = n.current.value.trim();
                 !t.includes("#") && t.startsWith("@") && (t = t.substring(1));
-                let i = (0, h.Ty)(t);
+                let i = (0, _.Ty)(t);
                 null != i
                     ? A({ type: "ERROR", text: i })
                     : u.A.sendRequest({ discordTag: t, context: { location: "Add Friend" } }).then(
                           () => A({ type: "SUCCESS", text: p.intl.format(p.t.Rtl1Ep, { discordTag: t }) }),
-                          (e) => A({ type: "ERROR", text: (0, h.vU)(e.body?.code, t) }),
+                          (e) => A({ type: "ERROR", text: (0, _.vU)(e.body?.code, t) }),
                       );
             },
             autoComplete: "off",
             children: [
                 (0, i.jsxs)("div", {
-                    className: g.QR,
+                    className: E.QR,
                     children: [
                         (0, i.jsx)(c.Text, {
                             tag: "div",
@@ -74,37 +75,37 @@ function x(e) {
                 (0, i.jsx)(c.vN3, {
                     focusTarget: n,
                     ringTarget: a,
-                    ringClassName: g.hN,
+                    ringClassName: E.hN,
                     children: (0, i.jsxs)("div", {
                         ref: a,
-                        className: l()(g.fc, { [g.kX]: y, [g.z3]: b }),
+                        className: r()(E.fc, { [E.kX]: O, [E.z3]: y }),
                         children: [
                             (0, i.jsx)(d.ob, {
-                                id: C,
+                                id: T,
                                 inputRef: n,
-                                className: g.QP,
-                                inputClassName: g.hF,
+                                className: E.QP,
+                                inputClassName: E.hF,
                                 onKeyPress: (e) => {
                                     let t = e.currentTarget.value;
-                                    if (e.key !== m.N$.Enter && t.includes("#")) {
+                                    if (e.key !== g.N$.Enter && t.includes("#")) {
                                         o()(null != n.current, "Input is handling keypress when not mounted");
                                         let i = t.indexOf("#"),
-                                            r = n.current.selectionStart,
+                                            l = n.current.selectionStart,
                                             a =
-                                                e.key === m.N$.Backspace ||
-                                                e.key === m.N$.ArrowRight ||
-                                                e.key === m.N$.ArrowLeft,
-                                            l = e.which >= 48 && e.which <= 57;
-                                        null != r && r > i && /^(.+?#\d{4})$/.test(t) && !a
+                                                e.key === g.N$.Backspace ||
+                                                e.key === g.N$.ArrowRight ||
+                                                e.key === g.N$.ArrowLeft,
+                                            r = (0, h.A)(e.key);
+                                        null != l && l > i && /^(.+?#\d{4})$/.test(t) && !a
                                             ? e.preventDefault()
-                                            : null == r || !(r > i) || l || a || e.preventDefault();
+                                            : null == l || !(l > i) || r || a || e.preventDefault();
                                     }
                                 },
                                 onChange: (e) => {
                                     if (e.length <= 0) return void A({ type: "RESET" });
                                     let t = "",
                                         [, n] = e.split("#");
-                                    null != n && (t = e + _.RoK.slice(null != n ? n.length + 1 : 0)),
+                                    null != n && (t = e + m.RoK.slice(null != n ? n.length + 1 : 0)),
                                         A({ type: "HINT", text: t });
                                 },
                                 maxLength: 37,
@@ -116,39 +117,39 @@ function x(e) {
                                 "data-1p-ignore": !0,
                                 placeholder: t,
                                 "aria-label": t,
-                                "aria-invalid": null != b || void 0,
-                                "aria-describedby": null != b ? T : N,
+                                "aria-invalid": null != y || void 0,
+                                "aria-describedby": null != y ? S : N,
                             }),
-                            null != v && (0, i.jsx)("div", { className: g.dQ, "aria-hidden": !0, children: v }),
+                            null != v && (0, i.jsx)("div", { className: E.dQ, "aria-hidden": !0, children: v }),
                             (0, i.jsx)(c.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: p.intl.string(p.t["PMsq/b"]),
-                                disabled: !x,
+                                disabled: !b,
                                 type: "submit",
                             }),
                         ],
                     }),
                 }),
-                null != b &&
+                null != y &&
                     (0, i.jsx)("div", {
                         role: "alert",
                         children: (0, i.jsx)(c.Text, {
-                            id: T,
+                            id: S,
                             variant: "text-sm/normal",
-                            className: E.Ot,
+                            className: I.Ot,
                             color: "text-feedback-critical",
-                            children: b,
+                            children: y,
                         }),
                     }),
-                null != y &&
+                null != O &&
                     (0, i.jsx)("div", {
                         role: "status",
                         children: (0, i.jsx)(c.Text, {
                             variant: "text-sm/normal",
-                            className: E.Ot,
+                            className: I.Ot,
                             color: "text-feedback-positive",
-                            children: y,
+                            children: O,
                         }),
                     }),
             ],

@@ -1,23 +1,24 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => c });
 var r = n(64700),
     i = n(861382),
-    a = n(35277),
-    s = n(407315),
+    s = n(35277),
+    a = n(407315),
     o = n(113001),
-    l = n(652215);
-function u(e) {
+    l = n(652215),
+    u = n(650583);
+function c(e) {
     let {
         editor: t,
         channel: n,
-        disableEnterToSubmit: u,
-        onKeyDown: c,
-        onKeyUp: d,
-        onTab: _,
-        onEnter: f,
-        allowNewLines: p,
-        submit: h,
-        hideAutocomplete: m,
+        disableEnterToSubmit: c,
+        onKeyDown: d,
+        onKeyUp: _,
+        onTab: f,
+        onEnter: p,
+        allowNewLines: h,
+        submit: m,
+        hideAutocomplete: E,
         moveSelection: g,
     } = e;
     return {
@@ -37,22 +38,22 @@ function u(e) {
                         if ((0, o.j)(e, { ctrl: !0 }) && g(1)) return void e.preventDefault();
                         break;
                     case l.Ks6.ESCAPE:
-                        m?.();
+                        E?.();
                         break;
                     case l.Ks6.TAB:
-                        if ((0, o.j)(e, {}) && _?.()) {
+                        if ((0, o.j)(e, {}) && f?.()) {
                             e.preventDefault(), e.stopPropagation();
                             return;
                         }
                         if (null != i.A.getActiveCommand(n.id)) {
                             e.preventDefault(),
                                 e.stopPropagation(),
-                                e.shiftKey ? a.b.selectPreviousCommandOption(t) : a.b.selectNextCommandOption(t);
+                                e.shiftKey ? s.b.selectPreviousCommandOption(t) : s.b.selectNextCommandOption(t);
                             return;
                         }
                         break;
                     case l.Ks6.ENTER:
-                        if ((0, o.j)(e, {}) && f?.(e)) {
+                        if ((0, o.j)(e, {}) && p?.(e)) {
                             e.preventDefault(), e.stopPropagation();
                             return;
                         }
@@ -61,18 +62,18 @@ function u(e) {
                     e.preventDefault(), e.stopPropagation();
                     return;
                 }
-                e.which !== l.Ks6.ENTER ||
-                    ((e.altKey || e.shiftKey || (u && !e.ctrlKey) || (0, s.Q9)(t)) && p) ||
-                    (e.preventDefault(), e.stopPropagation(), h()),
-                    c?.(e);
+                e.key !== u.dh.ENTER ||
+                    ((e.altKey || e.shiftKey || (c && !e.ctrlKey) || (0, a.Q9)(t)) && h) ||
+                    (e.preventDefault(), e.stopPropagation(), m()),
+                    d?.(e);
             },
-            [p, n.id, u, t, m, g, f, c, _, h],
+            [h, n.id, c, t, E, g, p, d, f, m],
         ),
         handleKeyUp: r.useCallback(
             (e) => {
-                d?.(e);
+                _?.(e);
             },
-            [d],
+            [_],
         ),
     };
 }

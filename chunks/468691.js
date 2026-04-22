@@ -1,8 +1,8 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => C });
 var i = n(627968),
-    a = n(64700),
-    l = n(503698),
-    r = n.n(l),
+    l = n(64700),
+    a = n(503698),
+    r = n.n(a),
     s = n(621466),
     o = n(311907),
     d = n(397927),
@@ -13,10 +13,11 @@ var i = n(627968),
     _ = n(268387),
     m = n(715671),
     g = n(652215),
-    p = n(985018),
-    E = n(699504);
-class I extends a.Component {
-    searchBarRef = a.createRef();
+    p = n(650583),
+    E = n(985018),
+    I = n(326112);
+class f extends l.Component {
+    searchBarRef = l.createRef();
     state = { focused: !1 };
     componentDidMount() {
         document.addEventListener("keydown", this.handleKeyDown);
@@ -34,28 +35,28 @@ class I extends a.Component {
     updateActiveRow(e) {
         let { applicationViewItems: t, activeRowKey: n } = this.props,
             i = t.findIndex((e) => e.key === n),
-            a = 0;
-        i >= 0 && (a = (i + e) % t.length) < 0 && (a = t.length - 1);
-        let l = t[a];
-        u.pU(null != l ? l.key : null, !0);
+            l = 0;
+        i >= 0 && (l = (i + e) % t.length) < 0 && (l = t.length - 1);
+        let a = t[l];
+        u.pU(null != a ? a.key : null, !0);
     }
     handleKeyDown = (e) => {
         let { activeRowKey: t, hasModalOpen: n, applicationViewItems: i } = this.props,
-            { searchBarRef: a } = this;
-        if (n || e.ctrlKey || e.altKey || e.metaKey || null == a) return;
-        let l = (0, s.BF)(e)?.activeElement;
-        if (!(l !== a.current && (0, s.Cw)(l)))
-            switch (e.which) {
-                case g.Ks6.ESCAPE:
-                    e.target !== a.current ? this.reset() : null != a.current && a.current?.blur();
+            { searchBarRef: l } = this;
+        if (n || e.ctrlKey || e.altKey || e.metaKey || null == l) return;
+        let a = (0, s.BF)(e)?.activeElement;
+        if (!(a !== l.current && (0, s.Cw)(a)))
+            switch (e.key) {
+                case p.dh.ESCAPE:
+                    e.target !== l.current ? this.reset() : null != l.current && l.current?.blur();
                     break;
-                case g.Ks6.ENTER:
+                case p.dh.ENTER:
                     if (null != t) {
                         e.preventDefault();
                         let n = i.find((e) => e.key === t);
                         if (null == n) return;
-                        let a = n.libraryApplication;
-                        m.performDefaultLibraryApplicationAction(a, {
+                        let l = n.libraryApplication;
+                        m.performDefaultLibraryApplicationAction(l, {
                             analyticsParams: {
                                 source: g.ThZ.APPLICATION_LIBRARY,
                                 location: {
@@ -67,21 +68,19 @@ class I extends a.Component {
                         });
                     }
                     break;
-                case g.Ks6.ARROW_DOWN:
-                case g.Ks6.ARROW_UP:
-                    e.preventDefault(),
-                        e.stopPropagation(),
-                        this.updateActiveRow(e.which === g.Ks6.ARROW_DOWN ? 1 : -1);
+                case p.dh.ARROW_DOWN:
+                case p.dh.ARROW_UP:
+                    e.preventDefault(), e.stopPropagation(), this.updateActiveRow(e.key === p.dh.ARROW_DOWN ? 1 : -1);
                     break;
                 default:
-                    null != a.current && e.target !== a.current && a.current?.focus();
+                    null != l.current && e.target !== l.current && l.current?.focus();
             }
     };
     render() {
         let { filterQuery: e } = this.props,
             { focused: t } = this.state;
         return (0, i.jsx)("div", {
-            className: r()({ [E.sw]: !0, [E.in]: t }),
+            className: r()({ [I.sw]: !0, [I.in]: t }),
             children: (0, i.jsx)(d.IWV, {
                 ref: this.searchBarRef,
                 onChange: u.n9,
@@ -91,15 +90,15 @@ class I extends a.Component {
                     this.reset(), this.focusInput();
                 },
                 query: e,
-                placeholder: p.intl.string(p.t.aSxWSo),
+                placeholder: E.intl.string(E.t.aSxWSo),
             }),
         });
     }
 }
-function f() {
+function C() {
     let e = (0, o.bG)([A.A], () => A.A.hasLayers()),
         t = (0, d.red)(d.DXt);
-    return (0, i.jsx)(I, {
+    return (0, i.jsx)(f, {
         activeRowKey: (0, o.bG)([_.A], () => _.A.activeRowKey),
         hasModalOpen: t || e,
         filterQuery: (0, o.bG)([h.A], () => h.A.applicationFilterQuery),

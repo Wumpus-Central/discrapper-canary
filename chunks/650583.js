@@ -1,12 +1,12 @@
 "use strict";
 n.d(t, {
     C8: () => l,
-    G1: () => a,
+    G1: () => s,
     N$: () => r.Key,
     Nu: () => c,
     RX: () => f,
     V8: () => u,
-    Yy: () => s,
+    Yy: () => a,
     dh: () => _,
     g$: () => d,
     mi: () => i,
@@ -14,7 +14,7 @@ n.d(t, {
 });
 var r = n(16336);
 let i = r.Key.F6,
-    a = new Map([
+    s = new Map([
         [r.Key.F6, "f6"],
         [r.Key.Tab, "tab"],
         [r.Key.ArrowDown, "down"],
@@ -24,7 +24,7 @@ let i = r.Key.F6,
         [r.Key.Home, "home"],
         [r.Key.End, "end"],
     ]),
-    s = new Set(["tab", "shift+tab", "down", "up", "left", "right", "home", "end"]);
+    a = new Set(["tab", "shift+tab", "down", "up", "left", "right", "home", "end"]);
 var o = (function (e) {
     return (
         (e[(e.KEYBOARD_KEY = 0)] = "KEYBOARD_KEY"),
@@ -426,6 +426,7 @@ var d = (function (e) {
             (e.HOME = "Home"),
             (e.END = "End"),
             (e.BACKSPACE = "Backspace"),
+            (e.DELETE = "Delete"),
             (e.COMMA = ","),
             e
         );

@@ -1,13 +1,14 @@
-s.d(e, { A: () => p }), s(321073);
+s.d(e, { A: () => u }), s(321073);
 var n = s(627968),
     i = s(64700),
     a = s(451988),
     l = s(732955),
     r = s(397927),
     o = s(652215),
-    h = s(985018),
-    d = s(31008);
-class g extends i.PureComponent {
+    h = s(650583),
+    d = s(985018),
+    g = s(31008);
+class p extends i.PureComponent {
     static defaultProps = {
         canResend: !1,
         canChange: !0,
@@ -27,16 +28,16 @@ class g extends i.PureComponent {
         if (!t)
             return [
                 {
-                    text: h.intl.string(h.t.v740sh),
+                    text: d.intl.string(d.t.v740sh),
                     variant: "primary",
                     onClick: this.handleVerify,
                     loading: s,
                     disabled: 0 === n.length || 0 === i.length,
                 },
             ];
-        let a = [{ variant: "secondary", text: h.intl.string(h.t.WnX4J2), onClick: this.handleResendEmail }];
+        let a = [{ variant: "secondary", text: d.intl.string(d.t.WnX4J2), onClick: this.handleResendEmail }];
         return (
-            e && a.push({ text: h.intl.string(h.t.Vm8akB), variant: "primary", onClick: this.handleChangeEmailClick }),
+            e && a.push({ text: d.intl.string(d.t.Vm8akB), variant: "primary", onClick: this.handleChangeEmailClick }),
             a
         );
     }
@@ -50,7 +51,7 @@ class g extends i.PureComponent {
                 gap: 20,
                 children: [
                     (0, n.jsx)(r.ksK, {
-                        label: h.intl.string(h.t.dI4d4S),
+                        label: d.intl.string(d.t.dI4d4S),
                         value: s,
                         error: t,
                         onChange: this.handleEmailChange,
@@ -58,7 +59,7 @@ class g extends i.PureComponent {
                         autoFocus: !0,
                     }),
                     (0, n.jsx)(r.ksK, {
-                        label: h.intl.string(h.t["CIGa+7"]),
+                        label: d.intl.string(d.t["CIGa+7"]),
                         type: "password",
                         value: i,
                         error: e,
@@ -76,15 +77,15 @@ class g extends i.PureComponent {
         return (
             (t =
                 e && null != s
-                    ? h.intl.format(h.t.JqLgQL, { email: s })
+                    ? d.intl.format(d.t.JqLgQL, { email: s })
                     : i
-                      ? h.intl.string(h.t.tSXg8O)
-                      : h.intl.string(h.t.KW5DEh)),
+                      ? d.intl.string(d.t.tSXg8O)
+                      : d.intl.string(d.t.KW5DEh)),
             (0, n.jsx)(l.kpP, {
                 transitionState: a,
-                title: h.intl.string(h.t["1MPz27"]),
+                title: d.intl.string(d.t["1MPz27"]),
                 subtitle: t,
-                graphic: { type: "image", src: d.A },
+                graphic: { type: "image", src: g.A },
                 onClose: this.props.onClose,
                 actions: this.getActions(),
                 children: !i && this.renderInputs(),
@@ -116,7 +117,7 @@ class g extends i.PureComponent {
     };
     handleKeyPress = (t) => {
         let { email: e, password: s } = this.state;
-        13 === t.which && e.length > 0 && s.length > 0 && (t.preventDefault(), this.handleVerify());
+        t.key === h.dh.ENTER && e.length > 0 && s.length > 0 && (t.preventDefault(), this.handleVerify());
     };
 }
-let p = g;
+let u = p;

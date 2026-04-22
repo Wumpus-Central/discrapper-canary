@@ -1,19 +1,21 @@
 "use strict";
-n.d(t, { A: () => u }), n(321073);
+n.d(t, { A: () => h }), n(321073);
 var i = n(627968),
     s = n(64700),
     r = n(503698),
     l = n.n(r),
     a = n(235986),
-    o = n(579767);
-class c extends s.PureComponent {
+    o = n(953051),
+    c = n(650583),
+    d = n(579767);
+class u extends s.PureComponent {
     static defaultProps = { autoFocus: !1 };
     _codeBlockRef;
     render() {
         let { className: e } = this.props;
         return (0, i.jsx)("input", {
             ref: this.setCodeBlockRef,
-            className: l()(o.h, e),
+            className: l()(d.h, e),
             maxLength: 1,
             value: null != this.props.code ? this.props.code : void 0,
             autoFocus: this.props.autoFocus,
@@ -31,8 +33,8 @@ class c extends s.PureComponent {
         this._codeBlockRef?.blur();
     }
     handleKeyDown = (e) => {
-        let t = 8 === e.which || 37 === e.which || 39 === e.which,
-            n = (e.which >= 48 && e.which <= 57) || (e.keyCode >= 96 && e.keyCode <= 105);
+        let t = e.key === c.dh.BACKSPACE || e.key === c.dh.ARROW_LEFT || e.key === c.dh.ARROW_RIGHT,
+            n = (0, o.A)(e.key);
         t || n || e.preventDefault();
         let { onKeyDown: i } = this.props;
         i?.(e);
@@ -42,7 +44,7 @@ class c extends s.PureComponent {
         t?.(e.currentTarget.value);
     };
 }
-class d extends s.PureComponent {
+class _ extends s.PureComponent {
     _codeBlockRefs = Array(this.props.count);
     static defaultProps = { count: 6 };
     constructor(e) {
@@ -53,10 +55,10 @@ class d extends s.PureComponent {
             { codes: n } = this.state,
             s = [];
         for (let e = 0; e < n.length; e++)
-            e === n.length / 2 && s.push((0, i.jsx)("div", { className: o.j }, "spacer")),
+            e === n.length / 2 && s.push((0, i.jsx)("div", { className: d.j }, "spacer")),
                 s.push(
                     (0, i.jsx)(
-                        c,
+                        u,
                         {
                             ref: (t) => this.setCodeBlockRef(e, t),
                             code: n[e],
@@ -84,7 +86,7 @@ class d extends s.PureComponent {
     }
     handleKeyDown(e, t) {
         let { codes: n } = this.state;
-        if (8 === t.which && e > 0 && (null == n[e] || 0 === n[e].length)) {
+        if (t.key === c.dh.BACKSPACE && e > 0 && (null == n[e] || 0 === n[e].length)) {
             let t = e - 1;
             n[t] = "";
             let i = this._codeBlockRefs[t];
@@ -105,4 +107,4 @@ class d extends s.PureComponent {
         t?.(e);
     }
 }
-let u = d;
+let h = _;

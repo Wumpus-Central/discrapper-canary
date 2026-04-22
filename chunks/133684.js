@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => A });
+n.d(t, { A: () => I });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -12,10 +12,11 @@ var r = n(627968),
     _ = n(723702),
     f = n(677134),
     p = n(408018),
-    h = n(652215);
-let m = ":",
-    E = /(\t|\s)/;
-class g extends i.PureComponent {
+    h = n(652215),
+    m = n(650583);
+let E = ":",
+    g = /(\t|\s)/;
+class A extends i.PureComponent {
     _ref;
     state = { nextSelection: -1 };
     componentDidMount() {
@@ -40,9 +41,9 @@ class g extends i.PureComponent {
         if (0 === t.trim().length) return { word: null, fullWord: null, isAtStart: !1 };
         let n = e.selectionStart,
             r = e.selectionEnd;
-        for (; n > 0 && !E.test(t[n - 1]); ) n--;
+        for (; n > 0 && !g.test(t[n - 1]); ) n--;
         let i = e.selectionEnd;
-        for (; i < t.length && !E.test(t[i]); ) i++;
+        for (; i < t.length && !g.test(t[i]); ) i++;
         return { word: t.slice(n, r), fullWord: t.slice(n, i), isAtStart: 0 === n };
     }
     focus = () => {
@@ -153,7 +154,7 @@ class g extends i.PureComponent {
     };
     handleKeyPress = (e) => {
         if (
-            e.which === h.Ks6.ENTER &&
+            e.key === m.dh.ENTER &&
             !e.shiftKey &&
             !this.hasOpenCodeBlock() &&
             (!this.props.disableEnterToSubmit || e.ctrlKey)
@@ -182,20 +183,20 @@ class g extends i.PureComponent {
         t?.(e);
     };
     handleTabOrEnterDown(e) {
-        (e.which === h.Ks6.TAB && this.props.onTab()) || (e.which === h.Ks6.ENTER && this.props.onEnter(e))
+        (e.key === m.dh.TAB && this.props.onTab()) || (e.key === m.dh.ENTER && this.props.onEnter(e))
             ? (e.preventDefault(), e.stopPropagation())
-            : e.which === h.Ks6.ESCAPE
+            : e.key === m.dh.ESCAPE
               ? (e.preventDefault(), e.stopPropagation(), this.props.hideAutocomplete())
-              : e.which === h.Ks6.TAB &&
+              : e.key === m.dh.TAB &&
                 this.hasOpenCodeBlock() &&
                 (e.preventDefault(), e.stopPropagation(), this.insertText("	", void 0, !1));
     }
     handleKeyUp = (e) => {
-        switch (e.which) {
-            case h.Ks6.ARROW_RIGHT:
-            case h.Ks6.ARROW_LEFT:
-            case h.Ks6.HOME:
-            case h.Ks6.END:
+        switch (e.key) {
+            case m.dh.ARROW_RIGHT:
+            case m.dh.ARROW_LEFT:
+            case m.dh.HOME:
+            case m.dh.END:
                 this.props.maybeShowAutocomplete();
         }
         let { onKeyUp: t } = this.props;
@@ -231,10 +232,10 @@ class g extends i.PureComponent {
     };
     insertEmoji(e) {
         let { emoji: t, addSpace: n = !1 } = e;
-        this.insertText(`${m}${t.name}${m}`, void 0, n);
+        this.insertText(`${E}${t.name}${E}`, void 0, n);
     }
     getFirstText() {
         return this.props.value;
     }
 }
-let A = g;
+let I = A;

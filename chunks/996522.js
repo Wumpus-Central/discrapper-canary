@@ -15,7 +15,7 @@ var a = n(503698),
     p = n(707539),
     g = n(519397),
     A = n(747926),
-    x = n(652215),
+    x = n(650583),
     f = n(985018),
     C = n(74791);
 function E(e) {
@@ -65,8 +65,7 @@ function I(e) {
                     e.stopPropagation();
                     let t = !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey,
                         n = e.shiftKey && !(e.altKey || e.ctrlKey || e.metaKey);
-                    (e.which === x.Ks6.SPACE || e.which === x.Ks6.ENTER) &&
-                        (e.preventDefault(), (t || n) && (0, A.JA)(_, n));
+                    (e.key === x.dh.SPACE || e.key === x.dh.ENTER) && (e.preventDefault(), (t || n) && (0, A.JA)(_, n));
                 },
                 onContextMenu: function (e) {
                     (0, o.L3)(e, async () => {
