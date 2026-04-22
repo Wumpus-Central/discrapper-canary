@@ -17,30 +17,30 @@ n.d(t, {
                     n
                 );
             }
-            let a = l;
-            t.type === i.Z6.SIDEBAR_ITEM && (a = { sidebarItem: t.key, panel: t.layout[0] }),
-                t.type === i.Z6.PANEL && (a = { sidebarItem: l.sidebarItem, panel: t }),
-                t.type === i.Z6.NESTED_PANEL && (a = { ...l, panel: t.layout[0] }),
-                t.type === i.Z6.CATEGORY && (a = { ...l, category: t }),
-                t.type === i.Z6.ACCORDION && (a = { ...l, accordion: t }),
-                t.type === i.Z6.TAB_ITEM && (a = { ...l, tab: t });
-            let r = t.layout.map((t) => e(t, n, s, a)).filter((e) => null != e);
+            let r = l;
+            t.type === i.Z6.SIDEBAR_ITEM && (r = { sidebarItem: t.key, panel: t.layout[0] }),
+                t.type === i.Z6.PANEL && (r = { sidebarItem: l.sidebarItem, panel: t }),
+                t.type === i.Z6.NESTED_PANEL_NAVIGATOR && (r = { ...l, panel: t.layout[0] }),
+                t.type === i.Z6.CATEGORY && (r = { ...l, category: t }),
+                t.type === i.Z6.ACCORDION && (r = { ...l, accordion: t }),
+                t.type === i.Z6.TAB_ITEM && (r = { ...l, tab: t });
+            let a = t.layout.map((t) => e(t, n, s, r)).filter((e) => null != e);
             if (
-                0 === r.length &&
+                0 === a.length &&
                 !1 !== t.collapseOnEmpty &&
                 !("StronglyDiscouragedCustomComponent" in t || (t.type === i.Z6.SIDEBAR_ITEM && "onClick" in t))
             )
                 return null;
             let { usePredicate: o, ...d } = t,
-                c = { ...d, layout: r };
+                c = { ...d, layout: a };
             return (
                 s.register({
                     node: c,
-                    parentSidebarItemKey: a.sidebarItem,
-                    parentPanelKey: a.panel?.key,
-                    parentTabKey: a.tab?.key,
-                    parentCategoryKey: a.category?.key,
-                    parentAccordionKey: a.accordion?.key,
+                    parentSidebarItemKey: r.sidebarItem,
+                    parentPanelKey: r.panel?.key,
+                    parentTabKey: r.tab?.key,
+                    parentCategoryKey: r.category?.key,
+                    parentAccordionKey: r.accordion?.key,
                 }),
                 c
             );

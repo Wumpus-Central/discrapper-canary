@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { GH: () => l, Iu: () => a, Z6: () => r, bJ: () => o, nW: () => i, zY: () => s }), n(64700);
+n.d(t, { Iu: () => a, Px: () => l, Z6: () => r, bJ: () => o, nW: () => i, zY: () => s }), n(64700);
 var r = (function (e) {
     return (
         (e[(e.ROOT = 0)] = "ROOT"),
@@ -13,7 +13,7 @@ var r = (function (e) {
         (e[(e.RELATED = 8)] = "RELATED"),
         (e[(e.FIELD_SET = 9)] = "FIELD_SET"),
         (e[(e.TAB_ITEM = 10)] = "TAB_ITEM"),
-        (e[(e.NESTED_PANEL = 11)] = "NESTED_PANEL"),
+        (e[(e.NESTED_PANEL_NAVIGATOR = 11)] = "NESTED_PANEL_NAVIGATOR"),
         (e[(e.STATIC = 12)] = "STATIC"),
         (e[(e.BUTTON = 13)] = "BUTTON"),
         (e[(e.TOGGLE = 14)] = "TOGGLE"),
