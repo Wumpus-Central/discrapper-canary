@@ -161,13 +161,12 @@ class N extends s.Ay.PersistedStore {
         {
             let e = r ?? l.hR,
                 [t, a] = this.getEvaluationAndAssignmentInner("user", e, n);
-            return a?.isOverride
-                ? [i, a]
-                : s?.isOverride
-                  ? [i, s]
-                  : a?.useAsEligibility && s?.variantId != null
-                    ? [i, s]
-                    : [void 0, void 0];
+            if (null == a) return [void 0, void 0];
+            if (a.isOverride) return [i, a];
+            if (!a.useAsEligibility) return [void 0, void 0];
+            else if (null == s) return [void 0, void 0];
+            else if (null != s.variantId) return [i, s];
+            else return [void 0, void 0];
         }
     }
     trackExperimentExposure(e, t, n, r, i, s, a) {
