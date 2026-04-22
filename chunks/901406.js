@@ -4,10 +4,11 @@ n.d(t, {
     IG: () => y,
     UR: () => g,
     W1: () => I,
-    b6: () => O,
+    _Q: () => R,
+    b6: () => v,
     bg: () => A,
-    pu: () => N,
-    se: () => R,
+    pu: () => O,
+    se: () => C,
     v0: () => S,
 }),
     n(321073),
@@ -72,36 +73,36 @@ function S(e, t) {
 function y(e) {
     return T(e) === p.fg2.XBOX ? m.t["mytEv+"] : m.t.iDiwby;
 }
-function N(e, t) {
+function N(e) {
+    if (((0, d.isIOS)() || "ios" === (0, d.getOS)()) && e.ios?.iosAppId != null) {
+        let t = e.ios.iosAppId.startsWith("id") ? e.ios.iosAppId : `id${e.ios.iosAppId}`;
+        return `https://apps.apple.com/app/${t}`;
+    }
+    return ((0, d.isAndroid)() || "android" === (0, d.getOS)()) && e.android?.androidAppId != null
+        ? `https://play.google.com/store/apps/details?id=${e.android.androidAppId}`
+        : null;
+}
+function O(e, t) {
     let n,
-        i = (0, f.Jx)(e.config),
-        s = (function (e) {
-            let t = e.config.ctaConfig;
-            if (null == t) return null;
-            if (((0, d.isIOS)() || "ios" === (0, d.getOS)()) && t.ios?.iosAppId != null) {
-                let e = t.ios.iosAppId.startsWith("id") ? t.ios.iosAppId : `id${t.ios.iosAppId}`;
-                return `https://apps.apple.com/app/${e}`;
-            }
-            return ((0, d.isAndroid)() || "android" === (0, d.getOS)()) && t.android?.androidAppId != null
-                ? `https://play.google.com/store/apps/details?id=${t.android.androidAppId}`
-                : null;
-        })(e);
-    null != s && (i = s),
+        i,
+        s = (0, f.Jx)(e.config),
+        o = null == (n = e.config.ctaConfig) ? null : N({ url: (0, f.Jx)(e.config), android: n.android, ios: n.ios });
+    null != o && (s = o),
         (function (e) {
             try {
                 return new URL(e).searchParams.has("dclid");
             } catch {
                 return !1;
             }
-        })(i) &&
-            (i = (function (e, t) {
+        })(s) &&
+            (s = (function (e, t) {
                 try {
                     let n = new URL(e);
                     return n.searchParams.set("dclid", t), n.toString();
                 } catch {
                     return e;
                 }
-            })(i, (n = (0, r.A)()))),
+            })(s, (i = (0, r.A)()))),
         (0, _.Y5)({
             questId: e.id,
             questContent: t.content,
@@ -109,13 +110,30 @@ function N(e, t) {
             questContentPosition: t.position,
             impressionId: t.impressionId,
             sourceQuestContent: t.sourceQuestContent,
-            clickId: n,
+            clickId: i,
         }),
         u._.dispatch(p.jej.QUEST_GAME_LINK_OPENED),
         c.YX.getConfig({ location: "quest_open_game_link" }).enabled,
-        (0, a.A)(i);
+        (0, a.A)(s);
 }
-function O(e, t) {
+function R(e, t) {
+    let { adContentId: n, adCreativeType: r, cta: i } = e,
+        s = i.url,
+        o = N(i);
+    null != o && (s = o),
+        (0, _.vK)({
+            adContentId: n,
+            adCreativeType: r,
+            questContent: t.content,
+            questContentCTA: t.ctaContent,
+            questContentPosition: t.position,
+            impressionId: t.impressionId,
+            sourceQuestContent: t.sourceQuestContent,
+        }),
+        u._.dispatch(p.jej.QUEST_GAME_LINK_OPENED),
+        (0, a.A)(s);
+}
+function v(e, t) {
     let { quest: r } = e;
     (0, _.Y5)({
         questId: r.id,
@@ -132,7 +150,7 @@ function O(e, t) {
             }
         })();
 }
-function R(e, t) {
+function C(e, t) {
     let { quest: n } = e;
     (0, _.Y5)({
         questId: n.id,
