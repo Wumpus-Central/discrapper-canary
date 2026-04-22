@@ -10,13 +10,7 @@ var n = s(284009),
     u = s(734057),
     h = s(679804);
 let m = new Set(),
-    g = {
-        layoutType: i.C.LIST,
-        sortOrder: o.T.CREATION_DATE,
-        tagFilter: m,
-        scrollPosition: 0,
-        tagSetting: r.n.MATCH_SOME,
-    };
+    g = { layoutType: i.C.LIST, sortOrder: o.T.CREATION_DATE, tagFilter: m, tagSetting: r.n.MATCH_SOME };
 class x {
     set;
     get;
@@ -41,7 +35,6 @@ class x {
                     layoutType: t.getDefaultLayout(),
                     sortOrder: t.getDefaultSortOrder(),
                     tagFilter: m,
-                    scrollPosition: 0,
                     tagSetting: t.getDefaultTagSetting(),
                 });
         }
@@ -62,9 +55,6 @@ class x {
     };
     setTagSetting = (e, t) => {
         this.setChannelState(e, { tagSetting: t }), h.A.setTagSetting(t);
-    };
-    setScrollPosition = (e, t) => {
-        this.setChannelState(e, { scrollPosition: t });
     };
 }
 let A = (0, a.v)((e, t) => new x(e, t)),
